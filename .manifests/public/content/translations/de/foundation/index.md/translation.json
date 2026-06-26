@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-08T09:21:18.317Z",
+  "englishManifestHash": "a3bcfab70eca",
+  "placeholderOrder": [
+    "LINK-b83248",
+    "LINK-a21a82",
+    "LINK-d7d0a1",
+    "LINK-71d28c",
+    "LINK-70f9a1",
+    "LINK-fd037b",
+    "LINK-fd037b",
+    "LINK-fe2251",
+    "LINK-47f2c3",
+    "LINK-622a10",
+    "LINK-3b73eb",
+    "LINK-a7319e",
+    "LINK-fd037b"
+  ],
+  "placeholderMap": {
+    "LINK-b83248": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.foundation/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-d7d0a1": {
+      "type": "link",
+      "values": {
+        "url": "/community/"
+      }
+    },
+    "LINK-71d28c": {
+      "type": "link",
+      "values": {
+        "url": "/foundation/mandate/"
+      }
+    },
+    "LINK-70f9a1": {
+      "type": "link",
+      "values": {
+        "url": "/bug-bounty/"
+      }
+    },
+    "LINK-fd037b": {
+      "type": "link",
+      "values": {
+        "url": "https://esp.ethereum.foundation/"
+      }
+    },
+    "LINK-fe2251": {
+      "type": "link",
+      "values": {
+        "url": "https://esp.ethereum.foundation/academic-grants"
+      }
+    },
+    "LINK-47f2c3": {
+      "type": "link",
+      "values": {
+        "url": "https://devcon.org/"
+      }
+    },
+    "LINK-622a10": {
+      "type": "link",
+      "values": {
+        "url": "/bug-bounty/"
+      }
+    },
+    "LINK-3b73eb": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.foundation/"
+      }
+    },
+    "LINK-a7319e": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:21:18.317Z",
+      "status": "success"
+    }
+  }
+}

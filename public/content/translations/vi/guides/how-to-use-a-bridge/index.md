@@ -1,55 +1,54 @@
 ---
-title: "Cách chuyển token sang lớp 2"
-description: "Một hướng dẫn giải thích cách do chuyển token từ Ethereum sang lớp thứ 2 bằng cầu nối."
+title: Cách chuyển token sang lớp 2 bằng cầu nối
+description: Hướng dẫn giải thích cách chuyển token từ Ethereum sang lớp 2 bằng cầu nối.
 lang: vi
 ---
 
-# Cách chuyển token sang lớp 2
+Nếu có nhiều lưu lượng truy cập trên Ethereum, chi phí có thể trở nên đắt đỏ. Một giải pháp cho vấn đề này là tạo ra các "lớp" mới: tức là các mạng lưới khác nhau hoạt động theo những cách tương tự như chính Ethereum. Những cái gọi là lớp 2 (l2) này giúp giảm tắc nghẽn và chi phí trên Ethereum bằng cách xử lý nhiều giao dịch hơn với mức phí thấp hơn, và chỉ lưu trữ kết quả của chúng trên Ethereum một cách định kỳ. Do đó, các lớp 2 này cho phép chúng ta giao dịch với tốc độ tăng lên và chi phí giảm đi. Nhiều dự án tiền mã hóa phổ biến đang chuyển sang lớp 2 vì những lợi ích này. Cách đơn giản nhất để chuyển token từ Ethereum sang lớp 2 là sử dụng một cầu nối.
 
-Nếu như có rất nhiều lưu lượng truy cập trên Ethereum, nó có thể trở nên đắt đỏ. Một giải pháp cho vấn đề này là tạo ra các "lớp" mới: tức là các mạng khác nhau hoạt động theo cách tương tự như chính Ethereum. Cái được gọi là Layer 2s giúp giảm thiểu tắc nghẽn và trả phí trên Ethereum bằng cách xử lý nhiều giao dịch cơ sở dữ liệu với mức chi phí thấp hơn và chỉ thường xuyên lưu trữ kết quả này trên Ethereum thường xuyên. Như vậy, những layers 2s này cho phép chúng ta giao dịch cơ sở sở dữ liệu với tốc độ cao và chi phí thấp hơn. Có rấy nhiều dự án crypto nổi tiếng đang chuyển sang layer 2s bởi vì những lợi ích này. Cách dễ nhất để di chuyển tokens từ Ethereum đến layer 2 là sử dụng cầu nối.
-
-**Lưu ý:**
+**Điều kiện tiên quyết:** 
 
 - có một ví tiền mã hóa—nếu bạn chưa có, hãy làm theo hướng dẫn này để [tạo một tài khoản Ethereum](/guides/how-to-create-an-ethereum-account/)
-- gửi tài sản vào ví đã tạo phía trên
+- nạp tiền vào ví của bạn
 
-## 1. Xác định mạng lớp 2 mà bạn muốn sử dụng
+## 1. Xác định mạng lưới lớp 2 bạn muốn sử dụng {#1-determine-which-layer-2-network-you-want-to-use}
 
 Bạn có thể tìm hiểu thêm về các dự án khác nhau và các liên kết quan trọng trên [trang lớp 2](/layer-2/) của chúng tôi.
 
-## 2. Đi đến cầu nối đã chọn
+## 2. Truy cập vào cầu nối đã chọn {#2-go-to-the-selected-bridge}
 
-Một vài lớp 2 phổ biến như:
+Một số lớp 2 phổ biến là:
 
 - [Cầu nối Arbitrum](https://portal.arbitrum.io/bridge?l2ChainId=42161)
 - [Cầu nối Optimism](https://app.optimism.io/bridge/deposit)
-- [Cầu nối Boba Network](https://hub.boba.network/)
+- [Cầu nối mạng lưới Boba](https://hub.boba.network/)
 
-## 3. Kết nối ví của bạn với cầu nối
+## 3. Kết nối với cầu nối bằng ví của bạn {#3-connect-to-the-bridge-with-your-wallet}
 
-Hãy đảm bảo rằng ví của bạn kết nối với mạng chính Ethereum. Nếu không, trang Web sẽ tự động yêu cầu bạn đổi mạng lưới.
+Đảm bảo rằng ví của bạn được kết nối với mạng lưới Mạng chính Ethereum. Nếu chưa, trang web sẽ tự động nhắc bạn chuyển đổi mạng lưới.
 
-![Giao diện chung để cầu nối token](./bridge1.png)
+![Common interface for bridging tokens](./bridge1.png)
 
-## 4. Cụ thể hóa lượng và di chuyển quỹ
+## 4. Chỉ định số lượng và chuyển tiền {#4-specify-the-amount-and-move-the-funds}
 
-Hãy kiểm tra trước số lượng bạn sẽ nhận được trên mạng layer 2 và các khoản phí để tránh bị bất ngờ.
+Xem lại số lượng bạn sẽ nhận lại trên mạng lưới lớp 2 và các khoản phí để tránh những bất ngờ không mong muốn.
 
-![Giao diện chung để cầu nối token](./bridge2.png)
+![Common interface for bridging tokens](./bridge2.png)
 
-## 5. Xác nhận giao dịch trong ví của bạn
+## 5. Xác nhận giao dịch trong ví của bạn {#5-confirm-the-transaction-in-your-wallet}
 
-Bạn sẽ phải trả một khoản phí (gọi là [gas](/glossary/#gas)) bằng ETH để xử lý giao dịch.
+Bạn sẽ phải trả một khoản phí (gọi là [Gas](/glossary/#gas)) dưới dạng ETH để xử lý giao dịch.
 
-![Giao diện chung để cầu nối token](./bridge3.png)
+![Common interface for bridging tokens](./bridge3.png)
 
-## 6. Chờ cho quỹ của bạn di chuyển
+## 6. Chờ tiền của bạn được chuyển {#6-wait-for-your-funds-to-be-moved}
 
-Quá trình này sẽ không quá 10 phút.
+Quá trình này sẽ không mất quá 10 phút.
 
-## 7. Thêm một mạng lớp 2 vào ví của bạn (không bắt buộc)
+## 7. Thêm mạng lưới lớp 2 đã chọn vào ví của bạn (tùy chọn) {#7-add-the-selected-layer-2-network-to-your-wallet-optional}
 
-Bạn có thể sử dụng [chainlist.org](http://chainlist.org) để tìm chi tiết RPC của mạng. Một khi mạng lưới đã được thêm vào và giao dịch hoạt tất bạn sẽ thấy Token trong ví của bạn. <br />
+Bạn có thể sử dụng [chainlist.org](https://chainlist.org) để tìm thông tin chi tiết về RPC của mạng lưới. Khi mạng lưới được thêm và giao dịch hoàn tất, bạn sẽ thấy các token trong ví của mình.
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -61,12 +60,12 @@ Bạn có thể sử dụng [chainlist.org](http://chainlist.org) để tìm chi
 </AlertContent>
 </Alert>
 
-## Những câu hỏi thường gặp
+## Câu hỏi thường gặp {#frequently-asked-questions}
 
-### Nếu tôi còn quỹ ở trên sàn giao dịch thì sao?
+### Điều gì xảy ra nếu tôi có tiền trên một sàn giao dịch? {#what-if-i-have-funds-on-an-exchange}
 
-Bạn có thể rút một số lớp 2 trực tiếp từ sàn giao dịch. Xem mục “Chuyển sang lớp 2” trong [trang Lớp 2](/layer-2/) của chúng tôi để biết thêm thông tin.
+Bạn có thể rút tiền trực tiếp từ một sàn giao dịch sang một số lớp 2. Hãy xem phần “Chuyển sang lớp 2” trên [trang Lớp 2](/layer-2/) của chúng tôi để biết thêm thông tin.
 
-### Tôi có thể quay trở lại mạng chính Ethereum sau khi nối Token của mình sang lớp 2?
+### Tôi có thể quay lại mạng chính Ethereum sau khi chuyển token của mình sang L2 bằng cầu nối không? {#can-i-go-back-to-ethereum-mainnet-after-i-bridge-my-tokens-to-l2}
 
-Vâng, bạn luôn có thể di chuyển quỹ của mình về mạng chính sử dụng cùng cầu nối.
+Có, bạn luôn có thể chuyển tiền của mình trở lại mạng chính bằng cách sử dụng cùng một cầu nối.

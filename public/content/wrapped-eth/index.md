@@ -1,10 +1,9 @@
 ---
-title: What is Wrapped Ether (WETH)
+title: Wrapped ether (WETH)
+metaTitle: What is Wrapped Ether (WETH)
 description: An introduction to Wrapped ether (WETH)—an ERC20-compatible wrapper for ether (ETH). 
 lang: en
 ---
-
-# Wrapped ether (WETH) {#intro-to-weth}
 
 <Alert variant="update">
 <Emoji text="🎁" />

@@ -1,0 +1,546 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md",
+  "generatedAt": "2026-06-19T22:48:30.919Z",
+  "rootHash": "109f85fbefc7",
+  "tree": {
+    "contentHash": "a402c0e134af",
+    "anchorHash": "357793a8f146",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "7ee01cb337b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "aed0506df0b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b941c9c8232d"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4ae17445e43a"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "831d0f72d242"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8040d42a7f8a"
+      },
+      "frontmatter:source": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8e588cd18774"
+      },
+      "frontmatter:sourceUrl": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2ee005b66274"
+      },
+      "image:0": {
+        "contentHash": "0c666b5d192a",
+        "anchorHash": "52833a0c29c3"
+      },
+      "prose:2": {
+        "contentHash": "930e71492cec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "2805fc43d2b5",
+        "anchorHash": "587ed7f3c6d3"
+      },
+      "prose:3": {
+        "contentHash": "80c9d887dfa6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sign-up-for-a-free-alchemy-account": {
+        "contentHash": "8ad76c84c3ff",
+        "anchorHash": "872bc60f91f5",
+        "labelHash": "17ca8375c943",
+        "children": {
+          "_label": {
+            "contentHash": "17ca8375c943",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "f1b8270465e6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "6a08a5f382ba",
+            "anchorHash": "51c63d05b727"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "create-an-alchemy-app": {
+        "contentHash": "6abe0e7b29f4",
+        "anchorHash": "36c30147e280",
+        "labelHash": "7fa6672195c7",
+        "children": {
+          "_label": {
+            "contentHash": "7fa6672195c7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "c828d867b455",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "659e2097f149",
+            "anchorHash": "dc1e2c310f7d"
+          },
+          "prose:6": {
+            "contentHash": "d7a75e54e504",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "24ed1b2d26b3",
+            "anchorHash": "17b4f71dca5d"
+          },
+          "prose:7": {
+            "contentHash": "959cce0e2cde",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:2": {
+            "contentHash": "88639368f8fc",
+            "anchorHash": "b3bd41268280"
+          },
+          "prose:8": {
+            "contentHash": "fe27671c614e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:3": {
+            "contentHash": "5594e438e39a",
+            "anchorHash": "a6154234e438"
+          },
+          "prose:9": {
+            "contentHash": "4f6f82c8589e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:4": {
+            "contentHash": "2f1dbb945de0",
+            "anchorHash": "1247eb2d4245"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "image:2",
+          "prose:8",
+          "image:3",
+          "prose:9",
+          "image:4"
+        ]
+      },
+      "make-a-request-from-the-command-line": {
+        "contentHash": "6d5cf5f35f09",
+        "anchorHash": "ef988881658f",
+        "labelHash": "628808fc7bcd",
+        "children": {
+          "_label": {
+            "contentHash": "628808fc7bcd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:10": {
+            "contentHash": "1359a3d2d620",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5bf552445cee"
+          },
+          "prose:11": {
+            "contentHash": "4d327af41f96",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4ec135b058f"
+          },
+          "prose:12": {
+            "contentHash": "10f7ff89c918",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4e0a72d80cf0"
+          },
+          "prose:13": {
+            "contentHash": "c0b31bf78092",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9aee6b1bcdf6"
+          },
+          "prose:14": {
+            "contentHash": "9ffa4af68734",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e7a027217aa3"
+          },
+          "prose:15": {
+            "contentHash": "c6d3b9949a61",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:5": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "d84bdb34d4ee"
+          },
+          "prose:16": {
+            "contentHash": "72253f331a75",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5b7e6bf2dc4a"
+          },
+          "prose:17": {
+            "contentHash": "de445e06886b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "cec16c13778c",
+            "anchorHash": "547504fb1cc3"
+          },
+          "prose:18": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:8": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a20b52fae57c"
+          },
+          "prose:19": {
+            "contentHash": "bf006c057eff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:9": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a56145270ce6"
+          },
+          "prose:20": {
+            "contentHash": "38d07be49d9d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:22": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "98dc3f9781f2"
+          },
+          "prose:2": {
+            "contentHash": "26b9d95e28c2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e5889d4723ce",
+            "anchorHash": "64e99fa562cd"
+          },
+          "prose:3": {
+            "contentHash": "5defc4016fcd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "25c7aae2eb48",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:28": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ba05c8dce4b4"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:10",
+          "inline-code:0",
+          "prose:11",
+          "inline-code:1",
+          "prose:12",
+          "inline-code:2",
+          "prose:13",
+          "inline-code:3",
+          "prose:14",
+          "inline-code:4",
+          "prose:15",
+          "inline-code:5",
+          "prose:16",
+          "inline-code:6",
+          "prose:17",
+          "link:7",
+          "prose:18",
+          "inline-code:8",
+          "prose:19",
+          "inline-code:9",
+          "prose:20",
+          "code-fence:22",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "inline-code:1",
+          "prose:4",
+          "code-fence:28"
+        ]
+      },
+      "set-up-your-web3-client": {
+        "contentHash": "e2e473893694",
+        "anchorHash": "9377fde52596",
+        "labelHash": "7aaf04305aaf",
+        "children": {
+          "_label": {
+            "contentHash": "7aaf04305aaf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "0b3d90f01a13",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "80d8bdea15c9"
+          },
+          "prose:5": {
+            "contentHash": "267eb2e5f747",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "a361ce3f9176",
+            "anchorHash": "019c62a8d5b2"
+          },
+          "prose:6": {
+            "contentHash": "40c4b7f35201",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "ede9cc089972",
+            "anchorHash": "0d74363c464a"
+          },
+          "prose:7": {
+            "contentHash": "b12e9cf630e0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "fce32e90ca84",
+            "anchorHash": "f463915cbafa"
+          },
+          "prose:8": {
+            "contentHash": "3a1450acb451",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:10": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "519440cf6280"
+          },
+          "prose:0": {
+            "contentHash": "76eecde95f75",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:12": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ff17e130226c"
+          },
+          "code-fence:14": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3c997ebc0c74"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "inline-code:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8",
+          "code-fence:10",
+          "prose:0",
+          "code-fence:12",
+          "prose:0",
+          "code-fence:14"
+        ]
+      },
+      "write-your-first-web3-script": {
+        "contentHash": "6989bbf510f0",
+        "anchorHash": "e1405ad64fb0",
+        "labelHash": "de8e20949861",
+        "children": {
+          "_label": {
+            "contentHash": "de8e20949861",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "03ec1842ed4b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a7cf3127a4b8"
+          },
+          "code-fence:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ff17e130226c"
+          },
+          "prose:2": {
+            "contentHash": "bd33d2681412",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e727e4bdf365"
+          },
+          "prose:3": {
+            "contentHash": "b7fa96ade96e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2a97516c354b"
+          },
+          "prose:4": {
+            "contentHash": "206db4aaa936",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:10": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "89bad8e7fc1d"
+          },
+          "prose:1": {
+            "contentHash": "81948631c4b6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "43344f463588",
+            "anchorHash": "2fe6f3a7eeb7"
+          },
+          "code-fence:14": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8f44e77195c2"
+          },
+          "code-fence:16": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "783cbd00631f"
+          },
+          "prose:5": {
+            "contentHash": "108353634931",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "5dfbfbac6348",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "45e1aecb4773",
+            "anchorHash": "b3110ec0a243"
+          },
+          "prose:7": {
+            "contentHash": "314459311f2e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "55e3f261e8ed",
+            "anchorHash": "51c63d05b727"
+          },
+          "prose:8": {
+            "contentHash": "86a7f4368692",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "caf9f906b16a",
+            "anchorHash": "c7a2e7f137f4"
+          },
+          "prose:9": {
+            "contentHash": "ce2a04f04dd0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "bcd18ead5fa8",
+            "anchorHash": "99d98a9647b0"
+          },
+          "prose:10": {
+            "contentHash": "e444e5de7fc2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "code-fence:2",
+          "prose:0",
+          "code-fence:4",
+          "prose:2",
+          "inline-code:0",
+          "prose:3",
+          "inline-code:1",
+          "prose:4",
+          "code-fence:10",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "code-fence:14",
+          "prose:0",
+          "code-fence:16",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "frontmatter:published",
+      "frontmatter:source",
+      "frontmatter:sourceUrl",
+      "image:0",
+      "prose:2",
+      "link:1",
+      "prose:3",
+      "sign-up-for-a-free-alchemy-account",
+      "create-an-alchemy-app",
+      "make-a-request-from-the-command-line",
+      "set-up-your-web3-client",
+      "write-your-first-web3-script"
+    ]
+  },
+  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+}

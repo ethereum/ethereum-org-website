@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "locale": "pl",
+  "translatedAt": "2026-06-17T00:18:55.695Z",
+  "englishManifestHash": "c15fddc0499d",
+  "placeholderOrder": [
+    "LINK-9cf763",
+    "CODE-3dfc37",
+    "CODEBLOCK-5266b8",
+    "LINK-7d92b6",
+    "LINK-cf4dbf",
+    "LINK-68b7ab",
+    "LINK-c720a2"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-5266b8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-3dfc37": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm install usingtellor"
+      }
+    },
+    "LINK-9cf763": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/tellor-io/usingtellor"
+      }
+    },
+    "LINK-7d92b6": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.tellor.io/tellor/the-basics/contracts-reference"
+      }
+    },
+    "LINK-cf4dbf": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/tellor-io/TellorPlayground"
+      }
+    },
+    "LINK-68b7ab": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/tellor-io/sampleUsingTellor#tellor-playground"
+      }
+    },
+    "LINK-c720a2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/tellor-io/usingtellor/blob/master/README.md"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:18:55.695Z",
+      "status": "success"
+    }
+  }
+}

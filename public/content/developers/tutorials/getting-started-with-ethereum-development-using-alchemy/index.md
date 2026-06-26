@@ -4,6 +4,7 @@ description: "This is a beginner's guide to getting started with Ethereum develo
 author: "Elan Halpern"
 tags: ["javascript", "ethers.js", "nodes", "querying", "alchemy"]
 skill: beginner
+breadcrumb: Getting started
 lang: en
 published: 2020-10-30
 source: Medium

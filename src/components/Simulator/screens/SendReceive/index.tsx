@@ -5,10 +5,11 @@ import isChromatic from "chromatic"
 
 import type { PhoneScreenProps } from "@/lib/types"
 
-import { useEthPrice } from "../../../../hooks/useEthPrice"
+import { useGasEthPrice } from "../../../../hooks/useGasEthPrice"
 import {
-  ETH_TRANSFER_FEE,
+  ETH_TRANSFER_GAS_UNITS,
   FALLBACK_ETH_PRICE,
+  FALLBACK_GAS_PRICE_GWEI,
   USD_RECEIVE_AMOUNT,
 } from "../../constants"
 import { defaultTokenBalances } from "../../constants"
@@ -26,15 +27,20 @@ import { Success } from "./Success"
 
 export const SendReceive = ({ nav, ctaLabel }: PhoneScreenProps) => {
   const { progressStepper, step } = nav
-  const fetchedPrice = useEthPrice()
+  const { ethPrice: fetchedPrice, gasPrice: fetchedGasPrice } = useGasEthPrice()
   const ethPrice =
     fetchedPrice > 1 && !isChromatic() ? fetchedPrice : FALLBACK_ETH_PRICE
+  const gasPriceGwei =
+    fetchedGasPrice > 0 && !isChromatic()
+      ? fetchedGasPrice
+      : FALLBACK_GAS_PRICE_GWEI
+  const ethTransferFee = ETH_TRANSFER_GAS_UNITS * gasPriceGwei * 1e-9
   const ethReceiveAmount = USD_RECEIVE_AMOUNT / ethPrice
   const [chosenAmount, setChosenAmount] = useState(0)
   const ethChosenAmount = chosenAmount / ethPrice
   const [recipient, setRecipient] = useState<string | null>(null)
   const ethAfterTransfer = Math.max(
-    ethReceiveAmount - chosenAmount / ethPrice - ETH_TRANSFER_FEE,
+    ethReceiveAmount - chosenAmount / ethPrice - ethTransferFee,
     0
   )
 
@@ -92,6 +98,7 @@ export const SendReceive = ({ nav, ctaLabel }: PhoneScreenProps) => {
         <SendSummary
           chosenAmount={chosenAmount}
           ethPrice={ethPrice}
+          ethTransferFee={ethTransferFee}
           recipient={recipient!}
           ethAvailable={ethReceiveAmount}
         />

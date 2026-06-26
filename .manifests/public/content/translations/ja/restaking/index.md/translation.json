@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-18T00:41:06.113Z",
+  "englishManifestHash": "1140d2387c76",
+  "placeholderOrder": [
+    "LINK-8869b2",
+    "LINK-adcad0",
+    "HTMLTAG-bfa71e",
+    "HTMLTAG-829466",
+    "HTMLTAG-2fd387",
+    "HTMLTAG-e730df",
+    "HTMLTAG-bfa71e",
+    "HTMLTAG-745d00",
+    "HTMLTAG-3dfe99",
+    "HTMLTAG-36a3c6",
+    "HTMLTAG-d67a2e",
+    "HTMLTAG-3d2130",
+    "HTMLTAG-ffda89",
+    "HTMLTAG-665142",
+    "HTMLTAG-61f976",
+    "LINK-142493",
+    "LINK-5824e6",
+    "LINK-667d56",
+    "LINK-d0aa29",
+    "LINK-69a248",
+    "LINK-cacffb",
+    "LINK-2b8db8",
+    "LINK-d57a1c"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-bfa71e": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-0"
+      }
+    },
+    "HTMLTAG-829466": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-2"
+      }
+    },
+    "HTMLTAG-2fd387": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-0"
+      }
+    },
+    "HTMLTAG-e730df": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-2"
+      }
+    },
+    "HTMLTAG-745d00": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-2"
+      }
+    },
+    "HTMLTAG-3dfe99": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-2"
+      }
+    },
+    "HTMLTAG-36a3c6": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-0"
+      }
+    },
+    "HTMLTAG-d67a2e": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-2"
+      }
+    },
+    "HTMLTAG-3d2130": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-0"
+      }
+    },
+    "HTMLTAG-ffda89": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-2"
+      }
+    },
+    "HTMLTAG-61f976": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-0"
+      }
+    },
+    "HTMLTAG-665142": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"
+      }
+    },
+    "LINK-8869b2": {
+      "type": "link",
+      "values": {
+        "url": "/what-is-ether/"
+      }
+    },
+    "LINK-adcad0": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-142493": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-5824e6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ledger.com/academy/what-is-ethereum-restaking"
+      }
+    },
+    "LINK-667d56": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained"
+      }
+    },
+    "LINK-d0aa29": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"
+      }
+    },
+    "LINK-69a248": {
+      "type": "link",
+      "values": {
+        "url": "https://cointelegraph.com/explained/what-is-eigenlayer-ethereums-restaking-protocol-explained"
+      }
+    },
+    "LINK-cacffb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=-V-fG4J1N_M"
+      }
+    },
+    "LINK-2b8db8": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=5r0SooSQFJg"
+      }
+    },
+    "LINK-d57a1c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.theblock.co/data/decentralized-finance/restaking"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:41:06.113Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,0 +1,1800 @@
+{
+  "version": 1,
+  "locale": "mr",
+  "translatedAt": "2026-06-19T23:20:44.568Z",
+  "englishManifestHash": "d15347d80166",
+  "placeholderOrder": [
+    "LINK-637479",
+    "LINK-33599d",
+    "LINK-573a00",
+    "LINK-33a26d",
+    "LINK-b476f7",
+    "LINK-d17b92",
+    "LINK-55276b",
+    "LINK-53d644",
+    "LINK-eb5ea9",
+    "LINK-28c067",
+    "LINK-1fba45",
+    "LINK-53d644",
+    "LINK-2ae89a",
+    "LINK-278609",
+    "LINK-d81945",
+    "LINK-5cbb66",
+    "LINK-64fe23",
+    "LINK-48fa71",
+    "CODE-9a881b",
+    "LINK-e192d1",
+    "CODE-2e5aa0",
+    "LINK-6a101b",
+    "CODE-e5c0f0",
+    "CODEBLOCK-1dafe7",
+    "CODEBLOCK-7ddbf5",
+    "CODE-005d0b",
+    "CODEBLOCK-98386b",
+    "LINK-5d6f48",
+    "CODEBLOCK-43623e",
+    "CODE-e5c0f0",
+    "IMAGE-88594e",
+    "CODE-e5c0f0",
+    "CODEBLOCK-dbdcea",
+    "CODEBLOCK-d9963e",
+    "CODEBLOCK-8aa102",
+    "CODEBLOCK-0255f1",
+    "LINK-ba1ffc",
+    "LINK-c3f9b8",
+    "CODE-b332c3",
+    "CODE-39e0f5",
+    "CODE-dec0f0",
+    "CODE-d1ea09",
+    "CODE-aee39b",
+    "CODE-88c9ea",
+    "CODE-b332c3",
+    "CODE-5041d1",
+    "CODE-86c3e7",
+    "CODE-823a31",
+    "CODE-a57cf9",
+    "CODE-46e725",
+    "CODE-6a9994",
+    "CODE-86c3e7",
+    "CODE-be176b",
+    "CODE-86c3e7",
+    "CODE-2d7116",
+    "CODE-a1fce4",
+    "CODE-0abaf5",
+    "CODE-26492a",
+    "LINK-904181",
+    "CODE-e5c0f0",
+    "LINK-6a101b",
+    "CODE-e5c0f0",
+    "LINK-905b9d",
+    "LINK-efa233",
+    "LINK-e5aad8",
+    "LINK-28c067",
+    "LINK-97cf49",
+    "CODE-b094db",
+    "LINK-4cd0c1",
+    "CODE-3760f3",
+    "LINK-e776aa",
+    "LINK-c56686",
+    "LINK-620d2b",
+    "LINK-bd2ac4",
+    "CODE-b332c3",
+    "CODE-3760f3",
+    "LINK-6fcfad",
+    "LINK-fee7c1",
+    "LINK-ccfa9e",
+    "CODE-ce3c3a",
+    "LINK-901930",
+    "LINK-16a4f2",
+    "LINK-cf0003",
+    "LINK-d885dc",
+    "LINK-146cfb",
+    "CODE-4e0ae9",
+    "LINK-d87c07",
+    "CODE-4e0ae9",
+    "CODE-6725e7",
+    "CODE-78ae64",
+    "CODE-c81cda",
+    "CODE-3f1dbb",
+    "CODE-67f714",
+    "LINK-c72f40",
+    "CODE-4e0ae9",
+    "LINK-db0860",
+    "CODE-0abaf5",
+    "CODE-0abaf5",
+    "LINK-7b192f",
+    "LINK-1055c3",
+    "CODE-4e0ae9",
+    "LINK-84f3dc",
+    "CODE-78a02b",
+    "CODE-78a02b",
+    "LINK-719d82",
+    "LINK-353bbe",
+    "CODE-557340",
+    "CODE-78a02b",
+    "LINK-43a9e1",
+    "CODE-e26998",
+    "CODE-4e0ae9",
+    "CODE-ea7285",
+    "LINK-e3784a",
+    "CODE-4f7c24",
+    "CODE-6725e7",
+    "LINK-072a76",
+    "CODE-9d8945",
+    "LINK-9f0142",
+    "LINK-063246",
+    "CODE-ddafa5",
+    "CODE-6725e7",
+    "CODE-5041d1",
+    "CODE-6a9994",
+    "CODE-0abaf5",
+    "CODE-0abaf5",
+    "LINK-283d0b",
+    "CODE-1b186b",
+    "LINK-7468a6",
+    "CODE-65f621",
+    "CODE-5041d1",
+    "CODE-5041d1",
+    "CODE-65f621",
+    "CODE-65f621",
+    "LINK-3e9467",
+    "LINK-92ec6c",
+    "LINK-9c41e2",
+    "CODE-ebbde5",
+    "LINK-bee055",
+    "CODE-ebbde5",
+    "LINK-504aa4",
+    "LINK-fb1642",
+    "CODE-26492a",
+    "LINK-85c372",
+    "CODE-26492a",
+    "LINK-dfd729",
+    "LINK-a3fab5",
+    "LINK-6442ae",
+    "LINK-ce882a",
+    "CODE-4a8507",
+    "CODE-4a8507",
+    "LINK-1ece4d",
+    "LINK-1cde2b",
+    "CODE-e383e4",
+    "CODE-e383e4",
+    "LINK-ccd6dd",
+    "LINK-803c56",
+    "LINK-1acd95",
+    "CODE-be176b",
+    "LINK-6333cf",
+    "LINK-eb652a",
+    "LINK-94dd6f",
+    "CODE-d04b98",
+    "CODE-ebbde5",
+    "CODEBLOCK-648c91",
+    "LINK-2c5084",
+    "LINK-aed4a6",
+    "LINK-784b17",
+    "LINK-f48cbd",
+    "CODE-c0d285",
+    "CODE-c0d285",
+    "LINK-580570",
+    "CODE-b68b1e",
+    "CODE-c0d285",
+    "CODEBLOCK-5673b2",
+    "CODE-af62d0",
+    "CODE-60be98",
+    "CODE-b760f4",
+    "CODE-f05acd",
+    "CODE-1b0338",
+    "LINK-8c61a2",
+    "CODE-ca6a45",
+    "CODE-ca137b",
+    "LINK-f9bfef",
+    "CODE-da17f3",
+    "CODE-d10b36",
+    "CODE-c0d285",
+    "CODEBLOCK-57b177",
+    "CODE-b68b1e",
+    "CODE-710633",
+    "LINK-f09950",
+    "CODE-631c1c",
+    "CODE-eb045d",
+    "CODE-00f0bf",
+    "LINK-09a805",
+    "CODE-fcbcf1",
+    "CODEBLOCK-170639",
+    "CODE-710633",
+    "CODEBLOCK-4630e0",
+    "LINK-da4199",
+    "CODE-10c22b",
+    "CODE-10c22b",
+    "CODE-ca6a45",
+    "CODE-dec0f0",
+    "CODEBLOCK-8da3de",
+    "CODE-710633",
+    "CODEBLOCK-45b933",
+    "CODE-710633",
+    "CODE-c0d285",
+    "CODE-b68b1e",
+    "CODE-9629b0",
+    "CODE-ca9781",
+    "CODE-3e499e",
+    "CODEBLOCK-52c527",
+    "CODE-f9f664",
+    "CODE-af62d0",
+    "CODE-0d6e40",
+    "CODE-0d6e40",
+    "CODEBLOCK-91e22d",
+    "CODEBLOCK-a22342",
+    "LINK-36f362",
+    "CODE-935f68",
+    "LINK-95b3ad",
+    "CODE-ca9781",
+    "CODE-c79a29",
+    "CODE-e82422",
+    "CODE-935f68",
+    "CODEBLOCK-3b6dd7",
+    "CODE-65e64f",
+    "CODEBLOCK-acc54c",
+    "CODE-715dc8",
+    "CODEBLOCK-4d3ae5",
+    "CODEBLOCK-48c139",
+    "CODEBLOCK-6f390a",
+    "LINK-f708c5",
+    "LINK-30c9dd",
+    "CODE-e25fec",
+    "CODEBLOCK-a2338a",
+    "LINK-9b78e5",
+    "LINK-c51c2c",
+    "CODE-470ebe",
+    "CODEBLOCK-dd43ef",
+    "LINK-5276ac",
+    "CODEBLOCK-460d14",
+    "CODEBLOCK-ac20cf",
+    "CODEBLOCK-087f38",
+    "CODEBLOCK-dea770",
+    "LINK-84bd8e",
+    "CODE-12ae32",
+    "CODE-e26998",
+    "CODEBLOCK-c33eb4",
+    "LINK-6e9202",
+    "CODE-ac8d1f",
+    "CODE-e0ee8b",
+    "CODE-ba1c56",
+    "CODE-93a17d",
+    "CODE-54dd31",
+    "CODE-f3b050",
+    "CODE-374a63",
+    "LINK-38604b",
+    "CODE-7f7b1b",
+    "CODE-7f7b1b",
+    "CODE-38c0fc",
+    "CODE-7f7b1b",
+    "CODE-8d248b",
+    "CODEBLOCK-d5b065",
+    "CODE-2d7116",
+    "CODE-a1fce4",
+    "CODEBLOCK-bbafef",
+    "CODEBLOCK-1bf8fc",
+    "CODEBLOCK-cf01d6",
+    "LINK-0e5a9b",
+    "CODE-7df751",
+    "CODEBLOCK-87c4f2",
+    "CODE-dd18c8",
+    "CODEBLOCK-4c27a1",
+    "LINK-072a76",
+    "CODE-9d8945",
+    "LINK-2c5ec9",
+    "CODE-603705",
+    "LINK-7fcee3",
+    "CODE-726bcb",
+    "CODE-50bc66",
+    "CODEBLOCK-53462d",
+    "CODE-603705",
+    "CODEBLOCK-703347",
+    "CODE-603705",
+    "CODEBLOCK-fc2486",
+    "CODE-6725e7",
+    "LINK-072a76",
+    "CODE-9d8945",
+    "LINK-30c9dd",
+    "CODE-e25fec",
+    "CODE-a447f7",
+    "LINK-cd7e6b",
+    "CODEBLOCK-84f260",
+    "CODE-658bcd",
+    "CODEBLOCK-7f4d2a",
+    "CODEBLOCK-acb8ff",
+    "LINK-423ac0",
+    "CODE-6725e7",
+    "LINK-d4d4a0",
+    "CODEBLOCK-4e1163",
+    "LINK-86152d",
+    "CODE-ca9d4a",
+    "CODEBLOCK-fd4207",
+    "LINK-6bbd6e",
+    "CODEBLOCK-b702de",
+    "CODEBLOCK-ebf840",
+    "LINK-24828c",
+    "LINK-33a26d",
+    "LINK-9fab09",
+    "LINK-44982d",
+    "LINK-565a36",
+    "LINK-3a02b1",
+    "LINK-d08050",
+    "LINK-ee867f",
+    "LINK-3deb47",
+    "LINK-0b140a",
+    "LINK-1ddcd5",
+    "CODE-a12dd3",
+    "LINK-d0ee33",
+    "LINK-12265a",
+    "LINK-012c11",
+    "LINK-7ce9de",
+    "CODE-ea7285",
+    "LINK-8ea1d5",
+    "LINK-7ab314",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-1dafe7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7ddbf5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-98386b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-43623e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dbdcea": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d9963e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8aa102": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0255f1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-648c91": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5673b2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-57b177": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-170639": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4630e0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8da3de": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-45b933": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-52c527": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-91e22d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a22342": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3b6dd7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-acc54c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4d3ae5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-48c139": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6f390a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a2338a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dd43ef": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-460d14": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ac20cf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-087f38": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dea770": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c33eb4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d5b065": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bbafef": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1bf8fc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cf01d6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-87c4f2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4c27a1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-53462d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-703347": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fc2486": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-84f260": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7f4d2a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-acb8ff": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4e1163": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fd4207": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b702de": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ebf840": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-9a881b": {
+      "type": "inline-code",
+      "values": {
+        "content": "git"
+      }
+    },
+    "CODE-2e5aa0": {
+      "type": "inline-code",
+      "values": {
+        "content": "pnpm"
+      }
+    },
+    "CODE-e5c0f0": {
+      "type": "inline-code",
+      "values": {
+        "content": "mprocs"
+      }
+    },
+    "CODE-005d0b": {
+      "type": "inline-code",
+      "values": {
+        "content": "pnpm install"
+      }
+    },
+    "CODE-b332c3": {
+      "type": "inline-code",
+      "values": {
+        "content": "Configuration"
+      }
+    },
+    "CODE-39e0f5": {
+      "type": "inline-code",
+      "values": {
+        "content": "height"
+      }
+    },
+    "CODE-dec0f0": {
+      "type": "inline-code",
+      "values": {
+        "content": "width"
+      }
+    },
+    "CODE-d1ea09": {
+      "type": "inline-code",
+      "values": {
+        "content": "numberOfBombs"
+      }
+    },
+    "CODE-aee39b": {
+      "type": "inline-code",
+      "values": {
+        "content": "VerifierAddress"
+      }
+    },
+    "CODE-88c9ea": {
+      "type": "inline-code",
+      "values": {
+        "content": "verifier"
+      }
+    },
+    "CODE-5041d1": {
+      "type": "inline-code",
+      "values": {
+        "content": "PlayerGame"
+      }
+    },
+    "CODE-86c3e7": {
+      "type": "inline-code",
+      "values": {
+        "content": "gameId"
+      }
+    },
+    "CODE-823a31": {
+      "type": "inline-code",
+      "values": {
+        "content": "win"
+      }
+    },
+    "CODE-a57cf9": {
+      "type": "inline-code",
+      "values": {
+        "content": "lose"
+      }
+    },
+    "CODE-46e725": {
+      "type": "inline-code",
+      "values": {
+        "content": "digNumber"
+      }
+    },
+    "CODE-6a9994": {
+      "type": "inline-code",
+      "values": {
+        "content": "GamePlayer"
+      }
+    },
+    "CODE-be176b": {
+      "type": "inline-code",
+      "values": {
+        "content": "Map"
+      }
+    },
+    "CODE-2d7116": {
+      "type": "inline-code",
+      "values": {
+        "content": "x"
+      }
+    },
+    "CODE-a1fce4": {
+      "type": "inline-code",
+      "values": {
+        "content": "y"
+      }
+    },
+    "CODE-0abaf5": {
+      "type": "inline-code",
+      "values": {
+        "content": "PendingGame"
+      }
+    },
+    "CODE-26492a": {
+      "type": "inline-code",
+      "values": {
+        "content": "PendingDig"
+      }
+    },
+    "CODE-b094db": {
+      "type": "inline-code",
+      "values": {
+        "content": "contracts"
+      }
+    },
+    "CODE-3760f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "PostDeploy.s.sol"
+      }
+    },
+    "CODE-ce3c3a": {
+      "type": "inline-code",
+      "values": {
+        "content": "zkFunctions"
+      }
+    },
+    "CODE-4e0ae9": {
+      "type": "inline-code",
+      "values": {
+        "content": "newGame"
+      }
+    },
+    "CODE-6725e7": {
+      "type": "inline-code",
+      "values": {
+        "content": "System"
+      }
+    },
+    "CODE-78ae64": {
+      "type": "inline-code",
+      "values": {
+        "content": "World"
+      }
+    },
+    "CODE-c81cda": {
+      "type": "inline-code",
+      "values": {
+        "content": "<namespace>__<function name>"
+      }
+    },
+    "CODE-3f1dbb": {
+      "type": "inline-code",
+      "values": {
+        "content": "app__newGame"
+      }
+    },
+    "CODE-67f714": {
+      "type": "inline-code",
+      "values": {
+        "content": "GameSystem"
+      }
+    },
+    "CODE-78a02b": {
+      "type": "inline-code",
+      "values": {
+        "content": "createGame"
+      }
+    },
+    "CODE-557340": {
+      "type": "inline-code",
+      "values": {
+        "content": "makeMapBorders"
+      }
+    },
+    "CODE-e26998": {
+      "type": "inline-code",
+      "values": {
+        "content": "calculateMapHash"
+      }
+    },
+    "CODE-ea7285": {
+      "type": "inline-code",
+      "values": {
+        "content": "gamesInProgress"
+      }
+    },
+    "CODE-4f7c24": {
+      "type": "inline-code",
+      "values": {
+        "content": "app__newGameResponse"
+      }
+    },
+    "CODE-9d8945": {
+      "type": "inline-code",
+      "values": {
+        "content": "ServerSystem"
+      }
+    },
+    "CODE-ddafa5": {
+      "type": "inline-code",
+      "values": {
+        "content": "mud.config.ts"
+      }
+    },
+    "CODE-1b186b": {
+      "type": "inline-code",
+      "values": {
+        "content": "wantsGame"
+      }
+    },
+    "CODE-65f621": {
+      "type": "inline-code",
+      "values": {
+        "content": "gameRecord"
+      }
+    },
+    "CODE-ebbde5": {
+      "type": "inline-code",
+      "values": {
+        "content": "dig"
+      }
+    },
+    "CODE-4a8507": {
+      "type": "inline-code",
+      "values": {
+        "content": "digResponse"
+      }
+    },
+    "CODE-e383e4": {
+      "type": "inline-code",
+      "values": {
+        "content": "processDigResult"
+      }
+    },
+    "CODE-d04b98": {
+      "type": "inline-code",
+      "values": {
+        "content": "hash"
+      }
+    },
+    "CODE-c0d285": {
+      "type": "inline-code",
+      "values": {
+        "content": "field"
+      }
+    },
+    "CODE-b68b1e": {
+      "type": "inline-code",
+      "values": {
+        "content": "pack128"
+      }
+    },
+    "CODE-af62d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "hashMap"
+      }
+    },
+    "CODE-60be98": {
+      "type": "inline-code",
+      "values": {
+        "content": "map"
+      }
+    },
+    "CODE-b760f4": {
+      "type": "inline-code",
+      "values": {
+        "content": "bool"
+      }
+    },
+    "CODE-f05acd": {
+      "type": "inline-code",
+      "values": {
+        "content": "width+2"
+      }
+    },
+    "CODE-1b0338": {
+      "type": "inline-code",
+      "values": {
+        "content": "height+2"
+      }
+    },
+    "CODE-ca6a45": {
+      "type": "inline-code",
+      "values": {
+        "content": "${width+2}"
+      }
+    },
+    "CODE-ca137b": {
+      "type": "inline-code",
+      "values": {
+        "content": "${height+2}"
+      }
+    },
+    "CODE-da17f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "${"
+      }
+    },
+    "CODE-d10b36": {
+      "type": "inline-code",
+      "values": {
+        "content": "}"
+      }
+    },
+    "CODE-710633": {
+      "type": "inline-code",
+      "values": {
+        "content": "map1d"
+      }
+    },
+    "CODE-631c1c": {
+      "type": "inline-code",
+      "values": {
+        "content": "mut"
+      }
+    },
+    "CODE-eb045d": {
+      "type": "inline-code",
+      "values": {
+        "content": "undefined"
+      }
+    },
+    "CODE-00f0bf": {
+      "type": "inline-code",
+      "values": {
+        "content": "[false; 512]"
+      }
+    },
+    "CODE-fcbcf1": {
+      "type": "inline-code",
+      "values": {
+        "content": "false"
+      }
+    },
+    "CODE-10c22b": {
+      "type": "inline-code",
+      "values": {
+        "content": "for"
+      }
+    },
+    "CODE-9629b0": {
+      "type": "inline-code",
+      "values": {
+        "content": "array[a..b]"
+      }
+    },
+    "CODE-ca9781": {
+      "type": "inline-code",
+      "values": {
+        "content": "a"
+      }
+    },
+    "CODE-3e499e": {
+      "type": "inline-code",
+      "values": {
+        "content": "b-1"
+      }
+    },
+    "CODE-f9f664": {
+      "type": "inline-code",
+      "values": {
+        "content": "poseidon"
+      }
+    },
+    "CODE-0d6e40": {
+      "type": "inline-code",
+      "values": {
+        "content": "main"
+      }
+    },
+    "CODE-935f68": {
+      "type": "inline-code",
+      "values": {
+        "content": "if"
+      }
+    },
+    "CODE-c79a29": {
+      "type": "inline-code",
+      "values": {
+        "content": "if a { b } else { c }"
+      }
+    },
+    "CODE-e82422": {
+      "type": "inline-code",
+      "values": {
+        "content": "ab+(1-a)c"
+      }
+    },
+    "CODE-65e64f": {
+      "type": "inline-code",
+      "values": {
+        "content": "arr[10]"
+      }
+    },
+    "CODE-715dc8": {
+      "type": "inline-code",
+      "values": {
+        "content": "private"
+      }
+    },
+    "CODE-e25fec": {
+      "type": "inline-code",
+      "values": {
+        "content": "zero-knowledge.ts"
+      }
+    },
+    "CODE-470ebe": {
+      "type": "inline-code",
+      "values": {
+        "content": "initialize"
+      }
+    },
+    "CODE-12ae32": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"\""
+      }
+    },
+    "CODE-ac8d1f": {
+      "type": "inline-code",
+      "values": {
+        "content": "computeWitness"
+      }
+    },
+    "CODE-e0ee8b": {
+      "type": "inline-code",
+      "values": {
+        "content": "output"
+      }
+    },
+    "CODE-ba1c56": {
+      "type": "inline-code",
+      "values": {
+        "content": "witness"
+      }
+    },
+    "CODE-93a17d": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"31337\""
+      }
+    },
+    "CODE-54dd31": {
+      "type": "inline-code",
+      "values": {
+        "content": "viem"
+      }
+    },
+    "CODE-f3b050": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x60A7"
+      }
+    },
+    "CODE-374a63": {
+      "type": "inline-code",
+      "values": {
+        "content": ".slice(1,-1)"
+      }
+    },
+    "CODE-7f7b1b": {
+      "type": "inline-code",
+      "values": {
+        "content": "BigInt"
+      }
+    },
+    "CODE-38c0fc": {
+      "type": "inline-code",
+      "values": {
+        "content": ".toString(16)"
+      }
+    },
+    "CODE-8d248b": {
+      "type": "inline-code",
+      "values": {
+        "content": "\"0x\"+"
+      }
+    },
+    "CODE-7df751": {
+      "type": "inline-code",
+      "values": {
+        "content": "generateProof"
+      }
+    },
+    "CODE-dd18c8": {
+      "type": "inline-code",
+      "values": {
+        "content": "digCompiled.program"
+      }
+    },
+    "CODE-603705": {
+      "type": "inline-code",
+      "values": {
+        "content": "cast"
+      }
+    },
+    "CODE-726bcb": {
+      "type": "inline-code",
+      "values": {
+        "content": "setupNetwork.ts"
+      }
+    },
+    "CODE-50bc66": {
+      "type": "inline-code",
+      "values": {
+        "content": "anvil"
+      }
+    },
+    "CODE-a447f7": {
+      "type": "inline-code",
+      "values": {
+        "content": "zkDig"
+      }
+    },
+    "CODE-658bcd": {
+      "type": "inline-code",
+      "values": {
+        "content": "pnpm dev"
+      }
+    },
+    "CODE-ca9d4a": {
+      "type": "inline-code",
+      "values": {
+        "content": "dig.zok"
+      }
+    },
+    "CODE-a12dd3": {
+      "type": "inline-code",
+      "values": {
+        "content": "verify"
+      }
+    },
+    "IMAGE-88594e": {
+      "type": "image",
+      "values": {
+        "path": "./mprocs.png"
+      }
+    },
+    "LINK-637479": {
+      "type": "link",
+      "values": {
+        "url": "<https://en.wikipedia.org/wiki/Minesweeper_(video_game"
+      }
+    },
+    "LINK-33599d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/server-components/"
+      }
+    },
+    "LINK-573a00": {
+      "type": "link",
+      "values": {
+        "url": "/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important"
+      }
+    },
+    "LINK-33a26d": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/"
+      }
+    },
+    "LINK-b476f7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.typescriptlang.org/"
+      }
+    },
+    "LINK-d17b92": {
+      "type": "link",
+      "values": {
+        "url": "https://nodejs.org/en"
+      }
+    },
+    "LINK-55276b": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/"
+      }
+    },
+    "LINK-53d644": {
+      "type": "link",
+      "values": {
+        "url": "https://mud.dev/"
+      }
+    },
+    "LINK-eb5ea9": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/"
+      }
+    },
+    "LINK-28c067": {
+      "type": "link",
+      "values": {
+        "url": "https://vitejs.dev/"
+      }
+    },
+    "LINK-1fba45": {
+      "type": "link",
+      "values": {
+        "url": "<https://en.wikipedia.org/wiki/Minesweeper_(video_game"
+      }
+    },
+    "LINK-2ae89a": {
+      "type": "link",
+      "values": {
+        "url": "https://aws.amazon.com/nosql/key-value/"
+      }
+    },
+    "LINK-278609": {
+      "type": "link",
+      "values": {
+        "url": "https://mud.dev/guides/extending-a-world"
+      }
+    },
+    "LINK-d81945": {
+      "type": "link",
+      "values": {
+        "url": "https://mud.dev/quickstart#prerequisites"
+      }
+    },
+    "LINK-5cbb66": {
+      "type": "link",
+      "values": {
+        "url": "https://mud.dev/quickstart#prerequisites"
+      }
+    },
+    "LINK-64fe23": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/getting-started/installation"
+      }
+    },
+    "LINK-48fa71": {
+      "type": "link",
+      "values": {
+        "url": "https://git-scm.com/downloads"
+      }
+    },
+    "LINK-e192d1": {
+      "type": "link",
+      "values": {
+        "url": "https://git-scm.com/downloads"
+      }
+    },
+    "LINK-6a101b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/pvolok/mprocs"
+      }
+    },
+    "LINK-5d6f48": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/anvil/"
+      }
+    },
+    "LINK-ba1ffc": {
+      "type": "link",
+      "values": {
+        "url": "http://localhost:3000"
+      }
+    },
+    "LINK-c3f9b8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts"
+      }
+    },
+    "LINK-904181": {
+      "type": "link",
+      "values": {
+        "url": "https://mud.dev/store/tables#types-of-tables"
+      }
+    },
+    "LINK-905b9d": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/anvil/"
+      }
+    },
+    "LINK-efa233": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts"
+      }
+    },
+    "LINK-e5aad8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client"
+      }
+    },
+    "LINK-97cf49": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server"
+      }
+    },
+    "LINK-4cd0c1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol"
+      }
+    },
+    "LINK-e776aa": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23"
+      }
+    },
+    "LINK-c56686": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts"
+      }
+    },
+    "LINK-620d2b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6"
+      }
+    },
+    "LINK-bd2ac4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23"
+      }
+    },
+    "LINK-6fcfad": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168"
+      }
+    },
+    "LINK-ccfa9e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35"
+      }
+    },
+    "LINK-fee7c1": {
+      "type": "link",
+      "values": {
+        "url": "#using-zokrates-from-typescript"
+      }
+    },
+    "LINK-901930": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53"
+      }
+    },
+    "LINK-16a4f2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71"
+      }
+    },
+    "LINK-cf0003": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108"
+      }
+    },
+    "LINK-d885dc": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175"
+      }
+    },
+    "LINK-146cfb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L96"
+      }
+    },
+    "LINK-d87c07": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L43-L46"
+      }
+    },
+    "LINK-c72f40": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L16-L22"
+      }
+    },
+    "LINK-db0860": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L21"
+      }
+    },
+    "LINK-7b192f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71"
+      }
+    },
+    "LINK-1055c3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L110-L114"
+      }
+    },
+    "LINK-84f3dc": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L116-L144"
+      }
+    },
+    "LINK-719d82": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L120-L135"
+      }
+    },
+    "LINK-353bbe": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L147-L166"
+      }
+    },
+    "LINK-43a9e1": {
+      "type": "link",
+      "values": {
+        "url": "#calculatemaphash"
+      }
+    },
+    "LINK-e3784a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L38-L43"
+      }
+    },
+    "LINK-072a76": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol"
+      }
+    },
+    "LINK-9f0142": {
+      "type": "link",
+      "values": {
+        "url": "https://mud.dev/config"
+      }
+    },
+    "LINK-063246": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts#L67-L72"
+      }
+    },
+    "LINK-283d0b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L58-L60"
+      }
+    },
+    "LINK-7468a6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L143-L148"
+      }
+    },
+    "LINK-3e9467": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190"
+      }
+    },
+    "LINK-92ec6c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L188"
+      }
+    },
+    "LINK-9c41e2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L33-L36"
+      }
+    },
+    "LINK-bee055": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L24-L32"
+      }
+    },
+    "LINK-504aa4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L25-L30"
+      }
+    },
+    "LINK-fb1642": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L31"
+      }
+    },
+    "LINK-85c372": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73"
+      }
+    },
+    "LINK-dfd729": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L75-L84"
+      }
+    },
+    "LINK-a3fab5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L86-L95"
+      }
+    },
+    "LINK-6442ae": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L97-L107"
+      }
+    },
+    "LINK-ce882a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L45-L64"
+      }
+    },
+    "LINK-1ece4d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L47-L61"
+      }
+    },
+    "LINK-1cde2b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L67-L86"
+      }
+    },
+    "LINK-ccd6dd": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L76-L78"
+      }
+    },
+    "LINK-803c56": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L83-L86"
+      }
+    },
+    "LINK-1acd95": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L80"
+      }
+    },
+    "LINK-6333cf": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190"
+      }
+    },
+    "LINK-94dd6f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-onchain/tree/solutions/exercise"
+      }
+    },
+    "LINK-eb652a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.poseidon-hash.info"
+      }
+    },
+    "LINK-2c5084": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/toolbox/stdlib.html"
+      }
+    },
+    "LINK-aed4a6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/hashes/poseidon/poseidon.zok"
+      }
+    },
+    "LINK-784b17": {
+      "type": "link",
+      "values": {
+        "url": "https://www.poseidon-hash.info/"
+      }
+    },
+    "LINK-f48cbd": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/language/types.html#field"
+      }
+    },
+    "LINK-580570": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok"
+      }
+    },
+    "LINK-8c61a2": {
+      "type": "link",
+      "values": {
+        "url": "#why-map-border"
+      }
+    },
+    "LINK-f9bfef": {
+      "type": "link",
+      "values": {
+        "url": "https://www.w3schools.com/js/js_string_templates.asp"
+      }
+    },
+    "LINK-f09950": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/language/variables.html#mutability"
+      }
+    },
+    "LINK-09a805": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/language/types.html#declaration-and-initialization"
+      }
+    },
+    "LINK-da4199": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/language/control_flow.html#for-loops"
+      }
+    },
+    "LINK-36f362": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/web3studio/simple-explanations-of-arithmetic-circuits-and-zero-knowledge-proofs-806e59a79785"
+      }
+    },
+    "LINK-95b3ad": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Ternary_conditional_operator"
+      }
+    },
+    "LINK-f708c5": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/toolbox/zokrates_js.html"
+      }
+    },
+    "LINK-30c9dd": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts"
+      }
+    },
+    "LINK-9b78e5": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/toolbox/zokrates_js.html"
+      }
+    },
+    "LINK-c51c2c": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/toolbox/zokrates_js.html#initialize"
+      }
+    },
+    "LINK-5276ac": {
+      "type": "link",
+      "values": {
+        "url": "https://www.w3schools.com/js/js_async.asp"
+      }
+    },
+    "LINK-84bd8e": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony"
+      }
+    },
+    "LINK-6e9202": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/toolbox/zokrates_js.html#computewitnessartifacts-args-options"
+      }
+    },
+    "LINK-38604b": {
+      "type": "link",
+      "values": {
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt"
+      }
+    },
+    "LINK-0e5a9b": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/toolbox/zokrates_js.html#generateproofprogram-witness-provingkey-entropy"
+      }
+    },
+    "LINK-2c5ec9": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/cast/"
+      }
+    },
+    "LINK-7fcee3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52"
+      }
+    },
+    "LINK-cd7e6b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L91"
+      }
+    },
+    "LINK-423ac0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/deploying/"
+      }
+    },
+    "LINK-d4d4a0": {
+      "type": "link",
+      "values": {
+        "url": "https://mud.dev/cli/verify"
+      }
+    },
+    "LINK-86152d": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/gettingstarted.html"
+      }
+    },
+    "LINK-6bbd6e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L67"
+      }
+    },
+    "LINK-24828c": {
+      "type": "link",
+      "values": {
+        "url": "https://0xparc.org/blog/autonomous-worlds"
+      }
+    },
+    "LINK-9fab09": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Imperative_programming"
+      }
+    },
+    "LINK-44982d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.circom.io/getting-started/installation/"
+      }
+    },
+    "LINK-565a36": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cairo-lang.org/tutorials/getting-started-with-cairo/"
+      }
+    },
+    "LINK-3a02b1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L60-L61"
+      }
+    },
+    "LINK-d08050": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L63-L69"
+      }
+    },
+    "LINK-ee867f": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony"
+      }
+    },
+    "LINK-3deb47": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/privacy-scaling-explorations/perpetualpowersoftau"
+      }
+    },
+    "LINK-0b140a": {
+      "type": "link",
+      "values": {
+        "url": "#user-verify-zero-trust"
+      }
+    },
+    "LINK-1ddcd5": {
+      "type": "link",
+      "values": {
+        "url": "https://zokrates.github.io/toolbox/zokrates_js.html#verifyverificationkey-proof"
+      }
+    },
+    "LINK-d0ee33": {
+      "type": "link",
+      "values": {
+        "url": "#user-verify-zero-trust"
+      }
+    },
+    "LINK-12265a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20"
+      }
+    },
+    "LINK-012c11": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47"
+      }
+    },
+    "LINK-7ce9de": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L20"
+      }
+    },
+    "LINK-8ea1d5": {
+      "type": "link",
+      "values": {
+        "url": "#why-zero-knowledge"
+      }
+    },
+    "LINK-7ab314": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Secure_multi-party_computation"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:20:44.568Z",
+      "status": "success"
+    }
+  }
+}

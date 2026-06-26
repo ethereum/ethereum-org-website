@@ -54,11 +54,12 @@ const DataProductCard = ({
           className="max-h-[257px] max-w-[311px] self-center object-cover sm:max-w-[372px]"
           src={image}
           width={imgWidth}
+          sizes="(max-width: 479px) 311px, 372px"
         />
       </Flex>
       <Flex className="flex-col justify-between text-left">
         <div>
-          <h3 className="mx-4 my-8 mb-4 text-2xl font-semibold">
+          <h3 className="mx-4 my-8 mb-4 text-2xl">
             <LinkOverlay asChild>
               <InlineLink href={url} hideArrow>
                 {name}

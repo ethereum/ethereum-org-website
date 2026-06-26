@@ -1,72 +1,68 @@
 ---
-title: "Cómo colaborar"
-description: "Entérese de diferentes maneras en las que puede colaborar con ethereum.org."
+title: "Contribuir a ethereum.org 🦄"
+metaTitle: Contribuir
+description: Aprende sobre las diferentes formas en las que puedes contribuir a ethereum.org
 lang: es
 ---
 
-# Contribuir a ethereum.org 🦄 {#contributing-to-ethereumorg}
+Ethereum.org es un proyecto de código abierto con **más de 12 000** colaboradores que ayudan a traducir, escribir, diseñar y mantener el sitio web.
 
-Ethereum.org es un proyecto de código abierto gestionado por más de **12 000** colaboradores que ayudan a traducir, escribir, diseñar y mantener el sitio web.
-
-¡Somos una comunidad amistosa que le ayudará a crecer y educarse en el ecosistema de Ethereum, mientras contribuye de manera significativa y obtiene experiencia práctica relevante!
+¡Somos una comunidad acogedora que te ayudará a crecer y educarte en el ecosistema de [Ethereum](/) mientras contribuyes de manera significativa y obtienes experiencia práctica relevante!
 
 ## Formas de contribuir {#ways-to-contribute}
 
 **Traducciones**
-
-- [Únase al programa de traducción](/contributing/translation-program/) – Ayúdenos a llevar ethereum.org a nuevos idiomas
+- [Únete al programa de traducción](/contributing/translation-program/) – Ayúdanos a llevar ethereum.org a nuevos idiomas
 
 **Desarrollo**
-
-- [Trabaje en un tema abierto](https://github.com/ethereum/ethereum-org-website/issues) – Tareas que hemos identificado y necesitan atención
+- [Trabaja en una tarea abierta](https://github.com/ethereum/ethereum-org-website/issues) – Trabajo que hemos identificado que debe realizarse
 
 **Diseño**
-
-- [Ayude a diseñar el sitio web](/contributing/design/) – Diseñadores de todos los niveles pueden contribuir para mejorar el sitio
+- [Ayuda a diseñar el sitio web](/contributing/design/) – Diseñadores de todos los niveles pueden contribuir a mejorar el sitio web
 
 **Contenido**
+- [Crea/edita contenido](/contributing/#how-to-update-content) – Sugiere nuevas páginas o haz ajustes a lo que ya está aquí
+- [Escribe un artículo de constructor](/contributing/adding-articles/) - Contribuye con un artículo para la sección [Más reciente](/latest/)
+- [Añade recursos de la comunidad](/contributing/content-resources/) – Añade un artículo o recurso útil a una página relevante
+- [Sugiere un informe](/contributing/adding-reports/) - Sugiere un informe de investigación para la página de [Informes](/reports/)
+- [Sugiere un recurso de diseño](/contributing/design/adding-design-resources/) – Añade, actualiza y elimina recursos de diseño útiles
+- [Cuestionarios](/contributing/quizzes/) – Añade, actualiza y elimina bancos de preguntas de cuestionarios para una página relevante
+- [Sugiere un video](/contributing/adding-videos/) – Sugiere un video educativo para la galería de videos
 
-- [Cree o edite contenido](/contributing/#how-to-update-content) – Sugiera nuevas páginas o realice ajustes a las que ya existen
-- [Agregue recursos de la comunidad](/contributing/content-resources/) – Añada un artículo o recurso útil a una página relevante
-- [Sugiera un recurso de diseño](/contributing/design/adding-design-resources/) – Añada, actualice o elimine recursos útiles de diseño
-- [Cuestionarios](/contributing/quizzes/) – Agregue, actualice o elimine bancos de preguntas de cuestionarios en páginas relevantes
+**Ideas de funciones**
+- [Solicita una función](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Cuéntanos cualquier idea que tengas para una nueva función o diseño
 
-**Ideas de funcionalides/características**
+**Listados de productos**
+- [Añade un exchange](/contributing/adding-exchanges/) – Añade un exchange a nuestro [buscador de exchanges](/get-eth/#country-picker)
+- [Añade un producto](/contributing/adding-products/) – Añade una aplicación descentralizada (dapp) o billetera a una página relevante
+- [Añade herramientas para desarrolladores](/contributing/adding-developer-tools/) – Añade una herramienta para desarrolladores a una página relevante
+- [Añade una capa 2](/contributing/adding-layer-2s/) – Añade una capa 2 (l2) a una página relevante
+- [Añade un producto o servicio de staking](/contributing/adding-staking-products/) – Añade un proyecto que ayude a facilitar el staking en solitario, el staking conjunto o el staking como servicio
+- [Añade una billetera](/contributing/adding-wallets/) – Añade una billetera para la [página de búsqueda de billeteras](/wallets/find-wallet/)
+- [Sugiere un proyecto para nuestra página de DeSci](/contributing/adding-desci-projects/) – Añade un proyecto construido en Ethereum que contribuya a la ciencia descentralizada (DeSci)
+- [Añade un recurso](/contributing/adding-resources/) – Añade un recurso útil a cualquier página relevante
 
-- [Solicite una función](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Compártanos cualquier idea que tenga para una nueva funcionalidad o diseño
+¿Tienes alguna pregunta? 🤔 Únete a nuestro [servidor de Discord](https://discord.gg/ethereum-org)
+## Buenas tareas iniciales para empezar a contribuir {#good-first-tasks-to-start-contributing}
 
-**Listado de productos**
+Estas son algunas tareas actuales que podrías ayudarnos a resolver y de las que podrías hacerte cargo. Para la mayoría necesitarás una cuenta de GitHub, ya que la mayor parte de los cambios en el sitio web se realizan a través de GitHub.
 
-- [Agregue un exchange](/contributing/adding-exchanges/) – Añada un exchange a nuestro [buscador de exchanges](/get-eth/#country-picker)
-- [Agregue un producto](/contributing/adding-products/) – Añada una dapp o billetera a una página relevante
-- [Agregue herramientas para desarrolladores](/contributing/adding-developer-tools/) – Añada una herramienta de desarrollo a una página relevante
-- [Agregue una solución de capa 2](/contributing/adding-layer-2s/) – Añada una capa 2 a una página relevante
-- [Agregue un producto o servicio de staking](/contributing/adding-staking-products/) – Añada un proyecto que ayude a facilitar staking en solitario, staking en grupo o staking como servicio
-- [Agregue una billetera](/contributing/adding-wallets/) – Añada una billetera para la [página de búsqueda de billeteras](/wallets/find-wallet/)
-- [Sugiera un proyecto para nuestra página DeSci](/contributing/adding-desci-projects/) – Añada un proyecto construido sobre Ethereum que contribuya a la ciencia descentralizada
-
-¿Alguna pregunta? 🤔 Únase a nuestro [servidor de Discord](https://discord.gg/ethereum-org)
-
-## Tareas apropiadas para empezar a contribuir
-
-Estas son algunas tareas actuales de las que podría encargarse y ayudarnos a resolver. Para la mayoría necesitará una cuenta de GitHub, ya que muchos de los cambios al sitio se hacen a través de GitHub.
-
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Ver todas las tareas</ButtonLink>
 
 ## Cómo trabajar en ethereum.org {#how-to-update-content}
 
-Si desea contribuir en el [Programa de traducción](/contributing/translation-program/), le pedimos crear una cuenta en [Crowdin](https://crowdin.com/project/ethereum-org). Para todo lo demás —agregar o editar contenido o elementos visuales en el sitio web, corregir errores, trabajar en tareas abiertas— necesitará una cuenta de [GitHub](https://github.com/).
+Si deseas contribuir en el [Programa de traducción](/contributing/translation-program/), te pedimos que crees una cuenta en [Crowdin](https://crowdin.com/project/ethereum-org). Para todo lo demás (añadir o editar contenido o elementos visuales en el sitio web, corregir errores, trabajar en tareas abiertas), necesitarás una cuenta de [GitHub](https://github.com/).
 
-Todas las actualizaciones se hacen a través del proceso de solicitud de incorporación de cambios de GitHub. Esto implica que crea una copia local del sitio web, realiza sus cambios y solicita que se implementen los cambios. Si nunca ha hecho esto antes, siga las instrucciones al final de nuestro [repositorio de GitHub](https://github.com/ethereum/ethereum-org-website).
+Todas las actualizaciones se realizan a través del proceso de PR (solicitudes de extracción) de GitHub. Esto significa que creas una copia local del sitio web, realizas tus cambios y solicitas fusionar tus cambios. Si nunca has hecho esto antes, sigue las instrucciones en la parte inferior de nuestro [repositorio de GitHub](https://github.com/ethereum/ethereum-org-website).
 
-No necesita permiso para trabajar en nada, pero siempre es mejor decirnos lo que tiene pensado hacer. Para ello, puede:
+No necesitas permiso para trabajar en nada, pero siempre es mejor hacernos saber lo que planeas hacer. Puedes hacerlo de las siguientes maneras:
 
-- Comentar en un issue o PR en [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Enviar mensajes en nuestro [servidor de Discord](https://discord.gg/ethereum-org)
+- Comentando en un problema o PR en [GitHub](https://github.com/ethereum/ethereum-org-website)
+- Enviando un mensaje en nuestro [servidor de Discord](https://discord.gg/ethereum-org)
 
-Antes de empezar a colaborar, asegúrese de estar familiarizado con:
+Antes de contribuir, asegúrate de estar familiarizado con:
 
 - la [visión de ethereum.org](/about/) en evolución
 - nuestros [principios de diseño](/contributing/design-principles/)
@@ -75,7 +71,7 @@ Antes de empezar a colaborar, asegúrese de estar familiarizado con:
 
 ## Cómo se toman las decisiones sobre el sitio {#how-decisions-about-the-site-are-made}
 
-Las decisiones acerca de las pull requests (PR) individuales, la evolución del diseño y las mejoras importantes las toma un equipo del ecosistema de Ethereum. Este equipo está compuesto por gestores de proyectos, desarrolladores, diseñadores, especialistas en marketing y comunicación, y otros expertos en la materia. El aporte de la comunidad se tiene en cuenta en cada decisión. Por lo tanto, exprese sus dudas y preguntas en las incidencias abiertas, envíe PR o póngase en contacto con el equipo:
+Las decisiones sobre PR individuales, la evolución del diseño y las actualizaciones importantes las toma un equipo de todo el ecosistema de Ethereum. Este equipo incluye gestores de proyectos, desarrolladores, diseñadores, marketing y comunicaciones, y expertos en la materia. Los aportes de la comunidad informan cada decisión: así que, por favor, plantea preguntas en los problemas, envía PR o contacta al equipo:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
@@ -83,37 +79,38 @@ Las decisiones acerca de las pull requests (PR) individuales, la evolución del 
 
 ### Una nota sobre el plagio {#plagiarism}
 
-Utilice únicamente su trabajo o contenido original del que tenga permiso para utilizar cuando contribuya con cualquier contenido o aportación en ethereum.org. Muchos proyectos dentro del ecosistema de Ethereum utilizan licencias de código abierto que permiten el libre intercambio de información. Sin embargo, si no puede encontrar esta información, no intente agregarla a ethereum.org. Cualquier pull request que se considere plagio será rechazada.
+Utiliza únicamente tu trabajo original o contenido que tengas permiso para usar al contribuir con cualquier contenido o artefacto a ethereum.org. Muchos proyectos dentro del ecosistema de Ethereum utilizan licencias de código abierto que permiten compartir información libremente. Sin embargo, si no puedes encontrar esta información, no intentes añadirla a ethereum.org. Cualquier solicitud de extracción (pull request) que se considere plagio será rechazada.
 
-## ¿No sabe lo que es el código abierto? {#new-to-open-source}
+## ¿Eres nuevo en el código abierto? {#new-to-open-source}
 
-En nuestro repositorio de GitHub tenemos tareas con baja barrera de entrada, específicamente diseñadas para desarrolladores que son nuevos en el código abierto, etiquetadas como [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+Tenemos problemas con una barrera de entrada baja en nuestro repositorio de GitHub, diseñados específicamente para desarrolladores que son nuevos en el código abierto, etiquetados como [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
-## Reclame su Onchain Achievement Token (OAT) {#oat}
+## Reclama tu Onchain Achievement Token (OAT) {#oat}
 
-Si su contribución se integra en ethereum.org, podrá reclamar una insignia especial en [Galxe](https://app.galxe.com/quest/ethereumorg). Un token de logro en cadena (OAT, Onchain Achievement Token) es una prueba de que ayudó a hacer el ecosistema un poco más increíble.
+Si tu contribución se fusiona en ethereum.org, tendrás la oportunidad de reclamar una insignia especial en [Galxe](https://app.galxe.com/quest/ethereumorg). Un Onchain Achievement Token (OAT) es una prueba de que ayudaste a hacer que el ecosistema sea un poco más increíble.
 
 [Más sobre los OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
-### Cómo reclamarlo
-
-1. Únase a nuestro [servidor de Discord](https://discord.gg/ethereum-org).
-2. Pegue un enlace a su contribución en el canal `#🥇 | proof-of-contribution`.
-3. Espere a que un miembro de nuestro equipo le envíe un enlace a su OAT.
-4. ¡Reclame su OAT!
-
-Debe utilizar únicamente billeteras autocustodiadas para reclamar sus OAT. No utilice cuentas de exchanges u otras cuentas de las cuales no posea la clave privada, pues no le permitirán acceder y administrar sus OAT.
-
-## Reclame su GitPOAP {#claim-gitpoap}
-
-¡GitPOAP reconocerá automáticamente el uso de su contribución y le permitirá mintear un POAP de contribución único separado en su propia plataforma!
-
 ### Cómo reclamar {#how-to-claim}
 
-1. Visite [GitPOAP](https://www.gitpoap.io).
-2. Conecte con su billetera o consulte su correo electrónico mediante la opción de inicio de sesión.
-3. Busque su nombre de usuario en GitHub, dirección ETH, nombres ENS o cualquier GitPOAP para comprobar si es elegible.
-4. Si su cuenta de GitHub es elegible, podrá mintear un GitPOAP.
+1. Únete a nuestro [servidor de Discord](https://discord.gg/ethereum-org).
+2. Pega un enlace a tu contribución en el canal `#🥇 | proof-of-contribution`.
+3. Espera a que un miembro de nuestro equipo te envíe un enlace a tu OAT.
+4. ¡Reclama tu OAT!
+
+Solo debes usar billeteras de autocustodia para reclamar los OAT. No uses cuentas de exchange u otras cuentas de las que no tengas las claves privadas, ya que estas no te permitirán acceder y gestionar tus OAT.
+
+## Reclama tu GitPOAP {#claim-gitpoap}
+
+¡GitPOAP también reconocerá automáticamente tu contribución fusionada y te permitirá acuñar un POAP de colaborador único e independiente en su propia plataforma!
+
+
+### Cómo reclamar {#how-to-claim-2}
+
+1. Visita [GitPOAP](https://www.gitpoap.io).
+2. Conéctate con tu billetera o incluso con tu correo electrónico a través de la opción de inicio de sesión.
+3. Busca tu nombre de usuario de GitHub, dirección de ETH, nombres de ENS o cualquier GitPOAP para comprobar si eres elegible.
+4. Si tu cuenta de GitHub es elegible, ¡entonces podrás acuñar un GitPOAP!
 
 ## Colaboradores {#contributors}
 

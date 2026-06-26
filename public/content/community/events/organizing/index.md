@@ -1,11 +1,10 @@
 ---
-title: Organizing an Ethereum Event
+title: How to organize an Ethereum event
+metaTitle: Organizing an Ethereum Event
 description: How to organize an Ethereum event
 lang: en
 hideEditButton: true
 ---
-
-# How to Organize an Ethereum event {#how-to-organize-an-ethereum-event}
 
 Building a strong and vibrant community is at the heart of growing the Ethereum ecosystem. Whether you’re planning to organize meetups, workshops, or a full-scale conference, the success of your event depends on the connections and engagement within your local network. This guide will help you lay the groundwork for an active Ethereum community and take you step by step through the process of organizing a memorable and impactful conference.
 

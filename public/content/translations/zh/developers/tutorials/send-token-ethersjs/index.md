@@ -1,25 +1,29 @@
 ---
 title: "使用 ethers.js 发送代币"
-description: "使用 ethers.js 发送代币的初学者友好指南。"
-author: Kim YongJun
-tags: [ "ETHERS.JS", "ERC-20", "代币" ]
+description: "适合初学者的使用 ethers.js 发送代币指南。"
+author: "金容俊"
+tags:
+  - ETHERS.JS
+  - ERC-20
+  - 代币
 skill: beginner
+breadcrumb: "发送代币"
 lang: zh
 published: 2021-04-06
 ---
 
 ## 使用 ethers.js (5.0) 发送代币 {#send-token}
 
-### 在本教程中，你将学习如何：{#you-learn-about}
+### 在本教程中，你将学习如何 {#you-learn-about}
 
 - 导入 ethers.js
 - 转账代币
-- 根据网络流量情况设置燃料价格
+- 根据网络拥堵情况设置 Gas 价格
 
-### 开始上手 {#to-get-started}
+### 准备工作 {#to-get-started}
 
-开始前，我们必须先将 ethers.js 程序库导入到我们的 javascript 中
-包含 ethers.js (5.0)
+首先，我们必须将 ethers.js 库导入到我们的 JavaScript 中
+引入 ethers.js (5.0)
 
 ### 安装 {#install-ethersjs}
 
@@ -32,7 +36,7 @@ published: 2021-04-06
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // 在此编写你的代码…
+  // 在此处编写您的代码...
 </script>
 ```
 
@@ -47,19 +51,19 @@ published: 2021-04-06
 
 ### 参数 {#param}
 
-1. **`contract_address`**：代币合约地址（如果你想转账的代币不是以太币，则需要合约地址）
-2. **`send_token_amount`**：你想要发送给接收方的金额
-3. **`to_address`**：接收方的地址
-4. **`send_account`**：发送方的地址
-5. **`private_key`**：发送方的私钥，用于签署交易并实际转账代币
+1. **`contract_address`**：代币合约地址（当你要转账的代币不是以太币时，需要合约地址）
+2. **`send_token_amount`**：你要发送给接收者的金额
+3. **`to_address`**：接收者的地址
+4. **`send_account`**：发送者的地址
+5. **`private_key`**：发送者的私钥，用于签署交易并实际转账代币
 
 ## 注意 {#notice}
 
-`signTransaction(tx)` 已被移除，因为 `sendTransaction()` 会在内部执行它。
+移除了 `signTransaction(tx)`，因为 `sendTransaction()` 会在内部执行此操作。
 
-## 发送流程 {#procedure}
+## 发送步骤 {#procedure}
 
-### 1. 连接到网络 (测试网) {#connect-to-network}
+### 1. 连接到网络（测试网） {#connect-to-network}
 
 #### 设置提供者 (Infura) {#set-provider}
 
@@ -81,25 +85,25 @@ let wallet = new ethers.Wallet(private_key)
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. 获取当前燃料价格 {#get-gas}
+### 4. 获取当前 Gas 价格 {#get-gas}
 
 ```javascript
-window.ethersProvider.getGasPrice() // gasPrice
+window.ethersProvider.getGasPrice() // Gas 价格
 ```
 
 ### 5. 定义交易 {#define-transaction}
 
-下面定义的变量取决于 `send_token()`
+下面定义的这些变量依赖于 `send_token()`
 
 ### 交易参数 {#transaction-params}
 
-1. **`send_account`**：代币发送方的地址
-2. **`to_address`**：代币接收方的地址
+1. **`send_account`**：代币发送者的地址
+2. **`to_address`**：代币接收者的地址
 3. **`send_token_amount`**：要发送的代币数量
-4. **`gas_limit`**：燃料限制
-5. **`gas_price`**：燃料价格
+4. **`gas_limit`**：gas 上限
+5. **`gas_price`**：Gas 价格
 
-[请参阅下文了解如何使用](#how-to-use)
+[有关如何使用，请参见下文](#how-to-use)
 
 ```javascript
 const tx = {
@@ -117,7 +121,7 @@ const tx = {
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("发送完成！")
+  alert("Send finished!")
 })
 ```
 
@@ -146,7 +150,7 @@ send_token(
 
 ### 成功！ {#success}
 
-![交易成功完成的图片](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -180,7 +184,7 @@ function send_token(
       // 发送代币
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("已发送代币")
+        alert("sent token")
       })
     } // 以太币发送
     else {
@@ -199,10 +203,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("发送完成！")
+          alert("Send finished!")
         })
       } catch (error) {
-        alert("发送失败！！")
+        alert("failed to send!!")
       }
     }
   })

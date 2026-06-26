@@ -1,25 +1,23 @@
 ---
-title: Kazi na maono
+title: Dhamira na maono
 lang: sw
-description: Dhamira na maono ya Mpango wa Tafsiri wa ethereum.org
+description: Dhamira na maono ya Programu ya Tafsiri ya ethereum.org
 ---
 
-# Dhamira na maono {#mission-and-vision}
+Jumuiya ya Ethereum inalenga kuwa ya kimataifa na jumuishi, lakini maudhui yake mengi yanahudumia wazungumzaji wa Kiingereza pekee, na kuwaacha nje watu bilioni 6 duniani wasiozungumza Kiingereza. Ili ethereum.org ifanye kazi kama lango la kuingia kwenye Ethereum kwa jumuiya ya ulimwenguni kote, tunaamini kutoa maudhui ya Ethereum kwa wasiozungumza Kiingereza katika lugha zao za asili ni muhimu.
 
-Jamii ya Ethereu inalenga kuwa ya ulimwengu wote na inayojumuisha, japo maudhui yake yanahudumia wazungumzaji wa kiingereza tu, na ikiacha watu bilioni 6 wasiozungumza kiingereza. Ili Ethereum.org ifanye kazi kama lango la Ethereum kwa jamii duniani kote, tunaamini kutoa maudhui ya Ethereum kwa wasiozungumza kiingereza katika lugha zao ni kitu muhimu.
-
-Programu ya Ufasiri wa ethereum.org unalenga kuifanya Ethereum kupatikana kwa kila mmoja kwa kufasiri ethereum.org na maudhui mengine ya Ethereum kwenda katika lugha nyingi iwezekanavyo.
+Programu ya Tafsiri ya ethereum.org inalenga kufanya Ethereum ipatikane kwa kila mtu kwa kutafsiri ethereum.org na maudhui mengine ya Ethereum katika lugha nyingi iwezekanavyo.
 
 ## Dhamira yetu {#our-mission}
 
-- Kuto matoleo yaliotafsiriwa ya tovuti kuwawezweha wageni duniani kote kujifunza kuhusu Ethereum kwenye lugha zao za asili
-- Wezesha ujio wa wanachama zaidi kwenye jumuiya ya kimataifa ya Ethereum
-- Ruhusu kushiriki kwa urahisi zaidi na kujumuisha zaidi taarifa na maarifa ya Ethereum
-- Wawezeshe wanajamii kuchangia tafsiri kwa Ethereum na kuweka alama zao kwenye mfumo wa ikolojia
-- Tambua, ungana na, na utoe mwongozo kwa wachangiaji wenye shauku wanaotaka kujihusisha na mfumo ikolojia
+- Kutoa matoleo yaliyotafsiriwa ya tovuti ili kuwawezesha wageni duniani kote kujifunza kuhusu Ethereum katika lugha yao ya asili
+- Kuwezesha uingizaji wa wanachama zaidi kwenye jumuiya ya kimataifa ya Ethereum
+- Kuruhusu ushiriki unaofikika zaidi na jumuishi zaidi wa taarifa na maarifa ya Ethereum
+- Kuwawezesha wanachama wa jumuiya kuchangia tafsiri kwenye Ethereum na kuacha alama yao kwenye mfumo wa ikolojia
+- Kutambua, kuungana na, na kutoa mwongozo kwa wachangiaji wenye shauku wanaotaka kujihusisha katika mfumo wa ikolojia
 
 ## Maono yetu {#our-vision}
 
-- Tafsiri maudhui muhimu kwa wanachama wa jumuiya ya Ethereum kutoka nchi na sehemu nyingi za dunia iwezekanavyo
-- Kuunga mkono ugawanaji wa maarifa katika lugha mbalimbali ili kuunda jamii ya Ethereum iliyo na habari bora na iliyoelimika
-- Kuongeza ushirikishwaji na ufikiaji wa Ethereum kwa kuondoa vizuizi vya lugha vinavyowazuia wasiozungumza Kiingereza kujiunga na mfumo wa ikolojia
+- Kutafsiri maudhui muhimu kwa wanachama wa jumuiya ya Ethereum kutoka nchi na sehemu nyingi za dunia iwezekanavyo
+- Kusaidia ushiriki wa maarifa katika lugha mbalimbali ili kuunda jumuiya ya Ethereum iliyo na taarifa na kuelimishwa vyema zaidi
+- Kuongeza ujumuishi na ufikiaji wa Ethereum kwa kuondoa vizuizi vya lugha vinavyozuia wasiozungumza Kiingereza kujiunga na mfumo wa ikolojia

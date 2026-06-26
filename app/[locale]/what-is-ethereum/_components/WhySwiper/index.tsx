@@ -15,7 +15,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import useTranslation from "@/hooks/useTranslation"
 
 const H3 = (props: ChildOnlyProp) => (
-  <h3 className="text-xl font-semibold leading-xs md:text-2xl" {...props} />
+  <h3 className="text-xl leading-xs md:text-2xl" {...props} />
 )
 
 const WhySwiper = () => {

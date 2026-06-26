@@ -1,32 +1,31 @@
 ---
-title: Utangulizi wa Ethereum Bootnodes
-description: Taarifa ya msingi unahitaji kuelewa bootnodes
+title: Utangulizi wa Nodi za Uanzishaji za Ethereum
+description: Taarifa za msingi unazohitaji ili kuelewa nodi za uanzishaji
 lang: sw
 ---
 
-Wakati nodi mpya anajiunga na Mtandao Ethereum inahitaji kuungana na nodes ambayo tayari ni juu ya Mtandao ili kisha kugundua wenzao mpya. Pointi hizi za kuingia kwenye Mtandao wa Ethereum zinaitwa bootnodes. Wateja kawaida kuwa na orodha ya bootnodes hardcoded ndani yao. Hizi bootnodes ni kawaida kukimbia na Ethereum Msingi
-ya devops timu au timu mteja wenyewe. Kumbuka kwamba bootnodes si sawa na nodi tuli. Nodi tuli huitwa tena na tena, ambapo bootnodes ni tu kuitwa juu kama hakuna wenzao kutosha kuungana na nodi mahitaji ya bootstrap baadhi ya uhusiano mpya.
+Wakati nodi mpya inapojiunga na mtandao wa Ethereum inahitaji kuunganishwa na nodi ambazo tayari ziko kwenye mtandao ili kisha kugundua wenza (peers) wapya. Sehemu hizi za kuingilia kwenye mtandao wa Ethereum zinaitwa nodi za uanzishaji. Wateja (Clients) kwa kawaida huwa na orodha ya nodi za uanzishaji zilizowekwa moja kwa moja kwenye kodi zao (hardcoded). Nodi hizi za uanzishaji kwa kawaida huendeshwa na timu ya devops ya Taasisi ya Ethereum au timu za wateja wenyewe. Kumbuka kwamba nodi za uanzishaji si sawa na nodi tuli (static nodes). Nodi tuli huitwa mara kwa mara, wakati nodi za uanzishaji huitwa tu ikiwa hakuna wenza wa kutosha wa kuunganishwa nao na nodi inahitaji kuanzisha miunganisho mipya.
 
-## Ungana na bootnode {#connect-to-a-bootnode}
+## Unganisha kwenye nodi ya uanzishaji {#connect-to-a-bootnode}
 
-Wateja wengi kuwa na orodha ya bootnodes kujengwa katika, lakini unaweza pia wanataka kuendesha bootnode yako mwenyewe, au kutumia moja ambayo si sehemu ya orodha ya wateja hardcoded. Katika kesi hii, unaweza kutaja yao wakati wa kuanza mteja wako, kama ifuatavyo (mfano ni kwa ajili ya Geth, tafadhali angalia nyaraka mteja wako):
+Wateja wengi wana orodha ya nodi za uanzishaji zilizojengewa ndani, lakini unaweza pia kutaka kuendesha nodi yako ya uanzishaji, au kutumia ambayo si sehemu ya orodha iliyowekwa kwenye kodi ya mteja. Katika hali hii, unaweza kuzibainisha wakati wa kuanzisha mteja wako, kama ifuatavyo (mfano ni wa Geth, tafadhali angalia nyaraka za mteja wako):
 
 ```
 geth --bootnodes "enode://<node ID>@<IP address>:<port>"
 ```
 
-## Endesha bootnode {#run-a-bootnode}
+## Endesha nodi ya uanzishaji {#run-a-bootnode}
 
-Bootnodes ni nodi kamili ambazo haziko nyuma ya NAT ([Tafsiri ya Anwani ya Mtandao](https://www.geeksforgeeks.org/network-address-translation-nat/)). Kila nodi kamili inaweza kutenda kama bootnode muda mrefu kama ni inapatikana kwa umma.
+Nodi za uanzishaji ni nodi kamili ambazo haziko nyuma ya NAT ([Tafsiri ya Anwani ya Mtandao](https://www.geeksforgeeks.org/network-address-translation-nat/)). Kila nodi kamili inaweza kufanya kazi kama nodi ya uanzishaji mradi tu inapatikana kwa umma.
 
-Unapoanzisha nodi, inapaswa kurekodi [enode](/developers/docs/networking-layer/network-addresses/#enode) yako, ambayo ni kitambulisho cha umma ambacho wengine wanaweza kutumia kuungana na nodi yako.
+Unapoanzisha nodi inapaswa kuweka logi ya [enode](/developers/docs/networking-layer/network-addresses/#enode) yako, ambayo ni kitambulisho cha umma ambacho wengine wanaweza kutumia kuunganisha kwenye nodi yako.
 
-Enodi ni kawaida kuzaliwa upya juu ya kila kuanzisha upya, hivyo kuwa na uhakika wa kuangalia nyaraka mteja wako juu ya jinsi ya kuzalisha enode kudumu kwa bootnode yako.
+Enode kwa kawaida hutengenezwa upya kila inapoanzishwa tena, kwa hivyo hakikisha unaangalia nyaraka za mteja wako kuhusu jinsi ya kutengeneza enode ya kudumu kwa ajili ya nodi yako ya uanzishaji.
 
-Ili kuwa nzuri bootnode ni wazo nzuri ya kuongeza idadi ya juu ya wenzao ambayo inaweza kuungana na hayo. Kukimbia bootnode na wenzao wengi itaongeza mahitaji bandwidth kwa kiasi kikubwa.
+Ili kuwa nodi nzuri ya uanzishaji ni wazo zuri kuongeza idadi ya juu zaidi ya wenza wanaoweza kuunganishwa nayo. Kuendesha nodi ya uanzishaji yenye wenza wengi kutaongeza hitaji la kipimo data (bandwidth) kwa kiasi kikubwa.
 
-## Bootnodes zinazopatikana {#available-bootnodes}
+## Nodi za uanzishaji zinazopatikana {#available-bootnodes}
 
-Orodha ya bootnodes zilizojengewa ndani ya go-ethereum inaweza kupatikana [hapa](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Hizi bootnodes ni kudumishwa na Ethereum Msingi na go-ethereum timu.
+Orodha ya nodi za uanzishaji zilizojengewa ndani katika go-ethereum inaweza kupatikana [hapa](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Nodi hizi za uanzishaji zinasimamiwa na Taasisi ya Ethereum na timu ya go-ethereum.
 
-Kuna orodha nyingine ya bootnodes kudumishwa na kujitolea inapatikana. Tafadhali kuhakikisha daima ni pamoja na angalau moja rasmi bootnode, vinginevyo unaweza kuwa kupatwa na kushambuliwa.
+Kuna orodha nyingine za nodi za uanzishaji zinazosimamiwa na watu wa kujitolea zinazopatikana. Tafadhali hakikisha kila wakati unajumuisha angalau nodi moja rasmi ya uanzishaji, vinginevyo unaweza kufanyiwa shambulio la eclipse (eclipse attack).

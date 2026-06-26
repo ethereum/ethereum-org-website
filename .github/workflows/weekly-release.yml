@@ -1,0 +1,236 @@
+name: Weekly Release
+
+on:
+  schedule:
+    # Thursday 14:00 UTC year-round (11:00 ART; US/EU offsets shift with DST).
+    - cron: "0 14 * * 4"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: weekly-release
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Required: deploy PR must be authored by a bot token so downstream
+      # pull_request workflows fire.
+      GH_TOKEN: ${{ secrets.RELEASE_BOT_TOKEN }}
+    outputs:
+      skipped: ${{ steps.skip_check.outputs.skip }}
+      skip_reason: ${{ steps.skip_check.outputs.reason }}
+      pr_number: ${{ steps.capture_pr.outputs.number }}
+      pr_url: ${{ steps.capture_pr.outputs.url }}
+      version: ${{ steps.capture_pr.outputs.version }}
+      discord_message_id: ${{ steps.announce_prepared.outputs.message_id }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.RELEASE_BOT_TOKEN }}
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Skip — is an open deploy PR already there?
+        id: skip_check
+        run: |
+          existing=$(gh pr list -B master -H staging -s open -S "Deploy" --json number -q ".[0].number")
+          if [[ -n "$existing" && "$existing" != "null" ]]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "reason=Open deploy PR #$existing already exists — leaving it alone." >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Announce skip
+        if: steps.skip_check.outputs.skip == 'true'
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
+          message: ":pause_button: Weekly release skipped — ${{ steps.skip_check.outputs.reason }}  •  <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>"
+
+      - name: Setup pnpm + node
+        if: steps.skip_check.outputs.skip == 'false'
+        uses: ./.github/actions/setup-pnpm-node
+
+      - name: Run /prepare-release
+        if: steps.skip_check.outputs.skip == 'false'
+        uses: anthropics/claude-code-action@v1
+        timeout-minutes: 25
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: |
+            --allowedTools "Read,Write,Bash(git:*),Bash(gh:*),Bash(./src/scripts/prepare-release.sh:*),Bash(pnpm:*),Bash(node:*),Bash(jq:*),Bash(cat:*),Bash(mkdir:*),Bash(rm:*)"
+          prompt: |
+            Execute /prepare-release per the instructions in
+            .claude/commands/prepare-release.md.
+
+            Important modifications for the CI context:
+            - Do NOT use AskUserQuestion — this is fully automated.
+            - No version flag is provided — analyze the draft release and
+              pick a version type yourself (the skill's Step 2 "If no flag
+              provided" path). DO NOT prompt; just decide and log your
+              reasoning. Bias toward --minor for substantive weeks and
+              --patch for low-activity weeks; never pick --major without a
+              clear stack/framework change.
+            - On any error, print the error and exit non-zero so the workflow
+              fails and the team is notified.
+
+      - name: Capture PR number / URL / version
+        if: steps.skip_check.outputs.skip == 'false'
+        id: capture_pr
+        run: |
+          pr_json=$(gh pr list -B master -H staging -s open -S "Deploy" \
+            --json number,url,title -L 1 -q ".[0]")
+          if [[ -z "$pr_json" || "$pr_json" == "null" ]]; then
+            echo "No deploy PR was created by /prepare-release."
+            exit 1
+          fi
+          number=$(echo "$pr_json" | jq -r '.number')
+          url=$(echo "$pr_json"    | jq -r '.url')
+          # Title shape: "Release candidate vX.Y.Z" or "Deploy vX.Y.Z"
+          version=$(echo "$pr_json" | jq -r '.title' | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+          echo "url=$url"       >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Announce prepared
+        id: announce_prepared
+        if: steps.skip_check.outputs.skip == 'false'
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
+          message: |
+            :rocket: **Weekly release prepared: ${{ steps.capture_pr.outputs.version }}**  •  ${{ steps.capture_pr.outputs.url }}
+            Waiting for preview deploy + CI before review…
+
+      - name: Announce prepare failure
+        if: failure()
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
+          message: |
+            :rotating_light: **Weekly release failed during `prepare`**  •  <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>
+            No deploy PR was created. Needs a human to look.
+
+  wait_and_review:
+    needs: prepare
+    if: needs.prepare.outputs.skipped == 'false'
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      # Checkout is needed so the claude-code-action below can read
+      # .claude/commands/review-release.md and so this job can use the
+      # ./.github/actions/discord-notify composite. Don't remove.
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Wait for all required checks
+        id: wait
+        uses: ./.github/actions/wait-for-pr-checks
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_number: ${{ needs.prepare.outputs.pr_number }}
+          required_checks: "Build website,Lint,netlify/ethereumorg/deploy-preview"
+          timeout_seconds: "3600"
+          poll_interval_seconds: "120"
+
+      - name: Announce CI failure
+        if: steps.wait.outputs.outcome == 'failure'
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
+          message_id: ${{ needs.prepare.outputs.discord_message_id }}
+          message: |
+            :x: **Release ${{ needs.prepare.outputs.version }} — CI failed on: ${{ steps.wait.outputs.failed_checks }}**  •  ${{ needs.prepare.outputs.pr_url }}
+            Needs a human to look. Skipping automated review.
+
+      - name: Announce timeout
+        if: steps.wait.outputs.outcome == 'timeout'
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
+          message_id: ${{ needs.prepare.outputs.discord_message_id }}
+          message: |
+            :hourglass: **Release ${{ needs.prepare.outputs.version }} — checks still not finished after 60min**  •  ${{ needs.prepare.outputs.pr_url }}
+            ${{ steps.wait.outputs.missing_checks && format('Required checks never posted: `{0}`', steps.wait.outputs.missing_checks) || '' }}
+            Handing off to a human. Skipping automated review.
+
+      - name: Run /review-release
+        if: steps.wait.outputs.outcome == 'success'
+        uses: anthropics/claude-code-action@v1
+        timeout-minutes: 20
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: |
+            --allowedTools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr comment:*),Bash(curl:*),Skill"
+          prompt: |
+            Execute /review-release for PR #${{ needs.prepare.outputs.pr_number }}
+            with the --post-comment flag, per .claude/commands/review-release.md.
+
+            Arguments: ${{ needs.prepare.outputs.pr_number }} --post-comment
+
+            CI context rules:
+            - Do NOT prompt with AskUserQuestion — fully automated.
+            - NEVER call `gh pr review --approve` or `--request-changes`. The
+              skill already forbids this; do not work around it.
+            - The full summary goes in the PR comment (--post-comment). Do NOT
+              write it anywhere else — Discord only gets a pass/fail line.
+
+      - name: Collect preview + Chromatic links
+        if: steps.wait.outputs.outcome == 'success'
+        id: links
+        run: |
+          rollup=$(gh pr view "${{ needs.prepare.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" --json statusCheckRollup \
+            -q '.statusCheckRollup')
+          # Chromatic posts both "UI Tests" (snapshot results) and "UI Review"
+          # (approval page) contexts per project. We want the UI Tests build
+          # links — NOT UI Review — and the build URL is on .targetUrl, not the
+          # GHA job's .detailsUrl (which points at the Actions log).
+          preview=$(echo "$rollup"    | jq -r '[.[] | select(.context=="netlify/ethereumorg/deploy-preview") | .targetUrl] | first // empty')
+          components=$(echo "$rollup" | jq -r '[.[] | select(.context=="UI Tests: ethereum-org-website") | .targetUrl] | first // empty')
+          pages=$(echo "$rollup"      | jq -r '[.[] | select(.context=="UI Tests: ethereum-org-website-pages") | .targetUrl] | first // empty')
+          echo "preview=$preview"       >> "$GITHUB_OUTPUT"
+          echo "components=$components" >> "$GITHUB_OUTPUT"
+          echo "pages=$pages"           >> "$GITHUB_OUTPUT"
+
+      - name: Announce ready for human
+        if: steps.wait.outputs.outcome == 'success'
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
+          message_id: ${{ needs.prepare.outputs.discord_message_id }}
+          message: |
+            :white_check_mark: **Release ${{ needs.prepare.outputs.version }} reviewed — ready for human approval + merge**  •  ${{ needs.prepare.outputs.pr_url }}
+            Automated review passed — full summary is in the PR comments.
+            ${{ steps.links.outputs.preview && format(':eyes: Preview: <{0}>', steps.links.outputs.preview) || '' }}
+            ${{ steps.links.outputs.components && format(':art: Chromatic (components): <{0}>', steps.links.outputs.components) || '' }}
+            ${{ steps.links.outputs.pages && format(':framed_picture: Chromatic (pages): <{0}>', steps.links.outputs.pages) || '' }}
+            Remaining manual steps: approve Chromatic, approve PR, merge.
+
+      - name: Announce wait-and-review failure
+        if: failure()
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
+          message_id: ${{ needs.prepare.outputs.discord_message_id }}
+          message: |
+            :rotating_light: **Weekly release failed during `wait_and_review`**  •  ${{ needs.prepare.outputs.pr_url }}
+            Run: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>
+            PR is open but automation couldn't finish reviewing it. Needs a human.

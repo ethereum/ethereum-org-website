@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/logging-events-smart-contracts/index.md",
+  "generatedAt": "2026-06-17T00:22:11.953Z",
+  "rootHash": "e9039eed4cc8",
+  "tree": {
+    "contentHash": "b12c74f2562c",
+    "anchorHash": "8022bd2093cd",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "5972dbd44df7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "8e11db287074",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "32c02afec79d"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d2d2f757e1aa"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "5ee998b10242"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6fe48db1b9ec"
+      },
+      "frontmatter:source": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f26cb6fb8ba7"
+      },
+      "frontmatter:sourceUrl": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e1a7e4489191"
+      },
+      "frontmatter:address": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "875b7ef46ba2"
+      },
+      "prose:1": {
+        "contentHash": "2d782cca506e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "862417b9e7c3",
+        "anchorHash": "f0b9dd1f74ff"
+      },
+      "prose:2": {
+        "contentHash": "07f9c960f690",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "events": {
+        "contentHash": "6bd1eada4459",
+        "anchorHash": "c1bea2181fac",
+        "labelHash": "8d14f6e72de8",
+        "children": {
+          "_label": {
+            "contentHash": "8d14f6e72de8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "056963ef5af1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a495df46e9b9"
+          },
+          "code-comment:4": {
+            "contentHash": "463f029beeed",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:5": {
+            "contentHash": "af3b534b989f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:6": {
+            "contentHash": "ed64848d59e5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:7": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8e486b4de564"
+          },
+          "prose:1": {
+            "contentHash": "a72408a4a223",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "b6ded3962883",
+            "anchorHash": "0cd0927388f3"
+          },
+          "prose:2": {
+            "contentHash": "6407733b30dd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "code-fence:2",
+          "prose:0",
+          "code-comment:4",
+          "code-comment:5",
+          "code-comment:6",
+          "code-fence:7",
+          "prose:1",
+          "image:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "frontmatter:published",
+      "frontmatter:source",
+      "frontmatter:sourceUrl",
+      "frontmatter:address",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "events"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

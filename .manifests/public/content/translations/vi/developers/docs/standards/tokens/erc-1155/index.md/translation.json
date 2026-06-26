@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "locale": "vi",
+  "translatedAt": "2026-06-17T23:14:22.247Z",
+  "englishManifestHash": "4db871a93931",
+  "placeholderOrder": [
+    "LINK-fb2e62",
+    "LINK-b5355b",
+    "LINK-2d106d",
+    "LINK-d0ae01",
+    "LINK-fb2e62",
+    "LINK-b5355b",
+    "LINK-6a4a6c",
+    "LINK-ca2095",
+    "LINK-760355",
+    "LINK-f0e324",
+    "LINK-e20a87",
+    "LINK-e113b6",
+    "CODE-b7f373",
+    "CODEBLOCK-da6820",
+    "CODE-822953",
+    "CODE-6c7011",
+    "CODE-fcd38a",
+    "CODE-3981ec",
+    "CODE-fcd38a",
+    "CODE-3981ec",
+    "CODE-fcd38a",
+    "CODE-3981ec",
+    "CODE-b7f373",
+    "CODE-27f576",
+    "CODE-27f576",
+    "CODE-82d62f",
+    "CODEBLOCK-fb6f25",
+    "CODE-6c9d95",
+    "CODE-43ad12",
+    "CODEBLOCK-aa02c7",
+    "CODEBLOCK-a44103",
+    "CODE-9e0065",
+    "CODE-ef3050",
+    "CODEBLOCK-781d74",
+    "LINK-f9977f",
+    "CODEBLOCK-f29050",
+    "LINK-d87602",
+    "CODE-fcd38a",
+    "CODE-fcd38a",
+    "CODE-3981ec",
+    "CODE-4f1aea",
+    "CODE-1790e9",
+    "CODE-4f1aea",
+    "CODE-1790e9",
+    "LINK-c450a7",
+    "LINK-7546f5",
+    "LINK-a1be67",
+    "LINK-c50943"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-da6820": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fb6f25": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-aa02c7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a44103": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-781d74": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f29050": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-b7f373": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFrom"
+      }
+    },
+    "CODE-822953": {
+      "type": "inline-code",
+      "values": {
+        "content": "ids=[3, 6, 13]"
+      }
+    },
+    "CODE-6c7011": {
+      "type": "inline-code",
+      "values": {
+        "content": "values=[100, 200, 5]"
+      }
+    },
+    "CODE-fcd38a": {
+      "type": "inline-code",
+      "values": {
+        "content": "_from"
+      }
+    },
+    "CODE-3981ec": {
+      "type": "inline-code",
+      "values": {
+        "content": "_to"
+      }
+    },
+    "CODE-27f576": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer"
+      }
+    },
+    "CODE-82d62f": {
+      "type": "inline-code",
+      "values": {
+        "content": "balanceOf"
+      }
+    },
+    "CODE-6c9d95": {
+      "type": "inline-code",
+      "values": {
+        "content": "_ids=[3, 6, 13]"
+      }
+    },
+    "CODE-43ad12": {
+      "type": "inline-code",
+      "values": {
+        "content": "_owners=[0xbeef..., 0x1337..., 0x1111...]"
+      }
+    },
+    "CODE-9e0065": {
+      "type": "inline-code",
+      "values": {
+        "content": "setApprovalForAll"
+      }
+    },
+    "CODE-ef3050": {
+      "type": "inline-code",
+      "values": {
+        "content": "isApprovedForAll"
+      }
+    },
+    "CODE-4f1aea": {
+      "type": "inline-code",
+      "values": {
+        "content": "_ids"
+      }
+    },
+    "CODE-1790e9": {
+      "type": "inline-code",
+      "values": {
+        "content": "_values"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-b5355b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-721/"
+      }
+    },
+    "LINK-2d106d": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1155"
+      }
+    },
+    "LINK-d0ae01": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/"
+      }
+    },
+    "LINK-6a4a6c": {
+      "type": "link",
+      "values": {
+        "url": "#batch-transfers"
+      }
+    },
+    "LINK-ca2095": {
+      "type": "link",
+      "values": {
+        "url": "#batch-balance"
+      }
+    },
+    "LINK-760355": {
+      "type": "link",
+      "values": {
+        "url": "#batch-approval"
+      }
+    },
+    "LINK-f0e324": {
+      "type": "link",
+      "values": {
+        "url": "#receive-hook"
+      }
+    },
+    "LINK-e20a87": {
+      "type": "link",
+      "values": {
+        "url": "#nft-support"
+      }
+    },
+    "LINK-e113b6": {
+      "type": "link",
+      "values": {
+        "url": "#safe-transfer-rule"
+      }
+    },
+    "LINK-f9977f": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-165"
+      }
+    },
+    "LINK-d87602": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1155#metadata"
+      }
+    },
+    "LINK-c450a7": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1155"
+      }
+    },
+    "LINK-7546f5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/5.x/erc1155"
+      }
+    },
+    "LINK-a1be67": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/enjin/erc-1155"
+      }
+    },
+    "LINK-c50943": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/reference/nft-api-quickstart"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:14:22.247Z",
+      "status": "success"
+    }
+  }
+}

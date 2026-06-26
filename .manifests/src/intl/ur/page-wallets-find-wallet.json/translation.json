@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-04-30T20:55:21.732Z",
+  "englishManifestHash": "4cf44ce23966",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "HTML-TAG-1"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/contributing/adding-wallets/"
+      }
+    },
+    "HTML-TAG-1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet",
+        "target": "_blank"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-30T20:55:21.732Z",
+      "status": "success"
+    }
+  }
+}

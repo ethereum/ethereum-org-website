@@ -1,43 +1,41 @@
 ---
-title: "Tajny wybór lidera"
-description: "Wyjaśnienie, w jaki sposób tajny wybór lidera może pomóc chronić walidatory przed atakami"
+title: Tajny wybór lidera
+description: Wyjaśnienie, w jaki sposób tajny wybór lidera może pomóc chronić walidatorów przed atakami
 lang: pl
 summaryPoints:
-  - Adres IP proponenta bloków może być znany z wyprzedzeniem, co czyni go podatnym na ataki
-  - Tajny wybór lidera ukrywa tożsamość walidatorów, dzięki czemu nie są oni znani z wyprzedzeniem
+  - Adres IP proponujących blok może być znany z wyprzedzeniem, co czyni ich podatnymi na ataki
+  - Tajny wybór lidera ukrywa tożsamość walidatorów, dzięki czemu nie można ich poznać z wyprzedzeniem
   - Rozszerzeniem tego pomysłu jest losowy wybór walidatora w każdym slocie.
 ---
 
-# Tajny wybór lidera {#single-secret-leader-election}
+W dzisiejszym mechanizmie konsensusu opartym na [dowodzie stawki (PoS)](/developers/docs/consensus-mechanisms/pos), lista nadchodzących proponujących blok jest publiczna i możliwe jest zmapowanie ich adresów IP. Oznacza to, że atakujący mogliby zidentyfikować, którzy walidatorzy mają zaproponować blok, i obrać ich za cel ataku typu odmowa usługi (DOS), co uniemożliwiłoby im zaproponowanie bloku na czas.
 
-W dzisiejszym mechanizmie konsensusu opartym na [dowodzie stawki](/developers/docs/consensus-mechanisms/pos) lista nadchodzących proponentów bloków jest publiczna i możliwe jest mapowanie ich adresów IP. Oznacza to, że atakujący mogą zidentyfikować, które walidatory będą proponować blok i zaatakować je za pomocą ataku blokady usług (DOS), który uniemożliwi im zaproponowanie bloku na czas.
+Mogłoby to stworzyć atakującemu okazję do osiągnięcia zysku. Na przykład proponujący blok wybrany dla slotu `n+1` mógłby przeprowadzić atak DOS na proponującego w slocie `n`, aby ten stracił swoją szansę na zaproponowanie bloku. Pozwoliłoby to atakującemu proponującemu blok na wydobycie MEV z obu slotów lub przejęcie wszystkich transakcji, które powinny zostać podzielone na dwa bloki, i zamiast tego umieszczenie ich wszystkich w jednym, zyskując wszystkie powiązane opłaty. Prawdopodobnie dotknie to domowych walidatorów bardziej niż zaawansowanych walidatorów instytucjonalnych, którzy mogą stosować bardziej zaawansowane metody ochrony przed atakami DOS, i w związku z tym może stanowić siłę centralizującą.
 
-Może to stworzyć okazję dla atakującego do osiągnięcia korzyści. Na przykład proponent bloku wybrany dla slotu `n+1` mógłby przeprowadzić atak DOS na proponenta w slocie `n`, aby ten stracił możliwość zaproponowania bloku. Umożliwiłoby to atakującemu proponentowi bloku wyodrębnienie MEV z obu slotów lub przejęcie wszystkich transakcji, które powinny zostać podzielone na dwa bloki i zamiast tego zawarcie ich wszystkich w jednym, wraz z uzyskaniem wszelkich powiązanych opłat. Prawdopodobnie wpływa to bardziej na walidatory domowe niż na wyrafinowane instytucjonalne walidatory, które mogą korzystać z bardziej zaawansowanych metod ochrony przed atakami DOS, a zatem mogą być siłą centralizującą.
+Istnieje kilka rozwiązań tego problemu. Jednym z nich jest [technologia rozproszonych walidatorów (DVT)](https://github.com/ethereum/distributed-validator-specs), która ma na celu rozdzielenie różnych zadań związanych z uruchomieniem walidatora na wiele maszyn, z zachowaniem redundancji, dzięki czemu atakującemu znacznie trudniej jest zapobiec zaproponowaniu bloku w danym slocie. Jednak najbardziej solidnym rozwiązaniem jest **pojedynczy tajny wybór lidera (SSLE)**.
 
-Jest kilka rozwiązań tego problemu. Jednym z rozwiązań jest [technologia rozproszonego walidatora (Distributed Validator Technology)](https://github.com/ethereum/distributed-validator-specs), której celem jest rozłożenie różnych zadań związanych z uruchamianiem walidatora na wiele maszyn, z nadmiarowością, tak aby atakującemu było znacznie trudniej uniemożliwić zaproponowanie bloku w danym slocie. Jednak najbardziej niezawodnym rozwiązaniem jest **tajny wybór pojedynczego lidera (SSLE)**.
+## Pojedynczy tajny wybór lidera {#secret-leader-election}
 
-## Tajny wybór pojedynczego lidera {#secret-leader-election}
+W SSLE wykorzystywana jest sprytna kryptografia, aby zapewnić, że tylko wybrany walidator wie, że został wybrany. Działa to w ten sposób, że każdy walidator przesyła zobowiązanie do wspólnego sekretu. Zobowiązania są tasowane i rekonfigurowane tak, aby nikt nie mógł przypisać zobowiązań do walidatorów, ale każdy walidator wie, które zobowiązanie należy do niego. Następnie jedno zobowiązanie jest wybierane losowo. Jeśli walidator wykryje, że wybrano jego zobowiązanie, wie, że nadeszła jego kolej na zaproponowanie bloku.
 
-W SSLE wykorzystywana jest sprytna kryptografia, aby zapewnić, że tylko wybrany walidator wie, że został wybrany. Działa to w taki sposób, że każdy walidator składa zobowiązanie do tajemnicy, którą wszyscy dzielą. Zobowiązania są przemieszane i ponownie konfigurowane, aby nikt nie mógł mapować zobowiązań do walidatorów, ale każdy walidator wie, które zobowiązanie należy do niego. Następnie losowo wybierane jest jedno zobowiązanie. Jeśli walidator wykryje, że jego zobowiązanie zostało wybrane, wie, że nadeszła jego kolej na zaproponowanie bloku.
+Wiodąca implementacja tego pomysłu nosi nazwę [Whisk](https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763). Działa ona w następujący sposób:
 
-Wiodącą implementacją tego pomysłu jest projekt o nazwie [Whisk](https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763). Która działa w następujący sposób:
+1. Walidatorzy zobowiązują się do wspólnego sekretu. Schemat zobowiązania jest zaprojektowany tak, aby można go było powiązać z tożsamością walidatora, ale także zrandomizować, aby żadna strona trzecia nie mogła odtworzyć powiązania i połączyć konkretnego zobowiązania z konkretnym walidatorem.
+2. Na początku epoki wybierany jest losowy zestaw walidatorów do próbkowania zobowiązań od 16 384 walidatorów przy użyciu RANDAO.
+3. Przez następne 8182 sloty (1 dzień) proponujący blok tasują i randomizują podzbiór zobowiązań, używając własnej prywatnej entropii.
+4. Po zakończeniu tasowania RANDAO jest używane do utworzenia uporządkowanej listy zobowiązań. Lista ta jest mapowana na sloty Ethereum.
+5. Walidatorzy widzą, że ich zobowiązanie jest przypisane do konkretnego slotu, a kiedy ten slot nadchodzi, proponują blok.
+6. Kroki te są powtarzane, aby przypisanie zobowiązań do slotów zawsze znacznie wyprzedzało obecny slot.
 
-1. Walidatory zobowiązują się do wspólnej tajemnicy. Schemat zobowiązania jest zaprojektowany w taki sposób, aby można go było powiązać z tożsamością walidatora, ale jest także losowy, tak aby żadna strona trzecia nie mogła dokonać inżynierii wstecznej powiązania i połączyć określonego zobowiązania z określonym walidatorem.
-2. Na początku każdej epoki, losowy zestaw walidatorów jest wybierany do próbkowania zobowiązań od 16.384 walidatorów przy użyciu RANDAO.
-3. Przez następne 8182 sloty (1 dzień) proponenci bloków mieszają i losują podzbiór zobowiązań przy użyciu własnej prywatnej entropii.
-4. Po zakończeniu mieszania, RANDAO jest używane do utworzenia uporządkowanej listy zobowiązań. Ta lista jest mapowana do slotów Ethereum.
-5. Walidatory widzą, że ich zobowiązanie jest przypisane do określonego slotu, a gdy ten slot nadejdzie, proponują blok.
-6. Powtórz te kroki, aby przypisanie zobowiązań do slotów zawsze znacznie wyprzedzało bieżący slot.
-
-Dzięki temu atakujący nie wiedzą z wyprzedzeniem, który konkretny walidator będzie proponował następny blok, co zapobiega możliwości ataków DOS.
+Zapobiega to wcześniejszemu poznaniu przez atakujących, który konkretnie walidator zaproponuje następny blok, uniemożliwiając przeprowadzanie ataków DOS.
 
 ## Tajny wybór niepojedynczego lidera (SnSLE) {#secret-non-single-leader-election}
 
-Istnieje również osobna propozycja, której celem jest stworzenie scenariusza, w którym walidatorzy mają losową szansę na zaproponowanie bloku w każdym slocie, podobnie jak decydowano o propozycji bloku w ramach dowodu pracy, znana jako **tajny wybór niepojedynczego lidera (SnSLE)**. Jednym z prostych sposobów na to jest wykorzystanie funkcji RANDAO używanej do losowego wybierania walidatorów w obecnym protokole. Założenie RANDAO polega na tym, że wystarczająco losowa liczba jest generowana poprzez mieszanie hashów przesłanych przez wiele niezależnych walidatorów. W SnSLE te hashe mogą służyć do wyboru następnego proponenta bloku, na przykład poprzez wybór hashu o najniższej wartości. Zakres prawidłowych hashów można ograniczyć, aby dostosować prawdopodobieństwo wyboru poszczególnych walidatorów w każdym slocie. Stwierdzając, że hasz musi być mniejszy niż `2^256 * 5 / N`, gdzie `N` = liczba aktywnych walidatorów, szansa na wybranie dowolnego pojedynczego walidatora w każdym slocie wynosiłaby `5/N`. W tym przykładzie istniałoby 99,3% szans na to, że co najmniej jeden proponent wygeneruje prawidłowy hash w każdym slocie.
+Istnieje również osobna propozycja, która ma na celu stworzenie scenariusza, w którym każdy z walidatorów ma losową szansę na zaproponowanie bloku w każdym slocie, podobnie jak propozycja bloku była rozstrzygana w ramach dowodu pracy (PoW), znana jako **tajny wybór niepojedynczego lidera (SnSLE)**. Jednym z prostych sposobów na osiągnięcie tego jest wykorzystanie funkcji RANDAO używanej do losowego wyboru walidatorów w dzisiejszym protokole. Idea RANDAO polega na tym, że wystarczająco losowa liczba jest generowana poprzez mieszanie hashy przesłanych przez wielu niezależnych walidatorów. W SnSLE te hashe mogłyby zostać użyte do wyboru następnego proponującego blok, na przykład poprzez wybór hasha o najniższej wartości. Zakres prawidłowych hashy można by ograniczyć, aby dostosować prawdopodobieństwo wyboru poszczególnych walidatorów w każdym slocie. Zakładając, że hash musi być mniejszy niż `2^256 * 5 / N`, gdzie `N` = liczba aktywnych walidatorów, szansa na wybranie dowolnego pojedynczego walidatora w każdym slocie wynosiłaby `5/N`. W tym przykładzie istniałoby 99,3% szans na to, że co najmniej jeden proponujący wygeneruje prawidłowy hash w każdym slocie.
 
-## Aktualny postęp {#current-progress}
+## Obecny postęp {#current-progress}
 
-SSLE i SnSLE wciąż znajdują się w fazie badań. Nie ma jeszcze ostatecznej specyfikacji dla żadnego z tych pomysłów. SSLE i SnSLE to konkurencyjne propozycje, których nie można wdrożyć jednocześnie. Przed wdrożeniem wymagają one dalszych badań i rozwoju, prototypowania i wdrażania w publicznych sieciach testowych.
+Zarówno SSLE, jak i SnSLE znajdują się w fazie badań. Nie ma jeszcze sfinalizowanej specyfikacji dla żadnego z tych pomysłów. SSLE i SnSLE to konkurujące ze sobą propozycje, których nie można wdrożyć jednocześnie. Przed wydaniem wymagają one więcej badań i rozwoju, prototypowania oraz wdrożenia w publicznych sieciach testowych.
 
 ## Dalsza lektura {#further-reading}
 

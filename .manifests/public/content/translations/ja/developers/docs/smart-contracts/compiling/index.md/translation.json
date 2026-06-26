@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-19T19:09:46.254Z",
+  "englishManifestHash": "49c9e77d7e68",
+  "placeholderOrder": [
+    "LINK-adc8d3",
+    "LINK-345e6c",
+    "LINK-6c4cfe",
+    "CODEBLOCK-517331",
+    "CODEBLOCK-0caab4",
+    "LINK-162537",
+    "LINK-94ccbe",
+    "CODEBLOCK-0fd443",
+    "LINK-aea4f6",
+    "LINK-eb05f2",
+    "LINK-345e6c"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-517331": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0caab4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0fd443": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-345e6c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-162537": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/opcodes/"
+      }
+    },
+    "LINK-94ccbe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/javascript/"
+      }
+    },
+    "LINK-aea4f6": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html"
+      }
+    },
+    "LINK-eb05f2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/javascript/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T19:09:46.254Z",
+      "status": "success"
+    }
+  }
+}

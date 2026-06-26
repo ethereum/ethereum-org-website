@@ -1,0 +1,359 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-17T21:34:09.266Z",
+  "englishManifestHash": "4181866ef405",
+  "placeholderOrder": [
+    "LINK-7dcf0c",
+    "LINK-a21a82",
+    "LINK-ded7e7",
+    "LINK-42ed4e",
+    "LINK-53691e",
+    "LINK-3abf2f",
+    "LINK-173676",
+    "LINK-0dcc8a",
+    "LINK-6e2c85",
+    "LINK-ebb665",
+    "LINK-9f78db",
+    "LINK-3e566b",
+    "LINK-65179d",
+    "LINK-63467e",
+    "LINK-76550b",
+    "LINK-2b836a",
+    "LINK-9e5295",
+    "LINK-dfe421",
+    "LINK-021601",
+    "LINK-4095b3",
+    "LINK-bb0dfc",
+    "LINK-e08b8d",
+    "LINK-cbdd78",
+    "LINK-71b3fd",
+    "LINK-d652a4",
+    "LINK-a2d2d7",
+    "LINK-74b3ba",
+    "LINK-975d39",
+    "LINK-799393",
+    "LINK-a4d8c4",
+    "LINK-670c60",
+    "LINK-aea0ef",
+    "LINK-addf9b",
+    "LINK-7f11aa",
+    "LINK-d5992a",
+    "LINK-2d1512",
+    "LINK-121d1a",
+    "LINK-4b05d3",
+    "LINK-91910c",
+    "LINK-157ce6",
+    "LINK-c07959",
+    "LINK-f93eca",
+    "LINK-6cc078",
+    "LINK-dd8f7b",
+    "LINK-9fabeb",
+    "LINK-d70f63",
+    "LINK-374fe4",
+    "LINK-5d610c",
+    "LINK-601859"
+  ],
+  "placeholderMap": {
+    "LINK-7dcf0c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#attestation"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-ded7e7": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#zk-proof"
+      }
+    },
+    "LINK-42ed4e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#anti-sybil"
+      }
+    },
+    "LINK-53691e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#nft"
+      }
+    },
+    "LINK-3abf2f": {
+      "type": "link",
+      "values": {
+        "url": "https://siwe.xyz/"
+      }
+    },
+    "LINK-173676": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Know_your_customer"
+      }
+    },
+    "LINK-0dcc8a": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#quadratic-voting"
+      }
+    },
+    "LINK-6e2c85": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#sybil-attack"
+      }
+    },
+    "LINK-ebb665": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/"
+      }
+    },
+    "LINK-9f78db": {
+      "type": "link",
+      "values": {
+        "url": "/zero-knowledge-proofs/"
+      }
+    },
+    "LINK-3e566b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878"
+      }
+    },
+    "LINK-65179d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.blockchain-council.org/blockchain/bhutan-uses-blockchain-in-digital-id-project/"
+      }
+    },
+    "LINK-63467e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878"
+      }
+    },
+    "LINK-76550b": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#account"
+      }
+    },
+    "LINK-2b836a": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#blockchain"
+      }
+    },
+    "LINK-9e5295": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#peer-to-peer-network"
+      }
+    },
+    "LINK-dfe421": {
+      "type": "link",
+      "values": {
+        "url": "https://w3c-ccg.github.io/did-primer/"
+      }
+    },
+    "LINK-021601": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#public-key"
+      }
+    },
+    "LINK-4095b3": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#private-key"
+      }
+    },
+    "LINK-bb0dfc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#cryptography"
+      }
+    },
+    "LINK-e08b8d": {
+      "type": "link",
+      "values": {
+        "url": "https://andersbrownworth.com/blockchain/public-private-keys/"
+      }
+    },
+    "LINK-cbdd78": {
+      "type": "link",
+      "values": {
+        "url": "https://www.w3.org/TR/vc-data-model/"
+      }
+    },
+    "LINK-71b3fd": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/JSON_Web_Token"
+      }
+    },
+    "LINK-d652a4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/storage/"
+      }
+    },
+    "LINK-a2d2d7": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#hash"
+      }
+    },
+    "LINK-74b3ba": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-975d39": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2022/01/26/soulbound.html"
+      }
+    },
+    "LINK-799393": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#nft"
+      }
+    },
+    "LINK-a4d8c4": {
+      "type": "link",
+      "values": {
+        "url": "https://ens.domains/"
+      }
+    },
+    "LINK-670c60": {
+      "type": "link",
+      "values": {
+        "url": "https://siwe.xyz/"
+      }
+    },
+    "LINK-aea0ef": {
+      "type": "link",
+      "values": {
+        "url": "https://www.spruceid.com/"
+      }
+    },
+    "LINK-addf9b": {
+      "type": "link",
+      "values": {
+        "url": "https://attest.org/"
+      }
+    },
+    "LINK-7f11aa": {
+      "type": "link",
+      "values": {
+        "url": "https://www.proofofhumanity.id"
+      }
+    },
+    "LINK-d5992a": {
+      "type": "link",
+      "values": {
+        "url": "https://veramo.io/"
+      }
+    },
+    "LINK-2d1512": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.net/blockchain-use-cases/digital-identity/"
+      }
+    },
+    "LINK-121d1a": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/"
+      }
+    },
+    "LINK-4b05d3": {
+      "type": "link",
+      "values": {
+        "url": "https://time.com/6142810/proof-of-humanity/"
+      }
+    },
+    "LINK-91910c": {
+      "type": "link",
+      "values": {
+        "url": "https://web3.hashnode.com/what-is-decentralized-identity"
+      }
+    },
+    "LINK-157ce6": {
+      "type": "link",
+      "values": {
+        "url": "https://walt.id/white-paper/digital-identity"
+      }
+    },
+    "LINK-c07959": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s"
+      }
+    },
+    "LINK-f93eca": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=t9gWZYJxk7c"
+      }
+    },
+    "LINK-6cc078": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=D3DbMFYGRoM"
+      }
+    },
+    "LINK-dd8f7b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=EZ_Bb6j87mg"
+      }
+    },
+    "LINK-9fabeb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=ce1IdSr-Kig"
+      }
+    },
+    "LINK-d70f63": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/erc725alliance"
+      }
+    },
+    "LINK-374fe4": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/ZUyG3mSXFD"
+      }
+    },
+    "LINK-5d610c": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/sYBUXpACh4"
+      }
+    },
+    "LINK-601859": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/AW8AgqJthZ"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T21:34:09.266Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-06-16T22:32:34.847Z",
+  "englishManifestHash": "5e107715b054",
+  "placeholderOrder": [
+    "LINK-c1c81e",
+    "IMAGE-9a9bf0",
+    "IMAGE-efce82",
+    "IMAGE-92250d",
+    "IMAGE-047b44",
+    "IMAGE-0d2931",
+    "IMAGE-259d95",
+    "IMAGE-5eceef",
+    "IMAGE-38e622",
+    "IMAGE-888d87",
+    "IMAGE-829283",
+    "IMAGE-9e08bf",
+    "IMAGE-e3640e",
+    "IMAGE-c8625f",
+    "IMAGE-4a7b0c",
+    "IMAGE-12782e",
+    "IMAGE-b6ff08",
+    "IMAGE-7eb126",
+    "LINK-4aaafb"
+  ],
+  "placeholderMap": {
+    "IMAGE-9a9bf0": {
+      "type": "image",
+      "values": {
+        "path": "./1.png"
+      }
+    },
+    "IMAGE-efce82": {
+      "type": "image",
+      "values": {
+        "path": "./2.png"
+      }
+    },
+    "IMAGE-92250d": {
+      "type": "image",
+      "values": {
+        "path": "./3.png"
+      }
+    },
+    "IMAGE-047b44": {
+      "type": "image",
+      "values": {
+        "path": "./4.png"
+      }
+    },
+    "IMAGE-0d2931": {
+      "type": "image",
+      "values": {
+        "path": "./5.png"
+      }
+    },
+    "IMAGE-259d95": {
+      "type": "image",
+      "values": {
+        "path": "./6.png"
+      }
+    },
+    "IMAGE-5eceef": {
+      "type": "image",
+      "values": {
+        "path": "./7.png"
+      }
+    },
+    "IMAGE-38e622": {
+      "type": "image",
+      "values": {
+        "path": "./8.png"
+      }
+    },
+    "IMAGE-888d87": {
+      "type": "image",
+      "values": {
+        "path": "./9.png"
+      }
+    },
+    "IMAGE-829283": {
+      "type": "image",
+      "values": {
+        "path": "./10.png"
+      }
+    },
+    "IMAGE-9e08bf": {
+      "type": "image",
+      "values": {
+        "path": "./11.png"
+      }
+    },
+    "IMAGE-e3640e": {
+      "type": "image",
+      "values": {
+        "path": "./12.png"
+      }
+    },
+    "IMAGE-c8625f": {
+      "type": "image",
+      "values": {
+        "path": "./13.png"
+      }
+    },
+    "IMAGE-4a7b0c": {
+      "type": "image",
+      "values": {
+        "path": "./14.png"
+      }
+    },
+    "IMAGE-12782e": {
+      "type": "image",
+      "values": {
+        "path": "./15.png"
+      }
+    },
+    "IMAGE-b6ff08": {
+      "type": "image",
+      "values": {
+        "path": "./16.png"
+      }
+    },
+    "IMAGE-7eb126": {
+      "type": "image",
+      "values": {
+        "path": "./17.png"
+      }
+    },
+    "LINK-c1c81e": {
+      "type": "link",
+      "values": {
+        "url": "https://lawsofux.com/jakobs-law/"
+      }
+    },
+    "LINK-4aaafb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.figma.com/community/file/1393606680816807382/dex-wireframes-kit"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:32:34.847Z",
+      "status": "success"
+    }
+  }
+}

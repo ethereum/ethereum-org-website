@@ -1,10 +1,9 @@
 ---
-title: Translation Program frequently asked questions (FAQ)
+title: Translating ethereum.org guide
+metaTitle: Translation Program frequently asked questions (FAQ)
 lang: en
 description: Frequently asked questions about the ethereum.org Translation Program
 ---
-
-# Translating ethereum.org guide {#translating-ethereum-guide}
 
 If you're new to the Translation Program and are hesitant to jump in, here are some FAQs that can help you begin. Use this guide to find answers to the most common queries.
 

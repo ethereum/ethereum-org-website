@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -6,9 +5,16 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { Lang, PageParams } from "@/lib/types"
+import type { ExtendedRollup, Lang, PageParams } from "@/lib/types"
 
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
+import Layer2NetworksTable from "@/components/Layer2NetworksTable"
+import MainArticle from "@/components/MainArticle"
+import NetworkMaturity from "@/components/NetworkMaturity"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
+import { Grid } from "@/components/ui/grid"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -18,7 +24,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 import { walletsData } from "@/data/wallets/wallet-data"
 
-import Layer2Networks from "./_components/networks"
 import Layer2NetworksPageJsonLD from "./page-jsonld"
 
 import {
@@ -28,8 +33,12 @@ import {
   getGrowThePieMasterData,
   getL2beatData,
 } from "@/lib/data"
+import heroImg from "@/public/images/heroes/layer-2-hub-hero.png"
+import Callout2Image from "@/public/images/layer-2/layer-2-walking.png"
+import Callout1Image from "@/public/images/man-and-dog-playing.png"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
@@ -116,7 +125,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2/networks")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const props = {
+  const layer2NetworksProps = {
     locale,
     layer2Data: layer2DataCompiled,
     mainnetData: {
@@ -128,13 +137,16 @@ const Page = async ({ params }: { params: PageParams }) => {
           wallet.supported_chains.includes("Ethereum Mainnet")
         )
         .map((wallet) => wallet.name),
-    },
+    } as ExtendedRollup,
   }
 
   const { contributors } = await getAppPageContributorInfo(
     "layer-2/networks",
     locale as Lang
   )
+
+  const t = await getTranslations("page-layer-2-networks")
+  const tCommon = await getTranslations("common")
 
   return (
     <I18nProvider locale={locale} messages={messages}>
@@ -143,24 +155,87 @@ const Page = async ({ params }: { params: PageParams }) => {
         layer2Data={layer2DataCompiled}
         contributors={contributors}
       />
-      <Suspense>
-        <Layer2Networks {...props} />
-      </Suspense>
+      <MainArticle className="relative flex flex-col">
+        <PageHero
+          breadcrumbs={{ slug: "/layer-2/networks", startDepth: 1 }}
+          heroImg={heroImg}
+          title={tCommon("nav-networks-explore-networks-label")}
+          description={t("page-layer-2-networks-hero-description")}
+        />
+
+        <Layer2NetworksTable {...layer2NetworksProps} />
+
+        <div id="more-advanced-cta" className="w-full px-8 py-9">
+          <div className="flex flex-col gap-8 bg-main-gradient px-12 py-14">
+            <h3>{t("page-layer-2-networks-more-advanced-title")}</h3>
+            <div className="flex max-w-[768px] flex-col gap-8">
+              <p>
+                {t("page-layer-2-networks-more-advanced-descripton-1")}{" "}
+                <strong>
+                  {t("page-layer-2-networks-more-advanced-descripton-2")}
+                </strong>
+              </p>
+              <p>{t("page-layer-2-networks-more-advanced-descripton-3")}</p>
+            </div>
+            <div className="flex flex-col gap-6 sm:flex-row">
+              <ButtonLink href="https://l2beat.com">
+                {t("page-layer-2-networks-more-advanced-link-1")}
+              </ButtonLink>
+              <ButtonLink href="https://growthepie.com">
+                {t("page-layer-2-networks-more-advanced-link-2")}
+              </ButtonLink>
+            </div>
+          </div>
+        </div>
+
+        <NetworkMaturity />
+
+        <Grid id="callout-cards" columns={2} size="wide" className="p-8">
+          <Callout
+            image={Callout1Image}
+            title={t("page-layer-2-networks-callout-1-title")}
+            description={t("page-layer-2-networks-callout-1-description")}
+          >
+            <ButtonLink
+              href="/layer-2/"
+              customEventOptions={{
+                eventCategory: "l2_networks",
+                eventAction: "button_click",
+                eventName: "bottom_hub",
+              }}
+            >
+              {tCommon("learn-more")}
+            </ButtonLink>
+          </Callout>
+          <Callout
+            image={Callout2Image}
+            title={t("page-layer-2-networks-callout-2-title")}
+            description={t("page-layer-2-networks-callout-2-description")}
+          >
+            <ButtonLink
+              href="/layer-2/learn/"
+              customEventOptions={{
+                eventCategory: "l2_networks",
+                eventAction: "button_click",
+                eventName: "bottom_learn",
+              }}
+            >
+              {tCommon("learn-more")}
+            </ButtonLink>
+          </Callout>
+        </Grid>
+      </MainArticle>
     </I18nProvider>
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-layer-2-networks",
-  })
+  const t = await getTranslations("page-layer-2-networks")
 
   return await getMetadata({
     locale,

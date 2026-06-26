@@ -16,15 +16,16 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 type CodeModalProps = {
   title: string
-  children?: ReactElement
+  children?: ReactElement<unknown>
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
 }
 
 const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
   const { t } = useTranslation()
-  const codeSnippet = (Children.toArray(children)[0] as ReactElement).props
-    .children
+  const codeSnippet = (
+    Children.toArray(children)[0] as ReactElement<{ children: string }>
+  ).props.children
 
   const { onCopy, hasCopied } = useClipboard()
 
@@ -32,7 +33,7 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetContent
         side="bottom"
-        className="flex h-[50vh] flex-col rounded-t-2xl"
+        className="flex h-[50vh] flex-col rounded-t-base"
       >
         <SheetHeader className="flex-row items-center justify-between space-y-0 p-4 ps-8 pt-6">
           <SheetTitle className="text-2xl font-bold">{title}</SheetTitle>
@@ -40,7 +41,7 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
           <Button
             variant="outline"
             onClick={() => onCopy(codeSnippet)}
-            className="absolute right-8 top-28" // Force right, code always LTR
+            className="absolute top-28 right-8" // Force right, code always LTR
           >
             {hasCopied ? (
               <>

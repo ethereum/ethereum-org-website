@@ -1,0 +1,1349 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-18T21:37:17.601Z",
+  "englishManifestHash": "489301142099",
+  "placeholderOrder": [
+    "LINK-d5e12f",
+    "LINK-b79d2e",
+    "LINK-fea23b",
+    "LINK-5987aa",
+    "LINK-4af683",
+    "LINK-be4334",
+    "CODE-b98cc3",
+    "CODE-4a479d",
+    "CODE-cb23f6",
+    "CODE-4a479d",
+    "CODE-d3bc8c",
+    "CODE-4a479d",
+    "CODE-5a079d",
+    "CODE-4a479d",
+    "CODE-5ca165",
+    "CODE-4a479d",
+    "CODE-5ca165",
+    "CODE-4a479d",
+    "CODE-124490",
+    "CODE-4a479d",
+    "CODE-124490",
+    "CODE-c4e96e",
+    "CODE-beeaa2",
+    "CODE-c4e96e",
+    "CODE-deb951",
+    "LINK-21be73",
+    "CODE-4a479d",
+    "CODE-1bda3e",
+    "CODE-071bfd",
+    "CODE-36fa26",
+    "LINK-06a531",
+    "CODE-2d7116",
+    "CODE-b84088",
+    "CODE-4a479d",
+    "CODE-efe1e5",
+    "CODE-4a479d",
+    "CODE-1c6424",
+    "CODE-4a479d",
+    "CODE-efe1e5",
+    "CODE-4a479d",
+    "CODE-1c6424",
+    "CODE-4a479d",
+    "CODE-920825",
+    "CODE-ca9781",
+    "CODE-619dfe",
+    "CODE-4a479d",
+    "CODE-adad54",
+    "CODE-4a479d",
+    "CODE-d1f8a6",
+    "CODE-4a479d",
+    "CODE-3d0c4e",
+    "CODE-ca9781",
+    "CODE-8d5679",
+    "CODE-3c4138",
+    "CODE-18fbd5",
+    "CODE-2d7116",
+    "CODE-de7d1b",
+    "CODE-2fa226",
+    "CODE-761298",
+    "CODE-2fa226",
+    "CODE-a15c0e",
+    "CODE-2fa226",
+    "CODE-a15c0e",
+    "LINK-7515a1",
+    "CODE-aac9df",
+    "CODE-4ccef5",
+    "CODE-cdb4ee",
+    "CODE-73ebe2",
+    "LINK-4cb6f0",
+    "CODE-a2593c",
+    "CODE-807f55",
+    "CODE-cdb4ee",
+    "CODE-c5f58d",
+    "CODE-cdb4ee",
+    "CODE-bfa3d0",
+    "CODE-cdb4ee",
+    "CODE-59114e",
+    "CODE-c66a8e",
+    "CODE-2929b7",
+    "CODE-c66a8e",
+    "CODE-cdb4ee",
+    "CODE-32f96f",
+    "LINK-2dee01",
+    "CODE-54d028",
+    "CODE-cdb4ee",
+    "CODE-cdb4ee",
+    "CODE-c05e80",
+    "LINK-2dee01",
+    "CODE-54d028",
+    "CODE-cdb4ee",
+    "CODE-cdb4ee",
+    "CODE-295f13",
+    "LINK-60e805",
+    "LINK-4cb6f0",
+    "CODE-a2593c",
+    "CODE-ebf716",
+    "LINK-b63daa",
+    "CODE-806175",
+    "CODE-cdb4ee",
+    "CODE-a2593c",
+    "CODE-cdb4ee",
+    "CODE-ccdcbe",
+    "LINK-2dee01",
+    "CODE-54d028",
+    "CODE-cdb4ee",
+    "LINK-4cb6f0",
+    "CODE-a2593c",
+    "CODE-d04b98",
+    "CODE-9de65c",
+    "CODE-8aca8d",
+    "CODE-cdb4ee",
+    "CODE-cc498d",
+    "CODE-cdb4ee",
+    "CODE-e8aac7",
+    "CODE-cdb4ee",
+    "CODE-97b5ad",
+    "CODE-cdb4ee",
+    "CODE-3cd159",
+    "CODE-cdb4ee",
+    "CODE-3323a1",
+    "CODE-cdb4ee",
+    "CODE-49db4d",
+    "LINK-cf119c",
+    "CODE-cdb4ee",
+    "CODE-ba698a",
+    "CODE-cdb4ee",
+    "CODE-a9cf05",
+    "CODE-c66a8e",
+    "CODE-456ac8",
+    "LINK-37f8a6",
+    "CODE-cdb4ee",
+    "CODE-8302be",
+    "LINK-003d29",
+    "CODE-f527e1",
+    "CODE-cdb4ee",
+    "LINK-318bad",
+    "CODE-adae1a",
+    "CODE-3e63de",
+    "CODE-adae1a",
+    "LINK-318bad",
+    "CODE-30df86",
+    "CODE-cdb4ee",
+    "LINK-318bad",
+    "CODE-30df86",
+    "CODE-cdb4ee",
+    "LINK-3cc17d",
+    "CODE-2c70e1",
+    "CODE-0568c0",
+    "LINK-e62910",
+    "CODE-f58e92",
+    "CODE-cdb4ee",
+    "CODE-061801",
+    "CODE-cdb4ee",
+    "CODE-061801",
+    "CODE-d8463b",
+    "CODE-4bd9a9",
+    "CODE-c129e9",
+    "CODE-cdb4ee",
+    "CODE-6e06cc",
+    "CODE-cdb4ee",
+    "CODE-89af09",
+    "CODE-cdb4ee",
+    "CODE-abbed3",
+    "CODE-cdb4ee",
+    "CODE-a5c3f6",
+    "CODE-2c70e1",
+    "CODE-1065e5",
+    "LINK-3dc2c6",
+    "CODE-f58e92",
+    "CODE-cdb4ee",
+    "LINK-3dc2c6",
+    "LINK-a7cdb2",
+    "CODE-54d028",
+    "CODE-cdb4ee",
+    "LINK-0bf5aa",
+    "CODE-cdb4ee",
+    "CODE-86768c",
+    "CODE-cdb4ee",
+    "CODE-86768c",
+    "CODE-cdb4ee",
+    "CODE-6cd79c",
+    "CODE-cdb4ee",
+    "CODE-4775fc",
+    "CODE-cdb4ee",
+    "CODE-1c06d8",
+    "CODE-cdb4ee",
+    "CODE-2478d4",
+    "CODE-cdb4ee",
+    "CODE-6818df",
+    "CODE-cdb4ee",
+    "CODE-86f792",
+    "CODE-cdb4ee",
+    "CODE-24d23a",
+    "CODE-cdb4ee",
+    "CODE-5950fa",
+    "CODE-cdb4ee",
+    "CODE-13ab73",
+    "CODE-cdb4ee",
+    "CODE-5a13cc",
+    "CODE-cdb4ee",
+    "CODE-2759cf",
+    "CODE-cdb4ee",
+    "CODE-825402",
+    "CODE-cdb4ee",
+    "CODE-2a18a7",
+    "CODE-cdb4ee",
+    "CODE-fd8486",
+    "CODE-cdb4ee",
+    "CODE-d085cf",
+    "CODE-cdb4ee",
+    "CODE-255c49",
+    "CODE-cdb4ee",
+    "CODE-a8b061",
+    "CODE-cdb4ee",
+    "CODE-f2a0c7",
+    "CODE-cdb4ee",
+    "CODE-f460b8",
+    "CODE-cdb4ee",
+    "CODE-cc1ee0",
+    "CODE-cdb4ee",
+    "CODE-faa701",
+    "CODE-cdb4ee",
+    "CODE-888063",
+    "CODE-cdb4ee",
+    "CODE-245f5c",
+    "CODE-cdb4ee",
+    "CODE-063dee",
+    "CODE-cdb4ee",
+    "CODE-4cd7ae",
+    "CODE-cdb4ee",
+    "CODE-a956b8",
+    "CODE-cdb4ee",
+    "CODE-6fd083",
+    "CODE-cdb4ee",
+    "CODE-56323f",
+    "CODE-cdb4ee",
+    "CODE-69ad13",
+    "CODE-cdb4ee",
+    "CODE-ca5b3e",
+    "CODE-cdb4ee",
+    "CODE-77951f",
+    "CODE-ca9781",
+    "CODE-672afd",
+    "CODE-42ba8e",
+    "CODE-8382ec",
+    "CODE-e6db4a",
+    "CODE-eda7ba",
+    "CODE-d2840f",
+    "CODE-c082bc",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-f292ce",
+    "CODE-dc1e9a",
+    "CODE-4a479d",
+    "CODE-22dbbc",
+    "CODE-af527c",
+    "CODE-5ee196",
+    "CODE-149aba",
+    "CODE-545c28",
+    "CODE-e25e51",
+    "CODE-23bc6f",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "CODE-0be39b",
+    "CODE-ee02e7",
+    "LINK-7b03d3",
+    "CODE-aac9df",
+    "CODE-cdb4ee",
+    "LINK-7b03d3",
+    "CODE-d6ceb9",
+    "CODE-cdb4ee",
+    "LINK-7b03d3",
+    "CODE-a3b24a",
+    "CODE-cdb4ee",
+    "LINK-7b03d3",
+    "CODE-551463",
+    "CODE-cdb4ee",
+    "LINK-7b03d3",
+    "CODE-a1668e",
+    "CODE-cdb4ee",
+    "LINK-82559c",
+    "CODE-309790",
+    "CODE-a2593c",
+    "LINK-cadfe7",
+    "CODE-aee408",
+    "LINK-cadfe7",
+    "CODE-97efc9",
+    "CODE-aee408",
+    "LINK-318bad",
+    "CODE-aac9df",
+    "CODE-cdb4ee",
+    "LINK-cadfe7",
+    "CODE-526631",
+    "CODE-aee408",
+    "LINK-82559c",
+    "CODE-9f01db",
+    "CODE-a2593c",
+    "LINK-cadfe7",
+    "CODE-526631",
+    "CODE-aee408",
+    "LINK-318bad",
+    "CODE-aac9df",
+    "CODE-cdb4ee",
+    "LINK-142326",
+    "LINK-da482d",
+    "LINK-527b72",
+    "CODE-a2593c",
+    "CODE-cdb4ee",
+    "CODE-a2593c"
+  ],
+  "placeholderMap": {
+    "CODE-b98cc3": {
+      "type": "inline-code",
+      "values": {
+        "content": "[shift] + scroll"
+      }
+    },
+    "CODE-4a479d": {
+      "type": "inline-code",
+      "values": {
+        "content": "a, b"
+      }
+    },
+    "CODE-cb23f6": {
+      "type": "inline-code",
+      "values": {
+        "content": "a + b"
+      }
+    },
+    "CODE-d3bc8c": {
+      "type": "inline-code",
+      "values": {
+        "content": "a * b"
+      }
+    },
+    "CODE-5a079d": {
+      "type": "inline-code",
+      "values": {
+        "content": "a - b"
+      }
+    },
+    "CODE-5ca165": {
+      "type": "inline-code",
+      "values": {
+        "content": "a // b"
+      }
+    },
+    "CODE-124490": {
+      "type": "inline-code",
+      "values": {
+        "content": "a % b"
+      }
+    },
+    "CODE-c4e96e": {
+      "type": "inline-code",
+      "values": {
+        "content": "a, b, N"
+      }
+    },
+    "CODE-beeaa2": {
+      "type": "inline-code",
+      "values": {
+        "content": "(a + b) % N"
+      }
+    },
+    "CODE-deb951": {
+      "type": "inline-code",
+      "values": {
+        "content": "(a * b) % N"
+      }
+    },
+    "CODE-1bda3e": {
+      "type": "inline-code",
+      "values": {
+        "content": "a ** b"
+      }
+    },
+    "CODE-071bfd": {
+      "type": "inline-code",
+      "values": {
+        "content": "b, x"
+      }
+    },
+    "CODE-36fa26": {
+      "type": "inline-code",
+      "values": {
+        "content": "SIGNEXTEND(x, b)"
+      }
+    },
+    "CODE-2d7116": {
+      "type": "inline-code",
+      "values": {
+        "content": "x"
+      }
+    },
+    "CODE-b84088": {
+      "type": "inline-code",
+      "values": {
+        "content": "(b+1)"
+      }
+    },
+    "CODE-efe1e5": {
+      "type": "inline-code",
+      "values": {
+        "content": "a < b"
+      }
+    },
+    "CODE-1c6424": {
+      "type": "inline-code",
+      "values": {
+        "content": "a > b"
+      }
+    },
+    "CODE-920825": {
+      "type": "inline-code",
+      "values": {
+        "content": "a == b"
+      }
+    },
+    "CODE-ca9781": {
+      "type": "inline-code",
+      "values": {
+        "content": "a"
+      }
+    },
+    "CODE-619dfe": {
+      "type": "inline-code",
+      "values": {
+        "content": "a == 0"
+      }
+    },
+    "CODE-adad54": {
+      "type": "inline-code",
+      "values": {
+        "content": "a && b"
+      }
+    },
+    "CODE-d1f8a6": {
+      "type": "inline-code",
+      "values": {
+        "content": "a \\|\\| b"
+      }
+    },
+    "CODE-3d0c4e": {
+      "type": "inline-code",
+      "values": {
+        "content": "a ^ b"
+      }
+    },
+    "CODE-8d5679": {
+      "type": "inline-code",
+      "values": {
+        "content": "~a"
+      }
+    },
+    "CODE-3c4138": {
+      "type": "inline-code",
+      "values": {
+        "content": "i, x"
+      }
+    },
+    "CODE-18fbd5": {
+      "type": "inline-code",
+      "values": {
+        "content": "(x >> (248 - i * 8)) && 0xFF"
+      }
+    },
+    "CODE-de7d1b": {
+      "type": "inline-code",
+      "values": {
+        "content": "i"
+      }
+    },
+    "CODE-2fa226": {
+      "type": "inline-code",
+      "values": {
+        "content": "shift, val"
+      }
+    },
+    "CODE-761298": {
+      "type": "inline-code",
+      "values": {
+        "content": "val << shift"
+      }
+    },
+    "CODE-a15c0e": {
+      "type": "inline-code",
+      "values": {
+        "content": "val >> shift"
+      }
+    },
+    "CODE-aac9df": {
+      "type": "inline-code",
+      "values": {
+        "content": "ost, len"
+      }
+    },
+    "CODE-4ccef5": {
+      "type": "inline-code",
+      "values": {
+        "content": "keccak256(mem[ost:ost+len-1])"
+      }
+    },
+    "CODE-cdb4ee": {
+      "type": "inline-code",
+      "values": {
+        "content": "."
+      }
+    },
+    "CODE-73ebe2": {
+      "type": "inline-code",
+      "values": {
+        "content": "address(this)"
+      }
+    },
+    "CODE-a2593c": {
+      "type": "inline-code",
+      "values": {
+        "content": "addr"
+      }
+    },
+    "CODE-807f55": {
+      "type": "inline-code",
+      "values": {
+        "content": "addr.balance"
+      }
+    },
+    "CODE-c5f58d": {
+      "type": "inline-code",
+      "values": {
+        "content": "tx.origin"
+      }
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-59114e": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.value"
+      }
+    },
+    "CODE-c66a8e": {
+      "type": "inline-code",
+      "values": {
+        "content": "idx"
+      }
+    },
+    "CODE-2929b7": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.data[idx:idx+32]"
+      }
+    },
+    "CODE-32f96f": {
+      "type": "inline-code",
+      "values": {
+        "content": "len(msg.data)"
+      }
+    },
+    "CODE-54d028": {
+      "type": "inline-code",
+      "values": {
+        "content": "dstOst, ost, len"
+      }
+    },
+    "CODE-c05e80": {
+      "type": "inline-code",
+      "values": {
+        "content": "len(this.code)"
+      }
+    },
+    "CODE-295f13": {
+      "type": "inline-code",
+      "values": {
+        "content": "tx.gasprice"
+      }
+    },
+    "CODE-ebf716": {
+      "type": "inline-code",
+      "values": {
+        "content": "len(addr.code)"
+      }
+    },
+    "CODE-806175": {
+      "type": "inline-code",
+      "values": {
+        "content": "addr, dstOst, ost, len"
+      }
+    },
+    "CODE-ccdcbe": {
+      "type": "inline-code",
+      "values": {
+        "content": "size"
+      }
+    },
+    "CODE-d04b98": {
+      "type": "inline-code",
+      "values": {
+        "content": "hash"
+      }
+    },
+    "CODE-9de65c": {
+      "type": "inline-code",
+      "values": {
+        "content": "blockNum"
+      }
+    },
+    "CODE-8aca8d": {
+      "type": "inline-code",
+      "values": {
+        "content": "blockHash(blockNum)"
+      }
+    },
+    "CODE-cc498d": {
+      "type": "inline-code",
+      "values": {
+        "content": "block.coinbase"
+      }
+    },
+    "CODE-e8aac7": {
+      "type": "inline-code",
+      "values": {
+        "content": "block.timestamp"
+      }
+    },
+    "CODE-97b5ad": {
+      "type": "inline-code",
+      "values": {
+        "content": "block.number"
+      }
+    },
+    "CODE-3cd159": {
+      "type": "inline-code",
+      "values": {
+        "content": "randomness beacon"
+      }
+    },
+    "CODE-3323a1": {
+      "type": "inline-code",
+      "values": {
+        "content": "block.gaslimit"
+      }
+    },
+    "CODE-49db4d": {
+      "type": "inline-code",
+      "values": {
+        "content": "chain_id"
+      }
+    },
+    "CODE-ba698a": {
+      "type": "inline-code",
+      "values": {
+        "content": "address(this).balance"
+      }
+    },
+    "CODE-a9cf05": {
+      "type": "inline-code",
+      "values": {
+        "content": "block.basefee"
+      }
+    },
+    "CODE-456ac8": {
+      "type": "inline-code",
+      "values": {
+        "content": "tx.blob_versioned_hashes[idx]"
+      }
+    },
+    "CODE-8302be": {
+      "type": "inline-code",
+      "values": {
+        "content": "block.blobbasefee"
+      }
+    },
+    "CODE-f527e1": {
+      "type": "inline-code",
+      "values": {
+        "content": "_anon"
+      }
+    },
+    "CODE-adae1a": {
+      "type": "inline-code",
+      "values": {
+        "content": "ost"
+      }
+    },
+    "CODE-3e63de": {
+      "type": "inline-code",
+      "values": {
+        "content": "mem[ost:ost+32]"
+      }
+    },
+    "CODE-30df86": {
+      "type": "inline-code",
+      "values": {
+        "content": "ost, val"
+      }
+    },
+    "CODE-2c70e1": {
+      "type": "inline-code",
+      "values": {
+        "content": "key"
+      }
+    },
+    "CODE-0568c0": {
+      "type": "inline-code",
+      "values": {
+        "content": "storage[key]"
+      }
+    },
+    "CODE-f58e92": {
+      "type": "inline-code",
+      "values": {
+        "content": "key, val"
+      }
+    },
+    "CODE-061801": {
+      "type": "inline-code",
+      "values": {
+        "content": "dst"
+      }
+    },
+    "CODE-4bd9a9": {
+      "type": "inline-code",
+      "values": {
+        "content": "$pc := dst"
+      }
+    },
+    "CODE-d8463b": {
+      "type": "inline-code",
+      "values": {
+        "content": "pc"
+      }
+    },
+    "CODE-c129e9": {
+      "type": "inline-code",
+      "values": {
+        "content": "dst, condition"
+      }
+    },
+    "CODE-6e06cc": {
+      "type": "inline-code",
+      "values": {
+        "content": "$pc := condition ? dst : $pc + 1"
+      }
+    },
+    "CODE-89af09": {
+      "type": "inline-code",
+      "values": {
+        "content": "$pc"
+      }
+    },
+    "CODE-abbed3": {
+      "type": "inline-code",
+      "values": {
+        "content": "len(mem)"
+      }
+    },
+    "CODE-a5c3f6": {
+      "type": "inline-code",
+      "values": {
+        "content": "gasRemaining"
+      }
+    },
+    "CODE-1065e5": {
+      "type": "inline-code",
+      "values": {
+        "content": "tstorage[key]"
+      }
+    },
+    "CODE-86768c": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint8"
+      }
+    },
+    "CODE-6cd79c": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint16"
+      }
+    },
+    "CODE-4775fc": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint24"
+      }
+    },
+    "CODE-1c06d8": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint32"
+      }
+    },
+    "CODE-2478d4": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint40"
+      }
+    },
+    "CODE-6818df": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint48"
+      }
+    },
+    "CODE-86f792": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint56"
+      }
+    },
+    "CODE-24d23a": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint64"
+      }
+    },
+    "CODE-5950fa": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint72"
+      }
+    },
+    "CODE-13ab73": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint80"
+      }
+    },
+    "CODE-5a13cc": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint88"
+      }
+    },
+    "CODE-2759cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint96"
+      }
+    },
+    "CODE-825402": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint104"
+      }
+    },
+    "CODE-2a18a7": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint112"
+      }
+    },
+    "CODE-fd8486": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint120"
+      }
+    },
+    "CODE-d085cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint128"
+      }
+    },
+    "CODE-255c49": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint136"
+      }
+    },
+    "CODE-a8b061": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint144"
+      }
+    },
+    "CODE-f2a0c7": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint152"
+      }
+    },
+    "CODE-f460b8": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint160"
+      }
+    },
+    "CODE-cc1ee0": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint168"
+      }
+    },
+    "CODE-faa701": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint176"
+      }
+    },
+    "CODE-888063": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint184"
+      }
+    },
+    "CODE-245f5c": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint192"
+      }
+    },
+    "CODE-063dee": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint200"
+      }
+    },
+    "CODE-4cd7ae": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint208"
+      }
+    },
+    "CODE-a956b8": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint216"
+      }
+    },
+    "CODE-6fd083": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint224"
+      }
+    },
+    "CODE-56323f": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint232"
+      }
+    },
+    "CODE-69ad13": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint240"
+      }
+    },
+    "CODE-ca5b3e": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint248"
+      }
+    },
+    "CODE-77951f": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint256"
+      }
+    },
+    "CODE-672afd": {
+      "type": "inline-code",
+      "values": {
+        "content": "a, a"
+      }
+    },
+    "CODE-42ba8e": {
+      "type": "inline-code",
+      "values": {
+        "content": "_, a"
+      }
+    },
+    "CODE-8382ec": {
+      "type": "inline-code",
+      "values": {
+        "content": "a, _, a"
+      }
+    },
+    "CODE-e6db4a": {
+      "type": "inline-code",
+      "values": {
+        "content": "_, _, a"
+      }
+    },
+    "CODE-eda7ba": {
+      "type": "inline-code",
+      "values": {
+        "content": "a, _, _, a"
+      }
+    },
+    "CODE-d2840f": {
+      "type": "inline-code",
+      "values": {
+        "content": "_, _, _, a"
+      }
+    },
+    "CODE-c082bc": {
+      "type": "inline-code",
+      "values": {
+        "content": "a, _, _, _, a"
+      }
+    },
+    "CODE-f292ce": {
+      "type": "inline-code",
+      "values": {
+        "content": "..., a"
+      }
+    },
+    "CODE-dc1e9a": {
+      "type": "inline-code",
+      "values": {
+        "content": "a, ..., a"
+      }
+    },
+    "CODE-22dbbc": {
+      "type": "inline-code",
+      "values": {
+        "content": "b, a"
+      }
+    },
+    "CODE-af527c": {
+      "type": "inline-code",
+      "values": {
+        "content": "a, _, b"
+      }
+    },
+    "CODE-5ee196": {
+      "type": "inline-code",
+      "values": {
+        "content": "b, _, a"
+      }
+    },
+    "CODE-149aba": {
+      "type": "inline-code",
+      "values": {
+        "content": "a, _, _, b"
+      }
+    },
+    "CODE-545c28": {
+      "type": "inline-code",
+      "values": {
+        "content": "b, _, _, a"
+      }
+    },
+    "CODE-e25e51": {
+      "type": "inline-code",
+      "values": {
+        "content": "a, _, _, _, b"
+      }
+    },
+    "CODE-23bc6f": {
+      "type": "inline-code",
+      "values": {
+        "content": "b, _, _, _, a"
+      }
+    },
+    "CODE-0be39b": {
+      "type": "inline-code",
+      "values": {
+        "content": "a, ..., b"
+      }
+    },
+    "CODE-ee02e7": {
+      "type": "inline-code",
+      "values": {
+        "content": "b, ..., a"
+      }
+    },
+    "CODE-d6ceb9": {
+      "type": "inline-code",
+      "values": {
+        "content": "ost, len, topic0"
+      }
+    },
+    "CODE-a3b24a": {
+      "type": "inline-code",
+      "values": {
+        "content": "ost, len, topic0, topic1"
+      }
+    },
+    "CODE-551463": {
+      "type": "inline-code",
+      "values": {
+        "content": "ost, len, topic0, topic1, topic2"
+      }
+    },
+    "CODE-a1668e": {
+      "type": "inline-code",
+      "values": {
+        "content": "ost, len, topic0, topic1, topic2, topic3"
+      }
+    },
+    "CODE-309790": {
+      "type": "inline-code",
+      "values": {
+        "content": "val, ost, len"
+      }
+    },
+    "CODE-aee408": {
+      "type": "inline-code",
+      "values": {
+        "content": "success"
+      }
+    },
+    "CODE-97efc9": {
+      "type": "inline-code",
+      "values": {
+        "content": "gas, addr, val, argOst, argLen, retOst, retLen"
+      }
+    },
+    "CODE-526631": {
+      "type": "inline-code",
+      "values": {
+        "content": "gas, addr, argOst, argLen, retOst, retLen"
+      }
+    },
+    "CODE-9f01db": {
+      "type": "inline-code",
+      "values": {
+        "content": "val, ost, len, salt"
+      }
+    },
+    "LINK-d5e12f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes"
+      }
+    },
+    "LINK-b79d2e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
+      }
+    },
+    "LINK-fea23b": {
+      "type": "link",
+      "values": {
+        "url": "https://jellopaper.org/evm/"
+      }
+    },
+    "LINK-5987aa": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/go-ethereum"
+      }
+    },
+    "LINK-4af683": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/"
+      }
+    },
+    "LINK-be4334": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md"
+      }
+    },
+    "LINK-21be73": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a1-exp"
+      }
+    },
+    "LINK-06a531": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Sign_extension"
+      }
+    },
+    "LINK-7515a1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a2-sha3"
+      }
+    },
+    "LINK-4cb6f0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a5-balance-extcodesize-extcodehash"
+      }
+    },
+    "LINK-2dee01": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a3-copy-operations"
+      }
+    },
+    "LINK-60e805": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1559#gasprice"
+      }
+    },
+    "LINK-b63daa": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a4-extcodecopy"
+      }
+    },
+    "LINK-cf119c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-155"
+      }
+    },
+    "LINK-37f8a6": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4844"
+      }
+    },
+    "LINK-003d29": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7516"
+      }
+    },
+    "LINK-318bad": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a0-1-memory-expansion"
+      }
+    },
+    "LINK-3cc17d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a6-sload"
+      }
+    },
+    "LINK-e62910": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a7-sstore"
+      }
+    },
+    "LINK-3dc2c6": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1153"
+      }
+    },
+    "LINK-a7cdb2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a0-1-memory-expansion"
+      }
+    },
+    "LINK-0bf5aa": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-5656"
+      }
+    },
+    "LINK-7b03d3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a8-log-operations"
+      }
+    },
+    "LINK-82559c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a9-create-operations"
+      }
+    },
+    "LINK-cadfe7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#aa-call-operations"
+      }
+    },
+    "LINK-142326": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#af-invalid"
+      }
+    },
+    "LINK-da482d": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-141"
+      }
+    },
+    "LINK-527b72": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wolflo/evm-opcodes/blob/main/gas.md#ab-selfdestruct"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:37:17.601Z",
+      "status": "success"
+    }
+  }
+}

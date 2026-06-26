@@ -1,14 +1,22 @@
 import { ChevronDown, ChevronRight } from "lucide-react"
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { Button, type ButtonVariantProps } from "../buttons/Button"
 import { HStack, VStack } from "../flex"
 
 const meta = {
-  title: "Atoms / Form / Buttons",
+  title: "UI / Button",
   component: Button,
   args: {
     children: "What is Ethereum?",
+  },
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "Action button. `variant`: `solid | outline | ghost | link`. `size`: `lg | md | sm`. `isSecondary` switches the text/border tone from primary to body color, but is a no-op on `solid` and `link`. Pass `asChild` to render as another element (e.g. anchor) while keeping the button styling.",
+      },
+    },
   },
 } satisfies Meta<typeof Button>
 
@@ -16,23 +24,127 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-const variants: ButtonVariantProps["variant"][] = [
+const VARIANTS: ButtonVariantProps["variant"][] = [
   "solid",
   "outline",
   "ghost",
   "link",
 ]
 
-export const StyleVariants: Story = {
+const SIZES: ButtonVariantProps["size"][] = ["lg", "md", "sm"]
+
+export const Default: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
+}
+
+export const Variants: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   render: (args) => (
-    <VStack className="gap-4">
-      {variants.map((variant) => (
+    <VStack className="items-start gap-4">
+      {VARIANTS.map((variant) => (
         <HStack key={variant} className="gap-4">
           <Button variant={variant} {...args} />
-          <Button disabled variant={variant} {...args} />
+          <Button variant={variant} disabled {...args} />
         </HStack>
       ))}
     </VStack>
+  ),
+}
+
+export const Sizes: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
+  render: (args) => (
+    <HStack className="items-center gap-4">
+      {SIZES.map((size) => (
+        <Button key={size} size={size} {...args} />
+      ))}
+    </HStack>
+  ),
+}
+
+export const SizeVariantMatrix: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story:
+          "Each variant rendered at each size. Use this to spot regressions across the matrix.",
+      },
+    },
+  },
+  render: (args) => (
+    <table className="border-separate border-spacing-3 text-xs">
+      <thead>
+        <tr>
+          <th className="text-left text-body-medium" />
+          {SIZES.map((size) => (
+            <th key={size} className="text-left text-body-medium">
+              {size}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {VARIANTS.map((variant) => (
+          <tr key={variant}>
+            <td className="pe-4 text-left text-body-medium">{variant}</td>
+            {SIZES.map((size) => (
+              <td key={size}>
+                <Button variant={variant} size={size} {...args} />
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  ),
+}
+
+export const IsSecondary: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story:
+          "`isSecondary` switches the primary tone to the body tone. No-op on `solid` and `link` variants -- they keep their canonical styling.",
+      },
+    },
+  },
+  render: (args) => (
+    <VStack className="items-start gap-4">
+      {VARIANTS.map((variant) => (
+        <HStack key={variant} className="gap-4">
+          <Button variant={variant} {...args}>
+            {variant}
+          </Button>
+          <Button variant={variant} isSecondary {...args}>
+            {variant} + isSecondary
+          </Button>
+        </HStack>
+      ))}
+    </VStack>
+  ),
+}
+
+export const AsChild: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story:
+          "`asChild` renders the button styling on the child element. Useful for wrapping non-button elements (anchors, custom components) without losing button styles.",
+      },
+    },
+  },
+  render: () => (
+    <HStack className="gap-4">
+      <Button asChild>
+        <a href="#asChild">Anchor as button</a>
+      </Button>
+      <Button variant="outline" asChild>
+        <a href="#asChild">Outline anchor</a>
+      </Button>
+    </HStack>
   ),
 }
 

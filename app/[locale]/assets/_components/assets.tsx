@@ -5,10 +5,11 @@ import { HTMLAttributes } from "react"
 import type { ChildOnlyProp } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { Center, Flex } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 
 // import efLogo from "@/public/images/ef-logo.png"
@@ -76,15 +77,15 @@ import wallet from "@/public/images/wallet.png"
 import whatIsEthereum from "@/public/images/what-is-ethereum.png"
 
 const Row = (props: ChildOnlyProp) => (
-  <div className="-mx-4 mb-8 grid grid-cols-fit-4" {...props} />
+  <Grid size="wide" fit className="-mx-4 mb-8" {...props} />
 )
 
 const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className="mb-6 mt-16 scroll-mt-24 leading-xs" {...props} />
+  <h2 className="mt-16 mb-6 scroll-mt-24 leading-xs" {...props} />
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <h3 className="mb-0 mt-10 leading-xs" {...props} />
+  <h3 className="mt-10 mb-0 leading-xs" {...props} />
 )
 
 const AssetsPage = () => {
@@ -106,6 +107,7 @@ const AssetsPage = () => {
               className="w-20"
               src={assetPageHeroImage}
               alt={t("page-assets-eth-diamond-gray")}
+              sizes="80px"
             />
           </Center>
           <Center>
@@ -509,7 +511,7 @@ const AssetsPage = () => {
           />
         </Row>
       </MainArticle>
-      <FeedbackCard />
+      <ContentFeedback />
     </Flex>
   )
 }

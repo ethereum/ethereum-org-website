@@ -76,7 +76,7 @@ Let's see how a Standard is so important to make things simple for us to inspect
 We just need the Contract Application Binary Interface (ABI) to create an interface to any ERC-20 Token. As you can
 see below we will use a simplified ABI, to make it a low friction example.
 
-#### Web3.py Example {#web3py-example}
+#### Web3.py Example {#web3py-example-2}
 
 First, make sure you have installed [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python library:
 
@@ -169,7 +169,7 @@ When ERC-20 tokens are sent to a smart contract that is not designed to handle E
 While it is not possible to prevent this issue with ERC-20 completely there are methods that would allow to significantly reduce the possibility of a tokens loss for the end user:
 
 - The most common problem is when a user sends tokens to the token contract address itself (e.g., USDT deposited to the address of USDT token contract). It is recommended to restrict `transfer(..)` function to revert such transfer attempts. Consider adding `require(_to != address(this));` check within the implementation of the `transfer(..)` function.
-- The `transfer(..)` function in general is not designed for depositing tokens to contracts. `approve(..) & transferFrom(..)` pattern is used to deposit ERC-20 tokens to contracts instead. It is possible to restrict the transfer function to disallow depositing tokens to any contracts with it, however it may break compatibility with contracts that assume tokens can be deposited to contracts with the `trasnfer(..)` function (e.g., Uniswap liquidity pools).
+- The `transfer(..)` function in general is not designed for depositing tokens to contracts. `approve(..) & transferFrom(..)` pattern is used to deposit ERC-20 tokens to contracts instead. It is possible to restrict the transfer function to disallow depositing tokens to any contracts with it, however it may break compatibility with contracts that assume tokens can be deposited to contracts with the `transfer(..)` function (e.g., Uniswap liquidity pools).
 - Always assume that ERC-20 tokens can end up in your contract even if your contract is not supposed to ever receive any. There is no way to prevent or reject accidental deposits on the recipients end. It is recommended to implement a function that would allow to extract accidentally deposited ERC-20 tokens.
 - Consider using alternative token standards.
 

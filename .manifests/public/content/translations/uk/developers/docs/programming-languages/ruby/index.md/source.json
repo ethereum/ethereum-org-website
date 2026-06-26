@@ -1,0 +1,430 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/programming-languages/ruby/index.md",
+  "generatedAt": "2026-06-16T23:04:37.011Z",
+  "rootHash": "1d4f511ca227",
+  "tree": {
+    "contentHash": "0ef529ec73f8",
+    "anchorHash": "7dfbd6977d24",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "3b93a0117250",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "2e495339ec46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:incomplete": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "fcbcf165908d"
+      },
+      "prose:0": {
+        "contentHash": "d14be4ecb007",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "getting-started-with-smart-contracts-and-solidity": {
+        "contentHash": "8fd04dae8aed",
+        "anchorHash": "a48afc0c5e36",
+        "labelHash": "7cd37d52b081",
+        "children": {
+          "_label": {
+            "contentHash": "7cd37d52b081",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "936640bc3455",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f8af7777bb8f",
+            "anchorHash": "da6930f1ec2d"
+          },
+          "prose:7": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d896c4bde8a6",
+            "anchorHash": "10260c8eaaaa"
+          },
+          "prose:8": {
+            "contentHash": "b220a64f849c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "f01579475e2d",
+            "anchorHash": "5458a066d411"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "9254611895b7",
+            "anchorHash": "7365a1c17c2a"
+          },
+          "prose:10": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "9ead8cce16b3",
+            "anchorHash": "a9c9e19634cc"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "bd76d1850071",
+            "anchorHash": "6586070dede3"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5"
+        ]
+      },
+      "beginner-articles": {
+        "contentHash": "c378b8dd55ba",
+        "anchorHash": "25b63a64bbc8",
+        "labelHash": "f28ba693d94f",
+        "children": {
+          "_label": {
+            "contentHash": "f28ba693d94f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "fd6d25806376",
+            "anchorHash": "0850a3cd1220"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "adc42a13cd20",
+            "anchorHash": "dd9dd41c4ade"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "7ca8888e95a3",
+            "anchorHash": "5a6285785d08"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "dfac43c56e32",
+            "anchorHash": "ffed87f3711e"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3"
+        ]
+      },
+      "intermediate-articles": {
+        "contentHash": "5bae9d2c4be0",
+        "anchorHash": "20d37e894d19",
+        "labelHash": "a2555da8e22a",
+        "children": {
+          "_label": {
+            "contentHash": "a2555da8e22a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "8b0afcc5432e",
+            "anchorHash": "e209b722a714"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "667e6f58a32b",
+            "anchorHash": "9e78c353856d"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "ruby-projects-and-tools": {
+        "contentHash": "00a3ad2e46a7",
+        "anchorHash": "96078a731a5b",
+        "labelHash": "e872de3035ec",
+        "children": {
+          "_label": {
+            "contentHash": "e872de3035ec",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "active": {
+            "contentHash": "0416898bd4c0",
+            "anchorHash": "dc40f5bfb26d",
+            "labelHash": "92340695899b",
+            "children": {
+              "_label": {
+                "contentHash": "92340695899b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:8": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "1b8f8731556a",
+                "anchorHash": "9dd36765ed4e"
+              },
+              "prose:9": {
+                "contentHash": "e9f48d59a1ae",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "5ada01c7d3b9",
+                "anchorHash": "079d63f3a55a"
+              },
+              "prose:10": {
+                "contentHash": "0f2ace746446",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "64f8caf2665d",
+                "anchorHash": "c615d9a55566"
+              },
+              "prose:11": {
+                "contentHash": "491bbccc762c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "4df3ad657216",
+                "anchorHash": "8a3af20197ee"
+              },
+              "prose:12": {
+                "contentHash": "85df8c5930c8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "fd30b6c309a5",
+                "anchorHash": "68690008d40c"
+              },
+              "prose:13": {
+                "contentHash": "0e470616da06",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "1c7d1db2c309",
+                "anchorHash": "155385e4dd60"
+              },
+              "prose:14": {
+                "contentHash": "0418d7de6634",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:6": {
+                "contentHash": "4f8e5159129a",
+                "anchorHash": "80f0b6791579"
+              },
+              "prose:15": {
+                "contentHash": "0bfa17a9abbf",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:7": {
+                "contentHash": "275bc0687ba9",
+                "anchorHash": "7fa695963f4d"
+              },
+              "prose:16": {
+                "contentHash": "a76762e28ecf",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:8",
+              "link:0",
+              "prose:9",
+              "link:1",
+              "prose:10",
+              "link:2",
+              "prose:11",
+              "link:3",
+              "prose:12",
+              "link:4",
+              "prose:13",
+              "link:5",
+              "prose:14",
+              "link:6",
+              "prose:15",
+              "link:7",
+              "prose:16"
+            ]
+          },
+          "archived--no-longer-maintained": {
+            "contentHash": "ec6ea4ceb576",
+            "anchorHash": "cf5dd7d91046",
+            "labelHash": "9614276913e2",
+            "children": {
+              "_label": {
+                "contentHash": "9614276913e2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:6": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "08866e2a7120",
+                "anchorHash": "599fe0b188d3"
+              },
+              "prose:7": {
+                "contentHash": "0c6a560a74b6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "387357a4959e",
+                "anchorHash": "5a11386b8571"
+              },
+              "prose:8": {
+                "contentHash": "299013ac0abf",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "7e920d2e872d",
+                "anchorHash": "2b7193d7f0ea"
+              },
+              "prose:9": {
+                "contentHash": "c4bab9b25fed",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "9035a5a579be",
+                "anchorHash": "2833b6a95464"
+              },
+              "prose:10": {
+                "contentHash": "72513bea763a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "537184ce5e0e",
+                "anchorHash": "05c6595d5b92"
+              },
+              "prose:11": {
+                "contentHash": "d61b6f391603",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "6d82dce82cc6",
+                "anchorHash": "10260c8eaaaa"
+              },
+              "prose:12": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:6",
+              "link:0",
+              "prose:7",
+              "link:1",
+              "prose:8",
+              "link:2",
+              "prose:9",
+              "link:3",
+              "prose:10",
+              "link:4",
+              "prose:11",
+              "link:5",
+              "prose:12"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "active",
+          "archived--no-longer-maintained"
+        ]
+      },
+      "ruby-community-contributors": {
+        "contentHash": "ea5256214247",
+        "anchorHash": "fb2aa616f540",
+        "labelHash": "945d6db4debb",
+        "children": {
+          "_label": {
+            "contentHash": "945d6db4debb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "b344d80e24a3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "1242a458c6be",
+            "anchorHash": "91b2d8695ac0"
+          },
+          "prose:2": {
+            "contentHash": "3e93c134f8bc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:incomplete",
+      "prose:0",
+      "getting-started-with-smart-contracts-and-solidity",
+      "beginner-articles",
+      "intermediate-articles",
+      "ruby-projects-and-tools",
+      "ruby-community-contributors"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

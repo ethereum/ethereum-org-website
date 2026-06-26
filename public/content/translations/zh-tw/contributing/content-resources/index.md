@@ -1,32 +1,30 @@
 ---
-title: "添加內容資源"
+title: 新增內容資源
 lang: zh-tw
-description: "我們在 ethereum.org 上列出內容資源的標準"
+description: 我們在 ethereum.org 上列出內容資源的標準
 ---
 
-# 新增內容資源 {#adding-content-resources}
+我們無法期望涵蓋以太坊的所有內容，因此我們嘗試展示社群所創作的一些精彩文章、教學、電子報、求職佈告欄以及各種內容資源。這些資源通常能針對使用者可能感興趣的主題提供更深入的資訊。
 
-我們無法涵蓋所有有關以太坊的內容，所以我們會嘗試展示一些由社群建立的出色的文章、使用教學、電子報、工作展示板，和各式內容資源。 這些資源通常為使用者可能感興趣的主題提供更深入的資訊。
+如果您認為有某個內容資源應該新增到頁面中，歡迎在適當的地方提出建議。
 
-如果這裡有你感到應該新增到頁面的一份內容資源，請隨時在適合的地方提出建議。
+## 我們的決定方式 {#how-we-decide}
 
-## 我們如何決定 {#how-we-decide}
+學習資源將根據以下標準進行評估：
 
-學習資源將按照以下標準評估：
-
-- 內容是最新的嗎？
-- 內容是否需要付費？
-- 資訊準確嗎？ 它是根據客觀事實，還是根據主觀意見？
-- 作者可信嗎？ 他們會引用文本出處麼？
-- 這份內容是否提供了現存資源/連結沒有的獨特價值？
-- 此內容是否符合我們的其中一個[使用者畫像](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)？
+- 內容是否為最新？
+- 內容是否設有付費牆？
+- 資訊是否準確？是基於事實還是個人觀點？
+- 作者是否可靠？他們是否引用了資料來源？
+- 該內容是否提供了現有資源/連結未涵蓋的獨特價值？
+- 該內容是否符合我們的其中一種[使用者角色](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)？
 
 ---
 
 ## 新增您的內容資源 {#add-your-content-resource}
 
-如果你想將內容資源新增至 ethereum.org 並且它符合標準，請在 GitHub 上建立一個議題。
+如果您想將內容資源新增至 ethereum.org 且該資源符合標準，請在 GitHub 上建立一個 issue。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
-提交一個議題
+  建立 issue
 </ButtonLink>

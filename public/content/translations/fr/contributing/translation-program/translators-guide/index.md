@@ -1,70 +1,69 @@
 ---
-title: "Guide à l'intention des traducteurs"
+title: Guide de style de traduction d'ethereum.org
+metaTitle: Guide des traducteurs
 lang: fr
 description: Instructions et conseils pour les traducteurs d'ethereum.org
 ---
 
-# Guide de style pour la traduction d'ethereum.org {#style-guide}
-
-Le guide de style pour la traduction d'ethereum.org contient les principales recommandations, directives et astuces pour ceux qui nous aident à traduire le site.
+Le guide de style de traduction d'ethereum.org contient certaines des directives, instructions et astuces les plus importantes pour les traducteurs, nous aidant à localiser le site Web.
 
 Ce document sert de guide général et n'est spécifique à aucune langue.
 
-Si vous avez des questions, des suggestions ou des commentaires, n'hésitez pas à nous contacter à l'adresse translations@ethereum.org, à envoyer un message à @ethdotorg sur Crowdin ou à [rejoindre notre Discord](https://discord.gg/ethereum-org), où vous pourrez nous envoyer un message sur le canal #translations ou contacter l'un des membres de l'équipe.
+Si vous avez des questions, des suggestions ou des commentaires, n'hésitez pas à nous contacter à translations@ethereum.org, à envoyer un message à @ethdotorg sur Crowdin, ou à [rejoindre notre Discord](https://discord.gg/ethereum-org), où vous pouvez nous envoyer un message dans le canal #translations ou contacter l'un des membres de l'équipe.
 
-## Utilisation de Crowdin {#using-crowdin}
+## Utiliser Crowdin {#using-crowdin}
 
-Vous trouverez des instructions de base sur la façon de rejoindre le projet dans Crowdin et d'utiliser l'éditeur en ligne de Crowdin sur la [page du programme de traduction](/contributing/translation-program/#how-to-translate).
+Vous pouvez trouver des instructions de base sur la façon de rejoindre le projet dans Crowdin et d'utiliser l'éditeur en ligne Crowdin sur la [page du Programme de traduction](/contributing/translation-program/#how-to-translate).
 
-Si vous souhaitez en savoir plus sur Crowdin et l'utilisation de certaines de ses fonctionnalités avancées, la [base de connaissances de Crowdin](https://support.crowdin.com/online-editor/) contient de nombreux guides approfondis et des aperçus de toutes les fonctionnalités de Crowdin.
+Si vous souhaitez en savoir plus sur Crowdin et l'utilisation de certaines de ses fonctionnalités avancées, la [base de connaissances Crowdin](https://support.crowdin.com/online-editor/) contient de nombreux guides approfondis et des aperçus de toutes les fonctionnalités de Crowdin.
 
-## Saisir l'essence du message {#capturing-the-essence}
+## Capturer l'essence du message {#capturing-the-essence}
 
 Lors de la traduction du contenu d'ethereum.org, évitez les traductions littérales.
 
-Les traductions doivent capturer l'essence du message. Cela peut impliquer de reformuler certaines phrases ou d'utiliser des traductions descriptives plutôt que de traduire le contenu mot à mot.
+Il est important que les traductions capturent l'essence du message. Cela peut signifier reformuler certaines phrases ou utiliser des traductions descriptives au lieu de traduire le contenu mot à mot.
 
-Chaque langue a ses règles grammaticales, ses conventions et sa syntaxe. Lors de la traduction, gardez à l'esprit la manière dont les phrases sont structurées dans la langue de destination et évitez de traduire littéralement la source anglaise, car cela peut conduire à une structure de phrase et une lisibilité de faible qualité.
+Différentes langues ont des règles de grammaire, des conventions et un ordre des mots différents. Lors de la traduction, veuillez faire attention à la façon dont les phrases sont structurées dans les langues cibles et évitez de traduire littéralement la source anglaise, car cela peut entraîner une mauvaise structure de phrase et une mauvaise lisibilité.
 
-Au lieu de traduire le texte original mot pour mot, il est recommandé de lire la phrase entière et de l'adapter aux conventions de la langue de destination.
+Au lieu de traduire le texte source mot à mot, il est recommandé de lire la phrase entière et de l'adapter pour qu'elle corresponde aux conventions de la langue cible.
 
-## Formel ou informel {#formal-vs-informal}
+## Formel vs informel {#formal-vs-informal}
 
-Nous utilisons la forme formelle (le vouvoiement), car elle est toujours polie et appropriée pour tous les visiteurs.
+Nous utilisons le vouvoiement (la forme formelle), qui est toujours poli et approprié pour tous les visiteurs.
 
-La forme formelle nous évite de paraître non officiels ou offensants et fonctionne quels que soient l'âge et le sexe du visiteur.
+L'utilisation du vouvoiement nous permet d'éviter de paraître non officiels ou offensants, et fonctionne indépendamment de l'âge et du sexe du visiteur.
 
-À la deuxième personne, la plupart des langues indo-européennes et afro-asiatiques utilisent des pronoms personnels spécifiques au sexe, qui distinguent les hommes et les femmes. Lorsque nous nous adressons à l'utilisateur ou que nous utilisons un pronom possessif, nous pouvons éviter de supposer le sexe du visiteur avec la forme formelle, étant donné qu'elle est généralement applicable et cohérente, quelle que soit la façon dont il s'identifie.
+La plupart des langues indo-européennes et afro-asiatiques utilisent des pronoms personnels de deuxième personne spécifiques au genre, qui font la distinction entre le masculin et le féminin. Lorsque nous nous adressons à l'utilisateur ou utilisons des pronoms possessifs, nous pouvons éviter de présumer du sexe du visiteur, car la forme formelle est généralement applicable et cohérente, quelle que soit la façon dont il s'identifie.
 
 ## Vocabulaire et sens simples et clairs {#simple-vocabulary}
 
-Notre objectif est de rendre le contenu du site accessible au plus grand nombre de personnes possible.
+Notre objectif est de rendre le contenu du site Web compréhensible pour le plus grand nombre de personnes possible.
 
-La plupart du temps, il suffit d'utiliser des mots courts et simples qui sont faciles à comprendre. S'il y a plusieurs traductions possibles pour un certain mot, le meilleur choix sera souvent le mot le plus court reflétant clairement le sens.
+Dans la plupart des cas, cela peut être facilement réalisé en utilisant des mots courts et simples qui sont facilement compréhensibles. S'il existe plusieurs traductions possibles pour un certain mot dans votre langue avec la même signification, la meilleure option est le plus souvent le mot le plus court qui reflète clairement le sens.
 
 ## Système d'écriture {#writing-system}
 
-Ethereum.org est disponible en plusieurs langues qui utilisent des systèmes d'écriture (ou des scripts) différents du système latin.
+Ethereum.org est disponible dans un certain nombre de langues, utilisant des systèmes d'écriture (ou scripts d'écriture) alternatifs au latin.
 
-Tout le contenu doit alors être traduit en utilisant le système d'écriture de votre langue et ne doit pas inclure de mots écrits en caractères latins.
+Tout le contenu doit être traduit en utilisant le système d'écriture correct pour votre langue, et ne doit inclure aucun mot écrit en caractères latins.
 
-Lors de la traduction du contenu, vous devez vous assurer que les traductions sont cohérentes et n'incluent pas de caractères latins.
+Lors de la traduction du contenu, vous devez vous assurer que les traductions sont cohérentes et n'incluent aucun caractère latin.
 
-Une idée reçue courante voudrait qu'« Ethereum » soit toujours écrit en latin. C'est généralement incorrect. Veuillez utiliser l'orthographe d'« Ethereum » native dans votre langue (ex : 以太坊 en chinois, إيثيريوم en arabe, etc.).
+Une idée fausse courante est qu'Ethereum devrait toujours être écrit en latin. C'est généralement incorrect, veuillez utiliser l'orthographe d'Ethereum native à votre langue (par exemple, 以太坊 en chinois, إيثيريوم en arabe, etc.).
 
-**Ceci ne s'applique pas aux langues au sein desquelles il existe une règle proscrivant la traduction des noms propres.**
+**Ce qui précède ne s'applique pas aux langues où les noms propres ne doivent pas être traduits en règle générale.**
 
-## Traduction des métadonnées de la page {#translating-metadata}
+## Traduire les métadonnées de la page {#translating-metadata}
 
-Certaines pages contiennent des métadonnées comme « title », « lang », « description », « sidebar », etc.
+Certaines pages contiennent des métadonnées sur la page, comme « title », « lang », « description », « sidebar », etc.
 
-Nous « cachons » le contenu que les traducteurs ne doivent jamais traduire lors du chargement de nouvelles pages sur Crowdin, ce qui signifie que toutes les métadonnées visibles aux traducteurs dans Crowdin doivent être traduites.
+Nous masquons le contenu que les traducteurs ne devraient jamais traduire lors du téléchargement de nouvelles pages sur Crowdin, ce qui signifie que toutes les métadonnées visibles par les traducteurs dans Crowdin doivent être traduites.
 
-Soyez particulièrement attentif lorsque vous traduisez des chaînes où le texte source est « en ». Ceci représente la langue dans laquelle la page est disponible et doit être traduit par le [code de langue ISO de votre langue](https://www.andiamo.co.uk/resources/iso-language-codes/). Ces chaînes de caractères doivent toujours être traduites en utilisant des caractères latins, et non le script natif de la langue cible.
+Veuillez être particulièrement attentif lors de la traduction de toute chaîne où le texte source est « en ». Cela représente la langue dans laquelle la page est disponible et doit être traduit par le [code de langue ISO de votre langue](https://www.andiamo.co.uk/resources/iso-language-codes/). Ces chaînes doivent toujours être traduites en utilisant des caractères latins, et non le script d'écriture natif de la langue cible.
 
-Si vous n'êtes pas certain du code de langue à utiliser, vous pouvez vérifier la mémoire de traduction dans Crowdin ou trouver le code de votre langue dans l'URL de la page dans l'éditeur en ligne Crowdin.
+Si vous n'êtes pas sûr du code de langue à utiliser, vous pouvez vérifier la mémoire de traduction dans Crowdin ou trouver le code de langue de votre langue dans l'URL de la page dans l'éditeur en ligne Crowdin.
 
-Voici quelques exemples de codes de langue pour les langues les plus parlées :
+Quelques exemples de codes de langue pour les langues les plus parlées :
 
 - Arabe - ar
 - Chinois simplifié - zh
@@ -72,205 +71,205 @@ Voici quelques exemples de codes de langue pour les langues les plus parlées :
 - Hindi - hi
 - Espagnol - es
 
-## Titres des articles externes {#external-articles}
+## Titres d'articles externes {#external-articles}
 
-Certaines chaînes de caractères contiennent des titres d'articles externes. La plupart de nos pages de documentation pour développeurs contiennent des liens vers des articles externes pour de plus amples détails. Les chaînes de caractères contenant les titres des articles doivent être traduites, quelle que soit la langue de l'article, afin d'assurer une expérience utilisateur plus cohérente pour les visiteurs qui consultent la page dans leur langue.
+Certaines chaînes contiennent des titres d'articles externes. La plupart de nos pages de documentation pour les développeurs contiennent des liens vers des articles externes pour aller plus loin. Les chaînes contenant des titres d'articles doivent être traduites, quelle que soit la langue de l'article, afin de garantir une expérience utilisateur plus cohérente pour les visiteurs qui consultent la page dans leur langue.
 
-Pour vous aider à les repérer, vous trouverez ci-dessous quelques exemples de ces chaînes (les liens vers les articles se trouvent principalement en bas de ces pages, dans la section « Further reading » [Lectures complémentaires]) :
+Vous pouvez trouver ci-dessous quelques exemples de ce à quoi ressemblent ces chaînes pour les traducteurs et comment les identifier (les liens vers les articles se trouvent principalement au bas de ces pages, dans la section « Complément d'information ») :
 
-![Titres des articles dans la barre latérale](./article-titles-in-sidebar.png)
-![Titres des articles dans l'éditeur](./article-titles-in-editor.png)
+![Article titles in sidebar.png](./article-titles-in-sidebar.png)
+![Article titles in editor.png](./article-titles-in-editor.png)
 
-## Avertissements de Crowdin {#crowdin-warnings}
+## Avertissements Crowdin {#crowdin-warnings}
 
-Crowdin a une fonctionnalité intégrée qui avertit les traducteurs lorsqu'ils sont sur le point de faire une erreur. Crowdin vous en avertira automatiquement avant d'enregistrer votre traduction si vous oubliez d'inclure une balise de la source, de traduire des éléments qui ne devraient pas être traduits, d'ajouter plusieurs espaces consécutifs, d'oublier la ponctuation de fin, etc.
-Si un tel avertissement s'affiche, veuillez revenir en arrière et vérifier la traduction proposée.
+Crowdin dispose d'une fonctionnalité intégrée qui avertit les traducteurs lorsqu'ils sont sur le point de faire une erreur. Crowdin vous en avertira automatiquement avant d'enregistrer votre traduction si vous oubliez d'inclure une balise de la source, traduisez des éléments qui ne devraient pas l'être, ajoutez plusieurs espaces consécutifs, oubliez la ponctuation finale, etc.
+Si vous voyez un avertissement de ce type, veuillez revenir en arrière et revérifier la traduction suggérée.
 
-**N'ignorez jamais ces avertissements, car ils signifient généralement que quelque chose ne va pas ou qu'il manque un élément essentiel du texte source dans la traduction.**
+**N'ignorez jamais ces avertissements, car ils signifient généralement que quelque chose ne va pas, ou qu'il manque une partie clé du texte source à la traduction.**
 
-Exemple d'un avertissement Crowdin lorsque vous oubliez d'ajouter une balise à votre traduction :
-![Exemple d'un avertissement Crowdin](./crowdin-warning-example.png)
+Un exemple d'avertissement Crowdin lorsque vous oubliez d'ajouter une balise à votre traduction :
+![Example of a Crowdin warning](./crowdin-warning-example.png)
 
-## Gestion des balises et des extraits de code {#dealing-with-tags}
+## Gérer les balises et les extraits de code {#dealing-with-tags}
 
-Une grande partie du contenu de la source contient des balises et des variables, surlignées en jaune dans l'éditeur Crowdin. Elles remplissent différentes fonctions et doivent être utilisées correctement.
+Une grande partie du contenu source contient des balises et des variables, qui sont surlignées en jaune dans l'éditeur Crowdin. Celles-ci remplissent différentes fonctions et doivent être abordées correctement.
 
-**Paramètres de Crowdin**
+**Paramètres Crowdin**
 
-Pour faciliter la gestion des tags et les copier directement à partir de la source, nous vous recommandons de modifier vos paramètres dans l'éditeur Crowdin.
+Pour faciliter la gestion des balises et les copier directement depuis la source, nous vous recommandons de modifier vos paramètres dans l'éditeur Crowdin.
 
-1. Ouvrir les paramètres
-   ![Comment ouvrir les paramètres dans l'éditeur](./editor-settings.png)
+1. Ouvrez les paramètres
+   ![How to open settings in the editor](./editor-settings.png)
 
-2. Allez à la section 'Affichage des tags HTML'
+2. Faites défiler jusqu'à la section « Affichage des balises HTML » (HTML tags displaying)
 
-3. Sélectionner « Masquer »
-   ![Veuillez sélectionner « Masquer »](./hide-tags.png)
+3. Sélectionnez « Masquer » (Hide)
+   ![Please select 'Hide'](./hide-tags.png)
 
-4. Cliquez sur 'Enregistrer'
+4. Cliquez sur « Enregistrer » (Save)
 
-En sélectionnant cette option, le texte du tag complet ne sera plus affiché et sera remplacé par un nombre.
-Lors de la traduction, cliquer sur ce tag copiera automatiquement le tag exact dans le champ de traduction.
+En sélectionnant cette option, le texte complet de la balise ne sera plus affiché et sera remplacé par un numéro.
+Lors de la traduction, cliquer sur cette balise copiera automatiquement la balise exacte dans le champ de traduction.
 
 **Liens**
 
-Vous pouvez remarquer des liens complets vers des pages d'ethereum.org ou d'autres sites web.
+Vous remarquerez peut-être des liens complets vers des pages sur ethereum.org ou d'autres sites Web.
 
-Ceux-ci doivent rester identiques à la source sans changement ni traduction. Si vous traduisez un lien ou le modifiez d'une manière ou d'une autre, même uniquement en supprimant une partie de celui-ci, comme un slash (/), cela va casser les liens et les rendre inutilisables.
+Ceux-ci doivent être identiques à la source et ne pas être modifiés ou traduits. Si vous traduisez un lien ou le modifiez de quelque manière que ce soit, même en en supprimant simplement une partie, comme une barre oblique (/), cela entraînera des liens rompus et inutilisables.
 
-La meilleure façon de gérer les liens est de les copier directement à partir de la source, soit en cliquant dessus, soit en utilisant le bouton « Copy Source » (Copier la source) (Alt+C).
+La meilleure façon de gérer les liens est de les copier directement depuis la source, soit en cliquant dessus, soit en utilisant le bouton « Copier la source » (Copy Source) (`Alt+C`).
 
-![Exemple de lien](./example-of-link.png)
+![Example of link.png](./example-of-link.png)
 
-Les liens apparaissent également dans le texte source sous la forme de balises (c'est-à-dire, `<0>` `</0>`). Si vous survolez la balise, l'éditeur affichera son véritable contenu. Parfois, ces balises désigneront des liens.
+Les liens apparaissent également dans le texte source sous forme de balises (c'est-à-dire `<0>` `</0>`). Si vous passez la souris sur la balise, l'éditeur affichera son contenu complet - parfois ces balises représenteront des liens.
 
-Il est très important de copier les liens depuis le texte source et de ne pas modifier l'ordre des balises.
+Il est très important de copier les liens depuis la source et de ne pas modifier leur ordre.
 
-Si l'ordre des balises est changé, le lien qu'elles représentent sera cassé.
+Si l'ordre des balises est modifié, le lien qu'elles représentent sera rompu.
 
-![Exemple de liens à l'intérieur de balises](./example-of-links-inside-tags.png)
+![Example of links inside tags.png](./example-of-links-inside-tags.png)
 
 **Balises et variables**
 
-Le texte source contient de nombreux types de balises différentes, qui doivent toujours être copiées depuis la source et ne pas être modifiées. Comme expliqué plus haut, l'ordre des balises dans la traduction devrait également être le même que dans le texte source.
+Le texte source contient de nombreux types de balises différents, qui doivent toujours être copiés depuis la source et jamais modifiés. De la même manière que ci-dessus, l'ordre de ces balises dans la traduction doit également rester le même que dans la source.
 
-Les balises comprennent toujours une balise ouvrante et une balise fermante. Et en général, le texte compris entre les deux balises doit être traduit.
+Les balises contiennent toujours une balise d'ouverture et de fermeture. Dans la plupart des cas, le texte entre les balises d'ouverture et de fermeture doit être traduit.
 
-Exemple : `<strong x-id="1">`Décentralisé`</strong>`
+Exemple : `<strong x-id="1">`Décentralisé`</strong>`
 
-`<strong x-id="1">` - _Balise ouvrante qui met le texte en gras_
+`<strong x-id="1">` - _Balise d'ouverture qui met le texte en gras_
 
 Décentralisé - _Texte traduisible_
 
-`</strong>` - _Balise fermante_
+`</strong>` - _Balise de fermeture_
 
-![Exemple de balises « strong »](./example-of-strong-tags.png)
+![Example of 'strong' tags.png](./example-of-strong-tags.png)
 
-Les extraits de code doivent être abordés légèrement différemment des autres balises, car ils contiennent du code qui ne doit pas être traduit.
+Les extraits de code doivent être abordés de manière légèrement différente des autres balises, car ils contiennent du code qui ne doit pas être traduit.
 
-Exemple : `<code>`nonce`</code>`
+Exemple : `<code>`nonce`</code>`
 
-`<code>` - _Balise ouvrante, qui contient un extrait de code_
+`<code>` - _Balise d'ouverture, qui contient un extrait de code_
 
 nonce - _Texte non traduisible_
 
-`</code>` - _Balise fermante_
+`</code>` - _Balise de fermeture_
 
-![Exemple d'extraits de code](./example-of-code-snippets.png)
+![Example of code snippets.png](./example-of-code-snippets.png)
 
-Le texte source contient aussi des balises raccourcies. Elles contiennent uniquement des chiffres et leur fonction n'est donc pas directement identifiable. Vous pouvez survoler ces balises pour voir exactement ce à quoi elles servent.
+Le texte source contient également des balises raccourcies, qui ne contiennent que des nombres, ce qui signifie que leur fonction n'est pas immédiatement évidente. Vous pouvez passer la souris sur ces balises pour voir exactement quelle fonction elles remplissent.
 
-Dans l'exemple ci-dessous, vous pouvez voir que le survol de la balise `<0>` montre qu'elle représente `<code>` et contient un extrait de code. Par conséquent, le contenu à l'intérieur de ces balises ne doit pas être traduit.
+Dans l'exemple ci-dessous, vous pouvez voir que le survol de la balise `<0>` montre qu'elle représente `<code>` et contient un extrait de code, par conséquent le contenu à l'intérieur de ces balises ne doit pas être traduit.
 
-![Exemple de balises ambiguës](./example-of-ambiguous-tags.png)
+![Example of ambiguous tags.png](./example-of-ambiguous-tags.png)
 
-## Formes courtes ou complètes/abréviations {#short-vs-full-forms}
+## Formes courtes vs formes complètes/abréviations {#short-vs-full-forms}
 
-De nombreuses abréviations sont utilisées sur le site, par exemple dapps, NFT, DAO, DeFi, etc. Ces abréviations sont couramment utilisées en anglais et les visiteurs du site web les connaissent généralement.
+De nombreuses abréviations sont utilisées sur le site Web, par exemple, les applications décentralisées (dapps), les NFT, les DAO, la finance décentralisée (DeFi), etc. Ces abréviations sont couramment utilisées en anglais et la plupart des visiteurs du site Web les connaissent.
 
-Étant donné qu'elles n'ont souvent pas de traduction établie dans les autres langues, la meilleure façon d'adapter ces termes (ainsi que les termes qui gravitent autour) est de fournir une traduction descriptive de leur forme complète, puis d'ajouter l'abréviation entre parenthèses.
+Comme elles n'ont généralement pas de traductions établies dans d'autres langues, la meilleure façon d'aborder ces termes et d'autres termes similaires est de fournir une traduction descriptive de la forme complète et d'ajouter l'abréviation anglaise entre parenthèses.
 
-Ne traduisez pas ces abréviations, car la plupart des gens ne les connaissent pas et les versions traduites n'auraient pas vraiment de sens pour la plupart des visiteurs.
+Ne traduisez pas ces abréviations, car la plupart des gens ne les connaîtraient pas, et les versions localisées n'auraient pas beaucoup de sens pour la plupart des visiteurs.
 
-Exemple de la manière de traduire « dApps » :
+Exemple de la façon de traduire les applications décentralisées (dapps) :
 
 - Applications décentralisées (dapps) → _Forme complète traduite (abréviation anglaise entre parenthèses)_
 
-## Termes sans traduction établie {#terms-without-established-translations}
+## Termes sans traductions établies {#terms-without-established-translations}
 
-Certains termes peuvent ne pas avoir de traduction bien définie dans les autres langues et être largement connus sous leur forme anglaise. Ces termes incluent principalement des concepts récents, comme proof-of-work, proof-of-stake, Beacon Chain, staking, etc.
+Certains termes peuvent ne pas avoir de traductions établies dans d'autres langues et sont largement connus sous le terme anglais d'origine. Ces termes incluent principalement des concepts plus récents, comme la preuve de travail (PoW), la preuve d'enjeu (PoS), la chaîne balise, le staking, etc.
 
-La traduction de ces termes peut sembler peu naturelle, mais puisque la version anglaise est également couramment utilisée dans d'autres langues, il est fortement recommandé de les traduire.
+Bien que la traduction de ces termes puisse sembler peu naturelle, étant donné que la version anglaise est également couramment utilisée dans d'autres langues, il est fortement recommandé de les traduire.
 
-Lorsque vous traduisez ces termes, soyez créatifs, utilisez des traductions descriptives ou alors traduisez-les littéralement.
+Lors de leur traduction, n'hésitez pas à faire preuve de créativité, à utiliser des traductions descriptives ou simplement à les traduire littéralement.
 
-**Le fait de traduire ces termes, plutôt que de les laisser en anglais, permettra à cette nouvelle terminologie de se généraliser à l'avenir, à mesure que de plus en plus de personnes utiliseront Ethereum et les technologies associées. Si nous voulons faire connaître ce domaine à plus de personnes à travers le monde, nous devons fournir une terminologie compréhensible dans un maximum de langues, quitte à la créer nous-mêmes.**
+**La raison pour laquelle la plupart des termes doivent être traduits, au lieu d'en laisser certains en anglais, est le fait que cette nouvelle terminologie se répandra à l'avenir, à mesure que de plus en plus de personnes commenceront à utiliser Ethereum et les technologies associées. Si nous voulons intégrer plus de personnes du monde entier dans cet espace, nous devons fournir une terminologie compréhensible dans autant de langues que possible, même si nous devons la créer nous-mêmes.**
 
-## Boutons et CTA {#buttons-and-ctas}
+## Boutons et appels à l'action (CTA) {#buttons-and-ctas}
 
-Le site contient de nombreux boutons, qui doivent être traduits différemment des autres contenus.
+Le site Web contient de nombreux boutons, qui doivent être traduits différemment des autres contenus.
 
-Vous pouvez repérer un bouton et son contenu en visualisant les captures d'écran contextuelles, fournies avec la plupart des textes sources, ou bien en regardant le contexte de l'éditeur, qui inclura le terme « button » (bouton).
+Le texte du bouton peut être identifié en affichant les captures d'écran de contexte, associées à la plupart des chaînes, ou en vérifiant le contexte dans l'éditeur, qui inclut le mot « button ».
 
-Les traductions des boutons doivent être aussi courtes que possible pour éviter les problèmes de mise en forme. En outre, la traduction des boutons doit être impérative, c'est-à-dire présenter un ordre ou une demande.
+Les traductions des boutons doivent être aussi courtes que possible, pour éviter les problèmes de formatage. De plus, les traductions des boutons doivent être à l'impératif, c'est-à-dire présenter une commande ou une demande.
 
-![Comment trouver un bouton](./how-to-find-a-button.png)
+![How to find a button.png](./how-to-find-a-button.png)
 
-## Traduction inclusive {#translating-for-inclusivity}
+## Traduire pour l'inclusivité {#translating-for-inclusivity}
 
-Les visiteurs d'ethereum.org viennent de partout dans le monde et d'horizons différents. Le langage du site web devrait donc être neutre, accueillant pour tout le monde et inclusif.
+Les visiteurs d'ethereum.org viennent du monde entier et d'horizons différents. Le langage sur le site Web doit donc être neutre, accueillant pour tous et non exclusif.
 
-La neutralité de genre est un aspect important de cette démarche. Dans cette optique, préférez un langage formel lorsque vous vous adressez au visiteur, en évitant d'utiliser des termes genrés dans les traductions.
+Un aspect important de cela est la neutralité de genre. Cela peut être facilement réalisé en utilisant le vouvoiement et en évitant tout mot spécifique au genre dans les traductions.
 
-Une autre forme d'inclusivité consiste à faire en sorte que la traduction s'adresse à un public mondial, et pas spécifiquement à un pays, une ethnie ou une région du monde.
+Une autre forme d'inclusivité consiste à essayer de traduire pour un public mondial, non spécifique à un pays, une race ou une région.
 
-Enfin, le langage doit être adapté à tous les publics et tous les âges.
+Enfin, le langage doit être adapté à tous les publics et à tous les âges.
 
 ## Traductions spécifiques à la langue {#language-specific-translations}
 
-Lors de la traduction, plutôt que de calquer simplement la source, il est important de suivre les règles de grammaire, les conventions et le formatage en vigueur dans votre langue. Le texte source suit les règles et conventions de la grammaire anglaise, qui ne sont pas applicables dans beaucoup d'autres langues.
+Lors de la traduction, il est important de suivre les règles de grammaire, les conventions et le formatage utilisés dans votre langue, plutôt que de copier à partir de la source. Le texte source suit les règles et conventions de grammaire anglaises, ce qui n'est pas applicable à de nombreuses autres langues.
 
-Vous devez donc avoir les règles de votre langue en tête afin de traduire correctement. Si vous avez besoin d'aide pour traduire certains éléments, contactez-nous et nous vous aiderons à trouver des ressources sur la façon dont ils doivent être adaptés à votre langue.
+Vous devez connaître les règles de votre langue et traduire en conséquence. Si vous avez besoin d'aide, contactez-nous et nous vous aiderons à trouver des ressources sur la façon dont ces éléments doivent être utilisés dans votre langue.
 
-Voici quelques exemples de ce à quoi vous devrez faire attention :
+Quelques exemples de ce à quoi il faut être particulièrement attentif :
 
-### Ponctuation et formatage {#punctuation-and-formatting}
+### Ponctuation, formatage {#punctuation-and-formatting}
 
 **Majuscules**
 
-- Il existe de grandes différences entre les langues sur la façon d'utiliser les lettres majuscules.
-- En anglais, il est courant de mettre en majuscule sur la première lettre de tous les mots contenus dans les titres, les noms, les mois, les jours, le nom des langues, les jours fériés, etc. Dans de nombreuses autres langues, c'est grammaticalement incorrect, car les règles sont différentes.
-- Certaines langues ont aussi des règles sur la mise en majuscule des pronoms personnels, des noms communs et de certains adjectifs, qui ne portent pas de majuscule en anglais.
+- Il existe de grandes différences dans l'utilisation des majuscules selon les langues.
+- En anglais, il est courant de mettre en majuscule tous les mots dans les titres et les noms, les mois et les jours, les noms de langues, les jours fériés, etc. Dans de nombreuses autres langues, cela est grammaticalement incorrect, car elles ont des règles de majuscules différentes.
+- Certaines langues ont également des règles concernant la mise en majuscule des pronoms personnels, des noms et de certains adjectifs, qui ne prennent pas de majuscule en anglais.
 
 **Espacement**
 
-- Les règles orthographiques définissent l'utilisation des espaces pour chaque langue. Ces règles sont souvent très spécifiques, et parce que les espaces sont utilisés partout, ils sont parmi les éléments les plus mal traduits.
-- Voici quelques différences d'espacement fréquentes entre l'anglais et d'autres langues :
-  - Espace avant les unités de mesure et les devises (par ex., USD, EUR, kB, MB)
-  - Espace avant les signes de degré (par ex., °C, ℉)
-  - Espace avant certains signes de ponctuation, notamment l'ellipse (…)
+- Les règles d'orthographe définissent l'utilisation des espaces pour chaque langue. Parce que les espaces sont utilisés partout, ces règles sont parmi les plus distinctes, et les espaces sont parmi les éléments les plus mal traduits.
+- Quelques différences courantes d'espacement entre l'anglais et d'autres langues :
+  - Espace avant les unités de mesure et les devises (par exemple, USD, EUR, kB, MB)
+  - Espace avant les signes de degré (par exemple, °C, ℉)
+  - Espace avant certains signes de ponctuation, en particulier les points de suspension (…)
   - Espace avant et après les barres obliques (/)
 
 **Listes**
 
-- Chaque langue possède un ensemble de règles diverses et variées pour la rédaction des listes. Elles peuvent différer considérablement de l'anglais.
-- Dans certaines langues, le premier mot de chaque nouvelle ligne doit avoir sa première lettre en majuscule, tandis que dans d'autres langues, les nouvelles lignes doivent commencer par une lettre minuscule. Plusieurs langues ont aussi différentes règles sur la présence de majuscule en début de ligne, en fonction de la longueur de celle-ci.
-- Il en va de même pour la ponctuation en fin de ligne. La ponctuation finale dans les listes peut être un point (.), une virgule (,) ou un point-virgule (;), selon la langue.
+- Chaque langue possède un ensemble diversifié et complexe de règles pour l'écriture de listes. Celles-ci peuvent être très différentes de l'anglais.
+- Dans certaines langues, le premier mot de chaque nouvelle ligne doit commencer par une majuscule, tandis que dans d'autres, les nouvelles lignes doivent commencer par des lettres minuscules. De nombreuses langues ont également des règles différentes concernant les majuscules dans les listes, en fonction de la longueur de chaque ligne.
+- Il en va de même pour la ponctuation des éléments de ligne. La ponctuation finale dans les listes peut être un point (**.**), une virgule (**,**) ou un point-virgule (**;**), selon la langue.
 
 **Guillemets**
 
-- Certaines langues utilisent différents signes pour les guillemets. Il est souvent incorrect de se contenter de recopier les guillemets anglais.
-- Parmi les types de guillemets les plus courants, figurent :
-  - „texte d'exemple“
-  - ‚texte d'exemple’
-  - »texte d'exemple«
-  - “texte d'exemple”
-  - ‘texte d'exemple’
-  - «texte d'exemple»
+- Les langues utilisent de nombreux guillemets différents. Copier simplement les guillemets anglais de la source est souvent incorrect.
+- Certains des types de guillemets les plus courants incluent :
+  - „exemple de texte“
+  - ‚exemple de texte’
+  - »exemple de texte«
+  - “exemple de texte”
+  - ‘exemple de texte’
+  - « exemple de texte »
 
-**Tirets et traits d'union**
+**Traits d'union et tirets**
 
-- En anglais, le trait d'union (-) est utilisé pour joindre des mots ou différentes parties d'un mot, tandis que le tiret (–) est utilisé pour indiquer un intervalle ou une pause.
-- Beaucoup de langues ont des règles différentes concernant les tirets et les traits d'union qui doivent être respectées.
+- En anglais, un trait d'union (-) est utilisé pour joindre des mots ou différentes parties d'un mot, tandis qu'un tiret (–) est utilisé pour indiquer une plage ou une pause.
+- De nombreuses langues ont des règles différentes pour l'utilisation des traits d'union et des tirets qui doivent être respectées.
 
 ### Formats {#formats}
 
 **Nombres**
 
-- La principale différence entre les langues concernant les nombres écrits est le séparateur utilisé pour les nombres décimaux et celui des milliers. Pour les milliers, cela peut être un point, une virgule ou une espace. De la même manière, certaines langues utilisent un point pour les nombres décimaux, tandis que d'autres utilisent une virgule.
-  - Voici quelques exemples de grands nombres :
+- La principale différence dans l'écriture des nombres dans différentes langues est le séparateur utilisé pour les décimales et les milliers. Pour les milliers, cela peut être un point, une virgule ou un espace. De même, certaines langues utilisent un point décimal, tandis que d'autres utilisent une virgule décimale.
+  - Quelques exemples de grands nombres :
     - Anglais – **1,000.50**
     - Espagnol – **1.000,50**
     - Français – **1 000,50**
-- Une autre chose à prendre en considération lors de la traduction de nombres est le signe pourcentage. Il peut être écrit de différentes manières : **100%**, **100 %** ou **%100**.
-- Enfin, les nombres négatifs peuvent aussi s'afficher différemment en fonction de la langue : -100, 100-, (100) ou [100].
+- Une autre considération importante lors de la traduction de nombres est le signe de pourcentage. Il peut être écrit de différentes manières : **100%**, **100 %** ou **%100**.
+- Enfin, les nombres négatifs peuvent être affichés différemment selon la langue : -100, 100-, (100) ou [100].
 
 **Dates**
 
-- Lors de la traduction des dates, il y a un certain nombre de différences à prendre en compte, en fonction de la langue. Il s'agit par exemple du format de date, du séparateur, de la présence de majuscules ou encore des zéros initiaux. Il y a aussi des différences entre les dates complètes et les dates numériques.
-  - Voici quelques exemples de différents formats de date :
-    - Anglais UK (jj/mm/aaaa) – 1er janvier 2022
-    - Anglais US (mm/jj/aaaa) – janvier 1, 2022
+- Lors de la traduction de dates, il y a un certain nombre de considérations et de différences selon la langue. Celles-ci incluent le format de la date, le séparateur, les majuscules et les zéros initiaux. Il existe également des différences entre les dates complètes et numériques.
+  - Quelques exemples de différents formats de date :
+    - Anglais britannique (jj/mm/aaaa) – 1st January, 2022
+    - Anglais américain (mm/jj/aaaa) – January 1st, 2022
     - Chinois (aaaa-mm-jj) – 2022 年 1 月 1 日
     - Français (jj/mm/aaaa) – 1er janvier 2022
     - Italien (jj/mm/aaaa) – 1º gennaio 2022
@@ -278,22 +277,22 @@ Voici quelques exemples de ce à quoi vous devrez faire attention :
 
 **Devises**
 
-- Traduire des devises peut s'avérer difficile, en raison des différences de formats, de conventions et de conversions. En règle générale, veuillez garder la même devise que la source. Dans l'intérêt du lecteur, vous pouvez éventuellement ajouter votre devise locale ainsi que la conversion entre parenthèses.
-- Les principales différences qui existent lors de l'écriture des devises dans différentes langues sont le placement des symboles, les virgules décimales par rapport aux points décimaux, l'espacement et les abréviations par rapport aux symboles.
-  - Emplacement du symbole : $100 ou 100$
-  - Virgule décimale ou point décimal : 100,50$ ou 100.50$
+- La traduction des devises peut être difficile, en raison des différents formats, conventions et conversions. En règle générale, veuillez conserver les mêmes devises que la source. Vous pouvez ajouter votre devise locale et la conversion entre parenthèses, pour le bénéfice du lecteur.
+- Les principales différences dans l'écriture des devises dans différentes langues incluent le placement du symbole, les virgules décimales par rapport aux points décimaux, l'espacement et les abréviations par rapport aux symboles.
+  - Placement du symbole : $100 ou 100$
+  - Virgules décimales vs points décimaux : 100,50$ ou 100.50$
   - Espacement : 100$ ou 100 $
-  - Abréviation ou symbole : 100 $ ou 100 USD
+  - Abréviations vs symboles : 100 $ ou 100 USD
 
 **Unités de mesure**
 
-- En règle générale, veuillez garder la même unité de mesure que dans le texte source. Si votre pays utilise un autre système, vous pouvez inclure la conversion entre parenthèses.
-- Outre la localisation des unités de mesure, il est également important de tenir compte des différences dans la façon dont les langues abordent ces unités. La différence principale est l'espacement entre le nombre et l'unité, qui peut différer selon la langue. Par exemple, on observe cette différence entre 100kB, 100 kB, 50ºF et 50 ºF.
+- En règle générale, veuillez conserver les unités de mesure telles qu'elles sont dans la source. Si votre pays utilise un système différent, vous pouvez inclure la conversion entre parenthèses.
+- Outre la localisation des unités de mesure, il est également important de noter les différences dans la façon dont les langues abordent ces unités. La principale différence est l'espacement entre le nombre et l'unité, qui peut être différent selon la langue. Des exemples de cela incluent 100kB vs 100 kB ou 50ºF vs 50 ºF.
 
 ## Conclusion {#conclusion}
 
-Traduire ethereum.org constitue une excellente occasion de découvrir les différents aspects d'Ethereum.
+Traduire ethereum.org est une excellente occasion d'en apprendre davantage sur les différents aspects d'Ethereum.
 
-Lors de la traduction, essayez de ne pas vous précipiter. Prenez votre temps et faites-vous plaisir !
+Lors de la traduction, essayez de ne pas vous précipiter. Allez-y doucement et amusez-vous !
 
-Merci pour votre participation au programme de traduction et de nous aider à rendre le site accessible à un public plus large. La communauté Ethereum est internationale, et nous sommes heureux que vous en fassiez partie !
+Merci de votre implication dans le Programme de traduction et de nous aider à rendre le site Web accessible à un public plus large. La communauté Ethereum est mondiale et nous sommes heureux que vous en fassiez partie !

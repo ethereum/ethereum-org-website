@@ -10,9 +10,11 @@ import Matomo from "@/components/Matomo"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { toLanguageTag } from "@/lib/utils/url"
 
 import Providers from "./providers"
 
+import "@rainbow-me/rainbowkit/styles.css"
 import "@/styles/global.css"
 
 import { routing } from "@/i18n/routing"
@@ -37,13 +39,16 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-mono",
 })
 
-export default async function LocaleLayout({
-  children,
-  params: { locale },
-}: {
+export default async function LocaleLayout(props: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
+
+  const { locale } = params
+
+  const { children } = props
+
   if (!routing.locales.includes(locale)) {
     notFound()
   }
@@ -62,7 +67,7 @@ export default async function LocaleLayout({
 
   return (
     <html
-      lang={locale}
+      lang={toLanguageTag(locale)}
       className={`${inter.variable} ${ibmPlexMono.variable}`}
       suppressHydrationWarning
     >

@@ -1,16 +1,16 @@
 ---
-title: "Multitokenový standard ERC-1155"
-description: "Seznamte se s ERC-1155, standardem pro více tokenů, který v jednom smart kontraktu kombinuje zastupitelné a nezastupitelné tokeny."
+title: "Standard pro více tokenů ERC-1155"
+description: "Přečtěte si o ERC-1155, standardu pro více tokenů, který kombinuje zaměnitelné a nezaměnitelné tokeny v jediném kontraktu."
 lang: cs
 ---
 
 ## Úvod {#introduction}
 
-Standardní rozhraní pro kontrakty, které spravují více typů tokenů. Jeden nasazený kontrakt může obsahovat libovolnou kombinaci zastupitelných tokenů, nezastupitelných tokenů nebo jiných konfigurací (např. polozastupitelných tokenů).
+Standardní rozhraní pro kontrakty, které spravují více typů tokenů. Jediný nasazený kontrakt může obsahovat libovolnou kombinaci zaměnitelných tokenů, nezaměnitelných tokenů nebo jiných konfigurací (např. částečně zaměnitelných tokenů).
 
-**Co znamená multitokenový standard?**
+**Co se myslí standardem pro více tokenů?**
 
-Myšlenka je jednoduchá a usiluje o vytvoření smart kontraktového rozhraní, které může reprezentovat a kontrolovat libovolný počet zaměnitelných a nezaměnitelných typů tokenů. Token ERC-1155 tak může plnit stejné funkce jako tokeny [ERC-20](/developers/docs/standards/tokens/erc-20/) a [ERC-721](/developers/docs/standards/tokens/erc-721/), a dokonce i obě najednou. Zlepšuje funkčnost standardů ERC-20 a ERC-721, činí je efektivnějšími a opravuje zjevné chyby v implementaci.
+Myšlenka je jednoduchá a snaží se vytvořit rozhraní chytrého kontraktu, které dokáže reprezentovat a ovládat libovolný počet typů zaměnitelných a nezaměnitelných tokenů. Tímto způsobem může token ERC-1155 plnit stejné funkce jako token [ERC-20](/developers/docs/standards/tokens/erc-20/) a [ERC-721](/developers/docs/standards/tokens/erc-721/), a dokonce i obojí současně. Zlepšuje funkčnost standardů ERC-20 i ERC-721, čímž je činí efektivnějšími a opravuje zjevné chyby v implementaci.
 
 Token ERC-1155 je plně popsán v [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
@@ -20,16 +20,16 @@ Pro lepší pochopení této stránky doporučujeme nejprve si přečíst o [sta
 
 ## Funkce a vlastnosti ERC-1155: {#body}
 
-- [Dávkový převod](#batch_transfers): Převod více aktiv v jednom volání.
-- [Dávkový zůstatek](#batch_balance): Získání zůstatků více aktiv v jednom volání.
-- [Dávkové schválení](#batch_approval): Schválení všech tokenů na adresu.
-- [Háky](#receive_hook): Hák pro příjem tokenů.
-- [Podpora NFT](#nft_support): Pokud je zásoba pouze 1, považuje se za NFT.
-- [Pravidla pro bezpečný převod](#safe_transfer_rule): Sada pravidel pro bezpečný převod.
+- [Dávkový převod](#batch-transfers): Převod více aktiv v jediném volání.
+- [Dávkový zůstatek](#batch-balance): Získání zůstatků více aktiv v jediném volání.
+- [Dávkové schválení](#batch-approval): Schválit všechny tokeny pro danou adresu.
+- [Hooky](#receive-hook): Hook pro příjem tokenů.
+- [Podpora NFT](#nft-support): Pokud je nabídka pouze 1, zachází se s ním jako s NFT.
+- [Pravidla pro bezpečný převod](#safe-transfer-rule): Soubor pravidel pro bezpečný převod.
 
 ### Dávkové převody {#batch-transfers}
 
-Hromadný přenos funguje velmi podobně jako běžné přenosy ERC-20. Podívejme se na běžnou funkci `transferFrom` v ERC-20:
+Dávkový převod funguje velmi podobně jako běžné převody ERC-20. Podívejme se na běžnou funkci ERC-20 `transferFrom`:
 
 ```solidity
 // ERC-20
@@ -45,17 +45,17 @@ function safeBatchTransferFrom(
 ) external;
 ```
 
-Jediný rozdíl v ERC-1155 je ten, že předáváme hodnoty jako pole a také předáváme pole ID. Například pokud jsou `ids=[3, 6, 13]` a `values=[100, 200, 5]`, výsledné převody budou:
+Jediný rozdíl u ERC-1155 je ten, že hodnoty předáváme jako pole a také předáváme pole ID. Například při zadání `ids=[3, 6, 13]` a `values=[100, 200, 5]` budou výsledné převody následující:
 
 1. Převod 100 tokenů s ID 3 z `_from` na `_to`.
 2. Převod 200 tokenů s ID 6 z `_from` na `_to`.
 3. Převod 5 tokenů s ID 13 z `_from` na `_to`.
 
-V ERC-1155 máme pouze `transferFrom`, žádný `transfer`. Chcete-li ji použít jako běžný `transfer`, stačí nastavit odesílající adresu na adresu, která funkci volá.
+V ERC-1155 máme pouze `transferFrom`, nikoli `transfer`. Chcete-li ji použít jako běžnou funkci `transfer`, stačí nastavit adresu odesílatele (from) na adresu, která funkci volá.
 
 ### Dávkový zůstatek {#batch-balance}
 
-Odpovídající volání `balanceOf` v ERC-20 má také svou partnerskou funkci s podporou dávkového zpracování. Pro připomenutí, takto vypadá verze ERC-20:
+Příslušné volání ERC-20 `balanceOf` má rovněž svou partnerskou funkci s podporou dávek. Pro připomenutí, toto je verze ERC-20:
 
 ```solidity
 // ERC-20
@@ -68,9 +68,9 @@ function balanceOfBatch(
 ) external view returns (uint256[] memory);
 ```
 
-Ještě jednodušší je volání za účelem získání informace o zůstatcích: V jednom volání můžeme získat několik zůstatků najednou. Předáváme pole vlastníků, následované polem ID tokenů.
+Ještě jednodušší je to u volání zůstatku, kde můžeme získat více zůstatků v jediném volání. Předáme pole vlastníků následované polem ID tokenů.
 
-Například pokud jsou `_ids=[3, 6, 13]` a `_owners=[0xbeef..., 0x1337..., 0x1111...]`, návratová hodnota bude:
+Například při zadání `_ids=[3, 6, 13]` a `_owners=[0xbeef..., 0x1337..., 0x1111...]` bude návratová hodnota
 
 ```solidity
 [
@@ -95,13 +95,13 @@ function isApprovedForAll(
 ) external view returns (bool);
 ```
 
-Schválení se mírně liší od ERC-20. Namísto schvalování konkrétních částek nastavíte operátora na schváleného nebo neschváleného pomocí `setApprovalForAll`.
+Schválení se mírně liší od ERC-20. Místo schvalování konkrétních částek nastavíte operátora jako schváleného nebo neschváleného pomocí `setApprovalForAll`.
 
-Aktuální stav lze zjistit pomocí `isApprovedForAll`. Jak můžete vidět, je to vše nebo nic. Nemůžete definovat, kolik tokenů schválit nebo dokonce kterou třídu tokenů.
+Čtení aktuálního stavu lze provést pomocí `isApprovedForAll`. Jak vidíte, jde o operaci typu všechno nebo nic. Nemůžete definovat, kolik tokenů schválit, ani o jakou třídu tokenů se jedná.
 
-Tento design je záměrně jednoduchý. Můžete schválit pouze vše nebo nic pro jednu adresu.
+Toto je záměrně navrženo s ohledem na jednoduchost. Můžete schválit pouze vše pro jednu adresu.
 
-### Hák pro příjem {#receive-hook}
+### Hook pro příjem {#receive-hook}
 
 ```solidity
 function onERC1155BatchReceived(
@@ -113,34 +113,34 @@ function onERC1155BatchReceived(
 ) external returns(bytes4);
 ```
 
-Díky podpoře [EIP-165](https://eips.ethereum.org/EIPS/eip-165) podporuje ERC-1155 háky pro příjem pouze pro chytré kontrakty. Funkce háčku musí vrátit magickou předdefinovanou hodnotu bytes4, která je dána jako:
+Vzhledem k podpoře [EIP-165](https://eips.ethereum.org/EIPS/eip-165) podporuje ERC-1155 hooky pro příjem pouze pro chytré kontrakty. Funkce hooku musí vrátit magickou předdefinovanou hodnotu bytes4, která je dána jako:
 
 ```solidity
 bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)"))
 ```
 
-Když přijímající kontrakt vrátí tuto hodnotu, předpokládá se, že kontrakt přijímá přenos a ví, jak zacházet s tokeny ERC-1155. Skvělé, už žádné tokeny zaseknuté v kontraktu!
+Když přijímající kontrakt vrátí tuto hodnotu, předpokládá se, že kontrakt přijímá převod a ví, jak s tokeny ERC-1155 zacházet. Skvělé, už žádné uvízlé tokeny v kontraktu!
 
 ### Podpora NFT {#nft-support}
 
-Když je zásoba pouze jedna, token je v podstatě nezaměnitelný token (NFT). A stejně jako u standardu ERC-721 můžete definovat URL metadat. Klienti mohou adresu URL číst a upravovat, viz [zde](https://eips.ethereum.org/EIPS/eip-1155#metadata).
+Když je nabídka pouze jedna, token je v podstatě nezaměnitelný token (NFT). A jak je standardem pro ERC-721, můžete definovat URL pro metadata. URL mohou klienti číst a upravovat, viz [zde](https://eips.ethereum.org/EIPS/eip-1155#metadata).
 
-### Pravidlo bezpečného převodu {#safe-transfer-rule}
+### Pravidlo pro bezpečný převod {#safe-transfer-rule}
 
-Už jsme se dotkli několika pravidel pro bezpečný přenos v předchozích vysvětleních. Podívejme se však na ta nejdůležitější z nich:
+Některých pravidel pro bezpečný převod jsme se dotkli již v předchozích vysvětleních. Podívejme se ale na ta nejdůležitější z nich:
 
-1. Volající musí mít schválení k útratě tokenů pro adresu `_from` nebo se volající musí rovnat `_from`.
-2. Volání přenosu musí být zrušeno, pokud
-   1. Adresa `_to` je 0.
+1. Volající musí být schválen k utrácení tokenů pro adresu `_from` nebo se volající musí rovnat `_from`.
+2. Volání převodu se musí zvrátit, pokud
+   1. adresa `_to` je 0.
    2. délka `_ids` není stejná jako délka `_values`.
-   3. zůstatek držitele některého z tokenů v `_ids` je nižší než odpovídající částka v `_values` odeslaná příjemci.
-   4. Dojde k jakékoliv jiné chybě.
+   3. jakýkoli ze zůstatků držitelů pro tokeny v `_ids` je nižší než příslušné částky v `_values` odeslané příjemci.
+   4. dojde k jakékoli jiné chybě.
 
-_Poznámka_: Všechny dávkové funkce, včetně háku, existují také ve verzích bez dávkového zpracování. Je to takto nastaveno kvůli efektivitě využití paliva, protože přenos pouze jednoho aktiva bude pravděpodobně stále nejběžněji používaným způsobem. Pro zjednodušení jsme tyto funkce z článku vynechali, stejě jako pravidla bezpečného přenosu. Jejich jména jsou ale identická, stačí jen odstranit "Batch".
+_Poznámka_: Všechny dávkové funkce včetně hooku existují také ve verzích bez dávek. Děje se tak z důvodu úspory gasu, vzhledem k tomu, že převod pouze jednoho aktiva bude pravděpodobně stále nejčastěji používaným způsobem. Pro zjednodušení jsme je ve vysvětleních vynechali, včetně pravidel pro bezpečný převod. Názvy jsou totožné, stačí odstranit slovo 'Batch'.
 
 ## Další čtení {#further-reading}
 
 - [EIP-1155: Standard pro více tokenů](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Dokumentace OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/erc1155)
-- [ERC-1155: GitHub repozitář](https://github.com/enjin/erc-1155)
+- [ERC-1155: Repozitář na GitHubu](https://github.com/enjin/erc-1155)
 - [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)

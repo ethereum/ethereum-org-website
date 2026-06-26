@@ -1,77 +1,76 @@
 ---
 title: Perguntas frequentes
-description: Common Ethereum questions about wallets, transactions, staking, and more.
+description: Perguntas comuns sobre o Ethereum relacionadas a carteiras, transações, staking e muito mais.
 lang: pt-br
 ---
 
-# Perguntas mais frequentes {#faq}
+## Enviei cripto para o endereço errado {#wrong-wallet}
 
-## I sent crypto to the wrong address {#wrong-wallet}
+Uma transação enviada no Ethereum é irreversível. Infelizmente, se você enviou ETH ou tokens para a carteira errada, não há como reverter a transação.
 
-Uma transação enviada em Ethereum é irreversível. Unfortunately, if you sent ETH or tokens to the wrong wallet, there is no way to reverse the transaction.
+**O que você pode fazer:**
 
-**What you can do:**
+- **Se você conhece o proprietário do endereço**, entre em contato diretamente com ele e peça que devolva os fundos
+- **Se o endereço pertencer a uma corretora ou serviço conhecido**, entre em contato com a equipe de suporte deles, pois eles podem ajudar
+- **Se você enviou tokens para um endereço de contrato**, verifique se o contrato tem uma função de saque ou recuperação (isso é raro)
 
-- **If you know the owner of the address**, contact them directly and ask them to return the funds
-- **If the address belongs to an exchange or known service**, contact their support team, as they may be able to help
-- **If you sent tokens to a contract address**, check whether the contract has a withdrawal or recovery function (this is rare)
+Na maioria dos casos, não há como recuperar os fundos. Nenhuma organização central, entidade ou pessoa é dona do Ethereum, o que significa que ninguém pode reverter transações. Sempre verifique o endereço do destinatário antes de confirmar.
 
-In most cases, there is no way to recover the funds. No central organization, entity, or person owns Ethereum, which means no one can reverse transactions. Always double-check the recipient address before confirming.
+## Perdi o acesso à minha carteira {#lost-wallet-access}
 
-## I lost access to my wallet {#lost-wallet-access}
+Suas opções de recuperação dependem do tipo de carteira que você usa.
 
-Your recovery options depend on the type of wallet you use.
+### Se você tem sua frase semente (frase de recuperação) {#if-you-have-your-seed-phrase-recovery-phrase}
 
-### If you have your seed phrase (recovery phrase)
+Você pode restaurar sua carteira em qualquer aplicativo de carteira compatível usando sua frase semente. É por isso que é fundamental manter sua frase semente armazenada com segurança offline. Verifique a documentação do provedor da sua carteira para obter instruções de restauração.
 
-You can restore your wallet in any compatible wallet app using your seed phrase. This is why it is critical to keep your seed phrase stored safely offline. Check your wallet provider's documentation for restore instructions.
+### Se você perdeu sua frase semente {#if-you-have-lost-your-seed-phrase}
 
-### If you have lost your seed phrase
+Sem sua frase semente ou chaves privadas, seus fundos não podem ser recuperados. Ninguém, incluindo o ethereum.org, pode redefinir sua senha ou restaurar o acesso a uma carteira de autocustódia.
 
-Without your seed phrase or private keys, your funds cannot be recovered. No one, including ethereum.org, can reset your password or restore access to a self-custody wallet.
+### Se sua conta estiver em uma corretora {#if-your-account-is-on-an-exchange}
 
-### If your account is on an exchange
-
-If your account is on a centralized exchange like Coinbase, Binance, or Kraken, contact the exchange's support team directly. They control accounts on their platform and may be able to help with password resets or account recovery.
+Se sua conta estiver em uma corretora centralizada como Coinbase, Binance ou Kraken, entre em contato diretamente com a equipe de suporte da corretora. Eles controlam as contas em sua plataforma e podem ajudar com redefinições de senha ou recuperação de conta.
 
 <Alert variant="warning">
 <AlertEmoji text=":shield:"/>
 <AlertContent>
 <AlertDescription>
 
-**Never share your seed phrase with anyone** claiming to help you recover your wallet. This is one of the most common scam tactics. No legitimate service will ever ask for your seed phrase.
+**Nunca compartilhe sua frase semente com ninguém** que afirme ajudar você a recuperar sua carteira. Esta é uma das táticas de golpe mais comuns. Nenhum serviço legítimo jamais pedirá sua frase semente.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 <DocLink href="/guides/how-to-use-a-wallet/">
-  How to use a wallet
+  Como usar uma carteira
 </DocLink>
 
-## My transaction is stuck or pending {#stuck-transaction}
+## Minha transação está travada ou pendente {#stuck-transaction}
 
-Transactions on Ethereum can get stuck when the gas fee you set was lower than what the network currently requires. Most wallets let you fix this:
+As transações no Ethereum podem ficar travadas quando a taxa de gas que você definiu for menor do que a rede exige no momento. A maioria das carteiras permite que você corrija isso:
 
-- **Speed up:** Resubmit the same transaction with a higher gas fee
-- **Cancel:** Send a 0 ETH transaction to your own address using the same nonce as the pending transaction
+- **Acelerar:** Reenvie a mesma transação com uma taxa de gas mais alta
+- **Cancelar:** Envie uma transação de 0 ETH para o seu próprio endereço usando o mesmo nonce da transação pendente
 
-### Helpful guides
+### Guias úteis {#helpful-guides}
 
-- [How to speed up or cancel a pending transaction on MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
-- [Como cancelar transações pendentes do Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+- [Como acelerar ou cancelar uma transação pendente na MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
+- [Como cancelar transações pendentes no Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-## Como eu posso solicitar minha doação de Ethereum? {#giveaway-scam}
+## Como posso reivindicar minha distribuição gratuita de Ethereum? {#giveaway-scam}
 
-Doações/airdrops de Ethereum são golpes criados para roubar o seu ETH. Do not be tempted by offers that seem too good to be true. If you send ETH to a giveaway address, you will not receive a giveaway, and you will not be able to recover your funds.
+As distribuições gratuitas de Ethereum são golpes projetados para roubar seu ETH. Não se sinta tentado por ofertas que parecem boas demais para ser verdade. Se você enviar ETH para um endereço de distribuição gratuita, não receberá a distribuição gratuita e não conseguirá recuperar seus fundos.
 
 [Mais sobre prevenção de golpes](/security/#common-scams)
 
-## How do I stake ETH? {#how-to-stake}
+## Como faço stake de ETH? {#how-to-stake}
 
-Para se tornar um validador, você deve participar com 32 ETH no contrato de depósito do Ethereum e configurar um nó validador. You can also participate with less ETH through staking pools.
+Para se tornar um validador, você deve fazer stake de 32 ETH no contrato de depósito do Ethereum e configurar um nó validador. Você também pode participar com menos ETH por meio de pools de staking.
 
-More information is available on our [staking pages](/staking/) and at [the staking launchpad](https://launchpad.ethereum.org/).
+Mais informações estão disponíveis em nossas [páginas de staking](/staking/) e na [plataforma de lançamento de staking](https://launchpad.ethereum.org/).
 
-## Como minero Ethereum? {#mining-ethereum}
+## Como faço para minerar Ethereum? {#mining-ethereum}
 
-A mineração do Ethereum não é mais possível. Mining was switched off when Ethereum moved from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Agora, em vez de mineradores, o Ethereum tem validadores. Qualquer pessoa pode fazer [stake](/glossary/#staking) de ETH e receber recompensas de staking por executar o software de validador para proteger a rede.
+A mineração de Ethereum não é mais possível. A mineração foi desativada quando o Ethereum mudou da [Prova de Trabalho (PoW)](/glossary/#pow) para a [Prova de Participação (PoS)](/glossary/#pos) durante o [The Merge](/roadmap/merge/) em setembro de 2022. Agora, em vez de mineradores, o Ethereum tem validadores. Qualquer pessoa pode fazer [stake](/glossary/#staking) de ETH e receber recompensas de staking por executar o software de validador para proteger a rede.

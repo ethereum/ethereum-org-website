@@ -1,68 +1,69 @@
 ---
-title: "Ethereum Foundation ve topluluk hibe programları"
+title: "Ethereum Vakfı ve topluluk hibe programları"
 description: "Ethereum ekosistemindeki hibe programlarının bir listesi."
 lang: tr
 ---
 
 # Ethereum hibeleri {#ethereum-grants}
 
-Aşağıda listelenen programlar, Ethereum ekosisteminin başarısını ve büyümesini teşvik etmek için çalışan projelere çeşitli finansman hibeleri sunar. Bunu, bir sonraki Ethereum projenizin başarılı olmasına yardımcı olacak fonları bulmak ve onlara başvurmak için bir kılavuz olarak kullabilirsiniz.
+Aşağıda listelenen programlar, [Ethereum](/) ekosisteminin başarısını ve büyümesini teşvik etmek için çalışan projelere çeşitli fon hibeleri sunmaktadır. Bir sonraki Ethereum projenizi başarılı kılmaya yardımcı olacak fonları bulmak ve bunlara başvurmak için bunu bir rehber olarak kullanın.
 
-Bu liste topluluğumuz tarafından hazırlanmıştır. Eksik veya yanlış bir şey varsa, lütfen bu sayfayı düzenleyin!
+Bu liste topluluğumuz tarafından derlenmiştir. Eksik veya yanlış bir şey varsa, lütfen bu sayfayı düzenleyin!
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Kurucular, işinizi hızlandırmak için yardıma mı ihtiyacınız var? [Kurucu Desteği sayfasına gidin](/founders/)</div>
+<div>Kurucular, işinizi hızlandırmak için yardıma mı ihtiyacınız var? [Kurucu Destek sayfasına gidin](/founders/)</div>
 </Alert>
 
 ## Geniş Ethereum ekosistemi {#broad-ethereum-ecosystem}
 
-Bu programlar geniş bir proje yelpazesine hibeler sağlayarak geniş Ethereum ekosistemini desteklerler. Bunlar ölçeklenebilirlik, topluluk kurma, güvenlik, gizlilik gibi birçoğu için çözümleri kapsar. Bu hibeler herhangi bir Ethereum platformuna özel değildir ve emin değilseniz başlamak için iyi yerlerdir.
+Bu programlar, geniş bir proje yelpazesine hibeler sunarak geniş Ethereum ekosistemini destekler. Bunlar arasında ölçeklenebilirlik, topluluk oluşturma, güvenlik, gizlilik ve daha fazlası için çözümler bulunur. Bu hibeler herhangi bir Ethereum platformuna özgü değildir ve emin değilseniz başlamak için iyi bir yerdir.
 
-- [EF Ekosistem Destek Programı](https://esp.ethereum.foundation) - _Özellikle evrensel araçlara, altyapıya, araştırmalara ve kamu mallarına odaklanarak Ethereum'a fayda sağlayan açık kaynaklı projeleri finanse eder_
-- [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Ekosistem Destek Programı tarafından desteklenen 1.000'den fazla projenin aranabilir dizini_
-- [Akademik Hibeler](https://esp.ethereum.foundation/academic-grants) - _Ethereum ile ilgili akademik çalışmaları desteklemek için hibeler_
+- [EF Ekosistem Destek Programı](https://esp.ethereum.foundation) - _Evrensel araçlar, altyapı, araştırma ve kamusal mallara özel olarak odaklanarak Ethereum'a fayda sağlayan açık kaynaklı projeleri finanse eder_
+- [ESP Hibe Gezgini](https://esp.ethereum.foundation/funded-projects) - _Ekosistem Destek Programı tarafından desteklenen 1.000'den fazla projenin aranabilir dizini_
+- [Akademik Hibeler](https://esp.ethereum.foundation/academic-grants) - _Ethereum ile ilgili akademik çalışmaları destekleyen hibeler_
+
 
 ## Hibe listesi toplayıcıları ve platformları {#grant-list-aggregators}
 
-Bu kaynaklar, Ethereum ekosistemindeki çeşitli hibe fırsatlarını derleyip düzenleyerek projenizin ihtiyaçlarına uygun fonlama fırsatlarını keşfetmeyi kolaylaştırır. Özel fonlama ihtiyaçlarınıza göre en uygun kaynakları bulmaya başlamanıza yardımcı olmak için bunları kişilere göre düzenledik.
+Bu kaynaklar, Ethereum ekosistemindeki çeşitli hibe fırsatlarını derleyip düzenleyerek projenizin ihtiyaçlarına uygun fonlama fırsatlarını keşfetmeyi kolaylaştırır. Belirli fonlama ihtiyaçlarınıza göre en alakalı kaynakları bulmaya başlamanıza yardımcı olmak için bunları kişilere göre düzenledik.
 
 ### Tüm hibe arayanlar için: Kapsamlı dizinler {#comprehensive-directories}
 
-Bu genel platformlar, tüm Web3 alanındaki hibeleri geniş bir şekilde kapsar ve fon arayan herkes için yararlı başlangıç noktalarıdır:
+Bu genel platformlar, tüm Web3 alanındaki hibelerin geniş bir kapsamını sunar ve fon arayan herkes için faydalı başlangıç noktalarıdır:
 
-- [Blockchain Grants](https://www.blockchaingrants.org/) - _Blokzincir ve kripto para hibeleri dizini_
-- [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Haftalık olarak güncellenen tüm web3 hibe programlarının dizini
+- [Karma Fonlama Haritası](https://gap.karmahq.xyz/funding-map) - Haftalık olarak güncellenen tüm Web3 hibe programlarının dizini
+- [Etherscan Hibe Dizini](https://etherscan.io/directory/Others/Grant) - Ethereum blok gezgini üzerindeki hibelerin derlenmiş listesi
 
-### Geliştiriciler ve kurucular için {#for-developers-and-builders}
+### Geliştiriciler ve inşa edenler için {#for-developers-and-builders}
 
-- [Hibe Programları Görüntüleyici](https://airtable.com/shr86elKgWTSCP4AY) - _Hibe programlarının halka açık Airtable veritabanı_
-- [Web3 Hibeleri E-Tablosu](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Web3 hibe fırsatlarının yer aldığı Google e-tablosu_
-- [Arbitrum Hibeleri](https://arbitrum.foundation/grants) — Arbitrum DAO ve [Arbitrum Foundation](https://arbitrum.foundation/)
+- [Hibe Programları Görüntüleyicisi](https://airtable.com/shr86elKgWTSCP4AY) - _Hibe programlarının halka açık Airtable veritabanı_
+- [Web3 Hibeleri Elektronik Tablosu](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Web3 hibe fırsatlarının Google elektronik tablosu_
+- [Arbitrum Hibeleri](https://arbitrum.foundation/grants) — Arbitrum DAO ve [Arbitrum Vakfı](https://arbitrum.foundation/)
 
-### DeFi projeleri ve finansal uygulamalar için {#for-defi-projects}
+### Merkeziyetsiz finans (DeFi) projeleri ve finansal uygulamalar için {#for-defi-projects}
 
-- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _DeFi Llama'nın hibe programı dizini_
 - [AlphaGrowth Hibeleri](https://alphagrowth.io/crypto-web3-grants-list) - _Kripto ve Web3 hibelerinin kapsamlı listesi_
-- [Uniswap Foundation Hibeleri](https://www.uniswapfoundation.org/build) - _DeFi geliştiricileri için Unichain ve Uniswap v4 hibeleri ve desteği_
+- [Uniswap Vakfı Hibeleri](https://www.uniswapfoundation.org/build) - _Unichain ve Uniswap v4 hibeleri ile DeFi geliştiricileri için destek_
 
 ### DAO katılımcıları ve yönetişim yenilikçileri için {#for-dao-contributors}
 
 Topluluk odaklı projeler ve yönetişim deneyleri için kaynaklar:
 
-- [DAO Hibeleri](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Hibe sunan kuruluşların yer aldığı Google e-tablosu_
-- [MetaGov Veritabanı](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Kapsamlı Web3 hibe haritası_
+- [DAO Hibeleri](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Hibe sunan organizasyonların Google elektronik tablosu_
+- [MetaGov Veritabanı](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Kapsamlı Web3 hibeleri haritası_
 
-### Kamu malları ve etki {#public-goods-and-impact}
+### Kamusal mallar ve etki {#public-goods-and-impact}
 
-Bu programlar, daha geniş topluluğa, kamu mallarına ve etki girişimlerine fayda sağlayan projeleri finanse etmeye odaklanmaktadır. Bunlar arasında hibe sağlayıcıların yanı sıra [karesel fonlama](/defi/#quadratic-funding) da dahil olmak üzere zincir üstü fon tahsis mekanizmalarını kullanan bağış platformları da bulunmaktadır:
+Bu programlar, daha geniş topluluğa, kamusal mallara ve etki girişimlerine fayda sağlayan projeleri finanse etmeye odaklanır. Bunlar arasında hibe sağlayıcıların yanı sıra [karesel fonlama](/defi/#quadratic-funding) dahil olmak üzere zincir içi fon tahsis mekanizmalarını kullanan bağış platformları da yer alır:
 
-- [Gitcoin](https://www.gitcoin.co/program) - _Gitcoin Hibeleri, Ethereum ekosistemindeki açık kaynak projeleri ve kamu mallarını finanse etmek için çok sayıda sermaye tahsis mekanizması kullanır_
-- [Octant](https://octant.app/home) - _Kamu yararını ve bireysel finansal güçlenmeyi dengeleyen bir kamu malları fonlama ekosistemi_
-- [Giveth](https://giveth.io/) - _İyilik amaçlı projelerden sıfır ek ücretle doğrudan bağış yapılmasını sağlayan kripto bağış platformu_
-- [Artizen](https://artizen.fund/) - _Sanat, bilim, teknoloji ve kültürün kesişim noktasında yeni projelere fon bulmaları için içerik üreticilere yardımcı olur_
-- [Karesel Hızlandırıcı](https://qacc.giveth.io/) - _Kamu yararına olan projeleri desteklemek için karesel fonlama kullanan bir başlangıç hızlandırma programı_
+- [Gitcoin](https://www.gitcoin.co/program) - _Gitcoin Hibeleri, Ethereum ekosistemindeki açık kaynaklı projeleri ve kamusal malları finanse etmek için çoklu sermaye tahsis mekanizmalarını kullanır_
+- [Octant](https://octant.app/home) - _Ortak fayda ile bireysel finansal güçlenmeyi dengeleyen kamusal mallar fonlama ekosistemi_
+- [Giveth](https://giveth.io/) - _İyilik amaçlı projelere sıfır ek ücretle doğrudan bağış yapılmasını sağlayan kripto bağış platformu_
+- [Artizen](https://artizen.fund/) - _Yaratıcıların sanat, bilim, teknoloji ve kültürün sınırlarında yeni projeler için eşleştirme fonu bulmalarına yardımcı olur_
+- [Quadratic Accelerator](https://qacc.giveth.io/) - _Kamu yararına olan projeleri desteklemek için karesel fonlama kullanan girişim hızlandırıcı programı_
 
-## Ethereum'da çalışmak {#work-in-ethereum}
 
-Kendi projenizi başlatmaya hazır değil misiniz? Aktif olarak çalışmak ve Ethereum ekosistemine katkıda bulunmak için tutkulu bireyler arayan yüzlerce şirket var. Daha fazla bilgi mi arıyorsunuz? [Ethereum ile ilgili işlere göz atın](/community/get-involved/#ethereum-jobs)
+## Ethereum'da Çalışın {#work-in-ethereum}
+
+Kendi projenizi başlatmaya hazır değil misiniz? Ethereum ekosisteminde çalışacak ve katkıda bulunacak tutkulu bireyleri aktif olarak arayan yüzlerce şirket var. Daha fazla bilgi mi arıyorsunuz? [Ethereum ile ilgili işlere göz atın](/community/get-involved/#ethereum-jobs)

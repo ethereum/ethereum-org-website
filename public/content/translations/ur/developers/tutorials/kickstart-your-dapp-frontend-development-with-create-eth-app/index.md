@@ -1,27 +1,22 @@
 ---
-title: "create-eth-app کے ساتھ اپنے ڈیپ فرنٹ اینڈ ڈیولپمنٹ کو کک اسٹارٹ کریں"
-description: "create-eth-app کا استعمال کیسے کریں اور اس کی خصوصیات کا ایک جائزہ"
-author: "Markus Waas"
+title: "⁦create-eth-app⁩ کے ساتھ اپنی غیر مرکزی ایپلی کیشن (dapp) کے فرنٹ اینڈ کی ڈیولپمنٹ کا آغاز کریں"
+description: "⁦create-eth-app⁩ اور اس کی خصوصیات کو استعمال کرنے کے طریقے کا جائزہ"
+author: "مارکس واس"
 tags:
-  [
-    "فرنٹ اینڈ",
-    "javascript",
-    "ethers.js",
-    "دی گراف",
-    "defi"
-  ]
+  ["فرنٹ اینڈ", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
-lang: ur-in
+breadcrumb: "⁦create-eth-app⁩"
+lang: ur
 published: 2020-04-27
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-پچھلی بار ہم نے [Solidity کی بڑی تصویر](https://soliditydeveloper.com/solidity-overview-2020) پر نظر ڈالی تھی اور [create-eth-app](https://github.com/PaulRBerg/create-eth-app) کا ذکر بھی کیا تھا۔ اب آپ جانیں گے کہ اسے کیسے استعمال کیا جائے، کون سی خصوصیات اس میں ضم ہیں اور اس کو مزید وسیع کرنے کے اضافی آئیڈیاز کیا ہیں۔ [Sablier](http://sablier.com/) کے بانی، Paul Razvan Berg کے ذریعہ شروع کی گئی، یہ ایپ آپ کے فرنٹ اینڈ ڈیولپمنٹ کو کِک اسٹارٹ کرے گی اور منتخب کرنے کے لیے کئی اختیاری انضمام کے ساتھ آتی ہے۔
+پچھلی بار ہم نے [<span dir="ltr">Solidity</span> کے مجموعی منظر](https://soliditydeveloper.com/solidity-overview-2020) کا جائزہ لیا تھا اور [<span dir="ltr">create-eth-app</span>](https://github.com/PaulRBerg/create-eth-app) کا ذکر بھی کیا تھا۔ اب آپ جانیں گے کہ اسے کیسے استعمال کرنا ہے، اس میں کون سی خصوصیات شامل ہیں اور اسے مزید وسعت دینے کے حوالے سے اضافی خیالات کیا ہیں۔ [<span dir="ltr">Sablier</span>](https://sablier.com/) کے بانی، پال رضوان برگ (Paul Razvan Berg) کی جانب سے شروع کی گئی یہ ایپ آپ کی فرنٹ اینڈ ڈیولپمنٹ کا آغاز کرے گی اور اس میں انتخاب کے لیے کئی اختیاری انضمام (integrations) شامل ہیں۔
 
-## انسٹالیشن {#installation}
+## تنصیب {#installation}
 
-انسٹالیشن کے لیے Yarn 0.25 یا اس سے اعلیٰ ورژن کی ضرورت ہے (`npm install yarn --global`)۔ یہ چلانے جتنا ہی آسان ہے:
+تنصیب کے لیے <span dir="ltr">Yarn 0.25</span> یا اس سے اعلیٰ ورژن (`npm install yarn --global`) درکار ہے۔ اسے چلانا اتنا ہی آسان ہے جتنا کہ:
 
 ```bash
 yarn create eth-app my-eth-app
@@ -29,44 +24,44 @@ cd my-eth-app
 yarn react-app:start
 ```
 
-یہ اندرونی طور پر [create-react-app](https://github.com/facebook/create-react-app) کا استعمال کر رہا ہے۔ اپنی ایپ دیکھنے کے لیے، `http://localhost:3000/` کھولیں۔ جب آپ پروڈکشن میں ڈیپلائے کرنے کے لیے تیار ہوں، تو yarn build کے ساتھ ایک مِنیفائیڈ بنڈل بنائیں۔ اسے ہوسٹ کرنے کا ایک آسان طریقہ [Netlify](https://www.netlify.com/) ہوگا۔ آپ ایک GitHub ریپو بنا سکتے ہیں، اسے Netlify میں شامل کر سکتے ہیں، بلڈ کمانڈ سیٹ اپ کر سکتے ہیں اور بس ہو گیا! آپ کی ایپ ہوسٹ ہو جائے گی اور ہر کسی کے لیے قابل استعمال ہوگی۔ اور یہ سب کچھ مفت ہے۔
+یہ اندرونی طور پر [<span dir="ltr">create-react-app</span>](https://github.com/facebook/create-react-app) کا استعمال کر رہا ہے۔ اپنی ایپ دیکھنے کے لیے، `http://localhost:3000/` کھولیں۔ جب آپ پروڈکشن میں تعینات کرنے کے لیے تیار ہوں، تو <span dir="ltr">yarn build</span> کے ساتھ ایک منیفائیڈ (minified) بنڈل بنائیں۔ اسے ہوسٹ کرنے کا ایک آسان طریقہ [<span dir="ltr">Netlify</span>](https://www.netlify.com/) ہوگا۔ آپ ایک <span dir="ltr">GitHub</span> ریپو بنا سکتے ہیں، اسے <span dir="ltr">Netlify</span> میں شامل کر سکتے ہیں، بلڈ کمانڈ سیٹ اپ کر سکتے ہیں اور آپ کا کام مکمل ہو گیا! آپ کی ایپ ہوسٹ ہو جائے گی اور ہر کسی کے لیے قابل استعمال ہوگی۔ اور یہ سب بالکل مفت ہے۔
 
 ## خصوصیات {#features}
 
 ### React اور create-react-app {#react--create-react-app}
 
-سب سے پہلے ایپ کا دل: React اور _create-react-app_ کے ساتھ آنے والی تمام اضافی خصوصیات۔ اگر آپ Ethereum کو انٹیگریٹ نہیں کرنا چاہتے ہیں تو صرف اس کا استعمال کرنا ایک بہترین آپشن ہے۔ [React](https://react.dev/) خود انٹرایکٹو UI بنانا بہت آسان بنا دیتا ہے۔ ہو سکتا ہے یہ [Vue](https://vuejs.org/) کی طرح مبتدیوں کے لیے آسان نہ ہو، لیکن یہ اب بھی زیادہ تر استعمال ہوتا ہے، اس میں زیادہ خصوصیات ہیں اور سب سے اہم بات یہ ہے کہ منتخب کرنے کے لیے ہزاروں اضافی لائبریریاں موجود ہیں۔ _create-react-app_ اس کے ساتھ شروعات کرنا بھی بہت آسان بنا دیتا ہے اور اس میں شامل ہیں:
+سب سے پہلے ایپ کا دل: <span dir="ltr">React</span> اور _create-react-app_ کے ساتھ آنے والی تمام اضافی خصوصیات۔ اگر آپ ایتھیریم کو ضم نہیں کرنا چاہتے تو صرف اس کا استعمال ایک بہترین آپشن ہے۔ [<span dir="ltr">React</span>](https://react.dev/) بذات خود انٹرایکٹو یوزر انٹرفیس (<span dir="ltr">UI</span>) بنانا بہت آسان بناتا ہے۔ یہ شاید [<span dir="ltr">Vue</span>](https://vuejs.org/) جتنا مبتدیوں کے لیے آسان نہ ہو، لیکن یہ اب بھی سب سے زیادہ استعمال ہوتا ہے، اس میں زیادہ خصوصیات ہیں اور سب سے اہم بات یہ ہے کہ انتخاب کے لیے ہزاروں اضافی لائبریریاں موجود ہیں۔ _create-react-app_ اس کے ساتھ شروعات کرنا بھی بہت آسان بناتا ہے اور اس میں شامل ہیں:
 
-- React, JSX, ES6, TypeScript, فلو سنٹیکس سپورٹ۔
-- ES6 سے آگے زبان کی اضافی چیزیں جیسے آبجیکٹ اسپریڈ آپریٹر۔
-- آٹوپریفکسڈ CSS، لہذا آپ کو -webkit- یا دیگر پریفکس کی ضرورت نہیں ہے۔
+- <span dir="ltr">React</span>، <span dir="ltr">JSX</span>، <span dir="ltr">ES6</span>، <span dir="ltr">TypeScript</span>، اور <span dir="ltr">Flow</span> سنٹیکس کی سپورٹ۔
+- <span dir="ltr">ES6</span> سے آگے زبان کے اضافی فیچرز جیسے آبجیکٹ اسپریڈ آپریٹر (object spread operator)۔
+- آٹوپریفکسڈ (Autoprefixed) <span dir="ltr">CSS</span>، تاکہ آپ کو <span dir="ltr">-webkit-</span> یا دیگر پریفکسز کی ضرورت نہ پڑے۔
 - کوریج رپورٹنگ کے لیے بلٹ ان سپورٹ کے ساتھ ایک تیز انٹرایکٹو یونٹ ٹیسٹ رنر۔
-- ایک لائیو ڈیولپمنٹ سرور جو عام غلطیوں کے بارے میں خبردار کرتا ہے۔
-- ہیشز اور سورس میپس کے ساتھ، پروڈکشن کے لیے JS، CSS، اور تصاویر کو بنڈل کرنے کے لیے ایک بلڈ اسکرپٹ۔
+- ایک لائیو ڈیولپمنٹ سرور جو عام غلطیوں کے بارے میں متنبہ کرتا ہے۔
+- پروڈکشن کے لیے <span dir="ltr">JS</span>، <span dir="ltr">CSS</span>، اور تصاویر کو بنڈل کرنے کے لیے ایک بلڈ اسکرپٹ، جس میں ہیشز (hashes) اور سورس میپس (sourcemaps) شامل ہیں۔
 
-خاص طور پر _create-eth-app_ نئے [hooks effects](https://legacy.reactjs.org/docs/hooks-effect.html) کا استعمال کر رہا ہے۔ طاقتور، پھر بھی بہت چھوٹے نام نہاد فنکشنل کمپونینٹس لکھنے کا ایک طریقہ۔ _create-eth-app_ میں ان کا استعمال کیسے ہوتا ہے اس کے لیے Apollo کے بارے میں نیچے والا سیکشن دیکھیں۔
+خاص طور پر _create-eth-app_ نئے [ہکس ایفیکٹس (hooks effects)](https://legacy.reactjs.org/docs/hooks-effect.html) کا استعمال کر رہا ہے۔ یہ طاقتور، لیکن بہت چھوٹے نام نہاد فنکشنل کمپوننٹس (functional components) لکھنے کا ایک طریقہ ہے۔ _create-eth-app_ میں ان کا استعمال کیسے ہوتا ہے، اس کے لیے نیچے <span dir="ltr">Apollo</span> کے بارے میں سیکشن دیکھیں۔
 
 ### Yarn Workspaces {#yarn-workspaces}
 
-[Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) آپ کو ایک سے زیادہ پیکیجز رکھنے کی اجازت دیتے ہیں، لیکن ان سب کو روٹ فولڈر سے منظم کرنے اور `yarn install` کا استعمال کرتے ہوئے سب کے لیے ایک ساتھ ڈیپینڈینسیز انسٹال کرنے کے قابل بناتے ہیں۔ یہ خاص طور پر چھوٹے اضافی پیکیجز کے لیے معنی خیز ہے جیسے کہ اسمارٹ کنٹریکٹس ایڈریس/ABI مینجمنٹ (یہ معلومات کہ آپ نے کون سے اسمارٹ کنٹریکٹس کہاں ڈیپلائے کیے ہیں اور ان کے ساتھ کیسے کمیونیکیٹ کرنا ہے) یا گراف انٹیگریشن، دونوں `create-eth-app` کا حصہ ہیں۔
+[<span dir="ltr">Yarn Workspaces</span>](https://classic.yarnpkg.com/en/docs/workspaces/) آپ کو متعدد پیکجز رکھنے کی اجازت دیتے ہیں، لیکن آپ ان سب کو روٹ فولڈر سے منظم کر سکتے ہیں اور `yarn install` کا استعمال کرتے ہوئے ایک ہی وقت میں سب کے لیے انحصار (dependencies) انسٹال کر سکتے ہیں۔ یہ خاص طور پر چھوٹے اضافی پیکجز کے لیے معنی خیز ہے جیسے سمارٹ کنٹریکٹ ایڈریسز/<span dir="ltr">ABI</span> مینجمنٹ (یہ معلومات کہ آپ نے کون سے سمارٹ کنٹریکٹس کہاں تعینات کیے ہیں اور ان کے ساتھ کیسے بات چیت کرنی ہے) یا گراف انضمام، جو دونوں `create-eth-app` کا حصہ ہیں۔
 
 ### ethers.js {#ethersjs}
 
-جبکہ [Web3](https://docs.web3js.org/) اب بھی زیادہ تر استعمال ہوتا ہے، [ethers.js](https://docs.ethers.io/) نے پچھلے سال ایک متبادل کے طور پر بہت زیادہ مقبولیت حاصل کی ہے اور یہی وہ ہے جسے _create-eth-app_ میں انٹیگریٹ کیا گیا ہے۔ آپ اس کے ساتھ کام کر سکتے ہیں، اسے Web3 میں تبدیل کر سکتے ہیں یا [ethers.js v5](https://docs.ethers.org/v5/) میں اپ گریڈ کرنے پر غور کر سکتے ہیں جو تقریباً بیٹا سے باہر ہے۔
+اگرچہ [<span dir="ltr">Web3</span>](https://docs.web3js.org/) اب بھی زیادہ تر استعمال ہوتا ہے، لیکن پچھلے سال میں ایک متبادل کے طور پر [<span dir="ltr">ethers.js</span>](https://docs.ethers.io/) نے بہت زیادہ مقبولیت حاصل کی ہے اور یہی _create-eth-app_ میں ضم کیا گیا ہے۔ آپ اس کے ساتھ کام کر سکتے ہیں، اسے <span dir="ltr">Web3</span> میں تبدیل کر سکتے ہیں یا [<span dir="ltr">ethers.js v5</span>](https://docs.ethers.org/v5/) پر اپ گریڈ کرنے پر غور کر سکتے ہیں جو تقریباً بیٹا (beta) سے باہر آچکا ہے۔
 
-### دی گراف {#the-graph}
+### The Graph {#the-graph}
 
-[GraphQL](https://graphql.org/) ایک [Restful API](https://restfulapi.net/) کے مقابلے میں ڈیٹا کو ہینڈل کرنے کا ایک متبادل طریقہ ہے۔ ان کے Restful Apis پر کئی فوائد ہیں، خاص طور پر وکندریقرت بلاک چین ڈیٹا کے لیے۔ اگر آپ اس کے پیچھے کی وجہ جاننے میں دلچسپی رکھتے ہیں، تو [GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a) پر ایک نظر ڈالیں۔
+[<span dir="ltr">Restful API</span>](https://restfulapi.net/) کے مقابلے میں [<span dir="ltr">GraphQL</span>](https://graphql.org/) ڈیٹا کو ہینڈل کرنے کا ایک متبادل طریقہ ہے۔ <span dir="ltr">Restful APIs</span> پر ان کے کئی فوائد ہیں، خاص طور پر لامركزی بلاک چین ڈیٹا کے لیے۔ اگر آپ اس کے پیچھے کی وجوہات میں دلچسپی رکھتے ہیں، تو [<span dir="ltr">GraphQL Will Power the Decentralized Web</span>](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a) پر ایک نظر ڈالیں۔
 
-عام طور پر آپ براہ راست اپنے اسمارٹ کنٹریکٹ سے ڈیٹا حاصل کرتے ہیں۔ تازہ ترین ٹریڈ کا وقت پڑھنا چاہتے ہیں؟ بس `MyContract.methods.latestTradeTime().call()` کو کال کریں جو Ethereum نوڈ سے آپ کے ڈی ایپ میں ڈیٹا حاصل کرتا ہے۔ لیکن کیا ہوگا اگر آپ کو سینکڑوں مختلف ڈیٹا پوائنٹس کی ضرورت ہو؟ اس کے نتیجے میں نوڈ پر سینکڑوں ڈیٹا فیچ ہوں گے، جس میں ہر بار [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) کی ضرورت ہوگی، جو آپ کے ڈی ایپ کو سست اور ناکارہ بنا دے گا۔ ایک حل آپ کے کنٹریکٹ کے اندر ایک فیچر کال فنکشن ہو سکتا ہے جو ایک ساتھ ایک سے زیادہ ڈیٹا واپس کرتا ہے۔ اگرچہ یہ ہمیشہ مثالی نہیں ہے۔
+عام طور پر آپ اپنے سمارٹ کنٹریکٹ سے براہ راست ڈیٹا حاصل کرتے ہیں۔ تازہ ترین ٹریڈ کا وقت پڑھنا چاہتے ہیں؟ بس `MyContract.methods.latestTradeTime().call()` کو کال کریں جو ایک ایتھیریم نوڈ سے آپ کی غیر مرکزی ایپلی کیشن (dapp) میں ڈیٹا لاتا ہے۔ لیکن کیا ہوگا اگر آپ کو سینکڑوں مختلف ڈیٹا پوائنٹس کی ضرورت ہو؟ اس کے نتیجے میں نوڈ سے سینکڑوں بار ڈیٹا لانا پڑے گا، ہر بار ایک [<span dir="ltr">RTT</span>](https://wikipedia.org/wiki/Round-trip_delay_time) کی ضرورت ہوگی جس سے آپ کی dapp سست اور غیر موثر ہو جائے گی۔ اس کا ایک حل آپ کے کنٹریکٹ کے اندر ایک فیچر کال فنکشن (fetcher call function) ہو سکتا ہے جو ایک ہی وقت میں متعدد ڈیٹا واپس کرتا ہے۔ تاہم، یہ ہمیشہ مثالی نہیں ہوتا۔
 
-اور پھر آپ کو تاریخی ڈیٹا میں بھی دلچسپی ہو سکتی ہے۔ آپ نہ صرف آخری ٹریڈ کا وقت جاننا چاہتے ہیں، بلکہ ان تمام ٹریڈز کے اوقات بھی جاننا چاہتے ہیں جو آپ نے خود کیے ہیں۔ _create-eth-app_ سب گراف پیکیج کا استعمال کریں، [ڈاکومنٹیشن](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) پڑھیں اور اسے اپنے کنٹریکٹس کے مطابق ڈھالیں۔ اگر آپ مقبول اسمارٹ کنٹریکٹس کی تلاش میں ہیں، تو ہو سکتا ہے کہ پہلے سے ہی ایک سب گراف موجود ہو۔ [سب گراف ایکسپلورر](https://thegraph.com/explorer/) دیکھیں۔
+اور پھر آپ تاریخی ڈیٹا میں بھی دلچسپی لے سکتے ہیں۔ آپ نہ صرف آخری ٹریڈ کا وقت جاننا چاہتے ہیں، بلکہ ان تمام ٹریڈز کے اوقات بھی جاننا چاہتے ہیں جو آپ نے خود کبھی کی تھیں۔ _create-eth-app_ سب گراف پیکج استعمال کریں، [دستاویزات](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) پڑھیں اور اسے اپنے کنٹریکٹس کے مطابق ڈھالیں۔ اگر آپ مقبول سمارٹ کنٹریکٹس تلاش کر رہے ہیں، تو ہو سکتا ہے کہ پہلے سے ہی کوئی سب گراف موجود ہو۔ [سب گراف ایکسپلورر](https://thegraph.com/explorer/) چیک کریں۔
 
-ایک بار جب آپ کے پاس سب گراف ہو جاتا ہے، تو یہ آپ کو اپنے ڈی ایپ میں ایک سادہ کوئری لکھنے کی اجازت دیتا ہے جو آپ کے لیے درکار تمام اہم بلاک چین ڈیٹا کو بازیافت کرتا ہے، بشمول تاریخی ڈیٹا، اور اس کے لیے صرف ایک فیچ کی ضرورت ہوتی ہے۔
+ایک بار جب آپ کے پاس سب گراف ہو جاتا ہے، تو یہ آپ کو اپنی dapp میں ایک سادہ استفسار (query) لکھنے کی اجازت دیتا ہے جو آپ کی ضرورت کے تمام اہم بلاک چین ڈیٹا بشمول تاریخی ڈیٹا کو بازیافت کرتا ہے، جس کے لیے صرف ایک بار ڈیٹا لانے (fetch) کی ضرورت ہوتی ہے۔
 
 ### Apollo {#apollo}
 
-[Apollo Boost](https://www.apollographql.com/docs/react/get-started/) انٹیگریشن کی بدولت آپ آسانی سے اپنے React ڈی ایپ میں گراف کو انٹیگریٹ کر سکتے ہیں۔ خاص طور پر [React hooks and Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks) کا استعمال کرتے وقت، ڈیٹا حاصل کرنا اتنا ہی آسان ہے جتنا کہ اپنے کمپونینٹ میں ایک ہی GraphQl کوئری لکھنا:
+[<span dir="ltr">Apollo Boost</span>](https://www.apollographql.com/docs/react/get-started/) انضمام کی بدولت آپ آسانی سے اپنی <span dir="ltr">React</span> dapp میں گراف کو ضم کر سکتے ہیں۔ خاص طور پر جب [<span dir="ltr">React</span> ہکس اور <span dir="ltr">Apollo</span>](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks) کا استعمال کیا جائے، تو ڈیٹا لانا اتنا ہی آسان ہے جتنا کہ آپ کے کمپوننٹ میں ایک واحد <span dir="ltr">GraphQL</span> استفسار (query) لکھنا:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)
@@ -80,32 +75,32 @@ React.useEffect(() => {
 
 ## ٹیمپلیٹس {#templates}
 
-اس کے علاوہ آپ کئی مختلف ٹیمپلیٹس میں سے انتخاب کر سکتے ہیں۔ اب تک آپ Aave، Compound، UniSwap یا sablier انٹیگریشن استعمال کر سکتے ہیں۔ وہ سبھی پہلے سے بنے سب گراف انٹیگریشنز کے ساتھ اہم سروس اسمارٹ کنٹریکٹ ایڈریسز شامل کرتے ہیں۔ بس ٹیمپلیٹ کو کریشن کمانڈ میں شامل کریں جیسے `yarn create eth-app my-eth-app --with-template aave`۔
+اس کے علاوہ آپ کئی مختلف ٹیمپلیٹس میں سے انتخاب کر سکتے ہیں۔ اب تک آپ آوے، <span dir="ltr">Compound</span>، یونی سویپ یا <span dir="ltr">Sablier</span> انضمام استعمال کر سکتے ہیں۔ یہ سب پہلے سے بنے ہوئے سب گراف انضمام کے ساتھ اہم سروس سمارٹ کنٹریکٹ ایڈریسز کا اضافہ کرتے ہیں۔ بس تخلیق کی کمانڈ میں ٹیمپلیٹ شامل کریں جیسے `yarn create eth-app my-eth-app --with-template aave`۔
 
-### Aave {#aave}
+### آوے {#aave}
 
-[Aave](https://aave.com/) ایک وکندریقرت رقم قرض دینے والی مارکیٹ ہے۔ ڈیپازیٹرز غیر فعال آمدنی حاصل کرنے کے لیے مارکیٹ کو لیکویڈیٹی فراہم کرتے ہیں، جبکہ قرض لینے والے کولیٹرلز کا استعمال کرکے قرض لے سکتے ہیں۔ Aave کی ایک منفرد خصوصیت [فلیش لونز](https://aave.com/docs/developers/flash-loans) ہیں جو آپ کو بغیر کسی کولیٹرل کے رقم ادھار لینے کی اجازت دیتے ہیں، جب تک کہ آپ ایک ٹرانزیکشن کے اندر قرض واپس کر دیں۔ یہ مفید ہو سکتا ہے، مثال کے طور پر، آربٹریج ٹریڈنگ پر آپ کو اضافی نقد رقم دینے کے لیے۔
+[آوے](https://aave.com/) ایک لامركزی رقم قرض دینے کی مارکیٹ ہے۔ جمع کنندگان غیر فعال آمدنی (passive income) حاصل کرنے کے لیے مارکیٹ کو سیالیت فراہم کرتے ہیں، جبکہ قرض لینے والے ضمانت کا استعمال کرتے ہوئے قرض لے سکتے ہیں۔ آوے کی ایک منفرد خصوصیت وہ [فلیش لون](https://aave.com/docs/developers/flash-loans) ہیں جو آپ کو بغیر کسی ضمانت کے رقم ادھار لینے کی اجازت دیتے ہیں، بشرطیکہ آپ ایک ٹرانزیکشن کے اندر قرض واپس کر دیں۔ یہ مثال کے طور پر آربٹریج ٹریڈنگ (arbitrage trading) پر آپ کو اضافی نقد رقم دینے کے لیے مفید ہو سکتا ہے۔
 
 ٹریڈ کیے گئے ٹوکنز جو آپ کو سود کماتے ہیں انہیں _aTokens_ کہا جاتا ہے۔
 
-جب آپ _create-eth-app_ کے ساتھ Aave کو انٹیگریٹ کرنے کا انتخاب کرتے ہیں، تو آپ کو ایک [سب گراف انٹیگریشن](https://docs.aave.com/developers/getting-started/using-graphql) ملے گا۔ Aave، The Graph کا استعمال کرتا ہے اور آپ کو پہلے ہی [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) اور [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) پر [خام](https://thegraph.com/explorer/subgraph/aave/protocol-raw) یا [فارمیٹ شدہ](https://thegraph.com/explorer/subgraph/aave/protocol) شکل میں کئی استعمال کے لیے تیار سب گراف فراہم کرتا ہے۔
+جب آپ _create-eth-app_ کے ساتھ آوے کو ضم کرنے کا انتخاب کرتے ہیں، تو آپ کو ایک [سب گراف انضمام](https://docs.aave.com/developers/getting-started/using-graphql) ملے گا۔ آوے <span dir="ltr">The Graph</span> کا استعمال کرتا ہے اور آپ کو پہلے سے ہی روپسٹن اور مین نیٹ پر [خام (raw)](https://thegraph.com/explorer/subgraph/aave/protocol-raw) یا [فارمیٹ شدہ](https://thegraph.com/explorer/subgraph/aave/protocol) شکل میں کئی استعمال کے لیے تیار سب گرافس فراہم کرتا ہے۔
 
-![Aave فلیش لون میم – "ہاں، اگر میں اپنا فلیش لون 1 ٹرانزیکشن سے زیادہ وقت تک رکھ سکتا، تو یہ بہت اچھا ہوتا"](./flashloan-meme.png)
+![Aave Flash Loan meme – "Yeahhh, if I could keep my flash loan longer than 1 transaction, that would be great"](./flashloan-meme.png)
 
 ### Compound {#compound}
 
-[Compound](https://compound.finance/)، Aave کی طرح ہے۔ انٹیگریشن میں نیا [Compound v2 Subgraph](https://medium.com/graphprotocol/https-medium-com-graphprotocol-compound-v2-subgraph-highlight-a5f38f094195) پہلے سے ہی شامل ہے۔ یہاں سود کمانے والے ٹوکنز کو حیرت انگیز طور پر _cTokens_ کہا جاتا ہے۔
+[<span dir="ltr">Compound</span>](https://compound.finance/) آوے کی طرح ہے۔ اس انضمام میں پہلے سے ہی نیا [<span dir="ltr">Compound v2</span> سب گراف](https://medium.com/graphprotocol/https-medium-com-graphprotocol-compound-v2-subgraph-highlight-a5f38f094195) شامل ہے۔ یہاں سود کمانے والے ٹوکنز کو حیرت انگیز طور پر _cTokens_ کہا جاتا ہے۔
 
-### Uniswap {#uniswap}
+### یونی سویپ {#uniswap}
 
-[Uniswap](https://uniswap.exchange/) ایک وکندریقرت ایکسچینج (DEX) ہے۔ لیکویڈیٹی فراہم کرنے والے ٹریڈ کے دونوں اطراف کے لیے مطلوبہ ٹوکنز یا ایتھر فراہم کرکے فیس کما سکتے ہیں۔ یہ بڑے پیمانے پر استعمال ہوتا ہے اور اس لیے ٹوکنز کی ایک بہت وسیع رینج کے لیے اس کی لیکویڈیٹی سب سے زیادہ ہے۔ آپ اسے آسانی سے اپنے ڈی ایپ میں انٹیگریٹ کر سکتے ہیں، مثال کے طور پر، صارفین کو اپنے ETH کو DAI سے تبدیل کرنے کی اجازت دینے کے لیے۔
+[یونی سویپ](https://uniswap.exchange/) ایک لامركزی ایکسچینج (<span dir="ltr">DEX</span>) ہے۔ سیالیت فراہم کرنے والے ٹریڈ کے دونوں اطراف کے لیے مطلوبہ ٹوکنز یا ایتھر فراہم کر کے فیس کما سکتے ہیں۔ یہ وسیع پیمانے پر استعمال ہوتا ہے اور اس لیے ٹوکنز کی ایک بہت وسیع رینج کے لیے اس میں سب سے زیادہ سیالیت موجود ہے۔ آپ اسے آسانی سے اپنی dapp میں ضم کر سکتے ہیں تاکہ، مثال کے طور پر، صارفین کو اپنے <span dir="ltr">ETH</span> کا <span dir="ltr">DAI</span> سے تبادلہ کرنے کی اجازت دی جا سکے۔
 
-بدقسمتی سے، اس تحریر کے وقت انٹیگریشن صرف Uniswap v1 کے لیے ہے نہ کہ [ابھی جاری کردہ v2](https://uniswap.org/blog/uniswap-v2/) کے لیے۔
+بدقسمتی سے، اس تحریر کے وقت انضمام صرف یونی سویپ <span dir="ltr">v1</span> کے لیے ہے نہ کہ [حال ہی میں جاری کردہ <span dir="ltr">v2</span>](https://uniswap.org/blog/uniswap-v2/) کے لیے۔
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.com/) صارفین کو رقم کی ادائیگیوں کو اسٹریم کرنے کی اجازت دیتا ہے۔ ایک ہی تنخواہ کے دن کے بجائے، آپ کو ابتدائی سیٹ اپ کے بعد مزید کسی انتظامی کارروائی کے بغیر مسلسل اپنی رقم ملتی ہے۔ انٹیگریشن میں اس کا [اپنا سب گراف](https://thegraph.com/explorer/subgraph/sablierhq/sablier) شامل ہے۔
+[<span dir="ltr">Sablier</span>](https://sablier.com/) صارفین کو رقم کی ادائیگیوں کو اسٹریم (stream) کرنے کی اجازت دیتا ہے۔ ایک ہی تنخواہ کے دن کے بجائے، آپ کو ابتدائی سیٹ اپ کے بعد مزید انتظامیہ کے بغیر مسلسل اپنی رقم ملتی رہتی ہے۔ اس انضمام میں اس کا [اپنا سب گراف](https://thegraph.com/explorer/subgraph/sablierhq/sablier) شامل ہے۔
 
 ## آگے کیا ہے؟ {#whats-next}
 
-اگر آپ کے پاس _create-eth-app_ کے بارے میں سوالات ہیں، تو [Sablier کمیونٹی سرور](https://discord.gg/bsS8T47) پر جائیں، جہاں آپ _create-eth-app_ کے مصنفین سے رابطہ کر سکتے ہیں۔ کچھ پہلے اگلے اقدامات کے طور پر آپ [Material UI](https://mui.com/material-ui/) جیسے UI فریم ورک کو انٹیگریٹ کرنا چاہ سکتے ہیں، اس ڈیٹا کے لیے GraphQL کوئریز لکھیں جس کی آپ کو واقعی ضرورت ہے اور ڈیپلائمنٹ سیٹ اپ کریں۔
+اگر آپ کے پاس _create-eth-app_ کے بارے میں سوالات ہیں، تو [<span dir="ltr">Sablier</span> کمیونٹی سرور](https://discord.gg/bsS8T47) پر جائیں، جہاں آپ _create-eth-app_ کے مصنفین سے رابطہ کر سکتے ہیں۔ کچھ ابتدائی اگلے اقدامات کے طور پر آپ [<span dir="ltr">Material UI</span>](https://mui.com/material-ui/) جیسے <span dir="ltr">UI</span> فریم ورک کو ضم کرنا، اس ڈیٹا کے لیے <span dir="ltr">GraphQL</span> استفسارات (queries) لکھنا جس کی آپ کو درحقیقت ضرورت ہے اور تعیناتی (deployment) کو سیٹ اپ کرنا چاہیں گے۔

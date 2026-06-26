@@ -1,0 +1,785 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-developers-docs.json",
+  "generatedAt": "2026-05-26T10:00:25.934Z",
+  "rootHash": "f0638a4201af",
+  "tree": {
+    "contentHash": "ec03daebb3c7",
+    "anchorHash": "3e2772382b70",
+    "children": {
+      "docs-nav-accounts": {
+        "contentHash": "8a7c8b67fe8b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-accounts-description": {
+        "contentHash": "03c3b0451498",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-advanced": {
+        "contentHash": "9f088dbebd6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-backend-apis": {
+        "contentHash": "8ae9cad53864",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-block-explorers": {
+        "contentHash": "22da58fdc2b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-blocks": {
+        "contentHash": "1cd5a6687bb7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-blocks-description": {
+        "contentHash": "291413e3fe82",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-bridges": {
+        "contentHash": "d982f029f5c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-bridges-description": {
+        "contentHash": "7549b8a117f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-compiling-smart-contracts": {
+        "contentHash": "b3dd950744a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-composability": {
+        "contentHash": "b35f4f23f2af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-consensus-mechanisms": {
+        "contentHash": "7d27c29b3bf9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-consensus-mechanisms-description": {
+        "contentHash": "469d6db373d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-gasper": {
+        "contentHash": "d143a4908b25",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-weak-subjectivity": {
+        "contentHash": "556c3ee68063",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-attestations": {
+        "contentHash": "ca740e692731",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-keys": {
+        "contentHash": "f0d66a79c138",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-withdrawal-credentials": {
+        "contentHash": "2f5d6e698625",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-block-proposal": {
+        "contentHash": "1c5381c97f33",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-data-and-analytics": {
+        "contentHash": "1dc274ed4d69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-data-and-analytics-description": {
+        "contentHash": "0972fbb439c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-data-availability": {
+        "contentHash": "188a992e372f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-data-availability-storage-strategies": {
+        "contentHash": "621bd76bc842",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-dart": {
+        "contentHash": "5a5c3f75ebce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-delphi": {
+        "contentHash": "8f8dd674e9d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-deploying-smart-contracts": {
+        "contentHash": "016c5a9097ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-design-and-ux": {
+        "contentHash": "17c8f136a1c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-design-and-ux-description": {
+        "contentHash": "a8162c6ce1f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-design-fundamentals": {
+        "contentHash": "55712013a64f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-development-frameworks": {
+        "contentHash": "81dc3a308ef5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-development-frameworks-description": {
+        "contentHash": "b4e2321c5487",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-development-networks": {
+        "contentHash": "37448883b651",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-development-networks-description": {
+        "contentHash": "593f43b4fe1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-dex-design-best-practice": {
+        "contentHash": "9e64a8864522",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-dot-net": {
+        "contentHash": "357e7188a643",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-elixir": {
+        "contentHash": "3315715a7a3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-erc-20": {
+        "contentHash": "b3411d8f0276",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-erc-721": {
+        "contentHash": "e30636222dc3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-erc-777": {
+        "contentHash": "f3d162f0225a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-erc-1155": {
+        "contentHash": "96233e154782",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-erc-4626": {
+        "contentHash": "f4750de27efe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-ethereum-client-apis": {
+        "contentHash": "c334536d413d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-ethereum-client-apis-description": {
+        "contentHash": "153b276884d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-ethereum-stack": {
+        "contentHash": "be1ff85b5120",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-evm": {
+        "contentHash": "d1d82959463e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-evm-description": {
+        "contentHash": "6ec529378c42",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-foundational-topics": {
+        "contentHash": "eb1455dc121a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-gas": {
+        "contentHash": "e23a445d0fa7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-gas-description": {
+        "contentHash": "188ce547a218",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-golang": {
+        "contentHash": "50e56e797c4a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-heuristics-for-web3": {
+        "contentHash": "8428f471a012",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-integrated-development-environments-ides": {
+        "contentHash": "806dd64b2f7c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-integrated-development-environments-ides-description": {
+        "contentHash": "25ac5e8725e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-intro-to-dapps": {
+        "contentHash": "8a39d4de13f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-intro-to-dapps-description": {
+        "contentHash": "ad2fbf6c277b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-intro-to-ether": {
+        "contentHash": "966ac42b7c75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-intro-to-ether-description": {
+        "contentHash": "12057be13201",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-intro-to-ethereum": {
+        "contentHash": "fb401ef36a93",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-intro-to-ethereum-description": {
+        "contentHash": "d8f56283ae1e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-intro-to-the-stack": {
+        "contentHash": "9170d4101576",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-intro-to-the-stack-description": {
+        "contentHash": "f46b4b9f535d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-java": {
+        "contentHash": "c1ba60ce1358",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-java-script-apis": {
+        "contentHash": "3dc6018c29a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-javascript": {
+        "contentHash": "b27ad06d123c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-json-rpc": {
+        "contentHash": "5bf552445cee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-mev": {
+        "contentHash": "34e1859f1a31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-mev-description": {
+        "contentHash": "6432c24ba9b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-mining": {
+        "contentHash": "bf94ba9e2d86",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-mining-algorithms": {
+        "contentHash": "e834f34f5dd3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-dagger-hashimoto": {
+        "contentHash": "2c849ebe3d9b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-ethash": {
+        "contentHash": "cc606cfb1ec5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-networks": {
+        "contentHash": "ab2c47c3c77f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-networks-description": {
+        "contentHash": "d5da83afebb1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-nodes-and-clients": {
+        "contentHash": "0e034426d05b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-nodes-and-clients-description": {
+        "contentHash": "ac8e7f5165a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-opcodes": {
+        "contentHash": "fdc8c39bbfa6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-run-a-node": {
+        "contentHash": "37a70eebd3a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-client-diversity": {
+        "contentHash": "17bae74122ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-bootnodes": {
+        "contentHash": "dfd4457142c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-light-clients": {
+        "contentHash": "499190d80be6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-nodes-as-a-service": {
+        "contentHash": "9ce1b5bd629a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-oracles": {
+        "contentHash": "8cd7b48f730e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-oracles-description": {
+        "contentHash": "1ed6294cff2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-programming-languages": {
+        "contentHash": "0c85ff9f6ed0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-programming-languages-description": {
+        "contentHash": "b1ff26ffc6e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-proof-of-authority": {
+        "contentHash": "e98666fe5aaf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-proof-of-stake": {
+        "contentHash": "c7a6db281618",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-proof-of-work": {
+        "contentHash": "735f891366e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-python": {
+        "contentHash": "18885f27b5af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-readme": {
+        "contentHash": "d4b1ea5708dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-ruby": {
+        "contentHash": "108040ac289a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-rust": {
+        "contentHash": "d9aa89fdd15a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-scaling": {
+        "contentHash": "f1766cc4ec8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-scaling-description": {
+        "contentHash": "bed3f355f1ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-scaling-optimistic-rollups": {
+        "contentHash": "0aa995f7eaeb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-scaling-zk-rollups": {
+        "contentHash": "f72c38cd19cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-scaling-channels": {
+        "contentHash": "b2a82f5c41a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-scaling-sidechains": {
+        "contentHash": "d244ee9995f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-scaling-plasma": {
+        "contentHash": "fad9c96b8764",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-scaling-validium": {
+        "contentHash": "cc38c4d4fa24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-smart-contract-security": {
+        "contentHash": "ed145638d4ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-smart-contract-security-description": {
+        "contentHash": "1b1b2b498d55",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-smart-contract-formal-verification": {
+        "contentHash": "ecaa0f7339af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-smart-contract-formal-verification-description": {
+        "contentHash": "8c95a03d0bbd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-smart-contract-anatomy": {
+        "contentHash": "45a460ba798b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-smart-contract-languages": {
+        "contentHash": "db9fcb06dc66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-smart-contracts": {
+        "contentHash": "c9239b20a918",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-smart-contracts-description": {
+        "contentHash": "81aa9378f960",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-smart-contracts-libraries": {
+        "contentHash": "3ac27891ce74",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-standards": {
+        "contentHash": "b9a136292f40",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-standards-description": {
+        "contentHash": "9904780a83cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-storage": {
+        "contentHash": "a69c4dece144",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-storage-description": {
+        "contentHash": "02af7f64ce39",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-testing-smart-contracts": {
+        "contentHash": "9163aeb9f46f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-token-standards": {
+        "contentHash": "aec7e5416cff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-transactions": {
+        "contentHash": "3e5136fd4b11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-transactions-description": {
+        "contentHash": "44c0509971d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-upgrading-smart-contracts": {
+        "contentHash": "71facbb2ae28",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-naming-smart-contracts": {
+        "contentHash": "2081a107853c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-verifying-smart-contracts": {
+        "contentHash": "9c40e3d286df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-web2-vs-web3": {
+        "contentHash": "de29eb5878cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-web2-vs-web3-description": {
+        "contentHash": "e8f2ce2717e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-networking-layer": {
+        "contentHash": "8a013c1df5de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-networking-layer-description": {
+        "contentHash": "8696083c2139",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-networking-layer-network-addresses": {
+        "contentHash": "fde8783e501b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-networking-layer-portal-network": {
+        "contentHash": "a7fb80b8d6bf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-data-structures-and-encoding": {
+        "contentHash": "33d90e3eb884",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-data-structures-and-encoding-description": {
+        "contentHash": "a916e75c352c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-data-structures-and-encoding-rlp": {
+        "contentHash": "0cb1af55f9c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-data-structures-and-encoding-patricia-merkle-trie": {
+        "contentHash": "3000c54a91dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-data-structures-and-encoding-ssz": {
+        "contentHash": "dc94cf82ff22",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-data-structures-and-encoding-web3-secret-storage": {
+        "contentHash": "e47933066995",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-rewards-and-penalties": {
+        "contentHash": "bc9211d6283b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-node-architecture": {
+        "contentHash": "9711ed2d13c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-archive-nodes": {
+        "contentHash": "e2fb49bc5e5b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-attack-and-defense": {
+        "contentHash": "ee49d0ff024a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-pos-vs-pow": {
+        "contentHash": "90ab2047de2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs-nav-pos-faqs": {
+        "contentHash": "d3e9dee1c127",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-calltocontribute-desc-1": {
+        "contentHash": "a353ceedd9e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-calltocontribute-desc-2": {
+        "contentHash": "8153bc62e2fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-calltocontribute-desc-3": {
+        "contentHash": "7dfdda8fd256",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-calltocontribute-desc-4": {
+        "contentHash": "fd5eb70b2f03",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-calltocontribute-link": {
+        "contentHash": "2b39659eaa82",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-calltocontribute-link-2": {
+        "contentHash": "3a9884e3ad9a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-calltocontribute-span": {
+        "contentHash": "5d2c6743b87c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-calltocontribute-title": {
+        "contentHash": "c01a15e11cdb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "layer-2-arbitrum-note": {
+        "contentHash": "7a4f8275a704",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "layer-2-boba-note": {
+        "contentHash": "3e4ed5fce7c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "layer-2-metis-note": {
+        "contentHash": "d5413a379574",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "layer-2-optimism-note": {
+        "contentHash": "34c469663829",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "back-to-top": {
+        "contentHash": "b05d95c62372",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "banner-page-incomplete": {
+        "contentHash": "b122b7056047",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "next": {
+        "contentHash": "1ff57a29d7c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "previous": {
+        "contentHash": "a57b08a480b8",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "docs-nav-accounts",
+      "docs-nav-accounts-description",
+      "docs-nav-advanced",
+      "docs-nav-backend-apis",
+      "docs-nav-block-explorers",
+      "docs-nav-blocks",
+      "docs-nav-blocks-description",
+      "docs-nav-bridges",
+      "docs-nav-bridges-description",
+      "docs-nav-compiling-smart-contracts",
+      "docs-nav-composability",
+      "docs-nav-consensus-mechanisms",
+      "docs-nav-consensus-mechanisms-description",
+      "docs-nav-gasper",
+      "docs-nav-weak-subjectivity",
+      "docs-nav-attestations",
+      "docs-nav-keys",
+      "docs-nav-withdrawal-credentials",
+      "docs-nav-block-proposal",
+      "docs-nav-data-and-analytics",
+      "docs-nav-data-and-analytics-description",
+      "docs-nav-data-availability",
+      "docs-nav-data-availability-storage-strategies",
+      "docs-nav-dart",
+      "docs-nav-delphi",
+      "docs-nav-deploying-smart-contracts",
+      "docs-nav-design-and-ux",
+      "docs-nav-design-and-ux-description",
+      "docs-nav-design-fundamentals",
+      "docs-nav-development-frameworks",
+      "docs-nav-development-frameworks-description",
+      "docs-nav-development-networks",
+      "docs-nav-development-networks-description",
+      "docs-nav-dex-design-best-practice",
+      "docs-nav-dot-net",
+      "docs-nav-elixir",
+      "docs-nav-erc-20",
+      "docs-nav-erc-721",
+      "docs-nav-erc-777",
+      "docs-nav-erc-1155",
+      "docs-nav-erc-4626",
+      "docs-nav-ethereum-client-apis",
+      "docs-nav-ethereum-client-apis-description",
+      "docs-nav-ethereum-stack",
+      "docs-nav-evm",
+      "docs-nav-evm-description",
+      "docs-nav-foundational-topics",
+      "docs-nav-gas",
+      "docs-nav-gas-description",
+      "docs-nav-golang",
+      "docs-nav-heuristics-for-web3",
+      "docs-nav-integrated-development-environments-ides",
+      "docs-nav-integrated-development-environments-ides-description",
+      "docs-nav-intro-to-dapps",
+      "docs-nav-intro-to-dapps-description",
+      "docs-nav-intro-to-ether",
+      "docs-nav-intro-to-ether-description",
+      "docs-nav-intro-to-ethereum",
+      "docs-nav-intro-to-ethereum-description",
+      "docs-nav-intro-to-the-stack",
+      "docs-nav-intro-to-the-stack-description",
+      "docs-nav-java",
+      "docs-nav-java-script-apis",
+      "docs-nav-javascript",
+      "docs-nav-json-rpc",
+      "docs-nav-mev",
+      "docs-nav-mev-description",
+      "docs-nav-mining",
+      "docs-nav-mining-algorithms",
+      "docs-nav-dagger-hashimoto",
+      "docs-nav-ethash",
+      "docs-nav-networks",
+      "docs-nav-networks-description",
+      "docs-nav-nodes-and-clients",
+      "docs-nav-nodes-and-clients-description",
+      "docs-nav-opcodes",
+      "docs-nav-run-a-node",
+      "docs-nav-client-diversity",
+      "docs-nav-bootnodes",
+      "docs-nav-light-clients",
+      "docs-nav-nodes-as-a-service",
+      "docs-nav-oracles",
+      "docs-nav-oracles-description",
+      "docs-nav-programming-languages",
+      "docs-nav-programming-languages-description",
+      "docs-nav-proof-of-authority",
+      "docs-nav-proof-of-stake",
+      "docs-nav-proof-of-work",
+      "docs-nav-python",
+      "docs-nav-readme",
+      "docs-nav-ruby",
+      "docs-nav-rust",
+      "docs-nav-scaling",
+      "docs-nav-scaling-description",
+      "docs-nav-scaling-optimistic-rollups",
+      "docs-nav-scaling-zk-rollups",
+      "docs-nav-scaling-channels",
+      "docs-nav-scaling-sidechains",
+      "docs-nav-scaling-plasma",
+      "docs-nav-scaling-validium",
+      "docs-nav-smart-contract-security",
+      "docs-nav-smart-contract-security-description",
+      "docs-nav-smart-contract-formal-verification",
+      "docs-nav-smart-contract-formal-verification-description",
+      "docs-nav-smart-contract-anatomy",
+      "docs-nav-smart-contract-languages",
+      "docs-nav-smart-contracts",
+      "docs-nav-smart-contracts-description",
+      "docs-nav-smart-contracts-libraries",
+      "docs-nav-standards",
+      "docs-nav-standards-description",
+      "docs-nav-storage",
+      "docs-nav-storage-description",
+      "docs-nav-testing-smart-contracts",
+      "docs-nav-token-standards",
+      "docs-nav-transactions",
+      "docs-nav-transactions-description",
+      "docs-nav-upgrading-smart-contracts",
+      "docs-nav-naming-smart-contracts",
+      "docs-nav-verifying-smart-contracts",
+      "docs-nav-web2-vs-web3",
+      "docs-nav-web2-vs-web3-description",
+      "docs-nav-networking-layer",
+      "docs-nav-networking-layer-description",
+      "docs-nav-networking-layer-network-addresses",
+      "docs-nav-networking-layer-portal-network",
+      "docs-nav-data-structures-and-encoding",
+      "docs-nav-data-structures-and-encoding-description",
+      "docs-nav-data-structures-and-encoding-rlp",
+      "docs-nav-data-structures-and-encoding-patricia-merkle-trie",
+      "docs-nav-data-structures-and-encoding-ssz",
+      "docs-nav-data-structures-and-encoding-web3-secret-storage",
+      "docs-nav-rewards-and-penalties",
+      "docs-nav-node-architecture",
+      "docs-nav-archive-nodes",
+      "docs-nav-attack-and-defense",
+      "docs-nav-pos-vs-pow",
+      "docs-nav-pos-faqs",
+      "page-calltocontribute-desc-1",
+      "page-calltocontribute-desc-2",
+      "page-calltocontribute-desc-3",
+      "page-calltocontribute-desc-4",
+      "page-calltocontribute-link",
+      "page-calltocontribute-link-2",
+      "page-calltocontribute-span",
+      "page-calltocontribute-title",
+      "layer-2-arbitrum-note",
+      "layer-2-boba-note",
+      "layer-2-metis-note",
+      "layer-2-optimism-note",
+      "back-to-top",
+      "banner-page-incomplete",
+      "next",
+      "previous"
+    ]
+  },
+  "sourceCommitSha": "3ec7d2cd6ede59940bb02b21be2e5d211370a724"
+}

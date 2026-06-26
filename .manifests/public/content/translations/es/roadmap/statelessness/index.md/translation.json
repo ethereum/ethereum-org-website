@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-06-08T10:44:48.724Z",
+  "englishManifestHash": "7baff35aba3b",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-c194b2",
+    "LINK-f2203b",
+    "LINK-071845",
+    "LINK-b1ab2c",
+    "LINK-be31f6",
+    "COMPONENT-6efbff",
+    "LINK-4786f4",
+    "LINK-8aafb2",
+    "LINK-da0742",
+    "LINK-a8b2f5",
+    "LINK-26c391",
+    "LINK-b5cee3",
+    "LINK-4c567f",
+    "LINK-52bed8",
+    "LINK-6196b7",
+    "LINK-4f9943",
+    "LINK-052e73",
+    "LINK-fc796a",
+    "LINK-afc50e",
+    "LINK-afe465",
+    "LINK-6b671d"
+  ],
+  "placeholderMap": {
+    "COMPONENT-6efbff": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/roadmap/statelessness",
+        "eventName": "clicked why is it OK to rely on fewer block proposers?"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-c194b2": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607"
+      }
+    },
+    "LINK-f2203b": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485"
+      }
+    },
+    "LINK-071845": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485"
+      }
+    },
+    "LINK-b1ab2c": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/verkle-trees/"
+      }
+    },
+    "LINK-be31f6": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pbs/"
+      }
+    },
+    "LINK-4786f4": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/zkevm/"
+      }
+    },
+    "LINK-8aafb2": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/verkle-trees"
+      }
+    },
+    "LINK-da0742": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pbs"
+      }
+    },
+    "LINK-a8b2f5": {
+      "type": "link",
+      "values": {
+        "url": "https://stateless.fyi/"
+      }
+    },
+    "LINK-26c391": {
+      "type": "link",
+      "values": {
+        "url": "https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/"
+      }
+    },
+    "LINK-b5cee3": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@vbuterin/state_size_management"
+      }
+    },
+    "LINK-4c567f": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739"
+      }
+    },
+    "LINK-52bed8": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@vbuterin/state_expiry_paths"
+      }
+    },
+    "LINK-6196b7": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4444"
+      }
+    },
+    "LINK-4f9943": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/SfDC_qUZaos"
+      }
+    },
+    "LINK-052e73": {
+      "type": "link",
+      "values": {
+        "url": "https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html"
+      }
+    },
+    "LINK-fc796a": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/the-stateless-client-concept/172"
+      }
+    },
+    "LINK-afc50e": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry"
+      }
+    },
+    "LINK-afe465": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry"
+      }
+    },
+    "LINK-6b671d": {
+      "type": "link",
+      "values": {
+        "url": "https://stateless.fyi"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:44:48.724Z",
+      "status": "success"
+    }
+  }
+}

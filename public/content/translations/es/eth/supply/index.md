@@ -1,80 +1,77 @@
 ---
-title: "Comprender el suministro y la emisión de ETH"
-description: "Una guía para principiantes sobre el suministro y emisión de ETH, que cubre conceptos clave como: EIP, PoS y EIP-1559."
+title: Suministro y emisión de ETH
+metaTitle: Entendiendo el suministro y la emisión de ETH
+description: Una guía para principiantes sobre el suministro y la emisión de ETH, que cubre conceptos clave como los EIP, PoS y el EIP-1559.
 lang: es
 ---
 
-# Suministro y emisión de ETH {#eth-supply-and-issuance}
-
 ## Requisitos previos {#prerequisites}
 
-Este artículo está escrito para principiantes, sin conocimientos previos. No obstante, para poder entender completamente este tema, es aconsejable asimilar algunos conceptos básicos como: [Propuestas de mejora de Ethereum (EIPs)](/eips/#introduction-to-ethereum-improvement-proposals), [prueba de trabajo (PoW)](/developers/docs/consensus-mechanisms/pow/), [prueba de participación (PoS)](/developers/docs/consensus-mechanisms/pos/) y [la actualización Londres](/ethereum-forks/#london).
+Este artículo está escrito para principiantes sin conocimientos previos. Sin embargo, para comprender completamente el tema, es útil tener una comprensión básica de conceptos como las [Propuestas de mejora de Ethereum (EIP)](/eips/#introduction-to-ethereum-improvement-proposals), la [prueba de trabajo (PoW)](/developers/docs/consensus-mechanisms/pow/), la [prueba de participación (PoS)](/developers/docs/consensus-mechanisms/pos/) y [la actualización de Londres](/ethereum-forks/#london).
 
-## ¿Cuántos tókenes de ETH hay en la actualidad? {#current-eth-supply}
+## ¿Cuántos tokens de ETH hay en la actualidad? {#current-eth-supply}
 
-El suministro total de ETH es dinámico y cambia de forma constante debido a dos factores principales:
+El suministro total de ETH es dinámico y cambia constantemente debido a dos factores principales:
 
-1. **Emisión por prueba de participación (PoS)**: se crean nuevos ETH para recompensar a los validadores que aseguran la red
-2. **Quema EIP-1559**: una porción de las comisiones por tarifas de transacción se sacan permanentemente de circulación
+1. **Emisión por prueba de participación (PoS)**: Se crea nuevo ETH como recompensa para los validadores que protegen la red.
+2. **Quema del EIP-1559**: Una parte de las tarifas de transacción se elimina permanentemente de la circulación.
 
-Puede realizar un seguimiento del suministro actual y estos cambios en tiempo real en plataformas como [Ultrasound Money](https://ultrasound.money).
+Puede realizar un seguimiento del suministro actual y de estos cambios en tiempo real en plataformas como [Ultrasound Money](https://ultrasound.money).
 
-El suministro y emisión de Ethereum son métricas esenciales para comprender la salud y el futuro de la red. ¿Pero qué significa exactamente la emisión de ETH? Vamos a desglosarlo.
+El suministro y la emisión de Ethereum son métricas esenciales para comprender la salud y el futuro de la red. Pero, ¿qué significa exactamente la emisión de ETH? Analicémoslo en detalle.
 
-## ¿Por qué importa el suministro y la emisión de ETH? {#why-eth-supply-matters}
+## Por qué son importantes el suministro y la emisión de ETH {#why-eth-supply-matters}
 
-En las finanzas tradicionales, los bancos centrales controlan el suministro del dinero, a menudo estos imprimen más dinero para estimular las economías. Por otra parte, Ethereum opera en un sistema transparente y precedible regido por su código. Saber cuántos ETH existen y lo rápido que se emiten nuevos ETH ayuda a:
+En las finanzas tradicionales, los bancos centrales controlan el suministro de dinero, a menudo imprimiendo más para estimular las economías. Ethereum, por otro lado, opera en un sistema transparente y predecible regido por su código. Saber cuánto ETH existe y con qué rapidez se emite nuevo ETH ayuda a:
 
-- **Generar confianza**: la comunidad de Ethereum puede verificar los datos del suministro y emisión de ETH directamente desde la cadena de bloques.
-- **Entender el valor**: la relación entre emisión y quema de ETH impacta en la fluctuación de ETH y en su valor a la larga.
-- **Seguimiento del estado de la red**: los cambios en las tasas de emisión y quema reflejan la actividad y seguridad de la red.
+- **Generar confianza**: La comunidad de Ethereum puede verificar los datos de suministro y emisión directamente desde la cadena de bloques.
+- **Comprender el valor**: La relación entre la emisión y las tasas de quema de ETH afecta la inflación o deflación de ETH, lo que influye en su valor a lo largo del tiempo.
+- **Rastrear la salud de la red**: Los cambios en las tasas de emisión y quema reflejan la actividad y la seguridad de la red.
 
 ## ¿Qué es la emisión de ETH? {#eth-issuance}
 
-Por emisión de ETH se refiere al proceso de creación de nuevos ETH como recompensas para los validadores que aseguran la red de Ethereum. Va separado del suministro total, el cual se refiere a la cantidad total de ETH que hay en circulación.
+La emisión de ETH se refiere al proceso de creación de nuevo ETH como recompensa para los validadores que protegen la red Ethereum. Es independiente del suministro total, que es la cantidad total de ETH en circulación.
 
-### En términos sencillos:
+### En términos simples: {#in-simple-terms}
+- La **emisión** añade nuevo ETH a la red.
+- La **quema** (introducida por el EIP-1559) elimina ETH de la red al destruir una parte de las tarifas de transacción.
 
-- La **emisión** añade nuevos ETH a la red.
-- **Quema** (introducida por la EIP-1559) elimina ETH de la red mediante la destruccion de una parte de la comisión de la transacción.
+Estas dos fuerzas determinan si el suministro de Ethereum crece (inflacionario) o se reduce (deflacionario) con el tiempo.
 
-Estas dos fuerzas determinan si el suministro de Ethereum crece (inflación) o decrece (deflación) a la larga.
+## Suministro y emisión de ETH en la actualidad {#eth-supply-today}
 
-## El suministro y la emisión de ETH hoy en día {#eth-supply-today}
+El sistema de prueba de participación (PoS) de Ethereum ha reducido drásticamente la emisión de ETH en comparación con su modelo anterior de prueba de trabajo (PoW). Los validadores (que bloquean ETH para proteger la red) ganan ETH como recompensa. Puede ver la tasa de emisión actual en [Ultrasound Money](https://ultrasound.money).
 
-El sistema de prueba de participación (PoS) de Ethereum ha reducido de forma drástica la emisión de ETH en comparación con su modelo anterior, la prueba de trabajo (PoW). Validadores —los que bloquean sus ETH para asegurar a la red— ganan ETH como recompensa. Puede ver la tasa actual de emisión en [Ultrasound Money](https://ultrasound.money).
+Sin embargo, este número es dinámico. Gracias al EIP-1559, cuando la actividad de la red es alta, las tasas de quema de ETH pueden superar la emisión, creando un efecto deflacionario. Por ejemplo, durante períodos de alta demanda, como los lanzamientos de NFT o la actividad de las finanzas descentralizadas (DeFi), es posible que se queme más ETH del que se emite.
 
-No obstante, este número es dinámico. Gracias a EIP-1559, cuando la red cuenta con gran actividad, la tasa de quema de ETH sobrepasa la tasa de emisión, creando asi un efecto deflacionario. Por ejemplo, durante periodos de alta demanda, como lanzamientos de NFT o actividad DeFi, más ETH del que se emite puede llegar a ser quemado.
+### Herramientas para rastrear el suministro y la emisión de ETH: {#tools-to-track-eth-supply-and-issuance}
+- [Ultrasound Money](https://ultrasound.money): seguimiento en tiempo real del suministro, la emisión y las tasas de quema de ETH.
+- [Etherscan](https://etherscan.io): explorador de bloques con métricas de suministro.
 
-### Herramientas para seguir el suministro y emisión de ETH:
+## Factores que influyen en el futuro suministro y emisión de ETH {#future-eth-supply}
 
-- [Ultrasound Money](https://ultrasound.money): seguimiento en tiempo real de las tasas de suministro, emisión y quema
-- [Etherscan](https://etherscan.io): explorador de bloque con métricas de suministro
+El suministro futuro de Ethereum no es fijo; depende de varias variables:
 
-## Factores que influyen en el suministro y en la emisión futura de ETH {#future-eth-supply}
-
-El suministro futuro de Ethereum no es fijo, depende de varias variables:
-
-1. **Cuota de participación**:
-   - Cuantos más validadores se unan a la red, más ETH se distribuirán en forma de recompensa.
-   - Si participan pocos validadores, puede que la emisión disminuya.
-   - Aprende más sobre [staking](/staking/).
+1. **Participación en el staking**: 
+   - Que más validadores se unan a la red significa que se distribuyen más recompensas de ETH.
+   - Una menor participación de validadores puede disminuir la emisión.
+   - Obtenga más información sobre el [staking](/staking/).
 
 2. **Actividad de la red**:
-   - Un alto volumen de transacciones hará que se quemen más ETH, comprensando o excediento potencialmente la emisión.
-   - Lee sobre las [comisiones de gas](/developers/docs/gas/) y cómo afectan a la quema.
+   - Los altos volúmenes de transacciones provocan que se queme más ETH, lo que podría compensar o superar la emisión.
+   - Lea sobre las [tarifas de gas](/developers/docs/gas/) y cómo afectan a la quema.
 
 3. **Actualizaciones del protocolo**:
-   - Futuras modificaciones en el código de Ethereum podrían ajustar la recompensa de participación o a los mecanismos de quema, lo cual afectaría a la dinámica del suministro actual.
-   - Manténgase actualizado con la [hoja de ruta de Ethereum](/roadmap/).
+   - Los futuros cambios en el código de Ethereum podrían ajustar las recompensas de staking o los mecanismos de quema, lo que daría forma a la dinámica del suministro.
+   - Manténgase al día con la [hoja de ruta de Ethereum](/roadmap/).
 
-## Recapitulación: suministro, emision de ETH y siguientes pasos {#recap}
+## Resumen: Suministro, emisión de ETH y lo que sigue {#recap}
 
-He aquí un resumen rápido de lo que necesita saber acerca el suministro y la emisión de ETH:
+Aquí tiene un breve resumen de lo que necesita saber sobre el suministro y la emisión de ETH:
 
-- **Suministro de ETH**: Dinámico y en constante cambio, rastreable en tiempo real a través de herramientas como: [Ultrasound Money](https://ultrasound.money)
-- **Emisión bajo PoS**: reducida de forma considerable en comparación a la PoW, cuyas recompensas van hacía los validadores. Revise las comisiones actuales en [Ultrasound Money](https://ultrasound.money)
-- **Papel de la EIP-1559**: la quema de ETH puede hacer que la red se vuelva deflacionaria durante altos periodos de actividad
-- **Tendencias futuras**: cuota de participacion, demanda de la red y actualizaciones del protocolo que impactarán en el suministro de ETH
+- **Suministro de ETH**: Dinámico y en constante cambio, rastreable en tiempo real a través de herramientas como [Ultrasound Money](https://ultrasound.money).
+- **Emisión bajo PoS**: Significativamente reducida en comparación con PoW, con recompensas destinadas a los validadores. Consulte las tasas actuales en [Ultrasound Money](https://ultrasound.money).
+- **El papel del EIP-1559**: La quema de ETH puede hacer que la red sea deflacionaria durante períodos de alta actividad.
+- **Tendencias futuras**: La participación en el staking, la demanda de la red y las actualizaciones del protocolo darán forma al suministro de ETH.
 
-Comprender la emisión de ETH ayuda a desmitificar el valor de Ethereum y su potencial como un activo deflacionario y descentralizado. Para obtener información detallada acerca del cómo la Fusión impactó en el suministro de ETH, revise nuestro [desglose detallado](/roadmap/merge/issuance/). ¿Le pica la curiosidad acerca el futuro de ETH? Profundice en el manejo de herramientas como [Ultrasound Money](https://ultrasound.money) o explore nuestra [guías de participación](/staking/).
+Comprender la emisión de ETH ayuda a desmitificar el valor de Ethereum y su potencial como activo deflacionario y descentralizado. Para obtener información más detallada sobre cómo La Fusión afectó el suministro de ETH, consulte nuestro [desglose detallado](/roadmap/merge/issuance/). ¿Siente curiosidad por el futuro de ETH? Profundice con herramientas como [Ultrasound Money](https://ultrasound.money) o explore nuestras [guías de staking](/staking/).

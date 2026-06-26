@@ -220,26 +220,12 @@ test.describe("Data-Layer Getters", () => {
     })
   })
 
-  test.describe("Staking & Beaconchain", () => {
-    test("getBeaconchainData returns combined data or null", async () => {
-      const result = await dataLayer.getBeaconchainData()
-      if (result !== null) {
-        expect(result).toHaveProperty("totalEthStaked")
-        expect(result).toHaveProperty("validatorscount")
-        expect(result).toHaveProperty("apr")
-        // Check values (MetricReturnData is a union type)
-        if ("value" in result.totalEthStaked) {
-          expect(typeof result.totalEthStaked.value).toBe("number")
-          expect(result.totalEthStaked.value).toBeGreaterThan(0)
-        }
-        if ("value" in result.validatorscount) {
-          expect(typeof result.validatorscount.value).toBe("number")
-          expect(result.validatorscount.value).toBeGreaterThan(0)
-        }
-        if ("value" in result.apr) {
-          expect(typeof result.apr.value).toBe("number")
-          expect(result.apr.value).toBeGreaterThan(0)
-        }
+  test.describe("Staking", () => {
+    test("getStakedPercentageData returns MetricReturnData or null", async () => {
+      const result = await dataLayer.getStakedPercentageData()
+      if (result !== null && "value" in result) {
+        expect(typeof result.value).toBe("number")
+        expect(result.value).toBeGreaterThan(0)
       }
     })
 

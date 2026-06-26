@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-16T23:51:27.857Z",
+  "englishManifestHash": "01d2013a1e15",
+  "placeholderOrder": [
+    "LINK-5bbb7f",
+    "LINK-5fc18a",
+    "CODEBLOCK-48439f",
+    "CODEBLOCK-6e523c",
+    "CODE-82d62f",
+    "CODE-27f576",
+    "LINK-0e78b3",
+    "CODEBLOCK-f8b79b",
+    "CODEBLOCK-b740d7",
+    "CODE-82d62f",
+    "LINK-0b8763",
+    "CODE-8173bc",
+    "CODE-7edb36",
+    "CODEBLOCK-98c845",
+    "LINK-3262db",
+    "CODEBLOCK-fc5d63",
+    "LINK-5f2475",
+    "LINK-a8323e"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-48439f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6e523c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f8b79b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b740d7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-98c845": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fc5d63": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-82d62f": {
+      "type": "inline-code",
+      "values": {
+        "content": "balanceOf"
+      }
+    },
+    "CODE-27f576": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer"
+      }
+    },
+    "CODE-8173bc": {
+      "type": "inline-code",
+      "values": {
+        "content": "yourContract.methods.methodname"
+      }
+    },
+    "CODE-7edb36": {
+      "type": "inline-code",
+      "values": {
+        "content": "call"
+      }
+    },
+    "LINK-5bbb7f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-5fc18a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/"
+      }
+    },
+    "LINK-0e78b3": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/abi-for-erc20-contract-on-ethereum/"
+      }
+    },
+    "LINK-0b8763": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/understand-the-erc-20-token-smart-contract/"
+      }
+    },
+    "LINK-3262db": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/"
+      }
+    },
+    "LINK-5f2475": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.stackexchange.com/questions/45648/how-to-calculate-the-assigned-txhash-of-a-transaction"
+      }
+    },
+    "LINK-a8323e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T23:51:27.857Z",
+      "status": "success"
+    }
+  }
+}

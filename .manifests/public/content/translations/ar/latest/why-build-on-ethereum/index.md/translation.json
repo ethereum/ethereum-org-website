@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-03T07:04:37.399Z",
+  "englishManifestHash": "76f2395cef75",
+  "placeholderOrder": [
+    "LINK-37a382",
+    "LINK-c0372d",
+    "LINK-8bd0cd",
+    "LINK-4df7a8",
+    "LINK-c6c8c1",
+    "LINK-383e0c",
+    "LINK-da49cb",
+    "LINK-7fdbab",
+    "LINK-6ca6b0",
+    "LINK-000d09",
+    "LINK-473c03",
+    "LINK-9a431f",
+    "LINK-7d0023",
+    "LINK-7a3e47",
+    "LINK-87f16a",
+    "LINK-87ec2b"
+  ],
+  "placeholderMap": {
+    "LINK-37a382": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2026/04/10/checkpoint-9"
+      }
+    },
+    "LINK-c0372d": {
+      "type": "link",
+      "values": {
+        "url": "https://clientdiversity.org/"
+      }
+    },
+    "LINK-8bd0cd": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/nodetracker"
+      }
+    },
+    "LINK-4df7a8": {
+      "type": "link",
+      "values": {
+        "url": "https://beaconcha.in/charts/validators"
+      }
+    },
+    "LINK-c6c8c1": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/offchainlabs/post-mortem-report-ethereum-mainnet-finality-05-11-2023-95e271dfd8b2"
+      }
+    },
+    "LINK-383e0c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.mevwatch.info/"
+      }
+    },
+    "LINK-da49cb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.theblock.co/post/230179/ethereums-ofac-compliant-blocks-fall-to-27-marking-a-drop-in-protocol-level-censorship"
+      }
+    },
+    "LINK-7fdbab": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/hegota-headliner-proposal-focil-eip-7805/27604"
+      }
+    },
+    "LINK-6ca6b0": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7805"
+      }
+    },
+    "LINK-000d09": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8004"
+      }
+    },
+    "LINK-473c03": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/coinbase/x402"
+      }
+    },
+    "LINK-9a431f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coindesk.com/markets/2026/03/11/coinbase-backed-ai-payments-protocol-wants-to-fix-micropayment-but-demand-is-just-not-there-yet"
+      }
+    },
+    "LINK-7d0023": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      }
+    },
+    "LINK-7a3e47": {
+      "type": "link",
+      "values": {
+        "url": "https://www.zellic.io/blog/all-ethereum-contracts/"
+      }
+    },
+    "LINK-87f16a": {
+      "type": "link",
+      "values": {
+        "url": "https://defillama.com/chain/ethereum"
+      }
+    },
+    "LINK-87ec2b": {
+      "type": "link",
+      "values": {
+        "url": "https://openzeppelin.com/hubfs/OpenZeppelin%20%7C%20Technical%20Risk%20Assessment%20on%20Blockchain%20Networks.pdf"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-03T07:04:37.399Z",
+      "status": "success"
+    }
+  }
+}

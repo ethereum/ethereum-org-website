@@ -1,69 +1,67 @@
 ---
-title: "İçerik kaynaklarını ekle"
-description: "Ethereum.org'daki tasarım materyallerinin kaliteli olmasını sağlamak için yönergeler ve gereksinimler"
+title: Tasarım kaynakları ekleme
+description: ethereum.org'daki tasarım materyallerinin kalitesini sağlamak için yönergeler ve gereksinimler
 lang: tr
 ---
 
-# Tasarım kaynakları ekleme {#adding-design-resources}
+Herkes [Web3'te Tasarım ve Kullanıcı Deneyimi (UX) sayfasına](/developers/docs/design-and-ux/) yeni tasarım materyalleri önerebilir.
 
-Herkes [Web3'te Tasarım ve Kullanıcı Deneyimi sayfasına](/developers/docs/design-and-ux/) yeni tasarım materyalleri önerebilir.
+Bu sayfanın odak noktasının, hevesli Web3 tasarımcılarına kullanıcı değeri sağlamak olduğunu unutmayın. Tasarım bölümü hizmetlerinizin, ürünlerinizin veya platformlarınızın reklamını yapmak için orada değildir.
 
-Bu sayfanın, hevesli web3 kullanıcıları için değer sunmaya odaklandığını unutmayın. Tasarım bölümü, hizmetleriniz, ürünleriniz ya da platformlarınızın reklamını yapmak için değildir.
+Yüksek bir bilgi standardını koruduğumuzdan emin olmak ve değerli içgörüleri teşvik etmek için bir listeleme politikası oluşturduk:
 
-Sağladığımız bilgilerde yüksek standartları korumak ve değerli görüşleri teşvik etmek için bir liste politikası oluşturduk:
-
-## Araştırma Çalışmaları ve Gösterge Panoları {#Research-studies}
+## Araştırma Çalışmaları ve Kontrol Panelleri {#research-studies}
 
 1. Sağlam Metodoloji
 
 a. Metodoloji, verilerin nasıl toplandığını açıkça tanımlamalıdır.
 
-b. Araştırmaya katılan katılımcıların sayısı belirtilmelidir.
+b. Araştırmaya katılan katılımcı sayısı belirtilmelidir.
 
 c. Kullanılan araştırma yöntemleri açıklanmalıdır.
 
-2. Web3 Tasarımcıları ve Yaygın Tasarım Kullanım Durumları ile Bağlantılı Olma
+2. Web3 Tasarımcıları ve Yaygın Tasarım Kullanım Durumlarıyla İlgililik
 
-a. Araştırmanın konusu, web3 tasarımcıları açısından ilgili olmalı ve yaygın tasarım kullanım durumlarını ele almalıdır.
+a. Araştırmanın konusu Web3 tasarımcılarıyla ilgili olmalı ve yaygın tasarım kullanım durumlarını ele almalıdır.
 
-3. Ayrıntılı bilgi sunmaya odaklanma
+3. İçgörü sunmaya odaklanma
 
-a. Metnin temel amacı, spesifik bir projeyi veya şirketi tanıtmak yerine ayrıntılı bilgiler paylaşmak olmalıdır.
+a. Metnin temel amacı, belirli bir projeyi veya şirketi tanıtmaktan ziyade içgörüleri paylaşmak olmalıdır.
 
-## Makaleler {#Articles}
+## Makaleler {#articles}
 
-1. Web3 Tasarımcıları/Araştırmacıları ve Yaygın Web3 Tasarım Kullanım Durumları ile Bağlantılı Olma
+1. Web3 Tasarımcıları/Araştırmacıları ve Yaygın Web3 Tasarım Kullanım Durumlarıyla İlgililik
 
-a. Makalenin konusu, web3 tasarımcılarıyla ve araştırmacılarıyla ilgili olmalı, ayrıca yaygın web3 tasarım kullanım durumlarına odaklanmalıdır.
+a. Makalenin konusu, yaygın Web3 tasarım kullanım durumlarına odaklanarak Web3 tasarımcıları ve araştırmacıları ile alakalı olmalıdır.
 
-2. Temel Yazma Kalitesi
+2. Temel Yazım Kalitesi
 
-a. Makale, dil bilgisi ve yazım hataları içermemelidir.
+a. Makale dilbilgisi ve yazım hataları içermemelidir.
 
-b. Vurgu, önemli bilgilerin ve öğrenmelerin sunulması üzerinde olmalıdır.
+b. Temel içgörüleri ve öğrenimleri sunmaya vurgu yapılmalıdır.
 
-c. Yazı, özlü ve nokta atışı olmalıdır.
+c. Yazım özlü ve amaca yönelik olmalıdır.
 
 3. Metnin Amacı
 
-a. Makalenin temel amacı, belirli bir projeyi veya şirketi tanıtmak yerine ayrıntılı bilgiler paylaşmak olmalıdır.
+a. Makalenin temel amacı, belirli bir projeyi veya şirketi tanıtmaktan ziyade içgörüleri paylaşmak olmalıdır.
 
-## Topluluklar / DAO'lar {#Communities-and-DAOs}
+## Topluluklar / DAO'lar {#communities-and-daos}
 
-1. Web sitesi, DAO'ya/Topluluğa katılma yolunu açıkça belirtmelidir
+1. Web sitesi, DAO'ya/Topluluğa nasıl katılınacağını açıkça belirtmelidir
 
-2. Üyeliğin Belirgin Avantajları
+2. Üyeliğin Açık Faydaları
 
-a. Üye olmanın faydaları açıkça öne çıkarılmalıdır.
+a. Üye olmanın faydaları belirgin bir şekilde gösterilmelidir.
 
-**Örnekler**: çalışmalar hakkında geribildirim almak, iş fırsatlarına veya ödüllere erişim, tasarım ve araştırma içgörülerini paylaşmak.
+**Örnekler**: işler hakkında geri bildirim almak, iş fırsatlarına veya ödüllere erişmek, tasarım ve araştırma içgörülerini paylaşmak.
 
 3. Discord'da Aktif ve Canlı İletişim
 
-a. Discord topluluğu, canlı ve etkileşimli iletişim sergilemelidir.
+a. Discord topluluğu canlı ve etkileşimli bir iletişim sergilemelidir.
 
-b. Topluluğun sürdürülmesi ve tartışmaların kolaylaştırılmasında moderatörler etkin bir şekilde yer almalıdır.
+b. Moderatörler, topluluğu sürdürmeye ve tartışmaları kolaylaştırmaya aktif olarak dahil olmalıdır.
 
-c. Topluluk, değerli ve verimli konuşmaların geçmiş son iki hafta içindeki kaydını göstermelidir.
+c. Topluluk, son iki hafta içinde değerli ve üretken konuşmaların yapıldığına dair bir geçmiş göstermelidir.
 
-Bu kriterlere bağlı kalarak topluluğumuzda sürekli gelişen ve bilgi paylaşımı odaklı bir ortamı teşvik etmeyi amaçlıyoruz. Bu beyaz listeleme politikasının güvenilir, ilgili ve anlayışlı bir ortamı kullanıcılarımıza sağlayacağına inanıyoruz. Platformumuzdaki içerik kalitesini koruma konusundaki anlayış ve iş birliğiniz için teşekkür ederiz.
+Bu kriterlere bağlı kalarak, topluluğumuz içinde gelişen ve bilgi paylaşımına dayalı bir ortamı teşvik etmeyi amaçlıyoruz. Bu beyaz liste politikasının, kullanıcılarımızın güvenilir, alakalı ve içgörü dolu kaynaklara erişmesini sağlayacağına inanıyoruz. Platformumuzdaki içeriğin kalitesini koruma konusundaki anlayışınız ve işbirliğiniz için teşekkür ederiz.
