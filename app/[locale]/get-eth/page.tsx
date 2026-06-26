@@ -53,6 +53,8 @@ import GetEthPageJsonLD from "./page-jsonld"
 
 import handEth from "@/public/images/developers-eth-blocks.png"
 import dapps from "@/public/images/doge-computer.png"
+import worldMapDark from "@/public/images/get-eth/world-map-dark.png"
+import worldMapLight from "@/public/images/get-eth/world-map-light.png"
 import ethCoins from "@/public/images/get-eth-coins.png"
 import wallet from "@/public/images/wallet.png"
 
@@ -227,9 +229,23 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <Section
             id="country-picker"
             data-flow="skip"
-            className="flex flex-col items-center rounded-2xl bg-background-highlight py-24"
+            className="relative flex min-h-[700px] flex-col items-center justify-center rounded-2xl bg-accent-a/5 px-page py-hero-3x dark:bg-accent-a/10"
           >
-            <div className="flex flex-col items-center gap-6">
+            <Image
+              src={worldMapLight}
+              alt=""
+              aria-hidden
+              sizes="(max-width: 896px) 100vw, 896px"
+              className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-auto w-full max-w-4xl rounded-t-2xl select-none dark:hidden"
+            />
+            <Image
+              src={worldMapDark}
+              alt=""
+              aria-hidden
+              sizes="(max-width: 896px) 100vw, 896px"
+              className="pointer-events-none absolute inset-x-0 top-0 mx-auto hidden h-auto w-full max-w-4xl rounded-t-2xl select-none dark:block"
+            />
+            <div className="relative z-10 flex flex-col items-center gap-6">
               <Eyebrow>{t("page-get-eth-exchanges-eyebrow")}</Eyebrow>
               <h2 className="text-center text-h1">
                 {t("page-get-eth-find-exchange-title")}
@@ -240,7 +256,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </div>
 
             {/* CLIENT SIDE */}
-            <div className="mt-6 flex w-full flex-col items-center">
+            <div className="relative z-10 mt-6 flex w-full flex-col items-center">
               <I18nProvider locale={locale} messages={messages}>
                 <CentralizedExchanges
                   lastDataUpdateDate={exchangesByCountryLastUpdated}
