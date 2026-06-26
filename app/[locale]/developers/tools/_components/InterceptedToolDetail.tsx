@@ -44,11 +44,7 @@ const InterceptedToolDetail = async ({
         )}
         <div className="flex flex-col gap-4 p-4 sm:p-8">
           <div className="space-y-1">
-            <Tag
-              size="small"
-              status={getCategoryTagStyle(tool.categoryId)}
-              className="px-1 py-0"
-            >
+            <Tag size="small" status={getCategoryTagStyle(tool.categoryId)}>
               {categoryLabels[tool.categoryId] || tool.categoryId}
             </Tag>
             <p className="text-sm text-body-medium">

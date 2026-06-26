@@ -1,9 +1,8 @@
 "use client"
 
-import { memo, useDeferredValue, useMemo, useRef, useState } from "react"
-import { AppWindowMac, ChevronRight } from "lucide-react"
+import { useDeferredValue, useMemo, useRef, useState } from "react"
+import { ChevronRight } from "lucide-react"
 
-import AppCard from "@/components/AppCard"
 import { Button } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
 import { BaseLink } from "@/components/ui/Link"
@@ -17,6 +16,8 @@ import type {
   DeveloperToolWithCategory,
 } from "../types"
 import { getToolKey } from "../utils"
+
+import ToolCard from "./ToolCard"
 
 type ToolsCatalogProps = {
   locale: string
@@ -76,37 +77,6 @@ function getToolSortScore(tool: DeveloperToolWithCategory): number {
   }
   return getToolStars(tool)
 }
-
-// Memoized so a filter/search re-render only re-renders cards whose tool changed
-const ToolCard = memo(function ToolCard({
-  tool,
-}: {
-  tool: DeveloperToolWithCategory
-}) {
-  const toolKey = getToolKey(tool)
-  return (
-    // content-visibility lets the browser skip layout/paint of off-screen
-    // cards while keeping them in the server HTML for crawlers
-    <div className="min-h-[88px] [contain-intrinsic-size:auto_88px] [content-visibility:auto]">
-      <AppCard
-        name={tool.name}
-        nameClassName="text-base"
-        description={tool.description}
-        descriptionClassName="text-sm [&>p]:text-body-medium"
-        descriptionMaxLines={2}
-        descriptionExpandable={false}
-        thumbnail={tool.thumbnail_url ?? undefined}
-        fallbackIcon={
-          <AppWindowMac className="size-12 text-body-medium group-hover/appcard:text-primary-hover" />
-        }
-        href={`/developers/tools/${tool.categoryId}/${toolKey}/`}
-        layout="horizontal"
-        imageSize="thumbnail"
-        className="h-fit p-4"
-      />
-    </div>
-  )
-})
 
 type CategorySidebarProps = {
   locale: string
@@ -181,7 +151,7 @@ function CategorySidebar({
               </span>
             </BaseLink>
             {isCurrent && (
-              <div className="ml-5 space-y-1 border-l pl-2">
+              <div className="ms-5 space-y-1 border-s ps-2">
                 {category.subcategories.map((subcategory) => (
                   <Button
                     key={subcategory.id}
@@ -203,7 +173,7 @@ function CategorySidebar({
                     <span>
                       {getSubcategoryLabel(subcategory.id, subcategoryLabels)}
                     </span>
-                    <span className="text-[10px] text-body-medium">
+                    <span className="text-2xs text-body-medium">
                       {nf.format(countBySubcategory[subcategory.id] || 0)}
                     </span>
                   </Button>
@@ -417,7 +387,7 @@ export default function ToolsCatalog({
               ({ category, subcategoryGroups, count }) => (
                 <div key={category.id} className="space-y-4">
                   <div className="flex items-baseline gap-2 border-b pb-2">
-                    <h2 className="text-xl font-bold">
+                    <h2 className="text-h4">
                       {getCategoryLabel(category.id, categoryLabels)}
                     </h2>
                     <span className="text-xs text-body-medium">
@@ -430,7 +400,7 @@ export default function ToolsCatalog({
                       ({ subcategory, tools: subcategoryTools }) => (
                         <div key={subcategory.id} className="space-y-2">
                           <div className="flex items-baseline gap-2">
-                            <h3 className="text-sm font-semibold text-body-medium">
+                            <h3 className="text-sm font-normal text-body-medium">
                               {getSubcategoryLabel(
                                 subcategory.id,
                                 subcategoryLabels

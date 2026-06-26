@@ -45,7 +45,7 @@ const ToolsPageBody = async ({
   })
 
   return (
-    <MainArticle className="space-y-20 px-4 pt-4 pb-10 md:px-8">
+    <MainArticle className="space-y-20 px-page pt-4 pb-10">
       <ToolsCatalog
         // Reset client filter/search state when navigating between categories
         key={currentCategoryId ?? "all"}
@@ -64,7 +64,7 @@ const ToolsPageBody = async ({
           noResults: t("page-developers-tools-no-results"),
         }}
       />
-      <div className="flex flex-col items-center gap-4 rounded-2xl bg-radial-a p-12">
+      <div className="flex flex-col items-center gap-4 rounded-base bg-radial-a p-12">
         <h2>{t("page-developers-tools-suggest-resource-title")}</h2>
         <p>{t("page-developers-tools-suggest-resource-description")}</p>
         <ButtonLink

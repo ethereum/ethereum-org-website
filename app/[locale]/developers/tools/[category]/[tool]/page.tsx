@@ -1,10 +1,8 @@
-import { AppWindowMac } from "lucide-react"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
-import AppCard from "@/components/AppCard"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import {
@@ -21,6 +19,7 @@ import { normalizeDeveloperToolsData } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { slugify } from "@/lib/utils/url"
 
+import ToolCard from "../../_components/ToolCard"
 import ToolLinks from "../../_components/ToolLinks"
 import { getToolDetailData } from "../../page-data"
 import { getCategoryTagStyle, getToolKey } from "../../utils"
@@ -52,7 +51,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   } = detail
 
   return (
-    <MainArticle className="flex flex-col gap-10 px-4 py-10 md:px-8">
+    <MainArticle className="flex flex-col gap-10 px-page py-10">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -133,23 +132,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
           </h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {relatedTools.map((related) => (
-              <AppCard
-                key={getToolKey(related)}
-                name={related.name}
-                nameClassName="text-base"
-                description={related.description}
-                descriptionClassName="text-sm [&>p]:text-body-medium"
-                descriptionMaxLines={2}
-                descriptionExpandable={false}
-                thumbnail={related.thumbnail_url ?? undefined}
-                fallbackIcon={
-                  <AppWindowMac className="size-12 text-body-medium group-hover/appcard:text-primary-hover" />
-                }
-                href={`/developers/tools/${related.categoryId}/${getToolKey(related)}/`}
-                layout="horizontal"
-                imageSize="thumbnail"
-                className="h-fit p-4"
-              />
+              <ToolCard key={getToolKey(related)} tool={related} />
             ))}
           </div>
         </section>
