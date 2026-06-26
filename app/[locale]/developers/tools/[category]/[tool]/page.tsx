@@ -37,9 +37,10 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const { locale, category, tool: toolKey } = await props.params
   setRequestLocale(locale)
 
-  const [detail, t] = await Promise.all([
+  const [detail, t, tCommon] = await Promise.all([
     getToolDetailData(locale, category, toolKey),
     getTranslations({ locale, namespace: "page-developers-tools" }),
+    getTranslations({ locale, namespace: "common" }),
   ])
   if (!detail) notFound()
 
@@ -60,14 +61,22 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
+              <BreadcrumbLink href="/">ethereum.org</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+              /
+            </BreadcrumbSeparator>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/developers/">
+                {tCommon("developers")}
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
               /
             </BreadcrumbSeparator>
             <BreadcrumbItem>
               <BreadcrumbLink href="/developers/tools/">
-                {t("page-developers-tools-title")}
+                {tCommon("tools")}
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
