@@ -100,8 +100,18 @@ export async function getToolDetailData(
   )
   if (!tool) return null
 
+  // Other tools in the same subcategory — surfaced on the standalone page only.
+  const relatedTools = allTools
+    .filter(
+      (item) =>
+        item.subcategory_id === tool.subcategory_id &&
+        getToolKey(item) !== toolKey
+    )
+    .slice(0, 6)
+
   return {
     tool,
+    relatedTools,
     categoryLabels,
     subcategoryLabels,
     tagLabels,

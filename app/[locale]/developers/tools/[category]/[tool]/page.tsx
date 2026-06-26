@@ -1,17 +1,29 @@
+import { AppWindowMac } from "lucide-react"
 import { notFound } from "next/navigation"
-import { setRequestLocale } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import { BaseLink } from "@/components/ui/Link"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { normalizeDeveloperToolsData } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 import { slugify } from "@/lib/utils/url"
 
-import ToolDetail from "../../_components/ToolDetail"
+import ToolLinks from "../../_components/ToolLinks"
 import { getToolDetailData } from "../../page-data"
+import { getCategoryTagStyle, getToolKey } from "../../utils"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
@@ -24,27 +36,124 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const { locale, category, tool: toolKey } = await props.params
   setRequestLocale(locale)
 
-  const detail = await getToolDetailData(locale, category, toolKey)
+  const [detail, t] = await Promise.all([
+    getToolDetailData(locale, category, toolKey),
+    getTranslations({ locale, namespace: "page-developers-tools" }),
+  ])
   if (!detail) notFound()
 
+  const {
+    tool,
+    relatedTools,
+    categoryLabels,
+    subcategoryLabels,
+    tagLabels,
+    labels,
+  } = detail
+
   return (
-    <MainArticle className="mx-auto w-full max-w-2xl px-4 py-10 md:px-8">
-      <BaseLink
-        href={`/developers/tools/${category}/`}
-        className="mb-4 inline-block text-sm"
-      >
-        ← {detail.categoryLabels[category] || category}
-      </BaseLink>
-      <div className="overflow-hidden rounded-lg border">
-        <ToolDetail
-          locale={locale}
-          tool={detail.tool}
-          categoryLabels={detail.categoryLabels}
-          subcategoryLabels={detail.subcategoryLabels}
-          tagLabels={detail.tagLabels}
-          labels={detail.labels}
+    <MainArticle className="flex flex-col gap-10 px-4 py-10 md:px-8">
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/developers/tools/">
+              {t("page-developers-tools-title")}
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+            /
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbLink href={`/developers/tools/${category}/`}>
+              {categoryLabels[category] || category}
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+            /
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbPage>{tool.name}</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+
+      {tool.banner_url && (
+        <Image
+          src={tool.banner_url}
+          alt=""
+          width={1200}
+          height={300}
+          className="h-40 w-full rounded-lg object-cover sm:h-56"
         />
+      )}
+
+      <div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
+        {tool.thumbnail_url && (
+          <Image
+            src={tool.thumbnail_url}
+            alt={tool.name}
+            width={124}
+            height={124}
+            className="size-16 shrink-0 rounded-xl object-cover xl:size-[124px]"
+          />
+        )}
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
+            <div>
+              <Tag status={getCategoryTagStyle(tool.categoryId)}>
+                {categoryLabels[tool.categoryId] || tool.categoryId}
+              </Tag>
+            </div>
+            <h1 className="mt-0">{tool.name}</h1>
+            <p className="text-sm text-body-medium">
+              {subcategoryLabels[tool.subcategory_id] || tool.subcategory_id}
+            </p>
+            <TagsInlineText
+              list={tool.tags.map((tag) => tagLabels[tag] || tag)}
+              variant="light"
+              className="lowercase"
+            />
+          </div>
+          <ToolLinks
+            locale={locale}
+            tool={tool}
+            labels={{ website: labels.website, social: labels.social }}
+          />
+        </div>
       </div>
+
+      {tool.description && (
+        <p className="max-w-3xl whitespace-pre-line">{tool.description}</p>
+      )}
+
+      {relatedTools.length > 0 && (
+        <section className="space-y-4">
+          <h2 className="text-h4">
+            {t("page-developers-tools-related-title")}
+          </h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {relatedTools.map((related) => (
+              <AppCard
+                key={getToolKey(related)}
+                name={related.name}
+                nameClassName="text-base"
+                description={related.description}
+                descriptionClassName="text-sm [&>p]:text-body-medium"
+                descriptionMaxLines={2}
+                descriptionExpandable={false}
+                thumbnail={related.thumbnail_url ?? undefined}
+                fallbackIcon={
+                  <AppWindowMac className="size-12 text-body-medium group-hover/appcard:text-primary-hover" />
+                }
+                href={`/developers/tools/${related.categoryId}/${getToolKey(related)}/`}
+                layout="horizontal"
+                imageSize="thumbnail"
+                className="h-fit p-4"
+              />
+            ))}
+          </div>
+        </section>
+      )}
     </MainArticle>
   )
 }
