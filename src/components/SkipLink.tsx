@@ -6,11 +6,11 @@ import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
 import { MAIN_CONTENT_ID } from "@/lib/constants"
 
-type SkipLinkContentProps = {
-  label: string
-}
+import useTranslation from "@/hooks/useTranslation"
 
-const SkipLinkContent = ({ label }: SkipLinkContentProps) => {
+const SkipLink = () => {
+  const { t } = useTranslation("common")
+
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     const target = document.getElementById(MAIN_CONTENT_ID)
     if (!target) return
@@ -33,10 +33,10 @@ const SkipLinkContent = ({ label }: SkipLinkContentProps) => {
         onClick={handleClick}
         className="absolute -top-14 rounded border bg-primary px-4 py-2 leading-8 text-background no-underline hover:no-underline focus:static"
       >
-        {label}
+        {t("skip-to-main-content")}
       </a>
     </div>
   )
 }
 
-export default SkipLinkContent
+export default SkipLink
