@@ -94,9 +94,9 @@ This is where you get colors for Claude-driven work. Light mode in `:root`, dark
 **Domain-specific:**
 - `--staking-gold` / `--staking-green` / `--staking-blue` / `--staking-red` (with `-fill` variants)
 
-**Gradients** also live here (`--radial-a`, `--card-gradient`, `--gradient-main`).
+**Gradients** are not semantic-token CSS vars -- they're `@utility` classes in `utilities.css` (see "Gradient backgrounds" below).
 
-**Shadows** are not CSS-variable tokens. Elevation uses the Tailwind default scale (`shadow-md`/`-lg`/`-xl`); only two custom utilities exist in `utilities.css` (`shadow-primary-xl`, `shadow-primary-no-blur-*`). Don't add new custom shadows -- see the rule in SKILL.md and the deprecation map in `cleanup-playbook.md`.
+**Shadows** are not CSS-variable tokens. Elevation uses the Tailwind default scale (`shadow-md`/`-lg`/`-xl`); the only custom utilities in `utilities.css` are `shadow-primary-xl` and `shadow-primary-no-blur-*` (plus the `hover-lift-*` composites). Don't add new custom shadows -- see the rule in SKILL.md.
 
 ### Layer 3: Tailwind Registration (`theme.css`)
 
@@ -161,46 +161,46 @@ Use these instead of arbitrary `z-[N]` values:
 
 ### Gradient backgrounds
 
-Existing named gradient utilities include `bg-gradient-main`, `bg-card-gradient`/`-secondary`/`-secondary-hover`, `bg-radial-a`/`bg-radial-b`, `bg-gradient-banner`, `bg-banner-grid-gradient`, `bg-gradient-staking`. **Always check `utilities.css` for an existing one before writing any `bg-linear-*` / `from-*` / `to-*` chain.** A multi-stop gradient typed inline at a call site is a red flag - it almost always belongs in a named utility.
+**One-off design gradients** are named `@utility` classes: `bg-linear-primary`, `bg-linear-secondary`, `bg-linear-tertiary`, and `bg-radial-primary`. **Always check `utilities.css` for an existing one before writing any `bg-linear-*` / `from-*` / `to-*` chain.** A multi-stop gradient typed inline at a call site is a red flag - it almost always belongs in a utility.
 
-Gradients are the highest-duplication area of the styling system (the same recipe gets hand-copied dozens of times). The full inventory is in `docs/gradient-audit.md`; a Storybook story lives at `src/styles/gradients.stories.tsx` (Design System / Gradients). The codebase is converging on a small, **closed** set of named gradient utilities - one class per gradient, with everything baked into the definition.
+For subtle **brand-hue washes** behind content, use the `bg-tint-*` / `bg-fade-*` family (below) - do not write a new named utility per color. A Storybook story lives at `src/styles/gradients.stories.tsx` (Design System / Gradients).
 
 #### How to reason about a gradient (decision ladder)
 
 Walk down until one fits:
 
-1. **A single design gradient reused across pages?** -> named `@utility` backed by CSS vars (the `bg-radial-a` pattern). Light/dark is handled for free by redefining the var under `.dark`.
-2. **Same shape, our-brand hue varies (tints/washes)?** -> use a named utility from the closed set (e.g. `bg-tint-accent-a`). The hue is encoded in the class name from an approved list - **never** a free argument and **never** re-spelled inline.
-3. **Owned by a specific component?** -> the component variant *applies* the named utility (e.g. `Card decoration="accent-a"` maps to `bg-tint-accent-a`). It does not redeclare the gradient. The utility is the single source of truth.
+1. **A single design gradient reused across pages?** -> a named `@utility` (the `bg-linear-*` / `bg-radial-primary` pattern), with direction, stops, and light/dark baked into the definition (the `dark:` variant lives in the utility, not at the call site).
+2. **A subtle brand-hue wash behind content?** -> the `bg-tint-*` (vertical) / `bg-fade-*` (horizontal) family. `*` is a theme color token (`accent-a/b/c`, `primary`, ...) resolved via `--value(--color-*)`, so it's constrained to the palette - **never** a free hex, **never** re-spelled inline.
+3. **Owned by a specific component?** -> the component variant *applies* the utility (e.g. `CardBanner background="accent-a"` maps to `bg-tint-accent-a`). It does not redeclare the gradient.
 4. **Genuine one-off / external brand color?** -> see the hex policy below.
 5. **A transparent->opaque fade/mask?** -> not a color decision; it's a mask utility. Leave it; out of scope for the color system.
 
-#### The rules the closed set enforces (don't break them at a call site)
+#### The `bg-tint-*` / `bg-fade-*` wash family
 
-- **No our-brand hex.** Hex (`from-[#...]`) is an absolute last resort, permitted **only** to match an exact *external* brand color (wallet logos, community-hub city brands). Anything representing *our* brand uses semantic tokens (`accent-a/b/c`, `primary`, `body`) with the alpha modifier (`from-accent-a/10`).
-- **Compass directions only.** The 8 keyword directions (`to-t/tr/r/br/b/bl/l/tl`). No custom angles (`bg-linear-65`) - they add clutter without earning their keep.
-- **Stops at 0% / 50% / 100% only.** No arbitrary stop positions (`from-20%`, `to-97%`, `from-[60%]`).
-- **One shared opacity ramp**, theme-aware via CSS vars - not re-chosen per use.
-- **RTL.** Vertical gradients (`to-t`/`to-b`) are RTL-safe. Directional gradients (horizontal/diagonal fades) must flip for RTL - bake the flip into the utility definition so consumers never hand-write `rtl:from-... rtl:to-...`.
+A single engine (`gradient-core` in `utilities.css`) holds the gradient body + light/dark variants; `bg-tint-*` and `bg-fade-*` are thin `@apply` wrappers differing only in direction and dark behavior. Always layer a wash over a solid base (`bg-background`) - `cn()` is configured (`extendTailwindMerge` in `src/lib/utils/cn.ts`) so the wash doesn't collide with `bg-background` and drop it.
 
-#### Shape of a token gradient utility (repo-idiomatic)
+| Class | Effect |
+|---|---|
+| `bg-tint-<color>` | Vertical wash (to bottom). |
+| `bg-fade-<color>` | Horizontal wash (to right); dark stops inverted vs tint. |
+| `…/N` modifier | Base opacity % (default 5). Stops add fixed offsets: light `n / n+10`, dark `n+5 / n+15` - constant interval at any base. |
+| `from-* to-*` | Native Tailwind stop positions (e.g. `from-25% to-75%`); omit for a full fade. |
+| `gradient-reverse` | Flip direction 180deg (tint -> to top, fade -> to left). |
+| `gradient-use-light` | Render dark mode at the lighter intensities - use when the boosted dark wash hurts text contrast. |
+| `gradient-use-dark` | Render light mode at the dark intensities. |
+| `[--grad-*]` inline | Fine-tune a stop offset or `--grad-angle` for a one-off. |
 
-Color triplets are comma-separated; apply alpha with `hsla(var(--token), <alpha>)`. Put the opacity ramp in theme-aware vars so dark mode flips automatically:
+Examples: `bg-background bg-tint-accent-b`, `bg-background bg-fade-primary/8 gradient-reverse`, `bg-background bg-tint-accent-c gradient-use-light`.
 
-```css
-/* semantic-tokens.css */
-:root { --tint-from: 0.05; --tint-to: 0.10; }
-.dark { --tint-from: 0.10; --tint-to: 0.20; }
+#### Rules (don't break them at a call site)
 
-/* utilities.css */
-@utility bg-tint-accent-a {
-  background-image: linear-gradient(to bottom,
-    hsla(var(--accent-a), var(--tint-from)),
-    hsla(var(--accent-a), var(--tint-to)));
-}
-```
+- **No our-brand hex.** `from-[#...]` is a last resort, permitted **only** to match an exact *external* brand color (wallet logos, community-hub city brands). Our brand uses tokens (`accent-a/b/c`, `primary`, `body`).
+- **Use the family; don't hand-build washes.** Don't reconstruct `bg-linear-* from-accent-a/10 to-...` at a call site - that's what `bg-tint-*`/`bg-fade-*` are for. Direction comes from the family (+ `gradient-reverse`); the opacity ramp is shared, not re-chosen per use.
+- **RTL.** `bg-tint-*` is vertical -> RTL-safe. `bg-fade-*` is horizontal/directional -> confirm the direction reads correctly in Arabic/Urdu.
 
-For an external brand color (the hex exception), only the hue varies - pass it as a custom property and keep direction/opacity/dark locked in the definition (`color-mix` applies the ramp to an arbitrary hex):
+#### External brand color (the hex exception)
+
+When only the hue varies and it's a genuine external brand, pass it as a custom property and keep direction/opacity/dark locked in a dedicated utility (`color-mix` applies the ramp to an arbitrary hex):
 
 ```css
 @utility bg-brand-tint {
@@ -213,7 +213,24 @@ For an external brand color (the hex exception), only the hue varies - pass it a
 <div className="bg-brand-tint" style={{ "--brand-color": brandHex } as CSSProperties} />
 ```
 
-> Why a closed named set rather than one open functional (`bg-tint-*` with `--value()`) utility? A functional utility accepts *any* hue, which just relocates the inconsistency to the call site. A fixed list of named utilities is constrained by design - you can only apply an approved one. Reserve parameterization for the genuinely open dimension (external brand hue), and lock everything else.
+> Why a functional `bg-tint-*` (with `--value(--color-*)`) rather than a hardcoded class per color? It stays constrained - `--value(--color-*)` only resolves existing palette tokens, so an arbitrary hue can't sneak in, and the recipe lives once in `gradient-core` instead of being copied per color. The closed set is enforced by the palette, not by a hand-maintained list of near-identical utilities. The one genuinely open dimension (external brand hex) gets the `bg-brand-tint` pattern above.
+
+#### Gradient-border ring (`gradient-ring-*`)
+
+A separate utility for a **1px gradient *border*** (not a fill wash). It paints `bg-background` over a rounded box and lays a 1px-larger gradient `::before` behind it (`z-hide`), so only a 1px ring shows along the top and sides; **the bottom edge is intentionally open**.
+
+- **Color from the name**, radius from an optional `/modifier` (default `4xl`): `gradient-ring-accent-a`, `gradient-ring-primary-hover`, `gradient-ring-accent-a/3xl`, `gradient-ring-primary/[1.25rem]`. Color is `--value(--color-*)` (palette-constrained, like the washes).
+- **The radius is also applied to the first child**, so the inner surface needs no `rounded-*` of its own.
+- Opacity stops are **fixed** (24/8 light, 40/20 dark) -- you choose the hue, not the translucency.
+
+Demo: the `GradientRing` story in `src/styles/gradients.stories.tsx`. Reach for it instead of hand-rolling the `before:-inset-px before:rounded-[calc(...)]` pattern at a call site.
+
+Gotchas:
+
+- **`overflow-hidden`/`overflow-clip` ancestors clip the ring** -- the `::before` bleeds 1px outside the box, so a clipping ancestor eats the border. The most common failure.
+- **A color token is mandatory** -- `gradient-ring` alone (no color) generates nothing; there is no default hue.
+- **`& > :first-child` rounds the *first direct child* only** -- if the visual surface isn't the first child (wrapper div, multiple top-level children, a Fragment that reshapes the DOM), the corner clip lands on the wrong element.
+- **It owns the element's background** (`bg-background`) and relies on the `::before` sitting at `z-index: -1` behind it -- drop it on an element that needs a *different* background and the trick breaks.
 
 ### Grid templates
 
@@ -295,7 +312,7 @@ If you're touching one of these primitives, replace the stale tokens. See `clean
 Decide based on what you're adding:
 
 - **A new semantic color** → `semantic-tokens.css` (must include both light and dark values), then register in `theme.css`'s `@theme inline` block.
-- **A new gradient** → `utilities.css` as `@utility`, referencing foundational/semantic vars. First walk the gradient decision ladder above and confirm an existing utility doesn't already cover it. Follow the closed-set rules (no our-brand hex, compass directions only, 0/50/100 stops, shared opacity ramp, RTL-flipped if directional).
+- **A brand-hue wash** → use the `bg-tint-*` / `bg-fade-*` family; don't add a new utility. **A new one-off design gradient** → `utilities.css` as `@utility`, referencing foundational/semantic vars (no our-brand hex, light/dark + RTL baked into the definition). First walk the gradient decision ladder above and confirm an existing utility doesn't already cover it.
 - **A new custom spacing/radius/breakpoint** → `theme.css` (under `@theme inline`).
 - **A foundational color** → `colors.css` (only if a new hue family is being added; rare).
 

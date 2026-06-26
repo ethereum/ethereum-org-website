@@ -57,7 +57,7 @@ className="from-[#5c1eb4] to-[#7b3fd8]"
 // After:
 className="bg-error"
 className="border-primary/10"
-// For gradients, check utilities.css for an existing one (e.g., bg-gradient-main, bg-card-gradient-secondary).
+// For gradients, check utilities.css for an existing one (e.g., bg-linear-primary, bg-linear-secondary).
 // If no token fits, add it to semantic-tokens.css before using a hex value in a component.
 ```
 
@@ -149,7 +149,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
 ```tsx
 // Before:
-<div className="flex flex-col gap-3 rounded-3xl border border-[rgba(159,43,212,0.11)] bg-card-gradient-secondary p-6 hover:bg-card-gradient-secondary-hover hover:shadow-lg">
+<div className="flex flex-col gap-3 rounded-3xl border border-[rgba(159,43,212,0.11)] bg-linear-secondary p-6 hover:bg-linear-tertiary hover:shadow-lg">
   <h3>Title</h3>
   <p>Description</p>
 </div>
@@ -325,7 +325,7 @@ See `tokens.md` for the full named z-index scale.
 
 ## Gradients -> named utilities (closed set)
 
-Gradients are the highest-duplication area of the styling system. The target is one class per gradient, with direction/stops/opacity/dark/RTL baked into the definition - no recipe rebuilt at a call site. See `tokens.md` ("Gradient backgrounds") for the decision ladder and rules; full inventory in `docs/gradient-audit.md`.
+Gradients are the highest-duplication area of the styling system. The target is one class per gradient, with direction/stops/opacity/dark/RTL baked into the definition - no recipe rebuilt at a call site. See `tokens.md` ("Gradient backgrounds") for the decision ladder and rules; the live inventory is the `src/styles/gradients.stories.tsx` story (Design System / Gradients).
 
 ### Inlined multi-stop hex gradient -> token utility
 
@@ -334,7 +334,7 @@ Gradients are the highest-duplication area of the styling system. The target is 
 className="bg-linear-to-br from-[#7f7fd5]/20 via-[#86a8e7]/20 to-[#91eae4]/20"
 
 // After (if a token gradient matches):
-className="bg-gradient-main"
+className="bg-linear-primary"
 
 // If no existing gradient matches: add a new @utility to utilities.css, then use it.
 ```
@@ -382,11 +382,10 @@ className="bg-gradient-to-b from-purple-700 to-purple-500"
 className="bg-linear-to-b from-purple-700 to-purple-500"
 ```
 
-### Misnamed / dead gradient tokens
+### Dead gradient utilities
 
-- `bg-gradient-step-1` is a flat color, not a gradient - it's a `--color-*` token. Use it as a color (`bg-...`) and don't treat it as a gradient.
-- Duplicate aliases (e.g. two utilities pointing at the same `--gradient-*` var) should collapse to one name.
 - A gradient `@utility` with zero references is dead - remove it rather than carry it.
+- Don't add a second `@utility` that duplicates an existing gradient under a new name; reuse the existing one.
 
 ## Deprecated shadow tokens -> Tailwind defaults / two custom utilities
 

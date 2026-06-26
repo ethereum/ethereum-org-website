@@ -87,11 +87,11 @@ Vertical rhythm between prose blocks is the opt-in `.flow` system -- wrap a regi
 
 ### Shadows: default to the Tailwind scale; almost never add a custom one
 
-Elevation uses the **Tailwind default scale** -- `shadow-sm`/`-md`/`-lg`/`-xl`/`-2xl`, `shadow-none` to reset. Pick by surface: dropdowns/tooltips `shadow-md`, cards/popovers/modals `shadow-lg`, large framed boxes/sheets `shadow-xl`. There is **no custom multi-layer token set** -- the old `shadow-table-box`/`-table-item-box`/`-drop`/`-widget`/`-window-box`/`-svg-button-link` tokens were removed; map any you encounter to a default (see `references/cleanup-playbook.md`).
+Elevation uses the **Tailwind default scale** -- `shadow-sm`/`-md`/`-lg`/`-xl`/`-2xl`, `shadow-none` to reset. Pick by surface: dropdowns/tooltips `shadow-md`, cards/popovers/modals `shadow-lg`, large framed boxes/sheets `shadow-xl`. There is **no custom multi-layer token set**.
 
 Only **two** project shadows exist, both in `utilities.css`, for the brand-tinted look defaults can't express:
-- `shadow-primary-xl` -- `shadow-xl` tinted with `primary-low-contrast`. Large framed / window-style boxes.
-- `shadow-primary-no-blur-*` -- functional, spacing-scaled solid offset (`-1` = 4px, `-0.5` = 2px) in `primary-low-contrast`. The hover offset on buttons/avatars/FAQ icons.
+- `shadow-primary-xl` -- `shadow-xl` tinted with `primary-low-contrast`, for large framed / window-style boxes.
+- `shadow-primary-no-blur-*` -- functional, spacing-scaled solid (no-blur) offset (`-1` = 4px, `-0.5` = 2px) in `primary-low-contrast`, for hard hover offsets.
 
 Before reaching for anything new: a default almost always fits, and a **hover lift is the `hover-lift-*` utility** (`-xs`/`-base`/`-sm`/`-md`) or `Card hoverEffect="lift"` -- not a bespoke shadow swap. If you genuinely need a custom shadow, write it as a **raw `box-shadow`** (like the two above), never an arbitrary `shadow-[...]`: arbitrary shadows route their color through `--tw-shadow-color`, which the global `* { dark:shadow-body }` rule overrides in dark mode, silently graying your color. Raw `box-shadow` utilities are immune.
 
