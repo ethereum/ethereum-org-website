@@ -26,7 +26,7 @@ The bare Radix tooltip (`@/components/ui/tooltip`) is hover-only and has no mobi
 
 ### Import heroes from `@/components/Hero`
 
-Heroes are named exports of `@/components/Hero`: `PageHero` (the workhorse), `HubHero`, `HomeHero`. `PageHero` takes discrete props -- `breadcrumbs` **or** `header`, `heroImg`, `title`, `description`, `buttons`, `variant`. (The former `MdxHero` was removed -- use `PageHero` text-only with `variant="no-divider"`.)
+Heroes are named exports of `@/components/Hero`: `PageHero` (the workhorse), `HubHero`, `HomeHero`. `PageHero` takes discrete props -- `breadcrumbs`, an optional `eyebrow`, an aside (`heroImg` **or** `heroComponent`, mutually exclusive), `title`, `description`, `buttons`, `variant`. `title` is always the `<h1>` -- there is no `header` prop (it was removed). (The former `MdxHero` was removed too -- use `PageHero` text-only with `variant="no-divider"`.)
 
 ## Component Behaviors You'd Miss
 
