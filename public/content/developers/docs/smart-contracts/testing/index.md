@@ -184,7 +184,7 @@ Fuzzing is useful for evaluating a smart contracts input validation mechanism si
 
 ### Guidelines for running property-based testing for smart contracts {#running-property-based-tests}
 
-Running property-based testing typically starts with defining a property (e.g., absence of [integer overflows](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) or collection of properties that you want to verify in a smart contract. You may also need to define a range of values within which the program can generate data for transaction inputs when writing property tests.
+Running property-based testing typically starts with defining a property (e.g., absence of [integer overflows](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)) or collection of properties that you want to verify in a smart contract. You may also need to define a range of values within which the program can generate data for transaction inputs when writing property tests.
 
 Once configured properly, the property testing tool will execute your smart contracts functions with randomly generated inputs. If there are any assertion violations, you should get a report with concrete input data that violates the property under evaluation. See some of the guides below to get started with running property-based testing with different tools:
 
@@ -195,7 +195,7 @@ Once configured properly, the property testing tool will execute your smart cont
 - **[Fuzzing contracts with Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Fuzzing contracts with Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Symbolic execution of smart contracts with Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Symbolic execution of smart contracts with Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[Symbolic execution of smart contracts with Mythril](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
 ## Manual testing for smart contracts {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _Dynamic symbolic execution framework for analyzing EVM bytecode._
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble is a specification language and runtime verification tool that allows you to annotate smart contracts with properties that allow you to automatically test the contracts with tools such as Diligence Fuzzing or MythX._
 
