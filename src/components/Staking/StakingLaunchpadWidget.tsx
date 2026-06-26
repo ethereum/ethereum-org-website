@@ -5,7 +5,6 @@ import { useState } from "react"
 import Tools from "@/components/icons/tools.svg"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
-import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { CANONICAL_STAKING_TESTNET } from "@/lib/constants"
@@ -53,12 +52,7 @@ const StakingLaunchpadWidget = () => {
   }))
 
   return (
-    <div
-      className={cn(
-        "flow rounded-base p-page",
-        "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
-      )}
-    >
+    <div className="flow rounded-base bg-fade-accent-c p-page gradient-reverse">
       <p className="text-body-medium">
         {t("page-staking-launchpad-widget-span")}
       </p>

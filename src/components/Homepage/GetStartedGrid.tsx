@@ -96,7 +96,7 @@ const GetStartedGrid = async ({
 
   return (
     <Section id="get-started" className={cn("relative", className)}>
-      <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-a px-4 pt-20 pb-8 md:px-8">
+      <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-primary px-4 pt-20 pb-8 md:px-8">
         <div className="flex flex-col items-center gap-2 text-center">
           <SectionHeader className="mt-0 mb-0">
             {t("page-index-get-started-title")}

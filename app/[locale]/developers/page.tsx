@@ -93,7 +93,7 @@ const WhyGrid = ({
       className={cn(
         "rounded-4xl border border-accent-c/20",
         "grid grid-cols-1 gap-6 p-8 md:grid-cols-2 md:p-14",
-        "bg-linear-to-b from-accent-c/5 from-[60%] to-accent-c/15"
+        "bg-tint-accent-c from-70%"
       )}
     >
       {items.map(({ heading, description }) => (
@@ -741,43 +741,34 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
           </Section>
 
           <Section id="founders" className="py-10 md:py-12">
-            <div
-              className={cn(
-                "mx-auto max-w-screen-lg",
-                "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(var(--radius-4xl)+1px)] before:content-['']", // Border/gradient positioning
-                "before:bg-linear-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
-                "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
-              )}
-            >
-              <div className="mb-12 flex flex-col items-center gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
-                <div className="flex flex-col gap-y-4 text-center">
-                  <h2>{t("page-developers-founders-title")}</h2>
-                  <p>{t("page-developers-founders-desc")}</p>
-                </div>
-                <div className="flex flex-wrap justify-center gap-4 text-center">
-                  <ButtonLink
-                    href="mailto:founders@ethereum.org?subject=Founder%20inquiry"
-                    customEventOptions={{
-                      eventCategory: "founders",
-                      eventAction: "click",
-                      eventName: "email",
-                    }}
-                  >
-                    {t("page-developers-get-in-touch")}
-                  </ButtonLink>
-                  <ButtonLink
-                    href="/community/grants/"
-                    isSecondary
-                    variant="outline"
-                    customEventOptions={{
-                      eventCategory: "founders",
-                      eventAction: "click",
-                      eventName: "grant-options",
-                    }}
-                  >
-                    {t("page-developers-see-grant-options")}
-                  </ButtonLink>
-                </div>
+            <div className="gradient-ring-primary/4xl mx-auto mb-12 flex max-w-screen-lg flex-col items-center gap-y-8 bg-radial-primary px-8 py-12 lg:mb-32 xl:mb-36">
+              <div className="flex flex-col gap-y-4 text-center">
+                <h2>{t("page-developers-founders-title")}</h2>
+                <p>{t("page-developers-founders-desc")}</p>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4 text-center">
+                <ButtonLink
+                  href="mailto:founders@ethereum.org?subject=Founder%20inquiry"
+                  customEventOptions={{
+                    eventCategory: "founders",
+                    eventAction: "click",
+                    eventName: "email",
+                  }}
+                >
+                  {t("page-developers-get-in-touch")}
+                </ButtonLink>
+                <ButtonLink
+                  href="/community/grants/"
+                  isSecondary
+                  variant="outline"
+                  customEventOptions={{
+                    eventCategory: "founders",
+                    eventAction: "click",
+                    eventName: "grant-options",
+                  }}
+                >
+                  {t("page-developers-see-grant-options")}
+                </ButtonLink>
               </div>
             </div>
           </Section>

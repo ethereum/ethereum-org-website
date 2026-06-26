@@ -34,7 +34,7 @@ const SubpageCard = ({
   return (
     <LinkBox
       className={cn(
-        "flex flex-col gap-3 rounded-3xl border border-[rgba(159,43,212,0.11)] bg-card-gradient-secondary p-6 hover:bg-card-gradient-secondary-hover hover:shadow-lg",
+        "flex hover-lift-base flex-col gap-3 rounded-3xl border border-primary/10 bg-linear-secondary p-6",
         className
       )}
     >

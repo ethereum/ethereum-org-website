@@ -31,7 +31,7 @@ const WhitepaperBridge = async () => {
   ] as const
 
   return (
-    <Section className="my-8 space-y-6 rounded-base border border-primary-low-contrast bg-radial-a p-6 md:p-8">
+    <Section className="my-8 space-y-6 rounded-base border border-primary-low-contrast bg-radial-primary p-6 md:p-8">
       {/* Eyebrow tag - uses warning status for attention */}
       <Tag status="warning" variant="outline" size="small" className="gap-1.5">
         <Info className="size-3.5" />
@@ -63,8 +63,8 @@ const WhitepaperBridge = async () => {
         </ButtonLink>
       </Flex>
 
-      {/* What's changed card - uses card-gradient-secondary */}
-      <Card className="border border-primary-low-contrast bg-card-gradient-secondary">
+      {/* What's changed card - uses bg-linear-secondary */}
+      <Card className="border border-primary-low-contrast bg-linear-secondary">
         <CardContent className="p-4 md:p-6">
           <p className="mb-4 text-sm font-semibold tracking-wide text-body-medium uppercase">
             {t("whats-changed")}

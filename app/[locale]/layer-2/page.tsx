@@ -356,7 +356,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </div>
 
         <div id="layer-2-cta" className="w-full px-8 py-9">
-          <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-main-gradient p-8">
+          <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-linear-primary p-8">
             <div className="flex flex-col gap-6">
               {userRandomL2s.map((l2, idx) => (
                 <div

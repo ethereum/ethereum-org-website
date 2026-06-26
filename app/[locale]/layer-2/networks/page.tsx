@@ -166,7 +166,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <Layer2NetworksTable {...layer2NetworksProps} />
 
         <div id="more-advanced-cta" className="w-full px-8 py-9">
-          <div className="flex flex-col gap-8 bg-main-gradient px-12 py-14">
+          <div className="flex flex-col gap-8 bg-linear-primary px-12 py-14">
             <h3>{t("page-layer-2-networks-more-advanced-title")}</h3>
             <div className="flex max-w-[768px] flex-col gap-8">
               <p>

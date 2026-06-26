@@ -288,7 +288,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             ) : (
               <Section
                 className={cn(
-                  "flow flex flex-col items-center bg-gradient-main py-20 text-center"
+                  "flow flex flex-col items-center bg-linear-primary py-20 text-center"
                 )}
               >
                 <h2>{t("page-wallets-features-title")}</h2>

@@ -1,38 +1,39 @@
+import { getTranslations } from "next-intl/server"
+
 import type { TranslationKey } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 export type UpgradeStatusProps = {
-  children?: React.ReactNode
   dateKey: TranslationKey
   isShipped?: boolean
+  children?: React.ReactNode
 }
 
-const UpgradeStatus = ({
+const UpgradeStatus = async ({
   dateKey,
+  isShipped,
   children,
-  isShipped = false,
 }: UpgradeStatusProps) => {
-  const { t } = useTranslation("page-staking")
+  const ns = "page-upgrades"
+  const t = await getTranslations(ns)
+  const tCommon = await getTranslations("common")
+
+  const split = dateKey.split(ns + ":")
+  const whenKey = split[split.length - 1]
 
   return (
     <aside
       className={cn(
-        "my-8 flex w-full flex-col gap-6 rounded p-6 shadow-2xl lg:mt-0",
-        "bg-black/80 bg-linear-to-b from-accent-c/10",
-        "dark:border-2 dark:bg-gray-700 dark:from-transparent",
-        isShipped
-          ? "bg-success-light dark:border-success"
-          : "bg-accent-a/20 dark:border-primary"
+        "flow w-full rounded-base p-6 shadow-2xl",
+        isShipped ? "bg-tint-success" : "bg-tiny-accent-a"
       )}
     >
       <h2 className="text-sm font-normal uppercase">
-        {t("common:consensus-when-shipping")}
+        {tCommon("consensus-when-shipping")}
       </h2>
-      <p className="mb-6 text-4xl leading-none font-bold">{t(dateKey)}</p>
-      <p className="text-xl">{children}</p>
+      <p className="text-h2 font-bold">{t(whenKey)}</p>
+      <p>{children}</p>
     </aside>
   )
 }

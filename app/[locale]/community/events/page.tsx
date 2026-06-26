@@ -202,7 +202,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <div
                     key={id}
                     className={cn(
-                      "flex w-full gap-4 rounded-4xl border p-6 shadow-lg sm:gap-6 sm:p-8",
+                      "flex w-full hover-lift-sm gap-4 rounded-4xl border p-6 sm:gap-6 sm:p-8",
                       brandColor
                     )}
                   >
@@ -279,7 +279,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           {/* Find events near you */}
           <Section
             id="search"
-            className="rounded-t-[4rem] bg-gradient-banner px-6 py-12 md:px-12 md:py-16 dark:bg-radial-b"
+            className="rounded-[4rem] bg-radial-primary px-6 py-12 not-dark:[--offset-y:20%] md:px-12 md:py-16"
           >
             <div className="space-y-6">
               <div className="space-y-2 text-center">
@@ -437,7 +437,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
             <div className="grid gap-8 md:grid-cols-2">
               {/* Ethereum Everywhere Card */}
-              <div className="flex flex-col gap-y-8 rounded-4xl bg-linear-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
+              <div className="flex flex-col gap-y-8 rounded-4xl bg-tint-accent-a px-4 py-6 md:p-12">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
@@ -501,7 +501,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </div>
 
               {/* Geode Labs Card */}
-              <div className="flex flex-col gap-y-8 rounded-4xl bg-linear-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
+              <div className="flex flex-col gap-y-8 rounded-4xl bg-tint-accent-c px-4 py-6 md:p-12">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={geodeLabsLogo} alt="" sizes="4rem" />

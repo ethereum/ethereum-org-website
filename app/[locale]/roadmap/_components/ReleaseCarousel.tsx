@@ -165,7 +165,7 @@ const ReleaseCarousel = () => {
                           {status === "dev" && (
                             <div
                               className={cn(
-                                "w-fit rounded-lg bg-card-gradient-secondary-hover px-2 py-1",
+                                "w-fit rounded-lg bg-linear-tertiary px-2 py-1",
                                 currentIndex !== index && "hidden"
                               )}
                             >

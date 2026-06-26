@@ -33,7 +33,7 @@ const BrowseApps = async () => {
   ]
 
   return (
-    <div className="bg-radial-b mt-16 flex flex-col items-center justify-center rounded-3xl p-8 md:p-20">
+    <div className="mt-16 flex flex-col items-center justify-center rounded-3xl bg-radial-primary p-8 md:p-20">
       <div className="flex max-w-2xl flex-col items-center justify-center gap-2 text-center">
         <h2>{t("title")}</h2>
         <p className="text-body-medium">{t("description")}</p>
@@ -82,7 +82,7 @@ const BrowseApps = async () => {
         </div>
       </div>
       <div className="mt-6 flex justify-center">
-        <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-step-1 px-4 py-2 text-sm font-bold">
+        <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-accent-a/10 px-4 py-2 text-sm font-bold dark:bg-accent-a/20">
           <Image
             src={EthereumLogo}
             alt="Ethereum"
