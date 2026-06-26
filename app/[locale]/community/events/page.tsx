@@ -16,6 +16,15 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
+  CalloutBanner,
+  CalloutButtons,
+  CalloutContent,
+  CalloutDescription,
+  CalloutMain,
+  CalloutRoot,
+  CalloutTitle,
+} from "@/components/ui/callout"
+import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
@@ -41,7 +50,6 @@ import EventsJsonLD from "./page-jsonld"
 import { getMeetupGroups, mapEventTranslations } from "./utils"
 
 import { getEventsData } from "@/lib/data"
-import ethereumEverywhereLogo from "@/public/images/community/ethereum-everywhere-logo.png"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
 import heroImage from "@/public/images/enterprise-eth.png"
 import organizerImage from "@/public/images/people-learning.png"
@@ -435,85 +443,26 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-events-section-support-subtitle")}
               </p>
             </div>
-            <div className="grid gap-8 md:grid-cols-2">
-              {/* Ethereum Everywhere Card */}
-              <div className="flex flex-col gap-y-8 rounded-4xl bg-linear-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
-                <div className="flex items-center gap-3">
-                  <div className="size-16 overflow-hidden rounded-full">
-                    <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
-                  </div>
-                  <h3 className="text-xl">
-                    {t("page-events-support-ethereum-everywhere")}
-                  </h3>
-                </div>
-
-                <div className="space-y-[1lh]">
-                  <p>
-                    {t("page-events-support-ethereum-everywhere-description")}
-                  </p>
-
-                  <div className="space-y-1">
-                    <p className="font-bold">
-                      {t("page-events-support-ethereum-everywhere-guidance")}
-                    </p>
-                    <p>
-                      {t(
-                        "page-events-support-ethereum-everywhere-guidance-description"
-                      )}
-                    </p>
-                  </div>
-
-                  <div className="space-y-1">
-                    <p className="font-bold">
-                      {t("page-events-support-ethereum-everywhere-resources")}
-                    </p>
-                    <p>
-                      {t(
-                        "page-events-support-ethereum-everywhere-resources-description"
-                      )}
-                    </p>
-                  </div>
-
-                  <div className="space-y-1">
-                    <p className="font-bold">
-                      {t("page-events-support-ethereum-everywhere-connections")}
-                    </p>
-                    <p>
-                      {t(
-                        "page-events-support-ethereum-everywhere-connections-description"
-                      )}
-                    </p>
-                  </div>
-                </div>
-
-                <ButtonLink
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeA-W8iy2PJxrY3TD4lMYXyky_wLd4QB_7NRwqSxCd0e19MUg/viewform"
-                  size="lg"
-                  className="mt-auto w-fit"
-                  customEventOptions={{
-                    eventCategory: "Events",
-                    eventAction: "organizer",
-                    eventName: "EE_get_in_touch",
-                  }}
-                >
-                  {t("page-events-get-in-touch")}
-                </ButtonLink>
-              </div>
-
-              {/* Geode Labs Card */}
-              <div className="flex flex-col gap-y-8 rounded-4xl bg-linear-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
-                <div className="flex items-center gap-3">
-                  <div className="size-16 overflow-hidden rounded-full">
-                    <Image src={geodeLabsLogo} alt="" sizes="4rem" />
-                  </div>
-                  <h3 className="text-xl">
+            {/* Geode Labs Callout */}
+            <CalloutRoot
+              variant="sm"
+              className="@3xl/callout:**:[img]:max-h-80"
+            >
+              <CalloutBanner>
+                <Image
+                  src={geodeLabsLogo}
+                  alt=""
+                  sizes="(min-width: 768px) 400px, calc(100vw - 64px)"
+                />
+              </CalloutBanner>
+              <CalloutMain>
+                <CalloutContent>
+                  <CalloutTitle as="h3">
                     {t("page-events-support-geode-labs")}
-                  </h3>
-                </div>
-                <div className="space-y-[1lh] [&_a]:no-underline">
-                  <p>{t("page-events-support-geode-labs-description")}</p>
+                  </CalloutTitle>
+                  <CalloutDescription className="space-y-[1lh] [&_a]:no-underline">
+                    <p>{t("page-events-support-geode-labs-description")}</p>
 
-                  <div>
                     <Link
                       href="https://geode.build/grants"
                       className="font-bold"
@@ -528,9 +477,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <p>
                       {t("page-events-support-geode-labs-grants-description")}
                     </p>
-                  </div>
 
-                  <div>
                     <Link
                       href="https://localethereum.substack.com/"
                       className="font-bold"
@@ -545,9 +492,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <p>
                       {t("page-events-support-geode-labs-local-description")}
                     </p>
-                  </div>
 
-                  <div>
                     <Link
                       href="https://ethstars.xyz"
                       className="font-bold"
@@ -562,23 +507,23 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <p>
                       {t("page-events-support-geode-labs-ethstars-description")}
                     </p>
-                  </div>
-                </div>
-
-                <ButtonLink
-                  href="https://geode.build/"
-                  size="lg"
-                  className="mt-auto w-fit"
-                  customEventOptions={{
-                    eventCategory: "Events",
-                    eventAction: "organizer",
-                    eventName: "Geode_get_in_touch",
-                  }}
-                >
-                  {t("page-events-get-in-touch")}
-                </ButtonLink>
-              </div>
-            </div>
+                  </CalloutDescription>
+                </CalloutContent>
+                <CalloutButtons>
+                  <ButtonLink
+                    href="https://geode.build/"
+                    size="lg"
+                    customEventOptions={{
+                      eventCategory: "Events",
+                      eventAction: "organizer",
+                      eventName: "Geode_get_in_touch",
+                    }}
+                  >
+                    {t("page-events-get-in-touch")}
+                  </ButtonLink>
+                </CalloutButtons>
+              </CalloutMain>
+            </CalloutRoot>
           </Section>
         </MainArticle>
       </I18nProvider>

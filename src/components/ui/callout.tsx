@@ -190,6 +190,7 @@ export {
   CalloutButtons,
   CalloutContent,
   CalloutDescription,
+  CalloutMain,
   CalloutRoot,
   CalloutTitle,
 }
