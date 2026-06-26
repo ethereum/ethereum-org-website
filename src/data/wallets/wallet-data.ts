@@ -5,7 +5,6 @@ import { newToCrypto } from "@/data/wallets/new-to-crypto"
 import OneInchWalletImage from "@/public/images/wallets/1inch.png"
 import AlphaWalletImage from "@/public/images/wallets/alpha.png"
 import AmbireImage from "@/public/images/wallets/ambire.png"
-import AuroxImage from "@/public/images/wallets/aurox.png"
 import BitgetImage from "@/public/images/wallets/bitget.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BraavosImage from "@/public/images/wallets/braavos_wallet.png"
@@ -446,6 +445,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://support.metamask.io",
     documentation: "https://docs.metamask.io/",
     supported_chains: [
@@ -457,7 +457,7 @@ export const walletsData: WalletData[] = [
       "Base",
       "Scroll",
       "Blast",
-      "Taiko Alethia",
+      "Taiko",
       "Unichain",
       "Ink",
     ],
@@ -502,6 +502,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: true,
     social_recovery: true,
+    eip_4337_support: true,
     onboard_documentation: "https://docs.safe.global/",
     documentation: "https://docs.safe.global/",
     supported_chains: [
@@ -637,6 +638,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
+    eip_4337_support: true,
     onboard_documentation:
       "https://help.ambire.com/hc/en-us/categories/4404980091538-Ambire-Wallet",
     documentation: "",
@@ -941,6 +943,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://docs.pillarx.app/",
     documentation: "https://docs.pillarx.app/",
     supported_chains: [
@@ -1326,6 +1329,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://learn.rainbow.me/",
     documentation: "",
     supported_chains: [
@@ -1339,7 +1343,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-09-01",
+    last_updated: "2026-06-16",
     name: "Trezor",
     image: TrezorImage,
     twBackgroundColor: "bg-[#ffffff]",
@@ -1381,7 +1385,32 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://trezor.io/support",
     documentation: "https://trezor.io/learn",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Base",
+      "Arbitrum One",
+      "OP Mainnet",
+      "Blast",
+      "Polygon zkEVM",
+      "zkSync Mainnet",
+      "Linea",
+      "Arbitrum Nova",
+      "Boba Network",
+      "Lightlink Phoenix Mainnet",
+      "World Chain",
+      "Ink",
+      "Abstract",
+      "Soneium",
+      "Funki",
+      "Unichain",
+      "Swellchain",
+      "Superseed",
+      "Kinto Mainnet",
+      "Eventum Mainnet",
+      "MegaETH Mainnet",
+      "Horizen Mainnet",
+      "Gensyn Mainnet",
+    ],
   },
   {
     last_updated: "2024-10-23",
@@ -1783,6 +1812,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://study.bitkeep.com/en/",
     documentation: "https://docs.bitkeep.com/en/docs/guide/",
     supported_chains: [
@@ -2154,6 +2184,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://community.trustwallet.com/",
     documentation: "https://developer.trustwallet.com/developer/",
     supported_chains: [
@@ -2166,53 +2197,6 @@ export const walletsData: WalletData[] = [
       "Scroll",
       "Blast",
     ],
-  },
-  {
-    last_updated: "2025-01-25",
-    name: "Aurox Wallet",
-    image: AuroxImage,
-    twBackgroundColor: "bg-[#1F47FF]",
-    twGradiantBrandColor: "from-[#1F47FF]",
-    url: "https://getaurox.com/wallet",
-    active_development_team: true,
-    languages_supported: ["en"],
-    twitter: "https://x.com/getaurox",
-    discord: "https://aurox.app/discord",
-    reddit: "",
-    telegram: "",
-    ios: false,
-    android: false,
-    linux: false,
-    windows: false,
-    macOS: false,
-    firefox: false,
-    chromium: true,
-    hardware: false,
-    open_source: true,
-    repo_url: "https://github.com/GetAurox/Aurox-Wallet",
-    non_custodial: true,
-    security_audit: ["https://skynet.certik.com/projects/aurox"],
-    scam_protection: true,
-    hardware_support: true,
-    rpc_importing: true,
-    nft_support: true,
-    connect_to_dapps: true,
-    staking: false,
-    swaps: true,
-    multichain: true,
-    layer_2: true,
-    gas_fee_customization: true,
-    ens_support: true,
-    erc_20_support: true,
-    buy_crypto: false,
-    withdraw_crypto: false,
-    multisig: false,
-    social_recovery: false,
-    onboard_documentation:
-      "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
-    documentation:
-      "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
-    supported_chains: ["Ethereum Mainnet", "Arbitrum One", "OP Mainnet"],
   },
   {
     last_updated: "2025-10-20",
@@ -2619,7 +2603,7 @@ export const walletsData: WalletData[] = [
       "Arbitrum One",
       "Linea",
       "Scroll",
-      "Taiko Alethia",
+      "Taiko",
     ],
   },
   {
@@ -2814,6 +2798,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://support.nu.fi/",
     documentation: "https://support.nu.fi/",
     supported_chains: [
@@ -2914,6 +2899,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation:
       "https://support.uniswap.org/hc/en-us/categories/11301970439565-Uniswap-Wallet",
     documentation: "https://docs.uniswap.org/",
@@ -2989,7 +2975,7 @@ export const walletsData: WalletData[] = [
       "Base",
       "Unichain",
       "Arbitrum Nova",
-      "Taiko Alethia",
+      "Taiko",
       "Manta Pacific Mainnet",
       "Abstract",
       "World Chain",

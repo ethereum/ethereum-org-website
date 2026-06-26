@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/key-pair-eth-build/index.md",
+  "generatedAt": "2026-04-29T05:49:26.528Z",
+  "rootHash": "61827fccb954",
+  "tree": {
+    "contentHash": "56b34cfe8fd6",
+    "anchorHash": "c002d703e340",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "c52815803f01",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "6a123c33fa19",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "3c621d313ab2"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "78d372afcbf9"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "62c6168af85b"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "fe30030e102e"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e618f8f25b6b"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4b6225556506"
+      },
+      "prose:1": {
+        "contentHash": "13b5a27cf17c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "387e9abdb2f4"
+      },
+      "prose:2": {
+        "contentHash": "f34da9fd5313",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "the-private-key-000": {
+        "contentHash": "b74a4391ae63",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "83b4281eba5a",
+        "children": {
+          "_label": {
+            "contentHash": "83b4281eba5a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d56673ba5d22",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "signing-and-recovering-messages-154": {
+        "contentHash": "f5f51e471008",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3ab8298d2e7e",
+        "children": {
+          "_label": {
+            "contentHash": "3ab8298d2e7e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2d234b15cf0f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "recovering-the-signers-address-317": {
+        "contentHash": "301218c69a00",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c60ab3eceda6",
+        "children": {
+          "_label": {
+            "contentHash": "c60ab3eceda6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9f6fccf24230",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-key-property-of-a-key-pair-458": {
+        "contentHash": "b5857b737bd1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "9228001eca78",
+        "children": {
+          "_label": {
+            "contentHash": "9228001eca78",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f2d0e2dd27cf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "the-private-key-000",
+      "signing-and-recovering-messages-154",
+      "recovering-the-signers-address-317",
+      "the-key-property-of-a-key-pair-458"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

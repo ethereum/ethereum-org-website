@@ -5,11 +5,12 @@ import type { MDXRemoteProps } from "next-mdx-remote/rsc"
 import GitHub from "@/components/icons/github.svg"
 import NpmJs from "@/components/icons/npmjs.svg"
 import { Image } from "@/components/Image"
-import { htmlElements } from "@/components/MdComponents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { formatDate, getValidDate } from "@/lib/utils/date"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
+import { numberFormat } from "@/lib/utils/numbers"
 import { isExternal } from "@/lib/utils/url"
 
 import { DEV_TOOL_CATEGORY_SLUGS } from "../constants"
@@ -20,16 +21,25 @@ import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
 
 const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
   const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-developers-tools")
+  const tCommon = await getTranslations("common")
+  const toolDescriptions = await getTranslations(
+    "page-developers-tools-descriptions"
+  )
+
+  const translatedDescription = getLocalizedDescription(
+    toolDescriptions,
+    "tool",
+    tool.name,
+    tool.description
+  )
 
   const categorySlug = DEV_TOOL_CATEGORY_SLUGS[tool.category]
 
-  const BoldedParagraph = (props: { children?: React.ReactNode }) => (
-    <htmlElements.p className="font-bold" {...props} />
+  const BoldedParagraph = ({ children }: { children?: React.ReactNode }) => (
+    <p>
+      <strong>{children}</strong>
+    </p>
   )
 
   const mdComponentOverrides = {
@@ -44,7 +54,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
 
   return (
     <div className="bg-background">
-      <div className="h-36 w-full bg-gradient-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20">
+      <div className="h-36 w-full bg-linear-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20">
         {tool.banner_url && (
           <Image
             src={tool.banner_url}
@@ -62,7 +72,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
             status={getCategoryTagStyle(categorySlug)}
             className="px-1 py-0"
           >
-            {tool.category}
+            {t(`page-developers-tools-category-${categorySlug}-title`)}
           </Tag>
           <h2 className="text-3xl">{tool.name}</h2>
           <TagsInlineText
@@ -71,10 +81,13 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
             className="lowercase"
           />
         </div>
-        <div className="-mt-2 max-h-[16lh] overflow-y-auto pb-4 pt-2 [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)]">
-          {await renderSimpleMarkdown(tool.description, mdComponentOverrides)}
+        <div className="-mt-2 max-h-[16lh] overflow-y-auto [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)] pt-2 pb-4">
+          {await renderSimpleMarkdown(
+            translatedDescription,
+            mdComponentOverrides
+          )}
         </div>
-        <div className="!mt-8 space-y-2">
+        <div className="mt-4 space-y-2">
           <p>{t("page-developers-tools-modal-links")}</p>
           <div className="flex flex-wrap gap-2">
             {tool.website && (
@@ -125,7 +138,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
                           className="text-sm"
                           title={t("page-developers-tools-stats-stargazers")}
                         >
-                          ({new Intl.NumberFormat(locale).format(stargazers)}
+                          ({numberFormat(locale).format(stargazers)}
                         </span>
                         <Star className="-mx-[0.5ch] !size-3" />
                         <span className="text-sm">)</span>
@@ -139,7 +152,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
                           title={t("page-developers-tools-stats-downloads")}
                         >
                           (
-                          {new Intl.NumberFormat(locale, {
+                          {numberFormat(locale, {
                             notation: "compact",
                           }).format(downloads)}
                         </span>

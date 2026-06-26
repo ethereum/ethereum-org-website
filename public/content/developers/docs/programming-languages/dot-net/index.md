@@ -38,17 +38,20 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 **Want to skip setup for now, and jump straight to the samples?**
 
 - [Nethereum Playground](https://playground.nethereum.com/) - Interact with Ethereum and learn how to use Nethereum through the browser.
-  - Try browser-based samples for account balances, token interactions, ether transfers, and more.
+  - [Query Account Balance](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
+  - [Query ERC20 Smart Contract Balance](https://docs.nethereum.com/docs/smart-contracts/erc20)
+  - [Transfer ether to an Account](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
+  - ... And more!
 
 ## Intermediate articles {#intermediate-articles}
 
-- [Nethereum guides and package catalog](https://docs.nethereum.com/docs/component-catalog/)
+- [Nethereum Getting Started & First Project](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Deploy Your Own Development Testchains](https://github.com/Nethereum/Testchains)
 - [Code generation with Nethereum and VS Code](https://docs.nethereum.com/docs/smart-contracts/code-generation/)
 - [Unity and Ethereum: Why and How](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Create ASP.NET Core Web API for Ethereum dapps](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Nethereum MUD framework for structured on-chain applications](https://docs.nethereum.com/docs/mud-framework/overview/)
-- [Nethereum Block Processing](https://docs.nethereum.com/docs/data-and-indexing/nethereum-blockchainprocessing/)
+- [Nethereum Blockchain Processing](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
 - [Nethereum real-time streaming](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido and Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum and Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -75,7 +78,7 @@ Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
 At Nethereum, we mostly hang out on [Gitter](https://gitter.im/Nethereum/Nethereum) where everyone is welcome to ask/answer questions, get help, or just chill. Feel free to do a PR or open an issue on the [Nethereum GitHub repository](https://github.com/Nethereum), or just browse through the many side/sample projects we have. You can also find us on [Discord](https://discord.gg/jQPrR58FxX)!
 
-If you are new to Nethermind and need help getting started, join our [Discord](http://discord.gg/PaCMRFdvWT). Our developers are on hand to answer your questions. Don't hesitate to open a PR or raise any issues on the [Nethermind GitHub repository](https://github.com/NethermindEth/nethermind).
+If you are new to Nethermind and need help getting started, join our [Discord](https://discord.gg/PaCMRFdvWT). Our developers are on hand to answer your questions. Don't hesitate to open a PR or raise any issues on the [Nethermind GitHub repository](https://github.com/NethermindEth/nethermind).
 
 ## Other aggregated lists {#other-aggregated-lists}
 

@@ -1,0 +1,469 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/real-world-assets/index.md",
+  "generatedAt": "2026-06-17T01:07:41.046Z",
+  "rootHash": "85d63b08d30e",
+  "tree": {
+    "contentHash": "82d90416ee99",
+    "anchorHash": "b171db1d6eba",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "5951c737e488",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "a3c17856bca7"
+      },
+      "frontmatter:description": {
+        "contentHash": "36288fac90eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2290d7d70dea"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "72f2f45bc33d"
+      },
+      "frontmatter:alt": {
+        "contentHash": "55e62c3a504e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:0": {
+        "contentHash": "7f42d76a94e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-rwas": {
+        "contentHash": "5986378b8cc3",
+        "anchorHash": "1a858a65e367",
+        "labelHash": "96e1a72eb4b4",
+        "children": {
+          "_label": {
+            "contentHash": "96e1a72eb4b4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "cb9f73382275",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7e8bf799c2a5",
+            "anchorHash": "2ca572d5d177"
+          },
+          "prose:3": {
+            "contentHash": "e80910174764",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "f586f0c78983",
+            "anchorHash": "22a167c43650"
+          },
+          "prose:4": {
+            "contentHash": "ca1038cbc2e6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "rwas-benefits": {
+        "contentHash": "cce57ed127df",
+        "anchorHash": "cce57ed127df",
+        "labelHash": "cd6af8ee6c9c",
+        "children": {
+          "_label": {
+            "contentHash": "cd6af8ee6c9c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "fadbe909da84",
+            "anchorHash": "fadbe909da84",
+            "children": {
+              "html-tag:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:3": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:4": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "html-tag:5": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "html-tag:0",
+              "html-tag:1",
+              "html-tag:2",
+              "html-tag:3",
+              "html-tag:4",
+              "html-tag:5"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1"
+        ]
+      },
+      "how-rwas-work": {
+        "contentHash": "0e7661e14ce8",
+        "anchorHash": "56ed52fe4481",
+        "labelHash": "993299ab9653",
+        "children": {
+          "_label": {
+            "contentHash": "993299ab9653",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6a2dd054e7a9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "investing-in-real-estate": {
+            "contentHash": "eb867a9db98c",
+            "anchorHash": "1e5aa488d9ef",
+            "labelHash": "36f46c7d3bc5",
+            "children": {
+              "_label": {
+                "contentHash": "36f46c7d3bc5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "d1e7588e4471",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "42d13eddf9be",
+                "anchorHash": "c5eb4d249fca"
+              },
+              "prose:3": {
+                "contentHash": "e7f12cc95c86",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "878804570a74",
+                "anchorHash": "62851a773bc8"
+              },
+              "prose:4": {
+                "contentHash": "9c542d3fe109",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "investing-in-financial-products": {
+            "contentHash": "a815228b1317",
+            "anchorHash": "5fa03d0c43a9",
+            "labelHash": "847044ceae55",
+            "children": {
+              "_label": {
+                "contentHash": "847044ceae55",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "fac91e0d375e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d75afb1b6121",
+                "anchorHash": "3d152bba37c9"
+              },
+              "prose:2": {
+                "contentHash": "ede29b21c0f5",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "investing-in-fine-art": {
+            "contentHash": "aab368db6742",
+            "anchorHash": "2cbb67b91f02",
+            "labelHash": "d8091979d04c",
+            "children": {
+              "_label": {
+                "contentHash": "d8091979d04c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "3cc14275649f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "7b63ae5cb33b",
+                "anchorHash": "4387b32047b0"
+              },
+              "prose:3": {
+                "contentHash": "707cef1bf260",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "10cfcc25afa3",
+                "anchorHash": "350f25eae260"
+              },
+              "prose:4": {
+                "contentHash": "a75e7ebe8612",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "investing-in-collectibles": {
+            "contentHash": "de93a3f26f8d",
+            "anchorHash": "c42f084dbf5f",
+            "labelHash": "50bdd8280348",
+            "children": {
+              "_label": {
+                "contentHash": "50bdd8280348",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "64a962897d3b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "df29a09e244e",
+                "anchorHash": "cb13f124ec26"
+              },
+              "prose:2": {
+                "contentHash": "1e1928c4768f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "investing-in-real-estate",
+          "investing-in-financial-products",
+          "investing-in-fine-art",
+          "investing-in-collectibles"
+        ]
+      },
+      "rwas-limitations": {
+        "contentHash": "797b448938e8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b977745f77bd",
+        "children": {
+          "_label": {
+            "contentHash": "b977745f77bd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "3485fbabc0b4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "learn-more": {
+        "contentHash": "20ffabdd36dd",
+        "anchorHash": "1e3bf71f8724",
+        "labelHash": "1445799c033a",
+        "children": {
+          "_label": {
+            "contentHash": "1445799c033a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "83fdfc8eb107",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "88679164427a"
+          },
+          "prose:3": {
+            "contentHash": "0adf7d27d662",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "9bf9d4a14b7e",
+            "anchorHash": "807fefbb8050"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "89cda88184f0",
+        "anchorHash": "501cea7f8ac9",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ba0ebf662ca2",
+            "anchorHash": "03d3538eb95e"
+          },
+          "prose:8": {
+            "contentHash": "cf87ab7c4550",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "e782fbe2fa3d",
+            "anchorHash": "18ae5464189c"
+          },
+          "prose:9": {
+            "contentHash": "7cc9e8d54269",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "0bdc9db153b7",
+            "anchorHash": "2228606bee87"
+          },
+          "prose:10": {
+            "contentHash": "e9595bef0c12",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "ca691cbf33eb",
+            "anchorHash": "617c4fd5e006"
+          },
+          "prose:11": {
+            "contentHash": "cf87ab7c4550",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "1f0c45fcf9ce",
+            "anchorHash": "44a5078943a8"
+          },
+          "prose:12": {
+            "contentHash": "291983c4f891",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "711b265e94c2",
+            "anchorHash": "a4d9ee6ce9c5"
+          },
+          "prose:13": {
+            "contentHash": "71c9681a45fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "e800fbf8c665",
+            "anchorHash": "0135a9ad4bd9"
+          },
+          "prose:14": {
+            "contentHash": "03cf9fc30e22",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:7",
+          "link:0",
+          "prose:8",
+          "link:1",
+          "prose:9",
+          "link:2",
+          "prose:10",
+          "link:3",
+          "prose:11",
+          "link:4",
+          "prose:12",
+          "link:5",
+          "prose:13",
+          "link:6",
+          "prose:14"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:image",
+      "frontmatter:alt",
+      "frontmatter:sidebarDepth",
+      "frontmatter:summaryPoints",
+      "prose:0",
+      "what-are-rwas",
+      "rwas-benefits",
+      "how-rwas-work",
+      "rwas-limitations",
+      "learn-more",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/component-ai-agent-products.json",
+  "generatedAt": "2026-05-01T19:52:57.647Z",
+  "rootHash": "5bad7109ee11",
+  "tree": {
+    "contentHash": "85e026bfd6c8",
+    "anchorHash": "eaaf5054dc6b",
+    "children": {
+      "action-label": {
+        "contentHash": "6cc8519b9158",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "aiagenttoolkit-description": {
+        "contentHash": "3fffed12e631",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "aiagenttoolkit-title": {
+        "contentHash": "80dfe3c0c52c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "aixbt-brand": {
+        "contentHash": "9deab57b7f16",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "aixbt-description-1": {
+        "contentHash": "78bb94fb5a2f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "aixbt-description-2": {
+        "contentHash": "f19905841c97",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "aixbt-title": {
+        "contentHash": "11c787dd153e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bankr-button": {
+        "contentHash": "67382a80cac6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bankr-description": {
+        "contentHash": "ea6f0a2f23fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bankr-title": {
+        "contentHash": "cae60cda8495",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "botto-brand": {
+        "contentHash": "6d5153013b14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "botto-description": {
+        "contentHash": "68849eea5eca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "botto-title": {
+        "contentHash": "eb6b95570ca8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "chat-with-brand": {
+        "contentHash": "0abd0136bf63",
+        "anchorHash": "f4f47dcecf20",
+        "children": {
+          "prose:1": {
+            "contentHash": "d35eb43a5e05",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dfb6b562fc50"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "clanker-description": {
+        "contentHash": "31c94ea46315",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "clanker-title": {
+        "contentHash": "ef2d50b60bd8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "cookiefun-description": {
+        "contentHash": "9e7ec3e8b07e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "cookiefun-title": {
+        "contentHash": "7df895deca43",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "heyanon-brand": {
+        "contentHash": "364575e1667b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "heyanon-description": {
+        "contentHash": "1a3daa6172d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "heyanon-title": {
+        "contentHash": "364575e1667b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "luna-brand": {
+        "contentHash": "9d77a24d0f4c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "luna-description-1": {
+        "contentHash": "afd557206e28",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8547570b347e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "luna-description-2": {
+        "contentHash": "cc7298b07583",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "luna-title": {
+        "contentHash": "d08a21ba1663",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "visit-brand": {
+        "contentHash": "fdd97f785936",
+        "anchorHash": "f4f47dcecf20",
+        "children": {
+          "prose:1": {
+            "contentHash": "1c8ac867f052",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dfb6b562fc50"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "action-label",
+      "aiagenttoolkit-description",
+      "aiagenttoolkit-title",
+      "aixbt-brand",
+      "aixbt-description-1",
+      "aixbt-description-2",
+      "aixbt-title",
+      "bankr-button",
+      "bankr-description",
+      "bankr-title",
+      "botto-brand",
+      "botto-description",
+      "botto-title",
+      "chat-with-brand",
+      "clanker-description",
+      "clanker-title",
+      "cookiefun-description",
+      "cookiefun-title",
+      "heyanon-brand",
+      "heyanon-description",
+      "heyanon-title",
+      "luna-brand",
+      "luna-description-1",
+      "luna-description-2",
+      "luna-title",
+      "visit-brand"
+    ]
+  },
+  "sourceCommitSha": "4a12cb9394943a43a5509983baec11bf9c3d756f"
+}

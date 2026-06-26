@@ -1,10 +1,11 @@
 import * as React from "react"
 import { ChevronRight, MoreHorizontal } from "lucide-react"
+import { getTranslations } from "next-intl/server"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Link } from "@/i18n/routing"
+import { Link } from "@/i18n/navigation"
 
 interface BreadcrumbProps extends React.ComponentPropsWithoutRef<"nav"> {
   separator?: React.ReactNode
@@ -57,7 +58,7 @@ const BreadcrumbLink = React.forwardRef<
     <Comp
       ref={ref}
       className={cn(
-        "uppercase !text-body-medium no-underline transition-colors hover:!text-primary",
+        "!text-body-medium uppercase no-underline transition-colors hover:!text-primary",
         className
       )}
       {...props}
@@ -75,7 +76,7 @@ const BreadcrumbPage = React.forwardRef<
     role="link"
     aria-disabled="true"
     aria-current="page"
-    className={cn("uppercase text-primary", className)}
+    className={cn("text-primary uppercase", className)}
     {...props}
   />
 ))
@@ -97,21 +98,23 @@ const BreadcrumbSeparator = ({
 )
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
 
-const BreadcrumbEllipsis = ({
+const BreadcrumbEllipsis = async ({
   className,
   ...props
-}: React.ComponentProps<"span">) => (
-  <span
-    role="presentation"
-    aria-hidden="true"
-    className={cn("flex h-9 w-9 items-center justify-center", className)}
-    {...props}
-  >
-    <MoreHorizontal className="size-4 text-md" />
-    <span className="sr-only">More</span>
-  </span>
-)
-BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
+}: React.ComponentProps<"span">) => {
+  const t = await getTranslations("common")
+  return (
+    <span
+      role="presentation"
+      aria-hidden="true"
+      className={cn("flex h-9 w-9 items-center justify-center", className)}
+      {...props}
+    >
+      <MoreHorizontal className="size-4 text-md" aria-label={t("more")} />
+    </span>
+  )
+}
+BreadcrumbEllipsis.displayName = "BreadcrumbEllipsis"
 
 export {
   Breadcrumb,

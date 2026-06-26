@@ -5,11 +5,11 @@ lang: pl
 sidebarDepth: 2
 ---
 
-Ethereum to sieć peer-to-peer z tysiącami węzłów, które muszą być w stanie komunikować się ze sobą przy użyciu ustandaryzowanych protokołów. „Warstwa sieciowa” jest stosem protokołów, które umożliwiają tym węzłom znajdować się i wymieniać informacje. Obejmuje to „plotkowanie” informacji (komunikacja jeden do wielu) w sieci, jak również wymienianie żądań oraz odpowiedzi pomiędzy określonymi węzłami (komunikacja jeden do jednego). Każdy węzeł musi przestrzegać określonych zasad sieciowych, aby zapewnić wysyłanie i odbieranie prawidłowych informacji.
+[Ethereum](/) to sieć peer-to-peer z tysiącami węzłów, które muszą być w stanie komunikować się ze sobą za pomocą ustandaryzowanych protokołów. „Warstwa sieciowa” to stos protokołów, które pozwalają tym węzłom odnajdywać się nawzajem i wymieniać informacje. Obejmuje to „plotkowanie” informacji (komunikacja jeden-do-wielu) w sieci, a także wymianę żądań i odpowiedzi między określonymi węzłami (komunikacja jeden-do-jednego). Każdy węzeł musi przestrzegać określonych reguł sieciowych, aby upewnić się, że wysyła i odbiera prawidłowe informacje.
 
-Istnieją dwie części oprogramowania klienta (klienty wykonawcze i klienty konsensusu), oba ze swoim własnym stosem sieciowym. Oprócz komunikacji z innymi węzłami Ethereum, klienty wykonawcze i konsensusu muszą się również komunikować ze sobą. Ta strona zawiera wstępne wyjaśnienie protokołów, które umożliwiają tę komunikację.
+Oprogramowanie klienta składa się z dwóch części (klienty warstwy wykonawczej i klienty konsensusu), z których każda ma swój własny, odrębny stos sieciowy. Oprócz komunikacji z innymi węzłami Ethereum, klienty warstwy wykonawczej i konsensusu muszą komunikować się ze sobą. Ta strona zawiera wstępne wyjaśnienie protokołów, które umożliwiają tę komunikację.
 
-Klienty wykonawcze plotkują transakcje po sieci peer-to-peer warstwy wykonawczej. Wymaga to szyfrowanej komunikacji między uwierzytelnionymi rówieśnikami. Kiedy walidator zostanie wybrany do proponowania bloku, transakcje z lokalnej puli transakcji węzła zostaną przesłane do klienta konsensusu za pomocą lokalnego połączenia RPC, które zostaną spakowane w bloki śledzące. Klienty konsensusu następnie rozplotkują bloki śledzące w swojej sieci P2P. To wymaga dwóch osobnych sieci P2P: jednej łączącej klienty wykonawcze do plotkowania transakcji i jednej łączącej klienty konsensusu do plotkowania bloku.
+Klienty warstwy wykonawczej plotkują o transakcjach w sieci peer-to-peer warstwy wykonawczej. Wymaga to szyfrowanej komunikacji między uwierzytelnionymi węzłami równorzędnymi. Kiedy walidator zostanie wybrany do zaproponowania bloku, transakcje z lokalnej puli transakcji węzła zostaną przekazane do klientów konsensusu za pośrednictwem lokalnego połączenia RPC, a następnie spakowane w bloki śledzące. Klienty konsensusu będą następnie plotkować o blokach śledzących w swojej sieci p2p. Wymaga to dwóch oddzielnych sieci p2p: jednej łączącej klienty warstwy wykonawczej w celu plotkowania o transakcjach i drugiej łączącej klienty konsensusu w celu plotkowania o blokach.
 
 ## Wymagania wstępne {#prerequisites}
 
@@ -19,45 +19,45 @@ Pewna wiedza na temat [węzłów i klientów](/developers/docs/nodes-and-clients
 
 Protokoły sieciowe warstwy wykonawczej są podzielone na dwa stosy:
 
-- stos odkrywania: zbudowany na bazie UDP, umożliwia nowemu węzłowi znalezienie rówieśników, z którymi może się połączyć
+- stos odkrywania: zbudowany na bazie UDP i pozwala nowemu węzłowi znaleźć węzły równorzędne, z którymi może się połączyć
 
-- stos DevP2P: oparty na TCP, umożliwia węzłom wymianę informacji
+- stos devp2p: opiera się na TCP i umożliwia węzłom wymianę informacji
 
-Oba stosy działają równoległe. Stos odkrywania wprowadza nowych uczestników sieci do sieci, a stos DevP2P umożliwia ich interakcje.
+Oba stosy działają równolegle. Stos odkrywania wprowadza nowych uczestników do sieci, a stos devp2p umożliwia ich interakcje.
 
 ### Odkrywanie {#discovery}
 
-Odkrywanie to proces znajdowania innych węzłów w sieci. Jest to inicjowane za pomocą małego zestawu bootnode'ów (węzłów, których adresy są [zakodowane na stałe](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go) w kliencie, aby można je było natychmiast znaleźć i połączyć klienta z peerami). Te węzły rozruchowe istnieją tylko po to, aby wprowadzić nowy węzeł do zbioru rówieśników — jest to ich jedyny cel, nie uczestniczą w normalnych zadaniach klienta takich jak synchronizacja z łańcuchem, oraz są używane tylko przy pierwszym uruchomieniu klienta.
+Odkrywanie to proces znajdowania innych węzłów w sieci. Jest to inicjowane przy użyciu małego zestawu węzłów rozruchowych (węzłów, których adresy są [zakodowane na stałe](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go) w kliencie, dzięki czemu można je natychmiast znaleźć i połączyć klienta z węzłami równorzędnymi). Te węzły rozruchowe istnieją tylko po to, aby przedstawić nowy węzeł zestawowi węzłów równorzędnych – to ich jedyny cel, nie uczestniczą w normalnych zadaniach klienta, takich jak synchronizacja łańcucha, i są używane tylko przy pierwszym uruchomieniu klienta.
 
-Protokół używany do interakcji między węzłami a bootnode'ami to zmodyfikowana forma protokołu [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f), która wykorzystuje [rozproszoną tablicę haszującą](https://en.wikipedia.org/wiki/Distributed_hash_table) do udostępniania list węzłów. Każdy węzeł ma własną wersję tej tablicy zwierającą informacje wymagane do połączenia się z jego najbliższym rówieśnikiem. Ta „bliskość” nie jest geograficzna — odległość określana jest poprzez podobieństwo identyfikatora węzła. Tablica każdego węzła jest regularnie odświeżana, jako funkcja bezpieczeństwa. Na przykład w protokole odkrywania [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5), węzły mogą również wysyłać „ogłoszenia”, które wyświetlają podprotokoły obsługiwane przez klienta, pozwalając peerom negocjować protokoły, których obie strony mogą używać do komunikacji.
+Protokół używany do interakcji węzeł-węzeł rozruchowy to zmodyfikowana forma [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f), która wykorzystuje [rozproszoną tablicę hashów](https://en.wikipedia.org/wiki/Distributed_hash_table) do udostępniania list węzłów. Każdy węzeł ma wersję tej tablicy zawierającą informacje wymagane do połączenia się z najbliższymi węzłami równorzędnymi. Ta „bliskość” nie jest geograficzna – odległość jest definiowana przez podobieństwo identyfikatora węzła. Tablica każdego węzła jest regularnie odświeżana w ramach funkcji bezpieczeństwa. Na przykład w protokole odkrywania [discv5](https://github.com/ethereum/devp2p/tree/master/discv5) węzły mogą również wysyłać „reklamy” wyświetlające podprotokoły obsługiwane przez klienta, co pozwala węzłom równorzędnym na negocjowanie protokołów, których oba mogą używać do komunikacji.
 
-Odkrywanie zaczyna się grą w PING-PONG. Pomyślny PING-PONG „wiąże” nowy węzeł z węzłem rozruchowym. Początkowym komunikatem, który informuje bootnode'a o istnieniu nowego węzła wchodzącego do sieci, jest `PING`. Ten `PING` zawiera zhaszowane informacje o nowym węźle, bootnodzie i znacznik czasu wygaśnięcia. Bootnode odbiera `PING` i zwraca `PONG` zawierający hasz `PING`. Jeśli hasze `PING` i `PONG` są zgodne, połączenie między nowym węzłem a bootnode'em jest weryfikowane i mówi się, że zostały "powiązane".
+Odkrywanie zaczyna się od gry w PING-PONG. Udany PING-PONG „wiąże” nowy węzeł z węzłem rozruchowym. Początkowa wiadomość, która ostrzega węzeł rozruchowy o istnieniu nowego węzła wchodzącego do sieci, to `PING`. Ten `PING` zawiera zahashowane informacje o nowym węźle, węźle rozruchowym i znaczniku czasu wygaśnięcia. Węzeł rozruchowy odbiera `PING` i zwraca `PONG` zawierający hash `PING`. Jeśli hashe `PING` i `PONG` pasują do siebie, połączenie między nowym węzłem a węzłem rozruchowym zostaje zweryfikowane i mówi się, że zostały „związane”.
 
-Po powiązaniu nowy węzeł może wysłać żądanie `FIND-NEIGHBOURS` do bootnode'a. Dane zwracane przez węzeł rozruchowy zawierają listę rówieśników, do których może się połączyć nowy węzeł. Jeśli węzły nie są powiązane, żądanie `FIND-NEIGHBOURS` zakończy się niepowodzeniem, więc nowy węzeł nie będzie mógł dołączyć do sieci.
+Po związaniu nowy węzeł może wysłać żądanie `FIND-NEIGHBOURS` do węzła rozruchowego. Dane zwrócone przez węzeł rozruchowy obejmują listę węzłów równorzędnych, z którymi nowy węzeł może się połączyć. Jeśli węzły nie są związane, żądanie `FIND-NEIGHBOURS` nie powiedzie się, więc nowy węzeł nie będzie mógł wejść do sieci.
 
-Po otrzymaniu przez nowy węzeł listy sąsiadów od węzła rozruchowego rozpoczyna on z każdym z nich wymianę PING-PONG. Pomyślne PING-PONGi wiążą nowy węzeł z jego sąsiadami, umożliwiając wymianę wiadomości.
+Gdy nowy węzeł otrzyma listę sąsiadów od węzła rozruchowego, rozpoczyna wymianę PING-PONG z każdym z nich. Udane PING-PONGi wiążą nowy węzeł z jego sąsiadami, umożliwiając wymianę wiadomości.
 
 ```
-uruchom klienta --> połącz z bootnode'em --> powiąż z bootnode'em --> znajdź sąsiadów --> powiąż z sąsiadami
+uruchom klienta --> połącz z węzłem rozruchowym --> zwiąż z węzłem rozruchowym --> znajdź sąsiadów --> zwiąż z sąsiadami
 ```
 
-Klienci wykonawczy obecnie używają protokołu odkrywania [Discv4](https://github.com/ethereum/devp2p/blob/master/discv4.md) i trwają aktywne prace nad migracją do protokołu [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5).
+Klienty warstwy wykonawczej używają obecnie protokołu odkrywania [Discv4](https://github.com/ethereum/devp2p/blob/master/discv4.md) i trwają aktywne prace nad migracją do protokołu [discv5](https://github.com/ethereum/devp2p/tree/master/discv5).
 
-#### ENR: Rekordy węzłów Ethereum {#enr}
+#### ENR: Rekordy węzłów Ethereum (Ethereum Node Records) {#enr}
 
-[Rekord węzła Ethereum (ENR)](/developers/docs/networking-layer/network-addresses/) to obiekt, który zawiera trzy podstawowe elementy: podpis (hasz zawartości rekordu utworzony zgodnie z ustalonym schematem tożsamości), numer sekwencyjny śledzący zmiany w rekordzie oraz dowolną listę par klucz:wartość. Jest to format odporny na zmiany w przyszłości, który umożliwia łatwiejszą wymianę informacji identyfikacyjnych między nowymi peerami i jest preferowanym formatem [adresu sieciowego](/developers/docs/networking-layer/network-addresses) dla węzłów Ethereum.
+[Rekord węzła Ethereum (ENR)](/developers/docs/networking-layer/network-addresses/) to obiekt, który zawiera trzy podstawowe elementy: podpis (hash zawartości rekordu wykonany zgodnie z pewnym uzgodnionym schematem tożsamości), numer sekwencyjny, który śledzi zmiany w rekordzie, oraz dowolną listę par klucz:wartość. Jest to przyszłościowy format, który pozwala na łatwiejszą wymianę informacji identyfikacyjnych między nowymi węzłami równorzędnymi i jest preferowanym formatem [adresu sieciowego](/developers/docs/networking-layer/network-addresses) dla węzłów Ethereum.
 
-#### Dlaczego odkrywanie opiera się na UDP? {#why-udp}
+#### Dlaczego odkrywanie jest oparte na UDP? {#why-udp}
 
-UDP nie umożliwia żadnego sprawdzania błędów, ponownego przesyłania błędnych pakietów ani dynamicznego otwierania i zamykania połączeń — zamiast tego wysyła po prostu ciągły strumień informacji do celu, bez względu na to, czy zostaną one poprawnie odebrane. Ta minimalna funkcjonalność oznacza również minimalne obciążenie, co sprawia, że połączenie to jest bardzo szybkie. Do odkrywania, gdzie węzeł po prostu chce powiadomić o swoim istnieniu, aby następnie nawiązać formalne połączenie z rówieśnikiem, UDP jest wystarczające. Jednak dla reszty stosu sieciowego, UDP nie nadaje się tego celu. Wymiana informacji pomiędzy węzłami jest dość złożona, a więc wymaga bardziej funkcjonalnego protokołu, który umożliwia ponowne wysyłanie, sprawdzanie błędów itp. Dodatkowe obciążenia związane z TCP warte są dodatkowych funkcji. Dlatego też większość stosu P2P działa na TCP.
+UDP nie obsługuje żadnego sprawdzania błędów, ponownego wysyłania nieudanych pakietów ani dynamicznego otwierania i zamykania połączeń – zamiast tego po prostu wystrzeliwuje ciągły strumień informacji do celu, niezależnie od tego, czy zostanie on pomyślnie odebrany. Ta minimalna funkcjonalność przekłada się również na minimalny narzut, dzięki czemu tego rodzaju połączenie jest bardzo szybkie. W przypadku odkrywania, gdzie węzeł po prostu chce zaznaczyć swoją obecność, aby następnie nawiązać formalne połączenie z węzłem równorzędnym, UDP jest wystarczające. Jednak w przypadku reszty stosu sieciowego UDP nie spełnia swojego zadania. Wymiana informacji między węzłami jest dość złożona i dlatego wymaga bardziej w pełni funkcjonalnego protokołu, który może obsługiwać ponowne wysyłanie, sprawdzanie błędów itp. Dodatkowy narzut związany z TCP jest wart dodatkowej funkcjonalności. Dlatego większość stosu P2P działa w oparciu o TCP.
 
-### DevP2P {#devp2p}
+### devp2p {#devp2p}
 
-DevP2P sam w sobie jest całym stosem protokołów, które implementuje Ethereum w celu ustanowienia i utrzymania sieci peer-to-peer. Gdy nowe węzły dołączą do sieci, ich interakcje są regulowane przez protokoły ze stosu [DevP2P](https://github.com/ethereum/devp2p). Wszystkie opierają się na TCP i obejmują protokół transportowy RLPx, protokół przewodowy i szereg podprotokołów. [RLPx](https://github.com/ethereum/devp2p/blob/master/rlpx.md) to protokół zarządzający inicjowaniem, uwierzytelnianiem i utrzymywaniem sesji między węzłami. RLPx koduje wiadomości przy użyciu RLP (prefiks o rekursywnej długości), który jest bardzo oszczędzającą pamięć metodą kodowania danych w minimalne struktury do wysyłania pomiędzy węzłami.
+devp2p to cały stos protokołów, które Ethereum implementuje w celu ustanowienia i utrzymania sieci peer-to-peer. Po wejściu nowych węzłów do sieci ich interakcje są regulowane przez protokoły w stosie [devp2p](https://github.com/ethereum/devp2p). Wszystkie one opierają się na TCP i obejmują protokół transportowy RLPx, protokół sieciowy (wire protocol) i kilka podprotokołów. [RLPx](https://github.com/ethereum/devp2p/blob/master/rlpx.md) to protokół zarządzający inicjowaniem, uwierzytelnianiem i utrzymywaniem sesji między węzłami. RLPx koduje wiadomości za pomocą RLP (Recursive Length Prefix), co jest bardzo oszczędną pod względem miejsca metodą kodowania danych w minimalną strukturę do wysyłania między węzłami.
 
-Sesja RLPx między dwoma węzłami rozpoczyna się od początkowego kryptograficznego uścisku dłoni. Oznacza to wysłanie przez węzeł wiadomości uwierzytelniającej, która następnie zostaje zweryfikowana przez rówieśnika. Po pomyślnej weryfikacji rówieśnik generuje wiadomość o potwierdzeniu uwierzytelnienia, którą następnie odsyła do węzła inicjującego. Jest to proces wymiany kluczy, który umożliwia węzłom na prywatne i bezpieczne komunikowanie się. Pomyślny kryptograficzny uścisk dłoni powoduje następnie, że oba węzły wysyłają do siebie wiadomość „hello” „po przewodzie”. Protokół przewodowy jest inicjowany przez pomyślną wymianę wiadomości „hello”.
+Sesja RLPx między dwoma węzłami rozpoczyna się od początkowego kryptograficznego uścisku dłoni (handshake). Polega to na wysłaniu przez węzeł wiadomości uwierzytelniającej, która jest następnie weryfikowana przez węzeł równorzędny. Po pomyślnej weryfikacji węzeł równorzędny generuje wiadomość potwierdzającą uwierzytelnienie, aby zwrócić ją do węzła inicjującego. Jest to proces wymiany kluczy, który umożliwia węzłom prywatną i bezpieczną komunikację. Udany kryptograficzny uścisk dłoni powoduje następnie, że oba węzły wysyłają do siebie wiadomość „hello” „po kablu” (on the wire). Protokół sieciowy jest inicjowany przez udaną wymianę wiadomości hello.
 
-Wiadomości „hello” zawierają:
+Wiadomości hello zawierają:
 
 - wersję protokołu
 - identyfikator klienta
@@ -65,99 +65,99 @@ Wiadomości „hello” zawierają:
 - identyfikator węzła
 - listę obsługiwanych podprotokołów
 
-Są to informacje potrzebne do pomyślnej interakcji, ponieważ określają jakie możliwości są współdzielone przez oba węzły oraz konfigurują komunikację. Istnieje proces negocjacji podprotokołów, w którym listy podprotokołów obsługiwanych przez każdy węzeł są porównywane, a te, które są wspólne dla obu węzłów, mogą zostać wykorzystane w sesji.
+Są to informacje wymagane do udanej interakcji, ponieważ definiują, jakie możliwości są współdzielone między obydwoma węzłami i konfigurują komunikację. Istnieje proces negocjacji podprotokołów, w którym listy podprotokołów obsługiwanych przez każdy węzeł są porównywane, a te, które są wspólne dla obu węzłów, mogą być używane w sesji.
 
-Oprócz wiadomości „hello” protokół przewodowy może również wysyłać wiadomość „disconnect”, która ostrzega rówieśnika, że połączenie zostanie zamknięte. Protokół przewodowy zawiera również wiadomości PING i PONG, które są okresowo wysyłane w celu utrzymania otwartej sesji. Wymiany protokołów RLPx i przewodowego ustanawiają zatem podstawy komunikacji między węzłami, zapewniając strukturę do wymiany użytecznych informacji zgodnie z określonym podprotokołem.
+Wraz z wiadomościami hello protokół sieciowy może również wysłać wiadomość „disconnect”, która ostrzega węzeł równorzędny, że połączenie zostanie zamknięte. Protokół sieciowy obejmuje również wiadomości PING i PONG, które są wysyłane okresowo w celu utrzymania otwartej sesji. Wymiany RLPx i protokołu sieciowego ustanawiają zatem podstawy komunikacji między węzłami, zapewniając rusztowanie dla użytecznych informacji, które mają być wymieniane zgodnie z określonym podprotokołem.
 
 ### Podprotokoły {#sub-protocols}
 
-#### Protokół komunikacyjny {#wire-protocol}
+#### Protokół sieciowy (Wire protocol) {#wire-protocol}
 
-Po połączeniu się rówieśników i rozpoczęciu sesji RLPx protokół przewodowy określa, w jaki sposób komunikują się rówieśnicy. Początkowo protokół przewodowy określał trzy główne zadania: synchronizacje łańcucha, propagację bloku i wymianę transakcji. Jednak kiedy Ethereum przeszło na proof-of-stake, propagowanie bloku i synchronizowanie łańcucha stało się częścią warstwy konsensusu. Wymiana transakcji nadal pozostaje zadaniem klientów wykonawczych. Wymiana transakcji odnosi się do wymiany oczekujących transakcji między węzłami tak, aby twórcy bloków mogli wybrać niektóre i uwzględnić je w następnym bloku. Szczegółowe informacje o tych zadaniach są dostępne [tutaj](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Klienci, którzy obsługują te podprotokoły, udostępniają je za pośrednictwem [JSON-RPC](/developers/docs/apis/json-rpc/).
+Po połączeniu węzłów równorzędnych i rozpoczęciu sesji RLPx protokół sieciowy definiuje sposób komunikacji między węzłami równorzędnymi. Początkowo protokół sieciowy definiował trzy główne zadania: synchronizację łańcucha, propagację bloku i wymianę transakcji. Jednak po przejściu Ethereum na dowód stawki (PoS), propagacja bloku i synchronizacja łańcucha stały się częścią warstwy konsensusu. Wymiana transakcji nadal leży w gestii klientów warstwy wykonawczej. Wymiana transakcji odnosi się do wymiany oczekujących transakcji między węzłami, tak aby budujący bloki mogli wybrać niektóre z nich do włączenia do następnego bloku. Szczegółowe informacje na temat tych zadań są dostępne [tutaj](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Klienty obsługujące te podprotokoły udostępniają je za pośrednictwem [JSON-RPC](/developers/docs/apis/json-rpc/).
 
-#### les (podprotokół lekkiego Ethereum) {#les}
+#### les (lekki podprotokół Ethereum) {#les}
 
-Jest to minimalny protiokół do synchronizowania lekkich klientów. Protokół ten był rzadko używany, ponieważ od pełnych węzłów wymaga się dostarczania danych do lekkich klientów bez żadnych zachęt. Domyślnym zachowaniem klientów wykonawczych jest niedostarczanie danych lekkim klientom poprzez les. Więcej informacji jest dostępnych w [specyfikacji](https://github.com/ethereum/devp2p/blob/master/caps/les.md) les.
+Jest to minimalny protokół do synchronizacji lekkich klientów. Tradycyjnie protokół ten był rzadko używany, ponieważ pełne węzły są zobowiązane do dostarczania danych do lekkich klientów bez żadnych zachęt. Domyślnym zachowaniem klientów warstwy wykonawczej jest niedostarczanie danych lekkiego klienta przez les. Więcej informacji można znaleźć w [specyfikacji](https://github.com/ethereum/devp2p/blob/master/caps/les.md) les.
 
 #### Snap {#snap}
 
-[Protokół snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md#ethereum-snapshot-protocol-snap) to opcjonalne rozszerzenie, które pozwala peerom na wymianę migawek ostatnich stanów, co umożliwia im weryfikację danych konta i pamięci masowej bez konieczności pobierania pośrednich węzłów drzewa Merkle trie.
+[Protokół snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md#ethereum-snapshot-protocol-snap) to opcjonalne rozszerzenie, które pozwala węzłom równorzędnym na wymianę migawek ostatnich stanów, umożliwiając im weryfikację danych konta i pamięci masowej bez konieczności pobierania pośrednich węzłów drzewa Merkle.
 
 #### Wit (protokół świadka) {#wit}
 
-[Protokół świadka](https://github.com/ethereum/devp2p/blob/master/caps/wit.md#ethereum-witness-protocol-wit) to opcjonalne rozszerzenie, które umożliwia wymianę świadectw stanu między peerami, pomagając w synchronizacji klientów z końcówką łańcucha.
+[Protokół świadka](https://github.com/ethereum/devp2p/blob/master/caps/wit.md#ethereum-witness-protocol-wit) to opcjonalne rozszerzenie, które umożliwia wymianę świadków stanu między węzłami równorzędnymi, pomagając w synchronizacji klientów z wierzchołkiem łańcucha.
 
 #### Whisper {#whisper}
 
-Whisper był protokołem, który miał na celu umożliwienie bezpiecznego przesyłania wiadomości pomiędzy rówieśnikami bez zapisywania żadnych informacji w blockchainie. Był on częścią protokołu przewodowego DevP2P, ale obecnie jest wycofany. Istnieją również inne [powiązane projekty](https://wakunetwork.com/) o podobnych celach.
+Whisper był protokołem, którego celem było dostarczanie bezpiecznych wiadomości między węzłami równorzędnymi bez zapisywania jakichkolwiek informacji w blockchainie. Był częścią protokołu sieciowego devp2p, ale jest obecnie przestarzały. Istnieją inne [powiązane projekty](https://wakunetwork.com/) o podobnych celach.
 
 ## Warstwa konsensusu {#consensus-layer}
 
-Klienty konsensusu uczestniczą w osobnej sieci peer-to-peer z inną specyfikacją. Klienty konsensusu muszą uczestniczyć w plotkowaniu bloku, tak aby mogły otrzymać nowe bloki od rówieśników i rozgłaszać je, gdy najdzie ich kolej na bycie proponentem bloku. Podobnie jak w przypadku warstwy wykonawczej, wymaga to najpierw protokołu odkrywania, aby węzeł mógł znaleźć rówieśników i ustanowić bezpiecze sesje do wymiany bloków, poświadczeń itp.
+Klienty konsensusu uczestniczą w oddzielnej sieci peer-to-peer o innej specyfikacji. Klienty konsensusu muszą uczestniczyć w plotkowaniu o blokach, aby mogły otrzymywać nowe bloki od węzłów równorzędnych i transmitować je, gdy nadejdzie ich kolej na bycie proponującym blok. Podobnie jak w przypadku warstwy wykonawczej, wymaga to najpierw protokołu odkrywania, aby węzeł mógł znaleźć węzły równorzędne i ustanowić bezpieczne sesje do wymiany bloków, poświadczeń itp.
 
 ### Odkrywanie {#consensus-discovery}
 
-Podobnie jak klienci wykonawczy, klienci konsensusu używają protokołu [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) przez UDP do znajdowania peerów. Implementacja discv5 w warstwie konsensusu różni się od implementacji w klientach wykonawczych tylko tym, że zawiera adapter łączący discv5 ze stosem [libP2P](https://libp2p.io/), wycofując DevP2P. Sesje RLPx warstwy wykonawczej zostały porzucone na rzecz bezpiecznego kanału uścisku dłoni libP2P.
+Podobnie jak klienty warstwy wykonawczej, klienty konsensusu używają [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) przez UDP do znajdowania węzłów równorzędnych. Implementacja discv5 w warstwie konsensusu różni się od implementacji klientów warstwy wykonawczej tylko tym, że zawiera adapter łączący discv5 ze stosem [libp2p](https://libp2p.io/), wycofując devp2p. Sesje RLPx warstwy wykonawczej są wycofywane na rzecz bezpiecznego uścisku dłoni kanału noise w libp2p.
 
-### ENR-y {#consensus-enr}
+### ENR {#consensus-enr}
 
-ENR dla węzłów konsensusu zawiera klucz publiczny węzła, adres IP, porty UDP i TCP oraz dwa pola specyficzne dla konsensusu: pole bitowe podsieci poświadczeń i klucz `eth2`. To pierwsze ułatwia węzłom znalezienie rówieśników uczestniczących w określonych podsieciach plotkujących poświadczenia. Klucz `eth2` zawiera informacje o tym, której wersji forka Ethereum używa węzeł, co zapewnia, że peery łączą się z właściwą siecią Ethereum.
+ENR dla węzłów konsensusu obejmuje klucz publiczny węzła, adres IP, porty UDP i TCP oraz dwa pola specyficzne dla konsensusu: pole bitowe podsieci poświadczeń i klucz `eth2`. To pierwsze ułatwia węzłom znajdowanie węzłów równorzędnych uczestniczących w określonych podsieciach plotkowania o poświadczeniach. Klucz `eth2` zawiera informacje o tym, której wersji rozwidlenia Ethereum używa węzeł, zapewniając, że węzły równorzędne łączą się z właściwym Ethereum.
 
-### libP2P {#libp2p}
+### libp2p {#libp2p}
 
-Stos libP2P obsługuje całą komunikację po odkrywaniu. Klienty mogą wybierać i nasłuchiwać na IPv4 i/lub IPv6 zgodnie z tym, jak to zostało określone w ich ENR. Protokoły w warstwie libP2P mogą zostać podzielone na domeny plotkujące i żądanie-odpowiedź.
+Stos libp2p obsługuje całą komunikację po odkrywaniu. Klienty mogą dzwonić i nasłuchiwać na IPv4 i/lub IPv6 zgodnie z definicją w ich ENR. Protokoły w warstwie libp2p można podzielić na domeny plotkowania (gossip) i żądań/odpowiedzi (req/resp).
 
-### Gossip {#gossip}
+### Plotkowanie (Gossip) {#gossip}
 
-Domena plotkująca zawiera wszystkie informacje, które muszą zostać szybko rozprzestrzenione w sieci. Wlicza się w to bloki śledzące, dowody, poświadczenia, wyjścia oraz odcięcia. Wszystko to przesyłane jest przy użyciu gossipsub v1 od libP2P i opiera się na różnych metadanych przechowywanych lokalnie w każdym węźle, wliczając w to maksymalny rozmiar ładunku plotkującego do odebrania i przesłania. Szczegółowe informacje o domenie gossip są dostępne [tutaj](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+Domena plotkowania obejmuje wszystkie informacje, które muszą szybko rozprzestrzeniać się w sieci. Obejmuje to bloki śledzące, dowody, poświadczenia, wyjścia i cięcia (slashings). Jest to przesyłane przy użyciu libp2p gossipsub v1 i opiera się na różnych metadanych przechowywanych lokalnie w każdym węźle, w tym na maksymalnym rozmiarze ładunków plotkowania do odbierania i przesyłania. Szczegółowe informacje na temat domeny plotkowania są dostępne [tutaj](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
-### Żądanie-odpowiedź {#request-response}
+### Żądanie-odpowiedź (Request-response) {#request-response}
 
-Domena żądanie-odpowiedź zawiera protokoły dla klientów żądających specyficznych informacji od swoich rówieśników. Przykładem może być żądanie określonych bloków śledzących pasujących do określonych hashy korzeni lub znajdujących się w określonym zakresie slotów. Odpowiedzi są zawsze zwracane jako bajty zakodowane w formie SSZ i skompresowane przy użyciu Snappy.
+Domena żądanie-odpowiedź zawiera protokoły dla klientów żądających określonych informacji od swoich węzłów równorzędnych. Przykłady obejmują żądanie określonych bloków śledzących pasujących do określonych hashów głównych lub w zakresie slotów. Odpowiedzi są zawsze zwracane jako skompresowane algorytmem snappy bajty zakodowane w SSZ.
 
-## Dlaczego klient konsensusu preferuje SSZ zamiast RLP? {#ssz-vs-rlp}
+## Dlaczego klient konsensusu preferuje SSZ od RLP? {#ssz-vs-rlp}
 
-SSZ to skrót od prostej serializacji. Wykorzystuje ona stałe przesunięcia, które ułatwiają dekodowanie indywidualnych części zakodowanej wiadomości bez potrzeby dekodowania całej struktury, co jest bardzo pomocne dla klienta konsensusu, ponieważ może efektywnie pobierać określone informacje z zakodowanej wiadomości. Został on również zaprojektowany specjalnie do integracji z protokołami Merkle, co przynosi korzyści w zakresie efektywności Merkleizacji. Ponieważ wszystkie hashe w warstwie konsensusu są korzeniami Merkle, przekłada się to na znaczącą poprawę. SSZ gwarantuje również unikalne reprezentacje wartości.
+SSZ oznacza prostą serializację (simple serialization). Wykorzystuje stałe przesunięcia, które ułatwiają dekodowanie poszczególnych części zakodowanej wiadomości bez konieczności dekodowania całej struktury, co jest bardzo przydatne dla klienta konsensusu, ponieważ może on skutecznie pobierać określone fragmenty informacji z zakodowanych wiadomości. Został również zaprojektowany specjalnie do integracji z protokołami Merkle, z powiązanym wzrostem wydajności dla merkleizacji. Ponieważ wszystkie hashe w warstwie konsensusu są korzeniami Merkle, składa się to na znaczną poprawę. SSZ gwarantuje również unikalne reprezentacje wartości.
 
-## Łączenie klientów wykonawczych i konsensusu {#connecting-clients}
+## Łączenie klientów warstwy wykonawczej i konsensusu {#connecting-clients}
 
-Oba te klienty działają równoległe. Muszą być połączone, aby klient konsensusu mógł dostarczać instrukcje do klienta wykonawczego, a klient wykonawczy mógł przekazywać pakiety transakcji do klienta konsensusu, aby zostały uwzględnione w blokach śledzących. Ta komunikacja między dwoma klientami może zostać osiągnięta przy użyciu lokalnego połączenia RPC. API znane jako ['Engine-API'](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) definiuje instrukcje wysyłane między tymi dwoma klientami. Ponieważ oba klienty znajdują się za pojedynczą tożsamością sieciową, współdzielą ENR (Ethereum Node Record), który zawiera osobny klucz dla każdego klienta (klucz eth1 i klucz eth2).
+Zarówno klienty konsensusu, jak i warstwy wykonawczej działają równolegle. Muszą być połączone, aby klient konsensusu mógł dostarczać instrukcje do klienta warstwy wykonawczej, a klient warstwy wykonawczej mógł przekazywać pakiety transakcji do klienta konsensusu w celu włączenia ich do bloków śledzących. Komunikację między dwoma klientami można osiągnąć za pomocą lokalnego połączenia RPC. API znane jako [„Engine-API”](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) definiuje instrukcje wysyłane między dwoma klientami. Ponieważ oba klienty kryją się za jedną tożsamością sieciową, współdzielą ENR (rekord węzła Ethereum), który zawiera oddzielny klucz dla każdego klienta (klucz Eth1 i klucz Eth2).
 
-Poniżej przedstawiono podsumowanie przepływu, z odpowiednim stosem sieciowym w nawiasach.
+Podsumowanie przepływu sterowania przedstawiono poniżej, z odpowiednim stosem sieciowym w nawiasach.
 
 ### Gdy klient konsensusu nie jest producentem bloku: {#when-consensus-client-is-not-block-producer}
 
-- Klient konsensusu otrzymuje blok za pośrednictwem protokołu plotkowania bloku (konsensus p2p)
-- Klient konsensusu wstępnie waliduje blok, tzn. upewnia się, że pochodzi on od prawidłowego nadawcy i zawiera poprawne metadane.
-- Transakcje w bloku zostają wysłane do warstwy wykonawczej jako ładunek wykonawczy (lokalne połączenie RPC)
-- Warstwa wykonawcza wykonuje transakcje i waliduje stan w nagłówku bloku (tzn. sprawdza, czy hasze się zgadzają).
-- Warstwa wykonawcza przekazuje zweryfikowane dane z powrotem do warstwy konsensusu, blok uważany jest teraz za zweryfikowany (lokalne połączenie RPC)
-- Warstwa konsensusu dodaje blok na początek swojego łańcucha i poświadcza go, rozgłaszając poświadczenie w sieci (konsensus p2p)
+- Klient konsensusu otrzymuje blok za pośrednictwem protokołu plotkowania o blokach (p2p konsensusu)
+- Klient konsensusu wstępnie waliduje blok, tj. upewnia się, że dotarł od prawidłowego nadawcy z poprawnymi metadanymi
+- Transakcje w bloku są wysyłane do warstwy wykonawczej jako ładunek wykonawczy (lokalne połączenie RPC)
+- Warstwa wykonawcza wykonuje transakcje i waliduje stan w nagłówku bloku (tj. sprawdza, czy hashe się zgadzają)
+- Warstwa wykonawcza przekazuje dane walidacji z powrotem do warstwy konsensusu, blok jest teraz uważany za zwalidowany (lokalne połączenie RPC)
+- Warstwa konsensusu dodaje blok do wierzchołka własnego blockchaina i poświadcza go, transmitując poświadczenie w sieci (p2p konsensusu)
 
 ### Gdy klient konsensusu jest producentem bloku: {#when-consensus-client-is-block-producer}
 
-- Klient konsensusu otrzymuje powiadomienie, że jest twórcą następnego bloku (konsensus p2p)
-- Warstwa konsensusu wywołuje metodę `create block` w kliencie wykonawczym (lokalne RPC).
-- Warstwa wykonawcza uzyskuje dostęp do pamięci puli transakcji, która została zapełniona przez protokół plotkowania transakcji (wykonawcze p2p)
-- Klient wykonawczy łączy transakcje w blok, wykonuje transakcje i generuje hash bloku
-- Klient konsensusu pobiera transakcje i hash bloku od klienta wykonawczego, a następnie dodaje je do bloku śledzącego (lokalne RPC)
-- Klient konsensusu rozgłasza blok po protokole plotkowania bloku (konsensus p2p)
-- Inne klienty otrzymują zaproponowany blok za pomocą protokołu plotkowania bloku i weryfikują go tak jak zostało to opisane powyżej (konsensus p2p)
+- Klient konsensusu otrzymuje powiadomienie, że jest następnym producentem bloku (p2p konsensusu)
+- Warstwa konsensusu wywołuje metodę `create block` w kliencie warstwy wykonawczej (lokalne RPC)
+- Warstwa wykonawcza uzyskuje dostęp do mempoola transakcji, który został wypełniony przez protokół plotkowania o transakcjach (p2p warstwy wykonawczej)
+- Klient warstwy wykonawczej pakuje transakcje w blok, wykonuje transakcje i generuje hash bloku
+- Klient konsensusu pobiera transakcje i hash bloku od klienta warstwy wykonawczej i dodaje je do bloku śledzącego (lokalne RPC)
+- Klient konsensusu transmituje blok za pośrednictwem protokołu plotkowania o blokach (p2p konsensusu)
+- Inne klienty otrzymują zaproponowany blok za pośrednictwem protokołu plotkowania o blokach i walidują go w sposób opisany powyżej (p2p konsensusu)
 
-Po poświadczeniu bloku przez wystarczającą liczbę walidatorów zostaje on dodany na początek łańcucha, uzasadniony i ostatecznie sfinalizowany.
+Gdy blok zostanie poświadczony przez wystarczającą liczbę walidatorów, jest dodawany do wierzchołka łańcucha, uzasadniony i ostatecznie sfinalizowany.
 
-![Schemat warstwy sieci klienta konsensusu Ethereum](cons_client_net_layer.png)
-![Schemat warstwy sieciowej klienta wykonawczego Ethereum](exe_client_net_layer.png)
+![Diagram of the Ethereum consensus client networking layer](cons_client_net_layer.png)
+![Diagram of the Ethereum execution client networking layer](exe_client_net_layer.png)
 
-Schemat warstwy sieciowej dla klientów konsensusu i wykonawczych, z [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+Schemat warstwy sieciowej dla klientów konsensusu i warstwy wykonawczej, z [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
 ## Dalsza lektura {#further-reading}
 
-[DevP2P](https://github.com/ethereum/devp2p)
-[LibP2p](https://github.com/libp2p/specs)
+[devp2p](https://github.com/ethereum/devp2p)
+[libp2p](https://github.com/libp2p/specs)
 [Specyfikacje sieciowe warstwy konsensusu](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure)
-[kademlia do discv5](https://vac.dev/kademlia-to-discv5)
-[Artykuł o kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
+[Od Kademlia do discv5](https://vac.dev/kademlia-to-discv5)
+[Praca naukowa o Kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [Wprowadzenie do p2p Ethereum](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[Relacja eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
-[Wideo ze szczegółami dotyczącymi The Merge i klienta eth2](https://www.youtube.com/watch?v=zNIrIninMgg)
+[Relacja Eth1/Eth2](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[Wideo ze szczegółami połączenia (Merge) i klienta Eth2](https://www.youtube.com/watch?v=zNIrIninMgg)

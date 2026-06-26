@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "locale": "ta",
+  "translatedAt": "2026-06-08T08:12:44.056Z",
+  "englishManifestHash": "df65fc6c9354",
+  "placeholderOrder": [
+    "LINK-26b6bc",
+    "LINK-668eb0",
+    "LINK-927b92",
+    "LINK-0da87f"
+  ],
+  "placeholderMap": {
+    "LINK-26b6bc": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/find-wallet/"
+      }
+    },
+    "LINK-668eb0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml"
+      }
+    },
+    "LINK-927b92": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/pulls"
+      }
+    },
+    "LINK-0da87f": {
+      "type": "link",
+      "values": {
+        "url": "/terms-of-use/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:12:44.056Z",
+      "status": "success"
+    }
+  }
+}

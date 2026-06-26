@@ -1,73 +1,71 @@
 ---
-title: Common misconceptions about Ethereum
-description: Clearing up the most common misunderstandings about how Ethereum works.
+title: ఎథీరియం గురించి సాధారణ అపోహలు
+description: ఎథీరియం ఎలా పనిచేస్తుందనే దాని గురించి అత్యంత సాధారణ అపార్థాలను తొలగించడం.
 lang: te
 ---
 
-# Common misconceptions about Ethereum {#misconceptions}
+## ఎథీరియం ఒక కంపెనీనా? {#not-a-company}
 
-## ఇతీరియము ఒక కంపెనీనా? {#not-a-company}
+ఎథీరియం అనేది ప్రపంచవ్యాప్తంగా వేలాది మంది కంట్రిబ్యూటర్లచే నిర్వహించబడే ఓపెన్-సోర్స్, వికేంద్రీకృత సాంకేతికత. ఖాతాలను నిర్వహించే, నిధులను ఉంచే లేదా కస్టమర్ మద్దతును అందించే "ఎథీరియం" అనే కంపెనీ ఏదీ లేదు.
 
-Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
+[ఎథీరియం ఫౌండేషన్](https://ethereum.foundation/) అనేది ఎథీరియం అభివృద్ధికి మద్దతు ఇచ్చే లాభాపేక్షలేని సంస్థ, కానీ ఇది నెట్‌వర్క్ స్వంతం చేసుకోదు లేదా నియంత్రించదు. ఏ ఒక్క సంస్థ కూడా అలా చేయదు.
 
-The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
-
-**[ethereum.org](/)** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
+**[ethereum.org](/)** అనేది కమ్యూనిటీచే నిర్వహించబడే విద్యా వనరు. ఇది ఎక్స్ఛేంజ్, వాలెట్ లేదా ఆర్థిక సంస్థ కాదు. ఇది ఏ వినియోగదారు నిధులను కలిగి ఉండదు మరియు ఏ ఖాతాలను యాక్సెస్ చేయలేదు.
 
 <DocLink href="/what-is-ethereum/">
-  Ethereum అంటే ఏమిటి?
+  ఎథీరియం అంటే ఏమిటి?
 </DocLink>
 
-## నా నిధులను ఎవరైనా తిరిగి పొందగలరా లేదా స్తంభింపజేయగలరా? {#no-fund-access}
+## ఎవరైనా నా నిధులను తిరిగి పొందగలరా లేదా స్తంభింపజేయగలరా? {#no-fund-access}
 
-Unlike a bank, there is no central authority on Ethereum that can freeze, seize, or recover funds. The person holding the private keys (or seed phrase) has full and sole control over a wallet.
+బ్యాంకులా కాకుండా, ఎథీరియంపై నిధులను స్తంభింపజేయగల, జప్తు చేయగల లేదా తిరిగి పొందగల కేంద్ర అధికారం ఏదీ లేదు. ప్రైవేట్ కీలను (లేదా బీజ పదబంధం) కలిగి ఉన్న వ్యక్తికి వాలెట్ పై పూర్తి మరియు ఏకైక నియంత్రణ ఉంటుంది.
 
-This means:
+దీని అర్థం:
 
-- **No one can recover funds** you sent to the wrong address
-- **No one can reverse** a transaction after it is confirmed
-- **No one can freeze** your wallet or block your transactions
-- **No one can reset your password** if you lose your seed phrase
+- మీరు తప్పు చిరునామాకు పంపిన **నిధులను ఎవరూ తిరిగి పొందలేరు**
+- లావాదేవీ నిర్ధారించబడిన తర్వాత **ఎవరూ దానిని వెనక్కి తీసుకోలేరు**
+- **ఎవరూ మీ వాలెట్ స్తంభింపజేయలేరు** లేదా మీ లావాదేవీలను నిరోధించలేరు
+- మీరు మీ బీజ పదబంధం కోల్పోతే **ఎవరూ మీ పాస్‌వర్డ్‌ను రీసెట్ చేయలేరు**
 
-This is why protecting your seed phrase is critical. It is the only way to access your wallet. If it is lost or stolen, there is no recovery option.
+అందుకే మీ బీజ పదబంధం రక్షించడం చాలా ముఖ్యం. మీ వాలెట్ యాక్సెస్ చేయడానికి ఇది ఏకైక మార్గం. అది పోయినా లేదా దొంగిలించబడినా, రికవరీ ఎంపిక ఏదీ లేదు.
 
 <DocLink href="/security/">
-  ఇతీరియము భద్రత మరియు స్కామ్ నివారణ
+  ఎథీరియం భద్రత మరియు స్కామ్ నివారణ
 </DocLink>
 
-## నేను ఇంకా ఇతీరియమును మైన్ చేయగలనా? {#no-mining}
+## నేను ఇంకా ఎథీరియం మైనింగ్ చేయవచ్చా? {#no-mining}
 
-Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Mining is no longer possible on Ethereum.
+సెప్టెంబర్ 2022లో [ది మెర్జ్](/roadmap/merge/) సమయంలో ఎథీరియం [ప్రూఫ్-ఆఫ్-వర్క్ (PoW)](/glossary/#pow) నుండి [ప్రూఫ్-ఆఫ్-స్టేక్ (PoS)](/glossary/#pos) కు మారింది. ఎథీరియంపై మైనింగ్ ఇకపై సాధ్యం కాదు.
 
-The network is now secured by validators who [stake](/glossary/#staking) ETH. Anyone can participate:
+నెట్‌వర్క్ ఇప్పుడు ETH [స్టేక్](/glossary/#staking) చేసే ధృవీకర్తల ద్వారా సురక్షితం చేయబడింది. ఎవరైనా పాల్గొనవచ్చు:
 
-- **Solo staking:** Run your own validator with 32 ETH—[learn more](/staking/solo/)
-- **Staking as a service:** Delegate node operation while keeping your keys—[learn more](/staking/saas/)
-- **Pooled staking:** Stake with less than 32 ETH by joining a pool—[learn more](/staking/pools/)
+- **సోలో స్టేకింగ్:** 32 ETH తో మీ స్వంత ధృవీకర్తను నడపండి—[మరింత తెలుసుకోండి](/staking/solo/)
+- **ఒక సేవగా స్టాకింగ్:** మీ కీలను ఉంచుకుంటూ నోడ్ ఆపరేషన్‌ను ప్రతినిధి చేయండి—[మరింత తెలుసుకోండి](/staking/saas/)
+- **పూల్డ్ స్టేకింగ్:** పూల్‌లో చేరడం ద్వారా 32 ETH కంటే తక్కువతో స్టేక్ చేయండి—[మరింత తెలుసుకోండి](/staking/pools/)
 
 <DocLink href="/staking/">
-  Learn more about staking
+  స్టేకింగ్ గురించి మరింత తెలుసుకోండి
 </DocLink>
 
-## ఇతీరియము సహాయ బృందం ఉందా? {#no-support-team}
+## ఎథీరియం మద్దతు బృందం ఉందా? {#no-support-team}
 
-Looking for "official Ethereum support" is similar to looking for "official internet support." This of course doesn't exist, but depending on your issue you may be able to seek out support from your internet service provider, your router hardware manufacturer, or one of the companies behind the device, app or website you're using.
+"అధికారిక ఎథీరియం మద్దతు" కోసం వెతకడం అనేది "అధికారిక ఇంటర్నెట్ మద్దతు" కోసం వెతకడం లాంటిది. ఇది వాస్తవానికి ఉనికిలో లేదు, కానీ మీ సమస్యను బట్టి మీరు మీ ఇంటర్నెట్ సర్వీస్ ప్రొవైడర్, మీ రూటర్ హార్డ్‌వేర్ తయారీదారు లేదా మీరు ఉపయోగిస్తున్న పరికరం, యాప్ లేదా వెబ్‌సైట్ వెనుక ఉన్న కంపెనీలలో ఒకరి నుండి మద్దతు పొందవచ్చు.
 
-Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
+ఎథీరియం కూడా అలాంటిదే. మొత్తం ఎథీరియం వెనుక ఎలాంటి కంపెనీ, మద్దతు బృందం లేదా హెల్ప్ డెస్క్ లేదు, కానీ సమస్యను బట్టి మీరు మీ _వాలెట్ ప్రొవైడర్_, _స్టేకింగ్ సర్వీస్_, _ఎక్స్ఛేంజ్_, _ఆర్థిక సంస్థ_ లేదా మీరు ఉపయోగిస్తున్న _యాప్‌ను నిర్వహించే బృందాన్ని_ సంప్రదించడం ద్వారా సహాయం పొందవచ్చు.
 
-Since Ethereum is publicly transparent by default, you may also find [block explorers](/developers/docs/data-and-analytics/block-explorers/), [analytics tools](/developers/tools/analytics/), and other [online investigation resources](/community/support/scams/#analyze) useful in looking into a problem directly.
+ఎథీరియం అప్రమేయంగా పబ్లిక్‌గా పారదర్శకంగా ఉంటుంది కాబట్టి, మీరు సమస్యను నేరుగా పరిశీలించడంలో [బ్లాక్ ఎక్స్‌ప్లోరర్‌లు](/developers/docs/data-and-analytics/block-explorers/), [విశ్లేషణ సాధనాలు](/developers/tools/analytics/) మరియు ఇతర [ఆన్‌లైన్ దర్యాప్తు వనరులు](/community/support/scams/#analyze) ఉపయోగకరంగా ఉండవచ్చు.
 
-That said, no one from Ethereum or ethereum.org will ever:
+అయినప్పటికీ, ఎథీరియం లేదా ethereum.org నుండి ఎవరూ ఎప్పటికీ ఇలా చేయరు:
 
-- Contact you via direct message
-- Ask for your seed phrase or private keys
-- Ask you to send ETH to verify your wallet
-- Offer to help you recover funds for a fee
+- డైరెక్ట్ మెసేజ్ ద్వారా మిమ్మల్ని సంప్రదించరు
+- మీ బీజ పదబంధం లేదా ప్రైవేట్ కీలను అడగరు
+- మీ వాలెట్ ధృవీకరించడానికి ETH పంపమని మిమ్మల్ని అడగరు
+- రుసుము కోసం నిధులను తిరిగి పొందడంలో మీకు సహాయం చేయడానికి ఆఫర్ చేయరు
 
-**Anyone doing any of the above is trying to scam you.**
+**పైన పేర్కొన్న వాటిలో దేనినైనా చేసే ఎవరైనా మిమ్మల్ని మోసం చేయడానికి ప్రయత్నిస్తున్నట్లే.**
 
-If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities—not official support channels.
+మీకు సహాయం కావాలంటే, సహాయం చేయగల నిజమైన కమ్యూనిటీలు [మద్దతు పేజీలో](/community/support/) జాబితా చేయబడ్డాయి. ఇవి వాలంటీర్లచే నిర్వహించబడే, ఓపెన్ కమ్యూనిటీలు—అధికారిక మద్దతు ఛానెల్‌లు కావు.
 
 <DocLink href="/security/">
-  ఇతీరియము భద్రత మరియు స్కామ్ నివారణ
+  ఎథీరియం భద్రత మరియు స్కామ్ నివారణ
 </DocLink>

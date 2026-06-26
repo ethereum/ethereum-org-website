@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-08T07:03:54.656Z",
+  "englishManifestHash": "25691cc45f42",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-dfe3f9",
+    "LINK-b70b93",
+    "LINK-a42e56",
+    "LINK-6c55b6",
+    "LINK-c52168",
+    "LINK-7b8564",
+    "LINK-5b217d",
+    "LINK-bd4c45",
+    "LINK-a0538c",
+    "LINK-c40560",
+    "LINK-497701",
+    "LINK-2ae115",
+    "LINK-8b3c8c",
+    "LINK-5b07e7",
+    "LINK-bea0f6",
+    "LINK-2b39b9",
+    "LINK-490a0d",
+    "LINK-9eb8b1",
+    "LINK-fbf1ed",
+    "LINK-5c1143",
+    "LINK-b12533",
+    "LINK-e2f7de",
+    "LINK-0da87f",
+    "LINK-2ae115",
+    "LINK-ebb954"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-dfe3f9": {
+      "type": "link",
+      "values": {
+        "url": "/what-is-ethereum/"
+      }
+    },
+    "LINK-b70b93": {
+      "type": "link",
+      "values": {
+        "url": "/governance/"
+      }
+    },
+    "LINK-a42e56": {
+      "type": "link",
+      "values": {
+        "url": "/what-is-ether/"
+      }
+    },
+    "LINK-6c55b6": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-c52168": {
+      "type": "link",
+      "values": {
+        "url": "/foundation/"
+      }
+    },
+    "LINK-7b8564": {
+      "type": "link",
+      "values": {
+        "url": "/community/"
+      }
+    },
+    "LINK-5b217d": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/"
+      }
+    },
+    "LINK-bd4c45": {
+      "type": "link",
+      "values": {
+        "url": "https://www.productplan.com/glossary/shape-up-method/"
+      }
+    },
+    "LINK-a0538c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/14726"
+      }
+    },
+    "LINK-c40560": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/"
+      }
+    },
+    "LINK-497701": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/ethdotorg"
+      }
+    },
+    "LINK-2ae115": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    },
+    "LINK-8b3c8c": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/design-principles/"
+      }
+    },
+    "LINK-5b07e7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1"
+      }
+    },
+    "LINK-bea0f6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System"
+      }
+    },
+    "LINK-2b39b9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/6284"
+      }
+    },
+    "LINK-490a0d": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    },
+    "LINK-9eb8b1": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/style-guide/"
+      }
+    },
+    "LINK-5c1143": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/design-principles/"
+      }
+    },
+    "LINK-b12533": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/style-guide/"
+      }
+    },
+    "LINK-fbf1ed": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/"
+      }
+    },
+    "LINK-e2f7de": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE"
+      }
+    },
+    "LINK-0da87f": {
+      "type": "link",
+      "values": {
+        "url": "/terms-of-use/"
+      }
+    },
+    "LINK-ebb954": {
+      "type": "link",
+      "values": {
+        "url": "/community/get-involved/#ethereum-jobs/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:03:54.656Z",
+      "status": "success"
+    }
+  }
+}

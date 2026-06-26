@@ -1,151 +1,151 @@
 ---
 title: Gesi na ada
-metaTitle: "Gesi na ada za Ethereum: Maelezo ya kiufundi"
+metaTitle: "Gesi na ada za Ethereum: muhtasari wa kiufundi"
 description: Jifunze kuhusu ada za gesi za Ethereum, jinsi zinavyokokotolewa, na jukumu lake katika usalama wa mtandao na uchakataji wa miamala.
 lang: sw
 ---
 
-Gesi ni muhimu kwa mtandao wa Ethereum. Ni mafuta yanayoiwezesha kufanya kazi, kama vile gari linavyohitaji petroli ili kufanya kazi.
+Gesi ni muhimu kwa mtandao wa [Ethereum](/). Ni mafuta yanayouwezesha kufanya kazi, kwa njia sawa na ambayo gari linahitaji petroli ili kwenda.
 
 ## Mahitaji ya awali {#prerequisites}
 
-Ili kuelewa ukurasa huu vizuri zaidi, tunapendekeza usome kwanza kuhusu [miamala](/developers/docs/transactions/) na [EVM](/developers/docs/evm/).
+Ili kuelewa vyema ukurasa huu, tunapendekeza usome kwanza kuhusu [miamala](/developers/docs/transactions/) na [EVM](/developers/docs/evm/).
 
 ## Gesi ni nini? {#what-is-gas}
 
-Gesi hurejelea kitengo kinachopima kiasi cha juhudi za kihesabu zinazohitajika kutekeleza shughuli maalumu kwenye mtandao wa Ethereum.
+Gesi inarejelea kipimo kinachopima kiasi cha juhudi za kikokotozi kinachohitajika kutekeleza shughuli mahususi kwenye mtandao wa Ethereum.
 
-Kwa sababu kila muamala wa Ethereum unahitaji rasilimali za kompyuta ili kutekelezwa, rasilimali hizo lazima zilipiwe ili kuhakikisha Ethereum sio hatarishi dhidi ya barua taka na haiwezi kukwama kwenye mzunguko wa kompyuta usio na mwisho. Malipo kwa ajili ya hesabu hufanywa kwa njia ya ada ya gesi.
+Kwa kuwa kila muamala wa Ethereum unahitaji rasilimali za kikokotozi ili kutekelezwa, rasilimali hizo lazima zilipiwe ili kuhakikisha Ethereum haishambuliwi na taka na haiwezi kukwama katika mizunguko isiyo na kikomo ya kikokotozi. Malipo ya ukokotoaji hufanywa kwa njia ya ada ya gesi.
 
-Ada ya gesi ni **kiasi cha gesi kinachotumika kufanya operesheni fulani, kikizidishwa na gharama ya kila kitengo cha gesi**. Ada inalipwa bila kujali kama muamala unafanikiwa au hautafanikiwa.
+Ada ya gesi ni **kiasi cha gesi kinachotumika kufanya operesheni fulani, kikizidishwa na gharama kwa kila uniti ya gesi**. Ada hulipwa bila kujali kama muamala umefaulu au umeshindwa.
 
-![Mchoro unaoonyesha mahali gesi inahitajika katika operesheni za EVM](./gas.png)
+![A diagram showing where gas is needed in EVM operations](./gas.png)
 _Mchoro umechukuliwa kutoka [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Ada za gesi lazima zilipwe kwa kutumia sarafu ya asili ya Ethereum, ether (ETH). Bei za gesi huwekwa kwa gwei, ambayo ni kiwango kidogo cha ETH. Kila gwei ni sawa na sehemu ya bilioni moja ya ETH (0.000000001 ETH au 10<sup>-9</sup>ETH).
+Ada za gesi lazima zilipwe kwa sarafu ya asili ya Ethereum, Etha (ETH). Bei za gesi kwa kawaida hunukuliwa kwa Gwei, ambayo ni kigawanyo cha ETH. Kila Gwei ni sawa na sehemu moja ya bilioni ya ETH (0.000000001 ETH au 10<sup>-9</sup> ETH).
 
-Kwa mfano, badala ya kusema kuwa gesi yako inagharimu ether 0.000000001, unaweza kusema gesi yako inagharimu gwei 1.
+Kwa mfano, badala ya kusema kwamba gesi yako inagharimu Etha 0.000000001, unaweza kusema gesi yako inagharimu Gwei 1.
 
-Neno 'gwei' ni ufupisho wa 'giga-wei', likimaanisha 'bilioni wei'. Gwei moja ni sawa na bilioni wei. Wei yenyewe (iliyoitwa jina la [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), muundaji wa [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) ndiyo sehemu ndogo zaidi ya ETH.
+Neno 'Gwei' ni ufupisho wa 'giga-wei', ikimaanisha 'Wei bilioni'. Gwei moja ni sawa na Wei bilioni moja. Wei yenyewe (iliyopewa jina la [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), muundaji wa [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) ni uniti ndogo zaidi ya ETH.
 
-## Ni jinsi gani gesi inapigiwa mahesabu? {#how-are-gas-fees-calculated}
+## Ada za gesi zinakokotolewa vipi? {#how-are-gas-fees-calculated}
 
-Unaweza weka kiwango cha gesi ambacho upo tayari kulipa pale unapotaka kufanya muamala. Kwa kutoa kiasi fulani cha gesi, unajilipia ili muamala wako ujumuishwe katika kitalu kinachofuata. Ikiwa utatoa kidogo sana, wathibitishaji itawawia vigumu kuchagua muamala wako ujumuishwe, ikimaanisha muamala wako unaweza kutekelezwa kwa kuchelewa au usitekelezwe kabisa. Ukitoa kiwango kikubwa zaidi, inawezekana ukapoteza baadhi ya ETH. Sasa, unaweza kugundua kiwango gani unaweza kulipia?
+Unaweza kuweka kiasi cha gesi ambacho uko tayari kulipa unapowasilisha muamala. Kwa kutoa kiasi fulani cha gesi, unashindania muamala wako ujumuishwe kwenye kitalu kinachofuata. Ukitoa kiasi kidogo sana, wathibitishaji wana uwezekano mdogo wa kuchagua muamala wako ili ujumuishwe, ikimaanisha muamala wako unaweza kutekelezwa kwa kuchelewa au usitekelezwe kabisa. Ukitoa kiasi kikubwa sana, unaweza kupoteza ETH. Kwa hivyo, unawezaje kujua kiasi cha kulipa?
 
-Jumla ya gesi unayolipa imegawanywa katika vipengele viwili: `ada ya msingi` na `ada ya kipaumbele` (bakshishi).
+Jumla ya gesi unayolipa imegawanywa katika vipengele viwili: `base fee` na `priority fee` (ada ya kipaumbele).
 
-`Ada ya msingi` huwekwa na itifaki—unapaswa kulipa angalau kiasi hiki ili muamala wako uchukuliwe kuwa halali. `Ada ya kipaumbele` ni bakshishi unayoongeza kwenye ada ya msingi ili kufanya muamala wako uvutie kwa wathibitishaji ili wauchague kwa ajili ya kujumuishwa kwenye kitalu kinachofuata.
+`base fee` huwekwa na itifaki—lazima ulipe angalau kiasi hiki ili muamala wako uchukuliwe kuwa halali. `priority fee` ni ada ya kipaumbele unayoongeza kwenye ada ya msingi ili kufanya muamala wako uvutie kwa wathibitishaji ili wauchague kwa ajili ya kujumuishwa kwenye kitalu kinachofuata.
 
-Muamala unaolipa `ada ya msingi` pekee ni halali kitaalamu lakini hauwezekani kujumuishwa kwa sababu haitoi motisha kwa wathibitishaji kuuchagua badala ya muamala mwingine wowote. Ada 'sahihi' ya `kipaumbele` huamuliwa na matumizi ya mtandao wakati unapotuma muamala wako—ikiwa kuna mahitaji mengi, huenda ikabidi uweke ada yako ya `kipaumbele` juu zaidi, lakini wakati kuna mahitaji kidogo, unaweza kulipa kidogo.
+Muamala unaolipa tu `base fee` ni halali kiufundi lakini hauna uwezekano wa kujumuishwa kwa sababu hautoi motisha kwa wathibitishaji kuuchagua badala ya muamala mwingine wowote. Ada 'sahihi' ya `priority` inabainishwa na matumizi ya mtandao wakati unapotuma muamala wako—kama kuna mahitaji mengi basi unaweza kulazimika kuweka ada yako ya `priority` kuwa juu zaidi, lakini wakati kuna mahitaji machache unaweza kulipa kidogo.
 
-Kwa mfano, hebu tuseme Jordan anapaswa kumlipa Taylor ETH 1. Uhamisho wa ETH unahitaji vitengo 21,000 vya gesi, na ada ya msingi ni gwei 10. Jordan anajumuisha ada ya kipaumbele ya gwei 2.
+Kwa mfano, tuseme Jordan anapaswa kumlipa Taylor ETH 1. Hamisho la ETH linahitaji uniti 21,000 za gesi, na ada ya msingi ni Gwei 10. Jordan anajumuisha ada ya kipaumbele ya Gwei 2.
 
-Jumla ya ada itakuwa sawa sawa na:
+Jumla ya ada sasa itakuwa sawa na:
 
-`vitengo vya gesi vilivyotumika * (ada ya msingi + ada ya kipaumbele)`
+`units of gas used * (base fee + priority fee)`
 
-ambapo `ada ya msingi` ni thamani iliyowekwa na itifaki na `ada ya kipaumbele` ni thamani iliyowekwa na mtumiaji kama bakshishi kwa mthibitishaji.
+ambapo `base fee` ni thamani iliyowekwa na itifaki na `priority fee` ni thamani iliyowekwa na mtumiaji kama ada ya kipaumbele kwa mthibitishaji.
 
 k.m., `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
 
-Wakati Jordan anapotuma pesa, ETH 1.000252 zitatolewa kutoka kwenye akaunti ya Jordan. Taylor atapewa ETH 1.0000. Mthibitishaji atapokea ada ya kipaumbele ya ETH 0.000042. `Ada ya msingi` ya ETH 0.00021 inachomwa.
+Wakati Jordan anatuma pesa, ETH 1.000252 itakatwa kutoka kwenye akaunti ya Jordan. Taylor atawekewa ETH 1.0000. Mthibitishaji anapokea ada ya kipaumbele ya ETH 0.000042. `base fee` ya ETH 0.00021 inachomwa.
 
 ### Ada ya msingi {#base-fee}
 
-Kila kitalu kina ada ya msingi ambacho kinafanya kazi kama bei ya akiba. Ili kustahili kujumuishwa katika kitalu bei iliyotolewa kwa kila gesi lazima angalau iwe sawa na ada ya msingi. Ada ya msingi huhesabiwa kwa kujitegemea na kitalu cha sasa na badala yake huamuliwa na vitalu vilivyotangulia, na kufanya ada za muamala zitabirike zaidi kwa watumiaji. Kitalu kinapoundwa, **ada hii ya msingi "inachomwa"**, na kuondolewa kwenye mzunguko.
+Kila kitalu kina ada ya msingi ambayo hufanya kazi kama bei ya akiba. Ili kustahiki kujumuishwa kwenye kitalu, bei inayotolewa kwa kila gesi lazima angalau ilingane na ada ya msingi. Ada ya msingi inakokotolewa bila kutegemea kitalu cha sasa na badala yake inabainishwa na vitalu vilivyotangulia, na kufanya ada za muamala kutabirika zaidi kwa watumiaji. Kitalu kinapoundwa **ada hii ya msingi "inachomwa"**, na kuiondoa kwenye mzunguko.
 
-Ada ya msingi hukokotolewa kwa fomula inayolinganisha ukubwa wa kitalu kilichopita (kiasi cha gesi iliyotumika kwa miamala yote) na ukubwa unaolengwa (nusu ya kikomo cha gesi). Ada ya msingi itaongezeka au kupungua kwa upeo wa 12.5% kwa kila kitalu ikiwa ukubwa wa kitalu lengwa utazidi au kuwa chini ya lengo, mtawalia. Ukuaji huu wa kasi hufanya iwe vigumu kiuchumi kwa ukubwa wa kitalu kubaki juu kwa muda usiojulikana.
+Ada ya msingi inakokotolewa kwa fomula inayolinganisha ukubwa wa kitalu kilichotangulia (kiasi cha gesi kilichotumika kwa miamala yote) na ukubwa unaolengwa (nusu ya kikomo cha gesi). Ada ya msingi itaongezeka au kupungua kwa kiwango cha juu cha 12.5% kwa kila kitalu ikiwa ukubwa wa kitalu unaolengwa uko juu au chini ya lengo, mtawalia. Ukuaji huu wa kielelezo hufanya isiwezekane kiuchumi kwa ukubwa wa kitalu kubaki juu kwa muda usiojulikana.
 
-| Namba ya Kitalu | Gesi Iliyojumuishwa |    Kuongezeka kwa Ada | Ada ya Msingi ya Hivi Sasa |
-| --------------- | ------------------: | --------------------: | -------------------------: |
-| 1               |                 18M |                    0% |                   gwei 100 |
-| 2               |                 36M |                    0% |                   gwei 100 |
-| 3               |                 36M | 12.5% | gwei 112.5 |
-| 4               |                 36M | 12.5% | gwei 126.6 |
-| 5               |                 36M | 12.5% | gwei 142.4 |
-| 6               |                 36M | 12.5% | gwei 160.2 |
-| 7               |                 36M | 12.5% | gwei 180.2 |
-| 8               |                 36M | 12.5% | gwei 202.7 |
+| Nambari ya Kitalu | Gesi Iliyojumuishwa | Ongezeko la Ada | Ada ya Msingi ya Sasa |
+| ------------ | -----------: | -----------: | ---------------: |
+| 1            |          18M |           0% |         100 gwei |
+| 2            |          36M |           0% |         100 gwei |
+| 3            |          36M |        12.5% |       112.5 gwei |
+| 4            |          36M |        12.5% |       126.6 gwei |
+| 5            |          36M |        12.5% |       142.4 gwei |
+| 6            |          36M |        12.5% |       160.2 gwei |
+| 7            |          36M |        12.5% |       180.2 gwei |
+| 8            |          36M |        12.5% |       202.7 gwei |
 
-Katika jedwali lililo hapo juu, mfano unaonyeshwa kwa kutumia milioni 36 kama kikomo cha gesi. Kufuatia mfano huu, ili kuunda muamala kwenye kitalu nambari 9, mkoba utamjulisha mtumiaji kwa uhakika kwamba **ada ya msingi ya juu zaidi** itakayoongezwa kwenye kitalu kinachofuata ni `ada ya msingi ya sasa * 112.5%` au `202.7 gwei * 112.5% = 228.1 gwei`.
+Katika jedwali hapo juu, mfano unaonyeshwa kwa kutumia milioni 36 kama kikomo cha gesi. Kufuatia mfano huu, ili kuunda muamala kwenye kitalu nambari 9, mkoba utamjulisha mtumiaji kwa uhakika kwamba **ada ya juu zaidi ya msingi** itakayoongezwa kwenye kitalu kinachofuata ni `current base fee * 112.5%` au `202.7 gwei * 112.5% = 228.1 gwei`.
 
-Ni muhimu pia kuzingatia kuwa kuna uwezekano mdogo wa kuona vitalu vilivyojaa kwa muda mrefu kutokana na kasi ambayo ada ya msingi huongezeka kabla ya kitalu kujaa kabisa.
+Pia ni muhimu kutambua kuwa hakuna uwezekano wa kuona ongezeko la muda mrefu la vitalu vilivyojaa kwa sababu ya kasi ambayo ada ya msingi huongezeka kabla ya kitalu kujaa.
 
-| Namba ya Kitalu                                     |                                 Gesi Iliyojumuishwa |    Kuongezeka kwa Ada |                          Ada ya Msingi ya Hivi Sasa |
-| --------------------------------------------------- | --------------------------------------------------: | --------------------: | --------------------------------------------------: |
-| 30                                                  |                                                 36M | 12.5% |                         gwei 2705.6 |
-| ... | ... | 12.5% | ... |
-| 50                                                  |                                                 36M | 12.5% |                        gwei 28531.3 |
-| ... | ... | 12.5% | ... |
-| 100                                                 |                                                 36M | 12.5% |                     gwei 10302608.6 |
+| Nambari ya Kitalu | Gesi Iliyojumuishwa | Ongezeko la Ada | Ada ya Msingi ya Sasa |
+| ------------ | -----------: | -----------: | ---------------: |
+| 30           |          36M |        12.5% |      2705.6 gwei |
+| ...          |          ... |        12.5% |              ... |
+| 50           |          36M |        12.5% |     28531.3 gwei |
+| ...          |          ... |        12.5% |              ... |
+| 100          |          36M |        12.5% |  10302608.6 gwei |
 
-### Ada ya kipaumbele (bakshishi) {#priority-fee}
+### Ada ya kipaumbele {#priority-fee}
 
-Ada ya kipaumbele (bakshishi) huwapa wathibitishaji motisha wa kuongeza idadi ya miamala katika kitalu, wakizuiliwa tu na kikomo cha gesi cha kitalu. Bila bakshishi, mthibitishaji mwenye busara anaweza kujumuisha miamala michache—au hata sifuri—bila adhabu yoyote ya moja kwa moja ya safu ya utekelezaji au safu ya makubaliano, kwa kuwa zawadi za kusimamisha hazitegemei idadi ya miamala iliyo kwenye kitalu. Zaidi ya hayo, bakshishi huwaruhusu watumiaji kuwazidi wengine zabuni kwa ajili ya kipaumbele ndani ya kitalu kimoja, na hivyo kuashiria uharaka.
+Ada ya kipaumbele inawapa motisha wathibitishaji kuongeza idadi ya miamala kwenye kitalu, ikizuiliwa tu na kikomo cha gesi cha kitalu. Bila ada za kipaumbele, mthibitishaji mwenye mantiki angeweza kujumuisha miamala michache—au hata sifuri—bila adhabu yoyote ya moja kwa moja ya tabaka la utekelezaji au tabaka la mwafaka, kwa kuwa zawadi za uwekaji dhamana hazitegemei idadi ya miamala iliyo kwenye kitalu. Zaidi ya hayo, ada za kipaumbele huwaruhusu watumiaji kushinda wengine kwa kipaumbele ndani ya kitalu kile kile, kuashiria udharura kwa ufanisi. 
 
 ### Ada ya juu zaidi {#maxfee}
 
-Ili kutekeleza muamala kwenye mtandao, watumiaji wanaweza kubainisha kiwango cha juu wanachotaka kulipia ili muamala wao utekelezwe. Kigezo hiki cha hiari kinajulikana kama `maxFeePerGas`. Ili muamala utekelezwe, ada ya juu kabisa lazima izidi jumla ya ada ya msingi na ada ya kipaumbele. Mtumaji wa muamala anarudishiwa tofauti kati ya ada ya juu kabisa na jumla ya ada ya msingi na ada ya kipaumbele.
+Ili kutekeleza muamala kwenye mtandao, watumiaji wanaweza kubainisha kikomo cha juu zaidi ambacho wako tayari kulipa ili muamala wao utekelezwe. Kigezo hiki cha hiari kinajulikana kama `maxFeePerGas`. Ili muamala utekelezwe, ada ya juu zaidi lazima izidi jumla ya ada ya msingi na ada ya kipaumbele. Mtumaji wa muamala anarejeshewa tofauti kati ya ada ya juu zaidi na jumla ya ada ya msingi na ada ya kipaumbele.
 
-### Ukubwa wa bloku {#block-size}
+### Ukubwa wa kitalu {#block-size}
 
-Kila kitalu kina ukubwa unaolengwa wa nusu ya kikomo cha gesi cha sasa, lakini ukubwa wa vitalu utaongezeka au kupungua kulingana na mahitaji ya mtandao, hadi kikomo cha kitalu kifikiwe (2x ukubwa wa kitalu lengwa). Itifaki hufikia wastani wa ukubwa wa kitalu wa usawa kwenye lengo kupitia mchakato wa _tâtonnement_. Hii inamaanisha ikiwa ukubwa wa kitalu ni mkubwa kuliko ukubwa unaolengwa wa kitalu, itifaki itaongeza ada ya msingi kwa kitalu kinachofuata. Vilevile, itifaki itapunguza ada ya msingi ikiwa ukubwa wa kitalu ni mdogo kuliko ukubwa unaolengwa wa kitalu.
+Kila kitalu kina ukubwa unaolengwa wa nusu ya kikomo cha gesi cha sasa, lakini ukubwa wa vitalu utaongezeka au kupungua kulingana na mahitaji ya mtandao, hadi kikomo cha kitalu kifikiwe (mara 2 ya ukubwa wa kitalu unaolengwa). Itifaki hufikia wastani wa ukubwa wa kitalu ulio sawa kwenye lengo kupitia mchakato wa _tâtonnement_. Hii inamaanisha ikiwa ukubwa wa kitalu ni mkubwa kuliko ukubwa wa kitalu unaolengwa, itifaki itaongeza ada ya msingi kwa kitalu kinachofuata. Vile vile, itifaki itapunguza ada ya msingi ikiwa ukubwa wa kitalu ni mdogo kuliko ukubwa wa kitalu unaolengwa.
 
-Kiasi ambacho ada ya msingi hurekebishwa ni sawia na umbali ambao ukubwa wa kitalu cha sasa upo kutoka kwenye lengo. Huu ni ukokotoaji wa mstari kutoka -12.5% kwa kitalu tupu, 0% kwenye ukubwa lengwa, hadi +12.5% kwa kitalu kinachofikia kikomo cha gesi. Kikomo cha gesi kinaweza kubadilika-badilika kadri muda unavyopita kulingana na ishara za wathibitishaji, na pia kupitia maboresho ya mtandao. Unaweza [kuona mabadiliko katika kikomo cha gesi kadiri muda unavyopita hapa](https://eth.blockscout.com/stats/averageGasLimit?interval=threeMonths).
+Kiasi ambacho ada ya msingi inarekebishwa kinalingana na jinsi ukubwa wa kitalu cha sasa ulivyo mbali na lengo. Huu ni ukokotoaji wa mstari kutoka -12.5% kwa kitalu tupu, 0% kwenye ukubwa unaolengwa, hadi +12.5% kwa kitalu kinachofikia kikomo cha gesi. Kikomo cha gesi kinaweza kubadilika kadiri muda unavyopita kulingana na uashiriaji wa mthibitishaji, pamoja na kupitia uboreshaji wa mtandao. Unaweza [kutazama mabadiliko katika kikomo cha gesi kadiri muda unavyopita hapa](https://eth.blockscout.com/stats/averageGasLimit?interval=threeMonths).
 
 [Zaidi kuhusu vitalu](/developers/docs/blocks/)
 
 ### Kukokotoa ada za gesi katika vitendo {#calculating-fees-in-practice}
 
-Unaweza kueleza waziwazi ni kiasi gani uko tayari kulipa ili muamala wako utekelezwe. Hata hivyo, watoa huduma wengi wa mkoba huweka moja kwa moja ada ya muamala inayopendekezwa (ada ya msingi + ada ya kipaumbele iliyopendekezwa) ili kupunguza ugumu kwa watumiaji wao.
+Unaweza kueleza waziwazi kiasi ambacho uko tayari kulipa ili muamala wako utekelezwe. Hata hivyo, watoa huduma wengi wa mikoba wataweka kiotomatiki ada ya muamala inayopendekezwa (ada ya msingi + ada ya kipaumbele inayopendekezwa) ili kupunguza kiasi cha utata kinachowekwa kwa watumiaji wao.
 
-## Kwa nini ada ya gesi ipo? {#why-do-gas-fees-exist}
+## Kwa nini ada za gesi zipo? {#why-do-gas-fees-exist}
 
-Kiufupi, ada ya gesi husaidia kuifanya mtandao wa Ethereum kuwa na ulinzi wa kutosha. Kwa kuhitaji ada kwa kila hesabu inayotekelezwa kwenye mtandao, tunawazuia wahalifu wasijaze mtandao kwa vitu visivyo na maana. Ili kuepuka vitanzi visivyoisha vya bahati mbaya au vya uhasama au upotevu mwingine wa hesabu katika msimbo, kila muamala unahitajika kuweka kikomo cha hatua ngapi za hesabu za utekelezaji wa msimbo unazoweza kutumia. Kitengo cha msingi cha hesabu ni "gesi".
+Kwa ufupi, ada za gesi husaidia kuweka mtandao wa Ethereum salama. Kwa kuhitaji ada kwa kila ukokotoaji unaotekelezwa kwenye mtandao, tunazuia watendaji wabaya kutuma taka kwenye mtandao. Ili kuepuka mizunguko isiyo na kikomo ya bahati mbaya au ya uhasama au upotevu mwingine wa kikokotozi katika msimbo, kila muamala unahitajika kuweka kikomo cha hatua ngapi za kikokotozi za utekelezaji wa msimbo unaweza kutumia. Uniti ya msingi ya ukokotoaji ni "gesi".
 
-Ingawa muamala unajumuisha kikomo, gesi yoyote isiyotumika katika muamala hurejeshwa kwa mtumiaji (k.m., `ada ya juu zaidi - (ada ya msingi + bakshishi)` hurejeshwa).
+Ingawa muamala unajumuisha kikomo, gesi yoyote ambayo haijatumika katika muamala inarejeshwa kwa mtumiaji (k.m., `max fee - (base fee + tip)` inarejeshwa).
 
-![Mchoro unaoonyesha jinsi gesi isiyotumika inavyorejeshwa](../transactions/gas-tx.png)
+![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
 _Mchoro umechukuliwa kutoka [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Nini ni kiwango cha gesi? {#what-is-gas-limit}
+## Kikomo cha gesi ni nini? {#what-is-gas-limit}
 
-Kikomo cha gesi hurejelea kiwango cha juu cha gesi unachotaka kutumia kwenye muamala. Miamala ngumu zaidi inayohusisha [mikataba-erevu](/developers/docs/smart-contracts/) huhitaji kazi zaidi ya kikokotozi, kwa hivyo huhitaji kikomo cha gesi cha juu zaidi kuliko malipo rahisi. Uhamisho wa kawaida wa ETH unahitaji kikomo cha gesi cha vitengo 21,000.
+Kikomo cha gesi kinarejelea kiasi cha juu zaidi cha gesi ambacho uko tayari kutumia kwenye muamala. Miamala ngumu zaidi inayohusisha [mikataba mahiri](/developers/docs/smart-contracts/) inahitaji kazi zaidi ya kikokotozi, kwa hivyo inahitaji kikomo cha juu zaidi cha gesi kuliko malipo rahisi. Hamisho la kawaida la ETH linahitaji kikomo cha gesi cha uniti 21,000 za gesi.
 
-Kwa mfano, ukiweka kikomo cha gesi cha 50,000 kwa uhamisho rahisi wa ETH, EVM itatumia 21,000, na utarudishiwa 29,000 vilivyobaki. Hata hivyo, ukiweka kiwango kidogo cha gesi, kwa mfano, kikomo cha gesi cha 20,000 kwa uhamisho rahisi wa ETH, muamala utashindikana wakati wa hatua ya uthibitisho. Utakataliwa kabla ya kujumuishwa kwenye kitalu, na hakuna gesi itakayotumiwa. Kwa upande mwingine, ikiwa muamala utaishiwa na gesi wakati wa utekelezaji (kwa mfano, mkataba mahiri unatumia gesi yote katikati ya mchakato), EVM itarudisha mabadiliko yoyote, lakini gesi yote iliyotolewa bado itatumiwa kwa kazi iliyofanywa.
+Kwa mfano, ukiweka kikomo cha gesi cha 50,000 kwa hamisho rahisi la ETH, EVM itatumia 21,000, na utarudishiwa 29,000 zilizosalia. Hata hivyo, ukibainisha gesi kidogo sana, kwa mfano, kikomo cha gesi cha 20,000 kwa hamisho rahisi la ETH, muamala utashindwa wakati wa awamu ya uthibitishaji. Utakataliwa kabla ya kujumuishwa kwenye kitalu, na hakuna gesi itakayotumika. Kwa upande mwingine, ikiwa muamala utaishiwa na gesi wakati wa utekelezaji (k.m., mkataba mahiri unatumia gesi yote katikati), EVM itatengua mabadiliko yoyote, lakini gesi yote iliyotolewa bado itatumika kwa kazi iliyofanywa.
 
-## Kwa nini ada ya gesi inaweza ikawa ya kiwango cha juu? {#why-can-gas-fees-get-so-high}
+## Kwa nini ada za gesi zinaweza kuwa juu sana? {#why-can-gas-fees-get-so-high}
 
-Ada za juu za gesi zinatokana na umaarufu wa Ethereum. Ikiwa kuna mahitaji mengi mno, watumiaji wanapaswa kutoa kiasi cha juu zaidi cha ada ya kipaumbele ili kujaribu kushinda miamala ya watumiaji wengine. Ada ya kipaumbele ya juu inaweza kufanya muamala wako uwe na uwezekano mkubwa wa kuingia kwenye kitalu kinachofuata. Pia, programu tata zaidi za mikataba mahiri zinaweza kufanya shughuli nyingi kusaidia kazi zao, hivyo kuzifanya zitumie gesi nyingi.
+Ada za juu za gesi zinatokana na umaarufu wa Ethereum. Ikiwa kuna mahitaji mengi sana, watumiaji lazima watoe kiasi cha juu zaidi cha ada ya kipaumbele ili kujaribu kushinda miamala ya watumiaji wengine. Ada ya kipaumbele ya juu zaidi inaweza kufanya iwezekane zaidi kwamba muamala wako utaingia kwenye kitalu kinachofuata. Pia, programu ngumu zaidi za mkataba mahiri zinaweza kuwa zinafanya operesheni nyingi ili kusaidia utendaji wao, na kuzifanya zitumie gesi nyingi.
 
 ## Mipango ya kupunguza gharama za gesi {#initiatives-to-reduce-gas-costs}
 
-Maboresho ya [kuongeza uwezo](/roadmap/) wa Ethereum hatimaye yanapaswa kushughulikia baadhi ya masuala ya ada za gesi, ambayo, kwa upande wake, yatawezesha jukwaa kuchakata maelfu ya miamala kwa sekunde na kuongezeka kimataifa.
+[Uboreshaji wa uwezo wa kuongezeka](/roadmap/) wa Ethereum unapaswa hatimaye kushughulikia baadhi ya masuala ya ada ya gesi, ambayo, kwa upande wake, itawezesha jukwaa kuchakata maelfu ya miamala kwa sekunde na kuongezeka ulimwenguni kote.
 
-Maboresho ya tabaka la pili ni mpango mkuu wa kuboresha kwa kiasi kikubwa gharama za gesi, uzoefu wa mtumiaji na uwezo wa mtandao.
+Uongezaji wa tabaka la 2 (l2) ni mpango wa msingi wa kuboresha sana gharama za gesi, uzoefu wa mtumiaji na uwezo wa kuongezeka.
 
-[Zaidi kuhusu uongezaji wa safu ya 2](/developers/docs/scaling/#layer-2-scaling)
+[Zaidi kuhusu uongezaji wa tabaka la 2 (l2)](/developers/docs/scaling/#layer-2-scaling)
 
-## Ufuatiliaji wa ada za gesi {#monitoring-gas-fees}
+## Kufuatilia ada za gesi {#monitoring-gas-fees}
 
-Ikiwa ungependa kufuatilia bei za gesi, ili uweze kutuma ETH yako kwa bei nafuu, unaweza kutumia zana nyingi tofauti kama vile:
+Ikiwa unataka kufuatilia bei za gesi, ili uweze kutuma ETH yako kwa bei nafuu, unaweza kutumia zana nyingi tofauti kama vile:
 
-- [Etherscan](https://etherscan.io/gastracker) _Kikadiriaji bei ya gesi ya muamala_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _Kikadiriaji bei ya gesi ya muamala cha chanzo huria_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Fuatilia bei za gesi za Ethereum, na safu ya 2 ili kupunguza ada za muamala na kuokoa pesa_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Kiendelezi cha Chrome cha kukadiria gesi kinachoauni miamala ya urithi ya Aina 0 na miamala ya EIP-1559 ya Aina 2._
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Kokotoa ada za gesi katika sarafu ya nchi yako kwa aina tofauti za miamala kwenye Mtandao Mkuu, Arbitrum, na Polygon._
+- [Etherscan](https://etherscan.io/gastracker) _Kikadiriaji cha bei ya gesi ya muamala_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _Kikadiriaji cha bei ya gesi ya muamala cha chanzo wazi_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Fuatilia na ufuatilie bei za gesi za Ethereum, na L2 ili kupunguza ada za muamala na kuokoa pesa_
+- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Kiendelezi cha Chrome cha kukadiria gesi kinachoauni miamala ya urithi ya Aina ya 0 na miamala ya Aina ya 2 ya EIP-1559._
+- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Kokotoa ada za gesi katika sarafu yako ya ndani kwa aina tofauti za miamala kwenye Mtandao Mkuu, Arbitrum, na Polygon._
 
 ## Zana zinazohusiana {#related-tools}
 
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API ya kukadiria gesi inayoendeshwa na jukwaa la data la mempool la kimataifa la Blocknative_
-- [Gas Network](https://gas.network) Orakali za Gesi za Onchain. Inasaidia chaini 35+.
+- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API ya ukadiriaji wa gesi inayoendeshwa na jukwaa la data la mempool la kimataifa la Blocknative_
+- [Gas Network](https://gas.network) Oracles za Gesi za Mnyororoni. Usaidizi kwa misururu 35+. 
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
 - [Gesi ya Ethereum Imefafanuliwa](https://defiprime.com/gas)
-- [Kupunguza matumizi ya gesi ya Mikataba-erevu yako](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Mbinu za Uboreshaji wa Gesi kwa Wasanidi Programu](https://www.alchemy.com/overviews/solidity-gas-optimization)
+- [Kupunguza matumizi ya gesi ya Mikataba yako Mahiri](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
+- [Mikakati ya Matumizi Bora ya Gesi kwa Wasanidi Programu](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Nyaraka za EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 - [Rasilimali za EIP-1559 za Tim Beiko](https://hackmd.io/@timbeiko/1559-resources)
-- [EIP-1559: Kutenganisha Mbinu na Memes](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)
+- [EIP-1559: Kutenganisha Taratibu na Meme](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

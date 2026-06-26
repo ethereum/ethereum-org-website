@@ -4,6 +4,7 @@ description: Learn how to create and use a caching contract for cheaper rollup t
 author: Ori Pomerantz
 tags: ["layer 2", "caching", "storage", "scaling"]
 skill: intermediate
+breadcrumb: Caching for rollups
 published: 2022-09-15
 lang: en
 ---

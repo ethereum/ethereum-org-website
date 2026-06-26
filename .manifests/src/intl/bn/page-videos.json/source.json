@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-videos.json",
+  "generatedAt": "2026-06-16T16:14:09.176Z",
+  "rootHash": "462ff0aa24ca",
+  "tree": {
+    "contentHash": "f85e8231df7e",
+    "anchorHash": "d5c333f8d157",
+    "children": {
+      "page-videos-category-all": {
+        "contentHash": "a52ace420f21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-category-community-stories": {
+        "contentHash": "4b892042c3b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-category-how-ethereum-works": {
+        "contentHash": "060d957bd9bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-category-network-upgrades": {
+        "contentHash": "ea523b78ebfa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-category-privacy-and-security": {
+        "contentHash": "f38d325999eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-category-roadmap-and-priorities": {
+        "contentHash": "a93b68403d46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-category-scaling-and-layer-2": {
+        "contentHash": "aa88512fdcd9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-category-use-cases": {
+        "contentHash": "ff27a991e855",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-date-published": {
+        "contentHash": "34ef5966edd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-filter-clear-all": {
+        "contentHash": "29a390f9237e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-filtering-by": {
+        "contentHash": "4879962894bf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-hero-description": {
+        "contentHash": "62aab6d13cb6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-hero-title": {
+        "contentHash": "d6ee3ce6cbe5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-meta-description": {
+        "contentHash": "82ed80a48489",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-meta-title": {
+        "contentHash": "ffe8cb588a92",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-no-results": {
+        "contentHash": "a4baef16e446",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-search-placeholder": {
+        "contentHash": "c7661da99c41",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-sort-az": {
+        "contentHash": "f9f6c8502eb0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-sort-newest": {
+        "contentHash": "ffb6f5764bdd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-sort-oldest": {
+        "contentHash": "6e2ebdab3c02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-watch-with-transcript": {
+        "contentHash": "12b92910b0b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-view-transcript": {
+        "contentHash": "f5190d98549b",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-videos-category-all",
+      "page-videos-category-community-stories",
+      "page-videos-category-how-ethereum-works",
+      "page-videos-category-network-upgrades",
+      "page-videos-category-privacy-and-security",
+      "page-videos-category-roadmap-and-priorities",
+      "page-videos-category-scaling-and-layer-2",
+      "page-videos-category-use-cases",
+      "page-videos-date-published",
+      "page-videos-filter-clear-all",
+      "page-videos-filtering-by",
+      "page-videos-hero-description",
+      "page-videos-hero-title",
+      "page-videos-meta-description",
+      "page-videos-meta-title",
+      "page-videos-no-results",
+      "page-videos-search-placeholder",
+      "page-videos-sort-az",
+      "page-videos-sort-newest",
+      "page-videos-sort-oldest",
+      "page-videos-watch-with-transcript",
+      "page-videos-view-transcript"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

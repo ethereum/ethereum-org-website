@@ -4,13 +4,13 @@ description: Tools and techniques for protecting your privacy on Ethereum
 lang: en
 ---
 
-# Privacy on Ethereum {#introduction}
-
 Privacy is not only essential for personal safety, it's a cornerstone of freedom and a key [guarantor for decentralization](https://vitalik.eth.limo/general/2025/04/14/privacy.html). Privacy gives people the ability to express themselves, transact with others, and organize communities freely. But like all blockchains, Ethereum's public ledger makes privacy challenging.
 
 Ethereum is transparent by design. Every onchain action is visible to anyone who looks. While Ethereum offers pseudonymity by linking your activity to a [public key](/decentralized-identity/#public-key-cryptography) instead of a real-world identity, patterns of activity could be analyzed to reveal sensitive information and identify users.
 
 Building privacy-preserving tools into Ethereum can help people, organizations, and institutions interact securely while limiting unnecessary exposure. This makes the ecosystem safer and more practical for a wider range of use cases.
+
+<VideoWatch slug="privacy-is-existential" />
 
 ## Privacy for writes {#privacy-of-writes}
 

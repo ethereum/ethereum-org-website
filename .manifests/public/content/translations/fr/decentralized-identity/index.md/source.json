@@ -1,0 +1,1061 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/decentralized-identity/index.md",
+  "generatedAt": "2026-06-17T21:33:59.567Z",
+  "rootHash": "4181866ef405",
+  "tree": {
+    "contentHash": "5a53185b9a00",
+    "anchorHash": "ceabc37fbbb5",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "a71bc8e61322",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "b50ee471ff0b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2290d7d70dea"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8070a2fdc5e4"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:2": {
+        "contentHash": "5219f08097b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "d03b096de7b2",
+        "anchorHash": "2962aca195eb"
+      },
+      "prose:3": {
+        "contentHash": "cf806f29acd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:4": {
+        "contentHash": "acc8d4c304c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-identity": {
+        "contentHash": "962ba7caa7ca",
+        "anchorHash": "eb0932c50449",
+        "labelHash": "33aee57338be",
+        "children": {
+          "_label": {
+            "contentHash": "33aee57338be",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7d4136435a9a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "a0d323be410a",
+            "children": {
+              "attr:slug": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "7aba81977658"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "what-are-identifiers": {
+        "contentHash": "42553dff18db",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "93e37a28afbe",
+        "children": {
+          "_label": {
+            "contentHash": "93e37a28afbe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "afdcfcfc184e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "benefits-of-decentralized-identity": {
+        "contentHash": "26160b10e72d",
+        "anchorHash": "99c9521f4dc0",
+        "labelHash": "2a732c69fa18",
+        "children": {
+          "_label": {
+            "contentHash": "2a732c69fa18",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "ecce7b809536",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "c947fbe4f460",
+            "anchorHash": "d83d8b930e79"
+          },
+          "prose:3": {
+            "contentHash": "9b91b5e9ecbc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "26e7d5a92f82",
+            "anchorHash": "1473d3ad24a5"
+          },
+          "prose:4": {
+            "contentHash": "12b650ba4dab",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "decentralized-identity-use-cases": {
+        "contentHash": "7a858a55ff7a",
+        "anchorHash": "7d281e4c415d",
+        "labelHash": "88236884dc66",
+        "children": {
+          "_label": {
+            "contentHash": "88236884dc66",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b4858252cf33",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "universal-dapp-logins": {
+            "contentHash": "233a67f15493",
+            "anchorHash": "2f03ea8508b9",
+            "labelHash": "c47c7b730ce8",
+            "children": {
+              "_label": {
+                "contentHash": "c47c7b730ce8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "c650df31520d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "35987a0f9ae7",
+                "anchorHash": "05ba8199b43a"
+              },
+              "prose:3": {
+                "contentHash": "f4926c4ec3e2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "00f0637e84b3",
+                "anchorHash": "a40d1bbe54c3"
+              },
+              "prose:4": {
+                "contentHash": "d156bcd197fc",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "kyc-authentication": {
+            "contentHash": "c53e93a9ec18",
+            "anchorHash": "ad9a16483ed7",
+            "labelHash": "b69f1bd575a4",
+            "children": {
+              "_label": {
+                "contentHash": "b69f1bd575a4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "01a1b0ac66f5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "cc8a534b967e",
+                "anchorHash": "52863e1cc995"
+              },
+              "prose:2": {
+                "contentHash": "1e3c76441e98",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "voting-and-online-communities": {
+            "contentHash": "1a483771d5b1",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "ff5bab03d0ae",
+            "children": {
+              "_label": {
+                "contentHash": "ff5bab03d0ae",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a13395f7cd60",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "sybil-protection": {
+            "contentHash": "4707b8191e3b",
+            "anchorHash": "17bfbe81329c",
+            "labelHash": "0636329a6356",
+            "children": {
+              "_label": {
+                "contentHash": "0636329a6356",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "3b172155e73b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "b56eb605c007",
+                "anchorHash": "74adb95d80b2"
+              },
+              "prose:3": {
+                "contentHash": "7bb29d7b6344",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "e325db80df49",
+                "anchorHash": "fe2d61c6f91a"
+              },
+              "prose:4": {
+                "contentHash": "4c0a0bdf3f3a",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "national-and-government-id": {
+            "contentHash": "a806a11602c1",
+            "anchorHash": "d4bcf0b50961",
+            "labelHash": "f5b2ebee9af6",
+            "children": {
+              "_label": {
+                "contentHash": "f5b2ebee9af6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "942cdc4b0320",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "e8d44050873d",
+                "anchorHash": "aeb8a6ee9055"
+              },
+              "prose:3": {
+                "contentHash": "7d6fe2ecd080",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "25fa7e0770bc",
+                "anchorHash": "79d9777883e2"
+              },
+              "prose:4": {
+                "contentHash": "2188d47c6b2e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "case-study-bhutan-ndi": {
+                "contentHash": "c3e7cf00bf8a",
+                "anchorHash": "e36cb4c29378",
+                "labelHash": "126c7ad5f09c",
+                "children": {
+                  "_label": {
+                    "contentHash": "126c7ad5f09c",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:3": {
+                    "contentHash": "e612ff6d330b",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "c435ca2d3632",
+                    "anchorHash": "f322b5c6eb00"
+                  },
+                  "prose:4": {
+                    "contentHash": "53a9bf241a89",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "5e04f881fa4e",
+                    "anchorHash": "f5d6ef2aa03a"
+                  },
+                  "prose:5": {
+                    "contentHash": "69ef029902f9",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:2": {
+                    "contentHash": "0bc8c86915e2",
+                    "anchorHash": "f322b5c6eb00"
+                  },
+                  "prose:6": {
+                    "contentHash": "c5d1b9275718",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:3",
+                  "link:0",
+                  "prose:4",
+                  "link:1",
+                  "prose:5",
+                  "link:2",
+                  "prose:6"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4",
+              "case-study-bhutan-ndi"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "universal-dapp-logins",
+          "kyc-authentication",
+          "voting-and-online-communities",
+          "sybil-protection",
+          "national-and-government-id"
+        ]
+      },
+      "what-are-attestations": {
+        "contentHash": "7536dcb61a1d",
+        "anchorHash": "072fad5598f2",
+        "labelHash": "b4d9fd8b478d",
+        "children": {
+          "_label": {
+            "contentHash": "b4d9fd8b478d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "080a1648da3a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "what-are-decentralized-identifiers": {
+            "contentHash": "b1bf814056dc",
+            "anchorHash": "bd951410da68",
+            "labelHash": "02d44ab2aef0",
+            "children": {
+              "_label": {
+                "contentHash": "02d44ab2aef0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "186fbbf66293",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "6ec05d697fd9",
+                "anchorHash": "aff25f04abbe"
+              },
+              "prose:5": {
+                "contentHash": "1bba7446510b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "99cf6497afaa",
+                "anchorHash": "312433dbc1b2"
+              },
+              "prose:6": {
+                "contentHash": "a6f8b2a1272e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "27f2b0c74fd4",
+                "anchorHash": "e53645ddefdc"
+              },
+              "prose:7": {
+                "contentHash": "89644b300698",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "7730c98b3086",
+                "anchorHash": "5ccf06df225b"
+              },
+              "prose:8": {
+                "contentHash": "d2294686337c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3",
+              "prose:8"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "what-are-decentralized-identifiers"
+        ]
+      },
+      "what-makes-decentralized-identifiers-possible": {
+        "contentHash": "5d2021d928e4",
+        "anchorHash": "07fe456b17c4",
+        "labelHash": "1c24e3888e31",
+        "children": {
+          "_label": {
+            "contentHash": "1c24e3888e31",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "public-key-cryptography": {
+            "contentHash": "52cbd432d8b4",
+            "anchorHash": "b8bd18f39bbd",
+            "labelHash": "e33feb62f13c",
+            "children": {
+              "_label": {
+                "contentHash": "e33feb62f13c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "76645e2202e4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "f569a86d3c2c",
+                "anchorHash": "e64ca79e663b"
+              },
+              "prose:5": {
+                "contentHash": "6201111b83a0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "d7cd482cb958",
+                "anchorHash": "cdd37379280b"
+              },
+              "prose:6": {
+                "contentHash": "c3cb107e7be7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "e06554818e90",
+                "anchorHash": "b59555c61441"
+              },
+              "prose:7": {
+                "contentHash": "fce6b078340d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "424d37e1c358",
+                "anchorHash": "9b2c8e73029f"
+              },
+              "prose:8": {
+                "contentHash": "30d6a6dd2421",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3",
+              "prose:8"
+            ]
+          },
+          "decentralized-datastores": {
+            "contentHash": "2decc8091484",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "0fbbffcb38a3",
+            "children": {
+              "_label": {
+                "contentHash": "0fbbffcb38a3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a2c3c5f01419",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "public-key-cryptography",
+          "decentralized-datastores"
+        ]
+      },
+      "how-decentralized-identifiers-and-attestations-enable-decentralized-identity": {
+        "contentHash": "a50834182679",
+        "anchorHash": "98e5d223916a",
+        "labelHash": "7ae23478ef43",
+        "children": {
+          "_label": {
+            "contentHash": "7ae23478ef43",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "6753fbfb792e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7c2a77c26ebf",
+            "anchorHash": "eb64874b4d6b"
+          },
+          "prose:2": {
+            "contentHash": "0c20b6c22504",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "types-of-attestations-in-decentralized-identity": {
+        "contentHash": "b663354ed5bc",
+        "anchorHash": "00e2ed7300d0",
+        "labelHash": "d20d9a7460fd",
+        "children": {
+          "_label": {
+            "contentHash": "d20d9a7460fd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f7192e2edc13",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "offchain-attestations": {
+            "contentHash": "815d3a5807c0",
+            "anchorHash": "f4a55821841a",
+            "labelHash": "80a977a28414",
+            "children": {
+              "_label": {
+                "contentHash": "80a977a28414",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "c44999ee42a8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "e52453bc22da",
+                "anchorHash": "958d31f5396c"
+              },
+              "prose:2": {
+                "contentHash": "44fe29ebcb89",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "offchain-attestations-with-persistent-access": {
+            "contentHash": "a90e4f62f101",
+            "anchorHash": "cc46abf85cd3",
+            "labelHash": "645c034b82f6",
+            "children": {
+              "_label": {
+                "contentHash": "645c034b82f6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "d88056e61c97",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "cf373b88b197",
+                "anchorHash": "5f0c8badeb5e"
+              },
+              "prose:3": {
+                "contentHash": "0e059a773bd4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "d04b98f48e8f",
+                "anchorHash": "3d22b6d7e032"
+              },
+              "prose:4": {
+                "contentHash": "dff64867e3c2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "onchain-attestations": {
+            "contentHash": "1c7c96e26b68",
+            "anchorHash": "f918b1c4c90a",
+            "labelHash": "5e5cbb8abab8",
+            "children": {
+              "_label": {
+                "contentHash": "5e5cbb8abab8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "930ac8eb66da",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "81fbd2f198c9",
+                "anchorHash": "89d756280b47"
+              },
+              "prose:2": {
+                "contentHash": "ee59a17b286d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "soulbound": {
+            "contentHash": "9a833fc0f8f1",
+            "anchorHash": "50aee713235e",
+            "labelHash": "4e317ce84796",
+            "children": {
+              "_label": {
+                "contentHash": "4e317ce84796",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "68dd05b71685",
+                "anchorHash": "67fe0e1ffb85"
+              },
+              "prose:2": {
+                "contentHash": "32ebb1abcc1c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "86220ffe59ee",
+                "anchorHash": "05ba8199b43a"
+              },
+              "prose:3": {
+                "contentHash": "bf7819ddaec2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "link:0",
+              "prose:2",
+              "link:1",
+              "prose:3"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "offchain-attestations",
+          "offchain-attestations-with-persistent-access",
+          "onchain-attestations",
+          "soulbound"
+        ]
+      },
+      "use-decentralized-identity": {
+        "contentHash": "505bc92e2aaa",
+        "anchorHash": "843ce913c01b",
+        "labelHash": "14252cfd262b",
+        "children": {
+          "_label": {
+            "contentHash": "14252cfd262b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "f157ea1f5618",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "76aaeb29b716",
+            "anchorHash": "23a86a4cac4f"
+          },
+          "prose:7": {
+            "contentHash": "e0bbd77558b2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "35f1462d5159",
+            "anchorHash": "a40d1bbe54c3"
+          },
+          "prose:8": {
+            "contentHash": "0d83d8e117d4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "c76078133f26",
+            "anchorHash": "9fe5d377662d"
+          },
+          "prose:9": {
+            "contentHash": "7819d39f0fc1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "cd267ba2ce11",
+            "anchorHash": "326a7dab4da0"
+          },
+          "prose:10": {
+            "contentHash": "f6b77662aeec",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "425da9b6c8b1",
+            "anchorHash": "78653604671a"
+          },
+          "prose:11": {
+            "contentHash": "c1154c277559",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "0c1ff3017b05",
+            "anchorHash": "00a799595fd6"
+          },
+          "prose:12": {
+            "contentHash": "bd5a10f9dcf0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5",
+          "prose:12"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "d3f5c27abe9a",
+        "anchorHash": "74debacb9cdc",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "articles": {
+            "contentHash": "264c7846858a",
+            "anchorHash": "5538890e1e55",
+            "labelHash": "b14ac78a46e9",
+            "children": {
+              "_label": {
+                "contentHash": "b14ac78a46e9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d403f252fb05",
+                "anchorHash": "81deb2e9991e"
+              },
+              "prose:6": {
+                "contentHash": "b03db2fd733d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "d32fdd4a1a6d",
+                "anchorHash": "7e142bf446b9"
+              },
+              "prose:7": {
+                "contentHash": "44ebf6c93064",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "bc6bb694a327",
+                "anchorHash": "e480c795417a"
+              },
+              "prose:8": {
+                "contentHash": "ba7c5cb9666b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "52a3303110e6",
+                "anchorHash": "becb7c873b1f"
+              },
+              "prose:9": {
+                "contentHash": "3e59208ebe19",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "ded81b3323b3",
+                "anchorHash": "f6adfb0e7fe0"
+              },
+              "prose:10": {
+                "contentHash": "d2b4c50ff2fe",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "link:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4",
+              "prose:10"
+            ]
+          },
+          "videos": {
+            "contentHash": "35c297849a3f",
+            "anchorHash": "c3826ab9dd0a",
+            "labelHash": "c9a9639463c2",
+            "children": {
+              "_label": {
+                "contentHash": "c9a9639463c2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "8bc268b74d26",
+                "anchorHash": "c417cd770df4"
+              },
+              "prose:6": {
+                "contentHash": "1dad6187d950",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "c7684bea1813",
+                "anchorHash": "92d93524a476"
+              },
+              "prose:7": {
+                "contentHash": "869ce956ff99",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "87821d1fe288",
+                "anchorHash": "7ceec3a20225"
+              },
+              "prose:8": {
+                "contentHash": "8381585201c2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "e21b3c72eaae",
+                "anchorHash": "6b5741465e8e"
+              },
+              "prose:9": {
+                "contentHash": "cd9dba6df6e2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "7d07849b69f9",
+                "anchorHash": "fab8cab07599"
+              },
+              "prose:10": {
+                "contentHash": "789e3b66ad02",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "link:0",
+              "prose:6",
+              "link:1",
+              "prose:7",
+              "link:2",
+              "prose:8",
+              "link:3",
+              "prose:9",
+              "link:4",
+              "prose:10"
+            ]
+          },
+          "communities": {
+            "contentHash": "46c7632ca13b",
+            "anchorHash": "68c34cf4a9ca",
+            "labelHash": "c864f329f5dd",
+            "children": {
+              "_label": {
+                "contentHash": "c864f329f5dd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:4": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "88e2c8ab89e2",
+                "anchorHash": "6b93d8478e93"
+              },
+              "prose:5": {
+                "contentHash": "edac4a910ee9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "27195d4a2ebc",
+                "anchorHash": "4862fb94317d"
+              },
+              "prose:6": {
+                "contentHash": "fe75b72a664c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "bac4f9b59c1f",
+                "anchorHash": "5b902e3940c2"
+              },
+              "prose:7": {
+                "contentHash": "bc26f72f3e74",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "228466722c4e",
+                "anchorHash": "a03052eaf691"
+              },
+              "prose:8": {
+                "contentHash": "801518f27f3f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3",
+              "prose:8"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "articles",
+          "videos",
+          "communities"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:sidebarDepth",
+      "frontmatter:image",
+      "frontmatter:summaryPoints",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "what-is-identity",
+      "what-are-identifiers",
+      "benefits-of-decentralized-identity",
+      "decentralized-identity-use-cases",
+      "what-are-attestations",
+      "what-makes-decentralized-identifiers-possible",
+      "how-decentralized-identifiers-and-attestations-enable-decentralized-identity",
+      "types-of-attestations-in-decentralized-identity",
+      "use-decentralized-identity",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

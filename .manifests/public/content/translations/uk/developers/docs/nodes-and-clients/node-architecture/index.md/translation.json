@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-06-17T22:08:36.319Z",
+  "englishManifestHash": "d90732718690",
+  "placeholderOrder": [
+    "LINK-327594",
+    "LINK-b5d0ee",
+    "LINK-a6dbd2",
+    "LINK-1baecb",
+    "LINK-2655ce",
+    "LINK-b5d0ee",
+    "IMAGE-f608cf",
+    "LINK-79c4e4",
+    "LINK-6c4cfe",
+    "LINK-56ef32",
+    "LINK-5efdf5",
+    "LINK-cbeb10",
+    "LINK-cbf05a",
+    "LINK-6cba2e",
+    "LINK-5e1d6e",
+    "LINK-a95e55",
+    "LINK-ad2081"
+  ],
+  "placeholderMap": {
+    "IMAGE-f608cf": {
+      "type": "image",
+      "values": {
+        "path": "node-architecture-text-background.png"
+      }
+    },
+    "LINK-327594": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    },
+    "LINK-b5d0ee": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#consensus-clients"
+      }
+    },
+    "LINK-a6dbd2": {
+      "type": "link",
+      "values": {
+        "url": "#validators"
+      }
+    },
+    "LINK-1baecb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-79c4e4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-56ef32": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm"
+      }
+    },
+    "LINK-5efdf5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc"
+      }
+    },
+    "LINK-cbeb10": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/"
+      }
+    },
+    "LINK-cbf05a": {
+      "type": "link",
+      "values": {
+        "url": "https://web3py.readthedocs.io/en/v5/"
+      }
+    },
+    "LINK-6cba2e": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-5e1d6e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    },
+    "LINK-a95e55": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/block-proposal"
+      }
+    },
+    "LINK-ad2081": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:08:36.319Z",
+      "status": "success"
+    }
+  }
+}

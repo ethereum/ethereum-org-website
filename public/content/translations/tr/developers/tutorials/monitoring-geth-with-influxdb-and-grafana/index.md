@@ -1,24 +1,25 @@
 ---
 title: "InfluxDB ve Grafana ile Geth'i İzleme"
-description: "Performansı izlemek ve sorunları belirlemek için InfluxDB ve Grafana'yı kullanarak Geth düğümünüz için izleme ayarlayın."
+description: "Performansı izlemek ve sorunları belirlemek için InfluxDB ve Grafana kullanarak Geth düğümünüz için izleme ayarlayın."
 author: "Mario Havel"
-tags: [ "istemciler", "düğümler" ]
+tags: ["istemciler", "düğümler"]
 skill: intermediate
+breadcrumb: "Geth'i İzleme"
 lang: tr
 published: 2021-01-13
 ---
 
-Bu öğretici, Geth düğümünüzün performansını daha iyi anlayabilmeniz ve olası sorunları belirleyebilmeniz için izleme kurmanıza yardımcı olacaktır.
+Bu eğitim, performansını daha iyi anlayabilmeniz ve olası sorunları belirleyebilmeniz için Geth düğümünüz için izleme ayarlamanıza yardımcı olacaktır.
 
 ## Ön Koşullar {#prerequisites}
 
 - Zaten bir Geth örneği çalıştırıyor olmalısınız.
-- Adımların ve örneklerin çoğu Linux ortamı içindir, temel terminal bilgisi yardımcı olacaktır.
-- Geth'in ölçüm paketine dair bu genel bakış videosuna göz atın: [Bir Ethereum altyapısını izleme - Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
+- Adımların ve örneklerin çoğu Linux ortamı içindir, temel terminal bilgisi faydalı olacaktır.
+- Geth'in metrik paketine genel bir bakış sunan bu videoya göz atın: [Péter Szilágyi tarafından Ethereum altyapısını izleme](https://www.youtube.com/watch?v=cOBab8IJMYI).
 
 ## İzleme yığını {#monitoring-stack}
 
-Bir Ethereum istemcisi, kronolojik bir veritabanı şeklinde okunabilecek çok sayıda veri toplar. İzlemeyi kolaylaştırmak için bunu veri görselleştirme yazılımına aktarabilirsiniz. Birden fazla seçenek mevcuttur:
+Bir Ethereum istemcisi, kronolojik bir veritabanı biçiminde okunabilen çok sayıda veri toplar. İzlemeyi kolaylaştırmak için bunu veri görselleştirme yazılımına besleyebilirsiniz. Birden fazla seçenek mevcuttur:
 
 - [Prometheus](https://prometheus.io/) (çekme modeli)
 - [InfluxDB](https://www.influxdata.com/get-influxdb/) (itme modeli)
@@ -27,13 +28,13 @@ Bir Ethereum istemcisi, kronolojik bir veritabanı şeklinde okunabilecek çok s
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-Ayrıca InfluxDB ve Grafana ile önceden yapılandırılmış bir seçenek olan [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter) da vardır.
+Ayrıca InfluxDB ve Grafana ile önceden yapılandırılmış bir seçenek olan [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter) da bulunmaktadır.
 
-Bu öğreticide, Geth istemcinizi bir veritabanı oluşturmak için InfluxDB'ye ve verilerin grafik görselleştirmesini oluşturmak için Grafana'ya veri gönderecek şekilde ayarlayacağız. Bunu manuel olarak yapmak; süreci daha iyi anlamanıza, değiştirmenize ve farklı ortamlarda dağıtmanıza yardımcı olacaktır.
+Bu eğitimde, bir veritabanı oluşturmak için verileri InfluxDB'ye ve verilerin grafiksel bir görselleştirmesini oluşturmak için Grafana'ya itecek şekilde Geth istemcinizi ayarlayacağız. Bunu manuel olarak yapmak, süreci daha iyi anlamanıza, değiştirmenize ve farklı ortamlarda dağıtmanıza yardımcı olacaktır.
 
-## InfluxDB'yi Kurma {#setting-up-influxdb}
+## InfluxDB'yi Ayarlama {#setting-up-influxdb}
 
-Öncelikle, InfluxDB'yi indirip kuralım. Çeşitli indirme seçenekleri [Influxdata yayın sayfasında](https://portal.influxdata.com/downloads/) bulunabilir. Ortamınıza uygun olanı seçin.
+İlk olarak, InfluxDB'yi indirip kuralım. Çeşitli indirme seçenekleri [Influxdata sürüm sayfasında](https://portal.influxdata.com/downloads/) bulunabilir. Ortamınıza uygun olanı seçin.
 Ayrıca bir [depodan](https://repos.influxdata.com/) da kurabilirsiniz. Örneğin Debian tabanlı bir dağıtımda:
 
 ```
@@ -47,27 +48,27 @@ sudo systemctl start influxdb
 sudo apt install influxdb-client
 ```
 
-InfluxDB'yi başarıyla yükledikten sonra, arka planda çalıştığından emin olun. Varsayılan olarak `localhost:8086` adresinden erişilebilir.
-`influx` istemcisini kullanmadan önce, yönetici ayrıcalıklarına sahip yeni bir kullanıcı oluşturmanız gerekir. Bu kullanıcı, üst düzey yönetim, veritabanları ve kullanıcılar oluşturmaya hizmet edecektir.
+InfluxDB'yi başarıyla kurduktan sonra, arka planda çalıştığından emin olun. Varsayılan olarak, `localhost:8086` adresinden ulaşılabilir.
+`influx` istemcisini kullanmadan önce, yönetici ayrıcalıklarına sahip yeni bir kullanıcı oluşturmalısınız. Bu kullanıcı, veritabanları ve kullanıcılar oluşturmak gibi üst düzey yönetim işlemleri için hizmet edecektir.
 
 ```
 curl -XPOST "http://localhost:8086/query" --data-urlencode "q=CREATE USER username WITH PASSWORD 'password' WITH ALL PRIVILEGES"
 ```
 
-Artık bu kullanıcıyla [InfluxDB kabuğuna](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) girmek için `influx` istemcisini kullanabilirsiniz.
+Artık bu kullanıcıyla [InfluxDB kabuğuna](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) girmek için influx istemcisini kullanabilirsiniz.
 
 ```
 influx -username 'username' -password 'password'
 ```
 
-Kabuğunda InfluxDB ile doğrudan iletişim kurarak, Geth ölçümleri için veritabanı ve kullanıcı oluşturabilirsiniz.
+Kabuğunda InfluxDB ile doğrudan iletişim kurarak, geth metrikleri için veritabanı ve kullanıcı oluşturabilirsiniz.
 
 ```
 create database geth
 create user geth with password choosepassword
 ```
 
-Oluşturulan girdileri şöyle doğrulayın:
+Oluşturulan girdileri şununla doğrulayın:
 
 ```
 show databases
@@ -80,12 +81,12 @@ InfluxDB kabuğundan çıkın.
 exit
 ```
 
-InfluxDB, Geth'ten gelen ölçümleri depolamak için çalışıyor ve yapılandırıldı.
+InfluxDB çalışıyor ve Geth'ten gelen metrikleri depolamak için yapılandırıldı.
 
 ## Geth'i Hazırlama {#preparing-geth}
 
-Veritabanını kurduktan sonra Geth'te ölçüm toplamayı etkinleştirmemiz gerekiyor. `geth --help` içindeki `METRICS AND STATS OPTIONS` bölümüne dikkat edin. Orada birden fazla seçenek bulunabilir, bu durumda Geth'in verileri InfluxDB'ye göndermesini istiyoruz.
-Temel kurulum, InfluxDB'nin erişilebilir olduğu uç noktayı ve veritabanı için kimlik doğrulamasını belirtir.
+Veritabanını kurduktan sonra, Geth'te metrik toplamayı etkinleştirmemiz gerekiyor. `geth --help` içindeki `METRICS AND STATS OPTIONS` kısmına dikkat edin. Orada birden fazla seçenek bulunabilir, bu durumda Geth'in verileri InfluxDB'ye itmesini istiyoruz.
+Temel kurulum, InfluxDB'nin ulaşılabileceği uç noktayı ve veritabanı için kimlik doğrulamayı belirtir.
 
 ```
 geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:8086" --metrics.influxdb.username "geth" --metrics.influxdb.password "chosenpassword"
@@ -93,16 +94,16 @@ geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:80
 
 Bu bayraklar, istemciyi başlatan bir komuta eklenebilir veya yapılandırma dosyasına kaydedilebilir.
 
-Geth'in verileri başarıyla gönderdiğini, örneğin veritabanındaki ölçümleri listeleyerek doğrulayabilirsiniz. InfluxDB kabuğunda:
+Örneğin veritabanındaki metrikleri listeleyerek Geth'in verileri başarıyla ittiğini doğrulayabilirsiniz. InfluxDB kabuğunda:
 
 ```
 use geth
 show measurements
 ```
 
-## Grafana'yı Kurma {#setting-up-grafana}
+## Grafana'yı Ayarlama {#setting-up-grafana}
 
-Bir sonraki adım, verileri grafiksel olarak yorumlayacak olan Grafana'yı kurmaktır. Grafana belgelerinde ortamınız için kurulum sürecini takip edin. Başka türlü istemiyorsanız, OSS sürümünü yüklediğinizden emin olun.
+Sonraki adım, verileri grafiksel olarak yorumlayacak olan Grafana'yı kurmaktır. Grafana belgelerinde ortamınız için kurulum sürecini izleyin. Aksi bir tercihiniz yoksa OSS sürümünü kurduğunuzdan emin olun.
 Depo kullanan Debian dağıtımları için örnek kurulum adımları:
 
 ```
@@ -114,38 +115,38 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-Grafana'yı çalıştırdığınızda, `localhost:3000` adresinden erişilebilir olmalıdır.
-Bu yola erişmek için tercih ettiğiniz tarayıcıyı kullanın, ardından varsayılan kimlik bilgileriyle (kullanıcı: `admin` ve şifre: `admin`) oturum açın. İstendiğinde, varsayılan şifreyi değiştirin ve kaydedin.
+Grafana'yı çalıştırdığınızda, `localhost:3000` adresinden ulaşılabilir olmalıdır.
+Bu yola erişmek için tercih ettiğiniz tarayıcıyı kullanın, ardından varsayılan kimlik bilgileriyle (kullanıcı: `admin` ve parola: `admin`) giriş yapın. İstendiğinde, varsayılan parolayı değiştirin ve kaydedin.
 
-![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 1)](./grafana1.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 1)](./grafana1.png)
 
-Grafana ana sayfasına yönlendirileceksiniz. Öncelikle, kaynak verilerinizi ayarlayın. Sol çubuktaki yapılandırma simgesine tıklayın ve "Data sources" (Veri kaynakları) seçeneğini seçin.
+Grafana ana sayfasına yönlendirileceksiniz. İlk olarak, kaynak verilerinizi ayarlayın. Sol çubuktaki yapılandırma simgesine tıklayın ve "Data sources" (Veri kaynakları) seçeneğini seçin.
 
-![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 2)](./grafana2.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 2)](./grafana2.png)
 
-Henüz oluşturulmuş veri kaynağı yok, birini tanımlamak için "Add data source" (Veri kaynağı ekle) seçeneğine tıklayın.
+Henüz oluşturulmuş bir veri kaynağı yok, bir tane tanımlamak için "Add data source" (Veri kaynağı ekle) seçeneğine tıklayın.
 
-![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 3)](./grafana3.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 3)](./grafana3.png)
 
-Bu kurulum için "InfluxDB"yi seçin ve devam edin.
+Bu kurulum için "InfluxDB"yi seçin ve ilerleyin.
 
-![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 4)](./grafana4.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 4)](./grafana4.png)
 
-Araçları aynı makinede çalıştırıyorsanız, veri kaynağı yapılandırması oldukça basittir. Veritabanına erişmek için InfluxDB adresini ve ayrıntılarını ayarlamanız gerekir. Aşağıdaki resme başvurun.
+Araçları aynı makinede çalıştırıyorsanız veri kaynağı yapılandırması oldukça basittir. InfluxDB adresini ve veritabanına erişim ayrıntılarını ayarlamanız gerekir. Aşağıdaki resme bakın.
 
-![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 5)](./grafana5.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 5)](./grafana5.png)
 
-Her şey tamamlandıysa ve InfluxDB erişilebilir durumdaysa, "Save and test" (Kaydet ve test et) seçeneğine tıklayın ve onayın görünmesini bekleyin.
+Her şey tamamsa ve InfluxDB'ye ulaşılabiliyorsa, "Save and test" (Kaydet ve test et) seçeneğine tıklayın ve onayın açılmasını bekleyin.
 
-![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 6)](./grafana6.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 6)](./grafana6.png)
 
-Grafana artık InfluxDB'den veri okumak üzere ayarlanmıştır. Şimdi, onu yorumlayacak ve gösterecek bir gösterge paneli oluşturmanız gerekiyor. Gösterge paneli özellikleri, herkes tarafından oluşturulabilen ve kolayca içe aktarılabilen JSON dosyalarında kodlanmıştır. Sol çubukta, "Create and Import" (Oluştur ve İçe Aktar) seçeneğine tıklayın.
+Grafana artık InfluxDB'den veri okumak için ayarlandı. Şimdi bunu yorumlayacak ve görüntüleyecek bir pano (dashboard) oluşturmanız gerekiyor. Pano özellikleri, herkes tarafından oluşturulabilen ve kolayca içe aktarılabilen JSON dosyalarında kodlanmıştır. Sol çubukta "Create and Import" (Oluştur ve İçe Aktar) seçeneğine tıklayın.
 
-![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 7)](./grafana7.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 7)](./grafana7.png)
 
-Bir Geth izleme gösterge paneli için [bu gösterge panelinin](https://grafana.com/grafana/dashboards/13877/) kimliğini kopyalayın ve Grafana'daki "Import page" (İçe Aktarma sayfası) bölümüne yapıştırın. Gösterge panelini kaydettikten sonra şöyle görünmelidir:
+Bir Geth izleme panosu için, [bu panonun](https://grafana.com/grafana/dashboards/13877/) kimliğini (ID) kopyalayın ve Grafana'daki "Import page" (İçe aktarma sayfası) içine yapıştırın. Panoyu kaydettikten sonra şöyle görünmelidir:
 
-![Geth izleme için Grafana kontrol paneli ekran görüntüsü (panel 8)](./grafana8.png)
+![Grafana dashboard screenshot for Geth monitoring (panel 8)](./grafana8.png)
 
-Gösterge panellerinizi değiştirebilirsiniz. Her panel düzenlenebilir, taşınabilir, kaldırılabilir veya eklenebilir. Yapılandırmalarınızı değiştirebilirsiniz. Size kalmış! Gösterge panellerinin nasıl çalıştığı hakkında daha fazla bilgi edinmek için [Grafana'nın dökümantasyonuna](https://grafana.com/docs/grafana/latest/dashboards/) başvurun.
-[Uyarılar](https://grafana.com/docs/grafana/latest/alerting/) da ilginizi çekebilir. Bu, ölçümler belirli değerlere ulaştığında uyarı bildirimleri ayarlamanıza olanak tanır. Çeşitli iletişim kanalları desteklenir.
+Panolarınızı değiştirebilirsiniz. Her panel düzenlenebilir, taşınabilir, kaldırılabilir veya eklenebilir. Yapılandırmalarınızı değiştirebilirsiniz. Bu size kalmış! Panoların nasıl çalıştığı hakkında daha fazla bilgi edinmek için [Grafana'nın belgelerine](https://grafana.com/docs/grafana/latest/dashboards/) başvurun.
+Ayrıca [Uyarılar (Alerting)](https://grafana.com/docs/grafana/latest/alerting/) ile de ilgilenebilirsiniz. Bu, metrikler belirli değerlere ulaştığında uyarı bildirimleri ayarlamanıza olanak tanır. Çeşitli iletişim kanalları desteklenmektedir.

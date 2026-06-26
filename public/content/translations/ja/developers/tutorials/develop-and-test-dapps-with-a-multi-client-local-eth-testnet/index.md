@@ -1,57 +1,58 @@
 ---
-title: "ローカルのマルチクライアントテストネットでdAppを開発・テストする方法"
-description: "このガイドでは、まずマルチクライアントのローカルイーサリアムテストネットをインスタンス化して設定する方法を説明し、次にそのテストネットを使用してdAppをデプロイ&テストします。"
-author: "Tedi Mitiku"
+title: "ローカルのマルチクライアント・テストネットでdappを開発およびテストする方法"
+description: "このガイドでは、まずマルチクライアントのローカルなイーサリアムテストネットをインスタンス化して構成する方法を説明し、その後、そのテストネットを使用してdappをデプロイおよびテストします。"
+author: "テディ・ミティク"
 tags:
   [
     "クライアント",
     "ノード",
-    "スマートコントラクト",
-    "構成可能性",
-    "コンセンサスレイヤー",
+    "スマート・コントラクト",
+    "コンポーザビリティ",
+    "コンセンサス・レイヤー",
     "実行レイヤー",
-    "テスト"
+    "テスト",
   ]
 skill: intermediate
+breadcrumb: "マルチクライアント・テストネット"
 lang: ja
 published: 2023-04-11
 ---
 
 ## はじめに {#introduction}
 
-このガイドでは、設定可能なローカルイーサリアムテストネットのインスタンス化、そこへのスマートコントラクトのデプロイ、およびdAppに対するテストを実行するためのテストネットの使用というプロセスを順を追って説明します。 このガイドは、ライブのテストネットやメインネットにデプロイする前に、さまざまなネットワーク構成に対してdAppをローカルで開発・テストしたいdApp開発者向けに設計されています。
+このガイドでは、構成可能なローカルのイーサリアムテストネットをインスタンス化し、そこにスマート・コントラクトをデプロイして、テストネットを使用して分散型アプリケーション (dapp) のテストを実行するプロセスを説明します。このガイドは、ライブのテストネットやメインネットにデプロイする前に、さまざまなネットワーク構成に対してローカルでdappを開発およびテストしたいdapp開発者を対象としています。
 
-このガイドでは、次のことを行います。
+このガイドでは、以下のことを行います。
 
-- [Kurtosis](https://www.kurtosis.com/)を使用して、[`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package)でローカルイーサリアムテストネットをインスタンス化する
-- Hardhat dApp開発環境をローカルテストネットに接続し、dAppをコンパイル、デプロイ、テストする、そして
-- ノード数や特定のEL/CLクライアントのペアリングなどのパラメータを含むローカルテストネットを設定し、さまざまなネットワーク構成に対する開発およびテストのワークフローを可能にする。
+- [Kurtosis](https://www.kurtosis.com/)を使用して、[`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package)でローカルのイーサリアムテストネットをインスタンス化する。
+- Hardhatのdapp開発環境をローカルのテストネットに接続し、dappをコンパイル、デプロイ、およびテストする。
+- ノード数や特定のEL/CLクライアントのペアリングなどのパラメーターを含め、ローカルのテストネットを構成し、さまざまなネットワーク構成に対する開発およびテストのワークフローを可能にする。
 
 ### Kurtosisとは？ {#what-is-kurtosis}
 
-[Kurtosis](https://www.kurtosis.com/)は、マルチコンテナのテスト環境を構成するために設計された、構成可能なビルドシステムです。 これにより、開発者は、ブロックチェーンテストネットなどの動的なセットアップロジックを必要とする再現可能な環境を作成できます。
+[Kurtosis](https://www.kurtosis.com/)は、マルチコンテナのテスト環境を構成するために設計されたコンポーザブルなビルドシステムです。特に、ブロックチェーンのテストネットなど、動的なセットアップロジックを必要とする再現可能な環境を開発者が作成できるようにします。
 
-このガイドでは、Kurtosis eth-network-packageが、[`geth`](https://geth.ethereum.org/)実行レイヤー(EL)クライアント、および[`teku`](https://consensys.io/teku)、[`lighthouse`](https://lighthouse.sigmaprime.io/)、[`lodestar`](https://lodestar.chainsafe.io/)コンセンサスレイヤー(CL)クライアントをサポートするローカルイーサリアムテストネットを起動します。 このパッケージは、Hardhat Network、Ganache、Anvilのようなフレームワークのネットワークに代わる、設定可能で構成可能な代替手段として機能します。 Kurtosisは、開発者が使用するテストネットに対してより優れた制御と柔軟性を提供します。これは、[イーサリアム・ファウンデーションがマージのテストにKurtosisを使用した](https://www.kurtosis.com/blog/testing-the-ethereum-merge)主な理由であり、ネットワークのアップグレードをテストするためにKurtosisを使い続けている理由でもあります。
+このガイドでは、Kurtosisのeth-network-packageを使用して、[`geth`](https://geth.ethereum.org/)実行レイヤー (EL) クライアント、および[`teku`](https://consensys.io/teku)、[`lighthouse`](https://lighthouse.sigmaprime.io/)、[`lodestar`](https://lodestar.chainsafe.io/)コンセンサス・レイヤー (CL) クライアントをサポートするローカルのイーサリアムテストネットを立ち上げます。このパッケージは、Hardhat Network、Ganache、Anvilなどのフレームワークにおけるネットワークの、構成可能でコンポーザブルな代替手段として機能します。Kurtosisは、使用するテストネットに対するより優れた制御と柔軟性を開発者に提供します。これが、[イーサリアム財団がマージのテストにKurtosisを使用し](https://www.kurtosis.com/blog/testing-the-ethereum-merge)、ネットワークアップグレードのテストに引き続き使用している主な理由です。
 
 ## Kurtosisのセットアップ {#setting-up-kurtosis}
 
-続行する前に、次のものがあることを確認してください。
+先に進む前に、以下の準備ができていることを確認してください。
 
-- ローカルマシンに[Dockerエンジンをインストールして起動](https://docs.kurtosis.com/install/#i-install--start-docker)していること
-- [Kurtosis CLIをインストール](https://docs.kurtosis.com/install#ii-install-the-cli)していること(CLIがすでにインストールされている場合は、最新リリースにアップグレードしていること)
-- [Node.js](https://nodejs.org/en)、[yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)、および[npx](https://www.npmjs.com/package/npx) (dApp環境用) をインストールしていること
+- ローカルマシンに[Dockerエンジンをインストールして起動している](https://docs.kurtosis.com/install/#i-install--start-docker)こと
+- [Kurtosis CLIをインストールしている](https://docs.kurtosis.com/install#ii-install-the-cli)こと (すでにCLIがインストールされている場合は、最新リリースにアップグレードしていること)
+- [Node.js](https://nodejs.org/en)、[yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)、および[npx](https://www.npmjs.com/package/npx)をインストールしていること (dapp環境用)
 
-## ローカルイーサリアムテストネットのインスタンス化 {#instantiate-testnet}
+## ローカルのイーサリアムテストネットのインスタンス化 {#instantiate-testnet}
 
-ローカルイーサリアムテストネットを起動するには、次を実行します。
+ローカルのイーサリアムテストネットを立ち上げるには、以下を実行します。
 
 ```python
 kurtosis --enclave local-eth-testnet run github.com/kurtosis-tech/eth-network-package
 ```
 
-注: このコマンドは、`--enclave`フラグを使用して、ネットワークに「local-eth-testnet」という名前を付けます。
+注: このコマンドは、`--enclave`フラグを使用してネットワークに「local-eth-testnet」という名前を付けます。
 
-Kurtosisは、指示を解釈、検証、そして実行する際に、内部で行われている手順を出力します。 最後に、次のような出力が表示されるはずです。
+Kurtosisは、命令を解釈、検証、実行する際に、内部で実行している手順を出力します。最後に、以下のような出力が表示されるはずです。
 
 ```python
 INFO[2023-04-04T18:09:44-04:00] ======================================================
@@ -91,46 +92,46 @@ d7b802f623e8   el-client-0                                    engine-rpc: 8551/t
 
 ```
 
-おめでとうございます！ Kurtosisを使用して、CL (`lighthouse`)とELクライアント(`geth`)を持つローカルイーサリアムテストネットをDocker経由でインスタンス化しました。
+おめでとうございます！Kurtosisを使用して、Docker上でCL (`lighthouse`) およびELクライアント (`geth`) を備えたローカルのイーサリアムテストネットをインスタンス化しました。
 
 ### レビュー {#review-instantiate-testnet}
 
-このセクションでは、Kurtosisに[GitHubでリモートホストされている`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package)を使用して、Kurtosis [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/)内にローカルイーサリアムテストネットを起動するよう指示するコマンドを実行しました。 エンクレーブ内には、「ファイルアーティファクト」と「ユーザーサービス」の両方があります。
+このセクションでは、[GitHub上でリモートホストされている`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package)を使用して、Kurtosisの[エンクレーブ (Enclave)](https://docs.kurtosis.com/advanced-concepts/enclaves/)内にローカルのイーサリアムテストネットを立ち上げるようKurtosisに指示するコマンドを実行しました。エンクレーブ内には、「ファイルアーティファクト (file artifacts)」と「ユーザーサービス (user services)」の両方があります。
 
-エンクレーブ内の[ファイルアーティファクト](https://docs.kurtosis.com/advanced-concepts/files-artifacts/)には、ELおよびCLクライアントをブートストラップするために生成および利用されたすべてのデータが含まれます。 データは、この[Dockerイメージ](https://github.com/ethpandaops/ethereum-genesis-generator)から構築された `prelaunch-data-generator` サービスを使用して作成されました。
+エンクレーブ内の[ファイルアーティファクト](https://docs.kurtosis.com/advanced-concepts/files-artifacts/)には、ELおよびCLクライアントをブートストラップするために生成および利用されるすべてのデータが含まれています。このデータは、この[Dockerイメージ](https://github.com/ethpandaops/ethereum-genesis-generator)から構築された`prelaunch-data-generator`サービスを使用して作成されました。
 
-ユーザーサービスには、エンクレーブで動作しているすべてのコンテナ化されたサービスが表示されます。 ELクライアントとCLクライアントの両方を備えた単一のノードが作成されていることがわかります。
+ユーザーサービスには、エンクレーブ内で動作しているすべてのコンテナ化されたサービスが表示されます。ELクライアントとCLクライアントの両方を備えた単一のノードが作成されていることがわかります。
 
-## dApp開発環境をローカルイーサリアムテストネットに接続する {#connect-your-dapp}
+## dapp開発環境をローカルのイーサリアムテストネットに接続する {#connect-your-dapp}
 
-### dApp開発環境のセットアップ {#set-up-dapp-env}
+### dapp開発環境のセットアップ {#set-up-dapp-env}
 
-実行中のローカルテストネットができたので、dApp開発環境を接続してローカルテストネットを使用できます。 このガイドでは、Hardhatフレームワークを使用して、ブラックジャックdAppをローカルテストネットにデプロイします。
+ローカルのテストネットが稼働したので、dapp開発環境を接続してローカルのテストネットを使用できるようになりました。このガイドでは、Hardhatフレームワークを使用して、ブラックジャックのdappをローカルのテストネットにデプロイします。
 
-dApp開発環境をセットアップするには、サンプルdAppを含むリポジトリをクローンし、その依存関係をインストールして、次を実行します。
+dapp開発環境をセットアップするには、サンプルdappが含まれるリポジトリをクローンし、その依存関係をインストールします。以下を実行してください。
 
 ```python
 git clone https://github.com/kurtosis-tech/awesome-kurtosis.git && cd awesome-kurtosis/smart-contract-example && yarn
 ```
 
-ここで使用する[smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example)フォルダには、[Hardhat](https://hardhat.org/)フレームワークを使用するdApp開発者のための一般的なセットアップが含まれています。
+ここで使用する[smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example)フォルダーには、[Hardhat](https://hardhat.org/)フレームワークを使用するdapp開発者向けの一般的なセットアップが含まれています。
 
-- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) には、Blackjack dApp用のいくつかのシンプルなスマートコントラクトが含まれています
-- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) には、ローカルのイーサリアムネットワークにトークンコントラクトをデプロイするためのスクリプトが含まれています
-- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) には、Blackjack dAppの各プレイヤーに1000がミントされていることを確認するための、トークンコントラクト用の簡単な .js テストが含まれています
-- [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts) はHardhatセットアップを構成します
+- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts)には、ブラックジャックdapp用のいくつかのシンプルなスマート・コントラクトが含まれています。
+- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts)には、トークンコントラクトをローカルのイーサリアムネットワークにデプロイするためのスクリプトが含まれています。
+- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test)には、ブラックジャックdappの各プレイヤーに1000トークンがミントされていることを確認するための、トークンコントラクト用のシンプルな.jsテストが含まれています。
+- [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts)は、Hardhatのセットアップを構成します。
 
-### Hardhatがローカルテストネットを使用するように設定する {#configure-hardhat}
+### ローカルのテストネットを使用するようにHardhatを構成する {#configure-hardhat}
 
-dApp開発環境がセットアップされたので、今度はHardhatを接続して、Kurtosisを使用して生成されたローカルイーサリアムテストネットを使用します。 これを実現するには、`hardhat.config.ts`設定ファイルの`localnet`構造体にある`<$YOUR_PORT>`を、任意の`el-client-<num>`サービスから出力されたrpc uriのポートに置き換えます。 このサンプルケースでは、ポートは`64248`になります。 ポートは異なります。
+dapp開発環境のセットアップが完了したら、次にHardhatを接続して、Kurtosisを使用して生成されたローカルのイーサリアムテストネットを使用するようにします。これを実現するには、`hardhat.config.ts`構成ファイル内の`localnet`構造体にある`<$YOUR_PORT>`を、任意の`el-client-<num>`サービスから出力されたRPC URIのポートに置き換えます。このサンプルの場合、ポートは`64248`になります。あなたのポートは異なる場合があります。
 
-`hardhat.config.ts`での例:
+`hardhat.config.ts`の例:
 
 ```js
 localnet: {
-url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: $YOUR_PORTを、ETH NETWORK KURTOSIS PACKAGEによって生成されたノードURIのポートに置き換えてください
+url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: $YOUR_PORT をETHネットワークのKurtosisパッケージによって生成されたノードURIのポートに置き換えてください
 
-// これらはeth-network-packageによって作成された、事前に入金済みのテストアカウントに関連付けられた秘密鍵です
+// これらは、eth-network-packageによって作成された、事前に資金が供給されたテストアカウントに関連付けられた秘密鍵です
 // <https://github.com/kurtosis-tech/eth-network-package/blob/main/src/prelaunch_data_generator/genesis_constants/genesis_constants.star>
 accounts: [
     "ef5177cd0b6b21c87db5a0bf35d4084a8a57a9d6a064f86d51ac85f2b873a4e2",
@@ -143,13 +144,13 @@ accounts: [
 },
 ```
 
-ファイルを保存すると、Hardhat dApp開発環境がローカルイーサリアムテストネットに接続されます。 次を実行して、テストネットが機能していることを確認できます。
+ファイルを保存すると、Hardhatのdapp開発環境がローカルのイーサリアムテストネットに接続されます！以下を実行することで、テストネットが機能していることを確認できます。
 
 ```python
 npx hardhat balances --network localnet
 ```
 
-出力は次のようになります。
+出力は以下のようになります。
 
 ```python
 0x878705ba3f8Bc32FCf7F4CAa1A35E72AF65CF766 has balance 10000000000000000000000000
@@ -160,64 +161,64 @@ npx hardhat balances --network localnet
 0x1F6298457C5d76270325B724Da5d1953923a6B88 has balance 10000000000000000000000000
 ```
 
-これにより、Hardhatがローカルテストネットを使用しており、`eth-network-package`によって作成された事前に入金されたアカウントを検出していることが確認できます。
+これにより、Hardhatがローカルのテストネットを使用しており、`eth-network-package`によって作成された事前資金提供済みのアカウントを検出していることが確認できます。
 
-### dAppをローカルでデプロイしてテストする {#deploy-and-test-dapp}
+### ローカルでのdappのデプロイとテスト {#deploy-and-test-dapp}
 
-dApp開発環境がローカルイーサリアムテストネットに完全に接続されたので、ローカルテストネットを使用してdAppに対する開発およびテストワークフローを実行できます。
+dapp開発環境がローカルのイーサリアムテストネットに完全に接続されたので、ローカルのテストネットを使用してdappに対する開発およびテストのワークフローを実行できるようになりました。
 
-ローカルでのプロトタイピングと開発のために`ChipToken.sol`スマートコントラクトをコンパイルしてデプロイするには、次を実行します。
+ローカルでのプロトタイピングと開発のために`ChipToken.sol`スマート・コントラクトをコンパイルしてデプロイするには、以下を実行します。
 
 ```python
 npx hardhat compile
 npx hardhat run scripts/deploy.ts --network localnet
 ```
 
-出力は次のようになります。
+出力は以下のようになります。
 
 ```python
-ChipTokenのデプロイ先: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
+ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
 ```
 
-次に、ローカルdAppに対して`simple.js`テストを実行し、Blackjack dAppの各プレイヤーに1000がミントされていることを確認します。
+次に、ローカルのdappに対して`simple.js`テストを実行し、ブラックジャックdappの各プレイヤーに1000トークンがミントされていることを確認してみましょう。
 
-出力は次のようになります。
+出力は以下のようになります。
 
 ```python
 npx hardhat test --network localnet
 ```
 
-出力は次のようになります。
+出力は以下のようになります。
 
 ```python
 ChipToken
     mint
-      ✔ PLAYER ONEに1000チップがミントされるべき
+      ✔ should mint 1000 chips for PLAYER ONE
 
-  1件合格 (654ms)
+  1 passing (654ms)
 ```
 
 ### レビュー {#review-dapp-workflows}
 
-この時点で、dApp開発環境をセットアップし、Kurtosisによって作成されたローカルイーサリアムネットワークに接続し、dAppに対してコンパイル、デプロイ、および簡単なテストを実行しました。
+この時点で、dapp開発環境をセットアップし、Kurtosisによって作成されたローカルのイーサリアムネットワークに接続し、dappをコンパイル、デプロイして、簡単なテストを実行しました。
 
-次に、さまざまなネットワーク構成でdAppをテストするために、基盤となるネットワークをどのように構成できるかを見ていきましょう。
+次に、さまざまなネットワーク構成でdappをテストするために、基盤となるネットワークを構成する方法を見ていきましょう。
 
-## ローカルイーサリアムテストネットの設定 {#configure-testnet}
+## ローカルのイーサリアムテストネットの構成 {#configure-testnet}
 
 ### クライアント構成とノード数の変更 {#configure-client-config-and-num-nodes}
 
-ローカルイーサリアムテストネットは、開発またはテストしたいシナリオや特定のネットワーク構成に応じて、異なるELおよびCLクライアントペア、ならびにさまざまな数のノードを使用するように構成できます。 これは、一度セットアップすれば、カスタマイズされたローカルテストネットを起動し、それを使用して同じワークフロー(デプロイ、テストなど)を実行できることを意味します。 さまざまなネットワーク構成の下で、すべてが期待どおりに機能することを確認します。 変更できる他のパラメータの詳細については、このリンクをご覧ください。
+ローカルのイーサリアムテストネットは、開発またはテストしたいシナリオや特定のネットワーク構成に応じて、異なるELおよびCLクライアントのペアや、さまざまな数のノードを使用するように構成できます。つまり、一度セットアップすれば、カスタマイズされたローカルのテストネットを立ち上げ、それを使用してさまざまなネットワーク構成で同じワークフロー (デプロイ、テストなど) を実行し、すべてが期待どおりに機能することを確認できます。変更可能なその他のパラメーターについて詳しくは、こちらのリンクをご覧ください。
 
-試してみましょう。 JSONファイルを介して、さまざまな構成オプションを `eth-network-package` に渡すことができます。 このネットワークパラメータJSONファイルは、Kurtosisがローカルイーサリアムネットワークをセットアップするために使用する特定の設定を提供します。
+試してみましょう！JSONファイルを介して、`eth-network-package`にさまざまな構成オプションを渡すことができます。このネットワークパラメーターのJSONファイルは、Kurtosisがローカルのイーサリアムネットワークをセットアップするために使用する特定の構成を提供します。
 
-デフォルトの設定ファイルを取得し、それを編集して、異なるEL/CLペアを持つ2つのノードを起動します。
+デフォルトの構成ファイルを取得し、異なるEL/CLペアを持つ2つのノードを立ち上げるように編集します。
 
-- ノード1：`geth`/`lighthouse`
-- ノード2：`geth`/`lodestar`
-- ノード3：`geth`/`teku`
+- `geth`/`lighthouse`のノード1
+- `geth`/`lodestar`のノード2
+- `geth`/`teku`のノード3
 
-この構成により、dAppをテストするためのイーサリアムノード実装の異種ネットワークが作成されます。 設定ファイルは次のようになります。
+この構成により、dappをテストするためのイーサリアムノード実装のヘテロジニアス (異種混合) ネットワークが作成されます。構成ファイルは以下のようになります。
 
 ```yaml
 {
@@ -273,19 +274,19 @@ ChipToken
 }
 ```
 
-各`participants`構造体はネットワーク内のノードにマッピングされるため、3つの`participants`構造体はKurtosisにネットワーク内で3つのノードを起動するように指示します。 各`participants`構造体では、その特定のノードに使用されるELとCLのペアを指定できます。
+各`participants`構造体はネットワーク内のノードにマッピングされるため、3つの`participants`構造体は、ネットワーク内に3つのノードを立ち上げるようKurtosisに指示します。各`participants`構造体により、その特定のノードに使用されるELおよびCLペアを指定できます。
 
-`network_params`構造体は、各ノードのジェネシスファイルを作成するために使用されるネットワーク設定や、ネットワークのスロットごとの秒数などの他の設定を構成します。
+`network_params`構造体は、各ノードのジェネシスファイルを作成するために使用されるネットワーク設定や、ネットワークのスロットあたりの秒数などのその他の設定を構成します。
 
-編集したパラメータファイルを任意のディレクトリに保存し(以下の例ではデスクトップに保存)、次を実行してKurtosisパッケージを実行します。
+編集したパラメーターファイルを任意のディレクトリ (以下の例ではデスクトップに保存されています) に保存し、それを使用して以下を実行することでKurtosisパッケージを実行します。
 
 ```python
 kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/kurtosis-tech/eth-network-package "$(cat ~/eth-network-params.json)"
 ```
 
-注: ここでは、`kurtosis clean -a`コマンドを使用して、新しいテストネットを開始する前に古いテストネットとその内容を破棄するようにKurtosisに指示します。
+注: ここでは、新しいテストネットを起動する前に、古いテストネットとそのコンテンツを破棄するようKurtosisに指示するために、`kurtosis clean -a`コマンドが使用されています。
 
-再び、Kurtosisは少しの間動作し、実行されている個々のステップを出力します。 最終的に、出力は次のようになります。
+ここでも、Kurtosisはしばらく動作し、実行されている個々の手順を出力します。最終的に、出力は以下のようになります。
 
 ```python
 Starlark code successfully run. No output was returned.
@@ -351,22 +352,22 @@ ad6f401126fa   el-client-2                                    engine-rpc: 8551/t
 3d4aaa75e218   prelaunch-data-generator-1680882122201668972   <none>                                           STOPPED
 ```
 
-おめでとうございます！ ローカルテストネットを1つではなく3つのノードを持つように正常に設定しました。 dAppに対して以前と同じワークフロー(デプロイ＆テスト)を実行するには、新しい3ノードのローカルテストネットの`el-client-<num>`サービスから出力されたrpc uriのポートで、`hardhat.config.ts`構成ファイルの`localnet`構造体にある`<$YOUR_PORT>`を置き換えることで、以前と同じ操作を実行します。
+おめでとうございます！ローカルのテストネットを1つではなく3つのノードを持つように正常に構成しました。dappに対して以前と同じワークフロー (デプロイとテスト) を実行するには、`hardhat.config.ts`構成ファイル内の`localnet`構造体にある`<$YOUR_PORT>`を、新しい3ノードのローカルテストネット内の任意の`el-client-<num>`サービスから出力されたRPC URIのポートに置き換えて、以前と同じ操作を実行します。
 
-## 結論 {#conclusion}
+## おわりに {#conclusion}
 
-完成です！ この短いガイドを要約すると、次のことを行いました。
+以上です！この短いガイドをまとめると、以下のことを行いました。
 
-- Kurtosisを使用してDocker上にローカルイーサリアムテストネットを作成
-- ローカルdApp開発環境をローカルイーサリアムネットワークに接続
-- dAppをデプロイし、ローカルイーサリアムネットワーク上で簡単なテストを実行
-- 基盤となるイーサリアムネットワークを3つのノードを持つように構成
+- Kurtosisを使用して、Docker上にローカルのイーサリアムテストネットを作成した
+- ローカルのdapp開発環境をローカルのイーサリアムネットワークに接続した
+- ローカルのイーサリアムネットワーク上でdappをデプロイし、簡単なテストを実行した
+- 基盤となるイーサリアムネットワークが3つのノードを持つように構成した
 
-何がうまくいったか、何を改善できるか、また質問への回答など、ご意見をお聞かせください。 [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose)または[メール](mailto:feedback@kurtosistech.com)でお気軽にご連絡ください。
+何がうまくいったか、何を改善できるかについてのご意見や、ご質問への回答など、皆様からのご連絡をお待ちしております。[GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose)または[メール](mailto:feedback@kurtosistech.com)でお気軽にお問い合わせください！
 
 ### その他の例とガイド {#other-examples-guides}
 
-[クイックスタート](https://docs.kurtosis.com/quickstart)(PostgresデータベースとAPIを構築します)や、[awesome-kurtosisリポジトリ](https://github.com/kurtosis-tech/awesome-kurtosis)にあるその他の例を確認することをお勧めします。そこには、次のようなパッケージを含む素晴らしい例があります。
+[クイックスタート](https://docs.kurtosis.com/quickstart) (Postgresデータベースとその上にAPIを構築します) や、[awesome-kurtosisリポジトリ](https://github.com/kurtosis-tech/awesome-kurtosis)にあるその他の例をぜひチェックしてみてください。そこには、以下のようなパッケージを含む素晴らしい例がいくつかあります。
 
-- [同じローカルイーサリアムテストネットを起動](https://github.com/kurtosis-tech/eth2-package)しますが、トランザクションスパマー(トランザクションをシミュレートするため)、フォークモニター、接続されたGrafanaおよびPrometheusインスタンスなどの追加サービスも接続します
-- 同じローカルイーサリアムネットワークに対して[サブネットワーキングテスト](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test)を実行する
+- [同じローカルのイーサリアムテストネットを立ち上げる](https://github.com/kurtosis-tech/eth2-package)が、トランザクションスパマー (トランザクションをシミュレートするため)、フォークモニター、接続されたGrafanaおよびPrometheusインスタンスなどの追加サービスが接続されているもの
+- 同じローカルのイーサリアムネットワークに対して[サブネットワーキングテスト](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test)を実行するもの

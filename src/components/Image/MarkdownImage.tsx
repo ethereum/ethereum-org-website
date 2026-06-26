@@ -3,6 +3,7 @@ import { extname } from "path"
 import NextLink from "next/link"
 
 import { Image, type ImageProps } from "@/components/Image"
+import MarkdownVideo from "@/components/Image/MarkdownVideo"
 
 import { toPosixPath } from "@/lib/utils/relativePath"
 
@@ -37,6 +38,18 @@ const MarkdownImage = ({
 
   const fileExt = extname(transformedSrc).toLowerCase()
   const isAnimated = [".gif", ".apng", ".webp"].includes(fileExt)
+  const isVideo = [".mp4", ".webm", ".mov"].includes(fileExt)
+
+  if (isVideo) {
+    // Orientation opt-in: a `-portrait` filename suffix (e.g. `clip-portrait.mp4`)
+    // selects the portrait ratio; everything else is landscape.
+    const orientation = /-portrait\.[^.]+$/.test(transformedSrc)
+      ? "portrait"
+      : "landscape"
+    return (
+      <MarkdownVideo src={transformedSrc} alt={alt} orientation={orientation} />
+    )
+  }
 
   return (
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx

@@ -21,7 +21,7 @@ const UpgradeStatus = ({
     <aside
       className={cn(
         "my-8 flex w-full flex-col gap-6 rounded p-6 shadow-2xl lg:mt-0",
-        "bg-black/80 bg-gradient-to-b from-accent-c/10",
+        "bg-black/80 bg-linear-to-b from-accent-c/10",
         "dark:border-2 dark:bg-gray-700 dark:from-transparent",
         isShipped
           ? "bg-success-light dark:border-success"
@@ -31,7 +31,7 @@ const UpgradeStatus = ({
       <h2 className="text-sm font-normal uppercase">
         {t("common:consensus-when-shipping")}
       </h2>
-      <p className="mb-6 text-4xl font-bold leading-none">{t(dateKey)}</p>
+      <p className="mb-6 text-4xl leading-none font-bold">{t(dateKey)}</p>
       <p className="text-xl">{children}</p>
     </aside>
   )

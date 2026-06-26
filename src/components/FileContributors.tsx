@@ -1,8 +1,9 @@
 "use client"
 
 import { BaseHTMLAttributes, useState } from "react"
+import { cva, type VariantProps } from "class-variance-authority"
 
-import type { ChildOnlyProp, FileContributor } from "@/lib/types"
+import type { FileContributor } from "@/lib/types"
 
 import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
@@ -13,36 +14,55 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { Avatar } from "./ui/avatar"
+import { Avatar, AvatarBase, AvatarFallback } from "./ui/avatar"
 import Modal from "./ui/dialog-modal"
 import { LinkBox, LinkOverlay } from "./ui/link-box"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
-const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
-  <ScrollArea className="h-64 w-full">
-    <UnorderedList className="m-0">{children}</UnorderedList>
-  </ScrollArea>
-)
-
 const ContributorAvatar = ({
   contributor,
   label,
   className,
-}: ContributorProps & { label?: string; className?: string }) => (
-  <Avatar
-    src={contributor.avatar_url}
-    name={contributor.login}
-    href={
-      contributor.html_url.includes("crowdin.com")
-        ? contributor.html_url
-        : "https://github.com/" + contributor.login
-    }
-    // `size-10` is not part of the "size" variants
-    className={cn("size-10", className)}
-    label={label}
-  />
-)
+}: ContributorProps & { label?: string; className?: string }) => {
+  const hasProfile = !!contributor.html_url
+
+  // Contributors without a profile (no GitHub account)
+  if (!hasProfile) {
+    const initials = contributor.login
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .slice(0, 2)
+      .toUpperCase()
+
+    return (
+      <Flex className="items-center gap-1">
+        <AvatarBase className={cn("size-10", className)}>
+          <AvatarFallback>{initials}</AvatarFallback>
+        </AvatarBase>
+        {label && (
+          <span className="inline-flex items-center p-1 text-sm">{label}</span>
+        )}
+      </Flex>
+    )
+  }
+
+  return (
+    <Avatar
+      src={contributor.avatar_url}
+      name={contributor.login}
+      href={
+        contributor.html_url.includes("crowdin.com")
+          ? contributor.html_url
+          : "https://github.com/" + contributor.login
+      }
+      // `size-10` is not part of the "size" variants
+      className={cn("size-10", className)}
+      label={label}
+    />
+  )
+}
 
 const ContributorAvatarGroup = ({
   contributors,
@@ -75,31 +95,46 @@ const ContributorAvatarGroup = ({
 }
 
 type ContributorProps = { contributor: FileContributor }
-const Contributor = ({ contributor }: ContributorProps) => (
-  <ListItem className="flex items-center p-2">
-    <ContributorAvatar
-      contributor={contributor}
-      label={"@" + contributor.login}
-    />
-    {contributor.html_url.includes("crowdin.com") && (
-      <p className="ms-5 text-body-medium">
-        <Translation id="translator" />
-      </p>
-    )}
-  </ListItem>
-)
+const Contributor = ({ contributor }: ContributorProps) => {
+  const hasProfile = !!contributor.html_url
+  return (
+    <ListItem className="flex items-center p-2">
+      <ContributorAvatar
+        contributor={contributor}
+        label={hasProfile ? "@" + contributor.login : contributor.login}
+      />
+      {contributor.html_url.includes("crowdin.com") && (
+        <p className="ms-5 text-body-medium">
+          <Translation id="translator" />
+        </p>
+      )}
+    </ListItem>
+  )
+}
 
-type FlexProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
-export type FileContributorsProps = FlexProps & {
+const variants = cva("", {
+  variants: {
+    variant: {
+      base: "my-4 me-4 md:p-2 lg:mb-0",
+      compact: "",
+    },
+  },
+  defaultVariants: {
+    variant: "base",
+  },
+})
+
+export type FileContributorsProps = BaseHTMLAttributes<HTMLDivElement> & {
   contributors: FileContributor[]
   lastEditLocaleTimestamp?: string
   className?: string
-}
+} & VariantProps<typeof variants>
 
 const FileContributors = ({
   contributors,
   lastEditLocaleTimestamp,
   className,
+  variant,
   ...props
 }: FileContributorsProps) => {
   const [isModalOpen, setModalOpen] = useState(false)
@@ -117,44 +152,44 @@ const FileContributors = ({
           <p>
             <Translation id="contributors-thanks" />
           </p>
-          <ContributorList>
-            {contributors.map((contributor) => (
-              <Contributor contributor={contributor} key={contributor.login} />
-            ))}
-          </ContributorList>
+          <ScrollArea className="h-64 w-full">
+            <UnorderedList className="m-0">
+              {contributors.map((contributor) => (
+                <Contributor
+                  contributor={contributor}
+                  key={contributor.login}
+                />
+              ))}
+            </UnorderedList>
+          </ScrollArea>
         </div>
       </Modal>
 
-      <Flex
-        className={cn("flex-col p-0 md:flex-row md:p-2", className)}
-        {...props}
-      >
-        <Flex className="my-4 me-4 flex-1 flex-col items-start lg:mb-0">
-          {lastEditLocaleTimestamp && (
-            <p className="mb-2 text-body-medium">
-              <Translation id="page-last-update" /> {lastEditLocaleTimestamp}
-            </p>
-          )}
-          <LinkBox className="flex">
-            <ContributorAvatarGroup contributors={contributors} />
-            <LinkOverlay asChild>
-              <Button
-                variant="ghost"
-                onClick={() => {
-                  setModalOpen(true)
-                  trackCustomEvent({
-                    eventCategory: "see contributors",
-                    eventAction: "click",
-                    eventName: "click",
-                  })
-                }}
-              >
-                <Translation id="see-contributors" />
-              </Button>
-            </LinkOverlay>
-          </LinkBox>
-        </Flex>
-      </Flex>
+      <aside className={cn(variants({ variant }), className)} {...props}>
+        {lastEditLocaleTimestamp && (
+          <p className="mb-2 text-body-medium">
+            <Translation id="page-last-update" /> {lastEditLocaleTimestamp}
+          </p>
+        )}
+        <LinkBox className="flex">
+          <ContributorAvatarGroup contributors={contributors} />
+          <LinkOverlay asChild>
+            <Button
+              variant="ghost"
+              onClick={() => {
+                setModalOpen(true)
+                trackCustomEvent({
+                  eventCategory: "see contributors",
+                  eventAction: "click",
+                  eventName: "click",
+                })
+              }}
+            >
+              <Translation id="see-contributors" />
+            </Button>
+          </LinkOverlay>
+        </LinkBox>
+      </aside>
     </>
   )
 }

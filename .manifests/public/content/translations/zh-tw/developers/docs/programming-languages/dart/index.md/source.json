@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/programming-languages/dart/index.md",
+  "generatedAt": "2026-06-19T18:44:53.414Z",
+  "rootHash": "4655323ac650",
+  "tree": {
+    "contentHash": "5d7c4214be6c",
+    "anchorHash": "4121d9e28306",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "96fc355a7d01",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "c21e791b9a38",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:incomplete": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "getting-started-with-smart-contracts-and-solidity": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc",
+        "labelHash": "7cd37d52b081",
+        "children": {
+          "_label": {
+            "contentHash": "7cd37d52b081",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "tutorials": {
+        "contentHash": "9001e88aa712",
+        "anchorHash": "35595dda29d9",
+        "labelHash": "8d9f66992dd4",
+        "children": {
+          "_label": {
+            "contentHash": "8d9f66992dd4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "12ffabb525c0",
+            "anchorHash": "dfaed0152b98"
+          },
+          "prose:9": {
+            "contentHash": "5043053e5601",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "7ead9d0680ad",
+            "anchorHash": "161cebedcc29"
+          },
+          "prose:10": {
+            "contentHash": "ae1b0972c91c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "c6b8dde8fe9c",
+            "anchorHash": "b6a073edd270"
+          },
+          "prose:11": {
+            "contentHash": "8ec0c9a098e8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "a06785fe7ea7",
+            "anchorHash": "e9065c26160c"
+          },
+          "prose:12": {
+            "contentHash": "8fc081ae8b25",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "ab785f0f52f9",
+            "anchorHash": "b67d5953daf6"
+          },
+          "prose:13": {
+            "contentHash": "23d5e33fba99",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "edaeb282b2ed",
+            "anchorHash": "bf6297873e9f"
+          },
+          "prose:14": {
+            "contentHash": "b0ab1161ebc2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "b59b4bb26c5a",
+            "anchorHash": "5e758741fa1f"
+          },
+          "prose:15": {
+            "contentHash": "ba953a5a2129",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "bcabd74253c6",
+            "anchorHash": "f212fc790681"
+          },
+          "prose:16": {
+            "contentHash": "a24a8f743368",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:8",
+          "link:0",
+          "prose:9",
+          "link:1",
+          "prose:10",
+          "link:2",
+          "prose:11",
+          "link:3",
+          "prose:12",
+          "link:4",
+          "prose:13",
+          "link:5",
+          "prose:14",
+          "link:6",
+          "prose:15",
+          "link:7",
+          "prose:16"
+        ]
+      },
+      "working-with-ethereum-clients": {
+        "contentHash": "da83b95253cc",
+        "anchorHash": "d27eaf7cbc22",
+        "labelHash": "a15cd2854203",
+        "children": {
+          "_label": {
+            "contentHash": "a15cd2854203",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "30e33c913f96",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "376771824ebe",
+            "anchorHash": "191567028ad9"
+          },
+          "prose:5": {
+            "contentHash": "83e5467f9209",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "b0f37a5eeae4",
+            "anchorHash": "3364d400f020"
+          },
+          "prose:6": {
+            "contentHash": "c977dbe78522",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "0cf7946a9098",
+            "anchorHash": "c0815e0453c3"
+          },
+          "prose:7": {
+            "contentHash": "4cd5f8dc6dff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "507270b730a6",
+            "anchorHash": "e96fd651ce7e"
+          },
+          "prose:8": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:incomplete",
+      "getting-started-with-smart-contracts-and-solidity",
+      "tutorials",
+      "working-with-ethereum-clients"
+    ]
+  },
+  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+}

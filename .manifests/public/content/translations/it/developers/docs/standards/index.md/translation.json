@@ -1,0 +1,226 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-17T23:10:48.421Z",
+  "englishManifestHash": "0a662d7381fa",
+  "placeholderOrder": [
+    "LINK-764cb3",
+    "LINK-709a7c",
+    "LINK-aa1f7d",
+    "LINK-580403",
+    "LINK-bed9a3",
+    "LINK-4e3a26",
+    "LINK-ab989f",
+    "LINK-0e1436",
+    "LINK-42ae6b",
+    "LINK-be5811",
+    "LINK-ef62d5",
+    "LINK-acaffd",
+    "LINK-bb3ed0",
+    "LINK-d977f7",
+    "LINK-2f4d1c",
+    "LINK-9033df",
+    "LINK-4f0bca",
+    "LINK-a52759",
+    "LINK-fb2e62",
+    "LINK-646282",
+    "LINK-7dd814",
+    "LINK-b5355b",
+    "LINK-13d858",
+    "LINK-c398c6",
+    "LINK-b54b2d",
+    "LINK-85277b",
+    "LINK-c0a85d",
+    "LINK-113369",
+    "LINK-d0ae01",
+    "LINK-2ed744"
+  ],
+  "placeholderMap": {
+    "LINK-764cb3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-709a7c": {
+      "type": "link",
+      "values": {
+        "url": "/eips/"
+      }
+    },
+    "LINK-aa1f7d": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1"
+      }
+    },
+    "LINK-580403": {
+      "type": "link",
+      "values": {
+        "url": "/eips/"
+      }
+    },
+    "LINK-bed9a3": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/"
+      }
+    },
+    "LINK-4e3a26": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/EIPs"
+      }
+    },
+    "LINK-ab989f": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/c/eips"
+      }
+    },
+    "LINK-0e1436": {
+      "type": "link",
+      "values": {
+        "url": "/governance/"
+      }
+    },
+    "LINK-42ae6b": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/"
+      }
+    },
+    "LINK-be5811": {
+      "type": "link",
+      "values": {
+        "url": "https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/"
+      }
+    },
+    "LINK-ef62d5": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/@EthereumProtocol"
+      }
+    },
+    "LINK-acaffd": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/meta"
+      }
+    },
+    "LINK-bb3ed0": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/informational"
+      }
+    },
+    "LINK-d977f7": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/core"
+      }
+    },
+    "LINK-2f4d1c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/networking"
+      }
+    },
+    "LINK-9033df": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/interface"
+      }
+    },
+    "LINK-4f0bca": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/erc"
+      }
+    },
+    "LINK-a52759": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1#eip-types"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-646282": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-223/"
+      }
+    },
+    "LINK-7dd814": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-1363/"
+      }
+    },
+    "LINK-b5355b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-721/"
+      }
+    },
+    "LINK-13d858": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2309"
+      }
+    },
+    "LINK-c398c6": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4400"
+      }
+    },
+    "LINK-b54b2d": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4907"
+      }
+    },
+    "LINK-85277b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-777/"
+      }
+    },
+    "LINK-c0a85d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-1155/"
+      }
+    },
+    "LINK-113369": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-4626/"
+      }
+    },
+    "LINK-d0ae01": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/"
+      }
+    },
+    "LINK-2ed744": {
+      "type": "link",
+      "values": {
+        "url": "/eips/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:10:48.421Z",
+      "status": "success"
+    }
+  }
+}

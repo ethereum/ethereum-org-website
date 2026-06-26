@@ -1,0 +1,655 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/community/events/organizing/index.md",
+  "generatedAt": "2026-06-08T07:12:50.046Z",
+  "rootHash": "c38e7fe81055",
+  "tree": {
+    "contentHash": "fcd31464caf7",
+    "anchorHash": "5aaf2be12ecb",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "ac2a4a3f001f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8bc8587a2b69"
+      },
+      "frontmatter:description": {
+        "contentHash": "ac2a4a3f001f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:hideEditButton": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "prose:0": {
+        "contentHash": "5488e74d0a74",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ask-yourself-is-there-an-ethereum-community": {
+        "contentHash": "f186947dd00f",
+        "anchorHash": "69b997ecec07",
+        "labelHash": "dfccde7c0951",
+        "children": {
+          "_label": {
+            "contentHash": "dfccde7c0951",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "173374824d56",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f4dc28533be2",
+            "anchorHash": "3fd2dc3f50df"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "b039fa6a6c1c",
+            "anchorHash": "3fd2dc3f50df"
+          },
+          "prose:4": {
+            "contentHash": "26388951201d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "if-not-how-to-build-it": {
+            "contentHash": "cc1ed1d5a5c3",
+            "anchorHash": "d5e7a29936b2",
+            "labelHash": "65acf3b1a611",
+            "children": {
+              "_label": {
+                "contentHash": "65acf3b1a611",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "dd2391a1cf43",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "d9f35eb161f0",
+                "anchorHash": "5baf4d40a57f"
+              },
+              "prose:2": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "if-yes-how-to-maintain-and-grow-it": {
+            "contentHash": "1ce063112d71",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "ea7eca832a30",
+            "children": {
+              "_label": {
+                "contentHash": "ea7eca832a30",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "b365b7fbaafa",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "if-not-how-to-build-it",
+          "if-yes-how-to-maintain-and-grow-it"
+        ]
+      },
+      "event": {
+        "contentHash": "ff5d5b630d07",
+        "anchorHash": "6f469e919f07",
+        "labelHash": "4e1f49a9c8ae",
+        "children": {
+          "_label": {
+            "contentHash": "4e1f49a9c8ae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "when-is-the-right-time-to-organize-an-event": {
+            "contentHash": "f5c39663dc22",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "119c5ba9b402",
+            "children": {
+              "_label": {
+                "contentHash": "119c5ba9b402",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "376b13b8f27f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "kyc-know-your-community": {
+            "contentHash": "f5f2f1c60ffc",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "6f564a6a6fa6",
+            "children": {
+              "_label": {
+                "contentHash": "6f564a6a6fa6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "ee846277aba1",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "where-to-start": {
+            "contentHash": "30b788ee6cbe",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "a08cf344721d",
+            "children": {
+              "_label": {
+                "contentHash": "a08cf344721d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "b9b496338a10",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "how-to-assemble-a-team": {
+            "contentHash": "ac1c929c7aff",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "d6864744e2fc",
+            "children": {
+              "_label": {
+                "contentHash": "d6864744e2fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "2962867d1345",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "the-program-a-key-element-of-a-successful-event": {
+            "contentHash": "c9f236317abd",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "0e93acee8a01",
+            "children": {
+              "_label": {
+                "contentHash": "0e93acee8a01",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a3543e7cfbb7",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "where-to-find-financial-support": {
+            "contentHash": "0fa9162673bd",
+            "anchorHash": "bc5534c213aa",
+            "labelHash": "fdab87f5203a",
+            "children": {
+              "_label": {
+                "contentHash": "fdab87f5203a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "a4d8c7036da0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "how-to-create-a-sponsorship-deck": {
+                "contentHash": "e4c10e423d9f",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "54a7eb0670cf",
+                "children": {
+                  "_label": {
+                    "contentHash": "54a7eb0670cf",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "7f6bef275b44",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "who-might-support-your-event": {
+                "contentHash": "32e421442684",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "89729fa280d8",
+                "children": {
+                  "_label": {
+                    "contentHash": "89729fa280d8",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "14e6e31351af",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "alternative-forms-of-funding-your-event": {
+                "contentHash": "0663616304a6",
+                "anchorHash": "f2c07a3dd6f0",
+                "labelHash": "e9152bd96e12",
+                "children": {
+                  "_label": {
+                    "contentHash": "e9152bd96e12",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:2": {
+                    "contentHash": "4fc88d0ff95c",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "026022cfd560",
+                    "anchorHash": "5baf4d40a57f"
+                  },
+                  "prose:3": {
+                    "contentHash": "64fe4fbfbd7f",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "7150b2f24765",
+                    "anchorHash": "6432c1d0d100"
+                  },
+                  "prose:4": {
+                    "contentHash": "f834421dda84",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:2",
+                  "link:0",
+                  "prose:3",
+                  "link:1",
+                  "prose:4"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "how-to-create-a-sponsorship-deck",
+              "who-might-support-your-event",
+              "alternative-forms-of-funding-your-event"
+            ]
+          },
+          "logistics": {
+            "contentHash": "ec30525bc49e",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "ae6e98909c98",
+            "children": {
+              "_label": {
+                "contentHash": "ae6e98909c98",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "c18f913dcec4",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "location-infrastructure": {
+            "contentHash": "4c2b3f463fdb",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "a65c789c25b8",
+            "children": {
+              "_label": {
+                "contentHash": "a65c789c25b8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "5bbd006068a0",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "how-to-promote-the-event": {
+            "contentHash": "de9c3f16e97a",
+            "anchorHash": "0c85936397c6",
+            "labelHash": "9ac48ea3a7fa",
+            "children": {
+              "_label": {
+                "contentHash": "9ac48ea3a7fa",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "ccc4b6f2ec15",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "social-media": {
+                "contentHash": "33c2d172363f",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "b904a7715560",
+                "children": {
+                  "_label": {
+                    "contentHash": "b904a7715560",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "eb99de763d92",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "partnerships-with-other-ethereum-communities": {
+                "contentHash": "68aa3eb39769",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "737fa2654043",
+                "children": {
+                  "_label": {
+                    "contentHash": "737fa2654043",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "4e498a817165",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "university-outreach": {
+                "contentHash": "78052dd1927c",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "b04f58b4c3fa",
+                "children": {
+                  "_label": {
+                    "contentHash": "b04f58b4c3fa",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "0b1dc0152848",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              },
+              "media": {
+                "contentHash": "348ca736181c",
+                "anchorHash": "4b9f7d802648",
+                "labelHash": "d357175cfe89",
+                "children": {
+                  "_label": {
+                    "contentHash": "d357175cfe89",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:0": {
+                    "contentHash": "148d31679b57",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "social-media",
+              "partnerships-with-other-ethereum-communities",
+              "university-outreach",
+              "media"
+            ]
+          },
+          "should-you-organize-a-hackathon-as-well": {
+            "contentHash": "44c249115981",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "7a9f55f72fa5",
+            "children": {
+              "_label": {
+                "contentHash": "7a9f55f72fa5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "8b143ffc490f",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "almost-inevitable-challenges-that-you-will-face": {
+            "contentHash": "e86a85145770",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "633ffdbd03a2",
+            "children": {
+              "_label": {
+                "contentHash": "633ffdbd03a2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "edc735fd39b4",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "you-shouldnt-do-it-alone-you-need-volunteers": {
+            "contentHash": "c8a6d6c3c18a",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "c225804a2933",
+            "children": {
+              "_label": {
+                "contentHash": "c225804a2933",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "3ae935b93c43",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "compliance-essentials-for-event-organizers": {
+            "contentHash": "90ca81cf1270",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "ef5da3f74815",
+            "children": {
+              "_label": {
+                "contentHash": "ef5da3f74815",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "db8dd4bacb03",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "when-is-the-right-time-to-organize-an-event",
+          "kyc-know-your-community",
+          "where-to-start",
+          "how-to-assemble-a-team",
+          "the-program-a-key-element-of-a-successful-event",
+          "where-to-find-financial-support",
+          "logistics",
+          "location-infrastructure",
+          "how-to-promote-the-event",
+          "should-you-organize-a-hackathon-as-well",
+          "almost-inevitable-challenges-that-you-will-face",
+          "you-shouldnt-do-it-alone-you-need-volunteers",
+          "compliance-essentials-for-event-organizers"
+        ]
+      },
+      "after-the-event-whats-next": {
+        "contentHash": "57e2e6e09cf1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "66ccfb6ab384",
+        "children": {
+          "_label": {
+            "contentHash": "66ccfb6ab384",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f12b24bfc6ee",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "acknowledgement": {
+        "contentHash": "625c6f6c6f46",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b0eafdef30da",
+        "children": {
+          "_label": {
+            "contentHash": "b0eafdef30da",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c0e76bf46218",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "resources": {
+        "contentHash": "c4a854d6c73b",
+        "anchorHash": "6a8e7b535f26",
+        "labelHash": "e89b30aa1dc3",
+        "children": {
+          "_label": {
+            "contentHash": "e89b30aa1dc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "64dbfcc17b0e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7a17ac3e2ecb",
+            "anchorHash": "4fdcc31dbb64"
+          },
+          "prose:4": {
+            "contentHash": "13b6d7819f26",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "66a55afa4306",
+            "anchorHash": "4f63db20e193"
+          },
+          "prose:5": {
+            "contentHash": "d04d005245cf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "258eb79929b6",
+            "anchorHash": "a5b5e9201845"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:hideEditButton",
+      "prose:0",
+      "ask-yourself-is-there-an-ethereum-community",
+      "event",
+      "after-the-event-whats-next",
+      "acknowledgement",
+      "resources"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

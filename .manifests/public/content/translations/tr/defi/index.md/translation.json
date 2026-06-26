@@ -1,0 +1,297 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-06-18T20:36:18.692Z",
+  "englishManifestHash": "3dd80df4c7e1",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-74b3ba",
+    "LINK-7d6c81",
+    "LINK-8f8825",
+    "LINK-0aa137",
+    "LINK-ca4796",
+    "LINK-097af2",
+    "LINK-b9f138",
+    "LINK-06dcfc",
+    "LINK-a21337",
+    "LINK-8193d4",
+    "LINK-c5c2bd",
+    "LINK-dc08da",
+    "LINK-058ff9",
+    "LINK-ebb665",
+    "LINK-1f0174",
+    "LINK-1f3f3f",
+    "LINK-05900f",
+    "LINK-ac21ec",
+    "LINK-18e6f6",
+    "LINK-2c6fc7",
+    "LINK-9ff54f",
+    "LINK-a4bfbc",
+    "LINK-850815",
+    "LINK-bec61c",
+    "LINK-74b3ba",
+    "LINK-9b1994",
+    "LINK-fd7ceb",
+    "LINK-a70170",
+    "LINK-f1afd9",
+    "LINK-a37b72",
+    "LINK-42507b",
+    "LINK-453bbb",
+    "LINK-57b5db",
+    "LINK-b1b418",
+    "LINK-2f3aca",
+    "LINK-920733",
+    "LINK-0b3dd1",
+    "LINK-576b5d",
+    "LINK-c20865",
+    "LINK-a2be55"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-74b3ba": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-7d6c81": {
+      "type": "link",
+      "values": {
+        "url": "#send-money"
+      }
+    },
+    "LINK-8f8825": {
+      "type": "link",
+      "values": {
+        "url": "#stream-money"
+      }
+    },
+    "LINK-0aa137": {
+      "type": "link",
+      "values": {
+        "url": "#stablecoins"
+      }
+    },
+    "LINK-ca4796": {
+      "type": "link",
+      "values": {
+        "url": "#lending-2"
+      }
+    },
+    "LINK-097af2": {
+      "type": "link",
+      "values": {
+        "url": "#flash-loans"
+      }
+    },
+    "LINK-b9f138": {
+      "type": "link",
+      "values": {
+        "url": "#saving"
+      }
+    },
+    "LINK-06dcfc": {
+      "type": "link",
+      "values": {
+        "url": "#swaps"
+      }
+    },
+    "LINK-a21337": {
+      "type": "link",
+      "values": {
+        "url": "#investing"
+      }
+    },
+    "LINK-8193d4": {
+      "type": "link",
+      "values": {
+        "url": "#crowdfunding"
+      }
+    },
+    "LINK-c5c2bd": {
+      "type": "link",
+      "values": {
+        "url": "#insurance"
+      }
+    },
+    "LINK-dc08da": {
+      "type": "link",
+      "values": {
+        "url": "#aggregators"
+      }
+    },
+    "LINK-058ff9": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#ens"
+      }
+    },
+    "LINK-ebb665": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/"
+      }
+    },
+    "LINK-1f0174": {
+      "type": "link",
+      "values": {
+        "url": "/payments/"
+      }
+    },
+    "LINK-1f3f3f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#ether"
+      }
+    },
+    "LINK-05900f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#stablecoin"
+      }
+    },
+    "LINK-ac21ec": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#nft"
+      }
+    },
+    "LINK-18e6f6": {
+      "type": "link",
+      "values": {
+        "url": "/nft/"
+      }
+    },
+    "LINK-2c6fc7": {
+      "type": "link",
+      "values": {
+        "url": "#stablecoins"
+      }
+    },
+    "LINK-9ff54f": {
+      "type": "link",
+      "values": {
+        "url": "/stablecoins/"
+      }
+    },
+    "LINK-a4bfbc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#apr"
+      }
+    },
+    "LINK-850815": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc"
+      }
+    },
+    "LINK-bec61c": {
+      "type": "link",
+      "values": {
+        "url": "/what-is-ether/"
+      }
+    },
+    "LINK-9b1994": {
+      "type": "link",
+      "values": {
+        "url": "/apps/"
+      }
+    },
+    "LINK-fd7ceb": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#erc-20"
+      }
+    },
+    "LINK-a70170": {
+      "type": "link",
+      "values": {
+        "url": "/wrapped-eth"
+      }
+    },
+    "LINK-f1afd9": {
+      "type": "link",
+      "values": {
+        "url": "/prediction-markets/"
+      }
+    },
+    "LINK-a37b72": {
+      "type": "link",
+      "values": {
+        "url": "/real-world-assets/"
+      }
+    },
+    "LINK-42507b": {
+      "type": "link",
+      "values": {
+        "url": "/payments/"
+      }
+    },
+    "LINK-453bbb": {
+      "type": "link",
+      "values": {
+        "url": "/ai-agents/"
+      }
+    },
+    "LINK-57b5db": {
+      "type": "link",
+      "values": {
+        "url": "https://defiprime.com/"
+      }
+    },
+    "LINK-b1b418": {
+      "type": "link",
+      "values": {
+        "url": "https://defillama.com/"
+      }
+    },
+    "LINK-2f3aca": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4"
+      }
+    },
+    "LINK-920733": {
+      "type": "link",
+      "values": {
+        "url": "https://entethalliance.org/specs/defi-risks/"
+      }
+    },
+    "LINK-0b3dd1": {
+      "type": "link",
+      "values": {
+        "url": "https://finematics.com/"
+      }
+    },
+    "LINK-576b5d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq"
+      }
+    },
+    "LINK-c20865": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/17QRFlml4pA"
+      }
+    },
+    "LINK-a2be55": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.defillama.com/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T20:36:18.692Z",
+      "status": "success"
+    }
+  }
+}

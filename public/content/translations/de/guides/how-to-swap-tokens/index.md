@@ -1,52 +1,51 @@
 ---
-title: So tauschen Sie Token
-description: Eine Anleitung zum Tauschen von Token auf Ethereum.
+title: Wie man Token tauscht
+description: Ein Leitfaden zum Tauschen von Token auf Ethereum.
 lang: de
 ---
 
-# So tauschen Sie Token
+Sind Sie es leid, nach einer Börse zu suchen, die alle Ihre Lieblings-Token auflistet? Sie können die meisten Token über [dezentrale Börsen](/glossary/#dex) tauschen.
 
-Sind Sie es leid, nach einer Börse zu suchen, die all Ihre Lieblings-Token auflistet? Sie können die meisten Token mithilfe von [dezentralisierten Börsen](/glossary/#dex) tauschen.
-
-Ein Token-Tausch beinhaltet den Tausch zweier verschiedener Assets, die auf dem Ethereum-Netzwerk existieren, zum Beispiel der Tausch von ETH gegen DAI (ein [ERC-20](/glossary/#erc-20)-Token). Der Prozess ist sehr schnell und preiswert. Sie brauchen eine Krypto-Wallet, um die Token zu tauschen.
+Ein Token-Tausch beinhaltet den Austausch von zwei verschiedenen Vermögenswerten, die im Ethereum-Netzwerk existieren, zum Beispiel das Tauschen von ETH gegen DAI (ein [ERC-20](/glossary/#erc-20)-Token). Der Prozess ist sehr schnell und günstig. Sie benötigen eine Krypto-Wallet, um Token zu tauschen.
 
 **Voraussetzung:**
 
-- Besitz einer [Krypto-Wallet](/glossary/#wallet). Sie können diesem Tutorial folgen: [Wie Sie einen Ethereum-Account „registrieren“](/guides/how-to-create-an-ethereum-account/)
-- Laden Sie Ihre Krypto-Wallet auf
+- eine [Krypto-Wallet](/glossary/#wallet) haben; falls Sie keine haben, können Sie diesem Leitfaden folgen, [wie man ein Ethereum-Konto erstellt](/guides/how-to-create-an-ethereum-account/)
+- Guthaben zu Ihrer Wallet hinzufügen
 
-## 1. Verbinden Sie Ihre Krypto-Wallet mit einem Exchange (DEX) Ihrer Wahl
+## 1. Verbinden Sie Ihre Wallet mit der dezentralen Börse (DEX) Ihrer Wahl {#1-connect-your-wallet-to-the-decentralized-exchange-dex-of-your-choice}
 
 Einige beliebte Börsen sind:
 
 - [Uniswap](https://app.uniswap.org/#/swap)
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
-- [Curve](https://curve.fi/#/ethereum/swap)
+- [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
-Interessiert? Erfahren Sie mehr darüber, was [das dezentrale Finanzwesen (DeFi)](/defi/) ist und wie diese neuen Börsen funktionieren.
+Interessiert? Erfahren Sie mehr darüber, was [Dezentralisierte Finanzen (DeFi)](/defi/) sind und wie diese neuen Arten von Börsen funktionieren.
 
-## 2. Wählen Sie die Token aus, die Sie tauschen wollen
+## 2. Wählen Sie das Token-Paar aus, das Sie tauschen möchten {#2-select-the-pair-of-tokens-you-wish-to-swap}
 
-Zum Beispiel, ETH und DAI. Vergewissern Sie sich, dass Sie in einem der zwei Token Geld haben. ![Gewöhnliche Schnittstelle für den Tausch](./swap1.png)
+Zum Beispiel ETH und DAI. Stellen Sie sicher, dass Sie über Guthaben in einem der beiden Token verfügen.
+![Common interface for swapping](./swap1.png)
 
-## 3. Geben Sie die Anzahl der Token ein, die Sie handeln möchten, und klicken Sie auf Tausch
+## 3. Geben Sie die Menge der Token ein, die Sie handeln möchten, und klicken Sie auf Tauschen {#3-enter-the-amount-of-tokens-you-want-to-trade-and-click-swap}
 
-Die Börse berechnet automatisch, wie viele Token Sie bekommen.
+Die Börse berechnet automatisch, wie viele Token Sie erhalten werden.
 
-![Gewöhnliche Schnittstelle für den Tausch](./swap2.png)
+![Common interface for swapping](./swap2.png)
 
-## 4. Bestätigen sie die Transaktion
+## 4. Bestätigen Sie die Transaktion {#4-confirm-the-transaction}
 
-Überprüfen Sie die Details der Transaktion. Überprüfen Sie den Wechselkurs und andere Gebühren, um negative Überraschungen zu verhindern.
+Überprüfen Sie die Details der Transaktion. Kontrollieren Sie den Wechselkurs und alle anderen Gebühren, um böse Überraschungen zu vermeiden.
 
-![Gewöhnliche Schnittstelle für die Überprüfung der Transaktion](./swap3.png)
+![Common interface for reviewing the transaction](./swap3.png)
 
-## 5. Warten Sie auf die Verarbeitung der Transaktion
+## 5. Warten Sie, bis die Transaktion verarbeitet wurde {#5-wait-for-the-transaction-to-be-processed}
 
-Sie können den Fortschritt der Transaktion auf jedem Blockchain-Explorer ansehen. Dieser Prozess sollte nicht länger als 10 Minuten dauern.
+Sie können den Fortschritt der Transaktion auf jedem Blockchain-Explorer verfolgen. Dieser Vorgang sollte nicht länger als 10 Minuten dauern.
 
-Sie werden die getauschten Token automatisch in Ihrer Krypto-Wallet erhalten, wenn die Transaktion verarbeitet wurde.
+Sie erhalten die getauschten Token automatisch in Ihrer Wallet, sobald die Transaktion verarbeitet wurde.
 <br />
 
 <Alert variant="update">
@@ -54,17 +53,17 @@ Sie werden die getauschten Token automatisch in Ihrer Krypto-Wallet erhalten, we
 <AlertContent className="justify-between flex-row items-center">
   <div>Möchten Sie mehr erfahren?</div>
   <ButtonLink href="/guides/">
-    Sehen Sie unsere anderen Anleitungen
+    Sehen Sie sich unsere anderen Leitfäden an
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-## Häufig gestellte Fragen
+## Häufig gestellte Fragen {#frequently-asked-questions}
 
-### Kann ich ETH gegen BTC aus meiner Krypto-Wallet tauschen?
+### Kann ich ETH aus meiner Wallet gegen BTC tauschen? {#can-i-swap-eth-for-btc-from-my-wallet}
 
-Nein, Sie können nur solche Token tauschen, die nativ auf dem Ethereum Netzwerk sind, so wie ETH, ERC-20 Token oder NFTs. Sie können nur Arten von Bitcoin tauschen, die auf Ethereum vorkommen.
+Nein, Sie können nur Token tauschen, die im Ethereum-Netzwerk nativ sind, wie ETH, ERC-20-Token oder NFTs. Sie können nur „verpackte“ (wrapped) Formen von Bitcoin tauschen, die auf Ethereum existieren.
 
-### Was ist Slippage?
+### Was ist Slippage? {#what-is-slippage}
 
-Dies ist der Unterschied zwischen Ihrem erwarteten Wechselkurs und dem aktuellen Kurs.
+Es ist die Differenz zwischen Ihrem erwarteten Wechselkurs und dem tatsächlichen Kurs.

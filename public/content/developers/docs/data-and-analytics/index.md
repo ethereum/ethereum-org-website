@@ -4,7 +4,7 @@ description: How to get onchain analytics and data for use in your dapps
 lang: en
 ---
 
-## Introduction {#Introduction}
+## Introduction {#introduction}
 
 As utilization of the network continues to grow, an increasing amount of valuable information will exist in the onchain data. As the volume of data rapidly increases, calculating and aggregating this information to report upon or drive a dapp can become a time and process heavy endeavor.
 

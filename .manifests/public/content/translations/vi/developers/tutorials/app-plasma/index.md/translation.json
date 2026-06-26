@@ -1,0 +1,1387 @@
+{
+  "version": 1,
+  "locale": "vi",
+  "translatedAt": "2026-06-17T23:31:17.921Z",
+  "englishManifestHash": "6436e17a2450",
+  "placeholderOrder": [
+    "LINK-21b137",
+    "LINK-9ad53a",
+    "LINK-248c7d",
+    "LINK-0a1e09",
+    "LINK-0527ac",
+    "LINK-403437",
+    "LINK-28cc7f",
+    "LINK-eb5ea9",
+    "LINK-55276b",
+    "LINK-c8bd53",
+    "LINK-7cd47c",
+    "LINK-d17b92",
+    "LINK-232350",
+    "CODE-e2ecd8",
+    "LINK-02dddf",
+    "CODEBLOCK-0df7bf",
+    "CODE-50bc66",
+    "LINK-9883d5",
+    "CODE-9a7c46",
+    "LINK-0ace3b",
+    "LINK-b668e5",
+    "LINK-327769",
+    "LINK-f32b65",
+    "CODEBLOCK-66edb3",
+    "CODE-f79cd6",
+    "LINK-563ed4",
+    "CODE-9a7c46",
+    "CODEBLOCK-1bf45d",
+    "CODEBLOCK-c084f6",
+    "CODE-9a7c46",
+    "LINK-62e441",
+    "CODEBLOCK-8c929e",
+    "LINK-0527ac",
+    "CODEBLOCK-c8f748",
+    "CODEBLOCK-545d36",
+    "LINK-092e7f",
+    "CODE-8f0da2",
+    "LINK-e85b92",
+    "CODE-9a7c46",
+    "CODEBLOCK-268541",
+    "CODE-dde8be",
+    "CODEBLOCK-e572b2",
+    "CODE-4221f0",
+    "CODEBLOCK-393de7",
+    "LINK-606b8c",
+    "LINK-d16d1b",
+    "CODEBLOCK-a2c6a5",
+    "LINK-a21c6b",
+    "CODE-2d15bc",
+    "CODE-ab530a",
+    "CODEBLOCK-108065",
+    "CODEBLOCK-6007c1",
+    "LINK-5ab917",
+    "CODEBLOCK-b5c1ae",
+    "CODEBLOCK-ecbe8e",
+    "LINK-4eade4",
+    "LINK-2e1128",
+    "CODE-9750eb",
+    "CODEBLOCK-55f17e",
+    "CODE-0b6f39",
+    "CODEBLOCK-67024f",
+    "CODE-109d51",
+    "CODEBLOCK-1f85cf",
+    "CODE-b03a82",
+    "CODE-2d7116",
+    "CODE-a1fce4",
+    "CODE-2d7116",
+    "CODE-a1fce4",
+    "CODEBLOCK-aa6cd6",
+    "CODEBLOCK-e7f088",
+    "CODEBLOCK-0dceaa",
+    "LINK-fd307b",
+    "CODE-2dbd1c",
+    "LINK-dbc9a6",
+    "CODEBLOCK-a8212d",
+    "LINK-446509",
+    "LINK-c570f4",
+    "LINK-ed9c4c",
+    "CODEBLOCK-72b5b7",
+    "LINK-06d9d5",
+    "CODE-4aa160",
+    "LINK-ed9108",
+    "CODEBLOCK-663375",
+    "LINK-5f1431",
+    "CODE-29cd9c",
+    "CODE-4ecc24",
+    "CODE-c89951",
+    "CODE-29881a",
+    "CODE-d7649d",
+    "CODE-1506e6",
+    "CODE-fcd03a",
+    "CODEBLOCK-8a05d7",
+    "CODEBLOCK-2aea06",
+    "CODEBLOCK-2fff35",
+    "LINK-b0c5ac",
+    "CODEBLOCK-340bf6",
+    "LINK-ecbb52",
+    "CODE-f45fc1",
+    "LINK-17a4d4",
+    "CODE-f45fc1",
+    "CODEBLOCK-7faef8",
+    "CODEBLOCK-63a703",
+    "CODE-7e1b0d",
+    "CODE-f45fc1",
+    "CODE-ac636b",
+    "CODEBLOCK-2f6561",
+    "CODE-4e45bb",
+    "CODE-fcdff7",
+    "CODE-d7649d",
+    "CODE-6fb701",
+    "CODE-fcd03a",
+    "CODE-fcd03a",
+    "CODE-4e45bb",
+    "CODE-fcd03a",
+    "CODE-f45fc1",
+    "CODEBLOCK-c1238b",
+    "CODEBLOCK-7f8ca2",
+    "CODE-f45fc1",
+    "CODEBLOCK-931ed3",
+    "CODEBLOCK-a52855",
+    "CODE-10c22b",
+    "CODE-10c22b",
+    "CODEBLOCK-e7a084",
+    "CODEBLOCK-1d2812",
+    "CODE-935f68",
+    "CODE-935f68",
+    "CODEBLOCK-79ee66",
+    "LINK-c19928",
+    "CODE-254506",
+    "LINK-065833",
+    "CODEBLOCK-7c3ff4",
+    "CODEBLOCK-345c7e",
+    "CODEBLOCK-bb7396",
+    "CODEBLOCK-33212c",
+    "CODEBLOCK-639e97",
+    "CODEBLOCK-1d1c23",
+    "CODEBLOCK-734e5e",
+    "CODEBLOCK-fb2e16",
+    "CODEBLOCK-0f3061",
+    "LINK-b37906",
+    "CODEBLOCK-b1e786",
+    "CODE-f581aa",
+    "CODEBLOCK-ad78c8",
+    "LINK-1292a1",
+    "CODEBLOCK-8b94a4",
+    "CODE-3029c1",
+    "CODEBLOCK-5256e8",
+    "CODE-ea1e89",
+    "CODEBLOCK-728730",
+    "CODE-07b72b",
+    "CODEBLOCK-162850",
+    "CODE-f45fc1",
+    "CODE-f45fc1",
+    "LINK-b24412",
+    "CODEBLOCK-49a78f",
+    "CODE-af316e",
+    "CODE-e7bf38",
+    "CODEBLOCK-bd27d9",
+    "LINK-1644e5",
+    "CODE-9750eb",
+    "CODE-254506",
+    "CODEBLOCK-18dda2",
+    "CODE-0d6e40",
+    "CODEBLOCK-39fa3f",
+    "CODE-fc4467",
+    "CODEBLOCK-5ac09d",
+    "CODEBLOCK-95e7ec",
+    "CODEBLOCK-febf34",
+    "CODEBLOCK-5b3a35",
+    "LINK-6eea0d",
+    "LINK-e9b3d2",
+    "CODEBLOCK-b5bfa0",
+    "CODE-7e88b3",
+    "LINK-f5f023",
+    "LINK-d838f7",
+    "CODE-2fcb73",
+    "CODEBLOCK-4c16ba",
+    "LINK-06e71f",
+    "CODEBLOCK-aa5084",
+    "CODEBLOCK-2b1c44",
+    "CODEBLOCK-d4c630",
+    "CODEBLOCK-024883",
+    "CODEBLOCK-a9a666",
+    "CODE-41550e",
+    "LINK-0f1e9a",
+    "CODE-109d51",
+    "CODE-21c933",
+    "CODE-f3b050",
+    "CODEBLOCK-96b5e1",
+    "CODEBLOCK-2283d8",
+    "CODEBLOCK-ea44a2",
+    "CODE-8a7c8b",
+    "CODEBLOCK-7f3ed7",
+    "CODE-50bc66",
+    "CODEBLOCK-9dfad4",
+    "CODE-50bc66",
+    "CODEBLOCK-a43a45",
+    "CODE-d25aab",
+    "CODEBLOCK-94648b",
+    "CODE-6f7943",
+    "CODEBLOCK-d7d986",
+    "CODE-db5fe6",
+    "CODE-8a7c8b",
+    "CODE-7e88b3",
+    "CODEBLOCK-d7d8ac",
+    "CODEBLOCK-5b3a35",
+    "CODE-6f7943",
+    "CODEBLOCK-1c286c",
+    "CODE-7e88b3",
+    "CODEBLOCK-c01025",
+    "LINK-281eb5",
+    "CODE-3b64db",
+    "LINK-f709c6",
+    "CODE-d8d153",
+    "LINK-78b709",
+    "CODE-2706c6",
+    "CODE-d8d153",
+    "CODE-d8d153",
+    "CODEBLOCK-bd2cca",
+    "CODE-50bc66",
+    "CODEBLOCK-44ce2a",
+    "CODE-50bc66",
+    "CODEBLOCK-83a222",
+    "CODE-3b64db",
+    "CODEBLOCK-268c66",
+    "CODEBLOCK-3da0e5",
+    "CODE-41550e",
+    "CODEBLOCK-729305",
+    "CODE-f45fc1",
+    "CODE-277089",
+    "CODE-a54942",
+    "CODEBLOCK-e30b71",
+    "CODEBLOCK-05e665",
+    "CODE-f45fc1",
+    "CODEBLOCK-ff5fa8",
+    "CODE-8fd853",
+    "CODE-78377b",
+    "CODEBLOCK-600779",
+    "CODE-1a3d48",
+    "CODEBLOCK-ed3145",
+    "CODE-ba5de1",
+    "CODEBLOCK-3d8710",
+    "CODE-564616",
+    "CODEBLOCK-f65529",
+    "CODE-277089",
+    "CODE-71d982",
+    "CODEBLOCK-22ebe3",
+    "CODEBLOCK-757b87",
+    "CODEBLOCK-eafb61",
+    "CODE-564616",
+    "LINK-d44b5c",
+    "LINK-d68fb0",
+    "LINK-52f600",
+    "CODE-1a3d48",
+    "LINK-9a0df2",
+    "CODE-d25aab",
+    "LINK-135d3f",
+    "CODE-d25aab",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-0df7bf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-66edb3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1bf45d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c084f6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8c929e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c8f748": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-545d36": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-268541": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e572b2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-393de7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a2c6a5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-108065": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6007c1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b5c1ae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ecbe8e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-55f17e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-67024f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1f85cf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-aa6cd6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e7f088": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0dceaa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a8212d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-72b5b7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-663375": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8a05d7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2aea06": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2fff35": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-340bf6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7faef8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-63a703": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2f6561": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c1238b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7f8ca2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-931ed3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a52855": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e7a084": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1d2812": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-79ee66": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7c3ff4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-345c7e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bb7396": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-33212c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-639e97": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1d1c23": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-734e5e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fb2e16": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0f3061": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b1e786": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ad78c8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8b94a4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5256e8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-728730": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-162850": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-49a78f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bd27d9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-18dda2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-39fa3f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5ac09d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-95e7ec": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-febf34": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5b3a35": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b5bfa0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4c16ba": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-aa5084": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2b1c44": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d4c630": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-024883": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a9a666": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-96b5e1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2283d8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ea44a2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7f3ed7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9dfad4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a43a45": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-94648b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d7d986": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d7d8ac": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1c286c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c01025": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bd2cca": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-44ce2a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-83a222": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-268c66": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3da0e5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-729305": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e30b71": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-05e665": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ff5fa8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-600779": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ed3145": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3d8710": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f65529": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-22ebe3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-757b87": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-eafb61": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-e2ecd8": {
+      "type": "inline-code",
+      "values": {
+        "content": "1.0.0-beta.10"
+      }
+    },
+    "CODE-50bc66": {
+      "type": "inline-code",
+      "values": {
+        "content": "anvil"
+      }
+    },
+    "CODE-9a7c46": {
+      "type": "inline-code",
+      "values": {
+        "content": "server/noir/Prover.toml"
+      }
+    },
+    "CODE-f79cd6": {
+      "type": "inline-code",
+      "values": {
+        "content": "test test test test test test test test test test test junk"
+      }
+    },
+    "CODE-8f0da2": {
+      "type": "inline-code",
+      "values": {
+        "content": "client/src/Transfer.tsx"
+      }
+    },
+    "CODE-dde8be": {
+      "type": "inline-code",
+      "values": {
+        "content": "Transfer"
+      }
+    },
+    "CODE-4221f0": {
+      "type": "inline-code",
+      "values": {
+        "content": "test ... test junk"
+      }
+    },
+    "CODE-2d15bc": {
+      "type": "inline-code",
+      "values": {
+        "content": "useState"
+      }
+    },
+    "CODE-ab530a": {
+      "type": "inline-code",
+      "values": {
+        "content": "message"
+      }
+    },
+    "CODE-9750eb": {
+      "type": "inline-code",
+      "values": {
+        "content": "ecrecover"
+      }
+    },
+    "CODE-0b6f39": {
+      "type": "inline-code",
+      "values": {
+        "content": "sign"
+      }
+    },
+    "CODE-109d51": {
+      "type": "inline-code",
+      "values": {
+        "content": "Prover.toml"
+      }
+    },
+    "CODE-b03a82": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x04"
+      }
+    },
+    "CODE-2d7116": {
+      "type": "inline-code",
+      "values": {
+        "content": "x"
+      }
+    },
+    "CODE-a1fce4": {
+      "type": "inline-code",
+      "values": {
+        "content": "y"
+      }
+    },
+    "CODE-2dbd1c": {
+      "type": "inline-code",
+      "values": {
+        "content": "server/noir/src/main.nr"
+      }
+    },
+    "CODE-4aa160": {
+      "type": "inline-code",
+      "values": {
+        "content": "Nargo.toml"
+      }
+    },
+    "CODE-29cd9c": {
+      "type": "inline-code",
+      "values": {
+        "content": "ACCOUNT_NUMBER"
+      }
+    },
+    "CODE-4ecc24": {
+      "type": "inline-code",
+      "values": {
+        "content": "u<number>"
+      }
+    },
+    "CODE-c89951": {
+      "type": "inline-code",
+      "values": {
+        "content": "u8"
+      }
+    },
+    "CODE-29881a": {
+      "type": "inline-code",
+      "values": {
+        "content": "u16"
+      }
+    },
+    "CODE-d7649d": {
+      "type": "inline-code",
+      "values": {
+        "content": "u32"
+      }
+    },
+    "CODE-1506e6": {
+      "type": "inline-code",
+      "values": {
+        "content": "u64"
+      }
+    },
+    "CODE-fcd03a": {
+      "type": "inline-code",
+      "values": {
+        "content": "u128"
+      }
+    },
+    "CODE-f45fc1": {
+      "type": "inline-code",
+      "values": {
+        "content": "Field"
+      }
+    },
+    "CODE-7e1b0d": {
+      "type": "inline-code",
+      "values": {
+        "content": "Account"
+      }
+    },
+    "CODE-ac636b": {
+      "type": "inline-code",
+      "values": {
+        "content": "FLAT_ACCOUNT_FIELDS"
+      }
+    },
+    "CODE-4e45bb": {
+      "type": "inline-code",
+      "values": {
+        "content": ".into()"
+      }
+    },
+    "CODE-fcdff7": {
+      "type": "inline-code",
+      "values": {
+        "content": "account.nonce"
+      }
+    },
+    "CODE-6fb701": {
+      "type": "inline-code",
+      "values": {
+        "content": "account.balance << 32"
+      }
+    },
+    "CODE-10c22b": {
+      "type": "inline-code",
+      "values": {
+        "content": "for"
+      }
+    },
+    "CODE-935f68": {
+      "type": "inline-code",
+      "values": {
+        "content": "if"
+      }
+    },
+    "CODE-254506": {
+      "type": "inline-code",
+      "values": {
+        "content": "assert"
+      }
+    },
+    "CODE-f581aa": {
+      "type": "inline-code",
+      "values": {
+        "content": "TransferTxn"
+      }
+    },
+    "CODE-3029c1": {
+      "type": "inline-code",
+      "values": {
+        "content": "Ethereum Signed Message:"
+      }
+    },
+    "CODE-ea1e89": {
+      "type": "inline-code",
+      "values": {
+        "content": "MESSAGE_LENGTH"
+      }
+    },
+    "CODE-07b72b": {
+      "type": "inline-code",
+      "values": {
+        "content": "keccak256"
+      }
+    },
+    "CODE-af316e": {
+      "type": "inline-code",
+      "values": {
+        "content": "hash1"
+      }
+    },
+    "CODE-e7bf38": {
+      "type": "inline-code",
+      "values": {
+        "content": "hash2"
+      }
+    },
+    "CODE-0d6e40": {
+      "type": "inline-code",
+      "values": {
+        "content": "main"
+      }
+    },
+    "CODE-fc4467": {
+      "type": "inline-code",
+      "values": {
+        "content": "txn"
+      }
+    },
+    "CODE-7e88b3": {
+      "type": "inline-code",
+      "values": {
+        "content": "server/index.mjs"
+      }
+    },
+    "CODE-2fcb73": {
+      "type": "inline-code",
+      "values": {
+        "content": "main.nr"
+      }
+    },
+    "CODE-41550e": {
+      "type": "inline-code",
+      "values": {
+        "content": "noir.execute"
+      }
+    },
+    "CODE-21c933": {
+      "type": "inline-code",
+      "values": {
+        "content": "[\"0x60\", \"0xA7\"]"
+      }
+    },
+    "CODE-f3b050": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x60A7"
+      }
+    },
+    "CODE-8a7c8b": {
+      "type": "inline-code",
+      "values": {
+        "content": "Accounts"
+      }
+    },
+    "CODE-d25aab": {
+      "type": "inline-code",
+      "values": {
+        "content": "Verifier.sol"
+      }
+    },
+    "CODE-6f7943": {
+      "type": "inline-code",
+      "values": {
+        "content": "ZkBank"
+      }
+    },
+    "CODE-db5fe6": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x199..67b"
+      }
+    },
+    "CODE-3b64db": {
+      "type": "inline-code",
+      "values": {
+        "content": "bb"
+      }
+    },
+    "CODE-d8d153": {
+      "type": "inline-code",
+      "values": {
+        "content": "bb.js"
+      }
+    },
+    "CODE-2706c6": {
+      "type": "inline-code",
+      "values": {
+        "content": "exec"
+      }
+    },
+    "CODE-277089": {
+      "type": "inline-code",
+      "values": {
+        "content": "bytes"
+      }
+    },
+    "CODE-a54942": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x"
+      }
+    },
+    "CODE-8fd853": {
+      "type": "inline-code",
+      "values": {
+        "content": "fromAddress"
+      }
+    },
+    "CODE-78377b": {
+      "type": "inline-code",
+      "values": {
+        "content": "nonce"
+      }
+    },
+    "CODE-1a3d48": {
+      "type": "inline-code",
+      "values": {
+        "content": "smart-contracts/src/ZkBank.sol"
+      }
+    },
+    "CODE-ba5de1": {
+      "type": "inline-code",
+      "values": {
+        "content": "nargo"
+      }
+    },
+    "CODE-564616": {
+      "type": "inline-code",
+      "values": {
+        "content": "TransactionProcessed"
+      }
+    },
+    "CODE-71d982": {
+      "type": "inline-code",
+      "values": {
+        "content": "bytes32"
+      }
+    },
+    "LINK-21b137": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups/"
+      }
+    },
+    "LINK-9ad53a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/plasma"
+      }
+    },
+    "LINK-248c7d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/merkle-proofs-for-offline-data-integrity/"
+      }
+    },
+    "LINK-0a1e09": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Cryptographic_hash_function"
+      }
+    },
+    "LINK-0527ac": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Cryptographic_nonce"
+      }
+    },
+    "LINK-403437": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Replay_attack"
+      }
+    },
+    "LINK-28cc7f": {
+      "type": "link",
+      "values": {
+        "url": "https://vite.dev/"
+      }
+    },
+    "LINK-eb5ea9": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/"
+      }
+    },
+    "LINK-55276b": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/"
+      }
+    },
+    "LINK-c8bd53": {
+      "type": "link",
+      "values": {
+        "url": "https://wagmi.sh/"
+      }
+    },
+    "LINK-7cd47c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
+      }
+    },
+    "LINK-d17b92": {
+      "type": "link",
+      "values": {
+        "url": "https://nodejs.org/en"
+      }
+    },
+    "LINK-232350": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/"
+      }
+    },
+    "LINK-02dddf": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/docs/getting_started/quick_start"
+      }
+    },
+    "LINK-9883d5": {
+      "type": "link",
+      "values": {
+        "url": "https://getfoundry.sh/introduction/installation"
+      }
+    },
+    "LINK-0ace3b": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1"
+      }
+    },
+    "LINK-b668e5": {
+      "type": "link",
+      "values": {
+        "url": "https://nodejs.org/en/download"
+      }
+    },
+    "LINK-327769": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/install"
+      }
+    },
+    "LINK-f32b65": {
+      "type": "link",
+      "values": {
+        "url": "https://learn.microsoft.com/en-us/windows/wsl/install"
+      }
+    },
+    "LINK-563ed4": {
+      "type": "link",
+      "values": {
+        "url": "http://localhost:5173/"
+      }
+    },
+    "LINK-62e441": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml"
+      }
+    },
+    "LINK-092e7f": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptovalleyjournal.com/glossary/finney/"
+      }
+    },
+    "LINK-e85b92": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/client/src/Transfer.tsx"
+      }
+    },
+    "LINK-606b8c": {
+      "type": "link",
+      "values": {
+        "url": "https://wagmi.sh/react/api/hooks"
+      }
+    },
+    "LINK-d16d1b": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/"
+      }
+    },
+    "LINK-a21c6b": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/reference/react/useState"
+      }
+    },
+    "LINK-5ab917": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/accounts/local/signMessage"
+      }
+    },
+    "LINK-4eade4": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/utilities/recoverPublicKey"
+      }
+    },
+    "LINK-2e1128": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/colinnielsen/ecrecover-noir"
+      }
+    },
+    "LINK-fd307b": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/learn/writing-markup-with-jsx"
+      }
+    },
+    "LINK-dbc9a6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr"
+      }
+    },
+    "LINK-446509": {
+      "type": "link",
+      "values": {
+        "url": "https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/"
+      }
+    },
+    "LINK-c570f4": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash"
+      }
+    },
+    "LINK-ed9c4c": {
+      "type": "link",
+      "values": {
+        "url": "https://rareskills.io/post/arithmetic-circuit"
+      }
+    },
+    "LINK-06d9d5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml"
+      }
+    },
+    "LINK-ed9108": {
+      "type": "link",
+      "values": {
+        "url": "https://emn178.github.io/online-tools/keccak_256.html"
+      }
+    },
+    "LINK-5f1431": {
+      "type": "link",
+      "values": {
+        "url": "https://www.rust-lang.org/"
+      }
+    },
+    "LINK-b0c5ac": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-191"
+      }
+    },
+    "LINK-ecbb52": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/docs/noir/concepts/data_types/fields"
+      }
+    },
+    "LINK-17a4d4": {
+      "type": "link",
+      "values": {
+        "url": "https://rareskills.io/post/arithmetic-circuit"
+      }
+    },
+    "LINK-c19928": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/docs/dev/noir/concepts/assert"
+      }
+    },
+    "LINK-065833": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings"
+      }
+    },
+    "LINK-b37906": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/docs/noir/concepts/data_types/tuples"
+      }
+    },
+    "LINK-1292a1": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-191"
+      }
+    },
+    "LINK-b24412": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Modulo"
+      }
+    },
+    "LINK-1644e5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions"
+      }
+    },
+    "LINK-6eea0d": {
+      "type": "link",
+      "values": {
+        "url": "http://localhost:5173"
+      }
+    },
+    "LINK-e9b3d2": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Replay_attack"
+      }
+    },
+    "LINK-f5f023": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs"
+      }
+    },
+    "LINK-d838f7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr"
+      }
+    },
+    "LINK-06e71f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/@noir-lang/noir_js"
+      }
+    },
+    "LINK-0f1e9a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml"
+      }
+    },
+    "LINK-281eb5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg"
+      }
+    },
+    "LINK-f709c6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/@aztec/bb.js"
+      }
+    },
+    "LINK-78b709": {
+      "type": "link",
+      "values": {
+        "url": "https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback"
+      }
+    },
+    "LINK-d44b5c": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2023/01/20/stealth.html"
+      }
+    },
+    "LINK-d68fb0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/250911-zk-bank/blob/03-smart-contracts/server/index.mjs#L278-L291"
+      }
+    },
+    "LINK-52f600": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.optimism.io/stack/transactions/forced-transaction"
+      }
+    },
+    "LINK-9a0df2": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract"
+      }
+    },
+    "LINK-135d3f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/ipfs-decentralized-ui/"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:31:17.921Z",
+      "status": "success"
+    }
+  }
+}

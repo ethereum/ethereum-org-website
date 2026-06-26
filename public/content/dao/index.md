@@ -4,13 +4,13 @@ metaTitle: What is a DAO? | Decentralized Autonomous Organization
 description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: A representation of a DAO voting on a proposal.
-summaryPoint1: Member-owned communities without centralized leadership.
-summaryPoint2: A safe way to collaborate with internet strangers.
-summaryPoint3: A safe place to commit funds to a specific cause.
+summaryPoints:
+  - "Member-owned communities without centralized leadership."
+  - "A safe way to collaborate with internet strangers."
+  - "A safe place to commit funds to a specific cause."
 ---
 
 ## What are DAOs? {#what-are-daos}
@@ -45,7 +45,7 @@ To help this make more sense, here's a few examples of how you could use a DAO:
 - **Collective ownership** – you could purchase physical or digital assets and members can vote on how to use them.
 - **Ventures and grants** – you could create a venture fund that pools investment capital and votes on ventures to back. Repaid money could later be redistributed amongst DAO-members.
 
-<YouTube id="zTStDvUtQWc" />
+<VideoWatch slug="dao-build-next-great-city" />
 
 ## How do DAOs work? {#how-daos-work}
 
@@ -74,15 +74,15 @@ Delegation is like the DAO version of representative democracy. Token holders de
 
 [ENS](https://claim.ens.domains/delegate-ranking) – ENS holders can delegate their votes to engaged community members to represent them.
 
-### Automatic transaction governance {#governance-example}
+### Automatic transaction governance {#governance-example-2}
 
 In many DAOs, transactions will be automatically executed if a quorum of members votes affirmative.
 
-#### A famous example {#governance-example}
+#### A famous example {#governance-example-3}
 
 [Nouns](https://nouns.wtf) – In Nouns DAO, a transaction is automatically executed if a quorum of votes is met and a majority votes affirmative, as long as it is not vetoed by the founders.
 
-### Multisig governance {#governance-example}
+### Multisig governance {#governance-example-4}
 
 While DAOs may have thousands of voting members, funds can live in a [wallet](/glossary/#wallet) shared by 5-20 active community members who are trusted and usually doxxed (public identities known to the community). After a vote, the [multisig](/glossary/#multisig) signers execute the will of the community.
 
@@ -113,10 +113,6 @@ _Typically used to govern broad decentralized protocols and/or tokens themselves
 Share-based DAOs are more permissioned, but still quite open. Any prospective members can submit a proposal to join the DAO, usually offering a tribute of some value in the form of tokens or work. Shares represent direct voting power and ownership. Members can exit at any time with their proportionate share of the treasury.
 
 _Typically used for more closer-knit, human-centric organizations like charities, worker collectives, and investment clubs. Can also govern protocols and tokens as well._
-
-#### A famous example {#share-example}
-
-[MolochDAO](http://molochdao.com/) – MolochDAO is focused on funding Ethereum projects. They require a proposal for membership so the group can assess whether you have the necessary expertise and capital to make informed judgments about potential grantees. You can't just buy access to the DAO on the open market.
 
 ### Reputation-based membership {#reputation-based-membership}
 

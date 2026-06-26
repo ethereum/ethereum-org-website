@@ -1,40 +1,39 @@
 ---
-title: "Ajouter des échanges"
-description: "La politique que nous appliquons pour ajouter des échanges sur ethereum.org"
+title: Ajouter des plateformes d'échange Ethereum
+metaTitle: Ajouter des plateformes d'échange
+description: La politique que nous utilisons lors de l'ajout de plateformes d'échange sur ethereum.org
 lang: fr
 ---
 
-# Ajout d'échanges Ethereum {#adding-ethereum-exchanges}
+Tout le monde est libre de suggérer de nouvelles plateformes d'échange sur ethereum.org.
 
-N'importe qui est libre de proposer l'ajout de nouveaux échanges (c'est-à-dire des intermédiaires d'échange) sur ethereum.org.
-
-Nous les listons actuellement ici :
+Nous les répertorions actuellement sur :
 
 - [ethereum.org/get-eth](/get-eth/)
 
-Cette page permet à un utilisateur de saisir son lieu de résidence afin de voir quels échanges il peut utiliser. Il peut ainsi prendre rapidement connaissance des éventuelles restrictions géographiques.
+Cette page permet à un utilisateur d'indiquer son lieu de résidence et de voir quelles plateformes d'échange il peut utiliser. Cela permet de mettre en évidence les éventuelles restrictions géographiques dès le début.
 
-Dans cette optique, nous avons besoin d'informations spécifiques lorsque vous proposez un échange.
+En raison de ce contexte, nous avons besoin de certaines informations spécifiques lorsque vous suggérez une plateforme d'échange.
 
-**REMARQUE :** Si vous souhaitez lister un échange décentralisé, consultez notre [politique d'ajout de portefeuilles et de dapps](/contributing/adding-products/).
+**REMARQUE :** Si vous souhaitez répertorier une plateforme d'échange décentralisée, consultez notre [politique de référencement des portefeuilles et des applications décentralisées (dapps)](/contributing/adding-products/).
 
 ## Ce dont nous avons besoin {#what-we-need}
 
-- Les restrictions géographiques qui s'appliquent à l'échange. Les restrictions géographiques associées à l'échange doivent être détaillées sur une page ou une section spécifique du site web de l'échange.
-- Les devises que les utilisateurs peuvent choisir pour acheter des ETH
-- Des preuves que l'échange est une société commerciale légitime
-- Toute information supplémentaire que vous pourriez avoir ; il peut s'agir d'informations sur l'entreprise comme son ancienneté, son financement, etc.
+- Les restrictions géographiques qui s'appliquent à la plateforme d'échange. Les restrictions géographiques associées à la plateforme d'échange doivent être détaillées sur une page ou une section dédiée du site Web de la plateforme.
+- Les devises que les utilisateurs peuvent utiliser pour acheter de l'ETH
+- La preuve que la plateforme d'échange est une société de trading légitime
+- Toute information supplémentaire que vous pourriez avoir – il peut s'agir d'informations sur l'entreprise telles que les années d'activité, le soutien financier, etc.
 
-Nous avons besoin de ces informations pour [aider les utilisateurs à trouver un échange qu'ils peuvent utiliser](/get-eth/#country-picker) avec précision.
+Nous avons besoin de ces informations pour pouvoir [aider précisément les utilisateurs à trouver une plateforme d'échange qu'ils peuvent utiliser](/get-eth/#country-picker).
 
-Cela permet également à ethereum.org d'avoir confiance en la légitimité et la sûreté des services fournis par l'échange.
+Et pour qu'ethereum.org puisse être plus sûr que la plateforme d'échange est un service légitime et sécurisé.
 
 ---
 
-## Ajoutez votre échange {#add-exchange}
+## Ajouter votre plateforme d'échange {#add-exchange}
 
-Si vous souhaitez ajouter un échange sur ethereum.org, créez un ticket sur GitHub.
+Si vous souhaitez ajouter une plateforme d'échange à ethereum.org, créez une issue sur GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
-Créer un ticket
+  Créer une issue
 </ButtonLink>

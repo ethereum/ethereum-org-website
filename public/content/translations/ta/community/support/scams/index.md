@@ -1,102 +1,102 @@
 ---
-title: Scam help & reporting
-description: What to do if you have been scammed, how to secure your remaining assets, and where to report fraud.
+title: நான் ஏமாற்றப்பட்டேன் அல்லது நிதியை இழந்துவிட்டேன்
+metaTitle: மோசடி உதவி மற்றும் புகாரளித்தல்
+description: நீங்கள் ஏமாற்றப்பட்டிருந்தால் என்ன செய்வது, மீதமுள்ள உங்கள் சொத்துக்களை எவ்வாறு பாதுகாப்பது மற்றும் மோசடி குறித்து எங்கு புகாரளிப்பது.
 lang: ta
 ---
 
-# I was scammed or lost funds {#scam-help}
-
-Cryptocurrency scams target people of all experience levels, including professionals in finance and technology. You are not alone, and being here is the right first step.
+மறைக்குறியீட்டு நாணய மோசடிகள் நிதி மற்றும் தொழில்நுட்ப வல்லுநர்கள் உட்பட அனைத்து அனுபவ நிலைகளிலும் உள்ளவர்களை குறிவைக்கின்றன. நீங்கள் தனியாக இல்லை, இங்கு வந்திருப்பது சரியான முதல் படியாகும்.
 
 <Alert variant="error">
 <AlertEmoji text=":rotating_light:"/>
 <AlertContent>
 <AlertDescription>
 
-**No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#recovery-scams) below.
+**யாராலும் தொகுதிச்சங்கிலி பரிவர்த்தனைகளைத் திரும்பப் பெற முடியாது.** கட்டணம் செலுத்தினால் உங்கள் நிதியை மீட்டுத் தர முடியும் என்று கூறி யாராவது உங்களைத் தொடர்பு கொண்டால், அது நிச்சயமாக இரண்டாவது மோசடியாகவே இருக்கும். கீழே உள்ள [மீட்பு மோசடிகளைப்](#scam-types) பார்க்கவும்.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Secure your remaining assets {#secure-assets}
+## மீதமுள்ள உங்கள் சொத்துக்களைப் பாதுகாக்கவும் {#secure-assets}
 
-If you interacted with a scammer or suspect your wallet is compromised, take these steps immediately:
+நீங்கள் ஒரு மோசடிக்காரருடன் தொடர்பு கொண்டிருந்தாலோ அல்லது உங்கள் பணப்பை சமரசம் செய்யப்பட்டதாக சந்தேகித்தாலோ, உடனடியாக இந்த நடவடிக்கைகளை எடுக்கவும்:
 
-1. **Move remaining funds** to a new, secure wallet that the scammer does not have access to
-2. **Revoke token approvals.** Scammers often trick you into approving unlimited token spending. Revoking these permissions prevents further draining of your wallet
-3. **Change passwords** on any exchange accounts that may be linked
-4. **Enable two-factor authentication (2FA)** on all crypto-related accounts
+1. **மீதமுள்ள நிதியை** மோசடிக்காரரால் அணுக முடியாத புதிய, பாதுகாப்பான பணப்பைக்கு மாற்றவும்
+2. **வில்லை ஒப்புதல்களைத் திரும்பப் பெறவும்.** வரம்பற்ற வில்லை செலவினங்களை அங்கீகரிக்கும்படி மோசடிக்காரர்கள் உங்களை அடிக்கடி ஏமாற்றுவார்கள். இந்த அனுமதிகளைத் திரும்பப் பெறுவது உங்கள் பணப்பையிலிருந்து மேலும் நிதி காலியாவதைத் தடுக்கிறது
+3. இணைக்கப்பட்டிருக்கக்கூடிய எந்தவொரு பரிமாற்றக் கணக்குகளின் **கடவுச்சொற்களையும் மாற்றவும்**
+4. கிரிப்டோ தொடர்பான அனைத்து கணக்குகளிலும் **இரு காரணி அங்கீகாரத்தை (2FA) இயக்கவும்**
 
-### How to revoke token approvals {#revoke-approvals}
+### வில்லை ஒப்புதல்களை எவ்வாறு திரும்பப் பெறுவது {#revoke-approvals}
 
-When you interact with a dapp or smart contract, you may have granted it permission to spend your tokens. If a scammer tricked you into approving a malicious contract, they can continue draining your tokens even after the initial scam.
+நீங்கள் ஒரு பரவலாக்கப்பட்ட செயலி (dapp) அல்லது திறன் ஒப்பந்தத்துடன் தொடர்பு கொள்ளும்போது, உங்கள் வில்லைகளைச் செலவிட அதற்கு அனுமதி அளித்திருக்கலாம். தீங்கிழைக்கும் ஒப்பந்தத்திற்கு ஒப்புதல் அளிக்கும்படி ஒரு மோசடிக்காரர் உங்களை ஏமாற்றியிருந்தால், ஆரம்ப மோசடிக்குப் பிறகும் அவர்கள் உங்கள் வில்லைகளைத் தொடர்ந்து காலி செய்ய முடியும்.
 
-Use these tools to check and revoke approvals:
+ஒப்புதல்களைச் சரிபார்க்கவும் திரும்பப் பெறவும் இந்தக் கருவிகளைப் பயன்படுத்தவும்:
 
-- [Revoke.cash](https://revoke.cash/): connect your wallet to see all active approvals and revoke them
-- [Revokescout](https://revoke.blockscout.com/): check and revoke approvals via Blockscout
-- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): check and revoke approvals via Etherscan
+- [Revoke.cash](https://revoke.cash/): செயலில் உள்ள அனைத்து ஒப்புதல்களையும் பார்க்கவும் அவற்றைத் திரும்பப் பெறவும் உங்கள் பணப்பையை இணைக்கவும்
+- [Revokescout](https://revoke.blockscout.com/): Blockscout மூலம் ஒப்புதல்களைச் சரிபார்த்து திரும்பப் பெறவும்
+- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): Etherscan மூலம் ஒப்புதல்களைச் சரிபார்த்து திரும்பப் பெறவும்
 
 <DocLink href="/guides/how-to-revoke-token-access/">
-  Step-by-step guide: How to revoke token access
+  படிப்படியான வழிகாட்டி: வில்லை அணுகலை எவ்வாறு திரும்பப் பெறுவது
 </DocLink>
 
-## Report scam addresses and websites {#report}
+## மோசடி முகவரிகள் மற்றும் இணையதளங்களைப் புகாரளிக்கவும் {#report}
 
-Reporting helps warn other users and may assist law enforcement investigations. Document everything: transaction hashes, wallet addresses, screenshots, and any communication with the scammer.
+புகாரளிப்பது பிற பயனர்களை எச்சரிக்க உதவுகிறது மற்றும் சட்ட அமலாக்க விசாரணைகளுக்கு உதவக்கூடும். அனைத்தையும் ஆவணப்படுத்தவும்: பரிவர்த்தனை ஹாஷ்கள், பணப்பை முகவரிகள், ஸ்கிரீன்ஷாட்கள் மற்றும் மோசடிக்காரருடனான எந்தவொரு தகவல்தொடர்பும்.
 
-### Report a scam address {#report-address}
+### மோசடி முகவரியைப் புகாரளிக்கவும் {#report-address}
 
-- [Chainabuse](https://www.chainabuse.com/): community-driven scam and fraud reporting database. Submit reports and search for known scam addresses
-- [Etherscan report](https://info.etherscan.com/report-address/): flag an address on the most-used Ethereum block explorer
-- [CryptoScamDB](https://cryptoscamdb.org/): open-source database tracking cryptocurrency scams
+- [Chainabuse](https://www.chainabuse.com/): சமூகம் சார்ந்த மோசடி மற்றும் மோசடி புகாரளிக்கும் தரவுத்தளம். புகார்களைச் சமர்ப்பிக்கவும் மற்றும் அறியப்பட்ட மோசடி முகவரிகளைத் தேடவும்
+- [Etherscan report](https://info.etherscan.com/report-address/): அதிகம் பயன்படுத்தப்படும் எத்திரியம் தொகுதி ஆராய்வியில் ஒரு முகவரியைக் கொடியிடவும்
+- [CryptoScamDB](https://cryptoscamdb.org/): மறைக்குறியீட்டு நாணய மோசடிகளைக் கண்காணிக்கும் திறந்த மூல தரவுத்தளம்
 
-### Report a scam website or social media account {#report-website}
+### மோசடி இணையதளம் அல்லது சமூக ஊடகக் கணக்கைப் புகாரளிக்கவும் {#report-website}
 
-- [PhishTank](https://phishtank.org/): submit and verify phishing URLs
-- [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/): report phishing sites to Google so they get blocked in Chrome and other browsers
-- [Netcraft](https://report.netcraft.com/report/mistake): report malicious and fraudulent websites
-- Report directly on the social media platform where the scam occurred (Twitter/X, Discord, Telegram all have reporting features)
+- [PhishTank](https://phishtank.org/): ஃபிஷிங் URLகளைச் சமர்ப்பித்து சரிபார்க்கவும்
+- [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/): ஃபிஷிங் தளங்களை கூகுளிடம் புகாரளிக்கவும், இதனால் அவை குரோம் மற்றும் பிற உலாவிகளில் முடக்கப்படும்
+- [Netcraft](https://report.netcraft.com/report/mistake): தீங்கிழைக்கும் மற்றும் மோசடியான இணையதளங்களைப் புகாரளிக்கவும்
+- மோசடி நடந்த சமூக ஊடக தளத்திலேயே நேரடியாகப் புகாரளிக்கவும் (ட்விட்டர்/X, டிஸ்கார்ட், டெலிகிராம் அனைத்திலும் புகாரளிக்கும் அம்சங்கள் உள்ளன)
 
-### Report to law enforcement {#report-law-enforcement}
+### சட்ட அமலாக்கத்திடம் புகாரளிக்கவும் {#report-law-enforcement}
 
-- **United States:** [FBI Internet Crime Complaint Center (IC3)](https://www.ic3.gov/)
-- **United Kingdom:** [Action Fraud](https://www.actionfraud.police.uk/)
-- **European Union:** [Europol](https://www.europol.europa.eu/report-a-crime)
-- **Other countries:** file a report with your local police. Cryptocurrency fraud is a crime in most jurisdictions
+- **அமெரிக்கா:** [FBI இணையக் குற்றப் புகார் மையம் (IC3)](https://www.ic3.gov/)
+- **ஐக்கிய இராச்சியம்:** [Action Fraud](https://www.actionfraud.police.uk/)
+- **ஐரோப்பிய ஒன்றியம்:** [Europol](https://www.europol.europa.eu/report-a-crime)
+- **பிற நாடுகள்:** உங்கள் உள்ளூர் காவல்துறையில் புகார் அளிக்கவும். மறைக்குறியீட்டு நாணய மோசடி பெரும்பாலான அதிகார வரம்புகளில் ஒரு குற்றமாகும்
 
-## Analyze what happened {#analyze}
+## என்ன நடந்தது என்பதைப் பகுப்பாய்வு செய்யவும் {#analyze}
 
-Understanding where your funds went can help with reports and may support recovery efforts if the funds land on a centralized exchange.
+உங்கள் நிதி எங்கு சென்றது என்பதைப் புரிந்துகொள்வது புகாரளிக்க உதவும், மேலும் நிதி ஒரு மையப்படுத்தப்பட்ட பரிமாற்றத்திற்குச் சென்றால் மீட்பு முயற்சிகளுக்கு ஆதரவளிக்கக்கூடும்.
 
-- [Blockscout](https://eth.blockscout.com/): open-source block explorer to look up any transaction hash or wallet address to see where funds were sent
-- [Etherscan](https://etherscan.io/): look up any transaction hash or wallet address to see where funds were sent
-- [Chainabuse lookup](https://www.chainabuse.com/): check if an address has already been reported by other victims
-- [MetaSleuth](https://metasleuth.io/) by BlockSec: visual transaction tracing tool that maps fund flows
+- [Blockscout](https://eth.blockscout.com/): நிதி எங்கு அனுப்பப்பட்டது என்பதைப் பார்க்க எந்தவொரு பரிவர்த்தனை ஹாஷ் அல்லது பணப்பை முகவரியையும் தேடுவதற்கான திறந்த மூல தொகுதி ஆராய்வி
+- [Etherscan](https://etherscan.io/): நிதி எங்கு அனுப்பப்பட்டது என்பதைப் பார்க்க எந்தவொரு பரிவர்த்தனை ஹாஷ் அல்லது பணப்பை முகவரியையும் தேடவும்
+- [Chainabuse lookup](https://www.chainabuse.com/): ஒரு முகவரி ஏற்கனவே பிற பாதிக்கப்பட்டவர்களால் புகாரளிக்கப்பட்டுள்ளதா எனச் சரிபார்க்கவும்
+- BlockSec வழங்கும் [MetaSleuth](https://metasleuth.io/): நிதிப் பாய்வுகளை வரைபடமாக்கும் காட்சி பரிவர்த்தனை கண்காணிப்புக் கருவி
 
-**If funds were sent to a centralized exchange** (like Coinbase, Binance, Kraken), contact their support team immediately with the transaction details. Exchanges can sometimes freeze accounts flagged for fraud.
+**நிதி ஒரு மையப்படுத்தப்பட்ட பரிமாற்றத்திற்கு அனுப்பப்பட்டிருந்தால்** (காயின்பேஸ், பைனான்ஸ், Kraken போன்றவை), பரிவர்த்தனை விவரங்களுடன் உடனடியாக அவர்களின் ஆதரவுக் குழுவைத் தொடர்பு கொள்ளவும். மோசடிக்காகக் கொடியிடப்பட்ட கணக்குகளைப் பரிமாற்றங்கள் சில நேரங்களில் முடக்கலாம்.
 
-## The hard truth {#hard-truth}
+## கசப்பான உண்மை {#hard-truth}
 
-Because Ethereum is decentralized, no central authority can reverse transactions or recover stolen funds. Once a transaction is confirmed on the blockchain, it is final.
+எத்திரியம் பரவலாக்கப்பட்டிருப்பதால், எந்தவொரு மைய அதிகார அமைப்பாலும் பரிவர்த்தனைகளைத் திரும்பப் பெறவோ அல்லது திருடப்பட்ட நிதியை மீட்கவோ முடியாது. தொகுதிச்சங்கிலியில் ஒரு பரிவர்த்தனை உறுதிசெய்யப்பட்டவுடன், அது இறுதியானது.
 
-Reporting is still valuable. Reports help law enforcement track organized fraud rings, and flagging addresses on Chainabuse and Etherscan warns future potential victims.
+புகாரளிப்பது இன்னும் மதிப்புமிக்கது. புகார்கள் சட்ட அமலாக்கத்திற்கு ஒழுங்கமைக்கப்பட்ட மோசடி வளையங்களைக் கண்காணிக்க உதவுகின்றன, மேலும் Chainabuse மற்றும் Etherscan இல் முகவரிகளைக் கொடியிடுவது எதிர்காலத்தில் பாதிக்கப்படக்கூடியவர்களை எச்சரிக்கிறது.
 
-## Types of scams to watch for {#scam-types}
+## கவனிக்க வேண்டிய மோசடிகளின் வகைகள் {#scam-types}
 
 <ExpandableCard
 title="Giveaway and airdrop scams"
 contentPreview="No one is giving away free ETH. These offers are always scams."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
-
 >
 
-Scammers create fake giveaways promising to multiply your ETH or give you free tokens. They often impersonate well-known figures like Vitalik Buterin. If you send ETH to a "giveaway" address, you will not receive anything back.
+மோசடிக்காரர்கள் உங்கள் ETH ஐப் பெருக்குவதாகவோ அல்லது உங்களுக்கு இலவச வில்லைகளை வழங்குவதாகவோ உறுதியளித்து போலி பரிசளிப்புகளை உருவாக்குகிறார்கள். அவர்கள் பெரும்பாலும் விட்டாலிக் புட்டெரின் போன்ற நன்கு அறியப்பட்ட நபர்களைப் போல ஆள்மாறாட்டம் செய்கிறார்கள். நீங்கள் ஒரு "பரிசளிப்பு" முகவரிக்கு ETH ஐ அனுப்பினால், உங்களுக்கு எதுவும் திரும்பக் கிடைக்காது.
 
-**Remember:** Vitalik and other prominent figures will never ask you to send them ETH.
+**நினைவில் கொள்க:** விட்டாலிக் மற்றும் பிற முக்கிய நபர்கள் தங்களுக்கு ETH அனுப்புமாறு ஒருபோதும் உங்களிடம் கேட்க மாட்டார்கள்.
 
-[More on common scams](/security/#common-scams)
+[பொதுவான மோசடிகள் பற்றி மேலும்](/security/#common-scams)
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -104,17 +104,17 @@ title="Impersonation and fake support"
 contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
-
 >
 
-Scammers impersonate Ethereum team members, moderators, or support agents on Discord, Telegram, and social media. They may send you direct messages offering help or claiming there is a problem with your account.
+மோசடிக்காரர்கள் டிஸ்கார்ட், டெலிகிராம் மற்றும் சமூக ஊடகங்களில் எத்திரியம் குழு உறுப்பினர்கள், மதிப்பீட்டாளர்கள் அல்லது ஆதரவு முகவர்களைப் போல ஆள்மாறாட்டம் செய்கிறார்கள். அவர்கள் உங்களுக்கு உதவி வழங்குவதாகவோ அல்லது உங்கள் கணக்கில் சிக்கல் இருப்பதாகவோ கூறி நேரடி செய்திகளை அனுப்பலாம்.
 
-**Remember:**
+**நினைவில் கொள்க:**
 
-- There is no "Ethereum support team"
-- Real moderators will never DM you first
-- Never share your seed phrase or private keys with anyone, for any reason
-- Never click links sent in unsolicited messages
+- "எத்திரியம் ஆதரவுக் குழு" என்று எதுவும் இல்லை
+- உண்மையான மதிப்பீட்டாளர்கள் ஒருபோதும் உங்களுக்கு முதலில் நேரடி செய்தி (DM) அனுப்ப மாட்டார்கள்
+- எந்தவொரு காரணத்திற்காகவும் உங்கள் விதைச் சொற்றொடர் அல்லது தனிப்பட்ட திறவுகோல்களை யாருடனும் பகிர வேண்டாம்
+- கோரப்படாத செய்திகளில் அனுப்பப்படும் இணைப்புகளை ஒருபோதும் கிளிக் செய்ய வேண்டாம்
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -122,14 +122,14 @@ title="Recovery scams"
 contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
-
 >
 
-Recovery scams specifically target people who have already lost funds. Scammers monitor social media for people talking about being scammed, then reach out posing as "blockchain investigators" or "crypto recovery experts."
+மீட்பு மோசடிகள் ஏற்கனவே நிதியை இழந்தவர்களைக் குறிப்பாகக் குறிவைக்கின்றன. மோசடிக்காரர்கள் சமூக ஊடகங்களில் ஏமாற்றப்பட்டதைப் பற்றிப் பேசுபவர்களைக் கண்காணித்து, பின்னர் "தொகுதிச்சங்கிலி புலனாய்வாளர்கள்" அல்லது "கிரிப்டோ மீட்பு நிபுணர்கள்" போல அவர்களைத் தொடர்பு கொள்கிறார்கள்.
 
-They promise to trace and recover your stolen crypto for an upfront fee. After you pay, they disappear.
+அவர்கள் முன்கூட்டியே கட்டணம் பெற்றுக்கொண்டு உங்கள் திருடப்பட்ட கிரிப்டோவைக் கண்காணித்து மீட்பதாக உறுதியளிக்கிறார்கள். நீங்கள் பணம் செலுத்திய பிறகு, அவர்கள் மறைந்துவிடுவார்கள்.
 
-**No legitimate service can reverse blockchain transactions.** Anyone promising this is lying. This is one of the most common follow-up scams.
+**எந்தவொரு முறையான சேவையாலும் தொகுதிச்சங்கிலி பரிவர்த்தனைகளைத் திரும்பப் பெற முடியாது.** இதை உறுதியளிக்கும் எவரும் பொய் சொல்கிறார்கள். இது மிகவும் பொதுவான தொடர் மோசடிகளில் ஒன்றாகும்.
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -137,23 +137,23 @@ title="Phishing websites and fake apps"
 contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
-
 >
 
-Phishing sites look identical to real wallet apps, exchanges, or DeFi platforms. They trick you into entering your seed phrase or connecting your wallet, then drain your funds.
+ஃபிஷிங் தளங்கள் உண்மையான பணப்பை செயலிகள், பரிமாற்றங்கள் அல்லது பரவலாக்கப்பட்ட நிதி (DeFi) தளங்களைப் போலவே இருக்கும். உங்கள் விதைச் சொற்றொடரை உள்ளிடும்படி அல்லது உங்கள் பணப்பையை இணைக்கும்படி அவை உங்களை ஏமாற்றி, பின்னர் உங்கள் நிதியைக் காலி செய்கின்றன.
 
-**Protect yourself:**
+**உங்களைப் பாதுகாத்துக் கொள்ளுங்கள்:**
 
-- Always verify the URL before connecting your wallet
-- Bookmark the official sites you use regularly
-- Never enter your seed phrase on any website. Legitimate apps never ask for it
-- Use [PhishTank](https://phishtank.org/) to check suspicious URLs
+- உங்கள் பணப்பையை இணைக்கும் முன் எப்போதும் URL ஐச் சரிபார்க்கவும்
+- நீங்கள் தொடர்ந்து பயன்படுத்தும் அதிகாரப்பூர்வ தளங்களைப் புக்மார்க் செய்யவும்
+- எந்தவொரு இணையதளத்திலும் உங்கள் விதைச் சொற்றொடரை ஒருபோதும் உள்ளிட வேண்டாம். முறையான செயலிகள் அதை ஒருபோதும் கேட்காது
+- சந்தேகத்திற்குரிய URLகளைச் சரிபார்க்க [PhishTank](https://phishtank.org/) ஐப் பயன்படுத்தவும்
 
 <DocLink href="/guides/how-to-id-scam-tokens/">
-  How to identify scam tokens
+  மோசடி வில்லைகளை எவ்வாறு கண்டறிவது
 </DocLink>
+
 </ExpandableCard>
 
 <DocLink href="/security/">
-  Full guide to Ethereum security and scam prevention
+  எத்திரியம் பாதுகாப்பு மற்றும் மோசடி தடுப்புக்கான முழுமையான வழிகாட்டி
 </DocLink>

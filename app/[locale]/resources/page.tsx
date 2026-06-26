@@ -2,14 +2,15 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
 import Github from "@/components/icons/github.svg"
 import StackIcon from "@/components/icons/stack.svg"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Stack, VStack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
@@ -17,6 +18,7 @@ import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
@@ -29,10 +31,11 @@ import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const EVENT_CATEGORY = "dashboard"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   // Fetch data using the new data-layer functions (already cached)
   const [growThePieData, blobscanOverallStats] = await Promise.all([
@@ -55,7 +58,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Extract blob stats directly (getBlobscanStats returns BlobscanStats, not wrapped in MetricReturnData)
   const blobStats = {
     avgBlobFee: blobscanOverallStats.avgBlobFee,
-    totalBlobs: new Intl.NumberFormat(undefined, {
+    totalBlobs: numberFormat(locale, {
       notation: "compact",
       maximumFractionDigits: 1,
     }).format(blobscanOverallStats.totalBlobs),
@@ -76,7 +79,7 @@ const Page = async ({ params }: { params: PageParams }) => {
       <ResourcesPageJsonLD locale={locale} contributors={contributors} />
 
       <MainArticle className="relative flex flex-col">
-        <BannerNotification shouldShow className="text-center max-md:flex-col">
+        <Alert variant="banner" className="max-md:flex-col">
           {t("page-resources-banner-notification-message")}{" "}
           <Link
             href={new URL(
@@ -92,7 +95,7 @@ const Page = async ({ params }: { params: PageParams }) => {
           >
             {t("page-resources-share-feedback")}
           </Link>
-        </BannerNotification>
+        </Alert>
 
         <HubHero
           title={t("page-resources-hero-title")}
@@ -125,11 +128,11 @@ const Page = async ({ params }: { params: PageParams }) => {
                     </div>
                     <h2 className="flex-1 text-start font-black">{label}</h2>
                   </div>
-                  <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-y-6">
+                  <Grid columns={2} size="wider" className="lg:gap-y-6">
                     {boxes.map(({ title, metric, items, className }) => (
                       <div
                         className={cn(
-                          "overflow-hidden rounded-2xl border shadow-lg",
+                          "overflow-hidden rounded-base border shadow-lg",
                           className
                         )}
                         key={title}
@@ -137,7 +140,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                         <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
                           {title}
                         </div>
-                        <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
+                        <div className="h-full bg-background bg-linear-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
                           {metric && metric}
                           <ResourcesContainer>
                             {items.map(({ className, ...item }) => (
@@ -151,7 +154,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                         </div>
                       </div>
                     ))}
-                  </div>
+                  </Grid>
                 </section>
               </Stack>
             ))}
@@ -228,14 +231,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   return await getMetadata({
     locale,

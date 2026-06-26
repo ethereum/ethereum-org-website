@@ -1,95 +1,95 @@
 ---
-title: Staking als Service
-description: Eine Übersicht darüber, wie man mit gepooltem ETH-Staking beginnen kann
+title: Staking as a Service
+description: "Erfahre mehr über Staking as a Service"
 lang: de
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Leslie, das in den Wolken schwebende Nashorn.
+alt: Nashorn Leslie schwebt in den Wolken.
 sidebarDepth: 2
 summaryPoints:
-  - Drittanbieter als Node-Betreiber kümmern sich um den Betrieb Ihres Validator-Client
-  - Eine großartige Option für alle mit 32 ETH, die ungern mit der technischen Komplexität von Nodes umgehen
-  - Weniger Vertrauen, doch Ihre Auszahlungsschlüssel bleiben bei Ihnen
+  - Drittanbieter von Knoten übernehmen den Betrieb deines Validator-Clients
+  - Großartige Option für alle mit 32 ETH, die sich mit der technischen Komplexität des Betriebs eines Knotens nicht wohlfühlen
+  - Reduziere Vertrauensannahmen und behalte die Verwahrung deiner Abhebungsschlüssel
 ---
 
-## Was ist unter Staking-as-a-Service, also Staking als Service zu verstehen? {#what-is-staking-as-a-service}
+## Was ist Staking as a Service? {#what-is-staking-as-a-service}
 
-Staking-as-a-Service („SaaS“) stellt eine Kategorie von Staking-Diensten dar, bei der Sie Ihre eigenen 32 ETH für einen Validator hinterlegen, aber den Node-Betrieb an einen Drittanbieter delegieren. In der Regel werden Sie in diesem Prozess durch die anfängliche Konfiguration geführt, einschließlich Schlüsselgenerierung und Hinterlegung, und dann laden Sie Ihre Signaturschlüssel für den Betreiber hoch. So kann der Service Ihren Validator in Ihrem Namen betreiben, für gewöhnlich gegen eine monatliche Gebühr.
+Staking as a Service („SaaS“) stellt eine Kategorie von Staking-Diensten dar, bei der du deine eigenen 32 ETH für einen Validator einzahlst, aber den Betrieb des Knotens an einen Drittanbieter delegierst. Dieser Prozess beinhaltet in der Regel, dass du durch die anfängliche Einrichtung geführt wirst, einschließlich der Schlüsselgenerierung und der Einzahlung, und dann deine Signierschlüssel beim Betreiber hochlädst. Dies ermöglicht es dem Dienst, deinen Validator in deinem Namen zu betreiben, normalerweise gegen eine monatliche Gebühr.
 
-## Warum per Service staken? {#why-stake-with-a-service}
+## Warum mit einem Dienst staken? {#why-stake-with-a-service}
 
-Das Ethereum-Protokoll unterstützt keine Delegation von Staking, daher wurden diese Serviceleistungen aufgebaut, um die entsprechende Nachfrage zu befriedigen. Wenn Sie über 32 ETH zum Staking verfügen, sich aber davor scheuen, mit Hardware umzugehen, bieten SaaS-Dienste Ihnen die Möglichkeit, den schwierigen Teil zu delegieren, während Sie native Blockbelohnungen erhalten.
+Das [Ethereum](/)-Protokoll unterstützt von Haus aus keine Delegation von Stakes, daher wurden diese Dienste entwickelt, um diese Nachfrage zu decken. Wenn du 32 ETH zum Staken hast, dich aber nicht mit Hardware auseinandersetzen möchtest, ermöglichen dir SaaS-Dienste, den schwierigen Teil zu delegieren, während du native Block-Belohnungen verdienst.
 
-<CardGrid>
-  <Card title="Ihr eigener Validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Einfach starten" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Schränken Sie Ihr Risiko ein" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
-</CardGrid>
+<Grid>
+  <Card title="Dein eigener Validator" emoji=":desktop_computer:" description="Hinterlege deine eigenen 32 ETH, um dein eigenes Set an Signierschlüsseln zu aktivieren, die am Ethereum-Konsens teilnehmen werden. Verfolge deinen Fortschritt mit Dashboards, um zu beobachten, wie sich diese ETH-Belohnungen ansammeln." />
+  <Card title="Einfacher Einstieg" emoji="🏁" description="Vergiss Hardware-Spezifikationen, Einrichtung, Knoten-Wartung und Upgrades. SaaS-Anbieter ermöglichen es dir, den schwierigen Teil auszulagern, indem du deine eigenen Signier-Zugangsdaten hochlädst, sodass sie gegen eine geringe Gebühr einen Validator in deinem Namen betreiben können." />
+  <Card title="Begrenze dein Risiko" emoji=":shield:" description="In vielen Fällen müssen Nutzer den Zugriff auf die Schlüssel nicht aufgeben, die die Abhebung oder den Transfer von gestakten Mitteln ermöglichen. Diese unterscheiden sich von den Signierschlüsseln und können separat aufbewahrt werden, um dein Risiko als Staker zu begrenzen (aber nicht zu eliminieren)." />
+</Grid>
 
 <StakingComparison page="saas" />
 
-## Bitte beachten {#what-to-consider}
+## Was es zu beachten gilt {#what-to-consider}
 
-Es kommen immer mehr SaaS-Anbieter auf den Markt, die Ihnen beim Staking Ihrer ETH helfen. Doch alle haben ihre eigenen Vorteile und Risiken. Bei allen SaaS-Optionen müssen Sie im Vergleich zum Home-Staking mehr Vertrauen aufbringen. SaaS-Optionen können zusätzlichen Code haben, der die Ethereum-Clients umgibt, der nicht offen oder überprüfbar ist. SaaS beeinträchtigt zudem die Dezentralisierung des Netzwerks. Je nach Einstellung haben Sie möglicherweise keine Kontrolle über Ihren Validator – der Betreiber könnte mit Ihrem ETH unehrlich handeln.
+Es gibt eine wachsende Anzahl von SaaS-Anbietern, die dir helfen, deine ETH zu staken, aber sie alle haben ihre eigenen Vor- und Nachteile. Alle SaaS-Optionen erfordern im Vergleich zum Home-Staking zusätzliche Vertrauensannahmen. SaaS-Optionen können zusätzlichen Code enthalten, der die Ethereum-Clients umhüllt und nicht offen oder überprüfbar ist. SaaS hat auch nachteilige Auswirkungen auf die Dezentralisierung des Netzwerks. Je nach Einrichtung kontrollierst du deinen Validator möglicherweise nicht – der Betreiber könnte mit deinen ETH unehrlich handeln.
 
-Attributindikatoren werden unten verwendet, um nennenswerte Stärken oder Schwächen eines gelisteten SaaS-Anbieters zu signalisieren. Nutzen Sie bei Ihrer Auswahl eines Diensts, dem Sie Ihr Staking anvertrauen möchten, diesen Abschnitt als Referenz dafür, wie wir diese Attribute definieren.
+Im Folgenden werden Attribut-Indikatoren verwendet, um auf bemerkenswerte Stärken oder Schwächen eines aufgeführten SaaS-Anbieters hinzuweisen. Nutze diesen Abschnitt als Referenz dafür, wie wir diese Attribute definieren, während du einen Dienst auswählst, der dich auf deiner Staking-Reise unterstützt.
 
 <StakingConsiderations page="saas" />
 
-## Erkunden Sie die Staking-Dienstleister {#saas-providers}
+## Entdecke Staking-Dienstleister {#saas-providers}
 
-Hier sind einige verfügbare SaaS-Anbieter. Verwenden Sie die obigen Indikatoren für die Beurteilung dieser Dienste
+Unten findest du einige verfügbare SaaS-Anbieter. Nutze die obigen Indikatoren, um dich bei diesen Diensten zu orientieren.
 
 <ProductDisclaimer />
 
-### SaaS-Anbieter
+### SaaS-Anbieter {#saas-providers-2}
 
 <StakingProductsCardGrid category="saas" />
 
-Hinweis: Es ist wichtig, dass sie die [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienste, die nachweislich die Nutzung von Mehrheits-Clients einschränken, sind gekennzeichnet mit <em style={{ textTransform: "uppercase" }}>"Vielfalt der Ausführungs-Clients"</em> and <em style={{ textTransform: "uppercase" }}>"Vielfalt der Konsens-Clients"</em>.
+Bitte beachte, wie wichtig die Unterstützung der [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) ist, da sie die Sicherheit des Netzwerks verbessert und dein Risiko begrenzt. Dienste, bei denen es Hinweise darauf gibt, dass sie die Nutzung von Mehrheits-Clients einschränken, sind mit <em style={{ textTransform: "uppercase" }}>„Ausführungsclient-Diversität“</em> und <em style={{ textTransform: "uppercase" }}>„Konsens-Client-Diversität“</em> gekennzeichnet.
 
-### Schlüssel-Generatoren
+### Schlüsselgeneratoren {#key-generators}
 
 <StakingProductsCardGrid category="keyGen" />
 
-Sie haben einen Vorschlag zu einem SaaS-Anbieter, den wir noch nicht haben? Machen Sie sich mit unserer [Richtlinie zum Aufführen von Produkten](/contributing/adding-staking-products/) vertraut, um beurteilen zu können, ob Ihr Vorschlag geeignet ist. Senden Sie ihn uns dann zur Prüfung zu.
+Hast du einen Vorschlag für einen Staking-as-a-Service-Anbieter, den wir übersehen haben? Sieh dir unsere [Richtlinien für Produktauflistungen](/contributing/adding-staking-products/) an, um zu prüfen, ob er gut passen würde, und reiche ihn zur Überprüfung ein.
 
 ## Häufig gestellte Fragen {#faq}
 
-<ExpandableCard title="Wer hält meine Schlüssel?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
-Die Vereinbarungen unterscheiden sich von Anbieter zu Anbieter. In der Regel werden Sie durch die Einrichtung aller benötigten Signaturschlüssel (einer pro 32 ETH) und das Hochladen dieser Schlüssel zu Ihrem Anbieter geleitet, damit dieser in Ihrem Namen validieren kann. Die Signaturschlüssel allein bieten nicht die Möglichkeit, Ihr Geld abzuheben, zu überweisen oder auszugeben. Sie bieten jedoch die Möglichkeit, Stimmen für einen Konsens abzugeben, was, wenn es nicht richtig gemacht wird, zu Offline-Strafen oder Slashing führen kann.
+<ExpandableCard title="Wer verwahrt meine Schlüssel?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
+Die Vereinbarungen unterscheiden sich von Anbieter zu Anbieter, aber in der Regel wirst du durch die Einrichtung aller benötigten Signierschlüssel (einer pro 32 ETH) geführt und lädst diese bei deinem Anbieter hoch, damit dieser in deinem Namen validieren kann. Die Signierschlüssel allein geben keine Möglichkeit, deine Gelder abzuheben, zu transferieren oder auszugeben. Sie bieten jedoch die Möglichkeit, Stimmen für den Konsens abzugeben, was bei unsachgemäßer Durchführung zu Offline-Strafen oder Slashing führen kann.
 </ExpandableCard>
 
-<ExpandableCard title="Also gibt es zwei Gruppen von Schlüsseln?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-Ja. Jedes Konto besteht aus BLS-<em>Signaturschlüsseln</em> und BLS-<em>Abhebungsschlüsseln</em>. Damit ein Validator den Zustand der Blockchain attestieren, an Synchronisierungsausschüssen teilnehmen und Blöcke vorschlagen kann, müssen die Signaturschlüssel für einen Validator-Kunden leicht zugänglich sein. Diese müssen in irgendeiner Form mit dem Internet verbunden sein und werden daher naturgemäß als "Hot Keys" betrachtet. Dies ist eine Voraussetzung für Ihren Validator, um attestieren zu können. Daher werden die Schlüssel, die zum Überweisen oder Abheben von Geldern verwendet werden, aus Sicherheitsgründen getrennt.
+<ExpandableCard title="Es gibt also zwei Schlüsselsätze?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
+Ja. Jedes Konto besteht sowohl aus BLS-<em>Signierschlüsseln</em> als auch aus BLS-<em>Abhebungsschlüsseln</em>. Damit ein Validator den Zustand der Chain bezeugen, an Synchronisierungs-Komitees teilnehmen und Blöcke vorschlagen kann, müssen die Signierschlüssel für einen Validator-Client leicht zugänglich sein. Diese müssen in irgendeiner Form mit dem Internet verbunden sein und gelten daher von Natur aus als „Hot“-Schlüssel. Dies ist eine Voraussetzung dafür, dass dein Validator bezeugen kann, und daher sind die Schlüssel, die zum Transferieren oder Abheben von Geldern verwendet werden, aus Sicherheitsgründen getrennt.
 
-Die BLS-Abhebungsschlüssel werden verwendet, um eine einmalige Nachricht zu signieren, die angibt, an welches Execution-Layer-Konto Staking-Belohnungen und ausgetretene Mittel gehen sollen. Sobald diese Nachricht gesendet wurde, werden die <em>BLS-Abhebungsschlüssel</em> nicht mehr benötigt. Stattdessen wird die Kontrolle über abgehobene Mittel dauerhaft an die von Ihnen angegebene Adresse delegiert. Auf diese Weise können Sie eine Abhebungsadresse festlegen, die durch Ihre eigene Cold Storage gesichert ist, um das Risiko für Ihre Validator-Fonds zu minimieren, selbst wenn jemand anderes die Signaturschlüssel Ihres Validators kontrolliert.
+Die BLS-Abhebungsschlüssel werden verwendet, um eine einmalige Nachricht zu signieren, die angibt, an welches Konto der Ausführungsschicht Staking-Belohnungen und ausgetretene Gelder gehen sollen. Sobald diese Nachricht gesendet wurde, werden die <em>BLS-Abhebungsschlüssel</em> nicht mehr benötigt. Stattdessen wird die Kontrolle über die abgehobenen Gelder dauerhaft an die von dir angegebene Adresse delegiert. Dies ermöglicht es dir, eine Abhebungsadresse festzulegen, die über deinen eigenen Cold Storage gesichert ist, wodurch das Risiko für deine Validator-Gelder minimiert wird, selbst wenn jemand anderes deine Validator-Signierschlüssel kontrolliert.
 
-Das Aktualisieren der Auszahlungsberechtigungen ist ein erforderlicher Schritt, um Auszahlungen zu ermöglichen\*. Dieser Prozess beinhaltet das Generieren der Abhebungsschlüssel mit Hilfe Ihrer Mnemonic Seed Phrase.
+Die Aktualisierung der Auszahlungsberechtigungen ist ein erforderlicher Schritt, um Abhebungen zu ermöglichen\*. Dieser Prozess beinhaltet die Generierung der Abhebungsschlüssel unter Verwendung deiner mnemonischen Seed-Phrase.
 
-<strong>Stellen Sie unbedingt sicher, dass Sie diesen Seed-Satz sicher aufbewahren, sonst können Sie Ihre Auszahlungsschlüssel nicht erstellen, wenn es soweit ist.</strong>
+<strong>Stelle sicher, dass du diese Seed-Phrase sicher aufbewahrst, da du sonst nicht in der Lage sein wirst, deine Abhebungsschlüssel zu generieren, wenn die Zeit gekommen ist.</strong>
 
-\*Staker, die eine Auszahlungsadresse bei der ersten Einzahlung angegeben haben, müssen dies nicht einstellen. Bitte wenden Sie sich an Ihren SaaS-Anbieter, um Unterstützung bei der Vorbereitung Ihres Validators zu erhalten.
+\*Staker, die bei der Ersteinzahlung eine Abhebungsadresse angegeben haben, müssen dies nicht festlegen. Wende dich an deinen SaaS-Anbieter, um Unterstützung bei der Vorbereitung deines Validators zu erhalten.
 </ExpandableCard>
 
-<ExpandableCard title="Wann kann ich ETH abheben?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Staking Auszahlungen wurden mit der Shanghai/Capella Aktualisierung im April 2023 eingeführt. Staker müssen (sofern nicht bereits bei der Ersteinzahlung geschehen) eine Auszahlungsadresse bereitstellen. Belohnungen werden daraufhin automatisch alle paar Tage in regelmäßigen Abständen ausgezahlt.
+<ExpandableCard title="Wann kann ich abheben?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+Staker müssen eine Abhebungsadresse angeben (falls nicht bei der Ersteinzahlung angegeben), und die Auszahlung der Belohnungen beginnt automatisch in regelmäßigen Abständen alle paar Tage.
 
-Validatoren haben auch die Möglichkeit, ihre Tätigkeit als Validator zu beenden. Das ermöglicht die Auszahlung ihres restlichen ETH-Guthabens. Konten, die eine Auszahlungsadresse angegeben und den Austrittsprozess abgeschlossen haben, erhalten ihr gesamtes Guthaben bei der nächsten Validatorendurchsicht auf die angegebene Auszahlungsadresse.
+Validatoren können auch vollständig als Validator austreten, wodurch ihr verbleibendes ETH-Guthaben zur Abhebung freigegeben wird. Konten, die eine Abhebungsadresse für die Ausführungsschicht angegeben und den Austrittsprozess abgeschlossen haben, erhalten ihr gesamtes Guthaben beim nächsten Validator-Sweep an die angegebene Abhebungsadresse.
 
-<ButtonLink href="/staking/withdrawals/">Mehr zu Staking-Abhebungen</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Mehr über Staking-Abhebungen</ButtonLink>
 </ExpandableCard>
 
-<ExpandableCard title="Was passiert, wenn ich geslashed werde?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
-Durch die Nutzung eines SaaS-Anbieters vertrauen Sie den Betrieb Ihrer Nodes jemand anderem an. Dies birgt das Risiko einer schlechten Node-Leistung, auf die Sie keinen Einfluss haben. Falls Ihr Validator geslashed wird, wird Ihr Validator-Guthaben bestraft und zwangsweise aus dem Validator-Pool entfernt.
+<ExpandableCard title="Was passiert, wenn ich geslasht werde?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+Durch die Nutzung eines SaaS-Anbieters vertraust du den Betrieb deines Knotens jemand anderem an. Dies birgt das Risiko einer schlechten Knoten-Leistung, die nicht in deiner Kontrolle liegt. Für den Fall, dass dein Validator geslasht wird, wird dein Validator-Guthaben bestraft und zwangsweise aus dem Validator-Pool entfernt.
 
-Nach Abschluss des Slashing-/Austrittsprozesses werden diese Mittel an die dem Validator zugewiesene Auszahlungsadresse übertragen. Dies erfordert die Angabe einer Auszahlungsadresse zur Aktivierung. Diese Adresse kann bei der anfänglichen Einzahlung angegeben worden sein. Falls nicht, müssen die Auszahlungsschlüssel des Validators verwendet werden, um eine Nachricht zu unterschreiben, die eine Auszahlungsadresse angibt. Wenn keine Auszahlungsadresse angegeben wurde, bleibt das Guthaben bis zur Angabe gesperrt.
+Nach Abschluss des Slashing-/Austrittsprozesses werden diese Gelder an die dem Validator zugewiesene Abhebungsadresse transferiert. Dies erfordert die Angabe einer Abhebungsadresse, um dies zu ermöglichen. Diese wurde möglicherweise bei der Ersteinzahlung angegeben. Wenn nicht, müssen die Validator-Abhebungsschlüssel verwendet werden, um eine Nachricht zu signieren, die eine Abhebungsadresse deklariert. Wenn keine Abhebungsadresse angegeben wurde, bleiben die Gelder gesperrt, bis sie angegeben wird.
 
-Für weitere Informationen zu Garantien oder Versicherungsoptionen sowie zur Anleitung zur Bereitstellung einer Abhebungsadresse wenden Sie sich bitte an Ihren individuellen SaaS-Anbieter. Wenn Sie es vorziehen, die volle Kontrolle über Ihre Validator-Konfiguration zu haben, [erfahren Sie mehr darüber, wie Sie Ihre ETH alleine einsetzen können](/staking/solo/).
+Kontaktiere den jeweiligen SaaS-Anbieter für weitere Details zu Garantien oder Versicherungsoptionen sowie für Anweisungen zur Angabe einer Abhebungsadresse. Wenn du lieber die volle Kontrolle über deine Validator-Einrichtung haben möchtest, [erfahre mehr darüber, wie du deine ETH solo staken kannst](/staking/solo/).
 </ExpandableCard>
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-- [Das Ethereum-Staking-Verzeichnis](https://www.staking.directory/) - _Eridian und Spacesider_
+- [Das Ethereum-Staking-Verzeichnis](https://www.staking.directory/) – _Eridian und Spacesider_
 - [Bewertung von Staking-Diensten](https://www.attestant.io/posts/evaluating-staking-services/) – _Jim McDonald 2020_

@@ -1,4 +1,4 @@
-import { addons } from "@storybook/manager-api"
+import { addons } from "storybook/manager-api"
 
 import favicon from "../public/images/eth-home-icon.png"
 

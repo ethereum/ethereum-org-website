@@ -1,79 +1,81 @@
 ---
-title: "A Cadeia de Sinalização/Beacon"
-description: "Saiba mais sobre a Beacon Chain — a melhoria que introduziu a prova de participação no Ethereum."
+title: A Beacon Chain
+description: "Aprenda sobre a Beacon Chain - a atualização que introduziu a Prova de Participação (PoS) no Ethereum."
 lang: pt-br
 template: upgrade
 image: /images/upgrades/core.png
-alt:
-summaryPoint1: "A Beacon Chain introduziu a prova de participação no ecossistema Ethereum."
-summaryPoint2: "Ela foi integrada à cadeia de prova de trabalho do Ethereum original em setembro de 2022."
-summaryPoint3: "A Beacon Chain introduziu a lógica de consenso e o protocolo de propagação de blocos que agora protege o Ethereum."
+alt: 
+summaryPoints:
+  - "A Beacon Chain introduziu a Prova de Participação (PoS) no ecossistema Ethereum."
+  - "Ela foi fundida com a cadeia original de Prova de Trabalho (PoW) do Ethereum em setembro de 2022."
+  - "A Beacon Chain introduziu a lógica de consenso e o protocolo de propagação de blocos (gossip) que agora protege o Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  A Beacon Chain foi lançada em 1º de dezembro de 2020 e formalizou a prova de participação como mecanismo de consenso da Ethereum com a atualização da Fusão em 15 de setembro de 2022.
+  A Beacon Chain foi lançada em 1º de dezembro de 2020 e formalizou a Prova de Participação (PoS) como o mecanismo de consenso do Ethereum com a atualização The Merge em 15 de setembro de 2022.
 </UpgradeStatus>
 
 ## O que é a Beacon Chain? {#what-is-the-beacon-chain}
 
-Beacon Chain é o nome do blockchain de prova de participação original que foi lançado em 2020. Ela foi criada para garantir que a lógica de consenso de prova de participação era sólida e sustentável antes de implementá-la na rede principal do Ethereum. Portanto, ela existia paralelamente à prova de trabalho do Ethereum. Beacon Chain era uma cadeia de blocos '"vazios", mas para desativar a prova de trabalho e ativar a prova de participação no Ethereum era necessário instruir a Beacon Chain a aceitar dados de transação de clientes de execução, agrupá-los em blocos e depois organizá-los em um blockchain usando um mecanismo de consenso com base em prova de participação. Ao mesmo tempo, os nós da rede original do Ethereum desligaram sua lógica de consenso, propagação de blocos e mineração, passando essas funções para a Beacon Chain. Este evento ficou conhecido como [A Fusão](/roadmap/merge/). Após a Fusão, não havia mais dois blockchains. Em vez disso, havia apenas um Ethereum de prova de participação, que agora exige dois clientes diferentes por nó. Agora, a Beacon Chain é a camada de consenso, uma rede ponto a ponto de clientes de consenso que processa a lógica de consenso e transmissão de blocos, enquanto os clientes originais formam a camada de execução, responsável pela transmissão e execução de transações e pelo gerenciamento do estado do Ethereum. As duas camadas podem se comunicar mutuamente por meio da Engine API.
+A Beacon Chain é o nome da blockchain original de Prova de Participação (PoS) que foi lançada em 2020. Ela foi criada para garantir que a lógica de consenso de Prova de Participação fosse sólida e sustentável antes de ativá-la na Rede Principal do [Ethereum](/) (Mainnet). Portanto, ela funcionou paralelamente ao Ethereum original de Prova de Trabalho (PoW). A Beacon Chain era uma cadeia de blocos 'vazios', mas desligar a Prova de Trabalho e ligar a Prova de Participação no Ethereum exigia instruir a Beacon Chain a aceitar dados de transação dos clientes de execução, agrupá-los em blocos e, em seguida, organizá-los em uma blockchain usando um mecanismo de consenso baseado em Prova de Participação. No mesmo momento, os clientes originais do Ethereum desligaram sua mineração, propagação de bloco e lógica de consenso, transferindo tudo isso para a Beacon Chain. Este evento ficou conhecido como [The Merge](/roadmap/merge/). Uma vez que o The Merge aconteceu, não havia mais duas blockchains. Em vez disso, havia apenas um Ethereum de Prova de Participação, que agora requer dois clientes diferentes por nó. A Beacon Chain agora é a camada de consenso, uma rede ponto a ponto de clientes de consenso que lida com a propagação de blocos (gossip) e a lógica de consenso, enquanto os clientes originais formam a camada de execução, que é responsável por propagar e executar transações, e gerenciar o estado do Ethereum. As duas camadas podem se comunicar uma com a outra usando a Engine API.
 
 ## O que a Beacon Chain faz? {#what-does-the-beacon-chain-do}
 
-A Beacon Chain é o nome dado a um registro de contas que conduzia e coordenava a rede de [stakers](/staking/) do Ethereum antes que esses stakers começassem a validar blocos reais do Ethereum. Entretanto, não processa transações nem interações de contratos inteligentes, pois isso é feito na camada de execução.
-A Beacon Chain é responsável por atividades como processamento de blocos e atestações, executação do algoritmo de escolha de bifurcação e gerenciamento de recompensas e penalidades.
-Leia mais em nossa [página sobre arquitetura de nós](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
+A Beacon Chain é o nome dado a um livro-razão de contas que conduziu e coordenou a rede de [stakers](/staking/) do Ethereum antes que esses stakers começassem a validar blocos reais do Ethereum. No entanto, ela não processa transações nem lida com interações de contratos inteligentes, porque isso está sendo feito na camada de execução.
+A Beacon Chain é responsável por coisas como o manuseio de blocos e atestações, a execução do algoritmo de escolha de fork e o gerenciamento de recompensas e penalidades.
+Leia mais em nossa [página de arquitetura de nó](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
 ## Impacto da Beacon Chain {#beacon-chain-features}
 
-### Introdução ao staking {#introducing-staking}
+### Introduzindo o staking {#introducing-staking}
 
-A Beacon Chain introduziu a [prova de participação](/developers/docs/consensus-mechanisms/pos/) ao Ethereum. Isso mantém o Ethereum protegido e os validadores recebem mais ETH no processo. Na prática, você precisará participar com os seus ETH para ativar o software de validador. Como participante, você executa o software que cria e valida novos blocos na cadeia.
+A Beacon Chain introduziu a [Prova de Participação (PoS)](/developers/docs/consensus-mechanisms/pos/) no Ethereum. Isso mantém o Ethereum seguro e faz com que os validadores ganhem mais ETH no processo. Na prática, o staking envolve fazer stake de ETH para ativar o software do validador. Como um staker, você executa o software que cria e valida novos blocos na cadeia.
 
-O staking tem uma finalidade semelhante à da [mineração](/developers/docs/consensus-mechanisms/pow/mining/), mas é diferente em muitos aspectos. A mineração exigia grandes investimentos iniciais na forma de um hardware potente e consumo de energia, o que resultava em economias de escala e promovia a centralização. A mineração também não tem como garantia uma exigência de bloqueio de ativos, o que limita a capacidade do protocolo de punir os malfeitores após um ataque.
+O staking serve a um propósito semelhante ao que a [mineração](/developers/docs/consensus-mechanisms/pow/mining/) costumava servir, mas é diferente de muitas maneiras. A mineração exigia grandes despesas iniciais na forma de hardware poderoso e consumo de energia, resultando em economias de escala e promovendo a centralização. A mineração também não vinha com nenhum requisito de bloquear ativos como colateral, limitando a capacidade do protocolo de punir maus atores após um ataque.
 
-A transição para a prova de participação tornou o Ethereum consideravelmente mais seguro e descentralizado, em comparação com a prova de trabalho. Quanto mais pessoas participarem da rede, mais descentralizada e segura contra ataques ela será.
+A transição para a Prova de Participação tornou o Ethereum significativamente mais seguro e descentralizado em comparação com a Prova de Trabalho. Quanto mais pessoas participam da rede, mais descentralizada e segura contra ataques ela se torna.
+
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Se você tiver interesse em se tornar um validador e ajudar a proteger a Ethereum, [saiba mais sobre staking](/staking/).
+  Se você estiver interessado em se tornar um validador e ajudar a proteger o Ethereum, [saiba mais sobre staking](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-### Preparação para a fragmentação {#setting-up-for-sharding}
+### Preparando para a fragmentação {#setting-up-for-sharding}
 
-Desde que a Beacon Chain se fundiu à rede principal original do Ethereum, a comunidade Ethereum começou tentar dimensionar a rede.
+Desde que a Beacon Chain se fundiu com a Rede Principal do Ethereum (Mainnet) original, a comunidade Ethereum começou a buscar escalar a rede.
 
-A prova de participação tem a vantagem de manter um registro de todos os produtores de blocos aprovados a qualquer momento, cada um com ETH participado. Esse registro prepara o cenário para a capacidade de dividir e conquistar, mas dividir de forma confiável as responsabilidades específicas da rede.
+A Prova de Participação tem a vantagem de ter um registro de todos os produtores de blocos aprovados em qualquer momento, cada um com ETH em stake. Este registro prepara o terreno para a capacidade de dividir e conquistar, mas dividindo de forma confiável responsabilidades específicas da rede.
 
-Essa responsabilidade contrasta com a prova de trabalho, em que os mineradores não têm nenhuma obrigação com a rede e podem interromper a mineração e desligar o software do nó permanentemente, em um instante, sem repercussão. Também não há registro de proponentes de blocos conhecidos e nenhuma maneira confiável de dividir as responsabilidades da rede com segurança.
+Essa responsabilidade contrasta com a Prova de Trabalho, onde os mineradores não têm obrigação com a rede e poderiam parar de minerar e desligar o software do seu nó permanentemente em um instante sem repercussão. Também não há registro de proponentes de blocos conhecidos e nenhuma maneira confiável de dividir as responsabilidades da rede com segurança.
 
 [Mais sobre fragmentação](/roadmap/danksharding/)
 
 ## Relação entre as atualizações {#relationship-between-upgrades}
 
-As melhorias do Ethereum estão, de certa forma, relacionadas. Vamos recapitular como a Beacon Chain afeta as outras melhorias.
+As atualizações do Ethereum estão todas de certa forma inter-relacionadas. Então, vamos recapitular como a Beacon Chain afeta as outras atualizações.
 
-### A Beacon Chain e A Fusão {#merge-and-beacon-chain}
+### A Beacon Chain e o The Merge {#merge-and-beacon-chain}
 
-No começo, a Beacon Chain existia separadamente da rede principal do Ethereum, mas ocorreu uma fusão em 2022.
+No início, a Beacon Chain existia separadamente da Rede Principal do Ethereum (Mainnet), mas elas foram fundidas em 2022.
 
 <ButtonLink href="/roadmap/merge/">
-  A Fusão
+  The Merge
 </ButtonLink>
 
 ### Fragmentos e a Beacon Chain {#shards-and-beacon-chain}
 
-As cadeias de fragmentação apenas podem ser introduzidas no ecossistema Ethereum por meio do estabelecimento de um mecanismo de consenso de prova de participação. A Beacon Chain introduziu a participação, que se "fundiu" com a rede principal, abrindo caminho para a fragmentação, de forma a ajudar a dimensionar ainda mais o Ethereum.
+A fragmentação só pode entrar com segurança no ecossistema Ethereum com um mecanismo de consenso de Prova de Participação em vigor. A Beacon Chain introduziu o staking, que se 'fundiu' com a Mainnet, abrindo caminho para a fragmentação ajudar a escalar ainda mais o Ethereum.
 
 <ButtonLink href="/roadmap/danksharding/">
   Cadeias de fragmentos
 </ButtonLink>
 
-## Leituras adicionais
+## Leitura adicional {#further-reading}
 
-- [Mais sobre arquitetura de nós](/developers/docs/nodes-and-clients/node-architecture)
-- [Mais sobre prova de participação](/developers/docs/consensus-mechanisms/pos)
+- [Mais sobre arquitetura de nó](/developers/docs/nodes-and-clients/node-architecture)
+- [Mais sobre Prova de Participação](/developers/docs/consensus-mechanisms/pos)

@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-06-08T08:28:36.586Z",
+  "englishManifestHash": "4904b226f784",
+  "placeholderOrder": [
+    "LINK-156fcf",
+    "LINK-b6ac5f",
+    "LINK-43b2a4",
+    "LINK-f2dc89",
+    "CODE-577c82",
+    "CODE-6afd30",
+    "CODE-44f0f3",
+    "CODE-dabd3a",
+    "CODE-62b67e",
+    "IMAGE-068d48",
+    "LINK-1bdfac",
+    "LINK-69a572",
+    "IMAGE-5b62d9",
+    "IMAGE-0ed06d",
+    "IMAGE-349df2",
+    "IMAGE-36fb7a",
+    "LINK-48cda4",
+    "IMAGE-f438f4",
+    "IMAGE-8896f1",
+    "IMAGE-aeae08",
+    "LINK-214b7e",
+    "LINK-84fa75",
+    "LINK-cbf88a",
+    "LINK-d4db65"
+  ],
+  "placeholderMap": {
+    "CODE-577c82": {
+      "type": "inline-code",
+      "values": {
+        "content": "<HTML tags>"
+      }
+    },
+    "CODE-6afd30": {
+      "type": "inline-code",
+      "values": {
+        "content": "<0>"
+      }
+    },
+    "CODE-44f0f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "</0>"
+      }
+    },
+    "CODE-dabd3a": {
+      "type": "inline-code",
+      "values": {
+        "content": "<"
+      }
+    },
+    "CODE-62b67e": {
+      "type": "inline-code",
+      "values": {
+        "content": ">"
+      }
+    },
+    "IMAGE-068d48": {
+      "type": "image",
+      "values": {
+        "path": "./html-tag-strings.png"
+      }
+    },
+    "IMAGE-5b62d9": {
+      "type": "image",
+      "values": {
+        "path": "./source-string.png"
+      }
+    },
+    "IMAGE-0ed06d": {
+      "type": "image",
+      "values": {
+        "path": "./source-string-2.png"
+      }
+    },
+    "IMAGE-349df2": {
+      "type": "image",
+      "values": {
+        "path": "./comment-issue.png"
+      }
+    },
+    "IMAGE-36fb7a": {
+      "type": "image",
+      "values": {
+        "path": "./translation-memory.png"
+      }
+    },
+    "IMAGE-f438f4": {
+      "type": "image",
+      "values": {
+        "path": "./glossary-definition.png"
+      }
+    },
+    "IMAGE-8896f1": {
+      "type": "image",
+      "values": {
+        "path": "./glossary-tab.png"
+      }
+    },
+    "IMAGE-aeae08": {
+      "type": "image",
+      "values": {
+        "path": "./add-glossary-term.png"
+      }
+    },
+    "LINK-156fcf": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/acknowledgements/#poap"
+      }
+    },
+    "LINK-b6ac5f": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/acknowledgements/#certificate"
+      }
+    },
+    "LINK-43b2a4": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/acknowledgements/"
+      }
+    },
+    "LINK-f2dc89": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/contributors/"
+      }
+    },
+    "LINK-1bdfac": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/translators-guide/#dealing-with-tags"
+      }
+    },
+    "LINK-69a572": {
+      "type": "link",
+      "values": {
+        "url": "#comment"
+      }
+    },
+    "LINK-48cda4": {
+      "type": "link",
+      "values": {
+        "url": "#terminology"
+      }
+    },
+    "LINK-214b7e": {
+      "type": "link",
+      "values": {
+        "url": "#glossary"
+      }
+    },
+    "LINK-84fa75": {
+      "type": "link",
+      "values": {
+        "url": "https://www.acolad.com/"
+      }
+    },
+    "LINK-cbf88a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues"
+      }
+    },
+    "LINK-d4db65": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:28:36.586Z",
+      "status": "success"
+    }
+  }
+}

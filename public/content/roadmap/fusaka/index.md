@@ -1,10 +1,10 @@
 ---
-title: Fulu-Osaka (Fusaka)
+title: "Fusaka 🦓"
+metaTitle: Fulu-Osaka (Fusaka)
 description: Learn about the Fusaka protocol upgrade
 lang: en
+authors: ["Nixo", "Mario Havel"]
 ---
-
-# Fusaka <Emoji text="🦓" /> {#fusaka}
 
 **Ethereum's highly anticipated Fusaka upgrade went live on December 3, 2025**
 
@@ -17,6 +17,8 @@ The Fusaka upgrade is only a single step in Ethereum's long-term development goa
 </AlertDescription>
 </AlertContent>
 </Alert>
+
+<VideoWatch slug="fusaka-upgrade-explained" />
 
 ## Improvements in Fusaka {#improvements-in-fusaka}
 
@@ -187,7 +189,7 @@ This EIP is in a section apart from the "Core EIPs" because the fork doesn't act
 
 ### Does this upgrade affect all Ethereum nodes and validators? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
 
-Yes, the Fusaka upgrade requires updates to both [execution clients and consensus clients](/developers/docs/nodes-and-clients/). All main Ethereum clients will release versions supporting the hard fork marked as high priority. You can keep up with when these releases will be available in client Github repos, their [Discord channels](https://ethstaker.org/support), the [EthStaker Discord](https://dsc.gg/ethstaker), or by subscribing to the Ethereum blog for protocol updates. To maintain synchronization with the Ethereum network post-upgrade, node operators must ensure they are running a supported client version. Note that the information about client releases is time-sensitive, and users should refer to the latest updates for the most current details.
+Yes, the Fusaka upgrade requires updates to both [execution clients and consensus clients](/developers/docs/nodes-and-clients/). All main Ethereum clients will release versions supporting the hard fork marked as high priority. You can keep up with when these releases will be available in client GitHub repos, their [Discord channels](https://ethstaker.org/support), the [EthStaker Discord](https://dsc.gg/ethstaker), or by subscribing to the Ethereum blog for protocol updates. To maintain synchronization with the Ethereum network post-upgrade, node operators must ensure they are running a supported client version. Note that the information about client releases is time-sensitive, and users should refer to the latest updates for the most current details.
 
 ### How can ETH be converted after the hard fork? {#how-can-eth-be-converted-after-the-hardfork}
 
@@ -280,7 +282,7 @@ The RPC method `eth_call` is not limited and will allow simulation of bigger tra
 
 EVM compilers like Solidity will implement and utilize the new function for counting zeros under the hood. New contracts might benefit from gas savings if they rely on this sort of operation. Follow releases and feature announcement of the smart contract language for documentation on potential savings.
 
-### Are there any changes for my existing smart contracts? {#what-clz-means-for-developers}
+### Are there any changes for my existing smart contracts? {#what-clz-means-for-developers-2}
 
 Fusaka has no direct affect that would break any existing contracts or change their behavior. Changes introduced to the execution layer are made with backward compatibility, however, always keep an eye on edge cases and potential impact.
 

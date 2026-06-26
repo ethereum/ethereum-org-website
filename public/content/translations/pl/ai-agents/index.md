@@ -1,144 +1,143 @@
 ---
 title: Agenci AI
-metaTitle: Agenci AI | Agenci AI na Ethereum
-description: "Przegląd agentów AI na Ethereum"
+metaTitle: Agenci AI | Agenci AI w Ethereum
+description: "Przegląd agentów AI w Ethereum"
 lang: pl
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: "Ludzie stojący przy stole z ekranami"
-summaryPoint1: "AI, która współpracuje z blockchainem i dokonuje niezależnych transakcji"
-summaryPoint2: Kontroluje portfele blockchain i finanse
-summaryPoint3: "Współpracuje z ludźmi i innymi agentami"
+alt: Ludzie zgromadzeni przy stole z terminalem
+summaryPoints:
+  - "Sztuczna inteligencja, która wchodzi w interakcje z blockchainem i samodzielnie handluje"
+  - "Kontroluje portfele onchain i środki"
+  - "Zatrudnia ludzi lub innych agentów do pracy"
 buttons:
   - content: Czym są agenci AI?
     toId: what-are-ai-agents
-  - content: Poznaj agentów
+  - content: Odkryj agentów
     toId: ai-agents-on-ethereum
     isSecondary: false
 ---
 
-Wyobraź sobie zarządzanie Ethereum z pomocą asystenta AI, który analizuje trendy na rynku blockchain 24/7, odpowiada na pytania, a nawet zawiera transakcje w twoim imieniu. Witaj w świecie agentów AI—inteligentnych systemów zaprojektowanych, by ułatwić twoje życie w cyfrowym świecie.
+Wyobraź sobie poruszanie się po Ethereum z asystentem AI, który bada trendy rynkowe onchain 24/7, odpowiada na pytania, a nawet wykonuje transakcje w Twoim imieniu. Witaj w świecie agentów AI — inteligentnych systemów zaprojektowanych, aby uprościć Twoje cyfrowe życie.
 
-W Ethereum jesteśmy świadkami rozwoju agentów AI począwszy od wirtualnych influencerów i autonomicznych twórców treści, aż po platformy analizujące rynek w czasie rzeczywistym, które zapewniają użytkownikom dogłębne analizy, rozrywkę i wydajność operacyjną.
+W Ethereum obserwujemy innowacje w postaci agentów AI, od wirtualnych influencerów i autonomicznych twórców treści po platformy analizy rynku w czasie rzeczywistym, które wzmacniają pozycję użytkowników, dostarczając im wiedzę, rozrywkę i wydajność operacyjną.
 
 ## Czym są agenci AI? {#what-are-ai-agents}
 
-Agenci AI to oprogramowanie, które używa sztucznej inteligencji do wykonywania zadań czy podejmowania decyzji. Uczą się na podstawie danych, przystosowują się do zmian i radzą sobie z kompleksowymi zadaniami. Pracują bez przerwy i potrafią dostrzec okazje natychmiastowo.
+Agenci AI to programy komputerowe, które wykorzystują sztuczną inteligencję do wykonywania zadań lub podejmowania własnych decyzji. Uczą się na podstawie danych, dostosowują do zmian i radzą sobie ze skomplikowanymi zadaniami. Działają bez przerwy i potrafią błyskawicznie wykrywać okazje.
 
-### Jak agenci AI pracują na blockchainie {#how-ai-agents-work-with-blockchains}
+### Jak agenci AI współpracują z blockchainami {#how-ai-agents-work-with-blockchains}
 
-W tradycyjnych finansach agenci AI często działają w scentralizowanych środowiskach z ograniczoną ilością danych wejściowych. To ogranicza ich możliwość uczenia się czy autonomicznego zarządzania aktywami.
+W tradycyjnych finansach agenci AI często działają w scentralizowanych środowiskach z ograniczonymi danymi wejściowymi. Utrudnia to ich zdolność do uczenia się lub autonomicznego zarządzania aktywami.
 
-W przeciwieństwie do tego zdecentralizowany ekosystem Ethereum oferuje kilka istotnych korzyści:
+W przeciwieństwie do tego, zdecentralizowany ekosystem Ethereum oferuje kilka kluczowych zalet:
 
-- <strong>Transparentność danych:</strong> Dostęp do informacji o blockchainie w czasie rzeczywistym.
-- <strong> Rzeczywiste posiadanie aktywów:</strong> Cyfrowe aktywa są w całości własnością agentów AI.
-- <strong>Niezawodna funkcjonalność w łańcuchu: </strong> Umożliwia agentom AI dokonywanie transakcji, interakcję z inteligentnymi kontraktami, zapewnienie płynności i współpracę w ramach protokołów.
+- <strong>Przejrzyste dane:</strong> Dostęp do informacji z blockchaina w czasie rzeczywistym.
+- <strong>Prawdziwa własność aktywów:</strong> Cyfrowe aktywa są w pełni własnością agentów AI.
+- <strong>Rozbudowana funkcjonalność onchain:</strong> Umożliwia agentom AI wykonywanie transakcji, interakcję z inteligentnymi kontraktami, zapewnianie płynności i współpracę w ramach różnych protokołów.
 
-Te czynniki przekształcają agentów AI z prostych botów w dynamiczne, samodoskonalące się systemy, które stanowią istotną wartość w wielu obszarach:
+Te czynniki przekształcają agentów AI ze zwykłych botów w dynamiczne, samodoskonalące się systemy, które oferują znaczną wartość w wielu sektorach:
 
-<CardGrid>
-  <Card title="Zautomatyzowane DeFi" emoji=":money_with_wings:" description="Agenci AI śledzą trendy rynkowe, realizują transakcje i zarządzają portfelami — sprawiając, że złożony świat DeFi staje się o wiele bardziej przystępny."/>
-  <Card title="Nowa gospodarka agentów AI" emoji="🌎" description="Agenci AI mogą zatrudniać innych agentów (lub ludzi) o różnych umiejętnościach do wykonywania dla nich specjalistycznych zadań." />
-  <Card title="Zarządzanie ryzykiem" emoji="🛠️" description="Monitorując transakcje, agenci AI pomagają wykrywać oszustwa oraz lepiej i szybciej chronić Twoje cyfrowe aktywa." />
-</CardGrid>
+<Grid>
+  <Card title="Zautomatyzowane DeFi" emoji=":money_with_wings:" description="Agenci AI uważnie śledzą trendy rynkowe, realizują transakcje i zarządzają portfelami — dzięki czemu skomplikowany świat DeFi staje się znacznie bardziej przystępny."/>
+  <Card title="Nowa gospodarka agentów AI" emoji="🌎" description="Agenci AI mogą zatrudniać innych agentów (lub ludzi) o różnych umiejętnościach do wykonywania dla nich wyspecjalizowanych zadań." />
+  <Card title="Zarządzanie ryzykiem" emoji="🛠️" description="Monitorując aktywność transakcyjną, agenci AI mogą pomóc w wykrywaniu oszustw oraz lepiej i szybciej chronić Twoje zasoby cyfrowe." />
+</Grid>
 
-## Weryfikowalna AI {#verifiable-ai}
+## Weryfikowalna sztuczna inteligencja (AI) {#verifiable-ai}
 
-Agenci AI działający offchain często zachowują się jak "czarne skrzynki" — ich rozumowanie, dane wejściowe i wyjściowe nie mogą być niezależnie zweryfikowane. Ethereum to zmienia. Poprzez zakotwiczenie zachowania agenta onchain deweloperzy mogą budować agentów, którzy są _niewymagający zaufania_, _przejrzyści_ i _ekonomicznie autonomiczni_. Działania takich agentów mogą być audytowane, ograniczane i udowadniane.
+Agenci AI działający pozałańcuchowo często zachowują się jak „czarne skrzynki” — ich rozumowanie, dane wejściowe i wyjściowe nie mogą być niezależnie zweryfikowane. Ethereum to zmienia. Zakotwiczając zachowanie agenta onchain, programiści mogą tworzyć agentów, którzy są _niewymagający zaufania_ (trustless), _przejrzyści_ i _niezależni ekonomicznie_. Działania takich agentów mogą być audytowane, ograniczane i udowadniane.
 
 ### Weryfikowalne wnioskowanie {#verifiable-inference}
 
-Wnioskowanie AI tradycyjnie odbywa się offchain, gdzie wykonanie jest tanie, ale wykonanie modelu jest nieprzejrzyste. Na Ethereum deweloperzy mogą parować agentów z weryfikowalnymi obliczeniami, używając kilku technik:
+Wnioskowanie AI tradycyjnie odbywa się pozałańcuchowo, gdzie wykonanie jest tanie, ale działanie modelu jest nieprzejrzyste. W Ethereum programiści mogą łączyć agentów z weryfikowalnymi obliczeniami za pomocą kilku technik:
 
-- [**zkML (uczenie maszynowe o zerowej wiedzy)**](https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04) pozwala agentom udowodnić, że model został wykonany poprawnie, bez ujawniania modelu lub danych wejściowych
-- [**Poświadczenia TEE (zaufane środowisko wykonawcze)**](https://en.wikipedia.org/wiki/Trusted_execution_environment) pozwalają na sprzętowe dowody, że agent uruchomił określony model lub ścieżkę kodu
-- **Niezmienność onchain** zapewnia, że te dowody i poświadczenia mogą być przywoływane, odtwarzane i uznawane za godne zaufania przez każdy kontrakt lub agenta
+- [**zkML (uczenie maszynowe z wiedzą zerową)**](https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04) pozwala agentom udowodnić, że model został wykonany poprawnie bez ujawniania samego modelu ani danych wejściowych
+- [**Atestacje TEE (Zaufane Środowisko Wykonawcze)**](https://en.wikipedia.org/wiki/Trusted_execution_environment) umożliwiają sprzętowe dowody na to, że agent uruchomił określony model lub ścieżkę kodu
+- **Niezmienność onchain** gwarantuje, że do tych dowodów i atestacji może odwoływać się, odtwarzać je i ufać im każdy kontrakt lub agent
 
 ## Płatności i handel z x402 {#x402}
 
-Protokół [x402](https://www.x402.org/), wdrożony na Ethereum i warstwach L2, daje agentom natywny sposób płacenia za zasoby i interakcji ekonomicznych bez interwencji człowieka. Agenci mogą:
+[Protokół x402](https://www.x402.org/), wdrożony w Ethereum i sieciach L2, daje agentom natywny sposób płacenia za zasoby i interakcji ekonomicznych bez interwencji człowieka. Agenci mogą:
 
 - Płacić za obliczenia, dane i wywołania API za pomocą stablecoinów
-- Żądać lub weryfikować poświadczenia od innych agentów lub usług
+- Żądać lub weryfikować atestacje od innych agentów lub usług
 - Uczestniczyć w handlu między agentami, kupując i sprzedając moc obliczeniową, dane lub wyniki modeli
 
-x402 przekształca Ethereum w programowalną warstwę ekonomiczną dla autonomicznych agentów, umożliwiając interakcje oparte na płatności za użycie zamiast kont, subskrypcji lub scentralizowanego fakturowania.
+x402 zamienia Ethereum w programowalną warstwę ekonomiczną dla autonomicznych agentów, umożliwiając interakcje typu pay-per-use (płatność za użycie) zamiast kont, subskrypcji czy scentralizowanych rozliczeń.
 
-### Bezpieczeństwo finansów agentowych {#agentic-finance-security}
+### Bezpieczeństwo finansów agentów {#agentic-finance-security}
 
-Autonomiczni agenci potrzebują zabezpieczeń. Ethereum zapewnia je na poziomie portfela i kontraktu:
+Autonomiczni agenci potrzebują barier ochronnych. Ethereum zapewnia je na poziomie portfela i kontraktu:
 
-- [Inteligentne konta (EIP-4337)](https://eips.ethereum.org/EIPS/eip-4337) pozwalają deweloperom egzekwować limity wydatków, białe listy, klucze sesji i szczegółowe uprawnienia
-- Zaprogramowane ograniczenia w inteligentnych kontraktach mogą ograniczać to, co agent może robić
+- [Inteligentne konta (EIP-4337)](https://eips.ethereum.org/EIPS/eip-4337) pozwalają programistom egzekwować limity wydatków, białe listy, klucze sesji i szczegółowe uprawnienia
+- Zaprogramowane ograniczenia w inteligentnych kontraktach mogą zawężać to, co agentowi wolno robić
 - Limity oparte na wnioskowaniu (np. wymaganie dowodu zkML przed wykonaniem akcji wysokiego ryzyka) dodają kolejną warstwę bezpieczeństwa
 
-Te mechanizmy kontrolne umożliwiają wdrażanie autonomicznych agentów, którzy nie są nieograniczeni.
+Te mechanizmy kontrolne umożliwiają wdrożenie autonomicznych agentów, którzy nie są pozbawieni ograniczeń.
 
 ### Rejestry onchain: ERC-8004 {#erc-8004}
 
-[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) to powstający standard (obecnie w trakcie recenzji), który proponuje rejestry onchain dla tożsamości, możliwości i poświadczeń agentów.
+[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) definiuje rejestry onchain dla tożsamości, reputacji i walidacji agentów. Współtworzony przez współpracowników z MetaMask, Fundacji Ethereum, Google i Coinbase, jest wdrożony w 16 sieciach, w tym w sieci głównej Ethereum, Base, Polygon, Arbitrum i innych.
 
-Jeśli zostanie przyjęty, mógłby zapewnić:
+Zapewnia on:
 
-- Współdzielony, niewymagający zaufania katalog agentów
-- Znormalizowane formaty poświadczeń
-- Podstawę dla "niewymagającej zaufania infrastruktury agentów" bezpośrednio w sieci głównej Ethereum
+- **Rejestr tożsamości** dla przenośnych, odpornych na cenzurę identyfikatorów agentów
+- **Rejestr reputacji** dla ustandaryzowanych sygnałów zwrotnych w różnych aplikacjach
+- **Rejestr walidacji** do żądania niezależnej weryfikacji (zkML, TEE, ponowne wykonanie oparte na stawce)
 
-Ułatwiłoby to agentom wzajemne odkrywanie, weryfikowanie i zawieranie transakcji w całkowicie zdecentralizowanym środowisku.
+ERC-8004 ułatwia agentom odkrywanie, weryfikowanie i przeprowadzanie transakcji między sobą w pełni zdecentralizowanym środowisku.
 
-## Agenci AI na Ethereum {#ai-agents-on-ethereum}
+## Agenci AI w Ethereum {#ai-agents-on-ethereum}
 
-Dopiero zaczynamy odkrywać pełny potencjał agentów AI, a projekty już wykorzystują synergię pomiędzy AI a blockchainem—szczególnie w zakresie transparentności i monetyzacji.
+Zaczynamy odkrywać pełen potencjał agentów AI, a projekty już teraz wykorzystują synergię między sztuczną inteligencją a blockchainem — szczególnie w zakresie przejrzystości i monetyzacji.
 
 <AiAgentProductLists list="ai-agents" />
 
-<strong>Pierwsze wystąpienie Luny w podcaście</strong>
+<strong>Pierwszy występ Luny jako gościa podcastu</strong>
 
-<YouTube id="ZCsOMxnIruA" />
+<VideoWatch slug="ai-agents-interview-luna" />
 
 ## Portfele kontrolowane przez agentów {#agent-controlled-wallets}
 
-Agenci tacy jak Luna czy AIXBT kontrolują swój portfel blockchain ([portfel AIXBT](https://clusters.xyz/aixbt), [portfel Luna](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)), co pozwala im dawać napiwki fanom i angażować się w działalność gospodarczą.
+Agenci tacy jak Luna czy AIXBT kontrolują swój własny portfel onchain ([portfel AIXBT](https://clusters.xyz/aixbt), [portfel Luny](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)), co umożliwia im nagradzanie fanów i uczestnictwo w działaniach ekonomicznych.
 
-Podczas kampanii społecznościowej Luny na portalu X, w wyzwaniu #LunaMuralChallange Luna wytypowała i nagrodziła zwycięzców za pomocą portfela Base — stając się <strong>pierwszą AI zatrudniającą człowieka w zamian za nagrodę w kryptowalutach</strong>.
+Podczas kampanii społecznościowej Luny na platformie X pod hasłem #LunaMuralChallenge, Luna wybrała i nagrodziła zwycięzców za pośrednictwem swojego portfela w sieci Base — co stanowi <strong>pierwszy przypadek zatrudnienia ludzi przez sztuczną inteligencję w zamian za nagrodę w krypto</strong>.
 
 <Alert variant="warning">
 <AlertEmoji text="💡"/>
 <AlertContent>
-<p className="mt-0"><strong>Dobrze wiedzieć</strong></p>
-<p className="mt-2">Agenci AI i związane z nimi narzędzia wciąż są we wczesnej fazie rozwoju i są bardzo eksperymentalne—używaj ich z rozwagą.</p>
+<p className="mt-0"><strong>Warto wiedzieć</strong></p>
+<p className="mt-2">Agenci AI i powiązane z nimi narzędzia są wciąż we wczesnej fazie rozwoju i mają charakter wysoce eksperymentalny — używaj ich z ostrożnością.</p>
 </AlertContent>
-
 </Alert>
 
-## Miej kontrolę nad swoim portfelem używając poleceń chatu {#control-your-wallet-using-chat-commands}
+## Kontroluj swój portfel za pomocą poleceń czatu {#control-your-wallet-using-chat-commands}
 
-Możesz pominąć skomplikowane interfejsy DeFi i zarządzać swoimi kryptowalutami za pomocą prostych poleceń chatu.
+Możesz pominąć skomplikowane interfejsy zdecentralizowanych finansów (DeFi) i zarządzać swoim krypto za pomocą prostych poleceń na czacie.
 
-Intuicyjne podejście przyspiesza i ułatwia transakcje i sprawia, że jest mniejsze ryzyko błędów takich jak wysłanie środków na niewłaściwy adres czy płacenie zbyt wysokich opłat.
+To intuicyjne podejście sprawia, że transakcje są szybsze, łatwiejsze i mniej podatne na błędy, takie jak wysłanie środków na zły adres lub przepłacanie za opłaty.
 
 <AiAgentProductLists list="chat" />
 
-## Agenci AI vs. boty AI {#ai-agents-vs-ai-bots}
+## Agenci AI a boty AI {#ai-agents-vs-ai-bots}
 
-Rozróżnienie pomiędzy agentami AI a botami AI czasem może sprawiać kłopot, ponieważ oba narzędzia wykonują zautomatyzowane działania w oparciu o dane wejściowe.
+Różnica między agentami AI a botami AI może być czasami myląca, ponieważ oba wykonują zautomatyzowane działania na podstawie danych wejściowych.
 
-- Boty AI przypominają automatycznych asystentów — Przestrzegają konkretnych, wcześniej zaprogramowanych instrukcji, aby wykonywać codzienne zadania.
-- Agenci AI przypominają bardziej inteligentnych towarzyszy — Uczą się dzięki doświadczeniu, dostosowują się do otrzymanych informacji i sami podejmują decyzje.
+- Boty AI są jak zautomatyzowani asystenci — postępują zgodnie z określonymi, wstępnie zaprogramowanymi instrukcjami, aby wykonywać rutynowe zadania.
+- Agenci AI przypominają bardziej inteligentnych towarzyszy — uczą się na podstawie doświadczeń, dostosowują do nowych informacji i samodzielnie podejmują decyzje.
 
-|                       | Agenci AI                                                                                                 | Boty AI                                                                     |
-| --------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| **Interakcje**        | Złożone, adaptacyjne, autonomiczne                                                                        | Proste, wcześniej zdefiniowane, zakodowane                                  |
-| **Uczenie się**       | Uczy się w sposób ciągły, potrafi eksperymentować i dostosować się do nowych danych w czasie rzeczywistym | Działa na podstawie przygotowanych danych treningowych lub ustalonych zasad |
-| **Wykonywanie zadań** | Stara się realizować większe cele                                                                         | Skupia się wyłącznie na konkretnych zadaniach                               |
+|                     | Agenci AI                                                              | Boty AI                                     |
+| ------------------- | ---------------------------------------------------------------------- | ------------------------------------------- |
+| **Interakcje**    | Złożone, elastyczne, autonomiczne                                         | Proste, z góry określony zakres, zakodowane na stałe        |
+| **Uczenie się**        | Uczą się w sposób ciągły, mogą eksperymentować i dostosowywać się do nowych danych w czasie rzeczywistym | Działają na wstępnie wytrenowanych danych lub stałych regułach |
+| **Wykonywanie zadań** | Mają na celu osiągnięcie szerszych celów                                     | Skupiają się wyłącznie na konkretnych zadaniach              |
 
 ## Dowiedz się więcej {#dive-deeper}
 
 <AiAgentProductLists list="dive-deeper" />
 
-## Możesz stworzyć własnego agenta AI {#you-can-build-your-own-ai-agent}
+## Możesz zbudować własnego agenta AI {#you-can-build-your-own-ai-agent}
 
 <BuildYourOwnAIAgent />

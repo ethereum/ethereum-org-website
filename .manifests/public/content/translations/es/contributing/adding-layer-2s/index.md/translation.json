@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-06-08T07:46:13.998Z",
+  "englishManifestHash": "9ba3e39e593f",
+  "placeholderOrder": [
+    "LINK-76c5e4",
+    "LINK-7ff967",
+    "LINK-571439",
+    "LINK-dd763a",
+    "LINK-b6c74a",
+    "LINK-12a269"
+  ],
+  "placeholderMap": {
+    "LINK-76c5e4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml"
+      }
+    },
+    "LINK-7ff967": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups/"
+      }
+    },
+    "LINK-571439": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups/"
+      }
+    },
+    "LINK-dd763a": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-b6c74a": {
+      "type": "link",
+      "values": {
+        "url": "https://l2beat.com"
+      }
+    },
+    "LINK-12a269": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:46:13.998Z",
+      "status": "success"
+    }
+  }
+}

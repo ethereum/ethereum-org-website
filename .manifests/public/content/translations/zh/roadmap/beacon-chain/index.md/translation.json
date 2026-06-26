@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "locale": "zh",
+  "translatedAt": "2026-06-18T00:44:24.349Z",
+  "englishManifestHash": "5cd5f3656522",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-14f434",
+    "LINK-adcad0",
+    "LINK-27660a",
+    "LINK-2655ce",
+    "LINK-bf455e",
+    "LINK-9ebc08",
+    "LINK-4a39da",
+    "LINK-c8340a",
+    "LINK-188531"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "LINK-adcad0": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-27660a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/node-architecture/#node-comparison"
+      }
+    },
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-bf455e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/"
+      }
+    },
+    "LINK-9ebc08": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-4a39da": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/"
+      }
+    },
+    "LINK-c8340a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/node-architecture"
+      }
+    },
+    "LINK-188531": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:44:24.349Z",
+      "status": "success"
+    }
+  }
+}

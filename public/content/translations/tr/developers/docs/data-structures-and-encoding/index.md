@@ -5,28 +5,28 @@ lang: tr
 sidebarDepth: 2
 ---
 
-Ethereum, büyük miktarda veri üretir, depolar ve transfer eder. Bu verinin, herhangi birinin nispeten mütevazı, tüketici sınıfı bir donanımda [bir düğüm çalıştırmasına](/run-a-node/) olanak tanımak için standartlaştırılmış ve bellek açısından verimli yollarla biçimlendirilmesi gerekir. Bunu başarmak için Ethereum yığınında belirli birkaç veri yapısı kullanılır.
+Ethereum büyük hacimlerde veri oluşturur, depolar ve aktarır. Bu veriler, herkesin nispeten mütevazı tüketici sınıfı donanımlarda [bir düğüm çalıştırmasına](/run-a-node/) olanak tanımak için standartlaştırılmış ve bellek açısından verimli yollarla biçimlendirilmelidir. Bunu başarmak için, Ethereum yığınında birkaç özel veri yapısı kullanılır.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Ethereum'un temellerini ve [istemci yazılımını](/developers/docs/nodes-and-clients/) anlamalısınız. Ağ katmanına ve [Ethereum tanıtım belgesine](/whitepaper/) aşina olmanız önerilir.
+Ethereum'un ve [istemci yazılımının](/developers/docs/nodes-and-clients/) temellerini anlamalısınız. Ağ katmanına ve [Ethereum tanıtım belgesine](/whitepaper/) aşina olmanız önerilir.
 
 ## Veri yapıları {#data-structures}
 
-### Patricia Merkle ağaçları {#patricia-merkle-tries}
+### Patricia merkle trie'leri {#patricia-merkle-tries}
 
-Patricia Merkle Dijital Ağaçları, anahtar-değer çiftlerini belirleyici ve kriptografik açıdan kimliği doğrulanmış bir dijital ağaç şeklinde kodlayan yapılardır. Bu yapılar, Ethereum'un yürütüm katmanında yaygın olarak kullanılır.
+Patricia Merkle Trie'leri, anahtar-değer çiftlerini deterministik ve kriptografik olarak doğrulanmış bir trie'ye kodlayan yapılardır. Bunlar, Ethereum'un yürütme katmanı genelinde yaygın olarak kullanılır.
 
-[Patricia Merkle Ağaçları hakkında daha fazla bilgi](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
+[Patricia Merkle Trie'leri hakkında daha fazlası](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
 
-### Özyinelemeli Uzunluk Ön Eki {#recursive-length-prefix}
+### Özyineli Uzunluk Öneki {#recursive-length-prefix}
 
-Özyinelemeli Uzunluk Ön Eki (RLP), Ethereum'un yürütüm katmanında yaygın şekilde kullanılan bir serileştirme yöntemidir.
+Özyineli Uzunluk Öneki (RLP), Ethereum'un yürütme katmanı genelinde yaygın olarak kullanılan bir serileştirme yöntemidir.
 
-[RLP hakkında daha fazla bilgi](/developers/docs/data-structures-and-encoding/rlp)
+[RLP hakkında daha fazlası](/developers/docs/data-structures-and-encoding/rlp)
 
 ### Basit Serileştirme {#simple-serialize}
 
-Basit Serileştirme (SSZ), merkle işlemi ile uyumluluğu nedeniyle Ethereum'un fikir birliği katmanında kullanılan baskın serileştirme biçimidir.
+Basit Serileştirme (SSZ), merklelaştırma ile uyumluluğu nedeniyle Ethereum'un mutabakat katmanındaki baskın serileştirme formatıdır.
 
-[SSZ hakkında daha fazla bilgi](/developers/docs/data-structures-and-encoding/ssz)
+[SSZ hakkında daha fazlası](/developers/docs/data-structures-and-encoding/ssz)

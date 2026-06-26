@@ -1,77 +1,76 @@
 ---
-title: "Często zadawane pytania"
-description: Common Ethereum questions about wallets, transactions, staking, and more.
+title: Często zadawane pytania
+description: Częste pytania dotyczące Ethereum, portfeli, transakcji, stakingu i nie tylko.
 lang: pl
 ---
 
-# Często zadawane pytania {#faq}
+## Wysłałem krypto na zły adres {#wrong-wallet}
 
-## I sent crypto to the wrong address {#wrong-wallet}
+Transakcja wysłana w sieci Ethereum jest nieodwracalna. Niestety, jeśli wysłałeś ETH lub tokeny na zły portfel, nie ma możliwości cofnięcia transakcji.
 
-Transakcja wysłana na Ethereum jest nieodwracalna. Unfortunately, if you sent ETH or tokens to the wrong wallet, there is no way to reverse the transaction.
+**Co możesz zrobić:**
 
-**What you can do:**
+- **Jeśli znasz właściciela adresu**, skontaktuj się z nim bezpośrednio i poproś o zwrot środków
+- **Jeśli adres należy do giełdy lub znanej usługi**, skontaktuj się z ich zespołem wsparcia, ponieważ mogą być w stanie pomóc
+- **Jeśli wysłałeś tokeny na adres kontraktu**, sprawdź, czy kontrakt ma funkcję wypłaty lub odzyskiwania (zdarza się to rzadko)
 
-- **If you know the owner of the address**, contact them directly and ask them to return the funds
-- **If the address belongs to an exchange or known service**, contact their support team, as they may be able to help
-- **If you sent tokens to a contract address**, check whether the contract has a withdrawal or recovery function (this is rare)
+W większości przypadków nie ma możliwości odzyskania środków. Żadna centralna organizacja, podmiot ani osoba nie jest właścicielem Ethereum, co oznacza, że nikt nie może cofać transakcji. Zawsze dokładnie sprawdzaj adres odbiorcy przed potwierdzeniem.
 
-In most cases, there is no way to recover the funds. No central organization, entity, or person owns Ethereum, which means no one can reverse transactions. Always double-check the recipient address before confirming.
+## Straciłem dostęp do mojego portfela {#lost-wallet-access}
 
-## I lost access to my wallet {#lost-wallet-access}
+Twoje opcje odzyskiwania zależą od rodzaju portfela, którego używasz.
 
-Your recovery options depend on the type of wallet you use.
+### Jeśli masz swoją frazę odzyskiwania {#if-you-have-your-seed-phrase-recovery-phrase}
 
-### If you have your seed phrase (recovery phrase)
+Możesz przywrócić swój portfel w dowolnej kompatybilnej aplikacji portfela, używając swojej frazy odzyskiwania. Dlatego tak ważne jest, aby bezpiecznie przechowywać frazę odzyskiwania w trybie offline. Sprawdź dokumentację dostawcy portfela, aby uzyskać instrukcje dotyczące przywracania.
 
-You can restore your wallet in any compatible wallet app using your seed phrase. This is why it is critical to keep your seed phrase stored safely offline. Check your wallet provider's documentation for restore instructions.
+### Jeśli zgubiłeś swoją frazę odzyskiwania {#if-you-have-lost-your-seed-phrase}
 
-### If you have lost your seed phrase
+Bez frazy odzyskiwania lub kluczy prywatnych Twoje środki nie mogą zostać odzyskane. Nikt, w tym ethereum.org, nie może zresetować Twojego hasła ani przywrócić dostępu do portfela z samodzielnym przechowywaniem.
 
-Without your seed phrase or private keys, your funds cannot be recovered. No one, including ethereum.org, can reset your password or restore access to a self-custody wallet.
+### Jeśli Twoje konto znajduje się na giełdzie {#if-your-account-is-on-an-exchange}
 
-### If your account is on an exchange
-
-If your account is on a centralized exchange like Coinbase, Binance, or Kraken, contact the exchange's support team directly. They control accounts on their platform and may be able to help with password resets or account recovery.
+Jeśli Twoje konto znajduje się na scentralizowanej giełdzie, takiej jak Coinbase, Binance lub Kraken, skontaktuj się bezpośrednio z zespołem wsparcia giełdy. Kontrolują oni konta na swojej platformie i mogą pomóc w zresetowaniu hasła lub odzyskaniu konta.
 
 <Alert variant="warning">
 <AlertEmoji text=":shield:"/>
 <AlertContent>
 <AlertDescription>
 
-**Never share your seed phrase with anyone** claiming to help you recover your wallet. This is one of the most common scam tactics. No legitimate service will ever ask for your seed phrase.
+**Nigdy nie udostępniaj swojej frazy odzyskiwania nikomu**, kto twierdzi, że pomoże Ci odzyskać portfel. Jest to jedna z najczęstszych taktyk oszustów. Żadna legalna usługa nigdy nie poprosi Cię o Twoją frazę odzyskiwania.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 <DocLink href="/guides/how-to-use-a-wallet/">
-  How to use a wallet
+  Jak korzystać z portfela
 </DocLink>
 
-## My transaction is stuck or pending {#stuck-transaction}
+## Moja transakcja utknęła lub jest oczekująca {#stuck-transaction}
 
-Transactions on Ethereum can get stuck when the gas fee you set was lower than what the network currently requires. Most wallets let you fix this:
+Transakcje w sieci Ethereum mogą utknąć, gdy ustawiona przez Ciebie opłata za gaz była niższa niż ta, której obecnie wymaga sieć. Większość portfeli pozwala to naprawić:
 
-- **Speed up:** Resubmit the same transaction with a higher gas fee
-- **Cancel:** Send a 0 ETH transaction to your own address using the same nonce as the pending transaction
+- **Przyspiesz:** Prześlij ponownie tę samą transakcję z wyższą opłatą za gaz
+- **Anuluj:** Wyślij transakcję o wartości 0 ETH na swój własny adres, używając tego samego nonce, co oczekująca transakcja
 
-### Helpful guides
+### Przydatne przewodniki {#helpful-guides}
 
-- [How to speed up or cancel a pending transaction on MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
+- [Jak przyspieszyć lub anulować oczekującą transakcję w MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
 - [Jak anulować oczekujące transakcje Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-## Jak mogę odebrać wygraną w konkursie Ethereum? {#giveaway-scam}
+## Jak mogę odebrać moje darmowe Ethereum z rozdawnictwa? {#giveaway-scam}
 
-Konkursy z nagrodami Ethereum to oszustwa mające na celu kradzież twojego ETH. Do not be tempted by offers that seem too good to be true. If you send ETH to a giveaway address, you will not receive a giveaway, and you will not be able to recover your funds.
+Rozdawnictwa (giveaways) Ethereum to oszustwa mające na celu kradzież Twojego ETH. Nie daj się skusić ofertom, które wydają się zbyt piękne, aby mogły być prawdziwe. Jeśli wyślesz ETH na adres rozdawnictwa, nie otrzymasz żadnych darmowych środków i nie będziesz w stanie odzyskać swoich funduszy.
 
 [Więcej o zapobieganiu oszustwom](/security/#common-scams)
 
-## How do I stake ETH? {#how-to-stake}
+## Jak stakować ETH? {#how-to-stake}
 
-Aby zostać walidatorem, musisz zestakować 32 ETH w kontrakcie depozytowym Ethereum i skonfigurować węzeł walidatora. You can also participate with less ETH through staking pools.
+Aby zostać walidatorem, musisz stakować 32 ETH w kontrakcie depozytowym Ethereum i skonfigurować węzeł walidatora. Możesz również uczestniczyć z mniejszą ilością ETH za pośrednictwem pul stakingowych.
 
-More information is available on our [staking pages](/staking/) and at [the staking launchpad](https://launchpad.ethereum.org/).
+Więcej informacji jest dostępnych na naszych [stronach o stakingu](/staking/) oraz na [platformie startowej stakingu](https://launchpad.ethereum.org/).
 
-## Jak wydobywać Ethereum? Wydobycie Ethereum {#mining-ethereum}
+## Jak kopać Ethereum? {#mining-ethereum}
 
-Kopanie Ethereum nie jest już dłużej możliwe. Mining was switched off when Ethereum moved from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Teraz, zamiast górników, Ethereum ma walidatory. Każdy może [stakować](/glossary/#staking) ETH i otrzymywać nagrody ze stakowania za uruchamianie oprogramowania walidatora w celu zabezpieczenia sieci.
+Kopanie Ethereum nie jest już możliwe. Kopanie zostało wyłączone, gdy Ethereum przeszło z [dowodu pracy (PoW)](/glossary/#pow) na [dowód stawki (PoS)](/glossary/#pos) podczas [The Merge](/roadmap/merge/) we wrześniu 2022 roku. Teraz, zamiast górników, Ethereum ma walidatorów. Każdy może [stakować](/glossary/#staking) ETH i otrzymywać nagrody za staking za uruchomienie oprogramowania walidatora w celu zabezpieczenia sieci.

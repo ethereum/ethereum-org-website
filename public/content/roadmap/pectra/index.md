@@ -1,10 +1,10 @@
 ---
-title: Prague-Electra (Pectra)
+title: Pectra
+metaTitle: Prague-Electra (Pectra)
 description: Learn about the Pectra protocol upgrade
 lang: en
+authors: ["Nixo", "Mario Havel"]
 ---
-
-# Pectra {#pectra}
 
 The Pectra network upgrade followed [Dencun](/roadmap/dencun/) and brought changes to both the execution and consensus layer of Ethereum. The shortened name Pectra is a combination of Prague and Electra, which are the respective names for the execution and consensus layer specification changes. Together, these changes bring a number of improvements to [Ethereum](/) users, developers and validators.
 
@@ -109,11 +109,11 @@ Yes, Pectra upgrade requires updates to both [execution clients and consensus cl
 
 ## More of a visual learner? {#visual-learner}
 
-<YouTube id="ufIDBCgdGwY" />
+<VideoWatch slug="pectra-upgrade-overview" />
 
 _What’s Going Into the Pectra Upgrade? - Christine Kim_
 
-<YouTube id="_UpAFpC7X6Y" />
+<VideoWatch slug="pectra-what-stakers-need-to-know" />
 
 _Ethereum Pectra Upgrade: What Stakers Need to Know — Blockdaemon_
 

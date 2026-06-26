@@ -1,99 +1,98 @@
 ---
-title: "Ürün ekleme"
-description: "Ethereum.org'a merkeziyetsiz uygulamalar eklerken kullandığımız politika"
+title: Ethereum ürünleri ekleme
+metaTitle: Ürün Ekleme
+description: ethereum.org'a merkeziyetsiz uygulama (dapp) eklerken kullandığımız politika
 lang: tr
 ---
 
-# Ethereum ürünleri ekleme {#adding-products}
+Uygun olduğu durumlarda herkes ethereum.org'daki içeriğe yeni merkeziyetsiz uygulamalar (dapp'ler) önermekte özgürdür. **Hayır, dapp'inizi ana sayfamızda listelemeyeceğiz** 😜
 
-Herkes, uygun olduğunda ethereum.org'daki içeriğe yeni merkeziyetsiz uygulamalar önermekte özgürdür. **Hayır, merkeziyetsiz uygulamanızı ana sayfamızda listelemeyeceğiz** 😜
-
-Merkeziyetsiz uygulamalar şu anda aşağıdakilerde listeleniyor:
+Dapp'ler şu anda buralarda listelenmektedir:
 
 - ethereum.org/dapps
 - ethereum.org/get-eth
 
-**Lütfen sadece bu sayfalarda yeni eklemeler önerin.**
+**Lütfen yalnızca bu sayfalara yeni eklemeler önerin.**
 
-Yeni eklemeleri memnuniyetle karşılasak da, mevcut cüzdanları ve merkeziyetsiz uygulamaları kullanıcılarımız için oluşturmaya çalıştığımız bir deneyime dayanarak seçtik. Bunlar, bazı tasarım ilkelerimize temel almaktadır:
+Yeni eklemeleri memnuniyetle karşılasak da, mevcut dapp'leri kullanıcılarımız için yaratmaya çalıştığımız bir deneyime dayanarak seçtik. Bunlar bazı tasarım ilkelerimize dayanmaktadır:
 
-- _İlham verici_: ethereum.org'daki herhangi bir şey kullanıcılara yeni bir şey sunmalıdır.
-- _İyi bir hikâye_: listelenen şey, bir "vay canına" anı yaşatmalıdır.
-- _Güvenilir_: Kullanıcılara yönelik riski en aza indirmek için her şeyin meşru işletmeler/projeler olması gerekir.
+- _İlham verici_: ethereum.org'daki her şey kullanıcılara yeni bir şeyler sunmalıdır
+- _İyi bir hikaye_: listelenenler bir "işte bu" anı sağlamalıdır
+- _Güvenilir_: kullanıcılara yönelik riski en aza indirmek için her şey meşru işletmeler/projeler olmalıdır
 
-Genel olarak **ethereum.org, yeni kullanıcılara "sorunsuz bir başlangıç deneyimi" sunmayı amaçlar**. Bu nedenle, aşağıdakilere dayalı olarak merkeziyetsiz uygulamalar ekliyoruz:
+Genel olarak **ethereum.org, yeni kullanıcılar için "sorunsuz bir sisteme katılım deneyimi" sağlamak istiyor**. Bu nedenle, dapp'leri şunlara göre ekliyoruz:
 
 - kullanım kolaylığı
 - diğer ürünlerle birlikte çalışabilirlik
 - güvenlik
 - uzun ömürlülük
 
-İşte karar çerçevemizin daha ayrıntılı hâli. Geribildirim sağlamaktan veya değişiklik önermekten çekinmeyin.
+İşte karar çerçevemizin daha fazla detayı. Geri bildirimde bulunmaktan veya değişiklik önermekten çekinmeyin.
 
 ## Karar çerçevesi {#decision-framework}
 
 ### Dahil edilme kriterleri: olmazsa olmazlar {#criteria-for-inclusion-the-must-haves}
 
-- **Güvenlik testi yapılmış ürün** – denetim, şirket içi güvenlik ekibi veya başka bir yöntemle olsun, ürününüzün güvenliği güvenilir bir şekilde test edilmelidir. Bu, kullanıcılarımıza yönelik riski azaltır ve güvenliği ciddiye aldığınızı gösterir.
-- **6 ayı aşkın süredir "yayında" olan bir ürün** – bu, güvenliğin başka bir göstergesidir. 6 ay, kritik hataların ve açıkların bulunması için iyi bir zaman dilimidir.
-- **Aktif bir ekip tarafından geliştirilmesi** – bu, kaliteyi sağlamaya ve bir kullanıcının soruları için destek almasına yardımcı olur.
-- **Dürüst ve doğru listeleme bilgileri** - Projelerden önerilen listelemelerin dürüst ve doğru bilgiler içermesi beklenir. Ürününüzü "açık kaynak" değilken öyleymiş gibi duyurmak gibi listeleme bilgilerini tahrif eden ürünler kaldırılacaktır.
+- **Güvenlik testi yapılmış bir ürün** – ister denetim, ister dahili bir güvenlik ekibi veya başka bir yöntemle olsun, ürününüzün güvenliği güvenilir bir şekilde test edilmiş olmalıdır. Bu, kullanıcılarımıza yönelik riski azaltır ve güvenliği ciddiye aldığınızı bize gösterir.
+- **6 aydan uzun süredir "yayında" olan bir ürün** – bu, güvenliğin bir başka göstergesidir. 6 ay, kritik hataların ve istismarların bulunması için iyi bir zaman dilimidir.
+- **Aktif bir ekip tarafından üzerinde çalışılan** – bu, kaliteyi ve bir kullanıcının sorularıyla ilgili destek almasını sağlamaya yardımcı olur.
+- **Dürüst ve doğru listeleme bilgileri** - projelerden önerilen tüm listelemelerin dürüst ve doğru bilgilerle gelmesi beklenir. Ürününüzün "açık kaynaklı" olmadığını halde öyle olduğunu beyan etmek gibi listeleme bilgilerini tahrif eden ürünler kaldırılacaktır.
 
-### Sıralama kriterleri: olması iyi olanlar {#criteria-for-ranking-the-nice-to-haves}
+### Sıralama kriterleri: olsa iyi olurlar {#criteria-for-ranking-the-nice-to-haves}
 
-Merkeziyetsiz uygulamanız aşağıdaki kriterler nedeniyle ethereum.org'da diğerleri kadar belirgin bir şekilde listelenmemiş olabilir.
+Merkeziyetsiz uygulamanız (dapp), aşağıdaki kriterler nedeniyle ethereum.org'da diğerleri kadar belirgin bir şekilde listelenmeyebilir.
 
-**Merkeziyetsiz uygulamalar**
+**Dapp'ler**
 
-- **Listelenen cüzdanların çoğu aracılığıyla erişilebilmesi** – merkeziyetsiz uygulamalar, ethereum.org'da listelenen cüzdanların çoğuyla çalışmalıdır.
-- **Kullanıcıların kendi başlarına deneyebilmesi –** Bireysel bir kullanıcı, merkeziyetsiz uygulamanızı kullanabilmeli ve somut bir şey elde edebilmelidir.
-- **Başlangıç –** ürününüz, kullanıcılara yardımcı olmak ve onları eğitmek için iyi tasarlanmış bir başlangıç deneyimine sahip olmalıdır. Alternatif olarak, makaleler veya videolar gibi nasıl yapılır içeriğinin kanıtına da sahip olabilir.
-- **Gözetimsiz** – kullanıcılar fonlarını kendileri kontrol eder. Ürününüz kaybolursa, kullanıcılar yine de fonlarına erişebilir ve bunları taşıyabilir.
-- **Küresel olarak erişilebilir** – ürününüz, belirli kişilerin hizmetinize erişmesini engelleyen coğrafi sınırlamalara veya KYC gereksinimlerine sahip olmamalıdır.
-- **Açık kaynak** – kodunuz erişilebilir olmalı ve daha geniş topluluktan gelen PR'leri kabul etmelisiniz.
-- **Topluluk** – kullanıcıların yardım almak veya yeni özellikler önermek için ekibinizle etkileşime girebileceği, belki bir Discord sunucusu gibi, özel bir topluluğunuzun olması.
+- **Listelenen cüzdanların çoğunluğu aracılığıyla erişilebilir olması** – dapp'ler, ethereum.org'da listelenen cüzdanların çoğunluğuyla çalışmalıdır.
+- **Kullanıcıların kendilerinin deneyebilmesi –** bireysel bir kullanıcı dapp'inizi kullanabilmeli ve somut bir şey elde edebilmelidir.
+- **Sisteme katılım** – ürününüz, kullanıcılara yardımcı olmak ve onları eğitmek için iyi tasarlanmış bir sisteme katılım deneyimine sahip olmalıdır. Veya makaleler ya da videolar gibi nasıl yapılır içeriklerinin kanıtı olmalıdır.
+- **Gözetimsiz** – kullanıcılar fonlarını kontrol eder. Ürününüz ortadan kaybolsa bile, kullanıcılar fonlarına erişmeye ve onları taşımaya devam edebilir.
+- **Küresel olarak erişilebilir** – ürününüzün, belirli kişilerin hizmetinize erişmesini engelleyen coğrafi sınırlamaları veya KYC gereksinimleri yoktur.
+- **Açık kaynak** – kodunuz erişilebilir olmalı ve daha geniş topluluktan gelen PR'ları (çekme isteklerini) kabul etmelisiniz.
+- **Topluluk** – kullanıcıların yardım almak veya yeni özellikler önermek için ekibinizle etkileşime girebileceği, belki bir Discord gibi özel bir topluluğunuz vardır.
 
-## Uygulamadaki kriterler {#criteria-in-practice}
+## Uygulamada kriterler {#criteria-in-practice}
 
-Ne kadar çok kriteri karşılarsanız, ürününüzün ethereum.org'a girme olasılığı o kadar artar.
+Kriterlerin ne kadar çoğunu karşılarsanız, ürününüzün ethereum.org'da yer bulma olasılığı o kadar artar.
 
-Yalnızca olmazsa olmazları karşılayan listelenmiş bir ürün, olmazsa olmazları ve olması iyi olan şeylerden birkaçını karşılayan yeni bir ürün önerildiğinde kaldırılabilir.
+Yalnızca olmazsa olmazları karşılayan listelenmiş bir ürün, olmazsa olmazları ve birkaç olsa iyi oluru karşılayan yeni bir ürün önerilirse kaldırılabilir.
 
-Bu kararı etkileyecek diğer şeyler:
+Bu kararda rol oynayacak diğer şeyler:
 
-- Değiştirmek yerine eklemek, sayfada kullanıcı deneyimini bozar mı?
-  - sitemiz öncelikle eğitim amaçlıdır ve asıl amacı Ethereum'u ve ilgili kavramları açıklamaktır. Kullanıcılar için çok fazla seçenek eklendiğinde, sayfalar daha az okunabilir ve dolayısıyla daha az kullanışlı hâle gelebilir.
-- Bu sayfa şu anda kullanıcıyı seçeneklerle felç ediyor mu?
-  - izleyecek bir şeye karar veremediğiniz için saatlerce Netflix'e göz atarken olduğu gibi. Yeni kullanıcıları çok fazla seçenekle şaşırtmak bir risktir.
+- Değiştirmek yerine eklemek sayfanın kullanıcı deneyimini (UX) bozar mı?
+  - sitemiz öncelikle eğiticidir ve temel amacı Ethereum'u ve ilgili kavramlarını açıklamaktır. Kullanıcılar için çok fazla seçenek eklemek, sayfaların daha az okunabilir ve dolayısıyla daha az kullanışlı hale gelmesine neden olabilir.
+- Bu sayfa artık kullanıcıyı seçeneklerle felç ediyor mu?
+  - tıpkı izleyecek bir şeye karar veremediğiniz için saatlerce oturup Netflix'te gezinmeniz gibi. Yeni kullanıcıların kafasını çok fazla seçenekle karıştırmak bir risktir.
 
 Bu, ethereum.org'un sorumlu olduğu bir tasarım kararıdır.
 
-Ancak içiniz rahat olsun, **daha fazla merkeziyetsiz uygulamaları sıralayan diğer web sitelerine bağlantılar olacaktır**
+Ancak içiniz rahat olsun, **daha fazla dapp'i sıralayan diğer web sitelerine bağlantılar olacaktır**
 
 ### Ürün Sıralaması {#product-ordering}
 
-Ürünler, örneğin alfabetik olarak, aksi belirtilmedikçe, sayfaya en yakın zamanda eklenenden en eski eklenene doğru gösterilecektir. Diğer bir deyişle, en yeni ürünler listenin en altına eklenir.
+Ürünler alfabetik gibi özel olarak başka bir şekilde sıralanmadıkça, sayfaya en son eklenenden en eskiye doğru görüntülenecektir. Başka bir deyişle, en yeni ürünler listenin en altına eklenir.
 
 ### Kullanım koşulları {#terms-of-use}
 
-Lütfen [kullanım koşullarımıza](/terms-of-use/) da göz atın. Ethereum.org'daki bilgiler, yalnızca genel bilgi amaçlı verilmektedir.
+Lütfen ayrıca [kullanım koşullarımıza](/terms-of-use/) da başvurun. ethereum.org'daki bilgiler yalnızca genel bilgilendirme amacıyla sağlanmaktadır.
 
 ## Bakım {#maintenance}
 
-Ethereum'un akıcı yapısında olduğu gibi, ekipler ve ürünler gelir ve gider; yenilikler her gün gerçekleşir, bu nedenle şu amaçlarla içeriğimizin rutin kontrollerini gerçekleştireceğiz:
+Ethereum'un akışkan doğası gereği, ekipler ve ürünler gelir ve gider ve inovasyon her gün gerçekleşir, bu nedenle içeriğimizin rutin kontrollerini şunlar için yapacağız:
 
-- listelenen tüm merkeziyetsiz uygulamaların kriterlerimizi hala karşıladığından emin olmak
-- şu anda listelenenlerden daha fazla sayıda kriterimizi karşılayan önerilmiş ürünler olmadığını doğrulamak
+- listelenen tüm dapp'lerin hala kriterlerimizi karşıladığından emin olmak
+- şu anda listelenenlerden daha fazla kriterimizi karşılayan önerilmiş ürünler olmadığını doğrulamak
 
-Kontrol edip bize bildirerek bu konuda yardımcı olabilirsiniz. [Bir konu oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) veya [website@ethereum.org](mailto:website@ethereum.org) adresine e-posta gönderin
+Kontrol edip bize bildirerek buna yardımcı olabilirsiniz. [Bir sorun (issue) oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) veya [website@ethereum.org](mailto:website@ethereum.org) adresine bir e-posta gönderin.
 
-_Ayrıca, topluluğun tercihlerini belirtebilmesi ve önerebileceğimiz en iyi ürünleri öne çıkarabilmesi için oylama seçeneklerini de araştırıyoruz._
+_Ayrıca, topluluğun tercihlerini belirtebilmesi ve önermemiz için piyasadaki en iyi ürünleri öne çıkarabilmesi adına oy verme seçeneklerini de araştırıyoruz._
 
 ---
 
 ## Ürününüzü ekleyin {#add-your-product}
 
-ethereum.org'a bir merkeziyetsiz uygulama eklemek isterseniz ve bu uygulama kriterleri karşılıyorsa lütfen bize bildirin.
+ethereum.org'a bir merkeziyetsiz uygulama (dapp) eklemek istiyorsanız ve kriterleri karşılıyorsa, lütfen bize bildirin.
 
 <ButtonLink href="https://submitapp.paperform.co/">
   Bir uygulama önerin

@@ -1,55 +1,82 @@
 ---
 title: Daten und Analysen
-description: So bekommen Sie Analysen und Daten in der Chain für die Nutzung in Ihren dApps
+description: "Wie man Onchain-Analysen und -Daten für die Verwendung in eigenen Dapps erhält"
 lang: de
 ---
 
-## Einführung {#Introduction}
+## Einführung {#introduction}
 
-Da die Nutzung des Netzwerks weiter zunimmt, steigt damit die Menge an wertvollen Informationen in den On-Chain-Daten. Da das Datenvolumen rapide zunimmt, kann die Berechnung und Aggregation dieser Informationen zur Erstellung von Berichten oder zur Steuerung einer dApp ein Zeit- und arbeitsintensives Unterfangen werden.
+Da die Nutzung des Netzwerks weiter wächst, wird eine zunehmende Menge an wertvollen Informationen in den Onchain-Daten vorhanden sein. Da das Datenvolumen schnell ansteigt, kann die Berechnung und Aggregation dieser Informationen für Berichte oder den Betrieb einer dezentralen Anwendung (Dapp) zu einem zeit- und rechenintensiven Unterfangen werden.
 
-Wenn Sie dabei auf vorhandene Datenanbieter setzen, können Sie die Entwicklung beschleunigen, genauere Ergebnisse liefern und den laufenden Wartungsaufwand reduzieren. Das bietet Ihnen die Möglichkeit, dass Sie ein Team nur mit den wesentlichen Funktionen betrauen, das Sie mit Ihrem Projekt bieten möchten.
+Die Nutzung bestehender Datenanbieter kann die Entwicklung beschleunigen, genauere Ergebnisse liefern und den laufenden Wartungsaufwand reduzieren. Dies ermöglicht es einem Team, sich auf die Kernfunktionalität zu konzentrieren, die ihr Projekt bereitstellen möchte.
 
 ## Voraussetzungen {#prerequisites}
 
-Sie sollten das Grundkonzept des [Block -Explorers](/developers/docs/data-and-analytics/block-explorers/) kennen, um dessen Einsatz im Kontext der Datenanalyse besser zu verstehen. Zusätzlich sollten Sie sich mit dem Konzept eines [Index](/glossary/#index) vertraut machen, um besser verstehen zu können, welche Vorteile sie für ein Systemdesign bedeuten.
+Sie sollten das grundlegende Konzept von [Block-Explorern](/developers/docs/data-and-analytics/block-explorers/) verstehen, um deren Einsatz im Kontext der Datenanalyse besser nachvollziehen zu können. Machen Sie sich außerdem mit dem Konzept eines [Index](/glossary/#index) vertraut, um die Vorteile zu verstehen, die sie einem Systemdesign hinzufügen.
 
-In puncto architektonische Grundlagen sollten Sie mit den Begriffen [API](https://www.wikipedia.org/wiki/API) und [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) vertraut sein, auch in der Theorie.
+Was die architektonischen Grundlagen betrifft, sollten Sie zumindest theoretisch verstehen, was eine [API](https://www.wikipedia.org/wiki/API) und [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) sind.
 
-## Block Explorer {#block-explorers}
+## Block-Explorer {#block-explorers}
 
-Viele [Block-Explorer](/developers/docs/data-and-analytics/block-explorers/) bieten [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer)-[API](https://www.wikipedia.org/wiki/API)-Gateways, die Entwicklern Einblick in Echtzeitdaten zu Blöcken, Transaktionen, Validatoren, Konten und anderen On-Chain-Aktivitäten ermöglichen.
+Viele [Block-Explorer](/developers/docs/data-and-analytics/block-explorers/) bieten [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API)-Gateways, die Entwicklern Einblick in Echtzeitdaten zu Blöcken, Transaktionen, Validatoren, Konten und anderen Onchain-Aktivitäten geben.
 
-Entwickler können diese Daten dann verarbeiten und umwandeln, um ihren Nutzern einzigartige Einblicke und Interaktionen mit der [Blockchain](/glossary/#blockchain) zu ermöglichen. So liefert [Etherscan](https://etherscan.io) beispielsweise Ausführungs- und Konsensdaten für jeden 12s-Slot.
+Entwickler können diese Daten dann verarbeiten und transformieren, um ihren Nutzern einzigartige Einblicke und Interaktionen mit der [Blockchain](/glossary/#blockchain) zu bieten. Zum Beispiel stellen [Etherscan](https://etherscan.io) und [Blockscout](https://eth.blockscout.com) Ausführungs- und Konsensdaten für jeden 12-Sekunden-Slot bereit.
 
 ## The Graph {#the-graph}
 
-Das [Graph Network](https://thegraph.com/) ist ein dezentrales Indexierungsprotokoll zur Organisation von Blockchain-Daten. Anstatt für die Aggregation von On-Chain-Daten Datenspeicher, ob zentral oder außerhalb der Chain, zu erstellen und zu verwalten, können Entwickler mit The Graph serverlose Anwendungen erstellen, die vollständig auf einer öffentlichen Infrastruktur laufen.
+[The Graph](https://thegraph.com/) ist ein Indexierungsprotokoll, das eine einfache Möglichkeit bietet, Blockchain-Daten über offene APIs, sogenannte Subgraphen, abzufragen.
 
-Mit [GraphQL](https://graphql.org/) können Entwickler jede der kuratierten offenen APIs, die sogenannten Sub-Graphen, abfragen, um die notwendigen Informationen zu erhalten, die sie für ihre dApp benötigen. Durch die Abfrage dieser indizierten Sub-Graphen erhalten Berichte und Anwendungen nicht nur Leistungs- und Skalierbarkeitsvorteile, sondern auch die integrierte Genauigkeit, die durch den Netzwerkkonsens bereitgestellt wird. Sobald dem Netzwerk neue Verbesserungen und/oder Sub-Graphen hinzugefügt werden, können Ihre Projekte schnell iterieren, um von diesen Verbesserungen zu profitieren.
+Mit The Graph können Entwickler von Folgendem profitieren:
 
-## Client-Diversität
+- Dezentrale Indexierung: Ermöglicht die Indexierung von Blockchain-Daten durch mehrere Indexer und eliminiert so jeden Single Point of Failure.
+- GraphQL-Abfragen: Bietet eine leistungsstarke GraphQL-Schnittstelle zur Abfrage indexierter Daten, was den Datenabruf extrem einfach macht.
+- Anpassbarkeit: Definieren Sie Ihre eigene Logik zur Transformation und Speicherung von Blockchain-Daten und verwenden Sie Subgraphen wieder, die von anderen Entwicklern im The Graph-Netzwerk veröffentlicht wurden.
 
-Die [Client-Vielfalt](/developers/docs/nodes-and-clients/client-diversity/) ist wichtig für die allgemeine Sicherheit des Ethereum-Netzwerks, da sie die Widerstandsfähigkeit gegen Fehler und Schwachstellen gewährleistet. Es gibt nun mehrere Dashboards zur Client-Vielfalt, darunter [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [supermajority.info](https://supermajority.info//) und [Ethernodes](https://ethernodes.org/).
+Folgen Sie dieser [Schnellstartanleitung](https://thegraph.com/docs/en/quick-start/), um innerhalb von 5 Minuten einen Subgraph zu erstellen, bereitzustellen und abzufragen.
+
+## Client-Diversität {#client-diversity}
+
+[Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) ist wichtig für die allgemeine Gesundheit des Ethereum-Netzwerks, da sie Widerstandsfähigkeit gegenüber Fehlern und Exploits bietet. Es gibt mittlerweile mehrere Dashboards zur Client-Diversität, darunter [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [supermajority.info](https://supermajority.info//) und [Ethernodes](https://ethernodes.org/).
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) verarbeitet Blockchain-Daten in relationalen Datenbanktabellen (DuneSQL) vor, ermöglicht Benutzern die Abfrage von Blockchain-Daten mit SQL und die Erstellung von Dashboards auf der Grundlage der Abfrageergebnisse. Die On-Chain-Daten sind in 4 Rohtabellen organisiert: `Blöcke`, `Transaktionen`, (Event) `Logs` und (Call) `Traces`. Beliebte Verträge und Protokolle liegen entschlüsselt vor und jedes hat seinen eigenen Satz von Event- und Call-Tabellen. Diese Event- und Call-Tabellen werden weiterverarbeitet und in Abstraktionstabellen nach der Art der Protokolle organisiert, z. B. Dex, Lending, Stablecoins usw.
+[Dune Analytics](https://dune.com/) verarbeitet Blockchain-Daten in Tabellen einer relationalen Datenbank (DuneSQL) vor, ermöglicht es Nutzern, Blockchain-Daten mit SQL abzufragen und Dashboards basierend auf den Abfrageergebnissen zu erstellen. Onchain-Daten sind in 4 Rohtabellen organisiert: `blocks`, `transactions`, (Ereignis) `logs` und (Aufruf) `traces`. Beliebte Verträge und Protokolle wurden decodiert und jedes hat seine eigenen Ereignis- und Aufruftabellen. Diese Ereignis- und Aufruftabellen werden weiterverarbeitet und nach Protokolltyp in Abstraktionstabellen organisiert, zum Beispiel Dex, Kreditvergabe, Stablecoins usw.
 
-## SubQuery Network {#subquery-network}
+## SQD {#sqd}
 
-[SubQuery](https://subquery.network/) ist ein führender Datenindexierer, der Entwicklern schnelle, zuverlässige, dezentrale und maßgeschneiderte APIs für ihre web3-Projekte bietet. SubQuery befähigt Entwickler aus über 165 Ökosystemen (einschließlich Ethereum) mit reichhaltigen indizierten Daten, um intuitive und immersive Erlebnisse für ihre Benutzer zu schaffen. Das SubQuery Network versorgt Ihre unaufhaltsamen Apps mit einem widerstandsfähigen und dezentralen Infrastrukturnetzwerk. Nutzen Sie das Blockchain-Entwickler-Toolkit von SubQuery, um die Web3-Anwendungen der Zukunft zu bauen, ohne dabei Zeit mit dem Aufbau eines benutzerdefinierten Backends für die Datenverarbeitung verbringen zu müssen.
+[SQD](https://sqd.dev/) ist eine dezentrale, hyperskalierbare Datenplattform, die für die Bereitstellung eines effizienten, erlaubnisfreien Zugriffs auf große Datenmengen optimiert ist. Sie stellt derzeit historische Onchain-Daten bereit, einschließlich Ereignisprotokollen, Transaktionsbelegen, Traces und Zustandsdifferenzen pro Transaktion. SQD bietet ein leistungsstarkes Toolkit zur Erstellung benutzerdefinierter Datenextraktions- und Verarbeitungspipelines und erreicht eine Indexierungsgeschwindigkeit von bis zu 150.000 Blöcken pro Sekunde.
 
-Um loszulegen, sehen Sie sich die [Ethereum-Schnellstartanleitung](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) an, um in wenigen Minuten Daten der Ethereum-Blockchain in einer lokalen Docker-Umgebung zu indizieren und vor der Live-Schaltung auf dem [verwalteten Dienst von SubQuery](https://managedservice.subquery.network/) oder dem [dezentralen Netzwerk von SubQuery](https://app.subquery.network/dashboard) zu testen.
+Um loszulegen, besuchen Sie die [Dokumentation](https://docs.sqd.dev/) oder sehen Sie sich [EVM-Beispiele](https://github.com/subsquid-labs/squid-evm-examples) an, was Sie mit SQD erstellen können.
 
-## Etherenow – Mempool-Datenprogramm {#ethernow}
-[Blocknative](https://www.blocknative.com/) bietet einen offenen Zugang zu seinem historischen [Mempool-Datenarchiv](https://www.ethernow.xyz/mempool-data-archive) für Ethereum. Dies ermöglicht Forschern und Projekten im Gemeinwohl, die Pre-Chain-Ebene des Ethereum-Mainnets zu erkunden. Der Datensatz wird aktiv gepflegt und stellt das umfassendste historische Protokoll von Mempool-Transaktionsereignissen innerhalb des Ethereum-Ökosystems dar. Erfahren Sie mehr bei [Ethernow](https://www.ethernow.xyz/).
+## SubQuery-Netzwerk {#subquery-network}
 
-## Weiterführende Informationen {#further-reading}
+[SubQuery](https://subquery.network/) ist ein führender Daten-Indexer, der Entwicklern schnelle, zuverlässige, dezentrale und maßgeschneiderte APIs für ihre Web3-Projekte bietet. SubQuery stattet Entwickler aus über 165 Ökosystemen (einschließlich Ethereum) mit umfangreichen indexierten Daten aus, um intuitive und immersive Erlebnisse für ihre Nutzer zu schaffen. Das SubQuery-Netzwerk treibt Ihre unaufhaltsamen Apps mit einem widerstandsfähigen und dezentralen Infrastrukturnetzwerk an. Nutzen Sie das Blockchain-Entwickler-Toolkit von SubQuery, um die Web3-Anwendungen der Zukunft zu entwickeln, ohne Zeit für den Aufbau eines benutzerdefinierten Backends für Datenverarbeitungsaktivitäten aufwenden zu müssen.
 
-- [Graph Network-Übersicht](https://thegraph.com/docs/en/about/)
-- [Graph-Abfrageplatz](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [API-Code-Beispiele auf EtherScan](https://etherscan.io/apis#contracts)
-- [Beaconcha.in Beacon Chain Explorer](https://beaconcha.in)
-- [Dune Basics](https://docs.dune.com/#dune-basics)
-- [Ethereum-Schnellstartanleitung – SubQuery](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+Um zu beginnen, besuchen Sie die [Ethereum-Schnellstartanleitung](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html), um innerhalb von Minuten mit der Indexierung von Ethereum-Blockchain-Daten in einer lokalen Docker-Umgebung zu Testzwecken zu beginnen, bevor Sie auf einem [verwalteten Dienst von SubQuery](https://managedservice.subquery.network/) oder im [dezentralen Netzwerk von SubQuery](https://app.subquery.network/dashboard) live gehen.
+
+## Codex {#codex}
+
+[Codex](https://www.codex.io/) ist eine Echtzeit-Blockchain-Daten-API, die angereicherte Daten für über 70 Millionen Token in mehr als 80 Netzwerken bereitstellt. Entwickler können auf strukturierte Token-Preise, Wallet-Guthaben, Transaktionshistorien und aggregierte Analysen (Volumen, Liquidität, einzigartige Wallets) zugreifen, ohne eine eigene Indexierungsinfrastruktur warten zu müssen. Codex unterstützt die Datenbereitstellung in Sekundenbruchteilen über WebSocket- und Webhook-Integrationen.
+
+Um loszulegen, besuchen Sie die [Dokumentation](https://docs.codex.io), probieren Sie den [Explorer](https://docs.codex.io/explore) aus oder melden Sie sich im [Dashboard](https://dashboard.codex.io/signup) an.
+
+## EVM Query Language {#evm-query-language}
+
+Die EVM Query Language (EQL) ist eine SQL-ähnliche Sprache, die für die Abfrage von EVM-Chains (Ethereum Virtual Machine) entwickelt wurde. Das ultimative Ziel von EQL ist es, komplexe relationale Abfragen auf First-Class-Citizens der EVM-Chain (Blöcke, Konten und Transaktionen) zu unterstützen und Entwicklern sowie Forschern gleichzeitig eine ergonomische Syntax für den täglichen Gebrauch zu bieten. Mit EQL können Entwickler Blockchain-Daten mit einer vertrauten SQL-ähnlichen Syntax abrufen und den Bedarf an komplexem Boilerplate-Code eliminieren. EQL unterstützt standardmäßige Blockchain-Datenanfragen (z. B. das Abrufen der Nonce und des Guthabens eines Kontos auf Ethereum oder das Abrufen der aktuellen Blockgröße und des Zeitstempels) und fügt kontinuierlich Unterstützung für komplexere Anfragen und Funktionsumfänge hinzu.
+
+## Weiterführende Literatur {#further-reading}
+
+- [Erkundung von Krypto-Daten I: Datenflussarchitekturen](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
+- [Übersicht über das Graph-Netzwerk](https://thegraph.com/docs/en/about/)
+- [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [API-Codebeispiele auf Etherscan](https://etherscan.io/apis#contracts)
+- [API-Dokumentation auf Blockscout](https://docs.blockscout.com/devs/apis)
+- [Beaconcha.in Beacon Chain-Explorer](https://beaconcha.in)
+- [Dune-Grundlagen](https://docs.dune.com/#dune-basics)
+- [SubQuery Ethereum-Schnellstartanleitung](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [Übersicht über das SQD-Netzwerk](https://docs.sqd.dev/)
+- [EVM Query Language](https://eql.sh/blog/alpha-release-notes)
+
+## Tutorials: Daten & Analysen / SQL auf Ethereum {#tutorials}
+
+- [Lernen Sie grundlegende Ethereum-Themen mit SQL](/developers/tutorials/learn-foundational-ethereum-topics-with-sql/) _– Fragen Sie Onchain-Ethereum-Daten mit SQL ab, um die Grundlagen von Transaktionen, Blöcken und Gas zu verstehen._

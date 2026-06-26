@@ -1,10 +1,8 @@
 ---
-title: Adding Resources
+title: Adding resources
 description: The policy we use when adding resources to ethereum.org
 lang: en
 ---
-
-# Adding Resources {#adding-resources}
 
 We want to make sure we list the best resources possible while keeping users safe and confident.
 

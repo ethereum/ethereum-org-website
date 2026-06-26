@@ -4,12 +4,13 @@ import { getTranslations } from "next-intl/server"
 import {
   DEFAULT_OG_IMAGE,
   IS_PRODUCTION_DEPLOY,
+  SITE_TITLE,
   SITE_URL,
 } from "@/lib/constants"
 
 import { getTranslatedLocales } from "../i18n/translationRegistry"
 
-import { getFullUrl } from "./url"
+import { getFullUrl, toLanguageTag } from "./url"
 
 import { routing } from "@/i18n/routing"
 
@@ -62,10 +63,17 @@ export const getMetadata = async ({
   translatedLocales?: string[]
 }): Promise<Metadata> => {
   const slugString = slug.join("/")
-  const t = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("common")
 
   const description = descriptionProp || t("site-description")
-  const siteTitle = t("site-title")
+
+  const titleAlreadyHasBrand = title
+    .toLowerCase()
+    .includes(SITE_TITLE.toLowerCase())
+
+  const finalTitle = titleAlreadyHasBrand
+    ? title
+    : `${title} | \u2066${SITE_TITLE}\u2069`
 
   // Auto-detect translated locales if not provided
   const finalTranslatedLocales =
@@ -93,8 +101,9 @@ export const getMetadata = async ({
     : []
 
   const base: Metadata = {
-    title,
+    title: finalTitle,
     description,
+    formatDetection: { telephone: false },
     metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: url,
@@ -102,18 +111,21 @@ export const getMetadata = async ({
         languages: {
           "x-default": xDefault,
           ...Object.fromEntries(
-            localesForHreflang.map((loc) => [loc, getFullUrl(loc, slugString)])
+            localesForHreflang.map((loc) => [
+              toLanguageTag(loc),
+              getFullUrl(loc, slugString),
+            ])
           ),
         },
       }),
     },
     openGraph: {
-      title,
+      title: finalTitle,
       description,
       locale,
       type: "website",
       url,
-      siteName: siteTitle,
+      siteName: SITE_TITLE,
       images: [
         {
           url: ogImage,
@@ -121,11 +133,11 @@ export const getMetadata = async ({
       ],
     },
     twitter: {
-      title,
+      title: finalTitle,
       description: twitterDescription || description,
       card: "summary_large_image",
-      creator: author || siteTitle,
-      site: author || siteTitle,
+      creator: author || SITE_TITLE,
+      site: author || SITE_TITLE,
       images: [
         {
           url: ogImage,

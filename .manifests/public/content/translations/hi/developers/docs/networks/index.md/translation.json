@@ -1,0 +1,457 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-06-17T21:56:57.894Z",
+  "englishManifestHash": "b925b639105f",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-d1b8fd",
+    "LINK-2768e4",
+    "LINK-12828a",
+    "LINK-605fb1",
+    "LINK-fe74f9",
+    "LINK-88ed30",
+    "LINK-7d57b0",
+    "LINK-ea844a",
+    "LINK-9a26ee",
+    "LINK-ad0f71",
+    "LINK-c43374",
+    "LINK-672bc2",
+    "LINK-9bc568",
+    "LINK-98c91a",
+    "LINK-df7e92",
+    "LINK-cd7eb4",
+    "LINK-97e3e6",
+    "LINK-4ab907",
+    "LINK-1f2a14",
+    "LINK-f5a19a",
+    "LINK-64794a",
+    "LINK-e599c3",
+    "LINK-6c0137",
+    "LINK-4d8bbc",
+    "LINK-b0ae41",
+    "LINK-fdb772",
+    "LINK-735210",
+    "LINK-f7ad84",
+    "LINK-6bb305",
+    "LINK-a24f42",
+    "LINK-340e24",
+    "LINK-a2af4a",
+    "LINK-641012",
+    "LINK-aab2d5",
+    "LINK-a0e1f4",
+    "LINK-f3a96c",
+    "LINK-acab25",
+    "LINK-ed7bd7",
+    "LINK-c5a507",
+    "LINK-7fab70",
+    "LINK-2957d3",
+    "LINK-be6819",
+    "LINK-44369c",
+    "LINK-41a394",
+    "LINK-380a58",
+    "LINK-12c146",
+    "LINK-e29f43",
+    "LINK-18937c",
+    "LINK-50ec77",
+    "LINK-2b65b8",
+    "LINK-cafe65",
+    "LINK-90de9c",
+    "LINK-ab0b90",
+    "LINK-8a700e",
+    "LINK-1f472a",
+    "LINK-3821d6",
+    "LINK-8484cb",
+    "LINK-52a8a2",
+    "LINK-971df9",
+    "LINK-1fadc8",
+    "LINK-76d9e1",
+    "LINK-d184be"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-d1b8fd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-2768e4": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia.dev/"
+      }
+    },
+    "LINK-12828a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/eth-clients/sepolia"
+      }
+    },
+    "LINK-605fb1": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia.otterscan.io/"
+      }
+    },
+    "LINK-fe74f9": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia.etherscan.io"
+      }
+    },
+    "LINK-88ed30": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-sepolia.blockscout.com/"
+      }
+    },
+    "LINK-7d57b0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/faucets/ethereum-sepolia"
+      }
+    },
+    "LINK-ea844a": {
+      "type": "link",
+      "values": {
+        "url": "https://faucet.chainplatform.co/faucets/ethereum-sepolia/"
+      }
+    },
+    "LINK-9a26ee": {
+      "type": "link",
+      "values": {
+        "url": "https://faucet.chainstack.com/sepolia-testnet-faucet"
+      }
+    },
+    "LINK-ad0f71": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia"
+      }
+    },
+    "LINK-c43374": {
+      "type": "link",
+      "values": {
+        "url": "https://ethfaucet.com/networks/ethereum"
+      }
+    },
+    "LINK-672bc2": {
+      "type": "link",
+      "values": {
+        "url": "https://cloud.google.com/application/web3/faucet/ethereum/sepolia"
+      }
+    },
+    "LINK-9bc568": {
+      "type": "link",
+      "values": {
+        "url": "https://grabteeth.xyz/"
+      }
+    },
+    "LINK-98c91a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.infura.io/faucet"
+      }
+    },
+    "LINK-df7e92": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia-faucet.pk910.de/"
+      }
+    },
+    "LINK-cd7eb4": {
+      "type": "link",
+      "values": {
+        "url": "https://faucet.quicknode.com/ethereum/sepolia"
+      }
+    },
+    "LINK-97e3e6": {
+      "type": "link",
+      "values": {
+        "url": "https://hoodi.ethpandaops.io/"
+      }
+    },
+    "LINK-4ab907": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/eth-clients/hoodi"
+      }
+    },
+    "LINK-1f2a14": {
+      "type": "link",
+      "values": {
+        "url": "https://explorer.hoodi.ethpandaops.io/"
+      }
+    },
+    "LINK-f5a19a": {
+      "type": "link",
+      "values": {
+        "url": "https://checkpoint-sync.hoodi.ethpandaops.io/"
+      }
+    },
+    "LINK-64794a": {
+      "type": "link",
+      "values": {
+        "url": "https://hoodi.otterscan.io/"
+      }
+    },
+    "LINK-e599c3": {
+      "type": "link",
+      "values": {
+        "url": "https://hoodi.etherscan.io/"
+      }
+    },
+    "LINK-6c0137": {
+      "type": "link",
+      "values": {
+        "url": "https://faucet.chainplatform.co/faucets/ethereum-hoodi/"
+      }
+    },
+    "LINK-4d8bbc": {
+      "type": "link",
+      "values": {
+        "url": "https://hoodi.ethpandaops.io/"
+      }
+    },
+    "LINK-b0ae41": {
+      "type": "link",
+      "values": {
+        "url": "https://hoodi-faucet.pk910.de/"
+      }
+    },
+    "LINK-fdb772": {
+      "type": "link",
+      "values": {
+        "url": "https://ephemery.dev/"
+      }
+    },
+    "LINK-735210": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ephemery-testnet/ephemery-resources"
+      }
+    },
+    "LINK-f7ad84": {
+      "type": "link",
+      "values": {
+        "url": "https://matrix.to/#/#staker-testnet:matrix.org"
+      }
+    },
+    "LINK-6bb305": {
+      "type": "link",
+      "values": {
+        "url": "https://explorer.ephemery.dev/"
+      }
+    },
+    "LINK-a24f42": {
+      "type": "link",
+      "values": {
+        "url": "https://otter.bordel.wtf/"
+      }
+    },
+    "LINK-340e24": {
+      "type": "link",
+      "values": {
+        "url": "https://beaconlight.ephemery.dev/"
+      }
+    },
+    "LINK-a2af4a": {
+      "type": "link",
+      "values": {
+        "url": "https://checkpoint-sync.ephemery.ethpandaops.io"
+      }
+    },
+    "LINK-641012": {
+      "type": "link",
+      "values": {
+        "url": "https://launchpad.ephemery.dev/"
+      }
+    },
+    "LINK-aab2d5": {
+      "type": "link",
+      "values": {
+        "url": "https://faucet.bordel.wtf/"
+      }
+    },
+    "LINK-a0e1f4": {
+      "type": "link",
+      "values": {
+        "url": "https://ephemery-faucet.pk910.de/"
+      }
+    },
+    "LINK-f3a96c": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement"
+      }
+    },
+    "LINK-acab25": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2025/03/18/hoodi-holesky"
+      }
+    },
+    "LINK-ed7bd7": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-c5a507": {
+      "type": "link",
+      "values": {
+        "url": "https://arbitrum.io/"
+      }
+    },
+    "LINK-7fab70": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia.arbiscan.io/"
+      }
+    },
+    "LINK-2957d3": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia-explorer.arbitrum.io/"
+      }
+    },
+    "LINK-be6819": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/faucets/arbitrum-sepolia"
+      }
+    },
+    "LINK-44369c": {
+      "type": "link",
+      "values": {
+        "url": "https://faucets.chain.link/arbitrum-sepolia"
+      }
+    },
+    "LINK-41a394": {
+      "type": "link",
+      "values": {
+        "url": "https://ethfaucet.com/networks/arbitrum"
+      }
+    },
+    "LINK-380a58": {
+      "type": "link",
+      "values": {
+        "url": "https://faucet.quicknode.com/arbitrum/sepolia"
+      }
+    },
+    "LINK-12c146": {
+      "type": "link",
+      "values": {
+        "url": "https://www.optimism.io/"
+      }
+    },
+    "LINK-e29f43": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia-optimistic.etherscan.io/"
+      }
+    },
+    "LINK-18937c": {
+      "type": "link",
+      "values": {
+        "url": "https://optimism-sepolia.blockscout.com/"
+      }
+    },
+    "LINK-50ec77": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/faucets/optimism-sepolia"
+      }
+    },
+    "LINK-2b65b8": {
+      "type": "link",
+      "values": {
+        "url": "https://faucets.chain.link/optimism-sepolia"
+      }
+    },
+    "LINK-cafe65": {
+      "type": "link",
+      "values": {
+        "url": "https://ethfaucet.com/networks/optimism"
+      }
+    },
+    "LINK-90de9c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.optimism.io/builders/tools/build/faucets"
+      }
+    },
+    "LINK-ab0b90": {
+      "type": "link",
+      "values": {
+        "url": "https://www.starknet.io"
+      }
+    },
+    "LINK-8a700e": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia.voyager.online/"
+      }
+    },
+    "LINK-1f472a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/faucets/starknet-sepolia"
+      }
+    },
+    "LINK-3821d6": {
+      "type": "link",
+      "values": {
+        "url": "https://blastapi.io/faucets/starknet-sepolia-eth"
+      }
+    },
+    "LINK-8484cb": {
+      "type": "link",
+      "values": {
+        "url": "https://starknet-faucet.vercel.app/"
+      }
+    },
+    "LINK-52a8a2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/development-networks/"
+      }
+    },
+    "LINK-971df9": {
+      "type": "link",
+      "values": {
+        "url": "https://chainlist.org/"
+      }
+    },
+    "LINK-1fadc8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-lists/chains"
+      }
+    },
+    "LINK-76d9e1": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17"
+      }
+    },
+    "LINK-d184be": {
+      "type": "link",
+      "values": {
+        "url": "https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T21:56:57.894Z",
+      "status": "success"
+    }
+  }
+}

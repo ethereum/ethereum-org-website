@@ -1,162 +1,161 @@
 ---
 title: JSON-RPC API
-description: "Bezstavový, lehký protokol pro vzdálené volání procedur (RPC) pro klienty na Ethereu."
+description: "Bezstavový, odlehčený protokol pro vzdálené volání procedur (RPC) pro klienty Etherea."
 lang: cs
 ---
 
-Aby mohla softwarová aplikace interagovat s blockchainem Ethereum - ať už čtením dat z blockchainu nebo odesíláním transakcí do sítě - musí se připojit k síťovému uzlu.
+Aby mohla softwarová aplikace komunikovat s blockchainem [Etherea](/) – ať už čtením dat z blockchainu, nebo odesíláním transakcí do sítě – musí se připojit k uzlu Etherea.
 
-Za tímto účelem každý [klient Etherea](/developers/docs/nodes-and-clients/#execution-clients) implementuje [specifikaci JSON-RPC](https://github.com/ethereum/execution-apis), takže existuje jednotná sada metod, na které se aplikace mohou spolehnout bez ohledu na konkrétní implementaci uzlu nebo klienta.
+Za tímto účelem implementuje každý [klient Etherea](/developers/docs/nodes-and-clients/#execution-clients) [specifikaci JSON-RPC](https://github.com/ethereum/execution-apis), takže existuje jednotná sada metod, na které se mohou aplikace spolehnout bez ohledu na konkrétní implementaci uzlu nebo klienta.
 
-[JSON-RPC](https://www.jsonrpc.org/specification) je bezstavový, odlehčený protokol pro vzdálené volání procedur (RPC). Definuje několik datových struktur a pravidla pro jejich zpracování. Je transportně agnostický, což znamená, že koncepty lze použít v rámci stejného procesu, přes sokety, přes HTTP nebo v mnoha různých prostředích pro předávání zpráv. Jako datový formát používá JSON (RFC 4627).
+[JSON-RPC](https://www.jsonrpc.org/specification) je bezstavový, odlehčený protokol pro vzdálené volání procedur (RPC). Definuje několik datových struktur a pravidla pro jejich zpracování. Je nezávislý na transportní vrstvě v tom smyslu, že jeho koncepty lze použít v rámci stejného procesu, přes sockety, přes HTTP nebo v mnoha různých prostředích pro předávání zpráv. Jako datový formát používá JSON (RFC 4627).
 
-## Implementace klienta {#client-implementations}
+## Implementace klientů {#client-implementations}
 
-Ethereovští klienti mohou při implementaci specifikace JSON-RPC používat různé programovací jazyky. Další podrobnosti týkající se konkrétních programovacích jazyků naleznete v dokumentaci jednotlivých [klientů](/developers/docs/nodes-and-clients/#execution-clients). Doporučujeme vám projít si dokumentaci každého klienta pro nejnovější informace o podpoře API.
+Klienti Etherea mohou při implementaci specifikace JSON-RPC využívat různé programovací jazyky. Další podrobnosti týkající se konkrétních programovacích jazyků najdete v [dokumentaci jednotlivých klientů](/developers/docs/nodes-and-clients/#execution-clients). Doporučujeme zkontrolovat dokumentaci každého klienta, kde najdete nejnovější informace o podpoře API.
 
-## Knihovny usnadňující práci {#convenience-libraries}
+## Pomocné knihovny {#convenience-libraries}
 
-I když se můžete rozhodnout přímo komunikovat s ethereovskými klienty přes JSON-RPC API, pro vývojáře dappek existují často jednodušší možnosti. Existuje mnoho knihoven pro [JavaScript](/developers/docs/apis/javascript/#available-libraries) a [backendové API](/developers/docs/apis/backend/#available-libraries), které poskytují obálky nad rozhraním JSON-RPC API. S těmito knihovnami mohou vývojáři psát intuitivní, jednorázové metody ve zvoleném programovacím jazyce, které (pod kapotou) inicializují JSON-RPC požadavky a interagují s Ethereem.
+Ačkoli se můžete rozhodnout komunikovat s klienty Etherea přímo přes JSON-RPC API, pro vývojáře decentralizovaných aplikací (dapp) často existují jednodušší možnosti. Existuje mnoho knihoven pro [JavaScript](/developers/docs/apis/javascript/#available-libraries) a [backendová API](/developers/docs/apis/backend/#available-libraries), které poskytují obálky nad JSON-RPC API. Díky těmto knihovnám mohou vývojáři psát intuitivní, jednořádkové metody ve svém oblíbeném programovacím jazyce, které (na pozadí) inicializují JSON-RPC požadavky pro interakci s Ethereem.
 
 ## API konsensuálních klientů {#consensus-clients}
 
-Tato stránka se zabývá především JSON-RPC API používaným exekučními klienty Etherea. Nicméně, konsensuální klienti také mají RPC API, které umožňuje uživatelům dotazovat se na informace o síťovém uzlu, žádat Beacon bloky, stav Beaconu a další informace související s konsensem přímo ze síťového uzlu. Toto API je zdokumentováno na [webové stránce Beacon API](https://ethereum.github.io/beacon-APIs/#/).
+Tato stránka se zabývá především JSON-RPC API, které používají exekuční klienti Etherea. Nicméně konsensuální klienti mají také RPC API, které uživatelům umožňuje dotazovat se na informace o uzlu, vyžadovat Beacon bloky, Beacon stav a další informace související s konsensem přímo z uzlu. Toto API je zdokumentováno na [webové stránce Beacon API](https://ethereum.github.io/beacon-APIs/#/).
 
-Interní API se také používá pro komunikaci mezi klienty v rámci síťového uzlu - tedy umožňuje konsensuálnímu klientovi a exekučnímu klientovi vyměňovat si data. Tomuto se říká „Engine API“ a specifikace jsou dostupné na [GitHubu](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Pro komunikaci mezi klienty v rámci uzlu se používá také interní API – to znamená, že umožňuje konsensuálnímu klientovi a exekučnímu klientovi vyměňovat si data. Nazývá se „Engine API“ a jeho specifikace jsou k dispozici na [GitHubu](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Specifikace exekučního klienta {#spec}
 
-[Přečtěte si celou specifikaci JSON-RPC API na GitHubu](https://github.com/ethereum/execution-apis). Toto API je zdokumentováno na [webové stránce Execution API](https://ethereum.github.io/execution-apis/) a obsahuje inspektor, který vám umožní vyzkoušet si všechny dostupné metody.
+[Přečtěte si úplnou specifikaci JSON-RPC API na GitHubu](https://github.com/ethereum/execution-apis). Toto API je dokumentováno na [webové stránce Execution API](https://ethereum.github.io/execution-apis/) a obsahuje nástroj Inspector pro vyzkoušení všech dostupných metod.
 
 ## Konvence {#conventions}
 
-### Kódování šestnáctkových hodnot {#hex-encoding}
+### Kódování hexadecimálních hodnot {#hex-encoding}
 
-Přes JSON jsou přenášeny dva klíčové datové typy: neformátovaná pole bajtů a množství. Oba jsou přenášeny s hex kódováním, ale s různými požadavky na formátování.
+Přes JSON se předávají dva klíčové datové typy: neformátovaná pole bajtů a kvantity. Oba se předávají v hexadecimálním kódování, ale s odlišnými požadavky na formátování.
 
-#### Množství {#quantities-encoding}
+#### Kvantity {#quantities-encoding}
 
-Pokud kódujete množství (integery, čísla): Kódujte jako hex, předpona "0x", nejkompaktnější reprezentace (mírná výjimka: nula by měla být reprezentována jako "0x0").
+Při kódování kvantit (celá čísla, čísla): kódujte jako hexadecimální hodnotu, přidejte předponu "0x", použijte nejkompaktnější reprezentaci (drobná výjimka: nula by měla být reprezentována jako "0x0").
 
 Zde je několik příkladů:
 
 - 0x41 (65 v desítkové soustavě)
 - 0x400 (1024 v desítkové soustavě)
-- ŠPATNĚ: 0x (vždy by mělo být alespoň jedno číslo - nula je "0x0")
-- ŠPATNĚ: 0x0400 (nejsou povoleny žádné nuly na začátku)
+- ŠPATNĚ: 0x (vždy by měla mít alespoň jednu číslici - nula je "0x0")
+- ŠPATNĚ: 0x0400 (nejsou povoleny žádné úvodní nuly)
 - ŠPATNĚ: ff (musí mít předponu 0x)
 
 ### Neformátovaná data {#unformatted-data-encoding}
 
-Při kódování neformátovaných dat (pole bajtů, adresy účtů, hashe, pole bytecode): Kódujte jako hex, předpona "0x", dva hexadecimální znaky na bajt.
+Při kódování neformátovaných dat (pole bajtů, adresy účtů, hashe, pole bajtkódu): kódujte jako hexadecimální hodnotu, přidejte předponu "0x", dvě hexadecimální číslice na bajt.
 
 Zde je několik příkladů:
 
 - 0x41 (velikost 1, "A")
 - 0x004200 (velikost 3, "0B0")
 - 0x (velikost 0, "")
-- ŠPATNĚ: 0xf0f0f (musí být sudý počet znaků)
+- ŠPATNĚ: 0xf0f0f (musí mít sudý počet číslic)
 - ŠPATNĚ: 004200 (musí mít předponu 0x)
 
 ### Parametr bloku {#block-parameter}
 
 Následující metody mají parametr bloku:
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getCode](#eth_getcode)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_call](#eth_call)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getCode](#eth-getcode)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_call](#eth-call)
 
-Když jsou podány požadavky, které se dotazují na stav Etherea, zadaný parametr bloku určuje jeho výšku.
+Když jsou vzneseny požadavky, které dotazují stav Etherea, poskytnutý parametr bloku určuje výšku bloku.
 
 Pro parametr bloku jsou možné následující možnosti:
 
-- `HEX String` – celé číslo bloku
-- `String "earliest"` pro nejstarší/genesis blok
-- `String "latest"` – pro poslední navržený blok
-- `String "safe"` – pro poslední bezpečný hlavní blok
-- `String "finalized"` – pro poslední finalizovaný blok
-- `String "pending"` – pro nevyřízený stav/transakce
+- `HEX String` - celočíselné číslo bloku
+- `String "earliest"` pro nejranější/genesis blok
+- `String "latest"` - pro nejnovější navržený blok
+- `String "safe"` - pro nejnovější bezpečný vrcholový blok
+- `String "finalized"` - pro nejnovější finalizovaný blok
+- `String "pending"` - pro čekající stav/transakce
 
-## Příklady
+## Příklady {#examples}
 
-Na této stránce poskytujeme příklady použití jednotlivých koncových bodů JSON_RPC API pomocí nástroje příkazového řádku [curl](https://curl.se). Tyto jednotlivé příklady koncových bodů naleznete níže v sekci [Příklady s curl](#curl-examples). Dále na stránce také poskytujeme [kompletní příklad](#usage-example) kompilace a nasazení chytrého kontraktu pomocí uzlu Geth, rozhraní JSON_RPC API a curl.
+Na této stránce uvádíme příklady, jak používat jednotlivé koncové body JSON_RPC API pomocí nástroje příkazového řádku [curl](https://curl.se). Tyto příklady jednotlivých koncových bodů naleznete níže v sekci [Příklady použití curl](#curl-examples). Dále na této stránce také uvádíme [komplexní příklad](#usage-example) pro kompilaci a nasazení chytrého kontraktu pomocí uzlu Geth, JSON_RPC API a nástroje curl.
 
-## Příklady s curl {#curl-examples}
+## Příklady curl {#curl-examples}
 
-Níže jsou uvedeny příklady použití rozhraní JSON_RPC API prostřednictvím požadavků [curl](https://curl.se) na uzel Ethereum. Každý příklad
-obsahuje popis konkrétního endpointu, jeho parametrů, návratového typu a konkrétní příklad, jak by měl být použit.
+Níže jsou uvedeny příklady použití JSON_RPC API pomocí [curl](https://curl.se) požadavků na uzel Etherea. Každý příklad obsahuje popis konkrétního koncového bodu, jeho parametrů, návratového typu a praktický ukázkový příklad jeho použití.
 
-Požadavky curl mohou vrátit chybovou zprávu týkající se typu obsahu. Důvodem je to, že volba `--data` nastavuje typ obsahu na `application/x-www-form-urlencoded`. Pokud si váš uzel na toto stěžuje, nastavte hlavičku ručně umístěním `-H "Content-Type: application/json"` na začátek volání. Příklady také nezahrnují kombinaci URL/IP adresy a portu, která musí být posledním argumentem předaným příkazu curl (např. `127.0.0.1:8545`). Kompletní požadavek curl včetně těchto údajů má následující podobu:
+Požadavky curl mohou vrátit chybovou zprávu týkající se typu obsahu. Je to proto, že volba `--data` nastavuje typ obsahu na `application/x-www-form-urlencoded`. Pokud váš uzel hlásí tuto chybu, nastavte hlavičku ručně umístěním `-H "Content-Type: application/json"` na začátek volání. Příklady také nezahrnují kombinaci URL/IP adresy a portu, která musí být posledním argumentem předaným příkazu curl (např. `127.0.0.1:8545`). Kompletní požadavek curl včetně těchto dodatečných dat má následující podobu:
 
 ```shell
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## Šíření informací, stav, historie {#gossip-state-history}
+## Gossip, stav a historie {#gossip-state-history}
 
-Několik základních metod JSON-RPC vyžaduje data ze sítě Ethereum a přehledně se dělí do tří hlavních kategorií: _šíření informací, stav a historie_. Pomocí odkazů v těchto sekcích můžete přejít na jednotlivé metody, nebo použít obsah pro prozkoumání kompletního seznamu metod.
+Několik základních metod JSON-RPC vyžaduje data ze sítě Ethereum a úhledně spadá do tří hlavních kategorií: _Gossip, stav a historie_. Pomocí odkazů v těchto sekcích můžete přeskočit na jednotlivé metody, nebo použijte obsah k prozkoumání celého seznamu metod.
 
-### Metody šíření informací {#gossip-methods}
+### Gossip metody {#gossip-methods}
 
-> Tyto metody sledují hlavičku řetězce. Takto se transakce šíří po síti, dostávají se do bloků a takto se také klienti dozvídají o nových blocích.
+> Tyto metody sledují vrchol řetězce. Tímto způsobem se transakce šíří po síti, dostávají se do bloků a klienti se dozvídají o nových blocích.
 
-- [eth_blockNumber](#eth_blocknumber)
-- [eth_sendRawTransaction](#eth_sendrawtransaction)
+- [eth_blockNumber](#eth-blocknumber)
+- [eth_sendRawTransaction](#eth-sendrawtransaction)
 
-### Metody stavu {#state_methods}
+### Stavové metody {#state-methods}
 
-> Metody, které informují o aktuálním stavu všech uložených dat. "Stav" je jako jeden velký sdílený kus RAM a zahrnuje zůstatky účtů, data kontraktů a odhady spotřeby paliva.
+> Metody, které informují o aktuálním stavu všech uložených dat. „Stav“ je jako jedna velká sdílená paměť RAM a zahrnuje zůstatky na účtech, data kontraktů a odhady gasu.
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getCode](#eth_getcode)
-- [eth_call](#eth_call)
-- [eth_estimateGas](#eth_estimategas)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getCode](#eth-getcode)
+- [eth_call](#eth-call)
+- [eth_estimateGas](#eth-estimategas)
 
-### Metody historie {#history_methods}
+### Historické metody {#history-methods}
 
-> Získávají historické záznamy o každém bloku až po genesis. Představte si je jako jeden velký soubor pouze pro přidávání, který obsahuje všechny hlavičky bloků, těla bloků, uncle bloky a stvrzenky transakcí.
+> Získávají historické záznamy každého bloku až po genesis blok. Je to jako jeden velký soubor, do kterého lze pouze přidávat (append-only), a obsahuje všechny hlavičky bloků, těla bloků, uncle bloky a stvrzenky transakcí.
 
-- [eth_getBlockTransactionCountByHash](#eth_getblocktransactioncountbyhash)
-- [eth_getBlockTransactionCountByNumber](#eth_getblocktransactioncountbynumber)
-- [eth_getUncleCountByBlockHash](#eth_getunclecountbyblockhash)
-- [eth_getUncleCountByBlockNumber](#eth_getunclecountbyblocknumber)
-- [eth_getBlockByHash](#eth_getblockbyhash)
-- [eth_getBlockByNumber](#eth_getblockbynumber)
-- [eth_getTransactionByHash](#eth_gettransactionbyhash)
-- [eth_getTransactionByBlockHashAndIndex](#eth_gettransactionbyblockhashandindex)
-- [eth_getTransactionByBlockNumberAndIndex](#eth_gettransactionbyblocknumberandindex)
-- [eth_getTransactionReceipt](#eth_gettransactionreceipt)
-- [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
-- [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+- [eth_getBlockTransactionCountByHash](#eth-getblocktransactioncountbyhash)
+- [eth_getBlockTransactionCountByNumber](#eth-getblocktransactioncountbynumber)
+- [eth_getUncleCountByBlockHash](#eth-getunclecountbyblockhash)
+- [eth_getUncleCountByBlockNumber](#eth-getunclecountbyblocknumber)
+- [eth_getBlockByHash](#eth-getblockbyhash)
+- [eth_getBlockByNumber](#eth-getblockbynumber)
+- [eth_getTransactionByHash](#eth-gettransactionbyhash)
+- [eth_getTransactionByBlockHashAndIndex](#eth-gettransactionbyblockhashandindex)
+- [eth_getTransactionByBlockNumberAndIndex](#eth-gettransactionbyblocknumberandindex)
+- [eth_getTransactionReceipt](#eth-gettransactionreceipt)
+- [eth_getUncleByBlockHashAndIndex](#eth-getunclebyblockhashandindex)
+- [eth_getUncleByBlockNumberAndIndex](#eth-getunclebyblocknumberandindex)
 
-## JSON-RPC API Playground
+## JSON-RPC API Playground {#json-rpc-api-playground}
 
-K prozkoumání a vyzkoušení metod API můžete použít [nástroj playground](https://ethereum-json-rpc.com). Ukazuje vám také, které metody a sítě jsou podporovány různými poskytovateli síťových uzlů.
+Můžete použít [nástroj playground](https://ethereum-json-rpc.com) k objevování a vyzkoušení metod API. Také vám ukáže, které metody a sítě jsou podporovány různými poskytovateli uzlů.
 
-## Metody rozhraní JSON-RPC API {#json-rpc-methods}
+## Metody JSON-RPC API {#json-rpc-methods}
 
-### web3_clientVersion {#web3_clientversion}
+### web3_clientVersion {#web3-clientversion}
 
 Vrací aktuální verzi klienta.
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`String` – aktuální verze klienta
+`String` - Aktuální verze klienta
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'
-// Result
+// Výsledek
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -164,28 +163,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 {#web3_sha3}
+### web3_sha3 {#web3-sha3}
 
-Vrátí haš Keccak-256 (nikoli standardizovaný SHA3-256) z daných dat.
+Vrací Keccak-256 (_nikoli_ standardizovaný SHA3-256) zadaných dat.
 
 **Parametry**
 
-1. `DATA` – data, která mají být převedena na haš SHA3
+1. `DATA` - Data k převodu na SHA3 hash
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
-`DATA` – výsledek haše SHA3 daného řetězce.
+`DATA` - Výsledek SHA3 zadaného řetězce.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c6f20776f726c64"],"id":64}'
-// Result
+// Výsledek
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -193,30 +192,30 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version {#net_version}
+### net_version {#net-version}
 
-Vrací ID aktuální sítě.
+Vrací aktuální ID sítě.
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`String` – ID aktuální sítě.
+`String` - Aktuální ID sítě.
 
-Úplný seznam aktuálních ID sítí je k dispozici na [chainlist.org](https://chainlist.org). Některé běžné jsou:
+Úplný seznam aktuálních ID sítí je k dispozici na [chainlist.org](https://chainlist.org). Mezi ty běžné patří:
 
 - `1`: Ethereum Mainnet
-- `11155111`: testnet Sepolia
-- `560048` : Hoodi Testnet
+- `11155111`: Sepolia testnet
+- `560048` : Hoodi testnet
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67}'
-// Result
+// Výsledek
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -224,24 +223,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_listening}
+### net_listening {#net-listening}
 
-Vrátí `true`, pokud klient aktivně naslouchá síťovým připojením.
+Vrací `true`, pokud klient aktivně naslouchá síťovým připojením.
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`Boolean` – `true`, když naslouchá, jinak `false`.
+`Boolean` - `true`, když naslouchá, jinak `false`.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":67}'
-// Result
+// Výsledek
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -249,24 +248,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_peercount}
+### net_peerCount {#net-peercount}
 
-Vrací počet peerů, kteří jsou aktuálně připojeni ke klientovi.
+Vrací počet peerů aktuálně připojených ke klientovi.
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`QUANTITY` – celé číslo počtu připojených peerů.
+`QUANTITY` - celé číslo udávající počet připojených peerů.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":74}'
-// Result
+// Výsledek
 {
   "id":74,
   "jsonrpc": "2.0",
@@ -274,24 +273,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 }
 ```
 
-### eth_protocolVersion {#eth_protocolversion}
+### eth_protocolVersion {#eth-protocolversion}
 
-Vrátí aktuální verzi protokolu Ethereum. Upozorňujeme, že tato metoda [není v Gethu dostupná](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
+Vrací aktuální verzi protokolu Ethereum. Vezměte na vědomí, že tato metoda [není dostupná v Gethu](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`String` – aktuální verze protokolu Ethereum
+`String` - Aktuální verze protokolu Ethereum
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":67}'
-// Result
+// Výsledek
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -299,29 +298,29 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing {#eth_syncing}
+### eth_syncing {#eth-syncing}
 
-Vrátí objekt s daty o stavu synchronizace nebo `false`.
+Vrací objekt s daty o stavu synchronizace nebo `false`.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_syncing">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-Přesná návratová data se liší mezi implementacemi klientů. Všichni klienti vracejí `False`, když se uzel nesynchronizuje, a všichni klienti vracejí následující pole.
+Přesná návratová data se liší mezi implementacemi klientů. Všichni klienti vrací `False`, když se uzel nesynchronizuje, a všichni klienti vrací následující pole.
 
-`Object|Boolean`, Objekt s daty o stavu synchronizace nebo `FALSE`, když nesynchronizuje:
+`Object|Boolean`, Objekt s daty o stavu synchronizace nebo `FALSE`, když se nesynchronizuje:
 
-- `startingBlock`: `QUANTITY` – blok, u kterého import začal (resetuje se pouze po dosažení hlavičky synchronizace)
-- `currentBlock`: `QUANTITY` – aktuální blok, stejné jako eth_blockNumber
-- `highestBlock`: `QUANTITY` – odhadovaný nejvyšší blok
+- `startingBlock`: `QUANTITY` - Blok, na kterém začal import (bude resetováno pouze poté, co synchronizace dosáhne svého vrcholu)
+- `currentBlock`: `QUANTITY` - Aktuální blok, stejné jako eth_blockNumber
+- `highestBlock`: `QUANTITY` - Odhadovaný nejvyšší blok
 
-Individuální klienti mohou také poskytovat další data. Například Geth vrací následující:
+Jednotliví klienti však mohou poskytovat i další data. Například Geth vrací následující:
 
 ```json
 {
@@ -362,14 +361,14 @@ Zatímco Besu vrací:
 }
 ```
 
-Další podrobnosti naleznete v dokumentaci pro vašeho konkrétního klienta.
+Další podrobnosti naleznete v dokumentaci vašeho konkrétního klienta.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -379,7 +378,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
     highestBlock: '0x454'
   }
 }
-// Or when not syncing
+// Nebo když neprobíhá synchronizace
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -387,30 +386,30 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase {#eth_coinbase}
+### eth_coinbase {#eth-coinbase}
 
-Vrátí klientskou adresu coinbase.
+Vrací adresu coinbase klienta.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_coinbase">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
-> **Poznámka:** Tato metoda je od verze **v1.14.0** zastaralá a již není podporována. Pokus o použití této metody bude mít za následek chybu „Metoda není podporována“.
+> **Poznámka:** Tato metoda je od verze **v1.14.0** zastaralá a již není podporována. Pokus o její použití povede k chybě „Method not supported“.
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`DATA`, 20 bajtů – aktuální coinbase adresa.
+`DATA`, 20 bajtů – aktuální adresa coinbase.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":64}'
-// Result
+// Výsledek
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -418,28 +417,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId {#eth_chainId}
+### eth_chainId {#eth-chainid}
 
-Vrátí ID řetězce používané pro podepisování transakcí chráněných proti opakování.
+Vrací ID řetězce používané pro podepisování transakcí chráněných proti znovupřehrání.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_chainId">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`chainId`, šestnáctková hodnota jako řetězec představující celé číslo ID aktuálního řetězce.
+`chainId`, hexadecimální hodnota jako řetězec představující celé číslo aktuálního ID řetězce.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67}'
-// Result
+// Výsledek
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -447,26 +446,26 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining {#eth_mining}
+### eth_mining {#eth-mining}
 
-Vrátí `true`, pokud klient aktivně těží nové bloky. Toto může vrátit `true` pouze pro sítě proof-of-work a v některých klientech nemusí být po [sloučení](/roadmap/merge/) k dispozici.
+Vrací `true`, pokud klient aktivně těží nové bloky. Toto může vrátit `true` pouze pro sítě s důkazem prací (PoW) a od [Merge](/roadmap/merge/) to v některých klientech nemusí být dostupné.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_mining">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`Boolean` – vrátí `true`, pokud klient těží, jinak `false`.
+`Boolean` - vrací `true`, pokud klient těží, jinak `false`.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}'
 //
 {
@@ -476,28 +475,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate {#eth_hashrate}
+### eth_hashrate {#eth-hashrate}
 
-Vrátí počet hashů za sekundu, se kterými uzel těží. Toto může vrátit `true` pouze pro sítě proof-of-work a v některých klientech nemusí být po [sloučení](/roadmap/merge/) k dispozici.
+Vrací počet hashů za sekundu, se kterými uzel těží. Toto může vrátit `true` pouze pro sítě využívající důkaz prací (PoW) a v některých klientech to nemusí být dostupné od [Merge](/roadmap/merge/).
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_hashrate">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`QUANTITY` – počet hašů za sekundu.
+`QUANTITY` - počet hashů za sekundu.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":71}'
-// Result
+// Výsledek
 {
   "id":71,
   "jsonrpc": "2.0",
@@ -505,28 +504,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice {#eth_gasprice}
+### eth_gasPrice {#eth-gasprice}
 
-Vrací odhad aktuální ceny za palivo v jednotkách wei. Například klient Besu zkoumá posledních 100 bloků a vrací mediánovou cenu za jednotku paliva ve výchozím nastavení.
+Vrací odhad aktuální ceny za gas ve Wei. Například klient Besu standardně prozkoumá posledních 100 bloků a vrátí mediánovou cenu za jednotku gasu.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`QUANTITY` – celé číslo aktuální ceny gasu ve wei.
+`QUANTITY` - celé číslo udávající aktuální cenu plynu ve Wei.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
-// Result
+// Výsledek
 {
   "id":73,
   "jsonrpc": "2.0",
@@ -534,28 +533,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
-### eth_accounts {#eth_accounts}
+### eth_accounts {#eth-accounts}
 
-Vrátí seznam adres, které klient vlastní.
+Vrací seznam adres vlastněných klientem.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_accounts">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`Pole DATA`, 20 bajtů – adresy vlastněné klientem.
+`Array of DATA`, 20 bajtů - adresy vlastněné klientem.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -563,28 +562,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber {#eth_blocknumber}
+### eth_blockNumber {#eth-blocknumber}
 
 Vrací číslo nejnovějšího bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_blockNumber">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-Žádná
+Žádné
 
-**Návratová hodnota**
+**Vrací**
 
-`QUANTITY` – celé číslo aktuálního čísla bloku, na kterém se klient nachází.
+`QUANTITY` - celé číslo aktuálního čísla bloku, na kterém se klient nachází.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}'
-// Result
+// Výsledek
 {
   "id":83,
   "jsonrpc": "2.0",
@@ -592,33 +591,33 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 }
 ```
 
-### eth_getBalance {#eth_getbalance}
+### eth_getBalance {#eth-getbalance}
 
 Vrací zůstatek účtu na dané adrese.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBalance">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 20 bajtů – adresa pro kontrolu zůstatku.
-2. `QUANTITY|TAG` – celé číslo bloku nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"` nebo `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`, 20 bajtů - adresa, u které se má zkontrolovat zůstatek.
+2. `QUANTITY|TAG` - celé číslo bloku, nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"` nebo `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
-`QUANTITY` – celé číslo aktuálního zůstatku ve wei.
+`QUANTITY` - celé číslo aktuálního zůstatku ve Wei.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -626,26 +625,26 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 }
 ```
 
-### eth_getStorageAt {#eth_getstorageat}
+### eth_getStorageAt {#eth-getstorageat}
 
-Vrátí hodnotu z pozice v úložišti na dané adrese.
+Vrací hodnotu z pozice úložiště na dané adrese.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 20 bajtů – adresa úložiště.
-2. `QUANTITY` – celé číslo pozice v úložišti.
-3. `QUANTITY|TAG` – celé číslo bloku nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`, 20 bajtů - adresa úložiště.
+2. `QUANTITY` - celé číslo pozice v úložišti.
+3. `QUANTITY|TAG` - celé číslo bloku, nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
 
-**Návratová hodnota**
+**Vrací**
 
-`DATA` – hodnota na této pozici v úložišti.
+`DATA` - hodnota na této pozici v úložišti.
 
 **Příklad**
-Výpočet správné pozice závisí na úložišti, které se má načíst. Zvažte následující kontrakt nasazený na adrese `0x295a70b2de5e3953354a6a8344e616ed314d7251` adresou `0x391694e7e0b0cce554cb130d723a9d27458f9298`.
+Výpočet správné pozice závisí na úložišti, které se má načíst. Uvažujme následující kontrakt nasazený na `0x295a70b2de5e3953354a6a8344e616ed314d7251` adresou `0x391694e7e0b0cce554cb130d723a9d27458f9298`.
 
 ```
 contract Storage {
@@ -665,13 +664,13 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
 ```
 
-Načtení prvku mapy je obtížnější. Pozice prvku v mapě se vypočítá pomocí:
+Získání prvku z mapy je složitější. Pozice prvku v mapě se vypočítá pomocí:
 
 ```js
 keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
-To znamená, že pro načtení úložiště na pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] musíme vypočítat pozici pomocí:
+To znamená, že pro získání úložiště na pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] musíme vypočítat pozici pomocí:
 
 ```js
 keccak(
@@ -682,7 +681,7 @@ keccak(
 )
 ```
 
-Konzole Geth, která je dodávána s knihovnou web3, může být použita k provedení výpočtu:
+K výpočtu lze použít konzoli Geth, která je součástí knihovny Web3:
 
 ```js
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -691,43 +690,43 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-Nyní načteme úložiště:
+Nyní k načtení úložiště:
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount {#eth_gettransactioncount}
+### eth_getTransactionCount {#eth-gettransactioncount}
 
-Vrátí počet transakcí _odeslaných_ z adresy.
+Vrací počet transakcí _odeslaných_ z dané adresy.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionCount">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 20 bajtů – adresa.
-2. `QUANTITY|TAG` – celé číslo bloku nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"` nebo `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`, 20 bajtů - adresa.
+2. `QUANTITY|TAG` - celé číslo bloku, nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"` nebo `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
   "0x407d73d8a49eeb85d32cf465507dd71d507100c1",
-  "latest", // stav v posledním bloku
+  "latest", // stav v nejnovějším bloku
 ]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
 `QUANTITY` - celé číslo udávající počet transakcí odeslaných z této adresy.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1","latest"],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -735,32 +734,32 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 }
 ```
 
-### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
+### eth_getBlockTransactionCountByHash {#eth-getblocktransactioncountbyhash}
 
-Vrátí počet transakcí v bloku, který odpovídá danému haši bloku.
+Vrací počet transakcí v bloku, který odpovídá zadanému hashi bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByHash">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajtů – haš bloku
+1. `DATA`, 32 bajtů - hash bloku
 
 ```js
 params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
-`QUANTITY` – celé číslo počtu transakcí v tomto bloku.
+`QUANTITY` - celé číslo udávající počet transakcí v tomto bloku.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -768,17 +767,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 }
 ```
 
-### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
+### eth_getBlockTransactionCountByNumber {#eth-getblocktransactioncountbynumber}
 
-Vrátí počet transakcí v bloku odpovídajícím danému číslu bloku.
+Vrací počet transakcí v bloku odpovídajícím zadanému číslu bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `QUANTITY|TAG` – celé číslo čísla bloku nebo řetězec `"earliest"`, `"latest"`, `"pending"`, `"safe"` nebo `"finalized"`, jako v [parametru bloku](/developers/docs/apis/json-rpc/#block-parameter).
+1. `QUANTITY|TAG` - celé číslo představující číslo bloku, nebo řetězec `"earliest"`, `"latest"`, `"pending"`, `"safe"` nebo `"finalized"`, jako v [parametru bloku](/developers/docs/apis/json-rpc/#block-parameter).
 
 ```js
 params: [
@@ -786,16 +785,16 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
-`QUANTITY` – celé číslo počtu transakcí v tomto bloku.
+`QUANTITY` - celé číslo představující počet transakcí v tomto bloku.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0x13738ca"],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -803,32 +802,32 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 }
 ```
 
-### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
+### eth_getUncleCountByBlockHash {#eth-getunclecountbyblockhash}
 
-Vrátí počet strýčkovských bloků v bloku odpovídajícím danému haši bloku.
+Vrací počet uncle bloků v bloku odpovídajícím zadanému hashi bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajtů – haš bloku
+1. `DATA`, 32 bajtů - hash bloku
 
 ```js
 params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
-`QUANTITY` – celé číslo počtu strýčkovských bloků v tomto bloku.
+`QUANTITY` - celé číslo udávající počet uncle bloků v tomto bloku.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -836,17 +835,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 }
 ```
 
-### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
+### eth_getUncleCountByBlockNumber {#eth-getunclecountbyblocknumber}
 
-Vrátí počet strýčkovských bloků v bloku odpovídajícím danému číslu bloku.
+Vrací počet uncle bloků v bloku odpovídajícím zadanému číslu bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockNumber">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `QUANTITY|TAG` – celé číslo čísla bloku nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"` nebo `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
+1. `QUANTITY|TAG` - celé číslo představující číslo bloku, nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"` nebo `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -854,16 +853,16 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
-`QUANTITY` – celé číslo počtu strýčkovských bloků v tomto bloku.
+`QUANTITY` - celé číslo představující počet uncle bloků v tomto bloku.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params":["0xe8"],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -871,18 +870,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 }
 ```
 
-### eth_getCode {#eth_getcode}
+### eth_getCode {#eth-getcode}
 
-Vrátí kód na dané adrese.
+Vrací kód na dané adrese.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getCode">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 20 bajtů – adresa
-2. `QUANTITY|TAG` – celé číslo bloku nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"` nebo `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`, 20 bajtů - adresa
+2. `QUANTITY|TAG` - celočíselné číslo bloku, nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"` nebo `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -891,16 +890,16 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
-`DATA` – kód z dané adresy.
+`DATA` - kód z dané adresy.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "0x5daf3b"],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -908,29 +907,29 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 }
 ```
 
-### eth_sign {#eth_sign}
+### eth_sign {#eth-sign}
 
-Metoda podpisu vypočítá specifický podpis Etherea pomocí: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
+Metoda sign vypočítá specifický podpis pro Ethereum pomocí: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
-Přidáním předpony ke zprávě je vypočtený podpis rozpoznatelný jako specifický podpis Etherea. Tím se zabrání zneužití, kdy může škodlivá dapp podepsat libovolná data (např. transakci) a použít podpis k tomu, aby se vydávala za oběť.
+Přidáním předpony ke zprávě se vypočítaný podpis stane rozpoznatelným jako specifický podpis pro Ethereum. To zabraňuje zneužití, kdy by škodlivá decentralizovaná aplikace (dapp) mohla podepsat libovolná data (např. transakci) a použít podpis k vydávání se za oběť.
 
-Poznámka: adresa, kterou se má podepsat, musí být odemčena.
+Poznámka: adresa, kterou se má podepisovat, musí být odemčená.
 
 **Parametry**
 
-1. `DATA`, 20 bajtů – adresa
-2. `DATA`, N bajtů – zpráva k podepsání
+1. `DATA`, 20 bajtů - adresa
+2. `DATA`, N bajtů - zpráva k podepsání
 
-**Návratová hodnota**
+**Vrací**
 
 `DATA`: Podpis
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d370f73ec7d8a03e965129118dc8f5bf83", "0xdeadbeaf"],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -938,33 +937,33 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction {#eth_signtransaction}
+### eth_signTransaction {#eth-signtransaction}
 
-Podepíše transakci, kterou lze později odeslat do sítě pomocí [eth_sendRawTransaction](#eth_sendrawtransaction).
+Podepíše transakci, která může být později odeslána do sítě pomocí [eth_sendRawTransaction](#eth-sendrawtransaction).
 
 **Parametry**
 
-1. `Object` – objekt transakce
+1. `Object` - Objekt transakce
 
 - `type`:
-- `from`: `DATA`, 20 bajtů – adresa, ze které je transakce odeslána.
-- `to`: `DATA`, 20 bajtů – (volitelné při vytváření nového kontraktu) adresa, na kterou je transakce směrována.
-- `gas`: `QUANTITY` – (volitelné, výchozí: 90000) celé číslo gasu poskytnutého pro provedení transakce. Vrátí nevyužitý gas.
-- `gasPrice`: `QUANTITY` – (volitelné, výchozí: bude určeno) celé číslo ceny gasPrice použité pro každý zaplacený gas, ve Wei.
-- `value`: `QUANTITY` – (volitelné) celé číslo hodnoty odeslané s touto transakcí, ve Wei.
-- `data`: `DATA` – zkompilovaný kód kontraktu NEBO haš podpisu vyvolané metody a zakódovaných parametrů.
-- `nonce`: `QUANTITY` – (volitelné) celé číslo nonce. To umožňuje přepsat vlastní nevyřízené transakce, které používají stejný nonce.
+- `from`: `DATA`, 20 bajtů - Adresa, ze které je transakce odeslána.
+- `to`: `DATA`, 20 bajtů - (volitelné při vytváření nového kontraktu) Adresa, na kterou je transakce směrována.
+- `gas`: `QUANTITY` - (volitelné, výchozí: 90000) Celé číslo udávající gas poskytnutý pro provedení transakce. Nevyužitý gas bude vrácen.
+- `gasPrice`: `QUANTITY` - (volitelné, výchozí: bude určeno) Celé číslo udávající gasPrice použitou pro každý zaplacený gas, ve Wei.
+- `value`: `QUANTITY` - (volitelné) Celé číslo udávající hodnotu odeslanou s touto transakcí, ve Wei.
+- `data`: `DATA` - Zkompilovaný kód kontraktu NEBO hash podpisu volané metody a zakódovaných parametrů.
+- `nonce`: `QUANTITY` - (volitelné) Celé číslo udávající nonce. To umožňuje přepsat vaše vlastní čekající transakce, které používají stejnou nonce.
 
-**Návratová hodnota**
+**Vrací**
 
-`DATA`, objekt transakce kódovaný pomocí RLP podepsaný zadaným účtem.
+`DATA`, RLP zakódovaný objekt transakce podepsaný zadaným účtem.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","params": [{"data":"0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675","from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155","gas": "0x76c0","gasPrice": "0x9184e72a000","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","value": "0x9184e72a"}]}'
-// Result
+// Výsledek
 {
     "id": 1,
     "jsonrpc": "2.0",
@@ -972,21 +971,21 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction {#eth_sendtransaction}
+### eth_sendTransaction {#eth-sendtransaction}
 
-Vytvoří novou transakci volání zprávy nebo vytvoření kontraktu, pokud pole data obsahuje kód, a podepíše ji pomocí účtu uvedeného v `from`.
+Vytvoří novou transakci volání zprávy nebo vytvoření kontraktu, pokud datové pole obsahuje kód, a podepíše ji pomocí účtu specifikovaného v `from`.
 
 **Parametry**
 
-1. `Object` – objekt transakce
+1. `Object` - Objekt transakce
 
-- `from`: `DATA`, 20 bajtů – adresa, ze které je transakce odeslána.
-- `to`: `DATA`, 20 bajtů – (volitelné při vytváření nového kontraktu) adresa, na kterou je transakce směrována.
-- `gas`: `QUANTITY` – (volitelné, výchozí: 90000) celé číslo gasu poskytnutého pro provedení transakce. Vrátí nevyužitý gas.
-- `gasPrice`: `QUANTITY` – (volitelné, výchozí: bude určeno) celé číslo ceny gasPrice použité pro každý zaplacený gas.
-- `value`: `QUANTITY` – (volitelné) celé číslo hodnoty odeslané s touto transakcí.
-- `input`: `DATA` – zkompilovaný kód kontraktu NEBO haš podpisu vyvolané metody a zakódovaných parametrů.
-- `nonce`: `QUANTITY` – (volitelné) celé číslo nonce. To umožňuje přepsat vlastní nevyřízené transakce, které používají stejný nonce.
+- `from`: `DATA`, 20 bajtů - Adresa, ze které je transakce odeslána.
+- `to`: `DATA`, 20 bajtů - (volitelné při vytváření nového kontraktu) Adresa, na kterou je transakce směrována.
+- `gas`: `QUANTITY` - (volitelné, výchozí: 90000) Celé číslo udávající gas poskytnutý pro provedení transakce. Vrátí nepoužitý gas.
+- `gasPrice`: `QUANTITY` - (volitelné, výchozí: bude určeno) Celé číslo udávající cenu plynu použitou pro každý zaplacený gas.
+- `value`: `QUANTITY` - (volitelné) Celé číslo udávající hodnotu odeslanou s touto transakcí.
+- `input`: `DATA` - Zkompilovaný kód kontraktu NEBO hash podpisu volané metody a zakódovaných parametrů.
+- `nonce`: `QUANTITY` - (volitelné) Celé číslo udávající nonce. To umožňuje přepsat vaše vlastní čekající transakce, které používají stejnou nonce.
 
 ```js
 params: [
@@ -1002,18 +1001,18 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
-`DATA`, 32 bajtů – haš transakce, nebo nulový haš, pokud transakce ještě není k dispozici.
+`DATA`, 32 bajtů - hash transakce, nebo nulový hash, pokud transakce ještě není k dispozici.
 
-Použijte [eth_getTransactionReceipt](#eth_gettransactionreceipt) pro získání adresy kontraktu poté, co byla transakce navržena v bloku, když jste vytvořili kontrakt.
+Pro získání adresy kontraktu (pokud jste kontrakt vytvořili) použijte [eth_getTransactionReceipt](#eth-gettransactionreceipt) poté, co byla transakce navržena v bloku.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{see above}],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1021,13 +1020,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction {#eth_sendrawtransaction}
+### eth_sendRawTransaction {#eth-sendrawtransaction}
 
-Vytvoří novou transakci volání zprávy nebo vytvoření kontraktu pro podepsané transakce.
+Vytváří novou transakci volání zprávy nebo vytvoření kontraktu pro podepsané transakce.
 
 **Parametry**
 
-1. `DATA`, podepsaná data transakce.
+1. `DATA`, Podepsaná data transakce.
 
 ```js
 params: [
@@ -1035,18 +1034,18 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
-`DATA`, 32 bajtů – haš transakce, nebo nulový haš, pokud transakce ještě není k dispozici.
+`DATA`, 32 bajtů - hash transakce, nebo nulový hash, pokud transakce ještě není k dispozici.
 
-Použijte [eth_getTransactionReceipt](#eth_gettransactionreceipt) pro získání adresy kontraktu poté, co byla transakce navržena v bloku, když jste vytvořili kontrakt.
+Pokud jste vytvořili kontrakt, použijte [eth_getTransactionReceipt](#eth-gettransactionreceipt) k získání adresy kontraktu poté, co byla transakce navržena v bloku.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{see above}],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1054,37 +1053,37 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call {#eth_call}
+### eth_call {#eth-call}
 
-Okamžitě provede nové volání zprávy bez vytvoření transakce na blockchainu. Často se používá pro provádění funkcí chytrých kontraktů pouze pro čtení, například `balanceOf` pro kontrakt ERC-20.
+Okamžitě provede nové volání zprávy bez vytvoření transakce na blockchainu. Často se používá k provádění funkcí chytrých kontraktů pouze pro čtení, například `balanceOf` pro kontrakt ERC-20.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_call">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `Object` – objekt volání transakce
+1. `Object` - Objekt volání transakce
 
-- `from`: `DATA`, 20 bajtů – (volitelné) adresa, ze které je transakce odeslána.
-- `to`: `DATA`, 20 bajtů – adresa, na kterou je transakce směrována.
-- `gas`: `QUANTITY` – (volitelné) celé číslo gasu poskytnutého pro provedení transakce. eth_call spotřebovává nulový gas, ale tento parametr může být potřebný pro některá provedení.
-- `gasPrice`: `QUANTITY` – (volitelné) celé číslo ceny gasu (gasPrice) použité pro každý zaplacený gas
-- `value`: `QUANTITY` – (volitelné) celé číslo hodnoty odeslané s touto transakcí
-- `input`: `DATA` – (volitelné) haš podpisu metody a zakódovaných parametrů. Podrobnosti naleznete v [dokumentaci Solidity o ABI kontraktu Etherea](https://docs.soliditylang.org/en/latest/abi-spec.html).
+- `from`: `DATA`, 20 bajtů - (volitelné) Adresa, ze které je transakce odeslána.
+- `to`: `DATA`, 20 bajtů - Adresa, na kterou je transakce směrována.
+- `gas`: `QUANTITY` - (volitelné) Celé číslo udávající gas poskytnutý pro provedení transakce. eth_call nespotřebovává žádný gas, ale tento parametr může být u některých spuštění vyžadován.
+- `gasPrice`: `QUANTITY` - (volitelné) Celé číslo udávající gasPrice použitou pro každý zaplacený gas
+- `value`: `QUANTITY` - (volitelné) Celé číslo udávající hodnotu odeslanou s touto transakcí
+- `input`: `DATA` - (volitelné) Hash podpisu metody a zakódovaných parametrů. Podrobnosti viz [Ethereum Contract ABI v dokumentaci Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` – celé číslo bloku nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"` nebo `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - celé číslo bloku, nebo řetězec `"latest"`, `"earliest"`, `"pending"`, `"safe"` nebo `"finalized"`, viz [parametr bloku](/developers/docs/apis/json-rpc/#block-parameter)
 
-**Návratová hodnota**
+**Vrací**
 
-`DATA` – návratová hodnota provedeného kontraktu.
+`DATA` - návratová hodnota provedeného kontraktu.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1092,28 +1091,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas {#eth_estimategas}
+### eth_estimateGas {#eth-estimategas}
 
-Generuje a vrací odhad, kolik gasu je nutné k dokončení transakce. Transakce nebude přidána do blockchainu. Všimněte si, že odhad může být výrazně vyšší než množství gasu skutečně spotřebovaného transakcí, a to z různých důvodů, včetně mechaniky EVM a výkonu uzlu.
+Generuje a vrací odhad toho, kolik gasu je potřeba k dokončení transakce. Transakce nebude přidána na blockchain. Vezměte na vědomí, že odhad může být z různých důvodů, včetně mechanismů EVM a výkonu uzlu, výrazně vyšší než množství gasu skutečně spotřebovaného transakcí.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-Viz parametry [eth_call](#eth_call) s tím rozdílem, že všechny vlastnosti jsou volitelné. Pokud není zadán žádný limit transakčních poplatků, Geth použije jako horní hranici limit transakčních poplatků bloku z nevyřízeného bloku. V důsledku toho vrácený odhad nemusí být dostatečný k provedení volání/transakce, pokud je množství paliva vyšší než limit transakčních poplatků nevyřízeného bloku.
+Viz parametry [eth_call](#eth-call) s tím rozdílem, že všechny vlastnosti jsou volitelné. Pokud není specifikován žádný limit plynu, geth použije jako horní hranici limit plynu z čekajícího bloku. V důsledku toho vrácený odhad nemusí stačit k provedení volání/transakce, pokud je množství gasu vyšší než limit plynu čekajícího bloku.
 
-**Návratová hodnota**
+**Vrací**
 
-`QUANTITY` – množství spotřebovaného gasu.
+`QUANTITY` - množství spotřebovaného gasu.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see above}],"id":1}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1121,18 +1120,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 }
 ```
 
-### eth_getBlockByHash {#eth_getblockbyhash}
+### eth_getBlockByHash {#eth-getblockbyhash}
 
-Vrátí informace o bloku podle haše.
+Vrací informace o bloku podle hashe.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByHash">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajtů – haš bloku.
-2. `Boolean` – pokud `true`, vrátí celé objekty transakcí, pokud `false`, vrátí pouze haše transakcí.
+1. `DATA`, 32 bajtů - Hash bloku.
+2. `Boolean` - Pokud je `true`, vrací celé objekty transakcí, pokud je `false`, vrací pouze hashe transakcí.
 
 ```js
 params: [
@@ -1141,29 +1140,29 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
-`Object` – objekt bloku, nebo `null`, pokud nebyl nalezen žádný blok:
+`Object` - Objekt bloku, nebo `null`, pokud nebyl nalezen žádný blok:
 
-- `number`: `QUANTITY` – číslo bloku. `null`, pokud se jedná o nevyřízený blok.
-- `hash`: `DATA`, 32 bajtů – haš bloku. `null`, pokud se jedná o nevyřízený blok.
-- `parentHash`: `DATA`, 32 bajtů – haš rodičovského bloku.
-- `nonce`: `DATA`, 8 bajtů – haš vygenerovaného proof-of-work. `null` pro nevyřízený blok, `0x0` pro bloky proof-of-stake (od sloučení)
-- `sha3Uncles`: `DATA`, 32 bajtů – SHA3 dat strýčkovských bloků v bloku.
-- `logsBloom`: `DATA`, 256 bajtů – bloom filtr pro záznamy bloku. `null`, pokud se jedná o nevyřízený blok.
-- `transactionsRoot`: `DATA`, 32 bajtů – kořen trie transakcí bloku.
-- `stateRoot`: `DATA`, 32 bajtů – kořen konečného stavového trie bloku.
-- `receiptsRoot`: `DATA`, 32 bajtů – kořen trie potvrzení bloku.
-- `miner`: `DATA`, 20 bajtů – adresa příjemce, kterému byly uděleny odměny za blok.
-- `difficulty`: `QUANTITY` – celé číslo obtížnosti tohoto bloku.
-- `totalDifficulty`: `QUANTITY` – celé číslo celkové obtížnosti řetězce až do tohoto bloku.
-- `extraData`: `DATA` – pole „extra data“ tohoto bloku.
-- `size`: `QUANTITY` – celé číslo velikosti tohoto bloku v bajtech.
-- `gasLimit`: `QUANTITY` – maximální povolený gas v tomto bloku.
-- `gasUsed`: `QUANTITY` – celkový spotřebovaný gas všemi transakcemi v tomto bloku.
-- `timestamp`: `QUANTITY` – časové razítko unixu pro okamžik, kdy byl blok seřazen.
-- `transactions`: `Pole` – pole objektů transakcí nebo 32bajtových hašů transakcí v závislosti na posledním zadaném parametru.
-- `uncles`: `Pole` – pole hašů strýčkovských bloků.
+- `number`: `QUANTITY` - číslo bloku. `null`, pokud se jedná o čekající blok.
+- `hash`: `DATA`, 32 bajtů - hash bloku. `null`, pokud se jedná o čekající blok.
+- `parentHash`: `DATA`, 32 bajtů - hash rodičovského bloku.
+- `nonce`: `DATA`, 8 bajtů - hash vygenerovaného důkazu prací (PoW). `null`, pokud se jedná o čekající blok, `0x0` pro bloky s důkazem podílem (PoS) (od Merge).
+- `sha3Uncles`: `DATA`, 32 bajtů - SHA3 dat uncle bloků v bloku.
+- `logsBloom`: `DATA`, 256 bajtů - bloom filter pro logy bloku. `null`, pokud se jedná o čekající blok.
+- `transactionsRoot`: `DATA`, 32 bajtů - kořen transakční trie bloku.
+- `stateRoot`: `DATA`, 32 bajtů - kořen finální stavové trie bloku.
+- `receiptsRoot`: `DATA`, 32 bajtů - kořen trie stvrzenek bloku.
+- `miner`: `DATA`, 20 bajtů - adresa příjemce, kterému byly uděleny odměny za blok.
+- `difficulty`: `QUANTITY` - celé číslo představující obtížnost tohoto bloku.
+- `totalDifficulty`: `QUANTITY` - celé číslo představující celkovou obtížnost řetězce až po tento blok.
+- `extraData`: `DATA` - pole „extra data“ tohoto bloku.
+- `size`: `QUANTITY` - celé číslo představující velikost tohoto bloku v bajtech.
+- `gasLimit`: `QUANTITY` - maximální povolený gas v tomto bloku.
+- `gasUsed`: `QUANTITY` - celkový gas spotřebovaný všemi transakcemi v tomto bloku.
+- `timestamp`: `QUANTITY` - unixové časové razítko (timestamp) okamžiku, kdy byl blok sestaven.
+- `transactions`: `Array` - Pole objektů transakcí, nebo 32bajtových hashů transakcí v závislosti na posledním zadaném parametru.
+- `uncles`: `Array` - Pole hashů uncle bloků.
 
 **Příklad**
 
@@ -1201,18 +1200,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 }
 ```
 
-### eth_getBlockByNumber {#eth_getblockbynumber}
+### eth_getBlockByNumber {#eth-getblockbynumber}
 
-Vrátí informace o bloku podle čísla bloku.
+Vrací informace o bloku podle čísla bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByNumber">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `QUANTITY|TAG` – celé číslo čísla bloku nebo řetězec `"earliest"`, `"latest"`, `"pending"`, `"safe"` nebo `"finalized"`, jako v [parametru bloku](/developers/docs/apis/json-rpc/#block-parameter).
-2. `Boolean` – pokud `true`, vrátí celé objekty transakcí, pokud `false`, vrátí pouze haše transakcí.
+1. `QUANTITY|TAG` - celé číslo čísla bloku, nebo řetězec `"earliest"`, `"latest"`, `"pending"`, `"safe"` nebo `"finalized"`, jako v [parametru bloku](/developers/docs/apis/json-rpc/#block-parameter).
+2. `Boolean` - Pokud je `true`, vrátí celé objekty transakcí, pokud je `false`, vrátí pouze hashe transakcí.
 
 ```js
 params: [
@@ -1221,59 +1220,59 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
-Viz [eth_getBlockByHash](#eth_getblockbyhash)
+**Vrací**
+Viz [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1}'
 ```
 
-Výsledek viz [eth_getBlockByHash](#eth_getblockbyhash)
+Výsledek viz [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_getTransactionByHash {#eth_gettransactionbyhash}
+### eth_getTransactionByHash {#eth-gettransactionbyhash}
 
-Vrátí informace o transakci požadované podle haše transakce.
+Vrací informace o transakci vyžádané pomocí hashe transakce.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByHash">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajtů – haš transakce
+1. `DATA`, 32 bajtů - hash transakce
 
 ```js
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 ```
 
-**Návratová hodnota**
+**Vrací**
 
-`Object` – objekt transakce nebo `null`, pokud nebyla nalezena žádná transakce:
+`Object` - Objekt transakce, nebo `null`, pokud nebyla nalezena žádná transakce:
 
-- `blockHash`: `DATA`, 32 bajtů – haš bloku, ve kterém se tato transakce nacházela. `null`, když je nevyřízená.
-- `blockNumber`: `QUANTITY` – číslo bloku, ve kterém se tato transakce nacházela. `null`, když je nevyřízená.
-- `from`: `DATA`, 20 bajtů – adresa odesílatele.
-- `gas`: `QUANTITY` – gas poskytnutý odesílatelem.
-- `gasPrice`: `QUANTITY` – cena gasu poskytnutá odesílatelem ve Wei.
-- `hash`: `DATA`, 32 bajtů – haš transakce.
-- `input`: `DATA` – data odeslaná spolu s transakcí.
-- `nonce`: `QUANTITY` – počet transakcí provedených odesílatelem před touto.
-- `to`: `DATA`, 20 bajtů – adresa příjemce. `null`, pokud se jedná o transakci vytvoření kontraktu.
-- `transactionIndex`: `QUANTITY` – celé číslo pozice indexu transakcí v bloku. `null`, když je nevyřízená.
-- `value`: `QUANTITY` – převedená hodnota ve Wei.
-- `v`: `QUANTITY` – ID pro obnovení ECDSA
-- `r`: `QUANTITY` – ECDSA podpis r
-- `s`: `QUANTITY` – ECDSA podpis s
+- `blockHash`: `DATA`, 32 bajtů - hash bloku, ve kterém se tato transakce nacházela. `null`, pokud čeká na vyřízení.
+- `blockNumber`: `QUANTITY` - číslo bloku, ve kterém se tato transakce nacházela. `null`, pokud čeká na vyřízení.
+- `from`: `DATA`, 20 bajtů - adresa odesílatele.
+- `gas`: `QUANTITY` - gas poskytnutý odesílatelem.
+- `gasPrice`: `QUANTITY` - cena plynu poskytnutá odesílatelem ve Wei.
+- `hash`: `DATA`, 32 bajtů - hash transakce.
+- `input`: `DATA` - data odeslaná spolu s transakcí.
+- `nonce`: `QUANTITY` - počet transakcí provedených odesílatelem před touto transakcí.
+- `to`: `DATA`, 20 bajtů - adresa příjemce. `null`, pokud se jedná o transakci vytvoření kontraktu.
+- `transactionIndex`: `QUANTITY` - celé číslo pozice indexu transakce v bloku. `null`, pokud čeká na vyřízení.
+- `value`: `QUANTITY` - převedená hodnota ve Wei.
+- `v`: `QUANTITY` - ID obnovy ECDSA
+- `r`: `QUANTITY` - podpis ECDSA r
+- `s`: `QUANTITY` - podpis ECDSA s
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"],"id":1}'
-// Result
+// Výsledek
 {
   "jsonrpc":"2.0",
   "id":1,
@@ -1296,18 +1295,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
+### eth_getTransactionByBlockHashAndIndex {#eth-gettransactionbyblockhashandindex}
 
-Vrátí informace o transakci podle haše bloku a pozice indexu transakce.
+Vrací informace o transakci podle hashe bloku a pozice indexu transakce.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajtů – haš bloku.
-2. `QUANTITY` – celé číslo pozice indexu transakce.
+1. `DATA`, 32 bajtů - hash bloku.
+2. `QUANTITY` - celé číslo pozice indexu transakce.
 
 ```js
 params: [
@@ -1316,30 +1315,30 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
-Viz [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**Vrací**
+Viz [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Výsledek viz [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Výsledek viz [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
+### eth_getTransactionByBlockNumberAndIndex {#eth-gettransactionbyblocknumberandindex}
 
-Vrátí informace o transakci podle čísla bloku a pozice indexu transakce.
+Vrací informace o transakci podle čísla bloku a pozice indexu transakce.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockNumberAndIndex">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `QUANTITY|TAG` – číslo bloku nebo řetězec `"earliest"`, `"latest"`, `"pending"`, `"safe"` nebo `"finalized"`, jako v [parametru bloku](/developers/docs/apis/json-rpc/#block-parameter).
-2. `QUANTITY` – pozice indexu transakce.
+1. `QUANTITY|TAG` - číslo bloku, nebo řetězec `"earliest"`, `"latest"`, `"pending"`, `"safe"` nebo `"finalized"`, jako v [parametru bloku](/developers/docs/apis/json-rpc/#block-parameter).
+2. `QUANTITY` - pozice indexu transakce.
 
 ```js
 params: [
@@ -1348,60 +1347,60 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
-Viz [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**Vrací**
+Viz [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
-Výsledek viz [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Výsledek viz [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionReceipt {#eth_gettransactionreceipt}
+### eth_getTransactionReceipt {#eth-gettransactionreceipt}
 
-Vrátí potvrzení o transakci podle haše transakce.
+Vrací stvrzenku transakce podle hashe transakce.
 
-**Poznámka:** Potvrzení není k dispozici pro nevyřízené transakce.
+**Poznámka:** Stvrzenka není k dispozici pro čekající transakce.
 
 **Parametry**
 
-1. `DATA`, 32 bajtů – haš transakce
+1. `DATA`, 32 bajtů - hash transakce
 
 ```js
 params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
-**Návratová hodnota**
-`Object` – objekt potvrzení transakce, nebo `null`, pokud nebylo nalezeno žádné potvrzení:
+**Vrací**
+`Object` - Objekt stvrzenky transakce, nebo `null`, pokud nebyla nalezena žádná stvrzenka:
 
-- `transactionHash `: `DATA`, 32 bajtů – haš transakce.
-- `transactionIndex`: `QUANTITY` – celé číslo pozice indexu transakcí v bloku.
-- `blockHash`: `DATA`, 32 bajtů – haš bloku, ve kterém se tato transakce nacházela.
-- `blockNumber`: `QUANTITY` – číslo bloku, ve kterém se tato transakce nacházela.
-- `from`: `DATA`, 20 bajtů – adresa odesílatele.
-- `to`: `DATA`, 20 bajtů – adresa příjemce. `null`, pokud se jedná o transakci vytvoření kontraktu.
-- `cumulativeGasUsed` : `QUANTITY ` – celkové množství gasu spotřebovaného při provedení této transakce v bloku.
-- `effectiveGasPrice` : `QUANTITY` – součet základního poplatku a spropitného zaplaceného za jednotku gasu.
-- `gasUsed `: `QUANTITY ` – množství gasu spotřebovaného pouze touto konkrétní transakcí.
-- `contractAddress `: `DATA`, 20 bajtů – adresa vytvořeného kontraktu, pokud se jednalo o transakci vytvoření kontraktu, jinak `null`.
-- `logs`: `Pole` – pole objektů logu, které tato transakce vygenerovala.
-- `logsBloom`: `DATA`, 256 bajtů – bloom filtr pro lehké klienty k rychlému načtení souvisejících záznamů.
-- `type`: `QUANTITY` – celé číslo typu transakce, `0x0` pro starší transakce, `0x1` pro typy se seznamem přístupů, `0x2` pro dynamické poplatky.
+- `transactionHash `: `DATA`, 32 bajtů - hash transakce.
+- `transactionIndex`: `QUANTITY` - celé číslo pozice indexu transakce v bloku.
+- `blockHash`: `DATA`, 32 bajtů - hash bloku, ve kterém se tato transakce nacházela.
+- `blockNumber`: `QUANTITY` - číslo bloku, ve kterém se tato transakce nacházela.
+- `from`: `DATA`, 20 bajtů - adresa odesílatele.
+- `to`: `DATA`, 20 bajtů - adresa příjemce. null, pokud se jedná o transakci vytvoření kontraktu.
+- `cumulativeGasUsed` : `QUANTITY ` - Celkové množství gasu spotřebovaného při provedení této transakce v bloku.
+- `effectiveGasPrice` : `QUANTITY` - Součet základního poplatku a prioritního poplatku zaplaceného za jednotku gasu.
+- `gasUsed `: `QUANTITY ` - Množství gasu spotřebovaného pouze touto konkrétní transakcí.
+- `contractAddress `: `DATA`, 20 bajtů - Adresa vytvořeného kontraktu, pokud se jednalo o transakci vytvoření kontraktu, jinak `null`.
+- `logs`: `Array` - Pole objektů logů, které tato transakce vygenerovala.
+- `logsBloom`: `DATA`, 256 bajtů - Bloomův filtr pro lehké klienty k rychlému získání souvisejících logů.
+- `type`: `QUANTITY` - celé číslo typu transakce, `0x0` pro starší (legacy) transakce, `0x1` pro typy se seznamem přístupů (access list), `0x2` pro dynamické poplatky.
 
-Vrátí také _buď_:
+Vrací také _buď_ :
 
-- `root`: `DATA` 32 bajtů kořene stavu po transakci (před Byzantium)
+- `root` : `DATA` 32 bajtů kořene stavu po transakci (před aktualizací Byzantium)
 - `status`: `QUANTITY` buď `1` (úspěch), nebo `0` (selhání)
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"],"id":1}'
-// Result
+// Výsledek
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -1415,9 +1414,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
     "from": "0x6221a9c005f6e47eb398fd867784cacfdcfff4e7",
     "gasUsed": "0xb4c8",
     "logs": [{
-      // logy vrácené pomocí getFilterLogs atd.
+      // logy, jak je vrací getFilterLogs atd.
     }],
-    "logsBloom": "0x00...0", // 256bajtový bloom filtr
+    "logsBloom": "0x00...0", // 256bajtový Bloomův filtr
     "status": "0x1",
     "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
     "transactionHash":
@@ -1428,18 +1427,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
+### eth_getUncleByBlockHashAndIndex {#eth-getunclebyblockhashandindex}
 
-Vrací informace o „uncle“ bloku podle haše a pozice indexu „uncle“.
+Vrací informace o strýci bloku podle hashe a pozice indexu strýce.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockHashAndIndex">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `DATA`, 32 bajtů – haš bloku.
-2. `QUANTITY` – pozice indexu strýčkovského bloku.
+1. `DATA`, 32 bajtů - Hash bloku.
+2. `QUANTITY` - Pozice indexu strýce.
 
 ```js
 params: [
@@ -1448,32 +1447,32 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
-Viz [eth_getBlockByHash](#eth_getblockbyhash)
+**Vrací**
+Viz [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Výsledek viz [eth_getBlockByHash](#eth_getblockbyhash)
+Výsledek viz [eth_getBlockByHash](#eth-getblockbyhash)
 
-**Poznámka**: Strýčkovský blok neobsahuje jednotlivé transakce.
+**Poznámka**: Strýc neobsahuje jednotlivé transakce.
 
-### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
+### eth_getUncleByBlockNumberAndIndex {#eth-getunclebyblocknumberandindex}
 
-Vrací informace o „uncle“ bloku podle čísla a pozice indexu „uncle“.
+Vrací informace o uncle bloku podle čísla bloku a pozice indexu uncle bloku.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockNumberAndIndex">
-  Vyzkoušejte koncový bod na playgroundu
+  Vyzkoušet endpoint v playgroundu
 </ButtonLink>
 
 **Parametry**
 
-1. `QUANTITY|TAG` – číslo bloku nebo řetězec `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, jako v [parametru bloku](/developers/docs/apis/json-rpc/#block-parameter).
-2. `QUANTITY` – pozice indexu strýčkovského bloku.
+1. `QUANTITY|TAG` - číslo bloku, nebo řetězec `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, jako v [parametru bloku](/developers/docs/apis/json-rpc/#block-parameter).
+2. `QUANTITY` - pozice indexu uncle bloku.
 
 ```js
 params: [
@@ -1482,41 +1481,41 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
-Viz [eth_getBlockByHash](#eth_getblockbyhash)
+**Vrací**
+Viz [eth_getBlockByHash](#eth-getblockbyhash)
 
-**Poznámka**: Strýčkovský blok neobsahuje jednotlivé transakce.
+**Poznámka**: Uncle blok neobsahuje jednotlivé transakce.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-Výsledek viz [eth_getBlockByHash](#eth_getblockbyhash)
+Výsledek viz [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_newFilter {#eth_newfilter}
+### eth_newFilter {#eth-newfilter}
 
-Vytvoří objekt filtru na základě možností filtru, který upozorní na změnu stavu (záznamy).
-Chcete-li zkontrolovat, zda se stav změnil, zavolejte [eth_getFilterChanges](#eth_getfilterchanges).
+Vytvoří objekt filtru na základě možností filtru, aby upozornil na změnu stavu (logy).
+Chcete-li zkontrolovat, zda se stav změnil, zavolejte [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Poznámka k zadávání filtrů témat:**
-Témata jsou závislá na pořadí. Transakce s logem s tématy [A, B] bude odpovídat následujícím filtrům témat:
+Témata závisí na pořadí. Transakce s logem s tématy [A, B] bude odpovídat následujícím filtrům témat:
 
-- `[]` „cokoliv“
-- `[A]` „A na první pozici (a cokoliv dalšího)“
-- `[null, B]` „cokoliv na první pozici A B na druhé pozici (a cokoliv dalšího)“
-- `[A, B]` „A na první pozici A B na druhé pozici (a cokoliv dalšího)“
-- `[[A, B], [A, B]]` „(A NEBO B) na první pozici A (A NEBO B) na druhé pozici (a cokoliv dalšího)“
+- `[]` "cokoliv"
+- `[A]` "A na první pozici (a cokoliv po něm)"
+- `[null, B]` "cokoliv na první pozici A ZÁROVEŇ B na druhé pozici (a cokoliv po něm)"
+- `[A, B]` "A na první pozici A ZÁROVEŇ B na druhé pozici (a cokoliv po něm)"
+- `[[A, B], [A, B]]` "(A NEBO B) na první pozici A ZÁROVEŇ (A NEBO B) na druhé pozici (a cokoliv po něm)"
 - **Parametry**
 
-1. `Object` – možnosti filtru:
+1. `Object` - Možnosti filtru:
 
-- `fromBlock`: `QUANTITY|TAG` – (volitelné, výchozí: `"latest"`) celé číslo bloku, nebo `"latest"` pro poslední navržený blok, `"safe"` pro poslední bezpečný blok, `"finalized"` pro poslední finalizovaný blok nebo `"pending"`, `"earliest"` pro transakce, které ještě nejsou v bloku.
-- `toBlock`: `QUANTITY|TAG` – (volitelné, výchozí: `"latest"`) celé číslo bloku, nebo `"latest"` pro poslední navržený blok, `"safe"` pro poslední bezpečný blok, `"finalized"` pro poslední finalizovaný blok nebo `"pending"`, `"earliest"` pro transakce, které ještě nejsou v bloku.
-- `address`: `DATA|Pole`, 20 bajtů – (volitelné) adresa kontraktu nebo seznam adres, ze kterých by měly logy pocházet.
-- `topics`: `Pole DATA`, – (volitelné) pole 32bajtových témat `DATA`. Témata jsou závislá na pořadí. Každé téma může být také polem DATA s možnostmi „nebo“.
+- `fromBlock`: `QUANTITY|TAG` - (volitelné, výchozí: `"latest"`) Celočíselné číslo bloku, nebo `"latest"` pro poslední navržený blok, `"safe"` pro nejnovější bezpečný blok, `"finalized"` pro nejnovější finalizovaný blok, nebo `"pending"`, `"earliest"` pro transakce, které ještě nejsou v bloku.
+- `toBlock`: `QUANTITY|TAG` - (volitelné, výchozí: `"latest"`) Celočíselné číslo bloku, nebo `"latest"` pro poslední navržený blok, `"safe"` pro nejnovější bezpečný blok, `"finalized"` pro nejnovější finalizovaný blok, nebo `"pending"`, `"earliest"` pro transakce, které ještě nejsou v bloku.
+- `address`: `DATA|Array`, 20 bajtů - (volitelné) Adresa kontraktu nebo seznam adres, ze kterých by měly logy pocházet.
+- `topics`: `Array of DATA`, - (volitelné) Pole 32bajtových `DATA` témat. Témata závisí na pořadí. Každé téma může být také polem DATA s možnostmi „nebo“ (or).
 
 ```js
 params: [
@@ -1536,15 +1535,15 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
-`QUANTITY` – ID filtru.
+**Vrací**
+`QUANTITY` - ID filtru.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topics":["0x12341234"]}],"id":73}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1552,23 +1551,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 }
 ```
 
-### eth_newBlockFilter {#eth_newblockfilter}
+### eth_newBlockFilter {#eth-newblockfilter}
 
-Vytvoří v uzlu filtr, který upozorní na příchod nového bloku.
-Chcete-li zkontrolovat, zda se stav změnil, zavolejte [eth_getFilterChanges](#eth_getfilterchanges).
+Vytvoří filtr v uzlu, který upozorní na příchod nového bloku.
+Chcete-li zkontrolovat, zda se změnil stav, zavolejte [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Parametry**
 Žádné
 
-**Návratová hodnota**
-`QUANTITY` – ID filtru.
+**Vrací**
+`QUANTITY` - ID filtru.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],"id":73}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc":  "2.0",
@@ -1576,23 +1575,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 }
 ```
 
-### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
+### eth_newPendingTransactionFilter {#eth-newpendingtransactionfilter}
 
-Vytvoří v uzlu filtr, který upozorní na příchod nových nevyřízených transakcí.
-Chcete-li zkontrolovat, zda se stav změnil, zavolejte [eth_getFilterChanges](#eth_getfilterchanges).
+Vytvoří filtr v uzlu, který upozorní na příchod nových čekajících transakcí.
+Chcete-li zkontrolovat, zda se stav změnil, zavolejte [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Parametry**
 Žádné
 
-**Návratová hodnota**
-`QUANTITY` – ID filtru.
+**Vrací**
+`QUANTITY` - ID filtru.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter","params":[],"id":73}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc":  "2.0",
@@ -1600,14 +1599,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 }
 ```
 
-### eth_uninstallFilter {#eth_uninstallfilter}
+### eth_uninstallFilter {#eth-uninstallfilter}
 
-Odinstaluje filtr s daným ID. Mělo by být vždy voláno, když již není potřeba sledování.
-Filtry navíc vyprší, pokud nejsou po určitou dobu požadovány pomocí [eth_getFilterChanges](#eth_getfilterchanges).
+Odinstaluje filtr se zadaným ID. Mělo by se volat vždy, když už sledování není potřeba.
+Navíc platnost filtrů vyprší, pokud nejsou po určitou dobu dotazovány pomocí [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Parametry**
 
-1. `QUANTITY` – ID filtru.
+1. `QUANTITY` - ID filtru.
 
 ```js
 params: [
@@ -1615,15 +1614,15 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
-`Boolean` – `true`, pokud byl filtr úspěšně odinstalován, jinak `false`.
+**Vrací**
+`Boolean` - `true`, pokud byl filtr úspěšně odinstalován, jinak `false`.
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["0xb"],"id":73}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1631,13 +1630,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges {#eth_getfilterchanges}
+### eth_getFilterChanges {#eth-getfilterchanges}
 
-Dotazovací metoda pro filtr, která vrací pole záznamů, které se objevily od posledního dotazu.
+Metoda dotazování pro filtr, která vrací pole logů, které se vyskytly od posledního dotazu.
 
 **Parametry**
 
-1. `QUANTITY` – ID filtru.
+1. `QUANTITY` - ID filtru.
 
 ```js
 params: [
@@ -1645,30 +1644,28 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
-`Pole` – pole objektů logů, nebo prázdné pole, pokud se od posledního dotazu nic nezměnilo.
+**Vrací**
+`Array` - Pole objektů logů, nebo prázdné pole, pokud se od posledního dotazu nic nezměnilo.
 
-- Pro filtry vytvořené pomocí `eth_newBlockFilter` jsou návratovou hodnotou haše bloků (`DATA`, 32 bajtů), např. `[\"0x3454645634534...\"]`.
-
-- Pro filtry vytvořené pomocí `eth_newPendingTransactionFilter` jsou návratovou hodnotou haše transakcí (`DATA`, 32 bajtů), např. `[\"0x6345343454645...\"]`.
-
+- Pro filtry vytvořené pomocí `eth_newBlockFilter` jsou návratovou hodnotou hashe bloků (`DATA`, 32 bajtů), např. `["0x3454645634534..."]`.
+- Pro filtry vytvořené pomocí `eth_newPendingTransactionFilter ` jsou návratovou hodnotou hashe transakcí (`DATA`, 32 bajtů), např. `["0x6345343454645..."]`.
 - Pro filtry vytvořené pomocí `eth_newFilter` jsou logy objekty s následujícími parametry:
-  - `removed`: `TAG` – `true`, když byl log odstraněn kvůli reorganizaci řetězce. `false`, pokud se jedná o platný log.
-  - `logIndex`: `QUANTITY` – celé číslo pozice indexu logu v bloku. `null`, pokud se jedná o nevyřízený log.
-  - `transactionIndex`: `QUANTITY` – celé číslo pozice indexu transakcí, ze kterého byl log vytvořen. `null`, pokud se jedná o nevyřízený log.
-  - `transactionHash`: `DATA`, 32 bajtů – haš transakcí, ze kterých byl tento log vytvořen. `null`, pokud se jedná o nevyřízený log.
-  - `blockHash`: `DATA`, 32 bajtů – haš bloku, ve kterém se tento log nacházel. `null`, když je nevyřízená. `null`, pokud se jedná o nevyřízený log.
-  - `blockNumber`: `QUANTITY` – číslo bloku, ve kterém se tento log nacházel. `null`, když je nevyřízená. `null`, pokud se jedná o nevyřízený log.
-  - `address`: `DATA`, 20 bajtů – adresa, ze které tento log pochází.
-  - `data`: `DATA` – neindexovaná data protokolu s proměnnou délkou. (V _solidity_: nula nebo více 32bajtových neindexovaných argumentů protokolu.)
-  - `topics`: `Pole DATA` – pole 0 až 4 32bajtových `DATA` indexovaných argumentů logu. (V _solidity_: První téma je _haš_ podpisu události (např. `Deposit(address,bytes32,uint256)`), pokud jste událost nedeklarovali se specifikátorem `anonymous`.)
+  - `removed`: `TAG` - `true`, když byl log odstraněn kvůli reorganizaci řetězce. `false`, pokud se jedná o platný log.
+  - `logIndex`: `QUANTITY` - celé číslo pozice indexu logu v bloku. `null`, když se jedná o čekající log.
+  - `transactionIndex`: `QUANTITY` - celé číslo pozice indexu transakce, ze které byl log vytvořen. `null`, když se jedná o čekající log.
+  - `transactionHash`: `DATA`, 32 bajtů - hash transakce, ze které byl tento log vytvořen. `null`, když se jedná o čekající log.
+  - `blockHash`: `DATA`, 32 bajtů - hash bloku, ve kterém se tento log nacházel. `null`, když čeká na vyřízení. `null`, když se jedná o čekající log.
+  - `blockNumber`: `QUANTITY` - číslo bloku, ve kterém se tento log nacházel. `null`, když čeká na vyřízení. `null`, když se jedná o čekající log.
+  - `address`: `DATA`, 20 bajtů - adresa, ze které tento log pochází.
+  - `data`: `DATA` - neindexovaná data logu s proměnnou délkou. (V _Solidity_: nula nebo více 32bajtových neindexovaných argumentů logu.)
+  - `topics`: `Array of DATA` - Pole 0 až 4 32bajtových `DATA` indexovaných argumentů logu. (V _Solidity_: Prvním tématem je _hash_ podpisu události (např. `Deposit(address,bytes32,uint256)`), pokud jste událost nedeklarovali pomocí specifikátoru `anonymous`.)
 
 - **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x16"],"id":73}'
-// Result
+// Výsledek
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1687,13 +1684,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs {#eth_getfilterlogs}
+### eth_getFilterLogs {#eth-getfilterlogs}
 
-Vrátí pole všech logů odpovídajících filtru s daným ID.
+Vrací pole všech logů odpovídajících filtru s daným id.
 
 **Parametry**
 
-1. `QUANTITY` – ID filtru.
+1. `QUANTITY` - Id filtru.
 
 ```js
 params: [
@@ -1701,31 +1698,31 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
-Viz [eth_getFilterChanges](#eth_getfilterchanges)
+**Vrací**
+Viz [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":74}'
 ```
 
-Výsledek viz [eth_getFilterChanges](#eth_getfilterchanges)
+Výsledek viz [eth_getFilterChanges](#eth-getfilterchanges)
 
-### eth_getLogs {#eth_getlogs}
+### eth_getLogs {#eth-getlogs}
 
-Vrátí pole všech logů odpovídajících danému objektu filtru.
+Vrací pole všech logů odpovídajících danému objektu filtru.
 
 **Parametry**
 
-1. `Object` – možnosti filtru:
+1. `Object` - Možnosti filtru:
 
-- `fromBlock`: `QUANTITY|TAG` – (volitelné, výchozí: `"latest"`) celé číslo bloku, nebo `"latest"` pro poslední navržený blok, `"safe"` pro poslední bezpečný blok, `"finalized"` pro poslední finalizovaný blok nebo `"pending"`, `"earliest"` pro transakce, které ještě nejsou v bloku.
-- `toBlock`: `QUANTITY|TAG` – (volitelné, výchozí: `"latest"`) celé číslo bloku, nebo `"latest"` pro poslední navržený blok, `"safe"` pro poslední bezpečný blok, `"finalized"` pro poslední finalizovaný blok nebo `"pending"`, `"earliest"` pro transakce, které ještě nejsou v bloku.
-- `address`: `DATA|Pole`, 20 bajtů – (volitelné) adresa kontraktu nebo seznam adres, ze kterých by měly logy pocházet.
-- `topics`: `Pole DATA`, – (volitelné) pole 32bajtových témat `DATA`. Témata jsou závislá na pořadí. Každé téma může být také polem DATA s možnostmi „nebo“.
-- `blockHash`: `DATA`, 32 bajtů – (volitelné, **v budoucnu**) S přidáním EIP-234 bude `blockHash` novou možností filtru, která omezuje vrácené logy na jediný blok s 32bajtovým hašem `blockHash`. Použití `blockHash` je ekvivalentní `fromBlock` = `toBlock` = číslo bloku s hašem `blockHash`. Pokud je v kritériích filtru přítomen `blockHash`, pak nejsou povoleny ani `fromBlock`, ani `toBlock`.
+- `fromBlock`: `QUANTITY|TAG` - (volitelné, výchozí: `"latest"`) Celočíselné číslo bloku, nebo `"latest"` pro poslední navržený blok, `"safe"` pro nejnovější bezpečný blok, `"finalized"` pro nejnovější finalizovaný blok, nebo `"pending"`, `"earliest"` pro transakce, které ještě nejsou v bloku.
+- `toBlock`: `QUANTITY|TAG` - (volitelné, výchozí: `"latest"`) Celočíselné číslo bloku, nebo `"latest"` pro poslední navržený blok, `"safe"` pro nejnovější bezpečný blok, `"finalized"` pro nejnovější finalizovaný blok, nebo `"pending"`, `"earliest"` pro transakce, které ještě nejsou v bloku.
+- `address`: `DATA|Array`, 20 bajtů - (volitelné) Adresa kontraktu nebo seznam adres, ze kterých by měly logy pocházet.
+- `topics`: `Array of DATA`, - (volitelné) Pole 32bajtových `DATA` témat (topics). Témata závisí na pořadí. Každé téma může být také polem DATA s možnostmi „nebo“ (or).
+- `blockHash`: `DATA`, 32 bajtů - (volitelné, **budoucí**) S přidáním EIP-234 bude `blockHash` novou možností filtru, která omezí vrácené logy na jediný blok s 32bajtovým hashem `blockHash`. Použití `blockHash` je ekvivalentní `fromBlock` = `toBlock` = číslo bloku s hashem `blockHash`. Pokud je `blockHash` přítomen v kritériích filtru, pak nejsou povoleny ani `fromBlock`, ani `toBlock`.
 
 ```js
 params: [
@@ -1737,25 +1734,25 @@ params: [
 ]
 ```
 
-**Návratová hodnota**
-Viz [eth_getFilterChanges](#eth_getfilterchanges)
+**Vrací**
+Viz [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Příklad**
 
 ```js
-// Request
+// Požadavek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
 
-Výsledek viz [eth_getFilterChanges](#eth_getfilterchanges)
+Výsledek viz [eth_getFilterChanges](#eth-getfilterchanges)
 
 ## Příklad použití {#usage-example}
 
-### Nasazení kontraktu pomocí JSON_RPC {#deploying-contract}
+### Nasazení kontraktu pomocí JSON-RPC {#deploying-contract}
 
-Tato část obsahuje ukázku, jak nasadit kontrakt pouze pomocí rozhraní RPC. Existují alternativní cesty k nasazení kontraktů, kde je tato složitost abstrahována – například pomocí knihoven postavených na rozhraní RPC, jako jsou [web3.js](https://web3js.readthedocs.io/) a [web3.py](https://github.com/ethereum/web3.py). Tyto abstrakce jsou obecně snáze pochopitelné a méně náchylné k chybám, ale stále je užitečné pochopit, co se děje pod pokličkou.
+Tato část obsahuje ukázku, jak nasadit kontrakt pouze pomocí RPC rozhraní. Existují i alternativní způsoby nasazení kontraktů, kde je tato složitost abstrahována – například pomocí knihoven postavených nad RPC rozhraním, jako jsou [Web3.js](https://web3js.readthedocs.io/) a [Web3.py](https://github.com/ethereum/web3.py). Tyto abstrakce jsou obecně snáze pochopitelné a méně náchylné k chybám, ale přesto je užitečné pochopit, jak to funguje pod pokličkou.
 
-Následuje jednoduchý chytrý kontrakt s názvem `Multiply7`, který bude nasazen pomocí rozhraní JSON-RPC na uzel Ethereum. Tento tutoriál předpokládá, že čtenář již provozuje uzel Geth. Více informací o uzlech a klientech je k dispozici [zde](/developers/docs/nodes-and-clients/run-a-node). Informace o tom, jak spustit HTTP JSON-RPC pro klienty jiné než Geth, naleznete v dokumentaci jednotlivých [klientů](/developers/docs/nodes-and-clients/). Většina klientů má jako výchozí nastavení poskytování služeb na `localhost:8545`.
+Následuje jednoduchý chytrý kontrakt s názvem `Multiply7`, který bude nasazen pomocí rozhraní JSON-RPC na uzel Etherea. Tento tutoriál předpokládá, že čtenář již provozuje uzel Geth. Více informací o uzlech a klientech je k dispozici [zde](/developers/docs/nodes-and-clients/run-a-node). Informace o tom, jak spustit HTTP JSON-RPC pro klienty jiné než Geth, naleznete v dokumentaci k jednotlivým [klientům](/developers/docs/nodes-and-clients/). Většina klientů ve výchozím nastavení běží na `localhost:8545`.
 
 ```javascript
 contract Multiply7 {
@@ -1767,7 +1764,7 @@ contract Multiply7 {
 }
 ```
 
-První věc, kterou je třeba udělat, je ujistit se, že je povoleno rozhraní HTTP RPC. To znamená, že při spuštění poskytneme Gethu příznak `--http`. V tomto příkladu používáme uzel Geth na soukromém vývojovém řetězci. Při tomto přístupu nepotřebujeme ether na skutečné síti.
+První věc, kterou musíte udělat, je ujistit se, že je povoleno rozhraní HTTP RPC. To znamená, že při spuštění poskytneme Gethu příznak `--http`. V tomto příkladu používáme uzel Geth v soukromém vývojovém řetězci. Díky tomuto přístupu nepotřebujeme ether ve skutečné síti.
 
 ```bash
 geth --http --dev console 2>>geth.log
@@ -1775,7 +1772,7 @@ geth --http --dev console 2>>geth.log
 
 Tím se spustí rozhraní HTTP RPC na `http://localhost:8545`.
 
-Ověřit, že rozhraní běží, můžeme načtením coinbase adresy (získáním první adresy z pole účtů) a zůstatku pomocí [curl](https://curl.se). Upozorňujeme, že data v těchto příkladech se na vašem lokálním uzlu budou lišit. Pokud chcete tyto příkazy vyzkoušet, nahraďte parametry požadavku v druhém požadavku curl výsledkem vráceným z prvního.
+Můžeme ověřit, že rozhraní běží, načtením adresy Coinbase (získáním první adresy z pole účtů) a zůstatku pomocí [curl](https://curl.se). Upozorňujeme, že data v těchto příkladech se budou na vašem lokálním uzlu lišit. Pokud si chcete tyto příkazy vyzkoušet, nahraďte parametry požadavku ve druhém požadavku curl výsledkem vráceným z prvního.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[], "id":1}' -H "Content-Type: application/json" localhost:8545
@@ -1785,16 +1782,16 @@ curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635
 {"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
 ```
 
-Protože čísla jsou kódována šestnáctkově, zůstatek je vrácen ve wei jako šestnáctkový řetězec. Pokud chceme mít zůstatek v etheru jako číslo, můžeme použít web3 z konzole Geth.
+Protože jsou čísla kódována hexadecimálně, zůstatek se vrací ve Wei jako hexadecimální řetězec. Pokud chceme mít zůstatek v etheru jako číslo, můžeme použít Web3 z konzole Geth.
 
 ```javascript
 web3.fromWei("0x1639e49bba16280000", "ether")
 // "410"
 ```
 
-Nyní, když máme na našem soukromém vývojovém řetězci nějaký ether, můžeme nasadit kontrakt. Prvním krokem je zkompilovat kontrakt Multiply7 do bajtkódu, který lze odeslat do EVM. Pro instalaci solc, kompilátoru Solidity, postupujte podle [dokumentace Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Možná budete chtít použít starší vydání `solc`, aby odpovídalo [verzi kompilátoru použitého pro náš příklad](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
+Nyní, když je v našem soukromém vývojovém řetězci nějaký ether, můžeme nasadit kontrakt. Prvním krokem je kompilace kontraktu Multiply7 do bajtkódu, který lze odeslat do EVM. Pro instalaci solc, kompilátoru Solidity, postupujte podle [dokumentace Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Možná budete chtít použít starší verzi `solc`, aby odpovídala [verzi kompilátoru použité v našem příkladu](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
 
-Dalším krokem je zkompilovat kontrakt Multiply7 do bajtového kódu, který lze odeslat do EVM.
+Dalším krokem je kompilace kontraktu Multiply7 do bajtkódu, který lze odeslat do EVM.
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
@@ -1804,50 +1801,49 @@ Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-Nyní, když máme zkompilovaný kód, musíme určit, kolik gasu stojí jeho nasazení. Rozhraní RPC má metodu `eth_estimateGas`, která nám poskytne odhad.
+Nyní, když máme zkompilovaný kód, musíme určit, kolik gasu bude stát jeho nasazení. Rozhraní RPC má metodu `eth_estimateGas`, která nám poskytne odhad.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":5,"result":"0x1c31e"}
 ```
 
-A nakonec nasaďte kontrakt.
+A nakonec kontrakt nasadíme.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "gas": "0x1c31e", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 6}' -H "Content-Type: application/json" localhost:8545
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-Transakce je přijata uzlem a vrátí se haš transakce. Tento haš může být použit ke sledování transakce. Dalším krokem je určení adresy, na které je náš kontrakt nasazen. Každá provedená transakce vytvoří potvrzení. Toto potvrzení obsahuje různé informace o transakci, například do kterého bloku byla transakce zahrnuta a kolik gasu spotřeboval EVM. Pokud transakce
-vytváří kontrakt, bude také obsahovat adresu kontraktu. Potvrzení můžeme získat pomocí RPC metody `eth_getTransactionReceipt`.
+Transakce je přijata uzlem a je vrácen hash transakce. Tento hash lze použít ke sledování transakce. Dalším krokem je určení adresy, na které je náš kontrakt nasazen. Každá provedená transakce vytvoří stvrzenku. Tato stvrzenka obsahuje různé informace o transakci, například do kterého bloku byla transakce zahrnuta a kolik gasu EVM spotřeboval. Pokud transakce vytvoří kontrakt, bude obsahovat také adresu kontraktu. Stvrzenku můžeme získat pomocí RPC metody `eth_getTransactionReceipt`.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-Náš kontrakt byl vytvořen na adrese `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Výsledek null namísto potvrzení znamená, že transakce ještě nebyla zahrnuta do bloku. Chvíli počkejte, zkontrolujte, zda běží váš konsensuální klient, a zkuste to znovu.
+Náš kontrakt byl vytvořen na `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Nulový výsledek (null) místo stvrzenky znamená, že transakce ještě nebyla zahrnuta do bloku. Chvíli počkejte, zkontrolujte, zda běží váš konsensuální klient, a zkuste to znovu.
 
 #### Interakce s chytrými kontrakty {#interacting-with-smart-contract}
 
-V tomto příkladu odešleme transakci pomocí `eth_sendTransaction` na metodu `multiply` daného kontraktu.
+V tomto příkladu budeme odesílat transakci pomocí `eth_sendTransaction` do metody `multiply` daného kontraktu.
 
-`eth_sendTransaction` vyžaduje několik argumentů, konkrétně `from`, `to` a `data`. `From` je veřejná adresa našeho účtu a `to` je adresa kontraktu. Argument `data` obsahuje datovou část (payload), která definuje, jaká metoda se má zavolat a s jakými argumenty. Zde přichází na řadu [ABI (application binary interface)](https://docs.soliditylang.org/en/latest/abi-spec.html). ABI je soubor JSON, který definuje, jak definovat a kódovat data pro EVM.
+`eth_sendTransaction` vyžaduje několik argumentů, konkrétně `from`, `to` a `data`. `From` je veřejná adresa našeho účtu a `to` je adresa kontraktu. Argument `data` obsahuje payload (užitečné zatížení), který definuje, jaká metoda musí být volána a s jakými argumenty. Zde vstupuje do hry [ABI (aplikační binární rozhraní)](https://docs.soliditylang.org/en/latest/abi-spec.html). ABI je soubor JSON, který definuje, jak definovat a kódovat data pro EVM.
 
-Bajty datové části (payload) definují, která metoda v kontraktu je volána. Jedná se o první 4 bajty z haše Keccak přes název funkce a typy jejích argumentů, kódované v šestnáctkové soustavě. Funkce multiply přijímá uint, což je alias pro uint256. Zůstane nám tedy:
+Bajty payloadu definují, která metoda v kontraktu je volána. Jedná se o první 4 bajty z Keccak hashe názvu funkce a typů jejích argumentů, kódované hexadecimálně. Funkce multiply přijímá uint, což je alias pro uint256. To nám dává:
 
 ```javascript
 web3.sha3("multiply(uint256)").substring(0, 10)
 // "0xc6888fa1"
 ```
 
-Dalším krokem je zakódování argumentů. Je zde pouze jeden uint256, řekněme hodnota 6. ABI má sekci, která specifikuje, jak kódovat typy uint256.
+Dalším krokem je zakódování argumentů. Existuje pouze jeden uint256, řekněme hodnota 6. ABI má sekci, která specifikuje, jak kódovat typy uint256.
 
-`int<M>: enc(X)` je kódování X v doplňkovém kódu big-endian, doplněné na straně vyššího řádu (vlevo) o 0xff pro záporné X a o nulové bajty pro kladné X tak, aby délka byla násobkem 32 bajtů.
+`int<M>: enc(X)` je big-endian kódování dvojkového doplňku X, doplněné na straně vyššího řádu (vlevo) hodnotou 0xff pro záporné X a nulovými bajty pro kladné X tak, aby délka byla násobkem 32 bajtů.
 
-To se zakóduje na `0000000000000000000000000000000000000000000000000000000000000006`.
+To se zakóduje jako `0000000000000000000000000000000000000000000000000000000000000006`.
 
-Kombinací selektoru funkce a zakódovaného argumentu budou naše data `0xc6888fa10000000000000000000000000000000000000000000000000000000000000006`.
+Spojením selektoru funkce a zakódovaného argumentu budou naše data `0xc6888fa10000000000000000000000000000000000000000000000000000000000000006`.
 
 Toto lze nyní odeslat do uzlu:
 
@@ -1856,7 +1852,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":8,"jsonrpc":"2.0","result":"0x759cf065cbc22e9d779748dc53763854e5376eea07409e590c990eafc0869d74"}
 ```
 
-Jelikož byla odeslána transakce, vrátil se její haš. Získání potvrzení vrátí:
+Protože byla odeslána transakce, byl vrácen hash transakce. Načtení stvrzenky poskytne:
 
 ```javascript
 {
@@ -1880,19 +1876,19 @@ Jelikož byla odeslána transakce, vrátil se její haš. Získání potvrzení 
 }
 ```
 
-Potvrzení obsahuje log. Tento log byl vygenerován EVM při provedení transakce a zahrnut do potvrzení. Funkce `multiply` ukazuje, že událost `Print` byla vyvolána se vstupem vynásobeným 7. Vzhledem k tomu, že argument pro událost `Print` byl uint256, můžeme jej dekódovat podle pravidel ABI, což nám zanechá očekávanou desetinnou hodnotu 42. Kromě dat stojí za zmínku, že témata lze použít k určení, která událost vytvořila záznam:
+Stvrzenka obsahuje log. Tento log byl vygenerován EVM při provádění transakce a zahrnut do stvrzenky. Funkce `multiply` ukazuje, že byla vyvolána událost `Print` se vstupem vynásobeným 7. Vzhledem k tomu, že argumentem pro událost `Print` byl uint256, můžeme jej dekódovat podle pravidel ABI, což nám poskytne očekávanou desítkovou hodnotu 42. Kromě dat stojí za zmínku, že témata (topics) lze použít k určení, která událost vytvořila log:
 
 ```javascript
 web3.sha3("Print(uint256)")
 // "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
 ```
 
-Toto byl jen stručný úvod do některých z nejběžnějších úkolů, demonstrující přímé použití JSON-RPC.
+Toto byl jen stručný úvod do některých nejběžnějších úloh, který demonstruje přímé použití JSON-RPC.
 
 ## Související témata {#related-topics}
 
 - [Specifikace JSON-RPC](http://www.jsonrpc.org/specification)
 - [Uzly a klienti](/developers/docs/nodes-and-clients/)
 - [JavaScript API](/developers/docs/apis/javascript/)
-- [Backend API](/developers/docs/apis/backend/)
+- [Backendová API](/developers/docs/apis/backend/)
 - [Exekuční klienti](/developers/docs/nodes-and-clients/#execution-clients)

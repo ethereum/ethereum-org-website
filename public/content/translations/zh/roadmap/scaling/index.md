@@ -1,58 +1,58 @@
 ---
-title: "以太坊扩容"
-description: "卷叠链下批量处理交易，从而降低用户的成本。 然而，目前卷叠使用数据的方法过于昂贵，这限制了交易费用的降低。 Proto-Danksharding 解决了这个问题。"
+title: "扩容以太坊"
+description: "汇总将交易在链下批量处理，从而降低用户的成本。然而，目前汇总使用数据的方式过于昂贵，限制了交易成本的降低空间。Proto-Danksharding 解决了这个问题。"
 lang: zh
 image: /images/roadmap/roadmap-transactions.png
 alt: "以太坊路线图"
 template: roadmap
 ---
 
-以太坊使用[二层网络](/layer-2/#rollups)（也称为“卷叠”）进行扩展，卷叠批量处理交易并将结果发送到以太坊上。 尽管卷叠比以太坊主网便宜多达八倍，但还可以进一步优化，以降低最终用户的成本。 卷叠还依赖于一些中心化的组件，随着卷叠的成熟，开发者可以逐步移除这些组件。
+以太坊通过 [二层网络](/layer-2/#rollups)（也称为汇总）进行扩容，汇总将交易批量处理并将结果发送到以太坊。尽管汇总的成本比以太坊主网低多达八倍，但仍有可能进一步优化汇总以降低最终用户的成本。汇总还依赖于一些中心化组件，随着汇总的成熟，开发人员可以移除这些组件。
 
-<Alert variant="update" className="mb-8">
+<Alert variant="update">
 <AlertContent>
 <AlertTitle className="mb-4">
   交易成本
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>目前，卷叠比以太坊一层网络便宜大约 <strong>5-20 倍</strong></li>
-    <li>零知识卷叠将很快把费用降低约 <strong>40-100 倍</strong></li>
-    <li>即将进行的以太坊变更会再次扩容 <strong>100-1000 倍</strong></li>
-    <li style={{ marginBottom: 0 }}>用户将从中受益，<strong>交易成本降至不足 0.001 美元</strong></li>
+    <li>如今的汇总比以太坊一层网络 (l1) 便宜 <strong>约 5-20 倍</strong></li>
+    <li>ZK-rollup 很快将使费用降低 <strong>约 40-100 倍</strong></li>
+    <li>以太坊即将进行的变更将提供另外 <strong>约 100-1000 倍</strong> 的扩容</li>
+ <li style={{ marginBottom: 0 }}>用户将受益于 <strong>成本低于 0.001 美元</strong> 的交易</li>
   </ul>
 </AlertContent>
 </Alert>
 
 ## 降低数据成本 {#making-data-cheaper}
 
-卷叠会收集、执行大量的交易，并将结果提交到以太坊。 这会生成大量数据，这些数据需要公开，以便任何人都能执行交易并验证卷叠运营商的诚实性。 如果有人发现交易有出入，就会提出质疑。
+汇总收集大量交易，执行它们并将结果提交给以太坊。这会产生大量需要公开可用的数据，以便任何人都可以自行执行交易并验证 Rollup 操作员是否诚实。如果有人发现差异，他们可以提出挑战。
 
 ### Proto-Danksharding {#proto-danksharding}
 
-过去卷叠数据永久存储在以太坊上，这导致费用高昂。 用户在卷叠中支付的超过 90% 的交易费用是由于这种数据存储造成的。 为了减少交易费用，我们可以将数据转移到新的临时“二进制大对象”中存储。 由于二进制大对象不是永久性存储，所以相对便宜。一旦不再需要这些数据，可以将它们从以太坊中删除。 长期存储卷叠数据成为需要者的责任，例如卷叠运营者、交易所、索引服务等。 向以太坊添加数据块交易是被称作“Proto-Danksharding”的升级的一部分。
+过去，Rollup 数据一直永久存储在以太坊上，这非常昂贵。用户在汇总上支付的交易成本中，超过 90% 是由于这种数据存储造成的。为了降低交易成本，我们可以将数据转移到一个新的临时“斑点”存储中。斑点更便宜，因为它们不是永久性的；一旦不再需要，它们就会从以太坊中删除。长期存储 Rollup 数据成为需要它的人的责任，例如 Rollup 操作员、交易所、索引服务等。向以太坊添加斑点交易是被称为“Proto-Danksharding”的升级的一部分。
 
-使用 Proto-Danksharding，可以向以太坊区块中添加许多二进制大对象。 这使得以太坊的吞吐量能够再次大幅（>100 倍）提升，并大幅降低交易成本。
+借助 Proto-Danksharding，可以向以太坊区块添加许多斑点。这使得以太坊的吞吐量实现了另一次大幅（>100 倍）提升，并大幅降低了交易成本。
 
-### Danksharding {#danksharding}
+### 丹克分片 {#danksharding}
 
-扩展 blob 数据的第二阶段很复杂，因为它需要用新方法来检查网络上是否有可用的卷叠数据，并且依赖于[验证者](/glossary/#validator)将其[区块](/glossary/#block)构建和区块提议的职责分开。 同时，它还需要以一种加密方式证明验证者已验证二进制大对象数据的小子集。
+扩展斑点数据的第二阶段很复杂，因为它需要新的方法来检查网络上是否可用 Rollup 数据，并且依赖于 [验证者](/glossary/#validator) 分离其 [区块](/glossary/#block) 构建和区块提案职责。它还需要一种方法来通过密码学证明验证者已经验证了斑点数据的一小部分。
 
-这第二步被称为 ["Danksharding"](/roadmap/danksharding/)。 实施工作仍在继续，在一些先决条件上已取得进展，例如[分离区块构建和区块提议](/roadmap/pbs)以及新的网络设计，这些设计使网络能够通过一次随机抽样几千字节来有效确认数据可用，这被称为[数据可用性采样 (DAS)](/developers/docs/data-availability)。
+这第二步被称为 [“丹克分片”](/roadmap/danksharding/)。实施工作仍在继续，在诸如 [分离区块构建和区块提案](/roadmap/pbs) 等先决条件方面取得了进展，并且新的网络设计使网络能够通过每次随机采样几千字节来有效地确认数据可用，这被称为 [数据可用性采样 (DAS)](/developers/docs/data-availability)。
 
-<ButtonLink variant="outline-color" href="/roadmap/danksharding/">关于 Danksharding 的更多信息</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">更多关于丹克分片的信息</ButtonLink>
 
-## 卷叠去中心化 {#decentralizing-rollups}
+## 去中心化汇总 {#decentralizing-rollups}
 
-[卷叠](/layer-2)已在为以太坊扩容。 一个[丰富的卷叠项目生态系统](https://l2beat.com/scaling/tvs)让用户能够在一系列安全保证下，快速、低成本地进行交易。 然而，卷叠目前是通过中心化的排序者（在提交给以太坊之前进行所有交易处理和聚合的计算机）来引导的。 这容易审查，因为这些排序运营商可能会受到制裁、受贿、或因其他原因妥协。 与此同时，[卷叠在验证传入数据的方式上也存在差异](https://l2beat.com/scaling/summary)。 最好的方法是让“证明者”提交[欺诈证明](/glossary/#fraud-proof)或有效性证明，但并非所有卷叠都已实现这一点。 甚至那些使用了有效性/欺诈证明的卷叠也仅使用少数已知的证明者。 因此，以太坊扩容的下一个重要步骤是向更多人分配运行排序者和证明者的责任。
+[汇总](/layer-2) 已经在对以太坊进行扩容。一个 [丰富的 Rollup 项目生态系统](https://l2beat.com/scaling/tvs) 正在使用户能够快速、廉价地进行交易，并提供一系列安全保证。然而，汇总在启动时使用了中心化的定序器（在将交易提交给以太坊之前完成所有交易处理和聚合的计算机）。这很容易受到审查，因为定序器操作员可能会受到制裁、贿赂或以其他方式被破坏。同时，[汇总](https://l2beat.com/scaling/summary) 验证传入数据的方式各不相同。最好的方法是由“证明者”提交 [欺诈证明](/glossary/#fraud-proof) 或有效性证明，但并非所有汇总都已达到这一步。即使是那些确实使用有效性/欺诈证明的汇总，也只使用一小部分已知的证明者。因此，扩容以太坊的下一个关键步骤是将运行定序器和证明者的责任分配给更多人。
 
-<ButtonLink variant="outline-color" href="/developers/docs/scaling/">关于卷叠的更多信息</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/scaling/">更多关于汇总的信息</ButtonLink>
 
 ## 当前进展 {#current-progress}
 
-Danksharding（以太坊未来的分片方案）的前期版本Proto-Danksharding 作为 Cancun-Deneb ("Dencun") 网络升级的一部分，在 2024 年 3 月成功部署完成。 从此，rollups 就开始使用 blob 存储，从而降低了用户的交易成本，并在 blobs 中处理了数百万笔交易。
+Proto-Danksharding 已作为 2024 年 3 月坎昆-德内布（“Dencun”）网络升级的一部分成功实施。自实施以来，汇总已开始利用斑点存储，从而降低了用户的交易成本，并在斑点中处理了数百万笔交易。
 
-全面的分片方案（Danksharding ）仍在构建中，相关前提工作也在不断推进，例如 PBS（提议者-构建者分离） 和 DAS（数据可用性采样）。 rollup 基础设施的去中心化是一个渐进的过程——目前有很多的 rollups 因为它们正在构建的系统略有不同，所以它们的去中心化进度也会不一样。
+完整丹克分片的工作仍在继续，在其先决条件（如提议者-构建者分离 (PBS) 和数据可用性采样 (DAS)）方面取得了进展。去中心化 Rollup 基础设施是一个渐进的过程——有许多不同的汇总正在构建略有不同的系统，并将以不同的速度完全去中心化。
 
-[关于 Dencun 网络升级及其影响的更多信息](/roadmap/dencun/)
+[更多关于 Dencun 网络升级及其影响的信息](/roadmap/dencun/)
 
 <QuizWidget quizKey="scaling" />

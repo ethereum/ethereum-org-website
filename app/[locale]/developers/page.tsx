@@ -1,11 +1,11 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
+import ContentFeedback from "@/components/ContentFeedback"
 import { CopyButton } from "@/components/CopyToClipboard"
-import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
@@ -16,6 +16,8 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardFooter,
+  CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -24,14 +26,18 @@ import {
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
 import { VStack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
+import { TagsInlineText } from "@/components/ui/tag"
 import { TerminalTypewriter } from "@/components/ui/terminal-typewriter"
 
+import { getBlogFallbackHero } from "@/lib/utils/blog"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { formatDateRange } from "@/lib/utils/date"
+import { formatDate, formatDateRange } from "@/lib/utils/date"
+import { getBlogPostsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
@@ -48,17 +54,18 @@ import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-s
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
 import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
 import dogeImage from "@/public/images/doge-computer.png"
-import EventFallback from "@/public/images/events/event-placeholder.png"
+import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
-const H3 = (props: ChildOnlyProp) => <h3 className="mb-8 mt-10" {...props} />
+
+const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
 
 const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />
 
 const Column = (props: ChildOnlyProp) => (
-  <div className="mb-6 me-8 w-full flex-1 basis-1/3" {...props} />
+  <div className="me-8 mb-6 w-full flex-1 basis-1/3" {...props} />
 )
 const RightColumn = (props: ChildOnlyProp) => (
-  <div className="mb-6 me-0 w-full flex-1 basis-1/3" {...props} />
+  <div className="me-0 mb-6 w-full flex-1 basis-1/3" {...props} />
 )
 
 const Scroller = ({
@@ -76,43 +83,24 @@ const Scroller = ({
   )
 }
 
-const WhyGrid = () => {
-  const items = [
-    {
-      heading: "Money you can program",
-      description:
-        "Write code that defines how value moves, when, and to whom. No banks, no intermediaries, just logic you define.",
-    },
-    {
-      heading: "Future-proof skills",
-      description:
-        "Learn the building blocks of the next internet. The tech might evolve, but the principles of web3 are here to stay.",
-    },
-    {
-      heading: "Censorship resistance",
-      description:
-        "Build projects and commerce that can't be silenced by governments, corporations, or algorithms. If it matters, it stays online.",
-    },
-    {
-      heading: "Digital sovereignty",
-      description:
-        "Own your identity, assets, and creations online without relying on platforms that can delete you.",
-    },
-  ]
-
+const WhyGrid = ({
+  items,
+}: {
+  items: { heading: string; description: string }[]
+}) => {
   return (
     <div
       className={cn(
         "rounded-4xl border border-accent-c/20",
         "grid grid-cols-1 gap-6 p-8 md:grid-cols-2 md:p-14",
-        "bg-gradient-to-b from-accent-c/5 from-[60%] to-accent-c/15"
+        "bg-linear-to-b from-accent-c/5 from-[60%] to-accent-c/15"
       )}
     >
       {items.map(({ heading, description }) => (
         <div className="flex gap-1.5" key={heading}>
           <CheckCircle />
           <div className="space-y-1">
-            <h3 className="text-lg">{heading}</h3>
+            <h3 className="text-lg font-bold">{heading}</h3>
             <p className="text-body-medium">{description}</p>
           </div>
         </div>
@@ -120,16 +108,12 @@ const WhyGrid = () => {
     </div>
   )
 }
-const DevelopersPage = async ({ params }: { params: PageParams }) => {
+const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
-  const tCommon = await getTranslations({
-    locale,
-    namespace: "common",
-  })
+  setRequestLocale(locale)
+  const t = await getTranslations("page-developers-index")
+  const tCommon = await getTranslations("common")
 
   const paths = await getBuilderPaths()
   const speedRunDetails = {
@@ -138,9 +122,30 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
     ctaLabel: t("page-developers-speedrunethereum-link"),
   }
 
+  const whyGridItems = [
+    {
+      heading: t("page-developers-why-grid-money-heading"),
+      description: t("page-developers-why-grid-money-desc"),
+    },
+    {
+      heading: t("page-developers-why-grid-skills-heading"),
+      description: t("page-developers-why-grid-skills-desc"),
+    },
+    {
+      heading: t("page-developers-why-grid-censorship-heading"),
+      description: t("page-developers-why-grid-censorship-desc"),
+    },
+    {
+      heading: t("page-developers-why-grid-sovereignty-heading"),
+      description: t("page-developers-why-grid-sovereignty-desc"),
+    },
+  ]
+
   const courses = await getVideoCourses()
 
   const hackathons = (await getHackathons()).slice(0, 5)
+
+  const recentPosts = (await getBlogPostsData(locale)).slice(0, 3)
 
   const { contributors } = await getAppPageContributorInfo(
     "developers",
@@ -172,13 +177,13 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
 
             <p>{t("page-developers-build-section-desc")}</p>
             {/* Desktop */}
-            <div className="grid gap-6 max-md:hidden md:grid-cols-2 lg:grid-cols-4">
+            <Grid balanced={4} className="max-md:hidden">
               {paths.map((path, idx) => (
                 <BuilderCard path={path} key={idx} />
               ))}
 
               <SpeedRunCard {...speedRunDetails} />
-            </div>
+            </Grid>
 
             {/* Mobile */}
             <div className="-mx-8 md:hidden">
@@ -217,7 +222,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                 </BigNumber>
               </div>
             </div>
-            <WhyGrid />
+            <WhyGrid items={whyGridItems} />
           </Section>
 
           <Section
@@ -273,16 +278,22 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             </h2>
 
             {/* Quickstart your idea */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
-              <Image
-                src={scaffoldDebugScreenshot}
-                alt="Scaffold-ETH 2 debug screenshot"
-                sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                className="h-56 object-cover"
-              />
-              <div>
-                <h3>{t("page-developers-jump-right-in-title")}</h3>
-                <p className="text-sm text-body-medium">
+            <Card variant="nested" size="lg">
+              <CardHeader>
+                <CardBanner background="none" size="lg">
+                  <Image
+                    src={scaffoldDebugScreenshot}
+                    alt=""
+                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                    className="h-56 object-cover"
+                  />
+                </CardBanner>
+              </CardHeader>
+              <CardContent>
+                <CardTitle size="lg">
+                  {t("page-developers-jump-right-in-title")}
+                </CardTitle>
+                <CardParagraph>
                   {t("page-developers-quickstart-scaffold-subtext")}{" "}
                   <Link
                     href="https://docs.scaffoldeth.io/"
@@ -295,27 +306,26 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                   >
                     {t("page-developers-quickstart-scaffold-docs")}
                   </Link>
-                </p>
-              </div>
-              <div className="flex items-center rounded-lg border bg-background px-3 py-1">
-                <span className="flex-1 font-mono text-sm">
-                  npx create-eth@latest
-                </span>
-                <CopyButton
-                  message="npx create-eth@latest"
-                  size="sm"
-                  customEventOptions={{
-                    eventCategory: "mid_boxes",
-                    eventAction: "click",
-                    eventName: "scaffold-npx-copy",
-                  }}
-                />
-              </div>
+                </CardParagraph>
 
-              <div>
+                <div className="flex items-center rounded-lg border bg-background px-3 py-1">
+                  <span className="flex-1 font-mono text-sm">
+                    npx create-eth@latest
+                  </span>
+                  <CopyButton
+                    message="npx create-eth@latest"
+                    size="sm"
+                    customEventOptions={{
+                      eventCategory: "mid_boxes",
+                      eventAction: "click",
+                      eventName: "scaffold-npx-copy",
+                    }}
+                  />
+                </div>
+              </CardContent>
+              <CardFooter>
                 <Link
                   href="https://docs.scaffoldeth.io/llms-full.txt"
-                  className="block"
                   customEventOptions={{
                     eventCategory: "mid_boxes",
                     eventAction: "click",
@@ -324,25 +334,30 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                 >
                   Scaffold-ETH 2 <code>llms-full.txt</code>
                 </Link>
-              </div>
+              </CardFooter>
             </Card>
 
             {/* Get help */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
-              <Image
-                src={stackExchangeScreenshot}
-                alt="Ethereum Stack Exchange screenshot"
-                sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                className="max-h-56 w-full object-cover object-top"
-              />
-              <div>
-                <h3>{t("page-developers-get-help-title")}</h3>
-                <p className="text-sm text-body-medium">
+            <Card variant="nested" size="lg">
+              <CardHeader>
+                <CardBanner background="none" size="lg">
+                  <Image
+                    src={stackExchangeScreenshot}
+                    alt=""
+                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                    className="object-top"
+                  />
+                </CardBanner>
+              </CardHeader>
+              <CardContent>
+                <CardTitle size="lg">
+                  {t("page-developers-get-help-title")}
+                </CardTitle>
+                <CardParagraph>
                   {t("page-developers-get-help-desc")}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-6">
+                </CardParagraph>
+              </CardContent>
+              <CardFooter>
                 <ButtonLink
                   variant="outline"
                   isSecondary
@@ -355,32 +370,29 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                 >
                   {t("page-developers-stack-exchange")}
                 </ButtonLink>
-                {/* <ButtonLink
-                variant="glow"
-                href="#some-magical-AI-link"
-                className="text-body"
-                >
-                {t("page-developers-ask-ai")}
-                </ButtonLink> */}
-              </div>
+              </CardFooter>
             </Card>
 
             {/* Resources */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
-              <Image
-                src={resourcesBanner}
-                alt="Banner showing four resource app icons"
-                sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                className="-my-2 max-h-60 w-full object-contain" // -my-2 accounts for image shadows
-              />
-              <div>
-                <h3>{t("page-developers-resources-title")}</h3>
-                <p className="text-sm text-body-medium">
+            <Card variant="nested" size="lg">
+              <CardHeader>
+                <CardBanner background="none" size="lg" fit="contain">
+                  <Image
+                    src={resourcesBanner}
+                    alt=""
+                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                  />
+                </CardBanner>
+              </CardHeader>
+              <CardContent>
+                <CardTitle size="lg">
+                  {t("page-developers-resources-title")}
+                </CardTitle>
+                <CardParagraph>
                   {t("page-developers-resources-desc")}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-6">
+                </CardParagraph>
+              </CardContent>
+              <CardFooter>
                 <ButtonLink
                   variant="outline"
                   isSecondary
@@ -393,25 +405,30 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                 >
                   {t("page-developers-play-code")}
                 </ButtonLink>
-              </div>
+              </CardFooter>
             </Card>
 
             {/* Tutorials */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
-              <Image
-                src={tutorialTagsBanner}
-                alt="Banner displaying multiple learning topics in a tag cloud"
-                sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                className="max-h-56 w-full object-contain"
-              />
-              <div>
-                <h3>{t("page-developers-tutorials-title")}</h3>
-                <p className="text-sm text-body-medium">
+            <Card variant="nested" size="lg">
+              <CardHeader>
+                <CardBanner background="none" size="lg" fit="contain">
+                  <Image
+                    src={tutorialTagsBanner}
+                    // src={resourcesBanner}
+                    alt=""
+                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                  />
+                </CardBanner>
+              </CardHeader>
+              <CardContent>
+                <CardTitle size="lg">
+                  {t("page-developers-tutorials-title")}
+                </CardTitle>
+                <CardParagraph>
                   {t("page-developers-tutorials-desc")}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-6">
+                </CardParagraph>
+              </CardContent>
+              <CardFooter>
                 <ButtonLink
                   variant="outline"
                   isSecondary
@@ -424,7 +441,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                 >
                   {t("page-developers-learn-tutorials-cta")}
                 </ButtonLink>
-              </div>
+              </CardFooter>
             </Card>
           </Section>
 
@@ -448,6 +465,85 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
               <VideoCourseSwiper courses={courses} />
             </div>
           </Section>
+
+          {recentPosts.length > 0 && (
+            <Section id="blog" className="space-y-4 py-10 md:py-12">
+              <h2>{t("page-developers-blog-title")}</h2>
+              <p>{t("page-developers-blog-desc")}</p>
+
+              <EdgeScrollContainer className="[--edge-spacing:2rem]">
+                {recentPosts.map((post) => (
+                  <EdgeScrollItem
+                    key={post.href}
+                    asChild
+                    className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
+                  >
+                    <Card
+                      href={post.href}
+                      customEventOptions={{
+                        eventCategory: "builder-blog",
+                        eventAction: "click",
+                        eventName: post.title,
+                      }}
+                      variant="ghost"
+                      size="sm"
+                    >
+                      <CardHeader>
+                        <CardBanner size="sm">
+                          {post.image ? (
+                            <Image
+                              src={post.image}
+                              alt=""
+                              width={1200}
+                              height={630}
+                              sizes="448px"
+                            />
+                          ) : (
+                            <Image
+                              src={getBlogFallbackHero(post.href)}
+                              alt=""
+                              sizes="448px"
+                            />
+                          )}
+                        </CardBanner>
+                      </CardHeader>
+                      <CardContent>
+                        <CardTitle className="line-clamp-2">
+                          {post.title}
+                        </CardTitle>
+                        <TagsInlineText
+                          list={[post.author, post.team]}
+                          variant="light"
+                          className="italic"
+                        />
+                        <CardParagraph size="sm" className="line-clamp-3">
+                          {post.description}
+                        </CardParagraph>
+                      </CardContent>
+                      <CardFooter>
+                        <CardParagraph size="sm">
+                          {formatDate(post.published, locale)}
+                        </CardParagraph>
+                      </CardFooter>
+                    </Card>
+                  </EdgeScrollItem>
+                ))}
+              </EdgeScrollContainer>
+
+              <div className="flex justify-center max-sm:*:w-full">
+                <ButtonLink
+                  href="/latest/"
+                  customEventOptions={{
+                    eventCategory: "builder-blog",
+                    eventAction: "click",
+                    eventName: "view-all-updates",
+                  }}
+                >
+                  {t("page-developers-blog-view-all")}
+                </ButtonLink>
+              </div>
+            </Section>
+          )}
 
           <Section
             id="docs"
@@ -497,6 +593,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                   className="mt-16 hidden max-w-[400px] lg:block"
                   src={dogeImage}
                   alt={t("page-assets-doge")}
+                  sizes="400px"
                 />
               </Column>
               <Column>
@@ -593,7 +690,10 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                   <EdgeScrollItem
                     key={event.id}
                     asChild
-                    className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
+                    className={cn(
+                      "ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]",
+                      "*:max-w-md *:min-w-72 *:flex-1"
+                    )}
                   >
                     <Card
                       href={link}
@@ -602,13 +702,14 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                         eventAction: "click",
                         eventName: title,
                       }}
-                      className="min-w-72 max-w-md flex-1"
+                      variant="ghost"
+                      size="sm"
                     >
-                      <CardBanner className="h-36">
+                      <CardBanner size="sm">
                         {bannerImage ? (
                           <CardImage src={bannerImage} />
                         ) : (
-                          <Image src={EventFallback} alt="" sizes="276px" />
+                          <Image src={fallbackThumbnail} alt="" sizes="276px" />
                         )}
                       </CardBanner>
                       <CardContent>
@@ -646,8 +747,8 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             <div
               className={cn(
                 "mx-auto max-w-screen-lg",
-                "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
-                "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
+                "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(var(--radius-4xl)+1px)] before:content-['']", // Border/gradient positioning
+                "before:bg-linear-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
                 "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
               )}
             >
@@ -685,23 +786,19 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
           </Section>
         </MainArticle>
 
-        <FeedbackCard />
+        <ContentFeedback />
       </VStack>
     </>
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
+  const t = await getTranslations("page-developers-index")
 
   return await getMetadata({
     locale,

@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-08T10:38:04.238Z",
+  "englishManifestHash": "77b423f0ac62",
+  "placeholderOrder": [
+    "LINK-c705fb",
+    "CODE-1f97d6",
+    "CODE-1b16b1",
+    "LINK-d9ee22",
+    "LINK-efe957",
+    "CODE-8470db",
+    "CODE-8ce86a",
+    "CODE-7a0185",
+    "LINK-6580d4"
+  ],
+  "placeholderMap": {
+    "CODE-1f97d6": {
+      "type": "inline-code",
+      "values": {
+        "content": "n+1"
+      }
+    },
+    "CODE-1b16b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "n"
+      }
+    },
+    "CODE-8470db": {
+      "type": "inline-code",
+      "values": {
+        "content": "2^256 * 5 / N"
+      }
+    },
+    "CODE-8ce86a": {
+      "type": "inline-code",
+      "values": {
+        "content": "N"
+      }
+    },
+    "CODE-7a0185": {
+      "type": "inline-code",
+      "values": {
+        "content": "5/N"
+      }
+    },
+    "LINK-c705fb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    },
+    "LINK-d9ee22": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/distributed-validator-specs"
+      }
+    },
+    "LINK-efe957": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763"
+      }
+    },
+    "LINK-6580d4": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/secret-non-single-leader-election/11789"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:38:04.238Z",
+      "status": "success"
+    }
+  }
+}
