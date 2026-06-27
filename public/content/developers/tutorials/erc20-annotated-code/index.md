@@ -502,7 +502,7 @@ other contract functions. By convention private functions are named `_<something
 variables.
 
 Normally in Solidity we use `msg.sender` for the message sender. However, that breaks
-[OpenGSN](http://opengsn.org/). If we want to allow etherless transactions with our token, we
+[OpenGSN](https://www.opengsn.org/). If we want to allow etherless transactions with our token, we
 need to use `_msgSender()`. It returns `msg.sender` for normal transactions, but for etherless ones
 return the original signer and not the contract that relayed the message.
 
