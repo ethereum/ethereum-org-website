@@ -16,7 +16,11 @@ import { getPlaylistBySlug } from "@/data/listen-to-feature/playlist"
 import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
 import { useTranslation } from "@/hooks/useTranslation"
 
-const ListenToPlayer = ({ slug }: { slug: string }) => {
+type ListenToPlayerProps = {
+  slug: string
+  className?: string
+}
+const ListenToPlayer = ({ slug, className }: ListenToPlayerProps) => {
   const locale = useLocale()
   const { setShowFeedbackWidget } = useContext(FeedbackWidgetContext)
   const { playlist, index } = getPlaylistBySlug(slug)
@@ -222,7 +226,9 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
         isPlaying={isPlaying}
         handlePlayPause={handlePlayPause}
         timeRemaining={timeRemaining}
+        className={className}
       />
+
       <Portal>
         <div
           className={cn(
