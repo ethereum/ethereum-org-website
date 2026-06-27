@@ -105,6 +105,7 @@ const WalletSubComponent = ({
                             <span className="whitespace-nowrap">
                               {filterLabelLastWord}
                               <Tooltip
+                                nested
                                 content={
                                   <p className="text-body">
                                     {item.description}
