@@ -21,17 +21,21 @@ interface TreeItem {
 /**
  * Shared committer for parallel language translation.
  *
- * Creates individual chained commits (each parented on the previous)
- * so multiple languages can interleave safely. Each file appears on the
- * branch immediately for crash safety.
+ * commitFile() only creates a git blob and records it per-language; it does
+ * NOT touch the branch ref. squashByLanguage() (called once after all tasks
+ * drain) builds the real commit chain from the recorded blobs and force-updates
+ * the ref a single time.
  *
- * After all translations complete, call squashByLanguage() to collapse
- * the individual commits into one per language for a clean history.
+ * This deliberately does NOT advance the branch ref per file. An earlier design
+ * created a chained commit + ref update for every file, but under the pool's
+ * concurrency those per-file ref updates raced and returned 422 "not a fast
+ * forward". A task that threw on that 422 had already recorded its content blob
+ * but aborted before recording its manifest blob(s), so the squash shipped
+ * content WITHOUT its manifest -- silently desyncing the manifest tracking that
+ * the whole incremental pipeline depends on. The per-file ref update was also
+ * redundant: the squash rebuilds everything from blobsByLanguage regardless.
  */
 export class SharedCommitter {
-  private currentCommitSha = ""
-  private currentTreeSha = ""
-  private queue: Promise<void> = Promise.resolve()
   private baseUrl = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}`
   /** Track blob SHAs per language for squashing */
   private blobsByLanguage = new Map<string, TreeItem[]>()
@@ -40,7 +44,7 @@ export class SharedCommitter {
 
   constructor(private branch: string) {}
 
-  /** Snapshot the current branch state. */
+  /** Snapshot the base commit the squash will build on top of. */
   async init(): Promise<void> {
     const refRes = await fetchWithRetry(
       `${this.baseUrl}/git/ref/heads/${this.branch}`,
@@ -51,48 +55,24 @@ export class SharedCommitter {
       throw new Error(`SharedCommitter init ref (${refRes.status}): ${body}`)
     }
     const refData: { object: { sha: string } } = await refRes.json()
-    this.currentCommitSha = refData.object.sha
     this.originalBaseSha = refData.object.sha
-
-    const commitRes = await fetchWithRetry(
-      `${this.baseUrl}/git/commits/${this.currentCommitSha}`,
-      { headers: gitHubBearerHeaders }
-    )
-    if (!commitRes.ok) {
-      const body = await commitRes.text().catch(() => "")
-      throw new Error(
-        `SharedCommitter init commit (${commitRes.status}): ${body}`
-      )
-    }
-    const commitData: { tree: { sha: string } } = await commitRes.json()
-    this.currentTreeSha = commitData.tree.sha
   }
 
   /**
-   * Queue a file commit. Serialized so concurrent languages don't race.
-   * Each commit chains on the previous (not amending).
+   * Record a file for committing: creates a git blob and tracks it under its
+   * language. Does NOT touch the branch ref -- squashByLanguage() builds the
+   * commit chain from the tracked blobs at the end of the run.
+   *
+   * Safe to call concurrently across languages and files: blob creation is an
+   * independent API call and the per-language array push is atomic on the JS
+   * event loop. Crucially, this never throws on a branch-ref race, so a task
+   * always reaches its manifest commits after its content commit.
    */
-  commitFile(
+  async commitFile(
     filePath: string,
     content: string,
     language: string
   ): Promise<void> {
-    const result = this.queue.then(() =>
-      this._doCommit(filePath, content, language)
-    )
-    this.queue = result.then(
-      () => {},
-      () => {}
-    )
-    return result
-  }
-
-  private async _doCommit(
-    filePath: string,
-    content: string,
-    language: string
-  ): Promise<void> {
-    // 1. Create blob
     const blobRes = await fetchWithRetry(`${this.baseUrl}/git/blobs`, {
       method: "POST",
       headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
@@ -116,62 +96,12 @@ export class SharedCommitter {
       sha: blobData.sha,
     }
 
-    // Track blob for squashing
     if (!this.blobsByLanguage.has(language)) {
       this.blobsByLanguage.set(language, [])
     }
     this.blobsByLanguage.get(language)!.push(item)
 
-    // 2. Create tree on top of current tree
-    const treeRes = await fetchWithRetry(`${this.baseUrl}/git/trees`, {
-      method: "POST",
-      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
-      body: JSON.stringify({
-        base_tree: this.currentTreeSha,
-        tree: [item],
-      }),
-    })
-    if (!treeRes.ok) {
-      const body = await treeRes.text().catch(() => "")
-      throw new Error(`Failed to create tree (${treeRes.status}): ${body}`)
-    }
-    const treeData: { sha: string } = await treeRes.json()
-
-    // 3. Create commit parented on the current tip (chaining, not amending)
-    const commitRes = await fetchWithRetry(`${this.baseUrl}/git/commits`, {
-      method: "POST",
-      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
-      body: JSON.stringify({
-        message: `i18n(${language}): ${filePath.split("/").pop()}`,
-        tree: treeData.sha,
-        parents: [this.currentCommitSha],
-      }),
-    })
-    if (!commitRes.ok) {
-      const body = await commitRes.text().catch(() => "")
-      throw new Error(`Failed to create commit (${commitRes.status}): ${body}`)
-    }
-    const commitData: { sha: string } = await commitRes.json()
-
-    // 4. Update branch ref (no force needed -- linear chain)
-    const updateRes = await fetchWithRetry(
-      `${this.baseUrl}/git/refs/heads/${this.branch}`,
-      {
-        method: "PATCH",
-        headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
-        body: JSON.stringify({ sha: commitData.sha }),
-      }
-    )
-    if (!updateRes.ok) {
-      const body = await updateRes.text().catch(() => "")
-      throw new Error(`Failed to update ref (${updateRes.status}): ${body}`)
-    }
-
-    // Advance internal state
-    this.currentCommitSha = commitData.sha
-    this.currentTreeSha = treeData.sha
-
-    debugLog(`SharedCommitter [${language}]: committed ${filePath}`)
+    debugLog(`SharedCommitter [${language}]: recorded ${filePath}`)
   }
 
   /**
@@ -264,10 +194,6 @@ export class SharedCommitter {
         `Failed to update ref after squash (${updateRes.status}): ${body}`
       )
     }
-
-    // Update internal state
-    this.currentCommitSha = parentSha
-    this.currentTreeSha = currentTree
 
     console.log(
       `[SharedCommitter] Squash complete: ${languages.length} commits`
