@@ -170,3 +170,16 @@
 @utility animate-pause {
   animation-play-state: paused;
 }
+
+/* Outlined floating surface (tooltip + popover): 1px themed border + lift drawn
+   entirely as drop-shadows so the outline wraps the Radix Arrow too. See the
+   design-system skill (Floating surfaces) for the why. */
+@utility popover-outline {
+  @apply [--shadow-opacity:0.1] dark:[--shadow-opacity:0.15];
+  filter: drop-shadow(1px 0 0 var(--color-border))
+    drop-shadow(-1px 0 0 var(--color-border))
+    drop-shadow(0 1px 0 var(--color-border))
+    drop-shadow(0 -1px 0 var(--color-border))
+    drop-shadow(0 10px 15px hsla(var(--body), var(--shadow-opacity)))
+    drop-shadow(0 4px 6px hsla(var(--body), var(--shadow-opacity)));
+}
