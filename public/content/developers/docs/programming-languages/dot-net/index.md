@@ -50,7 +50,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [VSCode Codegen Plugin for Solidity](https://docs.nethereum.com/docs/aspire-templates/guide-codegen)
 - [Unity and Ethereum: Why and How](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Create ASP.NET Core Web API for Ethereum dapps](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
-- [Using Nethereum Web3 to Implement a Supply Chain Tracking System](https://web.archive.org/web/20220526020350/http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
+- [Using Nethereum Web3 to Implement a Supply Chain Tracking System](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
 - [Nethereum Blockchain Processing](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
 - [Nethereum Websocket Streaming](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido and Nethereum](https://kaleido.io/kaleido-and-nethereum/)
