@@ -511,7 +511,7 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 14. [Merkle trees](https://wikipedia.org/wiki/Merkle_tree)
 15. [Patricia trees](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
-17. [StorJ and Autonomous Agents, Jeff Garzik](https://web.archive.org/web/20180524103011/https://garzikrants.blogspot.com/2013/01/storj-and-bitcoin-autonomous-agents.html)
+17. [StorJ and Autonomous Agents, Jeff Garzik](https://garzikrants.blogspot.com/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn on Smart Property at Turing Festival](https://www.youtube.com/watch?v=MVyv4t0OKe4)
 19. [Ethereum RLP](/developers/docs/data-structures-and-encoding/rlp/)
 20. [Ethereum Merkle Patricia trees](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
