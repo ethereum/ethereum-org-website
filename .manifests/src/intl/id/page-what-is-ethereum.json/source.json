@@ -1,0 +1,1204 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-what-is-ethereum.json",
+  "generatedAt": "2026-06-02T16:04:20.223Z",
+  "rootHash": "b9cbe34eed63",
+  "tree": {
+    "contentHash": "e5e87cb2d39e",
+    "anchorHash": "d1e634682c8d",
+    "children": {
+      "page-what-is-ethereum-meta-title": {
+        "contentHash": "8b4e0ea6aef8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-meta-description": {
+        "contentHash": "22fb6971abf9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-title": {
+        "contentHash": "ac6e184ddd15",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-hero-description-1": {
+        "contentHash": "ba366b15d227",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-hero-description-2": {
+        "contentHash": "3fec6c283f37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-ethereum-intro-1": {
+        "contentHash": "bdafb94aeb94",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d4c8c73992d7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-ethereum-intro-2": {
+        "contentHash": "f66553ee4e4d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "13373122444e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-ethereum-intro-3": {
+        "contentHash": "6b43a023614d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d44719dd8830",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-ethereum-intro-4": {
+        "contentHash": "ebe65385bd9a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "db21ca1bc4a0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-ethereum-intro-5": {
+        "contentHash": "a197c590a90c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ae7f744b1657",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-ethereum-intro-6": {
+        "contentHash": "6b865998eae7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "6ba2250ae04f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-ethereum-intro-7": {
+        "contentHash": "393274c25f9a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "504606068a07",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-title": {
+        "contentHash": "f914ad8e59c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-intro-1": {
+        "contentHash": "66a36d69f53a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "201c1dbebee8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-intro-2": {
+        "contentHash": "fd37e2fb3828",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1558671c6274",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-intro-3": {
+        "contentHash": "fd95b9f06839",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "5048174c8ab3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-censorship-title": {
+        "contentHash": "3c24680afc88",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-censorship-desc-1": {
+        "contentHash": "e5641e739388",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-censorship-desc-2": {
+        "contentHash": "20a9a32f6568",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-security-title": {
+        "contentHash": "54eec32a178c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-security-desc-1": {
+        "contentHash": "26a8d8954062",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-security-desc-2": {
+        "contentHash": "2e153c27c3ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-reliability-title": {
+        "contentHash": "2fb82ac661d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-reliability-desc-1": {
+        "contentHash": "4a0f7a7ffb77",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-reliability-desc-2": {
+        "contentHash": "9ab482040c16",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-layer2-title": {
+        "contentHash": "e7cf1288488b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-layer2-desc-1": {
+        "contentHash": "5de56847e5b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-layer2-desc-2": {
+        "contentHash": "ffeae1bef623",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8eda9078dd9b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-learn-more": {
+        "contentHash": "2c2069ffee7d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-ether-title": {
+        "contentHash": "2b9001f74ff5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-ether-intro-1": {
+        "contentHash": "ad421ed3732b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-ether-intro-2": {
+        "contentHash": "cc9259cdb60e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8fde44c78ebd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-ether-intro-3": {
+        "contentHash": "491251f0ae8f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "27e80a12298a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-ether-intro-4": {
+        "contentHash": "a8eb9093d6dc",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "caabb129f4cc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-ether-intro-5": {
+        "contentHash": "4cded5117da2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "03c92195449a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-ether-intro-6": {
+        "contentHash": "0d5fd3e45c86",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-ether-learn-more": {
+        "contentHash": "5277c6ca9ad3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-title": {
+        "contentHash": "c206d40477a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-intro-1": {
+        "contentHash": "a4e894f2029b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f17d03d0a4bc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-how-intro-2": {
+        "contentHash": "ddac02b9c2ed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-intro-3": {
+        "contentHash": "65839a326dbd",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "cada548f271a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-how-intro-4": {
+        "contentHash": "5122610c55ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-intro-5": {
+        "contentHash": "876b5a5a607a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-1-title": {
+        "contentHash": "367f5f68cf9d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-1-step-1": {
+        "contentHash": "9cb912053f04",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-1-step-2": {
+        "contentHash": "765f3452a767",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-1-step-3": {
+        "contentHash": "579471c13aeb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-1-step-4": {
+        "contentHash": "e9db974d2571",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-1-step-5": {
+        "contentHash": "c549170b6bc0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-1-step-6": {
+        "contentHash": "d74ccb0c04b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-2-title": {
+        "contentHash": "fbf47bd7488b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-2-step-1": {
+        "contentHash": "def707813973",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-2-step-2": {
+        "contentHash": "925c1d0e08c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-2-step-3": {
+        "contentHash": "03a2a771ce1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-2-step-4": {
+        "contentHash": "70dc0134fa3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-example-2-step-5": {
+        "contentHash": "2f59a847cd61",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-outro-1": {
+        "contentHash": "10c4ac27ffb9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-outro-2": {
+        "contentHash": "e2a816660b82",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "069e7b7c2176",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-how-learn-more-1": {
+        "contentHash": "ee1690e0c14d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-how-learn-more-2": {
+        "contentHash": "3a2dea974225",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-title": {
+        "contentHash": "9caf299d8bcd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-intro-1": {
+        "contentHash": "fc1b0d1bbd7a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-intro-2": {
+        "contentHash": "8f9b8460ae0e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d7070feef935",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-what-intro-3": {
+        "contentHash": "f4c1d5fd7edf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-intro-4": {
+        "contentHash": "f13e5055da5b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-consumers-title": {
+        "contentHash": "212b350d5a32",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-consumers-desc-1": {
+        "contentHash": "c7654207cab3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-consumers-desc-2": {
+        "contentHash": "31a9086e8855",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-consumers-benefit-1": {
+        "contentHash": "607df1e97086",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c47cac7c2b98",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-what-consumers-benefit-2": {
+        "contentHash": "1e3682130321",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "994600557558",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-what-consumers-benefit-3": {
+        "contentHash": "6aa4c00eb25b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c6e6395c0ed9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-what-consumers-benefit-4": {
+        "contentHash": "cd1c44b35f0f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-businesses-title": {
+        "contentHash": "1a05f93df650",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-businesses-benefit-1": {
+        "contentHash": "a1731d43addb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-businesses-benefit-2": {
+        "contentHash": "1229ab949ed6",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b373ea29bec0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-what-businesses-benefit-3": {
+        "contentHash": "1e745e3ae824",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-businesses-example": {
+        "contentHash": "6cf861f3665d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "6a995d6c3530",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-what-governments-title": {
+        "contentHash": "c1595faf8cdb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-governments-intro": {
+        "contentHash": "5f3c81341fb5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-governments-benefit-1": {
+        "contentHash": "1fa0271c918f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "47c0bfb0ab1d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-what-governments-benefit-2": {
+        "contentHash": "e14825f247a8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c8aa73220011",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-what-governments-benefit-3": {
+        "contentHash": "4fc972d17c23",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "317204cd6f6c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-what-governments-example-1": {
+        "contentHash": "545f43f08419",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "6b0da3816279",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-what-governments-example-2": {
+        "contentHash": "875deca2d4c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-what-learn-more": {
+        "contentHash": "29561f8dca75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-title": {
+        "contentHash": "b805258781a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-intro-1": {
+        "contentHash": "ca86b9b052f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-intro-2": {
+        "contentHash": "a96f5f567c87",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-individuals-title": {
+        "contentHash": "45dd44df0911",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-individuals-desc-1": {
+        "contentHash": "0f8723a542f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-individuals-desc-2": {
+        "contentHash": "e5e26f374b81",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-individuals-desc-3": {
+        "contentHash": "1b19a28ab854",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c51a04578a23",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-start-individuals-step-1": {
+        "contentHash": "2c81b30b0306",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-individuals-step-2": {
+        "contentHash": "e4ac8ab9cd1f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-individuals-step-3": {
+        "contentHash": "88b8a1d12b04",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "faee5c0c6fd8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-start-individuals-desc-4": {
+        "contentHash": "ead0f24e7ac1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-individuals-desc-5": {
+        "contentHash": "7fa2eef383e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-individuals-cta-1": {
+        "contentHash": "2adc964c0847",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-individuals-cta-2": {
+        "contentHash": "ef7eec5fe802",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-developers-title": {
+        "contentHash": "6f79cf5c144a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-developers-desc-1": {
+        "contentHash": "ab4ca7a61360",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-developers-desc-2": {
+        "contentHash": "a182e40b9f86",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "09012a945192",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-start-developers-desc-3": {
+        "contentHash": "2916e8de88af",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "548ea1445d0b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-start-developers-desc-4": {
+        "contentHash": "9724acbee155",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-developers-cta": {
+        "contentHash": "f5866b7fdbeb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-business-title": {
+        "contentHash": "29e4c1aa4a3c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-business-desc-1": {
+        "contentHash": "3e92dd33d1cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-business-desc-2": {
+        "contentHash": "a4f4c84955a6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-business-desc-3": {
+        "contentHash": "11e6de141665",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-business-benefit-1": {
+        "contentHash": "7725b7ebd5d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-business-benefit-2": {
+        "contentHash": "b07ba98d74e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-business-benefit-3": {
+        "contentHash": "b7f3619b340a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-start-business-example": {
+        "contentHash": "b614ad4639e6",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "13b64e9b9ee9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-start-business-cta": {
+        "contentHash": "29e4c1aa4a3c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-title": {
+        "contentHash": "604f130bd3dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-intro-1": {
+        "contentHash": "929a433548ab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-intro-2": {
+        "contentHash": "81340109f3a2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a5957dd2e7c1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-bitcoin-comparison-1-title": {
+        "contentHash": "03f80ffafcb5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-comparison-1-desc": {
+        "contentHash": "dbae93fd05d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-comparison-2-title": {
+        "contentHash": "f37b223d2798",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-comparison-2-desc": {
+        "contentHash": "30a4fc326985",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-comparison-3-title": {
+        "contentHash": "940d72e6b0fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-comparison-3-desc-1": {
+        "contentHash": "e2de72d997c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-comparison-3-desc-2": {
+        "contentHash": "11daf0151afc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-comparison-4-title": {
+        "contentHash": "9867777006de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-comparison-4-desc-1": {
+        "contentHash": "1481cddb943a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "532903f52c19",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-bitcoin-comparison-4-desc-2": {
+        "contentHash": "505bca68b0d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-comparison-4-desc-3": {
+        "contentHash": "0d079cd4f956",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-bitcoin-learn-more": {
+        "contentHash": "8a2df64a5f9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-title": {
+        "contentHash": "ba3a6e767b22",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-intro-1": {
+        "contentHash": "40d81c8d5885",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-intro-2": {
+        "contentHash": "af61fe903c21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-intro-3": {
+        "contentHash": "809788e66da2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-intro-4": {
+        "contentHash": "0ed19027f8b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-history-title": {
+        "contentHash": "1fa1575f91c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-history-2013": {
+        "contentHash": "835bcfa8e227",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-history-2014": {
+        "contentHash": "7e86e74e67e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-history-2015": {
+        "contentHash": "3e4f6219cee2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8ddfeebfdc6e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-when-who-history-2016": {
+        "contentHash": "07776139efc4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-history-2020": {
+        "contentHash": "71c286d51a54",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-history-2021": {
+        "contentHash": "bb66c0944051",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "0c9fc7c6c893",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-when-who-history-2022": {
+        "contentHash": "30cf794cadbb",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f2543eea62ab",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-when-who-history-2025": {
+        "contentHash": "ad1d2ad08ae2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c8f1579bfd5c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-when-who-governance-1": {
+        "contentHash": "da934adf12bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-contributors-title": {
+        "contentHash": "c2e3453ec53b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-contributors-1": {
+        "contentHash": "66aa73ffc206",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-contributors-2": {
+        "contentHash": "e4eaeaec93c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-contributors-3": {
+        "contentHash": "c51eb6c33934",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-contributors-4": {
+        "contentHash": "d687c98d4834",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-contributors-5": {
+        "contentHash": "6db45c785816",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "2f18ae7e6781",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-when-who-governance-2": {
+        "contentHash": "e206230da83d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a8346b14ddfd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-when-who-governance-3": {
+        "contentHash": "c9667c7a26df",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d26535595823",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-when-who-governance-4": {
+        "contentHash": "16fa6c8861ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-when-who-learn-more": {
+        "contentHash": "3dc274110b10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-roadmap-title": {
+        "contentHash": "d6a015ced0ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-roadmap-intro-1": {
+        "contentHash": "54fad8f3540c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-roadmap-intro-2": {
+        "contentHash": "5c579c5b72b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-roadmap-intro-3": {
+        "contentHash": "3846890f9966",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-roadmap-priorities-intro": {
+        "contentHash": "1ab8ef7d3820",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7f78c9fb2dc9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-roadmap-priority-1": {
+        "contentHash": "6ca0e85311c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-roadmap-priority-2": {
+        "contentHash": "570639495e76",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-roadmap-outro-1": {
+        "contentHash": "ead0f24e7ac1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-roadmap-outro-2": {
+        "contentHash": "b42d73e896d2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "0a7396432c28",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-roadmap-learn-more": {
+        "contentHash": "188a557f9b92",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-further-reading-title": {
+        "contentHash": "d80f7041674e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-further-reading-wallets": {
+        "contentHash": "82250b455b82",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-further-reading-eth": {
+        "contentHash": "2b9001f74ff5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-further-reading-web3": {
+        "contentHash": "f5d8be05c68e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-further-reading-networks": {
+        "contentHash": "2c2069ffee7d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-toc-ethereum": {
+        "contentHash": "ac6e184ddd15",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-toc-network": {
+        "contentHash": "f914ad8e59c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-toc-ether": {
+        "contentHash": "2b9001f74ff5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-toc-how": {
+        "contentHash": "c206d40477a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-toc-what": {
+        "contentHash": "9caf299d8bcd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-toc-start": {
+        "contentHash": "b805258781a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-toc-bitcoin": {
+        "contentHash": "604f130bd3dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-toc-when-who": {
+        "contentHash": "ba3a6e767b22",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-toc-roadmap": {
+        "contentHash": "d6a015ced0ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-banner-networks-alt": {
+        "contentHash": "b8a36d44d23c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-banner-ether-alt": {
+        "contentHash": "46332c3c12e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-banner-how-alt": {
+        "contentHash": "6f5d34690183",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-banner-contributing-alt": {
+        "contentHash": "84639bc96e6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-banner-what-alt": {
+        "contentHash": "18338f2ecd4b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-banner-start-alt": {
+        "contentHash": "01594e1865dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-banner-when-who-alt": {
+        "contentHash": "08bd7301e87f",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-what-is-ethereum-meta-title",
+      "page-what-is-ethereum-meta-description",
+      "page-what-is-ethereum-title",
+      "page-what-is-ethereum-hero-description-1",
+      "page-what-is-ethereum-hero-description-2",
+      "page-what-is-ethereum-ethereum-intro-1",
+      "page-what-is-ethereum-ethereum-intro-2",
+      "page-what-is-ethereum-ethereum-intro-3",
+      "page-what-is-ethereum-ethereum-intro-4",
+      "page-what-is-ethereum-ethereum-intro-5",
+      "page-what-is-ethereum-ethereum-intro-6",
+      "page-what-is-ethereum-ethereum-intro-7",
+      "page-what-is-ethereum-network-title",
+      "page-what-is-ethereum-network-intro-1",
+      "page-what-is-ethereum-network-intro-2",
+      "page-what-is-ethereum-network-intro-3",
+      "page-what-is-ethereum-network-censorship-title",
+      "page-what-is-ethereum-network-censorship-desc-1",
+      "page-what-is-ethereum-network-censorship-desc-2",
+      "page-what-is-ethereum-network-security-title",
+      "page-what-is-ethereum-network-security-desc-1",
+      "page-what-is-ethereum-network-security-desc-2",
+      "page-what-is-ethereum-network-reliability-title",
+      "page-what-is-ethereum-network-reliability-desc-1",
+      "page-what-is-ethereum-network-reliability-desc-2",
+      "page-what-is-ethereum-network-layer2-title",
+      "page-what-is-ethereum-network-layer2-desc-1",
+      "page-what-is-ethereum-network-layer2-desc-2",
+      "page-what-is-ethereum-network-learn-more",
+      "page-what-is-ethereum-ether-title",
+      "page-what-is-ethereum-ether-intro-1",
+      "page-what-is-ethereum-ether-intro-2",
+      "page-what-is-ethereum-ether-intro-3",
+      "page-what-is-ethereum-ether-intro-4",
+      "page-what-is-ethereum-ether-intro-5",
+      "page-what-is-ethereum-ether-intro-6",
+      "page-what-is-ethereum-ether-learn-more",
+      "page-what-is-ethereum-how-title",
+      "page-what-is-ethereum-how-intro-1",
+      "page-what-is-ethereum-how-intro-2",
+      "page-what-is-ethereum-how-intro-3",
+      "page-what-is-ethereum-how-intro-4",
+      "page-what-is-ethereum-how-intro-5",
+      "page-what-is-ethereum-how-example-1-title",
+      "page-what-is-ethereum-how-example-1-step-1",
+      "page-what-is-ethereum-how-example-1-step-2",
+      "page-what-is-ethereum-how-example-1-step-3",
+      "page-what-is-ethereum-how-example-1-step-4",
+      "page-what-is-ethereum-how-example-1-step-5",
+      "page-what-is-ethereum-how-example-1-step-6",
+      "page-what-is-ethereum-how-example-2-title",
+      "page-what-is-ethereum-how-example-2-step-1",
+      "page-what-is-ethereum-how-example-2-step-2",
+      "page-what-is-ethereum-how-example-2-step-3",
+      "page-what-is-ethereum-how-example-2-step-4",
+      "page-what-is-ethereum-how-example-2-step-5",
+      "page-what-is-ethereum-how-outro-1",
+      "page-what-is-ethereum-how-outro-2",
+      "page-what-is-ethereum-how-learn-more-1",
+      "page-what-is-ethereum-how-learn-more-2",
+      "page-what-is-ethereum-what-title",
+      "page-what-is-ethereum-what-intro-1",
+      "page-what-is-ethereum-what-intro-2",
+      "page-what-is-ethereum-what-intro-3",
+      "page-what-is-ethereum-what-intro-4",
+      "page-what-is-ethereum-what-consumers-title",
+      "page-what-is-ethereum-what-consumers-desc-1",
+      "page-what-is-ethereum-what-consumers-desc-2",
+      "page-what-is-ethereum-what-consumers-benefit-1",
+      "page-what-is-ethereum-what-consumers-benefit-2",
+      "page-what-is-ethereum-what-consumers-benefit-3",
+      "page-what-is-ethereum-what-consumers-benefit-4",
+      "page-what-is-ethereum-what-businesses-title",
+      "page-what-is-ethereum-what-businesses-benefit-1",
+      "page-what-is-ethereum-what-businesses-benefit-2",
+      "page-what-is-ethereum-what-businesses-benefit-3",
+      "page-what-is-ethereum-what-businesses-example",
+      "page-what-is-ethereum-what-governments-title",
+      "page-what-is-ethereum-what-governments-intro",
+      "page-what-is-ethereum-what-governments-benefit-1",
+      "page-what-is-ethereum-what-governments-benefit-2",
+      "page-what-is-ethereum-what-governments-benefit-3",
+      "page-what-is-ethereum-what-governments-example-1",
+      "page-what-is-ethereum-what-governments-example-2",
+      "page-what-is-ethereum-what-learn-more",
+      "page-what-is-ethereum-start-title",
+      "page-what-is-ethereum-start-intro-1",
+      "page-what-is-ethereum-start-intro-2",
+      "page-what-is-ethereum-start-individuals-title",
+      "page-what-is-ethereum-start-individuals-desc-1",
+      "page-what-is-ethereum-start-individuals-desc-2",
+      "page-what-is-ethereum-start-individuals-desc-3",
+      "page-what-is-ethereum-start-individuals-step-1",
+      "page-what-is-ethereum-start-individuals-step-2",
+      "page-what-is-ethereum-start-individuals-step-3",
+      "page-what-is-ethereum-start-individuals-desc-4",
+      "page-what-is-ethereum-start-individuals-desc-5",
+      "page-what-is-ethereum-start-individuals-cta-1",
+      "page-what-is-ethereum-start-individuals-cta-2",
+      "page-what-is-ethereum-start-developers-title",
+      "page-what-is-ethereum-start-developers-desc-1",
+      "page-what-is-ethereum-start-developers-desc-2",
+      "page-what-is-ethereum-start-developers-desc-3",
+      "page-what-is-ethereum-start-developers-desc-4",
+      "page-what-is-ethereum-start-developers-cta",
+      "page-what-is-ethereum-start-business-title",
+      "page-what-is-ethereum-start-business-desc-1",
+      "page-what-is-ethereum-start-business-desc-2",
+      "page-what-is-ethereum-start-business-desc-3",
+      "page-what-is-ethereum-start-business-benefit-1",
+      "page-what-is-ethereum-start-business-benefit-2",
+      "page-what-is-ethereum-start-business-benefit-3",
+      "page-what-is-ethereum-start-business-example",
+      "page-what-is-ethereum-start-business-cta",
+      "page-what-is-ethereum-bitcoin-title",
+      "page-what-is-ethereum-bitcoin-intro-1",
+      "page-what-is-ethereum-bitcoin-intro-2",
+      "page-what-is-ethereum-bitcoin-comparison-1-title",
+      "page-what-is-ethereum-bitcoin-comparison-1-desc",
+      "page-what-is-ethereum-bitcoin-comparison-2-title",
+      "page-what-is-ethereum-bitcoin-comparison-2-desc",
+      "page-what-is-ethereum-bitcoin-comparison-3-title",
+      "page-what-is-ethereum-bitcoin-comparison-3-desc-1",
+      "page-what-is-ethereum-bitcoin-comparison-3-desc-2",
+      "page-what-is-ethereum-bitcoin-comparison-4-title",
+      "page-what-is-ethereum-bitcoin-comparison-4-desc-1",
+      "page-what-is-ethereum-bitcoin-comparison-4-desc-2",
+      "page-what-is-ethereum-bitcoin-comparison-4-desc-3",
+      "page-what-is-ethereum-bitcoin-learn-more",
+      "page-what-is-ethereum-when-who-title",
+      "page-what-is-ethereum-when-who-intro-1",
+      "page-what-is-ethereum-when-who-intro-2",
+      "page-what-is-ethereum-when-who-intro-3",
+      "page-what-is-ethereum-when-who-intro-4",
+      "page-what-is-ethereum-when-who-history-title",
+      "page-what-is-ethereum-when-who-history-2013",
+      "page-what-is-ethereum-when-who-history-2014",
+      "page-what-is-ethereum-when-who-history-2015",
+      "page-what-is-ethereum-when-who-history-2016",
+      "page-what-is-ethereum-when-who-history-2020",
+      "page-what-is-ethereum-when-who-history-2021",
+      "page-what-is-ethereum-when-who-history-2022",
+      "page-what-is-ethereum-when-who-history-2025",
+      "page-what-is-ethereum-when-who-governance-1",
+      "page-what-is-ethereum-when-who-contributors-title",
+      "page-what-is-ethereum-when-who-contributors-1",
+      "page-what-is-ethereum-when-who-contributors-2",
+      "page-what-is-ethereum-when-who-contributors-3",
+      "page-what-is-ethereum-when-who-contributors-4",
+      "page-what-is-ethereum-when-who-contributors-5",
+      "page-what-is-ethereum-when-who-governance-2",
+      "page-what-is-ethereum-when-who-governance-3",
+      "page-what-is-ethereum-when-who-governance-4",
+      "page-what-is-ethereum-when-who-learn-more",
+      "page-what-is-ethereum-roadmap-title",
+      "page-what-is-ethereum-roadmap-intro-1",
+      "page-what-is-ethereum-roadmap-intro-2",
+      "page-what-is-ethereum-roadmap-intro-3",
+      "page-what-is-ethereum-roadmap-priorities-intro",
+      "page-what-is-ethereum-roadmap-priority-1",
+      "page-what-is-ethereum-roadmap-priority-2",
+      "page-what-is-ethereum-roadmap-outro-1",
+      "page-what-is-ethereum-roadmap-outro-2",
+      "page-what-is-ethereum-roadmap-learn-more",
+      "page-what-is-ethereum-further-reading-title",
+      "page-what-is-ethereum-further-reading-wallets",
+      "page-what-is-ethereum-further-reading-eth",
+      "page-what-is-ethereum-further-reading-web3",
+      "page-what-is-ethereum-further-reading-networks",
+      "page-what-is-ethereum-toc-ethereum",
+      "page-what-is-ethereum-toc-network",
+      "page-what-is-ethereum-toc-ether",
+      "page-what-is-ethereum-toc-how",
+      "page-what-is-ethereum-toc-what",
+      "page-what-is-ethereum-toc-start",
+      "page-what-is-ethereum-toc-bitcoin",
+      "page-what-is-ethereum-toc-when-who",
+      "page-what-is-ethereum-toc-roadmap",
+      "page-what-is-ethereum-banner-networks-alt",
+      "page-what-is-ethereum-banner-ether-alt",
+      "page-what-is-ethereum-banner-how-alt",
+      "page-what-is-ethereum-banner-contributing-alt",
+      "page-what-is-ethereum-banner-what-alt",
+      "page-what-is-ethereum-banner-start-alt",
+      "page-what-is-ethereum-banner-when-who-alt"
+    ]
+  },
+  "sourceCommitSha": "e65713ed154ea426f8c2ca96968df7fdd9929674"
+}

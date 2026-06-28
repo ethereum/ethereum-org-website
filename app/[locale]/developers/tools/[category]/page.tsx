@@ -3,9 +3,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import { ContentHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
+import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -26,13 +27,12 @@ import DevelopersToolsCategoryJsonLD from "./page-jsonld"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
-const Page = async ({
-  params,
-  searchParams,
-}: {
-  params: PageParams & { category: DeveloperToolCategorySlug }
-  searchParams: { toolId?: string }
+const Page = async (props: {
+  params: Promise<PageParams & { category: DeveloperToolCategorySlug }>
+  searchParams: Promise<{ toolId?: string }>
 }) => {
+  const searchParams = await props.searchParams
+  const params = await props.params
   const { locale, category } = params
   const { toolId } = searchParams
 
@@ -42,10 +42,7 @@ const Page = async ({
     notFound()
   }
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   const data = await getDeveloperToolsData()
   if (!data) throw Error("No developer tools data available")
@@ -94,7 +91,7 @@ const Page = async ({
         categoryTools={allCategoryData}
         contributors={contributors}
       />
-      <ContentHero
+      <PageHero
         breadcrumbs={{
           slug: `/developers/tools/${t(`page-developers-tools-category-${category}-breadcrumb`)}`,
         }}
@@ -102,7 +99,7 @@ const Page = async ({
         description={t(
           `page-developers-tools-category-${category}-description`
         )}
-        className="border-none pb-0"
+        variant="no-divider"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
         <HighlightsSection tools={highlights} />
@@ -121,7 +118,7 @@ const Page = async ({
 
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-tools-categories-title-other")}</h2>
-          <div className="grid grid-cols-fill-4 gap-8">
+          <Grid>
             {DEV_TOOL_CATEGORIES.filter(({ slug }) => slug !== category).map(
               ({ slug, Icon }) => (
                 <SubpageCard
@@ -135,7 +132,7 @@ const Page = async ({
                 />
               )
             )}
-          </div>
+          </Grid>
         </Section>
       </MainArticle>
 
@@ -150,30 +147,35 @@ export async function generateStaticParams() {
   return DEV_TOOL_CATEGORIES.map(({ slug }) => ({ category: slug }))
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string; category: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; category: string }>
 }) {
+  const params = await props.params
   const { locale, category } = params
 
-  if (!VALID_CATEGORY_SLUGS.has(category as DeveloperToolCategorySlug)) {
-    notFound()
+  try {
+    if (!VALID_CATEGORY_SLUGS.has(category as DeveloperToolCategorySlug)) {
+      throw new Error(`Invalid developer tools category: ${category}`)
+    }
+
+    const t = await getTranslations("page-developers-tools")
+
+    return await getMetadata({
+      locale,
+      slug: ["developers", "tools", category],
+      title: t(`page-developers-tools-category-${category}-title`),
+      description: t(
+        `page-developers-tools-category-${category}-meta-description`
+      ),
+    })
+  } catch {
+    const t = await getTranslations("common")
+
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
-
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
-
-  return await getMetadata({
-    locale,
-    slug: ["developers", "tools", category],
-    title: t(`page-developers-tools-category-${category}-title`),
-    description: t(
-      `page-developers-tools-category-${category}-meta-description`
-    ),
-  })
 }
 
 export default Page

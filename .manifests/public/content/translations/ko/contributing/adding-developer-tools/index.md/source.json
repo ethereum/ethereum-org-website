@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/adding-developer-tools/index.md",
+  "generatedAt": "2026-06-08T07:39:32.540Z",
+  "rootHash": "754163380681",
+  "tree": {
+    "contentHash": "9d06d9e8d185",
+    "anchorHash": "e0af9e21b2a8",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "cf177ba9bc34",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:description": {
+        "contentHash": "4ca130572bb4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:1": {
+        "contentHash": "3645f8906558",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "e16846f14b59",
+        "anchorHash": "10260c8eaaaa"
+      },
+      "prose:2": {
+        "contentHash": "e0872acb03c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ways-to-contribute": {
+        "contentHash": "6a87f7ae788e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "878cd5c7a042",
+        "children": {
+          "_label": {
+            "contentHash": "878cd5c7a042",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c87f20c11e2b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "product-ordering": {
+        "contentHash": "dd1918ec8a14",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "363f873a4a48",
+        "children": {
+          "_label": {
+            "contentHash": "363f873a4a48",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5536164b372b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-decisions-about-the-site-are-made": {
+        "contentHash": "364307c36bc6",
+        "anchorHash": "a45a0a5398f5",
+        "labelHash": "3dd5fdad6a22",
+        "children": {
+          "_label": {
+            "contentHash": "3dd5fdad6a22",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2bfe2c089006",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "3f6833e9165a",
+            "anchorHash": "03153d97f2f9",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2bbd6cd243bc"
+              },
+              "prose:0": {
+                "contentHash": "e99c2f404871",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:lang",
+      "frontmatter:description",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "ways-to-contribute",
+      "product-ordering",
+      "how-decisions-about-the-site-are-made"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

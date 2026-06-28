@@ -1,0 +1,903 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-18T00:25:31.526Z",
+  "englishManifestHash": "ca835cf2ebac",
+  "placeholderOrder": [
+    "LINK-59a455",
+    "LINK-658192",
+    "LINK-b5d50c",
+    "LINK-3cd40c",
+    "LINK-bd27e4",
+    "LINK-0abe43",
+    "LINK-7f98f0",
+    "LINK-819317",
+    "LINK-3fc911",
+    "LINK-b6902e",
+    "LINK-28cc7f",
+    "LINK-eb5ea9",
+    "LINK-7cd47c",
+    "LINK-5bfb36",
+    "LINK-b668e5",
+    "CODEBLOCK-cf37f0",
+    "CODEBLOCK-a5da13",
+    "CODEBLOCK-21bcc4",
+    "LINK-da6d10",
+    "LINK-469d14",
+    "LINK-3fc911",
+    "LINK-a7a682",
+    "CODE-b0968a",
+    "LINK-620bea",
+    "CODE-722c45",
+    "CODE-2e9d96",
+    "LINK-35dbe0",
+    "CODE-2e9d96",
+    "LINK-b5e5e1",
+    "CODE-7ae45a",
+    "CODEBLOCK-bae903",
+    "LINK-36a3d3",
+    "CODE-d007f6",
+    "CODEBLOCK-27726d",
+    "LINK-aba2b0",
+    "CODEBLOCK-e0c9b4",
+    "CODE-0544fc",
+    "CODEBLOCK-770f6f",
+    "LINK-d1fed4",
+    "CODEBLOCK-b4e61b",
+    "LINK-620bea",
+    "CODE-722c45",
+    "CODEBLOCK-f4817e",
+    "LINK-30fbe3",
+    "CODE-753930",
+    "LINK-b71863",
+    "CODE-128df1",
+    "CODEBLOCK-a620a4",
+    "CODEBLOCK-0d8dd7",
+    "CODEBLOCK-4c27f6",
+    "LINK-28d759",
+    "CODE-46a721",
+    "LINK-8a59b8",
+    "CODEBLOCK-201007",
+    "LINK-7da11e",
+    "CODE-0efcf5",
+    "LINK-7507a6",
+    "CODE-1319c8",
+    "CODEBLOCK-031b09",
+    "CODE-39e43b",
+    "LINK-45efd4",
+    "CODE-8ce86a",
+    "CODE-8d3126",
+    "CODE-1b16b1",
+    "CODE-827810",
+    "LINK-050687",
+    "CODE-578dcb",
+    "CODE-dc937b",
+    "CODE-d3570b",
+    "CODE-ec0edd",
+    "CODEBLOCK-62c484",
+    "LINK-c64688",
+    "CODE-47465f",
+    "CODE-660289",
+    "LINK-4b5e76",
+    "CODE-6e7d50",
+    "CODE-0d1a64",
+    "CODE-8a5fa5",
+    "CODE-a4c2b6",
+    "CODE-6e7d50",
+    "CODE-45aaac",
+    "CODE-27c084",
+    "CODE-dc937b",
+    "LINK-a64c24",
+    "CODE-dc937b",
+    "CODE-45aaac",
+    "CODE-38a4fd",
+    "CODE-6e7d50",
+    "CODE-45aaac",
+    "CODEBLOCK-5bda21",
+    "CODE-dc937b",
+    "CODEBLOCK-f0edc9",
+    "LINK-4142ba",
+    "LINK-f68020",
+    "CODE-47465f",
+    "CODE-94a280",
+    "LINK-ec46d6",
+    "CODE-b019f4",
+    "CODEBLOCK-94ffa8",
+    "LINK-513866",
+    "CODE-7187f0",
+    "CODEBLOCK-44b243",
+    "CODEBLOCK-67dbc7",
+    "LINK-590ee0",
+    "CODE-312ac0",
+    "CODEBLOCK-6598e5",
+    "CODEBLOCK-296ab8",
+    "LINK-0998d4",
+    "CODE-c6c737",
+    "CODEBLOCK-d0b9bd",
+    "LINK-8f7dc7",
+    "CODE-bf59a4",
+    "CODEBLOCK-3d75a8",
+    "CODEBLOCK-304523",
+    "CODE-62e207",
+    "CODEBLOCK-30e2e3",
+    "LINK-eb5ea9",
+    "LINK-28cc7f",
+    "LINK-7cd47c",
+    "LINK-197ef5",
+    "CODE-58e6f6",
+    "LINK-907160",
+    "CODEBLOCK-c6661b",
+    "LINK-316c3f",
+    "LINK-429f1b",
+    "CODE-dedc4d",
+    "CODE-3bc510",
+    "CODE-e51783",
+    "CODEBLOCK-743d3e",
+    "LINK-89c1fb",
+    "CODE-c740d4",
+    "CODE-b24ff0",
+    "CODE-61cb48",
+    "CODEBLOCK-9a1bb1",
+    "LINK-637ddc",
+    "CODE-b6e70b",
+    "CODE-4f53cd",
+    "CODE-bb5406",
+    "CODE-0da7c2",
+    "LINK-aab316",
+    "CODE-2d4a63",
+    "CODE-1aefe4",
+    "CODE-6960bf",
+    "CODEBLOCK-d5bf8d",
+    "CODE-c740d4",
+    "CODEBLOCK-191d74",
+    "CODE-c740d4",
+    "CODE-288592",
+    "CODE-288592",
+    "LINK-d59575",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-cf37f0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a5da13": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-21bcc4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bae903": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-27726d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e0c9b4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-770f6f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b4e61b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f4817e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a620a4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0d8dd7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4c27f6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-201007": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-031b09": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-62c484": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5bda21": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f0edc9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-94ffa8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-44b243": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-67dbc7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6598e5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-296ab8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d0b9bd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3d75a8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-304523": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-62e207": {
+      "type": "inline-code",
+      "values": {
+        "content": "left == right"
+      }
+    },
+    "CODEBLOCK-30e2e3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c6661b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-743d3e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9a1bb1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d5bf8d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-191d74": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-b0968a": {
+      "type": "inline-code",
+      "values": {
+        "content": "src/rust_wasm/src/lib.rs"
+      }
+    },
+    "CODE-722c45": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth-stealth-addresses"
+      }
+    },
+    "CODE-2e9d96": {
+      "type": "inline-code",
+      "values": {
+        "content": "Cargo.toml"
+      }
+    },
+    "CODE-7ae45a": {
+      "type": "inline-code",
+      "values": {
+        "content": "package.json"
+      }
+    },
+    "CODE-d007f6": {
+      "type": "inline-code",
+      "values": {
+        "content": "getrandom"
+      }
+    },
+    "CODE-0544fc": {
+      "type": "inline-code",
+      "values": {
+        "content": "lib.rs"
+      }
+    },
+    "CODE-753930": {
+      "type": "inline-code",
+      "values": {
+        "content": "[u8; <size>]"
+      }
+    },
+    "CODE-128df1": {
+      "type": "inline-code",
+      "values": {
+        "content": "hex"
+      }
+    },
+    "CODE-46a721": {
+      "type": "inline-code",
+      "values": {
+        "content": "generate_stealth_meta_address"
+      }
+    },
+    "CODE-0efcf5": {
+      "type": "inline-code",
+      "values": {
+        "content": "format!"
+      }
+    },
+    "CODE-1319c8": {
+      "type": "inline-code",
+      "values": {
+        "content": "hex::encode"
+      }
+    },
+    "CODE-39e43b": {
+      "type": "inline-code",
+      "values": {
+        "content": "<const N: usize>"
+      }
+    },
+    "CODE-8ce86a": {
+      "type": "inline-code",
+      "values": {
+        "content": "N"
+      }
+    },
+    "CODE-8d3126": {
+      "type": "inline-code",
+      "values": {
+        "content": "str_to_array::<n>"
+      }
+    },
+    "CODE-1b16b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "n"
+      }
+    },
+    "CODE-827810": {
+      "type": "inline-code",
+      "values": {
+        "content": "Option<[u8; N]>"
+      }
+    },
+    "CODE-578dcb": {
+      "type": "inline-code",
+      "values": {
+        "content": "str_to_array::10(\"bad060a7\")"
+      }
+    },
+    "CODE-dc937b": {
+      "type": "inline-code",
+      "values": {
+        "content": "None"
+      }
+    },
+    "CODE-d3570b": {
+      "type": "inline-code",
+      "values": {
+        "content": "str_to_array::4(\"bad060a7\")"
+      }
+    },
+    "CODE-ec0edd": {
+      "type": "inline-code",
+      "values": {
+        "content": "Some<[0xba, 0xd0, 0x60, 0xa7]>"
+      }
+    },
+    "CODE-47465f": {
+      "type": "inline-code",
+      "values": {
+        "content": "hex::decode"
+      }
+    },
+    "CODE-660289": {
+      "type": "inline-code",
+      "values": {
+        "content": "Result<Vec<u8>, FromHexError>"
+      }
+    },
+    "CODE-6e7d50": {
+      "type": "inline-code",
+      "values": {
+        "content": "Result"
+      }
+    },
+    "CODE-0d1a64": {
+      "type": "inline-code",
+      "values": {
+        "content": "Ok(value)"
+      }
+    },
+    "CODE-8a5fa5": {
+      "type": "inline-code",
+      "values": {
+        "content": "Err(error)"
+      }
+    },
+    "CODE-a4c2b6": {
+      "type": "inline-code",
+      "values": {
+        "content": ".ok()"
+      }
+    },
+    "CODE-45aaac": {
+      "type": "inline-code",
+      "values": {
+        "content": "Option"
+      }
+    },
+    "CODE-27c084": {
+      "type": "inline-code",
+      "values": {
+        "content": "Ok()"
+      }
+    },
+    "CODE-38a4fd": {
+      "type": "inline-code",
+      "values": {
+        "content": "vec"
+      }
+    },
+    "CODE-94a280": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_stealth_addresses"
+      }
+    },
+    "CODE-b019f4": {
+      "type": "inline-code",
+      "values": {
+        "content": ".try_into()"
+      }
+    },
+    "CODE-7187f0": {
+      "type": "inline-code",
+      "values": {
+        "content": "return"
+      }
+    },
+    "CODE-312ac0": {
+      "type": "inline-code",
+      "values": {
+        "content": "generate_stealth_address"
+      }
+    },
+    "CODE-c6c737": {
+      "type": "inline-code",
+      "values": {
+        "content": "compute_stealth_key"
+      }
+    },
+    "CODE-bf59a4": {
+      "type": "inline-code",
+      "values": {
+        "content": "#[wasm_bindgen(start)]"
+      }
+    },
+    "CODE-58e6f6": {
+      "type": "inline-code",
+      "values": {
+        "content": "vite.config.js"
+      }
+    },
+    "CODE-dedc4d": {
+      "type": "inline-code",
+      "values": {
+        "content": "App.jsx"
+      }
+    },
+    "CODE-3bc510": {
+      "type": "inline-code",
+      "values": {
+        "content": "Alice"
+      }
+    },
+    "CODE-e51783": {
+      "type": "inline-code",
+      "values": {
+        "content": "Bill"
+      }
+    },
+    "CODE-c740d4": {
+      "type": "inline-code",
+      "values": {
+        "content": "wasm-pack"
+      }
+    },
+    "CODE-b24ff0": {
+      "type": "inline-code",
+      "values": {
+        "content": "src/rust-wasm/pkg/rust_wasm_bg.wasm"
+      }
+    },
+    "CODE-61cb48": {
+      "type": "inline-code",
+      "values": {
+        "content": "src/rust_wasm/pkg/rust_wasm.js"
+      }
+    },
+    "CODE-b6e70b": {
+      "type": "inline-code",
+      "values": {
+        "content": "useEffect"
+      }
+    },
+    "CODE-4f53cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "[]"
+      }
+    },
+    "CODE-bb5406": {
+      "type": "inline-code",
+      "values": {
+        "content": "init"
+      }
+    },
+    "CODE-0da7c2": {
+      "type": "inline-code",
+      "values": {
+        "content": ".wasm"
+      }
+    },
+    "CODE-2d4a63": {
+      "type": "inline-code",
+      "values": {
+        "content": "async"
+      }
+    },
+    "CODE-1aefe4": {
+      "type": "inline-code",
+      "values": {
+        "content": "await"
+      }
+    },
+    "CODE-6960bf": {
+      "type": "inline-code",
+      "values": {
+        "content": "Bill.jsx"
+      }
+    },
+    "CODE-288592": {
+      "type": "inline-code",
+      "values": {
+        "content": "Alice.jsx"
+      }
+    },
+    "LINK-59a455": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-5564"
+      }
+    },
+    "LINK-658192": {
+      "type": "link",
+      "values": {
+        "url": "https://nerolation.github.io/stealth-utils"
+      }
+    },
+    "LINK-b5d50c": {
+      "type": "link",
+      "values": {
+        "url": "#go-wrong"
+      }
+    },
+    "LINK-3cd40c": {
+      "type": "link",
+      "values": {
+        "url": "#how-use"
+      }
+    },
+    "LINK-bd27e4": {
+      "type": "link",
+      "values": {
+        "url": "#how-math"
+      }
+    },
+    "LINK-0abe43": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/#elliptic-curves-building-blocks-of-a-better-trapdoor"
+      }
+    },
+    "LINK-7f98f0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/251022-stealth-addresses.git"
+      }
+    },
+    "LINK-819317": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ScopeLift/stealth-address-sdk"
+      }
+    },
+    "LINK-3fc911": {
+      "type": "link",
+      "values": {
+        "url": "https://rust-lang.org/"
+      }
+    },
+    "LINK-b6902e": {
+      "type": "link",
+      "values": {
+        "url": "https://webassembly.org/"
+      }
+    },
+    "LINK-28cc7f": {
+      "type": "link",
+      "values": {
+        "url": "https://vite.dev/"
+      }
+    },
+    "LINK-eb5ea9": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/"
+      }
+    },
+    "LINK-7cd47c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
+      }
+    },
+    "LINK-5bfb36": {
+      "type": "link",
+      "values": {
+        "url": "https://rust-lang.org/tools/install/"
+      }
+    },
+    "LINK-b668e5": {
+      "type": "link",
+      "values": {
+        "url": "https://nodejs.org/en/download"
+      }
+    },
+    "LINK-da6d10": {
+      "type": "link",
+      "values": {
+        "url": "http://localhost:5173/"
+      }
+    },
+    "LINK-469d14": {
+      "type": "link",
+      "values": {
+        "url": "https://iancoleman.net/ethereum-private-key-to-address/"
+      }
+    },
+    "LINK-a7a682": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs"
+      }
+    },
+    "LINK-620bea": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kassandraoftroy/eth-stealth-addresses"
+      }
+    },
+    "LINK-35dbe0": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/cargo/reference/manifest.html"
+      }
+    },
+    "LINK-b5e5e1": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.npmjs.com/cli/v9/configuring-npm/package-json"
+      }
+    },
+    "LINK-36a3d3": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.rs/getrandom/latest/getrandom/"
+      }
+    },
+    "LINK-aba2b0": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/"
+      }
+    },
+    "LINK-d1fed4": {
+      "type": "link",
+      "values": {
+        "url": "https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html"
+      }
+    },
+    "LINK-30fbe3": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/std/primitive.array.html"
+      }
+    },
+    "LINK-b71863": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.rs/hex/latest/hex/"
+      }
+    },
+    "LINK-28d759": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html"
+      }
+    },
+    "LINK-8a59b8": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/std/primitive.tuple.html"
+      }
+    },
+    "LINK-7da11e": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/std/fmt/index.html"
+      }
+    },
+    "LINK-7507a6": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.rs/hex/latest/hex/fn.encode.html"
+      }
+    },
+    "LINK-45efd4": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/book/ch10-01-syntax.html"
+      }
+    },
+    "LINK-050687": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/std/option/"
+      }
+    },
+    "LINK-c64688": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.rs/hex/latest/hex/fn.decode.html"
+      }
+    },
+    "LINK-4b5e76": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/std/result/"
+      }
+    },
+    "LINK-a64c24": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/std/option/#the-question-mark-operator-"
+      }
+    },
+    "LINK-4142ba": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/std/primitive.array.html"
+      }
+    },
+    "LINK-f68020": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/std/vec/index.html"
+      }
+    },
+    "LINK-ec46d6": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods"
+      }
+    },
+    "LINK-513866": {
+      "type": "link",
+      "values": {
+        "url": "https://doc.rust-lang.org/std/keyword.return.html"
+      }
+    },
+    "LINK-590ee0": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html"
+      }
+    },
+    "LINK-0998d4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html"
+      }
+    },
+    "LINK-8f7dc7": {
+      "type": "link",
+      "values": {
+        "url": "https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html"
+      }
+    },
+    "LINK-197ef5": {
+      "type": "link",
+      "values": {
+        "url": "https://wagmi.sh/"
+      }
+    },
+    "LINK-907160": {
+      "type": "link",
+      "values": {
+        "url": "https://vite.dev/config/"
+      }
+    },
+    "LINK-316c3f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/@vitejs/plugin-react"
+      }
+    },
+    "LINK-429f1b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Menci/vite-plugin-wasm#readme"
+      }
+    },
+    "LINK-89c1fb": {
+      "type": "link",
+      "values": {
+        "url": "https://rustwasm.github.io/docs/wasm-pack/"
+      }
+    },
+    "LINK-637ddc": {
+      "type": "link",
+      "values": {
+        "url": "https://react.dev/reference/react/useEffect"
+      }
+    },
+    "LINK-aab316": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Async/await"
+      }
+    },
+    "LINK-d59575": {
+      "type": "link",
+      "values": {
+        "url": "#go-wrong"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:25:31.526Z",
+      "status": "success"
+    }
+  }
+}

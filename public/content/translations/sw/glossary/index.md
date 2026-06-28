@@ -1,10 +1,10 @@
 ---
-title: Kamusi ya Ethereum
-description: Kamusi hii ya maneno ya kiufundi na yasio ya kiufundi yanayohusiana na Ethereum haijakamilika
+title: Faharasa
+metaTitle: Faharasa ya Ethereum
+description: Faharasa isiyokamilika ya maneno ya kiufundi na yasiyo ya kiufundi yanayohusiana na Ethereum
 lang: sw
+authors: ["Andreas Antonopoulos"]
 ---
-
-# Faharasa {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: sw
 
 ## Vyanzo {#sources}
 
-_Imetolewa kwa sehemu na [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) na [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) chini ya CC-BY-SA_
+_Imetolewa kwa kiasi na [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) na [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) chini ya CC-BY-SA_
 
 <Divider />
 
 ## Changia kwenye ukurasa huu {#contribute-to-this-page}
 
-Je, kuna kitu tumekosa? Je, kuna kitu si sahihi? Tusaidie kuboresha kwa kuchangia kwenye faharasa hii kwenye GitHub!
+Kuna kitu tumesahau? Kuna kitu si sahihi? Tusaidie kuboresha kwa kuchangia kwenye faharasa hii kwenye GitHub!
 
 [Jifunze zaidi kuhusu jinsi ya kuchangia](/contributing/adding-glossary-terms)

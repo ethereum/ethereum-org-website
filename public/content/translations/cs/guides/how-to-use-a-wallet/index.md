@@ -1,66 +1,66 @@
 ---
-title: "Jak používat peněženku"
-metaTitle: "Jak používat Ethereum peněženky | Krok za krokem"
-description: "Návod vysvětlující, jak odesílat a přijímat tokeny a jak se připojovat k web3 projektům."
+title: Jak používat peněženku
+metaTitle: Jak používat Ethereum peněženky | Krok za krokem
+description: Průvodce vysvětlující, jak odesílat a přijímat tokeny a jak se připojit k web3 projektům.
 lang: cs
 ---
 
-# Jak používat peněženku
+Naučte se ovládat všechny základní funkce peněženky. Pokud ji ještě nemáte, podívejte se na náš návod [Jak si vytvořit Ethereum účet](/guides/how-to-create-an-ethereum-account/).
 
-Naučte se ovládat všechny základní funkce peněženky. Pokud ji ještě nemáte, podívejte se na náš návod [Jak vytvořit Ethereum účet](/guides/how-to-create-an-ethereum-account/).
+## Otevřete svou peněženku {#open-your-wallet}
 
-## Otevřete vaši peněženku
+Měli byste vidět řídicí panel, který pravděpodobně zobrazí váš zůstatek a obsahuje tlačítka pro odesílání a přijímání tokenů.
 
-Měli byste vidět ovládací panel, který pravděpodobně zobrazí váš zůstatek a bude obsahovat tlačítka pro odesílání a přijímání tokenů.
+## Přijímání kryptoměny {#receive-cryptocurrency}
 
-## Přijímání kryptoměn
+Chcete do své peněženky přijmout krypto?
 
-Chcete přijímat kryptoměny do své peněženky?
+Každý Ethereum účet má svou vlastní přijímací adresu, což je unikátní sekvence čísel a písmen. Adresa funguje jako číslo bankovního účtu. Ethereum adresy vždy začínají na „0x“. Tuto adresu můžete s kýmkoli sdílet: je to bezpečné.
 
-Každý Ethereum účet má svou vlastní přijímací adresu, což je jedinečná sekvence čísel a písmen. Adresa funguje jako číslo bankovního účtu. Ethereum adresy vždy začínají řetězcem "0x". Tuto adresu můžete sdílet s kýmkoli: je to bezpečné.
+Vaše adresa je jako adresa vašeho bydliště: musíte lidem říct, jaká je, aby vás mohli najít. Je to bezpečné, protože své vchodové dveře můžete stále zamknout jiným klíčem, který ovládáte pouze vy, takže se nikdo nedostane dovnitř, i když ví, kde bydlíte.
 
-S vaší adresou je to jako s adresou domova: musíte ji lidem sdělit, aby vás mohli najít. Je to bezpečné, protože vchodové dveře můžete stále zamykat jiným klíčem, který ovládáte pouze vy, takže se k vám nikdo nedostane, i když ví, kde bydlíte.
+Tomu, kdo vám chce poslat peníze, musíte poskytnout svou veřejnou adresu. Mnoho aplikací peněženek vám umožňuje zkopírovat vaši adresu nebo zobrazit QR kód k naskenování pro snazší použití. Vyhněte se ručnímu přepisování jakékoli Ethereum adresy. To může snadno vést k překlepům a ztrátě prostředků.
 
-Tomu, kdo vám chce poslat peníze, musíte sdělit svou veřejnou adresu. Mnoho aplikací peněženek umožňuje zkopírovat adresu nebo zobrazit QR kód, který lze naskenovat pro snadnější použití. Vyhněte se ručnímu zadávání Ethereum adres. To může snadno vést k chybě v zadávání a ztrátě finančních prostředků.
+Různé aplikace se mohou lišit nebo používat jiný jazyk, ale pokud se snažíte o převod prostředků, měly by vás provést podobným procesem.
 
-Různé aplikace se mohou lišit nebo používat jiný jazyk, ale pokud se snažíte převést finanční prostředky, měly by vás provést podobným procesem.
-
-1. Otevřete aplikaci peněženky.
-2. Klikněte na možnost "Přijmout" (nebo podobně formulovanou možnost).
-3. Zkopírujte Ethereum adresu do schránky.
+1. Otevřete aplikaci své peněženky.
+2. Klikněte na „Přijmout“ (nebo podobně formulovanou možnost).
+3. Zkopírujte svou Ethereum adresu do schránky.
 4. Poskytněte odesílateli svou přijímací Ethereum adresu.
 
-## Odesílání kryptoměn
+## Odesílání kryptoměny {#send-cryptocurrency}
 
-Chcete poslat ETH do jiné peněženky?
+Chtěli byste odeslat ETH do jiné peněženky?
 
-1. Otevřete aplikaci peněženky.
-2. Zjistěte adresu příjemce a ujistěte se, že jste připojeni ke stejné síti jako příjemce.
-3. Zadejte adresu příjemce nebo naskenujte QR kód pomocí fotoaparátu, abyste nemuseli adresu psát ručně.
-4. Klikněte v peněžence na tlačítko "Odeslat" (nebo na podobně formulovanou alternativu).
+1. Otevřete aplikaci své peněženky.
+2. Získejte přijímací adresu a ujistěte se, že jste připojeni ke stejné síti jako příjemce.
+3. Zadejte přijímací adresu nebo naskenujte QR kód pomocí fotoaparátu, abyste nemuseli adresu psát ručně.
+4. Klikněte na tlačítko „Odeslat“ ve své peněžence (nebo na podobně formulovanou alternativu).
 
-![Pole pro odeslání na krypto adresu](./send.png) <br/>
+![Send field for crypto address](./send.png)
+<br/>
 
-5. Mnoho aktiv, jako například DAI nebo USDC, existuje ve více sítích. Při převodu krypto tokenů se ujistěte, že příjemce používá stejnou síť jako vy, protože tyto tokeny nejsou zaměnitelné.
-6. Ujistěte se, že máte v peněžence dostatek ETH na pokrytí transakčního poplatku, který se liší v závislosti na podmínkách sítě. Většina peněženek automaticky připočte navrhovaný poplatek k transakci, kterou pak můžete potvrdit.
-7. Po zpracování transakce se na účtu příjemce objeví odpovídající částka v kryptoměnách. To může trvat od několika sekund do několika minut v závislosti na aktuálním vytížení sítě.
+5. Mnoho aktiv, jako jsou DAI nebo USDC, existuje na více sítích. Při převodu krypto tokenů se ujistěte, že příjemce používá stejnou síť jako vy, protože tyto sítě nejsou zaměnitelné.
+6. Ujistěte se, že má vaše peněženka dostatek ETH na pokrytí transakčního poplatku, který se liší v závislosti na podmínkách sítě. Většina peněženek automaticky přidá navrhovaný poplatek k transakci, kterou pak můžete potvrdit.
+7. Jakmile je vaše transakce zpracována, odpovídající částka v kryptu se objeví na účtu příjemce. To může trvat od několika sekund do několika minut v závislosti na tom, jak moc je síť aktuálně využívána.
 
-## Připojování se k projektům
+## Připojování k projektům {#connecting-to-projects}
 
-Vaše adresa bude ve všech Ethereum projektech stejná. Na žádný projekt se nemusíte registrovat individuálně. Jakmile máte peněženku, můžete se připojit k jakémukoli Ethereum projektu bez dalších informací. Nejsou potřeba žádné e-maily ani jiné osobní údaje.
+Vaše adresa bude ve všech Ethereum projektů stejná. Nemusíte se registrovat do každého projektu zvlášť. Jakmile máte peněženku, můžete se připojit k jakémukoli Ethereum projektu bez jakýchkoli dalších informací. Nejsou potřeba žádné e-maily ani jiné osobní údaje.
 
 1. Navštivte webové stránky jakéhokoli projektu.
-2. Pokud je vstupní stránka projektu pouze statickým popisem projektu, měli byste mít v nabídce možnost kliknout na tlačítko "Otevřít aplikaci", které vás přesměruje do skutečné webové aplikace.
-3. Jakmile jste v aplikaci, klikněte na "Připojit".
+2. Pokud je vstupní stránka projektu pouze jeho statickým popisem, měli byste mít možnost kliknout v nabídce na tlačítko „Otevřít aplikaci“, které vás přesměruje do samotné webové aplikace.
+3. Jakmile jste v aplikaci, klikněte na „Připojit“.
 
-![Tlačítko umožňující uživateli připojit se k webové stránce pomocí peněženky](./connect1.png)
+![Button allowing user to connect to the website with a wallet](./connect1.png)
 
-4. Vyberte peněženku ze seznamu možností. Pokud svou peněženku nevidíte, může být skryta pod možností "WalletConnect".
+4. Vyberte svou peněženku z poskytnutého seznamu možností. Pokud svou peněženku nevidíte, může být skrytá pod možností „WalletConnect“.
 
-![Výběr ze seznamu peněženek k připojení](./connect2.png)
+![Selecting from a list of wallets to connect with](./connect2.png)
 
-5. Potvrďte žádost o podpis v peněžence a navažte spojení. **Podepsání této zprávy by nemělo vyžadovat utracení žádných ETH**.
-6. A je to! Začněte aplikaci používat. Některé zajímavé projekty najdete na naší [stránce dApps](/apps/#explore). <br />
+5. Potvrďte žádost o podpis ve své peněžence, abyste navázali spojení. **Podepisování této zprávy by nemělo vyžadovat utracení žádného ETH**.
+6. To je vše! Začněte aplikaci používat. Některé zajímavé projekty můžete najít na naší [stránce s decentralizovanými aplikacemi (dapps)](/apps/#explore).
+   <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -72,20 +72,20 @@ Vaše adresa bude ve všech Ethereum projektech stejná. Na žádný projekt se 
 </AlertContent>
 </Alert>
 
-## Často kladené dotazy
+## Často kladené dotazy {#frequently-asked-questions}
 
-### Pokud mám ETH adresu, vlastním stejnou adresu i na jiných blockchainech?
+### Pokud vlastním ETH adresu, vlastním stejnou adresu i na jiných blockchainech? {#if-i-own-an-eth-address-do-i-own-the-same-address-on-other-blockchains}
 
-Stejnou adresu můžete používat na všech blockchainech kompatibilních s EVM (pokud máte peněženku s frází pro obnovení). Tento [seznam](https://chainlist.org/) vám ukáže, které blockchainy můžete používat se stejnou adresou. Některé blockchainy, jako například Bitcoin, implementují samostatnou sadu síťových pravidel a budete na nich potřebovat jinou adresu s jiným formátem. Pokud máte peněženku s chytrými kontrakty, měli byste se podívat na jejich webové stránky, kde najdete další informace o podporovaných blockchainech.
+Stejnou adresu můžete použít na všech blockchainech kompatibilních s EVM (pokud máte typ peněženky s frází pro obnovení). Tento [seznam](https://chainlist.org/) vám ukáže, které blockchainy můžete používat se stejnou adresou. Některé blockchainy, jako je Bitcoin, implementují zcela odlišný soubor pravidel sítě a budete potřebovat jinou adresu s jiným formátem. Pokud máte peněženku typu chytrý kontrakt, měli byste se podívat na webové stránky jejího produktu pro více informací o tom, které blockchainy jsou podporovány.
 
-### Mohu používat stejnou adresu na více zařízeních?
+### Mohu používat stejnou adresu na více zařízeních? {#can-i-use-the-same-address-on-multiple-devices}
 
-Ano, stejnou adresu můžete použít na více zařízeních. Peněženky jsou technicky vzato pouze rozhraním, které vám ukazuje zůstatek a umožňuje provádět transakce, váš účet není uložen v peněžence, ale na blockchainu.
+Ano, stejnou adresu můžete používat na více zařízeních. Peněženky jsou technicky pouze rozhraním, které vám ukazuje váš zůstatek a umožňuje provádět transakce, váš účet není uložen uvnitř peněženky, ale na blockchainu.
 
-### Neobdržel jsem krypto, kde mohu zkontrolovat stav transakce?
+### Neobdržel jsem krypto, kde mohu zkontrolovat stav transakce? {#i-have-not-received-the-crypto-where-can-i-check-the-status-of-a-transaction}
 
-Můžete použít [prohlížeče bloků](/developers/docs/data-and-analytics/block-explorers/), abyste viděli stav jakékoli transakce v reálném čase. Stačí vyhledat adresu peněženky nebo ID transakce.
+Ke sledování stavu jakékoli transakce v reálném čase můžete použít [prohlížeče bloků](/developers/docs/data-and-analytics/block-explorers/). Vše, co musíte udělat, je vyhledat adresu vaší peněženky nebo ID transakce.
 
-### Mohu transakce zrušit nebo vrátit?
+### Mohu zrušit nebo vrátit transakce? {#can-i-cancel-or-return-transactions}
 
-Ne, jakmile je transakce potvrzena, nelze ji zrušit.
+Ne, jakmile je transakce potvrzena, nemůžete ji zrušit.

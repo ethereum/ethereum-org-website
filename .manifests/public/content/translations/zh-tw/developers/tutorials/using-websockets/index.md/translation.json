@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-19T23:28:02.810Z",
+  "englishManifestHash": "1c5732c054be",
+  "placeholderOrder": [
+    "LINK-dca13e",
+    "LINK-f99ca4",
+    "CODE-2a9751",
+    "LINK-3f0bf9",
+    "CODEBLOCK-9e4d9b",
+    "LINK-8df021",
+    "IMAGE-645485",
+    "LINK-13d16b",
+    "CODEBLOCK-5ebff4",
+    "CODE-5c43f8",
+    "CODE-e46548",
+    "CODE-5c43f8",
+    "LINK-ef2b78",
+    "CODE-5c43f8",
+    "CODE-e46548",
+    "CODE-e7a027",
+    "CODE-5b7e6b",
+    "CODE-a20b52",
+    "CODE-a8fa7f",
+    "CODE-5c43f8",
+    "CODE-f6a214",
+    "CODE-e8b27f",
+    "CODE-33df59",
+    "CODEBLOCK-13b455",
+    "CODE-cd55ad",
+    "CODEBLOCK-f28612",
+    "CODE-98f38f",
+    "CODE-e1f797",
+    "CODE-b5bea4",
+    "CODE-d80c9b",
+    "CODE-f013aa",
+    "CODE-74234e",
+    "CODE-74234e",
+    "CODE-4f53cd",
+    "CODE-014afd",
+    "CODE-9fe610",
+    "CODE-c44525",
+    "CODE-6f3060",
+    "CODEBLOCK-ebd368",
+    "CODE-e46548",
+    "CODE-5c43f8",
+    "CODE-b5bea4",
+    "CODE-fcbcf1",
+    "CODEBLOCK-70c551",
+    "CODEBLOCK-1b449a",
+    "LINK-9d7f22",
+    "LINK-8e3456",
+    "LINK-1e6b20"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-9e4d9b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5ebff4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-13b455": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f28612": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ebd368": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-70c551": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1b449a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-2a9751": {
+      "type": "inline-code",
+      "values": {
+        "content": "demo"
+      }
+    },
+    "CODE-5c43f8": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_subscribe"
+      }
+    },
+    "CODE-e46548": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_unsubscribe"
+      }
+    },
+    "CODE-e7a027": {
+      "type": "inline-code",
+      "values": {
+        "content": "jsonrpc"
+      }
+    },
+    "CODE-5b7e6b": {
+      "type": "inline-code",
+      "values": {
+        "content": "method"
+      }
+    },
+    "CODE-a20b52": {
+      "type": "inline-code",
+      "values": {
+        "content": "params"
+      }
+    },
+    "CODE-a8fa7f": {
+      "type": "inline-code",
+      "values": {
+        "content": "subscription"
+      }
+    },
+    "CODE-f6a214": {
+      "type": "inline-code",
+      "values": {
+        "content": "result"
+      }
+    },
+    "CODE-e8b27f": {
+      "type": "inline-code",
+      "values": {
+        "content": "alchemy_newFullPendingTransactions"
+      }
+    },
+    "CODE-33df59": {
+      "type": "inline-code",
+      "values": {
+        "content": "web3.eth.subscribe(\"pendingTransactions\")"
+      }
+    },
+    "CODE-cd55ad": {
+      "type": "inline-code",
+      "values": {
+        "content": "newHeads"
+      }
+    },
+    "CODE-98f38f": {
+      "type": "inline-code",
+      "values": {
+        "content": "logs"
+      }
+    },
+    "CODE-e1f797": {
+      "type": "inline-code",
+      "values": {
+        "content": "removed"
+      }
+    },
+    "CODE-b5bea4": {
+      "type": "inline-code",
+      "values": {
+        "content": "true"
+      }
+    },
+    "CODE-d80c9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "address"
+      }
+    },
+    "CODE-f013aa": {
+      "type": "inline-code",
+      "values": {
+        "content": "topics"
+      }
+    },
+    "CODE-74234e": {
+      "type": "inline-code",
+      "values": {
+        "content": "null"
+      }
+    },
+    "CODE-4f53cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "[]"
+      }
+    },
+    "CODE-014afd": {
+      "type": "inline-code",
+      "values": {
+        "content": "[A]"
+      }
+    },
+    "CODE-9fe610": {
+      "type": "inline-code",
+      "values": {
+        "content": "[null, B]"
+      }
+    },
+    "CODE-c44525": {
+      "type": "inline-code",
+      "values": {
+        "content": "[A, B]"
+      }
+    },
+    "CODE-6f3060": {
+      "type": "inline-code",
+      "values": {
+        "content": "[[A, B], [A, B]]"
+      }
+    },
+    "CODE-fcbcf1": {
+      "type": "inline-code",
+      "values": {
+        "content": "false"
+      }
+    },
+    "IMAGE-645485": {
+      "type": "image",
+      "values": {
+        "path": "./use-websockets.gif"
+      }
+    },
+    "LINK-dca13e": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/reference/api-overview"
+      }
+    },
+    "LINK-f99ca4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/websockets/wscat"
+      }
+    },
+    "LINK-3f0bf9": {
+      "type": "link",
+      "values": {
+        "url": "https://auth.alchemy.com/signup"
+      }
+    },
+    "LINK-8df021": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.alchemy.com/"
+      }
+    },
+    "LINK-13d16b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/reference/api-overview"
+      }
+    },
+    "LINK-ef2b78": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/reference/eth-subscribe"
+      }
+    },
+    "LINK-9d7f22": {
+      "type": "link",
+      "values": {
+        "url": "https://auth.alchemy.com"
+      }
+    },
+    "LINK-8e3456": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/"
+      }
+    },
+    "LINK-1e6b20": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/AlchemyPlatform"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:28:02.810Z",
+      "status": "success"
+    }
+  }
+}

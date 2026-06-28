@@ -1,5 +1,5 @@
 import { pickBy } from "lodash"
-import type { Meta, StoryObj } from "@storybook/react/*"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { viewportModes } from "@/storybook/modes"
 
@@ -20,51 +20,40 @@ const meta = {
 export default meta
 
 const {
-  ContentContainer,
-  h1: Heading1,
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
-  Title,
-  p: Paragraph,
   FeaturedText,
   Divider,
   hr: HR,
-  pre: Pre,
-  Page,
 } = MdComponentSet
 
 const Para = () => (
-  <Paragraph>
+  <p>
     Ether (also known by its ticker symbol, ETH) is the native currency
     transacted on Ethereum. ETH is needed to pay for usage of the Ethereum
     network (in the form of transaction fees). ETH is also used to secure the
     network with staking. When people talk about the price of Ethereum,
     they&apos;re referring to ETH the asset.
-  </Paragraph>
+  </p>
 )
 
 export const MdComponents: StoryObj = {
   render: () => (
     <div className="mx-auto max-w-screen-lg">
-      <Page>
-        <ContentContainer>
-          <Heading1>Heading1</Heading1>
-          <Para />
-          <Heading2>Heading2</Heading2>
-          <Para />
-          <Heading3>Heading3</Heading3>
-          <Para />
-          <Heading4>Heading4</Heading4>
-          <Para />
-          <Title>Title</Title>
-          <Para />
-          <Divider />
-          <Pre>Lots of coding here</Pre>
-          <HR />
-          <FeaturedText>Feature Text</FeaturedText>
-        </ContentContainer>
-      </Page>
+      <div className="flow px-page pb-page">
+        <h1>Heading1</h1>
+        <Para />
+        <Heading2>Heading2</Heading2>
+        <Para />
+        <Heading3>Heading3</Heading3>
+        <Para />
+        <Heading4>Heading4</Heading4>
+        <Para />
+        <Divider />
+        <HR />
+        <FeaturedText>Feature Text</FeaturedText>
+      </div>
     </div>
   ),
 }

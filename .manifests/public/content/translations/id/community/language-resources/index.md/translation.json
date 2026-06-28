@@ -1,0 +1,562 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-08T07:20:15.566Z",
+  "englishManifestHash": "3dc4d1e03b2a",
+  "placeholderOrder": [
+    "LINK-a6934c",
+    "IMAGE-257e7d",
+    "LINK-8be1ad",
+    "LINK-c59c8d",
+    "LINK-c8fe90",
+    "LINK-5c8c5f",
+    "LINK-9b9a14",
+    "LINK-75ad65",
+    "LINK-366e1e",
+    "LINK-779222",
+    "LINK-6f8d5a",
+    "LINK-c09d0c",
+    "LINK-e0772b",
+    "LINK-60c1ba",
+    "LINK-48276f",
+    "LINK-37d83e",
+    "LINK-a83d97",
+    "LINK-607d0f",
+    "LINK-b1f14b",
+    "LINK-22579e",
+    "LINK-8d6ebd",
+    "LINK-617e25",
+    "LINK-4be98a",
+    "LINK-b07aa3",
+    "LINK-382afb",
+    "LINK-84474a",
+    "LINK-87c75c",
+    "LINK-6d996b",
+    "LINK-3a5267",
+    "LINK-138137",
+    "LINK-c71227",
+    "LINK-72791a",
+    "LINK-d470bb",
+    "LINK-df5982",
+    "LINK-be0687",
+    "LINK-225c4e",
+    "LINK-67b516",
+    "LINK-c49fd9",
+    "LINK-ce8a98",
+    "LINK-995e73",
+    "LINK-b54e80",
+    "LINK-1d641f",
+    "LINK-710d9e",
+    "LINK-aed637",
+    "LINK-a5fcf4",
+    "LINK-fbd0b2",
+    "LINK-47edfb",
+    "LINK-f33298",
+    "LINK-8a23ae",
+    "LINK-47a337",
+    "LINK-21e11f",
+    "LINK-258dad",
+    "LINK-28a70d",
+    "LINK-72cfb2",
+    "LINK-59adec",
+    "LINK-6afd8c",
+    "LINK-4d989c",
+    "LINK-99fbc8",
+    "LINK-652b2d",
+    "LINK-6dc4f0",
+    "LINK-c5db1a",
+    "LINK-fbfc6b",
+    "LINK-fc1963",
+    "LINK-7b677a",
+    "LINK-d68106",
+    "LINK-602eca",
+    "LINK-575863",
+    "LINK-d9cf17",
+    "LINK-1ef150",
+    "LINK-96b341",
+    "LINK-7692e9",
+    "LINK-fe3869",
+    "LINK-9a2d97",
+    "LINK-fceb1e",
+    "LINK-2b4926",
+    "LINK-295a42",
+    "LINK-9ec974",
+    "LINK-6dfab2"
+  ],
+  "placeholderMap": {
+    "IMAGE-257e7d": {
+      "type": "image",
+      "values": {
+        "path": "./language-selector-menu.png"
+      }
+    },
+    "LINK-a6934c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new/choose"
+      }
+    },
+    "LINK-8be1ad": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/#translation-program"
+      }
+    },
+    "LINK-c59c8d": {
+      "type": "link",
+      "values": {
+        "url": "http://www.beincrypto.com.br"
+      }
+    },
+    "LINK-c8fe90": {
+      "type": "link",
+      "values": {
+        "url": "http://cointelegraph.com.br/category/analysis"
+      }
+    },
+    "LINK-5c8c5f": {
+      "type": "link",
+      "values": {
+        "url": "http://www.livecoins.com.br/ethereum"
+      }
+    },
+    "LINK-9b9a14": {
+      "type": "link",
+      "values": {
+        "url": "http://www.seudinheiro.com/criptomoedas/"
+      }
+    },
+    "LINK-75ad65": {
+      "type": "link",
+      "values": {
+        "url": "https://modularcrypto.xyz/"
+      }
+    },
+    "LINK-366e1e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.web3dev.com.br/"
+      }
+    },
+    "LINK-779222": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/web3brasil/web3brasil"
+      }
+    },
+    "LINK-6f8d5a": {
+      "type": "link",
+      "values": {
+        "url": "http://www.criptofacil.com/ultimas-noticias/"
+      }
+    },
+    "LINK-c09d0c": {
+      "type": "link",
+      "values": {
+        "url": "http://www.criptoativos.wiki.br/"
+      }
+    },
+    "LINK-e0772b": {
+      "type": "link",
+      "values": {
+        "url": "http://www.cointimes.com.br/"
+      }
+    },
+    "LINK-60c1ba": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/"
+      }
+    },
+    "LINK-48276f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethereum.cn/"
+      }
+    },
+    "LINK-37d83e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/editor-Ajian/EthFans.org-annual-collected-works/"
+      }
+    },
+    "LINK-a83d97": {
+      "type": "link",
+      "values": {
+        "url": "https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA"
+      }
+    },
+    "LINK-607d0f": {
+      "type": "link",
+      "values": {
+        "url": "https://123eth.org/"
+      }
+    },
+    "LINK-b1f14b": {
+      "type": "link",
+      "values": {
+        "url": "http://zhenxiao.com/blockchain/"
+      }
+    },
+    "LINK-22579e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethplanet.org/"
+      }
+    },
+    "LINK-8d6ebd": {
+      "type": "link",
+      "values": {
+        "url": "https://www.primitiveslane.org/"
+      }
+    },
+    "LINK-617e25": {
+      "type": "link",
+      "values": {
+        "url": "https://www.notion.so/Ethereum-Translation-Community-CN-05375fe0a94c4214acaf90f42ba40171"
+      }
+    },
+    "LINK-4be98a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Dapp-Learning-DAO/Dapp-Learning"
+      }
+    },
+    "LINK-b07aa3": {
+      "type": "link",
+      "values": {
+        "url": "https://learnblockchain.cn/"
+      }
+    },
+    "LINK-382afb": {
+      "type": "link",
+      "values": {
+        "url": "https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw"
+      }
+    },
+    "LINK-84474a": {
+      "type": "link",
+      "values": {
+        "url": "https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ"
+      }
+    },
+    "LINK-87c75c": {
+      "type": "link",
+      "values": {
+        "url": "https://gwei.cz"
+      }
+    },
+    "LINK-6d996b": {
+      "type": "link",
+      "values": {
+        "url": "https://prirucka.gwei.cz/"
+      }
+    },
+    "LINK-3a5267": {
+      "type": "link",
+      "values": {
+        "url": "https://dao.gwei.cz/"
+      }
+    },
+    "LINK-138137": {
+      "type": "link",
+      "values": {
+        "url": "https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m"
+      }
+    },
+    "LINK-c71227": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethereum-france.com/"
+      }
+    },
+    "LINK-72791a": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.fr/"
+      }
+    },
+    "LINK-d470bb": {
+      "type": "link",
+      "values": {
+        "url": "https://banklessfr.substack.com/"
+      }
+    },
+    "LINK-df5982": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptofr.com/category/44/ethereum-general"
+      }
+    },
+    "LINK-be0687": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/"
+      }
+    },
+    "LINK-225c4e": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/"
+      }
+    },
+    "LINK-67b516": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/"
+      }
+    },
+    "LINK-c49fd9": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/"
+      }
+    },
+    "LINK-ce8a98": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-ethereum/"
+      }
+    },
+    "LINK-995e73": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/omer-greisman-openzeppelin/"
+      }
+    },
+    "LINK-b54e80": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/shy-datika-tokenization/"
+      }
+    },
+    "LINK-1d641f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/roy-confino-insurance/"
+      }
+    },
+    "LINK-710d9e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/idan-ofrat-fireblocks/"
+      }
+    },
+    "LINK-aed637": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/gal-weizman-metamask/"
+      }
+    },
+    "LINK-a5fcf4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/dror-aviely-ethereum-center/"
+      }
+    },
+    "LINK-fbd0b2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/nir-rozin-cryptopunk/"
+      }
+    },
+    "LINK-47edfb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/adan-kedem-web3-gaming/"
+      }
+    },
+    "LINK-f33298": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/uri-kolodny-starkware/"
+      }
+    },
+    "LINK-8a23ae": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/udi-on-eth2/"
+      }
+    },
+    "LINK-47a337": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/etherurm2-week-summary/"
+      }
+    },
+    "LINK-21e11f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/alon-moroch-eth2/"
+      }
+    },
+    "LINK-258dad": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/eilon-aviv-eth2-0/"
+      }
+    },
+    "LINK-28a70d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptojungle.co.il/eilon-aviv-ethereum-2-0/"
+      }
+    },
+    "LINK-72cfb2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethereum-italia.it/"
+      }
+    },
+    "LINK-59adec": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethereum-italia.it/podcast/"
+      }
+    },
+    "LINK-6afd8c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/"
+      }
+    },
+    "LINK-4d989c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/"
+      }
+    },
+    "LINK-99fbc8": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/"
+      }
+    },
+    "LINK-652b2d": {
+      "type": "link",
+      "values": {
+        "url": "https://jvcea.or.jp/"
+      }
+    },
+    "LINK-6dc4f0": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptocurrency-association.org/"
+      }
+    },
+    "LINK-c5db1a": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/"
+      }
+    },
+    "LINK-fbfc6b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.oreilly.co.jp/books/9784873118963/"
+      }
+    },
+    "LINK-fc1963": {
+      "type": "link",
+      "values": {
+        "url": "https://www.oreilly.co.jp/books/9784873119342/"
+      }
+    },
+    "LINK-7b677a": {
+      "type": "link",
+      "values": {
+        "url": "https://cyberacademy.dev"
+      }
+    },
+    "LINK-d68106": {
+      "type": "link",
+      "values": {
+        "url": "https://forklog.com"
+      }
+    },
+    "LINK-602eca": {
+      "type": "link",
+      "values": {
+        "url": "https://ru.beincrypto.com"
+      }
+    },
+    "LINK-575863": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereummadrid.com/"
+      }
+    },
+    "LINK-d9cf17": {
+      "type": "link",
+      "values": {
+        "url": "https://es.cointelegraph.com/ethereum-for-beginners"
+      }
+    },
+    "LINK-1ef150": {
+      "type": "link",
+      "values": {
+        "url": "https://tutoriales.online/curso/solidity"
+      }
+    },
+    "LINK-96b341": {
+      "type": "link",
+      "values": {
+        "url": "https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU"
+      }
+    },
+    "LINK-7692e9": {
+      "type": "link",
+      "values": {
+        "url": "https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci"
+      }
+    },
+    "LINK-fe3869": {
+      "type": "link",
+      "values": {
+        "url": "https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS"
+      }
+    },
+    "LINK-9a2d97": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/c/Cryptoversidad"
+      }
+    },
+    "LINK-fceb1e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about"
+      }
+    },
+    "LINK-2b4926": {
+      "type": "link",
+      "values": {
+        "url": "https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/"
+      }
+    },
+    "LINK-295a42": {
+      "type": "link",
+      "values": {
+        "url": "https://wiki.tino.org/ethereum-la-gi/"
+      }
+    },
+    "LINK-9ec974": {
+      "type": "link",
+      "values": {
+        "url": "https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth"
+      }
+    },
+    "LINK-6dfab2": {
+      "type": "link",
+      "values": {
+        "url": "https://coin68.com/ethereum-tieu-diem/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:20:15.566Z",
+      "status": "success"
+    }
+  }
+}

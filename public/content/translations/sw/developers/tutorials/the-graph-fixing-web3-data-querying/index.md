@@ -1,27 +1,21 @@
 ---
-title: "The Graph: Kurekebisha uulizaji wa data wa Web3"
-description: Mnyororo wa bloku ni kama hifadhidata lakini bila SQL. Data yote ipo, lakini hakuna njia ya kuipata. Acha nikuonyeshe jinsi ya kurekebisha hili kwa kutumia The Graph na GraphQL.
+title: "The Graph: Kurekebisha uuliziaji wa data wa Web3"
+description: Mnyororo wa vitalu ni kama hifadhidata lakini bila SQL. Data yote ipo, lakini hakuna njia ya kuifikia. Hebu nikuonyeshe jinsi ya kurekebisha hili kwa The Graph na GraphQL.
 author: Markus Waas
 lang: sw
-tags:
-  [
-    "uimara",
-    "mikataba erevu",
-    "kuuliza",
-    "the graph",
-    "react"
-  ]
+tags: ["Solidity", "mikataba mahiri", "kuulizia", "the graph", "React"]
 skill: intermediate
+breadcrumb: The Graph
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
 ---
 
-Wakati huu tutaangalia kwa undani zaidi The Graph ambayo kimsingi imekuwa sehemu ya rundo la kawaida la kuendeleza mfumo mtawanyo wa kimamlaka katika mwaka uliopita. Hebu kwanza tuone jinsi tungefanya mambo kwa njia ya jadi...
+Wakati huu tutaangalia kwa undani The Graph ambayo kimsingi imekuwa sehemu ya mkusanyiko wa kawaida wa kutengeneza programu tumizi zilizogatuliwa (dapps) katika mwaka uliopita. Hebu kwanza tuone jinsi tungefanya mambo kwa njia ya kitamaduni...
 
 ## Bila The Graph... {#without-the-graph}
 
-Kwa hivyo, hebu tuchukue mfano rahisi kwa madhumuni ya kielelezo. Sote tunapenda michezo, kwa hivyo fikiria mchezo rahisi ambapo watumiaji wanaweka dau:
+Kwa hivyo hebu tuende na mfano rahisi kwa madhumuni ya kielelezo. Sote tunapenda michezo, kwa hivyo fikiria mchezo rahisi ambapo watumiaji wanaweka dau:
 
 ```solidity
 pragma solidity 0.7.1;
@@ -36,7 +30,7 @@ contract Game {
 
         if (hasWon) {
             (bool success, ) = msg.sender.call{ value: msg.value * 2 }('');
-            require(success, "Uhamisho umeshindikana");
+            require(success, "Transfer failed");
             totalGamesPlayerWon++;
         } else {
             totalGamesPlayerLost++;
@@ -47,89 +41,89 @@ contract Game {
 }
 ```
 
-Sasa tuseme katika mfumo wetu uliotawanywa, tunataka kuonyesha jumla ya dau, jumla ya michezo iliyopotea/kushinda na pia kuisasisha kila wakati mtu anapocheza tena. Njia itakuwa:
+Sasa tuseme katika programu tumizi iliyogatuliwa (dapp) yetu, tunataka kuonyesha jumla ya dau, jumla ya michezo iliyopotezwa/iliyoshindwa na pia kuisasisha kila wakati mtu anapocheza tena. Njia itakuwa:
 
 1. Leta `totalGamesPlayerWon`.
 2. Leta `totalGamesPlayerLost`.
-3. Jisajili kwa matukio ya `BetPlaced`.
+3. Jisajili kwenye matukio ya `BetPlaced`.
 
-Tunaweza kusikiliza [tukio katika Web3](https://docs.web3js.org/api/web3/class/Contract#events) kama inavyoonyeshwa upande wa kulia, lakini inahitaji kushughulikia visa kadhaa.
+Tunaweza kusikiliza [tukio katika Web3](https://docs.web3js.org/api/web3/class/Contract#events) kama inavyoonyeshwa upande wa kulia, lakini inahitaji kushughulikia matukio machache.
 
 ```solidity
 GameContract.events.BetPlaced({
     fromBlock: 0
 }, function(error, event) { console.log(event); })
 .on('data', function(event) {
-    // tukio limetokea
+    // tukio limeanzishwa
 })
 .on('changed', function(event) {
-    // tukio limeondolewa tena
+    // tukio liliondolewa tena
 })
 .on('error', function(error, receipt) {
-    // tx imekataliwa
+    // muamala umekataliwa
 });
 ```
 
-Sasa hii bado ni sawa kwa mfano wetu rahisi. Lakini tuseme sasa tunataka kuonyesha kiasi cha dau zilizopotea/kushinda kwa mchezaji wa sasa pekee. Basi hatuna bahati, ni bora upeleke mkataba mpya unaohifadhi thamani hizo na kuzileta. Na sasa fikiria mkataba-erevu na mfumo uliotawanywa ulio mgumu zaidi, mambo yanaweza kuwa magumu haraka.
+Sasa hii bado ni sawa kwa mfano wetu rahisi. Lakini tuseme sasa tunataka kuonyesha kiasi cha dau zilizopotezwa/zilizoshindwa kwa mchezaji wa sasa pekee. Kweli hatuna bahati, ni afadhali usambaze mkataba mpya unaohifadhi thamani hizo na kuzileta. Na sasa fikiria mkataba mahiri na programu tumizi iliyogatuliwa (dapp) ngumu zaidi, mambo yanaweza kuwa magumu haraka.
 
-![Mtu Haulizi Hivi Hivi](./one-does-not-simply-query.jpg)
+![One Does Not Simply Query](./one-does-not-simply-query.jpg)
 
-Unaweza kuona jinsi hii si bora zaidi:
+Unaweza kuona jinsi hii sio bora:
 
-- Haifanyi kazi kwa mikataba iliyokwisha pelekwa.
+- Haifanyi kazi kwa mikataba ambayo tayari imesambazwa.
 - Gharama za ziada za gesi kwa kuhifadhi thamani hizo.
 - Inahitaji wito mwingine ili kuleta data kwa nodi ya Ethereum.
 
-![Hiyo haitoshi](./not-good-enough.jpg)
+![Thats not good enough](./not-good-enough.jpg)
 
-Sasa hebu tuangalie suluhisho bora zaidi.
+Sasa hebu tuangalie suluhisho bora.
 
-## Acha nikutambulishe kwa GraphQL {#let-me-introduce-to-you-graphql}
+## Hebu nikutambulishe kwa GraphQL {#let-me-introduce-to-you-graphql}
 
-Kwanza hebu tuzungumzie GraphQL, iliyobuniwa na kutekelezwa awali na Facebook. Huenda unaifahamu muundo wa jadi wa REST API. Sasa fikiria badala yake unaweza kuandika hoja ya kuulizia data unayoitaka hasa:
+Kwanza hebu tuzungumze kuhusu GraphQL, iliyoundwa na kutekelezwa awali na Facebook. Unaweza kuwa unajua muundo wa kitamaduni wa REST API. Sasa fikiria badala yake ungeweza kuandika swali kwa data haswa uliyotaka:
 
-![GraphQL API dhidi ya REST API](./graphql.jpg)
+![GraphQL API vs. REST API](./graphql.jpg)
 
-![Onyesho lililohuishwa la swali la GraphQL katika uwanja wa michezo wa Graph](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
 
-Picha hizi mbili zinaonyesha kiini cha GraphQL. Kwa hoja ya kuulizia upande wa kulia tunaweza kufafanua hasa data tunayoitaka, kwa hivyo hapo tunapata kila kitu katika ombi moja na si zaidi ya kile tunachohitaji hasa. Seva ya GraphQL hushughulikia upataji wa data yote inayohitajika, kwa hivyo ni rahisi sana kwa upande wa mtumiaji wa frontend kutumia. [Haya ni maelezo mazuri](https://www.apollographql.com/blog/graphql-explained) ya jinsi seva inavyoshughulikia hoja ya kuulizia ikiwa una nia.
+Picha hizo mbili zinachukua kiini cha GraphQL. Kwa swali lililo upande wa kulia tunaweza kufafanua haswa data tunayotaka, kwa hivyo hapo tunapata kila kitu katika ombi moja na hakuna zaidi ya kile tunachohitaji. Seva ya GraphQL inashughulikia uletaji wa data yote inayohitajika, kwa hivyo ni rahisi sana kwa upande wa mtumiaji wa mbele kuitumia. [Haya ni maelezo mazuri](https://www.apollographql.com/blog/graphql-explained) ya jinsi haswa seva inashughulikia swali ikiwa una nia.
 
-Sasa tukiwa na maarifa hayo, hatimaye tuingie katika ulimwengu wa mnyororo wa bloku na The Graph.
+Sasa kwa ujuzi huo, hebu hatimaye tuingie kwenye nafasi ya mnyororo wa vitalu na The Graph.
 
 ## The Graph ni nini? {#what-is-the-graph}
 
-Mnyororo wa bloku ni hifadhidata iliyogatuliwa, lakini kinyume na ilivyo kawaida, hatuna lugha ya kuulizia kwa hifadhidata hii. Mbinu za kupata data ni ngumu au haziwezekani kabisa. The Graph ni itifaki iliyogatuliwa ya kuorodhesha na kuuliza data ya mnyororo wa bloku. Na huenda umekisia, inatumia GraphQL kama lugha ya kuulizia.
+Mnyororo wa vitalu ni hifadhidata iliyogatuliwa, lakini tofauti na kile ambacho huwa kawaida, hatuna lugha ya kuulizia kwa hifadhidata hii. Suluhu za kurejesha data ni ngumu au haziwezekani kabisa. The Graph ni itifaki iliyogatuliwa ya kufaharisi na kuulizia data ya mnyororo wa vitalu. Na unaweza kuwa umekisia, inatumia GraphQL kama lugha ya kuulizia.
 
 ![The Graph](./thegraph.png)
 
-Mifano daima ndiyo njia bora ya kuelewa kitu, kwa hivyo hebu tutumie The Graph kwa mfano wetu wa GameContract.
+Mifano daima ni bora kuelewa kitu, kwa hivyo hebu tutumie The Graph kwa mfano wetu wa GameContract.
 
-## Jinsi ya kuunda Subgraph {#how-to-create-a-subgraph}
+## Jinsi ya kuunda Grafu ndogo {#how-to-create-a-subgraph}
 
-Ufafanuzi wa jinsi ya kuorodhesha data unaitwa subgraph. Inahitaji vipengele vitatu:
+Ufafanuzi wa jinsi ya kufaharisi data unaitwa grafu ndogo. Inahitaji vipengele vitatu:
 
-1. Manifest (`subgraph.yaml`)
-2. Schema (`schema.graphql`)
-3. Mapping (`mapping.ts`)
+1. Dhihirisho (`subgraph.yaml`)
+2. Skema (`schema.graphql`)
+3. Uchoraji wa ramani (`mapping.ts`)
 
-### Manifest (`subgraph.yaml`) {#manifest}
+### Dhihirisho (`subgraph.yaml`) {#manifest}
 
-Manifest ni faili letu la usanidi na linafafanua:
+Dhihirisho ni faili yetu ya usanidi na inafafanua:
 
-- ni mikataba-erevu ipi ya kuorodhesha (anwani, mtandao, ABI...)
+- ni mikataba mahiri ipi ya kufaharisi (anwani, mtandao, ABI...)
 - ni matukio yapi ya kusikiliza
-- mambo mengine ya kusikiliza kama miito ya kukokotoa au bloku
-- kazi za ramani zinazoitwa (tazama `mapping.ts` hapa chini)
+- mambo mengine ya kusikiliza kama vile wito wa utendakazi au vitalu
+- vitendaji vya uchoraji wa ramani vinavyoitwa (tazama `mapping.ts` hapa chini)
 
-Unaweza kufafanua mikataba na vidhibiti vingi hapa. Mpangilio wa kawaida ungekuwa na folda ya subgraph ndani ya mradi wa Hardhat na hifadhi yake yenyewe. Kisha unaweza kurejelea ABI kwa urahisi.
+Unaweza kufafanua mikataba na vidhibiti vingi hapa. Usanidi wa kawaida ungekuwa na folda ya grafu ndogo ndani ya mradi wa Hardhat na hazina yake yenyewe. Kisha unaweza kurejelea ABI kwa urahisi.
 
-Kwa sababu za urahisi unaweza pia kutaka kutumia zana ya violezo kama mustache. Kisha unaunda `subgraph.template.yaml` na kuingiza anwani kulingana na upekuzi wa hivi karibuni. Kwa mfano wa usanidi wa hali ya juu zaidi, angalia kwa mfano [repo ya Aave subgraph](https://github.com/aave/aave-protocol/tree/master/thegraph).
+Kwa sababu za urahisi unaweza pia kutaka kutumia zana ya kiolezo kama mustache. Kisha unaunda `subgraph.template.yaml` na kuingiza anwani kulingana na usambazaji wa hivi punde. Kwa usanidi wa mfano wa hali ya juu zaidi, tazama kwa mfano [hazina ya grafu ndogo ya Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
 Na nyaraka kamili zinaweza kuonekana [hapa](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
 ```yaml
 specVersion: 0.0.1
-description: Kuweka Dau kwenye Ethereum
+description: Placing Bets on Ethereum
 repository: - GitHub link -
 schema:
   file: ./schema.graphql
@@ -156,11 +150,11 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-### Schema (`schema.graphql`) {#schema}
+### Skema (`schema.graphql`) {#schema}
 
-Schema ni ufafanuzi wa data wa GraphQL. Itakuruhusu kufafanua ni vyombo vipi vipo na aina zake. Aina zinazotumika kutoka kwa The Graph ni
+Skema ni ufafanuzi wa data wa GraphQL. Itakuruhusu kufafanua ni huluki zipi zilizopo na aina zake. Aina zinazotumika kutoka The Graph ni
 
-- Baiti
+- Bytes
 - ID
 - String
 - Boolean
@@ -168,7 +162,7 @@ Schema ni ufafanuzi wa data wa GraphQL. Itakuruhusu kufafanua ni vyombo vipi vip
 - BigInt
 - BigDecimal
 
-Unaweza pia kutumia vyombo kama aina kufafanua mahusiano. Katika mfano wetu tunafafanua uhusiano wa 1-kwa-wengi kutoka kwa mchezaji kwenda kwa dau. ! inamaanisha thamani haiwezi kuwa tupu. Nyaraka kamili zinaweza kuonekana [hapa](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
+Unaweza pia kutumia huluki kama aina ili kufafanua mahusiano. Katika mfano wetu tunafafanua uhusiano wa 1-kwa-wengi kutoka kwa mchezaji hadi dau. Alama ya ! inamaanisha thamani haiwezi kuwa tupu. Nyaraka kamili zinaweza kuonekana [hapa](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
 ```graphql
 type Bet @entity {
@@ -187,17 +181,17 @@ type Player @entity {
 }
 ```
 
-### Mapping (`mapping.ts`) {#mapping}
+### Uchoraji wa ramani (`mapping.ts`) {#mapping}
 
-Faili la ramani katika The Graph linafafanua kazi zetu zinazobadilisha matukio yanayoingia kuwa vyombo. Imeandikwa katika AssemblyScript, ambayo ni sehemu ndogo ya Typescript. Hii inamaanisha inaweza kuandaliwa kuwa WASM (WebAssembly) kwa utekelezaji bora zaidi na unaobebeka wa ramani.
+Faili ya uchoraji wa ramani katika The Graph inafafanua vitendaji vyetu vinavyobadilisha matukio yanayoingia kuwa huluki. Imeandikwa katika AssemblyScript, kitengo kidogo cha TypeScript. Hii inamaanisha inaweza kukusanywa kuwa WASM (WebAssembly) kwa utekelezaji bora zaidi na unaobebeka wa uchoraji wa ramani.
 
-Utahihaji kufafanua kila kazi iliyotajwa kwenye faili ya `subgraph.yaml`, kwa hivyo kwa upande wetu tunahitaji moja tu: `handleNewBet`. Kwanza tunajaribu kupakia chombo cha Mchezaji kutoka kwa anwani ya mtumaji kama kitambulisho. Ikiwa haipo, tunaunda chombo kipya na kukijaza na thamani za kuanzia.
+Utahitaji kufafanua kila kitendaji kilichotajwa katika faili ya `subgraph.yaml`, kwa hivyo katika kesi yetu tunahitaji moja tu: `handleNewBet`. Kwanza tunajaribu kupakia huluki ya Mchezaji kutoka kwa anwani ya mtumaji kama kitambulisho (id). Ikiwa haipo, tunaunda huluki mpya na kuijaza na thamani za kuanzia.
 
-Kisha tunaunda chombo kipya cha Dau. Kitambulisho cha hili kitakuwa `event.transaction.hash.toHex() + "-" + event.logIndex.toString()` kuhakikisha daima kuna thamani ya kipekee. Kutumia hashi pekee haitoshi kwani mtu anaweza kuwa anaita kazi ya placeBet mara kadhaa katika muamala mmoja kupitia mkataba-erevu.
+Kisha tunaunda huluki mpya ya Dau. Kitambulisho (id) cha hii kitakuwa `event.transaction.hash.toHex() + "-" + event.logIndex.toString()` kuhakikisha thamani ya kipekee kila wakati. Kutumia heshi pekee haitoshi kwani mtu anaweza kuwa anaita kitendaji cha placeBet mara kadhaa katika muamala mmoja kupitia mkataba mahiri.
 
-Mwisho, tunaweza kusasisha chombo cha Mchezaji na data yote. Safu haziwezi kusukumwa moja kwa moja, lakini zinahitaji kusasishwa kama inavyoonyeshwa hapa. Tunatumia kitambulisho kurejelea dau. Na `.save()` inahitajika mwishoni kuhifadhi chombo.
+Mwishowe tunaweza kusasisha huluki ya Mchezaji na data yote. Mipangilio (Arrays) haiwezi kusukumwa moja kwa moja, lakini inahitaji kusasishwa kama inavyoonyeshwa hapa. Tunatumia kitambulisho (id) kurejelea dau. Na `.save()` inahitajika mwishoni ili kuhifadhi huluki.
 
-Nyaraka kamili zinaweza kuonekana hapa: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Unaweza pia kuongeza matokeo ya kumbukumbu kwenye faili la ramani, tazama [hapa](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
+Nyaraka kamili zinaweza kuonekana hapa: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Unaweza pia kuongeza pato la ukataji miti (logging) kwenye faili ya uchoraji wa ramani, tazama [hapa](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"
@@ -207,7 +201,7 @@ export function handleNewBet(event: PlacedBet): void {
   let player = Player.load(event.transaction.from.toHex())
 
   if (player == null) {
-    // unda ikiwa bado haipo
+    // unda kama bado haipo
     player = new Player(event.transaction.from.toHex())
     player.bets = new Array<string>(0)
     player.totalPlayedCount = 0
@@ -239,12 +233,12 @@ export function handleNewBet(event: PlacedBet): void {
 }
 ```
 
-## Kuitumia katika Frontend {#using-it-in-the-frontend}
+## Kuitumia katika Upande wa Mbele (Frontend) {#using-it-in-the-frontend}
 
-Kwa kutumia kitu kama Apollo Boost, unaweza kuunganisha kwa urahisi The Graph katika mfumo wako uliotawanywa wa React (au Apollo-Vue). Hasa unapotumia React hooks na Apollo, kupata data ni rahisi kama kuandika hoja moja ya GraphQL katika kijenzi chako. Mpangilio wa kawaida unaweza kuonekana hivi:
+Kwa kutumia kitu kama Apollo Boost, unaweza kuunganisha The Graph kwa urahisi katika programu tumizi iliyogatuliwa (dapp) yako ya React (au Apollo-Vue). Hasa unapotumia ndoano za React (React hooks) na Apollo, kuleta data ni rahisi kama kuandika swali moja la GraphQL katika kipengele chako. Usanidi wa kawaida unaweza kuonekana kama hii:
 
 ```javascript
-// Tazama subgraphs zote: https://thegraph.com/explorer/
+// Tazama grafu ndogo zote: https://thegraph.com/explorer/
 const client = new ApolloClient({
   uri: "{{ subgraphUrl }}",
 })
@@ -257,10 +251,10 @@ ReactDOM.render(
 )
 ```
 
-Na sasa tunaweza kuandika kwa mfano hoja ya kuulizia kama hii. Hii itatuletea
+Na sasa tunaweza kuandika kwa mfano swali kama hili. Hili litatuletea
 
-- mtumiaji wa sasa ameshinda mara ngapi
-- mtumiaji wa sasa amepoteza mara ngapi
+- ni mara ngapi mtumiaji wa sasa ameshinda
+- ni mara ngapi mtumiaji wa sasa amepoteza
 - orodha ya mihuri ya muda na dau zake zote za awali
 
 Yote katika ombi moja kwa seva ya GraphQL.
@@ -286,29 +280,29 @@ React.useEffect(() => {
 }, [loading, error, data])
 ```
 
-![Uchawi](./magic.jpg)
+![Magic](./magic.jpg)
 
-Lakini tunakosa kipande kimoja cha mwisho cha fumbo na hiyo ni seva. Unaweza kuiendesha mwenyewe au kutumia huduma iliyohifadhiwa.
+Lakini tunakosa kipande kimoja cha mwisho cha fumbo na hiyo ni seva. Unaweza kuiendesha mwenyewe au kutumia huduma iliyopangishwa.
 
 ## Seva ya The Graph {#the-graph-server}
 
-### Graph Explorer: Huduma iliyohifadhiwa {#graph-explorer-the-hosted-service}
+### Kichunguzi cha Graph: Huduma iliyopangishwa {#graph-explorer-the-hosted-service}
 
-Njia rahisi zaidi ni kutumia huduma iliyohifadhiwa. Fuata maagizo [hapa](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) ili kupeleka subgraph. Kwa miradi mingi unaweza kupata subgraphs zilizopo kwenye [explorer](https://thegraph.com/explorer/).
+Njia rahisi zaidi ni kutumia huduma iliyopangishwa. Fuata maagizo [hapa](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) ili kusambaza grafu ndogo. Kwa miradi mingi unaweza kupata grafu ndogo zilizopo katika [kichunguzi](https://thegraph.com/explorer/).
 
 ![The Graph-Explorer](./thegraph-explorer.png)
 
 ### Kuendesha nodi yako mwenyewe {#running-your-own-node}
 
-Vinginevyo unaweza kuendesha nodi yako mwenyewe. Nyaraka [hapa](https://github.com/graphprotocol/graph-node#quick-start). Sababu moja ya kufanya hivi inaweza kuwa ni kutumia mtandao ambao hautumiki na huduma iliyohifadhiwa. Mitandao inayotumika sasa hivi [inaweza kupatikana hapa](https://thegraph.com/docs/en/developing/supported-networks/).
+Vinginevyo unaweza kuendesha nodi yako mwenyewe. Nyaraka [hapa](https://github.com/graphprotocol/graph-node#quick-start). Sababu moja ya kufanya hivi inaweza kuwa kutumia mtandao ambao hautumiki na huduma iliyopangishwa. Mitandao inayotumika kwa sasa [inaweza kupatikana hapa](https://thegraph.com/docs/en/developing/supported-networks/).
 
 ## Mustakabali uliogatuliwa {#the-decentralized-future}
 
-GraphQL inasaidia mitiririko pia kwa matukio mapya yanayoingia. Hizi zinatumika kwenye grafu kupitia [Substreams](https://thegraph.com/docs/en/substreams/) ambazo kwa sasa ziko katika beta ya wazi.
+GraphQL inasaidia mitiririko pia kwa matukio mapya yanayoingia. Hizi zinatumika kwenye grafu kupitia [Substreams](https://thegraph.com/docs/en/substreams/) ambazo kwa sasa ziko katika beta wazi.
 
-Mnamo [2021](https://thegraph.com/blog/mainnet-migration/) The Graph ilianza mabadiliko yake kuelekea mtandao wa uorodheshaji uliogatuliwa. Unaweza kusoma zaidi kuhusu usanifu wa mtandao huu wa uorodheshaji uliogatuliwa [hapa](https://thegraph.com/docs/en/network/explorer/).
+Mnamo [2021](https://thegraph.com/blog/mainnet-migration/) The Graph ilianza mpito wake kuelekea mtandao wa kufaharisi uliogatuliwa. Unaweza kusoma zaidi kuhusu usanifu wa mtandao huu wa kufaharisi uliogatuliwa [hapa](https://thegraph.com/docs/en/network/explorer/).
 
 Vipengele viwili muhimu ni:
 
-1. Watumiaji huwalipa waorodheshaji kwa ajili ya hoja za kuulizia.
-2. Waorodheshaji huweka dau Tokeni za Grafu (GRT).
+1. Watumiaji huwalipa wafaharisi kwa maswali.
+2. Wafaharisi huweka dhamana ya Tokeni za Graph (GRT).

@@ -1,10 +1,9 @@
 ---
-title: Translators guide
+title: ethereum.org translation style guide
+metaTitle: Translators guide
 lang: en
 description: Instructions and tips for ethereum.org translators
 ---
-
-# Ethereum.org Translation Style Guide {#style-guide}
 
 The ethereum.org translation style guide contains some of the most important guidelines, instructions, and tips for translators, helping us localize the website.
 
@@ -118,7 +117,7 @@ You may notice full links to pages on ethereum.org or other websites.
 
 These should be identical to the source and not changed or translated. If you translate a link or change it in any way, even just removing a part of it, like a slash (/), this will lead to broken and unusable links.
 
-The best way to handle links is to copy them directly from the source, either by clicking on them or using the ‘Copy Source’ button (Alt+C).
+The best way to handle links is to copy them directly from the source, either by clicking on them or using the 'Copy Source' button (`Alt+C`).
 
 ![Example of link.png](./example-of-link.png)
 

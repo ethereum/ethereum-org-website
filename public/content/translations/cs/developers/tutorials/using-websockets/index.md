@@ -1,30 +1,31 @@
 ---
-title: "Použití WebSocketů"
-description: "Průvodce používáním WebSocketů a Alchemy k provádění požadavků JSON-RPC a přihlašování k odběru událostí."
+title: "Používání WebSocketů"
+description: "Průvodce používáním WebSocketů a Alchemy k provádění JSON-RPC požadavků a odebírání událostí."
 author: "Elan Halpern"
 lang: cs
-tags: [ "alchemy", "websockety", "dotazování", "javascript" ]
+tags: ["Alchemy", "websockets", "dotazování", "JavaScript"]
 skill: beginner
+breadcrumb: WebSockets
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
 
-Toto je úvodní průvodce používáním WebSocketů a Alchemy k zadávání požadavků na blockchain Ethereum.
+Toto je úvodní průvodce používáním WebSocketů a Alchemy k provádění požadavků na blockchain Etherea.
 
 ## WebSockets vs. HTTP {#websockets-vs-http}
 
-Na rozdíl od protokolu HTTP s WebSockety nemusíte neustále zadávat požadavky, když chcete získat konkrétní informace. WebSockety za vás udržují síťové připojení (pokud jsou správně nastaveny) a naslouchají změnám.
+Na rozdíl od HTTP nemusíte u WebSocketů neustále odesílat požadavky, když chcete konkrétní informace. WebSockety pro vás udržují síťové připojení (pokud jsou správně implementovány) a naslouchají změnám.
 
-Stejně jako u jakéhokoli síťového připojení byste neměli předpokládat, že WebSocket zůstane otevřený navždy bez přerušení, ale správné ruční řešení přerušených připojení a opětovné připojení může být náročné. Další nevýhodou WebSocketů je, že v odpovědi nedostáváte stavové kódy HTTP, ale pouze chybovou zprávu.
+Jako u každého síťového připojení byste neměli předpokládat, že WebSocket zůstane otevřený navždy bez přerušení, ale správné ruční ošetření výpadků připojení a opětovného připojení může být náročné. Další nevýhodou WebSocketů je, že v odpovědi nedostáváte stavové kódy HTTP, ale pouze chybovou zprávu.
 
-[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automaticky přidává zpracování selhání WebSocketu a opakované pokusy bez nutnosti konfigurace.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automaticky přidává zpracování selhání WebSocketů a opakované pokusy bez nutnosti jakékoliv konfigurace.
 
 ## Vyzkoušejte si to {#try-it-out}
 
-Nejjednodušší způsob, jak otestovat WebSockety, je nainstalovat si nástroj pro příkazový řádek pro vytváření požadavků WebSocket, jako je [wscat](https://github.com/websockets/wscat). Pomocí wscat můžete odesílat požadavky následovně:
+Nejjednodušší způsob, jak otestovat WebSockety, je nainstalovat si nástroj příkazového řádku pro odesílání WebSocket požadavků, jako je [wscat](https://github.com/websockets/wscat). Pomocí wscat můžete odesílat požadavky následovně:
 
-_Poznámka: pokud máte účet Alchemy, můžete nahradit `demo` svým vlastním klíčem API._ [Zaregistrujte si zde bezplatný účet Alchemy!](https://auth.alchemy.com/signup)_
+_Poznámka: pokud máte účet na Alchemy, můžete nahradit `demo` svým vlastním API klíčem. [Zaregistrujte si bezplatný účet na Alchemy zde!](https://auth.alchemy.com/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -32,63 +33,62 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
 <  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-
 ```
 
 ## Jak používat WebSockety {#how-to-use-websockets}
 
-Pro začátek otevřete WebSocket pomocí adresy URL WebSocketu pro vaši aplikaci. URL WebSocketu pro vaši aplikaci najdete tak, že otevřete stránku aplikace ve [svém ovládacím panelu](https://dashboard.alchemy.com/) a kliknete na „View Key“. Všimněte si, že adresa URL vaší aplikace pro WebSockety se liší od její adresy URL pro požadavky HTTP, ale obě najdete kliknutím na „View Key“.
+Pro začátek otevřete WebSocket pomocí WebSocket URL vaší aplikace. WebSocket URL vaší aplikace najdete tak, že otevřete stránku aplikace na [vašem panelu (dashboard)](https://dashboard.alchemy.com/) a kliknete na „View Key“. Všimněte si, že URL vaší aplikace pro WebSockety se liší od URL pro HTTP požadavky, ale obě lze najít kliknutím na „View Key“.
 
-![Kde najít URL adresu svého WebSocketu na ovládacím panelu Alchemy](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
 
-Jakékoli z API uvedených v [referenční příručce Alchemy API](https://www.alchemy.com/docs/reference/api-overview) lze použít přes WebSocket. K tomu použijte stejný payload, který by byl odeslán jako tělo požadavku HTTP POST, ale místo toho jej odešlete prostřednictvím WebSocketu.
+Jakékoliv z API uvedených v [referenční příručce Alchemy API](https://www.alchemy.com/docs/reference/api-overview) lze použít přes WebSocket. K tomu použijte stejná data (payload), která by byla odeslána jako tělo HTTP POST požadavku, ale místo toho je odešlete přes WebSocket.
 
 ## S Web3 {#with-web3}
 
-Přechod na WebSockety při použití klientské knihovny, jako je Web3, je jednoduchý. Při vytváření instance klienta Web3 jednoduše předejte URL WebSocketu místo URL protokolu HTTP. Například:
+Přechod na WebSockety při používání klientské knihovny, jako je Web3, je jednoduchý. Při vytváření instance vašeho Web3 klienta jednoduše předejte WebSocket URL místo HTTP URL. Například:
 
 ```js
-const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/vas-api-klic")
+const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## API pro přihlášení k odběru {#subscription-api}
+## API pro odběry (Subscription API) {#subscription-api}
 
-Po připojení přes WebSocket můžete použít dvě další metody: `eth_subscribe` a `eth_unsubscribe`. Tyto metody vám umožní naslouchat konkrétním událostem a být o nich okamžitě informováni.
+Při připojení přes WebSocket můžete použít dvě další metody: `eth_subscribe` a `eth_unsubscribe`. Tyto metody vám umožní naslouchat konkrétním událostem a být okamžitě upozorněni.
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Vytvoří nové přihlášení k odběru pro zadané události. [Zjistěte více o `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
+Vytvoří nový odběr pro zadané události. [Zjistěte více o `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
 #### Parametry {#parameters}
 
-1. Typy přihlášení k odběru
-2. Volitelné parametry
+1. Typy odběrů (Subscription types)
+2. Volitelné parametry (Optional params)
 
-První argument určuje typ události, které se má naslouchat. Druhý argument obsahuje další možnosti, které závisí na prvním argumentu. Různé typy popisů, jejich možnosti a payloady událostí jsou popsány níže.
+První argument určuje typ události, které se má naslouchat. Druhý argument obsahuje další možnosti, které závisí na prvním argumentu. Různé typy odběrů, jejich možnosti a data událostí (payloads) jsou popsány níže.
 
 #### Návratové hodnoty {#returns}
 
-ID přihlášení k odběru: Toto ID bude připojeno ke všem přijatým událostem a lze ho také použít ke zrušení přihlášení k odběru pomocí `eth_unsubscribe`.
+ID odběru: Toto ID bude připojeno ke všem přijatým událostem a lze jej také použít ke zrušení odběru pomocí `eth_unsubscribe`.
 
-#### Události přihlášení k odběru {#subscription-events}
+#### Události odběru {#subscription-events}
 
-Zatímco je přihlášení k odběru aktivní, budete dostávat události, které jsou objekty s následujícími poli:
+Zatímco je odběr aktivní, budete dostávat události, což jsou objekty s následujícími poli:
 
 - `jsonrpc`: Vždy "2.0"
 - `method`: Vždy "eth_subscription"
 - `params`: Objekt s následujícími poli:
-  - `subscription`: ID přihlášení k odběru vrácené voláním `eth_subscribe`, které toto přihlášení k odběru vytvořilo.
-  - `result`: Objekt, jehož obsah se liší v závislosti na typu přihlášení k odběru.
+  - `subscription`: ID odběru vrácené voláním `eth_subscribe`, které tento odběr vytvořilo.
+  - `result`: Objekt, jehož obsah se liší v závislosti na typu odběru.
 
-#### Typy přihlášení k odběru {#subscription-types}
+#### Typy odběrů {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-Vrací informace o transakcích pro všechny transakce, které jsou přidány do nevyřízeného stavu. Tento typ přihlášení k odběru se přihlásí k odběru nevyřízených transakcí, podobně jako standardní volání Web3 `web3.eth.subscribe("pendingTransactions")`, ale liší se v tom, že emituje _úplné informace o transakci_, nikoli pouze haše transakcí.
+Vrací informace o transakci pro všechny transakce, které jsou přidány do čekajícího stavu (pending state). Tento typ odběru odebírá čekající transakce, podobně jako standardní volání Web3 `web3.eth.subscribe("pendingTransactions")`, ale liší se tím, že vysílá _úplné informace o transakci_ namísto pouhých hashů transakcí.
 
-Např.:
+Příklad:
 
 ```json
 >  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["alchemy_newFullPendingTransactions"]}
@@ -121,11 +121,11 @@ Např.:
 
 2. `newHeads`
 
-Emituje událost vždy, když je do řetězce přidána nová hlavička, a to i během reorganizace řetězce.
+Vyšle událost pokaždé, když je do řetězce přidána nová hlavička, a to i během reorganizace řetězce.
 
-Když dojde k reorganizaci řetězce, toto přihlášení k odběru bude emitovat událost obsahující všechny nové hlavičky pro nový řetězec. Zejména to znamená, že se může stát, že uvidíte více hlaviček emitovaných se stejnou výškou, a když k tomu dojde, měla by být pozdější hlavička po reorganizaci považována za tu správnou.
+Když dojde k reorganizaci řetězce, tento odběr vyšle událost obsahující všechny nové hlavičky pro nový řetězec. Konkrétně to znamená, že můžete vidět více vyslaných hlaviček se stejnou výškou bloku, a když k tomu dojde, pozdější hlavička by měla být po reorganizaci považována za tu správnou.
 
-Např.:
+Příklad:
 
 ```json
 >  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["newHeads"]}
@@ -158,28 +158,28 @@ Např.:
 
 3. `logs`
 
-Emituje záznamy, které jsou součástí nově přidaných bloků, které odpovídají zadaným kritériím filtru.
+Vysílá logy, které jsou součástí nově přidaných bloků a odpovídají zadaným kritériím filtru.
 
-Když dojde k reorganizaci řetězce, záznamy, které jsou součástí bloků ve starém řetězci, budou znovu emitovány s vlastností `removed` nastavenou na `true`. Dále se emitují záznamy, které jsou součástí bloků v novém řetězci, což znamená, že v případě reorganizace je možné vidět záznamy pro stejnou transakci vícekrát.
+Když dojde k reorganizaci řetězce, logy, které jsou součástí bloků ve starém řetězci, budou znovu vyslány s vlastností `removed` nastavenou na `true`. Dále jsou vyslány logy, které jsou součástí bloků v novém řetězci, což znamená, že v případě reorganizace je možné vidět logy pro stejnou transakci vícekrát.
 
 Parametry
 
 1. Objekt s následujícími poli:
    - `address` (volitelné): buď řetězec představující adresu, nebo pole takových řetězců.
-     - Budou emitovány pouze záznamy vytvořené z jedné z těchto adres.
-   - `topics`: pole specifikátorů témat.
+     - Budou vyslány pouze logy vytvořené z jedné z těchto adres.
+   - `topics`: pole specifikátorů témat (topics).
      - Každý specifikátor tématu je buď `null`, řetězec představující téma, nebo pole řetězců.
-     - Každá pozice v poli, která není `null`, omezuje emitované záznamy pouze na ty, které mají na dané pozici jedno z daných témat.
+     - Každá pozice v poli, která není `null`, omezuje vysílané logy pouze na ty, které mají na dané pozici jedno z uvedených témat.
 
-Některé příklady specifikací témat:
+Několik příkladů specifikací témat:
 
-- `[]`: Všechna témata jsou povolena.
-- `[A]`: A na první pozici (a cokoliv dalšího).
-- `[null, B]`: Cokoliv na první pozici a B na druhé pozici (a cokoliv dalšího).
-- `[A, B]`: A na první pozici a B na druhé pozici (a cokoliv dalšího).
-- `[[A, B], [A, B]]`: (A nebo B) na první pozici a (A nebo B) na druhé pozici (a cokoliv dalšího).
+- `[]`: Povolena jakákoliv témata.
+- `[A]`: A na první pozici (a cokoliv poté).
+- `[null, B]`: Cokoliv na první pozici a B na druhé pozici (a cokoliv poté).
+- `[A, B]`: A na první pozici a B na druhé pozici (a cokoliv poté).
+- `[[A, B], [A, B]]`: (A nebo B) na první pozici a (A nebo B) na druhé pozici (a cokoliv poté).
 
-Např.:
+Příklad:
 
 ```json
 >  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["logs",  {"address":  "0x8320fe7702b96808f7bbc0d4a888ed1468216cfd",  "topics":  ["0xd78a0cb8bb633d06981248b816e7bd33c2a35a6089241d099fa519e361cab902"]}]}
@@ -207,26 +207,25 @@ Např.:
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
-Zruší existující přihlášení k odběru, takže nebudou odesílány žádné další události.
+Zruší existující odběr, takže nebudou odesílány žádné další události.
 
 Parametry
 
-1. ID přihlášení k odběru, jak bylo dříve vráceno z volání `eth_subscribe`.
+1. ID odběru, jak bylo dříve vráceno z volání `eth_subscribe`.
 
-Návratová hodnota
+Návratové hodnoty
 
-`true`, pokud bylo přihlášení k odběru úspěšně zrušeno, nebo `false`, pokud s daným ID žádné přihlášení k odběru neexistovalo.
+`true`, pokud byl odběr úspěšně zrušen, nebo `false`, pokud neexistoval žádný odběr s daným ID.
 
-Např.:
+Příklad:
 
 **Požadavek**
 
 ```
-curl https://eth-mainnet.alchemyapi.io/v2/vas-api-klic
+curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 -X POST
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-
 ```
 
 **Výsledek**
@@ -241,4 +240,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/vas-api-klic
 
 ---
 
-Zaregistrujte se zdarma u [Alchemy](https://auth.alchemy.com), podívejte se na naši [dokumentaci](https://www.alchemy.com/docs/) a pro nejnovější zprávy nás sledujte na [Twitteru](https://x.com/AlchemyPlatform).
+[Zaregistrujte se na Alchemy](https://auth.alchemy.com) zdarma, podívejte se na [naši dokumentaci](https://www.alchemy.com/docs/) a pro nejnovější zprávy nás sledujte na [Twitteru](https://x.com/AlchemyPlatform).

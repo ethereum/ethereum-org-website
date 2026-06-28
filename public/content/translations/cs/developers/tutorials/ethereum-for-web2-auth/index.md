@@ -1,60 +1,64 @@
 ---
-title: "Použití Etherea pro web2 autentizaci"
-description: "Po přečtení tohoto tutoriálu bude vývojář schopen integrovat přihlášení přes Ethereum (web3) s přihlášením SAML, což je standard používaný ve web2 k poskytování jednotného přihlášení a dalších souvisejících služeb. To umožňuje, aby byl přístup ke zdrojům web2 autentizován prostřednictvím podpisů Etherea, s uživatelskými atributy pocházejícími z atestací."
+title: "Použití Etherea pro autentizaci ve Web2"
+description: "Po přečtení tohoto tutoriálu bude vývojář schopen integrovat přihlášení přes Ethereum (web3) s přihlášením přes SAML, což je standard používaný ve Web2 k poskytování jednotného přihlášení (single sign-on) a dalších souvisejících služeb. To umožňuje autentizovat přístup k Web2 zdrojům pomocí podpisů na Ethereu, přičemž atributy uživatele pocházejí z atestací."
 author: Ori Pomerantz
-tags: [ "web2", "ověření", "eas" ]
+tags:
+  - Web2
+  - autentizace
+  - eas
 skill: beginner
+breadcrumb: Ethereum pro Web2 autentizaci
 lang: cs
 published: 2025-04-30
 ---
 
-## Úvod
+## Úvod {#introduction}
 
-[SAML](https://www.onelogin.com/learn/saml) je standard používaný na web2, který umožňuje [poskytovateli identity (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) poskytovat informace o uživateli [poskytovatelům služeb (SP)](https://en.wikipedia.org/wiki/Service_provider_\(SAML\)).
+[SAML](https://www.onelogin.com/learn/saml) je standard používaný ve Web2, který umožňuje [poskytovateli identity (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) poskytovat informace o uživatelích [poskytovatelům služeb (SP)](https://en.wikipedia.org/wiki/Service_provider_(SAML).
 
-V tomto tutoriálu se dozvíte, jak integrovat podpisy Etherea se SAML, abyste uživatelům umožnili používat jejich peněženky Ethereum k vlastní autentizaci u služeb web2, které ještě nativně nepodporují Ethereum.
+V tomto tutoriálu se naučíte, jak integrovat podpisy na Ethereu se SAML, abyste uživatelům umožnili používat jejich peněženky na Ethereu k autentizaci do Web2 služeb, které zatím Ethereum nativně nepodporují.
 
-Upozorňujeme, že tento tutoriál je napsán pro dvě samostatné skupiny čtenářů:
+Vezměte prosím na vědomí, že tento tutoriál je napsán pro dvě různé cílové skupiny:
 
-- Lidi z komunity Etherea, kteří Ethereu rozumí a potřebují se naučit SAML
-- Lidi z web2, kteří rozumí SAML a web2 autentizaci a potřebují se naučit o Ethereu
+- Lidi z Etherea, kteří rozumí Ethereu a potřebují se naučit SAML
+- Lidi z Web2, kteří rozumí SAML a Web2 autentizaci a potřebují se naučit Ethereum
 
-V důsledku toho bude obsahovat spoustu úvodního materiálu, který již znáte. Klidně ho přeskočte.
+V důsledku toho bude obsahovat spoustu úvodních materiálů, které už možná znáte. Klidně je přeskočte.
 
-### SAML pro lidi z komunity Etherea
+### SAML pro lidi z Etherea {#saml-for-ethereum-people}
 
-SAML je centralizovaný protokol. Poskytovatel služeb (SP) přijímá tvrzení (například „toto je můj uživatel John, měl by mít oprávnění provádět A, B a C“) od poskytovatele identity (IdP) pouze pokud s ním má již existující vztah důvěry, nebo s [certifikační autoritou](https://www.ssl.com/article/what-is-a-certificate-authority-ca/), která podepsala certifikát daného IdP.
+SAML je centralizovaný protokol. Poskytovatel služeb (SP) přijímá tvrzení (například „toto je můj uživatel John, měl by mít oprávnění dělat A, B a C“) od poskytovatele identity (IdP) pouze tehdy, pokud s ním má předem navázaný vztah důvěry, nebo s [certifikační autoritou](https://www.ssl.com/article/what-is-a-certificate-authority-ca/), která podepsala certifikát daného IdP.
 
-Například SP může být cestovní kancelář poskytující cestovní služby firmám a IdP může být interní webová stránka firmy. Když si zaměstnanci potřebují rezervovat služební cestu, cestovní kancelář je odešle k autentizaci firmou, než jim skutečně umožní cestu rezervovat.
+Například SP může být cestovní kancelář poskytující cestovní služby firmám a IdP může být interní webová stránka firmy. Když si zaměstnanci potřebují zarezervovat služební cestu, cestovní kancelář je před samotnou rezervací pošle k autentizaci do jejich firmy.
 
-![Proces SAML krok za krokem](./fig-01-saml.png)
+![Step by step SAML process](./fig-01-saml.png)
 
-Tímto způsobem si tři entity, prohlížeč, SP a IdP, vyjednávají přístup. SP nemusí předem vědět nic o uživateli používajícím prohlížeč, stačí, když důvěřuje IdP.
+Tímto způsobem tyto tři subjekty – prohlížeč, SP a IdP – vyjednávají o přístupu. SP nepotřebuje o uživateli používajícím prohlížeč vědět předem vůbec nic, stačí mu pouze důvěřovat IdP.
 
-### Ethereum pro lidi znalé SAML
+### Ethereum pro lidi ze SAML {#ethereum-for-saml-people}
 
-Ethereum je decentralizovaný systém.
+Ethereum je decentralizovaný systém. 
 
-![Přihlášení přes Ethereum](./fig-02-eth-logon.png)
+![Ethereum logon](./fig-02-eth-logon.png)
 
-Uživatelé mají privátní klíč (obvykle uložený v rozšíření prohlížeče). Z privátního klíče můžete odvodit veřejný klíč a z něj 20bajtovou adresu. Když se uživatelé potřebují přihlásit do systému, jsou požádáni o podepsání zprávy s hodnotou nonce (jednorázově použitelná hodnota). Server může ověřit, že podpis byl vytvořen touto adresou.
+Uživatelé mají soukromý klíč (obvykle uložený v rozšíření prohlížeče). Ze soukromého klíče lze odvodit veřejný klíč a z něj 20bajtovou adresu. Když se uživatelé potřebují přihlásit do systému, jsou požádáni, aby podepsali zprávu s nonce (hodnotou na jedno použití). Server pak může ověřit, že podpis byl vytvořen touto adresou.
 
-![Získávání dodatečných dat z atestací](./fig-03-eas-data.png)
+![Getting extra data from attestations](./fig-03-eas-data.png)
 
-Podpis pouze ověřuje adresu Etherea. Chcete-li získat další atributy uživatele, obvykle používáte [atestace](https://attest.org/). Atestace má obvykle tato pole:
+Podpis ověřuje pouze adresu na Ethereu. K získání dalších atributů uživatele se obvykle používají [atestace](https://attest.org/). Atestace má obvykle tyto pole:
 
-- **Atestátor**, adresa, která provedla atestaci
-- **Příjemce**, adresa, které se atestace týká
-- **Data**, atestovaná data, jako je jméno, oprávnění atd.
-- **Schéma**, ID schématu použitého k interpretaci dat.
+- **Atestátor (Attestor)**, adresa, která atestaci provedla
+- **Příjemce (Recipient)**, adresa, na kterou se atestace vztahuje
+- **Data**, ověřovaná data, jako je jméno, oprávnění atd.
+- **Schéma (Schema)**, ID schématu použitého k interpretaci dat.
 
-Vzhledem k decentralizované povaze Etherea může atestace provádět kterýkoli uživatel. Identita atestátora je důležitá pro identifikaci atestací, které považujeme za spolehlivé.
+Vzhledem k decentralizované povaze Etherea může atestace provádět jakýkoli uživatel. Identita atestátora je důležitá pro určení toho, které atestace považujeme za spolehlivé.
 
-## Nastavení
+## Nastavení {#setup}
 
-Prvním krokem je zajistit komunikaci mezi SAML SP a SAML IdP.
+Prvním krokem je zajistit, aby spolu SAML SP a SAML IdP komunikovaly.
 
-1. Stáhněte si software. Vzorový software pro tento článek je [na GitHubu](https://github.com/qbzzt/250420-saml-ethereum). Různé fáze jsou uloženy v různých větvích, pro tuto fázi chcete `saml-only`
+1. Stáhněte si software. Ukázkový software pro tento článek je [na GitHubu](https://github.com/qbzzt/250420-saml-ethereum). Různé fáze jsou uloženy v různých větvích, pro tuto fázi budete potřebovat `saml-only`
 
     ```sh
     git clone https://github.com/qbzzt/250420-saml-ethereum -b saml-only
@@ -62,7 +66,7 @@ Prvním krokem je zajistit komunikaci mezi SAML SP a SAML IdP.
     pnpm install
     ```
 
-2. Vytvořte klíče s certifikáty s vlastním podpisem (self-signed). To znamená, že klíč je svou vlastní certifikační autoritou a je třeba jej ručně importovat do poskytovatele služeb. Více informací naleznete v [dokumentaci OpenSSL](https://docs.openssl.org/master/man1/openssl-req/).
+2. Vytvořte klíče s certifikáty podepsanými samými sebou (self-signed). To znamená, že klíč je svou vlastní certifikační autoritou a musí být do poskytovatele služeb importován ručně. Další informace najdete v [dokumentaci OpenSSL](https://docs.openssl.org/master/man1/openssl-req/). 
 
     ```sh
     mkdir keys
@@ -72,25 +76,25 @@ Prvním krokem je zajistit komunikaci mezi SAML SP a SAML IdP.
     cd ..
     ```
 
-3. Spusťte servery (SP i IdP)
+3. Spusťte servery (jak SP, tak IdP)
 
     ```sh
     pnpm start
     ```
 
-4. Přejděte na adresu URL SP [http://localhost:3000/](http://localhost:3000/) a kliknutím na tlačítko budete přesměrováni na IdP (port 3001).
+4. Přejděte na SP na URL [http://localhost:3000/](http://localhost:3000/) a klikněte na tlačítko pro přesměrování na IdP (port 3001).
 
-5. Poskytněte IdP svou e-mailovou adresu a klikněte na **Přihlásit se k poskytovateli služeb**. Uvidíte, že budete přesměrováni zpět k poskytovateli služeb (port 3000) a že vás pozná podle vaší e-mailové adresy.
+5. Poskytněte IdP svou e-mailovou adresu a klikněte na **Login to the service provider**. Všimněte si, že budete přesměrováni zpět na poskytovatele služeb (port 3000) a že vás zná podle vaší e-mailové adresy.
 
-### Podrobné vysvětlení
+### Podrobné vysvětlení {#detailed-explanation}
 
-Toto se děje krok za krokem:
+Zde je krok za krokem popsáno, co se stane:
 
-![Běžné přihlášení SAML bez Etherea](./fig-04-saml-no-eth.png)
+![Normal SAML logon without Ethereum](./fig-04-saml-no-eth.png)
 
-#### src/config.mts
+#### src/config.mts {#srcconfigmts}
 
-Tento soubor obsahuje konfiguraci jak pro poskytovatele identity, tak pro poskytovatele služeb. Obvykle by se jednalo o různé entity, ale zde můžeme pro zjednodušení sdílet kód.
+Tento soubor obsahuje konfiguraci jak pro poskytovatele identity, tak pro poskytovatele služeb. Normálně by se jednalo o dva různé subjekty, ale zde můžeme pro zjednodušení sdílet kód.
 
 ```typescript
 const fs = await import("fs")
@@ -98,14 +102,14 @@ const fs = await import("fs")
 const protocol="http"
 ```
 
-Zatím jen testujeme, takže je v pořádku používat HTTP.
+Zatím jen testujeme, takže je v pořádku použít HTTP.
 
 ```typescript
 export const spCert = fs.readFileSync("keys/saml-sp.crt").toString()
 export const idpCert = fs.readFileSync("keys/saml-idp.crt").toString()
 ```
 
-Načtení veřejných klíčů, které jsou normálně dostupné oběma komponentám (a jsou buď přímo důvěryhodné, nebo podepsané důvěryhodnou certifikační autoritou).
+Načtěte veřejné klíče, které jsou normálně dostupné oběma komponentám (a buď jsou přímo důvěryhodné, nebo podepsané důvěryhodnou certifikační autoritou).
 
 ```typescript
 export const spPort = 3000
@@ -120,7 +124,7 @@ export const spUrl = `${protocol}://${spHostname}:${spPort}/${spDir}`
 export const idpUrl = `${protocol}://${idpHostname}:${idpPort}/${idpDir}`
 ```
 
-Adresy URL pro obě komponenty.
+URL adresy pro obě komponenty.
 
 ```typescript
 export const spPublicData = {
@@ -132,7 +136,7 @@ Veřejná data pro poskytovatele služeb.
     entityID: `${spUrl}/metadata`,
 ```
 
-Podle konvence je v SAML `entityID` adresa URL, na které jsou dostupná metadata entity. Tato metadata odpovídají zdejším veřejným datům, s výjimkou toho, že jsou ve formátu XML.
+Podle konvence je v SAML `entityID` URL adresa, kde jsou dostupná metadata dané entity. Tato metadata odpovídají zdejším veřejným datům, akorát jsou ve formátu XML.
 
 ```typescript
     wantAssertionsSigned: true,
@@ -146,7 +150,7 @@ Podle konvence je v SAML `entityID` adresa URL, na které jsou dostupná metadat
   }
 ```
 
-Nejdůležitější definicí pro naše účely je `assertionConsumerServer`. To znamená, že abychom poskytovateli služeb mohli něco potvrdit (například, že „uživatel, který vám posílá tyto informace, je nekdo@example.com“), musíme použít [HTTP POST](https://www.w3schools.com/tags/ref_httpmethods.asp) na URL `http://localhost:3000/sp/assertion`.
+Nejdůležitější definicí pro naše účely je `assertionConsumerServer`. Znamená to, že abychom poskytovateli služeb něco potvrdili (například „uživatel, který vám posílá tyto informace, je somebody@example.com“), musíme použít [HTTP POST](https://www.w3schools.com/tags/ref_httpmethods.asp) na URL `http://localhost:3000/sp/assertion`.
 
 ```typescript
 export const idpPublicData = {
@@ -164,9 +168,9 @@ export const idpPublicData = {
   }
 ```
 
-Veřejná data pro poskytovatele identity jsou podobná. Určuje, že pro přihlášení uživatele je třeba odeslat POST na `http://localhost:3001/idp/login` a pro odhlášení uživatele POST na `http://localhost:3001/idp/logout`.
+Veřejná data pro poskytovatele identity jsou podobná. Specifikují, že pro přihlášení uživatele odešlete POST na `http://localhost:3001/idp/login` a pro odhlášení uživatele odešlete POST na `http://localhost:3001/idp/logout`.
 
-#### src/sp.mts
+#### src/sp.mts {#srcspmts}
 
 Toto je kód, který implementuje poskytovatele služeb.
 
@@ -183,7 +187,7 @@ import * as validator from "@authenio/samlify-node-xmllint"
 saml.setSchemaValidator(validator)
 ```
 
-Knihovna `samlify` očekává balíček, který ověří, že XML je správné, podepsané očekávaným veřejným klíčem atd. Pro tento účel používáme [`@authenio/samlify-node-xmllint`](https://www.npmjs.com/package/@authenio/samlify-node-xmllint).
+Knihovna `samlify` očekává balíček, který ověří, že je XML správné, podepsané očekávaným veřejným klíčem atd. K tomuto účelu používáme [`@authenio/samlify-node-xmllint`](https://www.npmjs.com/package/@authenio/samlify-node-xmllint).
 
 ```typescript
 const express = (await import("express")).default
@@ -191,7 +195,7 @@ const spRouter = express.Router()
 const app = express()
 ```
 
-[`Router`](https://expressjs.com/en/5x/api.html#router) v [`expressu`](https://expressjs.com/) je „mini webová stránka“, kterou lze připojit k webové stránce. V tomto případě jej používáme ke seskupení všech definic poskytovatele služeb dohromady.
+[`Router`](https://expressjs.com/en/5x/api.html#router) v [`express`](https://expressjs.com/) je „mini webová stránka“, kterou lze připojit (mount) uvnitř jiné webové stránky. V tomto případě jej používáme k seskupení všech definic poskytovatele služeb.
 
 ```typescript
 const spPrivateKey = fs.readFileSync("keys/saml-sp.pem").toString()
@@ -202,7 +206,7 @@ const sp = saml.ServiceProvider({
 })
 ```
 
-Vlastní reprezentace poskytovatele služeb se skládá ze všech veřejných dat a privátního klíče, který používá k podepisování informací.
+Vlastní reprezentace poskytovatele služeb se skládá ze všech veřejných dat a soukromého klíče, který používá k podepisování informací.
 
 ```typescript
 const idp = saml.IdentityProvider(config.idpPublicData);
@@ -216,45 +220,45 @@ spRouter.get(`/metadata`,
 )
 ```
 
-Pro zajištění interoperability s ostatními komponentami SAML by poskytovatelé služeb a identity měli mít svá veřejná data (nazývaná metadata) dostupná ve formátu XML na adrese `/metadata`.
+Aby byla umožněna interoperabilita s dalšími komponentami SAML, měli by poskytovatelé služeb a identity mít svá veřejná data (nazývaná metadata) dostupná ve formátu XML na `/metadata`.
 
 ```typescript
-spRouter.post(`/assertion`, 
+spRouter.post(`/assertion`,
 ```
 
-Toto je stránka, na kterou prohlížeč přistupuje, aby se identifikoval. Tvrzení obsahuje identifikátor uživatele (zde používáme e-mailovou adresu) a může obsahovat další atributy. Toto je obslužný program pro krok 7 ve výše uvedeném sekvenčním diagramu.
+Toto je stránka, ke které prohlížeč přistupuje, aby se identifikoval. Tvrzení (assertion) obsahuje identifikátor uživatele (zde používáme e-mailovou adresu) a může obsahovat další atributy. Toto je handler pro krok 7 ve výše uvedeném sekvenčním diagramu.
 
 ```typescript
   async (req, res) => {
-    // console.log(`SAML response:\n${Buffer.from(req.body.SAMLResponse, 'base64').toString('utf-8')}`)
+    // console.log(`SAML odpověď:\n${Buffer.from(req.body.SAMLResponse, 'base64').toString('utf-8')}`)
 ```
 
-Pomocí zakomentovaného příkazu můžete zobrazit data XML poskytnutá v tvrzení. Je [kódován v base64](https://en.wikipedia.org/wiki/Base64).
+Můžete použít zakomentovaný příkaz, abyste viděli XML data poskytnutá v tvrzení. Jsou [zakódována pomocí base64](https://en.wikipedia.org/wiki/Base64).
 
 ```typescript
     try {
       const loginResponse = await sp.parseLoginResponse(idp, 'post', req);
 ```
 
-Zpracujte požadavek na přihlášení od serveru identity.
+Zpracujte (parse) požadavek na přihlášení ze serveru identity.
 
 ```typescript
       res.send(`
         <html>
           <body>
-            <h2>Dobrý den, ${loginResponse.extract.nameID}</h2>
+            <h2>Hello ${loginResponse.extract.nameID}</h2>
           </body>
         </html>
       `)
       res.send();
 ```
 
-Odešlete odpověď HTML, abyste uživateli ukázali, že jsme obdrželi přihlášení.
+Odešlete HTML odpověď, jen abyste uživateli ukázali, že jsme přihlášení přijali.
 
 ```typescript
     } catch (err) {
-      console.error('Chyba při zpracování odpovědi SAML:', err);
-      res.status(400).send('Ověření SAML se nezdařilo');
+      console.error('Error processing SAML response:', err);
+      res.status(400).send('SAML authentication failed');
     }
   }
 )
@@ -266,7 +270,7 @@ V případě selhání informujte uživatele.
 spRouter.get('/login',
 ```
 
-Vytvořte požadavek na přihlášení, když se prohlížeč pokusí o přístup na tuto stránku. Toto je obslužný program pro krok 1 ve výše uvedeném sekvenčním diagramu.
+Vytvořte požadavek na přihlášení, když se prohlížeč pokusí získat tuto stránku. Toto je handler pro krok 1 ve výše uvedeném sekvenčním diagramu.
 
 ```typescript
   async (req, res) => {
@@ -284,19 +288,19 @@ Získejte informace pro odeslání požadavku na přihlášení.
           </script>
 ```
 
-Tato stránka automaticky odešle formulář (viz níže). Díky tomu uživatel nemusí pro přesměrování nic dělat. Toto je krok 2 ve výše uvedeném sekvenčním diagramu.
+Tato stránka automaticky odešle formulář (viz níže). Tímto způsobem uživatel nemusí dělat nic, aby byl přesměrován. Toto je krok 2 ve výše uvedeném sekvenčním diagramu.
 
 ```typescript
           <form method="post" action="${loginRequest.entityEndpoint}">
 ```
 
-Odešlete POST na `loginRequest.entityEndpoint` (adresa URL koncového bodu poskytovatele identity).
+Odešlete POST na `loginRequest.entityEndpoint` (URL adresa koncového bodu poskytovatele identity).
 
 ```typescript
             <input type="hidden" name="${loginRequest.type}" value="${loginRequest.context}" />
 ```
 
-Název vstupu je `loginRequest.type` (`SAMLRequest`). Obsah tohoto pole je `loginRequest.context`, což je opět XML kódované v base64.
+Název vstupu je `loginRequest.type` (`SAMLRequest`). Obsahem tohoto pole je `loginRequest.context`, což je opět XML zakódované pomocí base64.
 
 ```typescript
           </form>
@@ -309,7 +313,7 @@ Název vstupu je `loginRequest.type` (`SAMLRequest`). Obsah tohoto pole je `logi
 app.use(express.urlencoded({extended: true}))
 ```
 
-[Tento middleware](https://expressjs.com/en/5x/api.html#express.urlencoded) čte tělo [požadavku HTTP](https://www.tutorialspoint.com/http/http_requests.htm). Ve výchozím nastavení ho Express ignoruje, protože většina požadavků ho nevyžaduje. Potřebujeme ho, protože POST používá tělo.
+[Tento middleware](https://expressjs.com/en/5x/api.html#express.urlencoded) čte tělo [HTTP požadavku](https://www.tutorialspoint.com/http/http_requests.htm). Ve výchozím nastavení jej Express ignoruje, protože většina požadavků jej nevyžaduje. My jej potřebujeme, protože POST tělo používá.
 
 ```typescript
 app.use(`/${config.spDir}`, spRouter)
@@ -323,7 +327,7 @@ app.get("/", (req, res) => {
     <html>
       <body>
         <button onClick="document.location.href='${config.spUrl}/login'">
-           Klikněte zde pro přihlášení
+           Click here to log on
         </button>
       </body>
     </html>
@@ -335,13 +339,13 @@ Pokud se prohlížeč pokusí získat kořenový adresář, poskytněte mu odkaz
 
 ```typescript
 app.listen(config.spPort, () => {
-  console.log(`poskytovatel služeb běží na http://${config.spHostname}:${config.spPort}`)
+  console.log(`service provider is running on http://${config.spHostname}:${config.spPort}`)
 })
 ```
 
-Naslouchejte na portu `spPort` pomocí této aplikace Express.
+Naslouchejte na `spPort` s touto aplikací Express.
 
-#### src/idp.mts
+#### src/idp.mts {#srcidpmts}
 
 Toto je poskytovatel identity. Je velmi podobný poskytovateli služeb, níže uvedená vysvětlení se týkají částí, které se liší.
 
@@ -354,34 +358,34 @@ const xmlParser = new (await import("fast-xml-parser")).XMLParser(
 )
 ```
 
-Musíme si přečíst a porozumět požadavku XML, který obdržíme od poskytovatele služeb.
+Potřebujeme přečíst a porozumět XML požadavku, který obdržíme od poskytovatele služeb.
 
 ```typescript
 const getLoginPage = requestId => `
 ```
 
-Tato funkce vytváří stránku s automaticky odesílaným formulářem, který je vrácen v kroku 4 výše uvedeného sekvenčního diagramu.
+Tato funkce vytvoří stránku s automaticky odesílaným formulářem, která se vrací v kroku 4 výše uvedeného sekvenčního diagramu.
 
 ```typescript
 <html>
   <head>
-    <title>Přihlašovací stránka</title>
+    <title>Login page</title>
   </head>
   <body>
-    <h2>Přihlašovací stránka</h2>
+    <h2>Login page</h2>
     <form method="post" action="./loginSubmitted">
       <input type="hidden" name="requestId" value="${requestId}" />
-      E-mailová adresa: <input name="email" />
+      Email address: <input name="email" />
       <br />
       <button type="Submit">
-        Přihlásit se k poskytovateli služeb
+        Login to the service provider
       </button>
 ```
 
-Poskytovateli služeb posíláme dvě pole:
+Poskytovateli služeb odesíláme dvě pole:
 
 1. `requestId`, na které odpovídáme.
-2. Identifikátor uživatele (prozatím používáme e-mailovou adresu, kterou uživatel poskytne).
+2. Identifikátor uživatele (zatím používáme e-mailovou adresu, kterou uživatel poskytne).
 
 ```typescript
     </form>
@@ -394,7 +398,7 @@ idpRouter.post("/loginSubmitted", async (req, res) => {
   const loginResponse = await idp.createLoginResponse(
 ```
 
-Toto je obslužný program pro krok 5 ve výše uvedeném sekvenčním diagramu. [`idp.createLoginResponse`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L73-L125) vytváří odpověď na přihlášení.
+Toto je handler pro krok 5 výše uvedeného sekvenčního diagramu. [`idp.createLoginResponse`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L73-L125) vytvoří odpověď na přihlášení. 
 
 ```typescript
     sp, 
@@ -403,7 +407,7 @@ Toto je obslužný program pro krok 5 ve výše uvedeném sekvenčním diagramu.
       audience: sp.entityID,
 ```
 
-Cílovou skupinou je poskytovatel služeb.
+Příjemcem (audience) je poskytovatel služeb.
 
 ```typescript
       extract: {
@@ -413,7 +417,7 @@ Cílovou skupinou je poskytovatel služeb.
       },
 ```
 
-Informace extrahované z požadavku. Jediný parametr, který nás v požadavku zajímá, je requestId, který umožňuje poskytovateli služeb párovat požadavky a jejich odpovědi.
+Informace extrahované z požadavku. Jediný parametr, který nás v požadavku zajímá, je requestId, který umožňuje poskytovateli služeb spárovat požadavky s jejich odpověďmi.
 
 ```typescript
       signingKey: { privateKey: idpPrivateKey, publicKey: config.idpCert }  // Zajistit podepsání
@@ -430,7 +434,7 @@ Potřebujeme `signingKey`, abychom měli data k podepsání odpovědi. Poskytova
 
 Toto je pole s informacemi o uživateli, které posíláme zpět poskytovateli služeb.
 
-```typescript
+```typescript      
     }
   );
 
@@ -450,32 +454,32 @@ Toto je pole s informacemi o uživateli, které posíláme zpět poskytovateli s
 })
 ```
 
-Opět použijte automaticky odesílaný formulář. Toto je krok 6 ve výše uvedeném sekvenčním diagramu.
+Opět použijte automaticky odesílaný formulář. Toto je krok 6 výše uvedeného sekvenčního diagramu.
 
 ```typescript
 
-// Koncový bod IdP pro požadavky na přihlášení
+// IdP endpoint pro požadavky na přihlášení
 idpRouter.post(`/login`,
 ```
 
-Toto je koncový bod, který přijímá požadavek na přihlášení od poskytovatele služeb. Toto je obslužný program pro krok 3 ve výše uvedeném sekvenčním diagramu.
+Toto je koncový bod, který přijímá požadavek na přihlášení od poskytovatele služeb. Toto je handler pro krok 3 výše uvedeného sekvenčního diagramu.
 
 ```typescript
   async (req, res) => {
     try {
-      // Dočasné řešení, protože se mi nepodařilo zprovoznit parseLoginRequest.
+      // Náhradní řešení, protože se mi nepodařilo zprovoznit parseLoginRequest.
       // const loginRequest = await idp.parseLoginRequest(sp, 'post', req)
       const samlRequest = xmlParser.parse(Buffer.from(req.body.SAMLRequest, 'base64').toString('utf-8'))
       res.send(getLoginPage(samlRequest["samlp:AuthnRequest"]["@_ID"]))
 ```
 
-Měli bychom být schopni použít [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) ke čtení ID požadavku na ověření. Nepodařilo se mi to však zprovoznit a nestálo za to tím trávit spoustu času, tak jsem prostě použil [univerzální XML parser](https://www.npmjs.com/package/fast-xml-parser). Informace, kterou potřebujeme, je atribut `ID` uvnitř značky `<samlp:AuthnRequest>`, která je na nejvyšší úrovni XML.
+Měli bychom být schopni použít [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) ke čtení ID požadavku na autentizaci. Nepodařilo se mi to však zprovoznit a nestálo za to trávit nad tím spoustu času, takže jsem prostě použil [obecný XML parser](https://www.npmjs.com/package/fast-xml-parser). Informace, kterou potřebujeme, je atribut `ID` uvnitř značky `<samlp:AuthnRequest>`, která je na nejvyšší úrovni XML.
 
-## Použití podpisů Etherea
+## Použití podpisů na Ethereu {#using-ethereum-signatures}
 
-Nyní, když můžeme odeslat identitu uživatele poskytovateli služeb, dalším krokem je získat identitu uživatele důvěryhodným způsobem. Viem nám umožňuje jednoduše požádat peněženku o adresu uživatele, ale to znamená žádat o informace prohlížeč. Prohlížeč nemáme pod kontrolou, takže nemůžeme automaticky důvěřovat odpovědi, kterou od něj dostaneme.
+Nyní, když můžeme odeslat identitu uživatele poskytovateli služeb, je dalším krokem získání identity uživatele důvěryhodným způsobem. Viem nám umožňuje jednoduše požádat peněženku o adresu uživatele, ale to znamená požádat o informace prohlížeč. Prohlížeč nemáme pod kontrolou, takže nemůžeme automaticky důvěřovat odpovědi, kterou z něj dostaneme.
 
-Místo toho IdP pošle prohlížeči řetězec k podepsání. Pokud peněženka v prohlížeči tento řetězec podepíše, znamená to, že se skutečně jedná o tuto adresu (tj. zná privátní klíč, který adrese odpovídá).
+Místo toho IdP pošle prohlížeči řetězec k podepsání. Pokud peněženka v prohlížeči tento řetězec podepíše, znamená to, že se skutečně jedná o danou adresu (to znamená, že zná soukromý klíč, který k adrese patří).
 
 Chcete-li to vidět v akci, zastavte stávající IdP a SP a spusťte tyto příkazy:
 
@@ -487,13 +491,13 @@ pnpm start
 
 Poté přejděte [na SP](http://localhost:3000) a postupujte podle pokynů.
 
-Všimněte si, že v tomto okamžiku nevíme, jak získat e-mailovou adresu z adresy Etherea, takže místo toho hlásíme SP `<adresa etherea>@bad.email.address`.
+Vezměte prosím na vědomí, že v tuto chvíli nevíme, jak získat e-mailovou adresu z adresy na Ethereu, takže místo toho nahlásíme SP `<ethereum address>@bad.email.address`.
 
-### Podrobné vysvětlení
+### Podrobné vysvětlení {#detailed-explanation-2}
 
-Změny jsou v krocích 4–5 v předchozím diagramu.
+Změny jsou v krocích 4-5 v předchozím diagramu.
 
-![SAML s podpisem Etherea](./fig-05-saml-w-signature.png)
+![SAML with an Ethereum signature](./fig-05-saml-w-signature.png)
 
 Jediný soubor, který jsme změnili, je `idp.mts`. Zde jsou změněné části.
 
@@ -502,30 +506,30 @@ import { v4 as uuidv4 } from 'uuid'
 import { verifyMessage } from 'viem'
 ```
 
-Potřebujeme tyto dvě další knihovny. K vytvoření hodnoty [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) používáme [`uuid`](https://www.npmjs.com/package/uuid). Na samotné hodnotě nezáleží, jen na tom, že je použita pouze jednou.
+Potřebujeme tyto dvě další knihovny. K vytvoření hodnoty [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) používáme [`uuid`](https://www.npmjs.com/package/uuid). Na samotné hodnotě nezáleží, jde jen o to, že se použije pouze jednou.
 
-Knihovna [`viem`](https://viem.sh/) nám umožňuje používat definice Etherea. Zde ji potřebujeme k ověření, že podpis je skutečně platný.
+Knihovna [`viem`](https://viem.sh/) nám umožňuje používat definice Etherea. Zde ji potřebujeme k ověření, že je podpis skutečně platný.
 
 ```typescript
-const loginPrompt = "Pro přístup k poskytovateli služeb podepište tuto hodnotu nonce: "
+const loginPrompt = "To access the service provider, sign this nonce: "
 ```
 
-Peněženka požádá uživatele o povolení podepsat zprávu. Zpráva, která je pouze hodnotou nonce, by mohla uživatele zmást, proto uvádíme tuto výzvu.
+Peněženka požádá uživatele o povolení podepsat zprávu. Zpráva, která je pouze nonce, by mohla uživatele zmást, proto přidáváme tuto výzvu.
 
 ```typescript
-// Zde si ponechte requestID
+// Uchovávat requestIDs zde
 let nonces = {}
 ```
 
-Potřebujeme informace o požadavku, abychom na něj mohli odpovědět. Mohli bychom ho poslat s požadavkem (krok 4) a přijmout ho zpět (krok 5). Nemůžeme však důvěřovat informacím, které získáváme z prohlížeče, který je pod kontrolou potenciálně nepřátelského uživatele. Je tedy lepší jej uložit zde s hodnotou nonce jako klíčem.
+Potřebujeme informace o požadavku, abychom na něj mohli odpovědět. Mohli bychom je odeslat s požadavkem (krok 4) a přijmout je zpět (krok 5). Nemůžeme však důvěřovat informacím, které získáme z prohlížeče, který je pod kontrolou potenciálně nepřátelského uživatele. Je tedy lepší je uložit zde, s nonce jako klíčem.
 
-Všimněte si, že pro zjednodušení to zde děláme jako proměnnou. To má však několik nevýhod:
+Vezměte prosím na vědomí, že to zde pro zjednodušení děláme jako proměnnou. To má však několik nevýhod:
 
-- Jsme zranitelní vůči útoku typu odepření služby (denial of service). Uživatel se zlými úmysly by se mohl pokusit přihlásit vícekrát a zaplnit tak naši paměť.
-- Pokud je třeba proces IdP restartovat, ztratíme stávající hodnoty.
-- Nemůžeme rozkládat zátěž mezi více procesů, protože každý by měl svou vlastní proměnnou.
+- Jsme zranitelní vůči útoku typu odepření služby (Denial of Service). Zlomyslný uživatel by se mohl pokusit přihlásit vícekrát a zaplnit tak naši paměť.
+- Pokud je nutné restartovat proces IdP, ztratíme stávající hodnoty.
+- Nemůžeme rozložit zátěž (load balance) mezi více procesů, protože každý by měl svou vlastní proměnnou.
 
-Na produkčním systému bychom použili databázi a implementovali nějaký mechanismus pro vypršení platnosti.
+V produkčním systému bychom použili databázi a implementovali nějaký mechanismus expirace.
 
 ```typescript
 const getSignaturePage = requestId => {
@@ -533,7 +537,7 @@ const getSignaturePage = requestId => {
   nonces[nonce] = requestId
 ```
 
-Vytvořte hodnotu nonce a uložte `requestId` pro budoucí použití.
+Vytvořte nonce a uložte `requestId` pro budoucí použití.
 
 ```typescript
   return `
@@ -552,17 +556,17 @@ Potřebujeme několik funkcí z `viem`.
 
 ```typescript
       if (!window.ethereum) {
-          alert("Nainstalujte si prosím MetaMask nebo kompatibilní peněženku a poté stránku znovu načtěte")
+          alert("Please install MetaMask or a compatible wallet and then reload")
       }
 ```
 
-Pracovat můžeme pouze v případě, že je v prohlížeči peněženka.
+Můžeme fungovat pouze tehdy, pokud je v prohlížeči peněženka.
 
 ```typescript
       const [account] = await window.ethereum.request({method: 'eth_requestAccounts'})
 ```
 
-Požádejte o seznam účtů z peněženky (`window.ethereum`). Předpokládejte, že existuje alespoň jeden, a uložte pouze ten první.
+Vyžádejte si seznam účtů z peněženky (`window.ethereum`). Předpokládejte, že existuje alespoň jeden, a uložte pouze ten první. 
 
 ```typescript
       const walletClient = createWalletClient({
@@ -571,7 +575,7 @@ Požádejte o seznam účtů z peněženky (`window.ethereum`). Předpokládejte
       })
 ```
 
-Vytvořte [klienta peněženky](https://viem.sh/docs/clients/wallet) pro interakci s peněženkou prohlížeče.
+Vytvořte [klienta peněženky](https://viem.sh/docs/clients/wallet) pro interakci s peněženkou v prohlížeči.
 
 ```typescript
       window.goodSignature = () => {
@@ -579,7 +583,7 @@ Vytvořte [klienta peněženky](https://viem.sh/docs/clients/wallet) pro interak
             message: "${loginPrompt}${nonce}"
 ```
 
-Požádejte uživatele o podepsání zprávy. Protože celé toto HTML je v [řetězci šablony](https://viem.sh/docs/clients/wallet), můžeme použít proměnné definované v procesu idp. Toto je krok 4.5 v sekvenčním diagramu.
+Požádejte uživatele, aby podepsal zprávu. Protože je celé toto HTML v [šablonovém řetězci (template string)](https://viem.sh/docs/clients/wallet), můžeme použít proměnné definované v procesu IdP. Toto je krok 4.5 v sekvenčním diagramu.
 
 ```typescript
         }).then(signature => {
@@ -589,7 +593,7 @@ Požádejte uživatele o podepsání zprávy. Protože celé toto HTML je v [ře
       }
 ```
 
-Přesměrování na `/idp/signature/<nonce>/<adresa>/<podpis>`. Toto je krok 5 v sekvenčním diagramu.
+Přesměrujte na `/idp/signature/<nonce>/<address>/<signature>`. Toto je krok 5 v sekvenčním diagramu.
 
 ```typescript
       window.badSignature = () => {
@@ -600,19 +604,19 @@ Přesměrování na `/idp/signature/<nonce>/<adresa>/<podpis>`. Toto je krok 5 v
       }
 ```
 
-Podpis je odeslán zpět prohlížečem, který může být potenciálně škodlivý (nic vám nebrání v tom, abyste v prohlížeči otevřeli adresu `http://localhost:3001/idp/signature/bad-nonce/bad-address/bad-signature`). Proto je důležité ověřit, že proces IdP správně zpracovává špatné podpisy.
+Podpis je odeslán zpět prohlížečem, který je potenciálně škodlivý (nic vám nebrání v tom, abyste v prohlížeči jednoduše otevřeli `http://localhost:3001/idp/signature/bad-nonce/bad-address/bad-signature`). Proto je důležité ověřit, že proces IdP správně zpracovává špatné podpisy.
 
 ```typescript
     </script>
   </head>
   <body>
-    <h2>Prosím podepište</h2>
+    <h2>Please sign</h2>
     <button onClick="window.goodSignature()">
-      Odeslat dobrý (platný) podpis
+      Submit a good (valid) signature
     </button>
     <br/>
     <button onClick="window.badSignature()">
-      Odeslat špatný (neplatný) podpis
+      Submit a bad (invalid) signature
     </button>
   </body>
 </html>  
@@ -626,25 +630,25 @@ Zbytek je jen standardní HTML.
 idpRouter.get("/signature/:nonce/:account/:signature", async (req, res) => {
 ```
 
-Toto je obslužný program pro krok 5 v sekvenčním diagramu.
+Toto je handler pro krok 5 v sekvenčním diagramu.
 
 ```typescript
   const requestId = nonces[req.params.nonce]
   if (requestId === undefined) {
-    res.send("Špatná hodnota nonce")
+    res.send("Bad nonce")
     return ;
   }  
   
   nonces[req.params.nonce] = undefined
 ```
 
-Získejte ID požadavku a odstraňte hodnotu nonce z `nonces`, abyste se ujistili, že ji nelze znovu použít.
+Získejte ID požadavku a odstraňte nonce z `nonces`, abyste se ujistili, že jej nelze znovu použít.
 
 ```typescript
   try {
 ```
 
-Protože existuje mnoho způsobů, jak může být podpis neplatný, zabalíme to do bloku `try ...` `catch`, který zachytí jakékoli vyvolané chyby.
+Protože existuje tolik způsobů, jak může být podpis neplatný, zabalíme to do bloku `try ... catch`, abychom zachytili jakékoli vyhozené chyby.
 
 ```typescript
     const validSignature = await verifyMessage({
@@ -658,14 +662,14 @@ Použijte [`verifyMessage`](https://viem.sh/docs/actions/public/verifyMessage#ve
 
 ```typescript
     if (!validSignature)
-      throw("Špatný podpis")
+      throw("Bad signature")
   } catch (err) {
-    res.send("Chyba:" + err)
+    res.send("Error:" + err)
     return ;
   }
 ```
 
-Zbytek obslužného programu je ekvivalentní tomu, co jsme dělali v obslužném programu `/loginSubmitted` dříve, s výjimkou jedné malé změny.
+Zbytek handleru je ekvivalentní tomu, co jsme dělali v handleru `/loginSubmitted` dříve, s výjimkou jedné malé změny.
 
 ```typescript
   const loginResponse = await idp.createLoginResponse(
@@ -678,32 +682,33 @@ Zbytek obslužného programu je ekvivalentní tomu, co jsme dělali v obslužné
   );
 ```
 
-Nemáme skutečnou e-mailovou adresu (získáme ji v další části), takže prozatím vracíme adresu Etherea a jasně ji označujeme jako e-mailovou adresu.
+Nemáme skutečnou e-mailovou adresu (získáme ji v další části), takže prozatím vracíme adresu na Ethereu a jasně ji označíme, že to není e-mailová adresa.
+
 
 ```typescript
-// Koncový bod IdP pro požadavky na přihlášení
+// IdP endpoint pro požadavky na přihlášení
 idpRouter.post(`/login`,
   async (req, res) => {
     try {
-      // Dočasné řešení, protože se mi nepodařilo zprovoznit parseLoginRequest.
+      // Náhradní řešení, protože se mi nepodařilo zprovoznit parseLoginRequest.
       // const loginRequest = await idp.parseLoginRequest(sp, 'post', req)
       const samlRequest = xmlParser.parse(Buffer.from(req.body.SAMLRequest, 'base64').toString('utf-8'))
       res.send(getSignaturePage(samlRequest["samlp:AuthnRequest"]["@_ID"]))
     } catch (err) {
-      console.error('Chyba při zpracování odpovědi SAML:', err);
-      res.status(400).send('Ověření SAML se nezdařilo');
+      console.error('Error processing SAML response:', err);
+      res.status(400).send('SAML authentication failed');
     }
   }
 )
 ```
 
-Místo `getLoginPage` nyní v obslužném programu kroku 3 použijte `getSignaturePage`.
+Místo `getLoginPage` nyní použijte `getSignaturePage` v handleru kroku 3.
 
-## Získání e-mailové adresy
+## Získání e-mailové adresy {#getting-the-email-address}
 
-Dalším krokem je získání e-mailové adresy, identifikátoru požadovaného poskytovatelem služeb. K tomu používáme [službu Ethereum Attestation Service (EAS)](https://attest.org/).
+Dalším krokem je získání e-mailové adresy, identifikátoru požadovaného poskytovatelem služeb. K tomu použijeme [Ethereum Attestation Service (EAS)](https://attest.org/).
 
-Nejjednodušší způsob, jak získat atestace, je použít [GraphQL API](https://docs.attest.org/docs/developer-tools/api). Používáme tento dotaz:
+Nejjednodušší způsob, jak získat atestace, je použít [GraphQL API](https://docs.attest.org/docs/developer-tools/api). Použijeme tento dotaz:
 
 ```
 query GetAttestationsByRecipient {
@@ -721,15 +726,15 @@ query GetAttestationsByRecipient {
 }
 ```
 
-Toto [`schemaId`](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977) obsahuje pouze e-mailovou adresu. Tento dotaz žádá o atestace tohoto schématu. Subjekt atestace se nazývá `recipient`. Je to vždy adresa Etherea.
+Toto [`schemaId`](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977) obsahuje pouze e-mailovou adresu. Tento dotaz žádá o atestace tohoto schématu. Předmět atestace se nazývá `recipient`. Je to vždy adresa na Ethereu.
 
 Varování: Způsob, jakým zde získáváme atestace, má dva bezpečnostní problémy.
 
-- Přistupujeme ke koncovému bodu API `https://optimism.easscan.org/graphql`, což je centralizovaná komponenta. Můžeme získat atribut `id` a poté provést ověření na blockchainu, abychom ověřili, že je atestace skutečná, ale koncový bod API může stále cenzurovat atestace tím, že nám o nich neřekne.
+- Přistupujeme k API endpointu `https://optimism.easscan.org/graphql`, což je centralizovaná komponenta. Můžeme získat atribut `id` a poté provést vyhledávání onchain, abychom ověřili, že je atestace skutečná, ale API endpoint může atestace stále cenzurovat tím, že nám o nich neřekne. 
 
-  Tento problém není neřešitelný, mohli bychom spustit vlastní koncový bod GraphQL a získat atestace z protokolů řetězce, ale to je pro naše účely zbytečné.
+  Tento problém není neřešitelný, mohli bychom provozovat vlastní GraphQL endpoint a získávat atestace z logů řetězce, ale to je pro naše účely přehnané.
 
-- Nebereme v úvahu identitu atestátora. Kdokoli nám může poskytnout nepravdivé informace. V reálné implementaci bychom měli sadu důvěryhodných atestátorů a zabývali bychom se pouze jejich atestacemi.
+- Nedíváme se na identitu atestátora. Kdokoli nám může podstrčit falešné informace. V reálné implementaci bychom měli sadu důvěryhodných atestátorů a dívali bychom se pouze na jejich atestace.
 
 Chcete-li to vidět v akci, zastavte stávající IdP a SP a spusťte tyto příkazy:
 
@@ -741,27 +746,27 @@ pnpm start
 
 Poté zadejte svou e-mailovou adresu. Máte dva způsoby, jak to udělat:
 
-- Importujte peněženku pomocí privátního klíče a použijte testovací privátní klíč `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`.
+- Importujte peněženku pomocí soukromého klíče a použijte testovací soukromý klíč `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`.
 
 - Přidejte atestaci pro svou vlastní e-mailovou adresu:
 
   1. Přejděte na [schéma v průzkumníku atestací](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977).
 
-  2. Klikněte na **Atestovat se schématem**.
+  2. Klikněte na **Attest with Schema**.
 
-  3. Zadejte svou adresu Etherea jako příjemce, svou e-mailovou adresu jako e-mailovou adresu a vyberte **Onchain**. Poté klikněte na **Provést atestaci**.
+  3. Zadejte svou adresu na Ethereu jako příjemce, svou e-mailovou adresu jako email address a vyberte **Onchain**. Poté klikněte na **Make Attestation**.
 
-  4. Schvalte transakci ve své peněžence. K zaplacení za palivo budete potřebovat nějaké ETH na [blockchainu Optimism](https://app.optimism.io/bridge/deposit).
+  4. Schvalte transakci ve své peněžence. Budete potřebovat nějaké ETH na [blockchainu Optimism](https://app.optimism.io/bridge/deposit) k zaplacení za gas.
 
-Ať tak či onak, poté přejděte na [http://localhost:3000](http://localhost:3000) a postupujte podle pokynů. Pokud jste importovali testovací privátní klíč, e-mail, který obdržíte, je `test_addr_0@example.com`. Pokud jste použili vlastní adresu, měla by to být ta, kterou jste atestovali.
+Ať tak či onak, jakmile to uděláte, přejděte na [http://localhost:3000](http://localhost:3000) a postupujte podle pokynů. Pokud jste importovali testovací soukromý klíč, e-mail, který obdržíte, je `test_addr_0@example.com`. Pokud jste použili svou vlastní adresu, mělo by to být to, co jste atestovali.
 
-### Podrobné vysvětlení
+### Podrobné vysvětlení {#detailed-explanation-3}
 
-![Získání e-mailu z adresy Etherea](./fig-06-saml-sig-n-email.png)
+![Getting from Ethereum address to e-mail](./fig-06-saml-sig-n-email.png)
 
-Nové kroky jsou komunikace GraphQL, kroky 5.6 a 5.7.
+Nové kroky jsou komunikace přes GraphQL, kroky 5.6 a 5.7.
 
-Opět zde jsou změněné části `idp.mts`.
+Zde jsou opět změněné části `idp.mts`.
 
 ```typescript
 import { GraphQLClient } from 'graphql-request'
@@ -774,33 +779,33 @@ Importujte knihovny, které potřebujeme.
 const graphqlEndpointUrl = "https://optimism.easscan.org/graphql"
 ```
 
-Pro každý blockchain existuje [samostatný koncový bod](https://docs.attest.org/docs/developer-tools/api).
+Existuje [samostatný endpoint pro každý blockchain](https://docs.attest.org/docs/developer-tools/api).
 
 ```typescript
 const graphqlClient = new GraphQLClient(graphqlEndpointUrl, { fetch })
 ```
 
-Vytvořte nového klienta `GraphQLClient`, kterého můžeme použít pro dotazování koncového bodu.
+Vytvořte nového klienta `GraphQLClient`, kterého můžeme použít k dotazování endpointu.
 
 ```typescript
 const graphqlSchema = 'string emailAddress'
 const graphqlEncoder = new SchemaEncoder(graphqlSchema)
 ```
 
-GraphQL nám poskytuje pouze neprůhledný datový objekt s bajty. Abychom mu porozuměli, potřebujeme schéma.
+GraphQL nám dává pouze neprůhledný datový objekt s bajty. Abychom mu porozuměli, potřebujeme schéma. 
 
 ```typescript
 const ethereumAddressToEmail = async ethAddr => {
 ```
 
-Funkce pro získání e-mailové adresy z adresy Etherea.
+Funkce pro získání e-mailové adresy z adresy na Ethereu.
 
 ```typescript
   const query = `
     query GetAttestationsByRecipient {
 ```
 
-Toto je dotaz GraphQL.
+Toto je GraphQL dotaz.
 
 ```typescript
       attestations(
@@ -815,7 +820,7 @@ Hledáme atestace.
         }
 ```
 
-Atestace, které chceme, jsou ty v našem schématu, kde je příjemce `getAddress(ethAddr)`. Funkce [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) zajišťuje, že naše adresa má správný [kontrolní součet](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md). To je nutné, protože GraphQL rozlišuje velikost písmen. „0xBAD060A7“, „0xBad060A7“ a „0xbad060a7“ jsou různé hodnoty.
+Atestace, které chceme, jsou ty v našem schématu, kde je příjemcem `getAddress(ethAddr)`. Funkce [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) zajišťuje, že naše adresa má správný [kontrolní součet (checksum)](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md). To je nutné, protože GraphQL rozlišuje velká a malá písmena. „0xBAD060A7“, „0xBad060A7“ a „0xbad060a7“ jsou různé hodnoty.
 
 ```typescript
         take: 1
@@ -832,10 +837,10 @@ Bez ohledu na to, kolik atestací najdeme, chceme pouze tu první.
     }`
 ```
 
-Pole, která chceme obdržet.
+Pole, která chceme přijmout.
 
-- `attester`: Adresa, která atestaci odeslala. Obvykle se používá k rozhodnutí, zda atestaci důvěřovat, či nikoli.
-- `id`: ID atestace. Tuto hodnotu můžete použít ke [čtení atestace na blockchainu](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000021?tab=read_proxy&source_address=0x4E0275Ea5a89e7a3c1B58411379D1a0eDdc5b088#0xa3112a64), abyste ověřili, že informace z dotazu GraphQL jsou správné.
+- `attester`: Adresa, která atestaci odeslala. Normálně se to používá k rozhodnutí, zda atestaci důvěřovat, nebo ne.
+- `id`: ID atestace. Tuto hodnotu můžete použít k [přečtení atestace onchain](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000021?tab=read_proxy&source_address=0x4E0275Ea5a89e7a3c1B58411379D1a0eDdc5b088#0xa3112a64), abyste ověřili, že informace z GraphQL dotazu jsou správné.
 - `data`: Data schématu (v tomto případě e-mailová adresa).
 
 ```typescript
@@ -845,7 +850,7 @@ Pole, která chceme obdržet.
     return "no_address@available.is"
 ```
 
-Pokud neexistuje žádná atestace, vraťte hodnotu, která je zjevně nesprávná, ale která by se poskytovateli služeb jevila jako platná.
+Pokud neexistuje žádná atestace, vraťte hodnotu, která je zjevně nesprávná, ale poskytovateli služeb by se jevila jako platná.
 
 ```typescript
   const attestationDataFields = graphqlEncoder.decodeData(queryResult.attestations[0].data)
@@ -853,7 +858,7 @@ Pokud neexistuje žádná atestace, vraťte hodnotu, která je zjevně nesprávn
 }
 ```
 
-Pokud existuje hodnota, použijte k dekódování dat `decodeData`. Nepotřebujeme metadata, která poskytuje, pouze samotnou hodnotu.
+Pokud hodnota existuje, použijte `decodeData` k dekódování dat. Nepotřebujeme metadata, která poskytuje, pouze samotnou hodnotu.
 
 ```typescript
   const loginResponse = await idp.createLoginResponse(
@@ -870,17 +875,17 @@ Pokud existuje hodnota, použijte k dekódování dat `decodeData`. Nepotřebuje
   );
 ```
 
-Pro získání e-mailové adresy použijte novou funkci.
+Použijte novou funkci k získání e-mailové adresy.
 
-## A co decentralizace?
+## A co decentralizace? {#what-about-decentralization}
 
-V této konfiguraci se uživatelé nemohou vydávat za někoho, kým nejsou, pokud se spoléháme na důvěryhodné atestátory pro mapování adres Etherea na e-mailové adresy. Náš poskytovatel identity je však stále centralizovanou komponentou. Kdokoli, kdo má privátní klíč poskytovatele identity, může poskytovateli služeb posílat nepravdivé informace.
+V této konfiguraci uživatelé nemohou předstírat, že jsou někým, kým nejsou, pokud se spoléháme na důvěryhodné atestátory pro mapování adresy na Ethereu na e-mailovou adresu. Náš poskytovatel identity je však stále centralizovanou komponentou. Kdokoli má soukromý klíč poskytovatele identity, může poskytovateli služeb odesílat falešné informace.
 
-Může existovat řešení pomocí [více-stranného výpočtu (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation). Doufám, že o tom napíšu v budoucím tutoriálu.
+Může existovat řešení využívající [vícestranné výpočty (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation). Doufám, že o tom napíšu v některém z budoucích tutoriálů.
 
-## Závěr
+## Závěr {#conclusion}
 
-Přijetí standardu pro přihlášení, jako jsou podpisy Etherea, se potýká s problémem slepice a vejce. Poskytovatelé služeb chtějí oslovit co nejširší trh. Uživatelé chtějí mít přístup ke službám, aniž by se museli starat o podporu svého standardu pro přihlášení.
-Vytváření adaptérů, jako je Ethereum IdP, nám může pomoci překonat tuto překážku.
+Přijetí standardu pro přihlašování, jako jsou podpisy na Ethereu, čelí problému slepice a vejce. Poskytovatelé služeb chtějí oslovit co nejširší trh. Uživatelé chtějí mít přístup ke službám, aniž by se museli starat o to, zda podporují jejich standard pro přihlašování.
+Vytváření adaptérů, jako je Ethereum IdP, nám může pomoci tuto překážku překonat.
 
-[Více z mé práce najdete zde](https://cryptodocguy.pro/).
+[Zde najdete další mou práci](https://cryptodocguy.pro/).

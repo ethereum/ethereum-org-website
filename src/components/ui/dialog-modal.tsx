@@ -8,10 +8,12 @@ import { cn } from "@/lib/utils/cn"
 import { Button } from "./buttons/Button"
 import { Center, Flex } from "./flex"
 
+import useTranslation from "@/hooks/useTranslation"
+
 const dialogVariant = tv({
   slots: {
     content:
-      "data-[state=open]:animate-fade-in w-full grid gap-4 rounded-md bg-background p-8 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-modal",
+      "data-[state=open]:animate-fade-in w-full grid gap-4 rounded-md bg-background p-8 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-hidden z-modal",
     overlay:
       "data-[state=open]:animate-fade-in overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-black/70 z-overlay",
     header: "relative pe-12",
@@ -70,7 +72,7 @@ const DialogPortal = DialogPrimitive.Portal
 const DialogClose = DialogPrimitive.Close
 
 const DialogOverlay = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Overlay>,
+  React.ComponentRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => {
   const { overlay } = useDialogStyles()
@@ -89,7 +91,7 @@ type DialogContentProps = React.ComponentPropsWithoutRef<
 >
 
 const DialogContent = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Content>,
+  React.ComponentRef<typeof DialogPrimitive.Content>,
   DialogContentProps
 >(({ className, children, ...props }, ref) => {
   const { content } = useDialogStyles()
@@ -115,13 +117,13 @@ const DialogHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const { header, close } = useDialogStyles()
+  const { t } = useTranslation("common")
   return (
     <div className={cn(header(), className)} {...props}>
       {children}
       <Center className={close()} asChild>
-        <DialogPrimitive.Close>
+        <DialogPrimitive.Close aria-label={t("close")}>
           <X size="20" />
-          <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       </Center>
     </div>
@@ -139,7 +141,7 @@ const DialogFooter = ({
 DialogFooter.displayName = "DialogFooter"
 
 const DialogTitle = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Title>,
+  React.ComponentRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => {
   const { title } = useDialogStyles()
@@ -154,7 +156,7 @@ const DialogTitle = React.forwardRef<
 DialogTitle.displayName = DialogPrimitive.Title.displayName
 
 const DialogDescription = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Description>,
+  React.ComponentRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description

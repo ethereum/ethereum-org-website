@@ -1,0 +1,549 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-06-17T22:13:27.000Z",
+  "englishManifestHash": "09e5a9f311f0",
+  "placeholderOrder": [
+    "LINK-441610",
+    "LINK-edadd2",
+    "LINK-85eb8f",
+    "LINK-21141b",
+    "LINK-efb186",
+    "LINK-41541d",
+    "LINK-669d94",
+    "LINK-e26026",
+    "LINK-cf4e12",
+    "LINK-60fe5e",
+    "LINK-f81562",
+    "LINK-4cd52c",
+    "LINK-b04ecf",
+    "LINK-87b1f9",
+    "LINK-319660",
+    "LINK-85abae",
+    "LINK-c05fbf",
+    "LINK-5738d2",
+    "LINK-caa156",
+    "LINK-7cbe8c",
+    "LINK-6417d4",
+    "LINK-a40614",
+    "LINK-7a9289",
+    "LINK-8e61a5",
+    "LINK-59320b",
+    "LINK-1afe17",
+    "LINK-1bbcc4",
+    "LINK-f36abb",
+    "LINK-0a2b28",
+    "LINK-c9983b",
+    "LINK-629b75",
+    "LINK-4056fb",
+    "LINK-a00b8c",
+    "LINK-50200b",
+    "LINK-147195",
+    "LINK-fce2f4",
+    "LINK-915809",
+    "LINK-75c5d4",
+    "LINK-e7cd02",
+    "LINK-c08df3",
+    "LINK-5636c2",
+    "LINK-d8c8ef",
+    "LINK-934053",
+    "LINK-58423b",
+    "LINK-71166d",
+    "LINK-5879d0",
+    "LINK-f3fdae",
+    "LINK-77e165",
+    "LINK-4c2510",
+    "LINK-418e30",
+    "LINK-d71bd8",
+    "LINK-2c42fb",
+    "LINK-a2dc6e",
+    "LINK-c38f1c",
+    "LINK-7c516e",
+    "LINK-d73772",
+    "LINK-93a678",
+    "LINK-294f20",
+    "LINK-e09a78",
+    "LINK-0ed4d4",
+    "LINK-2a7fab",
+    "LINK-66aa38",
+    "LINK-e5fefc",
+    "LINK-7d505f",
+    "LINK-87160f",
+    "LINK-0b4c50",
+    "LINK-33333d",
+    "LINK-cfe1fa",
+    "LINK-072d87",
+    "LINK-cd5bfc",
+    "LINK-bd406b",
+    "LINK-239562",
+    "LINK-f3760a",
+    "LINK-3b58c6",
+    "LINK-85eb8f",
+    "LINK-f617b1",
+    "LINK-9e225c"
+  ],
+  "placeholderMap": {
+    "LINK-441610": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#what-are-nodes-and-clients"
+      }
+    },
+    "LINK-edadd2": {
+      "type": "link",
+      "values": {
+        "url": "#popular-node-services"
+      }
+    },
+    "LINK-85eb8f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-21141b": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge"
+      }
+    },
+    "LINK-efb186": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    },
+    "LINK-41541d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/#ethereum-testnets"
+      }
+    },
+    "LINK-669d94": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    },
+    "LINK-e26026": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#node-types"
+      }
+    },
+    "LINK-cf4e12": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#benefits-to-you"
+      }
+    },
+    "LINK-60fe5e": {
+      "type": "link",
+      "values": {
+        "url": "https://alchemy.com/"
+      }
+    },
+    "LINK-f81562": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/"
+      }
+    },
+    "LINK-4cd52c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.allnodes.com/"
+      }
+    },
+    "LINK-b04ecf": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.allnodes.com/"
+      }
+    },
+    "LINK-87b1f9": {
+      "type": "link",
+      "values": {
+        "url": "https://www.publicnode.com"
+      }
+    },
+    "LINK-319660": {
+      "type": "link",
+      "values": {
+        "url": "https://www.publicnode.com/snapshots"
+      }
+    },
+    "LINK-85abae": {
+      "type": "link",
+      "values": {
+        "url": "https://allthatnode.com/"
+      }
+    },
+    "LINK-c05fbf": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.allthatnode.com/"
+      }
+    },
+    "LINK-5738d2": {
+      "type": "link",
+      "values": {
+        "url": "https://aws.amazon.com/managed-blockchain/"
+      }
+    },
+    "LINK-caa156": {
+      "type": "link",
+      "values": {
+        "url": "https://aws.amazon.com/managed-blockchain/resources/"
+      }
+    },
+    "LINK-7cbe8c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ankr.com/"
+      }
+    },
+    "LINK-6417d4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ankr.com/"
+      }
+    },
+    "LINK-a40614": {
+      "type": "link",
+      "values": {
+        "url": "https://blastapi.io/"
+      }
+    },
+    "LINK-7a9289": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.blastapi.io/"
+      }
+    },
+    "LINK-8e61a5": {
+      "type": "link",
+      "values": {
+        "url": "https://blockdaemon.com/"
+      }
+    },
+    "LINK-59320b": {
+      "type": "link",
+      "values": {
+        "url": "https://ubiquity.docs.blockdaemon.com/"
+      }
+    },
+    "LINK-1afe17": {
+      "type": "link",
+      "values": {
+        "url": "https://blockpi.io/"
+      }
+    },
+    "LINK-1bbcc4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.blockpi.io/"
+      }
+    },
+    "LINK-f36abb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.chainbase.com/"
+      }
+    },
+    "LINK-0a2b28": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.chainbase.com"
+      }
+    },
+    "LINK-c9983b": {
+      "type": "link",
+      "values": {
+        "url": "https://chainstack.com/"
+      }
+    },
+    "LINK-629b75": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.chainstack.com/"
+      }
+    },
+    "LINK-4056fb": {
+      "type": "link",
+      "values": {
+        "url": "https://drpc.org/"
+      }
+    },
+    "LINK-a00b8c": {
+      "type": "link",
+      "values": {
+        "url": "https://drpc.org/docs"
+      }
+    },
+    "LINK-50200b": {
+      "type": "link",
+      "values": {
+        "url": "https://drpc.org/chainlist"
+      }
+    },
+    "LINK-147195": {
+      "type": "link",
+      "values": {
+        "url": "https://drpc.org/pricing#calculator"
+      }
+    },
+    "LINK-fce2f4": {
+      "type": "link",
+      "values": {
+        "url": "https://getblock.io/"
+      }
+    },
+    "LINK-915809": {
+      "type": "link",
+      "values": {
+        "url": "https://getblock.io/docs/get-started/authentication-with-api-key/"
+      }
+    },
+    "LINK-75c5d4": {
+      "type": "link",
+      "values": {
+        "url": "https://infstones.com/"
+      }
+    },
+    "LINK-e7cd02": {
+      "type": "link",
+      "values": {
+        "url": "https://infura.io/"
+      }
+    },
+    "LINK-c08df3": {
+      "type": "link",
+      "values": {
+        "url": "https://infura.io/docs"
+      }
+    },
+    "LINK-5636c2": {
+      "type": "link",
+      "values": {
+        "url": "https://kaleido.io/"
+      }
+    },
+    "LINK-d8c8ef": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.kaleido.io/"
+      }
+    },
+    "LINK-934053": {
+      "type": "link",
+      "values": {
+        "url": "https://www.lavanet.xyz/"
+      }
+    },
+    "LINK-58423b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.lavanet.xyz/"
+      }
+    },
+    "LINK-71166d": {
+      "type": "link",
+      "values": {
+        "url": "https://moralis.io/"
+      }
+    },
+    "LINK-5879d0": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.moralis.io/"
+      }
+    },
+    "LINK-f3fdae": {
+      "type": "link",
+      "values": {
+        "url": "https://nodereal.io/"
+      }
+    },
+    "LINK-77e165": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nodereal.io/docs/introduction"
+      }
+    },
+    "LINK-4c2510": {
+      "type": "link",
+      "values": {
+        "url": "https://nodeflare.app/"
+      }
+    },
+    "LINK-418e30": {
+      "type": "link",
+      "values": {
+        "url": "https://nodeflare.app/docs/quick-start"
+      }
+    },
+    "LINK-d71bd8": {
+      "type": "link",
+      "values": {
+        "url": "https://nownodes.io/"
+      }
+    },
+    "LINK-2c42fb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.pokt.network/"
+      }
+    },
+    "LINK-a2dc6e": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.pokt.network/"
+      }
+    },
+    "LINK-c38f1c": {
+      "type": "link",
+      "values": {
+        "url": "https://bit.ly/ETHorg_POKTportal"
+      }
+    },
+    "LINK-7c516e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.quicknode.com"
+      }
+    },
+    "LINK-d73772": {
+      "type": "link",
+      "values": {
+        "url": "https://www.quicknode.com/docs/"
+      }
+    },
+    "LINK-93a678": {
+      "type": "link",
+      "values": {
+        "url": "https://www.quicknode.com/security"
+      }
+    },
+    "LINK-294f20": {
+      "type": "link",
+      "values": {
+        "url": "https://rivet.cloud/"
+      }
+    },
+    "LINK-e09a78": {
+      "type": "link",
+      "values": {
+        "url": "https://rivet.readthedocs.io/en/latest/"
+      }
+    },
+    "LINK-0ed4d4": {
+      "type": "link",
+      "values": {
+        "url": "https://senseinode.com"
+      }
+    },
+    "LINK-2a7fab": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.senseinode.com/"
+      }
+    },
+    "LINK-66aa38": {
+      "type": "link",
+      "values": {
+        "url": "https://console.settlemint.com/"
+      }
+    },
+    "LINK-e5fefc": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.settlemint.com/"
+      }
+    },
+    "LINK-7d505f": {
+      "type": "link",
+      "values": {
+        "url": "https://tenderly.co/web3-gateway"
+      }
+    },
+    "LINK-87160f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.tenderly.co/web3-gateway/web3-gateway"
+      }
+    },
+    "LINK-0b4c50": {
+      "type": "link",
+      "values": {
+        "url": "https://services.tokenview.io/"
+      }
+    },
+    "LINK-33333d": {
+      "type": "link",
+      "values": {
+        "url": "https://services.tokenview.io/docs?type=nodeService"
+      }
+    },
+    "LINK-cfe1fa": {
+      "type": "link",
+      "values": {
+        "url": "https://watchdata.io/"
+      }
+    },
+    "LINK-072d87": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.watchdata.io/"
+      }
+    },
+    "LINK-cd5bfc": {
+      "type": "link",
+      "values": {
+        "url": "https://zmok.io/"
+      }
+    },
+    "LINK-bd406b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.zmok.io/"
+      }
+    },
+    "LINK-239562": {
+      "type": "link",
+      "values": {
+        "url": "https://www.zeeve.io/"
+      }
+    },
+    "LINK-f3760a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.zeeve.io/docs/"
+      }
+    },
+    "LINK-3b58c6": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumnodes.com/"
+      }
+    },
+    "LINK-f617b1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/"
+      }
+    },
+    "LINK-9e225c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:13:27.000Z",
+      "status": "success"
+    }
+  }
+}

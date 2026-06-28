@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { expect, fn, waitFor, within } from "@storybook/test"
+import { expect, fn, waitFor, within } from "storybook/test"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { Phone } from "@/components/Simulator/Phone"
 import { Template } from "@/components/Simulator/Template"

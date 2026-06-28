@@ -1,52 +1,53 @@
 ---
-title: "Tellor'u Kâhininiz Olarak Nasıl Kurarsınız?"
+title: "Tellor'u Kâhin Olarak Nasıl Kurarsınız"
 description: "Tellor kâhinini protokolünüze entegre etmeye başlamak için bir rehber"
 author: "Tellor"
 lang: tr
-tags: [ "solidity", "akıllı kontratlar", "kâhinler" ]
+tags: ["Solidity", "akıllı sözleşmeler", "kâhinler"]
 skill: beginner
+breadcrumb: "Tellor kâhini"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 
-Hızlı Soru: Protokolünüz tamamlanmak üzere, ancak zincir dışı verilere erişmek için bir kâhine ihtiyacı var... Ne yaparsınız?
+Kısa Sınav: Protokolünüz neredeyse bitti, ancak zincir dışı verilere erişmek için bir kâhine ihtiyacı var... Ne yaparsınız?
 
-## (Yumuşak) Ön Koşullar {#soft-prerequisites}
+## (Esnek) Ön Koşullar {#soft-prerequisites}
 
-Bu gönderi, bir kâhin akışına erişmeyi mümkün olduğunca basit ve anlaşılır hâle getirmeyi amaçlamaktadır. Bununla birlikte, kâhin yönüne odaklanmak için kodlama beceri seviyeniz hakkında aşağıdakileri varsayıyoruz.
+Bu yazı, bir kâhin akışına erişimi olabildiğince basit ve anlaşılır hâle getirmeyi amaçlamaktadır. Bununla birlikte, kâhin yönüne odaklanabilmek için kodlama beceri seviyeniz hakkında aşağıdakileri varsayıyoruz.
 
 Varsayımlar:
 
-- bir terminalde gezinebilmeniz
-- npm'nin kurulu olması
-- bağımlılıkları yönetmek için npm'yi nasıl kullanacağınızı bilmeniz
+- bir terminalde gezinebilirsiniz
+- npm yüklü
+- bağımlılıkları yönetmek için npm'i nasıl kullanacağınızı biliyorsunuz
 
-Tellor, uygulamaya hazır, canlı ve açık kaynaklı bir kâhindir. Bu başlangıç kılavuzu, projenize tamamen merkeziyetsiz ve sansüre dayanıklı bir kâhin sağlayarak Tellor'u kullanmaya başlamanın ne kadar kolay olduğunu göstermek için hazırlanmıştır.
+Tellor, uygulamaya hazır, canlı ve açık kaynaklı bir kâhindir. Bu başlangıç rehberi, projenize tamamen merkeziyetsiz ve sansüre dirençli bir kâhin sağlayarak Tellor ile çalışmaya başlamanın ne kadar kolay olduğunu göstermek için buradadır.
 
 ## Genel Bakış {#overview}
 
-Tellor, tarafların zincir dışı bir veri noktasının (ör. BTC/USD) değerini talep edebildiği ve raporlayıcıların bu değeri tüm Ethereum akıllı sözleşmeleri tarafından erişilebilen, zincir üstü bir veri bankasına eklemek için rekabet ettiği bir kâhin sistemidir. Bu veri bankasına yapılan girdiler, stake edilmiş raporlayıcılardan oluşan bir ağ tarafından güvence altına alınır. Tellor; raporlayıcılar tarafından dürüst veri gönderimlerini ödüllendiren ve Tellor'un jetonu olan Tributes (TRB) ihracı ve bir uyuşmazlık mekanizması aracılığıyla kötü niyetli aktörleri cezalandıran, kripto-ekonomik teşvik mekanizmalarından yararlanır.
+Tellor, tarafların zincir dışı bir veri noktasının (ör. BTC/USD) değerini talep edebildiği ve raporlayıcıların bu değeri tüm Ethereum akıllı sözleşmeleri tarafından erişilebilen zincir içi bir veri bankasına eklemek için rekabet ettiği bir kâhin sistemidir. Bu veri bankasına yapılan girdiler, stake etmiş raporlayıcılardan oluşan bir ağ tarafından güvence altına alınır. Tellor, raporlayıcıların dürüst veri gönderimlerini ödüllendiren ve kötü niyetli aktörleri Tellor'un token'ı olan Tributes (TRB) ihracı ve bir itiraz mekanizması aracılığıyla cezalandıran kripto-ekonomik teşvik mekanizmalarından yararlanır.
 
-Bu öğreticide şunları ele alacağız:
+Bu eğitimde şunların üzerinden geçeceğiz:
 
-- Çalışmaya başlamak için ihtiyacınız olacak ilk araç setinin kurulumu.
-- Basit bir örnek üzerinden ilerleme.
-- Tellor'ı şu anda test edebileceğiniz ağların test ağı adreslerini listeleme.
+- Çalışmaya başlamak için ihtiyaç duyacağınız başlangıç araç setini kurmak.
+- Basit bir örneği adım adım incelemek.
+- Şu anda Tellor'u test edebileceğiniz ağların test ağı adreslerini listelemek.
 
-## UsingTellor Kullanımı {#usingtellor}
+## UsingTellor {#usingtellor}
 
-Yapmak isteyeceğiniz ilk şey, Tellor'u kâhininiz olarak kullanmak için gerekli temel araçları kurmaktır. Tellor Kullanıcı Sözleşmelerini kurmak için [bu paketi](https://github.com/tellor-io/usingtellor) kullanın:
+Yapmak isteyeceğiniz ilk şey, Tellor'u kâhin olarak kullanmak için gerekli temel araçları yüklemektir. Tellor Kullanıcı Sözleşmelerini yüklemek için [bu paketi](https://github.com/tellor-io/usingtellor) kullanın:
 
 `npm install usingtellor`
 
-Kurulduktan sonra bu, sözleşmelerinizin 'UsingTellor' sözleşmesinden fonksiyonları devralmasına olanak tanır.
+Kurulduktan sonra bu, sözleşmelerinizin 'UsingTellor' sözleşmesinden işlevleri devralmasına olanak tanıyacaktır.
 
-Harika! Artık araçlar hazır olduğuna göre, bitcoin fiyatını aldığımız basit bir alıştırma yapalım:
+Harika! Artık araçları hazırladığınıza göre, Bitcoin fiyatını aldığımız basit bir alıştırma yapalım:
 
 ### BTC/USD Örneği {#btcusd-example}
 
-Tellor adresini bir yapıcı argümanı olarak geçirerek UsingTellor sözleşmesini kalıtın:
+Tellor adresini bir kurucu argümanı olarak geçirerek UsingTellor sözleşmesini devralın:
 
 İşte bir örnek:
 
@@ -56,7 +57,7 @@ import "usingtellor/contracts/UsingTellor.sol";
 contract PriceContract is UsingTellor {
   uint256 public btcPrice;
 
- //Bu Sözleşme artık UsingTellor'daki tüm fonksiyonlara erişebilir
+ //Bu Sözleşme artık UsingTellor'daki tüm fonksiyonlara erişime sahiptir.
 
 constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 
@@ -74,8 +75,8 @@ function setBtcPrice() public {
 }
 ```
 
-Sözleşme adreslerinin tam listesi için [buraya](https://docs.tellor.io/tellor/the-basics/contracts-reference) bakın.
+Sözleşme adreslerinin tam listesi için [buraya](https://docs.tellor.io/tellor/the-basics/contracts-reference) başvurun.
 
-Kullanım kolaylığı için UsingTellor deposu, daha kolay entegrasyon için [Tellor Playground](https://github.com/tellor-io/TellorPlayground) sözleşmesinin bir sürümünü içerir. Yardımcı fonksiyonların listesi için [buraya](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) bakın.
+Kullanım kolaylığı açısından, UsingTellor deposu daha kolay entegrasyon için [Tellor Playground](https://github.com/tellor-io/TellorPlayground) sözleşmesinin bir sürümüyle birlikte gelir. Yararlı işlevlerin bir listesi için [buraya](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) bakın.
 
-Tellor kâhininin daha sağlam bir uygulaması için mevcut fonksiyonların tam listesine [buradan](https://github.com/tellor-io/usingtellor/blob/master/README.md) göz atın.
+Tellor kâhinini daha sağlam bir şekilde uygulamak için mevcut işlevlerin tam listesine [buradan](https://github.com/tellor-io/usingtellor/blob/master/README.md) göz atın.

@@ -4,8 +4,6 @@ description: How to get involved in the Ethereum community.
 lang: en
 ---
 
-# How can I get involved? {#get-involved}
-
 The Ethereum community includes people of many different backgrounds and skillsets. Whether you’re a developer, an artist, or an accountant, there are ways to get involved. Here’s a list of suggestions that might help you get started.
 
 Start by reading about the ethereum.org mission and values in our [code of conduct](/community/code-of-conduct).
@@ -82,7 +80,7 @@ By staking your ETH you can earn rewards whilst helping to secure the Ethereum n
 
 The Ethereum ecosystem is on a mission to fund public goods and impactful projects. With very small donations you can show your support and allow important work to be realized.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Financial professionals & Accountants <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
@@ -109,7 +107,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless jobs board](https://pallet.xyz/list/bankless/jobs)
+- [Bankless jobs board](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
@@ -126,7 +124,6 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture for pre-seed crypto projects_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Digiphysical Apparel Brands_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community focused on funding Ethereum development_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collective of Web3 builders_
 
 Please remember to abide by the ethereum.org [code of conduct](/community/code-of-conduct) whenever and however you contribute to ethereum.org!

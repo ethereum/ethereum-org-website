@@ -1,4 +1,5 @@
 "use client"
+
 import { Dispatch, SetStateAction, useEffect, useRef } from "react"
 
 import type { QuizKey, QuizStatus, UserStats } from "@/lib/types"
@@ -19,8 +20,6 @@ import { QuizProgressBar } from "./QuizProgressBar"
 import { QuizRadioGroup } from "./QuizRadioGroup"
 import { QuizSummary } from "./QuizSummary"
 import { useQuizWidget } from "./useQuizWidget"
-
-import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type CommonProps = {
   quizKey: QuizKey
@@ -67,8 +66,6 @@ const QuizWidget = ({
     setCurrentQuestionAnswerChoice,
   } = useQuizWidget({ quizKey, updateUserStats })
 
-  const { isRtl } = useRtlFlip()
-
   const quizPageProps = useRef<
     | (Required<Pick<QuizWidgetProps, "currentHandler" | "statusHandler">> & {
         nextQuiz: QuizKey | undefined
@@ -108,7 +105,8 @@ const QuizWidget = ({
     <VStack data-testid="quiz-widget" className="w-full max-w-[600px] gap-12">
       <div
         className={cn(
-          "grid w-full rounded [&>*]:[grid-area:1/1]",
+          "grid w-full rounded-base *:[grid-area:1/1]",
+          isStandaloneQuiz && "shadow-drop",
           getMainContainerBg()
         )}
       >
@@ -117,16 +115,14 @@ const QuizWidget = ({
           className={cn(
             "relative w-full gap-8",
             // Reduce padding when showing Spinner
-            !quizData ? "pb-5 pt-10" : "pb-4 pt-5 md:pb-8 md:pt-12",
-            isStandaloneQuiz && "px-4 shadow-drop"
+            !quizData ? "pt-10 pb-5" : "pt-5 pb-4 md:pt-12 md:pb-8",
+            isStandaloneQuiz && "px-4"
           )}
         >
           <Center
             className={cn(
-              "relative top-2 md:absolute md:start-1/2 md:top-0 md:-translate-y-1/2",
-              isRtl
-                ? "md:translate-x-[calc(50%_*_1)]"
-                : "md:translate-x-[calc(50%_*_-1)]"
+              "relative top-2 md:absolute md:inset-s-1/2 md:top-0 md:-translate-y-1/2",
+              "md:translate-x-[-50%] rtl:md:translate-x-[50%]"
             )}
           >
             <AnswerIcon answerStatus={answerStatus} />

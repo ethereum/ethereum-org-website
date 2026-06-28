@@ -1,4 +1,4 @@
-import { retry, sleep } from "@/lib/utils/fetch"
+import { fetchRetry, sleep } from "@/data-layer/fetchers/fetchRetry"
 
 import type { DeveloperTool } from "./utils"
 
@@ -37,7 +37,7 @@ async function fetchSinglePackageDownloads(
   packageName: string
 ): Promise<number | null> {
   try {
-    const response = await fetch(
+    const response = await fetchRetry(
       `https://api.npmjs.org/downloads/point/last-week/${encodeURIComponent(packageName)}`
     )
 
@@ -94,35 +94,32 @@ async function fetchBulkDownloads(
     const packageList = batch.join(",")
 
     try {
-      // Retry with exponential backoff (3 attempts: 0ms, 1s, 2s)
-      await retry(async () => {
-        const response = await fetch(
-          `https://api.npmjs.org/downloads/point/last-week/${packageList}`
+      const response = await fetchRetry(
+        `https://api.npmjs.org/downloads/point/last-week/${packageList}`
+      )
+
+      if (!response.ok) {
+        throw new Error(
+          `npm downloads API returned ${response.status} for unscoped batch`
         )
+      }
 
-        if (!response.ok) {
-          throw new Error(
-            `npm downloads API returned ${response.status} for unscoped batch`
-          )
-        }
+      const data = await response.json()
 
-        const data = await response.json()
-
-        // Handle single-package response: { downloads: number, package: string }
-        // vs multi-package response: { "pkg1": { downloads: n }, "pkg2": { downloads: m } }
-        if ("downloads" in data && "package" in data) {
-          results.set(data.package, data.downloads)
-        } else {
-          for (const [pkg, info] of Object.entries(data)) {
-            if (info && typeof info === "object" && "downloads" in info) {
-              results.set(pkg, (info as { downloads: number }).downloads)
-            }
+      // Handle single-package response: { downloads: number, package: string }
+      // vs multi-package response: { "pkg1": { downloads: n }, "pkg2": { downloads: m } }
+      if ("downloads" in data && "package" in data) {
+        results.set(data.package, data.downloads)
+      } else {
+        for (const [pkg, info] of Object.entries(data)) {
+          if (info && typeof info === "object" && "downloads" in info) {
+            results.set(pkg, (info as { downloads: number }).downloads)
           }
         }
-      })
+      }
     } catch (err) {
       console.error(
-        `Failed to fetch bulk npm downloads for batch ${i / BATCH_SIZE + 1} after retries:`,
+        `Failed to fetch bulk npm downloads for batch ${i / BATCH_SIZE + 1}:`,
         err
       )
       // Continue with next batch instead of failing entirely

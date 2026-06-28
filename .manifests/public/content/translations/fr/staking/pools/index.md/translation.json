@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-18T00:50:14.013Z",
+  "englishManifestHash": "979bb6321cee",
+  "placeholderOrder": [
+    "LINK-2698d7",
+    "COMPONENT-000e09",
+    "COMPONENT-8dcb6f",
+    "COMPONENT-eb0fd5",
+    "LINK-a21a82",
+    "LINK-ea5158",
+    "LINK-1ed7a5",
+    "HTMLTAG-359785",
+    "HTMLTAG-648984",
+    "LINK-8bde19",
+    "COMPONENT-0a0748",
+    "COMPONENT-23d626",
+    "COMPONENT-990c74",
+    "LINK-11109b",
+    "LINK-20746f",
+    "LINK-b83f3e"
+  ],
+  "placeholderMap": {
+    "COMPONENT-0a0748": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "COMPONENT-23d626": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "COMPONENT-990c74": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "COMPONENT-000e09": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🐟"
+      }
+    },
+    "COMPONENT-8dcb6f": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": ":stopwatch:"
+      }
+    },
+    "COMPONENT-eb0fd5": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": ":droplet:"
+      }
+    },
+    "HTMLTAG-359785": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "em"
+      }
+    },
+    "HTMLTAG-648984": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "em"
+      }
+    },
+    "LINK-2698d7": {
+      "type": "link",
+      "values": {
+        "url": "/staking/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-ea5158": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@djrtwo/risks-of-lsd"
+      }
+    },
+    "LINK-1ed7a5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity/"
+      }
+    },
+    "LINK-8bde19": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-staking-products/"
+      }
+    },
+    "LINK-11109b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.staking.directory/"
+      }
+    },
+    "LINK-20746f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.rocketpool.net/guides/staking/overview.html"
+      }
+    },
+    "LINK-b83f3e": {
+      "type": "link",
+      "values": {
+        "url": "https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:50:14.013Z",
+      "status": "success"
+    }
+  }
+}

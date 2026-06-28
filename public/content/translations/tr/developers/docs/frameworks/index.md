@@ -1,32 +1,32 @@
 ---
 title: "Dapp Geliştirme Çerçeveleri"
-description: "Çerçevelerin avantajlarını keşfedin ve uygun seçenekleri karşılaştırın."
+description: "Çerçevelerin avantajlarını keşfedin ve mevcut seçenekleri karşılaştırın."
 lang: tr
 ---
 
 ## Çerçevelere giriş {#introduction-to-frameworks}
 
-Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerektirir. Yazılım çerçeveleri gereken özelliklerin çoğunu içerirler veya istediğiniz araçları seçmeniz için kolay eklenti sistemleri sağlarlar.
+Tam teşekküllü bir merkeziyetsiz uygulama (dapp) oluşturmak, farklı teknoloji parçaları gerektirir. Yazılım çerçeveleri, ihtiyaç duyulan özelliklerin çoğunu içerir veya istediğiniz araçları seçmeniz için kolay eklenti sistemleri sağlar.
 
-Çerçeveler, aşağıdakiler gibi birçok ezber bozan işlevsellikle gelirler:
+Çerçeveler, aşağıdakiler gibi birçok kullanıma hazır işlevsellikle birlikte gelir:
 
-- Yerel bir blok zinciri örneği başlatmak için özellikler.
-- Akıllı sözleşmelerinizi derlemek ve test etmek için yardımcı programlar.
-- Kullanıcı odaklı uygulamanızı aynı projede/depoda oluşturmak için istemci geliştirme eklentileri.
-- Ethereum ağlarına bağlanmak ve yerel olarak çalışan bir örneğe veya Ethereum'un genel ağlarından birine sözleşmeleri dağıtmak için yapılandırma.
-- Merkeziyetsiz uygulama dağıtımı - IPFS gibi depolama seçenekleri ile entegrasyonlar.
+- Yerel bir blokzincir örneği başlatmak için özellikler.
+- Akıllı sözleşmelerinizi derlemek ve test etmek için araçlar.
+- Kullanıcıya dönük uygulamanızı aynı proje/depo içinde oluşturmak için istemci geliştirme eklentileri.
+- İster yerel olarak çalışan bir örneğe ister Ethereum'un genel ağlarından birine olsun, Ethereum ağlarına bağlanmak ve sözleşmeleri dağıtmak için yapılandırma.
+- Merkeziyetsiz uygulama dağıtımı - IPFS gibi depolama seçenekleriyle entegrasyonlar.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Çerçevelere girmeden önce, [merkeziyetsiz uygulamalar](/developers/docs/dapps/) ve [Ethereum yığını](/developers/docs/ethereum-stack/) hakkındaki giriş yazımızı okumanızı öneririz.
+Çerçevelere dalmadan önce, [dapp'lere](/developers/docs/dapps/) ve [Ethereum yığınına](/developers/docs/ethereum-stack/) giriş yazılarımızı okumanızı öneririz.
 
 ## Mevcut çerçeveler {#available-frameworks}
 
-**Foundry** - **_Foundry, Ethereum uygulamaları geliştirmeye yönelik son derece hızlı, taşınabilir ve modüler bir araç setidir_**
+**Foundry** - **_Foundry, Ethereum uygulama geliştirmesi için son derece hızlı, taşınabilir ve modüler bir araç takımıdır_**
 
 - [Foundry'yi Yükleyin](https://book.getfoundry.sh/)
 - [Foundry kitabı](https://book.getfoundry.sh/)
-- [Telegram'daki Foundry topluluk sohbeti](https://t.me/foundry_support)
+- [Telegram'da Foundry topluluk sohbeti](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
 **Hardhat -** **_Profesyoneller için Ethereum geliştirme ortamı._**
@@ -34,41 +34,41 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Pythoncular, Veri Bilimciler ve Güvenlik Uzmanları için akıllı sözleşme geliştirme aracı._**
+**Ape -** **_Python geliştiricileri, Veri Bilimcileri ve Güvenlik Profesyonelleri için akıllı sözleşme geliştirme aracı._**
 
 - [Belgeler](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_JVM üzerinde blokzincir uygulamaları geliştirmeye yönelik bir platformdur._**
+**Web3j -** **_JVM üzerinde blokzincir uygulamaları geliştirmek için bir platform._**
 
-- [Ana sayfa](https://www.web3labs.com/web3j-sdk)
+- [Ana Sayfa](https://www.web3labs.com/web3j-sdk)
 - [Belgeler](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_EVM tabanlı blokzincirler için eşzamansız, yüksek performanslı Kotlin/Java/Android kütüphanesi._**
+**ethers-kt -** **_EVM tabanlı blokzincirler için asenkron, yüksek performanslı Kotlin/Java/Android kütüphanesi._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Örnekler](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Tek bir komutla Ethereum destekli uygulamalar oluşturun. Seçebileceğiniz geniş bir kullanıcı arayüzü çerçevesi ve DeFi şablonu yelpazesi bulunur._**
+**Create Eth App -** **_Tek bir komutla Ethereum destekli uygulamalar oluşturun. Aralarından seçim yapabileceğiniz geniş bir kullanıcı arayüzü çerçeveleri ve merkeziyetsiz finans (DeFi) şablonları yelpazesiyle birlikte gelir._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Şablonlar](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Web3 için Ethers.js + Hardhat + React bileşenleri ve kancaları: akıllı sözleşmeler tarafından desteklenen merkeziyetsiz uygulamalar inşa etmeye başlamanız için ihtiyaç duyduğunuz her şey._**
+**Scaffold-Eth -** **_Web3 için Ethers.js + Hardhat + React bileşenleri ve kancaları (hooks): akıllı sözleşmelerle desteklenen merkeziyetsiz uygulamalar oluşturmaya başlamak için ihtiyacınız olan her şey._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Blokzincir geliştiricilerinin akıllı sözleşmeler oluşturmasını, test etmesini, hata ayıklamasını, izlemesini ve çalıştırmasını ve dapp UX'i geliştirmesini sağlayan Web3 geliştirme platformu._**
+**Tenderly -** **_Blokzincir geliştiricilerinin akıllı sözleşmeler oluşturmasına, test etmesine, hata ayıklamasına, izlemesine ve çalıştırmasına ve dapp kullanıcı deneyimini (UX) iyileştirmesine olanak tanıyan Web3 geliştirme platformu._**
 
-- [Web sitesi](https://tenderly.co/)
+- [Web Sitesi](https://tenderly.co/)
 - [Belgeler](https://docs.tenderly.co/)
 
-**The Graph -** **_Blokzincir verisini verimli şekilde sorgulamak için The Graph._**
+**The Graph -** **_Blokzincir verilerini verimli bir şekilde sorgulamak için The Graph._**
 
-- [Web sitesi](https://thegraph.com/)
-- [Öğretici](/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Web Sitesi](https://thegraph.com/)
+- [Eğitim](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
 **Alchemy -** **_Ethereum Geliştirme Platformu._**
 
@@ -82,66 +82,70 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_Güçlü SDK'larımız ve CLI kullanarak akıllı sözleşmelerinizle etkileşimde bulunabilecek web3 uygulamaları oluşturun._**
+**thirdweb SDK -** **_Güçlü SDK'larımızı ve CLI'mızı kullanarak akıllı sözleşmelerinizle etkileşime girebilen Web3 uygulamaları oluşturun._**
 
 - [Belgeler](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Chainstack -** **_Web3 (Ethereum ve diğer) Geliştirme Platformu._**
+**Chainstack -** **_Web3 (Ethereum ve diğerleri) Geliştirme Platformu._**
 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Tüm büyük EVM zincirleri (ve diğerleri) üzerinde NFT uygulamaları oluşturmanıza olanak tanıyan, kurumsal düzeyde bir Web3 geliştirme platformu._**
+**Crossmint -** **_Tüm büyük zincirlerde, EVM Zincirlerinde (ve diğerlerinde) NFT uygulamaları oluşturmanıza olanak tanıyan kurumsal düzeyde Web3 geliştirme platformu._**
 
-- [Web sitesi](https://www.crossmint.com)
-- [Dokümantasyon](https://docs.crossmint.com)
+- [Web Sitesi](https://www.crossmint.com)
+- [Belgeler](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
 
 **Brownie -** **_Python tabanlı geliştirme ortamı ve test çerçevesi._**
 
 - [Belgeler](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-- **Brownie şu anda yönetilmemektedir**
+- **Brownie'nin bakımı şu anda yapılmamaktadır**
 
-**OpenZeppelin SDK -** **_Akıllı Sözleşmeler İçin Temel Araç Kiti: Akıllı sözleşmeler geliştirmenize, derlemenize, yükseltmenize, dağıtmanıza ve bunlarla etkileşime geçmenize yardımcı olacak bir dizi araç._**
+**OpenZeppelin SDK -** **_Nihai Akıllı Sözleşme Araç Takımı: Akıllı sözleşmeler geliştirmenize, derlemenize, yükseltmenize, dağıtmanıza ve bunlarla etkileşime girmenize yardımcı olacak bir araç paketi._**
 
 - [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Topluluk Forumu](https://forum.openzeppelin.com/c/support/17)
-- **OpenZeppelin SDK'nin geliştirme aşaması sona erdi**
+- **OpenZeppelin SDK geliştirmesi sona erdi**
 
-**Catapulta -** **_Çok zincirli akıllı sözleşme dağıtım aracı, blok arayıcılarda doğrulamaları otomatikleştirin, dağıtılan akıllı sözleşmeleri takip edin ve dağıtım raporlarını paylaşın, Foundry ve Hardhat projeleri için tak ve çalıştır özelliği._**
+**Catapulta -** **_Çok zincirli akıllı sözleşme dağıtım aracı; blok gezginlerinde doğrulamaları otomatikleştirin, dağıtılan akıllı sözleşmeleri takip edin ve dağıtım raporlarını paylaşın, Foundry ve Hardhat projeleri için tak-çalıştır._**
 
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (Covalent tarafından desteklenmektedir) -** **_GoldRush, geliştiriciler, analistler ve işletmeler için en kapsamlı blokzincir veri API paketini sunar. İster bir DeFi panosu, bir cüzdan, bir alım satım botu, bir yapay zeka aracısı isterse bir uyumluluk platformu oluşturuyor olun, veri API'leri ihtiyacınız olan temel zincir üstü verilere hızlı, doğru ve geliştirici dostu erişim sağlar_**
+**GoldRush (Covalent tarafından desteklenmektedir) -** **_GoldRush, geliştiriciler, analistler ve işletmeler için en kapsamlı blokzincir veri API paketini sunar. İster bir DeFi panosu, ister bir cüzdan, bir ticaret botu, bir yapay zeka ajanı veya bir uyumluluk platformu oluşturuyor olun, veri API'leri ihtiyacınız olan temel zincir içi verilere hızlı, doğru ve geliştirici dostu erişim sağlar_**
 
-- [Web sitesi](https://goldrush.dev/)
+- [Web Sitesi](https://goldrush.dev/)
 - [Belgeler](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_Sözleşme testleri, bulanıklaştırma, dağıtım, güvenlik açığı taraması ve kodda gezinme için hepsi bir arada Python çerçevesi._**
+**Wake -** **_Sözleşme testi, bulanıklaştırma (fuzzing), dağıtım, güvenlik açığı taraması ve kodda gezinme için hepsi bir arada Python çerçevesi._**
 
-- [Ana sayfa](https://getwake.io/)
+- [Ana Sayfa](https://getwake.io/)
 - [Belgeler](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code Eklentisi](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Merkeziyetsiz uygulama geliştiricilerinin, uygulamalarına merkeziyetsiz kimlikler ve doğrulanabilir kimlik bilgileri oluşturmasını kolaylaştıran açık kaynaklı, modüler ve agnostik bir çerçeve._**
+**Veramo -** **_Merkeziyetsiz uygulama geliştiricilerinin uygulamalarına merkeziyetsiz kimlikler ve doğrulanabilir kimlik bilgileri oluşturmasını kolaylaştıran açık kaynaklı, modüler ve agnostik çerçeve._**
 
-- [Ana sayfa](https://veramo.io/)
+- [Ana Sayfa](https://veramo.io/)
 - [Belgeler](https://veramo.io/docs/basics/introduction)
 - [GitHub](https://github.com/uport-project/veramo)
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [NPM Paketi](https://www.npmjs.com/package/@veramo/core)
 
-## Daha fazla kaynak {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## Alakalı başlıklar {#related-topics}
+## İlgili konular {#related-topics}
 
 - [Yerel bir geliştirme ortamı kurun](/developers/local-environment/)
+
+## Eğitimler: Ethereum üzerinde geliştirme çerçeveleri {#tutorials}
+
+- [Yeni Başlayanlar İçin Merhaba Dünya Akıllı Sözleşmesi – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Hardhat kullanarak bir merhaba dünya akıllı sözleşmesi oluşturun ve dağıtın, ardından bunu bir ön yüze bağlayın._

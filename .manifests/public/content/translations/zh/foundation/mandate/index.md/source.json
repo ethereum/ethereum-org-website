@@ -1,0 +1,363 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/foundation/mandate/index.md",
+  "generatedAt": "2026-06-08T09:41:59.063Z",
+  "rootHash": "b905d5da8dec",
+  "tree": {
+    "contentHash": "0698991acb9d",
+    "anchorHash": "70213d26583b",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "85e6a376b287",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2a1a0e74b6d8"
+      },
+      "frontmatter:description": {
+        "contentHash": "70ed14e02177",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:hideEditButton": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6b86b273ff34"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:authors": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e85c862b9afb"
+      },
+      "prose:2": {
+        "contentHash": "c66ab1416635",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "9b28f8548163",
+        "anchorHash": "16784351bb52"
+      },
+      "prose:3": {
+        "contentHash": "61560cc906e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "5581140a7776",
+        "anchorHash": "4a1a086569bb"
+      },
+      "prose:4": {
+        "contentHash": "060e54c93499",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "i-ethereum": {
+        "contentHash": "5a5724987709",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "9346e61b630b",
+        "children": {
+          "_label": {
+            "contentHash": "9346e61b630b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "3a7f60ef7840",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "ii-our-role": {
+        "contentHash": "7df0cc870832",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6ea57d145ebb",
+        "children": {
+          "_label": {
+            "contentHash": "6ea57d145ebb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "211c08cdf83a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "iii-our-mandate": {
+        "contentHash": "f9f4dfd0f9d0",
+        "anchorHash": "d6ae0ddd62c6",
+        "labelHash": "fe6b3286b6c3",
+        "children": {
+          "_label": {
+            "contentHash": "fe6b3286b6c3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "be3449eb26f5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e8fabcd11b98",
+            "anchorHash": "23c074c09934",
+            "children": {
+              "prose:0": {
+                "contentHash": "3b8d30ea5b8f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:1": {
+                "contentHash": "314b72f3eba7",
+                "anchorHash": "97276700ebe4",
+                "children": {
+                  "attr:className": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6e2f9d721209"
+                  },
+                  "prose:0": {
+                    "contentHash": "b369982debd9",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:className",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "prose:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "iv-principles-for-action": {
+        "contentHash": "2547ee90f678",
+        "anchorHash": "e1ffd3e69e7a",
+        "labelHash": "88c6f99b828a",
+        "children": {
+          "_label": {
+            "contentHash": "88c6f99b828a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ec97dbec32e7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "iv-technical-pillar": {
+            "contentHash": "02382e9dfcd0",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "7cfc3059d8af",
+            "children": {
+              "_label": {
+                "contentHash": "7cfc3059d8af",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "450832a01cf9",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "iv-social-pillar": {
+            "contentHash": "2795ea812029",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "0c7a9dc544ab",
+            "children": {
+              "_label": {
+                "contentHash": "0c7a9dc544ab",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "949bad90608b",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "iv-technical-pillar",
+          "iv-social-pillar"
+        ]
+      },
+      "v-carrying-out-the-work": {
+        "contentHash": "fecb34941dd2",
+        "anchorHash": "caf829f4a6f5",
+        "labelHash": "acd499668b20",
+        "children": {
+          "_label": {
+            "contentHash": "acd499668b20",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "v-approach": {
+            "contentHash": "d53e849adcc9",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "b6b243caef1e",
+            "children": {
+              "_label": {
+                "contentHash": "b6b243caef1e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "5001db7ba2a3",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "v-limits": {
+            "contentHash": "105b2392b95f",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "dffb64dc7001",
+            "children": {
+              "_label": {
+                "contentHash": "dffb64dc7001",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "1506013b1aa0",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "tradeoff-considerations": {
+            "contentHash": "10cbf503ac43",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "5b297c0bd621",
+            "children": {
+              "_label": {
+                "contentHash": "5b297c0bd621",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "00c5898e568c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "v-approach",
+          "v-limits",
+          "tradeoff-considerations"
+        ]
+      },
+      "vi-resolving-quandaries": {
+        "contentHash": "7902ed701bd9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6a633f586672",
+        "children": {
+          "_label": {
+            "contentHash": "6a633f586672",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ac74a855615e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "vii-the-future": {
+        "contentHash": "5e805f4a7f01",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f28701e01859",
+        "children": {
+          "_label": {
+            "contentHash": "f28701e01859",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "3c3099c36e89",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "viii-closing": {
+        "contentHash": "e885df78dc6c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b8aceae09f9d",
+        "children": {
+          "_label": {
+            "contentHash": "b8aceae09f9d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f48e91572c9b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:hideEditButton",
+      "frontmatter:sidebarDepth",
+      "frontmatter:lang",
+      "frontmatter:authors",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "i-ethereum",
+      "ii-our-role",
+      "iii-our-mandate",
+      "iv-principles-for-action",
+      "v-carrying-out-the-work",
+      "vi-resolving-quandaries",
+      "vii-the-future",
+      "viii-closing"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

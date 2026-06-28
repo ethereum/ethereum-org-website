@@ -26,7 +26,7 @@ const CallToContribute = ({ editPath }: CallToContributeProps) => {
   return (
     <aside className="mt-8 items-center rounded-md border border-b-4 border-primary bg-background-highlight">
       <ContentColumn>
-        <h2 className="mb-8 mt-0 p-1 font-monospace uppercase leading-xs">
+        <h2 className="mt-0 mb-8 p-1 font-monospace leading-xs uppercase">
           <Translation id="page-developers-docs:page-calltocontribute-title" />
         </h2>
         <DescriptionParagraph>

@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-16T22:50:31.861Z",
+  "englishManifestHash": "93dfb7febd40",
+  "placeholderOrder": [
+    "LINK-525a88",
+    "LINK-1d2e59",
+    "LINK-255754",
+    "LINK-5ede75",
+    "LINK-7ef789",
+    "LINK-47abf6",
+    "LINK-c69a23",
+    "LINK-95d3f1",
+    "LINK-bdd638",
+    "LINK-7e4e7a",
+    "LINK-fdc35e",
+    "LINK-ef47fb",
+    "LINK-ed991e",
+    "LINK-1d9beb",
+    "LINK-e1f2ce",
+    "LINK-c41224",
+    "LINK-f40cea",
+    "LINK-040178",
+    "LINK-6a943b",
+    "LINK-c80d10",
+    "LINK-1d7266",
+    "LINK-621ae6",
+    "LINK-8cf03b",
+    "LINK-02261f",
+    "LINK-afa179",
+    "LINK-2aeec6"
+  ],
+  "placeholderMap": {
+    "LINK-525a88": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Integrated_development_environment"
+      }
+    },
+    "LINK-1d2e59": {
+      "type": "link",
+      "values": {
+        "url": "/developers/local-environment/"
+      }
+    },
+    "LINK-255754": {
+      "type": "link",
+      "values": {
+        "url": "https://remix.ethereum.org/"
+      }
+    },
+    "LINK-5ede75": {
+      "type": "link",
+      "values": {
+        "url": "https://remix-ide.readthedocs.io/en/latest/#"
+      }
+    },
+    "LINK-7ef789": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/ethereum/remix"
+      }
+    },
+    "LINK-47abf6": {
+      "type": "link",
+      "values": {
+        "url": "https://chainide.com/"
+      }
+    },
+    "LINK-c69a23": {
+      "type": "link",
+      "values": {
+        "url": "https://chainide.gitbook.io/chainide-english-1/"
+      }
+    },
+    "LINK-95d3f1": {
+      "type": "link",
+      "values": {
+        "url": "https://forum.chainide.com/"
+      }
+    },
+    "LINK-bdd638": {
+      "type": "link",
+      "values": {
+        "url": "https://replit.com/@replit/Solidity-starter-beta"
+      }
+    },
+    "LINK-7e4e7a": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.replit.com/"
+      }
+    },
+    "LINK-fdc35e": {
+      "type": "link",
+      "values": {
+        "url": "https://sandbox.tenderly.co/"
+      }
+    },
+    "LINK-ef47fb": {
+      "type": "link",
+      "values": {
+        "url": "https://ethfiddle.com/"
+      }
+    },
+    "LINK-ed991e": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/loomnetwork/ethfiddle"
+      }
+    },
+    "LINK-1d9beb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/languages/"
+      }
+    },
+    "LINK-e1f2ce": {
+      "type": "link",
+      "values": {
+        "url": "https://code.visualstudio.com/"
+      }
+    },
+    "LINK-c41224": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md"
+      }
+    },
+    "LINK-f40cea": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/microsoft/vscode"
+      }
+    },
+    "LINK-040178": {
+      "type": "link",
+      "values": {
+        "url": "https://www.jetbrains.com/"
+      }
+    },
+    "LINK-6a943b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/JetBrains"
+      }
+    },
+    "LINK-c80d10": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/intellij-solidity/intellij-solidity/"
+      }
+    },
+    "LINK-1d7266": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/remix-desktop/releases"
+      }
+    },
+    "LINK-621ae6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/remix-desktop"
+      }
+    },
+    "LINK-8cf03b": {
+      "type": "link",
+      "values": {
+        "url": "https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity"
+      }
+    },
+    "LINK-02261f": {
+      "type": "link",
+      "values": {
+        "url": "https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity"
+      }
+    },
+    "LINK-afa179": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/prettier-solidity/prettier-plugin-solidity"
+      }
+    },
+    "LINK-2aeec6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/list-of/web3-ides-on-ethereum"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:50:31.861Z",
+      "status": "success"
+    }
+  }
+}

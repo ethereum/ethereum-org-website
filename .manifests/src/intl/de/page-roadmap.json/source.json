@@ -1,0 +1,665 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-roadmap.json",
+  "generatedAt": "2026-05-26T09:51:01.521Z",
+  "rootHash": "4a31d9eb5f64",
+  "tree": {
+    "contentHash": "9cdcc7ab4d37",
+    "anchorHash": "b8c6506e72db",
+    "children": {
+      "page-roadmap-title": {
+        "contentHash": "be50ffa0fc02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-meta-title": {
+        "contentHash": "be50ffa0fc02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-meta-description": {
+        "contentHash": "d7a2d625fb19",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-banner-notification": {
+        "contentHash": "c562479de8ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-changes-coming-title": {
+        "contentHash": "5a127c13242e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-changes-coming-description": {
+        "contentHash": "1a1d87c69b5d",
+        "anchorHash": "9ed7acab1b97",
+        "children": {
+          "html-tag:0": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "b85cbdfd493e"
+          },
+          "prose:1": {
+            "contentHash": "2bfb1ff1d15c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "html-tag:0",
+          "prose:1"
+        ]
+      },
+      "page-roadmap-cheaper-transactions-title": {
+        "contentHash": "2fc8de069189",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-cheaper-transactions-description": {
+        "contentHash": "c65064d856eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-cheaper-transactions-button": {
+        "contentHash": "985227cef2d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-extra-security-title": {
+        "contentHash": "e146f27bf918",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-extra-security-description": {
+        "contentHash": "f4843463f157",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-extra-security-button": {
+        "contentHash": "e01f17e6d6ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-better-user-experience-title": {
+        "contentHash": "7e9c787bf519",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-better-user-experience-description": {
+        "contentHash": "ba3bf22ce451",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-better-user-experience-button": {
+        "contentHash": "60adab3674a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-future-proofing-title": {
+        "contentHash": "d35c1e677306",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-future-proofing-description": {
+        "contentHash": "d1216fafbf7d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-future-proofing-button": {
+        "contentHash": "8747f88fdd88",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-why-need-title": {
+        "contentHash": "2113d5aeae37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-why-need-description": {
+        "contentHash": "1c65ac12d07d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-how-defined-title": {
+        "contentHash": "476be0ebc568",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-how-defined-p1": {
+        "contentHash": "0a1a3271b8bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-how-defined-p2": {
+        "contentHash": "d8e5cc79dcfb",
+        "anchorHash": "644800b9fa71",
+        "children": {
+          "prose:2": {
+            "contentHash": "fe4e222e0151",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "3fd87fc2837f",
+            "anchorHash": "ea2875a28e59"
+          },
+          "prose:3": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "75e605d044a1",
+            "anchorHash": "369506534da6"
+          },
+          "prose:4": {
+            "contentHash": "dfc980b2eec6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "html-tag:0",
+          "prose:3",
+          "html-tag:1",
+          "prose:4"
+        ]
+      },
+      "page-roadmap-how-defined-p3": {
+        "contentHash": "14e0d0697d88",
+        "anchorHash": "547282d364c1",
+        "children": {
+          "prose:1": {
+            "contentHash": "aeb63a341a34",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "3cb43c77bc90",
+            "anchorHash": "b87038210820"
+          },
+          "prose:2": {
+            "contentHash": "6f90235887b5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-roadmap-governance-button": {
+        "contentHash": "c3d750da762c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-hero-alt": {
+        "contentHash": "be50ffa0fc02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-technical-upgrades-title": {
+        "contentHash": "9f16376624c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-danksharding-title": {
+        "contentHash": "d5c7c6294c3d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-danksharding-description": {
+        "contentHash": "50b6776aa975",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-single-slot-finality-title": {
+        "contentHash": "26be487ae07f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-single-slot-finality-description": {
+        "contentHash": "256032109765",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-account-abstraction-title": {
+        "contentHash": "2ebcf10050c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-account-abstraction-description": {
+        "contentHash": "6c284eb8a0cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-statelessness-title": {
+        "contentHash": "6c88f20571b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-statelessness-description": {
+        "contentHash": "d980c2380565",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-zkevm-title": {
+        "contentHash": "84685178c6df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-zkevm-description": {
+        "contentHash": "67beb83c2eee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-learn-more": {
+        "contentHash": "1445799c033a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-timeline-title": {
+        "contentHash": "ef2b72b983f5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-blocks-alt": {
+        "contentHash": "9a5641b6adbe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-1-title": {
+        "contentHash": "0b71eb5b1a6a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-1-p1": {
+        "contentHash": "542fd477962c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-1-p1-continued": {
+        "contentHash": "807ca9a21926",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-1-p2": {
+        "contentHash": "e4e2ae646855",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-2-title": {
+        "contentHash": "234fe272dd2d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-2-p1": {
+        "contentHash": "57e0028331c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-2-p1-strong": {
+        "contentHash": "908d1bac645c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-2-p1-continued": {
+        "contentHash": "2d4f75f69098",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-2-p2": {
+        "contentHash": "80127a32d0a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-3-title": {
+        "contentHash": "918ee81973ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-3-p1": {
+        "contentHash": "b9c56d46948d",
+        "anchorHash": "cf1099240661",
+        "children": {
+          "prose:1": {
+            "contentHash": "ac0922a85f77",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "e93372533f32",
+            "anchorHash": "e11dc6b0436b"
+          },
+          "prose:2": {
+            "contentHash": "afc2b1aa1251",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-roadmap-faq-4-title": {
+        "contentHash": "96d4684a551d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-faq-4-p1": {
+        "contentHash": "afa454e926a1",
+        "anchorHash": "6f9c4168ffa8",
+        "children": {
+          "prose:2": {
+            "contentHash": "824fcc0aade6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "66d18af4cf3d",
+            "anchorHash": "403bb8233a41"
+          },
+          "prose:3": {
+            "contentHash": "0667ca204de2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "0c6eea24ed5f",
+            "anchorHash": "7ae159e27167"
+          },
+          "prose:4": {
+            "contentHash": "7196a246ed6a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "html-tag:0",
+          "prose:3",
+          "html-tag:1",
+          "prose:4"
+        ]
+      },
+      "page-roadmap-release-status-prod": {
+        "contentHash": "c4b56e06767d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-release-status-soon": {
+        "contentHash": "4f7d64017689",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-release-status-dev": {
+        "contentHash": "5259ae656146",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-release-main-features": {
+        "contentHash": "6d2085569a23",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-release-learn-more": {
+        "contentHash": "1445799c033a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-release-forkcast": {
+        "contentHash": "78316af9499c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-paris-pos-title": {
+        "contentHash": "b8147776d323",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-paris-pos-item-1": {
+        "contentHash": "30befdd8a333",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-paris-pos-item-2": {
+        "contentHash": "aed29d3971d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-paris-beacon-title": {
+        "contentHash": "24c0ff8f845f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-paris-beacon-item-1": {
+        "contentHash": "ead61f05acf6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-paris-beacon-item-2": {
+        "contentHash": "6194c09c4021",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-paris-difficulty-title": {
+        "contentHash": "4a7881911b73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-paris-difficulty-item-1": {
+        "contentHash": "c845a6ca2aeb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-paris-difficulty-item-2": {
+        "contentHash": "ca27d4080557",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-shapella-withdrawals-title": {
+        "contentHash": "815840a47399",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-shapella-withdrawals-item-1": {
+        "contentHash": "8eccf79ebe99",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-shapella-withdrawals-item-2": {
+        "contentHash": "b9f1390a8dd1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-shapella-eip4895-title": {
+        "contentHash": "9064f21005b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-shapella-eip4895-item-1": {
+        "contentHash": "2f2faf85c411",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-shapella-eip4895-item-2": {
+        "contentHash": "15528402e1be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-shapella-eip3651-title": {
+        "contentHash": "a1ba85d9921b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-shapella-eip3651-item-1": {
+        "contentHash": "250b2bcbe776",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-shapella-eip3651-item-2": {
+        "contentHash": "3c69ea1c2709",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-dencun-danksharding-title": {
+        "contentHash": "1bde7d59be8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-dencun-danksharding-item-1": {
+        "contentHash": "f73210cfa883",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-dencun-danksharding-item-2": {
+        "contentHash": "d191cfb4b0e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-dencun-eip1153-title": {
+        "contentHash": "5233a32915c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-dencun-eip1153-item-1": {
+        "contentHash": "289c3e70bd83",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-dencun-eip1153-item-2": {
+        "contentHash": "3f0aebfd6fd9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-dencun-eip4788-title": {
+        "contentHash": "bd655253ac0c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-dencun-eip4788-item-1": {
+        "contentHash": "8eba507b5905",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-dencun-eip4788-item-2": {
+        "contentHash": "4a3d14bbf0b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-pectra-eoa-title": {
+        "contentHash": "bcba21bde4f5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-pectra-eoa-item-1": {
+        "contentHash": "2620b164437f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-pectra-balance-title": {
+        "contentHash": "5fa0b64e3d21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-pectra-balance-item-1": {
+        "contentHash": "125e94daec32",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-pectra-blob-title": {
+        "contentHash": "a35bd2989140",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-pectra-blob-item-1": {
+        "contentHash": "1b3b82608d82",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-peerdas-title": {
+        "contentHash": "dd3d615f9e27",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-peerdas-item-1": {
+        "contentHash": "2dba92f42dce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-peerdas-item-2": {
+        "contentHash": "088234e748f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-additional-title": {
+        "contentHash": "68841a81a73d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-additional-item-1": {
+        "contentHash": "de1e4d8a716d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-additional-item-2": {
+        "contentHash": "d0bab67dbdb1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-fusaka-additional-item-3": {
+        "contentHash": "0dde1b75afc5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-glamsterdam-epbs-title": {
+        "contentHash": "daed009d2f40",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-glamsterdam-epbs-item-1": {
+        "contentHash": "f90c2afbacf6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-glamsterdam-epbs-item-2": {
+        "contentHash": "0ba383b399e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-glamsterdam-bal-title": {
+        "contentHash": "23685487945c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-glamsterdam-bal-item-1": {
+        "contentHash": "51eae320a904",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-glamsterdam-bal-item-2": {
+        "contentHash": "4477706cc1e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-glamsterdam-bal-item-3": {
+        "contentHash": "491593e13b5c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-hegota-discussed-title": {
+        "contentHash": "020ebc6d0ddd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-hegota-discussed-item-1": {
+        "contentHash": "41f1d86ec498",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-roadmap-title",
+      "page-roadmap-meta-title",
+      "page-roadmap-meta-description",
+      "page-roadmap-banner-notification",
+      "page-roadmap-changes-coming-title",
+      "page-roadmap-changes-coming-description",
+      "page-roadmap-cheaper-transactions-title",
+      "page-roadmap-cheaper-transactions-description",
+      "page-roadmap-cheaper-transactions-button",
+      "page-roadmap-extra-security-title",
+      "page-roadmap-extra-security-description",
+      "page-roadmap-extra-security-button",
+      "page-roadmap-better-user-experience-title",
+      "page-roadmap-better-user-experience-description",
+      "page-roadmap-better-user-experience-button",
+      "page-roadmap-future-proofing-title",
+      "page-roadmap-future-proofing-description",
+      "page-roadmap-future-proofing-button",
+      "page-roadmap-why-need-title",
+      "page-roadmap-why-need-description",
+      "page-roadmap-how-defined-title",
+      "page-roadmap-how-defined-p1",
+      "page-roadmap-how-defined-p2",
+      "page-roadmap-how-defined-p3",
+      "page-roadmap-governance-button",
+      "page-roadmap-hero-alt",
+      "page-roadmap-technical-upgrades-title",
+      "page-roadmap-danksharding-title",
+      "page-roadmap-danksharding-description",
+      "page-roadmap-single-slot-finality-title",
+      "page-roadmap-single-slot-finality-description",
+      "page-roadmap-account-abstraction-title",
+      "page-roadmap-account-abstraction-description",
+      "page-roadmap-statelessness-title",
+      "page-roadmap-statelessness-description",
+      "page-roadmap-zkevm-title",
+      "page-roadmap-zkevm-description",
+      "page-roadmap-learn-more",
+      "page-roadmap-timeline-title",
+      "page-roadmap-blocks-alt",
+      "page-roadmap-faq-1-title",
+      "page-roadmap-faq-1-p1",
+      "page-roadmap-faq-1-p1-continued",
+      "page-roadmap-faq-1-p2",
+      "page-roadmap-faq-2-title",
+      "page-roadmap-faq-2-p1",
+      "page-roadmap-faq-2-p1-strong",
+      "page-roadmap-faq-2-p1-continued",
+      "page-roadmap-faq-2-p2",
+      "page-roadmap-faq-3-title",
+      "page-roadmap-faq-3-p1",
+      "page-roadmap-faq-4-title",
+      "page-roadmap-faq-4-p1",
+      "page-roadmap-release-status-prod",
+      "page-roadmap-release-status-soon",
+      "page-roadmap-release-status-dev",
+      "page-roadmap-release-main-features",
+      "page-roadmap-release-learn-more",
+      "page-roadmap-release-forkcast",
+      "page-roadmap-paris-pos-title",
+      "page-roadmap-paris-pos-item-1",
+      "page-roadmap-paris-pos-item-2",
+      "page-roadmap-paris-beacon-title",
+      "page-roadmap-paris-beacon-item-1",
+      "page-roadmap-paris-beacon-item-2",
+      "page-roadmap-paris-difficulty-title",
+      "page-roadmap-paris-difficulty-item-1",
+      "page-roadmap-paris-difficulty-item-2",
+      "page-roadmap-shapella-withdrawals-title",
+      "page-roadmap-shapella-withdrawals-item-1",
+      "page-roadmap-shapella-withdrawals-item-2",
+      "page-roadmap-shapella-eip4895-title",
+      "page-roadmap-shapella-eip4895-item-1",
+      "page-roadmap-shapella-eip4895-item-2",
+      "page-roadmap-shapella-eip3651-title",
+      "page-roadmap-shapella-eip3651-item-1",
+      "page-roadmap-shapella-eip3651-item-2",
+      "page-roadmap-dencun-danksharding-title",
+      "page-roadmap-dencun-danksharding-item-1",
+      "page-roadmap-dencun-danksharding-item-2",
+      "page-roadmap-dencun-eip1153-title",
+      "page-roadmap-dencun-eip1153-item-1",
+      "page-roadmap-dencun-eip1153-item-2",
+      "page-roadmap-dencun-eip4788-title",
+      "page-roadmap-dencun-eip4788-item-1",
+      "page-roadmap-dencun-eip4788-item-2",
+      "page-roadmap-pectra-eoa-title",
+      "page-roadmap-pectra-eoa-item-1",
+      "page-roadmap-pectra-balance-title",
+      "page-roadmap-pectra-balance-item-1",
+      "page-roadmap-pectra-blob-title",
+      "page-roadmap-pectra-blob-item-1",
+      "page-roadmap-fusaka-peerdas-title",
+      "page-roadmap-fusaka-peerdas-item-1",
+      "page-roadmap-fusaka-peerdas-item-2",
+      "page-roadmap-fusaka-additional-title",
+      "page-roadmap-fusaka-additional-item-1",
+      "page-roadmap-fusaka-additional-item-2",
+      "page-roadmap-fusaka-additional-item-3",
+      "page-roadmap-glamsterdam-epbs-title",
+      "page-roadmap-glamsterdam-epbs-item-1",
+      "page-roadmap-glamsterdam-epbs-item-2",
+      "page-roadmap-glamsterdam-bal-title",
+      "page-roadmap-glamsterdam-bal-item-1",
+      "page-roadmap-glamsterdam-bal-item-2",
+      "page-roadmap-glamsterdam-bal-item-3",
+      "page-roadmap-hegota-discussed-title",
+      "page-roadmap-hegota-discussed-item-1"
+    ]
+  },
+  "sourceCommitSha": "3ec7d2cd6ede59940bb02b21be2e5d211370a724"
+}

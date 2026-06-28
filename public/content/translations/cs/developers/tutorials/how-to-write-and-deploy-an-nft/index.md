@@ -1,102 +1,95 @@
 ---
-title: "Jak napsat a nasadit NFT (část 1/3 ze série výukových programů o NFT)"
-description: "Tento výukový program je první částí série o NFT, která vás krok za krokem provede tím, jak napsat a nasadit chytrý kontrakt nefunkčního tokenu (token ERC-721) pomocí Etherea a systému souborů Inter Planetary File System (IPFS)."
+title: "Jak napsat a nasadit NFT (Část 1/3 ze série tutoriálů o NFT)"
+description: "Tento tutoriál je 1. částí série o NFT, která vás krok za krokem provede tím, jak napsat a nasadit chytrý kontrakt pro nezaměnitelný token (token ERC-721) pomocí Etherea a Inter Planetary File System (IPFS)."
 author: "Sumi Mudgil"
-tags: [ "ERC-721", "Alchemy", "Solidity", "chytré kontrakty" ]
+tags: ["ERC-721", "Alchemy", "Solidity", "chytré kontrakty"]
 skill: beginner
+breadcrumb: "Napsání a nasazení NFT"
 lang: cs
 published: 2021-04-22
 ---
 
-Jelikož NFT přibližují blockchain široké veřejnosti, je to skvělá příležitost, abyste pochopili ten humbuk kolem a sami si publikovali svůj vlastní NFT kontrakt (token ERC-721) na ethereovém blockchainu!
+Vzhledem k tomu, že NFT dostávají blockchain do povědomí veřejnosti, je nyní vynikající příležitost pochopit tento humbuk na vlastní kůži tím, že publikujete svůj vlastní NFT kontrakt (token ERC-721) na blockchainu Ethereum!
 
-Společnost Alchemy je nesmírně hrdá na to, že pohání největší jména v oblasti NFT, včetně Makersplace (nedávno stanovila rekord v prodeji digitálních uměleckých děl v aukční síni Christie's za 69 milionů dolarů), Dapper Labs (tvůrci NBA Top Shot a Crypto Kitties), OpenSea (největší světové NFT tržiště), Zora, Super Rare, NFTfi, Foundation, Enjin, Origin Protocol, Immutable a dalších.
+Alchemy je nesmírně hrdá na to, že pohání ta největší jména v prostoru NFT, včetně Makersplace (nedávno stanovili rekordní prodej digitálního uměleckého díla v Christie’s za 69 milionů dolarů), Dapper Labs (tvůrci NBA Top Shot a Crypto Kitties), OpenSea (největší světové tržiště s NFT), Zora, Super Rare, NFTfi, Foundation, Enjin, Origin Protocol, Immutable a dalších.
 
-V tomto výukovém programu si projdeme vytvoření a nasazení chytrého kontraktu ERC-721 v testovací síti Sepolia pomocí [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) a [Alchemy](https://alchemy.com/signup/eth) (nebojte se, pokud zatím nechápete, co z toho co znamená – všechno vám vysvětlíme!).
+V tomto tutoriálu si projdeme vytvoření a nasazení chytrého kontraktu ERC-721 na testnetu Sepolia pomocí [MetaMasku](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhatu](https://hardhat.org/), [Pinaty](https://pinata.cloud/) a [Alchemy](https://alchemy.com/signup/eth) (nebojte se, pokud ještě nerozumíte tomu, co to všechno znamená – vysvětlíme si to!).
 
-Ve 2. části tohoto výukového programu si projdeme, jak můžeme pomocí našeho chytrého kontraktu razit NFT, a ve 3. části si vysvětlíme, jak si své NFT zobrazit v MetaMask.
+Ve 2. části tohoto tutoriálu si projdeme, jak můžeme náš chytrý kontrakt použít k ražení NFT, a ve 3. části si vysvětlíme, jak si své NFT zobrazit v MetaMasku.
 
-A samozřejmě, pokud budete mít v kterémkoli bodě dotazy, neváhejte se ozvat na [Alchemy Discord](https://discord.gg/gWuC7zB) nebo navštivte [dokumentaci NFT API od Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
+A samozřejmě, pokud budete mít kdykoli nějaké dotazy, neváhejte se ozvat na [Discordu Alchemy](https://discord.gg/gWuC7zB) nebo navštivte [dokumentaci k NFT API od Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
 
-## Krok 1: Připojte se k síti Ethereum {#connect-to-ethereum}
+## Krok 1: Připojení k síti Ethereum {#connect-to-ethereum}
 
-Existuje spousta způsobů, jak posílat požadavky na ethereový blockchain, ale abychom si to zjednodušili, použijeme bezplatný účet na [Alchemy](https://alchemy.com/signup/eth), což je blockchainová vývojářská platforma a API, která nám umožňuje komunikovat s řetězcem Etherea, aniž bychom museli provozovat vlastní uzly.
+Existuje spousta způsobů, jak zadávat požadavky na blockchain Ethereum, ale abychom si to usnadnili, použijeme bezplatný účet na [Alchemy](https://alchemy.com/signup/eth), vývojářské platformě a API pro blockchain, která nám umožňuje komunikovat s řetězcem Ethereum, aniž bychom museli provozovat vlastní uzly.
 
-V tomto výukovém programu také využijeme vývojářské nástroje společnosti Alchemy pro monitorování a analýzu, abychom pochopili, co se děje „pod pokličkou“ při nasazování našeho chytrého kontraktu. Pokud ještě nemáte účet Alchemy, můžete se zdarma zaregistrovat [zde](https://alchemy.com/signup/eth).
+V tomto tutoriálu také využijeme vývojářské nástroje Alchemy pro monitorování a analytiku, abychom pochopili, co se děje pod pokličkou při nasazení našeho chytrého kontraktu. Pokud ještě nemáte účet na Alchemy, můžete se zdarma zaregistrovat [zde](https://alchemy.com/signup/eth).
 
-## Krok 2: Vytvořte si aplikaci (a klíč API) {#make-api-key}
+## Krok 2: Vytvoření aplikace (a API klíče) {#make-api-key}
 
-Jakmile si vytvoříte účet na Alchemy, můžete si vygenerovat klíč API vytvořením aplikace. To nám umožní posílat požadavky do testovací sítě Sepolia. Pokud se chcete o testovacích sítích dozvědět více, podívejte se na [tuto příručku](https://docs.alchemyapi.io/guides/choosing-a-network).
+Jakmile si vytvoříte účet na Alchemy, můžete si vygenerovat API klíč vytvořením aplikace. To nám umožní zadávat požadavky na testnet Sepolia. Pokud se chcete o testnetech dozvědět více, podívejte se na [tento průvodce](https://docs.alchemyapi.io/guides/choosing-a-network).
 
-1. Přejděte na stránku „Create App“ ve svém ovládacím panelu Alchemy tak, že v navigační liště najedete na „Apps“ a kliknete na „Create App“
+1. Přejděte na stránku „Create App“ (Vytvořit aplikaci) na svém panelu Alchemy tak, že najedete myší na „Apps“ (Aplikace) v navigačním panelu a kliknete na „Create App“.
 
-![Vytvořte si svou aplikaci](./create-your-app.png)
+![Create your app](./create-your-app.png)
 
-2. Pojmenujte svou aplikaci (my jsme zvolili „Moje první NFT!“), nabídněte krátký popis, pro řetězec vyberte „Ethereum“ a pro síť zvolte „Sepolia“. Od Sloučení jsou ostatní testovací sítě zastaralé.
+2. Pojmenujte svou aplikaci (my jsme zvolili „My First NFT!“), přidejte krátký popis, jako Chain (Řetězec) vyberte „Ethereum“ a jako síť zvolte „Sepolia“. Od Merge byly ostatní testnety ukončeny.
 
-![Nakonfigurujte a publikujte svou aplikaci](./alchemy-explorer-sepolia.png)
+![Configure and publish your app](./alchemy-explorer-sepolia.png)
 
-3. Klikněte na „Create app“ a to je vše! Vaše aplikace by se měla objevit v tabulce níže.
+3. Klikněte na „Create app“ a je to! Vaše aplikace by se měla objevit v tabulce níže.
 
-## Krok 3: Vytvořte si ethereový účet (adresu) {#create-eth-address}
+## Krok 3: Vytvoření účtu (adresy) na Ethereu {#create-eth-address}
 
-K odesílání a přijímání transakcí potřebujeme ethereový účet. Pro tento výukový program použijeme MetaMask, virtuální peněženku v prohlížeči, která slouží ke správě adresy vašeho ethereového účtu. Pokud chcete lépe porozumět tomu, jak fungují transakce na Ethereu, podívejte se na [tuto stránku](/developers/docs/transactions/) od Nadace Ethereum.
+K odesílání a přijímání transakcí potřebujeme účet na Ethereu. Pro tento tutoriál použijeme MetaMask, virtuální peněženku v prohlížeči, která se používá ke správě adresy vašeho účtu na Ethereu. Pokud chcete lépe porozumět tomu, jak fungují transakce na Ethereu, podívejte se na [tuto stránku](/developers/docs/transactions/) od Nadace Ethereum.
 
-Účet MetaMask si můžete zdarma stáhnout a vytvořit [zde](https://metamask.io/download). Při vytváření účtu, nebo pokud již účet máte, se ujistěte, že jste se vpravo nahoře přepnuli na „Sepolia Test Network“ (abychom nepracovali se skutečnými penězi).
+Účet na MetaMasku si můžete zdarma stáhnout a vytvořit [zde](https://metamask.io/download). Při vytváření účtu, nebo pokud již účet máte, se ujistěte, že jste vpravo nahoře přepnuli na „Sepolia Test Network“ (abychom nepracovali se skutečnými penězi).
 
-![Nastavte Sepolia jako vaši síť](./metamask-goerli.png)
+![Set Sepolia as your network](./metamask-goerli.png)
 
-## Krok 4: Přidejte ether z Faucetu {#step-4-add-ether-from-a-faucet}
+## Krok 4: Přidání etheru z faucetu {#step-4-add-ether-from-a-faucet}
 
-Abychom mohli náš chytrý kontrakt nasadit do testovací sítě, budeme potřebovat nějaké falešné ETH. Pro získání ETH můžete jít na [Sepolia Faucet](https://sepoliafaucet.com/) hostovaný společností Alchemy, přihlásit se, zadat adresu svého účtu a kliknout na „Send Me ETH“. Krátce poté byste měli vidět ETH ve svém účtu MetaMask!
+Abychom mohli nasadit náš chytrý kontrakt na testnet, budeme potřebovat nějaké falešné ETH. Chcete-li získat ETH, můžete přejít na [faucet Sepolia](https://sepoliafaucet.com/) hostovaný společností Alchemy, přihlásit se, zadat adresu svého účtu a kliknout na „Send Me ETH“ (Pošlete mi ETH). Brzy poté byste měli vidět ETH na svém účtu v MetaMasku!
 
-## Krok 5: Zkontrolujte svůj zůstatek {#check-balance}
+## Krok 5: Kontrola zůstatku {#check-balance}
 
-Abychom si dvakrát zkontrolovali, že tam náš zůstatek je, udělejme požadavek [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) pomocí [nástroje pro sestavování od Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Tím se vrátí množství ETH v naší peněžence. Po zadání adresy vašeho účtu MetaMask a kliknutí na „Send Request“ byste měli vidět takovouto odpověď:
+Abychom si ověřili, že tam náš zůstatek je, vytvořme požadavek [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) pomocí [nástroje composer od Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Ten nám vrátí množství ETH v naší peněžence. Po zadání adresy vašeho účtu v MetaMasku a kliknutí na „Send Request“ (Odeslat požadavek) byste měli vidět podobnou odpověď:
 
-    ````
-    ```json
-    {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
-    ```
-    ````
+    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-> **Poznámka** Tento výsledek je ve wei, ne v ETH. Wei se používá jako nejmenší denominace etheru. Převod z wei na ETH je 1 eth = 10<sup>18</sup> wei. Pokud tedy převedeme 0xde0b6b3a7640000 na desetinné číslo, dostaneme 1\*10<sup>18</sup> wei, což se rovná 1 ETH.
+> **Poznámka** Tento výsledek je ve Wei, nikoli v ETH. Wei se používá jako nejmenší nominální hodnota etheru. Převod z Wei na ETH je 1 eth = 10<sup>18</sup> Wei. Pokud tedy převedeme 0xde0b6b3a7640000 do desítkové soustavy, dostaneme 1\*10<sup>18</sup> Wei, což se rovná 1 ETH.
 
 Uf! Naše falešné peníze jsou všechny tam.
 
-## Krok 6: Inicializujte náš projekt {#initialize-project}
+## Krok 6: Inicializace našeho projektu {#initialize-project}
 
-Nejprve budeme muset vytvořit složku pro náš projekt. Přejděte na příkazový řádek a zadejte:
+Nejprve budeme muset vytvořit složku pro náš projekt. Přejděte do příkazového řádku a zadejte:
 
-    ```
     mkdir my-nft
     cd my-nft
-    ```
 
-Nyní, když jsme uvnitř složky našeho projektu, použijeme k inicializaci projektu npm init. Pokud ještě nemáte nainstalovaný npm, postupujte podle [těchto pokynů](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (budeme potřebovat také [Node.js](https://nodejs.org/en/download/), takže si ho také stáhněte!).
+Nyní, když jsme ve složce našeho projektu, použijeme npm init k inicializaci projektu. Pokud ještě nemáte nainstalované npm, postupujte podle [těchto pokynů](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (budeme také potřebovat [Node.js](https://nodejs.org/en/download/), takže si ho stáhněte také!).
 
-    ```
     npm init
-    ```
 
-Nezáleží na tom, jak odpovíte na instalační otázky; zde je pro informaci, jak jsme to udělali my:
+Nezáleží na tom, jak odpovíte na instalační otázky; zde je pro referenci ukázka, jak jsme to udělali my:
 
 ```json
-    název balíčku: (my-nft)
-    verze: (1.0.0)
-    popis: Moje první NFT!
-    vstupní bod: (index.js)
-    testovací příkaz:
-    repozitář git:
-    klíčová slova:
-    autor:
-    licence: (ISC)
-    Chystáte se zapsat do /Users/thesuperb1/Desktop/my-nft/package.json:
+    package name: (my-nft)
+    version: (1.0.0)
+    description: My first NFT!
+    entry point: (index.js)
+    test command:
+    git repository:
+    keywords:
+    author:
+    license: (ISC)
+    About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
 
     {
       "name": "my-nft",
       "version": "1.0.0",
-      "description": "Moje první NFT!",
+      "description": "My first NFT!",
       "main": "index.js",
       "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -106,31 +99,26 @@ Nezáleží na tom, jak odpovíte na instalační otázky; zde je pro informaci,
     }
 ```
 
-Schvalte soubor package.json a můžeme pokračovat!
+Schvalte soubor package.json a můžeme jít na to!
 
-## Krok 7: Instalace [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
+## Krok 7: Instalace [Hardhatu](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
-Hardhat je vývojové prostředí pro kompilaci, nasazení, testování a ladění vašeho softwaru pro Ethereum. Pomáhá vývojářům při lokálním budování chytrých kontraktů a dapps před jejich nasazením na živý řetězec.
+Hardhat je vývojové prostředí pro kompilaci, nasazení, testování a ladění vašeho softwaru pro Ethereum. Pomáhá vývojářům při lokálním vytváření chytrých kontraktů a decentralizovaných aplikací (dapp) před jejich nasazením do živého řetězce.
 
 Uvnitř našeho projektu my-nft spusťte:
 
-    ```
     npm install --save-dev hardhat
-    ```
 
-Další podrobnosti o [instalačních pokynech](https://hardhat.org/getting-started/#overview) naleznete na této stránce.
+Další podrobnosti o [pokynech k instalaci](https://hardhat.org/getting-started/#overview) najdete na této stránce.
 
-## Krok 8: Vytvoření projektu Hardhat {#create-hardhat-project}
+## Krok 8: Vytvoření projektu v Hardhatu {#create-hardhat-project}
 
 Uvnitř složky našeho projektu spusťte:
 
-    ```
     npx hardhat
-    ```
 
-Poté by se vám měla zobrazit uvítací zpráva a možnost vybrat si, co chcete dělat. Vyberte „create an empty hardhat.config.js“:
+Poté byste měli vidět uvítací zprávu a možnost vybrat si, co chcete udělat. Vyberte „create an empty hardhat.config.js“:
 
-    ```
     888    888                      888 888               888
     888    888                      888 888               888
     888    888                      888 888               888
@@ -139,37 +127,34 @@ Poté by se vám měla zobrazit uvítací zpráva a možnost vybrat si, co chcet
     888    888 .d888888 888    888  888 888  888 .d888888 888
     888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
     888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-    👷 Vítejte v Hardhat v2.0.11 👷‍
-    ? Co chcete dělat? …
-    Vytvořit vzorový projekt
-    ❯ Vytvořit prázdný hardhat.config.js
-    Ukončit
-    ```
+    👷 Welcome to Hardhat v2.0.11 👷‍
+    ? What do you want to do? …
+    Create a sample project
+    ❯ Create an empty hardhat.config.js
+    Quit
 
-Tím se nám vygeneruje soubor hardhat.config.js, kde v kroku 13 specifikujeme všechna nastavení našeho projektu.
+Tím se nám vygeneruje soubor hardhat.config.js, ve kterém specifikujeme veškeré nastavení pro náš projekt (v kroku 13).
 
 ## Krok 9: Přidání složek projektu {#add-project-folders}
 
-Abychom měli v projektu pořádek, vytvoříme si dvě nové složky. Přejděte do kořenového adresáře projektu v příkazovém řádku a zadejte:
+Abychom udrželi náš projekt organizovaný, vytvoříme dvě nové složky. Přejděte do kořenového adresáře vašeho projektu v příkazovém řádku a zadejte:
 
-    ```
     mkdir contracts
     mkdir scripts
-    ```
 
-- contracts/ je místo, kde budeme uchovávat kód našeho NFT chytrého kontraktu
+- contracts/ je místo, kde budeme uchovávat kód našeho chytrého kontraktu pro NFT
 
 - scripts/ je místo, kde budeme uchovávat skripty pro nasazení a interakci s naším chytrým kontraktem
 
-## Krok 10: Napište náš kontrakt {#write-contract}
+## Krok 10: Napsání našeho kontraktu {#write-contract}
 
-Nyní, když máme nastavené prostředí, přejděme k zajímavějším věcem: _psaní kódu našeho chytrého kontraktu!_
+Nyní, když je naše prostředí nastaveno, přejdeme k zajímavějším věcem: _psaní kódu našeho chytrého kontraktu!_
 
 Otevřete projekt my-nft ve svém oblíbeném editoru (my máme rádi [VSCode](https://code.visualstudio.com/)). Chytré kontrakty se píší v jazyce zvaném Solidity, který použijeme k napsání našeho chytrého kontraktu MyNFT.sol.‌
 
 1. Přejděte do složky `contracts` a vytvořte nový soubor s názvem MyNFT.sol
 
-2. Níže je kód našeho NFT chytrého kontraktu, který jsme založili na implementaci ERC-721 z knihovny [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721). Zkopírujte a vložte níže uvedený obsah do souboru MyNFT.sol.
+2. Níže je kód našeho chytrého kontraktu pro NFT, který jsme založili na implementaci ERC-721 z knihovny [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721). Zkopírujte a vložte níže uvedený obsah do svého souboru MyNFT.sol.
 
    ```solidity
    //Kontrakt založený na [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
@@ -202,60 +187,56 @@ Otevřete projekt my-nft ve svém oblíbeném editoru (my máme rádi [VSCode](h
    }
    ```
 
-3. Protože dědíme třídy z knihovny kontraktů OpenZeppelin, spusťte v příkazovém řádku `npm install @openzeppelin/contracts^4.0.0`, abyste knihovnu nainstalovali do naší složky.
+3. Protože dědíme třídy z knihovny kontraktů OpenZeppelin, spusťte ve svém příkazovém řádku `npm install @openzeppelin/contracts^4.0.0`, abyste knihovnu nainstalovali do naší složky.
 
-Co přesně tedy tento kód _dělá_? Pojďme si to rozebrat, řádek po řádku.
+Takže, co tento kód přesně _dělá_? Pojďme si to rozebrat řádek po řádku.
 
-V horní části našeho chytrého kontraktu importujeme tři třídy chytrých kontraktů [OpenZeppelin](https://openzeppelin.com/):
+Na začátku našeho chytrého kontraktu importujeme tři třídy chytrých kontraktů z [OpenZeppelin](https://openzeppelin.com/):
 
-- @openzeppelin/contracts/token/ERC721/ERC721.sol obsahuje implementaci standardu ERC-721, kterou bude náš NFT chytrý kontrakt dědit. (Aby byl chytrý kontrakt platným NFT, musí implementovat všechny metody standardu ERC-721.) Chcete-li se dozvědět více o zděděných funkcích ERC-721, podívejte se na definici rozhraní [zde](https://eips.ethereum.org/EIPS/eip-721).
+- @openzeppelin/contracts/token/ERC721/ERC721.sol obsahuje implementaci standardu ERC-721, kterou náš chytrý kontrakt pro NFT zdědí. (Aby byl váš chytrý kontrakt platným NFT, musí implementovat všechny metody standardu ERC-721.) Chcete-li se dozvědět více o zděděných funkcích ERC-721, podívejte se na definici rozhraní [zde](https://eips.ethereum.org/EIPS/eip-721).
 
-- @openzeppelin/contracts/utils/Counters.sol poskytuje čítače, které lze zvýšit nebo snížit pouze o jedna. Náš chytrý kontrakt používá čítač ke sledování celkového počtu ražených NFT a k nastavení jedinečného ID na našem novém NFT. (Každému NFT raženému pomocí chytrého kontraktu musí být přiděleno jedinečné ID – zde je naše jedinečné ID určeno pouze celkovým počtem existujících NFT. Například první NFT, které razíme s naším chytrým kontraktem, má ID „1“, naše druhé NFT má ID „2“ atd.)
+- @openzeppelin/contracts/utils/Counters.sol poskytuje počítadla, která lze pouze inkrementovat nebo dekrementovat o jedničku. Náš chytrý kontrakt používá počítadlo ke sledování celkového počtu vyražených NFT a k nastavení jedinečného ID pro naše nové NFT. (Každému NFT vyraženému pomocí chytrého kontraktu musí být přiřazeno jedinečné ID – zde je naše jedinečné ID určeno jednoduše celkovým počtem existujících NFT. Například první NFT, které vyrazíme naším chytrým kontraktem, má ID „1“, naše druhé NFT má ID „2“ atd.)
 
-- @openzeppelin/contracts/access/Ownable.sol nastavuje [řízení přístupu](https://docs.openzeppelin.com/contracts/3.x/access-control) k našemu chytrému kontraktu, takže NFT může razit pouze vlastník chytrého kontraktu (vy). (Poznámka: Zahrnutí řízení přístupu je zcela na preferencích. Pokud chcete, aby kdokoli mohl razit NFT pomocí vašeho chytrého kontraktu, odstraňte slovo Ownable na řádku 10 a onlyOwner na řádku 17.)
+- @openzeppelin/contracts/access/Ownable.sol nastavuje [řízení přístupu](https://docs.openzeppelin.com/contracts/3.x/access-control) k našemu chytrému kontraktu, takže NFT může razit pouze vlastník chytrého kontraktu (vy). (Poznámka: zahrnutí řízení přístupu je čistě na vašich preferencích. Pokud byste chtěli, aby kdokoli mohl razit NFT pomocí vašeho chytrého kontraktu, odstraňte slovo Ownable na řádku 10 a onlyOwner na řádku 17.)
 
-Po našich příkazech pro import máme náš vlastní NFT chytrý kontrakt, který je překvapivě krátký – obsahuje pouze čítač, konstruktor a jednu funkci! Je to díky našim zděděným kontraktům OpenZeppelin, které implementují většinu metod, které potřebujeme k vytvoření NFT, jako je `ownerOf`, která vrací vlastníka NFT, a `transferFrom`, která převádí vlastnictví NFT z jednoho účtu na druhý.
+Po našich příkazech importu následuje náš vlastní chytrý kontrakt pro NFT, který je překvapivě krátký – obsahuje pouze počítadlo, konstruktor a jedinou funkci! Je to díky našim zděděným kontraktům z OpenZeppelin, které implementují většinu metod, které potřebujeme k vytvoření NFT, jako je `ownerOf`, která vrací vlastníka NFT, a `transferFrom`, která převádí vlastnictví NFT z jednoho účtu na druhý.
 
 V našem konstruktoru ERC-721 si všimnete, že předáváme 2 řetězce, „MyNFT“ a „NFT“. První proměnná je název chytrého kontraktu a druhá je jeho symbol. Každou z těchto proměnných si můžete pojmenovat, jak chcete!
 
-Nakonec máme naši funkci `mintNFT(address recipient, string memory tokenURI)`, která nám umožňuje razit NFT! Všimnete si, že tato funkce přebírá dvě proměnné:
+Nakonec tu máme naši funkci `mintNFT(address recipient, string memory tokenURI)`, která nám umožňuje razit NFT! Všimnete si, že tato funkce přijímá dvě proměnné:
 
-- `address recipient` určuje adresu, která obdrží vaše čerstvě ražené NFT
+- `address recipient` specifikuje adresu, která obdrží vaše čerstvě vyražené NFT
 
-- `string memory tokenURI` je řetězec, který by se měl přeložit na dokument JSON, který popisuje metadata NFT. Metadata NFT jsou to, co ho skutečně oživuje a umožňuje mu mít konfigurovatelné vlastnosti, jako je název, popis, obrázek a další atributy. Ve 2. části tohoto výukového programu si popíšeme, jak tato metadata nakonfigurovat.
+- `string memory tokenURI` je řetězec, který by měl odkazovat na dokument JSON popisující metadata NFT. Metadata NFT jsou tím, co mu skutečně vdechuje život a umožňuje mu mít konfigurovatelné vlastnosti, jako je název, popis, obrázek a další atributy. Ve 2. části tohoto tutoriálu popíšeme, jak tato metadata nakonfigurovat.
 
-`mintNFT` volá některé metody ze zděděné knihovny ERC-721 a nakonec vrací číslo, které představuje ID čerstvě raženého NFT.
+`mintNFT` volá některé metody ze zděděné knihovny ERC-721 a nakonec vrací číslo, které představuje ID čerstvě vyraženého NFT.
 
-## Krok 11: Připojte MetaMask a Alchemy ke svému projektu {#connect-metamask-and-alchemy}
+## Krok 11: Připojení MetaMasku a Alchemy k vašemu projektu {#connect-metamask-and-alchemy}
 
-Nyní, když jsme vytvořili peněženku MetaMask, účet Alchemy a napsali náš chytrý kontrakt, je čas tyto tři věci propojit.
+Nyní, když jsme si vytvořili peněženku MetaMask, účet na Alchemy a napsali náš chytrý kontrakt, je čas tyto tři věci propojit.
 
-Každá transakce odeslaná z vaší virtuální peněženky vyžaduje podpis pomocí vašeho jedinečného privátního klíče. Abychom našemu programu poskytli toto oprávnění, můžeme bezpečně uložit náš privátní klíč (a klíč API od Alchemy) do souboru prostředí.
+Každá transakce odeslaná z vaší virtuální peněženky vyžaduje podpis pomocí vašeho jedinečného soukromého klíče. Abychom našemu programu toto oprávnění poskytli, můžeme náš soukromý klíč (a API klíč Alchemy) bezpečně uložit do souboru prostředí.
 
-Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [tento výukový program](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) o odesílání transakcí pomocí web3.
+Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [tento tutoriál](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) o odesílání transakcí pomocí Web3.
 
-Nejprve nainstalujte balíček dotenv do adresáře vašeho projektu:
+Nejprve nainstalujte balíček dotenv v adresáři vašeho projektu:
 
-    ```
     npm install dotenv --save
-    ```
 
-Poté vytvořte soubor `.env` v kořenovém adresáři našeho projektu a přidejte do něj svůj privátní klíč MetaMask a adresu URL rozhraní HTTP API od Alchemy.
+Poté vytvořte soubor `.env` v kořenovém adresáři našeho projektu a přidejte do něj svůj soukromý klíč z MetaMasku a HTTP URL pro API Alchemy.
 
-- Postupujte podle [těchto pokynů](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) pro export vašeho privátního klíče z MetaMask
+- Postupujte podle [těchto pokynů](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) pro export vašeho soukromého klíče z MetaMasku
 
-- Níže se podívejte, jak získat URL API HTTP od Alchemy, a zkopírujte si ji do schránky
+- Níže se podívejte, jak získat HTTP URL pro API Alchemy, a zkopírujte si ho do schránky
 
-![Zkopírujte URL vašeho API od Alchemy](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
 
 Váš soubor `.env` by nyní měl vypadat takto:
 
-    ```
     API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
-    ```
 
-Abychom je skutečně propojili s naším kódem, budeme na tyto proměnné odkazovat v našem souboru hardhat.config.js v kroku 13.
+Abychom je skutečně propojili s naším kódem, odkážeme se na tyto proměnné v našem souboru hardhat.config.js v kroku 13.
 
 <EnvWarningBanner />
 
@@ -263,21 +244,19 @@ Abychom je skutečně propojili s naším kódem, budeme na tyto proměnné odka
 
 Ethers.js je knihovna, která usnadňuje interakci a zadávání požadavků na Ethereum tím, že obaluje [standardní metody JSON-RPC](/developers/docs/apis/json-rpc/) uživatelsky přívětivějšími metodami.
 
-Hardhat velmi usnadňuje integraci [pluginů](https://hardhat.org/plugins/) pro další nástroje a rozšířenou funkčnost. Pro nasazení kontraktu využijeme [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) ([Ethers.js](https://github.com/ethers-io/ethers.js/) má několik velmi čistých metod pro nasazení kontraktu).
+Hardhat velmi usnadňuje integraci [pluginů](https://hardhat.org/plugins/) pro další nástroje a rozšířenou funkcionalitu. Využijeme [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) pro nasazení kontraktu ([Ethers.js](https://github.com/ethers-io/ethers.js/) má několik velmi čistých metod pro nasazení kontraktu).
 
-V adresáři projektu zadejte:
+V adresáři vašeho projektu zadejte:
 
-    ```
     npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0
-    ```
 
 V dalším kroku budeme také vyžadovat ethers v našem souboru hardhat.config.js.
 
-## Krok 13: Aktualizace souboru hardhat.config.js {#update-hardhat-config}
+## Krok 13: Aktualizace hardhat.config.js {#update-hardhat-config}
 
-Zatím jsme přidali několik závislostí a pluginů, nyní musíme aktualizovat hardhat.config.js, aby o nich všech náš projekt věděl.
+Zatím jsme přidali několik závislostí a pluginů, nyní musíme aktualizovat hardhat.config.js, aby o nich náš projekt věděl.
 
-Aktualizujte svůj soubor hardhat.config.js tak, aby vypadal takto:
+Aktualizujte svůj hardhat.config.js tak, aby vypadal takto:
 
 ```js
     /**
@@ -299,29 +278,27 @@ Aktualizujte svůj soubor hardhat.config.js tak, aby vypadal takto:
     }
 ```
 
-## Krok 14: Zkompilujte náš kontrakt {#compile-contract}
+## Krok 14: Kompilace našeho kontraktu {#compile-contract}
 
-Abychom se ujistili, že zatím vše funguje, zkompilujeme si náš kontrakt. Úkol kompilace je jedním z vestavěných úkolů Hardhat.
+Abychom se ujistili, že zatím vše funguje, zkompilujme náš kontrakt. Úloha kompilace je jednou z vestavěných úloh Hardhatu.
 
 Z příkazového řádku spusťte:
 
-    ```
     npx hardhat compile
-    ```
 
-Můžete dostat varování o tom, že v zdrojovém souboru není uveden identifikátor licence SPDX, ale s tím si nemusíte dělat starosti – doufejme, že vše ostatní vypadá dobře! Pokud ne, vždy můžete napsat zprávu na [discordu Alchemy](https://discord.gg/u72VCg3).
+Možná se vám zobrazí varování o tom, že ve zdrojovém souboru není uveden identifikátor licence SPDX (SPDX license identifier not provided in source file), ale s tím si nemusíte dělat starosti – doufejme, že vše ostatní vypadá dobře! Pokud ne, vždy můžete napsat na [Discord Alchemy](https://discord.gg/u72VCg3).
 
-## Krok 15: Napište náš skript pro nasazení {#write-deploy}
+## Krok 15: Napsání našeho skriptu pro nasazení {#write-deploy}
 
 Nyní, když je náš kontrakt napsán a náš konfigurační soubor je připraven, je čas napsat náš skript pro nasazení kontraktu.
 
-Přejděte do složky `scripts/` a vytvořte nový soubor s názvem `deploy.js` a přidejte do něj následující obsah:
+Přejděte do složky `scripts/` a vytvořte nový soubor s názvem `deploy.js`, do kterého přidejte následující obsah:
 
 ```js
 async function main() {
   const MyNFT = await ethers.getContractFactory("MyNFT")
 
-  // Spusťte nasazení, vrátí se promise, která se vyřeší na objekt kontraktu
+  // Zahájí nasazení a vrátí promise, který se vyhodnotí na objekt kontraktu
   const myNFT = await MyNFT.deploy()
   await myNFT.deployed()
   console.log("Contract deployed to address:", myNFT.address)
@@ -335,48 +312,40 @@ main()
   })
 ```
 
-Hardhat skvěle vysvětluje, co každý z těchto řádků kódu dělá ve svém [výukovém programu Kontrakty](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), a my jsme zde jejich vysvětlení převzali.
+Hardhat odvádí úžasnou práci při vysvětlování toho, co každý z těchto řádků kódu dělá, ve svém [tutoriálu o kontraktech](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), jejich vysvětlení jsme převzali i sem.
 
-    ```
     const MyNFT = await ethers.getContractFactory("MyNFT");
-    ```
 
-ContractFactory v ethers.js je abstrakce používaná k nasazení nových chytrých kontraktů, takže MyNFT je zde továrnou pro instance našeho NFT kontraktu. Při použití pluginu hardhat-ethers jsou instance ContractFactory a Contract ve výchozím nastavení připojeny k prvnímu podepisujícímu.
+ContractFactory v Ethers.js je abstrakce používaná k nasazení nových chytrých kontraktů, takže MyNFT je zde továrnou pro instance našeho kontraktu pro NFT. Při použití pluginu hardhat-ethers jsou instance ContractFactory a Contract ve výchozím nastavení připojeny k prvnímu podepisujícímu (signer).
 
-    ```
     const myNFT = await MyNFT.deploy();
-    ```
 
-Volání deploy() na ContractFactory spustí nasazení a vrátí Promise, která se vyřeší na Contract. Toto je objekt, který má metodu pro každou z funkcí našeho chytrého kontraktu.
+Zavoláním deploy() na ContractFactory se zahájí nasazení a vrátí se Promise, který se vyhodnotí jako Contract. Toto je objekt, který má metodu pro každou z funkcí našeho chytrého kontraktu.
 
-## Krok 16: Nasaďte náš kontrakt {#deploy-contract}
+## Krok 16: Nasazení našeho kontraktu {#deploy-contract}
 
-Konečně jsme připraveni nasadit náš chytrý kontrakt! Vraťte se do kořenového adresáře projektu a v příkazovém řádku spusťte:
+Konečně jsme připraveni nasadit náš chytrý kontrakt! Přejděte zpět do kořenového adresáře vašeho projektu a v příkazovém řádku spusťte:
 
-    ```
     npx hardhat --network sepolia run scripts/deploy.js
-    ```
 
-Měli byste pak vidět něco takového:
+Poté byste měli vidět něco jako:
 
-    ```
     Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
-    ```
 
-Pokud přejdeme na [Sepolia etherscan](https://sepolia.etherscan.io/) a vyhledáme adresu našeho kontraktu, měli bychom vidět, že byl úspěšně nasazen. Pokud ji nevidíte okamžitě, chvíli prosím počkejte, protože to může nějakou dobu trvat. Transakce bude vypadat nějak takto:
+Pokud přejdeme na [Etherscan pro Sepolii](https://sepolia.etherscan.io/) a vyhledáme adresu našeho kontraktu, měli bychom vidět, že byl úspěšně nasazen. Pokud to nevidíte okamžitě, chvíli počkejte, protože to může nějakou dobu trvat. Transakce bude vypadat nějak takto:
 
-![Zobrazení adresy transakce na Etherscanu](./etherscan-sepoila-contract-creation.png)
+![View your transaction address on Etherscan](./etherscan-sepoila-contract-creation.png)
 
-Adresa „Od“ by měla odpovídat adrese vašeho účtu MetaMask a adresa „Pro“ bude říkat „Contract Creation“. Pokud klikneme na transakci, uvidíme adresu našeho kontraktu v poli „Pro“:
+Adresa From (Od) by se měla shodovat s adresou vašeho účtu v MetaMasku a adresa To (Komu) bude uvádět „Contract Creation“ (Vytvoření kontraktu). Pokud klikneme na transakci, uvidíme adresu našeho kontraktu v poli To:
 
-![Zobrazte adresu svého kontraktu na Etherscanu](./etherscan-sepolia-tx-details.png)
+![View your contract address on Etherscan](./etherscan-sepolia-tx-details.png)
 
-Paráda! Právě jste nasadili svůj NFT chytrý kontrakt na řetězec Ethereum (testnet)!
+Jupííí! Právě jste nasadili svůj chytrý kontrakt pro NFT do řetězce Ethereum (testnet)!
 
-Abychom pochopili, co se děje „pod pokličkou“, přejděme na kartu Explorer v našem [ovládacím panelu Alchemy](https://dashboard.alchemyapi.io/explorer). Pokud máte více aplikací Alchemy, ujistěte se, že filtrujete podle aplikace a vyberete „MyNFT“.
+Abychom pochopili, co se děje pod pokličkou, přejděme na kartu Explorer (Průzkumník) na našem [panelu Alchemy](https://dashboard.alchemyapi.io/explorer). Pokud máte více aplikací Alchemy, nezapomeňte filtrovat podle aplikace a vybrat „MyNFT“.
 
-![Zobrazení volání provedených „pod pokličkou“ pomocí ovládacího panelu Explorer od Alchemy](./alchemy-explorer-goerli.png)
+![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 
-Zde uvidíte hrstku volání JSON-RPC, která pro nás Hardhat/Ethers provedly „pod pokličkou“, když jsme volali funkci .deploy(). Dvě důležité, které je třeba zde zmínit, jsou [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), což je požadavek na skutečný zápis našeho chytrého kontraktu na řetězec Sepolia, a [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash), což je požadavek na přečtení informací o naší transakci na základě haše (typický vzorec při odesílání transakcí). Chcete-li se dozvědět více o odesílání transakcí, podívejte se na tento výukový program o [odesílání transakcí pomocí Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Zde uvidíte hrstku volání JSON-RPC, která pro nás Hardhat/Ethers provedly pod pokličkou, když jsme zavolali funkci .deploy(). Dvě důležitá volání, která zde stojí za zmínku, jsou [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), což je požadavek na skutečný zápis našeho chytrého kontraktu do řetězce Sepolia, a [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash), což je požadavek na přečtení informací o naší transakci na základě hashe (typický vzor při odesílání transakcí). Chcete-li se dozvědět více o odesílání transakcí, podívejte se na tento tutoriál o [odesílání transakcí pomocí Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
-To je vše k 1. části tohoto výukového programu. V [části 2 budeme skutečně interagovat s naším chytrým kontraktem ražbou NFT](/developers/tutorials/how-to-mint-an-nft/) a v [části 3 si ukážeme, jak si své NFT zobrazit ve své ethereové peněžence](/developers/tutorials/how-to-view-nft-in-metamask/)!
+To je pro 1. část tohoto tutoriálu vše. Ve [2. části budeme s naším chytrým kontraktem skutečně interagovat tím, že vyrazíme NFT](/developers/tutorials/how-to-mint-an-nft/), a ve [3. části vám ukážeme, jak si své NFT zobrazit ve vaší peněžence na Ethereu](/developers/tutorials/how-to-view-nft-in-metamask/)!

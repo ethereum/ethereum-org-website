@@ -1,79 +1,81 @@
 ---
-title: "Řetězová vazba"
-description: "Přečtěte si o Řetězové vazbě – vylepšení, které umožnilo důkaz podílem na Ethereu."
+title: Beacon chain
+description: "Přečtěte si o Beacon chainu – aktualizaci, která do Etherea přinesla důkaz podílem (PoS)."
 lang: cs
 template: upgrade
 image: /images/upgrades/core.png
-alt:
-summaryPoint1: "Řetězová vazba zavedla důkaz podílem do ekosystému Etherea."
-summaryPoint2: "V září 2022 byla sloučena s původním Ethereem založeným na důkazu prací."
-summaryPoint3: "Řetězová vazba představila logiku konsensu a blokový komunikační protokol, který v současné době zabezpečuje Ethereum."
+alt: 
+summaryPoints:
+  - "Beacon chain přinesl do ekosystému Etherea důkaz podílem (PoS)."
+  - "V září 2022 byl sloučen s původním řetězcem Etherea využívajícím důkaz prací (PoW)."
+  - "Beacon chain zavedl logiku konsensu a protokol pro šíření bloků (gossip), který nyní zabezpečuje Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  Řetězová vazba byla spuštěna 1. prosince 2020 a formalizovala důkaz podílem jako mechanismus konsenzu Etherea s upgradem Sloučení dne 15. září 2022.
+  Beacon chain byl spuštěn 1. prosince 2020 a formalizoval důkaz podílem (PoS) jako mechanismus konsensu Etherea při aktualizaci Merge 15. září 2022.
 </UpgradeStatus>
 
-## Co je Řetězová vazba? {#what-is-the-beacon-chain}
+## Co je Beacon chain? {#what-is-the-beacon-chain}
 
-Řetězová vazba je název původního blockchainu založeného na důkazu podílem, který byl spuštěn v roce 2020. Byl vytvořen za účelem zajištění správnosti a udržitelnosti logiky konsensu důkazu podílem před nasazením na hlavní síť Ethereum. Proto běžel souběžně s původním Ethereem založeným na důkazu prací. Řetězová vazba byla řetězec „prázdných“ bloků, ale vypnutí důkazu prací a zapnutí důkazu podílem na Ethereu vyžadovalo instruovat Řetězovou vazbu, aby přijímala transakční data od exekučních klientů, sdružovala je do bloků a poté organizovala do blockchainu pomocí mechanismu konsenzu založeného na důkazu podílem. Ve stejnou chvíli původní klienti Etherea vypnuli těžbu, tvorbu bloků a logiku konsensu a převedli vše na Řetězovou vazbu. Tato událost byla známá jako [Sloučení](/roadmap/merge/). Jakmile došlo ke Sloučení, už neexistovaly dva blockchainy. Místo toho nyní existuje jen jedno Ethereum, které vyžaduje dva různé klienty na síťový uzel. Řetězová vazba je nyní konsensuální vrstva: Peer-to-peer síť konsenzuálních klientů, která zpracovává blokovou komunikaci a konsenzuální logiku, zatímco původní klienti tvoří exekuční vrstvu, která je zodpovědná za komunikaci a exekuci transakcí a správu stavu Etherea. Tyto dvě vrstvy spolu mohou komunikovat pomocí Engine API.
+Beacon chain je název původního blockchainu s důkazem podílem (PoS), který byl spuštěn v roce 2020. Byl vytvořen, aby se zajistilo, že logika konsensu důkazu podílem je spolehlivá a udržitelná před jejím povolením na [Ethereum](/) Mainnetu. Proto běžel souběžně s původním Ethereem využívajícím důkaz prací (PoW). Beacon chain byl řetězec „prázdných“ bloků, ale vypnutí důkazu prací a zapnutí důkazu podílem na Ethereu vyžadovalo dát Beacon chainu pokyn, aby přijímal transakční data od exekučních klientů, sdružoval je do bloků a poté je organizoval do blockchainu pomocí mechanismu konsensu založeného na důkazu podílem. Ve stejném okamžiku původní klienti Etherea vypnuli svou těžbu, šíření bloku a logiku konsensu a předali to vše Beacon chainu. Tato událost byla známá jako [Merge](/roadmap/merge/). Jakmile Merge proběhl, už neexistovaly dva blockchainy. Místo toho existovalo jen jedno Ethereum s důkazem podílem, které nyní vyžaduje dva různé klienty na uzel. Beacon chain je nyní vrstva konsensu, peer-to-peer síť klientů konsensu, která zpracovává šíření bloků (gossip) a logiku konsensu, zatímco původní klienti tvoří exekuční vrstvu, která je zodpovědná za šíření a provádění transakcí a správu stavu Etherea. Obě vrstvy spolu mohou komunikovat pomocí Engine API.
 
-## Co Řetězová vazba dělá? {#what-does-the-beacon-chain-do}
+## Co dělá Beacon chain? {#what-does-the-beacon-chain-do}
 
-Řetězová vazba je název pro řetězec účtů, který vedl a koordinoval síť [uzamykatelů](/staking/) Etherea předtím, než tito uzamykatelé začali ověřovat skutečné bloky Etherea. Nezpracovává transakce ani interakce s chytrými kontrakty, protože to se děje v exekuční vrstvě.
-Řetězová vazba je zodpovědná za akce, jako je zpracování bloků a atestací, provozování algoritmu výběru forku a správa odměn a sankcí.
+Beacon chain je název pro účetní knihu, která vedla a koordinovala síť [stakerů](/staking/) Etherea předtím, než tito stakeři začali validovat skutečné bloky Etherea. Nezpracovává však transakce ani neřeší interakce s chytrými kontrakty, protože to se děje v exekuční vrstvě.
+Beacon chain je zodpovědný za věci, jako je zpracování bloků a atestací, běh algoritmu volby forku a správa odměn a sankcí.
 Přečtěte si více na naší [stránce o architektuře uzlů](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
-## Dopad Řetězové vazby {#beacon-chain-features}
+## Dopad Beacon chainu {#beacon-chain-features}
 
-### Představení uzamčení {#introducing-staking}
+### Zavedení stakingu {#introducing-staking}
 
-Řetězová vazba zavedla do Etherea [důkaz podílem](/developers/docs/consensus-mechanisms/pos/). To udržuje Ethereum v bezpečí a vydělává validátorům více ETH. V praxi to znamená, že uzamknete ETH, abyste se stali validátorem. Jako uzamykatel spouštíte software, který vytváří a ověřuje nové bloky.
+Beacon chain přinesl do Etherea [důkaz podílem (PoS)](/developers/docs/consensus-mechanisms/pos/). To udržuje Ethereum v bezpečí a validátorům to v procesu vydělává více ETH. V praxi staking zahrnuje uzamčení (stake) ETH za účelem aktivace softwaru validátoru. Jako staker provozujete software, který vytváří a validuje nové bloky v řetězci.
 
-Uzamčení slouží k podobnému účelu, jako dříve sloužila [těžba](/developers/docs/consensus-mechanisms/pow/mining/), ale v mnoha ohledech se liší. Těžba vyžadovala velké výdaje ve formě pořízení výkonného hardwaru a spotřeby energie, což vedlo k úsporám z rozsahu a tím k podpoře centralizace. Těžba nevyžadovala zablokování aktiv jako kolaterálu, což omezovalo schopnost protokolu uvalit sankce na těžaře, kteří útočili na síť.
+Staking slouží podobnému účelu, jakému dříve sloužila [těžba](/developers/docs/consensus-mechanisms/pow/mining/), ale v mnoha ohledech se liší. Těžba vyžadovala velké počáteční výdaje v podobě výkonného hardwaru a spotřeby energie, což vedlo k úsporám z rozsahu a podporovalo centralizaci. Těžba také nepřinášela žádný požadavek na uzamčení aktiv jako zajištění, což omezovalo schopnost protokolu potrestat špatné aktéry po útoku.
 
-Přechod na Ethereum založené na důkazu podílem významně zabezpečil a decentralizoval jeho provoz ve srovnání s důkazem prací. Čím více lidí se do sítě zapojí, tím bude decentralizovanější a bezpečnější před útoky.
+Přechod na důkaz podílem učinil Ethereum ve srovnání s důkazem prací výrazně bezpečnějším a decentralizovanějším. Čím více lidí se do sítě zapojí, tím více decentralizovanou a bezpečnou před útoky se stává.
+
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-  Pokud máte zájem stát se validátorem a pomáhat zabezpečit Ethereum, [zjistěte více o uzamčení](/staking/).
+  Pokud máte zájem stát se validátorem a pomoci zabezpečit Ethereum, [přečtěte si více o stakingu](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ### Příprava na sharding {#setting-up-for-sharding}
 
-Od té doby, co se Řetězová vazba sloučila s původní hlavní sítí Ethereum, začala komunita Ethereum usilovat o škálování sítě.
+Od chvíle, kdy se Beacon chain sloučil s původním Ethereum Mainnetem, začala komunita Etherea hledat způsoby, jak síť škálovat.
 
-Důkaz podílem má tu výhodu, že má neustále registr všech schválených producentů bloků a každý producent bloků má uzamčené ETH. Tento registr nastavuje scénu pro schopnost dobře rozdělit konkrétní síťové zodpovědnosti.
+Důkaz podílem má tu výhodu, že má v daném okamžiku registr všech schválených producentů bloků, z nichž každý má v sázce (stake) ETH. Tento registr připravuje půdu pro schopnost rozdělit a panovat, ale spolehlivě rozdělit specifické odpovědnosti sítě.
 
-Tato odpovědnost je v kontrastu s důkazem prací, kde těžaři nemají žádné závazky vůči síti a mohli by zastavit těžbu a vypnout software síťových uzlů okamžitě a bez následků. V důkazu prací také neexistuje žádný registr známých navrhovatelů bloků a žádný spolehlivý způsob, jak bezpečně rozdělit síťové odpovědnosti.
+Tato odpovědnost je v kontrastu s důkazem prací, kde těžaři nemají vůči síti žádné závazky a mohli by okamžitě a bez následků trvale přestat těžit a vypnout software svého uzlu. Neexistuje zde také žádný registr známých navrhovatelů bloků a žádný spolehlivý způsob, jak bezpečně rozdělit odpovědnosti sítě.
 
 [Více o shardingu](/roadmap/danksharding/)
 
-## Vztah mezi vylepšeními {#relationship-between-upgrades}
+## Vztah mezi aktualizacemi {#relationship-between-upgrades}
 
-Všechna vylepšení Etherea jsou vzájemně provázaná. Pojďme si tedy zrekapitulovat, jak Řetězová vazba ovlivňuje další vylepšení.
+Všechny aktualizace Etherea spolu do jisté míry souvisejí. Pojďme si tedy shrnout, jak Beacon chain ovlivňuje ostatní aktualizace.
 
-### Řetězová vazba a Sloučení {#merge-and-beacon-chain}
+### Beacon chain a Merge {#merge-and-beacon-chain}
 
-Řetězová vazba nejprve existovala odděleně od hlavní sítě Ethereum, ale v roce 2022 byly oba blockchainy sloučeny.
+Zpočátku existoval Beacon chain odděleně od Ethereum Mainnetu, ale v roce 2022 byly sloučeny.
 
 <ButtonLink href="/roadmap/merge/">
-  Sloučení
+  Merge
 </ButtonLink>
 
-### Shardy a Řetězová vazba {#shards-and-beacon-chain}
+### Shardy a Beacon chain {#shards-and-beacon-chain}
 
-Tříštění může být bezpečně implementováno do ekosystému Ethereum pouze se zavedeným mechanismem konsenzu důkazu podílem. Řetězová vazba představila uzamčení, když se „sloučila“ s hlavní sítí, čímž se otevřela cesta pro tříštění, které pomůže dále škálovat Ethereum.
+Sharding může bezpečně vstoupit do ekosystému Etherea pouze se zavedeným mechanismem konsensu důkazu podílem. Beacon chain zavedl staking, který se „sloučil“ s Mainnetem, čímž připravil půdu pro sharding, který pomůže Ethereum dále škálovat.
 
 <ButtonLink href="/roadmap/danksharding/">
   Shardové řetězce
 </ButtonLink>
 
-## Další informace
+## Další čtení {#further-reading}
 
 - [Více o architektuře uzlů](/developers/docs/nodes-and-clients/node-architecture)
-- [Více o důkazu podílem](/developers/docs/consensus-mechanisms/pos)
+- [Více o důkazu podílem (PoS)](/developers/docs/consensus-mechanisms/pos)

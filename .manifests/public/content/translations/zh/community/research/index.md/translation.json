@@ -1,0 +1,912 @@
+{
+  "version": 1,
+  "locale": "zh",
+  "translatedAt": "2026-06-08T07:30:55.482Z",
+  "englishManifestHash": "6666f2240666",
+  "placeholderOrder": [
+    "LINK-90d32a",
+    "LINK-ab8d00",
+    "LINK-7a2194",
+    "LINK-b6781d",
+    "LINK-956d2a",
+    "LINK-152fbd",
+    "LINK-00ea6d",
+    "LINK-43b140",
+    "LINK-6eddec",
+    "LINK-7fdc51",
+    "LINK-c0e929",
+    "LINK-9c7335",
+    "LINK-e728ad",
+    "LINK-19c3da",
+    "LINK-aaeea1",
+    "LINK-00698c",
+    "LINK-be2c79",
+    "LINK-6358d8",
+    "LINK-c2083a",
+    "LINK-72963e",
+    "LINK-8acefa",
+    "LINK-14a15f",
+    "LINK-2fa7b6",
+    "LINK-cd8635",
+    "LINK-784cd6",
+    "LINK-95c4b4",
+    "LINK-8ce3a3",
+    "LINK-dbd4b8",
+    "LINK-9fdecf",
+    "LINK-0ff5ba",
+    "LINK-4649ba",
+    "LINK-9bcd81",
+    "LINK-3aaf19",
+    "LINK-75af7f",
+    "LINK-013ee9",
+    "LINK-2918d3",
+    "LINK-70c7b7",
+    "LINK-267a48",
+    "LINK-f2cf0e",
+    "LINK-f8ed57",
+    "LINK-c663bb",
+    "LINK-99f643",
+    "LINK-c48246",
+    "LINK-0703f2",
+    "LINK-5ca636",
+    "LINK-8ae67e",
+    "LINK-aada00",
+    "LINK-8c5c8d",
+    "LINK-7d71ce",
+    "LINK-919329",
+    "LINK-2b0de0",
+    "LINK-3d6cc8",
+    "LINK-5743ce",
+    "LINK-319c95",
+    "LINK-6e2f56",
+    "LINK-1113da",
+    "LINK-cc3692",
+    "LINK-52b327",
+    "LINK-293cac",
+    "LINK-16d0f8",
+    "LINK-de586e",
+    "LINK-502312",
+    "LINK-778c42",
+    "LINK-6bd270",
+    "LINK-3caa6a",
+    "LINK-121004",
+    "LINK-cf703e",
+    "LINK-90ada0",
+    "LINK-600533",
+    "LINK-af5821",
+    "LINK-f0b4fe",
+    "LINK-4575bd",
+    "LINK-82d749",
+    "LINK-2c6473",
+    "LINK-fe2077",
+    "LINK-a48456",
+    "LINK-6f4388",
+    "LINK-ed4f5e",
+    "LINK-fd4a0d",
+    "LINK-e22540",
+    "LINK-20a6ac",
+    "LINK-9f820b",
+    "LINK-9ae470",
+    "LINK-c77055",
+    "LINK-e1d2e9",
+    "LINK-2cace9",
+    "LINK-70b369",
+    "LINK-9e285e",
+    "LINK-5f57b7",
+    "LINK-63ef24",
+    "LINK-b0f2b2",
+    "LINK-493035",
+    "LINK-6979e6",
+    "LINK-04f843",
+    "LINK-d5ddef",
+    "LINK-618479",
+    "LINK-022c80",
+    "LINK-7ca44b",
+    "LINK-8751bd",
+    "LINK-307226",
+    "LINK-023c65",
+    "LINK-12bb09",
+    "LINK-6f4b3f",
+    "LINK-68d78e",
+    "LINK-b78a8b",
+    "LINK-b42ce6",
+    "LINK-0faf8c",
+    "LINK-3adcf7",
+    "LINK-9d78fa",
+    "LINK-15ca72",
+    "LINK-32402e",
+    "LINK-b8dcd2",
+    "LINK-d14dd9",
+    "LINK-5717a5",
+    "LINK-02c803",
+    "LINK-71edb0",
+    "LINK-4b7f54",
+    "LINK-4c306c",
+    "LINK-0373fb",
+    "LINK-3e0f91",
+    "LINK-52df50",
+    "LINK-eabaf4",
+    "LINK-555ae3",
+    "LINK-8fc374",
+    "LINK-3629fa",
+    "LINK-74e70b",
+    "LINK-beed1e",
+    "LINK-ac4e82"
+  ],
+  "placeholderMap": {
+    "LINK-90d32a": {
+      "type": "link",
+      "values": {
+        "url": "https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science"
+      }
+    },
+    "LINK-ab8d00": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/"
+      }
+    },
+    "LINK-7a2194": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch"
+      }
+    },
+    "LINK-b6781d": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/qGpsxSA"
+      }
+    },
+    "LINK-956d2a": {
+      "type": "link",
+      "values": {
+        "url": "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum"
+      }
+    },
+    "LINK-152fbd": {
+      "type": "link",
+      "values": {
+        "url": "/foundation/"
+      }
+    },
+    "LINK-00ea6d": {
+      "type": "link",
+      "values": {
+        "url": "https://esp.ethereum.foundation/academic-grants"
+      }
+    },
+    "LINK-43b140": {
+      "type": "link",
+      "values": {
+        "url": "/community/grants/"
+      }
+    },
+    "LINK-6eddec": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-7fdc51": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-c0e929": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/1710.09437"
+      }
+    },
+    "LINK-9c7335": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d"
+      }
+    },
+    "LINK-e728ad": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2003.03052"
+      }
+    },
+    "LINK-19c3da": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/c/consensus/29"
+      }
+    },
+    "LINK-aaeea1": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2009.04987"
+      }
+    },
+    "LINK-00698c": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259"
+      }
+    },
+    "LINK-be2c79": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance"
+      }
+    },
+    "LINK-6358d8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-c2083a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm"
+      }
+    },
+    "LINK-72963e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/c/execution-layer-research/37"
+      }
+    },
+    "LINK-8acefa": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md"
+      }
+    },
+    "LINK-14a15f": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/state_expiry_eip"
+      }
+    },
+    "LINK-2fa7b6": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@vbuterin/state_expiry_paths"
+      }
+    },
+    "LINK-cd8635": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal"
+      }
+    },
+    "LINK-784cd6": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4444"
+      }
+    },
+    "LINK-95c4b4": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2021/06/18/verkle.html"
+      }
+    },
+    "LINK-8ce3a3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding"
+      }
+    },
+    "LINK-dbd4b8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-9fdecf": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/"
+      }
+    },
+    "LINK-0ff5ba": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-specs"
+      }
+    },
+    "LINK-4649ba": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-apis"
+      }
+    },
+    "LINK-9bcd81": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs"
+      }
+    },
+    "LINK-3aaf19": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot"
+      }
+    },
+    "LINK-75af7f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling"
+      }
+    },
+    "LINK-013ee9": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-2918d3": {
+      "type": "link",
+      "values": {
+        "url": "https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d"
+      }
+    },
+    "LINK-70c7b7": {
+      "type": "link",
+      "values": {
+        "url": "https://eprint.iacr.org/2021/1465"
+      }
+    },
+    "LINK-267a48": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/c/layer-2/32"
+      }
+    },
+    "LINK-f2cf0e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698"
+      }
+    },
+    "LINK-f8ed57": {
+      "type": "link",
+      "values": {
+        "url": "https://l2beat.com/"
+      }
+    },
+    "LINK-c663bb": {
+      "type": "link",
+      "values": {
+        "url": "/bridges/"
+      }
+    },
+    "LINK-99f643": {
+      "type": "link",
+      "values": {
+        "url": "https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/"
+      }
+    },
+    "LINK-c48246": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8"
+      }
+    },
+    "LINK-0703f2": {
+      "type": "link",
+      "values": {
+        "url": "<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum"
+      }
+    },
+    "LINK-5ca636": {
+      "type": "link",
+      "values": {
+        "url": "https://stonecoldpat.github.io/images/validatingbridges.pdf"
+      }
+    },
+    "LINK-8ae67e": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/dencun/"
+      }
+    },
+    "LINK-aada00": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/proto_danksharding_faq"
+      }
+    },
+    "LINK-8c5c8d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=N5p0TB77flM"
+      }
+    },
+    "LINK-7d71ce": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view"
+      }
+    },
+    "LINK-919329": {
+      "type": "link",
+      "values": {
+        "url": "https://polynya.medium.com/danksharding-36dc0c8067fe"
+      }
+    },
+    "LINK-2b0de0": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4844"
+      }
+    },
+    "LINK-3d6cc8": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@vbuterin/sharding_proposal"
+      }
+    },
+    "LINK-5743ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    },
+    "LINK-319c95": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/"
+      }
+    },
+    "LINK-6e2f56": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738"
+      }
+    },
+    "LINK-1113da": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/sK7v0lr8Txi1bgION1rRpw?view#Overview"
+      }
+    },
+    "LINK-cc3692": {
+      "type": "link",
+      "values": {
+        "url": "https://0xparc.org/blog"
+      }
+    },
+    "LINK-52b327": {
+      "type": "link",
+      "values": {
+        "url": "https://zkp.science/"
+      }
+    },
+    "LINK-293cac": {
+      "type": "link",
+      "values": {
+        "url": "https://zeroknowledge.fm/"
+      }
+    },
+    "LINK-16d0f8": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346"
+      }
+    },
+    "LINK-de586e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/c/zk-s-nt-arks/13"
+      }
+    },
+    "LINK-502312": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/"
+      }
+    },
+    "LINK-778c42": {
+      "type": "link",
+      "values": {
+        "url": "/security/"
+      }
+    },
+    "LINK-6bd270": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/tag/security"
+      }
+    },
+    "LINK-3caa6a": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2938"
+      }
+    },
+    "LINK-121004": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4337"
+      }
+    },
+    "LINK-cf703e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603"
+      }
+    },
+    "LINK-90ada0": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603"
+      }
+    },
+    "LINK-600533": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-3074"
+      }
+    },
+    "LINK-af5821": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-5003"
+      }
+    },
+    "LINK-f0b4fe": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/c/ui-ux/24"
+      }
+    },
+    "LINK-4575bd": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/FsCFPMTSm9"
+      }
+    },
+    "LINK-82d749": {
+      "type": "link",
+      "values": {
+        "url": "https://www.web3designprinciples.com/"
+      }
+    },
+    "LINK-2c6473": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3"
+      }
+    },
+    "LINK-fe2077": {
+      "type": "link",
+      "values": {
+        "url": "https://rig.ethereum.org/"
+      }
+    },
+    "LINK-a48456": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm"
+      }
+    },
+    "LINK-6f4388": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2201.05574"
+      }
+    },
+    "LINK-ed4f5e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954"
+      }
+    },
+    "LINK-fd4a0d": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2101.05511"
+      }
+    },
+    "LINK-e22540": {
+      "type": "link",
+      "values": {
+        "url": "https://timroughgarden.org/papers/eip1559.pdf"
+      }
+    },
+    "LINK-20a6ac": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/abm1559"
+      }
+    },
+    "LINK-9f820b": {
+      "type": "link",
+      "values": {
+        "url": "https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url"
+      }
+    },
+    "LINK-9ae470": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/1904.05234"
+      }
+    },
+    "LINK-c77055": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/QbR4MTgnCko"
+      }
+    },
+    "LINK-e1d2e9": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2112.01472"
+      }
+    },
+    "LINK-2cace9": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788"
+      }
+    },
+    "LINK-70b369": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/CADLabs/ethereum-economic-model"
+      }
+    },
+    "LINK-9e285e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/beaconrunner/"
+      }
+    },
+    "LINK-5f57b7": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ"
+      }
+    },
+    "LINK-63ef24": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/abs/2110.10086"
+      }
+    },
+    "LINK-b0f2b2": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/search?q=liquid%20staking"
+      }
+    },
+    "LINK-493035": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.lido.fi/the-road-to-trustless-ethereum-staking/"
+      }
+    },
+    "LINK-6979e6": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd"
+      }
+    },
+    "LINK-04f843": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873"
+      }
+    },
+    "LINK-d5ddef": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722"
+      }
+    },
+    "LINK-618479": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@djrtwo/risks-of-lsd"
+      }
+    },
+    "LINK-022c80": {
+      "type": "link",
+      "values": {
+        "url": "https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.html"
+      }
+    },
+    "LINK-7ca44b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf"
+      }
+    },
+    "LINK-8751bd": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/runtimeverification/deposit-contract-verification"
+      }
+    },
+    "LINK-307226": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/runtimeverification/deposit-contract-verification"
+      }
+    },
+    "LINK-023c65": {
+      "type": "link",
+      "values": {
+        "url": "https://dune.com/browse/dashboards"
+      }
+    },
+    "LINK-12bb09": {
+      "type": "link",
+      "values": {
+        "url": "https://clientdiversity.org/"
+      }
+    },
+    "LINK-6f4b3f": {
+      "type": "link",
+      "values": {
+        "url": "https://rig.ethereum.org/"
+      }
+    },
+    "LINK-68d78e": {
+      "type": "link",
+      "values": {
+        "url": "/defi/"
+      }
+    },
+    "LINK-b78a8b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coinbase.com/learn/crypto-basics/what-is-defi"
+      }
+    },
+    "LINK-b42ce6": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/2012.09306.pdf"
+      }
+    },
+    "LINK-0faf8c": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92"
+      }
+    },
+    "LINK-3adcf7": {
+      "type": "link",
+      "values": {
+        "url": "/dao/"
+      }
+    },
+    "LINK-9d78fa": {
+      "type": "link",
+      "values": {
+        "url": "https://daocollective.xyz/"
+      }
+    },
+    "LINK-15ca72": {
+      "type": "link",
+      "values": {
+        "url": "https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy"
+      }
+    },
+    "LINK-32402e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/"
+      }
+    },
+    "LINK-b8dcd2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    },
+    "LINK-d14dd9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ConsenSys/ethereum-developer-tools-list"
+      }
+    },
+    "LINK-5717a5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/"
+      }
+    },
+    "LINK-02c803": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools"
+      }
+    },
+    "LINK-71edb0": {
+      "type": "link",
+      "values": {
+        "url": "https://discordapp.com/channels/595666850260713488/746343380900118528"
+      }
+    },
+    "LINK-4b7f54": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/oracles/"
+      }
+    },
+    "LINK-4c306c": {
+      "type": "link",
+      "values": {
+        "url": "https://arxiv.org/pdf/2004.07140.pdf"
+      }
+    },
+    "LINK-0373fb": {
+      "type": "link",
+      "values": {
+        "url": "https://chain.link/whitepaper"
+      }
+    },
+    "LINK-3e0f91": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.chainalysis.com/reports/wormhole-hack-february-2022/"
+      }
+    },
+    "LINK-52df50": {
+      "type": "link",
+      "values": {
+        "url": "https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191"
+      }
+    },
+    "LINK-eabaf4": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg"
+      }
+    },
+    "LINK-555ae3": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/c/applications/18"
+      }
+    },
+    "LINK-8fc374": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/ethereum-stack/"
+      }
+    },
+    "LINK-3629fa": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0"
+      }
+    },
+    "LINK-74e70b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-beed1e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/storage/"
+      }
+    },
+    "LINK-ac4e82": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/composability/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:30:55.482Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,7 +1,10 @@
 {
   "table-active": "فعال",
+  "table-browser-engines": "براؤزر انجن",
+  "table-desktop-platforms": "ڈیسک ٹاپ پلیٹ فارمز",
   "table-filters": "فلٹرز",
-  "table-showing": "دکھارہے ہیں",
-  "table-reset-filters": "ری سیٹ کریں",
+  "table-mobile-platforms": "موبائل پلیٹ فارمز",
+  "table-reset-filters": "ری سیٹ",
+  "table-showing": "دکھا رہا ہے",
   "table-what-are-you-looking-for": "آپ کیا تلاش کر رہے ہیں؟"
 }

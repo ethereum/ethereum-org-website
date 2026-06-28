@@ -32,7 +32,7 @@ Most testnets started by using a permissioned proof-of-authority consensus mecha
 
 ETH on testnets is supposed to have no real value; however, there have been markets created for certain types of testnet ETH that have become scarce or hard to obtain. Since you need ETH to actually interact with Ethereum (even on testnets), most people get testnet ETH for free from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
-#### Which Testnet should I use?
+#### Which Testnet should I use? {#which-testnet-should-i-use}
 
 The two public testnets that client developers are currently maintaining are Sepolia and Hoodi. Sepolia is a network for contract and application developers to test their applications. The Hoodi network lets protocol developers test network upgrades, and lets stakers test running validators.
 
@@ -53,7 +53,6 @@ The two public testnets that client developers are currently maintaining are Sep
 - [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia Faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Ethereum Ecosystem Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 - [ethfaucet.com Sepolia Faucet](https://ethfaucet.com/networks/ethereum)
 - [Google Cloud Web3 Sepolia Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
@@ -96,7 +95,7 @@ Ephemery is a unique kind of testnet that fully resets every month. The executio
 ##### Resources
 
 - [Website](https://ephemery.dev/)
-- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
 - [Community chat](https://matrix.to/#/#staker-testnet:matrix.org)
 - [Blockscout](https://explorer.ephemery.dev/)
 - [Otterscan](https://otter.bordel.wtf/)
@@ -104,7 +103,7 @@ Ephemery is a unique kind of testnet that fully resets every month. The executio
 - [Checkpoint Sync](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [Launchpad](https://launchpad.ephemery.dev/)
 
-#### Faucets
+#### Faucets {#faucets}
 
 - [Bordel Faucet](https://faucet.bordel.wtf/)
 - [Pk910 PoW Faucet](https://ephemery-faucet.pk910.de/)
@@ -150,7 +149,7 @@ A testnet for [Optimism](https://www.optimism.io/).
 - [Alchemy Faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Chainlink Faucet](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com Optimism Sepolia Faucet](https://ethfaucet.com/networks/optimism)
-- [Testnet Faucet](https://docs.optimism.io/builders/tools/build/faucets)
+- [Testnet Faucet](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 

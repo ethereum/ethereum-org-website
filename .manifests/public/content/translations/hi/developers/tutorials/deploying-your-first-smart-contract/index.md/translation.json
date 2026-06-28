@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-06-19T22:42:01.684Z",
+  "englishManifestHash": "cd4f49c47963",
+  "placeholderOrder": [
+    "LINK-5bbb7f",
+    "LINK-ca5f30",
+    "LINK-3634f0",
+    "LINK-a05c76",
+    "IMAGE-310637",
+    "CODEBLOCK-977caa",
+    "CODE-a78cfd",
+    "CODE-6c3549",
+    "CODE-6c3549",
+    "CODE-5842f1",
+    "CODE-6c3549",
+    "CODE-6c3549",
+    "LINK-c75e3d",
+    "LINK-8304f7",
+    "IMAGE-63a348",
+    "IMAGE-bace5e",
+    "IMAGE-8e5aa5",
+    "IMAGE-80cf72",
+    "CODE-efe899",
+    "CODE-5842f1",
+    "CODE-74cba2",
+    "CODE-6c3549",
+    "CODE-f967ab",
+    "CODE-6c3549",
+    "CODE-f67923",
+    "IMAGE-40c00a",
+    "CODE-f67923",
+    "CODE-f67923",
+    "IMAGE-01b1b1",
+    "CODE-5842f1",
+    "IMAGE-943d52",
+    "LINK-7ca87f"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-977caa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-a78cfd": {
+      "type": "inline-code",
+      "values": {
+        "content": "Counter"
+      }
+    },
+    "CODE-6c3549": {
+      "type": "inline-code",
+      "values": {
+        "content": "count"
+      }
+    },
+    "CODE-5842f1": {
+      "type": "inline-code",
+      "values": {
+        "content": "increment()"
+      }
+    },
+    "CODE-efe899": {
+      "type": "inline-code",
+      "values": {
+        "content": "counter"
+      }
+    },
+    "CODE-74cba2": {
+      "type": "inline-code",
+      "values": {
+        "content": "getCounter()"
+      }
+    },
+    "CODE-f967ab": {
+      "type": "inline-code",
+      "values": {
+        "content": "getCount"
+      }
+    },
+    "CODE-f67923": {
+      "type": "inline-code",
+      "values": {
+        "content": "increment"
+      }
+    },
+    "IMAGE-310637": {
+      "type": "image",
+      "values": {
+        "path": "./remix.png"
+      }
+    },
+    "IMAGE-63a348": {
+      "type": "image",
+      "values": {
+        "path": "./remix-compile-button.png"
+      }
+    },
+    "IMAGE-bace5e": {
+      "type": "image",
+      "values": {
+        "path": "./remix-compile.png"
+      }
+    },
+    "IMAGE-8e5aa5": {
+      "type": "image",
+      "values": {
+        "path": "./remix-deploy.png"
+      }
+    },
+    "IMAGE-80cf72": {
+      "type": "image",
+      "values": {
+        "path": "./remix-deploy-button.png"
+      }
+    },
+    "IMAGE-40c00a": {
+      "type": "image",
+      "values": {
+        "path": "./remix-function-button.png"
+      }
+    },
+    "IMAGE-01b1b1": {
+      "type": "image",
+      "values": {
+        "path": "./transaction-log.png"
+      }
+    },
+    "IMAGE-943d52": {
+      "type": "image",
+      "values": {
+        "path": "./updated-state.png"
+      }
+    },
+    "LINK-ca5f30": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/deploying/"
+      }
+    },
+    "LINK-5bbb7f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-3634f0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/"
+      }
+    },
+    "LINK-a05c76": {
+      "type": "link",
+      "values": {
+        "url": "https://remix.ethereum.org/"
+      }
+    },
+    "LINK-c75e3d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/deploying/"
+      }
+    },
+    "LINK-8304f7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/compiling/"
+      }
+    },
+    "LINK-7ca87f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/logging-events-smart-contracts/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T22:42:01.684Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,10 +1,10 @@
 ---
-title: "Slovník pojmů pro platformu Ethereum"
-description: "Neúplný slovník technických a netechnických pojmů souvisejících s Ethereem"
+title: Slovník
+metaTitle: Slovník Etherea
+description: Neúplný slovník technických i netechnických pojmů souvisejících s Ethereem
 lang: cs
+authors: ["Andreas Antonopoulos"]
 ---
-
-# Slovník {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: cs
 
 ## Zdroje {#sources}
 
-_Částečně převzato z [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) od [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) pod licencí CC-BY-SA_
+_Částečně převzato z [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) od [Andrease M. Antonopoulose a Gavina Wooda](https://aantonop.com/books/mastering-ethereum) pod licencí CC-BY-SA_
 
 <Divider />
 
 ## Přispějte na tuto stránku {#contribute-to-this-page}
 
-Chybí nám tu něco? Je zde něco špatně? Pomozte nám vylepšit tento glosář přispěním na GitHub!
+Chybí nám tu něco? Je něco špatně? Pomozte nám tento slovník vylepšit a přispějte na GitHubu!
 
 [Zjistěte více o tom, jak přispět](/contributing/adding-glossary-terms)

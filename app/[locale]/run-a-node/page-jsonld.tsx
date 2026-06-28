@@ -4,11 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function RunANodePageJsonLD({
   locale,
@@ -19,9 +18,7 @@ export default async function RunANodePageJsonLD({
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-run-a-node",
-  })
+  const t = await getTranslations("page-run-a-node")
 
   const url = normalizeUrlForJsonLd(locale, `/run-a-node/`)
 
@@ -31,24 +28,23 @@ export default async function RunANodePageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#run-a-node` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-run-a-node-title"),
         description: t("page-run-a-node-hero-subtitle"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -66,20 +62,20 @@ export default async function RunANodePageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
-        mainEntity: { "@id": `${url}#run-a-node` },
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#run-a-node`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-run-a-node-title"),
         description: t("page-run-a-node-hero-subtitle"),
         image: "https://ethereum.org/images/run-a-node/ethereum-inside.png",
-        author: [ethereumCommunityOrganization],
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         about: {
           "@type": "Thing",
           name: "Running an Ethereum Node",

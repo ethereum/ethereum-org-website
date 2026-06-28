@@ -1,10 +1,10 @@
 ---
-title: "ఇతీరియము పదకోశం"
-description: "ఇతీరియముకు సంబంధించిన సాంకేతిక, సాంకేతికేతర పదాల అసంపూర్ణ పదకోశం"
+title: పదకోశం
+metaTitle: ఎథీరియం పదకోశం
+description: ఎథీరియంకు సంబంధించిన సాంకేతిక మరియు సాంకేతికేతర పదాల అసంపూర్ణ పదకోశం
 lang: te
+authors: ["ఆండ్రియాస్ ఆంటోనోపౌలోస్"]
 ---
-
-# పదకోశం {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: te
 
 ## మూలాలు {#sources}
 
-_CC-BY-SA క్రింద [ఆండ్రియాస్ M. ఆంటోనోపౌలోస్, గావిన్ వుడ్](https://aantonop.com/books/mastering-ethereum) రాసిన [మాస్టరింగ్ ఇతీరియము](https://github.com/ethereumbook/ethereumbook) నుండి పాక్షికంగా అందించబడింది_
+_CC-BY-SA కింద [ఆండ్రియాస్ ఎమ్. ఆంటోనోపౌలోస్, గావిన్ వుడ్](https://aantonop.com/books/mastering-ethereum) రచించిన [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) ద్వారా పాక్షికంగా అందించబడింది_
 
 <Divider />
 
 ## ఈ పేజీకి సహకరించండి {#contribute-to-this-page}
 
-మేము ఏదైనా వదిలేశామా? ఏదైనా తప్పుగా ఉందా? GitHubలో ఈ పదకోశానికి సహకరించి, దానిని మెరుగుపరచడంలో మాకు సహాయం చేయండి!
+మేము ఏదైనా వదిలేశామా? ఏదైనా తప్పుగా ఉందా? GitHubలో ఈ పదకోశానికి సహకరించడం ద్వారా దీన్ని మెరుగుపరచడంలో మాకు సహాయపడండి!
 
 [ఎలా సహకరించాలో మరింత తెలుసుకోండి](/contributing/adding-glossary-terms)

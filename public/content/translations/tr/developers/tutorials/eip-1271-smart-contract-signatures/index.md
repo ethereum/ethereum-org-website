@@ -1,68 +1,63 @@
 ---
-title: "EIP-1271: Akıllı Sözleşme İmzalarını İmzalama ve Doğrulama"
-description: "EIP-1271 ile Akıllı sözleşme imzası oluşturmaya ve doğrulamaya yönelik bir genel görünüm. Ayrıca akıllı sözleşme geliştiricilerinin üzerine geliştirme yapmaları amaçlı somut bir örnek sağlamak için \"Safe\"te (önceden adı Gnosis Safe'ti) kullanılan EIP-1271 uygulamasının üstünden geçeceğiz."
+title: "EIP-1271: Akıllı Sözleşme İmzalarını İmzalamak ve Doğrulamak"
+description: "EIP-1271 ile akıllı sözleşme imzası oluşturma ve doğrulamaya genel bir bakış. Ayrıca akıllı sözleşme geliştiricilerinin üzerine inşa edebileceği somut bir örnek sağlamak için Safe'te (eski adıyla Gnosis Safe) kullanılan EIP-1271 uygulamasına da göz atıyoruz."
 author: Nathan H. Leung
 lang: tr
-tags:
-  [
-    "eip-1271",
-    "akıllı kontratlar",
-    "doğrulama",
-    "imzalama"
-  ]
+tags: ["eip-1271", "akıllı sözleşmeler", "doğrulama", "imzalama"]
 skill: intermediate
+breadcrumb: "EIP-1271 imzaları"
 published: 2023-01-12
 ---
 
 [EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) standardı, akıllı sözleşmelerin imzaları doğrulamasına olanak tanır.
 
-Bu öğreticide, dijital imzalara, EIP-1271'in arka planına ve [Safe](https://safe.global/) (eski adıyla Gnosis Safe) tarafından kullanılan özel EIP-1271 uygulamasına genel bir bakış sunuyoruz. Kısaca bu, EIP-1271'i kendi sözleşmelerinizde uygulayabilmek için bir başlangıç noktası olarak hizmet edebilir.
+Bu eğitimde, dijital imzalara, EIP-1271'in arka planına ve [Safe](https://safe.global/) (eski adıyla Gnosis Safe) tarafından kullanılan spesifik EIP-1271 uygulamasına genel bir bakış sunuyoruz. Tüm bunlar, kendi sözleşmelerinizde EIP-1271'i uygulamak için bir başlangıç noktası görevi görebilir.
 
-## İmza nedir?
+## İmza nedir? {#what-is-a-signature}
 
-Bu bağlamda imza (daha doğrusu “dijital imza”), bir mesaj ve onunla birlikte mesajın belirli bir kişiden/göndericiden/adresten geldiğine ilişkin bir tür kanıttır.
+Bu bağlamda bir imza (daha doğrusu bir "dijital imza"), bir mesaj ve bu mesajın belirli bir kişiden/göndericiden/adresten geldiğine dair bir tür kanıttır.
 
-Örnek olarak, bir dijital imza şu şekilde görünebilir:
+Örneğin, bir dijital imza şu şekilde görünebilir:
 
-1. Mesaj: "Bu siteye Ethereum cüzdanımla girmek istiyorum".
-2. İmzalayıcı: Adresim `0x000…`
-3. Kanıt: İşte ben, `0x000…`, bu mesajın tamamını gerçekten oluşturduğumun kanıtı (bu genellikle kriptografik bir şeydir).
+1. Mesaj: "Bu web sitesine Ethereum cüzdanımla giriş yapmak istiyorum."
+2. İmzalayan: Adresim `0x000…`
+3. Kanıt: İşte benim, yani `0x000…` adresinin, aslında tüm bu mesajı oluşturduğuma dair bir kanıt (bu genellikle kriptografik bir şeydir).
 
-Dijital imzanın hem "mesaj" hem de "imza" içerdiğini tekrar hatırlatmakta fayda var.
+Bir dijital imzanın hem bir "mesaj" hem de bir "imza" içerdiğini unutmamak önemlidir.
 
-Neden? Mesela bana imzalamam için bir sözleşme verseniz ve ben de imzalama sayfasını yırtıp sözleşmenin geri kalanı olmadan size versem, sözleşmenin hiçbir geçerliliği olmaz.
+Neden mi? Örneğin, bana imzalamam için bir sözleşme verseydiniz ve ben de imza sayfasını kesip sözleşmenin geri kalanı olmadan size sadece imzalarımı geri verseydim, sözleşme geçerli olmazdı.
 
-Aynı nedenle, dijital imzalar da ilişkili bir mesaj olmadan bir hiçtir!
+Aynı şekilde, bir dijital imza ilişkili bir mesaj olmadan hiçbir anlam ifade etmez!
 
-## EIP-1271 neden var?
+## EIP-1271 neden var? {#why-does-eip-1271-exist}
 
-Ethereum tabanlı blokzincirlerde kullanılacak bir dijital imza oluşturmak için genelde kimsenin bilmediği gizli bir özel anahtara ihtiyacınız vardır. Bu, imzanızı sizin yapan şeydir (kimse gizli anahtarı bilmeden aynı imzayı yaratamaz).
+Ethereum tabanlı blokzincirlerinde kullanılmak üzere bir dijital imza oluşturmak için genellikle sizden başka kimsenin bilmediği gizli bir özel anahtara ihtiyacınız vardır. İmzanızı size ait yapan şey budur (gizli anahtarı bilmeden başka hiç kimse aynı imzayı oluşturamaz).
 
-Ethereum hesabınızın (yani harici olarak sahip olunan hesabınızın/EOA) ilişkili bir özel anahtarı vardır ve bu, bir web sitesi veya merkeziyetsiz uygulama sizden bir imza istediğinde (ör. “Ethereum ile Oturum Aç” için) genellikle kullanılan özel anahtardır.
+Ethereum hesabınızla (yani harici olarak sahip olunan hesabınız/EOA) ilişkili bir özel anahtar vardır ve bu, bir web sitesi veya merkeziyetsiz uygulama (dapp) sizden bir imza istediğinde (örneğin, "Ethereum ile Giriş Yap" için) tipik olarak kullanılan özel anahtardır.
 
-Bir uygulama, ethers.js gibi bir üçüncü taraf kütüphanesi kullanarak oluşturduğunuz bir imzayı [özel anahtarınızı bilmeden](https://en.wikipedia.org/wiki/Public-key_cryptography) [doğrulayabilir](https://www.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) ve imzanın _sizin_ tarafınızdan oluşturulduğundan emin olabilir.
+Bir uygulama, ethers.js gibi üçüncü taraf bir kütüphane kullanarak oluşturduğunuz bir imzayı [özel anahtarınızı bilmeden](https://en.wikipedia.org/wiki/Public-key_cryptography) [doğrulayabilir](https://www.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) ve imzayı oluşturanın _siz_ olduğunuzdan emin olabilir.
 
-> Aslında, EOA dijital imzaları açık anahtar kriptografisi kullandığından, **zincir dışı** olarak oluşturulabilir ve doğrulanabilirler! Gazsız DAO oylaması bu şekilde çalışır — oyları zincir üstünde göndermek yerine, dijital imzalar kriptografik kütüphaneler kullanılarak zincir dışında oluşturulabilir ve doğrulanabilir.
+> Aslında, EOA dijital imzaları açık anahtarlı kriptografi kullandığından, **zincir dışı** olarak oluşturulabilir ve doğrulanabilirler! Gazsız DAO oylaması bu şekilde çalışır; oyları zincir içi göndermek yerine, kriptografik kütüphaneler kullanılarak zincir dışı dijital imzalar oluşturulabilir ve doğrulanabilir.
 
-EOA hesapları bir özel anahtara sahipken, akıllı sözleşme hesaplarının bu türde bir özel ya da gizli anahtarı yoktur (yani "Ethereum'la giriş yapın" ve benzerleri, akıllı sözleşme hesaplarınızla yerel biçimde çalışamaz).
+EOA hesaplarının bir özel anahtarı varken, akıllı sözleşme hesaplarının herhangi bir özel veya gizli anahtarı yoktur (bu nedenle "Ethereum ile Giriş Yap" vb. akıllı sözleşme hesaplarıyla yerel olarak çalışamaz).
 
-EIP-1271'in çözmeyi hedeflediği problem: Eğer bir akıllı sözleşmenin imzanın içine yerleştirdiği bir "giz" yoksa akıllı sözleşmenin imzasının geçerli olduğunu nasıl anlarız?
+EIP-1271'in çözmeyi amaçladığı sorun: Akıllı sözleşmenin imzaya dahil edebileceği bir "sırrı" yoksa, bir akıllı sözleşme imzasının geçerli olduğunu nasıl anlayabiliriz?
 
-## EIP-1271 nasıl çalışır?
+## EIP-1271 nasıl çalışır? {#how-does-eip-1271-work}
 
-Akıllı sözleşmelerin mesaj imzalamak için kullanabilecekleri özel anahtarları yoktur. O zaman bir imzanın özgün olduğunu nasıl anlayabiliriz?
+Akıllı sözleşmelerin mesajları imzalamak için kullanılabilecek özel anahtarları yoktur. Peki bir imzanın gerçek olup olmadığını nasıl anlayabiliriz?
 
-Bir fikir de, bir imzanın orijinal olup olmadığını doğrudan akıllı sözleşmeye _sormaktır_!
+Bir fikir, akıllı sözleşmeye bir imzanın gerçek olup olmadığını sadece _sormaktır_!
 
-EIP'nin yaptığı şey, bir akıllı sözleşmeye belirli bir imzanın geçerli olup olmadığını sorma fikrini standart hale getirmektir.
+EIP-1271'in yaptığı şey, bir akıllı sözleşmeye belirli bir imzanın geçerli olup olmadığını "sorma" fikrini standartlaştırmaktır.
 
-EIP-1271'i uygulayan bir sözleşmenin, bir mesaj ve bir imza alan `isValidSignature` adında bir fonksiyonu olmalıdır. Sözleşme, sonrasında bir tür doğrulama mantığı yürütüp (burada spesifikasyon belirli bir şeyi uygulatmaz) ve imzanın geçerli olup olmadığını belirten bir değer döndürebilir.
+EIP-1271'i uygulayan bir sözleşmenin, bir mesaj ve bir imza alan `isValidSignature` adında bir işlevi olmalıdır. Sözleşme daha sonra bazı doğrulama mantıklarını çalıştırabilir (spesifikasyon burada belirli bir şeyi zorunlu kılmaz) ve ardından imzanın geçerli olup olmadığını belirten bir değer döndürebilir.
 
-Eğer `isValidSignature` geçerli bir sonuç döndürürse, bu, sözleşmenin “evet, bu imzayı + mesajı onaylıyorum!” dediği anlamına gelir.
+Eğer `isValidSignature` geçerli bir sonuç döndürürse, bu hemen hemen sözleşmenin "evet, bu imza + mesajı onaylıyorum!" demesidir.
 
-### Arayüz
+### Arayüz {#interface}
 
-İşte EIP-1271 spesifikasyonundaki arayüzün tam hali (aşağıda `_hash` parametresinden bahsedeceğiz, ancak şimdilik bunu doğrulanan mesaj olarak düşünebilirsiniz):
+İşte EIP-1271 spesifikasyonundaki tam arayüz (aşağıda `_hash` parametresi hakkında konuşacağız, ancak şimdilik bunu doğrulanan mesaj olarak düşünün):
 
 ```jsx
 pragma solidity ^0.5.0;
@@ -73,12 +68,12 @@ contract ERC1271 {
   bytes4 constant internal MAGICVALUE = 0x1626ba7e;
 
   /**
-   * @dev Sağlanan imzanın, sağlanan karma için geçerli olup olmadığını döndürmelidir
-   * @param _hash      İmzalanacak verinin karması
+   * @dev Sağlanan imzanın sağlanan hash için geçerli olup olmadığını döndürmelidir
+   * @param _hash      İmzalanacak verinin hash'i
    * @param _signature _hash ile ilişkili imza bayt dizisi
    *
-   * Fonksiyon başarılı olduğunda 0x1626ba7e sihirli bytes4 değerini döndürmelidir.
-   * Durumu değiştirmemelidir (solc < 0.5 için STATICCALL, solc > 0.5 için view değiştiricisi kullanılır)
+   * İşlev başarılı olduğunda 0x1626ba7e bytes4 sihirli değerini döndürmelidir.
+   * Durumu değiştirmemelidir (solc < 0.5 için STATICCALL, solc > 0.5 için view değiştiricisi kullanarak)
    * Harici çağrılara izin vermelidir
    */
   function isValidSignature(
@@ -90,40 +85,40 @@ contract ERC1271 {
 }
 ```
 
-## Örnek EIP-1271 Uygulaması: Safe
+## Örnek EIP-1271 Uygulaması: Safe {#example-eip-1271-implementation-safe}
 
-Sözleşmeler `isValidSignature` fonksiyonunu birçok farklı şekilde uygulayabilir — spesifikasyon tam olarak nasıl uygulanacağı hakkında pek bir şey söylemez.
+Sözleşmeler `isValidSignature` işlevini birçok şekilde uygulayabilir; spesifikasyon tam uygulama hakkında pek bir şey söylemez.
 
-EIP-1271'i uygulayan göze çarpan sözleşmelerden biri Safe'tir (önceden adı Gnosis Safe'ti).
+EIP-1271'i uygulayan dikkate değer bir sözleşme Safe'tir (eski adıyla Gnosis Safe).
 
-Safe'in kodunda `isValidSignature`, imzaların [iki şekilde](https://ethereum.stackexchange.com/questions/122635/signing-messages-as-a-gnosis-safe-eip1271-support) oluşturulup doğrulanabilmesi için [şu şekilde uygulanmıştır](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol):
+Safe'in kodunda, `isValidSignature` imzaların [iki şekilde](https://ethereum.stackexchange.com/questions/122635/signing-messages-as-a-gnosis-safe-eip1271-support) oluşturulup doğrulanabileceği şekilde [uygulanmıştır](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol):
 
-1. Zincir üstü mesajlar
-   1. Oluşturma: bir Safe sahibi bir mesajı "imzalamak" için yeni bir Safe işlemi oluşturarak mesajı veri olarak işleme aktarır. Çoklu imza eşiğine ulaşabilmek için yeterli sayıda sahip işlemi imzaladığında, işlem yayımlanır ve çalıştırılır. İşlemde, mesajı “onaylanmış” mesajlar listesine ekleyen `signMessage(bytes calldata _data)` adında bir Safe fonksiyonu bulunur.
-   2. Doğrulama: Safe sözleşmesinde `isValidSignature` fonksiyonunu çağırın ve mesaj parametresi olarak doğrulanacak mesajı ve [imza parametresi için boş bir değeri](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol#L32) (yani `0x`) geçin. Safe, imza parametresinin boş olduğunu görecek ve kriptografik olarak imzayı doğrulamak yerine, sadece devam etmesi ve mesajın "onaylanmış" mesajlar listesi içinde olup olmadığını kontrol etmesi gerektiğini bilecektir.
+1. Zincir içi mesajlar
+   1. Oluşturma: Bir Safe sahibi, bir mesajı "imzalamak" için yeni bir Safe işlemi oluşturur ve mesajı işleme veri olarak geçirir. Çoklu imza eşiğine ulaşmak için yeterli sayıda sahip işlemi imzaladığında, işlem yayınlanır ve çalıştırılır. İşlemde, mesajı "onaylanmış" mesajlar listesine ekleyen (`signMessage(bytes calldata _data)`) adında bir Safe işlevi vardır.
+   2. Doğrulama: Safe sözleşmesinde `isValidSignature` işlevini çağırın ve doğrulanacak mesajı mesaj parametresi olarak ve [imza parametresi için boş bir değer](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol#L32) (yani `0x`) geçirin. Safe, imza parametresinin boş olduğunu görecek ve imzayı kriptografik olarak doğrulamak yerine, sadece devam edip mesajın "onaylanmış" mesajlar listesinde olup olmadığını kontrol etmesi gerektiğini bilecektir.
 2. Zincir dışı mesajlar:
-   1. Oluşturma: Bir Safe sahibi zincir dışı bir mesaj oluşturur, ardından çoklu imza onay eşiğini aşmak için yeterli imza olana kadar diğer Safe sahiplerinin her birinin mesajı ayrı ayrı imzalamasını sağlar.
-   2. Doğrulama: `isValidSignature` fonksiyonunu çağırın. Mesaj parametresinde, doğrulanması gereken mesajı aktarın. İmza parametresinde, Safe sahiplerinin her birinin bireysel imzalarını sıralanmış şekilde arka arkaya aktarın. Safe, eşiği karşılamak için yeterli imza olup olmadığını **ve** her imzanın geçerli olup olmadığını kontrol edecektir. Eğer geçerliyse, imza doğrulamasının başarılı olduğunu belirten bir değer döndürecektir.
+   1. Oluşturma: Bir Safe sahibi zincir dışı bir mesaj oluşturur, ardından çoklu imza onay eşiğini aşmak için yeterli imza olana kadar diğer Safe sahiplerinin mesajı tek tek imzalamasını sağlar.
+   2. Doğrulama: `isValidSignature` işlevini çağırın. Mesaj parametresinde, doğrulanacak mesajı geçirin. İmza parametresinde, her bir Safe sahibinin bireysel imzalarını arka arkaya birleştirilmiş olarak geçirin. Safe, eşiği karşılamak için yeterli imza olup olmadığını **ve** her bir imzanın geçerli olup olmadığını kontrol edecektir. Eğer öyleyse, başarılı imza doğrulamasını belirten bir değer döndürecektir.
 
-## `_hash` parametresi tam olarak nedir? Neden tüm mesajı aktarmıyoruz?
+## `_hash` parametresi tam olarak nedir? Neden tüm mesajı geçirmiyoruz? {#what-exactly-is-the-hash-parameter-why-not-pass-the-whole-message}
 
-[EIP-1271 arayüzündeki](https://eips.ethereum.org/EIPS/eip-1271) `isValidSignature` fonksiyonunun mesajın kendisini değil, bunun yerine bir `_hash` parametresi aldığını fark etmiş olabilirsiniz. Bunun anlamı, `isValidSignature`'a değişken uzunluktaki mesajın tamamını geçmek yerine, mesajın 32 baytlık bir karmasını (genellikle keccak256) geçmemizdir.
+[EIP-1271 arayüzündeki](https://eips.ethereum.org/EIPS/eip-1271) `isValidSignature` işlevinin mesajın kendisini değil, bunun yerine bir `_hash` parametresi aldığını fark etmiş olabilirsiniz. Bunun anlamı, rastgele uzunluktaki tam mesajı `isValidSignature` işlevine geçirmek yerine, mesajın 32 baytlık bir hash'ini (genellikle keccak256) geçirmemizdir.
 
-`calldata`nın her baytı — yani, bir akıllı sözleşme fonksiyonuna geçirilen fonksiyon parametre verileri — [16 gaz maliyetindedir (sıfır bayt ise 4 gaz)](https://eips.ethereum.org/EIPS/eip-2028), bu nedenle bir mesaj uzunsa çok fazla gaz tasarrufu sağlayabilir.
+Çağrı verisinin (calldata) her bir baytı — yani bir akıllı sözleşme işlevine geçirilen işlev parametresi verisi — [16 gaz (sıfır bayt ise 4 gaz) maliyetindedir](https://eips.ethereum.org/EIPS/eip-2028), bu nedenle bir mesaj uzunsa bu çok fazla gaz tasarrufu sağlayabilir.
 
-### Önceki EIP-1271 Spesifikasyonları
+### Önceki EIP-1271 Spesifikasyonları {#previous-eip-1271-specifications}
 
-Piyasada, `isValidSignature` fonksiyonunun ilk parametresinin `message` adında ve `bytes` türünde (sabit uzunluklu `bytes32` yerine değişken uzunluklu) olduğu EIP-1271 spesifikasyonları bulunmaktadır. Bu, EIP-1271 standardının [eski bir sürümüdür](https://github.com/safe-global/safe-contracts/issues/391#issuecomment-1075427206).
+Pratikte, ilk parametresi `bytes` türünde (sabit uzunluklu `bytes32` yerine rastgele uzunlukta) ve parametre adı `message` olan bir `isValidSignature` işlevine sahip EIP-1271 spesifikasyonları vardır. Bu, EIP-1271 standardının [daha eski bir sürümüdür](https://github.com/safe-global/safe-contracts/issues/391#issuecomment-1075427206).
 
-## EIP-1271 benim sözleşmelerime nasıl uygulanmalıdır?
+## EIP-1271 kendi sözleşmelerimde nasıl uygulanmalıdır? {#how-should-eip-1271-be-implemented-in-my-own-contracts}
 
-Burada spesifikasyon oldukça açık uçludur. Safe uygulamasının birkaç iyi fikri vardır:
+Spesifikasyon burada çok ucu açıktır. Safe uygulamasının bazı iyi fikirleri vardır:
 
-- Sözleşmenin "sahibinden" gelen EOA imzalarının geçerli olduğunu varsayabilirsiniz.
-- Onaylanmış mesajlardan oluşan bir listeyi kaydedip sadece onların geçerli olduğunu varsayabilirsiniz.
+- Sözleşmenin "sahibinden" gelen EOA imzalarını geçerli kabul edebilirsiniz.
+- Onaylanmış mesajların bir listesini saklayabilir ve yalnızca bunları geçerli kabul edebilirsiniz.
 
-Sonuçta, bu sözleşme geliştiricisi olarak size kalmış!
+Sonuçta, sözleşme geliştiricisi olarak bu size kalmış!
 
-## Sonuç
+## Sonuç {#conclusion}
 
-[EIP-1271](https://eips.ethereum.org/EIPS/eip-1271), akıllı sözleşmelerin imzaları doğrulamasına olanak tanıyan çok yönlü bir standarttır. Akıllı sözleşmelerin EOA'lar gibi hareket edebilmelerini sağlar; örnek olarak, "Ethereum'la giriş yapın" ifadesinin akıllı sözleşmelerle çalışabilmesine olanak tanır ve birçok farklı şekilde uygulanabilir (Safe'in anlaşılması zor ve ilginç uygulamasını da göz önünde bulundurarak).
+[EIP-1271](https://eips.ethereum.org/EIPS/eip-1271), akıllı sözleşmelerin imzaları doğrulamasına olanak tanıyan çok yönlü bir standarttır. Akıllı sözleşmelerin daha çok EOA'lar gibi davranmasına kapı açar — örneğin "Ethereum ile Giriş Yap"ın akıllı sözleşmelerle çalışması için bir yol sağlar — ve birçok şekilde uygulanabilir (Safe'in dikkate alınması gereken, basit olmayan, ilginç bir uygulaması vardır).

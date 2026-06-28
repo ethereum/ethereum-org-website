@@ -1,0 +1,307 @@
+/* TAILWIND V4 THEME CONFIGURATION
+   Registers design tokens with Tailwind via @theme inline so they generate
+   utility classes. Uses `inline` because values reference CSS custom
+   properties from colors.css / semantic-tokens.css that resolve per-context
+   (e.g. .dark containers). */
+
+@theme inline {
+  /* Layout spacing */
+  --spacing-page: var(--page-pad); /* The single base unit for standard page padding; responsive. */
+  --spacing-page-2x: calc(var(--page-pad) * 2);
+
+  --spacing-hero-half: calc(var(--hero-pad) * 0.5);
+  --spacing-hero: var(--hero-pad); /* The single base unit for standard page hero padding. */
+  --spacing-hero-1.5x:  calc(var(--hero-pad) * 1.5);
+  --spacing-hero-2x:  calc(var(--hero-pad) * 2);
+  --spacing-hero-3x:  calc(var(--hero-pad) * 3);
+  
+  --spacing-space-half: calc(var(--space) * 0.5);
+  --spacing-space: var(--space); /* The single base unit for the whole flow rhythm; responsive */
+  --spacing-space-2x: calc(var(--space) * 2);
+  --spacing-space-3x: calc(var(--space) * 3);
+  --spacing-space-4x: calc(var(--space) * 4);
+
+  /* Reset default breakpoints (project uses non-standard sm=480) */
+  --breakpoint-*: initial;
+
+  /* Breakpoints */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Font families */
+  --font-heading: var(--font-inter);
+  --font-body: var(--font-inter);
+  --font-monospace: var(--font-mono);
+  --font-mono: var(--font-mono);
+  --font-sans: var(--font-inter);
+
+  /* Font sizes + associated line heights */
+  --text-7xl: 4rem;
+  --text-7xl--line-height: 1.1;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1.2;
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1.2;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 1.2;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 1.3;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.3;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.4;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.6;
+  --text-md: 1rem;
+  --text-md--line-height: 1.6;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.6;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.6;
+  --text-2xs: 0.625rem;
+  --text-2xs--line-height: 1.6;
+
+  /* Line heights */
+  --leading-6xs: 1.1;
+  --leading-5xs: 1.15;
+  --leading-4xs: 1.2;
+  --leading-3xs: 1.25;
+  --leading-2xs: 1.3;
+  --leading-xs: 1.4;
+  --leading-sm: 1.5;
+  --leading-base: 1.6;
+
+  /* Colors: gray */
+  --color-gray-100: hsla(var(--gray-100));
+  --color-gray-150: hsla(var(--gray-150));
+  --color-gray-200: hsla(var(--gray-200));
+  --color-gray-300: hsla(var(--gray-300));
+  --color-gray-400: hsla(var(--gray-400));
+  --color-gray-500: hsla(var(--gray-500));
+  --color-gray-600: hsla(var(--gray-600));
+  --color-gray-700: hsla(var(--gray-700));
+  --color-gray-800: hsla(var(--gray-800));
+  --color-gray-900: hsla(var(--gray-900));
+
+  /* Colors: purple */
+  --color-purple-50: hsla(var(--purple-50));
+  --color-purple-100: hsla(var(--purple-100));
+  --color-purple-200: hsla(var(--purple-200));
+  --color-purple-300: hsla(var(--purple-300));
+  --color-purple-400: hsla(var(--purple-400));
+  --color-purple-500: hsla(var(--purple-500));
+  --color-purple-600: hsla(var(--purple-600));
+  --color-purple-700: hsla(var(--purple-700));
+  --color-purple-800: hsla(var(--purple-800));
+  --color-purple-900: hsla(var(--purple-900));
+
+  /* Colors: blue */
+  --color-blue-50: hsla(var(--blue-50));
+  --color-blue-100: hsla(var(--blue-100));
+  --color-blue-200: hsla(var(--blue-200));
+  --color-blue-300: hsla(var(--blue-300));
+  --color-blue-400: hsla(var(--blue-400));
+  --color-blue-500: hsla(var(--blue-500));
+  --color-blue-600: hsla(var(--blue-600));
+  --color-blue-700: hsla(var(--blue-700));
+  --color-blue-800: hsla(var(--blue-800));
+  --color-blue-900: hsla(var(--blue-900));
+
+  /* Colors: pink */
+  --color-pink-50: hsla(var(--pink-50));
+  --color-pink-100: hsla(var(--pink-100));
+  --color-pink-200: hsla(var(--pink-200));
+  --color-pink-300: hsla(var(--pink-300));
+  --color-pink-400: hsla(var(--pink-400));
+  --color-pink-500: hsla(var(--pink-500));
+  --color-pink-600: hsla(var(--pink-600));
+  --color-pink-700: hsla(var(--pink-700));
+  --color-pink-800: hsla(var(--pink-800));
+  --color-pink-900: hsla(var(--pink-900));
+
+  /* Colors: teal */
+  --color-teal-50: hsla(var(--teal-50));
+  --color-teal-100: hsla(var(--teal-100));
+  --color-teal-200: hsla(var(--teal-200));
+  --color-teal-300: hsla(var(--teal-300));
+  --color-teal-400: hsla(var(--teal-400));
+  --color-teal-500: hsla(var(--teal-500));
+  --color-teal-600: hsla(var(--teal-600));
+  --color-teal-700: hsla(var(--teal-700));
+  --color-teal-800: hsla(var(--teal-800));
+  --color-teal-900: hsla(var(--teal-900));
+
+  /* Colors: orange */
+  --color-orange-100: hsla(var(--orange-100));
+  --color-orange-800: hsla(var(--orange-800));
+  --color-orange-900: hsla(var(--orange-900));
+
+  /* Colors: body */
+  --color-body: hsla(var(--body));
+  --color-body-medium: hsla(var(--body-medium));
+  --color-body-light: hsla(var(--body-light));
+  --color-body-inverse: hsla(var(--body-inverse));
+  --color-body-menu: hsla(var(--body-menu));
+  --color-body-menu-low: hsla(var(--body-menu-low));
+  --color-body-menu-medium: hsla(var(--body-menu-medium));
+  --color-body-menu-high: hsla(var(--body-menu-high));
+
+  /* Colors: disabled */
+  --color-disabled: hsla(var(--disabled));
+
+  /* Colors: background */
+  --color-background: hsla(var(--background));
+  --color-background-highlight: hsla(var(--background-highlight));
+  --color-background-low: hsla(var(--background-low));
+  --color-background-medium: hsla(var(--background-medium));
+  --color-background-high: hsla(var(--background-high));
+
+  /* Colors: border */
+  --color-border: hsla(var(--border));
+  --color-border-high-contrast: hsla(var(--border-high-contrast));
+  --color-border-low-contrast: hsla(var(--border-low-contrast));
+  --color-border-hover: hsla(var(--border-hover));
+
+  /* Colors: primary */
+  --color-primary: hsla(var(--primary));
+  --color-primary-high-contrast: hsla(var(--primary-high-contrast));
+  --color-primary-low-contrast: hsla(var(--primary-low-contrast));
+  --color-primary-hover: hsla(var(--primary-hover));
+  --color-primary-visited: hsla(var(--primary-visited));
+  --color-primary-action: hsla(var(--primary-action));
+  --color-primary-action-hover: hsla(var(--primary-action-hover));
+
+  /* Colors: accent */
+  --color-accent-a: hsla(var(--accent-a));
+  --color-accent-a-hover: hsla(var(--accent-a-hover));
+  --color-accent-b: hsla(var(--accent-b));
+  --color-accent-b-hover: hsla(var(--accent-b-hover));
+  --color-accent-c: hsla(var(--accent-c));
+  --color-accent-c-hover: hsla(var(--accent-c-hover));
+
+  /* Colors: success */
+  --color-success: hsla(var(--success));
+  --color-success-light: hsla(var(--success-light));
+  --color-success-dark: hsla(var(--success-dark));
+  --color-success-border: hsla(var(--success-border));
+
+  /* Colors: error */
+  --color-error: hsla(var(--error));
+  --color-error-light: hsla(var(--error-light));
+  --color-error-dark: hsla(var(--error-dark));
+  --color-error-border: hsla(var(--error-border));
+
+  /* Colors: warning */
+  --color-warning: hsla(var(--warning));
+  --color-warning-light: hsla(var(--warning-light));
+  --color-warning-dark: hsla(var(--warning-dark));
+  --color-warning-border: hsla(var(--warning-border));
+
+  /* Colors: staking */
+  --color-staking-gold: hsla(var(--staking-gold));
+  --color-staking-gold-fill: hsla(var(--staking-gold-fill));
+  --color-staking-green: hsla(var(--staking-green));
+  --color-staking-green-fill: hsla(var(--staking-green-fill));
+  --color-staking-blue: hsla(var(--staking-blue));
+  --color-staking-blue-fill: hsla(var(--staking-blue-fill));
+  --color-staking-red: hsla(var(--staking-red));
+  --color-staking-red-fill: hsla(var(--staking-red-fill));
+
+  /* Colors: misc / deprecated */
+  --color-switch-background: hsla(var(--switch-background));
+  --color-tooltip-shadow: var(--tooltip-shadow);
+  --color-hub-hero-content: var(--hub-hero-content);
+  --color-search-background: var(--search-background);
+  --color-gradient-step-1: var(--gradient-step-1);
+
+  /* Custom spacing (additions to built-in scale) */
+  --spacing-7_5: 1.875rem;
+  --spacing-10_5: 2.625rem;
+  --spacing-19: 4.75rem;
+  --spacing-31: 7.75rem;
+  --spacing-128: 32rem;
+
+  /* Border radius */
+  --radius-base: var(--radius-2xl);
+
+  /* Box shadows */
+  --shadow-table-box: var(--table-box-shadow);
+  --shadow-table: 0 14px 66px rgba(0, 0, 0, 0.07), 0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
+  --shadow-drop: 0 4px 17px 0 rgba(0, 0, 0, 0.08);
+  --shadow-table-box-hover: 0px 8px 17px rgba(0, 0, 0, 0.15);
+  --shadow-table-item-box: var(--table-item-box-shadow);
+  --shadow-table-item-box-hover: 0 0 1px hsla(var(--primary));
+  --shadow-grid-yellow-box-shadow: 8px 8px 0px 0px #ffe78e;
+  --shadow-grid-blue-box-shadow: 8px 8px 0px 0px #a7d0f4;
+  --shadow-menu-accordion: 0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset;
+  --shadow-tooltip: 0 0 16px var(--tooltip-shadow);
+  --shadow-svg-button-link: var(--shadow-svg-button-link-1), var(--shadow-svg-button-link-2), var(--shadow-svg-button-link-3), var(--shadow-svg-button-link-4);
+  --shadow-svg-button-link-hover: var(--shadow-svg-button-link-1-hover), var(--shadow-svg-button-link-2-hover), var(--shadow-svg-button-link-3-hover), var(--shadow-svg-button-link-4-hover);
+  --shadow-card-hover: var(--shadow-body-md), var(--shadow-body-lg);
+  --shadow-window-box: var(--shadow-window-box-1), var(--shadow-window-box-2), var(--shadow-window-box-3), var(--shadow-window-box-4), var(--shadow-window-box-5);
+  --shadow-widget: var(--shadow-widget);
+
+  /* Animations — tokens */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-scroll-left: scroll-left 30s linear infinite;
+  --animate-scroll-right: scroll-right 30s linear infinite;
+  --animate-scroll-left-240: scroll-left 240s linear infinite;
+  --animate-spin-30: spin 60s linear infinite;
+  --animate-counter-spin-30: spin 60s linear infinite reverse;
+  --animate-spin-21: spin 42s linear infinite;
+  --animate-counter-spin-21: spin 42s linear infinite reverse;
+  --animate-spin-18: spin 36s linear infinite;
+  --animate-counter-spin-18: spin 36s linear infinite reverse;
+  --animate-spin-9: spin 18s linear infinite;
+  --animate-counter-spin-9: spin 18s linear infinite reverse;
+  --animate-pulse-light: pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-fade-in: fade-in 150ms ease-in-out;
+  --animate-blink: blink 1.06s step-end infinite;
+
+  @keyframes scroll-left {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes scroll-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); }
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes pulse-light {
+    50% { opacity: 0.2; }
+  }
+
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+}
+
+/* Animations — keyframes
+  Accordion keyframes are outside @theme because they reference the
+  runtime variable var(--radix-accordion-content-height). */
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}

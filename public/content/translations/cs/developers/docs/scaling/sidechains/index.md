@@ -1,64 +1,64 @@
 ---
 title: "Postranní řetězce"
-description: "Úvod do postranních řetězců jako škálovacího řešení, které v současnosti využívá komunita Etherea."
+description: "Úvod do postranních řetězců jako řešení škálování, které v současnosti využívá komunita Etherea."
 lang: cs
 sidebarDepth: 3
 ---
 
-Postranní řetězec je samostatný blockchain, který běží nezávisle na Ethereu a je spojen s Ethereum Mainnetem pomocí obousměrného přemostění. Postranní řetězce mohou mít odlišné parametry bloků a [konsensuální algoritmy](/developers/docs/consensus-mechanisms/), které jsou často navrženy pro efektivní zpracování transakcí. Použití postranního řetězce však přináší určité kompromisy, protože nedědí bezpečnostní vlastnosti Etherea. Na rozdíl od [škálovacích řešení na 2. vrstvě](/layer-2/) postranní řetězce nezaznamenávají změny stavu a transakční data zpět na Ethereum Mainnet.
+Postranní řetězec je samostatný blockchain, který běží nezávisle na [Ethereu](/) a je připojen k síti Ethereum Mainnet pomocí obousměrného mostu. Postranní řetězce mohou mít samostatné parametry bloku a [algoritmy konsensu](/developers/docs/consensus-mechanisms/), které jsou často navrženy pro efektivní zpracování transakcí. Použití postranního řetězce však přináší kompromisy, protože nedědí bezpečnostní vlastnosti Etherea. Na rozdíl od [řešení škálování vrstvy 2](/layer-2/) neodesílají postranní řetězce změny stavu a transakční data zpět na Ethereum Mainnet.
 
-Postranní řetězce také obětují určitou míru decentralizace nebo bezpečnosti, aby dosáhly vysoké propustnosti ([trilema škálovatelnosti](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Ethereum se však zavázalo ke škálování bez kompromisů v oblasti decentralizace a bezpečnosti.
+Postranní řetězce také obětují určitou míru decentralizace nebo bezpečnosti k dosažení vysoké propustnosti ([trilema škálovatelnosti](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Ethereum se však zavázalo ke škálování bez kompromisů v oblasti decentralizace a bezpečnosti.
 
 ## Jak fungují postranní řetězce? {#how-do-sidechains-work}
 
-Postranní řetězce jsou nezávislé blockchainy s odlišnou historií, vývojovými plány a designovými úvahami. Zatímco postranní řetězec může sdílet určité povrchové podobnosti s Ethereem, má několik charakteristických vlastností.
+Postranní řetězce jsou nezávislé blockchainy s odlišnou historií, plány vývoje a konstrukčními hledisky. Ačkoli může postranní řetězec sdílet s Ethereem určité povrchové podobnosti, má několik charakteristických rysů.
 
-### Konsenzuální algoritmy {#consensus-algorithms}
+### Algoritmy konsensu {#consensus-algorithms}
 
-Jednou z vlastností, která činí postranní řetězce jedinečnými (tj. odlišnými od Etherea), je použitý konsensuální algoritmus. Postranní řetězce se pro dosažení konsensu nespoléhají na Ethereum a mohou si vybrat alternativní konsensuální protokoly, které vyhovují jejich potřebám. Některé příklady konsensuálních algoritmů používaných na postranních řetězcích zahrnují:
+Jednou z vlastností, která činí postranní řetězce jedinečnými (tj. odlišnými od Etherea), je použitý algoritmus konsensu. Postranní řetězce nespoléhají na Ethereum ohledně konsensu a mohou si zvolit alternativní protokoly konsensu, které vyhovují jejich potřebám. Mezi příklady algoritmů konsensu používaných na postranních řetězcích patří:
 
-- [Důkaz autoritou](/developers/docs/consensus-mechanisms/poa/)
+- [Důkaz autority](/developers/docs/consensus-mechanisms/poa/)
 - [Delegovaný důkaz podílem](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
 - [Byzantská odolnost proti chybám](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained).
 
-Stejně jako Ethereum mají postranní řetězce validační uzly, které ověřují a zpracovávají transakce, produkují bloky a uchovávají stav blockchainu. Validátoři jsou také zodpovědní za udržování konsensu v celé síti a za její ochranu před škodlivými útoky.
+Stejně jako Ethereum mají postranní řetězce validující uzly, které ověřují a zpracovávají transakce, vytvářejí bloky a ukládají stav blockchainu. Validátory jsou také zodpovědné za udržování konsensu v celé síti a její zabezpečení proti škodlivým útokům.
 
 #### Parametry bloku {#block-parameters}
 
-Ethereum stanovuje limity na [doby bloků](/developers/docs/blocks/#block-time) (tj. dobu potřebnou k vytvoření nových bloků) a [velikosti bloků](/developers/docs/blocks/#block-size) (tj. množství dat obsažených v jednom bloku, vyjádřené v palivu). Naproti tomu postranní řetězce často přijímají odlišné parametry, jako jsou rychlejší doby blokování a vyšší limity paliva, aby dosáhly vysoké propustnosti, rychlých transakcí a nízkých poplatků.
+Ethereum stanovuje limity na [časy bloků](/developers/docs/blocks/#block-time) (tj. čas potřebný k vytvoření nových bloků) a [velikosti bloků](/developers/docs/blocks/#block-size) (tj. množství dat obsažených v jednom bloku vyjádřené v gasu). Naopak postranní řetězce často přijímají odlišné parametry, jako jsou rychlejší časy bloků a vyšší limity gasu, aby dosáhly vysoké propustnosti, rychlých transakcí a nízkých poplatků.
 
-I když tento přístup určité výhody přináší, má také zásadní důsledky pro decentralizaci a bezpečnost sítě. Parametry bloků, jako jsou rychlé doby blokování a velké velikosti bloků, zvyšují obtížnost provozu úplného síťového uzlu, což ponechává jen několik „superuzlů“ odpovědných za zabezpečení řetězce. V takovém scénáři se zvyšuje riziko tajné dohody validátorů nebo škodlivého převzetí řetězce.
+Ačkoli to má určité výhody, má to kritické důsledky pro decentralizaci a bezpečnost sítě. Parametry bloku, jako jsou rychlé časy bloků a velké velikosti bloků, zvyšují obtížnost provozování plného uzlu – což ponechává zodpovědnost za zabezpečení řetězce na několika „superuzlech“. V takovém scénáři se zvyšuje možnost tajné dohody validátorů nebo škodlivého převzetí řetězce.
 
-Aby mohly blockchainy škálovat, aniž by utrpěla decentralizace, musí být provoz síťového uzlu otevřený všem, nikoli nutně jen pro strany se specializovaným hardwarem. Proto probíhají snahy o zajištění toho, aby každý mohl [provozovat plný uzel](/developers/docs/nodes-and-clients/#why-should-i-run-an-ethereum-node) v síti Ethereum.
+Aby se blockchainy mohly škálovat bez poškození decentralizace, musí být provozování uzlu otevřené všem – ne nutně jen stranám se specializovaným hardwarem. Proto probíhají snahy zajistit, aby každý mohl [provozovat plný uzel](/developers/docs/nodes-and-clients/#why-should-i-run-an-ethereum-node) v síti Ethereum.
 
 ### Kompatibilita s EVM {#evm-compatibility}
 
-Některé postranní řetězce jsou kompatibilní s EVM a jsou schopny spouštět kontrakty vyvinuté pro [Virtuální stroj Etherea (EVM)](/developers/docs/evm/). Postranní řetězce kompatibilní s EVM podporují chytré kontrakty [napsané v jazyce Solidity](/developers/docs/smart-contracts/languages/), stejně jako jiné jazyky pro chytré kontrakty EVM, což znamená, že chytré kontrakty napsané pro Ethereum Mainnet budou fungovat i na postranních řetězcích kompatibilních s EVM.
+Některé postranní řetězce jsou kompatibilní s EVM a dokážou spouštět kontrakty vyvinuté pro [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). Postranní řetězce kompatibilní s EVM podporují chytré kontrakty [napsané v Solidity](/developers/docs/smart-contracts/languages/) i v dalších jazycích pro chytré kontrakty EVM, což znamená, že chytré kontrakty napsané pro Ethereum Mainnet budou fungovat i na postranních řetězcích kompatibilní s EVM.
 
-To znamená, že pokud chcete použít svou [dapp](/developers/docs/dapps/) na postranním řetězci, stačí nasadit svůj [chytrý kontrakt](/developers/docs/smart-contracts/) na tento postranní řetězec. Vypadá a funguje stejně jako na Mainnetu – píšete kontrakty v Solidity a interagujete s řetězcem prostřednictvím RPC postranního řetězce.
+To znamená, že pokud chcete používat svou [decentralizovanou aplikaci (dapp)](/developers/docs/dapps/) na postranním řetězci, stačí pouze nasadit váš [chytrý kontrakt](/developers/docs/smart-contracts/) na tento postranní řetězec. Vypadá, působí a chová se přesně jako Mainnet – píšete kontrakty v Solidity a komunikujete s řetězcem prostřednictvím RPC postranního řetězce.
 
-Protože jsou postranní řetězce kompatibilní s EVM, jsou považovány za užitečné [škválovací řešení](/developers/docs/scaling/) pro dapps nativní na Ethereu. S vaší dappkou na postranním řetězci mohou uživatelé využívat nižší poplatky za palivo a rychlejší transakce, zejména pokud je Mainnet přetížený.
+Protože jsou postranní řetězce kompatibilní s EVM, jsou považovány za užitečné [řešení škálování](/developers/docs/scaling/) pro nativní dapp na Ethereu. S vaší dapp na postranním řetězci mohou uživatelé využívat nižší poplatky za gas a rychlejší transakce, zejména pokud je Mainnet přetížený.
 
-Nicméně jak bylo dříve vysvětleno, používání postranního řetězce zahrnuje významné kompromisy. Každý postranní řetězec je zodpovědný za svou bezpečnost a nedědí bezpečnostní vlastnosti Etherea. To zvyšuje možnost škodlivého chování, které může ovlivnit vaše uživatele nebo ohrozit jejich prostředky.
+Jak však bylo vysvětleno dříve, použití postranního řetězce s sebou nese významné kompromisy. Každý postranní řetězec je zodpovědný za svou bezpečnost a nedědí bezpečnostní vlastnosti Etherea. To zvyšuje možnost škodlivého chování, které může ovlivnit vaše uživatele nebo ohrozit jejich prostředky.
 
-### Přesun aktiv {#asset-movement}
+### Pohyb aktiv {#asset-movement}
 
-Aby se samostatný blockchain mohl stát postranním řetězcem Mainnetu Etherea, musí mít schopnost umožnit převod aktiv z Mainnetu. Této interoperability s Ethereem je dosaženo pomocí blockchainového přemostění. [Přemostění](/bridges/) používají chytré kontrakty nasazené na Ethereum Mainnet a na postranním řetězci k řízení převodu prostředků mezi nimi.
+Aby se samostatný blockchain mohl stát postranním řetězcem k síti Ethereum Mainnet, potřebuje schopnost usnadnit převod aktiv z a do sítě Ethereum Mainnet. Této interoperability s Ethereem je dosaženo pomocí blockchainového mostu. [Mosty](/bridges/) využívají chytré kontrakty nasazené na síti Ethereum Mainnet a postranním řetězci k řízení přemostění prostředků mezi nimi.
 
-Zatímco přemostění pomáhají uživatelům přesouvat prostředky mezi Ethereem a postranním řetězcem, aktiva mezi těmito dvěma řetězci nejsou fyzicky přesouvána. Místo toho se k převodu hodnoty mezi řetězci používají mechanismy, které obvykle zahrnují mintování a spalování. Více o tom, [jak fungují přemostění](/developers/docs/bridges/#how-do-bridges-work).
+Ačkoli mosty pomáhají uživatelům přesouvat prostředky mezi Ethereem a postranním řetězcem, aktiva se fyzicky nepřesouvají mezi těmito dvěma řetězci. Místo toho se k převodu hodnoty napříč řetězci používají mechanismy, které obvykle zahrnují ražení a spálení. Více o tom, [jak fungují mosty](/developers/docs/bridges/#how-do-bridges-work).
 
 ## Výhody a nevýhody postranních řetězců {#pros-and-cons-of-sidechains}
 
-| Plusy                                                                                                                                                  | Minusy                                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Technologie, která stojí za postranními řetězci, je dobře zavedená a těží z rozsáhlého výzkumu a vylepšení designu.                    | Postranní řetězce obětují určitou míru decentralizace a důvěryhodnosti ve prospěch škálovatelnosti.                                                            |
-| Postranní řetězce podporují obecné výpočty a nabízejí EVM kompatibilitu (mohou spouštět dappky nativní na Ethereu). | Postranní řetězec používá samostatný konsensuální mechanismus a nemá prospěch z bezpečnostních záruk Etherea.                                                  |
-| Postranní řetězce používají různé modely konsensu k efektivnímu zpracování transakcí a snížení poplatků za transakce pro uživatele.    | Postranní řetězce vyžadují vyšší předpoklady důvěry (např. kvórum škodlivých validátorů postranního řetězce může podvádět). |
-| Postranní řetězce kompatibilní s EVM umožňují dappkám rozšířit jejich ekosystém.                                                       |                                                                                                                                                                                |
+| Výhody                                                                                                                      | Nevýhody                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Technologie, o kterou se postranní řetězce opírají, je dobře zavedená a těží z rozsáhlého výzkumu a vylepšení designu.      | Postranní řetězce vyměňují určitou míru decentralizace a bezdůvěrnosti za škálovatelnost.                        |
+| Postranní řetězce podporují obecné výpočty a nabízejí kompatibilitu s EVM (mohou spouštět nativní dapp Etherea).            | Postranní řetězec používá samostatný mechanismus konsensu a netěží z bezpečnostních záruk Etherea.               |
+| Postranní řetězce používají různé modely konsensu k efektivnímu zpracování transakcí a snížení transakčních poplatků pro uživatele. | Postranní řetězce vyžadují vyšší předpoklady důvěry (např. kvorum škodlivých validátorů postranního řetězce může spáchat podvod). |
+| Postranní řetězce kompatibilní s EVM umožňují dapp rozšířit jejich ekosystém.                                               |                                                                                                                  |
 
-### Použijte postranní řetězce {#use-sidechains}
+### Použití postranních řetězců {#use-sidechains}
 
-Několik projektů poskytuje implementace postranních řetězců, které můžete integrovat do svých dappek:
+Několik projektů poskytuje implementace postranních řetězců, které můžete integrovat do svých dapp:
 
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
@@ -68,6 +68,6 @@ Několik projektů poskytuje implementace postranních řetězců, které může
 
 ## Další čtení {#further-reading}
 
-- [Škálování dapps na Ethereu pomocí postranních řetězců](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8. února 2018 - Georgios Konstantopoulos_
+- [Škálování dapp na Ethereu pomocí postranních řetězců](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8. února 2018 – Georgios Konstantopoulos_
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_

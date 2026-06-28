@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-16T22:42:10.304Z",
+  "englishManifestHash": "cf48f7c62f53",
+  "placeholderOrder": [
+    "LINK-4e58f5",
+    "IMAGE-16d22f",
+    "IMAGE-cfb553",
+    "IMAGE-005e28",
+    "IMAGE-814e47",
+    "IMAGE-7a7910",
+    "IMAGE-2b091f",
+    "IMAGE-abe158"
+  ],
+  "placeholderMap": {
+    "IMAGE-16d22f": {
+      "type": "image",
+      "values": {
+        "path": "./Image1.png"
+      }
+    },
+    "IMAGE-cfb553": {
+      "type": "image",
+      "values": {
+        "path": "./Image2.png"
+      }
+    },
+    "IMAGE-005e28": {
+      "type": "image",
+      "values": {
+        "path": "./Image3.png"
+      }
+    },
+    "IMAGE-814e47": {
+      "type": "image",
+      "values": {
+        "path": "./Image4.png"
+      }
+    },
+    "IMAGE-7a7910": {
+      "type": "image",
+      "values": {
+        "path": "./Image5.png"
+      }
+    },
+    "IMAGE-2b091f": {
+      "type": "image",
+      "values": {
+        "path": "./Image6.png"
+      }
+    },
+    "IMAGE-abe158": {
+      "type": "image",
+      "values": {
+        "path": "./Image7.png"
+      }
+    },
+    "LINK-4e58f5": {
+      "type": "link",
+      "values": {
+        "url": "https://www.nngroup.com/articles/ten-usability-heuristics/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:42:10.304Z",
+      "status": "success"
+    }
+  }
+}

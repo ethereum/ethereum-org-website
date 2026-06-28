@@ -4,6 +4,7 @@ description: This tutorial is Part 1 of a series on NFTs that will take you step
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
+breadcrumb: Write and deploy NFT
 lang: en
 published: 2021-04-22
 ---
@@ -16,7 +17,7 @@ In this tutorial, we will walk through creating and deploying an ERC-721 smart c
 
 In Part 2 of this tutorial we’ll go through how we can use our smart contract to mint an NFT, and in Part 3 we’ll explain how to view your NFT on MetaMask.
 
-And of course, if you have questions at any point, don’t hesitate to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB) or visit [Alchemy's NFT API docs](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
+And of course, if you have questions at any point, don’t hesitate to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB) or visit [Alchemy's NFT API docs](https://www.alchemy.com/docs/reference/nft-api-quickstart)!
 
 ## Step 1: Connect to the Ethereum network {#connect-to-ethereum}
 
@@ -26,7 +27,7 @@ In this tutorial, we’ll also take advantage of Alchemy’s developer tools for
 
 ## Step 2: Create your app (and API key) {#make-api-key}
 
-Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Sepolia test network. Check out [this guide](https://docs.alchemyapi.io/guides/choosing-a-network) if you’re curious to learn more about test networks.
+Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Sepolia test network. Check out [this guide](https://www.alchemy.com/docs/choosing-a-web3-network) if you’re curious to learn more about test networks.
 
 1. Navigate to the “Create App” page in your Alchemy Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”
 
@@ -52,7 +53,7 @@ In order to deploy our smart contract to the test network, we’ll need some fak
 
 ## Step 5: Check your Balance {#check-balance}
 
-To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
+To double check our balance is there, let’s make an [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) request using [Alchemy’s sandbox tool](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). This will return the amount of ETH in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
@@ -67,7 +68,7 @@ First, we’ll need to create a folder for our project. Navigate to your command
     mkdir my-nft
     cd my-nft
 
-Now that we’re inside our project folder, we’ll use npm init to initialize the project. If you don’t already have npm installed, follow [these instructions](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (we’ll also need [Node.js](https://nodejs.org/en/download/), so download that too!).
+Now that we’re inside our project folder, we’ll use npm init to initialize the project. If you don’t already have npm installed, follow [the Node.js installation instructions](https://nodejs.org/en/download/) (we’ll need Node.js and npm for this tutorial).
 
     npm init
 
@@ -341,7 +342,7 @@ The From address should match your MetaMask account address and the To address w
 
 Yasssss! You just deployed your NFT smart contract to the Ethereum (testnet) chain!
 
-To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
+To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemy.com/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

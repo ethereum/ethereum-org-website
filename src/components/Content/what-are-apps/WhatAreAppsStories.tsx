@@ -7,8 +7,10 @@ import { Story } from "@/lib/types"
 import Twitter from "@/components/icons/twitter.svg"
 import { Image } from "@/components/Image"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import { Grid } from "@/components/ui/grid"
 
 import { cn } from "@/lib/utils/cn"
+import { dateTimeFormat } from "@/lib/utils/date"
 
 const stories: Story[] = [
   {
@@ -53,11 +55,11 @@ const WhatAreAppsStories = () => {
   }
 
   return (
-    <div className="my-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+    <Grid className="my-16">
       {stories.map((story, index) => (
         <div
           key={story.name}
-          className="flex flex-col gap-4 rounded-2xl border bg-background p-6"
+          className="flex flex-col gap-4 rounded-base border bg-background p-6"
         >
           <div className="flex flex-row items-center justify-between gap-2">
             <div className="flex flex-row items-center gap-2">
@@ -119,15 +121,15 @@ const WhatAreAppsStories = () => {
             </Button>
           </div>
           <p className="text-sm text-body-medium">
-            {new Date(story.date).toLocaleDateString("en-US", {
+            {dateTimeFormat("en-US", {
               year: "numeric",
               month: "long",
               day: "numeric",
-            })}
+            }).format(new Date(story.date))}
           </p>
         </div>
       ))}
-    </div>
+    </Grid>
   )
 }
 

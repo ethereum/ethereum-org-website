@@ -131,11 +131,13 @@ function buildS3Url(bucket: string, key: string): string {
  *
  * @param sourceUrl - The external image URL to fetch and upload
  * @param prefix - S3 key prefix (e.g., 'apps/logos', 'events')
+ * @param customFilename - Optional full filename (with extension) to use instead of the URL-derived hash.
  * @returns S3 URL if successful, null on failure
  */
 export async function uploadToS3(
   sourceUrl: string,
-  prefix: string
+  prefix: string,
+  customFilename?: string
 ): Promise<string | null> {
   // Skip empty or invalid URLs
   if (!sourceUrl || !isValidImageUrl(sourceUrl)) {
@@ -191,7 +193,9 @@ export async function uploadToS3(
       return null
     }
 
-    const key = generateKey(prefix, sourceUrl, ext)
+    const key = customFilename
+      ? `${prefix}/${customFilename}`
+      : generateKey(prefix, sourceUrl, ext)
 
     // Check if already exists in S3
     try {

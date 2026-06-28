@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-18T00:35:12.474Z",
+  "englishManifestHash": "b1f0765ced73",
+  "placeholderOrder": [
+    "HTMLTAG-338044",
+    "IMAGE-500c2b",
+    "COMPONENT-95581e",
+    "COMPONENT-d7c7e8",
+    "COMPONENT-498f43",
+    "LINK-ecb1be",
+    "LINK-05e569",
+    "LINK-c38cdd",
+    "CODE-5118fc",
+    "LINK-ebb665",
+    "LINK-453bbb",
+    "LINK-9ddbc0",
+    "LINK-16f040",
+    "LINK-44f712",
+    "LINK-760f77",
+    "LINK-a1a7ff",
+    "LINK-934bd5",
+    "LINK-d6a5c0",
+    "LINK-72d6e4",
+    "LINK-6755d9",
+    "LINK-f72fb3",
+    "LINK-435093",
+    "HTMLTAG-837531",
+    "IMAGE-657c36",
+    "HTMLTAG-ca83ec",
+    "IMAGE-48d477"
+  ],
+  "placeholderMap": {
+    "COMPONENT-95581e": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": ":money_with_wings:"
+      }
+    },
+    "COMPONENT-d7c7e8": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "📶"
+      }
+    },
+    "COMPONENT-498f43": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🌎"
+      }
+    },
+    "HTMLTAG-338044": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "div"
+      }
+    },
+    "HTMLTAG-837531": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "div"
+      }
+    },
+    "HTMLTAG-ca83ec": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "div"
+      }
+    },
+    "CODE-5118fc": {
+      "type": "inline-code",
+      "values": {
+        "content": "402 Payment Required"
+      }
+    },
+    "IMAGE-500c2b": {
+      "type": "image",
+      "values": {
+        "path": "./computer.png"
+      }
+    },
+    "IMAGE-657c36": {
+      "type": "image",
+      "values": {
+        "path": "./eth_robot.png"
+      }
+    },
+    "IMAGE-48d477": {
+      "type": "image",
+      "values": {
+        "path": "./walking.png"
+      }
+    },
+    "LINK-ecb1be": {
+      "type": "link",
+      "values": {
+        "url": "https://www.x402.org/"
+      }
+    },
+    "LINK-05e569": {
+      "type": "link",
+      "values": {
+        "url": "/stablecoins/"
+      }
+    },
+    "LINK-c38cdd": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-ebb665": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/"
+      }
+    },
+    "LINK-453bbb": {
+      "type": "link",
+      "values": {
+        "url": "/ai-agents/"
+      }
+    },
+    "LINK-9ddbc0": {
+      "type": "link",
+      "values": {
+        "url": "/gas/"
+      }
+    },
+    "LINK-16f040": {
+      "type": "link",
+      "values": {
+        "url": "https://x402.gitbook.io/x402/core-concepts/facilitator"
+      }
+    },
+    "LINK-44f712": {
+      "type": "link",
+      "values": {
+        "url": "https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/"
+      }
+    },
+    "LINK-760f77": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/haluklevent/status/1622913175409623041"
+      }
+    },
+    "LINK-a1a7ff": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/refikanadol/status/1622623521104089090"
+      }
+    },
+    "LINK-934bd5": {
+      "type": "link",
+      "values": {
+        "url": "https://ankarelief.org/"
+      }
+    },
+    "LINK-d6a5c0": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/banklessDAO"
+      }
+    },
+    "LINK-72d6e4": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/Giveth/status/1623493672149843969"
+      }
+    },
+    "LINK-6755d9": {
+      "type": "link",
+      "values": {
+        "url": "https://cause.quest/"
+      }
+    },
+    "LINK-f72fb3": {
+      "type": "link",
+      "values": {
+        "url": "https://cointelegraph.com/news/vitalik-buterin-donates-227k-to-help-earthquake-victims-in-turkey-syria"
+      }
+    },
+    "LINK-435093": {
+      "type": "link",
+      "values": {
+        "url": "https://dune.com/davy42/turkiye-earthquake-donations"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:35:12.474Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "energy-consumption-chart-airbnb-label": "⁦AirBnB⁩",
+  "energy-consumption-chart-btc-pow-label": "إثبات العمل (PoW) لـ ⁦BTC⁩",
+  "energy-consumption-chart-eth-pos-label": "إثبات الحصة (PoS) لـ ⁦ETH⁩",
+  "energy-consumption-chart-eth-pow-label": "إثبات العمل (PoW) لـ ⁦ETH⁩",
+  "energy-consumption-chart-gaming-us-label": "الألعاب في الولايات المتحدة",
+  "energy-consumption-chart-global-data-centers-label": "مراكز البيانات العالمية",
+  "energy-consumption-chart-netflix-label": "نتفليكس",
+  "energy-consumption-chart-paypal-label": "باي بال",
+  "energy-consumption-gold-mining-cbeci-label": "تعدين الذهب",
+  "energy-consumption-chart-legend": "استهلاك الطاقة السنوي بوحدة ⁦TWh/yr⁩"
+}

@@ -11,7 +11,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 - **Next.js 14.2+** - React framework with App Router
 - **React 18** - UI library
 - **TypeScript 5.5+** - Type safety and development experience
-- **Tailwind CSS 3.4+** - Utility-first CSS framework
+- **Tailwind CSS 4+** - Utility-first CSS framework (CSS-first config in `src/styles/global.css`)
 
 ### Key Dependencies
 
@@ -54,12 +54,13 @@ This is the official Ethereum.org website - a Next.js application that serves as
   - **content/** - Markdown content files
   - **images/** - Image assets
 - **docs/** - Development documentation
+  - **solutions/** - Documented solutions to past problems, organized by category with YAML frontmatter (module, tags, problem_type)
 
 ## Code Conventions
 
 ### File Naming
 
-- **Components**: PascalCase (e.g., `ActionCard.tsx`)
+- **Components**: kebab-case (e.g., `button-group.tsx`)
 - **Utilities**: camelCase (e.g., `cn.ts`, `relativePath.ts`)
 - **Pages**: kebab-case following Next.js conventions
 - **Assets**: kebab-case (e.g., `eth-logo.png`)
@@ -68,16 +69,19 @@ This is the official Ethereum.org website - a Next.js application that serves as
 
 - Use `interface` for object shapes, `type` for unions/intersections
 - Prefer explicit typing over `any` (ESLint enforces `fixToUnknown`)
+- **NEVER leave unused variables or parameters** - ESLint `unused-imports/no-unused-vars` will fail the Netlify build. The only allowed unused arg pattern is a single underscore `_`. Do NOT use `_prefixedNames` (e.g., `_foo`) - either use the variable or remove it from the signature entirely.
 - Use generic constraints for reusable components
 - Export types from dedicated files in `@/lib/types`
 
 ### Styling Conventions
 
 - **Primary approach**: Tailwind CSS utility classes
-- **Component variants**: Use `class-variance-authority` (cva)
+- **Component variants**: Use `tailwind-variants` (`tv`) for new and refactored work. Existing `class-variance-authority` (`cva`) components don't need bulk migration -- swap to `tv` opportunistically when you're already touching the component for another reason.
 - **Dynamic classes**: Use `cn()` utility (clsx + tailwind-merge)
-- **Custom properties**: CSS variables in `:root` for theme values
+- **Custom properties**: CSS variables in `src/styles/` for theme values
 - **Responsive design**: Mobile-first approach
+
+For UI work, see the **`design-system` skill** at `.claude/skills/design-system/`. It's the canonical knowledge base for component choices, design tokens, RTL/i18n, server/client boundaries, and the "use a variant, not a new component" pattern.
 
 ## Development Workflows
 
@@ -100,6 +104,8 @@ pnpm build-storybook       # Build Storybook
 pnpm chromatic             # Run Chromatic visual tests
 
 # Content Management
+pnpm lint:md               # Lint English markdown content
+pnpm lint:md:fix           # Auto-fix header IDs and duplicates
 pnpm markdown-checker      # Validate markdown content
 pnpm events-import         # Import community events
 ```
@@ -115,10 +121,12 @@ pnpm events-import         # Import community events
 
 ### Internationalization
 
-- **25 languages** supported via Crowdin (canonical list: `i18n.config.json`)
-- **RTL support** for Arabic, Urdu
-- Translation files (JSON format) in `src/intl/[locale]/`
-- Content translations managed through Crowdin platform
+- **25 languages** supported (canonical list: `i18n.config.json`); **RTL support** for Arabic, Urdu
+- JSON UI strings in `src/intl/[locale]/`; translated markdown content in `public/content/translations/[locale]/`
+- Non-English markdown is propagated by the **intl-pipeline** (`src/scripts/intl-pipeline/`, entry `main.ts`). **Do not hand-propagate English changes into non-English files** -- let the pipeline run, or trigger `intl-pipeline.yml` with `stamp_only: true` if manifests must catch up urgently (e.g. unblocking a build). Hand-fixing a translation error is fine when the English side hasn't moved, since the manifest mapping stays valid. Spec: `tests/specs/PIPELINE-SPEC.md`.
+- Glossary: base URL from `GLOSSARY_API_URL` env var; default in `src/scripts/intl-pipeline/config.ts`. ETHGlossary is authoritative for Ethereum term translations.
+
+For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `intl/pending-{base}` orchestration model, see the **`intl-pipeline` skill** at `.claude/skills/intl-pipeline/`. For translation-quality review (scoring rubric, language-group rules, ETHGlossary-as-authority policy, multi-agent role split), see the **`intl-review` skill** at `.claude/skills/intl-review/`.
 
 ### Markdown Content
 
@@ -126,6 +134,7 @@ pnpm events-import         # Import community events
 - Processed with `next-mdx-remote`
 - Custom MDX components for rich content
 - Automatic table of contents generation
+- **All h1-h4 headings require a custom `{#lower-kebab-id}`** -- enforced by markdownlint via pre-commit hook. Run `pnpm lint:md:fix` to auto-add missing IDs. Config: `.markdownlint-cli2.jsonc`, custom rules: `.markdownlint-rules/`
 
 ### Asset Management
 
@@ -153,6 +162,7 @@ pnpm events-import         # Import community events
 6. **Consider i18n** - All user-facing text should be translatable (use `getTranslations` and `getLocale`)
 7. **Mobile-first** - Design for mobile, enhance for desktop
 8. **Accessibility** - Use Radix primitives, semantic HTML
+9. **Use locale-aware formatting wrappers** - Use `numberFormat()` from `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`, and `dateTimeFormat()` from `src/lib/utils/date.ts` instead of `new Intl.DateTimeFormat()` / `.toLocaleDateString()` / `.toLocaleTimeString()`. Both enforce correct numbering systems and calendar for Urdu and Arabic locales.
 
 ### Component Development
 
@@ -186,7 +196,7 @@ This project enforces type-safe chain names via TypeScript. When working with la
 
 1. **Always look up exact names** - Before adding `chainName` or `supported_chains`, search `chains.ts` for the exact `name` value
 2. **Names are case-sensitive and exact** - e.g., use `"Zircuit Mainnet"` not `"Zircuit"`, use `"OP Mainnet"` not `"Optimism"`
-3. **Run type checking** - Use `npx tsc --noEmit` to verify chain names are valid before committing
+3. **Run type checking** - Use `pnpm type-check` to verify chain names are valid before committing
 4. **Non-EVM chains** - For Starknet and other non-EVM chains, use `NonEVMChainName` type
 
 **Common Mistakes:**
@@ -279,3 +289,10 @@ Required for Matomo integration:
 - **Platform**: Netlify (config in `netlify.toml`)
 - **Next.js Integration**: Uses `@netlify/plugin-nextjs` for seamless Netlify and Next.js compatibility
 - **Monitoring**: Matomo analytics integration
+
+## Internal Infrastructure
+
+The following external-looking services are managed by the ethereum.org team:
+
+- **`s3-dcl1.ethquokkaops.io`** — S3-compatible object storage for app screenshots and media. Used by the data layer to serve images for the `/dapps` and app listing pages. Downtime here means broken images on the live site.
+- **Netlify Blobs** (`@netlify/blobs`) — Key-value store used by the data layer to cache API responses. Accessed via `src/data-layer/storage.ts`.

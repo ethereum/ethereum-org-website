@@ -1,91 +1,91 @@
 ---
-title: "Cüzdan nasıl kullanılır?"
-metaTitle: "Ethereum Cüzdanları nasıl kullanılır | Adım adım"
-description: "Nasıl token gönderiliip alındığını ve web3 projelerine nasıl bağlanıldığını anlatan bir rehber."
+title: Bir cüzdan nasıl kullanılır
+metaTitle: Ethereum Cüzdanları Nasıl Kullanılır | Adım Adım
+description: Token göndermeyi, almayı ve web3 projelerine bağlanmayı açıklayan bir rehber.
 lang: tr
 ---
 
-# Cüzdan nasıl kullanılır?
+Bir cüzdanın tüm temel işlevlerini nasıl kullanacağınızı öğrenin. Henüz bir cüzdanınız yoksa, [Nasıl Ethereum hesabı oluşturulur](/guides/how-to-create-an-ethereum-account/) rehberimize göz atın.
 
-Bir cüzdanın temel fonksiyonlarının nasıl kullanılacağını öğrenin. Henüz bir hesabınız yoksa [Bir Ethereum hesabı nasıl oluşturulur](/guides/how-to-create-an-ethereum-account/) kılavuzumuza göz atın.
+## Cüzdanınızı açın {#open-your-wallet}
 
-## Cüzdanınızı açın
+Muhtemelen bakiyenizi gösteren ve token göndermek ile almak için düğmeler içeren bir kontrol paneli görmelisiniz.
 
-Bakiyenizi gösteren ve token gönderip almak için butonlar içeren bir panel görmelisiniz.
+## Kripto para alma {#receive-cryptocurrency}
 
-## Kripto para alma
+Cüzdanınıza kripto almak istiyor musunuz?
 
-Cüzdanınıza kripto almak mı istiyorsunuz?
+Her Ethereum hesabının, benzersiz bir sayı ve harf dizisi olan kendi alıcı adresi vardır. Adres, bir banka hesap numarası gibi işlev görür. Ethereum adresleri her zaman "0x" ile başlar. Bu adresi herkesle paylaşabilirsiniz: bunu yapmak güvenlidir.
 
-Her Ethereum hesabının eşsiz bir sayı ve harf dizisinden oluşan alıcı adresi vardır. Bu adres bir banka hesap numarası gibi işlev görür. Ethereum adresleri hep "0x" ile başlar. Bu adresi herhangi biriyle paylaşabilirsiniz: Bu, güvenlidir.
+Adresiniz ev adresiniz gibidir: insanların sizi bulabilmesi için onlara ne olduğunu söylemeniz gerekir. Bunu yapmak güvenlidir, çünkü nerede yaşadığınızı bilseler bile kimsenin içeri girememesi için ön kapınızı yalnızca sizin kontrol ettiğiniz başka bir anahtarla kilitleyebilirsiniz.
 
-Adresiniz ev adresiniz gibidir: İnsanların sizi bulabilmeleri için söylemeniz gerekir. Bunu yapmak güvenlidir çünkü ön kapınızı sadece sizin kontrol ettiğiniz bir anahtarla kilitleyebilirsiniz, böylece nerede yaşadığınızı bilse bile kimse içeri giremez.
+Size para göndermek isteyen kişiye açık adresinizi vermeniz gerekir. Birçok cüzdan uygulaması, daha kolay kullanım için adresinizi kopyalamanıza veya taranacak bir QR kodu göstermenize olanak tanır. Herhangi bir Ethereum adresini manuel olarak yazmaktan kaçının. Bu, kolayca yazım hatalarına ve fon kaybına yol açabilir.
 
-Size para göndermek isteyen herhangi birine herkese açık adresinizi vermelisiniz. Birçok cüzdan uygulaması kolay kullanım için adresinizi kopyalamanıza veya bir QR kodu göstermenize olanak verir. Herhangi bir Ethereum adresini manuel olarak girmekten kaçının. Bu kolayca yazımsal hatalara ve kayıp fonlara yol açabilir.
-
-Farklı uygulamalar değişkenlik gösterebilir veya farklı diller kullanabilir, ancak fon aktarmak istiyorsanız sizi benzer bir süreçten geçirmeleri gerekir.
+Farklı uygulamalar değişiklik gösterebilir veya farklı bir dil kullanabilir, ancak fon transferi yapmaya çalışıyorsanız sizi benzer bir süreçten geçirmelidirler.
 
 1. Cüzdan uygulamanızı açın.
-2. "Al" (veya benzeri bir seçenek) tuşuna basın.
+2. "Al" (veya benzer şekilde ifade edilen bir seçenek) üzerine tıklayın.
 3. Ethereum adresinizi panoya kopyalayın.
-4. Alıcı Ethereum adresinizi göndericiye verin.
+4. Göndericiye alıcı Ethereum adresinizi verin.
 
-## Kripto para gönderme
+## Kripto para gönderme {#send-cryptocurrency}
 
-Başka bir cüzdana ETH göndermek ister miydiniz?
+Başka bir cüzdana ETH göndermek ister misiniz?
 
 1. Cüzdan uygulamanızı açın.
-2. Alıcı adresi alın ve alıcı ile aynı ağa bağlandığınızdan emin olun.
-3. Alıcı adresi girin veya kameranız ile QR code okutun ki, adresi manuel olarak girmek zorunda kalmayasınız.
-4. Cüzdanınızdaki "Gönder" (veya benzeri bir seçenek) butonuna basın.
+2. Alıcı adresini alın ve alıcıyla aynı ağa bağlı olduğunuzdan emin olun.
+3. Adresi manuel olarak yazmak zorunda kalmamak için alıcı adresini girin veya kameranızla bir QR kodu tarayın.
+4. Cüzdanınızdaki "Gönder" düğmesine (veya benzer şekilde ifade edilen bir alternatife) tıklayın.
 
-![Kripto adresi için gönderme alanı](./send.png)\n<br/>
+![Send field for crypto address](./send.png)
+<br/>
 
-5. DAI veya USDC gibi birçok varlık, farklı ağlarda bulunur. Kripto token'ları aktarırken, bunlar değiştirilebilir olmadığı için alıcının sizinle aynı ağı kullandığından emin olun.
-6. Ağ durumuna göre değişen işlem ücretini karşılamak için cüzdanınızda yeterince ETH olduğundan emin olun. Çoğu cüzdan daha sonra onaylayabileceğiniz işleme önerilen ücreti otomatikmen ekleyecektir.
-7. İşleminiz gerçekleştirildiğinde, karşılık kripto miktarı alıcının hesabında görünecektir. Bu, ağın mevcut kullanımına göre birkaç saniye ila birkaç dakika arasında değişebilir.
+5. DAI veya USDC gibi birçok varlık birden fazla ağda bulunur. Kripto token'ları transfer ederken, bunlar birbirinin yerine kullanılamayacağından alıcının sizinle aynı ağı kullandığından emin olun.
+6. Cüzdanınızda, ağ koşullarına bağlı olarak değişen işlem ücretini karşılayacak kadar ETH olduğundan emin olun. Çoğu cüzdan, önerilen ücreti otomatik olarak işleme ekler ve siz de bunu onaylayabilirsiniz.
+7. İşleminiz işlendikten sonra, ilgili kripto miktarı alıcının hesabında görünecektir. Bu, ağın o anda ne kadar kullanıldığına bağlı olarak birkaç saniyeden birkaç dakikaya kadar sürebilir.
 
-## Projelere bağlanmak
+## Projelere bağlanma {#connecting-to-projects}
 
-Adresiniz tüm Ethereum projelerinde aynı olacaktır. Hiçbir projeye tek tek kaydolmanız gerekmez. Bir cüzdana sahip olduktan sonra, ek bir bilgi olmadan herhangi bir Ethereum projesine bağlanabilirsiniz. E-posta veya başka bir kişisel bilgi gerekmez.
+Adresiniz tüm Ethereum projelerinde aynı olacaktır. Herhangi bir projeye ayrı ayrı kaydolmanıza gerek yoktur. Bir cüzdanınız olduğunda, herhangi bir ek bilgi olmadan herhangi bir Ethereum projesine bağlanabilirsiniz. E-posta veya başka bir kişisel bilgi gerekmez.
 
-1. Herhangi bir projenin web sitesine girin.
-2. Eğer projenin giriş sayfası sadece projenin statik bir açıklamasıysa, menüde olan ve sizi asıl web uygulamasına yönlendirecek "Uygulamayı Aç" butonuna basabiliyor olmalısınız.
-3. Uygulamaya girdiğinizde "Bağlan" düğmesine tıklayın.
+1. Herhangi bir projenin web sitesini ziyaret edin.
+2. Projenin açılış sayfası yalnızca projenin statik bir açıklamasıysa, menüde sizi asıl web uygulamasına yönlendirecek olan "Uygulamayı Aç" düğmesine tıklayabilmelisiniz.
+3. Uygulamaya girdikten sonra "Bağlan"a tıklayın.
 
-![Kullanıcının bir cüzdan ile web sitesine bağlanmasını sağlayan buton](./connect1.png)
+![Button allowing user to connect to the website with a wallet](./connect1.png)
 
-4. Verilen seçenekler listesinden cüzdanınızı seçin. Cüzdanınızı göremiyorsanız, "WalletConnect" seçeneğinin altında gizli olabilir.
+4. Sunulan seçenekler listesinden cüzdanınızı seçin. Cüzdanınızı göremiyorsanız, "WalletConnect" seçeneğinin altına gizlenmiş olabilir.
 
-![Bağlanmak için cüzdan listesinden seçim yapma](./connect2.png)
+![Selecting from a list of wallets to connect with](./connect2.png)
 
-5. Bağlantıyı kurmak için cüzdanınızdaki imza isteğini kabul edin. **Bu mesajı imzalamak ETH harcamayı gerektirmez**.
-6. Bu kadar! Uygulamayı kullanmaya başlayın. Bazı ilginç projeleri [merkeziyetsiz uygulamalar sayfamızda](/apps/#explore) bulabilirsiniz. <br />
+5. Bağlantıyı kurmak için cüzdanınızdaki imza isteğini onaylayın. **Bu mesajı imzalama herhangi bir ETH harcamayı gerektirmemelidir**.
+6. İşte bu kadar! Uygulamayı kullanmaya başlayın. [merkeziyetsiz uygulamalar (dapp'ler) sayfamızda](/apps/#explore) bazı ilginç projeler bulabilirsiniz.
+   <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
+  <div>Daha fazlasını öğrenmek ister misiniz?</div>
   <ButtonLink href="/guides/">
-    Diğer rehberlerimizi inceleyin
+    Diğer rehberlerimize göz atın
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-## Sıkça sorulan sorular
+## Sıkça sorulan sorular {#frequently-asked-questions}
 
-### Bir ETH adresi sahibiysem, aynı adrese diğer blok zincirlerde de sahip miyim?
+### Bir ETH adresine sahipsem, diğer blokzincirlerde de aynı adrese sahip olur muyum? {#if-i-own-an-eth-address-do-i-own-the-same-address-on-other-blockchains}
 
-Tüm EVM uyumlu blok zincirlerde aynı adresi kullanabilirsiniz (Kurtarma ifadesi içeren bir cüzdan tipine sahipseniz). Bu [liste](https://chainlist.org/), size hangi blokzincirlerde aynı adresi kullanabileceğinizi gösterecektir. Bitcoin gibi bazı blok zincirlerde tamamen farklı ağ kuralları uygulanır ve farklı bir biçimde farklı bir adrese ihtiyaç duyacaksınız. Bir akıllı sözleşme cüzdanına sahipseniz, hangi blok zincirlerin desteklendiği hakkında bilgi almak için ürünün web sitesine bakmalısınız.
+Aynı adresi tüm EVM uyumlu blokzincirlerde kullanabilirsiniz (kurtarma ifadesi olan bir cüzdan türüne sahipseniz). Bu [liste](https://chainlist.org/) size aynı adresle hangi blokzincirleri kullanabileceğinizi gösterecektir. Bitcoin gibi bazı blokzincirler tamamen ayrı bir ağ kuralları seti uygular ve farklı bir formata sahip farklı bir adrese ihtiyacınız olacaktır. Bir akıllı sözleşme cüzdanınız varsa, hangi blokzincirlerin desteklendiği hakkında daha fazla bilgi için ürün web sitesini kontrol etmelisiniz.
 
-### Aynı adresi birden fazla cihazda kullanabilir miyim?
+### Aynı adresi birden fazla cihazda kullanabilir miyim? {#can-i-use-the-same-address-on-multiple-devices}
 
-Evet, aynı adresi birden fazla cihazda kullanabilirsiniz. Cüzdanlar teknik olarak sadece size bakiyenizi göstermek ve işlemler yapmanız için bir arayüzdür, hesabınız cüzdanda değil, blok zincirde depolanır.
+Evet, aynı adresi birden fazla cihazda kullanabilirsiniz. Cüzdanlar teknik olarak yalnızca bakiyenizi göstermek ve işlem yapmak için bir arayüzdür, hesabınız cüzdanın içinde değil, blokzincirde saklanır.
 
-### Kriptoyu almadım, bir işlemin durumunu nerede kontrol edebilirim?
+### Kriptoyu almadım, bir işlemin durumunu nereden kontrol edebilirim? {#i-have-not-received-the-crypto-where-can-i-check-the-status-of-a-transaction}
 
-Herhangi bir işlemin durumunu gerçek zamanlı olarak görmek için [blok arayıcılarını](/developers/docs/data-and-analytics/block-explorers/) kullanabilirsiniz. Tüm yapmanız gereken cüzdan adresinizi veya işlemin kimliğini aramaktır.
+Herhangi bir işlemin durumunu gerçek zamanlı olarak görmek için [blok gezginlerini](/developers/docs/data-and-analytics/block-explorers/) kullanabilirsiniz. Tek yapmanız gereken cüzdan adresinizi veya işlemin kimliğini aramaktır.
 
-### İşlemleri iptal veya iade edebilir miyim?
+### İşlemleri iptal edebilir veya iade edebilir miyim? {#can-i-cancel-or-return-transactions}
 
-Hayır, bir işlem onaylandığında, işlemi iptal edemezsiniz.
+Hayır, bir işlem onaylandıktan sonra işlemi iptal edemezsiniz.

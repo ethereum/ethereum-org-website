@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-18T21:29:59.467Z",
+  "englishManifestHash": "2e955dcd6c8b",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-0095da",
+    "LINK-d1f55c",
+    "LINK-580798",
+    "LINK-418cf0",
+    "LINK-f213eb",
+    "LINK-09f6ea",
+    "LINK-9d5c2c",
+    "LINK-512322",
+    "LINK-16cc52",
+    "LINK-4e8e7c",
+    "LINK-033034",
+    "LINK-62310a",
+    "LINK-cec1b7",
+    "LINK-ca0460",
+    "LINK-ea9290",
+    "LINK-a0e518",
+    "LINK-2852c3"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-0095da": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/ethereum-stack/"
+      }
+    },
+    "LINK-d1f55c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/"
+      }
+    },
+    "LINK-580798": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#running-your-own-node"
+      }
+    },
+    "LINK-418cf0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    },
+    "LINK-f213eb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/local-environment/"
+      }
+    },
+    "LINK-09f6ea": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/"
+      }
+    },
+    "LINK-9d5c2c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/NomicFoundation/hardhat"
+      }
+    },
+    "LINK-512322": {
+      "type": "link",
+      "values": {
+        "url": "https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/"
+      }
+    },
+    "LINK-16cc52": {
+      "type": "link",
+      "values": {
+        "url": "https://lighthouse-book.sigmaprime.io/setup.html#local-testnets"
+      }
+    },
+    "LINK-4e8e7c": {
+      "type": "link",
+      "values": {
+        "url": "https://hoodi.launchpad.ethereum.org/"
+      }
+    },
+    "LINK-033034": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/ethereum-package"
+      }
+    },
+    "LINK-62310a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.kurtosis.com/"
+      }
+    },
+    "LINK-cec1b7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/kurtosis"
+      }
+    },
+    "LINK-ca0460": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.kurtosis.com/"
+      }
+    },
+    "LINK-ea9290": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    },
+    "LINK-a0e518": {
+      "type": "link",
+      "values": {
+        "url": "/developers/local-environment/"
+      }
+    },
+    "LINK-2852c3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:29:59.467Z",
+      "status": "success"
+    }
+  }
+}
