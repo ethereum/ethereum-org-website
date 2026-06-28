@@ -249,7 +249,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` is the definitions required to use [OpenGSN](https://www.opengsn.org/), a system that allows users without ether
+- `GSN/Context.sol` is the definitions required to use [OpenGSN](https://opengsn.org/), a system that allows users without ether
   to use the blockchain. Note that this is an old version, if you want to integrate with OpenGSN
   [use this tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [The SafeMath library](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), which prevents
@@ -503,7 +503,7 @@ other contract functions. By convention private functions are named `_<something
 variables.
 
 Normally in Solidity we use `msg.sender` for the message sender. However, that breaks
-[OpenGSN](https://www.opengsn.org/). If we want to allow etherless transactions with our token, we
+[OpenGSN](https://opengsn.org/). If we want to allow etherless transactions with our token, we
 need to use `_msgSender()`. It returns `msg.sender` for normal transactions, but for etherless ones
 return the original signer and not the contract that relayed the message.
 
