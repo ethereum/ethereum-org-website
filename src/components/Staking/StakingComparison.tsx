@@ -1,4 +1,5 @@
 "use client"
+import type { JSX } from "react"
 
 import type {
   MatomoEventOptions,
@@ -121,8 +122,8 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
   return (
     <Flex
       className={cn(
-        "mt-16 flex-col gap-8 px-6 py-8 md:px-8",
-        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
+        "mt-16 flex-col gap-8 rounded-base px-6 py-8 md:px-8",
+        "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
         className
       )}
     >

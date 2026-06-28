@@ -1,25 +1,23 @@
 ---
 title: Misyon ve vizyon
 lang: tr
-description: "ethereum.org Tercüme Programının misyonu ve vizyonu"
+description: ethereum.org Çeviri Programı misyonu ve vizyonu
 ---
 
-# Misyon ve vizyon {#mission-and-vision}
+Ethereum topluluğu küresel ve kapsayıcı olmayı hedefler, ancak içeriğinin çoğu yalnızca İngilizce konuşanlara hitap ederek dünyadaki İngilizce konuşmayan 6 milyar insanı dışarıda bırakır. ethereum.org'un dünya çapındaki topluluk için Ethereum'a açılan bir portal olarak hareket edebilmesi için, İngilizce konuşmayanlara kendi ana dillerinde Ethereum içeriği sunmanın gerekli olduğuna inanıyoruz.
 
-Ethereum topluluğu, küresel ve kapsayıcı olmayı hedefliyor ancak içeriğinin çoğu yalnızca İngilizce konuşanlara hitap ediyor ve dünyada İngilizce konuşmayan 6 milyar insanı dışarıda bırakıyor. Ethereum.org'un dünya çapındaki topluluk için Ethereum'a giriş portalı görevi görmesi için İngilizce konuşmayan kişilere ana dillerinde Ethereum içeriği sağlamanın çok önemli olduğuna inanıyoruz.
-
-Ethereum.org Çeviri Programı, ethereum.org ve diğer Ethereum içeriğini mümkün olduğunca çok dile çevirerek Ethereum'u herkes için erişilebilir hâle getirmeyi amaçlıyor.
+ethereum.org Çeviri Programı, ethereum.org'u ve diğer Ethereum içeriklerini mümkün olduğunca çok dile çevirerek Ethereum'u herkes için erişilebilir kılmayı amaçlamaktadır.
 
 ## Misyonumuz {#our-mission}
 
-- Dünya çapındaki ziyaretçilerin kendi ana dillerinde Ethereum hakkında bilgi edinmelerini sağlamak için web sitesinin tercüme edilmiş versiyonlarını sağlama
-- Küresel Ethereum topluluğuna daha fazla üyenin katılımını kolaylaştırma
-- Ethereum'a ilişkin bilgilerin ve birikimin daha erişilebilir ve daha kapsayıcı şekilde paylaşımına olanak tanıma
-- Topluluk üyelerini Ethereum'a çevirilere katkıda bulunmaya ve ekosistemde iz bırakmaya teşvik etme
-- Ekosisteme dahil olmak isteyen katkıda bulunacak tutkulu kişileri belirleme, onlarla bağlantı kurma ve onlara rehberlik etme
+- Dünya çapındaki ziyaretçilerin Ethereum'u kendi ana dillerinde öğrenmelerini sağlamak için web sitesinin çevrilmiş sürümlerini sunmak
+- Küresel Ethereum topluluğuna daha fazla üyenin sisteme katılımını kolaylaştırmak
+- Ethereum bilgi ve birikiminin daha erişilebilir ve daha kapsayıcı bir şekilde paylaşılmasına olanak tanımak
+- Topluluk üyelerini Ethereum'a çevirilerle katkıda bulunmaları ve ekosistemde iz bırakmaları için güçlendirmek
+- Ekosisteme dahil olmak isteyen tutkulu katkıda bulunanları belirlemek, onlarla bağlantı kurmak ve onlara rehberlik sağlamak
 
 ## Vizyonumuz {#our-vision}
 
-- Mümkün olduğunca çok sayıda ülkeden ve dünyanın çeşitli bölgelerinden Ethereum topluluğu üyeleri için gerekli içeriği çevirme
-- Daha bilinçli ve eğitimli bir Ethereum topluluğu oluşturmak için diller arasında bilgi paylaşımını destekleme
-- İngilizce bilmeyenlerin ekosisteme katılmasını önleyen dil engellerini kaldırarak Ethereum'un kapsayıcılığını ve erişilebilirliğini artırma
+- Dünyanın mümkün olduğunca çok ülkesinden ve bölgesinden Ethereum topluluğu üyeleri için temel içerikleri çevirmek
+- Daha bilgili ve eğitimli bir Ethereum topluluğu oluşturmak için diller arası bilgi paylaşımını desteklemek
+- İngilizce konuşmayanların ekosisteme katılmasını engelleyen dil engellerini ortadan kaldırarak Ethereum'un kapsayıcılığını ve erişilebilirliğini artırmak

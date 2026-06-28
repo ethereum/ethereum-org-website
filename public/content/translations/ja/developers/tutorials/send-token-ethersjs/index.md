@@ -1,25 +1,26 @@
 ---
-title: "ethers.jsを使用してトークンを送信する"
-description: "ethers.jsを使用してトークンを送信するための初心者向けガイド。"
-author: Kim YongJun
-tags: [ "ETHERS.JS", "ERC-20", "トークン" ]
+title: "ethers.jsを使用したトークンの送金"
+description: "ethers.jsを使用してトークンを送金するための初心者向けガイド。"
+author: "キム・ヨンジュン"
+tags: ["ETHERS.JS", "ERC-20", "トークン"]
 skill: beginner
+breadcrumb: "トークンの送金"
 lang: ja
 published: 2021-04-06
 ---
 
-## ethers.js(5.0)を使用したトークンの送信 {#send-token}
+## ethers.js(5.0)を使用したトークンの送金 {#send-token}
 
-### このチュートリアルで学ぶこと {#you-learn-about}
+### このチュートリアルで学べること {#you-learn-about}
 
 - ethers.jsのインポート
-- トークンの転送
-- ネットワークの混雑状況に応じたガス代の設定
+- トークンの送金
+- ネットワークのトラフィック状況に応じたガス価格の設定
 
 ### はじめに {#to-get-started}
 
-始めるには、まずethers.jsライブラリをJavaScriptにインポートする必要があります。
-ethers.js(5.0)をインクルードします。
+まず、JavaScriptにethers.jsライブラリをインポートする必要があります。
+ethers.js(5.0)のインクルード
 
 ### インストール {#install-ethersjs}
 
@@ -27,16 +28,16 @@ ethers.js(5.0)をインクルードします。
 /home/ricmoo> npm install --save ethers
 ```
 
-ブラウザでES6を使用するには次のようにします。
+ブラウザでのES6
 
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // ここにコードを記述...
+  // ここにコードを記述してください...
 </script>
 ```
 
-ブラウザでES3(UMD)を使用するには次のようにします。
+ブラウザでのES3(UMD)
 
 ```html
 <script
@@ -47,23 +48,23 @@ ethers.js(5.0)をインクルードします。
 
 ### パラメータ {#param}
 
-1. **`contract_address`**: トークンのコントラクトアドレス(転送したいトークンがイーサでない場合は、コントラクトアドレスが必要となります)
-2. **`send_token_amount`**: 受取人に送る量
-3. **`to_address`**: 受取人のアドレス
+1. **`contract_address`**: トークンのコントラクトアドレス (送金したいトークンがイーサではない場合、コントラクトアドレスが必要です)
+2. **`send_token_amount`**: 受信者に送金したい金額
+3. **`to_address`**: 受信者のアドレス
 4. **`send_account`**: 送信者のアドレス
-5. **`private_key`**: トランザクションに署名し、実際にトークンを転送するための送信者の秘密鍵
+5. **`private_key`**: トランザクションに署名し、実際にトークンを送金するための送信者の秘密鍵
 
 ## 注意 {#notice}
 
-`signTransaction(tx)`は、`sendTransaction()`の内部で実行されるため削除されました。
+`sendTransaction()` が内部で処理を行うため、`signTransaction(tx)` は削除されています。
 
-## 送信手順 {#procedure}
+## 送金手順 {#procedure}
 
-### 1. ネットワークに接続 (テストネット) {#connect-to-network}
+### 1. ネットワーク (テストネット) への接続 {#connect-to-network}
 
-#### プロバイダーの設定 (Infura) {#set-provider}
+#### プロバイダの設定 (Infura) {#set-provider}
 
-Ropstenテストネットに接続します。
+ロプステンテストネットへの接続
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
@@ -84,22 +85,22 @@ let walletSigner = wallet.connect(window.ethersProvider)
 ### 4. 現在のガス価格の取得 {#get-gas}
 
 ```javascript
-window.ethersProvider.getGasPrice() // gasPrice
+window.ethersProvider.getGasPrice() // ガス価格
 ```
 
 ### 5. トランザクションの定義 {#define-transaction}
 
-以下で定義されている変数は、`send_token()`に依存します。
+以下で定義されている変数は、`send_token()` に依存しています。
 
 ### トランザクションパラメータ {#transaction-params}
 
 1. **`send_account`**: トークン送信者のアドレス
-2. **`to_address`**: トークンの受取人のアドレス
-3. **`send_token_amount`**: 送信するトークンの量
-4. **`gas_limit`**: ガスリミット
+2. **`to_address`**: トークン受信者のアドレス
+3. **`send_token_amount`**: 送金するトークンの量
+4. **`gas_limit`**: ガス・リミット
 5. **`gas_price`**: ガス価格
 
-[使用方法については、以下を参照してください](#how-to-use)
+[使用方法については以下を参照してください](#how-to-use)
 
 ```javascript
 const tx = {
@@ -112,12 +113,12 @@ const tx = {
 }
 ```
 
-### 6. 転送 {#transfer}
+### 6. 送金 {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("送信完了！")
+  alert("Send finished!")
 })
 ```
 
@@ -144,9 +145,9 @@ send_token(
 )
 ```
 
-### 成功しました！ {#success}
+### 成功！ {#success}
 
-![トランザクションが正常に完了した画像](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -166,23 +167,23 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // 一般的なトークン送信
+      // 一般的なトークンの送信
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // トークンの数量
+      // トークンの数は？
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
       // トークンを送信
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("トークンを送信しました")
+        alert("sent token")
       })
-    } // ether送信
+    } // イーサの送信
     else {
       const tx = {
         from: send_account,
@@ -199,10 +200,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("送信完了！")
+          alert("Send finished!")
         })
       } catch (error) {
-        alert("送信に失敗しました！！")
+        alert("failed to send!!")
       }
     }
   })

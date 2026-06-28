@@ -1,39 +1,44 @@
 ---
 title: Prelievi di staking
-description: Pagina di riepilogo su cosa sono i prelievi push di staking, come funzionano e cosa devono fare gli staker per ottenere le proprie ricompense
+description: Pagina che riassume cosa sono i prelievi push di staking, come funzionano e cosa devono fare gli staker per ottenere le loro ricompense
 lang: it
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Leslie il rinoceronte con le sue ricompense di staking
+alt: Il rinoceronte Leslie con le sue ricompense di staking
 sidebarDepth: 2
 summaryPoints:
-  - L'aggiornamento di Shanghai/Capella ha reso possibili i prelievi di staking su Ethereum
-  - Gli operatori del validatore devono fornire un indirizzo di prelievo per consentirli
-  - Le ricompense sono distribuite automaticamente a intervalli di pochi giorni
-  - I validatori che escono interamente dallo staking riceveranno il saldo rimanente
+  - Gli operatori dei validatori devono fornire un indirizzo di prelievo per abilitare i prelievi
+  - I validatori legacy vedono il saldo in eccesso oltre i 32 ETH prelevato automaticamente ogni pochi giorni
+  - I validatori compounding guadagnano ricompense sull'intero saldo fino a 2048 ETH
+  - I validatori che escono completamente dallo staking riceveranno il loro saldo rimanente
 ---
 
-<UpgradeStatus dateKey="page-staking-withdrawals-when">
-I prelievi di staking sono stati resi possibili con l'aggiornamento di Shanghai/Capella, verificatosi il 12 aprile 2023.&nbsp;<a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>Ulteriori informazioni su Shanghai/Capella</a>
-</UpgradeStatus>
+**I prelievi di staking** si riferiscono ai trasferimenti di ETH da un account del validatore sul livello di consenso di Ethereum (la Beacon Chain), al livello di esecuzione dove possono essere oggetto di transazione.
 
-I **prelievi di staking** si riferiscono ai trasferimenti di ETH dal conto di un validatore sul livello di consenso di Ethereum (la Beacon Chain) al livello d'esecuzione in cui possono essere spostati.
+> Se fai parte di una [pool di staking](/staking/pools/) o detieni token di staking, dovresti verificare con il tuo fornitore per maggiori dettagli su come vengono gestiti i prelievi di staking, poiché ogni servizio opera in modo diverso.
 
-I **pagamenti di ricompense dei saldi in eccesso** rispetto ai 32 ETH saranno inviati automaticamente e regolarmente a un indirizzo di prelievo collegato a ogni validatore, una volta fornito dall'utente. Gli utenti, inoltre, possono **uscire interamente dallo staking**, sbloccando il proprio intero saldo del validatore.
+Il funzionamento dei prelievi dipende dal tipo di credenziali di prelievo del tuo validatore:
+
+- **Validatori legacy (Tipo 1)**: Il saldo in eccesso oltre i 32 ETH viene inviato automaticamente e regolarmente all'indirizzo di prelievo collegato al validatore. Le ricompense superiori a 32 ETH non contribuiscono al peso del validatore sulla rete.
+- **Validatori compounding (Tipo 2)**: Le ricompense si accumulano nel saldo effettivo del validatore fino a 2048 ETH, aumentando il peso del validatore e facendo guadagnare più ricompense. Solo il saldo che supera i 2048 ETH viene prelevato automaticamente.
+
+Gli utenti possono anche **uscire completamente dallo staking**, inviando una transazione per prelevare, attendendo i tempi di un'eventuale coda di prelievo (in base alla domanda della rete) e sbloccando l'intero saldo del validatore.
 
 ## Ricompense di staking {#staking-rewards}
 
-I pagamenti delle ricompense sono elaborati automaticamente per i conti dei validatori attivi con un saldo effettivo massimizzato di 32 ETH.
+Il modo in cui vengono gestite le ricompense dipende dal tipo di credenziali del validatore:
 
-Qualsiasi saldo superiore a 32 ETH guadagnato tramite le ricompense non contribuisce effettivamente al capitale, né aumenta il peso di tale validatore sulla rete, pertanto è prelevato automaticamente come pagamento di una ricompensa a intervalli di pochi giorni. A parte fornire un indirizzo di prelievo una tantum, queste ricompense non richiedono alcuna azione da parte dell'operatore del validatore. Tutto questo è avviato sul livello di consenso, dunque non è necessario alcun carburante (commissione di transazione) in nessun passaggio.
+I **validatori legacy (Tipo 1)** hanno un saldo effettivo limitato a 32 ETH. Qualsiasi saldo superiore a 32 ETH ricevuto come ricompensa della rete non contribuisce al saldo effettivo né aumenta il peso di questo validatore sulla rete, e queste ricompense vengono prelevate automaticamente all'indirizzo di prelievo dedicato del validatore ogni pochi giorni. A parte fornire un indirizzo di prelievo una volta sola, richiedere queste ricompense non richiede alcuna azione da parte dell'operatore del validatore. Tutto questo viene avviato sul livello di consenso, quindi non è richiesto alcun gas (commissione di transazione) in nessuna fase.
 
-### Come siamo arrivati qui? {#how-did-we-get-here}
+I **validatori compounding (Tipo 2)** possono avere un saldo effettivo compreso tra 32 e 2048 ETH. Le ricompense della rete ricevute da questi validatori si accumulano nel loro saldo effettivo, aumentando il peso del validatore e il potenziale di ricevere ricompense future. I prelievi automatici avvengono solo per il saldo che supera i 2048 ETH. Per prelevare le ricompense al di sotto della soglia di 2048 ETH, i validatori compounding devono attivare manualmente un prelievo parziale dal livello di esecuzione, il che richiede gas.
 
-Negli ultimi anni, Ethereum ha subito diversi aggiornamenti della rete, passando a una rete protetta dagli stessi ETH invece che dall'elevato consumo derivato dal mining, com'era in passato. La partecipazione al consenso su Ethereum è nota come "staking", poiché i partecipanti bloccano volontariamente gli ETH, mettendoli "a disposizione" ("at stake", in inglese) per poter partecipare alla rete. Gli utenti che seguono le regole saranno ricompensati, mentre i tentativi di barare saranno penalizzati.
+### Come siamo arrivati fin qui? {#how-did-we-get-here}
 
-Dal lancio del contratto di deposito di staking a novembre 2020, alcuni coraggiosi pionieri di Ethereum hanno volontariamente bloccato i propri fondi per attivare i "validatori", conti speciali aventi il diritto di attestare formalmente e proporre blocchi, seguendo le regole della rete.
+Negli ultimi anni [Ethereum](/) ha subito diversi aggiornamenti della rete, passando a una rete protetta dall'ETH stesso, invece che dal minaggio ad alta intensità energetica come in passato. La partecipazione al consenso su Ethereum è ora nota come "staking", poiché i partecipanti hanno volontariamente bloccato degli ETH, mettendoli "in gioco" (at stake) per la possibilità di partecipare alla rete. Gli utenti che seguono le regole saranno ricompensati, mentre i tentativi di imbrogliare possono essere penalizzati.
 
-Prima dell'aggiornamento di Shanghai/Capella, non era possibile utilizzare i propri ETH in staking o accedervi. Ma ora, puoi optare per ricevere automaticamente le tue ricompense in un determinato conto e, inoltre, puoi prelevare i tuoi ETH in staking quando preferisci.
+Dal lancio del contratto di deposito di staking nel novembre 2020, alcuni coraggiosi pionieri di Ethereum hanno volontariamente bloccato dei fondi per attivare i "validatori", account speciali che hanno il diritto di attestare formalmente e proporre blocchi, seguendo le regole della rete.
+
+Prima dell'aggiornamento Shanghai/Capella, non potevi usare o accedere ai tuoi ETH messi in staking. Ma ora, puoi scegliere di ricevere automaticamente le tue ricompense in un account scelto, e puoi anche prelevare i tuoi ETH in staking quando vuoi.
 
 ### Come mi preparo? {#how-do-i-prepare}
 
@@ -41,85 +46,103 @@ Prima dell'aggiornamento di Shanghai/Capella, non era possibile utilizzare i pro
 
 ### Avvisi importanti {#important-notices}
 
-Fornire un indirizzo di prelievo è un passaggio necessario per qualsiasi conto del validatore affinché sia idoneo per il prelievo di ETH dal suo saldo.
+Agli account dei validatori è richiesto di fornire un indirizzo di prelievo prima di poter accedere e prelevare le ricompense di rete maturate, o elaborare un prelievo completo all'uscita dallo staking.
 
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
-  <strong>Ogni account validatore è assegnabile esclusivamente a un singolo indirizzo di prelievo, una sola volta.</strong> Una volta che un indirizzo è scelto e inviato al livello del consenso, ciò non è annullabile o nuovamente modificabile. Ricontrolla la proprietà e l'accuratezza dell'indirizzo fornito prima di inviarlo.
+**A ogni account del validatore può essere assegnato un solo indirizzo di prelievo, una volta sola.** Una volta che un indirizzo viene scelto e inviato al livello di consenso, questo non può essere annullato o modificato di nuovo. Ricontrolla la proprietà e l'accuratezza dell'indirizzo fornito prima di inviarlo.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-<strong>Nel mentre, non esiste alcuna minaccia ai tuoi fondi</strong> per non averlo fornito, supponendo che la tua frase mnemonica/di seed sia rimasta al sicuro offline e non sia stata compromessa in alcun modo. La mancata aggiunta delle credenziali di prelievo lascerà semplicemente gli ETH bloccati nel conto del validatore finché non sarà fornito un indirizzo di prelievo.
+Se non hai ancora fornito un indirizzo di prelievo per il tuo account del validatore, **non c'è alcuna minaccia per i tuoi fondi nel frattempo**, supponendo che la tua frase mnemonica/frase seme sia rimasta al sicuro offline e non sia stata compromessa in alcun modo. La mancata aggiunta delle credenziali di prelievo lascerà semplicemente gli ETH bloccati nell'account del validatore finché non verrà fornito un indirizzo di prelievo.
 
-## Uscire interamente dallo staking {#exiting-staking-entirely}
+## Validatori compounding {#compounding-validators}
 
-Fornire un indirizzo di prelievo è necessario prima che _qualsiasi_ fondo possa esser trasferito all'esterno del saldo di un conto del validatore.
+I validatori possono optare per il **compounding** (accumulo) convertendo le loro credenziali di prelievo dal Tipo 1 al Tipo 2. Questo innalza il saldo effettivo massimo da 32 ETH a **2048 ETH**, consentendo alle ricompense di accumularsi nel saldo effettivo del validatore invece di essere prelevate automaticamente.
 
-Gli utenti che desiderano uscire interamente dallo staking, prelevando il proprio intero saldo, devono inoltre firmare e trasmettere un messaggio di "uscita volontaria" con le chiavi del validatore, avviando così il procedimento di uscita dallo staking. Ciò avviene con il tuo client validatore inviato al tuo nodo del consenso e non richiede gas.
+Con il compounding abilitato:
 
-Il processo di uscita di un validatore dallo staking richiede periodi di tempo variabili, a seconda di quanti altri stanno uscendo contemporaneamente. Una volta completato, questo conto non sarà più responsabile dell'esecuzione dei doveri della rete dei validatori e non sarà più idoneo per ricevere ricompense, né avrà i propri ETH "in staking". A questo punto, il conto sarà contrassegnato come interamente "prelevabile".
+- Le ricompense aumentano il saldo effettivo del validatore con incrementi di 1 ETH (soggetti a un piccolo [buffer di isteresi](https://www.attestant.io/posts/understanding-validator-effective-balance/)), facendo guadagnare più ricompense nel tempo
+- I prelievi automatici avvengono solo per il saldo che supera i 2048 ETH
+- I prelievi parziali al di sotto della soglia di 2048 ETH devono essere attivati manualmente dal livello di esecuzione (questo costa gas)
+- Più validatori possono essere **consolidati** in un singolo validatore compounding, riducendo il carico operativo
 
-Una volta che un conto è contrassegnato come "prelevabile", e le credenziali sono state fornite, un utente non deve fare altro che aspettare. I conti sono ripuliti automaticamente e continuamente dai propositori di blocchi per verificare la presenza di fondi in uscita idonei e il saldo del tuo conto sarà trasferito interamente (anche noto come "prelievo completo") durante la successiva <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>pulizia</a>.
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
+**La conversione delle credenziali di prelievo dal Tipo 1 al Tipo 2 è irreversibile.** Usa lo [Staking Launchpad](https://launchpad.ethereum.org/validator-actions) come strumento ufficiale per questa conversione. Per maggiori dettagli sul processo di conversione, sui rischi e sul consolidamento, consulta l'[approfondimento su MaxEB](/roadmap/pectra/maxeb/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
-## Quando saranno abilitati i prelievi di staking? {#when}
+## Uscire completamente dallo staking {#exiting-staking-entirely}
 
-I prelievi di staking sono già operativi! La funzionalità di prelievo è stata abilitata come parte dell'aggiornamento di Shanghai/Capella, verificatosi il 12 aprile 2023.
+Fornire un indirizzo di prelievo è richiesto prima che _qualsiasi_ fondo possa essere trasferito fuori dal saldo di un account del validatore.
 
-L'aggiornamento di Shanghai/Capella ha consentito di rivendicare gli ETH precedentemente messi in staking, in conti regolari di Ethereum. Ciò ha chiuso il ciclo della liquidità di staking e ha portato Ethereum un passo più avanti nel suo percorso per la costruzione di un ecosistema decentralizzato sostenibile, scalabile e sicuro.
+Gli utenti che desiderano uscire completamente dallo staking e prelevare l'intero saldo devono avviare un'"uscita volontaria". Questo può essere fatto in due modi:
 
-- [Maggiori informazioni sulla storia di Ethereum](/ethereum-forks/)
-- [Maggiori informazioni sulla tabella di marcia di Ethereum](/roadmap/)
+- **Usando le chiavi del validatore**: Firma e trasmetti un messaggio di uscita volontaria con il tuo client del validatore, inviato al tuo nodo di consenso. Questo non richiede gas.
+- **Usando le credenziali di prelievo**: Attiva un'uscita dal livello di esecuzione usando il tuo indirizzo di prelievo, senza aver bisogno di accedere alla chiave di firma del validatore. Questo richiede una transazione e costa gas.
 
-## Come funzionano i pagamenti dei prelievi? {#how-do-withdrawals-work}
+Il processo di uscita di un validatore dallo staking richiede una quantità di tempo variabile, a seconda di quanti altri stanno uscendo contemporaneamente. Una volta completato, questo account non sarà più responsabile dell'esecuzione dei compiti di rete del validatore, non sarà più idoneo per le ricompense e non avrà più i suoi ETH "in staking". In questo momento l'account sarà contrassegnato come completamente "prelevabile" (withdrawable).
 
-Che un dato validatore sia o meno idoneo per un prelievo è determinato dallo stato del conto del validatore stesso. Nessun input dell'utente, in alcun dato momento, è necessario per determinare se un conto dovrebbe avviare o meno un prelievo; l'intero processo è effettuato automaticamente dal livello di consenso in un ciclo continuo.
+Una volta che un account è contrassegnato come "prelevabile" e sono state fornite le credenziali di prelievo, non c'è nient'altro che un utente debba fare a parte aspettare. Gli account vengono controllati automaticamente e continuamente dai proponenti dei blocchi per i fondi usciti idonei, e il saldo del tuo account verrà trasferito per intero (noto anche come "prelievo completo") durante il successivo <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>sweep</a> (controllo automatico).
 
-### Preferisci un approccio visivo all'apprendimento? {#visual-learner}
+## Come funzionano le ricompense automatiche (validatore di Tipo 1)? {#how-do-withdrawals-work}
 
-Dai un'occhiata a questa spiegazione dei prelievi di staking di Ethereum, di Finematics:
+Se un determinato validatore sia idoneo o meno per un prelievo è determinato dallo stato dell'account del validatore stesso. Non è necessario alcun input da parte dell'utente in nessun momento per determinare se un account debba avere un prelievo avviato o meno: l'intero processo viene eseguito automaticamente dal livello di consenso in un ciclo continuo.
 
-<YouTube id="RwwU3P9n3uo" />
+### Preferisci imparare visivamente? {#visual-learner}
 
-### "Pulizia" dei validatori {#validator-sweeping}
+Dai un'occhiata a questa spiegazione sui prelievi di staking di Ethereum realizzata da Finematics:
 
-Quando è pianificato che un validatore proponga il prossimo blocco, è necessario costruire una coda di prelievo, composta da un massimo di 16 prelievi idonei. Ciò avviene iniziando originariamente dall'indice 0 del validatore, determinando se esista un prelievo idoneo per questo conto secondo le regole del protocollo e, in tal caso, aggiungendolo alla coda. Il validatore impostato per proporre il blocco successivo riprenderà da dove si è fermato il precedente, procedendo indefinitamente in ordine.
+<VideoWatch slug="ethereum-staking-withdrawals" />
+
+### Lo "sweeping" dei validatori {#validator-sweeping}
+
+Quando un validatore è programmato per proporre il blocco successivo, gli è richiesto di costruire una coda di prelievo, fino a un massimo di 16 prelievi idonei. Questo viene fatto partendo originariamente dall'indice del validatore 0, determinando se c'è un prelievo idoneo per questo account secondo le regole del protocollo, e aggiungendolo alla coda se c'è. Il validatore impostato per proporre il blocco seguente riprenderà da dove si era interrotto l'ultimo, procedendo in ordine indefinitamente.
 
 <Alert variant="update">
 <AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
-Pensa a un orologio analogico. La lancetta dell'orologio indica l'ora, si muove in una direzione, non salta alcuna ora e, infine, torna nuovamente all'inizio, dopo aver raggiunto l'ultimo numero.<br/><br/>
-Ora, invece che da 1 a 12, immagina che l'orologio vada da 0 a N <em>(il numero totale di account validatore registrati sul livello del consenso, oltre 500.000 a gennaio 2023).</em><br/><br/>
-La lancetta dell'orologio punta al validatore successivo, che dev'essere controllato per verificare la presenza di prelievi idonei. Inizia a 0 e procede controllando tutti i conti, senza saltarne nessuno. Quando viene raggiunto l'ultimo validatore, il ciclo continua ricominciando dall'inizio.
+Pensa a un orologio analogico. La lancetta dell'orologio punta all'ora, avanza in una direzione, non salta nessuna ora e alla fine ricomincia dall'inizio dopo aver raggiunto l'ultimo numero.
+
+Ora, invece che da 1 a 12, immagina che l'orologio vada da 0 a N _(dove N è il numero totale di account dei validatori che sono mai stati registrati sul livello di consenso, oltre 1,2 milioni ad aprile 2026)._
+
+La lancetta dell'orologio punta al validatore successivo che deve essere controllato per i prelievi idonei. Inizia da 0 e procede per tutto il giro senza saltare alcun account. Quando viene raggiunto l'ultimo validatore, il ciclo continua tornando all'inizio.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-#### Verificare un conto per i prelievi {#checking-an-account-for-withdrawals}
+#### Controllo di un account per i prelievi {#checking-an-account-for-withdrawals}
 
-Mentre un propositore controlla i validatori per i possibili prelievi, ogni validatore verificato è valutato rispetto a una breve serie di domande per determinare se dovrebbe essere innescato un prelievo e, in tal caso, quanti ETH dovrebbero essere prelevati.
+Mentre un proponente sta controllando i validatori per possibili prelievi, ogni validatore controllato viene valutato in base a una breve serie di domande per determinare se debba essere attivato un prelievo e, in tal caso, quanti ETH debbano essere prelevati.
 
-1. **È stato fornito un indirizzo di prelievo?** Se non è stato fornito alcun indirizzo di prelievo, il conto viene saltato e non viene avviato alcun prelievo.
-2. **Il validatore è uscito ed è idoneo al prelievo?** Se il validatore è uscito interamente e abbiamo ricevuto l'epoca in cui tale conto è considerato come "prelevabile", sarà elaborato un prelievo completo. Questo, trasferirà l'intero saldo rimanente all'indirizzo di prelievo.
-3. **Il saldo effettivo è massimizzato a 32?** Se il conto ha le credenziali di prelievo, non è interamente uscito e ha ricompense superiori a 32 in attesa, sarà elaborato un prelievo parziale, che trasferirà esclusivamente le ricompense superiori a 32 all'indirizzo di prelievo dell'utente.
+1. **È stato fornito un indirizzo di prelievo?** Se non è stato fornito alcun indirizzo di prelievo, l'account viene saltato e non viene avviato alcun prelievo.
+2. **Il validatore è uscito ed è prelevabile?** Se il validatore è uscito completamente e abbiamo raggiunto l'epoca in cui il suo account è considerato "prelevabile", allora verrà elaborato un prelievo completo. Questo trasferirà l'intero saldo rimanente all'indirizzo di prelievo.
+3. **Il saldo supera il suo saldo effettivo massimo?** Per i validatori legacy (Tipo 1), questa soglia è di 32 ETH. Per i validatori compounding (Tipo 2), questa soglia è di 2048 ETH. Se l'account ha le credenziali di prelievo, non è uscito completamente, ha un saldo effettivo al massimo e ha un saldo superiore a questa soglia, allora verrà elaborato un prelievo parziale che trasferisce solo l'eccesso all'indirizzo di prelievo dell'utente.
 
-Esistono solo due azioni intraprese dagli operatori del validatore durante il ciclo di vita di un validatore che influenzano direttamente tale flusso:
+Ci sono solo due azioni intraprese dagli operatori dei validatori nel corso del ciclo di vita di un validatore che influenzano direttamente questo flusso:
 
-- Fornire le credenziali di prelievo per consentire qualsiasi forma di prelievo
-- Uscire dalla rete, innescando un prelievo completo
+- Fornire le credenziali di prelievo per abilitare qualsiasi forma di prelievo
+- Uscire dalla rete, il che attiverà un prelievo completo
 
-### Zero carburante {#gas-free}
+### Senza gas {#gas-free}
 
-Questo approccio ai prelievi di staking evita di richiedere agli staker di inviare manualmente una transazione richiedendo un importo particolare di ETH da prelevare. Ciò significa che **non è necessario alcun carburante (commissione di transazione)** e che il prelievo non compete per lo spazio del blocco del livello d'esecuzione esistente.
+I controlli automatici dei prelievi non richiedono agli staker di inviare manualmente una transazione. Questo significa che **non è richiesto alcun gas (commissione di transazione)** per i controlli automatici, e non competono per lo spazio dei blocchi esistente sul livello di esecuzione.
 
-### Con quale frequenza riceverò le mie ricompense di staking? {#how-soon}
+Nota che i [validatori compounding](#compounding-validators) che desiderano attivare un prelievo parziale al di sotto della soglia di 2048 ETH devono farlo manualmente dal livello di esecuzione, il che richiede gas.
 
-In un unico blocco può essere elaborato un massimo di 16 prelievi. A tale frequenza, possono essere elaborati 115.200 validatori al giorno (supponendo che non vi sia alcuno slot mancante). Come indicato in precedenza, i validatori privi di prelievi idonei saranno saltati, riducendo il tempo necessario per terminare la pulizia.
+### Con quale frequenza le mie ricompense di staking saranno sbloccate e disponibili nel mio portafoglio? {#how-soon}
 
-Espandendo tale calcolo, possiamo stimare il tempo necessario a elaborare un dato numero di prelievi:
+In un singolo blocco possono essere elaborati al massimo 16 prelievi. A questo ritmo, possono essere elaborati 115.200 prelievi di validatori al giorno (supponendo che non ci siano slot persi). Come notato sopra, i validatori senza prelievi idonei verranno saltati, diminuendo il tempo per terminare il controllo.
+
+Espandendo questo calcolo, possiamo stimare il tempo necessario per elaborare un determinato numero di prelievi:
 
 <TableContainer>
 
@@ -133,95 +156,121 @@ Espandendo tale calcolo, possiamo stimare il tempo necessario a elaborare un dat
 
 </TableContainer>
 
-Come vedi, la frequenza rallenta con l'aumento dei validatori sulla rete. Un aumento degli slot mancanti potrebbe rallentarla proporzionalmente, ma questo rappresenta generalmente il lato più lento dei possibili risultati.
+Come puoi vedere, questo rallenta man mano che ci sono più validatori sulla rete. Un aumento degli slot persi potrebbe rallentarlo proporzionalmente, ma questo rappresenterà generalmente il lato più lento dei possibili risultati.
 
 ## Domande frequenti {#faq}
 
 <ExpandableCard
-title="Una volta fornito un indirizzo di prelievo, posso modificarlo con un altro indirizzo di prelievo?"
+title="Una volta fornito un indirizzo di prelievo, posso cambiarlo con un indirizzo di prelievo alternativo?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-No, il processo per fornire le credenziali di prelievo è una tantum e queste non sono modificabili una volta inviate.
+No, il processo per fornire le credenziali di prelievo è un processo una tantum e non può essere modificato una volta inviato.
 </ExpandableCard>
 
 <ExpandableCard
-title="Perché un indirizzo di prelievo è impostabile solo una volta?"
+title="Perché l'indirizzo di prelievo di un validatore può essere impostato solo una volta?"
 eventCategory="FAQ"
-eventAction="Why can a withdrawal address only be set once?"
+eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
-Impostando un indirizzo di prelievo del livello d'esecuzione, le credenziali di prelievo per quel validatore sono state cambiate permanentemente. Ciò significa che le vecchie credenziali non funzioneranno più e che le nuove credenziali dirigono a un conto del livello d'esecuzione.
+L'impostazione dell'indirizzo di prelievo del livello di esecuzione di un validatore è una modifica permanente alle credenziali del validatore sul livello di consenso. Non c'è modo di aggiornare le credenziali del livello di consenso una volta registrate.
 
-Gli indirizzi di prelievo possono essere un contratto intelligente (controllato dal suo codice) o un conto posseduto esternamente (EOA, controllato dalla sua chiave privata). Attualmente questi conti non hanno alcun modo di comunicare un messaggio al livello di consenso che segnali una modifica delle credenziali del validatore, e aggiungere questa funzionalità aggiungerebbe una complessità non necessaria al protocollo.
+Le credenziali dell'indirizzo di prelievo di un validatore possono essere impostate per puntare a uno smart contract (controllato dal suo codice) o a un account di proprietà esterna (EOA, controllato dalla sua chiave privata). Attualmente, questi account non hanno modo di comunicare un messaggio al livello di consenso che segnali un cambiamento delle credenziali del validatore, e l'aggiunta di questa funzionalità aggiungerebbe un'inutile complessità al protocollo.
 
-Come alternativa alla modifica dell'indirizzo di prelievo per un dato validatore, gli utenti potrebbero scegliere di impostare un contratto intelligente come proprio indirizzo di prelievo che potrebbe gestirebbe la rotazione delle chiavi, come Safe. Gli utenti che impostano i propri fondi al proprio EOA possono eseguire un'uscita completa per prelevare tutti i propri fondi in staking, per poi rimetterli in staking utilizzando nuove credenziali.
+Gli utenti che cercano una gestione flessibile dei prelievi possono impostare un portafoglio smart contract in grado di ruotare le chiavi (come un [Safe](https://safe.global/)) come indirizzo di prelievo del validatore, consentendo di fatto l'aggiornamento dell'EOA destinatario finale. Se un utente ha già impostato un EOA come credenziale di prelievo, deve avviare un'uscita completa per recuperare i propri ETH in staking e poi usare quei fondi per attivare un nuovo validatore con credenziali diverse.
 </ExpandableCard>
 
 <ExpandableCard
-title="Cosa succede se partecipo token di staking o a staking in pool"
+title="Come prelevo dallo staking se faccio staking tramite un fornitore, una pool di staking o partecipo con token di staking liquido?"
 eventCategory="FAQ"
-eventAction="What if I participate in staking tokens or pooled staking"
+eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
+Se usi una pool di staking o detieni token di staking, contatta il tuo fornitore per sapere come gestisce i prelievi, poiché i processi variano a seconda del servizio. 
 
-Se fai parte di un [pool di staking](/staking/pools/) o detieni token di staking, dovresti chiedere al tuo fornitore ulteriori dettagli su come vengono gestiti i prelievi dallo staking, poiché ogni servizio opera in modo diverso.
-
-In generale, gli utenti dovrebbero essere liberi di rivendicare i propri ETH in staking sottostanti, o di modificare il fornitore di staking che utilizzano. Se un pool in particolare sta diventando troppo grande, è possibile uscire, riscattare i fondi e rimetterli in staking con un <a href="https://rated.network/">fornitore di dimensioni minori</a>. O, se hai accumulato abbastanza ETH, potresti [fare staking da casa](/staking/solo/).
+In generale, quando fai staking tramite un fornitore o una pool, dovresti essere libero di reclamare i tuoi ETH sottostanti in staking, o di prelevare e cambiare il fornitore di staking che utilizzi. Se una particolare pool sta diventando troppo grande, gli ETH in staking possono essere ritirati, riscattati e messi di nuovo in staking con un [fornitore più piccolo](https://rated.network/). Oppure, se hai accumulato abbastanza ETH, potresti [fare staking da casa](/staking/solo/).
 
 </ExpandableCard>
 
 <ExpandableCard
-title="I pagamenti delle ricompense (prelievi parziali) si verificano automaticamente?"
+title="La richiesta delle ricompense di rete (prelievi parziali) avviene automaticamente?"
 eventCategory="FAQ"
-eventAction="Do reward payments (partial withdrawals) happen automatically?"
+eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
-Sì, a condizione che il tuo validatore abbia fornito un indirizzo di prelievo. Questo deve essere fornito una volta per abilitare inizialmente qualsiasi prelievo, poi i pagamenti delle ricompense saranno innescati automaticamente a intervalli di pochi giorni, a ogni pulizia del validatore.
-</ExpandableCard>
+Per i **validatori legacy (Tipo 1)**, sì, a patto che il tuo validatore abbia fornito un indirizzo di prelievo. Questo deve essere fornito una volta per abilitare qualsiasi prelievo, dopodiché la distribuzione delle ricompense di rete all'indirizzo di prelievo verrà attivata automaticamente ogni pochi giorni con ogni controllo dei validatori.
 
-<ExpandableCard
-title="I prelievi completi si verificano automaticamente?"
-eventCategory="FAQ"
-eventAction="Do full withdrawals happen automatically?"
-eventName="read more">
-
-No, se il tuo validatore è ancora attivo sulla rete, un prelievo completo non si verificherà automaticamente. Questo richiede l'avvio manuale di un'uscita volontaria.
-
-Una volta che un validatore ha completato il procedimento di uscita e supponendo che il conto abbia le credenziali di prelievo, il saldo rimanente sarà <em>then</em> prelevato durante la successiva<a href="#validator-sweeping">pulizia del validatore</a>.
-
+Per i **validatori compounding (Tipo 2)**, le ricompense si accumulano nel saldo effettivo del validatore (fino a 2048 ETH) piuttosto che essere prelevate all'indirizzo di prelievo. I prelievi automatici avvengono solo per i saldi che superano i 2048 ETH. Per prelevare le ricompense al di sotto di questa soglia, devi attivare manualmente un prelievo parziale dal livello di esecuzione.
 </ExpandableCard>
 
 <ExpandableCard title="Posso prelevare un importo personalizzato?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
-I prelievi sono progettati per avvenire automaticamente, trasferendo qualsiasi ETH che non sta contribuendo attivamente allo staking. Ciò include i saldi completi dei conti che hanno completato il procedimento di uscita.
+Per i **validatori legacy (Tipo 1)**, qualsiasi ricompensa di rete in ETH maturata oltre il saldo effettivo di 32 ETH del validatore viene inviata automaticamente all'indirizzo di prelievo. I validatori di Tipo 1 che hanno inviato una transazione di prelievo completo e completato il processo di uscita dallo staking vedono il loro intero saldo in ETH prelevato al loro indirizzo di prelievo. Non è possibile per un validatore di Tipo 1 richiedere manualmente il prelievo di importi specifici di ETH.
 
-Non è possibile richiedere manualmente importi specifici di ETH da prelevare.
+I **validatori compounding (Tipo 2)** possono attivare prelievi parziali di un importo specifico dal livello di esecuzione, a patto che il saldo rimanente del validatore rimanga pari o superiore a 32 ETH. Questo richiede l'invio di una transazione di prelievo parziale e costa gas.
 </ExpandableCard>
 
 <ExpandableCard
-title="Gestisco un validatore. Dove posso trovare ulteriori informazione sull'abilitazione dei prelievi?"
+title="Gestisco un validatore. Dove posso trovare maggiori informazioni sulla gestione del processo di prelievo?"
 eventCategory="FAQ"
-eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
+eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
 
-Gli operatori del validatore dovrebbero visitare la pagina dei <a href="https://launchpad.ethereum.org/withdrawals/">Prelievi del Launchpad di Staking</a>, dove troveranno ulteriori dettagli su come preparare il proprio validatore ai prelievi, le tempistiche degli eventi e ulteriori dettagli sul funzionamento dei prelievi.
+Si raccomanda agli operatori dei validatori di visitare la pagina [Prelievi dello Staking Launchpad](https://launchpad.ethereum.org/withdrawals/) dove troverai maggiori dettagli su come preparare il tuo validatore per i prelievi, le tempistiche degli eventi e maggiori dettagli su come funzionano i prelievi.
 
-Per testare la tua configurazione su una rete di prova, visita il <a href="https://holesky.launchpad.ethereum.org">Launchpad di Staking della rete di prova di Holesky</a> per iniziare.
+Per provare prima la tua configurazione su una testnet, visita l'[Hoodi Testnet Staking Launchpad](https://hoodi.launchpad.ethereum.org) per iniziare.
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Posso riattivare il mio validatore dopo esser uscito, depositando altri ETH?"
+title="Posso riattivare il mio validatore dopo l'uscita depositando più ETH?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-No. Una volta che un validatore è uscito e che il suo intero saldo è stato prelevato, qualsiasi fondo aggiuntivo depositato a quel validatore sarà automaticamente trasferito all'indirizzo di prelievo durante la pulizia successiva del validatore. Per rimettere gli ETH in staking, deve essere abilitato un nuovo validatore.
+No. Una volta che un validatore è uscito e il suo intero saldo è stato prelevato, qualsiasi ETH aggiuntivo depositato su quel validatore verrà automaticamente trasferito all'indirizzo di prelievo durante il successivo controllo dei validatori. Per ricominciare a fare staking usando quegli ETH, devi attivare un nuovo validatore.
+</ExpandableCard>
+
+<ExpandableCard
+title="Qual è la differenza tra validatori legacy e compounding?"
+eventCategory="FAQ"
+eventAction="What is the difference between legacy and compounding validators?"
+eventName="read more">
+I validatori legacy usano credenziali di prelievo di **Tipo 1** (l'indirizzo delle credenziali di prelievo inizia con 0x01) e hanno un saldo effettivo limitato a 32 ETH. Qualsiasi ETH in eccesso ricevuto come ricompensa di rete viene prelevato automaticamente all'indirizzo di prelievo ogni pochi giorni.
+
+I validatori compounding usano credenziali di prelievo di **Tipo 2** (l'indirizzo delle credenziali di prelievo inizia con 0x02) e possono avere un saldo effettivo fino a 2048 ETH. Le ricompense si accumulano nel saldo effettivo del validatore, aumentando il peso del validatore sulla rete e il potenziale di ricevere ricompense future. I prelievi automatici avvengono solo per il saldo che supera i 2048 ETH. Per prelevare ETH al di sotto di questa soglia, deve essere attivato un prelievo parziale manuale dal livello di esecuzione.
+
+Per maggiori dettagli, consulta l'[approfondimento su MaxEB](/roadmap/pectra/maxeb/).
+</ExpandableCard>
+
+<ExpandableCard
+title="Come passare a un validatore compounding?"
+eventCategory="FAQ"
+eventAction="How do I convert to a compounding validator?"
+eventName="read more">
+Puoi convertire le credenziali di prelievo dal Tipo 1 al Tipo 2 usando lo [Staking Launchpad](https://launchpad.ethereum.org/validator-actions). Questa operazione è **irreversibile**: una volta convertite, non puoi tornare alle credenziali di Tipo 1.
+
+Dopo la conversione, puoi anche **consolidare** più validatori in uno solo, combinando i loro saldi in un singolo validatore compounding. Per una guida completa al processo di conversione, ai rischi e agli strumenti di consolidamento, consulta l'[approfondimento su MaxEB](/roadmap/pectra/maxeb/).
+</ExpandableCard>
+
+<ExpandableCard
+title="Quando sono stati abilitati i prelievi dallo staking?"
+eventCategory="FAQ"
+eventAction="When were staking withdrawals enabled?"
+eventName="read more">
+La funzionalità di prelievo è stata originariamente abilitata come parte dell'aggiornamento Shanghai/Capella il **12 aprile 2023**. L'[aggiornamento Pectra](/roadmap/pectra/) (maggio 2025) ha successivamente introdotto i validatori compounding con un saldo effettivo massimo più elevato di 2048 ETH, oltre alle uscite e ai prelievi parziali attivati dal livello di esecuzione.
+
+L'aggiornamento Shanghai/Capella ha permesso di reclamare gli ETH precedentemente messi in staking in normali account Ethereum. Questo ha chiuso il cerchio sulla liquidità dello staking e ha portato Ethereum un passo più vicino nel suo viaggio verso la costruzione di un ecosistema decentralizzato sostenibile, scalabile e sicuro.
+
+- [Maggiori informazioni sulla storia di Ethereum](/ethereum-forks/)
+- [Maggiori informazioni sulla roadmap di Ethereum](/roadmap/)
 </ExpandableCard>
 
 ## Letture consigliate {#further-reading}
 
-- [Prelievi del Launchpad di Staking](https://launchpad.ethereum.org/withdrawals)
-- [EIP-4895: La Beacon Chain spinge i prelievi come operazioni](https://eips.ethereum.org/EIPS/eip-4895)
-- [PEEPanEIP #94: Prelievo di ETH in staking (testing) con Potuz e Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Prelievi push della Beacon Chain come operazioni, con Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
-- [Informazioni sul saldo effettivo del validatore](https://www.attestant.io/posts/understanding-validator-effective-balance/)
+- [Prelievi dello Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
+- [Azioni del validatore dello Staking Launchpad](https://launchpad.ethereum.org/validator-actions)
+- [Approfondimento su MaxEB: compounding e consolidamento](/roadmap/pectra/maxeb/)
+- [EIP-4895: Prelievi push della Beacon Chain come operazioni](https://eips.ethereum.org/EIPS/eip-4895)
+- [PEEPanEIP #94: Prelievo di ETH in staking (Testing) con Potuz e Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
+- [PEEPanEIP#68: EIP-4895: Prelievi push della Beacon Chain come operazioni con Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [Comprendere il saldo effettivo del validatore](https://www.attestant.io/posts/understanding-validator-effective-balance/)

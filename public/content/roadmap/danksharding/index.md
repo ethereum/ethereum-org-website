@@ -9,8 +9,6 @@ summaryPoints:
   - Later, full Danksharding will spread responsibility for verifying data blobs across subsets of nodes, further scaling Ethereum to more than 100,000 transactions per second.
 ---
 
-# Danksharding {#danksharding}
-
 **Danksharding** is how [Ethereum](/) becomes a truly scalable blockchain, but there are several protocol upgrades required to get there. **Proto-Danksharding** is an intermediate step along the way. Both aim to make transactions on Layer 2 as cheap as possible for users and should scale Ethereum to >100,000 transactions per second.
 
 ## What is Proto-Danksharding? {#what-is-protodanksharding}
@@ -57,7 +55,7 @@ If someone knows the random locations used for the commitment, it is easy for th
 
 </ExpandableCard>
 
-<Alert variant="warning" className="mb-8">
+<Alert variant="warning">
   Neither Danksharding nor Proto-Danksharding follow the traditional "sharding" model that aims to split the blockchain into multiple parts. Shard chains are no longer part of the roadmap. Instead, Danksharding uses distributed data sampling across blobs to scale Ethereum. This is much simpler to implement. This model has sometimes been referred to as "data-sharding".
 </Alert>
 

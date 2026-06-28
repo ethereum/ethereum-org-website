@@ -1,161 +1,161 @@
 ---
-title: JSON-RPC 應用程式介面
-description: 一種無狀態、輕量的以太坊用戶端遠端程序呼叫 (RPC) 協定。
+title: JSON-RPC API
+description: "適用於以太坊客戶端的無狀態、輕量級遠端程序呼叫 (RPC) 協定。"
 lang: zh-tw
 ---
 
-為了讓軟體應用程式能夠和以太坊區塊鏈互動（例如：讀取區塊鏈資料，發送交易到網路），必須先連結以太坊節點。
+為了讓軟體應用程式能夠與 [以太坊](/) 區塊鏈互動（無論是讀取區塊鏈資料還是發送交易到網路），它必須連接到一個以太坊節點。
 
-為此，每個[以太坊用戶端](/developers/docs/nodes-and-clients/#execution-clients)都實作 [JSON-RPC 規範](https://github.com/ethereum/execution-apis)，因此無論特定節點或用戶端實作如何，應用程式都可以依賴一組統一的方法。
+為此，每個 [以太坊客戶端](/developers/docs/nodes-and-clients/#execution-clients) 都實作了 [JSON-RPC 規範](https://github.com/ethereum/execution-apis)，因此無論具體的節點或客戶端實作為何，應用程式都可以依賴一組統一的方法。
 
-[JSON-RPC](https://www.jsonrpc.org/specification) 是一種無狀態、輕量級的遠端程序呼叫 (RPC) 協定。 該協定定義了幾種資料結構及其處理規則。 它與傳輸無關，因為這些概念可以在同一進程中、透過通訊端、透過超文字傳輸協定或在許多不同的訊息傳遞環境中使用。 它使用 JSON (RFC 4627) 作為資料格式。
+[JSON-RPC](https://www.jsonrpc.org/specification) 是一種無狀態、輕量級的遠端程序呼叫 (RPC) 協定。它定義了幾種資料結構及其處理規則。它與傳輸方式無關，因為這些概念可以用於同一個行程內、透過 Socket、透過 HTTP，或在許多不同的訊息傳遞環境中。它使用 JSON (RFC 4627) 作為資料格式。
 
-## 用戶端實作 {#client-implementations}
+## 客戶端實作 {#client-implementations}
 
-每個以太坊用戶端在實作 JSON-RPC 規範時可能會使用不同的程式設計語言。 有關特定程式設計語言的更多詳細資料，請參閱各個[用戶端文件](/developers/docs/nodes-and-clients/#execution-clients)。 我們建議檢查每個用戶端的文件以取得最新的應用程式介面支援資訊。
+以太坊客戶端在實作 JSON-RPC 規範時，各自可能會使用不同的程式語言。請參閱個別的[客戶端文件](/developers/docs/nodes-and-clients/#execution-clients)，以了解關於特定程式語言的更多詳細資訊。我們建議查看各個客戶端的文件，以獲取最新的 API 支援資訊。
 
-## 便利程式庫 {#convenience-libraries}
+## 便利函式庫 {#convenience-libraries}
 
-雖然可以選擇透過 JSON-RPC 應用程式介面直接與以太坊用戶端互動，但對於去中心化應用程式開發者來說通常有更簡單的選擇。 許多 [JavaScript](/developers/docs/apis/javascript/#available-libraries) 和[後端應用程式介面](/developers/docs/apis/backend/#available-libraries) 程式庫都是為了在 JSON-RPC 應用程式介面之上提供包裝函式。 借助這些程式庫，開發者可以用自己選擇的程式語言編寫直覺的單行方法，以初始化與以太坊互動的 JSON-RPC 請求（在後台）。
+雖然您可以選擇透過 JSON-RPC API 直接與以太坊客戶端互動，但對於去中心化應用程式 (dapp) 開發者來說，通常有更簡單的選擇。有許多 [JavaScript](/developers/docs/apis/javascript/#available-libraries) 和[後端 API](/developers/docs/apis/backend/#available-libraries) 函式庫在 JSON-RPC API 之上提供封裝。藉由這些函式庫，開發者可以使用他們選擇的程式語言編寫直觀的單行方法，從而在底層初始化與以太坊互動的 JSON-RPC 請求。
 
-## 共識用戶端應用程式介面 {#consensus-clients}
+## 共識客戶端 API {#consensus-clients}
 
-本頁面主要討論以太坊執行用戶端使用的 JSON-RPC 應用程式介面。 然而，共識用戶端也有一個遠端程序呼叫應用程式介面，讓使用者能夠直接從節點查詢有關節點的資訊、請求信標區塊、信標狀態和其他共識相關資訊。 [信標應用程式介面網頁](https://ethereum.github.io/beacon-APIs/#/)上記錄了此應用程式介面。
+本頁面主要探討以太坊執行客戶端所使用的 JSON-RPC API。然而，共識客戶端也有一個 RPC API，允許使用者直接從節點查詢有關節點的資訊、請求信標區塊、信標狀態以及其他與共識相關的資訊。此 API 記錄在 [Beacon API 網頁](https://ethereum.github.io/beacon-APIs/#/)上。
 
-內部應用程式介面也用於節點內的用戶端間通訊 - 也就是說，它讓共識用戶端和執行用戶端能夠交換資料。 這被稱為「引擎應用程式介面」，其規範可在 [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 上取得。
+節點內部的客戶端之間通訊也使用了一個內部 API——也就是說，它使共識客戶端和執行客戶端能夠交換資料。這被稱為「引擎 API (Engine API)」，其規格可在 [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 上取得。
 
-## 執行用戶端規範 {#spec}
+## 執行客戶端規範 {#spec}
 
-[在 GitHub 上閱讀完整的 JSON-RPC 應用程式介面規範](https://github.com/ethereum/execution-apis)。 此應用程式介面記錄在[執行應用程式介面網頁](https://ethereum.github.io/execution-apis/api-documentation/)上，並包含一個檢查器來嘗試所有可用的方法。
+[在 GitHub 上閱讀完整的 JSON-RPC API 規範](https://github.com/ethereum/execution-apis)。此 API 記錄在[執行 API 網頁](https://ethereum.github.io/execution-apis/)上，並包含一個檢查器 (Inspector) 以供試用所有可用的方法。
 
 ## 慣例 {#conventions}
 
 ### 十六進位值編碼 {#hex-encoding}
 
-透過 JSON 傳遞兩種關鍵資料類型：未格式化的位元組陣列和數量。 兩者都以十六進位編碼傳遞，但對格式有不同的要求。
+有兩種關鍵資料類型透過 JSON 傳遞：未格式化的位元組陣列和數量。兩者都以十六進位編碼傳遞，但格式化要求不同。
 
 #### 數量 {#quantities-encoding}
 
-編碼數量（整數、數字）時：編碼為十六進位，前綴為「0x」，最緊湊的表示形式（輕微例外：零應表示為「0x0」）。
+編碼數量（整數、數字）時：編碼為十六進位，加上「0x」前綴，使用最精簡的表示法（小例外：零應表示為「0x0」）。
 
-下面有些範例：
+以下是一些範例：
 
-- 0x41（在十進位中是 65）
-- 0x400（在十進位中是 1024）
-- 錯誤：0x（應始終至少有一位數字，零是「0x0」）
-- 錯誤：0x0400（不允許有前導零）
-- 錯誤：ff（必須有前綴 0x）
+- 0x41（十進位的 65）
+- 0x400（十進位的 1024）
+- 錯誤：0x（應始終至少有一位數 - 零為「0x0」）
+- 錯誤：0x0400（不允許前導零）
+- 錯誤：ff（必須加上 0x 前綴）
 
-### 無格式資料 {#unformatted-data-encoding}
+### 未格式化資料 {#unformatted-data-encoding}
 
-編碼無格式資料（位元組陣列、帳戶位址、雜湊值、位元組碼陣列）時：編碼為十六進位，前綴為「0x」，每個位元組兩個十六進位數字。
+編碼未格式化資料（位元組陣列、帳戶地址、雜湊、位元組碼陣列）時：編碼為十六進位，加上「0x」前綴，每個位元組兩個十六進位數字。
 
-這裡有些範例：
+以下是一些範例：
 
 - 0x41（大小為 1，「A」）
 - 0x004200（大小為 3，「0B0」）
-- 0x（大小為 0，""）
-- 錯誤：0xf0f0f（位數必須為偶數）
-- 錯誤：004200（必須以 0x 為前綴）
+- 0x（大小為 0，「」）
+- 錯誤：0xf0f0f（必須是偶數位數）
+- 錯誤：004200（必須加上 0x 前綴）
 
-### 預設區塊參數 {#default-block}
+### 區塊參數 {#block-parameter}
 
-下列方法有一個額外的預設區塊參數：
+以下方法具有區塊參數：
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getCode](#eth_getcode)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_call](#eth_call)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getCode](#eth-getcode)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_call](#eth-call)
 
-當發出對以太坊狀態進行動作的請求時，最後一個預設區塊參數決定了區塊的高度。
+當發出查詢以太坊狀態的請求時，提供的區塊參數決定了區塊的高度。
 
-defaultBlock 參數可以使用以下選項：
+區塊參數有以下選項：
 
-- `HEX String` - 表示整數區塊編號
-- `String "earliest"` 表示最早的/創世區塊
-- `String "latest"` - 表示最新提議的區塊
-- `String "safe"` - 表示最新安全的頭部區塊
-- `String "finalized"` - 表示最新最終確定的區塊
-- `String "pending"` - 表示未決的狀態/交易
+- `HEX String` - 整數區塊號碼
+- `String "earliest"` 代表最早／創世區塊
+- `String "latest"` - 代表最新提議的區塊
+- `String "safe"` - 代表最新安全的頭部區塊
+- `String "finalized"` - 代表最新已定案的區塊
+- `String "pending"` - 代表待處理的狀態／交易
 
-## 範例
+## 範例 {#examples}
 
-在此頁面上，我們提供了有關如何透過命令列工具 [curl](https://curl.se) 使用各 JSON_RPC 應用程式介面端點的範例。 這些單獨的端點範例位於下面的 [Curl 範例](#curl-examples)部分。 在頁面下方，我們還提供了一個使用 Geth 節點、JSON_RPC 應用程式介面和 curl 來編譯和部署智慧型合約的[端到端範例](#usage-example)。
+在此頁面中，我們提供了如何使用命令列工具 [curl](https://curl.se) 來使用個別 JSON_RPC API 端點的範例。這些個別端點的範例可以在下方的 [Curl 範例](#curl-examples) 章節中找到。在頁面更下方，我們還提供了一個[端到端範例](#usage-example)，示範如何使用 Geth 節點、JSON_RPC API 以及 curl 來編譯與部署智能合約。
 
 ## Curl 範例 {#curl-examples}
 
-下面提供了使用 JSON_RPC 應用程式介面向以太坊節點發出 [curl](https://curl.se) 請求的範例。 每個範例包含對特定端點的描述、其參數、傳回類型，以及應該如何使用的可行範例。
+以下提供透過向以太坊節點發送 [curl](https://curl.se) 請求來使用 JSON_RPC API 的範例。每個範例都包含特定端點的描述、其參數、回傳類型，以及如何使用的實際操作範例。
 
-curl 請求可能會傳回與內容類型相關的錯誤訊息。 這是因為 `--data` 選項將內容類型設定為 `application/x-www-form-urlencoded`。 如果你的節點確實抱怨這一點，請手動在呼叫程式開始處放置 `-H "Content-Type: application/json"` 來設定標頭。 這些範例也不包括 URL/IP 和通訊埠組合，該組合必須是給 curl 的最後一個引數（例如 `127.0.0.1:8545`）。 完整的 curl 請求包含採用以下形式的附加資料：
+curl 請求可能會回傳與內容類型相關的錯誤訊息。這是因為 `--data` 選項會將內容類型設定為 `application/x-www-form-urlencoded`。如果您的節點出現此錯誤，請在呼叫的開頭加上 `-H "Content-Type: application/json"` 來手動設定標頭。這些範例也沒有包含 URL/IP 與通訊埠組合，這必須是提供給 curl 的最後一個參數（例如：`127.0.0.1:8545`）。包含這些額外資料的完整 curl 請求格式如下：
 
 ```shell
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## Gossip、State、History {#gossip-state-history}
+## Gossip、狀態與歷史 {#gossip-state-history}
 
-少數重要的 JSON-RPC 方法需要來自以太坊網路的資料，這些資料分屬於三個種類：_Gossip、State 和 History_。 利用這些章節中的連結移動至每個方法，或利用目錄探索完整的方法清單。
+少數幾個核心的 JSON-RPC 方法需要來自以太坊網路的資料，並可清楚分為三個主要類別：_Gossip、狀態與歷史_。使用這些章節中的連結跳轉至各個方法，或使用目錄來探索完整的方法列表。
 
 ### Gossip 方法 {#gossip-methods}
 
-> 這些方法用於追蹤鏈頭。 這就是交易如何在網路中傳播、進入區塊以及用戶端如何發現新區塊的方式。
+> 這些方法會追蹤鏈的頂端。這就是交易在網路中傳播、被納入區塊，以及客戶端發現新區塊的方式。
 
-- [eth_blockNumber](#eth_blocknumber)
-- [eth_sendRawTransaction](#eth_sendrawtransaction)
+- [eth_blockNumber](#eth-blocknumber)
+- [eth_sendRawTransaction](#eth-sendrawtransaction)
 
-### State 方法 {#state_methods}
+### 狀態方法 {#state-methods}
 
-> 報告所有已存儲資料的目前狀態的方法。 「狀態」像是一大塊可分享的隨機存取記憶體，包含帳戶餘額、合約資料和燃料預估。
+> 報告所有已儲存資料當前狀態的方法。「狀態」就像一塊巨大的共享記憶體 (RAM)，包含帳戶餘額、合約資料以及燃料估算。
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getCode](#eth_getcode)
-- [eth_call](#eth_call)
-- [eth_estimateGas](#eth_estimategas)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getCode](#eth-getcode)
+- [eth_call](#eth-call)
+- [eth_estimateGas](#eth-estimategas)
 
-### History 方法 {#history_methods}
+### 歷史方法 {#history-methods}
 
-> 取得包括創世區塊在內的每一區塊的歷史記錄。 這像一個大型只能附加資料的檔案，包括所有區塊頭、區塊體、叔塊和交易收據。
+> 獲取追溯至創世區塊的每個區塊歷史紀錄。這就像一個巨大的僅限附加 (append-only) 檔案，包含所有區塊標頭、區塊主體、叔區塊以及交易收據。
 
-- [eth_getBlockTransactionCountByHash](#eth_getblocktransactioncountbyhash)
-- [eth_getBlockTransactionCountByNumber](#eth_getblocktransactioncountbynumber)
-- [eth_getUncleCountByBlockHash](#eth_getunclecountbyblockhash)
-- [eth_getUncleCountByBlockNumber](#eth_getunclecountbyblocknumber)
-- [eth_getBlockByHash](#eth_getblockbyhash)
-- [eth_getBlockByNumber](#eth_getblockbynumber)
-- [eth_getTransactionByHash](#eth_gettransactionbyhash)
-- [eth_getTransactionByBlockHashAndIndex](#eth_gettransactionbyblockhashandindex)
-- [eth_getTransactionByBlockNumberAndIndex](#eth_gettransactionbyblocknumberandindex)
-- [eth_getTransactionReceipt](#eth_gettransactionreceipt)
-- [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
-- [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+- [eth_getBlockTransactionCountByHash](#eth-getblocktransactioncountbyhash)
+- [eth_getBlockTransactionCountByNumber](#eth-getblocktransactioncountbynumber)
+- [eth_getUncleCountByBlockHash](#eth-getunclecountbyblockhash)
+- [eth_getUncleCountByBlockNumber](#eth-getunclecountbyblocknumber)
+- [eth_getBlockByHash](#eth-getblockbyhash)
+- [eth_getBlockByNumber](#eth-getblockbynumber)
+- [eth_getTransactionByHash](#eth-gettransactionbyhash)
+- [eth_getTransactionByBlockHashAndIndex](#eth-gettransactionbyblockhashandindex)
+- [eth_getTransactionByBlockNumberAndIndex](#eth-gettransactionbyblocknumberandindex)
+- [eth_getTransactionReceipt](#eth-gettransactionreceipt)
+- [eth_getUncleByBlockHashAndIndex](#eth-getunclebyblockhashandindex)
+- [eth_getUncleByBlockNumberAndIndex](#eth-getunclebyblocknumberandindex)
 
-## JSON-RPC 應用程式介面訓練場
+## JSON-RPC API 遊樂場 {#json-rpc-api-playground}
 
-你可以使用[訓練場工具](https://ethereum-json-rpc.com)去發掘和試用應用程式介面方法。 訓練場也顯示不同的節點提供者支援的方法和網路。
+您可以使用[遊樂場工具](https://ethereum-json-rpc.com)來探索並試用 API 方法。它還會向您顯示各種節點供應商支援哪些方法與網路。
 
-## JSON-RPC 應用程式介面方法 {#json-rpc-methods}
+## JSON-RPC API 方法 {#json-rpc-methods}
 
-### web3_clientVersion {#web3_clientversion}
+### web3_clientVersion {#web3-clientversion}
 
-傳回目前用戶端版本。
+回傳目前的客戶端版本。
 
 **參數**
 
 無
 
-**傳回**
+**回傳**
 
-`String` - 目前用戶端版本
+`String` - 目前的客戶端版本
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'
-// Result
+// 結果
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -163,9 +163,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 {#web3_sha3}
+### web3_sha3 {#web3-sha3}
 
-傳回給定資料的 Keccak-256（_不是_ 標準化的 SHA3-256）。
+回傳給定資料的 Keccak-256（_不是_ 標準化的 SHA3-256）。
 
 **參數**
 
@@ -175,16 +175,16 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 params: ["0x68656c6c6f20776f726c64"]
 ```
 
-**返回**
+**回傳值**
 
 `DATA` - 給定字串的 SHA3 結果。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c6f20776f726c64"],"id":64}'
-// Result
+// 結果
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -192,30 +192,30 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version {#net_version}
+### net_version {#net-version}
 
-傳回目前網路 ID。
+回傳目前的網路 ID。
 
 **參數**
 
 無
 
-**返回**
+**回傳值**
 
-`String` - 目前網路 ID。
+`String` - 目前的網路 ID。
 
-目前網路 ID 的完整清單可在 [chainlist.org](https://chainlist.org) 上找到。 一些常用的如下：
+目前網路 ID 的完整清單可在 [chainlist.org](https://chainlist.org) 取得。一些常見的包括：
 
 - `1`：以太坊主網
 - `11155111`：Sepolia 測試網
-- `17000`：Hoodi 測試網
+- `560048`：Hoodi 測試網
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67}'
-// Result
+// 結果
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -223,24 +223,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_listening}
+### net_listening {#net-listening}
 
-如果用戶端正在主動偵聽網路連結，則傳回 `true`。
+如果客戶端正在主動監聽網路連線，則回傳 `true`。
 
 **參數**
 
 無
 
-**返回**
+**回傳值**
 
-`Boolean` - 偵聽時為 `true`，否則為 `false`。
+`Boolean` - 監聽時為 `true`，否則為 `false`。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":67}'
-// Result
+// 結果
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -248,24 +248,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_peercount}
+### net_peerCount {#net-peercount}
 
-傳回目前連線到用戶端的對等點數量。
+回傳目前連接到客戶端的對等節點數量。
 
 **參數**
 
 無
 
-**返回**
+**回傳值**
 
-`QUANTITY` - 表示連結的對等點數量的整數。
+`QUANTITY` - 已連接對等節點數量的整數。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":74}'
-// Result
+// 結果
 {
   "id":74,
   "jsonrpc": "2.0",
@@ -273,24 +273,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 }
 ```
 
-### eth_protocolVersion {#eth_protocolversion}
+### eth_protocolVersion {#eth-protocolversion}
 
-傳回目前的以太坊協定版本。 請注意此方法[在 Geth 中不可用](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924)。
+回傳目前的以太坊協定版本。請注意，此方法[在 Geth 中無法使用](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924)。
 
 **參數**
 
 無
 
-**返回**
+**回傳**
 
 `String` - 目前的以太坊協定版本
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":67}'
-// Result
+// 結果
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -298,25 +298,29 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing {#eth_syncing}
+### eth_syncing {#eth-syncing}
 
-傳回一個物件，其中包含有關同步狀態的資料或傳回 `false`。
+傳回包含同步狀態資料的物件，或 `false`。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_syncing">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
 無
 
-**返回**
+**傳回值**
 
-準確的傳回資料因用戶端實作而異。 當節點未同步時，所有用戶端傳回 `False`，並且所有用戶端傳回下列欄位。
+確切的傳回資料因客戶端實作而異。當節點未在同步時，所有客戶端都會傳回 `False`，且所有客戶端都會傳回以下欄位。
 
-`Object|Boolean`，具有同步狀態資料的物件，或不同步時為 `FALSE`：
+`Object|Boolean`，包含同步狀態資料的物件，或在未同步時傳回 `FALSE`：
 
-- `startingBlock`: `QUANTITY` - 匯入之開始區塊（僅在同步到達其頭部後才會重設）
-- `currentBlock`: `QUANTITY` - 目前區塊，與 eth_blockNumber 相同
+- `startingBlock`: `QUANTITY` - 開始匯入的區塊（只有在同步到達其頂端後才會重設）
+- `currentBlock`: `QUANTITY` - 目前的區塊，與 eth_blockNumber 相同
 - `highestBlock`: `QUANTITY` - 估計的最高區塊
 
-然而，個別用戶端也可以提供額外的資料。 例如 Geth 傳回如下資料：
+然而，個別客戶端也可能提供額外的資料。例如，Geth 會傳回以下內容：
 
 ```json
 {
@@ -341,7 +345,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-而 Besu 傳回：
+而貝蘇 (Besu) 則傳回：
 
 ```json
 {
@@ -357,14 +361,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-請參閱特定用戶端的文檔以獲得更多詳細資料。
+請參閱您特定客戶端的說明文件以了解更多詳細資訊。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -374,7 +378,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
     highestBlock: '0x454'
   }
 }
-// Or when not syncing
+// 或未同步時
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -382,26 +386,30 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase {#eth_coinbase}
+### eth_coinbase {#eth-coinbase}
 
-傳回用戶端的 coinbase 地址。
+回傳客戶端 Coinbase 地址。
 
-> **注意：**此方法已於 **v1.14.0** 棄用並不再支援。 嘗試採用此方法將會出現「不支援此方法」的錯誤。
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_coinbase">
+  在測試區中嘗試端點
+</ButtonLink>
+
+> **注意：** 此方法自 **v1.14.0** 起已棄用，且不再受到支援。嘗試使用此方法將導致「Method not supported」錯誤。
 
 **參數**
 
 無
 
-**傳回**
+**回傳值**
 
-`DATA`，20 位元組 - 目前 coinbase 地址。
+`DATA`，20 個位元組 - 目前的 Coinbase 地址。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":64}'
-// Result
+// 結果
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -409,24 +417,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId {#eth_chainId}
+### eth_chainId {#eth-chainid}
 
-傳回用來簽署重新執行攻擊保護交易的區塊鏈 ID。
+回傳用於簽署防重放交易的鏈 ID。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_chainId">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
 無
 
-**傳回**
+**回傳值**
 
-`chainId`，十六進位數值字串，表示目前區塊鏈 ID 的整數值。
+`chainId`，以字串表示的十六進位值，代表目前鏈 ID 的整數。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67}'
-// Result
+// 結果
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -434,22 +446,26 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining {#eth_mining}
+### eth_mining {#eth-mining}
 
-如果用戶端正活躍地開採新區塊，則傳回 `true`。 這方法只對工作量證明網路傳回 `true` 且自[合併](/roadmap/merge/)後這方法不可用在某些用戶端。
+如果客戶端正在積極挖礦產生新區塊，則回傳 `true`。這只能在工作量證明網路中回傳 `true`，且自[合併](/roadmap/merge/)以來，在某些客戶端中可能無法使用。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_mining">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
 無
 
-**傳回**
+**回傳值**
 
-`Boolean` - 如果用戶端正在挖礦，則傳回 `true`，否則傳回 `false`。
+`Boolean` - 如果客戶端正在挖礦則回傳 `true`，否則回傳 `false`。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}'
 //
 {
@@ -459,24 +475,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate {#eth_hashrate}
+### eth_hashrate {#eth-hashrate}
 
-傳回正在挖礦的節點每秒的雜湊值數量。 這方法只對工作量證明網路傳回 `true` 且自[合併](/roadmap/merge/)後這方法不可用在某些用戶端。
+回傳節點挖礦時每秒的雜湊次數。這只能在工作量證明網路中回傳 `true`，且自[合併](/roadmap/merge/)以來，在某些客戶端中可能無法使用。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_hashrate">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
 無
 
-**傳回**
+**回傳值**
 
-`QUANTITY` - 每秒的雜湊數。
+`QUANTITY` - 每秒的雜湊次數。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":71}'
-// Result
+// 結果
 {
   "id":71,
   "jsonrpc": "2.0",
@@ -484,24 +504,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice {#eth_gasprice}
+### eth_gasPrice {#eth-gasprice}
 
-傳回預估的目前燃料價格，以 wei 為單位。 例如：Besu 用戶端檢查最後面 100 個區塊並預設傳回燃料單價中位數。
+回傳以 Wei 為單位的當前每單位 Gas 價格估算值。例如，貝蘇客戶端預設會檢查過去 100 個區塊，並回傳 Gas 單位價格的中位數。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
 無
 
-**傳回**
+**回傳值**
 
-`QUANTITY` - 表示目前燃料價格的整數，以 wei 為單位。
+`QUANTITY` - 以 Wei 為單位的當前 Gas 價格整數。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
-// Result
+// 結果
 {
   "id":73,
   "jsonrpc": "2.0",
@@ -509,24 +533,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
-### eth_accounts {#eth_accounts}
+### eth_accounts {#eth-accounts}
 
-傳回用戶端擁有的地址清單。
+回傳由客戶端擁有的地址列表。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_accounts">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
 無
 
-**傳回**
+**回傳**
 
-`Array of DATA`，20 位元組 - 用戶端擁有的地址。
+`Array of DATA`，20 位元組 - 由客戶端擁有的地址。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -534,24 +562,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber {#eth_blocknumber}
+### eth_blockNumber {#eth-blocknumber}
 
-傳回最近的區塊編號。
+回傳最新區塊的編號。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_blockNumber">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
 無
 
-**傳回**
+**回傳值**
 
-`QUANTITY` - 表示用戶端目前所在區塊編號的整數。
+`QUANTITY` - 客戶端目前所在區塊編號的整數。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}'
-// Result
+// 結果
 {
   "id":83,
   "jsonrpc": "2.0",
@@ -559,29 +591,33 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 }
 ```
 
-### eth_getBalance {#eth_getbalance}
+### eth_getBalance {#eth-getbalance}
 
-傳回給定地址的帳戶餘額。
+回傳指定地址帳戶的餘額。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBalance">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
 1. `DATA`，20 位元組 - 要檢查餘額的地址。
-2. `QUANTITY|TAG` - 整數區塊編號，或字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，請參閱[預設區塊參數](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - 整數區塊號碼，或字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，請參閱[區塊參數](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 ```
 
-**傳回**
+**回傳值**
 
-`QUANTITY` - 表示目前餘額的整數，以 wei 為單位。
+`QUANTITY` - 目前餘額的整數，單位為 Wei。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"],"id":1}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -589,47 +625,52 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 }
 ```
 
-### eth_getStorageAt {#eth_getstorageat}
+### eth_getStorageAt {#eth-getstorageat}
 
-從給定地址的存儲位置傳回值。
+傳回給定地址中儲存位置的值。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
-1. `DATA`，20 位元組 - 存儲地址。
-2. `QUANTITY` - 表示存儲中的位置的整數。
-3. `QUANTITY|TAG` - 整數區塊編號，或字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`，請參閱[預設區塊參數](/developers/docs/apis/json-rpc/#default-block)
+1. `DATA`，20 位元組 - 儲存的地址。
+2. `QUANTITY` - 儲存位置的整數。
+3. `QUANTITY|TAG` - 整數區塊號碼，或是字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`，請參閱[區塊參數](/developers/docs/apis/json-rpc/#block-parameter)
 
-**傳回**
+**傳回值**
 
-`DATA` - 此存儲位置的值。
+`DATA` - 該儲存位置的值。
 
-**範例** 正確的位置計算取決於要擷取的存儲。 考慮透過地址 `0x391694e7e0b0cce554cb130d723a9d27458f9298` 部署在 `0x295a70b2de5e3953354a6a8344e616ed314d7251` 的以下合約。
+**範例**
+計算正確的位置取決於要擷取的儲存內容。考慮以下由地址 `0x391694e7e0b0cce554cb130d723a9d27458f9298` 部署在 `0x295a70b2de5e3953354a6a8344e616ed314d7251` 的合約。
 
 ```
 contract Storage {
     uint pos0;
     mapping(address => uint) pos1;
-    function Storage() {
+    constructor() {
         pos0 = 1234;
         pos1[msg.sender] = 5678;
     }
 }
 ```
 
-擷取 pos0 的值很簡單。
+擷取 pos0 的值很簡單：
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
 ```
 
-擷取對應的元素較困難。 對應中元素位置是依照下列方式計算的：
+擷取映射 (map) 的元素比較困難。映射中元素的位置計算方式如下：
 
 ```js
 keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
-這意味著要擷取 pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] 處的存儲，我們需要以下列方式計算位置：
+這表示要擷取 pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] 上的儲存內容，我們需要使用以下方式計算位置：
 
 ```js
 keccak(
@@ -640,7 +681,7 @@ keccak(
 )
 ```
 
-可以使用 web3 程式庫的 Geth 控制台進行計算：
+可以使用 Web3 函式庫隨附的 geth 主控台來進行計算：
 
 ```js
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -649,39 +690,43 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-現在擷取存儲：
+現在來擷取儲存內容：
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount {#eth_gettransactioncount}
+### eth_getTransactionCount {#eth-gettransactioncount}
 
-傳回從一個地址_發送_的交易數量。
+傳回從某個地址_發送_的交易數量。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionCount">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
 1. `DATA`，20 位元組 - 地址。
-2. `QUANTITY|TAG` - 整數區塊編號，或字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，請參閱[預設區塊參數](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - 整數區塊號碼，或是字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，請參閱[區塊參數](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
   "0x407d73d8a49eeb85d32cf465507dd71d507100c1",
-  "latest", // state at the latest block
+  "latest", // 最新區塊的狀態
 ]
 ```
 
-**傳回**
+**傳回值**
 
-`QUANTITY` - 表示從該地址發送的交易數量的整數。
+`QUANTITY` - 整數，表示從此地址發送的交易數量。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1","latest"],"id":1}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -689,9 +734,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 }
 ```
 
-### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
+### eth_getBlockTransactionCountByHash {#eth-getblocktransactioncountbyhash}
 
-傳回區塊中從符合給定區塊雜湊值的交易數量。
+回傳符合給定區塊雜湊值的區塊中的交易數量。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByHash">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
@@ -701,9 +750,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 ```
 
-**傳回**
+**回傳值**
 
-`QUANTITY` - 表示該區塊中交易數量的整數。
+`QUANTITY` - 整數，表示此區塊中的交易數量。
 
 **範例**
 
@@ -718,13 +767,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 }
 ```
 
-### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
+### eth_getBlockTransactionCountByNumber {#eth-getblocktransactioncountbynumber}
 
-傳回與給定區塊編號相符的區塊中的交易數量。
+傳回符合給定區塊編號的區塊中的交易數量。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
-1. `QUANTITY|TAG` - 整數區塊編號，或字串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，如[預設區塊參數](/developers/docs/apis/json-rpc/#default-block)所示。
+1. `QUANTITY|TAG` - 區塊編號的整數，或是字串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，如同 [區塊參數](/developers/docs/apis/json-rpc/#block-parameter)。
 
 ```js
 params: [
@@ -732,9 +785,9 @@ params: [
 ]
 ```
 
-**傳回**
+**回傳值**
 
-`QUANTITY` - 表示該區塊中交易數量的整數。
+`QUANTITY` - 此區塊中交易數量的整數。
 
 **範例**
 
@@ -749,9 +802,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 }
 ```
 
-### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
+### eth_getUncleCountByBlockHash {#eth-getunclecountbyblockhash}
 
-傳回區塊中符合給定區塊雜湊值的叔塊數量。
+回傳符合給定區塊雜湊值的區塊中，其叔塊的數量。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
@@ -761,9 +818,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 ```
 
-**傳回**
+**回傳值**
 
-`QUANTITY` - 表示該區塊中叔塊數量的整數。
+`QUANTITY` - 整數，表示此區塊中的叔塊數量。
 
 **範例**
 
@@ -778,13 +835,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 }
 ```
 
-### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
+### eth_getUncleCountByBlockNumber {#eth-getunclecountbyblocknumber}
 
-傳回區塊中符合給定區塊編號的叔塊數量。
+回傳符合給定區塊編號的區塊中的叔塊數量。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockNumber">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
-1. `QUANTITY|TAG` - 整數區塊編號，或字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，請參閱[預設區塊參數](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - 區塊編號的整數，或是字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，請參閱[區塊參數](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -792,9 +853,9 @@ params: [
 ]
 ```
 
-**傳回**
+**回傳值**
 
-`QUANTITY` - 表示該區塊中叔塊數量的整數。
+`QUANTITY` - 該區塊中叔塊數量的整數。
 
 **範例**
 
@@ -809,14 +870,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 }
 ```
 
-### eth_getCode {#eth_getcode}
+### eth_getCode {#eth-getcode}
 
-傳回給定地址的程式碼。
+回傳給定地址的程式碼。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getCode">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
 1. `DATA`，20 位元組 - 地址
-2. `QUANTITY|TAG` - 整數區塊編號，或字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，請參閱[預設區塊參數](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - 整數區塊編號，或字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，請參閱[區塊參數](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -825,7 +890,7 @@ params: [
 ]
 ```
 
-**傳回**
+**回傳值**
 
 `DATA` - 來自給定地址的程式碼。
 
@@ -842,29 +907,29 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 }
 ```
 
-### eth_sign {#eth_sign}
+### eth_sign {#eth-sign}
 
-Sign 方法按以下方式計算以太坊特定簽章：`sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`。
+sign 方法計算以太坊特定的簽章，使用：`sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`。
 
-透過在訊息中加入前綴，可以將計算出的簽章識別為以太坊特定簽章。 這可以防止濫用，即惡意去中心化應用程式簽署任意資料（例如交易）並使用簽章來冒充受害者。
+透過在訊息中加入前綴，可讓計算出的簽章被識別為以太坊特定的簽章。這可以防止濫用，避免惡意的去中心化應用程式 (dapp) 簽署任意資料（例如：交易），並使用該簽章來冒充受害者。
 
-注意：要簽章的地址必須解鎖。
+注意：用於簽署的地址必須處於解鎖狀態。
 
 **參數**
 
 1. `DATA`，20 位元組 - 地址
-2. `DATA`，N 位元組 - 要簽署的訊息。
+2. `DATA`，N 位元組 - 要簽署的訊息
 
-**傳回**
+**回傳值**
 
 `DATA`：簽章
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d370f73ec7d8a03e965129118dc8f5bf83", "0xdeadbeaf"],"id":1}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -872,33 +937,33 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction {#eth_signtransaction}
+### eth_signTransaction {#eth-signtransaction}
 
-簽署交易，稍後可使用 [eth_sendRawTransaction](#eth_sendrawtransaction) 將交易提交到網路。
+簽署一筆交易，該交易稍後可以使用 [eth_sendRawTransaction](#eth-sendrawtransaction) 提交至網路。
 
 **參數**
 
 1. `Object` - 交易物件
 
 - `type`:
-- `from`: `DATA`，20 位元組 - 發送交易的地址。
-- `to`: `DATA` 20 位元組 -（建立新合約時可選）交易指向的地址。
-- `gas`: `QUANTITY` -（可選，預設：90000）表示為交易執行提供的燃料的整數。 將傳回未使用的燃料。
-- `gasPrice`: `QUANTITY` -（可選，預設：尚未決定）表示每次支付燃料時的燃料價格的整數（單位為 Wei）。
-- `value`: `QUANTITY` -（可選）表示與此交易一起傳送的值的整數（單位為 Wei）。
-- `data`: `DATA` - 合約的編譯程式碼，或叫用的方法簽章和編碼參數的雜湊。
-- `nonce`: `QUANTITY` -（可選）表示隨機數的整數。 這允許覆寫你自己的使用相同隨機數的待處理交易。
+- `from`: `DATA`, 20 位元組 - 發送交易的地址。
+- `to`: `DATA`, 20 位元組 - （建立新合約時為選填）交易指向的地址。
+- `gas`: `QUANTITY` - （選填，預設值：90000）為執行交易提供的燃料整數。它將退回未使用的燃料。
+- `gasPrice`: `QUANTITY` - （選填，預設值：待定）每個支付的燃料所使用的 Gas 價格整數，單位為 Wei。
+- `value`: `QUANTITY` - （選填）隨此交易發送的價值整數，單位為 Wei。
+- `data`: `DATA` - 合約的編譯程式碼，或被呼叫方法簽章與編碼後參數的雜湊值。
+- `nonce`: `QUANTITY` - （選填）隨機數的整數。這允許覆寫您自己使用相同隨機數的待處理交易。
 
-**傳回**
+**回傳值**
 
-`DATA`，特定帳戶簽署的遞迴長度前綴編碼的交易物件。
+`DATA`，由指定帳戶簽署、經 RLP 編碼的交易物件。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","params": [{"data":"0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675","from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155","gas": "0x76c0","gasPrice": "0x9184e72a000","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","value": "0x9184e72a"}]}'
-// Result
+// 結果
 {
     "id": 1,
     "jsonrpc": "2.0",
@@ -906,21 +971,21 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction {#eth_sendtransaction}
+### eth_sendTransaction {#eth-sendtransaction}
 
-如果資料欄位包含程式碼，則建立新的訊息呼叫交易或建立合約，並使用 `from` 中指定的帳戶對其進行簽署。
+創建新的訊息呼叫交易或合約創建（如果資料欄位包含程式碼），並使用 `from` 中指定的帳戶對其進行簽署。
 
 **參數**
 
 1. `Object` - 交易物件
 
 - `from`: `DATA`，20 位元組 - 發送交易的地址。
-- `to`: `DATA` 20 位元組 -（建立新合約時可選）交易指向的地址。
-- `gas`: `QUANTITY` -（可選，預設：90000）表示為交易執行提供的燃料的整數。 將傳回未使用的燃料。
-- `gasPrice`: `QUANTITY` -（可選，預設：尚未決定）表示每次支付燃料時的燃料價格的整數。
-- `value`: `QUANTITY` -（可選）表示與此交易一起傳送的值的整數。
-- `input`: `DATA` - 合約的編譯程式碼，或叫用的方法簽章和編碼參數的雜湊值。
-- `nonce`: `QUANTITY` -（可選）表示隨機數的整數。 這允許覆寫你自己的使用相同隨機數的待處理交易。
+- `to`: `DATA`，20 位元組 - （創建新合約時為選填）交易指向的地址。
+- `gas`: `QUANTITY` - （選填，預設值：90000）為執行交易提供的燃料整數。它將退回未使用的燃料。
+- `gasPrice`: `QUANTITY` - （選填，預設值：待定）每個支付的燃料所使用的 gasPrice 整數。
+- `value`: `QUANTITY` - （選填）與此交易一起發送的金額整數。
+- `input`: `DATA` - 合約的編譯程式碼，或是被呼叫方法簽章與編碼後參數的雜湊值。
+- `nonce`: `QUANTITY` - （選填）隨機數的整數。這允許覆寫您自己使用相同隨機數的待處理交易。
 
 ```js
 params: [
@@ -936,18 +1001,18 @@ params: [
 ]
 ```
 
-**傳回**
+**回傳值**
 
-`DATA`，32 位元組 - 交易雜湊值，如果交易尚未可用則為零雜湊值。
+`DATA`，32 位元組 - 交易雜湊值，如果交易尚不可用，則為零雜湊。
 
-建立合約時，在區塊中提議交易後，使用 [eth_getTransactionReceipt](#eth_gettransactionreceipt) 取得合約地址。
+當您創建合約時，請在交易被提議到區塊後，使用 [eth_getTransactionReceipt](#eth-gettransactionreceipt) 來取得合約地址。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{see above}],"id":1}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -955,13 +1020,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction {#eth_sendrawtransaction}
+### eth_sendRawTransaction {#eth-sendrawtransaction}
 
-建立新的訊息呼叫交易或為簽署的交易建立合約。
+為已簽署的交易建立新的訊息呼叫交易或合約創建。
 
 **參數**
 
-1. `DATA`，簽署的交易資料。
+1. `DATA`，已簽署的交易資料。
 
 ```js
 params: [
@@ -969,18 +1034,18 @@ params: [
 ]
 ```
 
-**傳回**
+**回傳值**
 
-`DATA`，32 位元組 - 交易雜湊值，如果交易尚未可用則為零雜湊值。
+`DATA`，32 位元組 - 交易雜湊值，如果交易尚未可用，則為零雜湊值。
 
-建立合約時，在區塊中提議交易後，使用 [eth_getTransactionReceipt](#eth_gettransactionreceipt) 取得合約地址。
+當你創建合約時，在交易被提議到區塊後，請使用 [eth_getTransactionReceipt](#eth-gettransactionreceipt) 來取得合約地址。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{see above}],"id":1}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -988,33 +1053,37 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call {#eth_call}
+### eth_call {#eth-call}
 
-立即執行一個新的訊息呼叫，但不在區塊鏈上建立交易。 通常用於執行唯讀智慧型合約函式，例如 ERC-20 合約的 ` balanceOf`。
+立即執行新的訊息呼叫，而不在區塊鏈上建立交易。通常用於執行唯讀的智能合約函式，例如 ERC-20 合約的 `balanceOf`。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_call">
+  在測試區中嘗試端點
+</ButtonLink>
 
 **參數**
 
 1. `Object` - 交易呼叫物件
 
-- `from`: `DATA`，20 位元組 -（可選）發送交易的地址。
-- `to`: `DATA`，20 位元組 - 交易指向的地址。
-- `gas`: `QUANTITY` -（可選）表示為交易執行提供的燃料的整數。 eth_call 消耗零燃料，但某些執行可能需要此參數。
-- `gasPrice`: `QUANTITY` -（可選）表示每次支付燃料時的燃料價格的整數
-- `value`: `QUANTITY` -（可選）表示與此交易一起傳送的值的整數
-- `input`: `DATA` -（可選）方法簽章和編碼參數的雜湊值。 詳細資料請參考 [Solidity 文檔中的以太坊合約應用程式二進位介面](https://docs.soliditylang.org/en/latest/abi-spec.html)。
+- `from`: `DATA`，20 Bytes - （選填）發送交易的地址。
+- `to`: `DATA`，20 Bytes - 交易指向的地址。
+- `gas`: `QUANTITY` - （選填）為交易執行所提供燃料的整數。eth_call 消耗零燃料，但某些執行可能需要此參數。
+- `gasPrice`: `QUANTITY` - （選填）用於每個支付燃料的 gasPrice 整數
+- `value`: `QUANTITY` - （選填）隨此交易發送之值的整數
+- `input`: `DATA` - （選填）方法簽章與編碼參數的雜湊。詳情請見 [Solidity 文件中的以太坊合約 ABI](https://docs.soliditylang.org/en/latest/abi-spec.html)。
 
-2. `QUANTITY|TAG` - 整數區塊編號，或字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，請參閱[預設區塊參數](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - 整數區塊號碼，或字串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，請參閱[區塊參數](/developers/docs/apis/json-rpc/#block-parameter)
 
-**傳回**
+**回傳值**
 
-`DATA` - 已執行合約的傳回值。
+`DATA` - 已執行合約的回傳值。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}],"id":1}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1022,24 +1091,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas {#eth_estimategas}
+### eth_estimateGas {#eth-estimategas}
 
-產生和傳回完成交易所必需的燃料量預估值。 交易將不會新增至區塊鏈。 請注意，由於以太坊虛擬機機制和節點效能等種種原因，預估值可能明顯地大於交易實際使用的燃料量。
+產生並回傳讓交易完成所需燃料的估算值。該交易不會被加入到區塊鏈中。請注意，由於 EVM 機制和節點效能等多種原因，估算值可能會明顯高於交易實際使用的燃料量。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
-請參閱 [eth_call](#eth_call) 參數，但所有屬性都是可選的。 假如沒有明確說明燃料限制，Geth 將使用來自待處理區塊的區塊燃料限制作為上限。 因此，當燃料量高於待處理區塊燃料限制時，傳回的預估值可能不足以執行呼叫或交易。
+請參閱 [eth_call](#eth-call) 的參數，差別在於所有屬性皆為選填。如果未指定 Gas 限制，Geth 會使用待處理區塊的區塊 Gas 限制作為上限。因此，當燃料量高於待處理區塊的 Gas 限制時，回傳的估算值可能不足以執行該呼叫／交易。
 
-**傳回**
+**回傳值**
 
-`QUANTITY` - 使用的燃料數量。
+`QUANTITY` - 使用的燃料量。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see above}],"id":1}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1047,14 +1120,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 }
 ```
 
-### eth_getBlockByHash {#eth_getblockbyhash}
+### eth_getBlockByHash {#eth-getblockbyhash}
 
-根據雜湊值傳回區塊資訊。
+透過雜湊值回傳區塊的相關資訊。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByHash">
+  在遊樂場中測試端點
+</ButtonLink>
 
 **參數**
 
-1. `DATA`，32 位元組 - 區塊的雜湊值。
-2. `Boolean` - 如果為 `true`，傳回完整交易物件，如果為 `false`，只傳回交易的雜湊值。
+1. `DATA`，32 Bytes - 區塊的雜湊值。
+2. `Boolean` - 如果為 `true`，則回傳完整的交易物件；如果為 `false`，則僅回傳交易的雜湊值。
 
 ```js
 params: [
@@ -1063,41 +1140,40 @@ params: [
 ]
 ```
 
-**傳回**
+**回傳值**
 
-`Object` - 區塊物件，或如果未找到區塊，則為 `null`：
+`Object` - 一個區塊物件，如果未找到區塊則回傳 `null`：
 
-- `number`: `QUANTITY` - 區塊編號。 當為待處理區塊時，為 `null`。
-- `hash`: `DATA`，32 位元組 - 區塊的雜湊值。 當為待處理區塊時，為 `null`。
-- `parentHash`: `DATA`，32 位元組 - 父區塊的雜湊值。
-- `nonce`: `DATA`，8 位元組 - 產生的工作量證明的雜湊值。 當為待處理區塊時，為 `null`。
-- `sha3Uncles`: `DATA`，32 位元組 - 區塊中叔塊資料的第三代安全雜湊演算法。
-- `logsBloom`: `DATA`，256 位元組 - 區塊日誌的布隆篩選器。 當為待處理區塊時，為 `null`。
-- `transactionsRoot`: `DATA`，32 位元組 - 區塊交易樹的根。
-- `stateRoot`: `DATA`，32 位元組 - 區塊最終狀態樹的根。
-- `receiptsRoot`: `DATA`，32 位元組 - 區塊收據樹的根。
-- `miner`: `DATA`，20 位元組 - 挖礦獎勵受款人的地址。
-- `difficulty`: `QUANTITY` - 表示區塊難度的整數。
-- `totalDifficulty`: `QUANTITY` - 表示此區塊前的區塊鏈的總難度的整數。
-- `extraData`: `DATA` - 該區塊的「額外資料」欄位。
-- `size`: `QUANTITY` - 表示此區塊大小的整數，以位元組為單位。
-- `gasLimit`: `QUANTITY` - 此區塊允許的最大燃料量。
-- `gasUsed`: `QUANTITY` - 此區塊所有交易所使用的總燃料量。
-- `timestamp`: `QUANTITY` - 整理區塊時的 unix 時間戳。
-- `transactions`: `Array` - 交易物件陣列，或是 32 位元組交易雜湊值，取決於最後一個給定的參數。
-- `uncles`: `Array` - 叔塊雜湊值陣列。
+- `number`: `QUANTITY` - 區塊號碼。當其為待處理區塊時為 `null`。
+- `hash`: `DATA`，32 Bytes - 區塊的雜湊值。當其為待處理區塊時為 `null`。
+- `parentHash`: `DATA`，32 Bytes - 父區塊的雜湊值。
+- `nonce`: `DATA`，8 Bytes - 產生的工作量證明 (PoW) 雜湊值。當其為待處理區塊時為 `null`，對於權益證明 (PoS) 區塊（自合併以來）為 `0x0`。
+- `sha3Uncles`: `DATA`，32 Bytes - 區塊中叔區塊資料的 SHA3 雜湊值。
+- `logsBloom`: `DATA`，256 Bytes - 區塊日誌的布隆過濾器。當其為待處理區塊時為 `null`。
+- `transactionsRoot`: `DATA`，32 Bytes - 區塊的交易樹根節點。
+- `stateRoot`: `DATA`，32 Bytes - 區塊的最終狀態樹根節點。
+- `receiptsRoot`: `DATA`，32 Bytes - 區塊的收據樹根節點。
+- `miner`: `DATA`，20 Bytes - 獲得區塊獎勵的受益人地址。
+- `difficulty`: `QUANTITY` - 此區塊難度的整數值。
+- `totalDifficulty`: `QUANTITY` - 鏈直到此區塊的總難度整數值。
+- `extraData`: `DATA` - 此區塊的「額外資料 (extra data)」欄位。
+- `size`: `QUANTITY` - 此區塊大小的整數值（以位元組為單位）。
+- `gasLimit`: `QUANTITY` - 此區塊允許的最大燃料。
+- `gasUsed`: `QUANTITY` - 此區塊中所有交易總消耗的燃料。
+- `timestamp`: `QUANTITY` - 區塊打包時的 Unix 時間戳記。
+- `transactions`: `Array` - 交易物件的陣列，或 32 Bytes 的交易雜湊值，取決於最後給定的參數。
+- `uncles`: `Array` - 叔區塊雜湊值的陣列。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0xdc0818cf78f21a8e70579cb46a43643f78291264dda342ae31049421c82d21ae", false],"id":1}'
-// Result
+// 結果
 {
-{
-"jsonrpc": "2.0",
-"id": 1,
-"result": {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
     "difficulty": "0x4ea3f27bc",
     "extraData": "0x476574682f4c5649562f76312e302e302f6c696e75782f676f312e342e32",
     "gasLimit": "0x1388",
@@ -1120,18 +1196,22 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
     "transactionsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
     "uncles": [
     ]
-}
+  }
 }
 ```
 
-### eth_getBlockByNumber {#eth_getblockbynumber}
+### eth_getBlockByNumber {#eth-getblockbynumber}
 
-根據區塊編號傳回關於區塊的資訊。
+根據區塊號碼回傳區塊的相關資訊。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByNumber">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
-1. `QUANTITY|TAG` - 整數區塊編號，或字串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，如[預設區塊參數](/developers/docs/apis/json-rpc/#default-block)所示。
-2. `Boolean` - 如果為 `true`，傳回完整交易物件，如果為 `false`，只傳回交易的雜湊值。
+1. `QUANTITY|TAG` - 區塊號碼的整數，或是字串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，如同[區塊參數](/developers/docs/apis/json-rpc/#block-parameter)中所述。
+2. `Boolean` - 若為 `true`，則回傳完整的交易物件；若為 `false`，則僅回傳交易的雜湊值。
 
 ```js
 params: [
@@ -1140,20 +1220,25 @@ params: [
 ]
 ```
 
-**傳回** 請參與 [eth_getBlockByHash](#eth_getblockbyhash)
+**回傳值**
+請參閱 [eth_getBlockByHash](#eth-getblockbyhash)
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1}'
 ```
 
-結果請參閱 [eth_getBlockByHash](#eth_getblockbyhash)
+結果請參閱 [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_getTransactionByHash {#eth_gettransactionbyhash}
+### eth_getTransactionByHash {#eth-gettransactionbyhash}
 
-傳回有關按交易雜湊值請求的交易的資訊。
+根據請求的交易雜湊值，回傳關於該交易的資訊。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByHash">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
@@ -1163,31 +1248,31 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":[
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 ```
 
-**傳回**
+**回傳值**
 
-`Object` - 交易物件，或當找不到交易時為 `null`：
+`Object` - 交易物件，如果找不到交易則回傳 `null`：
 
-- `blockHash`: `DATA`，32 位元組 - 此交易所在區塊的雜湊值。 當為待處理時，為 `null`。
-- `blockNumber`: `QUANTITY` - 此交易所在的區塊編號。 當為待處理時，為 `null`。
+- `blockHash`: `DATA`，32 位元組 - 包含此交易的區塊雜湊值。如果處於待處理狀態則為 `null`。
+- `blockNumber`: `QUANTITY` - 包含此交易的區塊號碼。如果處於待處理狀態則為 `null`。
 - `from`: `DATA`，20 位元組 - 發送者的地址。
 - `gas`: `QUANTITY` - 發送者提供的燃料。
-- `gasPrice`: `QUANTITY` - 發送者提供的燃料價格，以 Wei 為單位。
+- `gasPrice`: `QUANTITY` - 發送者提供的 Gas 價格，單位為 Wei。
 - `hash`: `DATA`，32 位元組 - 交易的雜湊值。
-- `input`: `DATA` - 隨交易一起傳送的資料。
-- `nonce`: `QUANTITY` - 發送者在這之前所進行的交易數量。
-- `to`: `DATA`，20 位元組 - 接收者的地址。 如果是合約建立交易，則為 `null`。
-- `transactionIndex`: `QUANTITY` - 表示區塊中交易索引位置的整數。 當為待處理時，為 `null`。
-- `value`: `QUANTITY` - 傳輸的值，以 Wei 為單位。
-- `v`: `QUANTITY` - 橢圓曲線數位簽章演算法復原 ID
-- `r`: `QUANTITY` - 橢圓曲線數位簽章演算法簽章 r
-- `s`: `QUANTITY` - 橢圓曲線數位簽章演算法簽章 s
+- `input`: `DATA` - 隨交易發送的資料。
+- `nonce`: `QUANTITY` - 發送者在此交易之前進行的交易數量。
+- `to`: `DATA`，20 位元組 - 接收者的地址。如果是合約創建交易則為 `null`。
+- `transactionIndex`: `QUANTITY` - 交易在區塊中索引位置的整數。如果處於待處理狀態則為 `null`。
+- `value`: `QUANTITY` - 轉移的價值，單位為 Wei。
+- `v`: `QUANTITY` - ECDSA 恢復 ID
+- `r`: `QUANTITY` - ECDSA 簽章 r
+- `s`: `QUANTITY` - ECDSA 簽章 s
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"],"id":1}'
-// Result
+// 結果
 {
   "jsonrpc":"2.0",
   "id":1,
@@ -1210,14 +1295,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
+### eth_getTransactionByBlockHashAndIndex {#eth-gettransactionbyblockhashandindex}
 
-按區塊雜湊值和交易索引位置傳回有關交易的資訊。
+根據區塊雜湊與交易索引位置，回傳交易的相關資訊。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex">
+  在遊樂場中測試端點
+</ButtonLink>
 
 **參數**
 
 1. `DATA`，32 位元組 - 區塊的雜湊值。
-2. `QUANTITY` - 表示交易索引位置的整數。
+2. `QUANTITY` - 交易索引位置的整數。
 
 ```js
 params: [
@@ -1226,7 +1315,8 @@ params: [
 ]
 ```
 
-**傳回** 請參閱 [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**回傳值**
+請參閱 [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **範例**
 
@@ -1235,15 +1325,19 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-結果請參閱 [eth_getTransactionByHash](#eth_gettransactionbyhash)
+結果請參閱 [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
+### eth_getTransactionByBlockNumberAndIndex {#eth-gettransactionbyblocknumberandindex}
 
-按區塊編號和交易索引位置傳回有關交易的資訊。
+根據區塊號碼與交易索引位置，回傳交易的相關資訊。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockNumberAndIndex">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
-1. `QUANTITY|TAG` - 區塊編號，或字串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，如[預設區塊參數](/developers/docs/apis/json-rpc/#default-block)所示。
+1. `QUANTITY|TAG` - 區塊號碼，或是字串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，如同 [區塊參數](/developers/docs/apis/json-rpc/#block-parameter) 中的說明。
 2. `QUANTITY` - 交易索引位置。
 
 ```js
@@ -1253,22 +1347,23 @@ params: [
 ]
 ```
 
-**傳回** 請參閱 [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**回傳**
+請參閱 [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
-結果請參閱 [eth_getTransactionByHash](#eth_gettransactionbyhash)
+結果請參閱 [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionReceipt {#eth_gettransactionreceipt}
+### eth_getTransactionReceipt {#eth-gettransactionreceipt}
 
-按交易雜湊值返回交易的收據。
+透過交易雜湊值回傳交易的收據。
 
-**注意**待處理交易沒有收據。
+**注意**：待處理的交易無法取得收據。
 
 **參數**
 
@@ -1278,33 +1373,34 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberA
 params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
-**傳回** `Object` - 交易收據物件，或當找不到收據時為 `null`：
+**回傳值**
+`Object` - 交易收據物件，如果找不到收據則回傳 `null`：
 
-- `transactionHash`: `DATA`，32 位元組 - 交易的雜湊值。
-- `transactionIndex`: `QUANTITY` - 表示區塊中交易索引位置的整數。
-- `blockHash`: `DATA`，32 位元組 - 此交易所在區塊的雜湊值。
-- `blockNumber`: `QUANTITY` - 此交易所在的區塊編號。
-- `from`: `DATA`，20 位元組 - 發送者的地址。
-- `to`: `DATA`，20 位元組 - 接收者的地址。 如果是合約建立交易，則為 null。
-- `cumulativeGasUsed`: `QUANTITY` - 當區塊執行此交易時所使用的總燃料量。
-- `effectiveGasPrice`: `QUANTITY` - 每單位燃料支付的基本費用和小費的總和。
-- `gasUsed`: `QUANTITY` - 僅此特定交易所使用的燃料量。
-- `contractAddress`: `DATA`，20 位元組 - 如果交易為建立合約，則為建立的合約地址，否則為 `null`。
-- `logs`: `Array` - 此交易產生的日誌物件陣列。
-- `logsBloom`: `DATA`，256 位元組 - 給輕量用戶端快速擷取相關日誌的布隆篩選器。
-- `type`: `QUANTITY` - 表示交易類型的整數，`0x0` 表示傳統交易，`0x1` 表示存取清單類型， `0x2` 表示動態費用。
+- `transactionHash `：`DATA`，32 位元組 - 交易的雜湊值。
+- `transactionIndex`：`QUANTITY` - 交易在區塊中索引位置的整數。
+- `blockHash`：`DATA`，32 位元組 - 包含此交易的區塊雜湊值。
+- `blockNumber`：`QUANTITY` - 包含此交易的區塊號碼。
+- `from`：`DATA`，20 位元組 - 發送者的地址。
+- `to`：`DATA`，20 位元組 - 接收者的地址。如果是合約創建交易，則為 null。
+- `cumulativeGasUsed`：`QUANTITY ` - 在區塊中執行此交易時所使用的燃料總量。
+- `effectiveGasPrice`：`QUANTITY` - 每單位燃料支付的基礎費用與小費總和。
+- `gasUsed `：`QUANTITY ` - 僅此特定交易所使用的燃料量。
+- `contractAddress `：`DATA`，20 位元組 - 如果該交易是合約創建交易，則為創建的合約地址，否則為 `null`。
+- `logs`：`Array` - 此交易所產生的日誌物件陣列。
+- `logsBloom`：`DATA`，256 位元組 - 供輕客戶端快速擷取相關日誌的布隆過濾器。
+- `type`：`QUANTITY` - 交易類型的整數，`0x0` 為傳統交易，`0x1` 為存取清單類型，`0x2` 為動態費用。
 
-它也傳回 _以下兩者之一_：
+它還會回傳_以下其中一項_：
 
-- `root` : `DATA` 32 位元組的交易後狀態根（拜占庭升級之前）
-- `status`: `QUANTITY` 要麼 `1`（成功）要麼 `0`（失敗）
+- `root`：`DATA` 32 位元組的交易後狀態根（拜占庭升級前）
+- `status`：`QUANTITY` 為 `1`（成功）或 `0`（失敗）
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"],"id":1}'
-// Result
+// 結果
 {
   "jsonrpc": "2.0",
   "id": 1,
@@ -1312,15 +1408,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
     "blockHash":
       "0xa957d47df264a31badc3ae823e10ac1d444b098d9b73d204c40426e57f47e8c3",
     "blockNumber": "0xeff35f",
-    "contractAddress": null, // string of the address if it was created
+    "contractAddress": null, // 如果已建立，則為該地址的字串
     "cumulativeGasUsed": "0xa12515",
     "effectiveGasPrice": "0x5a9c688d4",
     "from": "0x6221a9c005f6e47eb398fd867784cacfdcfff4e7",
     "gasUsed": "0xb4c8",
     "logs": [{
-      // logs as returned by getFilterLogs, etc.
+      // 由 getFilterLogs 等回傳的日誌
     }],
-    "logsBloom": "0x00...0", // 256 byte bloom filter
+    "logsBloom": "0x00...0", // 256 位元組布隆過濾器
     "status": "0x1",
     "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
     "transactionHash":
@@ -1331,9 +1427,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
+### eth_getUncleByBlockHashAndIndex {#eth-getunclebyblockhashandindex}
 
-按雜湊值和叔塊索引位置傳回關於區塊的叔塊資訊。
+根據區塊雜湊值與叔塊索引位置，回傳區塊的叔塊資訊。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockHashAndIndex">
+  在遊樂場測試端點
+</ButtonLink>
 
 **參數**
 
@@ -1347,7 +1447,8 @@ params: [
 ]
 ```
 
-**傳回** 請參與 [eth_getBlockByHash](#eth_getblockbyhash)
+**回傳值**
+請參閱 [eth_getBlockByHash](#eth-getblockbyhash)
 
 **範例**
 
@@ -1356,17 +1457,21 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-結果請參閱 [eth_getBlockByHash](#eth_getblockbyhash)
+結果請參閱 [eth_getBlockByHash](#eth-getblockbyhash)
 
-**注意**：叔塊不包含單獨交易。
+**注意**：叔塊不包含個別交易。
 
-### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
+### eth_getUncleByBlockNumberAndIndex {#eth-getunclebyblocknumberandindex}
 
-按編號和叔塊索引位置傳回關於區塊的叔塊資訊。
+根據區塊編號與叔塊索引位置，回傳區塊的叔塊資訊。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockNumberAndIndex">
+  在遊樂場中嘗試端點
+</ButtonLink>
 
 **參數**
 
-1. `QUANTITY|TAG` - 區塊編號，或字串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，如[預設區塊參數](/developers/docs/apis/json-rpc/#default-block)所示。
+1. `QUANTITY|TAG` - 區塊編號，或是字串 `"earliest"`、`"latest"`、`"pending"`、`"safe"`、`"finalized"`，如同 [區塊參數](/developers/docs/apis/json-rpc/#block-parameter) 中的說明。
 2. `QUANTITY` - 叔塊的索引位置。
 
 ```js
@@ -1376,38 +1481,41 @@ params: [
 ]
 ```
 
-**傳回** 請參與 [eth_getBlockByHash](#eth_getblockbyhash)
+**回傳值**
+請參閱 [eth_getBlockByHash](#eth-getblockbyhash)
 
-**注意**：叔塊不包含單獨交易。
+**注意**：叔塊不包含個別交易。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-結果請參閱 [eth_getBlockByHash](#eth_getblockbyhash)
+結果請參閱 [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_newFilter {#eth_newfilter}
+### eth_newFilter {#eth-newfilter}
 
-根據篩選條件選項建立一個篩選條件物件，以在狀態改變時發出通知（日誌）。 檢查狀態是否改變，呼叫 [eth_getFilterChanges](#eth_getfilterchanges)。
+根據過濾器選項建立一個過濾器物件，以便在狀態改變（日誌）時發出通知。
+若要檢查狀態是否已改變，請呼叫 [eth_getFilterChanges](#eth-getfilterchanges)。
 
-**關於指定主題篩選條件的說明：** 主題跟順序相關。 以下主題篩選條件將匹配日誌中包含主題 [A, B] 的交易：
+**關於指定主題過濾器的注意事項：**
+主題與順序有關。包含主題為 [A, B] 之日誌的交易將與以下主題過濾器相符：
 
-- `[]`「任意值」
-- `[A]`「第一個位置為 A（其後為任意值）」
-- `[null, B]`「第一位置為任意值，且第二位置為 B（其後為任意值）」
-- `[A, B]`「第一位置為 A，且第二位置為 B（其後為任意值）」
-- `[[A, B], [A, B]]`「第一位置為（A 或 B）且第二位置為（A 或 B）（其後為任意值）」
+- `[]` 「任何值」
+- `[A]` 「A 在第一個位置（及其後任何值）」
+- `[null, B]` 「任何值在第一個位置，且 B 在第二個位置（及其後任何值）」
+- `[A, B]` 「A 在第一個位置，且 B 在第二個位置（及其後任何值）」
+- `[[A, B], [A, B]]` 「(A 或 B) 在第一個位置，且 (A 或 B) 在第二個位置（及其後任何值）」
 - **參數**
 
-1. `Object` - 篩選條件選項：
+1. `Object` - 過濾器選項：
 
-- `fromBlock`: `QUANTITY|TAG` -（可選，預設：`"latest"`）整數區塊編號，或 `"latest"` 表示最近提議的區塊，`"safe"` 表示最新的安全區塊，`"finalized"` 表示最新的最終確定區塊，或 `"pending"`，`"earliest"` 表示尚未在區塊中的交易。
-- `toBlock`: `QUANTITY|TAG` -（可選，預設：`"latest"`）整數區塊編號，或 `"latest"` 表示最近提議的區塊，`"safe"` 表示最新的安全區塊，`"finalized"` 表示最新的最終確定區塊，或 `"pending"`，`"earliest"` 表示尚未在區塊中的交易。
-- `address`: `DATA|Array`，20 位元組 - （可選）合約地址或日誌起源的地址清單。
-- `topics`: `Array of DATA`，（可選）32 位元組陣列 `DATA` 主題。 主題與順序相關。 每個主題也可以為帶有「或」選項的 DATA 陣列。
+- `fromBlock`: `QUANTITY|TAG` - （選填，預設值：`"latest"`）整數區塊號碼，或以 `"latest"` 代表最後一個提議的區塊，`"safe"` 代表最新的安全區塊，`"finalized"` 代表最新的已定案區塊，或以 `"pending"`、`"earliest"` 代表尚未包含在區塊中的交易。
+- `toBlock`: `QUANTITY|TAG` - （選填，預設值：`"latest"`）整數區塊號碼，或以 `"latest"` 代表最後一個提議的區塊，`"safe"` 代表最新的安全區塊，`"finalized"` 代表最新的已定案區塊，或以 `"pending"`、`"earliest"` 代表尚未包含在區塊中的交易。
+- `address`: `DATA|Array`，20 Bytes - （選填）合約地址或日誌應源自的地址清單。
+- `topics`: `Array of DATA`，- （選填）32 Bytes 的 `DATA` 主題陣列。主題與順序有關。每個主題也可以是帶有「或 (or)」選項的 DATA 陣列。
 
 ```js
 params: [
@@ -1427,14 +1535,15 @@ params: [
 ]
 ```
 
-**傳回** `QUANTITY` - 篩選條件 ID。
+**回傳值**
+`QUANTITY` - 過濾器 ID。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topics":["0x12341234"]}],"id":73}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1442,20 +1551,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 }
 ```
 
-### eth_newBlockFilter {#eth_newblockfilter}
+### eth_newBlockFilter {#eth-newblockfilter}
 
-在節點中建立一個篩選條件，以在新區塊到達時發出通知。 檢查狀態是否改變，呼叫 [eth_getFilterChanges](#eth_getfilterchanges)。
+在節點中建立一個過濾器，以便在有新區塊到達時發出通知。
+若要檢查狀態是否已更改，請呼叫 [eth_getFilterChanges](#eth-getfilterchanges)。
 
-**參數** 無
+**參數**
+無
 
-**傳回** `QUANTITY` - 篩選條件 ID。
+**回傳值**
+`QUANTITY` - 過濾器 ID。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],"id":73}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc":  "2.0",
@@ -1463,20 +1575,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 }
 ```
 
-### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
+### eth_newPendingTransactionFilter {#eth-newpendingtransactionfilter}
 
-在節點中建立一個篩選條件，以在新的待處理交易到達時發出通知。 檢查狀態是否改變，呼叫 [eth_getFilterChanges](#eth_getfilterchanges)。
+在節點中建立一個過濾器，以便在新的待處理交易到達時發出通知。
+若要檢查狀態是否已更改，請呼叫 [eth_getFilterChanges](#eth-getfilterchanges)。
 
-**參數** 無
+**參數**
+無
 
-**傳回** `QUANTITY` - 篩選條件 ID。
+**回傳值**
+`QUANTITY` - 過濾器 ID。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter","params":[],"id":73}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc":  "2.0",
@@ -1484,13 +1599,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 }
 ```
 
-### eth_uninstallFilter {#eth_uninstallfilter}
+### eth_uninstallFilter {#eth-uninstallfilter}
 
-根據給定 ID 解除安裝篩選條件。 當不再需要監視時，應始終對其進行呼叫。 另外，當在一段時間內未使用 [eth_getFilterChanges](#eth_getfilterchanges) 請求篩選條件時，篩選條件會逾時。
+卸載具有指定 ID 的過濾器。當不再需要監聽時，應始終呼叫此方法。
+此外，如果一段時間內未透過 [eth_getFilterChanges](#eth-getfilterchanges) 請求過濾器，過濾器將會逾時。
 
 **參數**
 
-1. `QUANTITY` - 篩選條件 ID。
+1. `QUANTITY` - 過濾器 ID。
 
 ```js
 params: [
@@ -1498,14 +1614,15 @@ params: [
 ]
 ```
 
-**傳回** `Boolean` - 如果成功解除安裝篩選條件，則為 `true`，否則為 `false`。
+**回傳值**
+`Boolean` - 如果過濾器成功卸載則回傳 `true`，否則回傳 `false`。
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["0xb"],"id":73}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1513,13 +1630,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges {#eth_getfilterchanges}
+### eth_getFilterChanges {#eth-getfilterchanges}
 
-篩選條件輪詢方法，傳回自從上次輪詢後產生的日誌陣列。
+篩選器的輪詢方法，會回傳自上次輪詢以來發生的日誌陣列。
 
 **參數**
 
-1. `QUANTITY` - 篩選條件 ID。
+1. `QUANTITY` - 篩選器 ID。
 
 ```js
 params: [
@@ -1527,26 +1644,28 @@ params: [
 ]
 ```
 
-**傳回** `Array` - 日誌物件陣列，或如果自上次輪詢沒有任何變更，則為空陣列。
+**回傳值**
+`Array` - 日誌物件的陣列，如果自上次輪詢以來沒有任何變更，則為空陣列。
 
-- 對於使用 `eth_newBlockFilter` 建立的篩選條件，傳回值是區塊雜湊值（`DATA`，32 位元組），例如 `["0x3454645634534..."]`。
-- 對於使用 `eth_newPendingTransactionFilter` 建立的篩選條件，傳回值是交易雜湊值（`DATA`，32 位元組），例如 `["0x6345343454645..."]`。
-- 對於使用 `eth_newFilter` 建立的篩選條件，日誌是包含下列參數的物件：
-  - `removed`: `TAG` - 當日誌由於鏈重組被移除時，為 `true`。 如果是有效日誌，則為 `false`。
-  - `logIndex`: `QUANTITY` - 表示區塊內日誌索引位置的整數。 當為待處理日誌時，為 `null`。
-  - `transactionIndex`: `QUANTITY` - 表示從中建立日誌的交易索引位置的整數。 當為待處理日誌時，為 `null`。
-  - `transactionHash`: `DATA`，32 位元組 - 從中建立此日誌的交易的雜湊值。 當為待處理日誌時，為 `null`。
-  - `blockHash`: `DATA`，32 位元組 - 此日誌所在區塊的雜湊值。 當為待處理時，為 `null`。 當為待處理日誌時，為 `null`。
-  - `blockNumber`: `QUANTITY` - 此日誌所在的區塊編號。 當為待處理時，為 `null`。 當為待處理日誌時，為 `null`。
-  - `address`: `DATA`，20 位元組 -此日誌的來源地址。
-  - `data`: `DATA` - 包含零個或多個 32 位元組非索引日誌引數。
-  - `topics`: `Array of DATA` - 索引日誌引數的 0 到 4 個 32 位元組 `DATA` 陣列。 (在 _solidity_：第一個主題是事件簽章的_雜湊值_（例如 `Deposit(address,bytes32,uint256)`），除非你使用說明符 `anonymous` 宣告了該事件)。
+- 對於使用 `eth_newBlockFilter` 建立的篩選器，回傳值為區塊雜湊值（`DATA`，32 位元組），例如 `["0x3454645634534..."]`。
+- 對於使用 `eth_newPendingTransactionFilter ` 建立的篩選器，回傳值為交易雜湊值（`DATA`，32 位元組），例如 `["0x6345343454645..."]`。
+- 對於使用 `eth_newFilter` 建立的篩選器，日誌是具有以下參數的物件：
+  - `removed`: `TAG` - 當日誌因為區塊鏈重組而被移除時為 `true`。如果是有效的日誌則為 `false`。
+  - `logIndex`: `QUANTITY` - 日誌在區塊中索引位置的整數。當其為待處理的日誌時為 `null`。
+  - `transactionIndex`: `QUANTITY` - 產生該日誌的交易索引位置的整數。當其為待處理的日誌時為 `null`。
+  - `transactionHash`: `DATA`，32 位元組 - 產生該日誌的交易雜湊值。當其為待處理的日誌時為 `null`。
+  - `blockHash`: `DATA`，32 位元組 - 包含該日誌的區塊雜湊值。當其為待處理時為 `null`。當其為待處理的日誌時為 `null`。
+  - `blockNumber`: `QUANTITY` - 包含該日誌的區塊號碼。當其為待處理時為 `null`。當其為待處理的日誌時為 `null`。
+  - `address`: `DATA`，20 位元組 - 產生此日誌的來源地址。
+  - `data`: `DATA` - 可變長度的非索引日誌資料。（在 _Solidity_ 中：零個或多個 32 位元組的非索引日誌參數。）
+  - `topics`: `Array of DATA` - 包含 0 到 4 個 32 位元組 `DATA` 的索引日誌參數陣列。（在 _Solidity_ 中：第一個主題是事件簽章的_雜湊_（例如 `Deposit(address,bytes32,uint256)`），除非您使用 `anonymous` 說明符宣告該事件。）
+
 - **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x16"],"id":73}'
-// Result
+// 結果
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1565,13 +1684,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs {#eth_getfilterlogs}
+### eth_getFilterLogs {#eth-getfilterlogs}
 
-傳回與給定 ID 之篩選條件相符的所有日誌的陣列。
+回傳符合給定 ID 過濾器的所有日誌陣列。
 
 **參數**
 
-1. `QUANTITY` - 篩選條件 ID。
+1. `QUANTITY` - 過濾器 ID。
 
 ```js
 params: [
@@ -1579,30 +1698,31 @@ params: [
 ]
 ```
 
-**傳回** 請參閱 [eth_getFilterChanges](#eth_getfilterchanges)
+**回傳值**
+請參閱 [eth_getFilterChanges](#eth-getfilterchanges)
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":74}'
 ```
 
-結果請參閱 [eth_getFilterChanges](#eth_getfilterchanges)
+結果請參閱 [eth_getFilterChanges](#eth-getfilterchanges)
 
-### eth_getLogs {#eth_getlogs}
+### eth_getLogs {#eth-getlogs}
 
-傳回與給定篩選條件物件相符的所有日誌的陣列。
+傳回符合給定過濾器物件的所有日誌陣列。
 
 **參數**
 
-1. `Object` - 篩選條件選項：
+1. `Object` - 過濾器選項：
 
-- `fromBlock`: `QUANTITY|TAG` -（可選，預設：`"latest"`）整數區塊編號，或 `"latest"` 表示最近提議的區塊，`"safe"` 表示最新的安全區塊，`"finalized"` 表示最新的最終確定區塊，或 `"pending"`，`"earliest"` 表示尚未在區塊中的交易。
-- `toBlock`: `QUANTITY|TAG` -（可選，預設：`"latest"`）整數區塊編號，或 `"latest"` 表示最近提議的區塊，`"safe"` 表示最新的安全區塊，`"finalized"` 表示最新的最終確定區塊，或 `"pending"`，`"earliest"` 表示尚未在區塊中的交易。
-- `address`: `DATA|Array`，20 位元組 - （可選）合約地址或日誌起源的地址清單。
-- `topics`: `Array of DATA`，（可選）32 位元組陣列 `DATA` 主題。 主題與順序相關。 每個主題也可以為帶有「或」選項的 DATA 陣列。
-- `blockhash`: `DATA`，32 位元組 - （可選，**future**），新增 EIP-234 後，`blockHash` 將是一個新的篩選條件選項，會將傳回的日誌限制為具有 32 位元組雜湊值 `blockHash` 的單一區塊。 使用 `blockHash` 等於 `fromBlock` = `toBlock` = 具有雜湊值 `blockHash` 的區塊編號。 如果 `blockHash` 出現在篩選條件中，則 `fromBlock` 和 `toBlock` 都不允許使用。
+- `fromBlock`: `QUANTITY|TAG` - (選填，預設值：`"latest"`) 整數區塊號碼，或使用 `"latest"` 表示最後一個提議的區塊，`"safe"` 表示最新的安全區塊，`"finalized"` 表示最新已定案的區塊，或使用 `"pending"`、`"earliest"` 表示尚未包含在區塊中的交易。
+- `toBlock`: `QUANTITY|TAG` - (選填，預設值：`"latest"`) 整數區塊號碼，或使用 `"latest"` 表示最後一個提議的區塊，`"safe"` 表示最新的安全區塊，`"finalized"` 表示最新已定案的區塊，或使用 `"pending"`、`"earliest"` 表示尚未包含在區塊中的交易。
+- `address`: `DATA|Array`，20 位元組 - (選填) 合約地址或日誌來源的地址清單。
+- `topics`: `Array of DATA`，- (選填) 包含 32 位元組 `DATA` 主題的陣列。主題與順序相關。每個主題也可以是帶有「或 (or)」選項的 DATA 陣列。
+- `blockHash`: `DATA`，32 位元組 - (選填，**未來**) 隨著 EIP-234 的加入，`blockHash` 將成為一個新的過濾器選項，它將傳回的日誌限制在具有 32 位元組雜湊值 `blockHash` 的單一區塊中。使用 `blockHash` 等同於 `fromBlock` = `toBlock` = 具有雜湊值 `blockHash` 的區塊號碼。如果過濾條件中存在 `blockHash`，則不允許使用 `fromBlock` 或 `toBlock`。
 
 ```js
 params: [
@@ -1614,24 +1734,25 @@ params: [
 ]
 ```
 
-**傳回** 請參閱 [eth_getFilterChanges](#eth_getfilterchanges)
+**回傳值**
+請參閱 [eth_getFilterChanges](#eth-getfilterchanges)
 
 **範例**
 
 ```js
-// Request
+// 請求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
 
-結果請參閱 [eth_getFilterChanges](#eth_getfilterchanges)
+結果請參閱 [eth_getFilterChanges](#eth-getfilterchanges)
 
 ## 使用範例 {#usage-example}
 
-### 使用 JSON_RPC 部署合約 {#deploying-contract}
+### 使用 JSON-RPC 部署合約 {#deploying-contract}
 
-這部分示範如何只使用遠端程序呼叫介面部署合約。 有其他的部署合約方法可以消除這種複雜性，例如，使用建置在遠端程序呼叫介面之上的程式庫，例如 [web3.js](https://web3js.readthedocs.io/) 和 [web3.py](https://github.com/ethereum/web3.py)。 雖然在抽象化之後，一般來說比較容易理解和較不易出錯，但理解在後台發生了什麼是有益的。
+本節包含如何僅使用 RPC 介面部署合約的示範。還有其他部署合約的途徑可以將這種複雜性抽象化——例如，使用建構在 RPC 介面之上的函式庫，像是 [Web3.js](https://web3js.readthedocs.io/) 和 [Web3.py](https://github.com/ethereum/web3.py)。這些抽象化通常更容易理解且較不容易出錯，但了解其內部運作原理仍然很有幫助。
 
-下面是一個名為 `Multiply7` 的簡單智慧型合約，將使用 JSON-RPC 介面把其部署到以太坊節點。 本教學假設讀者已經執行一個 Geth 節點。 更多節點和用戶端的資訊可以在[這裡](/developers/docs/nodes-and-clients/run-a-node)獲得。 請參考個別的[用戶端](/developers/docs/nodes-and-clients/)文件瞭解如何為非 Geth 用戶端開啟 HTTP JSON-RPC。 大多數用戶端預設在 `localhost:8545` 上提供服務。
+以下是一個名為 `Multiply7` 的簡單智能合約，將使用 JSON-RPC 介面部署到以太坊節點。本教學假設讀者已經在執行 Geth 節點。有關節點與客戶端的更多資訊，請參閱[這裡](/developers/docs/nodes-and-clients/run-a-node)。請參閱個別[客戶端](/developers/docs/nodes-and-clients/)文件，了解如何為非 Geth 客戶端啟動 HTTP JSON-RPC。大多數客戶端預設在 `localhost:8545` 上提供服務。
 
 ```javascript
 contract Multiply7 {
@@ -1643,34 +1764,34 @@ contract Multiply7 {
 }
 ```
 
-首先，確定啟用了 HTTP 遠端程序呼叫介面。 也就是說，在啟動時我們為 Geth 提供 `--http` 旗標。 在這個例子中，我們使用私有開發鏈的 Geth 節點。 使用這個方法，將不需要真實網路上的以太幣。
+首先要做的是確保 HTTP RPC 介面已啟用。這意味著我們在啟動時為 Geth 提供 `--http` 標籤。在這個範例中，我們在私有開發鏈上使用 Geth 節點。使用這種方法，我們不需要真實網路上的以太幣。
 
 ```bash
 geth --http --dev console 2>>geth.log
 ```
 
-這將在 `http://localhost:8545` 上啟動 HTTP 遠端程序呼叫介面。
+這將在 `http://localhost:8545` 上啟動 HTTP RPC 介面。
 
-我們可以透過使用 [ curl](https://curl.se) 取得 Coinbase 地址（獲取帳戶陣列中的第一個地址）和餘額，驗證介面是否正在執行。 請注意，這些範例中的資料與你的本地節點有所不同。 如果你想嘗試這些命令，請將第二個 curl 請求中的請求參數替換為第一個請求返回的結果。
+我們可以透過使用 [curl](https://curl.se) 擷取 Coinbase 地址（從帳戶陣列中取得第一個地址）和餘額，來驗證介面是否正在執行。請注意，這些範例中的資料在您的本機節點上會有所不同。如果您想嘗試這些指令，請將第二個 curl 請求中的請求參數替換為第一個請求傳回的結果。
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[], "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545
 {"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
 ```
 
-由於數字是十六進位編碼的，因此餘額以十六進位字串形式形式傳回（單位為 wei）。 如果想要以數位形式獲得以太幣餘額，可以使用 Geth 控制台中的 web3。
+因為數字是十六進位編碼，所以餘額會以十六進位字串的形式，以 Wei 為單位傳回。如果我們想將餘額轉換為以太幣的數字形式，我們可以使用 Geth 主控台中的 web3。
 
 ```javascript
 web3.fromWei("0x1639e49bba16280000", "ether")
 // "410"
 ```
 
-現在我們的私有開發鏈上有一些以太幣，我們可以部署合約了。 第一步是把 Multiply7 合約編譯成可以傳送到以太坊虛擬機的字元組程式碼。 要安裝 Solidity 編譯器 solc，請參考 [Solidity 文件](https://docs.soliditylang.org/en/latest/installing-solidity.html)。 （為符合[我們的範例中使用的編譯器版本](https://github.com/ethereum/solidity/releases/tag/v0.4.20)，你可能想要使用較舊的 `solc` 版本。）
+現在我們的私有開發鏈上有一些以太幣了，我們可以部署合約。第一步是將 Multiply7 合約編譯為可以傳送到 EVM 的位元組碼。要安裝 Solidity 編譯器 solc，請遵循 [Solidity 文件](https://docs.soliditylang.org/en/latest/installing-solidity.html)。（您可能需要使用較舊的 `solc` 版本，以符合[我們範例中使用的編譯器版本](https://github.com/ethereum/solidity/releases/tag/v0.4.20)。）
 
-下一步是把 Multiply7 合約編譯成可以傳送到以太坊虛擬機的字元組程式碼。
+下一步是將 Multiply7 合約編譯為可以傳送到 EVM 的位元組碼。
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
@@ -1680,7 +1801,7 @@ Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-現在我們有了編譯後的程式碼，我們需要確定部署程式碼需要花費多少燃料。 遠端程序呼叫介面有 `eth_estimateGas` 方法可以給我們預估值。
+現在我們有了編譯好的程式碼，我們需要決定部署它需要花費多少燃料。RPC 介面有一個 `eth_estimateGas` 方法可以給我們一個估算值。
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
@@ -1694,44 +1815,44 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-交易被節點接受且傳回交易雜湊值。 雜湊值可以用來追蹤交易。 下一步是確定將合約部署至的地址。 每一個被執行的交易將會產生一份收據。 此收據包含各種關於交易的資訊，例如：交易包含在哪一個區塊中，以及以太坊虛擬機使用多少燃料。 假如交易建立一個合約，交易也將包含合約地址。 我們可以用 `eth_getTransactionReceipt` 遠端程序呼叫方法擷取收據。
+交易被節點接受，並傳回一個交易雜湊值。這個雜湊可用於追蹤交易。下一步是決定我們合約部署的地址。每筆執行的交易都會建立一張收據。這張收據包含有關交易的各種資訊，例如交易被包含在哪個區塊中，以及 EVM 使用了多少燃料。如果交易建立了一個合約，它也會包含合約地址。我們可以使用 `eth_getTransactionReceipt` RPC 方法來擷取收據。
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-我們的合約是建立在 `0x4d03d617d700cf81935d7f797f4e2ae719648262`。 結果為 null 而不是收據時，表示交易尚未列入區塊中。 稍等一下，並檢查你的共識用戶端是否正常執行，然後重試一次。
+我們的合約建立在 `0x4d03d617d700cf81935d7f797f4e2ae719648262` 上。傳回 null 結果而不是收據，意味著交易尚未被包含在區塊中。請稍候片刻，檢查您的共識客戶端是否正在執行，然後重試。
 
 #### 與智能合約互動 {#interacting-with-smart-contract}
 
-在此範例中，我們將使用 `eth_sendTransaction` 向合約的 `multiply` 方法傳送交易。
+在這個範例中，我們將使用 `eth_sendTransaction` 傳送一筆交易到合約的 `multiply` 方法。
 
-`eth_sendTransaction` 需要若干引數，特別是 `from`、`to` 和 `data`。 `From` 是我們帳戶的公共地址，`to` 是合約地址。 `data` 引數包含有效負載，定義了必須呼叫哪個方法以及使用哪些引數。 這是 [ABI（應用程式二進位介面）](https://docs.soliditylang.org/en/latest/abi-spec.html)發揮作用的地方。 應用程式二進位介面是定義如何為以太坊虛擬機定義和編碼資料的 JSON 檔案。
+`eth_sendTransaction` 需要幾個參數，特別是 `from`、`to` 和 `data`。`From` 是我們帳戶的公開地址，而 `to` 是合約地址。`data` 參數包含一個有效負載 (payload)，定義了必須呼叫哪個方法以及使用哪些參數。這就是 [ABI（應用程式二進位介面）](https://docs.soliditylang.org/en/latest/abi-spec.html) 發揮作用的地方。ABI 是一個 JSON 檔案，定義了如何為 EVM 定義和編碼資料。
 
-有效負載中的位元組定義要呼叫合約中的哪個方法。 這是函式名稱及其引數類型的 Keccak 雜湊值的前 4 個位元組（十六進位編碼）。 Multiply 函式接受 uint，它是 uint256 的別名。 我們得到以下結果：
+有效負載的位元組定義了要呼叫合約中的哪個方法。這是對函式名稱及其參數類型進行 Keccak 雜湊後的前 4 個位元組，並以十六進位編碼。multiply 函式接受一個 uint，它是 uint256 的別名。這讓我們得到：
 
 ```javascript
 web3.sha3("multiply(uint256)").substring(0, 10)
 // "0xc6888fa1"
 ```
 
-下一步是對引數進行編碼。 只有一個 uint256，例如值 6。 應用程式二進制介面有一個部分指定如何對 uint256 類型進行編碼。
+下一步是編碼參數。只有一個 uint256，例如，值為 6。ABI 有一個部分指定了如何編碼 uint256 類型。
 
-`int<M>: enc(X)` 是 X 的高位元組在前二進位補碼編碼，對於負 X 在高位（左側）填充 0xff，對於正 X 填充零 > 位元組，使得長度為 32 位元組的倍數。
+`int<M>: enc(X)` 是 X 的大端序二補數編碼，對於負數 X，在較高階（左）側填補 0xff，對於正數 X，則填補零位元組，使得長度為 32 位元組的倍數。
 
-這編碼為 `000000000000000000000000000000000000000000000000000000000000006`。
+這會編碼為 `0000000000000000000000000000000000000000000000000000000000000006`。
 
-結合函式選擇器和已編碼的引數，我們的資料如下：`0xc6888fa10000000000000000000000000000000000000000000000000000000000000006`。
+結合函式選擇器和編碼後的參數，我們的資料將會是 `0xc6888fa10000000000000000000000000000000000000000000000000000000000000006`。
 
-現在可將其傳送到節點：
+現在可以將其傳送到節點：
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0xeb85a5557e5bdc18ee1934a89d8bb402398ee26a", "to": "0x6ff93b4b46b41c0c3c9baee01c255d3b4675963d", "data": "0xc6888fa10000000000000000000000000000000000000000000000000000000000000006"}], "id": 8}' -H "Content-Type: application/json" localhost:8545
 {"id":8,"jsonrpc":"2.0","result":"0x759cf065cbc22e9d779748dc53763854e5376eea07409e590c990eafc0869d74"}
 ```
 
-由於傳送了交易，因此傳回了交易雜湊值。 擷取收據得到以下內容：
+由於傳送了一筆交易，因此傳回了一個交易雜湊值。擷取收據會得到：
 
 ```javascript
 {
@@ -1755,20 +1876,19 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 }
 ```
 
-收據包含了日誌。 此日誌由以太坊虛擬機在交易執行時產生並包含在收據中。 `multiply` 函式顯示 `Print` 事件在輸入乘以 7 時觸發。 由於 `Print` 事件的引數是 uint256，我們可以根據應用程式二進位介面規則對其進行解碼，得到預期的十進位數 42。 除了資料之外，值得注意的是，主題可用於確定哪個事件建立了日誌：
+收據包含一個日誌。這個日誌是由 EVM 在執行交易時產生的，並包含在收據中。`multiply` 函式顯示觸發了 `Print` 事件，其值為輸入值乘以 7。由於 `Print` 事件的參數是 uint256，我們可以根據 ABI 規則對其進行解碼，這將讓我們得到預期的十進位數 42。除了資料之外，值得注意的是，主題 (topics) 可用於決定是哪個事件建立了該日誌：
 
 ```javascript
 web3.sha3("Print(uint256)")
 // "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
 ```
 
-這只是對一些最常見任務的簡要介紹，演示了 JSON-RPC 的直接使用。
+這只是對一些最常見任務的簡短介紹，示範了 JSON-RPC 的直接用法。
 
 ## 相關主題 {#related-topics}
 
 - [JSON-RPC 規範](http://www.jsonrpc.org/specification)
-- [節點和用戶端](/developers/docs/nodes-and-clients/)
-- [Javascript 應用程式介面](/developers/docs/apis/javascript/)
-- [後端應用程式介面](/developers/docs/apis/backend/)
-- [執行用戶端](/developers/docs/nodes-and-clients/#execution-clients)
-
+- [節點與客戶端](/developers/docs/nodes-and-clients/)
+- [JavaScript API](/developers/docs/apis/javascript/)
+- [後端 API](/developers/docs/apis/backend/)
+- [執行客戶端](/developers/docs/nodes-and-clients/#execution-clients)

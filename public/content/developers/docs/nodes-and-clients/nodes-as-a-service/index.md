@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-## Introduction {#Introduction}
+## Introduction {#introduction}
 
 Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started.
 
@@ -270,6 +270,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Enhanced API for web3 developers
     - Multi-chain support
     - Get started for free
+
+- [**NodeFlare**](https://nodeflare.app/)
+  - [Docs](https://nodeflare.app/docs/quick-start)
+  - Features
+    - 8 EVM chains including Ethereum, Base, Arbitrum One, and Optimism
+    - 4 regions (Europe, Asia, North America) with automatic failover to nearest healthy node
+    - Free public endpoint (no API key) + free plan with 3M compute units/month
+    - Compute Unit billing — pay only for what you use, heavier calls cost more
+    - No throttling on paid plans
 
 - [**NOWNodes**](https://nownodes.io/)
   - Features

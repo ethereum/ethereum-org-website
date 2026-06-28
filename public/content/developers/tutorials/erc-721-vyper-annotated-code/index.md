@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: en
 tags: ["vyper", "erc-721", "python"]
 skill: beginner
+breadcrumb: Vyper ERC-721
 published: 2021-04-01
 ---
 
@@ -96,7 +97,7 @@ This function is a `view`, which means it can read the state of the blockchain, 
 
 ### Events {#events}
 
-[Events](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e)
+[Events](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 are emitted to inform users and servers outside of the blockchain of events. Note that the content of events
 is not available to contracts on the blockchain.
 

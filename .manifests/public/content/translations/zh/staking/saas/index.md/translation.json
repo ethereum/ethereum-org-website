@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "locale": "zh",
+  "translatedAt": "2026-06-17T01:17:57.521Z",
+  "englishManifestHash": "85b7a2955ed8",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "COMPONENT-2189a9",
+    "COMPONENT-670e55",
+    "COMPONENT-f84c2e",
+    "LINK-1ed7a5",
+    "HTMLTAG-359785",
+    "HTMLTAG-648984",
+    "LINK-8bde19",
+    "COMPONENT-1c25b4",
+    "COMPONENT-2b2db5",
+    "COMPONENT-8d95c1",
+    "COMPONENT-666f58",
+    "LINK-2601c6",
+    "LINK-11109b",
+    "LINK-1cb83b"
+  ],
+  "placeholderMap": {
+    "COMPONENT-1c25b4": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SaasStaking",
+        "eventName": "clicked who holds my keys"
+      }
+    },
+    "COMPONENT-2b2db5": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SaasStaking",
+        "eventName": "clicked so there are two sets of keys"
+      }
+    },
+    "COMPONENT-8d95c1": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SaasStaking",
+        "eventName": "clicked when can I withdraw"
+      }
+    },
+    "COMPONENT-666f58": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SaasStaking",
+        "eventName": "clicked what happens if I get slashed"
+      }
+    },
+    "LINK-2601c6": {
+      "type": "link",
+      "values": {
+        "url": "/staking/solo/"
+      }
+    },
+    "COMPONENT-2189a9": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": ":desktop_computer:"
+      }
+    },
+    "COMPONENT-670e55": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🏁"
+      }
+    },
+    "COMPONENT-f84c2e": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": ":shield:"
+      }
+    },
+    "HTMLTAG-359785": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "em"
+      }
+    },
+    "HTMLTAG-648984": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "em"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-1ed7a5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity/"
+      }
+    },
+    "LINK-8bde19": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-staking-products/"
+      }
+    },
+    "LINK-11109b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.staking.directory/"
+      }
+    },
+    "LINK-1cb83b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.attestant.io/posts/evaluating-staking-services/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T01:17:57.521Z",
+      "status": "success"
+    }
+  }
+}

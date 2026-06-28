@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-18T00:05:57.648Z",
+  "englishManifestHash": "a77ed4cf81e6",
+  "placeholderOrder": [
+    "LINK-64d882",
+    "LINK-80cdb6",
+    "LINK-8a2415",
+    "IMAGE-4559f2",
+    "IMAGE-119bdb",
+    "IMAGE-652731"
+  ],
+  "placeholderMap": {
+    "IMAGE-4559f2": {
+      "type": "image",
+      "values": {
+        "path": "./goerliMetamask.gif"
+      }
+    },
+    "IMAGE-119bdb": {
+      "type": "image",
+      "values": {
+        "path": "./findNFTEtherscan.png"
+      }
+    },
+    "IMAGE-652731": {
+      "type": "image",
+      "values": {
+        "path": "./findNFTMetamask.gif"
+      }
+    },
+    "LINK-64d882": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-write-and-deploy-an-nft"
+      }
+    },
+    "LINK-80cdb6": {
+      "type": "link",
+      "values": {
+        "url": "https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202"
+      }
+    },
+    "LINK-8a2415": {
+      "type": "link",
+      "values": {
+        "url": "https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:05:57.648Z",
+      "status": "success"
+    }
+  }
+}

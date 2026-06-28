@@ -1,3 +1,5 @@
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_BLOBSCAN_STATS_TASK_ID = "fetch-blobscan-stats"
 
 export type BlobscanStats = {
@@ -26,7 +28,7 @@ export async function fetchBlobscanStats(): Promise<BlobscanStats> {
 
   console.log("Starting blobscan stats data fetch")
 
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     const status = response.status

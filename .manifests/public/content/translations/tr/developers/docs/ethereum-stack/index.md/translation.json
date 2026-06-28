@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-06-16T22:47:36.537Z",
+  "englishManifestHash": "7cf6cfe5c8a4",
+  "placeholderOrder": [
+    "LINK-71c926",
+    "LINK-ab55fe",
+    "LINK-fa9c2b",
+    "LINK-efc0b7",
+    "LINK-ae1008",
+    "LINK-1e4854",
+    "LINK-27acfb",
+    "LINK-98bdc0",
+    "LINK-293225",
+    "LINK-b5f20b",
+    "CODE-3a2dc0",
+    "LINK-6b48e7",
+    "LINK-3e2b44",
+    "LINK-1d2e59",
+    "LINK-54e492"
+  ],
+  "placeholderMap": {
+    "CODE-3a2dc0": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm install"
+      }
+    },
+    "LINK-71c926": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-fa9c2b": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Turing_completeness"
+      }
+    },
+    "LINK-efc0b7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-ae1008": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/languages/"
+      }
+    },
+    "LINK-1e4854": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/dapps/"
+      }
+    },
+    "LINK-27acfb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/oracles/"
+      }
+    },
+    "LINK-98bdc0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-293225": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-b5f20b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/javascript/"
+      }
+    },
+    "LINK-6b48e7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/python/"
+      }
+    },
+    "LINK-3e2b44": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/java/"
+      }
+    },
+    "LINK-1d2e59": {
+      "type": "link",
+      "values": {
+        "url": "/developers/local-environment/"
+      }
+    },
+    "LINK-54e492": {
+      "type": "link",
+      "values": {
+        "url": "https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:47:36.537Z",
+      "status": "success"
+    }
+  }
+}

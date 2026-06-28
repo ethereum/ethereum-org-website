@@ -1,24 +1,31 @@
-import Emoji from "react-emoji-render"
-
 import type { GHIssue } from "@/lib/types"
+
+import Emoji from "@/components/Emoji"
 
 import { cn } from "@/lib/utils/cn"
 
+import { getGFIs } from "@/data-layer"
+
 import { Avatar } from "../ui/avatar"
 import { Flex, HStack, Stack } from "../ui/flex"
+import { Grid } from "../ui/grid"
 import InlineLink from "../ui/Link"
 import { Tag } from "../ui/tag"
 
 type IssuesListProps = {
-  issues: GHIssue[]
   className?: string
 }
 
-const IssuesList = ({ issues, className }: IssuesListProps) => {
+const IssuesList = async ({ className }: IssuesListProps) => {
+  let issues: GHIssue[] = []
+  try {
+    issues = (await getGFIs()) ?? []
+  } catch (error) {
+    console.warn("Failed to fetch GFIs for IssuesList:", error)
+  }
+
   return (
-    <div
-      className={cn("my-7 grid gap-4 sm:grid-cols-1 lg:grid-cols-2", className)}
-    >
+    <Grid className={cn("my-7", className)}>
       {issues.map((issue) => (
         <Stack
           className="gap-4 rounded-md border border-border p-4"
@@ -53,7 +60,7 @@ const IssuesList = ({ issues, className }: IssuesListProps) => {
           </Flex>
         </Stack>
       ))}
-    </div>
+    </Grid>
   )
 }
 

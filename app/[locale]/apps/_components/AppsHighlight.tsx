@@ -35,6 +35,7 @@ const AppsHighlight = ({ apps, matomoCategory }: AppsHighlightProps) => {
             src={app.bannerImage}
             alt={`${app.name} application banner showing the main interface`}
             fill
+            sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(50vw - 24px), 492px"
             className="rounded-xl object-cover"
           />
         </div>

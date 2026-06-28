@@ -1,10 +1,9 @@
 ---
-title: Ethereum Governance
+title: Introduction to Ethereum governance
+metaTitle: Ethereum Governance
 description: An introduction to how decisions about Ethereum are made.
 lang: en
 ---
-
-# Introduction to Ethereum governance {#introduction}
 
 _If no one owns [Ethereum](/), how are decisions about past and future changes to Ethereum made? Ethereum governance refers to the process that allows such decisions to be made._
 
@@ -21,6 +20,8 @@ No one person owns or controls the Ethereum protocol, but decisions still need t
 ## Ethereum Governance {#ethereum-governance}
 
 Ethereum governance is the process by which protocol changes are made. It's important to point out that this process isn't related to how people and applications use the protocol - Ethereum is permissionless. Anyone from anywhere in the world can participate in onchain activities. There are no rules set for who can or cannot build an application or send a transaction. However, there is a process to propose changes to the core protocol, which decentralized applications run on top of. Since so many people depend on Ethereum's stability, there is a very high coordination threshold for core changes, including social and technical processes, to ensure any changes to Ethereum are secure and widely supported by the community.
+
+<VideoWatch slug="ethereum-core-governance-explained" />
 
 ### Onchain vs offchain governance {#onchain-vs-offchain}
 
@@ -134,7 +135,7 @@ Today, the Ethereum community has adopted a policy of non-intervention in cases 
 
 Watch more on the DAO hack:
 
-<YouTube id="rNeLuBOVe8A" />
+<VideoWatch slug="dao-hack-ethereum-classic" />
 
 <Divider />
 

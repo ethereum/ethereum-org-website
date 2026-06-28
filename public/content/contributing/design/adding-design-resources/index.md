@@ -4,15 +4,13 @@ description: Guidelines and requirements to ensure quality of design materials o
 lang: en
 ---
 
-# Adding design resources {#adding-design-resources}
-
 Anybody can suggest new design materials to the [Design and UX in web3 page](/developers/docs/design-and-ux/).
 
 Be aware that the focus of this page is on providing user value to aspiring web3 designers. The design section is not there to advertise your services, products, or platforms.
 
 To ensure that we maintain a high standard of information and promote valuable insights, we have established a listing policy:
 
-## Research Studies and Dashboards {#Research-studies}
+## Research Studies and Dashboards {#research-studies}
 
 1. Sound Methodology
 
@@ -30,7 +28,7 @@ a. The topic of the research should be relevant to web3 designers and address co
 
 a. The primary objective of the text should be sharing insights rather than promoting a specific project or company.
 
-## Articles {#Articles}
+## Articles {#articles}
 
 1. Relevance to Web3 Designers/Researchers and Common Web3 Design Use Cases
 
@@ -48,7 +46,7 @@ c. The writing should be concise and to the point.
 
 a. The primary goal of the article should be sharing insights rather than promoting a particular project or company.
 
-## Communities / DAOs {#Communities-and-DAOs}
+## Communities / DAOs {#communities-and-daos}
 
 1. Website must clearly indicate how to join the DAO/Community
 

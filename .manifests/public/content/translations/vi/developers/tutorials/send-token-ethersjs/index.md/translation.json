@@ -1,0 +1,158 @@
+{
+  "version": 1,
+  "locale": "vi",
+  "translatedAt": "2026-06-18T00:17:10.443Z",
+  "englishManifestHash": "b29466903deb",
+  "placeholderOrder": [
+    "CODEBLOCK-18138c",
+    "CODEBLOCK-8dc6d8",
+    "CODEBLOCK-e5679e",
+    "CODE-29137d",
+    "CODE-5a14a1",
+    "CODE-66a40c",
+    "CODE-2e0384",
+    "CODE-189759",
+    "CODE-236afb",
+    "CODE-8b9582",
+    "CODEBLOCK-ad4998",
+    "CODEBLOCK-bf0a73",
+    "CODEBLOCK-152662",
+    "CODEBLOCK-5b9b16",
+    "CODE-33f883",
+    "CODE-2e0384",
+    "CODE-66a40c",
+    "CODE-5a14a1",
+    "CODE-d7ea1e",
+    "CODE-b222a7",
+    "LINK-b60049",
+    "CODEBLOCK-adbbc8",
+    "CODEBLOCK-ceaece",
+    "CODEBLOCK-b193d3",
+    "IMAGE-8c7f7a",
+    "CODEBLOCK-de01f2"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-18138c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8dc6d8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e5679e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ad4998": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bf0a73": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-152662": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5b9b16": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-adbbc8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ceaece": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b193d3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-de01f2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-29137d": {
+      "type": "inline-code",
+      "values": {
+        "content": "contract_address"
+      }
+    },
+    "CODE-5a14a1": {
+      "type": "inline-code",
+      "values": {
+        "content": "send_token_amount"
+      }
+    },
+    "CODE-66a40c": {
+      "type": "inline-code",
+      "values": {
+        "content": "to_address"
+      }
+    },
+    "CODE-2e0384": {
+      "type": "inline-code",
+      "values": {
+        "content": "send_account"
+      }
+    },
+    "CODE-189759": {
+      "type": "inline-code",
+      "values": {
+        "content": "private_key"
+      }
+    },
+    "CODE-236afb": {
+      "type": "inline-code",
+      "values": {
+        "content": "signTransaction(tx)"
+      }
+    },
+    "CODE-8b9582": {
+      "type": "inline-code",
+      "values": {
+        "content": "sendTransaction()"
+      }
+    },
+    "CODE-33f883": {
+      "type": "inline-code",
+      "values": {
+        "content": "send_token()"
+      }
+    },
+    "CODE-d7ea1e": {
+      "type": "inline-code",
+      "values": {
+        "content": "gas_limit"
+      }
+    },
+    "CODE-b222a7": {
+      "type": "inline-code",
+      "values": {
+        "content": "gas_price"
+      }
+    },
+    "IMAGE-8c7f7a": {
+      "type": "image",
+      "values": {
+        "path": "./successful-transaction.png"
+      }
+    },
+    "LINK-b60049": {
+      "type": "link",
+      "values": {
+        "url": "#how-to-use"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:17:10.443Z",
+      "status": "success"
+    }
+  }
+}

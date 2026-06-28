@@ -1,23 +1,17 @@
-import React from "react"
-
 import { Tag } from "./ui/tag"
 
 export type TutorialTagsProps = {
-  tags: Array<string>
+  tags: string[]
 }
 
-const TutorialTags = ({ tags }: TutorialTagsProps) => {
-  return (
-    <>
-      {tags.map((tag, idx) => {
-        return (
-          <Tag key={idx} className="mb-2 me-2" status="tag">
-            {tag}
-          </Tag>
-        )
-      })}
-    </>
-  )
-}
+const TutorialTags = ({ tags }: TutorialTagsProps) => (
+  <>
+    {tags.map((tag, idx) => (
+      <Tag key={idx} status="tag">
+        {tag}
+      </Tag>
+    ))}
+  </>
+)
 
 export default TutorialTags

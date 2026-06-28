@@ -1,5 +1,7 @@
 import type { GithubRepoData } from "@/lib/types"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_GITHUB_REPO_DATA_TASK_ID = "fetch-github-repo-data"
 
 // GitHub repository URLs for local environment frameworks
@@ -42,7 +44,7 @@ export async function fetchGithubRepoData(): Promise<GithubRepoDataResult> {
       const repoName = split[split.length - 1]
 
       // Fetch repo data
-      const repoReq = await fetch(
+      const repoReq = await fetchRetry(
         `https://api.github.com/repos/${repoOwner}/${repoName}`,
         {
           headers: {
@@ -62,7 +64,7 @@ export async function fetchGithubRepoData(): Promise<GithubRepoDataResult> {
       const repoData = await repoReq.json()
 
       // Fetch language data
-      const languageReq = await fetch(
+      const languageReq = await fetchRetry(
         `https://api.github.com/repos/${repoOwner}/${repoName}/languages`,
         {
           headers: {

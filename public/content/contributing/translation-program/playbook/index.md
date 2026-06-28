@@ -1,10 +1,9 @@
 ---
-title: Translation program playbook
+title: Translation Program playbook
+metaTitle: Translation program playbook
 lang: en
 description: A collection of tips and important considerations for setting up a translation program
 ---
-
-# Translation Program Playbook {#translation-program-playbook}
 
 English is one of the most spoken languages in the world and is by far the world’s most studied language. As English is the most common language used on the internet – especially on social media – and multilingual programming languages are scarce, the majority of content in the blockchain space is natively written in English.
 

@@ -1,0 +1,417 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/roadmap/beacon-chain/index.md",
+  "generatedAt": "2026-06-18T00:43:19.726Z",
+  "rootHash": "5cd5f3656522",
+  "tree": {
+    "contentHash": "429647c55f5d",
+    "anchorHash": "35a4e3ab051e",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "b752f00630a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "7cd5a6af4242",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7fef9479c8bc"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "12bad26373f7"
+      },
+      "frontmatter:alt": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "component:7": {
+        "contentHash": "01179dc09614",
+        "anchorHash": "76a78e2cb925",
+        "children": {
+          "attr:dateKey": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ed990a6dbc8e"
+          },
+          "prose:0": {
+            "contentHash": "189057a7391c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "attr:dateKey",
+          "prose:0"
+        ]
+      },
+      "what-is-the-beacon-chain": {
+        "contentHash": "5762ded9154f",
+        "anchorHash": "d7456b41cb90",
+        "labelHash": "026b96076c0d",
+        "children": {
+          "_label": {
+            "contentHash": "026b96076c0d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "8397661c7569",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "8a5edab28263"
+          },
+          "prose:3": {
+            "contentHash": "51445a0c5dba",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "c09500586c2c",
+            "anchorHash": "77488c35533d"
+          },
+          "prose:4": {
+            "contentHash": "ee88ab842a2f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "what-does-the-beacon-chain-do": {
+        "contentHash": "e4d0a4d867ad",
+        "anchorHash": "48f68d1ac644",
+        "labelHash": "7b9c4db0b010",
+        "children": {
+          "_label": {
+            "contentHash": "7b9c4db0b010",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "fb6b8409dd53",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "469a18145a5e",
+            "anchorHash": "28704a15211d"
+          },
+          "prose:3": {
+            "contentHash": "80746f8491fe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "480eecec0ff8",
+            "anchorHash": "b8f3f158a2aa"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "beacon-chain-features": {
+        "contentHash": "b2fc11d74c21",
+        "anchorHash": "640282293be6",
+        "labelHash": "bbc85da34c74",
+        "children": {
+          "_label": {
+            "contentHash": "bbc85da34c74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "introducing-staking": {
+            "contentHash": "696a33b6e009",
+            "anchorHash": "83e6cae8a222",
+            "labelHash": "95fee35627d2",
+            "children": {
+              "_label": {
+                "contentHash": "95fee35627d2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "82e9b6e58ff0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "769e0b8515e3",
+                "anchorHash": "0e500613f6a4"
+              },
+              "prose:3": {
+                "contentHash": "691214196c8a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "2a6d20857db7",
+                "anchorHash": "1a9721cb05be"
+              },
+              "prose:4": {
+                "contentHash": "53fd2cf35c56",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:6": {
+                "contentHash": "4bb093c148fc",
+                "anchorHash": "c2bec618c389",
+                "children": {
+                  "attr:variant": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "2937013f2181"
+                  },
+                  "component:0": {
+                    "contentHash": "4b9f7d802648",
+                    "anchorHash": "8ab4a2414d4f",
+                    "children": {
+                      "attr:text": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "bddadeb154a9"
+                      }
+                    }
+                  },
+                  "component:1": {
+                    "contentHash": "8b8cee6e2ddb",
+                    "anchorHash": "980bd5cc1da3",
+                    "children": {
+                      "component:0": {
+                        "contentHash": "da64cb3bd4a4",
+                        "anchorHash": "e4a941f13dac",
+                        "children": {
+                          "prose:1": {
+                            "contentHash": "60bc26d1ff4e",
+                            "anchorHash": "e3b0c44298fc"
+                          },
+                          "link:0": {
+                            "contentHash": "b30d044ec881",
+                            "anchorHash": "28704a15211d"
+                          },
+                          "prose:2": {
+                            "contentHash": "cdb4ee2aea69",
+                            "anchorHash": "e3b0c44298fc"
+                          }
+                        },
+                        "childrenOrder": [
+                          "prose:1",
+                          "link:0",
+                          "prose:2"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "childrenOrder": [
+                  "attr:variant",
+                  "component:0",
+                  "component:1"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4",
+              "component:6"
+            ]
+          },
+          "setting-up-for-sharding": {
+            "contentHash": "f8f2cdd727c9",
+            "anchorHash": "35b915f4367b",
+            "labelHash": "f3f92d7a900d",
+            "children": {
+              "_label": {
+                "contentHash": "f3f92d7a900d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "700a72d3d485",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "b60a966f435b",
+                "anchorHash": "375512cb1465"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "introducing-staking",
+          "setting-up-for-sharding"
+        ]
+      },
+      "relationship-between-upgrades": {
+        "contentHash": "1b9e96f2c692",
+        "anchorHash": "e8f94bfd7f71",
+        "labelHash": "7d0ab12f7495",
+        "children": {
+          "_label": {
+            "contentHash": "7d0ab12f7495",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6327a12adf1f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "merge-and-beacon-chain": {
+            "contentHash": "6900f5c62edb",
+            "anchorHash": "d4db8bd801c1",
+            "labelHash": "9d67c2de122b",
+            "children": {
+              "_label": {
+                "contentHash": "9d67c2de122b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "78782377faf6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "9353397537e4",
+                "anchorHash": "f38bf4c4150d",
+                "children": {
+                  "attr:href": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "77488c35533d"
+                  },
+                  "prose:0": {
+                    "contentHash": "c09500586c2c",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:href",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2"
+            ]
+          },
+          "shards-and-beacon-chain": {
+            "contentHash": "2544e2538b2e",
+            "anchorHash": "4a3f5a5265cd",
+            "labelHash": "da0de6d424e2",
+            "children": {
+              "_label": {
+                "contentHash": "da0de6d424e2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "6bc35541d52d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "caed99c26b75",
+                "anchorHash": "09a87205dbac",
+                "children": {
+                  "attr:href": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "375512cb1465"
+                  },
+                  "prose:0": {
+                    "contentHash": "e5a99d39d59a",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:href",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "merge-and-beacon-chain",
+          "shards-and-beacon-chain"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "9306cbca00e2",
+        "anchorHash": "ed9aff675be0",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "abdeb6f7adf9",
+            "anchorHash": "197e6736678b"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "b5ae8627324e",
+            "anchorHash": "93c4e99645de"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:image",
+      "frontmatter:alt",
+      "frontmatter:summaryPoints",
+      "component:7",
+      "what-is-the-beacon-chain",
+      "what-does-the-beacon-chain-do",
+      "beacon-chain-features",
+      "relationship-between-upgrades",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

@@ -1,84 +1,84 @@
 ---
-title: "गो डेवलपर्स के लिए इथिरीयम"
-description: "गो-आधारित परियोजनाओं और टूलींग का उपयोग करके एथेरियम के लिए विकसित करना सीखें"
+title: "Go डेवलपर्स के लिए इथेरियम"
+description: "Go-आधारित प्रोजेक्ट्स और टूलिंग का उपयोग करके इथेरियम के लिए विकास करना सीखें"
 lang: hi
 incomplete: true
 ---
 
-<FeaturedText>Go-आधारित परियोजनाओं और टूलिंग का उपयोग करके एथेरियम के लिए विकसित करना सीखें</FeaturedText>
+<FeaturedText>Go-आधारित प्रोजेक्ट्स और टूलिंग का उपयोग करके इथेरियम के लिए विकास करना सीखें</FeaturedText>
 
-एथेरियम का उपयोग करके विकेंद्रीकृत अनुप्रयोग (या "dapps") बनाएं। ये डैप भरोसेमंद हो सकते हैं, जिसका अर्थ है कि एक बार इथिरीयम में तैनात होने के बाद, वे हमेशा प्रोग्राम किए गए अनुसार चलेंगे। वे विकेंद्रीकृत होते हैं, जिसका अर्थ है कि वे पीयर-टू-पीयर नेटवर्क पर चलते हैं और इसमें किसी एकल विफलता बिंदु का जोखिम नहीं होता है। कोई एकल इकाई या व्यक्ति इन्हें नियंत्रित नहीं करता है, और इन्हें सेंसर करना लगभग असंभव है। वे डिजिटल संपत्तियों को नियंत्रित कर सकते हैं ताकि नए प्रकार के अनुप्रयोग बनाए जा सकें।
+विकेंद्रीकृत एप्लिकेशन (dapp) बनाने के लिए इथेरियम का उपयोग करें। ये dapp भरोसेमंद हो सकते हैं, जिसका अर्थ है कि एक बार जब वे इथेरियम पर तैनात हो जाते हैं, तो वे हमेशा प्रोग्राम किए गए अनुसार ही चलेंगे। वे विकेंद्रीकृत हैं, जिसका अर्थ है कि वे एक पीयर-टू-पीयर नेटवर्क पर चलते हैं और विफलता का कोई एक बिंदु (single point of failure) नहीं है। कोई भी एक संस्था या व्यक्ति उन्हें नियंत्रित नहीं करता है और उन्हें सेंसर करना लगभग असंभव है। नए प्रकार के एप्लिकेशन बनाने के लिए वे डिजिटल संपत्तियों को नियंत्रित कर सकते हैं।
 
-## स्मार्ट अनुबंधों और सॉलिडिटी भाषा के साथ आरंभ करना {#getting-started-with-smart-contracts-and-solidity}
+## स्मार्ट अनुबंध और Solidity भाषा के साथ शुरुआत करना {#getting-started-with-smart-contracts-and-solidity}
 
-**Go को एथेरियम के साथ एकीकृत करने के लिए अपने पहले कदम उठाएँ**
+**Go को इथेरियम के साथ एकीकृत करने के लिए अपने पहले कदम उठाएं**
 
-पहले एक और बुनियादी प्राइमर की आवश्यकता है? [ethereum.org/learn](/learn/) या [ethereum.org/developers](/developers/) देखें।
+क्या पहले अधिक बुनियादी जानकारी की आवश्यकता है? [ethereum.org/learn](/learn/) या [ethereum.org/developers](/developers/) देखें।
 
-- [ब्लॉकचेन समझाया गया](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [ब्लॉकचेन को समझना](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [स्मार्ट अनुबंधों को समझना](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [अपना पहला स्मार्ट अनुबंध लिखें](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [सॉलिडिटी को कंपाइल और डिप्लॉय करना सीखें](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Solidity को संकलित (Compile) और तैनात करना सीखें](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [अनुबंध ट्यूटोरियल](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
-## शुरुआती लोगों के लिए लेख और पुस्तकें {#beginner-articles-and-books}
+## शुरुआती लेख और किताबें {#beginner-articles-and-books}
 
-- [गेथ के साथ शुरुआत करना](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
-- [एथेरियम से कनेक्ट करने के लिए गोलंग का उपयोग करें](https://www.youtube.com/watch?v=-7uChuO_VzM)
-- [गोलंग का उपयोग करके एथेरियम स्मार्ट अनुबंध तैनात करें](https://www.youtube.com/watch?v=pytGqQmDslE)
-- [Go में एथेरियम स्मार्ट अनुबंधों का परीक्षण और परिनियोजन के लिए चरण-दर-चरण मार्गदर्शिका](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
-- [ई-पुस्तक: Go के साथ एथेरियम का विकास](https://goethereumbook.org/) - _Go के साथ एथेरियम अनुप्रयोग विकसित करें_
+- [Geth के साथ शुरुआत करना](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
+- [इथेरियम से जुड़ने के लिए Golang का उपयोग करें](https://www.youtube.com/watch?v=-7uChuO_VzM)
+- [Golang का उपयोग करके इथेरियम स्मार्ट अनुबंध तैनात करें](https://www.youtube.com/watch?v=pytGqQmDslE)
+- [Go में इथेरियम स्मार्ट अनुबंधों के परीक्षण और तैनाती के लिए चरण-दर-चरण मार्गदर्शिका](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
+- [ई-बुक: Go के साथ इथेरियम विकास](https://goethereumbook.org/) - _Go के साथ इथेरियम एप्लिकेशन विकसित करें_
 
 ## मध्यवर्ती लेख और दस्तावेज़ {#intermediate-articles-and-docs}
 
-- [Go एथेरियम प्रलेखन](https://geth.ethereum.org/docs/) - _आधिकारिक एथेरियम गोलंग के लिए प्रलेखन_
-- [एरिगॉन प्रोग्रामर की मार्गदर्शिका](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _स्टेट ट्री, मल्टी-प्रूफ़ और लेनदेन प्रसंस्करण सहित सचित्र मार्गदर्शिका_
-- [एरिगॉन और स्टेटलेस एथेरियम](https://youtu.be/3-Mn7OckSus?t=394) - _2020 एथेरियम सामुदायिक सम्मेलन (EthCC 3)_
-- [एरिगॉन: एथेरियम क्लाइंट को अनुकूलित करना](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
-- [Go एथेरियम GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [गेथ के साथ Go में एक डैप बनाना](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
-- [गोलंग और गेथ के साथ एथेरियम निजी नेटवर्क के साथ काम करें](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
-- [Go के साथ एथेरियम पर सॉलिडिटी अनुबंधों का यूनिट परीक्षण](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
-- [गेथ को लाइब्रेरी के रूप में उपयोग करने के लिए त्वरित संदर्भ](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
+- [गो इथेरियम दस्तावेज़ीकरण](https://geth.ethereum.org/docs) - _आधिकारिक इथेरियम Golang के लिए दस्तावेज़ीकरण_
+- [एरिगोन प्रोग्रामर गाइड](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _स्थिति ट्री, मल्टी-प्रूफ और लेन-देन प्रसंस्करण सहित सचित्र मार्गदर्शिका_
+- [एरिगोन और स्टेटलेस इथेरियम](https://youtu.be/3-Mn7OckSus?t=394) - _2020 इथेरियम कम्युनिटी कॉन्फ्रेंस (EthCC 3)_
+- [एरिगोन: इथेरियम क्लाइंट्स को अनुकूलित करना](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
+- [गो इथेरियम GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
+- [Geth के साथ Go में एक dapp बनाना](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
+- [Golang और Geth के साथ इथेरियम प्राइवेट नेटवर्क के साथ काम करें](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
+- [Go के साथ इथेरियम पर Solidity अनुबंधों की यूनिट टेस्टिंग](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
+- [एक लाइब्रेरी के रूप में Geth का उपयोग करने के लिए त्वरित संदर्भ](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
 ## उन्नत उपयोग पैटर्न {#advanced-use-patterns}
 
 - [GETH सिम्युलेटेड बैकएंड](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
-- [एथेरियम और कोरम का उपयोग करके ब्लॉकचेन-एज़-अ-सर्विस ऐप्स](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
-- [एथेरियम ब्लॉकचेन अनुप्रयोगों में वितरित भंडारण आईपीएफएस और स्वार्म](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
-- [मोबाइल क्लाइंट: लाइब्रेरी और इनप्रोक एथेरियम नोड्स](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
-- [देशी डैप्स: एथेरियम अनुबंधों के लिए Go बाइंडिंग](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
+- [इथेरियम और Quorum का उपयोग करके ब्लॉकचेन-एज़-ए-सर्विस ऐप्स](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
+- [इथेरियम ब्लॉकचेन एप्लिकेशन में वितरित स्टोरेज IPFS और स्वार्म](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
+- [मोबाइल क्लाइंट: लाइब्रेरी और इनप्रोक इथेरियम नोड्स](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
+- [नेटिव dapps: इथेरियम अनुबंधों के लिए Go बाइंडिंग](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-## Go परियोजनाएं और उपकरण {#go-projects-and-tools}
+## Go प्रोजेक्ट्स और टूल्स {#go-projects-and-tools}
 
-- [गेथ / Go एथेरियम](https://github.com/ethereum/go-ethereum) - _Ethereum प्रोटोकॉल का आधिकारिक Go कार्यान्वयन_
-- [Go एथेरियम कोड विश्लेषण](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Go एथेरियम स्रोत कोड की समीक्षा और विश्लेषण_
-- [एरिगॉन](https://github.com/ledgerwatch/erigon) - _Go एथेरियम का तेज़ व्युत्पन्न, जो संग्रह नोड्स पर केंद्रित है_
-- [Golem](https://github.com/golemfactory/golem) - _Golem कंप्यूटिंग शक्ति के लिए एक वैश्विक बाज़ार बना रहा है_
-- [कोरम](https://github.com/jpmorganchase/quorum) - _डेटा गोपनीयता का समर्थन करने वाला एथेरियम का एक अनुमति प्राप्त कार्यान्वयन_
-- [प्रिज़्म](https://github.com/prysmaticlabs/prysm) - _Ethereum 'सेरेनिटी' 2.0 Go कार्यान्वयन_
-- [Eth Tweet](https://github.com/yep/eth-tweet) - _विकेंद्रीकृत ट्विटर: एथेरियम ब्लॉकचेन पर चलने वाली एक माइक्रोब्लॉगिंग सेवा_
-- [Plasma MVP गोलंग](https://github.com/kyokan/plasma) — _न्यूनतम व्यवहार्य प्लाज्मा विनिर्देश का गोलंग कार्यान्वयन और विस्तार_
-- [ओपन एथेरियम माइनिंग पूल](https://github.com/sammy007/open-ethereum-pool) - _एक ओपन सोर्स एथेरियम माइनिंग पूल_
-- [एथेरियम HD वॉलेट](https://github.com/miguelmota/go-ethereum-hdwallet) - _Go में एथेरियम HD वॉलेट व्युत्पत्तियाँ_
-- [मल्टी गेथ](https://github.com/multi-geth/multi-geth) - _कई प्रकार के एथेरियम नेटवर्क के लिए समर्थन_
-- [गेथ लाइट क्लाइंट](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _लाइट एथेरियम सबप्रोटोकॉल का गेथ कार्यान्वयन_
-- [एथेरियम गोलंग SDK](https://github.com/everFinance/goether) - _Golang में एक सरल एथेरियम वॉलेट कार्यान्वयन और यूटिलिटीज_
-- [Covalent गोलंग SDK](https://github.com/covalenthq/covalent-api-sdk-go) - _200+ ब्लॉकचेन के लिए Go SDK के माध्यम से कुशल ब्लॉकचेन डेटा एक्सेस_
+- [Geth / गो इथेरियम](https://github.com/ethereum/go-ethereum) - _इथेरियम प्रोटोकॉल का आधिकारिक Go कार्यान्वयन_
+- [गो इथेरियम कोड विश्लेषण](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _गो इथेरियम स्रोत कोड की समीक्षा और विश्लेषण_
+- [एरिगोन](https://github.com/ledgerwatch/erigon) - _गो इथेरियम का तेज़ व्युत्पन्न (derivative), जो आर्काइव नोड्स पर केंद्रित है_
+- [Golem](https://github.com/golemfactory/golem) - _Golem कंप्यूटिंग शक्ति के लिए एक वैश्विक बाज़ार बना रहा है_
+- [Quorum](https://github.com/jpmorganchase/quorum) - _डेटा गोपनीयता का समर्थन करने वाला इथेरियम का एक अनुमति-प्राप्त कार्यान्वयन_
+- [प्रिज़्म](https://github.com/prysmaticlabs/prysm) - _इथेरियम 'Serenity' 2.0 Go कार्यान्वयन_
+- [Eth Tweet](https://github.com/yep/eth-tweet) - _विकेंद्रीकृत ट्विटर: इथेरियम ब्लॉकचेन पर चलने वाली एक माइक्रोब्लॉगिंग सेवा_
+- [प्लाज्मा MVP Golang](https://github.com/kyokan/plasma) — _न्यूनतम व्यवहार्य प्लाज्मा (Minimum Viable Plasma) विनिर्देश का Golang कार्यान्वयन और विस्तार_
+- [ओपन इथेरियम माइनिंग पूल](https://github.com/sammy007/open-ethereum-pool) - _एक ओपन सोर्स इथेरियम खनन पूल_
+- [इथेरियम HD वॉलेट](https://github.com/miguelmota/go-ethereum-hdwallet) - _Go में इथेरियम HD वॉलेट व्युत्पन्न (derivations)_
+- [मल्टी Geth](https://github.com/multi-geth/multi-geth) - _इथेरियम नेटवर्क की कई प्रजातियों के लिए समर्थन_
+- [Geth लाइट क्लाइंट](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _लाइट इथेरियम सबप्रोटोकॉल का Geth कार्यान्वयन_
+- [इथेरियम Golang SDK](https://github.com/everFinance/goether) - _Golang में एक सरल इथेरियम वॉलेट कार्यान्वयन और उपयोगिताएँ_
+- [Covalent Golang SDK](https://github.com/covalenthq/covalent-api-sdk-go) - _200+ ब्लॉकचेन के लिए Go SDK के माध्यम से कुशल ब्लॉकचेन डेटा एक्सेस_
 
-अधिक संसाधनों की तलाश है? [ethereum.org/developers](/developers/) देखें
+क्या आप और अधिक संसाधनों की तलाश में हैं? [ethereum.org/developers](/developers/) देखें
 
 ## Go समुदाय के योगदानकर्ता {#go-community-contributors}
 
-- [गेथ डिस्कॉर्ड](https://discordapp.com/invite/nthXNEv)
-- [गेथ Gist](https://gitter.im/ethereum/go-ethereum)
+- [Geth डिस्कॉर्ड](https://discordapp.com/invite/nthXNEv)
+- [Geth Gist](https://gitter.im/ethereum/go-ethereum)
 - [Gophers Slack](https://invite.slack.golangbridge.org/) - [#ethereum चैनल](https://gophers.slack.com/messages/C9HP1S9V2)
-- [StackExchange - एथेरियम](https://ethereum.stackexchange.com/)
-- [Multi गेथ गिटर](https://gitter.im/ethoxy/multi-geth)
-- [एथेरियम गिटर](https://gitter.im/ethereum/home)
-- [गेथ लाइट क्लाइंट गिटर](https://gitter.im/ethereum/light-client)
+- [StackExchange - इथेरियम](https://ethereum.stackexchange.com/)
+- [मल्टी Geth Gitter](https://gitter.im/ethoxy/multi-geth)
+- [इथेरियम Gitter](https://gitter.im/ethereum/home)
+- [Geth लाइट क्लाइंट Gitter](https://gitter.im/ethereum/light-client)
 
 ## अन्य एकत्रित सूचियाँ {#other-aggregated-lists}
 
-- [Awesome एथेरियम](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: एथेरियम डेवलपर उपकरणों की एक निश्चित सूची](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [गिटहब स्रोत](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [ऑसम इथेरियम](https://github.com/btomashvili/awesome-ethereum)
+- [कॉन्सेन्सिस: इथेरियम डेवलपर टूल्स की एक निश्चित सूची](https://web.archive.org/web/2023/https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub स्रोत](https://github.com/ConsenSys/ethereum-developer-tools-list)

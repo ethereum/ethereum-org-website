@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-06-08T08:48:01.132Z",
+  "englishManifestHash": "d404817eb192",
+  "placeholderOrder": [
+    "LINK-cd836e",
+    "LINK-a21a82",
+    "LINK-3ced12",
+    "LINK-ba9439",
+    "LINK-c0e28e",
+    "LINK-826f5e",
+    "LINK-4b6d3b",
+    "LINK-0e3596",
+    "LINK-ddaab2",
+    "LINK-4ba685",
+    "LINK-4b54f9",
+    "LINK-087c5d",
+    "LINK-235bc7",
+    "LINK-a379d6",
+    "LINK-3ced12",
+    "LINK-4c0557",
+    "LINK-3ced12",
+    "LINK-5aa668",
+    "LINK-bb958e",
+    "LINK-51b678",
+    "LINK-b85a1e",
+    "LINK-c00dfc",
+    "LINK-3c9362",
+    "LINK-298175",
+    "LINK-3ced12",
+    "LINK-0d0d98",
+    "LINK-be5811"
+  ],
+  "placeholderMap": {
+    "LINK-cd836e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-3ced12": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1"
+      }
+    },
+    "LINK-ba9439": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1#eip-types"
+      }
+    },
+    "LINK-c0e28e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1559"
+      }
+    },
+    "LINK-826f5e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20"
+      }
+    },
+    "LINK-4b6d3b": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-721"
+      }
+    },
+    "LINK-0e3596": {
+      "type": "link",
+      "values": {
+        "url": "/learn/#clients-and-nodes"
+      }
+    },
+    "LINK-ddaab2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/EIPs"
+      }
+    },
+    "LINK-4ba685": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/bitcoin/bips"
+      }
+    },
+    "LINK-4b54f9": {
+      "type": "link",
+      "values": {
+        "url": "https://www.python.org/dev/peps/"
+      }
+    },
+    "LINK-087c5d": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-5069"
+      }
+    },
+    "LINK-235bc7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethereumcatherders.com/"
+      }
+    },
+    "LINK-a379d6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum-cat-herders/EIPIP"
+      }
+    },
+    "LINK-4c0557": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/"
+      }
+    },
+    "LINK-5aa668": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/all"
+      }
+    },
+    "LINK-bb958e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1#eip-types"
+      }
+    },
+    "LINK-51b678": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1#eip-process"
+      }
+    },
+    "LINK-b85a1e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F"
+      }
+    },
+    "LINK-c00dfc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.eips.wtf/"
+      }
+    },
+    "LINK-3c9362": {
+      "type": "link",
+      "values": {
+        "url": "https://eipfun.substack.com/"
+      }
+    },
+    "LINK-298175": {
+      "type": "link",
+      "values": {
+        "url": "https://eipsinsight.com/"
+      }
+    },
+    "LINK-0d0d98": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/"
+      }
+    },
+    "LINK-be5811": {
+      "type": "link",
+      "values": {
+        "url": "https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:48:01.132Z",
+      "status": "success"
+    }
+  }
+}

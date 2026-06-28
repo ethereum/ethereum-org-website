@@ -1,0 +1,1710 @@
+{
+  "version": 1,
+  "locale": "sw",
+  "translatedAt": "2026-06-17T01:06:37.638Z",
+  "englishManifestHash": "1c6d680ec4d7",
+  "placeholderOrder": [
+    "LINK-39a820",
+    "LINK-a17757",
+    "LINK-37da96",
+    "CODE-a0af9f",
+    "CODE-da47c2",
+    "CODE-5615ff",
+    "CODE-eb6865",
+    "CODE-5615ff",
+    "CODE-7cc5bb",
+    "CODE-5615ff",
+    "LINK-abcb8b",
+    "CODEBLOCK-880d4e",
+    "CODE-9b5749",
+    "CODE-6bbd01",
+    "CODEBLOCK-043dea",
+    "CODE-6bbd01",
+    "CODEBLOCK-9187a7",
+    "LINK-2fee12",
+    "CODE-1bad6b",
+    "CODE-688648",
+    "CODEBLOCK-be4337",
+    "CODE-d0ff59",
+    "CODE-715061",
+    "CODE-9f29a1",
+    "CODE-ec5e8d",
+    "LINK-e5c10e",
+    "CODEBLOCK-2b68d3",
+    "CODEBLOCK-5c63d7",
+    "CODEBLOCK-8bb3cb",
+    "CODEBLOCK-c8b9bd",
+    "CODEBLOCK-53b0a8",
+    "CODEBLOCK-97d52b",
+    "CODE-e6d4fd",
+    "CODE-d2620b",
+    "CODE-054b8f",
+    "CODEBLOCK-4e0a97",
+    "CODEBLOCK-be54f6",
+    "CODE-4eea46",
+    "CODEBLOCK-b13496",
+    "LINK-aa4f51",
+    "CODE-fd5b39",
+    "CODEBLOCK-5cbbb0",
+    "LINK-685add",
+    "CODEBLOCK-aad093",
+    "CODE-fd5b39",
+    "CODEBLOCK-6b9780",
+    "CODE-19114f",
+    "CODE-fd5b39",
+    "CODE-fd5b39",
+    "CODEBLOCK-e63dca",
+    "CODEBLOCK-46f6e6",
+    "LINK-eb7d95",
+    "CODEBLOCK-9f130c",
+    "CODE-57713e",
+    "CODE-165305",
+    "LINK-7991d1",
+    "CODEBLOCK-f50593",
+    "CODE-fcbcf1",
+    "CODE-fcbcf1",
+    "CODEBLOCK-c75a70",
+    "CODE-ced97c",
+    "CODE-926c5b",
+    "CODE-0a367b",
+    "CODE-663ea1",
+    "CODEBLOCK-8f4a03",
+    "CODEBLOCK-9adcaf",
+    "CODE-8d261a",
+    "CODEBLOCK-58c867",
+    "CODE-470ebe",
+    "CODEBLOCK-604f57",
+    "CODEBLOCK-e9f5fa",
+    "CODEBLOCK-4468c6",
+    "CODEBLOCK-7cca58",
+    "CODEBLOCK-eb35a6",
+    "CODE-883f8c",
+    "CODEBLOCK-f490bd",
+    "CODE-8d261a",
+    "CODEBLOCK-9a04eb",
+    "CODEBLOCK-7b0f91",
+    "CODEBLOCK-c24eba",
+    "CODE-4eea46",
+    "CODEBLOCK-b5c4ba",
+    "CODE-c67614",
+    "CODEBLOCK-9f6beb",
+    "LINK-425ca9",
+    "CODEBLOCK-ad5af5",
+    "LINK-943260",
+    "CODE-4eea46",
+    "CODE-1ae3f9",
+    "CODE-1ae3f9",
+    "CODEBLOCK-3a4d63",
+    "CODE-17e189",
+    "CODE-c67614",
+    "CODEBLOCK-eb1226",
+    "CODE-4eea46",
+    "LINK-b85573",
+    "CODEBLOCK-da0806",
+    "LINK-36f4f1",
+    "CODEBLOCK-c8a0b0",
+    "CODEBLOCK-5b71dd",
+    "CODEBLOCK-28c2a3",
+    "CODE-2aed25",
+    "CODEBLOCK-fd9b9b",
+    "CODE-b35ab6",
+    "CODE-b35ab6",
+    "CODEBLOCK-ec16a5",
+    "CODE-2e9c80",
+    "CODEBLOCK-5e9e03",
+    "CODE-17e189",
+    "CODEBLOCK-e05a9c",
+    "CODE-e6d4fd",
+    "CODE-d2620b",
+    "CODE-4eea46",
+    "CODEBLOCK-e0320b",
+    "LINK-4521ec",
+    "CODEBLOCK-615840",
+    "CODEBLOCK-911b43",
+    "CODEBLOCK-c14d5a",
+    "CODE-859fac",
+    "CODE-dc6f17",
+    "CODEBLOCK-3f9c6e",
+    "LINK-36f4f1",
+    "CODEBLOCK-ebb7a0",
+    "LINK-570135",
+    "CODEBLOCK-347b5c",
+    "CODEBLOCK-9efa2d",
+    "CODEBLOCK-c5cb1c",
+    "CODEBLOCK-e4b06a",
+    "CODE-2e9c80",
+    "CODEBLOCK-c7ff67",
+    "CODE-e6d4fd",
+    "CODE-d2620b",
+    "CODE-dc6f17",
+    "CODE-da47c2",
+    "CODE-75c75e",
+    "CODE-769a27",
+    "CODE-769a27",
+    "CODEBLOCK-e27ffb",
+    "LINK-228b2a",
+    "CODEBLOCK-1694b9",
+    "LINK-943260",
+    "CODE-c67614",
+    "CODE-37c418",
+    "CODE-c67614",
+    "CODEBLOCK-564294",
+    "CODE-b61f67",
+    "CODE-60e831",
+    "CODE-a9b6ea",
+    "CODE-fc85d1",
+    "CODE-994ac8",
+    "LINK-a101d9",
+    "CODEBLOCK-fa0cbe",
+    "CODEBLOCK-0663a3",
+    "CODE-37c418",
+    "CODE-f8a956",
+    "CODEBLOCK-5198cd",
+    "CODEBLOCK-7a5be5",
+    "CODEBLOCK-e711bc",
+    "LINK-9a8797",
+    "CODEBLOCK-8600b0",
+    "CODEBLOCK-cd3723",
+    "CODE-3530dd",
+    "LINK-4420c9",
+    "LINK-3e4a36",
+    "CODEBLOCK-1d3f7b",
+    "LINK-fc072d",
+    "CODEBLOCK-c344eb",
+    "CODE-470ebe",
+    "CODEBLOCK-b704e0",
+    "CODEBLOCK-567849",
+    "CODE-f8a956",
+    "CODE-f8a956",
+    "LINK-d5dc7e",
+    "LINK-67a5e2",
+    "CODE-85441a",
+    "LINK-a46b02",
+    "CODEBLOCK-5ff633",
+    "LINK-0ca33b",
+    "CODE-db1da3",
+    "CODEBLOCK-0dddba",
+    "LINK-0ea974",
+    "LINK-ddcf6e",
+    "CODE-db1da3",
+    "CODEBLOCK-d507aa",
+    "LINK-335917",
+    "LINK-5b28d4",
+    "CODE-911413",
+    "CODE-73b5e4",
+    "CODEBLOCK-7a1291",
+    "LINK-cef69c",
+    "CODEBLOCK-0cb3aa",
+    "LINK-231d0c",
+    "CODEBLOCK-00bbb3",
+    "CODEBLOCK-630f89",
+    "CODE-3989bc",
+    "CODE-07b72b",
+    "CODEBLOCK-f46079",
+    "LINK-b4cb0d",
+    "CODEBLOCK-ad07b9",
+    "LINK-bf7c87",
+    "LINK-07b9eb",
+    "LINK-8e2733",
+    "CODE-3ec9a2",
+    "LINK-bf2026",
+    "LINK-dc49c4",
+    "CODEBLOCK-6e8257",
+    "CODE-ce0700",
+    "LINK-57283b",
+    "CODEBLOCK-61e6ca",
+    "LINK-3252fa",
+    "CODEBLOCK-f5b910",
+    "CODEBLOCK-b836bd",
+    "CODEBLOCK-51f0a7",
+    "CODEBLOCK-331b14",
+    "CODEBLOCK-bfed4a",
+    "CODEBLOCK-e994f1",
+    "CODEBLOCK-0be7fc",
+    "CODEBLOCK-7d2bf6",
+    "CODEBLOCK-c18f2d",
+    "CODEBLOCK-22345c",
+    "CODEBLOCK-19df0e",
+    "CODEBLOCK-2887c2",
+    "LINK-f23681",
+    "CODEBLOCK-2c71e6",
+    "CODE-67405d",
+    "CODEBLOCK-ade62b",
+    "IMAGE-d75ab6",
+    "LINK-b47201",
+    "CODEBLOCK-2c69b5",
+    "CODE-d3e3bc",
+    "CODE-663ea1",
+    "CODE-dfc8ae",
+    "CODEBLOCK-246075",
+    "CODE-9cb4dc",
+    "CODEBLOCK-dde9e9",
+    "CODEBLOCK-33ca79",
+    "CODE-663ea1",
+    "CODE-dc6f17",
+    "CODEBLOCK-6051d6",
+    "CODE-59114e",
+    "CODEBLOCK-9ecba5",
+    "CODE-254506",
+    "CODEBLOCK-ddddb5",
+    "CODEBLOCK-70a3e9",
+    "CODEBLOCK-d10c81",
+    "CODE-859fac",
+    "CODEBLOCK-12fa08",
+    "CODEBLOCK-df811f",
+    "CODE-60e831",
+    "CODE-a9b6ea",
+    "CODEBLOCK-bd01db",
+    "CODEBLOCK-409f41",
+    "CODEBLOCK-5f1c57",
+    "LINK-038e0c",
+    "CODEBLOCK-467543",
+    "CODE-7cc5bb",
+    "CODEBLOCK-961b62",
+    "CODEBLOCK-53b2c7",
+    "CODEBLOCK-b38e1c",
+    "LINK-6765bb",
+    "LINK-4f0895",
+    "CODEBLOCK-8fd687",
+    "CODEBLOCK-fd9913",
+    "CODEBLOCK-d04b3d",
+    "CODEBLOCK-ba77e6",
+    "CODEBLOCK-54815e",
+    "CODEBLOCK-58f59b",
+    "CODE-c064fb",
+    "CODE-6ba9f2",
+    "CODE-a47a5a",
+    "CODE-c064fb",
+    "CODE-6ba9f2",
+    "CODE-c3f202",
+    "CODE-d80c9b",
+    "CODEBLOCK-fcf320",
+    "CODEBLOCK-5d641c",
+    "CODEBLOCK-ae947a",
+    "CODE-a47a5a",
+    "CODEBLOCK-56bfb6",
+    "CODE-d8301a",
+    "CODEBLOCK-b159b3",
+    "CODEBLOCK-20a620",
+    "LINK-8166c5",
+    "CODEBLOCK-4a77a0",
+    "CODE-03b08c",
+    "CODE-a47a5a",
+    "CODE-a47a5a",
+    "CODEBLOCK-ffcd70",
+    "CODE-7a3508",
+    "CODEBLOCK-91562a",
+    "LINK-394775",
+    "LINK-2fee12",
+    "CODEBLOCK-9dbbe3",
+    "CODEBLOCK-59514f",
+    "LINK-53565a",
+    "CODEBLOCK-82a1b9",
+    "CODEBLOCK-bc5554",
+    "CODEBLOCK-7d3f9c",
+    "CODE-d50479",
+    "CODEBLOCK-81ca50",
+    "CODE-2a18a7",
+    "CODE-8590a3",
+    "CODEBLOCK-41a7e1",
+    "CODE-8590a3",
+    "CODE-8590a3",
+    "CODEBLOCK-e44614",
+    "CODEBLOCK-e3adc7",
+    "LINK-4420c9",
+    "CODEBLOCK-497a32",
+    "CODEBLOCK-b4594c",
+    "CODEBLOCK-048521",
+    "CODE-632724",
+    "CODEBLOCK-bd2c22",
+    "CODEBLOCK-66278b",
+    "CODEBLOCK-910524",
+    "LINK-d09c1c",
+    "CODE-fcbcf1",
+    "CODEBLOCK-1fcac7",
+    "LINK-e3da4c",
+    "CODEBLOCK-d41475",
+    "CODE-aee408",
+    "CODE-fcbcf1",
+    "CODE-fcbcf1",
+    "CODE-fcbcf1",
+    "CODEBLOCK-b72b55",
+    "LINK-1626ef",
+    "CODEBLOCK-4f52ee",
+    "LINK-5f9b92",
+    "CODEBLOCK-eb2baf",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-880d4e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-043dea": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9187a7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-be4337": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2b68d3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5c63d7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8bb3cb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c8b9bd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-53b0a8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-97d52b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4e0a97": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-be54f6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b13496": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5cbbb0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-aad093": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6b9780": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e63dca": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-46f6e6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9f130c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f50593": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c75a70": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8f4a03": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9adcaf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-58c867": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-604f57": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e9f5fa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4468c6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7cca58": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-eb35a6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f490bd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9a04eb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7b0f91": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c24eba": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b5c4ba": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9f6beb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ad5af5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3a4d63": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-eb1226": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-da0806": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c8a0b0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5b71dd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-28c2a3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fd9b9b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ec16a5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5e9e03": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e05a9c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e0320b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-615840": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-911b43": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c14d5a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3f9c6e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ebb7a0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-347b5c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9efa2d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c5cb1c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e4b06a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c7ff67": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e27ffb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1694b9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-564294": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fa0cbe": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0663a3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5198cd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7a5be5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e711bc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8600b0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cd3723": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1d3f7b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c344eb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b704e0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-567849": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5ff633": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0dddba": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d507aa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7a1291": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0cb3aa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-00bbb3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-630f89": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f46079": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ad07b9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6e8257": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-61e6ca": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f5b910": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b836bd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-51f0a7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-331b14": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bfed4a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e994f1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0be7fc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7d2bf6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c18f2d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-22345c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-19df0e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2887c2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2c71e6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ade62b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2c69b5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-246075": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dde9e9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-33ca79": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6051d6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9ecba5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ddddb5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-70a3e9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d10c81": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-12fa08": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-df811f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bd01db": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-409f41": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5f1c57": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-467543": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-961b62": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-53b2c7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b38e1c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8fd687": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fd9913": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d04b3d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ba77e6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-54815e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-58f59b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fcf320": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5d641c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ae947a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-56bfb6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b159b3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-20a620": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4a77a0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ffcd70": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-91562a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9dbbe3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-59514f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-82a1b9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bc5554": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7d3f9c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-81ca50": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-41a7e1": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e44614": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e3adc7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-497a32": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b4594c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-048521": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bd2c22": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-66278b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-910524": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1fcac7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d41475": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b72b55": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4f52ee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-eb2baf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-a0af9f": {
+      "type": "inline-code",
+      "values": {
+        "content": "path"
+      }
+    },
+    "CODE-da47c2": {
+      "type": "inline-code",
+      "values": {
+        "content": "swap"
+      }
+    },
+    "CODE-5615ff": {
+      "type": "inline-code",
+      "values": {
+        "content": "_update"
+      }
+    },
+    "CODE-eb6865": {
+      "type": "inline-code",
+      "values": {
+        "content": "addLiquidity"
+      }
+    },
+    "CODE-7cc5bb": {
+      "type": "inline-code",
+      "values": {
+        "content": "removeLiquidity"
+      }
+    },
+    "CODE-9b5749": {
+      "type": "inline-code",
+      "values": {
+        "content": "IUniswapV2Pair"
+      }
+    },
+    "CODE-6bbd01": {
+      "type": "inline-code",
+      "values": {
+        "content": "UniswapV2ERC20"
+      }
+    },
+    "CODE-1bad6b": {
+      "type": "inline-code",
+      "values": {
+        "content": "-1"
+      }
+    },
+    "CODE-688648": {
+      "type": "inline-code",
+      "values": {
+        "content": "2^256-1"
+      }
+    },
+    "CODE-d0ff59": {
+      "type": "inline-code",
+      "values": {
+        "content": "1.0"
+      }
+    },
+    "CODE-715061": {
+      "type": "inline-code",
+      "values": {
+        "content": "2^112"
+      }
+    },
+    "CODE-9f29a1": {
+      "type": "inline-code",
+      "values": {
+        "content": "1.5"
+      }
+    },
+    "CODE-ec5e8d": {
+      "type": "inline-code",
+      "values": {
+        "content": "2^112 + 2^111"
+      }
+    },
+    "CODE-e6d4fd": {
+      "type": "inline-code",
+      "values": {
+        "content": "reserve0"
+      }
+    },
+    "CODE-d2620b": {
+      "type": "inline-code",
+      "values": {
+        "content": "reserve1"
+      }
+    },
+    "CODE-054b8f": {
+      "type": "inline-code",
+      "values": {
+        "content": "blockTimestampLast"
+      }
+    },
+    "CODE-4eea46": {
+      "type": "inline-code",
+      "values": {
+        "content": "kLast"
+      }
+    },
+    "CODE-fd5b39": {
+      "type": "inline-code",
+      "values": {
+        "content": "unlocked"
+      }
+    },
+    "CODE-19114f": {
+      "type": "inline-code",
+      "values": {
+        "content": "_;"
+      }
+    },
+    "CODE-57713e": {
+      "type": "inline-code",
+      "values": {
+        "content": "SELECTOR"
+      }
+    },
+    "CODE-165305": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer(address,uint)"
+      }
+    },
+    "CODE-fcbcf1": {
+      "type": "inline-code",
+      "values": {
+        "content": "false"
+      }
+    },
+    "CODE-ced97c": {
+      "type": "inline-code",
+      "values": {
+        "content": "Mint"
+      }
+    },
+    "CODE-926c5b": {
+      "type": "inline-code",
+      "values": {
+        "content": "Burn"
+      }
+    },
+    "CODE-0a367b": {
+      "type": "inline-code",
+      "values": {
+        "content": "sender"
+      }
+    },
+    "CODE-663ea1": {
+      "type": "inline-code",
+      "values": {
+        "content": "to"
+      }
+    },
+    "CODE-8d261a": {
+      "type": "inline-code",
+      "values": {
+        "content": "Sync"
+      }
+    },
+    "CODE-470ebe": {
+      "type": "inline-code",
+      "values": {
+        "content": "initialize"
+      }
+    },
+    "CODE-883f8c": {
+      "type": "inline-code",
+      "values": {
+        "content": "price0Cumulative"
+      }
+    },
+    "CODE-c67614": {
+      "type": "inline-code",
+      "values": {
+        "content": "feeTo"
+      }
+    },
+    "CODE-1ae3f9": {
+      "type": "inline-code",
+      "values": {
+        "content": "reserve0 * reserve1"
+      }
+    },
+    "CODE-17e189": {
+      "type": "inline-code",
+      "values": {
+        "content": "UniswapV2ERC20._mint"
+      }
+    },
+    "CODE-2aed25": {
+      "type": "inline-code",
+      "values": {
+        "content": "_mintFee"
+      }
+    },
+    "CODE-b35ab6": {
+      "type": "inline-code",
+      "values": {
+        "content": "MINIMUM_LIQUIDITY"
+      }
+    },
+    "CODE-2e9c80": {
+      "type": "inline-code",
+      "values": {
+        "content": "reserve0*reserve1"
+      }
+    },
+    "CODE-859fac": {
+      "type": "inline-code",
+      "values": {
+        "content": "burn"
+      }
+    },
+    "CODE-dc6f17": {
+      "type": "inline-code",
+      "values": {
+        "content": "mint"
+      }
+    },
+    "CODE-75c75e": {
+      "type": "inline-code",
+      "values": {
+        "content": "sync"
+      }
+    },
+    "CODE-769a27": {
+      "type": "inline-code",
+      "values": {
+        "content": "skim"
+      }
+    },
+    "CODE-37c418": {
+      "type": "inline-code",
+      "values": {
+        "content": "feeToSetter"
+      }
+    },
+    "CODE-b61f67": {
+      "type": "inline-code",
+      "values": {
+        "content": "getPair"
+      }
+    },
+    "CODE-60e831": {
+      "type": "inline-code",
+      "values": {
+        "content": "tokenA"
+      }
+    },
+    "CODE-a9b6ea": {
+      "type": "inline-code",
+      "values": {
+        "content": "tokenB"
+      }
+    },
+    "CODE-fc85d1": {
+      "type": "inline-code",
+      "values": {
+        "content": "getPair[<tokenA address>][<tokenB address>]"
+      }
+    },
+    "CODE-994ac8": {
+      "type": "inline-code",
+      "values": {
+        "content": "allPairs"
+      }
+    },
+    "CODE-f8a956": {
+      "type": "inline-code",
+      "values": {
+        "content": "feeSetter"
+      }
+    },
+    "CODE-3530dd": {
+      "type": "inline-code",
+      "values": {
+        "content": "addr = new <name of contract>(<constructor parameters>)"
+      }
+    },
+    "CODE-85441a": {
+      "type": "inline-code",
+      "values": {
+        "content": "permit"
+      }
+    },
+    "CODE-db1da3": {
+      "type": "inline-code",
+      "values": {
+        "content": "Permit"
+      }
+    },
+    "CODE-911413": {
+      "type": "inline-code",
+      "values": {
+        "content": "chainid()"
+      }
+    },
+    "CODE-73b5e4": {
+      "type": "inline-code",
+      "values": {
+        "content": "chainid"
+      }
+    },
+    "CODE-3989bc": {
+      "type": "inline-code",
+      "values": {
+        "content": "abi.encodePacked(...)"
+      }
+    },
+    "CODE-07b72b": {
+      "type": "inline-code",
+      "values": {
+        "content": "keccak256"
+      }
+    },
+    "CODE-3ec9a2": {
+      "type": "inline-code",
+      "values": {
+        "content": "UniswapV2Router02"
+      }
+    },
+    "CODE-ce0700": {
+      "type": "inline-code",
+      "values": {
+        "content": "IWETH.sol"
+      }
+    },
+    "CODE-67405d": {
+      "type": "inline-code",
+      "values": {
+        "content": "amountBOptimal"
+      }
+    },
+    "CODE-d3e3bc": {
+      "type": "inline-code",
+      "values": {
+        "content": "_addLiquidity"
+      }
+    },
+    "CODE-dfc8ae": {
+      "type": "inline-code",
+      "values": {
+        "content": "deadline"
+      }
+    },
+    "CODE-9cb4dc": {
+      "type": "inline-code",
+      "values": {
+        "content": "pairFor"
+      }
+    },
+    "CODE-59114e": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.value"
+      }
+    },
+    "CODE-254506": {
+      "type": "inline-code",
+      "values": {
+        "content": "assert"
+      }
+    },
+    "CODE-c064fb": {
+      "type": "inline-code",
+      "values": {
+        "content": "memory"
+      }
+    },
+    "CODE-6ba9f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldata"
+      }
+    },
+    "CODE-a47a5a": {
+      "type": "inline-code",
+      "values": {
+        "content": "_swap"
+      }
+    },
+    "CODE-c3f202": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint"
+      }
+    },
+    "CODE-d80c9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "address"
+      }
+    },
+    "CODE-d8301a": {
+      "type": "inline-code",
+      "values": {
+        "content": "swapTokensForTokens"
+      }
+    },
+    "CODE-03b08c": {
+      "type": "inline-code",
+      "values": {
+        "content": "getAmountsOut"
+      }
+    },
+    "CODE-7a3508": {
+      "type": "inline-code",
+      "values": {
+        "content": "_swapSupportingFeeOnTransferTokens"
+      }
+    },
+    "CODE-d50479": {
+      "type": "inline-code",
+      "values": {
+        "content": "Q112"
+      }
+    },
+    "CODE-2a18a7": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint112"
+      }
+    },
+    "CODE-8590a3": {
+      "type": "inline-code",
+      "values": {
+        "content": "UQ112x112"
+      }
+    },
+    "CODE-632724": {
+      "type": "inline-code",
+      "values": {
+        "content": "quote"
+      }
+    },
+    "CODE-aee408": {
+      "type": "inline-code",
+      "values": {
+        "content": "success"
+      }
+    },
+    "IMAGE-d75ab6": {
+      "type": "image",
+      "values": {
+        "path": "liquidityProviderDeposit.png"
+      }
+    },
+    "LINK-39a820": {
+      "type": "link",
+      "values": {
+        "url": "https://app.uniswap.org/whitepaper.pdf"
+      }
+    },
+    "LINK-a17757": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/"
+      }
+    },
+    "LINK-37da96": {
+      "type": "link",
+      "values": {
+        "url": "https://app.uniswap.org/whitepaper-v3.pdf"
+      }
+    },
+    "LINK-abcb8b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol"
+      }
+    },
+    "LINK-2fee12": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/2.x/api/math"
+      }
+    },
+    "LINK-e5c10e": {
+      "type": "link",
+      "values": {
+        "url": "#fixedpoint"
+      }
+    },
+    "LINK-aa4f51": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/ethernaut-lvl-10-re-entrancy-walkthrough-how-to-abuse-execution-ordering-and-reproduce-the-dao-7ec88b912c14"
+      }
+    },
+    "LINK-685add": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.3/contracts.html#function-modifiers"
+      }
+    },
+    "LINK-eb7d95": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.3/contracts.html#returning-multiple-values"
+      }
+    },
+    "LINK-7991d1": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions"
+      }
+    },
+    "LINK-425ca9": {
+      "type": "link",
+      "values": {
+        "url": "#math"
+      }
+    },
+    "LINK-943260": {
+      "type": "link",
+      "values": {
+        "url": "https://app.uniswap.org/whitepaper.pdf"
+      }
+    },
+    "LINK-b85573": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-3298"
+      }
+    },
+    "LINK-36f4f1": {
+      "type": "link",
+      "values": {
+        "url": "#uniswapv2router02"
+      }
+    },
+    "LINK-4521ec": {
+      "type": "link",
+      "values": {
+        "url": "#uniswapv2router02"
+      }
+    },
+    "LINK-570135": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
+      }
+    },
+    "LINK-228b2a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol"
+      }
+    },
+    "LINK-a101d9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol"
+      }
+    },
+    "LINK-9a8797": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-4420c9": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1014"
+      }
+    },
+    "LINK-3e4a36": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2"
+      }
+    },
+    "LINK-fc072d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.3/assembly.html"
+      }
+    },
+    "LINK-d5dc7e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol"
+      }
+    },
+    "LINK-67a5e2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc20-annotated-code"
+      }
+    },
+    "LINK-a46b02": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions"
+      }
+    },
+    "LINK-0ca33b": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash"
+      }
+    },
+    "LINK-0ea974": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Replay_attack"
+      }
+    },
+    "LINK-ddcf6e": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Cryptographic_nonce"
+      }
+    },
+    "LINK-335917": {
+      "type": "link",
+      "values": {
+        "url": "https://chainid.network/"
+      }
+    },
+    "LINK-5b28d4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.4/yul.html"
+      }
+    },
+    "LINK-cef69c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator"
+      }
+    },
+    "LINK-231d0c": {
+      "type": "link",
+      "values": {
+        "url": "https://yos.io/2018/11/16/ethereum-signatures/"
+      }
+    },
+    "LINK-b4cb0d": {
+      "type": "link",
+      "values": {
+        "url": "https://coders-errand.com/ecrecover-signature-verification-ethereum/"
+      }
+    },
+    "LINK-bf7c87": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20#approve"
+      }
+    },
+    "LINK-07b9eb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol"
+      }
+    },
+    "LINK-8e2733": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01"
+      }
+    },
+    "LINK-bf2026": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol"
+      }
+    },
+    "LINK-dc49c4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02"
+      }
+    },
+    "LINK-57283b": {
+      "type": "link",
+      "values": {
+        "url": "https://weth.tkn.eth.limo/"
+      }
+    },
+    "LINK-3252fa": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables"
+      }
+    },
+    "LINK-f23681": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35"
+      }
+    },
+    "LINK-b47201": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110"
+      }
+    },
+    "LINK-038e0c": {
+      "type": "link",
+      "values": {
+        "url": "#uniswapv2erc20"
+      }
+    },
+    "LINK-6765bb": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/tokens"
+      }
+    },
+    "LINK-4f0895": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/stats/accountsGrowth"
+      }
+    },
+    "LINK-8166c5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/uniswap-interface/issues/835"
+      }
+    },
+    "LINK-394775": {
+      "type": "link",
+      "values": {
+        "url": "#uniswapv2library"
+      }
+    },
+    "LINK-53565a": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method"
+      }
+    },
+    "LINK-d09c1c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol"
+      }
+    },
+    "LINK-e3da4c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.3/abi-spec.html"
+      }
+    },
+    "LINK-1626ef": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20#transfer"
+      }
+    },
+    "LINK-5f9b92": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20#transferfrom"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T01:06:37.638Z",
+      "status": "success"
+    }
+  }
+}

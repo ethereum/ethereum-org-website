@@ -32,6 +32,7 @@ import coinbase from "@/public/images/exchanges/coinbase.png"
 import coinmama from "@/public/images/exchanges/coinmama.png"
 import coinmate from "@/public/images/exchanges/coinmate.png"
 import coinspot from "@/public/images/exchanges/coinspot.png"
+import coinswitch from "@/public/images/exchanges/coinswitch.png"
 import cryptocom from "@/public/images/exchanges/crypto.com.png"
 import easycrypto from "@/public/images/exchanges/easycrypto.png"
 import gateio from "@/public/images/exchanges/gateio.png"
@@ -45,11 +46,11 @@ import matrixport from "@/public/images/exchanges/matrixport.png"
 import moonpay from "@/public/images/exchanges/moonpay.png"
 import mtpelerin from "@/public/images/exchanges/mtpelerin.png"
 import okx from "@/public/images/exchanges/okx.png"
+import peer from "@/public/images/exchanges/peer.png"
 import rain from "@/public/images/exchanges/rain.png"
 import shakepay from "@/public/images/exchanges/shakepay.png"
 import wazirx from "@/public/images/exchanges/wazirx.png"
 import zebpay from "@/public/images/exchanges/zebpay.png"
-import zkp2p from "@/public/images/exchanges/zkp2p.png"
 
 type ExchangeKey =
   | "binance"
@@ -66,6 +67,7 @@ type ExchangeKey =
   | "coinmama"
   | "coinmate"
   | "coinspot"
+  | "coinswitch"
   | "cryptocom"
   | "easycrypto"
   | "gateio"
@@ -83,7 +85,7 @@ type ExchangeKey =
   | "shakepay"
   | "wazirx"
   | "zebpay"
-  | "zkp2p"
+  | "peer"
 
 type ExchangeDetail = {
   name: string
@@ -217,6 +219,13 @@ const exchanges: ExchangeDetails = {
     image: coinspot,
     usaExceptions: [],
   },
+  coinswitch: {
+    name: "CoinSwitch",
+    url: "https://coinswitch.co/",
+    // ETH/INR trading: https://coinswitch.co/pro/eth-inr/csx
+    image: coinswitch,
+    usaExceptions: [],
+  },
   cryptocom: {
     name: "Crypto.com",
     url: "https://crypto.com/exchange/",
@@ -319,10 +328,10 @@ const exchanges: ExchangeDetails = {
     image: zebpay,
     usaExceptions: [],
   },
-  zkp2p: {
-    name: "ZKP2P",
-    url: "https://zkp2p.xyz",
-    image: zkp2p,
+  peer: {
+    name: "Peer",
+    url: "https://peer.xyz",
+    image: peer,
     usaExceptions: [],
   },
 }

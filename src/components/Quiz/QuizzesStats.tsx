@@ -61,7 +61,7 @@ const QuizzesStats = ({
     formattedCollectiveQuestionsAnswered,
     formattedCollectiveAverageScore,
     formattedCollectiveRetryRate,
-  } = getFormattedStats(locale!, averageScoresArray)
+  } = getFormattedStats(locale, averageScoresArray)
 
   return (
     <div>
@@ -96,7 +96,7 @@ const QuizzesStats = ({
                 <Center className="size-16 rounded-full bg-primary">
                   <TrophyIcon className="text-[35.62px] text-background" />
                 </Center>
-                <span className="text-5xl font-bold leading-base">
+                <span className="text-5xl leading-base font-bold">
                   {totalCorrectAnswers}
                   <span className="text-body-medium">
                     /{totalQuizzesPoints}

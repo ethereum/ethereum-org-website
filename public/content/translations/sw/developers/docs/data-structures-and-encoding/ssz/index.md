@@ -1,26 +1,26 @@
 ---
-title: Utaratibu rahisi wa kupanga
-description: Ufafanuzi wa muundo wa SSZ wa Ethereum.
+title: Usanjari rahisi
+description: Maelezo ya umbizo la SSZ la Ethereum.
 lang: sw
 sidebarDepth: 2
 ---
 
-**Serializesheni Rahisi (SSZ)** ni mbinu ya userializesheni inayotumika kwenye Mnyororo Kioleza. Inachukua nafasi ya usanifu wa RLP unaotumiwa kwenye safu ya utekelezaji kila mahali kwenye safu ya makubaliano isipokuwa itifaki ya ugunduzi wa programu zingine. Ili kupata maelezo zaidi kuhusu serializesheni ya RLP, tazama [Kiambishi awali cha urefu kinachojirudia (RLP)](/developers/docs/data-structures-and-encoding/rlp/). SSZ imeundwa kubainisha na pia Merkleize kwa ufanisi. SSZ inaweza kuzingatiwa kuwa na vipengee viwili: mpango wa kuratibu na mpango wa Merkleization ambao umeundwa kufanya kazi kwa ufanisi na muundo wa data uliosanifiwa.
+**Usanjari rahisi (SSZ)** ni mbinu ya usanjari inayotumika kwenye Mnyororo wa Beacon. Inachukua nafasi ya usanjari wa RLP unaotumika kwenye tabaka la utekelezaji kila mahali kwenye tabaka la mwafaka isipokuwa kwenye itifaki ya ugunduzi wa mwenza. Ili kujifunza zaidi kuhusu usanjari wa RLP, tazama [Kiambishi awali cha urefu wa kujirudia (RLP)](/developers/docs/data-structures-and-encoding/rlp/). SSZ imeundwa kuwa thabiti na pia kufanya umerkle kwa ufanisi. SSZ inaweza kufikiriwa kuwa na vijenzi viwili: mpango wa usanjari na mpango wa kugeuza kuwa mti wa Merkle ambao umeundwa kufanya kazi kwa ufanisi na muundo wa data uliosanjariwa.
 
-## SSZ inafanya kazi vipi? {#how-does-ssz-work}
+## SSZ inafanyaje kazi? {#how-does-ssz-work}
 
-### Serializesheni {#serialization}
+### Usanjari {#serialization}
 
-SSZ ni mpango wa kuratibu ambao haujielezi - badala yake unategemea mpango ambao lazima ujulikane mapema. Kusudi la usanifu wa SSZ ni kuwakilisha vitu vya ugumu wa kiholela kama kamba za baiti. Huu ni mchakato rahisi sana kwa "aina za msingi". Kipengele kinabadilishwa tu kuwa baiti za hexadecimal. Aina za msingi ni pamoja na:
+SSZ ni mpango wa usanjari ambao haujielezi wenyewe - badala yake unategemea skema ambayo lazima ijulikane mapema. Lengo la usanjari wa SSZ ni kuwakilisha vipengee vya utata wowote kama mifuatano ya baiti. Huu ni mchakato rahisi sana kwa "aina za msingi". Kipengele hubadilishwa tu kuwa baiti za heksadesimali. Aina za msingi ni pamoja na:
 
-- nambari kamili ambazo hazijasainiwa
-- Thamani za Mantiki
+- nambari kamili zisizo na ishara (unsigned integers)
+- Buleani (Booleans)
 
-Kwa aina tata za "mchanganyiko", usakinishaji ni mgumu zaidi kwa sababu aina ya mchanganyiko ina vipengele vingi ambavyo vinaweza kuwa na aina tofauti au ukubwa tofauti, au zote mbili. Ikiwa vitu hivi vyote vina urefu usiobadilika (yaani, ukubwa wa vipengele daima ni wa kudumu bila kujali thamani zao halisi), userializesheni ni ubadilishaji rahisi wa kila kipengele katika aina ya mchanganyiko, unaopangwa katika mifuatano ya baiti ya mwisho-mdogo. Mlolongo huu wa baiti huunganishwa pamoja. Kitu kilichofanyiwa usanifu huwa na mwakilishi wa orodha ya baiti wa vipengele vyenye urefu wa kudumu katika mpangilio uleule kama vinavyoonekana kwenye kitu kilichorudishwa.
+Kwa aina changamano za "mchanganyiko", usanjari ni mgumu zaidi kwa sababu aina ya mchanganyiko ina vipengele vingi ambavyo vinaweza kuwa na aina tofauti au ukubwa tofauti, au vyote viwili. Ambapo vipengee hivi vyote vina urefu usiobadilika (yaani, ukubwa wa vipengele utakuwa wa kudumu kila wakati bila kujali thamani zake halisi) usanjari ni ubadilishaji tu wa kila kipengele katika aina ya mchanganyiko kilichopangwa katika mifuatano ya baiti ya little-endian. Mifuatano hii ya baiti huunganishwa pamoja. Kipengee kilichosanjariwa kina uwakilishi wa orodha ya baiti ya vipengele vya urefu usiobadilika katika mpangilio sawa na jinsi vinavyoonekana katika kipengee kilichotolewa kwenye usanjari.
 
-Kwa aina zilizo na urefu tofauti, data halisi hubadilishwa na thamani ya "kukabiliana" katika nafasi ya kipengele hicho katika kitu kilichosanifiwa. Data halisi huongezwa kwenye lundo mwishoni mwa kitu kilichopangwa mfululizo. Thamani ya kukabiliana ni tofauti tofauti ya kuanza kwa data halisi kwenye lundo, ikifanya kazi kama kiashirio kwa baiti husika.
+Kwa aina zenye urefu unaobadilika, data halisi hubadilishwa na thamani ya "kifidia" (offset) katika nafasi ya kipengele hicho katika kipengee kilichosanjariwa. Data halisi huongezwa kwenye lundo mwishoni mwa kipengee kilichosanjariwa. Thamani ya kifidia ni faharisi ya kuanza kwa data halisi kwenye lundo, ikifanya kazi kama kielekezi kwa baiti husika.
 
-Mfano hapa chini unaonyesha jinsi urekebishaji unavyofanya kazi kwa kontena iliyo na vitu vilivyowekwa na vya urefu tofauti:
+Mfano hapa chini unaonyesha jinsi ufidiaji unavyofanya kazi kwa kontena lenye vipengele vya urefu usiobadilika na unaobadilika:
 
 ```Rust
 
@@ -44,107 +44,104 @@ Mfano hapa chini unaonyesha jinsi urekebishaji unavyofanya kazi kwa kontena iliy
 
 ```
 
-`serialized` ingekuwa na muundo ufuatao (imejazwa kwa biti 4 tu hapa, imejazwa kwa biti 32 katika uhalisia, na kuweka uwakilishi wa `int` kwa uwazi):
+`serialized` ingekuwa na muundo ufuatao (imejazwa tu hadi biti 4 hapa, imejazwa hadi biti 32 kiuhalisia, na kuweka uwakilishi wa `int` kwa uwazi):
 
 ```
 [37, 0, 0, 0, 55, 0, 0, 0, 16, 0, 0, 0, 22, 0, 0, 0, 1, 2, 3, 4]
 ------------  -----------  -----------  -----------  ----------
       |             |            |           |            |
-   namba1       namba2    punguzo kwa    namba 3     thamani ya
-                              vekta                    vekta
-
+   nambari1      nambari2   kifidia cha   nambari 3   thamani ya
+                               vekta                    vekta
 ```
 
-kugawanywa juu ya mistari kwa uwazi:
-
-```
-[
-  37, 0, 0, 0,  # usimbaji wa mwisho-mdogo wa `namba1`.
-  55, 0, 0, 0,  # usimbaji wa mwisho-mdogo wa `namba2`.
-  16, 0, 0, 0,  # "Punguzo" linaloonyesha mahali ambapo thamani ya `vekta` huanza (mwisho-mdogo 16).
-  22, 0, 0, 0,  # usimbaji wa mwisho-mdogo wa `namba3`.
-  1, 2, 3, 4,   # Thamani halisi katika `vekta`.
-]
-```
-
-Bado hii ni kurahisisha - nambari kamili na sifuri kwenye michoro hapo juu zingehifadhiwa kwa njia, kama hii:
+imegawanywa kwenye mistari kwa uwazi:
 
 ```
 [
-  10100101000000000000000000000000  # usimbaji wa mwisho-mdogo wa `namba1`
-  10110111000000000000000000000000  # usimbaji wa mwisho-mdogo wa `namba2`.
-  10010000000000000000000000000000  # "Punguzo" linaloonyesha mahali ambapo thamani ya `vekta` huanza (mwisho-mdogo 16).
-  10010110000000000000000000000000  # usimbaji wa mwisho-mdogo wa `namba3`.
-  10000001100000101000001110000100   # Thamani halisi ya sehemu ya `baiti`.
+  37, 0, 0, 0,  # usimbaji wa little-endian wa `number1`.
+  55, 0, 0, 0,  # usimbaji wa little-endian wa `number2`.
+  16, 0, 0, 0,  # "Kifidia" kinachoonyesha mahali thamani ya `vector` inapoanzia (little-endian 16).
+  22, 0, 0, 0,  # usimbaji wa little-endian wa `number3`.
+  1, 2, 3, 4,   # Thamani halisi katika `vector`.
 ]
 ```
 
-Kwa hivyo maadili halisi ya aina za urefu tofauti huhifadhiwa kwenye lundo mwishoni mwa kitu kilichopangwa kwa mpangilio na urekebishaji wao ukihifadhiwa katika nafasi zao sahihi katika orodha ya sehemu zilizoagizwa.
+Huu bado ni urahisishaji - nambari kamili na sufuri katika michoro hapo juu kwa kweli zingehifadhiwa kama orodha za baiti, kama hivi:
 
-Pia kuna baadhi ya kesi maalum zinazohitaji matibabu maalum, kama vile aina ya `BitList` inayohitaji kikomo cha urefu kuongezwa wakati wa userializesheni na kuondolewa wakati wa uondoaji-serializesheni. Maelezo kamili yanapatikana katika [maelezo ya SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
+```
+[
+  10100101000000000000000000000000  # usimbaji wa little-endian wa `number1`
+  10110111000000000000000000000000  # usimbaji wa little-endian wa `number2`.
+  10010000000000000000000000000000  # "Kifidia" kinachoonyesha mahali thamani ya `vector` inapoanzia (little-endian 16).
+  10010110000000000000000000000000  # usimbaji wa little-endian wa `number3`.
+  10000001100000101000001110000100   # Thamani halisi ya uga wa `bytes`.
+]
+```
 
-### Uondoaji-serializesheni {#deserialization}
+Kwa hivyo thamani halisi za aina zenye urefu unaobadilika huhifadhiwa kwenye lundo mwishoni mwa kipengee kilichosanjariwa huku vifidia vyake vikihifadhiwa katika nafasi zake sahihi katika orodha iliyopangwa ya nyanja.
 
-Uondoaji-serializesheni wa kitu hiki unahitaji <b>skema</b>. Ratiba inafafanua mpangilio sahihi wa data iliyosawazishwa ili kila kipengele mahususi kiweze kuondolewa kutoka kwenye sehemu ya baiti hadi kwenye kitu fulani cha maana na vipengele vilivyo na aina, thamani, ukubwa na nafasi sahihi. Ni muundo wa data unaomwambia msanifukwa ni maadili gani ni maadili halisi na ni yapi ambayo yamepunguzwa. Majina yote ya sehemu hupotea wakati kitu kinapofanyiwa usanifu, lakini hurudishwa tena wakati wa Urejeshaji wa data katika muundo wake wa asili kulingana na muundo wa data.
+Pia kuna baadhi ya matukio maalum ambayo yanahitaji matibabu maalum, kama vile aina ya `BitList` ambayo inahitaji kikomo cha urefu kuongezwa wakati wa usanjari na kuondolewa wakati wa kutoa kwenye usanjari. Maelezo kamili yanapatikana katika [vipimo vya SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
+
+### Kutoa kwenye usanjari (Deserialization) {#deserialization}
+
+Ili kutoa kipengee hiki kwenye usanjari inahitaji <b>skema</b>. Skema inafafanua mpangilio sahihi wa data iliyosanjariwa ili kila kipengele maalum kiweze kutolewa kwenye usanjari kutoka kwa blobu ya baiti hadi kwenye kipengee chenye maana huku vipengele vikiwa na aina, thamani, ukubwa na nafasi sahihi. Ni skema inayomwambia mtoaji kwenye usanjari ni thamani zipi ni thamani halisi na zipi ni vifidia. Majina yote ya nyanja hupotea wakati kipengee kinaposanjariwa, lakini hurejeshwa wakati wa kutoa kwenye usanjari kulingana na skema.
 
 Tazama [ssz.dev](https://www.ssz.dev/overview) kwa maelezo shirikishi kuhusu hili.
 
-## Umerkleizesheni {#merkleization}
+## Kugeuza kuwa mti wa Merkle (Merkleization) {#merkleization}
 
-Kipengee hiki cha serialized cha SSZ kinaweza kisha kuwa merkleized - ambacho kinabadilishwa kuwa uwakilishi wa mti wa Merkle wa data sawa. Kwanza, idadi ya Vipande 32-baiti katika Kipengele kilichoorodheshwa kimeamuliwa. Hizi ni "majani" ya mti. Idadi ya jumla ya majani lazima iwe na nguvu ya 2 ili kuharakisha pamoja majani hatimaye kutoa mzizi mmoja wa mti wa hashi. Ikiwa hii sio kawaida, majani ya ziada yaliyo na baiti 32 za zero huongezwa. Kielelezo:
+Kipengee hiki kilichosanjariwa cha SSZ kinaweza kugeuzwa kuwa mti wa Merkle - yaani kubadilishwa kuwa uwakilishi wa mti wa Merkle wa data hiyo hiyo. Kwanza, idadi ya vipande vya baiti 32 katika kipengee kilichosanjariwa hubainishwa. Haya ni "majani" ya mti. Jumla ya idadi ya majani lazima iwe kipeo cha 2 ili kuheshiji pamoja majani hatimaye kuzalishe mzizi mmoja wa mti wa heshi. Ikiwa hii si hivyo kiasili, majani ya ziada yenye baiti 32 za sufuri huongezwa. Kwa mchoro:
 
 ```
-        mzizi wa mti wa hashi
+mzizi wa mti wa heshi
             /     \
            /       \
           /         \
          /           \
-   hashi ya majani  hashi ya majani
-     1 na 2          3 na 4
+   heshi ya majani  heshi ya majani
+       1 na 2           3 na 4
       /   \            /  \
      /     \          /    \
     /       \        /      \
- jani1     jani2    jani3     jani4
+ jani1     jani2  jani3     jani4
 ```
 
-Pia kuna matukio ambapo majani ya mti hayana kawaida sawasawa kusambaza kwa njia ya kufanya katika mfano hapo juu. Kwa mfano, jani la 4 linaweza kuwa chombo chenye vipengele vingi vinavyohitaji "kina" cha ziada ili kuongezwa kwenye mti wa Merkle, na kuunda mti usio na usawa.
+Pia kuna matukio ambapo majani ya mti hayasambaaji kwa usawa kiasili kwa njia yanayofanya katika mfano hapo juu. Kwa mfano, jani la 4 linaweza kuwa kontena lenye vipengele vingi vinavyohitaji "kina" cha ziada kuongezwa kwenye mti wa Merkle, na kuunda mti usio sawa.
 
-Badala ya kurejelea vipengele hivi vya mti kama jani X, nodi X n. k, tunaweza kuvipa viashiria vya jumla, tukianza na mzizi = 1 na kuhesabu kutoka kushoto kwenda kulia kwa kila ngazi. Hiki ni kiashiria juimuishi kiliyoelezwa hapo juu. Kila kipengele katika orodha iliyofanyiwa userializesheni kina faharasa ya jumla sawa na `2**depth + idx` ambapo idx ni nafasi yake yenye faharasa-sifuri katika kitu kilichofanyiwa userializesheni na kina ni idadi ya viwango katika mti wa Merkle, ambayo inaweza kubainishwa kama logariti ya msingi-mbili ya idadi ya vipengele (majani).
+Badala ya kurejelea vipengele hivi vya mti kama jani X, nodi X n.k., tunaweza kuvipa faharisi za jumla, kuanzia na mzizi = 1 na kuhesabu kutoka kushoto kwenda kulia kando ya kila kiwango. Hii ndiyo faharisi ya jumla iliyoelezwa hapo juu. Kila kipengele katika orodha iliyosanjariwa kina faharisi ya jumla sawa na `2**depth + idx` ambapo idx ni nafasi yake yenye faharisi ya sufuri katika kipengee kilichosanjariwa na kina ni idadi ya viwango katika mti wa Merkle, ambayo inaweza kubainishwa kama logariti ya msingi wa mbili ya idadi ya vipengele (majani).
 
-## Faharasa za jumla {#generalized-indices}
+## Faharisi za jumla {#generalized-indices}
 
-Faharasa ya jumla ni nambari kamili inayowakilisha nodi katika mti wa Merkle wa binary ambapo kila nodi ina faharasa ya jumla `2 ** depth + index in row`.
+Faharisi ya jumla ni nambari kamili inayowakilisha nodi katika mti wa Merkle wa mfumo wa jozi ambapo kila nodi ina faharisi ya jumla `2 ** depth + index in row`.
 
 ```
-        1           --kina = 0  2**0 + 0 = 1
+1           --kina = 0  2**0 + 0 = 1
     2       3       --kina = 1  2**1 + 0 = 2, 2**1+1 = 3
   4   5   6   7     --kina = 2  2**2 + 0 = 4, 2**2 + 1 = 5...
-
 ```
 
-"Uwakilishi huu unatoa kiashiria cha nodi kwa kila kipande cha data katika mti wa Merkle."
+Uwakilishi huu hutoa faharisi ya nodi kwa kila kipande cha data katika mti wa Merkle.
 
-## Uthibitisho-anuwai {#multiproofs}
+## Uthibitisho mwingi (Multiproofs) {#multiproofs}
 
-"Kutoa orodha ya viashiria vilivyopanuliwa vinavyo wakilisha kipengele fulani kunaturuhusu kukithibitisha dhidi ya mizizi ya mti wa hash." Mzizi huu ni toleo letu la ukweli linalokubalika. Data yoyote tunayopewa inaweza kuthibitishwa dhidi ya ukweli huo kwa kuiingiza mahali pazuri katika mti wa Merkle na kuzingatia kwamba mzizi unabaki bila kubadilika. Kuna kazi katika maelezo [hapa](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) zinazoonyesha jinsi ya kukokotoa seti ndogo iwezekanavyo ya nodi zinazohitajika ili kuthibitisha maudhui ya seti maalum ya faharasa za jumla.
+Kutoa orodha ya faharisi za jumla zinazowakilisha kipengele maalum huturuhusu kukithibitisha dhidi ya mzizi wa mti wa heshi. Mzizi huu ndio toleo letu linalokubalika la uhalisia. Data yoyote tunayopewa inaweza kuthibitishwa dhidi ya uhalisia huo kwa kuiingiza mahali sahihi katika mti wa Merkle (inayobainishwa na faharisi yake ya jumla) na kuchunguza kwamba mzizi unabaki kuwa wa kudumu. Kuna vipengele vya utendaji katika vipimo [hapa](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) vinavyoonyesha jinsi ya kukokotoa seti ya chini zaidi ya nodi zinazohitajika ili kuthibitisha yaliyomo katika seti fulani ya faharisi za jumla.
 
-Kwa mfano, ili kuthibitisha data katika fahirisi ya 9 kwenye mti ulio hapa chini, tunahitaji heshi ya data katika kiashiria 8, 9, 5, 3, 1.
-Heshi ya (8,9) inapaswa kuwa sawa na (4), ambayo heshi na 5 kutoa 2, ambayo heshi yenye 3 ili kutoa mzizi wa mti 1. Ikiwa data isiyo sahihi ilitolewa kwa 9, mzizi ungebadilika - tungegundua hii na kushindwa kuthibitisha tawi.
+Kwa mfano, ili kuthibitisha data katika faharisi ya 9 katika mti ulio hapa chini, tunahitaji heshi ya data katika faharisi za 8, 9, 5, 3, 1.
+Heshi ya (8,9) inapaswa kuwa sawa na heshi (4), ambayo huheshiji na 5 ili kuzalisha 2, ambayo huheshiji na 3 ili kuzalisha mzizi wa mti 1. Ikiwa data isiyo sahihi ilitolewa kwa 9, mzizi ungebadilika - tungegundua hili na kushindwa kuthibitisha tawi.
 
 ```
-* = data inayohitajika ili kutoa uthibitisho
+* = data inayohitajika ili kuzalisha uthibitisho
 
                     1*
           2                      3*
     4          5*          6          7
 8*     9*   10    11   12    13    14    15
-
 ```
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
 - [Kuboresha Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
-- [Kuboresha Ethereum: Umerkleizesheni](https://eth2book.info/altair/part2/building_blocks/merkleization)
+- [Kuboresha Ethereum: Kugeuza kuwa mti wa Merkle](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [Utekelezaji wa SSZ](https://github.com/ethereum/consensus-specs/issues/2138)
 - [Kikokotoo cha SSZ](https://simpleserialize.com/)
 - [SSZ.dev](https://www.ssz.dev/)

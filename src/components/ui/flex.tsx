@@ -2,7 +2,7 @@ import {
   type BaseHTMLAttributes,
   Children,
   cloneElement,
-  type ElementRef,
+  type ComponentRef,
   forwardRef,
   Fragment,
   isValidElement,
@@ -13,7 +13,7 @@ import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
-type FlexElement = ElementRef<"div">
+type FlexElement = ComponentRef<"div">
 
 type FlexProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
 
@@ -41,7 +41,7 @@ const Center = forwardRef<FlexElement, FlexProps>(
 
 Center.displayName = "Center"
 
-type StackProps = FlexProps & { separator?: ReactElement }
+type StackProps = FlexProps & { separator?: ReactElement<unknown> }
 
 const Stack = forwardRef<FlexElement, StackProps>(
   ({ className, separator, children, asChild, ...props }, ref) => {
@@ -52,12 +52,15 @@ const Stack = forwardRef<FlexElement, StackProps>(
         isValidElement(child)
       )
 
-      const sep = cloneElement(separator, {
-        className: cn(
-          separator.props.className,
-          "size-auto border self-stretch"
-        ),
-      })
+      const sep = cloneElement(
+        separator as ReactElement<{ className?: string }>,
+        {
+          className: cn(
+            (separator as ReactElement<{ className?: string }>).props.className,
+            "size-auto border self-stretch"
+          ),
+        }
+      )
 
       return validChildren.map((child, index) => {
         const key = typeof child.key !== "undefined" ? child.key : index

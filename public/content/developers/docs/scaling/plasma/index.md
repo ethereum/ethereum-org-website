@@ -14,13 +14,13 @@ Merkle trees enable the creation of an endless stack of these chains that can wo
 
 You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/).
 
-## What is Plasma?
+## What is Plasma? {#what-is-plasma}
 
-Plasma is a framework for improving scalability in public blockchains like Ethereum. As described in the original [Plasma whitepaper](http://plasma.io/plasma.pdf), Plasma chains are built atop another blockchain (called a "root chain"). Each "child chain" extends from the root chain and is generally managed by a smart contract deployed on the parent chain.
+Plasma is a framework for improving scalability in public blockchains like Ethereum. As described in the original [Plasma whitepaper](https://plasma.io/plasma.pdf), Plasma chains are built atop another blockchain (called a "root chain"). Each "child chain" extends from the root chain and is generally managed by a smart contract deployed on the parent chain.
 
 The Plasma contract functions, among other things, as a [bridge](/developers/docs/bridges/) allowing users to move assets between Ethereum Mainnet and the plasma chain. Although this makes them similar to [sidechains](/developers/docs/scaling/sidechains/), plasma chains benefit—at least, to some extent—from Ethereum Mainnet's security. This is unlike sidechains that are solely responsible for their security.
 
-## How does Plasma work?
+## How does Plasma work? {#how-does-plasma-work}
 
 The basic components of the Plasma framework are:
 
@@ -62,9 +62,9 @@ To prevent malicious withdrawals, a "challenge period" is introduced. During the
 
 However, it is usually the case that users are honest and make correct claims about the funds they own. In this scenario, Alice will initiate a withdrawal request on the root chain (Ethereum) by submitting a transaction to the plasma contract.
 
-She must also provide a Merkle proof verifying that a transaction creating her funds on the Plasma chain was included in a block. This is necessary for iterations of Plasma, such as [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), that use a [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output) model.
+She must also provide a Merkle proof verifying that a transaction creating her funds on the Plasma chain was included in a block. This is necessary for iterations of Plasma, such as Plasma MVP, that use a [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output) model.
 
-Others, like [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), represent funds as [non-fungible tokens](/developers/docs/standards/tokens/erc-721/) instead of UTXOs. Withdrawing, in this case, requires proof of ownership of tokens on the Plasma chain. This is done by submitting the two latest transactions involving the token and providing a Merkle proof verifying the inclusion of those transactions in a block.
+Others, like Plasma Cash, represent funds as [non-fungible tokens](/developers/docs/standards/tokens/erc-721/) instead of UTXOs. Withdrawing, in this case, requires proof of ownership of tokens on the Plasma chain. This is done by submitting the two latest transactions involving the token and providing a Merkle proof verifying the inclusion of those transactions in a block.
 
 The user must also add a bond to the withdrawal request as a guarantee of honest behavior. If a challenger proves Alice's withdrawal request invalid, her bond is slashed, and some of it goes to the challenger as a reward.
 
@@ -167,7 +167,6 @@ Multiple projects provide implementations of Plasma that you can integrate into 
 
 ## Further reading {#further-reading}
 
-- [Learn Plasma](https://www.learnplasma.org/en/)
 - [A quick reminder of what "shared security" means and why it's so important](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Sidechains vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)

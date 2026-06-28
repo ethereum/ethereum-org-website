@@ -8,12 +8,10 @@ import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 
-import { breakpointAsNumber } from "@/lib/utils/screen"
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
 import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
 
-import MediaQuery from "../MediaQuery"
 import { ButtonLink } from "../ui/buttons/Button"
 import { TagsInlineText } from "../ui/tag"
 
@@ -59,120 +57,79 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
   }, [wallet.supportedLanguages])
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="relative flex flex-col gap-4">
+      {/* Open-state stripe (desktop only), sits in the image-column gutter. */}
+      <div
+        aria-hidden
+        className={`pointer-events-none absolute inset-s-7 top-16 -bottom-9 hidden w-1 -translate-x-1/2 lg:group-[[open]]/collapsible:block rtl:translate-x-1/2 ${wallet.twBackgroundColor}`}
+      />
+
       <div className="flex flex-row items-center justify-between gap-4">
-        <div className="flex flex-col gap-4">
-          {/* Desktop layout */}
-          <MediaQuery queries={[`(min-width: ${breakpointAsNumber.lg}px)`]}>
-            <div className="hidden flex-row gap-4 lg:flex">
-              <Image
-                src={wallet.image}
-                alt=""
-                style={{ objectFit: "contain", width: "56px", height: "56px" }}
-              />
-              <div className="flex flex-col gap-2">
-                <p className="text-xl font-bold">{wallet.name}</p>
+        <div className="grid flex-1 grid-cols-[auto_1fr] items-start gap-x-4 gap-y-2">
+          <Image
+            src={wallet.image}
+            alt=""
+            className="size-6 self-center object-contain lg:row-span-2 lg:size-14 lg:self-start"
+          />
 
-                <PersonaTags walletPersonas={walletPersonas} />
+          <p className="self-center text-xl font-bold lg:self-start">
+            {wallet.name}
+          </p>
 
-                <div
-                  className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""} mt-1`}
-                >
-                  <ChainImages
-                    chains={wallet.supported_chains as ChainName[]}
-                    className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
-                  />
-                </div>
-              </div>
+          {walletPersonas.length > 0 && (
+            <div className="col-span-2 lg:col-span-1 lg:col-start-2">
+              <PersonaTags walletPersonas={walletPersonas} />
             </div>
-          </MediaQuery>
+          )}
 
-          {/* Mobile layout */}
-          <MediaQuery queries={[`(max-width: ${breakpointAsNumber.lg - 1}px)`]}>
-            <div className="flex flex-col gap-4 lg:hidden">
-              <div className="flex flex-row items-center gap-4">
-                <Image
-                  src={wallet.image}
-                  alt=""
-                  style={{
-                    objectFit: "contain",
-                    width: "24px",
-                    height: "24px",
-                  }}
+          <div className="col-span-2 lg:col-span-1 lg:col-start-2">
+            <ChainImages chains={wallet.supported_chains as ChainName[]} />
+          </div>
+
+          {deviceLabels.length > 0 && (
+            <div className="col-span-2 flex flex-row gap-2 lg:col-span-1 lg:col-start-2">
+              <DevicesIcon className="size-6" />
+              <TagsInlineText list={deviceLabels} />
+            </div>
+          )}
+
+          <div className="col-span-2 flex flex-row gap-2 lg:col-span-1 lg:col-start-2">
+            <LanguagesIcon className="size-6" />
+            <p className="text-md">
+              {formattedLanguages}{" "}
+              {hasExtraLanguages && (
+                <SupportedLanguagesTooltip
+                  supportedLanguages={wallet.supportedLanguages}
                 />
-                <p className="text-xl font-bold">{wallet.name}</p>
-              </div>
-              <div>
-                <PersonaTags walletPersonas={walletPersonas} />
-              </div>
-              <ChainImages
-                chains={wallet.supported_chains as ChainName[]}
-                className={walletPersonas.length === 0 ? "mb-4" : ""}
-              />
-            </div>
-          </MediaQuery>
-
-          <div className="flex flex-row gap-4">
-            <div className="relative hidden w-14 lg:block">
-              <div
-                className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
-              />
-            </div>
-            <div
-              className={`flex flex-col gap-2 ${walletPersonas.length === 0 ? "-mt-4" : ""}`}
-            >
-              {deviceLabels.length > 0 && (
-                <div className="flex flex-row gap-2">
-                  <DevicesIcon className="size-6" />
-                  <TagsInlineText list={deviceLabels} />
-                </div>
               )}
-              <div className="flex flex-row gap-2">
-                <LanguagesIcon className="size-6" />
-                <p className="text-md">
-                  {formattedLanguages}{" "}
-                  {hasExtraLanguages && (
-                    <SupportedLanguagesTooltip
-                      supportedLanguages={wallet.supportedLanguages}
-                    />
-                  )}
-                </p>
-              </div>
-            </div>
+            </p>
           </div>
         </div>
-        <div>
-          <button className="text-primary">
-            <ChevronUp className="text-2xl group-data-[state=closed]/collapsible:hidden" />
-            <ChevronDown className="text-2xl group-data-[state=open]/collapsible:hidden" />
-          </button>
-        </div>
+
+        <span className="text-primary">
+          <ChevronUp className="text-2xl group-[&:not([open])]/collapsible:hidden" />
+          <ChevronDown className="text-2xl group-[[open]]/collapsible:hidden" />
+        </span>
       </div>
-      <div className="flex flex-row gap-4">
-        <div className="relative hidden w-14 lg:block">
-          <div
-            className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
-          />
-        </div>
-        <div className="flex flex-1">
-          <ButtonLink
-            href={wallet.url}
-            variant="outline"
-            className="p-2 max-sm:w-full"
-            size="sm"
-            customEventOptions={{
-              eventCategory: "WalletExternalLinkList",
-              eventAction: "Tap main button",
-              eventName: `${wallet.name}`,
-            }}
-            onClick={(e) => {
-              // Prevent expanding the wallet more info section when clicking on the "Visit website" button
-              e.stopPropagation()
-            }}
-          >
-            {t("page-find-wallet-visit-website")}
-          </ButtonLink>
-        </div>
+
+      <div className="lg:ps-18">
+        <ButtonLink
+          href={wallet.url}
+          variant="outline"
+          className="p-2 max-sm:w-full"
+          size="sm"
+          customEventOptions={{
+            eventCategory: "WalletExternalLinkList",
+            eventAction: "Tap main button",
+            eventName: `${wallet.name}`,
+          }}
+          onClick={(e) => {
+            // Prevent expanding the wallet more info section when clicking on the "Visit website" button
+            e.stopPropagation()
+          }}
+        >
+          {t("page-find-wallet-visit-website")}
+        </ButtonLink>
       </div>
     </div>
   )

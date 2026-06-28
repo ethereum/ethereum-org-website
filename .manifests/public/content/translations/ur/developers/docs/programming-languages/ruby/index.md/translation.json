@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-16T23:05:01.965Z",
+  "englishManifestHash": "1d4f511ca227",
+  "placeholderOrder": [
+    "LINK-c42188",
+    "LINK-5e5e9b",
+    "LINK-6857cb",
+    "LINK-1200a5",
+    "LINK-456e6f",
+    "LINK-0ab4bf",
+    "LINK-b507fe",
+    "LINK-4cb16a",
+    "LINK-623d97",
+    "LINK-8874f5",
+    "LINK-297aa1",
+    "LINK-c8f363",
+    "LINK-1f105e",
+    "LINK-37a2ff",
+    "LINK-a93b47",
+    "LINK-28d852",
+    "LINK-762f00",
+    "LINK-0f70fd",
+    "LINK-664c6e",
+    "LINK-814d61",
+    "LINK-b84b36",
+    "LINK-f45dcc",
+    "LINK-37e555",
+    "LINK-7931db",
+    "LINK-c39688",
+    "LINK-8d80b2",
+    "LINK-15fda9"
+  ],
+  "placeholderMap": {
+    "LINK-c42188": {
+      "type": "link",
+      "values": {
+        "url": "/learn/"
+      }
+    },
+    "LINK-5e5e9b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-6857cb": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained"
+      }
+    },
+    "LINK-1200a5": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract"
+      }
+    },
+    "LINK-456e6f": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract"
+      }
+    },
+    "LINK-0ab4bf": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment"
+      }
+    },
+    "LINK-b507fe": {
+      "type": "link",
+      "values": {
+        "url": "https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe"
+      }
+    },
+    "LINK-4cb16a": {
+      "type": "link",
+      "values": {
+        "url": "https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj"
+      }
+    },
+    "LINK-623d97": {
+      "type": "link",
+      "values": {
+        "url": "https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby"
+      }
+    },
+    "LINK-8874f5": {
+      "type": "link",
+      "values": {
+        "url": "https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby"
+      }
+    },
+    "LINK-297aa1": {
+      "type": "link",
+      "values": {
+        "url": "https://www.nopio.com/blog/blockchain-app-ruby/"
+      }
+    },
+    "LINK-c8f363": {
+      "type": "link",
+      "values": {
+        "url": "https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9"
+      }
+    },
+    "LINK-1f105e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/q9f/eth.rb"
+      }
+    },
+    "LINK-37a2ff": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/q9f/keccak.rb"
+      }
+    },
+    "LINK-a93b47": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/signinwithethereum/siwe-ruby"
+      }
+    },
+    "LINK-28d852": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/signinwithethereum/siwe-rails"
+      }
+    },
+    "LINK-762f00": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/signinwithethereum/siwe-rails-examples"
+      }
+    },
+    "LINK-0f70fd": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/signinwithethereum/omniauth-siwe"
+      }
+    },
+    "LINK-664c6e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/valthon/omniauth-nft"
+      }
+    },
+    "LINK-814d61": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/q9f/ethereum-on-rails"
+      }
+    },
+    "LINK-b84b36": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/spikewilliams/vtada-ethereum"
+      }
+    },
+    "LINK-f45dcc": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/longhoangwkm/ethereum_tree"
+      }
+    },
+    "LINK-37e555": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/budacom/etherlite"
+      }
+    },
+    "LINK-7931db": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/EthWorks/ethereum.rb"
+      }
+    },
+    "LINK-c39688": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/q9f/omniauth-ethereum.rb"
+      }
+    },
+    "LINK-8d80b2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-15fda9": {
+      "type": "link",
+      "values": {
+        "url": "https://t.me/ruby_eth"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T23:05:01.965Z",
+      "status": "success"
+    }
+  }
+}

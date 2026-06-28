@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-18T00:00:28.780Z",
+  "englishManifestHash": "68b2eed9a86d",
+  "placeholderOrder": [
+    "LINK-bbf168",
+    "LINK-017452",
+    "LINK-81b2d4",
+    "CODE-8e66d6",
+    "CODEBLOCK-b3e26d",
+    "CODEBLOCK-f2de5d",
+    "CODE-e0c245",
+    "CODE-b89148",
+    "CODE-e2efdd",
+    "CODE-8012de",
+    "CODE-973245",
+    "CODE-1551a7",
+    "CODE-5b843b",
+    "LINK-1920af",
+    "LINK-e73e93",
+    "CODE-dc6f17"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-b3e26d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f2de5d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-8e66d6": {
+      "type": "inline-code",
+      "values": {
+        "content": "_beforeTokenTransfer"
+      }
+    },
+    "CODE-e0c245": {
+      "type": "inline-code",
+      "values": {
+        "content": "PrivateERC20Mock.sol: TypeError: Overriding function is missing \"override\" specifier."
+      }
+    },
+    "CODE-b89148": {
+      "type": "inline-code",
+      "values": {
+        "content": "PrivateERC20.sol: TypeError: Trying to override non-virtual function. Did you forget to add \"virtual\"?."
+      }
+    },
+    "CODE-e2efdd": {
+      "type": "inline-code",
+      "values": {
+        "content": "virtual"
+      }
+    },
+    "CODE-8012de": {
+      "type": "inline-code",
+      "values": {
+        "content": "isPublic"
+      }
+    },
+    "CODE-973245": {
+      "type": "inline-code",
+      "values": {
+        "content": "PrivateERC20Mock"
+      }
+    },
+    "CODE-1551a7": {
+      "type": "inline-code",
+      "values": {
+        "content": "setIsPublic(false)"
+      }
+    },
+    "CODE-5b843b": {
+      "type": "inline-code",
+      "values": {
+        "content": "setIsPublic(true)"
+      }
+    },
+    "CODE-dc6f17": {
+      "type": "inline-code",
+      "values": {
+        "content": "mint"
+      }
+    },
+    "LINK-bbf168": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Mock_object"
+      }
+    },
+    "LINK-017452": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/testing/"
+      }
+    },
+    "LINK-81b2d4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks"
+      }
+    },
+    "LINK-1920af": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/test-helpers/0.5/api#increase"
+      }
+    },
+    "LINK-e73e93": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/gnosis/mock-contract"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:00:28.780Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "locale": "zh",
+  "translatedAt": "2026-06-19T23:24:22.642Z",
+  "englishManifestHash": "ce07b1c71686",
+  "placeholderOrder": [
+    "LINK-b79e37",
+    "LINK-386955",
+    "CODEBLOCK-3c53ae",
+    "CODEBLOCK-a8fb99",
+    "CODE-e8197b",
+    "CODE-c0f21d",
+    "CODE-c67941",
+    "CODEBLOCK-0c6952",
+    "CODE-dde8be",
+    "CODE-c67941",
+    "IMAGE-bdc9b3",
+    "CODE-2b9ba6",
+    "CODE-3c469e",
+    "CODE-74e216",
+    "CODE-c0f21d",
+    "CODEBLOCK-2635fa",
+    "CODEBLOCK-4177d2",
+    "CODE-dde8be",
+    "CODE-b870b1",
+    "IMAGE-2cea45",
+    "CODE-dde8be",
+    "CODE-256155",
+    "LINK-01ab23",
+    "LINK-a0911e",
+    "CODEBLOCK-824ee0"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-3c53ae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a8fb99": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0c6952": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2635fa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4177d2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-824ee0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-e8197b": {
+      "type": "inline-code",
+      "values": {
+        "content": "buy"
+      }
+    },
+    "CODE-c0f21d": {
+      "type": "inline-code",
+      "values": {
+        "content": "sell"
+      }
+    },
+    "CODE-c67941": {
+      "type": "inline-code",
+      "values": {
+        "content": "Bought"
+      }
+    },
+    "CODE-dde8be": {
+      "type": "inline-code",
+      "values": {
+        "content": "Transfer"
+      }
+    },
+    "CODE-2b9ba6": {
+      "type": "inline-code",
+      "values": {
+        "content": "token()"
+      }
+    },
+    "CODE-3c469e": {
+      "type": "inline-code",
+      "values": {
+        "content": "token"
+      }
+    },
+    "CODE-74e216": {
+      "type": "inline-code",
+      "values": {
+        "content": "approve"
+      }
+    },
+    "CODE-b870b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "Sold"
+      }
+    },
+    "CODE-256155": {
+      "type": "inline-code",
+      "values": {
+        "content": "TransferFrom"
+      }
+    },
+    "IMAGE-bdc9b3": {
+      "type": "image",
+      "values": {
+        "path": "./transfer-and-bought-events.png"
+      }
+    },
+    "IMAGE-2cea45": {
+      "type": "image",
+      "values": {
+        "path": "./transfer-and-sold-events.png"
+      }
+    },
+    "LINK-b79e37": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/understand-the-erc-20-token-smart-contract/"
+      }
+    },
+    "LINK-386955": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-01ab23": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/"
+      }
+    },
+    "LINK-a0911e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:24:22.642Z",
+      "status": "success"
+    }
+  }
+}

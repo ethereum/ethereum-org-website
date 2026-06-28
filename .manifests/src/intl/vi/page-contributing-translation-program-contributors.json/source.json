@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-contributing-translation-program-contributors.json",
+  "generatedAt": "2026-06-16T15:30:56.456Z",
+  "rootHash": "8842a712466e",
+  "tree": {
+    "contentHash": "45fcfdb74aee",
+    "anchorHash": "83153bb62b5d",
+    "children": {
+      "page-contributing-translation-program-contributors-thank-you": {
+        "contentHash": "c4e9b3f97114",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-contributors-title": {
+        "contentHash": "b3780af7deb4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-contributors-our-translators-1": {
+        "contentHash": "aa82e006895e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-contributors-our-translators-2": {
+        "contentHash": "1eb4247a488c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-contributors-our-translators-3": {
+        "contentHash": "bb35aac9a769",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-contributors-meta-title": {
+        "contentHash": "31956dfcf3e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-contributors-meta-description": {
+        "contentHash": "6e0ad4a22c10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-contributors-number-of-contributors": {
+        "contentHash": "f435538b0e7f",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-contributing-translation-program-contributors-thank-you",
+      "page-contributing-translation-program-contributors-title",
+      "page-contributing-translation-program-contributors-our-translators-1",
+      "page-contributing-translation-program-contributors-our-translators-2",
+      "page-contributing-translation-program-contributors-our-translators-3",
+      "page-contributing-translation-program-contributors-meta-title",
+      "page-contributing-translation-program-contributors-meta-description",
+      "page-contributing-translation-program-contributors-number-of-contributors"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

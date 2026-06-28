@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils/cn"
 import { commonControlClasses } from "./checkbox"
 
 const Switch = React.forwardRef<
-  React.ElementRef<typeof SwitchPrimitives.Root>,
+  React.ComponentRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
 >(({ className, ...props }, ref) => {
   return (

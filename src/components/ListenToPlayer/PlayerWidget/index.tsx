@@ -26,7 +26,9 @@ const PlayerButton = ({
   return isMobile() ? (
     children
   ) : (
-    <Tooltip content={tooltipContent}>{children}</Tooltip>
+    <Tooltip content={tooltipContent} asChild>
+      {children}
+    </Tooltip>
   )
 }
 
@@ -139,15 +141,15 @@ const PlayerWidget = ({
     <div
       className={cn(
         "w-80 border bg-background shadow-widget",
-        isExpanded ? "rounded-2xl p-4" : "rounded-t-2xl p-2"
+        isExpanded ? "rounded-base p-4" : "rounded-t-base p-2"
       )}
     >
       <div
         className={cn("flex flex-col gap-2", isExpanded ? "block" : "hidden")}
       >
         <div className="flex justify-between">
-          <p className="text-sm font-bold leading-base">{title}</p>
-          <Tooltip content={"Collapse"}>
+          <p className="text-sm leading-base font-bold">{title}</p>
+          <Tooltip content={"Collapse"} asChild>
             <button
               className="cursor-pointer text-body-medium hover:text-body"
               aria-label={"Collapse"}
@@ -171,7 +173,7 @@ const PlayerWidget = ({
             onMouseDown={handleMouseDown}
           >
             <div
-              className="absolute left-0 top-0 h-full rounded bg-primary"
+              className="absolute top-0 left-0 h-full rounded bg-primary"
               style={{
                 width: `${Number.isFinite(progress) && progress >= 0 ? progress : 0}%`,
               }}
@@ -191,7 +193,7 @@ const PlayerWidget = ({
           <div className="relative">
             <PlayerButton tooltipContent={"Playback speed"}>
               <button
-                className="w-[24px] cursor-pointer text-right text-xs font-bold leading-base text-body-medium hover:text-body"
+                className="w-[24px] cursor-pointer text-right text-xs leading-base font-bold text-body-medium hover:text-body"
                 onClick={() => setShowSpeedMenu(!showSpeedMenu)}
                 title={`Playback speed`}
                 aria-label={"Playback speed"}

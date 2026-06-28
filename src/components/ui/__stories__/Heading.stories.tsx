@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { Center, Stack } from "../flex"
 
@@ -37,8 +37,9 @@ export const Heading: Story = {
   render: () => (
     <>
       <div>
-        Adjust the viewport to below &quot;md&quot; to see the font size and
-        line height change
+        Base headings default to <code>font-black</code> (weight 900) via{" "}
+        <code>base.css</code>. Adjust the viewport to below &quot;md&quot; to
+        see the font size and line height change.
       </div>
       <Stack>
         {headings.map((Heading) => (

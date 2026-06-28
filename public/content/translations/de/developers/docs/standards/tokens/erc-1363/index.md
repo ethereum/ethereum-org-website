@@ -1,6 +1,6 @@
 ---
-title: ERC-1363 Zahlbarer Token-Standard
-description: "ERC-1363 ist eine Erweiterungsschnittstelle für ERC-20-Token, die die Ausführung einer benutzerdefinierten Logik auf einem Empfängervertrag nach Übertragungen oder auf einem Spendervertrag nach Genehmigungen innerhalb einer einzigen Transaktion unterstützt."
+title: ERC-1363 Payable Token-Standard
+description: "ERC-1363 ist eine Erweiterungsschnittstelle für ERC-20-Token, die die Ausführung benutzerdefinierter Logik auf einem Empfänger-Vertrag nach Transfers oder auf einem Spender-Vertrag nach Genehmigungen innerhalb einer einzigen Transaktion unterstützt."
 lang: de
 ---
 
@@ -8,68 +8,69 @@ lang: de
 
 ### Was ist ERC-1363? {#what-is-erc1363}
 
-ERC-1363 ist eine Erweiterungsschnittstelle für ERC-20-Token, die die Ausführung einer benutzerdefinierten Logik auf einem Empfängervertrag nach Übertragungen oder auf einem Spendervertrag nach Genehmigungen innerhalb einer einzigen Transaktion unterstützt.
+ERC-1363 ist eine Erweiterungsschnittstelle für ERC-20-Token, die die Ausführung benutzerdefinierter Logik auf einem Empfänger-Vertrag nach Transfers oder auf einem Spender-Vertrag nach Genehmigungen innerhalb einer einzigen Transaktion unterstützt.
 
 ### Unterschiede zu ERC-20 {#erc20-differences}
 
-Standard-ERC-20-Operationen wie `transfer`, `transferFrom` und `approve` erlauben keine Codeausführung auf dem Empfänger- oder Spendervertrag ohne eine separate Transaktion.
-Dies führt zu Komplexität in der UI-Entwicklung und zu Reibungsverlusten bei der Einführung, da Benutzer auf die Ausführung der ersten Transaktion warten und dann die zweite einreichen müssen.
-Sie müssen auch zweimal GAS bezahlen.
+Standardmäßige ERC-20-Operationen wie `transfer`, `transferFrom` und `approve` erlauben keine Codeausführung auf dem Empfänger- oder Spender-Vertrag ohne eine separate Transaktion.
+Dies führt zu Komplexität bei der UI-Entwicklung und Reibungsverlusten bei der Akzeptanz, da Benutzer warten müssen, bis die erste Transaktion ausgeführt wurde, und dann die zweite einreichen müssen.
+Sie müssen außerdem zweimal Gas bezahlen.
 
-ERC-1363 ermöglicht es fungiblen Token, Aktionen einfacher durchzuführen und ohne die Verwendung eines Off-Chain-Listeners zu funktionieren.
-Es ermöglicht, nach einer Übertragung oder einer Genehmigung in einer einzigen Transaktion einen Callback auf einem Empfänger- oder Spendervertrag durchzuführen.
+ERC-1363 ermöglicht es fungiblen Token, Aktionen einfacher auszuführen und ohne die Verwendung eines offchain-Listeners zu funktionieren.
+Es ermöglicht einen Callback auf einem Empfänger- oder Spender-Vertrag nach einem Transfer oder einer Genehmigung in einer einzigen Transaktion.
 
 ## Voraussetzungen {#prerequisites}
 
-Um diese Seite besser zu verstehen, empfehlen wir Ihnen, zunächst Folgendes zu lesen:
+Um diese Seite besser zu verstehen, empfehlen wir Ihnen, sich zunächst über Folgendes zu informieren:
 
 - [Token-Standards](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
 ## Hauptteil {#body}
 
-ERC-1363 führt eine Standard-API für ERC-20-Token ein, um nach `transfer`, `transferFrom` oder `approve` mit Smart Contracts zu interagieren.
+ERC-1363 führt eine Standard-API für ERC-20-Token ein, um mit Smart Contracts nach `transfer`, `transferFrom` oder `approve` zu interagieren.
 
-Dieser Standard bietet grundlegende Funktionen zum Übertragen von Token und ermöglicht die Genehmigung von Token, damit sie von einem anderen On-Chain-Drittanbieter ausgegeben werden können, um dann einen Callback auf dem Empfänger- oder Spendervertrag durchzuführen.
+Dieser Standard bietet grundlegende Funktionen zum Transfer von Token sowie die Möglichkeit, Token zu genehmigen, damit sie von einer anderen onchain-Drittpartei ausgegeben werden können, und anschließend einen Callback auf dem Empfänger- oder Spender-Vertrag auszuführen.
 
-Es gibt viele vorgeschlagene Anwendungsfälle für Smart Contracts, die ERC-20-Callbacks akzeptieren können.
+Es gibt viele vorgeschlagene Anwendungsfälle für Smart Contracts, die ERC-1363-Callbacks akzeptieren können.
 
 Beispiele könnten sein:
 
-- **Crowdsales**: Gesendete Token lösen eine sofortige Zuteilung der Belohnung aus.
-- **Dienstleistungen**: Die Zahlung aktiviert den Dienstzugang in einem Schritt.
+- **Crowdsales**: Gesendete Token lösen eine sofortige Zuweisung der Belohnung aus.
+- **Dienstleistungen**: Die Zahlung aktiviert den Zugang zum Dienst in einem einzigen Schritt.
 - **Rechnungen**: Token begleichen Rechnungen automatisch.
-- **Abonnements**: Die Genehmigung des jährlichen Tarifs aktiviert das Abonnement mit der Zahlung des ersten Monats.
+- **Abonnements**: Die Genehmigung des Jahresbeitrags aktiviert das Abonnement mit der Zahlung des ersten Monats.
 
-Aus diesen Gründen wurde es ursprünglich **„Payable Token“** genannt.
+Aus diesen Gründen wurde er ursprünglich **„Payable Token“** genannt.
 
-Das Callback-Verhalten erweitert den Nutzen zusätzlich und ermöglicht nahtlose Interaktionen wie:
+Das Callback-Verhalten erweitert seinen Nutzen weiter und ermöglicht nahtlose Interaktionen wie:
 
 - **Staking**: Übertragene Token lösen eine automatische Sperrung in einem Staking-Vertrag aus.
-- **Abstimmung**: Erhaltene Token registrieren Stimmen in einem Governance-System.
-- **Swapping**: Token-Genehmigungen aktivieren die Swap-Logik in einem einzigen Schritt.
+- **Abstimmungen**: Empfangene Token registrieren Stimmen in einem Governance-System.
+- **Tauschen**: Token-Genehmigungen aktivieren die Tausch-Logik in einem einzigen Schritt.
 
-ERC-1363-Token können für bestimmte Zwecke in allen Fällen verwendet werden, in denen nach einer erhaltenen Übertragung oder Genehmigung ein Callback ausgeführt werden muss.
-ERC-1363 ist auch nützlich, um den Verlust oder die Sperrung von Token in Smart Contracts zu vermeiden, indem die Fähigkeit des Empfängers, die Token zu handhaben, überprüft wird.
+ERC-1363-Token können für spezifische Zwecke in allen Fällen verwendet werden, die die Ausführung eines Callbacks nach einem Transfer oder einer erhaltenen Genehmigung erfordern.
+ERC-1363 ist auch nützlich, um Token-Verlust oder das Sperren von Token in Smart Contracts zu vermeiden, indem die Fähigkeit des Empfängers zum Umgang mit Token verifiziert wird.
 
-Im Gegensatz zu anderen ERC-20-Erweiterungsvorschlägen überschreibt ERC-1363 nicht die `transfer`- und `transferFrom`-Methoden von ERC-20 und definiert die zu implementierenden Schnittstellen-IDs, wodurch die Abwärtskompatibilität mit ERC-20 erhalten bleibt.
+Im Gegensatz zu anderen ERC-20-Erweiterungsvorschlägen überschreibt ERC-1363 nicht die ERC-20-Methoden `transfer` und `transferFrom` und definiert die zu implementierenden Schnittstellen-IDs, wobei die Abwärtskompatibilität mit ERC-20 erhalten bleibt.
 
 Aus [EIP-1363](https://eips.ethereum.org/EIPS/eip-1363):
 
 ### Methoden {#methods}
 
-Smart Contracts, die den ERC-1363-Standard implementieren, **MÜSSEN** alle Funktionen der `ERC1363`-Schnittstelle sowie die `ERC20`- und `ERC165`-Schnittstellen implementieren.
+Smart Contracts, die den ERC-1363-Standard implementieren, **MÜSSEN** alle Funktionen in der Schnittstelle `ERC1363` sowie die Schnittstellen `ERC20` und `ERC165` implementieren.
 
 ```solidity
 pragma solidity ^0.8.0;
 
 /**
  * @title ERC1363
- * @dev Eine Erweiterungsschnittstelle für ERC-20-Token, die die Ausführung von Code in einem Empfängervertrag nach `transfer` oder `transferFrom` oder Code in einem Spendervertrag nach `approve` in einer einzigen Transaktion unterstützt.
+ * @dev Eine Erweiterungsschnittstelle für ERC-20 Token, die das Ausführen von Code auf einem Empfänger-Vertrag
+ * nach `transfer` oder `transferFrom`, oder Code auf einem Spender-Vertrag nach `approve`, in einer einzigen Transaktion unterstützt.
  */
 interface ERC1363 is ERC20, ERC165 {
   /*
-   * HINWEIS: Die ERC-165-Kennung für diese Schnittstelle lautet 0xb0202a11.
+   * HINWEIS: Der ERC-165-Identifikator für diese Schnittstelle ist 0xb0202a11.
    * 0xb0202a11 ===
    *   bytes4(keccak256('transferAndCall(address,uint256)')) ^
    *   bytes4(keccak256('transferAndCall(address,uint256,bytes)')) ^
@@ -80,55 +81,61 @@ interface ERC1363 is ERC20, ERC165 {
    */
 
   /**
-   * @dev Verschiebt einen Token-Betrag von `value` vom Konto des Aufrufers nach `to` und ruft dann `ERC1363Receiver::onTransferReceived` auf `to` auf.
-   * @param to Die Adresse, an die die Token übertragen werden.
-   * @param value Der Betrag der zu übertragenden Token.
-   * @return Ein boolescher Wert, der angibt, dass die Operation erfolgreich war, es sei denn, es wird ein Fehler ausgelöst.
+   * @dev Verschiebt eine `value`-Menge an Token vom Konto des Aufrufers zu `to`
+   * und ruft dann `ERC1363Receiver::onTransferReceived` auf `to` auf.
+   * @param to Die Adresse, an die Token transferiert werden.
+   * @param value Die Menge der zu transferierenden Token.
+   * @return Ein boolescher Wert, der anzeigt, dass die Operation erfolgreich war, sofern kein Fehler geworfen wird.
    */
   function transferAndCall(address to, uint256 value) external returns (bool);
 
   /**
-   * @dev Verschiebt einen Token-Betrag von `value` vom Konto des Aufrufers nach `to` und ruft dann `ERC1363Receiver::onTransferReceived` auf `to` auf.
-   * @param to Die Adresse, an die die Token übertragen werden.
-   * @param value Der Betrag der zu übertragenden Token.
-   * @param data Zusätzliche Daten ohne bestimmtes Format, die beim Aufruf an `to` gesendet werden.
-   * @return Ein boolescher Wert, der angibt, dass die Operation erfolgreich war, es sei denn, es wird ein Fehler ausgelöst.
+   * @dev Verschiebt eine `value`-Menge an Token vom Konto des Aufrufers zu `to`
+   * und ruft dann `ERC1363Receiver::onTransferReceived` auf `to` auf.
+   * @param to Die Adresse, an die Token transferiert werden.
+   * @param value Die Menge der zu transferierenden Token.
+   * @param data Zusätzliche Daten ohne spezifiziertes Format, die im Aufruf an `to` gesendet werden.
+   * @return Ein boolescher Wert, der anzeigt, dass die Operation erfolgreich war, sofern kein Fehler geworfen wird.
    */
   function transferAndCall(address to, uint256 value, bytes calldata data) external returns (bool);
 
   /**
-   * @dev Verschiebt einen Token-Betrag von `value` von `from` nach `to` unter Verwendung des Genehmigungsmechanismus und ruft dann `ERC1363Receiver::onTransferReceived` auf `to` auf.
-   * @param from Die Adresse, von der die Token gesendet werden.
-   * @param to Die Adresse, an die die Token übertragen werden.
-   * @param value Der Betrag der zu übertragenden Token.
-   * @return Ein boolescher Wert, der angibt, dass die Operation erfolgreich war, es sei denn, es wird ein Fehler ausgelöst.
+   * @dev Verschiebt eine `value`-Menge an Token von `from` zu `to` unter Verwendung des Allowance-Mechanismus
+   * und ruft dann `ERC1363Receiver::onTransferReceived` auf `to` auf.
+   * @param from Die Adresse, von der Token gesendet werden.
+   * @param to Die Adresse, an die Token transferiert werden.
+   * @param value Die Menge der zu transferierenden Token.
+   * @return Ein boolescher Wert, der anzeigt, dass die Operation erfolgreich war, sofern kein Fehler geworfen wird.
    */
   function transferFromAndCall(address from, address to, uint256 value) external returns (bool);
 
   /**
-   * @dev Verschiebt einen Token-Betrag von `value` von `from` nach `to` unter Verwendung des Genehmigungsmechanismus und ruft dann `ERC1363Receiver::onTransferReceived` auf `to` auf.
-   * @param from Die Adresse, von der die Token gesendet werden.
-   * @param to Die Adresse, an die die Token übertragen werden.
-   * @param value Der Betrag der zu übertragenden Token.
-   * @param data Zusätzliche Daten ohne bestimmtes Format, die beim Aufruf an `to` gesendet werden.
-   * @return Ein boolescher Wert, der angibt, dass die Operation erfolgreich war, es sei denn, es wird ein Fehler ausgelöst.
+   * @dev Verschiebt eine `value`-Menge an Token von `from` zu `to` unter Verwendung des Allowance-Mechanismus
+   * und ruft dann `ERC1363Receiver::onTransferReceived` auf `to` auf.
+   * @param from Die Adresse, von der Token gesendet werden.
+   * @param to Die Adresse, an die Token transferiert werden.
+   * @param value Die Menge der zu transferierenden Token.
+   * @param data Zusätzliche Daten ohne spezifiziertes Format, die im Aufruf an `to` gesendet werden.
+   * @return Ein boolescher Wert, der anzeigt, dass die Operation erfolgreich war, sofern kein Fehler geworfen wird.
    */
   function transferFromAndCall(address from, address to, uint256 value, bytes calldata data) external returns (bool);
 
   /**
-   * @dev Legt einen Token-Betrag von `value` als Genehmigung für `spender` über die Token des Aufrufers fest und ruft dann `ERC1363Spender::onApprovalReceived` auf `spender` auf.
-   * @param spender Die Adresse, die das Guthaben ausgeben wird.
-   * @param value Der Betrag der auszugebenden Token.
-   * @return Ein boolescher Wert, der angibt, dass die Operation erfolgreich war, es sei denn, es wird ein Fehler ausgelöst.
+   * @dev Setzt eine `value`-Menge an Token als Allowance von `spender` über die Token des Aufrufers
+   * und ruft dann `ERC1363Spender::onApprovalReceived` auf `spender` auf.
+   * @param spender Die Adresse, die die Mittel ausgeben wird.
+   * @param value Die Menge der auszugebenden Token.
+   * @return Ein boolescher Wert, der anzeigt, dass die Operation erfolgreich war, sofern kein Fehler geworfen wird.
    */
   function approveAndCall(address spender, uint256 value) external returns (bool);
 
   /**
-   * @dev Legt einen Token-Betrag von `value` als Genehmigung für `spender` über die Token des Aufrufers fest und ruft dann `ERC1363Spender::onApprovalReceived` auf `spender` auf.
-   * @param spender Die Adresse, die das Guthaben ausgeben wird.
-   * @param value Der Betrag der auszugebenden Token.
-   * @param data Zusätzliche Daten ohne bestimmtes Format, die beim Aufruf an `spender` gesendet werden.
-   * @return Ein boolescher Wert, der angibt, dass die Operation erfolgreich war, es sei denn, es wird ein Fehler ausgelöst.
+   * @dev Setzt eine `value`-Menge an Token als Allowance von `spender` über die Token des Aufrufers
+   * und ruft dann `ERC1363Spender::onApprovalReceived` auf `spender` auf.
+   * @param spender Die Adresse, die die Mittel ausgeben wird.
+   * @param value Die Menge der auszugebenden Token.
+   * @param data Zusätzliche Daten ohne spezifiziertes Format, die im Aufruf an `spender` gesendet werden.
+   * @return Ein boolescher Wert, der anzeigt, dass die Operation erfolgreich war, sofern kein Fehler geworfen wird.
    */
   function approveAndCall(address spender, uint256 value, bytes calldata data) external returns (bool);
 }
@@ -149,55 +156,58 @@ interface ERC165 {
 }
 ```
 
-Ein Smart Contract, der ERC-1363-Token über `transferAndCall` oder `transferFromAndCall` annehmen möchte, **MUSS** die `ERC1363Receiver`-Schnittstelle implementieren:
+Ein Smart Contract, der ERC-1363-Token über `transferAndCall` oder `transferFromAndCall` akzeptieren möchte, **MUSS** die Schnittstelle `ERC1363Receiver` implementieren:
 
 ```solidity
 /**
  * @title ERC1363Receiver
- * @dev Schnittstelle für jeden Vertrag, der `transferAndCall` oder `transferFromAndCall` von ERC-1363-Token-Verträgen unterstützen möchte.
+ * @dev Schnittstelle für jeden Vertrag, der `transferAndCall` oder `transferFromAndCall` von ERC-1363 Token-Verträgen unterstützen möchte.
  */
 interface ERC1363Receiver {
   /**
-   * @dev Immer wenn ERC-1363-Token über `ERC1363::transferAndCall` oder `ERC1363::transferFromAndCall` von `operator` von `from` an diesen Vertrag übertragen werden, wird diese Funktion aufgerufen.
+   * @dev Wann immer ERC-1363 Token über `ERC1363::transferAndCall` oder `ERC1363::transferFromAndCall`
+   * durch `operator` von `from` an diesen Vertrag transferiert werden, wird diese Funktion aufgerufen.
    *
-   * HINWEIS: Um die Übertragung zu akzeptieren, muss diese Funktion `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))` zurückgeben
-   * (d. h. 0x88a7ca5c oder ihren eigenen Funktionsselektor).
+   * HINWEIS: Um den Transfer zu akzeptieren, muss dies
+   * `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))`
+   * (d.h. 0x88a7ca5c, oder seinen eigenen Funktionsselektor) zurückgeben.
    *
    * @param operator Die Adresse, die die Funktion `transferAndCall` oder `transferFromAndCall` aufgerufen hat.
-   * @param from Die Adresse, von der die Token übertragen werden.
-   * @param value Der Betrag der übertragenen Token.
-   * @param data Zusätzliche Daten ohne bestimmtes Format.
-   * @return `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))` wenn die Übertragung zulässig ist, es sei denn, es wird ein Fehler ausgelöst.
+   * @param from Die Adresse, von der Token transferiert werden.
+   * @param value Die Menge der transferierten Token.
+   * @param data Zusätzliche Daten ohne spezifiziertes Format.
+   * @return `bytes4(keccak256("onTransferReceived(address,address,uint256,bytes)"))` wenn der Transfer erlaubt ist, sofern kein Fehler geworfen wird.
    */
   function onTransferReceived(address operator, address from, uint256 value, bytes calldata data) external returns (bytes4);
 }
 ```
 
-Ein Smart Contract, der ERC-1363-Token über `approveAndCall` annehmen möchte, **MUSS** die `ERC1363Spender`-Schnittstelle implementieren:
+Ein Smart Contract, der ERC-1363-Token über `approveAndCall` akzeptieren möchte, **MUSS** die Schnittstelle `ERC1363Spender` implementieren:
 
 ```solidity
 /**
  * @title ERC1363Spender
- * @dev Schnittstelle für jeden Vertrag, der `approveAndCall` von ERC-1363-Token-Verträgen unterstützen möchte.
+ * @dev Schnittstelle für jeden Vertrag, der `approveAndCall` von ERC-1363 Token-Verträgen unterstützen möchte.
  */
 interface ERC1363Spender {
   /**
-   * @dev Immer wenn ein ERC-1363-Token-`owner` diesen Vertrag über `ERC1363::approveAndCall` zur Ausgabe seiner Token autorisiert,
-   * wird diese Funktion aufgerufen.
+   * @dev Wann immer ein `owner` von ERC-1363 Token diesen Vertrag über `ERC1363::approveAndCall` genehmigt,
+   * seine Token auszugeben, wird diese Funktion aufgerufen.
    *
-   * HINWEIS: Um die Genehmigung zu akzeptieren, muss diese Funktion `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))` zurückgeben
-   * (d. h. 0x7b04a2d0 oder ihren eigenen Funktionsselektor).
+   * HINWEIS: Um die Genehmigung zu akzeptieren, muss dies
+   * `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))`
+   * (d.h. 0x7b04a2d0, oder seinen eigenen Funktionsselektor) zurückgeben.
    *
    * @param owner Die Adresse, die die Funktion `approveAndCall` aufgerufen hat und zuvor die Token besaß.
-   * @param value Der Betrag der auszugebenden Token.
-   * @param data Zusätzliche Daten ohne bestimmtes Format.
-   * @return `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))` wenn die Genehmigung zulässig ist, es sei denn, es wird ein Fehler ausgelöst.
+   * @param value Die Menge der auszugebenden Token.
+   * @param data Zusätzliche Daten ohne spezifiziertes Format.
+   * @return `bytes4(keccak256("onApprovalReceived(address,uint256,bytes)"))` wenn die Genehmigung erlaubt ist, sofern kein Fehler geworfen wird.
    */
   function onApprovalReceived(address owner, uint256 value, bytes calldata data) external returns (bytes4);
 }
 ```
 
-## Weiterführende Lektüre {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-- [ERC-1363: Zahlbarer Token-Standard](https://eips.ethereum.org/EIPS/eip-1363)
+- [ERC-1363: Payable Token-Standard](https://eips.ethereum.org/EIPS/eip-1363)
 - [ERC-1363: GitHub-Repo](https://github.com/vittominacori/erc1363-payable-token)

@@ -8,18 +8,16 @@ import type { DeveloperDocsLink } from "@/lib/interfaces"
 import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
-import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
-import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 const TextDiv = ({ children, className, ...props }) => (
   <div
     className={cn(
-      "flex h-full w-full flex-col justify-center break-words p-4",
+      "flex h-full w-full flex-col justify-center p-4 wrap-break-word",
       className
     )}
     {...props}
@@ -34,50 +32,49 @@ type DocsArrayProps = {
 }
 
 type CardLinkProps = {
-  docData: DocsArrayProps
+  docData: DocsArrayProps | null
   contentNotTranslated: boolean
   isPrev?: boolean
 }
 
 const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
-  const { twFlipForRtl } = useRtlFlip()
+
+  if (!docData) return <div className="flex-1" />
 
   return (
     <BaseLink
       href={docData.href}
       className={cn(
-        "group flex w-full items-center rounded-sm border border-primary bg-background !no-underline",
+        "group flex w-full flex-1 items-center rounded-base border border-primary bg-background no-underline!",
         isPrev ? "justify-start" : "justify-end",
         "hover:border-primary-hover"
       )}
       rel={isPrev ? "prev" : "next"}
-      onClick={() => {
-        trackCustomEvent({
-          eventCategory: "next/previous article DocsNav",
-          eventAction: "click",
-          eventName: isPrev ? "previous" : "next",
-        })
+      customEventOptions={{
+        eventCategory: "next/previous article DocsNav",
+        eventAction: "click",
+        eventName: isPrev ? "previous" : "next",
       }}
     >
       <div
         className={cn(
           "p-4",
           isPrev ? "order-0" : "order-1",
-          !contentNotTranslated && twFlipForRtl
+          !contentNotTranslated && "rtl:-scale-x-100"
         )}
       >
         {isPrev ? (
-          <ChevronLeft className="text-xl group-hover:fill-primary-hover" />
+          <ChevronLeft className="text-xl group-hover:stroke-primary-hover" />
         ) : (
-          <ChevronRight className="text-xl group-hover:fill-primary-hover" />
+          <ChevronRight className="text-xl group-hover:stroke-primary-hover" />
         )}
       </div>
       <TextDiv className={cn(isPrev ? "ps-0" : "pe-0 text-end")}>
-        <p className="btn-txt !m-0 text-lg text-primary group-hover:text-primary-hover">
+        <p className="btn-txt m-0! text-lg text-primary group-hover:text-primary-hover">
           {t(isPrev ? "previous" : "next")}
         </p>
-        <p className="!mb-0 text-sm no-underline">{t(docData.id)}</p>
+        <p className="mb-0! text-sm no-underline">{t(docData.id)}</p>
       </TextDiv>
     </BaseLink>
   )
@@ -135,23 +132,12 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
       )}
       aria-label="Paginate to document"
     >
-      {previousDoc ? (
-        <CardLink
-          docData={previousDoc}
-          contentNotTranslated={contentNotTranslated}
-          isPrev
-        />
-      ) : (
-        <div className="hidden flex-grow xl:block" />
-      )}
-      {nextDoc ? (
-        <CardLink
-          docData={nextDoc}
-          contentNotTranslated={contentNotTranslated}
-        />
-      ) : (
-        <div className="hidden flex-grow xl:block" />
-      )}
+      <CardLink
+        docData={previousDoc}
+        contentNotTranslated={contentNotTranslated}
+        isPrev
+      />
+      <CardLink docData={nextDoc} contentNotTranslated={contentNotTranslated} />
     </nav>
   )
 }

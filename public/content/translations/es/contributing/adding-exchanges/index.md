@@ -1,40 +1,39 @@
 ---
-title: "Añadir intercambios"
-description: "Política aplicable para añadir tipos de interés a Ethereum.org"
+title: Añadir exchanges de Ethereum
+metaTitle: Añadir exchanges
+description: La política que utilizamos al añadir exchanges a ethereum.org
 lang: es
 ---
 
-# Añadir intercambios de Ethereum {#adding-ethereum-exchanges}
+Cualquier persona es libre de sugerir nuevos exchanges en ethereum.org.
 
-Cualquiera es libre de sugerir nuevos intercambios a Ethereum.org.
-
-Actualmente los enumeramos en:
+Actualmente los listamos en:
 
 - [ethereum.org/get-eth](/get-eth/)
 
-Esta página permite a un usuario indicar donde vive y ver el intercambio que puede utilizar. Esto ayuda a superar las restricciones geográficas en una fase temprana.
+Esta página permite a los usuarios introducir dónde viven y ver qué exchanges pueden utilizar. Esto ayuda a descubrir cualquier restricción geográfica desde el principio.
 
-Debido a este contexto, necesitamos información específica cuando usted sugiera un intercambio.
+Debido a este contexto, necesitamos cierta información específica cuando sugiera un exchange.
 
-**NOTA:** Si quiere incluir un intercambio descentralizado, eche un vistazo a nuestra [política para incluir billeteras y dapps](/contributing/adding-products/).
+**NOTA:** Si desea listar un exchange descentralizado, eche un vistazo a nuestra [política para listar carteras y aplicaciones descentralizadas (dapps)](/contributing/adding-products/).
 
-## Lo que necesitamos {#what-we-need}
+## Qué necesitamos {#what-we-need}
 
-- Restricciones geográficas aplicables al intercambio. Las restricciones geográficas relacionadas con el intercambio deben detallarse en una página o sección específica del sitio web del intercambio.
-- Las divisas que los usuarios pueden usar para comprar ETH.
-- Prueba de que el intercambio es una operación legítima.
-- Cualquier información adicional que usted pueda aportar, como años en activo de la empresa, respaldo financiero, etc.
+- Las restricciones geográficas que se aplican al exchange. Las restricciones geográficas asociadas con el exchange deben detallarse en una página o sección dedicada del sitio web del exchange.
+- Las monedas que los usuarios pueden utilizar para comprar ETH
+- Pruebas de que el exchange es una empresa comercial legítima
+- Cualquier información adicional que pueda tener: puede ser información sobre la empresa, como años de funcionamiento, respaldo financiero, etc.
 
-Necesitamos esta información para poder [ayudar a los usuarios a encontrar un intercambio que puedan usar](/get-eth/#country-picker) con precisión.
+Necesitamos esta información para poder [ayudar a los usuarios a encontrar un exchange que puedan utilizar](/get-eth/#country-picker) con precisión.
 
-Y para que ethereum.org pueda estar más seguro de que el intercambio es un servicio legítimo y seguro.
+Y para que ethereum.org pueda tener más confianza en que el exchange es un servicio legítimo y seguro.
 
 ---
 
-## Añade tu intercambio {#add-exchange}
+## Añada su exchange {#add-exchange}
 
-Si desea añadir un interambio a ethereum.org, cree una incidencia en GitHub.
+Si desea añadir un exchange a ethereum.org, cree un issue en GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
-  Crear una incidencia
+  Crear un issue
 </ButtonLink>

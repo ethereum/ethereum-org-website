@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import { formatDate, isValidDate } from "@/lib/utils/date"
 
@@ -46,11 +46,7 @@ export const parseStoryDates = (
   }))
 
 export const getInnovationCards = async (): Promise<InnovationCard[]> => {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
   return [
     {
       image: EthereumLaunchImage,
@@ -80,11 +76,7 @@ export const getInnovationCards = async (): Promise<InnovationCard[]> => {
 }
 
 export const getAdoptionCards = async (): Promise<AdoptionCard[]> => {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
   return [
     {
       image: Adoption1Image,

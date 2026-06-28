@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "locale": "zh",
+  "translatedAt": "2026-06-08T08:36:01.894Z",
+  "englishManifestHash": "6bbbd1fa837c",
+  "placeholderOrder": [
+    "IMAGE-b9bb84",
+    "LINK-e953a5",
+    "LINK-11c3c5",
+    "LINK-20d0cc",
+    "LINK-a21a82",
+    "LINK-d966e4",
+    "LINK-729972",
+    "LINK-7c7bca",
+    "LINK-8534d7",
+    "LINK-38d64e",
+    "LINK-10ed71",
+    "LINK-40745f",
+    "LINK-1eb78e",
+    "LINK-29a333",
+    "LINK-11c3c5",
+    "LINK-78799d",
+    "LINK-0f400d",
+    "LINK-163e15",
+    "LINK-5c84b1",
+    "LINK-b7a222"
+  ],
+  "placeholderMap": {
+    "IMAGE-b9bb84": {
+      "type": "image",
+      "values": {
+        "path": "./enterprise-eth.png"
+      }
+    },
+    "LINK-e953a5": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/how-to-translate/"
+      }
+    },
+    "LINK-11c3c5": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/translators-guide/"
+      }
+    },
+    "LINK-20d0cc": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-d966e4": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/mission-and-vision"
+      }
+    },
+    "LINK-729972": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/contributors/"
+      }
+    },
+    "LINK-7c7bca": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/acknowledgements/"
+      }
+    },
+    "LINK-8534d7": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/acknowledgements/#certificate"
+      }
+    },
+    "LINK-38d64e": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/acknowledgements/#oats"
+      }
+    },
+    "LINK-10ed71": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/acknowledgements/"
+      }
+    },
+    "LINK-40745f": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/contributors/"
+      }
+    },
+    "LINK-1eb78e": {
+      "type": "link",
+      "values": {
+        "url": "https://devcon.org/en/"
+      }
+    },
+    "LINK-29a333": {
+      "type": "link",
+      "values": {
+        "url": "https://devconnect.org/"
+      }
+    },
+    "LINK-78799d": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/faq/"
+      }
+    },
+    "LINK-0f400d": {
+      "type": "link",
+      "values": {
+        "url": "https://support.crowdin.com/online-editor/"
+      }
+    },
+    "LINK-163e15": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/resources/"
+      }
+    },
+    "LINK-5c84b1": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    },
+    "LINK-b7a222": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/playbook/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:36:01.894Z",
+      "status": "success"
+    }
+  }
+}

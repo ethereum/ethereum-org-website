@@ -1,77 +1,76 @@
 ---
-title: Mitarbeit am Design
-description: Mitarbeit am Design bei ethereum.org
+title: Design-Beiträge zu ethereum.org
+metaTitle: Design-Beiträge
+description: Design-Beiträge zu ethereum.org
 lang: de
 ---
 
-# Mitarbeit am Design bei ethereum.org {#design-contributions}
+Design ist ein entscheidender Bestandteil jedes Projekts. Indem du deine Zeit und deine Designfähigkeiten ethereum.org widmest, kannst du dazu beitragen, die Benutzererfahrung für unsere Besucher zu verbessern. Die Mitarbeit an einem Open-Source-Projekt bietet die Möglichkeit, relevante Erfahrungen zu sammeln und deine Fähigkeiten in einer kollaborativen Umgebung weiterzuentwickeln. Du hast die Möglichkeit, mit anderen Designern, Entwicklern und Community-Mitgliedern zusammenzuarbeiten, die alle ihre eigenen, einzigartigen Perspektiven und Erkenntnisse einbringen.
 
-Design ist ein wichtiger Bestandteil eines jeden Projekts. Wenn Sie Ihre Zeit und Ihre Design-Fähigkeiten für Ethereum.org einsetzen, können Sie dazu beitragen, die Benutzerfreundlichkeit für unsere Besucher zu verbessern. Die Mitarbeit an einem Open-Source-Projekt bietet Ihnen die Möglichkeit, relevante Erfahrungen zu sammeln und Ihre Fähigkeiten in einer kollaborativen Umgebung zu entwickeln. Sie werden die Chance haben, mit anderen Designern, Entwicklern und Community-Mitgliedern zusammenzuarbeiten, die alle ihre eigenen Perspektiven und Einsichten miteinbringen.
+Letztendlich ist dies eine großartige Möglichkeit, ein vielfältiges und beeindruckendes Portfolio aufzubauen, das deine Designfähigkeiten präsentiert.
 
-Letztendlich ist das eine großartige Möglichkeit, ein vielfältiges und beeindruckendes Portfolio aufzubauen, das Ihre Designfähigkeiten unter Beweis stellt.
+## Wie kannst du beitragen? {#how-to-contribute}
 
-## Wie kann ich etwas beitragen?
+### <Emoji text=":one:" size={1} /> &nbsp;Feedback zu frühen Design-Prototypen geben {#design-critique}
 
-### <Emoji text=":one:" size={1} /> &nbsp;Geben Sie Feedback zu frühen Design-Prototypen {#design-critique}
+Manchmal brauchen wir Hilfe beim Testen unserer ersten Ideen. Dies ist eine großartige Möglichkeit, ohne technisches Wissen einen Beitrag zu leisten.
 
-Manchmal brauchen wir Hilfe beim Testen unserer "rohen" Ideen. Das ist eine großartige Möglichkeit, auch ohne technische Kenntnisse einen Beitrag zu leisten.
+1. Das Design-Team wird einen Design-Entwurf auf [Discord](https://discord.com/invite/ethereum-org) und auf [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) teilen.
+2. Du wirst durch die Designs geführt, um über die Kommentarfunktion Feedback zu geben.
+3. Das Ergebnis wird im GitHub-Issue geteilt und dieses dann vom Team geschlossen.
 
-1. Das Design-Team wird ein Mockup-Design auf [Discord](https://discord.com/invite/CetY6Y4) und auf [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) veröffentlichen.
-2. Sie werden durch die Entwürfe geführt und können über die Kommentarfunktion Feedback geben.
-3. Das Ergebnis wird in einem GitHub-Issue geteilt und dann vom Team abgeschlossen.
+### <Emoji text=":two:" size={1} /> &nbsp;An Umfragen teilnehmen {#answer-surveys}
 
-### <Emoji text=":two:" size={1} /> &nbsp;Teilnahme an Umfragen {#answer-surveys}
+Gib Feedback zu unserer Website, indem du:
 
-Geben Sie Feedback zu unserer Website:
+1. ethereum.org besuchst und dir die Seiten durchliest.
+2. auf das Feedback-Widget in der unteren rechten Ecke klickst und design- sowie inhaltsbezogene Fragen beantwortest.
+3. Konzentriere dich auf die Freitextfragen.
 
-1. Besuchen Sie ethereum.org und lesen Sie die Seiten durch.
-2. Klicken Sie auf das Feedback-Widget in der rechten unteren Ecke und beantworten Sie Fragen zum Design und zum Inhalt.
-3. Konzentrieren Sie sich auf die Fragen zum freien Format.
+### <Emoji text=":three:" size={1} /> &nbsp;Designbezogene Probleme auf der Website finden und melden {#report-design-issues}
 
-### <Emoji text=":three:" size={1} /> &nbsp;Finden Sie designbezogene Probleme auf der Website und melden Sie diese. {#report-design-issues}
+ethereum.org ist eine schnell wachsende Website mit vielen Funktionen und Inhalten. Teile der Benutzeroberfläche (UI) können leicht veralten oder könnten verbessert werden. Wenn dir so etwas auffällt, melde es bitte, damit wir darauf aufmerksam werden.
 
-Ethereum.org ist eine schnell wachsende Website mit vielen Funktionen und Inhalten. Einige der Benutzeroberflächen können leicht veraltet sein oder verbessert werden. Wenn Ihnen ein solches Problem auffällt, melden Sie es bitte, damit wir darauf aufmerksam werden.
-
-1. Gehen Sie durch die Website und achten Sie auf ihr Design.
-2. Machen Sie Screenshots und Notizen, wenn Sie visuelle oder UX-Probleme sehen.
-3. Melden Sie die gefundenen Probleme in einem [Fehlerbericht](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+1. Gehe die Website durch und achte auf ihr Design.
+2. Mache Screenshots und Notizen, wenn du visuelle oder UX-Probleme siehst.
+3. Melde die gefundenen Probleme über einen [Fehlerbericht (Bug Report)](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 ### <Emoji text=":four:" size={1} /> &nbsp;Designänderungen vorschlagen {#propose-design-changes}
 
-Wenn Sie sich mit Design-Herausforderungen wohlfühlen, können Sie unser GitHub Issues Board besuchen und nach [designbezogenen Issues](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) filtern.
+Wenn du dich bereit fühlst, Design-Herausforderungen anzunehmen, kannst du unser GitHub-Issues-Board besuchen und nach [designbezogenen Issues](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) filtern.
 
-1. Schauen Sie sich unsere Website an und achten Sie auf das Design, oder gehen Sie zu unserem GitHub-Repository und überprüfen Sie Issues, die mit dem Tag ["Design required"](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) gekennzeichnet sind.
-2. Machen Sie sich Gedanken über die Lösung und entwerfen Sie sie. (Idealerweise unter Verwendung unseres [Designsystems](https://www.figma.com/community/file/1134414495420383395)).
-3. Schlagen Sie die Lösung in dem entsprechenden GitHub-Thema vor oder erstellen Sie ein [neues Thema](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request).
-4. Warten Sie auf die Überprüfung durch das Designteam.
+1. Gehe unsere Website durch und achte auf ihr Design oder besuche unser GitHub-Repository und überprüfe Issues, die mit dem [Tag „Design required“](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) markiert sind.
+2. Entwickle Ideen für die Lösung und gestalte sie (idealerweise unter Verwendung unseres [Design-Systems](https://www.figma.com/community/file/1134414495420383395)).
+3. Schlage die Lösung im entsprechenden GitHub-Issue vor oder [erstelle ein neues.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request)
+4. Warte auf die Überprüfung durch das Design-Team.
 
-### <Emoji text=":five:" size={1} /> &nbsp;Das Designsystem gemeinsam aufbauen {#Contribute-to-design-system}
+### <Emoji text=":five:" size={1} /> &nbsp;Gemeinsam am Design-System bauen {#contribute-to-design-system}
 
-Mit unserem Designsystem macht das Entwerfen von ethereum.org Spaß und ist einfach. Wenn Sie ein erfahrener Designer sind, können Sie uns helfen, viele Komponenten für die Website vorzubereiten.
+Unser Design-System macht die Gestaltung von ethereum.org einfach und unterhaltsam. Wenn du ein erfahrener Designer bist, kannst du uns helfen, viele Komponenten für die Website vorzubereiten.
 
-1. Wählen Sie ein Thema aus dem [Design-System-Board](https://github.com/ethereum/ethereum-org-website/labels/design%20system) auf GitHub aus, an dem Sie arbeiten möchten, oder erstellen Sie ein neues.
-2. Fordern Sie an, dass Ihnen das ausgewählte Thema zugewiesen wird.
-3. Beginnen Sie mit dem Design der gewünschten Komponente in figma.
-4. Teilen Sie es dem Designteam auf GitHub mit, sobald Sie eine Überprüfung oder Hilfe benötigen.
-5. Das Designteam wird es dann überprüfen.
-6. Das Designteam wird die Änderungen in die Hauptdatei einarbeiten und die Datei in der Community veröffentlichen.
+1. Wähle ein Issue vom [Design-System-Board](https://github.com/ethereum/ethereum-org-website/labels/design%20system) auf GitHub aus, an dem du arbeiten möchtest, oder erstelle ein neues.
+2. Bitte darum, dass dir das ausgewählte Issue zugewiesen wird.
+3. Beginne mit der Gestaltung der angeforderten Komponente in Figma.
+4. Teile es mit dem Design-Team auf GitHub, sobald du eine Überprüfung oder Anleitung benötigst.
+5. Das Design-Team wird es überprüfen.
+6. Das Design-Team wird die Änderungen in die Hauptdatei übernehmen und die Datei für die Community veröffentlichen.
 
-### <Emoji text=":six:" size={1} /> &nbsp;Verfassen Sie designbezogene Inhalte auf der Website. {#write-design-articles}
+### <Emoji text=":six:" size={1} /> &nbsp;Designbezogene Inhalte für die Website schreiben {#write-design-articles}
 
-Die Ethereum-Entwickler-Community ist stark, aber die Design-Community hinkt etwas hinterher. Wenn Sie ein Designer mit Web3-Kenntnissen sind, ziehen Sie bitte in Erwägung, Ihre Erkenntnisse mit der größeren Community zu teilen, damit wir alle gemeinsam wachsen und uns verbessern können; wir haben eine [Seite über Design für Ethereum](/developers/docs/design-and-ux/), zu der Sie beitragen können. Sie können auch unsere [Richtline zur Listung](/contributing/design/adding-design-resources) ansehen.
+Die Ethereum-Entwickler-Community ist stark, aber die Design-Community hinkt etwas hinterher. Wenn du ein Designer mit Web3-Kenntnissen bist, erwäge bitte, deine Erkenntnisse mit der größeren Community zu teilen, damit wir alle gemeinsam wachsen und uns verbessern können; wir haben [eine Seite über das Designen für Ethereum](/developers/docs/design-and-ux/), zu der du beitragen kannst. Du kannst dir auch unsere [Listungsrichtlinien](/contributing/design/adding-design-resources) ansehen.
 
-1. Machen Sie sich Gedanken über Designthemen, die auf ethereum.org behandelt werden sollten und die für die Designer in diesem Bereich von Nutzen wären.
-2. Gehen Sie zu unserem GitHub-Repository und [öffnen Sie ein Thema](https://github.com/ethereum/ethereum-org-website/issues/new), um ein Thema vorzuschlagen (schreiben Sie den Inhalt noch nicht).
-3. Warten Sie auf die Freigabe durch das Designteam.
-4. Sobald die Anfrage genehmigt ist, schreiben Sie den Inhalt.
-5. Reichen Sie ihn im entsprechenden GH-Thema ein.
+1. Sammle Ideen zu Design-Themen, die auf ethereum.org behandelt werden sollten und für Designer in diesem Bereich nützlich wären.
+2. Gehe zu unserem GitHub-Repository und [erstelle ein Issue](https://github.com/ethereum/ethereum-org-website/issues/new), um ein Thema vorzuschlagen (schreibe den Inhalt noch nicht).
+3. Warte auf die Genehmigung durch das Design-Team.
+4. Sobald es genehmigt ist, schreibe den Inhalt.
+5. Reiche ihn im entsprechenden GitHub-Issue ein.
 
-### <Emoji text=":seven:" size={1} /> &nbsp;Gestalten Sie neue Illustrationen. {#prepare-illustrations}
+### <Emoji text=":seven:" size={1} /> &nbsp;Neue Illustrationen zeichnen {#prepare-illustrations}
 
-Visualisierungen sind eines der wirkungsvollsten Instrumente zur Erklärung abstrakter Themen. Der Einsatz von Diagrammen und Infografiken birgt ein enormes Potenzial. Schließlich kann ein Bild mehr als tausend Worte sagen.
+Visualisierungen sind eines der mächtigsten Werkzeuge, um abstrakte Themen zu erklären. Es gibt ein enormes Potenzial durch das Hinzufügen von Diagrammen und Infografiken. Schließlich sagt ein Bild mehr als tausend Worte.
 
-1. Gehen Sie auf unsere Website und suchen Sie nach Seiten, auf denen neue Infografiken hinzugefügt werden könnten.
-2. Vergewissern Sie sich, dass der Illustrationsstil mit unseren [Assets](/assets/) übereinstimmt.
-3. Gehen Sie zu unserem GitHub-Repository und [machen Sie einen Vorschlag](https://github.com/ethereum/ethereum-org-website/issues/new) für die Illustration.
-4. Das Designteam wird sie dann prüfen.
-5. Wir erstellen ein neues Thema, um einen Entwickler zu bitten, das neue Bild zu implementieren.
+1. Gehe auf unsere Website und suche nach Seiten, auf denen neue Infografiken hinzugefügt werden könnten.
+2. Stelle sicher, dass der Illustrationsstil unseren [Assets](/assets/) entspricht.
+3. Gehe zu unserem GitHub-Repository und [erstelle ein Issue](https://github.com/ethereum/ethereum-org-website/issues/new), um die Illustration vorzuschlagen.
+4. Das Design-Team wird es überprüfen.
+5. Wir erstellen ein neues Issue, um einen Entwickler zu bitten, das neue Bild zu implementieren.

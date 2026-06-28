@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState } from "react"
 import { Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
@@ -39,16 +39,10 @@ export type ButtonDropdownProps = {
 
 const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
   const [selectedItem, setSelectedItem] = useState(list.text)
+
   const handleClick = (item: ListItem, idx: number) => {
-    const { matomo, callback } = item
-
-    if (matomo) {
-      trackCustomEvent(matomo)
-    }
-
-    if (callback) {
-      callback(idx)
-    }
+    if (item.matomo) trackCustomEvent(item.matomo)
+    item.callback?.(idx)
     setSelectedItem(item.text)
   }
 
@@ -57,47 +51,38 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
+          aria-label={list.ariaLabel}
           className={cn("flex justify-between", className)}
         >
-          <Menu />
+          <Menu aria-hidden />
           <span className="flex-1 text-center">{selectedItem}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="w-[var(--radix-dropdown-menu-trigger-width)]"
+        scrollAffordance
+        className="w-(--radix-dropdown-menu-trigger-width)"
+        collisionPadding={16}
         sideOffset={8}
       >
-        {list.items.map((item, idx) => {
-          const { text, href } = item
-
-          if (href) {
-            return (
-              <DropdownMenuItem
-                key={item.text}
-                className="justify-center text-center"
-                onClick={() => handleClick(item, idx)}
-                asChild
+        {list.items.map((item, idx) => (
+          <DropdownMenuItem
+            key={item.text}
+            className="justify-center text-center"
+            onClick={() => handleClick(item, idx)}
+            asChild={!!item.href}
+          >
+            {item.href ? (
+              <BaseLink
+                href={item.href}
+                className="text-body no-underline focus-visible:outline-0"
               >
-                <BaseLink
-                  href={item.href!}
-                  className="text-body no-underline focus-visible:outline-0"
-                >
-                  <span>{text}</span>
-                </BaseLink>
-              </DropdownMenuItem>
-            )
-          }
-
-          return (
-            <DropdownMenuItem
-              key={item.text}
-              className="justify-center text-center"
-              onClick={() => handleClick(item, idx)}
-            >
-              <span>{text}</span>
-            </DropdownMenuItem>
-          )
-        })}
+                {item.text}
+              </BaseLink>
+            ) : (
+              <span>{item.text}</span>
+            )}
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   )

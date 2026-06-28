@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-16T22:13:35.203Z",
+  "englishManifestHash": "f59797ef3924",
+  "placeholderOrder": [
+    "LINK-2655ce",
+    "LINK-a21a82",
+    "LINK-e59b51",
+    "LINK-af8581",
+    "LINK-a051a9",
+    "LINK-f17ce4",
+    "LINK-da9574"
+  ],
+  "placeholderMap": {
+    "LINK-2655ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-e59b51": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2"
+      }
+    },
+    "LINK-af8581": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity"
+      }
+    },
+    "LINK-a051a9": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.teku.consensys.io/concepts/weak-subjectivity"
+      }
+    },
+    "LINK-f17ce4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/weak-subjectivity.md"
+      }
+    },
+    "LINK-da9574": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:13:35.203Z",
+      "status": "success"
+    }
+  }
+}

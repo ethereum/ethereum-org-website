@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "locale": "sw",
+  "translatedAt": "2026-06-16T15:25:21.543Z",
+  "englishManifestHash": "2ea5fe9c1b8f",
+  "placeholderOrder": [
+    "HTML-TAG-0"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T15:25:21.543Z",
+      "status": "success"
+    }
+  }
+}

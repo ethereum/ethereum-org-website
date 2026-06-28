@@ -1,0 +1,12 @@
+{
+  "before-you-read": "Sebelum Anda membaca",
+  "heading": "Ingin memahami Ethereum?",
+  "description": "Buku putih ini diterbitkan pada tahun <strong>2014</strong>, sebelum Ethereum diluncurkan. Setelah lebih dari 10 tahun pengembangan, peningkatan besar, dan pertumbuhan ekosistem, <strong>buku putih aslinya tidak lagi mencerminkan Ethereum yang sekarang</strong>.",
+  "cta-learn": "Pelajari tentang Ethereum saat ini",
+  "cta-download-pdf": "Unduh PDF asli (2014)",
+  "whats-changed": "Apa yang berubah sejak 2014?",
+  "evolution-pos": "Ethereum beralih dari Bukti Kerja (PoW) ke Bukti Kepemilikan (PoS) (The Merge, 2022)",
+  "evolution-l2": "Solusi penskalaan lapisan 2 (L2) kini memproses jutaan transaksi",
+  "evolution-usecases": "Keuangan terdesentralisasi (DeFi), NFT, dan DAO muncul sebagai kasus penggunaan utama",
+  "evolution-standards": "Standar kontrak pintar (ERC-20, ERC-721) menjadi fondasi industri"
+}

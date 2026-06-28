@@ -4,11 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function StartPageJsonLD({
   locale,
@@ -17,9 +16,7 @@ export default async function StartPageJsonLD({
   locale: Lang | undefined
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-start",
-  })
+  const t = await getTranslations("page-start")
 
   const url = normalizeUrlForJsonLd(locale, `/start/`)
 
@@ -29,24 +26,23 @@ export default async function StartPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#start` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-start-meta-title"),
         description: t("page-start-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -64,20 +60,20 @@ export default async function StartPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
-        mainEntity: { "@id": `${url}#start` },
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#start`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-start-title"),
         description: t("page-start-meta-description"),
         image: "https://ethereum.org/images/heroes/developers-hub-hero.jpg",
-        author: [ethereumCommunityOrganization],
-        publisher: ethereumFoundationOrganization,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationOrganization,
         about: {
           "@type": "Thing",
           name: "Getting Started with Ethereum",

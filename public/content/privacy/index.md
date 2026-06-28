@@ -4,13 +4,13 @@ description: Tools and techniques for protecting your privacy on Ethereum
 lang: en
 ---
 
-# Privacy on Ethereum {#introduction}
-
 Privacy is not only essential for personal safety, it's a cornerstone of freedom and a key [guarantor for decentralization](https://vitalik.eth.limo/general/2025/04/14/privacy.html). Privacy gives people the ability to express themselves, transact with others, and organize communities freely. But like all blockchains, Ethereum's public ledger makes privacy challenging.
 
 Ethereum is transparent by design. Every onchain action is visible to anyone who looks. While Ethereum offers pseudonymity by linking your activity to a [public key](/decentralized-identity/#public-key-cryptography) instead of a real-world identity, patterns of activity could be analyzed to reveal sensitive information and identify users.
 
 Building privacy-preserving tools into Ethereum can help people, organizations, and institutions interact securely while limiting unnecessary exposure. This makes the ecosystem safer and more practical for a wider range of use cases.
+
+<VideoWatch slug="privacy-is-existential" />
 
 ## Privacy for writes {#privacy-of-writes}
 
@@ -93,5 +93,5 @@ Some projects exploring privacy for proving include [Client Side Proving](https:
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), an Ethereum Foundation research and development lab focused on privacy for the ecosystem
 - [Web3PrivacyNow](https://web3privacy.info/), a network of people, projects, and aligned organizations who protect and advance human rights online
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), an Ethereum wallet rating site aiming to provide a comprehensive list of wallets, their functionality, practices, and support for certain standards.
-- [Zk-kit](https://zkkit.pse.dev/): A set of libraries (algorithms, utility functions, and data structures) that can be reused in different projects and zero-knowledge protocols.
+- [Zk-kit](https://zkkit.org/): A set of libraries (algorithms, utility functions, and data structures) that can be reused in different projects and zero-knowledge protocols.
 - [Privacy Apps](/apps/categories/privacy/) - Discover a list of curated Privacy applications that run on Ethereum.

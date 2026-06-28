@@ -4,13 +4,13 @@ metaTitle: What are NFTs? | Benefits and use
 description: An overview of NFTs on Ethereum
 lang: en
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: An Eth logo being displayed via hologram.
-summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
-summaryPoint2: NFTs are giving more power to content creators than ever before.
-summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
+summaryPoints:
+  - "A way to represent anything unique as an Ethereum-based asset."
+  - "NFTs are giving more power to content creators than ever before."
+  - "Powered by smart contracts on the Ethereum blockchain."
 ---
 
 ## What are NFTs? {#what-are-nfts}
@@ -19,7 +19,7 @@ NFTs are tokens that are **individually unique**. Each NFT has different propert
 
 The uniqueness of each NFT enables tokenization of things like art, collectibles, or even real estate, where one specific unique NFT represents some specific unique real world or digital item. Ownership of an asset is publicly verifiable on Ethereum [blockchain](/glossary/#blockchain).
 
-<YouTube id="Xdkkux6OxfM" />
+<VideoWatch slug="learn-nfts-and-defi" />
 
 ## The internet of assets {#internet-of-assets}
 
@@ -55,7 +55,7 @@ NFTs are used for many things, including:
 
 Maybe you are an artist that wants to share their work using NFTs, without losing control and sacrificing your profits to intermediaries. You can create a new contract and specify the number of NFTs, their properties and a link to some specific artwork. As the artist, **you can program into the smart contract the royalties** you should be paid (e.g., transfer 5% of the sale price to the contract owner each time an NFT is transferred). You can also always prove that you created the NFTs because you own the [wallet](/glossary/#wallet) that deployed the contract. Your buyers can easily prove that they own an **authentic NFT** from your collection because their wallet [address](/glossary/#address) is associated with a token in your smart contract. They can use it across the Ethereum ecosystem, confident in its authenticity.
 
-<Alert variant="update" className="mt-8">
+<Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
@@ -67,7 +67,7 @@ Maybe you are an artist that wants to share their work using NFTs, without losin
 
 Or consider a ticket to a sporting event. Just as an **organizer of an event can choose how many tickets to sell**, the creator of an NFT can decide how many replicas exist. Sometimes these are exact replicas, such as 5000 General Admission tickets. Sometimes several are minted that are very similar, but each slightly different, such as a ticket with an assigned seat. These can be bought and sold peer-to-peer without paying ticket handlers and the buyer always with assurance of the ticket authenticity by checking the contract address.
 
-On ethereum.org, **NFTs are used to demonstrate that people have meaningfully contributed** to our Github repository (programmed the website, written or modified an article...), translated our content, or attended our community calls, and we've even got our own NFT domain name. If you contribute to ethereum.org, you can claim a [POAP](/glossary/#poap) NFT. Some crypto meetups have used POAPs as tickets. [More on contributing](/contributing/#poap). You can also explore our [ethereum.org collectibles](/collectibles/) page to see community achievement NFTs.
+On ethereum.org, **NFTs are used to demonstrate that people have meaningfully contributed** to our GitHub repository (programmed the website, written or modified an article...), translated our content, or attended our community calls, and we've even got our own NFT domain name. If you contribute to ethereum.org, you can claim a [POAP](/glossary/#poap) NFT. Some crypto meetups have used POAPs as tickets. [More on contributing](/contributing/#poap). You can also explore our [ethereum.org collectibles](/collectibles/) page to see community achievement NFTs.
 
 ![ethereum.org POAP](./poap.png)
 
@@ -108,7 +108,7 @@ Security issues relating to NFTs are most often related to phishing scams, smart
 - [Blockscout NFT tracker](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [ERC-721 token standard](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 token standard](/developers/docs/standards/tokens/erc-1155/)
-- [Popular NFT Apps and Tools](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+- [NFT Standards wiki](https://nft-standards.gitbook.io/nft-standards-wiki)
 
 ## Other resources {#other-resources}
 

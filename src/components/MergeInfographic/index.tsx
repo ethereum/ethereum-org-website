@@ -56,7 +56,7 @@ const MergeInfographic = () => {
     >
       <div>
         <HStack
-          className="absolute left-[2%] top-[40%] z-[2] h-[18%] max-h-[2em] w-[81%] justify-center text-center text-[0.625em] leading-[1em] text-background sm:text-[0.875em] md:text-[1.125em] lg:text-[1.375em]"
+          className="absolute top-[40%] left-[2%] z-[2] h-[18%] max-h-[2em] w-[81%] justify-center text-center text-[0.625em] leading-[1em] text-background sm:text-[0.875em] md:text-[1.125em] lg:text-[1.375em]"
           aria-hidden="true"
         >
           <Translation id="page-upgrades:page-upgrades-merge-infographic-el" />

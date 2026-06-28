@@ -1,155 +1,154 @@
 ---
 title: JSON-RPC API
-description: "Ethereum istemcileri için durum bilgisi olmayan, hafif bir uzaktan prosedür çağrısı (RPC) protokolü."
+description: "Ethereum istemcileri için durumsuz, hafif bir uzak prosedür çağrısı (RPC) protokolü."
 lang: tr
 ---
 
-Bir yazılım uygulamasının Ethereum blok zinciriyle etkileşimde bulunabilmesi - blok zincir verilerini okuma ya da ağa işlemler gönderme yoluyla - bir Ethereum düğümüne bağlanmasını gerektirmektedir.
+Bir yazılım uygulamasının [Ethereum](/) blokzinciri ile etkileşime girmesi için - blokzincir verilerini okuyarak veya ağa işlemler göndererek - bir Ethereum düğümüne bağlanması gerekir.
 
-Bu amaçla her [Ethereum istemcisi](/developers/docs/nodes-and-clients/#execution-clients), belirli düğüm veya istemci uygulamasından bağımsız olarak uygulamaların güvenebileceği tek tip bir metotlar kümesi olması için bir [JSON-RPC spesifikasyonu](https://github.com/ethereum/execution-apis) uygular.
+Bu amaçla, her [Ethereum istemcisi](/developers/docs/nodes-and-clients/#execution-clients) bir [JSON-RPC spesifikasyonunu](https://github.com/ethereum/execution-apis) uygular, böylece belirli düğüm veya istemci uygulamasından bağımsız olarak uygulamaların güvenebileceği tek tip bir yöntemler kümesi bulunur.
 
-[JSON-RPC](https://www.jsonrpc.org/specification), durum bilgisi olmayan, hafif bir uzaktan yordam çağrısı (RPC) protokolüdür. Birkaç veri yapısını ve bunların işlenmesiyle ilgili kuralları tanımlar. Kavramların aynı süreç içinde, soketler üzerinden, HTTP üzerinden veya birçok farklı mesaj geçiş ortamında kullanılabilir olması açısından aktarımdan bağımsızdır. Veri formatı olarak JSON (RFC 4627) kullanır.
+[JSON-RPC](https://www.jsonrpc.org/specification), durumsuz, hafif bir uzak prosedür çağrısı (RPC) protokolüdür. Çeşitli veri yapılarını ve bunların işlenmesiyle ilgili kuralları tanımlar. Kavramların aynı süreç içinde, soketler üzerinden, HTTP üzerinden veya birçok farklı mesaj iletme ortamında kullanılabilmesi bakımından taşıma bağımsızdır. Veri formatı olarak JSON (RFC 4627) kullanır.
 
 ## İstemci uygulamaları {#client-implementations}
 
-Ethereum istemcilerinin her biri, JSON-RPC şartnamesini uygularken farklı programlama dilleri kullanabilir. Belirli programlama dilleriyle ilgili daha fazla ayrıntı için bireysel [istemci belgelerine](/developers/docs/nodes-and-clients/#execution-clients) bakın. En güncel API destek bilgileri için her istemcinin belgelerini kontrol etmenizi öneririz.
+Ethereum istemcilerinin her biri, JSON-RPC spesifikasyonunu uygularken farklı programlama dilleri kullanabilir. Belirli programlama dilleriyle ilgili daha fazla ayrıntı için ilgili [istemci belgelerine](/developers/docs/nodes-and-clients/#execution-clients) bakın. En güncel API destek bilgileri için her bir istemcinin belgelerini kontrol etmenizi öneririz.
 
-## Kolaylaştırıcı Kütüphaneler {#convenience-libraries}
+## Yardımcı Kütüphaneler {#convenience-libraries}
 
-JSON-RPC API aracılığıyla Ethereum istemcileriyle doğrudan etkileşim kurmayı seçebilseniz de, dapp geliştiricileri için genellikle daha kolay seçenekler vardır. JSON-RPC API'sinin üzerinde sarmalayıcılar sağlamak için birçok [JavaScript](/developers/docs/apis/javascript/#available-libraries) ve [arka uç API](/developers/docs/apis/backend/#available-libraries) kütüphanesi mevcuttur. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON RPC taleplerini (arka planda) başlatmak için tercih ettikleri programlama dilinde sezgisel ve tek satırlı yöntemler yazabilirler.
+Ethereum istemcileriyle doğrudan JSON-RPC API aracılığıyla etkileşime girmeyi seçebilseniz de, merkeziyetsiz uygulama (dapp) geliştiricileri için genellikle daha kolay seçenekler vardır. JSON-RPC API'sinin üzerinde sarmalayıcılar sağlamak için birçok [JavaScript](/developers/docs/apis/javascript/#available-libraries) ve [arka uç API](/developers/docs/apis/backend/#available-libraries) kütüphanesi mevcuttur. Bu kütüphaneler sayesinde geliştiriciler, Ethereum ile etkileşime giren JSON-RPC isteklerini (arka planda) başlatmak için seçtikleri programlama dilinde sezgisel, tek satırlık metotlar yazabilirler.
 
-## Mutabakat istemcisi API'leri {#consensus-clients}
+## Fikir birliği istemcisi API'leri {#consensus-clients}
 
-Bu sayfa, özellikle Ethereum yürütüm istemcileri tarafından kullanılan JSON-RPC API'sı ile ilgilidir. Ancak, fikir birliği istemcileri de kullanıcıların bir düğümden bilgi sorgulamasına, İşaret bloklarını, İşaret durumunu ve mutabakat ile ilgili diğer bilgileri direkt talep etmesine olanak veren bir RPC API'sına sahiptir. Bu API, [Beacon API web sayfasında](https://ethereum.github.io/beacon-APIs/#/) belgelenmiştir.
+Bu sayfa temel olarak Ethereum yürütme istemcileri tarafından kullanılan JSON-RPC API'sini ele alır. Ancak, fikir birliği istemcilerinin de kullanıcıların doğrudan bir düğümden düğüm hakkında bilgi sorgulamasına, Beacon bloklarını, Beacon durumunu ve fikir birliği ile ilgili diğer bilgileri talep etmesine olanak tanıyan bir RPC API'si vardır. Bu API, [Beacon API web sayfasında](https://ethereum.github.io/beacon-APIs/#/) belgelenmiştir.
 
-Bir düğüm içinde müşteri veya istemci arası iletişim için dahili bir API da kullanılır; - yani, bu fikir birliği istemcisinin ve yürütüm istemcisinin veri takas etmesini sağlar. Buna 'Motor API'si' denir ve teknik özellikler [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) üzerinde mevcuttur.
+Bir düğüm içindeki istemciler arası iletişim için de dahili bir API kullanılır - yani, fikir birliği istemcisi ile yürütme istemcisinin veri takası yapmasını sağlar. Buna 'Engine API' adı verilir ve spesifikasyonları [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) üzerinde mevcuttur.
 
 ## Yürütme istemcisi spesifikasyonu {#spec}
 
-[GitHub'daki tam JSON-RPC API spesifikasyonunu okuyun](https://github.com/ethereum/execution-apis). Bu API, [Yürütme API'si web sayfasında](https://ethereum.github.io/execution-apis/) belgelenmiştir ve mevcut tüm yöntemleri denemek için bir Denetçi içerir.
+[GitHub'daki tam JSON-RPC API spesifikasyonunu okuyun](https://github.com/ethereum/execution-apis). Bu API, [Yürütme API'si web sayfasında](https://ethereum.github.io/execution-apis/) belgelenmiştir ve mevcut tüm yöntemleri denemek için bir Denetleyici içerir.
 
 ## Kurallar {#conventions}
 
-### Hex değer kodlaması {#hex-encoding}
+### Hex değeri kodlaması {#hex-encoding}
 
-JSON üzerinden iki temel veri türü geçirilir: biçimlendirilmemiş bayt dizileri ve miktarlar. Her ikisi de bir on altılı kodlamayla geçirilir, ancak biçimlendirme için farklı gereksinimler vardır.
+JSON üzerinden iki temel veri türü aktarılır: biçimlendirilmemiş bayt dizileri ve nicelikler. Her ikisi de hex kodlaması ile aktarılır ancak biçimlendirme için farklı gereksinimlere sahiptir.
 
-#### Miktarlar {#quantities-encoding}
+#### Nicelikler {#quantities-encoding}
 
-Miktarları (tamsayılar, sayılar) kodlarken: on altılı olarak kodlayın, önek "0x", en kompakt gösterim (küçük istisna: sıfır "0x0" olarak gösterilmelidir).
+Nicelikleri (tam sayılar, sayılar) kodlarken: hex olarak kodlayın, "0x" ön ekini ekleyin, en kompakt gösterimi kullanın (küçük bir istisna: sıfır "0x0" olarak temsil edilmelidir).
 
 İşte bazı örnekler:
 
-- 0x41 (ondalık olarak 65)
-- 0x400 (ondalık olarak 1024)
-- YANLIŞ: 0x (her zaman en az bir rakama sahip olmalıdır - sıfır "0x0" dır)
-- YANLIŞ: 0x0400 (baştaki sıfırlara izin verilmez)
-- YANLIŞ: ff (0x ön eki olmalıdır)
+- 0x41 (ondalık sistemde 65)
+- 0x400 (ondalık sistemde 1024)
+- YANLIŞ: 0x (her zaman en az bir basamağa sahip olmalıdır - sıfır "0x0"dır)
+- YANLIŞ: 0x0400 (başta sıfır bulunmasına izin verilmez)
+- YANLIŞ: ff (0x ön eki almalıdır)
 
 ### Biçimlendirilmemiş veri {#unformatted-data-encoding}
 
-Biçimlendirilmemiş verileri kodlarken (bayt dizileri, hesap adresleri, karmalar, bayt kodu dizileri): ön ek "0x" ile, bayt başına iki on altılık basamak ve on altılı olarak kodlayın.
+Biçimlendirilmemiş verileri (bayt dizileri, hesap adresleri, hash'ler, baytkod dizileri) kodlarken: hex olarak kodlayın, "0x" ön ekini ekleyin, her bayt için iki hex basamağı kullanın.
 
 İşte bazı örnekler:
 
-- 0x41 (size 1, "A")
+- 0x41 (boyut 1, "A")
 - 0x004200 (boyut 3, "0B0")
-- 0x (size 0, "")
-- YANLIŞ: 0xf0f0f (hane sayısı çift olmalıdır)
-- YANLIŞ: 004200 (0x ön eki olmalıdır)
+- 0x (boyut 0, "")
+- YANLIŞ: 0xf0f0f (çift sayıda basamak olmalıdır)
+- YANLIŞ: 004200 (0x ön eki almalıdır)
 
 ### Blok parametresi {#block-parameter}
 
-Aşağıdaki metotların bir blok parametresi vardır:
+Aşağıdaki metotlar bir blok parametresine sahiptir:
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getCode](#eth_getcode)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_call](#eth_call)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getCode](#eth-getcode)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_call](#eth-call)
 
 Ethereum'un durumunu sorgulayan istekler yapıldığında, sağlanan blok parametresi bloğun yüksekliğini belirler.
 
-Blok parametresi için aşağıdaki seçenekler mevcuttur:
+Blok parametresi için aşağıdaki seçenekler mümkündür:
 
-- `HEX Dizesi` - bir tam sayı blok numarası
-- `"earliest" Dizesi` - en erken/başlangıç bloğu için
-- `"latest" Dizesi` - en son önerilen blok için
-- `"safe" Dizesi` - en son güvenli baş blok için
-- `"finalized" Dizesi` - en son kesinleşmiş blok için
-- `"pending" Dizesi` - bekleyen durum/işlemler için
+- `HEX String` - bir tam sayı blok numarası
+- `String "earliest"` en eski/başlangıç bloğu için
+- `String "latest"` - önerilen en son blok için
+- `String "safe"` - en son güvenli baş blok için
+- `String "finalized"` - en son kesinleşmiş blok için
+- `String "pending"` - bekleyen durum/işlemler için
 
-## Örnekler
+## Örnekler {#examples}
 
-Bu sayfada, komut satırı aracı olan [curl](https://curl.se) kullanarak bireysel JSON_RPC API uç noktalarının nasıl kullanılacağına dair örnekler sunuyoruz. Bu bireysel uç nokta örnekleri, aşağıdaki [Curl örnekleri](#curl-examples) bölümünde bulunmaktadır. Sayfanın ilerleyen bölümlerinde, bir Geth düğümü, JSON_RPC API'si ve curl kullanarak bir akıllı sözleşmeyi derlemek ve dağıtmak için bir [uçtan uca örnek](#usage-example) de sunuyoruz.
+Bu sayfada, komut satırı aracı [curl](https://curl.se) kullanarak bireysel JSON_RPC API uç noktalarının nasıl kullanılacağına dair örnekler sunuyoruz. Bu bireysel uç nokta örnekleri aşağıdaki [Curl örnekleri](#curl-examples) bölümünde bulunabilir. Sayfanın ilerleyen kısımlarında, bir Geth düğümü, JSON_RPC API ve curl kullanarak bir akıllı sözleşmeyi derlemek ve dağıtmak için [uçtan uca bir örnek](#usage-example) de sunuyoruz.
 
 ## Curl örnekleri {#curl-examples}
 
-Bir Ethereum düğümüne [curl](https://curl.se) istekleri yaparak JSON_RPC API'sini kullanma örnekleri aşağıda verilmiştir. Her örnek
-belirli uç noktanın bir tanımını, parametrelerini, dönüş türünü ve nasıl kullanılması gerektiğine dair çalışılmış bir örneği içerir.
+Bir Ethereum düğümüne [curl](https://curl.se) istekleri yaparak JSON_RPC API'sini kullanma örnekleri aşağıda sunulmuştur. Her örnek; ilgili uç noktanın bir açıklamasını, parametrelerini, dönüş türünü ve nasıl kullanılması gerektiğine dair uygulamalı bir örneği içerir.
 
-Kıvrılma istekleri, içerik türüyle ilgili bir hata mesajı döndürebilir. Bunun nedeni, `--data` seçeneğinin içerik türünü `application/x-www-form-urlencoded` olarak ayarlamasıdır. Düğümünüz bu konuda şikayet ederse, çağrının başına `-H "Content-Type: application/json"` yerleştirerek başlığı manuel olarak ayarlayın. Örnekler ayrıca curl'e verilen son argüman olması gereken URL/IP ve bağlantı noktası kombinasyonunu içermez (örn. `127.0.0.1:8545`). Bu ek verileri içeren eksiksiz bir kıvrılma isteği aşağıdaki formu alır:
+Curl istekleri, içerik türüyle ilgili bir hata mesajı döndürebilir. Bunun nedeni, `--data` seçeneğinin içerik türünü `application/x-www-form-urlencoded` olarak ayarlamasıdır. Düğümünüz bu konuda hata verirse, çağrının başına `-H "Content-Type: application/json"` yerleştirerek başlığı manuel olarak ayarlayın. Örnekler ayrıca, curl'e verilen son argüman olması gereken URL/IP ve port kombinasyonunu (örn. `127.0.0.1:8545`) içermez. Bu ek verileri içeren eksiksiz bir curl isteği aşağıdaki biçimi alır:
 
 ```shell
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## Gossip, Durum, Geçmiş {#gossip-state-history}
+## Dedikodu, Durum, Geçmiş {#gossip-state-history}
 
-Birkaç temel JSON-RPC metodu, Ethereum ağından veri gerektirir ve üç ana kategoriye ayrılır: _Gossip, Durum ve Geçmiş_. Her bir yönteme atlamak için bu bölümlerdeki bağlantıları kullanın veya tüm yöntemler listesini keşfetmek için içindekiler tablosunu kullanın.
+Birkaç temel JSON-RPC yöntemi, Ethereum ağından veri gerektirir ve düzgün bir şekilde üç ana kategoriye ayrılır: _Dedikodu, Durum ve Geçmiş_. Her bir yönteme atlamak için bu bölümlerdeki bağlantıları kullanın veya yöntemlerin tam listesini keşfetmek için içindekiler tablosunu kullanın.
 
-### Gossip Metotları {#gossip-methods}
+### Dedikodu Yöntemleri {#gossip-methods}
 
-> Bu yöntemler zincirin başını izler. Bu, işlemlerin ağ etrafında nasıl dolaştığını, blokların içinde nasıl yer bulduğunu ve istemcilerin yeni bloklar hakkında nasıl bilgi sahibi olduğunu gösterir.
+> Bu yöntemler zincirin başını takip eder. İşlemler ağda bu şekilde dolaşır, bloklardaki yerlerini bulur ve istemciler yeni bloklardan bu şekilde haberdar olur.
 
-- [eth_blockNumber](#eth_blocknumber)
-- [eth_sendRawTransaction](#eth_sendrawtransaction)
+- [eth_blockNumber](#eth-blocknumber)
+- [eth_sendRawTransaction](#eth-sendrawtransaction)
 
-### Durum Metotları {#state_methods}
+### Durum Yöntemleri {#state-methods}
 
-> Depolanan tüm verinin mevcut durumunu raporlayan yöntemlerdir. "Durum" RAM'nin paylaşımlı, büyük tek bir parçası gibidir ve hesap bakiyelerini, sözleşme verilerini ve gaz tahminlerini içerir.
+> Depolanan tüm verilerin mevcut durumunu bildiren yöntemler. "Durum", paylaşılan büyük bir RAM parçası gibidir ve hesap bakiyelerini, sözleşme verilerini ve gaz tahminlerini içerir.
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getCode](#eth_getcode)
-- [eth_call](#eth_call)
-- [eth_estimateGas](#eth_estimategas)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getCode](#eth-getcode)
+- [eth_call](#eth-call)
+- [eth_estimateGas](#eth-estimategas)
 
-### Geçmiş Metotları {#history_methods}
+### Geçmiş Yöntemleri {#history-methods}
 
-> Başlangıça kadar her blokun geçmiş kayıtlarını alır. Bu tek büyük sadece ekleme yapılabilen bir dosya gibidir ve tüm blok başlıklarını, blok gövdelerini, amca bloklarını ve işlem makbuzlarını içerir.
+> Başlangıç bloğuna kadar her bloğun geçmiş kayıtlarını getirir. Bu, yalnızca ekleme yapılabilen büyük bir dosya gibidir ve tüm blok başlıklarını, blok gövdelerini, amca blokları ve işlem makbuzlarını içerir.
 
-- [eth_getBlockTransactionCountByHash](#eth_getblocktransactioncountbyhash)
-- [eth_getBlockTransactionCountByNumber](#eth_getblocktransactioncountbynumber)
-- [eth_getUncleCountByBlockHash](#eth_getunclecountbyblockhash)
-- [eth_getUncleCountByBlockNumber](#eth_getunclecountbyblocknumber)
-- [eth_getBlockByHash](#eth_getblockbyhash)
-- [eth_getBlockByNumber](#eth_getblockbynumber)
-- [eth_getTransactionByHash](#eth_gettransactionbyhash)
-- [eth_getTransactionByBlockHashAndIndex](#eth_gettransactionbyblockhashandindex)
-- [eth_getTransactionByBlockNumberAndIndex](#eth_gettransactionbyblocknumberandindex)
-- [eth_getTransactionReceipt](#eth_gettransactionreceipt)
-- [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
-- [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+- [eth_getBlockTransactionCountByHash](#eth-getblocktransactioncountbyhash)
+- [eth_getBlockTransactionCountByNumber](#eth-getblocktransactioncountbynumber)
+- [eth_getUncleCountByBlockHash](#eth-getunclecountbyblockhash)
+- [eth_getUncleCountByBlockNumber](#eth-getunclecountbyblocknumber)
+- [eth_getBlockByHash](#eth-getblockbyhash)
+- [eth_getBlockByNumber](#eth-getblockbynumber)
+- [eth_getTransactionByHash](#eth-gettransactionbyhash)
+- [eth_getTransactionByBlockHashAndIndex](#eth-gettransactionbyblockhashandindex)
+- [eth_getTransactionByBlockNumberAndIndex](#eth-gettransactionbyblocknumberandindex)
+- [eth_getTransactionReceipt](#eth-gettransactionreceipt)
+- [eth_getUncleByBlockHashAndIndex](#eth-getunclebyblockhashandindex)
+- [eth_getUncleByBlockNumberAndIndex](#eth-getunclebyblocknumberandindex)
 
-## JSON-RPC API Deneme Alanı
+## JSON-RPC API Oyun Alanı {#json-rpc-api-playground}
 
-API metotlarını keşfetmek ve denemek için [oyun alanı aracını](https://ethereum-json-rpc.com) kullanabilirsiniz. Ayrıca, çeşitli düğüm sağlayıcıları tarafından hangi yöntemlerin ve ağların desteklendiğini de gösterir.
+API metotlarını keşfetmek ve denemek için [oyun alanı aracını](https://ethereum-json-rpc.com) kullanabilirsiniz. Ayrıca çeşitli düğüm sağlayıcıları tarafından hangi metotların ve ağların desteklendiğini de gösterir.
 
 ## JSON-RPC API Metotları {#json-rpc-methods}
 
-### web3_clientVersion {#web3_clientversion}
+### web3_clientVersion {#web3-clientversion}
 
-Geçerli istemci sürümünü döndürür.
+Mevcut istemci sürümünü döndürür.
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
-**Döndürülenler**
+**Dönüşler**
 
-`Dize` - Mevcut istemci sürümü
+`String` - Mevcut istemci sürümü
 
 **Örnek**
 
@@ -164,13 +163,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 {#web3_sha3}
+### web3_sha3 {#web3-sha3}
 
-Verilen verinin Keccak-256'sını (_standartlaştırılmış SHA3-256'yı değil_) döndürür.
+Verilen verinin Keccak-256'sını (standartlaştırılmış SHA3-256 _değil_) döndürür.
 
 **Parametreler**
 
-1. `VERİ` - SHA3 karmasına dönüştürülecek veri
+1. `DATA` - Bir SHA3 hash'ine dönüştürülecek veri
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
@@ -178,7 +177,7 @@ params: ["0x68656c6c6f20776f726c64"]
 
 **Döndürülenler**
 
-`VERİ` - Verilen dizenin SHA3 sonucu.
+`DATA` - Verilen dizenin SHA3 sonucu.
 
 **Örnek**
 
@@ -193,19 +192,19 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version {#net_version}
+### net_version {#net-version}
 
-Geçerli ağ kimliğini döndürür.
+Mevcut ağ kimliğini döndürür.
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
 **Döndürülenler**
 
-`Dize` - Mevcut ağ kimliği.
+`String` - Mevcut ağ kimliği.
 
-Mevcut ağ kimliklerinin tam listesi [chainlist.org](https://chainlist.org) adresinde mevcuttur. Bazı yaygın olanları:
+Mevcut ağ kimliklerinin tam listesi [chainlist.org](https://chainlist.org) adresinde bulunabilir. Yaygın olanlardan bazıları şunlardır:
 
 - `1`: Ethereum Ana Ağı
 - `11155111`: Sepolia test ağı
@@ -224,13 +223,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_listening}
+### net_listening {#net-listening}
 
-İstemci ağ bağlantılarını aktif olarak dinliyorsa `true` döndürür.
+İstemci ağ bağlantıları için aktif olarak dinliyorsa `true` döndürür.
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
 **Döndürülenler**
 
@@ -249,17 +248,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_peercount}
+### net_peerCount {#net-peercount}
 
 Şu anda istemciye bağlı olan eşlerin sayısını döndürür.
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
-**Döndürülenler**
+**Dönüş Değeri**
 
-`MİKTAR` - bağlı olan eşlerin sayısının tam sayısı.
+`QUANTITY` - bağlı eşlerin sayısını belirten tam sayı.
 
 **Örnek**
 
@@ -274,17 +273,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 }
 ```
 
-### eth_protocolVersion {#eth_protocolversion}
+### eth_protocolVersion {#eth-protocolversion}
 
-Geçerli Ethereum protokol sürümünü döndürür. Bu metodun [Geth'te mevcut olmadığını](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924) unutmayın.
+Mevcut Ethereum protokol sürümünü döndürür. Bu metodun [Geth'te mevcut olmadığını](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924) unutmayın.
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
 **Döndürülenler**
 
-`Dize` - Mevcut Ethereum protokol sürümü
+`String` - Mevcut Ethereum protokol sürümü
 
 **Örnek**
 
@@ -299,9 +298,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing {#eth_syncing}
+### eth_syncing {#eth-syncing}
 
-Senkronizasyon durumu hakkında veri içeren bir nesne veya `false` döndürür.
+Eşzamanlama durumu hakkında veriler içeren bir nesne veya `false` döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_syncing">
   Uç noktayı oyun alanında deneyin
@@ -309,17 +308,17 @@ Senkronizasyon durumu hakkında veri içeren bir nesne veya `false` döndürür.
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
 **Döndürülenler**
 
-Kesin dönüş verileri, istemci uygulamaları arasında farklılık gösterir. Düğüm senkronize olmadığında tüm istemciler `False` döndürür ve tüm istemciler aşağıdaki alanları döndürür.
+Kesin dönüş verileri istemci uygulamaları arasında değişiklik gösterir. Düğüm eşzamanlama yapmadığında tüm istemciler `False` döndürür ve tüm istemciler aşağıdaki alanları döndürür.
 
-`Nesne|Boolean`, Senkronizasyon durumu verileri içeren bir nesne veya senkronize olmadığında `FALSE`:
+`Object|Boolean`, Eşzamanlama durumu verilerini içeren bir nesne veya eşzamanlama yapılmadığında `FALSE`:
 
-- `startingBlock`: `MİKTAR` - İçe aktarmanın başladığı blok (yalnızca senkronizasyon kendi baş bloğuna ulaştıktan sonra sıfırlanır)
-- `currentBlock`: `MİKTAR` - Mevcut blok, eth_blockNumber ile aynı
-- `highestBlock`: `MİKTAR` - Tahmini en yüksek blok
+- `startingBlock`: `QUANTITY` - İçe aktarmanın başladığı blok (yalnızca eşzamanlama zincir ucuna ulaştıktan sonra sıfırlanacaktır)
+- `currentBlock`: `QUANTITY` - Mevcut blok, eth_blockNumber ile aynı
+- `highestBlock`: `QUANTITY` - Tahmini en yüksek blok
 
 Ancak, bireysel istemciler ek veriler de sağlayabilir. Örneğin Geth aşağıdakileri döndürür:
 
@@ -346,7 +345,7 @@ Ancak, bireysel istemciler ek veriler de sağlayabilir. Örneğin Geth aşağıd
 }
 ```
 
-Oysa Besu bunları döndürür:
+Besu ise şunları döndürür:
 
 ```json
 {
@@ -362,7 +361,7 @@ Oysa Besu bunları döndürür:
 }
 ```
 
-Daha fazla ayrıntı için bakmak istediğiniz spesifik istemcinin dokümanlarına göz atın.
+Daha fazla ayrıntı için kendi istemcinizin belgelerine başvurun.
 
 **Örnek**
 
@@ -379,7 +378,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
     highestBlock: '0x454'
   }
 }
-// Veya senkronize değilken
+// Veya eşzamanlama yapılmadığında
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -387,23 +386,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase {#eth_coinbase}
+### eth_coinbase {#eth-coinbase}
 
-İstemci para tabanı adresini döndürür.
+İstemci coinbase adresini döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_coinbase">
   Uç noktayı oyun alanında deneyin
 </ButtonLink>
 
-> **Not:** Bu metot **v1.14.0** itibarıyla kullanımdan kaldırılmıştır ve artık desteklenmemektedir. Bu metodu kullanmaya çalışmak "Metot desteklenmiyor" hatasıyla sonuçlanacaktır.
+> **Not:** Bu metot **v1.14.0** itibarıyla kullanımdan kaldırılmıştır ve artık desteklenmemektedir. Bu metodu kullanmaya çalışmak "Method not supported" hatasıyla sonuçlanacaktır.
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
 **Döndürülenler**
 
-`VERİ`, 20 bayt - mevcut coinbase adresi.
+`DATA`, 20 bayt - mevcut coinbase adresi.
 
 **Örnek**
 
@@ -418,9 +417,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId {#eth_chainId}
+### eth_chainId {#eth-chainid}
 
-Tekrardan korumalı işlemleri imzalamak için kullanılan zincir kimliğini döndürür.
+Tekrar oynatmaya karşı korumalı işlemleri imzalamak için kullanılan zincir kimliğini döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_chainId">
   Uç noktayı oyun alanında deneyin
@@ -428,11 +427,11 @@ Tekrardan korumalı işlemleri imzalamak için kullanılan zincir kimliğini dö
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
 **Döndürülenler**
 
-`chainId`, mevcut zincir kimliğinin tam sayısını temsil eden bir dize olarak onaltılık değer.
+`chainId`, mevcut zincir kimliğinin tam sayısını temsil eden dize biçiminde onaltılık değer.
 
 **Örnek**
 
@@ -447,9 +446,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining {#eth_mining}
+### eth_mining {#eth-mining}
 
-İstemci aktif olarak yeni bloklar çıkarıyorsa `true` döndürür. Bu, yalnızca iş ispatı ağları için `true` döndürebilir ve [Birleşim](/roadmap/merge/) sonrasında bazı istemcilerde mevcut olmayabilir.
+İstemci aktif olarak yeni bloklar için madencilik yapıyorsa `true` döndürür. Bu, yalnızca İş Kanıtı (PoW) ağları için `true` döndürebilir ve [Birleşme](/roadmap/merge/)'den bu yana bazı istemcilerde kullanılamayabilir.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_mining">
   Uç noktayı oyun alanında deneyin
@@ -457,9 +456,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
-**Döndürülenler**
+**Dönen Değerler**
 
 `Boolean` - istemci madencilik yapıyorsa `true`, aksi takdirde `false` döndürür.
 
@@ -476,9 +475,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate {#eth_hashrate}
+### eth_hashrate {#eth-hashrate}
 
-Düğümün madencilik yaptığı saniye başına karma sayısını döndürür. Bu, yalnızca iş ispatı ağları için `true` döndürebilir ve [Birleşim](/roadmap/merge/) sonrasında bazı istemcilerde mevcut olmayabilir.
+Düğümün madencilik yaptığı saniye başına hash sayısını döndürür. Bu, yalnızca İş Kanıtı (PoW) ağları için `true` döndürebilir ve [Birleşme](/roadmap/merge/)'den bu yana bazı istemcilerde mevcut olmayabilir.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_hashrate">
   Uç noktayı oyun alanında deneyin
@@ -486,11 +485,11 @@ Düğümün madencilik yaptığı saniye başına karma sayısını döndürür.
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
 **Döndürülenler**
 
-`MİKTAR` - saniye başına karma sayısı.
+`QUANTITY` - saniye başına hash sayısı.
 
 **Örnek**
 
@@ -505,9 +504,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice {#eth_gasprice}
+### eth_gasPrice {#eth-gasprice}
 
-Wei cinsinden gaz başına mevcut fiyatın bir tahminini döndürür. Örneğin, Besu istemcisi son 100 bloğu inceler ve varsayılan medyan gaz birim fiyatını döndürür.
+Wei cinsinden gaz başına mevcut fiyatın bir tahminini döndürür. Örneğin, Besu istemcisi varsayılan olarak son 100 bloğu inceler ve medyan gaz birim fiyatını döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
   Uç noktayı oyun alanında deneyin
@@ -515,11 +514,11 @@ Wei cinsinden gaz başına mevcut fiyatın bir tahminini döndürür. Örneğin,
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
 **Döndürülenler**
 
-`MİKTAR` - wei cinsinden mevcut gaz fiyatının tam sayısı.
+`QUANTITY` - Wei cinsinden mevcut gas fiyatının tam sayısı.
 
 **Örnek**
 
@@ -534,9 +533,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
-### eth_accounts {#eth_accounts}
+### eth_accounts {#eth-accounts}
 
-İstemcinin sahip olduğu adreslerin listesini döndürür.
+İstemciye ait adreslerin bir listesini döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_accounts">
   Uç noktayı oyun alanında deneyin
@@ -544,11 +543,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
 **Döndürülenler**
 
-`VERİ Dizisi`, 20 Bayt - istemcinin sahip olduğu adresler.
+`Array of DATA`, 20 Bayt - istemciye ait adresler.
 
 **Örnek**
 
@@ -563,7 +562,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber {#eth_blocknumber}
+### eth_blockNumber {#eth-blocknumber}
 
 En son bloğun numarasını döndürür.
 
@@ -573,11 +572,11 @@ En son bloğun numarasını döndürür.
 
 **Parametreler**
 
-Hiçbiri
+Yok
 
 **Döndürülenler**
 
-`MİKTAR` - istemcinin bulunduğu mevcut blok numarasının tam sayısı.
+`QUANTITY` - istemcinin bulunduğu mevcut blok numarasını ifade eden tam sayı.
 
 **Örnek**
 
@@ -592,18 +591,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 }
 ```
 
-### eth_getBalance {#eth_getbalance}
+### eth_getBalance {#eth-getbalance}
 
 Belirli bir adresteki hesabın bakiyesini döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBalance">
-  Uç noktayı oyun alanında deneyin
+  Oyun alanında uç noktayı deneyin
 </ButtonLink>
 
 **Parametreler**
 
-1. `VERİ`, 20 Bayt - bakiye kontrolü için adres.
-2. `MİKTAR|ETİKET` - tam sayı blok numarası veya `"latest"`, `"earliest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi, bkz. [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`, 20 Bayt - bakiyesi kontrol edilecek adres.
+2. `QUANTITY|TAG` - tam sayı blok numarası veya `"latest"`, `"earliest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi, bkz. [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -611,7 +610,7 @@ params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 
 **Döndürülenler**
 
-`MİKTAR` - wei cinsinden mevcut bakiyenin tam sayısı.
+`QUANTITY` - Wei cinsinden mevcut bakiyenin tam sayı değeri.
 
 **Örnek**
 
@@ -626,9 +625,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 }
 ```
 
-### eth_getStorageAt {#eth_getstorageat}
+### eth_getStorageAt {#eth-getstorageat}
 
-Belirli bir adresteki bir depolama konumundan değeri döndürür.
+Belirli bir adresteki depolama konumundan değeri döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
   Uç noktayı oyun alanında deneyin
@@ -636,16 +635,16 @@ Belirli bir adresteki bir depolama konumundan değeri döndürür.
 
 **Parametreler**
 
-1. `VERİ`, 20 Bayt - depolama adresi.
-2. `MİKTAR` - depolamadaki konumun tam sayısı.
-3. `MİKTAR|ETİKET` - tam sayı blok numarası veya `"latest"`, `"earliest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi, bkz. [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`, 20 Bayt - depolamanın adresi.
+2. `QUANTITY` - depolamadaki konumun tam sayısı.
+3. `QUANTITY|TAG` - tam sayı blok numarası veya `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"` dizesi, bkz. [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)
 
-**Döndürülenler**
+**Döndürür**
 
-`VERİ` - bu depolama konumundaki değer.
+`DATA` - bu depolama konumundaki değer.
 
 **Örnek**
-Doğru konumu hesaplamak, alınacak depolamaya bağlıdır. Aşağıdaki, `0x391694e7e0b0cce554cb130d723a9d27458f9298` adresi tarafından `0x295a70b2de5e3953354a6a8344e616ed314d7251` adresinde dağıtılan sözleşmeyi göz önünde bulundurun.
+Doğru konumu hesaplamak, alınacak depolamaya bağlıdır. `0x391694e7e0b0cce554cb130d723a9d27458f9298` adresi tarafından `0x295a70b2de5e3953354a6a8344e616ed314d7251` adresinde dağıtılan aşağıdaki sözleşmeyi göz önünde bulundurun.
 
 ```
 contract Storage {
@@ -658,14 +657,14 @@ contract Storage {
 }
 ```
 
-pos0'ın değerini almak basittir:
+pos0 değerini almak basittir:
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
 ```
 
-Haritanın bir öğesini almak daha zordur. Bir elemanın haritadaki konumu şu şekilde hesaplanır:
+Eşlemenin (mapping) bir elemanını almak daha zordur. Eşlemedeki bir elemanın konumu şu şekilde hesaplanır:
 
 ```js
 keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
@@ -682,7 +681,7 @@ keccak(
 )
 ```
 
-Web3 kütüphanesi ile birlikte gelen geth konsolu, hesaplama yapmak için kullanılabilir:
+Hesaplamayı yapmak için Web3 kütüphanesi ile birlikte gelen geth konsolu kullanılabilir:
 
 ```js
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -691,16 +690,16 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-Şimdi depolamayı almak için:
+Şimdi depolamayı getirmek için:
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount {#eth_gettransactioncount}
+### eth_getTransactionCount {#eth-gettransactioncount}
 
-Bir adresten _gönderilen_ işlem sayısını döndürür.
+Bir adresten _gönderilen_ işlemlerin sayısını döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionCount">
   Uç noktayı oyun alanında deneyin
@@ -708,8 +707,8 @@ Bir adresten _gönderilen_ işlem sayısını döndürür.
 
 **Parametreler**
 
-1. `VERİ`, 20 Bayt - adres.
-2. `MİKTAR|ETİKET` - tam sayı blok numarası veya `"latest"`, `"earliest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi, bkz. [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`, 20 Bayt - adres.
+2. `QUANTITY|TAG` - tam sayı blok numarası veya `"latest"`, `"earliest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi, bkz. [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -720,7 +719,7 @@ params: [
 
 **Döndürülenler**
 
-`MİKTAR` - bu adresten gönderilen işlem sayısının tam sayısı.
+`QUANTITY` - bu adresten gönderilen işlemlerin sayısını belirten tam sayı.
 
 **Örnek**
 
@@ -735,9 +734,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 }
 ```
 
-### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
+### eth_getBlockTransactionCountByHash {#eth-getblocktransactioncountbyhash}
 
-Verilen blok karması ile eşleşen bir bloktaki işlem sayısını döndürür.
+Verilen blok hash'i ile eşleşen bir bloktaki işlem sayısını döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByHash">
   Uç noktayı oyun alanında deneyin
@@ -745,7 +744,7 @@ Verilen blok karması ile eşleşen bir bloktaki işlem sayısını döndürür.
 
 **Parametreler**
 
-1. `VERİ`, 32 Bayt - bir bloğun karması
+1. `DATA`, 32 Bayt - bir bloğun hash'i
 
 ```js
 params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
@@ -753,14 +752,14 @@ params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 
 **Döndürülenler**
 
-`MİKTAR` - bu bloktaki işlem sayısının tam sayısı.
+`QUANTITY` - bu bloktaki işlem sayısının tam sayı değeri.
 
 **Örnek**
 
 ```js
-// Request
+// İstek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"],"id":1}'
-// Result
+// Sonuç
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -768,9 +767,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 }
 ```
 
-### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
+### eth_getBlockTransactionCountByNumber {#eth-getblocktransactioncountbynumber}
 
-Verilen blok numarasıyla eşleşen bloktaki işlem sayısını döndürür.
+Verilen blok numarasıyla eşleşen bir bloktaki işlem sayısını döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber">
   Uç noktayı oyun alanında deneyin
@@ -778,7 +777,7 @@ Verilen blok numarasıyla eşleşen bloktaki işlem sayısını döndürür.
 
 **Parametreler**
 
-1. `MİKTAR|ETİKET` - bir blok numarasının tam sayısı veya [blok parametresinde](/developers/docs/apis/json-rpc/#block-parameter) olduğu gibi `"earliest"`, `"latest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi.
+1. `QUANTITY|TAG` - bir blok numarasının tam sayısı veya [blok parametresinde](/developers/docs/apis/json-rpc/#block-parameter) olduğu gibi `"earliest"`, `"latest"`, `"pending"`, `"safe"` veya `"finalized"` dizesi.
 
 ```js
 params: [
@@ -788,14 +787,14 @@ params: [
 
 **Döndürülenler**
 
-`MİKTAR` - bu bloktaki işlem sayısının tam sayısı.
+`QUANTITY` - bu bloktaki işlem sayısının tam sayısı.
 
 **Örnek**
 
 ```js
-// Request
+// İstek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0x13738ca"],"id":1}'
-// Result
+// Sonuç
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -803,9 +802,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 }
 ```
 
-### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
+### eth_getUncleCountByBlockHash {#eth-getunclecountbyblockhash}
 
-Verilen blok karması ile eşleşen bir bloktaki amcaların sayısını döndürür.
+Verilen blok hash'i ile eşleşen bir bloktaki amca sayısını döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash">
   Uç noktayı oyun alanında deneyin
@@ -813,7 +812,7 @@ Verilen blok karması ile eşleşen bir bloktaki amcaların sayısını döndür
 
 **Parametreler**
 
-1. `VERİ`, 32 Bayt - bir bloğun karması
+1. `DATA`, 32 Bayt - bir bloğun hash'i
 
 ```js
 params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
@@ -821,14 +820,14 @@ params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 
 **Döndürülenler**
 
-`MİKTAR` - bu bloktaki amca (uncle) sayısının tam sayısı.
+`QUANTITY` - bu bloktaki amca sayısının tam sayı değeri.
 
 **Örnek**
 
 ```js
-// Request
+// İstek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"],"id":1}'
-// Result
+// Sonuç
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -836,9 +835,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 }
 ```
 
-### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
+### eth_getUncleCountByBlockNumber {#eth-getunclecountbyblocknumber}
 
-Verilen blok numarası ile eşleşen bir bloktan olan bir bloktaki amcaların sayısını döndürür.
+Verilen blok numarasıyla eşleşen bir bloktaki amca sayısını döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockNumber">
   Uç noktayı oyun alanında deneyin
@@ -846,7 +845,7 @@ Verilen blok numarası ile eşleşen bir bloktan olan bir bloktaki amcaların sa
 
 **Parametreler**
 
-1. `MİKTAR|ETİKET` - tam sayı blok numarası veya `"latest"`, `"earliest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi, bkz. [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)
+1. `QUANTITY|TAG` - bir blok numarasının tam sayısı veya `"latest"`, `"earliest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi, bkz. [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -856,14 +855,14 @@ params: [
 
 **Döndürülenler**
 
-`MİKTAR` - bu bloktaki amca (uncle) sayısının tam sayısı.
+`QUANTITY` - bu bloktaki amca sayısının tam sayısı.
 
 **Örnek**
 
 ```js
-// Request
+// İstek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params":["0xe8"],"id":1}'
-// Result
+// Sonuç
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -871,18 +870,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 }
 ```
 
-### eth_getCode {#eth_getcode}
+### eth_getCode {#eth-getcode}
 
-Belirli bir adreste kod döndürür.
+Belirli bir adresteki kodu döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getCode">
-  Uç noktayı oyun alanında deneyin
+  Oyun alanında uç noktayı deneyin
 </ButtonLink>
 
 **Parametreler**
 
-1. `VERİ`, 20 Bayt - adres
-2. `MİKTAR|ETİKET` - tam sayı blok numarası veya `"latest"`, `"earliest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi, bkz. [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)
+1. `DATA`, 20 Bayt - adres
+2. `QUANTITY|TAG` - tam sayı blok numarası veya `"latest"`, `"earliest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi, bkz. [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -891,16 +890,16 @@ params: [
 ]
 ```
 
-**Döndürülenler**
+**Dönen Değerler**
 
-`VERİ` - verilen adresten kod.
+`DATA` - verilen adresten alınan kod.
 
 **Örnek**
 
 ```js
-// Request
+// İstek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "0x5daf3b"],"id":1}'
-// Result
+// Sonuç
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -908,22 +907,22 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 }
 ```
 
-### eth_sign {#eth_sign}
+### eth_sign {#eth-sign}
 
-İmzalama yöntemi, Ethereum'a özgü bir imzayı şu şekilde hesaplar: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
+sign metodu, şununla Ethereum'a özgü bir imza hesaplar: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
-Mesaja bir önek ekleyerek hesaplanan imzanın Ethereum'a özel bir imza olarak tanınmasını sağlar. Bu, kötü niyetli bir merkeziyetsiz uygulamanın rastgele verileri (ör. işlem) imzalayabildiği ve imzayı kurbanın kimliğine bürünmek için kullandığı kötüye kullanımı önler.
+Mesaja bir önek eklenmesi, hesaplanan imzanın Ethereum'a özgü bir imza olarak tanınmasını sağlar. Bu, kötü niyetli bir merkeziyetsiz uygulamanın (dapp) rastgele verileri (örneğin, işlem) imzalayıp imzayı kurbanın kimliğine bürünmek için kullanması gibi kötüye kullanımları önler.
 
-Not: İmzalanacak adresin kilidi açık olmalıdır.
+Not: imzalama yapılacak adresin kilidi açık olmalıdır.
 
 **Parametreler**
 
-1. `VERİ`, 20 Bayt - adres
-2. `VERİ`, N Bayt - imzalanacak mesaj
+1. `DATA`, 20 Bayt - adres
+2. `DATA`, N Bayt - imzalanacak mesaj
 
 **Döndürülenler**
 
-`VERİ`: İmza
+`DATA`: İmza
 
 **Örnek**
 
@@ -938,26 +937,26 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction {#eth_signtransaction}
+### eth_signTransaction {#eth-signtransaction}
 
-Daha sonra [eth_sendRawTransaction](#eth_sendrawtransaction) ile ağa gönderilebilecek bir işlemi imzalar.
+[eth_sendRawTransaction](#eth-sendrawtransaction) kullanarak daha sonraki bir zamanda ağa gönderilebilecek bir işlemi imzalar.
 
 **Parametreler**
 
-1. `Nesne` - İşlem nesnesi
+1. `Object` - İşlem nesnesi
 
-- `tür`:
-- `from`: `VERİ`, 20 Bayt - İşlemin gönderildiği adres.
-- `to`: `VERİ`, 20 Bayt - (yeni sözleşme oluştururken isteğe bağlı) İşlemin yönlendirildiği adres.
-- `gas`: `MİKTAR` - (isteğe bağlı, varsayılan: 90000) İşlemin yürütülmesi için sağlanan gazın tam sayısı. Kullanılmayan gazı geri verecektir.
-- `gasPrice`: `MİKTAR` - (isteğe bağlı, varsayılan: Belirlenecek) Wei cinsinden ödenen her gaz için kullanılan gasPrice tam sayısı.
-- `value`: `MİKTAR` - (isteğe bağlı) Wei cinsinden bu işlemle gönderilen değerin tam sayısı.
-- `data`: `VERİ` - Bir sözleşmenin derlenmiş kodu VEYA çağrılan metot imzasının ve kodlanmış parametrelerin karması.
-- `nonce`: `MİKTAR` - (isteğe bağlı) Bir nonce'un tam sayısı. Bu, aynı nonce'yi kullanan kendi bekleyen işlemlerinizin üzerine yazmanıza izin verir.
+- `type`:
+- `from`: `DATA`, 20 Bayt - İşlemin gönderildiği adres.
+- `to`: `DATA`, 20 Bayt - (yeni sözleşme oluşturulurken isteğe bağlıdır) İşlemin yönlendirildiği adres.
+- `gas`: `QUANTITY` - (isteğe bağlı, varsayılan: 90000) İşlemin yürütülmesi için sağlanan gazın tam sayı değeri. Kullanılmayan gazı iade edecektir.
+- `gasPrice`: `QUANTITY` - (isteğe bağlı, varsayılan: Belirlenecek) Ödenen her gaz için kullanılan gas fiyatının Wei cinsinden tam sayı değeri.
+- `value`: `QUANTITY` - (isteğe bağlı) Bu işlemle birlikte gönderilen değerin Wei cinsinden tam sayı değeri.
+- `data`: `DATA` - Bir sözleşmenin derlenmiş kodu VEYA çağrılan yöntem imzasının ve kodlanmış parametrelerin hash'i.
+- `nonce`: `QUANTITY` - (isteğe bağlı) Bir nonce'un tam sayı değeri. Bu, aynı nonce'u kullanan kendi bekleyen işlemlerinizin üzerine yazmanıza olanak tanır.
 
 **Döndürülenler**
 
-`VERİ`, Belirtilen hesap tarafından imzalanan RLP kodlu işlem nesnesi.
+`DATA`, Belirtilen hesap tarafından imzalanmış, RLP kodlamalı işlem nesnesi.
 
 **Örnek**
 
@@ -972,21 +971,21 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction {#eth_sendtransaction}
+### eth_sendTransaction {#eth-sendtransaction}
 
-Veri alanı kod içeriyorsa, yeni bir mesaj çağrı işlemi veya sözleşme oluşturma işlemi oluşturur ve `from` alanında belirtilen hesabı kullanarak imzalar.
+Veri alanı kod içeriyorsa yeni bir mesaj çağrısı işlemi veya sözleşme oluşturma işlemi yaratır ve bunu `from` içinde belirtilen hesabı kullanarak imzalar.
 
 **Parametreler**
 
-1. `Nesne` - İşlem nesnesi
+1. `Object` - İşlem nesnesi
 
-- `from`: `VERİ`, 20 Bayt - İşlemin gönderildiği adres.
-- `to`: `VERİ`, 20 Bayt - (yeni sözleşme oluştururken isteğe bağlı) İşlemin yönlendirildiği adres.
-- `gas`: `MİKTAR` - (isteğe bağlı, varsayılan: 90000) İşlemin yürütülmesi için sağlanan gazın tam sayısı. Kullanılmayan gazı geri verecektir.
-- `gasPrice`: `MİKTAR` - (isteğe bağlı, varsayılan: Belirlenecek) Ücretli her gaz için kullanılan gasPrice tam sayısı.
-- `value`: `MİKTAR` - (isteğe bağlı) Bu işlemle gönderilen değerin tam sayısı.
-- `input`: `VERİ` - Bir sözleşmenin derlenmiş kodu VEYA çağrılan metot imzasının ve kodlanmış parametrelerin karması.
-- `nonce`: `MİKTAR` - (isteğe bağlı) Bir nonce'un tam sayısı. Bu, aynı nonce'yi kullanan kendi bekleyen işlemlerinizin üzerine yazmanıza izin verir.
+- `from`: `DATA`, 20 Bayt - İşlemin gönderildiği adres.
+- `to`: `DATA`, 20 Bayt - (yeni sözleşme oluşturulurken isteğe bağlıdır) İşlemin yönlendirildiği adres.
+- `gas`: `QUANTITY` - (isteğe bağlı, varsayılan: 90000) İşlemin yürütülmesi için sağlanan gazın tam sayısı. Kullanılmayan gazı iade edecektir.
+- `gasPrice`: `QUANTITY` - (isteğe bağlı, varsayılan: Belirlenecek) Ödenen her gaz için kullanılan gas fiyatının tam sayısı.
+- `value`: `QUANTITY` - (isteğe bağlı) Bu işlemle birlikte gönderilen değerin tam sayısı.
+- `input`: `DATA` - Bir sözleşmenin derlenmiş kodu VEYA çağrılan yöntem imzasının ve kodlanmış parametrelerin hash'i.
+- `nonce`: `QUANTITY` - (isteğe bağlı) Bir nonce tam sayısı. Bu, aynı nonce'u kullanan kendi bekleyen işlemlerinizin üzerine yazmanıza olanak tanır.
 
 ```js
 params: [
@@ -1004,9 +1003,9 @@ params: [
 
 **Döndürülenler**
 
-`VERİ`, 32 Bayt - işlem karması veya işlem henüz mevcut değilse sıfır karma.
+`DATA`, 32 Bayt - işlem hash'i veya işlem henüz mevcut değilse sıfır hash'i.
 
-Bir sözleşme oluşturduğunuzda, işlem bir blokta önerildikten sonra sözleşme adresini almak için [eth_getTransactionReceipt](#eth_gettransactionreceipt) öğesini kullanın.
+Bir sözleşme oluşturduğunuzda, işlem bir blokta önerildikten sonra sözleşme adresini almak için [eth_getTransactionReceipt](#eth-gettransactionreceipt) kullanın.
 
 **Örnek**
 
@@ -1021,13 +1020,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction {#eth_sendrawtransaction}
+### eth_sendRawTransaction {#eth-sendrawtransaction}
 
-İmzalı işlemler için yeni mesaj arama işlemi veya sözleşme oluşturma gerçekleşir.
+İmzalı işlemler için yeni bir mesaj çağrısı işlemi veya sözleşme oluşturma işlemi yaratır.
 
 **Parametreler**
 
-1. `VERİ`, İmzalanmış işlem verisi.
+1. `DATA`, İmzalı işlem verisi.
 
 ```js
 params: [
@@ -1035,11 +1034,11 @@ params: [
 ]
 ```
 
-**Döndürülenler**
+**Dönen Değerler**
 
-`VERİ`, 32 Bayt - işlem karması veya işlem henüz mevcut değilse sıfır karma.
+`DATA`, 32 Bayt - işlem hash'i veya işlem henüz mevcut değilse sıfır hash'i.
 
-Bir sözleşme oluşturduğunuzda, işlem bir blokta önerildikten sonra sözleşme adresini almak için [eth_getTransactionReceipt](#eth_gettransactionreceipt) öğesini kullanın.
+Bir sözleşme oluşturduğunuzda, işlem bir blokta önerildikten sonra sözleşme adresini almak için [eth_getTransactionReceipt](#eth-gettransactionreceipt) kullanın.
 
 **Örnek**
 
@@ -1054,9 +1053,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call {#eth_call}
+### eth_call {#eth-call}
 
-Blokzincirde bir işlem oluşturmadan hemen yeni bir mesaj çağrısı yürütür. Genellikle yalnızca okuma işlemi yapan akıllı sözleşme fonksiyonlarını çalıştırmak için kullanılır, örneğin bir ERC-20 sözleşmesi için `balanceOf` fonksiyonu.
+Blokzincir üzerinde bir işlem oluşturmadan hemen yeni bir mesaj çağrısı yürütür. Genellikle salt okunur akıllı sözleşme işlevlerini yürütmek için kullanılır, örneğin bir ERC-20 sözleşmesi için `balanceOf`.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_call">
   Uç noktayı oyun alanında deneyin
@@ -1064,20 +1063,20 @@ Blokzincirde bir işlem oluşturmadan hemen yeni bir mesaj çağrısı yürütü
 
 **Parametreler**
 
-1. `Nesne` - İşlem çağrısı nesnesi
+1. `Object` - İşlem çağrısı nesnesi
 
-- `from`: `VERİ`, 20 Bayt - (isteğe bağlı) İşlemin gönderildiği adres.
-- `to`: `VERİ`, 20 Bayt - İşlemin yönlendirildiği adres.
-- `gas`: `MİKTAR` - (isteğe bağlı) İşlemin yürütülmesi için sağlanan gazın tam sayısı. eth_call sıfır gaz tüketir, ancak bazı uygulamalarda bu parametreye ihtiyaç duyulabilir.
-- `gasPrice`: `MİKTAR` - (isteğe bağlı) Ücretli her gaz için kullanılan gasPrice'ın tam sayısı
-- `value`: `MİKTAR` - (isteğe bağlı) Bu işlemle gönderilen değerin tam sayısı
-- `input`: `VERİ` - (isteğe bağlı) Metot imzasının ve kodlanmış parametrelerin karması. Ayrıntılar için [Solidity belgelerindeki Ethereum Contract ABI](https://docs.soliditylang.org/en/latest/abi-spec.html) bölümüne bakın.
+- `from`: `DATA`, 20 Bayt - (isteğe bağlı) İşlemin gönderildiği adres.
+- `to`: `DATA`, 20 Bayt - İşlemin yönlendirildiği adres.
+- `gas`: `QUANTITY` - (isteğe bağlı) İşlem yürütmesi için sağlanan gazın tam sayısı. eth_call sıfır gaz tüketir, ancak bu parametre bazı yürütmeler için gerekli olabilir.
+- `gasPrice`: `QUANTITY` - (isteğe bağlı) Ödenen her gaz için kullanılan gasPrice tam sayısı
+- `value`: `QUANTITY` - (isteğe bağlı) Bu işlemle gönderilen değerin tam sayısı
+- `input`: `DATA` - (isteğe bağlı) Yöntem imzasının ve kodlanmış parametrelerin hash'i. Ayrıntılar için [Solidity belgelerindeki Ethereum Sözleşme ABI'sine](https://docs.soliditylang.org/en/latest/abi-spec.html) bakın.
 
-2. `MİKTAR|ETİKET` - tam sayı blok numarası veya `"latest"`, `"earliest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi, bkz. [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)
+2. `QUANTITY|TAG` - tam sayı blok numarası veya `"latest"`, `"earliest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi, [blok parametresine](/developers/docs/apis/json-rpc/#block-parameter) bakın
 
-**Döndürülenler**
+**Dönüşler**
 
-`VERİ` - yürütülen sözleşmenin dönüş değeri.
+`DATA` - yürütülen sözleşmenin dönüş değeri.
 
 **Örnek**
 
@@ -1092,9 +1091,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas {#eth_estimategas}
+### eth_estimateGas {#eth-estimategas}
 
-İşlemin tamamlanmasına izin vermek için ne kadar gazın gerekli olduğuna dair bir tahmin oluşturur ve döndürür. İşlem, blokzincire eklenmez. Tahminin, ESM mekaniği ve düğüm performansı dahil olmak üzere çeşitli nedenlerle işlem tarafından fiilen kullanılan gaz miktarından önemli ölçüde daha fazla olabileceğini unutmayın.
+İşlemin tamamlanmasına izin vermek için ne kadar gaz gerektiğini tahmin eder ve döndürür. İşlem Blokzincire eklenmeyecektir. EVM mekanikleri ve düğüm performansı gibi çeşitli nedenlerden dolayı, tahminin işlem tarafından fiilen kullanılan gaz miktarından önemli ölçüde daha fazla olabileceğini unutmayın.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
   Uç noktayı oyun alanında deneyin
@@ -1102,18 +1101,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 **Parametreler**
 
-[eth_call](#eth_call) parametrelerine bakın, tüm özelliklerin isteğe bağlı olması dışında. Gaz limiti belirtilmemişse geth, bekleyen bloktan gelen blok gaz limitini üst sınır olarak kullanır. Sonuç olarak, gaz miktarı bekleyen blok gaz limitinden daha yüksek olduğunda, döndürülen tahmin çağrıyı/işlemi yürütmek için yeterli olmayabilir.
+Tüm özelliklerin isteğe bağlı olması dışında [eth_call](#eth-call) parametrelerine bakın. Hiçbir gaz limiti belirtilmezse Geth, bekleyen bloktaki blok gaz limitini üst sınır olarak kullanır. Sonuç olarak, gaz miktarı bekleyen blok gaz limitinden yüksek olduğunda, döndürülen tahmin çağrıyı/işlemi yürütmek için yeterli olmayabilir.
 
 **Döndürülenler**
 
-`MİKTAR` - kullanılan gaz miktarı.
+`QUANTITY` - kullanılan gaz miktarı.
 
 **Örnek**
 
 ```js
-// Request
+// İstek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see above}],"id":1}'
-// Result
+// Sonuç
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1121,18 +1120,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 }
 ```
 
-### eth_getBlockByHash {#eth_getblockbyhash}
+### eth_getBlockByHash {#eth-getblockbyhash}
 
-Karma ile bir blok hakkında bilgi döndürür.
+Hash değerine göre bir blok hakkında bilgi döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByHash">
-  Uç noktayı oyun alanında deneyin
+  Oyun alanında uç noktayı deneyin
 </ButtonLink>
 
 **Parametreler**
 
-1. `VERİ`, 32 Bayt - Bir bloğun karması.
-2. `Boolean` - `true` ise tam işlem nesnelerini döndürür, `false` ise yalnızca işlemlerin karmalarını döndürür.
+1. `DATA`, 32 Bayt - Bir bloğun hash'i.
+2. `Boolean` - Eğer `true` ise tam işlem nesnelerini, `false` ise yalnızca işlemlerin hash'lerini döndürür.
 
 ```js
 params: [
@@ -1143,27 +1142,27 @@ params: [
 
 **Döndürülenler**
 
-`Nesne` - Bir blok nesnesi veya blok bulunamadığında `null`:
+`Object` - Bir blok nesnesi veya hiçbir blok bulunamadığında `null` döndürür:
 
-- `number`: `MİKTAR` - blok numarası. Bekleyen bir blok olduğunda `null`.
-- `hash`: `VERİ`, 32 Bayt - bloğun karması. Bekleyen bir blok olduğunda `null`.
-- `parentHash`: `VERİ`, 32 Bayt - ana bloğun karması.
-- `nonce`: `VERİ`, 8 Bayt - oluşturulan iş ispatının karması. Bekleyen bir blok olduğunda `null`, hisse ispatı blokları için `0x0` (Birleşim'den beri)
-- `sha3Uncles`: `VERİ`, 32 Bayt - bloktaki amca (uncle) verilerinin SHA3'ü.
-- `logsBloom`: `VERİ`, 256 Bayt - bloğun günlükleri için bloom filtresi. Bekleyen bir blok olduğunda `null`.
-- `transactionsRoot`: `VERİ`, 32 Bayt - bloğun işlem trie'sinin kökü.
-- `stateRoot`: `VERİ`, 32 Bayt - bloğun son durum trie'sinin kökü.
-- `receiptsRoot`: `VERİ`, 32 Bayt - bloğun makbuz trie'sinin kökü.
-- `miner`: `VERİ`, 20 Bayt - blok ödüllerinin verildiği lehtarın adresi.
-- `difficulty`: `MİKTAR` - bu bloğun zorluğunun tam sayısı.
-- `totalDifficulty`: `MİKTAR` - bu bloka kadar zincirin toplam zorluğunun tam sayısı.
-- `extraData`: `VERİ` - bu bloğun "ekstra veri" alanı.
-- `size`: `MİKTAR` - bu bloğun bayt cinsinden boyutunun tam sayısı.
-- `gasLimit`: `MİKTAR` - bu blokta izin verilen maksimum gaz.
-- `gasUsed`: `MİKTAR` - bu bloktaki tüm işlemler tarafından kullanılan toplam gaz.
-- `timestamp`: `MİKTAR` - bloğun derlendiği zamana ilişkin unix zaman damgası.
-- `transactions`: `Dizi` - İşlem nesneleri dizisi veya son verilen parametreye bağlı olarak 32 Bayt'lık işlem karmaları.
-- `uncles`: `Dizi` - Amca (uncle) karmaları dizisi.
+- `number`: `QUANTITY` - blok numarası. Bekleyen blok olduğunda `null`.
+- `hash`: `DATA`, 32 Bayt - bloğun hash'i. Bekleyen blok olduğunda `null`.
+- `parentHash`: `DATA`, 32 Bayt - üst bloğun hash'i.
+- `nonce`: `DATA`, 8 Bayt - oluşturulan İş Kanıtı (PoW) hash'i. Bekleyen blok olduğunda `null`, Hisse Kanıtı (PoS) blokları için (Birleşme'den beri) `0x0`.
+- `sha3Uncles`: `DATA`, 32 Bayt - bloktaki uncle verilerinin SHA3'ü.
+- `logsBloom`: `DATA`, 256 Bayt - bloğun günlükleri için bloom filtresi. Bekleyen blok olduğunda `null`.
+- `transactionsRoot`: `DATA`, 32 Bayt - bloğun işlem ağacının (trie) kökü.
+- `stateRoot`: `DATA`, 32 Bayt - bloğun nihai durum ağacının kökü.
+- `receiptsRoot`: `DATA`, 32 Bayt - bloğun makbuz ağacının (trie) kökü.
+- `miner`: `DATA`, 20 Bayt - blok ödüllerinin verildiği lehtarın adresi.
+- `difficulty`: `QUANTITY` - bu blok için zorluğun tam sayı değeri.
+- `totalDifficulty`: `QUANTITY` - bu bloğa kadar zincirin toplam zorluğunun tam sayı değeri.
+- `extraData`: `DATA` - bu bloğun "ekstra veri" alanı.
+- `size`: `QUANTITY` - bu bloğun bayt cinsinden boyutunun tam sayı değeri.
+- `gasLimit`: `QUANTITY` - bu blokta izin verilen maksimum gaz.
+- `gasUsed`: `QUANTITY` - bu bloktaki tüm işlemler tarafından kullanılan toplam gaz.
+- `timestamp`: `QUANTITY` - bloğun derlendiği zamanın unix zaman damgası.
+- `transactions`: `Array` - Verilen son parametreye bağlı olarak işlem nesneleri dizisi veya 32 Baytlık işlem hash'leri.
+- `uncles`: `Array` - Uncle hash'leri dizisi.
 
 **Örnek**
 
@@ -1201,7 +1200,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 }
 ```
 
-### eth_getBlockByNumber {#eth_getblockbynumber}
+### eth_getBlockByNumber {#eth-getblockbynumber}
 
 Blok numarasına göre bir blok hakkında bilgi döndürür.
 
@@ -1211,8 +1210,8 @@ Blok numarasına göre bir blok hakkında bilgi döndürür.
 
 **Parametreler**
 
-1. `MİKTAR|ETİKET` - bir blok numarasının tam sayısı veya [blok parametresinde](/developers/docs/apis/json-rpc/#block-parameter) olduğu gibi `"earliest"`, `"latest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi.
-2. `Boolean` - `true` ise tam işlem nesnelerini döndürür, `false` ise yalnızca işlemlerin karmalarını döndürür.
+1. `QUANTITY|TAG` - bir blok numarası tam sayısı veya [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter) içinde olduğu gibi `"earliest"`, `"latest"`, `"pending"`, `"safe"` veya `"finalized"` dizesi.
+2. `Boolean` - Eğer `true` ise tam işlem nesnelerini, `false` ise yalnızca işlemlerin hash'lerini döndürür.
 
 ```js
 params: [
@@ -1222,7 +1221,7 @@ params: [
 ```
 
 **Döndürülenler**
-Bkz. [eth_getBlockByHash](#eth_getblockbyhash)
+Bkz. [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Örnek**
 
@@ -1231,11 +1230,11 @@ Bkz. [eth_getBlockByHash](#eth_getblockbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1}'
 ```
 
-Sonuç bkz. [eth_getBlockByHash](#eth_getblockbyhash)
+Sonuç için bkz. [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_getTransactionByHash {#eth_gettransactionbyhash}
+### eth_getTransactionByHash {#eth-gettransactionbyhash}
 
-İşlem karması tarafından istenen bir işlem hakkındaki bilgileri döndürür.
+İşlem hash'i ile talep edilen bir işlem hakkındaki bilgileri döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByHash">
   Uç noktayı oyun alanında deneyin
@@ -1243,7 +1242,7 @@ Sonuç bkz. [eth_getBlockByHash](#eth_getblockbyhash)
 
 **Parametreler**
 
-1. `VERİ`, 32 Bayt - bir işlemin karması
+1. `DATA`, 32 Bayt - bir işlemin hash'i
 
 ```js
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
@@ -1251,22 +1250,22 @@ params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 
 **Döndürülenler**
 
-`Nesne` - Bir işlem nesnesi veya işlem bulunamadığında `null`:
+`Object` - Bir işlem nesnesi veya hiçbir işlem bulunamadığında `null`:
 
-- `blockHash`: `VERİ`, 32 Bayt - bu işlemin bulunduğu bloğun karması. Beklemedeyken `null`.
-- `blockNumber`: `MİKTAR` - bu işlemin bulunduğu blok numarası. Beklemedeyken `null`.
-- `from`: `VERİ`, 20 Bayt - göndericinin adresi.
-- `gas`: `MİKTAR` - gönderici tarafından sağlanan gaz.
-- `gasPrice`: `MİKTAR` - gönderici tarafından Wei cinsinden sağlanan gaz fiyatı.
-- `hash`: `VERİ`, 32 Bayt - işlemin karması.
-- `input`: `VERİ` - işlemle birlikte gönderilen veriler.
-- `nonce`: `MİKTAR` - göndericinin bundan önce yaptığı işlem sayısı.
-- `to`: `VERİ`, 20 Bayt - alıcının adresi. Bir sözleşme oluşturma işlemi olduğunda `null`.
-- `transactionIndex`: `MİKTAR` - bloktaki işlemler dizin konumunun tam sayısı. Beklemedeyken `null`.
-- `value`: `MİKTAR` - Wei cinsinden aktarılan değer.
-- `v`: `MİKTAR` - ECDSA kurtarma kimliği
-- `r`: `MİKTAR` - ECDSA imzası r
-- `s`: `MİKTAR` - ECDSA imzası s
+- `blockHash`: `DATA`, 32 Bayt - bu işlemin içinde bulunduğu bloğun hash'i. Beklemedeyken `null`.
+- `blockNumber`: `QUANTITY` - bu işlemin içinde bulunduğu blok numarası. Beklemedeyken `null`.
+- `from`: `DATA`, 20 Bayt - gönderenin adresi.
+- `gas`: `QUANTITY` - gönderen tarafından sağlanan gaz.
+- `gasPrice`: `QUANTITY` - gönderen tarafından sağlanan Wei cinsinden gas fiyatı.
+- `hash`: `DATA`, 32 Bayt - işlemin hash'i.
+- `input`: `DATA` - işlemle birlikte gönderilen veri.
+- `nonce`: `QUANTITY` - gönderen tarafından bundan önce yapılan işlemlerin sayısı.
+- `to`: `DATA`, 20 Bayt - alıcının adresi. Bir sözleşme oluşturma işlemi olduğunda `null`.
+- `transactionIndex`: `QUANTITY` - bloğun içindeki işlemlerin endeks konumunun tam sayısı. Beklemedeyken `null`.
+- `value`: `QUANTITY` - Wei cinsinden aktarılan değer.
+- `v`: `QUANTITY` - ECDSA kurtarma kimliği
+- `r`: `QUANTITY` - ECDSA imza r
+- `s`: `QUANTITY` - ECDSA imza s
 
 **Örnek**
 
@@ -1296,9 +1295,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
+### eth_getTransactionByBlockHashAndIndex {#eth-gettransactionbyblockhashandindex}
 
-Blok karması ve işlem dizini konumuna göre bir işlem hakkındaki bilgileri döndürür.
+Blok hash'i ve işlem endeksi konumuna göre bir işlem hakkında bilgi döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex">
   Uç noktayı oyun alanında deneyin
@@ -1306,8 +1305,8 @@ Blok karması ve işlem dizini konumuna göre bir işlem hakkındaki bilgileri d
 
 **Parametreler**
 
-1. `VERİ`, 32 Bayt - bir bloğun karması.
-2. `MİKTAR` - işlem dizin konumunun tam sayısı.
+1. `DATA`, 32 Bayt - bir bloğun hash'i.
+2. `QUANTITY` - işlem endeksi konumunun tam sayısı.
 
 ```js
 params: [
@@ -1316,21 +1315,21 @@ params: [
 ]
 ```
 
-**Döndürülenler**
-Bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**Döndürdükleri**
+Bkz. [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Örnek**
 
 ```js
-// Request
+// İstek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Sonuç bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Sonuç için bkz. [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
+### eth_getTransactionByBlockNumberAndIndex {#eth-gettransactionbyblocknumberandindex}
 
-Blok numarasına ve işlem dizini konumuna göre bir işlem hakkında bilgi döndürür.
+Blok numarası ve işlem endeksi konumuna göre bir işlem hakkında bilgi döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockNumberAndIndex">
   Uç noktayı oyun alanında deneyin
@@ -1338,8 +1337,8 @@ Blok numarasına ve işlem dizini konumuna göre bir işlem hakkında bilgi dön
 
 **Parametreler**
 
-1. `MİKTAR|ETİKET` - bir blok numarası veya [blok parametresinde](/developers/docs/apis/json-rpc/#block-parameter) olduğu gibi `"earliest"`, `"latest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi.
-2. `MİKTAR` - işlem dizin konumu.
+1. `QUANTITY|TAG` - bir blok numarası veya [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter) içinde olduğu gibi `"earliest"`, `"latest"`, `"pending"`, `"safe"` veya `"finalized"` dizesi.
+2. `QUANTITY` - işlem endeksi konumu.
 
 ```js
 params: [
@@ -1349,7 +1348,7 @@ params: [
 ```
 
 **Döndürülenler**
-Bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Bkz. [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Örnek**
 
@@ -1358,43 +1357,43 @@ Bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
-Sonuç bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Sonuç için bkz. [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionReceipt {#eth_gettransactionreceipt}
+### eth_getTransactionReceipt {#eth-gettransactionreceipt}
 
-İşlem karmasına göre bir işlemin makbuzunu döndürür.
+İşlem hash'ine göre bir işlemin makbuzunu döndürür.
 
-**Not** Makbuzun bekleyen işlemler için mevcut olmadığına dikkat edin.
+**Not** Makbuz, bekleyen işlemler için mevcut değildir.
 
 **Parametreler**
 
-1. `VERİ`, 32 Bayt - bir işlemin karması
+1. `DATA`, 32 Bayt - bir işlemin hash'i
 
 ```js
 params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
 **Döndürülenler**
-`Nesne` - Bir işlem makbuzu nesnesi veya makbuz bulunamadığında `null`:
+`Object` - Bir işlem makbuzu nesnesi veya hiçbir makbuz bulunamadığında `null`:
 
-- `transactionHash `: `VERİ`, 32 Bayt - işlemin karması.
-- `transactionIndex`: `MİKTAR` - bloktaki işlemler dizin konumunun tam sayısı.
-- `blockHash`: `VERİ`, 32 Bayt - bu işlemin bulunduğu bloğun karması.
-- `blockNumber`: `MİKTAR` - bu işlemin bulunduğu blok numarası.
-- `from`: `VERİ`, 20 Bayt - göndericinin adresi.
-- `to`: `VERİ`, 20 Bayt - alıcının adresi. bir sözleşme oluşturma işlemi olduğunda null.
-- `cumulativeGasUsed` : `MİKTAR` - Bu işlem blokta yürütüldüğünde kullanılan toplam gaz miktarı.
-- `effectiveGasPrice` : `MİKTAR` - Taban ücretin ve gaz birimi başına ödenen bahşişin toplamı.
-- `gasUsed `: `MİKTAR` - Yalnızca bu özel işlem tarafından kullanılan gaz miktarı.
-- `contractAddress `: `VERİ`, 20 Bayt - İşlem bir sözleşme oluşturma ise, oluşturulan sözleşme adresi, aksi takdirde `null`.
-- `logs`: `Dizi` - Bu işlemin oluşturduğu günlük nesneleri dizisi.
-- `logsBloom`: `VERİ`, 256 Bayt - İlgili günlükleri hızlı bir şekilde almak için hafif istemciler için Bloom filtresi.
-- `type`: `MİKTAR` - işlem türünün tam sayısı, eski işlemler için `0x0`, erişim listesi türleri için `0x1`, dinamik ücretler için `0x2`.
+- `transactionHash `: `DATA`, 32 Bayt - işlemin hash'i.
+- `transactionIndex`: `QUANTITY` - işlemin bloktaki endeks konumunun tam sayısı.
+- `blockHash`: `DATA`, 32 Bayt - bu işlemin içinde bulunduğu bloğun hash'i.
+- `blockNumber`: `QUANTITY` - bu işlemin içinde bulunduğu blok numarası.
+- `from`: `DATA`, 20 Bayt - gönderenin adresi.
+- `to`: `DATA`, 20 Bayt - alıcının adresi. Bir sözleşme oluşturma işlemi olduğunda null olur.
+- `cumulativeGasUsed` : `QUANTITY ` - Bu işlem blokta yürütüldüğünde kullanılan toplam gaz miktarı.
+- `effectiveGasPrice` : `QUANTITY` - Gaz birimi başına ödenen taban ücret ve öncelik ücretinin toplamı.
+- `gasUsed `: `QUANTITY ` - Yalnızca bu belirli işlem tarafından kullanılan gaz miktarı.
+- `contractAddress `: `DATA`, 20 Bayt - İşlem bir sözleşme oluşturma işlemiyse oluşturulan sözleşme adresi, aksi takdirde `null`.
+- `logs`: `Array` - Bu işlemin oluşturduğu günlük nesneleri dizisi.
+- `logsBloom`: `DATA`, 256 Bayt - Hafif istemcilerin ilgili günlükleri hızlıca alması için Bloom filtresi.
+- `type`: `QUANTITY` - işlem türünün tam sayısı, eski işlemler için `0x0`, erişim listesi türleri için `0x1`, dinamik ücretler için `0x2`.
 
-Ayrıca şunlardan birini döndürür:
+Ayrıca _şunlardan birini_ döndürür:
 
-- `root` : `VERİ` 32 bayt işlem sonrası durum kökü (Bizans öncesi)
-- `status`: `MİKTAR` ya `1` (başarılı) ya da `0` (başarısız)
+- `root` : `DATA` 32 baytlık işlem sonrası durum kökü (Bizans öncesi)
+- `status`: `QUANTITY `1` (başarılı) veya `0` (başarısız)
 
 **Örnek**
 
@@ -1409,13 +1408,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
     "blockHash":
       "0xa957d47df264a31badc3ae823e10ac1d444b098d9b73d204c40426e57f47e8c3",
     "blockNumber": "0xeff35f",
-    "contractAddress": null, // oluşturulmuşsa adresin dizesi
+    "contractAddress": null, // oluşturulduysa Adres dizesi
     "cumulativeGasUsed": "0xa12515",
     "effectiveGasPrice": "0x5a9c688d4",
     "from": "0x6221a9c005f6e47eb398fd867784cacfdcfff4e7",
     "gasUsed": "0xb4c8",
     "logs": [{
-      // getFilterLogs tarafından döndürülen günlükler, vb.
+      // getFilterLogs vb. tarafından döndürülen günlükler
     }],
     "logsBloom": "0x00...0", // 256 bayt bloom filtresi
     "status": "0x1",
@@ -1428,9 +1427,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
+### eth_getUncleByBlockHashAndIndex {#eth-getunclebyblockhashandindex}
 
-Karma ve amca (uncle) dizin konumuna göre bir bloğun amcası hakkında bilgi verir.
+Bir bloğun amcası hakkında hash ve amca endeks konumuna göre bilgi döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockHashAndIndex">
   Uç noktayı oyun alanında deneyin
@@ -1438,8 +1437,8 @@ Karma ve amca (uncle) dizin konumuna göre bir bloğun amcası hakkında bilgi v
 
 **Parametreler**
 
-1. `VERİ`, 32 Bayt - Bir bloğun karması.
-2. `MİKTAR` - Amcanın (uncle) dizin konumu.
+1. `DATA`, 32 Bayt - Bir bloğun hash'i.
+2. `QUANTITY` - Amcanın endeks konumu.
 
 ```js
 params: [
@@ -1448,23 +1447,23 @@ params: [
 ]
 ```
 
-**Döndürülenler**
-Bkz. [eth_getBlockByHash](#eth_getblockbyhash)
+**Döndürür**
+Bkz. [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Örnek**
 
 ```js
-// Request
+// İstek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Sonuç bkz. [eth_getBlockByHash](#eth_getblockbyhash)
+Sonuç için bkz. [eth_getBlockByHash](#eth-getblockbyhash)
 
-**Not**: Bir amca (uncle), bireysel işlemler içermez.
+**Not**: Bir amca, bireysel işlemler içermez.
 
-### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
+### eth_getUncleByBlockNumberAndIndex {#eth-getunclebyblocknumberandindex}
 
-Numaraya ve amca (uncle) dizin konumuna göre bir bloğun amcası hakkında bilgi verir.
+Numarasına ve amca endeks konumuna göre bir bloğun amcası hakkında bilgi döndürür.
 
 <ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockNumberAndIndex">
   Uç noktayı oyun alanında deneyin
@@ -1472,8 +1471,8 @@ Numaraya ve amca (uncle) dizin konumuna göre bir bloğun amcası hakkında bilg
 
 **Parametreler**
 
-1. `MİKTAR|ETİKET` - bir blok numarası veya [blok parametresinde](/developers/docs/apis/json-rpc/#block-parameter) olduğu gibi `"earliest"`, `"latest"`, `"pending"`, `"safe"` ya da `"finalized"` dizesi.
-2. `MİKTAR` - amcanın (uncle) dizin konumu.
+1. `QUANTITY|TAG` - bir blok numarası veya [blok parametresi](/developers/docs/apis/json-rpc/#block-parameter)nde olduğu gibi `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"` dizesi.
+2. `QUANTITY` - amcanın endeks konumu.
 
 ```js
 params: [
@@ -1482,10 +1481,10 @@ params: [
 ]
 ```
 
-**Döndürülenler**
-Bkz. [eth_getBlockByHash](#eth_getblockbyhash)
+**Dönen Değerler**
+Bkz. [eth_getBlockByHash](#eth-getblockbyhash)
 
-**Not**: Bir amca (uncle), bireysel işlemler içermez.
+**Not**: Bir amca, bireysel işlemleri içermez.
 
 **Örnek**
 
@@ -1494,29 +1493,29 @@ Bkz. [eth_getBlockByHash](#eth_getblockbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-Sonuç bkz. [eth_getBlockByHash](#eth_getblockbyhash)
+Sonuç için bkz. [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_newFilter {#eth_newfilter}
+### eth_newFilter {#eth-newfilter}
 
-Durum değiştiğinde (günlükler) bildirimde bulunmak için filtre seçeneklerine dayalı olarak bir filtre nesnesi oluşturur.
-Durumun değişip değişmediğini kontrol etmek için [eth_getFilterChanges](#eth_getfilterchanges) çağrısı yapın.
+Durum değiştiğinde (günlükler) bildirim yapmak için filtre seçeneklerine dayalı olarak bir filtre nesnesi oluşturur.
+Durumun değişip değişmediğini kontrol etmek için [eth_getFilterChanges](#eth-getfilterchanges) çağrısı yapın.
 
-**Konu filtrelerini belirtme hakkında bir not:**
-Konular sıraya bağlıdır. [A, B] konularına sahip günlük içeren bir işlem, aşağıdaki konu filtreleriyle eşleştirilecektir:
+**Topic filtrelerini belirleme üzerine bir not:**
+Topic'ler sıraya bağlıdır. [A, B] topic'lerine sahip bir günlüğü olan bir işlem, aşağıdaki topic filtreleriyle eşleşecektir:
 
 - `[]` "herhangi bir şey"
-- `[A]` "birinci konumda A (ve sonrası herhangi bir şey)"
-- `[null, B]` "birinci konumda herhangi bir şey VE ikinci konumda B (ve sonrası herhangi bir şey)"
-- `[A, B]` "birinci konumda A VE ikinci konumda B (ve sonrası herhangi bir şey)"
-- `[[A, B], [A, B]]` "birinci konumda (A VEYA B) VE ikinci konumda (A VEYA B) (ve sonrası herhangi bir şey)"
+- `[A]` "İlk konumda A (ve sonrasında herhangi bir şey)"
+- `[null, B]` "İlk konumda herhangi bir şey VE ikinci konumda B (ve sonrasında herhangi bir şey)"
+- `[A, B]` "İlk konumda A VE ikinci konumda B (ve sonrasında herhangi bir şey)"
+- `[[A, B], [A, B]]` "İlk konumda (A VEYA B) VE ikinci konumda (A VEYA B) (ve sonrasında herhangi bir şey)"
 - **Parametreler**
 
-1. `Nesne` - Filtre seçenekleri:
+1. `Object` - Filtre seçenekleri:
 
-- `fromBlock`: `MİKTAR|ETİKET` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya son önerilen blok için `"latest"`, en son güvenli blok için `"safe"`, en son kesinleşmiş blok için `"finalized"` veya henüz bir blokta olmayan işlemler için `"pending"`, `"earliest"`.
-- `toBlock`: `MİKTAR|ETİKET` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya son önerilen blok için `"latest"`, en son güvenli blok için `"safe"`, en son kesinleşmiş blok için `"finalized"` veya henüz bir blokta olmayan işlemler için `"pending"`, `"earliest"`.
-- `address`: `VERİ|Dizi`, 20 Bayt - (isteğe bağlı) Sözleşme adresi veya günlüklerin kaynaklanması gereken adreslerin listesi.
-- `topics`: `VERİ Dizisi`, - (isteğe bağlı) 32 Baytlık `VERİ` konuları dizisi. Konular sıraya bağlıdır. Her konu, "veya" seçenekleriyle birlikte bir VERİ dizisi de olabilir.
+- `fromBlock`: `QUANTITY|TAG` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya önerilen son blok için `"latest"`, en son güvenli blok için `"safe"`, en son kesinleşmiş blok için `"finalized"` veya henüz bir blokta olmayan işlemler için `"pending"`, `"earliest"`.
+- `toBlock`: `QUANTITY|TAG` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya önerilen son blok için `"latest"`, en son güvenli blok için `"safe"`, en son kesinleşmiş blok için `"finalized"` veya henüz bir blokta olmayan işlemler için `"pending"`, `"earliest"`.
+- `address`: `DATA|Array`, 20 Bayt - (isteğe bağlı) Günlüklerin kaynaklanması gereken sözleşme adresi veya adreslerin bir listesi.
+- `topics`: `Array of DATA`, - (isteğe bağlı) 32 Baytlık `DATA` topic dizisi. Topic'ler sıraya bağlıdır. Her bir topic, "veya" seçeneklerine sahip bir VERİ (DATA) dizisi de olabilir.
 
 ```js
 params: [
@@ -1536,8 +1535,8 @@ params: [
 ]
 ```
 
-**Döndürülenler**
-`MİKTAR` - Bir filtre kimliği.
+**Dönen Değerler**
+`QUANTITY` - Bir filtre kimliği.
 
 **Örnek**
 
@@ -1552,16 +1551,16 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 }
 ```
 
-### eth_newBlockFilter {#eth_newblockfilter}
+### eth_newBlockFilter {#eth-newblockfilter}
 
 Yeni bir blok geldiğinde bildirimde bulunmak için düğümde bir filtre oluşturur.
-Durumun değişip değişmediğini kontrol etmek için [eth_getFilterChanges](#eth_getfilterchanges) çağrısı yapın.
+Durumun değişip değişmediğini kontrol etmek için [eth_getFilterChanges](#eth-getfilterchanges) çağırın.
 
 **Parametreler**
 Yok
 
 **Döndürülenler**
-`MİKTAR` - Bir filtre kimliği.
+`QUANTITY` - Bir filtre kimliği.
 
 **Örnek**
 
@@ -1576,23 +1575,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 }
 ```
 
-### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
+### eth_newPendingTransactionFilter {#eth-newpendingtransactionfilter}
 
-Yeni bekleyen işlemler geldiğinde bildirimde bulunmak için düğümde bir filtre oluşturur.
-Durumun değişip değişmediğini kontrol etmek için [eth_getFilterChanges](#eth_getfilterchanges) çağrısı yapın.
+Yeni bekleyen işlemler ulaştığında bildirimde bulunmak için düğümde bir filtre oluşturur.
+Durumun değişip değişmediğini kontrol etmek için [eth_getFilterChanges](#eth-getfilterchanges) çağrısı yapın.
 
 **Parametreler**
 Yok
 
-**Döndürülenler**
-`MİKTAR` - Bir filtre kimliği.
+**Döndürdükleri**
+`QUANTITY` - Bir filtre kimliği.
 
 **Örnek**
 
 ```js
-// Request
+// İstek
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter","params":[],"id":73}'
-// Result
+// Sonuç
 {
   "id":1,
   "jsonrpc":  "2.0",
@@ -1600,14 +1599,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 }
 ```
 
-### eth_uninstallFilter {#eth_uninstallfilter}
+### eth_uninstallFilter {#eth-uninstallfilter}
 
-Verilen kimliğe sahip bir filtreyi kaldırır. Saate artık ihtiyaç duyulmadığında daima çağrılmalıdır.
-Ayrıca Filtreler, belirli bir süre boyunca [eth_getFilterChanges](#eth_getfilterchanges) ile istenmediğinde zaman aşımına uğrar.
+Verilen id'ye sahip bir filtreyi kaldırır. İzlemeye artık ihtiyaç duyulmadığında her zaman çağrılmalıdır.
+Ayrıca filtreler, belirli bir süre boyunca [eth_getFilterChanges](#eth-getfilterchanges) ile talep edilmediklerinde zaman aşımına uğrar.
 
 **Parametreler**
 
-1. `MİKTAR` - Filtre kimliği.
+1. `QUANTITY` - Filtre id'si.
 
 ```js
 params: [
@@ -1631,13 +1630,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges {#eth_getfilterchanges}
+### eth_getFilterChanges {#eth-getfilterchanges}
 
-Son yoklamadan bu yana oluşan günlüklerin bir dizisini döndüren bir filtre için yoklama yöntemidir.
+Bir filtre için yoklama yöntemi, son yoklamadan bu yana oluşan günlüklerin bir dizisini döndürür.
 
 **Parametreler**
 
-1. `MİKTAR` - filtre kimliği.
+1. `QUANTITY` - filtre kimliği.
 
 ```js
 params: [
@@ -1646,22 +1645,20 @@ params: [
 ```
 
 **Döndürülenler**
-`Dizi` - Günlük nesneleri dizisi veya son yoklamadan bu yana hiçbir şey değişmediyse boş bir dizi.
+`Array` - Günlük nesnelerinden oluşan bir dizi veya son yoklamadan bu yana hiçbir şey değişmediyse boş bir dizi.
 
-- `eth_newBlockFilter` ile oluşturulan filtreler için dönüş, blok karmalarıdır (`VERİ`, 32 Bayt), örn., `["0x3454645634534..."]`.
-
-- `eth_newPendingTransactionFilter` ile oluşturulan filtreler için dönüş, işlem karmalarıdır (`VERİ`, 32 Bayt), örn., `["0x6345343454645..."]`.
-
-- `eth_newFilter` ile oluşturulan filtreler için günlükler, aşağıdaki parametrelere sahip nesnelerdir:
-  - `removed`: `ETİKET` - `true`, günlük bir zincir yeniden düzenlenmesi nedeniyle kaldırıldığında. Geçerli bir günlükse `false`.
-  - `logIndex`: `MİKTAR` - bloktaki günlük dizin konumunun tam sayısı. Bekleyen bir günlük olduğunda `null`.
-  - `transactionIndex`: `MİKTAR` - günlüğün oluşturulduğu işlemler dizin konumunun tam sayısı. Bekleyen bir günlük olduğunda `null`.
-  - `transactionHash`: `VERİ`, 32 Bayt - bu günlüğün oluşturulduğu işlemlerin karması. Bekleyen bir günlük olduğunda `null`.
-  - `blockHash`: `VERİ`, 32 Bayt - bu günlüğün bulunduğu bloğun karması. Beklemedeyken `null`. Bekleyen bir günlük olduğunda `null`.
-  - `blockNumber`: `MİKTAR` - bu günlüğün bulunduğu blok numarası. Beklemedeyken `null`. Bekleyen bir günlük olduğunda `null`.
-  - `address`: `VERİ`, 20 Bayt - bu günlüğün kaynaklandığı adres.
-  - `data`: `VERİ` - değişken uzunluklu, dizine alınmamış günlük verileri. (_Solidity_'de: sıfır veya daha fazla 32 Bayt'lık dizine alınmamış günlük argümanları.)
-  - `topics`: `VERİ Dizisi` - 0 ila 4 arası 32 Baytlık dizine alınmış günlük argümanlarının `VERİ` dizisi. (_Solidity_'de: `anonymous` belirteciyle olayı bildirdiğiniz durumlar dışında, ilk konu olayın imzasının _karmasıdır_ (örneğin, `Deposit(address,bytes32,uint256)`)).
+- `eth_newBlockFilter` ile oluşturulan filtreler için dönüş değerleri blok hash'leridir (`DATA`, 32 Bayt), örn. `["0x3454645634534..."]`.
+- `eth_newPendingTransactionFilter ` ile oluşturulan filtreler için dönüş değerleri işlem hash'leridir (`DATA`, 32 Bayt), örn. `["0x6345343454645..."]`.
+- `eth_newFilter` ile oluşturulan filtreler için günlükler aşağıdaki parametrelere sahip nesnelerdir:
+  - `removed`: `TAG` - Günlük, bir zincir yeniden düzenlemesi nedeniyle kaldırıldığında `true` olur. Geçerli bir günlükse `false` olur.
+  - `logIndex`: `QUANTITY` - günlüğün bloktaki endeks konumunun tam sayısı. Bekleyen bir günlük olduğunda `null` olur.
+  - `transactionIndex`: `QUANTITY` - günlüğün oluşturulduğu işlemin endeks konumunun tam sayısı. Bekleyen bir günlük olduğunda `null` olur.
+  - `transactionHash`: `DATA`, 32 Bayt - bu günlüğün oluşturulduğu işlemin hash'i. Bekleyen bir günlük olduğunda `null` olur.
+  - `blockHash`: `DATA`, 32 Bayt - bu günlüğün içinde bulunduğu bloğun hash'i. Beklemede olduğunda `null` olur. Bekleyen bir günlük olduğunda `null` olur.
+  - `blockNumber`: `QUANTITY` - bu günlüğün içinde bulunduğu blok numarası. Beklemede olduğunda `null` olur. Bekleyen bir günlük olduğunda `null` olur.
+  - `address`: `DATA`, 20 Bayt - bu günlüğün kaynaklandığı adres.
+  - `data`: `DATA` - değişken uzunluklu endekslenmemiş günlük verisi. (_solidity_'de: sıfır veya daha fazla 32 Baytlık endekslenmemiş günlük argümanı.)
+  - `topics`: `Array of DATA` - 0 ila 4 adet 32 Baytlık `DATA` endekslenmiş günlük argümanı dizisi. (_solidity_'de: Olayı `anonymous` belirteci ile bildirmediğiniz sürece, ilk konu olayın imzasının _hash_'idir (örn. `Deposit(address,bytes32,uint256)`).)
 
 - **Örnek**
 
@@ -1687,13 +1684,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs {#eth_getfilterlogs}
+### eth_getFilterLogs {#eth-getfilterlogs}
 
-Verilen kimliğe sahip filtreyle eşleşen tüm günlüklerin bir dizisini döndürür.
+Verilen id'ye sahip filtreyle eşleşen tüm günlüklerin bir dizisini döndürür.
 
 **Parametreler**
 
-1. `MİKTAR` - Filtre kimliği.
+1. `QUANTITY` - Filtre id'si.
 
 ```js
 params: [
@@ -1702,7 +1699,7 @@ params: [
 ```
 
 **Döndürülenler**
-Bkz. [eth_getFilterChanges](#eth_getfilterchanges)
+Bkz. [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Örnek**
 
@@ -1711,21 +1708,21 @@ Bkz. [eth_getFilterChanges](#eth_getfilterchanges)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":74}'
 ```
 
-Sonuç bkz. [eth_getFilterChanges](#eth_getfilterchanges)
+Sonuç için bkz. [eth_getFilterChanges](#eth-getfilterchanges)
 
-### eth_getLogs {#eth_getlogs}
+### eth_getLogs {#eth-getlogs}
 
 Belirli bir filtre nesnesiyle eşleşen tüm günlüklerin bir dizisini döndürür.
 
 **Parametreler**
 
-1. `Nesne` - Filtre seçenekleri:
+1. `Object` - Filtre seçenekleri:
 
-- `fromBlock`: `MİKTAR|ETİKET` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya son önerilen blok için `"latest"`, en son güvenli blok için `"safe"`, en son kesinleşmiş blok için `"finalized"` veya henüz bir blokta olmayan işlemler için `"pending"`, `"earliest"`.
-- `toBlock`: `MİKTAR|ETİKET` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya son önerilen blok için `"latest"`, en son güvenli blok için `"safe"`, en son kesinleşmiş blok için `"finalized"` veya henüz bir blokta olmayan işlemler için `"pending"`, `"earliest"`.
-- `address`: `VERİ|Dizi`, 20 Bayt - (isteğe bağlı) Sözleşme adresi veya günlüklerin kaynaklanması gereken adreslerin listesi.
-- `topics`: `VERİ Dizisi`, - (isteğe bağlı) 32 Baytlık `VERİ` konuları dizisi. Konular sıraya bağlıdır. Her konu, "veya" seçenekleriyle birlikte bir VERİ dizisi de olabilir.
-- `blockHash`: `VERİ`, 32 Bayt - (isteğe bağlı, **gelecek**) EIP-234'ün eklenmesiyle, `blockHash`, döndürülen günlükleri 32 baytlık karma `blockHash` ile tek bir blokla kısıtlayan yeni bir filtre seçeneği olacaktır. `blockHash` kullanmak, `fromBlock` = `toBlock` = `blockHash` karmasına sahip blok numarası ile eşdeğerdir. Filtre kriterlerinde `blockHash` mevcutsa, ne `fromBlock` ne de `toBlock`'a izin verilmez.
+- `fromBlock`: `QUANTITY|TAG` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya önerilen son blok için `"latest"`, en son güvenli blok için `"safe"`, en son kesinleşmiş blok için `"finalized"` veya henüz bir blokta olmayan işlemler için `"pending"`, `"earliest"`.
+- `toBlock`: `QUANTITY|TAG` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya önerilen son blok için `"latest"`, en son güvenli blok için `"safe"`, en son kesinleşmiş blok için `"finalized"` veya henüz bir blokta olmayan işlemler için `"pending"`, `"earliest"`.
+- `address`: `DATA|Array`, 20 Bayt - (isteğe bağlı) Günlüklerin kaynaklanması gereken sözleşme adresi veya adreslerin bir listesi.
+- `topics`: `Array of DATA`, - (isteğe bağlı) 32 Baytlık `DATA` konuları dizisi. Konular sıraya bağlıdır. Her konu ayrıca "veya" seçeneklerine sahip bir DATA dizisi olabilir.
+- `blockHash`: `DATA`, 32 Bayt - (isteğe bağlı, **gelecek**) EIP-234'ün eklenmesiyle, `blockHash`, döndürülen günlükleri 32 baytlık `blockHash` hash'ine sahip tek bir blokla sınırlayan yeni bir filtre seçeneği olacaktır. `blockHash` kullanmak, `fromBlock` = `toBlock` = `blockHash` hash'ine sahip blok numarası ile eşdeğerdir. Filtre kriterlerinde `blockHash` mevcutsa, ne `fromBlock` ne de `toBlock` kullanımına izin verilir.
 
 ```js
 params: [
@@ -1738,7 +1735,7 @@ params: [
 ```
 
 **Döndürülenler**
-Bkz. [eth_getFilterChanges](#eth_getfilterchanges)
+Bkz. [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Örnek**
 
@@ -1747,15 +1744,15 @@ Bkz. [eth_getFilterChanges](#eth_getfilterchanges)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
 
-Sonuç bkz. [eth_getFilterChanges](#eth_getfilterchanges)
+Sonuç için bkz. [eth_getFilterChanges](#eth-getfilterchanges)
 
 ## Kullanım Örneği {#usage-example}
 
-### JSON_RPC kullanarak bir sözleşme dağıtma {#deploying-contract}
+### JSON-RPC kullanarak bir sözleşme dağıtmak {#deploying-contract}
 
-Bu bölüm, yalnızca RPC arayüzünü kullanarak bir sözleşmenin nasıl dağıtılacağının gösterimini içerir. Bu karmaşıklığın soyutlandığı, sözleşmeleri dağıtmak için alternatif yollar vardır — örneğin, [web3.js](https://web3js.readthedocs.io/) ve [web3.py](https://github.com/ethereum/web3.py) gibi RPC arayüzünün üzerine kurulu kütüphaneleri kullanmak. Bu soyutlamaların anlaşılması genellikle daha kolaydır ve hataya karşı daha korumalıdır, ancak kaputun altında neler oldup bittiğini anlamak yine de yardımcı olur.
+Bu bölüm, yalnızca RPC arayüzünü kullanarak bir sözleşmenin nasıl dağıtılacağına dair bir gösterim içerir. Bu karmaşıklığın soyutlandığı sözleşmeleri dağıtmanın alternatif yolları vardır; örneğin, RPC arayüzü üzerine inşa edilmiş [web3.js](https://web3js.readthedocs.io/) ve [web3.py](https://github.com/ethereum/web3.py) gibi kütüphaneleri kullanmak. Bu soyutlamaların anlaşılması genellikle daha kolaydır ve daha az hataya açıktır, ancak arka planda neler olduğunu anlamak yine de faydalıdır.
 
-Aşağıdaki, JSON-RPC arayüzü kullanılarak bir Ethereum düğümüne dağıtılacak olan `Multiply7` adlı basit bir akıllı sözleşmedir. Bu öğretici, okuyucunun zaten bir Geth düğümü çalıştırdığını varsayar. Düğümler ve istemciler hakkında daha fazla bilgiye [buradan](/developers/docs/nodes-and-clients/run-a-node) ulaşabilirsiniz. Geth olmayan istemciler için HTTP JSON-RPC'nin nasıl başlatılacağını görmek için lütfen bireysel [istemci](/developers/docs/nodes-and-clients/) belgelerine bakın. Çoğu istemci, varsayılan olarak `localhost:8545` üzerinde hizmet verir.
+Aşağıdaki, bir Ethereum düğümüne JSON-RPC arayüzü kullanılarak dağıtılacak olan `Multiply7` adlı basit bir akıllı sözleşmedir. Bu eğitim, okuyucunun halihazırda bir Geth düğümü çalıştırdığını varsaymaktadır. Düğümler ve istemciler hakkında daha fazla bilgi [burada](/developers/docs/nodes-and-clients/run-a-node) mevcuttur. Geth dışındaki istemciler için HTTP JSON-RPC'nin nasıl başlatılacağını görmek üzere lütfen ilgili [istemci](/developers/docs/nodes-and-clients/) belgelerine başvurun. Çoğu istemci varsayılan olarak `localhost:8545` üzerinde hizmet verir.
 
 ```javascript
 contract Multiply7 {
@@ -1767,15 +1764,15 @@ contract Multiply7 {
 }
 ```
 
-Yapılacak ilk şey, HTTP RPC arayüzünün etkinleştirilmesini sağlamaktır. Bu, Geth'e başlangıçta `--http` bayrağını sağladığımız anlamına gelir. Bu örnekte, özel bir geliştirme zincirinde Geth düğümünü kullanıyoruz. Bu yaklaşımı kullandığımızda gerçek ağda ether'e ihtiyacımız olmaz.
+Yapılacak ilk şey, HTTP RPC arayüzünün etkinleştirildiğinden emin olmaktır. Bu, başlangıçta Geth'e `--http` bayrağını sağladığımız anlamına gelir. Bu örnekte, özel bir geliştirme zincirindeki Geth düğümünü kullanıyoruz. Bu yaklaşımı kullanarak gerçek ağda Ether'e ihtiyacımız olmaz.
 
 ```bash
 geth --http --dev console 2>>geth.log
 ```
 
-Bu, `http://localhost:8545` üzerinde HTTP RPC arayüzünü başlatır.
+Bu, `http://localhost:8545` üzerinde HTTP RPC arayüzünü başlatacaktır.
 
-Arayüzün çalıştığını, coinbase adresini (hesaplar dizisinden ilk adresi alarak) ve bakiyeyi [curl](https://curl.se) kullanarak alarak doğrulayabiliriz. Lütfen bu örneklerdeki verilerin yerel düğümünüzde farklılık göstereceğini unutmayın. Bu komutları denemek istiyorsanız, ikinci kıvrılma isteğindeki istek paragraflarını ilkinden döndürülen sonuçla değiştirin.
+[curl](https://curl.se) kullanarak Coinbase adresini (hesaplar dizisinden ilk adresi alarak) ve bakiyeyi alıp arayüzün çalıştığını doğrulayabiliriz. Lütfen bu örneklerdeki verilerin yerel düğümünüzde farklılık göstereceğini unutmayın. Bu komutları denemek isterseniz, ikinci curl isteğindeki istek parametrelerini ilkinden dönen sonuçla değiştirin.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[], "id":1}' -H "Content-Type: application/json" localhost:8545
@@ -1785,16 +1782,16 @@ curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635
 {"id":2,"jsonrpc":"2.0","result":"0x1639e49bba16280000"}
 ```
 
-Sayılar on altılık kodlandığından, bakiye wei'de on altılılık bir dize olarak döndürülür. Ether'de bir sayı olarak bakiyeye sahip olmak istiyorsak, Geth konsolundan web3'ü kullanabiliriz.
+Sayılar onaltılık (hex) olarak kodlandığından, bakiye Wei cinsinden bir onaltılık dize olarak döndürülür. Bakiyeyi sayı olarak Ether cinsinden almak istersek, Geth konsolundan web3 kullanabiliriz.
 
 ```javascript
 web3.fromWei("0x1639e49bba16280000", "ether")
 // "410"
 ```
 
-Artık özel geliştirme zincirimizde bir miktar ether olduğuna göre sözleşmeyi dağıtabiliriz. İlk adım, Multiply7 sözleşmesini EVM'ye gönderilebilecek bayt kodunu derlemektir. Solidity derleyicisi olan solc'u kurmak için [Solidity belgelerini](https://docs.soliditylang.org/en/latest/installing-solidity.html) takip edin. (Örneğimizde kullanılan derleyici sürümüyle ([v0.4.20](https://github.com/ethereum/solidity/releases/tag/v0.4.20)) eşleşmesi için daha eski bir `solc` sürümü kullanmak isteyebilirsiniz.)
+Artık özel geliştirme zincirimizde bir miktar Ether olduğuna göre, sözleşmeyi dağıtabiliriz. İlk adım, Multiply7 sözleşmesini EVM'ye gönderilebilecek baytkoda derlemektir. Solidity derleyicisi olan solc'yi kurmak için [Solidity belgelerini](https://docs.soliditylang.org/en/latest/installing-solidity.html) izleyin. ([Örneğimiz için kullanılan derleyici sürümüyle](https://github.com/ethereum/solidity/releases/tag/v0.4.20) eşleşmesi için daha eski bir `solc` sürümü kullanmak isteyebilirsiniz.)
 
-Bir sonraki adım, Multiply7 sözleşmesini EVM'ye gönderilebilecek bayt koduna derlemektir.
+Bir sonraki adım, Multiply7 sözleşmesini EVM'ye gönderilebilecek baytkoda derlemektir.
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
@@ -1804,7 +1801,7 @@ Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-Artık derlenmiş koda sahip olduğumuza göre, onu dağıtmanın ne kadar gaza mal olacağını belirlememiz gerekiyor. RPC arayüzünde bize bir tahmin verecek bir `eth_estimateGas` metodu mevcuttur.
+Artık derlenmiş koda sahip olduğumuza göre, onu dağıtmanın ne kadar gaza mal olacağını belirlememiz gerekiyor. RPC arayüzü, bize bir tahmin verecek olan bir `eth_estimateGas` yöntemine sahiptir.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
@@ -1818,44 +1815,44 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-İşlem, düğüm tarafından kabul edilir ve bir işlem karması döndürülür. Bu karma, işlemi takip etmek için kullanılabilir. Bir sonraki adım, sözleşmemizin dağıtıldığı adresi belirlemektir. Gerçekleştirilen her işlemi bir makbuz oluşturacaktır. Bu makbuz, işlemin hangi bloka dahil olduğu ve ESM tarafından ne kadar gaz kullanıldığı gibi işlemle ilgili çeşitli bilgileri içerir. Bir işlem bir sözleşme oluşturuyorsa, sözleşme adresini de içerecektir. `eth_getTransactionReceipt` RPC metoduyla makbuzu alabiliriz.
+İşlem düğüm tarafından kabul edilir ve bir işlem hash'i döndürülür. Bu hash, işlemi izlemek için kullanılabilir. Bir sonraki adım, sözleşmemizin dağıtıldığı adresi belirlemektir. Yürütülen her işlem bir makbuz oluşturacaktır. Bu makbuz, işlemin hangi bloğa dahil edildiği ve EVM tarafından ne kadar gaz kullanıldığı gibi işlem hakkında çeşitli bilgiler içerir. Bir işlem bir sözleşme oluşturursa, sözleşme adresini de içerecektir. Makbuzu `eth_getTransactionReceipt` RPC yöntemiyle alabiliriz.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-Sözleşmemiz `0x4d03d617d700cf81935d7f797f4e2ae719648262` üzerinde oluşturuldu. Makbuz yerine boş bir sonuç, işlemin henüz bir bloğa dahil edilmediği anlamına gelir. Bir dakika bekleyin ve fikir birliği istemcinizin çalışıp çalışmadığını kontrol edip tekrar deneyin.
+Sözleşmemiz `0x4d03d617d700cf81935d7f797f4e2ae719648262` üzerinde oluşturuldu. Makbuz yerine boş (null) bir sonuç, işlemin henüz bir bloğa dahil edilmediği anlamına gelir. Bir süre bekleyin, fikir birliği istemcinizin çalışıp çalışmadığını kontrol edin ve yeniden deneyin.
 
-#### Akıllı sözleşmelerle etkileşim {#interacting-with-smart-contract}
+#### Akıllı sözleşmelerle etkileşim kurmak {#interacting-with-smart-contract}
 
-Bu örnekte, `eth_sendTransaction` kullanarak sözleşmenin `multiply` metoduna bir işlem göndereceğiz.
+Bu örnekte, sözleşmenin `multiply` yöntemine `eth_sendTransaction` kullanarak bir işlem göndereceğiz.
 
-`eth_sendTransaction` özellikle `from`, `to` ve `data` olmak üzere birkaç argüman gerektirir. `From` hesabımızın genel adresidir ve `to` da sözleşme adresidir. `data` argümanı, hangi metodun hangi argümanlarla çağrılması gerektiğini tanımlayan bir yük içerir. İşte bu noktada [ABI (uygulama ikili arayüzü)](https://docs.soliditylang.org/en/latest/abi-spec.html) devreye giriyor. ABI, EVM için verilerin nasıl tanımlanacağını ve kodlanacağını tanımlayan bir JSON dosyasıdır.
+`eth_sendTransaction` birkaç argüman gerektirir, özellikle `from`, `to` ve `data`. `From` hesabımızın genel adresidir ve `to` sözleşme adresidir. `data` argümanı, hangi yöntemin hangi argümanlarla çağrılması gerektiğini tanımlayan bir yük (payload) içerir. İşte bu noktada [ABI (uygulama ikili arayüzü)](https://docs.soliditylang.org/en/latest/abi-spec.html) devreye girer. ABI, EVM için verilerin nasıl tanımlanacağını ve kodlanacağını belirleyen bir JSON dosyasıdır.
 
-Yükün baytları, sözleşmedeki hangi yöntemin çağrılacağını tanımlar. Bu, fonksiyon adı ve argüman türleri üzerindeki Keccak karma değerinin ilk 4 baytıdır ve on altılık şekilde kodlanmıştır. Çarpma fonksiyonu, uint256 için bir takma ad olan uint'i kabul eder. Bu, bize şunu bırakır:
+Yükün baytları, sözleşmede hangi yöntemin çağrılacağını tanımlar. Bu, işlev adı ve argüman türleri üzerinden alınan Keccak hash'inin onaltılık (hex) olarak kodlanmış ilk 4 baytıdır. Çarpma (multiply) işlevi, uint256 için bir takma ad olan bir uint kabul eder. Bu bize şunu verir:
 
 ```javascript
 web3.sha3("multiply(uint256)").substring(0, 10)
 // "0xc6888fa1"
 ```
 
-Bir sonraki adım, argümanları kodlamaktır. Yalnızca bir uint256 var, diyelim ki değeri 6. ABI, uint256 türlerinin nasıl kodlanacağını belirten bir bölüme sahiptir.
+Bir sonraki adım argümanları kodlamaktır. Sadece bir tane uint256 vardır, diyelim ki 6 değeri. ABI'nin uint256 türlerinin nasıl kodlanacağını belirten bir bölümü vardır.
 
-`int<M>: enc(X)`, X'in büyük endian ikinin tümleyeni kodlamasıdır, yüksek dereceli (sol) tarafta negatif X için 0xff ve uzunluk 32 baytın katı olacak şekilde pozitif X için sıfır baytlarla doldurulmuştur.
+`int<M>: enc(X)`, X'in büyük uçlu (big-endian) ikiye tümleyen kodlamasıdır; uzunluğun 32 baytın katı olması için negatif X için yüksek dereceli (sol) tarafta 0xff ile ve pozitif X için sıfır baytlarıyla doldurulur.
 
 Bu, `0000000000000000000000000000000000000000000000000000000000000006` olarak kodlanır.
 
-Fonksiyon seçiciyi ve kodlanmış argümanı birleştirdiğimizde verilerimiz `0xc6888fa10000000000000000000000000000000000000000000000000000000000000006` olacaktır.
+İşlev seçiciyi ve kodlanmış argümanı birleştirdiğimizde verimiz `0xc6888fa10000000000000000000000000000000000000000000000000000000000000006` olacaktır.
 
-Bu, artık düğüme gönderilebilir:
+Bu artık düğüme gönderilebilir:
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0xeb85a5557e5bdc18ee1934a89d8bb402398ee26a", "to": "0x6ff93b4b46b41c0c3c9baee01c255d3b4675963d", "data": "0xc6888fa10000000000000000000000000000000000000000000000000000000000000006"}], "id": 8}' -H "Content-Type: application/json" localhost:8545
 {"id":8,"jsonrpc":"2.0","result":"0x759cf065cbc22e9d779748dc53763854e5376eea07409e590c990eafc0869d74"}
 ```
 
-Bir işlem gönderildiğinden, bir işlem karması döndürülmüştür. Makbuzun alınması şunları sağlar:
+Bir işlem gönderildiği için bir işlem hash'i döndürüldü. Makbuzu almak şunu verir:
 
 ```javascript
 {
@@ -1879,16 +1876,16 @@ Bir işlem gönderildiğinden, bir işlem karması döndürülmüştür. Makbuzu
 }
 ```
 
-Makbuz, bir günlük içerir. Bu günlük, işlem yürütülürken EVM tarafından oluşturulur ve makbuza dahil edilir. `multiply` fonksiyonu, `Print` olayının girdinin 7 katı ile tetiklendiğini gösterir. `Print` olayının argümanı bir uint256 olduğundan, bunu ABI kurallarına göre çözebiliriz ve bu da bize beklenen ondalık sayı 42'yi verir. Verilerin yanı sıra, günlüğü hangi olayın oluşturduğunu belirlemek için konuların kullanılabileceğini belirtmekte fayda vardır:
+Makbuz bir günlük içerir. Bu günlük, işlem yürütülürken EVM tarafından oluşturulmuş ve makbuza dahil edilmiştir. `multiply` işlevi, `Print` olayının girdinin 7 katı ile tetiklendiğini gösterir. `Print` olayı için argüman bir uint256 olduğundan, onu ABI kurallarına göre çözebiliriz, bu da bize beklenen ondalık 42 değerini verecektir. Verilerin yanı sıra, günlüğü hangi olayın oluşturduğunu belirlemek için konuların (topics) kullanılabileceğini belirtmekte fayda var:
 
 ```javascript
 web3.sha3("Print(uint256)")
 // "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
 ```
 
-Bu, JSON-RPC'nin doğrudan kullanımını gösteren en yaygın görevlerden bazılarına kısa bir giriş niteliğindeydi.
+Bu, JSON-RPC'nin doğrudan kullanımını gösteren, en yaygın görevlerden bazılarına kısa bir girişti.
 
-## Alakalı başlıklar {#related-topics}
+## İlgili konular {#related-topics}
 
 - [JSON-RPC spesifikasyonu](http://www.jsonrpc.org/specification)
 - [Düğümler ve istemciler](/developers/docs/nodes-and-clients/)

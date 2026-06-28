@@ -1,4 +1,4 @@
-# APIs we use in our website
+# APIs we use on our website
 
 ## Environment File Structure
 
@@ -11,7 +11,7 @@ This project uses two separate `.env.local` files:
 
 Some variables like `GITHUB_TOKEN_READ_ONLY` and Sentry config are shared and should be set in both files.
 
-See `src/data-layer/.env.example` for all data-layer specific variables.
+See `src/data-layer/.env.example` for all data-layer-specific variables.
 
 ---
 
