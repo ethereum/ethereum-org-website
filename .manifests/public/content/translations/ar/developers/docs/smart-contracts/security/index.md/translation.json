@@ -1,0 +1,964 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-19T19:20:05.142Z",
+  "englishManifestHash": "28d8e4a08705",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-db1122",
+    "LINK-83dcc7",
+    "LINK-840755",
+    "LINK-a7eb5e",
+    "CODE-efa1f3",
+    "CODE-3c4623",
+    "CODE-715dc8",
+    "CODE-e6a019",
+    "CODE-4b1b8a",
+    "LINK-9b8a79",
+    "CODE-504d7b",
+    "CODE-7e4b49",
+    "CODE-bcc52f",
+    "CODE-504d7b",
+    "CODE-c4d0cf",
+    "CODE-c4d0cf",
+    "CODE-7e4b49",
+    "CODE-7e4b49",
+    "CODE-7e4b49",
+    "CODE-bcc52f",
+    "CODE-bcc52f",
+    "CODE-bcc52f",
+    "CODEBLOCK-78f58a",
+    "LINK-149ae7",
+    "LINK-8865f7",
+    "LINK-531f38",
+    "LINK-851715",
+    "LINK-36965a",
+    "LINK-7b2731",
+    "LINK-b692ac",
+    "LINK-386211",
+    "LINK-087353",
+    "LINK-12c146",
+    "LINK-dd763a",
+    "LINK-28273d",
+    "LINK-3bded6",
+    "LINK-75e214",
+    "LINK-60fe81",
+    "LINK-0bbcb9",
+    "LINK-64909f",
+    "LINK-2b9ea3",
+    "LINK-0ceaec",
+    "CODE-6b546b",
+    "CODE-6b546b",
+    "CODE-bfa3d0",
+    "CODE-59114e",
+    "LINK-91e293",
+    "CODE-fcbcf1",
+    "CODE-b5bea4",
+    "CODE-b5bea4",
+    "LINK-009255",
+    "CODEBLOCK-dc65bf",
+    "CODE-738e17",
+    "CODE-fcbcf1",
+    "CODE-b5bea4",
+    "CODE-aae385",
+    "CODE-659b03",
+    "CODE-738e17",
+    "CODE-659b03",
+    "CODE-2df2ce",
+    "CODE-aae385",
+    "CODE-e8e030",
+    "LINK-fea547",
+    "LINK-aebd65",
+    "LINK-5fe83c",
+    "LINK-1cfc37",
+    "LINK-809ffb",
+    "LINK-747481",
+    "LINK-4ee767",
+    "LINK-9647cf",
+    "CODEBLOCK-d47c32",
+    "CODE-dfea82",
+    "CODE-dfea82",
+    "CODE-d72cee",
+    "CODE-dfea82",
+    "CODE-ce4c2a",
+    "CODE-bfa3d0",
+    "CODE-dfea82",
+    "CODE-ce4c2a",
+    "CODEBLOCK-abd897",
+    "CODE-2969c6",
+    "CODE-dfea82",
+    "CODE-d72cee",
+    "CODE-55a37d",
+    "CODE-2969c6",
+    "CODE-d72cee",
+    "CODE-c26f22",
+    "CODEBLOCK-e57514",
+    "LINK-f6361a",
+    "LINK-2bd081",
+    "LINK-f2f8ec",
+    "CODE-d72cee",
+    "CODEBLOCK-60af9e",
+    "CODE-dfea82",
+    "CODE-2969c6",
+    "CODE-6b67d4",
+    "CODE-219262",
+    "CODE-b5bea4",
+    "CODE-fcbcf1",
+    "CODEBLOCK-46b4b9",
+    "LINK-f19375",
+    "CODE-86768c",
+    "CODE-9556b8",
+    "CODE-c3f202",
+    "CODE-5feceb",
+    "CODE-5feceb",
+    "CODE-86768c",
+    "CODE-9556b8",
+    "CODEBLOCK-5ac2af",
+    "LINK-a9b643",
+    "LINK-431b7a",
+    "LINK-2e633d",
+    "LINK-2f501c",
+    "LINK-670993",
+    "LINK-554873",
+    "LINK-64469d",
+    "LINK-b16c66",
+    "LINK-a8f53c",
+    "LINK-c6f407",
+    "LINK-ad53bf",
+    "LINK-4aed42",
+    "LINK-21f96f",
+    "LINK-0cd6d5",
+    "LINK-4ee767",
+    "LINK-64cc3d",
+    "LINK-8bcb6d",
+    "LINK-e21583",
+    "LINK-8b62da",
+    "LINK-206688",
+    "LINK-2ecc99",
+    "LINK-ba4ba4",
+    "LINK-28dc1b",
+    "LINK-b252fc",
+    "LINK-f1102a",
+    "LINK-48c1a4",
+    "LINK-300f22",
+    "LINK-dca7a6",
+    "LINK-9299ef",
+    "LINK-2a9ab0",
+    "LINK-44e094",
+    "LINK-ae5353",
+    "LINK-b28618",
+    "LINK-e80f49",
+    "LINK-904e1b",
+    "LINK-d49bfb",
+    "LINK-94507b",
+    "LINK-05667c",
+    "LINK-eb086e",
+    "LINK-e7f92a",
+    "LINK-9e1bd0",
+    "LINK-c87b72",
+    "LINK-688690",
+    "LINK-f63179",
+    "LINK-ac46b1",
+    "LINK-1fd244",
+    "LINK-2c5551",
+    "LINK-ea0b26",
+    "LINK-61e870",
+    "LINK-769490",
+    "LINK-ee8c7f",
+    "LINK-d89326",
+    "LINK-ecb109",
+    "LINK-df3ac8",
+    "LINK-5cdd31",
+    "LINK-add33e"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-78f58a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dc65bf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d47c32": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-abd897": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e57514": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-60af9e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-46b4b9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5ac2af": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-efa1f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "public"
+      }
+    },
+    "CODE-3c4623": {
+      "type": "inline-code",
+      "values": {
+        "content": "external"
+      }
+    },
+    "CODE-715dc8": {
+      "type": "inline-code",
+      "values": {
+        "content": "private"
+      }
+    },
+    "CODE-e6a019": {
+      "type": "inline-code",
+      "values": {
+        "content": "OnlyOwner"
+      }
+    },
+    "CODE-4b1b8a": {
+      "type": "inline-code",
+      "values": {
+        "content": "Owner"
+      }
+    },
+    "CODE-504d7b": {
+      "type": "inline-code",
+      "values": {
+        "content": "require()"
+      }
+    },
+    "CODE-7e4b49": {
+      "type": "inline-code",
+      "values": {
+        "content": "assert()"
+      }
+    },
+    "CODE-bcc52f": {
+      "type": "inline-code",
+      "values": {
+        "content": "revert()"
+      }
+    },
+    "CODE-c4d0cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "require"
+      }
+    },
+    "CODE-6b546b": {
+      "type": "inline-code",
+      "values": {
+        "content": "delegatecall()"
+      }
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-59114e": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.value"
+      }
+    },
+    "CODE-fcbcf1": {
+      "type": "inline-code",
+      "values": {
+        "content": "false"
+      }
+    },
+    "CODE-b5bea4": {
+      "type": "inline-code",
+      "values": {
+        "content": "true"
+      }
+    },
+    "CODE-738e17": {
+      "type": "inline-code",
+      "values": {
+        "content": "isStopped"
+      }
+    },
+    "CODE-aae385": {
+      "type": "inline-code",
+      "values": {
+        "content": "onlyWhenStopped"
+      }
+    },
+    "CODE-659b03": {
+      "type": "inline-code",
+      "values": {
+        "content": "stoppedInEmergency"
+      }
+    },
+    "CODE-2df2ce": {
+      "type": "inline-code",
+      "values": {
+        "content": "deposit()"
+      }
+    },
+    "CODE-e8e030": {
+      "type": "inline-code",
+      "values": {
+        "content": "emergencyWithdraw()"
+      }
+    },
+    "CODE-dfea82": {
+      "type": "inline-code",
+      "values": {
+        "content": "withdraw()"
+      }
+    },
+    "CODE-d72cee": {
+      "type": "inline-code",
+      "values": {
+        "content": "Victim"
+      }
+    },
+    "CODE-ce4c2a": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender.call.value()"
+      }
+    },
+    "CODE-2969c6": {
+      "type": "inline-code",
+      "values": {
+        "content": "Attacker"
+      }
+    },
+    "CODE-55a37d": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender.call.value"
+      }
+    },
+    "CODE-c26f22": {
+      "type": "inline-code",
+      "values": {
+        "content": "withdraw"
+      }
+    },
+    "CODE-6b67d4": {
+      "type": "inline-code",
+      "values": {
+        "content": "NoLongerAVictim"
+      }
+    },
+    "CODE-219262": {
+      "type": "inline-code",
+      "values": {
+        "content": "balances[msg.sender]"
+      }
+    },
+    "CODE-86768c": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint8"
+      }
+    },
+    "CODE-9556b8": {
+      "type": "inline-code",
+      "values": {
+        "content": "255"
+      }
+    },
+    "CODE-c3f202": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint"
+      }
+    },
+    "CODE-5feceb": {
+      "type": "inline-code",
+      "values": {
+        "content": "0"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-db1122": {
+      "type": "link",
+      "values": {
+        "url": "https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/"
+      }
+    },
+    "LINK-83dcc7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach"
+      }
+    },
+    "LINK-840755": {
+      "type": "link",
+      "values": {
+        "url": "https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether"
+      }
+    },
+    "LINK-a7eb5e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-9b8a79": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/#multisig"
+      }
+    },
+    "LINK-149ae7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-8865f7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/testing/#unit-testing"
+      }
+    },
+    "LINK-531f38": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/testing/#static-dynamic-analysis"
+      }
+    },
+    "LINK-851715": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Control-flow_graph"
+      }
+    },
+    "LINK-36965a": {
+      "type": "link",
+      "values": {
+        "url": "https://deepsource.io/glossary/ast/"
+      }
+    },
+    "LINK-7b2731": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry"
+      }
+    },
+    "LINK-b692ac": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/formal-verification"
+      }
+    },
+    "LINK-386211": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/tinchoabbate/status/1400170232904400897"
+      }
+    },
+    "LINK-087353": {
+      "type": "link",
+      "values": {
+        "url": "https://inference.ag/blog/2023-08-14-tips/"
+      }
+    },
+    "LINK-12c146": {
+      "type": "link",
+      "values": {
+        "url": "https://www.optimism.io/"
+      }
+    },
+    "LINK-dd763a": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-28273d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.saurik.com/optimism.html"
+      }
+    },
+    "LINK-3bded6": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/"
+      }
+    },
+    "LINK-75e214": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7"
+      }
+    },
+    "LINK-60fe81": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    },
+    "LINK-0bbcb9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Cyfrin/aderyn"
+      }
+    },
+    "LINK-64909f": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity.readthedocs.io/en/develop/natspec-format.html"
+      }
+    },
+    "LINK-2b9ea3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern"
+      }
+    },
+    "LINK-0ceaec": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries"
+      }
+    },
+    "LINK-91e293": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/upgrading/"
+      }
+    },
+    "LINK-009255": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/fravoll/solidity-patterns/blob/master/EmergencyStop/EmergencyStop.sol"
+      }
+    },
+    "LINK-fea547": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.15/contracts.html#events"
+      }
+    },
+    "LINK-aebd65": {
+      "type": "link",
+      "values": {
+        "url": "/defi/#flash-loans"
+      }
+    },
+    "LINK-5fe83c": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/"
+      }
+    },
+    "LINK-1cfc37": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/"
+      }
+    },
+    "LINK-809ffb": {
+      "type": "link",
+      "values": {
+        "url": "https://hackernoon.com/governance-is-the-holy-grail-for-daos"
+      }
+    },
+    "LINK-747481": {
+      "type": "link",
+      "values": {
+        "url": "https://dacian.me/dao-governance-defi-attacks"
+      }
+    },
+    "LINK-4ee767": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/5.x/"
+      }
+    },
+    "LINK-9647cf": {
+      "type": "link",
+      "values": {
+        "url": "https://www.computerhope.com/jargon/c/contflow.htm"
+      }
+    },
+    "LINK-f6361a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coindesk.com/learn/understanding-the-dao-attack"
+      }
+    },
+    "LINK-2bd081": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/pcaversaccio/reentrancy-attacks"
+      }
+    },
+    "LINK-f2f8ec": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern"
+      }
+    },
+    "LINK-f19375": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment"
+      }
+    },
+    "LINK-a9b643": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/2.x/api/math"
+      }
+    },
+    "LINK-431b7a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/oracles/"
+      }
+    },
+    "LINK-2e633d": {
+      "type": "link",
+      "values": {
+        "url": "/defi/"
+      }
+    },
+    "LINK-2f501c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples"
+      }
+    },
+    "LINK-670993": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles"
+      }
+    },
+    "LINK-554873": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/testing/#testing-tools-and-libraries"
+      }
+    },
+    "LINK-64469d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/formal-verification/#formal-verification-tools"
+      }
+    },
+    "LINK-b16c66": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/testing/#smart-contract-auditing-services"
+      }
+    },
+    "LINK-a8f53c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/testing/#bug-bounty-platforms"
+      }
+    },
+    "LINK-c6f407": {
+      "type": "link",
+      "values": {
+        "url": "https://forkchecker.hashex.org/"
+      }
+    },
+    "LINK-ad53bf": {
+      "type": "link",
+      "values": {
+        "url": "https://abi.hashex.org/"
+      }
+    },
+    "LINK-4aed42": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Cyfrin/aderyn"
+      }
+    },
+    "LINK-21f96f": {
+      "type": "link",
+      "values": {
+        "url": "https://tenderly.co/monitoring"
+      }
+    },
+    "LINK-0cd6d5": {
+      "type": "link",
+      "values": {
+        "url": "https://safe.global/"
+      }
+    },
+    "LINK-64cc3d": {
+      "type": "link",
+      "values": {
+        "url": "https://diligence.consensys.io/"
+      }
+    },
+    "LINK-8bcb6d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.certik.com/"
+      }
+    },
+    "LINK-e21583": {
+      "type": "link",
+      "values": {
+        "url": "https://www.trailofbits.com/"
+      }
+    },
+    "LINK-8b62da": {
+      "type": "link",
+      "values": {
+        "url": "https://peckshield.com/"
+      }
+    },
+    "LINK-206688": {
+      "type": "link",
+      "values": {
+        "url": "https://quantstamp.com/"
+      }
+    },
+    "LINK-2ecc99": {
+      "type": "link",
+      "values": {
+        "url": "https://www.openzeppelin.com/security-audits"
+      }
+    },
+    "LINK-ba4ba4": {
+      "type": "link",
+      "values": {
+        "url": "https://runtimeverification.com/"
+      }
+    },
+    "LINK-28dc1b": {
+      "type": "link",
+      "values": {
+        "url": "https://hacken.io"
+      }
+    },
+    "LINK-b252fc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.nethermind.io/smart-contract-audits"
+      }
+    },
+    "LINK-f1102a": {
+      "type": "link",
+      "values": {
+        "url": "https://hashex.org/"
+      }
+    },
+    "LINK-48c1a4": {
+      "type": "link",
+      "values": {
+        "url": "https://code4rena.com/"
+      }
+    },
+    "LINK-300f22": {
+      "type": "link",
+      "values": {
+        "url": "https://codehawks.com/"
+      }
+    },
+    "LINK-dca7a6": {
+      "type": "link",
+      "values": {
+        "url": "https://cyfrin.io"
+      }
+    },
+    "LINK-9299ef": {
+      "type": "link",
+      "values": {
+        "url": "https://immunebytes.com/smart-contract-audit/"
+      }
+    },
+    "LINK-2a9ab0": {
+      "type": "link",
+      "values": {
+        "url": "https://oxor.io/"
+      }
+    },
+    "LINK-44e094": {
+      "type": "link",
+      "values": {
+        "url": "https://inference.ag/"
+      }
+    },
+    "LINK-ae5353": {
+      "type": "link",
+      "values": {
+        "url": "https://immunefi.com/"
+      }
+    },
+    "LINK-b28618": {
+      "type": "link",
+      "values": {
+        "url": "https://www.hackerone.com/"
+      }
+    },
+    "LINK-e80f49": {
+      "type": "link",
+      "values": {
+        "url": "https://hackenproof.com/"
+      }
+    },
+    "LINK-904e1b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.sherlock.xyz/"
+      }
+    },
+    "LINK-d49bfb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.codehawks.com/"
+      }
+    },
+    "LINK-94507b": {
+      "type": "link",
+      "values": {
+        "url": "https://consensysdiligence.github.io/smart-contract-best-practices/attacks/"
+      }
+    },
+    "LINK-05667c": {
+      "type": "link",
+      "values": {
+        "url": "https://swcregistry.io/"
+      }
+    },
+    "LINK-eb086e": {
+      "type": "link",
+      "values": {
+        "url": "https://rekt.news/"
+      }
+    },
+    "LINK-e7f92a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/blockthreat/blocksec-ctfs"
+      }
+    },
+    "LINK-9e1bd0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.webopedia.com/definitions/ctf-event/amp/"
+      }
+    },
+    "LINK-c87b72": {
+      "type": "link",
+      "values": {
+        "url": "https://www.damnvulnerabledefi.xyz/"
+      }
+    },
+    "LINK-688690": {
+      "type": "link",
+      "values": {
+        "url": "https://ethernaut.openzeppelin.com/"
+      }
+    },
+    "LINK-f63179": {
+      "type": "link",
+      "values": {
+        "url": "https://app.hackthebox.com/tracks/HackenProof-Track"
+      }
+    },
+    "LINK-ac46b1": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.github.io/smart-contract-best-practices/"
+      }
+    },
+    "LINK-1fd244": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/nascentxyz/simple-security-toolkit"
+      }
+    },
+    "LINK-2c5551": {
+      "type": "link",
+      "values": {
+        "url": "https://fravoll.github.io/solidity-patterns/"
+      }
+    },
+    "LINK-ea0b26": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.16/security-considerations.html"
+      }
+    },
+    "LINK-61e870": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/securing/SCSVS"
+      }
+    },
+    "LINK-769490": {
+      "type": "link",
+      "values": {
+        "url": "https://updraft.cyfrin.io/courses/security"
+      }
+    },
+    "LINK-ee8c7f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/secure-development-workflow/"
+      }
+    },
+    "LINK-d89326": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/"
+      }
+    },
+    "LINK-ecb109": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/"
+      }
+    },
+    "LINK-df3ac8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/smart-contract-security-guidelines/"
+      }
+    },
+    "LINK-5cdd31": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/token-integration-checklist/"
+      }
+    },
+    "LINK-add33e": {
+      "type": "link",
+      "values": {
+        "url": "https://updraft.cyfrin.io/courses/security"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T19:20:05.142Z",
+      "status": "success"
+    }
+  }
+}

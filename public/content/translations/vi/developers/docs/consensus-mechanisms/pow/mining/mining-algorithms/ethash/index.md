@@ -8,57 +8,54 @@ lang: vi
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash là thuật toán khai thác bằng chứng công việc của Ethereum. Bằng chứng công việc hiện đã được **tắt hoàn toàn** và Ethereum hiện được bảo mật bằng cách sử dụng [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/). Đọc thêm về [The Merge](/roadmap/merge/), [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/) và [đặt cược](/staking/). Trang này mang tính chất lịch sử!
+   Ethash từng là thuật toán khai thác bằng chứng công việc (PoW) của Ethereum. Bằng chứng công việc hiện đã bị **tắt hoàn toàn** và Ethereum hiện được bảo mật bằng [bằng chứng cổ phần (PoS)](/developers/docs/consensus-mechanisms/pos/). Đọc thêm về [The Merge](/roadmap/merge/), [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/) và [việc đặt cọc](/staking/). Trang này chỉ dành cho mục đích tham khảo lịch sử!  
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Ethash là một phiên bản sửa đổi của thuật toán [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). Bằng chứng công việc Ethash có [độ khó bộ nhớ](https://wikipedia.org/wiki/Memory-hard_function), điều này được cho là làm cho thuật toán có khả năng kháng vi mạch tích hợp chuyên dụng (ASIC). Các vi mạch tích hợp chuyên dụng (ASIC) Ethash cuối cùng đã được phát triển nhưng việc khai thác bằng GPU vẫn là một lựa chọn khả thi cho đến khi bằng chứng công việc bị tắt. Ethash vẫn được sử dụng để khai thác các đồng tiền mã hóa khác trên các mạng bằng chứng công việc không phải của Ethereum.
+Ethash là một phiên bản sửa đổi của thuật toán [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). Bằng chứng công việc Ethash [đòi hỏi nhiều bộ nhớ (memory hard)](https://wikipedia.org/wiki/Memory-hard_function), điều này được cho là giúp thuật toán có khả năng kháng ASIC. Các máy ASIC cho Ethash cuối cùng cũng được phát triển nhưng việc khai thác bằng GPU vẫn là một lựa chọn khả thi cho đến khi bằng chứng công việc bị tắt. Ethash vẫn được sử dụng để khai thác các đồng tiền khác trên các mạng lưới bằng chứng công việc không phải Ethereum khác.
 
 ## Ethash hoạt động như thế nào? {#how-does-ethash-work}
 
-Độ khó bộ nhớ đạt được bằng một thuật toán bằng chứng công việc yêu cầu chọn các tập hợp con của một tài nguyên cố định phụ thuộc vào nonce và tiêu đề khối. Tài nguyên này (kích thước vài gigabyte) được gọi là DAG. DAG được thay đổi sau mỗi 30.000 khối, một khoảng thời gian ~125 giờ được gọi là một tham số epoch (khoảng 5,2 ngày) và mất một khoảng thời gian để tạo. Vì DAG chỉ phụ thuộc vào chiều cao khối, nó có thể được tạo trước, nhưng nếu không, máy khách cần đợi cho đến khi kết thúc quá trình này để tạo ra một khối. Nếu các máy khách không tạo trước và lưu vào bộ đệm DAG trước thời hạn, mạng có thể gặp phải độ trễ khối lớn ở mỗi lần chuyển tiếp tham số epoch. Lưu ý rằng DAG không cần phải được tạo để xác minh bằng chứng công việc, về cơ bản cho phép xác minh bằng cả CPU thấp và bộ nhớ nhỏ.
+Tính chất đòi hỏi nhiều bộ nhớ đạt được nhờ một thuật toán bằng chứng công việc yêu cầu chọn các tập con của một tài nguyên cố định phụ thuộc vào nonce và tiêu đề block. Tài nguyên này (có kích thước vài gigabyte) được gọi là DAG. DAG được thay đổi sau mỗi 30000 khối, một khoảng thời gian ~125 giờ được gọi là một kỷ nguyên (khoảng 5,2 ngày) và mất một khoảng thời gian để tạo ra. Vì DAG chỉ phụ thuộc vào chiều cao khối, nó có thể được tạo trước, nhưng nếu không, client cần phải đợi cho đến khi quá trình này kết thúc để tạo ra một khối. Nếu các client không tạo trước và lưu trữ DAG vào bộ nhớ đệm (cache) từ trước, mạng lưới có thể gặp phải sự chậm trễ khối lớn ở mỗi lần chuyển đổi kỷ nguyên. Lưu ý rằng DAG không cần phải được tạo ra để xác minh bằng chứng công việc, về cơ bản cho phép xác minh với cả CPU thấp và bộ nhớ nhỏ.
 
-Lộ trình chung mà thuật toán thực hiện như sau:
+Quy trình chung mà thuật toán thực hiện như sau:
 
-1. Tồn tại một **seed** có thể được tính toán cho mỗi khối bằng cách quét qua các tiêu đề khối cho đến thời điểm đó.
-2. Từ seed, người ta có thể tính toán một **bộ đệm giả ngẫu nhiên 16 MB**. Các máy khách nhẹ lưu trữ bộ đệm.
-3. Từ bộ đệm, chúng ta có thể tạo ra một **bộ dữ liệu 1 GB**, với thuộc tính là mỗi mục trong bộ dữ liệu chỉ phụ thuộc vào một số lượng nhỏ các mục từ bộ đệm. Các máy khách đầy đủ và thợ đào lưu trữ bộ dữ liệu. Bộ dữ liệu tăng tuyến tính theo thời gian.
-4. Việc khai thác bao gồm việc lấy các lát ngẫu nhiên của bộ dữ liệu và băm chúng lại với nhau. Việc xác minh có thể được thực hiện với bộ nhớ thấp bằng cách sử dụng bộ đệm để tái tạo các phần cụ thể của bộ dữ liệu mà bạn cần, vì vậy bạn chỉ cần lưu trữ bộ đệm.
+1. Có một **seed** (hạt giống) có thể được tính toán cho mỗi khối bằng cách quét qua các tiêu đề block cho đến thời điểm đó.
+2. Từ seed, người ta có thể tính toán một **bộ nhớ đệm giả ngẫu nhiên 16 MB**. Các light client lưu trữ bộ nhớ đệm này.
+3. Từ bộ nhớ đệm, chúng ta có thể tạo ra một **tập dữ liệu 1 GB**, với đặc tính là mỗi mục trong tập dữ liệu chỉ phụ thuộc vào một số lượng nhỏ các mục từ bộ nhớ đệm. Các full client và thợ đào lưu trữ tập dữ liệu này. Tập dữ liệu tăng trưởng tuyến tính theo thời gian.
+4. Việc khai thác liên quan đến việc lấy các phần ngẫu nhiên của tập dữ liệu và băm chúng lại với nhau. Việc xác minh có thể được thực hiện với bộ nhớ thấp bằng cách sử dụng bộ nhớ đệm để tạo lại các phần cụ thể của tập dữ liệu mà bạn cần, vì vậy bạn chỉ cần lưu trữ bộ nhớ đệm.
 
-Bộ dữ liệu lớn được cập nhật sau mỗi 30.000 khối, vì vậy phần lớn nỗ lực của một thợ đào sẽ là đọc bộ dữ liệu chứ không phải thay đổi nó.
+Tập dữ liệu lớn được cập nhật một lần sau mỗi 30000 khối, vì vậy phần lớn nỗ lực của thợ đào sẽ là đọc tập dữ liệu, chứ không phải thực hiện các thay đổi đối với nó.
 
-## Các định nghĩa {#definitions}
+## Định nghĩa {#definitions}
 
 Chúng tôi sử dụng các định nghĩa sau:
 
 ```
-WORD_BYTES = 4                    # byte trong một từ
-DATASET_BYTES_INIT = 2**30        # byte trong bộ dữ liệu tại genesis
-DATASET_BYTES_GROWTH = 2**23      # sự tăng trưởng của bộ dữ liệu trên mỗi tham số epoch
-CACHE_BYTES_INIT = 2**24          # byte trong bộ đệm tại genesis
-CACHE_BYTES_GROWTH = 2**17        # sự tăng trưởng của bộ đệm trên mỗi tham số epoch
-CACHE_MULTIPLIER=1024             # Kích thước của DAG so với bộ đệm
-EPOCH_LENGTH = 30000              # khối trên mỗi tham số epoch
-MIX_BYTES = 128                   # độ rộng của mix
-HASH_BYTES = 64                   # độ dài hàm băm tính bằng byte
-DATASET_PARENTS = 256             # số lượng các mục cha của mỗi phần tử trong bộ dữ liệu
-CACHE_ROUNDS = 3                  # số vòng trong quá trình sản xuất bộ đệm
+WORD_BYTES = 4                    # số byte trong một word
+DATASET_BYTES_INIT = 2**30        # số byte trong tập dữ liệu tại genesis
+DATASET_BYTES_GROWTH = 2**23      # mức tăng trưởng tập dữ liệu mỗi kỷ nguyên
+CACHE_BYTES_INIT = 2**24          # số byte trong bộ nhớ đệm tại genesis
+CACHE_BYTES_GROWTH = 2**17        # mức tăng trưởng bộ nhớ đệm mỗi kỷ nguyên
+CACHE_MULTIPLIER=1024             # Kích thước của DAG so với bộ nhớ đệm
+EPOCH_LENGTH = 30000              # số khối mỗi kỷ nguyên
+MIX_BYTES = 128                   # chiều rộng của mix
+HASH_BYTES = 64                   # độ dài mã băm tính bằng byte
+DATASET_PARENTS = 256             # số lượng phần tử cha của mỗi phần tử tập dữ liệu
+CACHE_ROUNDS = 3                  # số vòng trong quá trình tạo bộ nhớ đệm
 ACCESSES = 64                     # số lần truy cập trong vòng lặp hashimoto
 ```
 
 ### Việc sử dụng 'SHA3' {#sha3}
 
-Sự phát triển của Ethereum trùng hợp với sự phát triển của tiêu chuẩn SHA3 và quy trình
-tiêu chuẩn đã có một thay đổi muộn trong phần đệm của thuật toán băm cuối cùng, do đó các hàm băm
-"sha3_256" và "sha3_512" của Ethereum không phải là các hàm băm sha3 tiêu chuẩn, mà là một biến thể thường được gọi
-là "Keccak-256" và "Keccak-512" trong các ngữ cảnh khác. Xem thảo luận, ví dụ, [tại đây](https://eips.ethereum.org/EIPS/eip-1803), [tại đây](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), hoặc [tại đây](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Sự phát triển của Ethereum diễn ra cùng lúc với sự phát triển của tiêu chuẩn SHA3, và quá trình tiêu chuẩn hóa đã thực hiện một thay đổi muộn trong phần đệm (padding) của thuật toán băm đã chung cuộc, do đó các mã băm "sha3_256" và "sha3_512" của Ethereum không phải là các mã băm sha3 tiêu chuẩn, mà là một biến thể thường được gọi là "Keccak-256" và "Keccak-512" trong các ngữ cảnh khác. Xem thảo luận, ví dụ: [tại đây](https://eips.ethereum.org/EIPS/eip-1803), [tại đây](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), hoặc [tại đây](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
-Vui lòng lưu ý điều đó khi các hàm băm "sha3" được đề cập trong phần mô tả thuật toán bên dưới.
+Vui lòng ghi nhớ điều đó vì các mã băm "sha3" được đề cập trong phần mô tả thuật toán bên dưới.
 
 ## Các tham số {#parameters}
 
-Các tham số cho bộ đệm và bộ dữ liệu của Ethash phụ thuộc vào số khối. Kích thước bộ đệm và kích thước bộ dữ liệu đều tăng tuyến tính; tuy nhiên, chúng tôi luôn lấy số nguyên tố cao nhất dưới ngưỡng tăng tuyến tính để giảm nguy cơ xảy ra các quy luật ngẫu nhiên dẫn đến hành vi tuần hoàn.
+Các tham số cho bộ nhớ đệm và tập dữ liệu của Ethash phụ thuộc vào số khối. Kích thước bộ nhớ đệm và kích thước tập dữ liệu đều tăng trưởng tuyến tính; tuy nhiên, chúng tôi luôn lấy số nguyên tố cao nhất dưới ngưỡng tăng trưởng tuyến tính để giảm rủi ro về các quy luật ngẫu nhiên dẫn đến hành vi tuần hoàn.
 
 ```python
 def get_cache_size(block_number):
@@ -76,22 +73,22 @@ def get_full_size(block_number):
     return sz
 ```
 
-Các bảng giá trị kích thước bộ dữ liệu và kích thước bộ đệm được cung cấp trong phụ lục.
+Các bảng giá trị kích thước tập dữ liệu và bộ nhớ đệm được cung cấp trong phần phụ lục.
 
-## Tạo bộ đệm {#cache-generation}
+## Tạo bộ nhớ đệm {#cache-generation}
 
-Bây giờ, chúng tôi chỉ định hàm để tạo một bộ đệm:
+Bây giờ, chúng ta chỉ định hàm để tạo ra một bộ nhớ đệm:
 
 ```python
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Tạo tuần tự bộ dữ liệu ban đầu
+    # Tạo tuần tự tập dữ liệu ban đầu
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Sử dụng một phiên bản ít vòng lặp của randmemohash
+    # Sử dụng phiên bản ít vòng lặp của randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -100,11 +97,11 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Quá trình sản xuất bộ đệm bao gồm việc đầu tiên điền tuần tự 32 MB bộ nhớ, sau đó thực hiện hai lần duyệt thuật toán _RandMemoHash_ của Sergio Demian Lerner từ [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Đầu ra là một tập hợp gồm 524.288 giá trị 64 byte.
+Quá trình tạo bộ nhớ đệm bao gồm việc đầu tiên là lấp đầy tuần tự 32 MB bộ nhớ, sau đó thực hiện hai lượt chạy thuật toán _RandMemoHash_ của Sergio Demian Lerner từ [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Đầu ra là một tập hợp gồm 524288 giá trị 64-byte.
 
 ## Hàm tổng hợp dữ liệu {#date-aggregation-function}
 
-Chúng tôi sử dụng một thuật toán lấy cảm hứng từ [hàm băm FNV](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) trong một số trường hợp như một sự thay thế không liên kết cho XOR. Lưu ý rằng chúng tôi nhân số nguyên tố với toàn bộ đầu vào 32 bit, trái ngược với đặc tả FNV-1 nhân số nguyên tố với lần lượt một byte (octet).
+Chúng tôi sử dụng một thuật toán lấy cảm hứng từ [mã băm FNV](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) trong một số trường hợp như một sự thay thế không kết hợp cho XOR. Lưu ý rằng chúng tôi nhân số nguyên tố với toàn bộ đầu vào 32-bit, trái ngược với thông số kỹ thuật FNV-1 nhân số nguyên tố với từng byte (octet) một.
 
 ```python
 FNV_PRIME = 0x01000193
@@ -113,11 +110,11 @@ def fnv(v1, v2):
     return ((v1 * FNV_PRIME) ^ v2) % 2**32
 ```
 
-Xin lưu ý, ngay cả sách vàng cũng chỉ định fnv là v1\*(FNV_PRIME ^ v2), tất cả các triển khai hiện tại đều nhất quán sử dụng định nghĩa trên.
+Xin lưu ý, ngay cả khi sách vàng chỉ định fnv là v1\*(FNV_PRIME ^ v2), tất cả các triển khai hiện tại đều nhất quán sử dụng định nghĩa ở trên.
 
-## Tính toán bộ dữ liệu đầy đủ {#full-dataset-calculation}
+## Tính toán toàn bộ tập dữ liệu {#full-dataset-calculation}
 
-Mỗi mục 64 byte trong bộ dữ liệu 1 GB đầy đủ được tính toán như sau:
+Mỗi mục 64-byte trong toàn bộ tập dữ liệu 1 GB được tính toán như sau:
 
 ```python
 def calc_dataset_item(cache, i):
@@ -127,14 +124,14 @@ def calc_dataset_item(cache, i):
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # thực hiện fnv với nhiều nút bộ đệm ngẫu nhiên dựa trên i
+    # áp dụng hàm fnv cho nó với nhiều nút cache ngẫu nhiên dựa trên i
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
     return sha3_512(mix)
 ```
 
-Về cơ bản, chúng tôi kết hợp dữ liệu từ 256 nút bộ đệm được chọn giả ngẫu nhiên và băm dữ liệu đó để tính toán nút bộ dữ liệu. Toàn bộ bộ dữ liệu sau đó được tạo bởi:
+Về cơ bản, chúng tôi kết hợp dữ liệu từ 256 nút bộ nhớ đệm được chọn giả ngẫu nhiên và băm dữ liệu đó để tính toán nút tập dữ liệu. Toàn bộ tập dữ liệu sau đó được tạo ra bởi:
 
 ```python
 def calc_dataset(full_size, cache):
@@ -143,20 +140,20 @@ def calc_dataset(full_size, cache):
 
 ## Vòng lặp chính {#main-loop}
 
-Bây giờ, chúng tôi chỉ định vòng lặp chính giống như "hashimoto", nơi chúng tôi tổng hợp dữ liệu từ bộ dữ liệu đầy đủ để tạo ra giá trị cuối cùng cho một tiêu đề và nonce cụ thể. `header` đại diện cho _hàm băm_ SHA3-256 của biểu diễn RLP của một tiêu đề khối _bị cắt ngắn_, tức là của một tiêu đề không bao gồm các trường **mixHash** và **nonce**. `nonce` là tám byte của một số nguyên không dấu 64 bit theo thứ tự big-endian. Vì vậy, `nonce[::-1]` là biểu diễn little-endian tám byte của giá trị đó:
+Bây giờ, chúng ta chỉ định vòng lặp chính giống "hashimoto", nơi chúng ta tổng hợp dữ liệu từ toàn bộ tập dữ liệu để tạo ra giá trị cuối cùng cho một tiêu đề và nonce cụ thể. Trong đoạn mã bên dưới, `header` đại diện cho _mã băm_ SHA3-256 của biểu diễn RLP của một tiêu đề block _bị cắt bớt_, nghĩa là của một tiêu đề loại trừ các trường **mixHash** và **nonce**. `nonce` là tám byte của một số nguyên không dấu 64 bit theo thứ tự Big-endian. Vì vậy, `nonce[::-1]` là biểu diễn little-endian tám byte của giá trị đó:
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
     n = full_size / HASH_BYTES
     w = MIX_BYTES // WORD_BYTES
     mixhashes = MIX_BYTES / HASH_BYTES
-    # kết hợp header+nonce thành một seed 64 byte
+    # kết hợp tiêu đề+nonce thành một seed 64 byte
     s = sha3_512(header + nonce[::-1])
     # bắt đầu mix với s được nhân bản
     mix = []
     for _ in range(MIX_BYTES / HASH_BYTES):
         mix.extend(s)
-    # trộn trong các nút bộ dữ liệu ngẫu nhiên
+    # trộn vào các nút tập dữ liệu ngẫu nhiên
     for i in range(ACCESSES):
         p = fnv(i ^ s[0], mix[i % w]) % (n // mixhashes) * mixhashes
         newdata = []
@@ -179,9 +176,9 @@ def hashimoto_full(full_size, dataset, header, nonce):
     return hashimoto(header, nonce, full_size, lambda x: dataset[x])
 ```
 
-Về cơ bản, chúng tôi duy trì một "mix" rộng 128 byte và liên tục tìm nạp tuần tự 128 byte từ bộ dữ liệu đầy đủ và sử dụng hàm `fnv` để kết hợp nó với mix. 128 byte truy cập tuần tự được sử dụng để mỗi vòng của thuật toán luôn tìm nạp một trang đầy đủ từ RAM, giảm thiểu việc bỏ lỡ bộ đệm tra cứu biên dịch mà về mặt lý thuyết, các vi mạch tích hợp chuyên dụng (ASIC) có thể tránh được.
+Về cơ bản, chúng tôi duy trì một "mix" rộng 128 byte, và liên tục tìm nạp tuần tự 128 byte từ toàn bộ tập dữ liệu và sử dụng hàm `fnv` để kết hợp nó với mix. 128 byte truy cập tuần tự được sử dụng để mỗi vòng của thuật toán luôn tìm nạp một trang đầy đủ từ RAM, giảm thiểu các lỗi trượt bộ đệm ẩn biên dịch (translation lookaside buffer misses) mà về mặt lý thuyết các máy ASIC có thể tránh được.
 
-Nếu đầu ra của thuật toán này thấp hơn mục tiêu mong muốn, thì nonce là hợp lệ. Lưu ý rằng việc áp dụng thêm `sha3_256` ở cuối đảm bảo rằng tồn tại một nonce trung gian có thể được cung cấp để chứng minh rằng ít nhất một lượng nhỏ công việc đã được thực hiện; việc xác minh PoW (Bằng chứng công việc) bên ngoài nhanh chóng này có thể được sử dụng cho các mục đích chống DDoS. Nó cũng dùng để cung cấp sự đảm bảo về mặt thống kê rằng kết quả là một số 256-bit không thiên vị.
+Nếu đầu ra của thuật toán này thấp hơn mục tiêu mong muốn, thì nonce đó hợp lệ. Lưu ý rằng việc áp dụng thêm `sha3_256` ở cuối đảm bảo rằng tồn tại một nonce trung gian có thể được cung cấp để chứng minh rằng ít nhất một lượng nhỏ công việc đã được thực hiện; việc xác minh PoW vòng ngoài nhanh chóng này có thể được sử dụng cho mục đích chống DDoS. Nó cũng phục vụ để cung cấp sự đảm bảo về mặt thống kê rằng kết quả là một số 256-bit không bị sai lệch.
 
 ## Khai thác {#mining}
 
@@ -189,7 +186,7 @@ Thuật toán khai thác được định nghĩa như sau:
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # đệm số không vào mục tiêu để so sánh với hàm băm trên cùng một chữ số
+    # đệm số 0 vào target để so sánh với mã băm trên cùng chữ số
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -198,9 +195,9 @@ def mine(full_size, dataset, header, difficulty):
     return nonce
 ```
 
-## Định nghĩa hàm băm seed {#seed-hash}
+## Định nghĩa mã băm seed {#seed-hash}
 
-Để tính toán hàm băm seed sẽ được sử dụng để khai thác trên một khối nhất định, chúng tôi sử dụng thuật toán sau:
+Để tính toán mã băm seed sẽ được sử dụng để khai thác trên một khối nhất định, chúng tôi sử dụng thuật toán sau:
 
 ```python
  def get_seedhash(block):
@@ -210,20 +207,20 @@ def mine(full_size, dataset, header, difficulty):
      return s
 ```
 
-Lưu ý rằng để khai thác và xác minh trơn tru, chúng tôi khuyên bạn nên tính toán trước các hàm băm seed và bộ dữ liệu trong tương lai trong một luồng riêng biệt.
+Lưu ý rằng để việc khai thác và xác minh diễn ra suôn sẻ, chúng tôi khuyên bạn nên tính toán trước các mã băm seed và tập dữ liệu trong tương lai ở một luồng (thread) riêng biệt.
 
 ## Đọc thêm {#further-reading}
 
-_Biết về nguồn lực cộng đồng đã giúp đỡ bạn? Chỉnh sửa trang này và bổ sung!_
+_Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho bạn? Hãy chỉnh sửa trang này và thêm nó vào!_
 
 ## Phụ lục {#appendix}
 
-Đoạn mã sau đây nên được đặt trước nếu bạn muốn chạy đặc tả python ở trên dưới dạng mã.
+Đoạn mã sau nên được thêm vào đầu nếu bạn quan tâm đến việc chạy thông số kỹ thuật Python ở trên dưới dạng mã.
 
 ```python
 import sha3, copy
 
-# Giả định thứ tự bit little endian (giống như kiến trúc Intel)
+# Giả định thứ tự bit little-endian (giống như các kiến trúc Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -251,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# hàm băm sha3, đầu ra 64 byte
+# hàm băm sha3, xuất ra 64 byte
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -270,7 +267,7 @@ def isprime(x):
 
 ### Kích thước dữ liệu {#data-sizes}
 
-Các bảng tra cứu sau đây cung cấp khoảng 2048 tham số epoch được lập bảng về kích thước dữ liệu và kích thước bộ đệm.
+Các bảng tra cứu sau đây cung cấp khoảng 2048 kỷ nguyên được lập bảng về kích thước dữ liệu và kích thước bộ nhớ đệm.
 
 ```python
 def get_datasize(block_number):

@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
 import { ChevronRight } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -50,7 +50,7 @@ const innerLinksVariants = {
 
 const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
-    <HStack className="w-full justify-between py-2 pe-8 ps-2 hover:bg-[ednBackground]">
+    <HStack className="w-full justify-between py-2 ps-2 pe-8 hover:bg-[ednBackground]">
       {children}
     </HStack>
   )
@@ -102,7 +102,7 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
           </motion.div>
         </LinkContainer>
         <motion.div
-          className="ps-4 text-sm font-normal leading-relaxed"
+          className="ps-4 text-sm leading-relaxed font-normal"
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}

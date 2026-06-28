@@ -1,27 +1,28 @@
 ---
-title: Enviando Tokens Usando ethers.js
-description: Guia para iniciantes sobre o envio de tokens usando ethers.js.
+title: Enviando tokens usando ethers.js
+description: Guia para iniciantes sobre como enviar tokens usando ethers.js.
 author: Kim YongJun
-tags: [ "ETHERS.JS", "ERC-20", "TOKENS" ]
+tags: ["ETHERS.JS", "ERC-20", "TOKENS"]
 skill: beginner
+breadcrumb: Enviar tokens
 lang: pt-br
 published: 2021-04-06
 ---
 
-## Enviar Token usando ethers.js(5.0) {#send-token}
+## Enviar token usando ethers.js(5.0) {#send-token}
 
-### Neste tutorial, você aprenderá como {#you-learn-about}
+### Neste tutorial você aprenderá como {#you-learn-about}
 
-- Importar ethers.js
+- Importar o ethers.js
 - Transferir token
 - Definir o preço do gás de acordo com a situação do tráfego da rede
 
 ### Para começar {#to-get-started}
 
-Para começar, devemos primeiro importar a biblioteca ethers.js em nosso javascript
+Para começar, primeiro devemos importar a biblioteca ethers.js em nosso JavaScript
 Incluir ethers.js(5.0)
 
-### Instalação {#install-ethersjs}
+### Instalando {#install-ethersjs}
 
 ```shell
 /home/ricmoo> npm install --save ethers
@@ -47,15 +48,15 @@ ES3(UMD) no navegador
 
 ### Parâmetros {#param}
 
-1. **`contract_address`**: Endereço de contrato do token (o endereço de contrato é necessário quando o token que você deseja transferir não for ether)
-2. **`send_token_amount`**: A quantia que você deseja enviar para o destinatário
+1. **`contract_address`**: Endereço do contrato do token (o endereço do contrato é necessário quando o token que você deseja transferir não é ether)
+2. **`send_token_amount`**: A quantia que você deseja enviar ao destinatário
 3. **`to_address`**: O endereço do destinatário
 4. **`send_account`**: O endereço do remetente
-5. **`private_key`**: Chave privada do remetente para assinar a transação e realmente transferir os tokens
+5. **`private_key`**: Chave privada do remetente para assinar a transação e efetivamente transferir os tokens
 
 ## Aviso {#notice}
 
-`signTransaction(tx)` é removido porque `sendTransaction()` o faz internamente.
+`signTransaction(tx)` foi removido porque `sendTransaction()` faz isso internamente.
 
 ## Procedimentos de envio {#procedure}
 
@@ -63,7 +64,7 @@ ES3(UMD) no navegador
 
 #### Definir provedor (Infura) {#set-provider}
 
-Conecte-se à rede de teste Ropsten
+Conectar à rede de teste Ropsten
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
@@ -75,13 +76,13 @@ window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Conectar a carteira à rede {#connect-wallet-to-net}
+### 3. Conectar carteira à rede {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. Obter preço atual do gás {#get-gas}
+### 4. Obter o preço do gás atual {#get-gas}
 
 ```javascript
 window.ethersProvider.getGasPrice() // gasPrice
@@ -89,14 +90,14 @@ window.ethersProvider.getGasPrice() // gasPrice
 
 ### 5. Definir transação {#define-transaction}
 
-As variáveis definidas abaixo dependem de `send_token()`
+Estas variáveis definidas abaixo dependem de `send_token()`
 
 ### Parâmetros da transação {#transaction-params}
 
 1. **`send_account`**: endereço do remetente do token
 2. **`to_address`**: endereço do destinatário do token
-3. **`send_token_amount`**: a quantidade de tokens a serem enviados
-4. **`gas_limit`**: limite de gás
+3. **`send_token_amount`**: a quantia de tokens a enviar
+4. **`gas_limit`**: limite de gas
 5. **`gas_price`**: preço do gás
 
 [Veja abaixo como usar](#how-to-use)
@@ -112,12 +113,12 @@ const tx = {
 }
 ```
 
-### 6. Transferência {#transfer}
+### 6. Transferir {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("Envio concluído!")
+  alert("Send finished!")
 })
 ```
 
@@ -146,7 +147,7 @@ send_token(
 
 ### Sucesso! {#success}
 
-![imagem de transação concluída com sucesso](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -166,7 +167,7 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // envio de token geral
+      // envio geral de token
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
@@ -180,7 +181,7 @@ function send_token(
       // Enviar tokens
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("token enviado")
+        alert("sent token")
       })
     } // envio de ether
     else {
@@ -199,10 +200,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("Envio concluído!")
+          alert("Send finished!")
         })
       } catch (error) {
-        alert("falha no envio!!")
+        alert("failed to send!!")
       }
     }
   })

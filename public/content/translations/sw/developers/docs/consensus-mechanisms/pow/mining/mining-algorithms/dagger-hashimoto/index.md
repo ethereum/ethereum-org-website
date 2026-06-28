@@ -1,35 +1,35 @@
 ---
 title: Dagger-Hashimoto
-description: Mtazamo wa kina kuhusu kanuni ya Dagger-Hashimoto.
+description: Mtazamo wa kina wa algoriti ya Dagger-Hashimoto.
 lang: sw
 ---
 
-Dagger-Hashimoto ilikuwa utekelezaji wa awali wa utafiti na maelezo ya kanuni ya uchimbaji ya Ethereum. Dagger-Hashimoto ilibadilishwa na [Ethash](#ethash). Uchimbaji ulizimwa kabisa wakati wa [Muungano](/roadmap/merge/) mnamo tarehe 15 Septemba 2022. Tangu wakati huo, Ethereum imekuwa ikilindwa kwa kutumia utaratibu wa [uthibitisho wa hisa](/developers/docs/consensus-mechanisms/pos) badala yake. Ukurasa huu ni kwa ajili ya maslahi ya kihistoria - maelezo yaliyomo hapa hayahusiani tena na Ethereum ya baada ya Muungano.
+Dagger-Hashimoto ilikuwa utekelezaji na vipimo vya utafiti wa asili kwa algoriti ya uchimbaji ya Ethereum. Dagger-Hashimoto ilibadilishwa na [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/#ethash). Uchimbaji ulizimwa kabisa kwenye [Unganisho](/roadmap/merge/) mnamo tarehe 15 Septemba 2022. Tangu wakati huo, Ethereum imelindwa kwa kutumia utaratibu wa [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos) badala yake. Ukurasa huu ni kwa ajili ya maslahi ya kihistoria - maelezo hapa hayana umuhimu tena kwa Ethereum ya baada ya Unganisho.
 
 ## Mahitaji ya awali {#prerequisites}
 
-Ili kuelewa ukurasa huu vizuri zaidi, tunapendekeza kwanza usome kuhusu [makubaliano ya uthibitishaji-wa-kazi](/developers/docs/consensus-mechanisms/pow), [uchimbaji](/developers/docs/consensus-mechanisms/pow/mining), na [kanuni za uchimbaji](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
+Ili kuelewa vyema ukurasa huu, tunapendekeza kwanza usome kuhusu [mwafaka wa Uthibitisho wa Kazi (PoW)](/developers/docs/consensus-mechanisms/pow), [uchimbaji](/developers/docs/consensus-mechanisms/pow/mining), na [algoriti za uchimbaji](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 
 Dagger-Hashimoto inalenga kutimiza malengo mawili:
 
-1. **Ukinzani-wa-ASIC**: faida ya kutengeneza maunzi maalum kwa ajili ya kanuni inapaswa kuwa ndogo iwezekanavyo
-2. **Uthibitisho wa mteja mwepesi**: bloku inapaswa kuthibitishwa kwa ufanisi na mteja mwepesi.
+1.  **Ukinzani wa ASIC**: faida inayotokana na kuunda maunzi maalum kwa ajili ya algoriti inapaswa kuwa ndogo iwezekanavyo
+2.  **Uthibitishaji wa kiteja chepesi**: kitalu kinapaswa kuthibitishwa kwa ufanisi na kiteja chepesi.
 
-Kwa marekebisho ya ziada, pia tunaeleza jinsi ya kutimiza lengo la tatu ikiwa inahitajika, lakini kwa gharama ya utata wa ziada:
+Kwa marekebisho ya ziada, pia tunabainisha jinsi ya kutimiza lengo la tatu ikihitajika, lakini kwa gharama ya utata wa ziada:
 
-**Hifadhi kamili ya mnyororo**: uchimbaji unapaswa kuhitaji hifadhi ya hali kamili ya mnyororo wa bloku (kutokana na muundo usio wa kawaida wa trie ya hali ya Ethereum, tunatarajia kuwa upunguzaji fulani utawezekana, hasa wa baadhi ya mikataba inayotumiwa mara kwa mara, lakini tunataka kupunguza hili).
+**Hifadhi kamili ya mnyororo**: uchimbaji unapaswa kuhitaji uhifadhi wa hali kamili ya mnyororo wa vitalu (kutokana na muundo usio wa kawaida wa trie ya hali ya Ethereum, tunatarajia kwamba upunguzaji fulani utawezekana, hasa wa baadhi ya mikataba inayotumiwa mara kwa mara, lakini tunataka kupunguza hili).
 
-## Uzazi wa DAG {#dag-generation}
+## Uzalishaji wa DAG {#dag-generation}
 
-Msimbo wa kanuni utaelezwa katika Python hapa chini. Kwanza, tunatoa `encode_int` kwa ajili ya kupanga nambari kamili zisizo na alama za usahihi maalum kuwa mifuatano. Kinyume chake pia kimetolewa:
+Msimbo wa algoriti utafafanuliwa katika Python hapa chini. Kwanza, tunatoa `encode_int` kwa ajili ya kupanga nambari kamili zisizo na saini za usahihi uliobainishwa kuwa mifuatano. Kinyume chake pia kinatolewa:
 
 ```python
 NUM_BITS = 512
 
 def encode_int(x):
-    "Weka nambari kamili x kama mfuatano wa herufi 64 ukitumia mpango wa big-endian"
+    "Encode an integer x as a string of 64 characters using a big-endian scheme"
     o = ''
     for _ in range(NUM_BITS / 8):
         o = chr(x % 256) + o
@@ -37,7 +37,7 @@ def encode_int(x):
     return o
 
 def decode_int(s):
-    "Ondoa msimbo wa nambari kamili x kutoka kwenye mfuatano ukitumia mpango wa big-endian"
+    "Unencode an integer x from a string using a big-endian scheme"
     x = 0
     for c in s:
         x *= 256
@@ -45,7 +45,7 @@ def decode_int(s):
     return x
 ```
 
-Ifuatayo, tunadhani kwamba `sha3` ni chaguo la kukokotoa linalochukua nambari kamili na kutoa nambari kamili, na `dbl_sha3` ni chaguo la kukokotoa la double-sha3; ikiwa unabadilisha msimbo huu wa marejeleo kuwa utekelezaji, tumia:
+Kisha tunachukulia kwamba `sha3` ni kazi inayochukua nambari kamili na kutoa nambari kamili, na `dbl_sha3` ni kazi ya double-sha3; ikiwa unabadilisha msimbo huu wa marejeleo kuwa utekelezaji tumia:
 
 ```python
 from pyethereum import utils
@@ -62,30 +62,31 @@ def dbl_sha3(x):
 
 ### Vigezo {#parameters}
 
-Vigezo vinavyotumika kwa kanuni ni:
+Vigezo vinavyotumika kwa algoriti ni:
 
 ```python
-SAFE_PRIME_512 = 2**512 - 38117 # Nambari Kuu Salama iliyo chini ya 2**512
+SAFE_PRIME_512 = 2**512 - 38117     # Namba Tasa Salama Kubwa Zaidi ndogo kuliko 2**512
 
 params = {
- "n": 4000055296 * 8 // NUM_BITS, # Ukubwa wa seti ya data (Gigabaiti 4); LAZIMA IWE ZIDISHO LA 65536
- "n_inc": 65536, # Ongezeko la thamani ya n kwa kila kipindi; LAZIMA IWE ZIDISHO LA 65536
- # na epochtime=20000 inatoa ukuaji wa MB 882 kwa mwaka
- "cache_size": 2500, # Ukubwa wa kache ya mteja mwepesi (inaweza kuchaguliwa na mteja mwepesi; si sehemu ya vipimo vya kanuni)
- "diff": 2**14, # Ugumu (hurekebishwa wakati wa tathmini ya bloku)
- "epochtime": 100000, # Urefu wa kipindi katika bloku (mara ngapi seti ya data inasasishwa)
- "k": 1, # Idadi ya wazazi wa nodi
- "w": w, # Inatumika kwa ajili ya uhasishaji wa kipeo cha kimodula
- "accesses": 200, # Idadi ya ufikiaji wa seti ya data wakati wa hashimoto
- "P": SAFE_PRIME_512 # Nambari Kuu Salama kwa ajili ya uhasishaji na uzalishaji wa nambari nasibu
+      "n": 4000055296 * 8 // NUM_BITS,  # Ukubwa wa seti ya data (Gigabaiti 4); LAZIMA IWE KIZIDISHO CHA 65536
+      "n_inc": 65536,                   # Ongezeko la thamani ya n kwa kila kipindi; LAZIMA IWE KIZIDISHO CHA 65536
+                                        # kwa epochtime=20000 inatoa ukuaji wa MB 882 kwa mwaka
+      "cache_size": 2500,               # Ukubwa wa kache ya kiteja chepesi (inaweza kuchaguliwa na kiteja
+                                        # chepesi; sio sehemu ya vipimo vya aligoriti)
+      "diff": 2**14,                    # Ugumu (hurekebishwa wakati wa tathmini ya kitalu)
+      "epochtime": 100000,              # Urefu wa epoki katika vitalu (ni mara ngapi seti ya data inasasishwa)
+      "k": 1,                           # Idadi ya wazazi wa nodi
+      "w": w,                          # Hutumika kwa uheshiji wa kipeo cha moduli
+      "accesses": 200,                  # Idadi ya ufikiaji wa seti ya data wakati wa hashimoto
+      "P": SAFE_PRIME_512               # Namba Tasa Salama kwa uheshiji na uzalishaji wa namba nasibu
 }
 ```
 
-`P` katika kesi hii ni nambari kuu iliyochaguliwa kiasi kwamba `log₂(P)` ni chini kidogo ya 512, ambayo inalingana na biti 512 ambazo tumekuwa tukitumia kuwakilisha nambari zetu. Kumbuka kwamba ni nusu ya mwisho tu ya DAG ndiyo inayohitaji kuhifadhiwa, kwa hivyo mahitaji halisi ya RAM huanza kwa GB 1 na kukua kwa MB 441 kwa mwaka.
+`P` katika kesi hii ni nambari tasa iliyochaguliwa ili `log₂(P)` iwe chini kidogo ya 512, ambayo inalingana na biti 512 ambazo tumekuwa tukitumia kuwakilisha nambari zetu. Kumbuka kwamba ni nusu ya mwisho tu ya DAG ndiyo inayohitaji kuhifadhiwa, kwa hivyo hitaji halisi la RAM linaanza kwa GB 1 na kukua kwa MB 441 kwa mwaka.
 
-### Uundaji wa grafu ya Dagger {#dagger-graph-building}
+### Ujenzi wa grafu ya Dagger {#dagger-graph-building}
 
-Asili ya uundaji wa grafu ya dagger imefafanuliwa kama ifuatavyo:
+Msingi wa ujenzi wa grafu ya dagger unafafanuliwa kama ifuatavyo:
 
 ```python
 def produce_dag(params, seed, length):
@@ -100,15 +101,15 @@ def produce_dag(params, seed, length):
     return o
 ```
 
-Kimsingi, inaanza grafu kama nodi moja, `sha3(seed)`, na kutoka hapo huanza kuongeza kwa mfuatano nodi zingine kulingana na nodi za awali za nasibu. Wakati nodi mpya inaundwa, nguvu ya kimodula ya mbegu huhesabiwa ili kuchagua kwa nasibu fahirisi fulani zilizo chini ya `i` (kwa kutumia `x % i` hapo juu), na thamani za nodi kwenye fahirisi hizo hutumiwa katika hesabu ili kuzalisha thamani mpya ya `x`, ambayo hupelekwa kwenye chaguo dogo la uthibitisho wa kazi (kulingana na XOR) ili hatimaye kuzalisha thamani ya grafu kwenye fahirisi `i`. Sababu ya muundo huu maalum ni kulazimisha ufikiaji wa mfuatano wa DAG; thamani inayofuata ya DAG itakayofikiwa haiwezi kubainishwa hadi thamani ya sasa ijulikane. Mwishowe, upeo wa kimodula huhasisha matokeo zaidi.
+Kimsingi, inaanza grafu kama nodi moja, `sha3(seed)`, na kutoka hapo inaanza kuongeza nodi zingine kwa mfuatano kulingana na nodi za awali za nasibu. Wakati nodi mpya inapoundwa, nguvu ya msimu ya mbegu inakokotolewa ili kuchagua kwa nasibu baadhi ya faharisi zilizo chini ya `i` (kwa kutumia `x % i` hapo juu), na thamani za nodi kwenye faharisi hizo zinatumika katika ukokotoaji ili kuzalisha thamani mpya ya `x`, ambayo kisha inaingizwa kwenye kazi ndogo ya uthibitisho wa kazi (kulingana na XOR) ili hatimaye kuzalisha thamani ya grafu kwenye faharisi `i`. Mantiki nyuma ya muundo huu mahususi ni kulazimisha ufikiaji wa mfuatano wa DAG; thamani inayofuata ya DAG itakayofikiwa haiwezi kubainishwa hadi thamani ya sasa ijulikane. Hatimaye, upeo wa msimu unaheshi matokeo zaidi.
 
-Kanuni hii inategemea matokeo kadhaa kutoka kwa nadharia ya nambari. Tazama kiambatisho hapa chini kwa majadiliano.
+Algoriti hii inategemea matokeo kadhaa kutoka kwa nadharia ya nambari. Tazama kiambatisho hapa chini kwa mjadala.
 
-## Tathmini ya mteja mwepesi {#light-client-evaluation}
+## Tathmini ya kiteja chepesi {#light-client-evaluation}
 
-Uundaji wa grafu hapo juu unakusudia kuruhusu kila nodi kwenye grafu kujengwa upya kwa kukokotoa mti mdogo wa idadi ndogo tu ya nodi na kuhitaji kiasi kidogo tu cha kumbukumbu saidizi. Kumbuka kuwa kwa k=1, mti mdogo ni mnyororo tu wa thamani zinazopanda hadi kwenye elementi ya kwanza katika DAG.
+Ujenzi wa grafu hapo juu unakusudia kuruhusu kila nodi katika grafu kujengwa upya kwa kukokotoa mti mdogo wa idadi ndogo tu ya nodi na kuhitaji kiasi kidogo tu cha kumbukumbu ya ziada. Kumbuka kwamba kwa k=1, mti mdogo ni mnyororo tu wa thamani zinazopanda hadi kipengele cha kwanza katika DAG.
 
-Chaguo la kukokotoa la kompyuta ya mteja mwepesi kwa DAG hufanya kazi kama ifuatavyo:
+Kazi ya ukokotoaji ya kiteja chepesi kwa DAG inafanya kazi kama ifuatavyo:
 
 ```python
 def quick_calc(params, seed, p):
@@ -130,13 +131,13 @@ def quick_calc(params, seed, p):
     return quick_calc_cached(p)
 ```
 
-Kimsingi, ni uandishi upya wa kanuni iliyo hapo juu ambao huondoa kitanzi cha kukokotoa thamani za DAG nzima na kubadilisha utafutaji wa nodi ya awali na wito wa kujirudia au utafutaji wa kache. Kumbuka kuwa kwa `k=1` kache si lazima, ingawa uboreshaji zaidi kwa kweli huhesabu mapema thamani elfu chache za kwanza za DAG na kuweka hiyo kama kache tuli kwa ajili ya hesabu; tazama kiambatisho kwa utekelezaji wa msimbo wa hili.
+Kimsingi, ni uandishi upya tu wa algoriti iliyo hapo juu ambayo inaondoa kitanzi cha kukokotoa thamani za DAG nzima na kubadilisha utafutaji wa nodi wa awali na wito wa kujirudia au utafutaji wa kache. Kumbuka kwamba kwa `k=1` kache sio lazima, ingawa uboreshaji zaidi kwa kweli hukokotoa mapema thamani elfu chache za kwanza za DAG na kuiweka kama kache tuli kwa ukokotoaji; tazama kiambatisho kwa utekelezaji wa msimbo wa hili.
 
-## Bafa maradufu ya DAGs {#double-buffer}
+## Bafa mbili za DAG {#double-buffer}
 
-Katika mteja kamili, [_bafa maradufu_](https://wikipedia.org/wiki/Multiple_buffering) ya DAGs 2 zinazozalishwa na fomula iliyo hapo juu hutumiwa. Wazo ni kwamba DAGs huzalishwa kila `epochtime` idadi ya bloku kulingana na vigezo vilivyo hapo juu. Badala ya mteja kutumia DAG ya hivi karibuni iliyozalishwa, hutumia ile ya awali. Faida ya hili ni kwamba inaruhusu DAGs kubadilishwa kwa muda bila kuhitaji kujumuisha hatua ambapo wachimbaji lazima ghafla wahesabu upya data yote. Vinginevyo, kuna uwezekano wa kupungua kwa ghafla kwa muda katika usindikaji wa mnyororo kwa vipindi vya kawaida na kuongezeka kwa kiasi kikubwa kwa umilikishwaji. Hivyo hatari za shambulizi la asilimia 51% ndani ya dakika hizo chache kabla ya data yote kuhesabiwa upya.
+Katika kiteja kamili, [_bafa mbili_](https://wikipedia.org/wiki/Multiple_buffering) za DAG 2 zinazozalishwa na fomula iliyo hapo juu zinatumika. Wazo ni kwamba DAG zinazalishwa kila idadi ya `epochtime` ya vitalu kulingana na vigezo hapo juu. Badala ya kiteja kutumia DAG ya hivi punde iliyozalishwa, kinatumia ile ya awali. Faida ya hili ni kwamba inaruhusu DAG kubadilishwa kwa muda bila kuhitaji kujumuisha hatua ambapo wachimbaji lazima wakokotoe upya data yote ghafla. Vinginevyo, kuna uwezekano wa kupungua kwa kasi kwa muda kwa ghafla katika usindikaji wa mnyororo kwa vipindi vya kawaida na kuongeza kwa kiasi kikubwa uwekaji kati. Hivyo hatari za shambulio la asilimia 51 ndani ya dakika hizo chache kabla ya data yote kukokotolewa upya.
 
-Kanuni inayotumika kuzalisha seti ya DAGs zinazotumika kukokotoa kazi kwa ajili ya bloku ni kama ifuatavyo:
+Algoriti inayotumika kuzalisha seti ya DAG zinazotumika kukokotoa kazi kwa kitalu ni kama ifuatavyo:
 
 ```python
 def get_prevhash(n):
@@ -163,7 +164,7 @@ def get_daggerset(params, block):
     dagsz = get_dagsize(params, block)
     seedset = get_seedset(params, block)
     if seedset["front_hash"] <= 0:
-        # No back buffer is possible, just make front buffer
+        # Hakuna bafa ya nyuma inayowezekana, tengeneza tu bafa ya mbele
         return {"front": {"dag": produce_dag(params, seedset["front_hash"], dagsz),
                           "block_number": 0}}
     else:
@@ -175,7 +176,7 @@ def get_daggerset(params, block):
 
 ## Hashimoto {#hashimoto}
 
-Wazo la awali la Hashimoto ni kutumia mnyororo wa bloku kama seti ya data, kufanya hesabu inayochagua fahirisi za N kutoka kwenye mnyororo wa bloku, kukusanya miamala kwenye fahirisi hizo, kufanya XOR ya data hii, na kurudisha hashi ya matokeo. Kanuni ya awali ya Thaddeus Dryja, iliyotafsiriwa kwa Python kwa ajili ya uwiano, ni kama ifuatavyo:
+Wazo nyuma ya Hashimoto ya asili ni kutumia mnyororo wa vitalu kama seti ya data, kufanya ukokotoaji unaochagua faharisi N kutoka kwenye mnyororo wa vitalu, kukusanya miamala kwenye faharisi hizo, kufanya XOR ya data hii, na kurudisha heshi ya matokeo. Algoriti ya asili ya Thaddeus Dryja, iliyotafsiriwa kwa Python kwa uthabiti, ni kama ifuatavyo:
 
 ```python
 def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
@@ -188,7 +189,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
     return txid_mix ^ (nonce << 192)
 ```
 
-Kwa bahati mbaya, ingawa Hashimoto inachukuliwa kuwa ngumu kwa RAM, inategemea hesabu za biti 256, ambazo zina gharama kubwa za kikokotozi. Hata hivyo, Dagger-Hashimoto hutumia tu biti 64 za chini kabisa wakati wa kufaharisi seti yake ya data ili kushughulikia suala hili.
+Kwa bahati mbaya, ingawa Hashimoto inachukuliwa kuwa ngumu kwa RAM, inategemea hesabu ya biti 256, ambayo ina mzigo mkubwa wa ukokotoaji. Hata hivyo, Dagger-Hashimoto inatumia tu biti 64 zenye umuhimu mdogo zaidi wakati wa kuweka faharisi seti yake ya data ili kushughulikia suala hili.
 
 ```python
 def hashimoto(dag, dagsize, params, header, nonce):
@@ -199,7 +200,7 @@ def hashimoto(dag, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-Matumizi ya SHA3 maradufu huruhusu aina ya uthibitishaji wa awali wa data-sifuri, karibu wa papo hapo, kuthibitisha tu kwamba thamani sahihi ya kati ilitolewa. Safu hii ya nje ya uthibitishaji-wa-kazi inafaa sana kwa ASIC na ni dhaifu kiasi, lakini ipo ili kufanya DDoS iwe ngumu zaidi kwa kuwa kiasi hicho kidogo cha kazi lazima kifanyike ili kuzalisha bloku ambayo haitakataliwa mara moja. Hii ndiyo toleo la mteja-mwepesi:
+Matumizi ya SHA3 mbili yanaruhusu aina ya uthibitishaji wa awali wa data sifuri, unaokaribia papo hapo, kuthibitisha tu kwamba thamani sahihi ya kati ilitolewa. Safu hii ya nje ya uthibitisho wa kazi ni rafiki sana kwa ASIC na ni dhaifu kiasi, lakini ipo ili kufanya DDoS kuwa ngumu zaidi kwa kuwa kiasi hicho kidogo cha kazi lazima kifanyike ili kuzalisha kitalu ambacho hakitakataliwa mara moja. Hapa kuna toleo la kiteja chepesi:
 
 ```python
 def quick_hashimoto(seed, dagsize, params, header, nonce):
@@ -212,7 +213,7 @@ def quick_hashimoto(seed, dagsize, params, header, nonce):
 
 ## Uchimbaji na uthibitishaji {#mining-and-verifying}
 
-Sasa, hebu tuviweke vyote pamoja katika kanuni ya uchimbaji:
+Sasa, hebu tuweke yote pamoja katika algoriti ya uchimbaji:
 
 ```python
 def mine(daggerset, params, block):
@@ -229,7 +230,7 @@ def mine(daggerset, params, block):
     return nonce
 ```
 
-Hii ndiyo kanuni ya uthibitishaji:
+Hapa kuna algoriti ya uthibitishaji:
 
 ```python
 def verify(daggerset, params, block, nonce):
@@ -238,7 +239,7 @@ def verify(daggerset, params, block, nonce):
     return result * params["diff"] < 2**256
 ```
 
-Uthibitishaji unaofaa kwa mteja-mwepesi:
+Uthibitishaji rafiki kwa kiteja chepesi:
 
 ```python
 def light_verify(params, header, nonce):
@@ -248,57 +249,57 @@ def light_verify(params, header, nonce):
     return result * params["diff"] < 2**256
 ```
 
-Pia, kumbuka kuwa Dagger-Hashimoto inaweka mahitaji ya ziada kwenye kichwa cha bloku:
+Pia, kumbuka kwamba Dagger-Hashimoto inaweka mahitaji ya ziada kwenye kichwa cha kizuizi:
 
-- Ili uthibitishaji wa safu-mbili ufanye kazi, kichwa cha bloku lazima kiwe na nonce na thamani ya kati kabla ya sha3
-- Mahali fulani, kichwa cha bloku lazima kihifadhi sha3 ya seti ya mbegu ya sasa
+- Ili uthibitishaji wa tabaka mbili ufanye kazi, kichwa cha kizuizi lazima kiwe na nonsi na thamani ya kati kabla ya sha3
+- Mahali fulani, kichwa cha kizuizi lazima kihifadhi sha3 ya seti ya mbegu ya sasa
 
-## Masomo zaidi {#further-reading}
+## Usomaji zaidi {#further-reading}
 
-_Unajua rasilimali ya jamii iliyokusaidia?_ Hariri ukurasa huu na uiongeze!_
+_Unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 
 ## Kiambatisho {#appendix}
 
-Kama ilivyoelezwa hapo juu, RNG inayotumika kwa uzalishaji wa DAG inategemea matokeo fulani kutoka kwa nadharia ya nambari. Kwanza, tunatoa uhakikisho kwamba Lehmer RNG ambayo ni msingi wa kigezo cha `picker` ina kipindi kirefu. Pili, tunaonyesha kwamba `pow(x,3,P)` haitapanga `x` kwa `1` au `P-1` mradi `x ∈ [2,P-2]` mwanzoni. Mwishowe, tunaonyesha kwamba `pow(x,3,P)` ina kiwango cha chini cha mgongano inapotumika kama chaguo la kukokotoa la uhasishaji.
+Kama ilivyoelezwa hapo juu, RNG inayotumika kwa uzalishaji wa DAG inategemea baadhi ya matokeo kutoka kwa nadharia ya nambari. Kwanza, tunatoa hakikisho kwamba Lehmer RNG ambayo ni msingi wa kigezo cha `picker` ina kipindi kipana. Pili, tunaonyesha kwamba `pow(x,3,P)` haitapanga `x` kwa `1` au `P-1` mradi `x ∈ [2,P-2]` kuanza. Hatimaye, tunaonyesha kwamba `pow(x,3,P)` ina kiwango cha chini cha mgongano inapotibiwa kama kazi ya heshi.
 
 ### Jenereta ya nambari nasibu ya Lehmer {#lehmer-random-number}
 
-Ingawa chaguo la kukokotoa la `produce_dag` halihitaji kutoa nambari nasibu zisizo na upendeleo, tishio linalowezekana ni kwamba `seed**i % P` huchukua thamani chache tu. Hii inaweza kuwapa faida wachimbaji wanaotambua mchoro kuliko wale wasiotambua.
+Ingawa kazi ya `produce_dag` haihitaji kuzalisha nambari nasibu zisizo na upendeleo, tishio linalowezekana ni kwamba `seed**i % P` inachukua tu thamani chache. Hili linaweza kutoa faida kwa wachimbaji wanaotambua muundo huo dhidi ya wale wasiotambua.
 
-Ili kuepuka hili, matokeo kutoka kwa nadharia ya nambari yanatumika. [_Nambari Kuu Salama_](https://en.wikipedia.org/wiki/Safe_prime) inafafanuliwa kuwa nambari kuu `P` kiasi kwamba `(P-1)/2` pia ni nambari kuu. _Mpangilio_ wa mwanachama `x` wa [kikundi cha kuzidisha](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` unafafanuliwa kuwa `m` ndogo zaidi kiasi kwamba <pre>xᵐ mod P ≡ 1</pre>
-Kutokana na ufafanuzi huu, tuna:
+Ili kuepuka hili, matokeo kutoka kwa nadharia ya nambari yanatumika. [_Nambari Tasa Salama_](https://en.wikipedia.org/wiki/Safe_prime) inafafanuliwa kuwa nambari tasa `P` ili `(P-1)/2` pia iwe nambari tasa. _Mpangilio_ wa mwanachama `x` wa [kikundi cha kuzidisha](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` unafafanuliwa kuwa `m` ya chini zaidi ili <pre>xᵐ mod P ≡ 1</pre>
+Kwa kuzingatia ufafanuzi huu, tuna:
 
-> Uchunguzi 1. Acha `x` iwe mwanachama wa kikundi cha kuzidisha `ℤ/Pℤ` kwa nambari kuu salama `P`. Ikiwa `x mod P ≠ 1 mod P` na `x mod P ≠ P-1 mod P`, basi mpangilio wa `x` ni `P-1` au `(P-1)/2`.
+> Uchunguzi 1. Acha `x` iwe mwanachama wa kikundi cha kuzidisha `ℤ/Pℤ` kwa nambari tasa salama `P`. Ikiwa `x mod P ≠ 1 mod P` na `x mod P ≠ P-1 mod P`, basi mpangilio wa `x` ni ama `P-1` au `(P-1)/2`.
 
-_Uthibitisho_. Kwa kuwa `P` ni nambari kuu salama, basi kwa [Nadharia ya Lagrange][lagrange] tuna kwamba mpangilio wa `x` ni `1`, `2`, `(P-1)/2`, au `P-1`.
+_Uthibitisho_. Kwa kuwa `P` ni nambari tasa salama, basi kwa [Nadharia ya Lagrange][lagrange] tuna kwamba mpangilio wa `x` ni ama `1`, `2`, `(P-1)/2`, au `P-1`.
 
 Mpangilio wa `x` hauwezi kuwa `1`, kwa kuwa kwa Nadharia Ndogo ya Fermat tuna:
 
 <pre>x<sup>P-1</sup> mod P ≡ 1</pre>
 
-Kwa hiyo `x` lazima iwe utambulisho wa kuzidisha wa `ℤ/nℤ`, ambayo ni ya kipekee. Kwa kuwa tulidhani kwamba `x ≠ 1` kwa dhana, hili haliwezekani.
+Kwa hivyo `x` lazima iwe utambulisho wa kuzidisha wa `ℤ/nℤ`, ambao ni wa kipekee. Kwa kuwa tulichukulia kwamba `x ≠ 1` kwa dhana, hili haliwezekani.
 
-Mpangilio wa `x` hauwezi kuwa `2` isipokuwa `x = P-1`, kwa kuwa hili lingekiuka kwamba `P` ni nambari kuu.
+Mpangilio wa `x` hauwezi kuwa `2` isipokuwa `x = P-1`, kwa kuwa hii ingekiuka kwamba `P` ni nambari tasa.
 
-Kutoka kwa pendekezo lililo hapo juu, tunaweza kutambua kwamba kurudia `(picker * init) % P` kutakuwa na urefu wa mzunguko wa angalau `(P-1)/2`. Hii ni kwa sababu tulichagua `P` kuwa nambari kuu salama takriban sawa na kuwa nguvu ya juu ya mbili, na `init` iko katika muda wa `[2,2**256+1]`. Kutokana na ukubwa wa `P`, hatupaswi kamwe kutarajia mzunguko kutoka kwa upeo wa kimodula.
+Kutoka kwa pendekezo hapo juu, tunaweza kutambua kwamba kurudia `(picker * init) % P` kutakuwa na urefu wa mzunguko wa angalau `(P-1)/2`. Hii ni kwa sababu tulichagua `P` kuwa nambari tasa salama inayokaribia kuwa sawa na nguvu ya juu ya mbili, na `init` iko katika muda wa `[2,2**256+1]`. Kwa kuzingatia ukubwa wa `P`, hatupaswi kamwe kutarajia mzunguko kutoka kwa upeo wa msimu.
 
-Tunapogawa seli ya kwanza katika DAG (kigezo kilichoandikwa `init`), tunakokotoa `pow(sha3(seed) + 2, 3, P)`. Kwa mtazamo wa kwanza, hili halihakikishi kwamba matokeo si `1` wala `P-1`. Hata hivyo, kwa kuwa `P-1` ni nambari kuu salama, tuna uhakikisho wa ziada ufuatao, ambao ni matokeo ya Uchunguzi 1:
+Tunapokabidhi seli ya kwanza katika DAG (kigezo kilichoitwa `init`), tunakokotoa `pow(sha3(seed) + 2, 3, P)`. Kwa mtazamo wa kwanza, hii haihakikishi kwamba matokeo sio `1` wala `P-1`. Hata hivyo, kwa kuwa `P-1` ni nambari tasa salama, tuna hakikisho la ziada lifuatalo, ambalo ni tokeo la Uchunguzi 1:
 
-> Uchunguzi 2. Acha `x` iwe mwanachama wa kikundi cha kuzidisha `ℤ/Pℤ` kwa nambari kuu salama `P`, na acha `w` iwe nambari asilia. Ikiwa `x mod P ≠ 1 mod P` na `x mod P ≠ P-1 mod P`, na vile vile `w mod P ≠ P-1 mod P` na `w mod P ≠ 0 mod P`, basi `xʷ mod P ≠ 1 mod P` na `xʷ mod P ≠ P-1 mod P`
+> Uchunguzi 2. Acha `x` iwe mwanachama wa kikundi cha kuzidisha `ℤ/Pℤ` kwa nambari tasa salama `P`, na acha `w` iwe nambari asilia. Ikiwa `x mod P ≠ 1 mod P` na `x mod P ≠ P-1 mod P`, pamoja na `w mod P ≠ P-1 mod P` na `w mod P ≠ 0 mod P`, basi `xʷ mod P ≠ 1 mod P` na `xʷ mod P ≠ P-1 mod P`
 
-### Upeo wa kimodula kama chaguo la kukokotoa la hashi {#modular-exponentiation}
+### Upeo wa msimu kama kazi ya heshi {#modular-exponentiation}
 
-Kwa thamani fulani za `P` na `w`, chaguo la kukokotoa la `pow(x, w, P)` linaweza kuwa na migongano mingi. Kwa mfano, `pow(x,9,19)` huchukua tu thamani za `{1,18}`.
+Kwa thamani fulani za `P` na `w`, kazi ya `pow(x, w, P)` inaweza kuwa na migongano mingi. Kwa mfano, `pow(x,9,19)` inachukua tu thamani za `{1,18}`.
 
-Kwa kuwa `P` ni nambari kuu, basi `w` inayofaa kwa chaguo la kukokotoa la uhasishaji wa upeo wa kimodula inaweza kuchaguliwa kwa kutumia matokeo yafuatayo:
+Kwa kuwa `P` ni nambari tasa, basi `w` inayofaa kwa kazi ya uheshiji ya upeo wa msimu inaweza kuchaguliwa kwa kutumia matokeo yafuatayo:
 
-> Uchunguzi 3. Acha `P` iwe nambari kuu; `w` na `P-1` ni nambari kuu za jamaa ikiwa na tu ikiwa kwa `a` na `b` zote katika `ℤ/Pℤ`:<center>`aʷ mod P ≡ bʷ mod P` ikiwa na tu ikiwa `a mod P ≡ b mod P`</center>
+> Uchunguzi 3. Acha `P` iwe nambari tasa; `w` na `P-1` ni nambari tasa kiasi ikiwa na tu ikiwa kwa `a` na `b` zote katika `ℤ/Pℤ`:<center>`aʷ mod P ≡ bʷ mod P` ikiwa na tu ikiwa `a mod P ≡ b mod P`</center>
 
-Hivyo, kwa kuwa `P` ni nambari kuu na `w` ni nambari kuu ya jamaa na `P-1`, tuna `|{pow(x, w, P) : x ∈ ℤ}| = P`, ikimaanisha kwamba chaguo la kukokotoa la uhasishaji lina kiwango cha chini zaidi cha mgongano kinachowezekana.
+Hivyo, kwa kuwa `P` ni nambari tasa na `w` ni nambari tasa kiasi kwa `P-1`, tuna kwamba `|{pow(x, w, P) : x ∈ ℤ}| = P`, ikimaanisha kwamba kazi ya uheshiji ina kiwango cha chini zaidi cha mgongano kinachowezekana.
 
-Katika kesi maalum ambapo `P` ni nambari kuu salama kama tulivyochagua, basi `P-1` ina vigawanyo 1, 2, `(P-1)/2` na `P-1` pekee. Kwa kuwa `P` > 7, tunajua kwamba 3 ni nambari kuu ya jamaa na `P-1`, kwa hivyo `w=3` inakidhi pendekezo lililo hapo juu.
+Katika kesi maalum kwamba `P` ni nambari tasa salama kama tulivyochagua, basi `P-1` ina vigawo 1, 2, `(P-1)/2` na `P-1` pekee. Kwa kuwa `P` > 7, tunajua kwamba 3 ni nambari tasa kiasi kwa `P-1`, kwa hivyo `w=3` inakidhi pendekezo hapo juu.
 
-## Kanuni ya tathmini yenye ufanisi zaidi inayotegemea kache {#cache-based-evaluation}
+## Algoriti ya tathmini inayotegemea kache yenye ufanisi zaidi {#cache-based-evaluation}
 
 ```python
 def quick_calc(params, seed, p):

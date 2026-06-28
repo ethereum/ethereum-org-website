@@ -1,28 +1,28 @@
 ---
 title: "Vývojové sítě"
-description: "Přehled vývojových sítí a dostupných nástrojů, nápomocných při vytváření aplikací pro Ethereum."
+description: "Přehled vývojových sítí a dostupných nástrojů, které pomáhají při tvorbě aplikací na Ethereu."
 lang: cs
 ---
 
-Když vytváříte aplikaci pro Ethereum se smart kontrakty, budete ji chtít před nasazením spustit nejdříve v místní síti, abyste zjistili, jak funguje.
+Když vytváříte aplikaci na [Ethereu](/) s chytrými kontrakty, budete ji chtít před nasazením spustit na lokální síti, abyste viděli, jak funguje.
 
-Podobně jako můžete na svém počítači spustit lokální server pro vývoj webu, můžete pomocí vývojové sítě vytvořit lokální instanci blockchainu a otestovat svou dapp. Tyto vývojové sítě Etherea poskytují funkce, které umožňují mnohem rychlejší iteraci než veřejná testovací síť (například nemusíte řešit získávání ETH).
+Podobně jako při vývoji webu můžete na svém počítači spustit lokální server, můžete použít vývojovou síť k vytvoření lokální instance blockchainu pro testování vaší decentralizované aplikace (dapp). Tyto vývojové sítě Etherea poskytují funkce, které umožňují mnohem rychlejší iteraci než veřejný testnet (například se nemusíte starat o získávání ETH z testnetového faucetu).
 
 ## Předpoklady {#prerequisites}
 
-Měli byste rozumět [základům Ethereum stacku](/developers/docs/ethereum-stack/) a [ethereových sítí](/developers/docs/networks/), než se pustíte do vývojových sítí.
+Než se ponoříte do vývojových sítí, měli byste rozumět [základům technologického zásobníku Etherea](/developers/docs/ethereum-stack/) a [sítím Etherea](/developers/docs/networks/).
 
 ## Co je to vývojová síť? {#what-is-a-development-network}
 
-Vývojové sítě jsou v zásadě klienti Etherea (implementace Etherea) navrženi speciálně pro lokální vývoj.
+Vývojové sítě jsou v podstatě klienti Etherea (implementace Etherea) navržení speciálně pro lokální vývoj.
 
-**Proč jen lokálně nespustit standardní uzel Etherea?**
+**Proč prostě nespustit standardní uzel Etherea lokálně?**
 
-_Můžete_ [spustit uzel](/developers/docs/nodes-and-clients/#running-your-own-node), ale protože vývojové sítě jsou účelově vytvořeny pro vývoj, často obsahují praktické funkce, jako jsou:
+_Mohli_ byste [spustit uzel](/developers/docs/nodes-and-clients/#running-your-own-node), ale protože jsou vývojové sítě účelově vytvořeny pro vývoj, často obsahují užitečné funkce, jako jsou:
 
 - Deterministické naplnění vašeho lokálního blockchainu daty (např. účty se zůstatky ETH)
-- Okamžitá produkce bloků s každou přijatou transakcí, a to popořadě a bez zpoždění
-- Vylepšená funkce debugování a protokolování
+- Okamžité vytváření bloků s každou přijatou transakcí, popořadě a bez zpoždění
+- Vylepšené funkce pro ladění a logování
 
 ## Dostupné nástroje {#available-projects}
 
@@ -30,33 +30,33 @@ _Můžete_ [spustit uzel](/developers/docs/nodes-and-clients/#running-your-own-n
 
 ### Hardhat Network {#hardhat-network}
 
-Lokální síť Etherea určená pro vývoj. Umožňuje nasazovat kontrakty, spouštět testy a ladit kód.
+Lokální síť Etherea navržená pro vývoj. Umožňuje vám nasadit vaše kontrakty, spouštět testy a ladit váš kód.
 
-Síť Hardhat Network je integrovaná s Hardhatem, vývojovým prostředím Etherea pro profesionály.
+Hardhat Network je vestavěná v nástroji Hardhat, vývojovém prostředí Etherea pro profesionály.
 
 - [Webové stránky](https://hardhat.org/)
 - [GitHub](https://github.com/NomicFoundation/hardhat)
 
 ### Lokální Beacon Chainy {#local-beacon-chains}
 
-Někteří konsensuální klienti mají vestavěné nástroje pro spuštění lokálních Beacon Chainů pro účely testování. Jsou k dispozici pokyny pro Lighthouse, Nimbus a Lodestar:
+Někteří klienti konsensu mají vestavěné nástroje pro spuštění lokálních beacon chainů pro účely testování. K dispozici jsou pokyny pro Lighthouse, Nimbus a Lodestar:
 
-- [Lokální testovací síť s použitím Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
-- [Lokální testovací síť s použitím Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
+- [Lokální testnet pomocí klienta Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
+- [Lokální testnet pomocí klienta Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 
-### Veřejné testovací řetězce Etherea {#public-beacon-testchains}
+### Veřejné testovací sítě Etherea {#public-beacon-testchains}
 
-Existují také dvě udržované veřejné testovací implementace Etherea: Sepolia a Hoodi. Doporučenou testovací sítí s dlouhodobou podporou je Hoodi, na které může kdokoli volně validovat. Sepolia používá sadu validátorů s oprávněním, což znamená, že na této testovací síti není obecný přístup k novým validátorům.
+Existují také dvě udržované veřejné testovací implementace Etherea: Sepolia a Hoodi. Doporučený testnet s dlouhodobou podporou je Hoodi, na kterém může kdokoli volně validovat. Sepolia používá sadu validátorů s řízeným přístupem, což znamená, že na tomto testnetu není obecný přístup pro nové validátory.
 
 - [Hoodi Staking Launchpad](https://hoodi.launchpad.ethereum.org/)
 
 ### Kurtosis Ethereum Package {#kurtosis}
 
-Kurtosis je systém pro sestavování testovacích prostředí s více kontejnery, který vývojářům umožňuje lokálně spouštět reprodukovatelné instance blockchainových sítí.
+Kurtosis je systém pro sestavování vícekontajnerových testovacích prostředí, který umožňuje vývojářům lokálně spouštět reprodukovatelné instance blockchainových sítí.
 
-Balíček Ethereum Kurtosis lze použít k rychlému vytvoření parametrizovatelné, vysoce škálovatelné a soukromé testovací sítě Ethereum přes Docker nebo Kubernetes. Balíček podporuje všechny hlavní klienty exekuční vrstvy (EL) a vrstvy konsensu (CL). Kurtosis elegantně zpracovává všechna lokální mapování portů a servisní připojení pro reprezentativní síť, která se má používat v pracovních postupech validace a testování týkajících se základní infrastruktury Etherea.
+Balíček Ethereum Kurtosis lze použít k rychlému vytvoření parametrizovatelného, vysoce škálovatelného a soukromého testnetu Etherea přes Docker nebo Kubernetes. Balíček podporuje všechny hlavní klienty exekuční vrstvy (EL) a vrstvy konsensu (CL). Kurtosis elegantně zpracovává všechna mapování lokálních portů a připojení služeb pro reprezentativní síť, která se má použít v pracovních postupech validace a testování týkajících se základní infrastruktury Etherea.
 
-- [Ethereum network package](https://github.com/kurtosis-tech/ethereum-package)
+- [Balíček sítě Ethereum](https://github.com/kurtosis-tech/ethereum-package)
 - [Webové stránky](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Dokumentace](https://docs.kurtosis.com/)
@@ -67,5 +67,9 @@ _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidej
 
 ## Související témata {#related-topics}
 
-- [Vývojářské frameworky](/developers/docs/frameworks/)
+- [Vývojové frameworky](/developers/docs/frameworks/)
 - [Nastavení lokálního vývojového prostředí](/developers/local-environment/)
+
+## Návody: Vývojové sítě a testovací prostředí na Ethereu {#tutorials}
+
+- [Vývoj a testování dApps s lokálním testnetem Etherea s více klienty](/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/) _– Jak spustit lokální testnet Etherea s více klienty pomocí nástroje Kurtosis pro vývoj a testování dApps._

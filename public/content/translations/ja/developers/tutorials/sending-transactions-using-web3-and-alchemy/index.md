@@ -1,114 +1,115 @@
 ---
-title: "Web3を使用してトランザクションを送信する"
-description: "この初心者向けガイドでは、Web3を使用してイーサリアムトランザクションを送信する方法を説明します。 イーサリアムのブロックチェーンでは、作成、署名、およびブロードキャストという主に3つのステップを通じてトランザクションを送信します。 これら3つをすべて確認します。"
-author: "Elan Halpern"
-tags: [ "トランザクション", "web3.js", "Alchemy" ]
+title: "Web3を使用したトランザクションの送信"
+description: "これは、Web3を使用してイーサリアムのトランザクションを送信するための初心者向けガイドです。イーサリアムのブロックチェーンにトランザクションを送信するには、作成、署名、ブロードキャストの3つの主要なステップがあります。これら3つすべてについて説明します。"
+author: "エラン・ハルパーン"
+tags: ["トランザクション", "Web3.js", "Alchemy"]
 skill: beginner
+breadcrumb: "トランザクションの送信"
 lang: ja
 published: 2020-11-04
 source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
-この初心者向けガイドでは、Web3を使用してイーサリアムトランザクションを送信する方法を説明します。 イーサリアムのブロックチェーンでは、作成、署名、およびブロードキャストという主に3つのステップを通じてトランザクションを送信します。 これら3つのステップを説明することで、皆さんの疑問が氷解することを願っています！ このチュートリアルでは、[Alchemy](https://www.alchemy.com/)を使用して、イーサリアムチェーンにトランザクションを送信します。 [こちら](https://auth.alchemyapi.io/signup)で無料のAlchemyアカウントを作成できます。
+これは、Web3を使用してイーサリアムのトランザクションを送信するための初心者向けガイドです。イーサリアムのブロックチェーンにトランザクションを送信するには、作成、署名、ブロードキャストの3つの主要なステップがあります。これら3つすべてについて説明し、皆さんの疑問にお答えできればと思います。このチュートリアルでは、[Alchemy](https://www.alchemy.com/)を使用してイーサリアムのチェーンにトランザクションを送信します。[こちらから無料のAlchemyアカウントを作成](https://auth.alchemyapi.io/signup)できます。
 
-**注意：**このガイドは、アプリの_バックエンド_でトランザクションに署名するためのものです。 フロントエンドでトランザクションの署名を統合したい場合は、[Web3とブラウザプロバイダの連携](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider)をご確認ください。
+**注:** このガイドは、アプリの_バックエンド_でトランザクションに署名するためのものです。フロントエンドでのトランザクション署名を統合したい場合は、[Web3とブラウザプロバイダーの統合](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider)を確認してください。
 
-## 基本 {#the-basics}
+## 基本事項 {#the-basics}
 
-ブロックチェーンの開発を始めたばかりの皆さんは、トランザクションの送信（ごくシンプルな操作であるはずです）についてリサーチをした結果、ありとあらゆるガイドに遭遇し、それぞれが違うことを述べているために、圧倒され、混乱してしまったかもしれません。 今のあなたがそうだとしても、心配は要りません。誰しもその経験があるのです！ それではまず、いくつかの基本的な事項を確認しておきましょう：
+初めてブロックチェーン開発を始めた多くの開発者と同様に、トランザクションの送信方法（本来は非常にシンプルなはずのこと）について調べた結果、それぞれ異なることを言っている大量のガイドに遭遇し、少し圧倒されて混乱したかもしれません。もしそうなら、心配しないでください。誰もが一度は通る道です！それでは、始める前にいくつか明確にしておきましょう。
 
-### 1. Alchemyはあなたの秘密鍵を保存しません {#alchemy-does-not-store-your-private-keys}
+### 1\. Alchemyは秘密鍵を保存しません {#alchemy-does-not-store-your-private-keys}
 
-- 言い換えれば、Alchemyはあなたの代理として署名やトランザクションの送信を実行できません。 これは、セキュリティ保護のための仕様です。 Alchemyがあなたの秘密鍵を入力するように要求することはありませんので、ホスティングされたノード（あるいは、あらゆる他人）に対して、あなたの秘密鍵を教えないでください。
-- AlchemyのコアAPIを使ってブロックチェーンから読み込むことは可能ですが、ブロックチェーンに書き込むためには、Alchemyを通じてトランザクションを送信する前に、何か別のものを使ってトランザクションに署名する必要があります（これは、その他すべての[ノードサービス](/developers/docs/nodes-and-clients/nodes-as-a-service/)の場合も同様です）。
+- これは、Alchemyがあなたに代わってトランザクションに署名し、送信することはできないことを意味します。その理由はセキュリティのためです。Alchemyが秘密鍵の共有を求めることは決してありませんし、ホストされたノード（または他の誰か）と秘密鍵を共有するべきではありません。
+- AlchemyのコアAPIを使用してブロックチェーンから読み取ることはできますが、書き込むには、Alchemyを通じて送信する前に、別のものを使用してトランザクションに署名する必要があります（これは他の[ノードサービス](/developers/docs/nodes-and-clients/nodes-as-a-service/)でも同じです）。
 
-### 2. 「署名者」とは何か {#what-is-a-signer}
+### 2\. 「サイナー（署名者）」とは何ですか？ {#what-is-a-signer}
 
-- 署名者とは、あなたの秘密鍵を用いて、あなたのためにトランザクションに署名するユーザーです。 このチュートリアルでは、トランザクションの署名に[Alchemy web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)を使用しますが、他のweb3ライブラリも使用できます。
-- フロントエンドにおける署名者の良い例は[MetaMask](https://metamask.io/)です。これはあなたの代理としてトランザクションに署名し、送信します。
+- サイナーは、秘密鍵を使用してあなたに代わってトランザクションに署名します。このチュートリアルでは、トランザクションの署名に[Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)を使用しますが、他のWeb3ライブラリを使用することもできます。
+- フロントエンドにおけるサイナーの良い例は[メタマスク](https://metamask.io/)です。これはあなたに代わってトランザクションに署名し、送信します。
 
-### 3. 私のトランザクションに署名が必要なのはなぜですか？ {#why-do-i-need-to-sign-my-transactions}
+### 3\. なぜトランザクションに署名する必要があるのですか？ {#why-do-i-need-to-sign-my-transactions}
 
-- イーサリアムのネットワーク上でトランザクションを送信したいユーザーは、トランザクションの送信元が本人であることを証明するために、常に（秘密鍵を用いて）トランザクションに署名する必要があります。
-- この秘密鍵は、あなたのイーサリアムアカウントに対する完全な管理権限を与え、あなた（あるいはアクセス権限を持つすべてのユーザー）に対して、あなたの代理としてトランザクションを実行することを許可するものですから、厳重に保護することが非常に重要です。
+- イーサリアムのネットワークでトランザクションを送信したいすべてのユーザーは、トランザクションの送信元が主張する本人であることを検証するために、（秘密鍵を使用して）トランザクションに署名する必要があります。
+- 秘密鍵にアクセスできると、イーサリアムのアカウントを完全に制御できるようになり、あなた（またはアクセスできる人）に代わってトランザクションを実行できるようになるため、この秘密鍵を保護することは非常に重要です。
 
-### 4. 秘密鍵を保護するには、どうすればよいですか？ {#how-do-i-protect-my-private-key}
+### 4\. 秘密鍵を保護するにはどうすればよいですか？ {#how-do-i-protect-my-private-key}
 
-- 秘密鍵の保護や、トランザクションの送信のために秘密鍵を使用するには、多くの方法があります。 このチュートリアルでは、`.env`ファイルを使用します。 この他にも、秘密鍵を保存するために別のプロバイダーを利用したり、キーストア・ファイルを活用するなど、様々なオプションがあります。
+- 秘密鍵を保護し、それを使用してトランザクションを送信する方法はたくさんあります。このチュートリアルでは、`.env`ファイルを使用します。ただし、秘密鍵を保存する別のプロバイダーを使用したり、キーストアファイルを使用したり、その他のオプションを使用することもできます。
 
-### 5. `eth_sendTransaction`と`eth_sendRawTransaction`の違いは何ですか？ {#difference-between-send-and-send-raw}
+### 5\. `eth_sendTransaction`と`eth_sendRawTransaction`の違いは何ですか？ {#difference-between-send-and-send-raw}
 
-`eth_sendTransaction`と`eth_sendRawTransaction`はどちらも、トランザクションをイーサリアムのネットワークにブロードキャストし、将来のブロックに追加するためのイーサリアムAPIの関数です。 ただし、トランザクションの署名については、以下のような違いがあります：
+`eth_sendTransaction`と`eth_sendRawTransaction`はどちらも、将来のブロックに追加されるようにイーサリアムのネットワークにトランザクションをブロードキャストするイーサリアムのAPI関数です。これらは、トランザクションの署名の処理方法が異なります。
 
-- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction)は、_未署名_のトランザクションを送信するために使用します。これは、送信先のノードがあなたの秘密鍵を管理し、チェーンにブロードキャストする前にトランザクションに署名する必要があることを意味します。 Alchemyはユーザーの秘密鍵を保持しないため、このメソッドはサポートしていません。
-- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction)は、すでに署名されたトランザクションをブロードキャストするために使用されます。 これは、最初に[`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction)を使用し、その結果を`eth_sendRawTransaction`に渡す必要があることを意味します。
+- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction)は_未署名_のトランザクションを送信するために使用されます。つまり、送信先のノードが秘密鍵を管理し、チェーンにブロードキャストする前にトランザクションに署名できる必要があります。Alchemyはユーザーの秘密鍵を保持していないため、このメソッドはサポートしていません。
+- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction)は、すでに署名されているトランザクションをブロードキャストするために使用されます。つまり、最初に[`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction)を使用し、その結果を`eth_sendRawTransaction`に渡す必要があります。
 
-web3を使用する場合、`eth_sendRawTransaction`には[web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction)関数を呼び出すことでアクセスします。
+Web3を使用する場合、`eth_sendRawTransaction`には[web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction)関数を呼び出すことでアクセスします。
 
-このチュートリアルでは、これを使用します。
+このチュートリアルではこれを使用します。
 
-### 6. Web3ライブラリとは？ {#what-is-the-web3-library}
+### 6\. Web3ライブラリとは何ですか？ {#what-is-the-web3-library}
 
-- Web3.jsは、イーサリアム開発で非常に一般的に使用される、標準的なJSON-RPC呼び出しのラッパーライブラリです。
-- さまざまな言語に対応した数多くのweb3ライブラリが提供されています。 このチュートリアルでは、JavaScriptで書かれた[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)を使用します。 [ethers.js](https://docs.ethers.org/v5/)のような他の選択肢については[こちら](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)を確認できます。
+- Web3.jsは、イーサリアム開発で非常に一般的に使用される標準的なJSON-RPC呼び出しのラッパーライブラリです。
+- さまざまな言語向けに多くのWeb3ライブラリがあります。このチュートリアルでは、JavaScriptで書かれた[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)を使用します。[Ethers.js](https://docs.ethers.org/v5/)などの他のオプションは[こちら](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)で確認できます。
 
-さて、これらの疑問が解消できたところで、さっそくチュートリアルを始めましょう。 Alchemyの[discord](https://discord.gg/gWuC7zB)でいつでも気軽に質問してください！
+さて、いくつかの疑問が解消されたところで、チュートリアルに進みましょう。質問があれば、いつでもAlchemyの[ディスコード](https://discord.gg/gWuC7zB)で気軽に聞いてください！
 
-### 7. 安全でガス最適化されたプライベートなトランザクションを送信する方法は？ {#how-to-send-secure-gas-optimized-and-private-transactions}
+### 7\. 安全でガスが最適化されたプライベートなトランザクションを送信するには？ {#how-to-send-secure-gas-optimized-and-private-transactions}
 
-- [AlchemyにはTransact APIスイートがあります](https://docs.alchemy.com/reference/transact-api-quickstart)。 これにより、強化されたトランザクションの送信、トランザクションが発生する前のシミュレーション、プライベートなトランザクションの送信、ガス最適化されたトランザクションの送信が可能です。
-- また、[Notify API](https://docs.alchemy.com/docs/alchemy-notify)を使用して、トランザクションがメンプールから取得されチェーンに追加されたときにアラートを受け取ることもできます。
+- [AlchemyにはTransact APIのスイートがあります](https://docs.alchemy.com/reference/transact-api-quickstart)。これらを使用して、強化されたトランザクションの送信、実行前のトランザクションのシミュレーション、プライベートなトランザクションの送信、およびガスが最適化されたトランザクションの送信を行うことができます。
+- また、[Notify API](https://docs.alchemy.com/docs/alchemy-notify)を使用すると、トランザクションがメンプールから取り出されてチェーンに追加されたときにアラートを受け取ることができます。
 
-**注意：**このガイドには、Alchemyアカウント、イーサリアムアドレスまたはMetaMaskウォレット、NodeJs、およびnpmのインストールが必要です。 インストールが完了していない場合は、以下の手順で行ってください：
+**注:** このガイドでは、Alchemyアカウント、イーサリアムのアドレスまたはメタマスクのウォレット、Node.js、およびnpmがインストールされている必要があります。そうでない場合は、次の手順に従ってください。
 
-1. [無料のAlchemyアカウントを作成](https://auth.alchemyapi.io/signup)
-2. [MetaMaskアカウントを作成する](https://metamask.io/)（またはイーサリアムアドレスを取得する）
-3. [こちらの手順に従ってNodeJsとNPMをインストールしてください](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
+1.  [無料のAlchemyアカウントを作成する](https://auth.alchemyapi.io/signup)
+2.  [メタマスクのアカウントを作成する](https://metamask.io/)（またはイーサリアムのアドレスを取得する）
+3.  [これらの手順に従ってNode.jsとNPMをインストールする](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
 ## トランザクションを送信する手順 {#steps-to-sending-your-transaction}
 
-### 1. SepoliaテストネットでAlchemyアプリを作成する {#create-an-alchemy-app-on-the-sepolia-testnet}
+### 1\. SepoliaテストネットでAlchemyアプリを作成する {#create-an-alchemy-app-on-the-sepolia-testnet}
 
-[Alchemyダッシュボード](https://dashboard.alchemyapi.io/)に移動し、新規アプリを作成します。ネットワークにはSepolia（または他のテストネット）を選択してください。
+[Alchemyダッシュボード](https://dashboard.alchemyapi.io/)に移動し、ネットワークとしてSepolia（または他のテストネット）を選択して新しいアプリを作成します。
 
-### 2. SepoliaフォーセットからETHをリクエストする {#request-eth-from-sepolia-faucet}
+### 2\. SepoliaフォーセットからETHをリクエストする {#request-eth-from-sepolia-faucet}
 
-[Alchemy Sepoliaフォーセット](https://www.sepoliafaucet.com/)の指示に従って、ETHを受け取ってください。 リクエストには、他のネットワークのアドレスではなく、必ず**Sepolia**のイーサリアムアドレス（MetaMaskから）を含めてください。 指示を実行した後、ウォレットにETHが届いていることを再確認してください。
+[AlchemyのSepoliaフォーセット](https://www.sepoliafaucet.com/)の指示に従ってETHを受け取ります。他のネットワークではなく、必ず**Sepolia**のイーサリアムのアドレス（メタマスクから）を含めるようにしてください。指示に従った後、ウォレットにETHを受け取ったことを再確認してください。
 
-### 3. 新規プロジェクトディレクトリを作成し、`cd`で移動する {#create-a-new-project-direction}
+### 3\. 新しいプロジェクトディレクトリを作成し、そこに`cd`する {#create-a-new-project-direction}
 
-コマンドライン（Macの場合はターミナル）で新規のプロジェクトディレクトリを作成し、このディレクトリに移動します：
+コマンドライン（Macの場合はターミナル）から新しいプロジェクトディレクトリを作成し、そこに移動します。
 
 ```
 mkdir sendtx-example
 cd sendtx-example
 ```
 
-### 4. Alchemy Web3（または任意のweb3ライブラリ）をインストールする {#install-alchemy-web3}
+### 4\. Alchemy Web3（または任意のWeb3ライブラリ）をインストールする {#install-alchemy-web3}
 
-プロジェクトディレクトリで以下のコマンドを実行し、[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)をインストールしてください：
+プロジェクトディレクトリで次のコマンドを実行して、[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)をインストールします。
 
-注：ethers.jsライブラリを使用したい場合は、[こちらの指示に従ってください](https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum)。
+Ethers.jsライブラリを使用したい場合は、[こちらの手順に従ってください](https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum)。
 
 ```
 npm install @alch/alchemy-web3
 ```
 
-### 5. dotenvをインストールする {#install-dotenv}
+### 5\. dotenvをインストールする {#install-dotenv}
 
-APIキーと秘密鍵を安全に保存するために、.envファイルを使用します。
+APIキーと秘密鍵を安全に保存するために、`.env`ファイルを使用します。
 
 ```
 npm install dotenv --save
 ```
 
-### 6. `.env`ファイルを作成する {#create-the-dotenv-file}
+### 6\. `.env`ファイルを作成する {#create-the-dotenv-file}
 
-プロジェクトディレクトリに`.env`ファイルを作成し、以下を追加してください（“`your-api-url`”と“`your-private-key`”を置き換えます）
+プロジェクトディレクトリに`.env`ファイルを作成し、以下を追加します（「`your-api-url`」と「`your-private-key`」を置き換えます）。
 
-- AlchemyのAPI URLを見つけるには、ダッシュボードで作成したアプリの詳細ページに移動します。右上隅の「View Key」をクリックし、HTTP URLを選択します。
-- MetaMaskを使用して秘密鍵を見つけるには、この[ガイド](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)をご覧ください。
+- AlchemyのAPI URLを見つけるには、ダッシュボードで作成したばかりのアプリの詳細ページに移動し、右上隅の「View Key」をクリックして、HTTP URLを取得します。
+- メタマスクを使用して秘密鍵を見つけるには、この[ガイド](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)を確認してください。
 
 ```
 API_URL = "your-api-url"
@@ -118,16 +119,16 @@ PRIVATE_KEY = "your-private-key"
 <Alert variant="warning">
 <AlertContent>
 <AlertDescription>
-<code>.env</code>はコミットしないでください！ <code>.env</code>は決して他人と共有したり、公開したりしないように注意してください。共有することで、あなたのアカウント情報が漏洩する可能性があります。 バージョンを管理する場合は、<code>.env</code>を<a href="https://git-scm.com/docs/gitignore">gitignore</a>ファイルに追加してください。
+<code>.env</code>をコミットしないでください！<code>.env</code>ファイルを誰かと共有したり公開したりすると、シークレットが漏洩することになるため、絶対にしないようにしてください。バージョン管理を使用している場合は、<code>.env</code>を<a href="https://git-scm.com/docs/gitignore">gitignore</a>ファイルに追加してください。
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-### 7. `sendTx.js`ファイルを作成する {#create-sendtx-js}
+### 7\. `sendTx.js`ファイルを作成する {#create-sendtx-js}
 
-機密データが.envファイルで保護されたので、さっそくコード作成を始めましょう。 送信トランザクションの例として、ETHをSepoliaフォーセットに送り返します。
+素晴らしいです。これで機密データが`.env`ファイルで保護されたので、コーディングを始めましょう。トランザクション送信の例として、SepoliaフォーセットにETHを送金して戻します。
 
-トランザクションの設定と送信を行う`sendTx.js`ファイルを作成し、その中に以下のコードを追加してください。
+`sendTx.js`ファイルを作成します。ここでサンプルトランザクションを設定して送信します。次のコード行を追加してください。
 
 ```
 async function main() {
@@ -135,25 +136,25 @@ async function main() {
     const { API_URL, PRIVATE_KEY } = process.env;
     const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
     const web3 = createAlchemyWeb3(API_URL);
-    const myAddress = '0x610Ae88399fc1687FA7530Aac28eC2539c7d6d63' //TODO: このアドレスをあなた自身の公開アドレスに置き換えてください
+    const myAddress = '0x610Ae88399fc1687FA7530Aac28eC2539c7d6d63' //TODO: このアドレスをあなた自身のパブリックアドレスに置き換えてください
 
-    const nonce = await web3.eth.getTransactionCount(myAddress, 'latest'); // nonceは0からカウントを始めます
+    const nonce = await web3.eth.getTransactionCount(myAddress, 'latest'); // ナンスは0からカウントを開始します
 
     const transaction = {
-     'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // ETHを返却するフォーセットのアドレス
+     'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // ETHを返すフォーセットのアドレス
      'value': 1000000000000000000, // 1 ETH
      'gas': 30000,
      'nonce': nonce,
-     // メッセージの送信やスマートコントラクトを実行するためのオプションのデータフィールド
+     // メッセージを送信したりスマート・コントラクトを実行したりするためのオプションのデータフィールド
     };
 
     const signedTx = await web3.eth.accounts.signTransaction(transaction, PRIVATE_KEY);
 
     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
-      console.log("🎉 トランザクションのハッシュは次の通りです: ", hash, "\n AlchemyのMempoolでトランザクションのステータスを確認してください！");
+      console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
     } else {
-      console.log("❗トランザクションの送信中に問題が発生しました:", error)
+      console.log("❗Something went wrong while submitting your transaction:", error)
     }
    });
 }
@@ -161,48 +162,48 @@ async function main() {
 main();
 ```
 
-**6行目**のアドレスは、あなたの公開アドレスに置き換えてください。
+<strong>6行目</strong>のアドレスを必ずあなた自身のパブリックアドレスに置き換えてください。
 
-さて、このコードを実行する前に、ここでいくつかのコンポーネントについて説明しましょう。
+さて、このコードを実行する前に、ここにあるいくつかのコンポーネントについて説明しましょう。
 
-- `nonce`: ノンス仕様は、あなたのアドレスから送信されたトランザクション数を追跡するために使用されます。 これはセキュリティ目的、および[リプレイ攻撃](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce)を防ぐために必要です。 アドレスから送信されたトランザクション数を取得するには、[getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount)を使用します。
-- `transaction`: トランザクションオブジェクトには指定する必要があるいくつかの側面があります
-  - `to`: ETHの送信先アドレスです。 この場合、最初にリクエストした[Sepoliaフォーセット](https://sepoliafaucet.com/)にETHを送り返します。
-  - `value`: Wei（10^18 Wei = 1 ETH）で指定した送金額です。
-  - `gas`: トランザクションに含まれる適切なガス量を決定する方法はたくさんあります。 Alchemyには、ガス価格が特定のしきい値内に下がったときに通知する[ガス価格ウェブフック](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1)さえあります。 メインネット上のトランザクションの場合、[ETH Gas Station](https://ethgasstation.info/)などのガス推定ツールをチェックして、含めるべき適切なガス量を決定することをお勧めします。 イーサリアムの操作に必要なガスの最小量は21000なので、トランザクションが確実に実行されるように、ここでは30000としておきます。
-  - `nonce`: 上記のノンスの定義を参照してください。 ノンスは、0から開始されます。
-  - [任意] data: 送金やスマートコントラクトの呼び出しにおいて追加情報を送信するために使用します。残高転送の場合は必要ありません。以下の注記を確認してください。
-- `signedTx`: トランザクションオブジェクトへの署名には、`PRIVATE_KEY`を伴う`signTransaction`メソッドを使用します。
-- `sendSignedTransaction`: トランザクションの署名を取得したら、`sendSignedTransaction`を使って、次のブロックに含まれるように送信できるようになります。
+- `nonce` : ナンスの指定は、あなたのアドレスから送信されたトランザクションの数を追跡するために使用されます。これはセキュリティの目的と、[リプレイ攻撃](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce)を防ぐために必要です。アドレスから送信されたトランザクションの数を取得するには、[getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount)を使用します。
+- `transaction`: トランザクションオブジェクトには、指定する必要があるいくつかの要素があります。
+  - `to`: これはETHを送信したいアドレスです。この場合、最初にリクエストした[Sepoliaフォーセット](https://sepoliafaucet.com/)にETHを送金して戻します。
+  - `value`: これは送信したい金額で、Weiで指定します（10^18 Wei = 1 ETH）。
+  - `gas`: トランザクションに含める適切なガスの量を決定する方法はたくさんあります。Alchemyには、ガス価格が特定のしきい値を下回ったときに通知する[ガス価格Webhook](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1)もあります。メインネットのトランザクションの場合、[ETH Gas Station](https://ethgasstation.info/)のようなガス見積もりツールをチェックして、含める適切なガスの量を決定することをお勧めします。21000はイーサリアムでの操作が使用する最小のガス量であるため、トランザクションが確実に実行されるように、ここでは30000を指定します。
+  - `nonce`: 上記のナンスの定義を参照してください。ナンスはゼロからカウントを開始します。
+  - [オプション] data: 送金とともに追加情報を送信したり、スマート・コントラクトを呼び出したりするために使用されます。残高の送金には必須ではありません。以下の注記を確認してください。
+- `signedTx`: トランザクションオブジェクトに署名するには、`PRIVATE_KEY`とともに`signTransaction`メソッドを使用します。
+- `sendSignedTransaction`: 署名されたトランザクションができたら、`sendSignedTransaction`を使用して、後続のブロックに含められるように送信できます。
 
-**dataに関するメモ**
-イーサリアムで送信できるトランザクションは主に2種類あります。
+**dataに関する注記**
+イーサリアムで送信できるトランザクションには、主に2つのタイプがあります。
 
-- 残高転送：あるアドレスから別のアドレスにETHを送信します。 dataフィールドは必要ありませんが、トランザクションと一緒に追加の情報を送信したい場合はこのフィールドにHEX形式で入力してください。
-  - 例えば、不変のタイムスタンプを与えるために、IPFS文書のハッシュをイーサリアムチェーンに記録したい場合を考えてみましょう。 その場合、dataフィールドはdata: `web3.utils.toHex(‘IPFS hash‘)`のようになります。 これにより、誰でもチェーンをクエリして、このドキュメントがいつ追加されたかを確認できるようになります。
-- スマートコントラクトのトランザクション：チェーン上でスマートコントラクトコードを実行します。 この場合、dataフィールドは、パラメータと共に実行したいスマート関数を含む必要があります。
-  - 実践的な例については、この[Hello Worldチュートリアル](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction)のステップ8をご覧ください。
+- 残高の送金: あるアドレスから別のアドレスへETHを送信します。dataフィールドは必須ではありませんが、トランザクションとともに追加情報を送信したい場合は、このフィールドに16進数（HEX）形式でその情報を含めることができます。
+  - たとえば、IPFSドキュメントのハッシュをイーサリアムのチェーンに書き込んで、イミュータブルなタイムスタンプを付与したいとします。その場合、dataフィールドは data: `web3.utils.toHex(‘IPFS hash‘)` のようになります。これにより、誰でもチェーンをクエリして、そのドキュメントがいつ追加されたかを確認できるようになります。
+- スマート・コントラクトのトランザクション: チェーン上でスマート・コントラクトのコードを実行します。この場合、dataフィールドには、実行したいスマート関数とパラメータを含める必要があります。
+  - 実践的な例については、この[Hello Worldチュートリアル](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction)のステップ8を確認してください。
 
-### 8. `node sendTx.js`を使用してコードを実行する {#run-the-code-using-node-sendtx-js}
+### 8\. `node sendTx.js`を使用してコードを実行する {#run-the-code-using-node-sendtx-js}
 
-ターミナルまたはコマンドラインに戻り、以下を実行します。
+ターミナルまたはコマンドラインに戻り、次を実行します。
 
 ```
 node sendTx.js
 ```
 
-### 9. メンプールでトランザクションを確認する {#see-your-transaction-in-the-mempool}
+### 9\. メンプールでトランザクションを確認する {#see-your-transaction-in-the-mempool}
 
-Alchemyダッシュボードの[メンプールページ](https://dashboard.alchemyapi.io/mempool)を開き、作成したアプリでフィルタリングしてトランザクションを見つけます。 ここでは、トランザクション処理が保留中の状態からマイニングされた状態（成功した場合）あるいはドロップした状態（失敗した場合）に遷移するのを確認できます。 「All」の設定を変更せず、「マイニング済み」、「保留中」、および「ドロップ」のトランザクションをすべて捕捉できるようにしておきます。 また、アドレス`0x31b98d14007bdee637298086988a0bbd31184523`に送信されたトランザクションを確認する方法でもあなたのトランザクションを検索できます。
+Alchemyダッシュボードの[メンプールページ](https://dashboard.alchemyapi.io/mempool)を開き、作成したアプリでフィルタリングしてトランザクションを見つけます。ここでは、トランザクションが保留中の状態から、マイニングされた状態（成功した場合）、またはドロップされた状態（失敗した場合）に移行するのを確認できます。「mined（マイニング済み）」、「pending（保留中）」、「dropped（ドロップ）」のトランザクションをすべてキャプチャできるように、必ず「All」のままにしておいてください。アドレス `0x31b98d14007bdee637298086988a0bbd31184523` に送信されたトランザクションを探すことで、トランザクションを検索することもできます。
 
-あなたのトランザクションを見つけたら、当該のtxハッシュを選択してトランザクションの詳細を確認します。以下のようなビューが表示されるはずです：
+トランザクションを見つけたら、その詳細を表示するためにtxハッシュを選択します。すると、次のようなビューが表示されるはずです。
 
-![メンプールウォッチャーのスクリーンショット](./mempool.png)
+![Mempool watcher screenshot](./mempool.png)
 
-赤い丸印で囲まれたアイコンをクリックすると、Etherscan上でトランザクションを確認できます！
+そこから、赤丸で囲まれたアイコンをクリックすると、Etherscanでトランザクションを表示できます！
 
-**やりましたね！** **Alchemyを使用して、最初のイーサリアムトランザクションの送信に成功しました🎉**
+**やったー！Alchemyを使用して初めてのイーサリアムのトランザクションを送信しました 🎉**
 
-_このガイドに関するフィードバックやご提案は、Alchemyの[Discord](https://discord.gg/A39JVCM)でElanにメッセージをお送りください！_
+_このガイドに関するフィードバックや提案については、Alchemyの[ディスコード](https://discord.gg/A39JVCM)でエラン（Elan）にメッセージを送ってください！_
 
-_初出: [https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy](https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy)_
+_元記事は[https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy](https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy)で公開されました_

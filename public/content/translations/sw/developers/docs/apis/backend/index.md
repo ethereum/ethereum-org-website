@@ -1,14 +1,14 @@
 ---
-title: Maktaba za API za Backend
-description: Utangulizi wa API za mteja wa Ethereum zinazokuruhusu kuingiliana na mnyororo wa bloku kutoka kwenye programu yako.
+title: Maktaba za API za upande wa nyuma
+description: Utangulizi wa API za kiteja cha Ethereum zinazokuruhusu kuingiliana na mnyororo wa vitalu kutoka kwenye programu yako.
 lang: sw
 ---
 
-Ili programu ya kompyuta iweze kuingiliana na mnyororo wa bloku wa Ethereum (yaani, kusoma data ya mnyororo wa bloku na/au kutuma miamala kwenye mtandao), ni lazima iunganishwe na nodi ya Ethereum.
+Ili programu ya programu iweze kuingiliana na mnyororo wa vitalu wa [Ethereum](/) (yaani, kusoma data ya mnyororo wa vitalu na/au kutuma miamala kwenye mtandao), lazima iunganishwe na nodi ya Ethereum.
 
-Kwa kusudi hili, kila mteja wa Ethereum hutekeleza vipimo vya [JSON-RPC](/developers/docs/apis/json-rpc/), kwa hivyo kuna seti sare ya [njia](/developers/docs/apis/json-rpc/#json-rpc-methods) ambazo programu zinaweza kutegemea.
+Kwa madhumuni haya, kila kiteja cha Ethereum hutekeleza vipimo vya [JSON-RPC](/developers/docs/apis/json-rpc/), kwa hivyo kuna seti sawa ya [njia](/developers/docs/apis/json-rpc/#json-rpc-methods) ambazo programu zinaweza kutegemea.
 
-Ikiwa unataka kutumia lugha maalum ya programu kuungana na nodi ya Ethereum, kuna maktaba nyingi za kurahisisha ndani ya mfumo ikolojia ambazo hurahisisha hili zaidi. Kwa maktaba hizi, wasanidi programu wanaweza kuandika njia angavu, za mstari mmoja ili kuanzisha maombi ya JSON-RPC (chini ya pazia) yanayoingiliana na Ethereum.
+Ikiwa unataka kutumia lugha maalum ya programu kuunganishwa na nodi ya Ethereum, kuna maktaba nyingi za urahisi ndani ya mfumo wa ikolojia ambazo hufanya hili kuwa rahisi zaidi. Kwa maktaba hizi, wasanidi programu wanaweza kuandika njia angavu za mstari mmoja ili kuanzisha maombi ya JSON-RPC (kiufundi) yanayoingiliana na Ethereum.
 
 ## Mahitaji ya awali {#prerequisites}
 
@@ -16,7 +16,7 @@ Inaweza kusaidia kuelewa [mkusanyiko wa Ethereum](/developers/docs/ethereum-stac
 
 ## Kwa nini utumie maktaba? {#why-use-a-library}
 
-Maktaba hizi hurahisisha sehemu kubwa ya utata wa kuingiliana moja kwa moja na nodi ya Ethereum. Pia hutoa kazi za matumizi (k.m., kubadilisha ETH kwenda Gwei) hivyo kama msanidi programu unaweza kutumia muda mfupi kushughulikia ugumu wa wateja wa Ethereum na muda mwingi zaidi kulenga utendaji wa kipekee wa programu yako.
+Maktaba hizi huondoa ugumu mwingi wa kuingiliana moja kwa moja na nodi ya Ethereum. Pia hutoa vipengele vya matumizi (k.m., kubadilisha ETH kuwa Gwei) ili kama msanidi programu uweze kutumia muda mchache kushughulika na utata wa wateja wa Ethereum na muda mwingi kuzingatia utendaji wa kipekee wa programu yako.
 
 ## Maktaba zinazopatikana {#available-libraries}
 
@@ -28,39 +28,37 @@ Maktaba hizi hurahisisha sehemu kubwa ya utata wa kuingiliana moja kwa moja na n
 - [Nyaraka](https://www.alchemy.com/docs/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
-
+  
 **All That Node -** **_Nodi-kama-Huduma._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Nyaraka](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast by Bware Labs -** **_API zilizogatuliwa za Mtandao Mkuu wa Ethereum na Testnet._**
+**Blast na Bware Labs -** **_API Zilizogatuliwa kwa Mtandao Mkuu wa Ethereum na Mitandao ya Majaribio._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Nyaraka](https://docs.blastapi.io)
 - [Discord](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi -** **_Hutoa huduma za RPC zenye ufanisi na kasi zaidi_**
+**BlockPi -** **_Hutoa huduma za RPC zenye ufanisi zaidi na za haraka_**
 
 - [blockpi.io](https://blockpi.io/)
 - [Nyaraka](https://docs.blockpi.io/)
 - [GitHub](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
-**Lango la Cloudflare Ethereum.**
+**Lango la Ethereum la Cloudflare.**
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - Kichunguzi cha Bloku na API za Miamala**
-
+**Etherscan - Kichunguzi cha Bloku na API za Muamala**
 - [Nyaraka](https://docs.etherscan.io/)
 
-**Blockscout - Kichunguzi cha Bloku cha Chanzo Huria**
-
+**Blockscout - Kichunguzi cha Bloku cha Chanzo Wazi**
 - [Nyaraka](https://docs.blockscout.com/)
 
-**GetBlock-** **_Blockchain-kama-huduma kwa ajili ya maendeleo ya Web3_**
+**GetBlock-** **_Mnyororo wa vitalu-kama-huduma kwa maendeleo ya Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Nyaraka](https://docs.getblock.io/)
@@ -81,19 +79,19 @@ Maktaba hizi hurahisisha sehemu kubwa ya utata wa kuingiliana moja kwa moja na n
 - [NOWNodes.io](https://nownodes.io/)
 - [Nyaraka](https://nownodes.gitbook.io/documentation)
 
-**QuickNode -** **_Miundombinu ya Blockchain kama Huduma._**
+**QuickNode -** **_Miundombinu ya Mnyororo wa vitalu kama Huduma._**
 
 - [quicknode.com](https://quicknode.com)
 - [Nyaraka](https://www.quicknode.com/docs/welcome)
 - [Discord](https://discord.gg/quicknode)
 
-**Rivet -** **_API za Ethereum na Ethereum Classic kama huduma zinazoendeshwa na programu ya chanzo huria._**
+**Rivet -** **_API za Ethereum na Ethereum Asilia kama huduma inayoendeshwa na programu ya chanzo wazi._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Nyaraka](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_Nodi za Ethereum zinazozingatia kasi kama API ya JSON-RPC/WebSockets._**
+**Zmok -** **_Nodi za Ethereum zinazolenga kasi kama API ya JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -102,67 +100,67 @@ Maktaba hizi hurahisisha sehemu kubwa ya utata wa kuingiliana moja kwa moja na n
 
 ### Zana za maendeleo {#development-tools}
 
-**ethers-kt -** **_Maktaba ya Async, ya utendaji wa juu ya Kotlin/Java/Android kwa minyororo ya bloku inayotumia EVM._**
+**ethers-kt -** **_Maktaba ya Kotlin/Java/Android isiyolingana, yenye utendaji wa juu kwa minyororo ya vitalu inayotegemea EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Mifano](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_Maktaba ya chanzo huria ya .NET ya kuunganisha kwa ajili ya blockchain._**
+**Nethereum -** **_Maktaba ya ujumuishaji ya .NET ya chanzo wazi kwa mnyororo wa vitalu._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Nyaraka](http://docs.nethereum.com/en/latest/)
+- [Nyaraka](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-**Zana za Python -** **_Aina mbalimbali za maktaba kwa ajili ya mwingiliano wa Ethereum kupitia Python._**
+**Zana za Python -** **_Aina mbalimbali za maktaba kwa mwingiliano wa Ethereum kupitia Python._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [GitHub ya web3.py](https://github.com/ethereum/web3.py)
-- [Gumzo la web3.py](https://gitter.im/ethereum/web3.py)
+- [GitHub ya Web3.py](https://github.com/ethereum/web3.py)
+- [Soga ya Web3.py](https://gitter.im/ethereum/web3.py)
 
-**Tatum -** **_Jukwaa bora kabisa la maendeleo ya blockchain._**
+**Tatum -** **_Jukwaa kuu la maendeleo la mnyororo wa vitalu._**
 
 - [Tatum](https://tatum.io/)
 - [GitHub](https://github.com/tatumio/)
 - [Nyaraka](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**web3j -** **_Maktaba ya kuunganisha ya Java/Android/Kotlin/Scala kwa ajili ya Ethereum._**
+**Web3j -** **_Maktaba ya ujumuishaji ya Java/Android/Kotlin/Scala kwa Ethereum._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Nyaraka](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-### Huduma za Blockchain {#blockchain-services}
+### Huduma za mnyororo wa vitalu {#blockchain-services}
 
 **BlockCypher -** **_API za Wavuti za Ethereum._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Nyaraka](https://www.blockcypher.com/dev/ethereum/)
 
-**Chainbase -** **_Miundombinu ya data ya web3 yote kwa moja kwa ajili ya Ethereum._**
+**Chainbase -** **_Miundombinu ya data ya Web3 ya yote kwa moja kwa Ethereum._**
 
 - [chainbase.com](https://chainbase.com/)
 - [Nyaraka](https://docs.chainbase.com/)
 - [Discord](https://discord.gg/Wx6qpqz4AF)
 
-**Chainstack -** **_Nodi za Ethereum zenye kunyumbulika na maalum kama huduma._**
+**Chainstack -** **_Nodi za Ethereum zinazonyumbulika na zilizojitolea kama huduma._**
 
 - [chainstack.com](https://chainstack.com)
 - [Nyaraka](https://docs.chainstack.com/)
 - [Rejeleo la API ya Ethereum](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Nodi ya Wingu ya Coinbase -** **_API ya Miundombinu ya Blockchain._**
+**Nodi ya Wingu ya Coinbase -** **_API ya Miundombinu ya Mnyororo wa vitalu._**
 
 - [Nodi ya Wingu ya Coinbase](https://www.coinbase.com/developer-platform)
 - [Nyaraka](https://docs.cdp.coinbase.com/)
 
-**DataHub by Figment -** **_Huduma za API za Web3 pamoja na Mtandao Mkuu wa Ethereum na testnet._**
+**DataHub na Figment -** **_Huduma za API za Web3 zilizo na Mtandao Mkuu wa Ethereum na mitandao ya majaribio._**
 
 - [DataHub](https://www.figment.io/)
 - [Nyaraka](https://docs.figment.io/)
 
-**Moralis -** **_Mtoa Huduma wa API wa EVM wa Kiwango cha Biashara._**
+**Moralis -** **_Mtoa Huduma wa API ya EVM ya Kiwango cha Biashara._**
 
 - [moralis.io](https://moralis.io)
 - [Nyaraka](https://docs.moralis.io/)
@@ -170,42 +168,51 @@ Maktaba hizi hurahisisha sehemu kubwa ya utata wa kuingiliana moja kwa moja na n
 - [Discord](https://moralis.io/joindiscord/)
 - [Jukwaa](https://forum.moralis.io/)
 
-**NFTPort -** **_Data za Ethereum na API za Mint._**
+**NFTPort -** **_Data ya Ethereum na API za Kufua._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Nyaraka](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [Discord](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview -** **_Jukwaa la Jumla la API za Blockchain za Sarafu-Crypto Nyingi._**
+**Tokenview -** **_Jukwaa la Jumla la API za Mnyororo wa vitalu wa Kripto Nyingi._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Nyaraka](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_Hutoa ufikiaji rahisi na wa kuaminika wa API kwa blockchain ya Ethereum._**
+**Watchdata -** **_Hutoa ufikiaji rahisi na wa kutegemewa wa API kwenye mnyororo wa vitalu wa Ethereum._**
 
 - [Watchdata](https://watchdata.io/)
 - [Nyaraka](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Covalent -** **_API za blockchain zilizoboreshwa kwa Minyororo 200+._**
+**Codex -** **_API ya data ya mnyororo wa vitalu iliyoboreshwa na ya wakati halisi katika minyororo mingi._**
+
+- [codex.io](https://www.codex.io/)
+- [Nyaraka](https://docs.codex.io)
+- [Kichunguzi](https://docs.codex.io/explore)
+- [GitHub](https://github.com/Codex-Data)
+- [Discord](https://discord.com/invite/mFpUhT3vAq)
+
+**Covalent -** **_API zilizoboreshwa za mnyororo wa vitalu kwa Minyororo 200+._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
 - [Nyaraka](https://www.covalenthq.com/docs/api/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-## Masomo zaidi {#further-reading}
 
-_Unajua rasilimali ya jamii iliyokusaidia?_ Hariri ukurasa huu na uiongeze!_
+## Usomaji zaidi {#further-reading}
+
+_Je, unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 
 ## Mada zinazohusiana {#related-topics}
 
 - [Nodi na wateja](/developers/docs/nodes-and-clients/)
-- [Mifumo ya uundaji](/developers/docs/frameworks/)
+- [Mifumo ya maendeleo](/developers/docs/frameworks/)
 
 ## Mafunzo yanayohusiana {#related-tutorials}
 
-- [Sanidi Web3js kutumia blockchain ya Ethereum katika JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Maagizo ya kusanidi web3.js katika mradi wako._
-- [Kuita mkataba-erevu kutoka JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Kwa kutumia tokeni ya DAI, ona jinsi ya kuita kazi za mikataba kwa kutumia JavaScript._
+- [Sanidi Web3.js ili kutumia mnyororo wa vitalu wa Ethereum katika JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Maagizo ya kusanidi Web3.js katika mradi wako._
+- [Kuita mkataba mahiri kutoka kwenye JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Kwa kutumia tokeni ya DAI, angalia jinsi ya kuita utendakazi wa mikataba kwa kutumia JavaScript._

@@ -1,60 +1,61 @@
 ---
-title: "Usando Ethereum para autenticação web2"
-description: "Depois de ler este tutorial, um desenvolvedor poderá integrar o login do Ethereum (web3) com o login SAML, um padrão usado na web2 para fornecer single sign-on e outros serviços relacionados. Isso permite que o acesso aos recursos da web2 seja autenticado por meio de assinaturas do Ethereum, com os atributos do usuário provenientes de atestados."
+title: "Usando o Ethereum para autenticação na Web2"
+description: "Após ler este tutorial, um desenvolvedor será capaz de integrar o login do Ethereum (web3) com o login SAML, um padrão usado na Web2 para fornecer logon único (single sign-on) e outros serviços relacionados. Isso permite que o acesso a recursos da Web2 seja autenticado por meio de assinaturas do Ethereum, com os atributos do usuário provenientes de atestações."
 author: Ori Pomerantz
-tags: [ "web2", "autenticação", "eas" ]
+tags: ["web2", "autenticação", "eas"]
 skill: beginner
+breadcrumb: "Ethereum para autenticação na Web2"
 lang: pt-br
 published: 2025-04-30
 ---
 
-## Introdução
+## Introdução {#introduction}
 
-[SAML](https://www.onelogin.com/learn/saml) é um padrão usado na web2 para permitir que um [provedor de identidade (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) forneça informações do usuário para [provedores de serviço (SP)](https://en.wikipedia.org/wiki/Service_provider_\(SAML\)).
+[SAML](https://www.onelogin.com/learn/saml) é um padrão usado na Web2 para permitir que um [provedor de identidade (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) forneça informações de usuário para [provedores de serviços (SP)](https://en.wikipedia.org/wiki/Service_provider_(SAML).
 
-Neste tutorial, você aprenderá como integrar assinaturas do Ethereum com SAML para permitir que os usuários usem suas carteiras Ethereum para se autenticarem em serviços da web2 que ainda não suportam o Ethereum nativamente.
+Neste tutorial, você aprenderá como integrar assinaturas do Ethereum com SAML para permitir que os usuários usem suas carteiras Ethereum para se autenticarem em serviços da Web2 que ainda não suportam o Ethereum nativamente.
 
 Observe que este tutorial foi escrito para dois públicos distintos:
 
-- Pessoas do Ethereum que entendem o Ethereum e precisam aprender sobre SAML
-- Pessoas da Web2 que entendem de SAML e autenticação da web2 e precisam aprender sobre Ethereum
+- Pessoas do Ethereum que entendem de Ethereum e precisam aprender SAML
+- Pessoas da Web2 que entendem de SAML e autenticação na Web2 e precisam aprender Ethereum
 
 Como resultado, ele conterá muito material introdutório que você já conhece. Sinta-se à vontade para pulá-lo.
 
-### SAML para pessoas do Ethereum
+### SAML para pessoas do Ethereum {#saml-for-ethereum-people}
 
-SAML é um protocolo centralizado. Um provedor de serviço (SP) só aceita afirmações (como \"este é o meu usuário João, ele deve ter permissões para fazer A, B e C\") de um provedor de identidade (IdP) se tiver uma relação de confiança preexistente com ele, ou com a [autoridade certificadora](https://www.ssl.com/article/what-is-a-certificate-authority-ca/) que assinou o certificado daquele IdP.
+SAML é um protocolo centralizado. Um provedor de serviços (SP) só aceita asserções (como "este é meu usuário John, ele deve ter permissões para fazer A, B e C") de um provedor de identidade (IdP) se tiver uma relação de confiança pré-existente com ele ou com a [autoridade de certificação](https://www.ssl.com/article/what-is-a-certificate-authority-ca/) que assinou o certificado desse IdP.
 
-Por exemplo, o SP pode ser uma agência de viagens que presta serviços de viagens a empresas, e o IdP pode ser o site interno de uma empresa. Quando os funcionários precisam reservar uma viagem de negócios, a agência de viagens os envia para autenticação pela empresa antes de permitir que eles realmente reservem a viagem.
+Por exemplo, o SP pode ser uma agência de viagens que fornece serviços de viagens para empresas, e o IdP pode ser o site interno de uma empresa. Quando os funcionários precisam reservar viagens de negócios, a agência de viagens os envia para autenticação pela empresa antes de permitir que eles realmente reservem a viagem.
 
-![Passo a passo do processo SAML](./fig-01-saml.png)
+![Step by step SAML process](./fig-01-saml.png)
 
-Esta é a forma como as três entidades, o navegador, o SP e o IdP, negociam o acesso. O SP não precisa saber nada sobre o usuário que está usando o navegador com antecedência, apenas confiar no IdP.
+Esta é a maneira como as três entidades, o navegador, o SP e o IdP, negociam o acesso. O SP não precisa saber nada sobre o usuário que está usando o navegador com antecedência, apenas confiar no IdP.
 
-### Ethereum para pessoas do SAML
+### Ethereum para pessoas de SAML {#ethereum-for-saml-people}
 
-Ethereum é um sistema descentralizado.
+O Ethereum é um sistema descentralizado. 
 
-![Logon do Ethereum](./fig-02-eth-logon.png)
+![Ethereum logon](./fig-02-eth-logon.png)
 
-Os usuários possuem uma chave privada (geralmente mantida em uma extensão do navegador). A partir da chave privada, você pode derivar uma chave pública e, a partir dela, um endereço de 20 bytes. Quando os usuários precisam fazer login em um sistema, eles são solicitados a assinar uma mensagem com um nonce (um valor de uso único). O servidor pode verificar se a assinatura foi criada por esse endereço.
+Os usuários têm uma chave privada (normalmente mantida em uma extensão de navegador). A partir da chave privada, você pode derivar uma chave pública e, a partir dela, um endereço de 20 bytes. Quando os usuários precisam fazer login em um sistema, é solicitado que assinem uma mensagem com um nonce (um valor de uso único). O servidor pode verificar se a assinatura foi criada por esse endereço.
 
-![Obtendo dados extras de atestados](./fig-03-eas-data.png)
+![Getting extra data from attestations](./fig-03-eas-data.png)
 
-A assinatura verifica apenas o endereço do Ethereum. Para obter outros atributos do usuário, você normalmente usa [atestados](https://attest.org/). Um atestado normalmente tem estes campos:
+A assinatura verifica apenas o endereço Ethereum. Para obter outros atributos do usuário, você normalmente usa [atestações](https://attest.org/). Uma atestação normalmente tem estes campos:
 
-- **Atestador**, o endereço que fez o atestado
-- **Destinatário**, o endereço ao qual o atestado se aplica
-- **Dados**, os dados que estão sendo atestados, como nome, permissões, etc.
-- **Esquema**, o ID do esquema usado para interpretar os dados.
+- **Atestador (Attestor)**, o endereço que fez a atestação
+- **Destinatário (Recipient)**, o endereço ao qual a atestação se aplica
+- **Dados (Data)**, os dados sendo atestados, como nome, permissões, etc.
+- **Esquema (Schema)**, o ID do esquema usado para interpretar os dados.
 
-Devido à natureza descentralizada do Ethereum, qualquer usuário pode fazer atestados. A identidade do atestador é importante para identificar quais atestados consideramos confiáveis.
+Devido à natureza descentralizada do Ethereum, qualquer usuário pode fazer atestações. A identidade do atestador é importante para identificar quais atestações consideramos confiáveis.
 
-## Configuração
+## Configuração {#setup}
 
-O primeiro passo é ter um SP SAML e um IdP SAML comunicando-se entre si.
+O primeiro passo é ter um SP SAML e um IdP SAML se comunicando entre si.
 
-1. Baixe o software. O software de exemplo para este artigo está [no github](https://github.com/qbzzt/250420-saml-ethereum). Diferentes estágios são armazenados em diferentes branches, para este estágio você quer `saml-only`
+1. Baixe o software. O software de exemplo para este artigo está [no GitHub](https://github.com/qbzzt/250420-saml-ethereum). Diferentes estágios são armazenados em diferentes branches; para este estágio, você vai querer a `saml-only`
 
     ```sh
     git clone https://github.com/qbzzt/250420-saml-ethereum -b saml-only
@@ -62,7 +63,7 @@ O primeiro passo é ter um SP SAML e um IdP SAML comunicando-se entre si.
     pnpm install
     ```
 
-2. Crie chaves com certificados autoassinados. Isso significa que a chave é sua própria autoridade de certificação e precisa ser importada manualmente para o provedor de serviços. Consulte [a documentação do OpenSSL](https://docs.openssl.org/master/man1/openssl-req/) para obter mais informações.
+2. Crie chaves com certificados autoassinados. Isso significa que a chave é sua própria autoridade de certificação e precisa ser importada manualmente para o provedor de serviços. Consulte [a documentação do OpenSSL](https://docs.openssl.org/master/man1/openssl-req/) para obter mais informações. 
 
     ```sh
     mkdir keys
@@ -78,19 +79,19 @@ O primeiro passo é ter um SP SAML e um IdP SAML comunicando-se entre si.
     pnpm start
     ```
 
-4. Acesse o SP na URL [http://localhost:3000/](http://localhost:3000/) e clique no botão para ser redirecionado para o IdP (porta 3001).
+4. Navegue até o SP na URL [http://localhost:3000/](http://localhost:3000/) e clique no botão para ser redirecionado ao IdP (porta 3001).
 
-5. Forneça ao IdP seu endereço de e-mail e clique em **Login no provedor de serviços**. Veja que você é redirecionado de volta para o provedor de serviços (porta 3000) e que ele o reconhece pelo seu endereço de e-mail.
+5. Forneça ao IdP o seu endereço de e-mail e clique em **Login to the service provider**. Veja que você é redirecionado de volta ao provedor de serviços (porta 3000) e que ele o reconhece pelo seu endereço de e-mail.
 
-### Explicação detalhada
+### Explicação detalhada {#detailed-explanation}
 
 Isto é o que acontece, passo a passo:
 
-![Logon SAML normal sem Ethereum](./fig-04-saml-no-eth.png)
+![Normal SAML logon without Ethereum](./fig-04-saml-no-eth.png)
 
-#### src/config.mts
+#### src/config.mts {#srcconfigmts}
 
-Este arquivo contém a configuração tanto para o Provedor de Identidade quanto para o Provedor de Serviços. Normalmente, essas duas seriam entidades diferentes, mas aqui podemos compartilhar código para simplificar.
+Este arquivo contém a configuração tanto para o Provedor de Identidade quanto para o Provedor de Serviços. Normalmente, essas duas seriam entidades diferentes, mas aqui podemos compartilhar o código por simplicidade.
 
 ```typescript
 const fs = await import("fs")
@@ -132,7 +133,7 @@ Os dados públicos para o provedor de serviços.
     entityID: `${spUrl}/metadata`,
 ```
 
-Por convenção, em SAML, o `entityID` é a URL onde os metadados da entidade estão disponíveis. Esses metadados correspondem aos dados públicos aqui, exceto que estão em formato XML.
+Por convenção, no SAML o `entityID` é a URL onde os metadados da entidade estão disponíveis. Esses metadados correspondem aos dados públicos aqui, exceto que estão no formato XML.
 
 ```typescript
     wantAssertionsSigned: true,
@@ -146,7 +147,7 @@ Por convenção, em SAML, o `entityID` é a URL onde os metadados da entidade es
   }
 ```
 
-A definição mais importante para nossos propósitos é o `assertionConsumerServer`. Isso significa que para afirmar algo (por exemplo, \"o usuário que lhe envia esta informação é somebody@example.com\") para o provedor de serviços, precisamos usar [HTTP POST](https://www.w3schools.com/tags/ref_httpmethods.asp) para a URL `http://localhost:3000/sp/assertion`.
+A definição mais importante para nossos propósitos é o `assertionConsumerServer`. Isso significa que para fazer uma asserção de algo (por exemplo, "o usuário que lhe envia esta informação é alguem@exemplo.com") para o provedor de serviços, precisamos usar o [HTTP POST](https://www.w3schools.com/tags/ref_httpmethods.asp) para a URL `http://localhost:3000/sp/assertion`.
 
 ```typescript
 export const idpPublicData = {
@@ -164,9 +165,9 @@ export const idpPublicData = {
   }
 ```
 
-Os dados públicos do provedor de identidade são semelhantes. Ele especifica que, para fazer login de um usuário, você envia um POST para `http://localhost:3001/idp/login` e para fazer logout de um usuário, você envia um POST para `http://localhost:3001/idp/logout`.
+Os dados públicos para o provedor de identidade são semelhantes. Eles especificam que para fazer o login de um usuário você faz um POST para `http://localhost:3001/idp/login` e para fazer o logout de um usuário você faz um POST para `http://localhost:3001/idp/logout`.
 
-#### src/sp.mts
+#### src/sp.mts {#srcspmts}
 
 Este é o código que implementa um provedor de serviços.
 
@@ -183,7 +184,7 @@ import * as validator from "@authenio/samlify-node-xmllint"
 saml.setSchemaValidator(validator)
 ```
 
-A biblioteca `samlify` espera ter um pacote que valide se o XML está correto, assinado com a chave pública esperada, etc. Usamos [`@authenio/samlify-node-xmllint`](https://www.npmjs.com/package/@authenio/samlify-node-xmllint) para essa finalidade.
+A biblioteca `samlify` espera ter um pacote para validar se o XML está correto, assinado com a chave pública esperada, etc. Usamos o [`@authenio/samlify-node-xmllint`](https://www.npmjs.com/package/@authenio/samlify-node-xmllint) para esse propósito.
 
 ```typescript
 const express = (await import("express")).default
@@ -191,7 +192,7 @@ const spRouter = express.Router()
 const app = express()
 ```
 
-Um [`Router`](https://expressjs.com/en/5x/api.html#router) do [`express`](https://expressjs.com/) é um "mini site" que pode ser montado dentro de um site. Nesse caso, nós o usamos para agrupar todas as definições do provedor de serviços.
+Um [`Router`](https://expressjs.com/en/5x/api.html#router) do [`express`](https://expressjs.com/) é um "mini site" que pode ser montado dentro de um site. Neste caso, nós o usamos para agrupar todas as definições do provedor de serviços.
 
 ```typescript
 const spPrivateKey = fs.readFileSync("keys/saml-sp.pem").toString()
@@ -202,7 +203,7 @@ const sp = saml.ServiceProvider({
 })
 ```
 
-A representação do próprio provedor de serviços de si mesmo são todos os dados públicos e a chave privada que ele usa para assinar informações.
+A própria representação do provedor de serviços de si mesmo são todos os dados públicos e a chave privada que ele usa para assinar informações.
 
 ```typescript
 const idp = saml.IdentityProvider(config.idpPublicData);
@@ -216,17 +217,17 @@ spRouter.get(`/metadata`,
 )
 ```
 
-Para permitir a interoperabilidade com outros componentes SAML, os provedores de serviços e de identidade devem ter seus dados públicos (chamados de metadados) disponíveis em formato XML em `/metadata`.
+Para permitir a interoperabilidade com outros componentes SAML, os provedores de serviços e de identidade devem ter seus dados públicos (chamados de metadados) disponíveis no formato XML em `/metadata`.
 
 ```typescript
 spRouter.post(`/assertion`,
 ```
 
-Esta é a página acessada pelo navegador para se identificar. A afirmação inclui o identificador do usuário (aqui usamos o endereço de e-mail) e pode incluir atributos adicionais. Este é o manipulador para a etapa 7 no diagrama de sequência acima.
+Esta é a página acessada pelo navegador para se identificar. A asserção inclui o identificador do usuário (aqui usamos o endereço de e-mail) e pode incluir atributos adicionais. Este é o manipulador (handler) para o passo 7 no diagrama de sequência acima.
 
 ```typescript
   async (req, res) => {
-    // console.log(`SAML response:\n${Buffer.from(req.body.SAMLResponse, 'base64').toString('utf-8')}`)
+    // console.log(`Resposta SAML:\n${Buffer.from(req.body.SAMLResponse, 'base64').toString('utf-8')}`)
 ```
 
 Você pode usar o comando comentado para ver os dados XML fornecidos na asserção. Ele é [codificado em base64](https://en.wikipedia.org/wiki/Base64).
@@ -266,7 +267,7 @@ Informe o usuário em caso de falha.
 spRouter.get('/login',
 ```
 
-Crie uma solicitação de login quando o navegador tentar obter esta página. Este é o manipulador para a etapa 1 no diagrama de sequência acima.
+Crie uma solicitação de login quando o navegador tentar obter esta página. Este é o manipulador para o passo 1 no diagrama de sequência acima.
 
 ```typescript
   async (req, res) => {
@@ -284,19 +285,19 @@ Obtenha as informações para postar uma solicitação de login.
           </script>
 ```
 
-Esta página envia o formulário (veja abaixo) automaticamente. Dessa forma, o usuário não precisa fazer nada para ser redirecionado. Esta é a etapa 2 no diagrama de sequência acima.
+Esta página envia o formulário (veja abaixo) automaticamente. Dessa forma, o usuário não precisa fazer nada para ser redirecionado. Este é o passo 2 no diagrama de sequência acima.
 
 ```typescript
           <form method="post" action="${loginRequest.entityEndpoint}">
 ```
 
-Poste para `loginRequest.entityEndpoint` (a URL do ponto de extremidade do provedor de identidade).
+Faça um POST para `loginRequest.entityEndpoint` (a URL do endpoint do provedor de identidade).
 
 ```typescript
             <input type="hidden" name="${loginRequest.type}" value="${loginRequest.context}" />
 ```
 
-O nome da entrada é `loginRequest.type` (`SAMLRequest`). O conteúdo para esse campo é `loginRequest.context`, que é novamente XML codificado em base64.
+O nome da entrada é `loginRequest.type` (`SAMLRequest`). O conteúdo para esse campo é `loginRequest.context`, que é novamente um XML codificado em base64.
 
 ```typescript
           </form>
@@ -309,7 +310,7 @@ O nome da entrada é `loginRequest.type` (`SAMLRequest`). O conteúdo para esse 
 app.use(express.urlencoded({extended: true}))
 ```
 
-[Este middleware](https://expressjs.com/en/5x/api.html#express.urlencoded) lê o corpo da [requisição HTTP](https://www.tutorialspoint.com/http/http_requests.htm). Por padrão, o express o ignora, porque a maioria das requisições não o exige. Nós precisamos dele porque o POST usa o corpo.
+[Este middleware](https://expressjs.com/en/5x/api.html#express.urlencoded) lê o corpo da [solicitação HTTP](https://www.tutorialspoint.com/http/http_requests.htm). Por padrão, o express o ignora, porque a maioria das solicitações não exige isso. Nós precisamos dele porque o POST usa o corpo.
 
 ```typescript
 app.use(`/${config.spDir}`, spRouter)
@@ -323,7 +324,7 @@ app.get("/", (req, res) => {
     <html>
       <body>
         <button onClick="document.location.href='${config.spUrl}/login'">
-           Clique aqui para fazer logon
+           Click here to log on
         </button>
       </body>
     </html>
@@ -341,15 +342,15 @@ app.listen(config.spPort, () => {
 
 Escute a `spPort` com este aplicativo express.
 
-#### src/idp.mts
+#### src/idp.mts {#srcidpmts}
 
-Este é o provedor de identidade. É muito semelhante ao provedor de serviços, as explicações abaixo são para as partes que são diferentes.
+Este é o provedor de identidade. Ele é muito semelhante ao provedor de serviços; as explicações abaixo são para as partes que são diferentes.
 
 ```typescript
 const xmlParser = new (await import("fast-xml-parser")).XMLParser(
   {
-    ignoreAttributes: false, // Preserve attributes
-    attributeNamePrefix: "@_", // Prefix for attributes
+    ignoreAttributes: false, // Preservar atributos
+    attributeNamePrefix: "@_", // Prefixo para atributos
   }
 )
 ```
@@ -360,25 +361,25 @@ Precisamos ler e entender a solicitação XML que recebemos do provedor de servi
 const getLoginPage = requestId => `
 ```
 
-Esta função cria a página com o formulário enviado automaticamente que é retornado na etapa 4 do diagrama de sequência acima.
+Esta função cria a página com o formulário enviado automaticamente que é retornado no passo 4 do diagrama de sequência acima.
 
 ```typescript
 <html>
   <head>
-    <title>Página de login</title>
+    <title>Login page</title>
   </head>
   <body>
-    <h2>Página de login</h2>
+    <h2>Login page</h2>
     <form method="post" action="./loginSubmitted">
       <input type="hidden" name="requestId" value="${requestId}" />
-      Endereço de e-mail: <input name="email" />
+      Email address: <input name="email" />
       <br />
       <button type="Submit">
-        Fazer login no provedor de serviços
+        Login to the service provider
       </button>
 ```
 
-Há dois campos que enviamos ao provedor de serviços:
+Existem dois campos que enviamos ao provedor de serviços:
 
 1. O `requestId` ao qual estamos respondendo.
 2. O identificador do usuário (usamos o endereço de e-mail que o usuário fornece por enquanto).
@@ -394,7 +395,7 @@ idpRouter.post("/loginSubmitted", async (req, res) => {
   const loginResponse = await idp.createLoginResponse(
 ```
 
-Este é o manipulador para a etapa 5 no diagrama de sequência acima. [`idp.createLoginResponse`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L73-L125) cria a resposta de login.
+Este é o manipulador para o passo 5 do diagrama de sequência acima. O [`idp.createLoginResponse`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L73-L125) cria a resposta de login. 
 
 ```typescript
     sp, 
@@ -403,7 +404,7 @@ Este é o manipulador para a etapa 5 no diagrama de sequência acima. [`idp.crea
       audience: sp.entityID,
 ```
 
-O público é o provedor de serviços.
+O público (audience) é o provedor de serviços.
 
 ```typescript
       extract: {
@@ -413,13 +414,13 @@ O público é o provedor de serviços.
       },
 ```
 
-Informações extraídas da solicitação. O único parâmetro que nos interessa na solicitação é o requestId, que permite ao provedor de serviços corresponder as solicitações e suas respostas.
+Informações extraídas da solicitação. O único parâmetro com o qual nos importamos na solicitação é o requestId, que permite ao provedor de serviços corresponder as solicitações e suas respostas.
 
 ```typescript
-      signingKey: { privateKey: idpPrivateKey, publicKey: config.idpCert }  // Ensure signing
+      signingKey: { privateKey: idpPrivateKey, publicKey: config.idpCert }  // Garantir assinatura
 ```
 
-Precisamos que o `signingKey` tenha os dados para assinar a resposta. O provedor de serviços não confia em solicitações não assinadas.
+Precisamos do `signingKey` para ter os dados para assinar a resposta. O provedor de serviços não confia em solicitações não assinadas.
 
 ```typescript
     },
@@ -430,7 +431,7 @@ Precisamos que o `signingKey` tenha os dados para assinar a resposta. O provedor
 
 Este é o campo com as informações do usuário que enviamos de volta ao provedor de serviços.
 
-```typescript
+```typescript      
     }
   );
 
@@ -450,32 +451,32 @@ Este é o campo com as informações do usuário que enviamos de volta ao proved
 })
 ```
 
-Novamente, use um formulário enviado automaticamente. Esta é a etapa 6 do diagrama de sequência acima.
+Novamente, use um formulário enviado automaticamente. Este é o passo 6 do diagrama de sequência acima.
 
 ```typescript
 
-// Ponto de extremidade do IdP para solicitações de login
+// Endpoint do IdP para requisições de login
 idpRouter.post(`/login`,
 ```
 
-Este é o ponto de extremidade que recebe uma solicitação de login do provedor de serviços. Este é o manipulador da etapa 3 do diagrama de sequência acima.
+Este é o endpoint que recebe uma solicitação de login do provedor de serviços. Este é o manipulador do passo 3 do diagrama de sequência acima.
 
 ```typescript
   async (req, res) => {
     try {
-      // Workaround because I couldn't get parseLoginRequest to work.
+      // Solução de contorno porque não consegui fazer o parseLoginRequest funcionar.
       // const loginRequest = await idp.parseLoginRequest(sp, 'post', req)
       const samlRequest = xmlParser.parse(Buffer.from(req.body.SAMLRequest, 'base64').toString('utf-8'))
       res.send(getLoginPage(samlRequest["samlp:AuthnRequest"]["@_ID"]))
 ```
 
-Deveríamos ser capazes de usar [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) para ler o ID da solicitação de autenticação. No entanto, não consegui fazê-lo funcionar e não valia a pena gastar muito tempo nisso, então eu apenas uso um [analisador de XML de propósito geral](https://www.npmjs.com/package/fast-xml-parser). A informação que precisamos é o atributo `ID` dentro da tag `<samlp:AuthnRequest>`, que está no nível superior do XML.
+Deveríamos ser capazes de usar o [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) para ler o ID da solicitação de autenticação. No entanto, não consegui fazê-lo funcionar e não valia a pena gastar muito tempo nisso, então eu apenas uso um [analisador XML de uso geral](https://www.npmjs.com/package/fast-xml-parser). A informação que precisamos é o atributo `ID` dentro da tag `<samlp:AuthnRequest>`, que está no nível superior do XML.
 
-## Usando assinaturas do Ethereum
+## Usando assinaturas do Ethereum {#using-ethereum-signatures}
 
-Agora que podemos enviar uma identidade de usuário para o provedor de serviços, o próximo passo é obter a identidade do usuário de uma maneira confiável. O Viem nos permite apenas solicitar à carteira o endereço do usuário, mas isso significa solicitar a informação ao navegador. Nós não controlamos o navegador, então não podemos confiar automaticamente na resposta que recebemos dele.
+Agora que podemos enviar uma identidade de usuário para o provedor de serviços, o próximo passo é obter a identidade do usuário de maneira confiável. O Viem nos permite apenas pedir à carteira o endereço do usuário, mas isso significa pedir a informação ao navegador. Nós não controlamos o navegador, então não podemos confiar automaticamente na resposta que obtemos dele.
 
-Em vez disso, o IdP enviará ao navegador uma string para assinar. Se a carteira no navegador assinar esta string, significa que é realmente aquele endereço (ou seja, ele conhece a chave privada que corresponde ao endereço).
+Em vez disso, o IdP enviará ao navegador uma string para assinar. Se a carteira no navegador assinar essa string, isso significa que ela realmente é aquele endereço (ou seja, ela conhece a chave privada que corresponde ao endereço).
 
 Para ver isso em ação, pare o IdP e o SP existentes e execute estes comandos:
 
@@ -485,45 +486,45 @@ pnpm install
 pnpm start
 ```
 
-Em seguida, acesse [o SP](http://localhost:3000) e siga as instruções.
+Em seguida, navegue [até o SP](http://localhost:3000) e siga as instruções.
 
-Note que, neste momento, não sabemos como obter o endereço de e-mail a partir do endereço do Ethereum, então, em vez disso, relatamos `<endereço do ethereum>@bad.email.address` para o SP.
+Observe que, neste ponto, não sabemos como obter o endereço de e-mail a partir do endereço Ethereum, então, em vez disso, relatamos `<ethereum address>@bad.email.address` ao SP.
 
-### Explicação detalhada
+### Explicação detalhada {#detailed-explanation-2}
 
-As alterações estão nas etapas 4-5 no diagrama anterior.
+As alterações estão nos passos 4-5 do diagrama anterior.
 
-![SAML com uma assinatura do Ethereum](./fig-05-saml-w-signature.png)
+![SAML with an Ethereum signature](./fig-05-saml-w-signature.png)
 
-O único arquivo que alteramos foi `idp.mts`. Aqui estão as partes alteradas.
+O único arquivo que alteramos é o `idp.mts`. Aqui estão as partes alteradas.
 
 ```typescript
 import { v4 as uuidv4 } from 'uuid'
 import { verifyMessage } from 'viem'
 ```
 
-Precisamos dessas duas bibliotecas adicionais. Usamos [`uuid`](https://www.npmjs.com/package/uuid) para criar o valor [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). O valor em si não importa, apenas o fato de ser usado uma única vez.
+Precisamos destas duas bibliotecas adicionais. Usamos o [`uuid`](https://www.npmjs.com/package/uuid) para criar o valor do [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). O valor em si não importa, apenas o fato de que ele é usado apenas uma vez.
 
-A biblioteca [`viem`](https://viem.sh/) nos permite usar definições do Ethereum. Aqui precisamos dela para verificar se a assinatura é realmente válida.
+A biblioteca [`viem`](https://viem.sh/) nos permite usar definições do Ethereum. Aqui precisamos dela para verificar se a assinatura é de fato válida.
 
 ```typescript
-const loginPrompt = "Para acessar o provedor de serviços, assine este nonce: "
+const loginPrompt = "To access the service provider, sign this nonce: "
 ```
 
-A carteira pede permissão ao usuário para assinar a mensagem. Uma mensagem que é apenas um nonce pode confundir os usuários, por isso incluímos esta solicitação.
+A carteira pede permissão ao usuário para assinar a mensagem. Uma mensagem que é apenas um nonce pode confundir os usuários, então incluímos este prompt.
 
 ```typescript
 // Manter requestIDs aqui
 let nonces = {}
 ```
 
-Precisamos das informações da solicitação para poder respondê-la. Poderíamos enviá-lo com a solicitação (etapa 4) e recebê-lo de volta (etapa 5). No entanto, não podemos confiar nas informações que obtemos do navegador, que está sob o controle de um usuário potencialmente hostil. Portanto, é melhor armazená-lo aqui, com o nonce como chave.
+Precisamos das informações da solicitação para podermos responder a ela. Poderíamos enviá-las com a solicitação (passo 4) e recebê-las de volta (passo 5). No entanto, não podemos confiar nas informações que obtemos do navegador, que está sob o controle de um usuário potencialmente hostil. Portanto, é melhor armazená-las aqui, com o nonce como chave.
 
-Observe que estamos fazendo isso aqui como uma variável para simplificar. No entanto, isso tem várias desvantagens:
+Observe que estamos fazendo isso aqui como uma variável por uma questão de simplicidade. No entanto, isso tem várias desvantagens:
 
-- Estamos vulneráveis a um ataque de negação de serviço. Um usuário mal-intencionado pode tentar fazer login várias vezes, enchendo nossa memória.
+- Estamos vulneráveis a um ataque de negação de serviço (denial of service). Um usuário mal-intencionado poderia tentar fazer login várias vezes, enchendo nossa memória.
 - Se o processo do IdP precisar ser reiniciado, perdemos os valores existentes.
-- Não podemos balancear a carga entre vários processos, porque cada um teria sua própria variável.
+- Não podemos fazer balanceamento de carga em vários processos, porque cada um teria sua própria variável.
 
 Em um sistema de produção, usaríamos um banco de dados e implementaríamos algum tipo de mecanismo de expiração.
 
@@ -552,7 +553,7 @@ Precisamos de várias funções do `viem`.
 
 ```typescript
       if (!window.ethereum) {
-          alert("Por favor, instale a MetaMask ou uma carteira compatível e depois recarregue")
+          alert("Please install MetaMask or a compatible wallet and then reload")
       }
 ```
 
@@ -562,7 +563,7 @@ Só podemos trabalhar se houver uma carteira no navegador.
       const [account] = await window.ethereum.request({method: 'eth_requestAccounts'})
 ```
 
-Solicite a lista de contas da carteira (`window.ethereum`). Suponha que haja pelo menos uma e armazene apenas a primeira.
+Solicite a lista de contas da carteira (`window.ethereum`). Assuma que há pelo menos uma e armazene apenas a primeira. 
 
 ```typescript
       const walletClient = createWalletClient({
@@ -579,7 +580,7 @@ Crie um [cliente de carteira](https://viem.sh/docs/clients/wallet) para interagi
             message: "${loginPrompt}${nonce}"
 ```
 
-Peça ao usuário para assinar uma mensagem. Como todo este HTML está em uma [string de modelo](https://viem.sh/docs/clients/wallet), podemos usar variáveis definidas no processo idp. Esta é a etapa 4.5 no diagrama de sequência.
+Peça ao usuário para assinar uma mensagem. Como todo este HTML está em uma [template string](https://viem.sh/docs/clients/wallet), podemos usar variáveis definidas no processo do idp. Este é o passo 4.5 no diagrama de sequência.
 
 ```typescript
         }).then(signature => {
@@ -589,7 +590,7 @@ Peça ao usuário para assinar uma mensagem. Como todo este HTML está em uma [s
       }
 ```
 
-Redirecionar para `/idp/signature/<nonce>/<address>/<signature>`. Esta é a etapa 5 no diagrama de sequência.
+Redirecione para `/idp/signature/<nonce>/<address>/<signature>`. Este é o passo 5 no diagrama de sequência.
 
 ```typescript
       window.badSignature = () => {
@@ -600,19 +601,19 @@ Redirecionar para `/idp/signature/<nonce>/<address>/<signature>`. Esta é a etap
       }
 ```
 
-A assinatura é enviada de volta pelo navegador, que é potencialmente mal-intencionado (não há nada para impedi-lo de simplesmente abrir `http://localhost:3001/idp/signature/bad-nonce/bad-address/bad-signature` no navegador). Portanto, é importante verificar se o processo IdP lida corretamente com assinaturas inválidas.
+A assinatura é enviada de volta pelo navegador, que é potencialmente malicioso (não há nada que o impeça de apenas abrir `http://localhost:3001/idp/signature/bad-nonce/bad-address/bad-signature` no navegador). Portanto, é importante verificar se o processo do IdP lida com assinaturas incorretas corretamente.
 
 ```typescript
     </script>
   </head>
   <body>
-    <h2>Por favor, assine</h2>
+    <h2>Please sign</h2>
     <button onClick="window.goodSignature()">
-      Enviar uma assinatura boa (válida)
+      Submit a good (valid) signature
     </button>
     <br/>
     <button onClick="window.badSignature()">
-      Enviar uma assinatura ruim (inválida)
+      Submit a bad (invalid) signature
     </button>
   </body>
 </html>  
@@ -626,7 +627,7 @@ O resto é apenas HTML padrão.
 idpRouter.get("/signature/:nonce/:account/:signature", async (req, res) => {
 ```
 
-Este é o manipulador para a etapa 5 no diagrama de sequência.
+Este é o manipulador para o passo 5 no diagrama de sequência.
 
 ```typescript
   const requestId = nonces[req.params.nonce]
@@ -644,7 +645,7 @@ Obtenha o ID da solicitação e exclua o nonce de `nonces` para garantir que ele
   try {
 ```
 
-Como há muitas maneiras pelas quais a assinatura pode ser inválida, envolvemos isso em um bloco `try ... catch` para capturar quaisquer erros lançados.
+Como há muitas maneiras pelas quais a assinatura pode ser inválida, nós envolvemos isso em um bloco `try ... catch` para capturar quaisquer erros lançados.
 
 ```typescript
     const validSignature = await verifyMessage({
@@ -654,7 +655,7 @@ Como há muitas maneiras pelas quais a assinatura pode ser inválida, envolvemos
     })
 ```
 
-Use [`verifyMessage`](https://viem.sh/docs/actions/public/verifyMessage#verifymessage) para implementar a etapa 5.5 no diagrama de sequência.
+Use [`verifyMessage`](https://viem.sh/docs/actions/public/verifyMessage#verifymessage) para implementar o passo 5.5 no diagrama de sequência.
 
 ```typescript
     if (!validSignature)
@@ -678,26 +679,33 @@ O restante do manipulador é equivalente ao que fizemos no manipulador `/loginSu
   );
 ```
 
-Não temos o endereço de e-mail real (o obteremos na próxima seção), então, por enquanto, retornamos o endereço do Ethereum e o marcamos claramente como não sendo um endereço de e-mail.
+Não temos o endereço de e-mail real (vamos obtê-lo na próxima seção), então, por enquanto, retornamos o endereço Ethereum e o marcamos claramente como não sendo um endereço de e-mail.
+
 
 ```typescript
-// Ponto de extremidade do IdP para solicitações de login
+// Endpoint do IdP para requisições de login
 idpRouter.post(`/login`,
   async (req, res) => {
     try {
-      // Solução alternativa porque não consegui fazer o parseLoginRequest funcionar.
+      // Solução de contorno porque não consegui fazer o parseLoginRequest funcionar.
       // const loginRequest = await idp.parseLoginRequest(sp, 'post', req)
       const samlRequest = xmlParser.parse(Buffer.from(req.body.SAMLRequest, 'base64').toString('utf-8'))
       res.send(getSignaturePage(samlRequest["samlp:AuthnRequest"]["@_ID"]))
+    } catch (err) {
+      console.error('Error processing SAML response:', err);
+      res.status(400).send('SAML authentication failed');
+    }
+  }
+)
 ```
 
-Em vez de `getLoginPage`, agora use `getSignaturePage` no manipulador da etapa 3.
+Em vez de `getLoginPage`, agora use `getSignaturePage` no manipulador do passo 3.
 
-## Obtendo o endereço de e-mail
+## Obtendo o endereço de e-mail {#getting-the-email-address}
 
 O próximo passo é obter o endereço de e-mail, o identificador solicitado pelo provedor de serviços. Para fazer isso, usamos o [Ethereum Attestation Service (EAS)](https://attest.org/).
 
-A maneira mais fácil de obter atestados é usar a [API GraphQL](https://docs.attest.org/docs/developer-tools/api). Usamos esta consulta:
+A maneira mais fácil de obter atestações é usar a [API GraphQL](https://docs.attest.org/docs/developer-tools/api). Usamos esta consulta:
 
 ```
 query GetAttestationsByRecipient {
@@ -715,15 +723,15 @@ query GetAttestationsByRecipient {
 }
 ```
 
-Este [`schemaId`](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977) inclui apenas um endereço de e-mail. Esta consulta solicita atestados deste esquema. O sujeito do atestado é chamado de `destinatário`. É sempre um endereço do Ethereum.
+Este [`schemaId`](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977) inclui apenas um endereço de e-mail. Esta consulta pede atestações deste esquema. O sujeito da atestação é chamado de `recipient`. É sempre um endereço Ethereum.
 
-Aviso: a maneira como estamos obtendo os atestados aqui tem dois problemas de segurança.
+Aviso: A maneira como estamos obtendo atestações aqui tem dois problemas de segurança.
 
-- Estamos indo para o ponto de extremidade da API, `https://optimism.easscan.org/graphql`, que é um componente centralizado. Podemos obter o atributo `id` e, em seguida, fazer uma pesquisa na cadeia para verificar se um atestado é real, mas o ponto de extremidade da API ainda pode censurar atestados ao não nos informar sobre eles.
+- Estamos indo para o endpoint da API, `https://optimism.easscan.org/graphql`, que é um componente centralizado. Podemos obter o atributo `id` e, em seguida, fazer uma busca onchain para verificar se uma atestação é real, mas o endpoint da API ainda pode censurar atestações ao não nos informar sobre elas. 
 
-  Este problema não é impossível de resolver, poderíamos executar nosso próprio ponto de extremidade GraphQL e obter os atestados dos registros da cadeia, mas isso é excessivo para nossos propósitos.
+  Este problema não é impossível de resolver, poderíamos executar nosso próprio endpoint GraphQL e obter as atestações dos logs da cadeia, mas isso é excessivo para nossos propósitos.
 
-- Nós não olhamos para a identidade do atestador. Qualquer um pode nos fornecer informações falsas. Em uma implementação do mundo real, teríamos um conjunto de atestadores confiáveis e olharíamos apenas para seus atestados.
+- Não olhamos para a identidade do atestador. Qualquer um pode nos fornecer informações falsas. Em uma implementação no mundo real, teríamos um conjunto de atestadores confiáveis e olharíamos apenas para as atestações deles.
 
 Para ver isso em ação, pare o IdP e o SP existentes e execute estes comandos:
 
@@ -737,21 +745,21 @@ Em seguida, forneça seu endereço de e-mail. Você tem duas maneiras de fazer i
 
 - Importe uma carteira usando uma chave privada e use a chave privada de teste `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`.
 
-- Adicione um atestado para seu próprio endereço de e-mail:
+- Adicione uma atestação para o seu próprio endereço de e-mail:
 
-  1. Navegue até [o esquema no explorador de atestados](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977).
+  1. Navegue até [o esquema no explorador de atestações](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977).
 
-  2. Clique em **Atestar com Esquema**.
+  2. Clique em **Attest with Schema**.
 
-  3. Insira seu endereço Ethereum como destinatário, seu endereço de e-mail como endereço de e-mail e selecione **Onchain**. Em seguida, clique em **Fazer Atestado**.
+  3. Insira seu endereço Ethereum como o destinatário, seu endereço de e-mail como email address e selecione **Onchain**. Em seguida, clique em **Make Attestation**.
 
-  4. Aprove a transação na sua carteira. Você precisará de um pouco de ETH na [Blockchain da Optimism](https://app.optimism.io/bridge/deposit) para pagar pelo gás.
+  4. Aprove a transação na sua carteira. Você precisará de algum ETH na [blockchain Optimism](https://app.optimism.io/bridge/deposit) para pagar pelo gás.
 
 De qualquer forma, depois de fazer isso, navegue até [http://localhost:3000](http://localhost:3000) e siga as instruções. Se você importou a chave privada de teste, o e-mail que você recebe é `test_addr_0@example.com`. Se você usou seu próprio endereço, deve ser o que você atestou.
 
-### Explicação detalhada
+### Explicação detalhada {#detailed-explanation-3}
 
-![Obtendo do endereço Ethereum para o e-mail](./fig-06-saml-sig-n-email.png)
+![Getting from Ethereum address to e-mail](./fig-06-saml-sig-n-email.png)
 
 Os novos passos são a comunicação GraphQL, passos 5.6 e 5.7.
 
@@ -768,52 +776,54 @@ Importe as bibliotecas que precisamos.
 const graphqlEndpointUrl = "https://optimism.easscan.org/graphql"
 ```
 
-Existe [um endpoint separado para cada cadeia de blocos](https://docs.attest.org/docs/developer-tools/api).
+Existe [um endpoint separado para cada blockchain](https://docs.attest.org/docs/developer-tools/api).
 
 ```typescript
-Crie um novo cliente `GraphQLClient` que podemos usar para consultar o ponto de extremidade.
+const graphqlClient = new GraphQLClient(graphqlEndpointUrl, { fetch })
 ```
 
-Para entendê-lo, precisamos do esquema.
+Crie um novo cliente `GraphQLClient` que podemos usar para consultar o endpoint.
 
 ```typescript
-Uma função para ir de um endereço Ethereum para um endereço de e-mail.
+const graphqlSchema = 'string emailAddress'
+const graphqlEncoder = new SchemaEncoder(graphqlSchema)
 ```
 
-Esta é uma consulta GraphQL.         attestations(
+O GraphQL nos fornece apenas um objeto de dados opaco com bytes. Para entendê-lo, precisamos do esquema. 
 
 ```typescript
-Estamos procurando por atestados.
+const ethereumAddressToEmail = async ethAddr => {
 ```
 
-```
-    where: { 
-      recipient: { equals: "${getAddress(ethAddr)}" }
-      schemaId: { equals: "0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977" }
-    }
-```
+Uma função para obter um endereço de e-mail a partir de um endereço Ethereum.
 
 ```typescript
-Os atestados que queremos são aqueles em nosso esquema, onde o destinatário é `getAddress(ethAddr)`.
+  const query = `
+    query GetAttestationsByRecipient {
 ```
 
-A função [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) garante que nosso endereço tenha o [checksum](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md) correto.
+Esta é uma consulta GraphQL.
 
 ```typescript
-      atestações(
+      attestations(
 ```
 
-Isto é necessário porque GraphQL diferencia maiúsculas e minúsculas.
+Estamos procurando por atestações.
 
 ```typescript
-"0xBAD060A7", "0xBad060A7", and "0xbad060a7" são valores diferentes.
+        where: { 
+          recipient: { equals: "${getAddress(ethAddr)}" }
+          schemaId: { equals: "0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977" }
+        }
 ```
+
+As atestações que queremos são aquelas em nosso esquema, onde o destinatário é `getAddress(ethAddr)`. A função [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) garante que nosso endereço tenha o [checksum](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md) correto. Isso é necessário porque o GraphQL diferencia maiúsculas de minúsculas (case-significant). "0xBAD060A7", "0xBad060A7" e "0xbad060a7" são valores diferentes.
 
 ```typescript
         take: 1
 ```
 
-Independentemente de quantos atestados encontrarmos, queremos apenas o primeiro.
+Independentemente de quantas atestações encontrarmos, queremos apenas a primeira.
 
 ```typescript
       ) {
@@ -826,8 +836,8 @@ Independentemente de quantos atestados encontrarmos, queremos apenas o primeiro.
 
 Os campos que queremos receber.
 
-- `attester`: O endereço que enviou o atestado. Normalmente, isso é usado para decidir se confia no atestado ou não.
-- `id`: O ID do atestado. Você pode usar este valor para [ler o atestado on-chain](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000021?tab=read_proxy&source_address=0x4E0275Ea5a89e7a3c1B58411379D1a0eDdc5b088#0xa3112a64) para verificar se a informação da consulta GraphQL está correta.
+- `attester`: O endereço que enviou a atestação. Normalmente, isso é usado para decidir se deve confiar na atestação ou não.
+- `id`: O ID da atestação. Você pode usar esse valor para [ler a atestação onchain](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000021?tab=read_proxy&source_address=0x4E0275Ea5a89e7a3c1B58411379D1a0eDdc5b088#0xa3112a64) para verificar se a informação da consulta GraphQL está correta.
 - `data`: Os dados do esquema (neste caso, o endereço de e-mail).
 
 ```typescript
@@ -837,7 +847,7 @@ Os campos que queremos receber.
     return "no_address@available.is"
 ```
 
-Se não houver atestado, retorne um valor que seja obviamente incorreto, mas que pareça válido para o provedor de serviços.
+Se não houver atestação, retorne um valor que seja obviamente incorreto, mas que pareça válido para o provedor de serviços.
 
 ```typescript
   const attestationDataFields = graphqlEncoder.decodeData(queryResult.attestations[0].data)
@@ -848,41 +858,31 @@ Se não houver atestado, retorne um valor que seja obviamente incorreto, mas que
 Se houver um valor, use `decodeData` para decodificar os dados. Não precisamos dos metadados que ele fornece, apenas do valor em si.
 
 ```typescript
-const loginResponse = await idp.createLoginResponse(
-sp,
-{
-.
-.
-.
-},
-"post",
-{
-email: await ethereumAddressToEmail(req.params.account)
-}
-);
+  const loginResponse = await idp.createLoginResponse(
+    sp, 
+    {
+      .
+      .
+      .
+    },
+    "post",
+    {
+      email: await ethereumAddressToEmail(req.params.account)
+    }
+  );
 ```
 
-```typescript
 Use a nova função para obter o endereço de e-mail.
-```
 
-E a descentralização? Nesta configuração, os usuários não podem fingir ser alguém que não são, desde que confiemos em atestadores confiáveis para o mapeamento do endereço Ethereum para o endereço de e-mail.
+## E quanto à descentralização? {#what-about-decentralization}
 
-```typescript
-No entanto, nosso provedor de identidade ainda é um componente centralizado.
-```
+Nesta configuração, os usuários não podem fingir ser alguém que não são, desde que confiemos em atestadores confiáveis para o mapeamento do endereço Ethereum para o endereço de e-mail. No entanto, nosso provedor de identidade ainda é um componente centralizado. Quem tiver a chave privada do provedor de identidade pode enviar informações falsas ao provedor de serviços.
 
-Quem tiver a chave privada do provedor de identidade pode enviar informações falsas para o provedor de serviços.
+Pode haver uma solução usando [computação multipartidária (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation). Espero escrever sobre isso em um tutorial futuro.
 
-## Pode haver uma solução usando [computação multipartidária (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation).
+## Conclusão {#conclusion}
 
-Espero escrever sobre isso em um futuro tutorial. Adoção de um padrão de logon, como assinaturas Ethereum, enfrenta um problema de ovo e galinha. Os provedores de serviços querem atrair o mercado mais amplo possível.
-
-Os usuários querem poder acessar serviços sem ter que se preocupar em suportar seu padrão de logon. A criação de adaptadores, como um IdP do Ethereum, pode nos ajudar a superar esse obstáculo.
-
-## Conclusão
-
-[Veja aqui mais do meu trabalho](https://cryptodocguy.pro/). [Veja aqui mais do meu trabalho](https://cryptodocguy.pro/). Os usuários têm uma chave privada (normalmente mantida em uma extensão de navegador).
-Criar adaptadores, como um IdP da Ethereum, pode nos ajudar a superar este obstáculo.
+A adoção de um padrão de login, como assinaturas do Ethereum, enfrenta o problema do ovo e da galinha. Os provedores de serviços querem atrair o mercado mais amplo possível. Os usuários querem poder acessar serviços sem ter que se preocupar em suportar seu padrão de login.
+A criação de adaptadores, como um IdP do Ethereum, pode nos ajudar a superar esse obstáculo.
 
 [Veja aqui mais do meu trabalho](https://cryptodocguy.pro/).

@@ -4,13 +4,13 @@ metaTitle: What is DeFi? | Benefits and Use of Decentralised Finance
 description: An overview of DeFi on Ethereum
 lang: en
 template: use-cases
-emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
 alt: An Eth logo made of lego bricks.
 sidebarDepth: 2
-summaryPoint1: A global, open alternative to the current financial system.
-summaryPoint2: Products that let you borrow, save, invest, trade, and more.
-summaryPoint3: Based on open-source technology that anyone can program with.
+summaryPoints:
+  - "A global, open alternative to the current financial system."
+  - "Products that let you borrow, save, invest, trade, and more."
+  - "Based on open-source technology that anyone can program with."
 ---
 
 DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled, and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It gives you exposure to global markets and alternatives to your local currency or banking options. DeFi products open up financial services to anyone with an internet connection and they're largely owned and maintained by their users. So far, tens of billions of dollars worth of crypto has flowed through DeFi applications and it's growing every day.
@@ -21,7 +21,7 @@ DeFi is a collective term for financial products and services that are accessibl
 
 There's a booming crypto economy out there, where you can lend, borrow, long/short, earn interest, and more. Crypto-savvy Argentinians have used DeFi to escape crippling inflation. Companies have started streaming their employees their wages in real time. Some folks have even taken out and paid off loans worth millions of dollars without the need for any personal identification.
 
-<YouTube id="H-O3r2YMWJ4" />
+<VideoWatch slug="defi-future-of-finance" />
 
 ## DeFi vs traditional finance {#defi-vs-tradfi}
 
@@ -58,7 +58,7 @@ Bitcoin in many ways was the first DeFi application. Bitcoin lets you really own
 
 Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyone has access. But it also makes this digital money programmable, using [smart contracts](/glossary/#smart-contract), so you can go beyond storing and sending value.
 
-<YouTube id="qFBYB4W2tqU" />
+<VideoWatch slug="defi-history-inception-to-2021" />
 
 ## Programmable money {#programmable-money}
 
@@ -81,7 +81,7 @@ There's a decentralized alternative to most financial services. But Ethereum als
 - [Send money around the globe](#send-money)
 - [Stream money around the globe](#stream-money)
 - [Access stable currencies](#stablecoins)
-- [Borrow funds with collateral](#lending)
+- [Borrow funds with collateral](#lending-2)
 - [Borrow without collateral](#flash-loans)
 - [Start crypto savings](#saving)
 - [Trade tokens](#swaps)
@@ -180,7 +180,7 @@ To be able to do the above example in the traditional finance world, you'd need 
 
 ### Start saving with crypto {#saving}
 
-#### Lending {#lending}
+#### Lending {#lending-2}
 
 You can earn interest on your crypto by lending it and see your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank (if you're lucky enough to be able to access one). Here's an example:
 

@@ -1,0 +1,224 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-08T10:23:19.561Z",
+  "englishManifestHash": "ce563a53f2f1",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "COMPONENT-89cd30",
+    "LINK-d45bd7",
+    "LINK-496041",
+    "LINK-df243a",
+    "LINK-66593f",
+    "LINK-b04df4",
+    "LINK-8b661a",
+    "LINK-97182b",
+    "LINK-8c5a2a",
+    "CODE-21154a",
+    "CODE-2314e8",
+    "CODE-51555c",
+    "CODE-ea6e36",
+    "LINK-9fa0ad",
+    "CODE-64c2e9",
+    "CODE-25d0ba",
+    "CODE-4d244c",
+    "CODE-18f538",
+    "CODE-52cd98",
+    "CODE-b97d49",
+    "CODE-4b68ab",
+    "CODE-c12c72",
+    "CODE-4b68ab",
+    "CODE-d94aa9",
+    "CODE-4b68ab",
+    "CODE-d1c64b",
+    "CODE-4b68ab",
+    "CODE-d1c64b",
+    "CODE-4410c4",
+    "LINK-14f434",
+    "LINK-648145",
+    "LINK-38bf3f"
+  ],
+  "placeholderMap": {
+    "COMPONENT-89cd30": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": ":chart_decreasing:"
+      }
+    },
+    "CODE-21154a": {
+      "type": "inline-code",
+      "values": {
+        "content": "(1 block / 12 seconds) * (60 seconds/minute) = 5 blocks/minute"
+      }
+    },
+    "CODE-2314e8": {
+      "type": "inline-code",
+      "values": {
+        "content": "(5 blocks/minute) * (60 minutes/hour) = 300 blocks/hour"
+      }
+    },
+    "CODE-51555c": {
+      "type": "inline-code",
+      "values": {
+        "content": "(300 blocks/hour) * (24 hours/day) = 7200 blocks/day"
+      }
+    },
+    "CODE-ea6e36": {
+      "type": "inline-code",
+      "values": {
+        "content": "15x10^6 gas/block"
+      }
+    },
+    "CODE-64c2e9": {
+      "type": "inline-code",
+      "values": {
+        "content": "7200 blocks/day * 15x10^6 gas/block * "
+      }
+    },
+    "CODE-25d0ba": {
+      "type": "inline-code",
+      "values": {
+        "content": "Y gwei/gas"
+      }
+    },
+    "CODE-4d244c": {
+      "type": "inline-code",
+      "values": {
+        "content": " * 1 ETH/ 10^9 gwei = 1700 ETH/day"
+      }
+    },
+    "CODE-18f538": {
+      "type": "inline-code",
+      "values": {
+        "content": "Y"
+      }
+    },
+    "CODE-52cd98": {
+      "type": "inline-code",
+      "values": {
+        "content": "Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei"
+      }
+    },
+    "CODE-b97d49": {
+      "type": "inline-code",
+      "values": {
+        "content": "1700"
+      }
+    },
+    "CODE-4b68ab": {
+      "type": "inline-code",
+      "values": {
+        "content": "X"
+      }
+    },
+    "CODE-c12c72": {
+      "type": "inline-code",
+      "values": {
+        "content": "Y = (X(10^3)/(7200 * 15)) = X/108"
+      }
+    },
+    "CODE-d94aa9": {
+      "type": "inline-code",
+      "values": {
+        "content": "f(X) = X/108"
+      }
+    },
+    "CODE-d1c64b": {
+      "type": "inline-code",
+      "values": {
+        "content": "f(X)"
+      }
+    },
+    "CODE-4410c4": {
+      "type": "inline-code",
+      "values": {
+        "content": "17 gwei"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-d45bd7": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#constantinople"
+      }
+    },
+    "LINK-496041": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#ommer"
+      }
+    },
+    "LINK-df243a": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#beacon-chain-genesis"
+      }
+    },
+    "LINK-66593f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#difficulty-bomb"
+      }
+    },
+    "LINK-b04df4": {
+      "type": "link",
+      "values": {
+        "url": "https://bitinfocharts.com/ethereum/"
+      }
+    },
+    "LINK-8b661a": {
+      "type": "link",
+      "values": {
+        "url": "https://ultrasound.money/"
+      }
+    },
+    "LINK-97182b": {
+      "type": "link",
+      "values": {
+        "url": "/eth/supply/"
+      }
+    },
+    "LINK-8c5a2a": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/#london"
+      }
+    },
+    "LINK-9fa0ad": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "LINK-648145": {
+      "type": "link",
+      "values": {
+        "url": "https://ultrasound.money/"
+      }
+    },
+    "LINK-38bf3f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.attestant.io/posts/charting-ethereum-issuance/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:23:19.561Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,159 +1,159 @@
 ---
-title: Scam help & reporting
-description: What to do if you have been scammed, how to secure your remaining assets, and where to report fraud.
+title: Nimetapeliwa au kupoteza fedha
+metaTitle: Msaada na kuripoti utapeli
+description: Nini cha kufanya ikiwa umetapeliwa, jinsi ya kulinda mali zako zilizosalia, na wapi pa kuripoti ulaghai.
 lang: sw
 ---
 
-# I was scammed or lost funds {#scam-help}
-
-Cryptocurrency scams target people of all experience levels, including professionals in finance and technology. You are not alone, and being here is the right first step.
+Utapeli wa sarafu-fiche unalenga watu wa viwango vyote vya uzoefu, ikiwa ni pamoja na wataalamu wa fedha na teknolojia. Haupo peke yako, na kuwa hapa ni hatua ya kwanza sahihi.
 
 <Alert variant="error">
 <AlertEmoji text=":rotating_light:"/>
 <AlertContent>
 <AlertDescription>
 
-**No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#recovery-scams) below.
+**Hakuna anayeweza kubatilisha miamala ya mnyororo wa vitalu.** Ikiwa mtu atawasiliana nawe akidai anaweza kurejesha fedha zako kwa malipo, karibu kila mara huo ni utapeli wa pili. Tazama [utapeli wa urejeshaji](#scam-types) hapa chini.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Secure your remaining assets {#secure-assets}
+## Linda mali zako zilizosalia {#secure-assets}
 
-If you interacted with a scammer or suspect your wallet is compromised, take these steps immediately:
+Ikiwa uliwasiliana na tapeli au unashuku mkoba wako umeingiliwa, chukua hatua hizi mara moja:
 
-1. **Move remaining funds** to a new, secure wallet that the scammer does not have access to
-2. **Revoke token approvals.** Scammers often trick you into approving unlimited token spending. Revoking these permissions prevents further draining of your wallet
-3. **Change passwords** on any exchange accounts that may be linked
-4. **Enable two-factor authentication (2FA)** on all crypto-related accounts
+1. **Hamisha fedha zilizosalia** kwenye mkoba mpya, salama ambao tapeli hana ufikiaji nao
+2. **Batilisha idhini za tokeni.** Matapeli mara nyingi hukuhadaa ili uidhinishe matumizi ya tokeni yasiyo na kikomo. Kubatilisha ruhusa hizi kunazuia mkoba wako kuendelea kumalizwa
+3. **Badilisha nywila** kwenye akaunti zozote za ubadilishaji ambazo zinaweza kuunganishwa
+4. **Washa uthibitishaji wa hatua mbili (2FA)** kwenye akaunti zote zinazohusiana na kripto
 
-### How to revoke token approvals {#revoke-approvals}
+### Jinsi ya kubatilisha idhini za tokeni {#revoke-approvals}
 
-When you interact with a dapp or smart contract, you may have granted it permission to spend your tokens. If a scammer tricked you into approving a malicious contract, they can continue draining your tokens even after the initial scam.
+Unapotumia programu tumizi iliyogatuliwa (dapp) au mkataba mahiri, unaweza kuwa umeipa ruhusa ya kutumia tokeni zako. Ikiwa tapeli alikuhadaa kuidhinisha mkataba hasidi, wanaweza kuendelea kumaliza tokeni zako hata baada ya utapeli wa awali.
 
-Use these tools to check and revoke approvals:
+Tumia zana hizi kuangalia na kubatilisha idhini:
 
-- [Revoke.cash](https://revoke.cash/): connect your wallet to see all active approvals and revoke them
-- [Revokescout](https://revoke.blockscout.com/): check and revoke approvals via Blockscout
-- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): check and revoke approvals via Etherscan
+- [Revoke.cash](https://revoke.cash/): unganisha mkoba wako ili kuona idhini zote zinazotumika na kuzibatilisha
+- [Revokescout](https://revoke.blockscout.com/): angalia na ubatilishe idhini kupitia Blockscout
+- [Kikagua Idhini ya Tokeni cha Etherscan](https://etherscan.io/tokenapprovalchecker): angalia na ubatilishe idhini kupitia Etherscan
 
 <DocLink href="/guides/how-to-revoke-token-access/">
-  Step-by-step guide: How to revoke token access
+  Mwongozo wa hatua kwa hatua: Jinsi ya kubatilisha ufikiaji wa tokeni
 </DocLink>
 
-## Report scam addresses and websites {#report}
+## Ripoti anwani na tovuti za utapeli {#report}
 
-Reporting helps warn other users and may assist law enforcement investigations. Document everything: transaction hashes, wallet addresses, screenshots, and any communication with the scammer.
+Kuripoti husaidia kuonya watumiaji wengine na kunaweza kusaidia uchunguzi wa vyombo vya sheria. Andika kila kitu: heshi za muamala, anwani za mkoba, picha za skrini, na mawasiliano yoyote na tapeli.
 
-### Report a scam address {#report-address}
+### Ripoti anwani ya utapeli {#report-address}
 
-- [Chainabuse](https://www.chainabuse.com/): community-driven scam and fraud reporting database. Submit reports and search for known scam addresses
-- [Etherscan report](https://info.etherscan.com/report-address/): flag an address on the most-used Ethereum block explorer
-- [CryptoScamDB](https://cryptoscamdb.org/): open-source database tracking cryptocurrency scams
+- [Chainabuse](https://www.chainabuse.com/): hifadhidata inayoendeshwa na jamii ya kuripoti utapeli na ulaghai. Wasilisha ripoti na utafute anwani zinazojulikana za utapeli
+- [Ripoti ya Etherscan](https://info.etherscan.com/report-address/): ripoti anwani kwenye kichunguzi cha bloku cha Ethereum kinachotumiwa zaidi
+- [CryptoScamDB](https://cryptoscamdb.org/): hifadhidata ya chanzo wazi inayofuatilia utapeli wa sarafu-fiche
 
-### Report a scam website or social media account {#report-website}
+### Ripoti tovuti ya utapeli au akaunti ya mitandao ya kijamii {#report-website}
 
-- [PhishTank](https://phishtank.org/): submit and verify phishing URLs
-- [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/): report phishing sites to Google so they get blocked in Chrome and other browsers
-- [Netcraft](https://report.netcraft.com/report/mistake): report malicious and fraudulent websites
-- Report directly on the social media platform where the scam occurred (Twitter/X, Discord, Telegram all have reporting features)
+- [PhishTank](https://phishtank.org/): wasilisha na uthibitishe URL za kuhadaa ili kupata maelezo ya kibinafsi (phishing)
+- [Kuvinjari Salama kwa Google](https://safebrowsing.google.com/safebrowsing/report_phish/): ripoti tovuti za kuhadaa kwa Google ili zizuiwe kwenye Chrome na vivinjari vingine
+- [Netcraft](https://report.netcraft.com/report/mistake): ripoti tovuti hasidi na za ulaghai
+- Ripoti moja kwa moja kwenye jukwaa la mitandao ya kijamii ambapo utapeli ulitokea (Twitter/X, Discord, Telegram zote zina vipengele vya kuripoti)
 
-### Report to law enforcement {#report-law-enforcement}
+### Ripoti kwa vyombo vya sheria {#report-law-enforcement}
 
-- **United States:** [FBI Internet Crime Complaint Center (IC3)](https://www.ic3.gov/)
-- **United Kingdom:** [Action Fraud](https://www.actionfraud.police.uk/)
-- **European Union:** [Europol](https://www.europol.europa.eu/report-a-crime)
-- **Other countries:** file a report with your local police. Cryptocurrency fraud is a crime in most jurisdictions
+- **Marekani:** [Kituo cha Malalamiko ya Uhalifu wa Mtandaoni cha FBI (IC3)](https://www.ic3.gov/)
+- **Uingereza:** [Action Fraud](https://www.actionfraud.police.uk/)
+- **Umoja wa Ulaya:** [Europol](https://www.europol.europa.eu/report-a-crime)
+- **Nchi nyingine:** wasilisha ripoti kwa polisi wa eneo lako. Ulaghai wa sarafu-fiche ni uhalifu katika mamlaka nyingi
 
-## Analyze what happened {#analyze}
+## Changanua kilichotokea {#analyze}
 
-Understanding where your funds went can help with reports and may support recovery efforts if the funds land on a centralized exchange.
+Kuelewa wapi fedha zako zilienda kunaweza kusaidia na ripoti na kunaweza kusaidia juhudi za urejeshaji ikiwa fedha zitatua kwenye ubadilishaji uliowekwa kati.
 
-- [Blockscout](https://eth.blockscout.com/): open-source block explorer to look up any transaction hash or wallet address to see where funds were sent
-- [Etherscan](https://etherscan.io/): look up any transaction hash or wallet address to see where funds were sent
-- [Chainabuse lookup](https://www.chainabuse.com/): check if an address has already been reported by other victims
-- [MetaSleuth](https://metasleuth.io/) by BlockSec: visual transaction tracing tool that maps fund flows
+- [Blockscout](https://eth.blockscout.com/): kichunguzi cha bloku cha chanzo wazi ili kutafuta heshi yoyote ya muamala au anwani ya mkoba ili kuona wapi fedha zilitumwa
+- [Etherscan](https://etherscan.io/): tafuta heshi yoyote ya muamala au anwani ya mkoba ili kuona wapi fedha zilitumwa
+- [Utafutaji wa Chainabuse](https://www.chainabuse.com/): angalia ikiwa anwani tayari imeripotiwa na waathiriwa wengine
+- [MetaSleuth](https://metasleuth.io/) na BlockSec: zana ya kuona ufuatiliaji wa muamala inayoonyesha mtiririko wa fedha
 
-**If funds were sent to a centralized exchange** (like Coinbase, Binance, Kraken), contact their support team immediately with the transaction details. Exchanges can sometimes freeze accounts flagged for fraud.
+**Ikiwa fedha zilitumwa kwenye ubadilishaji uliowekwa kati** (kama Coinbase, Binance, Kraken), wasiliana na timu yao ya usaidizi mara moja na maelezo ya muamala. Ubadilishaji wakati mwingine unaweza kufungia akaunti zilizoripotiwa kwa ulaghai.
 
-## The hard truth {#hard-truth}
+## Ukweli mchungu {#hard-truth}
 
-Because Ethereum is decentralized, no central authority can reverse transactions or recover stolen funds. Once a transaction is confirmed on the blockchain, it is final.
+Kwa sababu Ethereum imegatuliwa, hakuna mamlaka kuu inayoweza kubatilisha miamala au kurejesha fedha zilizoibiwa. Pindi muamala unapothibitishwa kwenye mnyororo wa vitalu, unakuwa wa mwisho.
 
-Reporting is still valuable. Reports help law enforcement track organized fraud rings, and flagging addresses on Chainabuse and Etherscan warns future potential victims.
+Kuripoti bado ni muhimu. Ripoti husaidia vyombo vya sheria kufuatilia mitandao ya ulaghai iliyopangwa, na kuripoti anwani kwenye Chainabuse na Etherscan huonya waathiriwa watarajiwa wa baadaye.
 
-## Types of scams to watch for {#scam-types}
+## Aina za utapeli za kuangalia {#scam-types}
 
 <ExpandableCard
-title="Utapeli wa zawadi na airdrop"
-contentPreview="Hakuna anayetoa ETH bure. Ofa hizi daima ni utapeli."
+title="Giveaway and airdrop scams"
+contentPreview="No one is giving away free ETH. These offers are always scams."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
-
 >
 
-Scammers create fake giveaways promising to multiply your ETH or give you free tokens. They often impersonate well-known figures like Vitalik Buterin. If you send ETH to a "giveaway" address, you will not receive anything back.
+Matapeli huunda zawadi feki wakiahidi kuzidisha ETH yako au kukupa tokeni za bure. Mara nyingi wao hujifanya kuwa watu mashuhuri kama Vitalik Buterin. Ikiwa utatuma ETH kwa anwani ya "zawadi", hutapokea chochote.
 
-**Remember:** Vitalik and other prominent figures will never ask you to send them ETH.
+**Kumbuka:** Vitalik na watu wengine mashuhuri hawatakuuliza kamwe uwatumie ETH.
 
-[More on common scams](/security/#common-scams)
+[Zaidi kuhusu utapeli wa kawaida](/security/#common-scams)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Uigaji na usaidizi bandia"
-contentPreview="Hakuna mtu kutoka Ethereum au ethereum.org atakayewasiliana nawe kwanza."
+title="Impersonation and fake support"
+contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
-
 >
 
-Scammers impersonate Ethereum team members, moderators, or support agents on Discord, Telegram, and social media. They may send you direct messages offering help or claiming there is a problem with your account.
+Matapeli hujifanya kuwa wanachama wa timu ya Ethereum, wasimamizi, au mawakala wa usaidizi kwenye Discord, Telegram, na mitandao ya kijamii. Wanaweza kukutumia ujumbe wa moja kwa moja wakitoa msaada au kudai kuna tatizo na akaunti yako.
 
-**Remember:**
+**Kumbuka:**
 
-- There is no "Ethereum support team"
-- Real moderators will never DM you first
-- Never share your seed phrase or private keys with anyone, for any reason
-- Never click links sent in unsolicited messages
+- Hakuna "timu ya usaidizi ya Ethereum"
+- Wasimamizi wa kweli hawatakutumia ujumbe wa moja kwa moja (DM) kwanza
+- Kamwe usishiriki kirai cha mbegu chako au funguo za kibinafsi na mtu yeyote, kwa sababu yoyote
+- Kamwe usibofye viungo vilivyotumwa katika jumbe ambazo hukuomba
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Utapeli wa urejeshaji"
-contentPreview="Baada ya kutapeliwa, jihadhari na 'wataalamu' bandia wa kurejesha sarafu za kidigitali."
+title="Recovery scams"
+contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
-
 >
 
-Recovery scams specifically target people who have already lost funds. Scammers monitor social media for people talking about being scammed, then reach out posing as "blockchain investigators" or "crypto recovery experts."
+Utapeli wa urejeshaji unalenga hasa watu ambao tayari wamepoteza fedha. Matapeli hufuatilia mitandao ya kijamii kwa watu wanaozungumza kuhusu kutapeliwa, kisha huwafikia wakijifanya kama "wachunguzi wa mnyororo wa vitalu" au "wataalamu wa kurejesha kripto."
 
-They promise to trace and recover your stolen crypto for an upfront fee. After you pay, they disappear.
+Wanaahidi kufuatilia na kurejesha kripto yako iliyoibiwa kwa ada ya mapema. Baada ya kulipa, wanatoweka.
 
-**No legitimate service can reverse blockchain transactions.** Anyone promising this is lying. This is one of the most common follow-up scams.
+**Hakuna huduma halali inayoweza kubatilisha miamala ya mnyororo wa vitalu.** Yeyote anayeahidi hili anadanganya. Huu ni mojawapo ya utapeli wa ufuatiliaji wa kawaida sana.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Tovuti za hadaa na programu bandia"
-contentPreview="Tovuti za utapeli huiga mikoba na exchange halisi ili kuiba taarifa zako za siri."
+title="Phishing websites and fake apps"
+contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
-
 >
 
-Phishing sites look identical to real wallet apps, exchanges, or DeFi platforms. They trick you into entering your seed phrase or connecting your wallet, then drain your funds.
+Tovuti za kuhadaa ili kupata maelezo ya kibinafsi (phishing) zinaonekana sawa na programu halisi za mkoba, ubadilishaji, au majukwaa ya fedha zilizogatuliwa (DeFi). Zinakuhadaa ili uweke kirai cha mbegu chako au kuunganisha mkoba wako, kisha zinamaliza fedha zako.
 
-**Protect yourself:**
+**Jilinde:**
 
-- Always verify the URL before connecting your wallet
-- Bookmark the official sites you use regularly
-- Never enter your seed phrase on any website. Legitimate apps never ask for it
-- Use [PhishTank](https://phishtank.org/) to check suspicious URLs
+- Kila mara thibitisha URL kabla ya kuunganisha mkoba wako
+- Weka alama kwenye tovuti rasmi unazotumia mara kwa mara
+- Kamwe usiweke kirai cha mbegu chako kwenye tovuti yoyote. Programu halali haziulizi kamwe
+- Tumia [PhishTank](https://phishtank.org/) kuangalia URL zinazotiliwa shaka
 
 <DocLink href="/guides/how-to-id-scam-tokens/">
-  How to identify scam tokens
+  Jinsi ya kutambua tokeni za utapeli
 </DocLink>
+
 </ExpandableCard>
 
 <DocLink href="/security/">
-  Full guide to Ethereum security and scam prevention
+  Mwongozo kamili wa usalama wa Ethereum na kuzuia utapeli
 </DocLink>

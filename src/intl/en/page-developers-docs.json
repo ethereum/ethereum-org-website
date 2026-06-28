@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "Data and analytics",
   "docs-nav-data-and-analytics-description": "How blockchain data is aggregated, organized and implemented into dapps",
   "docs-nav-data-availability": "Data availability",
+  "docs-nav-data-availability-description": "An overview of problems and solutions relating to data availability in Ethereum",
   "docs-nav-data-availability-storage-strategies": "Blockchain data storage strategies",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "State validation in development",
   "layer-2-metis-note": "Fraud proofs in development",
   "layer-2-optimism-note": "Fault proofs in development",
-  "back-to-top": "Back to top",
   "banner-page-incomplete": "This page is incomplete and we'd love your help. Edit this page and add anything that you think might be useful to others.",
   "next": "Next",
   "previous": "Previous"

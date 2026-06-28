@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-16T21:54:58.660Z",
+  "englishManifestHash": "a1dd3e8b4f3e",
+  "placeholderOrder": [
+    "LINK-6e6cb2",
+    "LINK-5bbb7f",
+    "LINK-a21a82",
+    "LINK-8a4d24",
+    "LINK-2b5cec",
+    "LINK-033e3a",
+    "LINK-16d394",
+    "LINK-5852f9",
+    "LINK-1e4854",
+    "LINK-63b4bc",
+    "LINK-e4be84",
+    "LINK-3012d4",
+    "LINK-662dcc",
+    "LINK-dee4c5",
+    "LINK-11ee92",
+    "LINK-389d22",
+    "LINK-8aa84f",
+    "LINK-cbdff6",
+    "LINK-8ce3ac",
+    "LINK-d5f700",
+    "LINK-295ed4",
+    "LINK-c570fd",
+    "LINK-6391d0",
+    "LINK-fd9ef6",
+    "LINK-61434b",
+    "LINK-616160",
+    "LINK-f8d2bf",
+    "LINK-f49e28",
+    "LINK-f99814",
+    "LINK-aa8c12",
+    "LINK-678edf"
+  ],
+  "placeholderMap": {
+    "LINK-6e6cb2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-5bbb7f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-8a4d24": {
+      "type": "link",
+      "values": {
+        "url": "https://li.fi/knowledge-hub/blockchain-bridges-and-classification/"
+      }
+    },
+    "LINK-2b5cec": {
+      "type": "link",
+      "values": {
+        "url": "https://bridge.arbitrum.io/"
+      }
+    },
+    "LINK-033e3a": {
+      "type": "link",
+      "values": {
+        "url": "https://app.optimism.io/bridge"
+      }
+    },
+    "LINK-16d394": {
+      "type": "link",
+      "values": {
+        "url": "https://rekt.news/leaderboard/"
+      }
+    },
+    "LINK-5852f9": {
+      "type": "link",
+      "values": {
+        "url": "https://rekt.news/wormhole-rekt/"
+      }
+    },
+    "LINK-1e4854": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/dapps/"
+      }
+    },
+    "LINK-63b4bc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/"
+      }
+    },
+    "LINK-e4be84": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/"
+      }
+    },
+    "LINK-3012d4": {
+      "type": "link",
+      "values": {
+        "url": "https://moralis.io/"
+      }
+    },
+    "LINK-662dcc": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wighawag/hardhat-deploy"
+      }
+    },
+    "LINK-dee4c5": {
+      "type": "link",
+      "values": {
+        "url": "https://moralis.io/how-to-build-cross-chain-dapps/"
+      }
+    },
+    "LINK-11ee92": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/WZWCzsB1xUE"
+      }
+    },
+    "LINK-389d22": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=ehv70kE1QYo"
+      }
+    },
+    "LINK-8aa84f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.14/contracts.html?highlight=events#events"
+      }
+    },
+    "LINK-cbdff6": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/en/"
+      }
+    },
+    "LINK-8ce3ac": {
+      "type": "link",
+      "values": {
+        "url": "https://tenderly.co/"
+      }
+    },
+    "LINK-d5f700": {
+      "type": "link",
+      "values": {
+        "url": "/bridges/"
+      }
+    },
+    "LINK-295ed4": {
+      "type": "link",
+      "values": {
+        "url": "https://l2beat.com/bridges/summary"
+      }
+    },
+    "LINK-c570fd": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8"
+      }
+    },
+    "LINK-6391d0": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17"
+      }
+    },
+    "LINK-fd9ef6": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.celestia.org/clusters/"
+      }
+    },
+    "LINK-61434b": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8"
+      }
+    },
+    "LINK-616160": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability"
+      }
+    },
+    "LINK-f8d2bf": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability"
+      }
+    },
+    "LINK-f49e28": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/_prestwich"
+      }
+    },
+    "LINK-f99814": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/ZQJWMiX4hT0"
+      }
+    },
+    "LINK-aa8c12": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/b0mC-ZqN8Oo"
+      }
+    },
+    "LINK-678edf": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/c7cm2kd20j8"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T21:54:58.660Z",
+      "status": "success"
+    }
+  }
+}

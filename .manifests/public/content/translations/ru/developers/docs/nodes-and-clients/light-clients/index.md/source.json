@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/nodes-and-clients/light-clients/index.md",
+  "generatedAt": "2026-06-19T18:37:54.578Z",
+  "rootHash": "7a640a4a1ddc",
+  "tree": {
+    "contentHash": "1a5f8398bb9d",
+    "anchorHash": "d7e8d16f5c4d",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "499190d80be6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "0322577df5d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "1010f3dd930f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:2": {
+        "contentHash": "ce6ea95c014a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-a-light-client": {
+        "contentHash": "9b68f956c5db",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5d641deebe51",
+        "children": {
+          "_label": {
+            "contentHash": "5d641deebe51",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "bb8a40b03a0a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-do-light-clients-work": {
+        "contentHash": "a1eda91274ae",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5ed2582b9e4c",
+        "children": {
+          "_label": {
+            "contentHash": "5ed2582b9e4c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d549dd065302",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-are-light-clients-important": {
+        "contentHash": "addd57d7e021",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "705ebadc505c",
+        "children": {
+          "_label": {
+            "contentHash": "705ebadc505c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "01861f718cab",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-innovations-do-light-clients-enable": {
+        "contentHash": "942272c9fdd1",
+        "anchorHash": "53ae3fe5dac3",
+        "labelHash": "06d842427a46",
+        "children": {
+          "_label": {
+            "contentHash": "06d842427a46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "e5c727ad2aad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "bfead9c6a730",
+            "anchorHash": "8a63a008faae"
+          },
+          "prose:2": {
+            "contentHash": "ba87668280d3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "current-state-of-development": {
+        "contentHash": "967af13a5d54",
+        "anchorHash": "5c6c7b81eb6d",
+        "labelHash": "96f4091057cd",
+        "children": {
+          "_label": {
+            "contentHash": "96f4091057cd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:8": {
+            "contentHash": "49284fbf7c16",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ebcd9aca2aa3",
+            "anchorHash": "3a75f604dfb7"
+          },
+          "prose:9": {
+            "contentHash": "bfa1c256123f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "e3baa6695372",
+            "anchorHash": "48fb3e00f01b"
+          },
+          "prose:10": {
+            "contentHash": "7b9d30b607b7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "623efaf6a378",
+            "anchorHash": "e63c8a80d6bf"
+          },
+          "prose:11": {
+            "contentHash": "bd5252a61c01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "1d85cd9ea3cf",
+            "anchorHash": "98d73e5f8fc8"
+          },
+          "prose:12": {
+            "contentHash": "3566bc163fa5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "a7fb80b8d6bf",
+            "anchorHash": "1166474d5cea"
+          },
+          "prose:13": {
+            "contentHash": "8394e9196063",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "3de1580490d2",
+            "anchorHash": "0d9f7701bb4e"
+          },
+          "prose:14": {
+            "contentHash": "89919b8ae90c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "fdf6b8b2922f",
+            "anchorHash": "dbd9c3cd11b2"
+          },
+          "prose:15": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "7a079c90df8a",
+            "anchorHash": "ceae87f49ade"
+          },
+          "prose:16": {
+            "contentHash": "fddc0a80954c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:8",
+          "link:0",
+          "prose:9",
+          "link:1",
+          "prose:10",
+          "link:2",
+          "prose:11",
+          "link:3",
+          "prose:12",
+          "link:4",
+          "prose:13",
+          "link:5",
+          "prose:14",
+          "link:6",
+          "prose:15",
+          "link:7",
+          "prose:16"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "85941d03d873",
+        "anchorHash": "b8bd876bc54e",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3a356417ee6f",
+            "anchorHash": "f1b5445c1f8d"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "e77ad3fe02f0",
+            "anchorHash": "0269cdb0891d"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "f796589d57e7",
+            "anchorHash": "9fddf29ffb01"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "a20e9b6b688f",
+            "anchorHash": "638eadd83023"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "what-is-a-light-client",
+      "how-do-light-clients-work",
+      "why-are-light-clients-important",
+      "what-innovations-do-light-clients-enable",
+      "current-state-of-development",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+}

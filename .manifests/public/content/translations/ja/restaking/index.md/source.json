@@ -1,0 +1,813 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/restaking/index.md",
+  "generatedAt": "2026-06-18T00:41:02.479Z",
+  "rootHash": "1140d2387c76",
+  "tree": {
+    "contentHash": "2b4cf89f3cee",
+    "anchorHash": "0688b1bd336b",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "fee35e745a2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ea81fe120f54"
+      },
+      "frontmatter:description": {
+        "contentHash": "f460f2321adf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2290d7d70dea"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f8149d1da7bd"
+      },
+      "frontmatter:alt": {
+        "contentHash": "7b5731ffd350",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:buttons": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:- content": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c3f15799af50"
+      },
+      "frontmatter:toId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d5ee39d15d7e"
+      },
+      "frontmatter:isSecondary": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "fcbcf165908d"
+      },
+      "prose:2": {
+        "contentHash": "63c56e7d3fcf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "0d721aa93037",
+        "anchorHash": "db0b5977176b"
+      },
+      "prose:3": {
+        "contentHash": "b6e68a35cf79",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "469a18145a5e",
+        "anchorHash": "28704a15211d"
+      },
+      "prose:4": {
+        "contentHash": "829898eced49",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "component:20": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "4dda5411ceed",
+        "children": {
+          "attr:slug": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db383105efd4"
+          }
+        }
+      },
+      "what-is-restaking": {
+        "contentHash": "ab34065ab354",
+        "anchorHash": "f2b2df0cf425",
+        "labelHash": "04a4ca992676",
+        "children": {
+          "_label": {
+            "contentHash": "04a4ca992676",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "614bd6883519",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:3": {
+            "contentHash": "2c39a79c36ee",
+            "anchorHash": "ee87f5a70244",
+            "children": {
+              "attr:className": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "32c92bb1fde4"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "3df6662f9563",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "bb3fc0c17a32"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "f740f207c5da",
+                "anchorHash": "a23d45cd8f6d",
+                "children": {
+                  "component:0": {
+                    "contentHash": "b97970aa1dcf",
+                    "anchorHash": "ab686fbd763c",
+                    "children": {
+                      "html-tag:0": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "prose:2": {
+                        "contentHash": "ad813b277a8a",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "html-tag:1": {
+                        "contentHash": "300c4a0841b9",
+                        "anchorHash": "af2846cf76a6"
+                      }
+                    },
+                    "childrenOrder": [
+                      "html-tag:0",
+                      "prose:2",
+                      "html-tag:1"
+                    ]
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "attr:className",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "component:3"
+        ]
+      },
+      "staking-vs-restaking": {
+        "contentHash": "0046911e9590",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b0152e7ae7e2",
+        "children": {
+          "_label": {
+            "contentHash": "b0152e7ae7e2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "23847c304b50",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-do-we-need-restaking": {
+        "contentHash": "6c892325b2ff",
+        "anchorHash": "4becbe8e3985",
+        "labelHash": "37938938e9db",
+        "children": {
+          "_label": {
+            "contentHash": "37938938e9db",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fbc8bcca5380",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:5": {
+            "contentHash": "3859f3f4aafe",
+            "anchorHash": "ee87f5a70244",
+            "children": {
+              "attr:className": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "32c92bb1fde4"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "3df6662f9563",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "bb3fc0c17a32"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "8857937fe5c4",
+                "anchorHash": "a23d45cd8f6d",
+                "children": {
+                  "component:0": {
+                    "contentHash": "187339502848",
+                    "anchorHash": "ab686fbd763c",
+                    "children": {
+                      "html-tag:0": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "prose:2": {
+                        "contentHash": "ff3d73545333",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "html-tag:1": {
+                        "contentHash": "faf63b8a5228",
+                        "anchorHash": "af2846cf76a6"
+                      }
+                    },
+                    "childrenOrder": [
+                      "html-tag:0",
+                      "prose:2",
+                      "html-tag:1"
+                    ]
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "attr:className",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "prose:0",
+          "component:4",
+          "component:5"
+        ]
+      },
+      "how-does-restaking-work": {
+        "contentHash": "32da53e37ffb",
+        "anchorHash": "32d96a7796b3",
+        "labelHash": "45d9024db3cb",
+        "children": {
+          "_label": {
+            "contentHash": "45d9024db3cb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4fb6b1c21b87",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:3": {
+            "contentHash": "b8839acd9ddf",
+            "anchorHash": "28cc6169d70d",
+            "children": {
+              "attr:className": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "32c92bb1fde4"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "3df6662f9563",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "bb3fc0c17a32"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "561e06572878",
+                "anchorHash": "3e55f745b186",
+                "children": {
+                  "component:0": {
+                    "contentHash": "27165971140f",
+                    "anchorHash": "07ce40c0d854",
+                    "children": {
+                      "html-tag:0": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "prose:3": {
+                        "contentHash": "ad813b277a8a",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "html-tag:1": {
+                        "contentHash": "0f28ab912da2",
+                        "anchorHash": "af2846cf76a6"
+                      },
+                      "html-tag:2": {
+                        "contentHash": "80aaebf1ed20",
+                        "anchorHash": "af2846cf76a6"
+                      }
+                    },
+                    "childrenOrder": [
+                      "html-tag:0",
+                      "prose:3",
+                      "html-tag:1",
+                      "html-tag:2"
+                    ]
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "attr:className",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "component:3"
+        ]
+      },
+      "what-are-some-examples-of-restaking": {
+        "contentHash": "3607a3c63486",
+        "anchorHash": "4a1242a08f09",
+        "labelHash": "af75b825992a",
+        "children": {
+          "_label": {
+            "contentHash": "af75b825992a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "453714e4baae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
+            "contentHash": "3af8729a97fb",
+            "anchorHash": "982a4de65bf7",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "4bd9354bb652"
+              },
+              "attr:className": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "32c92bb1fde4"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "3df6662f9563",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "bb3fc0c17a32"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "23d2982be6c4",
+                "anchorHash": "a23d45cd8f6d",
+                "children": {
+                  "component:0": {
+                    "contentHash": "c100b0688c37",
+                    "anchorHash": "ab686fbd763c",
+                    "children": {
+                      "html-tag:0": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "prose:2": {
+                        "contentHash": "c66af71cc2e1",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "html-tag:1": {
+                        "contentHash": "6ab502f613bc",
+                        "anchorHash": "af2846cf76a6"
+                      }
+                    },
+                    "childrenOrder": [
+                      "html-tag:0",
+                      "prose:2",
+                      "html-tag:1"
+                    ]
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "attr:className",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "component:3",
+          "component:4"
+        ]
+      },
+      "how-much-can-i-make-from-restaking": {
+        "contentHash": "2e9b1002134f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "460deed603cd",
+        "children": {
+          "_label": {
+            "contentHash": "460deed603cd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e4eec7db2a48",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-are-the-risks-of-restaking": {
+        "contentHash": "88f148bf8c62",
+        "anchorHash": "87c7ab9bb080",
+        "labelHash": "d5bc5831bb1f",
+        "children": {
+          "_label": {
+            "contentHash": "d5bc5831bb1f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9a779f1f1ef4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:3": {
+            "contentHash": "15e0da23886c",
+            "anchorHash": "bcb523b970a3",
+            "children": {
+              "attr:className": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "32c92bb1fde4"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "3df6662f9563",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "bb3fc0c17a32"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "77c12bdf8097",
+                "anchorHash": "db19574fee54",
+                "children": {
+                  "component:0": {
+                    "contentHash": "410ce668e7be",
+                    "anchorHash": "1b444471b2a0",
+                    "children": {
+                      "html-tag:0": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "prose:1": {
+                        "contentHash": "afa6e0a003c6",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "component:2": {
+                        "contentHash": "2296e99d23bc",
+                        "anchorHash": "9be72cf1bf05",
+                        "children": {
+                          "attr:className": {
+                            "contentHash": "e3b0c44298fc",
+                            "anchorHash": "f28fea81a5cd"
+                          },
+                          "prose:1": {
+                            "contentHash": "83e063f7393d",
+                            "anchorHash": "e3b0c44298fc"
+                          },
+                          "html-tag:0": {
+                            "contentHash": "1eb6955c9271",
+                            "anchorHash": "12288c26cb86"
+                          }
+                        },
+                        "childrenOrder": [
+                          "attr:className",
+                          "prose:1",
+                          "html-tag:0"
+                        ]
+                      }
+                    },
+                    "childrenOrder": [
+                      "html-tag:0",
+                      "prose:1",
+                      "component:2"
+                    ]
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "attr:className",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "component:3"
+        ]
+      },
+      "how-to-get-started-with-restaking": {
+        "contentHash": "c82e219c1bae",
+        "anchorHash": "798aa7fa3f05",
+        "labelHash": "3a194d852907",
+        "children": {
+          "_label": {
+            "contentHash": "3a194d852907",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2973abc340a1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:3": {
+            "contentHash": "de9b87c237be",
+            "anchorHash": "7b3e2ccb4c79",
+            "children": {
+              "attr:className": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "32c92bb1fde4"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "491aaf33b92d",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "252d79a64486"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "2a6c52cc8d9b",
+                "anchorHash": "63a70fc7fe61",
+                "children": {
+                  "component:0": {
+                    "contentHash": "56900e793e92",
+                    "anchorHash": "12f1e0148cff",
+                    "children": {
+                      "html-tag:0": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "prose:1": {
+                        "contentHash": "f725484c6ad1",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "component:2": {
+                        "contentHash": "75ddaefa8e6c",
+                        "anchorHash": "3b748f72dfbf",
+                        "children": {
+                          "attr:href": {
+                            "contentHash": "e3b0c44298fc",
+                            "anchorHash": "28704a15211d"
+                          },
+                          "prose:0": {
+                            "contentHash": "8d8cd546b58d",
+                            "anchorHash": "e3b0c44298fc"
+                          }
+                        },
+                        "childrenOrder": [
+                          "attr:href",
+                          "prose:0"
+                        ]
+                      }
+                    },
+                    "childrenOrder": [
+                      "html-tag:0",
+                      "prose:1",
+                      "component:2"
+                    ]
+                  }
+                }
+              }
+            },
+            "childrenOrder": [
+              "attr:className",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "component:3"
+        ]
+      },
+      "advanced": {
+        "contentHash": "fb3c2f4b6ca6",
+        "anchorHash": "5b2150d00bce",
+        "labelHash": "9f088dbebd6c",
+        "children": {
+          "_label": {
+            "contentHash": "9f088dbebd6c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "26f2fdd28d09",
+            "children": {
+              "attr:slug": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "0bf5af440dcc"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "b9f73242048a",
+        "anchorHash": "ecc75b991c0d",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:8": {
+            "contentHash": "c977dbe78522",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a522328f8fa8",
+            "anchorHash": "28704a15211d"
+          },
+          "prose:9": {
+            "contentHash": "6bc54f13bea5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "db9c73c9447c",
+            "anchorHash": "d0e0f93d0ea1"
+          },
+          "prose:10": {
+            "contentHash": "267c23695b6e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "379cdf4f0cfc",
+            "anchorHash": "da4d6f20df2a"
+          },
+          "prose:11": {
+            "contentHash": "23f663630e2f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "fe2f4b57cfc2",
+            "anchorHash": "f1ea6081a0f4"
+          },
+          "prose:12": {
+            "contentHash": "540dd397b2d3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "733377495e20",
+            "anchorHash": "eb4c01a18d97"
+          },
+          "prose:13": {
+            "contentHash": "d80edd7fb074",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "97f44f0770de",
+            "anchorHash": "2a35e74f382d"
+          },
+          "prose:14": {
+            "contentHash": "a50aa8b9a980",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "5f7ae3ee3e05",
+            "anchorHash": "a1037bd77933"
+          },
+          "prose:15": {
+            "contentHash": "6ce012fd1056",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "56c3618039e2",
+            "anchorHash": "a198f8d3a19a"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:8",
+          "link:0",
+          "prose:9",
+          "link:1",
+          "prose:10",
+          "link:2",
+          "prose:11",
+          "link:3",
+          "prose:12",
+          "link:4",
+          "prose:13",
+          "link:5",
+          "prose:14",
+          "link:6",
+          "prose:15",
+          "link:7"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:image",
+      "frontmatter:alt",
+      "frontmatter:sidebarDepth",
+      "frontmatter:summaryPoints",
+      "frontmatter:buttons",
+      "frontmatter:- content",
+      "frontmatter:toId",
+      "frontmatter:- content",
+      "frontmatter:toId",
+      "frontmatter:isSecondary",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "component:20",
+      "what-is-restaking",
+      "staking-vs-restaking",
+      "why-do-we-need-restaking",
+      "how-does-restaking-work",
+      "what-are-some-examples-of-restaking",
+      "how-much-can-i-make-from-restaking",
+      "what-are-the-risks-of-restaking",
+      "how-to-get-started-with-restaking",
+      "advanced",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

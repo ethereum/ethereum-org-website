@@ -1,24 +1,25 @@
 ---
-title: Kutuma Tokeni Kwa Kutumia ethers.js
-description: Mwongozo rahisi kwa wanaoanza wa kutuma tokeni kwa kutumia ethers.js.
+title: Kutuma Tokeni Kutumia ethers.js
+description: Mwongozo rafiki kwa wanaoanza wa kutuma tokeni kutumia ethers.js.
 author: Kim YongJun
-tags: ["ETHERS.JS", "ERC-20", "TOKENS"]
+tags: ["ETHERS.JS", "ERC-20", "TOKENI"]
 skill: beginner
+breadcrumb: Tuma tokeni
 lang: sw
 published: 2021-04-06
 ---
 
-## Tuma Tokeni Kwa Kutumia ethers.js(5.0) {#send-token}
+## Tuma Tokeni Kutumia ethers.js(5.0) {#send-token}
 
-### Katika Somo Hili Utajifunza Jinsi ya {#you-learn-about}
+### Katika Mafunzo Haya Utajifunza Jinsi Ya {#you-learn-about}
 
-- Ingiza ethers.js
-- Hamisha tokeni
-- Weka bei ya gesi kulingana na hali ya msongamano wa mtandao
+- Kuagiza ethers.js
+- Kuhamisha tokeni
+- Kuweka bei ya gesi kulingana na hali ya msongamano wa mtandao
 
-### Ili Kuanza {#to-get-started}
+### Ili-Kuanza {#to-get-started}
 
-Ili kuanza, ni lazima kwanza tuingize maktaba ya ethers.js kwenye javascript yetu
+Ili kuanza, lazima kwanza tuagize maktaba ya ethers.js kwenye JavaScript yetu
 Jumuisha ethers.js(5.0)
 
 ### Kusakinisha {#install-ethersjs}
@@ -27,7 +28,7 @@ Jumuisha ethers.js(5.0)
 /home/ricmoo> npm install --save ethers
 ```
 
-ES6 katika Kivinjari
+ES6 kwenye Kivinjari
 
 ```html
 <script type="module">
@@ -36,7 +37,7 @@ ES6 katika Kivinjari
 </script>
 ```
 
-ES3(UMD) katika Kivinjari
+ES3(UMD) kwenye Kivinjari
 
 ```html
 <script
@@ -47,49 +48,49 @@ ES3(UMD) katika Kivinjari
 
 ### Vigezo {#param}
 
-1. **`contract_address`**: Anwani ya mkataba wa Tokeni (anwani ya mkataba inahitajika wakati tokeni unayotaka kuhamisha si ether)
+1. **`contract_address`**: Anwani ya mkataba wa tokeni (anwani ya mkataba inahitajika wakati tokeni unayotaka kuhamisha sio Etha)
 2. **`send_token_amount`**: Kiasi unachotaka kutuma kwa mpokeaji
 3. **`to_address`**: Anwani ya mpokeaji
 4. **`send_account`**: Anwani ya mtumaji
-5. **`private_key`**: Ufunguo binafsi wa mtumaji ili kusaini muamala na kuhamisha tokeni
+5. **`private_key`**: Ufunguo wa siri wa mtumaji ili kutia saini muamala na kuhamisha tokeni haswa
 
-## Tangazo {#notice}
+## Ilani {#notice}
 
-`signTransaction(tx)` imeondolewa kwa sababu `sendTransaction()` inaifanya ndani kwa ndani.
+`signTransaction(tx)` imeondolewa kwa sababu `sendTransaction()` inafanya hivyo kwa ndani.
 
 ## Taratibu za Kutuma {#procedure}
 
-### 1. Unganisha na mtandao (testnet) {#connect-to-network}
+### 1. Unganisha kwenye mtandao (mtandao wa majaribio) {#connect-to-network}
 
 #### Weka Mtoa Huduma (Infura) {#set-provider}
 
-Unganisha na Ropsten testnet
+Unganisha kwenye mtandao wa majaribio wa Ropsten
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. Tengeneza mkoba {#create-wallet}
+### 2. Unda mkoba {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Unganisha Mkoba na mtandao {#connect-wallet-to-net}
+### 3. Unganisha Mkoba kwenye mtandao {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. Pata bei ya sasa ya gesi {#get-gas}
+### 4. Pata bei ya gesi ya sasa {#get-gas}
 
 ```javascript
 window.ethersProvider.getGasPrice() // bei ya gesi
 ```
 
-### 5. Bainisha Muamala {#define-transaction}
+### 5. Fafanua Muamala {#define-transaction}
 
-Vigezo hivi vilivyobainishwa hapa chini vinategemea `send_token()`
+Vigezo hivi vilivyofafanuliwa hapa chini vinategemea `send_token()`
 
 ### Vigezo vya muamala {#transaction-params}
 
@@ -112,12 +113,12 @@ const tx = {
 }
 ```
 
-### 6. Hamisha {#transfer}
+### 6. Hamisho {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("Kutuma kumekamilika!")
+  alert("Send finished!")
 })
 ```
 
@@ -144,9 +145,9 @@ send_token(
 )
 ```
 
-### Imefanikiwa! {#success}
+### Imefaulu! {#success}
 
-![picha ya muamala uliofanywa kwa mafanikio](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -166,7 +167,7 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // utumaji wa tokeni wa jumla
+      // kutuma tokeni kwa ujumla
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
@@ -180,9 +181,9 @@ function send_token(
       // Tuma tokeni
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("tokeni imetumwa")
+        alert("sent token")
       })
-    } // utumaji wa ether
+    } // kutuma Etha
     else {
       const tx = {
         from: send_account,
@@ -199,10 +200,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("Kutuma kumekamilika!")
+          alert("Send finished!")
         })
       } catch (error) {
-        alert("imeshindwa kutuma!!")
+        alert("failed to send!!")
       }
     }
   })

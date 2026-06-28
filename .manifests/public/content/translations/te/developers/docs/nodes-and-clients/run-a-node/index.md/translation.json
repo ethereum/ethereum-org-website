@@ -1,0 +1,954 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-19T18:46:09.005Z",
+  "englishManifestHash": "ac8855706fb3",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-21141b",
+    "LINK-85eb8f",
+    "LINK-31f8fe",
+    "LINK-791d9a",
+    "LINK-0eec89",
+    "LINK-3123b7",
+    "LINK-d7dce0",
+    "LINK-f61f9c",
+    "LINK-9910ee",
+    "LINK-c6c32d",
+    "LINK-0274ac",
+    "LINK-a55858",
+    "IMAGE-075617",
+    "LINK-a04871",
+    "LINK-ddb5bc",
+    "LINK-f3fb1b",
+    "LINK-e6c123",
+    "LINK-c7d41f",
+    "LINK-1ce178",
+    "LINK-25474f",
+    "LINK-319c95",
+    "LINK-c7b146",
+    "LINK-a6d848",
+    "LINK-7f9c1f",
+    "LINK-0ef4b0",
+    "LINK-ae325e",
+    "LINK-cf6a52",
+    "LINK-327594",
+    "LINK-b5d0ee",
+    "LINK-ca37f4",
+    "LINK-e9d6bb",
+    "LINK-6c1fee",
+    "LINK-70e61c",
+    "LINK-b7fd40",
+    "LINK-1615f8",
+    "LINK-8b9ae4",
+    "LINK-ab78b6",
+    "LINK-99a592",
+    "LINK-796a0a",
+    "LINK-c8999f",
+    "LINK-a27534",
+    "LINK-511d2e",
+    "LINK-3123b7",
+    "LINK-41652b",
+    "LINK-134ac7",
+    "LINK-8861d7",
+    "CODE-6858a4",
+    "CODEBLOCK-18fe1f",
+    "LINK-e30563",
+    "LINK-b64f9c",
+    "LINK-ccb053",
+    "LINK-4b8a2d",
+    "CODE-f44ef9",
+    "LINK-1ff6c6",
+    "CODEBLOCK-471bd4",
+    "LINK-c721d1",
+    "CODE-f44ef9",
+    "CODE-667a1d",
+    "CODE-a9253d",
+    "CODE-97003b",
+    "CODE-f44ef9",
+    "CODE-49960d",
+    "CODEBLOCK-eead30",
+    "CODEBLOCK-5803a2",
+    "LINK-57401b",
+    "CODE-97003b",
+    "CODE-f44ef9",
+    "CODEBLOCK-dc891c",
+    "CODE-79e8c2",
+    "CODE-f0fa17",
+    "CODE-0bdbc8",
+    "CODE-97003b",
+    "CODE-f44ef9",
+    "CODE-49960d",
+    "CODEBLOCK-237538",
+    "LINK-047d0d",
+    "LINK-748b7a",
+    "LINK-ed862b",
+    "CODEBLOCK-9122f2",
+    "LINK-1a1def",
+    "CODE-f44ef9",
+    "CODE-49960d",
+    "CODEBLOCK-0d3be4",
+    "LINK-175acb",
+    "LINK-edadb1",
+    "CODE-dd8d38",
+    "CODE-f44ef9",
+    "CODE-8243cd",
+    "LINK-a37fec",
+    "LINK-de68ab",
+    "CODEBLOCK-259729",
+    "LINK-7c4de1",
+    "LINK-e78ba6",
+    "CODEBLOCK-27e5c2",
+    "LINK-7514ef",
+    "CODEBLOCK-46dc0e",
+    "LINK-55cf57",
+    "CODEBLOCK-fb725b",
+    "CODEBLOCK-62a3dc",
+    "LINK-a06274",
+    "LINK-2d5d7a",
+    "LINK-1788fd",
+    "LINK-d9c2b8",
+    "LINK-22d436",
+    "LINK-b3227b",
+    "LINK-b6c39a",
+    "LINK-c8945f",
+    "CODE-427e4b",
+    "CODE-ae810a",
+    "LINK-45f213",
+    "LINK-08be7e",
+    "LINK-184b3b",
+    "LINK-36150a",
+    "LINK-d7f3a7",
+    "LINK-a97c94",
+    "CODE-329cc1",
+    "CODE-19e362",
+    "CODE-466289",
+    "CODE-3e1943",
+    "LINK-287c02",
+    "LINK-8b008c",
+    "LINK-33f6ae",
+    "LINK-9dbc26",
+    "CODE-e0031c",
+    "LINK-a8d780",
+    "LINK-c7e054",
+    "LINK-e09a1b",
+    "LINK-fab34d",
+    "LINK-65039f",
+    "LINK-a48268",
+    "LINK-167dbe",
+    "LINK-35c901",
+    "LINK-06ff6b",
+    "CODE-275c60",
+    "CODE-dd291c",
+    "LINK-955eaa",
+    "LINK-a092ca",
+    "LINK-274142",
+    "LINK-0b8633",
+    "LINK-e9f25c",
+    "LINK-c23291",
+    "LINK-5ce839",
+    "LINK-600087",
+    "LINK-203279",
+    "LINK-85eb8f",
+    "LINK-6318b4",
+    "LINK-65c4de"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-18fe1f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-471bd4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-eead30": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5803a2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dc891c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-237538": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9122f2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0d3be4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-259729": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-27e5c2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-46dc0e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fb725b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-62a3dc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-6858a4": {
+      "type": "inline-code",
+      "values": {
+        "content": "gpg"
+      }
+    },
+    "CODE-f44ef9": {
+      "type": "inline-code",
+      "values": {
+        "content": "jwtsecret"
+      }
+    },
+    "CODE-667a1d": {
+      "type": "inline-code",
+      "values": {
+        "content": "/tmp/jwtsecret"
+      }
+    },
+    "CODE-a9253d": {
+      "type": "inline-code",
+      "values": {
+        "content": "\\"
+      }
+    },
+    "CODE-97003b": {
+      "type": "inline-code",
+      "values": {
+        "content": "/data/ethereum"
+      }
+    },
+    "CODE-49960d": {
+      "type": "inline-code",
+      "values": {
+        "content": "localhost"
+      }
+    },
+    "CODE-79e8c2": {
+      "type": "inline-code",
+      "values": {
+        "content": "datadir"
+      }
+    },
+    "CODE-f0fa17": {
+      "type": "inline-code",
+      "values": {
+        "content": "--prune"
+      }
+    },
+    "CODE-0bdbc8": {
+      "type": "inline-code",
+      "values": {
+        "content": "--help"
+      }
+    },
+    "CODE-dd8d38": {
+      "type": "inline-code",
+      "values": {
+        "content": "jwt-secret"
+      }
+    },
+    "CODE-8243cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "--suggested-fee-recipient=0xabcd1"
+      }
+    },
+    "CODE-427e4b": {
+      "type": "inline-code",
+      "values": {
+        "content": "curl"
+      }
+    },
+    "CODE-ae810a": {
+      "type": "inline-code",
+      "values": {
+        "content": "geth attach"
+      }
+    },
+    "CODE-329cc1": {
+      "type": "inline-code",
+      "values": {
+        "content": "8545"
+      }
+    },
+    "CODE-19e362": {
+      "type": "inline-code",
+      "values": {
+        "content": "0.0.0.0"
+      }
+    },
+    "CODE-466289": {
+      "type": "inline-code",
+      "values": {
+        "content": "--http.api web3,eth,txpool"
+      }
+    },
+    "CODE-3e1943": {
+      "type": "inline-code",
+      "values": {
+        "content": "https"
+      }
+    },
+    "CODE-e0031c": {
+      "type": "inline-code",
+      "values": {
+        "content": "systemd"
+      }
+    },
+    "CODE-275c60": {
+      "type": "inline-code",
+      "values": {
+        "content": "htop"
+      }
+    },
+    "CODE-dd291c": {
+      "type": "inline-code",
+      "values": {
+        "content": "uptime"
+      }
+    },
+    "IMAGE-075617": {
+      "type": "image",
+      "values": {
+        "path": "./diagram.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-21141b": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge"
+      }
+    },
+    "LINK-85eb8f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-31f8fe": {
+      "type": "link",
+      "values": {
+        "url": "/run-a-node"
+      }
+    },
+    "LINK-791d9a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    },
+    "LINK-0eec89": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#consensus-clients"
+      }
+    },
+    "LINK-3123b7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity"
+      }
+    },
+    "LINK-f61f9c": {
+      "type": "link",
+      "values": {
+        "url": "#local-vs-cloud"
+      }
+    },
+    "LINK-d7dce0": {
+      "type": "link",
+      "values": {
+        "url": "#requirements"
+      }
+    },
+    "LINK-9910ee": {
+      "type": "link",
+      "values": {
+        "url": "#automatized-setup"
+      }
+    },
+    "LINK-c6c32d": {
+      "type": "link",
+      "values": {
+        "url": "#manual-setup"
+      }
+    },
+    "LINK-0274ac": {
+      "type": "link",
+      "values": {
+        "url": "#using-the-node"
+      }
+    },
+    "LINK-a55858": {
+      "type": "link",
+      "values": {
+        "url": "#operating-the-node"
+      }
+    },
+    "LINK-a04871": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/nodes-as-a-service/"
+      }
+    },
+    "LINK-ddb5bc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethernodes.org/networkType/cl/Hosting"
+      }
+    },
+    "LINK-f3fb1b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#sync-modes"
+      }
+    },
+    "LINK-e6c123": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Data_cap"
+      }
+    },
+    "LINK-c7d41f": {
+      "type": "link",
+      "values": {
+        "url": "https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc"
+      }
+    },
+    "LINK-1ce178": {
+      "type": "link",
+      "values": {
+        "url": "https://dappnode.io/"
+      }
+    },
+    "LINK-25474f": {
+      "type": "link",
+      "values": {
+        "url": "https://ava.do/"
+      }
+    },
+    "LINK-319c95": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/"
+      }
+    },
+    "LINK-c7b146": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.dappnode.io/docs/user/getting-started/choose-your-path"
+      }
+    },
+    "LINK-a6d848": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coincashew.com/coins/overview-eth/ethpillar"
+      }
+    },
+    "LINK-7f9c1f": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-docker.net/"
+      }
+    },
+    "LINK-0ef4b0": {
+      "type": "link",
+      "values": {
+        "url": "https://stereum-dev.github.io/ethereum-node-web-docs"
+      }
+    },
+    "LINK-ae325e": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.sedge.nethermind.io/docs/intro"
+      }
+    },
+    "LINK-cf6a52": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.chainstack.com/docs/self-hosted/introduction"
+      }
+    },
+    "LINK-327594": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    },
+    "LINK-b5d0ee": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#consensus-clients"
+      }
+    },
+    "LINK-ca37f4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/hyperledger/besu/releases"
+      }
+    },
+    "LINK-e9d6bb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ledgerwatch/erigon/releases"
+      }
+    },
+    "LINK-6c1fee": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/downloads"
+      }
+    },
+    "LINK-70e61c": {
+      "type": "link",
+      "values": {
+        "url": "https://downloads.nethermind.io/"
+      }
+    },
+    "LINK-b7fd40": {
+      "type": "link",
+      "values": {
+        "url": "https://reth.rs/installation/installation.html"
+      }
+    },
+    "LINK-1615f8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity/#execution-layer"
+      }
+    },
+    "LINK-8b9ae4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/sigp/lighthouse/releases/latest"
+      }
+    },
+    "LINK-ab78b6": {
+      "type": "link",
+      "values": {
+        "url": "https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/"
+      }
+    },
+    "LINK-99a592": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/status-im/nimbus-eth2/releases/latest"
+      }
+    },
+    "LINK-796a0a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/prysmaticlabs/prysm/releases/latest"
+      }
+    },
+    "LINK-c8999f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ConsenSys/teku/releases"
+      }
+    },
+    "LINK-a27534": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity/"
+      }
+    },
+    "LINK-511d2e": {
+      "type": "link",
+      "values": {
+        "url": "https://clientdiversity.org/"
+      }
+    },
+    "LINK-41652b": {
+      "type": "link",
+      "values": {
+        "url": "https://gnupg.org/download/index.html"
+      }
+    },
+    "LINK-134ac7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tecmint.com/verify-pgp-signature-downloaded-software/"
+      }
+    },
+    "LINK-8861d7": {
+      "type": "link",
+      "values": {
+        "url": "https://freedom.press/training/verifying-open-source-software/"
+      }
+    },
+    "LINK-e30563": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#sync-modes"
+      }
+    },
+    "LINK-b64f9c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    },
+    "LINK-ccb053": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-apis/tree/main/src/engine"
+      }
+    },
+    "LINK-4b8a2d": {
+      "type": "link",
+      "values": {
+        "url": "https://jwt.io/"
+      }
+    },
+    "LINK-1ff6c6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.openssl.org/"
+      }
+    },
+    "LINK-c721d1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/"
+      }
+    },
+    "LINK-57401b": {
+      "type": "link",
+      "values": {
+        "url": "https://besu.hyperledger.org/public-networks/get-started/start-node/"
+      }
+    },
+    "LINK-047d0d": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/docs/fundamentals/command-line-options"
+      }
+    },
+    "LINK-748b7a": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/docs/getting-started/consensus-clients"
+      }
+    },
+    "LINK-ed862b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nethermind.io/get-started/installing-nethermind"
+      }
+    },
+    "LINK-1a1def": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nethermind.io/get-started/running-node/"
+      }
+    },
+    "LINK-175acb": {
+      "type": "link",
+      "values": {
+        "url": "https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth"
+      }
+    },
+    "LINK-edadb1": {
+      "type": "link",
+      "values": {
+        "url": "https://reth.rs/run/mainnet.html"
+      }
+    },
+    "LINK-a37fec": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@launchpad/checkpoint-sync"
+      }
+    },
+    "LINK-de68ab": {
+      "type": "link",
+      "values": {
+        "url": "https://lighthouse-book.sigmaprime.io/installation.html"
+      }
+    },
+    "LINK-7c4de1": {
+      "type": "link",
+      "values": {
+        "url": "https://chainsafe.github.io/lodestar/"
+      }
+    },
+    "LINK-e78ba6": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@philknows/rk5cDvKmK"
+      }
+    },
+    "LINK-7514ef": {
+      "type": "link",
+      "values": {
+        "url": "https://nimbus.guide/quick-start.html"
+      }
+    },
+    "LINK-55cf57": {
+      "type": "link",
+      "values": {
+        "url": "https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/"
+      }
+    },
+    "LINK-a06274": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2docs.vercel.app/"
+      }
+    },
+    "LINK-2d5d7a": {
+      "type": "link",
+      "values": {
+        "url": "/staking/solo/"
+      }
+    },
+    "LINK-1788fd": {
+      "type": "link",
+      "values": {
+        "url": "https://rocketpool.net/node-operators"
+      }
+    },
+    "LINK-d9c2b8": {
+      "type": "link",
+      "values": {
+        "url": "https://hoodi.launchpad.ethereum.org/"
+      }
+    },
+    "LINK-22d436": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@launchpad/hoodi"
+      }
+    },
+    "LINK-b3227b": {
+      "type": "link",
+      "values": {
+        "url": "https://launchpad.ethereum.org/"
+      }
+    },
+    "LINK-b6c39a": {
+      "type": "link",
+      "values": {
+        "url": "/staking"
+      }
+    },
+    "LINK-c8945f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-45f213": {
+      "type": "link",
+      "values": {
+        "url": "https://web3py.readthedocs.io/en/stable/overview.html#overview"
+      }
+    },
+    "LINK-08be7e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethers-io/ethers.js/"
+      }
+    },
+    "LINK-184b3b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-36150a": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node"
+      }
+    },
+    "LINK-d7f3a7": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/beacon-APIs"
+      }
+    },
+    "LINK-a97c94": {
+      "type": "link",
+      "values": {
+        "url": "https://curl.se"
+      }
+    },
+    "LINK-287c02": {
+      "type": "link",
+      "values": {
+        "url": "https://www.torproject.org/"
+      }
+    },
+    "LINK-8b008c": {
+      "type": "link",
+      "values": {
+        "url": "https://community.torproject.org/onion-services/"
+      }
+    },
+    "LINK-33f6ae": {
+      "type": "link",
+      "values": {
+        "url": "https://community.torproject.org/onion-services/setup/"
+      }
+    },
+    "LINK-9dbc26": {
+      "type": "link",
+      "values": {
+        "url": "https://openvpn.net/"
+      }
+    },
+    "LINK-a8d780": {
+      "type": "link",
+      "values": {
+        "url": "/eips/"
+      }
+    },
+    "LINK-c7e054": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/"
+      }
+    },
+    "LINK-e09a1b": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org"
+      }
+    },
+    "LINK-fab34d": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/category/protocol#subscribe"
+      }
+    },
+    "LINK-65039f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/#layer-2-scaling"
+      }
+    },
+    "LINK-167dbe": {
+      "type": "link",
+      "values": {
+        "url": "https://www.influxdata.com/get-influxdb/"
+      }
+    },
+    "LINK-35c901": {
+      "type": "link",
+      "values": {
+        "url": "https://prometheus.io/"
+      }
+    },
+    "LINK-a48268": {
+      "type": "link",
+      "values": {
+        "url": "https://grafana.com/"
+      }
+    },
+    "LINK-06ff6b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/"
+      }
+    },
+    "LINK-955eaa": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/SomerEsat/ethereum-staking-guides"
+      }
+    },
+    "LINK-a092ca": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet"
+      }
+    },
+    "LINK-274142": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/remyroy/ethstaker#guides"
+      }
+    },
+    "LINK-0b8633": {
+      "type": "link",
+      "values": {
+        "url": "https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum"
+      }
+    },
+    "LINK-e9f25c": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@launchpad/node-faq-merge"
+      }
+    },
+    "LINK-c23291": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902"
+      }
+    },
+    "LINK-5ce839": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31"
+      }
+    },
+    "LINK-600087": {
+      "type": "link",
+      "values": {
+        "url": "https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/"
+      }
+    },
+    "LINK-203279": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd"
+      }
+    },
+    "LINK-6318b4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-65c4de": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T18:46:09.005Z",
+      "status": "success"
+    }
+  }
+}

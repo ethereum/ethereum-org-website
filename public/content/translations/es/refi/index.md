@@ -1,82 +1,81 @@
 ---
 title: Finanzas regenerativas (ReFi)
-description: Un panorama del ReFi y sus casos de uso actuales.
+description: "Una descripción general de ReFi y sus casos de uso actuales."
 lang: es
 template: use-cases
-emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: "Un sistema económico alternativo construido con principios regenerativos"
-summaryPoint2: "Un intento de utilizar Ethereum para solucionar crisis de coordinación a escala global, como el cambio climático."
-summaryPoint3: "Una herramienta para escalar drásticamente activos de beneficio ecológico como los créditos de carbono verificados."
+summaryPoints:
+  - "Un sistema económico alternativo basado en principios regenerativos"
+  - "Un intento de aprovechar Ethereum para resolver crisis de coordinación a nivel global, como el cambio climático"
+  - "Una herramienta para escalar drásticamente los activos de beneficio ecológico, como los créditos de carbono verificados"
 ---
 
-## ¿Qué son las ReFi? {#what-is-refi}
+## ¿Qué es ReFi? {#what-is-refi}
 
-**La financiación regenerativa (ReFi)** es un conjunto de herramientas e ideas construidas sobre [blockchains](/glossary/#blockchain), que buscan crear economías que sean regenerativas, en lugar de extractivas o explotadoras. A la larga, los sistemas extractivos agotan los recursos disponibles y colapsan sin mecanismos regenerativos, carecen de resiliencia. ReFi opera con la creencia de que la creación de valor monetario debe separarse de la insostenible extracción de recursos de nuestro planeta y de nuestras comunidades.
+Las **finanzas regenerativas (ReFi)** son un conjunto de herramientas e ideas construidas sobre [cadenas de bloques](/glossary/#blockchain), que tienen como objetivo crear economías que sean regenerativas, en lugar de extractivas o de explotación. Con el tiempo, los sistemas extractivos agotan los recursos disponibles y colapsan; sin mecanismos regenerativos, carecen de resiliencia. ReFi opera bajo el supuesto de que la creación de valor monetario debe desvincularse de la extracción insostenible de recursos de nuestro planeta y nuestras comunidades.
 
-En cambio, el objetivo de las ReFi es solucionar problemas ambientales, comunales o sociales a través de la creación de ciclos regenerativos. Estos sistemas crean valor para los participantes, mientras que benefician simultáneamente a los ecosistemas y a las comunidades.
+En cambio, ReFi tiene como objetivo resolver problemas ambientales, comunitarios o sociales mediante la creación de ciclos regenerativos. Estos sistemas crean valor para los participantes y, al mismo tiempo, benefician a los ecosistemas y las comunidades.
 
-Uno de los fundamentos de ReFi es el concepto de economías regenerativas, liderado por John Fullerton del Instituto de Capital. Propuso [ocho principios interconectados](https://capitalinstitute.org/8-principles-regenerative-economy/) que sustentan la salud sistémica:
+Uno de los fundamentos de ReFi es el concepto de economía regenerativa, del cual John Fullerton, del Capital Institute, fue pionero. Él propuso [ocho principios interconectados](https://capitalinstitute.org/8-principles-regenerative-economy/) que sustentan la salud sistémica:
 
-![Ocho principios interconectados](refi-regenerative-economy-diagram.png)
+![Eight interconnected principles](refi-regenerative-economy-diagram.png)
 
-Los proyectos ReFi aplican estos principios mediante [smart contracts](/glossary/#smart-contract) y aplicaciones de [finanzas descentralizadas (DeFi)](/glossary/#defi) para incentivar comportamientos regenerativos, como la restauración de ecosistemas degradados, y facilitar la colaboración a gran escala en problemas globales como el cambio climático y la pérdida de biodiversidad.
+Los proyectos de ReFi aplican estos principios utilizando [contratos inteligentes](/glossary/#smart-contract) y aplicaciones de [finanzas descentralizadas (DeFi)](/glossary/#defi) para incentivar comportamientos regenerativos, por ejemplo, la restauración de ecosistemas degradados, y facilitar la colaboración a gran escala en problemas globales como el cambio climático y la pérdida de biodiversidad.
 
-ReFi también se relaciona con el movimiento de [ciencia descentralizada (DeSci)](/desci/), que utiliza Ethereum como plataforma para financiar, crear, revisar, acreditar, almacenar y difundir el conocimiento científico. Las herramientas DeSci pueden ser útiles para desarrollar estándares y prácticas verificables y así implementar y supervisar actividades regenerativas como plantar árboles, extraer plástico del mar o restaurar un ecosistema degradado.
+ReFi también se superpone con el movimiento de la [ciencia descentralizada (DeSci)](/desci/), que utiliza Ethereum como plataforma para financiar, crear, revisar, acreditar, almacenar y difundir el conocimiento científico. Las herramientas de DeSci podrían resultar útiles para desarrollar estándares y prácticas verificables para implementar y monitorear actividades regenerativas como plantar árboles, eliminar plástico del océano o restaurar un ecosistema degradado.
 
-<YouTube id="La52dDzBt2k" />
+<VideoWatch slug="regenerative-finance-refi" />
 
 ## Tokenización de créditos de carbono {#tokenization-of-carbon-credits}
 
-El **[mercado voluntario de carbono (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** es un mecanismo para financiar proyectos que generan un impacto positivo verificado en las emisiones de carbono, ya sea reduciendo las emisiones en curso o eliminando gases de efecto invernadero ya emitidos a la atmósfera. Estos proyectos reciben un activo llamado "crédito de carbono" después de que hayan sido verificados, el cual pueden vender a personas y a organizaciones que quieran apoyar la causa climática.
+El **[mercado voluntario de carbono (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** es un mecanismo para financiar proyectos que tienen un impacto positivo verificado en las emisiones de carbono, ya sea reduciendo las emisiones continuas o eliminando los gases de efecto invernadero que ya se han emitido a la atmósfera. Estos proyectos reciben un activo llamado "créditos de carbono" después de ser verificados, que pueden vender a individuos y organizaciones que desean apoyar la acción climática.
 
-Además del VCM, existen varios mercados de carbono establecidos por gobiernos («mercados de cumplimiento») que buscan establecer un precio al carbono a través de leyes o regulaciones dentro de una jurisdicción específica (por ejemplo, país o región), controlando la cantidad de permisos que se distribuyen. Los mercados de cumplimiento incentivan a los contaminadores
-dentro de su jurisdicción a reducir las emisiones, pero no son capaces de eliminar los gases de efecto invernadero que ya hayan sido emitidos.
+Además del VCM, también existen varios mercados de carbono obligatorios por el gobierno ('mercados de cumplimiento') que tienen como objetivo establecer un precio del carbono a través de leyes o regulaciones dentro de una jurisdicción particular (por ejemplo, país o región), controlando el suministro de permisos que se distribuirán. Los mercados de cumplimiento incentivan a los contaminadores dentro de su jurisdicción a reducir las emisiones, pero no son capaces de eliminar los gases de efecto invernadero que ya se han emitido.
 
-A pesar de su desarrollo en las recientes décadas, el VCM continúa padeciendo una variedad de problemas:
+A pesar de su desarrollo en las últimas décadas, el VCM sigue sufriendo una variedad de problemas:
 
 1. Liquidez altamente fragmentada
-2. Mecanismos de transacciones opacas
+2. Mecanismos de transacción opacos
 3. Tarifas altas
-4. Velocidad de comercio muy lenta
+4. Velocidad de negociación muy lenta
 5. Falta de escalabilidad
 
-La transición del VCM al nuevo **mercado digital de carbono (DCM)** basado en blockchain puede ser una oportunidad para mejorar la tecnología existente para validar, transaccionar y consumir créditos de carbono. Las cadenas de bloques permiten comprobar públicamente la información, acceso a un amplio número de usuarios y mayor liquidez.
+La transición del VCM al nuevo **mercado de carbono digital (DCM)** basado en cadenas de bloques podría ser una oportunidad para actualizar la tecnología existente para validar, realizar transacciones y consumir créditos de carbono. Las cadenas de bloques permiten datos verificables públicamente, acceso para una amplia gama de usuarios y más liquidez.
 
-Los proyectos de ReFi emplean tecnología de cadena de bloques para aliviar los numerosos problemas del mercado tradicional:
+Los proyectos de ReFi emplean la tecnología de cadena de bloques para aliviar muchos de los problemas del mercado tradicional:
 
-- **La liquidez se concentra en un pequeño número de pools de liquidez** que pueden ser negociados libremente por cualquier persona. Corporaciones, así como también usuarios individuales pueden usar estas reservas sin un manual de búsqueda para vendedores/compradores, comisiones de participación o registro previo.
-- **Todas las transacciones se registran en cadenas de bloques públicas**. La ruta que cada crédito de carbono toma debido a la actividad comercial tiene trazabilidad desde el momento en que se pone a disposición en el DCM.
-- **La velocidad de transacción es casi instantánea**. Asegurar grandes cantidades de créditos de carbono a través mercados tradicionales puede llevar días, si no semanas, sin embargo esto se puede lograr en unos segundos en el DCM.
-- **La actividad de negociación ocurre sin intermediarios**, los cuales suelen cobrar altas comisiones. Los créditos digitales de carbono representan una reducción significativa de los costos en comparación con los créditos tradicionales.
+- **La liquidez se concentra en un pequeño número de fondos de liquidez** que cualquier persona puede negociar libremente. Tanto las grandes organizaciones como los usuarios individuales pueden utilizar estos fondos sin búsquedas manuales de vendedores/compradores, tarifas de participación o registro previo.
+- **Todas las transacciones se registran en cadenas de bloques públicas**. La ruta que toma cada crédito de carbono debido a la actividad comercial es rastreable para siempre tan pronto como esté disponible en el DCM.
+- **La velocidad de transacción es casi instantánea**. Asegurar grandes cantidades de créditos de carbono a través de los mercados heredados puede llevar días o semanas, pero esto se puede lograr en unos pocos segundos en el DCM.
+- **La actividad comercial se produce sin intermediarios**, que cobran tarifas altas. Los créditos de carbono digitales representan una reducción de costos significativa en comparación con los créditos tradicionales.
 - **El DCM es escalable** y puede satisfacer las demandas tanto de individuos como de corporaciones multinacionales.
 
 ### Componentes clave del DCM {#key-components-dcm}
 
-Los cuatro componentes principales que conforman el panorama actual del DCM son:
+Cuatro componentes principales conforman el panorama actual del DCM:
 
-1. Registros como [Verra](https://verra.org/project/vcs-program/registry-system/) y [Gold Standard](https://www.goldstandard.org/) garantizan que los proyectos que generan créditos de carbono sean confiables. Estos también operan las bases de datos en las que se originan los créditos digitales de carbono y donde estos pueden transferirse o utilizarse (retirarse).
+1. Los registros como [Verra](https://verra.org/project/vcs-program/registry-system/) y [Gold Standard](https://www.goldstandard.org/) se aseguran de que los proyectos que crean créditos de carbono sean confiables. También operan las bases de datos en las que se originan los créditos de carbono digitales y pueden ser transferidos o consumidos (retirados).
 
-Hay una nueva ola de proyectos innovadores basados en cadenas de bloques que buscan desafiar a los actores dominantes en este sector.
+Hay una nueva ola de proyectos innovadores que se están construyendo en cadenas de bloques que intentan irrumpir a los actores establecidos en este sector.
 
-2. También conocidos como puentes de carbono, los tokenizadores, proporcionan la tecnología que representa o transfiere los créditos de carbono de registros tradicionales al DCM. Ejemplos notables incluyen [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/) y [Moss.Earth](https://moss.earth/).
-3. Servicios integrados a favor del medio ambiente ofrecen créditos de anulación y/o eliminación de emisiones de carbono a los consumidores, para que ellos puedan reclamar los beneficios ambientales de un crédito y así apoyar la causa climática con el resto del mundo.
+2. Los puentes de carbono, también conocidos como tokenizadores, proporcionan tecnología para representar o transferir créditos de carbono de los registros tradicionales al DCM. Ejemplos notables incluyen [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/) y [Moss.Earth](https://moss.earth/).
+3. Los servicios integrados ofrecen créditos de evitación y/o eliminación de carbono a los usuarios finales para que puedan reclamar el beneficio ambiental de un crédito y compartir su apoyo a la acción climática con el mundo.
 
-Algunos, como [Klima Infinity](https://www.klimadao.finance/infinity) y [Senken](https://senken.io/), ofrecen una amplia variedad de proyectos desarrollados por terceros y emitidos bajo estándares establecidos como Verra; otros, como [Nori](https://nori.com/), solo ofrecen proyectos específicos desarrollados bajo su propio estándar de crédito de carbono, que ellos mismos emiten y para los cuales disponen de su propio mercado dedicado.
+Algunos como [Klima Infinity](https://www.klimadao.finance/infinity) y [Senken](https://senken.io/) ofrecen una amplia variedad de proyectos desarrollados por terceros y emitidos bajo estándares establecidos como Verra; otros como [Nori](https://nori.com/) solo ofrecen proyectos específicos desarrollados bajo su propio estándar de crédito de carbono, que ellos emiten y para los cuales tienen su propio mercado dedicado.
 
-4. La infraestructura y los cauces subyacentes que facilitan la escalabilidad del impacto y la eficiencia de toda la cadena de suministros del mercado de carbono. [KlimaDAO](http://klimadao.finance/) provee liquidez como un bien público (permitiendo que cualquier persona compre o venda créditos de carbono a un precio transparente), incentiva un mayor volumen del mercado de carbono y de retiros con recompensas, y ofrece herramientas interoperables y fáciles de usar para acceder a datos, así como para adquirir y retirar una gran variedad de créditos de carbono tokenizados.
+4. Los rieles y la infraestructura subyacentes que facilitan la ampliación del impacto y la eficiencia de toda la cadena de suministro del mercado de carbono. [KlimaDAO](https://klimadao.finance/) suministra liquidez como un bien público (permitiendo a cualquier persona comprar o vender créditos de carbono a un precio transparente), incentiva una mayor capacidad de procesamiento de los mercados de carbono y retiros con recompensas, y proporciona herramientas interoperables fáciles de usar para acceder a datos sobre, así como adquirir y retirar, una amplia variedad de créditos de carbono tokenizados.
 
 ## ReFi más allá de los mercados de carbono {#refi-beyond}
 
-Aunque hay actualmente un gran énfasis en los mercados de carbono en general y en pasar del VCM al DCM en particular dentro del espacio, el término "ReFi" no está estrictamente limitado al carbono. Se pueden desarrollar y tokenizar otros activos ambientales más alla de los créditos de carbono, lo que significaría que a otras consecuencias negativas también se les podría poner un precio dentro de las capas bases de futuros sistemas económicos. Además, el aspecto regenerativo de este modelo económico puede aplicarse a otras áreas, como la financiación de bienes públicos mediante plataformas de financiación cuadrática como [Gitcoin](https://gitcoin.co/). Las organizaciones que se sustentan en la idea de participación abierta y distribución equitativa de recursos permiten a todos a canalizar dinero hacia proyectos de software de código abierto, así también como hacia proyectos de enfoque educacional, ambiental y comunitario.
+Aunque actualmente hay un fuerte énfasis en los mercados de carbono en general y en la transición del VCM al DCM en particular dentro del espacio, el término "ReFi" no se limita estrictamente al carbono. Se pueden desarrollar y tokenizar otros activos ambientales más allá de los créditos de carbono, lo que significará que otras externalidades negativas también podrán tener un precio dentro de las capas base de los futuros sistemas económicos. Además, el aspecto regenerativo de este modelo económico se puede aplicar a otras áreas, como la financiación de bienes públicos a través de plataformas de financiamiento cuadrático como [Gitcoin](https://gitcoin.co/). Las organizaciones que se basan en la idea de la participación abierta y la distribución equitativa de los recursos empoderan a todos para canalizar dinero hacia proyectos de software de código abierto, así como a proyectos educativos, ambientales y comunitarios.
 
-Al cambiar el rumbo del capital de las prácticas extractivas hacia un flujo regenerativo, los proyectos y empresas que proporcionan beneficios sociales, ambientales y comunales ―y que podrían no obtener fondos a través de finanzas tradicionales― pueden despegar y generar consecuencias positivas para la sociedad mucho más rápida y fácilmente. Pasar a este modelo de financiación también abre la puerta a sistemas económicos mucho más inclusivos, donde personas de todas las áreas demográficas pueden ser participantes activos en lugar de ser solo meros observadores pasivos. ReFi ofrece una visión de Ethereum como mecanismo para la acción coordinada en contra de los desafíos existenciales a los que se enfrenta nuestra especie y toda vida en nuestro planeta, como la capa base de un nuevo paradigma económico, permitiendo un futuro más inclusivo y sostenible por los siglos venideros.
+Al cambiar la dirección del capital de las prácticas extractivas hacia un flujo regenerativo, los proyectos y empresas que brindan beneficios sociales, ambientales o comunitarios —y que podrían no lograr financiamiento en las finanzas tradicionales— pueden despegar y generar externalidades positivas para la sociedad de manera mucho más rápida y sencilla. La transición a este modelo de financiamiento también abre la puerta a sistemas económicos mucho más inclusivos, donde personas de todos los grupos demográficos pueden convertirse en participantes activos en lugar de meros observadores pasivos. ReFi ofrece una visión de Ethereum como un mecanismo para coordinar la acción sobre los desafíos existenciales que enfrenta nuestra especie y toda la vida en nuestro planeta: como la capa base de un nuevo paradigma económico, permitiendo un futuro más inclusivo y sostenible en los siglos venideros.
 
-## Bibliografía para saber más sobre las ReFi
+## Lecturas adicionales sobre ReFi {#additional-reading-on-refi}
 
-- [Una visión general sobre las monedas de carbono y su lugar en la economía](https://www.klimadao.finance/resources/the-vision-of-a-carbon-currency)
-- [The Ministry for the Future, una novela que describe el papel de una moneda respaldada por carbono en la lucha contra el cambio climático](https://en.wikipedia.org/wiki/The_Ministry_for_the_Future)
-- [Un informe detallado del Taskforce for Scaling Voluntary Carbon Markets](https://www.iif.com/Portals/1/Files/TSVCM_Report.pdf)
-- [Entrada de glosario de CoinMarketCap sobre ReFi por Kevin Owocki y Evan Miyazono](https://coinmarketcap.com/academy/glossary/regenerative-finance-refi)
+- [Una descripción general de alto nivel de las monedas de carbono y su lugar en la economía](https://www.klimadao.finance/resources/the-vision-of-a-carbon-currency)
+- [El Ministerio del Futuro, una novela que describe el papel de una moneda respaldada por carbono en la lucha contra el cambio climático](https://en.wikipedia.org/wiki/The_Ministry_for_the_Future)
+- [Un informe detallado del Grupo de Trabajo para la Ampliación de los Mercados Voluntarios de Carbono](https://www.iif.com/Portals/1/Files/TSVCM_Report.pdf)
+- [Entrada del glosario de CoinMarketCap sobre ReFi de Kevin Owocki y Evan Miyazono](https://coinmarketcap.com/academy/glossary/regenerative-finance-refi)

@@ -1,8 +1,13 @@
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import AppCard from "@/components/AppCard"
 import { Image } from "@/components/Image"
-import { CardBanner, CardParagraph } from "@/components/ui/card"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardParagraph,
+} from "@/components/ui/card"
 import {
   EdgeScrollContainer,
   EdgeScrollItem,
@@ -11,6 +16,7 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { stripMarkdown } from "@/lib/utils/md"
 
 import { DEV_TOOL_CATEGORY_SLUGS } from "../constants"
@@ -18,11 +24,10 @@ import type { DeveloperTool } from "../types"
 import { getCategoryTagStyle } from "../utils"
 
 const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
+  const toolDescriptions = await getTranslations(
+    "page-developers-tools-descriptions"
+  )
 
   // Don't render section if no tools to highlight
   if (tools.length === 0) return null
@@ -45,7 +50,7 @@ const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
             >
               <LinkBox
                 className={cn(
-                  "group/appcard rounded-xl p-2",
+                  "group/appcard rounded-3xl p-2",
                   "hover:bg-background-highlight"
                 )}
               >
@@ -54,20 +59,29 @@ const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
                   scroll={false}
                   className="space-y-6 no-underline"
                 >
-                  <div className="space-y-4">
-                    <CardBanner background="accent-a" fit="contain">
-                      <Image
-                        src={tool.banner_url!}
-                        alt=""
-                        sizes="(max-width: 23rem) 100vw, 23rem"
-                        width={23 * 16}
-                        height={23 * 4}
-                      />
-                    </CardBanner>
-                    <CardParagraph variant="base" className="line-clamp-2">
-                      {stripMarkdown(tool.description)}
-                    </CardParagraph>
-                  </div>
+                  <Card size="xs" variant="ghost">
+                    <CardContent spacing="md">
+                      <CardBanner background="accent-a" fit="contain">
+                        <Image
+                          src={tool.banner_url!}
+                          alt=""
+                          sizes="(max-width: 23rem) 100vw, 23rem"
+                          width={23 * 16}
+                          height={23 * 4}
+                        />
+                      </CardBanner>
+                      <CardParagraph textColor="body" className="line-clamp-2">
+                        {stripMarkdown(
+                          getLocalizedDescription(
+                            toolDescriptions,
+                            "tool",
+                            tool.name,
+                            tool.description
+                          )
+                        )}
+                      </CardParagraph>
+                    </CardContent>
+                  </Card>
                   <AppCard
                     name={tool.name}
                     thumbnail={tool.thumbnail_url}

@@ -1,91 +1,91 @@
 ---
-title: "Cómo utilizar una cartera"
-metaTitle: "Cómo usar carteras de Ethereum | Guía detallada"
-description: "Una guía para explicar cómo enviar, recibir tókenes y conectarse con proyectos de web3."
+title: Cómo usar una billetera
+metaTitle: Cómo usar billeteras de Ethereum | Paso a paso
+description: Una guía que explica cómo enviar y recibir tokens, y cómo conectarse a proyectos web3.
 lang: es
 ---
 
-# Cómo utilizar una cartera
+Aprende a operar todas las funciones básicas de una billetera. Si aún no tienes una, consulta nuestra guía sobre [Cómo crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/).
 
-Domine el funcionamiento de todas las funciones básicas de su cartera. Si aún no tienes una, consulta nuestra guía: [Cómo crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/).
+## Abre tu billetera {#open-your-wallet}
 
-## Abra su cartera
+Deberías ver un panel de control que probablemente mostrará tu saldo y contendrá botones para enviar y recibir tokens.
 
-Debería aparecer un panel que probablemente muestre el saldo y dos botones para enviar y recibir tókenes.
+## Recibir criptomonedas {#receive-cryptocurrency}
 
-## Recibir criptomonedas
+¿Quieres recibir cripto en tu billetera?
 
-¿Quiere recibir criptomonedas en su cartera?
+Cada cuenta de Ethereum tiene su propia dirección de recepción, que es una secuencia única de números y letras. La dirección funciona como un número de cuenta bancaria. Las direcciones de Ethereum siempre comenzarán con "0x". Puedes compartir esta dirección con cualquier persona: es seguro hacerlo.
 
-Cada cuenta de Ethereum tiene su propia dirección que es una secuencia única de numeros y letras. La dirección funciona como el número de una cuenta de banco. Las direcciones de Ethereum siempre empiezan por «0x». Puede compartir esta dirección con cualquiera: es seguro hacerlo.
+Tu dirección es como la dirección de tu casa: necesitas decirle a la gente cuál es para que puedan encontrarte. Es seguro hacer esto, porque aún puedes cerrar la puerta principal con otra clave que solo tú controlas para que nadie pueda entrar, incluso si saben dónde vives.
 
-Su dirección es como la de su casa: tiene que decirle a la gente cuál es para que puedan encontrarle. Es seguro hacerlo, porque puede seguir bloqueando la puerta principal con otra llave que sólo usted controla, así nadie puede entrar, ni siquiera sabiendo donde vive.
+Necesitas proporcionar tu dirección pública a quien quiera enviarte dinero. Muchas aplicaciones de billetera te permiten copiar tu dirección o mostrar un código QR para escanear y facilitar su uso. Evita escribir cualquier dirección de Ethereum manualmente. Esto puede llevar fácilmente a errores tipográficos y a la pérdida de fondos.
 
-Tiene que facilitar su dirección pública a cualquier persona que quiera enviarle dinero. Muchas aplicaciones de cartera le permiten copiar su dirección o mostrar un código QR para escanear para un uso más sencillo. Evita escribir cualquier dirección Ethereum manualmente. Esto puede conllevar a errores y pérdida de fondos.
+Diferentes aplicaciones pueden variar o usar un lenguaje diferente, pero deberían guiarte a través de un proceso similar si estás intentando transferir fondos.
 
-Diferentes aplicaciones pueden variar o usar diferentes idiomas, pero todas deben llevarle por un proceso similar si intenta transferir fondos.
+1. Abre tu aplicación de billetera.
+2. Haz clic en "Recibir" (o una opción con palabras similares).
+3. Copia tu dirección de Ethereum al portapapeles.
+4. Proporciona al remitente tu dirección de recepción de Ethereum.
 
-1. Abra la aplicación de su cartera.
-2. Haga clic en «Recibir» (o en una opción con una palabra similar).
-3. Copie su dirección Ethereum al portapapeles.
-4. Proporcione al emisor su dirección de Ethereum.
+## Enviar criptomonedas {#send-cryptocurrency}
 
-## Enviar criptomonedas
+¿Te gustaría enviar ETH a otra billetera?
 
-¿Le gustaría enviar ETH a otra cartera?
+1. Abre tu aplicación de billetera.
+2. Obtén la dirección de recepción y asegúrate de estar conectado a la misma red que el destinatario.
+3. Ingresa la dirección de recepción o escanea un código QR con tu cámara para que no tengas que escribir la dirección manualmente.
+4. Haz clic en el botón "Enviar" en tu billetera (o una alternativa con palabras similares).
 
-1. Abra la aplicación de su cartera.
-2. Consiga la dirección de Ethereum y asegúrese de que está conectada a la misma red que el destinatario.
-3. Introduzca la dirección o escanee el código QR con su cámara y así no tiene que escribir la dirección manualmente.
-4. Haga clic en el botón «Enviar» en su cartera (u otra palabra similar).
+![Send field for crypto address](./send.png)
+<br/>
 
-![Campo de envío para direcciones de criptomonedas](./send.png) <br/>
+5. Muchos activos, como DAI o USDC, existen en múltiples redes. Al transferir tokens cripto, asegúrate de que el destinatario esté usando la misma red que tú, ya que estos no son intercambiables.
+6. Asegúrate de que tu billetera tenga suficiente ETH para cubrir la tarifa de transacción, que varía según las condiciones de la red. La mayoría de las billeteras agregarán automáticamente la tarifa sugerida a la transacción, la cual luego podrás confirmar.
+7. Una vez que se procese tu transacción, la cantidad de cripto correspondiente aparecerá en la cuenta del destinatario. Esto podría tardar desde unos pocos segundos hasta unos minutos, dependiendo de cuánto se esté utilizando la red actualmente.
 
-5. Muchos activos, como DAI o USDC, existen en múltiples redes. Cuando transfiera tókenes de criptomonedas, asegúrese de que el destinatario use la misma red que usted, ya que no sean intercambiables.
-6. Asegúrese de que su cartera tiene suficiente ETH como para cubrir la comisión de transacción, que varía dependiendo de las condiciones de la red. La mayoría de las carteras añadirán automáticamente la comisión sugerida que después debe confirmar.
-7. Una vez que su transacción se haya procesado, la cantidad de criptomoneda correspondiente se mostrará en la cuenta del destinatario. Esto puede llevar desde unos segundos hasta varios minutos dependiendo de cuánto se esté usando la red en ese instante.
+## Conectarse a proyectos {#connecting-to-projects}
 
-## Conectando a proyectos
+Tu dirección será la misma en todos los proyectos de Ethereum. No necesitas registrarte individualmente en ningún proyecto. Una vez que tengas una billetera, puedes conectarte a cualquier proyecto de Ethereum sin ninguna información adicional. No se necesitan correos electrónicos ni ninguna otra información personal.
 
-Su dirección será la misma en todos los proyectos de Ethereum. No tiene que registrarse individualmente en ningún proyecto. Una vez que tiene una cartera, puede conectarse a cualquier proyecto de Ethereum sin ninguna información adicional. No se necesitan correos electrónicos ni otra información personal.
+1. Visita el sitio web de cualquier proyecto.
+2. Si la página de inicio del proyecto es solo una descripción estática del mismo, deberías poder hacer clic en un botón "Abrir la aplicación" en el menú, que te llevará a la aplicación web real.
+3. Una vez que estés en la aplicación, haz clic en "Conectar".
 
-1. Visite la web de cualquier proyecto.
-2. Si la página de inicio es sólo una descripción estática del proyecto, debería poder hacer clic en el botón «Abrir la aplicación» en el menú que le redirigirá a la web real de la aplicación.
-3. Una vez que se encuentre dentro de la aplicación haga click en «Conectar».
+![Button allowing user to connect to the website with a wallet](./connect1.png)
 
-![Botón que permite al usuario conectarse al sitio web con una billetera](./connect1.png)
+4. Selecciona tu billetera de la lista de opciones proporcionada. Si no puedes ver tu billetera, puede estar oculta bajo la opción "WalletConnect".
 
-4. Seleccione su cartera de la lista de opciones facilitada. Si no puede ver su cartera, puede que esté oculta bajo la opción «WalletConnect».
+![Selecting from a list of wallets to connect with](./connect2.png)
 
-![Selección de una lista de billeteras con las que conectarse](./connect2.png)
-
-5. Confirme la solicitud en su cartera para establecer la conexión. **Firmar este mensaje no debería requerir gastar ETH**.
-6. ¡Y ya está! Puede empezar a utilizar la aplicación. Puedes encontrar algunos proyectos interesantes en nuestra [página de dApps](/apps/#explore). <br />
+5. Confirma la solicitud de firma en tu billetera para establecer la conexión. **Firmar este mensaje no debería requerir gastar ningún ETH**.
+6. ¡Eso es todo! Comienza a usar la aplicación. Puedes encontrar algunos proyectos interesantes en nuestra [página de aplicaciones descentralizadas (dapps)](/apps/#explore).
+   <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>¿Quiere saber más?</div>
+  <div>¿Quieres aprender más?</div>
   <ButtonLink href="/guides/">
-    Consulte nuestras demás guías
+    Mira nuestras otras guías
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-## Preguntas más frecuentes
+## Preguntas frecuentes {#frequently-asked-questions}
 
-### Si tengo una dirección de ETH, ¿tengo la misma dirección en otras cadenas de bloques?
+### Si poseo una dirección de ETH, ¿poseo la misma dirección en otras cadenas de bloques? {#if-i-own-an-eth-address-do-i-own-the-same-address-on-other-blockchains}
 
-Puede utilizar la misma dirección en todas las cadenas de bloques compatibles con EVM (si tiene el tipo de cartera con una frase de recuperación). Esta [lista](https://chainlist.org/) te mostrará qué cadenas de bloques puedes usar con la misma dirección. Algunas cadenas de bloques, como Bitcoin, implementan un conjunto de reglas de red completamente por separado y necesitará una dirección diferente con un formato diferente. Si tiene una cartera de contrato inteligente, debe consultar el sitio web del producto para obtener más información sobre qué cadenas de bloque se admiten.
+Puedes usar la misma dirección en todas las cadenas de bloques compatibles con la EVM (si tienes el tipo de billetera con una frase de recuperación). Esta [lista](https://chainlist.org/) te mostrará qué cadenas de bloques puedes usar con la misma dirección. Algunas cadenas de bloques, como Bitcoin, implementan un conjunto de reglas de red completamente separado y necesitarás una dirección diferente con un formato diferente. Si tienes una billetera de contrato inteligente, deberías consultar el sitio web de su producto para obtener más información sobre qué cadenas de bloques son compatibles.
 
-### ¿Puedo usar la misma dirección en múltiples dispositivos?
+### ¿Puedo usar la misma dirección en múltiples dispositivos? {#can-i-use-the-same-address-on-multiple-devices}
 
-Sí, puedes usar la misma dirección en varios dispositivos. Las carteras sólo son técnicamente una interfaz que muestra su saldo y que sirven para realizar transacciones, su cuenta no se guarda dentro de la cartera, sino en la cadena de bloques.
+Sí, puedes usar la misma dirección en múltiples dispositivos. Técnicamente, las billeteras son solo una interfaz para mostrarte tu saldo y realizar transacciones; tu cuenta no se almacena dentro de la billetera, sino en la cadena de bloques.
 
-### No he recibido mi criptomoneda, ¿dónde puedo verificar el estado de la transacción?
+### No he recibido las cripto, ¿dónde puedo verificar el estado de una transacción? {#i-have-not-received-the-crypto-where-can-i-check-the-status-of-a-transaction}
 
-Puedes usar los [exploradores de bloques](/developers/docs/data-and-analytics/block-explorers/) para ver el estado de cualquier transacción en tiempo real. Todo lo que tiene que hacer es buscar la dirección de la cartera o el ID de la transacción.
+Puedes usar [exploradores de bloques](/developers/docs/data-and-analytics/block-explorers/) para ver el estado de cualquier transacción en tiempo real. Todo lo que necesitas hacer es buscar la dirección de tu billetera o el ID de la transacción.
 
-### ¿Puedo cancelar o devolver transacciones?
+### ¿Puedo cancelar o devolver transacciones? {#can-i-cancel-or-return-transactions}
 
-No, una vez se ha confirmado la transacción, no puede cancelarla.
+No, una vez que se confirma una transacción, no puedes cancelarla.

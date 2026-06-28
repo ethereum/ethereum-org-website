@@ -1,80 +1,81 @@
 ---
-title: "ABI courtes pour l'optimisation des données d'appel"
+title: "ABI courtes pour l'optimisation des calldata"
 description: Optimisation des contrats intelligents pour les rollups optimistes
 author: Ori Pomerantz
 lang: fr
-tags: [ "couche 2" ]
+tags: ["couche 2 (l2)"]
 skill: intermediate
+breadcrumb: ABI courtes
 published: 2022-04-01
 ---
 
 ## Introduction {#introduction}
 
-Dans cet article, vous en apprendrez plus sur les [rollups optimistes](/developers/docs/scaling/optimistic-rollups), le coût des transactions qui leur est appliqué et la manière dont cette structure de coûts différente nous oblige à optimiser pour des éléments différents de ceux du réseau principal d'Ethereum.
-Vous apprendrez également comment mettre en œuvre cette optimisation.
+Dans cet article, vous en apprendrez davantage sur les [rollups optimistes](/developers/docs/scaling/optimistic-rollups), le coût des transactions sur ceux-ci, et comment cette structure de coûts différente nous oblige à optimiser d'autres éléments que sur le réseau principal Ethereum.
+Vous apprendrez également comment implémenter cette optimisation.
 
-### Transparence totale {#full-disclosure}
+### Divulgation complète {#full-disclosure}
 
-Je suis un employé à temps plein d'[Optimism](https://www.optimism.io/), les exemples de cet article seront donc exécutés sur Optimism.
-Cependant, la technique expliquée ici devrait aussi bien fonctionner pour d'autres rollups.
+Je suis un employé à temps plein d'[Optimism](https://www.optimism.io/), les exemples de cet article s'exécuteront donc sur Optimism.
+Cependant, la technique expliquée ici devrait fonctionner tout aussi bien pour d'autres rollups.
 
 ### Terminologie {#terminology}
 
-Lorsque l'on parle des rollups, le terme « couche 1 » (L1) est utilisé pour le réseau principal, le réseau de production Ethereum.
-Le terme « couche 2 » (L2) est utilisé pour le rollup ou tout autre système qui s'appuie sur L1 pour la sécurité, mais qui effectue la plupart de son traitement hors chaîne.
+Lorsqu'on parle de rollups, le terme « couche 1 (l1) » est utilisé pour le Réseau principal, le réseau Ethereum de production.
+Le terme « couche 2 (l2) » est utilisé pour le rollup ou tout autre système qui s'appuie sur la l1 pour la sécurité mais effectue la majeure partie de son traitement hors chaîne.
 
-## Comment pouvons-nous réduire davantage le coût des transactions L2 ? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
+## Comment pouvons-nous réduire davantage le coût des transactions sur la l2 ? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
 
-Les [rollups optimistes](/developers/docs/scaling/optimistic-rollups) doivent conserver un enregistrement de chaque transaction historique afin que n'importe qui puisse les parcourir et vérifier que l'état actuel est correct.
-Le moyen le plus économique d'inscrire des données sur le réseau principal d'Ethereum est de les écrire en tant que données d'appel.
+Les [rollups optimistes](/developers/docs/scaling/optimistic-rollups) doivent conserver un enregistrement de chaque transaction historique afin que quiconque puisse les parcourir et vérifier que l'état actuel est correct.
+Le moyen le moins cher d'intégrer des données dans le réseau principal Ethereum est de les écrire sous forme de calldata.
 Cette solution a été choisie à la fois par [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) et [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
-### Coût des transactions L2 {#cost-of-l2-transactions}
+### Coût des transactions sur la l2 {#cost-of-l2-transactions}
 
-Le coût des transactions L2 se compose de deux éléments :
+Le coût des transactions sur la l2 se compose de deux éléments :
 
-1. Le traitement L2, qui est généralement extrêmement bon marché
-2. Le stockage L1, qui est lié aux coûts de gaz du réseau principal
+1. Le traitement sur la l2, qui est généralement extrêmement bon marché
+2. Le stockage sur la l1, qui est lié aux coûts en gaz du Réseau principal
 
-Au moment où j'écris ces lignes, sur Optimism, le coût du gaz L2 est de 0,001 [Gwei](/developers/docs/gas/#pre-london).
-Le coût du gaz L1, en revanche, est d'environ 40 gwei.
-[Vous pouvez voir les prix actuels ici](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+Au moment où j'écris ces lignes, sur Optimism, le coût du gaz sur la l2 est de 0,001 [gwei](/developers/docs/gas/#pre-london).
+Le coût du gaz sur la l1, en revanche, est d'environ 40 gwei.
+[Vous pouvez consulter les prix actuels ici](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
-Un octet de données d'appel coûte soit 4 gaz (s'il est nul), soit 16 gaz (s'il s'agit de n'importe quelle autre valeur).
-L'une des opérations les plus coûteuses sur l'EVM est l'écriture sur le stockage.
-Le coût maximum de l'écriture d'un mot de 32 octets sur le stockage en L2 est de 22 100 gaz. Actuellement, cela représente 22,1 gwei.
-Ainsi, si nous pouvons économiser un seul octet nul de données d'appel, nous pourrons écrire environ 200 octets sur le stockage et être tout de même gagnants.
+Un octet de calldata coûte soit 4 gaz (s'il est nul), soit 16 gaz (s'il a une autre valeur).
+L'une des opérations les plus coûteuses sur l'EVM est l'écriture dans le stockage.
+Le coût maximum de l'écriture d'un mot de 32 octets dans le stockage sur la l2 est de 22 100 gaz. Actuellement, cela représente 22,1 gwei.
+Donc, si nous pouvons économiser un seul octet nul de calldata, nous pourrons écrire environ 200 octets dans le stockage tout en restant gagnants.
 
 ### L'ABI {#the-abi}
 
-La grande majorité des transactions accèdent à un contrat provenant d'un compte externe.
+La grande majorité des transactions accèdent à un contrat depuis un compte détenu par un tiers (EOA).
 La plupart des contrats sont écrits en Solidity et interprètent leur champ de données selon [l'interface binaire de l'application (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-Cependant, l'ABI a été conçue pour L1, où un octet de données d'appel coûte approximativement la même chose que quatre opérations arithmétiques, et non pour L2 où un octet de données d'appel coûte plus de mille opérations arithmétiques.
-Les données d'appel sont divisées comme suit :
+Cependant, l'ABI a été conçue pour la l1, où un octet de calldata coûte environ la même chose que quatre opérations arithmétiques, et non pour la l2 où un octet de calldata coûte plus de mille opérations arithmétiques.
+Les calldata sont divisées ainsi :
 
-| Section                | Longueur | Octets | Octets gaspillés | Gaz gaspillé | Octets nécessaires | Gaz nécessaire |
-| ---------------------- | -------: | -----: | ---------------: | -----------: | -----------------: | -------------: |
-| Sélecteur de fonction  |        4 |    0-3 |                3 |           48 |                  1 |             16 |
-| Zéros                  |       12 |   4-15 |               12 |           48 |                  0 |              0 |
-| Adresse de destination |       20 |  16-35 |                0 |            0 |                 20 |            320 |
-| Montant                |       32 |  36-67 |               17 |           64 |                 15 |            240 |
-| Total                  |       68 |        |                  |          160 |                    |            576 |
+| Section | Longueur | Octets | Octets gaspillés | Gaz gaspillé | Octets nécessaires | Gaz nécessaire |
+| ------------------- | -----: | ----: | -----------: | ---------: | --------------: | ------------: |
+| Sélecteur de fonction | 4 | 0-3 | 3 | 48 | 1 | 16 |
+| Zéros | 12 | 4-15 | 12 | 48 | 0 | 0 |
+| Adresse de destination | 20 | 16-35 | 0 | 0 | 20 | 320 |
+| Montant | 32 | 36-67 | 17 | 64 | 15 | 240 |
+| Total | 68 | | | 160 | | 576 |
 
-Explication :
+Explication :
 
-- **Sélecteur de fonction** : Le contrat a moins de 256 fonctions, nous pouvons donc les distinguer avec un seul octet.
-  Ces octets sont généralement non nuls et [coûtent donc seize gaz](https://eips.ethereum.org/EIPS/eip-2028).
-- **Zéros** : Ces octets sont toujours nuls car une adresse de vingt octets ne nécessite pas un mot de trente-deux octets pour la contenir.
-  Les octets qui contiennent la valeur zéro coûtent quatre gaz ([voir le Livre Jaune](https://ethereum.github.io/yellowpaper/paper.pdf), Annexe G,
+- **Sélecteur de fonction** : Le contrat a moins de 256 fonctions, nous pouvons donc les distinguer avec un seul octet.
+  Ces octets sont généralement non nuls et par conséquent [coûtent seize gaz](https://eips.ethereum.org/EIPS/eip-2028).
+- **Zéros** : Ces octets sont toujours nuls car une adresse de vingt octets ne nécessite pas un mot de trente-deux octets pour la contenir.
+  Les octets contenant un zéro coûtent quatre gaz ([voir le livre jaune](https://ethereum.github.io/yellowpaper/paper.pdf), Annexe G,
   p. 27, la valeur pour `G`<sub>`txdatazero`</sub>).
-- **Montant** : Si nous supposons que dans ce contrat `decimals` est de dix-huit (la valeur normale) et que le montant maximum de jetons que nous transférons sera de 10<sup>18</sup>, nous obtenons un montant maximum de 10<sup>36</sup>.
+- **Montant** : Si nous supposons que dans ce contrat `decimals` est de dix-huit (la valeur normale) et que le montant maximum de jetons que nous transférons sera de 10<sup>18</sup>, nous obtenons un montant maximum de 10<sup>36</sup>.
   256<sup>15</sup> &gt; 10<sup>36</sup>, donc quinze octets suffisent.
 
-Un gaspillage de 160 gaz sur L1 est normalement négligeable. Une transaction coûte au moins [21 000 gaz](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), donc 0,8 % supplémentaires n'ont pas d'importance.
-Cependant, sur L2, les choses sont différentes. La quasi-totalité du coût de la transaction consiste à l'écrire sur L1.
-En plus des données d'appel de la transaction, il y a 109 octets d'en-tête de transaction (adresse de destination, signature, etc.).
-Le coût total est donc `109*16+576+160=2480`, et nous en gaspillons environ 6,5 %.
+Un gaspillage de 160 gaz sur la l1 est normalement négligeable. Une transaction coûte au moins [21 000 gaz](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), donc 0,8 % supplémentaire n'a pas d'importance.
+Cependant, sur la l2, les choses sont différentes. Presque tout le coût de la transaction réside dans son écriture sur la l1.
+En plus des calldata de la transaction, il y a 109 octets d'en-tête de transaction (adresse de destination, signature, etc.).
+Le coût total est donc de `109*16+576+160=2480`, et nous en gaspillons environ 6,5 %.
 
 ## Réduire les coûts lorsque vous ne contrôlez pas la destination {#reducing-costs-when-you-dont-control-the-destination}
 
@@ -83,14 +84,14 @@ Passons en revue les fichiers pertinents.
 
 ### Token.sol {#token-sol}
 
-[Ceci est le contrat de destination](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
-Il s'agit d'un contrat standard ERC-20, avec une fonction supplémentaire.
-Cette fonction `faucet` permet à n'importe quel utilisateur d'obtenir un jeton à utiliser.
-Elle rendrait inutile la création d'un contrat ERC-20, mais elle facilite la vie quand un ERC-20 existe uniquement pour faciliter les tests.
+[Il s'agit du contrat de destination](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
+C'est un contrat ERC-20 standard, avec une fonctionnalité supplémentaire.
+Cette fonction `faucet` permet à tout utilisateur d'obtenir des jetons à utiliser.
+Cela rendrait un contrat ERC-20 de production inutile, mais cela facilite la vie lorsqu'un ERC-20 n'existe que pour faciliter les tests.
 
 ```solidity
     /**
-     * @dev Donne à l'appelant 1000 jetons avec lesquels jouer
+     * @dev Donne à l'appelant 1000 jetons pour jouer
      */
     function faucet() external {
         _mint(msg.sender, 1000);
@@ -99,8 +100,8 @@ Elle rendrait inutile la création d'un contrat ERC-20, mais elle facilite la vi
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
-[Ceci est le contrat que les transactions sont censées appeler avec des données d'appel plus courtes](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
-Revenons dessus ligne par ligne.
+[C'est le contrat que les transactions sont censées appeler avec des calldata plus courtes](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
+Passons-le en revue ligne par ligne.
 
 ```solidity
 //SPDX-License-Identifier: Unlicense
@@ -113,24 +114,24 @@ import { OrisUselessToken } from "./Token.sol";
 Nous avons besoin de la fonction du jeton pour savoir comment l'appeler.
 
 ```solidity
-contract CalldataInterpreter {
+contrat CalldataInterpreter {
 
     OrisUselessToken public immutable token;
 ```
 
-L'adresse du jeton pour lequel nous sommes un mandataire (proxy).
+L'adresse du jeton pour lequel nous sommes un proxy.
 
 ```solidity
 
     /**
-     * @dev Spécifier l'adresse du jeton
-     * @param tokenAddr_ Adresse du contrat ERC-20
+     * @dev Spécifie l'adresse du jeton
+     * @param tokenAddr_ adresse du contrat ERC-20
      */
-    constructor(
+    constructeur(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);
-    }   // constructeur
+    }   // constructor
 ```
 
 L'adresse du jeton est le seul paramètre que nous devons spécifier.
@@ -140,21 +141,21 @@ L'adresse du jeton est le seul paramètre que nous devons spécifier.
         private pure returns (uint) {
 ```
 
-Lire une valeur à partir des données d'appel.
+Lire une valeur à partir des calldata.
 
 ```solidity
         uint _retVal;
 
         require(length < 0x21,
-            "La limite de longueur de calldataVal est de 32 octets");
+            "calldataVal length limit is 32 bytes");
 
         require(length + startByte <= msg.data.length,
-            "calldataVal essaie de lire au-delà de calldatasize");
+            "calldataVal trying to read beyond calldatasize");
 ```
 
-Nous allons charger un unique mot de 32 octets (256 bits) en mémoire et supprimer les octets qui ne font pas partie du champ que nous voulons.
-Cet algorithme ne fonctionne pas pour des valeurs de plus de 32 octets, et bien sûr nous ne pouvons pas lire au-delà de la fin des données d'appel.
-Sur L1, il peut être nécessaire d'ignorer ces tests pour économiser du gaz, mais sur L2, le gaz est extrêmement bon marché, ce qui permet toutes les vérifications de cohérence auxquelles nous pouvons penser.
+Nous allons charger un seul mot de 32 octets (256 bits) en mémoire et supprimer les octets qui ne font pas partie du champ que nous voulons.
+Cet algorithme ne fonctionne pas pour les valeurs de plus de 32 octets, et bien sûr, nous ne pouvons pas lire au-delà de la fin des calldata.
+Sur la l1, il pourrait être nécessaire d'ignorer ces tests pour économiser du gaz, mais sur la l2, le gaz est extrêmement bon marché, ce qui permet d'effectuer tous les contrôles de cohérence imaginables.
 
 ```solidity
         assembly {
@@ -162,18 +163,18 @@ Sur L1, il peut être nécessaire d'ignorer ces tests pour économiser du gaz, m
         }
 ```
 
-Nous aurions pu copier les données de l'appel à `fallback()` (voir ci-dessous), mais il est plus facile d'utiliser [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), le langage d'assemblage de l'EVM.
+Nous aurions pu copier les données de l'appel vers `fallback()` (voir ci-dessous), mais il est plus facile d'utiliser [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), le langage d'assemblage de l'EVM.
 
-Ici, nous utilisons [l'opcode CALLDATALOAD](https://www.evm.codes/#35) pour lire les octets `startByte` à `startByte+31` dans la pile.
-En général, la syntaxe d'un opcode dans Yul est `<nom de l'opcode>(<première valeur de la pile, le cas échéant>,<deuxième valeur de la pile, le cas échéant>...)`.
+Ici, nous utilisons [le code d'opération CALLDATALOAD](https://www.evm.codes/#35) pour lire les octets `startByte` à `startByte+31` dans la pile.
+En général, la syntaxe d'un code d'opération dans Yul est `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
 
 ```solidity
 
         _retVal = _retVal >> (256-length*8);
 ```
 
-Seuls les octets de `longueur` les plus significatifs font partie du champ, donc nous effectuons un [décalage à droite](https://en.wikipedia.org/wiki/Logical_shift) pour nous débarrasser des autres valeurs.
-Ceci présente l'avantage supplémentaire de déplacer la valeur à droite du champ, il s'agit donc de la valeur elle-même plutôt que la valeur multipliée par 256<sup>quelque chose</sup>.
+Seuls les `length` octets les plus significatifs font partie du champ, nous effectuons donc un [décalage vers la droite](https://en.wikipedia.org/wiki/Logical_shift) pour nous débarrasser des autres valeurs.
+Cela a l'avantage supplémentaire de déplacer la valeur vers la droite du champ, de sorte qu'il s'agit de la valeur elle-même plutôt que de la valeur multipliée par 256<sup>quelque chose</sup>.
 
 ```solidity
 
@@ -185,7 +186,7 @@ Ceci présente l'avantage supplémentaire de déplacer la valeur à droite du ch
 ```
 
 Lorsqu'un appel à un contrat Solidity ne correspond à aucune des signatures de fonction, il appelle [la fonction `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (en supposant qu'il y en ait une).
-Dans le cas de `CalldataInterpreter`, n'importe quel appel arrive ici car il n'y a pas d'autres fonctions `external` ou `public`.
+Dans le cas de `CalldataInterpreter`, _tout_ appel arrive ici car il n'y a pas d'autres fonctions `external` ou `public`.
 
 ```solidity
         uint _func;
@@ -193,20 +194,20 @@ Dans le cas de `CalldataInterpreter`, n'importe quel appel arrive ici car il n'y
         _func = calldataVal(0, 1);
 ```
 
-Lit le premier octet des données d'appel, qui nous indique la fonction.
-Il y a deux raisons pour lesquelles une fonction ne serait pas disponible ici :
+Lire le premier octet des calldata, qui nous indique la fonction.
+Il y a deux raisons pour lesquelles une fonction ne serait pas disponible ici :
 
-1. Les fonctions `pure` ou `view` ne modifient pas l'état et ne coûtent pas de gaz (lorsqu'elles sont appelées hors chaîne).
-   Essayer de réduire leur coût en gaz n'a aucun sens.
-2. Fonctions qui s'appuient sur [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
+1. Les fonctions qui sont `pure` ou `view` ne modifient pas l'état et ne coûtent pas de gaz (lorsqu'elles sont appelées hors chaîne).
+   Il n'est pas logique d'essayer de réduire leur coût en gaz.
+2. Les fonctions qui s'appuient sur [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
    La valeur de `msg.sender` sera l'adresse de `CalldataInterpreter`, et non celle de l'appelant.
 
-Malheureusement, [en examinant les spécifications ERC-20](https://eips.ethereum.org/EIPS/eip-20), cela ne laisse qu'une seule fonction, `transfer`.
-Cela nous laisse avec uniquement deux fonctions : `transfer` (parce que nous pouvons appeler `transferFrom`) et `faucet` (parce que nous pouvons retourner les jetons à celui qui nous a appelés).
+Malheureusement, [en regardant les spécifications ERC-20](https://eips.ethereum.org/EIPS/eip-20), cela ne laisse qu'une seule fonction, `transfer`.
+Cela ne nous laisse que deux fonctions : `transfer` (car nous pouvons appeler `transferFrom`) et `faucet` (car nous pouvons transférer les jetons en retour à celui qui nous a appelés).
 
 ```solidity
 
-        // Appeler les méthodes de changement d'état du jeton en utilisant
+        // Appelle les méthodes de changement d'état du jeton en utilisant
         // les informations des données d'appel
 
         // faucet
@@ -222,12 +223,12 @@ Un appel à `faucet()`, qui n'a pas de paramètres.
         }
 ```
 
-Après avoir appelé `token.faucet()`, nous obtenons des jetons. Cependant, en tant que contrat mandataire, nous n'avons pas **besoin** de jetons.
-L'EOA (compte détenu en externe) ou le contrat qui nous a appelés en a besoin.
-Nous transférons donc tous nos jetons à ceux qui nous ont appelés.
+Après avoir appelé `token.faucet()`, nous obtenons des jetons. Cependant, en tant que contrat proxy, nous n'avons pas **besoin** de jetons.
+Le compte détenu par un tiers (EOA) ou le contrat qui nous a appelés en a besoin.
+Nous transférons donc tous nos jetons à celui qui nous a appelés.
 
 ```solidity
-        // transfer (supposons que nous ayons une allocation pour cela)
+        // transfert (en supposant que nous avons une allocation pour cela)
         if (_func == 2) {
 ```
 
@@ -238,33 +239,33 @@ Le transfert de jetons nécessite deux paramètres : l'adresse de destination et
                 msg.sender,
 ```
 
-Nous autorisons uniquement les appelants à transférer les jetons qu'ils possèdent
+Nous n'autorisons les appelants à transférer que les jetons qu'ils possèdent
 
 ```solidity
                 address(uint160(calldataVal(1, 20))),
 ```
 
-L'adresse de destination commence à l'octet n° 1 (l'octet n° 0 est la fonction).
+L'adresse de destination commence à l'octet n°1 (l'octet n°0 est la fonction).
 En tant qu'adresse, elle fait 20 octets de long.
 
 ```solidity
                 calldataVal(21, 2)
 ```
 
-Pour ce contrat particulier, nous supposons que le nombre maximum de jetons que n'importe qui voudra transférer tiendra dans deux octets (moins de 65 536).
+Pour ce contrat particulier, nous supposons que le nombre maximum de jetons que quiconque voudrait transférer tient sur deux octets (moins de 65536).
 
 ```solidity
             );
         }
 ```
 
-Dans l'ensemble, un transfert prend 35 octets de données d'appel :
+Dans l'ensemble, un transfert prend 35 octets de calldata :
 
-| Section                | Longueur | Octets |
-| ---------------------- | -------: | -----: |
-| Sélecteur de fonction  |        1 |      0 |
-| Adresse de destination |       32 |   1-32 |
-| Montant                |        2 |  33-34 |
+| Section | Longueur | Octets |
+| ------------------- | -----: | ----: |
+| Sélecteur de fonction | 1 | 0 |
+| Adresse de destination | 32 | 1-32 |
+| Montant | 2 | 33-34 |
 
 ```solidity
     }   // fallback
@@ -275,22 +276,22 @@ Dans l'ensemble, un transfert prend 35 octets de données d'appel :
 ### test.js {#test-js}
 
 [Ce test unitaire JavaScript](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) nous montre comment utiliser ce mécanisme (et comment vérifier qu'il fonctionne correctement).
-Je vais supposer que vous comprenez [chai](https://www.chaijs.com/) et [ethers](https://docs.ethers.io/v5/) et que je n'expliquerai que les parties qui s'appliquent spécifiquement au contrat.
+Je vais supposer que vous comprenez [chai](https://www.chaijs.com/) et [ethers](https://docs.ethers.io/v5/) et n'expliquer que les parties qui s'appliquent spécifiquement au contrat.
 
 ```js
 const { expect } = require("chai");
 
 describe("CalldataInterpreter", function () {
-  it("Devrait nous permettre d'utiliser des jetons", async function () {
+  it("Should let us use tokens", async function () {
     const Token = await ethers.getContractFactory("OrisUselessToken")
     const token = await Token.deploy()
     await token.deployed()
-    console.log("Adresse du jeton :", token.address)
+    console.log("Token addr:", token.address)
 
     const Cdi = await ethers.getContractFactory("CalldataInterpreter")
     const cdi = await Cdi.deploy(token.address)
     await cdi.deployed()
-    console.log("Adresse CalldataInterpreter :", cdi.address)
+    console.log("CalldataInterpreter addr:", cdi.address)
 
     const signer = await ethers.getSigner()
 ```
@@ -298,24 +299,24 @@ describe("CalldataInterpreter", function () {
 Nous commençons par déployer les deux contrats.
 
 ```javascript
-    // Obtenir des jetons pour jouer avec
+    // Obtenir des jetons pour jouer
     const faucetTx = {
 ```
 
 Nous ne pouvons pas utiliser les fonctions de haut niveau que nous utiliserions normalement (telles que `token.faucet()`) pour créer des transactions, car nous ne suivons pas l'ABI.
-Au lieu de cela, nous devons construire nous-mêmes la transaction et ensuite l'envoyer.
+Au lieu de cela, nous devons construire la transaction nous-mêmes, puis l'envoyer.
 
 ```javascript
       to: cdi.address,
       data: "0x01"
 ```
 
-Nous devons fournir deux paramètres pour la transaction :
+Il y a deux paramètres que nous devons fournir pour la transaction :
 
 1. `to`, l'adresse de destination.
-   Il s'agit du contrat d'interprétation des données d'appel.
-2. `data`, les données d'appel à envoyer.
-   Dans le cas d'un appel au faucet, les données sont un octet unique, `0x01`.
+   Il s'agit du contrat interpréteur de calldata.
+2. `data`, les calldata à envoyer.
+   Dans le cas d'un appel au faucet, la donnée est un seul octet, `0x01`.
 
 ```javascript
 
@@ -323,7 +324,7 @@ Nous devons fournir deux paramètres pour la transaction :
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-Nous appelons la méthode `sendTransaction` [du signataire](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) car nous avons déjà spécifié la destination (`faucetTx.to`) et nous avons besoin que la transaction soit signée.
+Nous appelons [la méthode `sendTransaction` du signataire](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) car nous avons déjà spécifié la destination (`faucetTx.to`) et nous avons besoin que la transaction soit signée.
 
 ```javascript
 // Vérifier que le faucet fournit les jetons correctement
@@ -331,19 +332,19 @@ expect(await token.balanceOf(signer.address)).to.equal(1000)
 ```
 
 Ici, nous vérifions le solde.
-Il n'est pas nécessaire d'économiser du gaz sur les fonctions de `vue`, nous les exécutons donc normalement.
+Il n'est pas nécessaire d'économiser du gaz sur les fonctions `view`, nous les exécutons donc normalement.
 
 ```javascript
-// Donner une allocation au CDI (les approbations ne peuvent pas être mandatées)
+// Donner au CDI une allocation (les approbations ne peuvent pas être mandatées)
 const approveTX = await token.approve(cdi.address, 10000)
 await approveTX.wait()
 expect(await token.allowance(signer.address, cdi.address)).to.equal(10000)
 ```
 
-Donner à l'interprète de données d'appel une allocation pour pouvoir effectuer des transferts.
+Donner à l'interpréteur de calldata une allocation pour pouvoir effectuer des transferts.
 
 ```javascript
-// Transférer des jetons
+// Transfert de jetons
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -356,7 +357,7 @@ Créer une transaction de transfert. Le premier octet est « 0x02 », suivi de l
 ```javascript
     await (await signer.sendTransaction(transferTx)).wait()
 
-    // Vérifier que nous avons 256 jetons en moins
+    // Vérifier que nous avons 256 jetons de moins
     expect (await token.balanceOf(signer.address)).to.equal(1000-256)
 
     // Et que notre destination les a reçus
@@ -367,34 +368,34 @@ Créer une transaction de transfert. Le premier octet est « 0x02 », suivi de l
 
 ## Réduire le coût lorsque vous contrôlez le contrat de destination {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
-Si vous avez le contrôle sur le contrat de destination, vous pouvez créer des fonctions qui contournent la vérification de `msg.sender` dans la mesure où elles font confiance à l'interpréteur des données d'appel.
+Si vous avez le contrôle sur le contrat de destination, vous pouvez créer des fonctions qui contournent les vérifications de `msg.sender` car elles font confiance à l'interpréteur de calldata.
 [Vous pouvez voir un exemple de la façon dont cela fonctionne ici, dans la branche `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
 
-Si le contrat ne répondait qu'à des transactions externes, nous pourrions nous contenter d'un seul contrat.
-Cependant, cela briserait [la composabilité](/developers/docs/smart-contracts/composability/).
-Il est préférable d'avoir un contrat qui répond aux appels ERC-20 normaux, et un autre contrat qui répond aux transactions avec des données d'appel courtes.
+Si le contrat ne répondait qu'aux transactions externes, nous pourrions nous contenter d'un seul contrat.
+Cependant, cela briserait la [composabilité](/developers/docs/smart-contracts/composability/).
+Il est bien préférable d'avoir un contrat qui répond aux appels ERC-20 normaux, et un autre contrat qui répond aux transactions avec des données d'appel courtes.
 
 ### Token.sol {#token-sol-2}
 
 Dans cet exemple, nous pouvons modifier `Token.sol`.
-Cela nous permet d'avoir un certain nombre de fonctions que seul le mandataire peut appeler.
-Voici les nouvelles parties :
+Cela nous permet d'avoir un certain nombre de fonctions que seul le proxy peut appeler.
+Voici les nouvelles parties :
 
 ```solidity
-    // La seule adresse autorisée à spécifier l'adresse CalldataInterpreter
+    // La seule adresse autorisée à spécifier l'adresse du CalldataInterpreter
     address owner;
 
-    // L'adresse CalldataInterpreter
+    // L'adresse du CalldataInterpreter
     address proxy = address(0);
 ```
 
-Le contrat ERC-20 doit connaître l'identité du mandataire autorisé.
+Le contrat ERC-20 doit connaître l'identité du proxy autorisé.
 Cependant, nous ne pouvons pas définir cette variable dans le constructeur, car nous n'en connaissons pas encore la valeur.
-Ce contrat est instancié en premier car le mandataire attend l'adresse du jeton dans son constructeur.
+Ce contrat est instancié en premier car le proxy attend l'adresse du jeton dans son constructeur.
 
 ```solidity
     /**
-     * @dev Appelle le constructeur ERC20.
+     * @dev Appelle le constructeur ERC-20.
      */
     constructor(
     ) ERC20("Oris useless token-2", "OUT-2") {
@@ -402,39 +403,39 @@ Ce contrat est instancié en premier car le mandataire attend l'adresse du jeton
     }
 ```
 
-L'adresse du créateur (appelé `propriétaire`) est stockée ici car c'est la seule adresse autorisée à définir le mandataire.
+L'adresse du créateur (appelée `owner`) est stockée ici car c'est la seule adresse autorisée à définir le proxy.
 
 ```solidity
     /**
-     * @dev définit l'adresse pour le mandataire (le CalldataInterpreter).
+     * @dev définit l'adresse pour le proxy (le CalldataInterpreter).
      * Ne peut être appelé qu'une seule fois par le propriétaire
      */
     function setProxy(address _proxy) external {
-        require(msg.sender == owner, "Ne peut être appelé que par le propriétaire");
-        require(proxy == address(0), "Le mandataire est déjà défini");
+        require(msg.sender == owner, "Can only be called by owner");
+        require(proxy == address(0), "Proxy is already set");
 
         proxy = _proxy;
     }    // function setProxy
 ```
 
-Le mandataire dispose d'un accès privilégié, car il peut contourner les contrôles de sécurité.
-Pour être sûr de pouvoir faire confiance au mandataire, nous ne laissons que le `propriétaire` appeler cette fonction, et une seule fois.
-Une fois que `proxy` a une valeur réelle (non nulle), cette valeur ne peut pas changer, donc même si le propriétaire décide de devenir malveillant, ou si la mnémonique pour celui-ci est révélée, nous sommes toujours en sécurité.
+Le proxy a un accès privilégié, car il peut contourner les contrôles de sécurité.
+Pour nous assurer que nous pouvons faire confiance au proxy, nous ne laissons que `owner` appeler cette fonction, et une seule fois.
+Une fois que `proxy` a une valeur réelle (non nulle), cette valeur ne peut pas changer, donc même si le propriétaire décide de devenir malveillant, ou si sa phrase mnémonique est révélée, nous sommes toujours en sécurité.
 
 ```solidity
     /**
-     * @dev Certaines fonctions ne peuvent être appelées que par le mandataire.
+     * @dev Certaines fonctions ne peuvent être appelées que par le proxy.
      */
     modifier onlyProxy {
 ```
 
-Ceci est une [fonction `modificatrice`](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), elle modifie le fonctionnement des autres fonctions.
+Il s'agit d'une [fonction `modifier`](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), elle modifie le fonctionnement des autres fonctions.
 
 ```solidity
       require(msg.sender == proxy);
 ```
 
-Tout d'abord, vérifiez que nous avons été appelés par le mandataire et personne d'autre.
+Tout d'abord, vérifier que nous avons été appelés par le proxy et par personne d'autre.
 Sinon, `revert`.
 
 ```solidity
@@ -442,10 +443,10 @@ Sinon, `revert`.
     }
 ```
 
-Si c'est le cas, exécutez la fonction que nous modifions.
+Si c'est le cas, exécuter la fonction que nous modifions.
 
 ```solidity
-   /* Fonctions qui permettent au mandataire de servir de mandataire pour les comptes */
+   /* Fonctions qui permettent au proxy de servir réellement de proxy pour les comptes */
 
     function transferProxy(address from, address to, uint256 amount)
         public virtual onlyProxy() returns (bool)
@@ -474,15 +475,15 @@ Si c'est le cas, exécutez la fonction que nous modifions.
     }
 ```
 
-Il s'agit de trois opérations qui nécessitent normalement que le message provienne directement de l'entité qui transfère les jetons ou qui approuve une allocation.
-Nous avons ici une version mandataire de ces opérations qui :
+Ce sont trois opérations qui nécessitent normalement que le message provienne directement de l'entité transférant des jetons ou approuvant une allocation.
+Ici, nous avons une version proxy de ces opérations qui :
 
-1. est modifiée par `onlyProxy()` afin que personne d'autre ne soit autorisé à les contrôler.
-2. Récupère l'adresse qui serait normalement `msg.sender` en tant que paramètre supplémentaire.
+1. Est modifiée par `onlyProxy()` afin que personne d'autre ne soit autorisé à les contrôler.
+2. Obtient l'adresse qui serait normalement `msg.sender` comme paramètre supplémentaire.
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
 
-L'interpréteur de données d'appel est presque identique à celui ci-dessus, à la différence que les fonctions mandatées reçoivent un paramètre `msg.sender` et qu'il n'est pas nécessaire d'effectuer d'allocation pour le `transfert`.
+L'interpréteur de calldata est presque identique à celui ci-dessus, à l'exception que les fonctions mandatées reçoivent un paramètre `msg.sender` et qu'il n'y a pas besoin d'allocation pour `transfer`.
 
 ```solidity
         // transfert (pas besoin d'allocation)
@@ -494,7 +495,7 @@ L'interpréteur de données d'appel est presque identique à celui ci-dessus, à
             );
         }
 
-        // approbation
+        // approve
         if (_func == 3) {
             token.approveProxy(
                 msg.sender,
@@ -516,7 +517,7 @@ L'interpréteur de données d'appel est presque identique à celui ci-dessus, à
 
 ### Test.js {#test-js-2}
 
-Il existe quelques différences entre le code de test précédent et celui-ci.
+Il y a quelques changements entre le code de test précédent et celui-ci.
 
 ```js
 const Cdi = await ethers.getContractFactory("CalldataInterpreter")
@@ -525,10 +526,10 @@ await cdi.deployed()
 await token.setProxy(cdi.address)
 ```
 
-Nous devons indiquer au contrat ERC-20 à quel mandataire faire confiance
+Nous devons indiquer au contrat ERC-20 à quel proxy faire confiance
 
 ```js
-console.log("Adresse CalldataInterpreter :", cdi.address)
+console.log("CalldataInterpreter addr:", cdi.address)
 
 // Besoin de deux signataires pour vérifier les allocations
 const signers = await ethers.getSigners()
@@ -536,11 +537,11 @@ const signer = signers[0]
 const poorSigner = signers[1]
 ```
 
-Pour vérifier `approve()` et `transferFrom()`, nous avons besoin d'un second signataire.
-Nous l'appelons `poorSigner` car il ne reçoit aucun de nos jetons (il doit bien sûr avoir de l'ETH).
+Pour vérifier `approve()` et `transferFrom()`, nous avons besoin d'un deuxième signataire.
+Nous l'appelons `poorSigner` car il ne reçoit aucun de nos jetons (il doit cependant avoir de l'ETH, bien sûr).
 
 ```js
-// Transférer des jetons
+// Transfert de jetons
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -549,7 +550,7 @@ const transferTx = {
 await (await signer.sendTransaction(transferTx)).wait()
 ```
 
-Étant donné que le contrat ERC-20 fait confiance au mandataire (`cdi`), nous n'avons pas besoin d'une allocation pour relayer les transferts.
+Parce que le contrat ERC-20 fait confiance au proxy (`cdi`), nous n'avons pas besoin d'une allocation pour relayer les transferts.
 
 ```js
 // approbation et transferFrom
@@ -567,19 +568,18 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// Vérifier que la combinaison approbation / transferFrom a été effectuée correctement
+// Vérifier que la combinaison approve / transferFrom a été effectuée correctement
 expect(await token.balanceOf(destAddr2)).to.equal(255)
 ```
 
 Tester les deux nouvelles fonctions.
-Notez que `transferFromTx` nécessite deux paramètres d'adresse : le donneur de l'allocation et le destinataire.
+Notez que `transferFromTx` nécessite deux paramètres d'adresse : le donneur de l'allocation et le receveur.
 
 ## Conclusion {#conclusion}
 
-[Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) et [Arbitrum](https://developer.offchainlabs.com/docs/special_features) cherchent tous deux des moyens de réduire la taille des données d'appel écrites sur L1 et donc le coût des transactions.
-Cependant, en tant que fournisseurs d'infrastructures à la recherche de solutions génériques, nos capacités sont limitées.
-En tant que développeur de dapps, vous avez des connaissances spécifiques à l'application, ce qui vous permet d'optimiser vos données d'appel bien mieux que nous ne pourrions le faire avec une solution générique.
-Nous espérons que cet article vous aidera à trouver la solution idéale pour vos besoins.
+À la fois [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) et [Arbitrum](https://developer.offchainlabs.com/docs/special_features) cherchent des moyens de réduire la taille des calldata écrites sur la l1 et donc le coût des transactions.
+Cependant, en tant que fournisseurs d'infrastructure à la recherche de solutions génériques, nos capacités sont limitées.
+En tant que développeur de dapp, vous avez des connaissances spécifiques à l'application, ce qui vous permet d'optimiser vos calldata bien mieux que nous ne pourrions le faire dans une solution générique.
+Espérons que cet article vous aidera à trouver la solution idéale pour vos besoins.
 
-[Voir ici pour plus de mon travail](https://cryptodocguy.pro/).
-
+[Voir ici pour plus de mes travaux](https://cryptodocguy.pro/).

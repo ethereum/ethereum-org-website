@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-06-19T23:03:00.803Z",
+  "englishManifestHash": "2d173de67e94",
+  "placeholderOrder": [
+    "LINK-fb6323",
+    "LINK-35c901",
+    "LINK-167dbe",
+    "LINK-34c3da",
+    "LINK-fad95e",
+    "LINK-09f119",
+    "LINK-e44d3a",
+    "LINK-2c5061",
+    "LINK-29dfe4",
+    "LINK-198afe",
+    "CODEBLOCK-685d10",
+    "CODE-e84f75",
+    "CODE-bdc07b",
+    "CODEBLOCK-a5c65e",
+    "LINK-2d621c",
+    "CODEBLOCK-8b28eb",
+    "CODEBLOCK-1c43ce",
+    "CODEBLOCK-5dee85",
+    "CODEBLOCK-090211",
+    "CODE-3a0383",
+    "CODE-d5ab7c",
+    "CODEBLOCK-1cd01d",
+    "CODEBLOCK-1da8b2",
+    "CODEBLOCK-ee08e5",
+    "CODE-79cbb3",
+    "CODE-8c6976",
+    "CODE-8c6976",
+    "IMAGE-e4b6cb",
+    "IMAGE-0a0a2a",
+    "IMAGE-01b47d",
+    "IMAGE-5cf37c",
+    "IMAGE-c7b01d",
+    "IMAGE-3670d6",
+    "IMAGE-82938a",
+    "LINK-d2a643",
+    "IMAGE-9dde66",
+    "LINK-757ce5",
+    "LINK-f69e9c"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-685d10": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a5c65e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8b28eb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1c43ce": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5dee85": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-090211": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1cd01d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1da8b2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ee08e5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-e84f75": {
+      "type": "inline-code",
+      "values": {
+        "content": "localhost:8086"
+      }
+    },
+    "CODE-bdc07b": {
+      "type": "inline-code",
+      "values": {
+        "content": "influx"
+      }
+    },
+    "CODE-3a0383": {
+      "type": "inline-code",
+      "values": {
+        "content": "METRICS AND STATS OPTIONS"
+      }
+    },
+    "CODE-d5ab7c": {
+      "type": "inline-code",
+      "values": {
+        "content": "geth --help"
+      }
+    },
+    "CODE-79cbb3": {
+      "type": "inline-code",
+      "values": {
+        "content": "localhost:3000"
+      }
+    },
+    "CODE-8c6976": {
+      "type": "inline-code",
+      "values": {
+        "content": "admin"
+      }
+    },
+    "IMAGE-e4b6cb": {
+      "type": "image",
+      "values": {
+        "path": "./grafana1.png"
+      }
+    },
+    "IMAGE-0a0a2a": {
+      "type": "image",
+      "values": {
+        "path": "./grafana2.png"
+      }
+    },
+    "IMAGE-01b47d": {
+      "type": "image",
+      "values": {
+        "path": "./grafana3.png"
+      }
+    },
+    "IMAGE-5cf37c": {
+      "type": "image",
+      "values": {
+        "path": "./grafana4.png"
+      }
+    },
+    "IMAGE-c7b01d": {
+      "type": "image",
+      "values": {
+        "path": "./grafana5.png"
+      }
+    },
+    "IMAGE-3670d6": {
+      "type": "image",
+      "values": {
+        "path": "./grafana6.png"
+      }
+    },
+    "IMAGE-82938a": {
+      "type": "image",
+      "values": {
+        "path": "./grafana7.png"
+      }
+    },
+    "IMAGE-9dde66": {
+      "type": "image",
+      "values": {
+        "path": "./grafana8.png"
+      }
+    },
+    "LINK-fb6323": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=cOBab8IJMYI"
+      }
+    },
+    "LINK-35c901": {
+      "type": "link",
+      "values": {
+        "url": "https://prometheus.io/"
+      }
+    },
+    "LINK-167dbe": {
+      "type": "link",
+      "values": {
+        "url": "https://www.influxdata.com/get-influxdb/"
+      }
+    },
+    "LINK-34c3da": {
+      "type": "link",
+      "values": {
+        "url": "https://www.influxdata.com/get-influxdb/"
+      }
+    },
+    "LINK-fad95e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.grafana.com/"
+      }
+    },
+    "LINK-09f119": {
+      "type": "link",
+      "values": {
+        "url": "https://www.datadoghq.com/"
+      }
+    },
+    "LINK-e44d3a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.influxdata.com/time-series-platform/chronograf/"
+      }
+    },
+    "LINK-2c5061": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/hunterlong/gethexporter"
+      }
+    },
+    "LINK-29dfe4": {
+      "type": "link",
+      "values": {
+        "url": "https://portal.influxdata.com/downloads/"
+      }
+    },
+    "LINK-198afe": {
+      "type": "link",
+      "values": {
+        "url": "https://repos.influxdata.com/"
+      }
+    },
+    "LINK-2d621c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.influxdata.com/influxdb/v1.8/tools/shell/"
+      }
+    },
+    "LINK-d2a643": {
+      "type": "link",
+      "values": {
+        "url": "https://grafana.com/grafana/dashboards/13877/"
+      }
+    },
+    "LINK-757ce5": {
+      "type": "link",
+      "values": {
+        "url": "https://grafana.com/docs/grafana/latest/dashboards/"
+      }
+    },
+    "LINK-f69e9c": {
+      "type": "link",
+      "values": {
+        "url": "https://grafana.com/docs/grafana/latest/alerting/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:03:00.803Z",
+      "status": "success"
+    }
+  }
+}

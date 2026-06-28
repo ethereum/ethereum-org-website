@@ -6,13 +6,12 @@ import type { ReactElement, ReactNode } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
+  BlogFrontmatter,
   DocsFrontmatter,
-  RoadmapFrontmatter,
-  StakingFrontmatter,
   StaticFrontmatter,
+  TopicFrontmatter,
   TutorialFrontmatter,
-  UpgradeFrontmatter,
-  UseCasesFrontmatter,
+  VideoFrontmatter,
 } from "@/lib/interfaces"
 
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
@@ -63,13 +62,12 @@ export type Params = {
   locale: string
 }
 
-export type Frontmatter = RoadmapFrontmatter &
-  UpgradeFrontmatter &
+export type Frontmatter = TopicFrontmatter &
   StaticFrontmatter &
-  UseCasesFrontmatter &
-  StakingFrontmatter &
   DocsFrontmatter &
-  TutorialFrontmatter
+  TutorialFrontmatter &
+  BlogFrontmatter &
+  VideoFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
 export type Layout = keyof LayoutMappingType | "docs" | "tutorial"
@@ -166,7 +164,6 @@ export type I18nLocale = {
   name: string
   localName: string
   langDir: Direction
-  dateFormat: string
   /**
    * @property forceLocalName - Optional flag to indicate that the local name should be used instead of the fallback from `Intl.DisplayName`.
    *   Fallback used when locale language name matches English name.
@@ -305,24 +302,11 @@ export type LocaleContributions = {
   data: FileContributorData[]
 }
 
-// Crowdin translation progress
-export type ProjectProgressData = {
-  languageId: string
-  words: {
-    total: number
-    approved: number
-  }
-}
-
 export type LocaleDisplayInfo = {
   localeOption: string
   sourceName: string
   targetName: string
   englishName: string
-  approvalProgress: number
-  wordsApproved: number
-  progress: string
-  words: string
   isBrowserDefault?: boolean
 }
 
@@ -402,6 +386,7 @@ export type Commit = {
       email: string
       date: string
     }
+    message: string
   }
   author: {
     avatar_url: string
@@ -503,11 +488,14 @@ export type CommonHeroProps<
    * The hero can render no buttons or up to and no more than two.
    * Can accept either button prop objects or React elements directly.
    */
-  buttons?: [HeroButtonProps | ReactElement, (HeroButtonProps | ReactElement)?]
+  buttons?: [
+    HeroButtonProps | ReactElement<unknown>,
+    (HeroButtonProps | ReactElement<unknown>)?,
+  ]
   /**
    * The primary title of the page
    */
-  title?: string
+  title?: ReactNode
   /**
    * A tag name for the page
    */
@@ -515,7 +503,7 @@ export type CommonHeroProps<
   /**
    * Preface text about the content in the given page
    */
-  description: ReactNode
+  description?: ReactNode
   /**
    * Optional CSS class name(s) to apply to the hero component root for styling and layout customization.
    */
@@ -523,37 +511,15 @@ export type CommonHeroProps<
 }
 
 // Staking stats data fetching
-type Data<T> = {
-  data: T
-}
-
-export type EthStoreResponse = Data<{
-  apr: number
-  day: number
-  effective_balances_sum_wei: number
-}>
-
-export type EthStakedResponse = {
+export type DuneResultResponse = {
   result: {
-    rows?: {
-      cum_deposited_eth: number
-      time: string
-    }[]
+    rows?: Record<string, number | string | null>[]
   }
 }
 
-export type EpochResponse = Data<
-  Record<"eligibleether" | "validatorscount", number>
->
-
-export type BeaconchainEpochData = Record<
-  "totalEthStaked" | "validatorscount",
-  MetricReturnData
->
-
 export type StakingStatsData = {
   totalEthStaked: number
-  validatorscount: number
+  stakedPercentage: number
   apr: number
 }
 
@@ -586,9 +552,69 @@ export type DefiLlamaTVLResponse = {
 
 export type MetricReturnData = ValueOrError<number>
 
+export type EthPriceData =
+  | { value: number; timestamp?: number; percentChange24h?: number }
+  | { error: string }
+
 export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
+
+/**
+ * Full video data parsed from a video's index.md file.
+ * Includes frontmatter metadata and the markdown body (transcript).
+ */
+export type VideoData = {
+  slug: string
+  content: string
+  frontmatter: VideoFrontmatter
+}
+
+export type VideoFormat =
+  | "presentation"
+  | "explainer"
+  | "interview"
+  | "tutorial"
+  | "panel"
+/**
+ * Flat, serializable video data for client components (e.g. VideoGalleryFilter).
+ * thumbnailUrl is pre-resolved server-side from customThumbnailUrl or youtubeId.
+ */
+export type VideoCardData = {
+  slug: string
+  title: string
+  description: string
+  uploadDate: string
+  duration: string
+  topic: string[]
+  thumbnailUrl: string
+}
+
+/**
+ * Blog post data for listing pages and carousels.
+ * Parsed from frontmatter of blog post markdown files.
+ */
+export type BlogPost = {
+  href: string
+  title: string
+  description: string
+  author: string
+  team?: string
+  tags?: string[]
+  timeToRead: number
+  published: string
+  lang: string
+  image?: string
+}
+
+/** Card preview for a long-form story, sourced from its markdown frontmatter. */
+export type StoryPreview = {
+  slug: string
+  title: string
+  description: string
+  image: string
+  published: string
+}
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
@@ -753,6 +779,8 @@ export type ChainName = (typeof chains)[number]["name"]
 
 export type NonEVMChainName = "Starknet"
 
+export type AppOnlyChainName = "Immutable zkEVM" | "Ronin"
+
 export type ExtendedRollup = Rollup & {
   networkMaturity: MaturityLevel
   txCosts: number | undefined
@@ -760,7 +788,7 @@ export type ExtendedRollup = Rollup & {
   walletsSupported: string[]
   activeAddresses: number | undefined
   launchDate: string | null
-  walletsSupportedCount: number
+  walletsSupportedCount: string
   blockspaceData: {
     nft: number
     defi: number
@@ -813,6 +841,8 @@ export type WalletData = {
   withdraw_crypto: boolean
   multisig: boolean
   social_recovery: boolean
+  eip_4337_support?: boolean
+  eip_7702_support?: boolean
   onboard_documentation: string
   documentation: string
   mpc?: boolean
@@ -850,6 +880,7 @@ type FilterItem = {
   ignoreFilterReset?: boolean
   input: FilterInput
   options: Array<FilterOptionItem>
+  optionsLegend?: string // sr-only legend for the nested fieldset wrapping `options` (when present)
 }
 
 type FilterInput = (
@@ -857,7 +888,7 @@ type FilterInput = (
   itemIndex: number,
   state: FilterInputState,
   updateFilterState: UpdateFilterState
-) => ReactElement
+) => ReactElement<unknown>
 
 type FilterOptionItem = {
   filterKey: string
@@ -874,7 +905,7 @@ type FilterOptionInput = (
   optionIndex: number,
   state: FilterInputState,
   updateFilterState: UpdateFilterState
-) => ReactElement
+) => ReactElement<unknown>
 
 type UpdateFilterState = (
   filterIndex: number,
@@ -1004,6 +1035,89 @@ export type RSSItem = {
   sourceFeedUrl: string
   sourceUrl: string
   imgSrc?: string
+  /** Plain-text excerpt extracted from the feed item, truncated for cards. */
+  description?: string
+  /** Publication-wide category assigned via the source config. */
+  category?: string
+}
+
+/**
+ * A single content source for the /latest page. Drives both RSS ingestion
+ * (every entry has a `feed`) and the "Read more on these websites" directory.
+ */
+export type LatestSource = {
+  /** Display name, also used as the per-item `source` label. */
+  name: string
+  /** Public website URL (directory link). */
+  link: string
+  /** RSS/Atom feed URL. Required — feedless sources are not listed. */
+  feed: string
+  /** Publication-wide category applied to every item from this feed. */
+  category: string
+  /**
+   * Path into /public for the directory icon. Optional for now — the
+   * directory falls back to a generic icon when absent (icons are mocked).
+   */
+  icon?: string
+  /**
+   * Optional RSS `<category>` allow-list for sources whose feed mixes unrelated
+   * posts (e.g. Besu inside the wider LF Decentralized Trust feed) — only items
+   * tagged with one of these categories are kept.
+   */
+  categoryFilter?: string[]
+  /**
+   * Optional item-link host rewrite. Some feeds publish links to a dead/old
+   * domain while the live articles sit elsewhere (e.g. Vitalik's feed, served
+   * via the eth.limo ENS gateway, still links to the now-defunct vitalik.ca).
+   * Item links beginning with `from` have that prefix swapped for `to`.
+   */
+  linkReplace?: { from: string; to: string }
+}
+
+/** A hardcoded editorial highlight card. `href` may be internal or external. */
+export type LatestHighlight = {
+  /**
+   * Article href. When it matches an article in the merged /latest stream, the
+   * card's metadata (title, image, date, etc.) is resolved from that article —
+   * so an internal builder highlight needs nothing but its href.
+   */
+  href: string
+  /**
+   * Optional overrides applied on top of the resolved article. They also act as
+   * a standalone fallback for an href that isn't in the stream (e.g. an external
+   * post that has aged out of the RSS window) — a `title` is the minimum needed
+   * to render in that case.
+   */
+  title?: string
+  description?: string
+  image?: string
+  source?: string
+  /** Publication date (ISO `YYYY-MM-DD`), shown in the card footer. */
+  date?: string
+}
+
+/**
+ * Unified article shape for the /latest grid, merged from first-party builder
+ * posts and external RSS items. Optional fields degrade gracefully for RSS.
+ */
+export type LatestArticle = {
+  title: string
+  href: string
+  /** ISO-ish date string used for chronological sorting. */
+  date: string
+  /** "Ethereum.org" for builder posts; the feed name for RSS items. */
+  source: string
+  /** Curated category facet (drives the filter chips). */
+  category: string
+  /** All filterable tags: `[category, ...topicTags]`. */
+  tags: string[]
+  isExternal: boolean
+  image?: string
+  author?: string
+  /** Authoring team/org behind a builder post; paired with `author` in the byline. */
+  team?: string
+  description?: string
+  timeToRead?: number
 }
 
 export type RSSChannel = {
@@ -1024,16 +1138,17 @@ export type RSSChannel = {
     link: string[]
     guid: string[]
     pubDate: string[]
-    description: string[]
-    category: string[]
-    enclosure: {
+    description?: string[]
+    category?: string[]
+    "content:encoded"?: string[]
+    enclosure?: {
       $: {
-        url: string[]
-        length: string[]
-        type: string[]
+        url: string
+        length: string
+        type: string
       }
     }[]
-    "media:content": { $: { url: string } }[]
+    "media:content"?: { $: { url: string } }[]
   }[]
 }
 
@@ -1182,7 +1297,7 @@ export type App = {
   image: string
   category: AppCategoryEnum
   subCategory: string[]
-  networks: (ChainName | NonEVMChainName)[]
+  networks: (ChainName | NonEVMChainName | AppOnlyChainName)[]
   screenshots: string[]
   bannerImage: string
   platforms: string[]
@@ -1318,6 +1433,8 @@ export type Story = {
   twitter: string | null
   country: string | null
   date: string
+  /** Comma-separated category labels used by the /stories community filter. */
+  category?: string
 }
 
 export type SectionNavDetails = {

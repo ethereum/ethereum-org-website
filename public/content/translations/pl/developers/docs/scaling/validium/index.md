@@ -1,157 +1,157 @@
 ---
 title: Validium
-description: "Wprowadzenie do Validium jako rozwiązania skalowania obecnie wykorzystywanego przez społeczność Ethereum."
+description: "Wprowadzenie do validium jako rozwiązania skalującego obecnie wykorzystywanego przez społeczność Ethereum."
 lang: pl
 sidebarDepth: 3
 ---
 
-Validium to [rozwiązanie skalujące](/developers/docs/scaling/), które wymusza integralność transakcji za pomocą dowodów ważności, takich jak [ZK-rollupy](/developers/docs/scaling/zk-rollups/), ale nie przechowuje danych transakcji w sieci głównej Ethereum. Chociaż dostępność danych poza łańcuchem wiąże się z pewnymi kompromisami, może prowadzić do ogromnej poprawy skalowalności (validia mogą przetwarzać [~9000 lub więcej transakcji na sekundę](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
+Validium to [rozwiązanie skalujące](/developers/docs/scaling/), które wymusza integralność transakcji za pomocą dowodów ważności, podobnie jak [ZK-rollupy](/developers/docs/scaling/zk-rollups/), ale nie przechowuje danych transakcji w sieci głównej [Ethereum](/). Chociaż pozałańcuchowa dostępność danych wprowadza pewne kompromisy, może prowadzić do ogromnej poprawy skalowalności (validium może przetwarzać [\~9000 transakcji lub więcej na sekundę](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
 ## Wymagania wstępne {#prerequisites}
 
-Należy przeczytać i zrozumieć naszą stronę na temat [skalowania Ethereum](/developers/docs/scaling/) i [warstwy 2](/layer-2).
+Należy przeczytać i zrozumieć nasze strony o [skalowaniu Ethereum](/developers/docs/scaling/) oraz [warstwie 2 (L2)](/layer-2).
 
 ## Czym jest validium? {#what-is-validium}
 
-Validium to skalowalne rozwiązania wykorzystujące dostępność danych poza łańcuchem i obliczenia, mające na celu poprawę przepustowości poprzez przetwarzanie transakcji poza główną siecią Ethereum. Podobnie jak rollupy o zerowej wiedzy (ZK-rollupy), validia publikują [dowody zerowej wiedzy](/glossary/#zk-proof) w celu weryfikacji transakcji poza łańcuchem na Ethereum. Zapobiega to nieprawidłowym zmianom stanów i zwiększa gwarancje bezpieczeństwa łańcucha validium.
+Validium to rozwiązania skalujące, które wykorzystują pozałańcuchową dostępność danych i obliczenia zaprojektowane w celu poprawy przepustowości poprzez przetwarzanie transakcji poza siecią główną Ethereum. Podobnie jak rollupy z wiedzą zerową (ZK-rollupy), validium publikują [dowody z wiedzą zerową](/glossary/#zk-proof) w celu weryfikacji transakcji pozałańcuchowych w Ethereum. Zapobiega to nieprawidłowym przejściom stanu i zwiększa gwarancje bezpieczeństwa łańcucha validium.
 
-Tego typu „dowody ważności” mogą przybierać formę ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) lub ZK-STARKs (Zero-Knowledge Scalable Transparent Argument of Knowledge). Więcej o [dowodach zerowej wiedzy](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
+Te „dowody ważności” mogą przybierać formę ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) lub ZK-STARKs (Zero-Knowledge Scalable Transparent ARgument of Knowledge). Więcej o [dowodach z wiedzą zerową](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
 
-Środki należące do użytkowników validium są kontrolowane przez inteligentny kontrakt w Ethereum. Validia oferują niemal natychmiastowe wypłaty, podobnie jak ZK-rollupy; gdy dowód ważności żądania wypłaty zostanie zweryfikowany w sieci głównej, użytkownicy mogą wypłacić środki, przedstawiając [dowody Merkle'a](/developers/tutorials/merkle-proofs-for-offline-data-integrity/). Dowód Merkle’a weryfikuje uwzględnienie transakcji wypłaty użytkownika w zweryfikowanej partii transakcji, umożliwiając kontraktowi onchain przetworzenie wypłaty.
+Środki należące do użytkowników validium są kontrolowane przez inteligentny kontrakt w Ethereum. Validium oferują niemal natychmiastowe wypłaty, podobnie jak ZK-rollupy; po zweryfikowaniu dowodu ważności dla żądania wypłaty w Sieci głównej, użytkownicy mogą wypłacić środki, dostarczając [dowody Merkle'a](/developers/tutorials/merkle-proofs-for-offline-data-integrity/). Dowód Merkle'a weryfikuje włączenie transakcji wypłaty użytkownika do zweryfikowanej partii transakcji, umożliwiając kontraktowi onchain przetworzenie wypłaty.
 
-Jednak użytkownicy validium mogą mieć zamrożone środki i ograniczone możliwości wypłat. Może się tak zdarzyć, jeśli menedżerowie dostępności danych w łańcuchu validium wstrzymują się z udostępnianiem użytkownikom danych o stanie poza łańcuchem. Bez dostępu do danych transakcyjnych użytkownicy nie mogą obliczyć dowodu Merkle'a wymaganego do potwierdzenia własności środków i dokonywania wypłat.
+Jednak użytkownicy validium mogą mieć zamrożone środki i ograniczone wypłaty. Może się tak zdarzyć, jeśli menedżerowie dostępności danych w łańcuchu validium zatają przed użytkownikami pozałańcuchowe dane stanu. Bez dostępu do danych transakcji użytkownicy nie mogą obliczyć dowodu Merkle'a wymaganego do udowodnienia własności środków i wykonania wypłat.
 
-To jest główna różnica między validium a ZK-rollupami — ich pozycją na spektrum dostępności danych. Oba rozwiązania podchodzą do przechowywania danych w odmienny sposób, co ma wpływ na bezpieczeństwo i brak zaufania.
+To jest główna różnica między validium a ZK-rollupami — ich pozycja w spektrum dostępności danych. Oba rozwiązania podchodzą do przechowywania danych w różny sposób, co ma implikacje dla bezpieczeństwa i bezzaufaniowości.
 
-## W jaki sposób validium wchodzą w interakcję z Ethereum? Jak validia wchodzą w interakcję z Ethereum? {#how-do-validiums-interact-with-ethereum}
+## Jak validium wchodzą w interakcję z Ethereum? {#how-do-validiums-interact-with-ethereum}
 
-Validium to skalowalne protokoły zbudowane na bazie istniejącego łańcucha Ethereum. Mimo że transakcje są wykonywane poza łańcuchem, łańcuchem validium zarządza zbiór inteligentnych kontraktów wdrożonych w sieci głównej, w tym:
+Validium to protokoły skalujące zbudowane na wierzchu istniejącego łańcucha Ethereum. Chociaż wykonuje transakcje pozałańcuchowo, łańcuch validium jest zarządzany przez zbiór inteligentnych kontraktów wdrożonych w Sieci głównej, w tym:
 
-1. **Kontrakt weryfikatora**: Kontrakt weryfikatora sprawdza ważność dowodów przesłanych przez operatora validium podczas dokonywania aktualizacji stanu. Obejmuje to dowody ważności potwierdzające prawidłowość transakcji poza łańcuchem oraz dowody dostępności danych weryfikujące istnienie danych transakcji poza łańcuchem.
+1. **Kontrakt weryfikatora**: Kontrakt weryfikatora weryfikuje ważność dowodów przedłożonych przez operatora validium podczas dokonywania aktualizacji stanu. Obejmuje to dowody ważności poświadczające poprawność transakcji pozałańcuchowych oraz dowody dostępności danych weryfikujące istnienie pozałańcuchowych danych transakcji.
 
-2. **Główny kontrakt**: Główny kontrakt przechowuje zobowiązania stanu (korzenie Merkle'a) przesłane przez producentów bloków i aktualizuje stan validium, gdy dowód ważności zostanie zweryfikowany w łańcuchu. Umowa ta obejmuje również przetwarzanie wpłat i wypłat z sieci validium.
+2. **Główny kontrakt**: Główny kontrakt przechowuje zobowiązania stanu (korzenie drzewa Merklego) przesłane przez producentów bloków i aktualizuje stan validium po zweryfikowaniu dowodu ważności onchain. Kontrakt ten przetwarza również depozyty i wypłaty z łańcucha validium.
 
-Validium bazuje także na głównym łańcuchu Ethereum w następujących kwestiach:
+Validium polegają również na głównym łańcuchu Ethereum w następujących kwestiach:
 
-### Rozliczenie {#settlement}
+### Rozrachunek {#settlement}
 
-Transakcje wykonywane w validium nie mogą zostać w pełni potwierdzone, dopóki łańcuch nadrzędny nie zweryfikuje ich ważności. Wszystkie sprawy prowadzone za pośrednictwem validium muszą być ostatecznie rozstrzygane w sieci głównej. Blockchain Ethereum zapewnia również „gwarancje rozliczeń” użytkownikom validium, co oznacza, że ​​transakcji poza łańcuchem nie można cofnąć ani zmienić po ich zatwierdzeniu w łańcuchu.
+Transakcje wykonane w validium nie mogą zostać w pełni potwierdzone, dopóki łańcuch nadrzędny nie zweryfikuje ich ważności. Wszystkie operacje przeprowadzane w validium muszą ostatecznie zostać rozliczone w Sieci głównej. Blockchain Ethereum zapewnia również „gwarancje rozrachunku” dla użytkowników validium, co oznacza, że transakcje pozałańcuchowe nie mogą zostać cofnięte ani zmienione po ich zatwierdzeniu onchain.
 
 ### Bezpieczeństwo {#security}
 
-Ethereum, działając jako warstwa rozliczeniowa, gwarantuje również poprawność przejść stanu w validium. Transakcje poza łańcuchem realizowane w łańcuchu validium są weryfikowane za pośrednictwem inteligentnego kontraktu na warstwie bazowej Ethereum.
+Ethereum, działając jako warstwa rozrachunku, gwarantuje również ważność przejść stanu w validium. Transakcje pozałańcuchowe wykonywane w łańcuchu validium są weryfikowane za pośrednictwem inteligentnego kontraktu w bazowej warstwie Ethereum.
 
-Jeśli kontrakt weryfikatora on-chain uzna dowód za nieważny, transakcje zostaną odrzucone. Oznacza to, że operatorzy muszą spełnić warunki ważności narzucone przez protokół Ethereum przed aktualizacją stanu validium.
+Jeśli kontrakt weryfikatora onchain uzna dowód za nieważny, transakcje zostaną odrzucone. Oznacza to, że operatorzy muszą spełnić warunki ważności wymuszane przez protokół Ethereum przed aktualizacją stanu validium.
 
 ## Jak działa validium? {#how-does-validium-work}
 
 ### Transakcje {#transactions}
 
-Użytkownicy przesyłają transakcje do operatora, czyli węzła odpowiedzialnego za realizację transakcji w łańcuchu validium. Niektóre validia mogą korzystać z jednego operatora do obsługi łańcucha lub opierać się na mechanizmie [dowodu stawki (PoS)](/developers/docs/consensus-mechanisms/pos/) do rotacji operatorów.
+Użytkownicy przesyłają transakcje do operatora, węzła odpowiedzialnego za wykonywanie transakcji w łańcuchu validium. Niektóre validium mogą korzystać z jednego operatora do wykonywania łańcucha lub polegać na mechanizmie [dowodu stawki (PoS)](/developers/docs/consensus-mechanisms/pos/) w celu rotacji operatorów.
 
-Operator zbiera transakcje w partie, a następnie przesyła ją do obwodu udowadniającego w celu wygenerowania dowodu. .
+Operator agreguje transakcje w partię i wysyła ją do obwodu dowodzącego w celu udowodnienia. Obwód dowodzący przyjmuje partię transakcji (i inne istotne dane) jako dane wejściowe i generuje dowód ważności weryfikujący, że operacje zostały wykonane poprawnie.
 
-### Zobowiązania dotyczące stanu {#state-commitments}
+### Zobowiązania stanu {#state-commitments}
 
-Stan validium jest zakodowany jako drzewo Merkle o korzeniu przechowywanym w głównym kontrakcie na Ethereum. Korzeń Merkle, znany również jako korzeń stanu, działa jako kryptograficzne potwierdzenie obecnego stanu kont oraz ich sald na validium.
+Stan validium jest haszowany jako drzewo Merklego z korzeniem przechowywanym w głównym kontrakcie w Ethereum. Korzeń drzewa Merklego, znany również jako korzeń stanu, działa jako kryptograficzne zobowiązanie do bieżącego stanu kont i sald w validium.
 
-Aby wykonać aktualizację stanu, operator musi opracować nowy korzeń stanu (po wykonaniu transakcji) i zgłosić go do kontraktu onchain. Jeśli dowód ważności potwierdzi się, zaproponowany stan zostaje zaakceptowany a validium przestawia się na nowy korzeń stanu.
+Aby przeprowadzić aktualizację stanu, operator musi obliczyć nowy korzeń stanu (po wykonaniu transakcji) i przesłać go do kontraktu onchain. Jeśli dowód ważności zostanie zweryfikowany pomyślnie, proponowany stan zostaje zaakceptowany, a validium przełącza się na nowy korzeń stanu.
 
-### Wpłaty i wypłaty {#deposits-and-withdrawals}
+### Depozyty i wypłaty {#deposits-and-withdrawals}
 
-Użytkownicy przenoszą środki z Ethereum do validium poprzez deponowanie ETH (lub innego tokena zgodnego z ERC) na kontrakcie onchain. Kontrakt przekazuje zdarzenie depozytu do validium offchain, gdzie adres użytkownika zostaje zasilony kwotą równą wielkości jego depozytu. Operator dołącza również transakcję depozytu do nowej partii.
+Użytkownicy przenoszą środki z Ethereum do validium, deponując ETH (lub dowolny token zgodny z ERC) w kontrakcie onchain. Kontrakt przekazuje zdarzenie depozytu do validium pozałańcuchowo, gdzie adres użytkownika zostaje zasilony kwotą równą jego depozytowi. Operator włącza również tę transakcję depozytu do nowej partii.
 
-Aby przenieś środki z powrotem do Ethereum, użytkownik validium rozpoczyna transakcję wypłaty i zgłasza ją do operatora, który potwierdza żądanie wypłaty i dołącza je do partii. Środki użytkownika na łańcuchu validium są również niszczone, zanim mogą opuścić system. Kiedy dowód ważności powiązany z partią jest zweryfikowany, użytkownik może wywołać główny kontrakt w celu wypłaty pozostałości jego pierwotnego depozytu.
+Aby przenieść środki z powrotem do Sieci głównej, użytkownik validium inicjuje transakcję wypłaty i przesyła ją do operatora, który weryfikuje żądanie wypłaty i włącza je do partii. Aktywa użytkownika w łańcuchu validium są również niszczone, zanim będą mogły opuścić system. Po zweryfikowaniu dowodu ważności powiązanego z partią, użytkownik może wywołać główny kontrakt, aby wypłacić resztę swojego początkowego depozytu.
 
-Jako mechanizm antycenzuralny protokół validium pozwala użytkownikom wypłacać bezpośrednio z kontraktu validium z pominięciem operatora. W tym przypadku użytkownicy muszą przedstawić dowód Merkle kontraktowi weryfikującego, wykazując w ten sposób fakt włączenia konta do korzenia stanu. Jeśli dowód zostanie zaakceptowany, użytkownik może wywołać funkcję wypłaty kontraktu głównego, aby wypłacić swoje środku z validium.
+Jako mechanizm antycenzorski, protokół validium pozwala użytkownikom na wypłatę bezpośrednio z kontraktu validium bez pośrednictwa operatora. W tym przypadku użytkownicy muszą dostarczyć dowód Merkle'a do kontraktu weryfikatora, wykazując włączenie konta do korzenia stanu. Jeśli dowód zostanie zaakceptowany, użytkownik może wywołać funkcję wypłaty głównego kontraktu, aby wyprowadzić swoje środki z validium.
 
-### Przesyłanie wsadowe {#batch-submission}
+### Przesyłanie partii {#batch-submission}
 
-Po wykonaniu partii transakcji operator zgłasza powiązany dowód ważności kontraktowi weryfikującemu i proponuje nowy korzeń stanu do kontraktu głównego. Jeśli dowód jest ważny, kontrakt główny aktualizuje stan validium i finalizuje wyniki transakcji w partii.
+Po wykonaniu partii transakcji operator przesyła powiązany dowód ważności do kontraktu weryfikatora i proponuje nowy korzeń stanu głównemu kontraktowi. Jeśli dowód jest ważny, główny kontrakt aktualizuje stan validium i finalizuje wyniki transakcji w partii.
 
-W przeciwieństwie do rollupu zerowej wiedzy, twórcy bloków na validium nie są zobowiązani, aby publikować dane transakcji dla partii transakcji (tylko nagłówki bloków). To sprawia, że validium jest protokołem skalującym czysto offchain, w przeciwieństwie do „hybrydowych” protokołów skalowania (tj. [warstwy 2](/layer-2/)), które publikują dane o stanie w głównym łańcuchu Ethereum, używając danych blob, `calldata` lub kombinacji obu.
+W przeciwieństwie do ZK-rollupa, producenci bloków w validium nie są zobowiązani do publikowania danych transakcji dla partii transakcji (tylko nagłówki bloków). Czyni to validium czysto pozałańcuchowym protokołem skalującym, w przeciwieństwie do „hybrydowych” protokołów skalujących (tj. [warstwy 2 (L2)](/layer-2/)), które publikują dane stanu w głównym łańcuchu Ethereum przy użyciu danych blob, `calldata` lub kombinacji obu.
 
 ### Dostępność danych {#data-availability}
 
-Jak wspomniano, validium używa modelu dostępności danych offchain, w którym operatorzy przechowują wszystkie dane transakcji poza główną siecią Ethereum. Niskie zapotrzebowanie na dane onchain validium zwiększa możliwość skalowania (przepustowość nie jest ograniczona przez możliwości procesowania danych Ethereum) i ogranicza opłaty poniesione przez użytkownika (koszt publikacji danych onchain jest niższy).
+Jak wspomniano, validium wykorzystują model pozałańcuchowej dostępności danych, w którym operatorzy przechowują wszystkie dane transakcji poza siecią główną Ethereum. Niewielki ślad danych onchain validium poprawia skalowalność (przepustowość nie jest ograniczona przez zdolność przetwarzania danych Ethereum) i zmniejsza opłaty dla użytkowników (koszt publikowania danych onchain jest niższy).
 
-Dostępność danych offchain wprowadza jednak jeden problem: dane niezbędne do tworzenia i weryfikacji dowodów Merkle mogą być niedostępne. Oznacza to, że użytkownicy mogą nie mieć możliwości wypłaty swoich środków z kontraktu onchian, jeśli operatorzy zachowają się w sposób wrogi.
+Pozałańcuchowa dostępność danych stwarza jednak problem: dane niezbędne do tworzenia lub weryfikacji dowodów Merkle'a mogą być niedostępne. Oznacza to, że użytkownicy mogą nie być w stanie wypłacić środków z kontraktu onchain, jeśli operatorzy będą działać złośliwie.
 
-Wiele rozwiązań validium próbuje pokonać problem poprzez decentralizację przechowywania danych stanu. To obejmuje zmuszenie twórców bloków do przesłania potrzebnych danych do "managerów dostępności danych" odpowiedzialnych za przechowywanie danych offchain i udostępnianie ich użytkownikom na żądanie.
+Różne rozwiązania validium próbują rozwiązać ten problem poprzez decentralizację przechowywania danych stanu. Obejmuje to zmuszanie producentów bloków do wysyłania danych bazowych do „menedżerów dostępności danych” odpowiedzialnych za przechowywanie danych pozałańcuchowych i udostępnianie ich użytkownikom na żądanie.
 
-Managerowie dostępności danych potwierdzają dostępność danych dla transakcji offchain poprzez podpisywanie każdej partii validium. Te podpisy stanowią formę "dowodu dostępności", które są sprawdzane onchain przez kontrakt weryfikujący przed zatwierdzeniem aktualizacji stanu.
+Menedżerowie dostępności danych w validium poświadczają dostępność danych dla transakcji pozałańcuchowych, podpisując każdą partię validium. Podpisy te stanowią formę „dowodu dostępności”, który kontrakt weryfikatora onchain sprawdza przed zatwierdzeniem aktualizacji stanu.
 
-Różne rodzaje validium różnią się między sobą podejściem do zarządzania dostępnością danych. Niektóre polegają na podmiotach zewnętrznych, które przechowują dane stanu, a inne wykorzystują do tego zdania losowo przypisanych walidatorów.
+Validium różnią się podejściem do zarządzania dostępnością danych. Niektóre polegają na zaufanych stronach w celu przechowywania danych stanu, podczas gdy inne używają do tego zadania losowo przypisanych walidatorów.
 
-#### Komitet ds. dostępności danych (DAC) {#data-availability-committee}
+#### Komitet dostępności danych (DAC) {#data-availability-committee}
 
-W celu zagwarantowania dostępności danych offchain niektóre rozwiązania validium wyznaczają grupę zaufanych podmiotów, znanych kolektywnie jako komitet dostępności danych (DAC), w celu przechowywania kopii stanu oraz zapewniania dowodu dostępności danych. DAC są łatwiejsze w implementacji oraz wymagają mniej koordynacji z uwagi na niską liczbę członków.
+Aby zagwarantować dostępność danych pozałańcuchowych, niektóre rozwiązania validium wyznaczają grupę zaufanych podmiotów, znanych łącznie jako komitet dostępności danych (DAC), do przechowywania kopii stanu i dostarczania dowodu dostępności danych. DAC są łatwiejsze do wdrożenia i wymagają mniejszej koordynacji, ponieważ liczba członków jest niewielka.
 
-Użytkownicy muszą jednak ufać, że DAC zapewni dostępność danych, kiedy będzie to potrzebne (np. do generowania dowodów Merkle). Istnieje możliwość, że członkowie komitetów ds. dostępności danych [zostaną skompromitowani przez złośliwego aktora](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view), który może następnie wstrzymać dane offchain.
+Jednak użytkownicy muszą ufać, że DAC udostępni dane, gdy będą potrzebne (np. do generowania dowodów Merkle'a). Istnieje możliwość, że członkowie komitetów dostępności danych [zostaną skompromitowani przez złośliwego aktora](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view), który może następnie zataić dane pozałańcuchowe.
 
-[Więcej o komitetach ds. dostępności danych w validiach](https://medium.com/starkware/data-availability-e5564c416424).
+[Więcej o komitetach dostępności danych w validium](https://medium.com/starkware/data-availability-e5564c416424).
 
-#### Dostępność danych z zabezpieczeniem {#bonded-data-availability}
+#### Dostępność danych zabezpieczona kaucją {#bonded-data-availability}
 
-Inne validium wymagają, aby uczestnicy odpowiadający za przechowywanie danych offchain  Ten wkład służy jako "kaucja" aby zagwarantować uczciwe zachowanie wśród managerów dostępności danych i zredukować konieczność zaufania. Jeśli co uczestnicy nie udowodnią dostępności danych, zabezpieczenie jest ucinane.
+Inne validium wymagają od uczestników odpowiedzialnych za przechowywanie danych offline zdeponowania stawki (tj. zablokowania) tokenów w inteligentnym kontrakcie przed objęciem swoich ról. Ta stawka służy jako „kaucja” gwarantująca uczciwe zachowanie wśród menedżerów dostępności danych i zmniejsza założenia dotyczące zaufania. Jeśli ci uczestnicy nie udowodnią dostępności danych, kaucja podlega cięciu.
 
-W schemacie zabezpieczonej dostępności danych każdy może zostać wyznaczony do przechowywania danych offchain, kiedy tylko wpłacą odpowiednią sumę. To rozszerza pulę kwalifikujących się managerów dostępności danych, zmniejszając centralizację, która wpływa na komitety dostępności danych (DAC). Co ważniejsze, to podejście opiera się na zachętach kryptoekonomicznych w celu zapobieżenia złośliwej aktywności, co jest znacząco bardziej bezpieczne niż wyznaczenie zaufanych podmiotów do zabezpieczenia danych offline w validium.
+W schemacie dostępności danych zabezpieczonej kaucją każdy może zostać przypisany do przechowywania danych pozałańcuchowych po dostarczeniu wymaganej stawki. Rozszerza to pulę kwalifikujących się menedżerów dostępności danych, zmniejszając centralizację, która wpływa na komitety dostępności danych (DAC). Co ważniejsze, to podejście opiera się na zachętach kryptoekonomicznych, aby zapobiegać złośliwym działaniom, co jest znacznie bezpieczniejsze niż wyznaczanie zaufanych stron do zabezpieczania danych offline w validium.
 
-[Więcej o dostępności danych z zabezpieczeniem w validiach](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf).
+[Więcej o dostępności danych zabezpieczonej kaucją w validium](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf).
 
-## Volition i validium {#volitions-and-validium}
+## Volitions i validium {#volitions-and-validium}
 
-Validium oferuje wiele korzyści, ale ma też swoje wady (najbardziej znacząca to dostępność danych). Jednak, jak w przypadku wielu rozwiązań do skalowania, validium jest odpowiednie do konkretnych zastosowań — właśnie dlatego zostało stworzone.
+Validium oferują wiele korzyści, ale wiążą się z kompromisami (przede wszystkim z dostępnością danych). Jednak, podobnie jak w przypadku wielu rozwiązań skalujących, validium są dostosowane do konkretnych przypadków użycia — dlatego właśnie stworzono volitions.
 
-Systemy wyboru łączą rollup zerowej wiedzy oraz sieć validium oraz pozwalają użytkownikowi na przełączanie się pomiędzy tymi dwoma rozwiązaniami do skalowania. W przypadku systemów wyboru użytkownicy mogą korzystać z, oferowanej przez validium, dostępności danych offchain dla niektórych transakcji, zachowując jednak możliwość przełączenia się na rozwiązanie dostępności danych onchain (rollup zerowej wiedzy) jeśli jest to potrzebne. To w gruncie rzeczy daje użytkownikom możliwość wyboru kompromisów podyktowanych ich unikalnymi okolicznościami.
+Volitions łączą ZK-rollup i łańcuch validium oraz pozwalają użytkownikom przełączać się między tymi dwoma rozwiązaniami skalującymi. Dzięki volitions użytkownicy mogą korzystać z pozałańcuchowej dostępności danych validium dla niektórych transakcji, zachowując jednocześnie swobodę przełączenia się na rozwiązanie dostępności danych onchain (ZK-rollup) w razie potrzeby. Zasadniczo daje to użytkownikom swobodę wyboru kompromisów podyktowanych ich unikalnymi okolicznościami.
 
-Zdecentralizowana giełda (DEX) może preferować skalowalną i prywatną infrastrukturę validium dla handlu o wysokiej wartości. Użytkownicy, którym zależy na większym bezpieczeństwie i zaufaniu, mogą również skorzystać z pakietu ZK-rollup.
+Zdecentralizowana giełda (DEX) może preferować korzystanie ze skalowalnej i prywatnej infrastruktury validium do transakcji o dużej wartości. Może również korzystać z ZK-rollupa dla użytkowników, którzy chcą wyższych gwarancji bezpieczeństwa i bezzaufaniowości ZK-rollupa.
 
-## Validia a kompatybilność z EVM {#validiums-and-evm-compatibility}
+## Validium i kompatybilność z EVM {#validiums-and-evm-compatibility}
 
-Podobnie jak ZK-rollupy, validium nadają się głównie do prostych zastosowań, takich jak wymiana tokenów i płatności. Obsługa ogólnych obliczeń i wykonywania inteligentnych kontraktów pomiędzy validiami jest trudna do wdrożenia, biorąc pod uwagę znaczny narzut związany z dowodzeniem instrukcji [EVM](/developers/docs/evm/) w obwodzie dowodowym zerowej wiedzy.
+Podobnie jak ZK-rollupy, validium są w większości dostosowane do prostych aplikacji, takich jak wymiany tokenów i płatności. Obsługa ogólnych obliczeń i wykonywania inteligentnych kontraktów w validium jest trudna do wdrożenia, biorąc pod uwagę znaczny narzut związany z dowodzeniem instrukcji [EVM](/developers/docs/evm/) w obwodzie dowodu z wiedzą zerową.
 
-Niektóre projekty validium próbują ominąć ten problem, kompilując języki zgodne z EVM (np. Solidity, Vyper) w celu utworzenia niestandardowego kodu bajtowego zoptymalizowanego pod kątem efektywnego dowodzenia. Wadą tego podejścia jest to, że nowe maszyny wirtualne obsługujące dowody zerowej wiedzy mogą nie obsługiwać ważnych kodów operacji EVM, a programiści muszą pisać bezpośrednio w języku wysokiego poziomu, aby uzyskać optymalne działanie. Stwarza to jeszcze więcej problemów: zmusza deweloperów do tworzenia zdecentralizowanych aplikacji przy użyciu zupełnie nowego stosu programistycznego i uniemożliwia kompatybilność z obecną infrastrukturą Ethereum.
+Niektóre projekty validium próbują ominąć ten problem poprzez kompilację języków kompatybilnych z EVM (np. Solidity, Vyper) w celu stworzenia niestandardowego kodu bajtowego zoptymalizowanego pod kątem wydajnego dowodzenia. Wadą tego podejścia jest to, że nowe maszyny wirtualne przyjazne dla dowodów z wiedzą zerową mogą nie obsługiwać ważnych kodów operacyjnych EVM, a programiści muszą pisać bezpośrednio w języku wysokiego poziomu, aby uzyskać optymalne wrażenia. Stwarza to jeszcze więcej problemów: zmusza programistów do budowania zdecentralizowanych aplikacji (dapp) przy użyciu zupełnie nowego stosu technologicznego i psuje kompatybilność z obecną infrastrukturą Ethereum.
 
-Niektóre zespoły próbują jednak zoptymalizować istniejące kody operacji EVM pod kątem obwodów sprawdzających ZK. Rezultatem będzie opracowanie maszyny wirtualnej Ethereum o zerowej wiedzy (zkEVM), która będzie zgodna z EVM i będzie generować dowody weryfikujące poprawność wykonywania programu. Dzięki zkEVM łańcuchy validium mogą wykonywać inteligentne kontrakty poza łańcuchem i przesyłać dowody ważności w celu weryfikacji obliczeń poza łańcuchem (bez konieczności ponownego ich wykonywania) w sieci Ethereum.
+Niektóre zespoły próbują jednak zoptymalizować istniejące kody operacyjne EVM dla obwodów dowodzących ZK. Doprowadzi to do opracowania wirtualnej maszyny Ethereum z wiedzą zerową (zkEVM), maszyny wirtualnej kompatybilnej z EVM, która generuje dowody w celu weryfikacji poprawności wykonania programu. Dzięki zkEVM łańcuchy validium mogą wykonywać inteligentne kontrakty pozałańcuchowo i przesyłać dowody ważności w celu weryfikacji obliczeń pozałańcuchowych (bez konieczności ich ponownego wykonywania) w Ethereum.
 
 [Więcej o zkEVM](https://www.alchemy.com/overviews/zkevm).
 
-## Jak validium skalują Ethereum? Skalowanie Ethereum za pomocą validiów {#scaling-ethereum-with-validiums}
+## Jak validium skalują Ethereum? {#scaling-ethereum-with-validiums}
 
-### 1. Przechowywanie danych poza łańcuchem {#offchain-data-storage}
+### 1. Pozałańcuchowe przechowywanie danych {#offchain-data-storage}
 
-Projekty skalowania warstwy 2, takie jak rollupy optymistyczne i ZK-rollupy, wymieniają nieskończoną skalowalność czystych protokołów skalowania offchain (np. [Plasma](/developers/docs/scaling/plasma/)) na bezpieczeństwo, publikując niektóre dane transakcyjne w warstwie 1. Oznacza to jednak, że skalowalność rollupów jest ograniczona przepustowością danych w sieci głównej Ethereum (dlatego [sharding danych](/roadmap/danksharding/) ma na celu poprawę pojemności przechowywania danych Ethereum).
+Projekty skalowania warstwy 2 (L2), takie jak optymistyczne rollupy i ZK-rollupy, wymieniają nieskończoną skalowalność czysto pozałańcuchowych protokołów skalujących (np. [Plasma](/developers/docs/scaling/plasma/)) na bezpieczeństwo, publikując niektóre dane transakcji w warstwie 1 (L1). Oznacza to jednak, że właściwości skalowalności rollupów są ograniczone przez przepustowość danych w sieci głównej Ethereum (z tego powodu [sharding danych](/roadmap/danksharding/) proponuje poprawę pojemności przechowywania danych w Ethereum).
 
-Validium osiąga skalowalność dzięki przechowywaniu wszystkich danych transakcyjnych poza łańcuchem i publikowaniu zobowiązań dotyczących stanu (oraz dowodów ważności) tylko przy przekazywaniu aktualizacji stanu do głównego łańcucha Ethereum. Jednak istnienie dowodów ważności daje validiom wyższe gwarancje bezpieczeństwa niż inne czysto offchainowe rozwiązania skalujące, w tym Plasma i [łańcuchy poboczne](/developers/docs/scaling/sidechains/). Zmniejszając ilość danych, które Ethereum musi przetworzyć przed zatwierdzeniem transakcji poza łańcuchem, rozwiązania validium znacznie zwiększają przepustowość sieci głównej.
+Validium osiągają skalowalność, przechowując wszystkie dane transakcji pozałańcuchowo i publikując tylko zobowiązania stanu (oraz dowody ważności) podczas przekazywania aktualizacji stanu do głównego łańcucha Ethereum. Istnienie dowodów ważności daje jednak validium wyższe gwarancje bezpieczeństwa niż inne czysto pozałańcuchowe rozwiązania skalujące, w tym Plasma i [łańcuchy poboczne](/developers/docs/scaling/sidechains/). Zmniejszając ilość danych, które Ethereum musi przetworzyć przed zatwierdzeniem transakcji pozałańcuchowych, projekty validium znacznie zwiększają przepustowość w Sieci głównej.
 
 ### 2. Dowody rekurencyjne {#recursive-proofs}
 
-Dowód rekurencyjny to dowód poprawności, który weryfikuje poprawność innych dowodów. Te „dowody dowodów” są generowane poprzez rekurencyjne agregowanie wielu dowodów, aż do momentu utworzenia ostatecznego dowodu weryfikującego wszystkie poprzednie dowody. Dowody rekurencyjne zwiększają szybkość przetwarzania blockchain poprzez zwiększenie liczby transakcji, które można zweryfikować przy użyciu jednego dowodu ważności.
+Dowód rekurencyjny to dowód ważności, który weryfikuje ważność innych dowodów. Te „dowody dowodów” są generowane poprzez rekurencyjne agregowanie wielu dowodów, aż do utworzenia jednego ostatecznego dowodu weryfikującego wszystkie poprzednie dowody. Dowody rekurencyjne skalują prędkość przetwarzania blockchaina poprzez zwiększenie liczby transakcji, które można zweryfikować na jeden dowód ważności.
 
-Z reguły każdy dowód ważności przesyłany przez operatora validium do Ethereum w celu weryfikacji potwierdza integralność pojedynczego bloku. Podczas gdy pojedynczy dowód rekurencyjny może zostać użyty do potwierdzenia prawidłowości kilku bloków validium jednocześnie — jest to możliwe, ponieważ obwód dowodzący może rekurencyjnie agregować kilka dowodów blokowych w jeden ostateczny dowód. Jeśli kontrakt weryfikatora on-chain zaakceptuje dowód rekurencyjny, wszystkie bazowe bloki zostaną natychmiast sfinalizowane.
+Zazwyczaj każdy dowód ważności, który operator validium przesyła do Ethereum w celu weryfikacji, weryfikuje integralność pojedynczego bloku. Natomiast pojedynczy dowód rekurencyjny może zostać użyty do potwierdzenia ważności kilku bloków validium w tym samym czasie — jest to możliwe, ponieważ obwód dowodzący może rekurencyjnie agregować kilka dowodów bloków w jeden ostateczny dowód. Jeśli kontrakt weryfikatora onchain zaakceptuje dowód rekurencyjny, wszystkie bazowe bloki zostaną natychmiast sfinalizowane.
 
-## Zalety i wady validium {#pros-and-cons-of-validium}
+## Plusy i minusy validium {#pros-and-cons-of-validium}
 
-| Zalety                                                                                                                                                                             | Wady                                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Dowody ważności wymuszają integralność transakcji poza łańcuchem i zapobiegają finalizowaniu przez operatorów nieprawidłowych aktualizacji stanu.                  | Do tworzenia dowodów ważności wymagany jest specjalistyczny sprzęt, co stwarza ryzyko centralizacji.                                                                                                                  |
-| Zwiększa efektywność kapitału dla użytkowników (brak opóźnień w wypłacaniu środków z powrotem do Ethereum)                                                      | Ograniczone wsparcie dla ogólnych obliczeń/inteligentnych kontraktów; do rozwoju wymagane są specjalistyczne języki.                                                                                                  |
-| Niepodatność na niektóre ataki gospodarcze, z którymi borykają się systemy oparte na oszustwach w zastosowaniach o wysokiej wartości.                              | Do generowania dowodów ZK wymagana jest duża moc obliczeniowa; nieopłacalne rozwiązanie w przypadku aplikacji o niskiej przepustowości.                                                                               |
-| Zmniejsza opłaty za gaz dla użytkowników, ponieważ nie przesyłają danych połączeń do głównej sieci Ethereum.                                                       | Dłuższy czas subiektywnej ostateczności (10–30 minut na wygenerowanie dowodu ZK), ale szybsze osiągnięcie pełnej ostateczności, ponieważ nie występuje opóźnienie czasowe związane z sporem.       |
-| Nadaje się do konkretnych zastosowań, takich jak handel lub gry oparte na technologii blockchain, w których priorytetem jest prywatność transakcji i skalowalność. | Użytkownikom można uniemożliwić wypłacanie środków, ponieważ generowanie dowodów własności Merkle wymaga ciągłej dostępności danych spoza łańcucha.                                                                   |
-| Dostępność danych poza łańcuchem zapewnia wyższy poziom przepustowości i zwiększa skalowalność.                                                                    | Model bezpieczeństwa opiera się na założeniach dotyczących zaufania i zachętach kryptoekonomicznych, w przeciwieństwie do ZK-rollupów, które opierają się wyłącznie na kryptograficznych mechanizmach bezpieczeństwa. |
+| Plusy                                                                                                                                                    | Minusy                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dowody ważności wymuszają integralność transakcji pozałańcuchowych i zapobiegają finalizowaniu przez operatorów nieprawidłowych aktualizacji stanu. | Tworzenie dowodów ważności wymaga specjalnego sprzętu, co stwarza ryzyko centralizacji.                                                              |
+| Zwiększa efektywność kapitałową dla użytkowników (brak opóźnień w wypłacaniu środków z powrotem do Ethereum).                                 | Ograniczone wsparcie dla ogólnych obliczeń/inteligentnych kontraktów; do programowania wymagane są specjalistyczne języki.                                             |
+| Brak podatności na niektóre ataki ekonomiczne, z którymi borykają się systemy oparte na dowodach oszustwa w aplikacjach o dużej wartości.                | Wysoka moc obliczeniowa wymagana do generowania dowodów ZK; nieopłacalne dla aplikacji o niskiej przepustowości.                                         |
+| Zmniejsza opłaty za gaz dla użytkowników poprzez niepublikowanie danych wywołania w sieci głównej Ethereum.                                                  | Wolniejszy subiektywny czas ostateczności (10-30 min na wygenerowanie dowodu ZK), ale szybszy do pełnej ostateczności, ponieważ nie ma opóźnienia czasu sporu.               |
+| Odpowiednie dla konkretnych przypadków użycia, takich jak handel lub gry blockchain, w których priorytetem jest prywatność transakcji i skalowalność.  | Użytkownicy mogą zostać pozbawieni możliwości wypłaty środków, ponieważ generowanie dowodów własności Merkle'a wymaga, aby dane pozałańcuchowe były dostępne przez cały czas.      |
+| Pozałańcuchowa dostępność danych zapewnia wyższy poziom przepustowości i zwiększa skalowalność.                              | Model bezpieczeństwa opiera się na założeniach dotyczących zaufania i zachętach kryptoekonomicznych, w przeciwieństwie do ZK-rollupów, które opierają się wyłącznie na kryptograficznych mechanizmach bezpieczeństwa. |
 
-### Użyj Validium/Volition {#use-validium-and-volitions}
+### Korzystanie z validium/volitions {#use-validium-and-volitions}
 
-Istnieje wiele projektów, które zapewniają implementacje Validium i Volitions, które można zintegrować z aplikacjami zdecentralizowanymi:
+Wiele projektów zapewnia implementacje validium i volitions, które można zintegrować ze swoimi zdecentralizowanymi aplikacjami (dapp):
 
-**StarkWare StarkEx** – _StarkEx to rozwiązanie skalowalności warstwy 2 (L2) Ethereum, oparte na dowodach ważności._ Może działać w trybie dostępności danych ZK-Rollup lub Validium._
+**StarkWare StarkEx** - _StarkEx to rozwiązanie skalowalności warstwy 2 (L2) Ethereum, które opiera się na dowodach ważności. Może działać w trybach dostępności danych ZK-Rollup lub Validium._
 
 - [Dokumentacja](https://docs.starkware.co/starkex-v4/starkex-deep-dive/data-availability-modes#validium)
 - [Strona internetowa](https://starkware.co/starkex/)
 
-**Matter Labs zkPorter** – _zkPorter to protokół skalowania warstwy 2, który podchodzi do kwestii dostępności danych w sposób hybrydowy, łącząc idee zkRollup i shardingu._ Może obsługiwać dowolną liczbę shardów, z których każdy ma własną politykę dostępności danych._
+**Matter Labs zkPorter** - _zkPorter to protokół skalowania warstwy 2 (L2) rozwiązujący problem dostępności danych za pomocą hybrydowego podejścia, które łączy idee zkRollup i shardingu. Może obsługiwać dowolnie wiele shardów, z których każdy ma własną politykę dostępności danych._
 
 - [Blog](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
 - [Dokumentacja](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
@@ -162,5 +162,4 @@ Istnieje wiele projektów, które zapewniają implementacje Validium i Volitions
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [ZK-rollups vs Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Volition and the Emerging Data Availability spectrum](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [Rollups, Validiums, and Volitions: Learn About the Hottest Ethereum Scaling Solutions](https://medium.com/coinmonks/rollups-vs-validiums-vs-volitions-d76300170f4a)
-- [Praktyczny przewodnik po rollupach Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [The Practical Guide to Ethereum Rollups](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

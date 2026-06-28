@@ -1,10 +1,9 @@
 ---
-title: Cancun-Deneb (Dencun) FAQ
+title: Cancun-Deneb (Dencun)
+metaTitle: Cancun-Deneb (Dencun) FAQ
 description: Frequently asked questions regarding the Cancun-Deneb (Dencun) network upgrade
 lang: en
 ---
-
-# Cancun-Deneb (Dencun) {#dencun}
 
 Cancun-Deneb (Dencun) is an upgrade to the Ethereum network, which activates **Proto-Danksharding (EIP-4844)**, introducing temporary data **blobs** for cheaper [layer 2 (L2)](/glossary/#layer-2) rollup storage.
 
@@ -101,11 +100,11 @@ Simply being compatible with the Ethereum Virtual Machine (EVM) does not mean th
 
 ## More of a visual learner? {#visual-learner}
 
-<YouTube id="HT9PHWloIiU" />
+<VideoWatch slug="eip-4844-dencun-explained" />
 
 _Unlocking Ethereum's Scaling, EIP-4844 — Finematics _
 
-<YouTube id="dFjyUY3e53Q" />
+<VideoWatch slug="blobspace-101-dencun" />
 
 _Blobspace 101 with Domothy — Bankless_
 

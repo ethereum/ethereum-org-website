@@ -4,6 +4,7 @@ description: "This is a beginner's guide to getting started with Ethereum develo
 author: "Elan Halpern"
 tags: ["javascript", "ethers.js", "nodes", "querying", "alchemy"]
 skill: beginner
+breadcrumb: Getting started
 lang: en
 published: 2020-10-30
 source: Medium
@@ -12,7 +13,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Ethereum and Alchemy logos](./ethereum-alchemy.png)
 
-This is a beginners guide to getting started with Ethereum development. For this tutorial we'll be using [Alchemy](https://alchemyapi.io/), the leading blockchain developer platform powering millions of users from 70% of the top blockchain apps, including Maker, 0x, MyEtherWallet, Dharma, and Kyber. Alchemy will give us access to an API endpoint on the Ethereum chain so we can read and write transactions.
+This is a beginners guide to getting started with Ethereum development. For this tutorial we'll be using [Alchemy](https://www.alchemy.com/), the leading blockchain developer platform powering millions of users from 70% of the top blockchain apps, including Maker, 0x, MyEtherWallet, Dharma, and Kyber. Alchemy will give us access to an API endpoint on the Ethereum chain so we can read and write transactions.
 
 We’ll take you from signing up with Alchemy to writing your first web3 script! No blockchain development experience necessary!
 
@@ -45,7 +46,7 @@ Interact with the Ethereum blockchain through Alchemy using JSON-RPC and curl.
 For manual requests, we recommend interacting with the `JSON-RPC` via `POST` requests. Simply pass in the `Content-Type: application/json` header and your query as the `POST` body with the following fields:
 
 - `jsonrpc`: The JSON-RPC version—currently, only `2.0` is supported.
-- `method`: The ETH API method. [See API reference.](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
+- `method`: The ETH API method. [See API reference.](/developers/docs/apis/json-rpc/)
 - `params`: A list of parameters to pass to the method.
 - `id`: The ID of your request. Will be returned by the response so you can keep track of which request a response belongs to.
 
@@ -58,7 +59,7 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) with your own API key `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
+_**NOTE:** Replace `https://eth-mainnet.alchemyapi.io/v2/demo` with your own API key `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
 
 **Results:**
 
@@ -70,9 +71,9 @@ _**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainn
 
 **If you have an existing client,** change your current node provider URL to an Alchemy URL with your API key: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**_NOTE:_** The scripts below need to be run in a **node context** or **saved in a file**, not run from the command line. If you don’t already have Node or npm installed, check out this quick [set-up guide for macs](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
+**_NOTE:_** The scripts below need to be run in a **node context** or **saved in a file**, not run from the command line. If you don’t already have Node or npm installed, follow [the Node.js installation instructions](https://nodejs.org/en/download/).
 
-There are tons of [Web3 libraries](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) you can integrate with Alchemy, however, we recommend using [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), a drop-in replacement for web3.js, built and configured to work seamlessly with Alchemy. This provides multiple advantages such as automatic retries and robust WebSocket support.
+There are tons of [Web3 libraries](/developers/docs/apis/javascript/) you can integrate with Alchemy, however, we recommend using [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), a drop-in replacement for web3.js, built and configured to work seamlessly with Alchemy. This provides multiple advantages such as automatic retries and robust WebSocket support.
 
 To install AlchemyWeb3.js, **navigate to your project directory** and run:
 
@@ -144,6 +145,6 @@ The latest block number is 11043912
 
 **Woo! Congrats! You just wrote your first web3 script using Alchemy 🎉**
 
-Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [Hello World Smart Contract Guide](https://www.alchemy.com/docs/hello-world-smart-contract), or test your dashboard knowledge with the [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app)!
+Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some Solidity programming in our [Hello World Smart Contract Guide](/developers/tutorials/hello-world-smart-contract/), or keep exploring [Alchemy's docs](https://www.alchemy.com/docs/) for more examples.
 
 _[Sign up with Alchemy for free](https://auth.alchemy.com/), check out our [documentation](https://www.alchemy.com/docs/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform)_.

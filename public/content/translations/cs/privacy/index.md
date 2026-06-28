@@ -1,97 +1,97 @@
 ---
-title: "Soukromí na Ethereu"
-description: "Nástroje a techniky pro ochranu vašeho soukromí na Ethereu"
+title: Soukromí na Ethereu
+description: Nástroje a techniky pro ochranu vašeho soukromí na Ethereu
 lang: cs
 ---
 
-# Soukromí na Ethereu {#introduction}
+Soukromí je nejen nezbytné pro osobní bezpečnost, je to základní kámen svobody a klíčový [garant decentralizace](https://vitalik.eth.limo/general/2025/04/14/privacy.html). Soukromí dává lidem možnost svobodně se vyjadřovat, provádět transakce s ostatními a organizovat komunity. Ale stejně jako u všech blockchainů, veřejná účetní kniha Etherea činí soukromí náročným.
 
-Soukromí je nejen nezbytné pro osobní bezpečnost, je to základní kámen svobody a klíčový [garant decentralizace](https://vitalik.eth.limo/general/2025/04/14/privacy.html). Soukromí dává lidem možnost svobodně se vyjadřovat, obchodovat s ostatními a organizovat komunity. Stejně jako u všech blockchainů je však soukromí v případě veřejné účetní knihy Etherea náročné.
+Ethereum je ze své podstaty transparentní. Každá onchain akce je viditelná pro kohokoli, kdo se podívá. Ačkoli Ethereum nabízí pseudonymitu tím, že spojuje vaši aktivitu s [veřejným klíčem](/decentralized-identity/#public-key-cryptography) namísto skutečné identity, vzorce aktivity by mohly být analyzovány k odhalení citlivých informací a identifikaci uživatelů.
 
-Ethereum je z podstaty transparentní. Každá akce na blockchainu je viditelná pro každého, kdo se podívá. Ačkoli Ethereum nabízí pseudonymitu propojením vaší aktivity s [veřejným klíčem](/decentralized-identity/#public-key-cryptography) namísto identity v reálném světě, vzorce aktivity by mohly být analyzovány za účelem odhalení citlivých informací a identifikace uživatelů.
+Zabudování nástrojů pro zachování soukromí do Etherea může pomoci lidem, organizacím a institucím bezpečně komunikovat a zároveň omezit zbytečné vystavení. Díky tomu je ekosystém bezpečnější a praktičtější pro širší škálu případů užití.
 
-Zabudování nástrojů pro ochranu soukromí do Etherea může lidem, organizacím a institucím pomoci bezpečně interagovat a zároveň omezit zbytečné odhalení. Díky tomu je ekosystém bezpečnější a praktičtější pro širší škálu případů použití.
+<VideoWatch slug="privacy-is-existential" />
 
-## Ochrana soukromí při zápisech {#privacy-of-writes}
+## Soukromí pro zápisy {#privacy-of-writes}
 
-Ve výchozím nastavení je každá transakce zapsaná na Ethereu veřejná a trvalá. To zahrnuje nejen posílání ETH, ale také registraci jmen ENS, sbírání POAP nebo obchodování s NFT. Každodenní akce, jako jsou platby, hlasování nebo ověření totožnosti, mohou odhalit vaše informace nezamýšleným stranám. Existuje několik nástrojů a technik, které mohou pomoci zvýšit jejich soukromí:
+Ve výchozím nastavení je každá transakce zapsaná na Ethereu veřejná a trvalá. To zahrnuje nejen odesílání ETH, ale také registraci jmen ENS, sbírání POAPů nebo obchodování s NFT. Každodenní akce, jako jsou platby, hlasování nebo ověřování identity, mohou odhalit vaše informace nezamýšleným stranám. Existuje několik nástrojů a technik, které mohou pomoci učinit tyto akce soukromějšími:
 
-### Mixovací protokoly (neboli „mixéry“) {#mixing-protocols}
+### Mixovací protokoly (nebo „mixéry“) {#mixing-protocols}
 
-Mixéry přerušují spojení mezi odesílateli a příjemci tím, že transakce mnoha uživatelů vkládají do sdíleného „poolu“ a poté umožňují lidem pozdější výběr na novou adresu. Jelikož jsou vklady a výběry promíchány, je pro pozorovatele mnohem těžší je spojit.
+Mixéry přerušují spojení mezi odesílateli a příjemci tím, že vloží transakce mnoha uživatelů do sdíleného „poolu“ a poté lidem umožní pozdější výběr na novou adresu. Vzhledem k tomu, že vklady a výběry jsou smíchány dohromady, je pro pozorovatele mnohem těžší je propojit.
 
 _Příklady: [PrivacyPools](https://docs.privacypools.com/), [Tornado Cash](https://tornado.cash/)_
 
-### Stíněné pooly {#shielded-pools}
+### Chráněné pooly {#shielded-pools}
 
-Stíněné pooly jsou podobné mixérům, ale umožňují uživatelům držet a převádět finanční prostředky soukromě uvnitř samotného poolu. Namísto pouhého zatemnění spojení mezi vkladem a výběrem si stíněné pooly udržují trvalý soukromý stav, často zabezpečený důkazy s nulovou znalostí. To umožňuje vytvářet soukromé převody, soukromé zůstatky a další.
+Chráněné pooly jsou podobné mixérům, ale umožňují uživatelům držet a převádět prostředky soukromě přímo uvnitř samotného poolu. Namísto pouhého zastření spojení mezi vkladem a výběrem udržují chráněné pooly nepřetržitý soukromý stav, často zabezpečený důkazy s nulovou znalostí. To umožňuje vytvářet soukromé převody, soukromé zůstatky a další.
 
 _Příklady: [Railgun](https://www.railgun.org/), [Aztec](https://aztec.network/), Nightfall_
 
 ### Skryté adresy {#stealth-addresses}
 
-[Skrytá adresa](https://vitalik.eth.limo/general/2023/01/20/stealth.html) je jako dát každému odesílateli jedinečnou, jednorázovou poštovní přihrádku, kterou můžete otevřít jen vy. Pokaždé, když vám někdo pošle kryptoměnu, přijde na novou adresu, takže nikdo jiný neuvidí, že všechny tyto platby patří vám. Díky tomu zůstává vaše platební historie soukromá a hůře sledovatelná.
+[Skrytá adresa](https://vitalik.eth.limo/general/2023/01/20/stealth.html) je jako dát každému odesílateli jedinečnou, jednorázovou P.O. box schránku, kterou můžete otevřít pouze vy. Pokaždé, když vám někdo pošle krypto, jde to na novou adresu, takže nikdo jiný nevidí, že všechny tyto platby patří vám. To udržuje vaši platební historii v soukromí a ztěžuje její sledování.
 
 _Příklady: [UmbraCash](https://app.umbra.cash/faq), [FluidKey](https://www.fluidkey.com/)_
 
-### Další případy použití {#other-use-cases}
+### Další případy užití {#other-use-cases}
 
-Mezi další projekty zkoumající soukromé zápisy patří [PlasmaFold](https://pse.dev/projects/plasma-fold) (soukromé platby) a systémy jako [MACI](https://pse.dev/projects/maci) a [Semaphore](https://pse.dev/projects/semaphore) (soukromé hlasování).
+Další projekty zkoumající soukromé zápisy zahrnují [PlasmaFold](https://pse.dev/projects/plasma-fold) (soukromé platby) a systémy jako [MACI](https://pse.dev/projects/maci) a [Semaphore](https://pse.dev/projects/semaphore) (soukromé hlasování).
 
-Tyto nástroje rozšiřují možnosti soukromého zápisu na Ethereu, ale každý z nich má své kompromisy. Některé přístupy jsou stále experimentální, některé zvyšují náklady nebo složitost a některé nástroje, jako jsou mixéry, mohou čelit právnímu nebo regulačnímu přezkumu v závislosti na tom, jak jsou používány.
+Tyto nástroje rozšiřují možnosti pro soukromé zápisy na Ethereu, ale každý z nich přináší určité kompromisy. Některé přístupy jsou stále experimentální, některé zvyšují náklady nebo složitost a některé nástroje, jako jsou mixéry, mohou čelit právnímu nebo regulačnímu dohledu v závislosti na tom, jak jsou používány.
 
-## Ochrana soukromí při čtení {#privacy-of-reads}
+## Soukromí pro čtení {#privacy-of-reads}
 
-Čtení nebo kontrola jakýchkoli informací na Ethereu (např. zůstatku v peněžence) obvykle probíhá prostřednictvím služby, jako je poskytovatel vaší peněženky, poskytovatel uzlů nebo prohlížeč bloků. Protože se na ně spoléháte, že za vás přečtou blockchain, mohou také vidět vaše požadavky spolu s metadaty, jako je vaše IP adresa nebo poloha. Pokud stále kontrolujete stejný účet, tyto informace lze poskládat a propojit vaši identitu s vaší aktivitou.
+Čtení nebo kontrola jakýchkoli informací na Ethereu (např. zůstatku vaší peněženky) obvykle probíhá prostřednictvím služby, jako je poskytovatel vaší peněženky, poskytovatel uzlu nebo prohlížeč bloků. Protože se spoléháte na to, že pro vás přečtou blockchain, mohou také vidět vaše požadavky spolu s metadaty, jako je vaše IP adresa nebo poloha. Pokud neustále kontrolujete stejný účet, mohou být tyto informace poskládány dohromady a propojit vaši identitu s vaší aktivitou.
 
-Provoz vlastního uzlu Etherea by tomu zabránil, ale ukládání a synchronizace celého blockchainu zůstává pro většinu uživatelů nákladná a nepraktická, zejména na mobilních zařízeních.
+Provozování vlastního uzlu Etherea by tomu zabránilo, ale ukládání a synchronizace celého blockchainu zůstává pro většinu uživatelů nákladné a nepraktické, zejména na mobilních zařízeních.
 
-Mezi některé projekty zkoumající soukromé čtení patří [Private Information Retrieval](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (PIR, získání dat bez odhalení toho, co hledáte), [zkID](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (soukromé ověření identity s důkazy s nulovou znalostí), [vOPRF](https://pse.dev/projects/voprf) (používání účtů Web2 pseudonymně ve Web3), [vFHE](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (výpočty na zašifrovaných datech) a [MachinaIO](https://pse.dev/projects/machina-io) (skrytí podrobností programu při zachování funkčnosti).
+Některé projekty zkoumající soukromé čtení zahrnují [Private Information Retrieval](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (PIR, načítání dat bez odhalení toho, co hledáte), [zkID](https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec) (soukromé kontroly identity pomocí důkazů s nulovou znalostí), [vOPRF](https://pse.dev/projects/voprf) (pseudonymní používání účtů Web2 ve Web3), [vFHE](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (výpočty na šifrovaných datech) a [MachinaIO](https://pse.dev/projects/machina-io) (skrytí detailů programu při zachování funkčnosti).
 
-## Ochrana soukromí při prokazování {#privacy-of-proving}
+## Soukromí pro dokazování {#privacy-of-proving}
 
-Důkazy chránící soukromí jsou nástroje, které můžete na Ethereu použít k prokázání, že je něco pravda, aniž byste odhalili zbytečné podrobnosti. Můžete například:
+Důkazy zachovávající soukromí jsou nástroje, které můžete na Ethereu použít k prokázání, že je něco pravda, aniž byste odhalili zbytečné detaily. Například byste mohli:
 
-- Prokázat, že je vám více než 18 let, aniž byste sdíleli své celé datum narození
-- Prokázat vlastnictví NFT nebo tokenu, aniž byste odhalili celou svou peněženku
-- Prokázat nárok na členství, odměnu nebo hlasování bez odhalení dalších osobních údajů
+- Dokázat, že je vám více než 18 let, aniž byste sdíleli celé datum narození
+- Dokázat vlastnictví NFT nebo tokenu, aniž byste odhalili celou svou peněženku
+- Dokázat způsobilost pro členství, odměnu nebo hlas, aniž byste odhalili další osobní údaje
 
-Většina nástrojů pro tyto účely se spoléhá na kryptografické techniky, jako jsou důkazy s nulovou znalostí, ale výzvou je učinit je dostatečně efektivními pro provoz na každodenních zařízeních, přenositelnými na jakoukoli platformu a bezpečnými.
+Většina nástrojů pro tyto účely spoléhá na kryptografické techniky, jako jsou důkazy s nulovou znalostí, ale výzvou je učinit je dostatečně efektivními, aby běžely na běžných zařízeních, byly přenositelné na jakoukoli platformu a bezpečné.
 
-Mezi některé projekty zkoumající ochranu soukromí při prokazování patří [Client Side Proving](https://pse.dev/projects/client-side-proving) (systémy prokazování ZK), [TLSNotary](https://tlsnotary.org/), (důkazy pravosti pro jakákoli data na webu), [Mopro](https://pse.dev/projects/mopro) (mobilní prokazování na straně klienta), [Private Proof Delegation](https://pse.dev/projects/private-proof-delegation) (delegační rámce, které se vyhýbají předpokladům důvěry) a [Noir](https://noir-lang.org/) (jazyk pro soukromé a ověřitelné výpočty).
+Některé projekty zkoumající soukromí pro dokazování zahrnují [Client Side Proving](https://pse.dev/projects/client-side-proving) (systémy pro dokazování ZK), [TLSNotary](https://tlsnotary.org/) (důkazy pravosti pro jakákoli data na webu), [Mopro](https://pse.dev/projects/mopro) (mobilní dokazování na straně klienta), [Private Proof Delegation](https://pse.dev/projects/private-proof-delegation) (rámce pro delegaci, které se vyhýbají předpokladům důvěry) a [Noir](https://noir-lang.org/) (jazyk pro soukromé a ověřitelné výpočty).
 
-## Slovníček pojmů o ochraně soukromí {#privacy-glossary}
+## Slovníček pojmů o soukromí {#privacy-glossary}
 
-**Anonymní**: Interakce s trvale odstraněnými všemi identifikátory z vašich dat, což znemožňuje zpětné vysledování informací k jednotlivci
+**Anonymní**: Interakce se všemi identifikátory trvale odstraněnými z vašich dat, což znemožňuje zpětné vysledování informací k jednotlivci
 
-**Šifrování**: Proces, který zamíchá data tak, že je může číst pouze někdo se správným klíčem
+**Šifrování**: Proces, který zamíchá data tak, aby je mohl přečíst pouze někdo se správným klíčem
 
-**[Plně homomorfní šifrování](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (FHE)**: Způsob provádění výpočtů přímo na zašifrovaných datech, aniž by se kdy dešifrovala
+**[Plně homomorfní šifrování](https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1) (FHE)**: Způsob, jak provádět výpočty přímo na šifrovaných datech, aniž by se kdy dešifrovala
 
-**[Nerozlišitelné zatemnění](https://pse.dev/projects/machina-io) (iO)**: Techniky ochrany soukromí, které činí programy nebo data nesrozumitelnými, ale stále použitelnými
+**[Nerozlišitelné zmatení](https://pse.dev/projects/machina-io) (iO)**: Techniky ochrany soukromí, které činí programy nebo data nesrozumitelnými, ale stále použitelnými
 
-**[Výpočty s více stranami](https://pse.dev/blog/secure-multi-party-computation) (MPC)**: Metody, které umožňují více stranám společně vypočítat výsledek, aniž by odhalily své soukromé vstupy
+**[Vícestranné výpočty](https://pse.dev/blog/secure-multi-party-computation) (MPC)**: Metody, které umožňují více stranám společně vypočítat výsledek, aniž by odhalily své soukromé vstupy
 
-**Programovatelná kryptografie**: Flexibilní, pravidly řízená kryptografie, kterou lze v softwaru přizpůsobit a řídit tak, jak a kdy jsou data sdílena, ověřována nebo odhalována
+**Programovatelná kryptografie**: Flexibilní kryptografie řízená pravidly, kterou lze v softwaru přizpůsobit tak, aby kontrolovala, jak a kdy jsou data sdílena, ověřována nebo odhalována
 
 **Pseudonymní**: Používání jedinečných kódů nebo čísel (jako je adresa Etherea) namísto osobních identifikátorů
 
-**Selektivní zveřejňování**: Schopnost sdílet pouze to, co je nezbytně nutné (např. prokázat, že vlastníte NFT, aniž byste odhalili celou historii své peněženky)
+**Selektivní odhalení**: Schopnost sdílet pouze to, co je potřeba (např. prokázání, že vlastníte NFT, aniž byste odhalili celou historii své peněženky)
 
-**Nepropojitelnost**: Zajištění toho, aby samostatné akce na blockchainu nebylo možné spojit se stejnou adresou
+**Nepropojitelnost**: Zajištění toho, že oddělené akce na blockchainu nelze zpětně spojit se stejnou adresou
 
-**Ověřitelnost**: Zajištění toho, aby ostatní mohli potvrdit, že tvrzení je pravdivé, například ověřením transakce nebo důkazu na Ethereu
+**Ověřitelnost**: Zajištění toho, že ostatní mohou potvrdit, že je nárok pravdivý, jako je ověření transakce nebo důkazu na Ethereu
 
-**Ověřitelná delegace**: Přidělení úkolu – například generování důkazu – jiné straně (např. mobilní peněžence využívající server pro náročnou kryptografii) a zároveň schopnost ověřit, že byl proveden správně
+**Ověřitelná delegace**: Přidělení úkolu – jako je generování důkazu – jiné straně (např. mobilní peněženka využívající server pro náročnou kryptografii), přičemž je stále možné ověřit, že byl proveden správně
 
-**[Důkazy s nulovou znalostí](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) (ZKP)**: Kryptografické protokoly, které umožňují někomu prokázat, že informace je pravdivá, aniž by odhalil podkladová data
+**[Důkazy s nulovou znalostí](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) (ZKP)**: Kryptografické protokoly, které někomu umožňují prokázat, že je informace pravdivá, aniž by odhalil podkladová data
 
-**ZK Rollup**: Systém škálovatelnosti, který dávkuje transakce mimo řetězec a odesílá důkaz platnosti na blockchainu – ve výchozím nastavení není soukromý, ale umožňuje efektivní systémy ochrany soukromí (jako jsou stíněné pooly) snížením nákladů
+**ZK rollup**: Systém škálovatelnosti, který dávkuje transakce offchain a odesílá důkaz platnosti onchain – ve výchozím nastavení není soukromý, ale umožňuje efektivní systémy ochrany soukromí (jako jsou chráněné pooly) snížením nákladů
 
-## Zdroje informací {#resources}
+## Zdroje {#resources}
 
-- [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), výzkumná a vývojová laboratoř nadace Ethereum zaměřená na ochranu soukromí v ekosystému
+- [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), výzkumná a vývojová laboratoř Nadace Ethereum zaměřená na soukromí pro ekosystém
 - [Web3PrivacyNow](https://web3privacy.info/), síť lidí, projektů a spřízněných organizací, které chrání a prosazují lidská práva online
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), stránka pro hodnocení peněženek Etherea, jejímž cílem je poskytnout komplexní seznam peněženek, jejich funkčnosti, postupů a podpory určitých standardů.
-- [Zk-kit](https://zkkit.pse.dev/): Sada knihoven (algoritmů, pomocných funkcí a datových struktur), které lze znovu použít v různých projektech a protokolech s nulovou znalostí.
-- [Aplikace pro ochranu soukromí](/apps/categories/privacy/) – Objevte seznam vybraných aplikací pro ochranu soukromí, které běží na Ethereu.
+- [Zk-kit](https://zkkit.pse.dev/): Sada knihoven (algoritmy, pomocné funkce a datové struktury), které lze znovu použít v různých projektech a protokolech s nulovým vědomím.
+- [Privacy Apps](/apps/categories/privacy/) – Objevte seznam vybraných aplikací pro ochranu soukromí, které běží na Ethereu.

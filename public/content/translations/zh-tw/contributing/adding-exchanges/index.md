@@ -1,40 +1,39 @@
 ---
-title: "新增交易所"
-description: "向 ethereum.org 新增交易所時使用的政策"
+title: 新增以太坊交易所
+metaTitle: 新增交易所
+description: 我們在 ethereum.org 上新增交易所時所使用的政策
 lang: zh-tw
 ---
 
-# 新增以太坊交易所 {#adding-ethereum-exchanges}
+任何人都可以自由地在 ethereum.org 上建議新的交易所。
 
-任何人都可以在 ethereum.org 上自由提議新的交易所。
-
-我們目前將這些交易所列於：
+我們目前將它們列在：
 
 - [ethereum.org/get-eth](/get-eth/)
 
-使用者在這個頁面輸入他們的居住地，就能查看他們可以使用哪些交易所。 這有助於儘早發現任何地域限制。
+此頁面允許使用者輸入他們的居住地，並查看他們可以使用的交易所。這有助於及早發現任何地理限制。
 
-鑑於此類情況，當你建議交易所時我們需要一些具體資訊。
+基於這個背景，當您建議交易所時，我們需要一些特定資訊。
 
-**注意：**如果您想上架去中心化交易所，請參閱我們的[錢包和去中心化應用程式上架政策](/contributing/adding-products/)。
+**注意：**如果您想列出去中心化交易所，請查看我們的[上架錢包與去中心化應用程式 (dapp) 的政策](/contributing/adding-products/)。
 
-## 我們需要哪些資訊 {#what-we-need}
+## 我們需要的資訊 {#what-we-need}
 
-- 適用於交易所的地域限制。 與交易所相關的地域限制應在交易所網站的專門頁面詳細說明。
-- 使用者可以用來購買以太幣的貨幣
-- 證明該交易所是合法營運的公司的證據
-- 你可能擁有的任何額外資訊 - 這可能是有關公司的信息，例如經營年限、財務支持等。
+- 適用於該交易所的地理限制。與該交易所相關的地理限制應在該交易所網站的專屬頁面或區塊中詳細說明。
+- 使用者可以用來購買 ETH 的貨幣
+- 證明該交易所是合法貿易公司的證據
+- 您可能擁有的任何其他資訊 – 這可能是關於公司的資訊，例如營運年數、財務支持等。
 
-我們需要這些資訊，以便我們能準確地[幫助使用者找到他們可以使用的交易所](/get-eth/#country-picker)。
+我們需要這些資訊，以便我們能夠準確地[幫助使用者找到他們可以使用的交易所](/get-eth/#country-picker)。
 
-這樣 ethereum.org 也能夠更加確保交易所可以提供合法且安全的兌換服務。
+同時也讓 ethereum.org 更有信心該交易所是合法且安全的服務。
 
 ---
 
 ## 新增您的交易所 {#add-exchange}
 
-如果你想向 ethereum.org 新增交易所，請在 GitHub 上建立一個議題。
+如果您想將交易所新增至 ethereum.org，請在 GitHub 上建立 issue。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
-提交一個議題
+  建立 issue
 </ButtonLink>

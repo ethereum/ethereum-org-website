@@ -24,7 +24,7 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
         data-testid="feedback-widget-button"
         aria-label={t("feedback-widget")}
         className={cn(
-          "fixed bottom-4 end-4 z-overlay flex size-12 items-center gap-0 rounded-full text-white shadow-table-item-box",
+          "fixed end-4 bottom-4 z-overlay flex size-12 items-center gap-0 rounded-full text-white shadow-table-item-box",
           "transition-all duration-200 hover:shadow-none hover:transition-transform hover:duration-200",
           !suppressScale && "hover:scale-110",
           offsetBottom && "bottom-31 lg:bottom-4",
@@ -44,7 +44,7 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
         >
           <span
             className={cn(
-              "line-clamp-2 h-full items-center whitespace-nowrap font-bold leading-5 text-white",
+              "line-clamp-2 h-full items-center leading-5 font-bold whitespace-nowrap text-white",
               isExpanded ? "lg:flex" : "hidden"
             )}
           >

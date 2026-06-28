@@ -1,9 +1,10 @@
 ---
-title: "Solidityから他のコントラクトとやり取りする"
-description: "既存のコントラクトからスマートコントラクトをデプロイし、それとやり取りする方法"
+title: "Solidityから他のコントラクトと対話する"
+description: "既存のコントラクトからスマート・コントラクトをデプロイし、対話する方法"
 author: "jdourlens"
-tags: [ "スマートコントラクト", "Solidity", "Remix", "デプロイ", "構成可能性" ]
+tags: ["スマート・コントラクト", "Solidity", "Remix", "デプロイ", "コンポーザビリティ"]
 skill: advanced
+breadcrumb: "コントラクトの対話"
 lang: ja
 published: 2020-04-05
 source: EthereumDev
@@ -11,9 +12,9 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-これまでのチュートリアルでは、[最初のスマートコントラクトのデプロイ方法](/developers/tutorials/deploying-your-first-smart-contract/)や、[修飾子(modifier)を使ったアクセス制御](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/)、[Solidityでのエラー処理](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/)といった機能の追加など、多くのことを学びました。 このチュートリアルでは、既存のコントラクトからスマートコントラクトをデプロイし、それとやり取りする方法を学びます。
+これまでのチュートリアルでは、[初めてのスマート・コントラクトをデプロイする方法](/developers/tutorials/deploying-your-first-smart-contract/)や、[修飾子を使用したアクセス制御](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/)、[Solidityでのエラー処理](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/)などの機能を追加する方法について多くを学びました。このチュートリアルでは、既存のコントラクトからスマート・コントラクトをデプロイし、それと対話する方法を学びます。
 
-ここでは、`CounterFactory`という名前のファクトリーを作成することで、誰もが自分自身の`Counter`スマートコントラクトを持てるようにするコントラクトを作成します。 まず、これが最初の`Counter`スマートコントラクトのコードです。
+ファクトリを作成することで、誰でも独自の`Counter`スマート・コントラクトを持てるようにするコントラクトを作成します。その名前は`CounterFactory`になります。まず、最初の`Counter`スマート・コントラクトのコードを以下に示します。
 
 ```solidity
 pragma solidity 0.5.17;
@@ -26,12 +27,12 @@ contract Counter {
 
 
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "あなたはこのコントラクトの所有者ではありません");
+        require(caller == _owner, "You're not the owner of the contract");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "ファクトリーを使用する必要があります");
+        require(msg.sender == _factory, "You need to use the factory");
         _;
     }
 
@@ -51,19 +52,19 @@ contract Counter {
 }
 ```
 
-ファクトリーのアドレスとコントラクト所有者のアドレスを追跡するために、コントラクトコードを少し変更したことに注意してください。 他のコントラクトからコントラクトコードを呼び出すと、`msg.sender`は私たちのコントラクトファクトリーのアドレスを参照します。 コントラクトを使って他のコントラクトとやり取りするのは一般的な方法であるため、これは**理解しておくべき、本当に重要な点**です。 したがって、複雑なケースでは誰が送信者(`sender`)なのかに注意する必要があります。
+ファクトリのアドレスとコントラクトの所有者のアドレスを追跡するために、コントラクトのコードをわずかに変更したことに注意してください。別のコントラクトからコントラクトのコードを呼び出す場合、msg.senderはコントラクトファクトリのアドレスを参照します。コントラクトを使用して他のコントラクトと対話することは一般的な手法であるため、これは**理解しておくべき非常に重要なポイント**です。したがって、複雑なケースでは誰が送信者であるかに注意する必要があります。
 
-このため、元の呼び出し元をパラメータとして渡すファクトリーによってのみ状態変更関数が呼び出されるように、`onlyFactory`修飾子も追加しました。
+このため、状態を変更する関数が、元の呼び出し元をパラメータとして渡すファクトリによってのみ呼び出されることを保証する`onlyFactory`修飾子も追加しました。
 
-他のすべての`Counter`を管理する新しい`CounterFactory`の中に、所有者とそのカウンターコントラクトのアドレスを関連付けるマッピングを追加します。
+他のすべてのCounterを管理する新しい`CounterFactory`の中に、所有者とそのCounterコントラクトのアドレスを関連付けるマッピングを追加します。
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-イーサリアムでは、マッピングはJavaScriptのオブジェクトに相当し、型Aのキーを型Bの値にマッピングできます。このケースでは、所有者のアドレスをその`Counter`のインスタンスにマッピングします。
+イーサリアムでは、マッピングはJavaScriptのオブジェクトに相当し、タイプAの鍵をタイプBの値にマッピングできます。この場合、所有者のアドレスをそのCounterのインスタンスにマッピングします。
 
-誰かのために新しい`Counter`をインスタンス化するには、次のようになります。
+誰かのために新しいCounterをインスタンス化するコードは次のようになります。
 
 ```solidity
   function createCounter() public {
@@ -72,9 +73,9 @@ mapping(address => Counter) _counters;
   }
 ```
 
-まず、その人がすでにカウンターを所有しているかどうかをチェックします。 その人がカウンターを所有していない場合、その人のアドレスを`Counter`のコンストラクタに渡して新しいカウンターをインスタンス化し、新しく作成されたインスタンスをマッピングに割り当てます。
+まず、その人がすでにCounterを所有しているかどうかを確認します。Counterを所有していない場合は、その人のアドレスを`Counter`コンストラクタに渡して新しいCounterをインスタンス化し、新しく作成されたインスタンスをマッピングに割り当てます。
 
-特定の`Counter`のカウント数を取得するには、次のようになります。
+特定のCounterのカウントを取得するコードは次のようになります。
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
@@ -87,9 +88,9 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-最初の関数は、指定されたアドレスに対して`Counter`コントラクトが存在するかどうかをチェックし、その後インスタンスから`getCount`メソッドを呼び出します。 2番目の関数`getMyCount`は、`msg.sender`を直接`getCount`関数に渡すための、ただのショートカットです。
+最初の関数は、指定されたアドレスに対してCounterコントラクトが存在するかどうかを確認し、インスタンスから`getCount`メソッドを呼び出します。2番目の関数である`getMyCount`は、msg.senderを直接`getCount`関数に渡すための単なるショートカットです。
 
-`increment`関数も非常によく似ていますが、元のトランザクションの送信者(`sender`)を`Counter`コントラクトに渡します。
+`increment`関数も非常に似ていますが、元のトランザクション送信者を`Counter`コントラクトに渡します。
 
 ```solidity
 function increment() public {
@@ -98,11 +99,11 @@ function increment() public {
   }
 ```
 
-何度も呼び出されると、カウンターがオーバーフローを起こす可能性があることに注意してください。 この可能性から保護するために、[SafeMathライブラリ](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)をできるだけ使用すべきです。
+何度も呼び出されると、Counterがオーバーフローの被害に遭う可能性があることに注意してください。このような可能性から保護するために、可能な限り[SafeMathライブラリ](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)を使用する必要があります。
 
-このコントラクトをデプロイするには、`CounterFactory`と`Counter`の両方のコードを提供する必要があります。 例えばRemixでデプロイする場合、`CounterFactory`を選択する必要があります。
+コントラクトをデプロイするには、`CounterFactory`と`Counter`の両方のコードを提供する必要があります。たとえばRemixでデプロイする場合、CounterFactoryを選択する必要があります。
 
-こちらが全コードです。
+完全なコードは以下の通りです。
 
 ```solidity
 pragma solidity 0.5.17;
@@ -115,12 +116,12 @@ contract Counter {
 
 
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "あなたはこのコントラクトの所有者ではありません");
+        require(caller == _owner, "You're not the owner of the contract");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "ファクトリーを使用する必要があります");
+        require(msg.sender == _factory, "You need to use the factory");
         _;
     }
 
@@ -165,8 +166,8 @@ contract CounterFactory {
 }
 ```
 
-コンパイル後、Remixのデプロイセクションで、デプロイするファクトリーを選択します。
+コンパイル後、Remixのデプロイセクションで、デプロイするファクトリを選択します。
 
-![Remixでデプロイするファクトリーの選択](./counterfactory-deploy.png)
+![Selecting the factory to be deployed in Remix](./counterfactory-deploy.png)
 
-その後、コントラクトファクトリーを操作して、値が変化することを確認できます。 もし、異なるアドレスからスマートコントラクトを呼び出したい場合は、Remixのアカウント選択でアドレスを変更する必要があります。
+その後、コントラクトファクトリを操作して、値が変化することを確認できます。別のアドレスからスマート・コントラクトを呼び出したい場合は、Remixのアカウント選択でアドレスを変更する必要があります。

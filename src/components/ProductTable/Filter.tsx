@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { FieldLegend, FieldSet } from "@/components/ui/field"
 
 interface FilterProps {
   filter: FilterOption
@@ -104,38 +105,46 @@ const Filter = ({ filter, filterIndex, onChange }: FilterProps) => {
         <p className="text-base font-bold text-body">{filter.title}</p>
       </AccordionTrigger>
       <AccordionContent className="p-0 md:p-0">
-        {filter.items.map((item, itemIndex) => {
-          return (
-            <div
-              key={itemIndex}
-              className={`${item.options.length ? "pb-0" : "pb-4"}`}
-            >
-              {item.input(
-                filterIndex,
-                itemIndex,
-                item.inputState,
-                handleChange
-              )}
-              {item.inputState === true && item.options.length ? (
-                <div className="flex flex-row gap-6 px-2 pb-4">
-                  {item.options.map((option, optionIndex) => {
-                    return (
-                      <Fragment key={optionIndex}>
-                        {option.input(
-                          filterIndex,
-                          itemIndex,
-                          optionIndex,
-                          option.inputState,
-                          handleChange
-                        )}
-                      </Fragment>
-                    )
-                  })}
-                </div>
-              ) : null}
-            </div>
-          )
-        })}
+        <FieldSet className="gap-0">
+          <FieldLegend className="sr-only">{filter.title}</FieldLegend>
+          {filter.items.map((item, itemIndex) => {
+            return (
+              <div
+                key={itemIndex}
+                className={`${item.options.length ? "pb-0" : "pb-4"}`}
+              >
+                {item.input(
+                  filterIndex,
+                  itemIndex,
+                  item.inputState,
+                  handleChange
+                )}
+                {item.inputState === true && item.options.length ? (
+                  <FieldSet className="flex flex-row flex-wrap gap-x-6 gap-y-2 px-2 pb-4">
+                    {item.optionsLegend && (
+                      <FieldLegend className="sr-only">
+                        {item.optionsLegend}
+                      </FieldLegend>
+                    )}
+                    {item.options.map((option, optionIndex) => {
+                      return (
+                        <Fragment key={optionIndex}>
+                          {option.input(
+                            filterIndex,
+                            itemIndex,
+                            optionIndex,
+                            option.inputState,
+                            handleChange
+                          )}
+                        </Fragment>
+                      )
+                    })}
+                  </FieldSet>
+                ) : null}
+              </div>
+            )
+          })}
+        </FieldSet>
       </AccordionContent>
     </AccordionItem>
   )

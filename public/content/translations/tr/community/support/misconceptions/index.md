@@ -1,35 +1,33 @@
 ---
-title: Common misconceptions about Ethereum
-description: Clearing up the most common misunderstandings about how Ethereum works.
+title: Ethereum hakkındaki yaygın yanılgılar
+description: Ethereum'un nasıl çalıştığına dair en yaygın yanlış anlaşılmaları açıklığa kavuşturmak.
 lang: tr
 ---
 
-# Common misconceptions about Ethereum {#misconceptions}
-
 ## Ethereum bir şirket mi? {#not-a-company}
 
-Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
+Ethereum, dünya çapında binlerce katkıda bulunan kişi tarafından sürdürülen açık kaynaklı, merkeziyetsiz bir teknolojidir. Hesapları yöneten, fonları tutan veya müşteri desteği sağlayan "Ethereum" adında bir şirket yoktur.
 
-The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
+[Ethereum Vakfı](https://ethereum.foundation/), Ethereum'un gelişimini destekleyen kâr amacı gütmeyen bir kuruluştur, ancak ağın sahibi değildir veya ağı kontrol etmez. Hiçbir tekil kuruluş bunu yapmaz.
 
-**[ethereum.org](/)** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
+**[ethereum.org](/)** topluluk tarafından yürütülen eğitici bir kaynaktır. Bir borsa, cüzdan veya finansal kuruluş değildir. Herhangi bir kullanıcı fonu tutmaz ve hiçbir hesaba erişemez.
 
 <DocLink href="/what-is-ethereum/">
-  Ethereum Nedir?
+  Ethereum nedir?
 </DocLink>
 
 ## Birisi fonlarımı kurtarabilir veya dondurabilir mi? {#no-fund-access}
 
-Unlike a bank, there is no central authority on Ethereum that can freeze, seize, or recover funds. The person holding the private keys (or seed phrase) has full and sole control over a wallet.
+Bir bankanın aksine, Ethereum'da fonları dondurabilecek, el koyabilecek veya kurtarabilecek merkezi bir otorite yoktur. Özel anahtarları (veya kurtarma ifadesini) elinde bulunduran kişi, bir cüzdan üzerinde tam ve tek kontrole sahiptir.
 
-This means:
+Bunun anlamı şudur:
 
-- **No one can recover funds** you sent to the wrong address
-- **No one can reverse** a transaction after it is confirmed
-- **No one can freeze** your wallet or block your transactions
-- **No one can reset your password** if you lose your seed phrase
+- Yanlış adrese gönderdiğiniz **fonları kimse kurtaramaz**
+- Onaylandıktan sonra bir işlemi **kimse geri alamaz**
+- **Kimse cüzdanınızı donduramaz** veya işlemlerinizi engelleyemez
+- Kurtarma ifadenizi kaybederseniz **kimse şifrenizi sıfırlayamaz**
 
-This is why protecting your seed phrase is critical. It is the only way to access your wallet. If it is lost or stolen, there is no recovery option.
+Bu nedenle kurtarma ifadenizi korumak kritik öneme sahiptir. Cüzdanınıza erişmenin tek yolu budur. Kaybolur veya çalınırsa, hiçbir kurtarma seçeneği yoktur.
 
 <DocLink href="/security/">
   Ethereum güvenliği ve dolandırıcılığı önleme
@@ -37,36 +35,36 @@ This is why protecting your seed phrase is critical. It is the only way to acces
 
 ## Hâlâ Ethereum madenciliği yapabilir miyim? {#no-mining}
 
-Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Mining is no longer possible on Ethereum.
+Ethereum, Eylül 2022'deki [Birleşme](/roadmap/merge/) sırasında [İş Kanıtı (PoW)](/glossary/#pow) sisteminden [Hisse Kanıtı (PoS)](/glossary/#pos) sistemine geçiş yaptı. Ethereum'da madencilik artık mümkün değildir.
 
-The network is now secured by validators who [stake](/glossary/#staking) ETH. Anyone can participate:
+Ağ artık ETH [stake](/glossary/#staking) eden doğrulayıcılar tarafından güvence altına alınmaktadır. Herkes katılabilir:
 
-- **Solo staking:** Run your own validator with 32 ETH—[learn more](/staking/solo/)
-- **Staking as a service:** Delegate node operation while keeping your keys—[learn more](/staking/saas/)
-- **Pooled staking:** Stake with less than 32 ETH by joining a pool—[learn more](/staking/pools/)
+- **Bireysel staking:** 32 ETH ile kendi doğrulayıcınızı çalıştırın—[daha fazla bilgi edinin](/staking/solo/)
+- **Hizmet olarak staking:** Anahtarlarınızı elinizde tutarken düğüm operasyonunu yetki devredin—[daha fazla bilgi edinin](/staking/saas/)
+- **Havuzlu staking:** Bir havuza katılarak 32 ETH'den daha az bir miktarla stake edin—[daha fazla bilgi edinin](/staking/pools/)
 
 <DocLink href="/staking/">
-  Learn more about staking
+  Staking hakkında daha fazla bilgi edinin
 </DocLink>
 
-## Ethereum destek ekibi var mı? {#no-support-team}
+## Bir Ethereum destek ekibi var mı? {#no-support-team}
 
-Looking for "official Ethereum support" is similar to looking for "official internet support." This of course doesn't exist, but depending on your issue you may be able to seek out support from your internet service provider, your router hardware manufacturer, or one of the companies behind the device, app or website you're using.
+"Resmi Ethereum desteği" aramak, "resmi internet desteği" aramaya benzer. Bu elbette mevcut değildir, ancak sorununuzun türüne bağlı olarak internet servis sağlayıcınızdan, yönlendirici donanım üreticinizden veya kullandığınız cihazın, uygulamanın veya web sitesinin arkasındaki şirketlerden birinden destek arayabilirsiniz.
 
-Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
+Ethereum da buna benzer. Bir bütün olarak Ethereum'un arkasında hiçbir şirket, destek ekibi veya yardım masası yoktur, ancak soruna bağlı olarak _cüzdan sağlayıcınıza_, _staking hizmetinize_, _borsanıza_, _finansal kuruluşunuza_ veya kullandığınız _uygulamayı sürdüren ekibe_ ulaşarak yardım bulabilirsiniz.
 
-Since Ethereum is publicly transparent by default, you may also find [block explorers](/developers/docs/data-and-analytics/block-explorers/), [analytics tools](/developers/tools/analytics/), and other [online investigation resources](/community/support/scams/#analyze) useful in looking into a problem directly.
+Ethereum varsayılan olarak herkese açık ve şeffaf olduğundan, bir sorunu doğrudan incelemek için [blok gezginlerini](/developers/docs/data-and-analytics/block-explorers/), [analitik araçlarını](/developers/tools/analytics/) ve diğer [çevrimiçi araştırma kaynaklarını](/community/support/scams/#analyze) da faydalı bulabilirsiniz.
 
-That said, no one from Ethereum or ethereum.org will ever:
+Bununla birlikte, Ethereum veya ethereum.org'dan hiç kimse asla:
 
-- Contact you via direct message
-- Ask for your seed phrase or private keys
-- Ask you to send ETH to verify your wallet
-- Offer to help you recover funds for a fee
+- Sizinle doğrudan mesaj yoluyla iletişime geçmez
+- Kurtarma ifadenizi veya özel anahtarlarınızı istemez
+- Cüzdanınızı doğrulamak için ETH göndermenizi istemez
+- Bir ücret karşılığında fonlarınızı kurtarmanıza yardım etmeyi teklif etmez
 
-**Anyone doing any of the above is trying to scam you.**
+**Yukarıdakilerden herhangi birini yapan biri sizi dolandırmaya çalışıyordur.**
 
-If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities—not official support channels.
+Yardıma ihtiyacınız varsa, yardımcı olabilecek gerçek topluluklar [destek sayfasında](/community/support/) listelenmiştir. Bunlar gönüllüler tarafından yürütülen açık topluluklardır; resmi destek kanalları değildir.
 
 <DocLink href="/security/">
   Ethereum güvenliği ve dolandırıcılığı önleme

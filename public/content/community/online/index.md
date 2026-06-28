@@ -4,8 +4,6 @@ description: Discover online forums, chat rooms, and social media communities wh
 lang: en
 ---
 
-# Online communities {#online-communities}
-
 Hundreds of thousands of [Ethereum](/) enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.
 
 ## Listing policy {#listing-policy}
@@ -54,7 +52,7 @@ If you believe a community should be added or removed based on these guidelines,
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - web3 creators community where builders, industrial figureheads, and Ethereum enthusiasts hang out. We're passionate about web3 development, design, and culture. Come build with us.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat for solidity development (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- question and answer forum</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- decentralized question and answer forum</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- decentralized question and answer forum</i></SocialListItem>
 
 ## YouTube and X (formerly Twitter) {#youtube-and-twitter}
 
@@ -65,10 +63,8 @@ If you believe a community should be added or removed based on these guidelines,
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
-  <div>
-    <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
-      Learn more about DAOs
-    </ButtonLink>
-  </div>
+<Callout title="Decentralized Autonomous Organizations (DAOs)" description="These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets.">
+  <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
+    Learn more about DAOs
+  </ButtonLink>
 </Callout>

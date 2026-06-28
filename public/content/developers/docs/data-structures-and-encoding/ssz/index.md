@@ -87,8 +87,6 @@ There are also some special cases that require specific treatment, such as the `
 
 To deserialize this object requires the <b>schema</b>. The schema defines the precise layout of the serialized data so that each specific element can be deserialized from a blob of bytes into some meaningful object with the elements having the right type, value, size and position. It is the schema that tells the deserializer which values are actual values and which ones are offsets. All field names disappear when an object is serialized, but reinstantiated on deserialization according to the schema.
 
-See [ssz.dev](https://www.ssz.dev/overview) for an interactive explainer on this.
-
 ## Merkleization {#merkleization}
 
 This SSZ serialized object can then be merkleized - that is transformed into a Merkle-tree representation of the same data. First, the number of 32-byte chunks in the serialized object is determined. These are the "leaves" of the tree. The total number of leaves must be a power of 2 so that hashing together the leaves eventually produces a single hash-tree-root. If this is not naturally the case, additional leaves containing 32 bytes of zeros are added. Diagrammatically:
@@ -147,4 +145,3 @@ The hash of (8,9) should equal hash (4), which hashes with 5 to produce 2, which
 - [Upgrading Ethereum: Merkleization](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [SSZ implementations](https://github.com/ethereum/consensus-specs/issues/2138)
 - [SSZ calculator](https://simpleserialize.com/)
-- [SSZ.dev](https://www.ssz.dev/)

@@ -1,0 +1,325 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-19T18:46:45.230Z",
+  "englishManifestHash": "b4a2837a5958",
+  "placeholderOrder": [
+    "LINK-c42188",
+    "LINK-5e5e9b",
+    "LINK-6857cb",
+    "LINK-1200a5",
+    "LINK-456e6f",
+    "LINK-0ab4bf",
+    "LINK-28afbb",
+    "LINK-852ac2",
+    "LINK-8fd1fb",
+    "LINK-08ea5c",
+    "LINK-63ab94",
+    "LINK-ca06c1",
+    "LINK-7d33f4",
+    "LINK-5929c7",
+    "LINK-01ade7",
+    "LINK-662130",
+    "LINK-849bd1",
+    "LINK-7dd6f5",
+    "LINK-55865e",
+    "LINK-28bc92",
+    "LINK-2d80e3",
+    "LINK-4a9368",
+    "LINK-3543f4",
+    "LINK-f21e7c",
+    "LINK-3e034b",
+    "LINK-d7b28c",
+    "LINK-84b15c",
+    "LINK-fcf24d",
+    "LINK-1993b1",
+    "LINK-a8b6d1",
+    "LINK-7082b5",
+    "LINK-77bf57",
+    "LINK-b129d5",
+    "LINK-58556e",
+    "LINK-8f64c5",
+    "LINK-3a67ab",
+    "LINK-e9e000",
+    "LINK-5e5e9b",
+    "LINK-b31644",
+    "LINK-b52454",
+    "LINK-76114b",
+    "LINK-948cc5",
+    "LINK-45e450",
+    "LINK-1fda69",
+    "LINK-cce6d3"
+  ],
+  "placeholderMap": {
+    "LINK-c42188": {
+      "type": "link",
+      "values": {
+        "url": "/learn/"
+      }
+    },
+    "LINK-5e5e9b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-6857cb": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained"
+      }
+    },
+    "LINK-1200a5": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract"
+      }
+    },
+    "LINK-456e6f": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract"
+      }
+    },
+    "LINK-0ab4bf": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment"
+      }
+    },
+    "LINK-28afbb": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nethereum.com/docs/getting-started/welcome/"
+      }
+    },
+    "LINK-852ac2": {
+      "type": "link",
+      "values": {
+        "url": "https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity"
+      }
+    },
+    "LINK-8fd1fb": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2"
+      }
+    },
+    "LINK-08ea5c": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm"
+      }
+    },
+    "LINK-63ab94": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933"
+      }
+    },
+    "LINK-ca06c1": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1"
+      }
+    },
+    "LINK-7d33f4": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/"
+      }
+    },
+    "LINK-5929c7": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36"
+      }
+    },
+    "LINK-01ade7": {
+      "type": "link",
+      "values": {
+        "url": "https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c"
+      }
+    },
+    "LINK-662130": {
+      "type": "link",
+      "values": {
+        "url": "https://playground.nethereum.com/"
+      }
+    },
+    "LINK-849bd1": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nethereum.com/docs/core-foundation/guide-query-balance"
+      }
+    },
+    "LINK-7dd6f5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nethereum.com/docs/smart-contracts/erc20"
+      }
+    },
+    "LINK-55865e": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nethereum.com/docs/core-foundation/guide-send-eth"
+      }
+    },
+    "LINK-28bc92": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nethereum.com/docs/getting-started/first-project"
+      }
+    },
+    "LINK-2d80e3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Nethereum/Testchains"
+      }
+    },
+    "LINK-4a9368": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nethereum.com/docs/aspire-templates/guide-codegen"
+      }
+    },
+    "LINK-3543f4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how"
+      }
+    },
+    "LINK-f21e7c": {
+      "type": "link",
+      "values": {
+        "url": "https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/"
+      }
+    },
+    "LINK-3e034b": {
+      "type": "link",
+      "values": {
+        "url": "http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4"
+      }
+    },
+    "LINK-d7b28c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing"
+      }
+    },
+    "LINK-84b15c": {
+      "type": "link",
+      "values": {
+        "url": "https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/"
+      }
+    },
+    "LINK-fcf24d": {
+      "type": "link",
+      "values": {
+        "url": "https://kaleido.io/kaleido-and-nethereum/"
+      }
+    },
+    "LINK-1993b1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md"
+      }
+    },
+    "LINK-a8b6d1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum"
+      }
+    },
+    "LINK-7082b5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Nethereum/Nethereum.DappHybrid"
+      }
+    },
+    "LINK-77bf57": {
+      "type": "link",
+      "values": {
+        "url": "https://playground.nethereum.com/"
+      }
+    },
+    "LINK-b129d5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Nethereum/Nethereum.CodeGen.Blazor"
+      }
+    },
+    "LINK-58556e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Nethereum/NethereumBlazor"
+      }
+    },
+    "LINK-8f64c5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/NethermindEth/nethermind"
+      }
+    },
+    "LINK-3a67ab": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/eth-utils/"
+      }
+    },
+    "LINK-e9e000": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Nethereum/TestChains"
+      }
+    },
+    "LINK-b31644": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/Nethereum/Nethereum"
+      }
+    },
+    "LINK-b52454": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Nethereum"
+      }
+    },
+    "LINK-76114b": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/jQPrR58FxX"
+      }
+    },
+    "LINK-948cc5": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/PaCMRFdvWT"
+      }
+    },
+    "LINK-45e450": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/NethermindEth/nethermind"
+      }
+    },
+    "LINK-1fda69": {
+      "type": "link",
+      "values": {
+        "url": "https://nethereum.com/"
+      }
+    },
+    "LINK-cce6d3": {
+      "type": "link",
+      "values": {
+        "url": "https://nethermind.io/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T18:46:45.230Z",
+      "status": "success"
+    }
+  }
+}

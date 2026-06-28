@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-18T00:32:19.457Z",
+  "englishManifestHash": "4990aebfedd7",
+  "placeholderOrder": [
+    "LINK-bc6c5f",
+    "LINK-fb2e62",
+    "LINK-1c14ff",
+    "CODEBLOCK-fa1879",
+    "CODEBLOCK-89a1c3",
+    "CODEBLOCK-4cbf29",
+    "CODE-9af211",
+    "CODEBLOCK-c7e49f",
+    "CODE-8b9718",
+    "CODE-4c1029",
+    "CODEBLOCK-a44c96",
+    "CODE-cf38d9",
+    "CODE-bfa3d0",
+    "CODE-dde8be",
+    "CODEBLOCK-88d5ad",
+    "CODE-32f09f",
+    "CODE-8b9718",
+    "CODE-bfa3d0",
+    "CODEBLOCK-871445",
+    "CODE-cf38d9",
+    "CODE-0a367b",
+    "CODE-665d06",
+    "CODE-dde8be",
+    "CODEBLOCK-b163a0",
+    "CODE-75857a",
+    "CODE-663ea1",
+    "CODE-75857a",
+    "CODE-663ea1",
+    "CODEBLOCK-02461e",
+    "CODE-cd4240",
+    "CODE-4c1029",
+    "CODE-8b9718",
+    "CODEBLOCK-6f0e9a",
+    "LINK-01d07b"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-fa1879": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-89a1c3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4cbf29": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c7e49f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a44c96": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-88d5ad": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-871445": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b163a0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-02461e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6f0e9a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-9af211": {
+      "type": "inline-code",
+      "values": {
+        "content": "account"
+      }
+    },
+    "CODE-8b9718": {
+      "type": "inline-code",
+      "values": {
+        "content": "spender"
+      }
+    },
+    "CODE-4c1029": {
+      "type": "inline-code",
+      "values": {
+        "content": "owner"
+      }
+    },
+    "CODE-cf38d9": {
+      "type": "inline-code",
+      "values": {
+        "content": "amount"
+      }
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-dde8be": {
+      "type": "inline-code",
+      "values": {
+        "content": "Transfer"
+      }
+    },
+    "CODE-32f09f": {
+      "type": "inline-code",
+      "values": {
+        "content": "allowance"
+      }
+    },
+    "CODE-0a367b": {
+      "type": "inline-code",
+      "values": {
+        "content": "sender"
+      }
+    },
+    "CODE-665d06": {
+      "type": "inline-code",
+      "values": {
+        "content": "recipient"
+      }
+    },
+    "CODE-75857a": {
+      "type": "inline-code",
+      "values": {
+        "content": "from"
+      }
+    },
+    "CODE-663ea1": {
+      "type": "inline-code",
+      "values": {
+        "content": "to"
+      }
+    },
+    "CODE-cd4240": {
+      "type": "inline-code",
+      "values": {
+        "content": "value"
+      }
+    },
+    "LINK-bc6c5f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-1c14ff": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/"
+      }
+    },
+    "LINK-01d07b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:32:19.457Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-18T00:38:32.294Z",
+  "englishManifestHash": "6ec1f6b38c44",
+  "placeholderOrder": [
+    "COMPONENT-b15cd1",
+    "COMPONENT-7f20f7",
+    "COMPONENT-c371d5",
+    "HTMLTAG-190660",
+    "HTMLTAG-42b184",
+    "LINK-639556",
+    "LINK-6ee574",
+    "LINK-058aee",
+    "LINK-4df3a2",
+    "LINK-deef7f"
+  ],
+  "placeholderMap": {
+    "COMPONENT-b15cd1": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "title": "Incentivized",
+        "emoji": ":money_with_wings:"
+      }
+    },
+    "COMPONENT-7f20f7": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "title": "Decentralization",
+        "emoji": "🌎"
+      }
+    },
+    "COMPONENT-c371d5": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🤝"
+      }
+    },
+    "HTMLTAG-190660": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-0"
+      }
+    },
+    "HTMLTAG-42b184": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "p",
+        "className": "mt-2"
+      }
+    },
+    "LINK-639556": {
+      "type": "link",
+      "values": {
+        "url": "https://www.investopedia.com/terms/t/thinmarket.asp"
+      }
+    },
+    "LINK-6ee574": {
+      "type": "link",
+      "values": {
+        "url": "https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305"
+      }
+    },
+    "LINK-058aee": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2024/11/09/infofinance.html"
+      }
+    },
+    "LINK-4df3a2": {
+      "type": "link",
+      "values": {
+        "url": "https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/"
+      }
+    },
+    "LINK-deef7f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/AugurProject/whitepaper"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:38:32.294Z",
+      "status": "success"
+    }
+  }
+}

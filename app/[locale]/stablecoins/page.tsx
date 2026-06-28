@@ -1,5 +1,11 @@
 import { pick } from "lodash"
-import { Info } from "lucide-react"
+import {
+  ArrowLeftRight,
+  Globe,
+  Info,
+  ShieldCheck,
+  TrendingUp,
+} from "lucide-react"
 import {
   getMessages,
   getTranslations,
@@ -8,31 +14,41 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import CalloutBannerSSR from "@/components/CalloutBannerSSR"
-import DataProductCard from "@/components/DataProductCard"
-import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
-import GhostCard from "@/components/GhostCard"
-import HorizontalCard from "@/components/HorizontalCard"
+import PathwayCard from "@/components/cards/pathway-card"
+import ContentFeedback from "@/components/ContentFeedback"
+import { PageHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
+import { CheckCircle } from "@/components/icons/CheckCircle"
+import { XCircle } from "@/components/icons/XCircle"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageHero from "@/components/PageHero"
 import ProductList from "@/components/ProductList"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
-import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Divider } from "@/components/ui/divider"
-import { Flex } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
+import {
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "@/components/ui/edge-scroll-container"
+import { Grid } from "@/components/ui/grid"
+import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { stablecoins } from "./data"
@@ -41,12 +57,17 @@ import StablecoinsPageJsonLD from "./page-jsonld"
 import { getStablecoinsData } from "@/lib/data"
 import sparkfiImg from "@/public/images/dapps/sparkfi.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
-import dogeComputerImg from "@/public/images/doge-computer.png"
+import swapCardImg from "@/public/images/developers-eth-blocks.png"
+import exchangeCardImg from "@/public/images/homepage/features/global.png"
+import buyCardImg from "@/public/images/impact_transparent.png"
+import manAndDogImg from "@/public/images/man-and-dog-playing.png"
 import aaveImg from "@/public/images/stablecoins/aave.png"
+import bitcoinPizzaImg from "@/public/images/stablecoins/bitcoin-pizza-party-photo.png"
 import compoundImg from "@/public/images/stablecoins/compound.png"
 import ghoLargeImg from "@/public/images/stablecoins/gho-large.png"
 import gloLargeImg from "@/public/images/stablecoins/glo-large.png"
-import heroImg from "@/public/images/stablecoins/hero.png"
+import heroImg from "@/public/images/stablecoins/gold-rollup-spaceship-with-coins.png"
+import gettingStartedImg from "@/public/images/stablecoins/three-people-cat-butterflies-petting-dog.png"
 import duneImg from "@/public/images/stablecoins/tools/dune.png"
 import stablePulseImg from "@/public/images/stablecoins/tools/stable-pulse.png"
 import stablecoinsWtfImg from "@/public/images/stablecoins/tools/stablecoinswtf.png"
@@ -55,6 +76,9 @@ import stablesWarsImg from "@/public/images/stablecoins/tools/stables-wars.png"
 import visaImg from "@/public/images/stablecoins/tools/visa.png"
 import usdcLargeImg from "@/public/images/stablecoins/usdc-large.png"
 import usdsLargeImg from "@/public/images/stablecoins/usds-large.png"
+import earnCardImg from "@/public/images/upgrades/core.png"
+import borrowCardImg from "@/public/images/upgrades/upgrade_eth.png"
+import walletCardImg from "@/public/images/wallets/wallet-hero.png"
 
 export type CoinDetails = {
   name: string
@@ -68,17 +92,26 @@ export type CoinDetails = {
 
 const MIN_MARKET_CAP_USD = 500_000
 
+// Vertical rhythm matches the Figma (112px / py-28 between section content on
+// desktop), eased down on smaller viewports.
 const Section = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
-  <section className={cn("w-full px-8 py-4", className)} {...props} />
+  <section
+    className={cn(
+      "mx-auto w-full max-w-screen-xl px-8 py-16 lg:py-28",
+      className
+    )}
+    {...props}
+  />
 )
 
-async function Page({ params }: { params: PageParams }) {
+async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-stablecoins" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-stablecoins")
+  const tCommon = await getTranslations("common")
 
   setRequestLocale(locale)
 
@@ -87,16 +120,15 @@ async function Page({ params }: { params: PageParams }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
   const messages = pick(allMessages, requiredNamespaces)
 
-  let marketsHasError = false // TODO: Implement error handling
+  let marketsHasError = false
   const coinDetails: CoinDetails[] = []
 
   try {
     marketsHasError = false
 
-    // Fetch stablecoins data using the new data-layer function (already cached)
+    // Fetch stablecoins data using the data-layer function (already cached)
     const stablecoinsData = await getStablecoinsData()
 
-    // Handle null case - throw error if required data is missing
     if (!stablecoinsData) {
       throw new Error("Failed to fetch stablecoins data")
     }
@@ -105,7 +137,6 @@ async function Page({ params }: { params: PageParams }) {
       .map(({ id, ...rest }) => {
         const coinMarketData = stablecoinsData.find((coin) => coin.id === id)
         if (!coinMarketData) {
-          // CoinGecko data may not include all configured stablecoins
           return null
         }
         return { ...coinMarketData, ...rest }
@@ -117,7 +148,7 @@ async function Page({ params }: { params: PageParams }) {
       .sort((a, b) => b.market_cap - a.market_cap)
       .map(({ market_cap, ...rest }) => ({
         ...rest,
-        marketCap: new Intl.NumberFormat("en-US", {
+        marketCap: numberFormat(locale, {
           style: "currency",
           currency: "USD",
           minimumFractionDigits: 0,
@@ -127,68 +158,39 @@ async function Page({ params }: { params: PageParams }) {
     coinDetails.push(...ethereumStablecoinData)
   } catch (error) {
     console.error(error)
-    marketsHasError = true // TODO: Handle error state
+    marketsHasError = true
   }
 
-  const heroContent = {
-    title: t("page-stablecoins-title"),
-    header: t("page-stablecoins-hero-header"),
-    subtitle: t("page-stablecoins-hero-subtitle"),
-    image: heroImg,
-    alt: t("page-stablecoins-hero-alt"),
-    buttons: [
-      {
-        content: t("page-stablecoins-hero-button"),
-        toId: "explore",
-        matomo: {
-          eventCategory: "stablecoins hero buttons",
-          eventAction: "click",
-          eventName: "get stablecoins",
-        },
-      },
-      {
-        content: t("page-stablecoins-how-they-work-button"),
-        toId: "how",
-        variant: "outline" as const,
-        matomo: {
-          eventCategory: "stablecoins hero buttons",
-          eventAction: "click",
-          eventName: "how they work",
-        },
-      },
-    ],
-  }
-
-  const tokens = [
+  const features = [
     {
-      emoji: ":globe_showing_americas:",
+      title: t("page-stablecoins-feature-1-title"),
+      icon: Globe,
       description: (
         <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-1" />
       ),
     },
     {
-      emoji: ":chart_with_upwards_trend:",
+      title: t("page-stablecoins-feature-2-title"),
+      icon: TrendingUp,
       description: (
         <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-2" />
       ),
     },
     {
-      emoji: ":handshake:",
+      title: t("page-stablecoins-feature-3-title"),
+      icon: ArrowLeftRight,
       description: (
         <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-3" />
       ),
     },
     {
-      emoji: ":key:",
+      title: t("page-stablecoins-feature-4-title"),
+      icon: ShieldCheck,
       description: (
         <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-4" />
       ),
     },
   ]
-
-  const getMarketCapByName = (name: string) =>
-    coinDetails.find((m) => m.symbol.toUpperCase() === name.toUpperCase())
-      ?.marketCap
 
   const editorsChoices = [
     {
@@ -200,8 +202,7 @@ async function Page({ params }: { params: PageParams }) {
       swapButtonText: t("page-stablecoins-usds-banner-swap-button"),
       learnUrl: "https://sky.money/",
       learnButtonText: t("page-stablecoins-usds-banner-learn-button"),
-      shadowColor: "amber",
-      marketCap: getMarketCapByName("usds"),
+      bannerClass: "bg-amber-100 dark:bg-amber-950/40",
     },
     {
       title: "USDC",
@@ -212,8 +213,7 @@ async function Page({ params }: { params: PageParams }) {
       swapButtonText: t("page-stablecoins-usdc-banner-swap-button"),
       learnUrl: "https://www.circle.com/en/usdc",
       learnButtonText: t("page-stablecoins-usdc-banner-learn-button"),
-      shadowColor: "blue",
-      marketCap: getMarketCapByName("usdc"),
+      bannerClass: "bg-blue-100 dark:bg-blue-950/40",
     },
     {
       title: "GHO",
@@ -225,8 +225,7 @@ async function Page({ params }: { params: PageParams }) {
       swapButtonText: t("page-stablecoins-gho-banner-swap-button"),
       learnUrl: "https://aave.com/docs/primitives/gho",
       learnButtonText: t("page-stablecoins-gho-banner-learn-button"),
-      shadowColor: "green",
-      marketCap: getMarketCapByName("gho"),
+      bannerClass: "bg-green-100 dark:bg-green-950/40",
     },
     {
       title: "Glo Dollar",
@@ -237,8 +236,7 @@ async function Page({ params }: { params: PageParams }) {
       swapButtonText: t("page-stablecoins-glo-banner-swap-button"),
       learnUrl: "https://www.glodollar.org/",
       learnButtonText: t("page-stablecoins-glo-banner-learn-button"),
-      shadowColor: "cyan",
-      marketCap: getMarketCapByName("usdglo"),
+      bannerClass: "bg-cyan-100 dark:bg-cyan-950/40",
     },
   ]
 
@@ -251,54 +249,81 @@ async function Page({ params }: { params: PageParams }) {
     </div>
   )
 
-  const dapps = [
+  // How to get stablecoins — method cards linking to anchors / DeFi page
+  const methods = [
+    {
+      title: t("page-stablecoins-method-swap-title"),
+      description: t("page-stablecoins-method-swap-description"),
+      href: "/defi/#swaps",
+      image: swapCardImg,
+      badge: {
+        label: t("page-stablecoins-recommended"),
+        status: "success" as const,
+      },
+    },
+    {
+      title: t("page-stablecoins-method-buy-title"),
+      description: t("page-stablecoins-method-buy-description"),
+      href: "#stablecoin-markets",
+      image: buyCardImg,
+    },
+    {
+      title: t("page-stablecoins-method-earn-title"),
+      description: t("page-stablecoins-method-earn-description"),
+      href: "#earn-interest",
+      image: earnCardImg,
+    },
+    {
+      title: t("page-stablecoins-method-borrow-title"),
+      description: t("page-stablecoins-method-borrow-description"),
+      href: "/defi/#lending",
+      image: borrowCardImg,
+      badge: {
+        label: t("page-stablecoins-advanced"),
+        status: "warning" as const,
+      },
+    },
+  ]
+
+  const interestApps = [
     {
       url: "https://aave.com",
       alt: t("aave-logo"),
       image: aaveImg,
-      width: 64 * 3,
       name: "Aave",
       description: t("page-stablecoins-stablecoins-dapp-description-1"),
-      className:
-        "[&>[data-label='banner']]:bg-gradient-to-tr from-[#5cb8c4] to-[#aa589b]",
+      bannerClass: "bg-[#a78bfa]",
     },
     {
       url: "https://compound.finance",
       alt: t("compound-logo"),
       image: compoundImg,
-      width: 64 * 2,
       name: "Compound",
       description: t("page-stablecoins-stablecoins-dapp-description-2"),
-      className:
-        "[&>[data-label='banner']]:bg-gradient-to-tr dark:from-white/5 ",
+      bannerClass: "bg-gray-900",
     },
     {
       url: "https://summer.fi/",
       alt: t("summerfi-logo"),
       image: summerfiImg,
-      width: (64 * 3) / 2,
       name: "Summer.fi",
       description: t("page-stablecoins-stablecoins-dapp-description-4"),
-      className:
-        "[&>[data-label='banner']]:bg-gradient-to-br from-[#c7efe6] to-[#eeeac7]",
+      bannerClass: "bg-gray-900",
     },
     {
       url: "https://spark.fi/",
       alt: t("sparkfi-logo"),
       image: sparkfiImg,
-      width: 64 * 2,
       name: "Spark Protocol",
       description: t("page-stablecoins-stablecoins-dapp-description-5"),
-      className:
-        "[&>[data-label='banner']]:bg-gradient-to-tr dark:from-white/5",
+      bannerClass: "bg-gray-100 dark:bg-gray-800",
     },
   ]
 
-  const features = [
+  const types = [
     {
       title: t("page-stablecoins-fiat-backed"),
       description: t("page-stablecoins-fiat-backed-description"),
-      emoji: ":dollar:",
       pros: [
         t("page-stablecoins-fiat-backed-pro-1"),
         t("page-stablecoins-fiat-backed-pro-2"),
@@ -315,7 +340,6 @@ async function Page({ params }: { params: PageParams }) {
     {
       title: t("page-stablecoins-crypto-backed"),
       description: t("page-stablecoins-crypto-backed-description"),
-      emoji: ":unicorn:",
       pros: [
         t("page-stablecoins-crypto-backed-pro-1"),
         t("page-stablecoins-crypto-backed-pro-2"),
@@ -335,7 +359,6 @@ async function Page({ params }: { params: PageParams }) {
       description: (
         <Translation id="page-stablecoins:page-stablecoins-precious-metals-description" />
       ),
-      emoji: ":gem_stone:",
       pros: [t("page-stablecoins-precious-metals-pro-1")],
       cons: [
         t("page-stablecoins-precious-metals-con-1"),
@@ -349,7 +372,6 @@ async function Page({ params }: { params: PageParams }) {
     {
       title: t("page-stablecoins-algorithmic"),
       description: t("page-stablecoins-algorithmic-description"),
-      emoji: ":chart_with_downwards_trend:",
       pros: [
         t("page-stablecoins-algorithmic-pro-1"),
         t("page-stablecoins-algorithmic-pro-2"),
@@ -416,359 +438,451 @@ async function Page({ params }: { params: PageParams }) {
   )
 
   return (
-    <>
-      <I18nProvider locale={locale} messages={messages}>
-        <StablecoinsPageJsonLD locale={locale} contributors={contributors} />
-        <MainArticle className="mx-auto my-0 w-full flex-col items-center">
-          <PageHero isReverse content={heroContent} />
-          <Divider />
-          <Section>
-            <Flex className="mb-8 me-8 w-full flex-col items-start lg:flex-row">
-              <div className="me-auto ms-auto w-full lg:me-2 lg:ms-0">
-                <h2 className="mb-8">
-                  {t("page-stablecoins-why-stablecoins")}
-                </h2>
-                <p className="mb-6">
-                  <Translation id="page-stablecoins:page-stablecoins-prices-definition" />{" "}
-                  <InlineLink href="#how">
-                    {t("page-stablecoins-prices-definition-how")}
-                  </InlineLink>
-                </p>
-              </div>
-            </Flex>
-            <Flex className="mb-8 me-0 w-full flex-col items-start lg:me-8 lg:flex-row">
-              <Flex className="mx-auto w-full flex-col gap-2 lg:mx-8 lg:my-0">
-                {tokens.map((token, index) => (
-                  <div key={index} className="my-2 min-w-full">
-                    <HorizontalCard
-                      emoji={token.emoji}
-                      description={token.description}
-                    />
-                  </div>
-                ))}
-              </Flex>
-              <GhostCard className="me-0 mt-16 max-w-[640px] lg:me-8 lg:mt-2">
-                <Emoji text=":pizza:" className="text-5xl" />
-                <h3 className="mb-8 mt-12">
-                  {t("page-stablecoins-bitcoin-pizza")}
-                </h3>
-                <p className="mb-6">
-                  {t("page-stablecoins-bitcoin-pizza-body")}{" "}
-                </p>
-              </GhostCard>
-            </Flex>
-          </Section>
+    <I18nProvider locale={locale} messages={messages}>
+      <StablecoinsPageJsonLD locale={locale} contributors={contributors} />
+      <MainArticle className="mx-auto my-0 w-full flex-col items-center">
+        <PageHero
+          breadcrumbs={{ slug: "/stablecoins" }}
+          heroImg={heroImg}
+          title={t("page-stablecoins-hero-header")}
+          description={t("page-stablecoins-hero-subtitle")}
+          buttons={[
+            {
+              content: t("page-stablecoins-hero-button"),
+              toId: "get-stablecoins",
+              matomo: {
+                eventCategory: "stablecoins hero buttons",
+                eventAction: "click",
+                eventName: "get stablecoins",
+              },
+            },
+            {
+              content: t("page-stablecoins-how-they-work-button"),
+              toId: "how",
+              matomo: {
+                eventCategory: "stablecoins hero buttons",
+                eventAction: "click",
+                eventName: "how they work",
+              },
+            },
+          ]}
+          variant="no-divider"
+        />
 
-          <div
-            className={cn(
-              "my-8 w-full py-16 shadow-inner",
-              "bg-gradient-to-r from-accent-a/10 to-accent-c/10",
-              "dark:bg-gradient-to-tr dark:from-primary/20 dark:from-20% dark:via-accent-a/20 dark:via-60% dark:to-accent-c/20 dark:to-95%"
-            )}
+        {/* Why stablecoins */}
+        <Section className="text-center">
+          <h2 className="mb-4 text-4xl font-black lg:text-5xl">
+            {t("page-stablecoins-why-stablecoins")}
+          </h2>
+          <p className="mx-auto mb-12 max-w-3xl text-lg text-body-medium">
+            <Translation id="page-stablecoins:page-stablecoins-why-stablecoins-intro" />
+          </p>
+          <Grid balanced={4} className="mb-12 gap-4 text-start">
+            {features.map(({ title, description, icon: Icon }) => (
+              <Card key={title} variant="base" size="lg">
+                <CardContent>
+                  <Icon className="size-12 text-primary" />
+                  <CardTitle>{title}</CardTitle>
+                  <CardParagraph>{description}</CardParagraph>
+                </CardContent>
+              </Card>
+            ))}
+          </Grid>
+          <Card
+            variant="nested"
+            className="flex-row items-center gap-6 border p-6 text-start"
           >
-            <div className="-mb-8 w-full px-8 py-4">
-              <h2 className="mb-8">{t("page-stablecoins-find-stablecoin")}</h2>
-              <Flex className="me-auto ms-auto w-full flex-col justify-center lg:me-2 lg:ms-0 lg:w-1/2">
-                <p className="mb-6">
-                  {t("page-stablecoins-find-stablecoin-intro")}
-                </p>
-                <ul>
-                  <li>
-                    <InlineLink href="#how">
-                      {t("page-stablecoins-find-stablecoin-types-link")}
-                    </InlineLink>
-                  </li>
-                  <li>
-                    <InlineLink href="#explore">
-                      {t("page-stablecoins-find-stablecoin-how-to-get-them")}
-                    </InlineLink>
-                  </li>
-                </ul>
-              </Flex>
+            <div className="relative h-32 w-40 shrink-0 overflow-hidden rounded-xl max-sm:hidden">
+              <Image
+                src={bitcoinPizzaImg}
+                alt={t("page-stablecoins-bitcoin-pizza-alt")}
+                fill
+                className="object-cover"
+                sizes="160px"
+              />
+            </div>
+            <div>
+              <CardTitle className="mb-2">
+                {t("page-stablecoins-bitcoin-pizza")}
+              </CardTitle>
+              <CardParagraph size="sm">
+                {t("page-stablecoins-bitcoin-pizza-body")}
+              </CardParagraph>
+            </div>
+          </Card>
+        </Section>
 
-              <h3 className="mb-4 mt-0">
-                {t("page-stablecoins-editors-choice")}
-              </h3>
-              <p className="mb-6">
-                {t("page-stablecoins-editors-choice-intro")}
+        {/* How they work: types of stablecoins */}
+        <Section id="how" className="text-center">
+          <h2 className="mb-4 text-4xl font-black lg:text-5xl">
+            {t("page-stablecoins-types-of-stablecoin")}
+          </h2>
+          <p className="mx-auto mb-10 max-w-3xl text-lg text-body-medium">
+            {t("page-stablecoins-types-intro")}
+          </p>
+          <Tabs defaultValue={types[0].title}>
+            <TabsList>
+              {types.map((type) => (
+                <TabsTrigger key={type.title} value={type.title}>
+                  {type.title}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            {types.map((type) => (
+              <TabsContent
+                key={type.title}
+                value={type.title}
+                className="mt-6 border-0 p-0"
+              >
+                <Grid
+                  balanced={2}
+                  className="gap-8 rounded-base bg-background-highlight p-6 text-start md:p-10"
+                >
+                  <div>
+                    <h3 className="mb-4 text-2xl font-black">{type.title}</h3>
+                    <div className="mb-6 text-body-medium">
+                      {type.description}
+                    </div>
+                    {type.links.length > 0 && (
+                      <div>
+                        <p className="mb-2 font-bold">
+                          {t("example-projects")}
+                        </p>
+                        <ul className="m-0 list-disc space-y-1 ps-5">
+                          {type.links.map((link) => (
+                            <li key={link.text}>
+                              <InlineLink href={link.url}>
+                                {link.text}
+                              </InlineLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                  <div>
+                    {/* Shared header row — one continuous divider across both columns on desktop */}
+                    <div className="mb-3 hidden border-b border-border pb-2 sm:grid sm:grid-cols-2 sm:gap-x-6">
+                      <h4 className="text-success">{t("pros")}</h4>
+                      <h4 className="text-error">{t("cons")}</h4>
+                    </div>
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                      <div>
+                        <h4 className="mb-3 border-b border-border pb-2 text-success sm:hidden">
+                          {t("pros")}
+                        </h4>
+                        <ul className="m-0 list-none space-y-3 ps-0">
+                          {type.pros.map((pro, idx) => (
+                            <li key={idx} className="flex gap-2">
+                              <CheckCircle className="shrink-0" />
+                              <span className="font-bold">{pro}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="mb-3 border-b border-border pb-2 text-error sm:hidden">
+                          {t("cons")}
+                        </h4>
+                        <ul className="m-0 list-none space-y-3 ps-0">
+                          {type.cons.map((con, idx) => (
+                            <li key={idx} className="flex gap-2">
+                              <XCircle className="shrink-0" />
+                              <span className="font-bold">{con}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+              </TabsContent>
+            ))}
+          </Tabs>
+        </Section>
+
+        {/* Getting started */}
+        <Section>
+          <div className="grid grid-cols-1 items-center gap-10 text-start lg:grid-cols-2 lg:gap-16">
+            <div>
+              <h2 className="mb-4 text-4xl font-black lg:text-5xl">
+                {t("page-stablecoins-getting-started-title")}
+              </h2>
+              <p className="mb-8 text-lg text-body-medium">
+                {t("page-stablecoins-getting-started-intro")}
               </p>
-
-              <div className="mb-16 grid grid-cols-1 gap-16 lg:grid-cols-2">
-                {editorsChoices.map((choice, idx) => (
-                  <Flex
-                    className="w-full flex-col-reverse justify-between gap-x-8 rounded-sm border border-border-high-contrast bg-background p-8 text-body sm:flex-row"
-                    key={idx}
-                    style={{
-                      boxShadow: `0.75rem 0.75rem 0 hsla(var(--${choice.shadowColor}-500), 0.25)`,
-                    }}
-                  >
-                    <Flex className="flex-col">
-                      <div>
-                        <h4 className="mb-2 text-3xl">{choice.title}</h4>
-                        <p className="mb-6 text-body-medium">{choice.body}</p>
-                      </div>
-                      <div className="mt-auto">
-                        <Flex className="flex-col">
-                          <div>
-                            <ButtonLink
-                              className="mb-4 me-4"
-                              href={choice.swapUrl}
-                            >
-                              {choice.swapButtonText}
-                            </ButtonLink>
-                          </div>
-                          <div>
-                            <ButtonLink
-                              variant="outline"
-                              href={choice.learnUrl}
-                              isSecondary
-                            >
-                              {choice.learnButtonText}
-                            </ButtonLink>
-                          </div>
-                        </Flex>
-                      </div>
-                    </Flex>
-                    <Flex className="items-center justify-between gap-x-8 gap-y-4 max-sm:mb-8 max-sm:max-h-16 sm:flex-col sm:justify-center">
-                      <div className="relative isolate my-8 max-w-24 self-center bg-cover bg-repeat max-sm:w-16 sm:min-w-40 sm:max-w-40 md:my-0">
-                        <Image
-                          src={choice.image}
-                          alt=""
-                          data-label="blur-decorator"
-                          aria-disabled
-                          className="absolute inset-0 z-[-1] blur-[12px]"
-                        />
-                        <Image src={choice.image} alt={choice.alt} />
-                      </div>
-                      <div>
-                        <div className="text-center">
-                          {choice.marketCap ? (
-                            <span className="text-lg font-semibold">
-                              {choice.marketCap}
-                            </span>
-                          ) : (
-                            <span className="text-lg text-body-medium">-</span>
-                          )}
-                        </div>
-                        <div className="text-center text-sm text-body-medium">
-                          {t(
-                            "page-stablecoins-stablecoins-table-header-column-2"
-                          )}
-                        </div>
-                      </div>
-                    </Flex>
-                  </Flex>
-                ))}
+              <div className="flex flex-col gap-6">
+                <PathwayCard
+                  href="/wallets/find-wallet/"
+                  banner={
+                    <Image
+                      src={walletCardImg}
+                      alt=""
+                      sizes="(max-width: 640px) 100vw, 176px"
+                    />
+                  }
+                  title={t("page-stablecoins-download-wallet-title")}
+                  description={t(
+                    "page-stablecoins-download-wallet-description"
+                  )}
+                  badge={{
+                    label: t("page-stablecoins-recommended"),
+                    status: "success",
+                  }}
+                />
+                <PathwayCard
+                  href="/get-eth/"
+                  banner={
+                    <Image
+                      src={exchangeCardImg}
+                      alt=""
+                      sizes="(max-width: 640px) 100vw, 176px"
+                    />
+                  }
+                  title={t("page-stablecoins-register-exchange-title")}
+                  description={t(
+                    "page-stablecoins-register-exchange-description"
+                  )}
+                />
               </div>
+            </div>
+            <div className="mx-auto w-full max-w-lg">
+              <Image
+                src={gettingStartedImg}
+                alt={t("page-stablecoins-getting-started-alt")}
+                sizes="(max-width: 1024px) 90vw, 600px"
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
+        </Section>
 
-              <h3 id="stablecoin-markets" className="mb-8 mt-12">
-                {t("page-stablecoins-top-coins")}&nbsp;
-                <Tooltip content={tooltipContent}>
-                  <Info className="size-4" />
-                </Tooltip>
-              </h3>
-
-              <p className="mb-6">
-                {t("page-stablecoins-top-coins-intro")}{" "}
-                {t("page-stablecoins-top-coins-intro-code")}
+        {/* Choose a stablecoin: editor's choices + market cap table */}
+        <div className="my-8 w-full rounded-t-4xl bg-radial-a">
+          {/* Figma: ~80px top padding, content runs to the band bottom; override
+              the default symmetric py so the explicit values win at every bp. */}
+          <Section className="pt-16 pb-12 lg:pt-20 lg:pb-16">
+            <div className="text-center">
+              <h2 className="mb-4 text-4xl font-black lg:text-5xl">
+                {t("page-stablecoins-choose-title")}
+              </h2>
+              <p className="mx-auto mb-6 max-w-3xl text-lg text-body-medium">
+                {t("page-stablecoins-choose-intro")}
               </p>
+              <div className="mb-12 flex flex-wrap justify-center gap-x-8 gap-y-2">
+                <LinkWithArrow href="#how">
+                  {t("page-stablecoins-choose-link-types")}
+                </LinkWithArrow>
+                <LinkWithArrow href="#get-stablecoins">
+                  {t("page-stablecoins-get-stablecoins")}
+                </LinkWithArrow>
+              </div>
             </div>
 
-            {/* CLIENT SIDE */}
+            <h3 className="mb-2 text-3xl font-black lg:text-4xl">
+              {t("page-stablecoins-editors-choice")}
+            </h3>
+            <p className="mb-6 text-body-medium">
+              {t("page-stablecoins-editors-choice-intro")}
+            </p>
+            <EdgeScrollContainer className="[--edge-spacing:2rem]">
+              {editorsChoices.map((choice) => (
+                <EdgeScrollItem
+                  key={choice.title}
+                  className="ms-4 basis-[80%] sm:basis-1/2 lg:basis-[29%]"
+                >
+                  <Card variant="nested" className="h-full border">
+                    <CardHeader>
+                      <CardBanner
+                        background="none"
+                        fit="contain"
+                        size="full"
+                        zoom={false}
+                        className={cn(
+                          "flex h-40 items-center justify-center p-8",
+                          choice.bannerClass
+                        )}
+                      >
+                        <Image
+                          src={choice.image}
+                          alt={choice.alt}
+                          sizes="160px"
+                        />
+                      </CardBanner>
+                    </CardHeader>
+                    <CardContent spacing="sm">
+                      <CardTitle asChild>
+                        <h4>{choice.title}</h4>
+                      </CardTitle>
+                      <CardParagraph size="sm">{choice.body}</CardParagraph>
+                    </CardContent>
+                    <CardFooter buttons="full" className="flex flex-col gap-2">
+                      <ButtonLink href={choice.swapUrl}>
+                        {choice.swapButtonText}
+                      </ButtonLink>
+                      <ButtonLink href={choice.learnUrl} variant="outline">
+                        {choice.learnButtonText}
+                      </ButtonLink>
+                    </CardFooter>
+                  </Card>
+                </EdgeScrollItem>
+              ))}
+            </EdgeScrollContainer>
+
+            <h3
+              id="stablecoin-markets"
+              className="mt-16 scroll-mt-24 text-3xl font-black lg:text-4xl"
+            >
+              {t("page-stablecoins-top-coins")}&nbsp;
+              <Tooltip content={tooltipContent}>
+                <Info className="inline size-4" />
+              </Tooltip>
+            </h3>
+            <p className="mt-4 mb-0 text-body-medium">
+              {t("page-stablecoins-top-coins-intro")}{" "}
+              {t("page-stablecoins-top-coins-intro-code")}
+            </p>
             <StablecoinsTable
               content={coinDetails}
               hasError={marketsHasError}
             />
-          </div>
-
-          <Section id="explore">
-            <h2 className="mb-8">{t("page-stablecoins-get-stablecoins")}</h2>
-            <Flex className="w-full items-center pb-4 pe-0 ps-0 lg:pe-8 lg:ps-8">
-              {/* CLIENT SIDE */}
-              <StablecoinAccordion />
-            </Flex>
           </Section>
-          <Divider />
-          <Section>
-            <CalloutBannerSSR
-              className="mx-0 mb-16 mt-8"
-              title={t("page-stablecoins-stablecoins-dapp-callout-title")}
-              description={t(
-                "page-stablecoins-stablecoins-dapp-callout-description"
-              )}
-              image={dogeComputerImg}
-              imageWidth={600}
-              alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
-            >
-              <div key="two-buttons" className="flex flex-wrap gap-4">
-                <ButtonLink href="/apps/">
-                  {t("page-stablecoins-explore-dapps")}
-                </ButtonLink>
-                <ButtonLink
-                  variant="outline"
-                  href="/defi/"
-                  className="whitespace-normal"
-                  isSecondary
-                >
-                  {t("page-stablecoins-more-defi-button")}
-                </ButtonLink>
-              </div>
-            </CalloutBannerSSR>
-            <h2>{t("page-stablecoins-save-stablecoins")}</h2>
-            <Flex className="mb-8 me-8 w-full flex-col items-start lg:flex-row">
-              <div className="me-auto ms-auto w-full lg:me-2 lg:ms-0">
-                <p className="mb-6">
-                  {t("page-stablecoins-save-stablecoins-body")}
+        </div>
+
+        {/* How to get stablecoins */}
+        <Section id="get-stablecoins" className="scroll-mt-24 text-center">
+          <h2 className="mb-4 text-4xl font-black lg:text-5xl">
+            {t("page-stablecoins-get-stablecoins")}
+          </h2>
+          <p className="mx-auto mb-12 max-w-3xl text-lg text-body-medium">
+            {t("page-stablecoins-get-intro")}
+          </p>
+          <Grid balanced={2} className="gap-6 text-start">
+            {methods.map((method) => (
+              <PathwayCard
+                key={method.title}
+                className="h-full"
+                href={method.href}
+                banner={
+                  <Image
+                    src={method.image}
+                    alt=""
+                    sizes="(max-width: 640px) 100vw, 176px"
+                  />
+                }
+                title={method.title}
+                description={method.description}
+                badge={method.badge}
+              />
+            ))}
+          </Grid>
+        </Section>
+
+        {/* Interest rate / apps to earn interest */}
+        <div className="my-8 w-full rounded-4xl bg-background-highlight">
+          <Section id="earn-interest" className="pt-16 pb-12 lg:pt-20 lg:pb-16">
+            <div className="mb-12 flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
+              <div className="max-w-3xl">
+                <h2 className="mb-4 text-4xl font-black lg:text-5xl">
+                  {t("page-stablecoins-interest-rate-title")}
+                </h2>
+                <p className="mb-0 text-lg text-body-medium">
+                  <Translation id="page-stablecoins:page-stablecoins-interest-rate-body" />
                 </p>
-                <h3 className="mb-8 mt-12">
-                  {t("page-stablecoins-interest-earning-dapps")}
-                </h3>
-                <p className="mb-6">{t("page-stablecoins-saving")}</p>
               </div>
-            </Flex>
-            <div className="mb-16 grid grid-cols-fill-4 gap-8">
-              {dapps.map((dapp, idx) => (
-                <DataProductCard
-                  key={idx}
-                  url={dapp.url}
-                  alt={dapp.alt}
-                  image={dapp.image!}
-                  imgWidth={dapp.width!}
-                  name={dapp.name}
-                  description={dapp.description}
-                  className={dapp.className}
-                />
-              ))}
-            </div>
-          </Section>
-          <Divider />
-          <Section id="how">
-            <h2 className="mb-8">
-              {t("page-stablecoins-types-of-stablecoin")}
-            </h2>
-            <Tabs defaultValue={features[0].title} className="mt-8">
-              <TabsList className="mb-4 flex h-fit flex-wrap items-end">
-                {features.map((feature) => (
-                  <TabsTrigger
-                    key={feature.title}
-                    value={feature.title}
-                    className="h-fit"
-                  >
-                    <Emoji
-                      text={feature.emoji}
-                      className="me-2 hidden shrink-0 data-[state=active]:inline-block"
-                    />
-                    {feature.title}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-              {features.map((feature) => (
-                <TabsContent key={feature.title} value={feature.title}>
-                  <div className="flex flex-col gap-6 md:flex-row md:items-start">
-                    <div className="mb-4 flex-shrink-0 text-7xl md:mb-0 md:me-8 md:text-8xl">
-                      <Emoji text={feature.emoji} />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="mb-4 text-3xl font-bold">
-                        {feature.title}
-                      </h3>
-                      <div className="mb-6 text-lg">{feature.description}</div>
-                      <div className="my-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-                        {feature.pros && (
-                          <div>
-                            <h4 className="mb-2 rounded bg-success/25 p-2 text-xl font-semibold">
-                              {t("pros")}
-                            </h4>
-                            <ul className="list-inside list-disc">
-                              {feature.pros.map((pro, idx) => (
-                                <li key={idx}>{pro}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                        {feature.cons && (
-                          <div>
-                            <h4 className="mb-2 rounded bg-error/25 p-2 text-xl font-semibold">
-                              {t("cons")}
-                            </h4>
-                            <ul className="list-inside list-disc">
-                              {feature.cons.map((con, idx) => (
-                                <li key={idx}>{con}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                      </div>
-                      {feature.links && feature.links.length > 0 && (
-                        <div>
-                          <h4 className="mb-2 text-xl font-semibold">
-                            {t("example-projects")}
-                          </h4>
-                          <ul className="list-inside list-disc">
-                            {feature.links.map((link, idx) => (
-                              <li key={idx}>
-                                <InlineLink
-                                  href={link.url}
-                                  className="text-primary hover:underline"
-                                >
-                                  {link.text}
-                                </InlineLink>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </TabsContent>
-              ))}
-            </Tabs>
-          </Section>
-          <div id="tools" className="w-full px-8 py-12">
-            <h2 className="mb-8">{t("page-stablecoins-tools-title")}</h2>
-
-            <div
-              className={cn(
-                "[&_[aria-labelledby='category-name']]:grid [&_[aria-labelledby='category-name']]:grid-cols-1 [&_[aria-labelledby='category-name']]:gap-x-16 md:[&_[aria-labelledby='category-name']]:grid-cols-2",
-                toolsData.length % 2 === 0 &&
-                  "md:[&_[aria-labelledby='category-name']>:not(:nth-last-child(-n+2))]:border-b md:[&_[aria-labelledby='category-name']>:nth-last-child(-n+2)]:border-b-0",
-                "[&_img]:shadow-none"
-              )}
-            >
-              <ProductList
-                actionLabel={t("page-apps-ready-button")}
-                category={t(
-                  "page-stablecoins-category-dashboard-and-education"
-                )}
-                content={toolsData}
+              <Image
+                src={manAndDogImg}
+                alt={t("page-stablecoins-interest-rate-alt")}
+                sizes="(max-width: 1024px) 80vw, 409px"
+                className="h-auto w-full max-w-sm shrink-0 lg:w-[409px] lg:max-w-none"
               />
             </div>
-          </div>
-          <Section>
-            <StandaloneQuizWidget quizKey="stablecoins" />
-            <FeedbackCard />
+            <h3 className="mb-2 text-3xl font-black lg:text-4xl">
+              {t("page-stablecoins-apps-earn-interest-title")}
+            </h3>
+            <p className="mb-8 text-body-medium">
+              {t("page-stablecoins-apps-earn-interest-intro")}
+            </p>
+            <EdgeScrollContainer className="[--edge-spacing:2rem]">
+              {interestApps.map((app) => (
+                <EdgeScrollItem
+                  key={app.name}
+                  className="ms-4 basis-[80%] sm:basis-1/2 lg:basis-[29%]"
+                >
+                  <Card variant="nested" className="h-full">
+                    <CardHeader>
+                      <CardBanner
+                        background="none"
+                        fit="contain"
+                        size="full"
+                        zoom={false}
+                        className={cn(
+                          "flex h-40 items-center justify-center p-10",
+                          app.bannerClass
+                        )}
+                      >
+                        <Image src={app.image} alt={app.alt} sizes="280px" />
+                      </CardBanner>
+                    </CardHeader>
+                    <CardContent spacing="sm">
+                      <CardTitle className="uppercase" asChild>
+                        <h4>{app.name}</h4>
+                      </CardTitle>
+                      <CardParagraph size="sm">{app.description}</CardParagraph>
+                    </CardContent>
+                    <CardFooter buttons="full">
+                      <ButtonLink href={app.url}>
+                        {t("page-stablecoins-learn-more")}
+                      </ButtonLink>
+                    </CardFooter>
+                  </Card>
+                </EdgeScrollItem>
+              ))}
+            </EdgeScrollContainer>
           </Section>
-        </MainArticle>
-      </I18nProvider>
-    </>
+        </div>
+
+        {/* Learn more / tools */}
+        <Section>
+          <h2 className="mb-6 text-4xl font-black lg:text-5xl">
+            {t("page-stablecoins-tools-title")}
+          </h2>
+          <div className="[&_img]:shadow-none">
+            <ProductList
+              columns={2}
+              category={t("page-stablecoins-category-dashboard-and-education")}
+              actionLabel={t("page-apps-ready-button")}
+              content={toolsData}
+            />
+          </div>
+        </Section>
+
+        <Section className="pb-0 lg:pb-0 [&_#quiz]:text-4xl [&_#quiz]:font-black [&_#quiz]:lg:text-5xl">
+          <StandaloneQuizWidget quizKey="stablecoins" />
+        </Section>
+
+        <Section>
+          <ContentFeedback />
+        </Section>
+      </MainArticle>
+    </I18nProvider>
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-stablecoins" })
+  const t = await getTranslations("page-stablecoins")
 
   return await getMetadata({
     locale,
     slug: ["stablecoins"],
     title: t("page-stablecoins-meta-title"),
     description: t("page-stablecoins-meta-description"),
-    image: "/images/stablecoins/hero.png",
+    image: "/images/mainnet.png",
   })
 }
 

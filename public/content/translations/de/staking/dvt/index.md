@@ -1,91 +1,89 @@
 ---
-title: Verteilte Validierungstechnologie (VVT)
-description: Verteilte Validierungstechnologie (VVT) ermöglicht den verteilten Betrieb eines Ethereum-Validators durch mehrere Parteien.
+title: Verteilte Validator-Technologie
+description: Die verteilte Validator-Technologie ermöglicht den verteilten Betrieb eines Ethereum-Validators durch mehrere Parteien.
 lang: de
 ---
 
-# Verteilte Validierungstechnologie (VVT) {#distributed-validator-technology}
+Die verteilte Validator-Technologie (DVT) ist ein Ansatz zur Validator-Sicherheit, der die Schlüsselverwaltung und die Verantwortlichkeiten für das Signieren auf mehrere Parteien verteilt, um Single Points of Failure (einzelne Ausfallpunkte) zu reduzieren und die Ausfallsicherheit des Validators zu erhöhen.
 
-Verteilte Validatortechnologie (VVT) ist ein Ansatz zur Sicherheit für Validatoren, bei dem die Verwaltung von Schlüsseln und die Verantwortlichkeit für Unterschriften auf mehrere Parteien verteilt wird, um einzelne Fehler zu reduzieren und die Belastbarkeit des Validators zu erhöhen.
+Dies geschieht durch die **Aufteilung des privaten Schlüssels**, der zur Sicherung eines Validators verwendet wird, **auf viele Computer**, die in einem „Cluster“ organisiert sind. Der Vorteil dabei ist, dass es für Angreifer sehr schwierig wird, Zugriff auf den Schlüssel zu erlangen, da er auf keiner einzelnen Maschine vollständig gespeichert ist. Es ermöglicht auch, dass einige Knoten offline gehen können, da das erforderliche Signieren von einer Teilmenge der Maschinen in jedem Cluster durchgeführt werden kann. Dies reduziert Single Points of Failure im Netzwerk und macht das gesamte Validator-Set robuster.
 
-Das geschieht durch die **Aufteilung des privaten Schlüssels**, der zur Absicherung eines Validators verwendet wird, **über viele Computer hinweg**, die in einem "Cluster" organisiert sind. Der Vorteil dabei: Für Angreifer wird es äußerst schwierig, Zugriff auf den Schlüssel zu erlangen, da er nicht vollständig auf einer einzigen Maschine gespeichert ist. Es ermöglicht auch, dass einige Knoten offline gehen können, da die erforderliche Signierung von einer Teilmenge der Maschinen in jedem Cluster durchgeführt werden kann. Das reduziert einzelne Fehlerpunkte im Netzwerk und macht das gesamte Validator-Set robuster.
+![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
 
-![Eine Grafik, die veranschaulicht, wie ein einzelner Validierungsschlüssel in Schlüsselteile aufgeteilt wird und diese auf mehrere Knoten mit verschiedenen Komponenten verteilt werden.](./dvt-cluster.png)
-
-## Wofür ist VVT erforderlich? {#why-do-we-need-dvt}
+## Warum brauchen wir DVT? {#why-do-we-need-dvt}
 
 ### Sicherheit {#security}
 
-Die Validatoren generieren sowohl zwei öffentliche als auch private Schlüsselpaare: Validatorschlüssel zum Teilnehmen am Konsens und Abhebungsschlüssel zum Zugriff auf Gelder. Während die Validatoren die Abhebungsschlüssel in einem Offline-Speicher (Cold Storage) sichern können, müssen die privaten Schlüssel immer online sein. Wenn der private Schlüssel eines Validators kompromittiert wird, kann ein Angreifer den Validator kontrollieren und das kann zu "Slashing" oder zum Verlust der ETH des Stakers führen. VVT kann dabei helfen, dieses Risiko zu minimieren. Und so funktioniert es:
+Validatoren generieren zwei öffentlich-private Schlüsselpaare: Validator-Schlüssel für die Teilnahme am Konsens und Abhebungsschlüssel für den Zugriff auf die Mittel. Während Validatoren Abhebungsschlüssel im Cold Storage (kalte Speicherung) sichern können, müssen private Validator-Schlüssel rund um die Uhr online sein. Wenn ein privater Validator-Schlüssel kompromittiert wird, kann ein Angreifer den Validator kontrollieren, was möglicherweise zu Slashing oder dem Verlust der ETH des Stakers führt. DVT kann helfen, dieses Risiko zu mindern. Und so funktioniert es:
 
-Durch die Verwendung von VVT können Staker am Staking teilnehmen, während sie den privaten Schlüssel des Validators im Offline-Speicher (Cold Storage) aufbewahren. Erreicht wird das, indem der ursprüngliche, vollständige Validator-Schlüssel verschlüsselt und dann in Schlüsselteile aufgeteilt wird. Die Schlüsselteile sind online und werden an mehrere Knoten verteilt, was den verteilten Betrieb des Validators ermöglicht. Das ist möglich, weil Ethereum-Validatoren BLS-Signaturen verwenden, die additiv sind, d. h. der vollständige Schlüssel kann rekonstruiert werden, indem ihre Bestandteile zusammengefügt werden. So kann der Staker den vollständigen, ursprünglichen "Master"-Validator-Schlüssel sicher offline aufbewahren.
+Durch die Verwendung von DVT können Staker am Staking teilnehmen, während sie den privaten Validator-Schlüssel im Cold Storage aufbewahren. Dies wird erreicht, indem der ursprüngliche, vollständige Validator-Schlüssel verschlüsselt und dann in Schlüsselanteile (Key Shares) aufgeteilt wird. Die Schlüsselanteile sind online und werden auf mehrere Knoten verteilt, was den verteilten Betrieb des Validators ermöglicht. Dies ist möglich, weil [Ethereum](/)-Validatoren BLS-Signaturen verwenden, die additiv sind, was bedeutet, dass der vollständige Schlüssel durch Summieren seiner Bestandteile rekonstruiert werden kann. Dies ermöglicht es dem Staker, den vollständigen, ursprünglichen „Master“-Validator-Schlüssel sicher offline zu halten.
 
-### Kein einzelner Ausfallpunkt {#no-single-point-of-failure}
+### Keine Single Points of Failure {#no-single-point-of-failure}
 
-Wenn ein Validator auf mehrere Operatoren und Maschinen verteilt ist, kann er einzelne Hardware- und Softwareausfälle überstehen, ohne offline zu gehen. Das Ausfallrisiko kann außerdem durch den Einsatz unterschiedlicher Hardware- und Softwarekonfigurationen über Knotenpunkte in einem Cluster gesenkt werden. Diese Ausfallsicherheit ist für Konfigurationen mit nur einem Knotenpunkt nicht verfügbar – sie bedingt sich durch die DVT-Schicht.
+Wenn ein Validator auf mehrere Betreiber und mehrere Maschinen aufgeteilt ist, kann er einzelnen Hardware- und Softwareausfällen standhalten, ohne offline zu gehen. Das Ausfallrisiko kann auch durch die Verwendung unterschiedlicher Hardware- und Softwarekonfigurationen über die Knoten in einem Cluster hinweg verringert werden. Diese Ausfallsicherheit ist bei Validator-Konfigurationen mit nur einem Knoten nicht gegeben – sie entsteht durch die DVT-Schicht.
 
-Falls eine der Maschinen innerhalb eines Clusters ausfällt (Beispiel: Von vier Operatoren innerhalb eines Validatoren-Clusters nutzt ein Nutzer einen spezifischen Client, der fehlerhaft ist), stellen die anderen sicher, dass der Validator nach wie vor läuft.
+Wenn eine der Komponenten einer Maschine in einem Cluster ausfällt (zum Beispiel, wenn es vier Betreiber in einem Validator-Cluster gibt und einer einen bestimmten Client verwendet, der einen Fehler hat), stellen die anderen sicher, dass der Validator weiterläuft.
 
 ### Dezentralisierung {#decentralization}
 
-Das ideale Szenario für Ethereum ist es, so viele unabhängig arbeitende Validatoren zu haben, wie möglich. Dennoch sind ein paar wenige Anbieter von Staking-Services sehr beliebt geworden und haben daher einen substantiellen Anteil der im Netzwerk für Staking eingesetzten ETH unter Kontrolle. Mithilfe von DVT können diese Operatoren existieren und gleichzeitig die Dezentralisierung des Staking gewährleisten. Das liegt daran, dass die Schlüssel für jeden Validator auf viele Maschinen verteilt sind und es einer viel größeren Absprache bedarf, einen Validator mit böswilligen Absichten einzusetzen.
+Das ideale Szenario für Ethereum ist es, so viele unabhängig betriebene Validatoren wie möglich zu haben. Einige Staking-Anbieter sind jedoch sehr beliebt geworden und machen einen erheblichen Teil der gesamten gestakten ETH im Netzwerk aus. DVT kann es diesen Betreibern ermöglichen zu existieren, während die Dezentralisierung des Stakes erhalten bleibt. Dies liegt daran, dass die Schlüssel für jeden Validator auf viele Maschinen verteilt sind und es einer viel größeren Absprache bedürfte, damit ein Validator bösartig wird.
 
-Ohne VVT ist es für Staking-Anbieter einfacher, nur eine oder zwei Client-Konfigurationen für all ihre Validatoren zu unterstützen. Damit werden die Auswirkungen eines Fehlers einzelner Clients verstärkt. VVT kann verwendet werden, um das Risiko auf mehrere Client-Konfigurationen und unterschiedliche Hardware zu verteilen und so Widerstandsfähigkeit durch Vielfalt zu erreichen.
+Ohne DVT ist es für Staking-Anbieter einfacher, nur ein oder zwei Client-Konfigurationen für all ihre Validatoren zu unterstützen, was die Auswirkungen eines Client-Fehlers erhöht. DVT kann verwendet werden, um das Risiko auf mehrere Client-Konfigurationen und unterschiedliche Hardware zu verteilen und so Ausfallsicherheit durch Vielfalt zu schaffen.
 
-**VVT bietet für Ethereum folgende Vorteile:**
+**DVT bietet Ethereum die folgenden Vorteile:**
 
-1. **Dezentralisierung** von Ethereums Proof-of-Stake-Konsens
-2. Sichert den **aktiven Status** des Netzwerks
+1. **Dezentralisierung** des Proof-of-Stake-Konsenses von Ethereum
+2. Stellt die **Liveness** (Verfügbarkeit) des Netzwerks sicher
 3. Schafft **Fehlertoleranz** für Validatoren
-4. **Minimiertes Vertrauen** beim Betrieb von Validatoren
-5. **Weniger Slashing** und Risiko von Ausfallzeiten
-6. **Verbesserte Vielfalt** (Client, Datenzentrum, Standort, Regulierung, etc.)
-7. **Erhöhte Sicherheit** bei der Verwaltung von Validatorschlüsseln
+4. **Vertrauensminimierter** Validator-Betrieb
+5. **Minimierte Risiken** für Slashing und Ausfallzeiten
+6. **Verbessert die Vielfalt** (Client, Rechenzentrum, Standort, Regulierung usw.)
+7. **Erhöhte Sicherheit** bei der Verwaltung von Validator-Schlüsseln
 
-## Wie funktioniert VVT? {#how-does-dvt-work}
+## Wie funktioniert DVT? {#how-does-dvt-work}
 
-Ein VVT-Lösungsansatz beinhaltet folgende Komponenten:
+Eine DVT-Lösung umfasst die folgenden Komponenten:
 
-- **[Shamir's geheimes Teilen](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Validatoren nutzen [BLS Schlüssel](https://en.wikipedia.org/wiki/BLS_digital_signature). Individuelle BLS-"Anteile eines Schlüssels" ("Schlüsselanteile") können kombiniert werden zu einem einzigen vereinigten Schlüssel (Signatur). Bei VVT ist der private Schlüssel für einen Validator die kombinierte BLS-Signatur jedes Operators im Cluster.
-- **[Schwellenwert eines Signatur-Schemas](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** – Bestimmt die Anzahl der einzelnen Schlüsselanteile, die für Signieraufgaben erforderlich sind, z. B. 3 von 4.
-- **[Verteilte Schlüsselgenerierung (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** – Kryptografischer Prozess, der die Schlüsselteile generiert und dazu dient, die Teile eines bestehenden oder neuen Validatorschlüssels an die Knoten in einem Cluster zu verteilen.
-- **[Mehrparteienberechnung (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** – Der vollständige Validierungsschlüssel wird im Geheimen mithilfe einer Mehrparteienberechnung generiert. Der vollständige Schlüssel ist keinem einzelnen Betreiber bekannt – sie kennen immer nur ihren eigenen Teil (ihren "Anteil").
-- **Konsensprotokoll** – Das Konsensprotokoll wählt einen Knoten aus, der den Block vorschlägt. Sie teilen den Block mit den anderen Knoten des Clusters, die ihre Schlüsselteile zur Gesamtsignatur hinzufügen. Wenn ausreichend Schlüsselteile zusammengekommen sind, wird der Block auf Ethereum vorgeschlagen.
+- **[Shamir's Secret Sharing](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** – Validatoren verwenden [BLS-Schlüssel](https://en.wikipedia.org/wiki/BLS_digital_signature). Einzelne BLS-„Schlüsselanteile“ („Key Shares“) können zu einem einzigen aggregierten Schlüssel (Signatur) kombiniert werden. Bei DVT ist der private Schlüssel für einen Validator die kombinierte BLS-Signatur jedes Betreibers im Cluster.
+- **[Schwellenwert-Signaturverfahren (Threshold Signature Scheme)](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** – Bestimmt die Anzahl der einzelnen Schlüsselanteile, die für Signieraufgaben erforderlich sind, z. B. 3 von 4.
+- **[Verteilte Schlüsselerzeugung (Distributed Key Generation, DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** – Ein kryptografischer Prozess, der die Schlüsselanteile generiert und verwendet wird, um die Anteile eines bestehenden oder neuen Validator-Schlüssels auf die Knoten in einem Cluster zu verteilen.
+- **[Sichere Mehrparteienberechnung (Multiparty Computation, MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** – Der vollständige Validator-Schlüssel wird im Geheimen mithilfe von Mehrparteienberechnung generiert. Der vollständige Schlüssel ist keinem einzelnen Betreiber jemals bekannt – sie kennen immer nur ihren eigenen Teil davon (ihren „Anteil“).
+- **Konsens-Protokoll** – Das Konsens-Protokoll wählt einen Knoten als Block-Proposer aus. Dieser teilt den Block mit den anderen Knoten im Cluster, die ihre Schlüsselanteile zur aggregierten Signatur hinzufügen. Wenn genügend Schlüsselanteile aggregiert wurden, wird der Block auf Ethereum vorgeschlagen.
 
-Verteilte Validatoren verfügen über eine eingebaute Fehlertoleranz und können selbst dann weiterarbeiten, wenn einige der einzelnen Knoten offline gehen. Das bedeutet, dass der Cluster selbst dann belastbar ist, wenn sich einige der Knoten darin als böswillig oder träge erweisen.
+Verteilte Validatoren verfügen über eine eingebaute Fehlertoleranz und können weiterlaufen, selbst wenn einige der einzelnen Knoten offline gehen. Das bedeutet, dass der Cluster ausfallsicher ist, selbst wenn sich einige der darin befindlichen Knoten als bösartig oder inaktiv erweisen.
 
-## Anwendungsfälle von VVT {#dvt-use-cases}
+## DVT-Anwendungsfälle {#dvt-use-cases}
 
-VVT hat erhebliche Auswirkungen auf die breite Staking-Branche:
+DVT hat erhebliche Auswirkungen auf die breitere Staking-Branche:
 
 ### Solo-Staker {#solo-stakers}
 
-VVT ermöglicht zudem depotloses Staking, indem es ermöglicht, Validatorenschlüssel über externe Knoten zu verteilen, während der gesamte Schlüssel offline bleibt. Das bedeutet, dass Solo-Staker nicht gezwungen sind, in erheblichem Umfang in Hardware zu investieren, während sie durch die Verteilung der Schlüsselteile gegen potentielle Angriffe gestärkt sind.
+DVT ermöglicht auch nicht-verwahrendes Staking, indem es Ihnen erlaubt, Ihren Validator-Schlüssel auf entfernte Knoten zu verteilen, während der vollständige Schlüssel komplett offline bleibt. Das bedeutet, dass Home-Staker nicht zwingend in Hardware investieren müssen, während die Verteilung der Schlüsselanteile dazu beitragen kann, sie gegen potenzielle Hacks abzusichern.
 
-### Staking als Dienstleistung (SaaS) {#saas}
+### Staking as a Service (SaaS) {#saas}
 
-Betreiber (zum Beispiel Staking-Gemeinschaften (Staking Pools) und institutionelle Staker), die viele Validatoren verwalten, können über VVT ihr eigenes Risiko senken. Durch die verteilte Infrastruktur lässt sich der Betrieb redundanter und die eingesetzte Hardware abwechslungsreich gestalten.
+Betreiber (wie Staking-Pools und institutionelle Staker), die viele Validatoren verwalten, können DVT nutzen, um ihr Risiko zu reduzieren. Durch die Verteilung ihrer Infrastruktur können sie ihren Abläufen Redundanz hinzufügen und die Arten der verwendeten Hardware diversifizieren.
 
-VVT verteilt die Verantwortung der Schlüsselverwaltung auf mehrere Knoten. So kann ein Teil der operativen Kosten geteilt werden. VVT kann zudem sowohl das Risiko als auch die Versicherungskosten für Staking-Anbieter verringern.
+DVT teilt die Verantwortung für die Schlüsselverwaltung auf mehrere Knoten auf, was bedeutet, dass auch einige Betriebskosten geteilt werden können. DVT kann zudem das operationelle Risiko und die Versicherungskosten für Staking-Anbieter senken.
 
-### Staking-Pool {#staking-pools}
+### Staking-Pools {#staking-pools}
 
-Aufgrund von Standard-Validatoren sind Staking-Pools und Anbieter von Liquid Staking gezwungen, einzelen Betreibern in unterschiedlichem Maße Vertrauen entgegen zu bringen, da Gewinne und Verluste im gesamten Pool sozialisiert werden. Außerdem sind sie auf die Betreiber angewiesen, um die Signaturschlüssel zu sichern, da bis dato keine alternative Möglichkeit dazu bestand.
+Aufgrund von Standard-Validator-Setups sind Staking-Pools und Liquid Staking-Anbieter gezwungen, ein unterschiedliches Maß an Vertrauen in einzelne Betreiber zu setzen, da Gewinne und Verluste im gesamten Pool sozialisiert werden. Sie sind auch darauf angewiesen, dass die Betreiber die Signierschlüssel schützen, da es für sie bisher keine andere Option gab.
 
-Auch wenn seit jeher versucht wird, das Risiko zu streuen, indem die Anteile auf mehrere Betreiber verteilt werden, verwaltet jeder Betreiber nach wie vor einen erheblichen Anteil unabhängig. Sich auf einen einzigen Betreiber zu verlassen, birgt immense Risiken, wenn dieser nicht die gewünschten Leistungen erbringt, Ausfallzeiten hat, kompromittiert wird oder mit böswilligen Absichten agiert.
+Auch wenn traditionell Anstrengungen unternommen werden, das Risiko durch die Verteilung von Stakes auf mehrere Betreiber zu streuen, verwaltet jeder Betreiber immer noch unabhängig einen erheblichen Stake. Sich auf einen einzigen Betreiber zu verlassen, birgt immense Risiken, wenn dieser schlechte Leistung erbringt, Ausfallzeiten hat, kompromittiert wird oder bösartig handelt.
 
-Durch den Einsatz von VVT ist es in geringerem Umfang erforderlich, den Betreibern zu vertrauen. **Pools können es den Betreibern ermöglichen, Einsätze zu halten, ohne dass sie die Schlüssel der Validatoren verwahren müssen** (da nur Schlüsselanteile verwendet werden). Außerdem können verwaltete Einsätze auf mehrere Betreiber verteilt werden (z. B. kann ein einzelner Betreiber 1000 Validatoren verwalten, während diese Validatoren von mehreren Betreibern gemeinsam betrieben werden). Verschiedene Betreiberkonfigurationen stellen sicher, dass im Falle des Ausfalls eines Betreibers die anderen noch in der Lage sind, die Bescheinigung auszustellen. Das steigert Redundanz und Diversifizierung, die zu einer besseren Leistung und Widerstandsfähigkeit führt und gleichzeitig die Erträge maximiert.
+Durch die Nutzung von DVT wird das von den Betreibern geforderte Vertrauen erheblich reduziert. **Pools können es Betreibern ermöglichen, Stakes zu halten, ohne die Verwahrung von Validator-Schlüsseln zu benötigen** (da nur Schlüsselanteile verwendet werden). Es ermöglicht auch, verwaltete Stakes auf mehr Betreiber zu verteilen (z. B. anstatt dass ein einzelner Betreiber 1000 Validatoren verwaltet, ermöglicht DVT, dass diese Validatoren kollektiv von mehreren Betreibern betrieben werden). Vielfältige Betreiberkonfigurationen stellen sicher, dass, falls ein Betreiber ausfällt, die anderen weiterhin in der Lage sind, zu attestieren. Dies führt zu Redundanz und Diversifizierung, was eine bessere Leistung und Ausfallsicherheit zur Folge hat und gleichzeitig die Belohnungen maximiert.
 
-Ein weiterer Vorteil, einem einzelnen Betreiber weniger vertrauen zu müssen, besteht darin, dass Staking-Pools eine offenere und genehmigungsfreie Teilnahme von Betreibern ermöglichen können. Auf diese Weise können Dienste ihr Risiko reduzieren und die Dezentralisierung von Ethereum unterstützen, indem sie sowohl kuratierte als auch genehmigungsfreie Gruppen von Betreibern verwenden, z. B. durch die Verbindung von Home- oder kleineren Stakern mit größeren.
+Ein weiterer Vorteil der Minimierung des Vertrauens in einzelne Betreiber besteht darin, dass Staking-Pools eine offenere und erlaubnisfreie Teilnahme von Betreibern ermöglichen können. Dadurch können Dienste ihr Risiko reduzieren und die Dezentralisierung von Ethereum unterstützen, indem sie sowohl kuratierte als auch erlaubnisfreie Gruppen von Betreibern nutzen, beispielsweise durch die Kombination von Home-Stakern oder kleineren Stakern mit größeren.
 
-## Mögliche Nachteile der Verwendung von DVT {#potential-drawbacks-of-using-dvt}
+## Potenzielle Nachteile der Verwendung von DVT {#potential-drawbacks-of-using-dvt}
 
-- **Zusätzliche Komponente** – mit der Einführung eines VVT-Knotens wird ein weiteres Teil hinzugefügt, das möglicherweise fehlerhaft oder anfällig sein kann. Eine Möglichkeit, das abzumildern, besteht darin, mehrere Implementierungen eines VVT-Knotens anzustreben, d. h. mehrere VVT-Clients (ähnlich wie es mehrere Clients für die Konsens- und Ausführungsebene gibt).
-- **Operative Kosten** – da VVT den Validator auf mehrere Parteien verteilt, sind mehr Knoten für den Betrieb erforderlich als nur ein einziger Knoten und das bedingt höhere Betriebskosten.
-- **Potenziell erhöhte Latenzzeit** – da VVT ein Konsensprotokoll verwendet, um einen Konsens zwischen mehreren Knoten zu erreichen, die einen Validator betreiben, kann es potenziell zu einer erhöhten Latenzzeit kommen.
+- **Zusätzliche Komponente** – Die Einführung eines DVT-Knotens fügt ein weiteres Teil hinzu, das möglicherweise fehlerhaft oder anfällig sein kann. Eine Möglichkeit, dies zu mindern, besteht darin, mehrere Implementierungen eines DVT-Knotens anzustreben, was mehrere DVT-Clients bedeutet (ähnlich wie es mehrere Clients für die Konsens- und Ausführungsschichten gibt).
+- **Betriebskosten** – Da DVT den Validator auf mehrere Parteien verteilt, sind für den Betrieb mehr Knoten anstelle eines einzigen Knotens erforderlich, was zu erhöhten Betriebskosten führt.
+- **Potenziell erhöhte Latenz** – Da DVT ein Konsens-Protokoll verwendet, um einen Konsens zwischen den mehreren Knoten zu erzielen, die einen Validator betreiben, kann dies potenziell zu einer erhöhten Latenz führen.
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-- [Spezifikationen der verteilten Ethereum-Validatoren (hohe Stufe)](https://github.com/ethereum/distributed-validator-specs)
-- [Technische Daten der verteilten Ethereum-Validatoren](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
-- [Shamir secret sharing – Demo-App](https://iancoleman.io/shamir/)
+- [Spezifikationen für verteilte Ethereum-Validatoren (High-Level)](https://github.com/ethereum/distributed-validator-specs)
+- [Technische Spezifikationen für verteilte Ethereum-Validatoren](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
+- [Demo-App für Shamir's Secret Sharing](https://iancoleman.io/shamir/)

@@ -1,77 +1,76 @@
 ---
 title: Maswali yanayoulizwa mara kwa mara
-description: Common Ethereum questions about wallets, transactions, staking, and more.
+description: Maswali ya kawaida ya Ethereum kuhusu mikoba, miamala, uwekaji dhamana, na zaidi.
 lang: sw
 ---
 
-# Maswali yanayoulizwa mara kwa mara {#faq}
+## Nilituma kripto kwenye anwani isiyo sahihi {#wrong-wallet}
 
-## I sent crypto to the wrong address {#wrong-wallet}
+Muamala uliotumwa kwenye Ethereum hauwezi kubatilishwa. Kwa bahati mbaya, ikiwa ulituma ETH au tokeni kwenye mkoba usio sahihi, hakuna njia ya kubatilisha muamala huo.
 
-Muamala unaofanyika kwenye Ethereum hauwezi kurudishwa ulikotoka. Unfortunately, if you sent ETH or tokens to the wrong wallet, there is no way to reverse the transaction.
+**Kile unachoweza kufanya:**
 
-**What you can do:**
+- **Ikiwa unamjua mmiliki wa anwani**, wasiliana naye moja kwa moja na umwombe arudishe fedha
+- **Ikiwa anwani ni ya soko la kubadilishia fedha au huduma inayojulikana**, wasiliana na timu yao ya usaidizi, kwani wanaweza kusaidia
+- **Ikiwa ulituma tokeni kwenye anwani ya mkataba**, angalia ikiwa mkataba una kipengele cha utoaji au urejeshaji (hii ni nadra)
 
-- **If you know the owner of the address**, contact them directly and ask them to return the funds
-- **If the address belongs to an exchange or known service**, contact their support team, as they may be able to help
-- **If you sent tokens to a contract address**, check whether the contract has a withdrawal or recovery function (this is rare)
+Katika hali nyingi, hakuna njia ya kurejesha fedha. Hakuna shirika kuu, taasisi, au mtu anayemiliki Ethereum, ambayo inamaanisha hakuna mtu anayeweza kubatilisha miamala. Kila mara hakikisha mara mbili anwani ya mpokeaji kabla ya kuthibitisha.
 
-In most cases, there is no way to recover the funds. No central organization, entity, or person owns Ethereum, which means no one can reverse transactions. Always double-check the recipient address before confirming.
+## Nilipoteza ufikiaji wa mkoba wangu {#lost-wallet-access}
 
-## I lost access to my wallet {#lost-wallet-access}
+Chaguo zako za urejeshaji zinategemea aina ya mkoba unaotumia.
 
-Your recovery options depend on the type of wallet you use.
+### Ikiwa una kirai cha mbegu chako (kirai cha kurejesha) {#if-you-have-your-seed-phrase-recovery-phrase}
 
-### If you have your seed phrase (recovery phrase)
+Unaweza kurejesha mkoba wako katika programu yoyote ya mkoba inayoendana ukitumia kirai cha mbegu chako. Hii ndiyo sababu ni muhimu sana kuweka kirai cha mbegu chako kikiwa kimehifadhiwa salama nje ya mtandao. Angalia nyaraka za mtoa huduma wako wa mkoba kwa maagizo ya kurejesha.
 
-You can restore your wallet in any compatible wallet app using your seed phrase. This is why it is critical to keep your seed phrase stored safely offline. Check your wallet provider's documentation for restore instructions.
+### Ikiwa umepoteza kirai cha mbegu chako {#if-you-have-lost-your-seed-phrase}
 
-### If you have lost your seed phrase
+Bila kirai cha mbegu chako au funguo za siri, fedha zako haziwezi kurejeshwa. Hakuna mtu, ikiwa ni pamoja na ethereum.org, anayeweza kuweka upya nenosiri lako au kurejesha ufikiaji wa mkoba wa uhifadhi binafsi.
 
-Without your seed phrase or private keys, your funds cannot be recovered. No one, including ethereum.org, can reset your password or restore access to a self-custody wallet.
+### Ikiwa akaunti yako iko kwenye soko la kubadilishia fedha {#if-your-account-is-on-an-exchange}
 
-### If your account is on an exchange
-
-If your account is on a centralized exchange like Coinbase, Binance, or Kraken, contact the exchange's support team directly. They control accounts on their platform and may be able to help with password resets or account recovery.
+Ikiwa akaunti yako iko kwenye soko kuu la kubadilishia fedha kama Coinbase, Binance, au Kraken, wasiliana na timu ya usaidizi ya soko hilo moja kwa moja. Wanadhibiti akaunti kwenye jukwaa lao na wanaweza kusaidia kwa kuweka upya nenosiri au kurejesha akaunti.
 
 <Alert variant="warning">
 <AlertEmoji text=":shield:"/>
 <AlertContent>
 <AlertDescription>
 
-**Never share your seed phrase with anyone** claiming to help you recover your wallet. This is one of the most common scam tactics. No legitimate service will ever ask for your seed phrase.
+**Kamwe usishiriki kirai cha mbegu chako na mtu yeyote** anayedai kukusaidia kurejesha mkoba wako. Hii ni mojawapo ya mbinu za kawaida za utapeli. Hakuna huduma halali itakayowahi kukuuliza kirai cha mbegu chako.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 <DocLink href="/guides/how-to-use-a-wallet/">
-  How to use a wallet
+  Jinsi ya kutumia mkoba
 </DocLink>
 
-## My transaction is stuck or pending {#stuck-transaction}
+## Muamala wangu umekwama au unasubiri {#stuck-transaction}
 
-Transactions on Ethereum can get stuck when the gas fee you set was lower than what the network currently requires. Most wallets let you fix this:
+Miamala kwenye Ethereum inaweza kukwama wakati ada ya gesi uliyoweka ilikuwa chini kuliko kile ambacho mtandao unahitaji kwa sasa. Mikoba mingi inakuruhusu kurekebisha hili:
 
-- **Speed up:** Resubmit the same transaction with a higher gas fee
-- **Cancel:** Send a 0 ETH transaction to your own address using the same nonce as the pending transaction
+- **Ongeza kasi:** Tuma tena muamala huo huo ukiwa na ada ya gesi ya juu zaidi
+- **Ghairi:** Tuma muamala wa 0 ETH kwenye anwani yako mwenyewe ukitumia nonsi sawa na muamala unaosubiri
 
-### Helpful guides
+### Miongozo muhimu {#helpful-guides}
 
-- [How to speed up or cancel a pending transaction on MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
-- [Jinsi ya kughairi miamala inayosubiri ya Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+- [Jinsi ya kuongeza kasi au kughairi muamala unaosubiri kwenye MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
+- [Jinsi ya kughairi miamala ya Ethereum inayosubiri](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-## Nawezaje kudai zawadi yangu ya Ethereum? {#giveaway-scam}
+## Ninawezaje kudai zawadi yangu ya Ethereum? {#giveaway-scam}
 
-Zawadi za Ethereum ni mitego/ulaghai unaobuniwa ili kuiba ETH zako. Do not be tempted by offers that seem too good to be true. If you send ETH to a giveaway address, you will not receive a giveaway, and you will not be able to recover your funds.
+Zawadi za Ethereum ni utapeli ulioundwa kuiba ETH yako. Usishawishiwe na ofa zinazoonekana kuwa nzuri sana kuwa kweli. Ikiwa utatuma ETH kwenye anwani ya zawadi, hutapokea zawadi, na hutaweza kurejesha fedha zako.
 
 [Zaidi kuhusu kuzuia utapeli](/security/#common-scams)
 
-## How do I stake ETH? {#how-to-stake}
+## Ninawekaje dhamana ya ETH? {#how-to-stake}
 
-Ili kuwa mthibitishaji, lazima uweke dau la ETH 32 katika mkataba wa amana wa Ethereum na uanzishe nodi ya mthibitishaji. You can also participate with less ETH through staking pools.
+Ili kuwa mthibitishaji, lazima uweke dhamana ya 32 ETH katika mkataba wa amana wa Ethereum na uweke nodi ya mthibitishaji. Unaweza pia kushiriki ukiwa na ETH kidogo kupitia mabwawa ya uwekaji dhamana.
 
-More information is available on our [staking pages](/staking/) and at [the staking launchpad](https://launchpad.ethereum.org/).
+Maelezo zaidi yanapatikana kwenye [kurasa zetu za uwekaji dhamana](/staking/) na kwenye [jukwaa la uzinduzi la uwekaji dhamana](https://launchpad.ethereum.org/).
 
-## Nawezaje kuchimba Ethereum? {#mining-ethereum}
+## Ninachimbaje Ethereum? {#mining-ethereum}
 
-Uchimbaji wa Ethereum hauwezekani tena. Mining was switched off when Ethereum moved from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Sasa, badala ya wachimbaji, Ethereum ina wathibitishaji. Mtu yeyote anaweza [kuweka dau](/glossary/#staking) ETH na kupokea zawadi za uwekaji dau kwa kuendesha programu ya mthibitishaji ili kulinda mtandao.
+Uchimbaji wa Ethereum hauwezekani tena. Uchimbaji ulizimwa wakati Ethereum ilipohama kutoka [Uthibitisho wa Kazi (PoW)](/glossary/#pow) hadi [Uthibitisho wa Dau (PoS)](/glossary/#pos) wakati wa [Unganisho](/roadmap/merge/) mnamo Septemba 2022. Sasa, badala ya wachimbaji, Ethereum ina wathibitishaji. Mtu yeyote anaweza [kuweka dhamana](/glossary/#staking) ya ETH na kupokea tuzo za uwekaji dhamana kwa kuendesha programu ya mthibitishaji ili kulinda mtandao.

@@ -1,5 +1,4 @@
 import { pick } from "lodash"
-import dynamic from "next/dynamic"
 import {
   getMessages,
   getTranslations,
@@ -7,15 +6,14 @@ import {
 } from "next-intl/server"
 import type { ReactNode } from "react"
 
-import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
-import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
   type CardProps as CardListCardProps,
 } from "@/components/CardList"
+import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -23,17 +21,21 @@ import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import {
   Card,
   CardContent,
+  CardEmoji,
   CardFooter,
   CardHeader,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import { Divider } from "@/components/ui/divider"
 import { Stack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
+import { Divider } from "@/components/ui/hr"
 import InlineLink from "@/components/ui/Link"
-import { Skeleton } from "@/components/ui/skeleton"
+import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -43,6 +45,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { exchangesByCountryLastUpdated } from "@/data/exchangesByCountry"
 
+import CentralizedExchanges from "./_components/CentralizedExchangesLazy"
 import GetEthPageJsonLD from "./page-jsonld"
 
 import uniswap from "@/public/images/dapps/uni.png"
@@ -50,26 +53,6 @@ import dapps from "@/public/images/doge-computer.png"
 import bancor from "@/public/images/exchanges/bancor.png"
 import hero from "@/public/images/get-eth.png"
 import wallet from "@/public/images/wallet.png"
-
-const CentralizedExchanges = dynamic(
-  () => import("@/components/CentralizedExchanges").then((mod) => mod.default),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="mb-6 flex w-full max-w-screen-sm flex-col items-center gap-y-10">
-        <div className="flex w-full justify-between rounded border p-3">
-          <Skeleton className="h-5 w-60" />
-          <Skeleton className="aspect-square" />
-        </div>
-        <Skeleton className="mt-6 size-20 rounded-3xl" />
-        <div className="flex w-full max-w-screen-sm flex-col items-center gap-2">
-          <Skeleton className="h-5 w-full" />
-          <Skeleton className="h-5 w-1/2" />
-        </div>
-      </div>
-    ),
-  }
-)
 
 type CardProps = {
   children: ReactNode
@@ -79,24 +62,22 @@ type CardProps = {
 }
 
 const StyledCard = ({ children, emoji, title, description }: CardProps) => (
-  <Card className="flex flex-col rounded-sm border">
-    <CardHeader className="space-y-4">
-      <Emoji text={emoji} className="text-5xl leading-none" />
-      <CardTitle>{title}</CardTitle>
+  <Card>
+    <CardHeader>
+      <CardEmoji text={emoji} />
     </CardHeader>
-    <CardContent className="flex-1 px-6">
-      <p>{description}</p>
+    <CardContent>
+      <CardTitle>{title}</CardTitle>
+      <CardParagraph>{description}</CardParagraph>
     </CardContent>
     <CardFooter>{children}</CardFooter>
   </Card>
 )
-const TwoColumnContent = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-1 gap-16 lg:grid-cols-2" {...props} />
-)
 
-export default async function Page({ params }: { params: PageParams }) {
+export default async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-get-eth" })
+  const t = await getTranslations("page-get-eth")
 
   const tokenSwaps: CardListCardProps[] = [
     {
@@ -106,7 +87,7 @@ export default async function Page({ params }: { params: PageParams }) {
       alt: "",
     },
     {
-      title: "Bancor",
+      title: "Carbon DeFi",
       link: "https://www.carbondefi.xyz/",
       image: bancor,
       alt: "",
@@ -143,40 +124,42 @@ export default async function Page({ params }: { params: PageParams }) {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contributors={contributors}
       />
-      <I18nProvider locale={locale} messages={messages}>
-        <MainArticle>
-          <Stack className="gap-16 p-8">
-            <div className="relative flex w-full flex-col-reverse justify-center lg:mx-auto lg:mb-8 lg:flex-col">
-              <Image
-                src={hero}
-                className="absolute -z-[1] min-h-[300px] w-full object-cover max-md:hidden"
-                sizes="100vw"
-                alt={t("page-get-eth-hero-image-alt")}
-                priority
-              />
-              <div className="my-8 flex flex-col items-center text-center lg:mx-0 lg:mb-0 lg:mt-24">
-                <h1 className="my-8 text-4xl md:text-5xl">
-                  {t("page-get-eth-where-to-buy-title")}
-                </h1>
-                <p className="mb-0 max-w-[45ch] text-center text-xl leading-snug text-body-medium">
-                  {t("page-get-eth-where-to-buy-desc")}
-                </p>
-                <br />
-                <EthPriceCard className="mb-8" />
-                <ButtonLink
-                  href="#country-picker"
-                  customEventOptions={{
-                    eventCategory: "Search by country button",
-                    eventAction: "click",
-                    eventName: "search_by_country",
-                  }}
-                >
-                  {t("page-get-eth-search-by-country")}
-                </ButtonLink>
-              </div>
-            </div>
 
-            <div className="my-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:my-0 lg:grid-cols-3">
+      <Section className="relative mb-space-2x">
+        <Image
+          src={hero}
+          className="absolute -z-[1] min-h-[300px] w-full object-cover max-md:hidden"
+          sizes="100vw"
+          alt={t("page-get-eth-hero-image-alt")}
+          preload
+        />
+        <div className="flow flex flex-col items-center p-page text-center max-lg:my-8 lg:mt-24">
+          <h1>{t("page-get-eth-where-to-buy-title")}</h1>
+          <p className="mb-0 max-w-[45ch] text-center text-xl leading-snug text-body-medium">
+            {t("page-get-eth-where-to-buy-desc")}
+          </p>
+
+          <EthPriceCard className="mb-space" />
+          <ButtonLink
+            href="#country-picker"
+            customEventOptions={{
+              eventCategory: "Search by country button",
+              eventAction: "click",
+              eventName: "search_by_country",
+            }}
+          >
+            {t("page-get-eth-search-by-country")}
+          </ButtonLink>
+        </div>
+      </Section>
+
+      <main className="pb-page">
+        <MainArticle className="flow *:[section]:px-page">
+          <Section id="ways">
+            <h2 className="sr-only select-none">
+              {t("page-get-eth-ways-to-get")}
+            </h2>
+            <Grid columns={3} className="my-4 lg:my-0">
               <StyledCard
                 emoji=":office_building:"
                 title={t("page-get-eth-cex")}
@@ -231,197 +214,204 @@ export default async function Page({ params }: { params: PageParams }) {
                   {t("page-get-eth-staking-link-desc")}
                 </InlineLink>
               </StyledCard>
-            </div>
+            </Grid>
 
-            <Stack className="gap-16">
-              <p>
-                <em>
-                  {t("listing-policy-disclaimer")}{" "}
-                  <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-                    {t("listing-policy-raise-issue-link")}
+            <p>
+              <em>
+                {t("listing-policy-disclaimer")}{" "}
+                <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+                  {t("listing-policy-raise-issue-link")}
+                </InlineLink>
+              </em>
+            </p>
+            <Alert className="mx-auto w-fit" variant="update">
+              <AlertContent className="flex flex-row items-center gap-4">
+                <Emoji className="text-4xl" text=":wave:" />
+                <AlertDescription>
+                  {t("page-get-eth-new-to-eth")}{" "}
+                  <InlineLink href="/eth/">
+                    {t("page-get-eth-whats-eth-link")}
                   </InlineLink>
-                </em>
+                </AlertDescription>
+              </AlertContent>
+            </Alert>
+          </Section>
+
+          <Section
+            id="country-picker"
+            className={cn(
+              "flex flex-col items-center py-16",
+              "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+            )}
+          >
+            <div className="flex flex-col items-center">
+              <h2 className="mb-4">{t("page-get-eth-exchanges-header")}</h2>
+              <p className="mb-8 max-w-3xl text-center">
+                {t("page-get-eth-exchanges-intro")}
               </p>
-              <Alert className="mx-auto w-fit" variant="update">
-                <AlertContent className="flex flex-row items-center gap-4">
-                  <Emoji className="text-4xl" text=":wave:" />
-                  <AlertDescription>
-                    {t("page-get-eth-new-to-eth")}{" "}
-                    <InlineLink href="/eth/">
-                      {t("page-get-eth-whats-eth-link")}
-                    </InlineLink>
-                  </AlertDescription>
-                </AlertContent>
-              </Alert>
-            </Stack>
 
-            <div
-              id="country-picker"
-              className={cn(
-                "-mx-8 my-0 flex flex-col items-center px-8 py-16 sm:p-16 md:my-16 lg:mx-0",
-                "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
-              )}
-            >
-              <div className="flex flex-col items-center">
-                <h2 className="mb-4">{t("page-get-eth-exchanges-header")}</h2>
-                <p className="mb-8 max-w-screen-md text-center">
-                  {t("page-get-eth-exchanges-intro")}
-                </p>
-
-                {/* CLIENT SIDE */}
+              {/* CLIENT SIDE */}
+              <I18nProvider locale={locale} messages={messages}>
                 <CentralizedExchanges
                   lastDataUpdateDate={exchangesByCountryLastUpdated}
                 />
-              </div>
+              </I18nProvider>
             </div>
+          </Section>
 
-            <Stack className="gap-12">
-              <h2 id="dex" className="text-2xl leading-6 md:text-3xl">
-                {t("page-get-eth-dexs")}
-              </h2>
-              <TwoColumnContent>
+          <Section id="dex">
+            <h2 className="text-2xl leading-6 md:text-3xl">
+              {t("page-get-eth-dexs")}
+            </h2>
+            <Grid
+              columns={2}
+              size="wider"
+              className="gap-16 [--grid-gap:--spacing(16)]"
+            >
+              <div className="flow">
+                <h3 className="text-xl leading-6 md:text-2xl">
+                  {t("page-get-eth-what-are-DEX's")}
+                </h3>
+                <p>{t("page-get-eth-dexs-desc")}</p>
+                <p>
+                  {t("page-get-eth-dexs-desc-2")}{" "}
+                  <InlineLink href="/smart-contracts">
+                    {t("page-get-eth-smart-contract-link")}
+                  </InlineLink>
+                </p>
+                <p>{t("page-get-eth-dexs-desc-3")}</p>
+                <p>{t("page-get-eth-need-wallet")}</p>
+                <ButtonLink href="/wallets/find-wallet/" className="sm:w-fit">
+                  {t("page-get-eth-get-wallet-btn")}
+                </ButtonLink>
+                <Alert variant="warning">
+                  <AlertContent>
+                    <AlertDescription>
+                      <Translation id="page-get-eth:page-get-eth-dexs-desc-4" />
+                    </AlertDescription>
+                  </AlertContent>
+                </Alert>
+              </div>
+
+              <div className="flow">
+                <h3 className="text-xl leading-6 md:text-2xl">
+                  {t("page-get-eth-other-cryptos")}
+                </h3>
+                <p>{t("page-get-eth-swapping")}</p>
+                <CardList items={tokenSwaps} />
+                <Alert variant="warning">
+                  <AlertContent>
+                    <AlertDescription>
+                      <Translation id="page-get-eth:page-get-eth-warning" />
+                    </AlertDescription>
+                  </AlertContent>
+                </Alert>
+              </div>
+            </Grid>
+          </Section>
+
+          <Divider className="mx-auto my-space-4x" />
+
+          <Section id="safety" className="flow">
+            <h2 className="text-2xl leading-6 md:text-3xl">
+              {t("page-get-eth-keep-it-safe")}
+            </h2>
+            <Grid
+              columns={2}
+              size="wider"
+              className="gap-16 [--grid-gap:--spacing(16)]"
+            >
+              <div className="flow">
+                <Image
+                  src={wallet}
+                  className="mx-auto h-auto w-full max-w-sm"
+                  sizes={`(max-width: ${screens.sm}) 100vw, (max-width: ${screens.md}) 60vw, calc(${screens["2xl"]} / 2)`}
+                  alt=""
+                />
+                <h3 className="text-xl leading-6 md:text-2xl">
+                  {t("page-get-eth-community-safety")}
+                </h3>
+                <CardList items={safetyArticles} />
+              </div>
+
+              <div className="flow">
                 <Stack className="gap-4">
-                  <h3 className="text-xl leading-6 md:text-2xl">
-                    {t("page-get-eth-what-are-DEX's")}
-                  </h3>
-                  <p>{t("page-get-eth-dexs-desc")}</p>
                   <p>
-                    {t("page-get-eth-dexs-desc-2")}{" "}
-                    <InlineLink href="/smart-contracts">
-                      {t("page-get-eth-smart-contract-link")}
-                    </InlineLink>
+                    <Translation id="page-get-eth:page-get-eth-description" />
                   </p>
-                  <p>{t("page-get-eth-dexs-desc-3")}</p>
-                  <p>{t("page-get-eth-need-wallet")}</p>
-                  <ButtonLink href="/wallets/find-wallet/" className="w-fit">
-                    {t("page-get-eth-get-wallet-btn")}
-                  </ButtonLink>
-                  <Alert variant="warning">
-                    <AlertContent>
-                      <AlertDescription>
-                        <Translation id="page-get-eth:page-get-eth-dexs-desc-4" />
-                      </AlertDescription>
-                    </AlertContent>
-                  </Alert>
+                  <p>{t("page-get-eth-security")}</p>
                 </Stack>
-
                 <Stack className="gap-4">
                   <h3 className="text-xl leading-6 md:text-2xl">
-                    {t("page-get-eth-other-cryptos")}
+                    {t("page-get-eth-protect-eth-in-wallet")}
                   </h3>
-                  <p>{t("page-get-eth-swapping")}</p>
-                  <CardList items={tokenSwaps} />
-                  <Alert variant="warning">
-                    <AlertContent>
-                      <AlertDescription>
-                        <Translation id="page-get-eth:page-get-eth-warning" />
-                      </AlertDescription>
-                    </AlertContent>
-                  </Alert>
+                  <p>{t("page-get-eth-protect-eth-desc")}</p>
+                  <InlineLink href="/wallets/">
+                    {t("page-get-eth-your-address-wallet-link")}
+                  </InlineLink>
                 </Stack>
-              </TwoColumnContent>
-            </Stack>
-
-            <Divider className="mx-auto my-16 md:my-32" />
-
-            <Stack className="gap-12">
-              <h2 className="text-2xl leading-6 md:text-3xl">
-                {t("page-get-eth-keep-it-safe")}
-              </h2>
-              <TwoColumnContent>
                 <Stack className="gap-4">
-                  <Image
-                    src={wallet}
-                    className="mb-8 h-auto w-full self-center sm:w-[60%] md:w-1/2"
-                    sizes={`(max-width: ${screens.sm}) 100vw, (max-width: ${screens.md}) 60vw, calc(${screens["2xl"]} / 2)`}
-                    alt=""
-                  />
                   <h3 className="text-xl leading-6 md:text-2xl">
-                    {t("page-get-eth-community-safety")}
+                    {t("page-get-eth-your-address")}
                   </h3>
-                  <CardList items={safetyArticles} />
-                </Stack>
-
-                <Stack className="gap-8">
-                  <Stack className="gap-4">
-                    <p>
-                      <Translation id="page-get-eth:page-get-eth-description" />
+                  <p>{t("page-get-eth-your-address-desc")}</p>
+                  <div className="mb-6 flex flex-col-reverse justify-between rounded bg-[#191919] p-2 select-none lg:flex-row">
+                    <p className="mb-0 font-monospace text-xs text-white">
+                      0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
                     </p>
-                    <p>{t("page-get-eth-security")}</p>
-                  </Stack>
-                  <Stack className="gap-4">
-                    <h3 className="text-xl leading-6 md:text-2xl">
-                      {t("page-get-eth-protect-eth-in-wallet")}
-                    </h3>
-                    <p>{t("page-get-eth-protect-eth-desc")}</p>
-                    <InlineLink href="/wallets/">
-                      {t("page-get-eth-your-address-wallet-link")}
-                    </InlineLink>
-                  </Stack>
-                  <Stack className="gap-4">
-                    <h3 className="text-xl leading-6 md:text-2xl">
-                      {t("page-get-eth-your-address")}
-                    </h3>
-                    <p>{t("page-get-eth-your-address-desc")}</p>
-                    <div className="mb-6 flex select-none flex-col-reverse justify-between rounded bg-[#191919] p-2 lg:flex-row">
-                      <p className="mb-0 font-monospace text-xs text-white">
-                        0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
-                      </p>
-                      <p className="mx-4 mb-0 text-sm uppercase text-error">
-                        {t("page-get-eth-do-not-copy")}
-                      </p>
-                    </div>
-                    <p>{t("page-get-eth-your-address-desc-3")}</p>
-                  </Stack>
-                  <Stack className="gap-4">
-                    <h3 className="text-xl leading-6 md:text-2xl">
-                      {t("page-get-eth-wallet-instructions")}
-                    </h3>
-                    <p>{t("page-get-eth-wallet-instructions-lost")}</p>
-                  </Stack>
+                    <p className="mx-4 mb-0 text-sm text-error uppercase">
+                      {t("page-get-eth-do-not-copy")}
+                    </p>
+                  </div>
+                  <p>{t("page-get-eth-your-address-desc-3")}</p>
                 </Stack>
-              </TwoColumnContent>
-            </Stack>
+                <Stack className="gap-4">
+                  <h3 className="text-xl leading-6 md:text-2xl">
+                    {t("page-get-eth-wallet-instructions")}
+                  </h3>
+                  <p>{t("page-get-eth-wallet-instructions-lost")}</p>
+                </Stack>
+              </div>
+            </Grid>
+          </Section>
 
-            <Divider className="mx-auto my-16 md:my-32" />
+          <Divider className="mx-auto my-space-4x" />
 
-            <CalloutBanner
-              className="mx-4 mb-40 mt-24"
-              titleKey="page-get-eth:page-get-eth-use-your-eth"
-              descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
+          <Section>
+            <Callout
+              title={t("page-get-eth-use-your-eth")}
+              description={t("page-get-eth-use-your-eth-dapps")}
               image={dapps}
               alt={t("page-index:page-index-sections-individuals-image-alt")}
-              imageWidth={600}
             >
-              <div>
-                <ButtonLink href="/apps/">
-                  {t("page-get-eth-checkout-dapps-btn")}
-                </ButtonLink>
-              </div>
-            </CalloutBanner>
+              <ButtonLink href="/apps/">
+                {t("page-get-eth-checkout-dapps-btn")}
+              </ButtonLink>
+            </Callout>
 
             <FileContributors
               className="border-t"
               contributors={contributors}
               lastEditLocaleTimestamp={lastEditLocaleTimestamp}
             />
-
-            <FeedbackCard />
-          </Stack>
+          </Section>
         </MainArticle>
-      </I18nProvider>
+
+        <Section className="px-page">
+          <ContentFeedback />
+        </Section>
+      </main>
     </>
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-get-eth" })
+  const t = await getTranslations("page-get-eth")
 
   return await getMetadata({
     locale,

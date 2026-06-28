@@ -23,7 +23,7 @@ const SearchModal = dynamic(() => import("./SearchModal"))
 
 interface SearchProps {
   asChild?: boolean
-  children?: React.ReactElement
+  children?: React.ReactElement<unknown>
 }
 
 const Search = ({ asChild = false, children }: SearchProps) => {

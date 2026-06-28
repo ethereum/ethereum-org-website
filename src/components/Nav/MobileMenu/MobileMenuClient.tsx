@@ -9,6 +9,8 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 
+import { SITE_TITLE } from "@/lib/constants"
+
 import HamburgerButton from "./HamburgerButton"
 
 import { useCloseOnNavigate } from "@/hooks/useCloseOnNavigate"
@@ -102,7 +104,7 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
         className="flex flex-col"
         onOpenChange={handleOpenChange}
         triggerRef={triggerRef}
-        aria-label={t("site-title")}
+        aria-label={SITE_TITLE}
         data-testid="mobile-menu-dialog"
       >
         {hasBeenOpened && (

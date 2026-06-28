@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/quizzes/index.md",
+  "generatedAt": "2026-06-08T08:26:33.781Z",
+  "rootHash": "dca6b3fe2448",
+  "tree": {
+    "contentHash": "d54a6e93097f",
+    "anchorHash": "b8ae48d11058",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "f1e638bae6e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c19aafeb4206"
+      },
+      "frontmatter:description": {
+        "contentHash": "ae57e58170b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:4": {
+        "contentHash": "67911f5c2af1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "620558ceadc1",
+        "anchorHash": "ffb8e9b5b37e"
+      },
+      "prose:5": {
+        "contentHash": "3973e022e932",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "35987a0f9ae7",
+        "anchorHash": "807fefbb8050"
+      },
+      "prose:6": {
+        "contentHash": "3973e022e932",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "ac6e184ddd15",
+        "anchorHash": "b2b55c156bde"
+      },
+      "prose:7": {
+        "contentHash": "3973e022e932",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:3": {
+        "contentHash": "937c6321fdfe",
+        "anchorHash": "db0b5977176b"
+      },
+      "adding-a-learn-quiz": {
+        "contentHash": "87a1fa10b651",
+        "anchorHash": "3fa993417e5a",
+        "labelHash": "af94df663c93",
+        "children": {
+          "_label": {
+            "contentHash": "af94df663c93",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "53a739ac2709",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "9c7b4f2d5fd4",
+            "anchorHash": "746af3cfd19a"
+          },
+          "prose:2": {
+            "contentHash": "f64827d7a360",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "adding-a-quiz-question": {
+        "contentHash": "0d2785976152",
+        "anchorHash": "3fa993417e5a",
+        "labelHash": "d7e2edb40eb7",
+        "children": {
+          "_label": {
+            "contentHash": "d7e2edb40eb7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "845070108d3f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "9c7b4f2d5fd4",
+            "anchorHash": "746af3cfd19a"
+          },
+          "prose:2": {
+            "contentHash": "eac03d155b9c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "updating-a-quiz-question": {
+        "contentHash": "353bc6cec6d6",
+        "anchorHash": "3fa993417e5a",
+        "labelHash": "a66862744065",
+        "children": {
+          "_label": {
+            "contentHash": "a66862744065",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "f8ca7aac91a4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "9c7b4f2d5fd4",
+            "anchorHash": "746af3cfd19a"
+          },
+          "prose:2": {
+            "contentHash": "fbe97dc679eb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "removing-a-quiz-question": {
+        "contentHash": "3cf5f0f3ba7a",
+        "anchorHash": "3fa993417e5a",
+        "labelHash": "ee695c9000c0",
+        "children": {
+          "_label": {
+            "contentHash": "ee695c9000c0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "2736553c34d9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "9c7b4f2d5fd4",
+            "anchorHash": "746af3cfd19a"
+          },
+          "prose:2": {
+            "contentHash": "20f90fc5baa7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:4",
+      "link:0",
+      "prose:5",
+      "link:1",
+      "prose:6",
+      "link:2",
+      "prose:7",
+      "link:3",
+      "adding-a-learn-quiz",
+      "adding-a-quiz-question",
+      "updating-a-quiz-question",
+      "removing-a-quiz-question"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

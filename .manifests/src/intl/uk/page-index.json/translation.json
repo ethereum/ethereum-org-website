@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-04-18T20:57:39.272Z",
+  "englishManifestHash": "577b3c18f5a4",
+  "placeholderOrder": [
+    "ICU-VARIABLE-0",
+    "ICU-VARIABLE-1",
+    "ICU-VARIABLE-2",
+    "ICU-VARIABLE-3",
+    "ICU-VARIABLE-4",
+    "ICU-VARIABLE-5",
+    "ICU-VARIABLE-6",
+    "ICU-VARIABLE-7",
+    "ICU-VARIABLE-8",
+    "ICU-VARIABLE-9",
+    "ICU-VARIABLE-10"
+  ],
+  "placeholderMap": {
+    "ICU-VARIABLE-0": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{minutes}"
+      }
+    },
+    "ICU-VARIABLE-1": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{wireFee}"
+      }
+    },
+    "ICU-VARIABLE-2": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{days}"
+      }
+    },
+    "ICU-VARIABLE-3": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{txFee}"
+      }
+    },
+    "ICU-VARIABLE-4": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{min}"
+      }
+    },
+    "ICU-VARIABLE-5": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{max}"
+      }
+    },
+    "ICU-VARIABLE-6": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{minutes}"
+      }
+    },
+    "ICU-VARIABLE-7": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{uptime}"
+      }
+    },
+    "ICU-VARIABLE-8": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count}"
+      }
+    },
+    "ICU-VARIABLE-9": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{volume}"
+      }
+    },
+    "ICU-VARIABLE-10": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{minutes}"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-18T20:57:39.272Z",
+      "status": "success"
+    }
+  }
+}

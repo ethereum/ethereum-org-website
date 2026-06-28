@@ -1,0 +1,345 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-06-18T00:13:55.715Z",
+  "englishManifestHash": "73332defdd78",
+  "placeholderOrder": [
+    "LINK-ce02dd",
+    "LINK-de0cd7",
+    "IMAGE-65438d",
+    "CODE-6b23c0",
+    "CODE-3f39d5",
+    "CODE-24e7ae",
+    "CODE-39ddcb",
+    "IMAGE-d4dc24",
+    "LINK-f43148",
+    "CODEBLOCK-849ed3",
+    "LINK-4ca9b6",
+    "CODEBLOCK-fb3f4e",
+    "LINK-1ab520",
+    "CODEBLOCK-65bde5",
+    "CODEBLOCK-acb0e5",
+    "CODE-f3b050",
+    "CODE-7f7b1b",
+    "CODEBLOCK-adef1d",
+    "LINK-acd592",
+    "CODE-850987",
+    "CODE-ca9781",
+    "CODE-3e23e8",
+    "CODE-1c0750",
+    "CODE-a80c8a",
+    "CODE-90f340",
+    "CODE-6bf383",
+    "CODEBLOCK-a8cd84",
+    "IMAGE-963786",
+    "CODEBLOCK-8704c5",
+    "CODE-51850f",
+    "CODEBLOCK-a8f19a",
+    "CODEBLOCK-b30293",
+    "CODE-9da765",
+    "CODE-2e2cda",
+    "CODEBLOCK-75f5ba",
+    "LINK-d31bd4",
+    "CODEBLOCK-82f809",
+    "LINK-b5e60d",
+    "LINK-536e5f",
+    "CODEBLOCK-17b818",
+    "CODEBLOCK-bc027b",
+    "CODE-d04b98",
+    "CODE-05cdfe",
+    "LINK-b51bd0",
+    "LINK-3e299c",
+    "CODE-71d982",
+    "CODEBLOCK-6e18cc",
+    "CODE-dd0ecb",
+    "LINK-b83bf4",
+    "LINK-45af56",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-849ed3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fb3f4e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-65bde5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-acb0e5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-adef1d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a8cd84": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8704c5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a8f19a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b30293": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-75f5ba": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-82f809": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-17b818": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bc027b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6e18cc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-6b23c0": {
+      "type": "inline-code",
+      "values": {
+        "content": "C"
+      }
+    },
+    "CODE-3f39d5": {
+      "type": "inline-code",
+      "values": {
+        "content": "D"
+      }
+    },
+    "CODE-24e7ae": {
+      "type": "inline-code",
+      "values": {
+        "content": "H(A-B)"
+      }
+    },
+    "CODE-39ddcb": {
+      "type": "inline-code",
+      "values": {
+        "content": "H(E-H)"
+      }
+    },
+    "CODE-f3b050": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x60A7"
+      }
+    },
+    "CODE-7f7b1b": {
+      "type": "inline-code",
+      "values": {
+        "content": "BigInt"
+      }
+    },
+    "CODE-850987": {
+      "type": "inline-code",
+      "values": {
+        "content": "hash(a^b)"
+      }
+    },
+    "CODE-ca9781": {
+      "type": "inline-code",
+      "values": {
+        "content": "a"
+      }
+    },
+    "CODE-3e23e8": {
+      "type": "inline-code",
+      "values": {
+        "content": "b"
+      }
+    },
+    "CODE-1c0750": {
+      "type": "inline-code",
+      "values": {
+        "content": "b' = a^b^a'"
+      }
+    },
+    "CODE-a80c8a": {
+      "type": "inline-code",
+      "values": {
+        "content": "a'"
+      }
+    },
+    "CODE-6bf383": {
+      "type": "inline-code",
+      "values": {
+        "content": "b'"
+      }
+    },
+    "CODE-90f340": {
+      "type": "inline-code",
+      "values": {
+        "content": "hash(a') ^ hash(b')"
+      }
+    },
+    "CODE-51850f": {
+      "type": "inline-code",
+      "values": {
+        "content": "hashEmpty"
+      }
+    },
+    "CODE-9da765": {
+      "type": "inline-code",
+      "values": {
+        "content": "(v[0],v[1])"
+      }
+    },
+    "CODE-2e2cda": {
+      "type": "inline-code",
+      "values": {
+        "content": "(v[2],v[3])"
+      }
+    },
+    "CODE-d04b98": {
+      "type": "inline-code",
+      "values": {
+        "content": "hash"
+      }
+    },
+    "CODE-05cdfe": {
+      "type": "inline-code",
+      "values": {
+        "content": "pairHash"
+      }
+    },
+    "CODE-71d982": {
+      "type": "inline-code",
+      "values": {
+        "content": "bytes32"
+      }
+    },
+    "CODE-dd0ecb": {
+      "type": "inline-code",
+      "values": {
+        "content": "H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))"
+      }
+    },
+    "IMAGE-65438d": {
+      "type": "image",
+      "values": {
+        "path": "tree.png"
+      }
+    },
+    "IMAGE-d4dc24": {
+      "type": "image",
+      "values": {
+        "path": "proof-c.png"
+      }
+    },
+    "IMAGE-963786": {
+      "type": "image",
+      "values": {
+        "path": "merkle-empty-hash.png"
+      }
+    },
+    "LINK-ce02dd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/storage/"
+      }
+    },
+    "LINK-de0cd7": {
+      "type": "link",
+      "values": {
+        "url": "https://computersciencewiki.org/index.php/Merkle_proof"
+      }
+    },
+    "LINK-f43148": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity"
+      }
+    },
+    "LINK-4ca9b6": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256"
+      }
+    },
+    "LINK-1ab520": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/chrisdotn/jsmnSol"
+      }
+    },
+    "LINK-acd592": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Exclusive_or"
+      }
+    },
+    "LINK-d31bd4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.11/"
+      }
+    },
+    "LINK-536e5f": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/"
+      }
+    },
+    "LINK-b5e60d": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/docs/cookbook/debug-logs"
+      }
+    },
+    "LINK-b51bd0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm"
+      }
+    },
+    "LINK-3e299c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays"
+      }
+    },
+    "LINK-b83bf4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/#rollups"
+      }
+    },
+    "LINK-45af56": {
+      "type": "link",
+      "values": {
+        "url": "https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:13:55.715Z",
+      "status": "success"
+    }
+  }
+}

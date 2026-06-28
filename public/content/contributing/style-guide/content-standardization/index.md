@@ -4,8 +4,6 @@ description: Guide to use consistent terminology in content writing
 lang: en
 ---
 
-# Content standardization {#content-standardization}
-
 This style guide aims to standardize certain aspects of writing content to make the contribution process smoother.
 
 ## Use American English {#american-english}
@@ -18,7 +16,7 @@ For words that have multiple spellings, use American English over British Englis
 - "color" over "colour"
 - "analyze" over "analyse"
 
-## Terminology {#Terminology}
+## Terminology {#terminology}
 
 ### Ethereum {#ethereum}
 
@@ -107,7 +105,7 @@ Zero-knowledge is a common noun and should only be capitalized at the beginning 
 - Zero knowledge
 - zero knowledge
 
-### ZK-proof {#ZK-proof}
+### ZK-proof {#zk-proof}
 
 When using the abbreviated form of zero-knowledge proof you should shorten zero-knowledge to ZK, and hyphenate the abbreviation.
 
@@ -124,7 +122,7 @@ When using the abbreviated form of zero-knowledge proof you should shorten zero-
 - zK proof
 - zk proof
 
-### ZK-rollup {#ZK-rollup}
+### ZK-rollup {#zk-rollup}
 
 When using the abbreviated form of zero-knowledge rollup you should shorten zero-knowledge to ZK, and hyphenate the abbreviation.
 
@@ -181,13 +179,13 @@ When linking to another page on ethereum.org, use the relative path over the abs
 ```md
 <!-- Good -->
 
-Read more about [smart contracts](/docs/developers/smart-contracts/)
+Read more about [smart contracts](/developers/docs/smart-contracts/)
 
 <!-- Bad -->
 
-Read more about [smart contracts](/en/docs/developers/smart-contracts)
-Read more about [smart contracts](/docs/developers/smart-contracts)
-Read more about [smart contracts](https://ethereum.org/docs/developers/smart-contracts)
+Read more about [smart contracts](/en/developers/docs/smart-contracts)
+Read more about [smart contracts](/developers/docs/smart-contracts)
+Read more about [smart contracts](https://ethereum.org/developers/docs/smart-contracts)
 ```
 
 Please also add a trailing slash to all links. This keeps links consistent and avoids redirects, which hurts site performance.
@@ -220,7 +218,7 @@ When adding an image to a page, the image should be downloaded and placed in the
 
 This helps us ensure the image will be available.
 
-### Using emojis {#images}
+### Using emojis {#images-2}
 
 Everyone loves emojis <Emoji text="🥰" size={1} /> To standardize the appearance of all Emojis across browsers, ethereum.org uses an `<Emoji />` React component.
 

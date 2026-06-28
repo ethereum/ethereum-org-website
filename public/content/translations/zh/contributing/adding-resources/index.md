@@ -1,53 +1,51 @@
 ---
-title: "添加资源"
-description: "我们添加资源到以太坊官网（ethereum.org）时所使用的政策"
+title: 添加资源
+description: 我们在向 ethereum.org 添加资源时使用的政策
 lang: zh
 ---
 
-# 添加资源{#adding-resources}
+我们希望确保列出尽可能最好的资源，同时让用户感到安全和自信。
 
-我们想要确保我们上架的资源是最好的，能够让用户安全和放心。
+任何人都可以自由建议将新资源添加到 ethereum.org 上的资源仪表板，目前可以在 [ethereum.org/resources](/resources/) 找到。
 
-任何人都可以自由地提议新的资源，以便将其添加到以太坊官网（ethereum.org）的资源板中，目前该页面位于[资源ethereum.org/资源](/resources/)。
+尽管我们欢迎新增内容，但目前的资源是基于我们试图为用户创造的体验而选择的。这些基于我们的一些设计原则：
 
-尽管我们欢迎新资源的加入，但当前资源的选择是基于我们希望为用户创造的体验而决定的。 以下条件基于我们的一些设计原则：
+- _启发性_：ethereum.org 上的任何内容都应该为用户提供一些新东西
+- _好故事_：列出的内容应该提供一个“顿悟”时刻
+- _可信度_：所有内容都应该是合法的企业/项目，以将用户的风险降至最低
 
-- ——激励性要求——：以太坊官网的任何内容都应向用户提供新价值。​
-- ——一个好的叙事——：列表中的内容应该提供一个“令人惊喜的”时刻
-- ——可信度——：所有项目必须确保合法合规，以最大限度降低用户风险。​​
-
-总体而言，以太坊官网（ethereum.org ）想要为新用户提供“无缝入门体验”。 由于这个原因，我们基于这些原则添加资源：
+总体而言，**ethereum.org 旨在为新用户提供无缝的用户引导体验**。因此，我们根据以下几点添加资源：
 
 - 易用性
 - 准确性
-- 维护
+- 维护情况
 
-## 决策框架{#decision-framework}
+## 决策框架 {#decision-framework}
 
-### 标准{#criteria}
+### 标准 {#criteria}
 
-- **真实且准确的列表信息‌**——所有推荐的列表必须提供真实准确的信息。 提供了虚假信息的产品将会被下架。
-- **‌活跃的项目‌**——该资源应该由活跃团队维护，以确保质量和用户支持。 过时的资源将会被移除。
+- **诚实准确的列表信息** - 任何建议的列表都必须附带诚实准确的信息。伪造信息的产品将被移除。
+- **活跃的项目** – 资源应由活跃的团队维护，以确保质量和对用户的支持。过时的资源可能会被移除。
 
-### 产品订购{#product-ordering}
+### 产品排序 {#product-ordering}
 
-我们保留根据产品的影响力进行订购的权利。 新产品一般会被添加到列表底部，除非有其它说明。
+我们保留根据产品影响力对其进行排序的权利。除非另有说明，新产品通常会添加到列表底部。
 
-## 持久性{#maintenance}
+## 维护 {#maintenance}
 
-随着以太坊生态系统的不断发展，我们将定期审核内容：
+随着以太坊生态系统的发展，我们将定期检查我们的内容以：
 
-- 以确保所有在列表中的资源仍然符合我们的标准
-- 验证建议的产品没有比当前上架的产品符合我们的更多标准
+- 确保列出的所有资源仍然符合我们的标准
+- 验证是否有没有被建议的产品比当前列出的产品更符合我们的标准
 
-如果你想对此提供帮助，可以开展上述两项检查并让我们知道检查结果。 [创建一个问题](https://github.com/ethereum/ethereum-org-website/issues/new?template=bug_report.yaml)或发送邮件至 [website@ethereum.org](mailto:website@ethereum.org)。
+您可以通过检查并告知我们来提供帮助。[创建议题](https://github.com/ethereum/ethereum-org-website/issues/new?template=bug_report.yaml)或发送电子邮件至 [website@ethereum.org](mailto:website@ethereum.org)。
 
 ---
 
-## 添加你的资源{#add-your-resource}
+## 添加您的资源 {#add-your-resource}
 
-如果你想要在以太坊官网（ethereum.org）上添加你的资源且资源符合标准，可以在Github上创设一个开源项目。
+如果您想向 ethereum.org 添加资源并且它符合标准，请在 GitHub 上创建一个议题。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=resource+📚&template=suggest_resource.yaml">
-创设一个开源项目
+  创建议题
 </ButtonLink>

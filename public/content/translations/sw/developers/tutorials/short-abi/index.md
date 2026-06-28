@@ -1,96 +1,97 @@
 ---
-title: "ABI Fupi za Uboreshaji wa Calldata"
-description: Kuboresha mikataba-erevu kwa ajili ya Optimistic Rollups
+title: "ABI Fupi kwa Uboreshaji wa Data za Mwito"
+description: Kuboresha mikataba mahiri kwa ajili ya Mikusanyiko ya Optimistic
 author: Ori Pomerantz
 lang: sw
-tags: [ "safu ya 2" ]
+tags: ["tabaka la 2 (l2)"]
 skill: intermediate
+breadcrumb: ABI Fupi
 published: 2022-04-01
 ---
 
 ## Utangulizi {#introduction}
 
-Katika makala haya, utajifunza kuhusu [optimistic rollups](/developers/docs/scaling/optimistic-rollups), gharama za miamala juu yao, na jinsi muundo huo tofauti wa gharama unavyotulazimu kuboresha mambo tofauti kuliko kwenye Mtandao Mkuu wa Ethereum.
-Pia utajifunza jinsi ya kutekeleza uboreshaji huu.
+Katika makala haya, unajifunza kuhusu [mikusanyiko ya optimistic](/developers/docs/scaling/optimistic-rollups), gharama ya miamala juu yake, na jinsi muundo huo tofauti wa gharama unavyotuhitaji kuboresha mambo tofauti kuliko kwenye Mtandao Mkuu wa Ethereum.
+Pia unajifunza jinsi ya kutekeleza uboreshaji huu.
 
 ### Ufichuzi kamili {#full-disclosure}
 
 Mimi ni mfanyakazi wa muda wote wa [Optimism](https://www.optimism.io/), kwa hivyo mifano katika makala haya itaendeshwa kwenye Optimism.
-Hata hivyo, mbinu iliyoelezwa hapa inapaswa kufanya kazi vizuri vile vile kwa rollups zingine.
+Hata hivyo, mbinu iliyoelezwa hapa inapaswa kufanya kazi vizuri kwa mikusanyiko mingine.
 
 ### Istilahi {#terminology}
 
-Wakati wa kujadili rollups, neno 'safu ya 1' (L1) hutumika kwa Mtandao Mkuu, mtandao wa uzalishaji wa Ethereum.
-Neno 'safu ya 2' (L2) hutumika kwa rollup au mfumo mwingine wowote unaotegemea L1 kwa usalama lakini hufanya usindikaji wake mwingi nje ya chain.
+Wakati wa kujadili mikusanyiko, neno 'tabaka la 1 (l1)' linatumika kwa Mtandao Mkuu, mtandao wa uzalishaji wa Ethereum.
+Neno 'tabaka la 2 (l2)' linatumika kwa rollup au mfumo mwingine wowote unaotegemea l1 kwa usalama lakini hufanya uchakataji wake mwingi nje ya mnyororo.
 
-## Je, tunawezaje kupunguza zaidi gharama ya miamala ya L2? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
+## Tunawezaje kupunguza zaidi gharama ya miamala ya l2? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
 
-[Optimistic rollups](/developers/docs/scaling/optimistic-rollups) zinapaswa kuhifadhi rekodi ya kila muamala wa kihistoria ili mtu yeyote aweze kuzipitia na kuthibitisha kwamba hali ya sasa ni sahihi.
-Njia ya bei nafuu zaidi ya kuingiza data kwenye Mtandao Mkuu wa Ethereum ni kuiandika kama calldata.
+[Mikusanyiko ya optimistic](/developers/docs/scaling/optimistic-rollups) inapaswa kuhifadhi rekodi ya kila muamala wa kihistoria ili mtu yeyote aweze kuipitia na kuthibitisha kuwa hali ya sasa ni sahihi.
+Njia ya bei nafuu zaidi ya kuingiza data kwenye Mtandao Mkuu wa Ethereum ni kuiandika kama data za mwito.
 Suluhisho hili lilichaguliwa na [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) na [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
-### Gharama ya miamala ya L2 {#cost-of-l2-transactions}
+### Gharama ya miamala ya l2 {#cost-of-l2-transactions}
 
-Gharama ya miamala ya L2 inaundwa na vijenzi viwili:
+Gharama ya miamala ya l2 inaundwa na vipengele viwili:
 
-1. Usindikaji wa L2, ambao kwa kawaida ni wa bei nafuu sana
-2. Ghala la L1, ambalo limeunganishwa na gharama za gesi za Mtandao Mkuu
+1. Uchakataji wa l2, ambao kwa kawaida ni wa bei nafuu sana
+2. Uhifadhi wa l1, ambao unahusishwa na gharama za gesi za Mtandao Mkuu
 
-Ninapoandika haya, kwenye Optimism gharama ya gesi ya L2 ni 0.001 [Gwei](/developers/docs/gas/#pre-london).
-Gharama ya gesi ya L1, kwa upande mwingine, ni takriban gwei 40.
+Ninapoandika haya, kwenye Optimism gharama ya gesi ya l2 ni 0.001 [Gwei](/developers/docs/gas/#pre-london).
+Gharama ya gesi ya l1, kwa upande mwingine, ni takriban Gwei 40.
 [Unaweza kuona bei za sasa hapa](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
-Baiti moja ya calldata hugharimu gesi 4 (ikiwa ni sifuri) au gesi 16 (ikiwa ni thamani nyingine yoyote).
-Moja ya operesheni za gharama kubwa zaidi kwenye EVM ni kuandika kwenye ghala.
-Gharama ya juu ya kuandika neno la baiti 32 kwenye ghala kwenye L2 ni gesi 22100. Kwa sasa, hii ni gwei 22.1.
-Kwa hivyo ikiwa tunaweza kuokoa baiti moja ya sifuri ya calldata, tutaweza kuandika takriban baiti 200 kwenye ghala na bado tuwe na faida.
+Baiti ya data za mwito inagharimu gesi 4 (ikiwa ni sifuri) au gesi 16 (ikiwa ni thamani nyingine yoyote).
+Moja ya shughuli ghali zaidi kwenye EVM ni kuandika kwenye hifadhi.
+Gharama ya juu zaidi ya kuandika neno la baiti 32 kwenye hifadhi kwenye l2 ni gesi 22100. Kwa sasa, hii ni Gwei 22.1.
+Kwa hivyo ikiwa tunaweza kuokoa baiti moja ya sifuri ya data za mwito, tutaweza kuandika takriban baiti 200 kwenye hifadhi na bado tuwe mbele.
 
 ### ABI {#the-abi}
 
 Idadi kubwa ya miamala hufikia mkataba kutoka kwa akaunti inayomilikiwa na mtu wa nje.
-Mikataba mingi imeandikwa katika Solidity na kutafsiri uga wao wa data kulingana na [kiolesura cha binary cha programu (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+Mikataba mingi imeandikwa katika Solidity na kutafsiri uwanja wao wa data kulingana na [kiolesura cha mfumo wa programu (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-Hata hivyo, ABI ilitengenezwa kwa ajili ya L1, ambapo baiti ya calldata hugharimu takriban sawa na operesheni nne za hesabu, sio L2 ambapo baiti ya calldata hugharimu zaidi ya operesheni elfu moja za hesabu.
-Calldata imegawanywa kama ifuatavyo:
+Hata hivyo, ABI iliundwa kwa ajili ya l1, ambapo baiti ya data za mwito inagharimu takriban sawa na shughuli nne za hesabu, si l2 ambapo baiti ya data za mwito inagharimu zaidi ya shughuli elfu moja za hesabu.
+Data za mwito zimegawanywa hivi:
 
-| Sehemu                          | Urefu | Baiti | Baiti zilizopotea | Gesi iliyopotea | Baiti zinazohitajika | Gesi inayohitajika |
-| ------------------------------- | ----: | ----: | ----------------: | --------------: | -------------------: | -----------------: |
-| Kiteuzi cha chaguo za kukokotoa |     4 |   0-3 |                 3 |              48 |                    1 |                 16 |
-| Sifuri                          |    12 |  4-15 |                12 |              48 |                    0 |                  0 |
-| Anwani ya mwisho                |    20 | 16-35 |                 0 |               0 |                   20 |                320 |
-| Kiasi                           |    32 | 36-67 |                17 |              64 |                   15 |                240 |
-| Jumla                           |    68 |       |                   |             160 |                      |                576 |
+| Sehemu | Urefu | Baiti | Baiti zilizopotea | Gesi iliyopotea | Baiti muhimu | Gesi muhimu |
+| ------------------- | -----: | ----: | -----------: | ---------: | --------------: | ------------: |
+| Kichaguzi cha utendakazi |      4 |   0-3 |            3 |         48 |               1 |            16 |
+| Sifuri |     12 |  4-15 |           12 |         48 |               0 |             0 |
+| Anwani ya marudio |     20 | 16-35 |            0 |          0 |              20 |           320 |
+| Kiasi |     32 | 36-67 |           17 |         64 |              15 |           240 |
+| Jumla |     68 |       |              |        160 |                 |           576 |
 
 Maelezo:
 
-- **Kiteuzi cha chaguo za kukokotoa**: Mkataba una chaguo za kukokotoa chini ya 256, kwa hivyo tunaweza kuzitofautisha kwa baiti moja.
-  Kwa kawaida baiti hizi si sifuri na kwa hivyo [hugharimu gesi kumi na sita](https://eips.ethereum.org/EIPS/eip-2028).
-- **Sifuri**: Baiti hizi daima ni sifuri kwa sababu anwani ya baiti ishirini haihitaji neno la baiti thelathini na mbili ili kuihifadhi.
-  Baiti zinazoshikilia sifuri hugharimu gesi nne ([angalia karatasi ya njano](https://ethereum.github.io/yellowpaper/paper.pdf), Nyongeza G,
-  k. 27, thamani ya `G`<sub>`txdatazero`</sub>).
-- **Kiasi**: Tukichukulia kuwa katika mkataba huu `decimals` ni kumi na nane (thamani ya kawaida) na kiasi cha juu cha tokeni tunachohamisha kitakuwa 10<sup>18</sup>, tunapata kiasi cha juu cha 10<sup>36</sup>.
+- **Kichaguzi cha utendakazi**: Mkataba una utendakazi chini ya 256, kwa hivyo tunaweza kuzitofautisha kwa baiti moja.
+  Baiti hizi kwa kawaida si sifuri na kwa hivyo [zinagharimu gesi kumi na sita](https://eips.ethereum.org/EIPS/eip-2028).
+- **Sifuri**: Baiti hizi daima ni sifuri kwa sababu anwani ya baiti ishirini haihitaji neno la baiti thelathini na mbili kuishikilia.
+  Baiti zinazoshikilia sifuri zinagharimu gesi nne ([tazama waraka wa manjano](https://ethereum.github.io/yellowpaper/paper.pdf), Kiambatisho G,
+  uk. 27, thamani ya `G`<sub>`txdatazero`</sub>).
+- **Kiasi**: Ikiwa tutachukulia kuwa katika mkataba huu `decimals` ni kumi na nane (thamani ya kawaida) na kiasi cha juu zaidi cha tokeni tunachohamisha kitakuwa 10<sup>18</sup>, tunapata kiasi cha juu zaidi cha 10<sup>36</sup>.
   256<sup>15</sup> &gt; 10<sup>36</sup>, kwa hivyo baiti kumi na tano zinatosha.
 
-Upotevu wa gesi 160 kwenye L1 kwa kawaida hauzingatiwi. Muamala hugharimu angalau [gesi 21,000](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), kwa hivyo 0.8% ya ziada haijalishi.
-Hata hivyo, kwenye L2, mambo ni tofauti. Karibu gharama nzima ya muamala ni kuiandika kwa L1.
-Mbali na calldata ya muamala, kuna baiti 109 za kichwa cha muamala (anwani ya mwisho, saini, n.k.).
-Gharama ya jumla kwa hivyo ni `109*16+576+160=2480`, na tunapoteza takriban 6.5% ya hiyo.
+Upotevu wa gesi 160 kwenye l1 kwa kawaida hauzingatiwi. Muamala unagharimu angalau [gesi 21,000](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), kwa hivyo 0.8% ya ziada haijalishi.
+Hata hivyo, kwenye l2, mambo ni tofauti. Takriban gharama nzima ya muamala ni kuiandika kwenye l1.
+Mbali na data za mwito za muamala, kuna baiti 109 za kichwa cha muamala (anwani ya marudio, sahihi, n.k.).
+Kwa hivyo gharama ya jumla ni `109*16+576+160=2480`, na tunapoteza takriban 6.5% ya hiyo.
 
-## Kupunguza gharama wakati haudhibiti mwishilio {#reducing-costs-when-you-dont-control-the-destination}
+## Kupunguza gharama wakati hudhibiti marudio {#reducing-costs-when-you-dont-control-the-destination}
 
-Tukichukulia kuwa huna udhibiti juu ya mkataba wa mwishilio, bado unaweza kutumia suluhisho sawa na [hili](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
-Wacha tupitie faili zinazohusika.
+Kwa kudhani kuwa huna udhibiti wa mkataba wa marudio, bado unaweza kutumia suluhisho sawa na [hili](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
+Hebu tupitie faili husika.
 
 ### Token.sol {#token-sol}
 
-[Huu ni mkataba wa mwishilio](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
+[Huu ni mkataba wa marudio](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
 Ni mkataba wa kawaida wa ERC-20, wenye kipengele kimoja cha ziada.
-Kitendo hiki cha `faucet` humruhusu mtumiaji yeyote kupata tokeni fulani ya kutumia.
-Ingefanya mkataba wa uzalishaji wa ERC-20 usiwe na maana, lakini hurahisisha maisha wakati ERC-20 ipo tu kuwezesha majaribio.
+Utendakazi huu wa `faucet` unamruhusu mtumiaji yeyote kupata tokeni ya kutumia.
+Ingefanya mkataba wa uzalishaji wa ERC-20 usiwe na maana, lakini inafanya maisha kuwa rahisi wakati ERC-20 ipo tu kuwezesha majaribio.
 
 ```solidity
     /**
-     * @dev Gives the caller 1000 tokens to play with
+     * @dev Inampa mpigaji tokeni 1000 za kucheza nazo
      */
     function faucet() external {
         _mint(msg.sender, 1000);
@@ -99,8 +100,8 @@ Ingefanya mkataba wa uzalishaji wa ERC-20 usiwe na maana, lakini hurahisisha mai
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
-[Huu ni mkataba ambao miamala inapaswa kuita na calldata fupi](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
-Wacha tuipitie mstari kwa mstari.
+[Huu ni mkataba ambao miamala inapaswa kuita kwa data za mwito fupi zaidi](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
+Hebu tuipitie mstari kwa mstari.
 
 ```solidity
 //SPDX-License-Identifier: Unlicense
@@ -110,23 +111,23 @@ pragma solidity ^0.8.0;
 import { OrisUselessToken } from "./Token.sol";
 ```
 
-Tunahitaji chaguo za kukokotoa za tokeni ili kujua jinsi ya kuiita.
+Tunahitaji utendakazi wa tokeni ili kujua jinsi ya kuiita.
 
 ```solidity
-contract CalldataInterpreter {
+mkataba CalldataInterpreter {
 
     OrisUselessToken public immutable token;
 ```
 
-Anwani ya tokeni ambayo sisi ni proksi.
+Anwani ya tokeni ambayo sisi ni mkataba wa uwakilishi.
 
 ```solidity
 
     /**
-     * @dev Specify the token address
-     * @param tokenAddr_ The ERC-20 contract address
+     * @dev Bainisha anwani ya tokeni
+     * @param tokenAddr_ anwani ya mkataba wa ERC-20
      */
-    constructor(
+    konstrukta(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);
@@ -140,7 +141,7 @@ Anwani ya tokeni ndiyo kigezo pekee tunachohitaji kubainisha.
         private pure returns (uint) {
 ```
 
-Soma thamani kutoka kwa calldata.
+Soma thamani kutoka kwa data za mwito.
 
 ```solidity
         uint _retVal;
@@ -152,9 +153,9 @@ Soma thamani kutoka kwa calldata.
             "calldataVal trying to read beyond calldatasize");
 ```
 
-Tutaipakia neno moja la baiti 32 (biti 256) kwenye kumbukumbu na kuondoa baiti ambazo si sehemu ya uga tunaotaka.
-Algorithm hii haifanyi kazi kwa thamani ndefu kuliko baiti 32, na bila shaka hatuwezi kusoma zaidi ya mwisho wa calldata.
-Kwenye L1 inaweza kuwa muhimu kuruka majaribio haya ili kuokoa gesi, lakini kwenye L2 gesi ni nafuu sana, ambayo huwezesha ukaguzi wowote wa kiakili tunaoweza kufikiria.
+Tutapakia neno moja la baiti 32 (biti 256) kwenye kumbukumbu na kuondoa baiti ambazo si sehemu ya uwanja tunaotaka.
+Kanuni hii haifanyi kazi kwa thamani ndefu zaidi ya baiti 32, na bila shaka hatuwezi kusoma kupita mwisho wa data za mwito.
+Kwenye l1 inaweza kuwa muhimu kuruka majaribio haya ili kuokoa gesi, lakini kwenye l2 gesi ni ya bei nafuu sana, ambayo inawezesha ukaguzi wowote wa usahihi tunaoweza kufikiria.
 
 ```solidity
         assembly {
@@ -162,18 +163,18 @@ Kwenye L1 inaweza kuwa muhimu kuruka majaribio haya ili kuokoa gesi, lakini kwen
         }
 ```
 
-Tungeweza kunakili data kutoka kwa simu hadi `fallback()` (tazama hapa chini), lakini ni rahisi zaidi kutumia [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), lugha ya mkusanyiko ya EVM.
+Tungeweza kunakili data kutoka kwa mwito hadi `fallback()` (tazama hapa chini), lakini ni rahisi kutumia [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), lugha ya asili ya EVM.
 
-Hapa tunatumia [opcode ya CALLDATALOAD](https://www.evm.codes/#35) kusoma baiti `startByte` hadi `startByte+31` kwenye rundo.
-Kwa ujumla, sintaksia ya opcode katika Yul ni `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
+Hapa tunatumia [msimbo wa operesheni wa CALLDATALOAD](https://www.evm.codes/#35) kusoma baiti `startByte` hadi `startByte+31` kwenye staki.
+Kwa ujumla, sintaksia ya msimbo wa operesheni katika Yul ni `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
 
 ```solidity
 
         _retVal = _retVal >> (256-length*8);
 ```
 
-Ni baiti za `urefu` muhimu pekee ndizo sehemu ya uga, kwa hivyo [tunahamisha kulia](https://en.wikipedia.org/wiki/Logical_shift) ili kuondoa thamani zingine.
-Hii ina faida iliyoongezwa ya kuhamisha thamani upande wa kulia wa uga, kwa hivyo ni thamani yenyewe badala ya thamani mara 256<sup>kitu</sup>.
+Baiti `length` muhimu zaidi pekee ndizo sehemu ya uwanja, kwa hivyo [tunahamisha kulia](https://en.wikipedia.org/wiki/Logical_shift) ili kuondoa thamani zingine.
+Hii ina faida ya ziada ya kuhamisha thamani upande wa kulia wa uwanja, kwa hivyo ni thamani yenyewe badala ya thamani mara 256<sup>kitu</sup>.
 
 ```solidity
 
@@ -184,8 +185,8 @@ Hii ina faida iliyoongezwa ya kuhamisha thamani upande wa kulia wa uga, kwa hivy
     fallback() external {
 ```
 
-Wito kwa mkataba wa Solidity usipofanana na saini zozote za chaguo za kukokotoa, huita [chaguo la kukokotoa la `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (kwa kudhani kuna moja).
-Katika kisa cha `CalldataInterpreter`, wito _yoyote_ hufika hapa kwa sababu hakuna chaguo zingine za kukokotoa za `external` au `public`.
+Wakati mwito kwa mkataba wa Solidity haulingani na sahihi yoyote ya utendakazi, inaita [utendakazi wa `fallback()`](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) (kwa kudhani kuna moja).
+Katika kesi ya `CalldataInterpreter`, mwito _wowote_ unafika hapa kwa sababu hakuna utendakazi mwingine wa `external` au `public`.
 
 ```solidity
         uint _func;
@@ -193,27 +194,27 @@ Katika kisa cha `CalldataInterpreter`, wito _yoyote_ hufika hapa kwa sababu haku
         _func = calldataVal(0, 1);
 ```
 
-Soma baiti ya kwanza ya calldata, ambayo inatuambia chaguo za kukokotoa.
-Kuna sababu mbili kwa nini chaguo za kukokotoa hazipatikani hapa:
+Soma baiti ya kwanza ya data za mwito, ambayo inatuambia utendakazi.
+Kuna sababu mbili kwa nini utendakazi haungepatikana hapa:
 
-1. Chaguo za kukokotoa ambazo ni `pure` au `view` hazibadilishi hali na hazigharimu gesi (zinapoitwa nje ya chain).
-   Haina maana kujaribu kupunguza gharama yao ya gesi.
-2. Chaguo za kukokotoa zinazotegemea [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
-   Thamani ya `msg.sender` itakuwa anwani ya `CalldataInterpreter`, si ya mpigaji simu.
+1. Utendakazi ambao ni `pure` au `view` haubadilishi hali na haugharimu gesi (unapoitwa nje ya mnyororo).
+   Haina maana kujaribu kupunguza gharama zao za gesi.
+2. Utendakazi unaotegemea [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
+   Thamani ya `msg.sender` itakuwa anwani ya `CalldataInterpreter`, si mpigaji.
 
-Kwa bahati mbaya, [ukiangalia vipimo vya ERC-20](https://eips.ethereum.org/EIPS/eip-20), hii inaacha chaguo moja tu la kukokotoa, `transfer`.
-Hii inatuacha na chaguo mbili tu za kukokotoa: `transfer` (kwa sababu tunaweza kuita `transferFrom`) na `faucet` (kwa sababu tunaweza kuhamisha tokeni kurudi kwa yeyote aliyetuita).
+Kwa bahati mbaya, [kukiangalia vipimo vya ERC-20](https://eips.ethereum.org/EIPS/eip-20), hii inaacha utendakazi mmoja tu, `transfer`.
+Hii inatuacha na utendakazi mbili tu: `transfer` (kwa sababu tunaweza kuita `transferFrom`) na `faucet` (kwa sababu tunaweza kuhamisha tokeni kurudi kwa yeyote aliyetuita).
 
 ```solidity
 
-        // Call the state changing methods of token using
-        // information from the calldata
+        // Piga mwito kwa mbinu za kubadilisha hali za tokeni ukitumia
+        // taarifa kutoka kwenye data za mwito
 
         // faucet
         if (_func == 1) {
 ```
 
-Wito kwa `faucet()`, ambayo haina vigezo.
+Mwito kwa `faucet()`, ambao hauna vigezo.
 
 ```solidity
             token.faucet();
@@ -222,49 +223,48 @@ Wito kwa `faucet()`, ambayo haina vigezo.
         }
 ```
 
-Baada ya kuita `token.faucet()` tunapata tokeni. Hata hivyo, kama mkataba wa proksi, **hatuhitaji** tokeni.
-EOA (akaunti inayomilikiwa nje) au mkataba uliotuita unahitaji.
+Baada ya kuita `token.faucet()` tunapata tokeni. Hata hivyo, kama mkataba wa uwakilishi, **hatuhitaji** tokeni.
+EOA (akaunti inayomilikiwa na mtu wa nje) au mkataba uliotuita unazihitaji.
 Kwa hivyo tunahamisha tokeni zetu zote kwa yeyote aliyetuita.
 
 ```solidity
-        // transfer (assume we have an allowance for it)
+        // hamisho (chukulia tuna kibali kwa ajili yake)
         if (_func == 2) {
 ```
 
-Kuhamisha tokeni kunahitaji vigezo viwili: anwani ya mwisho na kiasi.
+Kuhamisha tokeni kunahitaji vigezo viwili: anwani ya marudio na kiasi.
 
 ```solidity
             token.transferFrom(
                 msg.sender,
 ```
 
-Tunawaruhusu tu wapigaji simu kuhamisha tokeni wanazomiliki
+Tunaruhusu tu wapigaji kuhamisha tokeni wanazomiliki
 
 ```solidity
                 address(uint160(calldataVal(1, 20))),
 ```
 
-Anwani ya mwisho huanza kwenye baiti #1 (baiti #0 ni chaguo za kukokotoa).
-Kama anwani, ina urefu wa baiti 20.
+Anwani ya marudio inaanzia kwenye baiti #1 (baiti #0 ni utendakazi). Kama anwani, ina urefu wa baiti 20.
 
 ```solidity
                 calldataVal(21, 2)
 ```
 
-Kwa mkataba huu mahususi tunadhani kwamba idadi ya juu ya tokeni ambazo mtu yeyote angetaka kuhamisha inatoshea katika baiti mbili (chini ya 65536).
+Kwa mkataba huu mahususi tunachukulia kuwa idadi ya juu zaidi ya tokeni ambayo mtu yeyote angetaka kuhamisha inatoshea katika baiti mbili (chini ya 65536).
 
 ```solidity
             );
         }
 ```
 
-Kwa ujumla, uhamisho unachukua baiti 35 za calldata:
+Kwa ujumla, hamisho huchukua baiti 35 za data za mwito:
 
-| Sehemu                          | Urefu | Baiti |
-| ------------------------------- | ----: | ----: |
-| Kiteuzi cha chaguo za kukokotoa |     1 |     0 |
-| Anwani ya mwisho                |    32 |  1-32 |
-| Kiasi                           |     2 | 33-34 |
+| Sehemu | Urefu | Baiti |
+| ------------------- | -----: | ----: |
+| Kichaguzi cha utendakazi |      1 |     0 |
+| Anwani ya marudio |     32 |  1-32 |
+| Kiasi |      2 | 33-34 |
 
 ```solidity
     }   // fallback
@@ -274,48 +274,48 @@ Kwa ujumla, uhamisho unachukua baiti 35 za calldata:
 
 ### test.js {#test-js}
 
-[Jaribio hili la kitengo cha JavaScript](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) linatuonyesha jinsi ya kutumia utaratibu huu (na jinsi ya kuthibitisha kuwa inafanya kazi ipasavyo).
-Nitachukulia kuwa unaelewa [chai](https://www.chaijs.com/) na [ethers](https://docs.ethers.io/v5/) na nitaelezea tu sehemu zinazohusu mkataba haswa.
+[Jaribio hili la kitengo cha JavaScript](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) linatuonyesha jinsi ya kutumia utaratibu huu (na jinsi ya kuthibitisha inafanya kazi kwa usahihi).
+Nitachukulia kuwa unaelewa [chai](https://www.chaijs.com/) na [ethers](https://docs.ethers.io/v5/) na kuelezea tu sehemu zinazotumika haswa kwa mkataba.
 
 ```js
 const { expect } = require("chai");
 
 describe("CalldataInterpreter", function () {
-  it("Inapaswa kuturuhusu kutumia tokeni", async function () {
+  it("Should let us use tokens", async function () {
     const Token = await ethers.getContractFactory("OrisUselessToken")
     const token = await Token.deploy()
     await token.deployed()
-    console.log("Anwani ya tokeni:", token.address)
+    console.log("Token addr:", token.address)
 
     const Cdi = await ethers.getContractFactory("CalldataInterpreter")
     const cdi = await Cdi.deploy(token.address)
     await cdi.deployed()
-    console.log("Anwani ya CalldataInterpreter:", cdi.address)
+    console.log("CalldataInterpreter addr:", cdi.address)
 
     const signer = await ethers.getSigner()
 ```
 
-Tunaanza kwa kupeleka mikataba yote miwili.
+Tunaanza kwa kusambaza mikataba yote miwili.
 
 ```javascript
-    // Get tokens to play with
+    // Pata tokeni za kucheza nazo
     const faucetTx = {
 ```
 
-Hatuwezi kutumia chaguo za kukokotoa za kiwango cha juu ambazo tungetumia kwa kawaida (kama vile `token.faucet()`) kuunda miamala, kwa sababu hatufuati ABI.
-Badala yake, tunapaswa kujenga muamala wenyewe na kisha kuutuma.
+Hatuwezi kutumia utendakazi wa kiwango cha juu ambao kwa kawaida tungetumia (kama vile `token.faucet()`) kuunda miamala, kwa sababu hatufuati ABI.
+Badala yake, inabidi tujenge muamala wenyewe na kisha kuutuma.
 
 ```javascript
       to: cdi.address,
       data: "0x01"
 ```
 
-Kuna vigezo viwili tunavyohitaji kutoa kwa muamala:
+Kuna vigezo viwili tunavyohitaji kutoa kwa ajili ya muamala:
 
-1. `to`, anwani ya mwisho.
-   Huu ni mkataba wa mkalimani wa calldata.
-2. `data`, calldata ya kutuma.
-   Katika kesi ya simu ya bomba, data ni baiti moja, `0x01`.
+1. `to`, anwani ya marudio.
+   Huu ni mkataba wa mkalimani wa data za mwito.
+2. `data`, data za mwito za kutuma.
+   Katika kesi ya mwito wa bomba, data ni baiti moja, `0x01`.
 
 ```javascript
 
@@ -323,27 +323,27 @@ Kuna vigezo viwili tunavyohitaji kutoa kwa muamala:
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-Tunaita [mbinu ya `sendTransaction` ya mtia saini](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) kwa sababu tayari tumebainisha lengo (`faucetTx.to`) na tunahitaji muamala utiwe saini.
+Tunaita [mbinu ya `sendTransaction` ya mtia saini](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) kwa sababu tayari tumebainisha marudio (`faucetTx.to`) na tunahitaji muamala utiwe saini.
 
 ```javascript
-// Check the faucet provides the tokens correctly
+// Kagua kama faucet inatoa tokeni kwa usahihi
 expect(await token.balanceOf(signer.address)).to.equal(1000)
 ```
 
 Hapa tunathibitisha salio.
-Hakuna haja ya kuokoa gesi kwenye chaguo za kukokotoa za `view`, kwa hivyo tunaziendesha kawaida.
+Hakuna haja ya kuokoa gesi kwenye utendakazi wa `view`, kwa hivyo tunaziendesha kawaida.
 
 ```javascript
-// Give the CDI an allowance (approvals cannot be proxied)
+// Ipe CDI kibali (idhinisho haziwezi kuwakilishwa)
 const approveTX = await token.approve(cdi.address, 10000)
 await approveTX.wait()
 expect(await token.allowance(signer.address, cdi.address)).to.equal(10000)
 ```
 
-Mpe mkalimani wa calldata posho ili aweze kufanya uhamisho.
+Mpe mkalimani wa data za mwito kibali ili aweze kufanya uhamisho.
 
 ```javascript
-// Transfer tokens
+// Hamisha tokeni
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -351,50 +351,50 @@ const transferTx = {
 }
 ```
 
-Unda muamala wa uhamisho. Baiti ya kwanza ni "0x02", ikifuatiwa na anwani ya mwisho, na hatimaye kiasi (0x0100, ambayo ni 256 katika desimali).
+Unda muamala wa hamisho. Baiti ya kwanza ni "0x02", ikifuatiwa na anwani ya marudio, na hatimaye kiasi (0x0100, ambayo ni 256 katika desimali).
 
 ```javascript
     await (await signer.sendTransaction(transferTx)).wait()
 
-    // Check that we have 256 tokens less
+    // Kagua kwamba tuna tokeni 256 pungufu
     expect (await token.balanceOf(signer.address)).to.equal(1000-256)
 
-    // And that our destination got them
+    // Na kwamba kituo chetu kimezipata
     expect (await token.balanceOf(destAddr)).to.equal(256)
   })    // it
 })      // describe
 ```
 
-## Kupunguza gharama unapodhibiti mkataba wa mwisho {#reducing-the-cost-when-you-do-control-the-destination-contract}
+## Kupunguza gharama unapodhibiti mkataba wa marudio {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
-Ikiwa una udhibiti juu ya mkataba wa mwisho unaweza kuunda chaguo za kukokotoa zinazokwepa ukaguzi wa `msg.sender` kwa sababu zinamuamini mkalimani wa calldata.
+Ikiwa una udhibiti wa mkataba wa marudio unaweza kuunda utendakazi unaoruka ukaguzi wa `msg.sender` kwa sababu unamwamini mkalimani wa data za mwito.
 [Unaweza kuona mfano wa jinsi hii inavyofanya kazi hapa, katika tawi la `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
 
-Ikiwa mkataba ungekuwa ukijibu tu miamala ya nje, tungeweza kutosheka na kuwa na mkataba mmoja tu.
-Hata hivyo, hilo lingevunja [uwezo wa kutunga](/developers/docs/smart-contracts/composability/).
-Ni bora zaidi kuwa na mkataba unaojibu simu za kawaida za ERC-20, na mkataba mwingine unaojibu miamala yenye data fupi ya simu.
+Ikiwa mkataba ungekuwa unajibu tu miamala ya nje, tungeweza kufanikiwa kwa kuwa na mkataba mmoja tu.
+Hata hivyo, hiyo ingevunja [utangamano](/developers/docs/smart-contracts/composability/).
+Ni bora zaidi kuwa na mkataba unaojibu miito ya kawaida ya ERC-20, na mkataba mwingine unaojibu miamala yenye data za mwito fupi.
 
 ### Token.sol {#token-sol-2}
 
 Katika mfano huu tunaweza kurekebisha `Token.sol`.
-Hii inatuwezesha kuwa na idadi ya chaguo za kukokotoa ambazo proksi pekee inaweza kuita.
-Hapa kuna sehemu mpya:
+Hii inaturuhusu kuwa na idadi ya utendakazi ambazo mkataba wa uwakilishi pekee unaweza kuita.
+Hizi hapa ni sehemu mpya:
 
 ```solidity
-    // The only address allowed to specify the CalldataInterpreter address
+    // Anwani pekee inayoruhusiwa kubainisha anwani ya CalldataInterpreter
     address owner;
 
-    // The CalldataInterpreter address
+    // Anwani ya CalldataInterpreter
     address proxy = address(0);
 ```
 
-Mkataba wa ERC-20 unahitaji kujua utambulisho wa proksi aliyeidhinishwa.
-Hata hivyo, hatuwezi kuweka kigezo hiki katika mjenzi, kwa sababu hatujui thamani bado.
-Mkataba huu unathibitishwa kwanza kwa sababu proksi inatarajia anwani ya tokeni katika mjenzi wake.
+Mkataba wa ERC-20 unahitaji kujua utambulisho wa mkataba wa uwakilishi ulioidhinishwa.
+Hata hivyo, hatuwezi kuweka kigezo hiki katika konstrukta, kwa sababu bado hatujui thamani.
+Mkataba huu unaundwa kwanza kwa sababu mkataba wa uwakilishi unatarajia anwani ya tokeni katika konstrukta yake.
 
 ```solidity
     /**
-     * @dev Calls the ERC20 constructor.
+     * @dev Inapiga mwito kwa konstrukta ya ERC-20.
      */
     constructor(
     ) ERC20("Oris useless token-2", "OUT-2") {
@@ -402,12 +402,12 @@ Mkataba huu unathibitishwa kwanza kwa sababu proksi inatarajia anwani ya tokeni 
     }
 ```
 
-Anwani ya muundaji (inayoitwa `owner`) huhifadhiwa hapa kwa sababu hiyo ndiyo anwani pekee inayoruhusiwa kuweka proksi.
+Anwani ya muundaji (inayoitwa `owner`) imehifadhiwa hapa kwa sababu hiyo ndiyo anwani pekee inayoruhusiwa kuweka mkataba wa uwakilishi.
 
 ```solidity
     /**
-     * @dev set the proxy address (CalldataInterpreter).
-     * Can only be called once by the owner
+     * @dev weka anwani kwa ajili ya proksi (CalldataInterpreter).
+     * Inaweza tu kupigiwa mwito mara moja na mmiliki
      */
     function setProxy(address _proxy) external {
         require(msg.sender == owner, "Can only be called by owner");
@@ -417,24 +417,24 @@ Anwani ya muundaji (inayoitwa `owner`) huhifadhiwa hapa kwa sababu hiyo ndiyo an
     }    // function setProxy
 ```
 
-Proksi ina ufikiaji wa upendeleo, kwa sababu inaweza kukwepa ukaguzi wa usalama.
-Ili kuhakikisha tunaweza kuamini proksi tunamruhusu `mmiliki` pekee kuita chaguo hili la kukokotoa, na mara moja tu.
-Mara `proksi` inapokuwa na thamani halisi (sio sifuri), thamani hiyo haiwezi kubadilika, kwa hivyo hata ikiwa mmiliki ataamua kuwa mhalifu, au mnemonic yake itafichuliwa, bado tuko salama.
+Mkataba wa uwakilishi una ufikiaji wa upendeleo, kwa sababu unaweza kuruka ukaguzi wa usalama.
+Ili kuhakikisha tunaweza kuamini mkataba wa uwakilishi tunaruhusu tu `owner` kuita utendakazi huu, na mara moja tu.
+Mara tu `proxy` inapokuwa na thamani halisi (sio sifuri), thamani hiyo haiwezi kubadilika, kwa hivyo hata kama mmiliki ataamua kuwa mhalifu, au neno la siri lake likifichuliwa, bado tuko salama.
 
 ```solidity
     /**
-     * @dev Some functions can only be called by the proxy.
+     * @dev Baadhi ya kazi zinaweza tu kupigiwa mwito na proksi.
      */
     modifier onlyProxy {
 ```
 
-Hiki ni kitendakazi cha `kirekebishaji` (https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), kinarekebisha jinsi vitendakazi vingine vinavyofanya kazi.
+Huu ni [utendakazi wa `modifier`](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), unarekebisha jinsi utendakazi mwingine unavyofanya kazi.
 
 ```solidity
       require(msg.sender == proxy);
 ```
 
-Kwanza, thibitisha tumeitwa na proksi na si mtu mwingine.
+Kwanza, thibitisha kuwa tuliitwa na mkataba wa uwakilishi na si mtu mwingine.
 Ikiwa sivyo, `revert`.
 
 ```solidity
@@ -442,10 +442,10 @@ Ikiwa sivyo, `revert`.
     }
 ```
 
-Ikiwa ndivyo, endesha kitendakazi tunachorekebisha.
+Ikiwa ndivyo, endesha utendakazi ambao tunarekebisha.
 
 ```solidity
-   /* Functions that allow the proxy to act on behalf of accounts */
+   /* Kazi zinazoruhusu proksi kuwakilisha akaunti haswa */
 
     function transferProxy(address from, address to, uint256 amount)
         public virtual onlyProxy() returns (bool)
@@ -474,18 +474,18 @@ Ikiwa ndivyo, endesha kitendakazi tunachorekebisha.
     }
 ```
 
-Hizi ni shughuli tatu ambazo kwa kawaida huhitaji ujumbe kutoka moja kwa moja kutoka kwa huluki inayohamisha tokeni au kuidhinisha posho.
-Hapa tuna toleo la proksi la shughuli hizi ambalo:
+Hizi ni shughuli tatu ambazo kwa kawaida zinahitaji ujumbe utoke moja kwa moja kwa chombo kinachohamisha tokeni au kuidhinisha kibali.
+Hapa tuna toleo la uwakilishi la shughuli hizi ambalo:
 
-1. Hurekebishwa na `onlyProxy()` ili hakuna mtu mwingine anayeruhusiwa kuzidhibiti.
-2. Hupata anwani ambayo kwa kawaida ingekuwa `msg.sender` kama kigezo cha ziada.
+1. Limerekebishwa na `onlyProxy()` ili hakuna mtu mwingine anayeruhusiwa kuzidhibiti.
+2. Linapata anwani ambayo kwa kawaida ingekuwa `msg.sender` kama kigezo cha ziada.
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
 
-Mkalimani wa calldata karibu anafanana na ule ulio juu, isipokuwa kwamba chaguo za kukokotoa zinazowakilishwa hupokea kigezo cha `msg.sender` na hakuna haja ya posho ya `transfer`.
+Mkalimani wa data za mwito anafanana karibu kabisa na yule wa hapo juu, isipokuwa kwamba utendakazi uliowakilishwa hupokea kigezo cha `msg.sender` na hakuna haja ya kibali kwa `transfer`.
 
 ```solidity
-        // transfer (no need for allowance)
+        // hamisho (hakuna haja ya kibali)
         if (_func == 2) {
             token.transferProxy(
                 msg.sender,
@@ -516,7 +516,7 @@ Mkalimani wa calldata karibu anafanana na ule ulio juu, isipokuwa kwamba chaguo 
 
 ### Test.js {#test-js-2}
 
-Kuna mabadiliko machache kati ya msimbo wa awali wa majaribio na huu.
+Kuna mabadiliko machache kati ya msimbo wa majaribio uliopita na huu.
 
 ```js
 const Cdi = await ethers.getContractFactory("CalldataInterpreter")
@@ -525,12 +525,12 @@ await cdi.deployed()
 await token.setProxy(cdi.address)
 ```
 
-Tunahitaji kuuambia mkataba wa ERC-20 ni proksi gani ya kuamini
+Tunahitaji kuuambia mkataba wa ERC-20 ni mkataba upi wa uwakilishi wa kuamini
 
 ```js
-console.log("CalldataInterpreter address:", cdi.address)
+console.log("CalldataInterpreter addr:", cdi.address)
 
-// Need two signers to verify allowances
+// Inahitaji watia saini wawili ili kuthibitisha vibali
 const signers = await ethers.getSigners()
 const signer = signers[0]
 const poorSigner = signers[1]
@@ -540,7 +540,7 @@ Ili kuangalia `approve()` na `transferFrom()` tunahitaji mtia saini wa pili.
 Tunaiita `poorSigner` kwa sababu haipati tokeni zetu zozote (inahitaji kuwa na ETH, bila shaka).
 
 ```js
-// Transfer tokens
+// Hamisha tokeni
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -549,10 +549,10 @@ const transferTx = {
 await (await signer.sendTransaction(transferTx)).wait()
 ```
 
-Kwa sababu mkataba wa ERC-20 unaiamini proksi (`cdi`), hatuhitaji posho ya kuwasilisha uhamisho.
+Kwa sababu mkataba wa ERC-20 unaamini mkataba wa uwakilishi (`cdi`), hatuhitaji kibali ili kupeleka uhamisho.
 
 ```js
-// approval and transferFrom
+// approve na transferFrom
 const approveTx = {
   to: cdi.address,
   data: "0x03" + poorSigner.address.slice(2, 42) + "00FF",
@@ -567,19 +567,18 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// Check the approve / transferFrom combo was done correctly
+// Kagua mchanganyiko wa approve / transferFrom ulifanywa kwa usahihi
 expect(await token.balanceOf(destAddr2)).to.equal(255)
 ```
 
-Jaribu chaguo mbili mpya za kukokotoa.
-Kumbuka kwamba `transferFromTx` inahitaji vigezo viwili vya anwani: mtoaji wa posho na mpokeaji.
+Jaribu utendakazi mbili mpya.
+Kumbuka kwamba `transferFromTx` inahitaji vigezo viwili vya anwani: mtoaji wa kibali na mpokeaji.
 
 ## Hitimisho {#conclusion}
 
-Wote [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) na [Arbitrum](https://developer.offchainlabs.com/docs/special_features) wanatafuta njia za kupunguza ukubwa wa calldata iliyoandikwa kwa L1 na kwa hivyo gharama ya miamala.
-Hata hivyo, kama watoa huduma wa miundombinu wanaotafuta suluhisho za jumla, uwezo wetu una mipaka.
-Kama msanidi programu wa mfumo mtawanyo wa kimamlaka, una ujuzi maalum wa programu, ambao unakuwezesha kuboresha calldata yako vizuri zaidi kuliko tunavyoweza katika suluhisho la jumla.
-Tunatumahi, makala haya yanakusaidia kupata suluhisho bora kwa mahitaji yako.
+Zote [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) na [Arbitrum](https://developer.offchainlabs.com/docs/special_features) zinatafuta njia za kupunguza ukubwa wa data za mwito zilizoandikwa kwenye l1 na hivyo gharama ya miamala.
+Hata hivyo, kama watoa huduma wa miundombinu wanaotafuta suluhu za jumla, uwezo wetu una kikomo.
+Kama msanidi wa programu tumizi iliyogatuliwa (dapp), una maarifa mahususi ya programu, ambayo hukuruhusu kuboresha data za mwito zako vizuri zaidi kuliko tunavyoweza katika suluhisho la jumla.
+Tunatumai, makala haya yatakusaidia kupata suluhisho bora kwa mahitaji yako.
 
 [Tazama hapa kwa kazi zangu zaidi](https://cryptodocguy.pro/).
-

@@ -1,238 +1,239 @@
 ---
-title: "Důkazy s nulovou znalostí"
-description: "Netechnický úvod do důkazů s nulovou znalostí pro začátečníky."
+title: Co jsou důkazy s nulovou znalostí?
+metaTitle: Důkazy s nulovou znalostí
+description: Netechnický úvod do důkazů s nulovou znalostí pro začátečníky.
 lang: cs
 ---
 
-# Co jsou důkazy s nulovou znalostí? {#what-are-zk-proofs}
+Důkaz s nulovou znalostí je způsob, jak prokázat platnost tvrzení, aniž by bylo odhaleno samotné tvrzení. „Dokazovatel“ je strana, která se snaží prokázat nárok, zatímco „ověřovatel“ je zodpovědný za ověření tohoto nároku.
 
-Důkaz s nulovou znalostí je způsob, jak prokázat platnost tvrzení, aniž by bylo odhaleno samotné tvrzení. „Dokazovatel“ je strana, která se snaží prokázat tvrzení, zatímco „ověřovatel“ je odpovědný za ověření tvrzení.
+Důkazy s nulovou znalostí se poprvé objevily v článku z roku 1985 „[The knowledge complexity of interactive proof systems](http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)“, který poskytuje definici důkazů s nulovou znalostí široce používanou dodnes:
 
-Důkazy s nulovou znalostí se poprvé objevily v článku z roku 1985 „[The knowledge complexity of interactive proof systems](http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)“, který poskytuje definici důkazů s nulovou znalostí, jež se dnes široce používá:
+> Protokol s nulovým vědomím je metoda, pomocí které může jedna strana (dokazovatel) **prokázat** druhé straně (ověřovateli), **že je něco pravda, aniž by odhalila jakékoli informace** kromě faktu, že toto konkrétní tvrzení je pravdivé.
 
-> Protokol s nulovou znalostí je metoda, kterou může jedna strana (dokazovatel) **prokázat** druhé straně (ověřovateli), **že je něco pravdivé, aniž by prozradila jakoukoli jinou informaci** kromě skutečnosti, že toto konkrétní tvrzení je pravdivé.
+Důkazy s nulovou znalostí se v průběhu let zdokonalily a nyní se používají v několika aplikacích v reálném světě.
 
-Důkazy s nulovou znalostí se v průběhu let vylepšovaly a nyní se používají v aplikacích v reálném světě.
-
-<YouTube id="fOGdb1CTu5c" />
+<VideoWatch slug="zero-knowledge-proofs-5-levels" />
 
 ## Proč potřebujeme důkazy s nulovou znalostí? {#why-zero-knowledge-proofs-are-important}
 
-Důkazy nulové znalosti představovaly průlom v aplikované kryptografii, protože slibovaly zlepšení bezpečnosti uživatelských informací. Zamyslete se, jak byste mohli prokázat nějaký výrok (např. „Jsem občan země X“) jiné straně (např. poskytovateli služeb). Budete muset poskytnout „důkaz“ na podporu tohoto výroku, jako je cestovní pas nebo řidičský průkaz.
+Důkazy s nulovou znalostí představovaly průlom v aplikované kryptografii, protože slibovaly zlepšení bezpečnosti informací pro jednotlivce. Představte si, jak byste mohli prokázat nárok (např. „Jsem občanem země X“) jiné straně (např. poskytovateli služeb). K podložení svého nároku byste museli poskytnout „důkaz“, jako je cestovní pas nebo řidičský průkaz.
 
-S tímto přístupem se ale pojí různé problémy, především nedostatek soukromí. Informace identifikující osobu (Personally Identifiable Information, PII) sdílené se službami třetích stran jsou uloženy v centrálních databázích, které jsou zranitelné vůči útokům hackerů. Vzhledem k tomu, že krádež identity je kritickým problémem, zvyšují se požadavky na další na ochranu soukromí při sdílení citlivých informací.
+Tento přístup má však své problémy, především nedostatek soukromí. Osobně identifikovatelné informace (PII) sdílené se službami třetích stran jsou uloženy v centrálních databázích, které jsou zranitelné vůči hackerským útokům. Vzhledem k tomu, že krádeže identity se stávají kritickým problémem, objevuje se volání po způsobech sdílení citlivých informací, které by lépe chránily soukromí.
 
-Důkazy s nulovou znalostí řeší tento problém **odstraněním potřeby odhalovat informace k prokázání platnosti tvrzení**. Protokol s nulovou znalostí používá výrok (nazývaný „svědek“) jako vstup pro vytvoření stručného důkazu jeho platnosti. Tento důkaz poskytuje záruku, že je prohlášení pravdivé, aniž by odhalil informace použité při jeho vytváření.
+Důkazy s nulovou znalostí tento problém řeší tím, že **eliminují potřebu odhalovat informace k prokázání platnosti nároků**. Protokol s nulovým vědomím používá tvrzení (nazývané „svědek“) jako vstup k vygenerování stručného důkazu jeho platnosti. Tento důkaz poskytuje silné záruky, že tvrzení je pravdivé, aniž by odhalil informace použité k jeho vytvoření.
 
-Vraťme se k našemu příkladu: Jediný důkaz, který potřebujete k prokázání svého občanství, je důkaz nulové znalosti. Ověřovatel musí pouze zkontrolovat, zda platí určité vlastnosti důkazu, aby se přesvědčil, že platí i základní tvrzení.
+Vrátíme-li se k našemu dřívějšímu příkladu, jediným důkazem, který potřebujete k prokázání svého nároku na občanství, je důkaz s nulovou znalostí. Ověřovatel musí pouze zkontrolovat, zda platí určité vlastnosti důkazu, aby se přesvědčil, že platí i základní tvrzení.
 
-## Případy použití důkazů s nulovou znalostí {#use-cases-for-zero-knowledge-proofs}
+## Případy užití pro důkazy s nulovou znalostí {#use-cases-for-zero-knowledge-proofs}
 
 ### Anonymní platby {#anonymous-payments}
 
-Platby kreditní kartou jsou často viditelné pro více stran, včetně poskytovatele plateb, bank a dalších zainteresovaných stran (např. vládních úřadů). Finanční dohled má sice výhody, například v případě odhalování nezákonné činnosti, ale také narušuje soukromí běžných občanů.
+Platby kreditní kartou jsou často viditelné pro více stran, včetně poskytovatele plateb, bank a dalších zainteresovaných stran (např. vládních úřadů). Ačkoli má finanční dohled výhody pro identifikaci nelegální činnosti, narušuje také soukromí běžných občanů.
 
-Kryptoměny byly vyvinuty jako nástroj pro uskutečňování soukromých peer-to-peer transakcí. Většina transakcí s kryptoměnami je ale otevřeně viditelná na veřejných blockchainech. Identity uživatelů jsou často pseudonymní a buď úmyslně propojeny s identitami v reálném světě (např. uvedením ETH adres na profilech na Twitteru nebo GitHubu), nebo mohou být spojeny s identitami v reálném světě pomocí základní analýzy dat na blockchainu a mimo něj.
+Kryptoměny měly uživatelům poskytnout prostředek k provádění soukromých peer-to-peer transakcí. Většina transakcí s kryptoměnami je však veřejně viditelná na veřejných blockchainech. Identity uživatelů jsou často pseudonymní a buď jsou záměrně spojeny s identitami v reálném světě (např. uvedením ETH adres na profilech na Twitteru nebo GitHubu), nebo je lze s identitami v reálném světě spojit pomocí základní analýzy onchain a offchain dat.
 
-Existují specifické „kryptoměny na ochranu soukromí“ určené pro zcela anonymní transakce. Blockchainy zaměřené na soukromí, jako jsou Zcash a Monero, neuvádí podrobnosti o transakci, včetně adres odesílatele/příjemce, typu finančních prostředků, množství a časové osy transakce.
+Existují specifické „mince zaměřené na soukromí“ (privacy coins) navržené pro zcela anonymní transakce. Blockchainy zaměřené na soukromí, jako jsou Zcash a Monero, skrývají podrobnosti o transakcích, včetně adres odesílatele/příjemce, typu aktiva, množství a časové osy transakce.
 
-Díky zahrnutí technologie s nulovou znalostí do protokolu umožňují [blockchainové](/glossary/#blockchain) sítě zaměřené na soukromí [uzlům](/glossary/#node) ověřovat transakce, aniž by potřebovaly přístup k transakčním datům. [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) je příkladem navrženého designu, který umožní nativní soukromé převody hodnoty na blockchainu Etherea. Takové návrhy je však obtížné realizovat kvůli kombinaci bezpečnostních, regulačních a uživatelských obav.
+Zabudováním technologie s nulovým vědomím do protokolu umožňují [blockchainové](/glossary/#blockchain) sítě zaměřené na soukromí [uzlům](/glossary/#node) validovat transakce bez nutnosti přístupu k transakčním datům. [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) je příkladem navrhovaného designu, který umožní nativní soukromé převody hodnoty na blockchainu [Ethereum](/). Takové návrhy je však obtížné implementovat kvůli kombinaci obav o bezpečnost, regulaci a uživatelskou zkušenost (UX).  
 
-**Důkazy s nulovými znalostmi se také používají při anonymizaci transakcí na veřejných blockchainech**. Příkladem je Tornado Cash, decentralizovaná služba bez třetí strany, která uživatelům umožňuje provádět soukromé transakce na Ethereu. Tornado Cash používá důkazy s nulovou znalostí ke skrytí podrobností o transakcích a k zajištění finančního soukromí. Bohužel, protože se jedná o "opt-in" nástroje ochrany osobních údajů, jsou spojovány s nezákonnou činností. Pro vyřešení tohoto problému je třeba, aby se soukromí stalo výchozím nastavením veřejných blockchainů. Zjistěte více o [soukromí na Ethereu](/privacy/).
+**Důkazy s nulovou znalostí se také používají k anonymizaci transakcí na veřejných blockchainech**. Příkladem je Tornado Cash, decentralizovaná, nekustodiální služba, která uživatelům umožňuje provádět soukromé transakce na Ethereu. Tornado Cash používá důkazy s nulovou znalostí k zamlžení podrobností o transakcích a zaručení finančního soukromí. Bohužel, protože se jedná o nástroje pro soukromí typu „opt-in“ (na vyžádání), jsou spojovány s nezákonnou činností. Aby se to překonalo, soukromí se nakonec musí stát výchozím nastavením na veřejných blockchainech. Zjistěte více o [soukromí na Ethereu](/privacy/).
 
 ### Ochrana identity {#identity-protection}
 
-Většina současných systémů sloužících ke správě identit ohrožuje osobní údaje. Důkazy s nulovou znalostí mohou jednotlivcům pomoci ověřit svoji identitu a zároveň chránit citlivé detaily.
+Současné systémy správy identit vystavují osobní údaje riziku. Důkazy s nulovou znalostí mohou jednotlivcům pomoci ověřit identitu a zároveň chránit citlivé údaje.
 
-Důkazy s nulovou znalostí jsou obzvláště užitečné v kontextu [decentralizované identity](/decentralized-identity/). Decentralizovaná identita (také popisovaná jako „samostatná identita“) dává jednotlivci možnost převzít kontrolu nad přístupem k osobním údajům. Dobrým příkladem toho, jak technologie s nulovou znalostí umožňuje decentralizovanou identitu, je prokazování občanství bez odhalení údajů o vašem daňovém identifikačním čísle nebo pasu.
+Důkazy s nulovou znalostí jsou obzvláště užitečné v kontextu [decentralizované identity (DID)](/decentralized-identity/). Decentralizovaná identita (DID) (také označovaná jako „sebeurčující identita“) dává jednotlivci možnost kontrolovat přístup k osobním identifikátorům. Prokázání vašeho občanství bez odhalení vašeho daňového identifikačního čísla nebo údajů z pasu je dobrým příkladem toho, jak technologie s nulovým vědomím umožňuje decentralizovanou identitu.
 
 <Alert variant="info">
   <AlertEmoji text="💡" />
   <AlertContent>
     <AlertTitle className="mb-2">
-      ZKP + identita v akci: Bhútánské národní digitální ID (NDI) na Ethereu
+      ZKP + identita v praxi: Bhútánské národní digitální ID (NDI) na Ethereu
     </AlertTitle>
     <AlertDescription>
       <p>
-        Reálným příkladem použití ZKP pro systémy správy identity je systém národního digitálního ID (NDI) Bhútánského království, postavený na Ethereu. Bhútánské NDI používá ZKP, aby občané mohli kryptograficky prokázat fakta o sobě, jako například "Jsem občan" nebo "Je mi více než 18 let", aniž by odhalili citlivé osobní údaje na svém průkazu.
+        Příkladem z reálného světa, kde se ZKP používá pro systémy správy identit, je systém národního digitálního ID (NDI) Bhútánského království, postavený na Ethereu. Bhútánské NDI využívá ZKP k tomu, aby občanům umožnilo kryptograficky prokázat fakta o sobě, jako například „Jsem občan“ nebo „Je mi více než 18 let“, aniž by odhalili citlivé osobní údaje na svém průkazu totožnosti.
       </p>
       <p>
-        Více informací o bhútánském NDI se dozvíte v <a href="/decentralized-identity/#national-and-government-id">případové studii Decentralizovaná identita</a>.
+        Zjistěte více o bhútánském NDI v <a href="/decentralized-identity/#national-and-government-id">případové studii o decentralizované identitě</a>.
       </p>
-</AlertDescription>
-</AlertContent>
+    </AlertDescription>
+  </AlertContent>
 </Alert>
 
-### Důkaz lidství {#proof-of-humanity}
+### Důkaz lidskosti (Proof of Humanity) {#proof-of-humanity}
 
-Jedním z nejpoužívanějších příkladů důkazů s nulovou znalostí v praxi je dnes protokol [World ID](https://world.org/blog/world/world-id-faqs), který si lze představit jako „globální digitální pas pro věk umělé inteligence“. Umožňuje lidem prokázat, že jsou jedineční, aniž by odhalili osobní údaje. Toho je dosaženo prostřednictvím zařízení zvaného Orb, které naskenuje duhovku člověka a vygeneruje kód duhovky. Kód duhovky je zkontrolován a ověřen, aby se potvrdilo, že osoba je biologicky jedinečnou lidskou bytostí. Po ověření je na zabezpečený seznam na blockchainu přidán závazek identity vygenerovaný na zařízení uživatele (který není spojen s biometrickými údaji ani z nich odvozen). Kdykoli pak uživatel chce prokázat, že je ověřený člověk – ať už se chce přihlásit, hlasovat nebo provést jiné akce – může vygenerovat důkaz s nulovou znalostí, který potvrdí jeho členství v seznamu. Krása použití důkazu s nulovou znalostí spočívá v tom, že je odhalen pouze jeden výrok: tato osoba je jedinečná. Všechno ostatní zůstává soukromé.
+Jedním z nejrozšířenějších příkladů důkazů s nulovou znalostí v praxi je dnes [protokol World ID](https://world.org/blog/world/world-id-faqs), který lze považovat za „globální digitální pas pro věk umělé inteligence“. Umožňuje lidem prokázat, že jsou jedinečnými jednotlivci, aniž by odhalili osobní údaje. Toho je dosaženo prostřednictvím zařízení zvaného Orb, které naskenuje duhovku osoby a vygeneruje kód duhovky. Kód duhovky je zkontrolován a ověřen, aby se potvrdilo, že daná osoba je biologicky jedinečná lidská bytost. Po ověření je závazek identity vygenerovaný na zařízení uživatele (a nespojený s biometrickými údaji ani z nich neodvozený) přidán do zabezpečeného seznamu na blockchainu. Poté, kdykoli chce uživatel prokázat, že je ověřeným člověkem – ať už kvůli přihlášení, odevzdání hlasu nebo jiným akcím – může vygenerovat důkaz s nulovou znalostí, který potvrdí jeho členství v seznamu. Kouzlo použití důkazu s nulovou znalostí spočívá v tom, že je odhaleno pouze jedno tvrzení: tato osoba je jedinečná. Vše ostatní zůstává v soukromí.
 
-World ID se spoléhá na [protokol Semaphore](https://docs.semaphore.pse.dev/) vyvinutý [týmem PSE](https://pse.dev/) v nadaci Ethereum. Semaphore je navržen jako odlehčený, ale výkonný způsob generování a ověřování důkazů s nulovou znalostí. Umožňuje uživatelům prokázat, že jsou součástí skupiny (v tomto případě ověření lidé), aniž by ukázali, kterým členem skupiny jsou. Semaphore je také vysoce flexibilní a umožňuje vytvářet skupiny na základě široké škály kritérií, jako je ověření identity, účast na událostech nebo vlastnictví pověření.
+World ID spoléhá na [protokol Semaphore](https://docs.semaphore.pse.dev/) vyvinutý [týmem PSE](https://pse.dev/) v Nadaci Ethereum. Semaphore je navržen jako odlehčený, ale výkonný způsob generování a ověřování důkazů s nulovou znalostí. Umožňuje uživatelům prokázat, že jsou součástí skupiny (v tomto případě ověřených lidí), aniž by ukázali, kterým členem skupiny jsou. Semaphore je také vysoce flexibilní a umožňuje vytvářet skupiny na základě široké škály kritérií, jako je ověření identity, účast na událostech nebo vlastnictví pověření.
 
-### Ověřování {#authentication}
+### Autentizace {#authentication}
 
-Používání online služeb je často podmíněno prokázáním vaší identity a právy na přístup k těmto platformám. To často vyžaduje poskytnutí osobních údajů, jako jsou jména, e-mailové adresy, data narození atd. Možná si také budete muset zapamatovat dlouhá hesla nebo riskovat ztrátu přístupu.
+Používání online služeb vyžaduje prokázání vaší identity a práva na přístup k těmto platformám. To často vyžaduje poskytnutí osobních údajů, jako jsou jména, e-mailové adresy, data narození a podobně. Možná si také budete muset pamatovat dlouhá hesla, jinak riskujete ztrátu přístupu.
 
-Důkazy s nulovou znalostí mohou zjednodušit ověřování pro platformy i uživatele. Jakmile je vygenerován ZK důkaz pomocí veřejných vstupů (např. z dat potvrzujících členství uživatele na platformě) a soukromých vstupů (např. údajů o uživateli), může jej uživatel jednoduše předložit k ověření své identity. To zlepšuje uživatelskou zkušenost a zbavuje organizace potřeby ukládat obrovské množství uživatelských informací.
+Důkazy s nulovou znalostí však mohou zjednodušit autentizaci jak pro platformy, tak pro uživatele. Jakmile je vygenerován ZK důkaz pomocí veřejných vstupů (např. dat potvrzujících členství uživatele na platformě) a soukromých vstupů (např. údajů uživatele), uživatel jej může jednoduše předložit k ověření své identity, když potřebuje získat přístup ke službě. To zlepšuje uživatelskou zkušenost a osvobozuje organizace od nutnosti ukládat obrovské množství informací o uživatelích.
 
-### Ověřitelný výpočet {#verifiable-computation}
+### Ověřitelné výpočty {#verifiable-computation}
 
-Ověřitelný výpočet je další aplikací technologie s nulovou znalostí pro zlepšení chodu blockchainu. Umožňuje nám outsourcovat výpočty jinému subjektu a to při zachování ověřitelných výsledků. Subjekt předloží výsledek spolu s dokladem, který ověřuje, že program byl spuštěn správně.
+Ověřitelné výpočty jsou další aplikací technologie s nulovým vědomím pro vylepšení návrhů blockchainu. Ověřitelné výpočty nám umožňují outsourcovat výpočty na jiný subjekt při zachování ověřitelných výsledků. Subjekt předloží výsledek spolu s důkazem ověřujícím, že program byl spuštěn správně.
 
-Ověřitelný výpočet je **zásadní pro zlepšení rychlosti zpracování na blockchainech** bez snížení bezpečnosti. Pochopení tohoto principu vyžaduje znalost rozdílů v navrhovaných řešeních pro škálování Etherea.
+Ověřitelné výpočty jsou **klíčové pro zlepšení rychlosti zpracování na blockchainech** bez snížení bezpečnosti. Pochopení tohoto konceptu vyžaduje znalost rozdílů v navrhovaných řešeních pro škálování Etherea.
 
-[Řešení pro škálování na blockchainu](/developers/docs/scaling/#onchain-scaling), jako je sharding, vyžadují rozsáhlé úpravy základní vrstvy blockchainu. Tento přístup je však velmi složitý a chyby v implementaci mohou podkopat bezpečnostní model Etherea.
+[Onchain řešení škálování](/developers/docs/scaling/#onchain-scaling), jako je sharding, vyžadují rozsáhlé úpravy základní vrstvy blockchainu. Tento přístup je však vysoce komplexní a chyby v implementaci mohou narušit bezpečnostní model Etherea.
 
-[Řešení pro škálování mimo blockchain](/developers/docs/scaling/#offchain-scaling) nevyžadují přepracování základního protokolu Etherea. Místo toho se spoléhají na outsourcovaný výpočetní model pro zlepšení propustnosti transakcí na základní vrstvě Etherea.
+[Offchain řešení škálování](/developers/docs/scaling/#offchain-scaling) nevyžadují přepracování základního protokolu Etherea. Místo toho spoléhají na model outsourcovaných výpočtů ke zlepšení propustnosti na základní vrstvě Etherea.
 
-V praxi to funguje takto:
+Zde je ukázka, jak to funguje v praxi:
 
-- Namísto zpracování každé transakce přesune Ethereum její exekuci na samostatný blockchain.
+- Místo zpracování každé transakce Ethereum přesouvá provádění na samostatný řetězec.
 
-- Po zpracování transakcí vrátí tento blockchain výsledky, které se aplikují do stavu Etherea.
+- Po zpracování transakcí druhý řetězec vrátí výsledky, které se aplikují na stav Etherea.
 
-Výhodou je, že Ethereum nemusí provádět žádnou exekuci a potřebuje pouze aplikovat výsledky z outsourcovaných výpočtů na svůj stav. To snižuje zahlcení sítě a také zlepšuje rychlost transakcí (protokoly mimo blockchain se optimalizují pro rychlejší exekuci).
+Výhodou je, že Ethereum nemusí provádět žádné výpočty a stačí mu pouze aplikovat výsledky z outsourcovaných výpočtů na svůj stav. To snižuje přetížení sítě a také zlepšuje rychlost transakcí (offchain protokoly jsou optimalizovány pro rychlejší provádění).
 
-Blockchain potřebuje způsob, jak ověřovat transakce mimo blockchain bez opětovného provádění, jinak dojde ke ztrátě výhody exekuce mimo blockchain.
+Řetězec potřebuje způsob, jak validovat offchain transakce bez jejich opětovného provádění, jinak se hodnota offchain provádění ztratí.
 
-Zde přichází na řadu ověřitelný výpočet. Když uzel provede transakci mimo Ethereum, předloží důkaz nulové znalosti, aby prokázal správnost exekuce mimo blockchain. Tento důkaz (nazývaný [důkaz platnosti](/glossary/#validity-proof)) zaručuje, že transakce je platná, a umožňuje Ethereu aplikovat výsledek na svůj stav – aniž by čekal, zda ho někdo zpochybní.
+Zde přicházejí na řadu ověřitelné výpočty. Když uzel provede transakci mimo Ethereum, předloží důkaz s nulovou znalostí, aby prokázal správnost offchain provedení. Tento důkaz (nazývaný [důkaz platnosti](/glossary/#validity-proof)) zaručuje, že transakce je platná, což Ethereu umožňuje aplikovat výsledek na svůj stav – aniž by muselo čekat, až jej někdo zpochybní.
 
-[Rollupy s nulovou znalostí](/developers/docs/scaling/zk-rollups) a [validia](/developers/docs/scaling/validium/) jsou dvě řešení škálování mimo blockchain, která používají důkazy platnosti k zajištění bezpečné škálovatelnosti. Tyto protokoly provádějí tisíce transakcí mimo blockchain a předkládají důkazy k ověření na Ethereu. Tyto výsledky lze použít okamžitě po ověření důkazu, což umožňuje Ethereu zpracovat více transakcí bez zvýšení náročnosti výpočtů na základní vrstvě.
+[Zero-knowledge rollupy](/developers/docs/scaling/zk-rollups) a [validia](/developers/docs/scaling/validium/) jsou dvě offchain řešení škálování, která používají důkazy platnosti k zajištění bezpečné škálovatelnosti. Tyto protokoly provádějí tisíce transakcí offchain a předkládají důkazy k ověření na Ethereu. Tyto výsledky lze aplikovat okamžitě po ověření důkazu, což Ethereu umožňuje zpracovat více transakcí bez zvýšení výpočetní zátěže na základní vrstvě.
 
-### Snížení úplatkářství a tajných dohod při hlasování na blockchainu {#secure-blockchain-voting}
+Kromě škálování na vrstvě 2 (l2) mohou důkazy s nulovou znalostí také ověřovat samotné provádění bloků na vrstvě 1 (l1) Etherea. [zkEVM pro ověřování na l1](/roadmap/zkevm/) by validátorům umožnilo ověřovat bloky kontrolou důkazu namísto opětovného provádění všech transakcí – což by umožnilo vyšší limity gasu bez zvýšení hardwarových požadavků na validátory.
 
-Hlasovací schémata na blockchainu mají spoustu dobrých vlastností: Jsou plně auditovatelná, zabezpečená proti útokům, odolná vůči cenzuře a nemají žádná geografická omezení. Ale ani systémy hlasování na blockchainu nejsou imunní vůči problému **koluze**.
+### Snížení úplatkářství a tajných dohod při onchain hlasování {#secure-blockchain-voting}
 
-Tajná dohoda, definovaná jako „koordinace za účelem omezení otevřené soutěže klamáním, podváděním a navedením druhých“, může mít podobu nabízení úplatků. Například Alice může dostat úplatek od Boba, aby hlasovala pro `možnost B` na hlasovacím lístku, i když dává přednost `možnosti A`.
+Schémata hlasování na blockchainu mají mnoho příznivých vlastností: jsou plně auditovatelná, bezpečná proti útokům, odolná vůči cenzuře a bez geografických omezení. Ale ani onchain hlasovací schémata nejsou imunní vůči problému **tajných dohod (koluzí)**.
 
-Úplatkářství a tajné dohody omezují efektivitu jakéhokoli procesu, který využívá hlasování, ale zejména těch, kde uživatelé mohou prokázat, jak hlasovali. To může mít neblahé důsledky zejména na místech, kde hlasy slouží k přidělování omezených zdrojů.
+Tajná dohoda, definovaná jako „koordinace za účelem omezení otevřené soutěže klamáním, podváděním a zaváděním ostatních“, může mít podobu zlomyslného aktéra, který ovlivňuje hlasování nabízením úplatků. Například Alice může obdržet úplatek od Boba, aby na hlasovacím lístku dala hlas pro `option B`, i když preferuje `option A`.
 
-Například [mechanismy kvadratického financování](https://www.radicalxchange.org/wiki/plural-funding/) se spoléhají na dary k měření preferencí pro určité možnosti mezi různými projekty veřejných statků. Každý dar se počítá jako „hlas“ pro konkrétní projekt, přičemž projekty, které získají více hlasů, získají více prostředků z odpovídající skupiny.
+Úplatkářství a tajné dohody omezují efektivitu jakéhokoli procesu, který používá hlasování jako signalizační mechanismus (zejména tam, kde uživatelé mohou prokázat, jak hlasovali). To může mít značné důsledky, zejména tam, kde jsou hlasy zodpovědné za alokaci vzácných zdrojů.
 
-Díky hlasování na blockchainu je kvadratické financování náchylné k tajným dohodám: Blockchainové transakce jsou veřejné, takže úplatkáři mohou kontrolovat aktivitu úplatkáře na blockchainu, protože vidí, jak kdo „hlasoval“. Tímto způsobem kvadratické financování přestává být efektivním prostředkem pro alokaci finančních prostředků na základě preferencí komunity.
+Například [mechanismy kvadratického financování](https://www.radicalxchange.org/wiki/plural-funding/) spoléhají na dary k měření preferencí pro určité možnosti mezi různými projekty veřejných statků. Každý dar se počítá jako „hlas“ pro konkrétní projekt, přičemž projekty, které obdrží více hlasů, získají více prostředků ze sdíleného fondu (matching pool).
 
-Naštěstí novější řešení jako MACI (Minimum Anti-Collusion Infrastructure) používají důkazy s nulovou znalostí, aby bylo hlasování na blockchainu (např. mechanismy kvadratického financování) odolné vůči úplatkům a tajným dohodám. MACI je sada chytrých kontraktů a skriptů, které umožňují centrálnímu správci (nazývanému "koordinátor") shromažďovat hlasy a sčítat výsledky, _aniž by_ odhalovaly podrobnosti o tom, jak jednotlivci hlasovali. I tak je možné ověřit, že hlasy byly řádně sečteny, případně potvrdit, že se konkrétní jednotlivec zúčastnil hlasování.
+Použití onchain hlasování činí kvadratické financování náchylným k tajným dohodám: blockchainové transakce jsou veřejné, takže ten, kdo uplácí, může zkontrolovat onchain aktivitu podplaceného, aby viděl, jak „hlasoval“. Tímto způsobem přestává být kvadratické financování efektivním prostředkem pro alokaci finančních prostředků na základě agregovaných preferencí komunity.
 
-#### Jak MACI pracuje s důkazy s nulovou znalostí? {#how-maci-works-with-zk-proofs}
+Naštěstí novější řešení, jako je MACI (Minimum Anti-Collusion Infrastructure), používají důkazy s nulovou znalostí k tomu, aby onchain hlasování (např. mechanismy kvadratického financování) bylo odolné vůči úplatkářství a tajným dohodám. MACI je sada chytrých kontraktů a skriptů, které umožňují centrálnímu správci (nazývanému „koordinátor“) agregovat hlasy a sčítat výsledky, _aniž by_ odhalil podrobnosti o tom, jak každý jednotlivec hlasoval. I tak je stále možné ověřit, že hlasy byly sečteny správně, nebo potvrdit, že se konkrétní jednotlivec zúčastnil kola hlasování.
 
-Na začátku koordinátor zařadí MACI kontrakt na Ethereum, pté se uživatelé mohou přihlásit k hlasování (registrací svého veřejného klíče do chytrého kontraktu). Uživatelé hlasují zasíláním zpráv zašifrovaných jejich veřejným klíčem do chytrého kontraktu (platný hlas musí být mimo jiné podepsán nejnovějším veřejným klíčem spojeným s identitou uživatele). Poté koordinátor zpracuje všechny zprávy po skončení hlasování, sečte hlasy a ověří výsledky na blockchainu.
+#### Jak MACI funguje s důkazy s nulovou znalostí? {#how-maci-works-with-zk-proofs}
 
-V MACI se důkazy s nulovou znalostí používají k zajištění správnosti výpočtu tím, že koordinátorovi znemožní nesprávné zpracování hlasů a sečtení výsledků. Toho je dosaženo tím, že koordinátor musí vygenerovat ZK-SNARK důkazy ověřující, že a) všechny zprávy byly zpracovány správně b) konečný výsledek odpovídá součtu všech _platných_ hlasů.
+Na začátku koordinátor nasadí kontrakt MACI na Ethereu, načež se uživatelé mohou přihlásit k hlasování (registrací svého veřejného klíče v chytrém kontraktu). Uživatelé odevzdávají hlasy zasíláním zpráv zašifrovaných svým veřejným klíčem do chytrého kontraktu (platný hlas musí být mimo jiné podepsán nejnovějším veřejným klíčem spojeným s identitou uživatele). Poté, jakmile skončí období hlasování, koordinátor zpracuje všechny zprávy, sečte hlasy a ověří výsledky onchain.
 
-MACI tedy i bez sdílení podrobností o hlasech uživatelů (jak je tomu obvykle) zaručuje integritu výsledků hlasování. Tato funkce je užitečná při snižování účinnosti základních tajných dohod. Tuto možnost můžeme ilustrovat pomocí předchozího příkladu, kdy Bob podplatil Alici, aby hlasovala pro jím preferovanou možnost:
+V MACI se důkazy s nulovou znalostí používají k zajištění správnosti výpočtů tím, že znemožňují koordinátorovi nesprávně zpracovat hlasy a sečíst výsledky. Toho je dosaženo tím, že se od koordinátora vyžaduje vygenerování ZK-SNARK důkazů ověřujících, že a) všechny zprávy byly zpracovány správně b) konečný výsledek odpovídá součtu všech _platných_ hlasů.
 
-- Alice se zaregistruje k hlasování zasláním svého veřejného klíče do chytrého kontraktu.
-- Alice souhlasí, že bude hlasovat pro `možnost B` výměnou za úplatek od Boba.
-- Alice hlasuje pro `možnost B`.
-- Alice tajně odešle zašifrovanou transakci, a tím změní veřejný klíč spojený se svou identitou.
-- Alice pošle další (zašifrovanou) zprávu do chytrého kontraktu, kde hlasuje pro `možnost A` pomocí nového veřejného klíče.
-- Alice ukáže Bobovi transakci, která dokazuje, že hlasovala pro `možnost B` (která je neplatná, protože veřejný klíč již není v systému spojen s Alicinou identitou).
-- Při zpracování zpráv koordinátor přeskočí Alicin hlas pro `možnost B` a započítá pouze hlas pro `možnost A`. Proto Bobův pokus manipulovat s hlasováním pomocí tajné dohody s Alicí selže.
+Tudíž i bez sdílení rozpisu hlasů na uživatele (jak tomu obvykle bývá) MACI zaručuje integritu výsledků vypočítaných během procesu sčítání. Tato funkce je užitečná při snižování efektivity základních schémat tajných dohod. Tuto možnost můžeme prozkoumat na předchozím příkladu, kdy Bob podplatí Alici, aby hlasovala pro určitou možnost:
 
-Použití MACI _vyžaduje_ důvěru, že koordinátor nebude tajně spolupracovat s úplatkáři ani se nepokusí uplatit samotné voliče. Koordinátor může dešifrovat uživatelské zprávy (nezbytné pro vytvoření důkazu), takže pro něj není problém přesně ověřit, jak kdo hlasoval.
+- Alice se zaregistruje k hlasování odesláním svého veřejného klíče do chytrého kontraktu.
+- Alice souhlasí, že bude hlasovat pro `option B` výměnou za úplatek od Boba.
+- Alice hlasuje pro `option B`.
+- Alice tajně odešle zašifrovanou transakci, aby změnila veřejný klíč spojený s její identitou.
+- Alice odešle další (zašifrovanou) zprávu do chytrého kontraktu, ve které hlasuje pro `option A` pomocí nového veřejného klíče.
+- Alice ukáže Bobovi transakci, která ukazuje, že hlasovala pro `option B` (což je neplatné, protože veřejný klíč již není v systému spojen s identitou Alice).
+- Při zpracování zpráv koordinátor přeskočí hlas Alice pro `option B` a započítá pouze hlas pro `option A`. Bobův pokus o tajnou dohodu s Alicí a manipulaci s onchain hlasováním tak selže.
 
-Ale v případech, kdy je koordinátor čestný, MACI představuje mocný nástroj pro zaručení poctivosti hlasování na blockchainu. To vysvětluje jeho popularitu mezi aplikacemi kvadratického financování (např. [clr.fund](https://clr.fund/#/about/maci)), které se silně spoléhají na integritu volebních rozhodnutí každého jednotlivce.
+Použití MACI _vyžaduje_ důvěru v koordinátora, že se tajně nedohodne s těmi, kdo uplácejí, nebo se sám nepokusí podplatit voliče. Koordinátor může dešifrovat zprávy uživatelů (což je nezbytné pro vytvoření důkazu), takže může přesně ověřit, jak každá osoba hlasovala.
+
+Ale v případech, kdy koordinátor zůstává čestný, představuje MACI mocný nástroj pro zaručení nedotknutelnosti onchain hlasování. To vysvětluje jeho popularitu mezi aplikacemi kvadratického financování (např. [clr.fund](https://clr.fund/#/about/maci)), které silně spoléhají na integritu hlasovacích rozhodnutí každého jednotlivce.
 
 [Zjistěte více o MACI](https://maci.pse.dev/).
 
-## Jak důkazy s nulovou znalostí fungují? {#how-do-zero-knowledge-proofs-work}
+## Jak fungují důkazy s nulovou znalostí? {#how-do-zero-knowledge-proofs-work}
 
-Důkaz s nulovou znalostí vám umožňuje prokázat pravdivost tvrzení, aniž byste sdíleli obsah tvrzení nebo odhalili, jak jste pravdu zjistili. Aby to bylo možné, protokoly s nulovou znalostí spoléhají na algoritmy, které berou jistá data jako vstup a vracejí „pravda“ nebo „nepravda“ jako výstup.
+Důkaz s nulovou znalostí vám umožňuje prokázat pravdivost tvrzení, aniž byste sdíleli obsah tvrzení nebo odhalili, jak jste pravdu zjistili. Aby to bylo možné, protokoly s nulovým vědomím spoléhají na algoritmy, které přijmou nějaká data jako vstup a vrátí „pravda“ (true) nebo „nepravda“ (false) jako výstup.
 
-Protokol s nulovou znalostí musí splňovat tato kritéria:
+Protokol s nulovým vědomím musí splňovat následující kritéria:
 
-1. **Úplnost**: Pokud je vstup platný, protokol s nulovou znalostí vždy vrátí hodnotu „true“. Pokud je tedy základní tvrzení pravdivé a dokazovatel i ověřovatel jednají čestně, je možné důkaz přijmout.
+1. **Úplnost (Completeness)**: Pokud je vstup platný, protokol s nulovým vědomím vždy vrátí „pravda“. Pokud je tedy základní tvrzení pravdivé a dokazovatel i ověřovatel jednají čestně, důkaz může být přijat.
 
-2. **Spolehlivost**: Pokud je vstup neplatný, je teoreticky nemožné přimět protokol s nulovou znalostí, aby vrátil hodnotu „true“. Nepoctivý dokazovatel tedy nemůže oklamat poctivého ověřovatele, nebude schopen ho přesvědčit, že neplatný výrok je platný (s výjimkou zanedbatelné míry pravděpodobnosti).
+2. **Korektnost (Soundness)**: Pokud je vstup neplatný, je teoreticky nemožné oklamat protokol s nulovým vědomím, aby vrátil „pravda“. Lhající dokazovatel tedy nemůže oklamat čestného ověřovatele, aby uvěřil, že neplatné tvrzení je platné (s výjimkou nepatrné pravděpodobnosti).
 
-3. **Nulová znalost**: Ověřovatel se o tvrzení nedozví nic kromě jeho platnosti nebo nepravdivosti (má o tvrzení „nulovou znalost“). Tento požadavek také brání ověřovateli na základě důkazu uhodnout původní vstup (obsah prohlášení).
+3. **Nulové vědomí (Zero-knowledge)**: Ověřovatel se o tvrzení nedozví nic jiného než jeho platnost nebo neplatnost (má o tvrzení „nulové vědomí“). Tento požadavek také brání ověřovateli odvodit z důkazu původní vstup (obsah tvrzení).
 
-V základní podobě se důkaz s nulovou znalostí skládá ze tří prvků: **svědek**, **výzva** a **odpověď**.
+V základní podobě se důkaz s nulovou znalostí skládá ze tří prvků: **svědek (witness)**, **výzva (challenge)** a **odpověď (response)**.
 
-- **Svědek**: Pomocí důkazu s nulovou znalostí chce dokazovatel prokázat znalost nějaké skryté informace. Tajná informace je „svědkem“ důkazu a předpokládaná znalost svědka ověřovatelem vytváří soubor otázek, na které může odpovědět pouze strana, která tyto informace zná. Dokazovatel tedy zahájí proces dokazování náhodným výběrem otázky, vypočítáním odpovědi a jejím odesláním ověřovateli.
+- **Svědek**: Pomocí důkazu s nulovou znalostí chce dokazovatel prokázat znalost nějaké skryté informace. Tajná informace je „svědkem“ důkazu a předpokládaná znalost svědka dokazovatelem vytváří sadu otázek, na které může odpovědět pouze strana se znalostí této informace. Dokazovatel tedy zahájí proces dokazování tím, že náhodně vybere otázku, vypočítá odpověď a odešle ji ověřovateli.
 
-- **Výzva**: Ověřovatel náhodně vybere ze sady další otázku a požádá dokazovatele, aby na ni odpověděl.
+- **Výzva**: Ověřovatel náhodně vybere další otázku ze sady a požádá dokazovatele, aby na ni odpověděl.
 
-- **Odpověď**: Dokazovatel přijme otázku, vypočítá odpověď a vrátí ji ověřovateli. Odpověď dokazovatele umožňuje ověřovateli zkontrolovat, zda má skutečně přístup ke svědkovi. Aby dokazovatel nehádal naslepo a náhodou správné odpovědi neuhodl, vybere ověřovatel více otázek, na které se bude ptát. Mnohonásobným opakováním tohoto postupu výrazně klesá možnost podvodu ze strany dokazovatele. Je proto nutné provést ho několikrát za sebou, dokud není ověřovatel spokojen.
+- **Odpověď**: Dokazovatel přijme otázku, vypočítá odpověď a vrátí ji ověřovateli. Odpověď dokazovatele umožňuje ověřovateli zkontrolovat, zda má dokazovatel skutečně přístup ke svědkovi. Aby se zajistilo, že dokazovatel neuhodl naslepo a nezískal správné odpovědi náhodou, vybere ověřovatel další otázky. Opakováním této interakce mnohokrát se možnost, že dokazovatel předstírá znalost svědka, výrazně snižuje, dokud není ověřovatel spokojen.
 
-Výše uvedené popisuje strukturu „interaktivního důkazu s nulovou znalostí“. Rané protokoly s nulovou znalostí používaly interaktivní dokazování, kde ověření platnosti prohlášení vyžadovalo zpětnou komunikaci mezi dokazovateli a ověřovateli.
+Výše uvedené popisuje strukturu „interaktivního důkazu s nulovou znalostí“. Rané protokoly s nulovým vědomím používaly interaktivní dokazování, kde ověření platnosti tvrzení vyžadovalo obousměrnou komunikaci mezi dokazovateli a ověřovateli.
 
-Dobrým příkladem, který ilustruje, jak fungují interaktivní důkazy, je slavný [příběh o jeskyni Ali Baby](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave) od Jeana-Jacquese Quisquatera. V příběhu chce Peggy (dokazovatel) dokázat Victorovi (ověřovatel), že zná tajnou frázi, jak otevřít kouzelné dveře, aniž by ji prozradila.
+Dobrým příkladem, který ilustruje, jak fungují interaktivní důkazy, je slavný [příběh o jeskyni Ali Baby](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave) od Jean-Jacquese Quisquatera. V příběhu chce Peggy (dokazovatel) dokázat Victorovi (ověřovateli), že zná tajnou frázi k otevření magických dveří, aniž by tuto frázi odhalila.
 
 ### Neinteraktivní důkazy s nulovou znalostí {#non-interactive-zero-knowledge-proofs}
 
-I když je interaktivní dokazování revoluční, mělo omezenou užitečnost, protože vyžadovalo, aby byly obě strany k dispozici a interagovaly opakovaně. I kdyby byl ověřovatel přesvědčen o poctivosti dokazovatele, důkaz by nebyl k dispozici pro nezávislé ověření (protože výpočet nového důkazu vyžadoval novou sadu zpráv mezi dokazovatelem a ověřovatelem).
+Ačkoli bylo interaktivní dokazování revoluční, mělo omezenou užitečnost, protože vyžadovalo, aby obě strany byly k dispozici a opakovaně spolu interagovaly. I kdyby byl ověřovatel přesvědčen o poctivosti dokazovatele, důkaz by nebyl k dispozici pro nezávislé ověření (výpočet nového důkazu vyžadoval novou sadu zpráv mezi dokazovatelem a ověřovatelem).
 
-K vyřešení tohoto problému navrhli Manuel Blum, Paul Feldman a Silvio Micali první [neinteraktivní důkazy s nulovou znalostí](https://dl.acm.org/doi/10.1145/62212.62222), kde dokazovatel a ověřovatel mají sdílený klíč. To umožňuje dokazovateli prokázat svou znalost některých informací (tj. svědka), aniž by poskytoval informace samotné.
+K vyřešení tohoto problému navrhli Manuel Blum, Paul Feldman a Silvio Micali první [neinteraktivní důkazy s nulovou znalostí](https://dl.acm.org/doi/10.1145/62212.62222), kde mají dokazovatel a ověřovatel sdílený klíč. To umožňuje dokazovateli demonstrovat svou znalost nějaké informace (tj. svědka), aniž by poskytl samotnou informaci.
 
-Na rozdíl od interaktivních důkazů vyžadují neinteraktivní důkazy pouze jedno kolo komunikace mezi účastníky (dokazovatelem a ověřovatelem). Dokazovatel předá tajné informace speciálnímu algoritmu pro výpočet důkazu s nulovou znalostí. Tento důkaz je zaslán ověřovateli, který pomocí jiného algoritmu zkontroluje, že dokazovatel zná tajné informace.
+Na rozdíl od interaktivních důkazů vyžadovaly neinteraktivní důkazy pouze jedno kolo komunikace mezi účastníky (dokazovatelem a ověřovatelem). Dokazovatel předá tajnou informaci speciálnímu algoritmu k výpočtu důkazu s nulovou znalostí. Tento důkaz je odeslán ověřovateli, který pomocí jiného algoritmu zkontroluje, zda dokazovatel zná tajnou informaci.
 
-Neinteraktivní dokazování omezuje komunikaci mezi dokazovatelem a ověřovatelem, což zefektivňuje proces ověřování. Jakmile je navíc vygenerován důkaz, může ho ověřit kdokoliv (s přístupem ke sdílenému klíči a ověřovacímu algoritmu).
+Neinteraktivní dokazování snižuje komunikaci mezi dokazovatelem a ověřovatelem, díky čemuž jsou ZK důkazy efektivnější. Navíc, jakmile je důkaz vygenerován, je k dispozici komukoli jinému (s přístupem ke sdílenému klíči a ověřovacímu algoritmu) k ověření.
 
-Neinteraktivní důkazy představovaly průlom v technologii nulové znalosti a podnítily vývoj dnes používaných důkazních systémů. Typy těchto důkazů rozebíráme níže:
+Neinteraktivní důkazy představovaly průlom pro technologii s nulovým vědomím a podnítily vývoj dokazovacích systémů používaných dodnes. O těchto typech důkazů pojednáváme níže:
 
 ### Typy důkazů s nulovou znalostí {#types-of-zero-knowledge-proofs}
 
 #### ZK-SNARKs {#zk-snarks}
 
-ZK-SNARK je zkratka pro **Zero-Knowledge Succinct Non-Interactive Argument of Knowledge**. Protokol ZK-SNARK má následující vlastnosti:
+ZK-SNARK je zkratka pro **Zero-Knowledge Succinct Non-Interactive Argument of Knowledge** (Stručný neinteraktivní argument znalosti s nulovým vědomím). Protokol ZK-SNARK má následující vlastnosti:
 
-- **Nulová znalost**: Ověřovatel může potvrdit integritu tvrzení, aniž by o něm věděl cokoli jiného. Jediné, co ověřovatel o prohlášení ví, je, zda je pravdivé nebo nepravdivé.
+- **Nulové vědomí (Zero-knowledge)**: Ověřovatel může validovat integritu tvrzení, aniž by o tvrzení věděl cokoli dalšího. Jediná znalost, kterou má ověřovatel o tvrzení, je, zda je pravdivé nebo nepravdivé.
 
-- **Stručnost**: Důkaz s nulovou znalostí je menší než svědek a lze jej rychle ověřit.
+- **Stručný (Succinct)**: Důkaz s nulovou znalostí je menší než svědek a lze jej rychle ověřit.
 
-- **Neinteraktivní**: Důkaz je „neinteraktivní“, protože dokazovatel a ověřovatel spolu komunikují pouze jednou, na rozdíl od interaktivních důkazů, které vyžadují více kol komunikace.
+- **Neinteraktivní (Non-interactive)**: Důkaz je „neinteraktivní“, protože dokazovatel a ověřovatel spolu interagují pouze jednou, na rozdíl od interaktivních důkazů, které vyžadují více kol komunikace.
 
-- **Argument**: Důkaz splňuje požadavek na „spolehlivost“, takže podvádění je extrémně nepravděpodobné.
+- **Argument**: Důkaz splňuje požadavek „korektnosti“, takže podvádění je extrémně nepravděpodobné.
 
-- **(Ze) znalosti**: Důkaz s nulovou znalostí nelze zkonstruovat bez přístupu k tajným informacím (svědkovi). Pro dokazovatele, který nezná svědka, je obtížné, ne-li nemožné, vypočítat platný důkaz s nulovou znalostí.
+- **Znalosti (Of Knowledge)**: Důkaz s nulovou znalostí nelze zkonstruovat bez přístupu k tajné informaci (svědkovi). Pro dokazovatele, který nemá svědka, je obtížné, ne-li nemožné, vypočítat platný důkaz s nulovou znalostí.
 
-Výše zmíněný „sdílený klíč“ odkazuje na veřejné parametry, na kterých se dokazovatel a ověřovatel domluví při generování a ověřování důkazů. Generování veřejných parametrů (souhrnně známých jako Common Reference String (CRS)) je citlivá operace, protože je klíčová pro zabezpečení protokolu. Pokud se entropie (náhodnost) použitá při generování CRS dostane do rukou nepoctivého dokazovatele, může vypočítat falešné důkazy.
+Dříve zmíněný „sdílený klíč“ odkazuje na veřejné parametry, na kterých se dokazovatel a ověřovatel dohodnou, že je budou používat při generování a ověřování důkazů. Generování veřejných parametrů (souhrnně známých jako Common Reference String (CRS)) je citlivá operace kvůli jejímu významu pro bezpečnost protokolu. Pokud se entropie (náhodnost) použitá při generování CRS dostane do rukou nepoctivého dokazovatele, může vypočítat falešné důkazy.
 
-[Vícečlenný výpočet (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation) je způsob, jak snížit rizika při generování veřejných parametrů. Více stran se účastní [ceremonie důvěryhodného nastavení](https://zkproof.org/2021/06/30/setup-ceremonies/amp/), kde každá osoba přispěje náhodnými hodnotami k vygenerování CRS. Pokud alespoň jeden čestný účastník zničí svou část entropie, protokol ZK-SNARK si zachovává výpočetní spolehlivost.
+[Vícestranné výpočty (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation) jsou způsobem, jak snížit rizika při generování veřejných parametrů. Více stran se účastní [ceremonie důvěryhodného nastavení](https://zkproof.org/2021/06/30/setup-ceremonies/amp/), kde každá osoba přispívá nějakými náhodnými hodnotami k vygenerování CRS. Dokud alespoň jedna čestná strana zničí svou část entropie, protokol ZK-SNARK si zachovává výpočetní korektnost.
 
-Důvěryhodná nastavení vyžadují, aby uživatelé důvěřovali účastníkům při generování veřejných parametrů. Vývoj ZK-STARKů však umožnil vznik ověřovacích protokolů, které pracují s nastavením, kterému není třeba důvěřovat.
+Důvěryhodná nastavení vyžadují, aby uživatelé důvěřovali účastníkům při generování parametrů. Vývoj ZK-STARKů však umožnil dokazovací protokoly, které fungují s nedůvěryhodným nastavením.
 
 #### ZK-STARKs {#zk-starks}
 
-ZK-STARK je zkratka pro **Zero-Knowledge Scalable Transparent Argument of Knowledge**. ZK-STARK jsou podobné ZK-SNARK, až na to, že jsou:
+ZK-STARK je zkratka pro **Zero-Knowledge Scalable Transparent Argument of Knowledge** (Škálovatelný transparentní argument znalosti s nulovým vědomím). ZK-STARKy jsou podobné ZK-SNARKům, s tím rozdílem, že jsou:
 
-- **Škálovatelné**: ZK-STARK je rychlejší než ZK-SNARK při generování a ověřování důkazů, když je velikost svědka větší. S důkazy typu STARK se časy dokazování a ověřování s rostoucím objemem dat svědka jen mírně prodlužují (doby dokazování a ověřování typu SNARK rostou s velikostí svědka lineárně).
+- **Škálovatelné (Scalable)**: ZK-STARK je rychlejší než ZK-SNARK při generování a ověřování důkazů, když je velikost svědka větší. U STARK důkazů se časy dokazovatele a ověření s rostoucím svědkem zvyšují jen nepatrně (časy dokazovatele a ověřovatele u SNARKů rostou lineárně s velikostí svědka).
 
-- **Transparentní**: ZK-STARK se spoléhá na veřejně ověřitelnou náhodnost pro generování veřejných parametrů pro dokazování a ověřování namísto důvěryhodného nastavení. Jsou tedy ve srovnání se ZK-SNARK transparentnější.
+- **Transparentní (Transparent)**: ZK-STARK spoléhá na veřejně ověřitelnou náhodnost ke generování veřejných parametrů pro dokazování a ověřování namísto důvěryhodného nastavení. Jsou tedy transparentnější ve srovnání se ZK-SNARKy.
 
-ZK-STARK produkují větší důkazy než ZK-SNARK, což znamená, že mají obecně vyšší ověřovací náklady. Existují však případy (jako je prokazování velkých datových sad), kdy mohou být ZK-STARK cenově výhodnější než ZK-SNARK.
+ZK-STARKy produkují větší důkazy než ZK-SNARKy, což znamená, že mají obecně vyšší režii na ověřování. Existují však případy (jako je dokazování velkých datových sad), kdy mohou být ZK-STARKy nákladově efektivnější než ZK-SNARKy.
 
 ## Nevýhody používání důkazů s nulovou znalostí {#drawbacks-of-using-zero-knowledge-proofs}
 
 ### Náklady na hardware {#hardware-costs}
 
-Generování důkazů nulové znalosti zahrnuje velmi složité výpočty, které se nejlépe dělají na specializovaných strojích. Jelikož jsou tyto stroje drahé, jsou často mimo dosah jednotlivců. Navíc aplikace, které by chtěly používat technologii s nulovou znalostí, musí počítat s náklady na hardware – což může zvýšit náklady pro koncové uživatele.
+Generování důkazů s nulovou znalostí zahrnuje velmi složité výpočty, které se nejlépe provádějí na specializovaných strojích. Vzhledem k tomu, že tyto stroje jsou drahé, jsou často mimo dosah běžných jednotlivců. Kromě toho aplikace, které chtějí používat technologii s nulovým vědomím, musí zohlednit náklady na hardware – což může zvýšit náklady pro koncové uživatele.
 
 ### Náklady na ověření důkazu {#proof-verification-costs}
 
-Ověřování důkazů také vyžaduje složité výpočty a zvyšuje náklady na implementaci technologie s nulovou znalostí v aplikacích. Tyto náklady jsou obzvláště důležité v souvislosti s prokazováním správnosti výpočtů. Např. ZK-rollupy platí asi 500 000 jednotek paliva za ověření jediného důkazu ZK-SNARK na Ethereu, přičemž ZK-STARK vyžadují ještě vyšší poplatky.
+Ověřování důkazů také vyžaduje složité výpočty a zvyšuje náklady na implementaci technologie s nulovým vědomím v aplikacích. Tyto náklady jsou obzvláště relevantní v kontextu dokazování výpočtů. Například ZK-rollupy platí ~ 500 000 gasu za ověření jediného ZK-SNARK důkazu na Ethereu, přičemž ZK-STARKy vyžadují ještě vyšší poplatky.
 
 ### Předpoklady důvěry {#trust-assumptions}
 
-V ZK-SNARK je společný referenční řetězec (veřejné parametry) generován jednou a je zúčastněným stranám k dispozici pro opětovné použití. Veřejné parametry jsou vytvářeny prostřednictvím tzv. důvěryhodného obřadu nastavení, který předpokládá, že účastníci jsou čestní.
+V ZK-SNARKu je Common Reference String (veřejné parametry) vygenerován jednou a je k dispozici pro opakované použití stranám, které se chtějí účastnit protokolu s nulovým vědomím. Veřejné parametry jsou vytvářeny prostřednictvím ceremonie důvěryhodného nastavení, kde se předpokládá, že účastníci jsou čestní.
 
-Ale ve skutečnosti neexistuje způsob, jak by uživatelé mohli posoudit poctivost všech účastníků. Také musí věřit vývojářům. ZK-STARK jsou bez předpokladu důvěry, protože náhodnost použitá při generování řetězce je veřejně ověřitelná. V současné době výzkumníci pracují na nastaveních pro ZK-SNARK, která také nevyžadují důvěru, aby zvýšili bezpečnost dokazovacích mechanismů.
+Uživatelé však ve skutečnosti nemají žádný způsob, jak posoudit poctivost účastníků, a musí vzít vývojáře za slovo. ZK-STARKy jsou bez předpokladů důvěry, protože náhodnost použitá při generování řetězce je veřejně ověřitelná. Mezitím výzkumníci pracují na nedůvěryhodných nastaveních pro ZK-SNARKy, aby zvýšili bezpečnost dokazovacích mechanismů.
 
 ### Hrozby kvantových počítačů {#quantum-computing-threats}
 
-ZK-SNARK používá pro šifrování kryptografii eliptické křivky. V současnosti se předpokládá, že problém diskrétního logaritmu eliptické křivky je těžko řešitelný, ale vývoj kvantových počítačů by tento bezpečnostní model mohl v budoucnu ohrozit.
+ZK-SNARK používá k šifrování kryptografii eliptických křivek. Ačkoli se problém diskrétního logaritmu eliptické křivky zatím považuje za neřešitelný, vývoj kvantových počítačů by mohl tento bezpečnostní model v budoucnu prolomit.
 
-ZK-STARK je považován za imunní vůči hrozbě kvantových počítačů, protože pro šifrování používá hashe odolné proti kolizím. Na rozdíl od párů veřejného a privátního klíče, který se používá v kryptografii eliptických křivek, je hašování odolné proti kolizím pro algoritmy kvantových počítačů obtížnější prolomit.
+ZK-STARK je považován za imunní vůči hrozbě kvantových počítačů, protože pro svou bezpečnost spoléhá pouze na hashovací funkce odolné proti kolizím. Na rozdíl od párů veřejného a soukromého klíče používaných v kryptografii eliptických křivek je hashování odolné proti kolizím pro algoritmy kvantových počítačů obtížnější prolomit.
 
 ## Další čtení {#further-reading}
 
-- [Přehled případů použití důkazů s nulovou znalostí](https://pse.dev/projects) — _Tým pro zkoumání soukromí a škálování_
-- [SNARKy vs. STARKy vs. rekurzivní SNARKy](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Overviews_
+- [Přehled případů užití pro důkazy s nulovou znalostí](https://pse.dev/projects) — _Tým Privacy and Scaling Explorations_
+- [SNARKy vs. STARKy vs. Rekurzivní SNARKy](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Overviews_
 - [Důkaz s nulovou znalostí: Zlepšení soukromí na blockchainu](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
-- [zk-SNARKs — Realistický příklad a hluboký ponor do nulové znalosti](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
-- [ZK-STARKy — Vytvořte ověřitelnou důvěru i proti kvantovým počítačům](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
+- [zk-SNARKy — Realistický příklad nulového vědomí a hluboký ponor](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
+- [ZK-STARKy — Vytvořte ověřitelnou důvěru, a to i proti kvantovým počítačům](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Přibližný úvod do toho, jak jsou zk-SNARKy možné](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
-- [Proč jsou důkazy s nulovou znalostí (ZKP) přelomové pro sebe-suverénní identitu](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [Vysvětlení EIP-7503: Umožnění soukromých převodů na Ethereu s ZK důkazy](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
-- [Karetní hra ZK: hra pro naučení základů ZK a reálných případů použití](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+- [Proč jsou důkazy s nulovou znalostí (ZKP) přelomové pro sebeurčující identitu](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
+- [Vysvětlení EIP-7503: Umožnění soukromých převodů na Ethereu pomocí ZK důkazů](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [Karetní hra ZK: hra pro naučení základů ZK a případů užití v reálném životě](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
