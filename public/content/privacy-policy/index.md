@@ -48,7 +48,7 @@ Furthermore, the IP addresses may be evaluated, together with other data, in cas
 
 **3.2 Use of Website Cookies**
 
-The Websites may use cookies. Cookies are text files that are stored in a computer system via an Internet browser. More detailed information on cookies and how they work can be found at: https://cookiepedia.co.uk/.
+The Websites may use cookies. Cookies are text files that are stored in a computer system via an Internet browser. More detailed information on cookies and how they work can be found at: https://allaboutcookies.org/.
 
 Many Internet sites and servers use cookies. Many cookies contain a so-called cookie ID. A cookie ID is a unique identifier of the cookie. It consists of a character string through which Internet pages and servers can be assigned to the specific Internet browser in which the cookie was stored. This allows visited Internet sites and servers to differentiate the individual browser of the data subject from other Internet browsers that contain other cookies. A specific Internet browser can be recognized and identified using the unique cookie ID.
 
