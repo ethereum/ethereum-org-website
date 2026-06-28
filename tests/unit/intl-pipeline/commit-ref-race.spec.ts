@@ -19,7 +19,10 @@ import { expect, test } from "@playwright/test"
 // because config.ts throws on a missing GITHUB_API_TOKEN at import time.
 import "./env-shim"
 
-import { SharedCommitter } from "@/scripts/intl-pipeline/lib/github/commits"
+import {
+  CHECKPOINT_EVERY,
+  SharedCommitter,
+} from "@/scripts/intl-pipeline/lib/github/commits"
 
 type Recorded = { method: string; path: string }
 
@@ -40,10 +43,15 @@ function jsonRes(status: number, body: unknown) {
  * and the body of every POST /git/trees. Returns a restore() to put the real
  * fetch back.
  */
-function installFakeGitHub() {
+function installFakeGitHub(opts: { failPatchNumbers?: number[] } = {}) {
   const calls: Recorded[] = []
   const treePayloads: { tree: { path: string }[] }[] = []
+  const commitPayloads: { message: string; parents: string[] }[] = []
+  const refUpdates: { sha: string; force?: boolean }[] = []
+  const failPatch = new Set(opts.failPatchNumbers ?? [])
   let blobN = 0
+  let commitN = 0
+  let patchN = 0
   const originalFetch = globalThis.fetch
 
   globalThis.fetch = (async (url: string | URL, init?: RequestInit) => {
@@ -60,14 +68,25 @@ function installFakeGitHub() {
       treePayloads.push(JSON.parse(String(init?.body)))
       return jsonRes(201, { sha: `TREE${treePayloads.length}` })
     }
-    if (u.endsWith("/git/commits")) return jsonRes(201, { sha: "NEWCOMMIT" })
-    if (u.includes("/git/refs/heads/")) return jsonRes(200, {})
+    if (u.endsWith("/git/commits")) {
+      commitPayloads.push(JSON.parse(String(init?.body)))
+      return jsonRes(201, { sha: `COMMIT${++commitN}` })
+    }
+    if (u.includes("/git/refs/heads/")) {
+      patchN++
+      if (failPatch.has(patchN))
+        return jsonRes(422, { message: "Update is not a fast forward" })
+      refUpdates.push(JSON.parse(String(init?.body)))
+      return jsonRes(200, {})
+    }
     throw new Error(`unexpected request: ${method} ${u}`)
   }) as typeof fetch
 
   return {
     calls,
     treePayloads,
+    commitPayloads,
+    refUpdates,
     restore: () => {
       globalThis.fetch = originalFetch
     },
@@ -149,6 +168,103 @@ test.describe("SharedCommitter ref-race safety", () => {
       const allPaths = treePayloads.flatMap((p) => p.tree.map((t) => t.path))
       expect(allPaths).toHaveLength(expected.size)
       for (const p of expected) expect(allPaths).toContain(p)
+    } finally {
+      restore()
+    }
+  })
+
+  test("checkpoint() flushes recorded work mid-run via a single serialized force-update", async () => {
+    const { treePayloads, refUpdates, restore } = installFakeGitHub()
+    try {
+      const committer = new SharedCommitter("intl/pending-dev")
+      await committer.init()
+
+      await committer.commitFile(
+        "public/content/translations/ko/x/index.md",
+        "c",
+        "ko"
+      )
+      await committer.commitFile(
+        ".manifests/public/content/translations/ko/x/index.md/source.json",
+        "{}",
+        "ko"
+      )
+      await committer.commitFile(
+        "public/content/translations/es/x/index.md",
+        "c",
+        "es"
+      )
+
+      // Two checkpoints fired "concurrently" must serialize through refLock and
+      // never issue overlapping ref updates.
+      await Promise.all([committer.checkpoint(), committer.checkpoint()])
+
+      // Each checkpoint is a full squash -> a force-update of the ref.
+      expect(refUpdates.length).toBeGreaterThanOrEqual(1)
+      expect(refUpdates.every((r) => r.force === true)).toBe(true)
+
+      // The checkpoint trees carry every recorded blob (content + manifest).
+      const allPaths = treePayloads.flatMap((p) => p.tree.map((t) => t.path))
+      expect(allPaths).toContain("public/content/translations/ko/x/index.md")
+      expect(allPaths).toContain(
+        ".manifests/public/content/translations/ko/x/index.md/source.json"
+      )
+      expect(allPaths).toContain("public/content/translations/es/x/index.md")
+    } finally {
+      restore()
+    }
+  })
+
+  test("commitFile auto-checkpoints every CHECKPOINT_EVERY files", async () => {
+    const { refUpdates, restore } = installFakeGitHub()
+    try {
+      const committer = new SharedCommitter("intl/pending-dev")
+      await committer.init()
+
+      // Exactly CHECKPOINT_EVERY files must trigger exactly one auto-flush.
+      for (let i = 0; i < CHECKPOINT_EVERY; i++) {
+        await committer.commitFile(
+          `public/content/translations/fr/p${i}/index.md`,
+          "c",
+          "fr"
+        )
+      }
+      await committer.flushCheckpoints()
+
+      expect(refUpdates).toHaveLength(1)
+      expect(refUpdates[0].force).toBe(true)
+    } finally {
+      restore()
+    }
+  })
+
+  test("a failed checkpoint is non-fatal: run continues and the final squash still ships everything", async () => {
+    // First ref PATCH (the checkpoint's force-update) returns 422.
+    const { treePayloads, refUpdates, restore } = installFakeGitHub({
+      failPatchNumbers: [1],
+    })
+    try {
+      const committer = new SharedCommitter("intl/pending-dev")
+      await committer.init()
+
+      const koContent = "public/content/translations/ko/x/index.md"
+      await committer.commitFile(koContent, "c", "ko")
+      await committer.commitFile(
+        "public/content/translations/es/x/index.md",
+        "c",
+        "es"
+      )
+
+      // Checkpoint's PATCH fails; must NOT throw and must NOT poison refLock.
+      await committer.checkpoint() // 422 -> caught, non-fatal
+      expect(refUpdates).toHaveLength(0) // failed PATCH not recorded
+
+      // The backstop: the final squash still ships everything from base.
+      await committer.squashByLanguage()
+      expect(refUpdates).toHaveLength(1) // squash's force-update landed
+      const allPaths = treePayloads.flatMap((p) => p.tree.map((t) => t.path))
+      expect(allPaths).toContain(koContent)
+      expect(allPaths).toContain("public/content/translations/es/x/index.md")
     } finally {
       restore()
     }

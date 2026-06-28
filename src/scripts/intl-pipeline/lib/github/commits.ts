@@ -19,6 +19,14 @@ interface TreeItem {
 }
 
 /**
+ * Recorded files between crash-safety checkpoints. A checkpoint flushes
+ * everything recorded so far to the branch, so at most this many files' worth
+ * of LLM output is at risk if the job dies mid-run. Tuned for a balance between
+ * durability and the extra commits/API calls each checkpoint costs.
+ */
+export const CHECKPOINT_EVERY = 50
+
+/**
  * Shared committer for parallel language translation.
  *
  * commitFile() only creates a git blob and records it per-language; it does
@@ -41,10 +49,20 @@ export class SharedCommitter {
   private blobsByLanguage = new Map<string, TreeItem[]>()
   /** SHA of the original base before any translations */
   private originalBaseSha = ""
+  /** Tree of the original base, captured once in init(). */
+  private baseTreeSha = ""
+  /** Files recorded since the last checkpoint (drives periodic flushing). */
+  private recordedSinceCheckpoint = 0
+  /**
+   * Single-writer lock serializing every branch-ref update (periodic
+   * checkpoints + the final squash). Exactly one ref update is ever in flight,
+   * so they cannot race into the 422 the per-file commits used to.
+   */
+  private refLock: Promise<void> = Promise.resolve()
 
   constructor(private branch: string) {}
 
-  /** Snapshot the base commit the squash will build on top of. */
+  /** Snapshot the base commit the checkpoints/squash build on top of. */
   async init(): Promise<void> {
     const refRes = await fetchWithRetry(
       `${this.baseUrl}/git/ref/heads/${this.branch}`,
@@ -56,6 +74,46 @@ export class SharedCommitter {
     }
     const refData: { object: { sha: string } } = await refRes.json()
     this.originalBaseSha = refData.object.sha
+
+    const commitRes = await fetchWithRetry(
+      `${this.baseUrl}/git/commits/${this.originalBaseSha}`,
+      { headers: gitHubBearerHeaders }
+    )
+    if (!commitRes.ok) {
+      const body = await commitRes.text().catch(() => "")
+      throw new Error(
+        `SharedCommitter init commit (${commitRes.status}): ${body}`
+      )
+    }
+    const commitData: { tree: { sha: string } } = await commitRes.json()
+    this.baseTreeSha = commitData.tree.sha
+  }
+
+  /**
+   * Flush everything recorded so far to the branch, serialized and non-fatal.
+   * This is just the squash run mid-stream: it rebuilds one commit per language
+   * from base and force-updates the ref, so costly LLM output survives a crash
+   * instead of waiting for the end-of-run squash. Granularity is per-file (via
+   * CHECKPOINT_EVERY), not per-language, so a large job can't lose a whole
+   * language's work. Fire-and-forget; failures are logged, never fatal -- the
+   * final squashByLanguage() re-commits everything regardless.
+   */
+  checkpoint(): Promise<void> {
+    this.refLock = this.refLock.then(async () => {
+      try {
+        await this._squashNow("Checkpoint")
+      } catch (err) {
+        console.warn(
+          `[SharedCommitter] Checkpoint failed (non-fatal): ${err instanceof Error ? err.message : String(err)}`
+        )
+      }
+    })
+    return this.refLock
+  }
+
+  /** Await any in-flight checkpoint. */
+  async flushCheckpoints(): Promise<void> {
+    await this.refLock
   }
 
   /**
@@ -102,36 +160,46 @@ export class SharedCommitter {
     this.blobsByLanguage.get(language)!.push(item)
 
     debugLog(`SharedCommitter [${language}]: recorded ${filePath}`)
+
+    // Periodically flush to the branch for crash safety. Fire-and-forget: the
+    // checkpoint is serialized through refLock and awaited before the final
+    // squash. Reset the counter now (not on completion) so we don't queue a
+    // burst of redundant checkpoints while one is in flight.
+    if (++this.recordedSinceCheckpoint >= CHECKPOINT_EVERY) {
+      this.recordedSinceCheckpoint = 0
+      void this.checkpoint()
+    }
   }
 
   /**
-   * Squash all individual commits into one per language.
-   * Builds a new commit chain from the original base:
-   *   base -> lang1 (all files) -> lang2 (all files) -> ...
-   * Then force-updates the branch ref.
+   * Final consolidation: one commit per language from the recorded blobs,
+   * force-updating the branch ref once. Idempotent with the periodic
+   * checkpoints (both rebuild from base), so the end state is the same however
+   * many checkpoints ran. Called after the task pool drains.
    */
   async squashByLanguage(): Promise<void> {
+    // Wait for any in-flight checkpoint so it can't race this final ref update.
+    await this.flushCheckpoints()
+    await this._squashNow("Squash")
+  }
+
+  /**
+   * Rebuild one commit per language from blobsByLanguage on top of the base and
+   * force-update the ref. Used for both periodic checkpoints and the final
+   * squash. Reads blobsByLanguage as it goes; concurrent commitFile() appends
+   * are picked up by a later checkpoint (or the final squash), never lost.
+   */
+  private async _squashNow(label: string): Promise<void> {
     const languages = Array.from(this.blobsByLanguage.keys()).sort()
     if (languages.length === 0) return
 
     console.log(
-      `[SharedCommitter] Squashing ${languages.length} language(s): ${languages.join(", ")}`
+      `[SharedCommitter] ${label}: ${languages.length} language(s): ${languages.join(", ")}`
     )
 
     let parentSha = this.originalBaseSha
-    // Get the original base tree
-    const baseCommitRes = await fetchWithRetry(
-      `${this.baseUrl}/git/commits/${this.originalBaseSha}`,
-      { headers: gitHubBearerHeaders }
-    )
-    if (!baseCommitRes.ok) {
-      const body = await baseCommitRes.text().catch(() => "")
-      throw new Error(
-        `Failed to get base commit for squash (${baseCommitRes.status}): ${body}`
-      )
-    }
-    const baseCommitData: { tree: { sha: string } } = await baseCommitRes.json()
-    let currentTree = baseCommitData.tree.sha
+    // Base tree was captured in init().
+    let currentTree = this.baseTreeSha
 
     for (const lang of languages) {
       const blobs = this.blobsByLanguage.get(lang)!
@@ -196,7 +264,7 @@ export class SharedCommitter {
     }
 
     console.log(
-      `[SharedCommitter] Squash complete: ${languages.length} commits`
+      `[SharedCommitter] ${label} complete: ${languages.length} commits`
     )
   }
 
