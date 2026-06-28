@@ -52,24 +52,123 @@ type PlaceholderData = Record<Path, Placeholder>
  */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
 
-// Video clips authored as `![](./x.mp4)` are standardized to fixed aspect
-// ratios at authoring time, so the pipeline doesn't measure them — orientation
-// is chosen by the renderer from a `-portrait` filename suffix. We only need to
-// recognize video here to skip image-only steps (dimension probing, blur
-// placeholders).
+// Video clips are authored as `![](./x.mp4)`. Orientation is chosen by the
+// renderer from a `-portrait` filename suffix; for ISO-BMFF containers we also
+// probe intrinsic dimensions (below) so the rendered element can reserve layout
+// space and avoid CLS, and so we can skip image-only steps (blur placeholders).
 const VIDEO_EXTENSIONS = [".mp4", ".webm", ".mov"]
 
-const getImageSize = (src: string, dir: string) => {
-  if (absolutePathRegex.exec(src)) {
-    return
-  }
+// Subset of `VIDEO_EXTENSIONS` that `getVideoSize` can parse (ISO base media
+// file format). `.webm` is Matroska/EBML — recognized as video for rendering,
+// but not probed here (falls back to intrinsic CSS sizing).
+const ISO_BMFF_EXTENSIONS = [".mp4", ".mov"]
+
+// Guard against OOM if an oversized clip is ever committed: skip probing files
+// larger than this (short UI clips are well under 1 MB).
+const MAX_PROBE_BYTES = 64 * 1024 * 1024
+
+// Memoize probed dimensions per build: the same clip is compiled across every
+// locale and twice per page (content + metadata). Keyed by path + size + mtime
+// so edits in `next dev` aren't served stale.
+const videoSizeCache = new Map<
+  string,
+  { width: number; height: number } | undefined
+>()
+
+// Resolve a markdown src against the page's source dir, mirroring `getImageSize`.
+// Returns undefined for remote (`http(s)://`, `//`) sources.
+const resolveLocalPath = (src: string, dir: string): string | undefined => {
+  if (absolutePathRegex.exec(src)) return undefined
   // Treat `/` as a relative path, according to the server
   const shouldJoin = !path.isAbsolute(src) || src.startsWith("/")
+  return dir && shouldJoin ? path.join(dir, src) : src
+}
 
-  if (dir && shouldJoin) {
-    src = path.join(dir, src)
+const getImageSize = (src: string, dir: string) => {
+  const resolved = resolveLocalPath(src, dir)
+  if (!resolved) return
+  return sizeOf(resolved)
+}
+
+// Read intrinsic pixel dimensions from an mp4/mov `tkhd` (track header) box in
+// pure JS. `image-size` can't read video, and shelling out to `ffprobe` isn't
+// safe to rely on in the build image. Walks only the `moov > trak > tkhd` path;
+// the track's display dimensions are always the final two 16.16 fixed-point
+// fields of `tkhd`. The whole file is read because `moov` may sit at the tail
+// (non-`+faststart` clips); a value within ~1px from the pixel-aspect ratio is
+// fine since it only seeds the reserved box. Does not account for a rotation
+// matrix (our clips aren't rotated). Fail-safe: returns undefined on any parse
+// issue, so the renderer falls back to intrinsic CSS sizing without breaking
+// the build.
+const getVideoSize = (
+  src: string,
+  dir: string
+): { width: number; height: number } | undefined => {
+  const resolved = resolveLocalPath(src, dir)
+  if (!resolved) return undefined
+  // Only ISO-BMFF is parseable here; webm et al. fall back to CSS sizing.
+  if (!ISO_BMFF_EXTENSIONS.includes(path.extname(resolved).toLowerCase())) {
+    return undefined
   }
-  return sizeOf(src)
+  try {
+    const { size, mtimeMs } = fs.statSync(resolved)
+    if (size > MAX_PROBE_BYTES) return undefined
+    const cacheKey = `${resolved}:${size}:${mtimeMs}`
+    if (videoSizeCache.has(cacheKey)) return videoSizeCache.get(cacheKey)
+
+    const result = parseIsoBmffSize(fs.readFileSync(resolved))
+    videoSizeCache.set(cacheKey, result)
+    return result
+  } catch {
+    return undefined
+  }
+}
+
+// Parse the first visual track's dimensions from an ISO-BMFF buffer; see
+// `getVideoSize` for the contract. Throws are caught by the caller.
+const parseIsoBmffSize = (
+  buf: Buffer
+): { width: number; height: number } | undefined => {
+  // Find the first child box of `type` within [start, end); returns its
+  // payload range [contentStart, boxEnd], or undefined.
+  const findBox = (
+    start: number,
+    end: number,
+    type: string
+  ): [number, number] | undefined => {
+    let offset = start
+    while (offset + 8 <= end) {
+      let size = buf.readUInt32BE(offset)
+      const boxType = buf.toString("ascii", offset + 4, offset + 8)
+      // size === 1 means a 64-bit largesize follows; our clips never need it.
+      if (size === 1) return undefined
+      if (size === 0) size = end - offset // extends to container end
+      if (size < 8 || offset + size > end) return undefined
+      if (boxType === type) return [offset + 8, offset + size]
+      offset += size
+    }
+    return undefined
+  }
+
+  const moov = findBox(0, buf.length, "moov")
+  if (!moov) return undefined
+
+  let cursor = moov[0]
+  while (cursor < moov[1]) {
+    const trak = findBox(cursor, moov[1], "trak")
+    if (!trak) break
+    const tkhd = findBox(trak[0], trak[1], "tkhd")
+    if (tkhd) {
+      const width = buf.readUInt32BE(tkhd[1] - 8) / 65536
+      const height = buf.readUInt32BE(tkhd[1] - 4) / 65536
+      // Skip non-visual tracks (audio tkhd carries 0x0).
+      if (width > 0 && height > 0) {
+        return { width: Math.round(width), height: Math.round(height) }
+      }
+    }
+    cursor = trak[1]
+  }
+  return undefined
 }
 
 /**
@@ -173,9 +272,11 @@ const rehypeImg = (options: Options) => {
         const ext = path.extname(src).toLowerCase()
         const isVideo = VIDEO_EXTENSIONS.includes(ext)
 
-        // Videos are sized by the renderer (fixed aspect ratio), so they're not
-        // probed here; they still flow through for src rewriting.
-        const dimensions = isVideo ? undefined : getImageSize(src, dir)
+        // `image-size` can't read video, so use the mp4 `tkhd` reader for clips.
+        // Both yield intrinsic width/height the renderer uses to reserve space.
+        const dimensions = isVideo
+          ? getVideoSize(src, dir)
+          : getImageSize(src, dir)
 
         // Skip non-video files that have no detectable dimensions
         if (!dimensions && !isVideo) {

@@ -10,9 +10,12 @@ import { toPosixPath } from "@/lib/utils/relativePath"
 import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
 
 interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {
-  width: string
-  height: string
-  aspectRatio: string
+  // Optional: `rehypeImg` omits these when dimensions can't be probed (e.g. a
+  // video whose container it can't read), in which case the renderer falls back
+  // to intrinsic sizing.
+  width?: string
+  height?: string
+  aspectRatio?: string
 }
 
 const MarkdownImage = ({
@@ -23,9 +26,9 @@ const MarkdownImage = ({
   src,
   ...rest
 }: MarkdownImageProps) => {
-  const imageAspectRatio = parseFloat(aspectRatio)
-  let imageWidth = parseFloat(width)
-  let imageHeight = parseFloat(height)
+  const imageAspectRatio = parseFloat(aspectRatio ?? "")
+  let imageWidth = parseFloat(width ?? "")
+  let imageHeight = parseFloat(height ?? "")
 
   // Ensure that src path has forward slashes only, to avoid issues with Windows filepaths
   const transformedSrc = toPosixPath(src.toString())
@@ -46,8 +49,18 @@ const MarkdownImage = ({
     const orientation = /-portrait\.[^.]+$/.test(transformedSrc)
       ? "portrait"
       : "landscape"
+    // Intrinsic dimensions (probed in `rehypeImg`) let the video reserve layout
+    // space and avoid CLS; absent (probe failed), it sizes intrinsically.
+    const hasDimensions =
+      Number.isFinite(imageWidth) && Number.isFinite(imageHeight)
     return (
-      <MarkdownVideo src={transformedSrc} alt={alt} orientation={orientation} />
+      <MarkdownVideo
+        src={transformedSrc}
+        alt={alt}
+        orientation={orientation}
+        width={hasDimensions ? imageWidth : undefined}
+        height={hasDimensions ? imageHeight : undefined}
+      />
     )
   }
 
