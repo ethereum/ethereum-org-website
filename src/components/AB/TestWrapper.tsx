@@ -2,6 +2,7 @@ import { getLocale } from "next-intl/server"
 import type { ReactNode } from "react"
 
 import { IS_PREVIEW_DEPLOY, IS_PROD } from "@/lib/utils/env"
+import { logger } from "@/lib/utils/logger"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -78,12 +79,10 @@ const ABTestWrapper = async ({
     )
   } catch (error) {
     // If AB testing fails, render original variant
-    if (process.env.NODE_ENV === "development") {
-      console.warn(
-        `[AB Test] ${testKey}: Error occurred, falling back to original variant`,
-        error
-      )
-    }
+    logger.warn("[AB Test] Error occurred, falling back to original variant", {
+      testKey,
+      error,
+    })
     return <>{fallback || variants[0]}</>
   }
 }

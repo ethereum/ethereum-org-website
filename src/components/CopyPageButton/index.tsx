@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 import { cn } from "@/lib/utils/cn"
+import { logger } from "@/lib/utils/logger"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
@@ -72,20 +73,20 @@ const CopyPageMenuItem = ({
       className="group flex items-start gap-3 px-3 py-2.5 no-underline hover:no-underline"
     >
       <span
-        className="mt-0.5 flex size-5 shrink-0 items-center justify-center text-body"
+        className="text-body mt-0.5 flex size-5 shrink-0 items-center justify-center"
         aria-hidden="true"
       >
         {icon}
       </span>
       <span className="flex min-w-0 flex-1 flex-col gap-0.5">
-        <span className="flex items-center justify-between gap-2 text-sm leading-tight font-semibold text-body">
+        <span className="text-body flex items-center justify-between gap-2 text-sm font-semibold leading-tight">
           <span className="truncate">{title}</span>
           <ArrowUpRight
-            className="size-3.5 shrink-0 text-body-medium transition group-hover:text-primary-hover"
+            className="text-body-medium group-hover:text-primary-hover size-3.5 shrink-0 transition"
             aria-hidden="true"
           />
         </span>
-        <span className="text-xs leading-snug text-body-medium">
+        <span className="text-body-medium text-xs leading-snug">
           {description}
         </span>
       </span>
@@ -133,7 +134,7 @@ const CopyPageButton = ({
       const text = await res.text()
       await onCopy(text)
     } catch (error) {
-      console.error("Failed to copy page markdown:", error)
+      logger.error("Failed to copy page markdown", error, { mdPath })
     } finally {
       clearTimeout(showLoadingTimer)
       if (loadingShownAt !== null) {

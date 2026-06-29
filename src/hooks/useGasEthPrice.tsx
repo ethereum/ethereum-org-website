@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 
+import { logger } from "@/lib/utils/logger"
+
 type GasEthPriceData = {
   ethPrice: number
   gasPrice: number
@@ -28,7 +30,7 @@ export const useGasEthPrice = (): GasEthPriceData => {
           ethPercentChange24h: json.ethPercentChange24h,
         })
       } catch (error) {
-        console.error(error)
+        logger.error("Failed to fetch gas/ETH price", error)
       }
     })()
   }, [])

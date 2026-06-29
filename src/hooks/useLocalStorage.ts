@@ -6,6 +6,8 @@ import {
   useState,
 } from "react"
 
+import { logger } from "@/lib/utils/logger"
+
 import { useEventCallback } from "./useEventCallback"
 import { useEventListener } from "./useEventListener"
 
@@ -35,7 +37,7 @@ export function useLocalStorage<T>(
       const item = window.localStorage.getItem(key)
       return item ? (parseJSON(item) as T) : initialValue
     } catch (error) {
-      console.warn(`Error reading localStorage key “${key}”:`, error)
+      logger.warn("Error reading localStorage key", { key, error })
       return initialValue
     }
   }, [initialValue, key])
@@ -49,9 +51,7 @@ export function useLocalStorage<T>(
   const setValue: SetValue<T> = useEventCallback((value) => {
     // Prevent build error "window is undefined" but keeps working
     if (typeof window === "undefined") {
-      console.warn(
-        `Tried setting localStorage key “${key}” even though environment is not a client`
-      )
+      logger.warn("Tried setting localStorage outside the client", { key })
     }
 
     try {
@@ -67,7 +67,7 @@ export function useLocalStorage<T>(
       // We dispatch a custom event so every useLocalStorage hook are notified
       window.dispatchEvent(new Event("local-storage"))
     } catch (error) {
-      console.warn(`Error setting localStorage key “${key}”:`, error)
+      logger.warn("Error setting localStorage key", { key, error })
     }
   })
 

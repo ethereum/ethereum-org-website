@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 
 import { IS_PROD } from "@/lib/utils/env"
+import { logger } from "@/lib/utils/logger"
 
 import type { ABTestConfig, MatomoExperiment } from "@/lib/ab-testing/types"
 
@@ -65,10 +66,9 @@ export async function GET() {
     const data = await response.json()
 
     if (data.result === "error" || !Array.isArray(data)) {
-      console.error(
-        "[AB Config] Matomo API error:",
-        data.message || "Invalid response"
-      )
+      logger.error("[AB Config] Matomo API error", undefined, {
+        message: data.message || "Invalid response",
+      })
       return NextResponse.json(
         {},
         {
@@ -117,7 +117,7 @@ export async function GET() {
       },
     })
   } catch (error) {
-    console.error("[AB Config] Failed to fetch AB test configuration:", error)
+    logger.error("[AB Config] Failed to fetch AB test configuration", error)
 
     return NextResponse.json(
       {},
