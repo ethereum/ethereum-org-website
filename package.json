@@ -21,7 +21,7 @@
     "chromatic:pages": "chromatic --playwright --zip --exit-zero-on-changes",
     "lint:md": "markdownlint-cli2 \"public/content/**/*.md\" \"!public/content/translations/**\"",
     "lint:md:fix": "markdownlint-cli2 --fix \"public/content/**/*.md\" \"!public/content/translations/**\"",
-    "update-tutorials": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/update-tutorials-list.ts",
+    "update-tutorials": "ts-node --project tsconfig.scripts.json src/scripts/update-tutorials-list.ts",
     "prepare": "husky",
     "test": "pnpm test:unit && pnpm test:e2e",
     "test:unit": "USE_MOCK_DATA=true playwright test --project=unit",
