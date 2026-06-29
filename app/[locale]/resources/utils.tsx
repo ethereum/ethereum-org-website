@@ -177,7 +177,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-eth-asset-title"),
-      // TODO: Add RadialChart metric
       items: [
         {
           title: "Etherealize Dashboard",
@@ -201,7 +200,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-gas-title"),
-      // TODO: Add metric
       items: [
         {
           title: "Etherscan Gas",
@@ -234,7 +232,6 @@ export const getResources = async ({
   const usingBoxes: DashboardBox[] = [
     {
       title: t("page-resources-defi-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "DeFi Llama",
@@ -258,7 +255,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-stablecoins-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "stablecoins.wtf",
@@ -285,7 +281,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-nft-title"),
-      // TODO: Add bar chart metric
       items: [
         {
           title: "Etherscan - Top NFT",
@@ -424,7 +419,6 @@ export const getResources = async ({
   const resilienceBoxes: DashboardBox[] = [
     {
       title: t("page-resources-nodes-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "Node Watch",
@@ -518,7 +512,6 @@ export const getResources = async ({
   const privacySecurityBoxes: DashboardBox[] = [
     {
       title: t("page-resources-relays-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "Beaconchain Relays",
@@ -543,7 +536,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-mev-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "MEV-Boost Dashboard",
