@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp } from "lucide-react"
 import type { ChainName, Wallet } from "@/lib/types"
 
 import ChainImages from "@/components/ChainImages"
-import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
+import { DevicesIcon, FeeIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 
@@ -104,6 +104,13 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
               )}
             </p>
           </div>
+
+          {wallet.fee_summary && (
+            <div className="col-span-2 flex flex-row gap-2 lg:col-span-1 lg:col-start-2">
+              <FeeIcon className="size-6" />
+              <p className="text-md">{wallet.fee_summary}</p>
+            </div>
+          )}
         </div>
 
         <span className="text-primary">
