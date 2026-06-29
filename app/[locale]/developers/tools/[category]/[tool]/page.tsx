@@ -17,14 +17,19 @@ import {
 import { Section } from "@/components/ui/section"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
-import { normalizeDeveloperToolsData } from "@/lib/utils/developerToolsData"
+import {
+  buildSubcategoryIndex,
+  buildToolLabels,
+  findTool,
+  getRelatedTools,
+  getToolKey,
+  normalizeDeveloperToolsData,
+  withCategories,
+} from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
-import { slugify } from "@/lib/utils/url"
 
 import ToolCard from "../../_components/ToolCard"
 import ToolLinks from "../../_components/ToolLinks"
-import { getToolDetailData } from "../../page-data"
-import { getCategoryTagStyle, getToolKey } from "../../utils"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
@@ -37,21 +42,24 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const { locale, category, tool: toolKey } = await props.params
   setRequestLocale(locale)
 
-  const [detail, t, tCommon] = await Promise.all([
-    getToolDetailData(locale, category, toolKey),
+  const [data, t, tCommon] = await Promise.all([
+    getDeveloperToolsData(),
     getTranslations({ locale, namespace: "page-developers-tools" }),
     getTranslations({ locale, namespace: "common" }),
   ])
-  if (!detail) notFound()
 
-  const {
-    tool,
-    relatedTools,
-    categoryLabels,
-    subcategoryLabels,
-    tagLabels,
-    labels,
-  } = detail
+  const normalized = normalizeDeveloperToolsData(data)
+  if (!normalized) notFound()
+
+  const allTools = withCategories(normalized)
+  const tool = findTool(allTools, category, toolKey)
+  if (!tool) notFound()
+
+  const relatedTools = getRelatedTools(allTools, tool)
+  const { categoryLabels, subcategoryLabels, tagLabels } = buildToolLabels(
+    t,
+    normalized.taxonomy
+  )
 
   return (
     <>
@@ -122,7 +130,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
                 <div>
-                  <Tag status={getCategoryTagStyle(tool.categoryId)}>
+                  <Tag status="tag">
                     {categoryLabels[tool.categoryId] || tool.categoryId}
                   </Tag>
                 </div>
@@ -140,7 +148,10 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
               <ToolLinks
                 locale={locale}
                 tool={tool}
-                labels={{ website: labels.website, social: labels.social }}
+                labels={{
+                  website: t("page-developers-tools-modal-website"),
+                  social: t("page-developers-tools-modal-social"),
+                }}
               />
             </div>
           </div>
@@ -179,18 +190,13 @@ export async function generateStaticParams({
   const data = normalizeDeveloperToolsData(await getDeveloperToolsData())
   if (!data) return []
 
-  const subcategoryToCategory = new Map<string, string>()
-  for (const category of data.taxonomy.categories.definitions) {
-    for (const subcategory of category.subcategories) {
-      subcategoryToCategory.set(subcategory.id, category.id)
-    }
-  }
+  const subcategoryToCategory = buildSubcategoryIndex(data.taxonomy)
 
   return data.resources
     .filter(
       (r) => subcategoryToCategory.get(r.subcategory_id) === params.category
     )
-    .map((r) => ({ tool: slugify(r.name) }))
+    .map((r) => ({ tool: getToolKey(r) }))
 }
 
 export async function generateMetadata(props: {
@@ -198,14 +204,16 @@ export async function generateMetadata(props: {
 }) {
   const { locale, category, tool: toolKey } = await props.params
 
-  const detail = await getToolDetailData(locale, category, toolKey)
-  if (!detail) return {}
+  const normalized = normalizeDeveloperToolsData(await getDeveloperToolsData())
+  const tool =
+    normalized && findTool(withCategories(normalized), category, toolKey)
+  if (!tool) return {}
 
   return await getMetadata({
     locale,
     slug: ["developers", "tools", category, toolKey],
-    title: detail.tool.name,
-    description: detail.tool.description.slice(0, 160),
+    title: tool.name,
+    description: tool.description.slice(0, 160),
   })
 }
 

@@ -1,14 +1,22 @@
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import { PageHero } from "@/components/Hero"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import {
+  buildToolLabels,
+  countToolsByCategory,
+  normalizeDeveloperToolsData,
+  withCategories,
+} from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import ToolsPageBody from "./_components/ToolsPageBody"
-import { getToolsPageData } from "./page-data"
 import DevelopersToolsJsonLD from "./page-jsonld"
+
+import { getDeveloperToolsData } from "@/lib/data"
 
 // Re-render statically generated page daily to pick up tools data updates
 // (no `searchParams` read here — that would opt the page into dynamic
@@ -19,19 +27,23 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
 
   setRequestLocale(locale)
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
 
-  const {
-    categories,
-    allTools,
-    countByCategory,
-    categoryLabels,
-    subcategoryLabels,
-    contributors,
-  } = await getToolsPageData(locale)
+  const [data, { contributors }, t] = await Promise.all([
+    getDeveloperToolsData(),
+    getAppPageContributorInfo("developers/tools", locale as Lang),
+    getTranslations({ locale, namespace: "page-developers-tools" }),
+  ])
+
+  const normalized = normalizeDeveloperToolsData(data)
+  if (!normalized) throw Error("No developer tools data available")
+
+  const categories = normalized.taxonomy.categories.definitions
+  const allTools = withCategories(normalized)
+  const countByCategory = countToolsByCategory(allTools)
+  const { categoryLabels, subcategoryLabels } = buildToolLabels(
+    t,
+    normalized.taxonomy
+  )
 
   return (
     <>

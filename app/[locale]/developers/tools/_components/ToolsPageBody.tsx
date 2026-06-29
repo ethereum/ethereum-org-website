@@ -8,7 +8,7 @@ import { Section } from "@/components/ui/section"
 import type {
   DeveloperToolsCategory,
   DeveloperToolWithCategory,
-} from "../types"
+} from "@/lib/utils/developerToolsData"
 
 import ToolsCatalog from "./ToolsCatalog"
 

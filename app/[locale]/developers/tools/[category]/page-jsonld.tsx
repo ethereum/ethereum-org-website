@@ -4,9 +4,8 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import type { DeveloperTool } from "@/lib/utils/developerToolsData"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
-
-import type { DeveloperTool } from "../types"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"

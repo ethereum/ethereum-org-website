@@ -1,13 +1,20 @@
 import { notFound } from "next/navigation"
+import { getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
-import { getToolDetailData } from "../page-data"
-import { getCategoryTagStyle } from "../utils"
+import {
+  buildToolLabels,
+  findTool,
+  normalizeDeveloperToolsData,
+  withCategories,
+} from "@/lib/utils/developerToolsData"
 
 import ToolDetailModal from "./ToolDetailModal"
 import ToolLinks from "./ToolLinks"
+
+import { getDeveloperToolsData } from "@/lib/data"
 
 /**
  * Shared body for the intercepting modal slots (index-level and category-level):
@@ -23,10 +30,21 @@ const InterceptedToolDetail = async ({
   category: string
   toolKey: string
 }) => {
-  const detail = await getToolDetailData(locale, category, toolKey)
-  if (!detail) notFound()
+  const [data, t] = await Promise.all([
+    getDeveloperToolsData(),
+    getTranslations({ locale, namespace: "page-developers-tools" }),
+  ])
 
-  const { tool, categoryLabels, subcategoryLabels, tagLabels, labels } = detail
+  const normalized = normalizeDeveloperToolsData(data)
+  if (!normalized) notFound()
+
+  const tool = findTool(withCategories(normalized), category, toolKey)
+  if (!tool) notFound()
+
+  const { categoryLabels, subcategoryLabels, tagLabels } = buildToolLabels(
+    t,
+    normalized.taxonomy
+  )
 
   return (
     <ToolDetailModal title={tool.name}>
@@ -44,7 +62,7 @@ const InterceptedToolDetail = async ({
         )}
         <div className="flex flex-col gap-4 p-4 sm:p-8">
           <div className="space-y-1">
-            <Tag size="small" status={getCategoryTagStyle(tool.categoryId)}>
+            <Tag size="small" status="tag">
               {categoryLabels[tool.categoryId] || tool.categoryId}
             </Tag>
             <p className="text-sm text-body-medium">
@@ -59,11 +77,14 @@ const InterceptedToolDetail = async ({
           </div>
           <p className="whitespace-pre-line">{tool.description}</p>
           <div className="flex flex-col gap-2">
-            <p>{labels.links}</p>
+            <p>{t("page-developers-tools-modal-links")}</p>
             <ToolLinks
               locale={locale}
               tool={tool}
-              labels={{ website: labels.website, social: labels.social }}
+              labels={{
+                website: t("page-developers-tools-modal-website"),
+                social: t("page-developers-tools-modal-social"),
+              }}
             />
           </div>
         </div>

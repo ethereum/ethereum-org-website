@@ -4,10 +4,9 @@ import GitHub from "@/components/icons/github.svg"
 import NpmJs from "@/components/icons/npmjs.svg"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
+import type { DeveloperToolWithCategory } from "@/lib/utils/developerToolsData"
 import { numberFormat } from "@/lib/utils/numbers"
 import { isExternal } from "@/lib/utils/url"
-
-import type { DeveloperToolWithCategory } from "../types"
 
 export type ToolLinksLabels = {
   website: string

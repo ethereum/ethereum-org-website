@@ -3,8 +3,10 @@ import { AppWindowMac } from "lucide-react"
 
 import AppCard from "@/components/AppCard"
 
-import type { DeveloperToolWithCategory } from "../types"
-import { getToolKey } from "../utils"
+import {
+  type DeveloperToolWithCategory,
+  getToolKey,
+} from "@/lib/utils/developerToolsData"
 
 /**
  * Catalog card for a single tool. Shared by the catalog grid and the

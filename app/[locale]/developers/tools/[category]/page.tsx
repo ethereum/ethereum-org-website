@@ -1,13 +1,20 @@
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
+import type { Lang } from "@/lib/types"
+
 import { PageHero } from "@/components/Hero"
 
-import { normalizeDeveloperToolsData } from "@/lib/utils/developerToolsData"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import {
+  buildToolLabels,
+  countToolsByCategory,
+  normalizeDeveloperToolsData,
+  withCategories,
+} from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import ToolsPageBody from "../_components/ToolsPageBody"
-import { getToolsPageData } from "../page-data"
 
 import DevelopersToolsCategoryJsonLD from "./page-jsonld"
 
@@ -27,14 +34,22 @@ const Page = async (props: {
 
   setRequestLocale(locale)
 
-  const {
-    categories,
-    allTools,
-    countByCategory,
-    categoryLabels,
-    subcategoryLabels,
-    contributors,
-  } = await getToolsPageData(locale)
+  const [data, { contributors }, t] = await Promise.all([
+    getDeveloperToolsData(),
+    getAppPageContributorInfo("developers/tools", locale as Lang),
+    getTranslations({ locale, namespace: "page-developers-tools" }),
+  ])
+
+  const normalized = normalizeDeveloperToolsData(data)
+  if (!normalized) throw Error("No developer tools data available")
+
+  const categories = normalized.taxonomy.categories.definitions
+  const allTools = withCategories(normalized)
+  const countByCategory = countToolsByCategory(allTools)
+  const { categoryLabels, subcategoryLabels } = buildToolLabels(
+    t,
+    normalized.taxonomy
+  )
 
   const currentCategory = categories.find(({ id }) => id === category)
   if (!currentCategory) notFound()
