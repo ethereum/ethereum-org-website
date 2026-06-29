@@ -2,13 +2,13 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang, Params } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
 import CardList, { type CardProps } from "@/components/CardList"
 import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FileContributors from "@/components/FileContributors"
+import { PageHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
@@ -220,47 +220,47 @@ export default async function Page(props: { params: Promise<Params> }) {
         Fusaka vulnerabilities are now part of the Bug Bounty Program!
       </Alert> */}
 
-      <div className="flex justify-between gap-space-3x px-page py-hero *:flex-1 max-lg:flex-col lg:pt-hero-2x">
-        <div className="max-w-3xl">
-          <Breadcrumbs slug="bug-bounty" className="mb-space-2x" />
-          <div className="mb-space flex items-center gap-2">
+      <PageHero
+        breadcrumbs={{ slug: "bug-bounty" }}
+        eyebrow={
+          <div className="flex items-center gap-2">
             <div className="size-2 rounded-full bg-success" />
             <p className="text-sm uppercase">
               {t("page-upgrades-bug-bounty-title")}
             </p>
           </div>
-          <div
-            className="mb-space overflow-auto bg-linear-to-r from-body via-primary to-accent-b bg-clip-text"
-            style={{
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
+        }
+        heroComponent={
+          <VStack className="mx-auto w-full max-w-2xl">
+            <Leaderboard content={allBounterHunters.slice(0, 5)} />
+            <ButtonLink variant="outline" href="#leaderboard">
+              {t("page-upgrades-bug-bounty-leaderboard")}
+            </ButtonLink>
+          </VStack>
+        }
+        title={
+          <>
+            {t("page-upgrades-bug-bounty-slogan")}&nbsp;
+            <Emoji text=":bug:" />
+          </>
+        }
+        description={t("page-upgrades-bug-bounty-subtitle")}
+        buttons={[
+          <ButtonLink key="submit" href="https://bbp-form.ethereum.org/">
+            {t("page-upgrades-bug-bounty-submit")}
+          </ButtonLink>,
+          <ButtonLink
+            key="rules"
+            variant="outline"
+            href="#in-scope"
+            isSecondary
           >
-            <h1>
-              {t("page-upgrades-bug-bounty-slogan")}&nbsp;
-              <Emoji text=":bug:" />
-            </h1>
-          </div>
-          <p className="mb-space-3x max-w-lg text-body-medium">
-            {t("page-upgrades-bug-bounty-subtitle")}
-          </p>
-          <div className="flex flex-col gap-4 md:flex-row">
-            <ButtonLink href="https://bbp-form.ethereum.org/">
-              {t("page-upgrades-bug-bounty-submit")}
-            </ButtonLink>
-            <ButtonLink variant="outline" href="#in-scope" isSecondary>
-              {t("page-upgrades-bug-bounty-rules")}
-            </ButtonLink>
-          </div>
-        </div>
-
-        <VStack className="mx-auto w-full max-w-2xl">
-          <Leaderboard content={allBounterHunters.slice(0, 5)} />
-          <ButtonLink variant="outline" href="#leaderboard">
-            {t("page-upgrades-bug-bounty-leaderboard")}
-          </ButtonLink>
-        </VStack>
-      </div>
+            {t("page-upgrades-bug-bounty-rules")}
+          </ButtonLink>,
+        ]}
+        variant="no-divider"
+        className="**:[h1]:bg-linear-to-r **:[h1]:from-body **:[h1]:via-primary **:[h1]:to-accent-b **:[h1]:bg-clip-text **:[h1]:pb-1 **:[h1]:text-transparent"
+      />
 
       <MainArticle className="flow *:px-page! **:[:is(p,ul,ol)]:max-w-3xl">
         <Section id="clients">

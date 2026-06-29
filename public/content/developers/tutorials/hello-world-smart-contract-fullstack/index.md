@@ -63,7 +63,7 @@ _Note: due to network congestion, this might take a while._
 
 ### Step 5: Check your Balance {#step-5-check-your-balance}
 
-To double-check the ETH is in your wallet, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. To learn more check out [Alchemy's short tutorial on how to use the composer tool](https://youtu.be/r6sjRxBZJuU).
+To double-check the ETH is in your wallet, let’s make an [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) request using [Alchemy’s sandbox tool](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). This will return the amount of ETH in our wallet. To learn more check out [Alchemy's short tutorial on how to use the composer tool](https://youtu.be/r6sjRxBZJuU).
 
 Enter you input your MetaMask account address and click **Send Request**. You will see a response that looks like the code snippet below.
 
@@ -86,7 +86,7 @@ cd hello-world
 
 Now that we’re inside our project folder, we’ll use `npm init` to initialize the project.
 
-> If you don’t have npm installed yet, follow [these instructions to install Node.js and npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
+> If you don’t have npm installed yet, follow [the Node.js installation instructions](https://nodejs.org/en/download/) to install Node.js and npm.
 
 For the purpose of this tutorial, it doesn't matter how you answer the initialization questions. Here is how we did it for reference:
 
@@ -225,7 +225,7 @@ We’ve created a MetaMask wallet, Alchemy account, and written our smart contra
 
 Every transaction sent from your wallet requires a signature using your unique private key. To provide our program with this permission, we can safely store our private key in an environment file. We will also store an API key for Alchemy here.
 
-> To learn more about sending transactions, check out [this tutorial](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) on sending transactions using web3.
+> To learn more about sending transactions, check out [this tutorial](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) on sending transactions using web3.
 
 First, install the dotenv package in your project directory:
 
@@ -255,7 +255,7 @@ To actually connect these to our code, we’ll reference these variables in our 
 
 ### Step 12: Install Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) with more user friendly methods.
+Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](/developers/docs/apis/json-rpc/) with more user friendly methods.
 
 Hardhat allows us to integrate [plugins](https://hardhat.org/plugins/) for additional tooling and extended functionality. We’ll be taking advantage of the [Ethers plugin](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) for contract deployment.
 
@@ -373,7 +373,7 @@ To understand what’s going on under the hood, let’s navigate to the Explorer
 
 ![](./hello-world-explorer.png)
 
-Here you’ll see a handful of JSON-RPC methods that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important methods here are [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), which is the request to write our contract onto the Goerli chain, and [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), which is a request to read information about our transaction given the hash. To learn more about sending transactions, check out [our tutorial on sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Here you’ll see a handful of JSON-RPC methods that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important methods here are [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), which is the request to write our contract onto the Goerli chain, and [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), which is a request to read information about our transaction given the hash. To learn more about sending transactions, check out [our tutorial on sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 ## Part 2: Interact with your Smart Contract {#part-2-interact-with-your-smart-contract}
 
@@ -571,7 +571,7 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-While running that script, you may notice that the `Updating the message...` step takes a while to load before the new message loads. That is due to the mining process; if you are curious about tracking transactions while they are being mined, visit the [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of a transaction. If the transaction is dropped, it's also helpful to check [Goerli Etherscan](https://goerli.etherscan.io) and search for your transaction hash.
+While running that script, you may notice that the `Updating the message...` step takes a while to load before the new message loads. That is due to the mining process; if you are curious about tracking transactions while they are being mined, visit the [Alchemy mempool](https://dashboard.alchemy.com/mempool) to see the status of a transaction. If the transaction is dropped, it's also helpful to check [Goerli Etherscan](https://goerli.etherscan.io) and search for your transaction hash.
 
 ## Part 3: Publish your Smart Contract to Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -679,7 +679,7 @@ When you navigate to the link provided in your terminal, you should be able to s
 By the end of this tutorial, you'll know how to:
 
 - Connect a MetaMask wallet to your dapp
-- Read data from your smart contract using the [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API
+- Read data from your smart contract using the [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API
 - Sign Ethereum transactions using MetaMask
 
 For this dapp, we'll be using [React](https://react.dev/) as our frontend framework; however, it's important to note that we won't be spending much time breaking down its fundamentals, as we'll mostly be focusing on bringing Web3 functionality to our project.
@@ -900,7 +900,7 @@ This may sounds like a lot of steps, but don't worry! We'll walk you through how
 
 #### Establish an API connection to the Ethereum chain {#establish-an-api-connection-to-the-ethereum-chain}
 
-So remember how in Part 2 of this tutorial, we used our [Alchemy Web3 key to read from our smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? You'll also need an Alchemy Web3 key in your dapp to read from the chain.
+So remember how in Part 2 of this tutorial, we used our Alchemy Web3 key to read from our smart contract? You'll also need an Alchemy Web3 key in your dapp to read from the chain.
 
 If you don't have it already, first install [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) by navigating to the root directory of your `starter-files` and running the following in your terminal:
 
@@ -1032,7 +1032,7 @@ Now speaking of that listener...
 
 #### Implement `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-If you think back to the `HelloWorld.sol` file we wrote in [Part 1 of this tutorial series](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), you'll recall that there is a smart contract event called `UpdatedMessages` that is emitted after our smart contract's `update` function is invoked \(see lines 9 and 27\):
+If you think back to the `HelloWorld.sol` file we wrote in [Part 1 of this tutorial series](#step-10-write-our-contract), you'll recall that there is a smart contract event called `UpdatedMessages` that is emitted after our smart contract's `update` function is invoked \(see lines 9 and 27\):
 
 ```javascript
 // HelloWorld.sol
@@ -1129,7 +1129,7 @@ To sign a transaction on the Ethereum blockchain, we’ll need some fake Eth. To
 
 #### Check your Balance {#check-your-balance}
 
-To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
+To double check our balance is there, let’s make an [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) request using [Alchemy’s sandbox tool](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). This will return the amount of Eth in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
@@ -1537,7 +1537,7 @@ Go ahead and test out the **Update** button!
 Wooooo, you made it to the end of the tutorial! To recap, you learned how to:
 
 - Connect a MetaMask wallet to your dapp project
-- Read data from your smart contract using the [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API
+- Read data from your smart contract using the [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API
 - Sign Ethereum transactions using MetaMask
 
 Now you're fully equipped to apply the skills from this tutorial to build out your own custom dapp project! As always, if you have any questions, don't hesitate to reach out to us for help in the [Alchemy Discord](https://discord.gg/gWuC7zB). 🧙‍♂️
