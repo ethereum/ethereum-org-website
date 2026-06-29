@@ -1321,8 +1321,16 @@ export async function callGeminiRaw(
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
       const startTime = Date.now()
 
+      // Temperature 0 gives the best, deterministic translation on the first
+      // attempt. But RECITATION (Gemini's recitation/content checker) is
+      // deterministic at temp 0, so identical retries -- and even fallback
+      // models fed the same input -- get blocked identically. Escalate the
+      // temperature on retries to introduce variation that dodges the
+      // recitation match (e.g. on our own open-licensed whitepaper content).
+      const temperature = attempt === 1 ? 0 : Math.min(0.5 * (attempt - 1), 1)
+
       console.log(
-        `[${ts()}] [gemini] REQUEST model=${modelId} ${ctx}${attempt > 1 ? ` attempt=${attempt}` : ""}`
+        `[${ts()}] [gemini] REQUEST model=${modelId} ${ctx}${attempt > 1 ? ` attempt=${attempt} temp=${temperature}` : ""}`
       )
 
       if (verbose) {
@@ -1355,7 +1363,7 @@ export async function callGeminiRaw(
             model: modelId,
             contents: prompt,
             config: {
-              temperature: 0,
+              temperature,
               safetySettings: SAFETY_SETTINGS,
               abortSignal: controller.signal,
             },
