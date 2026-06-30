@@ -135,6 +135,25 @@ Accounts interact with the proxy contract, which dispatches all function calls t
 
 Delegating calls to the logic contract requires storing its address in the proxy contract's storage. Hence, upgrading the contract's logic is only a matter of deploying another logic contract and storing the new address in the proxy contract. As subsequent calls to the proxy contract are automatically routed to the new logic contract, you would have “upgraded” the contract without actually modifying the code.
 
+### Advanced Proxy Patterns: Transparent vs. UUPS {#advanced-proxy-patterns}
+
+While the basic proxy pattern enables upgradability, it introduces a critical security vulnerability known as **function clashing**. Because the proxy fallback function relies on `delegatecall` to forward all calls, an issue arises if the proxy contract and the logic contract have functions with the exact same name and signature (e.g., both having an `upgradeTo(address)` function). The Ethereum Virtual Machine (EVM) wouldn't know whether to execute the proxy's local function or delegate it to the logic contract. 
+
+To resolve function clashing safely, the Ethereum developer community standardizes around two advanced proxy architectures: 
+
+#### 1. The Transparent Proxy Pattern {#transparent-proxy-pattern}
+The Transparent Proxy resolves clashes by routing function calls based on the identity of the caller (`msg.sender`). 
+
+- **How it works:** If the caller is the designated `Admin` of the proxy, the proxy assumes the transaction is an administrative action. It will only allow the execution of the proxy's own management functions (like upgrading the logic address) and will *never* delegate the call. Conversely, if the caller is any other user, the proxy blindly delegates the execution to the logic contract, even if the user attempts to call an administrative function.
+- **Pros:** It provides a clear separation of concerns. The upgrade logic remains entirely within the proxy, meaning the logic contract doesn't need to know anything about the upgrade mechanism.
+- **Cons:** It is highly gas-inefficient. For every single transaction sent by a regular user, the EVM must perform a storage read to verify if the caller is the admin or not. On a highly active contract, this gas overhead compounds significantly.
+
+#### 2. UUPS (Universal Upgradeable Proxy Standard) {#uups-pattern}
+Proposed in EIP-1822, UUPS takes the opposite approach: it makes the proxy contract entirely lightweight and moves all the upgrade logic into the logic contract itself.
+
+- **How it works:** A UUPS proxy contains no upgrade functions and performs no admin checks; it unconditionally delegates every single call to the logic contract via `delegatecall`. To upgrade, the administrator invokes the `upgradeTo()` function directly on the logic contract. Because it is executed in the proxy's context, it successfully updates the logic address stored in the proxy.
+- **Pros:** It is extremely gas-efficient. By removing the `msg.sender` admin check from the proxy's fallback function, users save gas on every single interaction. It is currently the recommended standard by library maintainers like OpenZeppelin.
+- **Cons:** It carries a catastrophic risk of "bricking." Since the upgrade mechanism lives inside the logic contract, developers *must* remember to include the upgrade logic in every new version (V2, V3, etc.). If a new logic contract is deployed without the upgrade function, the proxy will be permanently locked to that version, losing its upgradability forever.
 [More on upgrading contracts](/developers/docs/smart-contracts/upgrading/).
 
 #### Emergency stops {#emergency-stops}
