@@ -80,6 +80,19 @@ Etherscan is the most used tool for verifying contracts. However, Etherscan's co
 
 [More on verifying contracts on Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 
+How users can view and interact with verified contracts {#how-users-can-view-verified-contracts}
+For everyday users, checking a contract's verification status and reading its code is a crucial security practice before interacting with any decentralized application.
+
+Check the verification status: Search for the contract address on Etherscan and scroll down to the tab section. If the contract is verified, you will see a green checkmark next to the Contract tab . If it is unverified, clicking this tab will only display raw, unreadable bytecode.
+
+Read and Write Code: Once a contract is verified, the Contract tab reveals three highly useful sub-tabs:
+
+Code: Displays the readable source code (e.g., Solidity files) and the Contract ABI (Application Binary Interface), which acts as a manual for how to interact with the contract.
+
+Read Contract: Allows you to query the contract's current state (e.g., checking a specific wallet's token balance or the total supply) for free, without paying any gas fees .
+
+Write Contract: Allows you to connect your Web3 wallet and directly execute state-changing functions (such as transfer, approve, or mint). This requires paying gas fees and is often used by advanced users to bypass a project's frontend UI in case of an outage.
+
 ### Blockscout {#blockscout}
 
 [Blockscout](https://blockscout.com/) is an open-source blockchain explorer that also provides a [contract verification service](https://eth.blockscout.com/contract-verification) for smart contract developers and users. As an open-source alternative, Blockscout offers transparency in how verification is performed and enables community contributions to improve the verification process.
