@@ -123,22 +123,27 @@ Ana bölümleri işaretlemek için zaman damgalarına sahip `###` başlıkların
 
 Eğer bir transkriptiniz yoksa, gövdeyi boş bırakabilirsiniz ve ekip bir tane oluşturacaktır.
 
-#### 4. Adım: Konu etiketlerini seçin {#step-4}
+#### 4. Adım: Konu etiketlerini seçin
 
-Galeride kullanılan mevcut kategorilerle eşleşen konu etiketlerini seçin. Mevcut kategoriler ve etiketleri şunları içerir:
+Aşağıdaki listeden konu etiketlerini seçin. Her etiket, video galerisindeki bir filtre kategorisiyle doğrudan eşleşir; etiket adını tam olarak gösterildiği gibi kullanın.
 
-- **Ethereum Nasıl Çalışır**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Ağ Yükseltmeleri**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Yol Haritası ve Öncelikler**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Ölçeklendirme ve Katman 2**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Kullanım Durumları**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Gizlilik ve Güvenlik**: `privacy-and-security`, `privacy`, `authentication`
-- **Topluluk Hikayeleri**: `community-stories`, `contributing`, `translations`, `community`
+Bir video, birden fazla galeri filtresinde görünmek için birden fazla etikete sahip olabilir:
 
-Videonuzun bir galeri kategori rafında görünmesini sağlamak için en az bir kategori anahtar etiketi (kebab-case formatındaki kalın isim, örn. `use-cases` veya `scaling-and-layer-2`) ekleyin. Tanınan bir kategori etiketi olmayan videolar yalnızca "Tümü" görünümünde ve arama sonuçlarında görünecektir.
+| Etiket | Galeri filtresi |
+|---|---|
+| `how-ethereum-works` | Ethereum Nasıl Çalışır |
+| `network-upgrades` | Ağ Yükseltmeleri |
+| `roadmap-and-priorities` | Yol Haritası ve Öncelikler |
+| `scaling-and-layer-2` | Ölçeklendirme ve Katman 2 |
+| `use-cases` | Kullanım Durumları |
+| `privacy` | Gizlilik |
+| `security` | Güvenlik |
+| `community-stories` | Topluluk Hikayeleri |
+| `events` | Etkinlikler |
 
-Ayrıca yeni etiketler de kullanabilirsiniz; bunlar gelecekteki kategori gruplandırmaları için kullanılabilir olacaktır.
+Her videonun bu listeden en az bir etiketi olmalıdır. Tanınan bir etiketi olmayan videolar yalnızca "Tümü" görünümünde ve arama sonuçlarında görünür.
 
+`community-stories` etiketi ayrıca bir videonun [Hikayeler sayfasında](/stories/) görünmesini sağlar.
 #### 5. Adım: PR'ınızı gönderin {#step-5}
 
 Değişikliklerinizle birlikte `dev` dalına (branch) bir çekme isteği (pull request) açın. Ekip gönderiminizi inceleyecek ve geri bildirim sağlayacaktır.

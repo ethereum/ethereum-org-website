@@ -82,12 +82,8 @@ Yani değişken uzunluklu türlerin gerçek değerleri, serileştirilmiş nesnen
 
 Serileştirme sırasında bir uzunluk sınırının eklenmesini ve serileştirmeden çıkarma sırasında kaldırılmasını gerektiren `BitList` türü gibi özel işlem gerektiren bazı özel durumlar da vardır. Tüm detaylar [SSZ spesifikasyonunda](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md) mevcuttur.
 
-### Serileştirmeden Çıkarma {#deserialization}
-
-Bu nesneyi serileştirmeden çıkarmak için <b>şema</b> gereklidir. Şema, serileştirilmiş verilerin kesin düzenini tanımlar, böylece her bir belirli öğe bir bayt blob'undan doğru türe, değere, boyuta ve konuma sahip öğelerle anlamlı bir nesneye dönüştürülebilir. Serileştirmeden çıkarıcıya hangi değerlerin gerçek değerler ve hangilerinin sapma olduğunu söyleyen şemadır. Bir nesne serileştirildiğinde tüm alan adları kaybolur, ancak şemaya göre serileştirmeden çıkarma sırasında yeniden oluşturulur.
-
-Bu konuda etkileşimli bir açıklama için [ssz.dev](https://www.ssz.dev/overview) adresine bakın.
-
+### Serileştirmeden çıkarma
+Bu nesneyi serileştirmeden çıkarmak için <b>şema</b> gereklidir. Şema, serileştirilmiş verilerin kesin düzenini tanımlar; böylece her bir belirli öğe, bir bayt blob'undan doğru türe, değere, boyuta ve konuma sahip öğeler içeren anlamlı bir nesneye dönüştürülerek serileştirmeden çıkarılabilir. Serileştirmeden çıkarıcıya hangi değerlerin gerçek değerler, hangilerinin sapma olduğunu belirten şey şemadır. Bir nesne serileştirildiğinde tüm alan adları kaybolur, ancak serileştirmeden çıkarma sırasında şemaya göre yeniden oluşturulur.
 ## Merkleizasyon {#merkleization}
 
 Bu SSZ serileştirilmiş nesnesi daha sonra merkleize edilebilir; yani aynı verilerin bir Merkle ağacı temsiline dönüştürülebilir. İlk olarak, serileştirilmiş nesnedeki 32 baytlık parçaların sayısı belirlenir. Bunlar ağacın "yapraklarıdır". Yaprakların birlikte hashlenmesinin sonunda tek bir hash ağacı kökü (hash-tree-root) üretmesi için toplam yaprak sayısı 2'nin bir kuvveti olmalıdır. Eğer doğal olarak durum böyle değilse, 32 baytlık sıfırlar içeren ek yapraklar eklenir. Şematik olarak:
@@ -138,10 +134,8 @@ Belirli bir öğeyi temsil eden genelleştirilmiş endekslerin listesini sağlam
 8*     9*   10    11   12    13    14    15
 ```
 
-## Daha fazla bilgi {#further-reading}
-
-- [Ethereum'u Yükseltmek: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
-- [Ethereum'u Yükseltmek: Merkleizasyon](https://eth2book.info/altair/part2/building_blocks/merkleization)
+## Daha fazla bilgi
+- [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
+- [Upgrading Ethereum: Merkleizasyon](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [SSZ uygulamaları](https://github.com/ethereum/consensus-specs/issues/2138)
 - [SSZ hesaplayıcısı](https://simpleserialize.com/)
-- [SSZ.dev](https://www.ssz.dev/)

@@ -101,16 +101,13 @@ NFT'lerle ilgili güvenlik sorunları çoğunlukla kimlik avı dolandırıcılı
   Güvenlik hakkında daha fazlası
 </ButtonLink>
 
-## Daha fazla okuma {#further-reading}
-
+## İleri okuma
 - [Yeni başlayanlar için NFT rehberi](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Ocak 2020_
 - [Etherscan NFT takipçisi](https://etherscan.io/nft-top-contracts)
 - [Blockscout NFT takipçisi](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [ERC-721 token standardı](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 token standardı](/developers/docs/standards/tokens/erc-1155/)
-- [Popüler NFT Uygulamaları ve Araçları](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
-- [NFT Standartları wiki'si](https://nft-standards.gitbook.io/nft-standards-wiki)
-
+- [NFT Standartları vikisi](https://nft-standards.gitbook.io/nft-standards-wiki)
 ## Diğer kaynaklar {#other-resources}
 
 - [NFTScan](https://nftscan.com/)

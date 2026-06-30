@@ -117,11 +117,9 @@ _Pectra Güncellemesinde Neler Var? - Christine Kim_
 
 _Ethereum Pectra Güncellemesi: Stake Edenlerin Bilmesi Gerekenler — Blockdaemon_
 
-## Daha fazla okuma {#further-reading}
-
+## Daha fazla bilgi
 - [Ethereum yol haritası](/roadmap/)
 - [Pectra SSS](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf bilgi sayfası](https://pectra.wtf)
 - [Pectra, stake edenlerin deneyimini nasıl geliştiriyor?](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 bilgi sayfası](https://eip7702.io/)
-- [Pectra geliştirici ağları (devnets)](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)
+- [Pectra geliştirici ağları](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

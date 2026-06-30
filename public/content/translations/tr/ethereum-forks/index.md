@@ -86,15 +86,14 @@ Gelecekteki protokol güncellemelerini mi arıyorsunuz? [Ethereum yol haritasın
 
 [Fusaka hakkında daha fazla bilgi](/roadmap/fusaka/)
 
-### Prag-Electra ("Pectra") {#pectra}
-
+### Prague-Electra ("Pectra")
 <NetworkUpgradeSummary name="pectra" />
 
-Prag-Electra ("Pectra") güncellemesi, tüm kullanıcılar, katman 2 ağları, stake edenler ve düğüm operatörleri için deneyimi geliştirmeyi amaçlayan Ethereum protokolünde çeşitli iyileştirmeler içeriyordu.
+Prague-Electra ("Pectra") güncellemesi, tüm kullanıcılar, katman 2 ağları, staker'lar ve düğüm operatörleri için deneyimi geliştirmeyi amaçlayan Ethereum protokolüne yönelik çeşitli iyileştirmeler içeriyordu.
 
-Staking, bileşik doğrulayıcı hesapları ve yürütme çekim adresi kullanılarak stake edilen fonlar üzerinde iyileştirilmiş kontrol ile bir güncelleme aldı. EIP-7251, tek bir doğrulayıcı için maksimum etkin bakiyeyi 2048'e çıkararak stake edenler için sermaye verimliliğini artırdı. EIP-7002, bir yürütme hesabının çıkış yapma veya fonların bir kısmının çekimini yapma dahil olmak üzere doğrulayıcı eylemlerini güvenli bir şekilde tetiklemesini sağlayarak ETH stake edenler için deneyimi iyileştirirken, düğüm operatörleri için hesap verebilirliği güçlendirmeye yardımcı oldu.
+Staking, bileşik doğrulayıcı hesapları ve yürütme çekim adresi kullanılarak stake edilen fonlar üzerinde iyileştirilmiş kontrol ile bir güncelleme aldı. EIP-7251, tek bir doğrulayıcı için maksimum etkin bakiyeyi 2048'e çıkararak staker'lar için sermaye verimliliğini artırdı. EIP-7002, bir yürütme hesabının çıkış yapma veya fonların bir kısmını çekme dahil olmak üzere doğrulayıcı eylemlerini güvenli bir şekilde tetiklemesini sağlayarak ETH staker'ları için deneyimi iyileştirirken, düğüm operatörleri için hesap verebilirliği güçlendirmeye yardımcı oldu.
 
-Güncellemenin diğer kısımları, normal kullanıcılar için deneyimi iyileştirmeye odaklandı. EIP-7702, akıllı sözleşme olmayan normal bir hesabın ([EOA](/glossary/#eoa)) akıllı sözleşmeye benzer şekilde kod yürütme yeteneğini getirdi. Bu, geleneksel Ethereum hesapları için işlemleri toplu işleme, gaz sponsorluğu, alternatif kimlik doğrulama, programlanabilir harcama kontrolleri, hesap kurtarma mekanizmaları ve daha fazlası gibi sınırsız yeni işlevlerin kilidini açtı.
+Güncellemenin diğer kısımları normal kullanıcılar için deneyimi iyileştirmeye odaklandı. EIP-7702, normal bir akıllı sözleşme olmayan hesabın ([EOA](/glossary/#eoa)) bir akıllı sözleşmeye benzer şekilde kod yürütme yeteneğini getirdi. Bu, geleneksel Ethereum hesapları için işlem toplu işleme, gaz sponsorluğu, alternatif kimlik doğrulama, programlanabilir harcama kontrolleri, hesap kurtarma mekanizmaları ve daha fazlası gibi sınırsız yeni işlevlerin kilidini açtı.
 
 <ExpandableCard title="Pectra EIP'leri" contentPreview="Bu güncellemeye dahil edilen resmi iyileştirmeler.">
 
@@ -104,7 +103,7 @@ Daha iyi kullanıcı deneyimi:
   <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>EOA hesap kodunu ayarla</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>Blob işlem kapasitesi artışı</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>Çağrı verisi maliyetini artır</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>EL yapılandırma dosyalarına blob takvimi ekle</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>EL yapılandırma dosyalarına blob programı ekle</em></li>
 </ul>
 
 Daha iyi staking deneyimi:
@@ -113,7 +112,7 @@ Daha iyi staking deneyimi:
   <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em><code>MAX_EFFECTIVE_BALANCE</code> değerini artır</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>Yürütme katmanı tarafından tetiklenebilir çıkışlar</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>Genel amaçlı yürütme katmanı istekleri</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Zincir içi doğrulayıcı depozitoları sağla</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Doğrulayıcı depozitolarını zincir içi sağla</em></li>
 </ul>
 
 Protokol verimliliği ve güvenlik iyileştirmeleri:
@@ -126,10 +125,9 @@ Protokol verimliliği ve güvenlik iyileştirmeleri:
 
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
 - [Pectra staking deneyimini nasıl geliştirecek](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Electra güncelleme spesifikasyonlarını okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
-- [Prag-Electra ("Pectra") SSS](/roadmap/pectra/)
+- [Electra güncellemesi spesifikasyonlarını okuyun](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
+- [Prague-Electra ("Pectra") SSS](/roadmap/pectra/)
 
 <Divider />
 

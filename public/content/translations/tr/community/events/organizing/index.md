@@ -204,16 +204,13 @@ Etkinlik sona erdikten sonra, gelecekteki etkinliklere daha iyi hazırlanabilmen
 
 İçgörülerini paylaşarak bu makaleye katkıda bulunan herkese çok teşekkür ederiz: ETHBratislava'dan Slavo Fabisik; ETH Kipu ve ETH Latam'dan Lola; ETH Belgrade'den Tanja Mladenovic, Ethereum Bogota'dan Juan David; ETHWarsaw'dan Monika Zając; NapulETH'ten Raffaele Orefice; ETH Riyadh'tan Xiao Wu(Ling); urbe.eth'ten Marco; ETH Dublin'den Caolán Walsh; ETHCluj'dan Alex Males; ve ETH Slovenia'dan Stanko Devic.
 
-## Kaynaklar {#resources}
+## Kaynaklar
+Podcast: A'dan Z'ye bir ETH etkinliği nasıl düzenlenir ve tanıtılır:
 
-Podcast: A'dan Z'ye bir ETH etkinliği nasıl organize edilir ve tanıtılır:
-
-- [Out of Ordinary tarafından hazırlanan ETHWarsaw vaka çalışması](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [Out of Ordinary'den ETHWarsaw vaka çalışması](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 Twitter space:
 
-- [ETH Topluluğu AMA (Bana İstediğini Sor)](https://x.com/NapulETH/status/1905732699094151623)
+- [ETH Topluluğu AMA](https://x.com/NapulETH/status/1905732699094151623)
 
 Makaleler:
-
-- [Danny H. tarafından hazırlanan ETHKL'yi İnşa Etmek](https://sekto.tech/ethkl24)

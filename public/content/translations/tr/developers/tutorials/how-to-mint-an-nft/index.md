@@ -21,7 +21,7 @@ Hadi başlayalım!
 
 ## 1. Adım: Web3'ü Yükleyin {#install-web3}
 
-NFT akıllı sözleşmenizi oluşturmaya yönelik ilk eğitimi takip ettiyseniz, Ethers.js kullanma konusunda zaten deneyiminiz var demektir. Web3, [Ethereum](/) blokzincirine istek oluşturmayı kolaylaştırmak için kullanılan bir kütüphane olması bakımından Ethers'a benzer. Bu eğitimde, otomatik yeniden denemeler ve sağlam WebSocket desteği sunan gelişmiş bir Web3 kütüphanesi olan [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)'ü kullanacağız.
+NFT akıllı sözleşmenizi oluşturmaya yönelik ilk eğitimi takip ettiyseniz, Ethers.js kullanma konusunda zaten deneyiminiz var demektir. Web3, [Ethereum](/) blokzincirine istek oluşturmayı kolaylaştırmak için kullanılan bir kütüphane olması bakımından Ethers'a benzer. Bu eğitimde, otomatik yeniden denemeler ve sağlam WebSocket desteği sunan gelişmiş bir Web3 kütüphanesi olan [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)'ü kullanacağız.
 
 Projenizin ana dizininde şunu çalıştırın:
 
@@ -40,15 +40,15 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## 3. Adım: Sözleşme ABI'nizi alın {#contract-abi}
+## 3. Adım: Sözleşme ABI'nizi alın
 
-Sözleşme ABI'miz (Uygulama İkili Arayüzü), akıllı sözleşmemizle etkileşime girmek için kullanılan arayüzdür. Sözleşme ABI'leri hakkında daha fazla bilgiyi [buradan](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is) edinebilirsiniz. Hardhat bizim için otomatik olarak bir ABI oluşturur ve bunu `MyNFT.json` dosyasına kaydeder. Bunu kullanmak için, `mint-nft.js` dosyamıza aşağıdaki kod satırlarını ekleyerek içerikleri ayrıştırmamız gerekecek:
+Sözleşme ABI'miz (Uygulama İkili Arayüzü), akıllı sözleşmemizle etkileşime girmek için kullanılan arayüzdür. [Sözleşme ABI'leri](/glossary/#abi) hakkında daha fazla bilgi edinebilirsiniz. Hardhat bizim için otomatik olarak bir ABI oluşturur ve bunu `MyNFT.json` dosyasına kaydeder. Bunu kullanmak için, `mint-nft.js` dosyamıza aşağıdaki kod satırlarını ekleyerek içerikleri ayrıştırmamız gerekecek:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 ```
 
-Eğer ABI'yi görmek isterseniz, konsolunuza yazdırabilirsiniz:
+ABI'yi görmek isterseniz konsolunuza yazdırabilirsiniz:
 
 ```js
 console.log(JSON.stringify(contract.abi))
@@ -59,7 +59,6 @@ console.log(JSON.stringify(contract.abi))
 ```js
 node scripts/mint-nft.js
 ```
-
 ## 4. Adım: IPFS kullanarak NFT'niz için meta verileri yapılandırın {#config-meta}
 
 Bölüm 1'deki eğitimimizden hatırlarsanız, `mintNFT` akıllı sözleşme fonksiyonumuz, NFT'nin meta verilerini açıklayan bir JSON belgesine çözümlenmesi gereken bir tokenURI parametresi alır; bu, NFT'ye hayat veren ve onun bir isim, açıklama, görüntü ve diğer nitelikler gibi yapılandırılabilir özelliklere sahip olmasını sağlayan şeydir.
@@ -136,13 +135,13 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## 7. Adım: İşleminizi oluşturun {#create-txn}
+## 7. Adım: İşleminizi oluşturun
 
 İlk olarak, `mintNFT(tokenData)` adında bir fonksiyon tanımlayalım ve aşağıdakileri yaparak işlemimizi oluşturalım:
 
 1. `.env` dosyasından _PRIVATE_KEY_ ve _PUBLIC_KEY_ değerlerinizi alın.
 
-1. Ardından, hesap nonce'unu bulmamız gerekecek. Nonce spesifikasyonu, adresinizden gönderilen işlemlerin sayısını takip etmek için kullanılır — ki buna güvenlik amacıyla ve [tekrarlama saldırılarını (replay attacks)](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce) önlemek için ihtiyacımız vardır. Adresinizden gönderilen işlemlerin sayısını almak için [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount) kullanırız.
+1. Ardından, hesap nonce'unu bulmamız gerekecek. Nonce spesifikasyonu, adresinizden gönderilen işlemlerin sayısını takip etmek için kullanılır — buna güvenlik amacıyla ve tekrarlama saldırılarını önlemek için ihtiyacımız vardır. Adresinizden gönderilen işlemlerin sayısını almak için [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count) kullanırız.
 
 1. Son olarak işlemimizi aşağıdaki bilgilerle kuracağız:
 
@@ -184,7 +183,6 @@ PUBLIC_KEY = "your-public-account-address"
      };
    }​
 ```
-
 ## 8. Adım: İşlemi imzalayın {#sign-txn}
 
 İşlemimizi oluşturduğumuza göre, onu göndermek için imzalamamız gerekiyor. İşte burada özel anahtarımızı kullanacağız.
@@ -317,7 +315,7 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
     İşleminizin durumunu görüntülemek için Alchemy'nin Bellek Havuzunu kontrol edin!
 
-Ardından, işleminizin durumunu (beklemede mi, madenciliği yapıldı mı veya ağ tarafından düşürüldü mü) görmek için [Alchemy bellek havuzunuzu](https://dashboard.alchemyapi.io/mempool) ziyaret edin. İşleminiz düşürüldüyse, [Blockscout](https://eth-sepolia.blockscout.com/)'u kontrol etmek ve işlem hash'inizi aramak da yararlı olacaktır.
+Ardından, işleminizin durumunu (beklemede mi, madenciliği yapıldı mı veya ağ tarafından düşürüldü mü) görmek için [Alchemy bellek havuzunuzu](https://dashboard.alchemy.com/mempool) ziyaret edin. İşleminiz düşürüldüyse, [Blockscout](https://eth-sepolia.blockscout.com/)'u kontrol etmek ve işlem hash'inizi aramak da yararlı olacaktır.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Etherscan'de NFT işlem hash'inizi görüntüleyin_
 

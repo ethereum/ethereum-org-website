@@ -16,7 +16,7 @@ published: 2021-03-31
 
 Blokzincir geliştirmeye yeniyseniz ve nereden başlayacağınızı bilmiyorsanız veya sadece akıllı sözleşmeleri nasıl dağıtacağınızı ve onlarla nasıl etkileşime gireceğinizi anlamak istiyorsanız, bu rehber tam size göre. Sanal bir cüzdan olan [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) ve [Alchemy](https://www.alchemy.com/eth) kullanarak Sepolia test ağında basit bir akıllı sözleşme oluşturma ve dağıtma adımlarını inceleyeceğiz (bunların ne anlama geldiğini henüz anlamıyorsanız endişelenmeyin, açıklayacağız).
 
-Bu eğitimin [2. bölümünde](https://docs.alchemy.com/docs/interacting-with-a-smart-contract), akıllı sözleşmemiz burada dağıtıldıktan sonra onunla nasıl etkileşime girebileceğimizi inceleyeceğiz ve [3. bölümünde](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) onu Etherscan'de nasıl yayınlayacağımızı ele alacağız.
+Bu eğitimin [2. bölümünde](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract), akıllı sözleşmemiz burada dağıtıldıktan sonra onunla nasıl etkileşime girebileceğimizi inceleyeceğiz ve [3. bölümünde](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) onu Etherscan'de nasıl yayınlayacağımızı ele alacağız.
 
 Herhangi bir noktada sorularınız olursa [Alchemy Discord](https://discord.gg/gWuC7zB) kanalından ulaşmaktan çekinmeyin!
 
@@ -64,7 +64,7 @@ Bakiyemizin orada olduğunu iki kez kontrol etmek için, [Alchemy'nin composer a
 >
 > Oh be! Sahte paramızın hepsi orada <Emoji text=":money_mouth_face:" size={1} />.
 
-## Adım 6: Projemizi başlatalım {#step-6}
+## Adım 6: Projemizi başlatın
 
 İlk olarak, projemiz için bir klasör oluşturmamız gerekecek. Komut satırınıza gidin ve şunu yazın:
 
@@ -73,7 +73,7 @@ mkdir hello-world
 cd hello-world
 ```
 
-Artık proje klasörümüzün içinde olduğumuza göre, projeyi başlatmak için `npm init` kullanacağız. Eğer npm henüz yüklü değilse, [bu talimatları](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) izleyin (Node.js'e de ihtiyacımız olacak, bu yüzden onu da indirin!).
+Artık proje klasörümüzün içinde olduğumuza göre, projeyi başlatmak için `npm init` komutunu kullanacağız. Eğer npm henüz kurulu değilse, [Node.js kurulum talimatlarını](https://nodejs.org/en/download/) izleyin (bu eğitim için Node.js ve npm'e ihtiyacımız olacak).
 
 ```
 npm init
@@ -106,8 +106,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-package.json dosyasını onaylayın ve başlamaya hazırız!
-
+package.json dosyasını onaylayın ve artık hazırız!
 ## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview)'i İndirin {#step-7}
 
 Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Geliştiricilere, canlı zincire dağıtmadan önce akıllı sözleşmeler ve merkeziyetsiz uygulamalar (dapp'ler) oluştururken yerel olarak yardımcı olur.
@@ -355,11 +354,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 Tebrikler! Ethereum zincirine az önce bir akıllı sözleşme dağıttınız 🎉
 
-Arka planda neler olup bittiğini anlamak için [Alchemy kontrol panelimizdeki](https://dashboard.alchemyapi.io/explorer) Explorer (Gezgin) sekmesine gidelim. Birden fazla Alchemy uygulamanız varsa, uygulamaya göre filtrelediğinizden ve "Hello World"ü seçtiğinizden emin olun.
+Arka planda neler olup bittiğini anlamak için [Alchemy kontrol panelimizdeki](https://dashboard.alchemy.com/explorer) Explorer (Gezgin) sekmesine gidelim. Birden fazla Alchemy uygulamanız varsa, uygulamaya göre filtrelediğinizden ve "Hello World"ü seçtiğinizden emin olun.
 ![hello world explorer](./hello-world-explorer.png)
 
-Burada, `.deploy()` işlevini çağırdığımızda Hardhat/Ethers'ın arka planda bizim için yaptığı bir avuç JSON-RPC çağrısını göreceksiniz. Burada belirtilmesi gereken iki önemli çağrı, sözleşmemizi fiilen Sepolia zincirine yazma isteği olan [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction) ve hash verildiğinde işlemimiz hakkındaki bilgileri okuma isteği olan [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash)'dir (işlemlerde tipik bir modeldir). İşlem gönderme hakkında daha fazla bilgi edinmek için, [Web3 kullanarak işlem gönderme](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) hakkındaki bu eğitime göz atın.
+Burada, `.deploy()` işlevini çağırdığımızda Hardhat/Ethers'ın arka planda bizim için yaptığı bir avuç JSON-RPC çağrısını göreceksiniz. Burada belirtilmesi gereken iki önemli çağrı, sözleşmemizi fiilen Sepolia zincirine yazma isteği olan [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) ve hash verildiğinde işlemimiz hakkındaki bilgileri okuma isteği olan [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)'dir (işlemlerde tipik bir modeldir). İşlem gönderme hakkında daha fazla bilgi edinmek için, [Web3 kullanarak işlem gönderme](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) hakkındaki bu eğitime göz atın.
 
-Bu eğitimin 1. bölümü için bu kadar, 2. bölümde başlangıç mesajımızı güncelleyerek [akıllı sözleşmemizle fiilen etkileşime gireceğiz](https://www.alchemy.com/docs/interacting-with-a-smart-contract) ve 3. bölümde herkesin onunla nasıl etkileşime gireceğini bilmesi için [akıllı sözleşmemizi Etherscan'de yayınlayacağız](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan).
+Bu eğitimin 1. bölümü için bu kadar, 2. bölümde başlangıç mesajımızı güncelleyerek [akıllı sözleşmemizle fiilen etkileşime gireceğiz](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) ve 3. bölümde herkesin onunla nasıl etkileşime gireceğini bilmesi için [akıllı sözleşmemizi Etherscan'de yayınlayacağız](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan).
 
 **Alchemy hakkında daha fazla bilgi edinmek ister misiniz? [Web sitemize](https://www.alchemy.com/eth) göz atın. Hiçbir güncellemeyi kaçırmak istemiyor musunuz? [Buradan](https://www.alchemy.com/newsletter) bültenimize abone olun! Ayrıca [Discord](https://discord.gg/u72VCg3) kanalımıza da katıldığınızdan emin olun.**

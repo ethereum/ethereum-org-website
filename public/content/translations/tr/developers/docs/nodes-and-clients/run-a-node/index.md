@@ -371,7 +371,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Bir fikir birliği istemcisi, yatırma sözleşmesini okumak ve doğrulayıcıları tanımlamak için yürütme istemcisine bağlandığında, aynı zamanda diğer İşaret Düğümü eşlerine de bağlanır ve başlangıçtan (genesis) itibaren fikir birliği yuvalarını (slots) eşzamanlamaya başlar. İşaret Düğümü mevcut döneme ulaştığında, İşaret API'si doğrulayıcılarınız için kullanılabilir hale gelir. [İşaret Düğümü API'leri](https://eth2docs.vercel.app/) hakkında daha fazla bilgi edinin.
+Bir fikir birliği istemcisi, yatırma sözleşmesini okumak ve doğrulayıcıları tanımlamak için yürütme istemcisine bağlandığında, aynı zamanda diğer İşaret Düğümü eşlerine de bağlanır ve başlangıçtan (genesis) itibaren fikir birliği yuvalarını (slots) eşzamanlamaya başlar. İşaret Düğümü mevcut döneme ulaştığında, İşaret API'si doğrulayıcılarınız için kullanılabilir hale gelir. [İşaret Düğümü API'leri](https://ethereum.github.io/beacon-APIs) hakkında daha fazla bilgi edinin.
 
 ### Doğrulayıcı Ekleme {#adding-validators}
 
@@ -454,7 +454,7 @@ Düğümünüzü düzgün bir şekilde izlemek için metrikleri toplamayı düş
 - [Ethereum Staking Kılavuzları](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, sık sık güncellenir_
 - [Kılavuz | Ana ağda Ethereum staking için bir doğrulayıcı nasıl kurulur](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, sık sık güncellenir_
 - [Test ağlarında doğrulayıcı çalıştırma üzerine ETHStaker kılavuzları](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, düzenli olarak güncellenir_
-- [Ethereum Düğümleri için Örnek AWS Blokzincir Düğüm Çalıştırıcı uygulaması](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, sık sık güncellenir_
+- [Ethereum Düğümleri için Örnek AWS Blokzincir Düğüm Çalıştırıcı uygulaması](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, sık sık güncellenir_
 - [Düğüm operatörleri için Birleşme SSS](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Temmuz 2022_
 - [Tam doğrulanmış bir Ethereum düğümü olmak için donanım gereksinimlerini analiz etme](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 Eylül 2018_
 - [Ethereum Tam Düğümlerini Çalıştırmak: Zar Zor Motive Olanlar İçin Bir Kılavuz](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Kasım 2019_

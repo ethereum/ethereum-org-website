@@ -22,7 +22,7 @@ Microsoft teknoloji yığınındaki araçları ve dilleri kullanarak Ethereum ü
 - [İlk Akıllı Sözleşmenizi Yazın](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity'yi Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Başlangıç seviyesi referanslar ve bağlantılar {#beginner-references-and-links}
+## Başlangıç seviyesi referanslar ve bağlantılar
 
 **Nethereum kütüphanesine ve VS Code Solidity'ye giriş**
 
@@ -30,48 +30,46 @@ Microsoft teknoloji yığınındaki araçları ve dilleri kullanarak Ethereum ü
 - [VS Code Solidity Kurulumu](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [Ethereum Akıllı Sözleşmeleri Oluşturmak ve Çağırmak İçin Bir .NET Geliştiricisinin İş Akışı](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
 - [Nethereum ile akıllı sözleşme entegrasyonu](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
-- [Nethereum ile .NET ve Ethereum Blokzinciri Akıllı Sözleşmelerini Birbirine Bağlamak](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), ayrıca [Çince sürümü](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1) de mevcuttur
+- [Nethereum ile .NET ve Ethereum Blokzinciri Akıllı Sözleşmelerini Birbirine Bağlama](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), ayrıca [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [Nethereum - Blokzincir için açık kaynaklı bir .NET entegrasyon kütüphanesi](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
-- [Nethereum Kullanarak Ethereum İşlemlerini SQL Veritabanına Yazmak](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
+- [Nethereum Kullanarak Ethereum İşlemlerini SQL Veritabanına Yazma](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [C# ve VisualStudio kullanarak Ethereum akıllı sözleşmelerini nasıl kolayca dağıtacağınızı görün](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
 **Şimdilik kurulumu atlayıp doğrudan örneklere geçmek mi istiyorsunuz?**
 
-- [Playground](https://playground.nethereum.com/) - Tarayıcı üzerinden Ethereum ile etkileşime geçin ve Nethereum'u nasıl kullanacağınızı öğrenin.
+- [Nethereum Playground](https://playground.nethereum.com/) - Tarayıcı üzerinden Ethereum ile etkileşime geçin ve Nethereum'u nasıl kullanacağınızı öğrenin.
   - [Hesap Bakiyesini Sorgulama](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
   - [ERC-20 Akıllı Sözleşme Bakiyesini Sorgulama](https://docs.nethereum.com/docs/smart-contracts/erc20)
-  - [Bir Hesaba Ether Transferi](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
+  - [Bir Hesaba Ether Transfer Etme](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... Ve daha fazlası!
+## Orta seviye makaleler
 
-## Orta seviye makaleler {#intermediate-articles}
-
-- [Nethereum'a Başlarken ve İlk Proje](https://docs.nethereum.com/docs/getting-started/first-project)
+- [Nethereum Başlarken ve İlk Proje](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Kendi Geliştirme Test Zincirlerinizi Dağıtın](https://github.com/Nethereum/Testchains)
-- [Solidity için VSCode Codegen Eklentisi](https://docs.nethereum.com/docs/aspire-templates/guide-codegen)
+- [Nethereum ve VS Code ile kod üretimi](https://docs.nethereum.com/docs/smart-contracts/code-generation/)
 - [Unity ve Ethereum: Neden ve Nasıl](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
-- [Ethereum dapp'leri için ASP.NET Core Web API'si Oluşturma](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
-- [Bir Tedarik Zinciri Takip Sistemi Uygulamak İçin Nethereum Web3 Kullanımı](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
+- [Ethereum merkeziyetsiz uygulamaları (dapp'ler) için ASP.NET Core Web API'si oluşturun](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
+- [Yapılandırılmış zincir içi uygulamalar için Nethereum MUD çerçevesi](https://docs.nethereum.com/docs/mud-framework/overview/)
 - [Nethereum Blokzincir İşleme](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
-- [Nethereum Websocket Akışı](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
+- [Nethereum gerçek zamanlı akış](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido ve Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum ve Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-
-## Gelişmiş kullanım kalıpları {#advanced-use-patterns}
+## Gelişmiş kullanım kalıpları
 
 - [Azure Key Vault ve Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
-
-## .NET projeleri, araçları ve diğer eğlenceli şeyler {#dot-net-projects-tools-and-other-fun-stuff}
+- [Ujo Nethereum arka uç referans mimarisi](https://github.com/Nethereum/ujo-backend)
+## .NET projeleri, araçları ve diğer eğlenceli şeyler
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _Tarayıcıda Nethereum kod parçacıklarını derleyin, oluşturun ve çalıştırın_
-- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor'da kullanıcı arayüzü ile Nethereum kod üretimi (codegen)_
+- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor'da kullanıcı arayüzü ile Nethereum kod üretimi_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Bir .NET Wasm SPA hafif blokzincir gezgini ve basit cüzdan_
+- [Wonka Business Rules Engine](https://github.com/Nethereum/Wonka) - _Doğası gereği meta veri odaklı bir iş kuralları motoru (hem .NET platformu hem de Ethereum platformu için)_
 - [Nethermind](https://github.com/NethermindEth/nethermind) - _Linux, Windows ve MacOS için bir .NET Core Ethereum istemcisi_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Ethereum ile ilgili kod tabanlarıyla çalışmak için yardımcı işlevler_
-- [TestChains](https://github.com/Nethereum/TestChains) - _Hızlı yanıt için önceden yapılandırılmış .NET geliştirme zincirleri (yetki kanıtı - PoA)_
+- [TestChains](https://github.com/Nethereum/TestChains) - _Hızlı yanıt için önceden yapılandırılmış .NET geliştirme zincirleri (yetki kanıtı (PoA))_
 
 Daha fazla kaynak mı arıyorsunuz? [ethereum.org/developers](/developers/) adresine göz atın.
-
 ## .NET topluluğu katkıda bulunanlar {#dot-net-community-contributors}
 
 Nethereum'da, çoğunlukla herkesin soru sorabileceği/cevaplayabileceği, yardım alabileceği veya sadece takılabileceği [Gitter](https://gitter.im/Nethereum/Nethereum)'da bulunuyoruz. [Nethereum GitHub deposunda](https://github.com/Nethereum) bir PR (Çekme İsteği) yapmaktan veya bir sorun (issue) açmaktan çekinmeyin ya da sahip olduğumuz birçok yan/örnek projeye göz atın. Bizi [Discord](https://discord.gg/jQPrR58FxX)'da da bulabilirsiniz!

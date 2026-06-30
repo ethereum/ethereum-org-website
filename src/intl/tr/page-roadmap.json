@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "Ethereum yönetişimi hakkında daha fazla bilgi",
   "page-roadmap-hero-alt": "Ethereum yol haritası",
   "page-roadmap-technical-upgrades-title": "Ethereum'a hangi teknik yükseltmeler geliyor?",
+  "page-roadmap-post-quantum-title": "Kuantum sonrası güvenlik",
+  "page-roadmap-post-quantum-description": "Kuantum bilgisayarlar bir gün blokzincirlerin dayandığı kriptografiyi kırabilir. Ethereum'un kuantum sonrası yükseltmeleri, kuantum hesaplama gerçek bir tehdit haline gelmeden önce savunmasız algoritmaları değiştirecektir.",
   "page-roadmap-danksharding-title": "Danksharding",
   "page-roadmap-danksharding-description": "Danksharding, Ethereum bloklarına veri \"blob\"ları ekleyerek Katman 2 (L2) toplamalarını kullanıcılar için çok daha ucuz hale getirir.",
   "page-roadmap-single-slot-finality-title": "Tek slot kesinliği",

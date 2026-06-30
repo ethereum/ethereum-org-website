@@ -61,9 +61,8 @@ Akıllı sözleşmenizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyac
 _Not: ağ yoğunluğu nedeniyle bu biraz zaman alabilir._
 ``
 
-### Adım 5: Bakiyenizi Kontrol Edin {#step-5-check-your-balance}
-
-ETH'nin cüzdanınızda olduğunu iki kez kontrol etmek için, [Alchemy'nin composer aracını](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) kullanarak bir [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) isteği yapalım. Bu, cüzdanımızdaki ETH miktarını döndürecektir. Daha fazlasını öğrenmek için [Alchemy'nin composer aracının nasıl kullanılacağına dair kısa eğitimine](https://youtu.be/r6sjRxBZJuU) göz atın.
+### Adım 5: Bakiyenizi Kontrol Edin
+ETH'nin cüzdanınızda olduğundan emin olmak için, [Alchemy'nin sandbox aracını](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) kullanarak bir [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) isteği yapalım. Bu, cüzdanımızdaki ETH miktarını döndürecektir. Daha fazla bilgi edinmek için [Alchemy'nin composer aracının nasıl kullanılacağına dair kısa eğitimine](https://youtu.be/r6sjRxBZJuU) göz atın.
 
 MetaMask hesap adresinizi girin ve **Send Request** (İstek Gönder) düğmesine tıklayın. Aşağıdaki kod parçacığına benzeyen bir yanıt göreceksiniz.
 
@@ -71,24 +70,23 @@ MetaMask hesap adresinizi girin ve **Send Request** (İstek Gönder) düğmesine
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> _Not: Bu sonuç ETH değil, wei cinsindendir. Wei, Ether'in en küçük birimi olarak kullanılır._
+> _Not: Bu sonuç ETH değil, wei cinsindendir. Wei, ether'in en küçük birimi olarak kullanılır._
 
 Oh be! Sahte paramızın hepsi orada.
+### Adım 6: Projemizi başlatalım
 
-### Adım 6: Projemizi başlatalım {#step-6-initialize-our-project}
-
-İlk olarak, projemiz için bir klasör oluşturmamız gerekecek. Komut satırınıza gidin ve aşağıdakileri girin.
+İlk olarak, projemiz için bir klasör oluşturmamız gerekecek. Komut satırınıza gidin ve aşağıdakini girin.
 
 ```
 mkdir hello-world
 cd hello-world
 ```
 
-Artık proje klasörümüzün içinde olduğumuza göre, projeyi başlatmak için `npm init` kullanacağız.
+Artık proje klasörümüzün içinde olduğumuza göre, projeyi başlatmak için `npm init` komutunu kullanacağız.
 
-> Henüz npm yüklü değilse, [Node.js ve npm'i yüklemek için bu talimatları](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) izleyin.
+> Henüz npm yüklü değilse, Node.js ve npm'i kurmak için [Node.js kurulum talimatlarını](https://nodejs.org/en/download/) izleyin.
 
-Bu eğitimin amacı doğrultusunda, başlatma sorularını nasıl yanıtladığınız önemli değildir. Referans olması açısından biz şu şekilde yaptık:
+Bu eğitim için, başlatma sorularını nasıl yanıtladığınızın bir önemi yoktur. Referans olması açısından biz şu şekilde yaptık:
 
 ```
 package name: (hello-world)
@@ -116,8 +114,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-package.json dosyasını onaylayın ve başlamaya hazırız!
-
+package.json dosyasını onaylayın, artık başlamaya hazırız!
 ### Adım 7: Hardhat'i İndirin {#step-7-download-hardhat}
 
 Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Geliştiricilere, canlı zincire dağıtmadan önce yerel olarak akıllı sözleşmeler ve merkeziyetsiz uygulamalar (dapp) oluştururken yardımcı olur.
@@ -225,7 +222,7 @@ Bir MetaMask cüzdanı, Alchemy hesabı oluşturduk ve akıllı sözleşmemizi y
 
 Cüzdanınızdan gönderilen her işlem, benzersiz özel anahtarınızı kullanan bir imza gerektirir. Programımıza bu izni sağlamak için özel anahtarımızı bir ortam (environment) dosyasında güvenle saklayabiliriz. Ayrıca Alchemy için bir API anahtarını da burada saklayacağız.
 
-> İşlem gönderme hakkında daha fazla bilgi edinmek için, Web3 kullanarak işlem gönderme hakkındaki [bu eğitime](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) göz atın.
+> İşlem gönderme hakkında daha fazla bilgi edinmek için, Web3 kullanarak işlem gönderme hakkındaki [bu eğitime](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) göz atın.
 
 İlk olarak, proje dizininize dotenv paketini kurun:
 
@@ -255,7 +252,7 @@ Bunları kodumuza fiilen bağlamak için, 13. adımda `hardhat.config.js` dosyam
 
 ### Adım 12: Ethers.js'yi Kurun {#step-12-install-ethersjs}
 
-Ethers.js, [standart JSON-RPC yöntemlerini](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) daha kullanıcı dostu yöntemlerle sararak Ethereum ile etkileşime girmeyi ve istekte bulunmayı kolaylaştıran bir kütüphanedir.
+Ethers.js, [standart JSON-RPC yöntemlerini](/developers/docs/apis/json-rpc/) daha kullanıcı dostu yöntemlerle sararak Ethereum ile etkileşime girmeyi ve istekte bulunmayı kolaylaştıran bir kütüphanedir.
 
 Hardhat, ek araçlar ve genişletilmiş işlevsellik için [eklentileri](https://hardhat.org/plugins/) entegre etmemize olanak tanır. Sözleşme dağıtımı için [Ethers eklentisinden](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) yararlanacağız.
 
@@ -373,7 +370,7 @@ Arka planda neler olup bittiğini anlamak için [Alchemy kontrol panelimizdeki](
 
 ![](./hello-world-explorer.png)
 
-Burada, `.deploy()` işlevini çağırdığımızda Hardhat/Ethers'ın bizim için arka planda yaptığı bir avuç JSON-RPC yöntemini göreceksiniz. Buradaki iki önemli yöntem, sözleşmemizi Goerli zincirine yazma isteği olan [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) ve hash değeri verilen işlemimiz hakkında bilgi okuma isteği olan [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash)'dir. İşlem gönderme hakkında daha fazla bilgi edinmek için, [Web3 kullanarak işlem gönderme hakkındaki eğitimimize](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) göz atın.
+Burada, `.deploy()` işlevini çağırdığımızda Hardhat/Ethers'ın bizim için arka planda yaptığı bir avuç JSON-RPC yöntemini göreceksiniz. Buradaki iki önemli yöntem, sözleşmemizi Goerli zincirine yazma isteği olan [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) ve hash değeri verilen işlemimiz hakkında bilgi okuma isteği olan [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)'dir. İşlem gönderme hakkında daha fazla bilgi edinmek için, [Web3 kullanarak işlem gönderme hakkındaki eğitimimize](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) göz atın.
 
 ## Bölüm 2: Akıllı Sözleşmenizle Etkileşime Geçin {#part-2-interact-with-your-smart-contract}
 
@@ -571,7 +568,7 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-Bu betiği çalıştırırken, yeni mesaj yüklenmeden önce `Updating the message...` adımının yüklenmesinin biraz zaman aldığını fark edebilirsiniz. Bunun nedeni madencilik sürecidir; işlemlerin kazılırken nasıl takip edileceğini merak ediyorsanız, bir işlemin durumunu görmek için [Alchemy bellek havuzunu (mempool)](https://dashboard.alchemyapi.io/mempool) ziyaret edin. Eğer işlem düşerse, [Goerli Etherscan](https://goerli.etherscan.io)'i kontrol etmek ve işlem özetinizi (hash) aramak da faydalı olacaktır.
+Bu betiği çalıştırırken, yeni mesaj yüklenmeden önce `Updating the message...` adımının yüklenmesinin biraz zaman aldığını fark edebilirsiniz. Bunun nedeni madencilik sürecidir; işlemlerin kazılırken nasıl takip edileceğini merak ediyorsanız, bir işlemin durumunu görmek için [Alchemy bellek havuzunu (mempool)](https://dashboard.alchemy.com/mempool) ziyaret edin. Eğer işlem düşerse, [Goerli Etherscan](https://goerli.etherscan.io)'i kontrol etmek ve işlem özetinizi (hash) aramak da faydalı olacaktır.
 
 ## Bölüm 3: Akıllı Sözleşmenizi Etherscan'de Yayınlayın {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -679,7 +676,7 @@ Terminalinizde sağlanan bağlantıya gittiğinizde, Etherscan'de yayınlanan ak
 Bu eğitimin sonunda şunları nasıl yapacağınızı öğreneceksiniz:
 
 - Bir MetaMask cüzdanını merkeziyetsiz uygulamanıza (dapp) bağlamak
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API'sini kullanarak akıllı sözleşmenizden veri okumak
+- [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API'sini kullanarak akıllı sözleşmenizden veri okumak
 - MetaMask kullanarak Ethereum işlemlerini imzalamak
 
 Bu dapp için önyüz çerçevemiz olarak [React](https://react.dev/) kullanacağız; ancak, çoğunlukla projemize Web3 işlevselliği kazandırmaya odaklanacağımız için temel prensiplerini açıklamaya çok fazla zaman ayırmayacağımızı belirtmek önemlidir.
@@ -900,30 +897,30 @@ Akıllı sözleşmenizden okuma yapmak için şunları başarıyla kurmanız ger
 
 Bu çok fazla adım gibi gelebilir, ancak endişelenmeyin! Her birini nasıl yapacağınızı adım adım göstereceğiz! :\)
 
-#### Ethereum zincirine bir API bağlantısı kurun {#establish-an-api-connection-to-the-ethereum-chain}
+#### Ethereum zincirine bir API bağlantısı kurun
 
-Bu eğitimin 2. Bölümünde [akıllı sözleşmemizden okuma yapmak için Alchemy Web3 anahtarımızı](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library) nasıl kullandığımızı hatırlıyor musunuz? Zincirden okuma yapmak için dapp'inizde de bir Alchemy Web3 anahtarına ihtiyacınız olacak.
+Bu eğitimin 2. Bölümünde akıllı sözleşmemizden okuma yapmak için Alchemy Web3 anahtarımızı nasıl kullandığımızı hatırlıyor musunuz? Zincirden okuma yapmak için merkeziyetsiz uygulamanızda (dapp) da bir Alchemy Web3 anahtarına ihtiyacınız olacak.
 
-Eğer henüz sahip değilseniz, ilk olarak `starter-files` klasörünüzün kök dizinine gidip terminalinizde aşağıdakini çalıştırarak [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)'ü yükleyin:
+Eğer henüz sahip değilseniz, öncelikle `starter-files` klasörünüzün kök dizinine gidip terminalinizde aşağıdakini çalıştırarak [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)'ü kurun:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), [Web3.js](https://docs.web3js.org/) etrafında bir sarmalayıcıdır ve bir Web3 geliştiricisi olarak hayatınızı kolaylaştırmak için gelişmiş API yöntemleri ve diğer önemli avantajlar sağlar. Uygulamanızda hemen kullanmaya başlayabilmeniz için minimum yapılandırma gerektirecek şekilde tasarlanmıştır!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), [Web3.js](https://docs.web3js.org/) etrafında bir sarmalayıcıdır (wrapper) ve bir Web3 geliştiricisi olarak hayatınızı kolaylaştırmak için gelişmiş API yöntemleri ve diğer önemli avantajlar sağlar. Uygulamanızda hemen kullanmaya başlayabilmeniz için minimum yapılandırma gerektirecek şekilde tasarlanmıştır!
 
-Ardından, API anahtarımızı aldıktan sonra saklayabileceğimiz güvenli bir yere sahip olmak için proje dizininize [dotenv](https://www.npmjs.com/package/dotenv) paketini yükleyin.
+Ardından, API anahtarımızı aldıktan sonra güvenli bir şekilde saklayabileceğimiz bir yer olması için proje dizininize [dotenv](https://www.npmjs.com/package/dotenv) paketini kurun.
 
 ```text
 npm install dotenv --save
 ```
 
-Dapp'imiz için, HTTP API anahtarımız yerine **Websockets API anahtarımızı kullanacağız**, çünkü bu, akıllı sözleşmede saklanan mesajın ne zaman değiştiğini algılayan bir dinleyici kurmamıza olanak tanıyacaktır.
+Dapp'imiz için, HTTP API anahtarımız yerine **Websockets API anahtarımızı kullanacağız**, çünkü bu, akıllı sözleşmede saklanan mesaj değiştiğinde bunu algılayan bir dinleyici kurmamızı sağlayacaktır.
 
 API anahtarınızı aldıktan sonra, kök dizininizde bir `.env` dosyası oluşturun ve Alchemy Websockets URL'nizi buna ekleyin. Sonrasında `.env` dosyanız şu şekilde görünmelidir:
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<anahtar>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
 Artık dapp'imizde Alchemy Web3 uç noktamızı kurmaya hazırız! `util` klasörümüzün içinde yer alan `interact.js` dosyamıza geri dönelim ve dosyanın en üstüne aşağıdaki kodu ekleyelim:
@@ -939,10 +936,9 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-Yukarıda, ilk olarak `.env` dosyamızdan Alchemy anahtarını içe aktardık ve ardından Alchemy Web3 uç noktamızı kurmak için `alchemyKey` değerimizi `createAlchemyWeb3` işlevine geçirdik.
+Yukarıda, Alchemy Web3 uç noktamızı kurmak için önce `.env` dosyamızdan Alchemy anahtarını içe aktardık ve ardından `alchemyKey` değerimizi `createAlchemyWeb3` işlevine geçirdik.
 
 Bu uç nokta hazır olduğuna göre, akıllı sözleşmemizi yükleme zamanı geldi!
-
 #### Hello World akıllı sözleşmenizi yükleme {#loading-your-hello-world-smart-contract}
 
 Hello World akıllı sözleşmenizi yüklemek için sözleşme adresine ve ABI'sine ihtiyacınız olacak; [bu eğitimin 3. Bölümünü](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan) tamamladıysanız her ikisi de Etherscan'de bulunabilir.
@@ -1034,7 +1030,7 @@ Mevcut mesajın artık "Ağa bağlantı yok" demediğini fark edeceksiniz. Bunun
 
 #### `addSmartContractListener` işlevini uygulayın {#implement-addsmartcontractlistener}
 
-[Bu eğitim serisinin 1. Bölümünde](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract) yazdığımız `HelloWorld.sol` dosyasını hatırlarsanız, akıllı sözleşmemizin `update` işlevi çağrıldıktan sonra yayımlanan `UpdatedMessages` adlı bir akıllı sözleşme olayı olduğunu anımsayacaksınız (bkz. satır 9 ve 27):
+[Bu eğitim serisinin 1. Bölümünde](#step-10-write-our-contract) yazdığımız `HelloWorld.sol` dosyasını hatırlarsanız, akıllı sözleşmemizin `update` işlevi çağrıldıktan sonra yayımlanan `UpdatedMessages` adlı bir akıllı sözleşme olayı olduğunu anımsayacaksınız (bkz. satır 9 ve 27):
 
 ```javascript
 // HelloWorld.sol
@@ -1129,18 +1125,16 @@ Ethereum'daki işlemlerin nasıl çalıştığı hakkında daha fazla bilgi edin
 
 Ethereum blokzincirinde bir işlemi imzalamak için biraz sahte ETH'ye ihtiyacımız olacak. ETH almak için [FaucETH](https://fauceth.komputing.org)'e gidebilir ve Goerli hesap adresinizi girebilir, "Request funds" (Fon talep et) seçeneğine tıklayabilir, ardından açılır menüden "Ethereum Testnet Goerli"yi seçebilir ve son olarak tekrar "Request funds" düğmesine tıklayabilirsiniz. Kısa bir süre sonra MetaMask hesabınızda ETH görmelisiniz!
 
-#### Bakiyenizi Kontrol Edin {#check-your-balance}
-
-Bakiyemizin orada olduğunu iki kez kontrol etmek için, [Alchemy'nin oluşturucu aracını](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) kullanarak bir [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) isteği yapalım. Bu, cüzdanımızdaki ETH miktarını döndürecektir. MetaMask hesap adresinizi girip "Send Request" (İstek Gönder) düğmesine tıkladıktan sonra şöyle bir yanıt görmelisiniz:
+#### Bakiyenizi Kontrol Edin
+Bakiyemizin orada olduğundan emin olmak için, [Alchemy'nin korumalı alan aracını (sandbox)](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) kullanarak bir [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) isteği yapalım. Bu, cüzdanımızdaki ETH miktarını döndürecektir. MetaMask hesap adresinizi girip "Send Request" (İsteği Gönder) düğmesine tıkladıktan sonra, şuna benzer bir yanıt görmelisiniz:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**NOT:** Bu sonuç ETH değil, wei cinsindendir. Wei, Ether'in en küçük birimi olarak kullanılır. Wei'den ETH'ye dönüşüm şöyledir: 1 ETH = 10¹⁸ wei. Yani 0xde0b6b3a7640000 değerini ondalık sayıya çevirirsek 1\*10¹⁸ elde ederiz, bu da 1 ETH'ye eşittir.
+**NOT:** Bu sonuç ETH değil, wei cinsindendir. Wei, Ether'in en küçük birimi olarak kullanılır. Wei'den ETH'ye dönüşüm şu şekildedir: 1 ETH = 10¹⁸ wei. Yani 0xde0b6b3a7640000 değerini ondalık sayıya çevirirsek, 1 ETH'ye eşit olan 1\*10¹⁸ elde ederiz.
 
 Oh be! Sahte paramızın hepsi orada! 🤑
-
 ### Adım 5: MetaMask'ı Kullanıcı Arayüzünüze Bağlayın {#step-5-connect-metamask-to-your-ui}
 
 MetaMask cüzdanımız kurulduğuna göre, dapp'imizi ona bağlayalım!
@@ -1539,7 +1533,7 @@ Devam edin ve **Update** (Güncelle) düğmesini test edin!
 Vay canına, eğitimin sonuna geldiniz! Özetlemek gerekirse, şunları nasıl yapacağınızı öğrendiniz:
 
 - Dapp projenize bir MetaMask cüzdanı bağlamak
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API'sini kullanarak akıllı sözleşmenizden veri okumak
+- [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API'sini kullanarak akıllı sözleşmenizden veri okumak
 - MetaMask kullanarak Ethereum işlemlerini imzalamak
 
 Artık kendi özel dapp projenizi oluşturmak için bu eğitimdeki becerileri uygulamak üzere tam donanımlısınız! Her zaman olduğu gibi, herhangi bir sorunuz varsa, yardım için [Alchemy Discord](https://discord.gg/gWuC7zB) üzerinden bize ulaşmaktan çekinmeyin. 🧙‍♂️

@@ -9,8 +9,6 @@ Ethereum.org, web sitesinin çevrilmesine, yazılmasına, tasarlanmasına ve sü
 
 Biz, [Ethereum](/) ekosisteminde gelişmenize ve öğrenmenize yardımcı olurken, aynı zamanda anlamlı katkılarda bulunmanızı ve ilgili pratik deneyimi kazanmanızı sağlayan misafirperver bir topluluğuz!
 
-## Katkıda bulunma yolları {#ways-to-contribute}
-
 **Çeviriler**
 - [Çeviri programına katılın](/contributing/translation-program/) – ethereum.org'u yeni dillere taşımamıza yardımcı olun
 
@@ -22,24 +20,25 @@ Biz, [Ethereum](/) ekosisteminde gelişmenize ve öğrenmenize yardımcı olurke
 
 **İçerik**
 - [İçerik oluşturun/düzenleyin](/contributing/#how-to-update-content) – Yeni sayfalar önerin veya halihazırda burada olanlarda ince ayarlar yapın
-- [Bir oluşturucu makalesi yazın](/contributing/adding-articles/) - [En Son](/latest/) bölümü için bir makale ile katkıda bulunun
+- [Bir oluşturucu makalesi yazın](/contributing/adding-articles/) - [En Son](/latest/) bölümü için bir makale katkısında bulunun
 - [Topluluk kaynakları ekleyin](/contributing/content-resources/) – İlgili bir sayfaya yararlı bir makale veya kaynak ekleyin
 - [Bir rapor önerin](/contributing/adding-reports/) - [Raporlar](/reports/) sayfası için bir araştırma raporu önerin
-- [Bir tasarım kaynağı önerin](/contributing/design/adding-design-resources/) – Yararlı tasarım kaynakları ekleyin, güncelleyin ve silin
+- [Hikayenizi paylaşın](/contributing/adding-community-stories/) - Açık kaynak ve sığınak teknolojileriyle ilgili kişisel deneyimleriniz, Ethereum ekosisteminin hayatınızı nasıl etkilediği veya sizin ve topluluğunuzun Ethereum'u nasıl kullandığı hakkında bir hikaye gönderin
 - [Testler](/contributing/quizzes/) – İlgili bir sayfa için test soru bankaları ekleyin, güncelleyin ve silin
+- [Bir tasarım kaynağı önerin](/contributing/design/adding-design-resources/) – Yararlı tasarım kaynakları ekleyin, güncelleyin ve silin
 - [Bir video önerin](/contributing/adding-videos/) – Video galerisi için eğitici bir video önerin
 
 **Özellik fikirleri**
-- [Bir özellik talep edin](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Yeni bir özellik veya tasarım için sahip olduğunuz fikirleri bize bildirin
+- [Bir özellik isteyin](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Yeni bir özellik veya tasarım için sahip olduğunuz fikirleri bize bildirin
 
 **Ürün listelemeleri**
 - [Bir borsa ekleyin](/contributing/adding-exchanges/) – [Borsa bulucumuza](/get-eth/#country-picker) bir borsa ekleyin
 - [Bir ürün ekleyin](/contributing/adding-products/) – İlgili bir sayfaya bir merkeziyetsiz uygulama (dapp) veya cüzdan ekleyin
 - [Geliştirici araçları ekleyin](/contributing/adding-developer-tools/) – İlgili bir sayfaya bir geliştirici aracı ekleyin
-- [Bir katman 2 (L2) ekleyin](/contributing/adding-layer-2s/) – İlgili bir sayfaya bir katman 2 (L2) ekleyin
+- [Bir katman 2 ekleyin](/contributing/adding-layer-2s/) – İlgili bir sayfaya bir katman 2 (l2) ekleyin
 - [Bir staking ürünü veya hizmeti ekleyin](/contributing/adding-staking-products/) – Bireysel staking, havuzlu staking veya hizmet olarak staking'i kolaylaştırmaya yardımcı olan bir proje ekleyin
 - [Bir cüzdan ekleyin](/contributing/adding-wallets/) – [Cüzdan bulma sayfası](/wallets/find-wallet/) için bir cüzdan ekleyin
-- [DeSci sayfamız için bir proje önerin](/contributing/adding-desci-projects/) – Ethereum üzerinde inşa edilmiş, merkeziyetsiz bilime (DeSci) katkıda bulunan bir proje ekleyin
+- [DeSci sayfamız için bir proje önerin](/contributing/adding-desci-projects/) – Merkeziyetsiz bilime (DeSci) katkıda bulunan, Ethereum üzerinde oluşturulmuş bir proje ekleyin
 - [Bir kaynak ekleyin](/contributing/adding-resources/) – İlgili herhangi bir sayfaya yararlı bir kaynak ekleyin
 
 Sorularınız mı var? 🤔 [Discord sunucumuza](https://discord.gg/ethereum-org) katılın

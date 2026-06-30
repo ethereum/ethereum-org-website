@@ -14,7 +14,7 @@ ETH **ihracı**, daha önce var olmayan ETH'yi yaratma sürecidir. ETH **yakım�
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="ETH ihracı özeti">
 
 - Hisse Kanıtı'na (PoS) geçmeden önce, madencilere günde yaklaşık 13.000 ETH ihraç ediliyordu
 - Stake edilen toplam yaklaşık 14 milyon ETH'ye dayanarak, staker'lara günde yaklaşık 1.700 ETH ihraç edilmektedir
