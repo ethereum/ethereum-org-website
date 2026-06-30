@@ -116,6 +116,18 @@ export const getResources = async ({
           href: "https://www.growthepie.com/ethereum-ecosystem/metrics",
           imgSrc: IconGrowthepie,
         },
+        {
+          title: "Rollup.wtf",
+          description: t("page-resources-network-layer2-rollupwtf-description"),
+          href: "https://rollup.wtf",
+          imgSrc: IconL2beat,
+        },
+        {
+          title: "L2Safety",
+          description: t("page-resources-network-layer2-l2safety-description"),
+          href: "https://l2safety.info",
+          imgSrc: IconEthGlyphBlack,
+        },
       ],
     },
     {
@@ -226,6 +238,12 @@ export const getResources = async ({
           description: t("page-resources-gas-gasfees-description"),
           href: "https://www.gasfees.io/",
           imgSrc: IconEthGlyphBlueCircle,
+        },
+        {
+          title: "L2 Fees",
+          description: t("page-resources-gas-l2fees-description"),
+          href: "https://l2fees.info",
+          imgSrc: IconGasTracker,
         },
       ],
     },
@@ -343,7 +361,7 @@ export const getResources = async ({
         },
         {
           title: "Strategic Ethereum Reserve",
-          description: t("page-resources-reserves-cryptowerk-description"),
+          description: t("page-resources-adoption-reserves-description"),
           href: "https://www.strategicethreserve.xyz",
           imgSrc: IconReserves,
         },
@@ -353,9 +371,9 @@ export const getResources = async ({
       title: t("page-resources-wallets-title"),
       items: [
         {
-          title: "Wallet Beat",
-          description: t("page-resources-wallets-wallet-beat-description"),
-          href: "https://wallet.page/",
+          title: "JiffyScan",
+          description: t("page-resources-wallets-jiffyscan-description"),
+          href: "https://jiffyscan.xyz",
           imgSrc: IconWalletBeat,
         },
         {
@@ -364,6 +382,12 @@ export const getResources = async ({
           href: "https://www.bundlebear.com",
           className: "dark:[&_img]:invert",
           imgSrc: IconBundleBear,
+        },
+        {
+          title: "ERC-4337",
+          description: t("page-resources-wallets-erc4337-description"),
+          href: "https://www.erc4337.io",
+          imgSrc: IconEthGlyphEOrg,
         },
       ],
     },
@@ -382,10 +406,16 @@ export const getResources = async ({
       ),
       items: [
         {
-          title: "Ethereum Roadmap",
-          description: t("page-resources-roadmap-ethroadmap-description"),
-          href: "https://ethroadmap.com",
+          title: "Forkcast",
+          description: t("page-resources-roadmap-forkcast-description"),
+          href: "https://forkcast.org",
           imgSrc: IconEthGlyphRainbowFrame,
+        },
+        {
+          title: "EIPsInsight",
+          description: t("page-resources-roadmap-eipsinsight-description"),
+          href: "https://eipsinsight.com",
+          imgSrc: IconEthGlyphBlack,
         },
       ],
     },
@@ -416,6 +446,17 @@ export const getResources = async ({
           description: t("page-resources-blobs-blobsguru-description"),
           href: "https://blobs.guru",
           imgSrc: IconBlobsGuru,
+        },
+      ],
+    },
+    {
+      title: t("page-resources-mempool-title"),
+      items: [
+        {
+          title: "mempool.pics",
+          description: t("page-resources-mempool-mempoolpics-description"),
+          href: "https://mempool.pics",
+          imgSrc: IconEthGlyphBlack,
         },
       ],
     },
@@ -463,19 +504,17 @@ export const getResources = async ({
           href: "https://www.validatorqueue.com",
           imgSrc: IconEthGlyphBlueCircle,
         },
+        {
+          title: "Ethernets Node Crawler",
+          description: t("page-resources-nodes-ethernets-description"),
+          href: "https://www.ethernets.io",
+          imgSrc: IconNodewatch,
+        },
       ],
     },
     {
       title: t("page-resources-network-resilience-title"),
       items: [
-        {
-          title: "Neutrality Watch",
-          description: t(
-            "page-resources-network-resilience-neutralitywatch-description"
-          ),
-          href: "https://eth.neutralitywatch.com",
-          imgSrc: IconEthGlyphBlueCircle,
-        },
         {
           title: "Project Sunshine",
           description: t(
