@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { useCopyToClipboard } from "usehooks-ts"
 
+import { logger } from "@/lib/utils/logger"
+
 export type UseClipboardOptions = {
   /**
    * timeout delay (in ms) to switch back to initial state once copied.
@@ -21,7 +23,7 @@ export const useClipboard = ({ timeout = 1500 }: UseClipboardOptions = {}) => {
         setHasCopied(false)
       }, timeout)
     } catch (error) {
-      console.error("Failed to copy!", error)
+      logger.error("Failed to copy to clipboard", error)
     }
   }
 
