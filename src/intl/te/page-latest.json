@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "ఎథీరియం పర్యావరణ వ్యవస్థ నుండి నిర్మాత వనరులు, సాధనాలు మరియు పరిణామాలు.",
-  "page-latest-title": "నిర్మాత నవీకరణలు",
-  "page-latest-subtitle": "ఎథీరియం నిర్మాత పర్యావరణ వ్యవస్థ అంతటా సరికొత్త వనరులు, సాధనాలు మరియు పరిణామాలపై నిపుణుల దృక్కోణాల కోసం ఒక ఉమ్మడి వేదిక.",
+  "page-latest-meta-description": "ఎథీరియం కమ్యూనిటీ నుండి తాజా బ్లాగ్ పోస్ట్‌లు, వార్తలు మరియు అప్‌డేట్‌లు, అలాగే నిర్మాత ఎకోసిస్టమ్ అంతటా నిపుణుల దృక్కోణాలు.",
+  "page-latest-title": "తాజా ఎథీరియం అప్‌డేట్‌లు",
+  "page-latest-subtitle": "కమ్యూనిటీ నుండి తాజా బ్లాగ్ పోస్ట్‌లు, వార్తలు మరియు అప్‌డేట్‌లు, అలాగే ఎథీరియం నిర్మాత ఎకోసిస్టమ్ అంతటా అభివృద్ధిపై నిపుణుల దృక్కోణాలు.",
   "page-latest-no-posts": "పోస్ట్‌లు ఏవీ కనుగొనబడలేదు.",
   "page-latest-read-more": "మరింత చదవండి",
   "page-latest-minute-read": "{minutes} నిమిషాల పఠనం",
-  "page-latest-team-attribution": "EF నిర్మాత వృద్ధి"
+  "page-latest-team-attribution": "EF నిర్మాత వృద్ధి",
+  "page-latest-cta-submit-resource": "ఒక వనరును సమర్పించండి",
+  "page-latest-cta-propose-article": "ఒక ఆర్టికల్‌ను ప్రతిపాదించండి",
+  "page-latest-highlights-heading": "ముఖ్యాంశాలు",
+  "page-latest-articles-heading": "తాజా ఎథీరియం ఆర్టికల్స్",
+  "page-latest-sources-heading": "ఈ వెబ్‌సైట్‌లలో మరింత చదవండి",
+  "page-latest-see-more": "మరిన్ని చూడండి ({count})",
+  "page-latest-sort-label": "ఆర్టికల్స్‌ను క్రమబద్ధీకరించండి",
+  "page-latest-sort-newest": "ముందుగా సరికొత్తవి",
+  "page-latest-sort-oldest": "ముందుగా పాతవి",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "కొన్ని ఆర్టికల్స్ వాటి అసలు భాషలో (ఇంగ్లీష్) చూపబడ్డాయి.",
+  "page-latest-suggest-heading": "ఒక వనరును సూచించండి",
+  "page-latest-suggest-description": "ఇక్కడ జాబితా చేయబడాల్సిన ఎథీరియం న్యూస్‌లెటర్ లేదా పరిశోధనా ప్రచురణ మీకు తెలుసా, లేదా మీ మనస్సులో ఏదైనా నిర్మాత ఆర్టికల్ అంశం ఉందా? మీ వనరును సమర్పించడానికి ఒక ఇష్యూను తెరవండి."
 }

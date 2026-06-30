@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-29T23:54:11.589Z",
+  "englishManifestHash": "fe5d8ae30c4f",
+  "placeholderOrder": [
+    "LINK-6c7ff9",
+    "LINK-b2010b",
+    "CODE-f798be",
+    "LINK-a133eb",
+    "LINK-5b036f",
+    "CODE-5cf7d7",
+    "CODE-dbd3a4",
+    "CODE-c0bc1e",
+    "LINK-68d408",
+    "LINK-e258d6",
+    "LINK-b2010b",
+    "CODE-9af299",
+    "LINK-f06685",
+    "CODE-9af299",
+    "CODE-9af299"
+  ],
+  "placeholderMap": {
+    "CODE-f798be": {
+      "type": "inline-code",
+      "values": {
+        "content": "/latest/"
+      }
+    },
+    "CODE-5cf7d7": {
+      "type": "inline-code",
+      "values": {
+        "content": "lang"
+      }
+    },
+    "CODE-dbd3a4": {
+      "type": "inline-code",
+      "values": {
+        "content": "en"
+      }
+    },
+    "CODE-c0bc1e": {
+      "type": "inline-code",
+      "values": {
+        "content": "es"
+      }
+    },
+    "CODE-9af299": {
+      "type": "inline-code",
+      "values": {
+        "content": "community-stories"
+      }
+    },
+    "LINK-6c7ff9": {
+      "type": "link",
+      "values": {
+        "url": "/stories/"
+      }
+    },
+    "LINK-b2010b": {
+      "type": "link",
+      "values": {
+        "url": "/videos/"
+      }
+    },
+    "LINK-a133eb": {
+      "type": "link",
+      "values": {
+        "url": "/community/code-of-conduct/"
+      }
+    },
+    "LINK-5b036f": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/"
+      }
+    },
+    "LINK-68d408": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/"
+      }
+    },
+    "LINK-e258d6": {
+      "type": "link",
+      "values": {
+        "url": "/stories/"
+      }
+    },
+    "LINK-f06685": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-videos/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-29T23:54:11.589Z",
+      "status": "success"
+    }
+  }
+}
