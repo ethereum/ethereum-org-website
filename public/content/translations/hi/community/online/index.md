@@ -52,7 +52,7 @@ lang: hi
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - Web3 क्रिएटर्स समुदाय जहां बिल्डर्स, औद्योगिक दिग्गज और इथेरियम के प्रति उत्साही लोग मिलते हैं। हम Web3 विकास, डिज़ाइन और संस्कृति के प्रति भावुक हैं। आएं और हमारे साथ निर्माण करें।</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity विकास के लिए चैट (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- प्रश्न और उत्तर फ़ोरम</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- विकेंद्रीकृत प्रश्न और उत्तर फ़ोरम</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- विकेंद्रीकृत प्रश्न और उत्तर फ़ोरम</i></SocialListItem>
 
 ## यूट्यूब और X (पूर्व में ट्विटर) {#youtube-and-twitter}
 

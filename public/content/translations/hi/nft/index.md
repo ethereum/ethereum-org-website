@@ -101,16 +101,13 @@ NFT से संबंधित सुरक्षा समस्याएँ 
   सुरक्षा के बारे में अधिक जानकारी
 </ButtonLink>
 
-## आगे की पढ़ाई {#further-reading}
-
+## आगे पढ़ें
 - [NFT के लिए शुरुआती गाइड](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _लिंडा ज़ी, जनवरी 2020_
 - [Etherscan NFT ट्रैकर](https://etherscan.io/nft-top-contracts)
 - [Blockscout NFT ट्रैकर](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [ERC-721 टोकन मानक](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 टोकन मानक](/developers/docs/standards/tokens/erc-1155/)
-- [लोकप्रिय NFT ऐप्स और टूल](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 - [NFT मानक विकी](https://nft-standards.gitbook.io/nft-standards-wiki)
-
 ## अन्य संसाधन {#other-resources}
 
 - [NFTScan](https://nftscan.com/)

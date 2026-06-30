@@ -371,7 +371,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-जब कोई सर्वसम्मति क्लाइंट जमा अनुबंध को पढ़ने और सत्यापकों की पहचान करने के लिए निष्पादन क्लाइंट से जुड़ता है, तो यह अन्य बीकन नोड साथियों से भी जुड़ता है और उत्पत्ति से सर्वसम्मति स्लॉट को सिंक करना शुरू करता है। एक बार जब बीकन नोड वर्तमान एपॉक तक पहुंच जाता है, तो बीकन API आपके सत्यापकों के लिए उपयोग करने योग्य हो जाता है। [बीकन नोड API](https://eth2docs.vercel.app/) के बारे में अधिक जानें।
+जब कोई सर्वसम्मति क्लाइंट जमा अनुबंध को पढ़ने और सत्यापकों की पहचान करने के लिए निष्पादन क्लाइंट से जुड़ता है, तो यह अन्य बीकन नोड साथियों से भी जुड़ता है और उत्पत्ति से सर्वसम्मति स्लॉट को सिंक करना शुरू करता है। एक बार जब बीकन नोड वर्तमान एपॉक तक पहुंच जाता है, तो बीकन API आपके सत्यापकों के लिए उपयोग करने योग्य हो जाता है। [बीकन नोड API](https://ethereum.github.io/beacon-APIs) के बारे में अधिक जानें।
 
 ### सत्यापक जोड़ना {#adding-validators}
 
@@ -454,7 +454,7 @@ _यह सर्वसम्मति परत सत्यापक नोड
 - [इथेरियम स्टेकिंग गाइड](https://github.com/SomerEsat/ethereum-staking-guides) - _सोमर एसैट, अक्सर अपडेट किया जाता है_
 - [गाइड | मेननेट पर इथेरियम स्टेकिंग के लिए सत्यापक कैसे सेट करें](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, अक्सर अपडेट किया जाता है_
 - [टेस्टनेट पर सत्यापक चलाने पर EthStaker गाइड](https://github.com/remyroy/ethstaker#guides) – _EthStaker, नियमित रूप से अपडेट किया जाता है_
-- [इथेरियम नोड्स के लिए नमूना AWS ब्लॉकचेन नोड रनर ऐप](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, अक्सर अपडेट किया जाता है_
+- [इथेरियम नोड्स के लिए नमूना AWS ब्लॉकचेन नोड रनर ऐप](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, अक्सर अपडेट किया जाता है_
 - [नोड ऑपरेटरों के लिए द मर्ज FAQ](https://notes.ethereum.org/@launchpad/node-faq-merge) - _जुलाई 2022_
 - [इथेरियम पूर्ण मान्य नोड होने के लिए हार्डवेयर आवश्यकताओं का विश्लेषण](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– अल्बर्ट पलाऊ, 24 सितंबर 2018_
 - [इथेरियम पूर्ण नोड्स चलाना: मुश्किल से प्रेरित लोगों के लिए एक गाइड](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– जस्टिन लेरौक्स, 7 नवंबर 2019_

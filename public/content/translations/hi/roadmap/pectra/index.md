@@ -119,11 +119,9 @@ _पेक्ट्रा अपग्रेड में क्या शाम
 
 _इथेरियम पेक्ट्रा अपग्रेड: स्टेकर्स को क्या जानना चाहिए — Blockdaemon_
 
-## आगे की पढ़ाई {#further-reading}
-
+## आगे पढ़ें
 - [इथेरियम रोडमैप](/roadmap/)
 - [पेक्ट्रा FAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf जानकारी पृष्ठ](https://pectra.wtf)
-- [पेक्ट्रा स्टेकर अनुभव को कैसे बढ़ाता है](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [पेक्ट्रा स्टेकर्स के अनुभव को कैसे बेहतर बनाता है](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 जानकारी पृष्ठ](https://eip7702.io/)
 - [पेक्ट्रा डेवनेट्स](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

@@ -1,0 +1,487 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/stories/digital-feudalism/index.md",
+  "generatedAt": "2026-06-30T00:56:56.107Z",
+  "rootHash": "15304f44b25f",
+  "tree": {
+    "contentHash": "a7ae2c06c270",
+    "anchorHash": "9a6bf8c8da38",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d9fd5dde7f2f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "70434afbc7a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "202792ba700c"
+      },
+      "frontmatter:team": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "09eb7c01f4e4"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dad283c19568"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0e398cab67f3"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "12c8bbc3b703"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "0570de5b7f0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "141635f29454",
+        "anchorHash": "825fee3fb192"
+      },
+      "prose:2": {
+        "contentHash": "cd7871445b15",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "guests-in-our-own-worlds": {
+        "contentHash": "1cf969219d4d",
+        "anchorHash": "c719bbd47687",
+        "labelHash": "0badaa16c60c",
+        "children": {
+          "_label": {
+            "contentHash": "0badaa16c60c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "a2e5855f9484",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "09dcacd637da",
+            "anchorHash": "a7427a349b71"
+          },
+          "prose:5": {
+            "contentHash": "ea8571849da7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "dd4374e464eb",
+            "anchorHash": "00519ca59f06"
+          },
+          "prose:6": {
+            "contentHash": "63d71b9106a7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:2": {
+            "contentHash": "89e8a9e24397",
+            "anchorHash": "e343e3be18ad"
+          },
+          "prose:7": {
+            "contentHash": "618dd2697dfe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:3": {
+            "contentHash": "52b815d168ae",
+            "anchorHash": "4ca5b40de79d"
+          },
+          "prose:8": {
+            "contentHash": "de1d8fd4d723",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:10": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "fd392f53ddc9",
+            "children": {
+              "attr:id": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ad18448b6245"
+              }
+            }
+          },
+          "prose:1": {
+            "contentHash": "211ea5f57e9d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "image:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "image:2",
+          "prose:7",
+          "image:3",
+          "prose:8",
+          "component:10",
+          "prose:1",
+          "image:0"
+        ]
+      },
+      "what-happens-when-players-control-their-worlds": {
+        "contentHash": "bf2e50802d30",
+        "anchorHash": "acda2ae00300",
+        "labelHash": "8ea7874928be",
+        "children": {
+          "_label": {
+            "contentHash": "8ea7874928be",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:14": {
+            "contentHash": "96beb741e516",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "853d8614c995",
+            "anchorHash": "3def95b46c66"
+          },
+          "prose:15": {
+            "contentHash": "276861a61267",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "62006b18caa4",
+            "anchorHash": "d127d53c7f40"
+          },
+          "prose:16": {
+            "contentHash": "1a52b0be3880",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "d5dd4ef0017f",
+            "anchorHash": "78cafc8df407"
+          },
+          "prose:17": {
+            "contentHash": "452655f5205d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "c09e5feb70f2",
+            "anchorHash": "6ffb00876c7e"
+          },
+          "prose:18": {
+            "contentHash": "e3a574c6a3ae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:4": {
+            "contentHash": "f4d72131fd7f",
+            "anchorHash": "e5fb5fb9e476"
+          },
+          "prose:19": {
+            "contentHash": "9178c6420b64",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:5": {
+            "contentHash": "c8ec3c26602f",
+            "anchorHash": "0aceb3af7365"
+          },
+          "prose:20": {
+            "contentHash": "6a0a49e0d418",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "fde35f2f4967",
+            "anchorHash": "3af382a94f20"
+          },
+          "link:7": {
+            "contentHash": "739b725931bd",
+            "anchorHash": "491c8d00045f"
+          },
+          "prose:21": {
+            "contentHash": "c323b49f3ab4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "4981a8e27fb5",
+            "anchorHash": "90b2bd2f9cd3"
+          },
+          "prose:22": {
+            "contentHash": "7bcd86625fbc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "af85365331ce",
+            "anchorHash": "bebbfa59ebe3"
+          },
+          "prose:23": {
+            "contentHash": "a999b29f7104",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "c09e5feb70f2",
+            "anchorHash": "6ffb00876c7e"
+          },
+          "prose:24": {
+            "contentHash": "bab4deb7c0f5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:11": {
+            "contentHash": "e6d5c7eaed04",
+            "anchorHash": "9c8826964c6c"
+          },
+          "prose:25": {
+            "contentHash": "484c5059faa7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:12": {
+            "contentHash": "de8007bb0a4c",
+            "anchorHash": "cf4e39c1ce3d"
+          },
+          "prose:26": {
+            "contentHash": "7733c0358d3d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:13": {
+            "contentHash": "acdfb8c6d8fb",
+            "anchorHash": "c21c379af656"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:14",
+          "image:0",
+          "prose:15",
+          "link:1",
+          "prose:16",
+          "link:2",
+          "prose:17",
+          "link:3",
+          "prose:18",
+          "image:4",
+          "prose:19",
+          "image:5",
+          "prose:20",
+          "link:6",
+          "link:7",
+          "prose:21",
+          "link:8",
+          "prose:22",
+          "link:9",
+          "prose:23",
+          "link:10",
+          "prose:24",
+          "image:11",
+          "prose:25",
+          "link:12",
+          "prose:26",
+          "image:13"
+        ]
+      },
+      "making-crypto-disappear": {
+        "contentHash": "e173778d7d35",
+        "anchorHash": "7b44823cca7e",
+        "labelHash": "0af7a11a3d0c",
+        "children": {
+          "_label": {
+            "contentHash": "0af7a11a3d0c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5c485a08866a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "243c1a50f336",
+            "children": {
+              "attr:id": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "b3f92da4f84e"
+              }
+            }
+          },
+          "prose:1": {
+            "contentHash": "0cf4ee5fd225",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "cc91df226d10",
+            "anchorHash": "6998af25ce80"
+          },
+          "prose:2": {
+            "contentHash": "9c802f7aed2f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:6": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "0a4acb7b3757",
+            "children": {
+              "attr:id": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "70ea515c309b"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "component:6"
+        ]
+      },
+      "a-world-that-cant-be-taken-away": {
+        "contentHash": "54b485001181",
+        "anchorHash": "1cea07f4ad0f",
+        "labelHash": "2c20732e5e7c",
+        "children": {
+          "_label": {
+            "contentHash": "2c20732e5e7c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "96f4ba8c54ff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "f3bb77b869ce",
+            "children": {
+              "attr:id": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "c12caab666bf"
+              }
+            }
+          },
+          "component:4": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "573bf934b828",
+            "children": {
+              "attr:id": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "372036ba3360"
+              }
+            }
+          },
+          "prose:2": {
+            "contentHash": "0c0b8903946a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "0063206834c0",
+            "anchorHash": "2491f4c9b955"
+          },
+          "prose:3": {
+            "contentHash": "ba66d6ea22f3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:1": {
+            "contentHash": "e4ca8b85a00d",
+            "anchorHash": "20f3c3c5a99e"
+          },
+          "prose:4": {
+            "contentHash": "9ab60a9671f8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:10": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "9b9313002b7f",
+            "children": {
+              "attr:id": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "5280162c700a"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "prose:0",
+          "component:4",
+          "prose:2",
+          "image:0",
+          "prose:3",
+          "image:1",
+          "prose:4",
+          "component:10"
+        ]
+      },
+      "declaring-independence": {
+        "contentHash": "7ab47f60a943",
+        "anchorHash": "ca1342dd9024",
+        "labelHash": "2ef3ccf632f5",
+        "children": {
+          "_label": {
+            "contentHash": "2ef3ccf632f5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "bf701877f956",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "afbd0e003ba3",
+            "anchorHash": "4a4fd12e8fb5"
+          },
+          "component:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
+            "contentHash": "1afbdbc4c474",
+            "anchorHash": "0ebfae2d7d4c",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d127d53c7f40"
+              },
+              "prose:0": {
+                "contentHash": "1c0bab4a4915",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0",
+          "component:3",
+          "component:4"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:team",
+      "frontmatter:tags",
+      "frontmatter:published",
+      "frontmatter:image",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "guests-in-our-own-worlds",
+      "what-happens-when-players-control-their-worlds",
+      "making-crypto-disappear",
+      "a-world-that-cant-be-taken-away",
+      "declaring-independence"
+    ]
+  },
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+}

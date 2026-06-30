@@ -28,7 +28,7 @@ published: 2022-04-01
 
 [ऑप्टिमिस्टिक रोलअप्स](/developers/docs/scaling/optimistic-rollups) को हर ऐतिहासिक लेन-देन का रिकॉर्ड सुरक्षित रखना होता है ताकि कोई भी उन्हें देख सके और सत्यापित कर सके कि वर्तमान स्थिति सही है।
 इथेरियम मेननेट में डेटा प्राप्त करने का सबसे सस्ता तरीका इसे कॉल डेटा के रूप में लिखना है।
-यह समाधान [ऑप्टिमिज़्म](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) और [आर्बिट्रम](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) दोनों द्वारा चुना गया था।
+यह समाधान [ऑप्टिमिज़्म](https://docs.optimism.io/op-stack/protocol/overview) और [आर्बिट्रम](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction) दोनों द्वारा चुना गया था।
 
 ### लेयर 2 (l2) लेन-देन की लागत {#cost-of-l2-transactions}
 
