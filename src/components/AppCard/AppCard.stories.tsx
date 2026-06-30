@@ -145,6 +145,20 @@ export const WithFallbackIcon: Story = {
   },
 }
 
+// Broken image URL triggers onError fallback
+export const BrokenImageFallback: Story = {
+  args: {
+    name: "Broken Thumbnail Tool",
+    description:
+      "This card has a thumbnail URL that fails to load (simulating an S3 outage). It should show the fallback icon instead of a broken image.",
+    thumbnail: "https://s3-dcl1.ethquokkaops.io/does-not-exist/broken.png",
+    tags: ["Testing", "Fallback"],
+    layout: "horizontal",
+    imageSize: "thumbnail",
+    href: "/apps/broken",
+  },
+}
+
 // As link vs static
 export const AsLink: Story = {
   args: {
