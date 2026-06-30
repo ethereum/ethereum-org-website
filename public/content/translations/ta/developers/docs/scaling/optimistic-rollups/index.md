@@ -253,17 +253,14 @@ ii. ஆப்டிமிஸ்டிக் ரோல்அப்களைப்
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## ஆப்டிமிஸ்டிக் ரோல்அப்கள் பற்றிய கூடுதல் வாசிப்பு {#further-reading-on-optimistic-rollups}
-
+## ஆப்டிமிஸ்டிக் ரோல்அப்கள் பற்றிய கூடுதல் வாசிப்பு
 - [ஆப்டிமிஸ்டிக் ரோல்அப்கள் எவ்வாறு செயல்படுகின்றன (முழுமையான வழிகாட்டி)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [தொகுதிச்சங்கிலி ரோலப் என்றால் என்ன? ஒரு தொழில்நுட்ப அறிமுகம்](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [ஆர்பிட்ரம் பற்றிய அத்தியாவசிய வழிகாட்டி](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [எத்திரியம் ரோலப்களுக்கான நடைமுறை வழிகாட்டி](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [எத்திரியம் L2-களில் மோசடி சான்றுகளின் நிலை](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
 - [ஆப்டிமிசத்தின் ரோலப் உண்மையில் எவ்வாறு செயல்படுகிறது?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [OVM ஆழமான பார்வை](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [OVM பற்றிய விரிவான ஆய்வு](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [ஆப்டிமிஸ்டிக் மெய்நிகர் இயந்திரம் என்றால் என்ன?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
 ## பயிற்சிகள்: எத்திரியத்தில் ஆப்டிமிஸ்டிக் ரோல்அப்கள் மற்றும் பாலங்கள் {#tutorials}
 
 - [ஆப்டிமிசம் நிலையான பாலம் ஒப்பந்த ஒத்திகை](/developers/tutorials/optimism-std-bridge-annotated-code/) _– L1 மற்றும் L2 இடையே சொத்துக்களை நகர்த்துவதற்கான ஆப்டிமிசம் நிலையான பாலத்தின் சிறுகுறிப்பு குறியீடு ஒத்திகை._

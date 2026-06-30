@@ -133,20 +133,17 @@ _பொதுவாக நெறிமுறைகள் மற்றும் [
 - [Tally.xyz-இன் DAO-களின் பட்டியல்](https://www.tally.xyz/explore)
 - [DeGov.AI-இன் DAO-களின் பட்டியல்](https://apps.degov.ai/)
 
-### ஒரு DAO-வைத் தொடங்கவும் {#start-a-dao}
-
-- [DAOHaus உடன் ஒரு DAO-வை உருவாக்கவும்](https://app.daohaus.club/summon)
-- [Tally உடன் ஒரு கவர்னர் DAO-வைத் தொடங்கவும்](https://www.tally.xyz/get-started)
+### ஒரு DAO-வைத் தொடங்கவும்
+- [DAOHaus மூலம் ஒரு DAO-வை உருவாக்கவும்](https://app.daohaus.club/summon)
+- [Tally மூலம் ஒரு Governor DAO-வைத் தொடங்கவும்](https://www.tally.xyz/get-started)
 - [Aragon-ஆல் இயக்கப்படும் DAO-வை உருவாக்கவும்](https://aragon.org/product)
-- [ஒரு காலனியைத் தொடங்கவும்](https://colony.io/)
-- [DAOstack-இன் முழுப்பரிமாணக் கருத்தொற்றுமையுடன் ஒரு DAO-வை உருவாக்கவும்](https://alchemy.daostack.io/daos/create)
+- [ஒரு colony-ஐத் தொடங்கவும்](https://colony.io/)
 - [DeGov Launcher மூலம் ஒரு DAO-வைத் தொடங்கவும்](https://docs.degov.ai/integration/deploy)
-
 ## மேலும் படிக்க {#further-reading}
 
 ### DAO கட்டுரைகள் {#dao-articles}
 
-- [DAO என்றால் என்ன?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [DAO என்றால் என்ன?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [DAO-களின் வீடு](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO என்றால் என்ன, அது எதற்காக?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [DAO-ஆல் இயக்கப்படும் டிஜிட்டல் சமூகத்தை எவ்வாறு தொடங்குவது](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
