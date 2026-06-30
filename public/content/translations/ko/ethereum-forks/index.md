@@ -86,15 +86,13 @@ authors: ["닉소"]
 
 [푸사카에 대해 더 알아보기](/roadmap/fusaka/)
 
-### 프라하-엘렉트라 ("펙트라") {#pectra}
-
 <NetworkUpgradeSummary name="pectra" />
 
-프라하-엘렉트라("펙트라") 업그레이드에는 모든 사용자, 레이어 2 네트워크, 스테이커 및 노드 운영자의 경험을 향상시키는 것을 목표로 하는 이더리움 프로토콜에 대한 몇 가지 개선 사항이 포함되었습니다.
+프라하-엘렉트라("펙트라") 업그레이드에는 모든 사용자, 레이어 2 (l2) 네트워크, 스테이커 및 노드 운영자의 경험을 향상시키는 것을 목표로 하는 이더리움 프로토콜에 대한 몇 가지 개선 사항이 포함되었습니다.
 
-스테이킹은 복리 검증자 계정과 실행 인출 주소를 사용하여 스테이킹된 자금에 대한 제어력을 향상시키는 업그레이드를 받았습니다. EIP-7251은 단일 검증자의 최대 유효 잔고를 2048로 늘려 스테이커의 자본 효율성을 개선했습니다. EIP-7002는 실행 계정이 자금의 일부를 인출하거나 종료하는 것을 포함하여 검증자 작업을 안전하게 트리거할 수 있도록 하여 ETH 스테이커의 경험을 개선하는 동시에 노드 운영자의 책임성을 강화하는 데 도움을 주었습니다.
+스테이킹은 검증자 계정의 복리 적용과 실행 인출 주소를 사용한 스테이킹된 자금에 대한 제어력 향상으로 업그레이드되었습니다. EIP-7251은 단일 검증자의 최대 유효 잔고를 2048로 늘려 스테이커의 자본 효율성을 향상시켰습니다. EIP-7002는 실행 계정이 종료 또는 자금의 일부 인출을 포함한 검증자 작업을 안전하게 트리거할 수 있도록 하여 ETH 스테이커의 경험을 개선하는 동시에 노드 운영자의 책임성을 강화하는 데 도움을 주었습니다.
 
-업그레이드의 다른 부분은 일반 사용자의 경험을 개선하는 데 중점을 두었습니다. EIP-7702는 일반적인 비 스마트 컨트랙트 계정([EOA](/glossary/#eoa))이 스마트 컨트랙트와 유사한 코드를 실행할 수 있는 기능을 도입했습니다. 이를 통해 트랜잭션 일괄 처리, 가스 스폰서십, 대체 인증, 프로그래밍 가능한 지출 제어, 계정 복구 메커니즘 등 기존 이더리움 계정에 대한 무한한 새로운 기능이 열렸습니다.
+업그레이드의 다른 부분은 일반 사용자의 경험을 개선하는 데 중점을 두었습니다. EIP-7702는 일반 비 스마트 컨트랙트 계정([외부 소유 계정(EOA)](/glossary/#eoa))이 스마트 컨트랙트와 유사한 코드를 실행할 수 있는 기능을 도입했습니다. 이는 트랜잭션 일괄 처리, 가스 대납, 대체 인증, 프로그래밍 가능한 지출 제어, 계정 복구 메커니즘 등 기존 이더리움 계정에 대한 무한한 새로운 기능을 열어주었습니다.
 
 <ExpandableCard title="펙트라 EIPs" contentPreview="이 업그레이드에 포함된 공식 개선 사항입니다.">
 
@@ -104,7 +102,7 @@ authors: ["닉소"]
   <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>EOA 계정 코드 설정</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>블롭 처리량 증가</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>콜 데이터 비용 증가</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>실행 계층(EL) 구성 파일에 블롭 일정 추가</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>EL 구성 파일에 블롭 일정 추가</em></li>
 </ul>
 
 더 나은 스테이킹 경험:
@@ -126,13 +124,11 @@ authors: ["닉소"]
 
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
 - [펙트라가 스테이킹 경험을 향상시키는 방법](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [엘렉트라 업그레이드 사양 읽기](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
+- [엘렉트라 업그레이드 사양 읽어보기](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [프라하-엘렉트라("펙트라") FAQ](/roadmap/pectra/)
 
 <Divider />
-
 ## 2024 {#2024}
 
 ### 칸쿤-데넵 ("덴쿤") {#dencun}

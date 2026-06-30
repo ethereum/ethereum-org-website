@@ -133,20 +133,17 @@ _일반적으로 프로토콜과 [탈중앙화 애플리케이션 (dapp)](/gloss
 - [Tally.xyz의 DAO 목록](https://www.tally.xyz/explore)
 - [DeGov.AI의 DAO 목록](https://apps.degov.ai/)
 
-### DAO 시작하기 {#start-a-dao}
-
-- [DAOHaus로 DAO 소환하기](https://app.daohaus.club/summon)
-- [Tally로 Governor DAO 시작하기](https://www.tally.xyz/get-started)
-- [Aragon 기반 DAO 만들기](https://aragon.org/product)
+### DAO 시작하기
+- [DAOHaus로 DAO 생성하기](https://app.daohaus.club/summon)
+- [Tally로 거버너 DAO 시작하기](https://www.tally.xyz/get-started)
+- [Aragon 기반 DAO 생성하기](https://aragon.org/product)
 - [Colony 시작하기](https://colony.io/)
-- [DAOstack의 홀로그래픽 합의로 DAO 만들기](https://alchemy.daostack.io/daos/create)
 - [DeGov Launcher로 DAO 출시하기](https://docs.degov.ai/integration/deploy)
-
 ## 더 읽을거리 {#further-reading}
 
 ### DAO 관련 아티클 {#dao-articles}
 
-- [DAO란 무엇인가요?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [DAO란 무엇인가요?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [DAO의 집(House of DAOs)](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO란 무엇이며 어디에 쓰이나요?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [DAO 기반 디지털 커뮤니티를 시작하는 방법](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

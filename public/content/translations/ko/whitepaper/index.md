@@ -13,13 +13,13 @@ _작성된 지 수년이 지났지만, 아래의 원본 백서는 [이더리움]
 
 ## 차세대 스마트 컨트랙트 및 탈중앙화 애플리케이션 플랫폼 {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
-2009년 사토시 나카모토의 비트코인 개발은 뒷받침하는 자산이나 "[내재 가치](https://bitcoinmagazine.com/culture/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it)"가 없으면서도 중앙화된 발행자나 통제자가 없는 디지털 자산의 첫 번째 사례로서, 돈과 통화 분야의 급진적인 발전으로 종종 찬사를 받아왔습니다. 그러나 비트코인 실험에서 틀림없이 더 중요하다고 할 수 있는 또 다른 부분은 분산 합의의 도구로서 기반이 되는 블록체인 기술이며, 비트코인의 이러한 다른 측면으로 관심이 빠르게 옮겨가기 시작했습니다. 흔히 언급되는 블록체인 기술의 대안적 애플리케이션에는 사용자 지정 통화 및 금융 상품을 나타내기 위해 블록체인 상의 디지털 자산을 사용하는 것("[컬러드 코인](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)"), 기반이 되는 물리적 기기의 소유권("[스마트 자산](https://en.bitcoin.it/wiki/Smart_Property)"), 도메인 이름과 같은 대체 불가능한 자산("[Namecoin](http://namecoin.org)")뿐만 아니라, 임의의 규칙을 구현하는 코드 조각에 의해 디지털 자산이 직접 제어되도록 하는 더 복잡한 애플리케이션("[스마트 컨트랙트](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)")이나 심지어 블록체인 기반의 "[탈중앙화된 자율 조직](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)"(DAO)까지도 포함됩니다. 이더리움이 제공하고자 하는 것은 임의의 상태 전환 함수를 인코딩할 수 있는 '컨트랙트'를 생성하는 데 사용할 수 있는 완전한 튜링 완전(Turing-complete) 프로그래밍 언어가 내장된 블록체인입니다. 이를 통해 사용자는 단 몇 줄의 코드로 로직을 작성하기만 하면 위에서 설명한 모든 시스템뿐만 아니라 아직 상상하지 못한 다른 많은 시스템을 만들 수 있습니다.
+2009년 사토시 나카모토의 비트코인 개발은 뒷받침하는 자산이나 "[내재 가치](https://bitcoinmagazine.com/culture/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it)"가 없으면서도 중앙화된 발행자나 통제자가 없는 디지털 자산의 첫 번째 사례로서, 돈과 통화 분야의 급진적인 발전으로 종종 찬사를 받아왔습니다. 그러나 비트코인 실험에서 틀림없이 더 중요하다고 할 수 있는 또 다른 부분은 분산 합의의 도구로서 기반이 되는 블록체인 기술이며, 비트코인의 이러한 다른 측면으로 관심이 빠르게 옮겨가기 시작했습니다. 흔히 언급되는 블록체인 기술의 대안적 애플리케이션에는 사용자 지정 통화 및 금융 상품을 나타내기 위해 블록체인 상의 디지털 자산을 사용하는 것("[컬러드 코인](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)"), 기반이 되는 물리적 기기의 소유권("[스마트 자산](https://en.bitcoin.it/wiki/Smart_Property)"), 도메인 이름과 같은 대체 불가능한 자산("[Namecoin](http://namecoin.org)")뿐만 아니라, 임의의 규칙을 구현하는 코드 조각에 의해 디지털 자산이 직접 제어되도록 하는 더 복잡한 애플리케이션("[스마트 컨트랙트](https://nakamotoinstitute.org/smart-contracts/)")이나 심지어 블록체인 기반의 "[탈중앙화된 자율 조직](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)"(DAO)까지도 포함됩니다. 이더리움이 제공하고자 하는 것은 임의의 상태 전환 함수를 인코딩할 수 있는 '컨트랙트'를 생성하는 데 사용할 수 있는 완전한 튜링 완전(Turing-complete) 프로그래밍 언어가 내장된 블록체인입니다. 이를 통해 사용자는 단 몇 줄의 코드로 로직을 작성하기만 하면 위에서 설명한 모든 시스템뿐만 아니라 아직 상상하지 못한 다른 많은 시스템을 만들 수 있습니다.
 
 ## 비트코인 및 기존 개념 소개 {#introduction-to-bitcoin-and-existing-concepts}
 
 ### 역사 {#history}
 
-탈중앙화된 디지털 통화의 개념과 자산 등록부 같은 대안적 애플리케이션은 수십 년 전부터 존재해 왔습니다. 1980년대와 1990년대의 익명 전자 화폐 프로토콜은 주로 차우미안 블라인딩(Chaumian blinding)이라는 암호학적 원형에 의존하여 높은 수준의 프라이버시를 갖춘 통화를 제공했지만, 중앙화된 중개자에 의존했기 때문에 큰 호응을 얻지 못했습니다. 1998년, 웨이 다이의 [b-money](http://www.weidai.com/bmoney.txt)는 연산 퍼즐 해결과 탈중앙화된 합의를 통해 화폐를 창출한다는 아이디어를 도입한 최초의 제안이 되었지만, 탈중앙화된 합의를 실제로 어떻게 구현할 수 있는지에 대한 세부 사항은 부족했습니다. 2005년, 할 피니(Hal Finney)는 b-money의 아이디어와 아담 백(Adam Back)의 연산적으로 어려운 해시캐시(Hashcash) 퍼즐을 결합하여 암호화폐의 개념을 만드는 시스템인 "[재사용 가능한 작업증명(reusable proofs of work)](https://nakamotoinstitute.org/finney/rpow/)" 개념을 도입했지만, 백엔드로 신뢰할 수 있는 컴퓨팅에 의존함으로써 다시 한번 이상적인 형태에는 미치지 못했습니다. 2009년, 사토시 나카모토(Satoshi Nakamoto)에 의해 처음으로 탈중앙화된 통화가 실제로 구현되었으며, 이는 공개키 암호학을 통해 소유권을 관리하는 확립된 원형과 코인의 소유자를 추적하기 위한 "작업증명(PoW)"이라는 합의 알고리즘을 결합한 것이었습니다.
+탈중앙화된 디지털 통화의 개념과 자산 등록부 같은 대안적 애플리케이션은 수십 년 전부터 존재해 왔습니다. 1980년대와 1990년대의 익명 전자 화폐 프로토콜은 주로 차우미안 블라인딩(Chaumian blinding)이라는 암호학적 원형에 의존하여 높은 수준의 프라이버시를 갖춘 통화를 제공했지만, 중앙화된 중개자에 의존했기 때문에 큰 호응을 얻지 못했습니다. 1998년, 웨이 다이의 [b-money](https://nakamotoinstitute.org/b-money/)는 연산 퍼즐 해결과 탈중앙화된 합의를 통해 화폐를 창출한다는 아이디어를 도입한 최초의 제안이 되었지만, 탈중앙화된 합의를 실제로 어떻게 구현할 수 있는지에 대한 세부 사항은 부족했습니다. 2005년, 할 피니(Hal Finney)는 b-money의 아이디어와 아담 백(Adam Back)의 연산적으로 어려운 해시캐시(Hashcash) 퍼즐을 결합하여 암호화폐의 개념을 만드는 시스템인 "[재사용 가능한 작업증명(reusable proofs of work)](https://nakamotoinstitute.org/finney/rpow/)" 개념을 도입했지만, 백엔드로 신뢰할 수 있는 컴퓨팅에 의존함으로써 다시 한번 이상적인 형태에는 미치지 못했습니다. 2009년, 사토시 나카모토(Satoshi Nakamoto)에 의해 처음으로 탈중앙화된 통화가 실제로 구현되었으며, 이는 공개키 암호학을 통해 소유권을 관리하는 확립된 원형과 코인의 소유자를 추적하기 위한 "작업증명(PoW)"이라는 합의 알고리즘을 결합한 것이었습니다.
 
 작업증명(PoW) 이면의 메커니즘은 두 가지 문제를 동시에 해결했기 때문에 이 분야에서 획기적인 발전이었습니다. 첫째, 단순하고 적당히 효과적인 합의 알고리즘을 제공하여 네트워크의 노드들이 비트코인 원장의 상태에 대한 일련의 표준적인 업데이트에 집단적으로 동의할 수 있게 했습니다. 둘째, 합의 프로세스에 자유롭게 참여할 수 있는 메커니즘을 제공하여 누가 합의에 영향을 미칠지 결정하는 정치적 문제를 해결하는 동시에 시빌 공격(sybil attack)을 방지했습니다. 이는 특정 목록에 고유한 엔티티로 등록되어야 하는 것과 같은 형식적인 참여 장벽을 경제적 장벽으로 대체함으로써 이루어집니다. 즉, 합의 투표 과정에서 단일 노드의 가중치는 해당 노드가 제공하는 컴퓨팅 파워에 정비례합니다. 그 이후로 노드의 가중치를 컴퓨팅 리소스가 아닌 보유한 통화량에 비례하여 계산하는 _지분 증명(PoS)_이라는 대안적 접근 방식이 제안되었습니다. 두 접근 방식의 상대적인 장단점에 대한 논의는 이 백서의 범위를 벗어나지만, 두 접근 방식 모두 암호화폐의 중추 역할을 하는 데 사용될 수 있다는 점에 유의해야 합니다.
 
@@ -496,7 +496,7 @@ _선형적인 통화 발행에도 불구하고, 비트코인과 마찬가지로 
 1. [내재 가치](https://bitcoinmagazine.com/culture/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it)
 2. [스마트 자산](https://en.bitcoin.it/wiki/Smart_Property)
 3. [스마트 컨트랙트](https://en.bitcoin.it/wiki/Contracts)
-4. [B-money](http://www.weidai.com/bmoney.txt)
+4. [B-money](https://nakamotoinstitute.org/b-money/)
 5. [재사용 가능한 작업증명](https://nakamotoinstitute.org/finney/rpow/)
 6. [소유자 권한이 있는 안전한 재산권](https://nakamotoinstitute.org/library/secure-property-titles/)
 7. [비트코인 백서](https://bitcoin.org/bitcoin.pdf)
@@ -509,7 +509,7 @@ _선형적인 통화 발행에도 불구하고, 비트코인과 마찬가지로 
 14. [머클 트리](https://wikipedia.org/wiki/Merkle_tree)
 15. [패트리샤 트리](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
-17. [StorJ와 자율 에이전트, 제프 가직(Jeff Garzik)](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
+17. [StorJ와 자율 에이전트, 제프 가직(Jeff Garzik)](https://garzikrants.blogspot.com/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [튜링 페스티벌에서의 마이크 헌(Mike Hearn)의 스마트 자산 강연](https://www.youtube.com/watch?v=MVyv4t0OKe4)
 19. [이더리움 RLP](/developers/docs/data-structures-and-encoding/rlp/)
 20. [이더리움 머클 패트리샤 트리](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)

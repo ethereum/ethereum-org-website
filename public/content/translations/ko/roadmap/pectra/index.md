@@ -117,11 +117,9 @@ _펙트라 업그레이드에는 무엇이 포함되나요? - 크리스틴 킴(C
 
 _이더리움 펙트라 업그레이드: 스테이커가 알아야 할 사항 — Blockdaemon_
 
-## 더 읽어보기 {#further-reading}
-
+## 더 읽어보기
 - [이더리움 로드맵](/roadmap/)
 - [펙트라 FAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf 정보 페이지](https://pectra.wtf)
 - [펙트라가 스테이커 경험을 향상시키는 방법](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [EIP-7702 정보 페이지](https://eip7702.io/)
+- [EIP7702 정보 페이지](https://eip7702.io/)
 - [펙트라 데브넷](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

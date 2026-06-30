@@ -17,11 +17,9 @@ published: 2021-04-06
 - 토큰 전송
 - 네트워크 트래픽 상황에 따른 가스 가격 설정
 
-### 시작하기 {#to-get-started}
-
+### 시작하기
 시작하려면 먼저 JavaScript에 ethers.js 라이브러리를 가져와야 합니다.
-ethers.js(5.0) 포함하기
-
+ethers.js v5 포함하기
 ### 설치 {#install-ethersjs}
 
 ```shell

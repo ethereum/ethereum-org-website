@@ -33,18 +33,17 @@ published: 2021-10-06
 
 두 NFT 스마트 컨트랙트 표준의 가장 큰 차이점은 ERC-1155는 다중 토큰 표준이며 일괄 처리 기능을 포함하는 반면, ERC-721은 단일 토큰 표준이므로 한 번에 하나의 토큰 전송만 지원한다는 것입니다.
 
-### 발행 함수 호출하기 {#minting-function}
+### 발행 함수 호출하기
 
 일반적으로 이 발행 함수는 두 개의 변수를 매개변수로 전달해야 합니다. 첫 번째는 새로 발행된 NFT를 받을 주소를 지정하는 `recipient`이고, 두 번째는 NFT의 메타데이터를 설명하는 JSON 문서로 확인되는 문자열인 NFT의 `tokenURI`입니다.
 
-NFT의 메타데이터는 이름, 설명, 이미지(또는 다른 디지털 자산) 및 기타 속성과 같은 특성을 가질 수 있게 하여 NFT에 생명력을 불어넣는 핵심 요소입니다. 다음은 NFT의 메타데이터를 포함하는 [tokenURI의 예시](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)입니다.
+NFT의 메타데이터는 이름, 설명, 이미지(또는 다른 디지털 자산) 및 기타 속성과 같은 특성을 가질 수 있게 하여 NFT에 생명력을 불어넣습니다. 다음은 NFT의 메타데이터가 포함된 [tokenURI의 예시](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)입니다.
 
-이 튜토리얼에서는 React UI를 사용하여 기존 NFT의 스마트 컨트랙트 발행 함수를 호출하는 두 번째 부분에 집중할 것입니다.
+이 튜토리얼에서는 React UI를 사용하여 NFT 스마트 컨트랙트 발행 함수를 호출하는 두 번째 부분에 초점을 맞출 것입니다.
 
-이 튜토리얼에서 호출할 ERC-721 NFT 스마트 컨트랙트의 [링크는 여기](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE)에 있습니다. 이를 어떻게 만들었는지 알고 싶다면 다른 튜토리얼인 ["NFT를 만드는 방법"](https://www.alchemy.com/docs/how-to-create-an-nft)을 확인해 보시기를 강력히 추천합니다.
+Sepolia와 같이 지원되는 테스트넷에 배포된 ERC-721 NFT 스마트 컨트랙트가 필요합니다. 직접 배포하고 싶다면 Alchemy의 [Sepolia에 스마트 컨트랙트 배포하기](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet) 가이드를 추천합니다.
 
 좋습니다. 이제 NFT를 만드는 방법을 이해했으니 시작 파일을 클론해 보겠습니다!
-
 ## 시작 파일 클론하기 {#clone-the-starter-files}
 
 먼저 [nft-minter-tutorial GitHub 리포지토리](https://github.com/alchemyplatform/nft-minter-tutorial)로 이동하여 이 프로젝트의 시작 파일을 가져옵니다. 이 리포지토리를 로컬 환경에 클론하세요.
@@ -195,28 +194,25 @@ return (
 
 사용자가 스마트 컨트랙트와 상호작용하려면 이더리움 지갑을 dapp에 연결해야 합니다.
 
-### 메타마스크 다운로드 {#download-metamask}
+### 메타마스크 다운로드
 
-이 튜토리얼에서는 이더리움 계정 주소를 관리하는 데 사용되는 브라우저 내 가상 지갑인 메타마스크를 사용합니다. 이더리움의 트랜잭션 작동 방식에 대해 더 자세히 알고 싶다면 [이 페이지](/developers/docs/transactions/)를 확인하세요.
+이 튜토리얼에서는 이더리움 계정 주소를 관리하는 데 사용되는 브라우저 기반 가상 지갑인 메타마스크를 사용할 것입니다. 이더리움의 트랜잭션이 어떻게 작동하는지 더 자세히 알고 싶다면 [이 페이지](/developers/docs/transactions/)를 확인해 보세요.
 
-[여기](https://metamask.io/download)에서 메타마스크를 다운로드하고 무료로 계정을 만들 수 있습니다. 계정을 만들 때나 이미 계정이 있는 경우, 오른쪽 상단에서 "Ropsten Test Network"로 전환해야 합니다(실제 돈을 다루지 않기 위함입니다).
+[여기](https://metamask.io/download)에서 무료로 메타마스크를 다운로드하고 계정을 생성할 수 있습니다. 계정을 생성할 때, 또는 이미 계정이 있는 경우, (실제 돈을 다루지 않도록) Sepolia와 같이 지원되는 테스트 네트워크로 전환해야 합니다.
+### 퍼싯에서 이더 추가하기
 
-### 퍼싯에서 이더 추가하기 {#add-ether-from-faucet}
+NFT를 발행하려면(또는 이더리움 블록체인에서 트랜잭션에 서명하려면) 가짜 ETH가 필요합니다. 테스트넷 ETH를 얻으려면 [Alchemy Sepolia 퍼싯](https://www.alchemy.com/faucets/ethereum-sepolia)과 같이 유지 관리되는 퍼싯을 사용하고 Sepolia 계정 주소를 입력하세요. 곧 메타마스크 계정에서 ETH를 확인할 수 있을 것입니다!
+### 잔액 확인하기
 
-NFT를 발행하거나(또는 이더리움 블록체인에서 트랜잭션에 서명하려면) 가짜 ETH가 필요합니다. ETH를 얻으려면 [롭스텐 퍼싯](https://faucet.ropsten.be/)으로 이동하여 롭스텐 계정 주소를 입력한 다음 "Send Ropsten Eth"를 클릭하세요. 곧 메타마스크 계정에서 ETH를 확인할 수 있을 것입니다!
-
-### 잔액 확인하기 {#check-your-balance}
-
-잔액이 있는지 다시 확인하기 위해 [Alchemy의 컴포저 도구](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)를 사용하여 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 요청을 해보겠습니다. 이는 지갑에 있는 ETH의 양을 반환합니다. 메타마스크 계정 주소를 입력하고 "Send Request"를 클릭하면 다음과 같은 응답이 표시되어야 합니다.
+잔액이 있는지 다시 확인하기 위해 [Alchemy의 샌드박스 도구](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)를 사용하여 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 요청을 해보겠습니다. 이 요청은 지갑에 있는 ETH의 양을 반환합니다. 메타마스크 계정 주소를 입력하고 “Send Request”를 클릭하면 다음과 같은 응답을 볼 수 있습니다.
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**참고:** 이 결과는 ETH가 아니라 Wei 단위입니다. Wei는 이더의 가장 작은 단위로 사용됩니다. Wei에서 ETH로의 변환은 1 ETH = 10¹⁸ Wei입니다. 따라서 0xde0b6b3a7640000을 십진수로 변환하면 1\*10¹⁸이 되어 1 ETH와 같습니다.
+**참고:** 이 결과는 ETH가 아닌 Wei 단위입니다. Wei는 이더의 가장 작은 단위로 사용됩니다. Wei에서 ETH로의 변환은 1 ETH = 10¹⁸ Wei입니다. 따라서 0xde0b6b3a7640000을 십진수로 변환하면 1\*10¹⁸이 되며, 이는 1 ETH와 같습니다.
 
-휴! 가짜 돈이 모두 들어왔습니다! <Emoji text=":money_mouth_face:" size={1} />
-
+휴! 가짜 돈이 모두 잘 들어있네요! <Emoji text=":money_mouth_face:" size={1} />
 ## UI에 메타마스크 연결하기 {#connect-metamask-to-your-ui}
 
 이제 메타마스크 지갑이 설정되었으니 dapp에 연결해 보겠습니다!
@@ -583,30 +579,27 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 또한 이더리움 블록체인에 연결하고 스마트 컨트랙트를 로드하려면 Alchemy API 키와 Alchemy Web3 API가 필요합니다.
 
-### Alchemy API 키 생성하기 {#create-alchemy-api}
-
 아직 Alchemy 계정이 없다면 [여기에서 무료로 가입하세요.](https://alchemy.com/?a=eth-org-nft-minter)
 
-Alchemy 계정을 만들었으면 앱을 만들어 API 키를 생성할 수 있습니다. 이를 통해 롭스텐 테스트 네트워크에 요청을 보낼 수 있습니다.
+Alchemy 계정을 생성한 후에는 앱을 생성하여 API 키를 생성할 수 있습니다. 이를 통해 Sepolia 테스트 네트워크에 요청을 보낼 수 있습니다.
 
-내비게이션 바의 "Apps" 위로 마우스를 가져간 다음 "Create App"을 클릭하여 Alchemy 대시보드의 "Create App" 페이지로 이동합니다.
+내비게이션 바에서 "Apps"에 마우스를 올리고 "Create App"을 클릭하여 Alchemy 대시보드의 "Create App" 페이지로 이동합니다.
 
-앱의 이름을 지정하고(우리는 "My First NFT!"를 선택했습니다), 짧은 설명을 제공하고, 앱 북키핑에 사용되는 환경으로 "Staging"을 선택하고, 네트워크로 "Ropsten"을 선택합니다.
+앱 이름을 지정하고(여기서는 "My First NFT!"로 정했습니다), 짧은 설명을 작성합니다. 앱 관리를 위한 환경(Environment)으로 "Staging"을 선택하고, 네트워크로 "Sepolia"를 선택합니다.
 
-"Create app"을 클릭하면 끝입니다! 아래 표에 앱이 나타날 것입니다.
+"Create app"을 클릭하면 끝입니다! 아래 표에 앱이 표시될 것입니다.
 
-멋집니다. 이제 HTTP Alchemy API URL을 만들었으니 클립보드에 복사하세요...
+좋습니다. 이제 HTTP Alchemy API URL을 생성했으니 클립보드에 복사합니다...
 
-...그런 다음 `.env` 파일에 추가해 보겠습니다. 전체적으로 .env 파일은 다음과 같아야 합니다.
+…그런 다음 `.env` 파일에 추가해 보겠습니다. 최종적으로 .env 파일은 다음과 같은 모습이어야 합니다.
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
-이제 컨트랙트 ABI와 Alchemy API 키가 있으므로 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)를 사용하여 스마트 컨트랙트를 로드할 준비가 되었습니다.
-
+이제 컨트랙트 ABI와 Alchemy API 키가 준비되었으므로 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)를 사용하여 스마트 컨트랙트를 로드할 준비가 되었습니다.
 ### Alchemy Web3 엔드포인트 및 컨트랙트 설정하기 {#setup-alchemy-endpoint}
 
 먼저, 아직 설치하지 않았다면 터미널에서 홈 디렉토리인 `nft-minter-tutorial`로 이동하여 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)를 설치해야 합니다.
@@ -849,12 +842,11 @@ const onMintPressed = async () => {
 }
 ```
 
-## 라이브 웹사이트에 NFT 배포하기 {#deploy-your-nft}
+## 라이브 웹사이트에 NFT 배포하기
 
-사용자가 상호작용할 수 있도록 프로젝트를 라이브로 전환할 준비가 되셨나요? Minter를 라이브 웹사이트에 배포하려면 [이 튜토리얼](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online)을 확인하세요.
+사용자가 상호작용할 수 있도록 프로젝트를 라이브로 전환할 준비가 되셨나요? Minter를 라이브 웹사이트에 배포하려면 [React 배포 문서](https://create-react-app.dev/docs/deployment/)를 확인하세요.
 
-마지막 단계...
-
+마지막으로 한 단계가 남았습니다...
 ## 블록체인 세계를 휩쓸어 보세요 {#take-the-blockchain-world-by-storm}
 
 농담입니다. 튜토리얼의 끝까지 오셨군요!
@@ -865,6 +857,6 @@ const onMintPressed = async () => {
 - 프론트엔드에서 스마트 컨트랙트 메서드 호출하기
 - 메타마스크를 사용하여 트랜잭션 서명하기
 
-아마도 dapp을 통해 발행된 NFT를 지갑에서 자랑하고 싶으실 것입니다. 그렇다면 간단한 튜토리얼인 [지갑에서 NFT를 보는 방법](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)을 꼭 확인해 보세요!
+아마도 dapp을 통해 발행된 NFT를 지갑에서 자랑하고 싶으실 것입니다. 그렇다면 간단한 튜토리얼인 [지갑에서 NFT를 보는 방법](/developers/tutorials/how-to-view-nft-in-metamask/)을 꼭 확인해 보세요!
 
 그리고 언제나 그렇듯 질문이 있으시면 [Alchemy 디스코드](https://discord.gg/gWuC7zB)에서 도와드리겠습니다. 이 튜토리얼의 개념을 향후 프로젝트에 어떻게 적용할지 무척 기대됩니다!

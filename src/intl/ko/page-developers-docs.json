@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "데이터 및 분석",
   "docs-nav-data-and-analytics-description": "블록체인 데이터가 수집, 구성되어 탈중앙화 애플리케이션(dapp)에 구현되는 방법",
   "docs-nav-data-availability": "데이터 가용성",
+  "docs-nav-data-availability-description": "이더리움의 데이터 가용성과 관련된 문제 및 해결책 개요",
   "docs-nav-data-availability-storage-strategies": "블록체인 데이터 저장 전략",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "상태 검증 개발 중",
   "layer-2-metis-note": "사기 증명 개발 중",
   "layer-2-optimism-note": "결함 증명 개발 중",
-  "back-to-top": "맨 위로 가기",
   "banner-page-incomplete": "이 페이지는 불완전하며 여러분의 도움이 필요합니다. 이 페이지를 편집하여 다른 사람들에게 유용할 만한 내용을 추가해 주세요.",
   "next": "다음",
   "previous": "이전"

@@ -253,17 +253,14 @@ ii. 옵티미스틱 롤업을 사용하는 개발자 및 프로젝트 팀은 이
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## 옵티미스틱 롤업에 대한 추가 자료 {#further-reading-on-optimistic-rollups}
-
-- [옵티미스틱 롤업의 작동 방식(완벽 가이드)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [블록체인 롤업이란? 기술적 소개](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
+## 옵티미스틱 롤업에 대한 추가 자료
+- [옵티미스틱 롤업은 어떻게 작동하나요? (완벽 가이드)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [아비트럼 필수 가이드](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [이더리움 롤업 실전 가이드](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [이더리움 레이어 2 (l2)의 사기 증명 현황](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
-- [옵티미즘의 롤업은 실제로 어떻게 작동할까요?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [OVM 심층 분석](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
-- [옵티미스틱 가상 머신이란?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
+- [옵티미즘의 롤업은 실제로 어떻게 작동하나요?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
+- [OVM 심층 탐구](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [옵티미스틱 가상 머신이란 무엇인가요?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
 ## 튜토리얼: 이더리움의 옵티미스틱 롤업 및 브릿지 {#tutorials}
 
 - [옵티미즘 표준 브릿지 컨트랙트 연습](/developers/tutorials/optimism-std-bridge-annotated-code/) _– 레이어 1 (l1)과 레이어 2 (l2) 간에 자산을 이동하기 위한 옵티미즘 표준 브릿지의 주석이 달린 코드 연습입니다._

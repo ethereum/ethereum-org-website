@@ -204,9 +204,8 @@ X.com은 소셜 미디어 홍보의 중추가 될 것입니다. 그곳에서 적
 
 통찰력을 공유하여 이 글에 기여해 주신 모든 분들께 깊은 감사를 드립니다: ETHBratislava의 Slavo Fabisik, ETH Kipu 및 ETH Latam의 Lola, ETH Belgrade의 Tanja Mladenovic, Ethereum Bogota의 Juan David, ETHWarsaw의 Monika Zając, NapulETH의 Raffaele Orefice, ETH Riyadh의 Xiao Wu(Ling), urbe.eth의 Marco, ETH Dublin의 Caolán Walsh, ETHCluj의 Alex Males, 그리고 ETH Slovenia의 Stanko Devic.
 
-## 리소스 {#resources}
-
-팟캐스트: ETH 이벤트를 A부터 Z까지 기획하고 홍보하는 방법:
+## 리소스
+팟캐스트: A부터 Z까지 ETH 이벤트를 개최하고 홍보하는 방법:
 
 - [Out of Ordinary의 ETHWarsaw 사례 연구](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
@@ -215,5 +214,3 @@ X.com은 소셜 미디어 홍보의 중추가 될 것입니다. 그곳에서 적
 - [ETH 커뮤니티 AMA](https://x.com/NapulETH/status/1905732699094151623)
 
 아티클:
-
-- [Danny H.의 ETHKL 구축하기](https://sekto.tech/ethkl24)

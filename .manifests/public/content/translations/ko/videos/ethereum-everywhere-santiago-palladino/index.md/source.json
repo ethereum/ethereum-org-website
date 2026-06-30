@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/ethereum-everywhere-santiago-palladino/index.md",
+  "generatedAt": "2026-06-30T01:02:15.224Z",
+  "rootHash": "0b9c3ae04f65",
+  "tree": {
+    "contentHash": "554f1e83bfa4",
+    "anchorHash": "b89a808044ce",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "6c29681f7a87",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "bcf553e14e9d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "159e115c1741"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "cf6021cfdd79"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "66501ad4d2e7"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b1cc2e711844"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "48266dd1614d"
+      },
+      "prose:1": {
+        "contentHash": "dc392434fd7e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "db9c4d5221a6"
+      },
+      "prose:2": {
+        "contentHash": "e04b1ae0fddc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "growing-up-far-away-007": {
+        "contentHash": "2df017e7c4ff",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a42c2aa60206",
+        "children": {
+          "_label": {
+            "contentHash": "a42c2aa60206",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "3b3fd5e2204f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "decentralization-as-a-feature-447": {
+        "contentHash": "70be3d914ea7",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a5edb9e310e8",
+        "children": {
+          "_label": {
+            "contentHash": "a5edb9e310e8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0e9aa160ed83",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "a-decade-of-argentine-crypto-527": {
+        "contentHash": "0f4333d3fd81",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "9f7b3e9db380",
+        "children": {
+          "_label": {
+            "contentHash": "9f7b3e9db380",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "50c1fd9036df",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "infiltrating-the-ecosystem-937": {
+        "contentHash": "c261e16abc46",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a89948900bbc",
+        "children": {
+          "_label": {
+            "contentHash": "a89948900bbc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0a1c5ddfc811",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "standards-and-infrastructure-1117": {
+        "contentHash": "1fd47a160ac5",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c1f28d9e292b",
+        "children": {
+          "_label": {
+            "contentHash": "c1f28d9e292b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f781fc845831",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "bringing-ethereum-home-1507": {
+        "contentHash": "23e7fbe0945e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "759396227f7b",
+        "children": {
+          "_label": {
+            "contentHash": "759396227f7b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1b1fc1298a40",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "devconnect-buenos-aires-1634": {
+        "contentHash": "a46df6400165",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a136bbbae0ad",
+        "children": {
+          "_label": {
+            "contentHash": "a136bbbae0ad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "553823e23024",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "ethereum-for-everyone-1746": {
+        "contentHash": "34e485c9d43c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b192df8739e3",
+        "children": {
+          "_label": {
+            "contentHash": "b192df8739e3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "95b8963247a8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-aleph-2359": {
+        "contentHash": "4aaf219a4807",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "58e1458f8cad",
+        "children": {
+          "_label": {
+            "contentHash": "58e1458f8cad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6ad1abb28309",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-2535": {
+        "contentHash": "d9abc8f122b2",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "d69381ffff6b",
+        "children": {
+          "_label": {
+            "contentHash": "d69381ffff6b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b5695a80f000",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "growing-up-far-away-007",
+      "decentralization-as-a-feature-447",
+      "a-decade-of-argentine-crypto-527",
+      "infiltrating-the-ecosystem-937",
+      "standards-and-infrastructure-1117",
+      "bringing-ethereum-home-1507",
+      "devconnect-buenos-aires-1634",
+      "ethereum-for-everyone-1746",
+      "the-aleph-2359",
+      "qa-2535"
+    ]
+  },
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+}

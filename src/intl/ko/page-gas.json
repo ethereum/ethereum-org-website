@@ -32,7 +32,7 @@
   "page-gas-attack-of-the-cryptokitties-text": "2017년 11월, 인기 있는 크립토키티 프로젝트가 시작되었습니다. 인기가 급상승하면서 심각한 네트워크 혼잡과 극도로 높은 가스비가 발생했습니다. 크립토키티가 제기한 과제는 이더리움 확장을 위한 솔루션을 찾아야 하는 시급성을 가속화했습니다.",
   "page-gas-why-do-we-need-gas-header": "가스는 왜 필요한가요?",
   "page-gas-why-do-we-need-gas-text": "가스는 이더리움을 안전하게 유지하고 트랜잭션을 처리하는 데 중요한 요소입니다. 가스는 여러 면에서 도움이 됩니다:",
-  "page-gas-benefits-1-description": "가스는 악의적인 행위자가 사기성 활동으로 네트워크를 압도하는 것을 방지하여 이더리움이 <a href=\"/glossary/#anti-sybil\">시빌 저항성(sybil-resistant)</a>을 유지하도록 합니다.",
+  "page-gas-benefits-1-description": "가스는 악의적인 행위자가 사기성 활동으로 네트워크를 마비시키는 것을 방지하여 이더리움이 <a href=\"/glossary/#anti-sybil\">시빌 저항성</a>을 유지하도록 합니다.",
   "page-gas-benefits-2-description": "연산에는 가스가 소모되므로, 실수로든 악의적으로든 비용이 많이 드는 트랜잭션으로 이더리움에 스팸을 보내는 것은 재정적으로 억제됩니다.",
   "page-gas-benefits-3-description": "한 번에 수행할 수 있는 연산량에 대한 엄격한 제한은 이더리움이 과부하되는 것을 방지하여 네트워크에 항상 접근할 수 있도록 보장합니다.",
   "page-gas-how-is-gas-calculated-header": "가스는 어떻게 계산되나요?",
