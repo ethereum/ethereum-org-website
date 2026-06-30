@@ -1,6 +1,7 @@
 import { http } from "wagmi"
 import { hardhat, mainnet, sepolia } from "wagmi/chains"
 import { getDefaultConfig } from "@rainbow-me/rainbowkit"
+import type { Chain } from "viem"
 import {
   coinbaseWallet,
   metaMaskWallet,
@@ -10,14 +11,20 @@ import {
   zerionWallet,
 } from "@rainbow-me/rainbowkit/wallets"
 
+type TargetChains = [Chain, ...Chain[]]
+
 const CHAIN_MAP = {
   hardhat,
   sepolia,
   mainnet,
 } as const
 
+type ChainName = keyof typeof CHAIN_MAP
+
+const isChainName = (name: string): name is ChainName => name in CHAIN_MAP
+
 // Determine which chains to use based on env vars
-export const getTargetChains = () => {
+export const getTargetChains = (): TargetChains => {
   const chainNames =
     process.env.NEXT_PUBLIC_CHAIN_NAMES?.split(",").map((name) =>
       name.trim()
@@ -28,9 +35,9 @@ export const getTargetChains = () => {
   }
 
   // Map chain names to actual chain objects
-  const validChains = chainNames
-    .map((name) => CHAIN_MAP[name as keyof typeof CHAIN_MAP])
-    .filter(Boolean)
+  const validChains: Chain[] = chainNames
+    .filter(isChainName)
+    .map((name) => CHAIN_MAP[name])
 
   // If no valid chains found, fallback to just hardhat
   if (validChains.length === 0) {
@@ -40,7 +47,7 @@ export const getTargetChains = () => {
     return [hardhat]
   }
 
-  return validChains
+  return [validChains[0], ...validChains.slice(1)]
 }
 
 const getTransports = () => {
@@ -77,7 +84,6 @@ const walletGroups = [
 export const rainbowkitConfig = getDefaultConfig({
   appName: "ethereum.org",
   projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
-  // @ts-expect-error - TODO: fix this
   chains: getTargetChains(),
   transports: getTransports(),
   wallets: walletGroups,
