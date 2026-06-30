@@ -12,12 +12,20 @@ interface ChainImagesProps {
   chains: ChainName[]
   size?: number
   className?: string
+  /**
+   * Render the network-name tooltips with the base `bg-background` color
+   * instead of `bg-background-highlight`, for when these icons live in a
+   * container that turns `bg-background-highlight` (e.g. a wallet table row on
+   * hover/open) and the default tooltip would blend in.
+   */
+  nested?: boolean
 }
 
 const ChainImages = ({
   chains,
   size = 24,
   className = "",
+  nested,
 }: ChainImagesProps) => {
   const networkData = [ethereumNetworkData, ...layer2Data, ...appOnlyNetworks]
 
@@ -39,7 +47,7 @@ const ChainImages = ({
               height: `${size}px`,
             }}
           >
-            <Tooltip content={chainData?.name || ""}>
+            <Tooltip content={chainData?.name || ""} nested={nested}>
               <Image
                 src={chainData?.logo || ""}
                 alt={`${chain} blockchain network`}
