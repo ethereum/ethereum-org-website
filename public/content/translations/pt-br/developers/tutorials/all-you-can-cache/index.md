@@ -756,11 +756,11 @@ Como usamos a função de baixo nível `<address>.call()`, não podemos usar `vm
 
 Esta é a maneira como verificamos se o código [emite um evento corretamente](https://getfoundry.sh/reference/cheatcodes/expect-emit/) no Foundry.
 
-### O cliente {#the-client}
+### O cliente
 
-Uma coisa que você não obtém com os testes em Solidity é o código JavaScript que você pode recortar e colar em seu próprio aplicativo. Para escrever esse código, implantei o WORM na [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), a nova rede de teste da [Optimism](https://www.optimism.io/). Ele está no endereço [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Uma coisa que você não obtém com os testes em Solidity é o código JavaScript que você pode recortar e colar em seu próprio aplicativo. A versão original deste tutorial implantou o WORM na Optimism Goerli, que desde então foi desativada. Para executar o cliente hoje, reimplante o WORM em uma rede OP Stack suportada, como a [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), e então use o endereço do contrato resultante no cliente JavaScript.
 
-[Você pode ver o código JavaScript para o cliente aqui](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Para usá-lo:
+[Você pode ver o código JavaScript para o cliente aqui](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). O repositório de exemplo foi escrito para a Optimism Goerli, portanto, antes de executá-lo, atualize o endpoint RPC e as URLs do explorador em `javascript/.env.example` e `javascript/index.js` para a sua rede de destino. Para usá-lo:
 
 1. Clone o repositório git:
 
@@ -781,22 +781,22 @@ Uma coisa que você não obtém com os testes em Solidity é o código JavaScrip
    cp .env.example .env
    ```
 
-4. Edite `.env` para sua configuração:
+4. Edite o `.env` para a sua configuração:
 
    | Parâmetro           | Valor                                                                                                                                                               |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | O mnemônico para uma conta que tem ETH suficiente para pagar por uma transação. [Você pode obter ETH grátis para a rede Optimism Goerli aqui](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL para a Optimism Goerli. O endpoint público, `https://goerli.optimism.io`, tem limite de taxa, mas é suficiente para o que precisamos aqui                                      |
+   | MNEMONIC            | O mnemônico para uma conta que tem ETH suficiente para pagar por uma transação. [A documentação de faucet da Optimism](https://docs.optimism.io/app-developers/tools/faucets) lista as faucets atuais da rede de teste. |
+   | OPTIMISM_GOERLI_URL | URL RPC para a rede onde você reimplanta o WORM. Para a OP Sepolia, use um endpoint RPC da OP Sepolia, como `https://sepolia.optimism.io`, ou outro endpoint do seu provedor.        |
 
-5. Execute `index.js`.
+5. Execute o `index.js`.
 
    ```sh
    node index.js
    ```
 
-   Este aplicativo de exemplo primeiro grava uma entrada no WORM, exibindo os dados de chamada e um link para a transação no Etherscan. Em seguida, ele lê essa entrada novamente e exibe a chave que usa e os valores na entrada (valor, número do bloco e autor).
+   Este aplicativo de exemplo primeiro grava uma entrada no WORM, exibindo os dados de chamada e um link para a transação em um explorador de blocos. Em seguida, ele lê essa entrada novamente e exibe a chave que ela usa e os valores na entrada (valor, número do bloco e autor).
 
-A maior parte do cliente é JavaScript normal de dapp. Então, novamente, vamos apenas repassar as partes interessantes.
+A maior parte do cliente é JavaScript normal de aplicativo descentralizado (dapp). Então, novamente, abordaremos apenas as partes interessantes.
 
 ```javascript
 .
@@ -809,16 +809,16 @@ const main = async () => {
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-Um determinado slot só pode ser gravado uma vez, então usamos o carimbo de data/hora para garantir que não reutilizemos os slots.
+Um determinado slot só pode ser gravado uma vez, portanto, usamos o carimbo de data/hora para garantir que não reutilizemos os slots.
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
 
-// Escreve uma entrada
+// Grava uma entrada
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-O Ethers espera que os dados de chamada sejam uma string hexadecimal, `0x` seguida por um número par de dígitos hexadecimais. Como `key` e `val` começam com `0x`, precisamos remover esses cabeçalhos.
+O Ethers espera que os dados de chamada sejam uma string hexadecimal, `0x` seguido por um número par de dígitos hexadecimais. Como `key` e `val` começam com `0x`, precisamos remover esses cabeçalhos.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -827,22 +827,21 @@ tx.data = calldata
 sentTx = await wallet.sendTransaction(tx)
 ```
 
-Assim como no código de teste em Solidity, não podemos chamar uma função em cache normalmente. Em vez disso, precisamos usar um mecanismo de nível inferior.
+Assim como no código de teste em Solidity, não podemos chamar uma função em cache normalmente. Em vez disso, precisamos usar um mecanismo de nível mais baixo.
 
 ```javascript
     .
     .
     .
-    // Lê a entrada que acabou de ser escrita
-    const realKey = '0x' + key.slice(4)  // remove a flag FF
+    // Lê a entrada que acabou de ser gravada
+    const realKey = '0x' + key.slice(4)  // remove o sinalizador FF
     const entryRead = await worm.readEntry(realKey)
     .
     .
     .
 ```
 
-Para ler entradas, podemos usar o mecanismo normal. Não há necessidade de usar cache de parâmetros com funções `view`.
-
+Para ler entradas, podemos usar o mecanismo normal. Não há necessidade de usar o cache de parâmetros com funções `view`.
 ## Conclusão {#conclusion}
 
 O código neste artigo é uma prova de conceito, o objetivo é tornar a ideia fácil de entender. Para um sistema pronto para produção, você pode querer implementar algumas funcionalidades adicionais:

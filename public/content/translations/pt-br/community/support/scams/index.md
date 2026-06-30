@@ -85,8 +85,8 @@ Denunciar ainda é valioso. As denúncias ajudam as autoridades policiais a rast
 ## Tipos de golpes para ficar atento {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Golpes de sorteios e airdrops"
+contentPreview="Ninguém está distribuindo ETH de graça. Essas ofertas são sempre golpes."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ Os golpistas criam falsos sorteios (giveaways) prometendo multiplicar seu ETH ou
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Falsificação de identidade e suporte falso"
+contentPreview="Ninguém da Ethereum ou do ethereum.org entrará em contato com você primeiro."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ Os golpistas se passam por membros da equipe do Ethereum, moderadores ou agentes
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Golpes de recuperação"
+contentPreview="Depois de cair em um golpe, cuidado com falsos &quot;especialistas em recuperação de cripto&quot;."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ Eles prometem rastrear e recuperar suas criptomoedas roubadas mediante uma taxa 
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Sites de phishing e aplicativos falsos"
+contentPreview="Sites fraudulentos imitam carteiras e corretoras reais para roubar suas credenciais."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

@@ -54,22 +54,21 @@ O Plasma usa um contrato mestre em execução no Ethereum para processar as entr
 
 Para entrar na cadeia Plasma, Alice (a usuária) terá que depositar ETH ou qualquer token ERC-20 no contrato Plasma. O operador do Plasma, que observa os depósitos do contrato, recria um valor igual ao depósito inicial de Alice e o libera para o endereço dela na cadeia Plasma. Alice é obrigada a atestar o recebimento dos fundos na cadeia filha e pode então usar esses fundos para transações.
 
-#### Saindo da cadeia Plasma {#exiting-the-plasma-chain}
+#### Saindo da cadeia Plasma
 
-Sair da cadeia Plasma é mais complexo do que entrar nela por vários motivos. O maior deles é que, embora o Ethereum tenha informações sobre o estado da cadeia Plasma, ele não pode verificar se a informação é verdadeira ou não. Um usuário mal-intencionado poderia fazer uma afirmação incorreta ("Eu tenho 1000 ETH") e se safar fornecendo provas falsas para apoiar a reivindicação.
+Sair da cadeia Plasma é mais complexo do que entrar nela por vários motivos. O maior deles é que, embora o Ethereum tenha informações sobre o estado da cadeia Plasma, ele não pode verificar se as informações são verdadeiras ou não. Um usuário mal-intencionado poderia fazer uma afirmação incorreta ("Eu tenho 1000 ETH") e se safar fornecendo provas falsas para apoiar a reivindicação.
 
 Para evitar saques maliciosos, um "período de desafio" é introduzido. Durante o período de desafio (geralmente uma semana), qualquer pessoa pode contestar uma solicitação de saque usando uma prova de fraude. Se o desafio for bem-sucedido, a solicitação de saque será negada.
 
 No entanto, geralmente os usuários são honestos e fazem reivindicações corretas sobre os fundos que possuem. Neste cenário, Alice iniciará uma solicitação de saque na cadeia raiz (Ethereum) enviando uma transação para o contrato Plasma.
 
-Ela também deve fornecer uma prova de Merkle verificando que uma transação que criou seus fundos na cadeia Plasma foi incluída em um bloco. Isso é necessário para iterações do Plasma, como o [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), que usam um modelo de [Saída de Transação Não Gasta (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
+Ela também deve fornecer uma prova de Merkle verificando que uma transação que criou seus fundos na cadeia Plasma foi incluída em um bloco. Isso é necessário para iterações do Plasma, como o Plasma MVP, que usam um modelo de [Saída de Transação Não Gasta (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Outros, como o [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), representam fundos como [tokens não fungíveis](/developers/docs/standards/tokens/erc-721/) em vez de UTXOs. O saque, neste caso, exige prova de propriedade dos tokens na cadeia Plasma. Isso é feito enviando as duas transações mais recentes envolvendo o token e fornecendo uma prova de Merkle verificando a inclusão dessas transações em um bloco.
+Outras, como o Plasma Cash, representam fundos como [tokens não fungíveis](/developers/docs/standards/tokens/erc-721/) em vez de UTXOs. Sacar, neste caso, exige prova de propriedade de tokens na cadeia Plasma. Isso é feito enviando as duas transações mais recentes envolvendo o token e fornecendo uma prova de Merkle verificando a inclusão dessas transações em um bloco.
 
-O usuário também deve adicionar um título (bond) à solicitação de saque como garantia de comportamento honesto. Se um desafiante provar que a solicitação de saque de Alice é inválida, seu título será penalizado, e parte dele irá para o desafiante como recompensa.
+O usuário também deve adicionar uma caução à solicitação de saque como garantia de comportamento honesto. Se um desafiante provar que a solicitação de saque de Alice é inválida, sua caução sofrerá uma penalização, e parte dela irá para o desafiante como recompensa.
 
 Se o período de desafio terminar sem que ninguém forneça uma prova de fraude, a solicitação de saque de Alice será considerada válida, permitindo que ela recupere os depósitos do contrato Plasma no Ethereum.
-
 ### Arbitragem de disputas {#dispute-arbitration}
 
 Como qualquer blockchain, as cadeias Plasma precisam de um mecanismo para impor a integridade das transações caso os participantes ajam de forma maliciosa (por exemplo, gasto duplo de fundos). Para esse fim, as cadeias Plasma usam provas de fraude para arbitrar disputas relativas à validade das transições de estado e penalizar o mau comportamento. As provas de fraude são usadas como um mecanismo por meio do qual uma cadeia filha Plasma apresenta uma reclamação à sua cadeia pai ou à cadeia raiz.
@@ -165,16 +164,14 @@ Vários projetos fornecem implementações de Plasma que você pode integrar aos
 
 - [Polygon](https://polygon.technology/) (anteriormente Matic Network)
 
-## Leitura adicional {#further-reading}
+## Leitura adicional
 
-- [Aprenda sobre o Plasma](https://www.learnplasma.org/en/)
 - [Um lembrete rápido do que significa "segurança compartilhada" e por que ela é tão importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Sidechains vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Entendendo o Plasma, Parte 1: O Básico](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [A Vida e a Morte do Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
 _Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_
-
 ## Tutoriais: Cadeias Plasma no Ethereum {#tutorials}
 
 - [Escreva um plasma específico para aplicativo que preserve a privacidade](/developers/tutorials/app-plasma/) _– Construa um aplicativo Plasma que preserve a privacidade usando provas de conhecimento zero e componentes offchain._

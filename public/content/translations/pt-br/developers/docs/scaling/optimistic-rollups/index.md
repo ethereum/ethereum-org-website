@@ -253,17 +253,14 @@ Aprende melhor visualmente? Assista ao Finematics explicar os rollups otimistas:
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Leitura adicional sobre rollups otimistas {#further-reading-on-optimistic-rollups}
-
+## Leitura adicional sobre rollups otimistas
 - [Como funcionam os rollups otimistas (O guia completo)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [O que é um Rollup de Blockchain? Uma Introdução Técnica](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [O Guia Essencial para o Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
-- [O Guia Prático para Rollups do Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
-- [O Estado das Provas de Fraude nas L2s do Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
-- [Como o Rollup do Optimism realmente funciona?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [Mergulho Profundo na OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [O guia essencial do Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [O guia prático para rollups do Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [O estado das provas de fraude nas l2s do Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
+- [Como o rollup do Optimism realmente funciona?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
+- [Análise detalhada da OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [O que é a Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
 ## Tutoriais: Rollups otimistas e pontes no Ethereum {#tutorials}
 
 - [Passo a passo do contrato de ponte padrão do Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Um passo a passo de código anotado da ponte padrão do Optimism para mover ativos entre a l1 e a l2._

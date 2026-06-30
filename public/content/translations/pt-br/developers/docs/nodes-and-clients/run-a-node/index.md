@@ -371,7 +371,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Quando um cliente de consenso se conecta ao cliente de execução para ler o contrato de depósito e identificar validadores, ele também se conecta a outros pares do nó do Beacon e começa a sincronizar os slots de consenso a partir do bloco gênese. Assim que o nó do Beacon atinge a época atual, a API do Beacon se torna utilizável para os seus validadores. Aprenda mais sobre as [APIs do nó do Beacon](https://eth2docs.vercel.app/).
+Quando um cliente de consenso se conecta ao cliente de execução para ler o contrato de depósito e identificar validadores, ele também se conecta a outros pares do nó do Beacon e começa a sincronizar os slots de consenso a partir do bloco gênese. Assim que o nó do Beacon atinge a época atual, a API do Beacon se torna utilizável para os seus validadores. Aprenda mais sobre as [APIs do nó do Beacon](https://ethereum.github.io/beacon-APIs).
 
 ### Adicionando validadores {#adding-validators}
 
@@ -454,7 +454,7 @@ Como parte do seu monitoramento, certifique-se de ficar de olho no desempenho da
 - [Guias de staking do Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, atualizado frequentemente_
 - [Guia | Como configurar um validador para staking do Ethereum na Mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, atualizado frequentemente_
 - [Guias do EthStaker sobre como executar validadores em redes de teste](https://github.com/remyroy/ethstaker#guides) – _EthStaker, atualizado regularmente_
-- [Aplicativo de exemplo AWS Blockchain Node Runner para nós do Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, atualizado frequentemente_
+- [Aplicativo de exemplo AWS Blockchain Node Runner para nós do Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, atualizado frequentemente_
 - [Perguntas frequentes sobre The Merge para operadores de nós](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Julho de 2022_
 - [Analisando os requisitos de hardware para ser um nó completo validado do Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 de setembro de 2018_
 - [Executando nós completos do Ethereum: um guia para os pouco motivados](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 de novembro de 2019_

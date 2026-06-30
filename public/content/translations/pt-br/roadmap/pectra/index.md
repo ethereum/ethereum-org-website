@@ -117,11 +117,9 @@ _O que está entrando na atualização Pectra? - Christine Kim_
 
 _Atualização Pectra do Ethereum: O que os stakers precisam saber — Blockdaemon_
 
-## Leitura adicional {#further-reading}
-
+## Leitura adicional
 - [Roteiro do Ethereum](/roadmap/)
 - [Perguntas Frequentes (FAQ) da Pectra](https://epf.wiki/#/wiki/pectra-faq)
-- [Página de informações Pectra.wtf](https://pectra.wtf)
 - [Como a Pectra melhora a experiência do staker](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Página de informações da EIP-7702](https://eip7702.io/)
+- [Página de informações da EIP7702](https://eip7702.io/)
 - [Devnets da Pectra](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

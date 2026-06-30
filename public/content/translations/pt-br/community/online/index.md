@@ -52,7 +52,7 @@ Se você acredita que uma comunidade deve ser adicionada ou removida com base ne
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Discord do Matos</Link> - comunidade de criadores da Web3 onde construtores, líderes da indústria e entusiastas do Ethereum se reúnem. Somos apaixonados pelo desenvolvimento, design e cultura da Web3. Venha construir conosco.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - bate-papo para desenvolvimento em Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- fórum de perguntas e respostas</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Fórum da Comunidade Peera</Link> <i>- fórum descentralizado de perguntas e respostas</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Fórum da Comunidade Peera</Link> <i>- fórum descentralizado de perguntas e respostas</i></SocialListItem>
 
 ## YouTube e X (antigo Twitter) {#youtube-and-twitter}
 

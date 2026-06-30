@@ -206,7 +206,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` são as definições necessárias para usar o [OpenGSN](https://www.opengsn.org/), um sistema que permite que usuários sem ether usem a blockchain. Observe que esta é uma versão antiga; se você quiser se integrar ao OpenGSN, [use este tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
+- `GSN/Context.sol` são as definições necessárias para usar o [OpenGSN](https://opengsn.org/), um sistema que permite que usuários sem ether usem a blockchain. Observe que esta é uma versão antiga; se você quiser se integrar ao OpenGSN, [use este tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [A biblioteca SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), que previne overflows/underflows aritméticos para versões do Solidity **&lt;0.8.0**. No Solidity ≥0.8.0, as operações aritméticas revertem automaticamente em overflow/underflow, tornando o SafeMath desnecessário. Este contrato usa o SafeMath para compatibilidade com versões anteriores de compiladores.
 
 &nbsp;
