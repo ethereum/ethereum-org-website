@@ -97,7 +97,9 @@ export default async function FindWalletPageJsonLD({
             name: wallet.name,
             url: wallet.url,
             applicationCategory: "Cryptocurrency Wallet",
-            operatingSystem: platforms(wallet).join(", "),
+            ...(platforms(wallet).length > 0 && {
+              operatingSystem: platforms(wallet).join(", "),
+            }),
             offers: {
               "@type": "Offer",
               price: "0",
