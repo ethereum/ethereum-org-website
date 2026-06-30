@@ -1,5 +1,3 @@
-import { http } from "wagmi"
-import { hardhat, mainnet, sepolia } from "wagmi/chains"
 import { getDefaultConfig } from "@rainbow-me/rainbowkit"
 import {
   coinbaseWallet,
@@ -9,6 +7,8 @@ import {
   walletConnectWallet,
   zerionWallet,
 } from "@rainbow-me/rainbowkit/wallets"
+import { http } from "wagmi"
+import { hardhat, mainnet, sepolia } from "wagmi/chains"
 
 const CHAIN_MAP = {
   hardhat,
@@ -16,31 +16,33 @@ const CHAIN_MAP = {
   mainnet,
 } as const
 
+type TargetChain = (typeof CHAIN_MAP)[keyof typeof CHAIN_MAP]
+type TargetChains = readonly [TargetChain, ...TargetChain[]]
+
 // Determine which chains to use based on env vars
-export const getTargetChains = () => {
+export const getTargetChains = (): TargetChains => {
   const chainNames =
     process.env.NEXT_PUBLIC_CHAIN_NAMES?.split(",").map((name) =>
       name.trim()
     ) || []
 
-  if (chainNames.length === 0) {
-    return [hardhat]
-  }
-
   // Map chain names to actual chain objects
   const validChains = chainNames
-    .map((name) => CHAIN_MAP[name as keyof typeof CHAIN_MAP])
-    .filter(Boolean)
+    .map((name): TargetChain | undefined => CHAIN_MAP[name as keyof typeof CHAIN_MAP])
+    .filter((chain): chain is TargetChain => chain !== undefined)
 
   // If no valid chains found, fallback to just hardhat
   if (validChains.length === 0) {
-    console.warn(
-      `No valid chains found for: ${chainNames.join(", ")}. Falling back to hardhat.`
-    )
+    if (chainNames.length > 0) {
+      console.warn(
+        `No valid chains found for: ${chainNames.join(", ")}. Falling back to hardhat.`
+      )
+    }
+
     return [hardhat]
   }
 
-  return validChains
+  return [validChains[0], ...validChains.slice(1)]
 }
 
 const getTransports = () => {
@@ -77,7 +79,6 @@ const walletGroups = [
 export const rainbowkitConfig = getDefaultConfig({
   appName: "ethereum.org",
   projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
-  // @ts-expect-error - TODO: fix this
   chains: getTargetChains(),
   transports: getTransports(),
   wallets: walletGroups,
