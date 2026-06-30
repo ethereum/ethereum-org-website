@@ -1,9 +1,12 @@
 "use client"
 
-import { useRef } from "react"
+import { type RefObject, useRef } from "react"
 import dynamic from "next/dynamic"
 import { useLocale } from "next-intl"
-import { type DocSearchHit, useDocSearchKeyboardEvents } from "@docsearch/react"
+import {
+  type DocSearchModalProps,
+  useDocSearchKeyboardEvents,
+} from "typesense-docsearch-react"
 import * as Portal from "@radix-ui/react-portal"
 import { Slot } from "@radix-ui/react-slot"
 
@@ -20,6 +23,13 @@ import { useDisclosure } from "@/hooks/useDisclosure"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
+
+// `DocSearchHit` isn't re-exported from the package root, so derive it from the
+// modal's transformItems signature. Note: unlike Algolia's nested `hierarchy`
+// object, this fork exposes flattened dotted keys (e.g. `item["hierarchy.lvl0"]`).
+type DocSearchHit = Parameters<
+  NonNullable<DocSearchModalProps["transformItems"]>
+>[0][number]
 
 interface SearchProps {
   asChild?: boolean
@@ -47,29 +57,38 @@ const Search = ({ asChild = false, children }: SearchProps) => {
     isOpen,
     onOpen: handleOpen,
     onClose,
-    searchButtonRef,
+    // The fork's React 18-era types want a non-null ref; React 19's useRef
+    // yields RefObject<T | null>. Safe to narrow — the hook only reads .current.
+    searchButtonRef: searchButtonRef as RefObject<HTMLButtonElement>,
   })
 
-  const appId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || ""
-  const apiKey = process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || ""
-  const indexName =
-    process.env.NEXT_PUBLIC_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
+  const host = process.env.NEXT_PUBLIC_TYPESENSE_HOST || ""
+  const port = Number(process.env.NEXT_PUBLIC_TYPESENSE_PORT) || 443
+  const protocol = process.env.NEXT_PUBLIC_TYPESENSE_PROTOCOL || "https"
+  const apiKey = process.env.NEXT_PUBLIC_TYPESENSE_SEARCH_KEY || ""
+  const collectionName =
+    process.env.NEXT_PUBLIC_TYPESENSE_COLLECTION_NAME || "ethereumorg"
 
   const searchModalProps = {
-    apiKey,
-    appId,
-    indexName,
-    onClose,
-    searchParameters: {
-      facetFilters: [`lang:${locale}`],
+    typesenseCollectionName: collectionName,
+    typesenseServerConfig: {
+      nodes: [{ host, port, protocol }],
+      apiKey,
     },
+    typesenseSearchParameters: {
+      // Mirrors Algolia's `facetFilters: ['lang:${locale}']`. The scraper
+      // populates `language` from each page's `<html lang="">` attribute.
+      filter_by: `language:=${locale}`,
+    },
+    onClose,
     transformItems: (items: DocSearchHit[]) =>
       items.map((item: DocSearchHit) => {
         // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
         const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
         newItem.url = sanitizeHitUrl(item.url)
-        const newTitle = sanitizeHitTitle(item.hierarchy.lvl0 || "")
-        newItem.hierarchy.lvl0 = newTitle
+        newItem["hierarchy.lvl0"] = sanitizeHitTitle(
+          item["hierarchy.lvl0"] || ""
+        )
         return newItem
       }),
     placeholder: t("search-ethereum-org"),
