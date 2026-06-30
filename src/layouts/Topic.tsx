@@ -7,6 +7,7 @@ import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
 import PageHero from "@/components/Hero/PageHero"
 import PageActions from "@/components/PageActions"
+import TranslationBanner from "@/components/TranslationBanner"
 import { Alert } from "@/components/ui/alert"
 import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
@@ -126,28 +127,32 @@ export const TopicLayout = async ({
   )
 
   return (
-    <ContentLayout
-      dir={contentNotTranslated ? "ltr" : "unset"}
-      tocItems={tocItems}
-      dropdownLinks={dropdownLinks}
-      contributors={contributors}
-      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-      heroSection={heroSection}
-      showDropdown={frontmatter.showDropdown ?? true}
-    >
-      {/*
-        The `!` overrides defeat the `flow` region's `*:first:mt-0` (which
-        would zero PageActions' mobile top spacing) and zero out the default
-        prose top margin on the following h2 that PageActions displaces from
-        first-child position.
-      */}
-      <PageActions
-        slug={slug}
-        isTranslated={!contentNotTranslated}
-        editPath={getEditPath(slug)}
-        className="-ms-2 mb-8 [&+h2]:mt-0!"
-      />
-      {children}
-    </ContentLayout>
+    <>
+      <TranslationBanner contentNotTranslated={contentNotTranslated} />
+
+      <ContentLayout
+        dir={contentNotTranslated ? "ltr" : "unset"}
+        tocItems={tocItems}
+        dropdownLinks={dropdownLinks}
+        contributors={contributors}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        heroSection={heroSection}
+        showDropdown={frontmatter.showDropdown ?? true}
+      >
+        {/*
+          The `!` overrides defeat the `flow` region's `*:first:mt-0` (which
+          would zero PageActions' mobile top spacing) and zero out the default
+          prose top margin on the following h2 that PageActions displaces from
+          first-child position.
+        */}
+        <PageActions
+          slug={slug}
+          isTranslated={!contentNotTranslated}
+          editPath={getEditPath(slug)}
+          className="-ms-2 mb-8 [&+h2]:mt-0!"
+        />
+        {children}
+      </ContentLayout>
+    </>
   )
 }
