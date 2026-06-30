@@ -204,16 +204,13 @@ Kluczem jest utrzymanie rozpędu. Kontynuuj angażowanie się w swoją społeczn
 
 Ogromne podziękowania dla wszystkich, którzy przyczynili się do powstania tego artykułu, dzieląc się swoimi spostrzeżeniami: Slavo Fabisik z ETHBratislava; Lola z ETH Kipu i ETH Latam; Tanja Mladenovic z ETH Belgrade, Juan David z Ethereum Bogota; Monika Zając z ETHWarsaw; Raffaele Orefice z NapulETH; Xiao Wu(Ling) z ETH Riyadh; Marco z urbe.eth; Caolán Walsh z ETH Dublin; Alex Males z ETHCluj; oraz Stanko Devic z ETH Slovenia.
 
-## Zasoby {#resources}
-
+## Zasoby
 Podcast: Jak zorganizować i promować wydarzenie ETH od A do Z:
 
-- [Studium przypadku ETHWarsaw, autorstwa Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [Studium przypadku ETHWarsaw autorstwa Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 Twitter Space:
 
 - [AMA społeczności ETH](https://x.com/NapulETH/status/1905732699094151623)
 
 Artykuły:
-
-- [Budowanie ETHKL, autorstwa Danny'ego H.](https://sekto.tech/ethkl24)

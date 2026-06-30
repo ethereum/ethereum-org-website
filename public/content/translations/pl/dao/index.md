@@ -133,20 +133,17 @@ _Zazwyczaj używane do zdecentralizowanego rozwoju i zarządzania protokołami o
 - [Lista DAO od Tally.xyz](https://www.tally.xyz/explore)
 - [Lista DAO od DeGov.AI](https://apps.degov.ai/)
 
-### Załóż DAO {#start-a-dao}
-
-- [Przywołaj DAO z DAOHaus](https://app.daohaus.club/summon)
-- [Załóż Governor DAO z Tally](https://www.tally.xyz/get-started)
+### Załóż DAO
+- [Stwórz DAO za pomocą DAOHaus](https://app.daohaus.club/summon)
+- [Załóż Governor DAO za pomocą Tally](https://www.tally.xyz/get-started)
 - [Stwórz DAO oparte na Aragon](https://aragon.org/product)
-- [Załóż kolonię](https://colony.io/)
-- [Stwórz DAO z konsensusem holograficznym DAOstack](https://alchemy.daostack.io/daos/create)
+- [Załóż Colony](https://colony.io/)
 - [Uruchom DAO za pomocą DeGov Launcher](https://docs.degov.ai/integration/deploy)
-
 ## Dalsza lektura {#further-reading}
 
 ### Artykuły o DAO {#dao-articles}
 
-- [Czym jest DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [Czym jest DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [Dom DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [Czym jest DAO i do czego służy?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Jak założyć cyfrową społeczność opartą na DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

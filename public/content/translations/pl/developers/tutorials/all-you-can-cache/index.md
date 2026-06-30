@@ -756,11 +756,11 @@ Ponieważ używamy niskopoziomowej funkcji `<address>.call()`, nie możemy uży�
 
 W ten sposób weryfikujemy, czy kod [poprawnie emituje zdarzenie](https://getfoundry.sh/reference/cheatcodes/expect-emit/) w Foundry.
 
-### Klient {#the-client}
+### Klient
 
-Jedną rzeczą, której nie otrzymujesz z testami Solidity, jest kod JavaScript, który możesz wyciąć i wkleić do własnej aplikacji. Aby napisać ten kod, wdrożyłem WORM do [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), nowej sieci testowej [Optimism](https://www.optimism.io/). Znajduje się pod adresem [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Jedną rzeczą, której nie uzyskasz dzięki testom w Solidity, jest kod w JavaScript, który możesz skopiować i wkleić do własnej aplikacji. Oryginalna wersja tego samouczka wdrażała WORM w sieci Optimism Goerli, która od tego czasu została wycofana. Aby dzisiaj uruchomić klienta, ponownie wdróż WORM w obsługiwanej sieci OP Stack, takiej jak [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), a następnie użyj wynikowego adresu kontraktu w kliencie JavaScript.
 
-[Kod JavaScript dla klienta możesz zobaczyć tutaj](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Aby go użyć:
+[Kod JavaScript dla klienta można zobaczyć tutaj](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Przykładowe repozytorium zostało napisane dla Optimism Goerli, więc przed jego uruchomieniem zaktualizuj punkt końcowy RPC i adresy URL eksploratora w plikach `javascript/.env.example` oraz `javascript/index.js` dla swojej docelowej sieci. Aby z niego skorzystać:
 
 1. Sklonuj repozytorium git:
 
@@ -781,12 +781,12 @@ Jedną rzeczą, której nie otrzymujesz z testami Solidity, jest kod JavaScript,
    cp .env.example .env
    ```
 
-4. Edytuj `.env` dla swojej konfiguracji:
+4. Edytuj plik `.env` zgodnie ze swoją konfiguracją:
 
-   | Parametr           | Wartość                                                                                                                                                               |
+   | Parametr            | Wartość                                                                                                                                                               |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | Mnemotechnika (fraza seed) dla konta, które ma wystarczająco dużo ETH, aby zapłacić za transakcję. [Darmowe ETH dla sieci Optimism Goerli możesz zdobyć tutaj](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | Adres URL do Optimism Goerli. Publiczny punkt końcowy, `https://goerli.optimism.io`, ma ograniczenia przepustowości (rate limited), ale jest wystarczający do naszych potrzeb                                      |
+   | MNEMONIC            | Fraza mnemoniczna dla konta, które ma wystarczająco dużo ETH, aby zapłacić za transakcję. [Dokumentacja kraników Optimism](https://docs.optimism.io/app-developers/tools/faucets) zawiera listę aktualnych kraników dla sieci testowej. |
+   | OPTIMISM_GOERLI_URL | Adres URL RPC dla sieci, w której ponownie wdrażasz WORM. W przypadku OP Sepolia użyj punktu końcowego RPC dla OP Sepolia, takiego jak `https://sepolia.optimism.io`, lub innego punktu końcowego od Twojego dostawcy.        |
 
 5. Uruchom `index.js`.
 
@@ -794,9 +794,9 @@ Jedną rzeczą, której nie otrzymujesz z testami Solidity, jest kod JavaScript,
    node index.js
    ```
 
-   Ta przykładowa aplikacja najpierw zapisuje wpis do WORM, wyświetlając dane wywołania i link do transakcji w Etherscan. Następnie odczytuje ten wpis z powrotem i wyświetla używany klucz oraz wartości we wpisie (wartość, numer bloku i autor).
+   Ta przykładowa aplikacja najpierw zapisuje wpis w WORM, wyświetlając dane wywołania i link do transakcji w eksploratorze bloków. Następnie odczytuje ten wpis i wyświetla używany klucz oraz wartości w nim zawarte (wartość, numer bloku i autora).
 
-Większość klienta to normalny JavaScript dla dapp. Więc ponownie omówimy tylko interesujące części.
+Większość klienta to standardowy kod JavaScript dla zdecentralizowanej aplikacji (dapp). Dlatego ponownie omówimy tylko interesujące części.
 
 ```javascript
 .
@@ -809,7 +809,7 @@ const main = async () => {
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-Do danego slotu można zapisać tylko raz, więc używamy znacznika czasu (timestamp), aby upewnić się, że nie używamy ponownie tych samych slotów.
+Do danego slotu można zapisać tylko raz, więc używamy znacznika czasu, aby upewnić się, że nie używamy ponownie tych samych slotów.
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
@@ -818,7 +818,7 @@ const val = await worm.encodeVal("0x600D")
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers oczekuje, że dane wywołania będą ciągiem szesnastkowym, `0x`, po którym następuje parzysta liczba cyfr szesnastkowych. Ponieważ zarówno `key`, jak i `val` zaczynają się od `0x`, musimy usunąć te nagłówki.
+Biblioteka Ethers oczekuje, że dane wywołania będą ciągiem szesnastkowym, czyli `0x`, po którym następuje parzysta liczba cyfr szesnastkowych. Ponieważ zarówno `key`, jak i `val` zaczynają się od `0x`, musimy usunąć te nagłówki.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -827,13 +827,13 @@ tx.data = calldata
 sentTx = await wallet.sendTransaction(tx)
 ```
 
-Podobnie jak w przypadku kodu testującego Solidity, nie możemy normalnie wywołać buforowanej funkcji. Zamiast tego musimy użyć mechanizmu niższego poziomu.
+Podobnie jak w kodzie testującym w Solidity, nie możemy normalnie wywołać funkcji korzystającej z pamięci podręcznej. Zamiast tego musimy użyć mechanizmu niższego poziomu.
 
 ```javascript
     .
     .
     .
-    // Odczytaj właśnie zapisany wpis
+    // Odczytaj nowo zapisany wpis
     const realKey = '0x' + key.slice(4)  // usuń flagę FF
     const entryRead = await worm.readEntry(realKey)
     .
@@ -841,8 +841,7 @@ Podobnie jak w przypadku kodu testującego Solidity, nie możemy normalnie wywo�
     .
 ```
 
-Do odczytywania wpisów możemy użyć normalnego mechanizmu. Nie ma potrzeby używania buforowania parametrów z funkcjami `view`.
-
+Do odczytywania wpisów możemy użyć standardowego mechanizmu. Nie ma potrzeby używania buforowania parametrów w przypadku funkcji `view`.
 ## Podsumowanie {#conclusion}
 
 Kod w tym artykule to dowód słuszności koncepcji (proof of concept), a jego celem jest ułatwienie zrozumienia pomysłu. W przypadku systemu gotowego do produkcji możesz chcieć zaimplementować dodatkową funkcjonalność:

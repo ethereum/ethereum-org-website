@@ -123,22 +123,27 @@ Użyj nagłówków `###` ze znacznikami czasu, aby oznaczyć główne sekcje. Dz
 
 Jeśli nie masz transkrypcji, możesz zostawić treść pustą, a zespół ją wygeneruje.
 
-#### Krok 4: Wybierz tagi tematyczne {#step-4}
+#### Krok 4: Wybierz tagi tematyczne
 
-Wybierz tagi tematyczne, które pasują do istniejących kategorii używanych w galerii. Obecne kategorie i ich tagi to:
+Wybierz tagi tematyczne z poniższej listy. Każdy tag odpowiada bezpośrednio kategorii filtra w galerii wideo — użyj nazwy tagu dokładnie tak, jak pokazano.
 
-- **Jak działa Ethereum**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Aktualizacje sieci**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Mapa drogowa i priorytety**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Skalowanie i warstwa 2 (L2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Przypadki użycia**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Prywatność i bezpieczeństwo**: `privacy-and-security`, `privacy`, `authentication`
-- **Historie społeczności**: `community-stories`, `contributing`, `translations`, `community`
+Film może mieć wiele tagów, aby pojawiać się w wielu filtrach galerii:
 
-Aby upewnić się, że Twój film pojawi się w sekcji kategorii galerii, dołącz co najmniej jeden kluczowy tag kategorii (pogrubiona nazwa w formacie kebab-case, np. `use-cases` lub `scaling-and-layer-2`). Filmy bez rozpoznanego tagu kategorii pojawią się tylko w widoku „Wszystkie” i w wynikach wyszukiwania.
+| Tag | Filtr galerii |
+|---|---|
+| `how-ethereum-works` | Jak działa Ethereum |
+| `network-upgrades` | Aktualizacje sieci |
+| `roadmap-and-priorities` | Mapa drogowa i priorytety |
+| `scaling-and-layer-2` | Skalowanie i warstwa 2 (L2) |
+| `use-cases` | Przypadki użycia |
+| `privacy` | Prywatność |
+| `security` | Bezpieczeństwo |
+| `community-stories` | Historie społeczności |
+| `events` | Zdarzenia |
 
-Możesz również użyć nowych tagów — będą one dostępne dla przyszłych grup kategorii.
+Każdy film powinien mieć co najmniej jeden tag z tej listy. Filmy bez rozpoznanego tagu będą pojawiać się tylko w widoku „Wszystkie” i wynikach wyszukiwania.
 
+Tag `community-stories` sprawia również, że film pojawia się na [stronie Historie](/stories/).
 #### Krok 5: Prześlij swój PR {#step-5}
 
 Otwórz pull request ze swoimi zmianami do gałęzi `dev`. Zespół przejrzy Twoje zgłoszenie i przekaże opinię.

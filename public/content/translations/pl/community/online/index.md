@@ -52,7 +52,7 @@ Jeśli uważasz, że społeczność powinna zostać dodana lub usunięta na pods
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - społeczność twórców Web3, w której przebywają programiści, liderzy branży i entuzjaści Ethereum. Pasjonujemy się rozwojem, projektowaniem i kulturą Web3. Buduj razem z nami.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - czat dotyczący programowania w Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- forum pytań i odpowiedzi</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- zdecentralizowane forum pytań i odpowiedzi</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- zdecentralizowane forum pytań i odpowiedzi</i></SocialListItem>
 
 ## YouTube i X (dawniej Twitter) {#youtube-and-twitter}
 

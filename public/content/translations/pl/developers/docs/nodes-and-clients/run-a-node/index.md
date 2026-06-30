@@ -371,7 +371,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Kiedy klient konsensusu łączy się z klientem warstwy wykonawczej, aby odczytać kontrakt depozytowy i zidentyfikować walidatory, łączy się również z innymi węzłami równorzędnymi węzła Beacon i rozpoczyna synchronizację slotów konsensusu od bloku genezy (genesis). Gdy węzeł Beacon osiągnie bieżącą epokę, Beacon API staje się użyteczne dla Twoich walidatorów. Dowiedz się więcej o [interfejsach API węzła Beacon](https://eth2docs.vercel.app/).
+Kiedy klient konsensusu łączy się z klientem warstwy wykonawczej, aby odczytać kontrakt depozytowy i zidentyfikować walidatory, łączy się również z innymi węzłami równorzędnymi węzła Beacon i rozpoczyna synchronizację slotów konsensusu od bloku genezy (genesis). Gdy węzeł Beacon osiągnie bieżącą epokę, Beacon API staje się użyteczne dla Twoich walidatorów. Dowiedz się więcej o [interfejsach API węzła Beacon](https://ethereum.github.io/beacon-APIs).
 
 ### Dodawanie walidatorów {#adding-validators}
 
@@ -454,7 +454,7 @@ W ramach monitorowania upewnij się, że masz oko na wydajność swojej maszyny.
 - [Przewodniki po stakingu Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) – _Somer Esat, często aktualizowane_
 - [Przewodnik | Jak skonfigurować walidator do stakingu Ethereum w Sieci głównej](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, często aktualizowane_
 - [Przewodniki ETHStaker dotyczące uruchamiania walidatorów w sieciach testowych](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, regularnie aktualizowane_
-- [Przykładowa aplikacja AWS Blockchain Node Runner dla węzłów Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) – _AWS, często aktualizowane_
+- [Przykładowa aplikacja AWS Blockchain Node Runner dla węzłów Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) – _AWS, często aktualizowane_
 - [FAQ dotyczące The Merge dla operatorów węzłów](https://notes.ethereum.org/@launchpad/node-faq-merge) – _Lipiec 2022_
 - [Analiza wymagań sprzętowych dla w pełni zwalidowanego węzła Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 września 2018_
 - [Uruchamianie pełnych węzłów Ethereum: Przewodnik dla ledwie zmotywowanych](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 listopada 2019_

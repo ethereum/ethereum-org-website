@@ -21,7 +21,7 @@ Zaczynajmy!
 
 ## Krok 1: Instalacja Web3 {#install-web3}
 
-Jeśli postępowałeś zgodnie z pierwszym samouczkiem dotyczącym tworzenia inteligentnego kontraktu NFT, masz już doświadczenie w korzystaniu z Ethers.js. Web3 jest podobne do Ethers, ponieważ jest to biblioteka używana do ułatwienia tworzenia żądań do blockchaina [Ethereum](/). W tym samouczku będziemy używać [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), ulepszonej biblioteki Web3, która oferuje automatyczne ponawianie prób i solidną obsługę WebSocket.
+Jeśli postępowałeś zgodnie z pierwszym samouczkiem dotyczącym tworzenia inteligentnego kontraktu NFT, masz już doświadczenie w korzystaniu z Ethers.js. Web3 jest podobne do Ethers, ponieważ jest to biblioteka używana do ułatwienia tworzenia żądań do blockchaina [Ethereum](/). W tym samouczku będziemy używać [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), ulepszonej biblioteki Web3, która oferuje automatyczne ponawianie prób i solidną obsługę WebSocket.
 
 W katalogu głównym projektu uruchom:
 
@@ -40,26 +40,25 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Krok 3: Pobranie ABI kontraktu {#contract-abi}
+## Krok 3: Pobranie ABI kontraktu
 
-Nasze ABI (Application Binary Interface) kontraktu to interfejs do interakcji z naszym inteligentnym kontraktem. Możesz dowiedzieć się więcej o ABI kontraktów [tutaj](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat automatycznie generuje dla nas ABI i zapisuje je w pliku `MyNFT.json`. Aby z niego skorzystać, będziemy musieli przeanalizować zawartość, dodając następujące wiersze kodu do naszego pliku `mint-nft.js`:
+Nasze ABI (Application Binary Interface) kontraktu to interfejs do interakcji z naszym inteligentnym kontraktem. Możesz dowiedzieć się więcej o [ABI kontraktu](/glossary/#abi). Hardhat automatycznie generuje dla nas ABI i zapisuje je w pliku `MyNFT.json`. Aby z niego skorzystać, będziemy musieli wyodrębnić zawartość, dodając następujące wiersze kodu do naszego pliku `mint-nft.js`:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 ```
 
-Jeśli chcesz zobaczyć ABI, możesz wydrukować je w konsoli:
+Jeśli chcesz zobaczyć ABI, możesz wypisać je w konsoli:
 
 ```js
 console.log(JSON.stringify(contract.abi))
 ```
 
-Aby uruchomić `mint-nft.js` i zobaczyć swoje ABI wydrukowane w konsoli, przejdź do terminala i uruchom:
+Aby uruchomić `mint-nft.js` i zobaczyć ABI wypisane w konsoli, przejdź do terminala i uruchom:
 
 ```js
 node scripts/mint-nft.js
 ```
-
 ## Krok 4: Konfiguracja metadanych dla Twojego NFT przy użyciu IPFS {#config-meta}
 
 Jeśli pamiętasz z naszego samouczka w części 1, nasza funkcja inteligentnego kontraktu `mintNFT` przyjmuje parametr tokenURI, który powinien wskazywać na dokument JSON opisujący metadane NFT — co tak naprawdę ożywia NFT, pozwalając mu na posiadanie konfigurowalnych właściwości, takich jak nazwa, opis, obraz i inne atrybuty.
@@ -136,13 +135,13 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## Krok 7: Utworzenie transakcji {#create-txn}
+## Krok 7: Utworzenie transakcji
 
 Najpierw zdefiniujmy funkcję o nazwie `mintNFT(tokenData)` i utwórzmy naszą transakcję, wykonując następujące czynności:
 
 1. Pobierz swój _PRIVATE_KEY_ i _PUBLIC_KEY_ z pliku `.env`.
 
-1. Następnie będziemy musieli ustalić nonce konta. Specyfikacja nonce służy do śledzenia liczby transakcji wysłanych z Twojego adresu — czego potrzebujemy ze względów bezpieczeństwa i aby zapobiec [atakom typu replay](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). Aby uzyskać liczbę transakcji wysłanych z Twojego adresu, używamy [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+1. Następnie będziemy musieli ustalić nonce konta. Specyfikacja nonce służy do śledzenia liczby transakcji wysłanych z Twojego adresu — czego potrzebujemy ze względów bezpieczeństwa i aby zapobiec atakom typu replay. Aby uzyskać liczbę transakcji wysłanych z Twojego adresu, używamy [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
 
 1. Na koniec skonfigurujemy naszą transakcję z następującymi informacjami:
 
@@ -184,7 +183,6 @@ Twój plik `mint-nft.js` powinien teraz wyglądać tak:
      };
    }​
 ```
-
 ## Krok 8: Podpisywanie transakcji {#sign-txn}
 
 Teraz, gdy utworzyliśmy naszą transakcję, musimy ją podpisać, aby ją wysłać. W tym miejscu użyjemy naszego klucza prywatnego.
@@ -317,7 +315,7 @@ Teraz uruchom `node scripts/mint-nft.js`, aby wdrożyć swoje NFT. Po kilku seku
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-Następnie odwiedź swój [mempool Alchemy](https://dashboard.alchemyapi.io/mempool), aby sprawdzić status swojej transakcji (czy jest oczekująca, wydobyta, czy została odrzucona przez sieć). Jeśli Twoja transakcja została odrzucona, warto również sprawdzić [Blockscout](https://eth-sepolia.blockscout.com/) i wyszukać hash transakcji.
+Następnie odwiedź swój [mempool Alchemy](https://dashboard.alchemy.com/mempool), aby sprawdzić status swojej transakcji (czy jest oczekująca, wydobyta, czy została odrzucona przez sieć). Jeśli Twoja transakcja została odrzucona, warto również sprawdzić [Blockscout](https://eth-sepolia.blockscout.com/) i wyszukać hash transakcji.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Wyświetl hash transakcji NFT w Etherscan_
 
