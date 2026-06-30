@@ -21,7 +21,7 @@ published: 2021-04-22
 
 ## ステップ1: Web3をインストールする {#install-web3}
 
-NFTスマートコントラクトの作成に関する最初のチュートリアルに従った場合、すでにEthers.jsを使用した経験があるはずです。Web3はEthersに似ており、[イーサリアム](/)ブロックチェーンへのリクエスト作成を容易にするために使用されるライブラリです。このチュートリアルでは、自動再試行と堅牢なWebSocketサポートを提供する拡張Web3ライブラリである[Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)を使用します。
+NFTスマートコントラクトの作成に関する最初のチュートリアルに従った場合、すでにEthers.jsを使用した経験があるはずです。Web3はEthersに似ており、[イーサリアム](/)ブロックチェーンへのリクエスト作成を容易にするために使用されるライブラリです。このチュートリアルでは、自動再試行と堅牢なWebSocketサポートを提供する拡張Web3ライブラリである[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)を使用します。
 
 プロジェクトのホームディレクトリで以下を実行します。
 
@@ -40,9 +40,9 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## ステップ3: コントラクトのABIを取得する {#contract-abi}
+## ステップ3: コントラクトのABIを取得する
 
-コントラクトのABI（Application Binary Interface）は、スマートコントラクトと対話するためのインターフェースです。コントラクトのABIについて詳しくは、[こちら](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is)をご覧ください。Hardhatは自動的にABIを生成し、`MyNFT.json`ファイルに保存します。これを使用するには、`mint-nft.js`ファイルに以下のコードを追加して、内容を解析する必要があります。
+コントラクトのABI（Application Binary Interface）は、スマートコントラクトと対話するためのインターフェースです。[コントラクトのABI](/glossary/#abi)について詳しく学ぶことができます。Hardhatは自動的にABIを生成し、`MyNFT.json`ファイルに保存します。これを使用するには、`mint-nft.js`ファイルに以下のコード行を追加して、コンテンツを解析する必要があります。
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -59,7 +59,6 @@ console.log(JSON.stringify(contract.abi))
 ```js
 node scripts/mint-nft.js
 ```
-
 ## ステップ4: IPFSを使用してNFTのメタデータを設定する {#config-meta}
 
 パート1のチュートリアルを思い出していただくと、`mintNFT`スマートコントラクト関数は、NFTのメタデータを記述したJSONドキュメントに解決されるtokenURIパラメータを受け取ります。これはまさにNFTに命を吹き込むものであり、名前、説明、画像、その他の属性などの設定可能なプロパティを持たせることができます。
@@ -136,27 +135,27 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## ステップ7: トランザクションを作成する {#create-txn}
+## ステップ7: トランザクションを作成する
 
 まず、`mintNFT(tokenData)`という名前の関数を定義し、以下の手順でトランザクションを作成しましょう。
 
 1. `.env`ファイルから_PRIVATE_KEY_と_PUBLIC_KEY_を取得します。
 
-1. 次に、アカウントのナンスを把握する必要があります。ナンスの仕様は、アドレスから送信されたトランザクションの数を追跡するために使用されます。これはセキュリティ上の目的と、[リプレイ攻撃](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce)を防ぐために必要です。アドレスから送信されたトランザクションの数を取得するには、[getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount)を使用します。
+1. 次に、アカウントのナンスを把握する必要があります。ナンスの仕様は、アドレスから送信されたトランザクションの数を追跡するために使用されます。これは、セキュリティ上の目的とリプレイ攻撃を防ぐために必要です。アドレスから送信されたトランザクションの数を取得するには、[getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count)を使用します。
 
 1. 最後に、以下の情報を使用してトランザクションを設定します。
 
-- `'from': PUBLIC_KEY` — トランザクションの送信元は公開アドレスです。
+- `'from': PUBLIC_KEY` — トランザクションの送信元は公開アドレスです
 
-- `'to': contractAddress` — 対話し、トランザクションを送信したいコントラクトです。
+- `'to': contractAddress` — 対話し、トランザクションを送信したいコントラクトです
 
-- `'nonce': nonce` — アドレスから送信されたトランザクションの数を示すアカウントのナンスです。
+- `'nonce': nonce` — アドレスから送信されたトランザクションの数を示すアカウントのナンスです
 
-- `'gas': estimatedGas` — トランザクションを完了するために必要な推定ガスです。
+- `'gas': estimatedGas` — トランザクションを完了するために必要な推定ガスです
 
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — このトランザクションで実行したい計算です。この場合はNFTのミントです。
+- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — このトランザクションで実行したい計算です。この場合はNFTのミントです
 
-現在の`mint-nft.js`ファイルは次のようになっているはずです。
+これで、`mint-nft.js`ファイルは次のようになるはずです。
 
 ```js
    require('dotenv').config();
@@ -184,7 +183,6 @@ PUBLIC_KEY = "your-public-account-address"
      };
    }​
 ```
-
 ## ステップ8: トランザクションに署名する {#sign-txn}
 
 トランザクションを作成したので、送信するために署名する必要があります。ここで秘密鍵を使用します。
@@ -317,7 +315,7 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-次に、[Alchemyのメンプール](https://dashboard.alchemyapi.io/mempool)にアクセスして、トランザクションのステータス（保留中か、マイニングされたか、ネットワークによってドロップされたか）を確認します。トランザクションがドロップされた場合は、[Blockscout](https://eth-sepolia.blockscout.com/)を確認し、トランザクション・ハッシュを検索するのも役立ちます。
+次に、[Alchemyのメンプール](https://dashboard.alchemy.com/mempool)にアクセスして、トランザクションのステータス（保留中か、マイニングされたか、ネットワークによってドロップされたか）を確認します。トランザクションがドロップされた場合は、[Blockscout](https://eth-sepolia.blockscout.com/)を確認し、トランザクション・ハッシュを検索するのも役立ちます。
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_EtherscanでNFTのトランザクション・ハッシュを表示する_
 

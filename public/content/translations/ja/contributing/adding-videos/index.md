@@ -123,22 +123,27 @@ title: "..."
 
 トランスクリプトがない場合は、本文を空のままにしておけば、チームが作成します。
 
-#### ステップ4: トピックタグを選択する {#step-4}
+#### ステップ4: トピックタグを選択する
 
-ギャラリーで使用されている既存のカテゴリーに一致するトピックタグを選択します。現在のカテゴリーとそのタグは以下の通りです。
+以下のリストからトピックタグを選択します。各タグはビデオギャラリーのフィルターカテゴリーに直接マッピングされます。タグ名は表示されている通りに正確に使用してください。
 
-- **イーサリアムの仕組み**: `how-ethereum-works`、`consensus`、`blockchain`、`cryptography`、`accounts`、`ethereum`、`intro`、`transactions`、`pos`、`smart-contracts`
-- **ネットワークのアップグレード**: `network-upgrades`、`upgrades`、`pectra`、`dencun`、`eip-4844`、`blobs`、`fusaka`
-- **ロードマップと優先事項**: `roadmap-and-priorities`、`pbs`、`mev`
-- **スケーリングとレイヤー2**: `scaling-and-layer-2`、`scaling`、`layer-2`、`rollups`、`optimistic-rollups`、`zk-rollups`
-- **ユースケース**: `use-cases`、`defi`、`finance`、`nfts`、`erc-721`、`erc-1155`、`lending`、`dapps`、`restaking`、`eigenlayer`、`dao`、`identity`、`desci`、`refi`
-- **プライバシーとセキュリティ**: `privacy-and-security`、`privacy`、`authentication`
-- **コミュニティストーリー**: `community-stories`、`contributing`、`translations`、`community`
+1つのビデオに複数のタグを付けて、複数のギャラリーフィルターに表示させることができます。
 
-ビデオがギャラリーのカテゴリーシェルフに確実に表示されるようにするには、少なくとも1つのカテゴリーキータグ（ケバブケースの太字の名前、例: `use-cases`や`scaling-and-layer-2`）を含めてください。認識されたカテゴリータグがないビデオは、「すべて」のビューと検索結果にのみ表示されます。
+| タグ | ギャラリーフィルター |
+|---|---|
+| `how-ethereum-works` | イーサリアムの仕組み |
+| `network-upgrades` | ネットワークのアップグレード |
+| `roadmap-and-priorities` | ロードマップと優先事項 |
+| `scaling-and-layer-2` | スケーリングとレイヤー2 (L2) |
+| `use-cases` | ユースケース |
+| `privacy` | プライバシー |
+| `security` | セキュリティ |
+| `community-stories` | コミュニティストーリー |
+| `events` | イベント |
 
-新しいタグを使用することもできます。これらは将来のカテゴリーのグループ化に利用できるようになります。
+すべてのビデオには、このリストから少なくとも1つのタグを付ける必要があります。認識されたタグがないビデオは、「すべて」ビューと検索結果にのみ表示されます。
 
+`community-stories`タグを付けると、ビデオは[ストーリーページ](/stories/)にも表示されます。
 #### ステップ5: PRを提出する {#step-5}
 
 `dev`ブランチに変更を加えたプルリクエストを作成します。チームが提出内容をレビューし、フィードバックを提供します。

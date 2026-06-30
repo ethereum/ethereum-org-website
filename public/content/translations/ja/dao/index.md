@@ -133,20 +133,17 @@ _通常、プロトコルや[分散型アプリケーション (dapp)](/glossary
 - [Tally.xyzのDAOリスト](https://www.tally.xyz/explore)
 - [DeGov.AIのDAOリスト](https://apps.degov.ai/)
 
-### DAOを立ち上げる {#start-a-dao}
-
-- [DAOHausでDAOを召喚する](https://app.daohaus.club/summon)
+### DAOを立ち上げる
+- [DAOHausでDAOを立ち上げる](https://app.daohaus.club/summon)
 - [TallyでGovernor DAOを立ち上げる](https://www.tally.xyz/get-started)
 - [Aragonを利用したDAOを作成する](https://aragon.org/product)
-- [Colonyを立ち上げる](https://colony.io/)
-- [DAOstackのホログラフィック・コンセンサスでDAOを作成する](https://alchemy.daostack.io/daos/create)
-- [DeGov LauncherでDAOをローンチする](https://docs.degov.ai/integration/deploy)
-
+- [colonyを立ち上げる](https://colony.io/)
+- [DeGov LauncherでDAOを立ち上げる](https://docs.degov.ai/integration/deploy)
 ## 参考文献 {#further-reading}
 
 ### DAOに関する記事 {#dao-articles}
 
-- [DAOとは？](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [DAOとは？](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAOとは何か、何のためにあるのか？](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [DAOを活用したデジタルコミュニティの始め方](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

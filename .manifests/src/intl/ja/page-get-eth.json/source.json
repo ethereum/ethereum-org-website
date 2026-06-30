@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-get-eth.json",
-  "generatedAt": "2026-05-01T19:46:20.661Z",
-  "rootHash": "ca8ddd38b56f",
+  "generatedAt": "2026-06-29T23:48:42.946Z",
+  "rootHash": "cc6a465a6541",
   "tree": {
-    "contentHash": "ae7263ddedce",
-    "anchorHash": "2fd10eacf5e9",
+    "contentHash": "17fc7272c034",
+    "anchorHash": "aaa6ba1e1118",
     "children": {
       "page-get-eth-article-keeping-crypto-safe": {
         "contentHash": "1bb2a4e6c288",
@@ -248,7 +248,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-meta-title": {
-        "contentHash": "bfa673418c82",
+        "contentHash": "bbaa90121be8",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-need-wallet": {
@@ -341,6 +341,10 @@
       },
       "page-get-eth-where-to-buy-title": {
         "contentHash": "53f421e525f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-ways-to-get": {
+        "contentHash": "adab5c90af16",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-your-address": {
@@ -444,6 +448,7 @@
       "page-get-eth-where-to-buy-desc",
       "page-get-eth-where-to-buy-desc-2",
       "page-get-eth-where-to-buy-title",
+      "page-get-eth-ways-to-get",
       "page-get-eth-your-address",
       "page-get-eth-your-address-desc",
       "page-get-eth-your-address-desc-3",
@@ -453,5 +458,5 @@
       "listing-policy-disclaimer"
     ]
   },
-  "sourceCommitSha": "4a12cb9394943a43a5509983baec11bf9c3d756f"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

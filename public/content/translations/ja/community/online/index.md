@@ -52,7 +52,7 @@ lang: ja
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos ディスコード</Link> - ビルダー、業界のリーダー、イーサリアム愛好家が集まるWeb3クリエイターコミュニティ。私たちはWeb3の開発、デザイン、文化に情熱を注いでいます。一緒に構築しましょう。</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity開発のためのチャット (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 質疑応答フォーラム</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- 分散型質疑応答フォーラム</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- 分散型質疑応答フォーラム</i></SocialListItem>
 
 ## ユーチューブとX（旧ツイッター） {#youtube-and-twitter}
 

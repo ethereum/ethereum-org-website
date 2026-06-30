@@ -17,11 +17,9 @@ published: 2021-04-06
 - トークンの送金
 - ネットワークのトラフィック状況に応じたガス価格の設定
 
-### はじめに {#to-get-started}
-
-まず、JavaScriptにethers.jsライブラリをインポートする必要があります。
-ethers.js(5.0)のインクルード
-
+### はじめに
+はじめるにあたり、まず ethers.js ライブラリを JavaScript にインポートする必要があります。
+ethers.js v5 をインクルードします。
 ### インストール {#install-ethersjs}
 
 ```shell

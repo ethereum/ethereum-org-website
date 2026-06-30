@@ -27,7 +27,7 @@ Ethereum.orgは40以上の言語にネイティブに翻訳されており、す
 **ニュース**
 
 - [BeInCrypto](http://www.beincrypto.com.br) - ブラジルで利用可能な取引所のリストを含む、暗号資産のニュースと記事
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - 主要な暗号資産ニュースメディアであるCointelegraphのブラジル版
+- [Cointelegraph](https://cointelegraph.com.br/) - 主要な暗号資産ニュースメディアであるCointelegraphのブラジル版
 - [Livecoins](http://www.livecoins.com.br/ethereum) - 暗号資産のニュースとツール
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - 暗号資産のニュースとレポート
 - [Modular Crypto](https://modularcrypto.xyz/) - 暗号資産のニュースと教育記事
@@ -37,7 +37,7 @@ Ethereum.orgは40以上の言語にネイティブに翻訳されており、す
 - [web3dev](https://www.web3dev.com.br/) - Web3開発者向けのコンテンツハブおよびディスコードコミュニティ。
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - Web3と分散型金融 (DeFi) を学ぶためのリソース
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - 「初心者のためのイーサリアム」や「初心者のためのDeFi」を含む、暗号資産のニュースと教育
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - 暗号資産分野からの洞察、教育、ブログ
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - 暗号資産分野からの洞察、教育、ブログ
 - [Cointimes](http://www.cointimes.com.br/) - 暗号資産のニュースと教育
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - 暗号資産に関する最もよくある基本的な質問に答えるガイド
 

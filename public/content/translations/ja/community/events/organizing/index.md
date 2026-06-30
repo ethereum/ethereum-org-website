@@ -204,16 +204,13 @@ LinkedInはプロモーションの最も明白な選択肢には聞こえない
 
 洞察を共有してこの記事に貢献してくれたすべての人に感謝します：ETHBratislavaのSlavo Fabisik、ETH KipuおよびETH LatamのLola、ETH BelgradeのTanja Mladenovic、Ethereum BogotaのJuan David、ETHWarsawのMonika Zając、NapulETHのRaffaele Orefice、ETH RiyadhのXiao Wu(Ling)、urbe.ethのMarco、ETH DublinのCaolán Walsh、ETHClujのAlex Males、そしてETH SloveniaのStanko Devic。
 
-## リソース {#resources}
-
+## リソース
 ポッドキャスト：ETHイベントの開催とプロモーションのAからZまで：
 
-- [Out of OrdinaryによるETHWarsawのケーススタディ](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [ETHWarsawのケーススタディ（Out of Ordinaryによる）](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 ツイッタースペース：
 
 - [ETHコミュニティAMA](https://x.com/NapulETH/status/1905732699094151623)
 
 記事：
-
-- [Danny H.によるETHKLの構築](https://sekto.tech/ethkl24)

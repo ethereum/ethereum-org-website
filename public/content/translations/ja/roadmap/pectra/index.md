@@ -117,11 +117,9 @@ _ペクトラ・アップグレードには何が含まれるのか？ - Christi
 
 _イーサリアムのペクトラ・アップグレード：ステーカーが知っておくべきこと — Blockdaemon_
 
-## 参考文献 {#further-reading}
-
+## 参考文献
 - [イーサリアムのロードマップ](/roadmap/)
 - [ペクトラFAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf 情報ページ](https://pectra.wtf)
 - [ペクトラがステーカーの体験をどのように向上させるか](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [EIP7702 情報ページ](https://eip7702.io/)
+- [EIP7702情報ページ](https://eip7702.io/)
 - [ペクトラ・デブネット](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

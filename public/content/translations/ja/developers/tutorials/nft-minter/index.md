@@ -33,18 +33,17 @@ Web2のバックグラウンドを持つ開発者にとって最大の課題の1
 
 2つのNFTスマート・コントラクト標準の最大の違いは、ERC-1155がマルチトークン標準でありバッチ機能を含んでいるのに対し、ERC-721はシングルトークン標準であるため、一度に1つのトークンの転送しかサポートしていないことです。
 
-### ミンティング関数を呼び出す {#minting-function}
+### ミンティング関数を呼び出す
 
-通常、このミンティング関数では、パラメータとして2つの変数を渡す必要があります。1つ目は新しくミントされたNFTを受け取るアドレスを指定する`recipient`、2つ目はNFTのメタデータを記述したJSONドキュメントに解決される文字列であるNFTの`tokenURI`です。
+通常、このミンティング関数では、パラメータとして2つの変数を渡す必要があります。1つ目は、新しくミントされたNFTを受け取るアドレスを指定する`recipient`、2つ目は、NFTのメタデータを記述するJSONドキュメントに解決される文字列であるNFTの`tokenURI`です。
 
-NFTのメタデータは、名前、説明、画像（または別のデジタル資産）、その他の属性などのプロパティを持たせることで、NFTに命を吹き込むものです。NFTのメタデータを含む[tokenURIの例はこちら](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)です。
+NFTのメタデータは、NFTに命を吹き込むものであり、名前、説明、画像（または異なるデジタル資産）、その他の属性などのプロパティを持たせることができます。NFTのメタデータを含む[tokenURIの例](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)を次に示します。
 
-このチュートリアルでは、パート2である、React UIを使用して既存のNFTのスマート・コントラクトのミンティング関数を呼び出すことに焦点を当てます。
+このチュートリアルでは、パート2である、React UIを使用したNFTスマート・コントラクトのミンティング関数の呼び出しに焦点を当てます。
 
-このチュートリアルで呼び出すERC-721 NFTスマート・コントラクトへの[リンクはこちら](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE)です。その作成方法を学びたい場合は、別のチュートリアルである[「NFTの作成方法」](https://www.alchemy.com/docs/how-to-create-an-nft)を確認することを強くお勧めします。
+SepoliaなどのサポートされているテストネットにデプロイされたERC-721 NFTスマート・コントラクトが必要になります。自分でデプロイしたい場合は、Alchemyの[Sepoliaへのスマート・コントラクトのデプロイ](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet)に関するガイドをお勧めします。
 
-素晴らしい！NFTの作成方法を理解したところで、スターターファイルをクローンしましょう！
-
+これでNFTの作成の仕組みが理解できたので、スターターファイルをクローンしましょう！
 ## スターターファイルをクローンする {#clone-the-starter-files}
 
 まず、[nft-minter-tutorialのGitHubリポジトリ](https://github.com/alchemyplatform/nft-minter-tutorial)にアクセスして、このプロジェクトのスターターファイルを取得します。このリポジトリをローカル環境にクローンしてください。
@@ -195,28 +194,25 @@ return (
 
 ユーザーがスマート・コントラクトとやり取りできるようにするには、イーサリアムウォレットをdappに接続する必要があります。
 
-### メタマスクをダウンロードする {#download-metamask}
+### メタマスクをダウンロードする
 
-このチュートリアルでは、イーサリアムアカウントアドレスを管理するために使用されるブラウザ内の仮想ウォレットであるメタマスクを使用します。イーサリアム上のトランザクションの仕組みについて詳しく知りたい場合は、[こちらのページ](/developers/docs/transactions/)を確認してください。
+このチュートリアルでは、イーサリアムのアカウントアドレスを管理するために使用されるブラウザ内の仮想ウォレットであるメタマスクを使用します。イーサリアム上のトランザクションがどのように機能するかについて詳しく知りたい場合は、[こちらのページ](/developers/docs/transactions/)を確認してください。
 
-[こちら](https://metamask.io/download)から無料でメタマスクアカウントをダウンロードして作成できます。アカウントを作成する際、または既にアカウントを持っている場合は、右上の「ロプステンテストネットワーク」に切り替えてください（実際の資金を扱わないようにするためです）。
+[こちら](https://metamask.io/download)から無料でメタマスクをダウンロードし、アカウントを作成できます。アカウントを作成する際、またはすでにアカウントを持っている場合は、（実際の資金を扱わないように）Sepoliaなどのサポートされているテストネットワークに必ず切り替えてください。
+### フォーセットからイーサを追加する
 
-### フォーセットからイーサを追加する {#add-ether-from-faucet}
+NFTをミントする（またはイーサリアムブロックチェーン上でトランザクションに署名する）には、テスト用のETHが必要になります。テストネットのETHを取得するには、[Alchemy Sepoliaフォーセット](https://www.alchemy.com/faucets/ethereum-sepolia)などのメンテナンスされているフォーセットを使用し、Sepoliaアカウントのアドレスを入力します。すぐにメタマスクアカウントにETHが表示されるはずです！
+### 残高を確認する
 
-NFTをミントする（またはイーサリアムブロックチェーン上でトランザクションに署名する）には、偽のETHが必要です。ETHを取得するには、[ロプステンフォーセット](https://faucet.ropsten.be/)にアクセスしてロプステンアカウントアドレスを入力し、「Send Ropsten Eth」をクリックします。すぐにメタマスクアカウントにETHが表示されるはずです！
-
-### 残高を確認する {#check-your-balance}
-
-残高があることを再確認するために、[Alchemyのコンポーザーツール](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)を使用して[eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)リクエストを行いましょう。これにより、ウォレット内のETHの量が返されます。メタマスクアカウントアドレスを入力して「Send Request」をクリックすると、次のような応答が表示されるはずです。
+残高があることを再確認するために、[Alchemyのサンドボックスツール](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)を使用して[eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)リクエストを行いましょう。これにより、ウォレット内のETHの量が返されます。メタマスクのアカウントアドレスを入力して「Send Request」をクリックすると、次のような応答が表示されるはずです。
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**注:** この結果はETHではなくWeiです。Weiはイーサの最小単位として使用されます。WeiからETHへの変換は、1 ETH = 10¹⁸ Weiです。したがって、0xde0b6b3a7640000を10進数に変換すると1\*10¹⁸となり、1 ETHに等しくなります。
+**注:** この結果はETHではなくWeiで表示されています。Weiはイーサの最小単位として使用されます。WeiからETHへの変換は、1 ETH = 10¹⁸ Weiです。したがって、0xde0b6b3a7640000を10進数に変換すると1\*10¹⁸となり、これは1 ETHに相当します。
 
-ふう！偽のお金がすべて揃いました！ <Emoji text=":money_mouth_face:" size={1} />
-
+ふう！テスト用の資金はちゃんと入っていますね！ <Emoji text=":money_mouth_face:" size={1} />
 ## メタマスクをUIに接続する {#connect-metamask-to-your-ui}
 
 メタマスクウォレットのセットアップが完了したので、dappをそれに接続しましょう！
@@ -583,30 +579,29 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 また、イーサリアムブロックチェーンに接続してスマート・コントラクトをロードするために、Alchemy APIキーとAlchemy Web3 APIも必要になります。
 
-### Alchemy APIキーを作成する {#create-alchemy-api}
+### Alchemy APIキーを作成する
 
 まだAlchemyアカウントをお持ちでない場合は、[こちらから無料でサインアップしてください。](https://alchemy.com/?a=eth-org-nft-minter)
 
-Alchemyアカウントを作成したら、アプリを作成してAPIキーを生成できます。これにより、ロプステンテストネットワークにリクエストを行うことができます。
+Alchemyアカウントを作成したら、アプリを作成してAPIキーを生成できます。これにより、Sepoliaテストネットワークにリクエストを送信できるようになります。
 
-ナビゲーションバーの「Apps」にカーソルを合わせ、「Create App」をクリックして、Alchemyダッシュボードの「Create App」ページに移動します。
+Alchemyダッシュボードのナビゲーションバーで「Apps」にカーソルを合わせ、「Create App」をクリックして、「Create App」ページに移動します。
 
-アプリに名前を付け（私たちは「My First NFT!」を選びました）、短い説明を提供し、アプリの簿記に使用する環境として「Staging」を選択し、ネットワークとして「Ropsten」を選択します。
+アプリに名前を付け（ここでは「My First NFT!」としました）、簡単な説明を入力し、アプリの管理に使用するEnvironmentとして「Staging」を選択し、ネットワークに「Sepolia」を選択します。
 
 「Create app」をクリックすれば完了です！アプリが下の表に表示されるはずです。
 
-素晴らしい！HTTP Alchemy API URLを作成したので、クリップボードにコピーしてください...
+素晴らしい！これでHTTP Alchemy API URLが作成されたので、クリップボードにコピーして...
 
-…そして、それを`.env`ファイルに追加しましょう。全体として、.envファイルは次のようになります。
+...`.env`ファイルに追加しましょう。最終的に、.envファイルは次のようになります。
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 コントラクトABIとAlchemy APIキーが揃ったので、[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)を使用してスマート・コントラクトをロードする準備が整いました。
-
 ### Alchemy Web3エンドポイントとコントラクトをセットアップする {#setup-alchemy-endpoint}
 
 まず、まだインストールしていない場合は、ターミナルでホームディレクトリ`nft-minter-tutorial`に移動して、[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)をインストールする必要があります。
@@ -849,12 +844,11 @@ const onMintPressed = async () => {
 }
 ```
 
-## ライブウェブサイトにNFTをデプロイする {#deploy-your-nft}
+## NFTを公開ウェブサイトにデプロイする
 
-ユーザーがやり取りできるようにプロジェクトをライブにする準備はできましたか？ミンターをライブウェブサイトにデプロイするための[こちらのチュートリアル](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online)を確認してください。
+ユーザーが操作できるようにプロジェクトを公開する準備はできましたか？ミンターを公開ウェブサイトにデプロイする方法については、[Reactのデプロイメントドキュメント](https://create-react-app.dev/docs/deployment/)を確認してください。
 
-最後のステップ...
-
+最後にもう1つ...
 ## ブロックチェーンの世界に旋風を巻き起こす {#take-the-blockchain-world-by-storm}
 
 冗談です、チュートリアルの最後までたどり着きましたね！
@@ -865,6 +859,6 @@ const onMintPressed = async () => {
 - フロントエンドからスマート・コントラクトのメソッドを呼び出す
 - メタマスクを使用してトランザクションに署名する
 
-おそらく、dappを介してミントされたNFTをウォレットで披露したいと思うでしょう。そのため、クイックチュートリアル[「ウォレットでNFTを表示する方法」](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)を必ず確認してください！
+おそらく、dappを介してミントされたNFTをウォレットで披露したいと思うでしょう。そのため、クイックチュートリアル[「ウォレットでNFTを表示する方法」](/developers/tutorials/how-to-view-nft-in-metamask/)を必ず確認してください！
 
 そして、いつものように、質問がある場合は[Alchemyのディスコード](https://discord.gg/gWuC7zB)でお手伝いします。このチュートリアルの概念を将来のプロジェクトにどのように適用するかを見るのが待ちきれません！

@@ -184,7 +184,7 @@ Solidityスマート・コントラクトの単体テストフレームワーク
 
 ### スマート・コントラクトのプロパティベーステストを実行するためのガイドライン {#running-property-based-tests}
 
-プロパティベーステストの実行は通常、スマート・コントラクトで検証したいプロパティ(例: [整数オーバーフロー](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)がないこと)またはプロパティのコレクションを定義することから始まります。また、プロパティテストを作成する際に、プログラムがトランザクション入力用のデータを生成できる値の範囲を定義する必要がある場合もあります。
+プロパティベーステストの実行は通常、スマート・コントラクトで検証したいプロパティ(例: [整数オーバーフロー](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)がないこと)またはプロパティのコレクションを定義することから始まります。また、プロパティテストを作成する際に、プログラムがトランザクション入力用のデータを生成できる値の範囲を定義する必要がある場合もあります。
 
 適切に構成されると、プロパティテストツールはランダムに生成された入力を使用してスマート・コントラクトの関数を実行します。アサーション違反がある場合は、評価中のプロパティに違反する具体的な入力データを含むレポートを取得できるはずです。さまざまなツールを使用してプロパティベーステストの実行を開始するには、以下のガイドのいくつかを参照してください。
 
@@ -195,7 +195,7 @@ Solidityスマート・コントラクトの単体テストフレームワーク
 - **[エキドナを使用したコントラクトのファジング](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Wakeを使用したコントラクトのファジング](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[マンティコアを使用したスマート・コントラクトのシンボリック実行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Mythrilを使用したスマート・コントラクトのシンボリック実行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[Mythrilを使用したスマート・コントラクトのシンボリック実行](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
 ## スマート・コントラクトの手動テスト {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ Solidityスマート・コントラクトの単体テストフレームワーク
 
 - **[マンティコア](https://manticore.readthedocs.io/en/latest/index.html)** - _EVMバイトコードを分析するための動的シンボリック実行フレームワーク。_
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _テイント分析、コンコリック分析、および制御フローチェックを使用してコントラクトの脆弱性を検出するためのEVMバイトコード評価ツール。_
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _テイント分析、コンコリック分析、および制御フローチェックを使用してコントラクトの脆弱性を検出するためのEVMバイトコード評価ツール。_
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribbleは、Diligence FuzzingやMythXなどのツールを使用してコントラクトを自動的にテストできるようにするプロパティでスマート・コントラクトに注釈を付けることができる仕様言語およびランタイム検証ツールです。_
 
