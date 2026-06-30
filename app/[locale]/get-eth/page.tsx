@@ -176,9 +176,9 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             content: t("page-get-eth-get-eth-btn"),
             href: "#country-picker",
             matomo: {
-              eventCategory: "Get ETH button",
+              eventCategory: "Search by country button",
               eventAction: "click",
-              eventName: "get_eth_hero",
+              eventName: "search_by_country",
             },
           },
         ]}
