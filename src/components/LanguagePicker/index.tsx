@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect } from "react"
-import { useParams } from "next/navigation"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
@@ -28,7 +27,6 @@ const LanguagePicker = ({
 }: LanguagePickerProps) => {
   const pathname = usePathname()
   const { push } = useRouter()
-  const params = useParams()
   const { languages: sortedLanguages } = useLanguagePicker(languages)
 
   useEffect(() => {
@@ -50,15 +48,9 @@ const LanguagePicker = ({
   const handleMenuItemSelect = (currentValue: string) => {
     onSelect?.(currentValue)
 
-    push(
-      // @ts-expect-error -- TypeScript will validate that only known `params`
-      // are used in combination with a given `pathname`. Since the two will
-      // always match for the current route, we can skip runtime checks.
-      { pathname, params },
-      {
-        locale: currentValue,
-      }
-    )
+    push(pathname, {
+      locale: currentValue,
+    })
 
     trackCustomEvent({
       eventCategory: `Language picker`,
