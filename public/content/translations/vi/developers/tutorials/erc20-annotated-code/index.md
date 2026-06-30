@@ -245,7 +245,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` là các định nghĩa cần thiết để sử dụng [OpenGSN](https://www.opengsn.org/), một hệ thống cho phép người dùng không có ether
+- `GSN/Context.sol` là các định nghĩa cần thiết để sử dụng [OpenGSN](https://opengsn.org/), một hệ thống cho phép người dùng không có ether
   sử dụng chuỗi khối. Lưu ý rằng đây là phiên bản cũ, nếu bạn muốn tích hợp với OpenGSN
   [hãy sử dụng hướng dẫn này](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [Thư viện SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), giúp ngăn chặn

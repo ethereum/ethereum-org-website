@@ -371,7 +371,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Khi một ứng dụng khách đồng thuận kết nối với máy khách thực thi để đọc hợp đồng tiền gửi và xác định các trình xác thực, nó cũng kết nối với các nút ngang hàng nút Beacon khác và bắt đầu đồng bộ hóa các khe đồng thuận từ khối nguyên thủy (genesis). Khi nút Beacon đạt đến Kỷ nguyên hiện tại, Beacon API sẽ trở nên khả dụng cho các trình xác thực của bạn. Tìm hiểu thêm về [Beacon Node APIs](https://eth2docs.vercel.app/).
+Khi một ứng dụng khách đồng thuận kết nối với máy khách thực thi để đọc hợp đồng tiền gửi và xác định các trình xác thực, nó cũng kết nối với các nút ngang hàng nút Beacon khác và bắt đầu đồng bộ hóa các khe đồng thuận từ khối nguyên thủy (genesis). Khi nút Beacon đạt đến Kỷ nguyên hiện tại, Beacon API sẽ trở nên khả dụng cho các trình xác thực của bạn. Tìm hiểu thêm về [Beacon Node APIs](https://ethereum.github.io/beacon-APIs).
 
 ### Thêm Trình xác thực {#adding-validators}
 
@@ -454,7 +454,7 @@ Là một phần của việc giám sát, hãy đảm bảo để mắt đến h
 - [Hướng dẫn đặt cọc Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, thường xuyên cập nhật_
 - [Hướng dẫn | Cách thiết lập một trình xác thực để đặt cọc Ethereum trên Mạng chính](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, thường xuyên cập nhật_
 - [Hướng dẫn của EthStaker về việc chạy các trình xác thực trên các mạng thử nghiệm](https://github.com/remyroy/ethstaker#guides) – _EthStaker, cập nhật thường xuyên_
-- [Ứng dụng AWS Blockchain Node Runner mẫu cho các Nút Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, thường xuyên cập nhật_
+- [Ứng dụng AWS Blockchain Node Runner mẫu cho các Nút Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, thường xuyên cập nhật_
 - [Câu hỏi thường gặp về The Merge dành cho các nhà điều hành nút](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Tháng 7 năm 2022_
 - [Phân tích các yêu cầu phần cứng để trở thành một nút đầy đủ được xác thực của Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, ngày 24 tháng 9 năm 2018_
 - [Chạy các nút đầy đủ Ethereum: Hướng dẫn cho những người ít động lực](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, ngày 7 tháng 11 năm 2019_

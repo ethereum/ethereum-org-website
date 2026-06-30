@@ -86,15 +86,14 @@ Bạn đang tìm kiếm các bản nâng cấp giao thức trong tương lai? [T
 
 [Tìm hiểu thêm về Fusaka](/roadmap/fusaka/)
 
-### Prague-Electra ("Pectra") {#pectra}
-
+### Prague-Electra ("Pectra")
 <NetworkUpgradeSummary name="pectra" />
 
-Bản nâng cấp Prague-Electra ("Pectra") bao gồm một số cải tiến đối với Giao thức Ethereum nhằm nâng cao trải nghiệm cho tất cả người dùng, các mạng lưới lớp 2 (l2), người đặt cọc và người vận hành nút.
+Bản nâng cấp Prague-Electra ("Pectra") bao gồm một số cải tiến đối với Giao thức Ethereum nhằm nâng cao trải nghiệm cho tất cả người dùng, các mạng lưới lớp 2, người đặt cọc và người vận hành nút.
 
-Việc đặt cọc đã được nâng cấp với các tài khoản trình xác thực có khả năng cộng dồn và cải thiện quyền kiểm soát đối với các khoản tiền đặt cọc bằng cách sử dụng địa chỉ rút tiền thực thi. EIP-7251 đã tăng số dư hiệu dụng tối đa cho một trình xác thực duy nhất lên 2048, cải thiện hiệu quả sử dụng vốn cho người đặt cọc. EIP-7002 cho phép một tài khoản thực thi kích hoạt các hành động của trình xác thực một cách an toàn, bao gồm thoát hoặc rút một phần tiền, cải thiện trải nghiệm cho người đặt cọc ETH, đồng thời giúp tăng cường trách nhiệm giải trình cho người vận hành nút.
+Việc đặt cọc đã được nâng cấp với các tài khoản trình xác thực gộp, và cải thiện khả năng kiểm soát đối với các khoản tiền đặt cọc bằng cách sử dụng địa chỉ rút tiền thực thi. EIP-7251 đã tăng số dư hiệu dụng tối đa cho một trình xác thực duy nhất lên 2048, cải thiện hiệu quả sử dụng vốn cho người đặt cọc. EIP-7002 cho phép một tài khoản thực thi kích hoạt các hành động của trình xác thực một cách an toàn, bao gồm việc thoát hoặc rút một phần tiền, cải thiện trải nghiệm cho những người đặt cọc ETH, đồng thời giúp tăng cường trách nhiệm giải trình cho những người vận hành nút.
 
-Các phần khác của bản nâng cấp tập trung vào việc cải thiện trải nghiệm cho người dùng thông thường. EIP-7702 mang lại khả năng cho một tài khoản không phải hợp đồng thông minh thông thường ([EOA](/glossary/#eoa)) thực thi mã tương tự như một hợp đồng thông minh. Điều này đã mở khóa chức năng mới không giới hạn cho các tài khoản Ethereum truyền thống, chẳng hạn như gom lô giao dịch, tài trợ Gas, xác thực thay thế, kiểm soát chi tiêu có thể lập trình, cơ chế khôi phục tài khoản và hơn thế nữa.
+Các phần khác của bản nâng cấp tập trung vào việc cải thiện trải nghiệm cho người dùng thông thường. EIP-7702 mang lại khả năng cho một tài khoản thông thường không phải hợp đồng thông minh ([EOA](/glossary/#eoa)) thực thi mã tương tự như một hợp đồng thông minh. Điều này đã mở khóa các chức năng mới không giới hạn cho các tài khoản Ethereum truyền thống, chẳng hạn như gom lô giao dịch, tài trợ Gas, xác thực thay thế, kiểm soát chi tiêu có thể lập trình, cơ chế khôi phục tài khoản và hơn thế nữa.
 
 <ExpandableCard title="Các EIP của Pectra" contentPreview="Các cải tiến chính thức được bao gồm trong bản nâng cấp này.">
 
@@ -111,22 +110,21 @@ Trải nghiệm đặt cọc tốt hơn:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>Tăng <code>MAX_EFFECTIVE_BALANCE</code></em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>Các lượt thoát có thể kích hoạt từ lớp thực thi</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>Các yêu cầu lớp thực thi đa mục đích</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>Các lệnh thoát có thể kích hoạt từ lớp thực thi</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>Các yêu cầu lớp thực thi đa dụng</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Cung cấp các khoản tiền đặt cọc của trình xác thực trên chuỗi</em></li>
 </ul>
 
-Cải thiện hiệu quả và bảo mật của Giao thức:
+Các cải tiến về hiệu quả và bảo mật của giao thức:
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>Hợp đồng tiền biên dịch cho các phép toán đường cong BLS12-381</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Lưu mã băm khối lịch sử trong trạng thái</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Di chuyển chỉ số ủy ban ra ngoài Chứng thực</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>Hợp đồng tiền biên dịch cho các hoạt động đường cong BLS12-381</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Lưu mã băm của các khối lịch sử trong trạng thái</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Di chuyển chỉ số ủy ban ra ngoài chứng thực</em></li>
 </ul>
 
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
 - [Cách Pectra sẽ nâng cao trải nghiệm đặt cọc](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Đọc thông số kỹ thuật của bản nâng cấp Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Câu hỏi thường gặp về Prague-Electra ("Pectra")](/roadmap/pectra/)

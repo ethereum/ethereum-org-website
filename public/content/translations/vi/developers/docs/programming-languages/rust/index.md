@@ -44,7 +44,7 @@ Bạn cần một tài liệu hướng dẫn cơ bản hơn trước? Hãy xem [
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Tài liệu tham khảo API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Công cụ kiểm thử đơn vị cho hợp đồng thông minh Solidity sử dụng EVM của máy khách Parity gốc._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Bản triển khai Máy ảo Ethereum bằng Rust_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Hợp đồng thông minh Wavelet bằng Rust_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Hợp đồng thông minh Wavelet bằng Rust_
 - [Foundry](https://github.com/foundry-rs/foundry) - _Bộ công cụ phát triển ứng dụng Ethereum_
 - [Alloy](https://alloy.rs) - _Các thư viện hiệu suất cao, được kiểm thử kỹ lưỡng & có tài liệu đầy đủ để tương tác với Ethereum và các chuỗi dựa trên EVM khác._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Thư viện Ethereum và bản triển khai ví_

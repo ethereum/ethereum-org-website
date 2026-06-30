@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "locale": "vi",
+  "translatedAt": "2026-06-30T00:59:07.536Z",
+  "englishManifestHash": "643d4e12b501",
+  "placeholderOrder": [
+    "LINK-2745ff",
+    "IMAGE-95a3c9",
+    "LINK-f53495",
+    "LINK-2c9f6a",
+    "IMAGE-6fa59b",
+    "LINK-6d7921",
+    "IMAGE-0a05d3",
+    "LINK-890b15",
+    "LINK-13795d",
+    "LINK-306892",
+    "IMAGE-b4d15f",
+    "IMAGE-c4a91f",
+    "IMAGE-9493b2",
+    "LINK-6f0ab0",
+    "IMAGE-4b4db3",
+    "LINK-fa0035",
+    "IMAGE-a33d1a"
+  ],
+  "placeholderMap": {
+    "IMAGE-95a3c9": {
+      "type": "image",
+      "values": {
+        "path": "./pplpleasr-intro.mp4"
+      }
+    },
+    "IMAGE-6fa59b": {
+      "type": "image",
+      "values": {
+        "path": "./pplpleasr-2.jpeg"
+      }
+    },
+    "IMAGE-0a05d3": {
+      "type": "image",
+      "values": {
+        "path": "./pplpleasr-3.jpeg"
+      }
+    },
+    "IMAGE-b4d15f": {
+      "type": "image",
+      "values": {
+        "path": "./white-rabbit.mp4"
+      }
+    },
+    "IMAGE-c4a91f": {
+      "type": "image",
+      "values": {
+        "path": "./pplpleasr-5.jpeg"
+      }
+    },
+    "IMAGE-9493b2": {
+      "type": "image",
+      "values": {
+        "path": "./pplpleasr-6.jpeg"
+      }
+    },
+    "IMAGE-4b4db3": {
+      "type": "image",
+      "values": {
+        "path": "./pplpleasr-7.png"
+      }
+    },
+    "IMAGE-a33d1a": {
+      "type": "image",
+      "values": {
+        "path": "./pplpleasr-8.png"
+      }
+    },
+    "LINK-2745ff": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/ethereum/status/1928462812554072540?s=20"
+      }
+    },
+    "LINK-f53495": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/Uniswap/status/1374069664297406467?s=20"
+      }
+    },
+    "LINK-2c9f6a": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/PleasrDAO"
+      }
+    },
+    "LINK-6d7921": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumfilm.xyz/watch-the-film/"
+      }
+    },
+    "LINK-890b15": {
+      "type": "link",
+      "values": {
+        "url": "https://www.shibuya.film/"
+      }
+    },
+    "LINK-13795d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.kuciara.com/"
+      }
+    },
+    "LINK-306892": {
+      "type": "link",
+      "values": {
+        "url": "https://www.shibuya.film/series/white-rabbit"
+      }
+    },
+    "LINK-6f0ab0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.televisionacademy.com/shows/white-rabbit"
+      }
+    },
+    "LINK-fa0035": {
+      "type": "link",
+      "values": {
+        "url": "https://www.shibuya.film/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-30T00:59:07.536Z",
+      "status": "success"
+    }
+  }
+}

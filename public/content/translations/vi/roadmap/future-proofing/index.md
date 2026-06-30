@@ -36,25 +36,24 @@ Không. Hiện nay không có máy tính lượng tử nào có thể phá vỡ 
 
 </ExpandableCard>
 
-### Những gì đang được thực hiện? {#what-is-being-done}
+### Những gì đang được thực hiện?
 
-Ethereum hiện là bên phòng thủ chủ động nhất trước các mối đe dọa lượng tử trong hệ sinh thái chuỗi khối. Tổ chức Ethereum đã thành lập một **nhóm Bảo mật Hậu lượng tử** chuyên trách vào tháng 1 năm 2026, và công việc tích cực đang diễn ra trên nhiều nhóm máy khách và nhóm nghiên cứu. Công việc của nhóm Hậu lượng tử thuộc Tổ chức Ethereum (EF) được theo dõi công khai tại [pq.ethereum.org](https://pq.ethereum.org).
+Ethereum hiện là bên phòng thủ chủ động nhất chống lại các mối đe dọa lượng tử trong hệ sinh thái chuỗi khối. Tổ chức Ethereum đã thành lập một **nhóm Bảo mật Hậu lượng tử** chuyên trách vào tháng 1 năm 2026, và công việc tích cực đang diễn ra trên nhiều nhóm máy khách và nhóm nghiên cứu. Công việc của nhóm Hậu lượng tử của EF được theo dõi công khai tại [pq.ethereum.org](https://pq.ethereum.org).
 
 Các công việc đang diễn ra bao gồm:
 
-- **Chữ ký dựa trên mã băm (leanXMSS)**: Một sự thay thế an toàn lượng tử cho chữ ký của trình xác thực, được xây dựng trên các hàm băm mà máy tính lượng tử không thể phá vỡ một cách hiệu quả.
-- **zkVM tối giản (leanVM)**: Bởi vì các chữ ký an toàn lượng tử lớn hơn các chữ ký hiện đang được sử dụng, leanXMSS được ghép nối với một zkVM tối giản (leanVM). Công cụ này tổng hợp các chữ ký an toàn lượng tử một cách hiệu quả, nén dữ liệu gấp 250 lần, để mạng lưới vẫn duy trì tốc độ nhanh sau quá trình chuyển đổi.
+- **Chữ ký dựa trên mã băm (leanXMSS)**: Một giải pháp thay thế an toàn lượng tử cho chữ ký của trình xác thực, được xây dựng trên các hàm băm mà máy tính lượng tử không thể phá vỡ một cách hiệu quả.
+- **zkVM tối giản (leanVM)**: Bởi vì các chữ ký an toàn lượng tử lớn hơn các chữ ký hiện đang được sử dụng, leanXMSS được kết hợp với một zkVM tối giản (leanVM). Công cụ này tổng hợp các chữ ký an toàn lượng tử một cách hiệu quả, nén dữ liệu gấp 250 lần, do đó mạng lưới vẫn duy trì tốc độ nhanh sau quá trình chuyển đổi.
 - **Thử nghiệm khả năng tương tác hàng tuần**: Hơn 10 nhóm máy khách tham gia vào các mạng thử nghiệm (devnet) hậu lượng tử thường xuyên.
 - **Tính khả dụng của dữ liệu:** Việc nâng cấp mật mã học cơ bản được sử dụng để xử lý lượng lớn dữ liệu mạng lưới sẽ đảm bảo Ethereum luôn nhanh chóng và có chi phí sử dụng phải chăng mà không gặp rủi ro về các lỗ hổng lượng tử trong tương lai.
 - **Giải thưởng Poseidon**: Một giải thưởng nghiên cứu trị giá 1 triệu đô la nhằm mục tiêu cải thiện các nguyên thủy mật mã học dựa trên mã băm.
 - **Tiêu chuẩn NIST**: Viện Tiêu chuẩn và Công nghệ Quốc gia Hoa Kỳ đã hoàn thiện ba tiêu chuẩn mật mã học hậu lượng tử vào tháng 8 năm 2024 (ML-KEM, ML-DSA, SLH-DSA). Công việc của Ethereum được xây dựng dựa trên những nền tảng này.
 
-Một phần quan trọng của chiến lược chuyển đổi là **EIP-8141**, giới thiệu tính năng [trừu tượng hóa tài khoản](/roadmap/account-abstraction/) gốc. Điều này cho phép các tài khoản cá nhân chọn xác minh chữ ký của riêng họ, nghĩa là người dùng có thể chuyển sang các chữ ký an toàn lượng tử **mà không cần chờ đợi một đợt di chuyển duy nhất trên toàn giao thức**. EIP-8141 đang được xem xét cho đợt phân nhánh cứng Hegotá (dự kiến vào nửa cuối năm 2026).
+Một phần quan trọng của chiến lược chuyển đổi là **EIP-8141**, giới thiệu [trừu tượng hóa tài khoản](/roadmap/account-abstraction/) gốc. Điều này cho phép các tài khoản cá nhân chọn xác minh chữ ký của riêng họ, có nghĩa là người dùng có thể chuyển sang các chữ ký an toàn lượng tử **mà không cần chờ đợi một đợt di chuyển duy nhất trên toàn bộ giao thức**. EIP-8141 đang được xem xét cho Phân nhánh cứng Hegotá (dự kiến vào nửa cuối năm 2026).
 
-Tổ chức Ethereum đã vạch ra các cột mốc phân nhánh có cấu trúc nhằm mục tiêu hoàn thành cơ sở hạ tầng hậu lượng tử cốt lõi vào khoảng năm 2029. Đây là các mục tiêu lập kế hoạch, không phải là những cam kết được đảm bảo.
+Tổ chức Ethereum đã vạch ra các cột mốc phân nhánh có cấu trúc nhắm mục tiêu hoàn thành cơ sở hạ tầng hậu lượng tử cốt lõi vào khoảng năm 2029. Đây là các mục tiêu lập kế hoạch, không phải là những cam kết được đảm bảo.
 
-[Đọc hướng dẫn chi tiết của chúng tôi về mật mã học hậu lượng tử trên Ethereum](/roadmap/future-proofing/quantum-resistance/)
-
+<ButtonLink variant="outline" href="/roadmap/future-proofing/quantum-resistance/">Tìm hiểu thêm về kháng lượng tử</ButtonLink>
 ## Ethereum đơn giản và hiệu quả hơn {#simpler-more-efficient-ethereum}
 
 Sự phức tạp tạo ra cơ hội cho các lỗi và lỗ hổng. Một phần của lộ trình tập trung vào việc **đơn giản hóa Ethereum và loại bỏ nợ kỹ thuật** để giao thức dễ dàng bảo trì, kiểm toán và suy luận hơn.

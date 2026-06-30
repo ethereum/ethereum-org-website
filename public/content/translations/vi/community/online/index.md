@@ -52,7 +52,7 @@ Nếu bạn cho rằng một cộng đồng nên được thêm vào hoặc xóa
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - cộng đồng những người sáng tạo Web3 nơi các nhà xây dựng, những nhân vật tiêu biểu trong ngành và những người đam mê Ethereum tụ tập. Chúng tôi đam mê phát triển, thiết kế và văn hóa Web3. Hãy đến xây dựng cùng chúng tôi.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - trò chuyện về phát triển Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- diễn đàn hỏi đáp</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- diễn đàn hỏi đáp phi tập trung</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- diễn đàn hỏi đáp phi tập trung</i></SocialListItem>
 
 ## YouTube và X (trước đây là Twitter) {#youtube-and-twitter}
 

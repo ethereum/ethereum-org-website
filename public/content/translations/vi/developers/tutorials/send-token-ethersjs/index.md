@@ -17,11 +17,9 @@ published: 2021-04-06
 - Chuyển token
 - Đặt giá gas theo tình trạng lưu lượng mạng lưới
 
-### Để bắt đầu {#to-get-started}
-
+### Để bắt đầu
 Để bắt đầu, trước tiên chúng ta phải nhập thư viện ethers.js vào JavaScript của mình
-Bao gồm ethers.js(5.0)
-
+Thêm ethers.js v5
 ### Cài đặt {#install-ethersjs}
 
 ```shell

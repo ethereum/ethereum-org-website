@@ -1888,7 +1888,7 @@ web3.sha3("Print(uint256)")
 
 ## Các chủ đề liên quan {#related-topics}
 
-- [Đặc tả JSON-RPC](http://www.jsonrpc.org/specification)
+- [Đặc tả JSON-RPC](https://www.jsonrpc.org/specification)
 - [Các nút và máy khách](/developers/docs/nodes-and-clients/)
 - [API JavaScript](/developers/docs/apis/javascript/)
 - [API backend](/developers/docs/apis/backend/)

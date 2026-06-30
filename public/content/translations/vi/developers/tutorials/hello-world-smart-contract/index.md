@@ -11,7 +11,7 @@ published: 2021-03-31
 
 Nếu bạn mới làm quen với việc phát triển chuỗi khối và không biết bắt đầu từ đâu, hoặc nếu bạn chỉ muốn hiểu cách triển khai và tương tác với các hợp đồng thông minh, thì hướng dẫn này là dành cho bạn. Chúng ta sẽ cùng nhau tạo và triển khai một hợp đồng thông minh đơn giản trên mạng lưới thử nghiệm Sepolia bằng cách sử dụng ví ảo [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), và [Alchemy](https://www.alchemy.com/eth) (đừng lo lắng nếu bạn chưa hiểu bất kỳ điều nào trong số này, chúng tôi sẽ giải thích).
 
-Trong [phần 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) của hướng dẫn này, chúng ta sẽ tìm hiểu cách tương tác với hợp đồng thông minh của mình sau khi nó được triển khai tại đây, và trong [phần 3](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan), chúng ta sẽ đề cập đến cách xuất bản nó trên Etherscan.
+Trong [phần 2](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) của hướng dẫn này, chúng ta sẽ tìm hiểu cách tương tác với hợp đồng thông minh của mình sau khi nó được triển khai tại đây, và trong [phần 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan), chúng ta sẽ đề cập đến cách xuất bản nó trên Etherscan.
 
 Nếu bạn có câu hỏi ở bất kỳ thời điểm nào, đừng ngần ngại liên hệ trong [Discord của Alchemy](https://discord.gg/gWuC7zB)!
 
@@ -59,7 +59,7 @@ Nếu bạn không thấy Sepolia được liệt kê, hãy vào menu, sau đó 
 >
 > Phù! Tiền giả của chúng ta đã ở đó <Emoji text=":money_mouth_face:" size={1} />.
 
-## Bước 6: Khởi tạo dự án của chúng ta {#step-6}
+## Bước 6: Khởi tạo dự án của chúng ta
 
 Đầu tiên, chúng ta sẽ cần tạo một thư mục cho dự án của mình. Điều hướng đến dòng lệnh của bạn và nhập:
 
@@ -68,7 +68,7 @@ mkdir hello-world
 cd hello-world
 ```
 
-Bây giờ chúng ta đang ở trong thư mục dự án của mình, chúng ta sẽ sử dụng `npm init` để khởi tạo dự án. Nếu bạn chưa cài đặt npm, hãy làm theo [các hướng dẫn này](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (chúng ta cũng sẽ cần Node.js nên hãy tải xuống cả phần mềm đó nữa!).
+Bây giờ chúng ta đã ở trong thư mục dự án của mình, chúng ta sẽ sử dụng `npm init` để khởi tạo dự án. Nếu bạn chưa cài đặt npm, hãy làm theo [hướng dẫn cài đặt Node.js](https://nodejs.org/en/download/) (chúng ta sẽ cần Node.js và npm cho hướng dẫn này).
 
 ```
 npm init
@@ -101,8 +101,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-Chấp thuận tệp package.json và chúng ta đã sẵn sàng!
-
+Chấp thuận package.json và chúng ta đã sẵn sàng!
 ## Bước 7: Tải xuống [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
 Hardhat là một môi trường phát triển để biên dịch, triển khai, thử nghiệm và gỡ lỗi phần mềm Ethereum của bạn. Nó giúp các nhà phát triển khi xây dựng các hợp đồng thông minh và ứng dụng phi tập trung (dapp) cục bộ trước khi triển khai lên chuỗi trực tiếp.
@@ -350,11 +349,11 @@ Nếu chúng ta truy cập [Etherscan của Sepolia](https://sepolia.etherscan.i
 
 Chúc mừng! Bạn vừa triển khai một hợp đồng thông minh lên chuỗi Ethereum 🎉
 
-Để hiểu những gì đang diễn ra bên trong, hãy điều hướng đến tab Explorer (Trình khám phá) trong [bảng điều khiển Alchemy](https://dashboard.alchemyapi.io/explorer) của chúng ta. Nếu bạn có nhiều ứng dụng Alchemy, hãy đảm bảo lọc theo ứng dụng và chọn “Hello World”.
+Để hiểu những gì đang diễn ra bên trong, hãy điều hướng đến tab Explorer (Trình khám phá) trong [bảng điều khiển Alchemy](https://dashboard.alchemy.com/explorer) của chúng ta. Nếu bạn có nhiều ứng dụng Alchemy, hãy đảm bảo lọc theo ứng dụng và chọn “Hello World”.
 ![hello world explorer](./hello-world-explorer.png)
 
-Tại đây, bạn sẽ thấy một số lệnh gọi JSON-RPC mà Hardhat/Ethers đã thực hiện ngầm cho chúng ta khi chúng ta gọi hàm `.deploy()`. Hai lệnh gọi quan trọng cần nhắc đến ở đây là [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction), đây là yêu cầu thực sự ghi hợp đồng của chúng ta lên chuỗi Sepolia, và [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash) là yêu cầu đọc thông tin về giao dịch của chúng ta dựa trên mã băm (một mẫu điển hình khi thực hiện các giao dịch). Để tìm hiểu thêm về việc gửi các giao dịch, hãy xem hướng dẫn này về [cách gửi các giao dịch bằng Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+Tại đây, bạn sẽ thấy một số lệnh gọi JSON-RPC mà Hardhat/Ethers đã thực hiện ngầm cho chúng ta khi chúng ta gọi hàm `.deploy()`. Hai lệnh gọi quan trọng cần nhắc đến ở đây là [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), đây là yêu cầu thực sự ghi hợp đồng của chúng ta lên chuỗi Sepolia, và [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash) là yêu cầu đọc thông tin về giao dịch của chúng ta dựa trên mã băm (một mẫu điển hình khi thực hiện các giao dịch). Để tìm hiểu thêm về việc gửi các giao dịch, hãy xem hướng dẫn này về [cách gửi các giao dịch bằng Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 
-Đó là tất cả cho phần 1 của hướng dẫn này, trong phần 2, chúng ta sẽ thực sự [tương tác với hợp đồng thông minh của mình](https://www.alchemy.com/docs/interacting-with-a-smart-contract) bằng cách cập nhật thông điệp ban đầu của chúng ta, và trong phần 3, chúng ta sẽ [xuất bản hợp đồng thông minh của mình lên Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) để mọi người đều biết cách tương tác với nó.
+Đó là tất cả cho phần 1 của hướng dẫn này, trong phần 2, chúng ta sẽ thực sự [tương tác với hợp đồng thông minh của mình](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) bằng cách cập nhật thông điệp ban đầu của chúng ta, và trong phần 3, chúng ta sẽ [xuất bản hợp đồng thông minh của mình lên Etherscan](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) để mọi người đều biết cách tương tác với nó.
 
 **Bạn muốn tìm hiểu thêm về Alchemy? Hãy xem [trang web](https://www.alchemy.com/eth) của chúng tôi. Không bao giờ muốn bỏ lỡ một bản cập nhật nào? Đăng ký nhận bản tin của chúng tôi [tại đây](https://www.alchemy.com/newsletter)! Đảm bảo cũng tham gia [Discord](https://discord.gg/u72VCg3) của chúng tôi.**.
