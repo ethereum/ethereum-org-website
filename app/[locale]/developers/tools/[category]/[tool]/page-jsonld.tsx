@@ -5,28 +5,26 @@ import { FileContributor } from "@/lib/types"
 import PageJsonLD from "@/components/PageJsonLD"
 
 import {
-  type DeveloperTool,
+  type DeveloperToolWithCategory,
   getToolKey,
+  getToolPackageHrefs,
   getToolPrimaryUrl,
+  getToolRepoHrefs,
 } from "@/lib/utils/developerToolsData"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
-export default async function DevelopersToolsCategoryJsonLD({
+export default async function DevelopersToolsToolJsonLD({
   locale,
-  category,
+  tool,
   categoryLabel,
-  categoryDescription,
-  categoryTools,
   contributors,
 }: {
   locale: string
-  category: string
+  tool: DeveloperToolWithCategory
   categoryLabel: string
-  categoryDescription: string
-  categoryTools: DeveloperTool[]
   contributors: FileContributor[]
 }) {
   const t = await getTranslations({
@@ -34,7 +32,14 @@ export default async function DevelopersToolsCategoryJsonLD({
     namespace: "page-developers-tools",
   })
 
-  const url = normalizeUrlForJsonLd(locale, `/developers/tools/${category}`)
+  const url = normalizeUrlForJsonLd(
+    locale,
+    `/developers/tools/${tool.categoryId}/${getToolKey(tool)}/`
+  )
+  const categoryUrl = normalizeUrlForJsonLd(
+    locale,
+    `/developers/tools/${tool.categoryId}/`
+  )
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
@@ -42,15 +47,24 @@ export default async function DevelopersToolsCategoryJsonLD({
     url: contributor.html_url,
   }))
 
+  const repoHrefs = getToolRepoHrefs(tool)
+  const externalUrl = getToolPrimaryUrl(tool)
+  // Other web presences of the tool: socials, repos, packages.
+  const sameAs = [
+    tool.twitter,
+    ...repoHrefs,
+    ...getToolPackageHrefs(tool),
+  ].filter(Boolean)
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
-        "@type": "CollectionPage",
+        "@type": "WebPage",
         "@id": url,
-        name: categoryLabel,
-        description: t("page-developers-tools-meta-description"),
+        name: tool.name,
+        description: tool.description,
         url: url,
         inLanguage: locale,
         contributor: contributorList,
@@ -81,45 +95,38 @@ export default async function DevelopersToolsCategoryJsonLD({
               "@type": "ListItem",
               position: 4,
               name: categoryLabel,
+              item: categoryUrl,
+            },
+            {
+              "@type": "ListItem",
+              position: 5,
+              name: tool.name,
               item: url,
             },
           ],
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#category-tools` },
+        mainEntity: { "@id": `${url}#tool` },
       },
       {
-        "@type": "ItemList",
-        "@id": `${url}#category-tools`,
-        name: categoryLabel,
-        description: categoryDescription,
-        url: url,
-        // Total size of the list; itemListElement below is a truncated subset.
-        numberOfItems: categoryTools.length,
-        itemListElement: categoryTools.slice(0, 10).map((tool, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          item: {
-            "@type": "SoftwareApplication",
-            name: tool.name,
-            description: tool.description,
-            // Prefer the tool's own site, fall back to its top repo, and as a
-            // last resort its canonical page here (some tools have neither a
-            // website nor a repo).
-            url:
-              getToolPrimaryUrl(tool) ||
-              normalizeUrlForJsonLd(
-                locale,
-                `/developers/tools/${category}/${getToolKey(tool)}/`
-              ),
-            applicationCategory: "DeveloperApplication",
-            applicationSubCategory: categoryLabel,
-            ...(tool.thumbnail_url || tool.banner_url
-              ? { image: tool.thumbnail_url || tool.banner_url }
-              : {}),
-          },
-        })),
+        "@type": "SoftwareApplication",
+        "@id": `${url}#tool`,
+        name: tool.name,
+        description: tool.description,
+        ...(externalUrl ? { url: externalUrl } : {}),
+        ...(tool.thumbnail_url || tool.banner_url
+          ? { image: tool.thumbnail_url || tool.banner_url }
+          : {}),
+        applicationCategory: "DeveloperApplication",
+        applicationSubCategory: categoryLabel,
+        ...(repoHrefs[0] ? { codeRepository: repoHrefs[0] } : {}),
+        ...(sameAs.length ? { sameAs } : {}),
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
       },
     ],
   }

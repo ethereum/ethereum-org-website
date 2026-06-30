@@ -38,7 +38,7 @@ export default async function DevelopersToolsJsonLD({
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
-        "@type": "WebPage",
+        "@type": "CollectionPage",
         "@id": url,
         name: t("page-developers-tools-meta-title"),
         description: t("page-developers-tools-meta-description"),

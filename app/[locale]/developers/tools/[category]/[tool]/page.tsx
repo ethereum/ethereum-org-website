@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import ContentFeedback from "@/components/ContentFeedback"
 import { Image } from "@/components/Image"
@@ -17,6 +17,7 @@ import {
 import { Section } from "@/components/ui/section"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import {
   buildSubcategoryIndex,
   buildToolLabels,
@@ -31,6 +32,8 @@ import { getMetadata } from "@/lib/utils/metadata"
 import ToolCard from "../../_components/ToolCard"
 import ToolLinks from "../../_components/ToolLinks"
 
+import PageJsonLD from "./page-jsonld"
+
 import { getDeveloperToolsData } from "@/lib/data"
 
 // Re-render statically generated pages daily to pick up tools data updates
@@ -42,8 +45,9 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const { locale, category, tool: toolKey } = await props.params
   setRequestLocale(locale)
 
-  const [data, t, tCommon] = await Promise.all([
+  const [data, { contributors }, t, tCommon] = await Promise.all([
     getDeveloperToolsData(),
+    getAppPageContributorInfo("developers/tools", locale as Lang),
     getTranslations({ locale, namespace: "page-developers-tools" }),
     getTranslations({ locale, namespace: "common" }),
   ])
@@ -63,6 +67,12 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
 
   return (
     <>
+      <PageJsonLD
+        locale={locale}
+        tool={tool}
+        categoryLabel={categoryLabels[tool.categoryId] || tool.categoryId}
+        contributors={contributors}
+      />
       {/* Breadcrumb sits outside <main>, matching PageHero's eyebrow inset on
           the catalog/category pages so it stays aligned across navigation. */}
       <div className="p-hero lg:px-hero-1.5x lg:py-hero-2x">

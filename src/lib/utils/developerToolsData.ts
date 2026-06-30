@@ -51,6 +51,33 @@ export function normalizeDeveloperToolsData(
 /** Canonical mapping from a tool to its URL slug (also its React key). */
 export const getToolKey = (tool: DeveloperTool): string => slugify(tool.name)
 
+const repoEntries = (tool: DeveloperTool) =>
+  tool.repos.map((repo) => (typeof repo === "string" ? { href: repo } : repo))
+
+/** Repo hrefs, most-starred first (matching the ordering shown in ToolLinks). */
+export function getToolRepoHrefs(tool: DeveloperTool): string[] {
+  return repoEntries(tool)
+    .slice()
+    .sort((a, b) => (b.stargazers ?? -1) - (a.stargazers ?? -1))
+    .map((repo) => repo.href)
+}
+
+/** Package hrefs (e.g. npm) for a tool. */
+export function getToolPackageHrefs(tool: DeveloperTool): string[] {
+  return (tool.packages ?? []).map((pkg) =>
+    typeof pkg === "string" ? pkg : pkg.href
+  )
+}
+
+/**
+ * A tool's canonical external URL: its website if it has one, otherwise its
+ * top repo. Many tools are repo-only, so this keeps a valid URL for them.
+ * Returns `undefined` when a tool has neither.
+ */
+export function getToolPrimaryUrl(tool: DeveloperTool): string | undefined {
+  return tool.website || getToolRepoHrefs(tool)[0] || undefined
+}
+
 /** Map every subcategory id to its parent category id. */
 export function buildSubcategoryIndex(
   taxonomy: BuilderResourcesTaxonomy

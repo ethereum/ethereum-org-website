@@ -62,6 +62,7 @@ const Page = async (props: {
         locale={locale}
         category={category}
         categoryLabel={categoryLabels[category]}
+        categoryDescription={currentCategory.description}
         categoryTools={categoryTools}
         contributors={contributors}
       />
