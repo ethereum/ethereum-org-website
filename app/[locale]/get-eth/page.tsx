@@ -1,6 +1,5 @@
 import { pick } from "lodash"
 import {
-  Check,
   CircleDashed,
   CircleDot,
   Database,
@@ -43,7 +42,6 @@ import { Grid } from "@/components/ui/grid"
 import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
-import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
@@ -65,17 +63,6 @@ const Eyebrow = ({ children }: { children: ReactNode }) => (
   <p className="text-sm font-bold tracking-wide text-primary-high-contrast uppercase">
     {children}
   </p>
-)
-
-// Database with a checkmark badge, matching the get-eth design
-const StakingRewardsIcon = ({ className }: { className?: string }) => (
-  <span className={cn("relative inline-block", className)}>
-    <Database className="size-full" />
-    <Check
-      aria-hidden
-      className="absolute end-0 bottom-0 size-[45%] stroke-[2.5]"
-    />
-  </span>
 )
 
 type WayToGetEth = {
@@ -110,8 +97,8 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       icon: Users,
       title: t("page-get-eth-receive"),
       description: t("page-get-eth-peers-desc"),
-      linkText: t("page-get-eth-wallets-link"),
-      href: "/wallets/",
+      linkText: t("page-get-eth-receive-link"),
+      href: "/guides/how-to-use-a-wallet/",
     },
     {
       icon: CircleDashed,
@@ -128,7 +115,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       href: "/wallets/",
     },
     {
-      icon: StakingRewardsIcon,
+      icon: Database,
       title: t("page-get-eth-staking"),
       description: t("page-get-eth-staking-desc"),
       linkText: t("page-get-eth-staking-link-desc"),
