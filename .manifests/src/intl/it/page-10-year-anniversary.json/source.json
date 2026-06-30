@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-10-year-anniversary.json",
-  "generatedAt": "2026-06-16T15:10:52.546Z",
-  "rootHash": "77da6697fbc1",
+  "generatedAt": "2026-06-29T23:46:51.610Z",
+  "rootHash": "53f698129c20",
   "tree": {
-    "contentHash": "508826f8b654",
-    "anchorHash": "53fb843d80dd",
+    "contentHash": "955bc61846ad",
+    "anchorHash": "651a0aa089f0",
     "children": {
       "page-10-year-anniversary-meta-title": {
         "contentHash": "fe7d2f6cf9d7",
@@ -229,30 +229,6 @@
       },
       "page-10-year-banner-cta": {
         "contentHash": "0433072d089f",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-10-year-stories-read-more": {
-        "contentHash": "83b794145c0c",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-10-year-stories-show-original": {
-        "contentHash": "16194a69c43d",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-10-year-stories-show-english": {
-        "contentHash": "f827a6514dfa",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-10-year-stories-original-language": {
-        "contentHash": "c5c60a2af071",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-10-year-stories-english-translation": {
-        "contentHash": "3c1709cef10c",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-10-year-stories-show-more": {
-        "contentHash": "f5c9bd131486",
         "anchorHash": "e3b0c44298fc"
       },
       "page-10-year-globe-go-to-event": {
@@ -654,12 +630,6 @@
       "page-10-year-banner-launch-text",
       "page-10-year-banner-tagline",
       "page-10-year-banner-cta",
-      "page-10-year-stories-read-more",
-      "page-10-year-stories-show-original",
-      "page-10-year-stories-show-english",
-      "page-10-year-stories-original-language",
-      "page-10-year-stories-english-translation",
-      "page-10-year-stories-show-more",
       "page-10-year-globe-go-to-event",
       "page-10-year-innovation-card-1-title",
       "page-10-year-innovation-card-1-date",
@@ -729,5 +699,5 @@
       "page-10-year-terms-and-conditions"
     ]
   },
-  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

@@ -11,7 +11,7 @@ published: 2021-03-31
 
 Se sei nuovo nello sviluppo su blockchain e non sai da dove iniziare, o se vuoi semplicemente capire come distribuire e interagire con gli smart contract, questa guida fa per te. Ti guideremo attraverso la creazione e la distribuzione di un semplice smart contract sulla rete di test di Sepolia utilizzando un portafoglio virtuale [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) e [Alchemy](https://www.alchemy.com/eth) (non preoccuparti se non capisci ancora cosa significhi tutto questo, lo spiegheremo).
 
-Nella [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) di questo tutorial vedremo come interagire con il nostro smart contract una volta distribuito, e nella [parte 3](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) spiegheremo come pubblicarlo su Etherscan.
+Nella [parte 2](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) di questo tutorial vedremo come interagire con il nostro smart contract una volta distribuito, e nella [parte 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) spiegheremo come pubblicarlo su Etherscan.
 
 Se hai domande in qualsiasi momento, sentiti libero di contattarci nel [Discord di Alchemy](https://discord.gg/gWuC7zB)!
 
@@ -59,7 +59,7 @@ Per verificare che il nostro saldo sia presente, facciamo una richiesta [eth_get
 >
 > Fiuu! I nostri soldi finti ci sono tutti <Emoji text=":money_mouth_face:" size={1} />.
 
-## Passaggio 6: Inizializzare il nostro progetto {#step-6}
+## Passaggio 6: Inizializzare il nostro progetto
 
 Per prima cosa, dovremo creare una cartella per il nostro progetto. Vai alla riga di comando e digita:
 
@@ -68,13 +68,13 @@ mkdir hello-world
 cd hello-world
 ```
 
-Ora che siamo all'interno della cartella del nostro progetto, utilizzeremo `npm init` per inizializzare il progetto. Se non hai già installato npm, segui [queste istruzioni](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (avremo bisogno anche di Node.js, quindi scarica anche quello!).
+Ora che siamo all'interno della cartella del nostro progetto, useremo `npm init` per inizializzare il progetto. Se non hai già installato npm, segui [le istruzioni di installazione di Node.js](https://nodejs.org/en/download/) (avremo bisogno di Node.js e npm per questo tutorial).
 
 ```
 npm init
 ```
 
-Non importa molto come rispondi alle domande di installazione, ecco come abbiamo fatto noi come riferimento:
+Non ha molta importanza come rispondi alle domande di installazione, ecco come abbiamo fatto noi come riferimento:
 
 ```
 package name: (hello-world)
@@ -102,7 +102,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 Approva il package.json e siamo pronti a partire!
-
 ## Passaggio 7: Scaricare [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
 Hardhat è un ambiente di sviluppo per compilare, distribuire, testare ed eseguire il debug del tuo software Ethereum. Aiuta gli sviluppatori durante la creazione di smart contract e dapp localmente prima della distribuzione sulla catena live.
@@ -350,11 +349,11 @@ L'indirizzo `From` dovrebbe corrispondere all'indirizzo del tuo account MetaMask
 
 Congratulazioni! Hai appena distribuito uno smart contract sulla catena di Ethereum 🎉
 
-Per capire cosa succede internamente, andiamo alla scheda Explorer nella nostra [dashboard di Alchemy](https://dashboard.alchemyapi.io/explorer). Se hai più app Alchemy, assicurati di filtrare per app e seleziona "Hello World".
+Per capire cosa succede internamente, andiamo alla scheda Explorer nella nostra [dashboard di Alchemy](https://dashboard.alchemy.com/explorer). Se hai più app Alchemy, assicurati di filtrare per app e seleziona "Hello World".
 ![hello world explorer](./hello-world-explorer.png)
 
-Qui vedrai una manciata di chiamate JSON-RPC che Hardhat/Ethers ha effettuato internamente per noi quando abbiamo chiamato la funzione `.deploy()`. Due importanti da segnalare qui sono [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction), che è la richiesta per scrivere effettivamente il nostro contratto sulla catena di Sepolia, e [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash) che è una richiesta per leggere informazioni sulla nostra transazione dato l'hash (un pattern tipico quando si inviano transazioni). Per saperne di più sull'invio di transazioni, dai un'occhiata a questo tutorial sull'[invio di transazioni utilizzando il Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+Qui vedrai una manciata di chiamate JSON-RPC che Hardhat/Ethers ha effettuato internamente per noi quando abbiamo chiamato la funzione `.deploy()`. Due importanti da segnalare qui sono [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), che è la richiesta per scrivere effettivamente il nostro contratto sulla catena di Sepolia, e [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash) che è una richiesta per leggere informazioni sulla nostra transazione dato l'hash (un pattern tipico quando si inviano transazioni). Per saperne di più sull'invio di transazioni, dai un'occhiata a questo tutorial sull'[invio di transazioni utilizzando il Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 
-Questo è tutto per la parte 1 di questo tutorial, nella parte 2 [interagiremo effettivamente con il nostro smart contract](https://www.alchemy.com/docs/interacting-with-a-smart-contract) aggiornando il nostro messaggio iniziale, e nella parte 3 [pubblicheremo il nostro smart contract su Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) in modo che tutti sappiano come interagirvi.
+Questo è tutto per la parte 1 di questo tutorial, nella parte 2 [interagiremo effettivamente con il nostro smart contract](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) aggiornando il nostro messaggio iniziale, e nella parte 3 [pubblicheremo il nostro smart contract su Etherscan](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) in modo che tutti sappiano come interagirvi.
 
 **Vuoi saperne di più su Alchemy? Dai un'occhiata al nostro [sito web](https://www.alchemy.com/eth). Non vuoi perderti nessun aggiornamento? Iscriviti alla nostra newsletter [qui](https://www.alchemy.com/newsletter)! Assicurati anche di unirti al nostro [Discord](https://discord.gg/u72VCg3).**.

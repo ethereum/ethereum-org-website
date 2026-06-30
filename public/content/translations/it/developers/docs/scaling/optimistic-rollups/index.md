@@ -253,17 +253,14 @@ Preferisci l'apprendimento visivo? Guarda Finematics che spiega i rollup ottimis
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Ulteriori letture sui rollup ottimistici {#further-reading-on-optimistic-rollups}
-
+## Letture di approfondimento sui rollup ottimistici
 - [Come funzionano i rollup ottimistici (La guida completa)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Cos'è un rollup blockchain? Un'introduzione tecnica](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [La guida essenziale ad Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [La guida pratica ai rollup di Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [Lo stato delle prove di frode negli L2 di Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
 - [Come funziona davvero il rollup di Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [Un'analisi approfondita dell'OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [Un'esplorazione dettagliata dell'OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Cos'è la Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
 ## Tutorial: Rollup ottimistici e ponti su Ethereum {#tutorials}
 
 - [Panoramica del contratto ponte standard di Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Una panoramica del codice annotato del ponte standard di Optimism per lo spostamento di asset tra L1 e L2._

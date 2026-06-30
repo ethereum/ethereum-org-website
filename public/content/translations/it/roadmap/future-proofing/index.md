@@ -36,7 +36,7 @@ No. Nessun computer quantistico oggi può violare la crittografia di Ethereum. I
 
 </ExpandableCard>
 
-### Cosa si sta facendo? {#what-is-being-done}
+### Cosa si sta facendo?
 
 Ethereum è attualmente il difensore più proattivo contro le minacce quantistiche nell'ecosistema blockchain. La Ethereum Foundation ha formato un **team per la sicurezza post-quantistica** dedicato nel gennaio 2026 e il lavoro attivo si estende a più team di client e gruppi di ricerca. Il lavoro del team post-quantistico della EF è tracciato pubblicamente su [pq.ethereum.org](https://pq.ethereum.org).
 
@@ -45,16 +45,15 @@ Il lavoro attivo include:
 - **Firme basate su hash (leanXMSS)**: Un sostituto a prova di quantum per le firme dei validatori, basato su funzioni di hash che i computer quantistici non possono violare in modo efficiente.
 - **zkVM minimale (leanVM)**: Poiché le firme a prova di quantum sono più grandi delle firme attualmente utilizzate, leanXMSS è abbinato a una zkVM minimale (leanVM). Questo motore aggrega le firme a prova di quantum in modo efficiente, comprimendo i dati di 250 volte, in modo che la rete rimanga veloce dopo la transizione.
 - **Test di interoperabilità settimanali**: Più di 10 team di client partecipano a devnet post-quantistiche regolari.
-- **Disponibilità dei dati:** L'aggiornamento della crittografia sottostante utilizzata per gestire grandi quantità di dati di rete garantirà che Ethereum rimanga veloce ed economico da usare senza rischiare future vulnerabilità quantistiche.
+- **Disponibilità dei dati:** L'aggiornamento della crittografia sottostante utilizzata per gestire grandi quantità di dati di rete garantirà che Ethereum rimanga veloce e conveniente da usare senza rischiare future vulnerabilità quantistiche.
 - **Premio Poseidon**: Un premio di ricerca da 1 milione di dollari mirato a miglioramenti nelle primitive crittografiche basate su hash.
 - **Standard NIST**: Il National Institute of Standards and Technology degli Stati Uniti ha finalizzato tre standard di crittografia post-quantistica nell'agosto 2024 (ML-KEM, ML-DSA, SLH-DSA). Il lavoro di Ethereum si basa su queste fondamenta.
 
 Una parte fondamentale della strategia di transizione è l'**EIP-8141**, che introduce l'[astrazione dell'account](/roadmap/account-abstraction/) nativa. Ciò consente ai singoli account di scegliere la propria verifica della firma, il che significa che gli utenti potrebbero passare a firme a prova di quantum **senza aspettare una singola migrazione a livello di protocollo**. L'EIP-8141 è in fase di valutazione per l'hard fork Hegotá (previsto per la seconda metà del 2026).
 
-La Ethereum Foundation ha delineato traguardi strutturati per i fork che mirano al completamento dell'infrastruttura post-quantistica di base entro circa il 2029. Si tratta di obiettivi di pianificazione, non di impegni garantiti.
+La Ethereum Foundation ha delineato traguardi strutturati per i fork che mirano al completamento dell'infrastruttura post-quantistica di base entro circa il 2029. Questi sono obiettivi di pianificazione, non impegni garantiti.
 
-[Leggi la nostra guida dettagliata alla crittografia post-quantistica su Ethereum](/roadmap/future-proofing/quantum-resistance/)
-
+<ButtonLink variant="outline" href="/roadmap/future-proofing/quantum-resistance/">Maggiori informazioni sulla resistenza quantistica</ButtonLink>
 ## Un Ethereum più semplice ed efficiente {#simpler-more-efficient-ethereum}
 
 La complessità crea opportunità per bug e vulnerabilità. Parte della roadmap si concentra sulla **semplificazione di Ethereum e sulla rimozione del debito tecnico** in modo che il protocollo sia più facile da mantenere, verificare e analizzare.

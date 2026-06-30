@@ -54,22 +54,21 @@ Plasma utilizza un contratto principale in esecuzione su Ethereum per elaborare 
 
 Per entrare nella catena Plasma, Alice (l'utente) dovrà depositare ETH o qualsiasi token ERC-20 nel contratto Plasma. L'operatore Plasma, che osserva i depositi del contratto, ricrea un importo pari al deposito iniziale di Alice e lo rilascia al suo indirizzo sulla catena Plasma. Ad Alice è richiesto di attestare la ricezione dei fondi sulla catena figlia e può quindi utilizzare questi fondi per le transazioni.
 
-#### Uscire dalla catena Plasma {#exiting-the-plasma-chain}
+#### Uscire dalla catena Plasma
 
-L'uscita dalla catena Plasma è più complessa dell'entrata per diversi motivi. Il principale è che, sebbene Ethereum disponga di informazioni sullo stato della catena Plasma, non può verificare se le informazioni siano vere o meno. Un utente malintenzionato potrebbe fare un'affermazione errata ("Ho 1000 ETH") e farla franca fornendo prove false per supportare la dichiarazione.
+Uscire dalla catena Plasma è più complesso che entrarvi per diverse ragioni. La principale è che, sebbene Ethereum abbia informazioni sullo stato della catena Plasma, non può verificare se le informazioni siano vere o meno. Un utente malintenzionato potrebbe fare un'affermazione errata ("Ho 1000 ETH") e farla franca fornendo prove false per sostenere l'affermazione.
 
 Per prevenire prelievi dannosi, viene introdotto un "periodo di contestazione". Durante il periodo di contestazione (di solito una settimana), chiunque può contestare una richiesta di prelievo utilizzando una prova di frode. Se la contestazione ha successo, la richiesta di prelievo viene negata.
 
 Tuttavia, di solito gli utenti sono onesti e fanno affermazioni corrette sui fondi che possiedono. In questo scenario, Alice avvierà una richiesta di prelievo sulla catena radice (Ethereum) inviando una transazione al contratto Plasma.
 
-Deve anche fornire una prova di Merkle che verifichi che una transazione che ha creato i suoi fondi sulla catena Plasma sia stata inclusa in un blocco. Questo è necessario per le iterazioni di Plasma, come [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), che utilizzano un modello [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
+Deve anche fornire una prova di Merkle che verifichi che una transazione che ha creato i suoi fondi sulla catena Plasma sia stata inclusa in un blocco. Questo è necessario per le iterazioni di Plasma, come Plasma MVP, che utilizzano un modello [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Altre, come [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), rappresentano i fondi come [token non fungibili](/developers/docs/standards/tokens/erc-721/) invece di UTXO. Il prelievo, in questo caso, richiede la prova della proprietà dei token sulla catena Plasma. Ciò viene fatto inviando le due transazioni più recenti che coinvolgono il token e fornendo una prova di Merkle che verifichi l'inclusione di tali transazioni in un blocco.
+Altre, come Plasma Cash, rappresentano i fondi come [token non fungibili](/developers/docs/standards/tokens/erc-721/) invece di UTXO. Il prelievo, in questo caso, richiede la prova di proprietà dei token sulla catena Plasma. Ciò viene fatto inviando le due transazioni più recenti che coinvolgono il token e fornendo una prova di Merkle che verifichi l'inclusione di tali transazioni in un blocco.
 
-L'utente deve anche aggiungere una cauzione alla richiesta di prelievo come garanzia di comportamento onesto. Se uno sfidante dimostra che la richiesta di prelievo di Alice non è valida, la sua cauzione subisce lo slashing e una parte di essa va allo sfidante come ricompensa.
+L'utente deve anche aggiungere una cauzione alla richiesta di prelievo come garanzia di comportamento onesto. Se uno sfidante dimostra che la richiesta di prelievo di Alice non è valida, la sua cauzione viene sottoposta a slashing e una parte di essa va allo sfidante come ricompensa.
 
 Se il periodo di contestazione trascorre senza che nessuno fornisca una prova di frode, la richiesta di prelievo di Alice è considerata valida, consentendole di recuperare i depositi dal contratto Plasma su Ethereum.
-
 ### Arbitrato delle dispute {#dispute-arbitration}
 
 Come qualsiasi blockchain, le catene Plasma necessitano di un meccanismo per far rispettare l'integrità delle transazioni nel caso in cui i partecipanti agiscano in modo dannoso (ad es. la doppia spesa dei fondi). A tal fine, le catene Plasma utilizzano le prove di frode per arbitrare le dispute riguardanti la validità delle transizioni di stato e penalizzare i comportamenti scorretti. Le prove di frode sono utilizzate come meccanismo attraverso il quale una catena figlia Plasma presenta un reclamo alla sua catena genitore o alla catena radice.
@@ -165,16 +164,14 @@ Diversi progetti forniscono implementazioni di Plasma che puoi integrare nelle t
 
 - [Polygon](https://polygon.technology/) (in precedenza Matic Network)
 
-## Letture consigliate {#further-reading}
+## Letture consigliate
 
-- [Impara Plasma](https://www.learnplasma.org/en/)
-- [Un rapido promemoria di cosa significa "sicurezza condivisa" e perché è così importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
+- [Un rapido promemoria di cosa significhi "sicurezza condivisa" e perché sia così importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Sidechain vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Comprendere Plasma, Parte 1: Le basi](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [Vita e morte di Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
-
 ## Tutorial: Catene Plasma su Ethereum {#tutorials}
 
 - [Scrivi un plasma specifico per l'app che preservi la privacy](/developers/tutorials/app-plasma/) _– Costruisci un'applicazione plasma che preserva la privacy utilizzando prove a conoscenza zero e componenti offchain._

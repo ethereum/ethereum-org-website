@@ -123,22 +123,27 @@ Usa le intestazioni `###` con i timestamp per contrassegnare le sezioni principa
 
 Se non hai una trascrizione, puoi lasciare il corpo vuoto e il team ne genererà una.
 
-#### Passaggio 4: Scegliere i tag degli argomenti {#step-4}
+#### Passaggio 4: Scegliere i tag degli argomenti
 
-Scegli i tag degli argomenti che corrispondono alle categorie esistenti utilizzate nella galleria. Le categorie attuali e i relativi tag includono:
+Scegli i tag degli argomenti dall'elenco sottostante. Ogni tag corrisponde direttamente a una categoria di filtro nella galleria video: usa il nome del tag esattamente come mostrato.
 
-- **Come funziona Ethereum**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Aggiornamenti della rete**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Roadmap e priorità**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Scalabilità e layer 2**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Casi d'uso**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Privacy e sicurezza**: `privacy-and-security`, `privacy`, `authentication`
-- **Storie della community**: `community-stories`, `contributing`, `translations`, `community`
+Un video può avere più tag per apparire in più filtri della galleria:
 
-Per assicurarti che il tuo video appaia in uno scaffale di categoria della galleria, includi almeno un tag chiave di categoria (il nome in grassetto in kebab-case, es. `use-cases` o `scaling-and-layer-2`). I video senza un tag di categoria riconosciuto appariranno solo nella vista "Tutti" e nei risultati di ricerca.
+| Tag | Filtro della galleria |
+|---|---|
+| `how-ethereum-works` | Come funziona Ethereum |
+| `network-upgrades` | Aggiornamenti della rete |
+| `roadmap-and-priorities` | Roadmap e priorità |
+| `scaling-and-layer-2` | Scalabilità e layer 2 |
+| `use-cases` | Casi d'uso |
+| `privacy` | Privacy |
+| `security` | Sicurezza |
+| `community-stories` | Storie della community |
+| `events` | Eventi |
 
-Puoi anche utilizzare nuovi tag: saranno disponibili per futuri raggruppamenti di categorie.
+Ogni video dovrebbe avere almeno un tag da questo elenco. I video senza un tag riconosciuto appariranno solo nella vista "Tutti" e nei risultati di ricerca.
 
+Il tag `community-stories` fa sì che un video appaia anche nella [pagina Storie](/stories/).
 #### Passaggio 5: Inviare la PR {#step-5}
 
 Apri una pull request con le tue modifiche al branch `dev`. Il team esaminerà la tua richiesta e fornirà un feedback.
