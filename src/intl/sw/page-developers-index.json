@@ -137,5 +137,16 @@
   "page-developers-why-title": "Lipwa vizuri. Fanya kazi ukiwa mbali. Jenga siku zijazo.",
   "page-developers-why-subtitle": "Zaidi ya nusu ya taaluma za mnyororo wa vitalu ni za kufanya kazi ukiwa mbali huku baadhi ya makadirio yakiweka idadi hiyo kufikia 70%.",
   "page-developers-why-avg-salary-dev": "Wastani wa mshahara wa msanidi programu",
-  "page-developers-why-avg-salary-blockchain": "Wastani wa mshahara katika tasnia ya mnyororo wa vitalu"
+  "page-developers-why-avg-salary-blockchain": "Wastani wa mshahara katika tasnia ya mnyororo wa vitalu",
+  "page-developers-why-grid-money-heading": "Pesa unayoweza kuipangia programu",
+  "page-developers-why-grid-money-desc": "Andika msimbo unaofafanua jinsi thamani inavyosonga, lini, na kwa nani. Hakuna benki, hakuna waamuzi, ni mantiki tu unayofafanua.",
+  "page-developers-why-grid-skills-heading": "Ujuzi usiopitwa na wakati",
+  "page-developers-why-grid-skills-desc": "Jifunze misingi ya intaneti ijayo. Teknolojia inaweza kubadilika, lakini kanuni za Web3 zitaendelea kuwepo.",
+  "page-developers-why-grid-censorship-heading": "Ustahimilivu wa udhibiti",
+  "page-developers-why-grid-censorship-desc": "Jenga miradi na biashara ambazo haziwezi kunyamazishwa na serikali, mashirika, au kanuni. Ikiwa ni muhimu, inabaki mtandaoni.",
+  "page-developers-why-grid-sovereignty-heading": "Mamlaka ya kidijitali",
+  "page-developers-why-grid-sovereignty-desc": "Miliki utambulisho wako, mali, na ubunifu wako mtandaoni bila kutegemea majukwaa yanayoweza kukufuta.",
+  "page-developers-blog-title": "Masasisho ya mjenzi",
+  "page-developers-blog-desc": "Maarifa kuhusu rasilimali, zana, na maendeleo ya hivi punde ya mjenzi wa Ethereum.",
+  "page-developers-blog-view-all": "Tazama masasisho yote"
 }

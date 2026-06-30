@@ -184,7 +184,7 @@ Fuzzing ni muhimu kwa kutathmini utaratibu wa uthibitishaji wa ingizo wa mkataba
 
 ### Miongozo ya kuendesha majaribio kulingana na sifa kwa mikataba mahiri {#running-property-based-tests}
 
-Kuendesha majaribio kulingana na sifa kwa kawaida huanza na kufafanua sifa (k.m., kutokuwepo kwa [mizidio ya nambari kamili](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) au mkusanyiko wa sifa unazotaka kuthibitisha katika mkataba mahiri. Unaweza pia kuhitaji kufafanua anuwai ya thamani ambazo programu inaweza kuzalisha data kwa ingizo za muamala wakati wa kuandika majaribio ya sifa.
+Kuendesha majaribio kulingana na sifa kwa kawaida huanza na kufafanua sifa (k.m., kutokuwepo kwa [mizidio ya nambari kamili](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)) au mkusanyiko wa sifa unazotaka kuthibitisha katika mkataba mahiri. Unaweza pia kuhitaji kufafanua anuwai ya thamani ambazo programu inaweza kuzalisha data kwa ingizo za muamala wakati wa kuandika majaribio ya sifa.
 
 Ikisanidiwa vizuri, zana ya majaribio ya sifa itatekeleza utendaji wa mikataba yako mahiri na ingizo zilizozalishwa kwa nasibu. Ikiwa kuna ukiukaji wowote wa madai, unapaswa kupata ripoti iliyo na data halisi ya ingizo inayokiuka sifa inayotathminiwa. Tazama baadhi ya miongozo hapa chini ili kuanza kuendesha majaribio kulingana na sifa na zana tofauti:
 
@@ -195,7 +195,7 @@ Ikisanidiwa vizuri, zana ya majaribio ya sifa itatekeleza utendaji wa mikataba y
 - **[Fuzzing ya mikataba na Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Fuzzing ya mikataba na Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Utekelezaji wa kiishara wa mikataba mahiri na Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Utekelezaji wa kiishara wa mikataba mahiri na Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[Utekelezaji wa kiishara wa mikataba mahiri na Mythril](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
 ## Majaribio ya mikono kwa mikataba mahiri {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ Tofauti kubwa ni kwamba programu za zawadi za hitilafu ziko wazi kwa jamii pana 
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _Mfumo wa utekelezaji wa kiishara thabiti kwa kuchanganua msimbo wa baiti wa EVM._
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _Zana ya tathmini ya msimbo wa baiti wa EVM kwa kugundua udhaifu wa mkataba kwa kutumia uchanganuzi wa taint, uchanganuzi wa concolic, na ukaguzi wa mtiririko wa udhibiti._
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _Zana ya tathmini ya msimbo wa baiti wa EVM kwa kugundua udhaifu wa mkataba kwa kutumia uchanganuzi wa taint, uchanganuzi wa concolic, na ukaguzi wa mtiririko wa udhibiti._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble ni lugha ya vipimo na zana ya uthibitishaji wa wakati wa utekelezaji inayokuruhusu kufafanua mikataba mahiri na sifa zinazokuruhusu kujaribu kiotomatiki mikataba na zana kama vile Diligence Fuzzing au MythX._
 

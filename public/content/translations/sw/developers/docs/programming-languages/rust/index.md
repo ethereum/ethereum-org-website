@@ -44,7 +44,7 @@ Je, unahitaji mwongozo wa kimsingi zaidi kwanza? Angalia [ethereum.org/learn](/l
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Rejeleo la API ya OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Zana ya majaribio ya Mikataba Mahiri ya Solidity kwa kutumia EVM asili ya Mteja wa Parity._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Utekelezaji wa Mashine Pepe ya Ethereum ya Rust_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Mkataba mahiri wa Wavelet katika Rust_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Mkataba mahiri wa Wavelet katika Rust_
 - [Foundry](https://github.com/foundry-rs/foundry) - _Zana za uundaji wa programu tumizi za Ethereum_
 - [Alloy](https://alloy.rs) - _Maktaba zenye utendaji wa juu, zilizojaribiwa vizuri na kurekodiwa kwa ajili ya kuingiliana na Ethereum na minyororo mingine inayotegemea EVM._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Maktaba ya Ethereum na utekelezaji wa mkoba_

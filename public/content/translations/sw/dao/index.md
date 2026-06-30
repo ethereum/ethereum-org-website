@@ -133,20 +133,17 @@ _Kwa kawaida hutumika kwa maendeleo yaliyogatuliwa na utawala wa itifaki na [pro
 - [Orodha ya DAO ya Tally.xyz](https://www.tally.xyz/explore)
 - [Orodha ya DAO ya DeGov.AI](https://apps.degov.ai/)
 
-### Anza DAO {#start-a-dao}
-
-- [Ita DAO ukitumia DAOHaus](https://app.daohaus.club/summon)
-- [Anza DAO ya Gavana ukitumia Tally](https://www.tally.xyz/get-started)
+### Anzisha DAO
+- [Anzisha DAO ukitumia DAOHaus](https://app.daohaus.club/summon)
+- [Anzisha DAO ya Gavana ukitumia Tally](https://www.tally.xyz/get-started)
 - [Unda DAO inayoendeshwa na Aragon](https://aragon.org/product)
-- [Anza koloni](https://colony.io/)
-- [Unda DAO ukitumia mwafaka wa holagrafia wa DAOstack](https://alchemy.daostack.io/daos/create)
-- [Zindua DAO ukitumia Kizindua cha DeGov](https://docs.degov.ai/integration/deploy)
-
+- [Anzisha koloni](https://colony.io/)
+- [Zindua DAO ukitumia Kizinduzi cha DeGov](https://docs.degov.ai/integration/deploy)
 ## Usomaji zaidi {#further-reading}
 
 ### Makala za DAO {#dao-articles}
 
-- [DAO ni nini?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [DAO ni nini?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [Nyumba ya DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO ni nini na inatumika kwa ajili gani?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Jinsi ya Kuanzisha Jumuiya ya Kidijitali Inayoendeshwa na DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

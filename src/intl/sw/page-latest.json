@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "Rasilimali za wajenzi, zana, na maendeleo kutoka kwenye mfumo wa ikolojia wa Ethereum.",
-  "page-latest-title": "Masasisho ya wajenzi",
-  "page-latest-subtitle": "Nafasi ya pamoja kwa mitazamo ya wataalamu kuhusu rasilimali, zana, na maendeleo ya hivi punde katika mfumo wa ikolojia wa wajenzi wa Ethereum.",
+  "page-latest-meta-description": "Machapisho ya hivi punde ya blogu, habari, na sasisho kutoka kwa jamii ya Ethereum, pamoja na mitazamo ya wataalamu kutoka kote kwenye mfumo wa ikolojia wa mjenzi.",
+  "page-latest-title": "Sasisho za hivi punde za Ethereum",
+  "page-latest-subtitle": "Machapisho ya hivi punde ya blogu, habari, na sasisho kutoka kwa jamii, pamoja na mitazamo ya wataalamu kuhusu maendeleo kote kwenye mfumo wa ikolojia wa mjenzi wa Ethereum.",
   "page-latest-no-posts": "Hakuna machapisho yaliyopatikana.",
   "page-latest-read-more": "Soma zaidi",
   "page-latest-minute-read": "Dakika {minutes} za kusoma",
-  "page-latest-team-attribution": "Ukuaji wa Wajenzi wa EF"
+  "page-latest-team-attribution": "Ukuaji wa Wajenzi wa EF",
+  "page-latest-cta-submit-resource": "Wasilisha rasilimali",
+  "page-latest-cta-propose-article": "Pendekeza makala",
+  "page-latest-highlights-heading": "Mambo muhimu",
+  "page-latest-articles-heading": "Makala za hivi punde za Ethereum",
+  "page-latest-sources-heading": "Soma zaidi kwenye tovuti hizi",
+  "page-latest-see-more": "Ona zaidi ({count})",
+  "page-latest-sort-label": "Panga makala",
+  "page-latest-sort-newest": "Mpya kwanza",
+  "page-latest-sort-oldest": "Za zamani kwanza",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "Baadhi ya makala zinaonyeshwa katika lugha yake ya asili (Kiingereza).",
+  "page-latest-suggest-heading": "Pendekeza rasilimali",
+  "page-latest-suggest-description": "Unajua jarida la Ethereum au chapisho la utafiti ambalo linapaswa kuorodheshwa hapa, au una mada ya makala ya mjenzi akilini? Fungua suala ili kuwasilisha rasilimali yako."
 }

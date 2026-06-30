@@ -760,19 +760,19 @@ Kwa kuwa tunatumia kazi ya kiwango cha chini ya `<address>.call()`, hatuwezi kut
 
 Hii ndiyo njia tunayothibitisha kwamba msimbo [unatoa tukio kwa usahihi](https://getfoundry.sh/reference/cheatcodes/expect-emit/) katika Foundry.
 
-### Mteja {#the-client}
+### Mteja
 
-Jambo moja ambalo hupati na majaribio ya Solidity ni msimbo wa JavaScript unaoweza kukata na kubandika kwenye programu yako mwenyewe. Ili kuandika msimbo huo nilipeleka WORM kwenye [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), mtandao wa majaribio mpya wa [Optimism](https://www.optimism.io/). Iko kwenye anwani [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Jambo moja ambalo hupati na majaribio ya Solidity ni msimbo wa JavaScript ambao unaweza kukata na kubandika kwenye programu yako mwenyewe. Toleo la asili la mafunzo haya lilisambaza WORM kwenye Optimism Goerli, ambayo tangu wakati huo imestaafishwa. Ili kuendesha mteja leo, sambaza tena WORM kwenye mtandao unaotumika wa OP Stack kama vile [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), kisha utumie anwani ya mkataba inayotokana katika mteja wa JavaScript.
 
-[Unaweza kuona msimbo wa JavaScript kwa mteja hapa](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Ili kuitumia:
+[Unaweza kuona msimbo wa JavaScript kwa ajili ya mteja hapa](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Hifadhi ya mfano iliandikwa kwa ajili ya Optimism Goerli, kwa hivyo kabla ya kuiendesha, sasisha mwisho wa RPC na URL za kichunguzi katika `javascript/.env.example` na `javascript/index.js` kwa mtandao wako lengwa. Ili kuitumia:
 
-1. Nakili hazina ya git:
+1. Nakili hifadhi ya git:
 
    ```sh
    git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
    ```
 
-2. Sakinisha vifurushi vinavyohitajika:
+2. Sakinisha vifurushi muhimu:
 
    ```sh
    cd javascript
@@ -785,12 +785,12 @@ Jambo moja ambalo hupati na majaribio ya Solidity ni msimbo wa JavaScript unaowe
    cp .env.example .env
    ```
 
-4. Hariri `.env` kwa usanidi wako:
+4. Hariri `.env` kwa ajili ya usanidi wako:
 
-   | Kigezo | Thamani |
+   | Kigezo              | Thamani                                                                                                                                                             |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC | Mnemonic kwa akaunti ambayo ina ETH ya kutosha kulipia muamala. [Unaweza kupata ETH ya bure kwa mtandao wa Optimism Goerli hapa](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL ya Optimism Goerli. Mwisho wa umma, `https://goerli.optimism.io`, una kikomo cha kiwango lakini unatosha kwa kile tunachohitaji hapa |
+   | MNEMONIC            | Mnemonic kwa ajili ya akaunti ambayo ina ETH ya kutosha kulipia muamala. [Nyaraka za bomba za Optimism](https://docs.optimism.io/app-developers/tools/faucets) zinaorodhesha mabomba ya sasa ya mtandao wa majaribio. |
+   | OPTIMISM_GOERLI_URL | URL ya RPC kwa mtandao ambapo unasambaza tena WORM. Kwa OP Sepolia, tumia mwisho wa RPC wa OP Sepolia kama vile `https://sepolia.optimism.io`, au mwisho mwingine kutoka kwa mtoa huduma wako.        |
 
 5. Endesha `index.js`.
 
@@ -798,9 +798,9 @@ Jambo moja ambalo hupati na majaribio ya Solidity ni msimbo wa JavaScript unaowe
    node index.js
    ```
 
-   Programu tumizi hii ya mfano kwanza inaandika ingizo kwa WORM, ikionyesha data za mwito na kiungo cha muamala kwenye Etherscan. Kisha inasoma tena ingizo hilo, na kuonyesha ufunguo inaotumia na thamani katika ingizo (thamani, nambari ya kitalu, na mwandishi).
+   Programu tumizi hii ya mfano kwanza inaandika ingizo kwenye WORM, ikionyesha data za mwito na kiungo cha muamala kwenye kichunguzi cha bloku. Kisha inasoma tena ingizo hilo, na kuonyesha ufunguo inaotumia na thamani katika ingizo (thamani, nambari ya kitalu, na mwandishi).
 
-Sehemu kubwa ya mteja ni JavaScript ya kawaida ya Dapp. Kwa hivyo tena tutapitia tu sehemu zinazovutia.
+Sehemu kubwa ya mteja ni JavaScript ya kawaida ya programu tumizi iliyogatuliwa (dapp). Kwa hivyo tena tutapitia tu sehemu zinazovutia.
 
 ```javascript
 .
@@ -813,7 +813,7 @@ const main = async () => {
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-Sloti fulani inaweza kuandikwa mara moja tu, kwa hivyo tunatumia muhuri wa muda kuhakikisha hatutumii tena sloti.
+Sloti fulani inaweza kuandikwa mara moja tu, kwa hivyo tunatumia muhuri wa muda ili kuhakikisha hatutumii tena sloti.
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
@@ -837,7 +837,7 @@ Kama ilivyo kwa msimbo wa majaribio wa Solidity, hatuwezi kuita kazi iliyohifadh
     .
     .
     .
-    // Soma ingizo lililoandikwa sasa hivi
+    // Soma ingizo lililoandikwa hivi punde
     const realKey = '0x' + key.slice(4)  // ondoa bendera ya FF
     const entryRead = await worm.readEntry(realKey)
     .
@@ -846,7 +846,6 @@ Kama ilivyo kwa msimbo wa majaribio wa Solidity, hatuwezi kuita kazi iliyohifadh
 ```
 
 Kwa kusoma maingizo tunaweza kutumia utaratibu wa kawaida. Hakuna haja ya kutumia kache ya kigezo na kazi za `view`.
-
 ## Hitimisho {#conclusion}
 
 Msimbo katika makala haya ni uthibitisho wa dhana, madhumuni ni kufanya wazo liwe rahisi kueleweka. Kwa mfumo ulio tayari kwa uzalishaji unaweza kutaka kutekeleza utendaji wa ziada:

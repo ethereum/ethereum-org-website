@@ -21,7 +21,7 @@ Hebu tuanze!
 
 ## Hatua ya 1: Sakinisha Web3 {#install-web3}
 
-Ikiwa ulifuata mafunzo ya kwanza kuhusu kuunda mkataba wako mahiri wa NFT, tayari una uzoefu wa kutumia Ethers.js. Web3 inafanana na Ethers, kwani ni maktaba inayotumika kurahisisha uundaji wa maombi kwenye mnyororo wa vitalu wa [Ethereum](/). Katika mafunzo haya tutatumia [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), ambayo ni maktaba iliyoboreshwa ya Web3 inayotoa majaribio ya kiotomatiki na usaidizi thabiti wa WebSocket.
+Ikiwa ulifuata mafunzo ya kwanza kuhusu kuunda mkataba wako mahiri wa NFT, tayari una uzoefu wa kutumia Ethers.js. Web3 inafanana na Ethers, kwani ni maktaba inayotumika kurahisisha uundaji wa maombi kwenye mnyororo wa vitalu wa [Ethereum](/). Katika mafunzo haya tutatumia [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), ambayo ni maktaba iliyoboreshwa ya Web3 inayotoa majaribio ya kiotomatiki na usaidizi thabiti wa WebSocket.
 
 Katika saraka ya mwanzo ya mradi wako endesha:
 
@@ -40,9 +40,9 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Hatua ya 3: Chukua ABI ya mkataba wako {#contract-abi}
+## Hatua ya 3: Pata ABI ya mkataba wako
 
-ABI (Application Binary Interface) ya mkataba wetu ni kiolesura cha kuingiliana na mkataba wetu mahiri. Unaweza kujifunza zaidi kuhusu ABI za Mkataba [hapa](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat inazalisha ABI kiotomatiki kwa ajili yetu na kuihifadhi katika faili ya `MyNFT.json`. Ili kutumia hii tutahitaji kuchanganua yaliyomo kwa kuongeza mistari ifuatayo ya msimbo kwenye faili yetu ya `mint-nft.js`:
+ABI (Application Binary Interface) ya mkataba wetu ni kiolesura cha kuingiliana na mkataba mahiri wetu. Unaweza kujifunza zaidi kuhusu [ABI za mkataba](/glossary/#abi). Hardhat inatutengenezea ABI kiotomatiki na kuihifadhi katika faili ya `MyNFT.json`. Ili kutumia hii tutahitaji kuchanganua yaliyomo kwa kuongeza mistari ifuatayo ya msimbo kwenye faili yetu ya `mint-nft.js`:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -54,12 +54,11 @@ Ikiwa unataka kuona ABI unaweza kuichapisha kwenye kiweko (console) chako:
 console.log(JSON.stringify(contract.abi))
 ```
 
-Ili kuendesha `mint-nft.js` na kuona ABI yako ikichapishwa kwenye kiweko nenda kwenye kituo chako (terminal) na uendeshe:
+Ili kuendesha `mint-nft.js` na kuona ABI yako ikichapishwa kwenye kiweko nenda kwenye kituo (terminal) chako na uendeshe:
 
 ```js
 node scripts/mint-nft.js
 ```
-
 ## Hatua ya 4: Sanidi data fafanuzi kwa ajili ya NFT yako kwa kutumia IPFS {#config-meta}
 
 Kama unakumbuka kutoka kwenye mafunzo yetu katika Sehemu ya 1, kipengele chetu cha mkataba mahiri cha `mintNFT` kinachukua kigezo cha tokenURI ambacho kinapaswa kutatua kwenye hati ya JSON inayoelezea data fafanuzi ya NFT— ambayo ndiyo hasa inayoipa NFT uhai, na kuiruhusu kuwa na sifa zinazoweza kusanidiwa, kama vile jina, maelezo, picha, na sifa nyinginezo.
@@ -136,13 +135,13 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## Hatua ya 7: Unda muamala wako {#create-txn}
+## Hatua ya 7: Unda muamala wako
 
 Kwanza, hebu tufafanue kipengele kinachoitwa `mintNFT(tokenData)` na tuunde muamala wetu kwa kufanya yafuatayo:
 
-1. Chukua _PRIVATE_KEY_ na _PUBLIC_KEY_ yako kutoka kwenye faili ya `.env`.
+1. Pata _PRIVATE_KEY_ na _PUBLIC_KEY_ yako kutoka kwenye faili ya `.env`.
 
-1. Kisha, tutahitaji kutambua nonsi ya akaunti. Uainishaji wa nonsi unatumika kufuatilia idadi ya miamala iliyotumwa kutoka kwenye anwani yako — ambayo tunaihitaji kwa madhumuni ya usalama na kuzuia [mashambulizi ya kurudia (replay attacks)](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). Ili kupata idadi ya miamala iliyotumwa kutoka kwenye anwani yako, tunatumia [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+1. Kisha, tutahitaji kutambua nonsi ya akaunti. Uainishaji wa nonsi unatumika kufuatilia idadi ya miamala iliyotumwa kutoka kwenye anwani yako — ambayo tunaihitaji kwa madhumuni ya usalama na kuzuia mashambulizi ya kurudia. Ili kupata idadi ya miamala iliyotumwa kutoka kwenye anwani yako, tunatumia [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
 
 1. Hatimaye tutaweka muamala wetu na maelezo yafuatayo:
 
@@ -152,7 +151,7 @@ Kwanza, hebu tufafanue kipengele kinachoitwa `mintNFT(tokenData)` na tuunde muam
 
 - `'nonce': nonce` — Nonsi ya akaunti yenye idadi ya miamala iliyotumwa kutoka kwenye anwani yetu
 
-- `'gas': estimatedGas` — Gesi inayokadiriwa kuhitajika ili kukamilisha muamala
+- `'gas': estimatedGas` — Gesi iliyokadiriwa inayohitajika kukamilisha muamala
 
 - `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Ukokotoaji tunaotaka kufanya katika muamala huu — ambao katika kesi hii ni kufua NFT
 
@@ -184,7 +183,6 @@ Faili yako ya `mint-nft.js` inapaswa kuonekana hivi sasa:
      };
    }​
 ```
-
 ## Hatua ya 8: Kusaini muamala {#sign-txn}
 
 Sasa kwa kuwa tumeunda muamala wetu, tunahitaji kuusaini ili kuutuma. Hapa ndipo tutatumia ufunguo wa siri wetu.
@@ -317,7 +315,7 @@ Sasa, endesha `node scripts/mint-nft.js` ili kusambaza NFT yako. Baada ya sekund
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-Kisha, tembelea [mempool ya Alchemy](https://dashboard.alchemyapi.io/mempool) yako ili kuona hali ya muamala wako (kama unasubiri, umechimbwa, au umedondoshwa na mtandao). Ikiwa muamala wako ulidondoshwa, inasaidia pia kuangalia [Blockscout](https://eth-sepolia.blockscout.com/) na kutafuta heshi ya muamala wako.
+Kisha, tembelea [mempool ya Alchemy](https://dashboard.alchemy.com/mempool) yako ili kuona hali ya muamala wako (kama unasubiri, umechimbwa, au umedondoshwa na mtandao). Ikiwa muamala wako ulidondoshwa, inasaidia pia kuangalia [Blockscout](https://eth-sepolia.blockscout.com/) na kutafuta heshi ya muamala wako.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Tazama heshi ya muamala wako wa NFT kwenye Etherscan_
 

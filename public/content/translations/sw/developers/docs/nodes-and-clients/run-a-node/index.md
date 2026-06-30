@@ -371,7 +371,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Wakati mteja wa mwafaka anapounganishwa na kiteja cha utekelezaji ili kusoma mkataba wa amana na kutambua wathibitishaji, pia huunganishwa na rika zingine za Nodi ya Kinara na kuanza kusawazisha nafasi za mwafaka kutoka mwanzo. Mara tu Nodi ya Kinara inapofikia kipindi cha sasa, API ya Kinara inakuwa inatumika kwa wathibitishaji wako. Jifunze zaidi kuhusu [API za Nodi ya Kinara](https://eth2docs.vercel.app/).
+Wakati mteja wa mwafaka anapounganishwa na kiteja cha utekelezaji ili kusoma mkataba wa amana na kutambua wathibitishaji, pia huunganishwa na rika zingine za Nodi ya Kinara na kuanza kusawazisha nafasi za mwafaka kutoka mwanzo. Mara tu Nodi ya Kinara inapofikia kipindi cha sasa, API ya Kinara inakuwa inatumika kwa wathibitishaji wako. Jifunze zaidi kuhusu [API za Nodi ya Kinara](https://ethereum.github.io/beacon-APIs).
 
 ### Kuongeza Wathibitishaji {#adding-validators}
 
@@ -454,7 +454,7 @@ Kama sehemu ya ufuatiliaji wako, hakikisha unafuatilia utendaji wa mashine yako.
 - [Miongozo ya Uwekezaji Dhamana ya Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, inasasishwa mara kwa mara_
 - [Mwongozo | Jinsi ya kusanidi mthibitishaji kwa uwekaji dhamana wa Ethereum kwenye Mtandao Mkuu](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, inasasishwa mara kwa mara_
 - [Miongozo ya EthStaker kuhusu kuendesha wathibitishaji kwenye mitandao ya majaribio](https://github.com/remyroy/ethstaker#guides) – _EthStaker, inasasishwa mara kwa mara_
-- [Sampuli ya programu ya AWS Blockchain Node Runner kwa Nodi za Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, inasasishwa mara kwa mara_
+- [Sampuli ya programu ya AWS Blockchain Node Runner kwa Nodi za Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, inasasishwa mara kwa mara_
 - [Maswali Yanayoulizwa Mara kwa Mara ya Unganisho kwa waendeshaji wa nodi](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Julai 2022_
 - [Kuchambua mahitaji ya vifaa ili kuwa nodi kamili iliyothibitishwa ya Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 Septemba 2018_
 - [Kuendesha Nodi Kamili za Ethereum: Mwongozo kwa Wasio na Motisha Sana](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Novemba 2019_

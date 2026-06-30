@@ -61,9 +61,8 @@ Ili kusambaza mkataba mahiri wako kwenye mtandao wa majaribio, utahitaji ETH ban
 _Kumbuka: kutokana na msongamano wa mtandao, hii inaweza kuchukua muda._
 ``
 
-### Hatua ya 5: Angalia Salio lako {#step-5-check-your-balance}
-
-Ili kuhakikisha kuwa ETH ipo kwenye mkoba wako, hebu tutume ombi la [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) tukitumia [zana ya kutunga ya Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Hii itarejesha kiasi cha ETH kwenye mkoba wetu. Ili kujifunza zaidi angalia [mafunzo mafupi ya Alchemy kuhusu jinsi ya kutumia zana ya kutunga](https://youtu.be/r6sjRxBZJuU).
+### Hatua ya 5: Angalia Salio lako
+Ili kuhakikisha mara mbili kuwa ETH ipo kwenye mkoba wako, hebu tufanye ombi la [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) kwa kutumia [zana ya sandbox ya Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Ili kujifunza zaidi angalia [mafunzo mafupi ya Alchemy kuhusu jinsi ya kutumia zana ya composer](https://youtu.be/r6sjRxBZJuU).
 
 Weka anwani yako ya akaunti ya MetaMask na ubofye **Send Request**. Utaona jibu linalofanana na kijisehemu cha msimbo hapa chini.
 
@@ -73,9 +72,8 @@ Weka anwani yako ya akaunti ya MetaMask na ubofye **Send Request**. Utaona jibu 
 
 > _Kumbuka: Matokeo haya yapo katika wei, si ETH. Wei inatumika kama kiasi kidogo zaidi cha Etha._
 
-Phew! Pesa zetu bandia zote zipo.
-
-### Hatua ya 6: Anzisha mradi wetu {#step-6-initialize-our-project}
+Phew! Pesa zetu bandia zote zipo hapo.
+### Hatua ya 6: Anzisha mradi wetu
 
 Kwanza, tutahitaji kuunda folda kwa ajili ya mradi wetu. Nenda kwenye mstari wako wa amri na uweke yafuatayo.
 
@@ -84,11 +82,11 @@ mkdir hello-world
 cd hello-world
 ```
 
-Sasa kwa kuwa tupo ndani ya folda yetu ya mradi, tutatumia `npm init` kuanzisha mradi.
+Sasa kwa kuwa tuko ndani ya folda yetu ya mradi, tutatumia `npm init` kuanzisha mradi.
 
-> Ikiwa bado hujasakinisha npm, fuata [maagizo haya ili kusakinisha Node.js na npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
+> Ikiwa bado hujasakinisha npm, fuata [maagizo ya usakinishaji wa Node.js](https://nodejs.org/en/download/) ili kusakinisha Node.js na npm.
 
-Kwa madhumuni ya mafunzo haya, haijalishi jinsi unavyojibu maswali ya uanzishaji. Hivi ndivyo tulivyofanya kwa marejeleo:
+Kwa madhumuni ya mafunzo haya, haijalishi jinsi unavyojibu maswali ya kuanzisha. Hivi ndivyo tulivyofanya kwa marejeleo:
 
 ```
 package name: (hello-world)
@@ -116,8 +114,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-Idhinisha package.json na tupo tayari kuendelea!
-
+Idhinisha package.json na tuko tayari kuendelea!
 ### Hatua ya 7: Pakua Hardhat {#step-7-download-hardhat}
 
 Hardhat ni mazingira ya usanidi ya kukusanya, kusambaza, kujaribu, na kutatua programu yako ya Ethereum. Inasaidia wasanidi wanapounda mikataba mahiri na programu tumizi zilizogatuliwa (dapps) ndani ya kompyuta zao kabla ya kusambaza kwenye mnyororo unaofanya kazi.
@@ -225,7 +222,7 @@ Tumeunda mkoba wa MetaMask, akaunti ya Alchemy, na kuandika mkataba mahiri wetu,
 
 Kila muamala unaotumwa kutoka kwenye mkoba wako unahitaji saini kwa kutumia ufunguo wako wa faragha wa kipekee. Ili kuipa programu yetu ruhusa hii, tunaweza kuhifadhi ufunguo wetu wa faragha kwa usalama kwenye faili la mazingira. Pia tutahifadhi ufunguo wa API wa Alchemy hapa.
 
-> Ili kujifunza zaidi kuhusu kutuma miamala, angalia [mafunzo haya](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) kuhusu kutuma miamala kwa kutumia Web3.
+> Ili kujifunza zaidi kuhusu kutuma miamala, angalia [mafunzo haya](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) kuhusu kutuma miamala kwa kutumia Web3.
 
 Kwanza, sakinisha kifurushi cha dotenv kwenye saraka yako ya mradi:
 
@@ -255,7 +252,7 @@ Ili kuunganisha haya kwenye msimbo wetu, tutarejelea vigezo hivi kwenye faili le
 
 ### Hatua ya 12: Sakinisha Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js ni maktaba inayorahisisha kuingiliana na kutuma maombi kwenye Ethereum kwa kufunika [mbinu za kawaida za JSON-RPC](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) na mbinu zinazofaa zaidi kwa mtumiaji.
+Ethers.js ni maktaba inayorahisisha kuingiliana na kutuma maombi kwenye Ethereum kwa kufunika [mbinu za kawaida za JSON-RPC](/developers/docs/apis/json-rpc/) na mbinu zinazofaa zaidi kwa mtumiaji.
 
 Hardhat inaturuhusu kujumuisha [programu-jalizi](https://hardhat.org/plugins/) kwa zana za ziada na utendaji uliopanuliwa. Tutatumia fursa ya [programu-jalizi ya Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) kwa usambazaji wa mkataba.
 
@@ -373,7 +370,7 @@ Ili kuelewa kinachoendelea kiufundi, hebu twende kwenye kichupo cha Explorer kwe
 
 ![](./hello-world-explorer.png)
 
-Hapa utaona mbinu chache za JSON-RPC ambazo Hardhat/Ethers ilitutengenezea kiufundi tulipoiita kipengele cha utendaji cha `.deploy()`. Mbinu mbili muhimu hapa ni [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), ambalo ni ombi la kuandika mkataba wetu kwenye mnyororo wa Goerli, na [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), ambalo ni ombi la kusoma taarifa kuhusu muamala wetu kulingana na heshi. Ili kujifunza zaidi kuhusu kutuma miamala, angalia [mafunzo yetu kuhusu kutuma miamala kwa kutumia Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Hapa utaona mbinu chache za JSON-RPC ambazo Hardhat/Ethers ilitutengenezea kiufundi tulipoiita kipengele cha utendaji cha `.deploy()`. Mbinu mbili muhimu hapa ni [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), ambalo ni ombi la kuandika mkataba wetu kwenye mnyororo wa Goerli, na [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), ambalo ni ombi la kusoma taarifa kuhusu muamala wetu kulingana na heshi. Ili kujifunza zaidi kuhusu kutuma miamala, angalia [mafunzo yetu kuhusu kutuma miamala kwa kutumia Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 ## Sehemu ya 2: Kuingiliana na Mkataba Mahiri wako {#part-2-interact-with-your-smart-contract}
 
@@ -571,7 +568,7 @@ Inasasisha ujumbe...
 Ujumbe mpya ni: Huu ni ujumbe mpya.
 ```
 
-Wakati unaendesha hati hiyo, unaweza kugundua kuwa hatua ya `Updating the message...` inachukua muda kupakia kabla ya ujumbe mpya kupakia. Hiyo inatokana na mchakato wa kuchimba; ikiwa una hamu ya kufuatilia miamala wakati inachimbwa, tembelea [mempool ya Alchemy](https://dashboard.alchemyapi.io/mempool) ili kuona hali ya muamala. Ikiwa muamala utaachwa, inasaidia pia kuangalia [Goerli Etherscan](https://goerli.etherscan.io) na kutafuta heshi ya muamala wako.
+Wakati unaendesha hati hiyo, unaweza kugundua kuwa hatua ya `Updating the message...` inachukua muda kupakia kabla ya ujumbe mpya kupakia. Hiyo inatokana na mchakato wa kuchimba; ikiwa una hamu ya kufuatilia miamala wakati inachimbwa, tembelea [mempool ya Alchemy](https://dashboard.alchemy.com/mempool) ili kuona hali ya muamala. Ikiwa muamala utaachwa, inasaidia pia kuangalia [Goerli Etherscan](https://goerli.etherscan.io) na kutafuta heshi ya muamala wako.
 
 ## Sehemu ya 3: Chapisha Mkataba Mahiri wako kwenye Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -679,7 +676,7 @@ Unapoenda kwenye kiungo kilichotolewa kwenye kituo chako, unapaswa kuweza kuona 
 Kufikia mwisho wa mafunzo haya, utajua jinsi ya:
 
 - Kuunganisha mkoba wa MetaMask kwenye programu tumizi iliyogatuliwa (dapp) yako
-- Kusoma data kutoka kwenye mkataba mahiri wako ukitumia API ya [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Kusoma data kutoka kwenye mkataba mahiri wako ukitumia API ya [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Kutia saini miamala ya Ethereum ukitumia MetaMask
 
 Kwa dapp hii, tutatumia [React](https://react.dev/) kama mfumo wetu wa sehemu ya mbele; hata hivyo, ni muhimu kutambua kwamba hatutatumia muda mwingi kuchambua misingi yake, kwani tutazingatia zaidi kuleta utendaji wa Web3 kwenye mradi wetu.
@@ -900,33 +897,33 @@ Ili kusoma kutoka kwenye mkataba mahiri wako, utahitaji kuweka kwa ufanisi:
 
 Hii inaweza kuonekana kama hatua nyingi, lakini usijali! Tutakutembeza jinsi ya kufanya kila moja wapo hatua kwa hatua! :\)
 
-#### Anzisha muunganisho wa API kwenye mnyororo wa Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
+#### Anzisha muunganisho wa API kwenye mnyororo wa Ethereum
 
-Kwa hivyo kumbuka jinsi katika Sehemu ya 2 ya mafunzo haya, tulitumia [ufunguo wetu wa Alchemy Web3 kusoma kutoka kwenye mkataba mahiri wetu](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? Utahitaji pia ufunguo wa Alchemy Web3 kwenye dapp yako ili kusoma kutoka kwenye mnyororo.
+Kwa hivyo unakumbuka jinsi katika Sehemu ya 2 ya mafunzo haya, tulitumia ufunguo wetu wa Alchemy Web3 kusoma kutoka kwenye mkataba mahiri wetu? Utahitaji pia ufunguo wa Alchemy Web3 kwenye programu tumizi iliyogatuliwa (dapp) yako ili kusoma kutoka kwenye mnyororo.
 
-Ikiwa huna tayari, kwanza sakinisha [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) kwa kwenda kwenye saraka kuu ya `starter-files` yako na kuendesha yafuatayo kwenye terminali yako:
+Ikiwa bado huna, kwanza sakinisha [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) kwa kwenda kwenye saraka kuu ya `starter-files` yako na kuendesha yafuatayo kwenye terminali yako:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) ni kanga inayozunguka [Web3.js](https://docs.web3js.org/), ikitoa mbinu zilizoboreshwa za API na faida zingine muhimu ili kurahisisha maisha yako kama msanidi programu wa Web3. Imeundwa kuhitaji usanidi mdogo ili uweze kuanza kuitumia kwenye programu yako mara moja!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) ni kifuniko (wrapper) cha [Web3.js](https://docs.web3js.org/), ikitoa mbinu zilizoboreshwa za API na faida zingine muhimu ili kurahisisha maisha yako kama msanidi wa Web3. Imeundwa kuhitaji usanidi mdogo ili uweze kuanza kuitumia kwenye programu yako mara moja!
 
-Kisha, sakinisha kifurushi cha [dotenv](https://www.npmjs.com/package/dotenv) kwenye saraka ya mradi wako, ili tuwe na mahali salama pa kuhifadhi ufunguo wetu wa API baada ya kuuchukua.
+Kisha, sakinisha kifurushi cha [dotenv](https://www.npmjs.com/package/dotenv) kwenye saraka yako ya mradi, ili tuwe na mahali salama pa kuhifadhi ufunguo wetu wa API baada ya kuuchukua.
 
 ```text
 npm install dotenv --save
 ```
 
-Kwa dapp yetu, **tutatumia ufunguo wetu wa API wa Websockets** badala ya ufunguo wetu wa API wa HTTP, kwani itaturuhusu kuweka msikilizaji ambaye hutambua wakati ujumbe uliohifadhiwa kwenye mkataba mahiri unapobadilika.
+Kwa dapp yetu, **tutakuwa tukitumia ufunguo wetu wa API wa Websockets** badala ya ufunguo wetu wa API wa HTTP, kwani itaturuhusu kuweka msikilizaji anayetambua wakati ujumbe uliohifadhiwa kwenye mkataba mahiri unapobadilika.
 
-Mara tu unapokuwa na ufunguo wako wa API, tengeneza faili ya `.env` kwenye saraka yako kuu na uongeze url yako ya Alchemy Websockets kwake. Baadaye, faili yako ya `.env` inapaswa kuonekana hivi:
+Mara tu unapokuwa na ufunguo wako wa API, unda faili la `.env` kwenye saraka kuu yako na uongeze url yako ya Alchemy Websockets ndani yake. Baadaye, faili lako la `.env` linapaswa kuonekana hivi:
 
 ```javascript
 REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-Sasa, tuko tayari kuweka mwisho wetu wa Alchemy Web3 kwenye dapp yetu! Hebu turudi kwenye `interact.js` yetu, ambayo imewekwa ndani ya folda yetu ya `util` na tuongeze msimbo ufuatao juu ya faili:
+Sasa, tuko tayari kuweka mwisho (endpoint) wetu wa Alchemy Web3 kwenye dapp yetu! Hebu turudi kwenye `interact.js` yetu, ambayo iko ndani ya folda yetu ya `util` na tuongeze msimbo ufuatao juu ya faili:
 
 ```javascript
 // interact.js
@@ -939,10 +936,9 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-Hapo juu, kwanza tuliingiza ufunguo wa Alchemy kutoka kwenye faili yetu ya `.env` na kisha tukapitisha `alchemyKey` yetu kwa `createAlchemyWeb3` ili kuanzisha mwisho wetu wa Alchemy Web3.
+Hapo juu, kwanza tuliingiza ufunguo wa Alchemy kutoka kwenye faili letu la `.env` na kisha tukapitisha `alchemyKey` yetu kwenye `createAlchemyWeb3` ili kuanzisha mwisho (endpoint) wetu wa Alchemy Web3.
 
-Pamoja na mwisho huu kuwa tayari, ni wakati wa kupakia mkataba mahiri wetu!
-
+Tukiwa na mwisho huu tayari, ni wakati wa kupakia mkataba mahiri wetu!
 #### Kupakia mkataba mahiri wako wa Hello World {#loading-your-hello-world-smart-contract}
 
 Ili kupakia mkataba mahiri wako wa Hello World, utahitaji anwani yake ya mkataba na ABI, ambazo zote zinaweza kupatikana kwenye Etherscan ikiwa ulikamilisha [Sehemu ya 3 ya mafunzo haya.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
@@ -1034,7 +1030,7 @@ Sasa tukizungumzia msikilizaji huyo...
 
 #### Tekeleza `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-Ikiwa unakumbuka faili ya `HelloWorld.sol` tuliyoiandika katika [Sehemu ya 1 ya mfululizo huu wa mafunzo](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), utakumbuka kwamba kuna tukio la mkataba mahiri linaloitwa `UpdatedMessages` ambalo hutolewa baada ya kitendaji cha `update` cha mkataba mahiri wetu kuitwa \(tazama mistari ya 9 na 27\):
+Ikiwa unakumbuka faili ya `HelloWorld.sol` tuliyoiandika katika [Sehemu ya 1 ya mfululizo huu wa mafunzo](#step-10-write-our-contract), utakumbuka kwamba kuna tukio la mkataba mahiri linaloitwa `UpdatedMessages` ambalo hutolewa baada ya kitendaji cha `update` cha mkataba mahiri wetu kuitwa \(tazama mistari ya 9 na 27\):
 
 ```javascript
 // HelloWorld.sol
@@ -1129,18 +1125,16 @@ Unaweza kupakua na kuunda akaunti ya MetaMask bila malipo [hapa](https://metamas
 
 Ili kutia saini muamala kwenye mnyororo wa vitalu wa Ethereum, tutahitaji ETH bandia. Ili kupata ETH unaweza kwenda kwenye [FaucETH](https://fauceth.komputing.org) na uweke anwani yako ya akaunti ya Goerli, bofya "Request funds", kisha uchague "Ethereum Testnet Goerli" kwenye menyu kunjuzi na hatimaye ubofye kitufe cha "Request funds" tena. Unapaswa kuona ETH kwenye akaunti yako ya MetaMask muda mfupi baadaye!
 
-#### Angalia Salio lako {#check-your-balance}
-
-Ili kuhakikisha salio letu lipo, hebu tufanye ombi la [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) kwa kutumia [zana ya mtunzi ya Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Baada ya kuweka anwani yako ya akaunti ya MetaMask na kubofya "Send Request", unapaswa kuona jibu kama hili:
+#### Angalia Salio lako
+Ili kuhakikisha kuwa salio letu lipo, hebu tufanye ombi la [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) kwa kutumia [zana ya sandbox ya Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Baada ya kuweka anwani yako ya akaunti ya MetaMask na kubofya "Send Request", unapaswa kuona jibu kama hili:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**KUMBUKA:** Matokeo haya yako katika wei sio ETH. Wei inatumika kama kiasi kidogo zaidi cha Etha. Ubadilishaji kutoka wei hadi ETH ni: 1 ETH = 10¹⁸ wei. Kwa hivyo ikiwa tutabadilisha 0xde0b6b3a7640000 kuwa desimali tunapata 1\*10¹⁸ ambayo ni sawa na 1 ETH.
+**KUMBUKA:** Jibu hili liko katika wei na si ETH. Wei inatumika kama kiasi kidogo zaidi cha Etha. Ubadilishaji kutoka wei kwenda ETH ni: ETH 1 = wei 10¹⁸. Kwa hivyo tukibadilisha 0xde0b6b3a7640000 kuwa desimali tunapata 1\*10¹⁸ ambayo ni sawa na ETH 1.
 
-Phew! Pesa zetu bandia zote zipo! 🤑
-
+Phew! Pesa yetu bandia yote ipo! 🤑
 ### Hatua ya 5: Unganisha MetaMask kwenye UI yako {#step-5-connect-metamask-to-your-ui}
 
 Sasa kwa kuwa mkoba wetu wa MetaMask umewekwa, hebu tuunganishe dapp yetu kwake!
@@ -1539,7 +1533,7 @@ Endelea na ujaribu kitufe cha **Update**!
 Wooooo, umefika mwisho wa mafunzo! Kwa muhtasari, umejifunza jinsi ya:
 
 - Kuunganisha mkoba wa MetaMask kwenye mradi wako wa dapp
-- Kusoma data kutoka kwenye mkataba mahiri wako ukitumia API ya [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Kusoma data kutoka kwenye mkataba mahiri wako ukitumia API ya [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Kutia saini miamala ya Ethereum ukitumia MetaMask
 
 Sasa una vifaa kamili vya kutumia ujuzi kutoka kwenye mafunzo haya ili kujenga mradi wako mwenyewe wa dapp maalum! Kama kawaida, ikiwa una maswali yoyote, usisite kuwasiliana nasi kwa msaada kwenye [Discord ya Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️

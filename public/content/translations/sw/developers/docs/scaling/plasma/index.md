@@ -54,22 +54,21 @@ Plasma hutumia mkataba mkuu unaoendeshwa kwenye Ethereum kuchakata uingiaji na k
 
 Ili kuingia kwenye mnyororo wa Plasma, Alice (mtumiaji) atalazimika kuweka ETH au tokeni yoyote ya ERC-20 katika mkataba wa Plasma. Mwendeshaji wa Plasma, ambaye hutazama amana za mkataba, huunda upya kiasi sawa na amana ya awali ya Alice na kukiachilia kwenye anwani yake kwenye mnyororo wa Plasma. Alice anahitajika kuthibitisha kupokea fedha kwenye mnyororo mtoto na kisha anaweza kutumia fedha hizi kwa miamala.
 
-#### Kujitoa kwenye mnyororo wa Plasma {#exiting-the-plasma-chain}
+#### Kujitoa kwenye mnyororo wa Plasma
 
-Kujitoa kwenye mnyororo wa Plasma ni ngumu zaidi kuliko kuingia kwa sababu kadhaa. Kubwa zaidi ni kwamba, ingawa Ethereum ina taarifa kuhusu hali ya mnyororo wa Plasma, haiwezi kuthibitisha ikiwa taarifa hiyo ni ya kweli au la. Mtumiaji mwenye nia mbaya anaweza kutoa madai yasiyo sahihi ("Nina 1000 ETH") na kufanikiwa kutoa uthibitisho bandia ili kuunga mkono dai hilo.
+Kujitoa kwenye mnyororo wa Plasma ni kugumu zaidi kuliko kuingia kwa sababu kadhaa. Kubwa zaidi ni kwamba, ingawa Ethereum ina taarifa kuhusu hali ya mnyororo wa Plasma, haiwezi kuthibitisha ikiwa taarifa hiyo ni ya kweli au la. Mtumiaji mwenye nia mbaya anaweza kutoa madai yasiyo sahihi ("Nina ETH 1000") na kufanikiwa kwa kutoa uthibitisho feki ili kuunga mkono dai hilo.
 
 Ili kuzuia utoaji wenye nia mbaya, "kipindi cha changamoto" kinaletwa. Wakati wa kipindi cha changamoto (kawaida wiki moja), mtu yeyote anaweza kupinga ombi la utoaji akitumia uthibitisho wa udanganyifu. Ikiwa changamoto itafaulu, basi ombi la utoaji linakataliwa.
 
 Hata hivyo, kwa kawaida watumiaji ni waaminifu na hutoa madai sahihi kuhusu fedha wanazomiliki. Katika hali hii, Alice ataanzisha ombi la utoaji kwenye mnyororo mzizi (Ethereum) kwa kuwasilisha muamala kwenye mkataba wa Plasma.
 
-Lazima pia atoe ushahidi wa Merkle unaothibitisha kwamba muamala uliounda fedha zake kwenye mnyororo wa Plasma ulijumuishwa kwenye kitalu. Hili ni muhimu kwa matoleo ya Plasma, kama vile [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), ambayo hutumia muundo wa [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
+Lazima pia atoe ushahidi wa Merkle unaothibitisha kwamba muamala uliounda fedha zake kwenye mnyororo wa Plasma ulijumuishwa katika kitalu. Hili ni muhimu kwa matoleo ya Plasma, kama vile Plasma MVP, yanayotumia muundo wa [Pato la Muamala Ambalo Halijatumika (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Nyingine, kama [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), huwakilisha fedha kama [tokeni zisizoweza kubadilishana](/developers/docs/standards/tokens/erc-721/) badala ya UTXO. Kutoa, katika kesi hii, kunahitaji uthibitisho wa umiliki wa tokeni kwenye mnyororo wa Plasma. Hili hufanywa kwa kuwasilisha miamala miwili ya hivi punde inayohusisha tokeni na kutoa ushahidi wa Merkle unaothibitisha kujumuishwa kwa miamala hiyo katika kitalu.
+Nyingine, kama Plasma Cash, huwakilisha fedha kama [tokeni zisizoweza kubadilishana](/developers/docs/standards/tokens/erc-721/) badala ya UTXO. Kutoa, katika kesi hii, kunahitaji uthibitisho wa umiliki wa tokeni kwenye mnyororo wa Plasma. Hili hufanywa kwa kuwasilisha miamala miwili ya hivi punde inayohusisha tokeni na kutoa ushahidi wa Merkle unaothibitisha kujumuishwa kwa miamala hiyo katika kitalu.
 
-Mtumiaji lazima pia aongeze dhamana kwenye ombi la utoaji kama hakikisho la tabia ya uaminifu. Ikiwa mpinzani atathibitisha kuwa ombi la utoaji la Alice ni batili, dhamana yake inakatwa (ukataji), na kiasi fulani huenda kwa mpinzani kama tuzo.
+Mtumiaji lazima pia aongeze dhamana kwenye ombi la utoaji kama hakikisho la tabia ya uaminifu. Ikiwa mpinzani atathibitisha kuwa ombi la utoaji la Alice ni batili, dhamana yake inakatwa, na kiasi fulani huenda kwa mpinzani kama tuzo.
 
-Ikiwa kipindi cha changamoto kitapita bila mtu yeyote kutoa uthibitisho wa udanganyifu, ombi la utoaji la Alice linachukuliwa kuwa halali, na kumruhusu kurejesha amana kutoka kwa mkataba wa Plasma kwenye Ethereum.
-
+Ikiwa kipindi cha changamoto kitapita bila mtu yeyote kutoa uthibitisho wa udanganyifu, ombi la utoaji la Alice linachukuliwa kuwa halali, na kumruhusu kuchukua amana kutoka kwenye mkataba wa Plasma kwenye Ethereum.
 ### Usuluhishi wa mizozo {#dispute-arbitration}
 
 Kama mnyororo wa vitalu wowote, minyororo ya Plasma inahitaji utaratibu wa kutekeleza uadilifu wa miamala endapo washiriki watatenda kwa nia mbaya (k.m., matumizi mara mbili ya fedha). Kwa lengo hili, minyororo ya Plasma hutumia uthibitisho wa udanganyifu kusuluhisha mizozo inayohusu uhalali wa mabadiliko ya hali na kuadhibu tabia mbaya. Uthibitisho wa udanganyifu hutumiwa kama utaratibu ambao mnyororo mtoto wa Plasma huwasilisha malalamiko kwa mnyororo wake mzazi au kwa mnyororo mzizi.
@@ -165,16 +164,14 @@ Miradi mingi hutoa utekelezaji wa Plasma ambao unaweza kuunganisha kwenye progra
 
 - [Polygon](https://polygon.technology/) (zamani Matic Network)
 
-## Usomaji zaidi {#further-reading}
+## Usomaji zaidi
 
-- [Jifunze Plasma](https://www.learnplasma.org/en/)
 - [Kikumbusho cha haraka cha maana ya "usalama wa pamoja" na kwa nini ni muhimu sana](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Minyororo ya kando dhidi ya Plasma dhidi ya Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Kuelewa Plasma, Sehemu ya 1: Mambo ya Msingi](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [Maisha na Kifo cha Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
-_Unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
-
+_Je, unajua nyenzo ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 ## Mafunzo: Minyororo ya Plasma kwenye Ethereum {#tutorials}
 
 - [Andika plasma maalum kwa programu inayohifadhi faragha](/developers/tutorials/app-plasma/) _– Jenga programu ya plasma inayohifadhi faragha ukitumia uthibitisho wa maarifa-sifuri na vipengele vya nje ya mnyororo._

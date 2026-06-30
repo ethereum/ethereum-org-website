@@ -28,7 +28,7 @@ Neno 'tabaka la 2 (l2)' linatumika kwa rollup au mfumo mwingine wowote unaotegem
 
 [Mikusanyiko ya optimistic](/developers/docs/scaling/optimistic-rollups) inapaswa kuhifadhi rekodi ya kila muamala wa kihistoria ili mtu yeyote aweze kuipitia na kuthibitisha kuwa hali ya sasa ni sahihi.
 Njia ya bei nafuu zaidi ya kuingiza data kwenye Mtandao Mkuu wa Ethereum ni kuiandika kama data za mwito.
-Suluhisho hili lilichaguliwa na [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) na [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+Suluhisho hili lilichaguliwa na [Optimism](https://docs.optimism.io/op-stack/protocol/overview) na [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
 
 ### Gharama ya miamala ya l2 {#cost-of-l2-transactions}
 

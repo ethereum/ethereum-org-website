@@ -17,7 +17,7 @@ Katika mafunzo haya, tutapitia kuunda na kusambaza mkataba mahiri wa ERC-721 kwe
 
 Katika Sehemu ya 2 ya mafunzo haya tutapitia jinsi tunavyoweza kutumia mkataba mahiri wetu kufua NFT, na katika Sehemu ya 3 tutaelezea jinsi ya kutazama NFT yako kwenye MetaMask.
 
-Na bila shaka, ikiwa una maswali wakati wowote, usisite kuwasiliana katika [Discord ya Alchemy](https://discord.gg/gWuC7zB) au tembelea [nyaraka za API ya NFT ya Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
+Na bila shaka, ikiwa una maswali wakati wowote, usisite kuwasiliana katika [Discord ya Alchemy](https://discord.gg/gWuC7zB) au tembelea [nyaraka za API ya NFT ya Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart)!
 
 ## Hatua ya 1: Unganisha kwenye mtandao wa Ethereum {#connect-to-ethereum}
 
@@ -27,7 +27,7 @@ Katika mafunzo haya, pia tutatumia zana za msanidi wa Alchemy kwa ufuatiliaji na
 
 ## Hatua ya 2: Unda programu yako (na ufunguo wa API) {#make-api-key}
 
-Mara tu unapounda akaunti ya Alchemy, unaweza kuzalisha ufunguo wa API kwa kuunda programu. Hii itaturuhusu kufanya maombi kwenye mtandao wa majaribio wa Sepolia. Angalia [mwongozo huu](https://docs.alchemyapi.io/guides/choosing-a-network) ikiwa una hamu ya kujifunza zaidi kuhusu mitandao ya majaribio.
+Mara tu unapounda akaunti ya Alchemy, unaweza kuzalisha ufunguo wa API kwa kuunda programu. Hii itaturuhusu kufanya maombi kwenye mtandao wa majaribio wa Sepolia. Angalia [mwongozo huu](https://www.alchemy.com/docs/choosing-a-web3-network) ikiwa una hamu ya kujifunza zaidi kuhusu mitandao ya majaribio.
 
 1. Nenda kwenye ukurasa wa “Unda Programu” katika Dashibodi yako ya Alchemy kwa kuelea juu ya “Programu” kwenye upau wa kusogeza na kubofya “Unda Programu”
 
@@ -51,24 +51,21 @@ Unaweza kupakua na kuunda akaunti ya MetaMask bila malipo [hapa](https://metamas
 
 Ili kusambaza mkataba mahiri wetu kwenye mtandao wa majaribio, tutahitaji ETH za majaribio. Ili kupata ETH unaweza kwenda kwenye [Bomba la Sepolia](https://sepoliafaucet.com/) linalopangishwa na Alchemy, ingia na uweke anwani ya akaunti yako, bofya “Nitumie ETH”. Unapaswa kuona ETH kwenye akaunti yako ya MetaMask muda mfupi baadaye!
 
-## Hatua ya 5: Angalia Salio lako {#check-balance}
-
-Ili kuhakikisha salio letu lipo, hebu tufanye ombi la [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) kwa kutumia [zana ya kutunga ya Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Baada ya kuweka anwani ya akaunti yako ya MetaMask na kubofya “Tuma Ombi”, unapaswa kuona jibu kama hili:
+## Hatua ya 5: Angalia Salio lako
+Ili kuhakikisha salio letu lipo, hebu tufanye ombi la [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) kwa kutumia [zana ya sandbox ya Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Baada ya kuweka anwani ya akaunti yako ya MetaMask na kubofya “Tuma Ombi” (“Send Request”), unapaswa kuona jibu kama hili:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-> **Kumbuka** Matokeo haya yako katika Wei, si ETH. Wei inatumika kama kiasi kidogo zaidi cha Etha. Ubadilishaji kutoka Wei hadi ETH ni 1 eth = 10<sup>18</sup> Wei. Kwa hivyo tukibadilisha 0xde0b6b3a7640000 kuwa desimali tunapata 1\*10<sup>18</sup> Wei, ambayo ni sawa na 1 ETH.
+> **Kumbuka** Matokeo haya yapo katika Wei, si ETH. Wei inatumika kama kiasi kidogo zaidi cha Etha. Ubadilishaji kutoka Wei hadi ETH ni 1 eth = 10<sup>18</sup> Wei. Kwa hivyo tukibadilisha 0xde0b6b3a7640000 kuwa desimali tunapata 1\*10<sup>18</sup> Wei, ambayo ni sawa na 1 ETH.
 
 Phew! Pesa zetu za majaribio zote zipo.
-
-## Hatua ya 6: Anzisha mradi wetu {#initialize-project}
-
+## Hatua ya 6: Anzisha mradi wetu
 Kwanza, tutahitaji kuunda folda kwa ajili ya mradi wetu. Nenda kwenye mstari wako wa amri na uandike:
 
     mkdir my-nft
     cd my-nft
 
-Sasa kwa kuwa tuko ndani ya folda ya mradi wetu, tutatumia npm init kuanzisha mradi. Ikiwa bado huna npm iliyosakinishwa, fuata [maagizo haya](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (pia tutahitaji [Node.js](https://nodejs.org/en/download/), kwa hivyo pakua hiyo pia!).
+Sasa kwa kuwa tuko ndani ya folda ya mradi wetu, tutatumia npm init kuanzisha mradi. Ikiwa bado hujasakinisha npm, fuata [maagizo ya usakinishaji wa Node.js](https://nodejs.org/en/download/) (tutahitaji Node.js na npm kwa mafunzo haya).
 
     npm init
 
@@ -100,7 +97,6 @@ Haijalishi sana jinsi unavyojibu maswali ya usakinishaji; hivi ndivyo tulivyofan
 ```
 
 Idhinisha package.json, na tuko tayari kuendelea!
-
 ## Hatua ya 7: Sakinisha [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 Hardhat ni mazingira ya usanidi ya kukusanya, kusambaza, kujaribu, na kutatua programu yako ya Ethereum. Inasaidia wasanidi wanapounda mikataba mahiri na programu tumizi zilizogatuliwa (dapps) ndani ya kompyuta zao kabla ya kusambaza kwenye mnyororo wa moja kwa moja.
@@ -342,7 +338,7 @@ Anwani ya Kutoka (From) inapaswa kulingana na anwani ya akaunti yako ya MetaMask
 
 Ndioooo! Umetoka tu kusambaza mkataba mahiri wako wa NFT kwenye mnyororo wa (mtandao wa majaribio wa) Ethereum!
 
-Ili kuelewa jinsi inavyofanya kazi kiufundi, hebu twende kwenye kichupo cha Kichunguzi (Explorer) katika [dashibodi yetu ya Alchemy](https://dashboard.alchemyapi.io/explorer). Ikiwa una programu nyingi za Alchemy hakikisha unachuja kwa programu na uchague “MyNFT”.
+Ili kuelewa jinsi inavyofanya kazi kiufundi, hebu twende kwenye kichupo cha Kichunguzi (Explorer) katika [dashibodi yetu ya Alchemy](https://dashboard.alchemy.com/explorer). Ikiwa una programu nyingi za Alchemy hakikisha unachuja kwa programu na uchague “MyNFT”.
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

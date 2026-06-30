@@ -204,16 +204,13 @@ Ufunguo ni kuweka kasi hai. Endelea kushirikiana na jamii yako, shiriki sasisho 
 
 Shukrani za dhati kwa kila mtu aliyechangia makala haya kwa kushiriki maarifa yao: Slavo Fabisik kutoka ETHBratislava; Lola kutoka ETH Kipu na ETH Latam; Tanja Mladenovic kutoka ETH Belgrade, Juan David kutoka Ethereum Bogota; Monika Zając kutoka ETHWarsaw; Raffaele Orefice kutoka NapulETH; Xiao Wu(Ling) kutoka ETH Riyadh; Marco kutoka urbe.eth; Caolán Walsh kutoka ETH Dublin; Alex Males kutoka ETHCluj; na Stanko Devic kutoka ETH Slovenia.
 
-## Rasilimali {#resources}
-
-Podikasti: Jinsi ya kuandaa na kutangaza tukio la ETH kuanzia A-Z:
+## Rasilimali
+Podikasti: Jinsi ya kuandaa na kutangaza tukio la ETH kuanzia A hadi Z:
 
 - [Uchunguzi kifani wa ETHWarsaw, na Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
-Nafasi ya Twitter (Twitter space):
+Twitter space:
 
 - [AMA ya Jamii ya ETH](https://x.com/NapulETH/status/1905732699094151623)
 
 Makala:
-
-- [Kujenga ETHKL, na Danny H.](https://sekto.tech/ethkl24)

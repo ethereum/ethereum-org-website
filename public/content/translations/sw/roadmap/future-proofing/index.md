@@ -36,25 +36,24 @@ Hapana. Hakuna kompyuta ya kwanta leo inayoweza kuvunja kriptografia ya Ethereum
 
 </ExpandableCard>
 
-### Nini kinafanyika? {#what-is-being-done}
+### Nini kinafanyika?
 
-Ethereum kwa sasa ndiye mtetezi anayechukua hatua zaidi dhidi ya vitisho vya kwanta katika mfumo wa ikolojia wa mnyororo wa vitalu. Taasisi ya Ethereum iliunda **Timu ya Usalama ya Baada ya Kwanta** maalum mnamo Januari 2026, na kazi inayoendelea inahusisha timu nyingi za wateja na vikundi vya utafiti. Kazi ya timu ya Baada ya Kwanta ya EF inafuatiliwa hadharani kwenye [pq.ethereum.org](https://pq.ethereum.org).
+Kwa sasa Ethereum ndiyo mtetezi anayechukua hatua madhubuti zaidi dhidi ya vitisho vya kwanta katika mfumo wa ikolojia wa mnyororo wa vitalu. Taasisi ya Ethereum iliunda **timu maalum ya Usalama wa Baada ya Kwanta** mnamo Januari 2026, na kazi inayoendelea inahusisha timu nyingi za wateja na vikundi vya utafiti. Kazi ya timu ya Baada ya Kwanta ya EF inafuatiliwa hadharani kwenye [pq.ethereum.org](https://pq.ethereum.org).
 
 Kazi inayoendelea inajumuisha:
 
-- **Sahihi zinazotegemea heshi (leanXMSS)**: Mbadala salama dhidi ya kwanta kwa sahihi za mthibitishaji, zilizojengwa kwenye vitendaji vya heshi ambavyo kompyuta za kwanta haziwezi kuvunja kwa ufanisi.
-- **zkVM ya kiwango cha chini (leanVM)**: Kwa sababu sahihi salama dhidi ya kwanta ni kubwa kuliko sahihi zinazotumiwa sasa, leanXMSS inaunganishwa na zkVM ya kiwango cha chini (leanVM). Injini hii inakusanya sahihi salama dhidi ya kwanta kwa ufanisi, ikikandamiza data kwa mara 250, ili mtandao ubaki na kasi baada ya mpito.
-- **Upimaji wa mwingiliano wa kila wiki**: Zaidi ya timu 10 za wateja zinashiriki katika mitandao ya wasanidi (devnets) ya baada ya kwanta ya mara kwa mara.
-- **Upatikanaji wa data:** Kuboresha kriptografia ya msingi inayotumiwa kushughulikia kiasi kikubwa cha data ya mtandao kutahakikisha Ethereum inabaki na kasi na nafuu kutumia bila kuhatarisha udhaifu wa kwanta wa siku zijazo.
+- **Sahihi zinazotegemea heshi (leanXMSS)**: Mbadala salama dhidi ya kwanta kwa ajili ya sahihi za mthibitishaji, uliojengwa kwenye utendakazi wa heshi ambao kompyuta za kwanta haziwezi kuvunja kwa ufanisi.
+- **zkVM ndogo (leanVM)**: Kwa sababu sahihi salama dhidi ya kwanta ni kubwa kuliko sahihi zinazotumika sasa, leanXMSS inaunganishwa na zkVM ndogo (leanVM). Injini hii inakusanya sahihi salama dhidi ya kwanta kwa ufanisi, ikikandamiza data mara 250, ili mtandao ubaki na kasi baada ya mpito.
+- **Majaribio ya mwingiliano ya kila wiki**: Zaidi ya timu 10 za wateja zinashiriki katika mitandao ya wasanidi (devnets) ya kawaida ya baada ya kwanta.
+- **Upatikanaji wa data:** Kuboresha kriptografia ya msingi inayotumika kushughulikia kiasi kikubwa cha data ya mtandao kutahakikisha Ethereum inabaki na kasi na nafuu kutumia bila kuhatarisha udhaifu wa kwanta wa siku zijazo.
 - **Tuzo ya Poseidon**: Tuzo ya utafiti ya dola milioni 1 inayolenga maboresho katika misingi ya kriptografia inayotegemea heshi.
 - **Viwango vya NIST**: Taasisi ya Kitaifa ya Viwango na Teknolojia ya Marekani ilikamilisha viwango vitatu vya kriptografia ya baada ya kwanta mnamo Agosti 2024 (ML-KEM, ML-DSA, SLH-DSA). Kazi ya Ethereum inajengwa kwenye misingi hii.
 
 Sehemu muhimu ya mkakati wa mpito ni **EIP-8141**, ambayo inaleta [udhanifu wa akaunti](/roadmap/account-abstraction/) asilia. Hii inaruhusu akaunti binafsi kuchagua uthibitishaji wao wenyewe wa sahihi, ikimaanisha watumiaji wanaweza kubadili kwenda kwenye sahihi salama dhidi ya kwanta **bila kusubiri uhamishaji mmoja wa itifaki nzima**. EIP-8141 inafikiriwa kwa ajili ya mchepuo mgumu wa Hegotá (uliopangwa kwa nusu ya pili ya 2026).
 
-Taasisi ya Ethereum imeainisha hatua muhimu za mchepuo zilizopangwa zinazolenga kukamilisha miundombinu ya msingi ya baada ya kwanta ifikapo takriban 2029. Haya ni malengo ya kupanga, si ahadi zilizohakikishwa.
+Taasisi ya Ethereum imeainisha hatua muhimu za mchepuo zilizopangwa zinazolenga kukamilika kwa miundombinu ya msingi ya baada ya kwanta ifikapo takriban 2029. Haya ni malengo ya kupanga, si ahadi zilizohakikishwa.
 
-[Soma mwongozo wetu wa kina kuhusu kriptografia ya baada ya kwanta kwenye Ethereum](/roadmap/future-proofing/quantum-resistance/)
-
+<ButtonLink variant="outline" href="/roadmap/future-proofing/quantum-resistance/">Zaidi kuhusu ustahimilivu dhidi ya kwanta</ButtonLink>
 ## Ethereum rahisi na yenye ufanisi zaidi {#simpler-more-efficient-ethereum}
 
 Utata hutengeneza fursa za hitilafu na udhaifu. Sehemu ya ramani ya njia inalenga **kurahisisha Ethereum na kuondoa deni la kiufundi** ili itifaki iwe rahisi kudumisha, kukagua, na kuelewa.
