@@ -54,22 +54,19 @@ Plasma menggunakan kontrak utama yang berjalan di Ethereum untuk memproses masuk
 
 Untuk memasuki rantai plasma, Alice (pengguna) harus menyetorkan ETH atau token ERC-20 apa pun ke dalam kontrak plasma. Operator plasma, yang mengawasi setoran kontrak, membuat ulang jumlah yang sama dengan setoran awal Alice dan melepaskannya ke alamatnya di rantai plasma. Alice diwajibkan untuk membuktikan penerimaan dana di rantai anak dan kemudian dapat menggunakan dana ini untuk transaksi.
 
-#### Keluar dari rantai plasma {#exiting-the-plasma-chain}
+Keluar dari rantai plasma lebih kompleks daripada memasukinya karena beberapa alasan. Alasan terbesarnya adalah, meskipun Ethereum memiliki informasi tentang state rantai plasma, Ethereum tidak dapat memverifikasi apakah informasi tersebut benar atau tidak. Pengguna jahat dapat membuat pernyataan yang salah ("Saya memiliki 1000 ETH") dan lolos dengan memberikan bukti palsu untuk mendukung klaim tersebut.
 
-Keluar dari rantai plasma lebih kompleks daripada memasukinya karena beberapa alasan. Alasan terbesarnya adalah, meskipun Ethereum memiliki informasi tentang state rantai plasma, ia tidak dapat memverifikasi apakah informasi tersebut benar atau tidak. Pengguna yang berniat jahat dapat membuat pernyataan yang salah ("Saya memiliki 1000 ETH") dan lolos dengan memberikan bukti palsu untuk mendukung klaim tersebut.
-
-Untuk mencegah penarikan yang berbahaya, "periode tantangan" diperkenalkan. Selama periode tantangan (biasanya seminggu), siapa pun dapat menantang permintaan penarikan menggunakan bukti penipuan. Jika tantangan berhasil, maka permintaan penarikan ditolak.
+Untuk mencegah penarikan yang berbahaya, "periode tantangan" diperkenalkan. Selama periode tantangan (biasanya satu minggu), siapa pun dapat menantang permintaan penarikan menggunakan bukti penipuan. Jika tantangan berhasil, maka permintaan penarikan ditolak.
 
 Namun, biasanya pengguna jujur dan membuat klaim yang benar tentang dana yang mereka miliki. Dalam skenario ini, Alice akan memulai permintaan penarikan pada rantai akar (Ethereum) dengan mengirimkan transaksi ke kontrak plasma.
 
-Dia juga harus memberikan bukti Merkle yang memverifikasi bahwa transaksi yang menciptakan dananya di rantai Plasma disertakan dalam sebuah blok. Hal ini diperlukan untuk iterasi Plasma, seperti [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), yang menggunakan model [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
+Dia juga wajib memberikan bukti Merkle yang memverifikasi bahwa transaksi yang membuat dananya di rantai Plasma disertakan dalam sebuah blok. Hal ini diperlukan untuk iterasi Plasma, seperti Plasma MVP, yang menggunakan model [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Yang lain, seperti [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), mewakili dana sebagai [token yang tidak dapat dipertukarkan (NFT)](/developers/docs/standards/tokens/erc-721/) alih-alih UTXO. Penarikan, dalam hal ini, memerlukan bukti kepemilikan token di rantai Plasma. Hal ini dilakukan dengan mengirimkan dua transaksi terbaru yang melibatkan token dan memberikan bukti Merkle yang memverifikasi penyertaan transaksi tersebut dalam sebuah blok.
+Yang lain, seperti Plasma Cash, mewakili dana sebagai [token yang tidak dapat dipertukarkan (NFT)](/developers/docs/standards/tokens/erc-721/) alih-alih UTXO. Penarikan, dalam hal ini, mewajibkan bukti kepemilikan token di rantai Plasma. Hal ini dilakukan dengan mengirimkan dua transaksi terbaru yang melibatkan token dan memberikan bukti Merkle yang memverifikasi penyertaan transaksi tersebut dalam sebuah blok.
 
-Pengguna juga harus menambahkan jaminan pada permintaan penarikan sebagai garansi perilaku jujur. Jika penantang membuktikan permintaan penarikan Alice tidak valid, jaminannya akan mengalami pemotongan, dan sebagian darinya diberikan kepada penantang sebagai imbalan.
+Pengguna juga wajib menambahkan jaminan pada permintaan penarikan sebagai garansi perilaku jujur. Jika penantang membuktikan permintaan penarikan Alice tidak valid, jaminannya akan dipotong, dan sebagian diberikan kepada penantang sebagai imbalan.
 
 Jika periode tantangan berlalu tanpa ada yang memberikan bukti penipuan, permintaan penarikan Alice dianggap valid, memungkinkannya untuk mengambil setoran dari kontrak Plasma di Ethereum.
-
 ### Arbitrase perselisihan {#dispute-arbitration}
 
 Seperti rantai blok mana pun, rantai plasma memerlukan mekanisme untuk menegakkan integritas transaksi jika peserta bertindak jahat (misalnya, pengeluaran ganda dana). Untuk tujuan ini, rantai plasma menggunakan bukti penipuan untuk menengahi perselisihan mengenai validitas transisi state dan menghukum perilaku buruk. Bukti penipuan digunakan sebagai mekanisme di mana rantai anak Plasma mengajukan keluhan ke rantai induknya atau ke rantai akar.
@@ -165,16 +162,12 @@ Beberapa proyek menyediakan implementasi Plasma yang dapat Anda integrasikan ke 
 
 - [Polygon](https://polygon.technology/) (sebelumnya Matic Network)
 
-## Bacaan lebih lanjut {#further-reading}
-
-- [Pelajari Plasma](https://www.learnplasma.org/en/)
 - [Pengingat singkat tentang apa arti "keamanan bersama" dan mengapa itu sangat penting](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Rantai Samping vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
+- [Rantai samping vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Memahami Plasma, Bagian 1: Dasar-dasar](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
-- [Kehidupan dan Kematian Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
+- [Hidup dan Matinya Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
-_Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
-
+_Tahu sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 ## Tutorial: Rantai Plasma di Ethereum {#tutorials}
 
 - [Tulis plasma khusus aplikasi yang menjaga privasi](/developers/tutorials/app-plasma/) _– Bangun aplikasi plasma yang menjaga privasi menggunakan bukti tanpa pengetahuan dan komponen offchain._

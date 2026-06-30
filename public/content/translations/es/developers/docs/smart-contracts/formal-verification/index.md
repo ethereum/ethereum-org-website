@@ -271,8 +271,8 @@ Además, no siempre es posible para los verificadores de programas determinar si
 
 **Mythril** - _Una herramienta de ejecución simbólica para detectar vulnerabilidades en contratos inteligentes de Ethereum_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Documentación](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [Documentación](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## Más información {#further-reading}
 

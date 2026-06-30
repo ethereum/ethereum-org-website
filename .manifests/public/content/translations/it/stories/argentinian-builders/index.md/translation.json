@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-30T00:54:57.374Z",
+  "englishManifestHash": "07239d461174",
+  "placeholderOrder": [
+    "LINK-5fb359",
+    "LINK-a90793",
+    "LINK-d4ff36",
+    "LINK-b74814",
+    "IMAGE-5a9426",
+    "LINK-48ecf5",
+    "LINK-0d80f9",
+    "IMAGE-ef0859",
+    "LINK-378437",
+    "LINK-e87c25",
+    "LINK-ad0ce8",
+    "LINK-1369b7",
+    "LINK-20a19a",
+    "IMAGE-f43741",
+    "IMAGE-167a61",
+    "IMAGE-e04d82",
+    "LINK-210432",
+    "LINK-cfb621",
+    "IMAGE-87fe06",
+    "LINK-935369",
+    "LINK-ab041c",
+    "LINK-634a46",
+    "LINK-5990c5",
+    "LINK-967dd2",
+    "IMAGE-7bb1cf",
+    "LINK-c8d9b5",
+    "IMAGE-4395d3",
+    "LINK-311bdd",
+    "LINK-12887d"
+  ],
+  "placeholderMap": {
+    "IMAGE-5a9426": {
+      "type": "image",
+      "values": {
+        "path": "./santiago2.jpeg"
+      }
+    },
+    "IMAGE-ef0859": {
+      "type": "image",
+      "values": {
+        "path": "./santiago3.jpeg"
+      }
+    },
+    "IMAGE-f43741": {
+      "type": "image",
+      "values": {
+        "path": "./santiago4.jpeg"
+      }
+    },
+    "IMAGE-167a61": {
+      "type": "image",
+      "values": {
+        "path": "./santiago5.jpeg"
+      }
+    },
+    "IMAGE-e04d82": {
+      "type": "image",
+      "values": {
+        "path": "./santiago6.jpeg"
+      }
+    },
+    "IMAGE-87fe06": {
+      "type": "image",
+      "values": {
+        "path": "./santiago7.jpeg"
+      }
+    },
+    "IMAGE-7bb1cf": {
+      "type": "image",
+      "values": {
+        "path": "./santiago9.jpeg"
+      }
+    },
+    "IMAGE-4395d3": {
+      "type": "image",
+      "values": {
+        "path": "./santiago10.jpeg"
+      }
+    },
+    "LINK-5fb359": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/ethereum/status/1985408315074232397?s=20"
+      }
+    },
+    "LINK-a90793": {
+      "type": "link",
+      "values": {
+        "url": "https://devconnect.org/"
+      }
+    },
+    "LINK-d4ff36": {
+      "type": "link",
+      "values": {
+        "url": "https://palla.dev/"
+      }
+    },
+    "LINK-b74814": {
+      "type": "link",
+      "values": {
+        "url": "https://aztec.network/"
+      }
+    },
+    "LINK-48ecf5": {
+      "type": "link",
+      "values": {
+        "url": "https://trends.google.com/trends/explore?date=2018-01-01%202022-01-01&q=ethereum%20dai&hl=en"
+      }
+    },
+    "LINK-0d80f9": {
+      "type": "link",
+      "values": {
+        "url": "https://maraoz.com/"
+      }
+    },
+    "LINK-378437": {
+      "type": "link",
+      "values": {
+        "url": "https://www.lanacion.com.ar/la-nacion-revista/casa-voltaire-como-era-el-lugar-de-reunion-de-quienes-iniciaron-empresas-que-hoy-valen-millones-nid05032022/#google_vignette"
+      }
+    },
+    "LINK-e87c25": {
+      "type": "link",
+      "values": {
+        "url": "https://www.openzeppelin.com/"
+      }
+    },
+    "LINK-ad0ce8": {
+      "type": "link",
+      "values": {
+        "url": "https://decentraland.org/"
+      }
+    },
+    "LINK-1369b7": {
+      "type": "link",
+      "values": {
+        "url": "https://muun.com/"
+      }
+    },
+    "LINK-20a19a": {
+      "type": "link",
+      "values": {
+        "url": "https://nomic.foundation/"
+      }
+    },
+    "LINK-210432": {
+      "type": "link",
+      "values": {
+        "url": "https://www.developerreport.com/"
+      }
+    },
+    "LINK-cfb621": {
+      "type": "link",
+      "values": {
+        "url": "https://innovationgraph.github.com/"
+      }
+    },
+    "LINK-935369": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@AugurProject/serpent-compiler-vulnerability-rep-solidity-migration-5d91e4ae90dd"
+      }
+    },
+    "LINK-ab041c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/pull/803d"
+      }
+    },
+    "LINK-634a46": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/MakerDAO"
+      }
+    },
+    "LINK-5990c5": {
+      "type": "link",
+      "values": {
+        "url": "https://balancer.fi/"
+      }
+    },
+    "LINK-967dd2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.aragon.org/"
+      }
+    },
+    "LINK-c8d9b5": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumba.substack.com/p/ethereum-ba-recap-2018-2020#%C2%A7thedevconba2020-campaign-trail"
+      }
+    },
+    "LINK-311bdd": {
+      "type": "link",
+      "values": {
+        "url": "https://www.forbes.com/sites/astanley/2025/09/30/devconnect-brings-an-ethereum-worlds-fair-to-buenos-aires/"
+      }
+    },
+    "LINK-12887d": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.foundation/infinitegarden"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-30T00:54:57.374Z",
+      "status": "success"
+    }
+  }
+}

@@ -63,18 +63,17 @@ _注意：由于网络拥堵，这可能需要一些时间。_
 
 ### 第 5 步：检查你的余额 {#step-5-check-your-balance}
 
-为了仔细检查 ETH 是否已存入你的钱包，让我们使用 [Alchemy 的 composer 工具](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)发出一个 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 请求。这将返回我们钱包中的 ETH 数量。要了解更多信息，请查看 [Alchemy 关于如何使用 composer 工具的简短教程](https://youtu.be/r6sjRxBZJuU)。
+为了仔细检查 ETH 是否在你的钱包中，让我们使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)发出一个 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 请求。这将返回我们钱包中的 ETH 数量。要了解更多信息，请查看 [Alchemy 关于如何使用 composer 工具的简短教程](https://youtu.be/r6sjRxBZJuU)。
 
-输入你的梅塔马斯克账户地址，然后点击 **Send Request**。你将看到类似于以下代码片段的响应。
+输入你的梅塔马斯克账户地址，然后点击 **Send Request**。你将看到一个类似于以下代码片段的响应。
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> _注意：此结果的单位是 wei，而不是 ETH。Wei 被用作以太币的最小面额。_
+> _注意：此结果的单位是 wei，而不是 ETH。wei 被用作以太币的最小面额。_
 
-呼！我们的测试资金都在那里了。
-
+呼！我们的假钱都在那里。
 ### 第 6 步：初始化我们的项目 {#step-6-initialize-our-project}
 
 首先，我们需要为我们的项目创建一个文件夹。导航到你的命令行并输入以下内容。
@@ -86,9 +85,9 @@ cd hello-world
 
 现在我们进入了项目文件夹，我们将使用 `npm init` 来初始化项目。
 
-> 如果你还没有安装 npm，请按照[这些说明安装 Node.js 和 npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm)。
+> 如果你还没有安装 npm，请按照 [Node.js 安装说明](https://nodejs.org/en/download/)安装 Node.js 和 npm。
 
-就本教程而言，你如何回答初始化问题并不重要。以下是我们的操作方法，以供参考：
+对于本教程而言，你如何回答初始化问题并不重要。以下是我们的做法，仅供参考：
 
 ```
 package name: (hello-world)
@@ -117,7 +116,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 批准 package.json，我们就可以开始了！
-
 ### 第 7 步：下载 Hardhat {#step-7-download-hardhat}
 
 Hardhat 是一个用于编译、部署、测试和调试以太坊软件的开发环境。它可以帮助开发者在部署到实时链之前，在本地构建智能合约和去中心化应用 (dapp)。
@@ -225,7 +223,7 @@ contract HelloWorld {
 
 从你的钱包发送的每笔交易都需要使用你唯一的私钥进行签名。为了向我们的程序提供此权限，我们可以安全地将私钥存储在环境文件中。我们还将在此处存储 Alchemy 的 API 密钥。
 
-> 要了解有关发送交易的更多信息，请查看[这篇关于使用 Web3 发送交易的教程](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project)。
+> 要了解有关发送交易的更多信息，请查看[这篇关于使用 Web3 发送交易的教程](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
 
 首先，在你的项目目录中安装 dotenv 包：
 
@@ -255,7 +253,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 ### 第 12 步：安装 Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js 是一个库，它通过使用更用户友好的方法包装[标准 JSON-RPC 方法](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc)，使与以太坊的交互和发出请求变得更加容易。
+Ethers.js 是一个库，它通过使用更用户友好的方法包装[标准 JSON-RPC 方法](/developers/docs/apis/json-rpc/)，使与以太坊的交互和发出请求变得更加容易。
 
 Hardhat 允许我们集成[插件](https://hardhat.org/plugins/)以获得额外的工具和扩展功能。我们将利用 [Ethers 插件](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)进行合约部署。
 
@@ -373,7 +371,7 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 ![](./hello-world-explorer.png)
 
-在这里，你将看到当我们调用 `.deploy()` 函数时，Hardhat/Ethers 在内部为我们执行的几个 JSON-RPC 方法。这里有两个重要的方法：[`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction)，这是将我们的合约写入 Goerli 链的请求；以及 [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash)，这是在给定哈希的情况下读取有关我们交易信息的请求。要了解有关发送交易的更多信息，请查看[我们关于使用 Web3 发送交易的教程](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
+在这里，你将看到当我们调用 `.deploy()` 函数时，Hardhat/Ethers 在内部为我们执行的几个 JSON-RPC 方法。这里有两个重要的方法：[`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)，这是将我们的合约写入 Goerli 链的请求；以及 [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)，这是在给定哈希的情况下读取有关我们交易信息的请求。要了解有关发送交易的更多信息，请查看[我们关于使用 Web3 发送交易的教程](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
 
 ## 第 2 部分：与你的智能合约交互 {#part-2-interact-with-your-smart-contract}
 
@@ -571,7 +569,7 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-在运行该脚本时，你可能会注意到在加载新消息之前，`Updating the message...` 步骤需要加载一段时间。这是由于挖矿过程造成的；如果你对在交易被打包时跟踪它们感到好奇，请访问 [Alchemy 内存池 (mempool)](https://dashboard.alchemyapi.io/mempool) 以查看交易状态。如果交易被丢弃，检查 [Goerli Etherscan](https://goerli.etherscan.io) 并搜索你的交易哈希也会很有帮助。
+在运行该脚本时，你可能会注意到在加载新消息之前，`Updating the message...` 步骤需要加载一段时间。这是由于挖矿过程造成的；如果你对在交易被打包时跟踪它们感到好奇，请访问 [Alchemy 内存池 (mempool)](https://dashboard.alchemy.com/mempool) 以查看交易状态。如果交易被丢弃，检查 [Goerli Etherscan](https://goerli.etherscan.io) 并搜索你的交易哈希也会很有帮助。
 
 ## 第 3 部分：将你的智能合约发布到 Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -679,7 +677,7 @@ https://goerli.etherscan.io/address/<contract-address>#contracts
 在本教程结束时，你将了解如何：
 
 - 将梅塔马斯克钱包连接到你的去中心化应用 (dapp)
-- 使用 [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API 从你的智能合约中读取数据
+- 使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API 从你的智能合约中读取数据
 - 使用梅塔马斯克签署以太坊交易
 
 对于这个 dapp，我们将使用 [React](https://react.dev/) 作为前端框架；但需要注意的是，我们不会花太多时间讲解它的基础知识，因为我们将主要专注于为我们的项目引入 Web3 功能。
@@ -902,7 +900,7 @@ export const updateMessage = async (message) => {}
 
 #### 建立与以太坊链的 API 连接 {#establish-an-api-connection-to-the-ethereum-chain}
 
-还记得在本教程的第 2 部分中，我们是如何使用 [Alchemy Web3 密钥从智能合约中读取数据](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)的吗？你还需要在 dapp 中使用 Alchemy Web3 密钥才能从链上读取数据。
+还记得在本教程的第 2 部分中，我们是如何使用 Alchemy Web3 密钥从智能合约中读取数据的吗？你还需要在你的去中心化应用 (dapp) 中使用 Alchemy Web3 密钥来从链上读取数据。
 
 如果你还没有安装，请首先导航到 `starter-files` 的根目录并在终端中运行以下命令来安装 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)：
 
@@ -910,7 +908,7 @@ export const updateMessage = async (message) => {}
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) 是 [Web3.js](https://docs.web3js.org/) 的包装器，提供增强的 API 方法和其他关键优势，让 Web3 开发者的工作更加轻松。它被设计为只需最少的配置，因此你可以立即开始在应用中使用它！
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) 是 [Web3.js](https://docs.web3js.org/) 的一个包装器，提供了增强的 API 方法和其他关键优势，让你的 Web3 开发者生活更加轻松。它的设计旨在只需最少的配置，因此你可以立即开始在你的应用中使用它！
 
 然后，在你的项目目录中安装 [dotenv](https://www.npmjs.com/package/dotenv) 包，这样我们在获取 API 密钥后就有一个安全的地方来存储它。
 
@@ -918,15 +916,15 @@ npm install @alch/alchemy-web3
 npm install dotenv --save
 ```
 
-对于我们的 dapp，**我们将使用 Websockets API 密钥**而不是 HTTP API 密钥，因为它允许我们设置一个监听器来检测存储在智能合约中的消息何时发生更改。
+对于我们的 dapp，**我们将使用 Websockets API 密钥**而不是 HTTP API 密钥，因为它将允许我们设置一个监听器，用于检测存储在智能合约中的消息何时发生变化。
 
-获得 API 密钥后，在根目录中创建一个 `.env` 文件，并将你的 Alchemy Websockets URL 添加到其中。之后，你的 `.env` 文件应如下所示：
+获得 API 密钥后，在你的根目录中创建一个 `.env` 文件，并将你的 Alchemy Websockets URL 添加到其中。之后，你的 `.env` 文件应该如下所示：
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<密钥>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-现在，我们准备好在 dapp 中设置 Alchemy Web3 端点了！让我们回到嵌套在 `util` 文件夹中的 `interact.js`，并在文件顶部添加以下代码：
+现在，我们准备好在我们的 dapp 中设置 Alchemy Web3 端点了！让我们回到嵌套在 `util` 文件夹中的 `interact.js`，并在文件顶部添加以下代码：
 
 ```javascript
 // interact.js
@@ -939,10 +937,9 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-在上面，我们首先从 `.env` 文件中导入了 Alchemy 密钥，然后将 `alchemyKey` 传递给 `createAlchemyWeb3` 以建立我们的 Alchemy Web3 端点。
+在上面的代码中，我们首先从 `.env` 文件中导入了 Alchemy 密钥，然后将我们的 `alchemyKey` 传递给 `createAlchemyWeb3` 以建立我们的 Alchemy Web3 端点。
 
-端点准备就绪后，就该加载我们的智能合约了！
-
+端点准备就绪后，是时候加载我们的智能合约了！
 #### 加载你的 Hello World 智能合约 {#loading-your-hello-world-smart-contract}
 
 要加载你的 Hello World 智能合约，你需要它的合约地址和 ABI，如果你完成了[本教程的第 3 部分](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)，这两者都可以在 Etherscan 上找到。
@@ -1034,7 +1031,7 @@ useEffect(async () => {
 
 #### 实现 `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-回想一下我们在[本系列教程第 1 部分](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract)中编写的 `HelloWorld.sol` 文件，你会记得有一个名为 `UpdatedMessages` 的智能合约事件，它在调用智能合约的 `update` 函数后发出（见第 9 行和第 27 行）：
+回想一下我们在[本系列教程第 1 部分](#step-10-write-our-contract)中编写的 `HelloWorld.sol` 文件，你会记得有一个名为 `UpdatedMessages` 的智能合约事件，它在调用智能合约的 `update` 函数后发出（见第 9 行和第 27 行）：
 
 ```javascript
 // HelloWorld.sol
@@ -1131,15 +1128,15 @@ useEffect(async () => {
 
 #### 检查你的余额 {#check-your-balance}
 
-为了仔细检查我们的余额是否已到账，让我们使用 [Alchemy 的 composer 工具](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)发出 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 请求。这将返回我们钱包中的 ETH 数量。输入你的梅塔马斯克账户地址并点击“Send Request”（发送请求）后，你应该会看到如下响应：
+为了再次确认我们的余额已到账，让我们使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)发出一个 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 请求。这将返回我们钱包中的 ETH 数量。在输入你的梅塔马斯克账户地址并点击“Send Request”（发送请求）后，你应该会看到类似以下的响应：
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**注意：** 此结果的单位是 wei 而不是 ETH。Wei 被用作以太币的最小面额。从 wei 到 ETH 的转换为：1 ETH = 10¹⁸ wei。因此，如果我们将 0xde0b6b3a7640000 转换为十进制，我们会得到 1\*10¹⁸，等于 1 ETH。
+**注意：** 此结果的单位是 wei，而不是 ETH。wei 被用作以太币的最小面额。从 wei 到 ETH 的换算关系是：1 ETH = 10¹⁸ wei。因此，如果我们将 0xde0b6b3a7640000 转换为十进制，我们会得到 1\*10¹⁸，即等于 1 ETH。
 
-呼！我们的假钱都在那里了！🤑
+呼！我们的假钱都在那里！🤑
 
 ### 第 5 步：将梅塔马斯克连接到你的 UI {#step-5-connect-metamask-to-your-ui}
 
@@ -1539,7 +1536,7 @@ const onUpdatePressed = async () => {
 哇哦，你已经到了教程的结尾！回顾一下，你学习了如何：
 
 - 将梅塔马斯克钱包连接到你的 dapp 项目
-- 使用 [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API 从你的智能合约中读取数据
+- 使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API 从你的智能合约中读取数据
 - 使用梅塔马斯克签署以太坊交易
 
 现在你已完全具备应用本教程中的技能来构建你自己的自定义 dapp 项目的能力！一如既往，如果你有任何疑问，请随时在 [Alchemy Discord](https://discord.gg/gWuC7zB) 中联系我们寻求帮助。🧙‍♂️

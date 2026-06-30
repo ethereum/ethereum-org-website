@@ -134,7 +134,7 @@ _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _திறந்த மூல பரிவர்த்தனை எரிவாயு விலை மதிப்பீட்டாளர்_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _பரிவர்த்தனை கட்டணங்களைக் குறைக்கவும் பணத்தைச் சேமிக்கவும் எத்திரியம் மற்றும் L2 எரிவாயு விலைகளைக் கண்காணித்துப் பின்தொடரவும்_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _வகை 0 மரபுப் பரிவர்த்தனைகள் மற்றும் வகை 2 EIP-1559 பரிவர்த்தனைகள் இரண்டையும் ஆதரிக்கும் எரிவாயுவை மதிப்பிடும் குரோம் நீட்டிப்பு._
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _முதன்மை வலைப்பின்னல், ஆர்பிட்ரம் மற்றும் பாலிகன் ஆகியவற்றில் வெவ்வேறு பரிவர்த்தனை வகைகளுக்கு உங்கள் உள்ளூர் நாணயத்தில் எரிவாயு கட்டணங்களைக் கணக்கிடுங்கள்._
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _முதன்மை வலைப்பின்னல், ஆர்பிட்ரம் மற்றும் பாலிகன் ஆகியவற்றில் வெவ்வேறு பரிவர்த்தனை வகைகளுக்கு உங்கள் உள்ளூர் நாணயத்தில் எரிவாயு கட்டணங்களைக் கணக்கிடுங்கள்._
 
 ## தொடர்புடைய கருவிகள் {#related-tools}
 

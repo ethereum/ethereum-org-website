@@ -1,6 +1,6 @@
 ---
-title: Ausencia de estado, caducidad del estado y expiración del historial
-description: Explicación de la expiración del historial y el Ethereum sin estado
+title: "Ausencia de estado, caducidad del estado y expiración del historial"
+description: "Explicación de la expiración del historial y el Ethereum sin estado"
 lang: es
 ---
 

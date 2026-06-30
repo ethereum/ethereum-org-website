@@ -137,5 +137,16 @@
   "page-developers-why-title": "Seja bem remunerado. Trabalhe remotamente. Construa o futuro.",
   "page-developers-why-subtitle": "Mais da metade das carreiras em blockchain são remotas, com algumas estimativas colocando esse número em até 70%.",
   "page-developers-why-avg-salary-dev": "Salário médio de desenvolvedor",
-  "page-developers-why-avg-salary-blockchain": "Salário médio na indústria de blockchain"
+  "page-developers-why-avg-salary-blockchain": "Salário médio na indústria de blockchain",
+  "page-developers-why-grid-money-heading": "Dinheiro que você pode programar",
+  "page-developers-why-grid-money-desc": "Escreva código que define como o valor se move, quando e para quem. Sem bancos, sem intermediários, apenas a lógica que você define.",
+  "page-developers-why-grid-skills-heading": "Habilidades à prova do futuro",
+  "page-developers-why-grid-skills-desc": "Aprenda os blocos de construção da próxima internet. A tecnologia pode evoluir, mas os princípios da Web3 vieram para ficar.",
+  "page-developers-why-grid-censorship-heading": "Resistência à censura",
+  "page-developers-why-grid-censorship-desc": "Construa projetos e comércio que não podem ser silenciados por governos, corporações ou algoritmos. Se for importante, continuará online.",
+  "page-developers-why-grid-sovereignty-heading": "Soberania digital",
+  "page-developers-why-grid-sovereignty-desc": "Seja dono da sua identidade, ativos e criações online sem depender de plataformas que podem excluir você.",
+  "page-developers-blog-title": "Atualizações para construtores",
+  "page-developers-blog-desc": "Informações sobre os mais recentes recursos, ferramentas e desenvolvimentos para construtores do Ethereum.",
+  "page-developers-blog-view-all": "Ver todas as atualizações"
 }

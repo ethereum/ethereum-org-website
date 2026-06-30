@@ -1,22 +1,22 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-latest.json",
-  "generatedAt": "2026-06-16T15:45:23.479Z",
-  "rootHash": "cb0321314367",
+  "generatedAt": "2026-06-29T23:50:19.729Z",
+  "rootHash": "8682fc90b956",
   "tree": {
-    "contentHash": "abdf4392dfc1",
-    "anchorHash": "5cd4143460ba",
+    "contentHash": "8e299781c8dd",
+    "anchorHash": "d425b1963c30",
     "children": {
       "page-latest-meta-description": {
-        "contentHash": "6ea1dc1a067c",
+        "contentHash": "c46a58bb481e",
         "anchorHash": "e3b0c44298fc"
       },
       "page-latest-title": {
-        "contentHash": "d90f62475406",
+        "contentHash": "1d040dec692d",
         "anchorHash": "e3b0c44298fc"
       },
       "page-latest-subtitle": {
-        "contentHash": "4d24f72f88d4",
+        "contentHash": "6a32cff732b7",
         "anchorHash": "e3b0c44298fc"
       },
       "page-latest-no-posts": {
@@ -48,6 +48,77 @@
       "page-latest-team-attribution": {
         "contentHash": "9e847484a658",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-cta-submit-resource": {
+        "contentHash": "48146469d2af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-cta-propose-article": {
+        "contentHash": "5bc40e241189",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-highlights-heading": {
+        "contentHash": "6e517828c3d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-articles-heading": {
+        "contentHash": "b643b0b6411e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-sources-heading": {
+        "contentHash": "3d11c78e4a58",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-see-more": {
+        "contentHash": "66e9c77411f5",
+        "anchorHash": "f13222720333",
+        "children": {
+          "prose:1": {
+            "contentHash": "38615af5722f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9307b2fa1323"
+          },
+          "prose:2": {
+            "contentHash": "ba5ec51d07a4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "page-latest-sort-label": {
+        "contentHash": "6369a3203fd8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-sort-newest": {
+        "contentHash": "ffb6f5764bdd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-sort-oldest": {
+        "contentHash": "6e2ebdab3c02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-sort-az": {
+        "contentHash": "f9f6c8502eb0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-i18n-disclaimer": {
+        "contentHash": "c9adff25d8cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-suggest-heading": {
+        "contentHash": "0aa03459a85c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-latest-suggest-description": {
+        "contentHash": "b87ea971a70d",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -57,8 +128,21 @@
       "page-latest-no-posts",
       "page-latest-read-more",
       "page-latest-minute-read",
-      "page-latest-team-attribution"
+      "page-latest-team-attribution",
+      "page-latest-cta-submit-resource",
+      "page-latest-cta-propose-article",
+      "page-latest-highlights-heading",
+      "page-latest-articles-heading",
+      "page-latest-sources-heading",
+      "page-latest-see-more",
+      "page-latest-sort-label",
+      "page-latest-sort-newest",
+      "page-latest-sort-oldest",
+      "page-latest-sort-az",
+      "page-latest-i18n-disclaimer",
+      "page-latest-suggest-heading",
+      "page-latest-suggest-description"
     ]
   },
-  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

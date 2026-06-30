@@ -28,7 +28,7 @@ Der Begriff „Layer 2“ (L2) wird für das Rollup oder jedes andere System ver
 
 [Optimistic Rollups](/developers/docs/scaling/optimistic-rollups) müssen eine Aufzeichnung jeder historischen Transaktion aufbewahren, damit jeder sie durchgehen und verifizieren kann, dass der aktuelle Zustand korrekt ist.
 Der günstigste Weg, Daten in das Ethereum Mainnet zu bekommen, ist, sie als Calldata (Aufrufdaten) zu schreiben.
-Diese Lösung wurde sowohl von [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) als auch von [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) gewählt.
+Diese Lösung wurde sowohl von [Optimism](https://docs.optimism.io/op-stack/protocol/overview) als auch von [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction) gewählt.
 
 ### Kosten von L2-Transaktionen {#cost-of-l2-transactions}
 
@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 Wir benötigen die Token-Funktion, um zu wissen, wie wir sie aufrufen können.
 
 ```solidity
-Vertrag CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ Die Adresse des Tokens, für den wir ein Proxy sind.
      * @dev Spezifiziert die Token-Adresse
      * @param tokenAddr_ ERC-20 Vertragsadresse
      */
-    Konstruktor(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

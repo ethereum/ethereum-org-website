@@ -1,6 +1,6 @@
 ---
-title: 在线社区
-description: 探索以太坊爱好者聚集、讨论和协作的在线论坛、聊天室和社交媒体社区。
+title: "在线社区"
+description: "探索以太坊爱好者聚集、讨论和协作的在线论坛、聊天室和社交媒体社区。"
 lang: zh
 ---
 
@@ -52,7 +52,7 @@ lang: zh
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - Web3 创作者社区，建设者、行业领袖和以太坊爱好者常聚于此。我们对 Web3 开发、设计和文化充满热情。快来和我们一起建设吧。</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity 开发聊天室 (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 问答论坛</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- 去中心化的问答论坛</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- 去中心化的问答论坛</i></SocialListItem>
 
 ## YouTube 和 X（原推特） {#youtube-and-twitter}
 

@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "Lebih lanjut tentang tata kelola Ethereum",
   "page-roadmap-hero-alt": "Peta jalan Ethereum",
   "page-roadmap-technical-upgrades-title": "Pemutakhiran teknis apa yang akan datang ke Ethereum?",
+  "page-roadmap-post-quantum-title": "Keamanan pasca-kuantum",
+  "page-roadmap-post-quantum-description": "Komputer kuantum suatu hari nanti dapat membobol kriptografi yang diandalkan oleh rantai blok. Pemutakhiran pasca-kuantum Ethereum akan mengganti algoritma yang rentan sebelum komputasi kuantum menjadi ancaman nyata.",
   "page-roadmap-danksharding-title": "Danksharding",
   "page-roadmap-danksharding-description": "Danksharding membuat rollup lapisan 2 (l2) jauh lebih murah bagi pengguna dengan menambahkan \"blob\" data ke blok Ethereum.",
   "page-roadmap-single-slot-finality-title": "Finalitas slot tunggal",

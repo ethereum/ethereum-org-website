@@ -1,7 +1,7 @@
 ---
-title: J'ai été victime d'une arnaque ou j'ai perdu des fonds
+title: "J'ai été victime d'une arnaque ou j'ai perdu des fonds"
 metaTitle: Aide et signalement d'arnaques
-description: Que faire si vous avez été victime d'une arnaque, comment sécuriser vos actifs restants et où signaler la fraude.
+description: "Que faire si vous avez été victime d'une arnaque, comment sécuriser vos actifs restants et où signaler la fraude."
 lang: fr
 ---
 
@@ -85,8 +85,8 @@ Le signalement reste utile. Les signalements aident les forces de l'ordre à tra
 ## Types d'arnaques à surveiller {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Arnaques aux cadeaux et airdrops"
+contentPreview="Personne ne donne d'ETH gratuitement. Ces offres sont toujours des arnaques."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ Les arnaqueurs créent de faux cadeaux promettant de multiplier vos ETH ou de vo
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Usurpation d'identité et faux support"
+contentPreview="Personne d'Ethereum ou d'ethereum.org ne vous contactera jamais en premier."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ Les arnaqueurs se font passer pour des membres de l'équipe Ethereum, des modér
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Arnaques à la récupération"
+contentPreview="Après avoir été victime d'une arnaque, méfiez-vous des faux « experts en récupération de crypto »."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ Ils promettent de retracer et de récupérer votre crypto volée moyennant des f
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Sites web d'hameçonnage et fausses applications"
+contentPreview="Les sites frauduleux imitent les vrais portefeuilles et plateformes d'échange pour voler vos identifiants."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

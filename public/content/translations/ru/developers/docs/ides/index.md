@@ -59,6 +59,6 @@ lang: ru
 
 ## Дополнительная литература {#further-reading}
 
-- [IDE для Эфириума](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _— Список IDE для Эфириума от Alchemy_
+- [IDE для Эфириума](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _— Список IDE для Эфириума от Alchemy_
 
 _Знаете ресурс сообщества, который вам помог? Отредактируйте эту страницу и добавьте его!_

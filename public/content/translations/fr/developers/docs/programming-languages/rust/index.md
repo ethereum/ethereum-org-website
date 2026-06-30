@@ -44,7 +44,7 @@ Besoin d'une introduction plus basique d'abord ? Consultez [ethereum.org/learn](
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Référence de l'API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Harnais de tests unitaires pour contrats intelligents Solidity utilisant l'EVM native du client Parity._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Implémentation de la machine virtuelle Ethereum en Rust_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Contrat intelligent Wavelet en Rust_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Contrat intelligent Wavelet en Rust_
 - [Foundry](https://github.com/foundry-rs/foundry) - _Boîte à outils pour le développement d'applications Ethereum_
 - [Alloy](https://alloy.rs) - _Bibliothèques performantes, bien testées et documentées pour interagir avec Ethereum et d'autres chaînes basées sur l'EVM._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Bibliothèque Ethereum et implémentation de portefeuille_

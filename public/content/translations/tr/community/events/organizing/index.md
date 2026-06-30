@@ -1,7 +1,7 @@
 ---
-title: Bir Ethereum etkinliği nasıl organize edilir
-metaTitle: Bir Ethereum Etkinliği Organize Etmek
-description: Bir Ethereum etkinliği nasıl organize edilir
+title: "Bir Ethereum etkinliği nasıl organize edilir"
+metaTitle: "Bir Ethereum Etkinliği Organize Etmek"
+description: "Bir Ethereum etkinliği nasıl organize edilir"
 lang: tr
 hideEditButton: true
 ---
@@ -206,14 +206,12 @@ Etkinlik sona erdikten sonra, gelecekteki etkinliklere daha iyi hazırlanabilmen
 
 ## Kaynaklar {#resources}
 
-Podcast: A'dan Z'ye bir ETH etkinliği nasıl organize edilir ve tanıtılır:
+Podcast: A'dan Z'ye bir ETH etkinliği nasıl düzenlenir ve tanıtılır:
 
-- [Out of Ordinary tarafından hazırlanan ETHWarsaw vaka çalışması](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [Out of Ordinary'den ETHWarsaw vaka çalışması](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 Twitter space:
 
-- [ETH Topluluğu AMA (Bana İstediğini Sor)](https://x.com/NapulETH/status/1905732699094151623)
+- [ETH Topluluğu AMA](https://x.com/NapulETH/status/1905732699094151623)
 
 Makaleler:
-
-- [Danny H. tarafından hazırlanan ETHKL'yi İnşa Etmek](https://sekto.tech/ethkl24)

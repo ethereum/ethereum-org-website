@@ -1,7 +1,7 @@
 ---
-title: मेरे साथ घोटाला हुआ है या मैंने फंड खो दिया है
-metaTitle: घोटाले में सहायता और रिपोर्टिंग
-description: यदि आपके साथ घोटाला हुआ है तो क्या करें, अपनी शेष संपत्तियों को कैसे सुरक्षित करें, और धोखाधड़ी की रिपोर्ट कहां करें।
+title: "मेरे साथ घोटाला हुआ है या मैंने फंड खो दिया है"
+metaTitle: "घोटाले में सहायता और रिपोर्टिंग"
+description: "यदि आपके साथ घोटाला हुआ है तो क्या करें, अपनी शेष संपत्तियों को कैसे सुरक्षित करें, और धोखाधड़ी की रिपोर्ट कहां करें।"
 lang: hi
 ---
 
@@ -85,8 +85,8 @@ lang: hi
 ## ध्यान रखने योग्य घोटालों के प्रकार {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="गिवअवे और एयरड्रॉप घोटाले"
+contentPreview="कोई भी मुफ्त ETH नहीं दे रहा है। ये ऑफ़र हमेशा घोटाले होते हैं।"
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="प्रतिरूपण और नकली सपोर्ट"
+contentPreview="इथेरियम या ethereum.org से कोई भी आपसे पहले संपर्क नहीं करेगा।"
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="रिकवरी घोटाले"
+contentPreview="ठगे जाने के बाद, नकली 'क्रिप्टो रिकवरी विशेषज्ञों' से सावधान रहें।"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="फ़िशिंग वेबसाइटें और नकली ऐप"
+contentPreview="घोटाले वाली साइटें आपके क्रेडेंशियल चुराने के लिए असली वॉलेट और एक्सचेंजों की नकल करती हैं।"
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

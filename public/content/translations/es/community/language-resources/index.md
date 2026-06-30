@@ -27,7 +27,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede part
 **Noticias**
 
 - [BeInCrypto](http://www.beincrypto.com.br): noticias y artículos sobre criptomonedas, incluida una lista de casas de cambio (exchanges), disponibles en Brasil.
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis): versión brasileña de Cointelegraph, un importante medio de noticias sobre criptomonedas.
+- [Cointelegraph](https://cointelegraph.com.br/): versión brasileña de Cointelegraph, un importante medio de noticias sobre criptomonedas.
 - [Livecoins](http://www.livecoins.com.br/ethereum): noticias y herramientas sobre criptomonedas.
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/): noticias y reportajes sobre criptomonedas.
 - [Modular Crypto](https://modularcrypto.xyz/): noticias y artículos educativos sobre criptomonedas.
@@ -37,7 +37,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede part
 - [web3dev](https://www.web3dev.com.br/): centro de contenido y comunidad de Discord para desarrolladores de Web3.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil): recursos para aprender sobre Web3 y finanzas descentralizadas (DeFi).
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/): noticias y educación sobre criptomonedas, incluyendo "Ethereum para principiantes" y "DeFi para principiantes".
-- [CriptoAtivos](http://www.criptoativos.wiki.br/): perspectivas del espacio de las criptomonedas, educación y blog.
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/): perspectivas del espacio de las criptomonedas, educación y blog.
 - [Cointimes](http://www.cointimes.com.br/): noticias y educación sobre criptomonedas.
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/): una guía que responde a las preguntas fundamentales y más frecuentes sobre cripto.
 

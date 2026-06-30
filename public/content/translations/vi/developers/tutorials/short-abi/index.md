@@ -28,7 +28,7 @@ Thuật ngữ 'lớp 2 (l2)' được sử dụng cho Rollup hoặc bất kỳ h
 
 [Bản cuộn Optimistic](/developers/docs/scaling/optimistic-rollups) phải lưu giữ hồ sơ của mọi giao dịch lịch sử để bất kỳ ai cũng có thể xem qua chúng và xác minh rằng trạng thái hiện tại là chính xác.
 Cách rẻ nhất để đưa dữ liệu vào Mạng chính Ethereum là ghi nó dưới dạng dữ liệu lệnh gọi.
-Giải pháp này đã được chọn bởi cả [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) và [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+Giải pháp này đã được chọn bởi cả [Optimism](https://docs.optimism.io/op-stack/protocol/overview) và [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
 
 ### Chi phí của các giao dịch l2 {#cost-of-l2-transactions}
 
@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 Chúng ta cần hàm token để biết cách gọi nó.
 
 ```solidity
-hợp đồng CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ hợp đồng CalldataInterpreter {
      * @dev Chỉ định địa chỉ token
      * @param tokenAddr_ Địa chỉ hợp đồng ERC-20
      */
-    hàm khởi tạo(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

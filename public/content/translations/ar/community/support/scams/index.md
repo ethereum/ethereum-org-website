@@ -1,7 +1,7 @@
 ---
-title: لقد تعرضت للاحتيال أو فقدت أموالي
-metaTitle: المساعدة والإبلاغ عن الاحتيال
-description: ماذا تفعل إذا تعرضت للاحتيال، وكيفية تأمين أصولك المتبقية، وأين يمكنك الإبلاغ عن الاحتيال.
+title: "لقد تعرضت للاحتيال أو فقدت أموالي"
+metaTitle: "المساعدة والإبلاغ عن الاحتيال"
+description: "ماذا تفعل إذا تعرضت للاحتيال، وكيفية تأمين أصولك المتبقية، وأين يمكنك الإبلاغ عن الاحتيال."
 lang: ar
 ---
 
@@ -85,8 +85,8 @@ lang: ar
 ## أنواع عمليات الاحتيال التي يجب الحذر منها {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="عمليات الاحتيال عبر الهدايا والتوزيعات المجانية"
+contentPreview="لا أحد يوزع ETH مجانًا. هذه العروض دائمًا ما تكون عمليات احتيال."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="انتحال الشخصية والدعم المزيف"
+contentPreview="لا أحد من إيثيريوم أو ethereum.org سيبادر بالاتصال بك أبدًا."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="عمليات الاحتيال باسم الاسترداد"
+contentPreview="بعد التعرض للاحتيال، احذر من &quot;خبراء استرداد الكريبتو&quot; المزيفين."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="مواقع التصيد الاحتيالي والتطبيقات المزيفة"
+contentPreview="تحاكي مواقع الاحتيال المحافظ والمنصات الحقيقية لسرقة بيانات الاعتماد الخاصة بك."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

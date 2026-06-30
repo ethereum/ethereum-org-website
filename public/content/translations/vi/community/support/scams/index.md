@@ -1,7 +1,7 @@
 ---
-title: Tôi đã bị lừa đảo hoặc mất tiền
-metaTitle: Trợ giúp & báo cáo lừa đảo
-description: Phải làm gì nếu bạn bị lừa đảo, cách bảo vệ tài sản còn lại của bạn và nơi báo cáo gian lận.
+title: "Tôi đã bị lừa đảo hoặc mất tiền"
+metaTitle: "Trợ giúp & báo cáo lừa đảo"
+description: "Phải làm gì nếu bạn bị lừa đảo, cách bảo vệ tài sản còn lại của bạn và nơi báo cáo gian lận."
 lang: vi
 ---
 
@@ -85,8 +85,8 @@ Việc báo cáo vẫn có giá trị. Các báo cáo giúp cơ quan thực thi 
 ## Các loại lừa đảo cần chú ý {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Lừa đảo tặng thưởng và airdrop"
+contentPreview="Không ai tặng ETH miễn phí. Những lời chào mời này luôn là lừa đảo."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ Những kẻ lừa đảo tạo ra các chương trình tặng quà giả mạo 
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Mạo danh và hỗ trợ giả mạo"
+contentPreview="Không ai từ Ethereum hoặc ethereum.org sẽ chủ động liên hệ với bạn trước."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ Những kẻ lừa đảo mạo danh các thành viên nhóm Ethereum, người 
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Lừa đảo khôi phục"
+contentPreview="Sau khi bị lừa đảo, hãy cẩn thận với những 'chuyên gia khôi phục tiền mã hóa' giả mạo."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ Chúng hứa hẹn sẽ theo dõi và thu hồi số tiền mã hóa bị đánh
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Trang web lừa đảo và ứng dụng giả mạo"
+contentPreview="Các trang web lừa đảo bắt chước các ví và sàn giao dịch thật để đánh cắp thông tin đăng nhập của bạn."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

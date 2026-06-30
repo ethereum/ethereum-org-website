@@ -134,7 +134,7 @@ Jika Anda ingin memantau harga gas, sehingga Anda dapat mengirim ETH Anda dengan
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimator harga gas transaksi sumber terbuka_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Pantau dan lacak harga gas Ethereum dan L2 untuk mengurangi biaya transaksi dan menghemat uang_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Ekstensi Chrome untuk estimasi gas yang mendukung transaksi warisan Tipe 0 dan transaksi EIP-1559 Tipe 2._
-- [Kalkulator Biaya Gas Cryptoneur](https://www.cryptoneur.xyz/gas-fees-calculator) _Hitung biaya gas dalam mata uang lokal Anda untuk berbagai jenis transaksi di Mainnet, Arbitrum, dan Polygon._
+- [Kalkulator Biaya Gas Cryptoneur](https://cryptoneur.xyz/en/gas-fees-calculator) _Hitung biaya gas dalam mata uang lokal Anda untuk berbagai jenis transaksi di Mainnet, Arbitrum, dan Polygon._
 
 ## Alat terkait {#related-tools}
 

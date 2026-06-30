@@ -9,24 +9,23 @@ Ethereum.org là một dự án mã nguồn mở với **hơn 12.000** người 
 
 Chúng tôi là một cộng đồng thân thiện sẽ giúp bạn phát triển và học hỏi trong hệ sinh thái [Ethereum](/) đồng thời đóng góp một cách có ý nghĩa và có được kinh nghiệm thực tế liên quan!
 
-## Các cách đóng góp {#ways-to-contribute}
-
 **Dịch thuật**
 - [Tham gia chương trình dịch thuật](/contributing/translation-program/) – Giúp chúng tôi mang ethereum.org đến với các ngôn ngữ mới
 
 **Phát triển**
-- [Làm việc trên một vấn đề đang mở](https://github.com/ethereum/ethereum-org-website/issues) – Những công việc chúng tôi đã xác định là cần thực hiện
+- [Làm việc trên một vấn đề đang mở](https://github.com/ethereum/ethereum-org-website/issues) – Những công việc chúng tôi đã xác định cần được thực hiện
 
 **Thiết kế**
 - [Giúp thiết kế trang web](/contributing/design/) – Các nhà thiết kế ở mọi cấp độ đều có thể đóng góp để cải thiện trang web
 
 **Nội dung**
-- [Tạo/chỉnh sửa nội dung](/contributing/#how-to-update-content) – Đề xuất các trang mới hoặc thực hiện các chỉnh sửa cho những gì đã có ở đây
-- [Viết một bài viết dành cho trình xây dựng](/contributing/adding-articles/) - Đóng góp một bài viết cho phần [Mới nhất](/latest/)
+- [Tạo/chỉnh sửa nội dung](/contributing/#how-to-update-content) – Đề xuất các trang mới hoặc thực hiện các tinh chỉnh cho những gì đã có ở đây
+- [Viết một bài viết cho trình xây dựng](/contributing/adding-articles/) - Đóng góp một bài viết cho phần [Mới nhất](/latest/)
 - [Thêm tài nguyên cộng đồng](/contributing/content-resources/) – Thêm một bài viết hoặc tài nguyên hữu ích vào một trang có liên quan
 - [Đề xuất một báo cáo](/contributing/adding-reports/) - Đề xuất một báo cáo nghiên cứu cho trang [Báo cáo](/reports/)
-- [Đề xuất một tài nguyên thiết kế](/contributing/design/adding-design-resources/) – Thêm, cập nhật và xóa các tài nguyên thiết kế hữu ích
+- [Chia sẻ câu chuyện của bạn](/contributing/adding-community-stories/) - Gửi một câu chuyện về trải nghiệm cá nhân của bạn với mã nguồn mở và các công nghệ bảo vệ quyền riêng tư, cách hệ sinh thái Ethereum đã tác động đến cuộc sống của bạn, hoặc cách bạn và cộng đồng của bạn sử dụng Ethereum
 - [Câu đố](/contributing/quizzes/) – Thêm, cập nhật và xóa các ngân hàng câu hỏi đố vui cho một trang có liên quan
+- [Đề xuất một tài nguyên thiết kế](/contributing/design/adding-design-resources/) – Thêm, cập nhật và xóa các tài nguyên thiết kế hữu ích
 - [Đề xuất một video](/contributing/adding-videos/) – Đề xuất một video giáo dục cho thư viện video
 
 **Ý tưởng tính năng**
@@ -36,13 +35,13 @@ Chúng tôi là một cộng đồng thân thiện sẽ giúp bạn phát triể
 - [Thêm một sàn giao dịch](/contributing/adding-exchanges/) – Thêm một sàn giao dịch vào [công cụ tìm kiếm sàn giao dịch](/get-eth/#country-picker) của chúng tôi
 - [Thêm một sản phẩm](/contributing/adding-products/) – Thêm một ứng dụng phi tập trung (dapp) hoặc ví vào một trang có liên quan
 - [Thêm công cụ dành cho nhà phát triển](/contributing/adding-developer-tools/) – Thêm một công cụ dành cho nhà phát triển vào một trang có liên quan
-- [Thêm một lớp 2 (l2)](/contributing/adding-layer-2s/) – Thêm một l2 vào một trang có liên quan
+- [Thêm một lớp 2](/contributing/adding-layer-2s/) – Thêm một lớp 2 (l2) vào một trang có liên quan
 - [Thêm một sản phẩm hoặc dịch vụ đặt cọc](/contributing/adding-staking-products/) – Thêm một dự án giúp tạo điều kiện thuận lợi cho việc đặt cọc độc lập, đặt cọc chung hoặc staking như một dịch vụ
 - [Thêm một ví](/contributing/adding-wallets/) – Thêm một ví cho [trang tìm ví](/wallets/find-wallet/)
-- [Đề xuất một dự án cho trang khoa học phi tập trung (desci) của chúng tôi](/contributing/adding-desci-projects/) – Thêm một dự án được xây dựng trên Ethereum đóng góp cho khoa học phi tập trung (desci)
+- [Đề xuất một dự án cho trang DeSci của chúng tôi](/contributing/adding-desci-projects/) – Thêm một dự án được xây dựng trên Ethereum đóng góp cho khoa học phi tập trung (desci)
 - [Thêm một tài nguyên](/contributing/adding-resources/) – Thêm một tài nguyên hữu ích vào bất kỳ trang nào có liên quan
 
-Bạn có câu hỏi nào không? 🤔 Tham gia [máy chủ Discord](https://discord.gg/ethereum-org) của chúng tôi
+Bạn có câu hỏi nào không? 🤔 Hãy tham gia [máy chủ Discord](https://discord.gg/ethereum-org) của chúng tôi
 ## Những nhiệm vụ đầu tiên tốt để bắt đầu đóng góp {#good-first-tasks-to-start-contributing}
 
 Đây là một vài nhiệm vụ hiện tại mà bạn có thể giúp chúng tôi giải quyết và đảm nhận. Đối với hầu hết các nhiệm vụ, bạn sẽ cần một tài khoản GitHub vì hầu hết các thay đổi đối với trang web đều được thực hiện thông qua GitHub.

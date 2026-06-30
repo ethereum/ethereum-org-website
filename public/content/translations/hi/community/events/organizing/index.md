@@ -1,7 +1,7 @@
 ---
-title: इथेरियम घटना कैसे आयोजित करें
-metaTitle: इथेरियम घटना का आयोजन
-description: इथेरियम घटना कैसे आयोजित करें
+title: "इथेरियम घटना कैसे आयोजित करें"
+metaTitle: "इथेरियम घटना का आयोजन"
+description: "इथेरियम घटना कैसे आयोजित करें"
 lang: hi
 hideEditButton: true
 ---
@@ -206,14 +206,12 @@ X.com आपके सोशल मीडिया प्रचार की र
 
 ## संसाधन {#resources}
 
-पॉडकास्ट: A-Z तक ETH घटना को कैसे आयोजित और प्रचारित करें:
+पॉडकास्ट: शुरू से अंत तक ETH घटना का आयोजन और प्रचार कैसे करें:
 
-- [ETHWarsaw केस स्टडी, Out of Ordinary द्वारा](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [Out of Ordinary द्वारा ETHWarsaw केस स्टडी](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 ट्विटर स्पेस:
 
-- [ETH कम्युनिटी AMA](https://x.com/NapulETH/status/1905732699094151623)
+- [ETH समुदाय AMA](https://x.com/NapulETH/status/1905732699094151623)
 
 लेख:
-
-- [ETHKL का निर्माण, Danny H. द्वारा](https://sekto.tech/ethkl24)

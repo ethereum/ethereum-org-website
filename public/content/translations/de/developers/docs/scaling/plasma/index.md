@@ -56,20 +56,19 @@ Um in die Plasma-Chain einzutreten, muss Alice (die Benutzerin) ETH oder einen b
 
 #### Austritt aus der Plasma-Chain {#exiting-the-plasma-chain}
 
-Der Austritt aus der Plasma-Chain ist aus mehreren Gründen komplexer als der Eintritt. Der wichtigste Grund ist, dass Ethereum zwar Informationen über den Zustand der Plasma-Chain hat, aber nicht überprüfen kann, ob die Informationen wahr sind oder nicht. Ein böswilliger Benutzer könnte eine falsche Behauptung aufstellen („Ich habe 1000 ETH“) und damit durchkommen, indem er gefälschte Beweise liefert, um den Anspruch zu untermauern.
+Der Austritt aus der Plasma-Chain ist aus mehreren Gründen komplexer als der Eintritt. Der wichtigste Grund ist, dass Ethereum zwar Informationen über den Zustand der Plasma-Chain hat, aber nicht überprüfen kann, ob diese Informationen wahr sind oder nicht. Ein böswilliger Benutzer könnte eine falsche Behauptung aufstellen („Ich habe 1000 ETH“) und damit durchkommen, indem er gefälschte Nachweise liefert, um die Behauptung zu untermauern.
 
-Um böswillige Abhebungen zu verhindern, wird eine „Anfechtungsfrist“ (Challenge Period) eingeführt. Während der Anfechtungsfrist (normalerweise eine Woche) kann jeder eine Abhebungsanfrage mithilfe eines Betrugsnachweises anfechten. Wenn die Anfechtung erfolgreich ist, wird die Abhebungsanfrage abgelehnt.
+Um böswillige Abhebungen zu verhindern, wird eine „Anfechtungsfrist“ eingeführt. Während der Anfechtungsfrist (normalerweise eine Woche) kann jeder eine Abhebungsanfrage mithilfe eines Betrugsnachweises anfechten. Wenn die Anfechtung erfolgreich ist, wird die Abhebungsanfrage abgelehnt.
 
-In der Regel sind die Benutzer jedoch ehrlich und stellen korrekte Ansprüche auf die Gelder, die sie besitzen. In diesem Szenario wird Alice eine Abhebungsanfrage auf der Root-Chain (Ethereum) initiieren, indem sie eine Transaktion an den Plasma-Vertrag übermittelt.
+In der Regel sind die Benutzer jedoch ehrlich und stellen korrekte Ansprüche auf die ihnen gehörenden Gelder. In diesem Szenario initiiert Alice eine Abhebungsanfrage auf der Root-Chain (Ethereum), indem sie eine Transaktion an den Plasma-Vertrag sendet.
 
-Sie muss außerdem einen Merkle-Nachweis erbringen, der verifiziert, dass eine Transaktion, die ihre Gelder auf der Plasma-Chain erstellt hat, in einen Block aufgenommen wurde. Dies ist für Iterationen von Plasma wie [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html) erforderlich, die ein [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output)-Modell verwenden.
+Sie muss außerdem einen Merkle-Nachweis erbringen, der verifiziert, dass eine Transaktion, die ihre Gelder auf der Plasma-Chain erstellt hat, in einen Block aufgenommen wurde. Dies ist für Iterationen von Plasma wie Plasma MVP erforderlich, die ein [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output)-Modell verwenden.
 
-Andere, wie [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), repräsentieren Gelder als [Non-Fungible Tokens](/developers/docs/standards/tokens/erc-721/) anstelle von UTXOs. Eine Abhebung erfordert in diesem Fall den Nachweis des Eigentums an Tokens auf der Plasma-Chain. Dies geschieht durch Übermittlung der beiden letzten Transaktionen, an denen der Token beteiligt war, und durch Bereitstellung eines Merkle-Nachweises, der die Aufnahme dieser Transaktionen in einen Block verifiziert.
+Andere, wie Plasma Cash, repräsentieren Gelder als [Non-Fungible Tokens](/developers/docs/standards/tokens/erc-721/) anstelle von UTXOs. Eine Abhebung erfordert in diesem Fall den Nachweis des Eigentums an Tokens auf der Plasma-Chain. Dies geschieht durch das Einreichen der beiden letzten Transaktionen, an denen der Token beteiligt war, und die Bereitstellung eines Merkle-Nachweises, der die Aufnahme dieser Transaktionen in einen Block verifiziert.
 
-Der Benutzer muss der Abhebungsanfrage außerdem eine Kaution (Bond) als Garantie für ehrliches Verhalten hinzufügen. Wenn ein Anfechtender beweist, dass Alices Abhebungsanfrage ungültig ist, wird ihre Kaution einem Slashing unterzogen, und ein Teil davon geht als Belohnung an den Anfechtenden.
+Der Benutzer muss der Abhebungsanfrage außerdem eine Kaution als Garantie für ehrliches Verhalten hinzufügen. Wenn ein Anfechtender beweist, dass Alices Abhebungsanfrage ungültig ist, wird ihre Kaution einem Slashing unterzogen und ein Teil davon geht als Belohnung an den Anfechtenden.
 
 Wenn die Anfechtungsfrist verstreicht, ohne dass jemand einen Betrugsnachweis erbringt, gilt Alices Abhebungsanfrage als gültig, sodass sie Einzahlungen aus dem Plasma-Vertrag auf Ethereum abrufen kann.
-
 ### Streitbeilegung {#dispute-arbitration}
 
 Wie jede Blockchain benötigen Plasma-Chains einen Mechanismus zur Durchsetzung der Integrität von Transaktionen für den Fall, dass Teilnehmer böswillig handeln (z. B. Doppelausgabe von Geldern). Zu diesem Zweck verwenden Plasma-Chains Betrugsnachweise, um Streitigkeiten über die Gültigkeit von Zustandsübergängen zu schlichten und schlechtes Verhalten zu bestrafen. Betrugsnachweise werden als Mechanismus verwendet, durch den eine Plasma-Child-Chain eine Beschwerde bei ihrer Parent-Chain oder der Root-Chain einreicht.
@@ -167,14 +166,12 @@ Mehrere Projekte bieten Implementierungen von Plasma an, die Sie in Ihre Dapps i
 
 ## Weiterführende Literatur {#further-reading}
 
-- [Plasma lernen](https://www.learnplasma.org/en/)
 - [Eine kurze Erinnerung daran, was „Shared Security“ bedeutet und warum sie so wichtig ist](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Sidechains vs. Plasma vs. Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Plasma verstehen, Teil 1: Die Grundlagen](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
-- [Leben und Tod von Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
+- [Das Leben und Sterben von Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
-
 ## Tutorials: Plasma-Chains auf Ethereum {#tutorials}
 
 - [Schreiben Sie ein App-spezifisches Plasma, das die Privatsphäre wahrt](/developers/tutorials/app-plasma/) _– Erstellen Sie eine die Privatsphäre wahrende Plasma-Anwendung unter Verwendung von Zero-Knowledge-Beweisen und Offchain-Komponenten._

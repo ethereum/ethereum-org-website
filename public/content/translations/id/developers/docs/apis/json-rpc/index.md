@@ -1888,7 +1888,7 @@ Ini hanyalah pengantar singkat tentang beberapa tugas yang paling umum, yang men
 
 ## Topik terkait {#related-topics}
 
-- [Spesifikasi JSON-RPC](http://www.jsonrpc.org/specification)
+- [Spesifikasi JSON-RPC](https://www.jsonrpc.org/specification)
 - [Node dan klien](/developers/docs/nodes-and-clients/)
 - [API JavaScript](/developers/docs/apis/javascript/)
 - [API backend](/developers/docs/apis/backend/)

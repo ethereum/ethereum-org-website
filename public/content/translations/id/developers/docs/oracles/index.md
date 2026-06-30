@@ -403,7 +403,7 @@ Ada beberapa aplikasi orakel yang dapat Anda integrasikan ke dalam dapp Ethereum
 
 **[Jaringan Pyth](https://pyth.network/)** - _Jaringan Pyth adalah jaringan orakel keuangan pihak pertama yang dirancang untuk memublikasikan data dunia nyata secara berkelanjutan onchain dalam lingkungan yang tahan kerusakan, terdesentralisasi, dan mandiri._
 
-**[API3 DAO](https://www.api3.org/)** - _API3 DAO memberikan solusi orakel pihak pertama yang memberikan transparansi sumber, keamanan, dan skalabilitas yang lebih besar dalam solusi terdesentralisasi untuk kontrak pintar_
+**[API3 DAO](https://api3.org/)** - _API3 DAO memberikan solusi orakel pihak pertama yang memberikan transparansi sumber, keamanan, dan skalabilitas yang lebih besar dalam solusi terdesentralisasi untuk kontrak pintar_
 
 **[Supra](https://supra.com/)** - Perangkat solusi lintas rantai yang terintegrasi secara vertikal yang menghubungkan semua rantai blok, publik (L1 dan L2) atau privat (perusahaan), menyediakan umpan harga orakel terdesentralisasi yang dapat digunakan untuk kasus penggunaan onchain dan offchain. 
 

@@ -32,7 +32,7 @@
   "page-gas-attack-of-the-cryptokitties-text": "2017 年 11 月，广受欢迎的加密猫项目上线。其人气的迅速飙升导致了严重的网络拥堵和极高的 gas 费。加密猫带来的挑战加速了寻找以太坊扩容解决方案的紧迫性。",
   "page-gas-why-do-we-need-gas-header": "为什么我们需要 Gas？",
   "page-gas-why-do-we-need-gas-text": "Gas 是保持以太坊安全和处理交易的关键要素。Gas 在许多方面发挥着作用：",
-  "page-gas-benefits-1-description": "Gas 通过防止恶意行为者用欺诈活动淹没网络，使以太坊保持<a href=\"/glossary/#anti-sybil\">抗女巫攻击</a>的能力。",
+  "page-gas-benefits-1-description": "Gas 通过防止恶意参与者用欺诈活动淹没网络，使以太坊保持<a href=\"/glossary/#anti-sybil\">抗女巫攻击</a>能力。",
   "page-gas-benefits-2-description": "因为计算需要消耗 Gas，所以无论是意外还是恶意地用昂贵的交易向以太坊发送垃圾信息，在经济上都是不划算的。",
   "page-gas-benefits-3-description": "对任何时候可以执行的计算量设置硬性限制，可以防止以太坊不堪重负，从而有助于确保网络始终可用。",
   "page-gas-how-is-gas-calculated-header": "Gas 是如何计算的？",

@@ -58,18 +58,17 @@ Pour entrer dans la chaîne Plasma, Alice (l'utilisatrice) devra déposer des ET
 
 Sortir de la chaîne Plasma est plus complexe que d'y entrer pour plusieurs raisons. La principale est que, bien qu'Ethereum dispose d'informations sur l'état de la chaîne Plasma, il ne peut pas vérifier si ces informations sont vraies ou non. Un utilisateur malveillant pourrait faire une affirmation incorrecte (« J'ai 1000 ETH ») et s'en tirer en fournissant de fausses preuves pour étayer sa réclamation.
 
-Pour empêcher les retraits malveillants, une « période de contestation » est introduite. Pendant la période de contestation (généralement une semaine), n'importe qui peut contester une demande de retrait en utilisant une preuve de fraude. Si la contestation réussit, la demande de retrait est refusée.
+Pour empêcher les retraits malveillants, une « période de contestation » est introduite. Pendant la période de contestation (généralement une semaine), n'importe qui peut contester une demande de retrait en utilisant une preuve de fraude. Si la contestation réussit, la demande de retrait est alors refusée.
 
 Cependant, il est généralement vrai que les utilisateurs sont honnêtes et font des réclamations correctes concernant les fonds qu'ils possèdent. Dans ce scénario, Alice initiera une demande de retrait sur la chaîne racine (Ethereum) en soumettant une transaction au contrat Plasma.
 
-Elle doit également fournir une preuve de Merkle vérifiant qu'une transaction créant ses fonds sur la chaîne Plasma a été incluse dans un bloc. Cela est nécessaire pour les itérations de Plasma, telles que [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), qui utilisent un modèle de [sortie de transaction non dépensée (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
+Elle doit également fournir une preuve de Merkle vérifiant qu'une transaction créant ses fonds sur la chaîne Plasma a été incluse dans un bloc. Cela est nécessaire pour les itérations de Plasma, telles que Plasma MVP, qui utilisent un modèle [UTXO (Unspent Transaction Output)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-D'autres, comme [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), représentent les fonds sous forme de [jetons non fongibles](/developers/docs/standards/tokens/erc-721/) au lieu d'UTXO. Le retrait, dans ce cas, nécessite une preuve de propriété des jetons sur la chaîne Plasma. Cela se fait en soumettant les deux dernières transactions impliquant le jeton et en fournissant une preuve de Merkle vérifiant l'inclusion de ces transactions dans un bloc.
+D'autres, comme Plasma Cash, représentent les fonds sous forme de [jetons non fongibles](/developers/docs/standards/tokens/erc-721/) au lieu d'UTXO. Le retrait, dans ce cas, nécessite une preuve de propriété des jetons sur la chaîne Plasma. Cela se fait en soumettant les deux dernières transactions impliquant le jeton et en fournissant une preuve de Merkle vérifiant l'inclusion de ces transactions dans un bloc.
 
 L'utilisateur doit également ajouter une caution à la demande de retrait comme garantie d'un comportement honnête. Si un contestataire prouve que la demande de retrait d'Alice est invalide, sa caution subit une réduction, et une partie de celle-ci va au contestataire en guise de récompense.
 
 Si la période de contestation s'écoule sans que personne ne fournisse de preuve de fraude, la demande de retrait d'Alice est considérée comme valide, ce qui lui permet de récupérer ses dépôts du contrat Plasma sur Ethereum.
-
 ### Arbitrage des litiges {#dispute-arbitration}
 
 Comme toute chaîne de blocs, les chaînes Plasma ont besoin d'un mécanisme pour faire respecter l'intégrité des transactions au cas où les participants agiraient de manière malveillante (par exemple, une double dépense de fonds). À cette fin, les chaînes Plasma utilisent des preuves de fraude pour arbitrer les litiges concernant la validité des transitions d'état et pénaliser les mauvais comportements. Les preuves de fraude sont utilisées comme un mécanisme par lequel une chaîne enfant Plasma dépose une plainte auprès de sa chaîne parente ou de la chaîne racine.
@@ -165,16 +164,14 @@ Plusieurs projets fournissent des implémentations de Plasma que vous pouvez int
 
 - [Polygon](https://polygon.technology/) (anciennement Matic Network)
 
-## Complément d'information {#further-reading}
+## Lectures complémentaires {#further-reading}
 
-- [Apprendre Plasma](https://www.learnplasma.org/en/)
 - [Un petit rappel de ce que signifie la « sécurité partagée » et pourquoi elle est si importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Chaînes latérales vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Comprendre Plasma, Partie 1 : Les bases](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [La vie et la mort de Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
 _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette page et ajoutez-la !_
-
 ## Tutoriels : Chaînes Plasma sur Ethereum {#tutorials}
 
 - [Écrire un plasma spécifique à une application qui préserve la confidentialité](/developers/tutorials/app-plasma/) _– Construisez une application Plasma préservant la confidentialité en utilisant des preuves à divulgation nulle de connaissance et des composants hors chaîne._

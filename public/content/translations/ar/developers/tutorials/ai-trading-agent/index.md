@@ -584,21 +584,21 @@ uv run test-predictor.py
 النتيجة المتوقعة مشابهة لـ:
 
 ```
-التنبؤ لـ 2026-01-05T19:50: المتوقع 3138.93 USD، الفعلي 3218.92 USD، الخطأ 79.99 USD
-التنبؤ لـ 2026-01-06T19:56: المتوقع 3243.39 USD، الفعلي 3221.08 USD، الخطأ 22.31 USD
-التنبؤ لـ 2026-01-07T20:02: المتوقع 3223.24 USD، الفعلي 3146.89 USD، الخطأ 76.35 USD
-التنبؤ لـ 2026-01-08T20:11: المتوقع 3150.47 USD، الفعلي 3092.04 USD، الخطأ 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-التنبؤ لـ 2026-01-31T22:33: المتوقع 2637.73 USD، الفعلي 2417.77 USD، الخطأ 219.96 USD
-التنبؤ لـ 2026-02-01T22:41: المتوقع 2381.70 USD، الفعلي 2318.84 USD، الخطأ 62.86 USD
-التنبؤ لـ 2026-02-02T22:49: المتوقع 2234.91 USD، الفعلي 2349.28 USD، الخطأ 114.37 USD
-متوسط خطأ التنبؤ على مدار 29 تنبؤًا: 83.87103448275862068965517241 USD
-متوسط التغيير لكل توصية: 4.787931034482758620689655172 USD
-التباين القياسي للتغييرات: 104.42 USD
-الأيام المربحة: 51.72%
-الأيام الخاسرة: 48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 معظم كود الاختبار مطابق للوكيل، ولكن إليك الأجزاء الجديدة أو المعدلة.
@@ -766,19 +766,19 @@ uv run agent.py
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-السعر الحالي: 1843.16
-في 2026-02-06T23:07، السعر المتوقع: 1724.41 USD
-أرصدة الحساب قبل التداول:
-رصيد USDC: 927301.578272
-رصيد WETH: 500
-بيع، أتوقع أن ينخفض السعر بمقدار 118.75 USD
-تم إرسال معاملة الموافقة: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-تم تعدين معاملة الموافقة.
-تم إرسال معاملة البيع: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-تم تعدين معاملة البيع.
-أرصدة الحساب بعد التداول:
-رصيد USDC: 929143.797116
-رصيد WETH: 499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 لاستخدامه فعليًا، تحتاج إلى بعض التغييرات الطفيفة.

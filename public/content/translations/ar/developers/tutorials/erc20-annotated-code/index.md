@@ -203,7 +203,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` هي التعريفات المطلوبة لاستخدام [OpenGSN](https://www.opengsn.org/)، وهو نظام يسمح للمستخدمين الذين ليس لديهم إيثر باستخدام سلسلة الكتل. لاحظ أن هذا إصدار قديم، إذا كنت ترغب في التكامل مع OpenGSN [استخدم هذا البرنامج التعليمي](https://docs.opengsn.org/javascript-client/tutorial.html).
+- `GSN/Context.sol` هي التعريفات المطلوبة لاستخدام [OpenGSN](https://opengsn.org/)، وهو نظام يسمح للمستخدمين الذين ليس لديهم إيثر باستخدام سلسلة الكتل. لاحظ أن هذا إصدار قديم، إذا كنت ترغب في التكامل مع OpenGSN [استخدم هذا البرنامج التعليمي](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [مكتبة SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)، والتي تمنع تجاوز السعة الحسابي (overflows/underflows) لإصدارات Solidity **&lt;<span dir="ltr">0.8.0</span>**. في Solidity ≥<span dir="ltr">0.8.0</span>، تتراجع العمليات الحسابية تلقائيًا عند تجاوز السعة، مما يجعل SafeMath غير ضرورية. يستخدم هذا العقد SafeMath للتوافق مع الإصدارات السابقة من المترجم.
 
 &nbsp;

@@ -1,7 +1,7 @@
 ---
-title: O que são provas de conhecimento zero?
+title: "O que são provas de conhecimento zero?"
 metaTitle: Provas de conhecimento zero
-description: Uma introdução não técnica às provas de conhecimento zero para iniciantes.
+description: "Uma introdução não técnica às provas de conhecimento zero para iniciantes."
 lang: pt-br
 ---
 
@@ -58,8 +58,10 @@ As provas de conhecimento zero são particularmente úteis no contexto da [ident
       <p>
         Saiba mais sobre a NDI do Butão no <a href="/decentralized-identity/#national-and-government-id">estudo de caso de Identidade Descentralizada</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Prova de Humanidade {#proof-of-humanity}
@@ -235,5 +237,5 @@ O ZK-STARK é considerado imune à ameaça da computação quântica, pois depen
 - [ZK-STARKs — Crie Confiança Verificável, mesmo contra Computadores Quânticos](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Uma introdução aproximada de como os zk-SNARKs são possíveis](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Por que as Provas de Conhecimento Zero (ZKPs) são um Divisor de Águas para a Identidade Autossuficiente](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [EIP-7503 Explicada: Habilitando Transferências Privadas no Ethereum com Provas ZK](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [EIP-7503 Explicada: Habilitando Transferências Privadas no Ethereum com Provas ZK](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Jogo de Cartas ZK: jogo para aprender os fundamentos de ZK e casos de uso da vida real](https://github.com/ZK-card/zk-cards) - _ZK-Cards_

@@ -20,8 +20,7 @@ published: 2021-04-06
 ### Untuk Memulai {#to-get-started}
 
 Untuk memulai, pertama-tama kita harus mengimpor pustaka ethers.js ke dalam JavaScript kita
-Sertakan ethers.js(5.0)
-
+Sertakan ethers.js v5
 ### Menginstal {#install-ethersjs}
 
 ```shell

@@ -63,9 +63,9 @@ _注意：由於網路擁塞，這可能需要一段時間。_
 
 ### 第 5 步：檢查你的餘額 {#step-5-check-your-balance}
 
-為了再次確認 ETH 已存入你的錢包，讓我們使用 [Alchemy 的 composer 工具](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)發出 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 請求。這將返回我們錢包中的 ETH 數量。要了解更多資訊，請查看 [Alchemy 關於如何使用 composer 工具的簡短教學](https://youtu.be/r6sjRxBZJuU)。
+為了再次確認 ETH 已存入你的錢包，讓我們使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 請求。這將回傳我們錢包中的 ETH 數量。要了解更多資訊，請查看 [Alchemy 關於如何使用 composer 工具的簡短教學](https://youtu.be/r6sjRxBZJuU)。
 
-輸入你的梅塔馬斯克帳戶地址，然後點擊 **Send Request**。你將看到類似下方程式碼片段的回應。
+輸入你的梅塔馬斯克帳戶地址，然後點擊 **Send Request**。你將會看到類似下方程式碼片段的回應。
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
@@ -73,11 +73,10 @@ _注意：由於網路擁塞，這可能需要一段時間。_
 
 > _注意：此結果的單位是 wei，而不是 ETH。Wei 被用作以太幣的最小面額。_
 
-呼！我們的測試資金都在那裡了。
-
+呼！我們的假錢都在那裡。
 ### 第 6 步：初始化我們的專案 {#step-6-initialize-our-project}
 
-首先，我們需要為我們的專案建立一個資料夾。導覽至你的命令列並輸入以下內容。
+首先，我們需要為專案建立一個資料夾。導覽至你的命令列並輸入以下內容。
 
 ```
 mkdir hello-world
@@ -86,9 +85,9 @@ cd hello-world
 
 現在我們已經在專案資料夾中，我們將使用 `npm init` 來初始化專案。
 
-> 如果你尚未安裝 npm，請按照[這些指示安裝 Node.js 和 npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm)。
+> 如果你尚未安裝 npm，請按照 [Node.js 安裝指示](https://nodejs.org/en/download/)來安裝 Node.js 和 npm。
 
-就本教學而言，你如何回答初始化問題並不重要。以下是我們的做法以供參考：
+就本教學而言，你如何回答初始化問題並不重要。以下是我們的做法，供你參考：
 
 ```
 package name: (hello-world)
@@ -116,8 +115,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-批准 package.json，我們就可以開始了！
-
+核准 package.json，我們就可以開始了！
 ### 第 7 步：下載 Hardhat {#step-7-download-hardhat}
 
 Hardhat 是一個用於編譯、部署、測試和除錯以太坊軟體的開發環境。它幫助開發者在部署到即時鏈之前，在本地端建立智能合約和去中心化應用程式 (dapp)。
@@ -225,7 +223,7 @@ contract HelloWorld {
 
 從你的錢包發送的每筆交易都需要使用你獨特的私密金鑰進行簽章。為了向我們的程式提供此權限，我們可以安全地將我們的私密金鑰儲存在環境檔案中。我們也將在這裡儲存 Alchemy 的 API 金鑰。
 
-> 要了解有關發送交易的更多資訊，請查看[這篇關於使用 Web3 發送交易的教學](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project)。
+> 要了解有關發送交易的更多資訊，請查看[這篇關於使用 Web3 發送交易的教學](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
 
 首先，在你的專案目錄中安裝 dotenv 套件：
 
@@ -255,7 +253,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 ### 第 12 步：安裝 Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js 是一個函式庫，它透過將[標準 JSON-RPC 方法](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc)包裝成更使用者友善的方法，使與以太坊互動和發出請求變得更加容易。
+Ethers.js 是一個函式庫，它透過將[標準 JSON-RPC 方法](/developers/docs/apis/json-rpc/)包裝成更使用者友善的方法，使與以太坊互動和發出請求變得更加容易。
 
 Hardhat 允許我們整合[外掛程式](https://hardhat.org/plugins/)以獲得額外的工具和擴充功能。我們將利用 [Ethers 外掛程式](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)來進行合約部署。
 
@@ -314,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.get合約Factory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // 開始部署，回傳一個解析為合約物件的 promise
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -373,7 +371,7 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 ![](./hello-world-explorer.png)
 
-在這裡，你將看到當我們呼叫 `.deploy()` 函式時，Hardhat/Ethers 在底層為我們執行的一些 JSON-RPC 方法。這裡有兩個重要的方法：[`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction)，這是將我們的合約寫入 Goerli 鏈的請求；以及 [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash)，這是根據雜湊值讀取有關我們交易資訊的請求。要了解有關發送交易的更多資訊，請查看[我們關於使用 Web3 發送交易的教學](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
+在這裡，你將看到當我們呼叫 `.deploy()` 函式時，Hardhat/Ethers 在底層為我們執行的一些 JSON-RPC 方法。這裡有兩個重要的方法：[`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)，這是將我們的合約寫入 Goerli 鏈的請求；以及 [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)，這是根據雜湊值讀取有關我們交易資訊的請求。要了解有關發送交易的更多資訊，請查看[我們關於使用 Web3 發送交易的教學](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
 
 ## 第 2 部分：與你的智能合約互動 {#part-2-interact-with-your-smart-contract}
 
@@ -486,7 +484,7 @@ main()
 在終端機中使用 `npx hardhat run scripts/interact.js` 執行檔案後，我們應該會看到這個回應：
 
 ```
-訊息是：Hello world!
+The message is: Hello world!
 ```
 
 恭喜！你剛剛成功從以太坊區塊鏈讀取了智能合約資料，做得好！
@@ -566,12 +564,12 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-訊息是：Hello World!
-正在更新訊息...
-新訊息是：This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
-在執行該腳本時，你可能會注意到 `Updating the message...` 步驟需要載入一段時間，然後才會載入新訊息。這是因為開採過程的緣故；如果你對在交易開採期間追蹤交易感到好奇，請造訪 [Alchemy 記憶體池 (mempool)](https://dashboard.alchemyapi.io/mempool) 來查看交易狀態。如果交易被丟棄，檢查 [Goerli Etherscan](https://goerli.etherscan.io) 並搜尋你的交易雜湊也會很有幫助。
+在執行該腳本時，你可能會注意到 `Updating the message...` 步驟需要載入一段時間，然後才會載入新訊息。這是因為開採過程的緣故；如果你對在交易開採期間追蹤交易感到好奇，請造訪 [Alchemy 記憶體池 (mempool)](https://dashboard.alchemy.com/mempool) 來查看交易狀態。如果交易被丟棄，檢查 [Goerli Etherscan](https://goerli.etherscan.io) 並搜尋你的交易雜湊也會很有幫助。
 
 ## 第三部分：將你的智能合約發佈到 Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -679,7 +677,7 @@ https://goerli.etherscan.io/address/<contract-address>#contracts
 在本教學結束時，您將了解如何：
 
 - 將梅塔馬斯克 (MetaMask) 錢包連接到您的去中心化應用程式 (dapp)
-- 使用 [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API 從您的智能合約讀取資料
+- 使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API 從您的智能合約讀取資料
 - 使用梅塔馬斯克簽署以太坊交易
 
 對於這個 dapp，我們將使用 [React](https://react.dev/) 作為我們的前端框架；然而，需要注意的是，我們不會花太多時間來解析它的基礎知識，因為我們將主要專注於為我們的專案帶來 Web3 功能。
@@ -900,33 +898,33 @@ export const updateMessage = async (message) => {}
 
 這聽起來可能有很多步驟，但別擔心！我們將逐步引導您完成每一個步驟！ :\)
 
-#### 建立到以太坊鏈的 API 連線 {#establish-an-api-connection-to-the-ethereum-chain}
+#### 建立與以太坊鏈的 API 連線 {#establish-an-api-connection-to-the-ethereum-chain}
 
-還記得在本教學的第 2 部分中，我們如何使用我們的 [Alchemy Web3 金鑰從我們的智能合約讀取](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)嗎？您還需要在您的 dapp 中使用 Alchemy Web3 金鑰才能從鏈上讀取。
+還記得在本教學的第 2 部分中，我們如何使用 Alchemy Web3 金鑰從智能合約中讀取資料嗎？您在去中心化應用程式 (dapp) 中也需要一個 Alchemy Web3 金鑰才能從鏈上讀取資料。
 
-如果您還沒有它，請先導覽至您的 `starter-files` 根目錄並在您的終端機中執行以下命令來安裝 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)：
+如果您還沒有安裝，請先導覽至 `starter-files` 的根目錄，並在終端機中執行以下指令來安裝 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)：
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) 是 [Web3.js](https://docs.web3js.org/) 的包裝器，提供增強的 API 方法和其他關鍵優勢，讓您作為 Web3 開發人員的生活更加輕鬆。它的設計旨在需要最少的設定，因此您可以立即開始在您的應用程式中使用它！
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) 是 [Web3.js](https://docs.web3js.org/) 的包裝器，提供增強的 API 方法和其他重要優勢，讓您作為 Web3 開發者的生活更加輕鬆。它的設計只需要最少的設定，因此您可以立即開始在應用程式中使用它！
 
-然後，在您的專案目錄中安裝 [dotenv](https://www.npmjs.com/package/dotenv) 套件，這樣我們在獲取 API 金鑰後就有一個安全的地方來儲存它。
+接著，在您的專案目錄中安裝 [dotenv](https://www.npmjs.com/package/dotenv) 套件，這樣我們在取得 API 金鑰後，就有一個安全的地方來儲存它。
 
 ```text
 npm install dotenv --save
 ```
 
-對於我們的 dapp，**我們將使用我們的 Websockets API 金鑰**而不是我們的 HTTP API 金鑰，因為它將允許我們設定一個監聽器，用於偵測儲存在智能合約中的訊息何時發生變化。
+對於我們的 dapp，**我們將使用 Websockets API 金鑰**而不是 HTTP API 金鑰，因為這將允許我們設定一個監聽器，用來偵測儲存在智能合約中的訊息何時發生變化。
 
-一旦您有了 API 金鑰，請在您的根目錄中建立一個 `.env` 檔案，並將您的 Alchemy Websockets URL 新增到其中。之後，您的 `.env` 檔案應該如下所示：
+取得 API 金鑰後，在您的根目錄中建立一個 `.env` 檔案，並將您的 Alchemy Websockets URL 新增到其中。之後，您的 `.env` 檔案應該會像這樣：
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<金鑰>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-現在，我們準備好在我們的 dapp 中設定我們的 Alchemy Web3 端點了！讓我們回到巢狀在 `util` 資料夾內的 `interact.js`，並在檔案頂部新增以下程式碼：
+現在，我們準備好在我們的 dapp 中設定 Alchemy Web3 端點了！讓我們回到位於 `util` 資料夾內的 `interact.js`，並在檔案頂部加入以下程式碼：
 
 ```javascript
 // interact.js
@@ -939,10 +937,9 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-在上面，我們首先從我們的 `.env` 檔案匯入 Alchemy 金鑰，然後將我們的 `alchemyKey` 傳遞給 `createAlchemyWeb3` 以建立我們的 Alchemy Web3 端點。
+在上面的程式碼中，我們先從 `.env` 檔案匯入 Alchemy 金鑰，然後將我們的 `alchemyKey` 傳遞給 `createAlchemyWeb3` 以建立我們的 Alchemy Web3 端點。
 
-準備好這個端點後，是時候載入我們的智能合約了！
-
+端點準備就緒後，是時候載入我們的智能合約了！
 #### 載入您的 Hello World 智能合約 {#loading-your-hello-world-smart-contract}
 
 要載入您的 Hello World 智能合約，您需要它的合約地址和 ABI，如果您完成了[本教學的第 3 部分](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)，這兩者都可以在 Etherscan 上找到。
@@ -1034,7 +1031,7 @@ useEffect(async () => {
 
 #### 實作 `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-如果您回想一下我們在[本教學系列第 1 部分](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract)中編寫的 `HelloWorld.sol` 檔案，您會記得有一個名為 `UpdatedMessages` 的智能合約事件，它在我們智能合約的 `update` 函式被呼叫後發出（見第 9 行和第 27 行）：
+如果您回想一下我們在[本教學系列第 1 部分](#step-10-write-our-contract)中編寫的 `HelloWorld.sol` 檔案，您會記得有一個名為 `UpdatedMessages` 的智能合約事件，它在我們智能合約的 `update` 函式被呼叫後發出（見第 9 行和第 27 行）：
 
 ```javascript
 // HelloWorld.sol
@@ -1129,18 +1126,17 @@ useEffect(async () => {
 
 要在以太坊區塊鏈上簽署交易，我們需要一些假的 ETH。要取得 ETH，您可以前往 [FaucETH](https://fauceth.komputing.org) 並輸入您的 Goerli 帳戶地址，點擊「Request funds」，然後在下拉選單中選擇「Ethereum Testnet Goerli」，最後再次點擊「Request funds」按鈕。不久之後，您應該會在您的梅塔馬斯克帳戶中看到 ETH！
 
-#### 檢查您的餘額 {#check-your-balance}
+#### 檢查你的餘額 {#check-your-balance}
 
-為了再次確認我們的餘額在那裡，讓我們使用 [Alchemy 的 composer 工具](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)發出一個 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 請求。這將傳回我們錢包中的 ETH 數量。在您輸入您的梅塔馬斯克帳戶地址並點擊「Send Request」後，您應該會看到類似這樣的響應：
+為了再次確認我們的餘額，讓我們使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 請求。這將回傳我們錢包中的 ETH 數量。在輸入你的梅塔馬斯克帳戶地址並點擊「Send Request」後，你應該會看到類似這樣的回應：
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**注意：** 此結果的單位是 wei 而不是 ETH。Wei 被用作以太幣的最小面額。從 wei 到 ETH 的轉換是：1 ETH = 10¹⁸ wei。因此，如果我們將 0xde0b6b3a7640000 轉換為十進位，我們會得到 1\*10¹⁸，這等於 1 ETH。
+**注意：** 此結果的單位是 wei，而不是 ETH。Wei 是以太幣的最小面額單位。從 wei 到 ETH 的轉換公式為：1 ETH = 10¹⁸ wei。因此，如果我們將 0xde0b6b3a7640000 轉換為十進位，我們會得到 1\*10¹⁸，這等於 1 ETH。
 
 呼！我們的假錢都在那裡了！ 🤑
-
 ### 第 5 步：將梅塔馬斯克連接到您的 UI {#step-5-connect-metamask-to-your-ui}
 
 現在我們的梅塔馬斯克錢包已經設定好了，讓我們將我們的 dapp 連接到它！
@@ -1539,7 +1535,7 @@ const onUpdatePressed = async () => {
 哇，您已經到了教學的最後！總結一下，您學習了如何：
 
 - 將梅塔馬斯克錢包連接到您的 dapp 專案
-- 使用 [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API 從您的智能合約讀取資料
+- 使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) API 從您的智能合約讀取資料
 - 使用梅塔馬斯克簽署以太坊交易
 
 現在您已具備充分的條件，可以應用本教學中的技能來建立您自己的自訂 dapp 專案！一如既往，如果您有任何問題，請隨時在 [Alchemy Discord](https://discord.gg/gWuC7zB) 中與我們聯絡以尋求幫助。 🧙‍♂️

@@ -84,10 +84,7 @@ Existem também alguns casos especiais que exigem tratamento específico, como o
 
 ### Desserialização {#deserialization}
 
-Para desserializar esse objeto, é necessário o <b>esquema</b> (schema). O esquema define o layout preciso dos dados serializados para que cada elemento específico possa ser desserializado de um blob de bytes em algum objeto significativo, com os elementos tendo o tipo, valor, tamanho e posição corretos. É o esquema que informa ao desserializador quais valores são valores reais e quais são deslocamentos. Todos os nomes de campos desaparecem quando um objeto é serializado, mas são reinstanciados na desserialização de acordo com o esquema.
-
-Consulte [ssz.dev](https://www.ssz.dev/overview) para obter uma explicação interativa sobre isso.
-
+Desserializar este objeto exige o <b>esquema</b>. O esquema define o layout preciso dos dados serializados para que cada elemento específico possa ser desserializado de um blob de bytes em algum objeto significativo com os elementos tendo o tipo, valor, tamanho e posição corretos. É o esquema que diz ao desserializador quais valores são valores reais e quais são deslocamentos. Todos os nomes de campos desaparecem quando um objeto é serializado, mas são reinstanciados na desserialização de acordo com o esquema.
 ## Merkleização {#merkleization}
 
 Esse objeto serializado em SSZ pode então ser merkleizado - ou seja, transformado em uma representação de árvore de Merkle dos mesmos dados. Primeiro, o número de pedaços (chunks) de 32 bytes no objeto serializado é determinado. Essas são as "folhas" da árvore. O número total de folhas deve ser uma potência de 2 para que a geração de hash das folhas em conjunto produza, por fim, uma única raiz de árvore de hash (hash-tree-root). Se esse não for naturalmente o caso, folhas adicionais contendo 32 bytes de zeros são adicionadas. Em forma de diagrama:
@@ -140,8 +137,7 @@ O hash de (8,9) deve ser igual ao hash (4), que faz hash com 5 para produzir 2, 
 
 ## Leitura adicional {#further-reading}
 
-- [Atualizando o Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
-- [Atualizando o Ethereum: Merkleização](https://eth2book.info/altair/part2/building_blocks/merkleization)
-- [Implementações do SSZ](https://github.com/ethereum/consensus-specs/issues/2138)
+- [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
+- [Upgrading Ethereum: Merkleização](https://eth2book.info/altair/part2/building_blocks/merkleization)
+- [Implementações de SSZ](https://github.com/ethereum/consensus-specs/issues/2138)
 - [Calculadora SSZ](https://simpleserialize.com/)
-- [SSZ.dev](https://www.ssz.dev/)

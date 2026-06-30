@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "イーサリアムエコシステムからのビルダー向けリソース、ツール、開発情報。",
-  "page-latest-title": "ビルダーアップデート",
-  "page-latest-subtitle": "イーサリアムのビルダーエコシステム全体における最新のリソース、ツール、開発情報に関する専門家の視点を共有するスペース。",
+  "page-latest-meta-description": "イーサリアムコミュニティからの最新のブログ記事、ニュース、アップデートに加え、ビルダーエコシステム全体からの専門家の視点をお届けします。",
+  "page-latest-title": "イーサリアムの最新アップデート",
+  "page-latest-subtitle": "コミュニティからの最新のブログ記事、ニュース、アップデートに加え、イーサリアムのビルダーエコシステム全体における開発に関する専門家の視点をお届けします。",
   "page-latest-no-posts": "記事が見つかりません。",
   "page-latest-read-more": "続きを読む",
   "page-latest-minute-read": "読了時間: {minutes}分",
-  "page-latest-team-attribution": "EF ビルダーグロース"
+  "page-latest-team-attribution": "EF ビルダーグロース",
+  "page-latest-cta-submit-resource": "リソースを提出する",
+  "page-latest-cta-propose-article": "記事を提案する",
+  "page-latest-highlights-heading": "ハイライト",
+  "page-latest-articles-heading": "イーサリアムの最新記事",
+  "page-latest-sources-heading": "これらのウェブサイトで続きを読む",
+  "page-latest-see-more": "さらに表示 ({count})",
+  "page-latest-sort-label": "記事を並べ替える",
+  "page-latest-sort-newest": "新しい順",
+  "page-latest-sort-oldest": "古い順",
+  "page-latest-sort-az": "A–Z順",
+  "page-latest-i18n-disclaimer": "一部の記事は元の言語（英語）で表示されています。",
+  "page-latest-suggest-heading": "リソースを提案する",
+  "page-latest-suggest-description": "ここに掲載すべきイーサリアムのニュースレターや調査出版物をご存知ですか？または、ビルダー向けの記事のトピックをお持ちですか？Issueを作成してリソースを提出してください。"
 }

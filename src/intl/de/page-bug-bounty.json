@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "Das Ethereum-Bug-Bounty-Programm berücksichtigt bei der Festlegung von Belohnungen eine Reihe von Variablen. Die Bestimmung der Berechtigung, der Punktzahl und aller Bedingungen im Zusammenhang mit einer Belohnung liegt im alleinigen und endgültigen Ermessen des Bug-Bounty-Gremiums der Ethereum Foundation.",
   "page-upgrades-bug-bounty-leaderboard": "Vollständige Bestenlisten ansehen",
   "page-upgrades-bug-bounty-leaderboard-list": "Bug-Bounty-Bestenliste",
+  "page-upgrades-bug-bounty-leaderboard-position": "Auf Platz {rank} mit {score, plural, one {# Punkt} other {# Punkten}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(Siehe GitHub-Profil)",
   "page-upgrades-bug-bounty-leaderboard-points": "Punkte",
   "page-upgrades-bug-bounty-ledger-desc": "Die Ethereum-Spezifikationen detaillieren die Entwurfsprinzipien für die Ausführungsschicht und die Konsensschicht.",
   "page-upgrades-bug-bounty-ledger-title": "Spezifikations-Bugs",

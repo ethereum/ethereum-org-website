@@ -673,7 +673,7 @@ const Token = () => {
 
 ```js
          <br /><br />
-         <input type="text" placeholder="یا موجودہ پراکسی پتہ درج کریں" value={newProxyAddr} onChange={proxyAddressChange} />
+         <input type="text" placeholder="Or enter existing proxy address" value={newProxyAddr} onChange={proxyAddressChange} />
          <br /><br />
          <button
             onClick={() => setProxyAddr(newProxyAddr)}

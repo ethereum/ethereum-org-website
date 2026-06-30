@@ -580,21 +580,21 @@ uv run test-predictor.py
 Hasil yang diharapkan mirip dengan:
 
 ```
-Prediksi untuk 2026-01-05T19:50: diprediksi 3138.93 USD, nyata 3218.92 USD, kesalahan 79.99 USD
-Prediksi untuk 2026-01-06T19:56: diprediksi 3243.39 USD, nyata 3221.08 USD, kesalahan 22.31 USD
-Prediksi untuk 2026-01-07T20:02: diprediksi 3223.24 USD, nyata 3146.89 USD, kesalahan 76.35 USD
-Prediksi untuk 2026-01-08T20:11: diprediksi 3150.47 USD, nyata 3092.04 USD, kesalahan 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-Prediksi untuk 2026-01-31T22:33: diprediksi 2637.73 USD, nyata 2417.77 USD, kesalahan 219.96 USD
-Prediksi untuk 2026-02-01T22:41: diprediksi 2381.70 USD, nyata 2318.84 USD, kesalahan 62.86 USD
-Prediksi untuk 2026-02-02T22:49: diprediksi 2234.91 USD, nyata 2349.28 USD, kesalahan 114.37 USD
-Rata-rata kesalahan prediksi selama 29 prediksi: 83.87103448275862068965517241 USD
-Rata-rata perubahan per rekomendasi: 4.787931034482758620689655172 USD
-Varians standar perubahan: 104.42 USD
-Hari yang menguntungkan: 51.72%
-Hari yang merugikan: 48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 Sebagian besar penguji identik dengan agen, tetapi berikut adalah bagian yang baru atau dimodifikasi.
@@ -762,19 +762,19 @@ Outputnya akan terlihat mirip dengan:
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-Harga saat ini: 1843.16
-Pada 2026-02-06T23:07, harga yang diharapkan: 1724.41 USD
-Saldo akun sebelum perdagangan:
-Saldo USDC: 927301.578272
-Saldo WETH: 500
-Jual, saya memperkirakan harga akan turun sebesar 118.75 USD
-Transaksi menyetujui dikirim: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-Transaksi menyetujui ditambang.
-Transaksi jual dikirim: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-Transaksi jual ditambang.
-Saldo akun setelah perdagangan:
-Saldo USDC: 929143.797116
-Saldo WETH: 499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 Untuk benar-benar menggunakannya, Anda memerlukan beberapa perubahan kecil.

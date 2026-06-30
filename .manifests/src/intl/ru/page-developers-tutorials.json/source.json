@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-developers-tutorials.json",
-  "generatedAt": "2026-06-16T15:32:48.881Z",
-  "rootHash": "45190abb6a6b",
+  "generatedAt": "2026-06-29T23:48:14.865Z",
+  "rootHash": "fd027f3ae511",
   "tree": {
-    "contentHash": "f2331f3a97cb",
-    "anchorHash": "a592926d3633",
+    "contentHash": "5218ea974a7b",
+    "anchorHash": "44c78b62089d",
     "children": {
       "comp-tutorial-metadata-minute-read": {
         "contentHash": "6b28e739783c",
@@ -144,29 +144,6 @@
       "page-tutorial-filtering-by": {
         "contentHash": "4879962894bf",
         "anchorHash": "e3b0c44298fc"
-      },
-      "page-tutorial-more-tags": {
-        "contentHash": "9b45ef9f23ee",
-        "anchorHash": "f13222720333",
-        "children": {
-          "prose:1": {
-            "contentHash": "a318c24216de",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "icu:0": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "9307b2fa1323"
-          },
-          "prose:2": {
-            "contentHash": "187897ce0afc",
-            "anchorHash": "e3b0c44298fc"
-          }
-        },
-        "childrenOrder": [
-          "prose:1",
-          "icu:0",
-          "prose:2"
-        ]
       }
     },
     "childrenOrder": [
@@ -194,9 +171,8 @@
       "page-tutorial-all",
       "page-tutorial-topics",
       "page-tutorial-search-placeholder",
-      "page-tutorial-filtering-by",
-      "page-tutorial-more-tags"
+      "page-tutorial-filtering-by"
     ]
   },
-  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

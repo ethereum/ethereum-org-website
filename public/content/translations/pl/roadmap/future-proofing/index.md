@@ -36,25 +36,24 @@ Nie. Obecnie żaden komputer kwantowy nie jest w stanie złamać kryptografii Et
 
 </ExpandableCard>
 
-### Co jest robione? {#what-is-being-done}
+### Jakie działania są podejmowane? {#what-is-being-done}
 
-Ethereum jest obecnie najbardziej proaktywnym obrońcą przed zagrożeniami kwantowymi w ekosystemie blockchain. Fundacja Ethereum utworzyła dedykowany **zespół ds. bezpieczeństwa postkwantowego (Post-Quantum Security team)** w styczniu 2026 r., a aktywne prace obejmują wiele zespołów klienckich i grup badawczych. Prace zespołu postkwantowego Fundacji Ethereum można śledzić publicznie na stronie [pq.ethereum.org](https://pq.ethereum.org).
+Ethereum jest obecnie najbardziej proaktywnym obrońcą przed zagrożeniami kwantowymi w ekosystemie blockchain. Fundacja Ethereum utworzyła dedykowany **zespół ds. bezpieczeństwa postkwantowego** w styczniu 2026 r., a aktywne prace obejmują wiele zespołów klienckich i grup badawczych. Prace zespołu postkwantowego EF można śledzić publicznie na stronie [pq.ethereum.org](https://pq.ethereum.org).
 
-Aktywne prace obejmują:
+Aktywne działania obejmują:
 
-- **Podpisy oparte na hashu (leanXMSS)**: Bezpieczny kwantowo zamiennik dla podpisów walidatorów, zbudowany na funkcjach hashujących, których komputery kwantowe nie potrafią skutecznie złamać.
-- **Minimalna maszyna zkVM (leanVM)**: Ponieważ podpisy bezpieczne kwantowo są większe niż obecnie używane, leanXMSS jest połączony z minimalną maszyną zkVM (leanVM). Ten silnik wydajnie agreguje podpisy bezpieczne kwantowo, kompresując dane 250-krotnie, dzięki czemu sieć pozostaje szybka po przejściu.
-- **Cotygodniowe testy interoperacyjności**: Ponad 10 zespołów klienckich uczestniczy w regularnych postkwantowych sieciach deweloperskich (devnetach).
-- **Dostępność danych:** Aktualizacja podstawowej kryptografii używanej do obsługi dużych ilości danych sieciowych zapewni, że Ethereum pozostanie szybkie i przystępne cenowo w użyciu bez ryzyka przyszłych luk kwantowych.
-- **Nagroda Poseidon**: Nagroda badawcza w wysokości 1 miliona dolarów, której celem jest ulepszenie prymitywów kryptograficznych opartych na hashu.
-- **Standardy NIST**: Amerykański Narodowy Instytut Standaryzacji i Technologii (NIST) sfinalizował trzy standardy kryptografii postkwantowej w sierpniu 2024 r. (ML-KEM, ML-DSA, SLH-DSA). Prace nad Ethereum opierają się na tych fundamentach.
+- **Podpisy oparte na hashach (leanXMSS)**: Bezpieczny kwantowo zamiennik dla podpisów walidatorów, zbudowany na funkcjach hashujących, których komputery kwantowe nie są w stanie skutecznie złamać.
+- **Minimalna zkVM (leanVM)**: Ponieważ podpisy bezpieczne kwantowo są większe niż obecnie używane podpisy, leanXMSS jest połączony z minimalną maszyną wirtualną zkVM (leanVM). Ten silnik wydajnie agreguje podpisy bezpieczne kwantowo, kompresując dane 250-krotnie, dzięki czemu sieć pozostaje szybka po przejściu.
+- **Cotygodniowe testy interoperacyjności**: Ponad 10 zespołów klienckich uczestniczy w regularnych postkwantowych devnetach.
+- **Dostępność danych:** Aktualizacja podstawowej kryptografii używanej do obsługi dużych ilości danych sieciowych zapewni, że Ethereum pozostanie szybkie i tanie w użyciu bez ryzyka przyszłych luk kwantowych.
+- **Poseidon Prize**: Nagroda badawcza w wysokości 1 miliona dolarów, której celem jest ulepszenie prymitywów kryptograficznych opartych na hashach.
+- **Standardy NIST**: Amerykański Narodowy Instytut Standardów i Technologii (NIST) sfinalizował trzy standardy kryptografii postkwantowej w sierpniu 2024 r. (ML-KEM, ML-DSA, SLH-DSA). Prace nad Ethereum opierają się na tych fundamentach.
 
-Kluczową częścią strategii przejścia jest **EIP-8141**, który wprowadza natywną [abstrakcję konta](/roadmap/account-abstraction/). Pozwala to poszczególnym kontom na wybór własnej weryfikacji podpisu, co oznacza, że użytkownicy mogliby przejść na podpisy bezpieczne kwantowo **bez czekania na jedną migrację obejmującą cały protokół**. EIP-8141 jest rozważany do włączenia w twarde rozwidlenie Hegotá (planowane na drugą połowę 2026 r.).
+Kluczową częścią strategii przejścia jest **EIP-8141**, który wprowadza natywną [abstrakcję konta](/roadmap/account-abstraction/). Pozwala to poszczególnym kontom na wybór własnej weryfikacji podpisu, co oznacza, że użytkownicy mogliby przejść na podpisy bezpieczne kwantowo **bez czekania na jedną migrację w całym protokole**. EIP-8141 jest rozważany do włączenia w twarde rozwidlenie Hegotá (planowane na drugą połowę 2026 r.).
 
-Fundacja Ethereum nakreśliła ustrukturyzowane kamienie milowe rozwidleń, których celem jest ukończenie podstawowej infrastruktury postkwantowej do około 2029 roku. Są to cele planistyczne, a nie gwarantowane zobowiązania.
+Fundacja Ethereum nakreśliła ustrukturyzowane kamienie milowe rozwidleń, których celem jest ukończenie podstawowej infrastruktury postkwantowej do około 2029 r. Są to cele planistyczne, a nie gwarantowane zobowiązania.
 
-[Przeczytaj nasz szczegółowy przewodnik po kryptografii postkwantowej w Ethereum](/roadmap/future-proofing/quantum-resistance/)
-
+<ButtonLink variant="outline" href="/roadmap/future-proofing/quantum-resistance/">Więcej o odporności na komputery kwantowe</ButtonLink>
 ## Prostsze i bardziej wydajne Ethereum {#simpler-more-efficient-ethereum}
 
 Złożoność stwarza okazje do powstawania błędów i luk w zabezpieczeniach. Część mapy drogowej skupia się na **uproszczeniu Ethereum i usunięciu długu technicznego**, aby protokół był łatwiejszy w utrzymaniu, audytowaniu i analizowaniu.

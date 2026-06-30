@@ -1887,7 +1887,7 @@ web3.sha3("Print(uint256)")
 
 ## संबंधित विषय {#related-topics}
 
-- [जेसन-आरपीसी विनिर्देश](http://www.jsonrpc.org/specification)
+- [जेसन-आरपीसी विनिर्देश](https://www.jsonrpc.org/specification)
 - [नोड्स और क्लाइंट्स](/developers/docs/nodes-and-clients/)
 - [JavaScript API](/developers/docs/apis/javascript/)
 - [बैकएंड API](/developers/docs/apis/backend/)

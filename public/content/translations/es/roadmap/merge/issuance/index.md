@@ -1,6 +1,6 @@
 ---
-title: Cómo La Fusión impactó el suministro de ETH
-description: Desglose de cómo La Fusión impactó el suministro de ETH
+title: "Cómo La Fusión impactó el suministro de ETH"
+description: "Desglose de cómo La Fusión impactó el suministro de ETH"
 lang: es
 ---
 
@@ -14,7 +14,7 @@ La **emisión** de ETH es el proceso de crear ETH que no existía previamente. L
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Resumen de la emisión de ETH">
 
 - Antes de la transición a la prueba de participación, se emitían aproximadamente 13.000 ETH/día a los mineros.
 - Se emiten aproximadamente 1.700 ETH/día a quienes hacen staking, basándose en un total de alrededor de 14 millones de ETH en participación.
@@ -38,18 +38,18 @@ Los validadores en la cadena de balizas son recompensados con ETH por dar fe del
 
 ### Desglose de la emisión antes de La Fusión {#pre-merge-issuance-breakdown}
 
-Suministro total de ETH: **~120.520.000 ETH** (en el momento de La Fusión en septiembre de 2022)
+Suministro total de ETH: **\~120.520.000 ETH** (en el momento de La Fusión en septiembre de 2022)
 
 **Emisión en la capa de ejecución:**
 
-- Se estimaba en 2,08 ETH cada 13,3 segundos\*: **~4.930.000** ETH emitidos en un año
+- Se estimaba en 2,08 ETH cada 13,3 segundos\*: **\~4.930.000** ETH emitidos en un año
 - Resultaba en una tasa de inflación de **aproximadamente 4,09 %** (4,93 M por año / 120,5 M en total)
 - \*Esto incluye los 2 ETH por bloque canónico, más un promedio de 0,08 ETH a lo largo del tiempo de los bloques ommer. También utiliza 13,3 segundos, el objetivo de tiempo de bloque base sin ninguna influencia de una [bomba de dificultad](/glossary/#difficulty-bomb). ([Ver fuente](https://bitinfocharts.com/ethereum/))
 
 **Emisión en la capa de consenso:**
 
 - Utilizando 14.000.000 de ETH en participación total, la tasa de emisión de ETH es de aproximadamente 1.700 ETH/día ([Ver fuente](https://ultrasound.money/))
-- Resulta en **~620.500** ETH emitidos en un año
+- Resulta en **\~620.500** ETH emitidos en un año
 - Resultaba en una tasa de inflación de **aproximadamente 0,52 %** (620,5 K por año / 119,3 M en total)
 
 <Alert variant="update">
@@ -57,9 +57,9 @@ Suministro total de ETH: **~120.520.000 ETH** (en el momento de La Fusión en se
 <AlertDescription>
 **Tasa de emisión anualizada total (antes de La Fusión): ~4,61 %** (4,09 % + 0,52 %)
 
-**~88,7 %** de la emisión se destinaba a los mineros en la capa de ejecución (4,09 / 4,61 * 100)
+**\~88,7 %** de la emisión se destinaba a los mineros en la capa de ejecución (4,09 / 4,61 * 100)
 
-**~11,3 %** se emitía a quienes hacían staking en la capa de consenso (0,52 / 4,61 * 100)
+**\~11,3 %** se emitía a quienes hacían staking en la capa de consenso (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -84,16 +84,16 @@ A medida que más validadores se retiran, el número máximo de validadores que 
 
 ### Desglose de la inflación después de La Fusión {#post-merge-inflation-breakdown}
 
-- [Suministro total de ETH](/eth/supply/): **~120.520.000 ETH** (en el momento de La Fusión en septiembre de 2022)
+- [Suministro total de ETH](/eth/supply/): **\~120.520.000 ETH** (en el momento de La Fusión en septiembre de 2022)
 - Emisión en la capa de ejecución: **0**
-- Emisión en la capa de consenso: Igual que arriba, **~0,52 %** de tasa de emisión anualizada (con 14 millones de ETH en participación total)
+- Emisión en la capa de consenso: Igual que arriba, **\~0,52 %** de tasa de emisión anualizada (con 14 millones de ETH en participación total)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Tasa de emisión anualizada total: **~0,52 %**
+Tasa de emisión anualizada total: **\~0,52 %**
 
-Reducción neta en la emisión anual de ETH: **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % * 100)
+Reducción neta en la emisión anual de ETH: **\~88,7 %** ((4,61 % - 0,52 %) / 4,61 % * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -1,6 +1,6 @@
 ---
 title: Aplicativos da Ethereum
-metaTitle: Aplicativos da Ethereum | Aplicativos Descentralizados na Ethereum
+metaTitle: Aplicativos da Ethereum | Aplicativos descentralizados na Ethereum
 description: "Os aplicativos na Ethereum são gratuitos, globais e usam uma blockchain pública em vez de servidores de empresas privadas. Isso significa que você pode usar a mesma conta em todos os projetos e manter sua privacidade."
 lang: pt-br
 template: use-cases
@@ -19,12 +19,12 @@ Uma vez que um aplicativo é publicado na blockchain da Ethereum, ele se torna i
 
 ## O que é um dapp? {#what-is-a-dapp}
 
-Os aplicativos da Ethereum têm sua lógica executada na blockchain da Ethereum em vez de em servidores centralizados. É por isso que eles costumam ser chamados de aplicativos descentralizados (dapps) para abreviar.
+Os aplicativos da Ethereum têm sua lógica executada na blockchain da Ethereum em vez de em servidores centralizados. É por isso que eles costumam ser chamados de aplicativos descentralizados (dapps).
 
 <Grid>
-  <Card title="Mais privado" emoji=":detective:" description="Você só precisa de uma carteira Ethereum para usar qualquer dapp. Seus dados pessoais não são necessários. Esta é a internet como sempre deveria ter sido."/>
-  <Card title="Globalmente acessível" emoji="🌍" description="Os dapps não são regidos pelas regras de regiões e lojas de aplicativos. Seu acesso depende de ter uma conexão com a internet – não de onde você mora." />
-  <Card title="Serviços mais baratos" emoji=":handshake:" description="Os dapps são ponto a ponto. Não ter intermediários cobrando uma parte significa serviços mais baratos." />
+  <Card title="Mais privado" emoji=":detective:" description="Você só precisa de uma carteira Ethereum para usar qualquer dapp. Seus dados pessoais não são exigidos. Esta é a internet como sempre deveria ter sido."/>
+  <Card title="Acessível globalmente" emoji="🌍" description="Os dapps não são governados pelas regras de regiões e lojas de aplicativos. Seu acesso depende de ter uma conexão com a internet – não de onde você mora." />
+  <Card title="Serviços mais baratos" emoji=":handshake:" description="Os dapps são peer-to-peer. Não ter intermediários tirando uma parte significa serviços mais baratos." />
 </Grid>
 
 ## Por que isso importa {#why-does-this-matter}
@@ -33,7 +33,7 @@ Os aplicativos da Ethereum podem fazer coisas que simplesmente não são possív
 
 Existem aplicativos para tudo: jogos, finanças, trabalho, mensagens, armazenamento e muito mais. Na maioria dos aplicativos, você não está sujeito a anúncios ou limitado por acesso restrito.
 
-Tudo o que você precisa é de uma carteira Ethereum e um pouco de ETH para começar a usar qualquer aplicativo da Ethereum.
+Tudo o que você precisa é de uma carteira da Ethereum e um pouco de ETH para começar a usar qualquer aplicativo da Ethereum.
 
 ## Como funciona {#how-does-it-work}
 
@@ -56,7 +56,7 @@ Os aplicativos são alimentados por contratos inteligentes — pedaços de códi
 
 ## Os aplicativos da Ethereum são como legos {#ethereum-apps-are-like-legos}
 
-Quando os aplicativos são todos construídos na Ethereum, eles são todos compatíveis. Um token de um aplicativo funcionará em um completamente diferente. Isso é como poder publicar tweets no seu mural do Facebook. De fato, muitas vezes você pode reutilizar o mesmo perfil em muitos aplicativos diferentes da Ethereum sem a necessidade de se registrar em todos os lugares separadamente.
+Quando os aplicativos são todos construídos na Ethereum, eles são todos compatíveis. Um token de um aplicativo funcionará em um completamente diferente. Isso é como poder publicar tweets no seu mural do Facebook. Na verdade, muitas vezes você pode reutilizar o mesmo perfil em muitos aplicativos diferentes da Ethereum sem a necessidade de se registrar em todos os lugares separadamente.
 
 <BrowseApps />
 
@@ -69,7 +69,7 @@ Quando os aplicativos são todos construídos na Ethereum, eles são todos compa
 ## Perguntas frequentes {#faq}
 
 <ExpandableCard title="O que significa dapp?" visible>
-  <p>Dapp significa aplicativos descentralizados. Esses são aplicativos construídos em redes blockchain como a Ethereum. Eles são chamados de descentralizados porque a rede subjacente é descentralizada.</p>
+  <p>Dapp significa aplicativo descentralizado (dapp). Esses são aplicativos construídos em redes de blockchain como a Ethereum. Eles são chamados de descentralizados porque a rede subjacente é descentralizada.</p>
 </ExpandableCard>
 
 <ExpandableCard title="Eu compro moedas em um dapp?" visible>
@@ -77,5 +77,5 @@ Quando os aplicativos são todos construídos na Ethereum, eles são todos compa
 </ExpandableCard>
 
 <ExpandableCard title="Qual é a melhor carteira cripto?" visible>
-  <p>Uma carteira cripto permite que você guarde seus tokens e gerencie sua conta Ethereum. Existem muitas carteiras excelentes, cada uma servindo a um propósito diferente. Para descobrir qual carteira é a melhor para você, visite nossa [lista de carteiras](/wallets/find-wallet).</p>
+  <p>Uma carteira cripto permite que você guarde seus tokens e gerencie sua conta da Ethereum. Existem muitas carteiras excelentes, cada uma servindo a um propósito diferente. Para descobrir qual carteira é a melhor para você, visite nossa [lista de carteiras](/wallets/find-wallet).</p>
 </ExpandableCard>

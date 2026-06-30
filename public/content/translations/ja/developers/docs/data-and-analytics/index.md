@@ -75,7 +75,7 @@ EVM Query Language (EQL) は、EVM (イーサリアム仮想マシン) チェー
 - [Duneの基礎](https://docs.dune.com/#dune-basics)
 - [SubQuery イーサリアムクイックスタートガイド](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQDネットワークの概要](https://docs.sqd.dev/)
-- [EVM Query Language](https://eql.sh/blog/alpha-release-notes)
+- [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## チュートリアル: データと分析 / イーサリアム上のSQL {#tutorials}
 

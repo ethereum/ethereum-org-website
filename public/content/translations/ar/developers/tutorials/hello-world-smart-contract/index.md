@@ -11,7 +11,7 @@ published: 2021-03-31
 
 إذا كنت جديدًا في مجال تطوير سلسلة الكتل ولا تعرف من أين تبدأ، أو إذا كنت ترغب فقط في فهم كيفية نشر العقود الذكية والتفاعل معها، فهذا الدليل مناسب لك. سنستعرض خطوات إنشاء ونشر عقد ذكي بسيط على شبكة اختبار Sepolia باستخدام محفظة افتراضية [ميتاماسك](https://metamask.io/)، و[Solidity](https://docs.soliditylang.org/en/v0.8.0/)، و[Hardhat](https://hardhat.org/)، و[Alchemy](https://www.alchemy.com/eth) (لا تقلق إذا كنت لا تفهم معنى أي من هذا بعد، فسنقوم بشرحه).
 
-في [الجزء الثاني](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) من هذا البرنامج التعليمي، سنستعرض كيفية التفاعل مع عقدنا الذكي بمجرد نشره هنا، وفي [الجزء الثالث](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) سنغطي كيفية نشره على Etherscan.
+في [الجزء الثاني](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) من هذا البرنامج التعليمي، سنستعرض كيفية التفاعل مع عقدنا الذكي بمجرد نشره هنا، وفي [الجزء الثالث](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) سنغطي كيفية نشره على Etherscan.
 
 إذا كانت لديك أسئلة في أي وقت، فلا تتردد في التواصل معنا في [ديسكورد Alchemy](https://discord.gg/gWuC7zB)!
 
@@ -68,13 +68,13 @@ mkdir hello-world
 cd hello-world
 ```
 
-الآن بعد أن أصبحنا داخل مجلد مشروعنا، سنستخدم `npm init` لتهيئة المشروع. إذا لم يكن لديك npm مثبتًا بالفعل، فاتبع [هذه التعليمات](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (سنحتاج أيضًا إلى Node.js لذا قم بتنزيله أيضًا!).
+الآن بعد أن أصبحنا داخل مجلد مشروعنا، سنستخدم `npm init` لتهيئة المشروع. إذا لم يكن لديك npm مثبتًا بالفعل، فاتبع [تعليمات تثبيت Node.js](https://nodejs.org/en/download/) (سنحتاج إلى Node.js وnpm في هذا البرنامج التعليمي).
 
 ```
 npm init
 ```
 
-لا يهم حقًا كيف تجيب على أسئلة التثبيت، إليك كيف فعلنا ذلك كمرجع:
+لا يهم حقًا كيف تجيب على أسئلة التثبيت، إليك كيف قمنا بذلك كمرجع:
 
 ```
 package name: (hello-world)
@@ -102,7 +102,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 وافق على package.json ونحن جاهزون للبدء!
-
 ## الخطوة 7: تنزيل [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
 Hardhat هي بيئة تطوير لتجميع برمجيات إيثيريوم الخاصة بك ونشرها واختبارها وتصحيح أخطائها. إنها تساعد المطورين عند بناء العقود الذكية والتطبيقات اللامركزية (dapps) محليًا قبل النشر على السلسلة الحية.
@@ -350,11 +349,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 تهانينا! لقد قمت للتو بنشر عقد ذكي على سلسلة إيثيريوم 🎉
 
-لفهم ما يحدث داخليًا، دعنا ننتقل إلى علامة التبويب Explorer (المستكشف) في [لوحة تحكم Alchemy](https://dashboard.alchemyapi.io/explorer) الخاصة بنا. إذا كان لديك تطبيقات Alchemy متعددة، فتأكد من التصفية حسب التطبيق وحدد "Hello World".
+لفهم ما يحدث داخليًا، دعنا ننتقل إلى علامة التبويب Explorer (المستكشف) في [لوحة تحكم Alchemy](https://dashboard.alchemy.com/explorer) الخاصة بنا. إذا كان لديك تطبيقات Alchemy متعددة، فتأكد من التصفية حسب التطبيق وحدد "Hello World".
 ![hello world explorer](./hello-world-explorer.png)
 
-هنا سترى مجموعة من استدعاءات JSON-RPC التي أجراها Hardhat/Ethers داخليًا نيابة عنا عندما استدعينا دالة `.deploy()`. هناك استدعاءان مهمان يجب الإشارة إليهما هنا وهما [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction)، وهو طلب كتابة عقدنا فعليًا على سلسلة Sepolia، و[`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash) وهو طلب لقراءة معلومات حول معاملتنا بناءً على التجزئة (نمط نموذجي عند إجراء المعاملات). لمعرفة المزيد حول إرسال المعاملات، راجع هذا البرنامج التعليمي حول [إرسال المعاملات باستخدام Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+هنا سترى مجموعة من استدعاءات JSON-RPC التي أجراها Hardhat/Ethers داخليًا نيابة عنا عندما استدعينا دالة `.deploy()`. هناك استدعاءان مهمان يجب الإشارة إليهما هنا وهما [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)، وهو طلب كتابة عقدنا فعليًا على سلسلة Sepolia، و[`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash) وهو طلب لقراءة معلومات حول معاملتنا بناءً على التجزئة (نمط نموذجي عند إجراء المعاملات). لمعرفة المزيد حول إرسال المعاملات، راجع هذا البرنامج التعليمي حول [إرسال المعاملات باستخدام Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 
-هذا كل شيء بالنسبة للجزء الأول من هذا البرنامج التعليمي، في الجزء الثاني سنقوم فعليًا بـ [التفاعل مع عقدنا الذكي](https://www.alchemy.com/docs/interacting-with-a-smart-contract) عن طريق تحديث رسالتنا الأولية، وفي الجزء الثالث سنقوم بـ [نشر عقدنا الذكي على Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) حتى يعرف الجميع كيفية التفاعل معه.
+هذا كل شيء بالنسبة للجزء الأول من هذا البرنامج التعليمي، في الجزء الثاني سنقوم فعليًا بـ [التفاعل مع عقدنا الذكي](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) عن طريق تحديث رسالتنا الأولية، وفي الجزء الثالث سنقوم بـ [نشر عقدنا الذكي على Etherscan](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) حتى يعرف الجميع كيفية التفاعل معه.
 
 **هل تريد معرفة المزيد عن Alchemy؟ راجع [موقعنا الإلكتروني](https://www.alchemy.com/eth). ألا تريد أن تفوتك أي تحديثات؟ اشترك في نشرتنا الإخبارية [هنا](https://www.alchemy.com/newsletter)! تأكد أيضًا من الانضمام إلى [ديسكورد](https://discord.gg/u72VCg3) الخاص بنا.**.

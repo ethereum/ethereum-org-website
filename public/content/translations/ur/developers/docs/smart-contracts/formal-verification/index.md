@@ -271,8 +271,8 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **<span dir="ltr">Mythril</span>** - _ایتھیریم سمارٹ کنٹریکٹس میں کمزوریوں کا پتہ لگانے کے لیے ایک علامتی نفاذ کا ٹول_
 
-- [<span dir="ltr">GitHub</span>](https://github.com/ConsenSys/mythril-classic)
-- [دستاویزات](https://mythril-classic.readthedocs.io/en/develop/)
+- [<span dir="ltr">GitHub</span>](https://github.com/ConsenSysDiligence/mythril)
+- [دستاویزات](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## مزید مطالعہ {#further-reading}
 

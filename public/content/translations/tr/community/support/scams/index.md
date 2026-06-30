@@ -1,7 +1,7 @@
 ---
-title: Dolandırıldım veya fonlarımı kaybettim
-metaTitle: Dolandırıcılık yardımı ve bildirme
-description: Dolandırıldıysanız ne yapmalısınız, kalan varlıklarınızı nasıl güvence altına alırsınız ve dolandırıcılığı nereye bildirebilirsiniz.
+title: "Dolandırıldım veya fonlarımı kaybettim"
+metaTitle: "Dolandırıcılık yardımı ve bildirme"
+description: "Dolandırıldıysanız ne yapmalısınız, kalan varlıklarınızı nasıl güvence altına alırsınız ve dolandırıcılığı nereye bildirebilirsiniz."
 lang: tr
 ---
 
@@ -85,8 +85,8 @@ Bildirimde bulunmak yine de değerlidir. Raporlar, kolluk kuvvetlerinin organize
 ## Dikkat edilmesi gereken dolandırıcılık türleri {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Çekiliş ve airdrop dolandırıcılıkları"
+contentPreview="Kimse bedava ETH dağıtmıyor. Bu teklifler her zaman dolandırıcılıktır."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ Dolandırıcılar, ETH'nizi katlamayı veya size ücretsiz token vermeyi vaat ed
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Kimlik taklidi ve sahte destek"
+contentPreview="Ethereum veya ethereum.org'dan hiç kimse sizinle ilk olarak iletişime geçmez."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ Dolandırıcılar Discord, Telegram ve sosyal medyada Ethereum ekip üyelerini, 
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Kurtarma dolandırıcılıkları"
+contentPreview="Dolandırıldıktan sonra, sahte 'kripto kurtarma uzmanlarına' karşı dikkatli olun."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ Peşin bir ücret karşılığında çalınan kriptonuzu izlemeyi ve kurtarmayı
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Oltalama web siteleri ve sahte uygulamalar"
+contentPreview="Dolandırıcı siteler, kimlik bilgilerinizi çalmak için gerçek cüzdanları ve borsaları taklit eder."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

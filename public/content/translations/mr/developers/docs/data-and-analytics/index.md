@@ -75,7 +75,7 @@ EVM Query Language (EQL) ही EVM (इथेरियम व्हर्च्
 - [Dune बेसिक्स](https://docs.dune.com/#dune-basics)
 - [SubQuery इथेरियम क्विक स्टार्ट मार्गदर्शक](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD नेटवर्क विहंगावलोकन](https://docs.sqd.dev/)
-- [EVM Query Language](https://eql.sh/blog/alpha-release-notes)
+- [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## ट्यूटोरियल्स: डेटा आणि ॲनालिटिक्स / इथेरियमवर SQL {#tutorials}
 

@@ -20,8 +20,7 @@ published: 2021-04-06
 ### Para empezar {#to-get-started}
 
 Para empezar, primero debemos importar la biblioteca ethers.js en nuestro JavaScript
-Incluir ethers.js(5.0)
-
+Incluir ethers.js v5
 ### Instalación {#install-ethersjs}
 
 ```shell

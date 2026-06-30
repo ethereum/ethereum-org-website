@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/community/support/scams/index.md",
-  "generatedAt": "2026-06-08T07:34:52.340Z",
-  "rootHash": "49fd512dd49a",
+  "generatedAt": "2026-06-29T23:52:37.699Z",
+  "rootHash": "7e194e5fa3fd",
   "tree": {
-    "contentHash": "524ebff650db",
-    "anchorHash": "811be091e67e",
+    "contentHash": "1febc5a4cef3",
+    "anchorHash": "d18048c5f628",
     "children": {
       "frontmatter:title": {
         "contentHash": "b4466d4c117c",
@@ -417,65 +417,181 @@
         ]
       },
       "scam-types": {
-        "contentHash": "d3df74705789",
-        "anchorHash": "629921053593",
+        "contentHash": "8a5e42b56dc1",
+        "anchorHash": "25e67837189b",
         "labelHash": "e96dd68e3ab0",
         "children": {
           "_label": {
             "contentHash": "e96dd68e3ab0",
             "anchorHash": "e3b0c44298fc"
           },
-          "html-tag:0": {
-            "contentHash": "246ad5dea770",
-            "anchorHash": "c26455fe5c22"
-          },
-          "html-tag:1": {
-            "contentHash": "25ad6a23c815",
-            "anchorHash": "04cbf8e4acf3"
-          },
-          "html-tag:2": {
-            "contentHash": "7e291086323f",
-            "anchorHash": "9831e13b0e9b"
-          },
-          "html-tag:3": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "prose:5": {
-            "contentHash": "67f8aee37d6b",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:4": {
-            "contentHash": "ee6dacf19eb5",
-            "anchorHash": "e41e6c9cd188"
-          },
-          "prose:6": {
-            "contentHash": "6ee6554a8002",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "component:8": {
-            "contentHash": "c2e7dfa79e40",
-            "anchorHash": "ef35f9a34daf",
+          "component:1": {
+            "contentHash": "2e5f05d657f8",
+            "anchorHash": "3dbbf1afbf3c",
             "children": {
-              "attr:href": {
+              "attr:title": {
+                "contentHash": "b5757d5e0af5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:contentPreview": {
+                "contentHash": "88bed7a059f3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "1a15925e0cf0"
+                "anchorHash": "181ba211d750"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "7b38c8f5bff7"
+              },
+              "prose:1": {
+                "contentHash": "f2c0af0b6fd5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "1fb28eb19b48",
+                "anchorHash": "0745828f0cec"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:contentPreview",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "component:2": {
+            "contentHash": "da9705cee2dd",
+            "anchorHash": "efe568160278",
+            "children": {
+              "attr:title": {
+                "contentHash": "fce18d592da3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:contentPreview": {
+                "contentHash": "13e957850d7b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "181ba211d750"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e8ab4dc51a77"
               },
               "prose:0": {
-                "contentHash": "8ba6867e2274",
+                "contentHash": "e97f7ee39b7a",
                 "anchorHash": "e3b0c44298fc"
               }
             },
             "childrenOrder": [
-              "attr:href",
+              "attr:title",
+              "attr:contentPreview",
+              "attr:eventCategory",
+              "attr:eventName",
               "prose:0"
             ]
           },
-          "prose:0": {
-            "contentHash": "00751b5afc7a",
-            "anchorHash": "e3b0c44298fc"
+          "component:3": {
+            "contentHash": "82ed55b1b2f6",
+            "anchorHash": "8c3e377986dd",
+            "children": {
+              "attr:title": {
+                "contentHash": "8c92987b3416",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:contentPreview": {
+                "contentHash": "d217f8049190",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "181ba211d750"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "4567d503d921"
+              },
+              "prose:0": {
+                "contentHash": "ac86b3c0e98a",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:contentPreview",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
           },
-          "component:10": {
+          "component:4": {
+            "contentHash": "7ecc684165ee",
+            "anchorHash": "e76e0da1e864",
+            "children": {
+              "attr:title": {
+                "contentHash": "582f738b20d2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:contentPreview": {
+                "contentHash": "70ae6ff1f73d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "181ba211d750"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "42b7e482bad6"
+              },
+              "prose:1": {
+                "contentHash": "67f8aee37d6b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "ee6dacf19eb5",
+                "anchorHash": "e41e6c9cd188"
+              },
+              "prose:2": {
+                "contentHash": "6ee6554a8002",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:3": {
+                "contentHash": "c2e7dfa79e40",
+                "anchorHash": "ef35f9a34daf",
+                "children": {
+                  "attr:href": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "1a15925e0cf0"
+                  },
+                  "prose:0": {
+                    "contentHash": "8ba6867e2274",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:href",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:contentPreview",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:1",
+              "link:0",
+              "prose:2",
+              "component:3"
+            ]
+          },
+          "component:5": {
             "contentHash": "2fe4399bf908",
             "anchorHash": "961a65c8b2b9",
             "children": {
@@ -496,16 +612,11 @@
         },
         "childrenOrder": [
           "_label",
-          "html-tag:0",
-          "html-tag:1",
-          "html-tag:2",
-          "html-tag:3",
-          "prose:5",
-          "link:4",
-          "prose:6",
-          "component:8",
-          "prose:0",
-          "component:10"
+          "component:1",
+          "component:2",
+          "component:3",
+          "component:4",
+          "component:5"
         ]
       }
     },
@@ -523,5 +634,5 @@
       "scam-types"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

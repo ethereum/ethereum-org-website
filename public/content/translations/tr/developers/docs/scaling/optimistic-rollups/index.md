@@ -254,14 +254,12 @@ Daha çok görsel olarak mı öğreniyorsunuz? Finematics'in iyimser rollupları
 ## İyimser rolluplar hakkında daha fazla okuma {#further-reading-on-optimistic-rollups}
 
 - [İyimser rolluplar nasıl çalışır (Tam rehber)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Blokzincir Rollup'ı Nedir? Teknik Bir Giriş](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [Arbitrum İçin Temel Rehber](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Temel Arbitrum Rehberi](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Ethereum Rollupları İçin Pratik Rehber](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [Ethereum L2'lerinde Sahtekarlık Kanıtlarının Durumu](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
 - [Optimism'in Rollup'ı gerçekte nasıl çalışır?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVM Derinlemesine İnceleme](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
-- [İyimser Sanal Makine (OVM) Nedir?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
+- [İyimser Sanal Makine nedir?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
 ## Eğitimler: Ethereum'da iyimser rolluplar ve köprüler {#tutorials}
 
 - [Optimism standart köprü sözleşmesi incelemesi](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Varlıkları L1 ve L2 arasında taşımak için Optimism standart köprüsünün açıklamalı bir kod incelemesi._

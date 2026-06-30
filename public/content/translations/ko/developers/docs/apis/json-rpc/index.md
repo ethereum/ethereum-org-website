@@ -1887,7 +1887,7 @@ web3.sha3("Print(uint256)")
 
 ## 관련 주제 {#related-topics}
 
-- [JSON-RPC 명세](http://www.jsonrpc.org/specification)
+- [JSON-RPC 명세](https://www.jsonrpc.org/specification)
 - [노드 및 클라이언트](/developers/docs/nodes-and-clients/)
 - [JavaScript API](/developers/docs/apis/javascript/)
 - [백엔드 API](/developers/docs/apis/backend/)

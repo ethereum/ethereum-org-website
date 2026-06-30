@@ -1889,7 +1889,7 @@ Questa era solo una breve introduzione ad alcune delle attività più comuni, ch
 
 ## Argomenti correlati {#related-topics}
 
-- [Specifica JSON-RPC](http://www.jsonrpc.org/specification)
+- [Specifica JSON-RPC](https://www.jsonrpc.org/specification)
 - [Nodi e client](/developers/docs/nodes-and-clients/)
 - [API JavaScript](/developers/docs/apis/javascript/)
 - [API di backend](/developers/docs/apis/backend/)

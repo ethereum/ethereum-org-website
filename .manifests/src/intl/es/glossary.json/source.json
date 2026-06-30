@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/glossary.json",
-  "generatedAt": "2026-05-07T18:22:58.151Z",
-  "rootHash": "145d7d117efa",
+  "generatedAt": "2026-06-29T23:46:45.752Z",
+  "rootHash": "3562b9745e40",
   "tree": {
-    "contentHash": "afdb357be472",
+    "contentHash": "33b00f32bd8f",
     "anchorHash": "81c0387846f2",
     "children": {
       "51%-attack-term": {
@@ -5405,11 +5405,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "vyper-definition": {
-        "contentHash": "e8772ed3a15b",
+        "contentHash": "d94e29509d33",
         "anchorHash": "9975c620d1c1",
         "children": {
           "prose:1": {
-            "contentHash": "d47d4c1d132f",
+            "contentHash": "4baea46ad2b7",
             "anchorHash": "e3b0c44298fc"
           },
           "html-tag:0": {
@@ -6062,5 +6062,5 @@
       "zk-rollup-definition"
     ]
   },
-  "sourceCommitSha": "37d70722cfa869934ca70dab17c0dc37f73bf30d"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

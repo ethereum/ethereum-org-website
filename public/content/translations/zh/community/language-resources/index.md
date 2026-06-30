@@ -1,6 +1,6 @@
 ---
-title: 语言资源
-description: 学习以太坊的非英语资源
+title: "语言资源"
+description: "学习以太坊的非英语资源"
 lang: zh
 ---
 
@@ -27,7 +27,7 @@ Ethereum.org 已被原生翻译成 40 多种语言，你可以使用位于每个
 **新闻**
 
 - [BeInCrypto](http://www.beincrypto.com.br) - 加密货币新闻和文章，包括在巴西可用的交易所列表
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - 主要加密货币新闻媒体 Cointelegraph 的巴西版
+- [Cointelegraph](https://cointelegraph.com.br/) - 主要加密货币新闻媒体 Cointelegraph 的巴西版
 - [Livecoins](http://www.livecoins.com.br/ethereum) - 加密货币新闻和工具
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - 加密货币新闻和报告
 - [Modular Crypto](https://modularcrypto.xyz/) - 加密货币新闻和教育文章
@@ -37,7 +37,7 @@ Ethereum.org 已被原生翻译成 40 多种语言，你可以使用位于每个
 - [web3dev](https://www.web3dev.com.br/) - 面向 Web3 开发者的内容中心和 Discord 社区。
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - 学习 Web3 和去中心化金融 (DeFi) 的资源
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - 加密货币新闻和教育，包括“以太坊初学者指南”和“DeFi 初学者指南”
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - 加密货币领域的见解、教育和博客
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - 加密货币领域的见解、教育和博客
 - [Cointimes](http://www.cointimes.com.br/) - 加密货币新闻和教育
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - 解答最常见和最基础的加密货币问题的指南
 

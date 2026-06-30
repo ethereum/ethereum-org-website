@@ -25,7 +25,7 @@ published: 2021-04-22
 
 ## 1단계: Web3 설치하기 {#install-web3}
 
-NFT 스마트 컨트랙트 생성에 관한 첫 번째 튜토리얼을 따라 하셨다면, 이미 Ethers.js 사용 경험이 있으실 것입니다. Web3는 Ethers와 유사하게 [이더리움](/) 블록체인에 대한 요청 생성을 더 쉽게 만들어주는 라이브러리입니다. 이 튜토리얼에서는 자동 재시도 및 강력한 WebSocket 지원을 제공하는 향상된 Web3 라이브러리인 [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)를 사용할 것입니다.
+NFT 스마트 컨트랙트 생성에 관한 첫 번째 튜토리얼을 따라 하셨다면, 이미 Ethers.js 사용 경험이 있으실 것입니다. Web3는 Ethers와 유사하게 [이더리움](/) 블록체인에 대한 요청 생성을 더 쉽게 만들어주는 라이브러리입니다. 이 튜토리얼에서는 자동 재시도 및 강력한 WebSocket 지원을 제공하는 향상된 Web3 라이브러리인 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)를 사용할 것입니다.
 
 프로젝트 홈 디렉터리에서 다음을 실행하세요:
 
@@ -46,7 +46,7 @@ const web3 = createAlchemyWeb3(API_URL)
 
 ## 3단계: 컨트랙트 ABI 가져오기 {#contract-abi}
 
-컨트랙트 ABI(Application Binary Interface)는 스마트 컨트랙트와 상호작용하기 위한 인터페이스입니다. 컨트랙트 ABI에 대한 자세한 내용은 [여기](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is)에서 확인할 수 있습니다. Hardhat은 자동으로 ABI를 생성하여 `MyNFT.json` 파일에 저장합니다. 이를 사용하려면 `mint-nft.js` 파일에 다음 코드 줄을 추가하여 내용을 파싱해야 합니다:
+우리의 컨트랙트 ABI(Application Binary Interface)는 스마트 컨트랙트와 상호작용하기 위한 인터페이스입니다. [컨트랙트 ABI](/glossary/#abi)에 대해 더 자세히 알아볼 수 있습니다. Hardhat은 자동으로 ABI를 생성하여 `MyNFT.json` 파일에 저장합니다. 이를 사용하려면 `mint-nft.js` 파일에 다음 코드 줄을 추가하여 내용을 파싱해야 합니다:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -58,12 +58,11 @@ ABI를 확인하고 싶다면 콘솔에 출력해 볼 수 있습니다:
 console.log(JSON.stringify(contract.abi))
 ```
 
-`mint-nft.js` 파일을 실행하고 콘솔에 출력된 ABI를 보려면 터미널로 이동하여 다음을 실행하세요:
+`mint-nft.js`를 실행하고 콘솔에 출력된 ABI를 보려면 터미널로 이동하여 다음을 실행하세요:
 
 ```js
 node scripts/mint-nft.js
 ```
-
 ## 4단계: IPFS를 사용하여 NFT 메타데이터 구성하기 {#config-meta}
 
 1부 튜토리얼에서 기억하시겠지만, 우리의 `mintNFT` 스마트 컨트랙트 함수는 NFT의 메타데이터를 설명하는 JSON 문서로 확인되어야 하는 tokenURI 매개변수를 받습니다. 이 메타데이터는 이름, 설명, 이미지 및 기타 속성과 같이 구성 가능한 속성을 가질 수 있게 하여 NFT에 생명력을 불어넣는 핵심 요소입니다.
@@ -146,11 +145,11 @@ PUBLIC_KEY = "your-public-account-address"
 
 1. `.env` 파일에서 _PRIVATE_KEY_와 _PUBLIC_KEY_를 가져옵니다.
 
-1. 다음으로 계정 논스를 파악해야 합니다. 논스 사양은 주소에서 전송된 트랜잭션 수를 추적하는 데 사용되며, 이는 보안 목적과 [재전송 공격(replay attacks)](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce)을 방지하기 위해 필요합니다. 주소에서 전송된 트랜잭션 수를 가져오려면 [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount)를 사용합니다.
+1. 다음으로 계정 논스를 알아내야 합니다. 논스 사양은 주소에서 전송된 트랜잭션 수를 추적하는 데 사용되며, 이는 보안 목적과 재생 공격을 방지하기 위해 필요합니다. 주소에서 전송된 트랜잭션 수를 가져오기 위해 [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count)를 사용합니다.
 
 1. 마지막으로 다음 정보로 트랜잭션을 설정합니다:
 
-- `'from': PUBLIC_KEY` — 트랜잭션의 출처는 우리의 공개 주소입니다.
+- `'from': PUBLIC_KEY` — 트랜잭션의 출발지는 우리의 공개 주소입니다.
 
 - `'to': contractAddress` — 상호작용하고 트랜잭션을 전송하고자 하는 컨트랙트입니다.
 
@@ -158,7 +157,7 @@ PUBLIC_KEY = "your-public-account-address"
 
 - `'gas': estimatedGas` — 트랜잭션을 완료하는 데 필요한 예상 가스입니다.
 
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — 이 트랜잭션에서 수행하고자 하는 연산으로, 이 경우에는 NFT 발행입니다.
+- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — 이 트랜잭션에서 수행하고자 하는 연산으로, 이 경우에는 NFT를 발행하는 것입니다.
 
 이제 `mint-nft.js` 파일은 다음과 같아야 합니다:
 
@@ -188,7 +187,6 @@ PUBLIC_KEY = "your-public-account-address"
      };
    }​
 ```
-
 ## 8단계: 트랜잭션 서명하기 {#sign-txn}
 
 이제 트랜잭션을 생성했으므로 전송하기 위해 서명해야 합니다. 여기서 개인 키를 사용하게 됩니다.
@@ -321,7 +319,7 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-다음으로 [Alchemy 멤풀](https://dashboard.alchemyapi.io/mempool)을 방문하여 트랜잭션 상태(대기 중인지, 채굴되었는지, 네트워크에서 누락되었는지)를 확인하세요. 트랜잭션이 누락된 경우 [Blockscout](https://eth-sepolia.blockscout.com/)을 확인하고 트랜잭션 해시를 검색해 보는 것도 도움이 됩니다.
+다음으로 [Alchemy 멤풀](https://dashboard.alchemy.com/mempool)을 방문하여 트랜잭션 상태(대기 중인지, 채굴되었는지, 네트워크에서 누락되었는지)를 확인하세요. 트랜잭션이 누락된 경우 [Blockscout](https://eth-sepolia.blockscout.com/)을 확인하고 트랜잭션 해시를 검색해 보는 것도 도움이 됩니다.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Etherscan에서 NFT 트랜잭션 해시 보기_
 

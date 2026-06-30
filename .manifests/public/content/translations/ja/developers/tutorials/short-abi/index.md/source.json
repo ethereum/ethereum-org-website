@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/short-abi/index.md",
-  "generatedAt": "2026-06-17T00:53:40.580Z",
-  "rootHash": "d820fb7ae1f8",
+  "generatedAt": "2026-06-30T00:48:30.592Z",
+  "rootHash": "8265e0b3784c",
   "tree": {
     "contentHash": "59984a0bb045",
-    "anchorHash": "b5de8f259d8b",
+    "anchorHash": "9f643cb6d6f9",
     "children": {
       "frontmatter:title": {
         "contentHash": "20ee17606658",
@@ -120,7 +120,7 @@
       },
       "how-can-we-further-reduce-the-cost-of-l2-transactions": {
         "contentHash": "9372f24f797c",
-        "anchorHash": "e352e8dfff09",
+        "anchorHash": "5257fa1ae8af",
         "labelHash": "c1e8056ab15c",
         "children": {
           "_label": {
@@ -137,7 +137,7 @@
           },
           "link:1": {
             "contentHash": "2b5edf516693",
-            "anchorHash": "71939196ae94"
+            "anchorHash": "a773ed7366c1"
           },
           "prose:4": {
             "contentHash": "6201111b83a0",
@@ -145,7 +145,7 @@
           },
           "link:2": {
             "contentHash": "3684de0e12df",
-            "anchorHash": "fd965e372dc9"
+            "anchorHash": "2f7d71665ee4"
           },
           "prose:5": {
             "contentHash": "cdb4ee2aea69",
@@ -1267,5 +1267,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

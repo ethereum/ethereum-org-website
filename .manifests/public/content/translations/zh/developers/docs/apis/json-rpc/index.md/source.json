@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/apis/json-rpc/index.md",
-  "generatedAt": "2026-06-18T21:15:47.382Z",
-  "rootHash": "847b34f78fd1",
+  "generatedAt": "2026-06-29T23:55:50.991Z",
+  "rootHash": "2226a315b14c",
   "tree": {
     "contentHash": "3ff0749c1d3e",
-    "anchorHash": "11389d27f190",
+    "anchorHash": "8aca539af25c",
     "children": {
       "frontmatter:title": {
         "contentHash": "376771824ebe",
@@ -8011,7 +8011,7 @@
       },
       "related-topics": {
         "contentHash": "2c5490750c99",
-        "anchorHash": "f723997aedcb",
+        "anchorHash": "b2972707de78",
         "labelHash": "5a38da0df0ab",
         "children": {
           "_label": {
@@ -8024,7 +8024,7 @@
           },
           "link:0": {
             "contentHash": "460db5ad6bfc",
-            "anchorHash": "0879ee1eee87"
+            "anchorHash": "237728dc7195"
           },
           "prose:6": {
             "contentHash": "3973e022e932",
@@ -8101,5 +8101,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

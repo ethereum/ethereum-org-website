@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-06-11T18:12:20.878Z",
-  "rootHash": "37e3e90aabf2",
+  "generatedAt": "2026-06-29T23:46:08.538Z",
+  "rootHash": "860d0a37c7f3",
   "tree": {
-    "contentHash": "68ced947acb6",
-    "anchorHash": "2b0750c7dab9",
+    "contentHash": "504e61bfe801",
+    "anchorHash": "ce8a00a0515c",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -21,6 +21,10 @@
       },
       "acknowledgements": {
         "contentHash": "c9015d53b908",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-community-stories": {
+        "contentHash": "53c41324fc82",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-desci-projects": {
@@ -256,6 +260,10 @@
       },
       "defi-page": {
         "contentHash": "ba1a84f8388c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "deposit-contract": {
+        "contentHash": "10449017f4dd",
         "anchorHash": "e3b0c44298fc"
       },
       "description": {
@@ -582,6 +590,10 @@
       },
       "future-proofing": {
         "contentHash": "d35c1e677306",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "gas": {
+        "contentHash": "d85b58b6125d",
         "anchorHash": "e3b0c44298fc"
       },
       "get-eth": {
@@ -1744,6 +1756,14 @@
         "contentHash": "3663ec0493cc",
         "anchorHash": "e3b0c44298fc"
       },
+      "nav-stories-description": {
+        "contentHash": "2b07e765a86d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-stories-label": {
+        "contentHash": "e2718f208216",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nav-start-get-started-description": {
         "contentHash": "d0b438999db0",
         "anchorHash": "e3b0c44298fc"
@@ -1854,6 +1874,10 @@
       },
       "open": {
         "contentHash": "ed077f3d8125",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-actions": {
+        "contentHash": "adc00f399f4e",
         "anchorHash": "e3b0c44298fc"
       },
       "page-languages-filter-label": {
@@ -2030,6 +2054,26 @@
         "contentHash": "94ea9b1d33a0",
         "anchorHash": "e3b0c44298fc"
       },
+      "story-card-read-more": {
+        "contentHash": "83b794145c0c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-card-show-original": {
+        "contentHash": "16194a69c43d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-card-show-english": {
+        "contentHash": "f827a6514dfa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-card-original-language": {
+        "contentHash": "c5c60a2af071",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "story-card-english-translation": {
+        "contentHash": "3c1709cef10c",
+        "anchorHash": "e3b0c44298fc"
+      },
       "single-slot-finality": {
         "contentHash": "57e99e621b32",
         "anchorHash": "e3b0c44298fc"
@@ -2064,6 +2108,10 @@
       },
       "statelessness": {
         "contentHash": "6c88f20571b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stories": {
+        "contentHash": "6d09cf574882",
         "anchorHash": "e3b0c44298fc"
       },
       "style-guide": {
@@ -2252,6 +2300,7 @@
       "about-us",
       "account-abstraction",
       "acknowledgements",
+      "adding-community-stories",
       "adding-desci-projects",
       "adding-developer-tools",
       "adding-exchanges",
@@ -2306,6 +2355,7 @@
       "decentralized-science",
       "decentralized-social-networks",
       "defi-page",
+      "deposit-contract",
       "description",
       "design",
       "design-principles",
@@ -2378,6 +2428,7 @@
       "founders",
       "from",
       "future-proofing",
+      "gas",
       "get-eth",
       "get-involved",
       "get-started",
@@ -2668,6 +2719,8 @@
       "nav-staking-solo-description",
       "nav-support-description",
       "nav-staking-solo-label",
+      "nav-stories-description",
+      "nav-stories-label",
       "nav-start-get-started-description",
       "nav-start-with-crypto-title",
       "nav-start-with-crypto-description",
@@ -2696,6 +2749,7 @@
       "on-this-page",
       "onchain-gaming",
       "open",
+      "page-actions",
       "page-languages-filter-label",
       "page-languages-filter-placeholder",
       "page-languages-interested",
@@ -2738,6 +2792,11 @@
       "show-all",
       "show-more",
       "show-less",
+      "story-card-read-more",
+      "story-card-show-original",
+      "story-card-show-english",
+      "story-card-original-language",
+      "story-card-english-translation",
       "single-slot-finality",
       "site-description",
       "skip-to-main-content",
@@ -2747,6 +2806,7 @@
       "stake-eth",
       "staking",
       "statelessness",
+      "stories",
       "style-guide",
       "support",
       "terms-and-conditions",
@@ -2794,5 +2854,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "2e0bedf904a21d6a5283f6df5a7894ec4f4b54c3"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

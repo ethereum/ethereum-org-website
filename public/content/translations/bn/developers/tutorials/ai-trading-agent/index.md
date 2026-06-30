@@ -583,21 +583,21 @@ uv run test-predictor.py
 প্রত্যাশিত ফলাফল অনেকটা এরকম:
 
 ```
-2026-01-05T19:50-এর জন্য প্রেডিকশন: প্রেডিক্টেড 3138.93 USD, আসল 3218.92 USD, এরর 79.99 USD
-2026-01-06T19:56-এর জন্য প্রেডিকশন: প্রেডিক্টেড 3243.39 USD, আসল 3221.08 USD, এরর 22.31 USD
-2026-01-07T20:02-এর জন্য প্রেডিকশন: প্রেডিক্টেড 3223.24 USD, আসল 3146.89 USD, এরর 76.35 USD
-2026-01-08T20:11-এর জন্য প্রেডিকশন: প্রেডিক্টেড 3150.47 USD, আসল 3092.04 USD, এরর 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-2026-01-31T22:33-এর জন্য প্রেডিকশন: প্রেডিক্টেড 2637.73 USD, আসল 2417.77 USD, এরর 219.96 USD
-2026-02-01T22:41-এর জন্য প্রেডিকশন: প্রেডিক্টেড 2381.70 USD, আসল 2318.84 USD, এরর 62.86 USD
-2026-02-02T22:49-এর জন্য প্রেডিকশন: প্রেডিক্টেড 2234.91 USD, আসল 2349.28 USD, এরর 114.37 USD
-29টি প্রেডিকশনের ওপর গড় প্রেডিকশন এরর: 83.87103448275862068965517241 USD
-প্রতি সুপারিশে গড় পরিবর্তন: 4.787931034482758620689655172 USD
-পরিবর্তনের স্ট্যান্ডার্ড ভ্যারিয়েন্স: 104.42 USD
-লাভজনক দিন: 51.72%
-লোকসানের দিন: 48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 টেস্টারের বেশিরভাগ অংশই এজেন্টের মতো, তবে এখানে নতুন বা পরিবর্তিত অংশগুলো দেওয়া হলো।
@@ -765,19 +765,19 @@ uv run agent.py
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-বর্তমান দাম: 1843.16
-2026-02-06T23:07-এ, প্রত্যাশিত দাম: 1724.41 USD
-ট্রেডের আগে অ্যাকাউন্ট ব্যালেন্স:
-USDC ব্যালেন্স: 927301.578272
-WETH ব্যালেন্স: 500
-বিক্রি করুন, আমি আশা করি দাম 118.75 USD কমে যাবে
-অনুমোদন ট্রানজ্যাকশন পাঠানো হয়েছে: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-অনুমোদন ট্রানজ্যাকশন মাইন করা হয়েছে।
-বিক্রি ট্রানজ্যাকশন পাঠানো হয়েছে: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-বিক্রি ট্রানজ্যাকশন মাইন করা হয়েছে।
-ট্রেডের পরে অ্যাকাউন্ট ব্যালেন্স:
-USDC ব্যালেন্স: 929143.797116
-WETH ব্যালেন্স: 499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 এটি আসলে ব্যবহার করার জন্য, আপনার কয়েকটি ছোট পরিবর্তনের প্রয়োজন।

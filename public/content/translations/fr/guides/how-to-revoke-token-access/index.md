@@ -1,6 +1,6 @@
 ---
-title: Comment révoquer l'accès d'un contrat intelligent à vos fonds crypto
-description: Un guide pratique sur la révocation de l'accès aux jetons par des contrats intelligents abusifs
+title: "Comment révoquer l'accès d'un contrat intelligent à vos fonds crypto"
+description: "Un guide pratique sur la révocation de l'accès aux jetons par des contrats intelligents abusifs"
 lang: fr
 ---
 

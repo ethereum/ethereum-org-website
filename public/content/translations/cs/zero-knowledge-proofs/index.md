@@ -1,7 +1,7 @@
 ---
-title: Co jsou důkazy s nulovou znalostí?
-metaTitle: Důkazy s nulovou znalostí
-description: Netechnický úvod do důkazů s nulovou znalostí pro začátečníky.
+title: "Co jsou důkazy s nulovou znalostí?"
+metaTitle: "Důkazy s nulovou znalostí"
+description: "Netechnický úvod do důkazů s nulovou znalostí pro začátečníky."
 lang: cs
 ---
 
@@ -58,8 +58,10 @@ Důkazy s nulovou znalostí jsou obzvláště užitečné v kontextu [decentrali
       <p>
         Zjistěte více o bhútánském NDI v <a href="/decentralized-identity/#national-and-government-id">případové studii o decentralizované identitě</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Důkaz lidskosti (Proof of Humanity) {#proof-of-humanity}
@@ -235,5 +237,5 @@ ZK-STARK je považován za imunní vůči hrozbě kvantových počítačů, prot
 - [ZK-STARKy — Vytvořte ověřitelnou důvěru, a to i proti kvantovým počítačům](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Přibližný úvod do toho, jak jsou zk-SNARKy možné](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Proč jsou důkazy s nulovou znalostí (ZKP) přelomové pro sebeurčující identitu](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [Vysvětlení EIP-7503: Umožnění soukromých převodů na Ethereu pomocí ZK důkazů](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [Vysvětlení EIP-7503: Umožnění soukromých převodů na Ethereu pomocí ZK důkazů](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Karetní hra ZK: hra pro naučení základů ZK a případů užití v reálném životě](https://github.com/ZK-card/zk-cards) - _ZK-Cards_

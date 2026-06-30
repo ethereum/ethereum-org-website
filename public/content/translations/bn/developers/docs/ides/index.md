@@ -59,6 +59,6 @@ lang: bn
 
 ## আরও পড়ুন {#further-reading}
 
-- [ইথেরিয়াম IDE](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy-এর ইথেরিয়াম IDE-এর তালিকা_
+- [ইথেরিয়াম IDE](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Alchemy-এর ইথেরিয়াম IDE-এর তালিকা_
 
 _আপনাকে সাহায্য করেছে এমন কোনো কমিউনিটি রিসোর্স সম্পর্কে জানেন? এই পেজটি এডিট করুন এবং এটি যোগ করুন!_

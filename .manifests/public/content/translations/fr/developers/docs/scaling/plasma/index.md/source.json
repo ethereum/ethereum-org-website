@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/scaling/plasma/index.md",
-  "generatedAt": "2026-06-17T22:39:42.484Z",
-  "rootHash": "cba9df3ccfcc",
+  "generatedAt": "2026-06-30T00:01:13.165Z",
+  "rootHash": "1bbe7fe26b8a",
   "tree": {
-    "contentHash": "54e07910861b",
-    "anchorHash": "8b27293b58d0",
+    "contentHash": "b0e84d326e9e",
+    "anchorHash": "66a34e18be99",
     "children": {
       "frontmatter:title": {
         "contentHash": "252564b4213a",
@@ -134,8 +134,8 @@
         ]
       },
       "how-does-plasma-work": {
-        "contentHash": "781712b3aead",
-        "anchorHash": "76e554cfd5b0",
+        "contentHash": "d94fdb405569",
+        "anchorHash": "f94eddac4bb8",
         "labelHash": "ed46cc364456",
         "children": {
           "_label": {
@@ -225,8 +225,8 @@
             ]
           },
           "entries-and-exits": {
-            "contentHash": "360027fefc9a",
-            "anchorHash": "f1d8678ea337",
+            "contentHash": "b295281374ab",
+            "anchorHash": "6349f31d7dbc",
             "labelHash": "dfda3014b037",
             "children": {
               "_label": {
@@ -257,62 +257,42 @@
                 ]
               },
               "exiting-the-plasma-chain": {
-                "contentHash": "cb8158e72238",
-                "anchorHash": "e4c6e82bd366",
+                "contentHash": "303df2423324",
+                "anchorHash": "3f471cc518c9",
                 "labelHash": "ef9c346cebd2",
                 "children": {
                   "_label": {
                     "contentHash": "ef9c346cebd2",
                     "anchorHash": "e3b0c44298fc"
                   },
-                  "prose:4": {
-                    "contentHash": "10886fa1e567",
+                  "prose:2": {
+                    "contentHash": "7f1e2cb22566",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:0": {
-                    "contentHash": "887fe76478ae",
-                    "anchorHash": "ba0b87665df5"
-                  },
-                  "prose:5": {
-                    "contentHash": "3468e83314c4",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "link:1": {
                     "contentHash": "f0c05e804cae",
                     "anchorHash": "296c1598b6a5"
                   },
-                  "prose:6": {
-                    "contentHash": "164935ce66ef",
+                  "prose:3": {
+                    "contentHash": "62354f546a7b",
                     "anchorHash": "e3b0c44298fc"
                   },
-                  "link:2": {
-                    "contentHash": "38f97f5df02f",
-                    "anchorHash": "2e92a6a0eac3"
-                  },
-                  "prose:7": {
-                    "contentHash": "5a907ebaaafe",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "link:3": {
+                  "link:1": {
                     "contentHash": "10b245ed545a",
                     "anchorHash": "75d475e0e55b"
                   },
-                  "prose:8": {
+                  "prose:4": {
                     "contentHash": "59b6980e8041",
                     "anchorHash": "e3b0c44298fc"
                   }
                 },
                 "childrenOrder": [
                   "_label",
-                  "prose:4",
+                  "prose:2",
                   "link:0",
-                  "prose:5",
+                  "prose:3",
                   "link:1",
-                  "prose:6",
-                  "link:2",
-                  "prose:7",
-                  "link:3",
-                  "prose:8"
+                  "prose:4"
                 ]
               }
             },
@@ -674,72 +654,62 @@
         ]
       },
       "further-reading": {
-        "contentHash": "cfd0a964fd0f",
-        "anchorHash": "ffe8c98dbe0e",
+        "contentHash": "132af06431f5",
+        "anchorHash": "6944a1a82752",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
             "contentHash": "4082f515b2f4",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:5": {
+          "prose:4": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "2411a890ddd3",
-            "anchorHash": "c9e0fc294654"
+            "contentHash": "6e6fb1e2e973",
+            "anchorHash": "6366ada9b204"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "441deae315b7",
+            "anchorHash": "615d682378ac"
           },
           "prose:6": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:1": {
-            "contentHash": "6e6fb1e2e973",
-            "anchorHash": "6366ada9b204"
+          "link:2": {
+            "contentHash": "a9d1be517a65",
+            "anchorHash": "2449e9290cd9"
           },
           "prose:7": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:2": {
-            "contentHash": "441deae315b7",
-            "anchorHash": "615d682378ac"
-          },
-          "prose:8": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
           "link:3": {
-            "contentHash": "a9d1be517a65",
-            "anchorHash": "2449e9290cd9"
-          },
-          "prose:9": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:4": {
             "contentHash": "a7bbfb594bcc",
             "anchorHash": "01f0b997dbbe"
           },
-          "prose:10": {
+          "prose:8": {
             "contentHash": "123ee5ac559d",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:5",
+          "prose:4",
           "link:0",
-          "prose:6",
+          "prose:5",
           "link:1",
-          "prose:7",
+          "prose:6",
           "link:2",
-          "prose:8",
+          "prose:7",
           "link:3",
-          "prose:9",
-          "link:4",
-          "prose:10"
+          "prose:8"
         ]
       },
       "tutorials": {
@@ -796,5 +766,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

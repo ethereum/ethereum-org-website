@@ -236,7 +236,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol`, Ether'i olmayan kullanıcıların Blokzincir'i kullanmasına olanak tanıyan bir sistem olan [OpenGSN](https://www.opengsn.org/)'yi kullanmak için gereken tanımlardır. Bunun eski bir sürüm olduğunu unutmayın, OpenGSN ile entegre olmak istiyorsanız
+- `GSN/Context.sol`, Ether'i olmayan kullanıcıların Blokzincir'i kullanmasına olanak tanıyan bir sistem olan [OpenGSN](https://opengsn.org/)'yi kullanmak için gereken tanımlardır. Bunun eski bir sürüm olduğunu unutmayın, OpenGSN ile entegre olmak istiyorsanız
   [bu öğreticiyi kullanın](https://docs.opengsn.org/javascript-client/tutorial.html).
 - Solidity sürümleri **&lt;0.8.0** için aritmetik taşmaları/alt taşmaları önleyen
   [SafeMath Kütüphanesi](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/). Solidity ≥0.8.0'da, aritmetik işlemler taşma/alt taşma durumunda otomatik olarak

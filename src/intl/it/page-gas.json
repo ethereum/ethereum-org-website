@@ -32,7 +32,7 @@
   "page-gas-attack-of-the-cryptokitties-text": "A novembre 2017 è stato lanciato il popolare progetto CryptoKitties. Il suo rapido picco di popolarità ha causato una significativa congestione della rete e commissioni del gas estremamente elevate. Le sfide poste da CryptoKitties hanno accelerato l'urgenza di trovare soluzioni per scalare Ethereum.",
   "page-gas-why-do-we-need-gas-header": "Perché abbiamo bisogno del gas?",
   "page-gas-why-do-we-need-gas-text": "Il gas è un elemento critico per mantenere Ethereum sicuro ed elaborare le transazioni. Il gas aiuta in molti modi:",
-  "page-gas-benefits-1-description": "Il gas mantiene Ethereum <a href=\"/glossary/#anti-sybil\">resistente agli attacchi Sybil</a> impedendo ad attori malintenzionati di sovraccaricare la rete con attività fraudolente.",
+  "page-gas-benefits-1-description": "Il gas mantiene Ethereum <a href=\"/glossary/#anti-sybil\">resistente agli attacchi Sybil</a> impedendo agli attori malintenzionati di sovraccaricare la rete con attività fraudolente.",
   "page-gas-benefits-2-description": "Poiché il calcolo costa gas, lo spamming di Ethereum con transazioni costose, sia accidentalmente che maliziosamente, è disincentivato finanziariamente.",
   "page-gas-benefits-3-description": "Un limite rigido alla quantità di calcolo che può essere eseguita in qualsiasi momento impedisce a Ethereum di essere sovraccaricato, aiutando a garantire che la rete sia sempre accessibile.",
   "page-gas-how-is-gas-calculated-header": "Come viene calcolato il gas?",

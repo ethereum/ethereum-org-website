@@ -135,18 +135,16 @@ _Típicamente utilizada para el desarrollo descentralizado y la gobernanza de pr
 
 ### Iniciar una DAO {#start-a-dao}
 
-- [Convocar una DAO con DAOHaus](https://app.daohaus.club/summon)
+- [Crear una DAO con DAOHaus](https://app.daohaus.club/summon)
 - [Iniciar una DAO Governor con Tally](https://www.tally.xyz/get-started)
 - [Crear una DAO impulsada por Aragon](https://aragon.org/product)
-- [Iniciar una colonia](https://colony.io/)
-- [Crear una DAO con el consenso holográfico de DAOstack](https://alchemy.daostack.io/daos/create)
+- [Iniciar una Colony](https://colony.io/)
 - [Lanzar una DAO con DeGov Launcher](https://docs.degov.ai/integration/deploy)
-
 ## Lecturas adicionales {#further-reading}
 
 ### Artículos sobre DAO {#dao-articles}
 
-- [¿Qué es una DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [¿Qué es una DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [La casa de las DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [¿Qué es una DAO y para qué sirve?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Cómo iniciar una comunidad digital impulsada por una DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

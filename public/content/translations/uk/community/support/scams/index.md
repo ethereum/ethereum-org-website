@@ -1,7 +1,7 @@
 ---
-title: Мене ошукали або я втратив кошти
-metaTitle: Допомога та звітування про шахрайство
-description: Що робити, якщо вас ошукали, як захистити активи, що залишилися, і куди повідомляти про шахрайство.
+title: "Мене ошукали або я втратив кошти"
+metaTitle: "Допомога та звітування про шахрайство"
+description: "Що робити, якщо вас ошукали, як захистити активи, що залишилися, і куди повідомляти про шахрайство."
 lang: uk
 ---
 
@@ -85,8 +85,8 @@ lang: uk
 ## Типи шахрайства, на які слід звернути увагу {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Шахрайство з розіграшами та аірдропами"
+contentPreview="Ніхто не роздає безкоштовні ETH. Такі пропозиції — це завжди шахрайство."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Видавання себе за інших та фейкова підтримка"
+contentPreview="Ніхто з Етеріуму чи ethereum.org ніколи не зв'яжеться з вами першим."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Шахрайство з відновленням коштів"
+contentPreview="Якщо ви стали жертвою шахраїв, остерігайтеся фейкових «експертів з відновлення крипто»."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Фішингові вебсайти та фейкові застосунки"
+contentPreview="Шахрайські сайти імітують справжні гаманці та біржі, щоб викрасти ваші облікові дані."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

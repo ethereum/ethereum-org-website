@@ -135,18 +135,16 @@ _Genellikle protokollerin ve [merkeziyetsiz uygulamaların (dapp)](/glossary/#da
 
 ### Bir DAO başlatın {#start-a-dao}
 
-- [DAOHaus ile bir DAO çağırın](https://app.daohaus.club/summon)
+- [DAOHaus ile bir DAO oluşturun](https://app.daohaus.club/summon)
 - [Tally ile bir Governor DAO başlatın](https://www.tally.xyz/get-started)
 - [Aragon destekli bir DAO oluşturun](https://aragon.org/product)
 - [Bir koloni başlatın](https://colony.io/)
-- [DAOstack'in holografik mutabakatı ile bir DAO oluşturun](https://alchemy.daostack.io/daos/create)
 - [DeGov Launcher ile bir DAO başlatın](https://docs.degov.ai/integration/deploy)
-
 ## Daha fazla bilgi {#further-reading}
 
 ### DAO Makaleleri {#dao-articles}
 
-- [DAO nedir?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [DAO nedir?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [DAO'ların Evi](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO nedir ve ne işe yarar?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [DAO Destekli Bir Dijital Topluluk Nasıl Başlatılır](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

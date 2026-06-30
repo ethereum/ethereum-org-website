@@ -1,7 +1,7 @@
 ---
-title: Jak si vytvořit účet na Ethereu
-metaTitle: Jak si „vytvořit“ účet na Ethereu
-description: Průvodce krok za krokem k vytvoření účtu na Ethereu pomocí peněženky.
+title: "Jak si vytvořit účet na Ethereu"
+metaTitle: "Jak si „vytvořit“ účet na Ethereu"
+description: "Průvodce krok za krokem k vytvoření účtu na Ethereu pomocí peněženky."
 lang: cs
 ---
 

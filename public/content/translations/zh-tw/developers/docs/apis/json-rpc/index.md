@@ -1887,7 +1887,7 @@ web3.sha3("Print(uint256)")
 
 ## 相關主題 {#related-topics}
 
-- [JSON-RPC 規範](http://www.jsonrpc.org/specification)
+- [JSON-RPC 規範](https://www.jsonrpc.org/specification)
 - [節點與客戶端](/developers/docs/nodes-and-clients/)
 - [JavaScript API](/developers/docs/apis/javascript/)
 - [後端 API](/developers/docs/apis/backend/)

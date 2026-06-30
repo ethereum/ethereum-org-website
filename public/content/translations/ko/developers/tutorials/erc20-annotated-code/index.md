@@ -196,7 +196,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol`는 이더가 없는 사용자도 블록체인을 사용할 수 있게 해주는 시스템인 [OpenGSN](https://www.opengsn.org/)을 사용하는 데 필요한 정의입니다. 이것은 이전 버전이므로 OpenGSN과 통합하려면 [이 튜토리얼을 사용하세요](https://docs.opengsn.org/javascript-client/tutorial.html).
+- `GSN/Context.sol`는 이더가 없는 사용자도 블록체인을 사용할 수 있게 해주는 시스템인 [OpenGSN](https://opengsn.org/)을 사용하는 데 필요한 정의입니다. 이것은 이전 버전이므로 OpenGSN과 통합하려면 [이 튜토리얼을 사용하세요](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [SafeMath 라이브러리](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)는 Solidity 버전 <strong>&lt;0.8.0</strong>에서 산술 오버플로/언더플로를 방지합니다. Solidity ≥0.8.0에서는 산술 연산이 오버플로/언더플로 시 자동으로 되돌리기(revert)를 수행하므로 SafeMath가 필요하지 않습니다. 이 컨트랙트는 이전 컴파일러 버전과의 이전 버전 호환성을 위해 SafeMath를 사용합니다.
 
 &nbsp;

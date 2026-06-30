@@ -11,7 +11,7 @@ published: 2021-03-31
 
 మీరు బ్లాక్‌చైన్ డెవలప్‌మెంట్‌కు కొత్త అయితే మరియు ఎక్కడ ప్రారంభించాలో తెలియకపోతే, లేదా స్మార్ట్ కాంట్రాక్ట్‌లను ఎలా డిప్లాయ్ చేయాలో మరియు వాటితో ఎలా ఇంటరాక్ట్ అవ్వాలో అర్థం చేసుకోవాలనుకుంటే, ఈ గైడ్ మీ కోసమే. వర్చువల్ వాలెట్ [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), మరియు [Alchemy](https://www.alchemy.com/eth) ఉపయోగించి Sepolia టెస్ట్ నెట్‌వర్క్‌లో ఒక సాధారణ స్మార్ట్ కాంట్రాక్ట్‌ను సృష్టించడం మరియు డిప్లాయ్ చేయడం ద్వారా మేము మీకు మార్గనిర్దేశం చేస్తాము (వీటి అర్థం మీకు ఇంకా తెలియకపోతే చింతించకండి, మేము వివరిస్తాము).
 
-ఈ ట్యుటోరియల్ యొక్క [పార్ట్ 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) లో, మన స్మార్ట్ కాంట్రాక్ట్ ఇక్కడ డిప్లాయ్ అయిన తర్వాత దానితో ఎలా ఇంటరాక్ట్ అవ్వవచ్చో చూస్తాము, మరియు [పార్ట్ 3](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) లో దాన్ని Etherscan లో ఎలా పబ్లిష్ చేయాలో కవర్ చేస్తాము.
+ఈ ట్యుటోరియల్ యొక్క [పార్ట్ 2](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) లో, మన స్మార్ట్ కాంట్రాక్ట్ ఇక్కడ డిప్లాయ్ అయిన తర్వాత దానితో ఎలా ఇంటరాక్ట్ అవ్వవచ్చో చూస్తాము, మరియు [పార్ట్ 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) లో దాన్ని Etherscan లో ఎలా పబ్లిష్ చేయాలో కవర్ చేస్తాము.
 
 మీకు ఏ సమయంలోనైనా ప్రశ్నలు ఉంటే, [Alchemy డిస్కార్డ్](https://discord.gg/gWuC7zB) లో సంప్రదించడానికి సంకోచించకండి!
 
@@ -59,22 +59,22 @@ published: 2021-03-31
 >
 > హమ్మయ్య! మన నకిలీ డబ్బు అంతా అక్కడే ఉంది <Emoji text=":money_mouth_face:" size={1} />.
 
-## దశ 6: మన ప్రాజెక్ట్‌ను ప్రారంభించండి {#step-6}
+## దశ 6: మన ప్రాజెక్ట్‌ను ఇనిషియలైజ్ చేయండి {#step-6}
 
-ముందుగా, మన ప్రాజెక్ట్ కోసం ఒక ఫోల్డర్‌ను సృష్టించాలి. మీ కమాండ్ లైన్‌కి వెళ్లి ఇలా టైప్ చేయండి:
+ముందుగా, మనం మన ప్రాజెక్ట్ కోసం ఒక ఫోల్డర్‌ను సృష్టించాలి. మీ కమాండ్ లైన్‌కి వెళ్లి ఇలా టైప్ చేయండి:
 
 ```
 mkdir hello-world
 cd hello-world
 ```
 
-ఇప్పుడు మనం మన ప్రాజెక్ట్ ఫోల్డర్ లోపల ఉన్నాము కాబట్టి, ప్రాజెక్ట్‌ను ప్రారంభించడానికి `npm init` ని ఉపయోగిస్తాము. మీకు ఇప్పటికే npm ఇన్‌స్టాల్ చేయబడి ఉండకపోతే, [ఈ సూచనలను](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) అనుసరించండి (మనకు Node.js కూడా అవసరం కాబట్టి దాన్ని కూడా డౌన్‌లోడ్ చేసుకోండి!).
+ఇప్పుడు మనం మన ప్రాజెక్ట్ ఫోల్డర్ లోపల ఉన్నాము కాబట్టి, ప్రాజెక్ట్‌ను ఇనిషియలైజ్ చేయడానికి మనం `npm init` ని ఉపయోగిస్తాము. మీకు ఇప్పటికే npm ఇన్‌స్టాల్ చేయబడి ఉండకపోతే, [Node.js ఇన్‌స్టాలేషన్ సూచనలను](https://nodejs.org/en/download/) అనుసరించండి (ఈ ట్యుటోరియల్ కోసం మనకు Node.js మరియు npm అవసరం).
 
 ```
 npm init
 ```
 
-ఇన్‌స్టాలేషన్ ప్రశ్నలకు మీరు ఎలా సమాధానం ఇస్తారనేది పెద్దగా పట్టింపు లేదు, సూచన కోసం మేము దీన్ని ఎలా చేశామో ఇక్కడ ఉంది:
+ఇన్‌స్టాలేషన్ ప్రశ్నలకు మీరు ఎలా సమాధానం ఇస్తారు అనేది అంత ముఖ్యం కాదు, రిఫరెన్స్ కోసం మేము దీన్ని ఎలా చేసామో ఇక్కడ ఉంది:
 
 ```
 package name: (hello-world)
@@ -94,7 +94,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
   "description": "hello world smart contract",
   "main": "index.js",
   "scripts": {
-     "test": "echo \\"Error: no test specified\\" && exit 1"
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
@@ -102,7 +102,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 package.json ని ఆమోదించండి మరియు మనం ముందుకు వెళ్లడానికి సిద్ధంగా ఉన్నాము!
-
 ## దశ 7: [Hardhat](https://hardhat.org/getting-started/#overview) ని డౌన్‌లోడ్ చేయండి {#step-7}
 
 Hardhat అనేది మీ ఎథీరియం సాఫ్ట్‌వేర్‌ను కంపైల్ చేయడానికి, డిప్లాయ్ చేయడానికి, పరీక్షించడానికి మరియు డీబగ్ చేయడానికి ఒక డెవలప్‌మెంట్ వాతావరణం. లైవ్ చైన్‌కు డిప్లాయ్ చేయడానికి ముందు స్థానికంగా స్మార్ట్ కాంట్రాక్ట్‌లు మరియు డాప్‌లను (dapps) నిర్మించేటప్పుడు ఇది డెవలపర్‌లకు సహాయపడుతుంది.
@@ -350,11 +349,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 అభినందనలు! మీరు ఇప్పుడే ఎథీరియం చైన్‌కు ఒక స్మార్ట్ కాంట్రాక్ట్‌ను డిప్లాయ్ చేసారు 🎉
 
-అంతర్గతంగా ఏమి జరుగుతుందో అర్థం చేసుకోవడానికి, మన [Alchemy డాష్‌బోర్డ్‌లోని](https://dashboard.alchemyapi.io/explorer) ఎక్స్‌ప్లోరర్ ట్యాబ్‌కి వెళ్దాం. మీకు బహుళ Alchemy యాప్‌లు ఉంటే, యాప్ ద్వారా ఫిల్టర్ చేసి “Hello World” ని ఎంచుకునేలా చూసుకోండి.
+అంతర్గతంగా ఏమి జరుగుతుందో అర్థం చేసుకోవడానికి, మన [Alchemy డాష్‌బోర్డ్‌లోని](https://dashboard.alchemy.com/explorer) ఎక్స్‌ప్లోరర్ ట్యాబ్‌కి వెళ్దాం. మీకు బహుళ Alchemy యాప్‌లు ఉంటే, యాప్ ద్వారా ఫిల్టర్ చేసి “Hello World” ని ఎంచుకునేలా చూసుకోండి.
 ![hello world explorer](./hello-world-explorer.png)
 
-మనం `.deploy()` ఫంక్షన్‌ను కాల్ చేసినప్పుడు Hardhat/Ethers మన కోసం అంతర్గతంగా చేసిన కొన్ని జేసన్-ఆర్‌పీసీ కాల్‌లను ఇక్కడ మీరు చూస్తారు. ఇక్కడ పేర్కొనవలసిన రెండు ముఖ్యమైనవి [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction), ఇది వాస్తవానికి మన కాంట్రాక్ట్‌ను Sepolia చైన్‌లో రాయడానికి అభ్యర్థన, మరియు [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash) ఇది హాష్ ఇచ్చినప్పుడు మన లావాదేవీ గురించి సమాచారాన్ని చదవడానికి అభ్యర్థన (లావాదేవీలు చేసేటప్పుడు ఇది ఒక సాధారణ పద్ధతి). లావాదేవీలను పంపడం గురించి మరింత తెలుసుకోవడానికి, [Web3 ఉపయోగించి లావాదేవీలను పంపడంపై](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) ఈ ట్యుటోరియల్‌ని చూడండి.
+మనం `.deploy()` ఫంక్షన్‌ను కాల్ చేసినప్పుడు Hardhat/Ethers మన కోసం అంతర్గతంగా చేసిన కొన్ని జేసన్-ఆర్‌పీసీ కాల్‌లను ఇక్కడ మీరు చూస్తారు. ఇక్కడ పేర్కొనవలసిన రెండు ముఖ్యమైనవి [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), ఇది వాస్తవానికి మన కాంట్రాక్ట్‌ను Sepolia చైన్‌లో రాయడానికి అభ్యర్థన, మరియు [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash) ఇది హాష్ ఇచ్చినప్పుడు మన లావాదేవీ గురించి సమాచారాన్ని చదవడానికి అభ్యర్థన (లావాదేవీలు చేసేటప్పుడు ఇది ఒక సాధారణ పద్ధతి). లావాదేవీలను పంపడం గురించి మరింత తెలుసుకోవడానికి, [Web3 ఉపయోగించి లావాదేవీలను పంపడంపై](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) ఈ ట్యుటోరియల్‌ని చూడండి.
 
-ఈ ట్యుటోరియల్ యొక్క పార్ట్ 1 కి అంతే, పార్ట్ 2 లో మనం మన ప్రారంభ సందేశాన్ని అప్‌డేట్ చేయడం ద్వారా వాస్తవానికి [మన స్మార్ట్ కాంట్రాక్ట్‌తో ఇంటరాక్ట్ అవుతాము](https://www.alchemy.com/docs/interacting-with-a-smart-contract), మరియు పార్ట్ 3 లో మనం [మన స్మార్ట్ కాంట్రాక్ట్‌ను Etherscan లో పబ్లిష్ చేస్తాము](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) తద్వారా దానితో ఎలా ఇంటరాక్ట్ అవ్వాలో అందరికీ తెలుస్తుంది.
+ఈ ట్యుటోరియల్ యొక్క పార్ట్ 1 కి అంతే, పార్ట్ 2 లో మనం మన ప్రారంభ సందేశాన్ని అప్‌డేట్ చేయడం ద్వారా వాస్తవానికి [మన స్మార్ట్ కాంట్రాక్ట్‌తో ఇంటరాక్ట్ అవుతాము](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract), మరియు పార్ట్ 3 లో మనం [మన స్మార్ట్ కాంట్రాక్ట్‌ను Etherscan లో పబ్లిష్ చేస్తాము](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) తద్వారా దానితో ఎలా ఇంటరాక్ట్ అవ్వాలో అందరికీ తెలుస్తుంది.
 
 **Alchemy గురించి మరింత తెలుసుకోవాలనుకుంటున్నారా? మా [వెబ్‌సైట్‌ను](https://www.alchemy.com/eth) చూడండి. ఏ అప్‌డేట్‌ను మిస్ అవ్వకూడదనుకుంటున్నారా? మా వార్తాలేఖకు [ఇక్కడ](https://www.alchemy.com/newsletter) సభ్యత్వం పొందండి! మా [డిస్కార్డ్‌లో](https://discord.gg/u72VCg3) కూడా తప్పకుండా చేరండి.**.

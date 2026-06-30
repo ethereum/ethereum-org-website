@@ -28,7 +28,7 @@ Termín „vrstva 2 (l2)“ se používá pro rollup nebo jakýkoli jiný systé
 
 [Optimistické rollupy](/developers/docs/scaling/optimistic-rollups) musí uchovávat záznam o každé historické transakci, aby si je kdokoli mohl projít a ověřit, že je aktuální stav správný.
 Nejlevnější způsob, jak dostat data do Ethereum Mainnetu, je zapsat je jako data volání.
-Toto řešení zvolily sítě [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) i [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+Toto řešení zvolily sítě [Optimism](https://docs.optimism.io/op-stack/protocol/overview) i [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
 
 ### Náklady na transakce na l2 {#cost-of-l2-transactions}
 
@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 Potřebujeme funkci tokenu, abychom věděli, jak ji zavolat.
 
 ```solidity
-kontrakt CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ Adresa tokenu, pro který jsme proxy kontraktem.
      * @dev Určuje adresu tokenu
      * @param tokenAddr_ adresa kontraktu ERC-20
      */
-    konstruktor(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

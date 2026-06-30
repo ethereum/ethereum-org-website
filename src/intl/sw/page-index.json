@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Ethereum - Mwongozo kamili kutoka Ethereum.org",
+  "page-index-meta-title": "Ethereum - Mwongozo kamili kutoka ethereum.org",
   "page-index-meta-description": "Ethereum ni jukwaa la kimataifa, lililogatuliwa kwa ajili ya pesa na aina mpya za programu. Kwenye Ethereum, unadhibiti pesa, data na utambulisho wako mwenyewe. Hakuna benki, hakuna mtu wa kati, hakuna ruhusa inayohitajika.",
   "page-index-description": "Jukwaa linaloongoza kwa programu bunifu na mitandao ya mnyororo wa vitalu",
   "page-index-title": "Karibu kwenye Ethereum",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Mitandao ya faragha na yenye ruhusa",
   "page-index-get-started-enterprise-bullet-3": "Rasilimali za taasisi",
   "page-index-get-started-enterprise-cta": "Gundua biashara",
-  "page-index-simulator-cta": "Jaribu miongozo zaidi"
+  "page-index-simulator-cta": "Jaribu miongozo zaidi",
+  "page-index-latest-updates-title": "Masasisho ya hivi punde ya Ethereum",
+  "page-index-latest-updates-cta": "Tazama zaidi"
 }

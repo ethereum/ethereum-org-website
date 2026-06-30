@@ -471,7 +471,7 @@ def safeTransferFrom(
          如果 `_from` 不是目前的擁有者則拋出錯誤。
          如果 `_to` 是零地址則拋出錯誤。
          如果 `_tokenId` 不是有效的 NFT 則拋出錯誤。
-         如果 `_to` 是智慧合約，它會在 `_to` 上呼叫 `onERC721Received`，如果
+         如果 `_to` 是智能合約，它會在 `_to` 上呼叫 `onERC721Received`，如果
          回傳值不是 `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))` 則拋出錯誤。
          注意：bytes4 由帶有填充的 bytes32 表示
     @param _from NFT 的目前擁有者。

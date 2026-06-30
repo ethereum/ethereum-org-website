@@ -123,22 +123,6 @@ title: "..."
 
 Якщо у вас немає транскрипту, ви можете залишити тіло файлу порожнім, і команда згенерує його.
 
-#### Крок 4: Виберіть теги тем {#step-4}
-
-Виберіть теги тем, які відповідають існуючим категоріям, що використовуються в галереї. Поточні категорії та їхні теги включають:
-
-- **Як працює Етеріум**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Оновлення мережі**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Дорожня карта та пріоритети**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Масштабування та рівень 2 (l2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Варіанти використання**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Приватність та безпека**: `privacy-and-security`, `privacy`, `authentication`
-- **Історії спільноти**: `community-stories`, `contributing`, `translations`, `community`
-
-Щоб ваше відео з'явилося на полиці категорії в галереї, додайте принаймні один ключовий тег категорії (назва жирним шрифтом у форматі kebab-case, наприклад, `use-cases` або `scaling-and-layer-2`). Відео без розпізнаного тегу категорії відображатимуться лише в поданні «Усі» та в результатах пошуку.
-
-Ви також можете використовувати нові теги — вони будуть доступні для майбутніх групувань за категоріями.
-
 #### Крок 5: Надішліть свій PR {#step-5}
 
 Відкрийте pull request зі своїми змінами до гілки `dev`. Команда розгляне вашу заявку та надасть зворотний зв'язок.

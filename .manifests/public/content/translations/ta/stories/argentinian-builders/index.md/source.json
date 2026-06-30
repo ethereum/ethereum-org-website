@@ -1,0 +1,446 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/stories/argentinian-builders/index.md",
+  "generatedAt": "2026-06-30T00:55:57.479Z",
+  "rootHash": "07239d461174",
+  "tree": {
+    "contentHash": "7526dd41a12f",
+    "anchorHash": "dc2b928bb4bb",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "a753e88080c6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "8f09996a06d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6aadb314782a"
+      },
+      "frontmatter:team": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "173ad61b14fe"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bb73a1a15d6b"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "37a316189190"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "85259ec7ee8b"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "0570de5b7f0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "141635f29454",
+        "anchorHash": "0171d356f868"
+      },
+      "prose:2": {
+        "contentHash": "05cb288b8dd6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "a-crisis-that-rewired-a-generation": {
+        "contentHash": "68b538e4cd86",
+        "anchorHash": "707d8cae46c5",
+        "labelHash": "7a20693f8bd2",
+        "children": {
+          "_label": {
+            "contentHash": "7a20693f8bd2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "52019903011c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d00ff73b3080",
+            "anchorHash": "c6b056f42dfa"
+          },
+          "prose:6": {
+            "contentHash": "defd6d8024d0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "0ef43a7b3495",
+            "anchorHash": "2eeb5dfa1124"
+          },
+          "prose:7": {
+            "contentHash": "37b565cc476b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "d28a9d9c1118",
+            "anchorHash": "4d456c1ebeec"
+          },
+          "prose:8": {
+            "contentHash": "7d394b4ed1f2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:3": {
+            "contentHash": "b6e12795ecec",
+            "anchorHash": "ad67d809ccff"
+          },
+          "prose:9": {
+            "contentHash": "d2e2adf7177b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "0e570ca6fabe",
+            "anchorHash": "66dd41310c42"
+          },
+          "prose:10": {
+            "contentHash": "30b610f4bbfa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "image:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "from-coworking-space-to-crypto-frontier": {
+        "contentHash": "898fc0e01d0d",
+        "anchorHash": "523d8e53fbd8",
+        "labelHash": "0ef174719e01",
+        "children": {
+          "_label": {
+            "contentHash": "0ef174719e01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:12": {
+            "contentHash": "a131a879e5da",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7a789fd4d170",
+            "anchorHash": "bf0a1ba0f8af"
+          },
+          "prose:13": {
+            "contentHash": "f8ae389591e0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:1": {
+            "contentHash": "cfbe29e293b7",
+            "anchorHash": "648273251ec6"
+          },
+          "prose:14": {
+            "contentHash": "d2e2adf7177b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "4be96da53a57",
+            "anchorHash": "e1fcdda36aea"
+          },
+          "prose:15": {
+            "contentHash": "ee8f4fe0f8f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "d140e31d2d69",
+            "anchorHash": "d717eabce46e"
+          },
+          "prose:16": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "3e28c95515db",
+            "anchorHash": "692a1393c5c8"
+          },
+          "prose:17": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "164ff9f4e055",
+            "anchorHash": "829219ee5ec2"
+          },
+          "prose:18": {
+            "contentHash": "4aa9bfd2f175",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "4023b5d5e4f2",
+            "anchorHash": "0eee61fe909b"
+          },
+          "prose:19": {
+            "contentHash": "af6a74f80d67",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:7": {
+            "contentHash": "407cf719e96a",
+            "anchorHash": "fa7761b6ca0c"
+          },
+          "prose:20": {
+            "contentHash": "e4dfca644da3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:8": {
+            "contentHash": "0ee6a12c8b08",
+            "anchorHash": "8bc4eb56bca2"
+          },
+          "prose:21": {
+            "contentHash": "064a51d929e6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:9": {
+            "contentHash": "2ffc21c70b52",
+            "anchorHash": "5c9d0d61ef4f"
+          },
+          "prose:22": {
+            "contentHash": "f98d0c885c51",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "2427c48003b0",
+            "anchorHash": "9acc694d9bd1"
+          },
+          "prose:23": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "64b0b3443e0e",
+            "anchorHash": "a9c911eedacf"
+          },
+          "prose:24": {
+            "contentHash": "30b610f4bbfa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:12",
+          "link:0",
+          "prose:13",
+          "image:1",
+          "prose:14",
+          "link:2",
+          "prose:15",
+          "link:3",
+          "prose:16",
+          "link:4",
+          "prose:17",
+          "link:5",
+          "prose:18",
+          "link:6",
+          "prose:19",
+          "image:7",
+          "prose:20",
+          "image:8",
+          "prose:21",
+          "image:9",
+          "prose:22",
+          "link:10",
+          "prose:23",
+          "link:11",
+          "prose:24"
+        ]
+      },
+      "milestones-made-in-argentina": {
+        "contentHash": "f4b81d06b728",
+        "anchorHash": "f86c9b8591e6",
+        "labelHash": "cdc8e48521dd",
+        "children": {
+          "_label": {
+            "contentHash": "cdc8e48521dd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "bcc1cfb69964",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "5e7079d9cbf2",
+            "anchorHash": "639852a59d97"
+          },
+          "prose:7": {
+            "contentHash": "d2e2adf7177b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "0e570ca6fabe",
+            "anchorHash": "be733e852a85"
+          },
+          "prose:8": {
+            "contentHash": "dda96bea3e31",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "5296b0ffc37b",
+            "anchorHash": "0ca9ebd1fe2b"
+          },
+          "prose:9": {
+            "contentHash": "971620426553",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "c0caf5025165",
+            "anchorHash": "12bbe5c6e147"
+          },
+          "prose:10": {
+            "contentHash": "f4ea3bf5d410",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "616a69d8d4a3",
+            "anchorHash": "72324d0812ad"
+          },
+          "prose:11": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "0ac864497e01",
+            "anchorHash": "708e7228af87"
+          },
+          "prose:12": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:14": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "be9102ac4535",
+            "children": {
+              "attr:id": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "29068e8e9b46"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "image:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5",
+          "prose:12",
+          "component:14"
+        ]
+      },
+      "bringing-ethereum-home": {
+        "contentHash": "72b039ca8887",
+        "anchorHash": "b30c1d31f239",
+        "labelHash": "fe2a0b8e4d24",
+        "children": {
+          "_label": {
+            "contentHash": "fe2a0b8e4d24",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "930a5bca49aa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "23d3e586bad8",
+            "anchorHash": "d07770a5cd75"
+          },
+          "prose:6": {
+            "contentHash": "d2e2adf7177b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "0e570ca6fabe",
+            "anchorHash": "17f517b178e8"
+          },
+          "prose:7": {
+            "contentHash": "3dfc467f50d9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:2": {
+            "contentHash": "4b0aadaaa7ae",
+            "anchorHash": "2cbbd29bea7b"
+          },
+          "prose:8": {
+            "contentHash": "d2e2adf7177b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "0e570ca6fabe",
+            "anchorHash": "23d2bba26c02"
+          },
+          "prose:9": {
+            "contentHash": "42d8bd2c5806",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "6aa3e79dcdac",
+            "anchorHash": "ac0961ab264e"
+          },
+          "prose:10": {
+            "contentHash": "30b610f4bbfa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "image:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "image:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:team",
+      "frontmatter:tags",
+      "frontmatter:published",
+      "frontmatter:image",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "a-crisis-that-rewired-a-generation",
+      "from-coworking-space-to-crypto-frontier",
+      "milestones-made-in-argentina",
+      "bringing-ethereum-home"
+    ]
+  },
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+}

@@ -123,22 +123,6 @@ Sử dụng các tiêu đề `###` kèm theo dấu thời gian để đánh dấ
 
 Nếu bạn không có bản chép lời, bạn có thể để trống phần thân (body) và đội ngũ sẽ tạo một bản.
 
-#### Bước 4: Chọn thẻ chủ đề {#step-4}
-
-Chọn các thẻ chủ đề phù hợp với các danh mục hiện có được sử dụng trong thư viện. Các danh mục hiện tại và thẻ của chúng bao gồm:
-
-- **Cách Ethereum hoạt động**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Nâng cấp mạng lưới**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Lộ trình & Ưu tiên**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Mở rộng quy mô & Lớp 2**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Trường hợp sử dụng**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Quyền riêng tư & Bảo mật**: `privacy-and-security`, `privacy`, `authentication`
-- **Câu chuyện cộng đồng**: `community-stories`, `contributing`, `translations`, `community`
-
-Để đảm bảo video của bạn xuất hiện trong một kệ danh mục của thư viện, hãy bao gồm ít nhất một thẻ khóa danh mục (tên in đậm được viết dưới dạng kebab-case, ví dụ: `use-cases` hoặc `scaling-and-layer-2`). Các video không có thẻ danh mục được nhận diện sẽ chỉ xuất hiện trong chế độ xem "Tất cả" và kết quả tìm kiếm.
-
-Bạn cũng có thể sử dụng các thẻ mới — chúng sẽ có sẵn cho các nhóm danh mục trong tương lai.
-
 #### Bước 5: Gửi PR của bạn {#step-5}
 
 Mở một pull request với các thay đổi của bạn vào nhánh `dev`. Đội ngũ sẽ xem xét nội dung bạn gửi và cung cấp phản hồi.

@@ -758,9 +758,9 @@ Tímto způsobem ověřujeme, že kód ve Foundry [správně emituje událost](h
 
 ### Klient {#the-client}
 
-Jedna věc, kterou s testy v Solidity nezískáte, je kód v JavaScriptu, který můžete zkopírovat a vložit do své vlastní aplikace. Abych tento kód napsal, nasadil jsem WORM na [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), nový testnet sítě [Optimism](https://www.optimism.io/). Nachází se na adrese [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Jednou z věcí, kterou u testů v Solidity nezískáte, je kód v JavaScriptu, který byste mohli zkopírovat a vložit do své vlastní aplikace. Původní verze tohoto tutoriálu nasadila WORM na síť Optimism Goerli, která však již byla ukončena. Chcete-li klienta spustit dnes, nasaďte WORM znovu na podporovanou síť OP Stack, jako je [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), a poté použijte výslednou adresu kontraktu v klientovi v JavaScriptu.
 
-[Kód v JavaScriptu pro klienta si můžete prohlédnout zde](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Chcete-li jej použít:
+[Kód v JavaScriptu pro klienta si můžete prohlédnout zde](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Ukázkový repozitář byl napsán pro Optimism Goerli, takže před jeho spuštěním aktualizujte koncový bod RPC a URL adresy prohlížeče bloků v souborech `javascript/.env.example` a `javascript/index.js` pro vaši cílovou síť. Chcete-li jej použít:
 
 1. Naklonujte git repozitář:
 
@@ -781,12 +781,12 @@ Jedna věc, kterou s testy v Solidity nezískáte, je kód v JavaScriptu, který
    cp .env.example .env
    ```
 
-4. Upravte `.env` pro vaši konfiguraci:
+4. Upravte soubor `.env` podle vaší konfigurace:
 
-   | Parametr | Hodnota |
+   | Parametr            | Hodnota                                                                                                                                                               |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC | Mnemotechnická pomůcka (seed) pro účet, který má dostatek ETH na zaplacení transakce. [Zde můžete získat zdarma ETH pro síť Optimism Goerli](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL na Optimism Goerli. Veřejný koncový bod, `https://goerli.optimism.io`, je omezen rychlostí (rate limited), ale pro naše potřeby zde postačuje. |
+   | MNEMONIC            | Mnemotechnická pomůcka (seed) pro účet, který má dostatek ETH na zaplacení transakce. [Dokumentace k faucetům sítě Optimism](https://docs.optimism.io/app-developers/tools/faucets) uvádí aktuální faucety pro testnet. |
+   | OPTIMISM_GOERLI_URL | RPC URL pro síť, do které znovu nasadíte WORM. Pro OP Sepolia použijte koncový bod RPC pro OP Sepolia, například `https://sepolia.optimism.io`, nebo jiný koncový bod od vašeho poskytovatele.        |
 
 5. Spusťte `index.js`.
 
@@ -794,9 +794,9 @@ Jedna věc, kterou s testy v Solidity nezískáte, je kód v JavaScriptu, který
    node index.js
    ```
 
-   Tato ukázková aplikace nejprve zapíše záznam do WORM, přičemž zobrazí data volání a odkaz na transakci na Etherscanu. Poté tento záznam přečte zpět a zobrazí klíč, který používá, a hodnoty v záznamu (hodnota, číslo bloku a autor).
+   Tato ukázková aplikace nejprve zapíše záznam do WORM, přičemž zobrazí data volání a odkaz na transakci v prohlížeči bloků. Poté tento záznam přečte zpět a zobrazí klíč, který používá, a hodnoty v záznamu (hodnotu, číslo bloku a autora).
 
-Většina klienta je běžný JavaScript pro dapp. Takže si opět projdeme jen ty zajímavé části.
+Většina klienta je běžný JavaScript pro decentralizovanou aplikaci (dapp). Takže si opět projdeme jen ty zajímavé části.
 
 ```javascript
 .
@@ -805,7 +805,7 @@ Většina klienta je běžný JavaScript pro dapp. Takže si opět projdeme jen 
 const main = async () => {
     const func = await worm.WRITE_ENTRY_CACHED()
 
-    // Pokaždé je potřeba nový klíč
+    // Pokaždé potřebujeme nový klíč
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
@@ -818,7 +818,7 @@ const val = await worm.encodeVal("0x600D")
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers očekává, že data volání budou hexadecimální řetězec, `0x` následovaný sudým počtem hexadecimálních číslic. Vzhledem k tomu, že `key` i `val` začínají na `0x`, musíme tyto hlavičky odstranit.
+Knihovna Ethers očekává, že data volání budou hexadecimální řetězec, tedy `0x` následované sudým počtem hexadecimálních číslic. Protože `key` i `val` začínají na `0x`, musíme tyto hlavičky odstranit.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -841,8 +841,7 @@ Stejně jako u testovacího kódu v Solidity nemůžeme cachovanou funkci volat 
     .
 ```
 
-Pro čtení záznamů můžeme použít normální mechanismus. U funkcí `view` není nutné používat cachování parametrů.
-
+Pro čtení záznamů můžeme použít normální mechanismus. U `view` funkcí není nutné používat cachování parametrů.
 ## Závěr {#conclusion}
 
 Kód v tomto článku je proof of concept (ověření konceptu), jehož účelem je usnadnit pochopení této myšlenky. Pro systém připravený do produkce byste možná chtěli implementovat některé další funkce:

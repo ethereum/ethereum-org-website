@@ -72,15 +72,18 @@ Velikost databáze a rychlost počáteční synchronizace závisí na zvoleném 
 Také se ujistěte, že vaše internetové připojení není omezeno [datovým limitem](https://wikipedia.org/wiki/Data_cap). Doporučuje se používat neomezené připojení, protože počáteční synchronizace a data vysílaná do sítě by mohla váš limit překročit.
 
 ##### Operační systém
+
 Všichni klienti podporují hlavní operační systémy – Linux, macOS, Windows. To znamená, že můžete provozovat uzly na běžných stolních nebo serverových počítačích s operačním systémem (OS), který vám nejvíce vyhovuje. Ujistěte se, že je váš OS aktuální, abyste předešli potenciálním problémům a bezpečnostním zranitelnostem.
 
 ##### Minimální požadavky
+
 - CPU se 2+ jádry
 - 8 GB RAM
 - 2TB SSD
 - Šířka pásma 10+ MBit/s
 
 ##### Doporučené specifikace
+
 - Rychlý CPU se 4+ jádry
 - 16 GB+ RAM
 - Rychlé SSD s 2+TB
@@ -149,6 +152,7 @@ Pokyny k instalaci každého klienta jsou uvedeny v dokumentaci odkazované v se
 Zde jsou stránky s vydáními klientů, kde najdete jejich předkompilované binární soubory nebo pokyny k instalaci:
 
 ##### Exekuční klienti
+
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads)
@@ -158,6 +162,7 @@ Zde jsou stránky s vydáními klientů, kde najdete jejich předkompilované bi
 Za zmínku také stojí, že klientská diverzita je [problémem na exekuční vrstvě](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Čtenářům se doporučuje zvážit provozování menšinového exekučního klienta.
 
 ##### Konsensuální klienti
+
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Neposkytuje předkompilovaný binární soubor, pouze obraz Dockeru nebo je nutné jej zkompilovat ze zdrojového kódu)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
@@ -169,6 +174,7 @@ Za zmínku také stojí, že klientská diverzita je [problémem na exekuční v
 [Podívejte se na nejnovější využití klientů v síti](https://clientdiversity.org/) a zjistěte více o [klientské diverzitě](/developers/docs/nodes-and-clients/client-diversity).
 
 ##### Ověření softwaru
+
 Při stahování softwaru z internetu se doporučuje ověřit jeho integritu. Tento krok je volitelný, ale zejména u klíčové součásti infrastruktury, jako je klient Etherea, je důležité si být vědom potenciálních vektorů útoku a vyhnout se jim. Pokud jste si stáhli předkompilovaný binární soubor, musíte mu důvěřovat a riskovat, že by útočník mohl spustitelný soubor vyměnit za škodlivý.
 
 Vývojáři podepisují vydané binární soubory svými PGP klíči, takže můžete kryptograficky ověřit, že spouštíte přesně ten software, který vytvořili. Stačí získat veřejné klíče používané vývojáři, které najdete na stránkách s vydáními klientů nebo v dokumentaci. Po stažení vydání klienta a jeho podpisu můžete k jejich snadnému ověření použít implementaci PGP, např. [GnuPG](https://gnupg.org/download/index.html). Podívejte se na návod k ověřování open-source softwaru pomocí `gpg` na [Linuxu](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) nebo [Windows/macOS](https://freedom.press/training/verifying-open-source-software/).
@@ -233,6 +239,7 @@ Mějte prosím na paměti, že se jedná pouze o základní příklad, všechna 
 > Vezměte na vědomí, že zpětná lomítka `\` v příkladech slouží pouze pro účely formátování; konfigurační příznaky lze definovat na jednom řádku.
 
 ##### Spuštění Besu
+
 Tento příklad spustí Besu na Mainnetu, uloží data blockchainu ve výchozím formátu do `/data/ethereum`, povolí JSON-RPC a Engine RPC pro připojení konsensuálního klienta. Engine API je ověřeno tokenem `jwtsecret` a jsou povolena pouze volání z `localhost`.
 
 ```sh
@@ -254,6 +261,7 @@ besu --Xlauncher
 [Dokumentace Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) obsahuje další možnosti a podrobnosti o konfiguraci.
 
 ##### Spuštění Erigon
+
 Tento příklad spustí Erigon na Mainnetu, uloží data blockchainu do `/data/ethereum`, povolí JSON-RPC, definuje, které jmenné prostory jsou povoleny, a povolí ověřování pro připojení konsensuálního klienta, které je definováno cestou `jwtsecret`.
 
 ```sh
@@ -266,6 +274,7 @@ erigon --chain mainnet \
 Erigon ve výchozím nastavení provádí plnou synchronizaci s 8GB HDD, což povede k více než 2 TB archivních dat. Ujistěte se, že `datadir` ukazuje na disk s dostatkem volného místa, nebo se podívejte na příznak `--prune`, který může oříznout různé druhy dat. Pro více informací zkontrolujte `--help` Erigonu.
 
 ##### Spuštění Geth
+
 Tento příklad spustí Geth na Mainnetu, uloží data blockchainu do `/data/ethereum`, povolí JSON-RPC a definuje, které jmenné prostory jsou povoleny. Povoluje také ověřování pro připojení konsensuálního klienta, které vyžaduje cestu k `jwtsecret` a také možnost definující, která připojení jsou povolena, v našem příkladu pouze z `localhost`.
 
 ```sh
@@ -280,6 +289,7 @@ geth --mainnet \
 Podívejte se do [dokumentace na všechny možnosti konfigurace](https://geth.ethereum.org/docs/fundamentals/command-line-options) a zjistěte více o [spuštění Geth s konsensuálním klientem](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
 ##### Spuštění Nethermind
+
 Nethermind nabízí různé [možnosti instalace](https://docs.nethermind.io/get-started/installing-nethermind). Balíček obsahuje různé binární soubory, včetně spouštěče (Launcher) s řízeným nastavením, který vám pomůže interaktivně vytvořit konfiguraci. Alternativně najdete Runner, což je samotný spustitelný soubor a můžete jej jednoduše spustit s konfiguračními příznaky. JSON-RPC je ve výchozím nastavení povoleno.
 
 ```sh
@@ -293,6 +303,7 @@ Dokumentace Nethermind nabízí [kompletního průvodce](https://docs.nethermind
 Exekuční klient zahájí své základní funkce, vybrané koncové body a začne hledat peery. Po úspěšném objevení peerů klient zahájí synchronizaci. Exekuční klient bude čekat na připojení od konsensuálního klienta. Aktuální data blockchainu budou k dispozici, jakmile bude klient úspěšně synchronizován do aktuálního stavu.
 
 ##### Spuštění Reth
+
 Tento příklad spustí Reth na Mainnetu s použitím výchozího umístění dat. Povoluje JSON-RPC a ověřování Engine RPC pro připojení konsensuálního klienta, které je definováno cestou `jwtsecret`, přičemž jsou povolena pouze volání z `localhost`.
 
 ```sh
@@ -317,6 +328,7 @@ Při spouštění uzlu Beacon na testnetu můžete ušetřit značný čas synch
 #### Spuštění konsensuálního klienta {#running-a-consensus-client}
 
 ##### Spuštění Lighthouse
+
 Před spuštěním Lighthouse se dozvíte více o tom, jak jej nainstalovat a nakonfigurovat v [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
 
 ```sh
@@ -329,6 +341,7 @@ lighthouse beacon_node \
 ```
 
 ##### Spuštění Lodestar
+
 Nainstalujte software Lodestar jeho kompilací nebo stažením obrazu Dockeru. Zjistěte více v [dokumentaci](https://chainsafe.github.io/lodestar/) a v komplexnějším [průvodci nastavením](https://hackmd.io/@philknows/rk5cDvKmK).
 
 ```sh
@@ -341,6 +354,7 @@ lodestar beacon \
 ```
 
 ##### Spuštění Nimbus
+
 Nimbus přichází s konsensuálními i exekučními klienty. Lze jej spustit na různých zařízeních i s velmi skromným výpočetním výkonem.
 Po [instalaci závislostí a samotného Nimbusu](https://nimbus.guide/quick-start.html) můžete spustit jeho konsensuálního klienta:
 
@@ -353,6 +367,7 @@ nimbus_beacon_node \
 ```
 
 ##### Spuštění Prysm
+
 Prysm přichází se skriptem, který umožňuje snadnou automatickou instalaci. Podrobnosti najdete v [dokumentaci Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
@@ -364,6 +379,7 @@ Prysm přichází se skriptem, který umožňuje snadnou automatickou instalaci.
 ```
 
 ##### Spuštění Teku
+
 ```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \
@@ -371,7 +387,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Když se konsensuální klient připojí k exekučnímu klientovi, aby přečetl depozitní kontrakt a identifikoval validátory, připojí se také k dalším peerům uzlu Beacon a začne synchronizovat konsensuální sloty od genesis. Jakmile uzel Beacon dosáhne aktuální epochy, Beacon API se stane použitelným pro vaše validátory. Zjistěte více o [API uzlu Beacon](https://eth2docs.vercel.app/).
+Když se konsensuální klient připojí k exekučnímu klientovi, aby přečetl depozitní kontrakt a identifikoval validátory, připojí se také k dalším peerům uzlu Beacon a začne synchronizovat konsensuální sloty od genesis. Jakmile uzel Beacon dosáhne aktuální epochy, Beacon API se stane použitelným pro vaše validátory. Zjistěte více o [API uzlu Beacon](https://ethereum.github.io/beacon-APIs).
 
 ### Přidání validátorů {#adding-validators}
 
@@ -454,7 +470,7 @@ V rámci monitorování nezapomeňte sledovat výkon vašeho stroje. Během poč
 - [Průvodci stakingem Etherea](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, často aktualizováno_
 - [Průvodce | Jak nastavit validátor pro staking Etherea na Mainnetu](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, často aktualizováno_
 - [Průvodci EthStaker pro provozování validátorů na testnetech](https://github.com/remyroy/ethstaker#guides) – _EthStaker, pravidelně aktualizováno_
-- [Ukázková aplikace AWS Blockchain Node Runner pro uzly Etherea](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, často aktualizováno_
+- [Ukázková aplikace AWS Blockchain Node Runner pro uzly Etherea](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, často aktualizováno_
 - [Časté dotazy k Merge pro provozovatele uzlů](https://notes.ethereum.org/@launchpad/node-faq-merge) - _červenec 2022_
 - [Analýza hardwarových požadavků pro plně validovaný uzel Etherea](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24. září 2018_
 - [Provozování plných uzlů Etherea: Průvodce pro sotva motivované](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7. listopadu 2019_

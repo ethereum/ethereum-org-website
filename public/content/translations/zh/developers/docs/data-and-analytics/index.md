@@ -75,7 +75,7 @@ EVM 查询语言 (EQL) 是一种类似 SQL 的语言，旨在查询 EVM（以太
 - [Dune 基础知识](https://docs.dune.com/#dune-basics)
 - [SubQuery 以太坊快速入门指南](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD 网络概述](https://docs.sqd.dev/)
-- [EVM 查询语言](https://eql.sh/blog/alpha-release-notes)
+- [EVM 查询语言](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## 教程：数据与分析 / 以太坊上的 SQL {#tutorials}
 
