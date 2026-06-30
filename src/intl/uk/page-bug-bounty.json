@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "Програма винагород Етеріум враховує низку змінних при визначенні винагород. Визначення відповідності вимогам, кількості балів та всіх умов, пов'язаних із винагородою, залишається на виключний та остаточний розсуд комісії Bug Bounty Фундації Ethereum.",
   "page-upgrades-bug-bounty-leaderboard": "Переглянути повні таблиці лідерів",
   "page-upgrades-bug-bounty-leaderboard-list": "Таблиця лідерів Bug Bounty",
+  "page-upgrades-bug-bounty-leaderboard-position": "На {rank} місці з {score, plural, one {# балом} few {# балами} many {# балами} other {# балами}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(Переглянути профіль GitHub)",
   "page-upgrades-bug-bounty-leaderboard-points": "балів",
   "page-upgrades-bug-bounty-ledger-desc": "Специфікації Етеріум детально описують обґрунтування дизайну для рівня виконання та рівня консенсусу.",
   "page-upgrades-bug-bounty-ledger-title": "Баги специфікації",

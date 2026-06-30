@@ -137,5 +137,16 @@
   "page-developers-why-title": "Отримуйте гідну оплату. Працюйте віддалено. Будуйте майбутнє.",
   "page-developers-why-subtitle": "Понад половина вакансій у сфері блокчейну передбачають віддалену роботу, а за деякими оцінками ця цифра сягає 70%.",
   "page-developers-why-avg-salary-dev": "Середня зарплата розробника",
-  "page-developers-why-avg-salary-blockchain": "Середня зарплата в блокчейн-індустрії"
+  "page-developers-why-avg-salary-blockchain": "Середня зарплата в блокчейн-індустрії",
+  "page-developers-why-grid-money-heading": "Гроші, які можна програмувати",
+  "page-developers-why-grid-money-desc": "Пишіть код, який визначає, як, коли та кому передається цінність. Жодних банків чи посередників — лише логіка, яку визначаєте ви.",
+  "page-developers-why-grid-skills-heading": "Навички майбутнього",
+  "page-developers-why-grid-skills-desc": "Вивчайте базові елементи інтернету майбутнього. Технології можуть розвиватися, але принципи Web3 залишаться з нами.",
+  "page-developers-why-grid-censorship-heading": "Стійкість до цензури",
+  "page-developers-why-grid-censorship-desc": "Створюйте проєкти та комерцію, які не зможуть заблокувати уряди, корпорації чи алгоритми. Якщо це важливо, воно залишається онлайн.",
+  "page-developers-why-grid-sovereignty-heading": "Цифровий суверенітет",
+  "page-developers-why-grid-sovereignty-desc": "Володійте своєю ідентичністю, активами та творіннями в інтернеті, не покладаючись на платформи, які можуть вас видалити.",
+  "page-developers-blog-title": "Оновлення для будівельників",
+  "page-developers-blog-desc": "Огляди найновіших ресурсів, інструментів та розробок для будівельників Етеріуму.",
+  "page-developers-blog-view-all": "Переглянути всі оновлення"
 }

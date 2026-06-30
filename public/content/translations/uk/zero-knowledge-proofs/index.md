@@ -235,5 +235,5 @@ ZK-STARK вважається несприйнятливим до загрози
 - [ZK-STARKs — створення довіри, що піддається перевірці, навіть проти квантових комп'ютерів](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Приблизний вступ до того, як можливі zk-SNARKs](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Чому доведення з нульовим розголошенням (ZKP) змінюють правила гри для суверенної ідентифікації](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [Пояснення EIP-7503: уможливлення приватних переказів в Етеріумі за допомогою ZK-доведень](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [Пояснення EIP-7503: уможливлення приватних переказів в Етеріумі за допомогою ZK-доведень](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Карткова гра ZK: гра для вивчення основ ZK та реальних варіантів використання](https://github.com/ZK-card/zk-cards) - _ZK-Cards_

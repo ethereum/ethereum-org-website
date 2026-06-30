@@ -28,7 +28,7 @@ published: 2022-04-01
 
 [Optimistic-ролапи](/developers/docs/scaling/optimistic-rollups) повинні зберігати запис кожної історичної транзакції, щоб будь-хто міг переглянути їх і переконатися, що поточний стан є правильним.
 Найдешевший спосіб передати дані в головну мережу Ethereum — записати їх як дані виклику (calldata).
-Це рішення обрали як [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-), так і [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+Це рішення обрали як [Optimism](https://docs.optimism.io/op-stack/protocol/overview), так і [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
 
 ### Вартість транзакцій рівня 2 (l2) {#cost-of-l2-transactions}
 

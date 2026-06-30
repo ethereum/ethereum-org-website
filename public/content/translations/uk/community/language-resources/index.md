@@ -27,7 +27,7 @@ Ethereum.org перекладено більш ніж 40 мовами, які в
 **Новини**
 
 - [BeInCrypto](http://www.beincrypto.com.br) — новини та статті про криптовалюту, включно зі списком бірж, доступних у Бразилії
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) — бразильська версія Cointelegraph, великого новинного видання про криптовалюту
+- [Cointelegraph](https://cointelegraph.com.br/) — бразильська версія Cointelegraph, великого новинного видання про криптовалюту
 - [Livecoins](http://www.livecoins.com.br/ethereum) — новини та інструменти для криптовалюти
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) — новини та звіти про криптовалюту
 - [Modular Crypto](https://modularcrypto.xyz/) — новини та освітні статті про криптовалюту
@@ -37,7 +37,7 @@ Ethereum.org перекладено більш ніж 40 мовами, які в
 - [web3dev](https://www.web3dev.com.br/) — контент-хаб та спільнота в Discord для розробників Web3.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) — ресурси для вивчення Web3 та децентралізованих фінансів (DeFi)
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) — новини та освіта про криптовалюту, включно з «Етеріум для початківців» та «DeFi для початківців»
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) — інсайти з криптовалютного простору, освіта та блог
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) — інсайти з криптовалютного простору, освіта та блог
 - [Cointimes](http://www.cointimes.com.br/) — новини та освіта про криптовалюту
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) — посібник, що відповідає на найпоширеніші та фундаментальні питання про крипто
 

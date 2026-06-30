@@ -52,7 +52,7 @@ lang: uk
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> — спільнота творців Web3, де збираються розробники, лідери індустрії та ентузіасти Етеріуму. Ми захоплені розробкою, дизайном та культурою Web3. Приєднуйтесь до нас.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — чат для розробки на Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>— форум запитань і відповідей</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>— децентралізований форум запитань і відповідей</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>— децентралізований форум запитань і відповідей</i></SocialListItem>
 
 ## YouTube та X (колишній Twitter) {#youtube-and-twitter}
 

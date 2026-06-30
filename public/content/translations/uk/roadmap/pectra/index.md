@@ -117,11 +117,9 @@ _Що входить в оновлення Пектра? - Крістін Кім
 
 _Оновлення Етеріуму Пектра: що потрібно знати стейкерам — Blockdaemon_
 
-## Додаткова література {#further-reading}
-
+## Додаткова література
 - [Дорожня карта Етеріуму](/roadmap/)
 - [Поширені запитання про Пектра](https://epf.wiki/#/wiki/pectra-faq)
-- [Інформаційна сторінка Pectra.wtf](https://pectra.wtf)
 - [Як Пектра покращує досвід стейкерів](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Інформаційна сторінка EIP-7702](https://eip7702.io/)
-- [Мережі розробників Пектра](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)
+- [Інформаційна сторінка EIP7702](https://eip7702.io/)
+- [Девнети Пектра](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

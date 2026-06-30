@@ -133,20 +133,17 @@ _Зазвичай використовується для децентраліз
 - [Список DAO від Tally.xyz](https://www.tally.xyz/explore)
 - [Список DAO від DeGov.AI](https://apps.degov.ai/)
 
-### Створити DAO {#start-a-dao}
-
+### Створити DAO
 - [Створити DAO за допомогою DAOHaus](https://app.daohaus.club/summon)
 - [Створити Governor DAO за допомогою Tally](https://www.tally.xyz/get-started)
 - [Створити DAO на базі Aragon](https://aragon.org/product)
-- [Створити колонію](https://colony.io/)
-- [Створити DAO з голографічним консенсусом DAOstack](https://alchemy.daostack.io/daos/create)
+- [Створити colony](https://colony.io/)
 - [Запустити DAO за допомогою DeGov Launcher](https://docs.degov.ai/integration/deploy)
-
 ## Додаткова література {#further-reading}
 
 ### Статті про DAO {#dao-articles}
 
-- [Що таке DAO?](https://aragon.org/dao) — [Aragon](https://aragon.org/)
+- [Що таке DAO?](https://blog.aragon.org/what-is-a-dao/) — [Aragon](https://aragon.org/)
 - [Дім DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) — [Metagame](https://wiki.metagame.wtf/)
 - [Що таке DAO і для чого вона потрібна?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) — [DAOhaus](https://daohaus.club/)
 - [Як створити цифрову спільноту на базі DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) — [DAOhaus](https://daohaus.club/)
