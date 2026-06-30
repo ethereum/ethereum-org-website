@@ -1,8 +1,9 @@
 "use client"
 
-// TODO: Fix RTL compatibility; currently forced to LTR flow
 import { useCallback, useEffect, useMemo, useState } from "react"
 import { useLocale } from "next-intl"
+
+import type { Lang } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -17,6 +18,7 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 import { dateTimeFormat, formatDate } from "@/lib/utils/date"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { getReleasesData, Release } from "@/data/roadmap/releases"
 
@@ -25,6 +27,8 @@ import { useTranslation } from "@/hooks/useTranslation"
 const ReleaseCarousel = () => {
   const locale = useLocale()
   const { t } = useTranslation("page-roadmap")
+  const isRtl = isLangRightToLeft(locale as Lang)
+  const carouselDirection = isRtl ? "rtl" : "ltr"
 
   const releasesData = useMemo(() => getReleasesData(t), [t])
 
@@ -111,7 +115,10 @@ const ReleaseCarousel = () => {
   }
 
   return (
-    <div className="w-full max-w-[100vw] overflow-hidden" dir="ltr">
+    <div
+      className="w-full max-w-[100vw] overflow-hidden"
+      dir={carouselDirection}
+    >
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6">
         <div className="w-full rounded-base bg-background-highlight py-6">
           <div className="flex flex-col gap-6">
@@ -122,7 +129,7 @@ const ReleaseCarousel = () => {
               opts={{
                 align: "center",
                 containScroll: false,
-                direction: "ltr",
+                direction: carouselDirection,
                 loop: false,
                 startIndex,
               }}
@@ -182,7 +189,10 @@ const ReleaseCarousel = () => {
                               "flex h-1 flex-1",
                               index !== 0
                                 ? status === "soon"
-                                  ? "bg-linear-to-r from-primary to-primary-low-contrast"
+                                  ? cn(
+                                      "from-primary to-primary-low-contrast",
+                                      isRtl ? "bg-linear-to-l" : "bg-linear-to-r"
+                                    )
                                   : status === "prod"
                                     ? "bg-primary"
                                     : "bg-primary-low-contrast"
@@ -236,7 +246,7 @@ const ReleaseCarousel = () => {
               opts={{
                 align: "center",
                 containScroll: false,
-                direction: "ltr",
+                direction: carouselDirection,
                 loop: false,
                 startIndex,
               }}
@@ -245,7 +255,7 @@ const ReleaseCarousel = () => {
                 {releasesData.map((release: Release) => (
                   <CarouselItem
                     key={release.releaseName}
-                    className="w-full pl-4"
+                    className="w-full ps-4"
                   >
                     <div className="flex w-full flex-col gap-6 lg:flex-row">
                       <div className="w-full flex-1 rounded-base">
