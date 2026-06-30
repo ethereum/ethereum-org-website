@@ -37,7 +37,7 @@ const cardVariants = cva(
         xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
       hoverEffect: {
-        lift: "hover:shadow-md hover:scale-[1.005]",
+        lift: "hover:shadow-md hover:-translate-y-1",
       },
     },
     defaultVariants: {
