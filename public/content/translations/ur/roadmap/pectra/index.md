@@ -117,11 +117,9 @@ _پیکٹرا اپ گریڈ میں کیا شامل ہو رہا ہے؟ - کرسٹ
 
 _ایتھیریم پیکٹرا اپ گریڈ: اسٹیکرز کو کیا جاننے کی ضرورت ہے — بلاک ڈیمن_
 
-## مزید مطالعہ {#further-reading}
-
+## مزید مطالعہ
 - [ایتھیریم روڈ میپ](/roadmap/)
-- [پیکٹرا کے اکثر پوچھے گئے سوالات (FAQ)](https://epf.wiki/#/wiki/pectra-faq)
-- [<span dir="ltr">Pectra.wtf</span> معلوماتی صفحہ](https://pectra.wtf)
+- [پیکٹرا کے اکثر پوچھے گئے سوالات (<span dir="ltr">FAQ</span>)](https://epf.wiki/#/wiki/pectra-faq)
 - [پیکٹرا اسٹیکر کے تجربے کو کیسے بہتر بناتا ہے](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [<span dir="ltr">EIP7702</span> معلوماتی صفحہ](https://eip7702.io/)
-- [پیکٹرا ڈیونیٹس (devnets)](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)
+- [پیکٹرا ڈیونیٹس](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

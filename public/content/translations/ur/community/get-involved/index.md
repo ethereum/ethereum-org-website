@@ -11,7 +11,7 @@ lang: ur
 ## ڈویلپرز <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [<span dir="ltr">ethereum.org/developers/</span>](/developers/) پر ایتھیریم کے بارے میں جانیں اور اسے آزمائیں
-- اپنے قریب کسی [ETHGlobal](https://ethglobal.co/) ہیکاتھون میں شرکت کریں!
+- اپنے قریب کسی [ETHGlobal](https://ethglobal.com/) ہیکاتھون میں شرکت کریں!
 - [اپنی مہارت کے شعبے یا پسندیدہ پروگرامنگ زبان سے متعلق پروجیکٹس](/developers/docs/programming-languages/) دیکھیں۔
 - [اتفاق رائے اور عمل درآمد کی تہہ کی کالز](https://www.youtube.com/@EthereumProtocol/streams) دیکھیں یا ان میں حصہ لیں۔
 - [ایکو سسٹم سپورٹ پروگرام کی خواہشات کی فہرست](https://esp.ethereum.foundation/wishlist/) - ٹولنگ، دستاویزات، اور بنیادی ڈھانچے کے وہ شعبے جہاں ایتھیریم ایکو سسٹم سپورٹ پروگرام فعال طور پر گرانٹ کی درخواستیں طلب کر رہا ہے۔
@@ -80,7 +80,7 @@ lang: ur
 
 ایتھیریم ایکو سسٹم عوامی اشیاء اور بااثر پروجیکٹس کو فنڈ دینے کے مشن پر ہے۔ بہت چھوٹے عطیات کے ساتھ آپ اپنی حمایت ظاہر کر سکتے ہیں اور اہم کاموں کو پایہ تکمیل تک پہنچانے میں مدد کر سکتے ہیں۔
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [<span dir="ltr">clr.fund</span>](https://clr.fund/#/about)
 
 ## مالیاتی پیشہ ور افراد اور اکاؤنٹنٹس <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

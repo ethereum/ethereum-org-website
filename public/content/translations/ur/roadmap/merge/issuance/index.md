@@ -14,7 +14,7 @@ lang: ur
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="ETH کے اجراء کا خلاصہ">
 
 - حصہ داری کا ثبوت (PoS) میں منتقلی سے پہلے، کان کنوں کو روزانہ تقریباً <span dir="ltr">13,000 ETH</span> جاری کیے جاتے تھے
 - کل تقریباً <span dir="ltr">14 million ETH</span> اسٹیک ہونے کی بنیاد پر، اسٹیکرز کو روزانہ تقریباً <span dir="ltr">1,700 ETH</span> جاری کیے جاتے ہیں

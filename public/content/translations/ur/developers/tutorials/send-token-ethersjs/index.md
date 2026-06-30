@@ -17,11 +17,10 @@ published: 2021-04-06
 - ٹوکن کی منتقلی کریں
 - نیٹ ورک ٹریفک کی صورتحال کے مطابق گیس کی قیمت مقرر کریں
 
-### شروع کرنے کے لیے {#to-get-started}
+### شروع کرنے کے لیے
 
-شروع کرنے کے لیے، ہمیں سب سے پہلے <span dir="ltr">ethers.js</span> لائبریری کو اپنی <span dir="ltr">JavaScript</span> میں امپورٹ کرنا ہوگا۔
-<span dir="ltr">ethers.js(5.0)</span> شامل کریں
-
+شروع کرنے کے لیے، ہمیں سب سے پہلے اپنے JavaScript میں ethers.js لائبریری کو امپورٹ کرنا ہوگا۔
+ethers.js <span dir="ltr">v5</span> شامل کریں
 ### انسٹال کرنا {#install-ethersjs}
 
 ```shell

@@ -27,7 +27,7 @@ lang: ur
 **خبریں**
 
 - [<span dir="ltr">BeInCrypto</span>](http://www.beincrypto.com.br) - کرپٹو کرنسی کی خبریں اور مضامین، بشمول ایکسچینجز کی فہرست، جو برازیل میں دستیاب ہیں
-- [<span dir="ltr">Cointelegraph</span>](http://cointelegraph.com.br/category/analysis) - <span dir="ltr">Cointelegraph</span> کا برازیلی ورژن، جو کرپٹو کرنسی کی خبروں کا ایک بڑا ادارہ ہے
+- [<span dir="ltr">Cointelegraph</span>](https://cointelegraph.com.br/) - <span dir="ltr">Cointelegraph</span> کا برازیلی ورژن، جو کرپٹو کرنسی کی خبروں کا ایک بڑا ادارہ ہے
 - [<span dir="ltr">Livecoins</span>](http://www.livecoins.com.br/ethereum) - کرپٹو کرنسی کی خبریں اور ٹولز
 - [<span dir="ltr">Seudinheiro</span>](http://www.seudinheiro.com/criptomoedas/) - کرپٹو کرنسی کی خبریں اور رپورٹس
 - [<span dir="ltr">Modular Crypto</span>](https://modularcrypto.xyz/) - کرپٹو کرنسی کی خبریں اور تعلیمی مضامین
@@ -37,7 +37,7 @@ lang: ur
 - [<span dir="ltr">web3dev</span>](https://www.web3dev.com.br/) - <span dir="ltr">Web3</span> ڈیولپرز کے لیے مواد کا مرکز اور ڈسکارڈ کمیونٹی۔
 - [<span dir="ltr">Web3Brasil</span>](https://github.com/web3brasil/web3brasil) - <span dir="ltr">Web3</span> اور غیر مرکزی مالیات (DeFi) سیکھنے کے وسائل
 - [<span dir="ltr">CriptoFacil</span>](http://www.criptofacil.com/ultimas-noticias/) - کرپٹو کرنسی کی خبریں اور تعلیم، بشمول مبتدیوں کے لیے 'ایتھیریم' اور مبتدیوں کے لیے 'غیر مرکزی مالیات (DeFi)'
-- [<span dir="ltr">CriptoAtivos</span>](http://www.criptoativos.wiki.br/) - کرپٹو کرنسی کی دنیا سے بصیرت، تعلیم اور بلاگ
+- [<span dir="ltr">CriptoAtivos</span>](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - کرپٹو کرنسی کی دنیا سے بصیرت، تعلیم اور بلاگ
 - [<span dir="ltr">Cointimes</span>](http://www.cointimes.com.br/) - کرپٹو کرنسی کی خبریں اور تعلیم
 - [<span dir="ltr">Web3 starter pack</span>](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - ایک گائیڈ جو کرپٹو کے سب سے زیادہ پوچھے جانے والے اور بنیادی سوالات کے جوابات دیتی ہے
 

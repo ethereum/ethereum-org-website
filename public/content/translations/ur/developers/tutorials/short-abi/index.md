@@ -28,7 +28,7 @@ published: 2022-04-01
 
 [آپٹیمسٹک رول اپس](/developers/docs/scaling/optimistic-rollups) کو ہر تاریخی ٹرانزیکشن کا ریکارڈ محفوظ کرنا ہوتا ہے تاکہ کوئی بھی ان کا جائزہ لے سکے اور تصدیق کر سکے کہ موجودہ حالت درست ہے۔
 ایتھیریم مین نیٹ میں ڈیٹا داخل کرنے کا سب سے سستا طریقہ اسے کال ڈیٹا کے طور پر لکھنا ہے۔
-یہ حل [آپٹیمزم](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) اور [آربٹرم](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) دونوں نے منتخب کیا تھا۔
+یہ حل [آپٹیمزم](https://docs.optimism.io/op-stack/protocol/overview) اور [آربٹرم](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction) دونوں نے منتخب کیا تھا۔
 
 ### <span dir="ltr">L2</span> ٹرانزیکشنز کی لاگت {#cost-of-l2-transactions}
 

@@ -204,16 +204,13 @@ hideEditButton: true
 
 ان تمام لوگوں کا بہت شکریہ جنہوں نے اپنی بصیرتیں شیئر کر کے اس مضمون میں تعاون کیا: <span dir="ltr">ETHBratislava</span> سے <span dir="ltr">Slavo Fabisik</span>؛ <span dir="ltr">ETH Kipu</span> اور <span dir="ltr">ETH Latam</span> سے <span dir="ltr">Lola</span>؛ <span dir="ltr">ETH Belgrade</span> سے <span dir="ltr">Tanja Mladenovic</span>، <span dir="ltr">Ethereum Bogota</span> سے <span dir="ltr">Juan David</span>؛ <span dir="ltr">ETHWarsaw</span> سے <span dir="ltr">Monika Zając</span>؛ <span dir="ltr">NapulETH</span> سے <span dir="ltr">Raffaele Orefice</span>؛ <span dir="ltr">ETH Riyadh</span> سے <span dir="ltr">Xiao Wu(Ling)</span>؛ <span dir="ltr">urbe.eth</span> سے <span dir="ltr">Marco</span>؛ <span dir="ltr">ETH Dublin</span> سے <span dir="ltr">Caolán Walsh</span>؛ <span dir="ltr">ETHCluj</span> سے <span dir="ltr">Alex Males</span>؛ اور <span dir="ltr">ETH Slovenia</span> سے <span dir="ltr">Stanko Devic</span>۔
 
-## وسائل {#resources}
+## وسائل
+پوڈ کاسٹ: ایک ETH ایونٹ کو A سے Z تک کیسے منظم اور پروموٹ کیا جائے:
 
-پوڈ کاسٹ: <span dir="ltr">A-Z</span> تک <span dir="ltr">ETH</span> ایونٹ کا انعقاد اور پروموٹ کیسے کریں:
-
-- [<span dir="ltr">Out of Ordinary</span> کی جانب سے <span dir="ltr">ETHWarsaw</span> کیس اسٹڈی](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [ETHWarsaw کیس اسٹڈی، از Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 ٹوئٹر اسپیس:
 
-- [<span dir="ltr">ETH</span> کمیونٹی <span dir="ltr">AMA</span>](https://x.com/NapulETH/status/1905732699094151623)
+- [ETH کمیونٹی AMA](https://x.com/NapulETH/status/1905732699094151623)
 
 مضامین:
-
-- [<span dir="ltr">Danny H.</span> کی جانب سے <span dir="ltr">ETHKL</span> کی تعمیر](https://sekto.tech/ethkl24)

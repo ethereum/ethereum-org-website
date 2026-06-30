@@ -14,7 +14,7 @@ lang: ur
 یہ واضح کرنے کے لیے کہ سکیم ٹوکنز کیا ہیں، اور ان کی شناخت کیسے کی جائے، ہم ان میں سے ایک کی مثال دیکھنے جا رہے ہیں: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82)۔ یہ ٹوکن جائز [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) ٹوکن کی طرح نظر آنے کی کوشش کرتا ہے۔
 
 <ExpandableCard
-title="What is ARB?"
+title="ARB کیا ہے؟"
 contentPreview=''>
 
 آربٹرم ایک تنظیم ہے جو [آپٹمسٹک رول اپس](/developers/docs/scaling/optimistic-rollups/) تیار کرتی ہے اور ان کا انتظام کرتی ہے۔ ابتدائی طور پر، آربٹرم کو ایک منافع بخش کمپنی کے طور پر منظم کیا گیا تھا، لیکن پھر اس نے لامرکزیت کی طرف قدم بڑھائے۔ اس عمل کے حصے کے طور پر، انہوں نے ایک قابل تجارت [گورننس ٹوکن](/dao/#token-based-membership) جاری کیا۔
@@ -22,7 +22,7 @@ contentPreview=''>
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="سکیم ٹوکن کو wARB کیوں کہا جاتا ہے؟"
 contentPreview=''>
 
 ایتھیریم میں ایک روایت ہے کہ جب کوئی اثاثہ <span dir="ltr">ERC-20</span> کے مطابق نہیں ہوتا ہے تو ہم اس کا ایک "ریپڈ" (wrapped) ورژن بناتے ہیں جس کا نام "w" سے شروع ہوتا ہے۔ لہذا، مثال کے طور پر، ہمارے پاس بٹ کوائن کے لیے <span dir="ltr">wBTC</span> اور <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">ایتھر کے لیے ریپڈ ایتھر (<span dir="ltr">wETH</span>)</a> ہے۔
@@ -36,7 +36,7 @@ contentPreview=''>
 ایتھیریم کا بنیادی مقصد لامرکزیت ہے۔ اس کا مطلب یہ ہے کہ کوئی مرکزی اتھارٹی نہیں ہے جو آپ کے اثاثوں کو ضبط کر سکے یا آپ کو سمارٹ کنٹریکٹ تعینات کرنے سے روک سکے۔ لیکن اس کا مطلب یہ بھی ہے کہ سکیمرز کوئی بھی سمارٹ کنٹریکٹ تعینات کر سکتے ہیں جو وہ چاہیں۔
 
 <ExpandableCard
-title="What are smart contracts?"
+title="سمارٹ کنٹریکٹس کیا ہیں؟"
 contentPreview=''>
 
 [سمارٹ کنٹریکٹس](/developers/docs/smart-contracts/) وہ پروگرام ہیں جو ایتھیریم بلاک چین کے اوپر چلتے ہیں۔ مثال کے طور پر، ہر <span dir="ltr">ERC-20</span> ٹوکن کو ایک سمارٹ کنٹریکٹ کے طور پر لاگو کیا جاتا ہے۔

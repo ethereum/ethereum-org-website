@@ -21,7 +21,7 @@ published: 2021-04-22
 
 ## مرحلہ 1: Web3 انسٹال کریں {#install-web3}
 
-اگر آپ نے اپنا NFT سمارٹ کنٹریکٹ بنانے کے پہلے ٹیوٹوریل کی پیروی کی ہے، تو آپ کو پہلے ہی Ethers.js استعمال کرنے کا تجربہ ہے۔ Web3 بھی Ethers کی طرح ہے، کیونکہ یہ ایک لائبریری ہے جو [ایتھیریم](/) بلاک چین پر درخواستیں بنانے کو آسان بنانے کے لیے استعمال ہوتی ہے۔ اس ٹیوٹوریل میں ہم [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3) استعمال کریں گے، جو ایک بہتر Web3 لائبریری ہے اور خودکار ری ٹرائی (automatic retries) اور مضبوط WebSocket سپورٹ پیش کرتی ہے۔
+اگر آپ نے اپنا NFT سمارٹ کنٹریکٹ بنانے کے پہلے ٹیوٹوریل کی پیروی کی ہے، تو آپ کو پہلے ہی Ethers.js استعمال کرنے کا تجربہ ہے۔ Web3 بھی Ethers کی طرح ہے، کیونکہ یہ ایک لائبریری ہے جو [ایتھیریم](/) بلاک چین پر درخواستیں بنانے کو آسان بنانے کے لیے استعمال ہوتی ہے۔ اس ٹیوٹوریل میں ہم [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) استعمال کریں گے، جو ایک بہتر Web3 لائبریری ہے اور خودکار ری ٹرائی (automatic retries) اور مضبوط WebSocket سپورٹ پیش کرتی ہے۔
 
 اپنے پروجیکٹ کی ہوم ڈائریکٹری میں چلائیں:
 
@@ -40,26 +40,25 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## مرحلہ 3: اپنے کنٹریکٹ کا ABI حاصل کریں {#contract-abi}
+## مرحلہ 3: اپنے کنٹریکٹ کا ABI حاصل کریں
 
-ہمارے کنٹریکٹ کا ABI (ایپلیکیشن بائنری انٹرفیس) ہمارے سمارٹ کنٹریکٹ کے ساتھ تعامل کرنے کا انٹرفیس ہے۔ آپ کنٹریکٹ ABIs کے بارے میں مزید [یہاں](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is) جان سکتے ہیں۔ Hardhat خود بخود ہمارے لیے ایک ABI تیار کرتا ہے اور اسے `MyNFT.json` فائل میں محفوظ کرتا ہے۔ اسے استعمال کرنے کے لیے ہمیں اپنی `mint-nft.js` فائل میں کوڈ کی درج ذیل لائنیں شامل کر کے مواد کو پارس (parse) کرنا ہوگا:
+ہمارا کنٹریکٹ <span dir="ltr">ABI (Application Binary Interface)</span> ہمارے سمارٹ کنٹریکٹ کے ساتھ تعامل کرنے کا انٹرفیس ہے۔ آپ [کنٹریکٹ <span dir="ltr">ABIs</span>](/glossary/#abi) کے بارے میں مزید جان سکتے ہیں۔ Hardhat خود بخود ہمارے لیے ایک <span dir="ltr">ABI</span> تیار کرتا ہے اور اسے `MyNFT.json` فائل میں محفوظ کرتا ہے۔ اسے استعمال کرنے کے لیے ہمیں اپنی `mint-nft.js` فائل میں کوڈ کی درج ذیل لائنیں شامل کر کے مواد کو پارس (parse) کرنے کی ضرورت ہوگی:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 ```
 
-اگر آپ ABI دیکھنا چاہتے ہیں تو آپ اسے اپنے کنسول پر پرنٹ کر سکتے ہیں:
+اگر آپ <span dir="ltr">ABI</span> دیکھنا چاہتے ہیں تو آپ اسے اپنے کنسول پر پرنٹ کر سکتے ہیں:
 
 ```js
 console.log(JSON.stringify(contract.abi))
 ```
 
-`mint-nft.js` کو چلانے اور اپنے ABI کو کنسول پر پرنٹ ہوتا دیکھنے کے لیے اپنے ٹرمینل پر جائیں اور چلائیں:
+`mint-nft.js` کو چلانے اور اپنے <span dir="ltr">ABI</span> کو کنسول پر پرنٹ ہوتا دیکھنے کے لیے اپنے ٹرمینل پر جائیں اور چلائیں:
 
 ```js
 node scripts/mint-nft.js
 ```
-
 ## مرحلہ 4: IPFS کا استعمال کرتے ہوئے اپنے NFT کے لیے میٹا ڈیٹا کنفیگر کریں {#config-meta}
 
 اگر آپ کو حصہ 1 میں ہمارے ٹیوٹوریل سے یاد ہو، تو ہمارا `mintNFT` سمارٹ کنٹریکٹ فنکشن ایک tokenURI پیرامیٹر لیتا ہے جسے ایک JSON دستاویز پر حل ہونا چاہیے جو NFT کے میٹا ڈیٹا کو بیان کرتی ہے— جو دراصل NFT کو زندہ کرتا ہے، اور اسے قابل ترتیب خصوصیات، جیسے کہ نام، تفصیل، تصویر، اور دیگر اوصاف رکھنے کی اجازت دیتا ہے۔
@@ -136,17 +135,17 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## مرحلہ 7: اپنی ٹرانزیکشن بنائیں {#create-txn}
+## مرحلہ 7: اپنی ٹرانزیکشن بنائیں
 
 سب سے پہلے، آئیے `mintNFT(tokenData)` کے نام سے ایک فنکشن کی وضاحت کریں اور درج ذیل کام کر کے اپنی ٹرانزیکشن بنائیں:
 
 1. `.env` فائل سے اپنی _PRIVATE_KEY_ اور _PUBLIC_KEY_ حاصل کریں۔
 
-1. اس کے بعد، ہمیں اکاؤنٹ کا نانس معلوم کرنے کی ضرورت ہوگی۔ نانس کی تخصیص آپ کے پتے سے بھیجی گئی ٹرانزیکشنز کی تعداد کا ٹریک رکھنے کے لیے استعمال ہوتی ہے — جس کی ہمیں سیکیورٹی مقاصد اور [ری پلے حملوں (replay attacks)](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce) کو روکنے کے لیے ضرورت ہے۔ آپ کے پتے سے بھیجی گئی ٹرانزیکشنز کی تعداد حاصل کرنے کے لیے، ہم [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount) استعمال کرتے ہیں۔
+1. اس کے بعد، ہمیں اکاؤنٹ کا نانس معلوم کرنے کی ضرورت ہوگی۔ نانس کی تخصیص آپ کے پتے سے بھیجی گئی ٹرانزیکشنز کی تعداد کا ٹریک رکھنے کے لیے استعمال ہوتی ہے — جس کی ہمیں سیکیورٹی مقاصد اور ری پلے حملوں (replay attacks) کو روکنے کے لیے ضرورت ہوتی ہے۔ آپ کے پتے سے بھیجی گئی ٹرانزیکشنز کی تعداد حاصل کرنے کے لیے، ہم [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count) استعمال کرتے ہیں۔
 
-1. آخر میں ہم درج ذیل معلومات کے ساتھ اپنی ٹرانزیکشن ترتیب دیں گے:
+1. آخر میں ہم درج ذیل معلومات کے ساتھ اپنی ٹرانزیکشن سیٹ اپ کریں گے:
 
-- `'from': PUBLIC_KEY` — ہماری ٹرانزیکشن کا ماخذ ہمارا عوامی پتہ ہے
+- `'from': PUBLIC_KEY` — ہماری ٹرانزیکشن کا آغاز ہمارا عوامی پتہ ہے
 
 - `'to': contractAddress` — وہ کنٹریکٹ جس کے ساتھ ہم تعامل کرنا اور ٹرانزیکشن بھیجنا چاہتے ہیں
 
@@ -184,7 +183,6 @@ PUBLIC_KEY = "your-public-account-address"
      };
    }​
 ```
-
 ## مرحلہ 8: ٹرانزیکشن پر دستخط کرنا {#sign-txn}
 
 اب جب کہ ہم نے اپنی ٹرانزیکشن بنا لی ہے، ہمیں اسے بھیجنے کے لیے اس پر دستخط کرنے کی ضرورت ہے۔ یہاں ہم اپنی نجی کلید استعمال کریں گے۔
@@ -317,7 +315,7 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-اس کے بعد، اپنی ٹرانزیکشن کی حیثیت دیکھنے کے لیے اپنے [Alchemy میم پول](https://dashboard.alchemyapi.io/mempool) پر جائیں (چاہے یہ زیر التواء ہو، مائن ہو گئی ہو، یا نیٹ ورک کے ذریعے ڈراپ ہو گئی ہو)۔ اگر آپ کی ٹرانزیکشن ڈراپ ہو گئی ہے، تو [Blockscout](https://eth-sepolia.blockscout.com/) چیک کرنا اور اپنے ٹرانزیکشن ہیش کو تلاش کرنا بھی مددگار ثابت ہوتا ہے۔
+اس کے بعد، اپنی ٹرانزیکشن کی حیثیت دیکھنے کے لیے اپنے [Alchemy میم پول](https://dashboard.alchemy.com/mempool) پر جائیں (چاہے یہ زیر التواء ہو، مائن ہو گئی ہو، یا نیٹ ورک کے ذریعے ڈراپ ہو گئی ہو)۔ اگر آپ کی ٹرانزیکشن ڈراپ ہو گئی ہے، تو [Blockscout](https://eth-sepolia.blockscout.com/) چیک کرنا اور اپنے ٹرانزیکشن ہیش کو تلاش کرنا بھی مددگار ثابت ہوتا ہے۔
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Etherscan پر اپنا NFT ٹرانزیکشن ہیش دیکھیں_
 

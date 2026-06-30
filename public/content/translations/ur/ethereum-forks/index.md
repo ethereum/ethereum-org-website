@@ -86,47 +86,45 @@ authors: ["نکسو"]
 
 [فوساکا کے بارے میں مزید](/roadmap/fusaka/)
 
-### پراگ-الیکٹرا ("پیکٹرا") {#pectra}
-
+### پراگ-الیکٹرا ("پیکٹرا")
 <NetworkUpgradeSummary name="pectra" />
 
-پراگ-الیکٹرا ("پیکٹرا") اپ گریڈ میں ایتھیریم پروٹوکول میں کئی بہتریوں کو شامل کیا گیا ہے جن کا مقصد تمام صارفین، لیئر ۲ (l2) نیٹ ورکس، اسٹیکرز اور نوڈ آپریٹرز کے لیے تجربے کو بہتر بنانا ہے۔
+پراگ-الیکٹرا ("پیکٹرا") اپ گریڈ میں ایتھیریم پروٹوکول میں کئی بہتریاں شامل ہیں جن کا مقصد تمام صارفین، لیئر ۲ (l2) نیٹ ورکس، اسٹیکرز اور نوڈ آپریٹرز کے لیے تجربے کو بہتر بنانا ہے۔
 
-کمپاؤنڈنگ توثیق کار اکاؤنٹس کے ساتھ اسٹیکنگ کو اپ گریڈ کیا گیا، اور عمل درآمد کے انخلا کے پتے کا استعمال کرتے ہوئے اسٹیک کیے گئے فنڈز پر کنٹرول کو بہتر بنایا گیا۔ <span dir="ltr">EIP-7251</span> نے ایک واحد توثیق کار کے لیے زیادہ سے زیادہ مؤثر بیلنس کو بڑھا کر <span dir="ltr">2048</span> کر دیا، جس سے اسٹیکرز کے لیے سرمائے کی کارکردگی میں بہتری آئی۔ <span dir="ltr">EIP-7002</span> نے ایک عمل درآمد اکاؤنٹ کو محفوظ طریقے سے توثیق کار کے افعال کو متحرک کرنے کے قابل بنایا، بشمول خروج، یا فنڈز کے کچھ حصوں کا انخلا، جس سے <span dir="ltr">ETH</span> اسٹیکرز کے تجربے میں بہتری آئی، جبکہ نوڈ آپریٹرز کے لیے جوابدہی کو مضبوط بنانے میں مدد ملی۔
+کمپاؤنڈنگ توثیق کار اکاؤنٹس کے ساتھ اسٹیکنگ کو اپ گریڈ کیا گیا، اور عمل درآمد کے انخلا کے پتہ کا استعمال کرتے ہوئے اسٹیک کیے گئے فنڈز پر کنٹرول کو بہتر بنایا گیا۔ <span dir="ltr">EIP-7251</span> نے ایک توثیق کار کے لیے زیادہ سے زیادہ مؤثر بیلنس کو بڑھا کر <span dir="ltr">2048</span> کر دیا، جس سے اسٹیکرز کے لیے سرمائے کی کارکردگی میں بہتری آئی۔ <span dir="ltr">EIP-7002</span> نے ایک عمل درآمد اکاؤنٹ کو محفوظ طریقے سے توثیق کار کے افعال کو متحرک کرنے کے قابل بنایا، جس میں خروج، یا فنڈز کے کچھ حصوں کا انخلا شامل ہے، جس سے <span dir="ltr">ETH</span> اسٹیکرز کے تجربے میں بہتری آئی، جبکہ نوڈ آپریٹرز کے لیے جوابدہی کو مضبوط بنانے میں مدد ملی。
 
-اپ گریڈ کے دیگر حصوں میں عام صارفین کے تجربے کو بہتر بنانے پر توجہ مرکوز کی گئی۔ <span dir="ltr">EIP-7702</span> نے ایک عام نان-سمارٹ-کنٹریکٹ اکاؤنٹ ([<span dir="ltr">EOA</span>](/glossary/#eoa)) کے لیے سمارٹ کنٹریکٹ کی طرح کوڈ پر عمل درآمد کرنے کی صلاحیت متعارف کرائی۔ اس نے روایتی ایتھیریم اکاؤنٹس کے لیے لامحدود نئی فعالیت کو کھول دیا، جیسے کہ ٹرانزیکشن بیچنگ، گیس کی اسپانسرشپ، متبادل تصدیق، قابل پروگرام اخراجات کے کنٹرولز، اکاؤنٹ کی بحالی کا طریقہ کار اور بہت کچھ۔
+اپ گریڈ کے دیگر حصوں میں عام صارفین کے تجربے کو بہتر بنانے پر توجہ دی گئی۔ <span dir="ltr">EIP-7702</span> نے ایک عام نان-سمارٹ-کنٹریکٹ اکاؤنٹ ([EOA](/glossary/#eoa)) کے لیے سمارٹ کنٹریکٹ کی طرح کوڈ پر عمل درآمد کرنے کی صلاحیت فراہم کی۔ اس نے روایتی ایتھیریم اکاؤنٹس کے لیے لامحدود نئی فعالیت کو کھول دیا، جیسے ٹرانزیکشن بیچنگ، گیس کی اسپانسرشپ، متبادل تصدیق، قابل پروگرام اخراجات کے کنٹرول، اکاؤنٹ کی بحالی کا طریقہ کار اور بہت کچھ۔
 
 <ExpandableCard title="پیکٹرا EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں۔">
 
-بہتر صارف کا تجربہ:
+صارف کا بہتر تجربہ:
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7702"><span dir="ltr">EIP-7702</span></a> - <em><span dir="ltr">EOA</span> اکاؤنٹ کا کوڈ سیٹ کریں</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7691"><span dir="ltr">EIP-7691</span></a> - <em>بلاب تھرو پٹ میں اضافہ</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7702"><span dir="ltr">EIP-7702</span></a> - <em>EOA اکاؤنٹ کا کوڈ سیٹ کریں</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7691"><span dir="ltr">EIP-7691</span></a> - <em>بلاب کے تھرو پٹ میں اضافہ</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7623"><span dir="ltr">EIP-7623</span></a> - <em>کال ڈیٹا کی لاگت میں اضافہ</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7840"><span dir="ltr">EIP-7840</span></a> - <em><span dir="ltr">EL</span> کنفیگریشن فائلوں میں بلاب شیڈول شامل کریں</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840"><span dir="ltr">EIP-7840</span></a> - <em>EL کنفیگریشن فائلوں میں بلاب کا شیڈول شامل کریں</em></li>
 </ul>
 
-بہتر اسٹیکنگ کا تجربہ:
+اسٹیکنگ کا بہتر تجربہ:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7251"><span dir="ltr">EIP-7251</span></a> - <em><code>MAX_EFFECTIVE_BALANCE</code> میں اضافہ</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7002"><span dir="ltr">EIP-7002</span></a> - <em>عمل درآمد کی تہہ سے متحرک ہونے والے خروج</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7685"><span dir="ltr">EIP-7685</span></a> - <em>عام مقاصد کے لیے عمل درآمد کی تہہ کی درخواستیں</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-6110"><span dir="ltr">EIP-6110</span></a> - <em>توثیق کار کے ڈپازٹس آن چین فراہم کریں</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6110"><span dir="ltr">EIP-6110</span></a> - <em>آن چین توثیق کار کے ڈپازٹس فراہم کریں</em></li>
 </ul>
 
 پروٹوکول کی کارکردگی اور سیکیورٹی میں بہتری:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2537"><span dir="ltr">EIP-2537</span></a> - <em><span dir="ltr">BLS12-381</span> منحنی کے آپریشنز کے لیے پری کمپائل</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2935"><span dir="ltr">EIP-2935</span></a> - <em>حالت میں تاریخی بلاک ہیشز کو محفوظ کریں</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2935"><span dir="ltr">EIP-2935</span></a> - <em>تاریخی بلاک ہیشز کو حالت میں محفوظ کریں</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549"><span dir="ltr">EIP-7549</span></a> - <em>کمیٹی کے اشاریہ کو تصدیق سے باہر منتقل کریں</em></li>
 </ul>
 
 </ExpandableCard>
 
-- [<span dir="ltr">Pectra.wtf</span>](https://pectra.wtf)
 - [پیکٹرا اسٹیکنگ کے تجربے کو کیسے بہتر بنائے گا](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [الیکٹرا اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [پراگ-الیکٹرا ("پیکٹرا") کے اکثر پوچھے گئے سوالات](/roadmap/pectra/)

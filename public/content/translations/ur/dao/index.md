@@ -133,20 +133,17 @@ _عام طور پر پروٹوکولز اور [غیر مرکزی ایپلی کی
 - [Tally.xyz کی ڈاؤز (DAOs) کی فہرست](https://www.tally.xyz/explore)
 - [DeGov.AI کی ڈاؤز (DAOs) کی فہرست](https://apps.degov.ai/)
 
-### ⁦DAO⁩ شروع کریں {#start-a-dao}
-
-- [DAOHaus کے ساتھ ایک ⁦DAO⁩ بلائیں](https://app.daohaus.club/summon)
+### ⁦DAO⁩ شروع کریں
+- [DAOHaus کے ساتھ ایک ⁦DAO⁩ بنائیں](https://app.daohaus.club/summon)
 - [Tally کے ساتھ ایک گورنر ⁦DAO⁩ شروع کریں](https://www.tally.xyz/get-started)
 - [Aragon سے چلنے والا ⁦DAO⁩ بنائیں](https://aragon.org/product)
-- [ایک کالونی شروع کریں](https://colony.io/)
-- [DAOstack کے ہولوگرافک اتفاقِ رائے کے ساتھ ایک ⁦DAO⁩ بنائیں](https://alchemy.daostack.io/daos/create)
+- [ایک Colony شروع کریں](https://colony.io/)
 - [DeGov لانچر کے ساتھ ایک ⁦DAO⁩ لانچ کریں](https://docs.degov.ai/integration/deploy)
-
 ## مزید مطالعہ {#further-reading}
 
 ### ⁦DAO⁩ کے مضامین {#dao-articles}
 
-- [ڈاؤ (DAO) کیا ہے؟](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [ڈاؤ (DAO) کیا ہے؟](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [ڈاؤز (DAOs) کا گھر](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [ڈاؤ (DAO) کیا ہے اور یہ کس لیے ہے؟](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [DAO سے چلنے والی ڈیجیٹل کمیونٹی کیسے شروع کریں](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

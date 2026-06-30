@@ -251,17 +251,14 @@ ii. آپٹمسٹک رول اپس استعمال کرنے والے ڈیولپرز
 
 کیا آپ بصری طور پر سیکھنا زیادہ پسند کرتے ہیں؟ Finematics کو آپٹمسٹک رول اپس کی وضاحت کرتے ہوئے دیکھیں:
 
-## آپٹمسٹک رول اپس پر مزید مطالعہ {#further-reading-on-optimistic-rollups}
-
+## آپٹمسٹک رول اپس پر مزید مطالعہ
 - [آپٹمسٹک رول اپس کیسے کام کرتے ہیں (مکمل گائیڈ)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [بلاک چین رول اپ کیا ہے؟ ایک تکنیکی تعارف](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [آربٹرم کے لیے ضروری گائیڈ](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [ایتھیریم رول اپس کے لیے عملی گائیڈ](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [ایتھیریم لیئر ۲ (l2) میں ثبوتِ دھوکہ دہی کی حالت](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
-- [آپٹیمزم کا رول اپ واقعی کیسے کام کرتا ہے؟](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
+- [آپٹیمزم کا رول اپ دراصل کیسے کام کرتا ہے؟](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVM کا تفصیلی جائزہ](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [آپٹمسٹک ورچوئل مشین کیا ہے؟](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
 ## ٹیوٹوریلز: ایتھیریم پر آپٹمسٹک رول اپس اور پل {#tutorials}
 
 - [آپٹیمزم کے معیاری پل کنٹریکٹ کا جائزہ](/developers/tutorials/optimism-std-bridge-annotated-code/) _– لیئر ۱ (l1) اور لیئر ۲ (l2) کے درمیان اثاثوں کی منتقلی کے لیے آپٹیمزم کے معیاری پل کا ایک تشریح شدہ کوڈ کا جائزہ۔_
