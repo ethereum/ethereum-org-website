@@ -1,8 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { type CSSProperties, type KeyboardEvent, useId, useState } from "react"
 
-import type { StakingPage } from "@/lib/types"
+import type { MatomoEventOptions, StakingPage } from "@/lib/types"
 
 import ButtonDropdown from "@/components/ButtonDropdown"
 import {
@@ -33,22 +33,22 @@ const IndicatorGroup = ({
   indicatorType,
 }: {
   label: string
-  styleObj: object
+  styleObj: CSSProperties
   indicatorType?: "valid" | "caution"
 }) => {
-  const IndicatorIcon = ({ style }) => {
+  const IndicatorIcon = ({ style }: { style: CSSProperties }) => {
     if (indicatorType === "valid") {
-      return <GreenCheckProductGlyph style={style} />
+      return <GreenCheckProductGlyph aria-hidden style={style} />
     }
 
     if (indicatorType === "caution") {
-      return <CautionProductGlyph style={style} />
+      return <CautionProductGlyph aria-hidden style={style} />
     }
 
-    return <WarningProductGlyph style={style} />
+    return <WarningProductGlyph aria-hidden style={style} />
   }
   return (
-    <VStack className="flex-1 gap-2">
+    <VStack className="w-full max-w-40 gap-2 sm:flex-1">
       <IndicatorIcon style={styleObj} />
       <p className="max-w-[10rem] text-center text-xs">
         <Translation id={label} />
@@ -76,6 +76,10 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
     activeIndex,
   } = useStakingConsiderations({ page })
 
+  const tabsId = useId()
+  const panelId = useId()
+  const headingId = useId()
+
   // Hover is tracked in JS (not CSS) so the panel can square the corner where a
   // highlighted first/last tab meets it, and so a hovered tab flares into the
   // panel like the active one.
@@ -83,29 +87,60 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
   const isHighlighted = (i: number) => i === activeIndex || i === hovered
   const lastIndex = (pageData?.length ?? 0) - 1
 
+  const selectConsideration = (idx: number, matomo: MatomoEventOptions) => {
+    handleSelection(idx)
+    trackCustomEvent(matomo)
+  }
+
+  const handleTabKeyDown = (
+    event: KeyboardEvent<HTMLButtonElement>,
+    idx: number
+  ) => {
+    if (!pageData?.length) return
+
+    const keyActions: Partial<Record<string, number>> = {
+      ArrowDown: Math.min(idx + 1, lastIndex),
+      ArrowUp: Math.max(idx - 1, 0),
+      End: lastIndex,
+      Home: 0,
+    }
+    const nextIndex = keyActions[event.key]
+
+    if (nextIndex === undefined) return
+
+    event.preventDefault()
+
+    const nextItem = pageData[nextIndex]
+    selectConsideration(nextIndex, nextItem.matomo)
+
+    const tabs = event.currentTarget
+      .closest('[role="tablist"]')
+      ?.querySelectorAll<HTMLButtonElement>('[role="tab"]')
+    tabs?.[nextIndex]?.focus()
+  }
+
   return (
-    <Flex className="flex-col md:flex-row">
-      <ButtonDropdown list={dropdownLinks} className="mb-4 md:hidden" />
-      {/* TODO: Improve a11y */}
+    <Flex className="flex-col gap-4 md:flex-row md:gap-0">
+      <ButtonDropdown list={dropdownLinks} className="w-full md:hidden" />
       <div className="hidden flex-1 md:block">
         {!!pageData && (
           <List
+            aria-label={dropdownLinks.ariaLabel}
             className="m-0 [--tab-r:0.75rem]"
             onMouseLeave={() => setHovered(null)}
+            role="tablist"
+            aria-orientation="vertical"
           >
-            {/* TODO: Make mobile responsive */}
             {pageData.map(({ title, matomo }, idx) => {
               const highlighted = isHighlighted(idx)
+              const tabId = `${tabsId}-tab-${idx}`
               return (
                 <ListItem
                   key={idx}
-                  onClick={() => {
-                    handleSelection(idx)
-                    trackCustomEvent(matomo)
-                  }}
                   onMouseEnter={() => setHovered(idx)}
+                  role="presentation"
                   className={cn(
-                    "relative mb-0 table h-8 w-full cursor-pointer p-3",
+                    "relative mb-0 table h-8 w-full",
                     highlighted
                       ? "bg-background-highlight text-body"
                       : "text-primary",
@@ -120,7 +155,19 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                     highlighted && idx !== lastIndex && BOTTOM_FILLET
                   )}
                 >
-                  {title}
+                  <button
+                    id={tabId}
+                    type="button"
+                    role="tab"
+                    aria-controls={panelId}
+                    aria-selected={idx === activeIndex}
+                    tabIndex={idx === activeIndex ? 0 : -1}
+                    onClick={() => selectConsideration(idx, matomo)}
+                    onKeyDown={(event) => handleTabKeyDown(event, idx)}
+                    className="block size-full cursor-pointer appearance-none border-0 bg-transparent p-3 text-start text-inherit [font:inherit] outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                  >
+                    {title}
+                  </button>
                 </ListItem>
               )
             })}
@@ -128,18 +175,21 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
         )}
       </div>
       <Flex
+        id={panelId}
+        role="tabpanel"
+        aria-labelledby={`${tabsId}-tab-${activeIndex} ${headingId}`}
         className={cn(
-          "flow min-h-96 flex-2 flex-col items-center rounded-base bg-background-highlight p-6 text-center",
+          "flow min-h-80 flex-2 flex-col items-center rounded-base bg-background-highlight p-4 text-center sm:p-6 md:min-h-96",
           // Square the panel's start corner where the highlighted (active or
           // hovered) first/last tab meets it, so the tab flows flush (desktop only).
           isHighlighted(0) && "md:rounded-ss-none",
           isHighlighted(lastIndex) && "md:rounded-es-none"
         )}
       >
-        <Svg className="text-8xl" />
-        <h3>{title}</h3>
+        <Svg aria-hidden className="text-8xl" />
+        <h3 id={headingId}>{title}</h3>
         <p>{description}</p>
-        <Flex className="mt-auto justify-center gap-8">
+        <Flex className="mt-8 flex-col items-center justify-center gap-6 sm:flex-row sm:gap-8 md:mt-auto">
           {!!valid && (
             <IndicatorGroup
               label={valid}
