@@ -66,6 +66,7 @@
   "page-apps-info-last-updated": "Dernière mise à jour",
   "page-apps-gallery-title": "Galerie",
   "page-apps-more-apps-like-this": "Plus d'applications de ce type",
+  "page-apps-by-company": "par {company}",
   "page-apps-today": "Aujourd'hui",
   "page-apps-one-day-ago": "Il y a 1 jour",
   "page-apps-days-ago": "Il y a {days} jours"

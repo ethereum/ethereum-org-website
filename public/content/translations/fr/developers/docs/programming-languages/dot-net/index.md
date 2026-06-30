@@ -22,13 +22,13 @@ Besoin d'une introduction plus basique d'abord ? Consultez [ethereum.org/learn](
 - [Écrivez votre premier contrat intelligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Apprenez à compiler et déployer Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Références et liens pour débutants {#beginner-references-and-links}
+## Références et liens pour débutants
 
-**Présentation de la bibliothèque Nethereum et de VSCode Solidity**
+**Présentation de la bibliothèque Nethereum et de VS Code Solidity**
 
 - [Nethereum, Premiers pas](https://docs.nethereum.com/docs/getting-started/welcome/)
-- [Installation de VSCode Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
-- [Un flux de travail de développeur .NET pour créer et appeler des contrats intelligents Ethereum](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
+- [Installation de VS Code Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
+- [Le flux de travail d'un développeur .NET pour créer et appeler des contrats intelligents Ethereum](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
 - [Intégration de contrats intelligents avec Nethereum](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
 - [Interfaçage de .NET et des contrats intelligents de la chaîne de blocs Ethereum avec Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), également en [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [Nethereum - Une bibliothèque d'intégration .NET open source pour la chaîne de blocs](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
@@ -37,41 +37,39 @@ Besoin d'une introduction plus basique d'abord ? Consultez [ethereum.org/learn](
 
 **Vous voulez ignorer la configuration pour le moment et passer directement aux exemples ?**
 
-- [Playground](https://playground.nethereum.com/) - Interagissez avec Ethereum et apprenez à utiliser Nethereum via le navigateur.
-  - [Interroger le solde du compte](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
+- [Nethereum Playground](https://playground.nethereum.com/) - Interagissez avec Ethereum et apprenez à utiliser Nethereum via le navigateur.
+  - [Interroger le solde d'un compte](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
   - [Interroger le solde d'un contrat intelligent ERC-20](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [Transférer de l'ether vers un compte](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... Et plus encore !
-
-## Articles de niveau intermédiaire {#intermediate-articles}
+## Articles de niveau intermédiaire
 
 - [Nethereum : Premiers pas et premier projet](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Déployer vos propres chaînes de test de développement](https://github.com/Nethereum/Testchains)
-- [Plugin Codegen VSCode pour Solidity](https://docs.nethereum.com/docs/aspire-templates/guide-codegen)
+- [Génération de code avec Nethereum et VS Code](https://docs.nethereum.com/docs/smart-contracts/code-generation/)
 - [Unity et Ethereum : Pourquoi et comment](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
-- [Créer une API Web ASP.NET Core pour les dapps Ethereum](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
-- [Utilisation de Nethereum Web3 pour implémenter un système de suivi de la chaîne d'approvisionnement](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
+- [Créer une API Web ASP.NET Core pour les applications décentralisées (dapps) Ethereum](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
+- [Framework Nethereum MUD pour les applications onchain structurées](https://docs.nethereum.com/docs/mud-framework/overview/)
 - [Traitement de la chaîne de blocs Nethereum](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
-- [Streaming Websocket Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
+- [Streaming en temps réel Nethereum](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido et Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum et Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-
-## Modèles d'utilisation avancés {#advanced-use-patterns}
+## Modèles d'utilisation avancés
 
 - [Azure Key Vault et Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
-
-## Projets .NET, outils et autres trucs sympas {#dot-net-projects-tools-and-other-fun-stuff}
+- [Architecture de référence du backend Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
+## Projets .NET, outils et autres choses amusantes
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _Compilez, créez et exécutez des extraits de code Nethereum dans le navigateur_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Génération de code Nethereum avec interface utilisateur dans Blazor_
-- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Un explorateur de chaîne de blocs léger et un portefeuille simple SPA .NET Wasm_
+- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Un explorateur de chaîne de blocs léger et un portefeuille simple SPA Wasm .NET_
+- [Wonka Business Rules Engine](https://github.com/Nethereum/Wonka) - _Un moteur de règles métier (à la fois pour la plateforme .NET et la plateforme Ethereum) qui est intrinsèquement piloté par les métadonnées_
 - [Nethermind](https://github.com/NethermindEth/nethermind) - _Un client Ethereum .NET Core pour Linux, Windows, MacOS_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _fonctions utilitaires pour travailler avec des bases de code liées à Ethereum_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Chaînes de développement .NET préconfigurées pour une réponse rapide (preuve d'autorité (PoA))_
 
 Vous cherchez plus de ressources ? Consultez [ethereum.org/developers](/developers/).
-
 ## Contributeurs de la communauté .NET {#dot-net-community-contributors}
 
 Chez Nethereum, nous traînons principalement sur [Gitter](https://gitter.im/Nethereum/Nethereum) où tout le monde est le bienvenu pour poser/répondre à des questions, obtenir de l'aide ou simplement se détendre. N'hésitez pas à faire une PR ou à ouvrir un ticket sur le [dépôt GitHub de Nethereum](https://github.com/Nethereum), ou simplement à parcourir les nombreux projets annexes/exemples que nous avons. Vous pouvez également nous trouver sur [Discord](https://discord.gg/jQPrR58FxX) !

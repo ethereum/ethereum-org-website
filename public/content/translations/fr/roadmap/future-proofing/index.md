@@ -36,25 +36,24 @@ Non. Aucun ordinateur quantique ne peut aujourd'hui briser la cryptographie d'Et
 
 </ExpandableCard>
 
-### Que fait-on ? {#what-is-being-done}
+### Qu'est-ce qui est fait ?
 
-Ethereum est actuellement le défenseur le plus proactif contre les menaces quantiques dans l'écosystème de la chaîne de blocs. La Fondation Ethereum a formé une **équipe de sécurité post-quantique** dédiée en janvier 2026, et le travail actif s'étend à plusieurs équipes de clients et groupes de recherche. Le travail de l'équipe post-quantique de la Fondation Ethereum est suivi publiquement sur [pq.ethereum.org](https://pq.ethereum.org).
+Ethereum est actuellement le défenseur le plus proactif contre les menaces quantiques dans l'écosystème de la chaîne de blocs. La Fondation Ethereum a formé une **équipe de sécurité post-quantique** dédiée en janvier 2026, et des travaux actifs s'étendent à plusieurs équipes de clients et groupes de recherche. Le travail de l'équipe post-quantique de la Fondation Ethereum est suivi publiquement sur [pq.ethereum.org](https://pq.ethereum.org).
 
-Les travaux en cours comprennent :
+Les travaux actifs comprennent :
 
-- **Signatures basées sur le hash (leanXMSS)** : Un remplacement résistant aux attaques quantiques pour les signatures de validateur, construit sur des fonctions de hash que les ordinateurs quantiques ne peuvent pas briser efficacement.
+- **Signatures basées sur les hashs (leanXMSS)** : Un remplacement résistant aux attaques quantiques pour les signatures de validateur, construit sur des fonctions de hash que les ordinateurs quantiques ne peuvent pas briser efficacement.
 - **zkVM minimal (leanVM)** : Étant donné que les signatures résistantes aux attaques quantiques sont plus volumineuses que les signatures actuellement utilisées, leanXMSS est associé à un zkVM minimal (leanVM). Ce moteur agrège efficacement les signatures résistantes aux attaques quantiques, compressant les données de 250 fois, afin que le réseau reste rapide après la transition.
 - **Tests d'interopérabilité hebdomadaires** : Plus de 10 équipes de clients participent à des devnets post-quantiques réguliers.
 - **Disponibilité des données :** La mise à niveau de la cryptographie sous-jacente utilisée pour gérer de grandes quantités de données du réseau garantira qu'Ethereum reste rapide et abordable à utiliser sans risquer de futures vulnérabilités quantiques.
-- **Prix Poseidon** : Un prix de recherche d'un million de dollars visant à améliorer les primitives cryptographiques basées sur le hash.
+- **Prix Poseidon** : Un prix de recherche d'un million de dollars visant à améliorer les primitives cryptographiques basées sur les hashs.
 - **Normes du NIST** : L'Institut national des normes et de la technologie des États-Unis (NIST) a finalisé trois normes de cryptographie post-quantique en août 2024 (ML-KEM, ML-DSA, SLH-DSA). Les travaux d'Ethereum s'appuient sur ces fondations.
 
-Un élément clé de la stratégie de transition est l'**EIP-8141**, qui introduit l'[abstraction de compte](/roadmap/account-abstraction/) native. Cela permet aux comptes individuels de choisir leur propre vérification de signature, ce qui signifie que les utilisateurs pourraient passer à des signatures résistantes aux attaques quantiques **sans attendre une migration unique à l'échelle du protocole**. L'EIP-8141 est envisagé pour le hard fork Hegotá (prévu pour le second semestre 2026).
+Une partie clé de la stratégie de transition est l'**EIP-8141**, qui introduit l'[abstraction de compte](/roadmap/account-abstraction/) native. Cela permet aux comptes individuels de choisir leur propre vérification de signature, ce qui signifie que les utilisateurs pourraient passer à des signatures résistantes aux attaques quantiques **sans attendre une migration unique à l'échelle du protocole**. L'EIP-8141 est envisagé pour le hard fork Hegotá (prévu pour le second semestre 2026).
 
 La Fondation Ethereum a défini des étapes structurées de fork visant l'achèvement de l'infrastructure post-quantique de base d'ici 2029 environ. Il s'agit d'objectifs de planification, et non d'engagements garantis.
 
-[Lisez notre guide détaillé sur la cryptographie post-quantique sur Ethereum](/roadmap/future-proofing/quantum-resistance/)
-
+<ButtonLink variant="outline" href="/roadmap/future-proofing/quantum-resistance/">En savoir plus sur la résistance quantique</ButtonLink>
 ## Un Ethereum plus simple et plus efficace {#simpler-more-efficient-ethereum}
 
 La complexité crée des opportunités pour les bugs et les vulnérabilités. Une partie de la feuille de route se concentre sur **la simplification d'Ethereum et la suppression de la dette technique** afin que le protocole soit plus facile à maintenir, à auditer et à analyser.

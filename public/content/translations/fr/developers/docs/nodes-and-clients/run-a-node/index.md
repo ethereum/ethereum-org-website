@@ -371,7 +371,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Lorsqu'un client de consensus se connecte au client d'exécution pour lire le contrat de dépôt et identifier les validateurs, il se connecte également à d'autres pairs de nœud balise et commence à synchroniser les créneaux de consensus à partir de la genèse. Une fois que le nœud balise atteint l'époque actuelle, l'API Beacon devient utilisable pour vos validateurs. Apprenez-en plus sur les [API de nœud balise](https://eth2docs.vercel.app/).
+Lorsqu'un client de consensus se connecte au client d'exécution pour lire le contrat de dépôt et identifier les validateurs, il se connecte également à d'autres pairs de nœud balise et commence à synchroniser les créneaux de consensus à partir de la genèse. Une fois que le nœud balise atteint l'époque actuelle, l'API Beacon devient utilisable pour vos validateurs. Apprenez-en plus sur les [API de nœud balise](https://ethereum.github.io/beacon-APIs).
 
 ### Ajout de validateurs {#adding-validators}
 
@@ -454,7 +454,7 @@ Dans le cadre de votre surveillance, assurez-vous de garder un œil sur les perf
 - [Guides de staking Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, mis à jour fréquemment_
 - [Guide | Comment configurer un validateur pour le staking Ethereum sur le réseau principal](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, mis à jour fréquemment_
 - [Guides EthStaker sur l'exécution de validateurs sur les réseaux de test](https://github.com/remyroy/ethstaker#guides) – _EthStaker, mis à jour régulièrement_
-- [Exemple d'application AWS Blockchain Node Runner pour les nœuds Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, mis à jour fréquemment_
+- [Exemple d'application AWS Blockchain Node Runner pour les nœuds Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, mis à jour fréquemment_
 - [FAQ sur La Fusion pour les opérateurs de nœuds](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Juillet 2022_
 - [Analyse des exigences matérielles pour être un nœud Ethereum complet validé](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 septembre 2018_
 - [Exécution de nœuds complets Ethereum : un guide pour les personnes à peine motivées](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 novembre 2019_

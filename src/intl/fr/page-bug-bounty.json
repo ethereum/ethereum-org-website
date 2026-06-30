@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "Le programme de primes Ethereum prend en compte un certain nombre de variables pour déterminer les récompenses. Les décisions d'éligibilité, le score et toutes les conditions liées à une récompense sont à la seule et entière discrétion du panel de primes aux bugs de la Fondation Ethereum.",
   "page-upgrades-bug-bounty-leaderboard": "Voir les classements complets",
   "page-upgrades-bug-bounty-leaderboard-list": "Classement des primes aux bugs",
+  "page-upgrades-bug-bounty-leaderboard-position": "À la place numéro {rank} avec {score, plural, one {# point} other {# points}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(Voir le profil GitHub)",
   "page-upgrades-bug-bounty-leaderboard-points": "points",
   "page-upgrades-bug-bounty-ledger-desc": "Les spécifications d'Ethereum détaillent la logique de conception de la couche d'exécution et de la couche de consensus.",
   "page-upgrades-bug-bounty-ledger-title": "Bugs de spécification",

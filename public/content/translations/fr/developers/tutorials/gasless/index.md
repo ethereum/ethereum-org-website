@@ -354,10 +354,10 @@ Un utilisateur soumet un message d'accueil. Peut-être qu'il sera mis à jour au
 - Le nouveau message d'accueil a été soumis, et il est en cours de traitement
 - Le nouveau message d'accueil a été rejeté
 
-## Conclusion {#conclusion}
+## Conclusion
 
-À ce stade, vous devriez être en mesure de créer une expérience sans gaz pour les utilisateurs de votre dapp, au prix d'une certaine centralisation.
+À ce stade, vous devriez être en mesure de créer une expérience sans gaz pour les utilisateurs de votre application décentralisée (dapp), au prix d'une certaine centralisation.
 
-Cependant, cela ne fonctionne qu'avec les contrats intelligents qui prennent en charge l'ERC-712. Pour transférer un jeton ERC-20, par exemple, il est nécessaire que la transaction soit signée par le propriétaire plutôt que par un simple message. La solution est l'[abstraction de compte (ERC-4337)](https://docs.erc4337.io/index.html). J'espère écrire un futur tutoriel à ce sujet.
+Cependant, cela ne fonctionne qu'avec les contrats intelligents qui prennent en charge l'ERC-712. Pour transférer un jeton ERC-20, par exemple, il est nécessaire de faire signer la transaction par le propriétaire plutôt qu'un simple message. La solution la plus simple consiste à faire en sorte que les actifs ne soient pas détenus par l'adresse EOA, mais par un contrat distinct (une forme simple d'[abstraction de compte](/roadmap/account-abstraction/)). Vous pouvez en apprendre davantage à ce sujet [dans la suite de ce tutoriel](/developers/tutorials/gasless-token).
 
-[Voir ici pour plus de mes travaux](https://cryptodocguy.pro/).
+[Découvrez d'autres de mes travaux ici](https://cryptodocguy.pro/).

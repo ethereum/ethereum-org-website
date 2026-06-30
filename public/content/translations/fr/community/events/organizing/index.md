@@ -204,16 +204,12 @@ La clé est de maintenir la dynamique. Continuez à vous engager avec votre comm
 
 Un grand merci à tous ceux qui ont contribué à cet article en partageant leurs idées : Slavo Fabisik d'ETHBratislava ; Lola d'ETH Kipu et ETH Latam ; Tanja Mladenovic d'ETH Belgrade, Juan David d'Ethereum Bogota ; Monika Zając d'ETHWarsaw ; Raffaele Orefice de NapulETH ; Xiao Wu(Ling) d'ETH Riyadh ; Marco d'urbe.eth ; Caolán Walsh d'ETH Dublin ; Alex Males d'ETHCluj ; et Stanko Devic d'ETH Slovenia.
 
-## Ressources {#resources}
-
 Podcast : Comment organiser et promouvoir un événement ETH de A à Z :
 
-- [L'étude de cas ETHWarsaw, par Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [L'étude de cas d'ETHWarsaw, par Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 Espace Twitter :
 
 - [AMA de la communauté ETH](https://x.com/NapulETH/status/1905732699094151623)
 
 Articles :
-
-- [Construire ETHKL, par Danny H.](https://sekto.tech/ethkl24)

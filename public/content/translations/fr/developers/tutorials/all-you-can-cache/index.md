@@ -756,11 +756,11 @@ Puisque nous utilisons la fonction de bas niveau `<address>.call()`, nous ne pou
 
 C'est ainsi que nous vérifions que le code [émet correctement un événement](https://getfoundry.sh/reference/cheatcodes/expect-emit/) dans Foundry.
 
-### Le client {#the-client}
+### Le client
 
-Une chose que vous n'obtenez pas avec les tests Solidity, c'est du code JavaScript que vous pouvez copier-coller dans votre propre application. Pour écrire ce code, j'ai déployé WORM sur [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), le nouveau réseau de test d'[Optimism](https://www.optimism.io/). Il se trouve à l'adresse [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Une chose que vous n'obtenez pas avec les tests Solidity est du code JavaScript que vous pouvez copier et coller dans votre propre application. La version originale de ce tutoriel déployait WORM sur Optimism Goerli, qui a depuis été retiré. Pour exécuter le client aujourd'hui, redéployez WORM sur un réseau OP Stack pris en charge tel que [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), puis utilisez l'adresse du contrat résultante dans le client JavaScript.
 
-[Vous pouvez voir le code JavaScript pour le client ici](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Pour l'utiliser :
+[Vous pouvez voir le code JavaScript pour le client ici](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Le dépôt d'exemple a été écrit pour Optimism Goerli, donc avant de l'exécuter, mettez à jour le point de terminaison RPC et les URL de l'explorateur dans `javascript/.env.example` et `javascript/index.js` pour votre réseau cible. Pour l'utiliser :
 
 1. Clonez le dépôt git :
 
@@ -768,7 +768,7 @@ Une chose que vous n'obtenez pas avec les tests Solidity, c'est du code JavaScri
    git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
    ```
 
-2. Installez les packages nécessaires :
+2. Installez les paquets nécessaires :
 
    ```sh
    cd javascript
@@ -785,8 +785,8 @@ Une chose que vous n'obtenez pas avec les tests Solidity, c'est du code JavaScri
 
    | Paramètre           | Valeur                                                                                                                                                               |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | La phrase mnémonique d'un compte qui a suffisamment d'ETH pour payer une transaction. [Vous pouvez obtenir des ETH gratuits pour le réseau Optimism Goerli ici](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | L'URL vers Optimism Goerli. Le point de terminaison public, `https://goerli.optimism.io`, est limité en débit mais suffisant pour ce dont nous avons besoin ici                                      |
+   | MNEMONIC            | La phrase mnémonique pour un compte qui a suffisamment d'ETH pour payer une transaction. [La documentation des faucets d'Optimism](https://docs.optimism.io/app-developers/tools/faucets) liste les faucets de réseau de test actuels. |
+   | OPTIMISM_GOERLI_URL | L'URL RPC pour le réseau où vous redéployez WORM. Pour OP Sepolia, utilisez un point de terminaison RPC OP Sepolia tel que `https://sepolia.optimism.io`, ou un autre point de terminaison de votre fournisseur.        |
 
 5. Exécutez `index.js`.
 
@@ -794,9 +794,9 @@ Une chose que vous n'obtenez pas avec les tests Solidity, c'est du code JavaScri
    node index.js
    ```
 
-   Cet exemple d'application écrit d'abord une entrée dans WORM, en affichant les données d'appel et un lien vers la transaction sur Etherscan. Ensuite, il relit cette entrée et affiche la clé qu'il utilise ainsi que les valeurs de l'entrée (valeur, numéro de bloc et auteur).
+   Cet exemple d'application écrit d'abord une entrée dans WORM, affichant les données d'appel et un lien vers la transaction sur un explorateur de blocs. Ensuite, il relit cette entrée et affiche la clé qu'il utilise et les valeurs de l'entrée (valeur, numéro de bloc et auteur).
 
-La majeure partie du client est du JavaScript de dapp normal. Donc, encore une fois, nous ne passerons en revue que les parties intéressantes.
+La majeure partie du client est du JavaScript d'application décentralisée (dapp) normal. Donc, encore une fois, nous ne passerons en revue que les parties intéressantes.
 
 ```javascript
 .
@@ -818,7 +818,7 @@ const val = await worm.encodeVal("0x600D")
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers s'attend à ce que les données d'appel soient une chaîne hexadécimale, `0x` suivie d'un nombre pair de chiffres hexadécimaux. Comme `key` et `val` commencent tous deux par `0x`, nous devons supprimer ces en-têtes.
+Ethers s'attend à ce que les données d'appel soient une chaîne hexadécimale, `0x` suivi d'un nombre pair de chiffres hexadécimaux. Comme `key` et `val` commencent tous deux par `0x`, nous devons supprimer ces en-têtes.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -834,7 +834,7 @@ Comme pour le code de test Solidity, nous ne pouvons pas appeler une fonction mi
     .
     .
     // Lire l'entrée qui vient d'être écrite
-    const realKey = '0x' + key.slice(4)  // supprimer le drapeau FF
+    const realKey = '0x' + key.slice(4)  // supprimer l'indicateur FF
     const entryRead = await worm.readEntry(realKey)
     .
     .
@@ -842,7 +842,6 @@ Comme pour le code de test Solidity, nous ne pouvons pas appeler une fonction mi
 ```
 
 Pour lire les entrées, nous pouvons utiliser le mécanisme normal. Il n'est pas nécessaire d'utiliser la mise en cache des paramètres avec les fonctions `view`.
-
 ## Conclusion {#conclusion}
 
 Le code de cet article est une preuve de concept, le but est de rendre l'idée facile à comprendre. Pour un système prêt pour la production, vous souhaiterez peut-être implémenter des fonctionnalités supplémentaires :

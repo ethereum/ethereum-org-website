@@ -251,17 +251,14 @@ Vous préférez un support visuel ? Regardez Finematics expliquer les rollups op
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Lectures complémentaires sur les rollups optimistes {#further-reading-on-optimistic-rollups}
-
+## Lectures complémentaires sur les rollups optimistes
 - [Comment fonctionnent les rollups optimistes (Le guide complet)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Qu'est-ce qu'un rollup de chaîne de blocs ? Une introduction technique](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Le guide essentiel d'Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Le guide pratique des rollups Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [L'état des preuves de fraude dans les l2 d'Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
 - [Comment fonctionne réellement le rollup d'Optimism ?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [Plongée au cœur de l'OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
-- [Qu'est-ce que la Machine Virtuelle Optimiste ?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
+- [Exploration détaillée de l'OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [Qu'est-ce que la machine virtuelle optimiste ?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
 ## Tutoriels : Rollups optimistes et ponts sur Ethereum {#tutorials}
 
 - [Présentation du contrat de pont standard d'Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Une présentation annotée du code du pont standard d'Optimism pour déplacer des actifs entre la l1 et la l2._

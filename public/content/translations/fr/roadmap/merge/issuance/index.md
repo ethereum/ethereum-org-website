@@ -14,7 +14,7 @@ L'**émission** d'ETH est le processus de création d'ETH qui n'existaient pas a
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="L'émission d'ETH en bref">
 
 - Avant la transition vers la preuve d'enjeu, les mineurs recevaient une émission d'environ 13 000 ETH/jour
 - Les stakers reçoivent une émission d'environ 1 700 ETH/jour, sur la base d'un total d'environ 14 millions d'ETH mis en jeu
