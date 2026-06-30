@@ -388,7 +388,7 @@
   "validium-term": "فاليديوم",
   "validium-definition": "حل خارج السلسلة يستخدم <a href=\"/glossary/#validity-proof\">إثباتات الصلاحية</a> لتحسين قدرة معالجة المعاملات. على عكس <a href=\"/glossary/#zk-rollup\">تجميعات المعرفة الصفرية</a>، لا يتم تخزين بيانات فاليديوم على الشبكة الرئيسية في الطبقة 1. <a href=\"/developers/docs/scaling/validium/\">المزيد عن فاليديوم</a>.",
   "vyper-term": "Vyper",
-  "vyper-definition": "لغة برمجة عالية المستوى ذات بناء جملة يشبه ⁦Python⁩. تهدف إلى الاقتراب من لغة وظيفية بحتة. أنشأها فيتاليك بوتيرين. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">المزيد عن ⁦Vyper⁩</a>.",
+  "vyper-definition": "لغة برمجة عالية المستوى ذات بناء جملة مشابه للغة ⁦Python⁩. أنشأها فيتاليك بوتيرين. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">المزيد عن ⁦Vyper⁩</a>.",
   "wallet-term": "محفظة",
   "wallet-definition": "المحفظة هي أداة رقمية لتخزين وإرسال واستلام العملات الرقمية، مثل حقيبة نقود افتراضية لأموالك عبر الإنترنت. <a href=\"/wallets/\">المزيد عن محافظ إيثيريوم</a>.",
   "web2-term": "ويب 2",

@@ -137,5 +137,16 @@
   "page-developers-why-title": "احصل على أجر جيد. اعمل عن بُعد. ابنِ المستقبل.",
   "page-developers-why-subtitle": "أكثر من نصف الوظائف في مجال سلسلة الكتل تعتمد على العمل عن بُعد بشكل أساسي، وتشير بعض التقديرات إلى أن هذه النسبة تصل إلى ⁦70%⁩.",
   "page-developers-why-avg-salary-dev": "متوسط راتب المطور",
-  "page-developers-why-avg-salary-blockchain": "متوسط الراتب في مجال سلسلة الكتل"
+  "page-developers-why-avg-salary-blockchain": "متوسط الراتب في مجال سلسلة الكتل",
+  "page-developers-why-grid-money-heading": "أموال يمكنك برمجتها",
+  "page-developers-why-grid-money-desc": "اكتب تعليمات برمجية تحدد كيفية انتقال القيمة، ومتى، وإلى من. لا بنوك، ولا وسطاء، فقط المنطق الذي تحدده.",
+  "page-developers-why-grid-skills-heading": "مهارات تواكب المستقبل",
+  "page-developers-why-grid-skills-desc": "تعلم اللبنات الأساسية للإنترنت القادم. قد تتطور التكنولوجيا، لكن مبادئ ⁦Web3⁩ وُجدت لتبقى.",
+  "page-developers-why-grid-censorship-heading": "مقاومة الرقابة",
+  "page-developers-why-grid-censorship-desc": "ابنِ مشاريع وتجارة لا يمكن للحكومات أو الشركات أو الخوارزميات إسكاتها. إذا كان الأمر مهماً، فسيبقى على الإنترنت.",
+  "page-developers-why-grid-sovereignty-heading": "السيادة الرقمية",
+  "page-developers-why-grid-sovereignty-desc": "امتلك هويتك وأصولك وإبداعاتك على الإنترنت دون الاعتماد على منصات يمكنها حذفك.",
+  "page-developers-blog-title": "تحديثات البناة",
+  "page-developers-blog-desc": "رؤى حول أحدث موارد وأدوات وتطورات بناة إيثيريوم.",
+  "page-developers-blog-view-all": "عرض جميع التحديثات"
 }

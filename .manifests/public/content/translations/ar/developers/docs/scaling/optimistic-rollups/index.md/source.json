@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/scaling/optimistic-rollups/index.md",
-  "generatedAt": "2026-06-17T22:35:57.607Z",
-  "rootHash": "29058db0bec9",
+  "generatedAt": "2026-06-30T00:00:15.821Z",
+  "rootHash": "03702588e0cd",
   "tree": {
-    "contentHash": "7bc62156e805",
-    "anchorHash": "b4af5616819e",
+    "contentHash": "1dae8617e504",
+    "anchorHash": "4a6067ceab13",
     "children": {
       "frontmatter:title": {
         "contentHash": "be340bc7ade4",
@@ -1007,15 +1007,15 @@
         ]
       },
       "further-reading-on-optimistic-rollups": {
-        "contentHash": "120f26c072a5",
-        "anchorHash": "ccb8bce963b6",
+        "contentHash": "fc8f01c26196",
+        "anchorHash": "a486c30bddae",
         "labelHash": "5476efe809ef",
         "children": {
           "_label": {
             "contentHash": "5476efe809ef",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:8": {
+          "prose:7": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1023,81 +1023,71 @@
             "contentHash": "5a551230db4e",
             "anchorHash": "80b3f313b0c2"
           },
-          "prose:9": {
+          "prose:8": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
-            "contentHash": "dc7f5a7f3451",
-            "anchorHash": "2b190934f5de"
+            "contentHash": "ab086a7d292e",
+            "anchorHash": "912cd8e4a1b3"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "eb8d62e27b94",
+            "anchorHash": "f79a0f0d8bbc"
           },
           "prose:10": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:2": {
-            "contentHash": "ab086a7d292e",
-            "anchorHash": "912cd8e4a1b3"
+          "link:3": {
+            "contentHash": "d3fdad0a91f1",
+            "anchorHash": "60cde4bb51a3"
           },
           "prose:11": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:3": {
-            "contentHash": "eb8d62e27b94",
-            "anchorHash": "f79a0f0d8bbc"
+          "link:4": {
+            "contentHash": "c380dab70fb2",
+            "anchorHash": "1162d04db93b"
           },
           "prose:12": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:4": {
-            "contentHash": "d3fdad0a91f1",
-            "anchorHash": "60cde4bb51a3"
+          "link:5": {
+            "contentHash": "02a76fb92912",
+            "anchorHash": "c41332817c12"
           },
           "prose:13": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:5": {
-            "contentHash": "c380dab70fb2",
-            "anchorHash": "1162d04db93b"
-          },
-          "prose:14": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
           "link:6": {
-            "contentHash": "02a76fb92912",
-            "anchorHash": "c41332817c12"
-          },
-          "prose:15": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:7": {
             "contentHash": "b91fbf78e8be",
             "anchorHash": "c6773e4d2235"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:8",
+          "prose:7",
           "link:0",
-          "prose:9",
+          "prose:8",
           "link:1",
-          "prose:10",
+          "prose:9",
           "link:2",
-          "prose:11",
+          "prose:10",
           "link:3",
-          "prose:12",
+          "prose:11",
           "link:4",
-          "prose:13",
+          "prose:12",
           "link:5",
-          "prose:14",
-          "link:6",
-          "prose:15",
-          "link:7"
+          "prose:13",
+          "link:6"
         ]
       },
       "tutorials": {
@@ -1155,5 +1145,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

@@ -33,18 +33,17 @@ published: 2021-10-06
 
 أكبر اختلاف بين معياري العقود الذكية لـ ⁦NFT⁩ هو أن <span dir="ltr">ERC-1155</span> هو معيار متعدد الرموز ويتضمن وظيفة الدفعات، بينما <span dir="ltr">ERC-721</span> هو معيار لرمز مميز واحد وبالتالي يدعم فقط نقل رمز مميز واحد في كل مرة.
 
-### استدعاء وظيفة السك {#minting-function}
+### استدعاء وظيفة السك
 
-عادةً، تتطلب وظيفة السك هذه تمرير متغيرين كمعلمات، الأول هو `recipient`، والذي يحدد العنوان الذي سيتلقى ⁦NFT⁩ المسكوك حديثًا، والثاني هو `tokenURI` الخاص بـ ⁦NFT⁩، وهو سلسلة نصية تشير إلى مستند JSON يصف البيانات الوصفية لـ ⁦NFT⁩.
+عادةً، تتطلب وظيفة السك هذه تمرير متغيرين كمعلمات، الأول هو `recipient`، والذي يحدد العنوان الذي سيتلقى ⁦NFT⁩ المسكوك حديثًا، والثاني هو `tokenURI` الخاص بـ ⁦NFT⁩، وهو سلسلة نصية تشير إلى مستند <span dir="ltr">JSON</span> يصف البيانات الوصفية لـ ⁦NFT⁩.
 
-البيانات الوصفية لـ ⁦NFT⁩ هي حقًا ما يبعث الحياة فيه، مما يسمح له بامتلاك خصائص، مثل الاسم، والوصف، والصورة (أو أصل رقمي مختلف)، وسمات أخرى. إليك [مثال على tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)، والذي يحتوي على البيانات الوصفية لـ ⁦NFT⁩.
+البيانات الوصفية لـ ⁦NFT⁩ هي ما يبعث الحياة فيه حقًا، مما يسمح له بامتلاك خصائص، مثل الاسم، والوصف، والصورة (أو أصل رقمي مختلف)، وسمات أخرى. إليك [مثال على <span dir="ltr">tokenURI</span>](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)، والذي يحتوي على البيانات الوصفية لـ ⁦NFT⁩.
 
-في هذا البرنامج التعليمي، سنركز على الجزء الثاني، وهو استدعاء وظيفة السك لعقد ذكي موجود لـ ⁦NFT⁩ باستخدام واجهة مستخدم React الخاصة بنا.
+في هذا البرنامج التعليمي، سنركز على الجزء 2، وهو استدعاء وظيفة سك لعقد ذكي لـ ⁦NFT⁩ باستخدام واجهة مستخدم React الخاصة بنا.
 
-[إليك رابط](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) للعقد الذكي <span dir="ltr">ERC-721</span> لـ ⁦NFT⁩ الذي سنستدعيه في هذا البرنامج التعليمي. إذا كنت ترغب في معرفة كيف صنعناه، نوصي بشدة بالاطلاع على برنامجنا التعليمي الآخر، ["كيفية إنشاء ⁦NFT⁩"](https://www.alchemy.com/docs/how-to-create-an-nft).
+ستحتاج إلى عقد ذكي لـ ⁦NFT⁩ من نوع <span dir="ltr">ERC-721</span> منشور على شبكة اختبار مدعومة مثل Sepolia. إذا كنت ترغب في نشر واحد بنفسك، نوصي بدليل Alchemy حول [نشر عقد ذكي على Sepolia](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet).
 
 رائع، الآن بعد أن فهمنا كيف تعمل عملية صنع ⁦NFT⁩، دعونا نستنسخ ملفات البداية الخاصة بنا!
-
 ## استنساخ ملفات البداية {#clone-the-starter-files}
 
 أولاً، انتقل إلى [مستودع GitHub الخاص ببرنامج nft-minter-tutorial](https://github.com/alchemyplatform/nft-minter-tutorial) للحصول على ملفات البداية لهذا المشروع. قم باستنساخ هذا المستودع في بيئتك المحلية.
@@ -195,28 +194,25 @@ return (
 
 لكي يتمكن المستخدمون من التفاعل مع عقدك الذكي، سيحتاجون إلى ربط محفظة إيثيريوم الخاصة بهم بتطبيقك اللامركزي (dapp).
 
-### تنزيل ميتاماسك {#download-metamask}
+### تنزيل ميتاماسك
 
-في هذا البرنامج التعليمي، سنستخدم ميتاماسك، وهي محفظة افتراضية في المتصفح تُستخدم لإدارة عنوان حساب إيثيريوم الخاص بك. إذا كنت ترغب في فهم المزيد حول كيفية عمل المعاملات على إيثيريوم، تحقق من [هذه الصفحة](/developers/docs/transactions/).
+في هذا البرنامج التعليمي، سنستخدم ميتاماسك، وهي محفظة افتراضية في المتصفح تُستخدم لإدارة عنوان حساب إيثيريوم الخاص بك. إذا كنت ترغب في فهم المزيد حول كيفية عمل المعاملات على إيثيريوم، فراجع [هذه الصفحة](/developers/docs/transactions/).
 
-يمكنك تنزيل وإنشاء حساب ميتاماسك مجانًا [هنا](https://metamask.io/download). عند إنشاء حساب، أو إذا كان لديك حساب بالفعل، تأكد من التبديل إلى "Ropsten Test Network" في الزاوية العلوية اليمنى (حتى لا نتعامل بأموال حقيقية).
+يمكنك تنزيل وإنشاء حساب ميتاماسك مجانًا [هنا](https://metamask.io/download). عند إنشاء حساب، أو إذا كان لديك حساب بالفعل، تأكد من التبديل إلى شبكة اختبار مدعومة مثل <span dir="ltr">Sepolia</span> \(حتى لا نتعامل بأموال حقيقية\).
+### إضافة إيثر من صنبور
 
-### إضافة إيثر من صنبور {#add-ether-from-faucet}
+لكي نتمكن من سك ⁦NFTs⁩ الخاصة بنا (أو توقيع أي معاملات على سلسلة الكتل لإيثيريوم)، سنحتاج إلى بعض ETH الوهمي. للحصول على ETH لشبكة اختبار، استخدم صنبورًا تتم صيانته مثل [صنبور Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia) وأدخل عنوان حساب Sepolia الخاص بك. يجب أن ترى ETH في حساب ميتاماسك الخاص بك بعد فترة وجيزة!
+### التحقق من رصيدك
 
-من أجل سك ⁦NFTs⁩ الخاصة بنا (أو توقيع أي معاملات على سلسلة الكتل لإيثيريوم)، سنحتاج إلى بعض الـ ETH الوهمي. للحصول على ETH، يمكنك الذهاب إلى [صنبور روبستن](https://faucet.ropsten.be/) وإدخال عنوان حساب روبستن الخاص بك، ثم النقر على "Send Ropsten Eth". يجب أن ترى ETH في حساب ميتاماسك الخاص بك بعد فترة وجيزة!
-
-### التحقق من رصيدك {#check-your-balance}
-
-للتأكد من وجود رصيدنا، دعونا نجري طلب [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الملحن الخاصة بـ Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). سيعيد هذا مقدار ETH في محفظتنا. بعد إدخال عنوان حساب ميتاماسك الخاص بك والنقر على "Send Request"، يجب أن ترى استجابة مثل هذه:
+للتحقق مرة أخرى من وجود رصيدنا، دعونا نجري طلب [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) باستخدام [أداة وضع الحماية الخاصة بـ Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). سيعيد هذا مقدار <span dir="ltr">ETH</span> في محفظتنا. بعد إدخال عنوان حساب ميتاماسك الخاص بك والنقر على "Send Request"، يجب أن ترى استجابة كهذه:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**ملاحظة:** هذه النتيجة بوحدة Wei وليس ETH. تُستخدم Wei كأصغر فئة من الإيثر. التحويل من Wei إلى ETH هو: <span dir="ltr">1 eth = 10¹⁸ wei</span>. لذا إذا قمنا بتحويل <span dir="ltr">0xde0b6b3a7640000</span> إلى النظام العشري نحصل على <span dir="ltr">1\*10¹⁸</span> والذي يساوي <span dir="ltr">1 eth</span>.
+**ملاحظة:** هذه النتيجة بوحدة <span dir="ltr">Wei</span> وليس <span dir="ltr">ETH</span>. تُستخدم <span dir="ltr">Wei</span> كأصغر فئة من الإيثر. التحويل من <span dir="ltr">Wei</span> إلى <span dir="ltr">ETH</span> هو: <span dir="ltr">1 ETH = 10¹⁸ Wei</span>. لذا إذا قمنا بتحويل <span dir="ltr">0xde0b6b3a7640000</span> إلى النظام العشري، نحصل على <span dir="ltr">1\*10¹⁸</span> والذي يساوي <span dir="ltr">1 ETH</span>.
 
-يا للعجب! أموالنا الوهمية كلها موجودة! <Emoji text=":money_mouth_face:" size={1} />
-
+رائع! أموالنا الوهمية كلها موجودة! <Emoji text=":money_mouth_face:" size={1} />
 ## ربط ميتاماسك بواجهة المستخدم الخاصة بك {#connect-metamask-to-your-ui}
 
 الآن بعد إعداد محفظة ميتاماسك الخاصة بنا، دعونا نربط تطبيقنا اللامركزي (dapp) بها!
@@ -583,30 +579,29 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 سنحتاج أيضًا إلى مفتاح API الخاص بـ Alchemy و API الخاص بـ Alchemy Web3 للاتصال بسلسلة الكتل لإيثيريوم وتحميل عقدنا الذكي.
 
-### إنشاء مفتاح API الخاص بـ Alchemy {#create-alchemy-api}
+### إنشاء مفتاح API الخاص بـ Alchemy
 
 إذا لم يكن لديك حساب Alchemy بالفعل، [قم بالتسجيل مجانًا هنا.](https://alchemy.com/?a=eth-org-nft-minter)
 
-بمجرد إنشاء حساب Alchemy، يمكنك إنشاء مفتاح API عن طريق إنشاء تطبيق. سيسمح لنا هذا بتقديم طلبات إلى شبكة اختبار روبستن.
+بمجرد إنشاء حساب Alchemy، يمكنك إنشاء مفتاح API عن طريق إنشاء تطبيق. سيسمح لنا هذا بإجراء طلبات إلى شبكة اختبار Sepolia.
 
 انتقل إلى صفحة "Create App" في لوحة تحكم Alchemy الخاصة بك عن طريق التمرير فوق "Apps" في شريط التنقل والنقر على "Create App".
 
-قم بتسمية تطبيقك، لقد اخترنا "My First NFT!"، وقدم وصفًا قصيرًا، وحدد "Staging" للبيئة المستخدمة لمسك دفاتر تطبيقك، واختر "Ropsten" لشبكتك.
+قم بتسمية تطبيقك (اخترنا "My First NFT!")، وقدم وصفًا قصيرًا، وحدد "Staging" للبيئة المستخدمة في مسك دفاتر تطبيقك، واختر "Sepolia" لشبكتك.
 
 انقر على "Create app" وهذا كل شيء! يجب أن يظهر تطبيقك في الجدول أدناه.
 
-رائع، الآن بعد أن أنشأنا عنوان URL الخاص بـ HTTP Alchemy API، انسخه إلى الحافظة الخاصة بك...
+رائع، الآن بعد أن أنشأنا رابط HTTP لـ API الخاص بـ Alchemy، انسخه إلى الحافظة الخاصة بك...
 
-…ثم دعونا نضيفه إلى ملف `.env` الخاص بنا. إجمالاً، يجب أن يبدو ملف .env الخاص بك هكذا:
+...ثم دعونا نضيفه إلى ملف `.env` الخاص بنا. إجمالاً، يجب أن يبدو ملف `.env` الخاص بك هكذا:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 الآن بعد أن أصبح لدينا ABI الخاص بالعقد ومفتاح API الخاص بـ Alchemy، نحن جاهزون لتحميل عقدنا الذكي باستخدام [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
-
 ### إعداد نقطة نهاية Alchemy Web3 والعقد الخاص بك {#setup-alchemy-endpoint}
 
 أولاً، إذا لم يكن لديك بالفعل، فستحتاج إلى تثبيت [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) عن طريق الانتقال إلى الدليل الرئيسي: `nft-minter-tutorial` في الطرفية:
@@ -849,12 +844,11 @@ const onMintPressed = async () => {
 }
 ```
 
-## نشر ⁦NFT⁩ الخاص بك على موقع ويب مباشر {#deploy-your-nft}
+## نشر ⁦NFT⁩ الخاص بك على موقع ويب مباشر
 
-هل أنت مستعد لجعل مشروعك مباشرًا ليتفاعل معه المستخدمون؟ تحقق من [هذا البرنامج التعليمي](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) لنشر أداة السك (Minter) الخاصة بك على موقع ويب مباشر.
+هل أنت مستعد لإطلاق مشروعك مباشرة ليتفاعل معه المستخدمون؟ اطلع على [وثائق نشر React](https://create-react-app.dev/docs/deployment/) لنشر أداة السك الخاصة بك على موقع ويب مباشر.
 
 خطوة أخيرة...
-
 ## اكتساح عالم سلسلة الكتل {#take-the-blockchain-world-by-storm}
 
 أمزح فقط، لقد وصلت إلى نهاية البرنامج التعليمي!
@@ -865,6 +859,6 @@ const onMintPressed = async () => {
 - استدعاء وظائف العقد الذكي من واجهتك الأمامية
 - توقيع المعاملات باستخدام ميتاماسك
 
-من المفترض أنك ترغب في أن تكون قادرًا على التباهي بـ ⁦NFTs⁩ المسكوكة عبر تطبيقك اللامركزي (dapp) في محفظتك — لذا تأكد من الاطلاع على برنامجنا التعليمي السريع [كيفية عرض ⁦NFT⁩ الخاص بك في محفظتك](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)!
+من المفترض أنك ترغب في أن تكون قادرًا على التباهي بـ ⁦NFTs⁩ المسكوكة عبر تطبيقك اللامركزي (dapp) في محفظتك — لذا تأكد من الاطلاع على برنامجنا التعليمي السريع [كيفية عرض ⁦NFT⁩ الخاص بك في محفظتك](/developers/tutorials/how-to-view-nft-in-metamask/)!
 
 وكما هو الحال دائمًا، إذا كان لديك أي أسئلة، فنحن هنا للمساعدة في [ديسكورد Alchemy](https://discord.gg/gWuC7zB). لا يسعنا الانتظار لرؤية كيف ستطبق المفاهيم من هذا البرنامج التعليمي على مشاريعك المستقبلية!

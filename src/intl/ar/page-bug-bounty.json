@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "يأخذ برنامج مكافآت إيثيريوم في الاعتبار عددًا من المتغيرات في تحديد المكافآت. قرارات الأهلية، والنتيجة، وجميع الشروط المتعلقة بالجائزة تخضع للتقدير المطلق والنهائي للجنة مكافآت الأخطاء التابعة لـ مؤسسة إيثيريوم.",
   "page-upgrades-bug-bounty-leaderboard": "عرض لوحات الصدارة الكاملة",
   "page-upgrades-bug-bounty-leaderboard-list": "لوحة صدارة مكافآت الأخطاء",
+  "page-upgrades-bug-bounty-leaderboard-position": "في المركز رقم {rank} برصيد {score, plural, zero {# نقطة} one {نقطة واحدة} two {نقطتين} few {# نقاط} many {# نقطة} other {# نقطة}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(انظر ملف ⁦GitHub⁩ الشخصي)",
   "page-upgrades-bug-bounty-leaderboard-points": "نقاط",
   "page-upgrades-bug-bounty-ledger-desc": "تفصل مواصفات إيثيريوم الأساس المنطقي لتصميم طبقة التنفيذ و طبقة الإجماع.",
   "page-upgrades-bug-bounty-ledger-title": "أخطاء المواصفات",

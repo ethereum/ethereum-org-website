@@ -17,7 +17,7 @@ published: 2021-04-22
 
 في الجزء الثاني من هذا الدرس، سنستعرض كيف يمكننا استخدام عقدنا الذكي لسك <span dir="ltr">NFT</span>، وفي الجزء الثالث سنشرح كيفية عرض <span dir="ltr">NFT</span> الخاص بك على ميتاماسك.
 
-وبالطبع، إذا كانت لديك أسئلة في أي وقت، فلا تتردد في التواصل معنا في [ديسكورد Alchemy](https://discord.gg/gWuC7zB) أو زيارة [مستندات <span dir="ltr">API</span> الخاصة بـ <span dir="ltr">NFT</span> من Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
+وبالطبع، إذا كانت لديك أسئلة في أي وقت، فلا تتردد في التواصل معنا في [ديسكورد Alchemy](https://discord.gg/gWuC7zB) أو زيارة [مستندات <span dir="ltr">API</span> الخاصة بـ <span dir="ltr">NFT</span> من Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart)!
 
 ## الخطوة 1: الاتصال بشبكة إيثيريوم {#connect-to-ethereum}
 
@@ -27,7 +27,7 @@ published: 2021-04-22
 
 ## الخطوة 2: إنشاء تطبيقك (ومفتاح API) {#make-api-key}
 
-بمجرد إنشاء حساب Alchemy، يمكنك إنشاء مفتاح <span dir="ltr">API</span> عن طريق إنشاء تطبيق. سيسمح لنا ذلك بتقديم طلبات إلى شبكة اختبار Sepolia. تحقق من [هذا الدليل](https://docs.alchemyapi.io/guides/choosing-a-network) إذا كنت مهتمًا بمعرفة المزيد عن شبكات الاختبار.
+بمجرد إنشاء حساب Alchemy، يمكنك إنشاء مفتاح <span dir="ltr">API</span> عن طريق إنشاء تطبيق. سيسمح لنا ذلك بتقديم طلبات إلى شبكة اختبار Sepolia. تحقق من [هذا الدليل](https://www.alchemy.com/docs/choosing-a-web3-network) إذا كنت مهتمًا بمعرفة المزيد عن شبكات الاختبار.
 
 1. انتقل إلى صفحة "Create App" (إنشاء تطبيق) في لوحة تحكم Alchemy الخاصة بك عن طريق التمرير فوق "Apps" (التطبيقات) في شريط التنقل والنقر على "Create App"
 
@@ -51,28 +51,27 @@ published: 2021-04-22
 
 من أجل نشر عقدنا الذكي على شبكة الاختبار، سنحتاج إلى بعض <span dir="ltr">ETH</span> الوهمي. للحصول على <span dir="ltr">ETH</span>، يمكنك الذهاب إلى [صنبور Sepolia](https://sepoliafaucet.com/) المستضاف بواسطة Alchemy، وتسجيل الدخول وإدخال عنوان حسابك، ثم النقر على "Send Me ETH" (أرسل لي ETH). يجب أن ترى <span dir="ltr">ETH</span> في حساب ميتاماسك الخاص بك بعد فترة وجيزة!
 
-## الخطوة 5: التحقق من رصيدك {#check-balance}
+## الخطوة 5: التحقق من رصيدك
 
-للتحقق مرة أخرى من وجود رصيدنا، دعنا نُجري طلب [<span dir="ltr">eth_getBalance</span>](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) باستخدام [أداة الملحن (composer) من Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). سيؤدي هذا إلى إرجاع مقدار <span dir="ltr">ETH</span> في محفظتنا. بعد إدخال عنوان حساب ميتاماسك الخاص بك والنقر على "Send Request" (إرسال الطلب)، يجب أن ترى استجابة مثل هذه:
+للتحقق مرة أخرى من وجود رصيدنا، دعنا نُجري طلب [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) باستخدام [أداة sandbox الخاصة بـ Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). سيؤدي هذا إلى إرجاع مقدار <span dir="ltr">ETH</span> في محفظتنا. بعد إدخال عنوان حساب ميتاماسك الخاص بك والنقر على "Send Request" (إرسال طلب)، يجب أن ترى استجابة مثل هذه:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-> **ملاحظة** هذه النتيجة بوحدة <span dir="ltr">Wei</span>، وليس <span dir="ltr">ETH</span>. تُستخدم <span dir="ltr">Wei</span> كأصغر فئة من الإيثر. التحويل من <span dir="ltr">Wei</span> إلى <span dir="ltr">ETH</span> هو <span dir="ltr">1 eth = 10<sup>18</sup> wei</span>. لذلك إذا قمنا بتحويل <span dir="ltr">0xde0b6b3a7640000</span> إلى النظام العشري، نحصل على <span dir="ltr">1\*10<sup>18</sup> wei</span>، وهو ما يعادل <span dir="ltr">1 ETH</span>.
+> **ملاحظة** هذه النتيجة بوحدة <span dir="ltr">Wei</span>، وليس <span dir="ltr">ETH</span>. تُستخدم <span dir="ltr">Wei</span> كأصغر فئة من إيثر. التحويل من <span dir="ltr">Wei</span> إلى <span dir="ltr">ETH</span> هو <span dir="ltr">1 eth = 10<sup>18</sup> wei</span>. لذا إذا قمنا بتحويل <span dir="ltr">0xde0b6b3a7640000</span> إلى النظام العشري، فسنحصل على <span dir="ltr">1\*10<sup>18</sup> wei</span>، وهو ما يعادل <span dir="ltr">1 ETH</span>.
 
 رائع! أموالنا الوهمية كلها موجودة.
-
-## الخطوة 6: تهيئة مشروعنا {#initialize-project}
+## الخطوة 6: تهيئة مشروعنا
 
 أولاً، سنحتاج إلى إنشاء مجلد لمشروعنا. انتقل إلى سطر الأوامر واكتب:
 
     mkdir my-nft
     cd my-nft
 
-الآن بعد أن أصبحنا داخل مجلد مشروعنا، سنستخدم `npm init` لتهيئة المشروع. إذا لم يكن لديك `npm` مثبتًا بالفعل، فاتبع [هذه التعليمات](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (سنحتاج أيضًا إلى [Node.js](https://nodejs.org/en/download/)، لذا قم بتنزيله أيضًا!).
+الآن بعد أن أصبحنا داخل مجلد مشروعنا، سنستخدم <span dir="ltr">npm init</span> لتهيئة المشروع. إذا لم يكن لديك <span dir="ltr">npm</span> مثبتًا بالفعل، فاتبع [تعليمات تثبيت Node.js](https://nodejs.org/en/download/) (سنحتاج إلى Node.js و <span dir="ltr">npm</span> في هذا الدرس).
 
     npm init
 
-لا يهم حقًا كيف تجيب على أسئلة التثبيت؛ إليك كيف فعلنا ذلك كمرجع:
+لا يهم حقًا كيف تجيب على أسئلة التثبيت؛ إليك كيف قمنا بذلك كمرجع:
 
 ```json
     package name: (my-nft)
@@ -99,8 +98,7 @@ published: 2021-04-22
     }
 ```
 
-وافق على `package.json`، ونحن جاهزون للبدء!
-
+وافق على <span dir="ltr">package.json</span>، ونحن جاهزون للبدء!
 ## الخطوة 7: تثبيت [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 Hardhat هي بيئة تطوير لتجميع ونشر واختبار وتصحيح أخطاء برمجيات إيثيريوم الخاصة بك. إنها تساعد المطورين عند بناء العقود الذكية والتطبيقات اللامركزية (dapps) محليًا قبل النشر على السلسلة الحية.
@@ -342,7 +340,7 @@ main()
 
 رائع! لقد قمت للتو بنشر العقد الذكي لـ <span dir="ltr">NFT</span> الخاص بك على سلسلة إيثيريوم (شبكة الاختبار)!
 
-لفهم ما يحدث داخليًا، دعنا ننتقل إلى علامة التبويب Explorer (المستكشف) في [لوحة تحكم Alchemy](https://dashboard.alchemyapi.io/explorer) الخاصة بنا. إذا كان لديك تطبيقات Alchemy متعددة، فتأكد من التصفية حسب التطبيق وحدد "MyNFT".
+لفهم ما يحدث داخليًا، دعنا ننتقل إلى علامة التبويب Explorer (المستكشف) في [لوحة تحكم Alchemy](https://dashboard.alchemy.com/explorer) الخاصة بنا. إذا كان لديك تطبيقات Alchemy متعددة، فتأكد من التصفية حسب التطبيق وحدد "MyNFT".
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

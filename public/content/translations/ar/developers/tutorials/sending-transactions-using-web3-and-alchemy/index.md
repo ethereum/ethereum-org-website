@@ -11,7 +11,7 @@ source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
-هذا دليل مبسط للمبتدئين حول إرسال معاملات إيثيريوم باستخدام <span dir="ltr">Web3</span>. هناك ثلاث خطوات رئيسية لإرسال معاملة إلى سلسلة كتل إيثيريوم: الإنشاء، والتوقيع، والبث. سنستعرض هذه الخطوات الثلاث، ونأمل أن نجيب على أي أسئلة قد تكون لديك! في هذا البرنامج التعليمي، سنستخدم [Alchemy](https://www.alchemy.com/) لإرسال معاملاتنا إلى سلسلة إيثيريوم. يمكنك [إنشاء حساب Alchemy مجاني هنا](https://auth.alchemyapi.io/signup).
+هذا دليل مبسط للمبتدئين حول إرسال معاملات إيثيريوم باستخدام <span dir="ltr">Web3</span>. هناك ثلاث خطوات رئيسية لإرسال معاملة إلى سلسلة كتل إيثيريوم: الإنشاء، والتوقيع، والبث. سنستعرض هذه الخطوات الثلاث، ونأمل أن نجيب على أي أسئلة قد تكون لديك! في هذا البرنامج التعليمي، سنستخدم [Alchemy](https://www.alchemy.com/) لإرسال معاملاتنا إلى سلسلة إيثيريوم. يمكنك [إنشاء حساب Alchemy مجاني هنا](https://auth.alchemy.com/signup).
 
 **ملاحظة:** هذا الدليل مخصص لتوقيع معاملاتك في _الواجهة الخلفية_ (backend) لتطبيقك. إذا كنت ترغب في دمج توقيع معاملاتك في الواجهة الأمامية (frontend)، فتحقق من دمج [<span dir="ltr">Web3</span> مع مزود متصفح](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider).
 
@@ -24,11 +24,9 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 - هذا يعني أن Alchemy لا يمكنها توقيع وإرسال المعاملات نيابة عنك. السبب في ذلك هو لأغراض أمنية. لن تطلب منك Alchemy أبدًا مشاركة مفتاحك الخاص، ويجب ألا تشارك مفتاحك الخاص أبدًا مع عقدة مستضافة (أو مع أي شخص آخر في هذا الصدد).
 - يمكنك القراءة من سلسلة الكتل باستخدام <span dir="ltr">API</span> الأساسية لـ Alchemy، ولكن للكتابة عليها ستحتاج إلى استخدام شيء آخر لتوقيع معاملاتك قبل إرسالها عبر Alchemy (وهذا ينطبق على أي [خدمة عقدة](/developers/docs/nodes-and-clients/nodes-as-a-service/) أخرى).
 
-### 2\. ما هو "المُوقِّع" (signer)؟ {#what-is-a-signer}
-
-- يقوم المُوقِّعون بتوقيع المعاملات نيابة عنك باستخدام مفتاحك الخاص. في هذا البرنامج التعليمي، سنستخدم [<span dir="ltr">Alchemy web3</span>](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3) لتوقيع معاملتنا، ولكن يمكنك أيضًا استخدام أي مكتبة <span dir="ltr">Web3</span> أخرى.
-- في الواجهة الأمامية، من الأمثلة الجيدة على المُوقِّع هو [ميتاماسك](https://metamask.io/)، والذي سيقوم بتوقيع وإرسال المعاملات نيابة عنك.
-
+### 2\. ما هو "المُوقِّع"؟
+- ستقوم المُوقِّعات بتوقيع المعاملات نيابة عنك باستخدام مفتاحك الخاص. في هذا البرنامج التعليمي، سنستخدم [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) لتوقيع معاملتنا، ولكن يمكنك أيضًا استخدام أي مكتبة <span dir="ltr">Web3</span> أخرى.
+- في الواجهة الأمامية، من الأمثلة الجيدة على المُوقِّع [ميتاماسك](https://metamask.io/)، والذي سيقوم بتوقيع وإرسال المعاملات نيابة عنك.
 ### 3\. لماذا أحتاج إلى توقيع معاملاتي؟ {#why-do-i-need-to-sign-my-transactions}
 
 - يجب على كل مستخدم يرغب في إرسال معاملة على شبكة إيثيريوم توقيع المعاملة (باستخدام مفتاحه الخاص)، من أجل التحقق من أن مصدر المعاملة هو بالفعل الشخص الذي يدعيه.
@@ -43,7 +41,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 `eth_sendTransaction` و `eth_sendRawTransaction` هما دالتان في <span dir="ltr">API</span> إيثيريوم تقومان ببث معاملة إلى شبكة إيثيريوم بحيث تتم إضافتها إلى كتلة مستقبلية. يختلفان في كيفية تعاملهما مع توقيع المعاملات.
 
 - تُستخدم [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction) لإرسال المعاملات _غير الموقعة_، مما يعني أن العقدة التي ترسل إليها يجب أن تدير مفتاحك الخاص حتى تتمكن من توقيع المعاملة قبل بثها إلى السلسلة. نظرًا لأن Alchemy لا تحتفظ بالمفاتيح الخاصة للمستخدمين، فإنها لا تدعم هذه الطريقة.
-- تُستخدم [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) لبث المعاملات التي تم توقيعها بالفعل. هذا يعني أنه يجب عليك أولاً استخدام [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction)، ثم تمرير النتيجة إلى `eth_sendRawTransaction`.
+- تُستخدم [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) لبث المعاملات التي تم توقيعها بالفعل. هذا يعني أنه يجب عليك أولاً استخدام [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction)، ثم تمرير النتيجة إلى `eth_sendRawTransaction`.
 
 عند استخدام <span dir="ltr">Web3</span>، يتم الوصول إلى `eth_sendRawTransaction` عن طريق استدعاء الدالة [web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction).
 
@@ -52,26 +50,24 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ### 6\. ما هي مكتبة Web3؟ {#what-is-the-web3-library}
 
 - <span dir="ltr">Web3.js</span> هي مكتبة تغليف (wrapper) حول استدعاءات <span dir="ltr">JSON-RPC</span> القياسية والتي يشيع استخدامها في تطوير إيثيريوم.
-- هناك العديد من مكتبات <span dir="ltr">Web3</span> للغات مختلفة. في هذا البرنامج التعليمي، سنستخدم [<span dir="ltr">Alchemy Web3</span>](https://docs.alchemy.com/reference/api-overview) المكتوبة بلغة <span dir="ltr">JavaScript</span>. يمكنك التحقق من الخيارات الأخرى [هنا](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) مثل [<span dir="ltr">Ethers.js</span>](https://docs.ethers.org/v5/).
+- هناك العديد من مكتبات <span dir="ltr">Web3</span> للغات مختلفة. في هذا البرنامج التعليمي، سنستخدم [<span dir="ltr">Alchemy Web3</span>](https://github.com/alchemyplatform/alchemy-web3) المكتوبة بلغة <span dir="ltr">JavaScript</span>. يمكنك التحقق من الخيارات الأخرى [هنا](/developers/docs/apis/javascript/) مثل [<span dir="ltr">Ethers.js</span>](https://docs.ethers.org/v5/).
 
 حسنًا، الآن بعد أن أجبنا على بعض هذه الأسئلة، دعنا ننتقل إلى البرنامج التعليمي. لا تتردد في طرح الأسئلة في أي وقت في [ديسكورد](https://discord.gg/gWuC7zB) الخاص بـ Alchemy!
 
-### 7\. كيف ترسل معاملات آمنة، ومُحسّنة الغاز، وخاصة؟ {#how-to-send-secure-gas-optimized-and-private-transactions}
+### 7\. كيف ترسل معاملات آمنة، ومُحسَّنة الغاز، وخاصة؟
+- [تمتلك Alchemy مجموعة من الموارد الخاصة بالمعاملات](https://www.alchemy.com/docs/sending-transactions). يمكنك استخدامها لإرسال المعاملات، ومحاكاة المعاملات قبل حدوثها، وإرسال معاملات خاصة، وإرسال معاملات مُحسَّنة الغاز.
+- يمكنك أيضًا استخدام [خطافات الويب (webhooks) الخاصة بـ Alchemy](https://www.alchemy.com/docs/reference/webhooks-overview) لتلقي تنبيهات عندما يتم سحب معاملتك من مجمع الذاكرة وإضافتها إلى السلسلة.
 
-- [تمتلك Alchemy مجموعة من واجهات برمجة تطبيقات المعاملات (Transact APIs)](https://docs.alchemy.com/reference/transact-api-quickstart). يمكنك استخدامها لإرسال معاملات معززة، ومحاكاة المعاملات قبل حدوثها، وإرسال معاملات خاصة، وإرسال معاملات مُحسّنة الغاز.
-- يمكنك أيضًا استخدام [<span dir="ltr">Notify API</span>](https://docs.alchemy.com/docs/alchemy-notify) لتلقي تنبيهات عندما يتم سحب معاملتك من مجمع الذاكرة وإضافتها إلى السلسلة.
+**ملاحظة:** يتطلب هذا الدليل حساب Alchemy، وعنوان إيثيريوم أو محفظة ميتاماسك، وتثبيت <span dir="ltr">Node.js</span> و <span dir="ltr">npm</span>. إذا لم يكن لديك ذلك، فاتبع هذه الخطوات:
 
-**ملاحظة:** يتطلب هذا الدليل حساب Alchemy، وعنوان إيثيريوم أو محفظة ميتاماسك، وتثبيت <span dir="ltr">NodeJs</span> و <span dir="ltr">npm</span>. إذا لم يكن الأمر كذلك، فاتبع هذه الخطوات:
-
-1.  [إنشاء حساب Alchemy مجاني](https://auth.alchemyapi.io/signup)
+1.  [إنشاء حساب Alchemy مجاني](https://auth.alchemy.com/signup)
 2.  [إنشاء حساب ميتاماسك](https://metamask.io/) (أو الحصول على عنوان إيثيريوم)
-3.  [اتبع هذه الخطوات لتثبيت NodeJs و NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
-
+3.  [تثبيت <span dir="ltr">Node.js</span> و <span dir="ltr">npm</span>](https://nodejs.org/en/download/)
 ## خطوات إرسال معاملتك {#steps-to-sending-your-transaction}
 
 ### 1\. إنشاء تطبيق Alchemy على شبكة اختبار Sepolia {#create-an-alchemy-app-on-the-sepolia-testnet}
 
-انتقل إلى [لوحة تحكم Alchemy](https://dashboard.alchemyapi.io/) الخاصة بك وأنشئ تطبيقًا جديدًا، مع اختيار Sepolia (أو أي شبكة اختبار أخرى) كشبكتك.
+انتقل إلى [لوحة تحكم Alchemy](https://dashboard.alchemy.com/) الخاصة بك وأنشئ تطبيقًا جديدًا، مع اختيار Sepolia (أو أي شبكة اختبار أخرى) كشبكتك.
 
 ### 2\. طلب ETH من صنبور Sepolia {#request-eth-from-sepolia-faucet}
 
@@ -88,9 +84,9 @@ cd sendtx-example
 
 ### 4\. تثبيت Alchemy Web3 (أو أي مكتبة Web3) {#install-alchemy-web3}
 
-قم بتشغيل الأمر التالي في دليل مشروعك لتثبيت [<span dir="ltr">Alchemy Web3</span>](https://docs.alchemy.com/reference/api-overview):
+قم بتشغيل الأمر التالي في دليل مشروعك لتثبيت [<span dir="ltr">Alchemy Web3</span>](https://github.com/alchemyplatform/alchemy-web3):
 
-ملاحظة، إذا كنت ترغب في استخدام مكتبة <span dir="ltr">Ethers.js</span>، [فاتبع التعليمات هنا](https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum).
+ملاحظة، إذا كنت ترغب في استخدام مكتبة <span dir="ltr">Ethers.js</span>، [فاتبع التعليمات هنا](https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum).
 
 ```
 npm install @alch/alchemy-web3
@@ -124,9 +120,8 @@ PRIVATE_KEY = "your-private-key"
 </AlertContent>
 </Alert>
 
-### 7\. إنشاء ملف `sendTx.js` {#create-sendtx-js}
-
-رائع، الآن بعد أن قمنا بحماية بياناتنا الحساسة في ملف `.env`، لنبدأ في كتابة التعليمات البرمجية. في مثال إرسال المعاملة الخاص بنا، سنقوم بإرسال <span dir="ltr">ETH</span> مرة أخرى إلى صنبور Sepolia.
+### 7\. إنشاء ملف `sendTx.js`
+رائع، الآن بعد أن قمنا بحماية بياناتنا الحساسة في ملف `.env`، دعنا نبدأ في كتابة التعليمات البرمجية. في مثال إرسال المعاملة الخاص بنا، سنقوم بإرسال <span dir="ltr">ETH</span> مرة أخرى إلى صنبور Sepolia.
 
 أنشئ ملف `sendTx.js`، وهو المكان الذي سنقوم فيه بتكوين وإرسال معاملة المثال الخاصة بنا، وأضف إليه أسطر التعليمات البرمجية التالية:
 
@@ -152,9 +147,9 @@ async function main() {
 
     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
-      console.log("🎉 تجزئة معاملتك هي: ", hash, "\n تحقق من مجمع الذاكرة الخاص بـ Alchemy لعرض حالة معاملتك!");
+      console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
     } else {
-      console.log("❗حدث خطأ ما أثناء إرسال معاملتك:", error)
+      console.log("❗Something went wrong while submitting your transaction:", error)
     }
    });
 }
@@ -166,24 +161,23 @@ main();
 
 الآن، قبل أن ننتقل إلى تشغيل هذه التعليمات البرمجية، دعنا نتحدث عن بعض المكونات هنا.
 
-- `nonce` : تُستخدم مواصفة الرقم الفريد (nonce) لتتبع عدد المعاملات المرسلة من عنوانك. نحتاج إلى هذا لأغراض أمنية ولمنع [هجمات إعادة الإرسال (replay attacks)](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). للحصول على عدد المعاملات المرسلة من عنوانك، نستخدم [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+- `nonce`: تُستخدم مواصفة الرقم الفريد (nonce) لتتبع عدد المعاملات المرسلة من عنوانك. نحتاج إلى هذا لأغراض أمنية ولمنع هجمات إعادة الإرسال (replay attacks). للحصول على عدد المعاملات المرسلة من عنوانك، نستخدم [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
 - `transaction`: يحتوي كائن المعاملة على بعض الجوانب التي نحتاج إلى تحديدها
-  - `to`: هذا هو العنوان الذي نريد إرسال <span dir="ltr">ETH</span> إليه. في هذه الحالة، نرسل <span dir="ltr">ETH</span> مرة أخرى إلى [صنبور Sepolia](https://sepoliafaucet.com/) الذي طلبنا منه في البداية.
+  - `to`: هذا هو العنوان الذي نريد إرسال <span dir="ltr">ETH</span> إليه. في هذه الحالة، نقوم بإرسال <span dir="ltr">ETH</span> مرة أخرى إلى [صنبور Sepolia](https://sepoliafaucet.com/) الذي طلبنا منه في البداية.
   - `value`: هذا هو المبلغ الذي نرغب في إرساله، محددًا بوحدة <span dir="ltr">Wei</span> حيث <span dir="ltr">10^18 Wei = 1 ETH</span>
-  - `gas`: هناك العديد من الطرق لتحديد الكمية المناسبة من الغاز لتضمينها مع معاملتك. تمتلك Alchemy حتى [خطاف ويب (webhook) لسعر الغاز](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1) لإعلامك عندما ينخفض سعر الغاز ضمن حد معين. بالنسبة لمعاملات الشبكة الرئيسية، من الممارسات الجيدة التحقق من مقدر الغاز مثل [<span dir="ltr">ETH Gas Station</span>](https://ethgasstation.info/) لتحديد الكمية المناسبة من الغاز لتضمينها. <span dir="ltr">21,000</span> هو الحد الأدنى لكمية الغاز التي ستستخدمها أي عملية على إيثيريوم، لذا لضمان تنفيذ معاملتنا نضع <span dir="ltr">30,000</span> هنا.
-  - `nonce`: راجع تعريف الرقم الفريد (nonce) أعلاه. يبدأ الرقم الفريد العد من الصفر.
-  - [اختياري] البيانات (data): تُستخدم لإرسال معلومات إضافية مع تحويلك، أو استدعاء عقد ذكي، وهي غير مطلوبة لتحويلات الرصيد، تحقق من الملاحظة أدناه.
+  - `gas`: هناك العديد من الطرق لتحديد الكمية المناسبة من الغاز لتضمينها مع معاملتك. تدعم Alchemy [خطافات الويب (webhooks)](https://www.alchemy.com/docs/reference/webhooks-overview) التي يمكنها إعلامك بالنشاط على السلسلة. بالنسبة لمعاملات الشبكة الرئيسية، من الممارسات الجيدة التحقق من ظروف الغاز الحالية لتحديد الكمية المناسبة من الغاز لتضمينها. <span dir="ltr">21,000</span> هو الحد الأدنى لكمية الغاز التي ستستخدمها أي عملية على إيثيريوم، لذا لضمان تنفيذ معاملتنا نضع <span dir="ltr">30,000</span> هنا.
+  - `nonce`: راجع تعريف الرقم الفريد أعلاه. يبدأ الرقم الفريد العد من الصفر.
+  - [اختياري] `data`: يُستخدم لإرسال معلومات إضافية مع تحويلك، أو استدعاء عقد ذكي، وهو غير مطلوب لتحويلات الرصيد، تحقق من الملاحظة أدناه.
 - `signedTx`: لتوقيع كائن المعاملة الخاص بنا، سنستخدم طريقة `signTransaction` مع `PRIVATE_KEY` الخاص بنا.
 - `sendSignedTransaction`: بمجرد أن يكون لدينا معاملة موقعة، يمكننا إرسالها ليتم تضمينها في كتلة لاحقة باستخدام `sendSignedTransaction`.
 
-**ملاحظة حول البيانات (data)**
+**ملاحظة حول البيانات (`data`)**
 هناك نوعان رئيسيان من المعاملات التي يمكن إرسالها في إيثيريوم.
 
 - تحويل الرصيد: إرسال <span dir="ltr">ETH</span> من عنوان إلى آخر. لا يلزم وجود حقل بيانات، ومع ذلك، إذا كنت ترغب في إرسال معلومات إضافية إلى جانب معاملتك، فيمكنك تضمين هذه المعلومات بتنسيق <span dir="ltr">HEX</span> في هذا الحقل.
-  - على سبيل المثال، لنفترض أننا أردنا كتابة تجزئة مستند <span dir="ltr">IPFS</span> على سلسلة إيثيريوم من أجل إعطائه طابعًا زمنيًا غير قابل للتغيير. يجب أن يبدو حقل البيانات الخاص بنا كالتالي: `web3.utils.toHex(‘IPFS hash‘)`. والآن يمكن لأي شخص الاستعلام عن السلسلة ومعرفة متى تمت إضافة هذا المستند.
-- معاملة العقد الذكي: تنفيذ بعض التعليمات البرمجية لعقد ذكي على السلسلة. في هذه الحالة، يجب أن يحتوي حقل البيانات على الدالة الذكية التي ترغب في تنفيذها، إلى جانب أي معلمات (parameters).
-  - للحصول على مثال عملي، تحقق من الخطوة 8 في [البرنامج التعليمي Hello World](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction).
-
+  - على سبيل المثال، لنفترض أننا أردنا كتابة تجزئة مستند <span dir="ltr">IPFS</span> على سلسلة إيثيريوم من أجل إعطائه طابعًا زمنيًا غير قابل للتغيير. يجب أن يبدو حقل البيانات الخاص بنا حينها كالتالي: `data: web3.utils.toHex(‘IPFS hash‘)`. والآن يمكن لأي شخص الاستعلام عن السلسلة ومعرفة متى تمت إضافة هذا المستند.
+- معاملة العقد الذكي: تنفيذ بعض التعليمات البرمجية للعقد الذكي على السلسلة. في هذه الحالة، يجب أن يحتوي حقل البيانات على الدالة الذكية التي ترغب في تنفيذها، إلى جانب أي معلمات.
+  - للحصول على مثال عملي، تحقق من [البرنامج التعليمي للعقد الذكي Hello World](/developers/tutorials/hello-world-smart-contract/).
 ### 8\. تشغيل التعليمات البرمجية باستخدام `node sendTx.js` {#run-the-code-using-node-sendtx-js}
 
 ارجع إلى الطرفية أو سطر الأوامر وقم بتشغيل:
@@ -192,18 +186,17 @@ main();
 node sendTx.js
 ```
 
-### 9\. رؤية معاملتك في مجمع الذاكرة {#see-your-transaction-in-the-mempool}
-
-افتح [صفحة مجمع الذاكرة](https://dashboard.alchemyapi.io/mempool) في لوحة تحكم Alchemy الخاصة بك وقم بالتصفية حسب التطبيق الذي أنشأته للعثور على معاملتك. هذا هو المكان الذي يمكننا فيه مشاهدة انتقال معاملتنا من حالة معلقة (pending) إلى حالة مُعدّنة (mined) (إذا نجحت) أو حالة مسقطة (dropped) إذا لم تنجح. تأكد من إبقائها على "الكل" (All) حتى تتمكن من التقاط المعاملات "المُعدّنة" و"المعلقة" و"المسقطة". يمكنك أيضًا البحث عن معاملتك من خلال البحث عن المعاملات المرسلة إلى العنوان `0x31b98d14007bdee637298086988a0bbd31184523` .
+### 9\. رؤية معاملتك في مجمع الذاكرة (Mempool)
+افتح [صفحة مجمع الذاكرة](https://dashboard.alchemy.com/mempool) في لوحة تحكم Alchemy الخاصة بك وقم بالتصفية حسب التطبيق الذي أنشأته للعثور على معاملتك. هذا هو المكان الذي يمكننا فيه مشاهدة انتقال معاملتنا من حالة التعليق (pending) إلى حالة التعدين (mined) (إذا نجحت) أو حالة الإسقاط (dropped) إذا لم تنجح. تأكد من إبقائها على "الكل" (All) حتى تتمكن من التقاط المعاملات "المُعدَّنة" و"المُعلَّقة" و"المُسقَطة". يمكنك أيضًا البحث عن معاملتك من خلال البحث عن المعاملات المرسلة إلى العنوان `0x31b98d14007bdee637298086988a0bbd31184523` .
 
 لعرض تفاصيل معاملتك بمجرد العثور عليها، حدد تجزئة المعاملة (tx hash)، والتي يجب أن تنقلك إلى عرض يبدو كالتالي:
 
-![Mempool watcher screenshot](./mempool.png)
+![لقطة شاشة لمراقب مجمع الذاكرة](./mempool.png)
 
-من هناك يمكنك عرض معاملتك على Etherscan بالنقر على الأيقونة المحاطة بدائرة حمراء!
+من هناك يمكنك عرض معاملتك على Etherscan بالنقر فوق الرمز المحاط بدائرة حمراء!
 
-**مرحى! لقد قمت للتو بإرسال أول معاملة إيثيريوم لك باستخدام Alchemy 🎉**
+**مرحى! لقد أرسلت للتو أول معاملة إيثيريوم لك باستخدام Alchemy 🎉**
 
-_للملاحظات والاقتراحات حول هذا الدليل، يرجى مراسلة إيلان على [ديسكورد](https://discord.gg/A39JVCM) الخاص بـ Alchemy!_
+_للحصول على ملاحظات واقتراحات حول هذا الدليل، يرجى مراسلة Elan على [ديسكورد](https://discord.gg/A39JVCM) الخاص بـ Alchemy!_
 
-_نُشر في الأصل على [https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy](https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy)_
+_نُشر في الأصل بواسطة Alchemy._

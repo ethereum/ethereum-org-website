@@ -271,8 +271,8 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **<span dir="ltr">Mythril</span>** - _أداة تنفيذ رمزي لاكتشاف نقاط الضعف في العقود الذكية على إيثيريوم_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [التوثيق](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [التوثيق](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## قراءة إضافية {#further-reading}
 

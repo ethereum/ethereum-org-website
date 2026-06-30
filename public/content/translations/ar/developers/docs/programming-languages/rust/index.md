@@ -44,7 +44,7 @@ incomplete: true
 - [<span dir="ltr">oasis_std</span>](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _مرجع <span dir="ltr">OASIS API</span>_
 - [<span dir="ltr">Solaris</span>](https://github.com/paritytech/sol-rs) - _أداة اختبار الوحدة للعقود الذكية بلغة <span dir="ltr">Solidity</span> باستخدام <span dir="ltr">EVM</span> الأصلي لعميل <span dir="ltr">Parity</span>._
 - [<span dir="ltr">SputnikVM</span>](https://github.com/rust-blockchain/evm) - _تنفيذ آلة إيثيريوم الافتراضية بلغة <span dir="ltr">Rust</span>_
-- [<span dir="ltr">Wavelet</span>](https://wavelet.perlin.net/docs/smart-contracts) - _عقد ذكي لـ <span dir="ltr">Wavelet</span> بلغة <span dir="ltr">Rust</span>_
+- [<span dir="ltr">Wavelet</span>](https://github.com/perlin-network/smart-contract-rs) - _عقد ذكي لـ <span dir="ltr">Wavelet</span> بلغة <span dir="ltr">Rust</span>_
 - [<span dir="ltr">Foundry</span>](https://github.com/foundry-rs/foundry) - _مجموعة أدوات لتطوير تطبيقات إيثيريوم_
 - [<span dir="ltr">Alloy</span>](https://alloy.rs) - _مكتبات عالية الأداء ومختبرة وموثقة جيدًا للتفاعل مع إيثيريوم والسلاسل الأخرى المعتمدة على <span dir="ltr">EVM</span>._
 - [<span dir="ltr">Ethers_rs</span>](https://github.com/gakonst/ethers-rs) - _مكتبة إيثيريوم وتنفيذ محفظة_

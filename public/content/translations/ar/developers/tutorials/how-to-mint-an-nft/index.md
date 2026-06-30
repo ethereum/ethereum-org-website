@@ -21,7 +21,7 @@ published: 2021-04-22
 
 ## الخطوة 1: تثبيت Web3 {#install-web3}
 
-إذا اتبعت البرنامج التعليمي الأول حول إنشاء العقد الذكي لـ NFT الخاص بك، فلديك بالفعل خبرة في استخدام Ethers.js. تشبه Web3 مكتبة Ethers، حيث إنها مكتبة تُستخدم لتسهيل إنشاء الطلبات إلى سلسلة كتل [إيثيريوم](/). في هذا البرنامج التعليمي، سنستخدم [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)، وهي مكتبة Web3 محسنة توفر إعادة المحاولة التلقائية ودعمًا قويًا لـ WebSocket.
+إذا اتبعت البرنامج التعليمي الأول حول إنشاء العقد الذكي لـ NFT الخاص بك، فلديك بالفعل خبرة في استخدام Ethers.js. تشبه Web3 مكتبة Ethers، حيث إنها مكتبة تُستخدم لتسهيل إنشاء الطلبات إلى سلسلة كتل [إيثيريوم](/). في هذا البرنامج التعليمي، سنستخدم [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)، وهي مكتبة Web3 محسنة توفر إعادة المحاولة التلقائية ودعمًا قويًا لـ WebSocket.
 
 في الدليل الرئيسي لمشروعك، قم بتشغيل:
 
@@ -40,9 +40,9 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## الخطوة 3: الحصول على واجهة التطبيق الثنائية (ABI) للعقد الخاص بك {#contract-abi}
+## الخطوة 3: الحصول على ABI للعقد الخاص بك
 
-واجهة التطبيق الثنائية (ABI) للعقد الخاص بنا هي الواجهة للتفاعل مع عقدنا الذكي. يمكنك معرفة المزيد حول واجهات التطبيق الثنائية للعقود [هنا](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). يقوم Hardhat تلقائيًا بإنشاء ABI لنا ويحفظه في ملف `MyNFT.json`. من أجل استخدام هذا، سنحتاج إلى تحليل المحتويات عن طريق إضافة أسطر التعليمات البرمجية التالية إلى ملف `mint-nft.js` الخاص بنا:
+إن ABI (واجهة التطبيق الثنائية) للعقد الخاص بنا هي الواجهة للتفاعل مع عقدنا الذكي. يمكنك معرفة المزيد حول [ABI للعقود](/glossary/#abi). يقوم Hardhat تلقائيًا بإنشاء ABI لنا ويحفظه في ملف `MyNFT.json`. من أجل استخدام هذا، سنحتاج إلى تحليل المحتويات عن طريق إضافة أسطر التعليمات البرمجية التالية إلى ملف `mint-nft.js` الخاص بنا:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -54,12 +54,11 @@ const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 console.log(JSON.stringify(contract.abi))
 ```
 
-لتشغيل `mint-nft.js` ورؤية ABI الخاص بك مطبوعًا على وحدة التحكم، انتقل إلى جهازك الطرفي (terminal) وقم بتشغيل:
+لتشغيل `mint-nft.js` ورؤية ABI الخاص بك مطبوعًا في وحدة التحكم، انتقل إلى جهازك الطرفي وقم بتشغيل:
 
 ```js
 node scripts/mint-nft.js
 ```
-
 ## الخطوة 4: تكوين البيانات الوصفية لـ NFT الخاص بك باستخدام IPFS {#config-meta}
 
 إذا كنت تتذكر من برنامجنا التعليمي في الجزء الأول، فإن دالة العقد الذكي `mintNFT` الخاصة بنا تأخذ معلمة tokenURI التي يجب أن تشير إلى مستند JSON يصف البيانات الوصفية لـ NFT — وهو ما يبعث الحياة حقًا في NFT، مما يسمح له بامتلاك خصائص قابلة للتكوين، مثل الاسم والوصف والصورة والسمات الأخرى.
@@ -136,17 +135,17 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## الخطوة 7: إنشاء معاملتك {#create-txn}
+## الخطوة 7: إنشاء معاملتك
 
-أولاً، دعنا نحدد دالة تسمى `mintNFT(tokenData)` وننشئ معاملتنا عن طريق القيام بما يلي:
+أولاً، دعنا نحدد دالة باسم `mintNFT(tokenData)` وننشئ معاملتنا عن طريق القيام بما يلي:
 
 1. احصل على _PRIVATE_KEY_ و _PUBLIC_KEY_ من ملف `.env`.
 
-1. بعد ذلك، سنحتاج إلى معرفة الرقم الفريد (nonce) للحساب. تُستخدم مواصفات الرقم الفريد لتتبع عدد المعاملات المرسلة من عنوانك — وهو ما نحتاجه لأغراض أمنية ولمنع [هجمات إعادة الإرسال](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). للحصول على عدد المعاملات المرسلة من عنوانك، نستخدم [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+1. بعد ذلك، سنحتاج إلى معرفة الرقم الفريد (nonce) للحساب. تُستخدم مواصفات الرقم الفريد لتتبع عدد المعاملات المرسلة من عنوانك — وهو ما نحتاجه لأغراض أمنية ولمنع هجمات إعادة الإرسال. للحصول على عدد المعاملات المرسلة من عنوانك، نستخدم [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
 
-1. أخيرًا سنقوم بإعداد معاملتنا بالمعلومات التالية:
+1. أخيرًا، سنقوم بإعداد معاملتنا بالمعلومات التالية:
 
-- `'from': PUBLIC_KEY` — أصل معاملتنا هو عنواننا العام
+- `'from': PUBLIC_KEY` — مصدر معاملتنا هو عنواننا العام
 
 - `'to': contractAddress` — العقد الذي نرغب في التفاعل معه وإرسال المعاملة إليه
 
@@ -154,7 +153,7 @@ PUBLIC_KEY = "your-public-account-address"
 
 - `'gas': estimatedGas` — الغاز المقدر اللازم لإكمال المعاملة
 
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — العملية الحسابية التي نرغب في إجرائها في هذه المعاملة — والتي في هذه الحالة هي سك NFT
+- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — العملية الحسابية التي نرغب في إجرائها في هذه المعاملة — والتي تتمثل في هذه الحالة في سك NFT
 
 يجب أن يبدو ملف `mint-nft.js` الخاص بك هكذا الآن:
 
@@ -184,7 +183,6 @@ PUBLIC_KEY = "your-public-account-address"
      };
    }​
 ```
-
 ## الخطوة 8: توقيع المعاملة {#sign-txn}
 
 الآن بعد أن أنشأنا معاملتنا، نحتاج إلى توقيعها من أجل إرسالها. هنا سنستخدم مفتاحنا الخاص.
@@ -317,7 +315,7 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
     تحقق من مجمع الذاكرة (Mempool) الخاص بـ Alchemy لعرض حالة معاملتك!
 
-بعد ذلك، قم بزيارة [مجمع الذاكرة في Alchemy](https://dashboard.alchemyapi.io/mempool) لمعرفة حالة معاملتك (سواء كانت معلقة أو تم تعدينها أو تم إسقاطها بواسطة الشبكة). إذا تم إسقاط معاملتك، فمن المفيد أيضًا التحقق من [Blockscout](https://eth-sepolia.blockscout.com/) والبحث عن تجزئة المعاملة الخاصة بك.
+بعد ذلك، قم بزيارة [مجمع الذاكرة في Alchemy](https://dashboard.alchemy.com/mempool) لمعرفة حالة معاملتك (سواء كانت معلقة أو تم تعدينها أو تم إسقاطها بواسطة الشبكة). إذا تم إسقاط معاملتك، فمن المفيد أيضًا التحقق من [Blockscout](https://eth-sepolia.blockscout.com/) والبحث عن تجزئة المعاملة الخاصة بك.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_عرض تجزئة معاملة NFT الخاصة بك على Etherscan_
 

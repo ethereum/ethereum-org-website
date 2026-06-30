@@ -13,7 +13,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Ethereum and Alchemy logos](./ethereum-alchemy.png)
 
-هذا دليل للمبتدئين للبدء في تطوير إيثيريوم. في هذا البرنامج التعليمي، سنستخدم [Alchemy](https://alchemyapi.io/)، وهي منصة تطوير سلسلة الكتل الرائدة التي تدعم ملايين المستخدمين من <span dir="ltr">70%</span> من أفضل تطبيقات سلسلة الكتل، بما في ذلك Maker و <span dir="ltr">0x</span> و MyEtherWallet و Dharma و Kyber. ستمنحنا Alchemy إمكانية الوصول إلى نقطة نهاية API على سلسلة إيثيريوم حتى نتمكن من قراءة المعاملات وكتابتها.
+هذا دليل للمبتدئين للبدء في تطوير إيثيريوم. في هذا البرنامج التعليمي، سنستخدم [Alchemy](https://www.alchemy.com/)، وهي منصة تطوير سلسلة الكتل الرائدة التي تدعم ملايين المستخدمين من <span dir="ltr">70%</span> من أفضل تطبيقات سلسلة الكتل، بما في ذلك Maker و <span dir="ltr">0x</span> و MyEtherWallet و Dharma و Kyber. ستمنحنا Alchemy إمكانية الوصول إلى نقطة نهاية API على سلسلة إيثيريوم حتى نتمكن من قراءة المعاملات وكتابتها.
 
 سنأخذك من التسجيل في Alchemy إلى كتابة أول برنامج نصي لـ Web3! لا يلزم وجود خبرة سابقة في تطوير سلسلة الكتل!
 
@@ -39,16 +39,16 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.gif)
 
-## 3. إجراء طلب من سطر الأوامر {#make-a-request-from-the-command-line}
+## 3. إجراء طلب من سطر الأوامر
 
 تفاعل مع سلسلة كتل إيثيريوم من خلال Alchemy باستخدام JSON-RPC و curl.
 
 بالنسبة للطلبات اليدوية، نوصي بالتفاعل مع `JSON-RPC` عبر طلبات `POST`. ما عليك سوى تمرير ترويسة `Content-Type: application/json` واستعلامك كجسم `POST` مع الحقول التالية:
 
-- `jsonrpc`: إصدار JSON-RPC — حاليًا، يتم دعم `2.0` فقط.
-- `method`: طريقة ETH API. [راجع مرجع API.](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
+- `jsonrpc`: إصدار JSON-RPC — حاليًا، الإصدار <span dir="ltr">2.0</span> فقط هو المدعوم.
+- `method`: طريقة API الخاصة بـ ETH. [راجع مرجع API.](/developers/docs/apis/json-rpc/)
 - `params`: قائمة بالمعلمات لتمريرها إلى الطريقة.
-- `id`: معرف طلبك. سيتم إرجاعه بواسطة الاستجابة حتى تتمكن من تتبع الطلب الذي تنتمي إليه الاستجابة.
+- `id`: مُعرّف طلبك. سيتم إرجاعه بواسطة الاستجابة حتى تتمكن من تتبع الطلب الذي تنتمي إليه الاستجابة.
 
 إليك مثال يمكنك تشغيله من سطر الأوامر لاسترداد سعر الغاز الحالي:
 
@@ -59,21 +59,20 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**ملاحظة:** استبدل [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) بمفتاح API الخاص بك `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
+_**ملاحظة:** استبدل `https://eth-mainnet.alchemyapi.io/v2/demo` بمفتاح API الخاص بك `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
 
 **النتائج:**
 
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-
-## 4. إعداد عميل Web3 الخاص بك {#set-up-your-web3-client}
+## 4. إعداد عميل Web3 الخاص بك
 
 **إذا كان لديك عميل حالي،** فقم بتغيير عنوان URL لمزود العقدة الحالي إلى عنوان URL الخاص بـ Alchemy مع مفتاح API الخاص بك: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**_ملاحظة:_** يجب تشغيل البرامج النصية أدناه في **سياق عقدة (node context)** أو **حفظها في ملف**، وليس تشغيلها من سطر الأوامر. إذا لم يكن لديك Node أو npm مثبتين بالفعل، فراجع [دليل الإعداد السريع لأجهزة Mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs) هذا.
+**_ملاحظة:_** يجب تشغيل البرامج النصية أدناه في **سياق عقدة (node context)** أو **حفظها في ملف**، وليس تشغيلها من سطر الأوامر. إذا لم يكن لديك Node أو npm مثبتين بالفعل، فاتبع [إرشادات تثبيت Node.js](https://nodejs.org/en/download/).
 
-هناك الكثير من [مكتبات Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) التي يمكنك دمجها مع Alchemy، ومع ذلك، نوصي باستخدام [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)، وهو بديل جاهز لـ Web3.js، تم إنشاؤه وتكوينه للعمل بسلاسة مع Alchemy. يوفر هذا مزايا متعددة مثل إعادة المحاولة التلقائية ودعم WebSocket القوي.
+هناك الكثير من [مكتبات Web3](/developers/docs/apis/javascript/) التي يمكنك دمجها مع Alchemy، ومع ذلك، نوصي باستخدام [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)، وهو بديل جاهز لـ Web3.js، تم إنشاؤه وتكوينه للعمل بسلاسة مع Alchemy. يوفر هذا مزايا متعددة مثل إعادة المحاولة التلقائية ودعم WebSocket القوي.
 
 لتثبيت AlchemyWeb3.js، **انتقل إلى دليل مشروعك** وقم بتشغيل:
 
@@ -97,19 +96,18 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
+## 5. كتابة أول برنامج نصي لـ Web3!
 
-## 5. كتابة أول برنامج نصي لـ Web3! {#write-your-first-web3-script}
+الآن للبدء في العمل العملي مع القليل من برمجة Web3، سنكتب برنامجًا نصيًا بسيطًا يطبع أحدث رقم كتلة من شبكة إيثيريوم الرئيسية.
 
-الآن للبدء عمليًا في برمجة Web3، سنكتب برنامجًا نصيًا بسيطًا يطبع أحدث رقم كتلة من شبكة إيثيريوم الرئيسية.
-
-**1. إذا لم تكن قد فعلت ذلك بالفعل، فقم بإنشاء دليل مشروع جديد في الطرفية (terminal) وانتقل إليه باستخدام cd:**
+**1. إذا لم تكن قد فعلت ذلك بالفعل، فقم بإنشاء دليل مشروع جديد في جهازك الطرفي (terminal) وانتقل إليه باستخدام cd:**
 
 ```
 mkdir web3-example
 cd web3-example
 ```
 
-**2. قم بتثبيت تبعية Alchemy Web3 (أو أي Web3) في مشروعك إذا لم تكن قد فعلت ذلك بالفعل:**
+**2. قم بتثبيت تبعية Alchemy Web3 (أو أي Web3) في مشروعك إذا لم تكن قد قمت بذلك بالفعل:**
 
 ```
 npm install @alch/alchemy-web3
@@ -117,7 +115,7 @@ npm install @alch/alchemy-web3
 
 **3. قم بإنشاء ملف باسم `index.js` وأضف المحتويات التالية:**
 
-> يجب عليك في النهاية استبدال `demo` بمفتاح Alchemy HTTP API الخاص بك.
+> يجب عليك في النهاية استبدال `demo` بمفتاح HTTP API الخاص بـ Alchemy.
 
 ```js
 async function main() {
@@ -131,7 +129,7 @@ main()
 
 لست على دراية بالأمور غير المتزامنة (async)؟ تحقق من [منشور Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c) هذا.
 
-**4. قم بتشغيله في الطرفية باستخدام node**
+**4. قم بتشغيله في جهازك الطرفي باستخدام node**
 
 ```
 node index.js
@@ -145,6 +143,6 @@ The latest block number is 11043912
 
 **رائع! تهانينا! لقد كتبت للتو أول برنامج نصي لـ Web3 باستخدام Alchemy 🎉**
 
-لست متأكدًا مما يجب فعله بعد ذلك؟ جرب نشر أول عقد ذكي لك وابدأ عمليًا في برمجة Solidity في [دليل العقد الذكي Hello World](https://www.alchemy.com/docs/hello-world-smart-contract) الخاص بنا، أو اختبر معرفتك بلوحة التحكم باستخدام [تطبيق لوحة التحكم التجريبي](https://docs.alchemyapi.io/tutorials/demo-app)!
+لست متأكدًا مما يجب فعله بعد ذلك؟ جرب نشر أول عقد ذكي لك وابدأ العمل العملي مع بعض برمجة Solidity في [دليل العقد الذكي Hello World](/developers/tutorials/hello-world-smart-contract/) الخاص بنا، أو استمر في استكشاف [مستندات Alchemy](https://www.alchemy.com/docs/) لمزيد من الأمثلة.
 
-_[سجل في Alchemy مجانًا](https://auth.alchemy.com/)، وتحقق من [وثائقنا](https://www.alchemy.com/docs/)، وللحصول على أحدث الأخبار، تابعنا على [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[سجل مع Alchemy مجانًا](https://auth.alchemy.com/)، وتحقق من [وثائقنا](https://www.alchemy.com/docs/)، وللحصول على أحدث الأخبار، تابعنا على [Twitter](https://twitter.com/AlchemyPlatform)_.

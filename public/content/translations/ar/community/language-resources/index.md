@@ -27,7 +27,7 @@ lang: ar
 **الأخبار**
 
 - [BeInCrypto](http://www.beincrypto.com.br) - أخبار ومقالات العملات المشفرة، بما في ذلك قائمة بالمنصات المتاحة في البرازيل
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - النسخة البرازيلية من <span dir="ltr">Cointelegraph</span>، وهي وكالة إخبارية رئيسية للعملات المشفرة
+- [Cointelegraph](https://cointelegraph.com.br/) - النسخة البرازيلية من <span dir="ltr">Cointelegraph</span>، وهي وكالة إخبارية رئيسية للعملات المشفرة
 - [Livecoins](http://www.livecoins.com.br/ethereum) - أخبار وأدوات العملات المشفرة
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - أخبار وتقارير العملات المشفرة
 - [Modular Crypto](https://modularcrypto.xyz/) - أخبار ومقالات تعليمية عن العملات المشفرة
@@ -37,7 +37,7 @@ lang: ar
 - [web3dev](https://www.web3dev.com.br/) - مركز محتوى ومجتمع ديسكورد لمطوري <span dir="ltr">Web3</span>.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - موارد لتعلم <span dir="ltr">Web3</span> والتمويل اللامركزي (DeFi)
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - أخبار وتعليم العملات المشفرة، بما في ذلك "إيثيريوم للمبتدئين" و"التمويل اللامركزي (DeFi)" للمبتدئين
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - رؤى من مساحة العملات المشفرة، والتعليم، والمدونة
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - رؤى من مساحة العملات المشفرة، والتعليم، والمدونة
 - [Cointimes](http://www.cointimes.com.br/) - أخبار وتعليم العملات المشفرة
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - دليل يجيب على الأسئلة الأساسية والأكثر شيوعًا حول الكريبتو
 

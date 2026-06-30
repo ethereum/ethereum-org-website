@@ -133,20 +133,17 @@ _تُستخدم عادةً للتطوير اللامركزي وحوكمة الب
 - [قائمة منظمات <span dir="ltr">DAO</span> من <span dir="ltr">Tally.xyz</span>](https://www.tally.xyz/explore)
 - [قائمة منظمات <span dir="ltr">DAO</span> من <span dir="ltr">DeGov.AI</span>](https://apps.degov.ai/)
 
-### بدء <span dir="ltr">DAO</span> {#start-a-dao}
-
+### بدء <span dir="ltr">DAO</span>
 - [استدعاء <span dir="ltr">DAO</span> باستخدام <span dir="ltr">DAOHaus</span>](https://app.daohaus.club/summon)
 - [بدء <span dir="ltr">Governor DAO</span> باستخدام <span dir="ltr">Tally</span>](https://www.tally.xyz/get-started)
-- [إنشاء <span dir="ltr">DAO</span> مدعوم من <span dir="ltr">Aragon</span>](https://aragon.org/product)
-- [بدء مستعمرة (<span dir="ltr">colony</span>)](https://colony.io/)
-- [إنشاء <span dir="ltr">DAO</span> باستخدام الإجماع الهولوغرافي من <span dir="ltr">DAOstack</span>](https://alchemy.daostack.io/daos/create)
+- [إنشاء <span dir="ltr">DAO</span> مدعومة من <span dir="ltr">Aragon</span>](https://aragon.org/product)
+- [بدء <span dir="ltr">Colony</span>](https://colony.io/)
 - [إطلاق <span dir="ltr">DAO</span> باستخدام <span dir="ltr">DeGov Launcher</span>](https://docs.degov.ai/integration/deploy)
-
 ## قراءة المزيد {#further-reading}
 
 ### مقالات عن <span dir="ltr">DAO</span> {#dao-articles}
 
-- [ما هي <span dir="ltr">DAO</span>؟](https://aragon.org/dao) – [<span dir="ltr">Aragon</span>](https://aragon.org/)
+- [ما هي <span dir="ltr">DAO</span>؟](https://blog.aragon.org/what-is-a-dao/) – [<span dir="ltr">Aragon</span>](https://aragon.org/)
 - [منزل منظمات <span dir="ltr">DAO</span>](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [<span dir="ltr">Metagame</span>](https://wiki.metagame.wtf/)
 - [ما هي <span dir="ltr">DAO</span> وما الغرض منها؟](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [<span dir="ltr">DAOhaus</span>](https://daohaus.club/)
 - [كيفية بدء مجتمع رقمي مدعوم من <span dir="ltr">DAO</span>](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [<span dir="ltr">DAOhaus</span>](https://daohaus.club/)

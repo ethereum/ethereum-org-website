@@ -11,7 +11,7 @@ lang: ar
 ## المطورون <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - تعرف على إيثيريوم وجربه على [<span dir="ltr">ethereum.org/developers/</span>](/developers/)
-- احضر هاكاثون [ETHGlobal](https://ethglobal.co/) بالقرب منك!
+- احضر هاكاثون [ETHGlobal](https://ethglobal.com/) بالقرب منك!
 - تحقق من [المشاريع المتعلقة بمجال خبرتك أو لغة البرمجة التي تفضلها](/developers/docs/programming-languages/)
 - شاهد أو شارك في [مكالمات طبقة التنفيذ والإجماع](https://www.youtube.com/@EthereumProtocol/streams)
 - [قائمة أمنيات برنامج دعم النظام البيئي](https://esp.ethereum.foundation/wishlist/) - مجالات الأدوات، والتوثيق، والبنية التحتية التي يسعى فيها برنامج دعم النظام البيئي لإيثيريوم بنشاط للحصول على طلبات المنح
@@ -80,7 +80,7 @@ lang: ar
 
 النظام البيئي لإيثيريوم في مهمة لتمويل السلع العامة والمشاريع المؤثرة. من خلال تبرعات صغيرة جدًا، يمكنك إظهار دعمك والسماح بإنجاز أعمال مهمة.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [<span dir="ltr">clr.fund</span>](https://clr.fund/#/about)
 
 ## المتخصصون الماليون والمحاسبون <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
