@@ -117,11 +117,9 @@ _Co přináší aktualizace Pectra? - Christine Kim_
 
 _Aktualizace Etherea Pectra: Co potřebují vědět stakeři — Blockdaemon_
 
-## Další čtení {#further-reading}
-
+## Další čtení
 - [Plán vývoje Etherea](/roadmap/)
 - [Často kladené dotazy (FAQ) k aktualizaci Pectra](https://epf.wiki/#/wiki/pectra-faq)
-- [Informační stránka Pectra.wtf](https://pectra.wtf)
-- [Jak Pectra vylepšuje zkušenosti stakerů](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [Jak Pectra zlepšuje zkušenosti stakerů](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Informační stránka EIP-7702](https://eip7702.io/)
-- [Devnety Pectra](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)
+- [Devnety aktualizace Pectra](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

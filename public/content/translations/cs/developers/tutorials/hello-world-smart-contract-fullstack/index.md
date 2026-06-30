@@ -61,9 +61,9 @@ K nasazení vašeho chytrého kontraktu do testovací sítě budete potřebovat 
 _Poznámka: kvůli přetížení sítě to může chvíli trvat._
 ``
 
-### Krok 5: Kontrola zůstatku {#step-5-check-your-balance}
+### Krok 5: Zkontrolujte svůj zůstatek
 
-Abychom si ověřili, že je ETH ve vaší peněžence, vytvořme požadavek [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) pomocí [nástroje composer od Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Tím se vrátí množství ETH v naší peněžence. Chcete-li se dozvědět více, podívejte se na [krátký tutoriál Alchemy o tom, jak používat nástroj composer](https://youtu.be/r6sjRxBZJuU).
+Abychom si ověřili, že je ETH ve vaší peněžence, vytvořme požadavek [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) pomocí [sandboxového nástroje Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Tím se vrátí množství ETH v naší peněžence. Chcete-li se dozvědět více, podívejte se na [krátký tutoriál Alchemy o tom, jak používat nástroj composer](https://youtu.be/r6sjRxBZJuU).
 
 Zadejte adresu svého účtu MetaMask a klikněte na **Send Request**. Uvidíte odpověď, která vypadá jako fragment kódu níže.
 
@@ -73,9 +73,8 @@ Zadejte adresu svého účtu MetaMask a klikněte na **Send Request**. Uvidíte 
 
 > _Poznámka: Tento výsledek je ve wei, nikoli v ETH. Wei se používá jako nejmenší nominální hodnota etheru._
 
-Uf! Naše falešné peníze jsou tam.
-
-### Krok 6: Inicializace našeho projektu {#step-6-initialize-our-project}
+Uf! Naše falešné peníze tam všechny jsou.
+### Krok 6: Inicializace našeho projektu
 
 Nejprve budeme muset vytvořit složku pro náš projekt. Přejděte do příkazového řádku a zadejte následující.
 
@@ -86,7 +85,7 @@ cd hello-world
 
 Nyní, když jsme ve složce našeho projektu, použijeme `npm init` k inicializaci projektu.
 
-> Pokud ještě nemáte nainstalované npm, postupujte podle [těchto pokynů k instalaci Node.js a npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
+> Pokud ještě nemáte nainstalované npm, postupujte podle [pokynů k instalaci Node.js](https://nodejs.org/en/download/) a nainstalujte Node.js a npm.
 
 Pro účely tohoto tutoriálu nezáleží na tom, jak odpovíte na inicializační otázky. Zde je pro referenci ukázka, jak jsme to udělali my:
 
@@ -116,8 +115,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-Schvalte soubor package.json a můžeme začít!
-
+Potvrďte package.json a můžeme začít!
 ### Krok 7: Stažení Hardhat {#step-7-download-hardhat}
 
 Hardhat je vývojové prostředí pro kompilaci, nasazení, testování a ladění vašeho softwaru pro Ethereum. Pomáhá vývojářům při lokálním vytváření chytrých kontraktů a decentralizovaných aplikací (dapp) před jejich nasazením do živého řetězce.
@@ -225,7 +223,7 @@ Vytvořili jsme peněženku MetaMask, účet Alchemy a napsali náš chytrý kon
 
 Každá transakce odeslaná z vaší peněženky vyžaduje podpis pomocí vašeho jedinečného soukromého klíče. Abychom našemu programu poskytli toto oprávnění, můžeme náš soukromý klíč bezpečně uložit do souboru prostředí (environment file). Zde také uložíme klíč API pro Alchemy.
 
-> Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [tento tutoriál](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) o odesílání transakcí pomocí Web3.
+> Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [tento tutoriál](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) o odesílání transakcí pomocí Web3.
 
 Nejprve nainstalujte balíček dotenv v adresáři vašeho projektu:
 
@@ -255,7 +253,7 @@ Abychom je skutečně propojili s naším kódem, odkážeme na tyto proměnné 
 
 ### Krok 12: Instalace Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js je knihovna, která usnadňuje interakci a zadávání požadavků na Ethereum tím, že obaluje [standardní metody JSON-RPC](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) uživatelsky přívětivějšími metodami.
+Ethers.js je knihovna, která usnadňuje interakci a zadávání požadavků na Ethereum tím, že obaluje [standardní metody JSON-RPC](/developers/docs/apis/json-rpc/) uživatelsky přívětivějšími metodami.
 
 Hardhat nám umožňuje integrovat [pluginy](https://hardhat.org/plugins/) pro další nástroje a rozšířenou funkcionalitu. Pro nasazení kontraktu využijeme [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers).
 
@@ -373,7 +371,7 @@ Abychom pochopili, jak to funguje uvnitř, přejděme na kartu Explorer na naše
 
 ![](./hello-world-explorer.png)
 
-Zde uvidíte hrstku metod JSON-RPC, které pro nás Hardhat/Ethers na pozadí vytvořily, když jsme zavolali funkci `.deploy()`. Dvě důležité metody jsou zde [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), což je požadavek na zápis našeho kontraktu do řetězce Goerli, a [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), což je požadavek na přečtení informací o naší transakci na základě hashe. Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [náš tutoriál o odesílání transakcí pomocí Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Zde uvidíte hrstku metod JSON-RPC, které pro nás Hardhat/Ethers na pozadí vytvořily, když jsme zavolali funkci `.deploy()`. Dvě důležité metody jsou zde [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), což je požadavek na zápis našeho kontraktu do řetězce Goerli, a [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), což je požadavek na přečtení informací o naší transakci na základě hashe. Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [náš tutoriál o odesílání transakcí pomocí Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 ## Část 2: Interakce s vaším chytrým kontraktem {#part-2-interact-with-your-smart-contract}
 
@@ -571,7 +569,7 @@ Aktualizuje se zpráva...
 Nová zpráva je: This is the new message.
 ```
 
-Při spouštění tohoto skriptu si můžete všimnout, že krok `Updating the message...` chvíli trvá, než se načte nová zpráva. Je to způsobeno procesem těžby; pokud vás zajímá sledování transakcí během jejich těžby, navštivte [mempool Alchemy](https://dashboard.alchemyapi.io/mempool), kde uvidíte stav transakce. Pokud je transakce zahozena, je také užitečné zkontrolovat [Goerli Etherscan](https://goerli.etherscan.io) a vyhledat hash vaší transakce.
+Při spouštění tohoto skriptu si můžete všimnout, že krok `Updating the message...` chvíli trvá, než se načte nová zpráva. Je to způsobeno procesem těžby; pokud vás zajímá sledování transakcí během jejich těžby, navštivte [mempool Alchemy](https://dashboard.alchemy.com/mempool), kde uvidíte stav transakce. Pokud je transakce zahozena, je také užitečné zkontrolovat [Goerli Etherscan](https://goerli.etherscan.io) a vyhledat hash vaší transakce.
 
 ## Část 3: Publikování vašeho chytrého kontraktu na Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -679,7 +677,7 @@ Když přejdete na odkaz uvedený ve vašem terminálu, měli byste vidět kód 
 Na konci tohoto tutoriálu budete vědět, jak:
 
 - Připojit peněženku MetaMask k vaší decentralizované aplikaci (dapp)
-- Číst data z vašeho chytrého kontraktu pomocí API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Číst data z vašeho chytrého kontraktu pomocí API [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Podepisovat transakce na Ethereu pomocí MetaMasku
 
 Pro tuto dapp budeme jako náš frontendový framework používat [React](https://react.dev/); je však důležité poznamenat, že nebudeme trávit mnoho času rozebíráním jeho základů, protože se zaměříme hlavně na to, jak do našeho projektu přinést funkcionalitu Web3.
@@ -900,33 +898,33 @@ Abyste mohli číst ze svého chytrého kontraktu, budete muset úspěšně nast
 
 Může to znít jako spousta kroků, ale nebojte se! Provedeme vás tím, jak udělat každý z nich krok za krokem! :)
 
-#### Vytvoření připojení API k řetězci Etherea {#establish-an-api-connection-to-the-ethereum-chain}
+#### Vytvoření připojení API k řetězci Etherea
 
-Pamatujete si, jak jsme ve 2. části tohoto tutoriálu použili náš [klíč Alchemy Web3 ke čtení z našeho chytrého kontraktu](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? Klíč Alchemy Web3 budete potřebovat i ve své dapp, abyste mohli číst z řetězce.
+Vzpomínáte si, jak jsme ve 2. části tohoto tutoriálu použili náš klíč Alchemy Web3 ke čtení z našeho chytrého kontraktu? Klíč Alchemy Web3 budete potřebovat také ve své decentralizované aplikaci (dapp) ke čtení z řetězce.
 
-Pokud jej ještě nemáte, nejprve si nainstalujte [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) tak, že přejdete do kořenového adresáře vašeho `starter-files` a ve svém terminálu spustíte následující:
+Pokud jej ještě nemáte, nejprve si nainstalujte [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) tak, že přejdete do kořenového adresáře vašich `starter-files` a ve svém terminálu spustíte následující příkaz:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) je wrapper kolem [Web3.js](https://docs.web3js.org/), který poskytuje vylepšené metody API a další klíčové výhody, jež vám usnadní život jako vývojáři Web3. Je navržen tak, aby vyžadoval minimální konfiguraci, takže jej můžete začít používat ve své aplikaci hned teď!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) je obálka (wrapper) kolem [Web3.js](https://docs.web3js.org/), která poskytuje vylepšené metody API a další klíčové výhody, jež vám usnadní život jako vývojáři Web3. Je navržena tak, aby vyžadovala minimální konfiguraci, takže ji můžete ve své aplikaci začít používat hned!
 
-Poté si do adresáře projektu nainstalujte balíček [dotenv](https://www.npmjs.com/package/dotenv), abychom měli bezpečné místo pro uložení našeho klíče API poté, co jej získáme.
+Poté nainstalujte balíček [dotenv](https://www.npmjs.com/package/dotenv) v adresáři vašeho projektu, abychom měli bezpečné místo pro uložení našeho klíče API poté, co jej získáme.
 
 ```text
 npm install dotenv --save
 ```
 
-Pro naši dapp **budeme používat náš klíč Websockets API** místo našeho klíče HTTP API, protože nám to umožní nastavit posluchače, který detekuje, když se zpráva uložená v chytrém kontraktu změní.
+Pro naši dapp **budeme používat náš klíč API pro Websockets** místo našeho klíče API pro HTTP, protože nám to umožní nastavit posluchače, který detekuje, když se zpráva uložená v chytrém kontraktu změní.
 
-Jakmile budete mít svůj klíč API, vytvořte ve svém kořenovém adresáři soubor `.env` a přidejte do něj svou URL adresu Alchemy Websockets. Poté by měl váš soubor `.env` vypadat takto:
+Jakmile budete mít svůj klíč API, vytvořte v kořenovém adresáři soubor `.env` a přidejte do něj svou URL adresu Alchemy Websockets. Poté by měl váš soubor `.env` vypadat takto:
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<klíč>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-Nyní jsme připraveni nastavit náš koncový bod Alchemy Web3 v naší dapp! Vraťme se k našemu `interact.js`, který je vnořený do naší složky `util`, a přidejme na začátek souboru následující kód:
+Nyní jsme připraveni nastavit náš koncový bod Alchemy Web3 v naší dapp! Vraťme se k našemu souboru `interact.js`, který je vnořený ve složce `util`, a přidejme na začátek souboru následující kód:
 
 ```javascript
 // interact.js
@@ -942,7 +940,6 @@ const web3 = createAlchemyWeb3(alchemyKey)
 Výše jsme nejprve importovali klíč Alchemy z našeho souboru `.env` a poté jsme předali náš `alchemyKey` do `createAlchemyWeb3`, abychom vytvořili náš koncový bod Alchemy Web3.
 
 S tímto připraveným koncovým bodem je čas načíst náš chytrý kontrakt!
-
 #### Načtení vašeho chytrého kontraktu Hello World {#loading-your-hello-world-smart-contract}
 
 K načtení vašeho chytrého kontraktu Hello World budete potřebovat adresu jeho kontraktu a ABI, obojí lze najít na Etherscanu, pokud jste dokončili [3. část tohoto tutoriálu.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
@@ -1034,7 +1031,7 @@ A když už mluvíme o tom posluchači...
 
 #### Implementace `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-Pokud si vzpomenete na soubor `HelloWorld.sol`, který jsme napsali v [1. části této série tutoriálů](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), vybavíte si, že existuje událost chytrého kontraktu s názvem `UpdatedMessages`, která je emitována po vyvolání funkce `update` našeho chytrého kontraktu (viz řádky 9 a 27):
+Pokud si vzpomenete na soubor `HelloWorld.sol`, který jsme napsali v [1. části této série tutoriálů](#step-10-write-our-contract), vybavíte si, že existuje událost chytrého kontraktu s názvem `UpdatedMessages`, která je emitována po vyvolání funkce `update` našeho chytrého kontraktu (viz řádky 9 a 27):
 
 ```javascript
 // HelloWorld.sol
@@ -1129,9 +1126,8 @@ MetaMask si můžete zdarma stáhnout a vytvořit si účet [zde](https://metama
 
 K podepsání transakce na blockchainu Etherea budeme potřebovat nějaké falešné ETH. Chcete-li získat ETH, můžete přejít na [FaucETH](https://fauceth.komputing.org) a zadat adresu svého účtu na Goerli, kliknout na „Request funds“ (Požádat o prostředky), poté v rozbalovací nabídce vybrat „Ethereum Testnet Goerli“ a nakonec znovu kliknout na tlačítko „Request funds“. Brzy poté byste měli vidět ETH na svém účtu MetaMask!
 
-#### Kontrola vašeho zůstatku {#check-your-balance}
-
-Abychom si ověřili, že tam náš zůstatek je, proveďme požadavek [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) pomocí [nástroje composer od Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). To vrátí množství ETH v naší peněžence. Poté, co zadáte adresu svého účtu MetaMask a kliknete na „Send Request“ (Odeslat požadavek), měli byste vidět odpověď jako je tato:
+#### Kontrola vašeho zůstatku
+Abychom si ověřili, že tam náš zůstatek je, pošleme požadavek [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) pomocí [nástroje sandbox od Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). To nám vrátí množství ETH v naší peněžence. Po zadání adresy vašeho účtu MetaMask a kliknutí na „Send Request“ byste měli vidět odpověď podobnou této:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
@@ -1139,8 +1135,7 @@ Abychom si ověřili, že tam náš zůstatek je, proveďme požadavek [eth_getB
 
 **POZNÁMKA:** Tento výsledek je ve wei, nikoli v ETH. Wei se používá jako nejmenší nominální hodnota etheru. Převod z wei na ETH je: 1 ETH = 10¹⁸ wei. Pokud tedy převedeme 0xde0b6b3a7640000 do desítkové soustavy, dostaneme 1\*10¹⁸, což se rovná 1 ETH.
 
-Uf! Naše falešné peníze jsou všechny tam! 🤑
-
+Uf! Všechny naše falešné peníze tam jsou! 🤑
 ### Krok 5: Připojení MetaMasku k vašemu UI {#step-5-connect-metamask-to-your-ui}
 
 Nyní, když je naše peněženka MetaMask nastavena, připojme k ní naši dapp!
@@ -1539,7 +1534,7 @@ Běžte do toho a vyzkoušejte tlačítko **Update**!
 Jupííí, dostali jste se na konec tutoriálu! Abychom to shrnuli, naučili jste se, jak:
 
 - Připojit peněženku MetaMask k vašemu projektu dapp
-- Číst data z vašeho chytrého kontraktu pomocí API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Číst data z vašeho chytrého kontraktu pomocí API [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Podepisovat transakce na Ethereu pomocí MetaMasku
 
 Nyní jste plně vybaveni k tomu, abyste uplatnili dovednosti z tohoto tutoriálu k vybudování vlastního projektu dapp! Jako vždy, pokud máte nějaké dotazy, neváhejte se na nás obrátit s prosbou o pomoc na [Discordu Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️

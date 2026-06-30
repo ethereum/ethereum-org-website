@@ -52,7 +52,7 @@ Pokud se domníváte, že by nějaká komunita měla být na základě těchto p
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - komunita tvůrců Web3, kde se scházejí vývojáři, vůdčí osobnosti oboru a nadšenci do Etherea. Jsme nadšení do vývoje, designu a kultury Web3. Pojďte tvořit s námi.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat pro vývoj v Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- fórum pro otázky a odpovědi</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- decentralizované fórum pro otázky a odpovědi</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- decentralizované fórum pro otázky a odpovědi</i></SocialListItem>
 
 ## YouTube a X (dříve Twitter) {#youtube-and-twitter}
 

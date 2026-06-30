@@ -371,7 +371,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Když se konsensuální klient připojí k exekučnímu klientovi, aby přečetl depozitní kontrakt a identifikoval validátory, připojí se také k dalším peerům uzlu Beacon a začne synchronizovat konsensuální sloty od genesis. Jakmile uzel Beacon dosáhne aktuální epochy, Beacon API se stane použitelným pro vaše validátory. Zjistěte více o [API uzlu Beacon](https://eth2docs.vercel.app/).
+Když se konsensuální klient připojí k exekučnímu klientovi, aby přečetl depozitní kontrakt a identifikoval validátory, připojí se také k dalším peerům uzlu Beacon a začne synchronizovat konsensuální sloty od genesis. Jakmile uzel Beacon dosáhne aktuální epochy, Beacon API se stane použitelným pro vaše validátory. Zjistěte více o [API uzlu Beacon](https://ethereum.github.io/beacon-APIs).
 
 ### Přidání validátorů {#adding-validators}
 
@@ -454,7 +454,7 @@ V rámci monitorování nezapomeňte sledovat výkon vašeho stroje. Během poč
 - [Průvodci stakingem Etherea](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, často aktualizováno_
 - [Průvodce | Jak nastavit validátor pro staking Etherea na Mainnetu](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, často aktualizováno_
 - [Průvodci EthStaker pro provozování validátorů na testnetech](https://github.com/remyroy/ethstaker#guides) – _EthStaker, pravidelně aktualizováno_
-- [Ukázková aplikace AWS Blockchain Node Runner pro uzly Etherea](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, často aktualizováno_
+- [Ukázková aplikace AWS Blockchain Node Runner pro uzly Etherea](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, často aktualizováno_
 - [Časté dotazy k Merge pro provozovatele uzlů](https://notes.ethereum.org/@launchpad/node-faq-merge) - _červenec 2022_
 - [Analýza hardwarových požadavků pro plně validovaný uzel Etherea](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24. září 2018_
 - [Provozování plných uzlů Etherea: Průvodce pro sotva motivované](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7. listopadu 2019_

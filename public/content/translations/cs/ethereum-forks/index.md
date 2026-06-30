@@ -86,50 +86,48 @@ Hledáte budoucí aktualizace protokolu? [Přečtěte si o nadcházejících akt
 
 [Více o Fusaka](/roadmap/fusaka/)
 
-### Prague-Electra („Pectra“) {#pectra}
-
+### Prague-Electra („Pectra“)
 <NetworkUpgradeSummary name="pectra" />
 
-Aktualizace Prague-Electra („Pectra“) zahrnovala několik vylepšení protokolu Ethereum zaměřených na zlepšení uživatelského zážitku pro všechny uživatele, sítě vrstvy 2 (l2), stakery a provozovatele uzlů.
+Aktualizace Prague-Electra („Pectra“) zahrnovala několik vylepšení protokolu Ethereum zaměřených na zlepšení uživatelské zkušenosti pro všechny uživatele, sítě vrstvy 2, stakery a provozovatele uzlů.
 
-Staking byl vylepšen o účty validátorů se složeným úročením a lepší kontrolu nad stakovanými prostředky pomocí exekuční adresy pro výběr. EIP-7251 zvýšil maximální efektivní zůstatek pro jednoho validátora na 2048, což zlepšilo kapitálovou efektivitu pro stakery. EIP-7002 umožnil exekučnímu účtu bezpečně spouštět akce validátora, včetně výstupu nebo výběru části prostředků, což zlepšilo uživatelský zážitek pro stakery ETH a zároveň pomohlo posílit odpovědnost provozovatelů uzlů.
+Staking byl vylepšen o účty validátorů se složeným úročením a o lepší kontrolu nad stakovanými prostředky pomocí exekuční adresy pro výběr. EIP-7251 zvýšil maximální efektivní zůstatek pro jednoho validátora na 2048, což zlepšuje kapitálovou efektivitu pro stakery. EIP-7002 umožnil exekučnímu účtu bezpečně spouštět akce validátora, včetně výstupu nebo výběru části prostředků, což zlepšuje zkušenost pro stakery ETH a zároveň pomáhá posílit odpovědnost provozovatelů uzlů.
 
-Další části aktualizace se zaměřily na zlepšení uživatelského zážitku pro běžné uživatele. EIP-7702 přinesl možnost pro běžný účet, který není chytrým kontraktem ([EOA](/glossary/#eoa)), spouštět kód podobně jako chytrý kontrakt. To odemklo neomezené nové funkce pro tradiční účty Etherea, jako je dávkování transakcí, sponzorování gasu, alternativní autentizace, programovatelné kontroly výdajů, mechanismy obnovy účtu a další.
+Další části aktualizace se zaměřily na zlepšení zkušenosti běžných uživatelů. EIP-7702 přinesl běžným účtům, které nejsou chytrými kontrakty ([EOA](/glossary/#eoa)), schopnost spouštět kód podobně jako chytrý kontrakt. To odemklo neomezené nové funkce pro tradiční účty Etherea, jako je dávkování transakcí, sponzorování gasu, alternativní ověřování, programovatelné kontroly výdajů, mechanismy obnovy účtu a další.
 
-<ExpandableCard title="EIP pro Pectra" contentPreview="Oficiální vylepšení zahrnutá v této aktualizaci.">
+<ExpandableCard title="EIP pro Pectru" contentPreview="Oficiální vylepšení zahrnutá v této aktualizaci.">
 
-Lepší uživatelský zážitek:
+Lepší uživatelská zkušenost:
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> – <em>Nastavení kódu EOA účtu</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> – <em>Zvýšení propustnosti blobů</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> – <em>Zvýšení ceny za data volání</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> – <em>Přidání plánu blobů do konfiguračních souborů exekuční vrstvy</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>Nastavení kódu EOA účtu</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>Zvýšení propustnosti blobů</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>Zvýšení ceny za data volání</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>Přidání plánu blobů do konfiguračních souborů EL</em></li>
 </ul>
 
-Lepší zážitek ze stakingu:
+Lepší zkušenost se stakingem:
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> – <em>Zvýšení <code>MAX_EFFECTIVE_BALANCE</code></em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> – <em>Výstupy spustitelné z exekuční vrstvy</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> – <em>Obecné požadavky exekuční vrstvy</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> – <em>Poskytování vkladů validátorů onchain</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>Zvýšení <code>MAX_EFFECTIVE_BALANCE</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>Výstupy spustitelné exekuční vrstvou</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>Požadavky exekuční vrstvy pro obecné účely</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Poskytování vkladů validátorů onchain</em></li>
 </ul>
 
 Zlepšení efektivity a bezpečnosti protokolu:
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> – <em>Předkompilovaný kontrakt pro operace na křivce BLS12-381</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> – <em>Ukládání historických hashů bloků do stavu</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> – <em>Přesun indexu výboru mimo atestaci</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>Předkompilovaný kontrakt pro operace na křivce BLS12-381</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Ukládání historických hashů bloků do stavu</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Přesun indexu výboru mimo atestaci</em></li>
 </ul>
 
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
-- [Jak Pectra zlepší zážitek ze stakingu](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [Jak Pectra zlepší zkušenost se stakingem](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Přečtěte si specifikace aktualizace Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
-- [Časté dotazy k Prague-Electra („Pectra“)](/roadmap/pectra/)
+- [Časté dotazy k aktualizaci Prague-Electra („Pectra“)](/roadmap/pectra/)
 
 <Divider />
 

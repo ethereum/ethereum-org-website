@@ -137,5 +137,16 @@
   "page-developers-why-title": "Získejte dobrý plat. Pracujte na dálku. Budujte budoucnost.",
   "page-developers-why-subtitle": "Více než polovina kariér v oblasti blockchainu je primárně na dálku, přičemž některé odhady uvádějí až 70 %.",
   "page-developers-why-avg-salary-dev": "Průměrný plat vývojáře",
-  "page-developers-why-avg-salary-blockchain": "Průměrný plat v blockchainovém odvětví"
+  "page-developers-why-avg-salary-blockchain": "Průměrný plat v blockchainovém odvětví",
+  "page-developers-why-grid-money-heading": "Peníze, které můžete programovat",
+  "page-developers-why-grid-money-desc": "Napište kód, který definuje, jak se hodnota přesouvá, kdy a komu. Žádné banky, žádní zprostředkovatelé, pouze vámi definovaná logika.",
+  "page-developers-why-grid-skills-heading": "Dovednosti připravené na budoucnost",
+  "page-developers-why-grid-skills-desc": "Poznejte stavební kameny příštího internetu. Technologie se může vyvíjet, ale principy Web3 tu zůstanou.",
+  "page-developers-why-grid-censorship-heading": "Odolnost vůči cenzuře",
+  "page-developers-why-grid-censorship-desc": "Budujte projekty a obchod, které nemohou být umlčeny vládami, korporacemi ani algoritmy. Pokud na tom záleží, zůstane to online.",
+  "page-developers-why-grid-sovereignty-heading": "Digitální suverenita",
+  "page-developers-why-grid-sovereignty-desc": "Vlastněte svou identitu, aktiva a výtvory online, aniž byste se spoléhali na platformy, které vás mohou smazat.",
+  "page-developers-blog-title": "Novinky pro tvůrce",
+  "page-developers-blog-desc": "Přehled nejnovějších zdrojů, nástrojů a novinek pro tvůrce na Ethereu.",
+  "page-developers-blog-view-all": "Zobrazit všechny novinky"
 }

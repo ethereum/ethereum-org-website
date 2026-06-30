@@ -85,8 +85,8 @@ Nahlašování má přesto smysl. Hlášení pomáhají orgánům činným v tre
 ## Typy podvodů, na které si dát pozor {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Podvody s rozdáváním a airdropy"
+contentPreview="Nikdo nerozdává ETH zdarma. Tyto nabídky jsou vždy podvod."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ Podvodníci vytvářejí falešné soutěže (giveaways), ve kterých slibují z
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Vydávání se za někoho jiného a falešná podpora"
+contentPreview="Nikdo z Etherea ani z ethereum.org vás nikdy nebude kontaktovat jako první."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ Podvodníci se vydávají za členy týmu Etherea, moderátory nebo agenty podpo
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Podvody s obnovou prostředků"
+contentPreview="Pokud jste se stali obětí podvodu, dejte si pozor na falešné „experty na obnovu kryptoměn“."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ Slibují, že za poplatek předem vystopují a získají zpět vaše ukradené k
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Phishingové weby a falešné aplikace"
+contentPreview="Podvodné stránky napodobují skutečné peněženky a burzy, aby vám ukradly přihlašovací údaje."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

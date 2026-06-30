@@ -133,20 +133,17 @@ _Typicky se používá pro decentralizovaný vývoj a správu protokolů a [dece
 - [Seznam DAO na Tally.xyz](https://www.tally.xyz/explore)
 - [Seznam DAO na DeGov.AI](https://apps.degov.ai/)
 
-### Založte DAO {#start-a-dao}
-
-- [Vyvolejte DAO pomocí DAOHaus](https://app.daohaus.club/summon)
+### Založte DAO
+- [Založte DAO pomocí DAOHaus](https://app.daohaus.club/summon)
 - [Založte Governor DAO pomocí Tally](https://www.tally.xyz/get-started)
 - [Vytvořte DAO poháněné Aragonem](https://aragon.org/product)
 - [Založte kolonii](https://colony.io/)
-- [Vytvořte DAO s holografickým konsenzem od DAOstack](https://alchemy.daostack.io/daos/create)
 - [Spusťte DAO pomocí DeGov Launcher](https://docs.degov.ai/integration/deploy)
-
 ## Další čtení {#further-reading}
 
 ### Články o DAO {#dao-articles}
 
-- [Co je to DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [Co je to DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [Dům DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [Co je to DAO a k čemu slouží?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Jak založit digitální komunitu poháněnou DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

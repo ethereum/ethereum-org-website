@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "Data a analytika",
   "docs-nav-data-and-analytics-description": "Jak jsou data z blockchainu agregována, organizována a implementována do decentralizovaných aplikací (dapp)",
   "docs-nav-data-availability": "Dostupnost dat",
+  "docs-nav-data-availability-description": "Přehled problémů a řešení týkajících se dostupnosti dat v Ethereu",
   "docs-nav-data-availability-storage-strategies": "Strategie ukládání dat na blockchainu",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "Ověřování stavu je ve vývoji",
   "layer-2-metis-note": "Důkazy o podvodu jsou ve vývoji",
   "layer-2-optimism-note": "Důkazy o chybě jsou ve vývoji",
-  "back-to-top": "Zpět nahoru",
   "banner-page-incomplete": "Tato stránka je neúplná a budeme rádi za vaši pomoc. Upravte tuto stránku a přidejte cokoli, co by podle vás mohlo být užitečné pro ostatní.",
   "next": "Další",
   "previous": "Předchozí"

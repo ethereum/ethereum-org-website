@@ -54,22 +54,21 @@ Plasma používá hlavní kontrakt běžící na Ethereu ke zpracování uživat
 
 Pro vstup do řetězce Plasma bude muset Alice (uživatelka) vložit ETH nebo jakýkoli ERC-20 token do kontraktu Plasmy. Operátor Plasmy, který sleduje vklady do kontraktu, znovu vytvoří částku rovnající se počátečnímu vkladu Alice a uvolní ji na její adresu na řetězci Plasma. Alice je povinna potvrdit přijetí prostředků na dceřiném řetězci a poté může tyto prostředky použít pro transakce.
 
-#### Výstup z řetězce Plasma {#exiting-the-plasma-chain}
+#### Výstup z řetězce Plasma
 
 Výstup z řetězce Plasma je z několika důvodů složitější než vstup do něj. Tím největším je, že ačkoli má Ethereum informace o stavu řetězce Plasma, nemůže ověřit, zda jsou tyto informace pravdivé, či nikoli. Zlomyslný uživatel by mohl učinit nesprávné tvrzení („Mám 1000 ETH“) a projít mu to poskytnutím falešných důkazů na podporu tohoto nároku.
 
-Aby se zabránilo zlomyslným výběrům, je zavedeno „období pro zpochybnění“ (challenge period). Během období pro zpochybnění (obvykle týden) může kdokoli zpochybnit žádost o výběr pomocí důkazu o podvodu. Pokud je zpochybnění úspěšné, žádost o výběr je zamítnuta.
+Aby se zabránilo zlomyslným výběrům, je zavedeno „období pro zpochybnění“. Během období pro zpochybnění (obvykle jeden týden) může kdokoli zpochybnit žádost o výběr pomocí důkazu o podvodu. Pokud je zpochybnění úspěšné, žádost o výběr je zamítnuta.
 
 Obvykle je však situace taková, že uživatelé jsou čestní a vznášejí správné nároky na prostředky, které vlastní. V tomto scénáři Alice iniciuje žádost o výběr na kořenovém řetězci (Ethereu) odesláním transakce do kontraktu Plasmy.
 
-Musí také poskytnout Merkleův důkaz ověřující, že transakce vytvářející její prostředky na řetězci Plasma byla zahrnuta do bloku. To je nezbytné pro iterace Plasmy, jako je [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), které používají model [nevyužitých transakčních výstupů (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
+Musí také poskytnout Merkleův důkaz ověřující, že transakce vytvářející její prostředky na řetězci Plasma byla zahrnuta do bloku. To je nezbytné pro iterace Plasmy, jako je Plasma MVP, které používají model [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Jiné, jako [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), představují prostředky jako [nezaměnitelné tokeny](/developers/docs/standards/tokens/erc-721/) namísto UTXO. Výběr v tomto případě vyžaduje důkaz o vlastnictví tokenů na řetězci Plasma. To se provádí odesláním dvou nejnovějších transakcí týkajících se tokenu a poskytnutím Merkleova důkazu ověřujícího zahrnutí těchto transakcí do bloku.
+Jiné, jako Plasma Cash, představují prostředky jako [nezaměnitelné tokeny](/developers/docs/standards/tokens/erc-721/) namísto UTXO. Výběr v tomto případě vyžaduje důkaz o vlastnictví tokenů na řetězci Plasma. To se provádí odesláním dvou nejnovějších transakcí týkajících se tokenu a poskytnutím Merkleova důkazu ověřujícího zahrnutí těchto transakcí do bloku.
 
-Uživatel musí k žádosti o výběr také přidat kauci jako záruku čestného chování. Pokud vyzyvatel prokáže, že žádost Alice o výběr je neplatná, její kauce je penalizována a část z ní připadne vyzyvateli jako odměna.
+Uživatel musí k žádosti o výběr také přidat kauci jako záruku čestného chování. Pokud zpochybňovatel prokáže, že je žádost Alice o výběr neplatná, její kauce je penalizována a část z ní připadne zpochybňovateli jako odměna.
 
 Pokud období pro zpochybnění uplyne, aniž by kdokoli poskytl důkaz o podvodu, žádost Alice o výběr je považována za platnou, což jí umožní získat vklady z kontraktu Plasmy na Ethereu.
-
 ### Řešení sporů {#dispute-arbitration}
 
 Jako každý blockchain, i řetězce Plasma potřebují mechanismus pro prosazování integrity transakcí pro případ, že by účastníci jednali zlomyslně (např. dvojí útrata prostředků). Za tímto účelem používají řetězce Plasma důkazy o podvodu k řešení sporů týkajících se platnosti přechodů stavu a k penalizaci špatného chování. Důkazy o podvodu se používají jako mechanismus, jehož prostřednictvím dceřiný řetězec Plasma podává stížnost svému mateřskému řetězci nebo kořenovému řetězci.
@@ -165,16 +164,14 @@ Několik projektů poskytuje implementace Plasmy, které můžete integrovat do 
 
 - [Polygon](https://polygon.technology/) (dříve Matic Network)
 
-## Další čtení {#further-reading}
+## Další čtení
 
-- [Naučte se Plasmu](https://www.learnplasma.org/en/)
 - [Rychlé připomenutí toho, co znamená „sdílená bezpečnost“ a proč je tak důležitá](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Postranní řetězce vs. Plasma vs. Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
+- [Postranní řetězce vs. Plasma vs. sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Porozumění Plasmě, část 1: Základy](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [Život a smrt Plasmy](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
-
 ## Návody: Řetězce Plasma na Ethereu {#tutorials}
 
 - [Napište Plasmu specifickou pro aplikaci, která zachovává soukromí](/developers/tutorials/app-plasma/) _– Vytvořte aplikaci Plasma zachovávající soukromí pomocí důkazů s nulovou znalostí a offchain komponent._

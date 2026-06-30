@@ -354,10 +354,10 @@ Uživatel odešle pozdrav. Možná se aktualizuje v dalším bloku. Možná ne. 
 - Nový pozdrav byl odeslán a zpracovává se
 - Nový pozdrav byl odmítnut
 
-## Závěr {#conclusion}
+## Závěr
 
-V tuto chvíli byste měli být schopni vytvořit pro uživatele vaší dapp zážitek bez nutnosti platit za gas, a to za cenu určité centralizace.
+V tuto chvíli byste měli být schopni vytvořit pro uživatele vaší decentralizované aplikace (dapp) prostředí bez poplatků za gas, a to za cenu určité centralizace.
 
-To však funguje pouze u chytrých kontraktů, které podporují ERC-712. Například k převodu tokenu ERC-20 je nutné, aby transakci podepsal vlastník, a ne jen zprávu. Řešením je [abstrakce účtu (ERC-4337)](https://docs.erc4337.io/index.html). Doufám, že o tom napíšu budoucí tutoriál.
+To však funguje pouze s chytrými kontrakty, které podporují ERC-712. Například pro převod ERC-20 tokenu je nutné, aby vlastník podepsal transakci, a nikoli pouze zprávu. Nejjednodušším řešením je, aby aktiva nevlastnila adresa EOA, ale samostatný kontrakt (jednoduchá forma [abstrakce účtu](/roadmap/account-abstraction/)). Více si o tom můžete přečíst [v navazujícím tutoriálu](/developers/tutorials/gasless-token).
 
 [Zde najdete další mou práci](https://cryptodocguy.pro/).

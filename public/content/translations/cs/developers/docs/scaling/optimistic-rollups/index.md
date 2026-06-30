@@ -253,17 +253,14 @@ Učíte se raději vizuálně? Podívejte se, jak Finematics vysvětluje optimis
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Další čtení o optimistických rollupech {#further-reading-on-optimistic-rollups}
-
+## Další čtení o optimistických rollupech
 - [Jak fungují optimistické rollupy (Kompletní průvodce)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Co je to blockchainový rollup? Technický úvod](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [Základní průvodce Arbitrem](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Základní průvodce pro Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Praktický průvodce rollupy na Ethereu](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
-- [Stav důkazů o podvodu v L2 na Ethereu](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
-- [Jak vlastně funguje rollup Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [Hluboký ponor do OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
-- [Co je to Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
+- [Stav důkazů o podvodu na L2 Etherea](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
+- [Jak vlastně funguje rollup sítě Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
+- [Detailní pohled na OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [Co je to optimistický virtuální stroj?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
 ## Návody: Optimistické rollupy a mosty na Ethereu {#tutorials}
 
 - [Průvodce standardním kontraktem mostu Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Komentovaný průvodce kódem standardního mostu Optimism pro přesun aktiv mezi L1 a L2._

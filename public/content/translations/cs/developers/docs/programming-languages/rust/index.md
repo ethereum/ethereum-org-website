@@ -44,7 +44,7 @@ Potřebujete nejprve základnější úvod? Podívejte se na [ethereum.org/learn
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Reference OASIS API_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Nástroj pro jednotkové testování chytrých kontraktů v Solidity využívající nativní EVM klienta Parity._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementace Ethereum Virtual Machine v Rustu_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Chytrý kontrakt Wavelet v Rustu_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Chytrý kontrakt Wavelet v Rustu_
 - [Foundry](https://github.com/foundry-rs/foundry) - _Sada nástrojů pro vývoj aplikací na Ethereu_
 - [Alloy](https://alloy.rs) - _Vysoce výkonné, dobře otestované a zdokumentované knihovny pro interakci s Ethereem a dalšími řetězci založenými na EVM._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Knihovna pro Ethereum a implementace peněženky_
