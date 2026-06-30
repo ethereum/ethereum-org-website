@@ -364,7 +364,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </Callout>
 
             <FileContributors
-              className="border-t"
+              className="my-10 border-t"
               contributors={contributors}
               lastEditLocaleTimestamp={lastEditLocaleTimestamp}
             />
