@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useMemo, useRef } from "react"
 import { Brain, LayersPlus } from "lucide-react"
 import { useLocale } from "next-intl"
 
@@ -21,12 +21,13 @@ export const useWalletFilters = (): FilterOption[] => {
   const locale = useLocale()
   const { t } = useTranslation("page-wallets-find-wallet")
   const prevNetworkArray = useRef<string[]>([])
-  return [
-    {
-      title: t("page-find-wallet-device"),
-      showFilterOption: true,
-      items: [
-        {
+  return useMemo(
+    () => [
+      {
+        title: t("page-find-wallet-device"),
+        showFilterOption: true,
+        items: [
+          {
           filterKey: "mobile",
           filterLabel: t("page-find-wallet-mobile"),
           description: "",
@@ -1045,6 +1046,8 @@ export const useWalletFilters = (): FilterOption[] => {
           options: [],
         },
       ],
-    },
-  ]
+      },
+    ],
+    [locale, t]
+  )
 }
