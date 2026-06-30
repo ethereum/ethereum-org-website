@@ -169,7 +169,7 @@
 }
 
 @utility bg-linear-secondary {
-  @apply bg-linear-to-r from-purple-500/10 to-purple-600/10 dark:from-purple-500/15 dark:to-purple-600/15;
+  @apply bg-linear-to-r from-purple-500/20 to-purple-600/10 dark:from-purple-500/25 dark:to-purple-600/15;
 }
 
 @utility bg-linear-tertiary {

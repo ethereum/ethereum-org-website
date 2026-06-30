@@ -52,7 +52,7 @@ const StakingLaunchpadWidget = () => {
   }))
 
   return (
-    <div className="flow rounded-base bg-fade-accent-c p-page gradient-reverse">
+    <div className="flow rounded-base bg-tint-accent-c p-page gradient-use-light gradient-reverse">
       <p className="text-body-medium">
         {t("page-staking-launchpad-widget-span")}
       </p>

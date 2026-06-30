@@ -146,7 +146,7 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   return (
     <div
       id={SIMULATOR_ID}
-      className="grid w-full scroll-mt-[5rem] place-items-center scroll-smooth bg-fade-accent-a p-4 gradient-reverse md:p-16"
+      className="grid w-full scroll-mt-[5rem] place-items-center scroll-smooth bg-linear-primary p-4 md:p-16"
     >
       <Flex className="w-full max-w-[1000px] items-center gap-16 bg-background px-4 py-8 text-center max-md:flex-col md:p-16 md:text-start md:max-lg:gap-8">
         {/* TEXT CONTENT */}
