@@ -1887,7 +1887,7 @@ web3.sha3("Print(uint256)")
 
 ## সম্পর্কিত বিষয়বস্তু {#related-topics}
 
-- [জেসন-আরপিসি স্পেসিফিকেশন](http://www.jsonrpc.org/specification)
+- [জেসন-আরপিসি স্পেসিফিকেশন](https://www.jsonrpc.org/specification)
 - [নোড এবং ক্লায়েন্ট](/developers/docs/nodes-and-clients/)
 - [JavaScript API](/developers/docs/apis/javascript/)
 - [ব্যাকএন্ড API](/developers/docs/apis/backend/)

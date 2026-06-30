@@ -117,11 +117,9 @@ _পেকট্রা আপগ্রেডে কী কী থাকছে? -
 
 _ইথেরিয়াম পেকট্রা আপগ্রেড: স্টেকারদের যা জানা দরকার — Blockdaemon_
 
-## আরও পড়ুন {#further-reading}
-
-- [ইথেরিয়াম রোডম্যাপ](/roadmap/)
+## আরও পড়ুন
+- [ইথেরিয়াম রোডম্যাপ](/roadmap/)
 - [পেকট্রা FAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf তথ্য পৃষ্ঠা](https://pectra.wtf)
 - [পেকট্রা কীভাবে স্টেকারদের অভিজ্ঞতা উন্নত করে](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 তথ্য পৃষ্ঠা](https://eip7702.io/)
 - [পেকট্রা ডেভনেট](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

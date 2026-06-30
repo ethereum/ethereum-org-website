@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "ইথেরিয়াম ইকোসিস্টেম থেকে নির্মাতা রিসোর্স, টুল এবং ডেভেলপমেন্ট।",
-  "page-latest-title": "নির্মাতা আপডেট",
-  "page-latest-subtitle": "ইথেরিয়াম নির্মাতা ইকোসিস্টেম জুড়ে সর্বশেষ রিসোর্স, টুল এবং ডেভেলপমেন্টের উপর বিশেষজ্ঞদের দৃষ্টিভঙ্গির জন্য একটি সাধারণ স্থান।",
+  "page-latest-meta-description": "ইথেরিয়াম কমিউনিটি থেকে সর্বশেষ ব্লগ পোস্ট, খবর এবং আপডেট, সেইসাথে নির্মাতা ইকোসিস্টেমের বিশেষজ্ঞদের দৃষ্টিভঙ্গি।",
+  "page-latest-title": "সর্বশেষ ইথেরিয়াম আপডেট",
+  "page-latest-subtitle": "কমিউনিটি থেকে সর্বশেষ ব্লগ পোস্ট, খবর এবং আপডেট, সেইসাথে ইথেরিয়াম নির্মাতা ইকোসিস্টেমের উন্নয়নের উপর বিশেষজ্ঞদের দৃষ্টিভঙ্গি।",
   "page-latest-no-posts": "কোনো পোস্ট পাওয়া যায়নি।",
   "page-latest-read-more": "আরও পড়ুন",
   "page-latest-minute-read": "{minutes} মিনিট পাঠ",
-  "page-latest-team-attribution": "EF নির্মাতা গ্রোথ"
+  "page-latest-team-attribution": "EF নির্মাতা গ্রোথ",
+  "page-latest-cta-submit-resource": "একটি রিসোর্স জমা দিন",
+  "page-latest-cta-propose-article": "একটি প্রবন্ধ প্রস্তাব করুন",
+  "page-latest-highlights-heading": "হাইলাইটস",
+  "page-latest-articles-heading": "সর্বশেষ ইথেরিয়াম প্রবন্ধ",
+  "page-latest-sources-heading": "এই ওয়েবসাইটগুলোতে আরও পড়ুন",
+  "page-latest-see-more": "আরও দেখুন ({count})",
+  "page-latest-sort-label": "প্রবন্ধ সাজান",
+  "page-latest-sort-newest": "নতুনগুলো আগে",
+  "page-latest-sort-oldest": "পুরনোগুলো আগে",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "কিছু প্রবন্ধ তাদের মূল ভাষায় (ইংরেজি) দেখানো হয়েছে।",
+  "page-latest-suggest-heading": "একটি রিসোর্স প্রস্তাব করুন",
+  "page-latest-suggest-description": "এমন কোনো ইথেরিয়াম নিউজলেটার বা গবেষণা প্রকাশনা সম্পর্কে জানেন যা এখানে তালিকাভুক্ত করা উচিত, অথবা আপনার মনে কোনো নির্মাতা প্রবন্ধের বিষয় আছে? আপনার রিসোর্স জমা দিতে একটি ইস্যু খুলুন।"
 }

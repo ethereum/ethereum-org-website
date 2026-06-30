@@ -27,7 +27,7 @@ Ethereum.org 40-টিরও বেশি ভাষায় অনুবাদ ক
 **খবর**
 
 - [BeInCrypto](http://www.beincrypto.com.br) - ক্রিপ্টোকারেন্সি খবর এবং আর্টিকেল, যার মধ্যে এক্সচেঞ্জের একটি তালিকা রয়েছে, যা ব্রাজিলে উপলব্ধ
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Cointelegraph-এর ব্রাজিলিয়ান সংস্করণ, যা একটি প্রধান ক্রিপ্টোকারেন্সি সংবাদ মাধ্যম
+- [Cointelegraph](https://cointelegraph.com.br/) - Cointelegraph-এর ব্রাজিলিয়ান সংস্করণ, যা একটি প্রধান ক্রিপ্টোকারেন্সি সংবাদ মাধ্যম
 - [Livecoins](http://www.livecoins.com.br/ethereum) - ক্রিপ্টোকারেন্সি খবর এবং টুল
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - ক্রিপ্টোকারেন্সি খবর এবং রিপোর্ট
 - [Modular Crypto](https://modularcrypto.xyz/) - ক্রিপ্টোকারেন্সি খবর এবং শিক্ষামূলক আর্টিকেল
@@ -37,7 +37,7 @@ Ethereum.org 40-টিরও বেশি ভাষায় অনুবাদ ক
 - [web3dev](https://www.web3dev.com.br/) - Web3 ডেভেলপারদের জন্য কনটেন্ট হাব এবং ডিসকর্ড কমিউনিটি।
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - Web3 এবং বিকেন্দ্রীভূত অর্থব্যবস্থা (DeFi) শেখার রিসোর্স
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - ক্রিপ্টোকারেন্সি খবর এবং শিক্ষা, যার মধ্যে নতুনদের জন্য 'ইথেরিয়াম' এবং নতুনদের জন্য 'DeFi' অন্তর্ভুক্ত
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - ক্রিপ্টোকারেন্সি স্পেস থেকে ইনসাইট, শিক্ষা এবং ব্লগ
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - ক্রিপ্টোকারেন্সি স্পেস থেকে ইনসাইট, শিক্ষা এবং ব্লগ
 - [Cointimes](http://www.cointimes.com.br/) - ক্রিপ্টোকারেন্সি খবর এবং শিক্ষা
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - ক্রিপ্টো সম্পর্কিত সবচেয়ে সাধারণ এবং মৌলিক প্রশ্নগুলোর উত্তর দেওয়ার একটি গাইড
 

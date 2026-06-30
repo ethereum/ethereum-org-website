@@ -235,5 +235,5 @@ ZK-STARK হলো **Zero-Knowledge Scalable Transparent Argument of Knowledge**
 - [ZK-STARKs — কোয়ান্টাম কম্পিউটারের বিরুদ্ধেও যাচাইযোগ্য আস্থা তৈরি করুন](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _অ্যাডাম লুসিয়ানো_
 - [কীভাবে zk-SNARKs সম্ভব তার একটি আনুমানিক ভূমিকা](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _ভিটালিক বুটেরিন_
 - [কেন জিরো নলেজ প্রুফ (ZKPs) স্ব-সার্বভৌম পরিচয়ের জন্য একটি গেম চেঞ্জার](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _ফ্র্যাঙ্কলিন ওহেগবুলাম_
-- [EIP-7503 ব্যাখ্যা: ZK প্রমাণের মাধ্যমে ইথেরিয়ামে প্রাইভেট ট্রান্সফার সক্ষম করা](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _ইমানুয়েল আওসিকা_
+- [EIP-7503 ব্যাখ্যা: ZK প্রমাণের মাধ্যমে ইথেরিয়ামে প্রাইভেট ট্রান্সফার সক্ষম করা](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _ইমানুয়েল আওসিকা_
 - [ZK কার্ড গেম: ZK-এর মৌলিক বিষয় এবং বাস্তব জীবনের ব্যবহার-ক্ষেত্র শেখার গেম](https://github.com/ZK-card/zk-cards) - _ZK-Cards_

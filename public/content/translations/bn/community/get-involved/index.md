@@ -11,7 +11,7 @@ lang: bn
 ## ডেভেলপার <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/)-এ ইথেরিয়াম সম্পর্কে জানুন এবং চেষ্টা করে দেখুন
-- আপনার কাছাকাছি একটি [ETHGlobal](https://ethglobal.co/) হ্যাকাথনে অংশগ্রহণ করুন!
+- আপনার কাছাকাছি একটি [ETHGlobal](https://ethglobal.com/) হ্যাকাথনে অংশগ্রহণ করুন!
 - [আপনার দক্ষতার ক্ষেত্র বা পছন্দের প্রোগ্রামিং ভাষার সাথে সম্পর্কিত প্রজেক্টগুলো](/developers/docs/programming-languages/) দেখুন
 - [ঐক্যমত এবং এক্সিকিউশন লেয়ার কলগুলোতে](https://www.youtube.com/@EthereumProtocol/streams) নজর রাখুন বা অংশগ্রহণ করুন
 - [ইকোসিস্টেম সাপোর্ট প্রোগ্রামের উইশলিস্ট](https://esp.ethereum.foundation/wishlist/) - টুলিং, ডকুমেন্টেশন এবং পরিকাঠামোগত ক্ষেত্র যেখানে ইথেরিয়াম ইকোসিস্টেম সাপোর্ট প্রোগ্রাম সক্রিয়ভাবে অনুদানের আবেদন খুঁজছে
@@ -80,7 +80,7 @@ lang: bn
 
 ইথেরিয়াম ইকোসিস্টেম সর্বজনীন সম্পদ এবং প্রভাবশালী প্রজেক্টগুলোতে অর্থায়নের মিশনে রয়েছে। খুব ছোট অনুদানের মাধ্যমে আপনি আপনার সমর্থন দেখাতে পারেন এবং গুরুত্বপূর্ণ কাজগুলো বাস্তবায়নে সহায়তা করতে পারেন।
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## আর্থিক পেশাদার এবং হিসাবরক্ষক <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

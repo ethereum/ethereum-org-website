@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "ডেটা এবং অ্যানালিটিক্স",
   "docs-nav-data-and-analytics-description": "কীভাবে ব্লকচেইন ডেটা একত্রিত, সংগঠিত এবং dapp-এ প্রয়োগ করা হয়",
   "docs-nav-data-availability": "ডেটার প্রাপ্যতা",
+  "docs-nav-data-availability-description": "ইথেরিয়ামে ডেটার প্রাপ্যতা সম্পর্কিত সমস্যা এবং সমাধানগুলোর একটি ওভারভিউ",
   "docs-nav-data-availability-storage-strategies": "ব্লকচেইন ডেটা স্টোরেজ কৌশল",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "স্টেট ভ্যালিডেশন ডেভেলপমেন্ট পর্যায়ে রয়েছে",
   "layer-2-metis-note": "ফ্রড প্রুফ ডেভেলপমেন্ট পর্যায়ে রয়েছে",
   "layer-2-optimism-note": "ফল্ট প্রুফ ডেভেলপমেন্ট পর্যায়ে রয়েছে",
-  "back-to-top": "উপরে ফিরে যান",
   "banner-page-incomplete": "এই পৃষ্ঠাটি অসম্পূর্ণ এবং আমরা আপনার সাহায্য পেলে খুশি হব। এই পৃষ্ঠাটি সম্পাদনা করুন এবং এমন কিছু যোগ করুন যা অন্যদের জন্য দরকারী হতে পারে বলে আপনি মনে করেন।",
   "next": "পরবর্তী",
   "previous": "পূর্ববর্তী"

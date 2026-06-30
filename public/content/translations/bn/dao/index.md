@@ -133,20 +133,18 @@ _সাধারণত প্রোটোকল এবং [বিকেন্দ
 - [Tally.xyz-এর DAO-এর তালিকা](https://www.tally.xyz/explore)
 - [DeGov.AI-এর DAO-এর তালিকা](https://apps.degov.ai/)
 
-### একটি DAO শুরু করুন {#start-a-dao}
+### একটি DAO শুরু করুন
 
-- [DAOHaus দিয়ে একটি DAO তৈরি করুন](https://app.daohaus.club/summon)
-- [Tally দিয়ে একটি গভর্নর DAO শুরু করুন](https://www.tally.xyz/get-started)
-- [একটি Aragon-চালিত DAO তৈরি করুন](https://aragon.org/product)
+- [DAOHaus-এর মাধ্যমে একটি DAO তৈরি করুন](https://app.daohaus.club/summon)
+- [Tally-এর মাধ্যমে একটি গভর্নর DAO শুরু করুন](https://www.tally.xyz/get-started)
+- [Aragon-চালিত একটি DAO তৈরি করুন](https://aragon.org/product)
 - [একটি কলোনি শুরু করুন](https://colony.io/)
-- [DAOstack-এর হলোগ্রাফিক ঐকমত্য দিয়ে একটি DAO তৈরি করুন](https://alchemy.daostack.io/daos/create)
-- [DeGov লঞ্চার দিয়ে একটি DAO চালু করুন](https://docs.degov.ai/integration/deploy)
-
+- [DeGov লঞ্চারের মাধ্যমে একটি DAO চালু করুন](https://docs.degov.ai/integration/deploy)
 ## আরও পড়ুন {#further-reading}
 
 ### DAO সম্পর্কিত আর্টিকেল {#dao-articles}
 
-- [DAO কী?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [DAO কী?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [হাউস অফ DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO কী এবং এটি কীসের জন্য?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [কীভাবে একটি DAO-চালিত ডিজিটাল কমিউনিটি শুরু করবেন](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
