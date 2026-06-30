@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-gas.json",
-  "generatedAt": "2026-05-26T10:06:08.307Z",
-  "rootHash": "b2a579282d7b",
+  "generatedAt": "2026-06-29T23:48:34.867Z",
+  "rootHash": "618848cb7122",
   "tree": {
-    "contentHash": "f89b37dad840",
+    "contentHash": "a2565b17c769",
     "anchorHash": "8773b9ed5da7",
     "children": {
       "page-gas-meta-title": {
@@ -188,7 +188,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-gas-benefits-1-description": {
-        "contentHash": "3bd8a1719c28",
+        "contentHash": "66106f9ade19",
         "anchorHash": "b81cfbb4a5db",
         "children": {
           "prose:1": {
@@ -196,7 +196,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "html-tag:0": {
-            "contentHash": "5e1850cff26d",
+            "contentHash": "9f942f6723a8",
             "anchorHash": "2cd06318f59f"
           },
           "prose:2": {
@@ -432,5 +432,5 @@
       "page-gas-use-layer-2"
     ]
   },
-  "sourceCommitSha": "3ec7d2cd6ede59940bb02b21be2e5d211370a724"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

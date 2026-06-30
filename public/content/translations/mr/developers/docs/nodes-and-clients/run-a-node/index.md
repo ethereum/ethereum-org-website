@@ -371,7 +371,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-जेव्हा सहमती क्लायंट ठेव करार वाचण्यासाठी आणि प्रमाणक ओळखण्यासाठी अंमलबजावणी क्लायंटशी कनेक्ट होतो, तेव्हा तो इतर बीकन नोड पीअर्सशी देखील कनेक्ट होतो आणि उत्पत्तीपासून सहमती स्लॉट्स समक्रमित करण्यास सुरुवात करतो. एकदा बीकन नोड वर्तमान पर्वावर पोहोचला की, बीकन API तुमच्या प्रमाणकांसाठी वापरण्यायोग्य बनते. [बीकन नोड APIs](https://eth2docs.vercel.app/) बद्दल अधिक जाणून घ्या.
+जेव्हा सहमती क्लायंट ठेव करार वाचण्यासाठी आणि प्रमाणक ओळखण्यासाठी अंमलबजावणी क्लायंटशी कनेक्ट होतो, तेव्हा तो इतर बीकन नोड पीअर्सशी देखील कनेक्ट होतो आणि उत्पत्तीपासून सहमती स्लॉट्स समक्रमित करण्यास सुरुवात करतो. एकदा बीकन नोड वर्तमान पर्वावर पोहोचला की, बीकन API तुमच्या प्रमाणकांसाठी वापरण्यायोग्य बनते. [बीकन नोड APIs](https://ethereum.github.io/beacon-APIs) बद्दल अधिक जाणून घ्या.
 
 ### प्रमाणक जोडणे {#adding-validators}
 
@@ -454,7 +454,7 @@ _हे सहमती स्तर प्रमाणक नोड्सवर
 - [इथेरियम स्टेकिंग मार्गदर्शक](https://github.com/SomerEsat/ethereum-staking-guides) - _सोमर इसाट, वारंवार अद्यतनित_
 - [मार्गदर्शक | मुख्यनेटवर इथेरियम स्टेकिंगसाठी प्रमाणक कसे सेट करावे](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, वारंवार अद्यतनित_
 - [टेस्टनेट्सवर प्रमाणक चालवण्यावरील EthStaker मार्गदर्शक](https://github.com/remyroy/ethstaker#guides) – _EthStaker, नियमितपणे अद्यतनित_
-- [इथेरियम नोड्ससाठी नमुना AWS ब्लॉकचेन नोड रनर ॲप](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, वारंवार अद्यतनित_
+- [इथेरियम नोड्ससाठी नमुना AWS ब्लॉकचेन नोड रनर ॲप](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, वारंवार अद्यतनित_
 - [नोड ऑपरेटर्ससाठी द मर्ज FAQ](https://notes.ethereum.org/@launchpad/node-faq-merge) - _जुलै 2022_
 - [इथेरियम पूर्ण प्रमाणित नोड होण्यासाठी हार्डवेअर आवश्यकतांचे विश्लेषण करणे](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– अल्बर्ट पलाऊ, 24 सप्टेंबर 2018_
 - [इथेरियम पूर्ण नोड्स चालवणे: क्वचितच प्रेरित असलेल्यांसाठी मार्गदर्शक](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– जस्टिन लेरॉक्स, 7 नोव्हेंबर 2019_

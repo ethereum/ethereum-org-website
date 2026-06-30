@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "इथेरियम बाउन्टी प्रोग्राम बक्षिसे ठरवताना अनेक चलांचा विचार करतो. पात्रता, स्कोअर आणि बक्षिसाशी संबंधित सर्व अटींचे निर्धारण पूर्णपणे आणि अंतिमरित्या इथेरियम फाउंडेशन बग बाउन्टी पॅनेलच्या विवेकबुद्धीवर अवलंबून असते.",
   "page-upgrades-bug-bounty-leaderboard": "संपूर्ण लीडरबोर्ड्स पहा",
   "page-upgrades-bug-bounty-leaderboard-list": "बग बाउन्टी लीडरबोर्ड",
+  "page-upgrades-bug-bounty-leaderboard-position": "{score, plural, one {# पॉइंट} other {# पॉइंट्स}} सह क्रमांक {rank} वर",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(GitHub प्रोफाईल पहा)",
   "page-upgrades-bug-bounty-leaderboard-points": "पॉइंट्स",
   "page-upgrades-bug-bounty-ledger-desc": "इथेरियम तपशील अंमलबजावणी स्तर आणि सहमती स्तरासाठी डिझाइनचे तर्क स्पष्ट करतात.",
   "page-upgrades-bug-bounty-ledger-title": "तपशील बग्स",

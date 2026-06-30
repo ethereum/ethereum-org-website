@@ -21,7 +21,7 @@ published: 2021-04-22
 
 ## पायरी 1: Web3 इन्स्टॉल करा {#install-web3}
 
-जर तुम्ही तुमचे NFT स्मार्ट कॉन्ट्रॅक्ट तयार करण्यावरील पहिल्या ट्युटोरियलचे अनुसरण केले असेल, तर तुम्हाला Ethers.js वापरण्याचा अनुभव आधीच असेल. Web3 हे Ethers सारखेच आहे, कारण ही एक लायब्ररी आहे जी [इथेरियम](/) ब्लॉकचेनवर विनंत्या तयार करणे सोपे करण्यासाठी वापरली जाते. या ट्युटोरियलमध्ये आम्ही [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3) वापरणार आहोत, जी एक प्रगत Web3 लायब्ररी आहे जी स्वयंचलित रिट्राय (automatic retries) आणि मजबूत WebSocket सपोर्ट देते.
+जर तुम्ही तुमचे NFT स्मार्ट कॉन्ट्रॅक्ट तयार करण्यावरील पहिल्या ट्युटोरियलचे अनुसरण केले असेल, तर तुम्हाला Ethers.js वापरण्याचा अनुभव आधीच असेल. Web3 हे Ethers सारखेच आहे, कारण ही एक लायब्ररी आहे जी [इथेरियम](/) ब्लॉकचेनवर विनंत्या तयार करणे सोपे करण्यासाठी वापरली जाते. या ट्युटोरियलमध्ये आम्ही [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) वापरणार आहोत, जी एक प्रगत Web3 लायब्ररी आहे जी स्वयंचलित रिट्राय (automatic retries) आणि मजबूत WebSocket सपोर्ट देते.
 
 तुमच्या प्रोजेक्ट होम डिरेक्टरीमध्ये रन करा:
 
@@ -40,15 +40,15 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## पायरी 3: तुमचा कॉन्ट्रॅक्ट ABI मिळवा {#contract-abi}
+## पायरी 3: तुमचा कॉन्ट्रॅक्ट ABI मिळवा
 
-आमचा कॉन्ट्रॅक्ट ABI (Application Binary Interface) हा आमच्या स्मार्ट कॉन्ट्रॅक्टशी संवाद साधण्यासाठीचा इंटरफेस आहे. तुम्ही कॉन्ट्रॅक्ट ABIs बद्दल अधिक माहिती [येथे](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is) मिळवू शकता. Hardhat आमच्यासाठी आपोआप एक ABI तयार करते आणि तो `MyNFT.json` फाईलमध्ये सेव्ह करते. हे वापरण्यासाठी आम्हाला आमच्या `mint-nft.js` फाईलमध्ये खालील कोडच्या ओळी जोडून त्यातील मजकूर पार्स (parse) करावा लागेल:
+आमचा कॉन्ट्रॅक्ट ABI (Application Binary Interface) हा आमच्या स्मार्ट कॉन्ट्रॅक्टशी संवाद साधण्यासाठीचा इंटरफेस आहे. तुम्ही [कॉन्ट्रॅक्ट ABIs](/glossary/#abi) बद्दल अधिक जाणून घेऊ शकता. Hardhat आमच्यासाठी आपोआप एक ABI जनरेट करते आणि तो `MyNFT.json` फाईलमध्ये सेव्ह करते. याचा वापर करण्यासाठी आम्हाला आमच्या `mint-nft.js` फाईलमध्ये खालील कोडच्या ओळी जोडून त्यातील मजकूर पार्स (parse) करावा लागेल:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 ```
 
-जर तुम्हाला ABI पाहायचा असेल तर तुम्ही तो तुमच्या कन्सोलवर प्रिंट करू शकता:
+जर तुम्हाला ABI पाहायचा असेल, तर तुम्ही तो तुमच्या कन्सोलवर प्रिंट करू शकता:
 
 ```js
 console.log(JSON.stringify(contract.abi))
@@ -59,7 +59,6 @@ console.log(JSON.stringify(contract.abi))
 ```js
 node scripts/mint-nft.js
 ```
-
 ## पायरी 4: IPFS वापरून तुमच्या NFT साठी मेटाडेटा कॉन्फिगर करा {#config-meta}
 
 जर तुम्हाला भाग 1 मधील आमच्या ट्युटोरियलवरून आठवत असेल, तर आमचे `mintNFT` स्मार्ट कॉन्ट्रॅक्ट फंक्शन एक tokenURI पॅरामीटर घेते जे NFT च्या मेटाडेटाचे वर्णन करणाऱ्या JSON डॉक्युमेंटमध्ये रिझॉल्व्ह झाले पाहिजे— जे खऱ्या अर्थाने NFT ला जिवंत करते, ज्यामुळे त्याला नाव, वर्णन, इमेज आणि इतर गुणधर्मांसारख्या कॉन्फिगर करण्यायोग्य प्रॉपर्टीज मिळतात.
@@ -136,13 +135,13 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## पायरी 7: तुमचा व्यवहार तयार करा {#create-txn}
+## पायरी 7: तुमचा व्यवहार तयार करा
 
-प्रथम, चला `mintNFT(tokenData)` नावाचे एक फंक्शन परिभाषित करूया आणि खालील गोष्टी करून आमचा व्यवहार तयार करूया:
+प्रथम, आपण `mintNFT(tokenData)` नावाचे एक फंक्शन परिभाषित करूया आणि खालील गोष्टी करून आपला व्यवहार तयार करूया:
 
 1. `.env` फाईलमधून तुमची _PRIVATE_KEY_ आणि _PUBLIC_KEY_ मिळवा.
 
-1. पुढे, आम्हाला खाते नॉन्स शोधून काढावा लागेल. नॉन्स स्पेसिफिकेशनचा वापर तुमच्या पत्त्यावरून पाठवलेल्या व्यवहारांच्या संख्येचा मागोवा ठेवण्यासाठी केला जातो — ज्याची आम्हाला सुरक्षिततेच्या उद्देशाने आणि [रिप्ले अटॅक्स (replay attacks)](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce) टाळण्यासाठी आवश्यकता असते. तुमच्या पत्त्यावरून पाठवलेल्या व्यवहारांची संख्या मिळवण्यासाठी, आम्ही [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount) वापरतो.
+1. पुढे, आम्हाला खाते नॉन्स शोधून काढावा लागेल. तुमच्या पत्त्यावरून पाठवलेल्या व्यवहारांच्या संख्येचा मागोवा ठेवण्यासाठी नॉन्स स्पेसिफिकेशन वापरले जाते — जे आम्हाला सुरक्षिततेच्या उद्देशाने आणि रिप्ले अटॅक (replay attacks) टाळण्यासाठी आवश्यक आहे. तुमच्या पत्त्यावरून पाठवलेल्या व्यवहारांची संख्या मिळवण्यासाठी, आम्ही [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count) वापरतो.
 
 1. शेवटी आम्ही खालील माहितीसह आमचा व्यवहार सेट करू:
 
@@ -154,7 +153,7 @@ PUBLIC_KEY = "your-public-account-address"
 
 - `'gas': estimatedGas` — व्यवहार पूर्ण करण्यासाठी आवश्यक असलेला अंदाजित गॅस
 
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — या व्यवहारामध्ये आम्हाला जे कॉम्प्युटेशन करायचे आहे — जे या प्रकरणात NFT मिंट करणे आहे
+- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — या व्यवहारामध्ये आम्हाला जे कॉम्प्युटेशन (computation) करायचे आहे — जे या प्रकरणात एक NFT मिंट करणे आहे
 
 तुमची `mint-nft.js` फाईल आता अशी दिसायला हवी:
 
@@ -184,7 +183,6 @@ PUBLIC_KEY = "your-public-account-address"
      };
    }​
 ```
-
 ## पायरी 8: व्यवहारावर स्वाक्षरी करा {#sign-txn}
 
 आता आम्ही आमचा व्यवहार तयार केला आहे, तो पाठवण्यासाठी आम्हाला त्यावर स्वाक्षरी करणे आवश्यक आहे. येथे आम्ही आमची खाजगी की वापरू.
@@ -317,7 +315,7 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-पुढे, तुमच्या व्यवहाराची स्थिती पाहण्यासाठी (तो प्रलंबित आहे, माईन झाला आहे की नेटवर्कद्वारे ड्रॉप झाला आहे) तुमच्या [Alchemy मेमपूल](https://dashboard.alchemyapi.io/mempool) ला भेट द्या. जर तुमचा व्यवहार ड्रॉप झाला असेल, तर [Blockscout](https://eth-sepolia.blockscout.com/) तपासणे आणि तुमचा व्यवहार हॅश शोधणे देखील उपयुक्त ठरते.
+पुढे, तुमच्या व्यवहाराची स्थिती पाहण्यासाठी (तो प्रलंबित आहे, माईन झाला आहे की नेटवर्कद्वारे ड्रॉप झाला आहे) तुमच्या [Alchemy मेमपूल](https://dashboard.alchemy.com/mempool) ला भेट द्या. जर तुमचा व्यवहार ड्रॉप झाला असेल, तर [Blockscout](https://eth-sepolia.blockscout.com/) तपासणे आणि तुमचा व्यवहार हॅश शोधणे देखील उपयुक्त ठरते.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Etherscan वर तुमचा NFT व्यवहार हॅश पहा_
 
