@@ -484,7 +484,7 @@ main()
 Sau khi chạy tệp bằng `npx hardhat run scripts/interact.js` trong terminal, chúng ta sẽ thấy phản hồi này:
 
 ```
-Thông điệp là: Hello world!
+The message is: Hello world!
 ```
 
 Chúc mừng! Bạn vừa đọc thành công dữ liệu hợp đồng thông minh từ Chuỗi khối Ethereum, làm tốt lắm!
@@ -564,9 +564,9 @@ Bây giờ chỉ cần chạy tập lệnh và bạn sẽ có thể thấy thôn
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-Thông điệp là: Hello World!
-Đang cập nhật thông điệp...
-Thông điệp mới là: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 Trong khi chạy tập lệnh đó, bạn có thể nhận thấy rằng bước `Updating the message...` mất một lúc để tải trước khi thông điệp mới được tải. Đó là do quá trình khai thác; nếu bạn tò mò về việc theo dõi các giao dịch trong khi chúng đang được khai thác, hãy truy cập [mempool của Alchemy](https://dashboard.alchemy.com/mempool) để xem trạng thái của một giao dịch. Nếu giao dịch bị hủy, việc kiểm tra [Goerli Etherscan](https://goerli.etherscan.io) và tìm kiếm hàm băm giao dịch (transaction hash) của bạn cũng rất hữu ích.

@@ -40,16 +40,14 @@ lang: hi
 
 **एप्लिकेशन विकास के लिए Sepolia अनुशंसित डिफ़ॉल्ट टेस्टनेट है**। Sepolia नेटवर्क क्लाइंट और परीक्षण टीमों द्वारा नियंत्रित एक अनुमति-प्राप्त सत्यापक सेट का उपयोग करता है।
 
-##### संसाधन {#} {#} {#} {#} {#}
-
+##### संसाधन
 - [वेबसाइट](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### फॉसेट {#} {#} {#} {#}
-
+##### फॉसेट
 - [Alchemy Sepolia फॉसेट](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [चेन प्लेटफ़ॉर्म Sepolia फॉसेट](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia फॉसेट](https://faucet.chainstack.com/sepolia-testnet-faucet)

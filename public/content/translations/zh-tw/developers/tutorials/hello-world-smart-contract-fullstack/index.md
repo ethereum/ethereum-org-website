@@ -312,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.get合約Factory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // 開始部署，回傳一個解析為合約物件的 promise
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -484,7 +484,7 @@ main()
 在終端機中使用 `npx hardhat run scripts/interact.js` 執行檔案後，我們應該會看到這個回應：
 
 ```
-訊息是：Hello world!
+The message is: Hello world!
 ```
 
 恭喜！你剛剛成功從以太坊區塊鏈讀取了智能合約資料，做得好！
@@ -564,9 +564,9 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-訊息是：Hello World!
-正在更新訊息...
-新訊息是：This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 在執行該腳本時，你可能會注意到 `Updating the message...` 步驟需要載入一段時間，然後才會載入新訊息。這是因為開採過程的緣故；如果你對在交易開採期間追蹤交易感到好奇，請造訪 [Alchemy 記憶體池 (mempool)](https://dashboard.alchemy.com/mempool) 來查看交易狀態。如果交易被丟棄，檢查 [Goerli Etherscan](https://goerli.etherscan.io) 並搜尋你的交易雜湊也會很有幫助。

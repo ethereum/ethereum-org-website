@@ -313,7 +313,7 @@ Przejdź do folderu `scripts/` i utwórz nowy plik o nazwie `deploy.js`, dodają
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getKontraktFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // Rozpocznij wdrożenie, zwracając obietnicę, która rozwiązuje się do obiektu kontraktu
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -485,7 +485,7 @@ main()
 Po uruchomieniu pliku za pomocą `npx hardhat run scripts/interact.js` w terminalu powinniśmy zobaczyć taką odpowiedź:
 
 ```
-Wiadomość to: Hello world!
+The message is: Hello world!
 ```
 
 Gratulacje! Właśnie pomyślnie odczytałeś dane inteligentnego kontraktu z blockchaina Ethereum, tak trzymaj!
@@ -565,9 +565,9 @@ Teraz po prostu uruchom skrypt, a powinieneś zobaczyć starą wiadomość, stat
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-Wiadomość to: Hello World!
-Aktualizowanie wiadomości...
-Nowa wiadomość to: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 Podczas uruchamiania tego skryptu możesz zauważyć, że krok `Updating the message...` ładuje się przez chwilę, zanim załaduje się nowa wiadomość. Wynika to z procesu wydobywania; jeśli jesteś ciekawy śledzenia transakcji podczas ich wydobywania, odwiedź [mempool Alchemy](https://dashboard.alchemy.com/mempool), aby zobaczyć status transakcji. Jeśli transakcja zostanie odrzucona, warto również sprawdzić [Goerli Etherscan](https://goerli.etherscan.io) i wyszukać hash swojej transakcji.

@@ -150,9 +150,9 @@ async function main() {
 
     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
-      console.log("🎉 O hash da sua transação é: ", hash, "\n Verifique a Mempool da Alchemy para ver o status da sua transação!");
+      console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
     } else {
-      console.log("❗Algo deu errado ao enviar sua transação:", error)
+      console.log("❗Something went wrong while submitting your transaction:", error)
     }
    });
 }

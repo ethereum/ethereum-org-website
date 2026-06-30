@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 Wir benötigen die Token-Funktion, um zu wissen, wie wir sie aufrufen können.
 
 ```solidity
-Vertrag CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ Die Adresse des Tokens, für den wir ein Proxy sind.
      * @dev Spezifiziert die Token-Adresse
      * @param tokenAddr_ ERC-20 Vertragsadresse
      */
-    Konstruktor(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

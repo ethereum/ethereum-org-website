@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 Chúng ta cần hàm token để biết cách gọi nó.
 
 ```solidity
-hợp đồng CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ hợp đồng CalldataInterpreter {
      * @dev Chỉ định địa chỉ token
      * @param tokenAddr_ Địa chỉ hợp đồng ERC-20
      */
-    hàm khởi tạo(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

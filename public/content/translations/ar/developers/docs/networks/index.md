@@ -40,16 +40,14 @@ lang: ar
 
 **Sepolia هي شبكة الاختبار الافتراضية الموصى بها لتطوير التطبيقات**. تستخدم شبكة Sepolia مجموعة مُدَقِّقين مصرح بها تتحكم فيها فرق العملاء والاختبار.
 
-##### الموارد {#} {#} {#} {#} {#}
-
+##### الموارد
 - [الموقع الإلكتروني](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### الصنابير {#} {#} {#} {#}
-
+##### الصنابير
 - [صنبور Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [صنبور Chain Platform Sepolia](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [صنبور Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)

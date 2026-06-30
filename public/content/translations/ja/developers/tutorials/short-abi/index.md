@@ -113,8 +113,7 @@ import { OrisUselessToken } from "./Token.sol";
 呼び出し方を知るために、トークン関数が必要です。
 
 ```solidity
-コントラクト CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -126,7 +125,7 @@ import { OrisUselessToken } from "./Token.sol";
      * @dev トークンのアドレスを指定します
      * @param tokenAddr_ ERC-20コントラクトのアドレス
      */
-    コンストラクタ(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

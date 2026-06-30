@@ -40,16 +40,14 @@ Die beiden öffentlichen Testnetze, die Client-Entwickler derzeit pflegen, sind 
 
 **Sepolia ist das empfohlene Standard-Testnetz für die Anwendungsentwicklung**. Das Sepolia-Netzwerk verwendet ein erlaubnispflichtiges Validator-Set, das von Client- und Testteams kontrolliert wird.
 
-##### Ressourcen {#} {#} {#} {#} {#}
-
+##### Ressourcen
 - [Website](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucets {#} {#} {#} {#}
-
+##### Faucets
 - [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia Faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)

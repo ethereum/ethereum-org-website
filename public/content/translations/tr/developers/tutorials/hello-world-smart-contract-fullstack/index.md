@@ -312,7 +312,7 @@ Artık sözleşmemiz yazıldığına ve yapılandırma dosyamız hazır olduğun
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getSözleşmeFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // Dağıtımı başlatır, bir Sözleşme nesnesine çözümlenen bir promise döndürür
   const hello_world = await HelloWorld.deploy("Hello World!")

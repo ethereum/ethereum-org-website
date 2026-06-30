@@ -40,16 +40,14 @@ Mitandao miwili ya majaribio ya umma ambayo wasanidi wa wateja wanaitunza kwa sa
 
 **Sepolia ni mtandao wa majaribio chaguomsingi unaopendekezwa kwa maendeleo ya programu**. Mtandao wa Sepolia unatumia seti ya wathibitishaji yenye ruhusa inayodhibitiwa na timu za wateja na majaribio.
 
-##### Rasilimali {#} {#} {#} {#} {#}
-
+##### Rasilimali
 - [Tovuti](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Mabomba {#} {#} {#} {#}
-
+##### Mabomba
 - [Bomba la Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Bomba la Chain Platform Sepolia](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Bomba la Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)

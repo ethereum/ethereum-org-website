@@ -150,9 +150,9 @@ async function main() {
 
     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
-      console.log("🎉 İşleminizin hash'i: ", hash, "\n İşleminizin durumunu görüntülemek için Alchemy'nin Bellek Havuzunu kontrol edin!");
+      console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
     } else {
-      console.log("❗İşleminiz gönderilirken bir şeyler ters gitti:", error)
+      console.log("❗Something went wrong while submitting your transaction:", error)
     }
    });
 }

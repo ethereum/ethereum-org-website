@@ -312,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getعقدFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // بدء النشر، وإرجاع وعد يحل إلى كائن عقد
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -484,7 +484,7 @@ main()
 بعد تشغيل الملف باستخدام `npx hardhat run scripts/interact.js` في الطرفية، يجب أن نرى هذه الاستجابة:
 
 ```
-الرسالة هي: مرحبًا بالعالم!
+The message is: Hello world!
 ```
 
 تهانينا! لقد نجحت للتو في قراءة بيانات العقد الذكي من سلسلة كتل إيثيريوم، عمل رائع!
@@ -564,9 +564,9 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-الرسالة هي: مرحبًا بالعالم!
-جاري تحديث الرسالة...
-الرسالة الجديدة هي: هذه هي الرسالة الجديدة.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 أثناء تشغيل هذا البرنامج النصي، قد تلاحظ أن خطوة `Updating the message...` تستغرق بعض الوقت للتحميل قبل تحميل الرسالة الجديدة. ويرجع ذلك إلى عملية التعدين؛ إذا كنت مهتمًا بتتبع المعاملات أثناء تعدينها، فقم بزيارة [مجمع ذاكرة Alchemy (mempool)](https://dashboard.alchemy.com/mempool) لمعرفة حالة المعاملة. إذا تم إسقاط المعاملة، فمن المفيد أيضًا التحقق من [Etherscan لشبكة غويرلي](https://goerli.etherscan.io) والبحث عن تجزئة المعاملة الخاصة بك.

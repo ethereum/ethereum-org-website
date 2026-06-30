@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 我们需要代币函数来知道如何调用它。
 
 ```solidity
-合约 CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ import { OrisUselessToken } from "./Token.sol";
      * @dev 指定代币地址
      * @param tokenAddr_ ERC-20 合约地址
      */
-    构造函数(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

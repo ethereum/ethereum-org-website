@@ -312,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getコントラクトFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // デプロイを開始し、コントラクトオブジェクトに解決されるプロミスを返します
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -484,7 +484,7 @@ main()
 ターミナルで`npx hardhat run scripts/interact.js`を使用してファイルを実行すると、次の応答が表示されるはずです。
 
 ```
-メッセージ: Hello world!
+The message is: Hello world!
 ```
 
 おめでとうございます！イーサリアムのブロックチェーンからスマート・コントラクトのデータを正常に読み取ることができました。よくやりました！
@@ -564,9 +564,9 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-メッセージ: Hello World!
-メッセージを更新中...
-新しいメッセージ: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 スクリプトの実行中、新しいメッセージが読み込まれる前に`Updating the message...`のステップで少し時間がかかることに気づくかもしれません。これはマイニングプロセスによるものです。マイニング中のトランザクションの追跡に興味がある場合は、[Alchemyのメンプール](https://dashboard.alchemy.com/mempool)にアクセスしてトランザクションのステータスを確認してください。トランザクションがドロップされた場合は、[Goerli Etherscan](https://goerli.etherscan.io)を確認し、トランザクションハッシュを検索するのも役立ちます。

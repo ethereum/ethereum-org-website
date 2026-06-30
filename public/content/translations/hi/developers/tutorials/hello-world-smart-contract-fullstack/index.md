@@ -312,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getअनुबंधFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // तैनाती शुरू करें, एक प्रॉमिस लौटाते हुए जो एक अनुबंध ऑब्जेक्ट में रिज़ॉल्व होता है
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -484,7 +484,7 @@ main()
 टर्मिनल में `npx hardhat run scripts/interact.js` का उपयोग करके फ़ाइल को रन करने के बाद हमें यह प्रतिक्रिया दिखनी चाहिए:
 
 ```
-संदेश है: Hello world!
+The message is: Hello world!
 ```
 
 बधाई हो! आपने अभी-अभी इथेरियम ब्लॉकचेन से स्मार्ट अनुबंध डेटा को सफलतापूर्वक पढ़ा है, बहुत बढ़िया!
@@ -564,9 +564,9 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-संदेश है: Hello World!
-संदेश अपडेट हो रहा है...
-नया संदेश है: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 उस स्क्रिप्ट को रन करते समय, आप देख सकते हैं कि नया संदेश लोड होने से पहले `Updating the message...` चरण लोड होने में थोड़ा समय लेता है। ऐसा माइनिंग प्रक्रिया के कारण होता है; यदि आप लेन-देन के माइन होने के दौरान उन्हें ट्रैक करने के बारे में उत्सुक हैं, तो लेन-देन की स्थिति देखने के लिए [Alchemy मेमपूल](https://dashboard.alchemy.com/mempool) पर जाएं। यदि लेन-देन ड्रॉप हो जाता है, तो [गोएर्ली Etherscan](https://goerli.etherscan.io) की जांच करना और अपने लेन-देन हैश को खोजना भी मददगार होता है।

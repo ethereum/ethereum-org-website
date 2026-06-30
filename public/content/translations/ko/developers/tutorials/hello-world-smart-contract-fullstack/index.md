@@ -312,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.get컨트랙트Factory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // 배포를 시작하고, 컨트랙트 객체로 리졸브되는 프로미스를 반환합니다
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -484,7 +484,7 @@ main()
 터미널에서 `npx hardhat run scripts/interact.js`를 사용하여 파일을 실행하면 다음과 같은 응답이 표시되어야 합니다:
 
 ```
-메시지: Hello world!
+The message is: Hello world!
 ```
 
 축하합니다! 방금 이더리움 블록체인에서 스마트 컨트랙트 데이터를 성공적으로 읽어왔습니다. 정말 잘하셨습니다!
@@ -564,9 +564,9 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-메시지: Hello World!
-메시지 업데이트 중...
-새 메시지: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 스크립트를 실행하는 동안 새 메시지가 로드되기 전에 `Updating the message...` 단계가 로드되는 데 시간이 꽤 걸리는 것을 알 수 있습니다. 이는 채굴 과정 때문입니다. 채굴되는 동안 트랜잭션을 추적하는 방법이 궁금하다면 [Alchemy 멤풀](https://dashboard.alchemy.com/mempool)을 방문하여 트랜잭션 상태를 확인해 보세요. 트랜잭션이 드롭된 경우, [괴를리 Etherscan](https://goerli.etherscan.io)을 확인하고 트랜잭션 해시를 검색해 보는 것도 도움이 됩니다.

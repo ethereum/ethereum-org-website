@@ -156,14 +156,14 @@ Získáte výstup testovacích případů podobný tomuto (pořadí se může zm
 
 ```
 ...
-... m.c.manticore:INFO: Vygenerován testovací případ č. 0 - STOP
+... m.c.manticore:INFO: Generated testcase No. 0 - STOP
 ... m.c.manticore:INFO: Vygenerován testovací případ č. 1 - REVERT
 ... m.c.manticore:INFO: Vygenerován testovací případ č. 2 - RETURN
 ... m.c.manticore:INFO: Vygenerován testovací případ č. 3 - REVERT
 ... m.c.manticore:INFO: Vygenerován testovací případ č. 4 - STOP
 ... m.c.manticore:INFO: Vygenerován testovací případ č. 5 - REVERT
 ... m.c.manticore:INFO: Vygenerován testovací případ č. 6 - REVERT
-... m.c.manticore:INFO: Výsledky v /home/ethsec/workshops/Automated Smart Contracts Audit - TruffleCon 2018/manticore/examples/mcore_t6vi6ij3
+... m.c.manticore:INFO: Results in /home/ethsec/workshops/Automated Smart Contracts Audit - TruffleCon 2018/manticore/examples/mcore_t6vi6ij3
 ...
 ```
 

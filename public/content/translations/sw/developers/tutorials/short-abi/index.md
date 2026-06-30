@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 Tunahitaji utendakazi wa tokeni ili kujua jinsi ya kuiita.
 
 ```solidity
-mkataba CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ Anwani ya tokeni ambayo sisi ni mkataba wa uwakilishi.
      * @dev Bainisha anwani ya tokeni
      * @param tokenAddr_ anwani ya mkataba wa ERC-20
      */
-    konstrukta(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

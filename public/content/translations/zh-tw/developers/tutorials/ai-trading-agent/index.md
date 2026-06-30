@@ -584,21 +584,21 @@ uv run test-predictor.py
 預期結果類似於：
 
 ```
-2026-01-05T19:50 的預測：預測值 3138.93 USD，實際值 3218.92 USD，誤差 79.99 USD
-2026-01-06T19:56 的預測：預測值 3243.39 USD，實際值 3221.08 USD，誤差 22.31 USD
-2026-01-07T20:02 的預測：預測值 3223.24 USD，實際值 3146.89 USD，誤差 76.35 USD
-2026-01-08T20:11 的預測：預測值 3150.47 USD，實際值 3092.04 USD，誤差 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-2026-01-31T22:33 的預測：預測值 2637.73 USD，實際值 2417.77 USD，誤差 219.96 USD
-2026-02-01T22:41 的預測：預測值 2381.70 USD，實際值 2318.84 USD，誤差 62.86 USD
-2026-02-02T22:49 的預測：預測值 2234.91 USD，實際值 2349.28 USD，誤差 114.37 USD
-29 次預測的平均預測誤差：83.87103448275862068965517241 USD
-每次建議的平均變動：4.787931034482758620689655172 USD
-變動的標準變異數：104.42 USD
-獲利天數：51.72%
-虧損天數：48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 測試程式的大部分與代理相同，但以下是新增或修改的部分。
@@ -766,19 +766,19 @@ uv run agent.py
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-目前價格：1843.16
-在 2026-02-06T23:07，預期價格：1724.41 USD
-交易前帳戶餘額：
-USDC 餘額：927301.578272
-WETH 餘額：500
-賣出，我預期價格將下跌 118.75 USD
-授權交易已發送：74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-授權交易已打包。
-賣出交易已發送：fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-賣出交易已打包。
-交易後帳戶餘額：
-USDC 餘額：929143.797116
-WETH 餘額：499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 要實際使用它，你需要進行一些小修改。

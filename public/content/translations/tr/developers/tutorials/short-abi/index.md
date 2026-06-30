@@ -115,7 +115,6 @@ Nasıl çağıracağımızı bilmek için Token işlevine ihtiyacımız var.
 
 ```solidity
 contract CalldataInterpreter {
-
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ Vekil kontratı olduğumuz Token'ın adresi.
      * @dev Token Adresini belirtin
      * @param tokenAddr_ ERC-20 Sözleşme Adresi
      */
-    kurucu(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

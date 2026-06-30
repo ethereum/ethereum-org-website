@@ -312,7 +312,7 @@ Přejděte do složky `scripts/` a vytvořte nový soubor s názvem `deploy.js`,
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getKontraktFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // Zahájí nasazení a vrátí promise, který se vyhodnotí jako objekt kontraktu
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -484,7 +484,7 @@ main()
 Po spuštění souboru pomocí `npx hardhat run scripts/interact.js` v terminálu bychom měli vidět tuto odpověď:
 
 ```
-Zpráva je: Hello world!
+The message is: Hello world!
 ```
 
 Gratulujeme! Právě jste úspěšně přečetli data chytrého kontraktu z blockchainu Ethereum, jen tak dál!
@@ -564,9 +564,9 @@ Nyní stačí skript spustit a ve vašem terminálu byste měli vidět vypsanou 
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-Zpráva je: Hello World!
-Aktualizuje se zpráva...
-Nová zpráva je: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 Při spouštění tohoto skriptu si můžete všimnout, že krok `Updating the message...` chvíli trvá, než se načte nová zpráva. Je to způsobeno procesem těžby; pokud vás zajímá sledování transakcí během jejich těžby, navštivte [mempool Alchemy](https://dashboard.alchemy.com/mempool), kde uvidíte stav transakce. Pokud je transakce zahozena, je také užitečné zkontrolovat [Goerli Etherscan](https://goerli.etherscan.io) a vyhledat hash vaší transakce.

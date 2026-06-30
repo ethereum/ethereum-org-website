@@ -111,7 +111,6 @@ import { OrisUselessToken } from "./Token.sol";
 
 ```solidity
 contract CalldataInterpreter {
-
     OrisUselessToken public immutable token;
 ```
 
@@ -123,7 +122,7 @@ contract CalldataInterpreter {
      * @dev 指定代幣地址
      * @param tokenAddr_ ERC-20 合約地址
      */
-    建構函式(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

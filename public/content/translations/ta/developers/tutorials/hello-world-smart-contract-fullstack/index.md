@@ -312,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getஒப்பந்தம்Factory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // நிலைநிறுத்தத்தைத் தொடங்கவும், இது ஒரு ஒப்பந்தப் பொருளாகத் தீர்க்கப்படும் ஒரு promise-ஐ வழங்கும்
   const hello_world = await HelloWorld.deploy("Hello World!")

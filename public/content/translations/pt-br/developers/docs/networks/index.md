@@ -40,16 +40,14 @@ As duas redes de teste públicas que os desenvolvedores de clientes estão mante
 
 **A Sepolia é a rede de teste padrão recomendada para o desenvolvimento de aplicativos**. A rede Sepolia usa um conjunto de validadores permissionado controlado por equipes de clientes e de testes.
 
-##### Recursos {#} {#} {#} {#} {#}
-
+##### Recursos
 - [Site](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucets {#} {#} {#} {#}
-
+##### Faucets
 - [Faucet da Sepolia da Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet da Sepolia da Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Faucet da Sepolia da Chainstack](https://faucet.chainstack.com/sepolia-testnet-faucet)

@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 نحتاج إلى دالة الرمز المميز لمعرفة كيفية استدعائها.
 
 ```solidity
-عقد CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ import { OrisUselessToken } from "./Token.sol";
      * @dev تحديد عنوان الرمز المميز
      * @param tokenAddr_ عنوان عقد ERC-20
      */
-    مُنشئ(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

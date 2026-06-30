@@ -312,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getکنٹریکٹFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // تعیناتی شروع کریں، ایک promise واپس کر رہا ہے جو ایک کنٹریکٹ آبجیکٹ پر resolve ہوتا ہے
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -484,7 +484,7 @@ main()
 ٹرمینل میں `npx hardhat run scripts/interact.js` کا استعمال کرتے ہوئے فائل کو چلانے کے بعد ہمیں یہ جواب دیکھنا چاہیے:
 
 ```
-پیغام یہ ہے: Hello world!
+The message is: Hello world!
 ```
 
 مبارک ہو! آپ نے ابھی کامیابی کے ساتھ ایتھیریم بلاک چین سے سمارٹ کنٹریکٹ کا ڈیٹا پڑھ لیا ہے، بہت خوب!
@@ -564,9 +564,9 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-پیغام یہ ہے: Hello World!
-پیغام کو اپ ڈیٹ کیا جا رہا ہے...
-نیا پیغام یہ ہے: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 اس اسکرپٹ کو چلاتے وقت، آپ محسوس کر سکتے ہیں کہ نیا پیغام لوڈ ہونے سے پہلے `Updating the message...` کا مرحلہ لوڈ ہونے میں کچھ وقت لیتا ہے۔ یہ مائننگ کے عمل کی وجہ سے ہے؛ اگر آپ ٹرانزیکشنز کے مائن ہونے کے دوران انہیں ٹریک کرنے کے بارے میں متجسس ہیں، تو ٹرانزیکشن کا اسٹیٹس دیکھنے کے لیے [Alchemy میم پول (mempool)](https://dashboard.alchemy.com/mempool) پر جائیں۔ اگر ٹرانزیکشن ڈراپ ہو جاتی ہے، تو [گورلی Etherscan](https://goerli.etherscan.io) کو چیک کرنا اور اپنے ٹرانزیکشن ہیش کو تلاش کرنا بھی مددگار ثابت ہوتا ہے۔

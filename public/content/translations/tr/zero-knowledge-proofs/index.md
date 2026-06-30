@@ -55,7 +55,7 @@ Sıfır bilgi ispatları, özellikle [merkeziyetsiz kimlik (DID)](/decentralized
       <p>
         Kimlik yönetimi sistemleri için ZKP kullanımının gerçek dünyadaki bir örneği, Ethereum üzerine inşa edilen Bhutan Krallığı'nın Ulusal Dijital Kimlik (NDI) sistemidir. Bhutan'ın NDI'si, vatandaşların kimliklerindeki hassas kişisel verileri ifşa etmeden "Ben bir vatandaşım" veya "18 yaşından büyüğüm" gibi kendileri hakkındaki gerçekleri kriptografik olarak kanıtlamalarına olanak tanımak için ZKP'leri kullanır.
       </p>
-      <p></p>
+      <p>
         <a href="/decentralized-identity/#national-and-government-id">Merkeziyetsiz Kimlik vaka çalışmasında</a> Bhutan NDI hakkında daha fazla bilgi edinin.
       </p>
  

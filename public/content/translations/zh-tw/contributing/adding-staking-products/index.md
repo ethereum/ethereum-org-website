@@ -57,9 +57,9 @@ lang: zh-tw
 
 - 即 Linux、macOS、Windows、iOS、Android
 
-#### 軟體與智慧合約 {#software-and-smart-contracts}
+#### 軟體與智能合約 {#software-and-smart-contracts}
 
-對於涉及的任何自訂軟體或智慧合約：
+對於涉及的任何自訂軟體或智能合約：
 
 **一切都是開源的嗎？**
 

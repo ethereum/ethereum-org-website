@@ -93,8 +93,8 @@ id="node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp 與智慧合約開發者"
-contentPreview="合併的設計旨在對智慧合約與 dapp 開發者產生最小的影響。"
+title="Dapp 與智能合約開發者"
+contentPreview="合併的設計旨在對智能合約與 dapp 開發者產生最小的影響。"
 id="developers">
 
 合併帶來了共識的變化，其中也包括與以下相關的變化：

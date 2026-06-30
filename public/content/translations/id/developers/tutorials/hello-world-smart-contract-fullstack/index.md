@@ -312,7 +312,7 @@ Navigasikan ke folder `scripts/` dan buat file baru bernama `deploy.js` , lalu t
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getKontrakFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // Mulai penyebaran, mengembalikan promise yang menghasilkan objek kontrak
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -484,7 +484,7 @@ main()
 Setelah menjalankan file menggunakan `npx hardhat run scripts/interact.js` di terminal, kita akan melihat respons ini:
 
 ```
-Pesan tersebut adalah: Hello world!
+The message is: Hello world!
 ```
 
 Selamat! Anda baru saja berhasil membaca data kontrak pintar dari rantai blok Ethereum, kerja bagus!
@@ -564,9 +564,9 @@ Sekarang jalankan saja skripnya dan Anda seharusnya dapat melihat pesan lama, st
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-Pesan tersebut adalah: Hello World!
-Memperbarui pesan...
-Pesan baru tersebut adalah: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 Saat menjalankan skrip tersebut, Anda mungkin menyadari bahwa langkah `Updating the message...` membutuhkan waktu beberapa saat untuk dimuat sebelum pesan baru dimuat. Hal itu disebabkan oleh proses penambangan; jika Anda penasaran tentang pelacakan transaksi saat sedang ditambang, kunjungi [mempool Alchemy](https://dashboard.alchemy.com/mempool) untuk melihat status transaksi. Jika transaksi dibatalkan, ada baiknya juga untuk memeriksa [Etherscan Goerli](https://goerli.etherscan.io) dan mencari hash transaksi Anda.

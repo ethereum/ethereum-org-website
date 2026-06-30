@@ -312,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getकॉन्ट्रॅक्टFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // प्रस्थापना सुरू करा, जे कॉन्ट्रॅक्ट ऑब्जेक्टमध्ये रिझॉल्व्ह होणारे प्रॉमिस परत करते
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -484,7 +484,7 @@ main()
 टर्मिनलमध्ये `npx hardhat run scripts/interact.js` वापरून फाईल रन केल्यानंतर आपल्याला हा प्रतिसाद दिसायला हवा:
 
 ```
-संदेश आहे: Hello world!
+The message is: Hello world!
 ```
 
 अभिनंदन! तुम्ही नुकताच इथेरियम ब्लॉकचेनवरून स्मार्ट कॉन्ट्रॅक्टचा डेटा यशस्वीरित्या वाचला आहे, खूप छान!
@@ -564,9 +564,9 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-संदेश आहे: Hello World!
-संदेश अपडेट करत आहे...
-नवीन संदेश आहे: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 ती स्क्रिप्ट रन करताना, तुमच्या लक्षात येईल की नवीन संदेश लोड होण्यापूर्वी `Updating the message...` पायरी लोड होण्यासाठी थोडा वेळ घेते. हे मायनिंग प्रक्रियेमुळे होते; जर तुम्हाला व्यवहार माइन होत असताना ट्रॅक करण्याची उत्सुकता असेल, तर व्यवहाराची स्थिती पाहण्यासाठी [Alchemy mempool](https://dashboard.alchemy.com/mempool) ला भेट द्या. जर व्यवहार ड्रॉप झाला, तर [गोर्ली Etherscan](https://goerli.etherscan.io) तपासणे आणि तुमचा ट्रान्झॅक्शन हॅश शोधणे देखील उपयुक्त ठरते.

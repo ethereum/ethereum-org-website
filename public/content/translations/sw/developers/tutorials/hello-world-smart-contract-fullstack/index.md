@@ -312,7 +312,7 @@ Nenda kwenye folda ya `scripts/` na uunde faili jipya linaloitwa `deploy.js` , u
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getMkatabaFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // Anza usambazaji, ikirudisha ahadi inayotatuliwa kuwa kipengee cha mkataba
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -484,7 +484,7 @@ main()
 Baada ya kuendesha faili kwa kutumia `npx hardhat run scripts/interact.js` kwenye kituo tunapaswa kuona jibu hili:
 
 ```
-Ujumbe ni: Hello world!
+The message is: Hello world!
 ```
 
 Hongera! Umefanikiwa kusoma data ya mkataba mahiri kutoka kwenye mnyororo wa vitalu wa Ethereum, kazi nzuri!
@@ -564,9 +564,9 @@ Sasa endesha tu hati na unapaswa kuweza kuona ujumbe wa zamani, hali ya kusasish
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-Ujumbe ni: Hello World!
-Inasasisha ujumbe...
-Ujumbe mpya ni: Huu ni ujumbe mpya.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 Wakati unaendesha hati hiyo, unaweza kugundua kuwa hatua ya `Updating the message...` inachukua muda kupakia kabla ya ujumbe mpya kupakia. Hiyo inatokana na mchakato wa kuchimba; ikiwa una hamu ya kufuatilia miamala wakati inachimbwa, tembelea [mempool ya Alchemy](https://dashboard.alchemy.com/mempool) ili kuona hali ya muamala. Ikiwa muamala utaachwa, inasaidia pia kuangalia [Goerli Etherscan](https://goerli.etherscan.io) na kutafuta heshi ya muamala wako.

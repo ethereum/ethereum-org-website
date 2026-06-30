@@ -30,7 +30,7 @@ Le mécanisme derrière la preuve de travail (PoW) a été une percée dans le d
 D'un point de vue technique, le registre d'une cryptomonnaie telle que Bitcoin peut être considéré comme un système de transition d'état, où il y a un « état » constitué du statut de propriété de tous les bitcoins existants et une « fonction de transition d'état » qui prend un état et une transaction et produit un nouvel état qui en est le résultat. Dans un système bancaire standard, par exemple, l'état est un bilan, une transaction est une demande de transfert de X $ de A vers B, et la fonction de transition d'état réduit la valeur du compte de A de X $ et augmente la valeur du compte de B de X $. Si le compte de A a moins de X $ au départ, la fonction de transition d'état renvoie une erreur. Par conséquent, on peut définir formellement :
 
 ```
-APPLY(S,TX) -> S' ou ERREUR
+APPLY(S,TX) -> S' or ERROR
 ```
 
 Dans le système bancaire défini ci-dessus :

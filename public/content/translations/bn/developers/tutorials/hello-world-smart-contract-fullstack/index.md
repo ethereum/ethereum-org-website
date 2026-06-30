@@ -312,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getকন্ট্রাক্টFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // ডিপ্লয়মেন্ট শুরু করুন, একটি প্রমিস রিটার্ন করে যা একটি কন্ট্রাক্ট অবজেক্টে রিজলভ হয়
   const hello_world = await HelloWorld.deploy("Hello World!")

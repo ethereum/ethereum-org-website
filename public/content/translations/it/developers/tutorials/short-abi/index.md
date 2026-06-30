@@ -115,7 +115,6 @@ Abbiamo bisogno della funzione del token per sapere come chiamarla.
 
 ```solidity
 contract CalldataInterpreter {
-
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ L'indirizzo del token per il quale siamo un proxy.
      * @dev Specifica l'indirizzo del token
      * @param tokenAddr_ indirizzo del contratto ERC-20
      */
-    costruttore(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

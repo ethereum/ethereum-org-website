@@ -40,16 +40,14 @@ lang: ja
 
 **Sepoliaは、アプリケーション開発において推奨されるデフォルトのテストネットです**。Sepoliaネットワークは、クライアントおよびテストチームによって管理されるパーミッションドなバリデータセットを使用します。
 
-##### リソース {#} {#} {#} {#} {#}
-
+##### リソース
 - [ウェブサイト](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### フォーセット {#} {#} {#} {#}
-
+##### フォーセット
 - [Alchemy Sepoliaフォーセット](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepoliaフォーセット](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepoliaフォーセット](https://faucet.chainstack.com/sepolia-testnet-faucet)

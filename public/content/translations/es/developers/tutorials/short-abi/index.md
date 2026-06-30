@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 Necesitamos la función del token para saber cómo llamarla.
 
 ```solidity
-contrato CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 

@@ -312,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getకాంట్రాక్ట్Factory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // డిప్లాయ్‌మెంట్ ప్రారంభించండి, కాంట్రాక్ట్ ఆబ్జెక్ట్‌కు రిజాల్వ్ అయ్యే ప్రామిస్‌ను తిరిగి ఇస్తుంది
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -484,7 +484,7 @@ main()
 టెర్మినల్‌లో `npx hardhat run scripts/interact.js` ఉపయోగించి ఫైల్‌ను రన్ చేసిన తర్వాత మనం ఈ ప్రతిస్పందనను చూడాలి:
 
 ```
-సందేశం: Hello world!
+The message is: Hello world!
 ```
 
 అభినందనలు! మీరు ఎథీరియం బ్లాక్‌చైన్ నుండి స్మార్ట్ కాంట్రాక్ట్ డేటాను విజయవంతంగా చదివారు, చాలా అద్భుతం!
@@ -564,9 +564,9 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-సందేశం: Hello World!
-సందేశాన్ని అప్‌డేట్ చేస్తోంది...
-కొత్త సందేశం: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 ఆ స్క్రిప్ట్‌ను రన్ చేస్తున్నప్పుడు, కొత్త సందేశం లోడ్ అయ్యే ముందు `Updating the message...` దశ లోడ్ అవ్వడానికి కొంత సమయం పడుతుందని మీరు గమనించవచ్చు. దానికి కారణం మైనింగ్ ప్రక్రియ; లావాదేవీలు మైన్ అవుతున్నప్పుడు వాటిని ట్రాక్ చేయడం గురించి మీకు ఆసక్తి ఉంటే, లావాదేవీ స్థితిని చూడటానికి [Alchemy మెమ్‌పూల్](https://dashboard.alchemy.com/mempool)ని సందర్శించండి. ఒకవేళ లావాదేవీ డ్రాప్ అయితే, [Goerli Etherscan](https://goerli.etherscan.io)ని తనిఖీ చేసి, మీ లావాదేవీ హ్యాష్ కోసం వెతకడం కూడా సహాయకరంగా ఉంటుంది.

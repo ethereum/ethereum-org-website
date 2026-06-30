@@ -313,7 +313,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getКонтрактFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // Начать развертывание, возвращая промис, который разрешается в объект контракта
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -485,7 +485,7 @@ main()
 После запуска файла с помощью `npx hardhat run scripts/interact.js` в терминале мы должны увидеть этот ответ:
 
 ```
-Сообщение: Hello world!
+The message is: Hello world!
 ```
 
 Поздравляем! Вы только что успешно прочитали данные смарт-контракта из блокчейна Эфириума, так держать!
@@ -565,9 +565,9 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-Сообщение: Hello World!
-Обновление сообщения...
-Новое сообщение: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 Во время выполнения этого скрипта вы можете заметить, что шаг `Updating the message...` занимает некоторое время перед загрузкой нового сообщения. Это связано с процессом майнинга; если вам интересно отслеживать транзакции во время их майнинга, посетите [мемпул Alchemy](https://dashboard.alchemy.com/mempool), чтобы увидеть статус транзакции. Если транзакция отклонена, также полезно проверить [Etherscan для Гёрли](https://goerli.etherscan.io) и найти хеш вашей транзакции.

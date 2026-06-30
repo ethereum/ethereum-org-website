@@ -150,9 +150,9 @@ async function main() {
 
     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
-      console.log("🎉 మీ లావాదేవీ యొక్క హాష్: ", hash, "\n మీ లావాదేవీ స్థితిని వీక్షించడానికి Alchemy యొక్క మెంపూల్‌ని తనిఖీ చేయండి!");
+      console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
     } else {
-      console.log("❗మీ లావాదేవీని సమర్పిస్తున్నప్పుడు ఏదో తప్పు జరిగింది:", error)
+      console.log("❗Something went wrong while submitting your transaction:", error)
     }
    });
 }

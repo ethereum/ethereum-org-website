@@ -40,16 +40,14 @@ lang: ru
 
 **Sepolia — это рекомендуемая по умолчанию тестовая сеть для разработки приложений**. Сеть Sepolia использует набор валидаторов с разрешенным доступом, контролируемый командами разработчиков клиентов и тестировщиков.
 
-##### Ресурсы {#} {#} {#} {#} {#}
-
+##### Ресурсы
 - [Веб-сайт](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Краны {#} {#} {#} {#}
-
+##### Краны
 - [Кран Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Кран Chain Platform Sepolia](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Кран Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)

@@ -484,7 +484,7 @@ main()
 Nachdem wir die Datei mit `npx hardhat run scripts/interact.js` im Terminal ausgeführt haben, sollten wir diese Antwort sehen:
 
 ```
-Die Nachricht lautet: Hello world!
+The message is: Hello world!
 ```
 
 Glückwunsch! Sie haben gerade erfolgreich Smart Contract-Daten aus der Ethereum-Blockchain gelesen, weiter so!
@@ -564,9 +564,9 @@ Führen Sie nun einfach das Skript aus und Sie sollten die alte Nachricht, den A
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-Die Nachricht lautet: Hello World!
-Nachricht wird aktualisiert...
-Die neue Nachricht lautet: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
 Während Sie dieses Skript ausführen, werden Sie vielleicht bemerken, dass der Schritt `Updating the message...` eine Weile zum Laden braucht, bevor die neue Nachricht geladen wird. Das liegt am Mining-Prozess; wenn Sie neugierig sind und Transaktionen verfolgen möchten, während sie gemint werden, besuchen Sie den [Alchemy-Mempool](https://dashboard.alchemy.com/mempool), um den Status einer Transaktion zu sehen. Wenn die Transaktion verworfen wird, ist es auch hilfreich, [Goerli Etherscan](https://goerli.etherscan.io) zu überprüfen und nach Ihrem Transaktions-Hash zu suchen.

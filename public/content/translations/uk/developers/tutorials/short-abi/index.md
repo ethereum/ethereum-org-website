@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 Нам потрібна функція токена, щоб знати, як її викликати.
 
 ```solidity
-контракт CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ import { OrisUselessToken } from "./Token.sol";
      * @dev Вкажіть адресу токена
      * @param tokenAddr_ адреса контракту ERC-20
      */
-    конструктор(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 त्याला कसे कॉल करायचे हे जाणून घेण्यासाठी आपल्याला टोकन फंक्शनची आवश्यकता आहे.
 
 ```solidity
-कॉन्ट्रॅक्ट CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ import { OrisUselessToken } from "./Token.sol";
      * @dev टोकन पत्ता निर्दिष्ट करा
      * @param tokenAddr_ ERC-20 कॉन्ट्रॅक्ट पत्ता
      */
-    कन्स्ट्रक्टर(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);
