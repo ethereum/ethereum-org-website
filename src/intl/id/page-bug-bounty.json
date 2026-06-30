@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "Program bounty Ethereum mempertimbangkan sejumlah variabel dalam menentukan imbalan. Penentuan kelayakan, skor, dan semua ketentuan yang terkait dengan penghargaan sepenuhnya merupakan kebijaksanaan mutlak dan final dari panel bug bounty Yayasan Ethereum.",
   "page-upgrades-bug-bounty-leaderboard": "Lihat papan peringkat lengkap",
   "page-upgrades-bug-bounty-leaderboard-list": "Papan peringkat bug bounty",
+  "page-upgrades-bug-bounty-leaderboard-position": "Di posisi nomor {rank} dengan {score, plural, one {# poin} other {# poin}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(Lihat Profil GitHub)",
   "page-upgrades-bug-bounty-leaderboard-points": "poin",
   "page-upgrades-bug-bounty-ledger-desc": "Spesifikasi Ethereum merinci dasar pemikiran desain untuk Lapisan Eksekusi dan Lapisan Konsensus.",
   "page-upgrades-bug-bounty-ledger-title": "Bug spesifikasi",

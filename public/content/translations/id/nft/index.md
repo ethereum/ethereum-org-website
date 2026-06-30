@@ -101,16 +101,13 @@ Masalah keamanan yang berkaitan dengan NFT paling sering terkait dengan penipuan
   Lebih lanjut tentang keamanan
 </ButtonLink>
 
-## Bacaan lebih lanjut {#further-reading}
-
+## Bacaan lebih lanjut
 - [Panduan pemula untuk NFT](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Januari 2020_
 - [Pelacak NFT Etherscan](https://etherscan.io/nft-top-contracts)
 - [Pelacak NFT Blockscout](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [Standar token ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Standar token ERC-1155](/developers/docs/standards/tokens/erc-1155/)
-- [Aplikasi dan Alat NFT Populer](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 - [Wiki Standar NFT](https://nft-standards.gitbook.io/nft-standards-wiki)
-
 ## Sumber daya lainnya {#other-resources}
 
 - [NFTScan](https://nftscan.com/)

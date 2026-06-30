@@ -86,13 +86,12 @@ Mencari pembaruan protokol di masa mendatang? [Pelajari tentang pembaruan mendat
 
 [Lebih lanjut tentang Fusaka](/roadmap/fusaka/)
 
-### Prague-Electra ("Pectra") {#pectra}
-
+### Prague-Electra ("Pectra")
 <NetworkUpgradeSummary name="pectra" />
 
-Pembaruan Prague-Electra ("Pectra") mencakup beberapa peningkatan pada protokol Ethereum yang bertujuan untuk meningkatkan pengalaman bagi semua pengguna, jaringan lapisan 2, staker, dan operator node.
+Pembaruan Prague-Electra ("Pectra") mencakup beberapa peningkatan pada protokol Ethereum yang bertujuan untuk meningkatkan pengalaman bagi semua pengguna, jaringan lapisan 2 (l2), staker, dan operator node.
 
-Staking mendapatkan pembaruan dengan akun validator majemuk, dan peningkatan kontrol atas dana yang di-stake menggunakan alamat penarikan eksekusi. EIP-7251 meningkatkan saldo efektif maksimum untuk satu validator menjadi 2048, meningkatkan efisiensi modal bagi para staker. EIP-7002 memungkinkan akun eksekusi untuk memicu tindakan validator secara aman, termasuk keluar, atau melakukan penarikan sebagian dana, meningkatkan pengalaman bagi staker ETH, sekaligus membantu memperkuat akuntabilitas bagi operator node.
+Staking mendapatkan pembaruan dengan akun validator yang dapat menggabungkan imbalan (compounding), dan peningkatan kendali atas dana yang di-stake menggunakan alamat penarikan eksekusi. EIP-7251 meningkatkan saldo efektif maksimum untuk satu validator menjadi 2048, yang meningkatkan efisiensi modal bagi para staker. EIP-7002 memungkinkan akun eksekusi untuk memicu tindakan validator secara aman, termasuk keluar, atau menarik sebagian dana, yang meningkatkan pengalaman bagi staker ETH, sekaligus membantu memperkuat akuntabilitas bagi operator node.
 
 Bagian lain dari pembaruan ini berfokus pada peningkatan pengalaman bagi pengguna biasa. EIP-7702 membawa kemampuan bagi akun non-kontrak pintar biasa ([EOA](/glossary/#eoa)) untuk mengeksekusi kode yang mirip dengan kontrak pintar. Hal ini membuka fungsionalitas baru yang tak terbatas untuk akun Ethereum tradisional, seperti pemrosesan batch transaksi, sponsor gas, autentikasi alternatif, kontrol pengeluaran yang dapat diprogram, mekanisme pemulihan akun, dan banyak lagi.
 
@@ -104,7 +103,7 @@ Pengalaman pengguna yang lebih baik:
   <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>Menetapkan kode akun EOA</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>Peningkatan laju pemrosesan blob</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>Meningkatkan biaya data panggilan</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>Menambahkan jadwal blob ke file konfigurasi EL</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>Menambahkan jadwal blob ke berkas konfigurasi EL</em></li>
 </ul>
 
 Pengalaman staking yang lebih baik:
@@ -113,7 +112,7 @@ Pengalaman staking yang lebih baik:
   <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>Meningkatkan <code>MAX_EFFECTIVE_BALANCE</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>Keluar yang dapat dipicu oleh lapisan eksekusi</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>Permintaan lapisan eksekusi tujuan umum</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Menyediakan deposit validator secara onchain</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Menyediakan deposit validator onchain</em></li>
 </ul>
 
 Peningkatan efisiensi dan keamanan protokol:
@@ -126,7 +125,6 @@ Peningkatan efisiensi dan keamanan protokol:
 
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
 - [Bagaimana Pectra akan meningkatkan pengalaman staking](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Baca spesifikasi pembaruan Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Tanya Jawab Prague-Electra ("Pectra")](/roadmap/pectra/)

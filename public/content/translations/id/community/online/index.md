@@ -52,7 +52,7 @@ Jika Anda merasa sebuah komunitas harus ditambahkan atau dihapus berdasarkan ped
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - komunitas kreator Web3 tempat para pembangun, tokoh industri, dan penggemar Ethereum berkumpul. Kami bersemangat tentang pengembangan, desain, dan budaya Web3. Mari membangun bersama kami.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - obrolan untuk pengembangan Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- forum tanya jawab</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- forum tanya jawab terdesentralisasi</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- forum tanya jawab terdesentralisasi</i></SocialListItem>
 
 ## YouTube dan X (sebelumnya Twitter) {#youtube-and-twitter}
 

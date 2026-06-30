@@ -371,7 +371,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Saat klien konsensus terhubung ke klien eksekusi untuk membaca kontrak deposit dan mengidentifikasi validator, klien tersebut juga terhubung ke rekan Simpul Suar lainnya dan mulai menyinkronkan slot konsensus dari genesis. Setelah Simpul Suar mencapai Epok saat ini, Beacon API menjadi dapat digunakan untuk validator Anda. Pelajari lebih lanjut tentang [API Simpul Suar](https://eth2docs.vercel.app/).
+Saat klien konsensus terhubung ke klien eksekusi untuk membaca kontrak deposit dan mengidentifikasi validator, klien tersebut juga terhubung ke rekan Simpul Suar lainnya dan mulai menyinkronkan slot konsensus dari genesis. Setelah Simpul Suar mencapai Epok saat ini, Beacon API menjadi dapat digunakan untuk validator Anda. Pelajari lebih lanjut tentang [API Simpul Suar](https://ethereum.github.io/beacon-APIs).
 
 ### Menambahkan Validator {#adding-validators}
 
@@ -454,7 +454,7 @@ Sebagai bagian dari pemantauan Anda, pastikan untuk terus memantau kinerja mesin
 - [Panduan Staking Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, sering diperbarui_
 - [Panduan | Cara mengatur validator untuk staking Ethereum di mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, sering diperbarui_
 - [Panduan EthStaker tentang menjalankan validator di testnet](https://github.com/remyroy/ethstaker#guides) – _EthStaker, diperbarui secara berkala_
-- [Contoh aplikasi AWS Blockchain Node Runner untuk Node Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, sering diperbarui_
+- [Contoh aplikasi AWS Blockchain Node Runner untuk Node Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, sering diperbarui_
 - [FAQ The Merge untuk operator node](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Juli 2022_
 - [Menganalisis persyaratan perangkat keras untuk menjadi full node Ethereum yang divalidasi](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Menjalankan Full Node Ethereum: Panduan untuk yang Kurang Termotivasi](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_

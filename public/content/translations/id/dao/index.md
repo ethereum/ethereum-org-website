@@ -133,20 +133,17 @@ _Biasanya digunakan untuk pengembangan terdesentralisasi dan tata kelola protoko
 - [Daftar DAO Tally.xyz](https://www.tally.xyz/explore)
 - [Daftar DAO DeGov.AI](https://apps.degov.ai/)
 
-### Memulai DAO {#start-a-dao}
-
-- [Buat DAO dengan DAOHaus](https://app.daohaus.club/summon)
+### Memulai DAO
+- [Panggil DAO dengan DAOHaus](https://app.daohaus.club/summon)
 - [Mulai Governor DAO dengan Tally](https://www.tally.xyz/get-started)
 - [Buat DAO yang didukung Aragon](https://aragon.org/product)
-- [Mulai sebuah colony](https://colony.io/)
-- [Buat DAO dengan konsensus holografik DAOstack](https://alchemy.daostack.io/daos/create)
+- [Mulai colony](https://colony.io/)
 - [Luncurkan DAO dengan DeGov Launcher](https://docs.degov.ai/integration/deploy)
-
 ## Bacaan lebih lanjut {#further-reading}
 
 ### Artikel DAO {#dao-articles}
 
-- [Apa itu DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [Apa itu DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [Apa itu DAO dan apa fungsinya?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Cara Memulai Komunitas Digital yang Didukung DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

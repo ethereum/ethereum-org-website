@@ -28,7 +28,7 @@ Istilah 'lapisan 2 (l2)' digunakan untuk rollup atau sistem lain apa pun yang be
 
 [Optimistic rollup](/developers/docs/scaling/optimistic-rollups) harus menyimpan catatan setiap transaksi historis sehingga siapa pun dapat memeriksanya dan memverifikasi bahwa state saat ini sudah benar.
 Cara termurah untuk memasukkan data ke Mainnet Ethereum adalah dengan menulisnya sebagai calldata.
-Solusi ini dipilih oleh [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) maupun [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+Solusi ini dipilih oleh [Optimism](https://docs.optimism.io/op-stack/protocol/overview) maupun [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
 
 ### Biaya transaksi l2 {#cost-of-l2-transactions}
 

@@ -14,7 +14,7 @@ Kita dapat membagi pasokan ETH menjadi dua kekuatan utama: penerbitan dan pembak
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="TLDR penerbitan ETH">
 
 - Sebelum beralih ke Bukti Kepemilikan (PoS), penambang diterbitkan sekitar 13.000 ETH/hari
 - Staker diterbitkan sekitar 1.700 ETH/hari, berdasarkan sekitar 14 juta total ETH yang di-stake

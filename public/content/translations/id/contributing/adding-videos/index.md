@@ -123,22 +123,27 @@ Gunakan heading `###` dengan stempel waktu untuk menandai bagian-bagian utama. I
 
 Jika Anda tidak memiliki transkrip, Anda dapat membiarkan bagian isi (body) kosong dan tim akan membuatnya.
 
-#### Langkah 4: Pilih tag topik {#step-4}
+#### Langkah 4: Pilih tag topik
 
-Pilih tag topik yang cocok dengan kategori yang ada yang digunakan di galeri. Kategori saat ini dan tagnya meliputi:
+Pilih tag topik dari daftar di bawah ini. Setiap tag memetakan langsung ke kategori filter di galeri video — gunakan nama tag persis seperti yang ditampilkan.
 
-- **Cara Kerja Ethereum**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Peningkatan Jaringan**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Peta Jalan & Prioritas**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Penskalaan & Lapisan 2**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Kasus Penggunaan**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Privasi & Keamanan**: `privacy-and-security`, `privacy`, `authentication`
-- **Kisah Komunitas**: `community-stories`, `contributing`, `translations`, `community`
+Sebuah video dapat memiliki beberapa tag untuk muncul di beberapa filter galeri:
 
-Untuk memastikan video Anda muncul di rak kategori galeri, sertakan setidaknya satu tag kunci kategori (nama yang dicetak tebal dalam format kebab-case, mis. `use-cases` atau `scaling-and-layer-2`). Video tanpa tag kategori yang dikenali hanya akan muncul di tampilan "Semua" dan hasil pencarian.
+| Tag | Filter galeri |
+|---|---|
+| `how-ethereum-works` | Cara Kerja Ethereum |
+| `network-upgrades` | Peningkatan Jaringan |
+| `roadmap-and-priorities` | Peta Jalan & Prioritas |
+| `scaling-and-layer-2` | Penskalaan & Lapisan 2 |
+| `use-cases` | Kasus Penggunaan |
+| `privacy` | Privasi |
+| `security` | Keamanan |
+| `community-stories` | Cerita Komunitas |
+| `events` | Peristiwa |
 
-Anda juga dapat menggunakan tag baru — tag tersebut akan tersedia untuk pengelompokan kategori di masa mendatang.
+Setiap video harus memiliki setidaknya satu tag dari daftar ini. Video tanpa tag yang dikenali hanya akan muncul dalam tampilan "Semua" dan hasil pencarian.
 
+Tag `community-stories` juga menyebabkan video muncul di [halaman Cerita](/stories/).
 #### Langkah 5: Kirimkan PR Anda {#step-5}
 
 Buka pull request dengan perubahan Anda ke cabang `dev`. Tim akan meninjau kiriman Anda dan memberikan umpan balik.
