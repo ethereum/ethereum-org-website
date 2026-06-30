@@ -177,197 +177,199 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       />
 
       <main className="p-page pt-page-2x">
-        <MainArticle className="flow space-y-space-4x">
-          <Section id="ways">
-            <h2 className="mb-space-2x text-center text-h1">
-              {t("page-get-eth-ways-you-can-get-eth")}
-            </h2>
-            <Grid columns={3}>
-              {waysToGetEth.map(
-                ({ icon: Icon, title, description, linkText, href }) => (
-                  <Card key={href + String(title)}>
-                    <CardHeader>
-                      <CardIconContainer>
-                        <Icon />
-                      </CardIconContainer>
-                    </CardHeader>
-                    <CardContent>
-                      <CardTitle>{title}</CardTitle>
-                      <CardParagraph>{description}</CardParagraph>
-                    </CardContent>
-                    <CardFooter buttons="inherit">
-                      <LinkWithArrow href={href}>{linkText}</LinkWithArrow>
-                    </CardFooter>
-                  </Card>
-                )
-              )}
-            </Grid>
-
-            <p className="mt-space text-body-medium">
-              <em>
-                {t("listing-policy-disclaimer")}{" "}
-                <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-                  {t("listing-policy-raise-issue-link")}
-                </InlineLink>
-              </em>
-            </p>
-          </Section>
-
-          <Section>
-            <Callout
-              image={handEth}
-              alt=""
-              title={t("page-get-eth-new-to-eth-title")}
-              description={t("page-get-eth-new-to-eth-desc")}
-            >
-              <ButtonLink href="/eth/">
-                {t("page-get-eth-whats-eth-link")}
-              </ButtonLink>
-            </Callout>
-          </Section>
-
-          <Section
-            id="country-picker"
-            data-flow="skip"
-            className="relative flex min-h-[700px] flex-col items-center justify-center rounded-2xl bg-accent-a/5 px-page py-hero-3x dark:bg-accent-a/10"
-          >
-            <Image
-              src={worldMapLight}
-              alt=""
-              aria-hidden
-              sizes="(max-width: 896px) 100vw, 896px"
-              className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-auto w-full max-w-4xl rounded-t-2xl select-none dark:hidden"
-            />
-            <Image
-              src={worldMapDark}
-              alt=""
-              aria-hidden
-              sizes="(max-width: 896px) 100vw, 896px"
-              className="pointer-events-none absolute inset-x-0 top-0 mx-auto hidden h-auto w-full max-w-4xl rounded-t-2xl select-none dark:block"
-            />
-            <div className="relative z-10 flex flex-col items-center gap-6">
-              <Eyebrow>{t("page-get-eth-exchanges-eyebrow")}</Eyebrow>
-              <h2 className="text-center text-h1">
-                {t("page-get-eth-find-exchange-title")}
+        <I18nProvider locale={locale} messages={messages}>
+          <MainArticle className="flow space-y-space-4x">
+            <Section id="ways">
+              <h2 className="mb-space-2x text-center text-h1">
+                {t("page-get-eth-ways-you-can-get-eth")}
               </h2>
-              <p className="max-w-2xl text-center text-lg text-body-medium">
-                {t("page-get-eth-find-exchange-desc")}
-              </p>
-            </div>
+              <Grid columns={3}>
+                {waysToGetEth.map(
+                  ({ icon: Icon, title, description, linkText, href }) => (
+                    <Card key={href + String(title)}>
+                      <CardHeader>
+                        <CardIconContainer>
+                          <Icon />
+                        </CardIconContainer>
+                      </CardHeader>
+                      <CardContent>
+                        <CardTitle>{title}</CardTitle>
+                        <CardParagraph>{description}</CardParagraph>
+                      </CardContent>
+                      <CardFooter buttons="inherit">
+                        <LinkWithArrow href={href}>{linkText}</LinkWithArrow>
+                      </CardFooter>
+                    </Card>
+                  )
+                )}
+              </Grid>
 
-            {/* CLIENT SIDE */}
-            <div className="relative z-10 mt-6 flex w-full flex-col items-center">
-              <I18nProvider locale={locale} messages={messages}>
+              <p className="mt-space text-body-medium">
+                <em>
+                  {t("listing-policy-disclaimer")}{" "}
+                  <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+                    {t("listing-policy-raise-issue-link")}
+                  </InlineLink>
+                </em>
+              </p>
+            </Section>
+
+            <Section>
+              <Callout
+                image={handEth}
+                alt=""
+                title={t("page-get-eth-new-to-eth-title")}
+                description={t("page-get-eth-new-to-eth-desc")}
+              >
+                <ButtonLink href="/eth/">
+                  {t("page-get-eth-whats-eth-link")}
+                </ButtonLink>
+              </Callout>
+            </Section>
+
+            <Section
+              id="country-picker"
+              data-flow="skip"
+              className="relative flex min-h-[700px] flex-col items-center justify-center rounded-2xl bg-accent-a/5 px-page py-hero-3x dark:bg-accent-a/10"
+            >
+              <Image
+                src={worldMapLight}
+                alt=""
+                aria-hidden
+                sizes="(max-width: 896px) 100vw, 896px"
+                className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-auto w-full max-w-4xl rounded-t-2xl select-none dark:hidden"
+              />
+              <Image
+                src={worldMapDark}
+                alt=""
+                aria-hidden
+                sizes="(max-width: 896px) 100vw, 896px"
+                className="pointer-events-none absolute inset-x-0 top-0 mx-auto hidden h-auto w-full max-w-4xl rounded-t-2xl select-none dark:block"
+              />
+              <div className="relative z-10 flex flex-col items-center gap-6">
+                <Eyebrow>{t("page-get-eth-exchanges-eyebrow")}</Eyebrow>
+                <h2 className="text-center text-h1">
+                  {t("page-get-eth-find-exchange-title")}
+                </h2>
+                <p className="max-w-2xl text-center text-lg text-body-medium">
+                  {t("page-get-eth-find-exchange-desc")}
+                </p>
+              </div>
+
+              {/* CLIENT SIDE */}
+              <div className="relative z-10 mt-6 flex w-full flex-col items-center">
                 <CentralizedExchanges
                   lastDataUpdateDate={exchangesByCountryLastUpdated}
                 />
-              </I18nProvider>
-            </div>
-          </Section>
-
-          <Section
-            id="safety"
-            data-flow="skip"
-            className="rounded-2xl bg-background-highlight p-8 md:p-16"
-          >
-            <Grid balanced={2} className="items-center gap-8">
-              <Image
-                src={wallet}
-                className="mx-auto h-auto w-full max-w-sm"
-                sizes={`(max-width: ${screens.sm}) 100vw, (max-width: ${screens.md}) 60vw, calc(${screens["2xl"]} / 2)`}
-                alt=""
-              />
-              <div className="flex flex-col gap-6">
-                <Eyebrow>{t("page-get-eth-safety-eyebrow")}</Eyebrow>
-                <h2 className="text-h1">{t("page-get-eth-keep-it-safe")}</h2>
-                <p className="text-lg text-body-medium">
-                  {t("page-get-eth-description")}
-                </p>
-                <p className="text-lg text-body-medium">
-                  {t("page-get-eth-security")}
-                </p>
               </div>
-            </Grid>
+            </Section>
 
-            <Grid columns={3} className="mt-space-2x">
-              <Card variant="nested">
-                <CardContent>
-                  <CardTitle>
-                    {t("page-get-eth-protect-eth-in-wallet")}
-                  </CardTitle>
-                  <CardParagraph>
-                    {t("page-get-eth-protect-eth-desc")}
-                  </CardParagraph>
-                  <InlineLink href="/wallets/">
-                    {t("page-get-eth-your-address-wallet-link")}
-                  </InlineLink>
-                </CardContent>
-              </Card>
+            <Section
+              id="safety"
+              data-flow="skip"
+              className="rounded-2xl bg-background-highlight p-8 md:p-16"
+            >
+              <Grid balanced={2} className="items-center gap-8">
+                <Image
+                  src={wallet}
+                  className="mx-auto h-auto w-full max-w-sm"
+                  sizes={`(max-width: ${screens.sm}) 100vw, (max-width: ${screens.md}) 60vw, calc(${screens["2xl"]} / 2)`}
+                  alt=""
+                />
+                <div className="flex flex-col gap-6">
+                  <Eyebrow>{t("page-get-eth-safety-eyebrow")}</Eyebrow>
+                  <h2 className="text-h1">{t("page-get-eth-keep-it-safe")}</h2>
+                  <p className="text-lg text-body-medium">
+                    {t("page-get-eth-description")}
+                  </p>
+                  <p className="text-lg text-body-medium">
+                    {t("page-get-eth-security")}
+                  </p>
+                </div>
+              </Grid>
 
-              <Card variant="nested">
-                <CardContent>
-                  <CardTitle>{t("page-get-eth-your-address")}</CardTitle>
-                  <CardParagraph>
-                    {t("page-get-eth-your-address-desc")}
-                  </CardParagraph>
-                  <div className="select-none">
-                    <div className="rounded bg-background-highlight p-2">
-                      <p className="mb-0 font-monospace text-xs break-all text-body-medium">
-                        0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
+              <Grid columns={3} className="mt-space-2x">
+                <Card variant="nested">
+                  <CardContent>
+                    <CardTitle>
+                      {t("page-get-eth-protect-eth-in-wallet")}
+                    </CardTitle>
+                    <CardParagraph>
+                      {t("page-get-eth-protect-eth-desc")}
+                    </CardParagraph>
+                    <InlineLink href="/wallets/">
+                      {t("page-get-eth-your-address-wallet-link")}
+                    </InlineLink>
+                  </CardContent>
+                </Card>
+
+                <Card variant="nested">
+                  <CardContent>
+                    <CardTitle>{t("page-get-eth-your-address")}</CardTitle>
+                    <CardParagraph>
+                      {t("page-get-eth-your-address-desc")}
+                    </CardParagraph>
+                    <div className="select-none">
+                      <div className="rounded bg-background-highlight p-2">
+                        <p className="mb-0 font-monospace text-xs break-all text-body-medium">
+                          0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
+                        </p>
+                      </div>
+                      <p className="mt-2 mb-0 text-end text-xs text-body-medium">
+                        {t("page-get-eth-do-not-copy")}
                       </p>
                     </div>
-                    <p className="mt-2 mb-0 text-end text-xs text-body-medium">
-                      {t("page-get-eth-do-not-copy")}
-                    </p>
-                  </div>
-                  <CardParagraph>
-                    {t("page-get-eth-your-address-desc-3")}
-                  </CardParagraph>
-                </CardContent>
-              </Card>
+                    <CardParagraph>
+                      {t("page-get-eth-your-address-desc-3")}
+                    </CardParagraph>
+                  </CardContent>
+                </Card>
 
-              <Card variant="nested">
-                <CardContent>
-                  <CardTitle>{t("page-get-eth-wallet-instructions")}</CardTitle>
-                  <CardParagraph>
-                    {t("page-get-eth-wallet-instructions-lost")}
-                  </CardParagraph>
-                  <InlineLink href="/security/">
-                    {t("page-get-eth-more-on-security")}
-                  </InlineLink>
-                </CardContent>
-              </Card>
-            </Grid>
+                <Card variant="nested">
+                  <CardContent>
+                    <CardTitle>
+                      {t("page-get-eth-wallet-instructions")}
+                    </CardTitle>
+                    <CardParagraph>
+                      {t("page-get-eth-wallet-instructions-lost")}
+                    </CardParagraph>
+                    <InlineLink href="/security/">
+                      {t("page-get-eth-more-on-security")}
+                    </InlineLink>
+                  </CardContent>
+                </Card>
+              </Grid>
 
-            <div className="mx-auto mt-space-2x flex w-full max-w-2xl flex-col items-center gap-space">
-              <h3 className="text-center">
-                {t("page-get-eth-community-safety")}
-              </h3>
-              <CardList className="w-full" items={safetyArticles} />
-            </div>
-          </Section>
+              <div className="mx-auto mt-space-2x flex w-full max-w-2xl flex-col items-center gap-space">
+                <h3 className="text-center">
+                  {t("page-get-eth-community-safety")}
+                </h3>
+                <CardList className="w-full" items={safetyArticles} />
+              </div>
+            </Section>
 
-          <Section>
-            <Callout
-              title={t("page-get-eth-use-your-eth")}
-              description={t("page-get-eth-use-your-eth-dapps")}
-              image={dapps}
-              alt=""
-            >
-              <ButtonLink href="/apps/">
-                {t("page-get-eth-checkout-dapps-btn")}
-              </ButtonLink>
-            </Callout>
+            <Section>
+              <Callout
+                title={t("page-get-eth-use-your-eth")}
+                description={t("page-get-eth-use-your-eth-dapps")}
+                image={dapps}
+                alt=""
+              >
+                <ButtonLink href="/apps/">
+                  {t("page-get-eth-checkout-dapps-btn")}
+                </ButtonLink>
+              </Callout>
 
-            <FileContributors
-              className="my-10 border-t"
-              contributors={contributors}
-              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-            />
-          </Section>
-        </MainArticle>
+              <FileContributors
+                className="my-space-4x border-t"
+                contributors={contributors}
+                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+              />
+            </Section>
+          </MainArticle>
 
-        <ContentFeedback />
+          <ContentFeedback />
+        </I18nProvider>
       </main>
     </>
   )
