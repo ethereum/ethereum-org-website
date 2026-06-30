@@ -52,7 +52,7 @@ export const buildFooterLinkSections = (
       { href: "/developers/docs/", text: t("documentation") },
       { href: "/developers/tools/", text: t("start-building") },
       {
-        href: "/developers/tools/education/",
+        href: "/developers/tools/education-standards/",
         text: t("learn-ethereum-development"),
       },
       { href: "/community/grants/", text: t("grants") },

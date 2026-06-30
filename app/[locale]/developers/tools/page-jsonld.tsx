@@ -6,19 +6,24 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import { DEV_TOOL_CATEGORIES } from "./constants"
-
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function DevelopersToolsJsonLD({
   locale,
   contributors,
+  categories,
+  categoryLabels,
 }: {
   locale: string
   contributors: FileContributor[]
+  categories: { id: string; name: string; description: string }[]
+  categoryLabels: Record<string, string>
 }) {
-  const t = await getTranslations("page-developers-tools")
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-tools",
+  })
 
   const url = normalizeUrlForJsonLd(locale, "/developers/tools/")
 
@@ -37,7 +42,7 @@ export default async function DevelopersToolsJsonLD({
         "@id": url,
         name: t("page-developers-tools-meta-title"),
         description: t("page-developers-tools-meta-description"),
-        url,
+        url: url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -74,18 +79,16 @@ export default async function DevelopersToolsJsonLD({
         "@id": `${url}#developer-tools`,
         name: t("page-developers-tools-categories-title"),
         description: t("page-developers-tools-meta-description"),
-        url,
-        numberOfItems: DEV_TOOL_CATEGORIES.length,
-        itemListElement: DEV_TOOL_CATEGORIES.map((category, index) => ({
+        url: url,
+        numberOfItems: categories.length,
+        itemListElement: categories.map((category, index) => ({
           "@type": "ListItem",
           position: index + 1,
-          name: t(`page-developers-tools-category-${category.slug}-title`),
-          description: t(
-            `page-developers-tools-category-${category.slug}-description`
-          ),
+          name: categoryLabels[category.id] || category.name,
+          description: category.description,
           url: normalizeUrlForJsonLd(
             locale,
-            `/developers/tools/${category.slug}`
+            `/developers/tools/${category.id}/`
           ),
         })),
       },
