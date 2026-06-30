@@ -4,6 +4,7 @@ import {
   useDeferredValue,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react"
 
@@ -41,6 +42,66 @@ interface ProductTableProps<T extends { id: string }> {
   }) => React.ReactNode | undefined
 }
 
+const getInitialFiltersKey = (filters: FilterOption[]) => {
+  return JSON.stringify(
+    filters.map(({ title, showFilterOption, items }) => ({
+      title,
+      showFilterOption,
+      items: items.map(
+        ({
+          filterKey,
+          filterLabel,
+          description,
+          inputState,
+          ignoreFilterReset,
+          optionsLegend,
+          options,
+        }) => ({
+          filterKey,
+          filterLabel,
+          description,
+          inputState,
+          ignoreFilterReset,
+          optionsLegend,
+          options: options.map(
+            ({
+              filterKey,
+              filterLabel,
+              description,
+              inputState,
+              ignoreFilterReset,
+            }) => ({
+              filterKey,
+              filterLabel,
+              description,
+              inputState,
+              ignoreFilterReset,
+            })
+          ),
+        })
+      ),
+    }))
+  )
+}
+
+const hydrateFiltersFromQuery = (
+  filters: FilterOption[],
+  query: Record<string, string>
+) => {
+  return filters.map((filter) => ({
+    ...filter,
+    items: filter.items.map((item) => ({
+      ...item,
+      inputState: parseQueryParams(query[item.filterKey]) || item.inputState,
+      options: item.options.map((option) => ({
+        ...option,
+        inputState:
+          parseQueryParams(query[option.filterKey]) || option.inputState,
+      })),
+    })),
+  }))
+}
+
 const ProductTable = <T extends { id: string }>({
   data,
   filters: initialFilters,
@@ -52,6 +113,8 @@ const ProductTable = <T extends { id: string }>({
 }: ProductTableProps<T>) => {
   const [filters, setFilters] = useState<FilterOption[]>(initialFilters)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const initialFiltersKey = getInitialFiltersKey(initialFilters)
+  const syncedInitialFiltersKey = useRef(initialFiltersKey)
 
   // Hydrate filters from URL params once on mount. Reads window.location.search
   // directly (not useSearchParams) to avoid Next's CSR bailout on this SSG page.
@@ -63,23 +126,20 @@ const ProductTable = <T extends { id: string }>({
     )
 
     if (Object.keys(query).length > 0) {
-      const updatedFilters = filters.map((filter) => ({
-        ...filter,
-        items: filter.items.map((item) => ({
-          ...item,
-          inputState:
-            parseQueryParams(query[item.filterKey]) || item.inputState,
-          options: item.options.map((option) => ({
-            ...option,
-            inputState:
-              parseQueryParams(query[option.filterKey]) || option.inputState,
-          })),
-        })),
-      }))
-      setFilters(updatedFilters)
+      setFilters((currentFilters) =>
+        hydrateFiltersFromQuery(currentFilters, query)
+      )
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useEffect(() => {
+    if (syncedInitialFiltersKey.current === initialFiltersKey) return
+
+    syncedInitialFiltersKey.current = initialFiltersKey
+    startTransition(() => {
+      setFilters(initialFilters)
+    })
+  }, [initialFilters, initialFiltersKey])
 
   const updateFilters = useCallback(
     (filters: FilterOption | FilterOption[]) => {

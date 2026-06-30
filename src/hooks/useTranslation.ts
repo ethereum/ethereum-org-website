@@ -1,3 +1,4 @@
+import { useMemo } from "react"
 import { useTranslations } from "next-intl"
 
 /**
@@ -18,39 +19,42 @@ const DEFAULT_NAMESPACE = "common"
 
 export function useTranslation(namespaces?: string[] | string) {
   const t = useTranslations()
+  const namespace = Array.isArray(namespaces)
+    ? namespaces[0]
+    : namespaces || DEFAULT_NAMESPACE
 
-  const customT = (
-    fullKey: string,
-    values?: Record<string, string | number | Date>
-  ) => {
-    try {
-      if (fullKey.includes(":")) {
-        const [namespace, key] = fullKey.split(":")
+  const customT = useMemo(() => {
+    const translate = (
+      fullKey: string,
+      values?: Record<string, string | number | Date>
+    ) => {
+      try {
+        if (fullKey.includes(":")) {
+          const [namespace, key] = fullKey.split(":")
 
-        if (values) {
-          return t(`${namespace}.${key}`, values)
+          if (values) {
+            return t(`${namespace}.${key}`, values)
+          }
+
+          return t.raw(`${namespace}.${key}`)
         }
 
-        return t.raw(`${namespace}.${key}`)
+        return t.raw(`${namespace}.${fullKey}`)
+      } catch (error) {
+        // Suppress errors by default, enable if needed to debug
+        // console.error(error)
+        return fullKey
       }
-
-      const namespace = Array.isArray(namespaces)
-        ? namespaces[0]
-        : namespaces || DEFAULT_NAMESPACE
-
-      return t.raw(`${namespace}.${fullKey}`)
-    } catch (error) {
-      // Suppress errors by default, enable if needed to debug
-      // console.error(error)
-      return fullKey
     }
-  }
 
-  // keep the original methods
-  customT.raw = t.raw
-  customT.rich = t.rich
-  customT.markup = t.markup
-  customT.has = t.has
+    // keep the original methods
+    translate.raw = t.raw
+    translate.rich = t.rich
+    translate.markup = t.markup
+    translate.has = t.has
+
+    return translate
+  }, [namespace, t])
 
   return { t: customT }
 }
