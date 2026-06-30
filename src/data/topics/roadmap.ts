@@ -32,6 +32,47 @@ export const roadmap: TopicConfig = {
         href: "/roadmap/future-proofing",
         matomoEvent: "clicked roadmap future-proofing home",
       },
+      // Additional technical pages
+      {
+        textKey: "nav-roadmap-account-abstraction",
+        href: "/roadmap/account-abstraction/",
+        matomoEvent: "clicked roadmap account abstraction",
+      },
+      {
+        textKey: "nav-roadmap-danksharding",
+        href: "/roadmap/danksharding/",
+        matomoEvent: "clicked roadmap danksharding",
+      },
+      {
+        textKey: "nav-roadmap-pbs",
+        href: "/roadmap/pbs/",
+        matomoEvent: "clicked roadmap pbs",
+      },
+      {
+        textKey: "nav-roadmap-secret-leader-election",
+        href: "/roadmap/secret-leader-election/",
+        matomoEvent: "clicked roadmap secret leader election",
+      },
+      {
+        textKey: "nav-roadmap-single-slot-finality",
+        href: "/roadmap/single-slot-finality/",
+        matomoEvent: "clicked roadmap single slot finality",
+      },
+      {
+        textKey: "nav-roadmap-statelessness",
+        href: "/roadmap/statelessness/",
+        matomoEvent: "clicked roadmap statelessness",
+      },
+      {
+        textKey: "nav-roadmap-verkle-trees",
+        href: "/roadmap/verkle-trees/",
+        matomoEvent: "clicked roadmap verkle trees",
+      },
+      {
+        textKey: "nav-roadmap-zkevm",
+        href: "/roadmap/zkevm/",
+        matomoEvent: "clicked roadmap zkevm",
+      },
     ],
   },
 }

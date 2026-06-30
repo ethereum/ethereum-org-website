@@ -2,6 +2,7 @@
 title: Danksharding
 description: Learn about Proto-Danksharding and Danksharding - two sequential upgrades for scaling Ethereum.
 lang: en
+template: roadmap
 summaryPoints:
   - Danksharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
   - The first stage, Proto-Danksharding, adds data blobs to blocks
