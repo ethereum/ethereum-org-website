@@ -108,9 +108,10 @@ const setImagePlaceholders = async (
 
     // Load image data from file system as buffer
     const buffer: Buffer = fs.readFileSync(path.join("public", src))
+    const imageBytes = Uint8Array.from(buffer)
 
     // Get hash fingerprint of image data (no security implications; fast algorithm prioritized)
-    const hash = await getHashFromBuffer(buffer, {
+    const hash = await getHashFromBuffer(imageBytes, {
       algorithm: "SHA-1",
       length: 8,
     })
