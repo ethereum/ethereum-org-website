@@ -52,7 +52,7 @@ lang: ru
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Дискорд Matos</Link> — сообщество создателей Web3, где общаются разработчики, лидеры индустрии и энтузиасты Эфириума. Мы увлечены разработкой, дизайном и культурой Web3. Присоединяйтесь к нам.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — чат для разработки на Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>— форум вопросов и ответов</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Форум сообщества Peera</Link> <i>— децентрализованный форум вопросов и ответов</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Форум сообщества Peera</Link> <i>— децентрализованный форум вопросов и ответов</i></SocialListItem>
 
 ## Ютуб и X (ранее Твиттер) {#youtube-and-twitter}
 

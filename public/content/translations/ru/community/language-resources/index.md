@@ -27,7 +27,7 @@ lang: ru
 **Новости**
 
 - [BeInCrypto](http://www.beincrypto.com.br) — новости и статьи о криптовалюте, включая список бирж, доступных в Бразилии
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) — бразильская версия Cointelegraph, крупного новостного издания о криптовалюте
+- [Cointelegraph](https://cointelegraph.com.br/) — бразильская версия Cointelegraph, крупного новостного издания о криптовалюте
 - [Livecoins](http://www.livecoins.com.br/ethereum) — новости и инструменты для криптовалют
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) — новости и отчеты о криптовалюте
 - [Modular Crypto](https://modularcrypto.xyz/) — новости о криптовалюте и образовательные статьи
@@ -37,7 +37,7 @@ lang: ru
 - [web3dev](https://www.web3dev.com.br/) — центр контента и сообщество в Дискорд для разработчиков Web3.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) — ресурсы для изучения Web3 и децентрализованных финансов (DeFi)
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) — новости и обучение по криптовалюте, включая «Эфириум для начинающих» и «DeFi для начинающих»
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) — аналитика из криптовалютного пространства, обучение и блог
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) — аналитика из криптовалютного пространства, обучение и блог
 - [Cointimes](http://www.cointimes.com.br/) — новости и обучение по криптовалюте
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) — руководство, отвечающее на самые частые и фундаментальные вопросы о криптовалюте
 

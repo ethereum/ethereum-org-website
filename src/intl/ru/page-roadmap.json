@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "Подробнее об управлении Эфириумом",
   "page-roadmap-hero-alt": "Дорожная карта Эфириума",
   "page-roadmap-technical-upgrades-title": "Какие технические обновления ждут Эфириум?",
+  "page-roadmap-post-quantum-title": "Постквантовая безопасность",
+  "page-roadmap-post-quantum-description": "Квантовые компьютеры однажды могут взломать криптографию, на которую опираются блокчейны. Постквантовые обновления Эфириума заменят уязвимые алгоритмы до того, как квантовые вычисления станут реальной угрозой.",
   "page-roadmap-danksharding-title": "Данкшардинг",
   "page-roadmap-danksharding-description": "Данкшардинг делает роллапы уровня 2 (l2) намного дешевле для пользователей за счет добавления «блобов» данных в блоки Эфириума.",
   "page-roadmap-single-slot-finality-title": "Однослотовая финализация",
