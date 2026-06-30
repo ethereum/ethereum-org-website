@@ -24,10 +24,12 @@ async function uploadToolImages(
   return Promise.all(
     tools.map(async (tool) => {
       const thumbnail_url = tool.thumbnail_url
-        ? ((await uploadToS3(tool.thumbnail_url, "tools/thumbnails")) ?? "")
+        ? ((await uploadToS3(tool.thumbnail_url, "tools/thumbnails")) ??
+          tool.thumbnail_url)
         : tool.thumbnail_url
       const banner_url = tool.banner_url
-        ? ((await uploadToS3(tool.banner_url, "tools/banners")) ?? "")
+        ? ((await uploadToS3(tool.banner_url, "tools/banners")) ??
+          tool.banner_url)
         : tool.banner_url
 
       return { ...tool, thumbnail_url, banner_url }
