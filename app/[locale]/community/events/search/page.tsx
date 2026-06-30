@@ -1,11 +1,9 @@
-import { Info } from "lucide-react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { EventItem, Lang, PageParams } from "@/lib/types"
 
 import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
-import { Alert, AlertContent } from "@/components/ui/alert"
 import { Button } from "@/components/ui/buttons/Button"
 import { Grid } from "@/components/ui/grid"
 import Input from "@/components/ui/input"
@@ -14,11 +12,12 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import EventCard from "../_components/EventCard"
-import OrganizerCTA from "../_components/OrganizerCTA"
+import EventCard from "../_components/event-card"
+import NoResultsAlert from "../_components/no-results-alert"
+import OrganizerCTA from "../_components/organizer-cta"
 import { mapEventTranslations, sanitize } from "../utils"
 
-import EventsSearchJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 
 import { getEventsData } from "@/lib/data"
 
@@ -73,33 +72,25 @@ const Page = async (props: {
 
     if (!filteredEvents.length)
       return (
-        <Alert variant="warning" className="mx-auto max-w-xl justify-center">
-          <Info className="size-6 !text-current" />
-          <AlertContent className="flex-none">
-            {t("page-events-search-no-results")}
-          </AlertContent>
-        </Alert>
+        <NoResultsAlert>{t("page-events-search-no-results")}</NoResultsAlert>
       )
 
     return (
-      <>
-        <Grid>
-          {filteredEvents.map((event) => (
-            <EventCard
-              key={event.id}
-              event={event}
-              variant="grid"
-              locale={locale}
-              showTypeTag
-              customEventOptions={{
-                eventCategory: "Events_search",
-                eventAction: "events_clicked",
-                eventName: event.title,
-              }}
-            />
-          ))}
-        </Grid>
-      </>
+      <Grid>
+        {filteredEvents.map((event) => (
+          <EventCard
+            key={event.id}
+            event={event}
+            locale={locale}
+            showTypeTag
+            customEventOptions={{
+              eventCategory: "Events_search",
+              eventAction: "events_clicked",
+              eventName: event.title,
+            }}
+          />
+        ))}
+      </Grid>
     )
   }
 
@@ -110,45 +101,46 @@ const Page = async (props: {
 
   return (
     <>
-      <EventsSearchJsonLD locale={locale} contributors={contributors} />
+      <PageJsonLD locale={locale} contributors={contributors} />
+
       <PageHero
         breadcrumbs={{ slug: "/community/events/search" }}
         title={title}
         description={t("page-events-meetups-hero-subtitle")}
       />
 
-      <MainArticle className="flex flex-col gap-16 px-4 py-10 md:px-8">
-        <Section className="space-y-8">
-          <div className="space-y-2">
-            <h2 className="">{t("page-events-section-find-events")}</h2>
-            <p className="">{t("page-events-meetups-events-subtitle")}</p>
-          </div>
-          <form
-            action=""
-            method="GET"
-            className="flex w-full max-w-xl flex-col gap-2 sm:flex-row"
-          >
-            <Input
-              type="search"
-              name="q"
-              defaultValue={q ? safeDecodeURIComponent(q) : ""}
-              placeholder={t("page-events-search-placeholder")}
-              aria-label={t("page-events-search-placeholder")}
-              aria-describedby="input-instruction"
-              className="w-full"
-              required
-            />
-            <span id="input-instruction" className="sr-only">
-              {t("page-events-search-submit-sr-text")}
-            </span>
-            <Button type="submit">{tCommon("search")}</Button>
-          </form>
+      <main className="px-page pt-page-2x pb-page">
+        <MainArticle className="flow">
+          <Section id="find-events">
+            <h2>{t("page-events-section-find-events")}</h2>
+            <p>{t("page-events-meetups-events-subtitle")}</p>
+            <form
+              action=""
+              method="GET"
+              className="flex w-full max-w-xl flex-col gap-2 sm:flex-row"
+            >
+              <Input
+                type="search"
+                name="q"
+                defaultValue={q ? safeDecodeURIComponent(q) : ""}
+                placeholder={t("page-events-search-placeholder")}
+                aria-label={t("page-events-search-placeholder")}
+                aria-describedby="input-instruction"
+                className="w-full"
+                required
+              />
+              <span id="input-instruction" className="sr-only">
+                {t("page-events-search-submit-sr-text")}
+              </span>
+              <Button type="submit">{tCommon("search")}</Button>
+            </form>
 
-          <Results />
-        </Section>
+            <Results />
+          </Section>
 
-        <OrganizerCTA />
-      </MainArticle>
+          <OrganizerCTA />
+        </MainArticle>
+      </main>
     </>
   )
 }
