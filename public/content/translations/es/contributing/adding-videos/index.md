@@ -123,22 +123,27 @@ Use encabezados `###` con marcas de tiempo para señalar las secciones principal
 
 Si no tiene una transcripción, puede dejar el cuerpo vacío y el equipo generará una.
 
-#### Paso 4: Elegir etiquetas de temas {#step-4}
+#### Paso 4: Elegir etiquetas de temas
 
-Elija etiquetas de temas que coincidan con las categorías existentes utilizadas en la galería. Las categorías actuales y sus etiquetas incluyen:
+Elija las etiquetas de temas de la lista a continuación. Cada etiqueta se asigna directamente a una categoría de filtro en la galería de videos; use el nombre de la etiqueta exactamente como se muestra.
 
-- **Cómo funciona Ethereum**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Actualizaciones de la red**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Hoja de ruta y prioridades**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Escalabilidad y capa 2 (l2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Casos de uso**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Privacidad y seguridad**: `privacy-and-security`, `privacy`, `authentication`
-- **Historias de la comunidad**: `community-stories`, `contributing`, `translations`, `community`
+Un video puede tener varias etiquetas para aparecer en múltiples filtros de la galería:
 
-Para asegurarse de que su video aparezca en una sección de categoría de la galería, incluya al menos una etiqueta clave de categoría (el nombre en negrita en formato kebab-case, por ejemplo, `use-cases` o `scaling-and-layer-2`). Los videos sin una etiqueta de categoría reconocida solo aparecerán en la vista "Todos" y en los resultados de búsqueda.
+| Etiqueta | Filtro de la galería |
+|---|---|
+| `how-ethereum-works` | Cómo funciona Ethereum |
+| `network-upgrades` | Actualizaciones de la red |
+| `roadmap-and-priorities` | Hoja de ruta y prioridades |
+| `scaling-and-layer-2` | Escalabilidad y capa 2 |
+| `use-cases` | Casos de uso |
+| `privacy` | Privacidad |
+| `security` | Seguridad |
+| `community-stories` | Historias de la comunidad |
+| `events` | Eventos |
 
-También puede usar etiquetas nuevas; estarán disponibles para futuras agrupaciones de categorías.
+Cada video debe tener al menos una etiqueta de esta lista. Los videos sin una etiqueta reconocida solo aparecerán en la vista "Todos" y en los resultados de búsqueda.
 
+La etiqueta `community-stories` también hace que un video aparezca en la [página de Historias](/stories/).
 #### Paso 5: Enviar su PR {#step-5}
 
 Abra una solicitud de extracción (pull request) con sus cambios a la rama `dev`. El equipo revisará su envío y le proporcionará comentarios.

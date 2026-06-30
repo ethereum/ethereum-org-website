@@ -61,9 +61,9 @@ Para desplegar tu contrato inteligente en la red de prueba, necesitarás algo de
 _Nota: debido a la congestión de la red, esto podría tardar un poco._
 ``
 
-### Paso 5: Comprueba tu saldo {#step-5-check-your-balance}
+### Paso 5: Comprobar tu saldo
 
-Para verificar que el ETH está en tu billetera, hagamos una solicitud [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando la [herramienta composer de Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto devolverá la cantidad de ETH en nuestra billetera. Para obtener más información, consulta el [breve tutorial de Alchemy sobre cómo usar la herramienta composer](https://youtu.be/r6sjRxBZJuU).
+Para comprobar que el ETH está en tu billetera, hagamos una solicitud [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) utilizando la [herramienta sandbox de Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Esto devolverá la cantidad de ETH en nuestra billetera. Para obtener más información, echa un vistazo al [breve tutorial de Alchemy sobre cómo usar la herramienta composer](https://youtu.be/r6sjRxBZJuU).
 
 Ingresa la dirección de tu cuenta de MetaMask y haz clic en **Send Request**. Verás una respuesta que se parece al fragmento de código a continuación.
 
@@ -73,10 +73,8 @@ Ingresa la dirección de tu cuenta de MetaMask y haz clic en **Send Request**. V
 
 > _Nota: Este resultado está en wei, no en ETH. Wei se utiliza como la denominación más pequeña de ether._
 
-¡Uf! Nuestro dinero falso está todo ahí.
-
-### Paso 6: Inicializar nuestro proyecto {#step-6-initialize-our-project}
-
+¡Uf! Todo nuestro dinero falso está ahí.
+### Paso 6: Inicializar nuestro proyecto
 Primero, necesitaremos crear una carpeta para nuestro proyecto. Navega a tu línea de comandos e ingresa lo siguiente.
 
 ```
@@ -86,7 +84,7 @@ cd hello-world
 
 Ahora que estamos dentro de la carpeta de nuestro proyecto, usaremos `npm init` para inicializar el proyecto.
 
-> Si aún no tienes npm instalado, sigue [estas instrucciones para instalar Node.js y npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
+> Si aún no tienes npm instalado, sigue [las instrucciones de instalación de Node.js](https://nodejs.org/en/download/) para instalar Node.js y npm.
 
 Para los fines de este tutorial, no importa cómo respondas a las preguntas de inicialización. Aquí te mostramos cómo lo hicimos como referencia:
 
@@ -117,7 +115,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 ¡Aprueba el package.json y estamos listos para continuar!
-
 ### Paso 7: Descargar Hardhat {#step-7-download-hardhat}
 
 Hardhat es un entorno de desarrollo para compilar, desplegar, probar y depurar tu software de Ethereum. Ayuda a los desarrolladores a construir contratos inteligentes y aplicaciones descentralizadas (dapps) localmente antes de desplegarlos en la cadena activa.
@@ -225,7 +222,7 @@ Hemos creado una billetera de MetaMask, una cuenta de Alchemy y hemos escrito nu
 
 Cada transacción enviada desde tu billetera requiere una firma usando tu clave privada única. Para proporcionar este permiso a nuestro programa, podemos almacenar de forma segura nuestra clave privada en un archivo de entorno. También almacenaremos una clave API para Alchemy aquí.
 
-> Para obtener más información sobre el envío de transacciones, consulta [este tutorial](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) sobre cómo enviar transacciones usando Web3.
+> Para obtener más información sobre el envío de transacciones, consulta [este tutorial](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) sobre cómo enviar transacciones usando Web3.
 
 Primero, instala el paquete dotenv en el directorio de tu proyecto:
 
@@ -255,7 +252,7 @@ Para conectar realmente esto a nuestro código, haremos referencia a estas varia
 
 ### Paso 12: Instalar Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js es una biblioteca que facilita la interacción y la realización de solicitudes a Ethereum al envolver los [métodos estándar JSON-RPC](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) con métodos más fáciles de usar.
+Ethers.js es una biblioteca que facilita la interacción y la realización de solicitudes a Ethereum al envolver los [métodos estándar JSON-RPC](/developers/docs/apis/json-rpc/) con métodos más fáciles de usar.
 
 Hardhat nos permite integrar [complementos](https://hardhat.org/plugins/) para herramientas adicionales y funcionalidad extendida. Aprovecharemos el [complemento Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) para el despliegue de contratos.
 
@@ -373,7 +370,7 @@ Para entender cómo funciona internamente, naveguemos a la pestaña Explorer en 
 
 ![](./hello-world-explorer.png)
 
-Aquí verás un puñado de métodos JSON-RPC que Hardhat/Ethers hicieron internamente por nosotros cuando llamamos a la función `.deploy()`. Dos métodos importantes aquí son [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), que es la solicitud para escribir nuestro contrato en la cadena Goerli, y [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), que es una solicitud para leer información sobre nuestra transacción dado el hash. Para obtener más información sobre el envío de transacciones, consulta [nuestro tutorial sobre cómo enviar transacciones usando Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Aquí verás un puñado de métodos JSON-RPC que Hardhat/Ethers hicieron internamente por nosotros cuando llamamos a la función `.deploy()`. Dos métodos importantes aquí son [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), que es la solicitud para escribir nuestro contrato en la cadena Goerli, y [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), que es una solicitud para leer información sobre nuestra transacción dado el hash. Para obtener más información sobre el envío de transacciones, consulta [nuestro tutorial sobre cómo enviar transacciones usando Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 ## Parte 2: Interactúa con tu contrato inteligente {#part-2-interact-with-your-smart-contract}
 
@@ -571,7 +568,7 @@ Actualizando el mensaje...
 El nuevo mensaje es: This is the new message.
 ```
 
-Al ejecutar ese script, es posible que notes que el paso `Updating the message...` tarda un poco en cargar antes de que se cargue el nuevo mensaje. Esto se debe al proceso de minería; si tienes curiosidad por rastrear las transacciones mientras se minan, visita la [mempool de Alchemy](https://dashboard.alchemyapi.io/mempool) para ver el estado de una transacción. Si la transacción se descarta, también es útil consultar [Etherscan de Goerli](https://goerli.etherscan.io) y buscar el hash de tu transacción.
+Al ejecutar ese script, es posible que notes que el paso `Updating the message...` tarda un poco en cargar antes de que se cargue el nuevo mensaje. Esto se debe al proceso de minería; si tienes curiosidad por rastrear las transacciones mientras se minan, visita la [mempool de Alchemy](https://dashboard.alchemy.com/mempool) para ver el estado de una transacción. Si la transacción se descarta, también es útil consultar [Etherscan de Goerli](https://goerli.etherscan.io) y buscar el hash de tu transacción.
 
 ## Parte 3: Publicar tu contrato inteligente en Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -679,7 +676,7 @@ Cuando navegues al enlace proporcionado en tu terminal, ¡deberías poder ver el
 Al final de este tutorial, sabrá cómo:
 
 - Conectar una billetera MetaMask a su aplicación descentralizada (dapp)
-- Leer datos de su contrato inteligente utilizando la API de [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Leer datos de su contrato inteligente utilizando la API de [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Firmar transacciones de Ethereum utilizando MetaMask
 
 Para esta dapp, utilizaremos [React](https://react.dev/) como nuestro marco de frontend; sin embargo, es importante tener en cuenta que no pasaremos mucho tiempo desglosando sus fundamentos, ya que nos centraremos principalmente en aportar la funcionalidad de Web3 a nuestro proyecto.
@@ -900,33 +897,33 @@ Para leer de su contrato inteligente, deberá configurar correctamente:
 
 Esto puede sonar como muchos pasos, ¡pero no se preocupe! ¡Le guiaremos sobre cómo hacer cada uno de ellos paso a paso! :\)
 
-#### Establecer una conexión API a la cadena de Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
+#### Establecer una conexión API a la cadena de Ethereum
 
-¿Recuerda cómo en la Parte 2 de este tutorial, usamos nuestra [clave de Alchemy Web3 para leer de nuestro contrato inteligente](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? También necesitará una clave de Alchemy Web3 en su dapp para leer de la cadena.
+¿Recuerdas cómo en la Parte 2 de este tutorial usamos nuestra clave de Alchemy Web3 para leer de nuestro contrato inteligente? También necesitarás una clave de Alchemy Web3 en tu aplicación descentralizada (dapp) para leer de la cadena.
 
-Si aún no la tiene, primero instale [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) navegando al directorio raíz de su `starter-files` y ejecutando lo siguiente en su terminal:
+Si aún no la tienes, primero instala [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) navegando al directorio raíz de tus `starter-files` y ejecutando lo siguiente en tu terminal:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) es un contenedor alrededor de [Web3.js](https://docs.web3js.org/), que proporciona métodos de API mejorados y otros beneficios cruciales para facilitarle la vida como desarrollador de Web3. ¡Está diseñado para requerir una configuración mínima para que pueda comenzar a usarlo en su aplicación de inmediato!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) es un envoltorio (wrapper) alrededor de [Web3.js](https://docs.web3js.org/), que proporciona métodos de API mejorados y otros beneficios cruciales para hacer tu vida como desarrollador de Web3 más fácil. ¡Está diseñado para requerir una configuración mínima para que puedas comenzar a usarlo en tu aplicación de inmediato!
 
-Luego, instale el paquete [dotenv](https://www.npmjs.com/package/dotenv) en el directorio de su proyecto, para que tengamos un lugar seguro donde almacenar nuestra clave API después de obtenerla.
+Luego, instala el paquete [dotenv](https://www.npmjs.com/package/dotenv) en el directorio de tu proyecto, para que tengamos un lugar seguro donde almacenar nuestra clave API después de obtenerla.
 
 ```text
 npm install dotenv --save
 ```
 
-Para nuestra dapp, **utilizaremos nuestra clave API de Websockets** en lugar de nuestra clave API HTTP, ya que nos permitirá configurar un oyente que detecte cuándo cambia el mensaje almacenado en el contrato inteligente.
+Para nuestra dapp, **usaremos nuestra clave API de Websockets** en lugar de nuestra clave API de HTTP, ya que nos permitirá configurar un oyente (listener) que detecte cuándo cambia el mensaje almacenado en el contrato inteligente.
 
-Una vez que tenga su clave API, cree un archivo `.env` en su directorio raíz y agréguele su URL de Websockets de Alchemy. Después, su archivo `.env` debería verse así:
+Una vez que tengas tu clave API, crea un archivo `.env` en tu directorio raíz y añade tu URL de Websockets de Alchemy en él. Después, tu archivo `.env` debería verse así:
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<clave>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-¡Ahora, estamos listos para configurar nuestro punto de conexión de Alchemy Web3 en nuestra dapp! Volvamos a nuestro `interact.js`, que está anidado dentro de nuestra carpeta `util` y agreguemos el siguiente código en la parte superior del archivo:
+¡Ahora estamos listos para configurar nuestro punto de conexión (endpoint) de Alchemy Web3 en nuestra dapp! Volvamos a nuestro `interact.js`, que está anidado dentro de nuestra carpeta `util`, y añadamos el siguiente código en la parte superior del archivo:
 
 ```javascript
 // interact.js
@@ -939,10 +936,9 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-Arriba, primero importamos la clave de Alchemy de nuestro archivo `.env` y luego pasamos nuestro `alchemyKey` a `createAlchemyWeb3` para establecer nuestro punto de conexión de Alchemy Web3.
+Arriba, primero importamos la clave de Alchemy desde nuestro archivo `.env` y luego pasamos nuestra `alchemyKey` a `createAlchemyWeb3` para establecer nuestro punto de conexión de Alchemy Web3.
 
 Con este punto de conexión listo, ¡es hora de cargar nuestro contrato inteligente!
-
 #### Cargar su contrato inteligente Hello World {#loading-your-hello-world-smart-contract}
 
 Para cargar su contrato inteligente Hello World, necesitará la dirección de su contrato y el ABI, los cuales se pueden encontrar en Etherscan si completó la [Parte 3 de este tutorial.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
@@ -1034,7 +1030,7 @@ Ahora hablando de ese oyente...
 
 #### Implementar `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-Si recuerda el archivo `HelloWorld.sol` que escribimos en la [Parte 1 de esta serie de tutoriales](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), recordará que hay un evento de contrato inteligente llamado `UpdatedMessages` que se emite después de que se invoca la función `update` de nuestro contrato inteligente (consulte las líneas 9 y 27):
+Si recuerda el archivo `HelloWorld.sol` que escribimos en la [Parte 1 de esta serie de tutoriales](#step-10-write-our-contract), recordará que hay un evento de contrato inteligente llamado `UpdatedMessages` que se emite después de que se invoca la función `update` de nuestro contrato inteligente (consulte las líneas 9 y 27):
 
 ```javascript
 // HelloWorld.sol
@@ -1129,18 +1125,17 @@ Puede descargar y crear una cuenta de MetaMask de forma gratuita [aquí](https:/
 
 Para firmar una transacción en la cadena de bloques de Ethereum, necesitaremos algo de ETH falso. Para obtener ETH, puede ir al [FaucETH](https://fauceth.komputing.org) e ingresar la dirección de su cuenta de Goerli, hacer clic en "Request funds" (Solicitar fondos), luego seleccionar "Ethereum Testnet Goerli" en el menú desplegable y finalmente hacer clic en el botón "Request funds" nuevamente. ¡Debería ver ETH en su cuenta de MetaMask poco después!
 
-#### Comprobar su saldo {#check-your-balance}
+#### Comprueba tu saldo
 
-Para verificar que nuestro saldo esté allí, hagamos una solicitud [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) utilizando la [herramienta de composición de Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto devolverá la cantidad de ETH en nuestra billetera. Después de ingresar la dirección de su cuenta de MetaMask y hacer clic en "Send Request" (Enviar solicitud), debería ver una respuesta como esta:
+Para comprobar que nuestro saldo está ahí, hagamos una solicitud [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) utilizando la [herramienta sandbox de Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Esto devolverá la cantidad de ETH en nuestra billetera. Después de ingresar la dirección de tu cuenta de MetaMask y hacer clic en "Send Request" (Enviar solicitud), deberías ver una respuesta como esta:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**NOTA:** Este resultado está en wei, no en ether. Wei se utiliza como la denominación más pequeña de ether. La conversión de wei a ether es: 1 ether = 10¹⁸ wei. Entonces, si convertimos 0xde0b6b3a7640000 a decimal, obtenemos 1\*10¹⁸, lo que equivale a 1 ether.
+**NOTA:** Este resultado está en wei, no en ether. Wei se utiliza como la denominación más pequeña de ether. La conversión de wei a ether es: 1 ether = 10¹⁸ wei. Así que si convertimos 0xde0b6b3a7640000 a decimal obtenemos 1\*10¹⁸, lo que equivale a 1 ether.
 
 ¡Uf! ¡Nuestro dinero falso está todo ahí! 🤑
-
 ### Paso 5: Conectar MetaMask a su interfaz de usuario {#step-5-connect-metamask-to-your-ui}
 
 Ahora que nuestra billetera MetaMask está configurada, ¡conectemos nuestra dapp a ella!
@@ -1539,7 +1534,7 @@ Es súper limpio y simple. Y adivine qué... ¡¡¡SU DAPP ESTÁ COMPLETA!!!
 ¡Wooooo, llegó al final del tutorial! Para recapitular, aprendió cómo:
 
 - Conectar una billetera MetaMask a su proyecto de dapp
-- Leer datos de su contrato inteligente utilizando la API de [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Leer datos de su contrato inteligente utilizando la API de [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Firmar transacciones de Ethereum utilizando MetaMask
 
 ¡Ahora está completamente equipado para aplicar las habilidades de este tutorial para construir su propio proyecto de dapp personalizado! Como siempre, si tiene alguna pregunta, no dude en comunicarse con nosotros para obtener ayuda en el [Discord de Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️

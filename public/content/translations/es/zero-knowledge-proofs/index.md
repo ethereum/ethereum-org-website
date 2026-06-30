@@ -235,5 +235,5 @@ ZK-STARK se considera inmune a la amenaza de la computación cuántica, ya que s
 - [ZK-STARK: cree confianza verificable, incluso contra computadoras cuánticas](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Una introducción aproximada a cómo son posibles los zk-SNARK](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Por qué las pruebas de conocimiento cero (ZKP) cambian las reglas del juego para la identidad autosoberana](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [Explicación de EIP-7503: habilitación de transferencias privadas en Ethereum con pruebas ZK](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [Explicación de EIP-7503: habilitación de transferencias privadas en Ethereum con pruebas ZK](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Juego de cartas ZK: juego para aprender los fundamentos de ZK y casos de uso de la vida real](https://github.com/ZK-card/zk-cards) - _ZK-Cards_

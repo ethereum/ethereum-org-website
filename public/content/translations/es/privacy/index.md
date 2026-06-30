@@ -93,5 +93,5 @@ Algunos proyectos que exploran la privacidad para probar incluyen [Client Side P
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), un laboratorio de investigación y desarrollo de la Fundación Ethereum centrado en la privacidad para el ecosistema
 - [Web3PrivacyNow](https://web3privacy.info/), una red de personas, proyectos y organizaciones alineadas que protegen y promueven los derechos humanos en línea
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), un sitio de calificación de billeteras de Ethereum que tiene como objetivo proporcionar una lista completa de billeteras, su funcionalidad, prácticas y soporte para ciertos estándares.
-- [Zk-kit](https://zkkit.pse.dev/): Un conjunto de bibliotecas (algoritmos, funciones de utilidad y estructuras de datos) que se pueden reutilizar en diferentes proyectos y protocolos de conocimiento cero.
+- [Zk-kit](https://zkkit.org/): Un conjunto de bibliotecas (algoritmos, funciones de utilidad y estructuras de datos) que se pueden reutilizar en diferentes proyectos y protocolos de conocimiento cero.
 - [Privacy Apps](/apps/categories/privacy/) - Descubra una lista seleccionada de aplicaciones de privacidad que se ejecutan en Ethereum.

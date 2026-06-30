@@ -1,87 +1,84 @@
 ---
-title: "Mejores prácticas de diseño para exchanges descentralizados (DEX)"
-description: "Guía que explica las decisiones de UX/UI para el intercambio de tokens."
+title: Mejores prácticas de diseño para intercambios descentralizados (DEX)
+description: Una guía que explica las decisiones de UX/UI para el intercambio de tokens.
 lang: es
 ---
 
-Desde el lanzamiento de Uniswap en 2018, se han creado cientos de exchanges, o plataformas de intercambio, descentralizados en docenas de diferentes cadenas de bloques.
-Muchos de ellos han introducido nuevos elementos o han añadido su propio toque, pero la interfaz ha seguido siendo la misma, por lo general.
+Desde el lanzamiento de Uniswap en 2018, se han lanzado cientos de intercambios descentralizados en docenas de cadenas diferentes.
+Muchos de estos introdujeron nuevos elementos o añadieron su propio toque, pero la interfaz se ha mantenido generalmente igual.
 
-Una de las razones es la [Ley de Jakob](https://lawsofux.com/jakobs-law/):
+Una razón para esto es la [Ley de Jakob](https://lawsofux.com/jakobs-law/):
 
-> Los usuarios pasan la mayor parte de su tiempo en otros sitios. Esto significa que los usuarios prefieren que su sitio funcione igual que todos los demás que ya conocen.
+> Los usuarios pasan la mayor parte de su tiempo en otros sitios. Esto significa que los usuarios prefieren que su sitio funcione de la misma manera que todos los demás sitios que ya conocen.
 
-Gracias a innovadores como Uniswap, Pancakeswap y Sushiswap, los usuarios de DeFi tienen una idea colectiva clara de lo que es un DEX.
-Por este motivo, ahora está surgiendo algo así como "buenas prácticas". Vemos que cada vez se están estandarizando más decisiones de diseño en diferentes sitios. Puede ver la evolución de los DEX como un ejemplo gigante de prueba en vivo. Las cosas que han funcionado se quedaron; las que no se desecharon. Todavía hay espacio para cuestiones particulares o la personalización, pero hay ciertas normas a las que debe ajustarse un DEX.
+Gracias a los primeros innovadores como Uniswap, Pancakeswap y Sushiswap, los usuarios de las finanzas descentralizadas (DeFi) tienen una idea colectiva de cómo se ve un DEX.
+Por esta razón, ahora está surgiendo algo parecido a las "mejores prácticas". Vemos cada vez más decisiones de diseño estandarizándose en todos los sitios. Se puede ver la evolución de los DEX como un ejemplo gigante de pruebas en vivo. Las cosas que funcionaron se quedaron, las que no, se descartaron. Todavía hay espacio para la personalidad, pero hay ciertos estándares que un DEX debe cumplir.
 
 Este artículo es un resumen de:
-
-- qué incluir;
-- cómo hacerlo lo más fácil de usar posible;
-- las principales formas de personalizar el diseño.
+- qué incluir
+- cómo hacerlo lo más utilizable posible
+- las principales formas de personalizar el diseño
 
 Todos los wireframes de ejemplo se hicieron específicamente para este artículo, aunque todos se basan en proyectos reales.
 
-El kit de Figma también está incluido en la parte inferior: ¡siéntase libre de utilizarlo y acelerar sus propios wireframes!
+El kit de Figma también se incluye en la parte inferior: ¡siéntase libre de usarlo y acelerar sus propios wireframes!
 
 ## Anatomía básica de un DEX {#basic-anatomy-of-a-dex}
 
-La interfaz de usuario suele constar de tres elementos:
-
+La interfaz de usuario (UI) generalmente contiene tres elementos:
 1. Formulario principal
 2. Botón
 3. Panel de detalles
 
-![Interfaz de usuario de DEX genérica, que muestra los tres elementos principales](./1.png)
+![Generic DEX UI, showing the three main elements](./1.png)
+
 
 ## Variaciones {#variations}
 
-Este será un tema común en este artículo, pero hay varias formas diferentes de organizar estos elementos. El "panel de detalles" puede estar:
-
-- Sobre el botón
+Este será un tema común en este artículo, pero hay varias formas diferentes en que se pueden organizar estos elementos. El "panel de detalles" puede estar:
+- Encima del botón
 - Debajo del botón
-- Oculto en un panel acordeón
+- Oculto en un panel de acordeón
 - Y/o en un modal de "vista previa"
-
-Nota: El modal de "vista previa" es opcional, pero, si se muestran muy pocos detalles en la interfaz de usuario principal, se convierte en esencial.
+  
+Nota: Un modal de "vista previa" es opcional, pero si muestra muy pocos detalles en la interfaz de usuario principal, se vuelve esencial.
 
 ## Estructura del formulario principal {#structure-of-the-main-form}
 
-Esta es la casilla en la que elige qué token quiere intercambiar. El componente consta de un campo de entrada y un pequeño botón en la misma fila.
+Esta es la caja donde realmente elige qué token desea intercambiar. El componente consta de un campo de entrada y un pequeño botón en una fila.
 
-Los DEX suelen mostrar detalles adicionales en una fila superior y otra inferior, aunque esto puede configurarse de diferentes formas.
+Los DEX generalmente muestran detalles adicionales en una fila arriba y una fila abajo, aunque esto se puede configurar de manera diferente.
 
-![Fila de entrada, con filas de detalles arriba y abajo](./2.png)
+![Input row, with a details row above and below](./2.png)
 
 ## Variaciones {#variations2}
 
-Aquí se muestran dos variaciones de la interfaz de usuario: una sin bordes, que crea un diseño muy abierto y otra en donde la fila de entrada tiene un borde centrando la atención en ese elemento.
+Aquí se muestran dos variaciones de la interfaz de usuario; una sin bordes, creando un diseño muy abierto, y otra donde la fila de entrada tiene un borde, creando un enfoque en ese elemento.
 
-![Dos variaciones de interfaz de usuario del formulario principal](./3.png)
+![Two UI variations of the main form](./3.png)
 
-Esta estructura básica permite mostrar **cuatro datos clave** en el diseño: uno en cada esquina. Si solo hay una fila superior/inferior, entonces solo hay dos espacios disponibles.
+Esta estructura básica permite mostrar **cuatro piezas clave de información** en el diseño: una en cada esquina. Si solo hay una fila superior/inferior, entonces solo hay dos lugares.
 
-A lo largo de la evolución de DeFi, se han incluido aquí muchas cosas diferentes.
+Durante la evolución de las finanzas descentralizadas (DeFi), se han incluido muchas cosas diferentes aquí.
 
 ## Información clave a incluir {#key-info-to-include}
 
 - Saldo en la billetera
-- Botón Max
-- Equivalente Fiat
-- Repercusión del precio en el importe "recibido"
+- Botón de máximo (Max)
+- Equivalente en dinero fíat
+- Impacto en el precio sobre la cantidad "recibida"
 
-En los primeros tiempos de DeFi, a menudo faltaba el equivalente en fiat. Si está construyendo cualquier tipo de proyecto Web3, es esencial que aparezca un equivalente fiat. Los usuarios siguen pensando en términos de moneda local, por lo que, para ajustarse a los modelos mentales del mundo real, debe incluirse.
+En los primeros días de las finanzas descentralizadas (DeFi), a menudo faltaba el equivalente en dinero fíat. Si está construyendo cualquier tipo de proyecto Web3, es esencial que se muestre un equivalente en dinero fíat. Los usuarios todavía piensan en términos de monedas locales, por lo que para coincidir con los modelos mentales del mundo real, esto debe incluirse.
 
-En el segundo campo (en el que elige el token al que va a cambiar) también puede incluir el impacto del precio junto al importe en moneda fiat, calculando la diferencia entre el importe de entrada y el importe estimado resultante. Es muy útil incluir este detalle.
+En el segundo campo (aquel donde elige el token al que está intercambiando) también puede incluir el impacto en el precio junto a la cantidad de moneda fíat, calculando la diferencia entre la cantidad de entrada y las cantidades de salida estimadas. Este es un detalle bastante útil para incluir.
 
-Los botones de porcentaje (por ejemplo, 25 %, 50 %, 75 %) pueden ser una característica útil, pero ocupan más espacio, añaden más llamadas a la acción y aumentan la carga mental. Lo mismo ocurre con los deslizadores de porcentaje. Algunas de estas decisiones sobre la interfaz de usuario dependerán de su marca y de su tipo de usuario.
+Los botones de porcentaje (por ejemplo, 25 %, 50 %, 75 %) pueden ser una característica útil, pero ocupan más espacio, agregan más llamadas a la acción y añaden más carga mental. Lo mismo ocurre con los controles deslizantes de porcentaje. Algunas de estas decisiones de interfaz de usuario dependerán de su marca y de su tipo de usuario.
 
-Debajo del formulario principal se pueden mostrar detalles adicionales. Como este tipo de información es sobre todo para usuarios profesionales, tiene sentido:
+Se pueden mostrar detalles adicionales debajo del formulario principal. Como este tipo de información es principalmente para usuarios profesionales, tiene sentido:
+- mantenerlo lo más mínimo posible, o;
+- ocultarlo en un panel de acordeón
 
-- Mantenerla lo más simple posible o
-- Ocultarla en un panel de acordeón
-
-![Detalles mostrados en las esquinas de ese formulario principal](./4.png)
+![Details shown in the corners of that main form](./4.png)
 
 ## Información adicional a incluir {#extra-info-to-include}
 
@@ -90,131 +87,131 @@ Debajo del formulario principal se pueden mostrar detalles adicionales. Como est
 - Mínimo recibido
 - Salida esperada
 - Impacto en el precio
-- Estimación del costo de gas
+- Estimación del costo del gas
 - Otras tarifas
-- Enrutamiento de pedidos
+- Enrutamiento de órdenes
 
-Se podría decir que algunos de estos detalles pueden ser opcionales.
+Podría decirse que algunos de estos detalles podrían ser opcionales.
 
-El enrutamiento de pedidos es interesante, pero no hace mucha diferencia para la mayoría de los usuarios.
+El enrutamiento de órdenes es interesante, pero no hace mucha diferencia para la mayoría de los usuarios.
 
-Algunos otros detalles simplemente están repitiendo lo mismo de diferentes maneras. Por ejemplo, "mínimo recibido" y "deslizamiento" son dos caras de la misma moneda. Si tiene el deslizamiento establecido en el 1%, entonces el mínimo que puede esperar recibir = salida esperada -1%. Algunas interfaces de usuario mostrarán la cantidad esperada, la cantidad mínima y el deslizamiento… lo cual es útil, pero posiblemente exagerado.
+Algunos otros detalles simplemente reafirman lo mismo de diferentes maneras. Por ejemplo, "mínimo recibido" y "deslizamiento" son dos caras de la misma moneda. Si tiene el deslizamiento establecido en 1 %, entonces el mínimo que puede esperar recibir = salida esperada - 1 %. Algunas interfaces de usuario mostrarán la cantidad esperada, la cantidad mínima y el deslizamiento... Lo cual es útil pero posiblemente excesivo. 
 
 La mayoría de los usuarios dejarán el deslizamiento predeterminado de todos modos.
 
-El "impacto del precio" a menudo se muestra entre paréntesis junto al equivalente fiat en el campo "a". Este es un gran detalle para agregar para la experiencia de usuario, pero si se muestra aquí, ¿realmente es necesario mostrarlo de nuevo a continuación? ¿Y luego de nuevo en una pantalla de vista previa?
+El "impacto en el precio" a menudo se muestra entre paréntesis junto al equivalente en dinero fíat en el campo "hacia" (to). Este es un gran detalle de UX para agregar, pero si se muestra aquí, ¿realmente necesita mostrarse de nuevo a continuación? ¿Y luego otra vez en una pantalla de vista previa?
 
-Muchos usuarios (especialmente aquellos que intercambian pequeñas cantidades) no se preocuparán por estos detalles; simplemente ingresarán un número y presionarán Cambiar.
+A muchos usuarios (especialmente a aquellos que intercambian pequeñas cantidades) no les importarán estos detalles; simplemente ingresarán un número y presionarán intercambiar.
 
-![Algunos detalles muestran lo mismo](./5.png)
+![Some details show the same thing](./5.png)
 
-Los detalles exactos que se muestren dependerán de su público y del aspecto que quiera que transmita la aplicación.
+Exactamente qué detalles se muestran dependerá de su audiencia y de la sensación que desee que tenga la aplicación.
 
-Si incluye la tolerancia al deslizamiento en el panel de detalles, también debería hacerla editable directamente desde aquí. Este es un buen ejemplo de "acelerador", un truco de UX que puede acelerar los flujos de los usuarios experimentados sin afectar a la usabilidad general de la aplicación.
+Si incluye la tolerancia al deslizamiento en el panel de detalles, también debería hacerla editable directamente desde aquí. Este es un buen ejemplo de un "acelerador"; un ingenioso truco de UX que puede acelerar los flujos de los usuarios experimentados, sin afectar la usabilidad general de la aplicación.
 
-![El deslizamiento puede controlarse desde el panel de detalles](./6.png)
+![Slippage can be controlled from the details panel](./6.png)
 
-Es una buena idea pensar detenidamente no solo en un dato concreto de una pantalla, sino en todo el flujo a través de ella:
-Introducir números en el formulario principal → Escanear detalles → Hacer clic en la pantalla de vista previa (si tiene una pantalla de vista previa).
-¿El panel de detalles debe estar visible en todo momento, o es necesario que el usuario haga clic en él para ampliarlo?
-¿Debería crear fricción añadiendo una pantalla de vista previa? Esto obliga al usuario a reducir la velocidad y considerar la operación, lo que puede ser útil. Pero, ¿querrán volver a ver toda la misma información? ¿Qué es lo más útil para ellos en este momento?
+Es una buena idea pensar cuidadosamente no solo en una pieza específica de información en una pantalla, sino en todo el flujo a través de:
+Ingresar números en el formulario principal → Escanear detalles → Hacer clic en la pantalla de vista previa (si tiene una pantalla de vista previa). 
+¿Debería el panel de detalles estar visible en todo momento, o el usuario necesita hacer clic en él para expandirlo?
+¿Debería crear fricción agregando una pantalla de vista previa? Esto obliga al usuario a reducir la velocidad y considerar su operación, lo cual puede ser útil. Pero, ¿quieren ver toda la misma información de nuevo? ¿Qué es lo más útil para ellos en este punto?
 
 ## Opciones de diseño {#design-options}
 
-Como se mencionó, mucho de esto se reduce a su estilo personal.
+Como se mencionó, mucho de esto se reduce a su estilo personal
 ¿Quién es su usuario?
 ¿Cuál es su marca?
-¿Quiere una interfaz "profesional" que muestre cada detalle o quiere ser minimalista?
-Incluso si está apuntando a usuarios profesionales que quieran toda la información posible, aún debería recordar las sabias palabras de Alan Cooper:
+¿Desea una interfaz "profesional" que muestre cada detalle, o desea ser minimalista?
+Incluso si se dirige a los usuarios profesionales que desean toda la información posible, aún debe recordar las sabias palabras de Alan Cooper:
 
-> No importa lo atractiva que sea, no importa lo genial que se vea su interfaz, lo mejor al fin y al cabo es ver lo menos posible.
+> No importa cuán hermosa, no importa cuán genial sea su interfaz, sería mejor si hubiera menos de ella.
 
 ### Estructura {#structure}
 
-- Tokens a la izquierda o tokens a la derecha
+- tokens a la izquierda, o tokens a la derecha
 - 2 filas o 3
-- Detalles sobre o debajo del botón
-- Detalles ampliados, minimizados o no mostrados
+- detalles arriba o abajo del botón
+- detalles expandidos, minimizados o no mostrados
 
-### Estilo de los componentes {#component-style}
+### Estilo del componente {#component-style}
 
-- Vacíos
-- Delineados
-- Rellenos
+- vacío
+- delineado
+- relleno
 
-Desde un punto de vista puramente de la experiencia de usuario, el estilo de la interfaz de usuario importa menos de lo que se cree. Las tendencias visuales van y vienen, y muchas preferencias son subjetivas.
+Desde un punto de vista puramente de UX, el estilo de la interfaz de usuario importa menos de lo que piensa. Las tendencias visuales van y vienen en ciclos, y gran parte de la preferencia es subjetiva.
 
-La forma más fácil de hacerse una idea y pensar en las distintas configuraciones es ver algunos ejemplos y luego experimentar.
+La forma más fácil de familiarizarse con esto, y pensar en las diversas configuraciones diferentes, es echar un vistazo a algunos ejemplos y luego experimentar un poco por su cuenta.
 
 El kit de Figma incluido contiene componentes vacíos, delineados y rellenos.
 
-Eche un vistazo a los siguientes ejemplos para ver las distintas formas en que puede combinarlo todo:
+Eche un vistazo a los siguientes ejemplos para ver diferentes formas en que puede armarlo todo:
 
-![3 filas en estilo relleno](./7.png)
+![3 rows in a filled style](./7.png)
 
-![3 filas en un estilo delineado](./8.png)
+![3 rows in a outlined style](./8.png)
 
-![2 filas en estilo vacío](./9.png)
+![2 rows in an empty style](./9.png)
 
-![3 filas en estilo contorneado, con un panel de detalles](./10.png)
+![3 rows in an outlined style, with a details panel](./10.png)
 
-![3 filas con la fila de entrada en un estilo delineado](./11.png)
+![3 rows with the input row in an outlined style](./11.png)
 
-![2 filas en un estilo relleno](./12.png)
+![2 rows in a filled style](./12.png)
 
-## Pero, ¿de qué lado debería ir el token? {#but-which-side-should-the-token-go-on}
+## Pero, ¿en qué lado debería ir el token? {#but-which-side-should-the-token-go-on}
 
-La conclusión es que probablemente no haga una gran diferencia en la usabilidad. Sin embargo, hay algunas cosas a tener en cuenta que podrían influir en la modalidad elegida.
+La conclusión es que probablemente no haga una gran diferencia en la usabilidad. Sin embargo, hay algunas cosas a tener en cuenta que podrían inclinarlo de un lado o del otro.
 
-Ha sido medianamente interesante ver cómo cambiaba la moda con el tiempo. Al principio, Uniswap tenía el token a la izquierda, pero ahora la ha desplazado a la derecha. Sushiswap también hizo este cambio durante una actualización de diseño. La mayoría de los protocolos, aunque no todos, han seguido su ejemplo.
+Ha sido un poco interesante ver cómo cambia la moda con el tiempo. Uniswap inicialmente tenía el token a la izquierda, pero desde entonces lo ha movido a la derecha. Sushiswap también hizo este cambio durante una actualización de diseño. La mayoría de los protocolos, pero no todos, han seguido su ejemplo.
 
-Tradicionalmente, las convenciones financieras anteponen el símbolo de la moneda a la cifra, por ejemplo, 50 $, 50 €, 50 £, pero nosotros _decimos_ 50 dólares, 50 euros, 50 libras.
+La convención financiera tradicionalmente pone el símbolo de la moneda antes del número, por ejemplo, $50, €50, £50, pero *decimos* 50 dólares, 50 euros, 50 libras.
 
-Para el usuario en general, especialmente alguien que lee de izquierda a derecha, de arriba a abajo, el token de la derecha probablemente se sienta más natural.
+Para el usuario general, especialmente alguien que lee de izquierda a derecha, de arriba a abajo, el token a la derecha probablemente se sienta más natural.
 
-![Una interfaz de usuario con tokens a la izquierda](./13.png)
+![A UI with tokens on the left](./13.png)
 
-Poner el token a la izquierda y todos los números a la derecha se ve agradablemente simétrico, lo cual es una ventaja, pero hay otro inconveniente en este diseño.
+Poner el token a la izquierda y todos los números a la derecha se ve agradablemente simétrico, lo cual es una ventaja, pero hay otra desventaja en este diseño.
 
-La ley de proximidad establece que los elementos que están cerca se perciben como relacionados. En consecuencia, queremos colocar artículos relacionados uno al lado del otro. El saldo de tokens está directamente relacionado con la propio token, y cambiará cada vez que se seleccione un nuevo token. Por lo tanto, tiene un poco más de sentido que el saldo del token esté al lado del botón de selección del token. Se podría mover debajo del token, pero eso rompería la simetría del diseño.
+La ley de proximidad establece que los elementos que están cerca unos de otros se perciben como relacionados. En consecuencia, queremos colocar elementos relacionados uno al lado del otro. El saldo del token está directamente relacionado con el token en sí, y cambiará cada vez que se seleccione un nuevo token. Por lo tanto, tiene un poco más de sentido que el saldo del token esté junto al botón de selección de token. Podría moverse debajo del token, pero eso rompe la simetría del diseño.
 
-En última instancia, hay ventajas y desventajas para ambas opciones, pero es interesante cómo la tendencia parece ser colocar el token del lado derecho.
+En última instancia, hay ventajas y desventajas para ambas opciones, pero es interesante cómo la tendencia parece ser hacia el token a la derecha.
 
 ## Comportamiento del botón {#button-behavior}
 
-No tenga un botón separado para Aprobar. Tampoco tenga un clic separado para Aprobar. El usuario quiere intercambiar, así que solo tiene que decir "intercambiar" en el botón e iniciar la aprobación como primer paso. Un modal puede mostrar el progreso con un paso a paso, o una simple notificación "tx 1 de 2 - aprobación".
+No tenga un botón separado para Aprobar. Tampoco tenga un clic separado para Aprobar. El usuario quiere Intercambiar, así que simplemente diga "intercambiar" en el botón e inicie la aprobación como el primer paso. Un modal puede mostrar el progreso con un indicador de pasos, o una simple notificación de "tx 1 de 2 - aprobando".
 
-![Una interfaz de usuario con botones separados para aprobar e intercambiar](./14.png)
+![A UI with separate buttons for approve and swap](./14.png)
 
-![Una interfaz de usuario con un botón que dice aprobar](./15.png)
+![A UI with one button that says approve](./15.png)
 
-### Botón como ayuda contextual {#button-as-contextual-help}
+### El botón como ayuda contextual {#button-as-contextual-help}
 
-El botón puede tener una doble función como una ¡alerta!
+¡El botón puede cumplir una doble función como alerta!
 
-En realidad, este es un patrón de diseño bastante inusual fuera de Web3, pero se ha convertido en un estándar dentro de ella. Esta es una buena innovación, ya que ahorra espacio y mantiene la atención centrada.
+En realidad, este es un patrón de diseño bastante inusual fuera de Web3, pero se ha convertido en un estándar dentro de él. Esta es una buena innovación, ya que ahorra espacio y mantiene la atención enfocada.
 
-Si la acción principal, Intercambiar, no está disponible debido a un error, se puede explicar el motivo con el botón, por ej.:
+Si la acción principal (INTERCAMBIAR) no está disponible debido a un error, la razón se puede explicar con el botón, por ejemplo:
 
-- Cambiar de red
-- Conectar billetera
-- Varios errores
+- cambiar de red
+- conectar billetera
+- varios errores
 
-El botón también puede ser **mapeado a la acción** a realizar. Por ejemplo, si el usuario no puede realizar el intercambio porque está en la red equivocada, el botón debería decir "cambiar a Ethereum", y cuando el usuario haga clic en el botón, debería cambiar la red a Ethereum. Esto acelera considerablemente el flujo del usuario.
+El botón también se puede **asignar a la acción** que debe realizarse. Por ejemplo, si el usuario no puede intercambiar porque está en la red incorrecta, el botón debería decir "cambiar a Ethereum", y cuando el usuario haga clic en el botón, debería cambiar la red a Ethereum. Esto acelera significativamente el flujo del usuario.
 
-![Acciones clave iniciadas desde el CTA principal](./16.png)
+![Key actions being initiated from the main CTA](./16.png)
 
-![Mensaje de error mostrado en el CTA principal](./17.png)
+![Error message shown within the main CTA](./17.png)
 
-## Construya el suyo con este archivo figma {#build-your-own-with-this-figma-file}
+## Construya el suyo propio con este archivo de Figma {#build-your-own-with-this-figma-file}
 
-Gracias a la ardua labor de múltiples protocolos, el diseño de DEX ha mejorado mucho. Sabemos qué información necesita el usuario, cómo debemos mostrarla y cómo hacer que el flujo sea lo más fluido posible.
-Esperamos que este artículo ofrezca una sólida visión general de los principios de la UX.
+Gracias al arduo trabajo de múltiples protocolos, el diseño de los DEX ha mejorado mucho. Sabemos qué información necesita el usuario, cómo debemos mostrarla y cómo hacer que el flujo sea lo más fluido posible.
+Con suerte, este artículo proporciona una descripción general sólida de los principios de UX. 
 
-Si quiere experimentar, no dude en utilizar el kit de wireframe de Figma. Es lo más sencillo posible, pero tiene suficiente flexibilidad para construir la estructura básica de varias maneras.
+Si desea experimentar, no dude en utilizar el kit de wireframes de Figma. Se mantiene lo más simple posible, pero tiene suficiente flexibilidad para construir la estructura básica de varias maneras.
 
-[Kit de wireframe de Figma](https://www.figma.com/community/file/1393606680816807382/dex-wireframes-kit)
+[Kit de wireframes de Figma](https://www.figma.com/community/file/1393606680816807382/dex-wireframes-kit)
 
-DeFi seguirá evolucionando y siempre hay margen de mejora.
+Las finanzas descentralizadas (DeFi) continuarán evolucionando, y siempre hay margen de mejora. 
 
 ¡Buena suerte!

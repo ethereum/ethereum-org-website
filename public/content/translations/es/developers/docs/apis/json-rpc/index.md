@@ -1887,7 +1887,7 @@ Esta fue solo una breve introducción a algunas de las tareas más comunes, demo
 
 ## Temas relacionados {#related-topics}
 
-- [Especificación JSON-RPC](http://www.jsonrpc.org/specification)
+- [Especificación JSON-RPC](https://www.jsonrpc.org/specification)
 - [Nodos y clientes](/developers/docs/nodes-and-clients/)
 - [API de JavaScript](/developers/docs/apis/javascript/)
 - [API de backend](/developers/docs/apis/backend/)

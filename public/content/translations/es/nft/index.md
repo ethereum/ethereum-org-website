@@ -101,16 +101,13 @@ Los problemas de seguridad relacionados con los NFT suelen estar relacionados co
   Más sobre seguridad
 </ButtonLink>
 
-## Lecturas adicionales {#further-reading}
-
+## Más información
 - [Una guía para principiantes sobre los NFT](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, enero de 2020_
 - [Rastreador de NFT de Etherscan](https://etherscan.io/nft-top-contracts)
 - [Rastreador de NFT de Blockscout](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [Estándar de token ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Estándar de token ERC-1155](/developers/docs/standards/tokens/erc-1155/)
-- [Aplicaciones y herramientas populares de NFT](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 - [Wiki de estándares de NFT](https://nft-standards.gitbook.io/nft-standards-wiki)
-
 ## Otros recursos {#other-resources}
 
 - [NFTScan](https://nftscan.com/)

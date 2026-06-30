@@ -204,16 +204,13 @@ La clave es mantener vivo el impulso. Continúa interactuando con tu comunidad, 
 
 Un gran agradecimiento a todos los que contribuyeron a este artículo compartiendo sus conocimientos: Slavo Fabisik de ETHBratislava; Lola de ETH Kipu y ETH Latam; Tanja Mladenovic de ETH Belgrade, Juan David de Ethereum Bogota; Monika Zając de ETHWarsaw; Raffaele Orefice de NapulETH; Xiao Wu(Ling) de ETH Riyadh; Marco de urbe.eth; Caolán Walsh de ETH Dublin; Alex Males de ETHCluj; y Stanko Devic de ETH Slovenia.
 
-## Recursos {#resources}
-
+## Recursos
 Podcast: Cómo organizar y promocionar un evento de ETH de la A a la Z:
 
-- [El estudio de caso de ETHWarsaw, por Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [El caso de estudio de ETHWarsaw, por Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 Espacio de Twitter:
 
 - [AMA de la comunidad de ETH](https://x.com/NapulETH/status/1905732699094151623)
 
 Artículos:
-
-- [Construyendo ETHKL, por Danny H.](https://sekto.tech/ethkl24)

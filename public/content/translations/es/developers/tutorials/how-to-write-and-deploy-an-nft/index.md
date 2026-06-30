@@ -17,7 +17,7 @@ En este tutorial, repasaremos la creación y el despliegue de un contrato inteli
 
 En la Parte 2 de este tutorial, veremos cómo podemos usar nuestro contrato inteligente para acuñar un NFT, y en la Parte 3 explicaremos cómo ver su NFT en MetaMask.
 
-Y, por supuesto, si tiene preguntas en cualquier momento, ¡no dude en comunicarse en el [Discord de Alchemy](https://discord.gg/gWuC7zB) o visite la [documentación de la API de NFT de Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
+Y, por supuesto, si tiene preguntas en cualquier momento, ¡no dude en comunicarse en el [Discord de Alchemy](https://discord.gg/gWuC7zB) o visite la [documentación de la API de NFT de Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart)!
 
 ## Paso 1: Conectarse a la red Ethereum {#connect-to-ethereum}
 
@@ -27,7 +27,7 @@ En este tutorial, también aprovecharemos las herramientas para desarrolladores 
 
 ## Paso 2: Crear su aplicación (y clave API) {#make-api-key}
 
-Una vez que haya creado una cuenta de Alchemy, puede generar una clave API creando una aplicación. Esto nos permitirá hacer solicitudes a la red de prueba Sepolia. Consulte [esta guía](https://docs.alchemyapi.io/guides/choosing-a-network) si tiene curiosidad por aprender más sobre las redes de prueba.
+Una vez que haya creado una cuenta de Alchemy, puede generar una clave API creando una aplicación. Esto nos permitirá hacer solicitudes a la red de prueba Sepolia. Consulte [esta guía](https://www.alchemy.com/docs/choosing-a-web3-network) si tiene curiosidad por aprender más sobre las redes de prueba.
 
 1. Navegue a la página "Create App" (Crear aplicación) en su panel de control de Alchemy pasando el cursor sobre "Apps" (Aplicaciones) en la barra de navegación y haciendo clic en "Create App".
 
@@ -51,24 +51,23 @@ Puede descargar y crear una cuenta de MetaMask de forma gratuita [aquí](https:/
 
 Para desplegar nuestro contrato inteligente en la red de prueba, necesitaremos algo de ETH falso. Para obtener ETH, puede ir al [faucet de Sepolia](https://sepoliafaucet.com/) alojado por Alchemy, iniciar sesión e ingresar la dirección de su cuenta, y hacer clic en "Send Me ETH" (Envíame ETH). ¡Debería ver ETH en su cuenta de MetaMask poco después!
 
-## Paso 5: Comprobar su saldo {#check-balance}
+## Paso 5: Comprobar su saldo
 
-Para verificar que nuestro saldo esté ahí, hagamos una solicitud [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) utilizando la [herramienta composer de Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto devolverá la cantidad de ETH en nuestra billetera. Después de ingresar la dirección de su cuenta de MetaMask y hacer clic en "Send Request" (Enviar solicitud), debería ver una respuesta como esta:
+Para comprobar que nuestro saldo está ahí, hagamos una solicitud [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) utilizando [la herramienta sandbox de Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Esto devolverá la cantidad de ETH en nuestra billetera. Después de ingresar la dirección de su cuenta de MetaMask y hacer clic en "Send Request" (Enviar solicitud), debería ver una respuesta como esta:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
 > **Nota** Este resultado está en Wei, no en ETH. Wei se utiliza como la denominación más pequeña de ether. La conversión de Wei a ETH es 1 eth = 10<sup>18</sup> Wei. Así que si convertimos 0xde0b6b3a7640000 a decimal obtenemos 1\*10<sup>18</sup> Wei, lo que equivale a 1 ETH.
 
 ¡Uf! Todo nuestro dinero falso está ahí.
-
-## Paso 6: Inicializar nuestro proyecto {#initialize-project}
+## Paso 6: Inicializar nuestro proyecto
 
 Primero, necesitaremos crear una carpeta para nuestro proyecto. Navegue a su línea de comandos y escriba:
 
     mkdir my-nft
     cd my-nft
 
-Ahora que estamos dentro de la carpeta de nuestro proyecto, usaremos npm init para inicializar el proyecto. Si aún no tiene npm instalado, siga [estas instrucciones](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (también necesitaremos [Node.js](https://nodejs.org/en/download/), ¡así que descárguelo también!).
+Ahora que estamos dentro de la carpeta de nuestro proyecto, usaremos npm init para inicializar el proyecto. Si aún no tiene npm instalado, siga [las instrucciones de instalación de Node.js](https://nodejs.org/en/download/) (necesitaremos Node.js y npm para este tutorial).
 
     npm init
 
@@ -99,8 +98,7 @@ Realmente no importa cómo responda a las preguntas de instalación; aquí le mo
     }
 ```
 
-Apruebe el archivo package.json, ¡y estamos listos para continuar!
-
+Apruebe el package.json, ¡y estamos listos para continuar!
 ## Paso 7: Instalar [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 Hardhat es un entorno de desarrollo para compilar, desplegar, probar y depurar su software de Ethereum. Ayuda a los desarrolladores a construir contratos inteligentes y aplicaciones descentralizadas (dapps) localmente antes de desplegarlos en la cadena en vivo.
@@ -342,7 +340,7 @@ La dirección "From" (De) debe coincidir con la dirección de su cuenta de MetaM
 
 ¡Siiii! ¡Acaba de desplegar su contrato inteligente de NFT en la cadena (red de prueba) de Ethereum!
 
-Para entender qué sucede internamente, naveguemos a la pestaña Explorer (Explorador) en nuestro [panel de control de Alchemy](https://dashboard.alchemyapi.io/explorer). Si tiene varias aplicaciones de Alchemy, asegúrese de filtrar por aplicación y seleccionar "MyNFT".
+Para entender qué sucede internamente, naveguemos a la pestaña Explorer (Explorador) en nuestro [panel de control de Alchemy](https://dashboard.alchemy.com/explorer). Si tiene varias aplicaciones de Alchemy, asegúrese de filtrar por aplicación y seleccionar "MyNFT".
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

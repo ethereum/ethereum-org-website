@@ -756,13 +756,13 @@ Dado que usamos la función de bajo nivel `<address>.call()`, no podemos usar `v
 
 Esta es la forma en que verificamos que el código [emite un evento correctamente](https://getfoundry.sh/reference/cheatcodes/expect-emit/) en Foundry.
 
-### El cliente {#the-client}
+### El cliente
 
-Una cosa que no se obtiene con las pruebas de Solidity es código JavaScript que pueda cortar y pegar en su propia aplicación. Para escribir ese código, implementé WORM en [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), la nueva red de prueba de [Optimism](https://www.optimism.io/). Está en la dirección [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Una cosa que no se obtiene con las pruebas de Solidity es código JavaScript que se pueda copiar y pegar en su propia aplicación. La versión original de este tutorial implementó WORM en Optimism Goerli, que desde entonces ha sido retirada. Para ejecutar el cliente hoy, vuelva a implementar WORM en una red OP Stack compatible, como [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), y luego use la dirección del contrato resultante en el cliente JavaScript.
 
-[Puede ver el código JavaScript para el cliente aquí](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Para usarlo:
+[Puede ver el código JavaScript para el cliente aquí](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). El repositorio de muestra se escribió para Optimism Goerli, por lo que antes de ejecutarlo, actualice el punto de conexión RPC y las URL del explorador en `javascript/.env.example` y `javascript/index.js` para su red de destino. Para usarlo:
 
-1. Clone el repositorio de git:
+1. Clone el repositorio git:
 
    ```sh
    git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
@@ -785,8 +785,8 @@ Una cosa que no se obtiene con las pruebas de Solidity es código JavaScript que
 
    | Parámetro           | Valor                                                                                                                                                               |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | La frase mnemotécnica para una cuenta que tiene suficiente ETH para pagar una transacción. [Puede obtener ETH gratis para la red Optimism Goerli aquí](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL a Optimism Goerli. El endpoint público, `https://goerli.optimism.io`, tiene límite de tasa pero es suficiente para lo que necesitamos aquí                                      |
+   | MNEMONIC            | La frase mnemotécnica para una cuenta que tiene suficiente ETH para pagar una transacción. [La documentación de faucet de Optimism](https://docs.optimism.io/app-developers/tools/faucets) enumera los faucet actuales de la red de prueba. |
+   | OPTIMISM_GOERLI_URL | URL de RPC para la red donde vuelve a implementar WORM. Para OP Sepolia, use un punto de conexión RPC de OP Sepolia como `https://sepolia.optimism.io`, u otro punto de conexión de su proveedor.        |
 
 5. Ejecute `index.js`.
 
@@ -794,9 +794,9 @@ Una cosa que no se obtiene con las pruebas de Solidity es código JavaScript que
    node index.js
    ```
 
-   Esta aplicación de muestra primero escribe una entrada en WORM, mostrando los datos de llamada y un enlace a la transacción en Etherscan. Luego vuelve a leer esa entrada y muestra la clave que usa y los valores en la entrada (valor, número de bloque y autor).
+   Esta aplicación de muestra primero escribe una entrada en WORM, mostrando los datos de llamada y un enlace a la transacción en un explorador de bloques. Luego vuelve a leer esa entrada y muestra la clave que usa y los valores en la entrada (valor, número de bloque y autor).
 
-La mayor parte del cliente es JavaScript normal de dapp. Así que de nuevo solo repasaremos las partes interesantes.
+La mayor parte del cliente es JavaScript normal de una aplicación descentralizada (dapp). Así que, de nuevo, solo repasaremos las partes interesantes.
 
 ```javascript
 .
@@ -805,11 +805,11 @@ La mayor parte del cliente es JavaScript normal de dapp. Así que de nuevo solo 
 const main = async () => {
     const func = await worm.WRITE_ENTRY_CACHED()
 
-    // Se necesita una nueva clave cada vez
+    // Necesita una nueva clave cada vez
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-Un slot dado solo se puede escribir una vez, por lo que usamos la marca de tiempo para asegurarnos de no reutilizar los slots.
+Un slot dado solo se puede escribir una vez, por lo que usamos la marca de tiempo para asegurarnos de no reutilizar los slot.
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
@@ -841,8 +841,7 @@ Al igual que con el código de prueba de Solidity, no podemos llamar a una funci
     .
 ```
 
-Para leer entradas podemos usar el mecanismo normal. No hay necesidad de usar el almacenamiento en caché de parámetros con funciones `view`.
-
+Para leer entradas podemos usar el mecanismo normal. No hay necesidad de usar el almacenamiento en caché de parámetros con las funciones `view`.
 ## Conclusión {#conclusion}
 
 El código en este artículo es una prueba de concepto, el propósito es hacer que la idea sea fácil de entender. Para un sistema listo para producción, es posible que desee implementar alguna funcionalidad adicional:
