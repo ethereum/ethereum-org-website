@@ -1,7 +1,7 @@
 ---
-title: Cách tổ chức một sự kiện Ethereum
-metaTitle: Tổ chức một sự kiện Ethereum
-description: Cách tổ chức một sự kiện Ethereum
+title: "Cách tổ chức một sự kiện Ethereum"
+metaTitle: "Tổ chức một sự kiện Ethereum"
+description: "Cách tổ chức một sự kiện Ethereum"
 lang: vi
 hideEditButton: true
 ---

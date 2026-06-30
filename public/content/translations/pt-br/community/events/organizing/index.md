@@ -204,7 +204,8 @@ A chave é manter o impulso vivo. Continue se engajando com a sua comunidade, co
 
 Um muito obrigado a todos que contribuíram para este artigo compartilhando seus insights: Slavo Fabisik da ETHBratislava; Lola da ETH Kipu e ETH Latam; Tanja Mladenovic da ETH Belgrade, Juan David da Ethereum Bogota; Monika Zając da ETHWarsaw; Raffaele Orefice da NapulETH; Xiao Wu(Ling) da ETH Riyadh; Marco da urbe.eth; Caolán Walsh da ETH Dublin; Alex Males da ETHCluj; e Stanko Devic da ETH Slovenia.
 
-## Recursos
+## Recursos {#resources}
+
 Podcast: Como organizar e promover um evento de ETH de A a Z:
 
 - [O estudo de caso da ETHWarsaw, por Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)

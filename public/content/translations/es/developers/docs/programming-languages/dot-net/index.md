@@ -22,7 +22,7 @@ Construye aplicaciones descentralizadas sobre Ethereum e interactúa con contrat
 - [Escribe tu primer contrato inteligente](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Aprende a compilar y desplegar Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Referencias y enlaces para principiantes
+## Referencias y enlaces para principiantes {#beginner-references-and-links}
 
 **Introducción a la biblioteca Nethereum y VS Code Solidity**
 
@@ -43,7 +43,7 @@ Construye aplicaciones descentralizadas sobre Ethereum e interactúa con contrat
   - [Transferir ether a una cuenta](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... ¡Y mucho más!
 
-## Artículos de nivel intermedio
+## Artículos de nivel intermedio {#intermediate-articles}
 
 - [Nethereum: primeros pasos y primer proyecto](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Despliega tus propias cadenas de prueba de desarrollo](https://github.com/Nethereum/Testchains)
@@ -56,13 +56,13 @@ Construye aplicaciones descentralizadas sobre Ethereum e interactúa con contrat
 - [Kaleido y Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum y Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## Patrones de uso avanzado
+## Patrones de uso avanzado {#advanced-use-patterns}
 
 - [Azure Key Vault y Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Arquitectura de referencia del backend de Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
 
-## Proyectos de .NET, herramientas y otras cosas divertidas
+## Proyectos de .NET, herramientas y otras cosas divertidas {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/): _compila, crea y ejecuta fragmentos de código de Nethereum en el navegador_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor): _generación de código de Nethereum con interfaz de usuario en Blazor_

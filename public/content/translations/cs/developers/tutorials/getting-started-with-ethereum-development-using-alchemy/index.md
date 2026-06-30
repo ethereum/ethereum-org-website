@@ -39,7 +39,7 @@ Existující API klíče můžete také získat najetím myší na „Apps“ (A
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.gif)
 
-## 3. Vytvořte požadavek z příkazového řádku
+## 3. Vytvořte požadavek z příkazového řádku {#make-a-request-from-the-command-line}
 
 Komunikujte s blockchainem Etherea prostřednictvím Alchemy pomocí JSON-RPC a curl.
 
@@ -66,7 +66,7 @@ _**POZNÁMKA:** Nahraďte `https://eth-mainnet.alchemyapi.io/v2/demo` svým vlas
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. Nastavte si svého Web3 klienta
+## 4. Nastavte si svého Web3 klienta {#set-up-your-web3-client}
 
 **Pokud již máte existujícího klienta,** změňte aktuální URL poskytovatele uzlu na URL Alchemy s vaším API klíčem: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -96,7 +96,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. Napište svůj první Web3 skript!
+## 5. Napište svůj první Web3 skript! {#write-your-first-web3-script}
 
 Nyní, abychom si vyzkoušeli trochu Web3 programování v praxi, napíšeme jednoduchý skript, který vypíše číslo nejnovějšího bloku z Ethereum Mainnet.
 

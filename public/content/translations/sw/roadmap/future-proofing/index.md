@@ -36,7 +36,7 @@ Hapana. Hakuna kompyuta ya kwanta leo inayoweza kuvunja kriptografia ya Ethereum
 
 </ExpandableCard>
 
-### Nini kinafanyika?
+### Nini kinafanyika? {#what-is-being-done}
 
 Kwa sasa Ethereum ndiyo mtetezi anayechukua hatua madhubuti zaidi dhidi ya vitisho vya kwanta katika mfumo wa ikolojia wa mnyororo wa vitalu. Taasisi ya Ethereum iliunda **timu maalum ya Usalama wa Baada ya Kwanta** mnamo Januari 2026, na kazi inayoendelea inahusisha timu nyingi za wateja na vikundi vya utafiti. Kazi ya timu ya Baada ya Kwanta ya EF inafuatiliwa hadharani kwenye [pq.ethereum.org](https://pq.ethereum.org).
 

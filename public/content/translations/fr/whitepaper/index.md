@@ -1,6 +1,6 @@
 ---
 title: Livre blanc d'Ethereum
-description: Un document de présentation d'Ethereum, publié en 2013 avant son lancement.
+description: "Un document de présentation d'Ethereum, publié en 2013 avant son lancement."
 lang: fr
 sidebarDepth: 2
 hideEditButton: true

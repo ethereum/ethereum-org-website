@@ -40,7 +40,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Hatua ya 3: Pata ABI ya mkataba wako
+## Hatua ya 3: Pata ABI ya mkataba wako {#contract-abi}
 
 ABI (Application Binary Interface) ya mkataba wetu ni kiolesura cha kuingiliana na mkataba mahiri wetu. Unaweza kujifunza zaidi kuhusu [ABI za mkataba](/glossary/#abi). Hardhat inatutengenezea ABI kiotomatiki na kuihifadhi katika faili ya `MyNFT.json`. Ili kutumia hii tutahitaji kuchanganua yaliyomo kwa kuongeza mistari ifuatayo ya msimbo kwenye faili yetu ya `mint-nft.js`:
 
@@ -135,7 +135,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## Hatua ya 7: Unda muamala wako
+## Hatua ya 7: Unda muamala wako {#create-txn}
 
 Kwanza, hebu tufafanue kipengele kinachoitwa `mintNFT(tokenData)` na tuunde muamala wetu kwa kufanya yafuatayo:
 

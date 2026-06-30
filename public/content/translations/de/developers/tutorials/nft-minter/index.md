@@ -33,7 +33,7 @@ Bevor wir uns überhaupt Code ansehen, ist es wichtig zu verstehen, wie das Erst
 
 Der größte Unterschied zwischen den beiden NFT-Smart-Contract-Standards besteht darin, dass ERC-1155 ein Multi-Token-Standard ist und Batch-Funktionalität beinhaltet, während ERC-721 ein Single-Token-Standard ist und daher nur die Übertragung eines Tokens auf einmal unterstützt.
 
-### Die Prägefunktion aufrufen
+### Die Prägefunktion aufrufen {#minting-function}
 
 Normalerweise erfordert diese Prägefunktion, dass du zwei Variablen als Parameter übergibst: erstens den `recipient`, der die Adresse angibt, die dein frisch geprägtes NFT erhalten wird, und zweitens die `tokenURI` des NFTs, eine Zeichenfolge, die auf ein JSON-Dokument verweist, das die Metadaten des NFTs beschreibt.
 
@@ -194,15 +194,15 @@ Da wir nun verstehen, womit wir arbeiten, lass uns unsere Ethereum-Wallet einric
 
 Damit Benutzer mit deinem Smart Contract interagieren können, müssen sie ihre Ethereum-Wallet mit deiner Dapp verbinden.
 
-### MetaMask herunterladen
+### MetaMask herunterladen {#download-metamask}
 
 Für dieses Tutorial verwenden wir MetaMask, eine virtuelle Wallet im Browser, die zur Verwaltung deiner Ethereum-Konto-Adresse verwendet wird. Wenn du mehr darüber erfahren möchtest, wie Transaktionen auf Ethereum funktionieren, sieh dir [diese Seite](/developers/docs/transactions/) an.
 
 Du kannst [hier](https://metamask.io/download) kostenlos MetaMask herunterladen und ein Konto erstellen. Wenn du ein Konto erstellst oder bereits eines hast, achte darauf, zu einem unterstützten Testnetz wie Sepolia zu wechseln \(damit wir nicht mit echtem Geld hantieren\).
-### Ether von einem Faucet hinzufügen
+### Ether von einem Faucet hinzufügen {#add-ether-from-faucet}
 
 Um unsere NFTs zu prägen (oder Transaktionen auf der Ethereum-Blockchain zu signieren), benötigen wir etwas Fake-ETH. Um Testnetz-ETH zu erhalten, verwende ein gewartetes Faucet wie das [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia) und gib deine Sepolia-Kontoadresse ein. Du solltest kurz darauf ETH in deinem MetaMask-Konto sehen!
-### Überprüfe dein Guthaben
+### Überprüfe dein Guthaben {#check-your-balance}
 
 Um noch einmal zu überprüfen, ob unser Guthaben vorhanden ist, stellen wir eine [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)-Anfrage über das [Sandbox-Tool von Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Dadurch wird die Menge an ETH in unserer Wallet zurückgegeben. Nachdem du die Adresse deines MetaMask-Kontos eingegeben und auf „Send Request“ geklickt hast, solltest du eine Antwort wie diese sehen:
 
@@ -579,7 +579,7 @@ Wenn du unsere Dateien genau untersucht hast, wirst du festgestellt haben, dass 
 
 Wir benötigen außerdem einen Alchemy-API-Schlüssel und die Alchemy-Web3-API, um uns mit der Ethereum-Blockchain zu verbinden und unseren Smart Contract zu laden.
 
-### Deinen Alchemy-API-Schlüssel erstellen
+### Deinen Alchemy-API-Schlüssel erstellen {#create-alchemy-api}
 
 Wenn du noch kein Alchemy-Konto hast, [melde dich hier kostenlos an.](https://alchemy.com/?a=eth-org-nft-minter)
 
@@ -844,7 +844,7 @@ const onMintPressed = async () => {
 }
 ```
 
-## Dein NFT auf einer Live-Website bereitstellen
+## Dein NFT auf einer Live-Website bereitstellen {#deploy-your-nft}
 
 Bist du bereit, dein Projekt live zu schalten, damit Benutzer damit interagieren können? Sieh dir die [React-Bereitstellungsdokumentation](https://create-react-app.dev/docs/deployment/) an, um deinen Minter auf einer Live-Website bereitzustellen.
 

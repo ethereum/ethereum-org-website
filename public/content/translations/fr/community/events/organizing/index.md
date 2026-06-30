@@ -1,7 +1,7 @@
 ---
-title: Comment organiser un événement Ethereum
-metaTitle: Organiser un événement Ethereum
-description: Comment organiser un événement Ethereum
+title: "Comment organiser un événement Ethereum"
+metaTitle: "Organiser un événement Ethereum"
+description: "Comment organiser un événement Ethereum"
 lang: fr
 hideEditButton: true
 ---

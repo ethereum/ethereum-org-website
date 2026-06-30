@@ -757,6 +757,7 @@ contract WORM is Cache {
 Foundryలో కోడ్ [ఈవెంట్‌ను సరిగ్గా విడుదల చేస్తుందని](https://getfoundry.sh/reference/cheatcodes/expect-emit/) మనం ధృవీకరించే విధానం ఇది.
 
 ### క్లయింట్ {#the-client}
+
 Solidity పరీక్షలతో మీకు లభించని ఒక విషయం ఏమిటంటే, మీరు మీ స్వంత అప్లికేషన్‌లో కట్ చేసి పేస్ట్ చేయగల JavaScript కోడ్. ఈ ట్యుటోరియల్ యొక్క అసలు వెర్షన్ WORMని Optimism Goerliకి డిప్లాయ్ చేసింది, అది అప్పటి నుండి విరమించబడింది. ఈ రోజు క్లయింట్‌ను రన్ చేయడానికి, [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) వంటి మద్దతు ఉన్న OP స్టాక్ నెట్‌వర్క్‌కు WORMని మళ్లీ డిప్లాయ్ చేయండి, ఆపై ఫలితంగా వచ్చిన కాంట్రాక్ట్ చిరునామాను JavaScript క్లయింట్‌లో ఉపయోగించండి.
 
 [మీరు క్లయింట్ కోసం JavaScript కోడ్‌ను ఇక్కడ చూడవచ్చు](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). నమూనా రిపోజిటరీ Optimism Goerli కోసం వ్రాయబడింది, కాబట్టి దానిని రన్ చేయడానికి ముందు, మీ లక్ష్య నెట్‌వర్క్ కోసం `javascript/.env.example` మరియు `javascript/index.js`లో RPC ఎండ్‌పాయింట్ మరియు ఎక్స్‌ప్లోరర్ URLలను అప్‌డేట్ చేయండి. దీన్ని ఉపయోగించడానికి:

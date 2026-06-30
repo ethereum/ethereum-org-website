@@ -9,7 +9,7 @@ tags:
   - "własność twórcza"
 published: "2025-05-30"
 image: /content/stories/funding-culture/pplpleasr-hero.png
-breadcrumb: Kształtowanie kultury
+breadcrumb: "Kształtowanie kultury"
 lang: pl
 ---
 

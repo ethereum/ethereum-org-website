@@ -24,7 +24,8 @@ Seperti kebanyakan pengembang rantai blok saat pertama kali memulai, Anda mungki
 - Ini berarti bahwa Alchemy tidak dapat menandatangani dan mengirim transaksi atas nama Anda. Alasannya adalah untuk tujuan keamanan. Alchemy tidak akan pernah meminta Anda untuk membagikan kunci privat Anda, dan Anda tidak boleh membagikan kunci privat Anda dengan node yang di-host (atau siapa pun dalam hal ini).
 - Anda dapat membaca dari rantai blok menggunakan API inti Alchemy, tetapi untuk menulis ke dalamnya, Anda harus menggunakan sesuatu yang lain untuk menandatangani transaksi Anda sebelum mengirimkannya melalui Alchemy (ini sama untuk [layanan node](/developers/docs/nodes-and-clients/nodes-as-a-service/) lainnya).
 
-### 2\. Apa itu "penandatangan"?
+### 2\. Apa itu "penandatangan"? {#what-is-a-signer}
+
 - Penandatangan akan menandatangani transaksi untuk Anda menggunakan kunci privat Anda. Dalam tutorial ini kita akan menggunakan [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) untuk menandatangani transaksi kita, tetapi Anda juga dapat menggunakan pustaka Web3 lainnya.
 - Di frontend, contoh penandatangan yang baik adalah [MetaMask](https://metamask.io/), yang akan menandatangani dan mengirim transaksi atas nama Anda.
 ### 3\. Mengapa saya perlu menandatangani transaksi saya? {#why-do-i-need-to-sign-my-transactions}
@@ -54,7 +55,8 @@ Inilah yang akan kita gunakan dalam tutorial ini.
 
 Oke, sekarang setelah kita menyelesaikan beberapa pertanyaan ini, mari kita lanjutkan ke tutorial. Jangan ragu untuk mengajukan pertanyaan kapan saja di [Discord](https://discord.gg/gWuC7zB) Alchemy!
 
-### 7\. Bagaimana cara mengirim transaksi yang aman, dioptimalkan gasnya, dan privat?
+### 7\. Bagaimana cara mengirim transaksi yang aman, dioptimalkan gasnya, dan privat? {#how-to-send-secure-gas-optimized-and-private-transactions}
+
 - [Alchemy memiliki serangkaian sumber daya transaksi](https://www.alchemy.com/docs/sending-transactions). Anda dapat menggunakannya untuk mengirim transaksi, mensimulasikan transaksi sebelum terjadi, mengirim transaksi privat, dan mengirim transaksi yang dioptimalkan penggunaan gasnya
 - Anda juga dapat menggunakan [webhook Alchemy](https://www.alchemy.com/docs/reference/webhooks-overview) untuk mendapatkan peringatan saat transaksi Anda ditarik dari mempool dan ditambahkan ke rantai
 
@@ -120,7 +122,8 @@ Jangan commit <code>.env</code>! Pastikan untuk tidak pernah membagikan atau men
 </AlertContent>
 </Alert>
 
-### 7\. Buat file `sendTx.js`
+### 7\. Buat file `sendTx.js` {#create-sendtx-js}
+
 Bagus, sekarang setelah data sensitif kita dilindungi dalam file `.env`, mari kita mulai menulis kode. Untuk contoh pengiriman transaksi ini, kita akan mengirimkan ETH kembali ke faucet Sepolia.
 
 Buat file `sendTx.js`, yang merupakan tempat kita akan mengonfigurasi dan mengirim contoh transaksi kita, dan tambahkan baris kode berikut ke dalamnya:
@@ -186,7 +189,8 @@ Navigasikan kembali ke terminal atau baris perintah Anda dan jalankan:
 node sendTx.js
 ```
 
-### 9\. Lihat transaksi Anda di Mempool
+### 9\. Lihat transaksi Anda di Mempool {#see-your-transaction-in-the-mempool}
+
 Buka [halaman Mempool](https://dashboard.alchemy.com/mempool) di dasbor Alchemy Anda dan saring berdasarkan aplikasi yang Anda buat untuk menemukan transaksi Anda. Di sinilah kita dapat melihat transaksi kita bertransisi dari state pending ke state mined (jika berhasil) atau state dropped jika tidak berhasil. Pastikan untuk tetap pada pilihan "All" sehingga Anda dapat menangkap transaksi "mined", "pending", dan "dropped". Anda juga dapat mencari transaksi Anda dengan mencari transaksi yang dikirim ke alamat `0x31b98d14007bdee637298086988a0bbd31184523` .
 
 Untuk melihat detail transaksi Anda setelah Anda menemukannya, pilih hash tx, yang akan membawa Anda ke tampilan yang terlihat seperti ini:

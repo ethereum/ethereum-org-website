@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: Tìm hiểu về bản nâng cấp giao thức Pectra
+description: "Tìm hiểu về bản nâng cấp giao thức Pectra"
 lang: vi
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -117,7 +117,8 @@ _Những gì sẽ có trong Bản nâng cấp Pectra? - Christine Kim_
 
 _Bản nâng cấp Pectra của Ethereum: Những điều người đặt cọc cần biết — Blockdaemon_
 
-## Đọc thêm
+## Đọc thêm {#further-reading}
+
 - [Lộ trình Ethereum](/roadmap/)
 - [Câu hỏi thường gặp về Pectra](https://epf.wiki/#/wiki/pectra-faq)
 - [Cách Pectra nâng cao trải nghiệm của người đặt cọc](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

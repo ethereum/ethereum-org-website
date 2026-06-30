@@ -36,7 +36,7 @@ Nein. Kein Quantencomputer kann heute die Kryptographie von Ethereum knacken. Di
 
 </ExpandableCard>
 
-### Was wird getan?
+### Was wird getan? {#what-is-being-done}
 
 Ethereum ist derzeit der proaktivste Verteidiger gegen Quantenbedrohungen im Blockchain-Ökosystem. Die Ethereum Foundation hat im Januar 2026 ein dediziertes **Post-Quantum-Sicherheitsteam** gegründet, und die aktive Arbeit erstreckt sich über mehrere Client-Teams und Forschungsgruppen. Die Arbeit des Post-Quantum-Teams der EF wird öffentlich unter [pq.ethereum.org](https://pq.ethereum.org) verfolgt.
 

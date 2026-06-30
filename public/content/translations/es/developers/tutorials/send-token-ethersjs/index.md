@@ -17,7 +17,8 @@ published: 2021-04-06
 - Transferir tokens
 - Establecer el precio del gas según la situación del tráfico de la red
 
-### Para empezar
+### Para empezar {#to-get-started}
+
 Para empezar, primero debemos importar la biblioteca ethers.js en nuestro JavaScript
 Incluir ethers.js v5
 ### Instalación {#install-ethersjs}

@@ -1,7 +1,7 @@
 ---
-title: Byl jsem podveden nebo jsem přišel o prostředky
-metaTitle: Pomoc a hlášení podvodů
-description: Co dělat, pokud jste se stali obětí podvodu, jak zabezpečit zbývající aktiva a kde nahlásit podvod.
+title: "Byl jsem podveden nebo jsem přišel o prostředky"
+metaTitle: "Pomoc a hlášení podvodů"
+description: "Co dělat, pokud jste se stali obětí podvodu, jak zabezpečit zbývající aktiva a kde nahlásit podvod."
 lang: cs
 ---
 
@@ -119,7 +119,7 @@ Podvodníci se vydávají za členy týmu Etherea, moderátory nebo agenty podpo
 
 <ExpandableCard
 title="Podvody s obnovou prostředků"
-contentPreview="Pokud jste se stali obětí podvodu, dejte si pozor na falešné „experty na obnovu kryptoměn“."
+contentPreview="Pokud jste se stali obětí podvodu, dejte si pozor na falešné &quot;experty na obnovu kryptoměn&quot;."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >

@@ -1,6 +1,6 @@
 ---
-title: Jazykové zdroje
-description: Neanglické zdroje pro výuku o Ethereu
+title: "Jazykové zdroje"
+description: "Neanglické zdroje pro výuku o Ethereu"
 lang: cs
 ---
 

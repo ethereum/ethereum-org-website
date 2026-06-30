@@ -59,7 +59,7 @@ Untuk memastikan kembali saldo kita ada di sana, mari buat permintaan [eth_getBa
 >
 > Fiuh! Uang palsu kita semuanya ada di sana <Emoji text=":money_mouth_face:" size={1} />.
 
-## Langkah 6: Inisialisasi proyek kita
+## Langkah 6: Inisialisasi proyek kita {#step-6}
 
 Pertama, kita perlu membuat folder untuk proyek kita. Arahkan ke baris perintah Anda dan ketik:
 

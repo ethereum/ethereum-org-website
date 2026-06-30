@@ -54,7 +54,7 @@ Plasma używa głównego kontraktu działającego na Ethereum do przetwarzania w
 
 Aby wejść do łańcucha Plasma, Alice (użytkownik) będzie musiała zdeponować ETH lub dowolny token ERC-20 w kontrakcie Plasma. Operator Plasmy, który obserwuje depozyty w kontrakcie, odtwarza kwotę równą początkowemu depozytowi Alice i uwalnia ją na jej adres w łańcuchu Plasma. Alice jest zobowiązana do poświadczenia otrzymania środków w łańcuchu potomnym, a następnie może użyć tych środków do transakcji.
 
-#### Wyjście z łańcucha Plasma
+#### Wyjście z łańcucha Plasma {#exiting-the-plasma-chain}
 
 Wyjście z łańcucha Plasma jest bardziej skomplikowane niż wejście do niego z kilku powodów. Najważniejszym z nich jest to, że chociaż Ethereum posiada informacje o stanie łańcucha Plasma, nie może zweryfikować, czy są one prawdziwe. Złośliwy użytkownik mógłby złożyć nieprawdziwe oświadczenie („Mam 1000 ETH”) i uniknąć konsekwencji, dostarczając fałszywe dowody na poparcie swojego roszczenia.
 
@@ -164,7 +164,7 @@ Wiele projektów dostarcza implementacje Plasmy, które możesz zintegrować ze 
 
 - [Polygon](https://polygon.technology/) (wcześniej Matic Network)
 
-## Dalsza lektura
+## Dalsza lektura {#further-reading}
 
 - [Szybkie przypomnienie, co oznacza „współdzielone bezpieczeństwo” i dlaczego jest tak ważne](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Łańcuchy poboczne a Plasma a sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)

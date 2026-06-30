@@ -123,27 +123,6 @@ Gunakan heading `###` dengan stempel waktu untuk menandai bagian-bagian utama. I
 
 Jika Anda tidak memiliki transkrip, Anda dapat membiarkan bagian isi (body) kosong dan tim akan membuatnya.
 
-#### Langkah 4: Pilih tag topik
-
-Pilih tag topik dari daftar di bawah ini. Setiap tag memetakan langsung ke kategori filter di galeri video — gunakan nama tag persis seperti yang ditampilkan.
-
-Sebuah video dapat memiliki beberapa tag untuk muncul di beberapa filter galeri:
-
-| Tag | Filter galeri |
-|---|---|
-| `how-ethereum-works` | Cara Kerja Ethereum |
-| `network-upgrades` | Peningkatan Jaringan |
-| `roadmap-and-priorities` | Peta Jalan & Prioritas |
-| `scaling-and-layer-2` | Penskalaan & Lapisan 2 |
-| `use-cases` | Kasus Penggunaan |
-| `privacy` | Privasi |
-| `security` | Keamanan |
-| `community-stories` | Cerita Komunitas |
-| `events` | Peristiwa |
-
-Setiap video harus memiliki setidaknya satu tag dari daftar ini. Video tanpa tag yang dikenali hanya akan muncul dalam tampilan "Semua" dan hasil pencarian.
-
-Tag `community-stories` juga menyebabkan video muncul di [halaman Cerita](/stories/).
 #### Langkah 5: Kirimkan PR Anda {#step-5}
 
 Buka pull request dengan perubahan Anda ke cabang `dev`. Tim akan meninjau kiriman Anda dan memberikan umpan balik.

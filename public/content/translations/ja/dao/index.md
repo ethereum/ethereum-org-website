@@ -133,7 +133,8 @@ _通常、プロトコルや[分散型アプリケーション (dapp)](/glossary
 - [Tally.xyzのDAOリスト](https://www.tally.xyz/explore)
 - [DeGov.AIのDAOリスト](https://apps.degov.ai/)
 
-### DAOを立ち上げる
+### DAOを立ち上げる {#start-a-dao}
+
 - [DAOHausでDAOを立ち上げる](https://app.daohaus.club/summon)
 - [TallyでGovernor DAOを立ち上げる](https://www.tally.xyz/get-started)
 - [Aragonを利用したDAOを作成する](https://aragon.org/product)

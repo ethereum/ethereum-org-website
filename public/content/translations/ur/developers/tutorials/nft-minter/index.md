@@ -591,7 +591,7 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 زبردست، تو اب جب کہ ہم نے اپنا <span dir="ltr">HTTP Alchemy API URL</span> بنا لیا ہے، اسے اپنے کلپ بورڈ پر کاپی کریں...
 
-...اور پھر آئیے اسے اپنی <span dir="ltr">`.env`</span> فائل میں شامل کریں۔ مجموعی طور پر، آپ کی <span dir="ltr">.env</span> فائل اس طرح نظر آنی چاہیے:
+...اور پھر آئیے اسے اپنی `.env` فائل میں شامل کریں۔ مجموعی طور پر، آپ کی <span dir="ltr">.env</span> فائل اس طرح نظر آنی چاہیے:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
@@ -842,11 +842,6 @@ const onMintPressed = async () => {
 }
 ```
 
-## اپنے <span dir="ltr">NFT</span> کو ایک لائیو ویب سائٹ پر تعینات کریں
-
-کیا آپ اپنے پروجیکٹ کو لائیو کرنے کے لیے تیار ہیں تاکہ صارفین اس کے ساتھ تعامل کر سکیں؟ اپنے Minter کو ایک لائیو ویب سائٹ پر تعینات کرنے کے لیے [React کی تعیناتی کی دستاویزات](https://create-react-app.dev/docs/deployment/) دیکھیں۔
-
-ایک آخری مرحلہ...
 ## بلاک چین کی دنیا میں تہلکہ مچا دیں {#take-the-blockchain-world-by-storm}
 
 مذاق کر رہا ہوں، آپ ٹیوٹوریل کے اختتام تک پہنچ گئے ہیں!

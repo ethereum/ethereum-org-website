@@ -123,27 +123,6 @@ Utilisez des titres `###` avec des horodatages pour marquer les sections princip
 
 Si vous n'avez pas de transcription, vous pouvez laisser le corps vide et l'équipe en générera une.
 
-#### Étape 4 : Choisir les balises thématiques
-
-Choisissez des balises thématiques dans la liste ci-dessous. Chaque balise correspond directement à une catégorie de filtre dans la galerie vidéo — utilisez le nom de la balise exactement comme indiqué.
-
-Une vidéo peut avoir plusieurs balises pour apparaître dans plusieurs filtres de la galerie :
-
-| Balise | Filtre de la galerie |
-|---|---|
-| `how-ethereum-works` | Comment fonctionne Ethereum |
-| `network-upgrades` | Mises à niveau du réseau |
-| `roadmap-and-priorities` | Feuille de route et priorités |
-| `scaling-and-layer-2` | Mise à l'échelle et couche 2 |
-| `use-cases` | Cas d'utilisation |
-| `privacy` | Confidentialité |
-| `security` | Sécurité |
-| `community-stories` | Histoires de la communauté |
-| `events` | Événements |
-
-Chaque vidéo doit avoir au moins une balise de cette liste. Les vidéos sans balise reconnue n'apparaîtront que dans la vue « Toutes » et dans les résultats de recherche.
-
-La balise `community-stories` permet également à une vidéo d'apparaître sur la [page Histoires](/stories/).
 #### Étape 5 : Soumettre votre PR {#step-5}
 
 Ouvrez une demande d'extraction (pull request) avec vos modifications vers la branche `dev`. L'équipe examinera votre soumission et vous fera part de ses commentaires.

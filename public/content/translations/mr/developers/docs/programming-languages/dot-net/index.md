@@ -22,7 +22,7 @@ incomplete: true
 - [तुमचे पहिले स्मार्ट कॉन्ट्रॅक्ट लिहा](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity कंपाईल आणि प्रस्थापित कसे करावे ते शिका](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## नवशिक्यांसाठी संदर्भ आणि लिंक्स
+## नवशिक्यांसाठी संदर्भ आणि लिंक्स {#beginner-references-and-links}
 
 **Nethereum लायब्ररी आणि VS Code Solidity ची ओळख**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [ERC-20 स्मार्ट कॉन्ट्रॅक्ट बॅलन्सची चौकशी करा](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [एखाद्या खात्यात इथरचे हस्तांतरण करा](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... आणि बरेच काही!
-## इंटरमीडिएट लेख
+## इंटरमीडिएट लेख {#intermediate-articles}
 
 - [Nethereum सुरुवात करणे आणि पहिला प्रोजेक्ट](https://docs.nethereum.com/docs/getting-started/first-project)
 - [तुमच्या स्वतःच्या डेव्हलपमेंट टेस्टचेन्स प्रस्थापित करा](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [Nethereum रिअल-टाइम स्ट्रीमिंग](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido आणि Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum आणि Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## प्रगत वापर पॅटर्न
+## प्रगत वापर पॅटर्न {#advanced-use-patterns}
 
 - [Azure Key Vault आणि Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum बॅकएंड संदर्भ आर्किटेक्चर](https://github.com/Nethereum/ujo-backend)
-## .NET प्रोजेक्ट्स, टूल्स आणि इतर मजेशीर गोष्टी
+## .NET प्रोजेक्ट्स, टूल्स आणि इतर मजेशीर गोष्टी {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _ब्राउझरमध्ये Nethereum कोड स्निपेट्स कंपाईल करा, तयार करा आणि रन करा_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor मध्ये UI सह Nethereum कोडजेन_

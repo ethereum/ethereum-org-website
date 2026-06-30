@@ -1,7 +1,7 @@
 ---
-title: 我被骗了或丢失了资金
-metaTitle: 诈骗求助与举报
-description: 如果您遭遇诈骗该怎么办，如何保护您的剩余资产，以及在哪里举报欺诈行为。
+title: "我被骗了或丢失了资金"
+metaTitle: "诈骗求助与举报"
+description: "如果您遭遇诈骗该怎么办，如何保护您的剩余资产，以及在哪里举报欺诈行为。"
 lang: zh
 ---
 
@@ -22,7 +22,7 @@ lang: zh
 
 如果您与诈骗者有过互动，或者怀疑您的钱包已遭到入侵，请立即采取以下步骤：
 
-1. **转移剩余资金**到一个诈骗者无法访问的新的安全钱包中
+1. <strong>转移剩余资金</strong>到一个诈骗者无法访问的新的安全钱包中
 2. **撤销代币授权。** 诈骗者经常诱骗您授权无限制的代币支出。撤销这些权限可以防止您的钱包被进一步掏空
 3. **更改任何可能关联的交易所账户的密码**
 4. **在所有与加密货币相关的账户上启用双重身份验证 (2FA)**
@@ -119,7 +119,7 @@ eventName="clicked impersonation scam"
 
 <ExpandableCard
 title="资金追回骗局"
-contentPreview="被骗后，请警惕虚假的“加密货币追回专家”。"
+contentPreview="被骗后，请警惕虚假的&quot;加密货币追回专家&quot;。"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >

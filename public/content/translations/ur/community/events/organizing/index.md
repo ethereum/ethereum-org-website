@@ -1,7 +1,7 @@
 ---
-title: ایتھیریم ایونٹ کا انعقاد کیسے کریں
-metaTitle: ایتھیریم ایونٹ کا انعقاد
-description: ایتھیریم ایونٹ کا انعقاد کیسے کریں
+title: "ایتھیریم ایونٹ کا انعقاد کیسے کریں"
+metaTitle: "ایتھیریم ایونٹ کا انعقاد"
+description: "ایتھیریم ایونٹ کا انعقاد کیسے کریں"
 lang: ur
 hideEditButton: true
 ---
@@ -204,7 +204,8 @@ hideEditButton: true
 
 ان تمام لوگوں کا بہت شکریہ جنہوں نے اپنی بصیرتیں شیئر کر کے اس مضمون میں تعاون کیا: <span dir="ltr">ETHBratislava</span> سے <span dir="ltr">Slavo Fabisik</span>؛ <span dir="ltr">ETH Kipu</span> اور <span dir="ltr">ETH Latam</span> سے <span dir="ltr">Lola</span>؛ <span dir="ltr">ETH Belgrade</span> سے <span dir="ltr">Tanja Mladenovic</span>، <span dir="ltr">Ethereum Bogota</span> سے <span dir="ltr">Juan David</span>؛ <span dir="ltr">ETHWarsaw</span> سے <span dir="ltr">Monika Zając</span>؛ <span dir="ltr">NapulETH</span> سے <span dir="ltr">Raffaele Orefice</span>؛ <span dir="ltr">ETH Riyadh</span> سے <span dir="ltr">Xiao Wu(Ling)</span>؛ <span dir="ltr">urbe.eth</span> سے <span dir="ltr">Marco</span>؛ <span dir="ltr">ETH Dublin</span> سے <span dir="ltr">Caolán Walsh</span>؛ <span dir="ltr">ETHCluj</span> سے <span dir="ltr">Alex Males</span>؛ اور <span dir="ltr">ETH Slovenia</span> سے <span dir="ltr">Stanko Devic</span>۔
 
-## وسائل
+## وسائل {#resources}
+
 پوڈ کاسٹ: ایک ETH ایونٹ کو A سے Z تک کیسے منظم اور پروموٹ کیا جائے:
 
 - [ETHWarsaw کیس اسٹڈی، از Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)

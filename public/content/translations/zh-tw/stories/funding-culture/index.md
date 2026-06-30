@@ -1,7 +1,7 @@
 ---
-title: 當你資助的不只是程式碼，而是文化時，會發生什麼事？
-description: 以太坊證明了它能轉移的不僅僅是金錢。現在，粉絲們可以資助、塑造他們喜愛的電影，並在其中獲得署名。
-author: 艾蜜莉·楊
+title: "當你資助的不只是程式碼，而是文化時，會發生什麼事？"
+description: "以太坊證明了它能轉移的不僅僅是金錢。現在，粉絲們可以資助、塑造他們喜愛的電影，並在其中獲得署名。"
+author: "艾蜜莉·楊"
 team: Shibuya
 tags:
   - 電影製作
@@ -9,7 +9,7 @@ tags:
   - 創意所有權
 published: "2025-05-30"
 image: /content/stories/funding-culture/pplpleasr-hero.png
-breadcrumb: 推動文化
+breadcrumb: "推動文化"
 lang: zh-tw
 ---
 

@@ -101,7 +101,8 @@ Bezpečnostní problémy týkající se NFT nejčastěji souvisejí s phishingov
   Více o bezpečnosti
 </ButtonLink>
 
-## Další čtení
+## Další čtení {#further-reading}
+
 - [Průvodce NFT pro začátečníky](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, leden 2020_
 - [Sledování NFT na Etherscanu](https://etherscan.io/nft-top-contracts)
 - [Sledování NFT na Blockscoutu](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)

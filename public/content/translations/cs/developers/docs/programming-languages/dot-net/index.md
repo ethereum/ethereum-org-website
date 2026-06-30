@@ -22,7 +22,7 @@ Potřebujete nejprve základnější úvod? Podívejte se na [ethereum.org/learn
 - [Napište svůj první chytrý kontrakt](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Naučte se kompilovat a nasadit Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Odkazy a materiály pro začátečníky
+## Odkazy a materiály pro začátečníky {#beginner-references-and-links}
 
 **Představení knihovny Nethereum a VS Code Solidity**
 
@@ -42,7 +42,7 @@ Potřebujete nejprve základnější úvod? Podívejte se na [ethereum.org/learn
   - [Dotaz na zůstatek ERC-20 chytrého kontraktu](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [Převod etheru na účet](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... A další!
-## Články pro pokročilejší
+## Články pro pokročilejší {#intermediate-articles}
 
 - [Nethereum: Začínáme a první projekt](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Nasaďte si vlastní vývojové testovací sítě](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ Potřebujete nejprve základnější úvod? Podívejte se na [ethereum.org/learn
 - [Streamování v reálném čase v Nethereu](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido a Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum a Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## Pokročilé způsoby použití
+## Pokročilé způsoby použití {#advanced-use-patterns}
 
 - [Azure Key Vault a Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Referenční architektura backendu Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
-## .NET projekty, nástroje a další zajímavosti
+## .NET projekty, nástroje a další zajímavosti {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) – _Kompilujte, vytvářejte a spouštějte úryvky kódu Nethereum v prohlížeči_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) – _Generování kódu Nethereum s uživatelským rozhraním v Blazoru_

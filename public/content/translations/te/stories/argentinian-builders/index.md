@@ -9,7 +9,7 @@ tags:
   - "కమ్యూనిటీ"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: అర్జెంటీనా నుండి నిర్మాణం
+breadcrumb: "అర్జెంటీనా నుండి నిర్మాణం"
 lang: te
 ---
 > *ఈ కథనం మొదట నవంబర్ 3, 2025న [@Ethereum X ప్రొఫైల్‌లో అతిథి థ్రెడ్‌గా](https://x.com/ethereum/status/1985408315074232397?s=20) ప్రచురించబడింది. చదవడానికి సులభంగా ఉండేలా ఇది కొద్దిగా సవరించబడింది.*

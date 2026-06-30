@@ -123,27 +123,6 @@ Ana bölümleri işaretlemek için zaman damgalarına sahip `###` başlıkların
 
 Eğer bir transkriptiniz yoksa, gövdeyi boş bırakabilirsiniz ve ekip bir tane oluşturacaktır.
 
-#### 4. Adım: Konu etiketlerini seçin
-
-Aşağıdaki listeden konu etiketlerini seçin. Her etiket, video galerisindeki bir filtre kategorisiyle doğrudan eşleşir; etiket adını tam olarak gösterildiği gibi kullanın.
-
-Bir video, birden fazla galeri filtresinde görünmek için birden fazla etikete sahip olabilir:
-
-| Etiket | Galeri filtresi |
-|---|---|
-| `how-ethereum-works` | Ethereum Nasıl Çalışır |
-| `network-upgrades` | Ağ Yükseltmeleri |
-| `roadmap-and-priorities` | Yol Haritası ve Öncelikler |
-| `scaling-and-layer-2` | Ölçeklendirme ve Katman 2 |
-| `use-cases` | Kullanım Durumları |
-| `privacy` | Gizlilik |
-| `security` | Güvenlik |
-| `community-stories` | Topluluk Hikayeleri |
-| `events` | Etkinlikler |
-
-Her videonun bu listeden en az bir etiketi olmalıdır. Tanınan bir etiketi olmayan videolar yalnızca "Tümü" görünümünde ve arama sonuçlarında görünür.
-
-`community-stories` etiketi ayrıca bir videonun [Hikayeler sayfasında](/stories/) görünmesini sağlar.
 #### 5. Adım: PR'ınızı gönderin {#step-5}
 
 Değişikliklerinizle birlikte `dev` dalına (branch) bir çekme isteği (pull request) açın. Ekip gönderiminizi inceleyecek ve geri bildirim sağlayacaktır.

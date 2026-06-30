@@ -133,7 +133,8 @@ _Zazwyczaj używane do zdecentralizowanego rozwoju i zarządzania protokołami o
 - [Lista DAO od Tally.xyz](https://www.tally.xyz/explore)
 - [Lista DAO od DeGov.AI](https://apps.degov.ai/)
 
-### Załóż DAO
+### Załóż DAO {#start-a-dao}
+
 - [Stwórz DAO za pomocą DAOHaus](https://app.daohaus.club/summon)
 - [Załóż Governor DAO za pomocą Tally](https://www.tally.xyz/get-started)
 - [Stwórz DAO oparte na Aragon](https://aragon.org/product)

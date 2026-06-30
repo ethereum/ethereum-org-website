@@ -24,7 +24,7 @@ Bu, Web3 kullanarak Ethereum işlemleri göndermeye yönelik başlangıç dostu 
 - Bu, Alchemy'nin sizin adınıza işlemleri imzalayamayacağı ve gönderemeyeceği anlamına gelir. Bunun nedeni güvenlik amaçlıdır. Alchemy sizden asla özel anahtarınızı paylaşmanızı istemez ve özel anahtarınızı asla barındırılan bir düğümle (veya bu konuda herhangi biriyle) paylaşmamalısınız.
 - Alchemy'nin çekirdek API'sini kullanarak blokzincirden okuma yapabilirsiniz, ancak ona yazmak için işlemlerinizi Alchemy aracılığıyla göndermeden önce imzalamak üzere başka bir şey kullanmanız gerekecektir (bu, diğer herhangi bir [düğüm hizmeti](/developers/docs/nodes-and-clients/nodes-as-a-service/) için de aynıdır).
 
-### 2\. "İmzalayıcı" (signer) nedir?
+### 2\. "İmzalayıcı" (signer) nedir? {#what-is-a-signer}
 
 - İmzalayıcılar, özel anahtarınızı kullanarak sizin adınıza işlemleri imzalar. Bu eğitimde işlemimizi imzalamak için [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) kullanacağız, ancak başka herhangi bir Web3 kütüphanesini de kullanabilirsiniz.
 - Ön uçta (frontend), sizin adınıza işlemleri imzalayacak ve gönderecek olan [MetaMask](https://metamask.io/) iyi bir imzalayıcı örneğidir.
@@ -55,7 +55,7 @@ Bu eğitimde kullanacağımız şey budur.
 
 Tamam, bu sorulardan birkaçını aradan çıkardığımıza göre, eğitime geçebiliriz. Alchemy [Discord](https://discord.gg/gWuC7zB) kanalında istediğiniz zaman soru sormaktan çekinmeyin!
 
-### 7\. Güvenli, gaz için optimize edilmiş ve gizli işlemler nasıl gönderilir?
+### 7\. Güvenli, gaz için optimize edilmiş ve gizli işlemler nasıl gönderilir? {#how-to-send-secure-gas-optimized-and-private-transactions}
 
 - [Alchemy'nin bir dizi işlem kaynağı vardır](https://www.alchemy.com/docs/sending-transactions). Bunları işlemler göndermek, gerçekleşmeden önce işlemleri simüle etmek, gizli işlemler göndermek ve gaz için optimize edilmiş işlemler göndermek için kullanabilirsiniz.
 - İşleminiz bellek havuzundan çekilip zincire eklendiğinde uyarılmak için [Alchemy web kancalarını (webhooks)](https://www.alchemy.com/docs/reference/webhooks-overview) da kullanabilirsiniz.
@@ -122,7 +122,7 @@ PRIVATE_KEY = "your-private-key"
 </AlertContent>
 </Alert>
 
-### 7\. `sendTx.js` dosyasını oluşturun
+### 7\. `sendTx.js` dosyasını oluşturun {#create-sendtx-js}
 
 Harika, artık hassas verilerimizi bir `.env` dosyasında koruduğumuza göre kodlamaya başlayabiliriz. İşlem gönderme örneğimiz için, Sepolia musluğuna ETH'yi geri göndereceğiz.
 
@@ -189,7 +189,7 @@ Terminalinize veya komut satırınıza geri dönün ve şunu çalıştırın:
 node sendTx.js
 ```
 
-### 9\. İşleminizi Bellek Havuzunda (Mempool) görün
+### 9\. İşleminizi Bellek Havuzunda (Mempool) görün {#see-your-transaction-in-the-mempool}
 
 Alchemy kontrol panelinizdeki [Bellek Havuzu (Mempool) sayfasını](https://dashboard.alchemy.com/mempool) açın ve işleminizi bulmak için oluşturduğunuz uygulamaya göre filtreleyin. Burası, işlemimizin beklemede (pending) durumundan kazılmış (mined) durumuna (başarılıysa) veya başarısızsa düşmüş (dropped) durumuna geçişini izleyebileceğimiz yerdir. "Kazılmış", "beklemede" ve "düşmüş" işlemleri yakalamak için bunu "Tümü" (All) olarak tuttuğunuzdan emin olun. Ayrıca `0x31b98d14007bdee637298086988a0bbd31184523` adresine gönderilen işlemleri arayarak da işleminizi arayabilirsiniz.
 

@@ -1,6 +1,6 @@
 ---
 title: Online komunity
-description: Objevte online fóra, chatovací místnosti a komunity na sociálních sítích, kde se scházejí nadšenci do Etherea, aby diskutovali a spolupracovali.
+description: "Objevte online fóra, chatovací místnosti a komunity na sociálních sítích, kde se scházejí nadšenci do Etherea, aby diskutovali a spolupracovali."
 lang: cs
 ---
 

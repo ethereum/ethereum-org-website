@@ -760,7 +760,7 @@ Vì chúng ta sử dụng hàm `<address>.call()` cấp thấp, chúng ta không
 
 Đây là cách chúng ta xác minh rằng mã [phát ra một sự kiện một cách chính xác](https://getfoundry.sh/reference/cheatcodes/expect-emit/) trong Foundry.
 
-### Máy khách
+### Máy khách {#the-client}
 
 Một điều bạn không có được với các bài kiểm tra Solidity là mã JavaScript mà bạn có thể cắt và dán vào ứng dụng của riêng mình. Phiên bản gốc của hướng dẫn này đã triển khai WORM lên Optimism Goerli, mạng lưới này hiện đã ngừng hoạt động. Để chạy máy khách ngày nay, hãy triển khai lại WORM lên một mạng lưới OP Stack được hỗ trợ như [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), sau đó sử dụng địa chỉ hợp đồng thu được trong máy khách JavaScript.
 

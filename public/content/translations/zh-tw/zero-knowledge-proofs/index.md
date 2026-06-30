@@ -1,7 +1,7 @@
 ---
-title: 什麼是零知識證明？
-metaTitle: 零知識證明
-description: 適合初學者的零知識證明非技術性介紹。
+title: "什麼是零知識證明？"
+metaTitle: "零知識證明"
+description: "適合初學者的零知識證明非技術性介紹。"
 lang: zh-tw
 ---
 
@@ -58,8 +58,10 @@ lang: zh-tw
       <p>
         在<a href="/decentralized-identity/#national-and-government-id">去中心化身分案例研究</a>中了解更多關於不丹 NDI 的資訊。
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### 人類證明 {#proof-of-humanity}
@@ -130,7 +132,7 @@ World ID 依賴於以太坊基金會 [PSE 團隊](https://pse.dev/)開發的 [Se
 - Alice 向 Bob 展示一筆交易，顯示她投票給了 `option B`（這是無效的，因為該公鑰在系統中不再與 Alice 的身分關聯）。
 - 在處理訊息時，協調員會跳過 Alice 對 `option B` 的投票，只計算對 `option A` 的投票。因此，Bob 試圖與 Alice 共謀並操縱鏈上投票的企圖失敗了。
 
-使用 MACI _確實_需要信任協調員不會與行賄者共謀，也不會試圖自己賄賂投票者。協調員可以解密使用者訊息（建立證明所必需的），因此他們可以準確地驗證每個人的投票方式。
+使用 MACI <em>確實</em>需要信任協調員不會與行賄者共謀，也不會試圖自己賄賂投票者。協調員可以解密使用者訊息（建立證明所必需的），因此他們可以準確地驗證每個人的投票方式。
 
 但在協調員保持誠實的情況下，MACI 代表了一個強大的工具，可以保證鏈上投票的神聖性。這解釋了它在嚴重依賴每個人投票選擇完整性的二次方融資應用程式（例如 [clr.fund](https://clr.fund/#/about/maci)）中受歡迎的原因。
 

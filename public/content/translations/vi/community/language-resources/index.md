@@ -1,6 +1,6 @@
 ---
-title: Tài nguyên ngôn ngữ
-description: Các tài nguyên không phải tiếng Anh để tìm hiểu về Ethereum
+title: "Tài nguyên ngôn ngữ"
+description: "Các tài nguyên không phải tiếng Anh để tìm hiểu về Ethereum"
 lang: vi
 ---
 

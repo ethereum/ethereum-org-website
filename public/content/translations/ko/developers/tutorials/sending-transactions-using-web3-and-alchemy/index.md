@@ -27,7 +27,8 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 - 이는 Alchemy가 여러분을 대신하여 트랜잭션에 서명하고 전송할 수 없음을 의미합니다. 그 이유는 보안 목적 때문입니다. Alchemy는 절대 개인 키 공유를 요구하지 않으며, 여러분도 호스팅된 노드(또는 그 누구와도)와 개인 키를 공유해서는 안 됩니다.
 - Alchemy의 핵심 API를 사용하여 블록체인에서 데이터를 읽을 수는 있지만, 데이터를 쓰려면 Alchemy를 통해 트랜잭션을 전송하기 전에 다른 도구를 사용하여 트랜잭션에 서명해야 합니다(이는 다른 모든 [노드 서비스](/developers/docs/nodes-and-clients/nodes-as-a-service/)에서도 마찬가지입니다).
 
-### 2\. "서명자(signer)"란 무엇인가요?
+### 2\. "서명자(signer)"란 무엇인가요? {#what-is-a-signer}
+
 - 서명자는 개인 키를 사용하여 여러분을 대신해 트랜잭션에 서명합니다. 이 튜토리얼에서는 트랜잭션에 서명하기 위해 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)를 사용할 것이지만, 다른 Web3 라이브러리를 사용할 수도 있습니다.
 - 프론트엔드에서 서명자의 좋은 예로는 여러분을 대신해 트랜잭션에 서명하고 전송하는 [메타마스크](https://metamask.io/)가 있습니다.
 ### 3\. 왜 트랜잭션에 서명해야 하나요? {#why-do-i-need-to-sign-my-transactions}
@@ -57,7 +58,8 @@ Web3를 사용할 때 `eth_sendRawTransaction`는 [web3.eth.sendSignedTransactio
 
 좋습니다. 이제 몇 가지 궁금증을 해결했으니 튜토리얼로 넘어가 보겠습니다. 언제든지 Alchemy [디스코드](https://discord.gg/gWuC7zB)에서 자유롭게 질문해 주세요!
 
-### 7\. 안전하고 가스가 최적화된 비공개 트랜잭션을 전송하는 방법은 무엇인가요?
+### 7\. 안전하고 가스가 최적화된 비공개 트랜잭션을 전송하는 방법은 무엇인가요? {#how-to-send-secure-gas-optimized-and-private-transactions}
+
 - [Alchemy는 트랜잭션 리소스 세트를 제공합니다](https://www.alchemy.com/docs/sending-transactions). 이를 사용하여 트랜잭션을 전송하고, 트랜잭션이 발생하기 전에 시뮬레이션하며, 비공개 트랜잭션을 전송하고, 가스가 최적화된 트랜잭션을 전송할 수 있습니다.
 - 또한 [Alchemy 웹훅(webhook)](https://www.alchemy.com/docs/reference/webhooks-overview)을 사용하여 트랜잭션이 멤풀에서 가져와져 체인에 추가될 때 알림을 받을 수 있습니다.
 
@@ -123,7 +125,8 @@ PRIVATE_KEY = "your-private-key"
 </AlertContent>
 </Alert>
 
-### 7\. `sendTx.js` 파일 생성하기
+### 7\. `sendTx.js` 파일 생성하기 {#create-sendtx-js}
+
 좋습니다. 이제 `.env` 파일에 민감한 데이터를 안전하게 보호했으니 코딩을 시작해 보겠습니다. 트랜잭션 전송 예제에서는 Sepolia 퍼싯으로 ETH를 다시 전송할 것입니다.
 
 예제 트랜잭션을 구성하고 전송할 `sendTx.js` 파일을 생성하고, 다음 코드 줄을 추가합니다.
@@ -160,7 +163,7 @@ async function main() {
 main();
 ```
 
-**6번째 줄**의 주소를 본인의 공개 주소로 대체해야 합니다.
+<strong>6번째 줄</strong>의 주소를 본인의 공개 주소로 대체해야 합니다.
 
 이제 이 코드를 실행하기 전에 여기에 있는 몇 가지 구성 요소에 대해 이야기해 보겠습니다.
 
@@ -189,7 +192,8 @@ main();
 node sendTx.js
 ```
 
-### 9\. 멤풀에서 트랜잭션 확인하기
+### 9\. 멤풀에서 트랜잭션 확인하기 {#see-your-transaction-in-the-mempool}
+
 Alchemy 대시보드에서 [멤풀 페이지](https://dashboard.alchemy.com/mempool)를 열고 생성한 앱으로 필터링하여 트랜잭션을 찾습니다. 여기서 트랜잭션이 대기(pending) 상태에서 채굴(mined) 상태(성공 시) 또는 삭제(dropped) 상태(실패 시)로 전환되는 것을 지켜볼 수 있습니다. "채굴됨(mined)", "대기 중(pending)", "삭제됨(dropped)" 트랜잭션을 모두 포착할 수 있도록 "All(모두)"로 유지하세요. 주소 `0x31b98d14007bdee637298086988a0bbd31184523`으로 전송된 트랜잭션을 검색하여 트랜잭션을 찾을 수도 있습니다.
 
 트랜잭션을 찾은 후 세부 정보를 보려면 tx 해시를 선택하세요. 그러면 다음과 같은 화면으로 이동합니다.

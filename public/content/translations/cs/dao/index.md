@@ -133,7 +133,8 @@ _Typicky se používá pro decentralizovaný vývoj a správu protokolů a [dece
 - [Seznam DAO na Tally.xyz](https://www.tally.xyz/explore)
 - [Seznam DAO na DeGov.AI](https://apps.degov.ai/)
 
-### Založte DAO
+### Založte DAO {#start-a-dao}
+
 - [Založte DAO pomocí DAOHaus](https://app.daohaus.club/summon)
 - [Založte Governor DAO pomocí Tally](https://www.tally.xyz/get-started)
 - [Vytvořte DAO poháněné Aragonem](https://aragon.org/product)

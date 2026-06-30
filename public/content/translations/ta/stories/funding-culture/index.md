@@ -9,7 +9,7 @@ tags:
   - "படைப்பு உரிமை"
 published: "2025-05-30"
 image: /content/stories/funding-culture/pplpleasr-hero.png
-breadcrumb: கலாச்சாரத்தை நகர்த்துதல்
+breadcrumb: "கலாச்சாரத்தை நகர்த்துதல்"
 lang: ta
 ---
 

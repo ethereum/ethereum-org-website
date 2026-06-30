@@ -1,6 +1,6 @@
 ---
-title: 合併如何影響 ETH 供應量
-description: 合併如何影響 ETH 供應量的詳細分析
+title: "合併如何影響 ETH 供應量"
+description: "合併如何影響 ETH 供應量的詳細分析"
 lang: zh-tw
 ---
 

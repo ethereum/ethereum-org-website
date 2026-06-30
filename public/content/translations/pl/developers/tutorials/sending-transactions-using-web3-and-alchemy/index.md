@@ -24,7 +24,8 @@ Podobnie jak większość programistów blockchain na początku swojej drogi, mo
 - Oznacza to, że Alchemy nie może podpisywać i wysyłać transakcji w Twoim imieniu. Powodem tego są względy bezpieczeństwa. Alchemy nigdy nie poprosi Cię o udostępnienie klucza prywatnego i nigdy nie powinieneś udostępniać swojego klucza prywatnego hostowanemu węzłowi (ani nikomu innemu).
 - Możesz odczytywać dane z blockchaina za pomocą głównego API Alchemy, ale aby do niego zapisywać, będziesz musiał użyć czegoś innego do podpisania swoich transakcji przed wysłaniem ich przez Alchemy (dotyczy to również każdej innej [usługi węzła](/developers/docs/nodes-and-clients/nodes-as-a-service/)).
 
-### 2\. Czym jest „signer”?
+### 2\. Czym jest „signer”? {#what-is-a-signer}
+
 - Signery będą podpisywać transakcje za Ciebie przy użyciu Twojego klucza prywatnego. W tym samouczku użyjemy [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) do podpisania naszej transakcji, ale możesz również użyć dowolnej innej biblioteki Web3.
 - Na frontendzie dobrym przykładem signera byłby [MetaMask](https://metamask.io/), który podpisze i wyśle transakcje w Twoim imieniu.
 ### 3\. Dlaczego muszę podpisywać swoje transakcje? {#why-do-i-need-to-sign-my-transactions}
@@ -54,7 +55,8 @@ Tego właśnie będziemy używać w tym samouczku.
 
 Okej, skoro mamy już za sobą kilka z tych pytań, przejdźmy do samouczka. Śmiało zadawaj pytania w dowolnym momencie na [Discordzie](https://discord.gg/gWuC7zB) Alchemy!
 
-### 7\. Jak wysyłać bezpieczne, zoptymalizowane pod kątem gazu i prywatne transakcje?
+### 7\. Jak wysyłać bezpieczne, zoptymalizowane pod kątem gazu i prywatne transakcje? {#how-to-send-secure-gas-optimized-and-private-transactions}
+
 - [Alchemy posiada zestaw zasobów dotyczących transakcji](https://www.alchemy.com/docs/sending-transactions). Możesz ich użyć do wysyłania transakcji, symulowania transakcji przed ich wykonaniem, wysyłania prywatnych transakcji oraz wysyłania transakcji zoptymalizowanych pod kątem gazu.
 - Możesz również użyć [webhooków Alchemy](https://www.alchemy.com/docs/reference/webhooks-overview), aby otrzymywać powiadomienia, gdy Twoja transakcja zostanie pobrana z mempoola i dodana do łańcucha.
 
@@ -120,7 +122,8 @@ Nie commituj pliku <code>.env</code>! Upewnij się, że nigdy nie udostępniasz 
 </AlertContent>
 </Alert>
 
-### 7\. Utwórz plik `sendTx.js`
+### 7\. Utwórz plik `sendTx.js` {#create-sendtx-js}
+
 Świetnie, teraz gdy nasze wrażliwe dane są chronione w pliku `.env`, zacznijmy kodować. W naszym przykładzie wysyłania transakcji odeślemy ETH z powrotem do kranika Sepolia.
 
 Utwórz plik `sendTx.js`, w którym skonfigurujemy i wyślemy naszą przykładową transakcję, a następnie dodaj do niego następujące wiersze kodu:
@@ -186,7 +189,8 @@ Wróć do swojego terminala lub wiersza poleceń i uruchom:
 node sendTx.js
 ```
 
-### 9\. Zobacz swoją transakcję w mempoolu
+### 9\. Zobacz swoją transakcję w mempoolu {#see-your-transaction-in-the-mempool}
+
 Otwórz [stronę Mempool](https://dashboard.alchemy.com/mempool) w swoim pulpicie nawigacyjnym Alchemy i przefiltruj według utworzonej aplikacji, aby znaleźć swoją transakcję. To tutaj możemy obserwować, jak nasza transakcja przechodzi ze stanu oczekującego (pending) do stanu wydobytego (mined) (jeśli się powiedzie) lub odrzuconego (dropped), jeśli się nie powiedzie. Upewnij się, że masz ustawione „All” (Wszystkie), aby uchwycić transakcje „mined”, „pending” i „dropped”. Możesz również wyszukać swoją transakcję, szukając transakcji wysłanych na adres `0x31b98d14007bdee637298086988a0bbd31184523` .
 
 Aby wyświetlić szczegóły swojej transakcji po jej znalezieniu, wybierz hash transakcji, co powinno przenieść Cię do widoku wyglądającego tak:

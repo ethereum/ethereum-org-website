@@ -22,7 +22,7 @@ incomplete: true
 - [உங்கள் முதல் திறன் ஒப்பந்தத்தை எழுதுங்கள்](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity ஐ எவ்வாறு தொகுப்பது மற்றும் நிலைநிறுத்துவது என்பதை அறிக](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## தொடக்கநிலை குறிப்புகள் மற்றும் இணைப்புகள்
+## தொடக்கநிலை குறிப்புகள் மற்றும் இணைப்புகள் {#beginner-references-and-links}
 
 **Nethereum நிரலகம் மற்றும் VS Code Solidity அறிமுகம்**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [ERC-20 திறன் ஒப்பந்த இருப்பை வினவுதல்](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [ஒரு கணக்கிற்கு ஈதரைப் பரிமாற்றம் செய்தல்](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... மேலும் பல!
-## இடைநிலை கட்டுரைகள்
+## இடைநிலை கட்டுரைகள் {#intermediate-articles}
 
 - [Nethereum தொடங்குதல் & முதல் திட்டம்](https://docs.nethereum.com/docs/getting-started/first-project)
 - [உங்கள் சொந்த மேம்பாட்டு சோதனைச் சங்கிலிகளை நிலைநிறுத்துங்கள்](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [Nethereum நிகழ்நேர ஸ்ட்ரீமிங்](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido மற்றும் Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum மற்றும் Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## மேம்பட்ட பயன்பாட்டு முறைகள்
+## மேம்பட்ட பயன்பாட்டு முறைகள் {#advanced-use-patterns}
 
 - [Azure திறவுகோல் பெட்டகம் மற்றும் Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum பின்தள குறிப்பு கட்டமைப்பு](https://github.com/Nethereum/ujo-backend)
-## .NET திட்டங்கள், கருவிகள் மற்றும் பிற வேடிக்கையான விஷயங்கள்
+## .NET திட்டங்கள், கருவிகள் மற்றும் பிற வேடிக்கையான விஷயங்கள் {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _உலாவியில் Nethereum குறியீட்டுத் துணுக்குகளைத் தொகுக்கவும், உருவாக்கவும் மற்றும் இயக்கவும்_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor இல் UI உடன் Nethereum குறியீடு உருவாக்கம் (codegen)_

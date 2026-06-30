@@ -1,7 +1,7 @@
 ---
-title: J'ai été victime d'une arnaque ou j'ai perdu des fonds
+title: "J'ai été victime d'une arnaque ou j'ai perdu des fonds"
 metaTitle: Aide et signalement d'arnaques
-description: Que faire si vous avez été victime d'une arnaque, comment sécuriser vos actifs restants et où signaler la fraude.
+description: "Que faire si vous avez été victime d'une arnaque, comment sécuriser vos actifs restants et où signaler la fraude."
 lang: fr
 ---
 

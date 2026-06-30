@@ -760,7 +760,7 @@ contract WORM is Cache {
 
 هذه هي الطريقة التي نتحقق بها من أن الكود [يُصدر حدثًا بشكل صحيح](https://getfoundry.sh/reference/cheatcodes/expect-emit/) في Foundry.
 
-### العميل
+### العميل {#the-client}
 
 الشيء الوحيد الذي لا تحصل عليه مع اختبارات Solidity هو كود JavaScript الذي يمكنك قصه ولصقه في تطبيقك الخاص. نشرت النسخة الأصلية من هذا البرنامج التعليمي عقد WORM على شبكة أوبتيميزم غويرلي، والتي تم إيقافها منذ ذلك الحين. لتشغيل العميل اليوم، أعد نشر WORM على شبكة OP Stack مدعومة مثل [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)، ثم استخدم عنوان العقد الناتج في عميل JavaScript.
 

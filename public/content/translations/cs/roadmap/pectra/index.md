@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: Přečtěte si o aktualizaci protokolu Pectra
+description: "Přečtěte si o aktualizaci protokolu Pectra"
 lang: cs
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -117,7 +117,8 @@ _Co přináší aktualizace Pectra? - Christine Kim_
 
 _Aktualizace Etherea Pectra: Co potřebují vědět stakeři — Blockdaemon_
 
-## Další čtení
+## Další čtení {#further-reading}
+
 - [Plán vývoje Etherea](/roadmap/)
 - [Často kladené dotazy (FAQ) k aktualizaci Pectra](https://epf.wiki/#/wiki/pectra-faq)
 - [Jak Pectra zlepšuje zkušenosti stakerů](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

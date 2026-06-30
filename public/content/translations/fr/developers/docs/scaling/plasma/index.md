@@ -54,7 +54,7 @@ Plasma utilise un contrat maître fonctionnant sur Ethereum pour traiter les ent
 
 Pour entrer dans la chaîne Plasma, Alice (l'utilisatrice) devra déposer des ETH ou tout jeton ERC-20 dans le contrat Plasma. L'opérateur Plasma, qui surveille les dépôts du contrat, recrée un montant égal au dépôt initial d'Alice et le libère à son adresse sur la chaîne Plasma. Alice est tenue d'attester de la réception des fonds sur la chaîne enfant et peut ensuite utiliser ces fonds pour des transactions.
 
-#### Sortir de la chaîne Plasma
+#### Sortir de la chaîne Plasma {#exiting-the-plasma-chain}
 
 Sortir de la chaîne Plasma est plus complexe que d'y entrer pour plusieurs raisons. La principale est que, bien qu'Ethereum dispose d'informations sur l'état de la chaîne Plasma, il ne peut pas vérifier si ces informations sont vraies ou non. Un utilisateur malveillant pourrait faire une affirmation incorrecte (« J'ai 1000 ETH ») et s'en tirer en fournissant de fausses preuves pour étayer sa réclamation.
 
@@ -164,7 +164,7 @@ Plusieurs projets fournissent des implémentations de Plasma que vous pouvez int
 
 - [Polygon](https://polygon.technology/) (anciennement Matic Network)
 
-## Lectures complémentaires
+## Lectures complémentaires {#further-reading}
 
 - [Un petit rappel de ce que signifie la « sécurité partagée » et pourquoi elle est si importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Chaînes latérales vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)

@@ -9,7 +9,7 @@ tags:
   - "творча власність"
 published: "2025-05-30"
 image: /content/stories/funding-culture/pplpleasr-hero.png
-breadcrumb: Просування культури
+breadcrumb: "Просування культури"
 lang: uk
 ---
 

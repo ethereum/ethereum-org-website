@@ -36,7 +36,7 @@ Non. Aucun ordinateur quantique ne peut aujourd'hui briser la cryptographie d'Et
 
 </ExpandableCard>
 
-### Qu'est-ce qui est fait ?
+### Qu'est-ce qui est fait ? {#what-is-being-done}
 
 Ethereum est actuellement le défenseur le plus proactif contre les menaces quantiques dans l'écosystème de la chaîne de blocs. La Fondation Ethereum a formé une **équipe de sécurité post-quantique** dédiée en janvier 2026, et des travaux actifs s'étendent à plusieurs équipes de clients et groupes de recherche. Le travail de l'équipe post-quantique de la Fondation Ethereum est suivi publiquement sur [pq.ethereum.org](https://pq.ethereum.org).
 

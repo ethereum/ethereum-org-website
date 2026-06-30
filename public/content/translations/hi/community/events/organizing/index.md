@@ -1,7 +1,7 @@
 ---
-title: इथेरियम घटना कैसे आयोजित करें
-metaTitle: इथेरियम घटना का आयोजन
-description: इथेरियम घटना कैसे आयोजित करें
+title: "इथेरियम घटना कैसे आयोजित करें"
+metaTitle: "इथेरियम घटना का आयोजन"
+description: "इथेरियम घटना कैसे आयोजित करें"
 lang: hi
 hideEditButton: true
 ---
@@ -204,7 +204,8 @@ X.com आपके सोशल मीडिया प्रचार की र
 
 इस लेख में अपनी अंतर्दृष्टि साझा करके योगदान देने वाले सभी लोगों को बहुत-बहुत धन्यवाद: ETHBratislava से Slavo Fabisik; ETH Kipu और ETH Latam से Lola; ETH Belgrade से Tanja Mladenovic, Ethereum Bogota से Juan David; ETHWarsaw से Monika Zając; NapulETH से Raffaele Orefice; ETH Riyadh से Xiao Wu(Ling); urbe.eth से Marco; ETH Dublin से Caolán Walsh; ETHCluj से Alex Males; और ETH Slovenia से Stanko Devic।
 
-## संसाधन
+## संसाधन {#resources}
+
 पॉडकास्ट: शुरू से अंत तक ETH घटना का आयोजन और प्रचार कैसे करें:
 
 - [Out of Ordinary द्वारा ETHWarsaw केस स्टडी](https://www.youtube.com/watch?v=io2Dx1ouz8o)

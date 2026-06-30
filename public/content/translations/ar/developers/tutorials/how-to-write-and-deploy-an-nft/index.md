@@ -51,7 +51,7 @@ published: 2021-04-22
 
 من أجل نشر عقدنا الذكي على شبكة الاختبار، سنحتاج إلى بعض <span dir="ltr">ETH</span> الوهمي. للحصول على <span dir="ltr">ETH</span>، يمكنك الذهاب إلى [صنبور Sepolia](https://sepoliafaucet.com/) المستضاف بواسطة Alchemy، وتسجيل الدخول وإدخال عنوان حسابك، ثم النقر على "Send Me ETH" (أرسل لي ETH). يجب أن ترى <span dir="ltr">ETH</span> في حساب ميتاماسك الخاص بك بعد فترة وجيزة!
 
-## الخطوة 5: التحقق من رصيدك
+## الخطوة 5: التحقق من رصيدك {#check-balance}
 
 للتحقق مرة أخرى من وجود رصيدنا، دعنا نُجري طلب [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) باستخدام [أداة sandbox الخاصة بـ Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). سيؤدي هذا إلى إرجاع مقدار <span dir="ltr">ETH</span> في محفظتنا. بعد إدخال عنوان حساب ميتاماسك الخاص بك والنقر على "Send Request" (إرسال طلب)، يجب أن ترى استجابة مثل هذه:
 
@@ -60,7 +60,7 @@ published: 2021-04-22
 > **ملاحظة** هذه النتيجة بوحدة <span dir="ltr">Wei</span>، وليس <span dir="ltr">ETH</span>. تُستخدم <span dir="ltr">Wei</span> كأصغر فئة من إيثر. التحويل من <span dir="ltr">Wei</span> إلى <span dir="ltr">ETH</span> هو <span dir="ltr">1 eth = 10<sup>18</sup> wei</span>. لذا إذا قمنا بتحويل <span dir="ltr">0xde0b6b3a7640000</span> إلى النظام العشري، فسنحصل على <span dir="ltr">1\*10<sup>18</sup> wei</span>، وهو ما يعادل <span dir="ltr">1 ETH</span>.
 
 رائع! أموالنا الوهمية كلها موجودة.
-## الخطوة 6: تهيئة مشروعنا
+## الخطوة 6: تهيئة مشروعنا {#initialize-project}
 
 أولاً، سنحتاج إلى إنشاء مجلد لمشروعنا. انتقل إلى سطر الأوامر واكتب:
 

@@ -253,7 +253,8 @@ ii. 옵티미스틱 롤업을 사용하는 개발자 및 프로젝트 팀은 이
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## 옵티미스틱 롤업에 대한 추가 자료
+## 옵티미스틱 롤업에 대한 추가 자료 {#further-reading-on-optimistic-rollups}
+
 - [옵티미스틱 롤업은 어떻게 작동하나요? (완벽 가이드)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [아비트럼 필수 가이드](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [이더리움 롤업 실전 가이드](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

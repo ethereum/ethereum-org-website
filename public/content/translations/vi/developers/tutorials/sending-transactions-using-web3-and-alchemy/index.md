@@ -24,7 +24,8 @@ Giống như hầu hết các nhà phát triển chuỗi khối khi mới bắt 
 - Điều này có nghĩa là Alchemy không thể thay mặt bạn ký và gửi các giao dịch. Lý do cho việc này là vì mục đích bảo mật. Alchemy sẽ không bao giờ yêu cầu bạn chia sẻ khóa riêng tư của mình và bạn cũng không bao giờ nên chia sẻ khóa riêng tư của mình với một nút được lưu trữ (hoặc với bất kỳ ai khác).
 - Bạn có thể đọc từ chuỗi khối bằng cách sử dụng API cốt lõi của Alchemy, nhưng để ghi vào đó, bạn sẽ cần sử dụng một công cụ khác để ký các giao dịch của mình trước khi gửi chúng qua Alchemy (điều này cũng tương tự đối với bất kỳ [dịch vụ nút](/developers/docs/nodes-and-clients/nodes-as-a-service/) nào khác).
 
-### 2\. "Trình ký" (signer) là gì?
+### 2\. "Trình ký" (signer) là gì? {#what-is-a-signer}
+
 - Các trình ký sẽ ký các giao dịch thay cho bạn bằng cách sử dụng khóa riêng tư của bạn. Trong hướng dẫn này, chúng ta sẽ sử dụng [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) để ký giao dịch của mình, nhưng bạn cũng có thể sử dụng bất kỳ thư viện Web3 nào khác.
 - Ở frontend, một ví dụ điển hình về trình ký là [MetaMask](https://metamask.io/), nó sẽ ký và gửi các giao dịch thay mặt bạn.
 ### 3\. Tại sao tôi cần phải ký các giao dịch của mình? {#why-do-i-need-to-sign-my-transactions}
@@ -54,7 +55,8 @@ Khi sử dụng Web3, `eth_sendRawTransaction` được truy cập bằng cách 
 
 Được rồi, bây giờ chúng ta đã giải quyết xong một vài câu hỏi này, hãy chuyển sang phần hướng dẫn. Đừng ngần ngại đặt câu hỏi bất cứ lúc nào trong [Discord](https://discord.gg/gWuC7zB) của Alchemy!
 
-### 7\. Làm cách nào để gửi các giao dịch an toàn, tối ưu hóa Gas và riêng tư?
+### 7\. Làm cách nào để gửi các giao dịch an toàn, tối ưu hóa Gas và riêng tư? {#how-to-send-secure-gas-optimized-and-private-transactions}
+
 - [Alchemy có một bộ tài nguyên giao dịch](https://www.alchemy.com/docs/sending-transactions). Bạn có thể sử dụng chúng để gửi các giao dịch, mô phỏng các giao dịch trước khi chúng diễn ra, gửi các giao dịch riêng tư và gửi các giao dịch được tối ưu hóa Gas
 - Bạn cũng có thể sử dụng [webhook của Alchemy](https://www.alchemy.com/docs/reference/webhooks-overview) để được cảnh báo khi giao dịch của bạn được lấy ra khỏi mempool và thêm vào Chuỗi
 
@@ -120,7 +122,8 @@ PRIVATE_KEY = "your-private-key"
 </AlertContent>
 </Alert>
 
-### 7\. Tạo tệp `sendTx.js`
+### 7\. Tạo tệp `sendTx.js` {#create-sendtx-js}
+
 Tuyệt vời, bây giờ chúng ta đã bảo vệ dữ liệu nhạy cảm của mình trong tệp `.env`, hãy bắt đầu viết mã. Đối với ví dụ gửi giao dịch của chúng ta, chúng ta sẽ chuyển ETH trở lại vòi Sepolia.
 
 Tạo một tệp `sendTx.js`, đây là nơi chúng ta sẽ cấu hình và gửi giao dịch ví dụ của mình, và thêm các dòng mã sau vào đó:
@@ -186,7 +189,8 @@ Có hai loại giao dịch chính có thể được gửi trên Ethereum.
 node sendTx.js
 ```
 
-### 9\. Xem giao dịch của bạn trong mempool
+### 9\. Xem giao dịch của bạn trong mempool {#see-your-transaction-in-the-mempool}
+
 Mở [trang Mempool](https://dashboard.alchemy.com/mempool) trong bảng điều khiển Alchemy của bạn và lọc theo ứng dụng bạn đã tạo để tìm giao dịch của mình. Đây là nơi chúng ta có thể theo dõi giao dịch của mình chuyển từ trạng thái chờ xử lý (pending) sang trạng thái đã được khai thác (mined) (nếu thành công) hoặc trạng thái bị loại bỏ (dropped) nếu không thành công. Đảm bảo giữ nó ở mức “All” (Tất cả) để bạn nắm bắt được các giao dịch “mined”, “pending” và “dropped”. Bạn cũng có thể tìm kiếm giao dịch của mình bằng cách tìm các giao dịch được gửi đến Địa chỉ `0x31b98d14007bdee637298086988a0bbd31184523` .
 
 Để xem chi tiết giao dịch của bạn sau khi bạn đã tìm thấy nó, hãy chọn Mã băm giao dịch (tx hash), thao tác này sẽ đưa bạn đến một chế độ xem trông giống như thế này:

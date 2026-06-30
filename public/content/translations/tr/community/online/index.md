@@ -1,6 +1,6 @@
 ---
-title: Çevrimiçi topluluklar
-description: Ethereum meraklılarının tartışmak ve işbirliği yapmak için bir araya geldiği çevrimiçi forumları, sohbet odalarını ve sosyal medya topluluklarını keşfedin.
+title: "Çevrimiçi topluluklar"
+description: "Ethereum meraklılarının tartışmak ve işbirliği yapmak için bir araya geldiği çevrimiçi forumları, sohbet odalarını ve sosyal medya topluluklarını keşfedin."
 lang: tr
 ---
 

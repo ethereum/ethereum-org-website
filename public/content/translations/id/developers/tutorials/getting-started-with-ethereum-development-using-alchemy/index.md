@@ -39,7 +39,7 @@ Anda juga dapat menarik kunci API yang ada dengan mengarahkan kursor ke “Apps�
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.gif)
 
-## 3. Buat Permintaan dari Baris Perintah
+## 3. Buat Permintaan dari Baris Perintah {#make-a-request-from-the-command-line}
 
 Berinteraksi dengan rantai blok Ethereum melalui Alchemy menggunakan JSON-RPC dan curl.
 
@@ -66,7 +66,7 @@ _**CATATAN:** Ganti `https://eth-mainnet.alchemyapi.io/v2/demo` dengan kunci API
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. Siapkan Klien Web3 Anda
+## 4. Siapkan Klien Web3 Anda {#set-up-your-web3-client}
 
 **Jika Anda memiliki klien yang sudah ada,** ubah URL penyedia node Anda saat ini ke URL Alchemy dengan kunci API Anda: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -96,7 +96,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. Tulis Skrip Web3 pertama Anda!
+## 5. Tulis Skrip Web3 pertama Anda! {#write-your-first-web3-script}
 
 Sekarang untuk mulai mempraktikkan sedikit pemrograman Web3, kita akan menulis skrip sederhana yang mencetak nomor blok terbaru dari Mainnet Ethereum.
 

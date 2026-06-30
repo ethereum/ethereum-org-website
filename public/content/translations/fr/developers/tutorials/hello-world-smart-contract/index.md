@@ -59,7 +59,7 @@ Pour vérifier que notre solde est bien là, effectuons une requête [eth_getBal
 >
 > Ouf ! Notre faux argent est bien là <Emoji text=":money_mouth_face:" size={1} />.
 
-## Étape 6 : Initialiser notre projet
+## Étape 6 : Initialiser notre projet {#step-6}
 
 Tout d'abord, nous devrons créer un dossier pour notre projet. Accédez à votre ligne de commande et tapez :
 

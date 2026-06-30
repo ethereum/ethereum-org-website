@@ -133,7 +133,8 @@ _Genellikle protokollerin ve [merkeziyetsiz uygulamaların (dapp)](/glossary/#da
 - [Tally.xyz DAO'lar listesi](https://www.tally.xyz/explore)
 - [DeGov.AI DAO'lar listesi](https://apps.degov.ai/)
 
-### Bir DAO başlatın
+### Bir DAO başlatın {#start-a-dao}
+
 - [DAOHaus ile bir DAO oluşturun](https://app.daohaus.club/summon)
 - [Tally ile bir Governor DAO başlatın](https://www.tally.xyz/get-started)
 - [Aragon destekli bir DAO oluşturun](https://aragon.org/product)

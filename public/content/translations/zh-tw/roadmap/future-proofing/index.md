@@ -36,7 +36,7 @@ summaryPoints:
 
 </ExpandableCard>
 
-### 正在採取什麼行動？
+### 正在採取什麼行動？ {#what-is-being-done}
 
 以太坊目前是區塊鏈生態系統中對抗量子威脅最積極的防禦者。以太坊基金會於 2026 年 1 月成立了專門的**後量子安全團隊**，且積極的工作跨越多個客戶端團隊與研究小組。以太坊基金會 (EF) 後量子團隊的工作在 [pq.ethereum.org](https://pq.ethereum.org) 上公開追蹤。
 

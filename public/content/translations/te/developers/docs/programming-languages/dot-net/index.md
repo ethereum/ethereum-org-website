@@ -22,7 +22,7 @@ incomplete: true
 - [మీ మొదటి స్మార్ట్ కాంట్రాక్ట్‌ను రాయండి](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity ని కంపైల్ చేయడం మరియు డిప్లాయ్ చేయడం ఎలాగో తెలుసుకోండి](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## బిగినర్ రిఫరెన్స్‌లు మరియు లింక్‌లు
+## బిగినర్ రిఫరెన్స్‌లు మరియు లింక్‌లు {#beginner-references-and-links}
 
 **Nethereum లైబ్రరీ మరియు VS Code Solidity పరిచయం**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [ERC-20 స్మార్ట్ కాంట్రాక్ట్ బ్యాలెన్స్‌ను క్వెరీ చేయండి](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [ఒక ఖాతాకు ఈథర్‌ను బదిలీ చేయండి](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... ఇంకా మరెన్నో!
-## ఇంటర్మీడియట్ ఆర్టికల్స్
+## ఇంటర్మీడియట్ ఆర్టికల్స్ {#intermediate-articles}
 
 - [Nethereum ప్రారంభించడం & మొదటి ప్రాజెక్ట్](https://docs.nethereum.com/docs/getting-started/first-project)
 - [మీ స్వంత డెవలప్‌మెంట్ టెస్ట్‌చైన్‌లను డిప్లాయ్ చేయండి](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [Nethereum రియల్-టైమ్ స్ట్రీమింగ్](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido మరియు Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum మరియు Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## అడ్వాన్స్‌డ్ యూజ్ ప్యాటర్న్స్
+## అడ్వాన్స్‌డ్ యూజ్ ప్యాటర్న్స్ {#advanced-use-patterns}
 
 - [Azure కీ ఖజానా మరియు Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum బ్యాకెండ్ రిఫరెన్స్ ఆర్కిటెక్చర్](https://github.com/Nethereum/ujo-backend)
-## .NET ప్రాజెక్ట్‌లు, టూల్స్ మరియు ఇతర సరదా విషయాలు
+## .NET ప్రాజెక్ట్‌లు, టూల్స్ మరియు ఇతర సరదా విషయాలు {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _బ్రౌజర్‌లో Nethereum కోడ్ స్నిప్పెట్‌లను కంపైల్ చేయండి, సృష్టించండి మరియు రన్ చేయండి_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor లో UI తో Nethereum కోడ్‌జెన్_

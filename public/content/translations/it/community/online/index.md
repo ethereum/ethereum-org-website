@@ -1,6 +1,6 @@
 ---
-title: Comunità online
-description: Scopri forum online, chat room e comunità sui social media in cui gli appassionati di Ethereum si riuniscono per discutere e collaborare.
+title: "Comunità online"
+description: "Scopri forum online, chat room e comunità sui social media in cui gli appassionati di Ethereum si riuniscono per discutere e collaborare."
 lang: it
 ---
 

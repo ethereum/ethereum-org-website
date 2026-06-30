@@ -82,7 +82,8 @@ Kwa hivyo thamani halisi za aina zenye urefu unaobadilika huhifadhiwa kwenye lun
 
 Pia kuna baadhi ya matukio maalum ambayo yanahitaji matibabu maalum, kama vile aina ya `BitList` ambayo inahitaji kikomo cha urefu kuongezwa wakati wa usanjari na kuondolewa wakati wa kutoa kwenye usanjari. Maelezo kamili yanapatikana katika [vipimo vya SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
-### Kutoa kwenye usanjari
+### Kutoa kwenye usanjari {#deserialization}
+
 Kutoa kipengee hiki kwenye usanjari kunahitaji <b>skema</b>. Skema inafafanua mpangilio kamili wa data iliyosanjariwa ili kila kipengele maalum kiweze kutolewa kwenye usanjari kutoka kwenye blobu ya baiti hadi kwenye kipengee chenye maana huku vipengele vikiwa na aina, thamani, ukubwa na nafasi sahihi. Ni skema inayomwambia mtoaji kwenye usanjari ni thamani zipi ni thamani halisi na zipi ni vifidia. Majina yote ya nyanja hupotea wakati kipengee kinaposanjariwa, lakini hurejeshwa wakati wa kutoa kwenye usanjari kulingana na skema.
 ## Kugeuza kuwa mti wa Merkle (Merkleization) {#merkleization}
 
@@ -134,7 +135,8 @@ Heshi ya (8,9) inapaswa kuwa sawa na heshi (4), ambayo huheshiji na 5 ili kuzali
 8*     9*   10    11   12    13    14    15
 ```
 
-## Usomaji zaidi
+## Usomaji zaidi {#further-reading}
+
 - [Kuboresha Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [Kuboresha Ethereum: Kugeuza kuwa mti wa Merkle](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [Utekelezaji wa SSZ](https://github.com/ethereum/consensus-specs/issues/2138)

@@ -162,13 +162,6 @@ ZK-ரோலப்கள் மற்றும் ஆப்டிமிஸ்ட
 
 - [பாலிகன்](https://polygon.technology/) (முன்பு மேட்டிக் நெட்வொர்க்)
 
-## மேலும் படிக்க
-- ["பகிரப்பட்ட பாதுகாப்பு" என்றால் என்ன, அது ஏன் மிகவும் முக்கியமானது என்பதற்கான விரைவான நினைவூட்டல்](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [பக்கச்சங்கிலிகள் vs பிளாஸ்மா vs ஷார்டிங்](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
-- [பிளாஸ்மாவைப் புரிந்துகொள்ளுதல், பகுதி 1: அடிப்படைகள்](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
-- [பிளாஸ்மாவின் வாழ்வும் மரணமும்](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
-
-_உங்களுக்கு உதவிய சமூக வளத்தைப் பற்றித் தெரியுமா? இந்தப் பக்கத்தைத் திருத்தி அதைச் சேர்க்கவும்!_
 ## பயிற்சிகள்: எத்திரியத்தில் பிளாஸ்மா சங்கிலிகள் {#tutorials}
 
 - [தனியுரிமையைப் பாதுகாக்கும் செயலி சார்ந்த பிளாஸ்மாவை எழுதுங்கள்](/developers/tutorials/app-plasma/) _– பூஜ்ஜிய-அறிவுச் சான்றுகள் மற்றும் புறச்சங்கிலிக் கூறுகளைப் பயன்படுத்தித் தனியுரிமையைப் பாதுகாக்கும் பிளாஸ்மா செயலியை உருவாக்குங்கள்._

@@ -1,6 +1,6 @@
 ---
-title: Ethereum Tanıtım Belgesi
-description: Ethereum'un piyasaya sürülmesinden önce 2013 yılında yayımlanan tanıtım belgesi.
+title: "Ethereum Tanıtım Belgesi"
+description: "Ethereum'un piyasaya sürülmesinden önce 2013 yılında yayımlanan tanıtım belgesi."
 lang: tr
 sidebarDepth: 2
 hideEditButton: true

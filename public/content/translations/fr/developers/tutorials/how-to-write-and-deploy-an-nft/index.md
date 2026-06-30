@@ -51,7 +51,8 @@ Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https:
 
 Afin de déployer notre contrat intelligent sur le réseau de test, nous aurons besoin de faux ETH. Pour obtenir des ETH, vous pouvez vous rendre sur le [faucet Sepolia](https://sepoliafaucet.com/) hébergé par Alchemy, vous connecter et entrer l'adresse de votre compte, puis cliquer sur « Send Me ETH » (Envoyez-moi des ETH). Vous devriez voir des ETH dans votre compte MetaMask peu de temps après !
 
-## Étape 5 : Vérifier votre solde
+## Étape 5 : Vérifier votre solde {#check-balance}
+
 Pour vérifier que notre solde est bien là, faisons une requête [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) en utilisant [l'outil bac à sable d'Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Cela renverra le montant d'ETH dans notre portefeuille. Après avoir saisi l'adresse de votre compte MetaMask et cliqué sur « Send Request » (Envoyer la requête), vous devriez voir une réponse comme celle-ci :
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
@@ -59,7 +60,8 @@ Pour vérifier que notre solde est bien là, faisons une requête [eth_getBalanc
 > **Remarque** Ce résultat est en Wei, pas en ETH. Le Wei est utilisé comme la plus petite dénomination d'ether. La conversion de Wei en ETH est 1 eth = 10<sup>18</sup> Wei. Donc, si nous convertissons 0xde0b6b3a7640000 en décimal, nous obtenons 1\*10<sup>18</sup> Wei, ce qui équivaut à 1 ETH.
 
 Ouf ! Notre fausse monnaie est bien là.
-## Étape 6 : Initialiser notre projet
+## Étape 6 : Initialiser notre projet {#initialize-project}
+
 Tout d'abord, nous devrons créer un dossier pour notre projet. Accédez à votre ligne de commande et tapez :
 
     mkdir my-nft

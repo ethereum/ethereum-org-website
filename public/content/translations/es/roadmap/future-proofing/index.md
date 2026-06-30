@@ -36,7 +36,7 @@ No. Ninguna computadora cuántica actual puede romper la criptografía de Ethere
 
 </ExpandableCard>
 
-### ¿Qué se está haciendo?
+### ¿Qué se está haciendo? {#what-is-being-done}
 
 Ethereum es actualmente el defensor más proactivo contra las amenazas cuánticas en el ecosistema de la cadena de bloques. La Fundación Ethereum formó un **equipo de Seguridad Poscuántica** dedicado en enero de 2026, y el trabajo activo abarca múltiples equipos de clientes y grupos de investigación. El trabajo del equipo Poscuántico de la EF se rastrea públicamente en [pq.ethereum.org](https://pq.ethereum.org).
 

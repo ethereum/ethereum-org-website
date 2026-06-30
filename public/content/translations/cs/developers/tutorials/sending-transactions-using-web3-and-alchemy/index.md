@@ -24,7 +24,8 @@ Stejně jako většina blockchainových vývojářů ve svých začátcích jste
 - To znamená, že Alchemy nemůže podepisovat a odesílat transakce vaším jménem. Důvodem je bezpečnost. Alchemy vás nikdy nepožádá o sdílení vašeho soukromého klíče a vy byste nikdy neměli sdílet svůj soukromý klíč s hostovaným uzlem (ani s nikým jiným).
 - Z blockchainu můžete číst pomocí základního API Alchemy, ale pro zápis do něj budete muset použít něco jiného k podepsání vašich transakcí před jejich odesláním přes Alchemy (to platí i pro jakoukoli jinou [službu uzlu](/developers/docs/nodes-and-clients/nodes-as-a-service/)).
 
-### 2\. Co je to „signer“?
+### 2\. Co je to „signer“? {#what-is-a-signer}
+
 - Signeři (podepisovatelé) za vás podepíší transakce pomocí vašeho soukromého klíče. V tomto tutoriálu budeme k podepsání naší transakce používat [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), ale můžete použít i jakoukoli jinou knihovnu Web3.
 - Na frontendu by byl dobrým příkladem signera [MetaMask](https://metamask.io/), který bude podepisovat a odesílat transakce vaším jménem.
 ### 3\. Proč musím podepisovat své transakce? {#why-do-i-need-to-sign-my-transactions}
@@ -54,7 +55,8 @@ To je to, co budeme používat v tomto tutoriálu.
 
 Dobře, teď, když máme několik těchto otázek z krku, přejděme k tutoriálu. Neváhejte se kdykoli zeptat na [Discordu](https://discord.gg/gWuC7zB) Alchemy!
 
-### 7\. Jak odesílat bezpečné, soukromé transakce s optimalizovaným gasem?
+### 7\. Jak odesílat bezpečné, soukromé transakce s optimalizovaným gasem? {#how-to-send-secure-gas-optimized-and-private-transactions}
+
 - [Alchemy má sadu zdrojů pro transakce](https://www.alchemy.com/docs/sending-transactions). Můžete je použít k odesílání transakcí, simulaci transakcí před jejich provedením, odesílání soukromých transakcí a odesílání transakcí s optimalizovaným gasem.
 - Můžete také použít [webhooky Alchemy](https://www.alchemy.com/docs/reference/webhooks-overview), abyste byli upozorněni, když je vaše transakce vytažena z mempoolu a přidána do řetězce.
 
@@ -120,7 +122,8 @@ Necommitujte <code>.env</code>! Ujistěte se, že svůj soubor <code>.env</code>
 </AlertContent>
 </Alert>
 
-### 7\. Vytvořte soubor `sendTx.js`
+### 7\. Vytvořte soubor `sendTx.js` {#create-sendtx-js}
+
 Skvělé, teď, když máme naše citlivá data chráněna v souboru `.env`, můžeme začít kódovat. Pro náš příklad odeslání transakce budeme posílat ETH zpět do faucetu Sepolia.
 
 Vytvořte soubor `sendTx.js`, ve kterém nakonfigurujeme a odešleme naši ukázkovou transakci, a přidejte do něj následující řádky kódu:
@@ -186,7 +189,8 @@ Přejděte zpět do terminálu nebo příkazového řádku a spusťte:
 node sendTx.js
 ```
 
-### 9\. Podívejte se na svou transakci v mempoolu
+### 9\. Podívejte se na svou transakci v mempoolu {#see-your-transaction-in-the-mempool}
+
 Otevřete [stránku Mempool](https://dashboard.alchemy.com/mempool) na svém řídicím panelu Alchemy a filtrujte podle aplikace, kterou jste vytvořili, abyste našli svou transakci. Zde můžeme sledovat, jak naše transakce přechází ze stavu čekající (pending) do stavu vytěžená (mined) (pokud je úspěšná) nebo zahozená (dropped), pokud je neúspěšná. Ujistěte se, že máte nastaveno „All“ (Vše), abyste zachytili „vytěžené“, „čekající“ a „zahozené“ transakce. Svou transakci můžete také vyhledat tak, že budete hledat transakce odeslané na adresu `0x31b98d14007bdee637298086988a0bbd31184523` .
 
 Chcete-li zobrazit podrobnosti o své transakci, jakmile ji najdete, vyberte hash transakce (tx hash), což by vás mělo přenést do zobrazení, které vypadá takto:

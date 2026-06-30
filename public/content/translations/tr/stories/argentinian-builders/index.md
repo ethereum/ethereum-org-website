@@ -9,7 +9,7 @@ tags:
   - "topluluk"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: Arjantin'den Geliştirmek
+breadcrumb: "Arjantin'den Geliştirmek"
 lang: tr
 ---
 > *Bu hikaye ilk olarak 3 Kasım 2025'te [@Ethereum X profilinde konuk bir ileti dizisi](https://x.com/ethereum/status/1985408315074232397?s=20) olarak yayımlandı. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapıldı.*

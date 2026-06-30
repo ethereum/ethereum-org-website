@@ -1,6 +1,6 @@
 ---
 title: Prova de autoridade (PoA)
-description: Uma explicação do protocolo de consenso de prova de autoridade e seu papel no ecossistema da blockchain.
+description: "Uma explicação do protocolo de consenso de prova de autoridade e seu papel no ecossistema da blockchain."
 lang: pt-br
 ---
 

@@ -9,7 +9,7 @@ tags:
   - "résistance à la censure"
 published: "2026-02-05"
 image: /content/stories/digital-feudalism/tarrence-cover-image.jpeg
-breadcrumb: Possédez votre monde
+breadcrumb: "Possédez votre monde"
 lang: fr
 ---
 

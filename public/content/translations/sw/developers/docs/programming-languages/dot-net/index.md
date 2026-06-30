@@ -22,7 +22,7 @@ Je, unahitaji mwongozo wa kimsingi zaidi kwanza? Angalia [ethereum.org/learn](/l
 - [Andika Mkataba wako Mahiri wa Kwanza](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Jifunze Jinsi ya Kukusanya na Kusambaza Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Marejeleo na viungo vya wanaoanza
+## Marejeleo na viungo vya wanaoanza {#beginner-references-and-links}
 
 **Kutambulisha maktaba ya Nethereum na VS Code Solidity**
 
@@ -42,7 +42,7 @@ Je, unahitaji mwongozo wa kimsingi zaidi kwanza? Angalia [ethereum.org/learn](/l
   - [Hoji Salio la Mkataba Mahiri wa ERC-20](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [Hamisha Etha kwenye Akaunti](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... Na zaidi!
-## Makala ya kati
+## Makala ya kati {#intermediate-articles}
 
 - [Nethereum Kuanza & Mradi wa Kwanza](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Sambaza Minyororo Yako Mwenyewe ya Majaribio ya Maendeleo](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ Je, unahitaji mwongozo wa kimsingi zaidi kwanza? Angalia [ethereum.org/learn](/l
 - [Utiririshaji wa wakati halisi wa Nethereum](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido na Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum na Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## Miundo ya matumizi ya hali ya juu
+## Miundo ya matumizi ya hali ya juu {#advanced-use-patterns}
 
 - [Hifadhi ya Ufunguo ya Azure na Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Usanifu wa marejeleo wa mandhari-nyuma ya Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
-## Miradi ya .NET, zana na mambo mengine ya kufurahisha
+## Miradi ya .NET, zana na mambo mengine ya kufurahisha {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _Kusanya, unda, na uendeshe vijisehemu vya msimbo wa Nethereum kwenye kivinjari_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Codegen ya Nethereum yenye UI katika Blazor_

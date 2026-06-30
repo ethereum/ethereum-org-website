@@ -22,7 +22,7 @@ Butuh pengantar yang lebih mendasar terlebih dahulu? Lihat [ethereum.org/learn](
 - [Tulis Kontrak Pintar Pertama Anda](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Pelajari Cara Mengompilasi dan Menyebarkan Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Referensi dan tautan untuk pemula
+## Referensi dan tautan untuk pemula {#beginner-references-and-links}
 
 **Memperkenalkan pustaka Nethereum dan VS Code Solidity**
 
@@ -43,7 +43,7 @@ Butuh pengantar yang lebih mendasar terlebih dahulu? Lihat [ethereum.org/learn](
   - [Transfer Ether ke Akun](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... Dan banyak lagi!
 
-## Artikel tingkat menengah
+## Artikel tingkat menengah {#intermediate-articles}
 
 - [Nethereum Memulai & Proyek Pertama](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Menyebarkan Rantai Uji Pengembangan Anda Sendiri](https://github.com/Nethereum/Testchains)
@@ -56,13 +56,13 @@ Butuh pengantar yang lebih mendasar terlebih dahulu? Lihat [ethereum.org/learn](
 - [Kaleido dan Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum dan Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## Pola penggunaan tingkat lanjut
+## Pola penggunaan tingkat lanjut {#advanced-use-patterns}
 
 - [Azure Key Vault Dan Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Arsitektur referensi backend Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
 
-## Proyek, perkakas, dan hal menyenangkan lainnya tentang .NET
+## Proyek, perkakas, dan hal menyenangkan lainnya tentang .NET {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _Kompilasi, buat, dan jalankan cuplikan kode Nethereum di peramban_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Codegen Nethereum dengan UI di Blazor_

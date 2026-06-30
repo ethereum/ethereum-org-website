@@ -1,5 +1,5 @@
 ---
-title: Documento técnico de Ethereum
+title: "Documento técnico de Ethereum"
 description: Un documento introductorio a Ethereum, publicado en 2013 antes de su lanzamiento.
 lang: es
 sidebarDepth: 2

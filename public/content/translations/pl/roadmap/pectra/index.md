@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: Dowiedz się więcej o aktualizacji protokołu Pectra
+description: "Dowiedz się więcej o aktualizacji protokołu Pectra"
 lang: pl
 authors: ["Nixo", "Mario Havel"]
 ---

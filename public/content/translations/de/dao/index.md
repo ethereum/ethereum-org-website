@@ -133,7 +133,8 @@ _Wird typischerweise für die dezentrale Entwicklung und Governance von Protokol
 - [DAO-Liste von Tally.xyz](https://www.tally.xyz/explore)
 - [DAO-Liste von DeGov.AI](https://apps.degov.ai/)
 
-### Eine DAO gründen
+### Eine DAO gründen {#start-a-dao}
+
 - [Eine DAO mit DAOHaus gründen](https://app.daohaus.club/summon)
 - [Eine Governor-DAO mit Tally gründen](https://www.tally.xyz/get-started)
 - [Eine Aragon-basierte DAO erstellen](https://aragon.org/product)

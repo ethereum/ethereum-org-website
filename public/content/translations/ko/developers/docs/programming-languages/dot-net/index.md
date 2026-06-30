@@ -22,7 +22,7 @@ incomplete: true
 - [첫 번째 스마트 컨트랙트 작성하기](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity 컴파일 및 배포 방법 알아보기](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## 초보자용 참고 자료 및 링크
+## 초보자용 참고 자료 및 링크 {#beginner-references-and-links}
 
 **Nethereum 라이브러리 및 VS Code Solidity 소개**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [ERC-20 스마트 컨트랙트 잔액 조회하기](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [계정으로 이더 전송하기](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... 그 외 다수!
-## 중급자용 문서
+## 중급자용 문서 {#intermediate-articles}
 
 - [Nethereum 시작하기 및 첫 번째 프로젝트](https://docs.nethereum.com/docs/getting-started/first-project)
 - [나만의 개발용 테스트 체인 배포하기](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [Nethereum 실시간 스트리밍](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido와 Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum과 Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## 고급 사용 패턴
+## 고급 사용 패턴 {#advanced-use-patterns}
 
 - [Azure Key 볼트 및 Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum 백엔드 참조 아키텍처](https://github.com/Nethereum/ujo-backend)
-## .NET 프로젝트, 도구 및 기타 흥미로운 자료
+## .NET 프로젝트, 도구 및 기타 흥미로운 자료 {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _브라우저에서 Nethereum 코드 스니펫을 컴파일, 생성 및 실행합니다._
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor UI가 포함된 Nethereum 코드 생성기_

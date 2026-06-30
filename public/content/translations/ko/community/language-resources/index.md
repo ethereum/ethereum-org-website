@@ -1,6 +1,6 @@
 ---
-title: 언어 리소스
-description: 이더리움에 대해 배울 수 있는 영어가 아닌 리소스
+title: "언어 리소스"
+description: "이더리움에 대해 배울 수 있는 영어가 아닌 리소스"
 lang: ko
 ---
 

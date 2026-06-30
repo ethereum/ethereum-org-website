@@ -22,7 +22,7 @@ incomplete: true
 - [撰寫你的第一個智能合約](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [學習如何編譯與部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## 初學者參考資料與連結
+## 初學者參考資料與連結 {#beginner-references-and-links}
 
 **介紹 Nethereum 函式庫與 VS Code Solidity**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [查詢 ERC-20 智能合約餘額](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [轉帳以太幣至帳戶](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... 還有更多！
-## 中階文章
+## 中階文章 {#intermediate-articles}
 
 - [Nethereum 入門與第一個專案](https://docs.nethereum.com/docs/getting-started/first-project)
 - [部署你自己的開發測試鏈](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [Nethereum 即時串流](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido 與 Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum 與 Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## 進階使用模式
+## 進階使用模式 {#advanced-use-patterns}
 
 - [Azure Key Vault 與 Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum 後端參考架構](https://github.com/Nethereum/ujo-backend)
-## .NET 專案、工具與其他有趣的東西
+## .NET 專案、工具與其他有趣的東西 {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _在瀏覽器中編譯、建立與執行 Nethereum 程式碼片段_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _在 Blazor 中具有使用者介面的 Nethereum 程式碼產生器_

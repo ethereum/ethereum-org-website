@@ -59,7 +59,7 @@ Nếu bạn không thấy Sepolia được liệt kê, hãy vào menu, sau đó 
 >
 > Phù! Tiền giả của chúng ta đã ở đó <Emoji text=":money_mouth_face:" size={1} />.
 
-## Bước 6: Khởi tạo dự án của chúng ta
+## Bước 6: Khởi tạo dự án của chúng ta {#step-6}
 
 Đầu tiên, chúng ta sẽ cần tạo một thư mục cho dự án của mình. Điều hướng đến dòng lệnh của bạn và nhập:
 

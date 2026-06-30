@@ -842,11 +842,6 @@ const onMintPressed = async () => {
 }
 ```
 
-## 라이브 웹사이트에 NFT 배포하기
-
-사용자가 상호작용할 수 있도록 프로젝트를 라이브로 전환할 준비가 되셨나요? Minter를 라이브 웹사이트에 배포하려면 [React 배포 문서](https://create-react-app.dev/docs/deployment/)를 확인하세요.
-
-마지막으로 한 단계가 남았습니다...
 ## 블록체인 세계를 휩쓸어 보세요 {#take-the-blockchain-world-by-storm}
 
 농담입니다. 튜토리얼의 끝까지 오셨군요!

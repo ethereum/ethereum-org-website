@@ -133,7 +133,7 @@ _সাধারণত প্রোটোকল এবং [বিকেন্দ
 - [Tally.xyz-এর DAO-এর তালিকা](https://www.tally.xyz/explore)
 - [DeGov.AI-এর DAO-এর তালিকা](https://apps.degov.ai/)
 
-### একটি DAO শুরু করুন
+### একটি DAO শুরু করুন {#start-a-dao}
 
 - [DAOHaus-এর মাধ্যমে একটি DAO তৈরি করুন](https://app.daohaus.club/summon)
 - [Tally-এর মাধ্যমে একটি গভর্নর DAO শুরু করুন](https://www.tally.xyz/get-started)

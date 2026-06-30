@@ -9,7 +9,7 @@ tags:
   - "검열 저항성"
 published: "2026-02-05"
 image: /content/stories/digital-feudalism/tarrence-cover-image.jpeg
-breadcrumb: 당신만의 세계를 소유하세요
+breadcrumb: "당신만의 세계를 소유하세요"
 lang: ko
 ---
 
@@ -79,7 +79,7 @@ lang: ko
 
 ![Screenshot of a campaign image with text 'The unity runtime fee is dead'](./tarrance-6.png) 
 
-리처드 가필드(Richard Garfield)는 해즈브로(Hasbro)의 첫 10억 달러 규모 브랜드인 *매직: 더 개더링(Magic: The Gathering)*을 만들었습니다. 
+리처드 가필드(Richard Garfield)는 해즈브로(Hasbro)의 첫 10억 달러 규모 브랜드인 <em>매직: 더 개더링(Magic: The Gathering)</em>을 만들었습니다. 
 
 이제 그는 플레이어들이 "공식적인 지원이 중단된 후에도 계속해서 게임을 즐길 수 있도록" 온체인 게임을 개발하고 있습니다.
 

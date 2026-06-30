@@ -1,7 +1,7 @@
 ---
-title: Jak zorganizovat událost Etherea
-metaTitle: Organizace události Etherea
-description: Jak zorganizovat událost Etherea
+title: "Jak zorganizovat událost Etherea"
+metaTitle: "Organizace události Etherea"
+description: "Jak zorganizovat událost Etherea"
 lang: cs
 hideEditButton: true
 ---

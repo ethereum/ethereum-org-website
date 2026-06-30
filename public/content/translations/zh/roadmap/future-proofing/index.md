@@ -36,7 +36,7 @@ summaryPoints:
 
 </ExpandableCard>
 
-### 正在采取哪些措施？
+### 正在采取哪些措施？ {#what-is-being-done}
 
 在区块链生态系统中，以太坊目前是应对量子威胁最积极的防御者。以太坊基金会于 2026 年 1 月成立了专门的**后量子安全团队**，并且多支客户端团队和研究小组都在积极开展工作。以太坊基金会 (EF) 后量子团队的工作在 [pq.ethereum.org](https://pq.ethereum.org) 上公开追踪。
 

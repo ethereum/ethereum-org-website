@@ -40,7 +40,7 @@ lang: zh-tw
 
 **Sepolia 是推薦用於應用程式開發的預設測試網**。Sepolia 網路使用由客戶端和測試團隊控制的許可制驗證者集。
 
-##### 資源
+##### 資源 {#} {#} {#} {#} {#}
 
 - [網站](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ lang: zh-tw
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### 水龍頭
+##### 水龍頭 {#} {#} {#} {#}
 
 - [Alchemy Sepolia 水龍頭](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia 水龍頭](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)

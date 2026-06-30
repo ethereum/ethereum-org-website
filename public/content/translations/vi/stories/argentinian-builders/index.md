@@ -9,7 +9,7 @@ tags:
   - "cộng đồng"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: Xây dựng từ Argentina
+breadcrumb: "Xây dựng từ Argentina"
 lang: vi
 ---
 > *Câu chuyện này ban đầu được xuất bản dưới dạng [một luồng bài viết khách mời trên hồ sơ X của @Ethereum](https://x.com/ethereum/status/1985408315074232397?s=20) vào ngày 3 tháng 11 năm 2025. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*

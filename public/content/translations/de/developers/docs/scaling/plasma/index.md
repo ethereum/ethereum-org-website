@@ -54,7 +54,7 @@ Plasma verwendet einen Master-Vertrag, der auf Ethereum läuft, um Benutzereintr
 
 Um in die Plasma-Chain einzutreten, muss Alice (die Benutzerin) ETH oder einen beliebigen ERC-20-Token in den Plasma-Vertrag einzahlen. Der Plasma-Betreiber, der die Vertragseinzahlungen überwacht, erstellt einen Betrag in Höhe von Alices ursprünglicher Einzahlung neu und gibt ihn an ihre Adresse auf der Plasma-Chain frei. Alice muss den Erhalt der Gelder auf der Child-Chain bestätigen und kann diese Gelder dann für Transaktionen verwenden.
 
-#### Austritt aus der Plasma-Chain
+#### Austritt aus der Plasma-Chain {#exiting-the-plasma-chain}
 
 Der Austritt aus der Plasma-Chain ist aus mehreren Gründen komplexer als der Eintritt. Der wichtigste Grund ist, dass Ethereum zwar Informationen über den Zustand der Plasma-Chain hat, aber nicht überprüfen kann, ob diese Informationen wahr sind oder nicht. Ein böswilliger Benutzer könnte eine falsche Behauptung aufstellen („Ich habe 1000 ETH“) und damit durchkommen, indem er gefälschte Nachweise liefert, um die Behauptung zu untermauern.
 
@@ -164,7 +164,7 @@ Mehrere Projekte bieten Implementierungen von Plasma an, die Sie in Ihre Dapps i
 
 - [Polygon](https://polygon.technology/) (ehemals Matic Network)
 
-## Weiterführende Literatur
+## Weiterführende Literatur {#further-reading}
 
 - [Eine kurze Erinnerung daran, was „Shared Security“ bedeutet und warum sie so wichtig ist](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Sidechains vs. Plasma vs. Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)

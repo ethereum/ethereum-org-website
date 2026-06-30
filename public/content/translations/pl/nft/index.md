@@ -101,7 +101,8 @@ Kwestie bezpieczeństwa związane z NFT najczęściej dotyczą oszustw typu phis
   Więcej o bezpieczeństwie
 </ButtonLink>
 
-## Dalsza lektura
+## Dalsza lektura {#further-reading}
+
 - [Przewodnik po NFT dla początkujących](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, styczeń 2020 r._
 - [Narzędzie do śledzenia NFT Etherscan](https://etherscan.io/nft-top-contracts)
 - [Narzędzie do śledzenia NFT Blockscout](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)

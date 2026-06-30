@@ -253,7 +253,8 @@ Je, wewe ni mwanafunzi wa kuona zaidi? Tazama Finematics akielezea mikusanyiko y
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Usomaji zaidi kuhusu mikusanyiko ya optimistic
+## Usomaji zaidi kuhusu mikusanyiko ya optimistic {#further-reading-on-optimistic-rollups}
+
 - [Mikusanyiko ya optimistic inafanyaje kazi (Mwongozo Kamili)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Mwongozo Muhimu wa Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Mwongozo wa Vitendo wa Mikusanyiko ya Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

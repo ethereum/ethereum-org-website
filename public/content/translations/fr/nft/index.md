@@ -101,7 +101,8 @@ Les problèmes de sécurité liés aux NFT sont le plus souvent liés à des esc
   En savoir plus sur la sécurité
 </ButtonLink>
 
-## Pour aller plus loin
+## Pour aller plus loin {#further-reading}
+
 - [Guide pour débutants sur les NFT](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, janvier 2020_
 - [Traqueur de NFT Etherscan](https://etherscan.io/nft-top-contracts)
 - [Traqueur de NFT Blockscout](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)

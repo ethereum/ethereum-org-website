@@ -51,7 +51,7 @@ Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://m
 
 Untuk menyebarkan kontrak pintar kita ke testnet, kita akan membutuhkan beberapa ETH palsu. Untuk mendapatkan ETH, Anda dapat pergi ke [Sepolia Faucet](https://sepoliafaucet.com/) yang di-host oleh Alchemy, masuk dan masukkan alamat akun Anda, klik "Send Me ETH". Anda akan segera melihat ETH di akun MetaMask Anda!
 
-## Langkah 5: Periksa Saldo Anda
+## Langkah 5: Periksa Saldo Anda {#check-balance}
 
 Untuk memastikan saldo kita ada di sana, mari buat permintaan [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) menggunakan [alat sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Ini akan mengembalikan jumlah ETH di dompet kita. Setelah Anda memasukkan alamat akun MetaMask Anda dan mengklik "Send Request", Anda akan melihat respons seperti ini:
 
@@ -60,7 +60,7 @@ Untuk memastikan saldo kita ada di sana, mari buat permintaan [eth_getBalance](h
 > **Catatan** Hasil ini dalam Wei, bukan ETH. Wei digunakan sebagai denominasi terkecil dari Ether. Konversi dari Wei ke ETH adalah 1 eth = 10<sup>18</sup> Wei. Jadi jika kita mengonversi 0xde0b6b3a7640000 ke desimal, kita mendapatkan 1\*10<sup>18</sup> Wei, yang sama dengan 1 ETH.
 
 Fiuh! Uang palsu kita semuanya ada di sana.
-## Langkah 6: Inisialisasi proyek kita
+## Langkah 6: Inisialisasi proyek kita {#initialize-project}
 
 Pertama, kita perlu membuat folder untuk proyek kita. Arahkan ke baris perintah Anda dan ketik:
 

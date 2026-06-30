@@ -101,7 +101,8 @@ NFT 智能合約可以執行幾個關鍵操作：
   更多關於安全性的資訊
 </ButtonLink>
 
-## 延伸閱讀
+## 延伸閱讀 {#further-reading}
+
 - [NFT 初學者指南](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie，2020 年 1 月_
 - [Etherscan NFT 追蹤器](https://etherscan.io/nft-top-contracts)
 - [Blockscout NFT 追蹤器](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)

@@ -1,6 +1,6 @@
 ---
-title: Społeczności internetowe
-description: Odkryj fora internetowe, czaty i społeczności w mediach społecznościowych, gdzie entuzjaści Ethereum gromadzą się, aby dyskutować i współpracować.
+title: "Społeczności internetowe"
+description: "Odkryj fora internetowe, czaty i społeczności w mediach społecznościowych, gdzie entuzjaści Ethereum gromadzą się, aby dyskutować i współpracować."
 lang: pl
 ---
 

@@ -133,7 +133,8 @@ _عام طور پر پروٹوکولز اور [غیر مرکزی ایپلی کی
 - [Tally.xyz کی ڈاؤز (DAOs) کی فہرست](https://www.tally.xyz/explore)
 - [DeGov.AI کی ڈاؤز (DAOs) کی فہرست](https://apps.degov.ai/)
 
-### ⁦DAO⁩ شروع کریں
+### ⁦DAO⁩ شروع کریں {#start-a-dao}
+
 - [DAOHaus کے ساتھ ایک ⁦DAO⁩ بنائیں](https://app.daohaus.club/summon)
 - [Tally کے ساتھ ایک گورنر ⁦DAO⁩ شروع کریں](https://www.tally.xyz/get-started)
 - [Aragon سے چلنے والا ⁦DAO⁩ بنائیں](https://aragon.org/product)

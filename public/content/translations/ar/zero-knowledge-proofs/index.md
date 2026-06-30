@@ -58,8 +58,10 @@ lang: ar
       <p>
         تعرف على المزيد حول نظام NDI في بوتان في <a href="/decentralized-identity/#national-and-government-id">دراسة حالة هوية لامركزية</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### إثبات الإنسانية {#proof-of-humanity}

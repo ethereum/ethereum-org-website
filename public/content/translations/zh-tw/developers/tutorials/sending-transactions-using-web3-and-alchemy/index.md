@@ -24,7 +24,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 - 這意味著 Alchemy 無法代表您簽署和發送交易。這樣做是出於安全考量。Alchemy 永遠不會要求您分享您的私鑰，您也絕對不應該與託管節點（或任何人）分享您的私鑰。
 - 您可以使用 Alchemy 的核心 API 從區塊鏈讀取資料，但要寫入資料，您需要使用其他工具來簽署交易，然後再透過 Alchemy 發送（這對於任何其他[節點服務](/developers/docs/nodes-and-clients/nodes-as-a-service/)也是一樣的）。
 
-### 2\. 什麼是「簽署者」？
+### 2\. 什麼是「簽署者」？ {#what-is-a-signer}
 
 - 簽署者將使用您的私鑰為您簽署交易。在本教學中，我們將使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) 來簽署我們的交易，但您也可以使用任何其他 Web3 函式庫。
 - 在前端，簽署者的一個好例子是 [梅塔馬斯克 (MetaMask)](https://metamask.io/)，它將代表您簽署並發送交易。
@@ -55,7 +55,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 好了，現在我們已經解決了其中幾個問題，讓我們繼續進行教學。歡迎隨時在 Alchemy 的 [Discord](https://discord.gg/gWuC7zB) 中提問！
 
-### 7\. 如何發送安全、燃料最佳化且私密的交易？
+### 7\. 如何發送安全、燃料最佳化且私密的交易？ {#how-to-send-secure-gas-optimized-and-private-transactions}
 
 - [Alchemy 提供了一系列交易資源](https://www.alchemy.com/docs/sending-transactions)。您可以使用這些資源來發送交易、在交易發生前進行模擬、發送私密交易，以及發送燃料最佳化的交易。
 - 您還可以使用 [Alchemy webhooks](https://www.alchemy.com/docs/reference/webhooks-overview)，在您的交易從記憶體池中被提取並新增到鏈上時收到警報。
@@ -122,7 +122,7 @@ PRIVATE_KEY = "your-private-key"
 </AlertContent>
 </Alert>
 
-### 7\. 建立 `sendTx.js` 檔案
+### 7\. 建立 `sendTx.js` 檔案 {#create-sendtx-js}
 
 太好了，現在我們已經將敏感資料保護在 `.env` 檔案中，讓我們開始編寫程式碼。在我們的發送交易範例中，我們將把 ETH 發送回 Sepolia 水龍頭。
 
@@ -189,7 +189,7 @@ main();
 node sendTx.js
 ```
 
-### 9\. 在記憶體池中查看您的交易
+### 9\. 在記憶體池中查看您的交易 {#see-your-transaction-in-the-mempool}
 
 打開 Alchemy 儀表板中的[記憶體池頁面](https://dashboard.alchemy.com/mempool)，並透過您建立的應用程式進行篩選以尋找您的交易。在這裡，我們可以觀察我們的交易從待處理狀態轉換為已挖礦狀態（如果成功）或已丟棄狀態（如果失敗）。請確保將其保持在「All」（全部），以便您捕捉到「mined」（已挖礦）、「pending」（待處理）和「dropped」（已丟棄）的交易。您也可以透過尋找發送到地址 `0x31b98d14007bdee637298086988a0bbd31184523` 的交易來搜尋您的交易。
 

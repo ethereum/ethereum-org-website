@@ -1,6 +1,6 @@
 ---
-title: Přidávání komunitních příběhů
-description: Jak na ethereum.org odeslat komunitní příběh o vašich zkušenostech s Ethereem
+title: "Přidávání komunitních příběhů"
+description: "Jak na ethereum.org odeslat komunitní příběh o vašich zkušenostech s Ethereem"
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Adicionando histórias da comunidade
-description: Como enviar uma história da comunidade sobre sua experiência com o Ethereum para o ethereum.org
+title: "Adicionando histórias da comunidade"
+description: "Como enviar uma história da comunidade sobre sua experiência com o Ethereum para o ethereum.org"
 lang: pt-br
 ---
 

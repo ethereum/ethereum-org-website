@@ -1,6 +1,6 @@
 ---
-title: Làm thế nào để tôi có thể tham gia?
-description: Cách tham gia vào cộng đồng Ethereum.
+title: "Làm thế nào để tôi có thể tham gia?"
+description: "Cách tham gia vào cộng đồng Ethereum."
 lang: vi
 ---
 

@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "community-stories"
 format: interview
-author: ऑप्टिमिस्ट
+author: "ऑप्टिमिस्ट"
 breadcrumb: "Community.eth भाग 1"
 ---
 

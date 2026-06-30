@@ -133,7 +133,8 @@ _Зазвичай використовується для децентраліз
 - [Список DAO від Tally.xyz](https://www.tally.xyz/explore)
 - [Список DAO від DeGov.AI](https://apps.degov.ai/)
 
-### Створити DAO
+### Створити DAO {#start-a-dao}
+
 - [Створити DAO за допомогою DAOHaus](https://app.daohaus.club/summon)
 - [Створити Governor DAO за допомогою Tally](https://www.tally.xyz/get-started)
 - [Створити DAO на базі Aragon](https://aragon.org/product)

@@ -24,7 +24,8 @@ Kama watengenezaji wengi wa mnyororo wa vitalu wanapoanza kwa mara ya kwanza, un
 - Hii inamaanisha kuwa Alchemy haiwezi kusaini na kutuma miamala kwa niaba yako. Sababu ya hii ni kwa madhumuni ya usalama. Alchemy haitakuuliza kamwe kushiriki ufunguo wako wa siri, na hupaswi kamwe kushiriki ufunguo wako wa siri na nodi inayopangishwa (au mtu yeyote kwa jambo hilo).
 - Unaweza kusoma kutoka kwenye mnyororo wa vitalu kwa kutumia API kuu ya Alchemy, lakini ili kuandika kwake utahitaji kutumia kitu kingine kusaini miamala yako kabla ya kuituma kupitia Alchemy (hii ni sawa kwa [huduma yoyote nyingine ya nodi](/developers/docs/nodes-and-clients/nodes-as-a-service/)).
 
-### 2\. "Signer" (msaini) ni nini?
+### 2\. "Signer" (msaini) ni nini? {#what-is-a-signer}
+
 - Wasaini (signers) watasaini miamala kwa ajili yako kwa kutumia ufunguo wako wa siri. Katika mafunzo haya tutatumia [Web3 ya Alchemy](https://github.com/alchemyplatform/alchemy-web3) kusaini muamala wetu, lakini unaweza pia kutumia maktaba nyingine yoyote ya Web3.
 - Kwenye sehemu ya mbele (frontend), mfano mzuri wa msaini ungekuwa [MetaMask](https://metamask.io/), ambayo itasaini na kutuma miamala kwa niaba yako.
 ### 3\. Kwa nini ninahitaji kusaini miamala yangu? {#why-do-i-need-to-sign-my-transactions}
@@ -54,7 +55,8 @@ Hiki ndicho tutakachotumia katika mafunzo haya.
 
 Sawa, sasa kwa kuwa tumejibu baadhi ya maswali haya, hebu tuendelee na mafunzo. Jisikie huru kuuliza maswali wakati wowote kwenye [Discord](https://discord.gg/gWuC7zB) ya Alchemy!
 
-### 7\. Jinsi ya kutuma miamala salama, iliyoboreshwa kwa gesi, na ya siri?
+### 7\. Jinsi ya kutuma miamala salama, iliyoboreshwa kwa gesi, na ya siri? {#how-to-send-secure-gas-optimized-and-private-transactions}
+
 - [Alchemy ina seti ya rasilimali za miamala](https://www.alchemy.com/docs/sending-transactions). Unaweza kutumia hizi kutuma miamala, kuiga miamala kabla haijatokea, kutuma miamala ya siri, na kutuma miamala iliyoboreshwa kwa gesi
 - Unaweza pia kutumia [webhooks za Alchemy](https://www.alchemy.com/docs/reference/webhooks-overview) ili kuarifiwa wakati muamala wako unapotolewa kwenye mempool na kuongezwa kwenye mnyororo
 
@@ -120,7 +122,8 @@ Usifanye commit ya <code>.env</code>! Tafadhali hakikisha kamwe hushiriki au kuf
 </AlertContent>
 </Alert>
 
-### 7\. Unda faili la `sendTx.js`
+### 7\. Unda faili la `sendTx.js` {#create-sendtx-js}
+
 Vizuri, sasa kwa kuwa tuna data zetu nyeti zikilindwa katika faili la `.env`, hebu tuanze kuandika kodi. Kwa mfano wetu wa kutuma muamala, tutakuwa tunatuma ETH kurudi kwenye bomba la Sepolia.
 
 Unda faili la `sendTx.js`, ambapo tutasanidi na kutuma mfano wetu wa muamala, na uongeze mistari ifuatayo ya kodi ndani yake:
@@ -186,7 +189,8 @@ Nenda nyuma kwenye terminal yako au mstari wa amri na uendeshe:
 node sendTx.js
 ```
 
-### 9\. Angalia muamala wako kwenye Mempool
+### 9\. Angalia muamala wako kwenye Mempool {#see-your-transaction-in-the-mempool}
+
 Fungua [ukurasa wa Mempool](https://dashboard.alchemy.com/mempool) kwenye dashibodi yako ya Alchemy na uchuje kwa programu uliyounda ili kupata muamala wako. Hapa ndipo tunapoweza kutazama muamala wetu ukibadilika kutoka hali ya kusubiri hadi hali ya kuchimbwa (ikiwa umefanikiwa) au hali ya kuachwa ikiwa haujafanikiwa. Hakikisha unaiweka kwenye "Zote" (All) ili unase miamala "iliyochimbwa" (mined), "inayosubiri" (pending), na "iliyoachwa" (dropped). Unaweza pia kutafuta muamala wako kwa kuangalia miamala iliyotumwa kwenye anwani `0x31b98d14007bdee637298086988a0bbd31184523` .
 
 Ili kutazama maelezo ya muamala wako mara tu unapoupata, chagua heshi ya muamala (tx hash), ambayo inapaswa kukupeleka kwenye mwonekano unaoonekana hivi:

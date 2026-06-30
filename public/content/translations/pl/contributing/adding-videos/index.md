@@ -123,27 +123,6 @@ Użyj nagłówków `###` ze znacznikami czasu, aby oznaczyć główne sekcje. Dz
 
 Jeśli nie masz transkrypcji, możesz zostawić treść pustą, a zespół ją wygeneruje.
 
-#### Krok 4: Wybierz tagi tematyczne
-
-Wybierz tagi tematyczne z poniższej listy. Każdy tag odpowiada bezpośrednio kategorii filtra w galerii wideo — użyj nazwy tagu dokładnie tak, jak pokazano.
-
-Film może mieć wiele tagów, aby pojawiać się w wielu filtrach galerii:
-
-| Tag | Filtr galerii |
-|---|---|
-| `how-ethereum-works` | Jak działa Ethereum |
-| `network-upgrades` | Aktualizacje sieci |
-| `roadmap-and-priorities` | Mapa drogowa i priorytety |
-| `scaling-and-layer-2` | Skalowanie i warstwa 2 (L2) |
-| `use-cases` | Przypadki użycia |
-| `privacy` | Prywatność |
-| `security` | Bezpieczeństwo |
-| `community-stories` | Historie społeczności |
-| `events` | Zdarzenia |
-
-Każdy film powinien mieć co najmniej jeden tag z tej listy. Filmy bez rozpoznanego tagu będą pojawiać się tylko w widoku „Wszystkie” i wynikach wyszukiwania.
-
-Tag `community-stories` sprawia również, że film pojawia się na [stronie Historie](/stories/).
 #### Krok 5: Prześlij swój PR {#step-5}
 
 Otwórz pull request ze swoimi zmianami do gałęzi `dev`. Zespół przejrzy Twoje zgłoszenie i przekaże opinię.

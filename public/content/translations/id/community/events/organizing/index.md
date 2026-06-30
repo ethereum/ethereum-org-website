@@ -204,7 +204,8 @@ Kuncinya adalah menjaga momentum tetap hidup. Teruslah berinteraksi dengan komun
 
 Terima kasih yang sebesar-besarnya kepada semua orang yang telah berkontribusi pada artikel ini dengan membagikan wawasan mereka: Slavo Fabisik dari ETHBratislava; Lola dari ETH Kipu dan ETH Latam; Tanja Mladenovic dari ETH Belgrade, Juan David dari Ethereum Bogota; Monika Zając dari ETHWarsaw; Raffaele Orefice dari NapulETH; Xiao Wu(Ling) dari ETH Riyadh; Marco dari urbe.eth; Caolán Walsh dari ETH Dublin; Alex Males dari ETHCluj; dan Stanko Devic dari ETH Slovenia.
 
-## Sumber Daya
+## Sumber Daya {#resources}
+
 Podcast: Cara menyelenggarakan dan mempromosikan peristiwa ETH dari A-Z:
 
 - [Studi kasus ETHWarsaw, oleh Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)

@@ -1,7 +1,7 @@
 ---
 title: "کیا ہوتا ہے جب آپ صرف کوڈ کو نہیں، بلکہ کلچر کو فنڈ کرتے ہیں"
 description: "ایتھیریم نے ثابت کیا کہ یہ صرف پیسے سے زیادہ بہت کچھ منتقل کر سکتا ہے۔ اب مداح اپنی پسندیدہ فلموں کو فنڈ کرتے ہیں، انہیں شکل دیتے ہیں، اور ان میں کریڈٹ حاصل کرتے ہیں۔"
-author: ایملی یانگ
+author: "ایملی یانگ"
 team: "Shibuya"
 tags:
   - فلم سازی
@@ -9,7 +9,7 @@ tags:
   - تخلیقی ملکیت
 published: "2025-05-30"
 image: /content/stories/funding-culture/pplpleasr-hero.png
-breadcrumb: کلچر کو منتقل کرنا
+breadcrumb: "کلچر کو منتقل کرنا"
 lang: ur
 ---
 
@@ -59,7 +59,7 @@ lang: ur
 
 میں نے [<span dir="ltr">Maciej Kuciara</span>](https://www.kuciara.com/) کے ساتھ مل کر [<span dir="ltr">Shibuya</span>](https://www.shibuya.film/) شروع کیا۔ ہمارا خواب: ایک ایسا پلیٹ فارم جہاں تخلیق کار اپنی کمیونٹیز کے ساتھ براہ راست کہانیوں کو کراؤڈ فنڈ، شائع، اور تیار کر سکیں۔ کوئی گیٹ کیپرز نہیں۔ صرف کہانی، کمیونٹی، اور کوڈ۔
 
-ہمارا پہلا تجربہ [<span dir="ltr">White Rabbit</span>](https://www.shibuya.film/series/white-rabbit) نامی ایک اینیمی سیریز تھی۔ ہم نے ایک 'اپنا ایڈونچر خود چنیں' طرز کے انٹرایکٹو تجربے کے ساتھ <span dir="ltr">> 400 ETH</span> جمع کیے:
+ہمارا پہلا تجربہ [<span dir="ltr">White Rabbit</span>](https://www.shibuya.film/series/white-rabbit) نامی ایک اینیمی سیریز تھی۔ ہم نے ایک 'اپنا ایڈونچر خود چنیں' طرز کے انٹرایکٹو تجربے کے ساتھ <span dir="ltr"> 400 ETH</span> جمع کیے:
 - مداحوں نے پروڈیوسر پاس NFTs منٹ کیے
 - پلیئر میں براہ راست کہانی کے فیصلوں پر ووٹ دینے کے لیے اسٹیک کیا
 - ایک <span dir="ltr">ERC-20</span> (ہمارا اٹینشن ٹوکن) کمایا 

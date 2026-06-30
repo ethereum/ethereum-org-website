@@ -22,7 +22,7 @@ incomplete: true
 - [আপনার প্রথম স্মার্ট কন্ট্রাক্ট লিখুন](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [কীভাবে Solidity কম্পাইল এবং ডিপ্লয় করতে হয় তা শিখুন](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## নতুনদের জন্য রেফারেন্স এবং লিংক
+## নতুনদের জন্য রেফারেন্স এবং লিংক {#beginner-references-and-links}
 
 **Nethereum লাইব্রেরি এবং VS Code Solidity-এর পরিচিতি**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [ERC-20 স্মার্ট কন্ট্রাক্ট ব্যালেন্স কোয়েরি করুন](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [একটি অ্যাকাউন্ট-এ ইথার হস্তান্তর করুন](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... এবং আরও অনেক কিছু!
-## ইন্টারমিডিয়েট আর্টিকেল
+## ইন্টারমিডিয়েট আর্টিকেল {#intermediate-articles}
 
 - [Nethereum শুরু করা এবং প্রথম প্রজেক্ট](https://docs.nethereum.com/docs/getting-started/first-project)
 - [আপনার নিজস্ব ডেভেলপমেন্ট টেস্টচেইন ডিপ্লয় করুন](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [Nethereum রিয়েল-টাইম স্ট্রিমিং](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido এবং Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum এবং Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## অ্যাডভান্সড ব্যবহারের প্যাটার্ন
+## অ্যাডভান্সড ব্যবহারের প্যাটার্ন {#advanced-use-patterns}
 
 - [Azure কী ভল্ট এবং Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum ব্যাকএন্ড রেফারেন্স আর্কিটেকচার](https://github.com/Nethereum/ujo-backend)
-## .NET প্রজেক্ট, টুল এবং অন্যান্য মজার জিনিস
+## .NET প্রজেক্ট, টুল এবং অন্যান্য মজার জিনিস {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _ব্রাউজারে Nethereum কোড স্নিপেট কম্পাইল, তৈরি এবং রান করুন_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor-এ UI সহ Nethereum কোডজেন_

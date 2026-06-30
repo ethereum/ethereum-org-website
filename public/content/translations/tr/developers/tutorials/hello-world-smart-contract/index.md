@@ -64,7 +64,7 @@ Bakiyemizin orada olduğunu iki kez kontrol etmek için, [Alchemy'nin composer a
 >
 > Oh be! Sahte paramızın hepsi orada <Emoji text=":money_mouth_face:" size={1} />.
 
-## Adım 6: Projemizi başlatın
+## Adım 6: Projemizi başlatın {#step-6}
 
 İlk olarak, projemiz için bir klasör oluşturmamız gerekecek. Komut satırınıza gidin ve şunu yazın:
 

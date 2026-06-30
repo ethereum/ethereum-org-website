@@ -1,7 +1,7 @@
 ---
-title: Bằng chứng không kiến thức là gì?
-metaTitle: Bằng chứng không kiến thức
-description: Giới thiệu phi kỹ thuật về bằng chứng không kiến thức dành cho người mới bắt đầu.
+title: "Bằng chứng không kiến thức là gì?"
+metaTitle: "Bằng chứng không kiến thức"
+description: "Giới thiệu phi kỹ thuật về bằng chứng không kiến thức dành cho người mới bắt đầu."
 lang: vi
 ---
 
@@ -58,8 +58,10 @@ Bằng chứng không kiến thức đặc biệt hữu ích trong bối cảnh 
       <p>
         Tìm hiểu thêm về NDI của Bhutan trong <a href="/decentralized-identity/#national-and-government-id">nghiên cứu tình huống về Danh tính phi tập trung</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Bằng chứng nhân tính {#proof-of-humanity}

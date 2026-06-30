@@ -33,7 +33,7 @@ Prima ancora di iniziare a guardare il codice, è importante capire come funzion
 
 La più grande differenza tra i due standard di smart contract per NFT è che l'ERC-1155 è uno standard multi-token e include funzionalità in batch, mentre l'ERC-721 è uno standard a token singolo e pertanto supporta solo il trasferimento di un token alla volta.
 
-### Chiamare la funzione di conio
+### Chiamare la funzione di conio {#minting-function}
 
 Di solito, questa funzione di conio richiede di passare due variabili come parametri: in primo luogo il `recipient`, che specifica l'indirizzo che riceverà il tuo NFT appena coniato, e in secondo luogo il `tokenURI` dell'NFT, una stringa che si risolve in un documento JSON che descrive i metadati dell'NFT.
 
@@ -194,15 +194,15 @@ Ora che abbiamo capito con cosa stiamo lavorando, configuriamo il nostro portafo
 
 Affinché gli utenti possano interagire con il tuo smart contract, dovranno connettere il loro portafoglio Ethereum alla tua dapp.
 
-### Scaricare MetaMask
+### Scaricare MetaMask {#download-metamask}
 
 Per questo tutorial, utilizzeremo MetaMask, un portafoglio virtuale nel browser utilizzato per gestire l'indirizzo del tuo account Ethereum. Se vuoi capire meglio come funzionano le transazioni su Ethereum, dai un'occhiata a [questa pagina](/developers/docs/transactions/).
 
 Puoi scaricare e creare un account MetaMask gratuitamente [qui](https://metamask.io/download). Quando crei un account, o se ne hai già uno, assicurati di passare a una rete di test supportata come Sepolia \(in modo da non avere a che fare con denaro reale\).
-### Aggiungere ether da un faucet
+### Aggiungere ether da un faucet {#add-ether-from-faucet}
 
 Per coniare i nostri NFT (o firmare qualsiasi transazione sulla blockchain di Ethereum), avremo bisogno di alcuni ETH finti. Per ottenere ETH di testnet, usa un faucet gestito come il [faucet Sepolia di Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia) e inserisci l'indirizzo del tuo account Sepolia. Dovresti vedere gli ETH nel tuo account MetaMask poco dopo!
-### Controlla il tuo saldo
+### Controlla il tuo saldo {#check-your-balance}
 
 Per verificare che il nostro saldo sia presente, facciamo una richiesta [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) utilizzando lo [strumento sandbox di Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Questo restituirà la quantità di ETH nel nostro portafoglio. Dopo aver inserito l'indirizzo del tuo account MetaMask e aver cliccato su "Send Request", dovresti vedere una risposta come questa:
 
@@ -579,7 +579,8 @@ Se hai esaminato attentamente i nostri file, avrai notato che nella nostra direc
 
 Avremo anche bisogno di una chiave API Alchemy e dell'API Alchemy Web3 per connetterci alla blockchain di Ethereum e caricare il nostro smart contract.
 
-### Creare la tua chiave API Alchemy
+### Creare la tua chiave API Alchemy {#create-alchemy-api}
+
 Se non hai già un account Alchemy, [registrati gratuitamente qui.](https://alchemy.com/?a=eth-org-nft-minter)
 
 Una volta creato un account Alchemy, puoi generare una chiave API creando un'app. Questo ci consentirà di effettuare richieste alla testnet Sepolia.
@@ -843,7 +844,7 @@ const onMintPressed = async () => {
 }
 ```
 
-## Distribuire il tuo NFT su un sito web live
+## Distribuire il tuo NFT su un sito web live {#deploy-your-nft}
 
 Pronto a rendere il tuo progetto live affinché gli utenti possano interagirvi? Dai un'occhiata alla [documentazione sulla distribuzione di React](https://create-react-app.dev/docs/deployment/) per distribuire il tuo Minter su un sito web live.
 

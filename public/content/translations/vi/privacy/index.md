@@ -1,6 +1,6 @@
 ---
-title: Quyền riêng tư trên Ethereum
-description: Các công cụ và kỹ thuật để bảo vệ quyền riêng tư của bạn trên Ethereum
+title: "Quyền riêng tư trên Ethereum"
+description: "Các công cụ và kỹ thuật để bảo vệ quyền riêng tư của bạn trên Ethereum"
 lang: vi
 ---
 

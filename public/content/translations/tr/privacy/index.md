@@ -1,6 +1,6 @@
 ---
 title: Ethereum'da Gizlilik
-description: Ethereum'da gizliliğinizi korumak için araçlar ve teknikler
+description: "Ethereum'da gizliliğinizi korumak için araçlar ve teknikler"
 lang: tr
 ---
 

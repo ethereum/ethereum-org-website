@@ -1,6 +1,6 @@
 ---
-title: ¿Cómo puedo participar?
-description: Cómo participar en la comunidad de Ethereum.
+title: "¿Cómo puedo participar?"
+description: "Cómo participar en la comunidad de Ethereum."
 lang: es
 ---
 

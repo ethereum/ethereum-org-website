@@ -1,6 +1,6 @@
 ---
-title: Dòng thời gian của tất cả các đợt phân nhánh Ethereum (2014 đến nay)
-description: Lịch sử của chuỗi khối Ethereum bao gồm các cột mốc, bản phát hành và đợt phân nhánh chính.
+title: "Dòng thời gian của tất cả các đợt phân nhánh Ethereum (2014 đến nay)"
+description: "Lịch sử của chuỗi khối Ethereum bao gồm các cột mốc, bản phát hành và đợt phân nhánh chính."
 lang: vi
 sidebarDepth: 1
 authors: ["Nixo"]
@@ -86,7 +86,8 @@ Bạn đang tìm kiếm các bản nâng cấp giao thức trong tương lai? [T
 
 [Tìm hiểu thêm về Fusaka](/roadmap/fusaka/)
 
-### Prague-Electra ("Pectra")
+### Prague-Electra ("Pectra") {#pectra}
+
 <NetworkUpgradeSummary name="pectra" />
 
 Bản nâng cấp Prague-Electra ("Pectra") bao gồm một số cải tiến đối với Giao thức Ethereum nhằm nâng cao trải nghiệm cho tất cả người dùng, các mạng lưới lớp 2, người đặt cọc và người vận hành nút.

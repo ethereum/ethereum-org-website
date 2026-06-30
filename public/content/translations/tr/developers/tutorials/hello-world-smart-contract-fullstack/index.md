@@ -61,7 +61,8 @@ Akıllı sözleşmenizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyac
 _Not: ağ yoğunluğu nedeniyle bu biraz zaman alabilir._
 ``
 
-### Adım 5: Bakiyenizi Kontrol Edin
+### Adım 5: Bakiyenizi Kontrol Edin {#step-5-check-your-balance}
+
 ETH'nin cüzdanınızda olduğundan emin olmak için, [Alchemy'nin sandbox aracını](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) kullanarak bir [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) isteği yapalım. Bu, cüzdanımızdaki ETH miktarını döndürecektir. Daha fazla bilgi edinmek için [Alchemy'nin composer aracının nasıl kullanılacağına dair kısa eğitimine](https://youtu.be/r6sjRxBZJuU) göz atın.
 
 MetaMask hesap adresinizi girin ve **Send Request** (İstek Gönder) düğmesine tıklayın. Aşağıdaki kod parçacığına benzeyen bir yanıt göreceksiniz.
@@ -73,7 +74,7 @@ MetaMask hesap adresinizi girin ve **Send Request** (İstek Gönder) düğmesine
 > _Not: Bu sonuç ETH değil, wei cinsindendir. Wei, ether'in en küçük birimi olarak kullanılır._
 
 Oh be! Sahte paramızın hepsi orada.
-### Adım 6: Projemizi başlatalım
+### Adım 6: Projemizi başlatalım {#step-6-initialize-our-project}
 
 İlk olarak, projemiz için bir klasör oluşturmamız gerekecek. Komut satırınıza gidin ve aşağıdakini girin.
 
@@ -897,7 +898,7 @@ Akıllı sözleşmenizden okuma yapmak için şunları başarıyla kurmanız ger
 
 Bu çok fazla adım gibi gelebilir, ancak endişelenmeyin! Her birini nasıl yapacağınızı adım adım göstereceğiz! :\)
 
-#### Ethereum zincirine bir API bağlantısı kurun
+#### Ethereum zincirine bir API bağlantısı kurun {#establish-an-api-connection-to-the-ethereum-chain}
 
 Bu eğitimin 2. Bölümünde akıllı sözleşmemizden okuma yapmak için Alchemy Web3 anahtarımızı nasıl kullandığımızı hatırlıyor musunuz? Zincirden okuma yapmak için merkeziyetsiz uygulamanızda (dapp) da bir Alchemy Web3 anahtarına ihtiyacınız olacak.
 
@@ -1125,7 +1126,8 @@ Ethereum'daki işlemlerin nasıl çalıştığı hakkında daha fazla bilgi edin
 
 Ethereum blokzincirinde bir işlemi imzalamak için biraz sahte ETH'ye ihtiyacımız olacak. ETH almak için [FaucETH](https://fauceth.komputing.org)'e gidebilir ve Goerli hesap adresinizi girebilir, "Request funds" (Fon talep et) seçeneğine tıklayabilir, ardından açılır menüden "Ethereum Testnet Goerli"yi seçebilir ve son olarak tekrar "Request funds" düğmesine tıklayabilirsiniz. Kısa bir süre sonra MetaMask hesabınızda ETH görmelisiniz!
 
-#### Bakiyenizi Kontrol Edin
+#### Bakiyenizi Kontrol Edin {#check-your-balance}
+
 Bakiyemizin orada olduğundan emin olmak için, [Alchemy'nin korumalı alan aracını (sandbox)](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) kullanarak bir [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) isteği yapalım. Bu, cüzdanımızdaki ETH miktarını döndürecektir. MetaMask hesap adresinizi girip "Send Request" (İsteği Gönder) düğmesine tıkladıktan sonra, şuna benzer bir yanıt görmelisiniz:
 
 ```text

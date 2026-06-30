@@ -1,6 +1,6 @@
 ---
-title: 所有以太坊分叉的时间线（2014 年至今）
-description: 以太坊区块链的历史，包括主要里程碑、版本发布和分叉。
+title: "所有以太坊分叉的时间线（2014 年至今）"
+description: "以太坊区块链的历史，包括主要里程碑、版本发布和分叉。"
 lang: zh
 sidebarDepth: 1
 authors: ["尼克索"]
@@ -86,7 +86,8 @@ authors: ["尼克索"]
 
 [更多关于弗萨卡的信息](/roadmap/fusaka/)
 
-### 布拉格-Electra ("佩克特拉")
+### 布拉格-Electra ("佩克特拉") {#pectra}
+
 <NetworkUpgradeSummary name="pectra" />
 
 布拉格-Electra (“佩克特拉”) 升级包含了几项对以太坊协议的改进，旨在提升所有用户、二层网络 (l2)、质押者和节点运营商的体验。

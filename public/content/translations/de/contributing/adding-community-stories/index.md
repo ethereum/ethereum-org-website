@@ -1,6 +1,6 @@
 ---
-title: Community-Geschichten hinzufügen
-description: Wie man eine Community-Geschichte über seine Erfahrungen mit Ethereum bei ethereum.org einreicht
+title: "Community-Geschichten hinzufügen"
+description: "Wie man eine Community-Geschichte über seine Erfahrungen mit Ethereum bei ethereum.org einreicht"
 lang: de
 ---
 

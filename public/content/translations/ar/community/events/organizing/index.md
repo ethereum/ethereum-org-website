@@ -204,7 +204,8 @@ hideEditButton: true
 
 شكر كبير لكل من ساهم في هذا المقال من خلال مشاركة رؤاهم: Slavo Fabisik من ETHBratislava؛ و Lola من ETH Kipu و ETH Latam؛ و Tanja Mladenovic من ETH Belgrade، و Juan David من Ethereum Bogota؛ و Monika Zając من ETHWarsaw؛ و Raffaele Orefice من NapulETH؛ و Xiao Wu(Ling) من ETH Riyadh؛ و Marco من urbe.eth؛ و Caolán Walsh من ETH Dublin؛ و Alex Males من ETHCluj؛ و Stanko Devic من ETH Slovenia.
 
-## الموارد
+## الموارد {#resources}
+
 بودكاست: كيفية تنظيم والترويج لحدث ETH من الألف إلى الياء:
 
 - [دراسة حالة ETHWarsaw، بواسطة Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)

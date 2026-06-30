@@ -1,7 +1,7 @@
 ---
-title: ゼロ知識証明とは？
-metaTitle: ゼロ知識証明
-description: 初心者向けのゼロ知識証明の非技術的な入門。
+title: "ゼロ知識証明とは？"
+metaTitle: "ゼロ知識証明"
+description: "初心者向けのゼロ知識証明の非技術的な入門。"
 lang: ja
 ---
 
@@ -58,8 +58,10 @@ lang: ja
       <p>
         ブータンNDIの詳細については、<a href="/decentralized-identity/#national-and-government-id">分散型アイデンティティのケーススタディ</a>をご覧ください。
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Proof of Humanity（人間性の証明） {#proof-of-humanity}

@@ -11,7 +11,7 @@ topic:
   - "use-cases"
   - "events"
 format: presentation
-author: Фонд Ethereum
+author: "Фонд Ethereum"
 breadcrumb: "Эфириум везде"
 ---
 

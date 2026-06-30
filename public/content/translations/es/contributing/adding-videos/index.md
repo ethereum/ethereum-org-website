@@ -123,27 +123,6 @@ Use encabezados `###` con marcas de tiempo para señalar las secciones principal
 
 Si no tiene una transcripción, puede dejar el cuerpo vacío y el equipo generará una.
 
-#### Paso 4: Elegir etiquetas de temas
-
-Elija las etiquetas de temas de la lista a continuación. Cada etiqueta se asigna directamente a una categoría de filtro en la galería de videos; use el nombre de la etiqueta exactamente como se muestra.
-
-Un video puede tener varias etiquetas para aparecer en múltiples filtros de la galería:
-
-| Etiqueta | Filtro de la galería |
-|---|---|
-| `how-ethereum-works` | Cómo funciona Ethereum |
-| `network-upgrades` | Actualizaciones de la red |
-| `roadmap-and-priorities` | Hoja de ruta y prioridades |
-| `scaling-and-layer-2` | Escalabilidad y capa 2 |
-| `use-cases` | Casos de uso |
-| `privacy` | Privacidad |
-| `security` | Seguridad |
-| `community-stories` | Historias de la comunidad |
-| `events` | Eventos |
-
-Cada video debe tener al menos una etiqueta de esta lista. Los videos sin una etiqueta reconocida solo aparecerán en la vista "Todos" y en los resultados de búsqueda.
-
-La etiqueta `community-stories` también hace que un video aparezca en la [página de Historias](/stories/).
 #### Paso 5: Enviar su PR {#step-5}
 
 Abra una solicitud de extracción (pull request) con sus cambios a la rama `dev`. El equipo revisará su envío y le proporcionará comentarios.

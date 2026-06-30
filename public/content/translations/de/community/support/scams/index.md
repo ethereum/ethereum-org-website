@@ -1,7 +1,7 @@
 ---
 title: Ich wurde betrogen oder habe Geld verloren
 metaTitle: Hilfe bei Betrug & Meldung
-description: Was Sie tun können, wenn Sie betrogen wurden, wie Sie Ihr verbleibendes Vermögen sichern und wo Sie Betrug melden können.
+description: "Was Sie tun können, wenn Sie betrogen wurden, wie Sie Ihr verbleibendes Vermögen sichern und wo Sie Betrug melden können."
 lang: de
 ---
 
@@ -119,7 +119,7 @@ Betrüger geben sich auf Discord, Telegram und in sozialen Medien als Ethereum-T
 
 <ExpandableCard
 title="Wiederherstellungsbetrug"
-contentPreview="Nimm dich nach einem Betrug vor falschen „Krypto-Wiederherstellungsexperten“ in Acht."
+contentPreview="Nimm dich nach einem Betrug vor falschen &quot;Krypto-Wiederherstellungsexperten&quot; in Acht."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >

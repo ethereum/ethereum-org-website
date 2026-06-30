@@ -9,7 +9,7 @@ tags:
   - "社群"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: 在阿根廷建置
+breadcrumb: "在阿根廷建置"
 lang: zh-tw
 ---
 > *這個故事最初於 2025 年 11 月 3 日作為[客座討論串發布在 @Ethereum X 個人檔案上](https://x.com/ethereum/status/1985408315074232397?s=20)。為了提高可讀性，已進行了輕微的編輯。*

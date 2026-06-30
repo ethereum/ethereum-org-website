@@ -1,7 +1,7 @@
 ---
-title: Пектра
-metaTitle: Прага-Електра (Пектра)
-description: Дізнайтеся про оновлення протоколу Пектра
+title: "Пектра"
+metaTitle: "Прага-Електра (Пектра)"
+description: "Дізнайтеся про оновлення протоколу Пектра"
 lang: uk
 authors: ["Nixo", "Маріо Гавел"]
 ---
@@ -117,7 +117,8 @@ _Що входить в оновлення Пектра? - Крістін Кім
 
 _Оновлення Етеріуму Пектра: що потрібно знати стейкерам — Blockdaemon_
 
-## Додаткова література
+## Додаткова література {#further-reading}
+
 - [Дорожня карта Етеріуму](/roadmap/)
 - [Поширені запитання про Пектра](https://epf.wiki/#/wiki/pectra-faq)
 - [Як Пектра покращує досвід стейкерів](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

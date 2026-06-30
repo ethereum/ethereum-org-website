@@ -9,7 +9,7 @@ tags:
   - "resistencia a la censura"
 published: "2026-02-05"
 image: /content/stories/digital-feudalism/tarrence-cover-image.jpeg
-breadcrumb: Sé dueño de tu mundo
+breadcrumb: "Sé dueño de tu mundo"
 lang: es
 ---
 

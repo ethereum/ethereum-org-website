@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: Pectra protokol güncellemesi hakkında bilgi edinin
+description: "Pectra protokol güncellemesi hakkında bilgi edinin"
 lang: tr
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -117,7 +117,8 @@ _Pectra Güncellemesinde Neler Var? - Christine Kim_
 
 _Ethereum Pectra Güncellemesi: Stake Edenlerin Bilmesi Gerekenler — Blockdaemon_
 
-## Daha fazla bilgi
+## Daha fazla bilgi {#further-reading}
+
 - [Ethereum yol haritası](/roadmap/)
 - [Pectra SSS](https://epf.wiki/#/wiki/pectra-faq)
 - [Pectra, stake edenlerin deneyimini nasıl geliştiriyor?](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

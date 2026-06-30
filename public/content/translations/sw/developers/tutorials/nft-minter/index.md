@@ -33,7 +33,7 @@ Kabla hata hatujaanza kuangalia msimbo wowote, ni muhimu kuelewa jinsi kutengene
 
 Tofauti kubwa kati ya viwango viwili vya mkataba mahiri wa NFT ni kwamba ERC-1155 ni kiwango cha tokeni nyingi na inajumuisha utendaji wa kundi, wakati ERC-721 ni kiwango cha tokeni moja na kwa hivyo inasaidia tu kuhamisha tokeni moja kwa wakati.
 
-### Ita utendaji wa ufuzi
+### Ita utendaji wa ufuzi {#minting-function}
 
 Kwa kawaida, utendaji huu wa ufuzi unahitaji upitishe vigezo viwili kama parameta, kwanza `recipient`, ambayo inabainisha anwani itakayopokea NFT yako iliyofufuliwa hivi punde, na pili `tokenURI` ya NFT, mfuatano unaotatua kwenye hati ya JSON inayoelezea data fafanuzi ya NFT.
 
@@ -194,15 +194,15 @@ Sasa kwa kuwa tunaelewa kile tunachofanyia kazi, hebu tuweke mkoba wetu wa Ether
 
 Ili watumiaji waweze kuingiliana na mkataba mahiri wako watahitaji kuunganisha mkoba wao wa Ethereum kwenye programu tumizi iliyogatuliwa (dapp) yako.
 
-### Pakua MetaMask
+### Pakua MetaMask {#download-metamask}
 
 Kwa mafunzo haya, tutatumia MetaMask, mkoba pepe katika kivinjari unaotumika kudhibiti anwani ya akaunti yako ya Ethereum. Ikiwa unataka kuelewa zaidi kuhusu jinsi miamala kwenye Ethereum inavyofanya kazi, angalia [ukurasa huu](/developers/docs/transactions/).
 
 Unaweza kupakua na kuunda akaunti ya MetaMask bila malipo [hapa](https://metamask.io/download). Unapounda akaunti, au ikiwa tayari una akaunti, hakikisha unabadilisha kwenda kwenye mtandao wa majaribio unaotumika kama vile Sepolia \(ili tusiwe tunashughulika na pesa halisi\).
-### Ongeza Etha kutoka kwenye Bomba
+### Ongeza Etha kutoka kwenye Bomba {#add-ether-from-faucet}
 
 Ili kufua NFT zetu (au kutia sahihi miamala yoyote kwenye mnyororo wa vitalu wa Ethereum), tutahitaji ETH bandia. Ili kupata ETH ya mtandao wa majaribio, tumia bomba linalodumishwa kama vile [bomba la Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia) na uweke anwani ya akaunti yako ya Sepolia. Unapaswa kuona ETH kwenye akaunti yako ya MetaMask punde tu baada ya hapo!
-### Angalia salio lako
+### Angalia salio lako {#check-your-balance}
 
 Ili kuhakikisha salio letu lipo, hebu tufanye ombi la [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) tukitumia [zana ya sandbox ya Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Baada ya kuweka anwani ya akaunti yako ya MetaMask na kubofya “Send Request”, unapaswa kuona jibu kama hili:
 
@@ -579,7 +579,7 @@ Ikiwa ulichunguza faili zetu kwa karibu, utakuwa umegundua kuwa katika saraka ye
 
 Pia tutahitaji ufunguo wa API wa Alchemy na API ya Alchemy Web3 ili kuunganisha kwenye mnyororo wa vitalu wa Ethereum na kupakia mkataba mahiri wetu.
 
-### Unda ufunguo wako wa API wa Alchemy
+### Unda ufunguo wako wa API wa Alchemy {#create-alchemy-api}
 
 Ikiwa bado huna akaunti ya Alchemy, [jisajili bila malipo hapa.](https://alchemy.com/?a=eth-org-nft-minter)
 
@@ -844,7 +844,7 @@ const onMintPressed = async () => {
 }
 ```
 
-## Sambaza NFT yako kwenye tovuti iliyo hewani
+## Sambaza NFT yako kwenye tovuti iliyo hewani {#deploy-your-nft}
 
 Uko tayari kuweka mradi wako hewani ili watumiaji waingiliane nao? Angalia [nyaraka za usambazaji za React](https://create-react-app.dev/docs/deployment/) kwa ajili ya kusambaza Minter yako kwenye tovuti iliyo hewani.
 

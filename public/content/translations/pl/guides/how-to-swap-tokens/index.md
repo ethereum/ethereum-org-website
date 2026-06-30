@@ -1,6 +1,6 @@
 ---
-title: Jak wymieniać tokeny
-description: Przewodnik po tym, jak wymieniać tokeny na Ethereum.
+title: "Jak wymieniać tokeny"
+description: "Przewodnik po tym, jak wymieniać tokeny na Ethereum."
 lang: pl
 ---
 

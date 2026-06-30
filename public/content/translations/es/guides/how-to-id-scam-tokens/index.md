@@ -1,6 +1,6 @@
 ---
-title: Cómo identificar tokens fraudulentos
-description: Comprender los tokens fraudulentos, cómo se hacen pasar por legítimos y cómo evitarlos.
+title: "Cómo identificar tokens fraudulentos"
+description: "Comprender los tokens fraudulentos, cómo se hacen pasar por legítimos y cómo evitarlos."
 lang: es
 ---
 

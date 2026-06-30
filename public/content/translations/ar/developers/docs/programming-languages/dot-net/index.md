@@ -22,7 +22,7 @@ incomplete: true
 - [كتابة عقدك الذكي الأول](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [تعلم كيفية تجميع ونشر Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## مراجع وروابط للمبتدئين
+## مراجع وروابط للمبتدئين {#beginner-references-and-links}
 
 **مقدمة عن مكتبة Nethereum وVS Code Solidity**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [الاستعلام عن رصيد العقد الذكي <span dir="ltr">ERC-20</span>](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [تحويل إيثر إلى حساب](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... والمزيد!
-## مقالات للمستوى المتوسط
+## مقالات للمستوى المتوسط {#intermediate-articles}
 
 - [Nethereum البدء والمشروع الأول](https://docs.nethereum.com/docs/getting-started/first-project)
 - [نشر سلاسل الاختبار التطويرية الخاصة بك](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [البث في الوقت الفعلي في Nethereum](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido وNethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum وNethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## أنماط الاستخدام المتقدمة
+## أنماط الاستخدام المتقدمة {#advanced-use-patterns}
 
 - [Azure Key Vault وNethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [البنية المرجعية للواجهة الخلفية لـ Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
-## مشاريع <span dir="ltr">.NET</span> وأدوات وأشياء أخرى ممتعة
+## مشاريع <span dir="ltr">.NET</span> وأدوات وأشياء أخرى ممتعة {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _تجميع وإنشاء وتشغيل مقتطفات كود Nethereum في المتصفح_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _توليد كود Nethereum مع واجهة مستخدم في Blazor_

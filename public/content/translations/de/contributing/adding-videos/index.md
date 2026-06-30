@@ -123,27 +123,6 @@ Verwenden Sie `###`-Überschriften mit Zeitstempeln, um wichtige Abschnitte zu m
 
 Wenn Sie kein Transkript haben, können Sie den Textkörper leer lassen, und das Team wird eines erstellen.
 
-#### Schritt 4: Themen-Tags auswählen
-
-Wählen Sie Themen-Tags aus der unten stehenden Liste aus. Jedes Tag ist direkt einer Filterkategorie in der Videogalerie zugeordnet – verwenden Sie den Tag-Namen genau wie abgebildet.
-
-Ein Video kann mehrere Tags haben, um in mehreren Galeriefiltern zu erscheinen:
-
-| Tag | Galeriefilter |
-|---|---|
-| `how-ethereum-works` | Wie Ethereum funktioniert |
-| `network-upgrades` | Netzwerk-Upgrades |
-| `roadmap-and-priorities` | Roadmap & Prioritäten |
-| `scaling-and-layer-2` | Skalierung & Layer 2 |
-| `use-cases` | Anwendungsfälle |
-| `privacy` | Privatsphäre |
-| `security` | Sicherheit |
-| `community-stories` | Community-Geschichten |
-| `events` | Ereignisse |
-
-Jedes Video sollte mindestens ein Tag aus dieser Liste haben. Videos ohne ein erkanntes Tag erscheinen nur in der Ansicht „Alle“ und in den Suchergebnissen.
-
-Das Tag `community-stories` bewirkt außerdem, dass ein Video auf der [Stories-Seite](/stories/) erscheint.
 #### Schritt 5: Ihren PR einreichen {#step-5}
 
 Erstellen Sie einen Pull Request mit Ihren Änderungen für den Branch `dev`. Das Team wird Ihre Einreichung überprüfen und Feedback geben.

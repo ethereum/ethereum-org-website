@@ -842,11 +842,6 @@ const onMintPressed = async () => {
 }
 ```
 
-## Nasazení vašeho NFT na živý web
-
-Jste připraveni svůj projekt spustit, aby s ním uživatelé mohli interagovat? Podívejte se na [dokumentaci k nasazení Reactu](https://create-react-app.dev/docs/deployment/), kde se dozvíte, jak nasadit váš Minter na živý web.
-
-Ještě jeden poslední krok...
 ## Vezměte blockchainový svět útokem {#take-the-blockchain-world-by-storm}
 
 Dělám si legraci, dostali jste se na konec návodu!

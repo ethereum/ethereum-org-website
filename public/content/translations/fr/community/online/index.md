@@ -1,6 +1,6 @@
 ---
-title: Communautés en ligne
-description: Découvrez les forums en ligne, les salons de discussion et les communautés sur les réseaux sociaux où les passionnés d'Ethereum se réunissent pour discuter et collaborer.
+title: "Communautés en ligne"
+description: "Découvrez les forums en ligne, les salons de discussion et les communautés sur les réseaux sociaux où les passionnés d'Ethereum se réunissent pour discuter et collaborer."
 lang: fr
 ---
 

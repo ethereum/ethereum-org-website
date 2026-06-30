@@ -33,7 +33,7 @@ Avant même de commencer à regarder le code, il est important de comprendre com
 
 La plus grande différence entre les deux normes de contrats intelligents de NFT est que l'ERC-1155 est une norme multi-jetons et inclut une fonctionnalité de traitement par lots, tandis que l'ERC-721 est une norme à jeton unique et ne prend donc en charge que le transfert d'un seul jeton à la fois.
 
-### Appeler la fonction de frappe
+### Appeler la fonction de frappe {#minting-function}
 
 Habituellement, cette fonction de frappe nécessite que vous passiez deux variables en paramètres : premièrement le `recipient`, qui spécifie l'adresse qui recevra votre NFT fraîchement frappé, et deuxièmement le `tokenURI` du NFT, une chaîne de caractères qui se résout en un document JSON décrivant les métadonnées du NFT.
 
@@ -194,15 +194,15 @@ Maintenant que nous comprenons avec quoi nous travaillons, configurons notre por
 
 Pour que les utilisateurs puissent interagir avec votre contrat intelligent, ils devront connecter leur portefeuille Ethereum à votre dapp.
 
-### Télécharger MetaMask
+### Télécharger MetaMask {#download-metamask}
 
 Pour ce tutoriel, nous utiliserons MetaMask, un portefeuille virtuel dans le navigateur utilisé pour gérer l'adresse de votre compte Ethereum. Si vous souhaitez en savoir plus sur le fonctionnement des transactions sur Ethereum, consultez [cette page](/developers/docs/transactions/).
 
 Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download). Lors de la création d'un compte, ou si vous en avez déjà un, assurez-vous de passer à un réseau de test pris en charge tel que Sepolia \(afin de ne pas manipuler d'argent réel\).
-### Ajouter de l'ether depuis un faucet
+### Ajouter de l'ether depuis un faucet {#add-ether-from-faucet}
 
 Pour frapper nos NFT (ou signer des transactions sur la chaîne de blocs Ethereum), nous aurons besoin de faux ETH. Pour obtenir des ETH du réseau de test, utilisez un faucet maintenu tel que le [faucet Sepolia d'Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia) et entrez l'adresse de votre compte Sepolia. Vous devriez voir des ETH dans votre compte MetaMask peu de temps après !
-### Vérifier votre solde
+### Vérifier votre solde {#check-your-balance}
 
 Pour vérifier que notre solde est bien là, faisons une requête [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) en utilisant [l'outil bac à sable d'Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Cela renverra la quantité d'ETH dans notre portefeuille. Après avoir saisi l'adresse de votre compte MetaMask et cliqué sur « Send Request », vous devriez voir une réponse comme celle-ci :
 
@@ -579,7 +579,7 @@ Si vous avez examiné nos fichiers de près, vous aurez remarqué que dans notre
 
 Nous allons également avoir besoin d'une clé API Alchemy et de l'API Alchemy Web3 pour nous connecter à la chaîne de blocs Ethereum et charger notre contrat intelligent.
 
-### Créer votre clé API Alchemy
+### Créer votre clé API Alchemy {#create-alchemy-api}
 
 Si vous n'avez pas encore de compte Alchemy, [inscrivez-vous gratuitement ici.](https://alchemy.com/?a=eth-org-nft-minter)
 
@@ -844,7 +844,7 @@ const onMintPressed = async () => {
 }
 ```
 
-## Déployer votre NFT sur un site Web en ligne
+## Déployer votre NFT sur un site Web en ligne {#deploy-your-nft}
 
 Prêt à mettre votre projet en ligne pour que les utilisateurs puissent interagir avec ? Consultez la [documentation de déploiement de React](https://create-react-app.dev/docs/deployment/) pour déployer votre Minter sur un site Web en ligne.
 

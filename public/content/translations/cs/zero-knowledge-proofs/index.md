@@ -1,7 +1,7 @@
 ---
-title: Co jsou důkazy s nulovou znalostí?
-metaTitle: Důkazy s nulovou znalostí
-description: Netechnický úvod do důkazů s nulovou znalostí pro začátečníky.
+title: "Co jsou důkazy s nulovou znalostí?"
+metaTitle: "Důkazy s nulovou znalostí"
+description: "Netechnický úvod do důkazů s nulovou znalostí pro začátečníky."
 lang: cs
 ---
 
@@ -58,8 +58,10 @@ Důkazy s nulovou znalostí jsou obzvláště užitečné v kontextu [decentrali
       <p>
         Zjistěte více o bhútánském NDI v <a href="/decentralized-identity/#national-and-government-id">případové studii o decentralizované identitě</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Důkaz lidskosti (Proof of Humanity) {#proof-of-humanity}

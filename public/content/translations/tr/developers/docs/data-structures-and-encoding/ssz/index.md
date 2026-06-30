@@ -82,7 +82,8 @@ Yani değişken uzunluklu türlerin gerçek değerleri, serileştirilmiş nesnen
 
 Serileştirme sırasında bir uzunluk sınırının eklenmesini ve serileştirmeden çıkarma sırasında kaldırılmasını gerektiren `BitList` türü gibi özel işlem gerektiren bazı özel durumlar da vardır. Tüm detaylar [SSZ spesifikasyonunda](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md) mevcuttur.
 
-### Serileştirmeden çıkarma
+### Serileştirmeden çıkarma {#deserialization}
+
 Bu nesneyi serileştirmeden çıkarmak için <b>şema</b> gereklidir. Şema, serileştirilmiş verilerin kesin düzenini tanımlar; böylece her bir belirli öğe, bir bayt blob'undan doğru türe, değere, boyuta ve konuma sahip öğeler içeren anlamlı bir nesneye dönüştürülerek serileştirmeden çıkarılabilir. Serileştirmeden çıkarıcıya hangi değerlerin gerçek değerler, hangilerinin sapma olduğunu belirten şey şemadır. Bir nesne serileştirildiğinde tüm alan adları kaybolur, ancak serileştirmeden çıkarma sırasında şemaya göre yeniden oluşturulur.
 ## Merkleizasyon {#merkleization}
 
@@ -134,7 +135,8 @@ Belirli bir öğeyi temsil eden genelleştirilmiş endekslerin listesini sağlam
 8*     9*   10    11   12    13    14    15
 ```
 
-## Daha fazla bilgi
+## Daha fazla bilgi {#further-reading}
+
 - [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [Upgrading Ethereum: Merkleizasyon](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [SSZ uygulamaları](https://github.com/ethereum/consensus-specs/issues/2138)

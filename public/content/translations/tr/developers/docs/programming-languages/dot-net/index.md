@@ -22,7 +22,7 @@ Microsoft teknoloji yığınındaki araçları ve dilleri kullanarak Ethereum ü
 - [İlk Akıllı Sözleşmenizi Yazın](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity'yi Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Başlangıç seviyesi referanslar ve bağlantılar
+## Başlangıç seviyesi referanslar ve bağlantılar {#beginner-references-and-links}
 
 **Nethereum kütüphanesine ve VS Code Solidity'ye giriş**
 
@@ -42,7 +42,7 @@ Microsoft teknoloji yığınındaki araçları ve dilleri kullanarak Ethereum ü
   - [ERC-20 Akıllı Sözleşme Bakiyesini Sorgulama](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [Bir Hesaba Ether Transfer Etme](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... Ve daha fazlası!
-## Orta seviye makaleler
+## Orta seviye makaleler {#intermediate-articles}
 
 - [Nethereum Başlarken ve İlk Proje](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Kendi Geliştirme Test Zincirlerinizi Dağıtın](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ Microsoft teknoloji yığınındaki araçları ve dilleri kullanarak Ethereum ü
 - [Nethereum gerçek zamanlı akış](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido ve Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum ve Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## Gelişmiş kullanım kalıpları
+## Gelişmiş kullanım kalıpları {#advanced-use-patterns}
 
 - [Azure Key Vault ve Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum arka uç referans mimarisi](https://github.com/Nethereum/ujo-backend)
-## .NET projeleri, araçları ve diğer eğlenceli şeyler
+## .NET projeleri, araçları ve diğer eğlenceli şeyler {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _Tarayıcıda Nethereum kod parçacıklarını derleyin, oluşturun ve çalıştırın_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor'da kullanıcı arayüzü ile Nethereum kod üretimi_

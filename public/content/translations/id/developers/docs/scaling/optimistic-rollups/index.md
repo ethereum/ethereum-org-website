@@ -253,7 +253,8 @@ Lebih suka belajar secara visual? Tonton Finematics menjelaskan rollup Optimisti
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Bacaan lebih lanjut tentang rollup Optimistic
+## Bacaan lebih lanjut tentang rollup Optimistic {#further-reading-on-optimistic-rollups}
+
 - [Bagaimana cara kerja rollup Optimistic (Panduan Lengkap)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Panduan Esensial untuk Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Panduan Praktis untuk Rollup Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

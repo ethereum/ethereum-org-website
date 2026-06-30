@@ -1,6 +1,6 @@
 ---
-title: 添加社区故事
-description: 如何向 ethereum.org 提交关于你的以太坊体验的社区故事
+title: "添加社区故事"
+description: "如何向 ethereum.org 提交关于你的以太坊体验的社区故事"
 lang: zh
 ---
 
@@ -19,8 +19,8 @@ lang: zh
 Ethereum.org 是一个中立的教育资源。故事页面的策划旨在：
 
 - 通过真实的个人和社区体验，使以太坊的目标和技术**更具人情味**
-- **强调**开源和避风港技术如何真正改变人们的生活
-- **赞颂**全球以太坊社区的多样性
+- <strong>强调</strong>开源和避风港技术如何真正改变人们的生活
+- <strong>赞颂</strong>全球以太坊社区的多样性
 
 本网站不会上架主要用于推广特定产品、代币或商业服务的故事。所有提交的内容均由 ethereum.org 团队审核。
 
@@ -62,8 +62,8 @@ Ethereum.org 是一个中立的教育资源。故事页面的策划旨在：
 
 你也可以建议**短篇故事**或**视频故事**：
 
-- **短篇故事**在[故事登陆页面](/stories/)上以卡片形式显示。这些故事可以直接发布在 ethereum.org 上，也可以链接到在推特上分享的故事。
-- **视频故事**是在[视频库](/videos/)中带有 `community-stories` 类别标签的视频。要添加视频故事，请遵循现有的[添加视频](/contributing/adding-videos/)贡献指南，并在主题标签中包含 `community-stories`。
+- <strong>短篇故事</strong>在[故事登陆页面](/stories/)上以卡片形式显示。这些故事可以直接发布在 ethereum.org 上，也可以链接到在推特上分享的故事。
+- <strong>视频故事</strong>是在[视频库](/videos/)中带有 `community-stories` 类别标签的视频。要添加视频故事，请遵循现有的[添加视频](/contributing/adding-videos/)贡献指南，并在主题标签中包含 `community-stories`。
 
 如果你想建议这两种类型中的任何一种，请在 GitHub 上创建一个 issue。
 

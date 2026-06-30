@@ -22,7 +22,7 @@ Hai prima bisogno di un'introduzione più basilare? Dai un'occhiata a [ethereum.
 - [Scrivi il tuo primo smart contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Scopri come compilare e distribuire in Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Riferimenti e link per principianti
+## Riferimenti e link per principianti {#beginner-references-and-links}
 
 **Introduzione alla libreria Nethereum e a VSCode Solidity**
 
@@ -42,7 +42,7 @@ Hai prima bisogno di un'introduzione più basilare? Dai un'occhiata a [ethereum.
   - [Interrogare il saldo di uno smart contract ERC-20](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [Trasferire ether a un account](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... E molto altro!
-## Articoli di livello intermedio
+## Articoli di livello intermedio {#intermediate-articles}
 
 - [Nethereum: per iniziare e primo progetto](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Distribuire le proprie catene di test di sviluppo](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ Hai prima bisogno di un'introduzione più basilare? Dai un'occhiata a [ethereum.
 - [Streaming in tempo reale con Nethereum](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido e Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum e Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## Modelli di utilizzo avanzati
+## Modelli di utilizzo avanzati {#advanced-use-patterns}
 
 - [Azure Key Vault e Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Architettura di riferimento del backend Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
-## Progetti .NET, strumenti e altre cose divertenti
+## Progetti .NET, strumenti e altre cose divertenti {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _Compila, crea ed esegui frammenti di codice Nethereum nel browser_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Generazione di codice Nethereum con interfaccia utente in Blazor_

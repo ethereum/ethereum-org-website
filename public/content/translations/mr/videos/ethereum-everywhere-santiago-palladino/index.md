@@ -11,7 +11,7 @@ topic:
   - "use-cases"
   - "events"
 format: presentation
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "इथेरियम, सर्वत्र"
 ---
 

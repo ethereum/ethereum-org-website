@@ -54,7 +54,7 @@ Plasma používá hlavní kontrakt běžící na Ethereu ke zpracování uživat
 
 Pro vstup do řetězce Plasma bude muset Alice (uživatelka) vložit ETH nebo jakýkoli ERC-20 token do kontraktu Plasmy. Operátor Plasmy, který sleduje vklady do kontraktu, znovu vytvoří částku rovnající se počátečnímu vkladu Alice a uvolní ji na její adresu na řetězci Plasma. Alice je povinna potvrdit přijetí prostředků na dceřiném řetězci a poté může tyto prostředky použít pro transakce.
 
-#### Výstup z řetězce Plasma
+#### Výstup z řetězce Plasma {#exiting-the-plasma-chain}
 
 Výstup z řetězce Plasma je z několika důvodů složitější než vstup do něj. Tím největším je, že ačkoli má Ethereum informace o stavu řetězce Plasma, nemůže ověřit, zda jsou tyto informace pravdivé, či nikoli. Zlomyslný uživatel by mohl učinit nesprávné tvrzení („Mám 1000 ETH“) a projít mu to poskytnutím falešných důkazů na podporu tohoto nároku.
 
@@ -164,7 +164,7 @@ Několik projektů poskytuje implementace Plasmy, které můžete integrovat do 
 
 - [Polygon](https://polygon.technology/) (dříve Matic Network)
 
-## Další čtení
+## Další čtení {#further-reading}
 
 - [Rychlé připomenutí toho, co znamená „sdílená bezpečnost“ a proč je tak důležitá](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Postranní řetězce vs. Plasma vs. sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)

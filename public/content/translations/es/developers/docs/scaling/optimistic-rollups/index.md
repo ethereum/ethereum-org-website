@@ -253,7 +253,8 @@ Se espera que la introducción de la [fragmentación de datos](/roadmap/dankshar
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Más información sobre los rollups optimistas
+## Más información sobre los rollups optimistas {#further-reading-on-optimistic-rollups}
+
 - [¿Cómo funcionan los rollups optimistas? (La guía completa)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [La guía esencial de Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [La guía práctica de los rollups de Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

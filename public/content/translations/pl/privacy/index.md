@@ -1,6 +1,6 @@
 ---
-title: Prywatność w Ethereum
-description: Narzędzia i techniki ochrony prywatności w Ethereum
+title: "Prywatność w Ethereum"
+description: "Narzędzia i techniki ochrony prywatności w Ethereum"
 lang: pl
 ---
 

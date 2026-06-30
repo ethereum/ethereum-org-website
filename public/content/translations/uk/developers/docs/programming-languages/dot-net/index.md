@@ -22,7 +22,7 @@ incomplete: true
 - [Напишіть свій перший смарт-контракт](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Дізнайтеся, як компілювати та розгортати Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Посилання та матеріали для початківців
+## Посилання та матеріали для початківців {#beginner-references-and-links}
 
 **Знайомство з бібліотекою Nethereum та VS Code Solidity**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [Запит балансу смарт-контракту ERC-20](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [Переказ етеру на акаунт](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... Та багато іншого!
-## Статті для середнього рівня
+## Статті для середнього рівня {#intermediate-articles}
 
 - [Nethereum: початок роботи та перший проєкт](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Розгортання власних тестових мереж для розробки](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [Потокова передача в реальному часі в Nethereum](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido та Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum та Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## Патерни розширеного використання
+## Патерни розширеного використання {#advanced-use-patterns}
 
 - [Azure Key Vault та Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Еталонна архітектура бекенду Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
-## Проєкти .NET, інструменти та інші цікавинки
+## Проєкти .NET, інструменти та інші цікавинки {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) — _компілюйте, створюйте та запускайте фрагменти коду Nethereum у браузері_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) — _генерація коду Nethereum з інтерфейсом користувача в Blazor_

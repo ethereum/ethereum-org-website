@@ -1,6 +1,6 @@
 ---
-title: Privatsphäre auf Ethereum
-description: Tools und Techniken zum Schutz Ihrer Privatsphäre auf Ethereum
+title: "Privatsphäre auf Ethereum"
+description: "Tools und Techniken zum Schutz Ihrer Privatsphäre auf Ethereum"
 lang: de
 ---
 

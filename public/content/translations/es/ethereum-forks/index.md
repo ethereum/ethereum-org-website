@@ -1,5 +1,5 @@
 ---
-title: Cronología de todas las bifurcaciones de Ethereum (2014 hasta el presente)
+title: "Cronología de todas las bifurcaciones de Ethereum (2014 hasta el presente)"
 description: Una historia de la cadena de bloques de Ethereum que incluye los principales hitos, lanzamientos y bifurcaciones.
 lang: es
 sidebarDepth: 1
@@ -86,7 +86,8 @@ Vaya directamente a la información sobre algunas de las actualizaciones pasadas
 
 [Más sobre Fusaka](/roadmap/fusaka/)
 
-### Praga-Electra ("Pectra")
+### Praga-Electra ("Pectra") {#pectra}
+
 <NetworkUpgradeSummary name="pectra" />
 
 La actualización Praga-Electra ("Pectra") incluyó varias mejoras en el protocolo de Ethereum destinadas a mejorar la experiencia de todos los usuarios, las redes de capa 2, quienes hacen staking y los operadores de nodos.

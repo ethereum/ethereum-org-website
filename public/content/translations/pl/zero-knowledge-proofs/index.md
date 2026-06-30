@@ -1,7 +1,7 @@
 ---
-title: Czym są dowody z wiedzą zerową?
-metaTitle: Dowody z wiedzą zerową
-description: Nietechniczne wprowadzenie do dowodów z wiedzą zerową dla początkujących.
+title: "Czym są dowody z wiedzą zerową?"
+metaTitle: "Dowody z wiedzą zerową"
+description: "Nietechniczne wprowadzenie do dowodów z wiedzą zerową dla początkujących."
 lang: pl
 ---
 
@@ -58,8 +58,10 @@ Dowody z wiedzą zerową są szczególnie przydatne w kontekście [zdecentralizo
       <p>
         Dowiedz się więcej o NDI Bhutanu w <a href="/decentralized-identity/#national-and-government-id">studium przypadku zdecentralizowanej tożsamości</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Dowód człowieczeństwa (Proof of Humanity) {#proof-of-humanity}

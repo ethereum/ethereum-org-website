@@ -1,6 +1,6 @@
 ---
-title: Bílá kniha Etherea
-description: Úvodní dokument k Ethereu, publikovaný v roce 2013 před jeho spuštěním.
+title: "Bílá kniha Etherea"
+description: "Úvodní dokument k Ethereu, publikovaný v roce 2013 před jeho spuštěním."
 lang: cs
 sidebarDepth: 2
 hideEditButton: true

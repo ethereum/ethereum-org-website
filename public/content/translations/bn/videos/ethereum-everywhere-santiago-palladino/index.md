@@ -11,7 +11,7 @@ topic:
   - "use-cases"
   - "events"
 format: presentation
-author: ইথেরিয়াম ফাউন্ডেশন
+author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "ইথেরিয়াম, সর্বত্র"
 ---
 

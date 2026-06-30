@@ -61,7 +61,8 @@ _注意：請務必選擇 **Goerli**，否則本教學將無法運作。_
 _注意：由於網路擁塞，這可能需要一段時間。_
 ``
 
-### 第 5 步：檢查你的餘額
+### 第 5 步：檢查你的餘額 {#step-5-check-your-balance}
+
 為了再次確認 ETH 已存入你的錢包，讓我們使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 請求。這將回傳我們錢包中的 ETH 數量。要了解更多資訊，請查看 [Alchemy 關於如何使用 composer 工具的簡短教學](https://youtu.be/r6sjRxBZJuU)。
 
 輸入你的梅塔馬斯克帳戶地址，然後點擊 **Send Request**。你將會看到類似下方程式碼片段的回應。
@@ -73,7 +74,7 @@ _注意：由於網路擁塞，這可能需要一段時間。_
 > _注意：此結果的單位是 wei，而不是 ETH。Wei 被用作以太幣的最小面額。_
 
 呼！我們的假錢都在那裡。
-### 第 6 步：初始化我們的專案
+### 第 6 步：初始化我們的專案 {#step-6-initialize-our-project}
 
 首先，我們需要為專案建立一個資料夾。導覽至你的命令列並輸入以下內容。
 
@@ -897,7 +898,8 @@ export const updateMessage = async (message) => {}
 
 這聽起來可能有很多步驟，但別擔心！我們將逐步引導您完成每一個步驟！ :\)
 
-#### 建立與以太坊鏈的 API 連線
+#### 建立與以太坊鏈的 API 連線 {#establish-an-api-connection-to-the-ethereum-chain}
+
 還記得在本教學的第 2 部分中，我們如何使用 Alchemy Web3 金鑰從智能合約中讀取資料嗎？您在去中心化應用程式 (dapp) 中也需要一個 Alchemy Web3 金鑰才能從鏈上讀取資料。
 
 如果您還沒有安裝，請先導覽至 `starter-files` 的根目錄，並在終端機中執行以下指令來安裝 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)：
@@ -1124,7 +1126,7 @@ useEffect(async () => {
 
 要在以太坊區塊鏈上簽署交易，我們需要一些假的 ETH。要取得 ETH，您可以前往 [FaucETH](https://fauceth.komputing.org) 並輸入您的 Goerli 帳戶地址，點擊「Request funds」，然後在下拉選單中選擇「Ethereum Testnet Goerli」，最後再次點擊「Request funds」按鈕。不久之後，您應該會在您的梅塔馬斯克帳戶中看到 ETH！
 
-#### 檢查你的餘額
+#### 檢查你的餘額 {#check-your-balance}
 
 為了再次確認我們的餘額，讓我們使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 請求。這將回傳我們錢包中的 ETH 數量。在輸入你的梅塔馬斯克帳戶地址並點擊「Send Request」後，你應該會看到類似這樣的回應：
 

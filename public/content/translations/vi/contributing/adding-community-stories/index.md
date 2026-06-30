@@ -1,6 +1,6 @@
 ---
-title: Thêm câu chuyện cộng đồng
-description: Cách gửi câu chuyện cộng đồng về trải nghiệm của bạn với Ethereum cho ethereum.org
+title: "Thêm câu chuyện cộng đồng"
+description: "Cách gửi câu chuyện cộng đồng về trải nghiệm của bạn với Ethereum cho ethereum.org"
 lang: vi
 ---
 

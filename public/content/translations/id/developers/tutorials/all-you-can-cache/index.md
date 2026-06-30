@@ -756,7 +756,7 @@ Karena kita menggunakan fungsi `<address>.call()` tingkat rendah, kita tidak dap
 
 Ini adalah cara kita memverifikasi bahwa kode [memancarkan peristiwa dengan benar](https://getfoundry.sh/reference/cheatcodes/expect-emit/) di Foundry.
 
-### Klien
+### Klien {#the-client}
 
 Satu hal yang tidak Anda dapatkan dengan pengujian Solidity adalah kode JavaScript yang dapat Anda potong dan tempel ke dalam aplikasi Anda sendiri. Versi asli dari tutorial ini men-deploy WORM ke Optimism Goerli, yang sejak saat itu telah dihentikan. Untuk menjalankan klien saat ini, deploy ulang WORM ke jaringan OP Stack yang didukung seperti [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), lalu gunakan alamat kontrak yang dihasilkan di klien JavaScript.
 

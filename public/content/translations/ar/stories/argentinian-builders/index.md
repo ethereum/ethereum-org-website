@@ -9,7 +9,7 @@ tags:
   - "مجتمع"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: البناء من الأرجنتين
+breadcrumb: "البناء من الأرجنتين"
 lang: ar
 ---
 > *نُشرت هذه القصة في الأصل كـ [سلسلة تغريدات ضيف على حساب <span dir="ltr">@Ethereum</span> على منصة <span dir="ltr">X</span>](https://x.com/ethereum/status/1985408315074232397?s=20) في 3 نوفمبر 2025. تم تعديلها بشكل طفيف لتسهيل القراءة.*

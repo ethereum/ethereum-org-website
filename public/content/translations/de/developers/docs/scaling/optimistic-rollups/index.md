@@ -251,7 +251,8 @@ Es wird erwartet, dass die Einführung von [Data Sharding](/roadmap/danksharding
 
 Lernen Sie eher visuell? Sehen Sie sich an, wie Finematics Optimistic Rollups erklärt:
 
-## Weiterführende Literatur zu Optimistic Rollups
+## Weiterführende Literatur zu Optimistic Rollups {#further-reading-on-optimistic-rollups}
+
 - [Wie funktionieren Optimistic Rollups (Der vollständige Leitfaden)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Der essenzielle Leitfaden für Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Der praktische Leitfaden für Ethereum-Rollups](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

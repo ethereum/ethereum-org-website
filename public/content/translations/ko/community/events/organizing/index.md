@@ -1,7 +1,7 @@
 ---
-title: 이더리움 이벤트 개최 방법
-metaTitle: 이더리움 이벤트 개최하기
-description: 이더리움 이벤트를 개최하는 방법
+title: "이더리움 이벤트 개최 방법"
+metaTitle: "이더리움 이벤트 개최하기"
+description: "이더리움 이벤트를 개최하는 방법"
 lang: ko
 hideEditButton: true
 ---
@@ -165,7 +165,7 @@ X.com은 소셜 미디어 홍보의 중추가 될 것입니다. 그곳에서 적
 
 콘퍼런스, 특히 이더리움 분야에서 이벤트를 개최할 때 가장 큰 과제 중 하나는 충분한 자금을 확보하는 것입니다. **많은 이벤트 주최자가 대관료, 케이터링 및 기타 물류 비용을 충당하는 데 필요한 자금을 조달하는 데 어려움을 겪습니다.** 후원은 종종 필수적이지만, 관계를 구축하고 기업이 이벤트에 투자하도록 설득하는 데는 시간이 걸릴 수 있습니다. 더욱이 시장 침체기에는 기업들이 비핵심 활동에 투자하려는 의지가 줄어들 수 있으므로 후원자를 유치하는 어려움이 커질 수 있습니다.
 
-예산을 효과적으로 관리하는 것이 핵심입니다. 막바지 장소 변경이나 추가적인 이벤트 기술 요구 사항과 같은 **예기치 않은 지출**은 예산을 순식간에 초과하게 만들 수 있습니다.
+예산을 효과적으로 관리하는 것이 핵심입니다. 막바지 장소 변경이나 추가적인 이벤트 기술 요구 사항과 같은 <strong>예기치 않은 지출</strong>은 예산을 순식간에 초과하게 만들 수 있습니다.
 
 새로운 이벤트의 경우, **고품질의 연사를 섭외하는 것이 특히 어려울 수 있습니다.** 이더리움 분야에서 확고한 입지를 다진 오피니언 리더나 인플루언서는 이미 일정이 꽉 차 있을 수 있으며, 검증된 실적이 없는 새로운 이벤트에 참여하는 것을 주저할 수 있습니다. 이벤트가 열리기 훨씬 전부터 네트워킹을 하고 잠재적인 연사에게 연락하는 데 시간을 할애할 준비를 하세요.
 
@@ -204,7 +204,8 @@ X.com은 소셜 미디어 홍보의 중추가 될 것입니다. 그곳에서 적
 
 통찰력을 공유하여 이 글에 기여해 주신 모든 분들께 깊은 감사를 드립니다: ETHBratislava의 Slavo Fabisik, ETH Kipu 및 ETH Latam의 Lola, ETH Belgrade의 Tanja Mladenovic, Ethereum Bogota의 Juan David, ETHWarsaw의 Monika Zając, NapulETH의 Raffaele Orefice, ETH Riyadh의 Xiao Wu(Ling), urbe.eth의 Marco, ETH Dublin의 Caolán Walsh, ETHCluj의 Alex Males, 그리고 ETH Slovenia의 Stanko Devic.
 
-## 리소스
+## 리소스 {#resources}
+
 팟캐스트: A부터 Z까지 ETH 이벤트를 개최하고 홍보하는 방법:
 
 - [Out of Ordinary의 ETHWarsaw 사례 연구](https://www.youtube.com/watch?v=io2Dx1ouz8o)

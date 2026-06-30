@@ -1,6 +1,6 @@
 ---
-title: 所有以太坊分叉時間表（2014 年至今）
-description: 以太坊區塊鏈的歷史，包含重要里程碑、版本發佈與分叉。
+title: "所有以太坊分叉時間表（2014 年至今）"
+description: "以太坊區塊鏈的歷史，包含重要里程碑、版本發佈與分叉。"
 lang: zh-tw
 sidebarDepth: 1
 authors: ["尼克索"]
@@ -86,7 +86,8 @@ authors: ["尼克索"]
 
 [更多關於富薩卡的資訊](/roadmap/fusaka/)
 
-### 布拉格-Electra (「佩克特拉」)
+### 布拉格-Electra (「佩克特拉」) {#pectra}
+
 <NetworkUpgradeSummary name="pectra" />
 
 布拉格-Electra (「佩克特拉」) 升級包含了對以太坊協定的幾項改進，旨在提升所有使用者、第二層 (L2) 網路、質押者與節點營運商的體驗。

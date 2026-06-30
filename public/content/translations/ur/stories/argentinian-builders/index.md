@@ -88,7 +88,7 @@ _ماخذ: [Electric Capital Developer Report](https://www.developerreport.com/)
 
 _[ماخذ](https://medium.com/@AugurProject/serpent-compiler-vulnerability-rep-solidity-migration-5d91e4ae90dd)۔_
 
-یا یہ کہ [ERC-721 کا نفاذ](https://github.com/OpenZeppelin/openzeppelin-contracts/pull/803d) جس نے ۲۰۲۱ کے NFT کے جنون کو ممکن بنایا، وہ تین سال پہلے یہیں لکھا گیا تھا۔ 
+یا یہ کہ [<span dir="ltr">ERC-721</span> کا نفاذ](https://github.com/OpenZeppelin/openzeppelin-contracts/pull/803d) جس نے ۲۰۲۱ کے NFT کے جنون کو ممکن بنایا، وہ تین سال پہلے یہیں لکھا گیا تھا۔ 
 
 یا یہ کہ [میکر ڈاؤ](https://x.com/MakerDAO) SAI اور ملٹی-ضمانت DAI کی تعیناتی یہیں سے ہوئی، بالکل [Balancer](https://balancer.fi/) اور [Aragon](https://www.aragon.org/) کی طرح۔ 
 

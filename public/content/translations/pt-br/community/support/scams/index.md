@@ -1,7 +1,7 @@
 ---
-title: Fui vítima de golpe ou perdi fundos
-metaTitle: Ajuda e denúncia de golpes
-description: O que fazer se você foi vítima de um golpe, como proteger seus ativos restantes e onde denunciar fraudes.
+title: "Fui vítima de golpe ou perdi fundos"
+metaTitle: "Ajuda e denúncia de golpes"
+description: "O que fazer se você foi vítima de um golpe, como proteger seus ativos restantes e onde denunciar fraudes."
 lang: pt-br
 ---
 

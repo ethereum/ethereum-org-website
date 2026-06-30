@@ -9,7 +9,7 @@ tags:
   - "సృజనాత్మక యాజమాన్యం"
 published: "2025-05-30"
 image: /content/stories/funding-culture/pplpleasr-hero.png
-breadcrumb: సంస్కృతిని మార్చడం
+breadcrumb: "సంస్కృతిని మార్చడం"
 lang: te
 ---
 

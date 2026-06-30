@@ -39,7 +39,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.gif)
 
-## 3. إجراء طلب من سطر الأوامر
+## 3. إجراء طلب من سطر الأوامر {#make-a-request-from-the-command-line}
 
 تفاعل مع سلسلة كتل إيثيريوم من خلال Alchemy باستخدام JSON-RPC و curl.
 
@@ -66,7 +66,7 @@ _**ملاحظة:** استبدل `https://eth-mainnet.alchemyapi.io/v2/demo` بم
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. إعداد عميل Web3 الخاص بك
+## 4. إعداد عميل Web3 الخاص بك {#set-up-your-web3-client}
 
 **إذا كان لديك عميل حالي،** فقم بتغيير عنوان URL لمزود العقدة الحالي إلى عنوان URL الخاص بـ Alchemy مع مفتاح API الخاص بك: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -96,7 +96,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. كتابة أول برنامج نصي لـ Web3!
+## 5. كتابة أول برنامج نصي لـ Web3! {#write-your-first-web3-script}
 
 الآن للبدء في العمل العملي مع القليل من برمجة Web3، سنكتب برنامجًا نصيًا بسيطًا يطبع أحدث رقم كتلة من شبكة إيثيريوم الرئيسية.
 

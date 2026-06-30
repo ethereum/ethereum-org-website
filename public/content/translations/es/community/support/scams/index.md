@@ -1,7 +1,7 @@
 ---
-title: Fui estafado o perdí fondos
+title: "Fui estafado o perdí fondos"
 metaTitle: Ayuda y denuncias de estafas
-description: Qué hacer si ha sido estafado, cómo asegurar sus activos restantes y dónde denunciar el fraude.
+description: "Qué hacer si ha sido estafado, cómo asegurar sus activos restantes y dónde denunciar el fraude."
 lang: es
 ---
 

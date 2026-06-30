@@ -117,7 +117,8 @@ _Cosa c'è nell'aggiornamento Pectra? - Christine Kim_
 
 _Aggiornamento Pectra di Ethereum: cosa devono sapere gli staker — Blockdaemon_
 
-## Letture di approfondimento
+## Letture di approfondimento {#further-reading}
+
 - [Roadmap di Ethereum](/roadmap/)
 - [FAQ su Pectra](https://epf.wiki/#/wiki/pectra-faq)
 - [Come Pectra migliora l'esperienza degli staker](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

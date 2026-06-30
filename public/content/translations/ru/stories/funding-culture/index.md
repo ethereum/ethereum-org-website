@@ -9,7 +9,7 @@ tags:
   - "творческая собственность"
 published: "2025-05-30"
 image: /content/stories/funding-culture/pplpleasr-hero.png
-breadcrumb: Продвижение культуры
+breadcrumb: "Продвижение культуры"
 lang: ru
 ---
 

@@ -134,6 +134,7 @@ Hash dari (8,9) harus sama dengan hash (4), yang di-hash dengan 5 untuk menghasi
 ```
 
 ## Bacaan lebih lanjut
+
 - [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [Upgrading Ethereum: Merkleisasi](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [Implementasi SSZ](https://github.com/ethereum/consensus-specs/issues/2138)

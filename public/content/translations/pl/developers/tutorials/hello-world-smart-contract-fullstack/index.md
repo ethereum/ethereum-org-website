@@ -61,7 +61,7 @@ Aby wdrożyć swój inteligentny kontrakt w sieci testowej, będziesz potrzebowa
 _Uwaga: ze względu na przeciążenie sieci może to chwilę potrwać._
 ``
 
-### Krok 5: Sprawdź swoje saldo
+### Krok 5: Sprawdź swoje saldo {#step-5-check-your-balance}
 
 Aby upewnić się, że ETH znajduje się w Twoim portfelu, wykonajmy żądanie [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) za pomocą [narzędzia sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Zwróci to ilość ETH w naszym portfelu. Aby dowiedzieć się więcej, sprawdź [krótki samouczek Alchemy na temat korzystania z narzędzia composer](https://youtu.be/r6sjRxBZJuU).
 
@@ -74,7 +74,8 @@ Wprowadź adres swojego konta MetaMask i kliknij **Send Request**. Zobaczysz odp
 > _Uwaga: Ten wynik jest podany w wei, a nie w ETH. Wei jest używane jako najmniejszy nominał etheru._
 
 Uff! Nasze fałszywe pieniądze są na miejscu.
-### Krok 6: Zainicjuj nasz projekt
+### Krok 6: Zainicjuj nasz projekt {#step-6-initialize-our-project}
+
 Najpierw musimy utworzyć folder dla naszego projektu. Przejdź do wiersza poleceń i wpisz poniższe polecenia.
 
 ```
@@ -898,7 +899,7 @@ Aby odczytywać dane ze swojego inteligentnego kontraktu, musisz pomyślnie skon
 
 Może to brzmieć jak wiele kroków, ale nie martw się! Przeprowadzimy Cię przez każdy z nich krok po kroku! :\)
 
-#### Nawiąż połączenie API z łańcuchem Ethereum
+#### Nawiąż połączenie API z łańcuchem Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
 
 Pamiętasz, jak w części 2 tego samouczka użyliśmy naszego klucza Alchemy Web3 do odczytu z naszego inteligentnego kontraktu? Będziesz również potrzebować klucza Alchemy Web3 w swojej zdecentralizowanej aplikacji (dapp), aby odczytywać dane z łańcucha.
 
@@ -1126,7 +1127,8 @@ Możesz pobrać i utworzyć konto MetaMask za darmo [tutaj](https://metamask.io/
 
 Aby podpisać transakcję na blockchainie Ethereum, będziemy potrzebować trochę fałszywego ETH. Aby zdobyć ETH, możesz przejść do [FaucETH](https://fauceth.komputing.org) i wprowadzić adres swojego konta Goerli, kliknąć „Request funds” (Poproś o środki), następnie wybrać „Ethereum Testnet Goerli” z listy rozwijanej i na koniec ponownie kliknąć przycisk „Request funds”. Wkrótce potem powinieneś zobaczyć ETH na swoim koncie MetaMask!
 
-#### Sprawdź swoje saldo
+#### Sprawdź swoje saldo {#check-your-balance}
+
 Aby upewnić się, że nasze saldo tam jest, wykonajmy żądanie [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) za pomocą [narzędzia sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Zwróci to ilość ETH w naszym portfelu. Po wprowadzeniu adresu swojego konta MetaMask i kliknięciu „Send Request”, powinieneś zobaczyć odpowiedź podobną do tej:
 
 ```text

@@ -1,7 +1,7 @@
 ---
-title: ペクトラ
-metaTitle: Prague-Electra (ペクトラ)
-description: ペクトラ・プロトコル・アップグレードについて学ぶ
+title: "ペクトラ"
+metaTitle: "Prague-Electra (ペクトラ)"
+description: "ペクトラ・プロトコル・アップグレードについて学ぶ"
 lang: ja
 authors: ["Nixo", "マリオ・ハベル"]
 ---
@@ -117,7 +117,8 @@ _ペクトラ・アップグレードには何が含まれるのか？ - Christi
 
 _イーサリアムのペクトラ・アップグレード：ステーカーが知っておくべきこと — Blockdaemon_
 
-## 参考文献
+## 参考文献 {#further-reading}
+
 - [イーサリアムのロードマップ](/roadmap/)
 - [ペクトラFAQ](https://epf.wiki/#/wiki/pectra-faq)
 - [ペクトラがステーカーの体験をどのように向上させるか](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

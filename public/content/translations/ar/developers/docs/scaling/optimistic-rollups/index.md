@@ -253,7 +253,8 @@ lang: ar
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## قراءات إضافية حول رول أب متفائل
+## قراءات إضافية حول رول أب متفائل {#further-reading-on-optimistic-rollups}
+
 - [كيف تعمل رول أب متفائل (الدليل الشامل)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [الدليل الأساسي لـ أربيتروم](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [الدليل العملي لتجميعات إيثيريوم](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

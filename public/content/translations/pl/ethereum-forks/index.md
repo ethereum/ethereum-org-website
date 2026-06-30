@@ -1,6 +1,6 @@
 ---
-title: Oś czasu wszystkich rozwidleń Ethereum (od 2014 do dziś)
-description: Historia blockchaina Ethereum, w tym najważniejsze kamienie milowe, wydania i rozwidlenia.
+title: "Oś czasu wszystkich rozwidleń Ethereum (od 2014 do dziś)"
+description: "Historia blockchaina Ethereum, w tym najważniejsze kamienie milowe, wydania i rozwidlenia."
 lang: pl
 sidebarDepth: 1
 authors: ["Nixo"]
@@ -86,7 +86,8 @@ Szukasz przyszłych aktualizacji protokołu? [Dowiedz się o nadchodzących aktu
 
 [Więcej o Fusaka](/roadmap/fusaka/)
 
-### Prague-Electra („Pectra”)
+### Prague-Electra („Pectra”) {#pectra}
+
 <NetworkUpgradeSummary name="pectra" />
 
 Aktualizacja Prague-Electra („Pectra”) zawierała kilka ulepszeń protokołu Ethereum, których celem była poprawa doświadczeń wszystkich użytkowników, sieci warstwy 2 (L2), stakujących oraz operatorów węzłów.

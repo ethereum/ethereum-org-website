@@ -59,7 +59,7 @@ lang: ar
 
 بدأت [<span dir="ltr">Shibuya</span>](https://www.shibuya.film/) مع [<span dir="ltr">Maciej Kuciara</span>](https://www.kuciara.com/). حلمنا: منصة يمكن للمبدعين من خلالها التمويل الجماعي، والنشر، وتطوير القصص مباشرة مع مجتمعاتهم. لا يوجد حراس بوابة. فقط القصة، والمجتمع، والكود.
 
-كانت تجربتنا الأولى عبارة عن مسلسل أنمي يُدعى [<span dir="ltr">White Rabbit</span>](https://www.shibuya.film/series/white-rabbit). جمعنا <span dir="ltr">>400 ETH</span> من خلال تجربة تفاعلية بأسلوب "اختر مغامرتك الخاصة":
+كانت تجربتنا الأولى عبارة عن مسلسل أنمي يُدعى [<span dir="ltr">White Rabbit</span>](https://www.shibuya.film/series/white-rabbit). جمعنا <span dir="ltr">400 ETH</span> من خلال تجربة تفاعلية بأسلوب "اختر مغامرتك الخاصة":
 - قام المعجبون بسك رموز <span dir="ltr">Producer Pass NFTs</span>
 - قاموا بتخزين حصة للتصويت على قرارات الحبكة مباشرة في المشغل
 - ربحوا رمز <span dir="ltr">ERC-20</span> مميز (رمز الانتباه الخاص بنا) 

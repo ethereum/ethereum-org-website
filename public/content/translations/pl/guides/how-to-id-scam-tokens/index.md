@@ -1,6 +1,6 @@
 ---
-title: Jak rozpoznać fałszywe tokeny
-description: Zrozumienie fałszywych tokenów, jak udają one legalne i jak ich unikać.
+title: "Jak rozpoznać fałszywe tokeny"
+description: "Zrozumienie fałszywych tokenów, jak udają one legalne i jak ich unikać."
 lang: pl
 ---
 

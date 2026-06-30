@@ -117,7 +117,8 @@ _Apa Saja yang Ada di Pembaruan Pectra? - Christine Kim_
 
 _Pembaruan Pectra Ethereum: Apa yang Perlu Diketahui Staker — Blockdaemon_
 
-## Bacaan lebih lanjut
+## Bacaan lebih lanjut {#further-reading}
+
 - [Peta jalan Ethereum](/roadmap/)
 - [Tanya Jawab Pectra](https://epf.wiki/#/wiki/pectra-faq)
 - [Bagaimana Pectra meningkatkan pengalaman staker](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

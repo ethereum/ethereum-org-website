@@ -9,7 +9,7 @@ Ethereum.org est un projet open source avec **plus de 12 000** contributeurs qui
 
 Nous sommes une communauté accueillante qui vous aidera à vous développer et à vous former dans l'écosystème [Ethereum](/) tout en contribuant de manière significative et en acquérant une expérience pratique pertinente !
 
-## Façons de contribuer
+## Façons de contribuer {#ways-to-contribute}
 
 **Traductions**
 - [Rejoindre le programme de traduction](/contributing/translation-program/) – Aidez-nous à traduire ethereum.org dans de nouvelles langues

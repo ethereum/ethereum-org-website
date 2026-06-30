@@ -72,15 +72,18 @@ La dimensione del database e la velocità della sincronizzazione iniziale dipend
 Assicurati inoltre che la tua connessione Internet non sia limitata da un [limite di larghezza di banda](https://wikipedia.org/wiki/Data_cap). Si consiglia di utilizzare una connessione a consumo illimitato poiché la sincronizzazione iniziale e i dati trasmessi alla rete potrebbero superare il tuo limite.
 
 ##### Sistema operativo
+
 Tutti i client supportano i principali sistemi operativi: Linux, macOS, Windows. Ciò significa che puoi eseguire i nodi su normali macchine desktop o server con il sistema operativo (OS) più adatto a te. Assicurati che il tuo sistema operativo sia aggiornato per evitare potenziali problemi e vulnerabilità di sicurezza.
 
 ##### Requisiti minimi
+
 - CPU con 2+ core
 - 8 GB di RAM
 - SSD da 2 TB
 - Larghezza di banda di 10+ MBit/s
 
 ##### Specifiche consigliate
+
 - CPU veloce con 4+ core
 - 16+ GB di RAM
 - SSD veloce da 2+ TB
@@ -149,6 +152,7 @@ Le istruzioni per l'installazione di ciascun client sono fornite nella documenta
 Ecco le pagine di rilascio dei client in cui puoi trovare i loro binari precompilati o le istruzioni sull'installazione:
 
 ##### Client di esecuzione
+
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads)
@@ -158,6 +162,7 @@ Ecco le pagine di rilascio dei client in cui puoi trovare i loro binari precompi
 Vale anche la pena notare che la diversità dei client è un [problema sul livello di esecuzione](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Si consiglia ai lettori di prendere in considerazione l'esecuzione di un client di esecuzione di minoranza.
 
 ##### Client di consenso
+
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Non fornisce un binario precompilato, solo un'immagine Docker o da compilare dal codice sorgente)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
@@ -169,6 +174,7 @@ La [diversità dei client](/developers/docs/nodes-and-clients/client-diversity/)
 [Vedi l'ultimo utilizzo dei client di rete](https://clientdiversity.org/) e scopri di più sulla [diversità dei client](/developers/docs/nodes-and-clients/client-diversity).
 
 ##### Verificare il software
+
 Quando si scarica software da Internet, si consiglia di verificarne l'integrità. Questo passaggio è facoltativo, ma soprattutto con un pezzo di infrastruttura cruciale come il client Ethereum, è importante essere consapevoli dei potenziali vettori di attacco ed evitarli. Se hai scaricato un binario precompilato, devi fidarti di esso e rischiare che un utente malintenzionato possa scambiare l'eseguibile con uno dannoso.
 
 Gli sviluppatori firmano i binari rilasciati con le loro chiavi PGP in modo da poter verificare crittograficamente che stai eseguendo esattamente il software che hanno creato. Devi solo ottenere le chiavi pubbliche utilizzate dagli sviluppatori, che possono essere trovate nelle pagine di rilascio del client o nella documentazione. Dopo aver scaricato la versione del client e la sua firma, puoi utilizzare un'implementazione PGP, ad es. [GnuPG](https://gnupg.org/download/index.html) per verificarli facilmente. Dai un'occhiata a un tutorial sulla verifica del software open source utilizzando `gpg` su [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) o [Windows/macOS](https://freedom.press/training/verifying-open-source-software/).
@@ -233,6 +239,7 @@ Tieni presente che questo è solo un esempio di base, tutte le altre impostazion
 > Nota che i backslash `\` negli esempi sono solo a scopo di formattazione; i flag di configurazione possono essere definiti in una singola riga.
 
 ##### Eseguire Besu
+
 Questo esempio avvia Besu sulla Mainnet, archivia i dati della blockchain nel formato predefinito in `/data/ethereum`, abilita JSON-RPC e Engine RPC per la connessione del client di consenso. L'Engine API è autenticata con il token `jwtsecret` e sono consentite solo le chiamate da `localhost`.
 
 ```sh
@@ -254,6 +261,7 @@ besu --Xlauncher
 La [documentazione di Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) contiene opzioni aggiuntive e dettagli di configurazione.
 
 ##### Eseguire Erigon
+
 Questo esempio avvia Erigon sulla Mainnet, archivia i dati della blockchain in `/data/ethereum`, abilita JSON-RPC, definisce quali namespace sono consentiti e abilita l'autenticazione per la connessione del client di consenso che è definita dal percorso `jwtsecret`.
 
 ```sh
@@ -266,6 +274,7 @@ erigon --chain mainnet \
 Erigon per impostazione predefinita esegue una sincronizzazione completa con 8 GB di HDD che si tradurrà in oltre 2 TB di dati di archivio. Assicurati che `datadir` punti a un disco con spazio libero sufficiente o esamina il flag `--prune` che può tagliare diversi tipi di dati. Controlla la `--help` di Erigon per saperne di più.
 
 ##### Eseguire Geth
+
 Questo esempio avvia Geth sulla Mainnet, archivia i dati della blockchain in `/data/ethereum`, abilita JSON-RPC e definisce quali namespace sono consentiti. Abilita anche l'autenticazione per la connessione del client di consenso che richiede il percorso a `jwtsecret` e anche l'opzione che definisce quali connessioni sono consentite, nel nostro esempio solo da `localhost`.
 
 ```sh
@@ -280,6 +289,7 @@ geth --mainnet \
 Controlla la [documentazione per tutte le opzioni di configurazione](https://geth.ethereum.org/docs/fundamentals/command-line-options) e scopri di più sull'[esecuzione di Geth con un client di consenso](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
 ##### Eseguire Nethermind
+
 Nethermind offre varie [opzioni di installazione](https://docs.nethermind.io/get-started/installing-nethermind). Il pacchetto viene fornito con vari binari, incluso un Launcher con una configurazione guidata, che ti aiuterà a creare la configurazione in modo interattivo. In alternativa, trovi Runner che è l'eseguibile stesso e puoi semplicemente eseguirlo con i flag di configurazione. JSON-RPC è abilitato per impostazione predefinita.
 
 ```sh
@@ -293,6 +303,7 @@ La documentazione di Nethermind offre una [guida completa](https://docs.nethermi
 Un client di esecuzione avvierà le sue funzioni principali, gli endpoint scelti e inizierà a cercare peer. Dopo aver scoperto con successo i peer, il client avvia la sincronizzazione. Il client di esecuzione attenderà una connessione dal client di consenso. I dati correnti della blockchain saranno disponibili una volta che il client sarà sincronizzato con successo allo stato corrente.
 
 ##### Eseguire Reth
+
 Questo esempio avvia Reth sulla Mainnet, utilizzando la posizione dei dati predefinita. Abilita l'autenticazione JSON-RPC e Engine RPC per la connessione del client di consenso che è definita dal percorso `jwtsecret`, con solo le chiamate da `localhost` consentite.
 
 ```sh
@@ -317,6 +328,7 @@ Quando si avvia un nodo beacon su una testnet, è possibile risparmiare molto te
 #### Eseguire un client di consenso {#running-a-consensus-client}
 
 ##### Eseguire Lighthouse
+
 Prima di eseguire Lighthouse, scopri di più su come installarlo e configurarlo nel [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
 
 ```sh
@@ -329,6 +341,7 @@ lighthouse beacon_node \
 ```
 
 ##### Eseguire Lodestar
+
 Installa il software Lodestar compilandolo o scaricando l'immagine Docker. Scopri di più nella [documentazione](https://chainsafe.github.io/lodestar/) e nella [guida di configurazione](https://hackmd.io/@philknows/rk5cDvKmK) più completa.
 
 ```sh
@@ -341,6 +354,7 @@ lodestar beacon \
 ```
 
 ##### Eseguire Nimbus
+
 Nimbus viene fornito con client sia di consenso che di esecuzione. Può essere eseguito su vari dispositivi anche con una potenza di calcolo molto modesta.
 Dopo aver [installato le dipendenze e Nimbus stesso](https://nimbus.guide/quick-start.html), puoi eseguire il suo client di consenso:
 
@@ -353,6 +367,7 @@ nimbus_beacon_node \
 ```
 
 ##### Eseguire Prysm
+
 Prysm viene fornito con uno script che consente una facile installazione automatica. I dettagli possono essere trovati nella [documentazione di Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
@@ -364,6 +379,7 @@ Prysm viene fornito con uno script che consente una facile installazione automat
 ```
 
 ##### Eseguire Teku
+
 ```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \

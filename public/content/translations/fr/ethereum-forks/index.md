@@ -1,6 +1,6 @@
 ---
-title: Chronologie de tous les forks d'Ethereum (de 2014 à aujourd'hui)
-description: Un historique de la chaîne de blocs Ethereum comprenant les étapes majeures, les versions et les forks.
+title: "Chronologie de tous les forks d'Ethereum (de 2014 à aujourd'hui)"
+description: "Un historique de la chaîne de blocs Ethereum comprenant les étapes majeures, les versions et les forks."
 lang: fr
 sidebarDepth: 1
 authors: ["Nixo"]
@@ -86,7 +86,8 @@ Vous recherchez les futures mises à jour du protocole ? [Découvrez les prochai
 
 [Plus d'informations sur Fusaka](/roadmap/fusaka/)
 
-### Prague-Electra (« Pectra »)
+### Prague-Electra (« Pectra ») {#pectra}
+
 <NetworkUpgradeSummary name="pectra" />
 
 La mise à jour Prague-Electra (« Pectra ») a inclus plusieurs améliorations au protocole Ethereum visant à améliorer l'expérience pour tous les utilisateurs, les réseaux de couche 2, les stakers et les opérateurs de nœuds.

@@ -55,7 +55,8 @@ Alchemy 非常自豪能為 NFT 領域的知名專案提供支援，包括 Makers
 
 為了將我們的智能合約部署到測試網，我們需要一些測試用的 ETH。要獲取 ETH，您可以前往由 Alchemy 託管的 [Sepolia 水龍頭](https://sepoliafaucet.com/)，登入並輸入您的帳戶地址，點擊「Send Me ETH」。不久之後，您應該就會在您的梅塔馬斯克帳戶中看到 ETH！
 
-## 第 5 步：檢查您的餘額
+## 第 5 步：檢查您的餘額 {#check-balance}
+
 為了再次確認我們的餘額是否已入帳，讓我們使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 請求。這將回傳我們錢包中的 ETH 數量。在您輸入您的梅塔馬斯克帳戶地址並點擊「Send Request」後，您應該會看到類似以下的響應：
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
@@ -63,7 +64,8 @@ Alchemy 非常自豪能為 NFT 領域的知名專案提供支援，包括 Makers
 > **注意** 此結果的單位是 Wei，而不是 ETH。Wei 被用作以太幣的最小面額。從 Wei 到 ETH 的轉換為 1 ETH = 10<sup>18</sup> Wei。因此，如果我們將 0xde0b6b3a7640000 轉換為十進位，我們會得到 1\*10<sup>18</sup> Wei，這等於 1 ETH。
 
 呼！我們的假錢都在那裡了。
-## 第 6 步：初始化我們的專案
+## 第 6 步：初始化我們的專案 {#initialize-project}
+
 首先，我們需要為我們的專案建立一個資料夾。導覽至您的命令列並輸入：
 
     mkdir my-nft

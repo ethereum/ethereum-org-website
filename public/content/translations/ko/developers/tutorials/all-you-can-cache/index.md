@@ -756,7 +756,7 @@ contract WORM is Cache {
 
 이것이 Foundry에서 코드가 [이벤트를 올바르게 내보내는지](https://getfoundry.sh/reference/cheatcodes/expect-emit/) 확인하는 방법입니다.
 
-### 클라이언트
+### 클라이언트 {#the-client}
 
 Solidity 테스트에서 얻을 수 없는 한 가지는 자체 애플리케이션에 잘라내어 붙여넣을 수 있는 JavaScript 코드입니다. 이 튜토리얼의 원본 버전은 WORM을 옵티미즘 괴를리에 배포했지만, 해당 네트워크는 이후 종료되었습니다. 오늘날 클라이언트를 실행하려면 [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)와 같이 지원되는 OP Stack 네트워크에 WORM을 다시 배포한 다음, 결과로 나온 컨트랙트 주소를 JavaScript 클라이언트에서 사용하세요.
 

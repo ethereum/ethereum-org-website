@@ -253,7 +253,8 @@ ii. Розробники та команди проєктів, що викори
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Додаткова інформація про оптимістичні ролапи
+## Додаткова інформація про оптимістичні ролапи {#further-reading-on-optimistic-rollups}
+
 - [Як працюють оптимістичні ролапи (Повний посібник)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Основний посібник з Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Практичний посібник з ролапів Етеріуму](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

@@ -1,6 +1,6 @@
 ---
 title: Comunidades online
-description: Descubra fóruns online, salas de bate-papo e comunidades de mídia social onde os entusiastas do Ethereum se reúnem para discutir e colaborar.
+description: "Descubra fóruns online, salas de bate-papo e comunidades de mídia social onde os entusiastas do Ethereum se reúnem para discutir e colaborar."
 lang: pt-br
 ---
 

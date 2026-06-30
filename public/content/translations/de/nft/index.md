@@ -101,7 +101,8 @@ Sicherheitsprobleme im Zusammenhang mit NFTs hängen meist mit Phishing-Betrug, 
   Mehr zum Thema Sicherheit
 </ButtonLink>
 
-## Weiterführende Literatur
+## Weiterführende Literatur {#further-reading}
+
 - [Ein Anfänger-Leitfaden zu NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Januar 2020_
 - [Etherscan NFT-Tracker](https://etherscan.io/nft-top-contracts)
 - [Blockscout NFT-Tracker](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)

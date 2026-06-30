@@ -61,7 +61,7 @@ K nasazení vašeho chytrého kontraktu do testovací sítě budete potřebovat 
 _Poznámka: kvůli přetížení sítě to může chvíli trvat._
 ``
 
-### Krok 5: Zkontrolujte svůj zůstatek
+### Krok 5: Zkontrolujte svůj zůstatek {#step-5-check-your-balance}
 
 Abychom si ověřili, že je ETH ve vaší peněžence, vytvořme požadavek [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) pomocí [sandboxového nástroje Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Tím se vrátí množství ETH v naší peněžence. Chcete-li se dozvědět více, podívejte se na [krátký tutoriál Alchemy o tom, jak používat nástroj composer](https://youtu.be/r6sjRxBZJuU).
 
@@ -74,7 +74,7 @@ Zadejte adresu svého účtu MetaMask a klikněte na **Send Request**. Uvidíte 
 > _Poznámka: Tento výsledek je ve wei, nikoli v ETH. Wei se používá jako nejmenší nominální hodnota etheru._
 
 Uf! Naše falešné peníze tam všechny jsou.
-### Krok 6: Inicializace našeho projektu
+### Krok 6: Inicializace našeho projektu {#step-6-initialize-our-project}
 
 Nejprve budeme muset vytvořit složku pro náš projekt. Přejděte do příkazového řádku a zadejte následující.
 
@@ -898,7 +898,7 @@ Abyste mohli číst ze svého chytrého kontraktu, budete muset úspěšně nast
 
 Může to znít jako spousta kroků, ale nebojte se! Provedeme vás tím, jak udělat každý z nich krok za krokem! :)
 
-#### Vytvoření připojení API k řetězci Etherea
+#### Vytvoření připojení API k řetězci Etherea {#establish-an-api-connection-to-the-ethereum-chain}
 
 Vzpomínáte si, jak jsme ve 2. části tohoto tutoriálu použili náš klíč Alchemy Web3 ke čtení z našeho chytrého kontraktu? Klíč Alchemy Web3 budete potřebovat také ve své decentralizované aplikaci (dapp) ke čtení z řetězce.
 
@@ -1126,7 +1126,8 @@ MetaMask si můžete zdarma stáhnout a vytvořit si účet [zde](https://metama
 
 K podepsání transakce na blockchainu Etherea budeme potřebovat nějaké falešné ETH. Chcete-li získat ETH, můžete přejít na [FaucETH](https://fauceth.komputing.org) a zadat adresu svého účtu na Goerli, kliknout na „Request funds“ (Požádat o prostředky), poté v rozbalovací nabídce vybrat „Ethereum Testnet Goerli“ a nakonec znovu kliknout na tlačítko „Request funds“. Brzy poté byste měli vidět ETH na svém účtu MetaMask!
 
-#### Kontrola vašeho zůstatku
+#### Kontrola vašeho zůstatku {#check-your-balance}
+
 Abychom si ověřili, že tam náš zůstatek je, pošleme požadavek [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) pomocí [nástroje sandbox od Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). To nám vrátí množství ETH v naší peněžence. Po zadání adresy vašeho účtu MetaMask a kliknutí na „Send Request“ byste měli vidět odpověď podobnou této:
 
 ```text

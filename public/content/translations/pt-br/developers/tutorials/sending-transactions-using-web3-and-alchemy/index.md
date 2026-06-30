@@ -24,7 +24,8 @@ Assim como a maioria dos desenvolvedores de blockchain quando estão começando,
 - Isso significa que a Alchemy não pode assinar e enviar transações em seu nome. O motivo disso são questões de segurança. A Alchemy nunca pedirá que você compartilhe sua chave privada, e você nunca deve compartilhar sua chave privada com um nó hospedado (ou com qualquer pessoa, na verdade).
 - Você pode ler da blockchain usando a API principal da Alchemy, mas para escrever nela você precisará usar outra coisa para assinar suas transações antes de enviá-las através da Alchemy (isso é o mesmo para qualquer outro [serviço de nó](/developers/docs/nodes-and-clients/nodes-as-a-service/)).
 
-### 2\. O que é um “signer”?
+### 2\. O que é um “signer”? {#what-is-a-signer}
+
 - Os signers assinarão transações para você usando sua chave privada. Neste tutorial, usaremos a [Web3 da Alchemy](https://github.com/alchemyplatform/alchemy-web3) para assinar nossa transação, mas você também pode usar qualquer outra biblioteca Web3.
 - No frontend, um bom exemplo de signer seria a [MetaMask](https://metamask.io/), que assinará e enviará transações em seu nome.
 ### 3\. Por que preciso assinar minhas transações? {#why-do-i-need-to-sign-my-transactions}
@@ -54,7 +55,8 @@ Ao usar a Web3, `eth_sendRawTransaction` é acessado chamando a função [web3.e
 
 Certo, agora que tiramos algumas dessas dúvidas do caminho, vamos passar para o tutorial. Sinta-se à vontade para fazer perguntas a qualquer momento no [Discord](https://discord.gg/gWuC7zB) da Alchemy!
 
-### 7\. Como enviar transações seguras, com gás otimizado e privadas?
+### 7\. Como enviar transações seguras, com gás otimizado e privadas? {#how-to-send-secure-gas-optimized-and-private-transactions}
+
 - [A Alchemy possui um conjunto de recursos de transação](https://www.alchemy.com/docs/sending-transactions). Você pode usá-los para enviar transações, simular transações antes que elas aconteçam, enviar transações privadas e enviar transações com gás otimizado.
 - Você também pode usar os [webhooks da Alchemy](https://www.alchemy.com/docs/reference/webhooks-overview) para receber alertas quando sua transação for retirada da mempool e adicionada à cadeia.
 
@@ -120,7 +122,8 @@ Não faça commit do <code>.env</code>! Certifique-se de nunca compartilhar ou e
 </AlertContent>
 </Alert>
 
-### 7\. Crie o arquivo `sendTx.js`
+### 7\. Crie o arquivo `sendTx.js` {#create-sendtx-js}
+
 Ótimo, agora que temos nossos dados confidenciais protegidos em um arquivo `.env`, vamos começar a programar. Para o nosso exemplo de envio de transação, enviaremos ETH de volta para o faucet da Sepolia.
 
 Crie um arquivo `sendTx.js`, que é onde configuraremos e enviaremos nossa transação de exemplo, e adicione as seguintes linhas de código a ele:
@@ -186,7 +189,8 @@ Navegue de volta para o seu terminal ou linha de comando e execute:
 node sendTx.js
 ```
 
-### 9\. Veja sua transação na Mempool
+### 9\. Veja sua transação na Mempool {#see-your-transaction-in-the-mempool}
+
 Abra a [página da Mempool](https://dashboard.alchemy.com/mempool) no seu painel da Alchemy e filtre pelo aplicativo que você criou para encontrar sua transação. É aqui que podemos observar a transição da nossa transação do estado pendente para o estado minerado (se for bem-sucedida) ou para o estado descartado (dropped) se não for bem-sucedida. Certifique-se de mantê-lo em “All” (Todos) para capturar as transações “mined” (mineradas), “pending” (pendentes) e “dropped” (descartadas). Você também pode pesquisar sua transação procurando por transações enviadas para o endereço `0x31b98d14007bdee637298086988a0bbd31184523` .
 
 Para visualizar os detalhes da sua transação depois de encontrá-la, selecione o hash da transação (tx hash), o que deve levá-lo a uma visualização parecida com esta:

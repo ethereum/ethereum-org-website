@@ -756,7 +756,7 @@ contract WORM is Cache {
 
 这就是我们在 Foundry 中验证代码是否[正确发出事件](https://getfoundry.sh/reference/cheatcodes/expect-emit/)的方式。
 
-### 客户端
+### 客户端 {#the-client}
 
 Solidity 测试无法提供的一点是，你可以直接复制粘贴到自己应用中的 JavaScript 代码。本教程的原始版本将 WORM 部署到了 Optimism Goerli，但该网络现已退役。要在今天运行客户端，请将 WORM 重新部署到受支持的 OP Stack 网络（例如 [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack)），然后在 JavaScript 客户端中使用生成的合约地址。
 

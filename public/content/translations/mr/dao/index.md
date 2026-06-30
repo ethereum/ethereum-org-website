@@ -133,7 +133,8 @@ _सामान्यतः प्रोटोकॉल आणि [विके
 - [Tally.xyz ची DAOs ची यादी](https://www.tally.xyz/explore)
 - [DeGov.AI ची DAOs ची यादी](https://apps.degov.ai/)
 
-### DAO सुरू करा
+### DAO सुरू करा {#start-a-dao}
+
 - [DAOHaus सह DAO तयार करा](https://app.daohaus.club/summon)
 - [Tally सह गव्हर्नर DAO सुरू करा](https://www.tally.xyz/get-started)
 - [Aragon-समर्थित DAO तयार करा](https://aragon.org/product)

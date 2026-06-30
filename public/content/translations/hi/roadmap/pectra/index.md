@@ -1,7 +1,7 @@
 ---
-title: पेक्ट्रा
-metaTitle: प्राग-इलेक्ट्रा (पेक्ट्रा)
-description: पेक्ट्रा प्रोटोकॉल अपग्रेड के बारे में जानें
+title: "पेक्ट्रा"
+metaTitle: "प्राग-इलेक्ट्रा (पेक्ट्रा)"
+description: "पेक्ट्रा प्रोटोकॉल अपग्रेड के बारे में जानें"
 lang: hi
 authors:
   - निक्सो
@@ -119,7 +119,8 @@ _पेक्ट्रा अपग्रेड में क्या शाम
 
 _इथेरियम पेक्ट्रा अपग्रेड: स्टेकर्स को क्या जानना चाहिए — Blockdaemon_
 
-## आगे पढ़ें
+## आगे पढ़ें {#further-reading}
+
 - [इथेरियम रोडमैप](/roadmap/)
 - [पेक्ट्रा FAQ](https://epf.wiki/#/wiki/pectra-faq)
 - [पेक्ट्रा स्टेकर्स के अनुभव को कैसे बेहतर बनाता है](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

@@ -1,6 +1,6 @@
 ---
 title: Kaynak ekleme
-description: ethereum.org'a kaynak eklerken kullandığımız politika
+description: "ethereum.org'a kaynak eklerken kullandığımız politika"
 lang: tr
 ---
 

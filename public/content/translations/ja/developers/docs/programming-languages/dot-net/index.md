@@ -22,7 +22,7 @@ incomplete: true
 - [初めてのスマート・コントラクトを作成する](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidityのコンパイルとデプロイ方法を学ぶ](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## 初心者向けのリファレンスとリンク
+## 初心者向けのリファレンスとリンク {#beginner-references-and-links}
 
 **NethereumライブラリとVS Code Solidityの紹介**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [ERC-20スマート・コントラクト残高の照会](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [アカウントへのイーサの送金](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... その他多数！
-## 中級者向けの記事
+## 中級者向けの記事 {#intermediate-articles}
 
 - [Nethereumのはじめにと最初のプロジェクト](https://docs.nethereum.com/docs/getting-started/first-project)
 - [独自の開発用テストチェーンのデプロイ](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [Nethereumのリアルタイムストリーミング](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [KaleidoとNethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [QuorumとNethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## 高度な使用パターン
+## 高度な使用パターン {#advanced-use-patterns}
 
 - [Azure Key VaultとNethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereumバックエンドのリファレンスアーキテクチャ](https://github.com/Nethereum/ujo-backend)
-## .NETプロジェクト、ツール、その他の楽しいコンテンツ
+## .NETプロジェクト、ツール、その他の楽しいコンテンツ {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _ブラウザでNethereumのコードスニペットをコンパイル、作成、実行します_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _BlazorのUIを備えたNethereumのコード生成_

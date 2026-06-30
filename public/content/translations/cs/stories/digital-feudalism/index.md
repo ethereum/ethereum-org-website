@@ -9,7 +9,7 @@ tags:
   - "odolnost vůči cenzuře"
 published: "2026-02-05"
 image: /content/stories/digital-feudalism/tarrence-cover-image.jpeg
-breadcrumb: Vlastněte svůj svět
+breadcrumb: "Vlastněte svůj svět"
 lang: cs
 ---
 

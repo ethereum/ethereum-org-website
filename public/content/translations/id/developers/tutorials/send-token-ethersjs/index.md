@@ -17,7 +17,8 @@ published: 2021-04-06
 - Mentransfer token
 - Mengatur harga gas sesuai dengan situasi lalu lintas jaringan
 
-### Untuk Memulai
+### Untuk Memulai {#to-get-started}
+
 Untuk memulai, pertama-tama kita harus mengimpor pustaka ethers.js ke dalam JavaScript kita
 Sertakan ethers.js v5
 ### Menginstal {#install-ethersjs}

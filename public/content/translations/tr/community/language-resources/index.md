@@ -1,6 +1,6 @@
 ---
-title: Dil kaynakları
-description: Ethereum hakkında bilgi edinmek için İngilizce dışındaki kaynaklar
+title: "Dil kaynakları"
+description: "Ethereum hakkında bilgi edinmek için İngilizce dışındaki kaynaklar"
 lang: tr
 ---
 

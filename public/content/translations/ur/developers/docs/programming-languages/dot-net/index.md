@@ -22,7 +22,7 @@ incomplete: true
 - [اپنا پہلا سمارٹ کنٹریکٹ لکھیں](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity کو مرتب اور تعینات کرنا سیکھیں](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## ابتدائی حوالہ جات اور لنکس
+## ابتدائی حوالہ جات اور لنکس {#beginner-references-and-links}
 
 **Nethereum لائبریری اور <span dir="ltr">VS Code Solidity</span> کا تعارف**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [<span dir="ltr">ERC-20</span> سمارٹ کنٹریکٹ بیلنس کی استفسار کریں](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [کسی اکاؤنٹ میں ایتھر کی منتقلی کریں](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... اور مزید!
-## درمیانی سطح کے مضامین
+## درمیانی سطح کے مضامین {#intermediate-articles}
 
 - [Nethereum شروعات کرنا اور پہلا پروجیکٹ](https://docs.nethereum.com/docs/getting-started/first-project)
 - [اپنی خود کی ڈیولپمنٹ ٹیسٹ چینز تعینات کریں](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [Nethereum ریئل ٹائم سٹریمنگ](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido اور Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum اور Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## اعلی درجے کے استعمال کے پیٹرنز
+## اعلی درجے کے استعمال کے پیٹرنز {#advanced-use-patterns}
 
 - [<span dir="ltr">Azure Key Vault</span> اور Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum بیک اینڈ حوالہ جاتی فن تعمیر](https://github.com/Nethereum/ujo-backend)
-## <span dir="ltr">.NET</span> پروجیکٹس، ٹولز اور دیگر دلچسپ چیزیں
+## <span dir="ltr">.NET</span> پروجیکٹس، ٹولز اور دیگر دلچسپ چیزیں {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _براؤزر میں Nethereum کوڈ کے ٹکڑوں کو مرتب کریں، بنائیں اور چلائیں_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor میں <span dir="ltr">UI</span> کے ساتھ Nethereum کوڈجن_

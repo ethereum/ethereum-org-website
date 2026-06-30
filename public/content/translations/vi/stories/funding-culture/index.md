@@ -9,7 +9,7 @@ tags:
   - "quyền sở hữu sáng tạo"
 published: "2025-05-30"
 image: /content/stories/funding-culture/pplpleasr-hero.png
-breadcrumb: Thúc đẩy văn hóa
+breadcrumb: "Thúc đẩy văn hóa"
 lang: vi
 ---
 

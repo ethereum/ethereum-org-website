@@ -55,7 +55,7 @@ published: 2021-04-22
 
 اپنے سمارٹ کنٹریکٹ کو آزمائشی نیٹ ورک پر تعینات کرنے کے لیے، ہمیں کچھ نقلی <span dir="ltr">ETH</span> کی ضرورت ہوگی۔ <span dir="ltr">ETH</span> حاصل کرنے کے لیے آپ <span dir="ltr">Alchemy</span> کے زیر اہتمام [<span dir="ltr">Sepolia</span> فوسٹ](https://sepoliafaucet.com/) پر جا سکتے ہیں، لاگ ان کریں اور اپنے اکاؤنٹ کا پتہ درج کریں، "Send Me ETH" پر کلک کریں۔ آپ کو جلد ہی اپنے میٹاماسک اکاؤنٹ میں <span dir="ltr">ETH</span> نظر آنا چاہیے!
 
-## مرحلہ 5: اپنا بیلنس چیک کریں
+## مرحلہ 5: اپنا بیلنس چیک کریں {#check-balance}
 
 یہ دوبارہ چیک کرنے کے لیے کہ ہمارا بیلنس موجود ہے، آئیے [<span dir="ltr">Alchemy</span> کے سینڈ باکس ٹول](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) کا استعمال کرتے ہوئے ایک [<span dir="ltr">eth_getBalance</span>](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) درخواست کریں۔ یہ ہمارے والیٹ میں موجود <span dir="ltr">ETH</span> کی مقدار واپس کرے گا۔ اپنا میٹاماسک اکاؤنٹ کا پتہ درج کرنے اور "Send Request" پر کلک کرنے کے بعد، آپ کو اس طرح کا جواب نظر آنا چاہیے:
 
@@ -64,7 +64,7 @@ published: 2021-04-22
 > **نوٹ** یہ نتیجہ <span dir="ltr">Wei</span> میں ہے، <span dir="ltr">ETH</span> میں نہیں۔ <span dir="ltr">Wei</span> کو ایتھر کی سب سے چھوٹی اکائی کے طور پر استعمال کیا جاتا ہے۔ <span dir="ltr">Wei</span> سے <span dir="ltr">ETH</span> میں تبدیلی <span dir="ltr">1 eth = 10<sup>18</sup> wei</span> ہے۔ لہذا اگر ہم <span dir="ltr">0xde0b6b3a7640000</span> کو اعشاریہ میں تبدیل کریں تو ہمیں <span dir="ltr">1\*10<sup>18</sup> wei</span> ملتا ہے، جو <span dir="ltr">1 ETH</span> کے برابر ہے۔
 
 شکر ہے! ہماری تمام نقلی رقم وہاں موجود ہے۔
-## مرحلہ 6: اپنا پروجیکٹ شروع کریں
+## مرحلہ 6: اپنا پروجیکٹ شروع کریں {#initialize-project}
 
 سب سے پہلے، ہمیں اپنے پروجیکٹ کے لیے ایک فولڈر بنانا ہوگا۔ اپنی کمانڈ لائن پر جائیں اور ٹائپ کریں:
 

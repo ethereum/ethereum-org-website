@@ -22,7 +22,7 @@ Potrzebujesz najpierw bardziej podstawowego wprowadzenia? Sprawdź [ethereum.org
 - [Napisz swój pierwszy inteligentny kontrakt](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Dowiedz się, jak kompilować i wdrażać Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Odnośniki i linki dla początkujących
+## Odnośniki i linki dla początkujących {#beginner-references-and-links}
 
 **Wprowadzenie do biblioteki Nethereum i VSCode Solidity**
 
@@ -43,7 +43,7 @@ Potrzebujesz najpierw bardziej podstawowego wprowadzenia? Sprawdź [ethereum.org
   - [Transfer etheru na konto](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... i wiele więcej!
 
-## Artykuły dla średniozaawansowanych
+## Artykuły dla średniozaawansowanych {#intermediate-articles}
 
 - [Nethereum: pierwsze kroki i pierwszy projekt](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Wdróż własne testowe łańcuchy deweloperskie](https://github.com/Nethereum/Testchains)
@@ -56,13 +56,13 @@ Potrzebujesz najpierw bardziej podstawowego wprowadzenia? Sprawdź [ethereum.org
 - [Kaleido i Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum i Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## Zaawansowane wzorce użycia
+## Zaawansowane wzorce użycia {#advanced-use-patterns}
 
 - [Azure Key Vault i Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Architektura referencyjna backendu Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
 
-## Projekty .NET, narzędzia i inne ciekawe rzeczy
+## Projekty .NET, narzędzia i inne ciekawe rzeczy {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _Kompiluj, twórz i uruchamiaj fragmenty kodu Nethereum w przeglądarce_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Generator kodu Nethereum z interfejsem użytkownika w Blazor_

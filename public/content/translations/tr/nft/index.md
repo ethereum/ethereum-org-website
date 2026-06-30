@@ -101,7 +101,8 @@ NFT'lerle ilgili güvenlik sorunları çoğunlukla kimlik avı dolandırıcılı
   Güvenlik hakkında daha fazlası
 </ButtonLink>
 
-## İleri okuma
+## İleri okuma {#further-reading}
+
 - [Yeni başlayanlar için NFT rehberi](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Ocak 2020_
 - [Etherscan NFT takipçisi](https://etherscan.io/nft-top-contracts)
 - [Blockscout NFT takipçisi](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)

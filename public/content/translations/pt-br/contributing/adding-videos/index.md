@@ -123,27 +123,6 @@ Use cabeçalhos `###` com marcações de tempo para marcar as seções principai
 
 Se você não tiver uma transcrição, pode deixar o corpo vazio e a equipe gerará uma.
 
-#### Etapa 4: Escolher as tags de tópico
-
-Escolha as tags de tópico na lista abaixo. Cada tag mapeia diretamente para uma categoria de filtro na galeria de vídeos — use o nome da tag exatamente como mostrado.
-
-Um vídeo pode ter várias tags para aparecer em vários filtros da galeria:
-
-| Tag | Filtro da galeria |
-|---|---|
-| `how-ethereum-works` | Como o Ethereum funciona |
-| `network-upgrades` | Atualizações da rede |
-| `roadmap-and-priorities` | Roteiro e prioridades |
-| `scaling-and-layer-2` | Escalonamento e camada 2 (l2) |
-| `use-cases` | Casos de uso |
-| `privacy` | Privacidade |
-| `security` | Segurança |
-| `community-stories` | Histórias da comunidade |
-| `events` | Eventos |
-
-Todo vídeo deve ter pelo menos uma tag desta lista. Vídeos sem uma tag reconhecida aparecerão apenas na visualização "Todos" e nos resultados de pesquisa.
-
-A tag `community-stories` também faz com que um vídeo apareça na [página de Histórias](/stories/).
 #### Etapa 5: Enviar seu PR {#step-5}
 
 Abra um pull request com suas alterações para a branch `dev`. A equipe revisará seu envio e fornecerá feedback.

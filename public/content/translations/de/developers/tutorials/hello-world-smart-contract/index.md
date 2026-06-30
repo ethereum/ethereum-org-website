@@ -59,7 +59,7 @@ Um sicherzustellen, dass unser Guthaben vorhanden ist, stellen wir eine [eth_get
 >
 > Puh! Unser falsches Geld ist komplett da <Emoji text=":money_mouth_face:" size={1} />.
 
-## Schritt 6: Initialisieren Sie unser Projekt
+## Schritt 6: Initialisieren Sie unser Projekt {#step-6}
 
 Zuerst müssen wir einen Ordner für unser Projekt erstellen. Navigieren Sie zu Ihrer Befehlszeile und tippen Sie:
 

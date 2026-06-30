@@ -33,7 +33,7 @@ Antes mesmo de começarmos a olhar para qualquer código, é importante entender
 
 A maior diferença entre os dois padrões de contrato inteligente de NFT é que o ERC-1155 é um padrão de múltiplos tokens e inclui funcionalidade em lote, enquanto o ERC-721 é um padrão de token único e, portanto, suporta apenas a transferência de um token por vez.
 
-### Chame a função de cunhagem
+### Chame a função de cunhagem {#minting-function}
 
 Geralmente, essa função de cunhagem exige que você passe duas variáveis como parâmetros: primeiro o `recipient`, que especifica o endereço que receberá seu NFT recém-cunhado, e segundo o `tokenURI` do NFT, uma string que resolve para um documento JSON que descreve os metadados do NFT.
 
@@ -194,15 +194,15 @@ Agora que entendemos com o que estamos trabalhando, vamos configurar nossa carte
 
 Para que os usuários possam interagir com seu contrato inteligente, eles precisarão conectar sua carteira Ethereum ao seu dapp.
 
-### Baixar a MetaMask
+### Baixar a MetaMask {#download-metamask}
 
 Para este tutorial, usaremos a MetaMask, uma carteira virtual no navegador usada para gerenciar o endereço da sua conta Ethereum. Se você quiser entender mais sobre como as transações na Ethereum funcionam, confira [esta página](/developers/docs/transactions/).
 
 Você pode baixar e criar uma conta na MetaMask gratuitamente [aqui](https://metamask.io/download). Ao criar uma conta, ou se você já tiver uma, certifique-se de mudar para uma rede de teste suportada, como a Sepolia \(para que não estejamos lidando com dinheiro real\).
-### Adicionar ether de um faucet
+### Adicionar ether de um faucet {#add-ether-from-faucet}
 
 Para cunhar nossos NFTs (ou assinar quaisquer transações na blockchain Ethereum), precisaremos de algum ETH falso. Para obter ETH de rede de teste, use um faucet mantido, como o [faucet Sepolia da Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia) e insira o endereço da sua conta Sepolia. Você deve ver o ETH na sua conta MetaMask logo em seguida!
-### Verifique seu saldo
+### Verifique seu saldo {#check-your-balance}
 
 Para confirmar se o nosso saldo está lá, vamos fazer uma solicitação [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) usando a [ferramenta de sandbox da Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Isso retornará a quantidade de ETH na nossa carteira. Depois de inserir o endereço da sua conta MetaMask e clicar em “Send Request”, você deverá ver uma resposta como esta:
 
@@ -579,7 +579,7 @@ Se você examinou nossos arquivos de perto, deve ter notado que no nosso diretó
 
 Também precisaremos de uma chave de API da Alchemy e da API Alchemy Web3 para nos conectarmos à blockchain Ethereum e carregarmos nosso contrato inteligente.
 
-### Crie sua chave de API da Alchemy
+### Crie sua chave de API da Alchemy {#create-alchemy-api}
 
 Se você ainda não tem uma conta na Alchemy, [inscreva-se gratuitamente aqui.](https://alchemy.com/?a=eth-org-nft-minter)
 
@@ -844,7 +844,7 @@ const onMintPressed = async () => {
 }
 ```
 
-## Implante seu NFT em um site ativo
+## Implante seu NFT em um site ativo {#deploy-your-nft}
 
 Pronto para colocar seu projeto no ar para que os usuários interajam com ele? Confira a [documentação de implantação do React](https://create-react-app.dev/docs/deployment/) para implantar seu cunhador em um site ativo.
 

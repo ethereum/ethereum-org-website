@@ -1,7 +1,7 @@
 ---
-title: ¿Qué son las pruebas de conocimiento cero?
+title: "¿Qué son las pruebas de conocimiento cero?"
 metaTitle: Pruebas de conocimiento cero
-description: Una introducción no técnica a las pruebas de conocimiento cero para principiantes.
+description: "Una introducción no técnica a las pruebas de conocimiento cero para principiantes."
 lang: es
 ---
 
@@ -58,8 +58,10 @@ Las pruebas de conocimiento cero son particularmente útiles en el contexto de l
       <p>
         Obtenga más información sobre el NDI de Bután en el <a href="/decentralized-identity/#national-and-government-id">estudio de caso de Identidad Descentralizada</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Prueba de humanidad {#proof-of-humanity}

@@ -51,7 +51,7 @@ Puoi scaricare e creare un account MetaMask gratuitamente [qui](https://metamask
 
 Per distribuire il nostro smart contract sulla testnet, avremo bisogno di alcuni ETH finti. Per ottenere ETH puoi andare al [faucet di Sepolia](https://sepoliafaucet.com/) ospitato da Alchemy, accedere e inserire l'indirizzo del tuo account, cliccare su "Send Me ETH". Dovresti vedere gli ETH nel tuo account MetaMask subito dopo!
 
-## Passaggio 5: Controllare il tuo saldo
+## Passaggio 5: Controllare il tuo saldo {#check-balance}
 
 Per verificare che il nostro saldo sia presente, facciamo una richiesta [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) utilizzando lo [strumento sandbox di Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Questo restituirà la quantità di ETH nel nostro portafoglio. Dopo aver inserito l'indirizzo del tuo account MetaMask e cliccato su "Send Request", dovresti vedere una risposta come questa:
 
@@ -60,7 +60,7 @@ Per verificare che il nostro saldo sia presente, facciamo una richiesta [eth_get
 > **Nota** Questo risultato è in Wei, non in ETH. Il Wei è utilizzato come la denominazione più piccola di ether. La conversione da Wei a ETH è 1 eth = 10<sup>18</sup> Wei. Quindi, se convertiamo 0xde0b6b3a7640000 in decimale, otteniamo 1\*10<sup>18</sup> Wei, che equivale a 1 ETH.
 
 Fiuu! I nostri soldi finti ci sono tutti.
-## Passaggio 6: Inizializzare il nostro progetto
+## Passaggio 6: Inizializzare il nostro progetto {#initialize-project}
 
 Per prima cosa, dovremo creare una cartella per il nostro progetto. Vai alla riga di comando e digita:
 

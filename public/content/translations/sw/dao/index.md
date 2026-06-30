@@ -133,7 +133,8 @@ _Kwa kawaida hutumika kwa maendeleo yaliyogatuliwa na utawala wa itifaki na [pro
 - [Orodha ya DAO ya Tally.xyz](https://www.tally.xyz/explore)
 - [Orodha ya DAO ya DeGov.AI](https://apps.degov.ai/)
 
-### Anzisha DAO
+### Anzisha DAO {#start-a-dao}
+
 - [Anzisha DAO ukitumia DAOHaus](https://app.daohaus.club/summon)
 - [Anzisha DAO ya Gavana ukitumia Tally](https://www.tally.xyz/get-started)
 - [Unda DAO inayoendeshwa na Aragon](https://aragon.org/product)

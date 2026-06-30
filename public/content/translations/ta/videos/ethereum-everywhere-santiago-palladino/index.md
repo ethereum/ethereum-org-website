@@ -11,7 +11,7 @@ topic:
   - "use-cases"
   - "events"
 format: presentation
-author: எத்தீரியம் அறக்கட்டளை
+author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "எத்திரியம், எங்கும்"
 ---
 

@@ -40,7 +40,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## 第 3 步：取得你的合約 ABI
+## 第 3 步：取得你的合約 ABI {#contract-abi}
 
 我們的合約 ABI（應用程式二進位介面）是與我們的智能合約互動的介面。你可以了解更多關於[合約 ABI](/glossary/#abi) 的資訊。Hardhat 會自動為我們產生一個 ABI，並將其儲存在 `MyNFT.json` 檔案中。為了使用它，我們需要透過在 `mint-nft.js` 檔案中加入以下程式碼來解析其內容：
 
@@ -135,7 +135,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## 第 7 步：建立你的交易
+## 第 7 步：建立你的交易 {#create-txn}
 
 首先，讓我們定義一個名為 `mintNFT(tokenData)` 的函式，並透過以下步驟建立我們的交易：
 

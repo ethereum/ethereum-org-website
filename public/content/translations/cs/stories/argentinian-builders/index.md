@@ -9,7 +9,7 @@ tags:
   - "komunita"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: Budování z Argentiny
+breadcrumb: "Budování z Argentiny"
 lang: cs
 ---
 > *Tento příběh byl původně publikován jako [vlákno hosta na profilu @Ethereum na síti X](https://x.com/ethereum/status/1985408315074232397?s=20) dne 3. listopadu 2025. Pro lepší čitelnost byl lehce upraven.*

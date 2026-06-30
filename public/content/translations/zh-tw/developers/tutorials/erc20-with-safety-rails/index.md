@@ -1,11 +1,11 @@
 ---
-title: 具備安全防護機制的 ERC-20
-description: 如何幫助人們避免犯下愚蠢的錯誤
-author: 歐里·波梅蘭茨
+title: "具備安全防護機制的 ERC-20"
+description: "如何幫助人們避免犯下愚蠢的錯誤"
+author: "歐里·波梅蘭茨"
 lang: zh-tw
 tags: ["erc-20"]
 skill: beginner
-breadcrumb: ERC-20 安全性
+breadcrumb: "ERC-20 安全性"
 published: 2022-08-15
 ---
 

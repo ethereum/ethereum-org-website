@@ -1,6 +1,6 @@
 ---
-title: 어떻게 참여할 수 있나요?
-description: 이더리움 커뮤니티에 참여하는 방법.
+title: "어떻게 참여할 수 있나요?"
+description: "이더리움 커뮤니티에 참여하는 방법."
 lang: ko
 ---
 
@@ -27,7 +27,7 @@ lang: ko
 - 이더리움 개선 제안(EIP)을 작성하거나 검토하세요.
   - EIP 작성하기
     1. [Ethereum Magicians](https://ethereum-magicians.org)에 아이디어를 제출하세요.
-    2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1)을 읽어보세요. - **네, 그것이 문서의 _전부_입니다.**
+    2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1)을 읽어보세요. - **네, 그것이 문서의 <em>전부</em>입니다.**
     3. EIP-1의 지침을 따르세요. 초안을 작성할 때 참고하세요.
   - [EIP 에디터](https://eips.ethereum.org/EIPS/eip-5069)가 되는 방법을 알아보세요.
     - 지금 바로 EIP를 동료 검토(peer-review)할 수 있습니다! [`e-review` 태그가 있는 열린 PR](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review)을 확인해 보세요. `discussion-to` 링크에서 기술적인 피드백을 제공하세요.

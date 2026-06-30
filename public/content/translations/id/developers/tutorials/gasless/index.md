@@ -354,7 +354,7 @@ Seorang pengguna mengirimkan sapaan. Mungkin sapaan itu diperbarui di blok berik
 - Sapaan baru telah dikirimkan, dan sedang diproses
 - Sapaan baru telah ditolak
 
-## Kesimpulan
+## Kesimpulan {#conclusion}
 
 Pada titik ini, Anda seharusnya sudah dapat membuat pengalaman tanpa gas untuk pengguna aplikasi terdesentralisasi (dapp) Anda, dengan konsekuensi berupa sedikit sentralisasi.
 

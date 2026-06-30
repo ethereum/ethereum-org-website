@@ -1,5 +1,5 @@
 ---
-title: Comment La Fusion a impacté l'offre d'ETH
+title: "Comment La Fusion a impacté l'offre d'ETH"
 description: Analyse de l'impact de La Fusion sur l'offre d'ETH
 lang: fr
 ---
@@ -38,18 +38,18 @@ Les validateurs sur la chaîne balise sont récompensés en ETH pour avoir attes
 
 ### Répartition de l'émission avant La Fusion {#pre-merge-issuance-breakdown}
 
-Offre totale d'ETH : **~120 520 000 ETH** (au moment de La Fusion en septembre 2022)
+Offre totale d'ETH : **\~120 520 000 ETH** (au moment de La Fusion en septembre 2022)
 
 **Émission sur la couche d'exécution :**
 
-- Était estimée à 2,08 ETH toutes les 13,3 secondes\* : **~4 930 000** ETH émis en un an
+- Était estimée à 2,08 ETH toutes les 13,3 secondes\* : **\~4 930 000** ETH émis en un an
 - Entraînait un taux d'inflation d'**environ 4,09 %** (4,93 M par an / 120,5 M au total)
 - \*Cela inclut les 2 ETH par bloc canonique, plus une moyenne de 0,08 ETH au fil du temps provenant des blocs oncles. Utilise également 13,3 secondes, la cible de temps de bloc de base sans aucune influence d'une [bombe de difficulté](/glossary/#difficulty-bomb). ([Voir la source](https://bitinfocharts.com/ethereum/))
 
 **Émission sur la couche de consensus :**
 
 - En utilisant un total de 14 000 000 d'ETH mis en jeu, le taux d'émission d'ETH est d'environ 1 700 ETH/jour ([Voir la source](https://ultrasound.money/))
-- Entraîne **~620 500** ETH émis en un an
+- Entraîne **\~620 500** ETH émis en un an
 - Entraînait un taux d'inflation d'**environ 0,52 %** (620,5 k par an / 119,3 M au total)
 
 <Alert variant="update">
@@ -57,9 +57,9 @@ Offre totale d'ETH : **~120 520 000 ETH** (au moment de La Fusion en septembre 2
 <AlertDescription>
 **Taux d'émission annualisé total (avant La Fusion) : ~4,61 %** (4,09 % + 0,52 %)
 
-**~88,7 %** de l'émission allait aux mineurs sur la couche d'exécution (4,09 / 4,61 * 100)
+**\~88,7 %** de l'émission allait aux mineurs sur la couche d'exécution (4,09 / 4,61 * 100)
 
-**~11,3 %** était émis pour les stakers sur la couche de consensus (0,52 / 4,61 * 100)
+**\~11,3 %** était émis pour les stakers sur la couche de consensus (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -84,16 +84,16 @@ Environ 0,33 % du nombre total de validateurs peut sortir un jour donné. Par d�
 
 ### Répartition de l'inflation après La Fusion {#post-merge-inflation-breakdown}
 
-- [Offre totale d'ETH](/eth/supply/) : **~120 520 000 ETH** (au moment de La Fusion en septembre 2022)
+- [Offre totale d'ETH](/eth/supply/) : **\~120 520 000 ETH** (au moment de La Fusion en septembre 2022)
 - Émission sur la couche d'exécution : **0**
-- Émission sur la couche de consensus : Identique à ci-dessus, taux d'émission annualisé d'**~0,52 %** (avec 14 millions d'ETH mis en jeu au total)
+- Émission sur la couche de consensus : Identique à ci-dessus, taux d'émission annualisé d'**\~0,52 %** (avec 14 millions d'ETH mis en jeu au total)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Taux d'émission annualisé total : **~0,52 %**
+Taux d'émission annualisé total : **\~0,52 %**
 
-Réduction nette de l'émission annuelle d'ETH : **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % * 100)
+Réduction nette de l'émission annuelle d'ETH : **\~88,7 %** ((4,61 % - 0,52 %) / 4,61 % * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

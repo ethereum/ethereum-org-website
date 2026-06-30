@@ -1,6 +1,6 @@
 ---
-title: Stratégies de stockage de données sur la chaîne de blocs
-description: Il existe plusieurs façons de stocker des données à l'aide de la chaîne de blocs. Cet article compare les différentes stratégies, leurs coûts et leurs compromis, ainsi que les exigences pour les utiliser en toute sécurité.
+title: "Stratégies de stockage de données sur la chaîne de blocs"
+description: "Il existe plusieurs façons de stocker des données à l'aide de la chaîne de blocs. Cet article compare les différentes stratégies, leurs coûts et leurs compromis, ainsi que les exigences pour les utiliser en toute sécurité."
 lang: fr
 ---
 
@@ -110,7 +110,7 @@ Ce tableau résume les différentes options, leurs avantages et leurs inconvéni
 
 | Type de stockage | Source des données | Garantie de disponibilité | Disponibilité onchain | Limites supplémentaires |
 | --------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Blobs de l'EIP-4844              | Hors chaîne            | Garantie Ethereum pendant [~18 jours](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Seul le hash est disponible                                           |                                                                         |
+| Blobs de l'EIP-4844              | Hors chaîne            | Garantie Ethereum pendant [\~18 jours](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Seul le hash est disponible                                           |                                                                         |
 | Données d'appel                    | Hors chaîne            | Garantie d'Ethereum pour toujours (partie de la chaîne de blocs)                                                                                | Uniquement disponible si écrites dans un contrat, et lors de cette transaction |
 | Hors chaîne avec mécanismes de la couche 1 (L1) | Hors chaîne            | Garantie d'« un vérificateur honnête » pendant la période de contestation                                                                        | Seulement le hash                                                        | Garantie par le mécanisme de contestation, uniquement pendant la période de contestation |
 | Code de contrat               | Onchain ou hors chaîne | Garantie d'Ethereum pour toujours (partie de la chaîne de blocs)                                                                                | Oui                                                              | Écrit à une adresse « aléatoire », ne peut pas commencer par `0xEF`                 |

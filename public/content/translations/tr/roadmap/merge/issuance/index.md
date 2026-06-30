@@ -1,6 +1,6 @@
 ---
-title: Birleşme ETH arzını nasıl etkiledi
-description: Birleşme'nin ETH arzını nasıl etkilediğinin dökümü
+title: "Birleşme ETH arzını nasıl etkiledi"
+description: "Birleşme'nin ETH arzını nasıl etkilediğinin dökümü"
 lang: tr
 ---
 
@@ -38,18 +38,18 @@ title="ETH ihracı özeti">
 
 ### Birleşme öncesi ihraç dökümü {#pre-merge-issuance-breakdown}
 
-Toplam ETH arzı: **~120.520.000 ETH** (Eylül 2022'deki Birleşme sırasında)
+Toplam ETH arzı: **\~120.520.000 ETH** (Eylül 2022'deki Birleşme sırasında)
 
 **Yürütme katmanı ihracı:**
 
-- 13,3 saniyede bir 2,08 ETH olarak tahmin ediliyordu\*: Yılda **~4.930.000** ETH ihraç edildi
+- 13,3 saniyede bir 2,08 ETH olarak tahmin ediliyordu\*: Yılda **\~4.930.000** ETH ihraç edildi
 - **Yaklaşık %4,09'luk** bir enflasyon oranıyla sonuçlandı (yılda 4,93M / toplam 120,5M)
 - \*Bu, kurallı blok başına 2 ETH'yi ve ommer bloklarından zaman içinde ortalama 0,08 ETH'yi içerir. Ayrıca, bir [zorluk bombası](/glossary/#difficulty-bomb) etkisi olmayan temel blok süresi hedefi olan 13,3 saniyeyi kullanır. ([Kaynağa bakın](https://bitinfocharts.com/ethereum/))
 
 **Mutabakat katmanı ihracı:**
 
 - Stake edilen toplam 14.000.000 ETH kullanıldığında, ETH ihraç oranı yaklaşık 1700 ETH/gündür ([Kaynağa bakın](https://ultrasound.money/))
-- Yılda **~620.500** ETH ihracıyla sonuçlanır
+- Yılda **\~620.500** ETH ihracıyla sonuçlanır
 - **Yaklaşık %0,52'lik** bir enflasyon oranıyla sonuçlandı (yılda 620,5B / toplam 119,3M)
 
 <Alert variant="update">
@@ -57,9 +57,9 @@ Toplam ETH arzı: **~120.520.000 ETH** (Eylül 2022'deki Birleşme sırasında)
 <AlertDescription>
 **Toplam yıllık ihraç oranı (birleşme öncesi): ~%4,61** (%4,09 + %0,52)
 
-İhracın **~%88,7'si** yürütme katmanındaki madencilere gidiyordu (4,09 / 4,61 * 100)
+İhracın **\~%88,7'si** yürütme katmanındaki madencilere gidiyordu (4,09 / 4,61 * 100)
 
-**~%11,3'ü** mutabakat katmanındaki staker'lara ihraç ediliyordu (0,52 / 4,61 * 100)
+**\~%11,3'ü** mutabakat katmanındaki staker'lara ihraç ediliyordu (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -84,16 +84,16 @@ Daha fazla doğrulayıcı para çektikçe, stake edilen büyük miktarlardaki ET
 
 ### Birleşme sonrası enflasyon dökümü {#post-merge-inflation-breakdown}
 
-- [Toplam ETH arzı](/eth/supply/): **~120.520.000 ETH** (Eylül 2022'deki Birleşme sırasında)
+- [Toplam ETH arzı](/eth/supply/): **\~120.520.000 ETH** (Eylül 2022'deki Birleşme sırasında)
 - Yürütme katmanı ihracı: **0**
-- Mutabakat katmanı ihracı: Yukarıdakiyle aynı, **~%0,52** yıllık ihraç oranı (toplam 14 milyon ETH stake edilmiş halde)
+- Mutabakat katmanı ihracı: Yukarıdakiyle aynı, **\~%0,52** yıllık ihraç oranı (toplam 14 milyon ETH stake edilmiş halde)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Toplam yıllık ihraç oranı: **~%0,52**
+Toplam yıllık ihraç oranı: **\~%0,52**
 
-Yıllık ETH ihracındaki net azalma: **~%88,7** ((%4,61 - %0,52) / %4,61 * 100)
+Yıllık ETH ihracındaki net azalma: **\~%88,7** ((%4,61 - %0,52) / %4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

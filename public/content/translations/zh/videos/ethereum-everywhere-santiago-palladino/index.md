@@ -11,7 +11,7 @@ topic:
   - "use-cases"
   - "events"
 format: presentation
-author: 以太坊基金会
+author: "以太坊基金会"
 breadcrumb: "以太坊，无处不在"
 ---
 

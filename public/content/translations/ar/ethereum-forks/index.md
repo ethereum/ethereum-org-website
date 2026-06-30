@@ -1,6 +1,6 @@
 ---
-title: الجدول الزمني لجميع تفرعات إيثيريوم (⁦2014⁩ إلى الوقت الحاضر)
-description: تاريخ سلسلة كتل إيثيريوم بما في ذلك الإنجازات الرئيسية والإصدارات والتفرعات.
+title: "الجدول الزمني لجميع تفرعات إيثيريوم (⁦2014⁩ إلى الوقت الحاضر)"
+description: "تاريخ سلسلة كتل إيثيريوم بما في ذلك الإنجازات الرئيسية والإصدارات والتفرعات."
 lang: ar
 sidebarDepth: 1
 authors: ["نيكسو"]
@@ -52,8 +52,8 @@ authors: ["نيكسو"]
 | [بيلاتريكس](https://en.wikipedia.org/wiki/Bellatrix) | <span dir="ltr">6</span> سبتمبر <span dir="ltr">2022</span> |
 | [كابيلا](https://en.wikipedia.org/wiki/Capella) | <span dir="ltr">12</span> أبريل <span dir="ltr">2023</span> |
 | [دينيب](https://en.wikipedia.org/wiki/Deneb) | <span dir="ltr">13</span> مارس <span dir="ltr">2024</span> |
-| [إلكترا](<https://en.wikipedia.org/wiki/Electra_(star) | <span dir="ltr">7</span> مايو <span dir="ltr">2025</span> |
-| [فولو](<https://en.wikipedia.org/wiki/Fulu_(star) | <span dir="ltr">3</span> ديسمبر <span dir="ltr">2025</span> |
+| [إلكترا](<https://en.wikipedia.org/wiki/Electra_(star)>) | <span dir="ltr">7</span> مايو <span dir="ltr">2025</span> |
+| [فولو](<https://en.wikipedia.org/wiki/Fulu_(star)>) | <span dir="ltr">3</span> ديسمبر <span dir="ltr">2025</span> |
 | [**غلواس**](https://en.wikipedia.org/wiki/WASP-13) | يُحدد لاحقًا - التالي |
 | [_هيزي_](https://en.wikipedia.org/wiki/Zeta_Virginis) | يُحدد لاحقًا |
 
@@ -101,27 +101,27 @@ authors: ["نيكسو"]
 تجربة مستخدم أفضل:
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>تعيين كود حساب EOA</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>زيادة قدرة المعالجة لكتلة البيانات</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>زيادة تكلفة بيانات الاستدعاء</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>إضافة جدول كتلة البيانات إلى ملفات تكوين طبقة التنفيذ</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7702"><span dir="ltr">EIP-7702</span></a> - <em>تعيين كود حساب EOA</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7691"><span dir="ltr">EIP-7691</span></a> - <em>زيادة قدرة المعالجة لكتلة البيانات</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7623"><span dir="ltr">EIP-7623</span></a> - <em>زيادة تكلفة بيانات الاستدعاء</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840"><span dir="ltr">EIP-7840</span></a> - <em>إضافة جدول كتلة البيانات إلى ملفات تكوين طبقة التنفيذ</em></li>
 </ul>
 
 تجربة تخزين أفضل:
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>زيادة <code>MAX_EFFECTIVE_BALANCE</code></em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>عمليات الخروج القابلة للتشغيل في طبقة التنفيذ</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>طلبات طبقة التنفيذ للأغراض العامة</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>تزويد ودائع المُدَقِّقين على السلسلة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7251"><span dir="ltr">EIP-7251</span></a> - <em>زيادة <code>MAX_EFFECTIVE_BALANCE</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7002"><span dir="ltr">EIP-7002</span></a> - <em>عمليات الخروج القابلة للتشغيل في طبقة التنفيذ</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7685"><span dir="ltr">EIP-7685</span></a> - <em>طلبات طبقة التنفيذ للأغراض العامة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6110"><span dir="ltr">EIP-6110</span></a> - <em>تزويد ودائع المُدَقِّقين على السلسلة</em></li>
 </ul>
 
 تحسينات كفاءة وأمان البروتوكول:
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>عقد مجمع مسبقًا لعمليات المنحنى BLS12-381</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>حفظ تجزئات الكتل التاريخية في الحالة</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>نقل مؤشر اللجنة خارج التصديق</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2537"><span dir="ltr">EIP-2537</span></a> - <em>عقد مجمع مسبقًا لعمليات المنحنى BLS12-381</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2935"><span dir="ltr">EIP-2935</span></a> - <em>حفظ تجزئات الكتل التاريخية في الحالة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7549"><span dir="ltr">EIP-7549</span></a> - <em>نقل مؤشر اللجنة خارج التصديق</em></li>
 </ul>
 
 </ExpandableCard>
@@ -147,12 +147,12 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs كانكون" contentPreview="التحسينات الرسمية المضمنة في هذه الترقية.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>رموز تشغيل التخزين العابر</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>جذر كتلة المنارة في جهاز إيثيريوم الظاهري (EVM)</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>معاملات كتلة بيانات الشظية (بروتو-دانكشاردينغ)</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-5656">EIP-5656</a> - <em><code>MCOPY</code> - تعليمة نسخ الذاكرة</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> (تدمير ذاتي) فقط في نفس المعاملة</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em>رمز التشغيل <code>BLOBBASEFEE</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1153"><span dir="ltr">EIP-1153</span></a> - <em>رموز تشغيل التخزين العابر</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788"><span dir="ltr">EIP-4788</span></a> - <em>جذر كتلة المنارة في جهاز إيثيريوم الظاهري (EVM)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844"><span dir="ltr">EIP-4844</span></a> - <em>معاملات كتلة بيانات الشظية (بروتو-دانكشاردينغ)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-5656"><span dir="ltr">EIP-5656</span></a> - <em><code>MCOPY</code> - تعليمة نسخ الذاكرة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6780"><span dir="ltr">EIP-6780</span></a> - <em><code>SELFDESTRUCT</code> (تدمير ذاتي) فقط في نفس المعاملة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7516"><span dir="ltr">EIP-7516</span></a> - <em>رمز التشغيل <code>BLOBBASEFEE</code></em></li>
 </ul>
 
 </ExpandableCard>
@@ -173,11 +173,11 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs دينيب" contentPreview="التحسينات الرسمية المضمنة في هذه الترقية">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>جذر كتلة المنارة في جهاز إيثيريوم الظاهري (EVM)</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>معاملات كتلة بيانات الشظية</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7044">EIP-7044</a> - <em>عمليات خروج طوعية موقعة صالحة بشكل دائم</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>زيادة الحد الأقصى لخانة تضمين التصديق</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>إضافة حد أقصى لتبديل الحقبة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788"><span dir="ltr">EIP-4788</span></a> - <em>جذر كتلة المنارة في جهاز إيثيريوم الظاهري (EVM)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844"><span dir="ltr">EIP-4844</span></a> - <em>معاملات كتلة بيانات الشظية</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7044"><span dir="ltr">EIP-7044</span></a> - <em>عمليات خروج طوعية موقعة صالحة بشكل دائم</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7045"><span dir="ltr">EIP-7045</span></a> - <em>زيادة الحد الأقصى لخانة تضمين التصديق</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7514"><span dir="ltr">EIP-7514</span></a> - <em>إضافة حد أقصى لتبديل الحقبة</em></li>
 </ul>
 
 </ExpandableCard>
@@ -200,11 +200,11 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs شانغهاي" contentPreview="التحسينات الرسمية المضمنة في هذه الترقية.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>يبدأ عنوان <code>COINBASE</code> دافئًا</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3855">EIP-3855</a> – <em>تعليمة <code>PUSH0</code> جديدة</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3860">EIP-3860</a> – <em>تقييد وقياس كود التهيئة (initcode)</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>سلسلة المنارة تدفع عمليات السحب كعمليات</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>إيقاف استخدام <code>SELFDESTRUCT</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3651"><span dir="ltr">EIP-3651</span></a> – <em>يبدأ عنوان <code>COINBASE</code> دافئًا</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3855"><span dir="ltr">EIP-3855</span></a> – <em>تعليمة <code>PUSH0</code> جديدة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3860"><span dir="ltr">EIP-3860</span></a> – <em>تقييد وقياس كود التهيئة (initcode)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4895"><span dir="ltr">EIP-4895</span></a> – <em>سلسلة المنارة تدفع عمليات السحب كعمليات</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6049"><span dir="ltr">EIP-6049</span></a> - <em>إيقاف استخدام <code>SELFDESTRUCT</code></em></li>
 </ul>
 
 </ExpandableCard>
@@ -239,8 +239,8 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs باريس" contentPreview="التحسينات الرسمية المضمنة في هذه الترقية.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>ترقية الإجماع إلى إثبات الحصة</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>استبدال رمز التشغيل DIFFICULTY بـ PREVRANDAO</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3675"><span dir="ltr">EIP-3675</span></a> – <em>ترقية الإجماع إلى إثبات الحصة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4399"><span dir="ltr">EIP-4399</span></a> – <em>استبدال رمز التشغيل DIFFICULTY بـ PREVRANDAO</em></li>
 </ul>
 
 </ExpandableCard>
@@ -272,7 +272,7 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs غراي غلاسيير" contentPreview="التحسينات الرسمية المضمنة في هذه الترقية.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>يؤخر قنبلة الصعوبة حتى سبتمبر 2022</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-5133"><span dir="ltr">EIP-5133</span></a> – <em>يؤخر قنبلة الصعوبة حتى سبتمبر 2022</em></li>
 </ul>
 
 </ExpandableCard>
@@ -295,7 +295,7 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs آرو غلاسيير" contentPreview="التحسينات الرسمية المضمنة في هذه الترقية.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>يؤخر قنبلة الصعوبة حتى يونيو 2022</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4345"><span dir="ltr">EIP-4345</span></a> – <em>يؤخر قنبلة الصعوبة حتى يونيو 2022</em></li>
 </ul>
 
 </ExpandableCard>
@@ -328,7 +328,7 @@ authors: ["نيكسو"]
 
 قدمت ترقية لندن [<span dir="ltr">EIP-1559</span>](https://eips.ethereum.org/EIPS/eip-1559)، والذي أصلح سوق رسوم المعاملة، إلى جانب تغييرات في كيفية التعامل مع استرداد الغاز وجدول [العصر الجليدي](/glossary/#ice-age).
 
-#### ما هي ترقية لندن / EIP-1559؟ {#eip-1559}
+#### ما هي ترقية لندن / <span dir="ltr">EIP-1559</span>؟ {#eip-1559}
 
 قبل ترقية لندن، كانت لدى إيثيريوم كتل ذات حجم ثابت. في أوقات ارتفاع الطلب على الشبكة، كانت هذه الكتل تعمل بكامل طاقتها. ونتيجة لذلك، غالبًا ما كان على المستخدمين انتظار انخفاض الطلب ليتم تضمينهم في كتلة، مما أدى إلى تجربة مستخدم سيئة. قدمت ترقية لندن كتلًا متغيرة الحجم إلى إيثيريوم.
 
@@ -340,7 +340,7 @@ authors: ["نيكسو"]
 
 أدى تنفيذ [<span dir="ltr">EIP-1559</span>](https://eips.ethereum.org/EIPS/eip-1559) في ترقية لندن إلى جعل آلية رسوم المعاملة أكثر تعقيدًا، ولكنه جعل رسوم الغاز أكثر قابلية للتنبؤ، مما أدى إلى سوق رسوم معاملة أكثر كفاءة. يمكن للمستخدمين إرسال المعاملات مع `maxFeePerGas` يتوافق مع المبلغ الذي هم على استعداد لدفعه لتنفيذ المعاملة، مع العلم أنهم لن يدفعوا أكثر من سعر السوق للغاز (`baseFeePerGas`)، واسترداد أي مبلغ إضافي، ناقصًا الإكرامية الخاصة بهم.
 
-يشرح هذا الفيديو <span dir="ltr">EIP-1559</span> والفوائد التي يجلبه: [شرح EIP-1559](https://www.youtube.com/watch?v=MGemhK9t44Q)
+يشرح هذا الفيديو <span dir="ltr">EIP-1559</span> والفوائد التي يجلبه: [شرح <span dir="ltr">EIP-1559</span>](https://www.youtube.com/watch?v=MGemhK9t44Q)
 
 - [هل أنت مطور تطبيق لامركزي (dapp)؟ تأكد من ترقية مكتباتك وأدواتك.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [اقرأ إعلان مؤسسة إيثيريوم](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
@@ -349,11 +349,11 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs لندن" contentPreview="التحسينات الرسمية المضمنة في هذه الترقية.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>يحسن سوق رسوم المعاملة</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3198">EIP-3198</a> – <em>يرجع <code>BASEFEE</code> من الكتلة</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3529">EIP-3529</a> - <em>يقلل من استرداد الغاز لعمليات جهاز إيثيريوم الظاهري (EVM)</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>يمنع نشر العقود التي تبدأ بـ <code>0xEF</code></em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>يؤخر العصر الجليدي حتى ديسمبر 2021</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1559"><span dir="ltr">EIP-1559</span></a> – <em>يحسن سوق رسوم المعاملة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3198"><span dir="ltr">EIP-3198</span></a> – <em>يرجع <code>BASEFEE</code> من الكتلة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3529"><span dir="ltr">EIP-3529</span></a> - <em>يقلل من استرداد الغاز لعمليات جهاز إيثيريوم الظاهري (EVM)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3541"><span dir="ltr">EIP-3541</span></a> - <em>يمنع نشر العقود التي تبدأ بـ <code>0xEF</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3554"><span dir="ltr">EIP-3554</span></a> – <em>يؤخر العصر الجليدي حتى ديسمبر 2021</em></li>
 </ul>
 
 </ExpandableCard>
@@ -374,10 +374,10 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs برلين" contentPreview="التحسينات الرسمية المضمنة في هذه الترقية.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>يخفض تكلفة غاز MODEXP</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2718">EIP-2718</a> – <em>يتيح دعمًا أسهل لأنواع المعاملات المتعددة</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>زيادات تكلفة الغاز لرموز تشغيل الوصول إلى الحالة</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>يضيف قوائم وصول اختيارية</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2565"><span dir="ltr">EIP-2565</span></a> – <em>يخفض تكلفة غاز MODEXP</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2718"><span dir="ltr">EIP-2718</span></a> – <em>يتيح دعمًا أسهل لأنواع المعاملات المتعددة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2929"><span dir="ltr">EIP-2929</span></a> – <em>زيادات تكلفة الغاز لرموز تشغيل الوصول إلى الحالة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2930"><span dir="ltr">EIP-2930</span></a> – <em>يضيف قوائم وصول اختيارية</em></li>
 </ul>
 
 </ExpandableCard>
@@ -432,7 +432,7 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs موير غلاسيير" contentPreview="التحسينات الرسمية المضمنة في هذا التفرع.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>يؤخر قنبلة الصعوبة لـ 4,000,000 كتلة أخرى، أو حوالي 611 يومًا.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2384"><span dir="ltr">EIP-2384</span></a> – <em>يؤخر قنبلة الصعوبة لـ <span dir="ltr">4,000,000</span> كتلة أخرى، أو حوالي 611 يومًا.</em></li>
 </ul>
 
 </ExpandableCard>
@@ -460,12 +460,12 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs إسطنبول" contentPreview="التحسينات الرسمية المضمنة في هذا التفرع.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>السماح لإيثيريوم بالعمل مع عملة تحافظ على الخصوصية مثل Zcash.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>علم تشفير أرخص لتحسين تكاليف [الغاز](/glossary/#gas).</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>يحمي إيثيريوم من هجمات إعادة التشغيل عن طريق إضافة [رمز التشغيل](/developers/docs/ethereum-stack/#ethereum-virtual-machine) <code>CHAINID</code>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>تحسين أسعار غاز رموز التشغيل بناءً على الاستهلاك.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>يقلل من تكلفة بيانات الاستدعاء للسماح بمزيد من البيانات في الكتل – مفيد لـ [توسع طبقة 2 (L2)](/developers/docs/scaling/#layer-2-scaling).</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>تعديلات أخرى على أسعار غاز رموز التشغيل.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-152"><span dir="ltr">EIP-152</span></a> – <em>السماح لإيثيريوم بالعمل مع عملة تحافظ على الخصوصية مثل Zcash.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108"><span dir="ltr">EIP-1108</span></a> – <em>علم تشفير أرخص لتحسين تكاليف [الغاز](/glossary/#gas).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344"><span dir="ltr">EIP-1344</span></a> – <em>يحمي إيثيريوم من هجمات إعادة التشغيل عن طريق إضافة [رمز التشغيل](/developers/docs/ethereum-stack/#ethereum-virtual-machine) <code>CHAINID</code>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1884"><span dir="ltr">EIP-1884</span></a> – <em>تحسين أسعار غاز رموز التشغيل بناءً على الاستهلاك.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028"><span dir="ltr">EIP-2028</span></a> – <em>يقلل من تكلفة بيانات الاستدعاء للسماح بمزيد من البيانات في الكتل – مفيد لـ [توسع طبقة 2 (L2)](/developers/docs/scaling/#layer-2-scaling).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2200"><span dir="ltr">EIP-2200</span></a> – <em>تعديلات أخرى على أسعار غاز رموز التشغيل.</em></li>
 </ul>
 
 </ExpandableCard>
@@ -490,10 +490,10 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs كونستانتينوبل" contentPreview="التحسينات الرسمية المضمنة في هذا التفرع.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>يحسّن تكلفة بعض الإجراءات على السلسلة.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>يسمح لك بالتفاعل مع العناوين التي لم يتم إنشاؤها بعد.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>يقدم تعليمة <code>EXTCODEHASH</code> لاسترداد تجزئة كود عقد آخر.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>يتأكد من عدم تجميد سلسلة الكتل قبل إثبات الحصة ويقلل مكافأة الكتلة من 3 إلى 2 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-145"><span dir="ltr">EIP-145</span></a> – <em>يحسّن تكلفة بعض الإجراءات على السلسلة.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1014"><span dir="ltr">EIP-1014</span></a> – <em>يسمح لك بالتفاعل مع العناوين التي لم يتم إنشاؤها بعد.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1052"><span dir="ltr">EIP-1052</span></a> – <em>يقدم تعليمة <code>EXTCODEHASH</code> لاسترداد تجزئة كود عقد آخر.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1234"><span dir="ltr">EIP-1234</span></a> – <em>يتأكد من عدم تجميد سلسلة الكتل قبل إثبات الحصة ويقلل مكافأة الكتلة من 3 إلى <span dir="ltr">2 ETH</span>.</em></li>
 </ul>
 
 </ExpandableCard>
@@ -520,15 +520,15 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs بيزنطيوم" contentPreview="التحسينات الرسمية المضمنة في هذا التفرع.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>يضيف رمز التشغيل <code>REVERT</code>.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>تمت إضافة حقل الحالة إلى إيصالات المعاملة للإشارة إلى النجاح أو الفشل.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>يضيف منحنى إهليلجي والضرب القياسي للسماح بـ [zk-SNARKs](/developers/docs/scaling/zk-rollups/).</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>يضيف منحنى إهليلجي والضرب القياسي للسماح بـ [zk-SNARKs](/developers/docs/scaling/zk-rollups/).</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>يمكّن التحقق من توقيع RSA.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>يضيف دعمًا لقيم الإرجاع ذات الطول المتغير.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>يضيف رمز التشغيل <code>STATICCALL</code>، مما يسمح باستدعاءات لا تغير الحالة لعقود أخرى.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>يغير صيغة تعديل الصعوبة.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>يؤخر [قنبلة الصعوبة](/glossary/#difficulty-bomb) لمدة عام واحد ويقلل مكافأة الكتلة من 5 إلى 3 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-140"><span dir="ltr">EIP-140</span></a> – <em>يضيف رمز التشغيل <code>REVERT</code>.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-658"><span dir="ltr">EIP-658</span></a> – <em>تمت إضافة حقل الحالة إلى إيصالات المعاملة للإشارة إلى النجاح أو الفشل.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196"><span dir="ltr">EIP-196</span></a> – <em>يضيف منحنى إهليلجي والضرب القياسي للسماح بـ [zk-SNARKs](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197"><span dir="ltr">EIP-197</span></a> – <em>يضيف منحنى إهليلجي والضرب القياسي للسماح بـ [zk-SNARKs](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-198"><span dir="ltr">EIP-198</span></a> – <em>يمكّن التحقق من توقيع RSA.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-211"><span dir="ltr">EIP-211</span></a> – <em>يضيف دعمًا لقيم الإرجاع ذات الطول المتغير.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-214"><span dir="ltr">EIP-214</span></a> – <em>يضيف رمز التشغيل <code>STATICCALL</code>، مما يسمح باستدعاءات لا تغير الحالة لعقود أخرى.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-100"><span dir="ltr">EIP-100</span></a> – <em>يغير صيغة تعديل الصعوبة.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649"><span dir="ltr">EIP-649</span></a> – <em>يؤخر [قنبلة الصعوبة](/glossary/#difficulty-bomb) لمدة عام واحد ويقلل مكافأة الكتلة من 5 إلى <span dir="ltr">3 ETH</span>.</em></li>
 </ul>
 
 </ExpandableCard>
@@ -554,10 +554,10 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs سبوريوس دراغون" contentPreview="التحسينات الرسمية المضمنة في هذا التفرع.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>يمنع إعادة بث المعاملات من سلسلة إيثيريوم واحدة على سلسلة بديلة، على سبيل المثال إعادة تشغيل معاملة شبكة اختبار على سلسلة إيثيريوم الرئيسية.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-160">EIP-160</a> – <em>يضبط أسعار رمز التشغيل <code>EXP</code> – مما يجعل إبطاء الشبكة عبر عمليات العقود باهظة التكلفة حسابيًا أكثر صعوبة.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>يسمح بإزالة الحسابات الفارغة المضافة عبر هجمات DOS.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>يغير الحد الأقصى لحجم الكود الذي يمكن أن يحتويه العقد على سلسلة الكتل – إلى 24576 بايت.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-155"><span dir="ltr">EIP-155</span></a> – <em>يمنع إعادة بث المعاملات من سلسلة إيثيريوم واحدة على سلسلة بديلة، على سبيل المثال إعادة تشغيل معاملة شبكة اختبار على سلسلة إيثيريوم الرئيسية.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-160"><span dir="ltr">EIP-160</span></a> – <em>يضبط أسعار رمز التشغيل <code>EXP</code> – مما يجعل إبطاء الشبكة عبر عمليات العقود باهظة التكلفة حسابيًا أكثر صعوبة.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-161"><span dir="ltr">EIP-161</span></a> – <em>يسمح بإزالة الحسابات الفارغة المضافة عبر هجمات DOS.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-170"><span dir="ltr">EIP-170</span></a> – <em>يغير الحد الأقصى لحجم الكود الذي يمكن أن يحتويه العقد على سلسلة الكتل – إلى 24576 بايت.</em></li>
 </ul>
 
 </ExpandableCard>
@@ -579,8 +579,8 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs تانجرين ويسل" contentPreview="التحسينات الرسمية المضمنة في هذا التفرع.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>يزيد من تكاليف الغاز لرموز التشغيل التي يمكن استخدامها في هجمات البريد العشوائي.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>يقلل من حجم الحالة عن طريق إزالة عدد كبير من الحسابات الفارغة التي تم وضعها في الحالة بتكلفة منخفضة للغاية بسبب عيوب في الإصدارات السابقة من بروتوكول إيثيريوم.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-150"><span dir="ltr">EIP-150</span></a> – <em>يزيد من تكاليف الغاز لرموز التشغيل التي يمكن استخدامها في هجمات البريد العشوائي.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-158"><span dir="ltr">EIP-158</span></a> – <em>يقلل من حجم الحالة عن طريق إزالة عدد كبير من الحسابات الفارغة التي تم وضعها في الحالة بتكلفة منخفضة للغاية بسبب عيوب في الإصدارات السابقة من بروتوكول إيثيريوم.</em></li>
 </ul>
 
 </ExpandableCard>
@@ -616,9 +616,9 @@ authors: ["نيكسو"]
 <ExpandableCard title="EIPs هومستيد" contentPreview="التحسينات الرسمية المضمنة في هذا التفرع.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>يجري تعديلات على عملية إنشاء العقد.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>يضيف رمز تشغيل جديد: <code>DELEGATECALL</code></em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>يقدم متطلبات التوافق المستقبلي لـ devp2p</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2"><span dir="ltr">EIP-2</span></a> – <em>يجري تعديلات على عملية إنشاء العقد.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7"><span dir="ltr">EIP-7</span></a> – <em>يضيف رمز تشغيل جديد: <code>DELEGATECALL</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-8"><span dir="ltr">EIP-8</span></a> – <em>يقدم متطلبات التوافق المستقبلي لـ devp2p</em></li>
 </ul>
 
 </ExpandableCard>

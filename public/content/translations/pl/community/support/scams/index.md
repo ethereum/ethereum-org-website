@@ -1,7 +1,7 @@
 ---
-title: Zostałem oszukany lub straciłem środki
-metaTitle: Pomoc i zgłaszanie oszustw
-description: Co zrobić, jeśli padłeś ofiarą oszustwa, jak zabezpieczyć pozostałe aktywa i gdzie zgłosić przestępstwo.
+title: "Zostałem oszukany lub straciłem środki"
+metaTitle: "Pomoc i zgłaszanie oszustw"
+description: "Co zrobić, jeśli padłeś ofiarą oszustwa, jak zabezpieczyć pozostałe aktywa i gdzie zgłosić przestępstwo."
 lang: pl
 ---
 
@@ -119,7 +119,7 @@ Oszuści podszywają się pod członków zespołu Ethereum, moderatorów lub age
 
 <ExpandableCard
 title="Oszustwa na odzyskiwanie środków"
-contentPreview="Jeśli zostaniesz oszukany, uważaj na fałszywych „ekspertów od odzyskiwania krypto”."
+contentPreview="Jeśli zostaniesz oszukany, uważaj na fałszywych &quot;ekspertów od odzyskiwania krypto&quot;."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >

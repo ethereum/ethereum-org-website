@@ -24,7 +24,8 @@ Come la maggior parte degli sviluppatori blockchain agli inizi, potresti aver fa
 - Questo significa che Alchemy non può firmare e inviare transazioni per tuo conto. Il motivo è legato alla sicurezza. Alchemy non ti chiederà mai di condividere la tua chiave privata, e non dovresti mai condividere la tua chiave privata con un nodo ospitato (o con chiunque altro, se è per questo).
 - Puoi leggere dalla blockchain usando l'API principale di Alchemy, ma per scriverci dovrai usare qualcos'altro per firmare le tue transazioni prima di inviarle tramite Alchemy (questo vale per qualsiasi altro [servizio di nodo](/developers/docs/nodes-and-clients/nodes-as-a-service/)).
 
-### 2\. Cos'è un "signer"?
+### 2\. Cos'è un "signer"? {#what-is-a-signer}
+
 - I signer ("firmatari") firmeranno le transazioni per tuo conto usando la tua chiave privata. In questo tutorial useremo [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) per firmare la nostra transazione, ma potresti anche usare qualsiasi altra libreria Web3.
 - Sul frontend, un buon esempio di signer è [MetaMask](https://metamask.io/), che firmerà e invierà le transazioni per tuo conto.
 ### 3\. Perché devo firmare le mie transazioni? {#why-do-i-need-to-sign-my-transactions}
@@ -54,7 +55,8 @@ Questo è ciò che useremo in questo tutorial.
 
 Ok, ora che abbiamo chiarito alcune di queste domande, passiamo al tutorial. Sentiti libero di fare domande in qualsiasi momento nel [Discord](https://discord.gg/gWuC7zB) di Alchemy!
 
-### 7\. Come inviare transazioni sicure, ottimizzate per il gas e private?
+### 7\. Come inviare transazioni sicure, ottimizzate per il gas e private? {#how-to-send-secure-gas-optimized-and-private-transactions}
+
 - [Alchemy ha una serie di risorse per le transazioni](https://www.alchemy.com/docs/sending-transactions). Puoi usarle per inviare transazioni, simulare transazioni prima che avvengano, inviare transazioni private e inviare transazioni ottimizzate per il gas.
 - Puoi anche usare i [webhook di Alchemy](https://www.alchemy.com/docs/reference/webhooks-overview) per ricevere un avviso quando la tua transazione viene prelevata dalla mempool e aggiunta alla catena.
 
@@ -120,7 +122,8 @@ Non committare <code>.env</code>! Assicurati di non condividere o esporre mai il
 </AlertContent>
 </Alert>
 
-### 7\. Crea il file `sendTx.js`
+### 7\. Crea il file `sendTx.js` {#create-sendtx-js}
+
 Ottimo, ora che abbiamo protetto i nostri dati sensibili in un file `.env`, iniziamo a programmare. Per il nostro esempio di invio di una transazione, restituiremo ETH al faucet di Sepolia.
 
 Crea un file `sendTx.js`, dove configureremo e invieremo la nostra transazione di esempio, e aggiungi le seguenti righe di codice:
@@ -186,7 +189,8 @@ Torna al tuo terminale o riga di comando ed esegui:
 node sendTx.js
 ```
 
-### 9\. Vedi la tua transazione nella mempool
+### 9\. Vedi la tua transazione nella mempool {#see-your-transaction-in-the-mempool}
+
 Apri la [pagina Mempool](https://dashboard.alchemy.com/mempool) nella tua dashboard di Alchemy e filtra in base all'app che hai creato per trovare la tua transazione. È qui che possiamo osservare il passaggio della nostra transazione dallo stato in sospeso (pending) allo stato minato (mined) (se ha esito positivo) o allo stato abbandonato (dropped) se non ha esito positivo. Assicurati di mantenerlo su "All" (Tutte) in modo da catturare le transazioni "mined", "pending" e "dropped". Puoi anche cercare la tua transazione cercando le transazioni inviate all'indirizzo `0x31b98d14007bdee637298086988a0bbd31184523`.
 
 Per visualizzare i dettagli della tua transazione una volta trovata, seleziona l'hash della transazione; questo dovrebbe portarti a una visualizzazione simile a questa:

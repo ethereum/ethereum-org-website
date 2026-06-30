@@ -19,8 +19,8 @@ title="خلاصة إصدار ETH">
 - قبل الانتقال إلى إثبات الحصة (PoS)، كان يتم إصدار حوالي <span dir="ltr">13,000 ETH/day</span> للمُعَدِّنين
 - يتم إصدار حوالي <span dir="ltr">1,700 ETH/day</span> للمُخزِّنين، بناءً على إجمالي حوالي 14 مليون <span dir="ltr">ETH</span> مخزنة كحصة تخزين
 - يتقلب إصدار التخزين الدقيق بناءً على إجمالي كمية <span dir="ltr">ETH</span> المخزنة كحصة تخزين
-- **منذ الدمج، يتبقى فقط <span dir="ltr">~1,700 ETH/day</span>، مما أدى إلى انخفاض إجمالي إصدار <span dir="ltr">ETH</span> الجديد بنسبة <span dir="ltr">~88%</span>**
-- الحرق: يتقلب هذا وفقًا لطلب الشبكة. _إذا_ لوحظ متوسط سعر الغاز لا يقل عن <span dir="ltr">16 gwei</span> ليوم معين، فإن هذا يعوض فعليًا <span dir="ltr">~1,700 ETH</span> التي يتم إصدارها للمُدَقِّقين ويجعل صافي تضخم <span dir="ltr">ETH</span> يصل إلى الصفر أو أقل لذلك اليوم.
+- **منذ الدمج، يتبقى فقط <span dir="ltr">\~1,700 ETH/day</span>، مما أدى إلى انخفاض إجمالي إصدار <span dir="ltr">ETH</span> الجديد بنسبة <span dir="ltr">\~88%</span>**
+- الحرق: يتقلب هذا وفقًا لطلب الشبكة. _إذا_ لوحظ متوسط سعر الغاز لا يقل عن <span dir="ltr">16 gwei</span> ليوم معين، فإن هذا يعوض فعليًا <span dir="ltr">\~1,700 ETH</span> التي يتم إصدارها للمُدَقِّقين ويجعل صافي تضخم <span dir="ltr">ETH</span> يصل إلى الصفر أو أقل لذلك اليوم.
 
 </Card>
 
@@ -38,28 +38,28 @@ title="خلاصة إصدار ETH">
 
 ### تفصيل الإصدار قبل الدمج {#pre-merge-issuance-breakdown}
 
-إجمالي المعروض من <span dir="ltr">ETH</span>: **<span dir="ltr">~120,520,000 ETH</span>** (في وقت الدمج في <span dir="ltr">September 2022</span>)
+إجمالي المعروض من <span dir="ltr">ETH</span>: **<span dir="ltr">\~120,520,000 ETH</span>** (في وقت الدمج في <span dir="ltr">September 2022</span>)
 
 **إصدار طبقة التنفيذ:**
 
-- قُدر بحوالي <span dir="ltr">2.08 ETH</span> كل 13.3 ثانية\*: تم إصدار **<span dir="ltr">~4,930,000</span>** <span dir="ltr">ETH</span> في السنة
+- قُدر بحوالي <span dir="ltr">2.08 ETH</span> كل 13.3 ثانية\*: تم إصدار **<span dir="ltr">\~4,930,000</span>** <span dir="ltr">ETH</span> في السنة
 - أدى إلى معدل تضخم يبلغ **حوالي <span dir="ltr">4.09%</span>** (<span dir="ltr">4.93M</span> سنويًا / <span dir="ltr">120.5M</span> إجمالي)
 - \*يشمل هذا <span dir="ltr">2 ETH</span> لكل كتلة أساسية، بالإضافة إلى متوسط <span dir="ltr">0.08 ETH</span> بمرور الوقت من كتل ommer. يستخدم أيضًا 13.3 ثانية، وهو الهدف الأساسي لـ وقت الكتلة دون أي تأثير من [قنبلة الصعوبة](/glossary/#difficulty-bomb). ([انظر المصدر](https://bitinfocharts.com/ethereum/))
 
 **إصدار طبقة الإجماع:**
 
 - باستخدام إجمالي <span dir="ltr">14,000,000</span> <span dir="ltr">ETH</span> مخزنة كحصة تخزين، يبلغ معدل إصدار <span dir="ltr">ETH</span> حوالي <span dir="ltr">1700 ETH/day</span> ([انظر المصدر](https://ultrasound.money/))
-- ينتج عنه إصدار **<span dir="ltr">~620,500</span>** <span dir="ltr">ETH</span> في السنة
+- ينتج عنه إصدار **<span dir="ltr">\~620,500</span>** <span dir="ltr">ETH</span> في السنة
 - أدى إلى معدل تضخم يبلغ **حوالي <span dir="ltr">0.52%</span>** (<span dir="ltr">620.5K</span> سنويًا / <span dir="ltr">119.3M</span> إجمالي)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-**إجمالي معدل الإصدار السنوي (قبل الدمج): <span dir="ltr">~4.61%</span>** (<span dir="ltr">4.09%</span> + <span dir="ltr">0.52%</span>)
+**إجمالي معدل الإصدار السنوي (قبل الدمج): <span dir="ltr">\~4.61%</span>** (<span dir="ltr">4.09%</span> + <span dir="ltr">0.52%</span>)
 
-**<span dir="ltr">~88.7%</span>** من الإصدار كان يذهب إلى المُعَدِّنين على طبقة التنفيذ (<span dir="ltr">4.09 / 4.61 * 100</span>)
+**<span dir="ltr">\~88.7%</span>** من الإصدار كان يذهب إلى المُعَدِّنين على طبقة التنفيذ (<span dir="ltr">4.09 / 4.61 * 100</span>)
 
-**<span dir="ltr">~11.3%</span>** كان يتم إصداره للمُخزِّنين على طبقة الإجماع (<span dir="ltr">0.52 / 4.61 * 100</span>)
+**<span dir="ltr">\~11.3%</span>** كان يتم إصداره للمُخزِّنين على طبقة الإجماع (<span dir="ltr">0.52 / 4.61 * 100</span>)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -84,16 +84,16 @@ title="خلاصة إصدار ETH">
 
 ### تفصيل التضخم بعد الدمج {#post-merge-inflation-breakdown}
 
-- [إجمالي المعروض من <span dir="ltr">ETH</span>](/eth/supply/): **<span dir="ltr">~120,520,000 ETH</span>** (في وقت الدمج في <span dir="ltr">September 2022</span>)
+- [إجمالي المعروض من <span dir="ltr">ETH</span>](/eth/supply/): **<span dir="ltr">\~120,520,000 ETH</span>** (في وقت الدمج في <span dir="ltr">September 2022</span>)
 - إصدار طبقة التنفيذ: **0**
-- إصدار طبقة الإجماع: كما هو مذكور أعلاه، معدل إصدار سنوي يبلغ **<span dir="ltr">~0.52%</span>** (مع إجمالي 14 مليون <span dir="ltr">ETH</span> مخزنة كحصة تخزين)
+- إصدار طبقة الإجماع: كما هو مذكور أعلاه، معدل إصدار سنوي يبلغ **<span dir="ltr">\~0.52%</span>** (مع إجمالي 14 مليون <span dir="ltr">ETH</span> مخزنة كحصة تخزين)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-إجمالي معدل الإصدار السنوي: **<span dir="ltr">~0.52%</span>**
+إجمالي معدل الإصدار السنوي: **<span dir="ltr">\~0.52%</span>**
 
-صافي الانخفاض في الإصدار السنوي لـ <span dir="ltr">ETH</span>: **<span dir="ltr">~88.7%</span>** (<span dir="ltr">(4.61% - 0.52%) / 4.61% * 100</span>)
+صافي الانخفاض في الإصدار السنوي لـ <span dir="ltr">ETH</span>: **<span dir="ltr">\~88.7%</span>** (<span dir="ltr">(4.61% - 0.52%) / 4.61% * 100</span>)
 </AlertDescription>
 </AlertContent>
 </Alert>

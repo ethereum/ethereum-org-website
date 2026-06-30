@@ -1,6 +1,6 @@
 ---
-title: 新增社群故事
-description: 如何向 ethereum.org 提交關於您的以太坊體驗的社群故事
+title: "新增社群故事"
+description: "如何向 ethereum.org 提交關於您的以太坊體驗的社群故事"
 lang: zh-tw
 ---
 
@@ -19,8 +19,8 @@ lang: zh-tw
 Ethereum.org 是一個中立的教育資源。故事頁面的策展目的是：
 
 - 透過真實的個人與社群經驗，將以太坊的目的與技術**人性化**
-- **突顯**開源與庇護技術如何為人們的生活帶來真正的改變
-- **慶祝**全球以太坊社群的多樣性
+- <strong>突顯</strong>開源與庇護技術如何為人們的生活帶來真正的改變
+- <strong>慶祝</strong>全球以太坊社群的多樣性
 
 本網站不會列出主要用於推廣特定產品、代幣或商業服務的故事。所有提交的內容都會由 ethereum.org 團隊進行審核。
 
@@ -62,8 +62,8 @@ Ethereum.org 是一個中立的教育資源。故事頁面的策展目的是：
 
 您也可以建議**短篇故事**或**影片故事**：
 
-- **短篇故事**會以卡片形式顯示在[故事登陸頁面](/stories/)上。這些故事可以直接發布在 ethereum.org 上，或是連結到在推特上分享的故事。
-- **影片故事**是在[影片庫](/videos/)中標記為 `community-stories` 類別的影片。若要新增影片故事，請遵循現有的[新增影片](/contributing/adding-videos/)貢獻指南，並在主題標籤中包含 `community-stories`。
+- <strong>短篇故事</strong>會以卡片形式顯示在[故事登陸頁面](/stories/)上。這些故事可以直接發布在 ethereum.org 上，或是連結到在推特上分享的故事。
+- <strong>影片故事</strong>是在[影片庫](/videos/)中標記為 `community-stories` 類別的影片。若要新增影片故事，請遵循現有的[新增影片](/contributing/adding-videos/)貢獻指南，並在主題標籤中包含 `community-stories`。
 
 如果您想建議這兩種故事類型中的任何一種，請在 GitHub 上建立一個 issue。
 

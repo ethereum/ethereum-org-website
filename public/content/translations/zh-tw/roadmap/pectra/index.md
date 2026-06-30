@@ -1,7 +1,7 @@
 ---
-title: 佩克特拉
-metaTitle: Prague-Electra (佩克特拉)
-description: 了解佩克特拉 (Pectra) 協定升級
+title: "佩克特拉"
+metaTitle: "Prague-Electra (佩克特拉)"
+description: "了解佩克特拉 (Pectra) 協定升級"
 lang: zh-tw
 authors:
   - Nixo
@@ -119,7 +119,8 @@ _佩克特拉升級包含了什麼？ - Christine Kim_
 
 _以太坊佩克特拉升級：質押者需要知道的事 — Blockdaemon_
 
-## 延伸閱讀
+## 延伸閱讀 {#further-reading}
+
 - [以太坊路線圖](/roadmap/)
 - [佩克特拉常見問題](https://epf.wiki/#/wiki/pectra-faq)
 - [佩克特拉如何提升質押者體驗](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

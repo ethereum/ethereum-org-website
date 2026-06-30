@@ -1,6 +1,6 @@
 ---
-title: Jak rozpoznat podvodné tokeny
-description: Porozumění podvodným tokenům, jak se tváří jako legitimní a jak se jim vyhnout.
+title: "Jak rozpoznat podvodné tokeny"
+description: "Porozumění podvodným tokenům, jak se tváří jako legitimní a jak se jim vyhnout."
 lang: cs
 ---
 

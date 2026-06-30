@@ -354,7 +354,8 @@ Um usuário envia uma saudação. Talvez ela seja atualizada no próximo bloco. 
 - A nova saudação foi enviada e está em processamento
 - A nova saudação foi rejeitada
 
-## Conclusão
+## Conclusão {#conclusion}
+
 Neste ponto, você deve ser capaz de criar uma experiência sem gás para os usuários do seu aplicativo descentralizado (dapp), ao custo de alguma centralização.
 
 No entanto, isso só funciona com contratos inteligentes que suportam ERC-712. Para transferir um token ERC-20, por exemplo, é necessário que a transação seja assinada pelo proprietário, em vez de apenas uma mensagem. A solução mais simples é fazer com que os ativos não sejam de propriedade do endereço EOA, mas de um contrato separado (uma forma simples de [abstração de conta](/roadmap/account-abstraction/)). Você pode ler mais sobre isso [no tutorial de continuação](/developers/tutorials/gasless-token).

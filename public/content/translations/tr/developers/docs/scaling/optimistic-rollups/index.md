@@ -251,7 +251,8 @@ Ethereum'da [veri parçalamanın (data sharding)](/roadmap/danksharding/) kullan
 
 Daha çok görsel olarak mı öğreniyorsunuz? Finematics'in iyimser rollupları açıklamasını izleyin:
 
-## İyimser rolluplar hakkında daha fazla okuma
+## İyimser rolluplar hakkında daha fazla okuma {#further-reading-on-optimistic-rollups}
+
 - [İyimser rolluplar nasıl çalışır (Tam rehber)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Temel Arbitrum Rehberi](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Ethereum Rollupları İçin Pratik Rehber](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

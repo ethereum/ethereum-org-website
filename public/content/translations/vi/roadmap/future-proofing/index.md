@@ -36,7 +36,7 @@ Không. Hiện nay không có máy tính lượng tử nào có thể phá vỡ 
 
 </ExpandableCard>
 
-### Những gì đang được thực hiện?
+### Những gì đang được thực hiện? {#what-is-being-done}
 
 Ethereum hiện là bên phòng thủ chủ động nhất chống lại các mối đe dọa lượng tử trong hệ sinh thái chuỗi khối. Tổ chức Ethereum đã thành lập một **nhóm Bảo mật Hậu lượng tử** chuyên trách vào tháng 1 năm 2026, và công việc tích cực đang diễn ra trên nhiều nhóm máy khách và nhóm nghiên cứu. Công việc của nhóm Hậu lượng tử của EF được theo dõi công khai tại [pq.ethereum.org](https://pq.ethereum.org).
 

@@ -133,7 +133,8 @@ _일반적으로 프로토콜과 [탈중앙화 애플리케이션 (dapp)](/gloss
 - [Tally.xyz의 DAO 목록](https://www.tally.xyz/explore)
 - [DeGov.AI의 DAO 목록](https://apps.degov.ai/)
 
-### DAO 시작하기
+### DAO 시작하기 {#start-a-dao}
+
 - [DAOHaus로 DAO 생성하기](https://app.daohaus.club/summon)
 - [Tally로 거버너 DAO 시작하기](https://www.tally.xyz/get-started)
 - [Aragon 기반 DAO 생성하기](https://aragon.org/product)

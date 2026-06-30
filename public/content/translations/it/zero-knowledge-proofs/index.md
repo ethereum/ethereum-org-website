@@ -58,8 +58,10 @@ Le prove a conoscenza zero sono particolarmente utili nel contesto dell'[identit
       <p>
         Scopri di più sull'NDI del Bhutan nel <a href="/decentralized-identity/#national-and-government-id">caso di studio sull'identità decentralizzata</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Prova di umanità {#proof-of-humanity}

@@ -39,7 +39,7 @@ Alchemyのアカウント作成は簡単です。[こちらから無料でサイ
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.gif)
 
-## 3. コマンドラインからリクエストを行う
+## 3. コマンドラインからリクエストを行う {#make-a-request-from-the-command-line}
 
 JSON-RPCとcurlを使用して、Alchemy経由でイーサリアム・ブロックチェーンと対話します。
 
@@ -66,9 +66,9 @@ _**注:** `https://eth-mainnet.alchemyapi.io/v2/demo`を自身のAPIキー`https
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. Web3クライアントをセットアップする
+## 4. Web3クライアントをセットアップする {#set-up-your-web3-client}
 
-**既存のクライアントがある場合、**現在のノードプロバイダーのURLを、APIキーを含むAlchemyのURLに変更します: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+<strong>既存のクライアントがある場合、</strong>現在のノードプロバイダーのURLを、APIキーを含むAlchemyのURLに変更します: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
 **_注:_** 以下のスクリプトは、コマンドラインから実行するのではなく、**ノードコンテキスト**で実行するか、**ファイルに保存**する必要があります。Nodeまたはnpmをまだインストールしていない場合は、[Node.jsのインストール手順](https://nodejs.org/en/download/)に従ってください。
 
@@ -96,7 +96,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. 初めてのWeb3スクリプトを作成する！
+## 5. 初めてのWeb3スクリプトを作成する！ {#write-your-first-web3-script}
 
 それでは、Web3プログラミングを実際に体験するために、イーサリアム・メインネットから最新のブロック番号を出力する簡単なスクリプトを作成しましょう。
 

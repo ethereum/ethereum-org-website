@@ -123,27 +123,6 @@ Tumia vichwa vya `###` vilivyo na mihuri ya muda ili kuweka alama kwenye sehemu 
 
 Ikiwa huna nakala ya maandishi, unaweza kuacha mwili wazi na timu itatengeneza moja.
 
-#### Hatua ya 4: Chagua lebo za mada
-
-Chagua lebo za mada kutoka kwenye orodha iliyo hapa chini. Kila lebo inalingana moja kwa moja na kategoria ya kichujio katika matunzio ya video — tumia jina la lebo kama inavyoonyeshwa.
-
-Video inaweza kuwa na lebo nyingi ili kuonekana katika vichujio vingi vya matunzio:
-
-| Lebo | Kichujio cha matunzio |
-|---|---|
-| `how-ethereum-works` | Jinsi Ethereum Inavyofanya Kazi |
-| `network-upgrades` | Maboresho ya Mtandao |
-| `roadmap-and-priorities` | Ramani ya Njia na Vipaumbele |
-| `scaling-and-layer-2` | Kuongeza Uwezo na tabaka la 2 (l2) |
-| `use-cases` | Hali za Matumizi |
-| `privacy` | Faragha |
-| `security` | Usalama |
-| `community-stories` | Hadithi za Jamii |
-| `events` | Matukio |
-
-Kila video inapaswa kuwa na angalau lebo moja kutoka kwenye orodha hii. Video zisizo na lebo inayotambulika zitaonekana tu katika mwonekano wa "Zote" na matokeo ya utafutaji.
-
-Lebo ya `community-stories` pia husababisha video kuonekana kwenye [ukurasa wa Hadithi](/stories/).
 #### Hatua ya 5: Wasilisha PR yako {#step-5}
 
 Fungua ombi la kuvuta (pull request) na mabadiliko yako kwenye tawi la `dev`. Timu itakagua wasilisho lako na kutoa maoni.

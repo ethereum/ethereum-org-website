@@ -1,7 +1,7 @@
 ---
-title: صفر علم ثبوت کیا ہیں؟
-metaTitle: صفر علم ثبوت
-description: مبتدیوں کے لیے صفر علم ثبوت کا ایک غیر تکنیکی تعارف۔
+title: "صفر علم ثبوت کیا ہیں؟"
+metaTitle: "صفر علم ثبوت"
+description: "مبتدیوں کے لیے صفر علم ثبوت کا ایک غیر تکنیکی تعارف۔"
 lang: ur
 ---
 
@@ -55,11 +55,13 @@ lang: ur
       <p>
         شناختی انتظامی نظام کے لیے <span dir="ltr">ZKP</span> کے استعمال کی ایک حقیقی دنیا کی مثال بھوٹان کی نیشنل ڈیجیٹل آئی ڈی (<span dir="ltr">NDI</span>) کا نظام ہے، جو ایتھیریم پر بنایا گیا ہے۔ بھوٹان کا <span dir="ltr">NDI</span> شہریوں کو اپنی آئی ڈی پر موجود حساس ذاتی ڈیٹا کو ظاہر کیے بغیر، اپنے بارے میں حقائق کو کرپٹوگرافک طور پر ثابت کرنے کی اجازت دینے کے لیے <span dir="ltr">ZKPs</span> کا استعمال کرتا ہے، جیسے "میں ایک شہری ہوں" یا "میری عمر <span dir="ltr">18</span> سال سے زیادہ ہے"۔
       </p>
-      <p>
+      <p></p>
         <a href="/decentralized-identity/#national-and-government-id">غیر مرکزی شناخت کے کیس اسٹڈی</a> میں بھوٹان <span dir="ltr">NDI</span> کے بارے میں مزید جانیں۔
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### انسانیت کا ثبوت {#proof-of-humanity}

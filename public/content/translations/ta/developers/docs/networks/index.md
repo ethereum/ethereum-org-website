@@ -40,7 +40,7 @@ lang: ta
 
 **செயலி மேம்பாட்டிற்குப் பரிந்துரைக்கப்படும் இயல்புநிலைச் சோதனை வலையமைப்பு Sepolia ஆகும்**. Sepolia பிணையம் கிளையண்ட் மற்றும் சோதனைக் குழுக்களால் கட்டுப்படுத்தப்படும் அனுமதிக்குட்பட்ட சரிபார்ப்பான் தொகுப்பைப் பயன்படுத்துகிறது.
 
-##### வளங்கள்
+##### வளங்கள் {#} {#} {#} {#} {#}
 
 - [இணையதளம்](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ lang: ta
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### பாசெட்கள்
+##### பாசெட்கள் {#} {#} {#} {#}
 
 - [Alchemy Sepolia பாசெட்](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia பாசெட்](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)

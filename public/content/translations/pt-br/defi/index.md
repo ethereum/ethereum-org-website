@@ -1,11 +1,11 @@
 ---
-title: Finanças descentralizadas (DeFi)
-metaTitle: O que é DeFi? | Benefícios e uso das finanças descentralizadas
-description: Uma visão geral sobre DeFi no Ethereum
+title: "Finanças descentralizadas (DeFi)"
+metaTitle: "O que é DeFi? | Benefícios e uso das finanças descentralizadas"
+description: "Uma visão geral sobre DeFi no Ethereum"
 lang: pt-br
 template: use-cases
 image: /images/use-cases/defi.png
-alt: Um logotipo do Eth feito de peças de Lego.
+alt: "Um logotipo do Eth feito de peças de Lego."
 sidebarDepth: 2
 summaryPoints:
   - "Uma alternativa global e aberta ao sistema financeiro atual."

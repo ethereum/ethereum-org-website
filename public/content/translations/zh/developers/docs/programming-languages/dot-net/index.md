@@ -22,7 +22,7 @@ incomplete: true
 - [编写你的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编译和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## 初学者参考资料与链接
+## 初学者参考资料与链接 {#beginner-references-and-links}
 
 **Nethereum 库与 VS Code Solidity 简介**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [查询 ERC-20 智能合约余额](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [向账户转账以太币](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... 以及更多！
-## 进阶文章
+## 进阶文章 {#intermediate-articles}
 
 - [Nethereum 入门与第一个项目](https://docs.nethereum.com/docs/getting-started/first-project)
 - [部署你自己的开发测试链](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [Nethereum 实时流处理](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido 与 Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum 与 Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## 高级使用模式
+## 高级使用模式 {#advanced-use-patterns}
 
 - [Azure Key Vault 与 Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum 后端参考架构](https://github.com/Nethereum/ujo-backend)
-## .NET 项目、工具及其他有趣内容
+## .NET 项目、工具及其他有趣内容 {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _在浏览器中编译、创建和运行 Nethereum 代码片段_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _带有 Blazor 用户界面的 Nethereum 代码生成器_

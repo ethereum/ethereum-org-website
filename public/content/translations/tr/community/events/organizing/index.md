@@ -1,7 +1,7 @@
 ---
-title: Bir Ethereum etkinliği nasıl organize edilir
-metaTitle: Bir Ethereum Etkinliği Organize Etmek
-description: Bir Ethereum etkinliği nasıl organize edilir
+title: "Bir Ethereum etkinliği nasıl organize edilir"
+metaTitle: "Bir Ethereum Etkinliği Organize Etmek"
+description: "Bir Ethereum etkinliği nasıl organize edilir"
 lang: tr
 hideEditButton: true
 ---
@@ -204,7 +204,8 @@ Etkinlik sona erdikten sonra, gelecekteki etkinliklere daha iyi hazırlanabilmen
 
 İçgörülerini paylaşarak bu makaleye katkıda bulunan herkese çok teşekkür ederiz: ETHBratislava'dan Slavo Fabisik; ETH Kipu ve ETH Latam'dan Lola; ETH Belgrade'den Tanja Mladenovic, Ethereum Bogota'dan Juan David; ETHWarsaw'dan Monika Zając; NapulETH'ten Raffaele Orefice; ETH Riyadh'tan Xiao Wu(Ling); urbe.eth'ten Marco; ETH Dublin'den Caolán Walsh; ETHCluj'dan Alex Males; ve ETH Slovenia'dan Stanko Devic.
 
-## Kaynaklar
+## Kaynaklar {#resources}
+
 Podcast: A'dan Z'ye bir ETH etkinliği nasıl düzenlenir ve tanıtılır:
 
 - [Out of Ordinary'den ETHWarsaw vaka çalışması](https://www.youtube.com/watch?v=io2Dx1ouz8o)

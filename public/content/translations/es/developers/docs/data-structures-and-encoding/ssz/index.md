@@ -82,7 +82,8 @@ Por lo tanto, los valores reales para los tipos de longitud variable se almacena
 
 También hay algunos casos especiales que requieren un tratamiento específico, como el tipo `BitList` que requiere que se agregue un límite de longitud durante la serialización y se elimine durante la deserialización. Los detalles completos están disponibles en la [especificación de SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
-### Deserialización
+### Deserialización {#deserialization}
+
 Para deserializar este objeto se requiere el <b>esquema</b>. El esquema define la disposición precisa de los datos serializados para que cada elemento específico pueda deserializarse desde un blob de bytes a un objeto significativo donde los elementos tengan el tipo, valor, tamaño y posición correctos. Es el esquema el que indica al deserializador qué valores son valores reales y cuáles son desplazamientos. Todos los nombres de los campos desaparecen cuando se serializa un objeto, pero se vuelven a instanciar durante la deserialización de acuerdo con el esquema.
 ## Merkleización {#merkleization}
 
@@ -134,7 +135,8 @@ El hash de (8,9) debería ser igual al hash (4), que se somete a hashing con 5 p
 8*     9*   10    11   12    13    14    15
 ```
 
-## Más información
+## Más información {#further-reading}
+
 - [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [Upgrading Ethereum: Merkleización](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [Implementaciones de SSZ](https://github.com/ethereum/consensus-specs/issues/2138)

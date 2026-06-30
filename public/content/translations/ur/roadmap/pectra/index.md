@@ -117,7 +117,8 @@ _پیکٹرا اپ گریڈ میں کیا شامل ہو رہا ہے؟ - کرسٹ
 
 _ایتھیریم پیکٹرا اپ گریڈ: اسٹیکرز کو کیا جاننے کی ضرورت ہے — بلاک ڈیمن_
 
-## مزید مطالعہ
+## مزید مطالعہ {#further-reading}
+
 - [ایتھیریم روڈ میپ](/roadmap/)
 - [پیکٹرا کے اکثر پوچھے گئے سوالات (<span dir="ltr">FAQ</span>)](https://epf.wiki/#/wiki/pectra-faq)
 - [پیکٹرا اسٹیکر کے تجربے کو کیسے بہتر بناتا ہے](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

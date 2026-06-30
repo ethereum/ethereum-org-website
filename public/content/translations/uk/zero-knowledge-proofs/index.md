@@ -1,7 +1,7 @@
 ---
-title: Що таке доведення з нульовим розголошенням?
-metaTitle: Доведення з нульовим розголошенням
-description: Нетехнічний вступ до доведень з нульовим розголошенням для початківців.
+title: "Що таке доведення з нульовим розголошенням?"
+metaTitle: "Доведення з нульовим розголошенням"
+description: "Нетехнічний вступ до доведень з нульовим розголошенням для початківців."
 lang: uk
 ---
 
@@ -58,8 +58,10 @@ lang: uk
       <p>
         Дізнайтеся більше про NDI Бутану в <a href="/decentralized-identity/#national-and-government-id">тематичному дослідженні децентралізованої ідентифікації</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Доведення людяності (Proof of Humanity) {#proof-of-humanity}

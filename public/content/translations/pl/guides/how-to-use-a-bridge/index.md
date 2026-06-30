@@ -1,6 +1,6 @@
 ---
-title: Jak przenieść tokeny przez most do warstwy 2
-description: Przewodnik wyjaśniający, jak przenieść tokeny z Ethereum do warstwy 2 za pomocą mostu.
+title: "Jak przenieść tokeny przez most do warstwy 2"
+description: "Przewodnik wyjaśniający, jak przenieść tokeny z Ethereum do warstwy 2 za pomocą mostu."
 lang: pl
 ---
 

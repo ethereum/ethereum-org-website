@@ -36,7 +36,7 @@ Nie. Obecnie żaden komputer kwantowy nie jest w stanie złamać kryptografii Et
 
 </ExpandableCard>
 
-### Jakie działania są podejmowane?
+### Jakie działania są podejmowane? {#what-is-being-done}
 
 Ethereum jest obecnie najbardziej proaktywnym obrońcą przed zagrożeniami kwantowymi w ekosystemie blockchain. Fundacja Ethereum utworzyła dedykowany **zespół ds. bezpieczeństwa postkwantowego** w styczniu 2026 r., a aktywne prace obejmują wiele zespołów klienckich i grup badawczych. Prace zespołu postkwantowego EF można śledzić publicznie na stronie [pq.ethereum.org](https://pq.ethereum.org).
 

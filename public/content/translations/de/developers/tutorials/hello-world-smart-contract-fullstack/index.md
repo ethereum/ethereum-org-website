@@ -61,7 +61,8 @@ Um Ihren Smart Contract im Testnetz bereitzustellen, benötigen Sie etwas falsch
 _Hinweis: Aufgrund von Netzwerküberlastung kann dies eine Weile dauern._
 ``
 
-### Schritt 5: Ihr Guthaben überprüfen
+### Schritt 5: Ihr Guthaben überprüfen {#step-5-check-your-balance}
+
 Um sicherzugehen, dass sich die ETH in Ihrer Wallet befinden, stellen wir eine [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)-Anfrage über [Alchemys Sandbox-Tool](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Dies gibt die Menge an ETH in unserer Wallet zurück. Um mehr zu erfahren, sehen Sie sich [Alchemys kurzes Tutorial zur Verwendung des Composer-Tools](https://youtu.be/r6sjRxBZJuU) an.
 
 Geben Sie Ihre MetaMask-Konto-Adresse ein und klicken Sie auf **Send Request**. Sie werden eine Antwort sehen, die wie das folgende Code-Snippet aussieht.
@@ -73,7 +74,8 @@ Geben Sie Ihre MetaMask-Konto-Adresse ein und klicken Sie auf **Send Request**. 
 > _Hinweis: Dieses Ergebnis ist in Wei, nicht in ETH. Wei wird als die kleinste Stückelung von Ether verwendet._
 
 Puh! Unser falsches Geld ist komplett da.
-### Schritt 6: Unser Projekt initialisieren
+### Schritt 6: Unser Projekt initialisieren {#step-6-initialize-our-project}
+
 Zuerst müssen wir einen Ordner für unser Projekt erstellen. Navigieren Sie zu Ihrer Kommandozeile und geben Sie Folgendes ein.
 
 ```
@@ -896,7 +898,8 @@ Um aus Ihrem Smart Contract zu lesen, müssen Sie Folgendes erfolgreich einricht
 
 Das mag nach vielen Schritten klingen, aber keine Sorge! Wir werden Sie Schritt für Schritt durch jeden einzelnen führen! :\)
 
-#### Eine API-Verbindung zur Ethereum-Chain herstellen
+#### Eine API-Verbindung zur Ethereum-Chain herstellen {#establish-an-api-connection-to-the-ethereum-chain}
+
 Erinnern Sie sich, wie wir in Teil 2 dieses Tutorials unseren Alchemy Web3-Schlüssel verwendet haben, um aus unserem Smart Contract zu lesen? Sie benötigen auch einen Alchemy Web3-Schlüssel in Ihrer Dezentralen Anwendung (Dapp), um von der Chain zu lesen.
 
 Wenn Sie ihn noch nicht haben, installieren Sie zuerst [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), indem Sie in das Stammverzeichnis Ihrer `starter-files` navigieren und Folgendes in Ihrem Terminal ausführen:
@@ -1123,7 +1126,8 @@ Sie können [hier](https://metamask.io/download) kostenlos ein MetaMask-Konto he
 
 Um eine Transaktion auf der Ethereum-Blockchain zu signieren, benötigen wir etwas Fake-ETH. Um ETH zu erhalten, können Sie zum [FaucETH](https://fauceth.komputing.org) gehen und Ihre Goerli-Kontoadresse eingeben, auf „Request funds“ klicken, dann im Dropdown-Menü „Ethereum Testnet Goerli“ auswählen und schließlich erneut auf die Schaltfläche „Request funds“ klicken. Sie sollten kurz darauf ETH in Ihrem MetaMask-Konto sehen!
 
-#### Überprüfen Sie Ihr Guthaben
+#### Überprüfen Sie Ihr Guthaben {#check-your-balance}
+
 Um sicherzugehen, dass unser Guthaben vorhanden ist, stellen wir eine [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)-Anfrage über das [Sandbox-Tool von Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Dies gibt die Menge an ETH in unserer Wallet zurück. Nachdem Sie Ihre MetaMask-Konto-Adresse eingegeben und auf „Send Request“ geklickt haben, sollten Sie eine Antwort wie diese sehen:
 
 ```text

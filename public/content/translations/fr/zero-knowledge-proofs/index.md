@@ -1,7 +1,7 @@
 ---
-title: Que sont les preuves à divulgation nulle de connaissance ?
-metaTitle: Preuves à divulgation nulle de connaissance
-description: Une introduction non technique aux preuves à divulgation nulle de connaissance pour les débutants.
+title: "Que sont les preuves à divulgation nulle de connaissance ?"
+metaTitle: "Preuves à divulgation nulle de connaissance"
+description: "Une introduction non technique aux preuves à divulgation nulle de connaissance pour les débutants."
 lang: fr
 ---
 
@@ -58,8 +58,10 @@ Les preuves à divulgation nulle de connaissance sont particulièrement utiles d
       <p>
         Apprenez-en plus sur le NDI du Bhoutan dans l'<a href="/decentralized-identity/#national-and-government-id">étude de cas sur l'identité décentralisée</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Preuve d'humanité {#proof-of-humanity}

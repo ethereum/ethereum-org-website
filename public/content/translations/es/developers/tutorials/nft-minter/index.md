@@ -33,7 +33,7 @@ Antes de empezar a ver cualquier código, es importante entender cómo funciona 
 
 La mayor diferencia entre los dos estándares de contratos inteligentes de NFT es que ERC-1155 es un estándar multitoken e incluye funcionalidad por lotes, mientras que ERC-721 es un estándar de un solo token y, por lo tanto, solo admite la transferencia de un token a la vez.
 
-### Llamar a la función de acuñación
+### Llamar a la función de acuñación {#minting-function}
 
 Por lo general, esta función de acuñación requiere que pases dos variables como parámetros: primero el `recipient`, que especifica la dirección que recibirá tu NFT recién acuñado, y segundo el `tokenURI` del NFT, una cadena que se resuelve en un documento JSON que describe los metadatos del NFT.
 
@@ -194,15 +194,15 @@ Ahora que entendemos con qué estamos trabajando, ¡configuremos nuestra billete
 
 Para que los usuarios puedan interactuar con tu contrato inteligente, deberán conectar su billetera de Ethereum a tu dapp.
 
-### Descargar MetaMask
+### Descargar MetaMask {#download-metamask}
 
 Para este tutorial, usaremos MetaMask, una billetera virtual en el navegador que se usa para administrar la dirección de tu cuenta de Ethereum. Si deseas comprender más sobre cómo funcionan las transacciones en Ethereum, consulta [esta página](/developers/docs/transactions/).
 
 Puedes descargar y crear una cuenta de MetaMask de forma gratuita [aquí](https://metamask.io/download). Cuando estés creando una cuenta, o si ya tienes una, asegúrate de cambiar a una red de prueba compatible como Sepolia \(para que no estemos lidiando con dinero real\).
-### Agrega ether desde un faucet
+### Agrega ether desde un faucet {#add-ether-from-faucet}
 
 Para acuñar nuestros NFT (o firmar cualquier transacción en la cadena de bloques de Ethereum), necesitaremos algo de ETH falso. Para obtener ETH de la red de prueba, usa un faucet mantenido como el [faucet de Sepolia de Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia) e ingresa la dirección de tu cuenta de Sepolia. ¡Deberías ver ETH en tu cuenta de MetaMask poco después!
-### Comprueba tu saldo
+### Comprueba tu saldo {#check-your-balance}
 
 Para comprobar que nuestro saldo está ahí, hagamos una solicitud [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) usando [la herramienta sandbox de Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Esto devolverá la cantidad de ETH en nuestra billetera. Después de ingresar la dirección de tu cuenta de MetaMask y hacer clic en "Send Request" (Enviar solicitud), deberías ver una respuesta como esta:
 
@@ -579,7 +579,7 @@ Si examinaste nuestros archivos de cerca, habrás notado que en nuestro director
 
 También vamos a necesitar una clave API de Alchemy y la API Web3 de Alchemy para conectarnos a la cadena de bloques de Ethereum y cargar nuestro contrato inteligente.
 
-### Crea tu clave API de Alchemy
+### Crea tu clave API de Alchemy {#create-alchemy-api}
 
 Si aún no tienes una cuenta de Alchemy, [regístrate gratis aquí.](https://alchemy.com/?a=eth-org-nft-minter)
 
@@ -844,7 +844,7 @@ const onMintPressed = async () => {
 }
 ```
 
-## Despliega tu NFT en un sitio web en vivo
+## Despliega tu NFT en un sitio web en vivo {#deploy-your-nft}
 
 ¿Listo para publicar tu proyecto para que los usuarios interactúen con él? Consulta la [documentación de despliegue de React](https://create-react-app.dev/docs/deployment/) para desplegar tu Minter en un sitio web en vivo.
 

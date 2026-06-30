@@ -61,7 +61,8 @@ Bạn có thể tải xuống và tạo tài khoản MetaMask miễn phí [tại
 _Lưu ý: do tắc nghẽn mạng lưới, quá trình này có thể mất một lúc._
 ``
 
-### Bước 5: Kiểm tra số dư của bạn
+### Bước 5: Kiểm tra số dư của bạn {#step-5-check-your-balance}
+
 Để kiểm tra lại xem ETH đã có trong ví của bạn chưa, hãy tạo một yêu cầu [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) bằng cách sử dụng [công cụ sandbox của Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Yêu cầu này sẽ trả về số lượng ETH trong ví của chúng ta. Để tìm hiểu thêm, hãy xem [hướng dẫn ngắn của Alchemy về cách sử dụng công cụ composer](https://youtu.be/r6sjRxBZJuU).
 
 Nhập địa chỉ tài khoản MetaMask của bạn và nhấp vào **Send Request**. Bạn sẽ thấy một phản hồi trông giống như đoạn mã bên dưới.
@@ -73,7 +74,8 @@ Nhập địa chỉ tài khoản MetaMask của bạn và nhấp vào **Send Req
 > _Lưu ý: Kết quả này tính bằng wei, không phải ETH. Wei được sử dụng làm đơn vị nhỏ nhất của ether._
 
 Phù! Toàn bộ số tiền giả của chúng ta đã ở đó.
-### Bước 6: Khởi tạo dự án của chúng ta
+### Bước 6: Khởi tạo dự án của chúng ta {#step-6-initialize-our-project}
+
 Đầu tiên, chúng ta sẽ cần tạo một thư mục cho dự án của mình. Điều hướng đến dòng lệnh của bạn và nhập nội dung sau.
 
 ```
@@ -896,7 +898,7 @@ Bây giờ chúng ta đã hiểu những gì mình đang làm việc, hãy tìm 
 
 Điều này nghe có vẻ như rất nhiều bước, nhưng đừng lo lắng! Chúng tôi sẽ hướng dẫn bạn cách thực hiện từng bước một! :\)
 
-#### Thiết lập kết nối API với chuỗi Ethereum
+#### Thiết lập kết nối API với chuỗi Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
 
 Bạn có nhớ trong Phần 2 của hướng dẫn này, chúng ta đã sử dụng khóa Alchemy Web3 của mình để đọc từ hợp đồng thông minh không? Bạn cũng sẽ cần một khóa Alchemy Web3 trong ứng dụng phi tập trung (dapp) của mình để đọc từ chuỗi.
 
@@ -1124,7 +1126,7 @@ Bạn có thể tải xuống và tạo tài khoản MetaMask miễn phí [tại
 
 Để ký một giao dịch trên chuỗi khối Ethereum, chúng ta sẽ cần một số ETH giả. Để nhận ETH, bạn có thể truy cập [FaucETH](https://fauceth.komputing.org) và nhập địa chỉ tài khoản Goerli của bạn, nhấp vào “Request funds” (Yêu cầu tiền), sau đó chọn “Ethereum Testnet Goerli” trong menu thả xuống và cuối cùng nhấp lại vào nút “Request funds”. Bạn sẽ thấy ETH trong tài khoản MetaMask của mình ngay sau đó!
 
-#### Kiểm tra số dư của bạn
+#### Kiểm tra số dư của bạn {#check-your-balance}
 
 Để kiểm tra lại xem số dư của chúng ta đã có ở đó chưa, hãy tạo một yêu cầu [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) bằng cách sử dụng [công cụ sandbox của Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Thao tác này sẽ trả về số lượng ETH trong ví của chúng ta. Sau khi bạn nhập địa chỉ tài khoản MetaMask của mình và nhấp vào “Send Request”, bạn sẽ thấy một phản hồi giống như thế này:
 

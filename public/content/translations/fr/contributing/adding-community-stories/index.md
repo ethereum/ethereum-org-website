@@ -1,6 +1,6 @@
 ---
-title: Ajouter des histoires de la communauté
-description: Comment soumettre une histoire de la communauté sur votre expérience avec Ethereum à ethereum.org
+title: "Ajouter des histoires de la communauté"
+description: "Comment soumettre une histoire de la communauté sur votre expérience avec Ethereum à ethereum.org"
 lang: fr
 ---
 

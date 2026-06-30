@@ -1,6 +1,6 @@
 ---
-title: تمام ایتھیریم فورکس کی ٹائم لائن (⁦2014⁩ سے اب تک)
-description: ایتھیریم بلاک چین کی تاریخ جس میں اہم سنگ میل، ریلیزز اور فورکس شامل ہیں۔
+title: "تمام ایتھیریم فورکس کی ٹائم لائن (⁦2014⁩ سے اب تک)"
+description: "ایتھیریم بلاک چین کی تاریخ جس میں اہم سنگ میل، ریلیزز اور فورکس شامل ہیں۔"
 lang: ur
 sidebarDepth: 1
 authors: ["نکسو"]
@@ -86,12 +86,13 @@ authors: ["نکسو"]
 
 [فوساکا کے بارے میں مزید](/roadmap/fusaka/)
 
-### پراگ-الیکٹرا ("پیکٹرا")
+### پراگ-الیکٹرا ("پیکٹرا") {#pectra}
+
 <NetworkUpgradeSummary name="pectra" />
 
 پراگ-الیکٹرا ("پیکٹرا") اپ گریڈ میں ایتھیریم پروٹوکول میں کئی بہتریاں شامل ہیں جن کا مقصد تمام صارفین، لیئر ۲ (l2) نیٹ ورکس، اسٹیکرز اور نوڈ آپریٹرز کے لیے تجربے کو بہتر بنانا ہے۔
 
-کمپاؤنڈنگ توثیق کار اکاؤنٹس کے ساتھ اسٹیکنگ کو اپ گریڈ کیا گیا، اور عمل درآمد کے انخلا کے پتہ کا استعمال کرتے ہوئے اسٹیک کیے گئے فنڈز پر کنٹرول کو بہتر بنایا گیا۔ <span dir="ltr">EIP-7251</span> نے ایک توثیق کار کے لیے زیادہ سے زیادہ مؤثر بیلنس کو بڑھا کر <span dir="ltr">2048</span> کر دیا، جس سے اسٹیکرز کے لیے سرمائے کی کارکردگی میں بہتری آئی۔ <span dir="ltr">EIP-7002</span> نے ایک عمل درآمد اکاؤنٹ کو محفوظ طریقے سے توثیق کار کے افعال کو متحرک کرنے کے قابل بنایا، جس میں خروج، یا فنڈز کے کچھ حصوں کا انخلا شامل ہے، جس سے <span dir="ltr">ETH</span> اسٹیکرز کے تجربے میں بہتری آئی، جبکہ نوڈ آپریٹرز کے لیے جوابدہی کو مضبوط بنانے میں مدد ملی。
+کمپاؤنڈنگ توثیق کار اکاؤنٹس کے ساتھ اسٹیکنگ کو اپ گریڈ کیا گیا، اور عمل درآمد کے انخلا کے پتہ کا استعمال کرتے ہوئے اسٹیک کیے گئے فنڈز پر کنٹرول کو بہتر بنایا گیا۔ <span dir="ltr">EIP-7251</span> نے ایک توثیق کار کے لیے زیادہ سے زیادہ مؤثر بیلنس کو بڑھا کر <span dir="ltr">2048</span> کر دیا، جس سے اسٹیکرز کے لیے سرمائے کی کارکردگی میں بہتری آئی۔ <span dir="ltr">EIP-7002</span> نے ایک عمل درآمد اکاؤنٹ کو محفوظ طریقے سے توثیق کار کے افعال کو متحرک کرنے کے قابل بنایا، جس میں خروج، یا فنڈز کے کچھ حصوں کا انخلا شامل ہے، جس سے <span dir="ltr">ETH</span> اسٹیکرز کے تجربے میں بہتری آئی، جبکہ نوڈ آپریٹرز کے لیے جوابدہی کو مضبوط بنانے میں مدد ملی۔
 
 اپ گریڈ کے دیگر حصوں میں عام صارفین کے تجربے کو بہتر بنانے پر توجہ دی گئی۔ <span dir="ltr">EIP-7702</span> نے ایک عام نان-سمارٹ-کنٹریکٹ اکاؤنٹ ([EOA](/glossary/#eoa)) کے لیے سمارٹ کنٹریکٹ کی طرح کوڈ پر عمل درآمد کرنے کی صلاحیت فراہم کی۔ اس نے روایتی ایتھیریم اکاؤنٹس کے لیے لامحدود نئی فعالیت کو کھول دیا، جیسے ٹرانزیکشن بیچنگ، گیس کی اسپانسرشپ، متبادل تصدیق، قابل پروگرام اخراجات کے کنٹرول، اکاؤنٹ کی بحالی کا طریقہ کار اور بہت کچھ۔
 
@@ -238,8 +239,8 @@ authors: ["نکسو"]
 <ExpandableCard title="پیرس EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں۔">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>اتفاق رائے کو حصہ داری کا ثبوت (PoS) میں اپ گریڈ کریں</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>DIFFICULTY آپ کوڈ کو PREVRANDAO سے تبدیل کریں</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3675"><span dir="ltr">EIP-3675</span></a> – <em>اتفاق رائے کو حصہ داری کا ثبوت (PoS) میں اپ گریڈ کریں</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4399"><span dir="ltr">EIP-4399</span></a> – <em>DIFFICULTY آپ کوڈ کو PREVRANDAO سے تبدیل کریں</em></li>
 </ul>
 
 </ExpandableCard>
@@ -271,7 +272,7 @@ authors: ["نکسو"]
 <ExpandableCard title="گرے گلیشیئر EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں۔">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>دشواری کا بم کو <span dir="ltr">September 2022</span> تک موخر کرتا ہے</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-5133"><span dir="ltr">EIP-5133</span></a> – <em>دشواری کا بم کو <span dir="ltr">September 2022</span> تک موخر کرتا ہے</em></li>
 </ul>
 
 </ExpandableCard>
@@ -459,12 +460,12 @@ authors: ["نکسو"]
 <ExpandableCard title="استنبول EIPs" contentPreview="اس فورک میں شامل باضابطہ بہتریاں۔">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>ایتھیریم کو Zcash جیسی رازداری کو برقرار رکھنے والی کرنسی کے ساتھ کام کرنے کی اجازت دیتا ہے۔</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>[گیس](/glossary/#gas) کی لاگت کو بہتر بنانے کے لیے سستا علمِ تشفیر۔</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em><code>CHAINID</code> [آپ کوڈ](/developers/docs/ethereum-stack/#ethereum-virtual-machine) شامل کر کے ایتھیریم کو ری پلے (replay) حملوں سے بچاتا ہے۔</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>استعمال کی بنیاد پر آپ کوڈ گیس کی قیمتوں کو بہتر بناتا ہے۔</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>بلاک میں مزید ڈیٹا کی اجازت دینے کے لیے کال ڈیٹا کی لاگت کو کم کرتا ہے – جو [لیئر ۲ (l2) اسکیلنگ](/developers/docs/scaling/#layer-2-scaling) کے لیے اچھا ہے۔</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>آپ کوڈ گیس کی قیمت میں دیگر تبدیلیاں۔</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-152"><span dir="ltr">EIP-152</span></a> – <em>ایتھیریم کو Zcash جیسی رازداری کو برقرار رکھنے والی کرنسی کے ساتھ کام کرنے کی اجازت دیتا ہے۔</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108"><span dir="ltr">EIP-1108</span></a> – <em>[گیس](/glossary/#gas) کی لاگت کو بہتر بنانے کے لیے سستا علمِ تشفیر۔</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344"><span dir="ltr">EIP-1344</span></a> – <em><code>CHAINID</code> [آپ کوڈ](/developers/docs/ethereum-stack/#ethereum-virtual-machine) شامل کر کے ایتھیریم کو ری پلے (replay) حملوں سے بچاتا ہے۔</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1884"><span dir="ltr">EIP-1884</span></a> – <em>استعمال کی بنیاد پر آپ کوڈ گیس کی قیمتوں کو بہتر بناتا ہے۔</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028"><span dir="ltr">EIP-2028</span></a> – <em>بلاک میں مزید ڈیٹا کی اجازت دینے کے لیے کال ڈیٹا کی لاگت کو کم کرتا ہے – جو [لیئر ۲ (l2) اسکیلنگ](/developers/docs/scaling/#layer-2-scaling) کے لیے اچھا ہے۔</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2200"><span dir="ltr">EIP-2200</span></a> – <em>آپ کوڈ گیس کی قیمت میں دیگر تبدیلیاں۔</em></li>
 </ul>
 
 </ExpandableCard>
@@ -489,10 +490,10 @@ authors: ["نکسو"]
 <ExpandableCard title="کونسٹینٹینوپل EIPs" contentPreview="اس فورک میں شامل باضابطہ بہتریاں۔">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>کچھ مخصوص آن چین افعال کی لاگت کو بہتر بناتا ہے۔</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>آپ کو ایسے پتوں کے ساتھ تعامل کرنے کی اجازت دیتا ہے جو ابھی تک نہیں بنائے گئے ہیں۔</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>کسی دوسرے کنٹریکٹ کے کوڈ کا ہیش بازیافت کرنے کے لیے <code>EXTCODEHASH</code> ہدایت متعارف کراتا ہے۔</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>اس بات کو یقینی بناتا ہے کہ حصہ داری کا ثبوت (PoS) سے پہلے بلاک چین منجمد نہ ہو اور بلاک ریوارڈ کو 3 سے کم کر کے <span dir="ltr">2 ETH</span> کر دیتا ہے۔</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-145"><span dir="ltr">EIP-145</span></a> – <em>کچھ مخصوص آن چین افعال کی لاگت کو بہتر بناتا ہے۔</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1014"><span dir="ltr">EIP-1014</span></a> – <em>آپ کو ایسے پتوں کے ساتھ تعامل کرنے کی اجازت دیتا ہے جو ابھی تک نہیں بنائے گئے ہیں۔</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1052"><span dir="ltr">EIP-1052</span></a> – <em>کسی دوسرے کنٹریکٹ کے کوڈ کا ہیش بازیافت کرنے کے لیے <code>EXTCODEHASH</code> ہدایت متعارف کراتا ہے۔</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1234"><span dir="ltr">EIP-1234</span></a> – <em>اس بات کو یقینی بناتا ہے کہ حصہ داری کا ثبوت (PoS) سے پہلے بلاک چین منجمد نہ ہو اور بلاک ریوارڈ کو 3 سے کم کر کے <span dir="ltr">2 ETH</span> کر دیتا ہے۔</em></li>
 </ul>
 
 </ExpandableCard>

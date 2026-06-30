@@ -842,11 +842,6 @@ const onMintPressed = async () => {
 }
 ```
 
-## Wdrożenie NFT na działającej stronie internetowej
-
-Gotowy, aby udostępnić swój projekt, by użytkownicy mogli wchodzić z nim w interakcje? Zapoznaj się z [dokumentacją wdrożenia React](https://create-react-app.dev/docs/deployment/), aby dowiedzieć się, jak wdrożyć swój minter na działającej stronie internetowej.
-
-Jeszcze tylko jeden krok...
 ## Podbij świat blockchaina {#take-the-blockchain-world-by-storm}
 
 Żartuję, dotarłeś do końca samouczka!

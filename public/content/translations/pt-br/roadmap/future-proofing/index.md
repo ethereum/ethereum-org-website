@@ -36,7 +36,8 @@ Não. Nenhum computador quântico hoje pode quebrar a criptografia do Ethereum. 
 
 </ExpandableCard>
 
-### O que está sendo feito?
+### O que está sendo feito? {#what-is-being-done}
+
 O Ethereum é atualmente o defensor mais proativo contra ameaças quânticas no ecossistema da blockchain. A Fundação Ethereum formou uma **equipe de Segurança Pós-Quântica** dedicada em janeiro de 2026, e o trabalho ativo abrange várias equipes de clientes e grupos de pesquisa. O trabalho da equipe Pós-Quântica da EF é acompanhado publicamente em [pq.ethereum.org](https://pq.ethereum.org).
 
 O trabalho ativo inclui:

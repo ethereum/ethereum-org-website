@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: Aprenda sobre la actualización del protocolo Pectra
+description: "Aprenda sobre la actualización del protocolo Pectra"
 lang: es
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -117,7 +117,8 @@ _¿Qué incluye la actualización Pectra? - Christine Kim_
 
 _Actualización Pectra de Ethereum: Lo que los stakers necesitan saber — Blockdaemon_
 
-## Lecturas adicionales
+## Lecturas adicionales {#further-reading}
+
 - [Hoja de ruta de Ethereum](/roadmap/)
 - [Preguntas frecuentes sobre Pectra](https://epf.wiki/#/wiki/pectra-faq)
 - [Cómo Pectra mejora la experiencia de los stakers](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

@@ -1,6 +1,6 @@
 ---
-title: イーサリアム・ホワイトペーパー
-description: 2013年のローンチ前に公開された、イーサリアムの入門書となる論文です。
+title: "イーサリアム・ホワイトペーパー"
+description: "2013年のローンチ前に公開された、イーサリアムの入門書となる論文です。"
 lang: ja
 sidebarDepth: 2
 hideEditButton: true

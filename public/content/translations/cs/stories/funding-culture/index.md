@@ -9,7 +9,7 @@ tags:
   - "kreativní vlastnictví"
 published: "2025-05-30"
 image: /content/stories/funding-culture/pplpleasr-hero.png
-breadcrumb: Posouvání kultury
+breadcrumb: "Posouvání kultury"
 lang: cs
 ---
 

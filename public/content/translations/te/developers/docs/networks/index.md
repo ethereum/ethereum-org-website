@@ -40,7 +40,7 @@ lang: te
 
 **అప్లికేషన్ అభివృద్ధి కోసం Sepolia సిఫార్సు చేయబడిన డిఫాల్ట్ టెస్ట్‌నెట్**. Sepolia నెట్‌వర్క్ క్లయింట్ & టెస్టింగ్ బృందాలచే నియంత్రించబడే అనుమతిగల ధృవీకర్త సెట్‌ను ఉపయోగిస్తుంది.
 
-##### వనరులు
+##### వనరులు {#} {#} {#} {#} {#}
 
 - [వెబ్‌సైట్](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ lang: te
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### ఫాసెట్‌లు
+##### ఫాసెట్‌లు {#} {#} {#} {#}
 
 - [Alchemy Sepolia ఫాసెట్](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia ఫాసెట్](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)

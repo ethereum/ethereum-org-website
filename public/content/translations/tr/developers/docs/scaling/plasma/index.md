@@ -54,7 +54,7 @@ Plasma, kullanıcı girişlerini ve çıkışlarını işlemek için Ethereum ü
 
 Plasma zincirine girmek için Alice'in (kullanıcı) Plasma sözleşmesine ETH veya herhangi bir ERC-20 Token yatırması gerekecektir. Sözleşme yatırımlarını izleyen Plasma operatörü, Alice'in ilk yatırdığı tutara eşit bir miktar yeniden oluşturur ve bunu Plasma zincirindeki adresine serbest bırakır. Alice'in çocuk zincirde fonları aldığını onaylaması gerekir ve ardından bu fonları işlemler için kullanabilir.
 
-#### Plasma zincirinden çıkış
+#### Plasma zincirinden çıkış {#exiting-the-plasma-chain}
 
 Plasma zincirinden çıkmak, çeşitli nedenlerden dolayı girmekten daha karmaşıktır. En büyük neden, Ethereum'un Plasma zincirinin durumu hakkında bilgiye sahip olmasına rağmen, bu bilginin doğru olup olmadığını doğrulayamamasıdır. Kötü niyetli bir kullanıcı yanlış bir iddiada bulunabilir ("1000 ETH'm var") ve bu talebi desteklemek için sahte kanıtlar sunarak bundan sıyrılabilir.
 
@@ -164,7 +164,8 @@ Birden fazla proje, dapp'lerinize entegre edebileceğiniz Plasma uygulamaları s
 
 - [Polygon](https://polygon.technology/) (önceden Matic Network)
 
-## İleri okuma
+## İleri okuma {#further-reading}
+
 - ["Paylaşılan güvenlik" kavramının ne anlama geldiğine ve neden bu kadar önemli olduğuna dair kısa bir hatırlatma](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Yan Zincirler, Plasma ve Parçalama Karşılaştırması](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Plasma'yı Anlamak, Bölüm 1: Temeller](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)

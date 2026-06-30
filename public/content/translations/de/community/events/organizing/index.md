@@ -204,7 +204,8 @@ Der Schlüssel ist, die Dynamik aufrechtzuerhalten. Tauschen Sie sich weiterhin 
 
 Ein großes Dankeschön an alle, die zu diesem Artikel beigetragen haben, indem sie ihre Erkenntnisse geteilt haben: Slavo Fabisik von ETHBratislava; Lola von ETH Kipu und ETH Latam; Tanja Mladenovic von ETH Belgrade, Juan David von Ethereum Bogota; Monika Zając von ETHWarsaw; Raffaele Orefice von NapulETH; Xiao Wu(Ling) von ETH Riyadh; Marco von urbe.eth; Caolán Walsh von ETH Dublin; Alex Males von ETHCluj; und Stanko Devic von ETH Slovenia.
 
-## Ressourcen
+## Ressourcen {#resources}
+
 Podcast: Wie man ein ETH-Ereignis von A bis Z organisiert und bewirbt:
 
 - [Die ETHWarsaw-Fallstudie von Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)

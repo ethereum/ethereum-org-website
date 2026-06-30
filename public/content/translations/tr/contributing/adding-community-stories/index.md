@@ -1,6 +1,6 @@
 ---
 title: Topluluk hikayeleri ekleme
-description: Ethereum deneyiminizle ilgili bir topluluk hikalesini ethereum.org'a nasıl gönderebilirsiniz
+description: "Ethereum deneyiminizle ilgili bir topluluk hikalesini ethereum.org'a nasıl gönderebilirsiniz"
 lang: tr
 ---
 

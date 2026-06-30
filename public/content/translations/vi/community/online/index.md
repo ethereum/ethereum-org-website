@@ -1,6 +1,6 @@
 ---
-title: Cộng đồng trực tuyến
-description: Khám phá các diễn đàn trực tuyến, phòng trò chuyện và cộng đồng mạng xã hội nơi những người đam mê Ethereum tụ họp để thảo luận và hợp tác.
+title: "Cộng đồng trực tuyến"
+description: "Khám phá các diễn đàn trực tuyến, phòng trò chuyện và cộng đồng mạng xã hội nơi những người đam mê Ethereum tụ họp để thảo luận và hợp tác."
 lang: vi
 ---
 

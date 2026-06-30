@@ -1,7 +1,7 @@
 ---
-title: 펙트라
-metaTitle: 프라하-엘렉트라 (펙트라)
-description: 펙트라 프로토콜 업그레이드에 대해 알아보세요
+title: "펙트라"
+metaTitle: "프라하-엘렉트라 (펙트라)"
+description: "펙트라 프로토콜 업그레이드에 대해 알아보세요"
 lang: ko
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -117,7 +117,8 @@ _펙트라 업그레이드에는 무엇이 포함되나요? - 크리스틴 킴(C
 
 _이더리움 펙트라 업그레이드: 스테이커가 알아야 할 사항 — Blockdaemon_
 
-## 더 읽어보기
+## 더 읽어보기 {#further-reading}
+
 - [이더리움 로드맵](/roadmap/)
 - [펙트라 FAQ](https://epf.wiki/#/wiki/pectra-faq)
 - [펙트라가 스테이커 경험을 향상시키는 방법](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

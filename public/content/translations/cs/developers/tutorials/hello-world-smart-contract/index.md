@@ -59,7 +59,7 @@ Abychom si ověřili, že tam náš zůstatek je, vytvořme požadavek [eth_getB
 >
 > Uf! Naše falešné peníze tam všechny jsou <Emoji text=":money_mouth_face:" size={1} />.
 
-## Krok 6: Inicializace našeho projektu
+## Krok 6: Inicializace našeho projektu {#step-6}
 
 Nejprve budeme muset vytvořit složku pro náš projekt. Přejděte do příkazového řádku a zadejte:
 

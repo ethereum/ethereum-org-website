@@ -1,6 +1,6 @@
 ---
-title: Tüm Ethereum çatallanmalarının zaman çizelgesi (2014'ten günümüze)
-description: Önemli kilometre taşları, sürümler ve çatallanmalar dahil olmak üzere Ethereum blokzincirinin tarihi.
+title: "Tüm Ethereum çatallanmalarının zaman çizelgesi (2014'ten günümüze)"
+description: "Önemli kilometre taşları, sürümler ve çatallanmalar dahil olmak üzere Ethereum blokzincirinin tarihi."
 lang: tr
 sidebarDepth: 1
 authors: ["Nixo"]
@@ -86,7 +86,8 @@ Gelecekteki protokol güncellemelerini mi arıyorsunuz? [Ethereum yol haritasın
 
 [Fusaka hakkında daha fazla bilgi](/roadmap/fusaka/)
 
-### Prague-Electra ("Pectra")
+### Prague-Electra ("Pectra") {#pectra}
+
 <NetworkUpgradeSummary name="pectra" />
 
 Prague-Electra ("Pectra") güncellemesi, tüm kullanıcılar, katman 2 ağları, staker'lar ve düğüm operatörleri için deneyimi geliştirmeyi amaçlayan Ethereum protokolüne yönelik çeşitli iyileştirmeler içeriyordu.

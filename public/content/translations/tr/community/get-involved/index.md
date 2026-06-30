@@ -1,6 +1,6 @@
 ---
-title: Nasıl dahil olabilirim?
-description: Ethereum topluluğuna nasıl dahil olabilirsiniz.
+title: "Nasıl dahil olabilirim?"
+description: "Ethereum topluluğuna nasıl dahil olabilirsiniz."
 lang: tr
 ---
 

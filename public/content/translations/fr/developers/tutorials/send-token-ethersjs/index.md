@@ -17,7 +17,8 @@ published: 2021-04-06
 - Transférer un jeton
 - Définir le prix du gaz en fonction de l'état du trafic sur le réseau
 
-### Pour commencer
+### Pour commencer {#to-get-started}
+
 Pour commencer, nous devons d'abord importer la bibliothèque ethers.js dans notre JavaScript
 Inclure ethers.js v5
 

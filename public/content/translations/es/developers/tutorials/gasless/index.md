@@ -354,7 +354,7 @@ Un usuario envía un saludo. Tal vez se actualice en el siguiente bloque. Tal ve
 - El nuevo saludo se ha enviado y está en proceso
 - El nuevo saludo ha sido rechazado
 
-## Conclusión
+## Conclusión {#conclusion}
 
 Llegados a este punto, debería ser capaz de crear una experiencia sin gas para los usuarios de su aplicación descentralizada (dapp), a costa de cierta centralización.
 

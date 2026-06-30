@@ -40,7 +40,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## الخطوة 3: الحصول على ABI للعقد الخاص بك
+## الخطوة 3: الحصول على ABI للعقد الخاص بك {#contract-abi}
 
 إن ABI (واجهة التطبيق الثنائية) للعقد الخاص بنا هي الواجهة للتفاعل مع عقدنا الذكي. يمكنك معرفة المزيد حول [ABI للعقود](/glossary/#abi). يقوم Hardhat تلقائيًا بإنشاء ABI لنا ويحفظه في ملف `MyNFT.json`. من أجل استخدام هذا، سنحتاج إلى تحليل المحتويات عن طريق إضافة أسطر التعليمات البرمجية التالية إلى ملف `mint-nft.js` الخاص بنا:
 
@@ -135,7 +135,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## الخطوة 7: إنشاء معاملتك
+## الخطوة 7: إنشاء معاملتك {#create-txn}
 
 أولاً، دعنا نحدد دالة باسم `mintNFT(tokenData)` وننشئ معاملتنا عن طريق القيام بما يلي:
 

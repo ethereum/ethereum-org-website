@@ -61,7 +61,7 @@ Para desplegar tu contrato inteligente en la red de prueba, necesitarás algo de
 _Nota: debido a la congestión de la red, esto podría tardar un poco._
 ``
 
-### Paso 5: Comprobar tu saldo
+### Paso 5: Comprobar tu saldo {#step-5-check-your-balance}
 
 Para comprobar que el ETH está en tu billetera, hagamos una solicitud [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) utilizando la [herramienta sandbox de Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Esto devolverá la cantidad de ETH en nuestra billetera. Para obtener más información, echa un vistazo al [breve tutorial de Alchemy sobre cómo usar la herramienta composer](https://youtu.be/r6sjRxBZJuU).
 
@@ -74,7 +74,8 @@ Ingresa la dirección de tu cuenta de MetaMask y haz clic en **Send Request**. V
 > _Nota: Este resultado está en wei, no en ETH. Wei se utiliza como la denominación más pequeña de ether._
 
 ¡Uf! Todo nuestro dinero falso está ahí.
-### Paso 6: Inicializar nuestro proyecto
+### Paso 6: Inicializar nuestro proyecto {#step-6-initialize-our-project}
+
 Primero, necesitaremos crear una carpeta para nuestro proyecto. Navega a tu línea de comandos e ingresa lo siguiente.
 
 ```
@@ -897,7 +898,7 @@ Para leer de su contrato inteligente, deberá configurar correctamente:
 
 Esto puede sonar como muchos pasos, ¡pero no se preocupe! ¡Le guiaremos sobre cómo hacer cada uno de ellos paso a paso! :\)
 
-#### Establecer una conexión API a la cadena de Ethereum
+#### Establecer una conexión API a la cadena de Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
 
 ¿Recuerdas cómo en la Parte 2 de este tutorial usamos nuestra clave de Alchemy Web3 para leer de nuestro contrato inteligente? También necesitarás una clave de Alchemy Web3 en tu aplicación descentralizada (dapp) para leer de la cadena.
 
@@ -1125,7 +1126,7 @@ Puede descargar y crear una cuenta de MetaMask de forma gratuita [aquí](https:/
 
 Para firmar una transacción en la cadena de bloques de Ethereum, necesitaremos algo de ETH falso. Para obtener ETH, puede ir al [FaucETH](https://fauceth.komputing.org) e ingresar la dirección de su cuenta de Goerli, hacer clic en "Request funds" (Solicitar fondos), luego seleccionar "Ethereum Testnet Goerli" en el menú desplegable y finalmente hacer clic en el botón "Request funds" nuevamente. ¡Debería ver ETH en su cuenta de MetaMask poco después!
 
-#### Comprueba tu saldo
+#### Comprueba tu saldo {#check-your-balance}
 
 Para comprobar que nuestro saldo está ahí, hagamos una solicitud [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) utilizando la [herramienta sandbox de Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Esto devolverá la cantidad de ETH en nuestra billetera. Después de ingresar la dirección de tu cuenta de MetaMask y hacer clic en "Send Request" (Enviar solicitud), deberías ver una respuesta como esta:
 

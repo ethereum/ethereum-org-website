@@ -1,7 +1,7 @@
 ---
-title: Jak zorganizować wydarzenie Ethereum
+title: "Jak zorganizować wydarzenie Ethereum"
 metaTitle: Organizacja wydarzenia Ethereum
-description: Jak zorganizować wydarzenie Ethereum
+description: "Jak zorganizować wydarzenie Ethereum"
 lang: pl
 hideEditButton: true
 ---
@@ -204,7 +204,8 @@ Kluczem jest utrzymanie rozpędu. Kontynuuj angażowanie się w swoją społeczn
 
 Ogromne podziękowania dla wszystkich, którzy przyczynili się do powstania tego artykułu, dzieląc się swoimi spostrzeżeniami: Slavo Fabisik z ETHBratislava; Lola z ETH Kipu i ETH Latam; Tanja Mladenovic z ETH Belgrade, Juan David z Ethereum Bogota; Monika Zając z ETHWarsaw; Raffaele Orefice z NapulETH; Xiao Wu(Ling) z ETH Riyadh; Marco z urbe.eth; Caolán Walsh z ETH Dublin; Alex Males z ETHCluj; oraz Stanko Devic z ETH Slovenia.
 
-## Zasoby
+## Zasoby {#resources}
+
 Podcast: Jak zorganizować i promować wydarzenie ETH od A do Z:
 
 - [Studium przypadku ETHWarsaw autorstwa Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)

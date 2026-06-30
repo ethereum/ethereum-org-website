@@ -253,7 +253,8 @@ Učíte se raději vizuálně? Podívejte se, jak Finematics vysvětluje optimis
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Další čtení o optimistických rollupech
+## Další čtení o optimistických rollupech {#further-reading-on-optimistic-rollups}
+
 - [Jak fungují optimistické rollupy (Kompletní průvodce)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Základní průvodce pro Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Praktický průvodce rollupy na Ethereu](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

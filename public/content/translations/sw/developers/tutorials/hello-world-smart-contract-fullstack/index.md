@@ -61,7 +61,8 @@ Ili kusambaza mkataba mahiri wako kwenye mtandao wa majaribio, utahitaji ETH ban
 _Kumbuka: kutokana na msongamano wa mtandao, hii inaweza kuchukua muda._
 ``
 
-### Hatua ya 5: Angalia Salio lako
+### Hatua ya 5: Angalia Salio lako {#step-5-check-your-balance}
+
 Ili kuhakikisha mara mbili kuwa ETH ipo kwenye mkoba wako, hebu tufanye ombi la [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) kwa kutumia [zana ya sandbox ya Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Ili kujifunza zaidi angalia [mafunzo mafupi ya Alchemy kuhusu jinsi ya kutumia zana ya composer](https://youtu.be/r6sjRxBZJuU).
 
 Weka anwani yako ya akaunti ya MetaMask na ubofye **Send Request**. Utaona jibu linalofanana na kijisehemu cha msimbo hapa chini.
@@ -73,7 +74,7 @@ Weka anwani yako ya akaunti ya MetaMask na ubofye **Send Request**. Utaona jibu 
 > _Kumbuka: Matokeo haya yapo katika wei, si ETH. Wei inatumika kama kiasi kidogo zaidi cha Etha._
 
 Phew! Pesa zetu bandia zote zipo hapo.
-### Hatua ya 6: Anzisha mradi wetu
+### Hatua ya 6: Anzisha mradi wetu {#step-6-initialize-our-project}
 
 Kwanza, tutahitaji kuunda folda kwa ajili ya mradi wetu. Nenda kwenye mstari wako wa amri na uweke yafuatayo.
 
@@ -897,7 +898,7 @@ Ili kusoma kutoka kwenye mkataba mahiri wako, utahitaji kuweka kwa ufanisi:
 
 Hii inaweza kuonekana kama hatua nyingi, lakini usijali! Tutakutembeza jinsi ya kufanya kila moja wapo hatua kwa hatua! :\)
 
-#### Anzisha muunganisho wa API kwenye mnyororo wa Ethereum
+#### Anzisha muunganisho wa API kwenye mnyororo wa Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
 
 Kwa hivyo unakumbuka jinsi katika Sehemu ya 2 ya mafunzo haya, tulitumia ufunguo wetu wa Alchemy Web3 kusoma kutoka kwenye mkataba mahiri wetu? Utahitaji pia ufunguo wa Alchemy Web3 kwenye programu tumizi iliyogatuliwa (dapp) yako ili kusoma kutoka kwenye mnyororo.
 
@@ -1125,7 +1126,8 @@ Unaweza kupakua na kuunda akaunti ya MetaMask bila malipo [hapa](https://metamas
 
 Ili kutia saini muamala kwenye mnyororo wa vitalu wa Ethereum, tutahitaji ETH bandia. Ili kupata ETH unaweza kwenda kwenye [FaucETH](https://fauceth.komputing.org) na uweke anwani yako ya akaunti ya Goerli, bofya "Request funds", kisha uchague "Ethereum Testnet Goerli" kwenye menyu kunjuzi na hatimaye ubofye kitufe cha "Request funds" tena. Unapaswa kuona ETH kwenye akaunti yako ya MetaMask muda mfupi baadaye!
 
-#### Angalia Salio lako
+#### Angalia Salio lako {#check-your-balance}
+
 Ili kuhakikisha kuwa salio letu lipo, hebu tufanye ombi la [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) kwa kutumia [zana ya sandbox ya Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Baada ya kuweka anwani yako ya akaunti ya MetaMask na kubofya "Send Request", unapaswa kuona jibu kama hili:
 
 ```text

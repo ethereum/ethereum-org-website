@@ -133,7 +133,8 @@ _تُستخدم عادةً للتطوير اللامركزي وحوكمة الب
 - [قائمة منظمات <span dir="ltr">DAO</span> من <span dir="ltr">Tally.xyz</span>](https://www.tally.xyz/explore)
 - [قائمة منظمات <span dir="ltr">DAO</span> من <span dir="ltr">DeGov.AI</span>](https://apps.degov.ai/)
 
-### بدء <span dir="ltr">DAO</span>
+### بدء <span dir="ltr">DAO</span> {#start-a-dao}
+
 - [استدعاء <span dir="ltr">DAO</span> باستخدام <span dir="ltr">DAOHaus</span>](https://app.daohaus.club/summon)
 - [بدء <span dir="ltr">Governor DAO</span> باستخدام <span dir="ltr">Tally</span>](https://www.tally.xyz/get-started)
 - [إنشاء <span dir="ltr">DAO</span> مدعومة من <span dir="ltr">Aragon</span>](https://aragon.org/product)

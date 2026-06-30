@@ -1,6 +1,6 @@
 ---
-title: Linha do tempo de todos os forks do Ethereum (2014 até o presente)
-description: Um histórico da blockchain Ethereum, incluindo os principais marcos, lançamentos e forks.
+title: "Linha do tempo de todos os forks do Ethereum (2014 até o presente)"
+description: "Um histórico da blockchain Ethereum, incluindo os principais marcos, lançamentos e forks."
 lang: pt-br
 sidebarDepth: 1
 authors: ["Nixo"]
@@ -86,7 +86,8 @@ Procurando por futuras atualizações do protocolo? [Saiba mais sobre as próxim
 
 [Mais sobre a Fusaka](/roadmap/fusaka/)
 
-### Prague-Electra ("Pectra")
+### Prague-Electra ("Pectra") {#pectra}
+
 <NetworkUpgradeSummary name="pectra" />
 
 A atualização Prague-Electra ("Pectra") incluiu várias melhorias no protocolo Ethereum com o objetivo de aprimorar a experiência para todos os usuários, redes da camada 2 (l2), stakers e operadores de nó.

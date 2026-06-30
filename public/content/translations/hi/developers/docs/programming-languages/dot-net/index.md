@@ -22,7 +22,7 @@ incomplete: true
 - [अपना पहला स्मार्ट अनुबंध लिखें](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [जानें कि Solidity को कैसे संकलित और तैनात करें](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## शुरुआती संदर्भ और लिंक
+## शुरुआती संदर्भ और लिंक {#beginner-references-and-links}
 
 **Nethereum लाइब्रेरी और VS Code Solidity का परिचय**
 
@@ -42,7 +42,7 @@ incomplete: true
   - [ERC-20 स्मार्ट अनुबंध बैलेंस क्वेरी करें](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [किसी खाते में ईथर ट्रांसफर करें](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... और भी बहुत कुछ!
-## मध्यवर्ती लेख
+## मध्यवर्ती लेख {#intermediate-articles}
 
 - [Nethereum शुरुआत करना और पहला प्रोजेक्ट](https://docs.nethereum.com/docs/getting-started/first-project)
 - [अपनी खुद की डेवलपमेंट टेस्टचेन तैनात करें](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ incomplete: true
 - [Nethereum रियल-टाइम स्ट्रीमिंग](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido और Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum और Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## उन्नत उपयोग पैटर्न
+## उन्नत उपयोग पैटर्न {#advanced-use-patterns}
 
 - [Azure Key Vault और Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum बैकएंड संदर्भ आर्किटेक्चर](https://github.com/Nethereum/ujo-backend)
-## .NET प्रोजेक्ट्स, टूल और अन्य मज़ेदार चीज़ें
+## .NET प्रोजेक्ट्स, टूल और अन्य मज़ेदार चीज़ें {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _ब्राउज़र में Nethereum कोड स्निपेट संकलित करें, बनाएं और चलाएं_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor में UI के साथ Nethereum कोडजेन_

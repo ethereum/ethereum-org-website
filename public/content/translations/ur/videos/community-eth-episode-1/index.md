@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "community-stories"
 format: interview
-author: آپٹمسٹ
+author: "آپٹمسٹ"
 breadcrumb: "⁦Community.eth⁩ قسط 1"
 ---
 

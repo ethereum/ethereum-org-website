@@ -133,7 +133,8 @@ _Généralement utilisé pour le développement décentralisé et la gouvernance
 - [Liste de DAO de Tally.xyz](https://www.tally.xyz/explore)
 - [Liste de DAO de DeGov.AI](https://apps.degov.ai/)
 
-### Créer une DAO
+### Créer une DAO {#start-a-dao}
+
 - [Créer une DAO avec DAOHaus](https://app.daohaus.club/summon)
 - [Créer une DAO Governor avec Tally](https://www.tally.xyz/get-started)
 - [Créer une DAO propulsée par Aragon](https://aragon.org/product)

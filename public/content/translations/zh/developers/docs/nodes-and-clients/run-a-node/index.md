@@ -72,15 +72,18 @@ sidebarDepth: 2
 还要确保你的互联网连接不受[带宽上限](https://wikipedia.org/wiki/Data_cap)的限制。建议使用不计量的连接，因为初始同步和广播到网络的数据可能会超出你的限制。
 
 ##### 操作系统
+
 所有客户端都支持主流操作系统——Linux、macOS、Windows。这意味着你可以在最适合你的操作系统 (OS) 的常规桌面或服务器机器上运行节点。确保你的操作系统是最新的，以避免潜在的问题和安全漏洞。
 
 ##### 最低要求
+
 - 2 核以上的 CPU
 - 8 GB 内存
 - 2TB SSD
 - 10+ MBit/s 带宽
 
 ##### 推荐规格
+
 - 4 核以上的快速 CPU
 - 16 GB 以上内存
 - 2+TB 的快速 SSD
@@ -149,6 +152,7 @@ sidebarDepth: 2
 以下是客户端的发布页面，你可以在其中找到它们预构建的二进制文件或安装说明：
 
 ##### 执行客户端
+
 - [贝苏](https://github.com/hyperledger/besu/releases)
 - [埃里贡](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads)
@@ -158,6 +162,7 @@ sidebarDepth: 2
 值得注意的是，客户端多样性是[执行层上的一个问题](/developers/docs/nodes-and-clients/client-diversity/#execution-layer)。建议读者考虑运行少数派执行客户端。
 
 ##### 共识客户端
+
 - [莱特豪斯](https://github.com/sigp/lighthouse/releases/latest)
 - [洛德斯塔](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/)（不提供预构建的二进制文件，仅提供 Docker 镜像或从源代码构建）
 - [尼姆巴斯](https://github.com/status-im/nimbus-eth2/releases/latest)
@@ -169,6 +174,7 @@ sidebarDepth: 2
 [查看最新的网络客户端使用情况](https://clientdiversity.org/)并了解有关[客户端多样性](/developers/docs/nodes-and-clients/client-diversity)的更多信息。
 
 ##### 验证软件
+
 从互联网下载软件时，建议验证其完整性。此步骤是可选的，但特别是对于像以太坊客户端这样的关键基础设施，了解潜在的攻击媒介并避免它们非常重要。如果你下载了预构建的二进制文件，你需要信任它，并承担攻击者可能将可执行文件替换为恶意文件的风险。
 
 开发人员使用他们的 PGP 密钥对发布的二进制文件进行签名，因此你可以通过密码学验证你运行的正是他们创建的软件。你只需要获取开发人员使用的公钥，这些公钥可以在客户端发布页面或文档中找到。下载客户端版本及其签名后，你可以使用 PGP 实现（例如 [GnuPG](https://gnupg.org/download/index.html)）轻松验证它们。查看关于在 [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) 或 [Windows/macOS](https://freedom.press/training/verifying-open-source-software/) 上使用 `gpg` 验证开源软件的教程。
@@ -233,6 +239,7 @@ openssl rand -hex 32 > jwtsecret
 > 请注意，示例中的反斜杠 `\` 仅用于格式化目的；配置标志可以在单行中定义。
 
 ##### 运行贝苏
+
 此示例在主网上启动贝苏，将区块链数据以默认格式存储在 `/data/ethereum`，启用 JSON-RPC 和引擎 RPC 以连接共识客户端。引擎 API 使用代币 `jwtsecret` 进行身份验证，并且仅允许来自 `localhost` 的调用。
 
 ```sh
@@ -254,6 +261,7 @@ besu --Xlauncher
 [贝苏的文档](https://besu.hyperledger.org/public-networks/get-started/start-node/)包含其他选项和配置详细信息。
 
 ##### 运行埃里贡
+
 此示例在主网上启动埃里贡，将区块链数据存储在 `/data/ethereum`，启用 JSON-RPC，定义允许哪些命名空间，并启用用于连接共识客户端的身份验证（由 `jwtsecret` 路径定义）。
 
 ```sh
@@ -266,6 +274,7 @@ erigon --chain mainnet \
 埃里贡默认使用 8GB HDD 执行完全同步，这将产生超过 2TB 的归档数据。确保 `datadir` 指向具有足够可用空间的磁盘，或者查看可以修剪不同类型数据的 `--prune` 标志。查看埃里贡的 `--help` 以了解更多信息。
 
 ##### 运行 Geth
+
 此示例在主网上启动 Geth，将区块链数据存储在 `/data/ethereum`，启用 JSON-RPC 并定义允许哪些命名空间。它还启用了用于连接共识客户端的身份验证，这需要 `jwtsecret` 的路径以及定义允许哪些连接的选项，在我们的示例中仅允许来自 `localhost` 的连接。
 
 ```sh
@@ -280,6 +289,7 @@ geth --mainnet \
 查看[所有配置选项的文档](https://geth.ethereum.org/docs/fundamentals/command-line-options)，并了解有关[与共识客户端一起运行 Geth](https://geth.ethereum.org/docs/getting-started/consensus-clients) 的更多信息。
 
 ##### 运行奈瑟曼德
+
 奈瑟曼德提供各种[安装选项](https://docs.nethermind.io/get-started/installing-nethermind)。该软件包带有各种二进制文件，包括一个带有引导式设置的启动器，它将帮助你交互式地创建配置。或者，你可以找到 Runner，它是可执行文件本身，你可以直接使用配置标志运行它。默认情况下启用 JSON-RPC。
 
 ```sh
@@ -293,6 +303,7 @@ Nethermind.Runner --config mainnet \
 执行客户端将启动其核心功能、选定的端点，并开始寻找对等节点。成功发现对等节点后，客户端开始同步。执行客户端将等待来自共识客户端的连接。一旦客户端成功同步到当前状态，当前的区块链数据将可用。
 
 ##### 运行瑞斯
+
 此示例在主网上启动瑞斯，使用默认数据位置。启用 JSON-RPC 和引擎 RPC 身份验证以连接共识客户端（由 `jwtsecret` 路径定义），并且仅允许来自 `localhost` 的调用。
 
 ```sh
@@ -317,6 +328,7 @@ reth node \
 #### 运行共识客户端 {#running-a-consensus-client}
 
 ##### 运行莱特豪斯
+
 在运行莱特豪斯之前，请在[莱特豪斯手册](https://lighthouse-book.sigmaprime.io/installation.html)中了解有关如何安装和配置它的更多信息。
 
 ```sh
@@ -329,6 +341,7 @@ lighthouse beacon_node \
 ```
 
 ##### 运行洛德斯塔
+
 通过编译或下载 Docker 镜像来安装洛德斯塔软件。在[文档](https://chainsafe.github.io/lodestar/)和更全面的[设置指南](https://hackmd.io/@philknows/rk5cDvKmK)中了解更多信息。
 
 ```sh
@@ -341,6 +354,7 @@ lodestar beacon \
 ```
 
 ##### 运行尼姆巴斯
+
 尼姆巴斯同时带有共识和执行客户端。它可以在各种设备上运行，即使计算能力非常有限。
 在[安装依赖项和尼姆巴斯本身](https://nimbus.guide/quick-start.html)之后，你可以运行其共识客户端：
 
@@ -353,6 +367,7 @@ nimbus_beacon_node \
 ```
 
 ##### 运行普莱斯姆
+
 普莱斯姆带有允许轻松自动安装的脚本。详细信息可以在[普莱斯姆文档](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/)中找到。
 
 ```sh
@@ -364,6 +379,7 @@ nimbus_beacon_node \
 ```
 
 ##### 运行泰库
+
 ```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \

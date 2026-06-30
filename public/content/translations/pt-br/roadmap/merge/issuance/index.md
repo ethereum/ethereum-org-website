@@ -1,6 +1,6 @@
 ---
 title: Como o The Merge impactou a oferta de ETH
-description: Análise detalhada de como o The Merge impactou a oferta de ETH
+description: "Análise detalhada de como o The Merge impactou a oferta de ETH"
 lang: pt-br
 ---
 
@@ -38,18 +38,18 @@ Os validadores na Beacon Chain são recompensados com ETH por atestar o estado d
 
 ### Detalhamento da emissão pré-merge {#pre-merge-issuance-breakdown}
 
-Oferta total de ETH: **~120.520.000 ETH** (no momento do The Merge em setembro de 2022)
+Oferta total de ETH: **\~120.520.000 ETH** (no momento do The Merge em setembro de 2022)
 
 **Emissão na camada de execução:**
 
-- Foi estimada em 2,08 ETH a cada 13,3 segundos\*: **~4.930.000** ETH emitidos em um ano
+- Foi estimada em 2,08 ETH a cada 13,3 segundos\*: **\~4.930.000** ETH emitidos em um ano
 - Resultou em uma taxa de inflação de **aproximadamente 4,09%** (4,93M por ano / 120,5M no total)
 - \*Isso inclui os 2 ETH por bloco canônico, mais uma média de 0,08 ETH ao longo do tempo de blocos ommer. Também usa 13,3 segundos, a meta de tempo de bloco base sem qualquer influência de uma [bomba de dificuldade](/glossary/#difficulty-bomb). ([Ver fonte](https://bitinfocharts.com/ethereum/))
 
 **Emissão na camada de consenso:**
 
 - Usando 14.000.000 de ETH em stake no total, a taxa de emissão de ETH é de aproximadamente 1.700 ETH/dia ([Ver fonte](https://ultrasound.money/))
-- Resulta em **~620.500** ETH emitidos em um ano
+- Resulta em **\~620.500** ETH emitidos em um ano
 - Resultou em uma taxa de inflação de **aproximadamente 0,52%** (620,5K por ano / 119,3M no total)
 
 <Alert variant="update">
@@ -57,9 +57,9 @@ Oferta total de ETH: **~120.520.000 ETH** (no momento do The Merge em setembro d
 <AlertDescription>
 **Taxa de emissão anualizada total (pré-merge): ~4,61%** (4,09% + 0,52%)
 
-**~88,7%** da emissão ia para os mineradores na camada de execução (4,09 / 4,61 * 100)
+**\~88,7%** da emissão ia para os mineradores na camada de execução (4,09 / 4,61 * 100)
 
-**~11,3%** estava sendo emitida para os stakers na camada de consenso (0,52 / 4,61 * 100)
+**\~11,3%** estava sendo emitida para os stakers na camada de consenso (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -84,16 +84,16 @@ Aproximadamente 0,33% da contagem total de validadores pode fazer a saída em um
 
 ### Detalhamento da inflação pós-merge {#post-merge-inflation-breakdown}
 
-- [Oferta total de ETH](/eth/supply/): **~120.520.000 ETH** (no momento do The Merge em setembro de 2022)
+- [Oferta total de ETH](/eth/supply/): **\~120.520.000 ETH** (no momento do The Merge em setembro de 2022)
 - Emissão na camada de execução: **0**
-- Emissão na camada de consenso: Igual ao acima, taxa de emissão anualizada de **~0,52%** (com 14 milhões de ETH em stake no total)
+- Emissão na camada de consenso: Igual ao acima, taxa de emissão anualizada de **\~0,52%** (com 14 milhões de ETH em stake no total)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Taxa de emissão anualizada total: **~0,52%**
+Taxa de emissão anualizada total: **\~0,52%**
 
-Redução líquida na emissão anual de ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
+Redução líquida na emissão anual de ETH: **\~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

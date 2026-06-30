@@ -1,7 +1,7 @@
 ---
-title: Tôi đã bị lừa đảo hoặc mất tiền
-metaTitle: Trợ giúp & báo cáo lừa đảo
-description: Phải làm gì nếu bạn bị lừa đảo, cách bảo vệ tài sản còn lại của bạn và nơi báo cáo gian lận.
+title: "Tôi đã bị lừa đảo hoặc mất tiền"
+metaTitle: "Trợ giúp & báo cáo lừa đảo"
+description: "Phải làm gì nếu bạn bị lừa đảo, cách bảo vệ tài sản còn lại của bạn và nơi báo cáo gian lận."
 lang: vi
 ---
 

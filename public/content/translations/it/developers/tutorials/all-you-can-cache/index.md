@@ -760,7 +760,7 @@ Poiché utilizziamo la funzione di basso livello `<address>.call()`, non possiam
 
 Questo è il modo in cui verifichiamo che il codice [emetta un evento correttamente](https://getfoundry.sh/reference/cheatcodes/expect-emit/) in Foundry.
 
-### Il client
+### Il client {#the-client}
 
 Una cosa che non ottieni con i test in Solidity è il codice JavaScript che puoi tagliare e incollare nella tua applicazione. La versione originale di questo tutorial distribuiva WORM su Optimism Goerli, che da allora è stata dismessa. Per eseguire il client oggi, ridistribuisci WORM su una rete OP Stack supportata come [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), quindi usa l'indirizzo del contratto risultante nel client JavaScript.
 

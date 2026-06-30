@@ -9,7 +9,7 @@ tags:
   - "抗審查性"
 published: "2026-02-05"
 image: /content/stories/digital-feudalism/tarrence-cover-image.jpeg
-breadcrumb: 擁有你的世界
+breadcrumb: "擁有你的世界"
 lang: zh-tw
 ---
 

@@ -251,7 +251,8 @@ ii. آپٹمسٹک رول اپس استعمال کرنے والے ڈیولپرز
 
 کیا آپ بصری طور پر سیکھنا زیادہ پسند کرتے ہیں؟ Finematics کو آپٹمسٹک رول اپس کی وضاحت کرتے ہوئے دیکھیں:
 
-## آپٹمسٹک رول اپس پر مزید مطالعہ
+## آپٹمسٹک رول اپس پر مزید مطالعہ {#further-reading-on-optimistic-rollups}
+
 - [آپٹمسٹک رول اپس کیسے کام کرتے ہیں (مکمل گائیڈ)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [آربٹرم کے لیے ضروری گائیڈ](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [ایتھیریم رول اپس کے لیے عملی گائیڈ](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

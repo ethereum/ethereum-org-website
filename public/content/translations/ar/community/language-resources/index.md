@@ -48,7 +48,7 @@ lang: ar
 - [Ethereum.cn](https://www.ethereum.cn/) - محتوى يديره المجتمع، يغطي ترقية طبقة الإجماع، وجميع ملاحظات اجتماعات المطورين الأساسيين، وطبقة 2 (L2)، إلخ.
 - [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - تعلم كل شيء من الأساسيات إلى مواضيع إيثيريوم المتقدمة
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - محتوى يديره المجتمع، يغطي إيثيريوم، والتمويل اللامركزي (DeFi)، والرموز غير القابلة للاستبدال (NFT)، والمعرفة المتعلقة بـ <span dir="ltr">Web3</span>
-- [123ETH](https://123eth.org/) - بوابة إلى منظومة إيثيريوم
+- [<span dir="ltr">123ETH</span>](https://123eth.org/) - بوابة إلى منظومة إيثيريوم
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - دورات مجانية عبر الإنترنت حول العملات المشفرة وتطبيقاتها
 
 **منظومة إيثيريوم**

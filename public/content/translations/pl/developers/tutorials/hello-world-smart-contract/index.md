@@ -59,7 +59,7 @@ Aby upewnić się, że nasze saldo tam jest, wyślijmy żądanie [eth_getBalance
 >
 > Uff! Nasze fałszywe pieniądze są na miejscu <Emoji text=":money_mouth_face:" size={1} />.
 
-## Krok 6: Zainicjuj nasz projekt
+## Krok 6: Zainicjuj nasz projekt {#step-6}
 
 Najpierw będziemy musieli utworzyć folder dla naszego projektu. Przejdź do wiersza poleceń i wpisz:
 

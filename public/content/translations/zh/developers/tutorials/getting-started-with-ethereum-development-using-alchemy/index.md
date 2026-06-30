@@ -1,7 +1,7 @@
 ---
-title: 以太坊开发入门
-description: 这是一份以太坊开发入门指南。我们将带你从启动 API 端点、发起命令行请求，一直到编写你的第一个 Web3 脚本！无需任何区块链开发经验！
-author: 伊兰·哈尔彭
+title: "以太坊开发入门"
+description: "这是一份以太坊开发入门指南。我们将带你从启动 API 端点、发起命令行请求，一直到编写你的第一个 Web3 脚本！无需任何区块链开发经验！"
+author: "伊兰·哈尔彭"
 tags:
   - javascript
   - ethers.js
@@ -9,7 +9,7 @@ tags:
   - 查询
   - alchemy
 skill: beginner
-breadcrumb: 入门
+breadcrumb: "入门"
 lang: zh
 published: 2020-10-30
 source: Medium
@@ -74,9 +74,9 @@ _**注意：**请将 `https://eth-mainnet.alchemyapi.io/v2/demo` 替换为你自
 
 ## 4. 设置你的 Web3 客户端 {#set-up-your-web3-client}
 
-**如果你已有客户端，**请将你当前的节点提供者 URL 更改为带有你 API 密钥的 Alchemy URL：`“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+<strong>如果你已有客户端，</strong>请将你当前的节点提供者 URL 更改为带有你 API 密钥的 Alchemy URL：`“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**_注意：_**以下脚本需要在 **Node 环境**中运行或**保存在文件中**，而不是从命令行运行。如果你尚未安装 Node 或 npm，请遵循 [Node.js 安装说明](https://nodejs.org/en/download/)。
+<strong>_注意：_</strong>以下脚本需要在 <strong>Node 环境</strong>中运行或**保存在文件中**，而不是从命令行运行。如果你尚未安装 Node 或 npm，请遵循 [Node.js 安装说明](https://nodejs.org/en/download/)。
 
 有许多 [Web3 库](/developers/docs/apis/javascript/)可以与 Alchemy 集成，但是，我们建议使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)，它是 Web3.js 的直接替代品，经过构建和配置，可与 Alchemy 无缝协作。这提供了多种优势，例如自动重试和强大的 WebSocket 支持。
 

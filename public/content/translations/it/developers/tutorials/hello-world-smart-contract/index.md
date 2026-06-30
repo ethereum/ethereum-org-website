@@ -59,7 +59,7 @@ Per verificare che il nostro saldo sia presente, facciamo una richiesta [eth_get
 >
 > Fiuu! I nostri soldi finti ci sono tutti <Emoji text=":money_mouth_face:" size={1} />.
 
-## Passaggio 6: Inizializzare il nostro progetto
+## Passaggio 6: Inizializzare il nostro progetto {#step-6}
 
 Per prima cosa, dovremo creare una cartella per il nostro progetto. Vai alla riga di comando e digita:
 

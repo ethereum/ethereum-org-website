@@ -9,7 +9,7 @@ tags:
   - "odporność na cenzurę"
 published: "2026-02-05"
 image: /content/stories/digital-feudalism/tarrence-cover-image.jpeg
-breadcrumb: Posiadaj swój świat
+breadcrumb: "Posiadaj swój świat"
 lang: pl
 ---
 

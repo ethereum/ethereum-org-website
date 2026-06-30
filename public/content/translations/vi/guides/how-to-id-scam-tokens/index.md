@@ -1,6 +1,6 @@
 ---
-title: Cách nhận biết token lừa đảo
-description: Tìm hiểu về token lừa đảo, cách chúng ngụy trang thành hợp pháp và cách phòng tránh.
+title: "Cách nhận biết token lừa đảo"
+description: "Tìm hiểu về token lừa đảo, cách chúng ngụy trang thành hợp pháp và cách phòng tránh."
 lang: vi
 ---
 

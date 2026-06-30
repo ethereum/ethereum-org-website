@@ -1,6 +1,6 @@
 ---
-title: Dodawanie historii społeczności
-description: Jak przesłać historię społeczności o swoich doświadczeniach z Ethereum na stronę ethereum.org
+title: "Dodawanie historii społeczności"
+description: "Jak przesłać historię społeczności o swoich doświadczeniach z Ethereum na stronę ethereum.org"
 lang: pl
 ---
 

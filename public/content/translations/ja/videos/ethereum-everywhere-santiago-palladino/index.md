@@ -11,7 +11,7 @@ topic:
   - "use-cases"
   - "events"
 format: presentation
-author: イーサリアム財団
+author: "イーサリアム財団"
 breadcrumb: "イーサリアム、どこにでも"
 ---
 

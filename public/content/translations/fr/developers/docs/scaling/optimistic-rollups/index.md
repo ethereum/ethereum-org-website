@@ -251,7 +251,8 @@ Vous préférez un support visuel ? Regardez Finematics expliquer les rollups op
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Lectures complémentaires sur les rollups optimistes
+## Lectures complémentaires sur les rollups optimistes {#further-reading-on-optimistic-rollups}
+
 - [Comment fonctionnent les rollups optimistes (Le guide complet)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Le guide essentiel d'Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Le guide pratique des rollups Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

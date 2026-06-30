@@ -253,7 +253,8 @@ ii. ஆப்டிமிஸ்டிக் ரோல்அப்களைப்
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## ஆப்டிமிஸ்டிக் ரோல்அப்கள் பற்றிய கூடுதல் வாசிப்பு
+## ஆப்டிமிஸ்டிக் ரோல்அப்கள் பற்றிய கூடுதல் வாசிப்பு {#further-reading-on-optimistic-rollups}
+
 - [ஆப்டிமிஸ்டிக் ரோல்அப்கள் எவ்வாறு செயல்படுகின்றன (முழுமையான வழிகாட்டி)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [ஆர்பிட்ரம் பற்றிய அத்தியாவசிய வழிகாட்டி](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [எத்திரியம் ரோலப்களுக்கான நடைமுறை வழிகாட்டி](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

@@ -36,7 +36,7 @@ No. Nessun computer quantistico oggi può violare la crittografia di Ethereum. I
 
 </ExpandableCard>
 
-### Cosa si sta facendo?
+### Cosa si sta facendo? {#what-is-being-done}
 
 Ethereum è attualmente il difensore più proattivo contro le minacce quantistiche nell'ecosistema blockchain. La Ethereum Foundation ha formato un **team per la sicurezza post-quantistica** dedicato nel gennaio 2026 e il lavoro attivo si estende a più team di client e gruppi di ricerca. Il lavoro del team post-quantistico della EF è tracciato pubblicamente su [pq.ethereum.org](https://pq.ethereum.org).
 

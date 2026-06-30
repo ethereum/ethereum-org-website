@@ -760,7 +760,7 @@ contract WORM is Cache {
 
 یہ وہ طریقہ ہے جس سے ہم تصدیق کرتے ہیں کہ کوڈ Foundry میں [ایونٹ کو درست طریقے سے خارج (emit) کرتا ہے](https://getfoundry.sh/reference/cheatcodes/expect-emit/)۔
 
-### کلائنٹ
+### کلائنٹ {#the-client}
 
 ایک چیز جو آپ کو Solidity ٹیسٹس کے ساتھ نہیں ملتی وہ JavaScript کوڈ ہے جسے آپ کاٹ کر اپنی ایپلی کیشن میں پیسٹ کر سکتے ہیں۔ اس ٹیوٹوریل کا اصل ورژن WORM کو آپٹیمزم گورلی (Optimism Goerli) پر تعینات کرتا تھا، جسے اب ریٹائر کر دیا گیا ہے۔ آج کلائنٹ کو چلانے کے لیے، WORM کو کسی تعاون یافتہ OP Stack نیٹ ورک جیسے کہ [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) پر دوبارہ تعینات کریں، پھر نتیجے میں آنے والے کنٹریکٹ کے پتے کو JavaScript کلائنٹ میں استعمال کریں۔
 

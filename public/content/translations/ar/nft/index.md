@@ -101,7 +101,8 @@ summaryPoints:
   المزيد حول الأمان
 </ButtonLink>
 
-## قراءات إضافية
+## قراءات إضافية {#further-reading}
+
 - [دليل المبتدئين إلى الرموز غير القابلة للاستبدال (<span dir="ltr">NFTs</span>)](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _ليندا شي، يناير 2020_
 - [متتبع <span dir="ltr">NFT</span> على <span dir="ltr">Etherscan</span>](https://etherscan.io/nft-top-contracts)
 - [متتبع <span dir="ltr">NFT</span> على <span dir="ltr">Blockscout</span>](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)

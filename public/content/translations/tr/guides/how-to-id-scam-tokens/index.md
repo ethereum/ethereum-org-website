@@ -1,6 +1,6 @@
 ---
-title: Dolandırıcı token'lar nasıl tespit edilir
-description: Dolandırıcı token'ları, kendilerini nasıl meşru gösterdiklerini ve onlardan nasıl kaçınılacağını anlamak.
+title: "Dolandırıcı token'lar nasıl tespit edilir"
+description: "Dolandırıcı token'ları, kendilerini nasıl meşru gösterdiklerini ve onlardan nasıl kaçınılacağını anlamak."
 lang: tr
 ---
 

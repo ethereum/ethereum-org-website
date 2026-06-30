@@ -1,6 +1,6 @@
 ---
-title: Soukromí na Ethereu
-description: Nástroje a techniky pro ochranu vašeho soukromí na Ethereu
+title: "Soukromí na Ethereu"
+description: "Nástroje a techniky pro ochranu vašeho soukromí na Ethereu"
 lang: cs
 ---
 

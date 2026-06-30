@@ -22,7 +22,7 @@ Bạn cần một tài liệu hướng dẫn cơ bản hơn trước? Hãy xem [
 - [Viết hợp đồng thông minh đầu tiên của bạn](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Tìm hiểu cách biên dịch và triển khai Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Tài liệu tham khảo và liên kết cho người mới bắt đầu
+## Tài liệu tham khảo và liên kết cho người mới bắt đầu {#beginner-references-and-links}
 
 **Giới thiệu thư viện Nethereum và VS Code Solidity**
 
@@ -42,7 +42,7 @@ Bạn cần một tài liệu hướng dẫn cơ bản hơn trước? Hãy xem [
   - [Truy vấn số dư hợp đồng thông minh ERC-20](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [Chuyển ether đến một tài khoản](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... Và nhiều hơn nữa!
-## Các bài viết trung cấp
+## Các bài viết trung cấp {#intermediate-articles}
 
 - [Nethereum Bắt đầu & Dự án đầu tiên](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Triển khai các chuỗi thử nghiệm phát triển của riêng bạn](https://github.com/Nethereum/Testchains)
@@ -54,12 +54,12 @@ Bạn cần một tài liệu hướng dẫn cơ bản hơn trước? Hãy xem [
 - [Phát trực tuyến theo thời gian thực Nethereum](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido và Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum và Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-## Các mẫu sử dụng nâng cao
+## Các mẫu sử dụng nâng cao {#advanced-use-patterns}
 
 - [Azure Key Vault và Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Kiến trúc tham chiếu backend Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
-## Các dự án, công cụ .NET và những thứ thú vị khác
+## Các dự án, công cụ .NET và những thứ thú vị khác {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _Biên dịch, tạo và chạy các đoạn mã Nethereum trong trình duyệt_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Tạo mã Nethereum với giao diện người dùng trong Blazor_

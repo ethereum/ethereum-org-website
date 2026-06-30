@@ -9,7 +9,7 @@ tags:
   - "communauté"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: Bâtir depuis l'Argentine
+breadcrumb: "Bâtir depuis l'Argentine"
 lang: fr
 ---
 > *Cette histoire a été initialement publiée sous forme de [fil de discussion invité sur le profil X @Ethereum](https://x.com/ethereum/status/1985408315074232397?s=20) le 3 novembre 2025. Elle a été légèrement modifiée pour en faciliter la lecture.*

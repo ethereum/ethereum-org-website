@@ -54,7 +54,7 @@ Plasma hutumia mkataba mkuu unaoendeshwa kwenye Ethereum kuchakata uingiaji na k
 
 Ili kuingia kwenye mnyororo wa Plasma, Alice (mtumiaji) atalazimika kuweka ETH au tokeni yoyote ya ERC-20 katika mkataba wa Plasma. Mwendeshaji wa Plasma, ambaye hutazama amana za mkataba, huunda upya kiasi sawa na amana ya awali ya Alice na kukiachilia kwenye anwani yake kwenye mnyororo wa Plasma. Alice anahitajika kuthibitisha kupokea fedha kwenye mnyororo mtoto na kisha anaweza kutumia fedha hizi kwa miamala.
 
-#### Kujitoa kwenye mnyororo wa Plasma
+#### Kujitoa kwenye mnyororo wa Plasma {#exiting-the-plasma-chain}
 
 Kujitoa kwenye mnyororo wa Plasma ni kugumu zaidi kuliko kuingia kwa sababu kadhaa. Kubwa zaidi ni kwamba, ingawa Ethereum ina taarifa kuhusu hali ya mnyororo wa Plasma, haiwezi kuthibitisha ikiwa taarifa hiyo ni ya kweli au la. Mtumiaji mwenye nia mbaya anaweza kutoa madai yasiyo sahihi ("Nina ETH 1000") na kufanikiwa kwa kutoa uthibitisho feki ili kuunga mkono dai hilo.
 
@@ -164,7 +164,7 @@ Miradi mingi hutoa utekelezaji wa Plasma ambao unaweza kuunganisha kwenye progra
 
 - [Polygon](https://polygon.technology/) (zamani Matic Network)
 
-## Usomaji zaidi
+## Usomaji zaidi {#further-reading}
 
 - [Kikumbusho cha haraka cha maana ya "usalama wa pamoja" na kwa nini ni muhimu sana](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Minyororo ya kando dhidi ya Plasma dhidi ya Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)

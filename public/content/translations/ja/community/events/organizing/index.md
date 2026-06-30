@@ -1,7 +1,7 @@
 ---
-title: イーサリアムイベントの開催方法
-metaTitle: イーサリアムイベントの開催
-description: イーサリアムイベントの開催方法
+title: "イーサリアムイベントの開催方法"
+metaTitle: "イーサリアムイベントの開催"
+description: "イーサリアムイベントの開催方法"
 lang: ja
 hideEditButton: true
 ---
@@ -43,8 +43,8 @@ hideEditButton: true
 
 - **イベントのフォーマットを多様化する：** 1つのタイプの集まりに固執しないでください。ミートアップ、短期ハッカソン、パネルディスカッション、ネットワーキングイベントを組み合わせます。コワークデーや教育コースの開催を試みることもできます。
 - **トピックを多様化する：** イーサリアムは単なる技術ではありません。法務、マーケティング、ビジネスに関わる価値観の集合体でもあります。
-- **コミュニティに**フィードバックやアイデアを求める。
-- **さまざまなオーディエンス**セグメントと関わる。初めてイーサリアムを探索する初心者から、経験豊富な開発者や起業家まで、さまざまな経験レベルに合わせてコンテンツやイベントを調整します。
+- <strong>コミュニティに</strong>フィードバックやアイデアを求める。
+- <strong>さまざまなオーディエンス</strong>セグメントと関わる。初めてイーサリアムを探索する初心者から、経験豊富な開発者や起業家まで、さまざまな経験レベルに合わせてコンテンツやイベントを調整します。
 
 学習、コラボレーション、成長のための多様な機会を提供することで、コミュニティが活発であり続け、カンファレンスの開催のようなより大きな取り組みの準備が整うことを保証します。
 
@@ -204,7 +204,8 @@ LinkedInはプロモーションの最も明白な選択肢には聞こえない
 
 洞察を共有してこの記事に貢献してくれたすべての人に感謝します：ETHBratislavaのSlavo Fabisik、ETH KipuおよびETH LatamのLola、ETH BelgradeのTanja Mladenovic、Ethereum BogotaのJuan David、ETHWarsawのMonika Zając、NapulETHのRaffaele Orefice、ETH RiyadhのXiao Wu(Ling)、urbe.ethのMarco、ETH DublinのCaolán Walsh、ETHClujのAlex Males、そしてETH SloveniaのStanko Devic。
 
-## リソース
+## リソース {#resources}
+
 ポッドキャスト：ETHイベントの開催とプロモーションのAからZまで：
 
 - [ETHWarsawのケーススタディ（Out of Ordinaryによる）](https://www.youtube.com/watch?v=io2Dx1ouz8o)

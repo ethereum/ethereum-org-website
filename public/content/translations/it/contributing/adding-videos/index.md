@@ -123,27 +123,6 @@ Usa le intestazioni `###` con i timestamp per contrassegnare le sezioni principa
 
 Se non hai una trascrizione, puoi lasciare il corpo vuoto e il team ne genererà una.
 
-#### Passaggio 4: Scegliere i tag degli argomenti
-
-Scegli i tag degli argomenti dall'elenco sottostante. Ogni tag corrisponde direttamente a una categoria di filtro nella galleria video: usa il nome del tag esattamente come mostrato.
-
-Un video può avere più tag per apparire in più filtri della galleria:
-
-| Tag | Filtro della galleria |
-|---|---|
-| `how-ethereum-works` | Come funziona Ethereum |
-| `network-upgrades` | Aggiornamenti della rete |
-| `roadmap-and-priorities` | Roadmap e priorità |
-| `scaling-and-layer-2` | Scalabilità e layer 2 |
-| `use-cases` | Casi d'uso |
-| `privacy` | Privacy |
-| `security` | Sicurezza |
-| `community-stories` | Storie della community |
-| `events` | Eventi |
-
-Ogni video dovrebbe avere almeno un tag da questo elenco. I video senza un tag riconosciuto appariranno solo nella vista "Tutti" e nei risultati di ricerca.
-
-Il tag `community-stories` fa sì che un video appaia anche nella [pagina Storie](/stories/).
 #### Passaggio 5: Inviare la PR {#step-5}
 
 Apri una pull request con le tue modifiche al branch `dev`. Il team esaminerà la tua richiesta e fornirà un feedback.

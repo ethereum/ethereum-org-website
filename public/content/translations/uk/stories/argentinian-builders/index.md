@@ -9,7 +9,7 @@ tags:
   - "спільнота"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: Розробка з Аргентини
+breadcrumb: "Розробка з Аргентини"
 lang: uk
 ---
 > *Ця історія була спочатку опублікована як [гостьовий тред у профілі @Ethereum в X](https://x.com/ethereum/status/1985408315074232397?s=20) 3 листопада 2025 року. Її було трохи відредаговано для зручності читання.*

@@ -133,7 +133,8 @@ _பொதுவாக நெறிமுறைகள் மற்றும் [
 - [Tally.xyz-இன் DAO-களின் பட்டியல்](https://www.tally.xyz/explore)
 - [DeGov.AI-இன் DAO-களின் பட்டியல்](https://apps.degov.ai/)
 
-### ஒரு DAO-வைத் தொடங்கவும்
+### ஒரு DAO-வைத் தொடங்கவும் {#start-a-dao}
+
 - [DAOHaus மூலம் ஒரு DAO-வை உருவாக்கவும்](https://app.daohaus.club/summon)
 - [Tally மூலம் ஒரு Governor DAO-வைத் தொடங்கவும்](https://www.tally.xyz/get-started)
 - [Aragon-ஆல் இயக்கப்படும் DAO-வை உருவாக்கவும்](https://aragon.org/product)

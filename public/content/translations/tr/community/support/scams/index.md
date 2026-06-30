@@ -1,7 +1,7 @@
 ---
-title: Dolandırıldım veya fonlarımı kaybettim
-metaTitle: Dolandırıcılık yardımı ve bildirme
-description: Dolandırıldıysanız ne yapmalısınız, kalan varlıklarınızı nasıl güvence altına alırsınız ve dolandırıcılığı nereye bildirebilirsiniz.
+title: "Dolandırıldım veya fonlarımı kaybettim"
+metaTitle: "Dolandırıcılık yardımı ve bildirme"
+description: "Dolandırıldıysanız ne yapmalısınız, kalan varlıklarınızı nasıl güvence altına alırsınız ve dolandırıcılığı nereye bildirebilirsiniz."
 lang: tr
 ---
 

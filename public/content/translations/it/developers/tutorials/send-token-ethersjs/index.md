@@ -17,7 +17,7 @@ published: 2021-04-06
 - Trasferire token
 - Impostare il prezzo del gas in base alla situazione del traffico di rete
 
-### Per iniziare
+### Per iniziare {#to-get-started}
 
 Per iniziare, dobbiamo prima importare la libreria ethers.js nel nostro JavaScript
 Includere ethers.js v5

@@ -133,7 +133,8 @@ _Biasanya digunakan untuk pengembangan terdesentralisasi dan tata kelola protoko
 - [Daftar DAO Tally.xyz](https://www.tally.xyz/explore)
 - [Daftar DAO DeGov.AI](https://apps.degov.ai/)
 
-### Memulai DAO
+### Memulai DAO {#start-a-dao}
+
 - [Panggil DAO dengan DAOHaus](https://app.daohaus.club/summon)
 - [Mulai Governor DAO dengan Tally](https://www.tally.xyz/get-started)
 - [Buat DAO yang didukung Aragon](https://aragon.org/product)

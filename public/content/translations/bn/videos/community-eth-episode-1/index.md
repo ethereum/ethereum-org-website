@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "community-stories"
 format: interview
-author: অপটিমিস্ট
+author: "অপটিমিস্ট"
 breadcrumb: "Community.eth এপিসোড 1"
 ---
 

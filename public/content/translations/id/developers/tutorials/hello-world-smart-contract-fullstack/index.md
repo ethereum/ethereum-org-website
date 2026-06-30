@@ -61,7 +61,8 @@ Untuk menyebarkan kontrak pintar Anda ke jaringan pengujian (testnet), Anda akan
 _Catatan: karena kepadatan jaringan, ini mungkin memakan waktu beberapa saat._
 ``
 
-### Langkah 5: Periksa Saldo Anda
+### Langkah 5: Periksa Saldo Anda {#step-5-check-your-balance}
+
 Untuk memeriksa kembali apakah ETH ada di dompet Anda, mari kita buat permintaan [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) menggunakan [alat sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Ini akan mengembalikan jumlah ETH di dompet kita. Untuk mempelajari lebih lanjut, lihat [tutorial singkat Alchemy tentang cara menggunakan alat komposer](https://youtu.be/r6sjRxBZJuU).
 
 Masukkan alamat akun MetaMask Anda dan klik **Send Request**. Anda akan melihat respons yang terlihat seperti cuplikan kode di bawah ini.
@@ -73,7 +74,7 @@ Masukkan alamat akun MetaMask Anda dan klik **Send Request**. Anda akan melihat 
 > _Catatan: Hasil ini dalam wei, bukan ETH. Wei digunakan sebagai denominasi terkecil dari ether._
 
 Fiuh! Uang palsu kita semuanya ada di sana.
-### Langkah 6: Inisialisasi proyek kita
+### Langkah 6: Inisialisasi proyek kita {#step-6-initialize-our-project}
 
 Pertama, kita perlu membuat folder untuk proyek kita. Navigasikan ke baris perintah Anda dan masukkan yang berikut ini.
 
@@ -897,7 +898,8 @@ Untuk membaca dari kontrak pintar Anda, Anda harus berhasil menyiapkan:
 
 Ini mungkin terdengar seperti banyak langkah, tetapi jangan khawatir! Kami akan memandu Anda tentang cara melakukan masing-masing langkah tersebut selangkah demi selangkah! :\)
 
-#### Membangun koneksi API ke rantai Ethereum
+#### Membangun koneksi API ke rantai Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
+
 Jadi, ingatkah Anda bagaimana di Bagian 2 dari tutorial ini, kita menggunakan kunci Alchemy Web3 kita untuk membaca dari kontrak pintar kita? Anda juga akan memerlukan kunci Alchemy Web3 di dapp Anda untuk membaca dari rantai.
 
 Jika Anda belum memilikinya, pertama-tama instal [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) dengan menavigasi ke direktori akar `starter-files` Anda dan menjalankan perintah berikut di terminal Anda:
@@ -1124,7 +1126,8 @@ Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://m
 
 Untuk menandatangani transaksi di rantai blok Ethereum, kita akan membutuhkan beberapa ETH palsu. Untuk mendapatkan ETH, Anda dapat pergi ke [FaucETH](https://fauceth.komputing.org) dan memasukkan alamat akun Goerli Anda, klik "Request funds", lalu pilih "Ethereum Testnet Goerli" di menu tarik-turun dan terakhir klik tombol "Request funds" lagi. Anda akan melihat ETH di akun MetaMask Anda segera setelahnya!
 
-#### Periksa Saldo Anda
+#### Periksa Saldo Anda {#check-your-balance}
+
 Untuk memeriksa ulang apakah saldo kita ada, mari buat permintaan [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) menggunakan [alat sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Ini akan mengembalikan jumlah ETH di dompet kita. Setelah Anda memasukkan alamat akun MetaMask Anda dan mengeklik “Send Request”, Anda akan melihat respons seperti ini:
 
 ```text

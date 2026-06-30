@@ -33,7 +33,7 @@ Web2のバックグラウンドを持つ開発者にとって最大の課題の1
 
 2つのNFTスマート・コントラクト標準の最大の違いは、ERC-1155がマルチトークン標準でありバッチ機能を含んでいるのに対し、ERC-721はシングルトークン標準であるため、一度に1つのトークンの転送しかサポートしていないことです。
 
-### ミンティング関数を呼び出す
+### ミンティング関数を呼び出す {#minting-function}
 
 通常、このミンティング関数では、パラメータとして2つの変数を渡す必要があります。1つ目は、新しくミントされたNFTを受け取るアドレスを指定する`recipient`、2つ目は、NFTのメタデータを記述するJSONドキュメントに解決される文字列であるNFTの`tokenURI`です。
 
@@ -194,15 +194,15 @@ return (
 
 ユーザーがスマート・コントラクトとやり取りできるようにするには、イーサリアムウォレットをdappに接続する必要があります。
 
-### メタマスクをダウンロードする
+### メタマスクをダウンロードする {#download-metamask}
 
 このチュートリアルでは、イーサリアムのアカウントアドレスを管理するために使用されるブラウザ内の仮想ウォレットであるメタマスクを使用します。イーサリアム上のトランザクションがどのように機能するかについて詳しく知りたい場合は、[こちらのページ](/developers/docs/transactions/)を確認してください。
 
 [こちら](https://metamask.io/download)から無料でメタマスクをダウンロードし、アカウントを作成できます。アカウントを作成する際、またはすでにアカウントを持っている場合は、（実際の資金を扱わないように）Sepoliaなどのサポートされているテストネットワークに必ず切り替えてください。
-### フォーセットからイーサを追加する
+### フォーセットからイーサを追加する {#add-ether-from-faucet}
 
 NFTをミントする（またはイーサリアムブロックチェーン上でトランザクションに署名する）には、テスト用のETHが必要になります。テストネットのETHを取得するには、[Alchemy Sepoliaフォーセット](https://www.alchemy.com/faucets/ethereum-sepolia)などのメンテナンスされているフォーセットを使用し、Sepoliaアカウントのアドレスを入力します。すぐにメタマスクアカウントにETHが表示されるはずです！
-### 残高を確認する
+### 残高を確認する {#check-your-balance}
 
 残高があることを再確認するために、[Alchemyのサンドボックスツール](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)を使用して[eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)リクエストを行いましょう。これにより、ウォレット内のETHの量が返されます。メタマスクのアカウントアドレスを入力して「Send Request」をクリックすると、次のような応答が表示されるはずです。
 
@@ -579,7 +579,7 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 また、イーサリアムブロックチェーンに接続してスマート・コントラクトをロードするために、Alchemy APIキーとAlchemy Web3 APIも必要になります。
 
-### Alchemy APIキーを作成する
+### Alchemy APIキーを作成する {#create-alchemy-api}
 
 まだAlchemyアカウントをお持ちでない場合は、[こちらから無料でサインアップしてください。](https://alchemy.com/?a=eth-org-nft-minter)
 
@@ -844,7 +844,7 @@ const onMintPressed = async () => {
 }
 ```
 
-## NFTを公開ウェブサイトにデプロイする
+## NFTを公開ウェブサイトにデプロイする {#deploy-your-nft}
 
 ユーザーが操作できるようにプロジェクトを公開する準備はできましたか？ミンターを公開ウェブサイトにデプロイする方法については、[Reactのデプロイメントドキュメント](https://create-react-app.dev/docs/deployment/)を確認してください。
 

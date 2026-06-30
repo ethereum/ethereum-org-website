@@ -9,7 +9,7 @@ tags:
   - "커뮤니티"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: 아르헨티나에서 구축하기
+breadcrumb: "아르헨티나에서 구축하기"
 lang: ko
 ---
 > *이 이야기는 원래 2025년 11월 3일 [@Ethereum X 프로필의 게스트 스레드](https://x.com/ethereum/status/1985408315074232397?s=20)로 게시되었습니다. 가독성을 위해 약간 편집되었습니다.*

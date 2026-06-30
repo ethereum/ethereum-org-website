@@ -39,7 +39,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.gif)
 
-## 3. 從命令列發出請求
+## 3. 從命令列發出請求 {#make-a-request-from-the-command-line}
 
 使用 JSON-RPC 和 curl 透過 Alchemy 與以太坊區塊鏈互動。
 
@@ -66,11 +66,11 @@ _**注意：**請將 `https://eth-mainnet.alchemyapi.io/v2/demo` 替換為你自
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. 設定你的 Web3 用戶端
+## 4. 設定你的 Web3 用戶端 {#set-up-your-web3-client}
 
-**如果你已有現成的用戶端，**請將你目前的節點提供者 URL 變更為包含你 API 金鑰的 Alchemy URL：`“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+<strong>如果你已有現成的用戶端，</strong>請將你目前的節點提供者 URL 變更為包含你 API 金鑰的 Alchemy URL：`“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**_注意：_** 以下腳本需要在 **Node.js 環境**中執行或**儲存於檔案中**，而不是從命令列執行。如果你尚未安裝 Node.js 或 npm，請遵循 [Node.js 安裝說明](https://nodejs.org/en/download/)。
+**_注意：_** 以下腳本需要在 <strong>Node.js 環境</strong>中執行或**儲存於檔案中**，而不是從命令列執行。如果你尚未安裝 Node.js 或 npm，請遵循 [Node.js 安裝說明](https://nodejs.org/en/download/)。
 
 有許多 [Web3 函式庫](/developers/docs/apis/javascript/)可以與 Alchemy 整合，不過，我們建議使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)，這是 Web3.js 的直接替代方案，其建置與設定可與 Alchemy 無縫運作。這提供了多項優勢，例如自動重試和強大的 WebSocket 支援。
 
@@ -96,7 +96,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. 編寫你的第一個 Web3 腳本！
+## 5. 編寫你的第一個 Web3 腳本！ {#write-your-first-web3-script}
 
 現在，為了實際動手進行一些 Web3 程式設計，我們將編寫一個簡單的腳本，印出以太坊主網的最新區塊號碼。
 

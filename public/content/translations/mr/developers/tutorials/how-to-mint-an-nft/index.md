@@ -40,7 +40,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## पायरी 3: तुमचा कॉन्ट्रॅक्ट ABI मिळवा
+## पायरी 3: तुमचा कॉन्ट्रॅक्ट ABI मिळवा {#contract-abi}
 
 आमचा कॉन्ट्रॅक्ट ABI (Application Binary Interface) हा आमच्या स्मार्ट कॉन्ट्रॅक्टशी संवाद साधण्यासाठीचा इंटरफेस आहे. तुम्ही [कॉन्ट्रॅक्ट ABIs](/glossary/#abi) बद्दल अधिक जाणून घेऊ शकता. Hardhat आमच्यासाठी आपोआप एक ABI जनरेट करते आणि तो `MyNFT.json` फाईलमध्ये सेव्ह करते. याचा वापर करण्यासाठी आम्हाला आमच्या `mint-nft.js` फाईलमध्ये खालील कोडच्या ओळी जोडून त्यातील मजकूर पार्स (parse) करावा लागेल:
 
@@ -135,7 +135,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## पायरी 7: तुमचा व्यवहार तयार करा
+## पायरी 7: तुमचा व्यवहार तयार करा {#create-txn}
 
 प्रथम, आपण `mintNFT(tokenData)` नावाचे एक फंक्शन परिभाषित करूया आणि खालील गोष्टी करून आपला व्यवहार तयार करूया:
 

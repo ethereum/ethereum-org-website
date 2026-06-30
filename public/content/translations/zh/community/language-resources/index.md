@@ -1,6 +1,6 @@
 ---
-title: 语言资源
-description: 学习以太坊的非英语资源
+title: "语言资源"
+description: "学习以太坊的非英语资源"
 lang: zh
 ---
 

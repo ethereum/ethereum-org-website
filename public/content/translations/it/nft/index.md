@@ -101,7 +101,8 @@ I problemi di sicurezza relativi agli NFT sono più spesso legati a truffe di ph
   Maggiori informazioni sulla sicurezza
 </ButtonLink>
 
-## Letture di approfondimento
+## Letture di approfondimento {#further-reading}
+
 - [Una guida agli NFT per principianti](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, gennaio 2020_
 - [Tracker di NFT di Etherscan](https://etherscan.io/nft-top-contracts)
 - [Tracker di NFT di Blockscout](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)

@@ -354,7 +354,7 @@ Un utilisateur soumet un message d'accueil. Peut-être qu'il sera mis à jour au
 - Le nouveau message d'accueil a été soumis, et il est en cours de traitement
 - Le nouveau message d'accueil a été rejeté
 
-## Conclusion
+## Conclusion {#conclusion}
 
 À ce stade, vous devriez être en mesure de créer une expérience sans gaz pour les utilisateurs de votre application décentralisée (dapp), au prix d'une certaine centralisation.
 

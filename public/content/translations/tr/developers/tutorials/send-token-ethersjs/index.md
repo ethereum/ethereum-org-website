@@ -17,7 +17,8 @@ published: 2021-04-06
 - Token transfer etme
 - Ağ trafiği durumuna göre gas fiyatı belirleme
 
-### Başlarken
+### Başlarken {#to-get-started}
+
 Başlamak için öncelikle ethers.js kütüphanesini JavaScript'imize aktarmalıyız
 ethers.js v5'i dahil edin
 ### Kurulum {#install-ethersjs}

@@ -59,7 +59,7 @@ Ili kuhakikisha salio letu lipo, hebu tutume ombi la [eth_getBalance](/developer
 >
 > Phew! Pesa zetu bandia zote zipo <Emoji text=":money_mouth_face:" size={1} />.
 
-## Hatua ya 6: Anzisha mradi wetu
+## Hatua ya 6: Anzisha mradi wetu {#step-6}
 
 Kwanza, tutahitaji kuunda folda kwa ajili ya mradi wetu. Nenda kwenye mstari wako wa amri na uandike:
 

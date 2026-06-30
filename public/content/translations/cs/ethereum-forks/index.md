@@ -1,6 +1,6 @@
 ---
-title: Časová osa všech forků Etherea (od roku 2014 do současnosti)
-description: Historie blockchainu Ethereum včetně hlavních milníků, vydání a forků.
+title: "Časová osa všech forků Etherea (od roku 2014 do současnosti)"
+description: "Historie blockchainu Ethereum včetně hlavních milníků, vydání a forků."
 lang: cs
 sidebarDepth: 1
 authors: ["Nixo"]
@@ -86,7 +86,8 @@ Hledáte budoucí aktualizace protokolu? [Přečtěte si o nadcházejících akt
 
 [Více o Fusaka](/roadmap/fusaka/)
 
-### Prague-Electra („Pectra“)
+### Prague-Electra („Pectra“) {#pectra}
+
 <NetworkUpgradeSummary name="pectra" />
 
 Aktualizace Prague-Electra („Pectra“) zahrnovala několik vylepšení protokolu Ethereum zaměřených na zlepšení uživatelské zkušenosti pro všechny uživatele, sítě vrstvy 2, stakery a provozovatele uzlů.

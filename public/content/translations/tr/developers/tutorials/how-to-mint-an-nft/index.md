@@ -40,7 +40,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## 3. Adım: Sözleşme ABI'nizi alın
+## 3. Adım: Sözleşme ABI'nizi alın {#contract-abi}
 
 Sözleşme ABI'miz (Uygulama İkili Arayüzü), akıllı sözleşmemizle etkileşime girmek için kullanılan arayüzdür. [Sözleşme ABI'leri](/glossary/#abi) hakkında daha fazla bilgi edinebilirsiniz. Hardhat bizim için otomatik olarak bir ABI oluşturur ve bunu `MyNFT.json` dosyasına kaydeder. Bunu kullanmak için, `mint-nft.js` dosyamıza aşağıdaki kod satırlarını ekleyerek içerikleri ayrıştırmamız gerekecek:
 
@@ -135,7 +135,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## 7. Adım: İşleminizi oluşturun
+## 7. Adım: İşleminizi oluşturun {#create-txn}
 
 İlk olarak, `mintNFT(tokenData)` adında bir fonksiyon tanımlayalım ve aşağıdakileri yaparak işlemimizi oluşturalım:
 

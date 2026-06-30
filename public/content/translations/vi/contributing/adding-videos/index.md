@@ -123,27 +123,6 @@ Sử dụng các tiêu đề `###` kèm theo dấu thời gian để đánh dấ
 
 Nếu bạn không có bản chép lời, bạn có thể để trống phần thân (body) và đội ngũ sẽ tạo một bản.
 
-#### Bước 4: Chọn thẻ chủ đề
-
-Chọn các thẻ chủ đề từ danh sách bên dưới. Mỗi thẻ tương ứng trực tiếp với một danh mục bộ lọc trong thư viện video — hãy sử dụng tên thẻ chính xác như được hiển thị.
-
-Một video có thể có nhiều thẻ để xuất hiện trong nhiều bộ lọc thư viện:
-
-| Thẻ | Bộ lọc thư viện |
-|---|---|
-| `how-ethereum-works` | Cách Ethereum hoạt động |
-| `network-upgrades` | Nâng cấp mạng lưới |
-| `roadmap-and-priorities` | Lộ trình & ưu tiên |
-| `scaling-and-layer-2` | Mở rộng quy mô & lớp 2 |
-| `use-cases` | Trường hợp sử dụng |
-| `privacy` | Quyền riêng tư |
-| `security` | Bảo mật |
-| `community-stories` | Câu chuyện cộng đồng |
-| `events` | Sự kiện |
-
-Mỗi video nên có ít nhất một thẻ từ danh sách này. Các video không có thẻ được nhận dạng sẽ chỉ xuất hiện trong chế độ xem "Tất cả" và kết quả tìm kiếm.
-
-Thẻ `community-stories` cũng giúp video xuất hiện trên [trang Câu chuyện](/stories/).
 #### Bước 5: Gửi PR của bạn {#step-5}
 
 Mở một pull request với các thay đổi của bạn vào nhánh `dev`. Đội ngũ sẽ xem xét nội dung bạn gửi và cung cấp phản hồi.

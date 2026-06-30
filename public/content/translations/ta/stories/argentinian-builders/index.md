@@ -9,7 +9,7 @@ tags:
   - "சமூகம்"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: அர்ஜென்டினாவிலிருந்து உருவாக்குதல்
+breadcrumb: "அர்ஜென்டினாவிலிருந்து உருவாக்குதல்"
 lang: ta
 ---
 > *இந்தக் கதை முதலில் நவம்பர் 3, 2025 அன்று [@Ethereum X சுயவிவரத்தில் ஒரு விருந்தினர் தொடராக](https://x.com/ethereum/status/1985408315074232397?s=20) வெளியிடப்பட்டது. இது வாசிப்புத்திறனுக்காகச் சிறிதளவு திருத்தப்பட்டுள்ளது.*

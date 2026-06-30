@@ -9,7 +9,7 @@ tags:
   - "समुदाय"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: अर्जेंटीना से निर्माण
+breadcrumb: "अर्जेंटीना से निर्माण"
 lang: hi
 ---
 > *यह कहानी मूल रूप से 3 नवंबर, 2025 को [@Ethereum X प्रोफ़ाइल पर एक अतिथि थ्रेड](https://x.com/ethereum/status/1985408315074232397?s=20) के रूप में प्रकाशित हुई थी। इसे पढ़ने में आसानी के लिए थोड़ा संपादित किया गया है।*

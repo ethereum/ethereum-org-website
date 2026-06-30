@@ -36,7 +36,7 @@ Tidak. Tidak ada komputer kuantum saat ini yang dapat menembus kriptografi Ether
 
 </ExpandableCard>
 
-### Apa yang sedang dilakukan?
+### Apa yang sedang dilakukan? {#what-is-being-done}
 
 Saat ini, Ethereum adalah pembela paling proaktif terhadap ancaman kuantum di ekosistem rantai blok. Yayasan Ethereum membentuk **tim Keamanan Pascakuantum** khusus pada bulan Januari 2026, dan pekerjaan aktif mencakup berbagai tim klien dan kelompok penelitian. Pekerjaan tim Pascakuantum EF dilacak secara publik di [pq.ethereum.org](https://pq.ethereum.org).
 

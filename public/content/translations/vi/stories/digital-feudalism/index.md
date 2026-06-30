@@ -9,7 +9,7 @@ tags:
   - "khả năng chống kiểm duyệt"
 published: "2026-02-05"
 image: /content/stories/digital-feudalism/tarrence-cover-image.jpeg
-breadcrumb: Sở hữu thế giới của bạn
+breadcrumb: "Sở hữu thế giới của bạn"
 lang: vi
 ---
 

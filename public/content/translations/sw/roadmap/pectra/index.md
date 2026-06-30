@@ -117,7 +117,8 @@ _Nini Kinaingia Kwenye Sasisho la Pectra? - Christine Kim_
 
 _Sasisho la Pectra la Ethereum: Kile Waweka Dhamana Wanachohitaji Kujua — Blockdaemon_
 
-## Usomaji zaidi
+## Usomaji zaidi {#further-reading}
+
 - [Ramani ya njia ya Ethereum](/roadmap/)
 - [Maswali Yanayoulizwa Mara kwa Mara (FAQ) ya Pectra](https://epf.wiki/#/wiki/pectra-faq)
 - [Jinsi Pectra inavyoboresha uzoefu wa mweka dhamana](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)

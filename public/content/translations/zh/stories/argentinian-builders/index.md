@@ -9,7 +9,7 @@ tags:
   - "社区"
 published: "2025-11-03"
 image: /content/stories/argentinian-builders/placeholder-ar-flag-hero.png
-breadcrumb: 来自阿根廷的建设
+breadcrumb: "来自阿根廷的建设"
 lang: zh
 ---
 > *这个故事最初于 2025 年 11 月 3 日作为[客座推文发布在 @Ethereum X 账号上](https://x.com/ethereum/status/1985408315074232397?s=20)。为了提高可读性，内容经过了轻微编辑。*

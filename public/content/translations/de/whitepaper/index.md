@@ -1,6 +1,6 @@
 ---
 title: Ethereum Whitepaper
-description: Ein Einführungspapier zu Ethereum, das 2013 vor seinem Start veröffentlicht wurde.
+description: "Ein Einführungspapier zu Ethereum, das 2013 vor seinem Start veröffentlicht wurde."
 lang: de
 sidebarDepth: 2
 hideEditButton: true

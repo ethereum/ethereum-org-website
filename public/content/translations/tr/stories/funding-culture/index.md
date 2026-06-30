@@ -9,7 +9,7 @@ tags:
   - "yaratıcı mülkiyet"
 published: "2025-05-30"
 image: /content/stories/funding-culture/pplpleasr-hero.png
-breadcrumb: Kültürü taşımak
+breadcrumb: "Kültürü taşımak"
 lang: tr
 ---
 

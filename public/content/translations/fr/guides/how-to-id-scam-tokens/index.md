@@ -1,6 +1,6 @@
 ---
 title: Comment identifier les jetons frauduleux
-description: Comprendre les jetons frauduleux, comment ils se font passer pour légitimes et comment les éviter.
+description: "Comprendre les jetons frauduleux, comment ils se font passer pour légitimes et comment les éviter."
 lang: fr
 ---
 

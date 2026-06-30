@@ -101,7 +101,8 @@ summaryPoints:
   سیکیورٹی کے بارے میں مزید
 </ButtonLink>
 
-## مزید مطالعہ
+## مزید مطالعہ {#further-reading}
+
 - [<span dir="ltr">NFTs</span> کے لیے ابتدائی افراد کی گائیڈ](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _لنڈا ژی، جنوری 2020_
 - [<span dir="ltr">Etherscan NFT</span> ٹریکر](https://etherscan.io/nft-top-contracts)
 - [<span dir="ltr">Blockscout NFT</span> ٹریکر](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)

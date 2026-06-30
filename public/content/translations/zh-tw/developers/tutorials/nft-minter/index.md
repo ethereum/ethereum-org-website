@@ -33,7 +33,7 @@ published: 2021-10-06
 
 這兩個 NFT 智能合約標準之間最大的區別在於，ERC-1155 是一個多代幣標準並包含批次處理功能，而 ERC-721 是一個單一代幣標準，因此一次只支援轉移一個代幣。
 
-### 呼叫鑄造函式
+### 呼叫鑄造函式 {#minting-function}
 
 通常，這個鑄造函式要求你傳入兩個變數作為參數：第一個是 `recipient`，它指定將接收你剛鑄造的 NFT 的地址；第二個是 NFT 的 `tokenURI`，這是一個解析為描述 NFT 中繼資料的 JSON 文件的字串。
 
@@ -194,15 +194,15 @@ return (
 
 為了讓使用者能夠與你的智能合約互動，他們需要將他們的以太坊錢包連接到你的 dapp。
 
-### 下載梅塔馬斯克
+### 下載梅塔馬斯克 {#download-metamask}
 
 在本教學中，我們將使用梅塔馬斯克，這是一個瀏覽器中的虛擬錢包，用於管理你的以太坊帳戶地址。如果你想進一步了解以太坊上的交易是如何運作的，請查看[此頁面](/developers/docs/transactions/)。
 
 你可以免費在[這裡](https://metamask.io/download)下載並建立一個梅塔馬斯克帳戶。當你在建立帳戶時，或者如果你已經有一個帳戶，請確保切換到如 Sepolia 等受支援的測試網 \(這樣我們就不會牽涉到真實的資金\)。
-### 從水龍頭新增以太幣
+### 從水龍頭新增以太幣 {#add-ether-from-faucet}
 
 為了鑄造我們的 NFT（或在以太坊區塊鏈上簽署任何交易），我們需要一些假的 ETH。要獲取測試網 ETH，請使用維護中的水龍頭，例如 [Alchemy Sepolia 水龍頭](https://www.alchemy.com/faucets/ethereum-sepolia)，並輸入你的 Sepolia 帳戶地址。不久之後，你應該就會在你的梅塔馬斯克帳戶中看到 ETH！
-### 檢查你的餘額
+### 檢查你的餘額 {#check-your-balance}
 
 為了再次確認我們的餘額是否存在，讓我們使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 請求。這將回傳我們錢包中的 ETH 數量。在輸入你的梅塔馬斯克帳戶地址並點擊「發送請求 (Send Request)」後，你應該會看到類似以下的響應：
 
@@ -579,7 +579,7 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 我們還需要一個 Alchemy API 金鑰和 Alchemy Web3 API 來連接到以太坊區塊鏈並載入我們的智能合約。
 
-### 建立你的 Alchemy API 金鑰
+### 建立你的 Alchemy API 金鑰 {#create-alchemy-api}
 
 如果你還沒有 Alchemy 帳戶，[請在這裡免費註冊。](https://alchemy.com/?a=eth-org-nft-minter)
 
@@ -844,7 +844,8 @@ const onMintPressed = async () => {
 }
 ```
 
-## 將你的 NFT 部署到上線的網站
+## 將你的 NFT 部署到上線的網站 {#deploy-your-nft}
+
 準備好讓你的專案上線供使用者互動了嗎？請查看 [React 部署文件](https://create-react-app.dev/docs/deployment/)，了解如何將你的鑄造程式部署到上線的網站。
 
 最後一步...
