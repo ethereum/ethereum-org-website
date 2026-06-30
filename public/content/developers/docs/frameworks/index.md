@@ -47,6 +47,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
+**Moccasin -** **_A fast, Pythonic smart contract development and testing framework for Vyper, built on Titanoboa._**
+
+- [Documentation](https://github.com/Cyfrin/moccasin)
+- [GitHub](https://github.com/Cyfrin/moccasin)
+
 **Web3j -** **_A platform for developing blockchain applications on the JVM._**
 
 - [Homepage](https://www.web3labs.com/web3j-sdk)
