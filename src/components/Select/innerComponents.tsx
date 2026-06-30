@@ -46,9 +46,9 @@ export const selectVariants = tv({
       },
       outline: {
         container:
-          "[--border-outline-radius:8px] rounded-[--border-outline-radius]",
+          "[--border-outline-radius:8px] rounded-[var(--border-outline-radius)]",
         control:
-          "rounded-[--border-outline-radius] [&[data-expanded=true]]:border-b-transparent [&[data-expanded=true]]:rounded-b-none",
+          "rounded-[var(--border-outline-radius)] [&[data-expanded=true]]:border-b-transparent [&[data-expanded=true]]:rounded-b-none",
         menuList: "border-primary-low-contrast",
       },
     },
