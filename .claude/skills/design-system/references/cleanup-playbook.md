@@ -252,15 +252,16 @@ Add the new key to `src/intl/en/[namespace].json`.
 ```tsx
 import { PageHero } from "@/components/Hero"
 <PageHero
-  header={...}      // small uppercase eyebrow (h1); or use `breadcrumbs` instead
-  heroImg={...}     // omit for a text-only hero
-  title={...}       // large heading
+  breadcrumbs={{ slug }} // fills the slot above the title
+  eyebrow={...}          // optional ReactNode (status/tag) above the title
+  heroImg={...}          // or `heroComponent` (mutually exclusive); omit both for text-only
+  title={...}            // large heading -- always the <h1>
   description={...}
-  buttons={[...]}   // up to two
+  buttons={[...]}        // up to two
 />
 ```
 
-Porting an older `content={{ title, header, subtitle, image, alt }}` shape? Mind the field swap: the old `title` was the eyebrow (now `header`), the old `header` was the large heading (now `title`), `image`/`alt` -> `heroImg` (decorative), and `isReverse` is gone (the layout auto-reverses when `heroImg` is present). See `references/page-hero-walkthrough.md`.
+Porting an older `content={{ title, header, subtitle, image, alt }}` shape? Mind the field swap: the old `title` was the eyebrow and the old `header` was the large heading -- now `title` is the large heading **and** the `<h1>` (there is no `header` prop; use `breadcrumbs` for the slot above it, and `eyebrow` for any extra label). `image`/`alt` -> `heroImg` (decorative; or `heroComponent` for a widget), and `isReverse` is gone (the layout auto-places the aside). See `references/page-hero-walkthrough.md`.
 
 ## `BannerNotification` -> `Alert variant="banner"`
 

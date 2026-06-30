@@ -157,9 +157,17 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       <PageHero
         variant="no-divider"
         breadcrumbs={{ slug: "get-eth", startDepth: 1 }}
-        heroImg={ethCoins}
-        imageOverlay={
-          <EthPriceCard className="absolute inset-x-0 top-1/2 mx-auto -translate-y-1/2" />
+        heroComponent={
+          <div className="relative grid size-full place-items-center">
+            <Image
+              src={ethCoins}
+              alt=""
+              preload
+              sizes={`(max-width: ${screens.lg}) 100vw, 50vw`}
+              className="h-auto w-full object-contain max-lg:max-h-64 max-lg:w-auto"
+            />
+            <EthPriceCard className="absolute inset-x-0 top-1/2 mx-auto -translate-y-1/2" />
+          </div>
         }
         title={t("page-get-eth-hero-title")}
         description={t("page-get-eth-hero-subtitle")}

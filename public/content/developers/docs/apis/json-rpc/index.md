@@ -1889,7 +1889,7 @@ This was just a brief introduction into some of the most common tasks, demonstra
 
 ## Related topics {#related-topics}
 
-- [JSON-RPC specification](http://www.jsonrpc.org/specification)
+- [JSON-RPC specification](https://www.jsonrpc.org/specification)
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
 - [JavaScript APIs](/developers/docs/apis/javascript/)
 - [Backend APIs](/developers/docs/apis/backend/)
