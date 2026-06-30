@@ -8,6 +8,7 @@ import { Image } from "@/components/Image"
 
 import { cn } from "@/lib/utils/cn"
 
+import { Alert } from "./ui/alert"
 import { Button } from "./ui/buttons/Button"
 import { Flex } from "./ui/flex"
 import InlineLink from "./ui/Link"
@@ -56,6 +57,14 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
     ALGORITHMIC: t("page-stablecoins-algorithmic"),
   }
 
+  if (hasError) {
+    return (
+      <Alert variant="error" role="alert" className="mt-6 w-full">
+        <p>{t("page-stablecoins-table-error")}</p>
+      </Alert>
+    )
+  }
+
   return (
     <div className="mt-6 w-full overflow-x-auto">
       <Table variant="minimal" className="min-w-[520px]">
@@ -73,14 +82,6 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {hasError && (
-            <TableRow>
-              <TableCell colSpan={3}>
-                {t("page-stablecoins-table-error")}
-              </TableCell>
-            </TableRow>
-          )}
-
           {displayedContent.map(
             ({ name, marketCap, image, type, url, symbol }, idx) => {
               const row = (
