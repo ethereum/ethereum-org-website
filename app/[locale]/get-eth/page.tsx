@@ -2,7 +2,7 @@ import { pick } from "lodash"
 import {
   CircleDashed,
   CircleDot,
-  Database,
+  DatabaseCheck,
   HandCoins,
   Users,
   Wallet as WalletIcon,
@@ -115,7 +115,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       href: "/wallets/",
     },
     {
-      icon: Database,
+      icon: DatabaseCheck,
       title: t("page-get-eth-staking"),
       description: t("page-get-eth-staking-desc"),
       linkText: t("page-get-eth-staking-link-desc"),
