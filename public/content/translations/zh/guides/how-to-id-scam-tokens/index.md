@@ -1,6 +1,6 @@
 ---
-title: 如何识别诈骗代币
-description: 了解诈骗代币，它们如何伪装成合法代币，以及如何避免上当受骗。
+title: "如何识别诈骗代币"
+description: "了解诈骗代币，它们如何伪装成合法代币，以及如何避免上当受骗。"
 lang: zh
 ---
 
@@ -14,7 +14,7 @@ lang: zh
 为了说明什么是诈骗代币以及如何识别它们，我们将看一个例子：[`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82)。该代币试图伪装成合法的 [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) 代币。
 
 <ExpandableCard
-title="What is ARB?"
+title="什么是 ARB？"
 contentPreview=''>
 
 Arbitrum 是一个开发和管理[乐观汇总 (optimistic rollups)](/developers/docs/scaling/optimistic-rollups/)的组织。最初，Arbitrum 是一家营利性公司，但随后采取了去中心化的措施。作为该过程的一部分，他们发行了一种可交易的[治理代币](/dao/#token-based-membership)。
@@ -22,7 +22,7 @@ Arbitrum 是一个开发和管理[乐观汇总 (optimistic rollups)](/developers
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="为什么诈骗代币叫 wARB？"
 contentPreview=''>
 
 在以太坊中有一个惯例，当一种资产不符合 ERC-20 标准时，我们会创建一个“封装”版本，其名称以“w”开头。例如，我们有代表比特币的 wBTC 和<a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">代表以太币的 wETH</a>。
@@ -36,7 +36,7 @@ contentPreview=''>
 以太坊的核心在于去中心化。这意味着没有中央机构可以没收你的资产或阻止你部署智能合约。但这也意味着诈骗者可以部署他们想要的任何智能合约。
 
 <ExpandableCard
-title="What are smart contracts?"
+title="什么是智能合约？"
 contentPreview=''>
 
 [智能合约](/developers/docs/smart-contracts/)是在以太坊区块链上运行的程序。例如，每一个 ERC-20 代币都是作为智能合约实现的。

@@ -17,11 +17,8 @@ published: 2021-04-06
 - Wykonać transfer tokena
 - Ustawić cenę gazu w zależności od natężenia ruchu w sieci
 
-### Jak zacząć {#to-get-started}
-
-Aby zacząć, musimy najpierw zaimportować bibliotekę ethers.js do naszego kodu JavaScript
-Dołączanie ethers.js(5.0)
-
+Aby rozpocząć, musimy najpierw zaimportować bibliotekę ethers.js do naszego kodu JavaScript.
+Dołącz ethers.js v5
 ### Instalacja {#install-ethersjs}
 
 ```shell

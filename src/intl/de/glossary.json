@@ -388,7 +388,7 @@
   "validium-term": "Validium",
   "validium-definition": "Eine offchain-Lösung, die <a href=\"/glossary/#validity-proof\">Gültigkeitsbeweise</a> verwendet, um den Transaktionsdurchsatz zu verbessern. Im Gegensatz zu <a href=\"/glossary/#zk-rollup\">Zero-Knowledge-Rollups</a> werden Validium-Daten nicht im Layer-1-Mainnet gespeichert. <a href=\"/developers/docs/scaling/validium/\">Mehr zu Validium</a>.",
   "vyper-term": "Vyper",
-  "vyper-definition": "Eine höhere Programmiersprache mit Python-ähnlicher Syntax. Sie soll einer rein funktionalen Sprache näher kommen. Entwickelt von Vitalik Buterin. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Mehr zu Vyper</a>.",
+  "vyper-definition": "Eine höhere Programmiersprache mit Python-ähnlicher Syntax. Entwickelt von Vitalik Buterin. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Mehr zu Vyper</a>.",
   "wallet-term": "Wallet",
   "wallet-definition": "Eine Wallet ist ein digitales Werkzeug zum Speichern, Senden und Empfangen digitaler Währungen, wie eine virtuelle Geldbörse für Ihr Online-Geld. <a href=\"/wallets/\">Mehr zu Ethereum-Wallets</a>.",
   "web2-term": "Web2",

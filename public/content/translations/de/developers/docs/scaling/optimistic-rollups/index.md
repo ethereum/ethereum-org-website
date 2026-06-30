@@ -254,14 +254,12 @@ Lernen Sie eher visuell? Sehen Sie sich an, wie Finematics Optimistic Rollups er
 ## Weiterführende Literatur zu Optimistic Rollups {#further-reading-on-optimistic-rollups}
 
 - [Wie funktionieren Optimistic Rollups (Der vollständige Leitfaden)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Was ist ein Blockchain-Rollup? Eine technische Einführung](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [Der wesentliche Leitfaden zu Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
-- [Der praktische Leitfaden zu Ethereum-Rollups](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
-- [Der Stand der Betrugsnachweise in Ethereum L2s](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
+- [Der essenzielle Leitfaden für Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Der praktische Leitfaden für Ethereum-Rollups](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Der Stand der Betrugsnachweise in Ethereum-L2s](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
 - [Wie funktioniert das Rollup von Optimism wirklich?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [Die OVM im Detail](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Was ist die Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
 ## Tutorials: Optimistic Rollups und Brücken auf Ethereum {#tutorials}
 
 - [Durchgang durch den Standard-Brücken-Vertrag von Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Ein kommentierter Code-Durchgang der Standard-Brücke von Optimism zum Bewegen von Vermögenswerten zwischen L1 und L2._

@@ -17,11 +17,10 @@ published: 2021-04-06
 - Převést token
 - Nastavit cenu plynu podle vytížení sítě
 
-### Jak začít {#to-get-started}
+### Začínáme {#to-get-started}
 
 Abychom mohli začít, musíme nejprve importovat knihovnu ethers.js do našeho JavaScriptu.
-Zahrnutí ethers.js(5.0)
-
+Zahrňte ethers.js v5
 ### Instalace {#install-ethersjs}
 
 ```shell

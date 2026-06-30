@@ -40,7 +40,7 @@ lang: ko
 
 **Sepolia는 애플리케이션 개발을 위해 권장되는 기본 테스트넷입니다**. Sepolia 네트워크는 클라이언트 및 테스트 팀이 제어하는 허가형 검증자 세트를 사용합니다.
 
-##### 리소스
+##### 리소스 {#} {#} {#} {#} {#}
 
 - [웹사이트](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ lang: ko
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### 퍼싯
+##### 퍼싯 {#} {#} {#} {#}
 
 - [Alchemy Sepolia 퍼싯](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia 퍼싯](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)

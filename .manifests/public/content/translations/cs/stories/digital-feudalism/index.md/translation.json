@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-06-30T00:56:43.879Z",
+  "englishManifestHash": "15304f44b25f",
+  "placeholderOrder": [
+    "LINK-3a361d",
+    "IMAGE-e7568b",
+    "LINK-133406",
+    "IMAGE-56063f",
+    "IMAGE-afe7f8",
+    "IMAGE-d43b27",
+    "IMAGE-da136f",
+    "LINK-016df7",
+    "LINK-9b81ae",
+    "LINK-f56c1a",
+    "IMAGE-fa62a1",
+    "IMAGE-d35fac",
+    "LINK-aeea2e",
+    "LINK-df9e7e",
+    "LINK-7747ee",
+    "LINK-80080b",
+    "LINK-f56c1a",
+    "IMAGE-20a199",
+    "LINK-e7f8be",
+    "IMAGE-350258",
+    "LINK-790ad5",
+    "IMAGE-face01",
+    "IMAGE-23da51",
+    "IMAGE-3a1c94"
+  ],
+  "placeholderMap": {
+    "IMAGE-e7568b": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-image-1.png"
+      }
+    },
+    "IMAGE-56063f": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-2.png"
+      }
+    },
+    "IMAGE-afe7f8": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-3.png"
+      }
+    },
+    "IMAGE-d43b27": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-4.png"
+      }
+    },
+    "IMAGE-da136f": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-5.png"
+      }
+    },
+    "IMAGE-fa62a1": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-6.png"
+      }
+    },
+    "IMAGE-d35fac": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-7.png"
+      }
+    },
+    "IMAGE-20a199": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-8.png"
+      }
+    },
+    "IMAGE-350258": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-9.png"
+      }
+    },
+    "IMAGE-face01": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-10.png"
+      }
+    },
+    "IMAGE-23da51": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-11.png"
+      }
+    },
+    "IMAGE-3a1c94": {
+      "type": "image",
+      "values": {
+        "path": "./tarrance-12.png"
+      }
+    },
+    "LINK-3a361d": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/ethereum/status/2019505333593641179?s=20"
+      }
+    },
+    "LINK-133406": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Stop_Killing_Games"
+      }
+    },
+    "LINK-016df7": {
+      "type": "link",
+      "values": {
+        "url": "/gaming/"
+      }
+    },
+    "LINK-9b81ae": {
+      "type": "link",
+      "values": {
+        "url": "https://godotengine.org/"
+      }
+    },
+    "LINK-f56c1a": {
+      "type": "link",
+      "values": {
+        "url": "https://dojoengine.org/"
+      }
+    },
+    "LINK-df9e7e": {
+      "type": "link",
+      "values": {
+        "url": "https://domhofmann.com/"
+      }
+    },
+    "LINK-aeea2e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.lootproject.com/"
+      }
+    },
+    "LINK-7747ee": {
+      "type": "link",
+      "values": {
+        "url": "https://linktr.ee/Realms.World"
+      }
+    },
+    "LINK-80080b": {
+      "type": "link",
+      "values": {
+        "url": "https://cartridge.gg/"
+      }
+    },
+    "LINK-e7f8be": {
+      "type": "link",
+      "values": {
+        "url": "https://www.deathmountain.gg/lootsurvivor"
+      }
+    },
+    "LINK-790ad5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.cartridge.gg/controller/overview"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-30T00:56:43.879Z",
+      "status": "success"
+    }
+  }
+}

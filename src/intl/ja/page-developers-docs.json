@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "データと分析",
   "docs-nav-data-and-analytics-description": "ブロックチェーンデータが集約、整理され、分散型アプリケーション (dapp) に実装される方法",
   "docs-nav-data-availability": "データ可用性",
+  "docs-nav-data-availability-description": "イーサリアムにおけるデータ可用性に関する問題と解決策の概要",
   "docs-nav-data-availability-storage-strategies": "ブロックチェーンデータのストレージ戦略",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "状態の検証は開発中です",
   "layer-2-metis-note": "不正証明は開発中です",
   "layer-2-optimism-note": "フォルト証明は開発中です",
-  "back-to-top": "トップへ戻る",
   "banner-page-incomplete": "このページは未完成であり、皆様のご協力をお待ちしております。このページを編集して、他の人の役に立つと思われる情報を追加してください。",
   "next": "次へ",
   "previous": "前へ"

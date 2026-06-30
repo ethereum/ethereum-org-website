@@ -44,7 +44,7 @@ incomplete: true
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API संदर्भ_
 - [Solaris](https://github.com/paritytech/sol-rs) - _नेटिव Parity क्लाइंट EVM का उपयोग करके Solidity स्मार्ट अनुबंध यूनिट टेस्ट हार्नेस।_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust इथेरियम वर्चुअल मशीन कार्यान्वयन_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust में Wavelet स्मार्ट अनुबंध_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Rust में Wavelet स्मार्ट अनुबंध_
 - [Foundry](https://github.com/foundry-rs/foundry) - _इथेरियम एप्लिकेशन विकास के लिए टूलकिट_
 - [Alloy](https://alloy.rs) - _इथेरियम और अन्य EVM-आधारित चेन के साथ इंटरैक्ट करने के लिए उच्च-प्रदर्शन, अच्छी तरह से परीक्षण की गई और प्रलेखित लाइब्रेरी।_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _इथेरियम लाइब्रेरी और वॉलेट कार्यान्वयन_

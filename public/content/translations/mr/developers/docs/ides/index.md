@@ -59,6 +59,6 @@ lang: mr
 
 ## पुढील वाचन {#further-reading}
 
-- [इथेरियम IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy ची इथेरियम IDEs ची यादी_
+- [इथेरियम IDEs](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Alchemy ची इथेरियम IDEs ची यादी_
 
 _तुम्हाला मदत केलेल्या एखाद्या कम्युनिटी रिसोर्सबद्दल माहिती आहे का? हे पेज एडिट करा आणि ते जोडा!_

@@ -28,7 +28,7 @@ published: 2022-04-01
 
 [ऑप्टिमिस्टिक रोलअप्स](/developers/docs/scaling/optimistic-rollups) ला प्रत्येक ऐतिहासिक व्यवहाराची नोंद जतन करावी लागते जेणेकरून कोणालाही ते तपासता येतील आणि सध्याची स्थिती योग्य असल्याची पडताळणी करता येईल.
 इथरियम मेननेटमध्ये डेटा मिळवण्याचा सर्वात स्वस्त मार्ग म्हणजे तो कॉल डेटा म्हणून लिहिणे.
-हा उपाय [ऑप्टिमिझम्](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) आणि [आर्बिट्रम्](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) या दोन्हीनी निवडला होता.
+हा उपाय [ऑप्टिमिझम्](https://docs.optimism.io/op-stack/protocol/overview) आणि [आर्बिट्रम्](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction) या दोन्हीनी निवडला होता.
 
 ### L2 व्यवहारांचा खर्च {#cost-of-l2-transactions}
 

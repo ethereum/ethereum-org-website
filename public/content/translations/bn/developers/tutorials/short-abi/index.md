@@ -28,7 +28,7 @@ published: 2022-04-01
 
 [অপটিমিস্টিক রোলআপ](/developers/docs/scaling/optimistic-rollups)-কে প্রতিটি ঐতিহাসিক ট্রানজ্যাকশনের রেকর্ড সংরক্ষণ করতে হয় যাতে যে কেউ সেগুলো পরীক্ষা করে দেখতে পারে এবং বর্তমান স্টেট সঠিক কিনা তা যাচাই করতে পারে।
 ইথেরিয়াম মেইননেটে ডেটা পাঠানোর সবচেয়ে সস্তা উপায় হলো এটিকে কল ডেটা হিসেবে লেখা।
-এই সমাধানটি [অপটিমিজম](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) এবং [আরবিট্রাম](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) উভয়ই বেছে নিয়েছে।
+এই সমাধানটি [অপটিমিজম](https://docs.optimism.io/op-stack/protocol/overview) এবং [আরবিট্রাম](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction) উভয়ই বেছে নিয়েছে।
 
 ### লেয়ার ২ (l2) ট্রানজ্যাকশনের খরচ {#cost-of-l2-transactions}
 

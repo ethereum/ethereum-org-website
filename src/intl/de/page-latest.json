@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "Ressourcen, Tools und Entwicklungen für Ersteller aus dem Ethereum-Ökosystem.",
-  "page-latest-title": "Updates für Ersteller",
-  "page-latest-subtitle": "Ein gemeinsamer Raum für Expertenperspektiven zu den neuesten Ressourcen, Tools und Entwicklungen im gesamten Ethereum-Ökosystem für Ersteller.",
+  "page-latest-meta-description": "Die neuesten Blogbeiträge, Nachrichten und Updates aus der Ethereum-Community sowie Expertenperspektiven aus dem gesamten Ersteller-Ökosystem.",
+  "page-latest-title": "Neueste Ethereum-Updates",
+  "page-latest-subtitle": "Die neuesten Blogbeiträge, Nachrichten und Updates aus der Community sowie Expertenperspektiven zu Entwicklungen im gesamten Ethereum-Ersteller-Ökosystem.",
   "page-latest-no-posts": "Keine Beiträge gefunden.",
   "page-latest-read-more": "Weiterlesen",
   "page-latest-minute-read": "{minutes} Min. Lesezeit",
-  "page-latest-team-attribution": "EF Builder Growth"
+  "page-latest-team-attribution": "EF Builder Growth",
+  "page-latest-cta-submit-resource": "Ressource einreichen",
+  "page-latest-cta-propose-article": "Artikel vorschlagen",
+  "page-latest-highlights-heading": "Highlights",
+  "page-latest-articles-heading": "Neueste Ethereum-Artikel",
+  "page-latest-sources-heading": "Mehr auf diesen Websites lesen",
+  "page-latest-see-more": "Mehr ansehen ({count})",
+  "page-latest-sort-label": "Artikel sortieren",
+  "page-latest-sort-newest": "Neueste zuerst",
+  "page-latest-sort-oldest": "Älteste zuerst",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "Einige Artikel werden in ihrer Originalsprache (Englisch) angezeigt.",
+  "page-latest-suggest-heading": "Ressource vorschlagen",
+  "page-latest-suggest-description": "Kennen Sie einen Ethereum-Newsletter oder eine Forschungspublikation, die hier aufgeführt werden sollte, oder haben Sie ein Thema für einen Ersteller-Artikel im Kopf? Eröffnen Sie ein Issue, um Ihre Ressource einzureichen."
 }

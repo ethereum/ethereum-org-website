@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "El programa de recompensas de Ethereum considera una serie de variables para determinar las recompensas. Las determinaciones de elegibilidad, puntuación y todos los términos relacionados con una recompensa quedan a la entera y final discreción del panel de recompensas por errores de la Fundación Ethereum.",
   "page-upgrades-bug-bounty-leaderboard": "Ver tablas de clasificación completas",
   "page-upgrades-bug-bounty-leaderboard-list": "Tabla de clasificación de recompensas por errores",
+  "page-upgrades-bug-bounty-leaderboard-position": "En el puesto número {rank} con {score, plural, one {# punto} other {# puntos}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(Ver perfil de GitHub)",
   "page-upgrades-bug-bounty-leaderboard-points": "puntos",
   "page-upgrades-bug-bounty-ledger-desc": "Las especificaciones de Ethereum detallan los fundamentos de diseño para la capa de ejecución y la capa de consenso.",
   "page-upgrades-bug-bounty-ledger-title": "Errores de especificación",

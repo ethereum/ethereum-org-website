@@ -33,18 +33,17 @@ Kabla hata hatujaanza kuangalia msimbo wowote, ni muhimu kuelewa jinsi kutengene
 
 Tofauti kubwa kati ya viwango viwili vya mkataba mahiri wa NFT ni kwamba ERC-1155 ni kiwango cha tokeni nyingi na inajumuisha utendaji wa kundi, wakati ERC-721 ni kiwango cha tokeni moja na kwa hivyo inasaidia tu kuhamisha tokeni moja kwa wakati.
 
-### Kuita utendaji wa ufuzi {#minting-function}
+### Ita utendaji wa ufuzi {#minting-function}
 
-Kawaida, utendaji huu wa ufuzi unahitaji upitishe vigezo viwili kama vigezo, kwanza `recipient`, ambayo inabainisha anwani itakayopokea NFT yako iliyofufuliwa hivi karibuni, na pili `tokenURI` ya NFT, mfuatano unaotatua kwenye hati ya JSON inayoelezea data fafanuzi ya NFT.
+Kwa kawaida, utendaji huu wa ufuzi unahitaji upitishe vigezo viwili kama parameta, kwanza `recipient`, ambayo inabainisha anwani itakayopokea NFT yako iliyofufuliwa hivi punde, na pili `tokenURI` ya NFT, mfuatano unaotatua kwenye hati ya JSON inayoelezea data fafanuzi ya NFT.
 
-Data fafanuzi ya NFT ndiyo inayoipa uhai, na kuiruhusu kuwa na sifa, kama vile jina, maelezo, picha (au rasilimali ya dijitali tofauti), na sifa zingine. Hapa kuna [mfano wa tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), ambayo ina data fafanuzi ya NFT.
+Data fafanuzi ya NFT ndiyo hasa inayoipa uhai, na kuiruhusu kuwa na sifa, kama vile jina, maelezo, picha (au rasilimali ya dijitali tofauti), na sifa zingine. Hapa kuna [mfano wa tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), ambayo ina data fafanuzi ya NFT.
 
-Katika mafunzo haya, tutazingatia sehemu ya 2, kuita utendaji wa ufuzi wa mkataba mahiri wa NFT uliopo kwa kutumia UI yetu ya React.
+Katika mafunzo haya, tutazingatia sehemu ya 2, kuita utendaji wa ufuzi wa mkataba mahiri wa NFT kwa kutumia UI yetu ya React.
 
-[Hapa kuna kiungo](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) cha mkataba mahiri wa NFT wa ERC-721 tutakaouita katika mafunzo haya. Ikiwa ungependa kujifunza jinsi tulivyouunda, tunapendekeza sana uangalie mafunzo yetu mengine, ["Jinsi ya Kuunda NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
+Utahitaji mkataba mahiri wa NFT wa ERC-721 uliosambazwa kwenye mtandao wa majaribio unaotumika kama vile Sepolia. Ikiwa ungependa kusambaza mmoja wewe mwenyewe, tunapendekeza mwongozo wa Alchemy wa [kusambaza mkataba mahiri kwenye Sepolia](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet).
 
-Poa, sasa kwa kuwa tunaelewa jinsi kutengeneza NFT kunavyofanya kazi, hebu tunakili faili zetu za kuanzia!
-
+Sawa, sasa kwa kuwa tunaelewa jinsi kutengeneza NFT kunavyofanya kazi, hebu tunakili faili zetu za kuanzia!
 ## Kunakili faili za kuanzia {#clone-the-starter-files}
 
 Kwanza, nenda kwenye [hifadhi ya GitHub ya nft-minter-tutorial](https://github.com/alchemyplatform/nft-minter-tutorial) ili kupata faili za kuanzia za mradi huu. Nakili hifadhi hii kwenye mazingira yako ya ndani.
@@ -197,26 +196,23 @@ Ili watumiaji waweze kuingiliana na mkataba mahiri wako watahitaji kuunganisha m
 
 ### Pakua MetaMask {#download-metamask}
 
-Kwa mafunzo haya, tutatumia MetaMask, mkoba pepe kwenye kivinjari unaotumika kudhibiti anwani ya akaunti yako ya Ethereum. Ikiwa unataka kuelewa zaidi kuhusu jinsi miamala kwenye Ethereum inavyofanya kazi, angalia [ukurasa huu](/developers/docs/transactions/).
+Kwa mafunzo haya, tutatumia MetaMask, mkoba pepe katika kivinjari unaotumika kudhibiti anwani ya akaunti yako ya Ethereum. Ikiwa unataka kuelewa zaidi kuhusu jinsi miamala kwenye Ethereum inavyofanya kazi, angalia [ukurasa huu](/developers/docs/transactions/).
 
-Unaweza kupakua na kuunda akaunti ya MetaMask bila malipo [hapa](https://metamask.io/download). Unapounda akaunti, au ikiwa tayari una akaunti, hakikisha unabadilisha kwenda kwenye "Ropsten Test Network" upande wa juu kulia \(ili tusiwe tunashughulika na pesa halisi\).
-
+Unaweza kupakua na kuunda akaunti ya MetaMask bila malipo [hapa](https://metamask.io/download). Unapounda akaunti, au ikiwa tayari una akaunti, hakikisha unabadilisha kwenda kwenye mtandao wa majaribio unaotumika kama vile Sepolia \(ili tusiwe tunashughulika na pesa halisi\).
 ### Ongeza Etha kutoka kwenye Bomba {#add-ether-from-faucet}
 
-Ili kufua NFT zetu (au kutia sahihi miamala yoyote kwenye mnyororo wa vitalu wa Ethereum), tutahitaji ETH bandia. Ili kupata ETH unaweza kwenda kwenye [bomba la Ropsten](https://faucet.ropsten.be/) na uweke anwani ya akaunti yako ya Ropsten, kisha ubofye "Send Ropsten Eth." Unapaswa kuona ETH kwenye akaunti yako ya MetaMask muda mfupi baadaye!
-
+Ili kufua NFT zetu (au kutia sahihi miamala yoyote kwenye mnyororo wa vitalu wa Ethereum), tutahitaji ETH bandia. Ili kupata ETH ya mtandao wa majaribio, tumia bomba linalodumishwa kama vile [bomba la Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia) na uweke anwani ya akaunti yako ya Sepolia. Unapaswa kuona ETH kwenye akaunti yako ya MetaMask punde tu baada ya hapo!
 ### Angalia salio lako {#check-your-balance}
 
-Ili kuhakikisha salio letu lipo, hebu tufanye ombi la [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) kwa kutumia [zana ya mtunzi ya Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Baada ya kuweka anwani ya akaunti yako ya MetaMask na kubofya "Send Request", unapaswa kuona jibu kama hili:
+Ili kuhakikisha salio letu lipo, hebu tufanye ombi la [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) tukitumia [zana ya sandbox ya Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Baada ya kuweka anwani ya akaunti yako ya MetaMask na kubofya “Send Request”, unapaswa kuona jibu kama hili:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**KUMBUKA:** Matokeo haya yako katika Wei sio ETH. Wei inatumika kama kiasi kidogo zaidi cha Etha. Ubadilishaji kutoka Wei hadi ETH ni: 1 ETH = 10¹⁸ Wei. Kwa hivyo tukibadilisha 0xde0b6b3a7640000 kuwa desimali tunapata 1\*10¹⁸ ambayo ni sawa na 1 ETH.
+**KUMBUKA:** Matokeo haya yapo katika Wei na si ETH. Wei inatumika kama kizio kidogo zaidi cha etha. Ubadilishaji kutoka Wei kwenda ETH ni: ETH 1 = Wei 10¹⁸. Kwa hivyo tukibadilisha 0xde0b6b3a7640000 kuwa desimali tunapata 1\*10¹⁸ ambayo ni sawa na ETH 1.
 
-Phew! Pesa zetu bandia zote zipo! <Emoji text=":money_mouth_face:" size={1} />
-
+Afadhali! Pesa yetu bandia yote ipo! <Emoji text=":money_mouth_face:" size={1} />
 ## Unganisha MetaMask kwenye UI yako {#connect-metamask-to-your-ui}
 
 Sasa kwa kuwa mkoba wetu wa MetaMask umewekwa, hebu tuunganishe programu tumizi iliyogatuliwa (dapp) yetu kwake!
@@ -587,26 +583,25 @@ Pia tutahitaji ufunguo wa API wa Alchemy na API ya Alchemy Web3 ili kuunganisha 
 
 Ikiwa bado huna akaunti ya Alchemy, [jisajili bila malipo hapa.](https://alchemy.com/?a=eth-org-nft-minter)
 
-Mara tu unapounda akaunti ya Alchemy, unaweza kuzalisha ufunguo wa API kwa kuunda programu. Hii itaturuhusu kufanya maombi kwenye mtandao wa majaribio wa Ropsten.
+Mara tu unapounda akaunti ya Alchemy, unaweza kuzalisha ufunguo wa API kwa kuunda programu. Hii itaturuhusu kufanya maombi kwenye mtandao wa majaribio wa Sepolia.
 
-Nenda kwenye ukurasa wa "Create App" katika Dashibodi yako ya Alchemy kwa kuelea juu ya "Apps" kwenye upau wa kusogeza na kubofya "Create App".
+Nenda kwenye ukurasa wa “Create App” katika Dashibodi yako ya Alchemy kwa kuelea juu ya “Apps” kwenye upau wa kusogeza na kubofya “Create App”.
 
-Ipe jina programu yako tulichagua "My First NFT!", toa maelezo mafupi, chagua "Staging" kwa Mazingira yanayotumika kwa uwekaji hesabu wa programu yako, na uchague "Ropsten" kwa mtandao wako.
+Ipe jina programu yako tulichagua "My First NFT!", toa maelezo mafupi, chagua “Staging” kwa Mazingira yanayotumika kwa uwekaji hesabu wa programu yako, na uchague “Sepolia” kwa mtandao wako.
 
-Bofya "Create app" na ndivyo hivyo! Programu yako inapaswa kuonekana kwenye jedwali hapa chini.
+Bofya “Create app” na ndivyo hivyo! Programu yako inapaswa kuonekana kwenye jedwali hapa chini.
 
-Ajabu kwa hivyo sasa kwa kuwa tumeunda URL yetu ya API ya HTTP ya Alchemy, inakili kwenye ubao wako wa kunakili...
+Safi sana kwa hivyo sasa kwa kuwa tumeunda URL yetu ya HTTP ya API ya Alchemy, inakili kwenye ubao wako wa kunakili...
 
-…na kisha hebu tuiongeze kwenye faili yetu ya `.env`. Kwa ujumla, faili yako ya .env inapaswa kuonekana hivi:
+…na kisha tuiongeze kwenye faili yetu ya `.env`. Kwa ujumla, faili yako ya .env inapaswa kuonekana hivi:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 Sasa kwa kuwa tuna ABI ya mkataba wetu na ufunguo wetu wa API wa Alchemy, tuko tayari kupakia mkataba mahiri wetu kwa kutumia [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
-
 ### Weka mwisho wako wa Alchemy Web3 na mkataba {#setup-alchemy-endpoint}
 
 Kwanza, ikiwa bado huna, utahitaji kusakinisha [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) kwa kwenda kwenye saraka ya nyumbani: `nft-minter-tutorial` kwenye terminal:
@@ -849,12 +844,11 @@ const onMintPressed = async () => {
 }
 ```
 
-## Sambaza NFT yako kwenye tovuti ya moja kwa moja {#deploy-your-nft}
+## Sambaza NFT yako kwenye tovuti iliyo hewani {#deploy-your-nft}
 
-Uko tayari kupeleka mradi wako moja kwa moja ili watumiaji waingiliane nao? Angalia [mafunzo haya](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) kwa ajili ya kusambaza Kifua chako kwenye tovuti ya moja kwa moja.
+Uko tayari kuweka mradi wako hewani ili watumiaji waingiliane nao? Angalia [nyaraka za usambazaji za React](https://create-react-app.dev/docs/deployment/) kwa ajili ya kusambaza Minter yako kwenye tovuti iliyo hewani.
 
 Hatua moja ya mwisho...
-
 ## Tikisa ulimwengu wa mnyororo wa vitalu {#take-the-blockchain-world-by-storm}
 
 Utani tu, umefika mwisho wa mafunzo!
@@ -865,6 +859,6 @@ Kwa muhtasari, kwa kuunda kifua NFT, umejifunza kwa mafanikio jinsi ya:
 - Kuita mbinu za mkataba mahiri kutoka kwenye mbele yako
 - Kutia sahihi miamala ukitumia MetaMask
 
-Yamkini, ungependa kuweza kuonyesha NFT zilizofufuliwa kupitia programu tumizi iliyogatuliwa (dapp) yako kwenye mkoba wako — kwa hivyo hakikisha unaangalia mafunzo yetu ya haraka ya [Jinsi ya Kutazama NFT Yako Kwenye Mkoba Wako](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)!
+Yamkini, ungependa kuweza kuonyesha NFT zilizofufuliwa kupitia programu tumizi iliyogatuliwa (dapp) yako kwenye mkoba wako — kwa hivyo hakikisha unaangalia mafunzo yetu ya haraka ya [Jinsi ya Kutazama NFT Yako Kwenye Mkoba Wako](/developers/tutorials/how-to-view-nft-in-metamask/)!
 
 Na, kama kawaida, ikiwa una maswali yoyote, tuko hapa kusaidia katika [Discord ya Alchemy](https://discord.gg/gWuC7zB). Tunatarajia kuona jinsi unavyotumia dhana kutoka kwenye mafunzo haya kwenye miradi yako ya baadaye!

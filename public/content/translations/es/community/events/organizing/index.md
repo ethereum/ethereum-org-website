@@ -1,7 +1,7 @@
 ---
-title: Cómo organizar un evento de Ethereum
+title: "Cómo organizar un evento de Ethereum"
 metaTitle: Organizar un evento de Ethereum
-description: Cómo organizar un evento de Ethereum
+description: "Cómo organizar un evento de Ethereum"
 lang: es
 hideEditButton: true
 ---
@@ -208,12 +208,10 @@ Un gran agradecimiento a todos los que contribuyeron a este artículo compartien
 
 Podcast: Cómo organizar y promocionar un evento de ETH de la A a la Z:
 
-- [El estudio de caso de ETHWarsaw, por Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [El caso de estudio de ETHWarsaw, por Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 Espacio de Twitter:
 
 - [AMA de la comunidad de ETH](https://x.com/NapulETH/status/1905732699094151623)
 
 Artículos:
-
-- [Construyendo ETHKL, por Danny H.](https://sekto.tech/ethkl24)

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/staking/saas/index.md",
-  "generatedAt": "2026-06-17T01:16:16.747Z",
-  "rootHash": "85b7a2955ed8",
+  "generatedAt": "2026-06-30T00:53:05.959Z",
+  "rootHash": "37e3d8c221d8",
   "tree": {
-    "contentHash": "d85936f333a9",
-    "anchorHash": "d529df3fcd3e",
+    "contentHash": "87593992f909",
+    "anchorHash": "36fa63a51ac5",
     "children": {
       "frontmatter:title": {
         "contentHash": "6561796cd0de",
@@ -63,8 +63,8 @@
         ]
       },
       "why-stake-with-a-service": {
-        "contentHash": "17115d5cc035",
-        "anchorHash": "1e64e959f133",
+        "contentHash": "b35fd2818232",
+        "anchorHash": "4e91dc0e0224",
         "labelHash": "622021a15ebc",
         "children": {
           "_label": {
@@ -84,26 +84,83 @@
             "anchorHash": "e3b0c44298fc"
           },
           "component:4": {
-            "contentHash": "918e1f78a588",
-            "anchorHash": "918e1f78a588",
+            "contentHash": "37f543163500",
+            "anchorHash": "15f6d6158249",
             "children": {
-              "html-tag:0": {
-                "contentHash": "e3b0c44298fc",
-                "anchorHash": "e3b0c44298fc"
+              "component:0": {
+                "contentHash": "2c9d9cc13cdc",
+                "anchorHash": "0754d8572024",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "a7256ad600a9",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "464dd6a97dcf",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "d378957788bb"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
               },
-              "html-tag:1": {
-                "contentHash": "e3b0c44298fc",
-                "anchorHash": "e3b0c44298fc"
+              "component:1": {
+                "contentHash": "98047e7cf717",
+                "anchorHash": "e6e4db58b2c2",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "e44603d362bf",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "b1e127fceb03",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "ced6d25b2ea9"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
               },
-              "html-tag:2": {
-                "contentHash": "e3b0c44298fc",
-                "anchorHash": "e3b0c44298fc"
+              "component:2": {
+                "contentHash": "7f56ab73c057",
+                "anchorHash": "c61d0ac7ac3f",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "8fb689b20e00",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "d3de10b4b90f",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "fe4b570e22cc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
               }
             },
             "childrenOrder": [
-              "html-tag:0",
-              "html-tag:1",
-              "html-tag:2"
+              "component:0",
+              "component:1",
+              "component:2"
             ]
           },
           "component:5": {
@@ -480,5 +537,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

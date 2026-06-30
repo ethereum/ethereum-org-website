@@ -28,7 +28,7 @@ published: 2022-04-01
 
 [ஆப்டிமிஸ்டிக் ரோலப்கள்](/developers/docs/scaling/optimistic-rollups) ஒவ்வொரு வரலாற்றுப் பரிவர்த்தனையின் பதிவையும் பாதுகாக்க வேண்டும், இதனால் எவரும் அவற்றைச் சரிபார்த்து தற்போதைய நிலை (state) சரியானது என்பதை உறுதிப்படுத்த முடியும்.
 எத்தேரியம் முதன்மை வலைப்பின்னலில் தரவைப் பெறுவதற்கான மலிவான வழி, அதை அழைப்புத் தரவாக (calldata) எழுதுவதாகும்.
-இந்தத் தீர்வு [ஆப்டிமிசம்](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) மற்றும் [ஆர்பிட்ரம்](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) ஆகிய இரண்டாலும் தேர்ந்தெடுக்கப்பட்டது.
+இந்தத் தீர்வு [ஆப்டிமிசம்](https://docs.optimism.io/op-stack/protocol/overview) மற்றும் [ஆர்பிட்ரம்](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction) ஆகிய இரண்டாலும் தேர்ந்தெடுக்கப்பட்டது.
 
 ### L2 பரிவர்த்தனைகளின் செலவு {#cost-of-l2-transactions}
 

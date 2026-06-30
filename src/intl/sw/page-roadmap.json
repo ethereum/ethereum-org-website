@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "Zaidi kuhusu utawala wa Ethereum",
   "page-roadmap-hero-alt": "Ramani ya njia ya Ethereum",
   "page-roadmap-technical-upgrades-title": "Ni maboresho gani ya kiufundi yanakuja kwenye Ethereum?",
+  "page-roadmap-post-quantum-title": "Usalama wa baada ya kwanta",
+  "page-roadmap-post-quantum-description": "Kompyuta za kwanta siku moja zinaweza kuvunja kriptografia ambayo minyororo ya vitalu inategemea. Maboresho ya baada ya kwanta ya Ethereum yatachukua nafasi ya algoriti zilizo hatarini kabla ya uchakataji wa kwanta kuwa tishio halisi.",
   "page-roadmap-danksharding-title": "danksharding",
   "page-roadmap-danksharding-description": "danksharding hufanya mikusanyiko ya tabaka la 2 (l2) kuwa nafuu zaidi kwa watumiaji kwa kuongeza \"mablobu\" ya data kwenye vitalu vya Ethereum.",
   "page-roadmap-single-slot-finality-title": "Uthibitisho wa mwisho wa sloti moja",

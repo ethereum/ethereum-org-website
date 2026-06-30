@@ -1,7 +1,7 @@
 ---
-title: Web3 簡介
-metaTitle: 什麼是 Web3？為什麼它很重要？
-description: Web3（全球資訊網的下一次演進）簡介及其重要性。
+title: "Web3 簡介"
+metaTitle: "什麼是 Web3？為什麼它很重要？"
+description: "Web3（全球資訊網的下一次演進）簡介及其重要性。"
 lang: zh-tw
 ---
 

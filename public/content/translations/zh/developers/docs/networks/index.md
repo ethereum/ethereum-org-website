@@ -40,7 +40,7 @@ lang: zh
 
 **Sepolia 是推荐用于应用开发的默认测试网**。Sepolia 网络使用由客户端和测试团队控制的许可型验证者集。
 
-##### 资源
+##### 资源 {#} {#} {#} {#} {#}
 
 - [网站](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ lang: zh
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### 水龙头
+##### 水龙头 {#} {#} {#} {#}
 
 - [Alchemy Sepolia 水龙头](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia 水龙头](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)

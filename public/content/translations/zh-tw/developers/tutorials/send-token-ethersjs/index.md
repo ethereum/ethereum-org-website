@@ -17,11 +17,10 @@ published: 2021-04-06
 - 轉帳代幣
 - 根據網路流量狀況設定 Gas 價格
 
-### 開始之前 {#to-get-started}
+### 開始使用 {#to-get-started}
 
-首先，我們必須將 ethers.js 函式庫匯入到我們的 JavaScript 中
-包含 ethers.js (5.0)
-
+要開始使用，我們必須先將 ethers.js 函式庫匯入到我們的 JavaScript 中
+引入 ethers.js v5
 ### 安裝 {#install-ethersjs}
 
 ```shell

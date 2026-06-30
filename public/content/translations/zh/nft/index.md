@@ -108,9 +108,7 @@ NFT 智能合约可以做几件关键的事情：
 - [Blockscout NFT 追踪器](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [ERC-721 代币标准](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 代币标准](/developers/docs/standards/tokens/erc-1155/)
-- [热门 NFT 应用程序和工具](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 - [NFT 标准维基](https://nft-standards.gitbook.io/nft-standards-wiki)
-
 ## 其他资源 {#other-resources}
 
 - [NFTScan](https://nftscan.com/)

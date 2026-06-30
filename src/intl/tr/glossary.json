@@ -388,7 +388,7 @@
   "validium-term": "Validium",
   "validium-definition": "İşlem kapasitesini artırmak için <a href=\"/glossary/#validity-proof\">geçerlilik kanıtları</a> kullanan zincir dışı bir çözüm. <a href=\"/glossary/#zk-rollup\">Sıfır bilgi toplamalarının</a> aksine, validium verileri katman 1 Ana Ağ'da depolanmaz. <a href=\"/developers/docs/scaling/validium/\">Validium hakkında daha fazla bilgi</a>.",
   "vyper-term": "Vyper",
-  "vyper-definition": "Python benzeri sözdizimine sahip üst düzey bir programlama dili. Saf bir fonksiyonel dile daha da yaklaşması amaçlanmıştır. Vitalik Buterin tarafından yaratılmıştır. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Vyper hakkında daha fazla bilgi</a>.",
+  "vyper-definition": "Python benzeri sözdizimine sahip üst düzey bir programlama dili. Vitalik Buterin tarafından yaratılmıştır. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Vyper hakkında daha fazla bilgi</a>.",
   "wallet-term": "Cüzdan",
   "wallet-definition": "Cüzdan, çevrimiçi paranız için sanal bir cüzdan gibi, dijital para birimini depolamak, göndermek ve almak için kullanılan dijital bir araçtır. <a href=\"/wallets/\">Ethereum cüzdanları hakkında daha fazla bilgi</a>.",
   "web2-term": "Web2",

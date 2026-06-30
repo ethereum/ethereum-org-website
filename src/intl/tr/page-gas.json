@@ -32,7 +32,7 @@
   "page-gas-attack-of-the-cryptokitties-text": "Kasım 2017'de popüler CryptoKitties projesi başlatıldı. Popülaritesindeki hızlı artış, önemli bir ağ tıkanıklığına ve son derece yüksek gaz ücretlerine neden oldu. CryptoKitties'in ortaya çıkardığı zorluklar, Ethereum'u ölçeklendirmek için çözüm bulma aciliyetini hızlandırdı.",
   "page-gas-why-do-we-need-gas-header": "Neden gaza ihtiyacımız var?",
   "page-gas-why-do-we-need-gas-text": "Gaz, Ethereum'u güvende tutmak ve işlemleri gerçekleştirmek için kritik bir unsurdur. Gaz birçok yönden yardımcı olur:",
-  "page-gas-benefits-1-description": "Gaz, kötü niyetli aktörlerin ağı hileli faaliyetlerle bunaltmasını önleyerek Ethereum'u <a href=\"/glossary/#anti-sybil\">Sybil direncine sahip</a> tutar.",
+  "page-gas-benefits-1-description": "Gaz, kötü niyetli aktörlerin ağı sahte faaliyetlerle aşırı yüklemesini önleyerek Ethereum'un <a href=\"/glossary/#anti-sybil\">Sybil dirençli</a> kalmasını sağlar.",
   "page-gas-benefits-2-description": "Hesaplama gaz maliyeti gerektirdiğinden, Ethereum'u yanlışlıkla veya kötü niyetli olarak pahalı işlemlerle spam'lemek finansal olarak caydırılır.",
   "page-gas-benefits-3-description": "Herhangi bir zamanda yapılabilecek hesaplama miktarına getirilen kesin bir sınır, Ethereum'un bunalmasını önleyerek ağın her zaman erişilebilir olmasını sağlamaya yardımcı olur.",
   "page-gas-how-is-gas-calculated-header": "Gaz nasıl hesaplanır?",

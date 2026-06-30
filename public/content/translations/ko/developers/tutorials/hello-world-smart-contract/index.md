@@ -16,7 +16,7 @@ published: 2021-03-31
 
 블록체인 개발이 처음이라 어디서부터 시작해야 할지 모르거나, 스마트 컨트랙트를 배포하고 상호작용하는 방법을 이해하고 싶다면 이 가이드가 도움이 될 것입니다. 가상 지갑인 [메타마스크](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), 그리고 [Alchemy](https://www.alchemy.com/eth)를 사용하여 Sepolia 테스트 네트워크에 간단한 스마트 컨트랙트를 생성하고 배포하는 과정을 살펴보겠습니다(이 용어들이 아직 무슨 뜻인지 몰라도 걱정하지 마세요. 차근차근 설명해 드릴 것입니다).
 
-이 튜토리얼의 [파트 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract)에서는 스마트 컨트랙트가 배포된 후 상호작용하는 방법을 알아보고, [파트 3](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan)에서는 Etherscan에 게시하는 방법을 다룹니다.
+이 튜토리얼의 [파트 2](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract)에서는 스마트 컨트랙트가 배포된 후 상호작용하는 방법을 알아보고, [파트 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan)에서는 Etherscan에 게시하는 방법을 다룹니다.
 
 진행 중 궁금한 점이 있다면 언제든지 [Alchemy 디스코드](https://discord.gg/gWuC7zB)에 문의해 주세요!
 
@@ -73,13 +73,13 @@ mkdir hello-world
 cd hello-world
 ```
 
-이제 프로젝트 폴더 안에 있으므로 `npm init`를 사용하여 프로젝트를 초기화하겠습니다. 아직 npm이 설치되어 있지 않다면 [이 지침](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm)을 따르세요(Node.js도 필요하므로 함께 다운로드하세요!).
+이제 프로젝트 폴더 안에 있으므로 `npm init`을 사용하여 프로젝트를 초기화하겠습니다. 아직 npm이 설치되어 있지 않다면 [Node.js 설치 지침](https://nodejs.org/en/download/)을 따르세요(이 튜토리얼에서는 Node.js와 npm이 필요합니다).
 
 ```
 npm init
 ```
 
-설치 질문에 어떻게 대답하든 크게 상관없지만, 참고를 위해 저희가 입력한 내용을 보여드립니다.
+설치 질문에 어떻게 대답하든 크게 상관없지만, 참고를 위해 저희가 작성한 내용은 다음과 같습니다.
 
 ```
 package name: (hello-world)
@@ -99,7 +99,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
   "description": "hello world smart contract",
   "main": "index.js",
   "scripts": {
-     "test": "echo \\"Error: no test specified\\" && exit 1"
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
@@ -107,7 +107,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 package.json을 승인하면 준비가 완료됩니다!
-
 ## 7단계: [Hardhat](https://hardhat.org/getting-started/#overview) 다운로드하기 {#step-7}
 
 Hardhat은 이더리움 소프트웨어를 컴파일, 배포, 테스트 및 디버깅하기 위한 개발 환경입니다. 개발자가 라이브 체인에 배포하기 전에 로컬에서 스마트 컨트랙트와 탈중앙화 애플리케이션(dapp)을 구축할 때 도움을 줍니다.
@@ -355,11 +354,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 축하합니다! 방금 이더리움 체인에 스마트 컨트랙트를 배포하셨습니다 🎉
 
-내부적으로 어떤 일이 일어나고 있는지 이해하기 위해 [Alchemy 대시보드](https://dashboard.alchemyapi.io/explorer)의 Explorer 탭으로 이동해 보겠습니다. 여러 개의 Alchemy 앱이 있는 경우 앱별로 필터링하여 "Hello World"를 선택하세요.
+내부적으로 어떤 일이 일어나고 있는지 이해하기 위해 [Alchemy 대시보드](https://dashboard.alchemy.com/explorer)의 Explorer 탭으로 이동해 보겠습니다. 여러 개의 Alchemy 앱이 있는 경우 앱별로 필터링하여 "Hello World"를 선택하세요.
 ![hello world explorer](./hello-world-explorer.png)
 
-여기에서 `.deploy()` 함수를 호출했을 때 Hardhat/Ethers가 내부적으로 수행한 몇 가지 JSON-RPC 호출을 볼 수 있습니다. 여기서 주목해야 할 두 가지 중요한 호출은 실제로 Sepolia 체인에 컨트랙트를 기록하라는 요청인 [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction)와, 해시가 주어졌을 때 트랜잭션에 대한 정보를 읽어오라는 요청인 [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash)입니다(트랜잭션을 보낼 때의 일반적인 패턴입니다). 트랜잭션 전송에 대해 더 자세히 알아보려면 [Web3를 사용하여 트랜잭션을 전송하는 방법](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)에 대한 이 튜토리얼을 확인하세요.
+여기에서 `.deploy()` 함수를 호출했을 때 Hardhat/Ethers가 내부적으로 수행한 몇 가지 JSON-RPC 호출을 볼 수 있습니다. 여기서 주목해야 할 두 가지 중요한 호출은 실제로 Sepolia 체인에 컨트랙트를 기록하라는 요청인 [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)와, 해시가 주어졌을 때 트랜잭션에 대한 정보를 읽어오라는 요청인 [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)입니다(트랜잭션을 보낼 때의 일반적인 패턴입니다). 트랜잭션 전송에 대해 더 자세히 알아보려면 [Web3를 사용하여 트랜잭션을 전송하는 방법](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)에 대한 이 튜토리얼을 확인하세요.
 
-이것으로 이 튜토리얼의 파트 1을 마칩니다. 파트 2에서는 초기 메시지를 업데이트하여 실제로 [스마트 컨트랙트와 상호작용](https://www.alchemy.com/docs/interacting-with-a-smart-contract)해 보고, 파트 3에서는 모든 사람이 상호작용하는 방법을 알 수 있도록 [Etherscan에 스마트 컨트랙트를 게시](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan)해 보겠습니다.
+이것으로 이 튜토리얼의 파트 1을 마칩니다. 파트 2에서는 초기 메시지를 업데이트하여 실제로 [스마트 컨트랙트와 상호작용](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract)해 보고, 파트 3에서는 모든 사람이 상호작용하는 방법을 알 수 있도록 [Etherscan에 스마트 컨트랙트를 게시](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan)해 보겠습니다.
 
 **Alchemy에 대해 더 알고 싶으신가요? 저희 [웹사이트](https://www.alchemy.com/eth)를 확인해 보세요. 업데이트 소식을 놓치고 싶지 않으시다면 [여기](https://www.alchemy.com/newsletter)에서 뉴스레터를 구독하세요! 저희 [디스코드](https://discord.gg/u72VCg3)에도 꼭 참여해 주세요.**

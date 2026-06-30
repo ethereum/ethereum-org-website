@@ -246,7 +246,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` adalah definisi yang diperlukan untuk menggunakan [OpenGSN](https://www.opengsn.org/), sebuah sistem yang memungkinkan pengguna tanpa Ether
+- `GSN/Context.sol` adalah definisi yang diperlukan untuk menggunakan [OpenGSN](https://opengsn.org/), sebuah sistem yang memungkinkan pengguna tanpa Ether
   untuk menggunakan rantai blok. Perhatikan bahwa ini adalah versi lama, jika Anda ingin berintegrasi dengan OpenGSN
   [gunakan tutorial ini](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [Pustaka SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), yang mencegah

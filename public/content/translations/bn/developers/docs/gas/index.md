@@ -134,7 +134,7 @@ _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _ওপেন সোর্স ট্রানজ্যাকশন গ্যাস প্রাইস এস্টিমেটর_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _ট্রানজ্যাকশন ফি কমাতে এবং অর্থ সাশ্রয় করতে ইথেরিয়াম এবং L2 গ্যাস প্রাইস পর্যবেক্ষণ ও ট্র্যাক করুন_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _গ্যাস এস্টিমেটিং ক্রোম এক্সটেনশন যা টাইপ 0 লিগ্যাসি ট্রানজ্যাকশন এবং টাইপ 2 EIP-1559 ট্রানজ্যাকশন উভয়কেই সমর্থন করে।_
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _মেইননেট, আরবিট্রাম এবং পলিগনে বিভিন্ন ট্রানজ্যাকশন প্রকারের জন্য আপনার স্থানীয় মুদ্রায় গ্যাস ফি গণনা করুন।_
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _মেইননেট, আরবিট্রাম এবং পলিগনে বিভিন্ন ট্রানজ্যাকশন প্রকারের জন্য আপনার স্থানীয় মুদ্রায় গ্যাস ফি গণনা করুন।_
 
 ## সম্পর্কিত টুল {#related-tools}
 

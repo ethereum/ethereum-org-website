@@ -1,6 +1,6 @@
 ---
-title: Quyền riêng tư trên Ethereum
-description: Các công cụ và kỹ thuật để bảo vệ quyền riêng tư của bạn trên Ethereum
+title: "Quyền riêng tư trên Ethereum"
+description: "Các công cụ và kỹ thuật để bảo vệ quyền riêng tư của bạn trên Ethereum"
 lang: vi
 ---
 
@@ -93,5 +93,5 @@ Một số dự án đang khám phá quyền riêng tư cho việc chứng minh 
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), một phòng thí nghiệm nghiên cứu và phát triển của Tổ chức Ethereum tập trung vào quyền riêng tư cho hệ sinh thái
 - [Web3PrivacyNow](https://web3privacy.info/), một mạng lưới gồm những người, dự án và các tổ chức liên kết bảo vệ và thúc đẩy nhân quyền trực tuyến
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), một trang web đánh giá ví Ethereum nhằm cung cấp một danh sách toàn diện về các ví, chức năng, thực tiễn và sự hỗ trợ của chúng cho các tiêu chuẩn nhất định.
-- [Zk-kit](https://zkkit.pse.dev/): Một tập hợp các thư viện (thuật toán, hàm tiện ích và cấu trúc dữ liệu) có thể được tái sử dụng trong các dự án và giao thức không tri thức khác nhau.
+- [Zk-kit](https://zkkit.org/): Một tập hợp các thư viện (thuật toán, hàm tiện ích và cấu trúc dữ liệu) có thể được tái sử dụng trong các dự án và giao thức không tri thức khác nhau.
 - [Ứng dụng quyền riêng tư](/apps/categories/privacy/) - Khám phá danh sách các ứng dụng Quyền riêng tư được tuyển chọn chạy trên Ethereum.

@@ -137,5 +137,16 @@
   "page-developers-why-title": "Soyez bien payé. Restez en télétravail. Construisez l'avenir.",
   "page-developers-why-subtitle": "Plus de la moitié des carrières dans la chaîne de blocs sont principalement en télétravail, certaines estimations allant jusqu'à 70 %.",
   "page-developers-why-avg-salary-dev": "Salaire moyen d'un développeur",
-  "page-developers-why-avg-salary-blockchain": "Salaire moyen dans l'industrie de la chaîne de blocs"
+  "page-developers-why-avg-salary-blockchain": "Salaire moyen dans l'industrie de la chaîne de blocs",
+  "page-developers-why-grid-money-heading": "De l'argent que vous pouvez programmer",
+  "page-developers-why-grid-money-desc": "Écrivez du code qui définit comment la valeur se déplace, quand et vers qui. Pas de banques, pas d'intermédiaires, juste la logique que vous définissez.",
+  "page-developers-why-grid-skills-heading": "Des compétences d'avenir",
+  "page-developers-why-grid-skills-desc": "Apprenez les bases du prochain Internet. La technologie peut évoluer, mais les principes du Web3 sont là pour durer.",
+  "page-developers-why-grid-censorship-heading": "Résistance à la censure",
+  "page-developers-why-grid-censorship-desc": "Construisez des projets et des commerces qui ne peuvent pas être réduits au silence par les gouvernements, les entreprises ou les algorithmes. Si c'est important, cela reste en ligne.",
+  "page-developers-why-grid-sovereignty-heading": "Souveraineté numérique",
+  "page-developers-why-grid-sovereignty-desc": "Possédez votre identité, vos actifs et vos créations en ligne sans dépendre de plateformes qui peuvent vous supprimer.",
+  "page-developers-blog-title": "Mises à jour pour les constructeurs",
+  "page-developers-blog-desc": "Aperçus des dernières ressources, outils et développements pour les constructeurs Ethereum.",
+  "page-developers-blog-view-all": "Voir toutes les mises à jour"
 }

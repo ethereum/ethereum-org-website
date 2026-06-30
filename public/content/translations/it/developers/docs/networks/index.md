@@ -40,7 +40,7 @@ Le due testnet pubbliche che gli sviluppatori di client stanno attualmente mante
 
 **Sepolia è la testnet predefinita consigliata per lo sviluppo di applicazioni**. La rete Sepolia utilizza un set di validatori autorizzato controllato dai team dei client e di test.
 
-##### Risorse
+##### Risorse {#} {#} {#} {#} {#}
 
 - [Sito web](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Le due testnet pubbliche che gli sviluppatori di client stanno attualmente mante
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucet
+##### Faucet {#} {#} {#} {#}
 
 - [Faucet di Sepolia di Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet di Sepolia di Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)

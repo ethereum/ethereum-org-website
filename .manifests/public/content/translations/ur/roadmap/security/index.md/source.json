@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/security/index.md",
-  "generatedAt": "2026-06-19T23:46:01.307Z",
-  "rootHash": "3eabc09f2620",
+  "generatedAt": "2026-06-30T00:53:02.776Z",
+  "rootHash": "bb610e177a44",
   "tree": {
     "contentHash": "42c80655e842",
-    "anchorHash": "9344a56e9f43",
+    "anchorHash": "cd6ef233f5c4",
     "children": {
       "frontmatter:title": {
         "contentHash": "9edb4b0e87b0",
@@ -77,7 +77,7 @@
       },
       "staking-withdrawals": {
         "contentHash": "4b7c75c02487",
-        "anchorHash": "761fb7fc6972",
+        "anchorHash": "e1e0a07c0497",
         "labelHash": "815840a47399",
         "children": {
           "_label": {
@@ -98,7 +98,7 @@
           },
           "html-tag:1": {
             "contentHash": "e1275de271ba",
-            "anchorHash": "6c0b0b5470df"
+            "anchorHash": "7044ddbad49f"
           }
         },
         "childrenOrder": [
@@ -111,7 +111,7 @@
       },
       "defending-against-attacks": {
         "contentHash": "f46e5abb1966",
-        "anchorHash": "009de15aa30c",
+        "anchorHash": "e4a36d99a5d7",
         "labelHash": "f03bb925278f",
         "children": {
           "_label": {
@@ -156,7 +156,7 @@
           },
           "html-tag:4": {
             "contentHash": "2ee79576a1b8",
-            "anchorHash": "0579807eeebd"
+            "anchorHash": "16f1d9af5d1e"
           }
         },
         "childrenOrder": [
@@ -175,7 +175,7 @@
       },
       "defending-against-censorship": {
         "contentHash": "79d2f2d39bea",
-        "anchorHash": "f9a14eb1b8cd",
+        "anchorHash": "02c0194eda00",
         "labelHash": "103ae8f37e02",
         "children": {
           "_label": {
@@ -212,7 +212,7 @@
           },
           "html-tag:3": {
             "contentHash": "e0ef53b07154",
-            "anchorHash": "0c70e74e2288"
+            "anchorHash": "07cae2094bbc"
           },
           "prose:9": {
             "contentHash": "b43480baa020",
@@ -220,7 +220,7 @@
           },
           "html-tag:4": {
             "contentHash": "f7001753728f",
-            "anchorHash": "448b08ab7898"
+            "anchorHash": "ca0c156bfe6c"
           }
         },
         "childrenOrder": [
@@ -239,7 +239,7 @@
       },
       "protecting-validators": {
         "contentHash": "5d24ae193377",
-        "anchorHash": "07ff835da764",
+        "anchorHash": "691565decc42",
         "labelHash": "a90e3935cfba",
         "children": {
           "_label": {
@@ -260,7 +260,7 @@
           },
           "html-tag:1": {
             "contentHash": "b137f14d7544",
-            "anchorHash": "42f2c05adf72"
+            "anchorHash": "b9f7851a42dd"
           }
         },
         "childrenOrder": [
@@ -316,5 +316,5 @@
       "current-progress"
     ]
   },
-  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

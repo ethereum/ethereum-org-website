@@ -11,7 +11,7 @@ published: 2021-03-31
 
 Jika Anda baru dalam pengembangan rantai blok dan tidak tahu harus mulai dari mana, atau jika Anda hanya ingin memahami cara menyebarkan dan berinteraksi dengan kontrak pintar, panduan ini cocok untuk Anda. Kami akan memandu Anda membuat dan menyebarkan kontrak pintar sederhana di jaringan pengujian Sepolia menggunakan dompet virtual [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), dan [Alchemy](https://www.alchemy.com/eth) (jangan khawatir jika Anda belum memahami arti dari semua ini, kami akan menjelaskannya).
 
-Pada [bagian 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) dari tutorial ini, kita akan membahas cara berinteraksi dengan kontrak pintar kita setelah disebarkan di sini, dan pada [bagian 3](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) kita akan membahas cara memublikasikannya di Etherscan.
+Pada [bagian 2](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) dari tutorial ini, kita akan membahas cara berinteraksi dengan kontrak pintar kita setelah disebarkan di sini, dan pada [bagian 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) kita akan membahas cara memublikasikannya di Etherscan.
 
 Jika Anda memiliki pertanyaan kapan saja, jangan ragu untuk menghubungi kami di [Discord Alchemy](https://discord.gg/gWuC7zB)!
 
@@ -68,7 +68,7 @@ mkdir hello-world
 cd hello-world
 ```
 
-Sekarang setelah kita berada di dalam folder proyek kita, kita akan menggunakan `npm init` untuk menginisialisasi proyek. Jika Anda belum menginstal npm, ikuti [instruksi ini](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (kita juga akan membutuhkan Node.js jadi unduh juga!).
+Sekarang setelah kita berada di dalam folder proyek kita, kita akan menggunakan `npm init` untuk menginisialisasi proyek. Jika Anda belum menginstal npm, ikuti [instruksi instalasi Node.js](https://nodejs.org/en/download/) (kita akan membutuhkan Node.js dan npm untuk tutorial ini).
 
 ```
 npm init
@@ -94,7 +94,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
   "description": "hello world smart contract",
   "main": "index.js",
   "scripts": {
-     "test": "echo \\"Error: no test specified\\" && exit 1"
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
@@ -102,7 +102,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 Setujui package.json dan kita siap untuk melanjutkan!
-
 ## Langkah 7: Unduh [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
 Hardhat adalah lingkungan pengembangan untuk mengompilasi, menyebarkan, menguji, dan men-debug perangkat lunak Ethereum Anda. Ini membantu pengembang saat membangun kontrak pintar dan aplikasi terdesentralisasi (dapp) secara lokal sebelum menyebarkannya ke rantai langsung.
@@ -350,12 +349,12 @@ Alamat `From` harus cocok dengan alamat akun MetaMask Anda dan alamat To akan me
 
 Selamat! Anda baru saja menyebarkan kontrak pintar ke rantai Ethereum 🎉
 
-Untuk memahami apa yang terjadi secara teknis, mari arahkan ke tab Explorer di [dasbor Alchemy](https://dashboard.alchemyapi.io/explorer) kita. Jika Anda memiliki beberapa aplikasi Alchemy, pastikan untuk memfilter berdasarkan aplikasi dan pilih "Hello World".
+Untuk memahami apa yang terjadi secara teknis, mari arahkan ke tab Explorer di [dasbor Alchemy](https://dashboard.alchemy.com/explorer) kita. Jika Anda memiliki beberapa aplikasi Alchemy, pastikan untuk memfilter berdasarkan aplikasi dan pilih "Hello World".
 ![hello world explorer](./hello-world-explorer.png)
 
-Di sini Anda akan melihat beberapa panggilan JSON-RPC yang dilakukan Hardhat/Ethers secara teknis untuk kita saat kita memanggil fungsi `.deploy()`. Dua hal penting yang perlu diperhatikan di sini adalah [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction), yang merupakan permintaan untuk benar-benar menulis kontrak kita ke rantai Sepolia, dan [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash) yang merupakan permintaan untuk membaca informasi tentang transaksi kita berdasarkan hash (pola umum saat
+Di sini Anda akan melihat beberapa panggilan JSON-RPC yang dilakukan Hardhat/Ethers secara teknis untuk kita saat kita memanggil fungsi `.deploy()`. Dua hal penting yang perlu diperhatikan di sini adalah [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), yang merupakan permintaan untuk benar-benar menulis kontrak kita ke rantai Sepolia, dan [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash) yang merupakan permintaan untuk membaca informasi tentang transaksi kita berdasarkan hash (pola umum saat
 transaksi). Untuk mempelajari lebih lanjut tentang pengiriman transaksi, lihat tutorial ini tentang [pengiriman transaksi menggunakan Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 
-Sekian untuk bagian 1 dari tutorial ini, di bagian 2 kita akan benar-benar [berinteraksi dengan kontrak pintar kita](https://www.alchemy.com/docs/interacting-with-a-smart-contract) dengan memperbarui pesan awal kita, dan di bagian 3 kita akan [memublikasikan kontrak pintar kita ke Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) sehingga semua orang akan tahu cara berinteraksi dengannya.
+Sekian untuk bagian 1 dari tutorial ini, di bagian 2 kita akan benar-benar [berinteraksi dengan kontrak pintar kita](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) dengan memperbarui pesan awal kita, dan di bagian 3 kita akan [memublikasikan kontrak pintar kita ke Etherscan](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) sehingga semua orang akan tahu cara berinteraksi dengannya.
 
 **Ingin mempelajari lebih lanjut tentang Alchemy? Kunjungi [situs web](https://www.alchemy.com/eth) kami. Tidak ingin ketinggalan pembaruan? Berlangganan buletin kami [di sini](https://www.alchemy.com/newsletter)! Pastikan juga untuk bergabung dengan [Discord](https://discord.gg/u72VCg3) kami.**.

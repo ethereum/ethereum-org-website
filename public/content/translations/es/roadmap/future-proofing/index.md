@@ -46,15 +46,14 @@ El trabajo activo incluye:
 - **zkVM mínima (leanVM)**: Debido a que las firmas seguras contra ataques cuánticos son más grandes que las firmas utilizadas actualmente, leanXMSS se combina con una zkVM mínima (leanVM). Este motor agrega firmas seguras contra ataques cuánticos de manera eficiente, comprimiendo los datos 250 veces, para que la red siga siendo rápida después de la transición.
 - **Pruebas de interoperabilidad semanales**: Más de 10 equipos de clientes participan en redes de desarrollo (devnets) poscuánticas regulares.
 - **Disponibilidad de datos:** Actualizar la criptografía subyacente utilizada para manejar grandes cantidades de datos de la red garantizará que Ethereum siga siendo rápido y asequible de usar sin arriesgar futuras vulnerabilidades cuánticas.
-- **Premio Poseidón**: Un premio de investigación de 1 millón de dólares dirigido a mejoras en primitivas criptográficas basadas en hash.
+- **Premio Poseidon**: Un premio de investigación de 1 millón de dólares dirigido a mejoras en las primitivas criptográficas basadas en hash.
 - **Estándares del NIST**: El Instituto Nacional de Estándares y Tecnología de EE. UU. finalizó tres estándares de criptografía poscuántica en agosto de 2024 (ML-KEM, ML-DSA, SLH-DSA). El trabajo de Ethereum se basa en estos cimientos.
 
-Una parte clave de la estrategia de transición es la **EIP-8141**, que introduce la [abstracción de cuentas](/roadmap/account-abstraction/) nativa. Esto permite que las cuentas individuales elijan su propia verificación de firma, lo que significa que los usuarios podrían cambiar a firmas seguras contra ataques cuánticos **sin esperar a una única migración en todo el protocolo**. La EIP-8141 se está considerando para la bifurcación dura Hegotá (planeada para la segunda mitad de 2026).
+Una parte clave de la estrategia de transición es la **EIP-8141**, que introduce la [abstracción de cuentas](/roadmap/account-abstraction/) nativa. Esto permite a las cuentas individuales elegir su propia verificación de firma, lo que significa que los usuarios podrían cambiar a firmas seguras contra ataques cuánticos **sin esperar una única migración en todo el protocolo**. La EIP-8141 se está considerando para la bifurcación dura Hegotá (planeada para la segunda mitad de 2026).
 
 La Fundación Ethereum ha delineado hitos estructurados de bifurcación con el objetivo de completar la infraestructura poscuántica central para aproximadamente 2029. Estos son objetivos de planificación, no compromisos garantizados.
 
-[Lea nuestra guía detallada sobre criptografía poscuántica en Ethereum](/roadmap/future-proofing/quantum-resistance/)
-
+<ButtonLink variant="outline" href="/roadmap/future-proofing/quantum-resistance/">Más sobre la resistencia cuántica</ButtonLink>
 ## Un Ethereum más simple y eficiente {#simpler-more-efficient-ethereum}
 
 La complejidad crea oportunidades para errores y vulnerabilidades. Parte de la hoja de ruta se centra en **simplificar Ethereum y eliminar la deuda técnica** para que el protocolo sea más fácil de mantener, auditar y analizar.

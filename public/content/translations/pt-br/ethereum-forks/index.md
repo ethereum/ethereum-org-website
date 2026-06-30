@@ -1,6 +1,6 @@
 ---
-title: Linha do tempo de todos os forks do Ethereum (2014 até o presente)
-description: Um histórico da blockchain Ethereum, incluindo os principais marcos, lançamentos e forks.
+title: "Linha do tempo de todos os forks do Ethereum (2014 até o presente)"
+description: "Um histórico da blockchain Ethereum, incluindo os principais marcos, lançamentos e forks."
 lang: pt-br
 sidebarDepth: 1
 authors: ["Nixo"]
@@ -90,21 +90,21 @@ Procurando por futuras atualizações do protocolo? [Saiba mais sobre as próxim
 
 <NetworkUpgradeSummary name="pectra" />
 
-A atualização Prague-Electra ("Pectra") incluiu várias melhorias no protocolo Ethereum com o objetivo de aprimorar a experiência para todos os usuários, redes de camada 2 (l2), stakers e operadores de nó.
+A atualização Prague-Electra ("Pectra") incluiu várias melhorias no protocolo Ethereum com o objetivo de aprimorar a experiência para todos os usuários, redes da camada 2 (l2), stakers e operadores de nó.
 
-O staking recebeu uma atualização com contas de validador com rendimento composto e controle aprimorado sobre os fundos em staking usando o endereço de saque de execução. A EIP-7251 aumentou o saldo efetivo máximo para um único validador para 2048, melhorando a eficiência de capital para os stakers. A EIP-7002 permitiu que uma conta de execução acionasse com segurança ações do validador, incluindo a saída ou o saque de partes dos fundos, melhorando a experiência para os stakers de ETH, ao mesmo tempo em que ajuda a fortalecer a responsabilidade dos operadores de nó.
+O staking recebeu uma atualização com contas de validador com composição de rendimentos e melhor controle sobre os fundos em staking usando o endereço de saque de execução. A EIP-7251 aumentou o saldo efetivo máximo para um único validador para 2048, melhorando a eficiência de capital para os stakers. A EIP-7002 permitiu que uma conta de execução acionasse com segurança ações do validador, incluindo a saída ou o saque de partes dos fundos, melhorando a experiência para os stakers de ETH, ao mesmo tempo em que ajuda a fortalecer a responsabilidade dos operadores de nó.
 
 Outras partes da atualização se concentraram em melhorar a experiência para usuários comuns. A EIP-7702 trouxe a capacidade para uma conta comum que não é de contrato inteligente ([EOA](/glossary/#eoa)) executar código semelhante a um contrato inteligente. Isso desbloqueou novas funcionalidades ilimitadas para contas tradicionais do Ethereum, como processamento em lote de transações, patrocínio de gás, autenticação alternativa, controles de gastos programáveis, mecanismos de recuperação de conta e muito mais.
 
-<ExpandableCard title="EIPs da Pectra" contentPreview="Melhorias oficiais incluídas nesta atualização.">
+<ExpandableCard title="EIPs de Pectra" contentPreview="Melhorias oficiais incluídas nesta atualização.">
 
 Melhor experiência do usuário:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>Definir código de conta EOA</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>Aumento da vazão de blob</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>Aumentar o custo de dados de chamada</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>Adicionar cronograma de blob aos arquivos de configuração da camada de execução</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>Aumentar o custo dos dados de chamada</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>Adicionar cronograma de blob aos arquivos de configuração da EL</em></li>
 </ul>
 
 Melhor experiência de staking:
@@ -112,24 +112,23 @@ Melhor experiência de staking:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>Aumentar o <code>MAX_EFFECTIVE_BALANCE</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>Saídas acionáveis pela camada de execução</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>Solicitações de camada de execução de uso geral</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>Solicitações de uso geral da camada de execução</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Fornecer depósitos de validador onchain</em></li>
 </ul>
 
-Melhorias de eficiência e segurança do protocolo:
+Melhorias na eficiência e segurança do protocolo:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>Pré-compilado para operações de curva BLS12-381</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Salvar hashes de blocos históricos no estado</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Mover o índice do comitê para fora da atestação</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Mover o índice do comitê para fora da Atestação</em></li>
 </ul>
 
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
 - [Como a Pectra aprimorará a experiência de staking](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Leia as especificações da atualização Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
-- [Perguntas frequentes sobre a Prague-Electra ("Pectra")](/roadmap/pectra/)
+- [Perguntas frequentes sobre Prague-Electra ("Pectra")](/roadmap/pectra/)
 
 <Divider />
 

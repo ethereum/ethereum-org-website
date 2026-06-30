@@ -137,5 +137,16 @@
   "page-developers-why-title": "Thu nhập tốt. Làm việc từ xa. Xây dựng tương lai.",
   "page-developers-why-subtitle": "Hơn một nửa số công việc trong lĩnh vực chuỗi khối ưu tiên làm việc từ xa, với một số ước tính đưa ra con số lên tới 70%.",
   "page-developers-why-avg-salary-dev": "Mức lương trung bình của nhà phát triển",
-  "page-developers-why-avg-salary-blockchain": "Mức lương trung bình trong ngành chuỗi khối"
+  "page-developers-why-avg-salary-blockchain": "Mức lương trung bình trong ngành chuỗi khối",
+  "page-developers-why-grid-money-heading": "Tiền có thể lập trình",
+  "page-developers-why-grid-money-desc": "Viết mã code xác định cách giá trị di chuyển, khi nào và cho ai. Không có ngân hàng, không có trung gian, chỉ có logic do bạn xác định.",
+  "page-developers-why-grid-skills-heading": "Kỹ năng đón đầu tương lai",
+  "page-developers-why-grid-skills-desc": "Tìm hiểu các thành phần cơ bản của thế hệ internet tiếp theo. Công nghệ có thể tiến hóa, nhưng các nguyên tắc của Web3 sẽ luôn tồn tại.",
+  "page-developers-why-grid-censorship-heading": "Khả năng chống kiểm duyệt",
+  "page-developers-why-grid-censorship-desc": "Xây dựng các dự án và nền thương mại không thể bị chính phủ, tập đoàn hoặc thuật toán ngăn chặn. Nếu điều đó quan trọng, nó sẽ luôn trực tuyến.",
+  "page-developers-why-grid-sovereignty-heading": "Chủ quyền kỹ thuật số",
+  "page-developers-why-grid-sovereignty-desc": "Sở hữu danh tính, tài sản và các tác phẩm trực tuyến của bạn mà không phải phụ thuộc vào các nền tảng có thể xóa bỏ bạn.",
+  "page-developers-blog-title": "Cập nhật dành cho trình xây dựng",
+  "page-developers-blog-desc": "Thông tin chi tiết về các tài nguyên, công cụ và sự phát triển mới nhất dành cho trình xây dựng Ethereum.",
+  "page-developers-blog-view-all": "Xem tất cả cập nhật"
 }

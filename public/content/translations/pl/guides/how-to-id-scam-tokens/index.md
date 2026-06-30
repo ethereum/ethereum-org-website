@@ -1,6 +1,6 @@
 ---
-title: Jak rozpoznać fałszywe tokeny
-description: Zrozumienie fałszywych tokenów, jak udają one legalne i jak ich unikać.
+title: "Jak rozpoznać fałszywe tokeny"
+description: "Zrozumienie fałszywych tokenów, jak udają one legalne i jak ich unikać."
 lang: pl
 ---
 
@@ -14,7 +14,7 @@ Istnieją dwa główne sposoby, na jakie mogą próbować Cię oszukać:
 Aby zilustrować, czym są fałszywe tokeny i jak je rozpoznać, przyjrzymy się przykładowi jednego z nich: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Ten token próbuje wyglądać jak legalny token [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
-title="What is ARB?"
+title="Czym jest ARB?"
 contentPreview=''>
 
 Arbitrum to organizacja, która rozwija i zarządza [optymistycznymi rollupami](/developers/docs/scaling/optimistic-rollups/). Początkowo Arbitrum było zorganizowane jako firma nastawiona na zysk, ale następnie podjęło kroki w celu decentralizacji. W ramach tego procesu wyemitowano zbywalny [token zarządzania](/dao/#token-based-membership).
@@ -22,7 +22,7 @@ Arbitrum to organizacja, która rozwija i zarządza [optymistycznymi rollupami](
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Dlaczego fałszywy token nazywa się wARB?"
 contentPreview=''>
 
 W Ethereum istnieje konwencja, że gdy aktywo nie jest zgodne ze standardem ERC-20, tworzymy jego „opakowaną” wersję z nazwą zaczynającą się od „w”. Tak więc, na przykład, mamy wBTC dla bitcoina i <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH dla etheru</a>.
@@ -36,7 +36,7 @@ Nie ma sensu tworzyć opakowanej wersji tokena ERC-20, który jest już na Ether
 Cały sens Ethereum polega na decentralizacji. Oznacza to, że nie ma centralnego organu, który mógłby skonfiskować Twoje aktywa lub uniemożliwić Ci wdrożenie inteligentnego kontraktu. Oznacza to jednak również, że oszuści mogą wdrożyć dowolny inteligentny kontrakt, jaki tylko zechcą.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Czym są inteligentne kontrakty?"
 contentPreview=''>
 
 [Inteligentne kontrakty](/developers/docs/smart-contracts/) to programy działające na blockchainie Ethereum. Każdy token ERC-20, na przykład, jest zaimplementowany jako inteligentny kontrakt.

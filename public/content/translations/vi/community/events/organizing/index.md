@@ -1,7 +1,7 @@
 ---
-title: Cách tổ chức một sự kiện Ethereum
-metaTitle: Tổ chức một sự kiện Ethereum
-description: Cách tổ chức một sự kiện Ethereum
+title: "Cách tổ chức một sự kiện Ethereum"
+metaTitle: "Tổ chức một sự kiện Ethereum"
+description: "Cách tổ chức một sự kiện Ethereum"
 lang: vi
 hideEditButton: true
 ---
@@ -204,16 +204,12 @@ Chìa khóa là giữ cho động lực luôn tồn tại. Tiếp tục tương 
 
 Xin gửi lời cảm ơn chân thành đến tất cả những người đã đóng góp cho bài viết này bằng cách chia sẻ những hiểu biết của họ: Slavo Fabisik từ ETHBratislava; Lola từ ETH Kipu và ETH Latam; Tanja Mladenovic từ ETH Belgrade, Juan David từ Ethereum Bogota; Monika Zając từ ETHWarsaw; Raffaele Orefice từ NapulETH; Xiao Wu(Ling) từ ETH Riyadh; Marco từ urbe.eth; Caolán Walsh từ ETH Dublin; Alex Males từ ETHCluj; và Stanko Devic từ ETH Slovenia.
 
-## Tài nguyên {#resources}
-
 Podcast: Cách tổ chức và quảng bá một sự kiện ETH từ A-Z:
 
-- [Nghiên cứu điển hình về ETHWarsaw, bởi Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [Nghiên cứu tình huống ETHWarsaw, bởi Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 Twitter space:
 
-- [AMA Cộng đồng ETH](https://x.com/NapulETH/status/1905732699094151623)
+- [AMA của cộng đồng ETH](https://x.com/NapulETH/status/1905732699094151623)
 
 Bài viết:
-
-- [Xây dựng ETHKL, bởi Danny H.](https://sekto.tech/ethkl24)

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/how-to-write-and-deploy-an-nft/index.md",
-  "generatedAt": "2026-06-18T00:10:13.183Z",
-  "rootHash": "2b00fe7982a8",
+  "generatedAt": "2026-06-30T00:45:10.172Z",
+  "rootHash": "afb7cb50184b",
   "tree": {
-    "contentHash": "060f10639d77",
-    "anchorHash": "cfc4fcb48afc",
+    "contentHash": "1fb7b4462f64",
+    "anchorHash": "004cc8728db2",
     "children": {
       "frontmatter:title": {
         "contentHash": "c1c31fe6c863",
@@ -93,7 +93,7 @@
       },
       "link:6": {
         "contentHash": "bfad8ecb0342",
-        "anchorHash": "f611c06109e1"
+        "anchorHash": "2b747c6809ee"
       },
       "prose:14": {
         "contentHash": "bb7208bc9b5d",
@@ -140,7 +140,7 @@
       },
       "make-api-key": {
         "contentHash": "a452da5a57b9",
-        "anchorHash": "260471b39440",
+        "anchorHash": "0e3fa48861d8",
         "labelHash": "7fa8197dbcb7",
         "children": {
           "_label": {
@@ -153,7 +153,7 @@
           },
           "link:0": {
             "contentHash": "0a3bba7069c0",
-            "anchorHash": "2e6469bb5a96"
+            "anchorHash": "2cb4dac3eb07"
           },
           "prose:4": {
             "contentHash": "119e1449e340",
@@ -261,8 +261,8 @@
         ]
       },
       "check-balance": {
-        "contentHash": "02b35cfc4ef9",
-        "anchorHash": "c93088351143",
+        "contentHash": "eee1a6bea099",
+        "anchorHash": "44dc4db4de1d",
         "labelHash": "e41f67969740",
         "children": {
           "_label": {
@@ -275,15 +275,15 @@
           },
           "link:0": {
             "contentHash": "633f5d8e09c6",
-            "anchorHash": "9094876f7e9a"
+            "anchorHash": "19974bdfcc7b"
           },
           "prose:4": {
             "contentHash": "5ed0a3f4758f",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
-            "contentHash": "dc12fc59041e",
-            "anchorHash": "1c7763a93a8e"
+            "contentHash": "269ad565a9d3",
+            "anchorHash": "72f0fc3dfc92"
           },
           "prose:5": {
             "contentHash": "c087aa9b1bf3",
@@ -310,35 +310,27 @@
         ]
       },
       "initialize-project": {
-        "contentHash": "c0dfbdbd52c3",
-        "anchorHash": "f48517639d24",
+        "contentHash": "f37cd300ee06",
+        "anchorHash": "7939a63a8ba7",
         "labelHash": "b1c3d2d5796c",
         "children": {
           "_label": {
             "contentHash": "b1c3d2d5796c",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:2": {
+          "prose:1": {
             "contentHash": "3204442d2e42",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "7cb212791b2b",
-            "anchorHash": "5b28cf787d9a"
-          },
-          "prose:3": {
-            "contentHash": "7bc6801ac4aa",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:1": {
-            "contentHash": "1fc0c785332e",
+            "contentHash": "4a5face54e26",
             "anchorHash": "6f1666522a9e"
           },
-          "prose:4": {
-            "contentHash": "d52d487da867",
+          "prose:2": {
+            "contentHash": "2fe2368097af",
             "anchorHash": "e3b0c44298fc"
           },
-          "code-fence:6": {
+          "code-fence:4": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "74e92ccc0637"
           },
@@ -349,12 +341,10 @@
         },
         "childrenOrder": [
           "_label",
-          "prose:2",
+          "prose:1",
           "link:0",
-          "prose:3",
-          "link:1",
-          "prose:4",
-          "code-fence:6",
+          "prose:2",
+          "code-fence:4",
           "prose:0"
         ]
       },
@@ -838,7 +828,7 @@
       },
       "deploy-contract": {
         "contentHash": "d27024ea54ec",
-        "anchorHash": "bbfc9bc012ba",
+        "anchorHash": "6b9ebf88a2f7",
         "labelHash": "1a3185ef12f2",
         "children": {
           "_label": {
@@ -875,7 +865,7 @@
           },
           "link:3": {
             "contentHash": "88639368f8fc",
-            "anchorHash": "b806af7bf126"
+            "anchorHash": "4198c4d7a2fd"
           },
           "prose:14": {
             "contentHash": "c8e86709c1fd",
@@ -998,5 +988,5 @@
       "deploy-contract"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

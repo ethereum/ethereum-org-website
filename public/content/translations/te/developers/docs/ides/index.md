@@ -59,6 +59,6 @@ lang: te
 
 ## మరింత చదవడానికి {#further-reading}
 
-- [ఎథీరియం IDEలు](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy వారి ఎథీరియం IDEల జాబితా_
+- [ఎథీరియం IDEలు](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Alchemy వారి ఎథీరియం IDEల జాబితా_
 
 _మీకు సహాయపడిన కమ్యూనిటీ వనరు గురించి తెలుసా? ఈ పేజీని సవరించి, దాన్ని జోడించండి!_

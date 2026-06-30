@@ -40,7 +40,7 @@ Dua testnet publik yang saat ini dikelola oleh pengembang klien adalah Sepolia d
 
 **Sepolia adalah testnet default yang direkomendasikan untuk pengembangan aplikasi**. Jaringan Sepolia menggunakan set validator berizin yang dikendalikan oleh tim klien & pengujian.
 
-##### Sumber Daya
+##### Sumber Daya {#} {#} {#} {#} {#}
 
 - [Situs Web](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Dua testnet publik yang saat ini dikelola oleh pengembang klien adalah Sepolia d
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucet
+##### Faucet {#} {#} {#} {#}
 
 - [Faucet Sepolia Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet Sepolia Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)

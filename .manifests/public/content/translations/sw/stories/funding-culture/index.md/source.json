@@ -1,0 +1,376 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/stories/funding-culture/index.md",
+  "generatedAt": "2026-06-30T00:58:45.709Z",
+  "rootHash": "643d4e12b501",
+  "tree": {
+    "contentHash": "2be76f9b560f",
+    "anchorHash": "28168e609927",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "66644dd2f720",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "4e4094a17190",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1ccdf41c405b"
+      },
+      "frontmatter:team": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "392e334c8b6b"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1b43ad116a80"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "38c40bdd7656"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e483d657d849"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "0570de5b7f0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "141635f29454",
+        "anchorHash": "ab2202232b77"
+      },
+      "prose:2": {
+        "contentHash": "334c7f2cffeb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "journey-to-disruption": {
+        "contentHash": "4ed5f11c73da",
+        "anchorHash": "f57f74f27349",
+        "labelHash": "de57fca3b79a",
+        "children": {
+          "_label": {
+            "contentHash": "de57fca3b79a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "34ac52ba7f33",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "aa3ff76e5077",
+            "anchorHash": "13c7f6db1f2c"
+          },
+          "prose:3": {
+            "contentHash": "e94f6de172ee",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "bf7c0314a755",
+            "anchorHash": "3dd07f05de11"
+          },
+          "prose:4": {
+            "contentHash": "1e39b91e96f5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:6": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "5d73c7616975",
+            "children": {
+              "attr:id": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d916cc4c5b37"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "image:0",
+          "prose:3",
+          "link:1",
+          "prose:4",
+          "component:6"
+        ]
+      },
+      "pleasrdao-and-the-rise-of-collective-ownership": {
+        "contentHash": "0328309310c4",
+        "anchorHash": "37472ddbaafb",
+        "labelHash": "1995b3a0ee43",
+        "children": {
+          "_label": {
+            "contentHash": "1995b3a0ee43",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "7fbbe8821707",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ad2e66ce7d91",
+            "anchorHash": "325888a882df"
+          },
+          "prose:5": {
+            "contentHash": "0e90d2226d82",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:1": {
+            "contentHash": "6ce7f52f00a2",
+            "anchorHash": "720bd1d71073"
+          },
+          "prose:6": {
+            "contentHash": "7d1eabd0fd14",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "a35a8b117620",
+            "anchorHash": "d999f4a5a243"
+          },
+          "prose:7": {
+            "contentHash": "615dd25758e4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:3": {
+            "contentHash": "0d08f809871c",
+            "anchorHash": "810d03374f15"
+          },
+          "prose:8": {
+            "contentHash": "7a309eac5bf2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "image:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "image:3",
+          "prose:8"
+        ]
+      },
+      "building-a-studio-without-gatekeepers": {
+        "contentHash": "3ded15ba540c",
+        "anchorHash": "93c8309f44e8",
+        "labelHash": "1a256eb6bc08",
+        "children": {
+          "_label": {
+            "contentHash": "1a256eb6bc08",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "6e24c28c8b9d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ec91fce2d339",
+            "anchorHash": "f6a535b07d7c"
+          },
+          "prose:7": {
+            "contentHash": "0695b563acde",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d3e6264d7a85",
+            "anchorHash": "cb79196a0a3e"
+          },
+          "prose:8": {
+            "contentHash": "754b6f5c47a9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "e0326baa7f81",
+            "anchorHash": "1884c00b49b4"
+          },
+          "prose:9": {
+            "contentHash": "6a332b2dc7a4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:3": {
+            "contentHash": "baf5e3076efc",
+            "anchorHash": "c66b37e15d2e"
+          },
+          "prose:10": {
+            "contentHash": "220d5a242d3e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:4": {
+            "contentHash": "4989ed202d92",
+            "anchorHash": "0ab25c9d6646"
+          },
+          "prose:11": {
+            "contentHash": "53d861f9079b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:5": {
+            "contentHash": "5a1016ef801f",
+            "anchorHash": "0b6de072b29f"
+          },
+          "prose:12": {
+            "contentHash": "82b75317a75d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "image:3",
+          "prose:10",
+          "image:4",
+          "prose:11",
+          "image:5",
+          "prose:12"
+        ]
+      },
+      "white-rabbit-when-ethereum-stories-move-culture": {
+        "contentHash": "6cbf7dcbd4ad",
+        "anchorHash": "ddc11be8eff1",
+        "labelHash": "77c579eec0b8",
+        "children": {
+          "_label": {
+            "contentHash": "77c579eec0b8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "997eed82366d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "6381c8e15fbf",
+            "anchorHash": "8734158e5c7d"
+          },
+          "prose:4": {
+            "contentHash": "ffd46a610c45",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:1": {
+            "contentHash": "e923a7762cca",
+            "anchorHash": "07b89e1bbc7b"
+          },
+          "prose:5": {
+            "contentHash": "22f6eef5de1b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "3c0839c291ca",
+            "anchorHash": "f6a535b07d7c"
+          },
+          "prose:6": {
+            "contentHash": "df6560d65e50",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:8": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "dd2f43a6137a",
+            "children": {
+              "attr:id": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "679791c558ab"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "image:1",
+          "prose:5",
+          "link:2",
+          "prose:6",
+          "component:8"
+        ]
+      },
+      "proving-the-system-works": {
+        "contentHash": "43644970532d",
+        "anchorHash": "a8ae8b70233f",
+        "labelHash": "cac0e65926c4",
+        "children": {
+          "_label": {
+            "contentHash": "cac0e65926c4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "0a7eb2cd1ebc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "69a7a87091c7",
+            "anchorHash": "02a8a4b5b7fa"
+          },
+          "component:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:4": {
+            "contentHash": "10a37493d523",
+            "anchorHash": "aa906f880689",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d1d1f4395a5a"
+              },
+              "prose:0": {
+                "contentHash": "d49aef4dbc76",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0",
+          "component:3",
+          "component:4"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:team",
+      "frontmatter:tags",
+      "frontmatter:published",
+      "frontmatter:image",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "journey-to-disruption",
+      "pleasrdao-and-the-rise-of-collective-ownership",
+      "building-a-studio-without-gatekeepers",
+      "white-rabbit-when-ethereum-stories-move-culture",
+      "proving-the-system-works"
+    ]
+  },
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+}

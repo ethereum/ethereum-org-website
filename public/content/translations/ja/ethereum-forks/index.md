@@ -1,6 +1,6 @@
 ---
-title: すべてのイーサリアム・フォークのタイムライン（2014年〜現在）
-description: 主要なマイルストーン、リリース、フォークを含むイーサリアム・ブロックチェーンの歴史。
+title: "すべてのイーサリアム・フォークのタイムライン（2014年〜現在）"
+description: "主要なマイルストーン、リリース、フォークを含むイーサリアム・ブロックチェーンの歴史。"
 lang: ja
 sidebarDepth: 1
 authors: ["Nixo"]
@@ -86,28 +86,28 @@ authors: ["Nixo"]
 
 [フサカの詳細](/roadmap/fusaka/)
 
-### Prague-Electra（「ペクトラ」） {#pectra}
+### プラハ・エレクトラ（「ペクトラ」） {#pectra}
 
 <NetworkUpgradeSummary name="pectra" />
 
-Prague-Electra（「ペクトラ」）アップグレードには、すべてのユーザー、レイヤー2 (L2) ネットワーク、ステーカー、およびノードオペレーターのエクスペリエンスを向上させることを目的とした、イーサリアム・プロトコルに対するいくつかの改善が含まれています。
+プラハ・エレクトラ（「ペクトラ」）アップグレードには、すべてのユーザー、レイヤー2 (L2) ネットワーク、ステーカー、およびノード・オペレーターのエクスペリエンス向上を目的とした、イーサリアム・プロトコルに対するいくつかの改善が含まれています。
 
-ステーキングは、複利運用されるバリデータ・アカウントや、実行レイヤーの引き出しアドレスを使用したステークされた資金の制御の改善により、アップグレードされました。EIP-7251は、単一のバリデータの最大エフェクティブ・バランスを2048に増やし、ステーカーの資本効率を向上させました。EIP-7002は、実行アカウントがエグジットや資金の一部の引き出しを含むバリデータのアクションを安全にトリガーできるようにし、ETHステーカーのエクスペリエンスを向上させると同時に、ノードオペレーターの説明責任を強化するのに役立ちました。
+ステーキングは、バリデータ・アカウントの複利運用や、実行レイヤーの引き出しアドレスを使用したステークされた資金のコントロールの改善により、アップグレードされました。EIP-7251は、単一のバリデータの最大エフェクティブ・バランスを2048に引き上げ、ステーカーの資本効率を向上させました。EIP-7002は、実行アカウントがエグジットや資金の一部の引き出しを含むバリデータのアクションを安全にトリガーできるようにし、ETHステーカーのエクスペリエンスを向上させるとともに、ノード・オペレーターの責任を強化するのに役立ちました。
 
-アップグレードのその他の部分は、一般ユーザーのエクスペリエンスの向上に焦点を当てていました。EIP-7702は、通常の非スマート・コントラクト・アカウント（[EOA](/glossary/#eoa)）がスマート・コントラクトと同様にコードを実行する機能をもたらしました。これにより、トランザクションのバッチ処理、ガスのスポンサーシップ、代替認証、プログラム可能な支出制御、アカウント回復メカニズムなど、従来のイーサリアム・アカウントに対する無限の新しい機能が解放されました。
+アップグレードのその他の部分は、一般ユーザーのエクスペリエンス向上に焦点を当てています。EIP-7702は、通常の非スマート・コントラクト・アカウント（[EOA](/glossary/#eoa)）がスマート・コントラクトと同様にコードを実行する機能をもたらしました。これにより、トランザクションのバッチ処理、ガスのスポンサーシップ、代替認証、プログラム可能な支出コントロール、アカウント復旧メカニズムなど、従来のイーサリアム・アカウントに対する無限の新しい機能が解放されました。
 
 <ExpandableCard title="ペクトラ EIPs" contentPreview="このアップグレードに含まれる公式の改善提案。">
 
-ユーザーエクスペリエンスの向上:
+ユーザー・エクスペリエンスの向上：
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>EOAアカウントコードの設定</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>EOAアカウント・コードの設定</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>ブロブのスループット向上</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>コールデータコストの増加</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>EL設定ファイルへのブロブスケジュールの追加</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>コールデータのコスト増加</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>実行レイヤー（EL）の設定ファイルにブロブのスケジュールを追加</em></li>
 </ul>
 
-ステーキングエクスペリエンスの向上:
+ステーキング・エクスペリエンスの向上：
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em><code>MAX_EFFECTIVE_BALANCE</code>の増加</em></li>
@@ -116,20 +116,19 @@ Prague-Electra（「ペクトラ」）アップグレードには、すべての
   <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>オンチェーンでのバリデータ・デポジットの供給</em></li>
 </ul>
 
-プロトコルの効率性とセキュリティの向上:
+プロトコルの効率性とセキュリティの向上：
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>BLS12-381曲線演算のプリコンパイル</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>過去のブロックハッシュを状態に保存</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>BLS12-381曲線操作のプリコンパイル</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>過去のブロック・ハッシュを状態に保存</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>コミッティ・インデックスをアテステーションの外部に移動</em></li>
 </ul>
 
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
-- [ペクトラがステーキングエクスペリエンスをどのように向上させるか](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Electraアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
-- [Prague-Electra（「ペクトラ」）FAQ](/roadmap/pectra/)
+- [ペクトラがステーキング・エクスペリエンスをどのように向上させるか](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [エレクトラ・アップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
+- [プラハ・エレクトラ（「ペクトラ」）FAQ](/roadmap/pectra/)
 
 <Divider />
 

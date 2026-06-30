@@ -40,7 +40,7 @@ Dva veřejné testnety, které vývojáři klientů v současné době udržují
 
 **Sepolia je doporučený výchozí testnet pro vývoj aplikací**. Síť Sepolia používá sadu validátorů s řízeným přístupem, kterou kontrolují klientské a testovací týmy.
 
-##### Zdroje
+##### Zdroje {#} {#} {#} {#} {#}
 
 - [Webové stránky](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
@@ -48,7 +48,7 @@ Dva veřejné testnety, které vývojáři klientů v současné době udržují
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucety
+##### Faucety {#} {#} {#} {#}
 
 - [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)

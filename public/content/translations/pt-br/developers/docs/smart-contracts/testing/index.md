@@ -184,7 +184,7 @@ O fuzzing é útil para avaliar o mecanismo de validação de entrada de um cont
 
 ### Diretrizes para executar testes baseados em propriedades para contratos inteligentes {#running-property-based-tests}
 
-A execução de testes baseados em propriedades geralmente começa com a definição de uma propriedade (por exemplo, ausência de [overflows de inteiros](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) ou coleção de propriedades que você deseja verificar em um contrato inteligente. Você também pode precisar definir um intervalo de valores dentro do qual o programa pode gerar dados para entradas de transação ao escrever testes de propriedade.
+A execução de testes baseados em propriedades geralmente começa com a definição de uma propriedade (por exemplo, ausência de [overflows de inteiros](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)) ou coleção de propriedades que você deseja verificar em um contrato inteligente. Você também pode precisar definir um intervalo de valores dentro do qual o programa pode gerar dados para entradas de transação ao escrever testes de propriedade.
 
 Uma vez configurada corretamente, a ferramenta de teste de propriedade executará as funções do seu contrato inteligente com entradas geradas aleatoriamente. Se houver alguma violação de asserção, você deverá obter um relatório com dados de entrada concretos que violam a propriedade em avaliação. Veja alguns dos guias abaixo para começar a executar testes baseados em propriedades com diferentes ferramentas:
 
@@ -195,7 +195,7 @@ Uma vez configurada corretamente, a ferramenta de teste de propriedade executar�
 - **[Fuzzing de contratos com Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Fuzzing de contratos com Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Execução simbólica de contratos inteligentes com Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Execução simbólica de contratos inteligentes com Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[Execução simbólica de contratos inteligentes com Mythril](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
 ## Testes manuais para contratos inteligentes {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ A principal diferença é que os programas de recompensa por bugs são abertos �
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _Estrutura de execução simbólica dinâmica para analisar o bytecode da EVM._
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _Ferramenta de avaliação de bytecode da EVM para detectar vulnerabilidades de contrato usando análise de taint, análise concólica e verificação de fluxo de controle._
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _Ferramenta de avaliação de bytecode da EVM para detectar vulnerabilidades de contrato usando análise de taint, análise concólica e verificação de fluxo de controle._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _O Scribble é uma linguagem de especificação e ferramenta de verificação em tempo de execução que permite anotar contratos inteligentes com propriedades que permitem testar automaticamente os contratos com ferramentas como Diligence Fuzzing ou MythX._
 

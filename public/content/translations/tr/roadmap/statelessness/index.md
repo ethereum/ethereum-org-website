@@ -1,6 +1,6 @@
 ---
-title: Durumsuzluk, durum zaman aşımı ve geçmiş sonlanması
-description: Geçmiş sonlanması ve durumsuz Ethereum'un açıklaması
+title: "Durumsuzluk, durum zaman aşımı ve geçmiş sonlanması"
+description: "Geçmiş sonlanması ve durumsuz Ethereum'un açıklaması"
 lang: tr
 ---
 

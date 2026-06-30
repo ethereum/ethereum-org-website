@@ -82,12 +82,7 @@ Zatem rzeczywiste wartości dla typów o zmiennej długości są przechowywane n
 
 Istnieją również pewne szczególne przypadki, które wymagają specyficznego traktowania, takie jak typ `BitList`, który wymaga dodania limitu długości podczas serializacji i usunięcia go podczas deserializacji. Pełne szczegóły są dostępne w [specyfikacji SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
-### Deserializacja {#deserialization}
-
-Do zdeserializowania tego obiektu wymagany jest <b>schemat</b>. Schemat definiuje dokładny układ serializowanych danych, dzięki czemu każdy konkretny element może zostać zdeserializowany z bloba bajtów do sensownego obiektu, w którym elementy mają odpowiedni typ, wartość, rozmiar i pozycję. To schemat informuje deserializator, które wartości są rzeczywistymi wartościami, a które przesunięciami. Wszystkie nazwy pól znikają podczas serializacji obiektu, ale są przywracane podczas deserializacji zgodnie ze schematem.
-
-Zobacz [ssz.dev](https://www.ssz.dev/overview), aby zapoznać się z interaktywnym wyjaśnieniem tego zagadnienia.
-
+Deserializacja tego obiektu wymaga <b>schematu</b>. Schemat definiuje dokładny układ zserializowanych danych, dzięki czemu każdy konkretny element może zostać zdeserializowany z ciągu bajtów w sensowny obiekt, którego elementy mają odpowiedni typ, wartość, rozmiar i pozycję. To właśnie schemat informuje deserializator, które wartości są rzeczywistymi wartościami, a które przesunięciami. Wszystkie nazwy pól znikają, gdy obiekt jest serializowany, ale są przywracane podczas deserializacji zgodnie ze schematem.
 ## Merkleizacja {#merkleization}
 
 Ten serializowany obiekt SSZ może następnie zostać poddany merkleizacji – to znaczy przekształcony w reprezentację tych samych danych w postaci drzewa Merklego. Najpierw określana jest liczba 32-bajtowych fragmentów (chunks) w serializowanym obiekcie. Są to „liście” drzewa. Całkowita liczba liści musi być potęgą liczby 2, aby haszowanie liści ostatecznie dało pojedynczy korzeń drzewa hashów (hash-tree-root). Jeśli tak nie jest w naturalny sposób, dodawane są dodatkowe liście zawierające 32 bajty zer. Schematycznie:
@@ -138,10 +133,7 @@ Hash z (8,9) powinien być równy hashowi (4), który jest haszowany z 5, aby ut
 8*     9*   10    11   12    13    14    15
 ```
 
-## Dalsza lektura {#further-reading}
-
-- [Aktualizacja Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
-- [Aktualizacja Ethereum: Merkleizacja](https://eth2book.info/altair/part2/building_blocks/merkleization)
+- [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
+- [Upgrading Ethereum: Merkleizacja](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [Implementacje SSZ](https://github.com/ethereum/consensus-specs/issues/2138)
 - [Kalkulator SSZ](https://simpleserialize.com/)
-- [SSZ.dev](https://www.ssz.dev/)

@@ -14,7 +14,7 @@ Ci sono due modi in cui è probabile che cerchino di ingannarti:
 Per illustrare cosa sono i token truffa e come identificarli, ne esamineremo un esempio: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Questo token tenta di assomigliare al token legittimo [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
-title="What is ARB?"
+title="Cos'è ARB?"
 contentPreview=''>
 
 Arbitrum è un'organizzazione che sviluppa e gestisce [rollup ottimistici](/developers/docs/scaling/optimistic-rollups/). Inizialmente, Arbitrum era organizzata come una società a scopo di lucro, ma poi ha intrapreso dei passi per decentralizzarsi. Come parte di questo processo, ha emesso un [token di governance](/dao/#token-based-membership) scambiabile.
@@ -22,7 +22,7 @@ Arbitrum è un'organizzazione che sviluppa e gestisce [rollup ottimistici](/deve
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Perché il token truffa si chiama wARB?"
 contentPreview=''>
 
 In Ethereum c'è una convenzione secondo cui, quando un asset non è conforme allo standard ERC-20, ne creiamo una versione "incapsulata" (wrapped) con il nome che inizia per "w". Quindi, ad esempio, abbiamo wBTC per i bitcoin e <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH per ether</a>.
@@ -36,7 +36,7 @@ Non ha senso creare una versione incapsulata di un token ERC-20 che è già su E
 L'intero scopo di Ethereum è la decentralizzazione. Ciò significa che non esiste un'autorità centrale che possa confiscare i tuoi asset o impedirti di distribuire uno smart contract. Ma significa anche che i truffatori possono distribuire qualsiasi smart contract desiderino.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Cosa sono gli smart contract?"
 contentPreview=''>
 
 Gli [smart contract](/developers/docs/smart-contracts/) sono i programmi che vengono eseguiti sulla blockchain di Ethereum. Ogni token ERC-20, ad esempio, è implementato come uno smart contract.

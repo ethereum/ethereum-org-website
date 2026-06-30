@@ -762,9 +762,9 @@ Questo è il modo in cui verifichiamo che il codice [emetta un evento correttame
 
 ### Il client {#the-client}
 
-Una cosa che non ottieni con i test in Solidity è il codice JavaScript che puoi tagliare e incollare nella tua applicazione. Per scrivere quel codice ho distribuito WORM su [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), la nuova testnet di [Optimism](https://www.optimism.io/). Si trova all'indirizzo [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Una cosa che non ottieni con i test in Solidity è il codice JavaScript che puoi tagliare e incollare nella tua applicazione. La versione originale di questo tutorial distribuiva WORM su Optimism Goerli, che da allora è stata dismessa. Per eseguire il client oggi, ridistribuisci WORM su una rete OP Stack supportata come [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), quindi usa l'indirizzo del contratto risultante nel client JavaScript.
 
-[Puoi vedere il codice JavaScript per il client qui](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Per usarlo:
+[Puoi vedere il codice JavaScript per il client qui](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Il repository di esempio è stato scritto per Optimism Goerli, quindi prima di eseguirlo, aggiorna l'endpoint RPC e gli URL dell'explorer in `javascript/.env.example` e `javascript/index.js` per la tua rete di destinazione. Per usarlo:
 
 1. Clona il repository git:
 
@@ -789,8 +789,8 @@ Una cosa che non ottieni con i test in Solidity è il codice JavaScript che puoi
 
    | Parametro           | Valore                                                                                                                                                               |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | La frase mnemonica per un account che ha abbastanza ETH per pagare una transazione. [Puoi ottenere ETH gratuiti per la rete Optimism Goerli qui](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL per Optimism Goerli. L'endpoint pubblico, `https://goerli.optimism.io`, ha un limite di frequenza ma è sufficiente per ciò di cui abbiamo bisogno qui                                      |
+   | MNEMONIC            | La frase mnemonica per un account che ha abbastanza ETH per pagare una transazione. [La documentazione sui faucet di Optimism](https://docs.optimism.io/app-developers/tools/faucets) elenca i faucet delle testnet attuali. |
+   | OPTIMISM_GOERLI_URL | L'URL RPC per la rete in cui ridistribuisci WORM. Per OP Sepolia, usa un endpoint RPC di OP Sepolia come `https://sepolia.optimism.io`, o un altro endpoint dal tuo provider.        |
 
 5. Esegui `index.js`.
 
@@ -798,7 +798,7 @@ Una cosa che non ottieni con i test in Solidity è il codice JavaScript che puoi
    node index.js
    ```
 
-   Questa applicazione di esempio scrive prima una voce in WORM, visualizzando i dati di chiamata e un link alla transazione su Etherscan. Quindi rilegge quella voce e visualizza la chiave che utilizza e i valori nella voce (valore, numero di blocco e autore).
+   Questa applicazione di esempio scrive prima una voce in WORM, visualizzando i dati di chiamata e un link alla transazione su un block explorer. Quindi rilegge quella voce e visualizza la chiave che utilizza e i valori nella voce (valore, numero del blocco e autore).
 
 La maggior parte del client è normale JavaScript per dapp. Quindi, ancora una volta, esamineremo solo le parti interessanti.
 
@@ -813,7 +813,7 @@ const main = async () => {
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-Un determinato slot può essere scritto solo una volta, quindi utilizziamo il timestamp per assicurarci di non riutilizzare gli slot.
+Un determinato slot può essere scritto solo una volta, quindi usiamo il timestamp per assicurarci di non riutilizzare gli slot.
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
@@ -822,7 +822,7 @@ const val = await worm.encodeVal("0x600D")
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers si aspetta che i dati di chiamata siano una stringa esadecimale, `0x` seguita da un numero pari di cifre esadecimali. Poiché sia `key` che `val` iniziano con `0x`, dobbiamo rimuovere quelle intestazioni.
+Ethers si aspetta che i dati di chiamata siano una stringa esadecimale, `0x` seguito da un numero pari di cifre esadecimali. Poiché sia `key` che `val` iniziano con `0x`, dobbiamo rimuovere quei prefissi.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -831,7 +831,7 @@ tx.data = calldata
 sentTx = await wallet.sendTransaction(tx)
 ```
 
-Come con il codice di test in Solidity, non possiamo chiamare normalmente una funzione in cache. Dobbiamo invece utilizzare un meccanismo di livello inferiore.
+Come con il codice di test in Solidity, non possiamo chiamare normalmente una funzione in cache. Dobbiamo invece usare un meccanismo di basso livello.
 
 ```javascript
     .
@@ -846,7 +846,6 @@ Come con il codice di test in Solidity, non possiamo chiamare normalmente una fu
 ```
 
 Per leggere le voci possiamo usare il meccanismo normale. Non c'è bisogno di usare il caching dei parametri con le funzioni `view`.
-
 ## Conclusione {#conclusion}
 
 Il codice in questo articolo è una prova di concetto, lo scopo è rendere l'idea facile da capire. Per un sistema pronto per la produzione potresti voler implementare alcune funzionalità aggiuntive:

@@ -1,7 +1,7 @@
 ---
-title: Jak utworzyć konto Ethereum
-metaTitle: Jak „utworzyć” konto Ethereum
-description: Przewodnik krok po kroku dotyczący tworzenia konta Ethereum za pomocą portfela.
+title: "Jak utworzyć konto Ethereum"
+metaTitle: "Jak „utworzyć” konto Ethereum"
+description: "Przewodnik krok po kroku dotyczący tworzenia konta Ethereum za pomocą portfela."
 lang: pl
 ---
 

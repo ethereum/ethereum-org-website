@@ -1,6 +1,6 @@
 ---
-title: Jak The Merge wpłynęło na podaż ETH
-description: Szczegółowe zestawienie wpływu The Merge na podaż ETH
+title: "Jak The Merge wpłynęło na podaż ETH"
+description: "Szczegółowe zestawienie wpływu The Merge na podaż ETH"
 lang: pl
 ---
 
@@ -14,7 +14,7 @@ Podaż ETH możemy podzielić na dwie główne siły: emisję i spalanie.
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Emisja ETH w skrócie">
 
 - Przed przejściem na dowód stawki (PoS), górnicy otrzymywali z emisji około 13 000 ETH dziennie
 - Osoby stakujące otrzymują z emisji około 1700 ETH dziennie, przy założeniu około 14 milionów całkowitego stakowanego ETH
@@ -38,18 +38,18 @@ Walidatory w Beacon Chain są nagradzane ETH za poświadczanie stanu łańcucha 
 
 ### Zestawienie emisji przed The Merge {#pre-merge-issuance-breakdown}
 
-Całkowita podaż ETH: **~120 520 000 ETH** (w momencie The Merge we wrześniu 2022 r.)
+Całkowita podaż ETH: **\~120 520 000 ETH** (w momencie The Merge we wrześniu 2022 r.)
 
 **Emisja w warstwie wykonawczej:**
 
-- Szacowano ją na 2,08 ETH na 13,3 sekundy\*: **~4 930 000** ETH wyemitowanych w ciągu roku
+- Szacowano ją na 2,08 ETH na 13,3 sekundy\*: **\~4 930 000** ETH wyemitowanych w ciągu roku
 - Skutkowało to stopą inflacji na poziomie **około 4,09%** (4,93 mln rocznie / 120,5 mln łącznie)
 - \*Obejmuje to 2 ETH za blok kanoniczny oraz średnio 0,08 ETH w czasie z bloków ommer. Wykorzystuje również 13,3 sekundy, czyli docelowy bazowy czas bloku bez żadnego wpływu [bomby trudności](/glossary/#difficulty-bomb). ([Zobacz źródło](https://bitinfocharts.com/ethereum/))
 
 **Emisja w warstwie konsensusu:**
 
 - Przy 14 000 000 całkowitego stakowanego ETH, wskaźnik emisji ETH wynosi około 1700 ETH dziennie ([Zobacz źródło](https://ultrasound.money/))
-- Daje to **~620 500** ETH wyemitowanych w ciągu roku
+- Daje to **\~620 500** ETH wyemitowanych w ciągu roku
 - Skutkowało to stopą inflacji na poziomie **około 0,52%** (620,5 tys. rocznie / 119,3 mln łącznie)
 
 <Alert variant="update">
@@ -57,9 +57,9 @@ Całkowita podaż ETH: **~120 520 000 ETH** (w momencie The Merge we wrześniu 2
 <AlertDescription>
 **Całkowita roczna stopa emisji (przed The Merge): ~4,61%** (4,09% + 0,52%)
 
-**~88,7%** emisji trafiało do górników w warstwie wykonawczej (4,09 / 4,61 * 100)
+**\~88,7%** emisji trafiało do górników w warstwie wykonawczej (4,09 / 4,61 * 100)
 
-**~11,3%** było emitowane dla osób stakujących w warstwie konsensusu (0,52 / 4,61 * 100)
+**\~11,3%** było emitowane dla osób stakujących w warstwie konsensusu (0,52 / 4,61 * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -84,16 +84,16 @@ W miarę jak coraz więcej walidatorów będzie się wycofywać, maksymalna licz
 
 ### Zestawienie inflacji po The Merge {#post-merge-inflation-breakdown}
 
-- [Całkowita podaż ETH](/eth/supply/): **~120 520 000 ETH** (w momencie The Merge we wrześniu 2022 r.)
+- [Całkowita podaż ETH](/eth/supply/): **\~120 520 000 ETH** (w momencie The Merge we wrześniu 2022 r.)
 - Emisja w warstwie wykonawczej: **0**
-- Emisja w warstwie konsensusu: Tak samo jak powyżej, **~0,52%** rocznej stopy emisji (przy 14 milionach całkowitego stakowanego ETH)
+- Emisja w warstwie konsensusu: Tak samo jak powyżej, **\~0,52%** rocznej stopy emisji (przy 14 milionach całkowitego stakowanego ETH)
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Całkowita roczna stopa emisji: **~0,52%**
+Całkowita roczna stopa emisji: **\~0,52%**
 
-Zmniejszenie netto rocznej emisji ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
+Zmniejszenie netto rocznej emisji ETH: **\~88,7%** ((4,61% - 0,52%) / 4,61% * 100)
 </AlertDescription>
 </AlertContent>
 </Alert>

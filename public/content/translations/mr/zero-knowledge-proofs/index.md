@@ -1,7 +1,7 @@
 ---
-title: शून्य-ज्ञान पुरावे म्हणजे काय?
-metaTitle: शून्य-ज्ञान पुरावे
-description: नवशिक्यांसाठी शून्य-ज्ञान पुराव्यांची एक गैर-तांत्रिक ओळख.
+title: "शून्य-ज्ञान पुरावे म्हणजे काय?"
+metaTitle: "शून्य-ज्ञान पुरावे"
+description: "नवशिक्यांसाठी शून्य-ज्ञान पुराव्यांची एक गैर-तांत्रिक ओळख."
 lang: mr
 ---
 
@@ -55,11 +55,13 @@ lang: mr
       <p>
         ओळख व्यवस्थापन प्रणालींसाठी ZKP वापरण्याचे वास्तविक-जगातील उदाहरण म्हणजे इथेरियमवर तयार केलेली भूतान राज्याची नॅशनल डिजिटल आयडी (NDI) प्रणाली. भूतानची NDI नागरिकांना त्यांच्या आयडीवरील संवेदनशील वैयक्तिक डेटा उघड न करता, "मी नागरिक आहे" किंवा "मी 18 वर्षांपेक्षा जास्त वयाचा आहे" यासारख्या स्वतःबद्दलच्या तथ्यांचे गूढलेखन पद्धतीने पुरावे देण्याची परवानगी देण्यासाठी ZKPs वापरते.
       </p>
-      <p>
+      <p></p>
         <a href="/decentralized-identity/#national-and-government-id">विकेंद्रित ओळख केस स्टडीमध्ये</a> भूतान NDI बद्दल अधिक जाणून घ्या.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### मानवतेचा पुरावा {#proof-of-humanity}
@@ -235,5 +237,5 @@ ZK-STARK क्वांटम संगणनाच्या धोक्या
 - [ZK-STARKs — क्वांटम संगणकांविरुद्धही पडताळणीयोग्य विश्वास निर्माण करा](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [zk-SNARKs कसे शक्य आहेत याची अंदाजे ओळख](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [स्व-सार्वभौम ओळखीसाठी शून्य-ज्ञान पुरावे (ZKPs) गेम चेंजर का आहेत](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [EIP-7503 स्पष्टीकरण: ZK पुराव्यांसह इथेरियमवर खाजगी हस्तांतरण सक्षम करणे](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [EIP-7503 स्पष्टीकरण: ZK पुराव्यांसह इथेरियमवर खाजगी हस्तांतरण सक्षम करणे](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK कार्ड गेम: ZK मूलभूत तत्त्वे आणि वास्तविक जीवनातील वापर-प्रकरणे शिकण्यासाठी गेम](https://github.com/ZK-card/zk-cards) - _ZK-Cards_

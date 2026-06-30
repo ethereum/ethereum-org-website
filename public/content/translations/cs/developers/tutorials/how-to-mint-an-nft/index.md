@@ -21,7 +21,7 @@ Pojďme na to!
 
 ## Krok 1: Instalace Web3 {#install-web3}
 
-Pokud jste postupovali podle prvního tutoriálu o vytváření chytrého kontraktu pro NFT, už máte zkušenosti s používáním Ethers.js. Web3 je podobné jako Ethers, protože jde o knihovnu, která usnadňuje vytváření požadavků na blockchain [Etherea](/). V tomto tutoriálu budeme používat [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), což je vylepšená knihovna Web3, která nabízí automatické opakování a robustní podporu WebSocketů.
+Pokud jste postupovali podle prvního tutoriálu o vytváření chytrého kontraktu pro NFT, už máte zkušenosti s používáním Ethers.js. Web3 je podobné jako Ethers, protože jde o knihovnu, která usnadňuje vytváření požadavků na blockchain [Etherea](/). V tomto tutoriálu budeme používat [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), což je vylepšená knihovna Web3, která nabízí automatické opakování a robustní podporu WebSocketů.
 
 V domovském adresáři vašeho projektu spusťte:
 
@@ -42,7 +42,7 @@ const web3 = createAlchemyWeb3(API_URL)
 
 ## Krok 3: Získání ABI vašeho kontraktu {#contract-abi}
 
-ABI (Application Binary Interface) našeho kontraktu je rozhraní pro interakci s naším chytrým kontraktem. Více se o ABI kontraktů můžete dozvědět [zde](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat pro nás automaticky generuje ABI a ukládá ho do souboru `MyNFT.json`. Abychom ho mohli použít, budeme muset analyzovat jeho obsah přidáním následujících řádků kódu do našeho souboru `mint-nft.js`:
+ABI (Application Binary Interface) našeho kontraktu je rozhraní pro interakci s naším chytrým kontraktem. Více se o [ABI kontraktů](/glossary/#abi) můžete dozvědět v glosáři. Hardhat pro nás automaticky generuje ABI a ukládá jej do souboru `MyNFT.json`. Abychom jej mohli použít, budeme muset načíst jeho obsah přidáním následujících řádků kódu do našeho souboru `mint-nft.js`:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -54,12 +54,11 @@ Pokud chcete vidět ABI, můžete si ho vypsat do konzole:
 console.log(JSON.stringify(contract.abi))
 ```
 
-Chcete-li spustit `mint-nft.js` a vidět vaše ABI vypsané v konzoli, přejděte do terminálu a spusťte:
+Chcete-li spustit `mint-nft.js` a vidět své ABI vypsané v konzoli, přejděte do terminálu a spusťte:
 
 ```js
 node scripts/mint-nft.js
 ```
-
 ## Krok 4: Konfigurace metadat pro vaše NFT pomocí IPFS {#config-meta}
 
 Pokud si pamatujete z našeho tutoriálu v 1. části, funkce našeho chytrého kontraktu `mintNFT` přijímá parametr tokenURI, který by měl odkazovat na JSON dokument popisující metadata NFT – což je to, co NFT skutečně oživuje a umožňuje mu mít konfigurovatelné vlastnosti, jako je název, popis, obrázek a další atributy.
@@ -138,15 +137,15 @@ PUBLIC_KEY = "your-public-account-address"
 
 ## Krok 7: Vytvoření vaší transakce {#create-txn}
 
-Nejprve definujme funkci s názvem `mintNFT(tokenData)` a vytvořme naši transakci provedením následujícího:
+Nejprve si definujme funkci s názvem `mintNFT(tokenData)` a vytvořme naši transakci následujícím způsobem:
 
-1. Získejte svůj _PRIVATE_KEY_ a _PUBLIC_KEY_ ze souboru `.env`.
+1. Získejte své _PRIVATE_KEY_ a _PUBLIC_KEY_ ze souboru `.env`.
 
-1. Dále budeme muset zjistit nonce účtu. Specifikace nonce se používá ke sledování počtu transakcí odeslaných z vaší adresy – což potřebujeme z bezpečnostních důvodů a k zabránění [útokům typu replay](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). K získání počtu transakcí odeslaných z vaší adresy použijeme [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+1. Dále budeme muset zjistit nonce účtu. Specifikace nonce se používá ke sledování počtu transakcí odeslaných z vaší adresy — což potřebujeme z bezpečnostních důvodů a pro prevenci replay útoků. K získání počtu transakcí odeslaných z vaší adresy použijeme [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
 
 1. Nakonec nastavíme naši transakci s následujícími informacemi:
 
-- `'from': PUBLIC_KEY` — Původem naší transakce je naše veřejná adresa
+- `'from': PUBLIC_KEY` — Původcem naší transakce je naše veřejná adresa
 
 - `'to': contractAddress` — Kontrakt, se kterým chceme interagovat a odeslat mu transakci
 
@@ -154,9 +153,9 @@ Nejprve definujme funkci s názvem `mintNFT(tokenData)` a vytvořme naši transa
 
 - `'gas': estimatedGas` — Odhadovaný gas potřebný k dokončení transakce
 
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Výpočet, který chceme v této transakci provést – což je v tomto případě ražení NFT
+- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Výpočet, který chceme v této transakci provést — což je v tomto případě ražení NFT
 
-Váš soubor `mint-nft.js` by měl nyní vypadat takto:
+Váš soubor `mint-nft.js` by nyní měl vypadat takto:
 
 ```js
    require('dotenv').config();
@@ -184,7 +183,6 @@ Váš soubor `mint-nft.js` by měl nyní vypadat takto:
      };
    }​
 ```
-
 ## Krok 8: Podepsání transakce {#sign-txn}
 
 Nyní, když jsme vytvořili naši transakci, musíme ji podepsat, abychom ji mohli odeslat. Zde použijeme náš soukromý klíč.
@@ -317,7 +315,7 @@ Nyní spusťte `node scripts/mint-nft.js` pro nasazení vašeho NFT. Po několik
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-Dále navštivte svůj [mempool na Alchemy](https://dashboard.alchemyapi.io/mempool), abyste viděli stav vaší transakce (zda čeká na vyřízení, byla vytěžena, nebo byla sítí zahozena). Pokud byla vaše transakce zahozena, je také užitečné zkontrolovat [Blockscout](https://eth-sepolia.blockscout.com/) a vyhledat hash vaší transakce.
+Dále navštivte svůj [mempool na Alchemy](https://dashboard.alchemy.com/mempool), abyste viděli stav vaší transakce (zda čeká na vyřízení, byla vytěžena, nebo byla sítí zahozena). Pokud byla vaše transakce zahozena, je také užitečné zkontrolovat [Blockscout](https://eth-sepolia.blockscout.com/) a vyhledat hash vaší transakce.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Zobrazení hashe vaší transakce NFT na Etherscan_
 

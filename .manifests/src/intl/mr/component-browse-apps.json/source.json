@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/component-browse-apps.json",
+  "generatedAt": "2026-06-29T23:46:27.718Z",
+  "rootHash": "23d68b2f1e8a",
+  "tree": {
+    "contentHash": "9eedaebe3a79",
+    "anchorHash": "83153bb62b5d",
+    "children": {
+      "title": {
+        "contentHash": "cc28cdd0d000",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "description": {
+        "contentHash": "bea789ee6641",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "take-a-look": {
+        "contentHash": "03174267a505",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "aave-description": {
+        "contentHash": "db969c9dcd69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "farcaster-description": {
+        "contentHash": "3acd99161ff9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "uniswap-description": {
+        "contentHash": "8bb95b126158",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "go": {
+        "contentHash": "6cc8519b9158",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "powered-by-ethereum": {
+        "contentHash": "09fb3a83d220",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "title",
+      "description",
+      "take-a-look",
+      "aave-description",
+      "farcaster-description",
+      "uniswap-description",
+      "go",
+      "powered-by-ethereum"
+    ]
+  },
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+}

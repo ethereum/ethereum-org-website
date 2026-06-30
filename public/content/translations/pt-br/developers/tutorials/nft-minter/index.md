@@ -33,18 +33,17 @@ Antes mesmo de começarmos a olhar para qualquer código, é importante entender
 
 A maior diferença entre os dois padrões de contrato inteligente de NFT é que o ERC-1155 é um padrão de múltiplos tokens e inclui funcionalidade em lote, enquanto o ERC-721 é um padrão de token único e, portanto, suporta apenas a transferência de um token por vez.
 
-### Chamar a função de cunhagem {#minting-function}
+### Chame a função de cunhagem {#minting-function}
 
-Geralmente, essa função de cunhagem exige que você passe duas variáveis como parâmetros: primeiro o `recipient`, que especifica o endereço que receberá seu NFT recém-cunhado, e segundo o `tokenURI` do NFT, uma string que resolve para um documento JSON descrevendo os metadados do NFT.
+Geralmente, essa função de cunhagem exige que você passe duas variáveis como parâmetros: primeiro o `recipient`, que especifica o endereço que receberá seu NFT recém-cunhado, e segundo o `tokenURI` do NFT, uma string que resolve para um documento JSON que descreve os metadados do NFT.
 
-Os metadados de um NFT são realmente o que lhe dão vida, permitindo que ele tenha propriedades, como nome, descrição, imagem (ou um ativo digital diferente) e outros atributos. Aqui está [um exemplo de um tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), que contém os metadados de um NFT.
+Os metadados de um NFT são realmente o que lhe dá vida, permitindo que ele tenha propriedades, como um nome, descrição, imagem (ou ativo digital diferente) e outros atributos. Aqui está [um exemplo de um tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), que contém os metadados de um NFT.
 
-Neste tutorial, vamos focar na parte 2, chamando a função de cunhagem de um contrato inteligente de NFT existente usando nossa UI em React.
+Neste tutorial, vamos focar na parte 2, chamar uma função de cunhagem de contrato inteligente de NFT usando nossa UI em React.
 
-[Aqui está um link](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) para o contrato inteligente de NFT ERC-721 que chamaremos neste tutorial. Se você quiser aprender como o criamos, recomendamos fortemente que confira nosso outro tutorial, ["Como criar um NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
+Você precisará de um contrato inteligente de NFT ERC-721 implantado em uma rede de teste suportada, como a Sepolia. Se você quiser implantar um você mesmo, recomendamos o guia da Alchemy sobre [como implantar um contrato inteligente na Sepolia](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet).
 
 Legal, agora que entendemos como funciona a criação de um NFT, vamos clonar nossos arquivos iniciais!
-
 ## Clonar os arquivos iniciais {#clone-the-starter-files}
 
 Primeiro, vá para o [repositório do GitHub nft-minter-tutorial](https://github.com/alchemyplatform/nft-minter-tutorial) para obter os arquivos iniciais deste projeto. Clone este repositório em seu ambiente local.
@@ -195,28 +194,25 @@ Agora que entendemos com o que estamos trabalhando, vamos configurar nossa carte
 
 Para que os usuários possam interagir com seu contrato inteligente, eles precisarão conectar sua carteira Ethereum ao seu dapp.
 
-### Baixe a MetaMask {#download-metamask}
+### Baixar a MetaMask {#download-metamask}
 
 Para este tutorial, usaremos a MetaMask, uma carteira virtual no navegador usada para gerenciar o endereço da sua conta Ethereum. Se você quiser entender mais sobre como as transações na Ethereum funcionam, confira [esta página](/developers/docs/transactions/).
 
-Você pode baixar e criar uma conta na MetaMask gratuitamente [aqui](https://metamask.io/download). Ao criar uma conta, ou se você já tiver uma, certifique-se de mudar para a "Ropsten Test Network" (Rede de Teste Ropsten) no canto superior direito \(para não lidarmos com dinheiro real\).
+Você pode baixar e criar uma conta na MetaMask gratuitamente [aqui](https://metamask.io/download). Ao criar uma conta, ou se você já tiver uma, certifique-se de mudar para uma rede de teste suportada, como a Sepolia \(para que não estejamos lidando com dinheiro real\).
+### Adicionar ether de um faucet {#add-ether-from-faucet}
 
-### Adicione ether de um Faucet {#add-ether-from-faucet}
-
-Para cunhar nossos NFTs (ou assinar quaisquer transações na blockchain Ethereum), precisaremos de algum ETH falso. Para obter ETH, você pode ir ao [faucet da Ropsten](https://faucet.ropsten.be/) e inserir o endereço da sua conta Ropsten, depois clicar em "Send Ropsten Eth". Você deve ver o ETH na sua conta MetaMask logo em seguida!
-
+Para cunhar nossos NFTs (ou assinar quaisquer transações na blockchain Ethereum), precisaremos de algum ETH falso. Para obter ETH de rede de teste, use um faucet mantido, como o [faucet Sepolia da Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia) e insira o endereço da sua conta Sepolia. Você deve ver o ETH na sua conta MetaMask logo em seguida!
 ### Verifique seu saldo {#check-your-balance}
 
-Para verificar se o nosso saldo está lá, vamos fazer uma solicitação [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando a [ferramenta composer da Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Isso retornará a quantidade de ETH em nossa carteira. Depois de inserir o endereço da sua conta MetaMask e clicar em "Send Request" (Enviar Solicitação), você deve ver uma resposta como esta:
+Para confirmar se o nosso saldo está lá, vamos fazer uma solicitação [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) usando a [ferramenta de sandbox da Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Isso retornará a quantidade de ETH na nossa carteira. Depois de inserir o endereço da sua conta MetaMask e clicar em “Send Request”, você deverá ver uma resposta como esta:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**NOTA:** Este resultado está em Wei, não em ETH. Wei é usado como a menor denominação de ether. A conversão de Wei para ETH é: 1 ETH = 10¹⁸ Wei. Portanto, se convertermos 0xde0b6b3a7640000 para decimal, obtemos 1\*10¹⁸, o que equivale a 1 ETH.
+**NOTA:** Este resultado está em Wei, não em ETH. Wei é usado como a menor denominação de ether. A conversão de Wei para ETH é: 1 ETH = 10¹⁸ Wei. Portanto, se convertermos 0xde0b6b3a7640000 para decimal, obteremos 1\*10¹⁸, o que equivale a 1 ETH.
 
 Ufa! Nosso dinheiro falso está todo lá! <Emoji text=":money_mouth_face:" size={1} />
-
 ## Conecte a MetaMask à sua UI {#connect-metamask-to-your-ui}
 
 Agora que nossa carteira MetaMask está configurada, vamos conectar nosso dapp a ela!
@@ -587,26 +583,25 @@ Também precisaremos de uma chave de API da Alchemy e da API Alchemy Web3 para n
 
 Se você ainda não tem uma conta na Alchemy, [inscreva-se gratuitamente aqui.](https://alchemy.com/?a=eth-org-nft-minter)
 
-Depois de criar uma conta na Alchemy, você pode gerar uma chave de API criando um aplicativo. Isso nos permitirá fazer solicitações à rede de teste Ropsten.
+Depois de criar uma conta na Alchemy, você pode gerar uma chave de API criando um aplicativo. Isso nos permitirá fazer solicitações à rede de teste Sepolia.
 
 Navegue até a página "Create App" (Criar Aplicativo) no seu Painel da Alchemy passando o mouse sobre "Apps" na barra de navegação e clicando em "Create App".
 
-Dê um nome ao seu aplicativo (nós escolhemos "My First NFT!"), ofereça uma breve descrição, selecione "Staging" para o Ambiente usado para a contabilidade do seu aplicativo e escolha "Ropsten" para a sua rede.
+Dê um nome ao seu aplicativo (nós escolhemos "My First NFT!"), forneça uma breve descrição, selecione "Staging" para o Ambiente (Environment) usado para a organização do seu aplicativo e escolha "Sepolia" para a sua rede.
 
 Clique em "Create app" e pronto! Seu aplicativo deve aparecer na tabela abaixo.
 
-Incrível, então agora que criamos nossa URL da API HTTP da Alchemy, copie-a para a sua área de transferência...
+Incrível, agora que criamos nossa URL de API HTTP da Alchemy, copie-a para a sua área de transferência...
 
 …e então vamos adicioná-la ao nosso arquivo `.env`. No geral, seu arquivo .env deve ficar assim:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 Agora que temos a ABI do nosso contrato e nossa chave de API da Alchemy, estamos prontos para carregar nosso contrato inteligente usando a [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
-
 ### Configure seu endpoint e contrato da Alchemy Web3 {#setup-alchemy-endpoint}
 
 Primeiro, se você ainda não a tem, precisará instalar a [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) navegando até o diretório inicial: `nft-minter-tutorial` no terminal:
@@ -851,10 +846,9 @@ const onMintPressed = async () => {
 
 ## Implante seu NFT em um site ativo {#deploy-your-nft}
 
-Pronto para colocar seu projeto no ar para os usuários interagirem? Confira [este tutorial](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) para implantar seu Minter em um site ativo.
+Pronto para colocar seu projeto no ar para que os usuários interajam com ele? Confira a [documentação de implantação do React](https://create-react-app.dev/docs/deployment/) para implantar seu cunhador em um site ativo.
 
 Um último passo...
-
 ## Conquiste o mundo da blockchain {#take-the-blockchain-world-by-storm}
 
 Brincadeira, você chegou ao fim do tutorial!
@@ -865,6 +859,6 @@ Para recapitular, ao construir um cunhador de NFT, você aprendeu com sucesso a:
 - Chamar métodos de contrato inteligente a partir do seu frontend
 - Assinar transações usando a MetaMask
 
-Presumivelmente, você gostaria de poder exibir os NFTs cunhados por meio do seu dapp na sua carteira — então não deixe de conferir nosso tutorial rápido [Como visualizar seu NFT na sua carteira](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)!
+Presumivelmente, você gostaria de poder exibir os NFTs cunhados por meio do seu dapp na sua carteira — então não deixe de conferir nosso tutorial rápido [Como visualizar seu NFT na sua carteira](/developers/tutorials/how-to-view-nft-in-metamask/)!
 
 E, como sempre, se você tiver alguma dúvida, estamos aqui para ajudar no [Discord da Alchemy](https://discord.gg/gWuC7zB). Mal podemos esperar para ver como você aplicará os conceitos deste tutorial aos seus projetos futuros!

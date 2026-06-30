@@ -1,6 +1,6 @@
 ---
-title: Dolandırıcı token'lar nasıl tespit edilir
-description: Dolandırıcı token'ları, kendilerini nasıl meşru gösterdiklerini ve onlardan nasıl kaçınılacağını anlamak.
+title: "Dolandırıcı token'lar nasıl tespit edilir"
+description: "Dolandırıcı token'ları, kendilerini nasıl meşru gösterdiklerini ve onlardan nasıl kaçınılacağını anlamak."
 lang: tr
 ---
 
@@ -14,7 +14,7 @@ Sizi kandırmalarının muhtemel iki yolu vardır:
 Dolandırıcı Token'ların ne olduğunu ve nasıl tespit edileceğini göstermek için bir örneğe bakacağız: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Bu Token, meşru [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) Token'ı gibi görünmeye çalışır.
 
 <ExpandableCard
-title="What is ARB?"
+title="ARB nedir?"
 contentPreview=''>
 
 Arbitrum, [iyimser toplamalar (optimistic rollups)](/developers/docs/scaling/optimistic-rollups/) geliştiren ve yöneten bir organizasyondur. Başlangıçta Arbitrum kâr amacı güden bir şirket olarak organize edilmişti, ancak daha sonra merkeziyetsiz olmak için adımlar attı. Bu sürecin bir parçası olarak, ticareti yapılabilir bir [yönetişim token'ı](/dao/#token-based-membership) çıkardılar.
@@ -22,7 +22,7 @@ Arbitrum, [iyimser toplamalar (optimistic rollups)](/developers/docs/scaling/opt
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Dolandırıcı token'a neden wARB deniyor?"
 contentPreview=''>
 
 Ethereum'da, bir varlık ERC-20 uyumlu olmadığında, adının "w" ile başladığı "sarılmış" (wrapped) bir versiyonunu oluşturduğumuz bir gelenek vardır. Örneğin, Bitcoin için wBTC ve <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">Ether için wETH</a> vardır.
@@ -36,7 +36,7 @@ Zaten Ethereum'da bulunan bir ERC-20 Token'ının sarılmış bir versiyonunu ol
 Ethereum'un tüm amacı merkeziyetsizliktir. Bu, varlıklarınıza el koyabilecek veya bir akıllı sözleşme dağıtmanızı engelleyebilecek merkezi bir otorite olmadığı anlamına gelir. Ancak bu aynı zamanda dolandırıcıların diledikleri herhangi bir akıllı sözleşmeyi dağıtabilecekleri anlamına da gelir.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Akıllı sözleşmeler nedir?"
 contentPreview=''>
 
 [Akıllı sözleşmeler](/developers/docs/smart-contracts/), Ethereum Blokzinciri üzerinde çalışan programlardır. Örneğin her ERC-20 Token'ı, bir akıllı sözleşme olarak uygulanır.

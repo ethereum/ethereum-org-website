@@ -1,6 +1,6 @@
 ---
-title: Tính phi trạng thái, hết hạn trạng thái và hết hạn lịch sử
-description: Giải thích về hết hạn lịch sử và Ethereum phi trạng thái
+title: "Tính phi trạng thái, hết hạn trạng thái và hết hạn lịch sử"
+description: "Giải thích về hết hạn lịch sử và Ethereum phi trạng thái"
 lang: vi
 ---
 

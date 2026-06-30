@@ -123,22 +123,6 @@ title: "..."
 
 আপনার কাছে ট্রান্সক্রিপ্ট না থাকলে, আপনি বডি অংশটি খালি রাখতে পারেন এবং টিম একটি তৈরি করে নেবে।
 
-#### ধাপ 4: টপিক ট্যাগ বেছে নিন {#step-4}
-
-গ্যালারিতে ব্যবহৃত বিদ্যমান ক্যাটাগরিগুলোর সাথে মেলে এমন টপিক ট্যাগ বেছে নিন। বর্তমান ক্যাটাগরি এবং সেগুলোর ট্যাগগুলোর মধ্যে রয়েছে:
-
-- **ইথেরিয়াম কীভাবে কাজ করে**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **নেটওয়ার্ক আপগ্রেড**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **রোডম্যাপ এবং অগ্রাধিকার**: `roadmap-and-priorities`, `pbs`, `mev`
-- **স্কেলিং এবং লেয়ার ২ (l2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **ইউজ কেস**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **গোপনীয়তা এবং নিরাপত্তা**: `privacy-and-security`, `privacy`, `authentication`
-- **কমিউনিটির গল্প**: `community-stories`, `contributing`, `translations`, `community`
-
-আপনার ভিডিওটি গ্যালারির কোনো ক্যাটাগরি শেলফে প্রদর্শিত হওয়া নিশ্চিত করতে, অন্তত একটি ক্যাটাগরি কী ট্যাগ (kebab-case-এ বোল্ড করা নাম, যেমন `use-cases` বা `scaling-and-layer-2`) অন্তর্ভুক্ত করুন। স্বীকৃত ক্যাটাগরি ট্যাগ ছাড়া ভিডিওগুলো শুধুমাত্র "All" ভিউ এবং সার্চ রেজাল্টে প্রদর্শিত হবে।
-
-আপনি নতুন ট্যাগও ব্যবহার করতে পারেন — সেগুলো ভবিষ্যতের ক্যাটাগরি গ্রুপিংয়ের জন্য উপলব্ধ থাকবে।
-
 #### ধাপ 5: আপনার PR সাবমিট করুন {#step-5}
 
 `dev` ব্রাঞ্চে আপনার পরিবর্তনগুলোসহ একটি পুল রিকোয়েস্ট ওপেন করুন। টিম আপনার সাবমিশনটি রিভিউ করবে এবং ফিডব্যাক দেবে।

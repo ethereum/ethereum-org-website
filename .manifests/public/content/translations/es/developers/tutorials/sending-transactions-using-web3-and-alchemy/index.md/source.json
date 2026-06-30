@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md",
-  "generatedAt": "2026-06-17T00:49:14.295Z",
-  "rootHash": "abeabd1a0da0",
+  "generatedAt": "2026-06-30T00:47:48.834Z",
+  "rootHash": "ac20487d92b6",
   "tree": {
-    "contentHash": "30b8b1cd43c1",
-    "anchorHash": "5fa181e98175",
+    "contentHash": "67635e212762",
+    "anchorHash": "dea0d36be735",
     "children": {
       "frontmatter:title": {
         "contentHash": "ed4afc5b5954",
@@ -61,23 +61,23 @@
       },
       "link:1": {
         "contentHash": "285141884585",
-        "anchorHash": "6fe575a80485"
+        "anchorHash": "fe2dbe328677"
       },
       "prose:5": {
-        "contentHash": "a928130cf9cc",
+        "contentHash": "3b65986b18e1",
         "anchorHash": "e3b0c44298fc"
       },
       "link:2": {
-        "contentHash": "181b853e542f",
-        "anchorHash": "82f7eadf6db0"
+        "contentHash": "d17b465e738d",
+        "anchorHash": "ff8a982e3e2b"
       },
       "prose:6": {
         "contentHash": "cdb4ee2aea69",
         "anchorHash": "e3b0c44298fc"
       },
       "the-basics": {
-        "contentHash": "555f99b423de",
-        "anchorHash": "2d31cb6686ff",
+        "contentHash": "af0402de3a1f",
+        "anchorHash": "e622d26f111b",
         "labelHash": "a5e729fb76c8",
         "children": {
           "_label": {
@@ -118,8 +118,8 @@
             ]
           },
           "what-is-a-signer": {
-            "contentHash": "658778056da8",
-            "anchorHash": "bacd97328d8b",
+            "contentHash": "bc0ce3bd9a07",
+            "anchorHash": "5a0a08cbb1b6",
             "labelHash": "22d9407192db",
             "children": {
               "_label": {
@@ -131,8 +131,8 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
-                "contentHash": "cd9b930645df",
-                "anchorHash": "4d52623dbc7b"
+                "contentHash": "fce32e90ca84",
+                "anchorHash": "41f860b4d7f3"
               },
               "prose:3": {
                 "contentHash": "303ded210d84",
@@ -206,7 +206,7 @@
           },
           "difference-between-send-and-send-raw": {
             "contentHash": "2a40ba635056",
-            "anchorHash": "e13926eaa3dd",
+            "anchorHash": "796fb5a4d7a5",
             "labelHash": "262557f0b27d",
             "children": {
               "_label": {
@@ -239,7 +239,7 @@
               },
               "link:3": {
                 "contentHash": "55cca2ec77e2",
-                "anchorHash": "d0351b625814"
+                "anchorHash": "99229f849e92"
               },
               "prose:11": {
                 "contentHash": "d1a4982804fe",
@@ -300,7 +300,7 @@
           },
           "what-is-the-web3-library": {
             "contentHash": "ceda05fd5309",
-            "anchorHash": "a6e52a3716f6",
+            "anchorHash": "3492334b1571",
             "labelHash": "1632bbe6977c",
             "children": {
               "_label": {
@@ -313,7 +313,7 @@
               },
               "link:0": {
                 "contentHash": "fce32e90ca84",
-                "anchorHash": "f463915cbafa"
+                "anchorHash": "41f860b4d7f3"
               },
               "prose:5": {
                 "contentHash": "aaacd101b0d7",
@@ -321,7 +321,7 @@
               },
               "link:1": {
                 "contentHash": "fcec91509759",
-                "anchorHash": "0d74363c464a"
+                "anchorHash": "93ad88bd412d"
               },
               "prose:6": {
                 "contentHash": "cab2644828bc",
@@ -358,8 +358,8 @@
             ]
           },
           "how-to-send-secure-gas-optimized-and-private-transactions": {
-            "contentHash": "5415293df3c6",
-            "anchorHash": "ff3131d7913a",
+            "contentHash": "19e35fde405b",
+            "anchorHash": "f101d8b0905d",
             "labelHash": "225f4dd5822c",
             "children": {
               "_label": {
@@ -371,16 +371,16 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
-                "contentHash": "0136e9bf6a1a",
-                "anchorHash": "b7e3cc735e95"
+                "contentHash": "436bf384d1b3",
+                "anchorHash": "138ddd35269d"
               },
               "prose:6": {
-                "contentHash": "99d15a0270c0",
+                "contentHash": "f7ec90ff4b61",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:1": {
-                "contentHash": "24d048d574a5",
-                "anchorHash": "65295851e159"
+                "contentHash": "b710e515983c",
+                "anchorHash": "6f2862c346d2"
               },
               "prose:7": {
                 "contentHash": "897da07ac52b",
@@ -388,7 +388,7 @@
               },
               "link:2": {
                 "contentHash": "7941f0458043",
-                "anchorHash": "6fe575a80485"
+                "anchorHash": "fe2dbe328677"
               },
               "prose:8": {
                 "contentHash": "6bc54f13bea5",
@@ -403,8 +403,8 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "link:4": {
-                "contentHash": "215d34582772",
-                "anchorHash": "e39dc2f6065b"
+                "contentHash": "1abd0bbbedc2",
+                "anchorHash": "6f1666522a9e"
               }
             },
             "childrenOrder": [
@@ -435,8 +435,8 @@
         ]
       },
       "steps-to-sending-your-transaction": {
-        "contentHash": "46b874ed6eb1",
-        "anchorHash": "061e7c2d67db",
+        "contentHash": "5f2128a9b19f",
+        "anchorHash": "df0b71a96fcd",
         "labelHash": "ce46c285eb3d",
         "children": {
           "_label": {
@@ -445,7 +445,7 @@
           },
           "create-an-alchemy-app-on-the-sepolia-testnet": {
             "contentHash": "d25a66dafcd7",
-            "anchorHash": "932d822e0eb0",
+            "anchorHash": "38c821fd2f94",
             "labelHash": "209eb834b0d3",
             "children": {
               "_label": {
@@ -458,7 +458,7 @@
               },
               "link:0": {
                 "contentHash": "baef80b0957b",
-                "anchorHash": "b9a286d1cf58"
+                "anchorHash": "dc1e2c310f7d"
               },
               "prose:2": {
                 "contentHash": "3bced6328744",
@@ -527,7 +527,7 @@
           },
           "install-alchemy-web3": {
             "contentHash": "b4d9a24ce248",
-            "anchorHash": "288ff06c4a1a",
+            "anchorHash": "14292c983895",
             "labelHash": "6748c57fc539",
             "children": {
               "_label": {
@@ -540,7 +540,7 @@
               },
               "link:0": {
                 "contentHash": "fce32e90ca84",
-                "anchorHash": "f463915cbafa"
+                "anchorHash": "41f860b4d7f3"
               },
               "prose:3": {
                 "contentHash": "f17abd14871a",
@@ -548,7 +548,7 @@
               },
               "link:1": {
                 "contentHash": "6de811191fd7",
-                "anchorHash": "bc87e40630e7"
+                "anchorHash": "39acd69cc9c5"
               },
               "prose:4": {
                 "contentHash": "cdb4ee2aea69",
@@ -712,8 +712,8 @@
             ]
           },
           "create-sendtx-js": {
-            "contentHash": "c7d1b89c53b8",
-            "anchorHash": "822bbd3c635f",
+            "contentHash": "4750771d7d44",
+            "anchorHash": "ed678ce6f612",
             "labelHash": "f4b92d66a7cc",
             "children": {
               "_label": {
@@ -748,147 +748,131 @@
                 "contentHash": "e3b0c44298fc",
                 "anchorHash": "77024e159a9d"
               },
-              "prose:18": {
+              "prose:16": {
                 "contentHash": "3814ce56fe47",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:19": {
-                "contentHash": "bf6ea2a880af",
+              "prose:17": {
+                "contentHash": "3c4ae1877009",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:1": {
-                "contentHash": "2b2f7f42eb26",
-                "anchorHash": "86bb512976b6"
+                "contentHash": "326cc280d091",
+                "anchorHash": "ec8d33c15272"
               },
-              "prose:20": {
-                "contentHash": "b38b849a7a2b",
+              "prose:18": {
+                "contentHash": "1bff53634dc7",
                 "anchorHash": "e3b0c44298fc"
               },
-              "link:2": {
-                "contentHash": "326cc280d091",
-                "anchorHash": "57a4720e8bf8"
+              "inline-code:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ce922519a3c3"
               },
-              "prose:21": {
-                "contentHash": "1bff53634dc7",
+              "prose:19": {
+                "contentHash": "1b87ac4b8905",
                 "anchorHash": "e3b0c44298fc"
               },
               "inline-code:3": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "ce922519a3c3"
-              },
-              "prose:22": {
-                "contentHash": "1b87ac4b8905",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "inline-code:4": {
-                "contentHash": "e3b0c44298fc",
                 "anchorHash": "663ea1bfffe5"
               },
-              "prose:23": {
+              "prose:20": {
                 "contentHash": "82156698b26c",
                 "anchorHash": "e3b0c44298fc"
               },
-              "link:5": {
+              "link:4": {
                 "contentHash": "b5b8b9576430",
                 "anchorHash": "f72596a4719b"
               },
-              "prose:24": {
+              "prose:21": {
                 "contentHash": "9ef6941268d6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:5": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "cd42404d52ad"
+              },
+              "prose:22": {
+                "contentHash": "e551e56a7ea7",
                 "anchorHash": "e3b0c44298fc"
               },
               "inline-code:6": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "cd42404d52ad"
-              },
-              "prose:25": {
-                "contentHash": "e551e56a7ea7",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "inline-code:7": {
-                "contentHash": "e3b0c44298fc",
                 "anchorHash": "2fe840e13244"
               },
+              "prose:23": {
+                "contentHash": "893f97f7c561",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:7": {
+                "contentHash": "a58f0473fb4c",
+                "anchorHash": "6f2862c346d2"
+              },
+              "prose:24": {
+                "contentHash": "4a2bc7f92598",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:8": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "78377b525757"
+              },
+              "prose:25": {
+                "contentHash": "e219ef4d1b4b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:9": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "6a31b63811f8"
+              },
               "prose:26": {
-                "contentHash": "648fa6c6a226",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "link:8": {
-                "contentHash": "53ece6159230",
-                "anchorHash": "632dc3603d91"
-              },
-              "prose:27": {
-                "contentHash": "7a629ac91d53",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "link:9": {
-                "contentHash": "8cc5348e3f87",
-                "anchorHash": "eb8069ffe3b9"
-              },
-              "prose:28": {
-                "contentHash": "004aed934257",
+                "contentHash": "3843edb7b01c",
                 "anchorHash": "e3b0c44298fc"
               },
               "inline-code:10": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "78377b525757"
+                "anchorHash": "99f391be0bc0"
               },
-              "prose:29": {
-                "contentHash": "e219ef4d1b4b",
+              "prose:27": {
+                "contentHash": "1cac1e808e7b",
                 "anchorHash": "e3b0c44298fc"
               },
               "inline-code:11": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "6a31b63811f8"
+                "anchorHash": "c522337787f3"
               },
-              "prose:30": {
-                "contentHash": "3843edb7b01c",
+              "prose:28": {
+                "contentHash": "3973e022e932",
                 "anchorHash": "e3b0c44298fc"
               },
               "inline-code:12": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "99f391be0bc0"
+                "anchorHash": "9f2eeb19c9b7"
               },
-              "prose:31": {
-                "contentHash": "1cac1e808e7b",
+              "prose:29": {
+                "contentHash": "7622d554471e",
                 "anchorHash": "e3b0c44298fc"
               },
               "inline-code:13": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "c522337787f3"
+                "anchorHash": "9f2eeb19c9b7"
               },
-              "prose:32": {
-                "contentHash": "3973e022e932",
+              "prose:30": {
+                "contentHash": "7e264d7e0c84",
                 "anchorHash": "e3b0c44298fc"
               },
               "inline-code:14": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "9f2eeb19c9b7"
-              },
-              "prose:33": {
-                "contentHash": "7622d554471e",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "inline-code:15": {
-                "contentHash": "e3b0c44298fc",
-                "anchorHash": "9f2eeb19c9b7"
-              },
-              "prose:34": {
-                "contentHash": "7e264d7e0c84",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "inline-code:16": {
-                "contentHash": "e3b0c44298fc",
                 "anchorHash": "d21f08b3294a"
               },
-              "prose:35": {
-                "contentHash": "0d37141e3766",
+              "prose:31": {
+                "contentHash": "56af80e28ea7",
                 "anchorHash": "e3b0c44298fc"
               },
-              "link:17": {
-                "contentHash": "501496a44865",
-                "anchorHash": "ac203a87d7f3"
+              "link:15": {
+                "contentHash": "e30e897ffcd8",
+                "anchorHash": "ee6b3a042e7d"
               },
-              "prose:36": {
+              "prose:32": {
                 "contentHash": "cdb4ee2aea69",
                 "anchorHash": "e3b0c44298fc"
               }
@@ -902,43 +886,39 @@
               "prose:4",
               "code-comment:6",
               "code-fence:7",
-              "prose:18",
+              "prose:16",
               "inline-code:0",
-              "prose:19",
+              "prose:17",
               "link:1",
-              "prose:20",
-              "link:2",
-              "prose:21",
+              "prose:18",
+              "inline-code:2",
+              "prose:19",
               "inline-code:3",
+              "prose:20",
+              "link:4",
+              "prose:21",
+              "inline-code:5",
               "prose:22",
-              "inline-code:4",
-              "prose:23",
-              "link:5",
-              "prose:24",
               "inline-code:6",
+              "prose:23",
+              "link:7",
+              "prose:24",
+              "inline-code:8",
               "prose:25",
-              "inline-code:7",
+              "inline-code:9",
               "prose:26",
-              "link:8",
-              "prose:27",
-              "link:9",
-              "prose:28",
               "inline-code:10",
-              "prose:29",
+              "prose:27",
               "inline-code:11",
-              "prose:30",
+              "prose:28",
               "inline-code:12",
-              "prose:31",
+              "prose:29",
               "inline-code:13",
-              "prose:32",
+              "prose:30",
               "inline-code:14",
-              "prose:33",
-              "inline-code:15",
-              "prose:34",
-              "inline-code:16",
-              "prose:35",
-              "link:17",
-              "prose:36"
+              "prose:31",
+              "link:15",
+              "prose:32"
             ]
           },
           "run-the-code-using-node-sendtx-js": {
@@ -966,23 +946,23 @@
             ]
           },
           "see-your-transaction-in-the-mempool": {
-            "contentHash": "dd88584f8e55",
-            "anchorHash": "0fa9f55d1428",
+            "contentHash": "7591d9949850",
+            "anchorHash": "bfef83080675",
             "labelHash": "b24890b9c4a8",
             "children": {
               "_label": {
                 "contentHash": "b24890b9c4a8",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:5": {
+              "prose:4": {
                 "contentHash": "8801598a2b0c",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
                 "contentHash": "d1c1545a519f",
-                "anchorHash": "79b8f5199275"
+                "anchorHash": "7d1018c96cac"
               },
-              "prose:6": {
+              "prose:5": {
                 "contentHash": "a97c0b88bdc6",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -990,7 +970,7 @@
                 "contentHash": "e3b0c44298fc",
                 "anchorHash": "a4de46774047"
               },
-              "prose:7": {
+              "prose:6": {
                 "contentHash": "c6d24947d229",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -998,7 +978,7 @@
                 "contentHash": "4265acd69e8d",
                 "anchorHash": "0cf6f7a549af"
               },
-              "prose:8": {
+              "prose:7": {
                 "contentHash": "22c2711708e3",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -1006,32 +986,22 @@
                 "contentHash": "053bc65874ad",
                 "anchorHash": "0725688166ee"
               },
-              "prose:9": {
-                "contentHash": "ca5d194a6296",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "link:4": {
-                "contentHash": "ed4ef9bcc0cb",
-                "anchorHash": "ed4ef9bcc0cb"
-              },
-              "prose:10": {
-                "contentHash": "d2e2adf7177b",
+              "prose:8": {
+                "contentHash": "a65d5753a974",
                 "anchorHash": "e3b0c44298fc"
               }
             },
             "childrenOrder": [
               "_label",
-              "prose:5",
+              "prose:4",
               "link:0",
-              "prose:6",
+              "prose:5",
               "inline-code:1",
-              "prose:7",
+              "prose:6",
               "image:2",
-              "prose:8",
+              "prose:7",
               "link:3",
-              "prose:9",
-              "link:4",
-              "prose:10"
+              "prose:8"
             ]
           }
         },
@@ -1071,5 +1041,5 @@
       "steps-to-sending-your-transaction"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

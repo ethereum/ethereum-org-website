@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "来自以太坊生态系统的构建者资源、工具和开发动态。",
-  "page-latest-title": "构建者最新动态",
-  "page-latest-subtitle": "一个共享空间，汇集专家视角，探讨整个以太坊构建者生态系统的最新资源、工具和开发动态。",
+  "page-latest-meta-description": "来自以太坊社区的最新博客文章、新闻和更新，以及来自整个构建者生态系统的专家观点。",
+  "page-latest-title": "最新以太坊更新",
+  "page-latest-subtitle": "来自社区的最新博客文章、新闻和更新，以及关于整个以太坊构建者生态系统发展的专家观点。",
   "page-latest-no-posts": "未找到文章。",
   "page-latest-read-more": "阅读更多",
   "page-latest-minute-read": "{minutes} 分钟阅读",
-  "page-latest-team-attribution": "EF 构建者增长团队"
+  "page-latest-team-attribution": "EF 构建者增长团队",
+  "page-latest-cta-submit-resource": "提交资源",
+  "page-latest-cta-propose-article": "提议文章",
+  "page-latest-highlights-heading": "亮点",
+  "page-latest-articles-heading": "最新以太坊文章",
+  "page-latest-sources-heading": "在这些网站上阅读更多",
+  "page-latest-see-more": "查看更多 ({count})",
+  "page-latest-sort-label": "文章排序",
+  "page-latest-sort-newest": "最新优先",
+  "page-latest-sort-oldest": "最旧优先",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "部分文章以其原文（英语）显示。",
+  "page-latest-suggest-heading": "推荐资源",
+  "page-latest-suggest-description": "知道应该在此列出的以太坊新闻通讯或研究出版物，或者有构建者文章主题的想法？开启议题以提交您的资源。"
 }

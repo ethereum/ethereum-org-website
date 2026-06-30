@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/send-token-ethersjs/index.md",
-  "generatedAt": "2026-06-18T00:14:38.799Z",
-  "rootHash": "b29466903deb",
+  "generatedAt": "2026-06-30T00:46:37.898Z",
+  "rootHash": "82ac5232cd2c",
   "tree": {
-    "contentHash": "97ad3ef95144",
-    "anchorHash": "e75292a3fdd4",
+    "contentHash": "134e2a571a9c",
+    "anchorHash": "01fe2c348e2c",
     "children": {
       "frontmatter:title": {
         "contentHash": "51a5ade084c0",
@@ -40,12 +40,12 @@
         "anchorHash": "51c27cbdf3c7"
       },
       "send-token": {
-        "contentHash": "a7b18c9fa1c0",
-        "anchorHash": "641f57c182a4",
-        "labelHash": "8b0cd3fc2c0b",
+        "contentHash": "8e8b35cef37d",
+        "anchorHash": "366f1e91adb5",
+        "labelHash": "11de47148cc9",
         "children": {
           "_label": {
-            "contentHash": "8b0cd3fc2c0b",
+            "contentHash": "11de47148cc9",
             "anchorHash": "e3b0c44298fc"
           },
           "you-learn-about": {
@@ -68,7 +68,7 @@
             ]
           },
           "to-get-started": {
-            "contentHash": "463dc5912153",
+            "contentHash": "10dad40f1d18",
             "anchorHash": "4b9f7d802648",
             "labelHash": "e88ac440ef97",
             "children": {
@@ -77,7 +77,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:0": {
-                "contentHash": "2e81891b6862",
+                "contentHash": "09191e07d207",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -88,7 +88,7 @@
           },
           "install-ethersjs": {
             "contentHash": "1cefe022d0ec",
-            "anchorHash": "283b4d0c261c",
+            "anchorHash": "990d1fb5ee5a",
             "labelHash": "8749b1693f74",
             "children": {
               "_label": {
@@ -97,7 +97,7 @@
               },
               "code-fence:1": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "4e3a9b51798a"
+                "anchorHash": "2c159a624415"
               },
               "prose:0": {
                 "contentHash": "a291d88f47ad",
@@ -109,11 +109,11 @@
               },
               "code-fence:4": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "00a6a3968d4e"
+                "anchorHash": "014a63a1f045"
               },
               "code-fence:6": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "c47d23bc5772"
+                "anchorHash": "e585acc9fa7f"
               }
             },
             "childrenOrder": [
@@ -567,5 +567,5 @@
       "send-token-method"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

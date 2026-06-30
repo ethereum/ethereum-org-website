@@ -31,47 +31,45 @@ Je, unahitaji mwongozo wa kimsingi zaidi kwanza? Angalia [ethereum.org/learn](/l
 - [Mtiririko wa Kazi wa Msanidi Programu wa .NET wa Kuunda na Kuita Mikataba Mahiri ya Ethereum](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
 - [Ujumuishaji wa mikataba mahiri na Nethereum](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
 - [Kuunganisha .NET na Mikataba Mahiri ya Mnyororo wa Vitalu wa Ethereum na Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), pia katika [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
-- [Nethereum - Maktaba ya ujumuishaji ya .NET ya chanzo wazi kwa ajili ya mnyororo wa vitalu](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
-- [Kuandika Miamala ya Ethereum kwenye Hifadhidata ya SQL Ukitumia Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [Angalia jinsi ya kusambaza mikataba mahiri ya Ethereum kwa urahisi ukitumia C# na VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
+- [Nethereum - Maktaba ya ujumuishaji ya .NET ya chanzo wazi kwa mnyororo wa vitalu](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
+- [Kuandika Miamala ya Ethereum kwenye Hifadhidata ya SQL Kwa Kutumia Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
+- [Tazama jinsi ya kusambaza mikataba mahiri ya Ethereum kwa urahisi ukitumia C# na VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
 **Unataka kuruka usanidi kwa sasa, na uruke moja kwa moja kwenye sampuli?**
 
-- [Uwanja wa michezo (Playground)](https://playground.nethereum.com/) - Wasiliana na Ethereum na ujifunze jinsi ya kutumia Nethereum kupitia kivinjari.
+- [Nethereum Playground](https://playground.nethereum.com/) - Wasiliana na Ethereum na ujifunze jinsi ya kutumia Nethereum kupitia kivinjari.
   - [Hoji Salio la Akaunti](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
-  - [Hoji Salio la Mkataba Mahiri wa ERC20](https://docs.nethereum.com/docs/smart-contracts/erc20)
+  - [Hoji Salio la Mkataba Mahiri wa ERC-20](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [Hamisha Etha kwenye Akaunti](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
-  - ... Na mengine mengi!
+  - ... Na zaidi!
+## Makala ya kati {#intermediate-articles}
 
-## Makala ya kiwango cha kati {#intermediate-articles}
-
-- [Kuanza na Nethereum & Mradi wa Kwanza](https://docs.nethereum.com/docs/getting-started/first-project)
-- [Sambaza Minyororo Yako Mwenyewe ya Majaribio ya Usanidi](https://github.com/Nethereum/Testchains)
-- [Programu-jalizi ya VSCode Codegen ya Solidity](https://docs.nethereum.com/docs/aspire-templates/guide-codegen)
-- [Unity na Ethereum: Kwa Nini na Jinsi Gani](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
-- [Unda API ya Wavuti ya ASP.NET Core kwa ajili ya dapps za Ethereum](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
-- [Kutumia Nethereum Web3 Kutekeleza Mfumo wa Kufuatilia Mnyororo wa Ugavi](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
+- [Nethereum Kuanza & Mradi wa Kwanza](https://docs.nethereum.com/docs/getting-started/first-project)
+- [Sambaza Minyororo Yako Mwenyewe ya Majaribio ya Maendeleo](https://github.com/Nethereum/Testchains)
+- [Uzalishaji wa msimbo ukitumia Nethereum na VS Code](https://docs.nethereum.com/docs/smart-contracts/code-generation/)
+- [Unity na Ethereum: Kwa nini na Jinsi gani](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
+- [Unda API ya Wavuti ya ASP.NET Core kwa programu tumizi zilizogatuliwa (dapps) za Ethereum](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
+- [Mfumo wa Nethereum MUD kwa programu tumizi zilizopangwa mnyororoni](https://docs.nethereum.com/docs/mud-framework/overview/)
 - [Uchakataji wa Mnyororo wa Vitalu wa Nethereum](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
-- [Utiririshaji wa Websocket wa Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
+- [Utiririshaji wa wakati halisi wa Nethereum](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido na Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum na Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-
 ## Miundo ya matumizi ya hali ya juu {#advanced-use-patterns}
 
-- [Azure Key Vault Na Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
+- [Hifadhi ya Ufunguo ya Azure na Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
-
+- [Usanifu wa marejeleo wa mandhari-nyuma ya Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
 ## Miradi ya .NET, zana na mambo mengine ya kufurahisha {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Uwanja wa Michezo wa Nethereum (Nethereum Playground)](https://playground.nethereum.com/) - _Kusanya, unda, na uendeshe vijisehemu vya msimbo vya Nethereum kwenye kivinjari_
+- [Nethereum Playground](https://playground.nethereum.com/) - _Kusanya, unda, na uendeshe vijisehemu vya msimbo wa Nethereum kwenye kivinjari_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Codegen ya Nethereum yenye UI katika Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Kichunguzi chepesi cha mnyororo wa vitalu cha .NET Wasm SPA na mkoba rahisi_
-- [Nethermind](https://github.com/NethermindEth/nethermind) - _Mteja wa Ethereum wa .NET Core kwa ajili ya Linux, Windows, MacOS_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _kazi za matumizi kwa ajili ya kufanya kazi na misingi ya msimbo inayohusiana na Ethereum_
-- [TestChains](https://github.com/Nethereum/TestChains) - _Minyororo ya usanidi ya .NET iliyosanidiwa mapema kwa majibu ya haraka (uthibitisho wa mamlaka (PoA))_
+- [Wonka Business Rules Engine](https://github.com/Nethereum/Wonka) - _Injini ya sheria za biashara (kwa jukwaa la .NET na jukwaa la Ethereum) ambayo kiasili inaendeshwa na data fafanuzi_
+- [Nethermind](https://github.com/NethermindEth/nethermind) - _Mteja wa Ethereum wa .NET Core kwa Linux, Windows, MacOS_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _vitendaji vya matumizi kwa kufanya kazi na misingi ya msimbo inayohusiana na Ethereum_
+- [TestChains](https://github.com/Nethereum/TestChains) - _Minyororo ya maendeleo ya .NET iliyosanidiwa mapema kwa majibu ya haraka (uthibitisho wa mamlaka (PoA))_
 
 Je, unatafuta rasilimali zaidi? Angalia [ethereum.org/developers](/developers/).
-
 ## Wachangiaji wa jumuiya ya .NET {#dot-net-community-contributors}
 
 Katika Nethereum, mara nyingi tunapatikana kwenye [Gitter](https://gitter.im/Nethereum/Nethereum) ambapo kila mtu anakaribishwa kuuliza/kujibu maswali, kupata msaada, au kupumzika tu. Jisikie huru kufanya PR au kufungua suala kwenye [hazina ya GitHub ya Nethereum](https://github.com/Nethereum), au pitia tu miradi mingi ya kando/sampuli tuliyonayo. Unaweza pia kutupata kwenye [Discord](https://discord.gg/jQPrR58FxX)!

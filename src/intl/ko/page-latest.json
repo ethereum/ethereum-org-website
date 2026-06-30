@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "이더리움 생태계의 빌더 리소스, 도구 및 개발 소식입니다.",
-  "page-latest-title": "빌더 업데이트",
-  "page-latest-subtitle": "이더리움 빌더 생태계 전반의 최신 리소스, 도구 및 개발 소식에 대한 전문가의 관점을 나누는 공유 공간입니다.",
+  "page-latest-meta-description": "이더리움 커뮤니티의 최신 블로그 게시물, 뉴스 및 업데이트와 빌더 생태계 전반의 전문가 관점을 확인하세요.",
+  "page-latest-title": "최신 이더리움 업데이트",
+  "page-latest-subtitle": "커뮤니티의 최신 블로그 게시물, 뉴스 및 업데이트와 이더리움 빌더 생태계 전반의 개발에 대한 전문가 관점을 확인하세요.",
   "page-latest-no-posts": "게시물을 찾을 수 없습니다.",
   "page-latest-read-more": "더 읽기",
   "page-latest-minute-read": "{minutes}분 소요",
-  "page-latest-team-attribution": "EF 빌더 성장"
+  "page-latest-team-attribution": "EF 빌더 성장",
+  "page-latest-cta-submit-resource": "리소스 제출하기",
+  "page-latest-cta-propose-article": "아티클 제안하기",
+  "page-latest-highlights-heading": "하이라이트",
+  "page-latest-articles-heading": "최신 이더리움 아티클",
+  "page-latest-sources-heading": "다음 웹사이트에서 더 읽어보기",
+  "page-latest-see-more": "더 보기 ({count})",
+  "page-latest-sort-label": "아티클 정렬",
+  "page-latest-sort-newest": "최신순",
+  "page-latest-sort-oldest": "오래된순",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "일부 아티클은 원문(영어)으로 표시됩니다.",
+  "page-latest-suggest-heading": "리소스 제안하기",
+  "page-latest-suggest-description": "여기에 등록되어야 할 이더리움 뉴스레터나 연구 간행물을 알고 계시거나, 염두에 두고 있는 빌더 아티클 주제가 있으신가요? 이슈를 열어 리소스를 제출해 주세요."
 }

@@ -63,7 +63,7 @@ _Примечание: из-за перегруженности сети это 
 
 ### Шаг 5. Проверка баланса {#step-5-check-your-balance}
 
-Чтобы убедиться, что ETH поступили на ваш кошелек, давайте сделаем запрос [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) с помощью [инструмента composer от Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Это вернет количество ETH в нашем кошельке. Чтобы узнать больше, посмотрите [краткое руководство Alchemy по использованию инструмента composer](https://youtu.be/r6sjRxBZJuU).
+Чтобы убедиться, что ETH находится в вашем кошельке, давайте сделаем запрос [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) с помощью [инструмента песочницы Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Это вернет количество ETH в нашем кошельке. Чтобы узнать больше, посмотрите [короткое руководство Alchemy по использованию инструмента composer](https://youtu.be/r6sjRxBZJuU).
 
 Введите адрес вашего аккаунта МетаМаск и нажмите **Send Request** (Отправить запрос). Вы увидите ответ, похожий на фрагмент кода ниже.
 
@@ -73,9 +73,8 @@ _Примечание: из-за перегруженности сети это 
 
 > _Примечание: этот результат указан в wei, а не в ETH. Wei используется как наименьшая единица измерения эфира._
 
-Фух! Наши тестовые деньги на месте.
-
-### Шаг 6. Инициализация проекта {#step-6-initialize-our-project}
+Фух! Наши ненастоящие деньги на месте.
+### Шаг 6. Инициализация нашего проекта {#step-6-initialize-our-project}
 
 Сначала нам нужно создать папку для нашего проекта. Перейдите в командную строку и введите следующее:
 
@@ -84,11 +83,11 @@ mkdir hello-world
 cd hello-world
 ```
 
-Теперь, когда мы находимся внутри папки нашего проекта, мы используем `npm init` для инициализации проекта.
+Теперь, когда мы находимся внутри папки нашего проекта, мы будем использовать `npm init` для инициализации проекта.
 
-> Если у вас еще не установлен npm, следуйте [этим инструкциям по установке Node.js и npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
+> Если у вас еще не установлен npm, следуйте [инструкциям по установке Node.js](https://nodejs.org/en/download/), чтобы установить Node.js и npm.
 
-В рамках этого руководства не имеет значения, как вы ответите на вопросы при инициализации. Вот как это сделали мы для примера:
+Для целей этого руководства не имеет значения, как вы ответите на вопросы инициализации. Вот как мы это сделали для справки:
 
 ```
 package name: (hello-world)
@@ -116,7 +115,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-Подтвердите создание package.json, и мы готовы продолжать!
+Подтвердите создание package.json, и мы готовы к работе!
 
 ### Шаг 7. Загрузка Hardhat {#step-7-download-hardhat}
 
@@ -225,7 +224,7 @@ contract HelloWorld {
 
 Каждая транзакция, отправленная с вашего кошелька, требует подписи с использованием вашего уникального закрытого ключа. Чтобы предоставить нашей программе это разрешение, мы можем безопасно сохранить наш закрытый ключ в файле окружения. Здесь же мы сохраним ключ API для Alchemy.
 
-> Чтобы узнать больше об отправке транзакций, ознакомьтесь с [этим руководством](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) по отправке транзакций с использованием Web3.
+> Чтобы узнать больше об отправке транзакций, ознакомьтесь с [этим руководством](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) по отправке транзакций с использованием Web3.
 
 Сначала установите пакет dotenv в каталоге вашего проекта:
 
@@ -255,7 +254,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 ### Шаг 12. Установка Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js — это библиотека, которая упрощает взаимодействие и выполнение запросов к Эфириуму, оборачивая [стандартные методы JSON-RPC](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) в более удобные для пользователя методы.
+Ethers.js — это библиотека, которая упрощает взаимодействие и выполнение запросов к Эфириуму, оборачивая [стандартные методы JSON-RPC](/developers/docs/apis/json-rpc/) в более удобные для пользователя методы.
 
 Hardhat позволяет нам интегрировать [плагины](https://hardhat.org/plugins/) для дополнительных инструментов и расширенной функциональности. Мы воспользуемся [плагином Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) для развертывания контракта.
 
@@ -373,7 +372,7 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 ![](./hello-world-explorer.png)
 
-Здесь вы увидите несколько методов JSON-RPC, которые Hardhat/Ethers выполнили для нас в фоновом режиме, когда мы вызвали функцию `.deploy()`. Два важных метода здесь — это [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), который является запросом на запись нашего контракта в цепь Гёрли, и [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), который является запросом на чтение информации о нашей транзакции по заданному хешу. Чтобы узнать больше об отправке транзакций, ознакомьтесь с [нашим руководством по отправке транзакций с использованием Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Здесь вы увидите несколько методов JSON-RPC, которые Hardhat/Ethers выполнили для нас в фоновом режиме, когда мы вызвали функцию `.deploy()`. Два важных метода здесь — это [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), который является запросом на запись нашего контракта в цепь Гёрли, и [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), который является запросом на чтение информации о нашей транзакции по заданному хешу. Чтобы узнать больше об отправке транзакций, ознакомьтесь с [нашим руководством по отправке транзакций с использованием Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 ## Часть 2: Взаимодействие с вашим смарт-контрактом {#part-2-interact-with-your-smart-contract}
 
@@ -571,7 +570,7 @@ main()
 Новое сообщение: This is the new message.
 ```
 
-Во время выполнения этого скрипта вы можете заметить, что шаг `Updating the message...` занимает некоторое время перед загрузкой нового сообщения. Это связано с процессом майнинга; если вам интересно отслеживать транзакции во время их майнинга, посетите [мемпул Alchemy](https://dashboard.alchemyapi.io/mempool), чтобы увидеть статус транзакции. Если транзакция отклонена, также полезно проверить [Etherscan для Гёрли](https://goerli.etherscan.io) и найти хеш вашей транзакции.
+Во время выполнения этого скрипта вы можете заметить, что шаг `Updating the message...` занимает некоторое время перед загрузкой нового сообщения. Это связано с процессом майнинга; если вам интересно отслеживать транзакции во время их майнинга, посетите [мемпул Alchemy](https://dashboard.alchemy.com/mempool), чтобы увидеть статус транзакции. Если транзакция отклонена, также полезно проверить [Etherscan для Гёрли](https://goerli.etherscan.io) и найти хеш вашей транзакции.
 
 ## Часть 3: Публикация вашего смарт-контракта на Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -679,7 +678,7 @@ https://goerli.etherscan.io/address/<contract-address>#contracts
 К концу этого руководства вы узнаете, как:
 
 - Подключить кошелек МетаМаск к вашему децентрализованному приложению (dapp)
-- Читать данные из вашего смарт-контракта с помощью API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Читать данные из вашего смарт-контракта с помощью API [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Подписывать транзакции Эфириума с помощью МетаМаск
 
 Для этого dapp мы будем использовать [React](https://react.dev/) в качестве фронтенд-фреймворка. Однако важно отметить, что мы не будем тратить много времени на разбор его основ, так как в основном сосредоточимся на добавлении функциональности Web3 в наш проект.
@@ -900,33 +899,33 @@ export const updateMessage = async (message) => {}
 
 Может показаться, что это много шагов, но не волнуйтесь! Мы шаг за шагом покажем вам, как выполнить каждый из них! :)
 
-#### Установка API-подключения к цепи Эфириума {#establish-an-api-connection-to-the-ethereum-chain}
+#### Установка API-подключения к цепи Эфириум {#establish-an-api-connection-to-the-ethereum-chain}
 
-Помните, как в Части 2 этого руководства мы использовали наш [ключ Alchemy Web3 для чтения из нашего смарт-контракта](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? Вам также понадобится ключ Alchemy Web3 в вашем dapp для чтения из цепи.
+Помните, как в части 2 этого руководства мы использовали наш ключ Alchemy Web3 для чтения из нашего смарт-контракта? Вам также понадобится ключ Alchemy Web3 в вашем децентрализованном приложении (dapp) для чтения из цепи.
 
-Если у вас его еще нет, сначала установите [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), перейдя в корневой каталог вашего `starter-files` и выполнив следующее в вашем терминале:
+Если у вас его еще нет, сначала установите [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), перейдя в корневой каталог ваших `starter-files` и выполнив следующую команду в терминале:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) — это обертка вокруг [Web3.js](https://docs.web3js.org/), предоставляющая расширенные методы API и другие важные преимущества, чтобы облегчить вашу жизнь как разработчика Web3. Она разработана так, чтобы требовать минимальной настройки, поэтому вы можете сразу начать использовать ее в своем приложении!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) — это обертка для [Web3.js](https://docs.web3js.org/), предоставляющая расширенные методы API и другие важные преимущества, которые облегчат вашу жизнь как Web3-разработчика. Она разработана так, чтобы требовать минимальной настройки, поэтому вы можете начать использовать ее в своем приложении прямо сейчас!
 
-Затем установите пакет [dotenv](https://www.npmjs.com/package/dotenv) в каталог вашего проекта, чтобы у нас было безопасное место для хранения нашего API-ключа после его получения.
+Затем установите пакет [dotenv](https://www.npmjs.com/package/dotenv) в каталог вашего проекта, чтобы у нас было безопасное место для хранения нашего ключа API после его получения.
 
 ```text
 npm install dotenv --save
 ```
 
-Для нашего dapp **мы будем использовать наш API-ключ Websockets** вместо нашего API-ключа HTTP, так как это позволит нам настроить слушатель, который обнаруживает изменение сообщения, хранящегося в смарт-контракте.
+Для нашего dapp **мы будем использовать наш ключ API Websockets** вместо ключа API HTTP, так как это позволит нам настроить слушатель, который обнаруживает изменения сообщения, хранящегося в смарт-контракте.
 
-Как только вы получите свой API-ключ, создайте файл `.env` в вашем корневом каталоге и добавьте в него ваш URL-адрес Alchemy Websockets. После этого ваш файл `.env` должен выглядеть так:
+Как только вы получите свой ключ API, создайте файл `.env` в корневом каталоге и добавьте в него ваш URL-адрес Alchemy Websockets. После этого ваш файл `.env` должен выглядеть так:
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<ключ>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-Теперь мы готовы настроить нашу конечную точку Alchemy Web3 в нашем dapp! Давайте вернемся к нашему `interact.js`, который вложен в папку `util`, и добавим следующий код в начало файла:
+Теперь мы готовы настроить нашу конечную точку Alchemy Web3 в нашем dapp! Давайте вернемся к нашему файлу `interact.js`, который находится в папке `util`, и добавим следующий код в начало файла:
 
 ```javascript
 // interact.js
@@ -939,10 +938,9 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-Выше мы сначала импортировали ключ Alchemy из нашего файла `.env`, а затем передали наш `alchemyKey` в `createAlchemyWeb3` для установки нашей конечной точки Alchemy Web3.
+Выше мы сначала импортировали ключ Alchemy из нашего файла `.env`, а затем передали наш `alchemyKey` в `createAlchemyWeb3`, чтобы установить нашу конечную точку Alchemy Web3.
 
-С готовой конечной точкой пришло время загрузить наш смарт-контракт!
-
+Теперь, когда эта конечная точка готова, пришло время загрузить наш смарт-контракт!
 #### Загрузка вашего смарт-контракта Hello World {#loading-your-hello-world-smart-contract}
 
 Чтобы загрузить ваш смарт-контракт Hello World, вам понадобятся адрес его контракта и ABI, которые можно найти на Etherscan, если вы завершили [Часть 3 этого руководства.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
@@ -1034,7 +1032,7 @@ useEffect(async () => {
 
 #### Реализация `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-Если вы вспомните файл `HelloWorld.sol`, который мы написали в [Части 1 этой серии руководств](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), то вспомните, что существует событие смарт-контракта под названием `UpdatedMessages`, которое генерируется после вызова функции `update` нашего смарт-контракта (см. строки 9 и 27):
+Если вы вспомните файл `HelloWorld.sol`, который мы написали в [Части 1 этой серии руководств](#step-10-write-our-contract), то вспомните, что существует событие смарт-контракта под названием `UpdatedMessages`, которое генерируется после вызова функции `update` нашего смарт-контракта (см. строки 9 и 27):
 
 ```javascript
 // HelloWorld.sol
@@ -1129,18 +1127,17 @@ useEffect(async () => {
 
 Чтобы подписать транзакцию в блокчейне Эфириума, нам понадобится немного тестового ETH. Чтобы получить ETH, вы можете перейти на [FaucETH](https://fauceth.komputing.org) и ввести адрес вашего аккаунта Гёрли, нажать «Request funds» (Запросить средства), затем выбрать «Ethereum Testnet Goerli» в выпадающем списке и, наконец, снова нажать кнопку «Request funds». Вскоре после этого вы должны увидеть ETH на своем аккаунте МетаМаск!
 
-#### Проверка вашего баланса {#check-your-balance}
+#### Проверка баланса {#check-your-balance}
 
-Чтобы дважды проверить наличие нашего баланса, давайте сделаем запрос [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) с помощью [инструмента composer от Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Это вернет количество ETH в нашем кошельке. После того как вы введете адрес своего аккаунта МетаМаск и нажмете «Send Request» (Отправить запрос), вы должны увидеть ответ вроде этого:
+Чтобы убедиться, что наш баланс на месте, давайте выполним запрос [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) с помощью [инструмента песочницы Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Это вернет количество ETH в нашем кошельке. После того как вы введете адрес вашего аккаунта МетаМаск и нажмете «Send Request», вы должны увидеть примерно такой ответ:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**ПРИМЕЧАНИЕ:** Этот результат указан в wei, а не в ETH. Wei используется как наименьший номинал эфира. Конвертация из wei в ETH: 1 ETH = 10¹⁸ wei. Поэтому, если мы переведем 0xde0b6b3a7640000 в десятичную систему, мы получим 1\*10¹⁸, что равно 1 ETH.
+**ПРИМЕЧАНИЕ:** Этот результат указан в wei, а не в ETH. wei используется как наименьшая единица измерения эфира. Конвертация из wei в ETH: 1 ETH = 10¹⁸ wei. Поэтому, если мы переведем 0xde0b6b3a7640000 в десятичную систему, мы получим 1\*10¹⁸, что равно 1 ETH.
 
-Фух! Наши тестовые деньги на месте! 🤑
-
+Фух! Все наши ненастоящие деньги на месте! 🤑
 ### Шаг 5. Подключение МетаМаск к вашему пользовательскому интерфейсу {#step-5-connect-metamask-to-your-ui}
 
 Теперь, когда наш кошелек МетаМаск настроен, давайте подключим к нему наш dapp!
@@ -1539,7 +1536,7 @@ const onUpdatePressed = async () => {
 Ууууу, вы дошли до конца руководства! Подводя итог, вы узнали, как:
 
 - Подключить кошелек МетаМаск к вашему проекту dapp
-- Читать данные из вашего смарт-контракта с помощью API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Читать данные из вашего смарт-контракта с помощью API [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Подписывать транзакции Эфириума с помощью МетаМаск
 
 Теперь вы полностью готовы применить навыки из этого руководства для создания собственного пользовательского проекта dapp! Как всегда, если у вас есть какие-либо вопросы, не стесняйтесь обращаться к нам за помощью в [Дискорд Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️

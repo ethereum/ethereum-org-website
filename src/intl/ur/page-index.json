@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "ایتھیریم - ⁦Ethereum.org⁩ کی جانب سے مکمل گائیڈ",
+  "page-index-meta-title": "ایتھیریم - ⁦ethereum.org⁩ کی جانب سے مکمل گائیڈ",
   "page-index-meta-description": "ایتھیریم رقم اور نئی قسم کی ایپلی کیشنز کے لیے ایک عالمی، غیر مرکزی پلیٹ فارم ہے۔ ایتھیریم پر، آپ اپنی رقم، ڈیٹا، اور شناخت کو خود کنٹرول کرتے ہیں۔ کسی بینک، کسی درمیانی شخص، یا کسی اجازت کی ضرورت نہیں ہے۔",
   "page-index-description": "جدید ایپس اور بلاک چین نیٹ ورکس کے لیے معروف پلیٹ فارم",
   "page-index-title": "ایتھیریم میں خوش آمدید",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "نجی اور اجازت یافتہ نیٹ ورکس",
   "page-index-get-started-enterprise-bullet-3": "ادارہ جاتی وسائل",
   "page-index-get-started-enterprise-cta": "انٹرپرائز دریافت کریں",
-  "page-index-simulator-cta": "مزید گائیڈز آزمائیں"
+  "page-index-simulator-cta": "مزید گائیڈز آزمائیں",
+  "page-index-latest-updates-title": "ایتھیریم کی تازہ ترین اپ ڈیٹس",
+  "page-index-latest-updates-cta": "مزید دیکھیں"
 }

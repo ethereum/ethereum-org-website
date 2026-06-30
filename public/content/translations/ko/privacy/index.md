@@ -1,6 +1,6 @@
 ---
-title: 이더리움의 프라이버시
-description: 이더리움에서 프라이버시를 보호하기 위한 도구 및 기술
+title: "이더리움의 프라이버시"
+description: "이더리움에서 프라이버시를 보호하기 위한 도구 및 기술"
 lang: ko
 ---
 
@@ -93,5 +93,5 @@ _예시: [UmbraCash](https://app.umbra.cash/faq), [FluidKey](https://www.fluidke
 - [이더리움 프라이버시 스튜어드(Privacy Stewards of Ethereum)](https://pse.dev/) (PSE): 생태계의 프라이버시에 중점을 둔 이더리움 재단 연구 개발 랩
 - [Web3PrivacyNow](https://web3privacy.info/): 온라인에서 인권을 보호하고 증진하는 사람, 프로젝트 및 관련 조직의 네트워크
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/): 지갑의 포괄적인 목록, 기능, 관행 및 특정 표준에 대한 지원을 제공하는 것을 목표로 하는 이더리움 지갑 평가 사이트
-- [Zk-kit](https://zkkit.pse.dev/): 다양한 프로젝트 및 영지식 프로토콜에서 재사용할 수 있는 라이브러리(알고리즘, 유틸리티 함수 및 데이터 구조) 세트
+- [Zk-kit](https://zkkit.org/): 다양한 프로젝트 및 영지식 프로토콜에서 재사용할 수 있는 라이브러리(알고리즘, 유틸리티 함수 및 데이터 구조) 세트
 - [프라이버시 앱(Privacy Apps)](/apps/categories/privacy/) - 이더리움에서 실행되는 엄선된 프라이버시 애플리케이션 목록을 확인하세요.

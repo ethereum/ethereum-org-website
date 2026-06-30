@@ -1,6 +1,6 @@
 ---
-title: ⁦میں کیسے شامل ہو سکتا ہوں؟⁩
-description: ⁦ایتھیریم کمیونٹی میں شامل ہونے کا طریقہ۔⁩
+title: "⁦میں کیسے شامل ہو سکتا ہوں؟⁩"
+description: "⁦ایتھیریم کمیونٹی میں شامل ہونے کا طریقہ۔⁩"
 lang: ur
 ---
 
@@ -11,7 +11,7 @@ lang: ur
 ## ڈویلپرز <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [<span dir="ltr">ethereum.org/developers/</span>](/developers/) پر ایتھیریم کے بارے میں جانیں اور اسے آزمائیں
-- اپنے قریب کسی [ETHGlobal](https://ethglobal.co/) ہیکاتھون میں شرکت کریں!
+- اپنے قریب کسی [ETHGlobal](https://ethglobal.com/) ہیکاتھون میں شرکت کریں!
 - [اپنی مہارت کے شعبے یا پسندیدہ پروگرامنگ زبان سے متعلق پروجیکٹس](/developers/docs/programming-languages/) دیکھیں۔
 - [اتفاق رائے اور عمل درآمد کی تہہ کی کالز](https://www.youtube.com/@EthereumProtocol/streams) دیکھیں یا ان میں حصہ لیں۔
 - [ایکو سسٹم سپورٹ پروگرام کی خواہشات کی فہرست](https://esp.ethereum.foundation/wishlist/) - ٹولنگ، دستاویزات، اور بنیادی ڈھانچے کے وہ شعبے جہاں ایتھیریم ایکو سسٹم سپورٹ پروگرام فعال طور پر گرانٹ کی درخواستیں طلب کر رہا ہے۔
@@ -34,7 +34,7 @@ lang: ur
   - [<span dir="ltr">EIP</span> گورننس](https://github.com/ethereum-cat-herders/EIPIP) میں حصہ لیں
     - [Ethereum Cat Herders ڈسکارڈ](https://discord.com/invite/Nz6rtfJ8Cu) میں شامل ہوں۔
   - [<span dir="ltr">EIPs</span> کے بارے میں مزید](/eips/)
-- [<span dir="ltr">Challenges.ethereum.org</span>](https://challenges.ethereum.org/) - اعلیٰ مالیت کے تحقیقی باؤنٹیز کا ایک سلسلہ، جہاں آپ <span dir="ltr">>$100,000 USD</span> کما سکتے ہیں۔
+- [<span dir="ltr">Challenges.ethereum.org</span>](https://challenges.ethereum.org/) - اعلیٰ مالیت کے تحقیقی باؤنٹیز کا ایک سلسلہ، جہاں آپ <span dir="ltr">$100,000 USD</span> کما سکتے ہیں۔
 - [<span dir="ltr">Ethresear.ch</span>](https://ethresear.ch) - تحقیق کے لیے ایتھیریم کا بنیادی فورم، اور کرپٹو معاشیات کے لیے دنیا کا سب سے بااثر فورم
 - [<span dir="ltr">EF Research AMA</span>](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - محققین کے ساتھ سوال و جواب کا ایک جاری سلسلہ۔ جیسے ہی ہر اگلا حصہ کھلتا ہے، کوئی بھی سوالات پوسٹ کر سکتا ہے۔
 - [ایکو سسٹم سپورٹ پروگرام کی خواہشات کی فہرست](https://esp.ethereum.foundation/wishlist/) - تحقیق کے وہ شعبے جہاں ایتھیریم ایکو سسٹم سپورٹ پروگرام فعال طور پر گرانٹ کی درخواستیں طلب کر رہا ہے۔
@@ -80,7 +80,7 @@ lang: ur
 
 ایتھیریم ایکو سسٹم عوامی اشیاء اور بااثر پروجیکٹس کو فنڈ دینے کے مشن پر ہے۔ بہت چھوٹے عطیات کے ساتھ آپ اپنی حمایت ظاہر کر سکتے ہیں اور اہم کاموں کو پایہ تکمیل تک پہنچانے میں مدد کر سکتے ہیں۔
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [<span dir="ltr">clr.fund</span>](https://clr.fund/#/about)
 
 ## مالیاتی پیشہ ور افراد اور اکاؤنٹنٹس <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

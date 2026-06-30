@@ -1,7 +1,7 @@
 ---
-title: शून्य-ज्ञान प्रमाण क्या हैं?
-metaTitle: शून्य-ज्ञान प्रमाण
-description: शुरुआती लोगों के लिए शून्य-ज्ञान प्रमाण का एक गैर-तकनीकी परिचय।
+title: "शून्य-ज्ञान प्रमाण क्या हैं?"
+metaTitle: "शून्य-ज्ञान प्रमाण"
+description: "शुरुआती लोगों के लिए शून्य-ज्ञान प्रमाण का एक गैर-तकनीकी परिचय।"
 lang: hi
 ---
 
@@ -55,11 +55,13 @@ lang: hi
       <p>
         पहचान प्रबंधन प्रणालियों के लिए ZKP का उपयोग करने का एक वास्तविक दुनिया का उदाहरण इथेरियम पर निर्मित भूटान साम्राज्य की राष्ट्रीय डिजिटल आईडी (NDI) प्रणाली है। भूटान का NDI नागरिकों को अपनी आईडी पर संवेदनशील व्यक्तिगत डेटा प्रकट किए बिना, "मैं एक नागरिक हूँ" या "मैं 18 वर्ष से अधिक का हूँ" जैसे अपने बारे में तथ्यों को क्रिप्टोग्राफ़िक रूप से साबित करने की अनुमति देने के लिए ZKP का उपयोग करता है।
       </p>
-      <p>
+      <p></p>
         <a href="/decentralized-identity/#national-and-government-id">विकेंद्रीकृत पहचान केस स्टडी</a> में भूटान NDI के बारे में अधिक जानें।
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### मानवता का प्रमाण (Proof of Humanity) {#proof-of-humanity}
@@ -235,5 +237,5 @@ MACI का उपयोग करने के लिए समन्वयक 
 - [ZK-STARKs — क्वांटम कंप्यूटर के खिलाफ भी सत्यापन योग्य विश्वास बनाएं](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [zk-SNARKs कैसे संभव हैं, इसका एक अनुमानित परिचय](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [शून्य-ज्ञान प्रमाण (ZKPs) स्व-संप्रभु पहचान के लिए गेम चेंजर क्यों हैं](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [EIP-7503 समझाया गया: ZK प्रमाण के साथ इथेरियम पर निजी हस्तांतरण सक्षम करना](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [EIP-7503 समझाया गया: ZK प्रमाण के साथ इथेरियम पर निजी हस्तांतरण सक्षम करना](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK कार्ड गेम: ZK बुनियादी बातों और वास्तविक जीवन के उपयोग के मामलों को सीखने के लिए गेम](https://github.com/ZK-card/zk-cards) - _ZK-Cards_

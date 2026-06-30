@@ -1,7 +1,7 @@
 ---
-title: Web3 简介
-metaTitle: 什么是 Web3 以及它为什么重要？
-description: Web3（万维网的下一次演进）简介及其重要性。
+title: "Web3 简介"
+metaTitle: "什么是 Web3 以及它为什么重要？"
+description: "Web3（万维网的下一次演进）简介及其重要性。"
 lang: zh
 ---
 

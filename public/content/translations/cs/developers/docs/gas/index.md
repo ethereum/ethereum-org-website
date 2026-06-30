@@ -134,7 +134,7 @@ Pokud chcete sledovat ceny plynu, abyste mohli posílat své ETH levněji, můž
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Open source odhadce ceny plynu pro transakce_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Sledujte ceny plynu na Ethereu a L2, abyste snížili transakční poplatky a ušetřili peníze_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Rozšíření pro Chrome pro odhad gasu podporující jak starší transakce typu 0, tak transakce typu 2 EIP-1559._
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Vypočítejte si poplatky za plyn ve vaší místní měně pro různé typy transakcí na sítích Mainnet, Arbitrum a Polygon._
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Vypočítejte si poplatky za plyn ve vaší místní měně pro různé typy transakcí na sítích Mainnet, Arbitrum a Polygon._
 
 ## Související nástroje {#related-tools}
 

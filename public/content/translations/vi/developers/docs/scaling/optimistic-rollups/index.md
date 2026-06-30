@@ -255,15 +255,13 @@ Bạn thích học qua hình ảnh hơn? Hãy xem Finematics giải thích về 
 
 ## Đọc thêm về Rollup lạc quan {#further-reading-on-optimistic-rollups}
 
-- [Rollup lạc quan hoạt động như thế nào (Hướng dẫn hoàn chỉnh)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Rollup Chuỗi khối là gì? Giới thiệu kỹ thuật](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
+- [Rollup lạc quan hoạt động như thế nào (Hướng dẫn toàn tập)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Hướng dẫn thiết yếu về Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Hướng dẫn thực tế về các bản cuộn Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
-- [Trạng thái của các bằng chứng gian lận trong các l2 của Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
-- [Rollup của Optimism thực sự hoạt động như thế nào?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [Đi sâu vào OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [Tình trạng của bằng chứng gian lận trong các l2 của Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
+- [Bản cuộn của Optimism thực sự hoạt động như thế nào?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
+- [Tìm hiểu sâu về OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Máy ảo lạc quan là gì?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
 ## Hướng dẫn: Rollup lạc quan và cầu nối trên Ethereum {#tutorials}
 
 - [Hướng dẫn chi tiết về hợp đồng cầu nối tiêu chuẩn của Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Một hướng dẫn chi tiết về mã có chú thích của cầu nối tiêu chuẩn Optimism để di chuyển tài sản giữa l1 và l2._

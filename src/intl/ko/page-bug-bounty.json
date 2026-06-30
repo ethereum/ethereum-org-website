@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "이더리움 바운티 프로그램은 보상을 결정할 때 여러 변수를 고려합니다. 자격, 점수 및 보상과 관련된 모든 조건의 결정은 전적으로 이더리움 재단 버그 바운티 패널의 최종 재량에 따릅니다.",
   "page-upgrades-bug-bounty-leaderboard": "전체 리더보드 보기",
   "page-upgrades-bug-bounty-leaderboard-list": "버그 바운티 리더보드",
+  "page-upgrades-bug-bounty-leaderboard-position": "{score, plural, other {# 포인트}}로 {rank}위",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(GitHub 프로필 보기)",
   "page-upgrades-bug-bounty-leaderboard-points": "포인트",
   "page-upgrades-bug-bounty-ledger-desc": "이더리움 사양은 실행 계층과 합의 레이어의 설계 근거를 자세히 설명합니다.",
   "page-upgrades-bug-bounty-ledger-title": "사양 버그",

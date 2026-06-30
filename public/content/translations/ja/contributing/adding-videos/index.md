@@ -123,22 +123,6 @@ title: "..."
 
 トランスクリプトがない場合は、本文を空のままにしておけば、チームが作成します。
 
-#### ステップ4: トピックタグを選択する {#step-4}
-
-ギャラリーで使用されている既存のカテゴリーに一致するトピックタグを選択します。現在のカテゴリーとそのタグは以下の通りです。
-
-- **イーサリアムの仕組み**: `how-ethereum-works`、`consensus`、`blockchain`、`cryptography`、`accounts`、`ethereum`、`intro`、`transactions`、`pos`、`smart-contracts`
-- **ネットワークのアップグレード**: `network-upgrades`、`upgrades`、`pectra`、`dencun`、`eip-4844`、`blobs`、`fusaka`
-- **ロードマップと優先事項**: `roadmap-and-priorities`、`pbs`、`mev`
-- **スケーリングとレイヤー2**: `scaling-and-layer-2`、`scaling`、`layer-2`、`rollups`、`optimistic-rollups`、`zk-rollups`
-- **ユースケース**: `use-cases`、`defi`、`finance`、`nfts`、`erc-721`、`erc-1155`、`lending`、`dapps`、`restaking`、`eigenlayer`、`dao`、`identity`、`desci`、`refi`
-- **プライバシーとセキュリティ**: `privacy-and-security`、`privacy`、`authentication`
-- **コミュニティストーリー**: `community-stories`、`contributing`、`translations`、`community`
-
-ビデオがギャラリーのカテゴリーシェルフに確実に表示されるようにするには、少なくとも1つのカテゴリーキータグ（ケバブケースの太字の名前、例: `use-cases`や`scaling-and-layer-2`）を含めてください。認識されたカテゴリータグがないビデオは、「すべて」のビューと検索結果にのみ表示されます。
-
-新しいタグを使用することもできます。これらは将来のカテゴリーのグループ化に利用できるようになります。
-
 #### ステップ5: PRを提出する {#step-5}
 
 `dev`ブランチに変更を加えたプルリクエストを作成します。チームが提出内容をレビューし、フィードバックを提供します。

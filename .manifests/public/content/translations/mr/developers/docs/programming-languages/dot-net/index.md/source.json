@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/programming-languages/dot-net/index.md",
-  "generatedAt": "2026-06-19T18:46:59.076Z",
-  "rootHash": "b4a2837a5958",
+  "generatedAt": "2026-06-29T23:59:27.158Z",
+  "rootHash": "d284afb985b5",
   "tree": {
-    "contentHash": "56cb61a8214a",
-    "anchorHash": "7938f2085c74",
+    "contentHash": "ece2d636f499",
+    "anchorHash": "2f9391d50ee1",
     "children": {
       "frontmatter:title": {
         "contentHash": "13f3e961ab3b",
@@ -102,7 +102,7 @@
         ]
       },
       "beginner-references-and-links": {
-        "contentHash": "acf8c12aacd2",
+        "contentHash": "687d56de4a39",
         "anchorHash": "35dd339a78e1",
         "labelHash": "1c744b0e0e83",
         "children": {
@@ -187,7 +187,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "link:9": {
-            "contentHash": "a6273fb551f2",
+            "contentHash": "565e1f1b371f",
             "anchorHash": "30d15118bb04"
           },
           "prose:23": {
@@ -251,8 +251,8 @@
         ]
       },
       "intermediate-articles": {
-        "contentHash": "ebe334de68bc",
-        "anchorHash": "d3408ce8b54a",
+        "contentHash": "5b79d9051dde",
+        "anchorHash": "8fcf3ab66c49",
         "labelHash": "a2555da8e22a",
         "children": {
           "_label": {
@@ -280,8 +280,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
-            "contentHash": "aff09e7b7484",
-            "anchorHash": "d538b341c9e3"
+            "contentHash": "34fb7f7c9f37",
+            "anchorHash": "1132beb3ad5f"
           },
           "prose:13": {
             "contentHash": "3973e022e932",
@@ -304,8 +304,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "link:5": {
-            "contentHash": "b0ab4ffa7c6a",
-            "anchorHash": "a9bfa81b86e2"
+            "contentHash": "96e18b23a85c",
+            "anchorHash": "0332020d2558"
           },
           "prose:16": {
             "contentHash": "3973e022e932",
@@ -320,8 +320,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "link:7": {
-            "contentHash": "b6c46458a188",
-            "anchorHash": "f23e14f88f5d"
+            "contentHash": "c3ef705757e5",
+            "anchorHash": "bc6cad99e9c9"
           },
           "prose:18": {
             "contentHash": "3973e022e932",
@@ -365,15 +365,15 @@
         ]
       },
       "advanced-use-patterns": {
-        "contentHash": "d0e6591597b3",
-        "anchorHash": "f579cbfa4166",
+        "contentHash": "530512d050c9",
+        "anchorHash": "ece19dbb8080",
         "labelHash": "d791bf9455f8",
         "children": {
           "_label": {
             "contentHash": "d791bf9455f8",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:2": {
+          "prose:3": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -381,33 +381,43 @@
             "contentHash": "0409ccea7332",
             "anchorHash": "ac4a648c5041"
           },
-          "prose:3": {
+          "prose:4": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
             "contentHash": "b0407b847b53",
             "anchorHash": "5abde8ab2c69"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "727b0108bdab",
+            "anchorHash": "c3ce88d4f35b"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:2",
-          "link:0",
           "prose:3",
-          "link:1"
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
         ]
       },
       "dot-net-projects-tools-and-other-fun-stuff": {
-        "contentHash": "8c8c937835b9",
-        "anchorHash": "3273002e3f7f",
+        "contentHash": "a8d0128ebf40",
+        "anchorHash": "ab6737a6cb3c",
         "labelHash": "758d11ce9159",
         "children": {
           "_label": {
             "contentHash": "758d11ce9159",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:7": {
+          "prose:8": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -415,7 +425,7 @@
             "contentHash": "565e1f1b371f",
             "anchorHash": "30d15118bb04"
           },
-          "prose:8": {
+          "prose:9": {
             "contentHash": "215d648cbf59",
             "anchorHash": "e3b0c44298fc"
           },
@@ -423,7 +433,7 @@
             "contentHash": "fcfe7999c4a4",
             "anchorHash": "62f14c6948b4"
           },
-          "prose:9": {
+          "prose:10": {
             "contentHash": "77881110a40c",
             "anchorHash": "e3b0c44298fc"
           },
@@ -431,60 +441,70 @@
             "contentHash": "25205bc4a1cf",
             "anchorHash": "27575d096c5a"
           },
-          "prose:10": {
+          "prose:11": {
             "contentHash": "55102dcb9f80",
             "anchorHash": "e3b0c44298fc"
           },
           "link:3": {
-            "contentHash": "f79c67c0d6de",
-            "anchorHash": "0015a5a2c918"
+            "contentHash": "955d923c745c",
+            "anchorHash": "f76196794d3f"
           },
-          "prose:11": {
-            "contentHash": "76c757e20f0b",
+          "prose:12": {
+            "contentHash": "d21366415a59",
             "anchorHash": "e3b0c44298fc"
           },
           "link:4": {
-            "contentHash": "83314c37a86f",
-            "anchorHash": "fd62331fa5cd"
+            "contentHash": "f79c67c0d6de",
+            "anchorHash": "0015a5a2c918"
           },
-          "prose:12": {
-            "contentHash": "742b548a3d69",
+          "prose:13": {
+            "contentHash": "76c757e20f0b",
             "anchorHash": "e3b0c44298fc"
           },
           "link:5": {
-            "contentHash": "6133cf9e4072",
-            "anchorHash": "61351d2ef0cf"
+            "contentHash": "83314c37a86f",
+            "anchorHash": "fd62331fa5cd"
           },
-          "prose:13": {
-            "contentHash": "0877a250d3f6",
+          "prose:14": {
+            "contentHash": "742b548a3d69",
             "anchorHash": "e3b0c44298fc"
           },
           "link:6": {
+            "contentHash": "6133cf9e4072",
+            "anchorHash": "61351d2ef0cf"
+          },
+          "prose:15": {
+            "contentHash": "0877a250d3f6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
             "contentHash": "d896c4bde8a6",
             "anchorHash": "10260c8eaaaa"
           },
-          "prose:14": {
+          "prose:16": {
             "contentHash": "cdb4ee2aea69",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:7",
-          "link:0",
           "prose:8",
-          "link:1",
+          "link:0",
           "prose:9",
-          "link:2",
+          "link:1",
           "prose:10",
-          "link:3",
+          "link:2",
           "prose:11",
-          "link:4",
+          "link:3",
           "prose:12",
-          "link:5",
+          "link:4",
           "prose:13",
+          "link:5",
+          "prose:14",
           "link:6",
-          "prose:14"
+          "prose:15",
+          "link:7",
+          "prose:16"
         ]
       },
       "dot-net-community-contributors": {
@@ -596,5 +616,5 @@
       "other-aggregated-lists"
     ]
   },
-  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

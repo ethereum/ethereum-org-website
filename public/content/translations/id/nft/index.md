@@ -108,9 +108,7 @@ Masalah keamanan yang berkaitan dengan NFT paling sering terkait dengan penipuan
 - [Pelacak NFT Blockscout](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [Standar token ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Standar token ERC-1155](/developers/docs/standards/tokens/erc-1155/)
-- [Aplikasi dan Alat NFT Populer](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 - [Wiki Standar NFT](https://nft-standards.gitbook.io/nft-standards-wiki)
-
 ## Sumber daya lainnya {#other-resources}
 
 - [NFTScan](https://nftscan.com/)

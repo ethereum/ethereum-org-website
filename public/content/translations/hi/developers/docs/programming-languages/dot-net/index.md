@@ -27,51 +27,49 @@ incomplete: true
 **Nethereum लाइब्रेरी और VS Code Solidity का परिचय**
 
 - [Nethereum, शुरुआत करना](https://docs.nethereum.com/docs/getting-started/welcome/)
-- [VS Code Solidity स्थापित करना](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
+- [VS Code Solidity इंस्टॉल करना](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [इथेरियम स्मार्ट अनुबंध बनाने और कॉल करने के लिए एक .NET डेवलपर का वर्कफ़्लो](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Nethereum के साथ स्मार्ट अनुबंधों का एकीकरण](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
+- [Nethereum के साथ स्मार्ट अनुबंध एकीकरण](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
 - [Nethereum के साथ .NET और इथेरियम ब्लॉकचेन स्मार्ट अनुबंधों को इंटरफ़ेस करना](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1) में भी
 - [Nethereum - ब्लॉकचेन के लिए एक ओपन सोर्स .NET एकीकरण लाइब्रेरी](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Nethereum का उपयोग करके SQL डेटाबेस में इथेरियम लेनदेन लिखना](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [देखें कि C# और VisualStudio का उपयोग करके इथेरियम स्मार्ट अनुबंधों को आसानी से कैसे तैनात करें](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
-**क्या अभी के लिए सेटअप छोड़ना चाहते हैं, और सीधे उदाहरणों पर जाना चाहते हैं?**
+**क्या अभी के लिए सेटअप छोड़ना चाहते हैं, और सीधे सैंपल पर जाना चाहते हैं?**
 
-- [प्लेग्राउंड](https://playground.nethereum.com/) - इथेरियम के साथ इंटरैक्ट करें और ब्राउज़र के माध्यम से Nethereum का उपयोग करना सीखें।
-  - [खाते का बैलेंस जांचें](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
-  - [ERC-20 स्मार्ट अनुबंध बैलेंस जांचें](https://docs.nethereum.com/docs/smart-contracts/erc20)
+- [Nethereum Playground](https://playground.nethereum.com/) - इथेरियम के साथ इंटरैक्ट करें और ब्राउज़र के माध्यम से Nethereum का उपयोग करना सीखें।
+  - [खाता बैलेंस क्वेरी करें](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
+  - [ERC-20 स्मार्ट अनुबंध बैलेंस क्वेरी करें](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [किसी खाते में ईथर ट्रांसफर करें](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... और भी बहुत कुछ!
-
 ## मध्यवर्ती लेख {#intermediate-articles}
 
 - [Nethereum शुरुआत करना और पहला प्रोजेक्ट](https://docs.nethereum.com/docs/getting-started/first-project)
 - [अपनी खुद की डेवलपमेंट टेस्टचेन तैनात करें](https://github.com/Nethereum/Testchains)
-- [Solidity के लिए VSCode कोडजेन प्लगइन](https://docs.nethereum.com/docs/aspire-templates/guide-codegen)
+- [Nethereum और VS Code के साथ कोड जनरेशन](https://docs.nethereum.com/docs/smart-contracts/code-generation/)
 - [Unity और इथेरियम: क्यों और कैसे](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
-- [इथेरियम dapp के लिए ASP.NET Core Web API बनाएं](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
-- [सप्लाई चेन ट्रैकिंग सिस्टम को लागू करने के लिए Nethereum Web3 का उपयोग करना](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
+- [इथेरियम विकेंद्रीकृत एप्लिकेशन (dapp) के लिए ASP.NET Core Web API बनाएं](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
+- [संरचित ऑनचेन एप्लिकेशन के लिए Nethereum MUD फ्रेमवर्क](https://docs.nethereum.com/docs/mud-framework/overview/)
 - [Nethereum ब्लॉकचेन प्रोसेसिंग](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
-- [Nethereum वेबसॉकेट स्ट्रीमिंग](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
+- [Nethereum रियल-टाइम स्ट्रीमिंग](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido और Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum और Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-
 ## उन्नत उपयोग पैटर्न {#advanced-use-patterns}
 
-- [Azure Key वॉल्ट और Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
+- [Azure Key Vault और Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
+- [Ujo Nethereum बैकएंड संदर्भ आर्किटेक्चर](https://github.com/Nethereum/ujo-backend)
+## .NET प्रोजेक्ट्स, टूल और अन्य मज़ेदार चीज़ें {#dot-net-projects-tools-and-other-fun-stuff}
 
-## .NET प्रोजेक्ट्स, टूल और अन्य मजेदार चीजें {#dot-net-projects-tools-and-other-fun-stuff}
-
-- [Nethereum प्लेग्राउंड](https://playground.nethereum.com/) - _ब्राउज़र में Nethereum कोड स्निपेट संकलित करें, बनाएं और चलाएं_
-- [Nethereum कोडजेन Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor में UI के साथ Nethereum कोडजेन_
+- [Nethereum Playground](https://playground.nethereum.com/) - _ब्राउज़र में Nethereum कोड स्निपेट संकलित करें, बनाएं और चलाएं_
+- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor में UI के साथ Nethereum कोडजेन_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _एक .NET Wasm SPA लाइट ब्लॉकचेन एक्सप्लोरर और सरल वॉलेट_
+- [Wonka Business Rules Engine](https://github.com/Nethereum/Wonka) - _एक व्यावसायिक नियम इंजन (.NET प्लेटफ़ॉर्म और इथेरियम प्लेटफ़ॉर्म दोनों के लिए) जो स्वाभाविक रूप से मेटाडेटा-संचालित है_
 - [नेदरमाइंड](https://github.com/NethermindEth/nethermind) - _Linux, Windows, MacOS के लिए एक .NET Core इथेरियम क्लाइंट_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _इथेरियम संबंधित कोडबेस के साथ काम करने के लिए उपयोगिता फ़ंक्शन_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _इथेरियम से संबंधित कोडबेस के साथ काम करने के लिए उपयोगिता फ़ंक्शन_
 - [TestChains](https://github.com/Nethereum/TestChains) - _तेज़ प्रतिक्रिया के लिए पूर्व-कॉन्फ़िगर की गई .NET डेवचेन (प्राधिकरण का प्रमाण (PoA))_
 
-क्या और अधिक संसाधन खोज रहे हैं? [ethereum.org/developers](/developers/) देखें।
-
+क्या आप और संसाधन खोज रहे हैं? [ethereum.org/developers](/developers/) देखें।
 ## .NET समुदाय के योगदानकर्ता {#dot-net-community-contributors}
 
 Nethereum में, हम ज़्यादातर [Gitter](https://gitter.im/Nethereum/Nethereum) पर समय बिताते हैं जहाँ सवाल पूछने/जवाब देने, मदद पाने या बस आराम करने के लिए सभी का स्वागत है। बेझिझक PR करें या [Nethereum GitHub रिपॉजिटरी](https://github.com/Nethereum) पर कोई समस्या (issue) खोलें, या हमारे पास मौजूद कई साइड/सैंपल प्रोजेक्ट्स को ब्राउज़ करें। आप हमें [डिस्कॉर्ड](https://discord.gg/jQPrR58FxX) पर भी पा सकते हैं!

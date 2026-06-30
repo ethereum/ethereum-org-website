@@ -28,7 +28,7 @@ published: 2022-04-01
 
 [Optimistic 汇总](/developers/docs/scaling/optimistic-rollups)必须保存每笔历史交易的记录，以便任何人都能查看它们并验证当前状态是否正确。
 将数据输入以太坊主网最便宜的方法是将其作为调用数据写入。
-[Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) 和 [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) 都选择了这种解决方案。
+[Optimism](https://docs.optimism.io/op-stack/protocol/overview) 和 [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction) 都选择了这种解决方案。
 
 ### 二层网络 (l2) 交易的成本 {#cost-of-l2-transactions}
 

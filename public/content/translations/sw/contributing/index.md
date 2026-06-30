@@ -9,8 +9,6 @@ Ethereum.org ni mradi unaoendeshwa kwa programu huria wenye wachangiaji **12 000
 
 Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo wa ikolojia wa [Ethereum](/) huku pia ukichangia kwa maana na kupata uzoefu unaofaa wa vitendo!
 
-## Njia za kuchangia {#ways-to-contribute}
-
 **Tafsiri**
 - [Jiunge na programu ya kutafsiri](/contributing/translation-program/) – Tusaidie kuleta ethereum.org katika lugha mpya
 
@@ -25,8 +23,9 @@ Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo 
 - [Andika makala ya mjenzi](/contributing/adding-articles/) - Changia makala kwa ajili ya sehemu ya [Hivi Punde](/latest/)
 - [Ongeza rasilimali za jamii](/contributing/content-resources/) – Ongeza makala au rasilimali muhimu kwenye ukurasa husika
 - [Pendekeza ripoti](/contributing/adding-reports/) - Pendekeza ripoti ya utafiti kwa ajili ya ukurasa wa [Ripoti](/reports/)
+- [Shiriki hadithi yako](/contributing/adding-community-stories/) - Wasilisha hadithi kuhusu uzoefu wako binafsi na teknolojia za programu huria na hifadhi, jinsi mfumo wa ikolojia wa Ethereum umeathiri maisha yako, au jinsi wewe na jamii yako mnavyotumia Ethereum
+- [Maswali](/contributing/quizzes/) – Ongeza, sasisha, na ufute benki za maswali kwa ajili ya ukurasa husika
 - [Pendekeza rasilimali ya usanifu](/contributing/design/adding-design-resources/) – Ongeza, sasisha, na ufute rasilimali muhimu za usanifu
-- [Chemshabongo](/contributing/quizzes/) – Ongeza, sasisha, na ufute benki za maswali ya chemshabongo kwa ajili ya ukurasa husika
 - [Pendekeza video](/contributing/adding-videos/) – Pendekeza video ya kuelimisha kwa ajili ya matunzio ya video
 
 **Mawazo ya vipengele**
@@ -36,10 +35,10 @@ Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo 
 - [Ongeza ubadilishaji](/contributing/adding-exchanges/) – Ongeza ubadilishaji kwenye [kitafuta ubadilishaji](/get-eth/#country-picker) chetu
 - [Ongeza bidhaa](/contributing/adding-products/) – Ongeza programu tumizi iliyogatuliwa (dapp) au mkoba kwenye ukurasa husika
 - [Ongeza zana za wasanidi](/contributing/adding-developer-tools/) – Ongeza zana ya msanidi kwenye ukurasa husika
-- [Ongeza tabaka la 2 (l2)](/contributing/adding-layer-2s/) – Ongeza l2 kwenye ukurasa husika
+- [Ongeza tabaka la 2 (l2)](/contributing/adding-layer-2s/) – Ongeza tabaka la 2 (l2) kwenye ukurasa husika
 - [Ongeza bidhaa au huduma ya uwekaji dhamana](/contributing/adding-staking-products/) – Ongeza mradi unaosaidia kuwezesha uwekaji dhamana wa kujitegemea, uwekaji dhamana wa pamoja, au kuweka hisa kama huduma
 - [Ongeza mkoba](/contributing/adding-wallets/) – Ongeza mkoba kwa ajili ya [ukurasa wa kutafuta mikoba](/wallets/find-wallet/)
-- [Pendekeza mradi kwa ajili ya ukurasa wetu wa sayansi iliyogatuliwa (desci)](/contributing/adding-desci-projects/) – Ongeza mradi uliojengwa kwenye Ethereum unaochangia katika desci
+- [Pendekeza mradi kwa ajili ya ukurasa wetu wa sayansi iliyogatuliwa (desci)](/contributing/adding-desci-projects/) – Ongeza mradi uliojengwa kwenye Ethereum unaochangia katika sayansi iliyogatuliwa (desci)
 - [Ongeza rasilimali](/contributing/adding-resources/) – Ongeza rasilimali muhimu kwenye ukurasa wowote husika
 
 Una maswali yoyote? 🤔 Jiunge na [seva yetu ya Discord](https://discord.gg/ethereum-org)

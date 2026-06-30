@@ -1,7 +1,7 @@
 ---
-title: ایتھیریم ایونٹ کا انعقاد کیسے کریں
-metaTitle: ایتھیریم ایونٹ کا انعقاد
-description: ایتھیریم ایونٹ کا انعقاد کیسے کریں
+title: "ایتھیریم ایونٹ کا انعقاد کیسے کریں"
+metaTitle: "ایتھیریم ایونٹ کا انعقاد"
+description: "ایتھیریم ایونٹ کا انعقاد کیسے کریں"
 lang: ur
 hideEditButton: true
 ---
@@ -206,14 +206,12 @@ hideEditButton: true
 
 ## وسائل {#resources}
 
-پوڈ کاسٹ: <span dir="ltr">A-Z</span> تک <span dir="ltr">ETH</span> ایونٹ کا انعقاد اور پروموٹ کیسے کریں:
+پوڈ کاسٹ: ایک ETH ایونٹ کو A سے Z تک کیسے منظم اور پروموٹ کیا جائے:
 
-- [<span dir="ltr">Out of Ordinary</span> کی جانب سے <span dir="ltr">ETHWarsaw</span> کیس اسٹڈی](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [ETHWarsaw کیس اسٹڈی، از Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 ٹوئٹر اسپیس:
 
-- [<span dir="ltr">ETH</span> کمیونٹی <span dir="ltr">AMA</span>](https://x.com/NapulETH/status/1905732699094151623)
+- [ETH کمیونٹی AMA](https://x.com/NapulETH/status/1905732699094151623)
 
 مضامین:
-
-- [<span dir="ltr">Danny H.</span> کی جانب سے <span dir="ltr">ETHKL</span> کی تعمیر](https://sekto.tech/ethkl24)

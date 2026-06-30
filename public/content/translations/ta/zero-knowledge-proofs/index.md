@@ -1,7 +1,7 @@
 ---
-title: பூஜ்ஜிய-அறிவுச் சான்றுகள் என்றால் என்ன?
-metaTitle: பூஜ்ஜிய-அறிவுச் சான்றுகள்
-description: தொடக்கநிலையாளர்களுக்கான பூஜ்ஜிய-அறிவுச் சான்றுகள் பற்றிய தொழில்நுட்பமற்ற அறிமுகம்.
+title: "பூஜ்ஜிய-அறிவுச் சான்றுகள் என்றால் என்ன?"
+metaTitle: "பூஜ்ஜிய-அறிவுச் சான்றுகள்"
+description: "தொடக்கநிலையாளர்களுக்கான பூஜ்ஜிய-அறிவுச் சான்றுகள் பற்றிய தொழில்நுட்பமற்ற அறிமுகம்."
 lang: ta
 ---
 
@@ -55,11 +55,13 @@ lang: ta
       <p>
         அடையாள மேலாண்மை அமைப்புகளுக்கு ZKP-ஐப் பயன்படுத்துவதற்கான ஒரு நிஜ-உலக எடுத்துக்காட்டு, எத்திரியத்தில் கட்டமைக்கப்பட்ட பூட்டான் ராஜ்ஜியத்தின் தேசிய டிஜிட்டல் ஐடி (NDI) அமைப்பாகும். பூட்டானின் NDI, குடிமக்கள் தங்கள் ஐடியில் உள்ள முக்கியமான தனிப்பட்ட தரவை வெளிப்படுத்தாமல், "நான் ஒரு குடிமகன்" அல்லது "எனக்கு 18 வயதுக்கு மேல் ஆகிறது" போன்ற தங்களைப் பற்றிய உண்மைகளைக் குறியாக்கவியல் ரீதியாக நிரூபிக்க அனுமதிக்க ZKP-களைப் பயன்படுத்துகிறது.
       </p>
-      <p>
+      <p></p>
         <a href="/decentralized-identity/#national-and-government-id">பரவலாக்கப்பட்ட அடையாள வழக்கு ஆய்வில்</a> பூட்டான் NDI பற்றி மேலும் அறிக.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### மனிதநேயச் சான்று {#proof-of-humanity}
@@ -235,5 +237,5 @@ ZK-STARK என்பது **Zero-Knowledge Scalable Transparent Argument of Kn
 - [ZK-STARKs — குவாண்டம் கணினிகளுக்கு எதிராகவும் சரிபார்க்கக்கூடிய நம்பிக்கையை உருவாக்குங்கள்](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _ஆடம் லூசியானோ (Adam Luciano)_
 - [zk-SNARKs எவ்வாறு சாத்தியம் என்பதற்கான தோராயமான அறிமுகம்](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _விட்டலிக் புட்டரின் (Vitalik Buterin)_
 - [சுய-இறையாண்மை அடையாளத்திற்குப் பூஜ்ஜிய-அறிவுச் சான்றுகள் (ZKPs) ஏன் ஒரு திருப்புமுனையாக இருக்கின்றன](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _ஃபிராங்க்ளின் ஓஹேக்புலாம் (Franklin Ohaegbulam)_
-- [EIP-7503 விளக்கப்பட்டது: ZK சான்றுகளுடன் எத்திரியத்தில் தனிப்பட்ட இடமாற்றங்களைச் செயல்படுத்துதல்](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _இம்மானுவேல் அவோசிகா (Emmanuel Awosika)_
+- [EIP-7503 விளக்கப்பட்டது: ZK சான்றுகளுடன் எத்திரியத்தில் தனிப்பட்ட இடமாற்றங்களைச் செயல்படுத்துதல்](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _இம்மானுவேல் அவோசிகா (Emmanuel Awosika)_
 - [ZK அட்டை விளையாட்டு: ZK அடிப்படைகள் மற்றும் நிஜ வாழ்க்கை பயன்பாட்டு நிகழ்வுகளைக் கற்றுக்கொள்வதற்கான விளையாட்டு](https://github.com/ZK-card/zk-cards) - _ZK-Cards_

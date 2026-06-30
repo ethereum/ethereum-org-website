@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "Ressources, outils et développements pour les constructeurs de l'écosystème Ethereum.",
-  "page-latest-title": "Actualités des constructeurs",
-  "page-latest-subtitle": "Un espace partagé offrant des perspectives d'experts sur les dernières ressources, outils et développements de l'écosystème des constructeurs Ethereum.",
+  "page-latest-meta-description": "Les derniers articles de blog, actualités et mises à jour de la communauté Ethereum, ainsi que des perspectives d'experts de l'ensemble de l'écosystème des constructeurs.",
+  "page-latest-title": "Dernières mises à jour d'Ethereum",
+  "page-latest-subtitle": "Les derniers articles de blog, actualités et mises à jour de la communauté, ainsi que des perspectives d'experts sur les développements à travers l'écosystème des constructeurs d'Ethereum.",
   "page-latest-no-posts": "Aucun article trouvé.",
   "page-latest-read-more": "Lire la suite",
   "page-latest-minute-read": "{minutes} min de lecture",
-  "page-latest-team-attribution": "Croissance des constructeurs de l'EF"
+  "page-latest-team-attribution": "Croissance des constructeurs de l'EF",
+  "page-latest-cta-submit-resource": "Soumettre une ressource",
+  "page-latest-cta-propose-article": "Proposer un article",
+  "page-latest-highlights-heading": "À la une",
+  "page-latest-articles-heading": "Derniers articles sur Ethereum",
+  "page-latest-sources-heading": "En savoir plus sur ces sites web",
+  "page-latest-see-more": "Voir plus ({count})",
+  "page-latest-sort-label": "Trier les articles",
+  "page-latest-sort-newest": "Plus récents en premier",
+  "page-latest-sort-oldest": "Plus anciens en premier",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "Certains articles sont affichés dans leur langue d'origine (anglais).",
+  "page-latest-suggest-heading": "Suggérer une ressource",
+  "page-latest-suggest-description": "Vous connaissez une newsletter ou une publication de recherche sur Ethereum qui devrait figurer ici, ou vous avez un sujet d'article de constructeur en tête ? Ouvrez une issue pour soumettre votre ressource."
 }

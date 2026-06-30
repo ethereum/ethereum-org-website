@@ -1,6 +1,6 @@
 ---
-title: Token takası nasıl yapılır
-description: Ethereum'da token takasının nasıl yapılacağına dair bir rehber.
+title: "Token takası nasıl yapılır"
+description: "Ethereum'da token takasının nasıl yapılacağına dair bir rehber."
 lang: tr
 ---
 

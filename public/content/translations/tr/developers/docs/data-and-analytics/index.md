@@ -75,7 +75,7 @@ EVM Sorgu Dili (EQL), EVM (Ethereum Sanal Makinesi) zincirlerini sorgulamak içi
 - [Dune Temelleri](https://docs.dune.com/#dune-basics)
 - [SubQuery Ethereum Hızlı Başlangıç Kılavuzu](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD Ağına Genel Bakış](https://docs.sqd.dev/)
-- [EVM Sorgu Dili](https://eql.sh/blog/alpha-release-notes)
+- [EVM Sorgu Dili](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## Eğitimler: Veri ve analitik / Ethereum'da SQL {#tutorials}
 

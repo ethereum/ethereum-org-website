@@ -1887,7 +1887,7 @@ web3.sha3("Print(uint256)")
 
 ## సంబంధిత అంశాలు {#related-topics}
 
-- [జేసన్-ఆర్‌పీసీ స్పెసిఫికేషన్](http://www.jsonrpc.org/specification)
+- [జేసన్-ఆర్‌పీసీ స్పెసిఫికేషన్](https://www.jsonrpc.org/specification)
 - [నోడ్‌లు మరియు క్లయింట్‌లు](/developers/docs/nodes-and-clients/)
 - [JavaScript APIలు](/developers/docs/apis/javascript/)
 - [బ్యాకెండ్ APIలు](/developers/docs/apis/backend/)

@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/web2-vs-web3/index.md",
+  "generatedAt": "2026-06-30T00:04:01.622Z",
+  "rootHash": "9cb00e6692ba",
+  "tree": {
+    "contentHash": "a2107c7cd952",
+    "anchorHash": "cae17d653d68",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "de29eb5878cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "088cc1b23109",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:2": {
+        "contentHash": "cb341fc2f574",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:3": {
+        "contentHash": "4bf5faf6f05f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "4fc77d6f34ae",
+        "anchorHash": "f81b209bf2cd"
+      },
+      "prose:4": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "web3-benefits": {
+        "contentHash": "5d265da4fd4a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "aa42ac0c552f",
+        "children": {
+          "_label": {
+            "contentHash": "aa42ac0c552f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b3d470049616",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "practical-comparisons": {
+        "contentHash": "1ba8fd323749",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b485ba4a5f47",
+        "children": {
+          "_label": {
+            "contentHash": "b485ba4a5f47",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d42ca3267a9c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "web3-limitations": {
+        "contentHash": "8eb29de23b07",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "94f0307d118f",
+        "children": {
+          "_label": {
+            "contentHash": "94f0307d118f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6326d34327b5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "centralization-vs-decentralization": {
+        "contentHash": "4207bb6f64ea",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "38d88f6e7cb6",
+        "children": {
+          "_label": {
+            "contentHash": "38d88f6e7cb6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "de016c40ad37",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "2f7b8c52f385",
+        "anchorHash": "904861966bca",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "43c82fb496b4",
+            "anchorHash": "f81b209bf2cd"
+          },
+          "prose:7": {
+            "contentHash": "811cc76ab239",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "2bd0dc76fec6",
+            "anchorHash": "1fc27bc738de"
+          },
+          "prose:8": {
+            "contentHash": "2815645c6efc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "38f9d4cdfd23",
+            "anchorHash": "62e173deb573"
+          },
+          "prose:9": {
+            "contentHash": "4328da639737",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "8a3805ce2873",
+            "anchorHash": "13f4a4a54107"
+          },
+          "prose:10": {
+            "contentHash": "9abc5ce5ced1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "a51df92f6424",
+            "anchorHash": "0d303026c299"
+          },
+          "prose:11": {
+            "contentHash": "142330f57c06",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "fd72cfe22dae",
+            "anchorHash": "49760a47c79f"
+          },
+          "prose:12": {
+            "contentHash": "4ce2d16afcd5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5",
+          "prose:12"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "web3-benefits",
+      "practical-comparisons",
+      "web3-limitations",
+      "centralization-vs-decentralization",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+}
