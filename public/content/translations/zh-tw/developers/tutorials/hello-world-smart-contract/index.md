@@ -16,7 +16,7 @@ published: 2021-03-31
 
 如果你是區塊鏈開發的新手且不知道從何開始，或者你只是想了解如何部署智能合約並與之互動，這篇指南就是為你準備的。我們將逐步介紹如何使用虛擬錢包 [梅塔馬斯克 (MetaMask)](https://metamask.io/)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org/) 以及 [Alchemy](https://www.alchemy.com/eth)，在 Sepolia 測試網路上建立並部署一個簡單的智能合約（如果你還不懂這些名詞的意思，別擔心，我們會一一解釋）。
 
-在本教學的[第 2 部分](https://docs.alchemy.com/docs/interacting-with-a-smart-contract)中，我們將探討如何在智能合約部署後與之互動，而在[第 3 部分](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan)中，我們將介紹如何將其發布到 Etherscan 上。
+在本教學的[第 2 部分](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract)中，我們將探討如何在智能合約部署後與之互動，而在[第 3 部分](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan)中，我們將介紹如何將其發布到 Etherscan 上。
 
 如果你在任何時候有疑問，歡迎隨時在 [Alchemy Discord](https://discord.gg/gWuC7zB) 中提問！
 
@@ -64,22 +64,22 @@ published: 2021-03-31
 >
 > 呼！我們的測試資金都在那裡了 <Emoji text=":money_mouth_face:" size={1} />。
 
-## 第 6 步：初始化我們的專案 {#step-6}
+## 第 6 步：初始化我們的專案
 
-首先，我們需要為我們的專案建立一個資料夾。導覽至你的命令列並輸入：
+首先，我們需要為專案建立一個資料夾。導覽至你的命令列並輸入：
 
 ```
 mkdir hello-world
 cd hello-world
 ```
 
-現在我們已經在專案資料夾中，我們將使用 `npm init` 來初始化專案。如果你還沒有安裝 npm，請遵循[這些指示](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm)（我們也需要 Node.js，所以請一併下載！）。
+現在我們已經在專案資料夾中，我們將使用 `npm init` 來初始化專案。如果你尚未安裝 npm，請遵循 [Node.js 安裝指示](https://nodejs.org/en/download/)（本教學將會用到 Node.js 和 npm）。
 
 ```
 npm init
 ```
 
-你如何回答安裝問題其實並不重要，以下是我們的做法供參考：
+你如何回答安裝問題其實並不重要，以下是我們的做法供你參考：
 
 ```
 package name: (hello-world)
@@ -106,8 +106,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-批准 package.json，我們就可以開始了！
-
+確認 package.json 後，我們就可以開始了！
 ## 第 7 步：下載 [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
 Hardhat 是一個用於編譯、部署、測試和除錯以太坊軟體的開發環境。它幫助開發者在部署到即時鏈之前，在本地端建置智能合約與去中心化應用程式 (dapp)。
@@ -355,11 +354,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 恭喜！你剛剛將一個智能合約部署到了以太坊鏈上 🎉
 
-為了了解底層發生了什麼事，讓我們導覽至 [Alchemy 儀表板](https://dashboard.alchemyapi.io/explorer)中的 Explorer 分頁。如果你有多個 Alchemy 應用程式，請務必按應用程式篩選並選擇「Hello World」。
+為了了解底層發生了什麼事，讓我們導覽至 [Alchemy 儀表板](https://dashboard.alchemy.com/explorer)中的 Explorer 分頁。如果你有多個 Alchemy 應用程式，請務必按應用程式篩選並選擇「Hello World」。
 ![hello world explorer](./hello-world-explorer.png)
 
-在這裡，你會看到當我們呼叫 `.deploy()` 函式時，Hardhat/Ethers 在底層為我們發出的一些 JSON-RPC 呼叫。這裡有兩個重要的呼叫需要特別指出：[`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction)，這是實際將我們的合約寫入 Sepolia 鏈的請求；以及 [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash)，這是一個根據雜湊值讀取我們交易資訊的請求（這是處理交易時的典型模式）。要了解更多關於發送交易的資訊，請查看這篇關於[使用 Web3 發送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)的教學。
+在這裡，你會看到當我們呼叫 `.deploy()` 函式時，Hardhat/Ethers 在底層為我們發出的一些 JSON-RPC 呼叫。這裡有兩個重要的呼叫需要特別指出：[`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)，這是實際將我們的合約寫入 Sepolia 鏈的請求；以及 [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)，這是一個根據雜湊值讀取我們交易資訊的請求（這是處理交易時的典型模式）。要了解更多關於發送交易的資訊，請查看這篇關於[使用 Web3 發送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)的教學。
 
-本教學的第 1 部分就到此結束，在第 2 部分中，我們將透過更新初始訊息來實際[與我們的智能合約互動](https://www.alchemy.com/docs/interacting-with-a-smart-contract)，而在第 3 部分中，我們將[將我們的智能合約發布到 Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan)，讓每個人都知道如何與之互動。
+本教學的第 1 部分就到此結束，在第 2 部分中，我們將透過更新初始訊息來實際[與我們的智能合約互動](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract)，而在第 3 部分中，我們將[將我們的智能合約發布到 Etherscan](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan)，讓每個人都知道如何與之互動。
 
 **想了解更多關於 Alchemy 的資訊嗎？請查看我們的[網站](https://www.alchemy.com/eth)。不想錯過任何更新？[在這裡](https://www.alchemy.com/newsletter)訂閱我們的電子報！也請務必加入我們的 [Discord](https://discord.gg/u72VCg3)。**。

@@ -85,8 +85,8 @@ lang: zh-tw
 ## 需注意的詐騙類型 {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="贈品與空投詐騙"
+contentPreview="沒有人會免費贈送 ETH。這些活動都是詐騙。"
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="冒充與假客服"
+contentPreview="以太坊或 ethereum.org 的人員絕對不會主動聯絡您。"
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="追回詐騙"
+contentPreview="被騙後，請小心假冒的「加密貨幣追回專家」。"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="釣魚網站與假應用程式"
+contentPreview="詐騙網站會模仿真實的錢包與交易所，以竊取您的憑證。"
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

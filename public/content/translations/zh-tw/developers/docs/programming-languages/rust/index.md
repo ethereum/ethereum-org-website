@@ -44,7 +44,7 @@ incomplete: true
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API 參考文件_
 - [Solaris](https://github.com/paritytech/sol-rs) - _使用原生 Parity 客戶端 EVM 的 Solidity 智能合約單元測試框架。_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust 以太坊虛擬機實作_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _使用 Rust 撰寫的 Wavelet 智能合約_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _使用 Rust 撰寫的 Wavelet 智能合約_
 - [Foundry](https://github.com/foundry-rs/foundry) - _以太坊應用程式開發工具包_
 - [Alloy](https://alloy.rs) - _高效能、經過充分測試且文件齊全的函式庫，用於與以太坊及其他基於 EVM 的區塊鏈互動。_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _以太坊函式庫與錢包實作_

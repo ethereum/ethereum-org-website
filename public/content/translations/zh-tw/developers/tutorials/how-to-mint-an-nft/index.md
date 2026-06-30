@@ -21,7 +21,7 @@ published: 2021-04-22
 
 ## 第 1 步：安裝 Web3 {#install-web3}
 
-如果你遵循了關於建立 NFT 智能合約的第一個教學，你應該已經有使用 Ethers.js 的經驗。Web3 類似於 Ethers，它是一個用來讓向[以太坊](/)區塊鏈發送請求變得更容易的函式庫。在本教學中，我們將使用 [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)，這是一個增強版的 Web3 函式庫，提供自動重試和強大的 WebSocket 支援。
+如果你遵循了關於建立 NFT 智能合約的第一個教學，你應該已經有使用 Ethers.js 的經驗。Web3 類似於 Ethers，它是一個用來讓向[以太坊](/)區塊鏈發送請求變得更容易的函式庫。在本教學中，我們將使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)，這是一個增強版的 Web3 函式庫，提供自動重試和強大的 WebSocket 支援。
 
 在你的專案主目錄中執行：
 
@@ -40,9 +40,9 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## 第 3 步：取得你的合約 ABI {#contract-abi}
+## 第 3 步：取得你的合約 ABI
 
-我們的合約 ABI（應用程式二進位介面）是與智能合約互動的介面。你可以[在此](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is)了解更多關於合約 ABI 的資訊。Hardhat 會自動為我們產生一個 ABI 並將其儲存在 `MyNFT.json` 檔案中。為了使用它，我們需要透過在 `mint-nft.js` 檔案中加入以下程式碼來解析其內容：
+我們的合約 ABI（應用程式二進位介面）是與我們的智能合約互動的介面。你可以了解更多關於[合約 ABI](/glossary/#abi) 的資訊。Hardhat 會自動為我們產生一個 ABI，並將其儲存在 `MyNFT.json` 檔案中。為了使用它，我們需要透過在 `mint-nft.js` 檔案中加入以下程式碼來解析其內容：
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -54,12 +54,11 @@ const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 console.log(JSON.stringify(contract.abi))
 ```
 
-要執行 `mint-nft.js` 並在主控台看到列印出的 ABI，請前往終端機並執行：
+要執行 `mint-nft.js` 並在主控台看到列印出的 ABI，請前往你的終端機並執行：
 
 ```js
 node scripts/mint-nft.js
 ```
-
 ## 第 4 步：使用 IPFS 設定 NFT 的中繼資料 {#config-meta}
 
 如果你還記得第 1 部分的教學，我們的 `mintNFT` 智能合約函式會接收一個 tokenURI 參數，該參數應解析為描述 NFT 中繼資料的 JSON 文件——這正是賦予 NFT 生命力的關鍵，使其具有可設定的屬性，例如名稱、描述、圖片和其他屬性。
@@ -136,13 +135,13 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## 第 7 步：建立你的交易 {#create-txn}
+## 第 7 步：建立你的交易
 
 首先，讓我們定義一個名為 `mintNFT(tokenData)` 的函式，並透過以下步驟建立我們的交易：
 
 1. 從 `.env` 檔案中取得你的 _PRIVATE_KEY_ 和 _PUBLIC_KEY_。
 
-1. 接下來，我們需要找出帳戶隨機數。隨機數規範用於追蹤從你的地址發送的交易數量——基於安全考量以及防止[重放攻擊](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce)，我們需要這個數值。為了取得從你的地址發送的交易數量，我們使用 [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount)。
+1. 接下來，我們需要找出帳戶隨機數。隨機數規格用於追蹤從你的地址發送的交易數量——基於安全考量以及防止重放攻擊，我們需要這個數值。為了取得從你的地址發送的交易數量，我們使用 [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count)。
 
 1. 最後，我們將使用以下資訊設定我們的交易：
 
@@ -154,7 +153,7 @@ PUBLIC_KEY = "your-public-account-address"
 
 - `'gas': estimatedGas` — 完成交易所需的預估燃料
 
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — 我們希望在此交易中執行的運算——在這種情況下是鑄造 NFT
+- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — 我們希望在此交易中執行的運算——在這種情況下是鑄造一個 NFT
 
 你的 `mint-nft.js` 檔案現在應該看起來像這樣：
 
@@ -184,7 +183,6 @@ PUBLIC_KEY = "your-public-account-address"
      };
    }​
 ```
-
 ## 第 8 步：簽署交易 {#sign-txn}
 
 現在我們已經建立了交易，我們需要簽署它才能將其發送出去。這就是我們將使用私鑰的地方。
@@ -317,7 +315,7 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-接下來，造訪你的 [Alchemy 記憶體池](https://dashboard.alchemyapi.io/mempool)以查看你的交易狀態（無論是待處理、已開採，還是被網路丟棄）。如果你的交易被丟棄，檢查 [Blockscout](https://eth-sepolia.blockscout.com/) 並搜尋你的交易雜湊值也會很有幫助。
+接下來，造訪你的 [Alchemy 記憶體池](https://dashboard.alchemy.com/mempool)以查看你的交易狀態（無論是待處理、已開採，還是被網路丟棄）。如果你的交易被丟棄，檢查 [Blockscout](https://eth-sepolia.blockscout.com/) 並搜尋你的交易雜湊值也會很有幫助。
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_在 Etherscan 上檢視你的 NFT 交易雜湊值_
 

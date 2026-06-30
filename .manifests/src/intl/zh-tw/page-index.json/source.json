@@ -1,14 +1,14 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-index.json",
-  "generatedAt": "2026-05-01T17:05:29.008Z",
-  "rootHash": "da509f26f967",
+  "generatedAt": "2026-06-29T23:48:56.896Z",
+  "rootHash": "17a81e1049bc",
   "tree": {
-    "contentHash": "8d704d488570",
-    "anchorHash": "c70fa7ea2b59",
+    "contentHash": "c5414ba6befd",
+    "anchorHash": "c680a83b839e",
     "children": {
       "page-index-meta-title": {
-        "contentHash": "3b2d6d66edd3",
+        "contentHash": "2de94f4fbe78",
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-meta-description": {
@@ -616,6 +616,14 @@
       "page-index-simulator-cta": {
         "contentHash": "3e58b342d3c8",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-latest-updates-title": {
+        "contentHash": "1d040dec692d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-latest-updates-cta": {
+        "contentHash": "267e5558ef02",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -729,8 +737,10 @@
       "page-index-get-started-enterprise-bullet-2",
       "page-index-get-started-enterprise-bullet-3",
       "page-index-get-started-enterprise-cta",
-      "page-index-simulator-cta"
+      "page-index-simulator-cta",
+      "page-index-latest-updates-title",
+      "page-index-latest-updates-cta"
     ]
   },
-  "sourceCommitSha": "102e7d69213329505b9595dbf50a235b7e6c2a9d"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

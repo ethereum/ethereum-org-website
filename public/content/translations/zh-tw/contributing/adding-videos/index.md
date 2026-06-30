@@ -123,22 +123,27 @@ title: "..."
 
 如果你沒有逐字稿，可以將內文留空，團隊會協助產生。
 
-#### 步驟 4：選擇主題標籤 {#step-4}
+#### 步驟 4：選擇主題標籤
 
-挑選與影片庫中現有分類相符的主題標籤。目前的分類及其標籤包含：
+從下方清單中挑選主題標籤。每個標籤都直接對應到影片庫中的一個篩選類別——請完全按照顯示的標籤名稱使用。
 
-- **以太坊如何運作**：`how-ethereum-works`、`consensus`、`blockchain`、`cryptography`、`accounts`、`ethereum`、`intro`、`transactions`、`pos`、`smart-contracts`
-- **網路升級**：`network-upgrades`、`upgrades`、`pectra`、`dencun`、`eip-4844`、`blobs`、`fusaka`
-- **路線圖與優先事項**：`roadmap-and-priorities`、`pbs`、`mev`
-- **擴容與第二層 (L2)**：`scaling-and-layer-2`、`scaling`、`layer-2`、`rollups`、`optimistic-rollups`、`zk-rollups`
-- **使用案例**：`use-cases`、`defi`、`finance`、`nfts`、`erc-721`、`erc-1155`、`lending`、`dapps`、`restaking`、`eigenlayer`、`dao`、`identity`、`desci`、`refi`
-- **隱私與安全**：`privacy-and-security`、`privacy`、`authentication`
-- **社群故事**：`community-stories`、`contributing`、`translations`、`community`
+一部影片可以有多個標籤，以顯示在多個影片庫篩選條件中：
 
-為確保你的影片出現在影片庫的分類架上，請至少包含一個分類關鍵標籤（以 kebab-case 格式表示的粗體名稱，例如 `use-cases` 或 `scaling-and-layer-2`）。沒有可識別分類標籤的影片將只會出現在「全部」檢視與搜尋結果中。
+| 標籤 | 影片庫篩選條件 |
+|---|---|
+| `how-ethereum-works` | 以太坊如何運作 |
+| `network-upgrades` | 網路升級 |
+| `roadmap-and-priorities` | 路線圖與優先事項 |
+| `scaling-and-layer-2` | 擴容與第二層 (L2) |
+| `use-cases` | 使用案例 |
+| `privacy` | 隱私 |
+| `security` | 安全性 |
+| `community-stories` | 社群故事 |
+| `events` | 活動 |
 
-你也可以使用新標籤——它們將可用於未來的分類群組。
+每部影片都應至少擁有此清單中的一個標籤。沒有可識別標籤的影片將只會出現在「全部」檢視與搜尋結果中。
 
+`community-stories` 標籤也會讓影片出現在[故事頁面](/stories/)上。
 #### 步驟 5：提交你的 PR {#step-5}
 
 將你的變更建立一個拉取請求 (Pull Request) 到 `dev` 分支。團隊將會審查你的提交並提供回饋。

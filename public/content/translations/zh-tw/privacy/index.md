@@ -93,5 +93,5 @@ _範例：[UmbraCash](https://app.umbra.cash/faq)、[FluidKey](https://www.fluid
 - [以太坊隱私守護者](https://pse.dev/) (Privacy Stewards of Ethereum, PSE)，一個專注於生態系統隱私的以太坊基金會研發實驗室
 - [Web3PrivacyNow](https://web3privacy.info/)，一個由保護並推動線上人權的個人、專案及理念一致的組織所組成的網路
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/)，一個以太坊錢包評分網站，旨在提供錢包的全面清單、其功能、實務做法以及對特定標準的支援情況。
-- [Zk-kit](https://zkkit.pse.dev/)：一組可在不同專案和零知識協定中重複使用的函式庫（演算法、公用程式函式和資料結構）。
+- [Zk-kit](https://zkkit.org/)：一組可在不同專案和零知識協定中重複使用的函式庫（演算法、公用程式函式和資料結構）。
 - [隱私應用程式](/apps/categories/privacy/) - 探索在以太坊上執行的精選隱私應用程式清單。

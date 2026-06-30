@@ -133,20 +133,17 @@ _通常用於協定和[去中心化應用程式 (dapp)](/glossary/#dapp)的去�
 - [Tally.xyz 的 DAO 列表](https://www.tally.xyz/explore)
 - [DeGov.AI 的 DAO 列表](https://apps.degov.ai/)
 
-### 建立 DAO {#start-a-dao}
-
+### 建立 DAO
 - [使用 DAOHaus 召喚 DAO](https://app.daohaus.club/summon)
 - [使用 Tally 建立 Governor DAO](https://www.tally.xyz/get-started)
 - [建立由 Aragon 驅動的 DAO](https://aragon.org/product)
-- [建立一個 colony](https://colony.io/)
-- [使用 DAOstack 的全息共識建立 DAO](https://alchemy.daostack.io/daos/create)
+- [建立 colony](https://colony.io/)
 - [使用 DeGov Launcher 啟動 DAO](https://docs.degov.ai/integration/deploy)
-
 ## 延伸閱讀 {#further-reading}
 
 ### DAO 文章 {#dao-articles}
 
-- [什麼是 DAO？](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [什麼是 DAO？](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [DAO 之家 (House of DAOs)](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [什麼是 DAO 以及它的用途是什麼？](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [如何建立由 DAO 驅動的數位社群](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

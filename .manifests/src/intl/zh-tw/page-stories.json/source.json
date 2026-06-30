@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-stories.json",
+  "generatedAt": "2026-06-29T23:51:43.168Z",
+  "rootHash": "68bd4522245d",
+  "tree": {
+    "contentHash": "77a2b7b0e9e5",
+    "anchorHash": "915d33659015",
+    "children": {
+      "page-stories-meta-title": {
+        "contentHash": "e2718f208216",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-meta-description": {
+        "contentHash": "6f8aaab2a84a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-hero-title": {
+        "contentHash": "e2718f208216",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-hero-description": {
+        "contentHash": "23c714e2b865",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-hero-cta": {
+        "contentHash": "cfacf759b75e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-discover-title": {
+        "contentHash": "de93f3c9df0f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-discover-subtitle": {
+        "contentHash": "6bb748cb96a4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-discover-read-full-story": {
+        "contentHash": "91d51d050eff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-more-title": {
+        "contentHash": "30546a5e0580",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-more-subtitle": {
+        "contentHash": "855bc5b5170b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-community-title": {
+        "contentHash": "4b892042c3b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-community-subtitle": {
+        "contentHash": "71aa50e32eb9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-banner-title": {
+        "contentHash": "c448349a77f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-banner-description": {
+        "contentHash": "07a2293243fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-banner-cta": {
+        "contentHash": "cfacf759b75e",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-stories-meta-title",
+      "page-stories-meta-description",
+      "page-stories-hero-title",
+      "page-stories-hero-description",
+      "page-stories-hero-cta",
+      "page-stories-discover-title",
+      "page-stories-discover-subtitle",
+      "page-stories-discover-read-full-story",
+      "page-stories-more-title",
+      "page-stories-more-subtitle",
+      "page-stories-community-title",
+      "page-stories-community-subtitle",
+      "page-stories-banner-title",
+      "page-stories-banner-description",
+      "page-stories-banner-cta"
+    ]
+  },
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+}

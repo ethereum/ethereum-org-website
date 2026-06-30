@@ -33,18 +33,17 @@ published: 2021-10-06
 
 這兩個 NFT 智能合約標準之間最大的區別在於，ERC-1155 是一個多代幣標準並包含批次處理功能，而 ERC-721 是一個單一代幣標準，因此一次只支援轉移一個代幣。
 
-### 呼叫鑄造函式 {#minting-function}
+### 呼叫鑄造函式
 
-通常，這個鑄造函式要求你傳入兩個變數作為參數，第一個是 `recipient`，它指定了將接收你剛鑄造的 NFT 的地址，第二個是 NFT 的 `tokenURI`，這是一個解析為描述 NFT 中繼資料的 JSON 文件的字串。
+通常，這個鑄造函式要求你傳入兩個變數作為參數：第一個是 `recipient`，它指定將接收你剛鑄造的 NFT 的地址；第二個是 NFT 的 `tokenURI`，這是一個解析為描述 NFT 中繼資料的 JSON 文件的字串。
 
-NFT 的中繼資料才是真正賦予它生命的東西，讓它擁有屬性，例如名稱、描述、圖片（或不同的數位資產）以及其他屬性。這是[一個 tokenURI 的範例](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)，其中包含了 NFT 的中繼資料。
+NFT 的中繼資料才是真正賦予它生命的東西，讓它擁有屬性，例如名稱、描述、圖片（或不同的數位資產）以及其他屬性。這是一個包含 NFT 中繼資料的 [tokenURI 範例](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)。
 
-在本教學中，我們將專注於第 2 部分，使用我們的 React 使用者介面呼叫現有 NFT 的智能合約鑄造函式。
+在本教學中，我們將專注於第 2 部分：使用我們的 React 使用者介面呼叫 NFT 智能合約的鑄造函式。
 
-[這是](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE)我們將在本教學中呼叫的 ERC-721 NFT 智能合約的連結。如果你想了解我們是如何製作它的，我們強烈推薦你查看我們的另一篇教學：[「如何建立 NFT」](https://www.alchemy.com/docs/how-to-create-an-nft)。
+你需要一個部署到受支援測試網（例如 Sepolia）的 ERC-721 NFT 智能合約。如果你想自己部署一個，我們推薦 Alchemy 的[將智能合約部署到 Sepolia](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet) 指南。
 
-太棒了，現在我們了解了製作 NFT 的運作方式，讓我們複製 (clone) 我們的起始檔案吧！
-
+太棒了，現在我們了解了製作 NFT 的運作方式，讓我們複製我們的起始檔案吧！
 ## 複製起始檔案 {#clone-the-starter-files}
 
 首先，前往 [nft-minter-tutorial GitHub 儲存庫](https://github.com/alchemyplatform/nft-minter-tutorial)以取得此專案的起始檔案。將此儲存庫複製到你的本機環境中。
@@ -195,28 +194,25 @@ return (
 
 為了讓使用者能夠與你的智能合約互動，他們需要將他們的以太坊錢包連接到你的 dapp。
 
-### 下載梅塔馬斯克 {#download-metamask}
+### 下載梅塔馬斯克
 
 在本教學中，我們將使用梅塔馬斯克，這是一個瀏覽器中的虛擬錢包，用於管理你的以太坊帳戶地址。如果你想進一步了解以太坊上的交易是如何運作的，請查看[此頁面](/developers/docs/transactions/)。
 
-你可以免費在[這裡](https://metamask.io/download)下載並建立一個梅塔馬斯克帳戶。當你建立帳戶時，或者如果你已經有一個帳戶，請確保切換到右上角的「Ropsten 測試網路 (Ropsten Test Network)」\(這樣我們就不會處理真錢\)。
+你可以免費在[這裡](https://metamask.io/download)下載並建立一個梅塔馬斯克帳戶。當你在建立帳戶時，或者如果你已經有一個帳戶，請確保切換到如 Sepolia 等受支援的測試網 \(這樣我們就不會牽涉到真實的資金\)。
+### 從水龍頭新增以太幣
 
-### 從水龍頭新增以太幣 {#add-ether-from-faucet}
+為了鑄造我們的 NFT（或在以太坊區塊鏈上簽署任何交易），我們需要一些假的 ETH。要獲取測試網 ETH，請使用維護中的水龍頭，例如 [Alchemy Sepolia 水龍頭](https://www.alchemy.com/faucets/ethereum-sepolia)，並輸入你的 Sepolia 帳戶地址。不久之後，你應該就會在你的梅塔馬斯克帳戶中看到 ETH！
+### 檢查你的餘額
 
-為了鑄造我們的 NFT（或在以太坊區塊鏈上簽署任何交易），我們需要一些假的 ETH。要取得 ETH，你可以前往 [Ropsten 水龍頭](https://faucet.ropsten.be/)並輸入你的 Ropsten 帳戶地址，然後點擊「發送 Ropsten ETH (Send Ropsten Eth)」。不久之後，你應該會在你的梅塔馬斯克帳戶中看到 ETH！
-
-### 檢查你的餘額 {#check-your-balance}
-
-為了再次確認我們的餘額在那裡，讓我們使用 [Alchemy 的 composer 工具](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)發出一個 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 請求。這將回傳我們錢包中的 ETH 數量。在你輸入你的梅塔馬斯克帳戶地址並點擊「發送請求 (Send Request)」後，你應該會看到類似這樣的響應：
+為了再次確認我們的餘額是否存在，讓我們使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 請求。這將回傳我們錢包中的 ETH 數量。在輸入你的梅塔馬斯克帳戶地址並點擊「發送請求 (Send Request)」後，你應該會看到類似以下的響應：
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**注意：** 這個結果的單位是 Wei 而不是 ETH。Wei 被用作以太幣的最小面額。從 Wei 到 ETH 的轉換是：1 ETH = 10¹⁸ Wei。因此，如果我們將 0xde0b6b3a7640000 轉換為十進制，我們得到 1\*10¹⁸，等於 1 ETH。
+**注意：** 這個結果的單位是 Wei，而不是 ETH。Wei 被用作以太幣的最小面額。Wei 到 ETH 的轉換為：1 ETH = 10¹⁸ Wei。因此，如果我們將 0xde0b6b3a7640000 轉換為十進位，我們會得到 1\*10¹⁸，等於 1 ETH。
 
-呼！我們的假錢都在那裡了！ <Emoji text=":money_mouth_face:" size={1} />
-
+呼！我們的假錢都在那裡！ <Emoji text=":money_mouth_face:" size={1} />
 ## 將梅塔馬斯克連接到你的使用者介面 {#connect-metamask-to-your-ui}
 
 現在我們的梅塔馬斯克錢包已經設定好了，讓我們將我們的 dapp 連接到它！
@@ -583,30 +579,29 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 我們還需要一個 Alchemy API 金鑰和 Alchemy Web3 API 來連接到以太坊區塊鏈並載入我們的智能合約。
 
-### 建立你的 Alchemy API 金鑰 {#create-alchemy-api}
+### 建立你的 Alchemy API 金鑰
 
-如果你還沒有 Alchemy 帳戶，請在[這裡免費註冊。](https://alchemy.com/?a=eth-org-nft-minter)
+如果你還沒有 Alchemy 帳戶，[請在這裡免費註冊。](https://alchemy.com/?a=eth-org-nft-minter)
 
-建立 Alchemy 帳戶後，你可以透過建立應用程式來產生 API 金鑰。這將允許我們向 Ropsten 測試網路發出請求。
+建立 Alchemy 帳戶後，你可以透過建立應用程式來產生 API 金鑰。這將允許我們向 Sepolia 測試網發出請求。
 
-將滑鼠懸停在導覽列中的「應用程式 (Apps)」上並點擊「建立應用程式 (Create App)」，導覽到 Alchemy 儀表板中的「建立應用程式」頁面。
+將滑鼠懸停在導覽列中的「Apps」上，然後點擊「Create App」，導覽至 Alchemy 儀表板中的「Create App」頁面。
 
-為你的應用程式命名，我們選擇了「My First NFT!」，提供簡短描述，為你的應用程式記帳使用的環境選擇「Staging」，並為你的網路選擇「Ropsten」。
+為你的應用程式命名（我們選擇了「My First NFT!」），提供簡短的描述，為你的應用程式記帳環境選擇「Staging」，並為你的網路選擇「Sepolia」。
 
-點擊「建立應用程式 (Create app)」，就這樣！你的應用程式應該會出現在下表中。
+點擊「Create app」，就這樣！你的應用程式應該會出現在下表中。
 
 太棒了，現在我們已經建立了我們的 HTTP Alchemy API URL，將其複製到你的剪貼簿...
 
-…然後讓我們將它新增到我們的 `.env` 檔案中。總而言之，你的 .env 檔案應該看起來像這樣：
+...然後讓我們將其新增到我們的 `.env` 檔案中。總而言之，你的 .env 檔案應該看起來像這樣：
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 現在我們有了我們的合約 ABI 和我們的 Alchemy API 金鑰，我們準備好使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) 載入我們的智能合約了。
-
 ### 設定你的 Alchemy Web3 端點和合約 {#setup-alchemy-endpoint}
 
 首先，如果你還沒有安裝，你需要透過在終端機中導覽到主目錄：`nft-minter-tutorial` 來安裝 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)：
@@ -849,12 +844,10 @@ const onMintPressed = async () => {
 }
 ```
 
-## 將你的 NFT 部署到即時網站 {#deploy-your-nft}
-
-準備好讓你的專案上線供使用者互動了嗎？查看[這篇教學](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online)，了解如何將你的鑄造程式部署到即時網站。
+## 將你的 NFT 部署到上線的網站
+準備好讓你的專案上線供使用者互動了嗎？請查看 [React 部署文件](https://create-react-app.dev/docs/deployment/)，了解如何將你的鑄造程式部署到上線的網站。
 
 最後一步...
-
 ## 席捲區塊鏈世界 {#take-the-blockchain-world-by-storm}
 
 開玩笑的，你已經來到了教學的尾聲！
@@ -865,6 +858,6 @@ const onMintPressed = async () => {
 - 從你的前端呼叫智能合約方法
 - 使用梅塔馬斯克簽署交易
 
-想必，你希望能夠在你的錢包中展示透過你的 dapp 鑄造的 NFT——所以一定要查看我們的快速教學：[如何在你的錢包中查看你的 NFT](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)！
+想必，你希望能夠在你的錢包中展示透過你的 dapp 鑄造的 NFT——所以一定要查看我們的快速教學：[如何在你的錢包中查看你的 NFT](/developers/tutorials/how-to-view-nft-in-metamask/)！
 
 而且，一如既往，如果你有任何問題，我們會在 [Alchemy Discord](https://discord.gg/gWuC7zB) 中提供協助。我們迫不及待地想看看你如何將本教學中的概念應用到你未來的專案中！

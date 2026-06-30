@@ -52,7 +52,7 @@ lang: zh-tw
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - Web3 創作者社群，建設者、產業領袖和以太坊愛好者聚集於此。我們對 Web3 開發、設計和文化充滿熱情。來和我們一起建設吧。</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity 開發聊天室 (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 問答論壇</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- 去中心化的問答論壇</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- 去中心化的問答論壇</i></SocialListItem>
 
 ## YouTube 與 X（原推特） {#youtube-and-twitter}
 
