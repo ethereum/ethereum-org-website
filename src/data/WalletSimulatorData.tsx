@@ -140,6 +140,11 @@ export function useWalletOnboardingSimData(): SimulatorData {
                 })}
               </p>
               <p>{t("sim-ca-desc-7-p3")}</p>
+              <p>
+                <Link href="/security/#protect-private-keys">
+                  {t("sim-cw-desc-6-link-1")}
+                </Link>
+              </p>
             </>
           ),
         },
