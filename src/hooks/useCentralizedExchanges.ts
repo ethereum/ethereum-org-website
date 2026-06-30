@@ -2,14 +2,6 @@ import { useState } from "react"
 import { shuffle } from "lodash"
 import { useLocale } from "next-intl"
 
-// TODO: Remove unused?
-// import argent from "@/public/images/wallets/argent.png"
-// import binanceus from "@/public/images/exchanges/binance.png"
-// import imtoken from "@/public/images/wallets/imtoken.png"
-// import mycrypto from "@/public/images/wallets/mycrypto.png"
-// import myetherwallet from "@/public/images/wallets/myetherwallet.png"
-// import squarelink from "@/public/images/wallets/squarelink.png"
-// import trust from "@/public/images/wallets/trust.png"
 import type { ImageProps } from "@/components/Image"
 import { SelectOnChange } from "@/components/Select"
 
@@ -103,6 +95,7 @@ type ExchangeData = Record<Country, ExchangeKey[]>
 type ExchangeByCountryOption = {
   value: string
   label: string
+  countryCode: Country
   exchanges: string[]
 }
 
@@ -113,8 +106,6 @@ type FilteredData = {
   image: ImageProps["src"]
   alt: string
 }
-
-const UNITED_STATES = "United States of America (USA)"
 
 const exchanges: ExchangeDetails = {
   binance: {
@@ -345,9 +336,12 @@ export const useCentralizedExchanges = () => {
   const placeholderString = t("page-get-eth-exchanges-search")
 
   // Add `value` & `label` for Select component, sort alphabetically
-  const selectOptions: ExchangeByCountryOption[] = Object.entries(
-    exchangeData as ExchangeData
-  )
+  const exchangeEntries = Object.entries(exchangeData as ExchangeData) as [
+    Country,
+    ExchangeKey[],
+  ][]
+
+  const selectOptions: ExchangeByCountryOption[] = exchangeEntries
     .map(([countryCode, exchanges]) => {
       const countryName =
         countryCode.length === 2
@@ -357,6 +351,7 @@ export const useCentralizedExchanges = () => {
       return {
         value: countryName,
         label: countryName,
+        countryCode,
         exchanges,
       }
     })
@@ -393,10 +388,9 @@ export const useCentralizedExchanges = () => {
         .filter((exchange) => selectedCountry?.exchanges.includes(exchange))
         // Format array for <CardList/>
         .map((exchange) => {
-          // Add state exceptions if Country is USA
+          // Add state exceptions if the selected country is the United States
           let description: string | undefined
-          // TODO: Set up for i18n support; currently all country names in English:
-          if (selectedCountry.value === UNITED_STATES) {
+          if (selectedCountry.countryCode === "US") {
             const { usaExceptions } = exchanges[exchange]
             if (usaExceptions.length > 0) {
               description = `${t("page-get-eth-exchanges-except")} ${formatList(
