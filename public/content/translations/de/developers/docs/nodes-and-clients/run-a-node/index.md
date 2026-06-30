@@ -371,7 +371,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Wenn sich ein Konsens-Client mit dem Ausführungsclient verbindet, um den Einzahlungsvertrag zu lesen und Validatoren zu identifizieren, verbindet er sich auch mit anderen Beacon-Knoten-Peers und beginnt mit der Synchronisierung von Konsens-Slots ab Genesis. Sobald der Beacon-Knoten die aktuelle Epoche erreicht, wird die Beacon-API für Ihre Validatoren nutzbar. Erfahren Sie mehr über [Beacon-Knoten-APIs](https://eth2docs.vercel.app/).
+Wenn sich ein Konsens-Client mit dem Ausführungsclient verbindet, um den Einzahlungsvertrag zu lesen und Validatoren zu identifizieren, verbindet er sich auch mit anderen Beacon-Knoten-Peers und beginnt mit der Synchronisierung von Konsens-Slots ab Genesis. Sobald der Beacon-Knoten die aktuelle Epoche erreicht, wird die Beacon-API für Ihre Validatoren nutzbar. Erfahren Sie mehr über [Beacon-Knoten-APIs](https://ethereum.github.io/beacon-APIs).
 
 ### Hinzufügen von Validatoren {#adding-validators}
 
@@ -454,7 +454,7 @@ Achten Sie im Rahmen Ihrer Überwachung darauf, die Leistung Ihrer Maschine im A
 - [Ethereum-Staking-Leitfäden](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, wird oft aktualisiert_
 - [Leitfaden | Wie man einen Validator für Ethereum-Staking im Mainnet einrichtet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, wird oft aktualisiert_
 - [ETHStaker-Leitfäden zum Betrieb von Validatoren in Testnetzen](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, wird regelmäßig aktualisiert_
-- [Beispiel-AWS-Blockchain-Node-Runner-App für Ethereum-Knoten](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, wird oft aktualisiert_
+- [Beispiel-AWS-Blockchain-Node-Runner-App für Ethereum-Knoten](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, wird oft aktualisiert_
 - [Die Merge-FAQ für Knotenbetreiber](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Juli 2022_
 - [Analyse der Hardwareanforderungen für einen vollständig validierten Ethereum-Knoten](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24. September 2018_
 - [Betrieb von Ethereum Full Nodes: Ein Leitfaden für die kaum Motivierten](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7. November 2019_

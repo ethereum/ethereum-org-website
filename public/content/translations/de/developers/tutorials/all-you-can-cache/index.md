@@ -756,11 +756,11 @@ Da wir die Low-Level-Funktion `<address>.call()` verwenden, können wir `vm.expe
 
 Auf diese Weise überprüfen wir in Foundry, ob Code [ein Ereignis korrekt ausgibt](https://getfoundry.sh/reference/cheatcodes/expect-emit/).
 
-### Der Client {#the-client}
+### Der Client
 
-Eine Sache, die Sie bei Solidity-Tests nicht bekommen, ist JavaScript-Code, den Sie ausschneiden und in Ihre eigene Anwendung einfügen können. Um diesen Code zu schreiben, habe ich WORM auf [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), dem neuen Testnetz von [Optimism](https://www.optimism.io/), bereitgestellt. Es befindet sich unter der Adresse [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Eine Sache, die Sie bei Solidity-Tests nicht bekommen, ist JavaScript-Code, den Sie ausschneiden und in Ihre eigene Anwendung einfügen können. Die ursprüngliche Version dieses Tutorials hat WORM auf Optimism Goerli bereitgestellt, das inzwischen eingestellt wurde. Um den Client heute auszuführen, stellen Sie WORM erneut in einem unterstützten OP-Stack-Netzwerk wie [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack) bereit und verwenden Sie dann die resultierende Vertragsadresse im JavaScript-Client.
 
-[Den JavaScript-Code für den Client können Sie hier sehen](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Um ihn zu verwenden:
+[Den JavaScript-Code für den Client finden Sie hier](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Das Beispiel-Repository wurde für Optimism Goerli geschrieben. Bevor Sie es ausführen, aktualisieren Sie daher den RPC-Endpunkt und die Explorer-URLs in `javascript/.env.example` und `javascript/index.js` für Ihr Zielnetzwerk. So verwenden Sie es:
 
 1. Klonen Sie das Git-Repository:
 
@@ -785,8 +785,8 @@ Eine Sache, die Sie bei Solidity-Tests nicht bekommen, ist JavaScript-Code, den 
 
    | Parameter           | Wert                                                                                                                                                               |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | Die Mnemonic für ein Konto, das über genügend ETH verfügt, um eine Transaktion zu bezahlen. [Hier erhalten Sie kostenlose ETH für das Optimism Goerli-Netzwerk](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL zu Optimism Goerli. Der öffentliche Endpunkt, `https://goerli.optimism.io`, ist ratenlimitiert, aber ausreichend für das, was wir hier benötigen.                                      |
+   | MNEMONIC            | Die Mnemonic für ein Konto, das über genügend ETH verfügt, um eine Transaktion zu bezahlen. [Die Faucet-Dokumentation von Optimism](https://docs.optimism.io/app-developers/tools/faucets) listet aktuelle Testnetz-Faucets auf. |
+   | OPTIMISM_GOERLI_URL | RPC-URL für das Netzwerk, in dem Sie WORM erneut bereitstellen. Verwenden Sie für OP Sepolia einen OP-Sepolia-RPC-Endpunkt wie `https://sepolia.optimism.io` oder einen anderen Endpunkt von Ihrem Anbieter.        |
 
 5. Führen Sie `index.js` aus.
 
@@ -794,9 +794,9 @@ Eine Sache, die Sie bei Solidity-Tests nicht bekommen, ist JavaScript-Code, den 
    node index.js
    ```
 
-   Diese Beispielanwendung schreibt zunächst einen Eintrag in WORM und zeigt die Calldata sowie einen Link zur Transaktion auf Etherscan an. Dann liest sie diesen Eintrag zurück und zeigt den verwendeten Schlüssel sowie die Werte im Eintrag (Wert, Blocknummer und Autor) an.
+   Diese Beispielanwendung schreibt zunächst einen Eintrag in WORM und zeigt die Calldata sowie einen Link zur Transaktion in einem Block-Explorer an. Anschließend liest sie diesen Eintrag wieder aus und zeigt den verwendeten Schlüssel sowie die Werte im Eintrag (Wert, Blocknummer und Autor) an.
 
-Der Großteil des Clients ist normales Dapp-JavaScript. Wir werden also auch hier nur die interessanten Teile durchgehen.
+Der Großteil des Clients ist normales JavaScript für eine Dezentrale Anwendung (Dapp). Wir werden also auch hier nur auf die interessanten Teile eingehen.
 
 ```javascript
 .
@@ -818,7 +818,7 @@ const val = await worm.encodeVal("0x600D")
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers erwartet, dass die Aufrufdaten (Calldata) ein Hex-String sind, `0x` gefolgt von einer geraden Anzahl hexadezimaler Ziffern. Da `key` und `val` beide mit `0x` beginnen, müssen wir diese Header entfernen.
+Ethers erwartet, dass die Aufrufdaten ein Hex-String sind, also `0x` gefolgt von einer geraden Anzahl hexadezimaler Ziffern. Da sowohl `key` als auch `val` mit `0x` beginnen, müssen wir diese Header entfernen.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -842,7 +842,6 @@ Wie beim Solidity-Testcode können wir eine gecachte Funktion nicht normal aufru
 ```
 
 Zum Lesen von Einträgen können wir den normalen Mechanismus verwenden. Es besteht keine Notwendigkeit, Parameter-Caching bei `view`-Funktionen zu verwenden.
-
 ## Fazit {#conclusion}
 
 Der Code in diesem Artikel ist ein Proof of Concept; der Zweck ist es, die Idee leicht verständlich zu machen. Für ein produktionsreifes System möchten Sie vielleicht einige zusätzliche Funktionen implementieren:

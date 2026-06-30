@@ -184,7 +184,7 @@ Fuzzing ist nützlich zur Bewertung des Eingabevalidierungsmechanismus eines Sma
 
 ### Richtlinien für die Ausführung von eigenschaftsbasiertem Testen für Smart Contracts {#running-property-based-tests}
 
-Die Ausführung von eigenschaftsbasiertem Testen beginnt typischerweise mit der Definition einer Eigenschaft (z. B. das Fehlen von [Ganzzahl-Überläufen](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) oder einer Sammlung von Eigenschaften, die Sie in einem Smart Contract verifizieren möchten. Möglicherweise müssen Sie beim Schreiben von Eigenschaftstests auch einen Wertebereich definieren, innerhalb dessen das Programm Daten für Transaktionseingaben generieren kann.
+Die Ausführung von eigenschaftsbasiertem Testen beginnt typischerweise mit der Definition einer Eigenschaft (z. B. das Fehlen von [Ganzzahl-Überläufen](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)) oder einer Sammlung von Eigenschaften, die Sie in einem Smart Contract verifizieren möchten. Möglicherweise müssen Sie beim Schreiben von Eigenschaftstests auch einen Wertebereich definieren, innerhalb dessen das Programm Daten für Transaktionseingaben generieren kann.
 
 Sobald das Tool für Eigenschaftstests richtig konfiguriert ist, führt es die Funktionen Ihres Smart Contracts mit zufällig generierten Eingaben aus. Wenn es Verletzungen von Zusicherungen gibt, sollten Sie einen Bericht mit konkreten Eingabedaten erhalten, die die zu bewertende Eigenschaft verletzen. In einigen der folgenden Leitfäden erfahren Sie, wie Sie mit der Ausführung von eigenschaftsbasiertem Testen mit verschiedenen Tools beginnen können:
 
@@ -195,7 +195,7 @@ Sobald das Tool für Eigenschaftstests richtig konfiguriert ist, führt es die F
 - **[Fuzzing von Verträgen mit Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[Fuzzing von Verträgen mit Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Symbolische Ausführung von Smart Contracts mit Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[Symbolische Ausführung von Smart Contracts mit Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[Symbolische Ausführung von Smart Contracts mit Mythril](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
 ## Manuelles Testen für Smart Contracts {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ Der Hauptunterschied besteht darin, dass Bug-Bounty-Programme der breiteren Entw
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _Framework zur dynamischen symbolischen Ausführung für die Analyse von EVM-Bytecode._
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _EVM-Bytecode-Bewertungs-Tool zur Erkennung von Vertragsschwachstellen mithilfe von Taint-Analyse, concolic-Analyse und Kontrollflussprüfung._
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _EVM-Bytecode-Bewertungs-Tool zur Erkennung von Vertragsschwachstellen mithilfe von Taint-Analyse, concolic-Analyse und Kontrollflussprüfung._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble ist eine Spezifikationssprache und ein Tool zur Laufzeitverifikation, mit dem Sie Smart Contracts mit Eigenschaften annotieren können, die es Ihnen ermöglichen, die Verträge automatisch mit Tools wie Diligence Fuzzing oder MythX zu testen._
 

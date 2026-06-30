@@ -27,7 +27,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 **Nachrichten**
 
 - [BeInCrypto](http://www.beincrypto.com.br) – Nachrichten und Artikel zu Kryptowährungen, einschließlich einer Liste von Börsen, die in Brasilien verfügbar sind
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) – Brasilianische Version von Cointelegraph, einem großen Nachrichtenportal für Kryptowährungen
+- [Cointelegraph](https://cointelegraph.com.br/) – Brasilianische Version von Cointelegraph, einem großen Nachrichtenportal für Kryptowährungen
 - [Livecoins](http://www.livecoins.com.br/ethereum) – Nachrichten und Tools zu Kryptowährungen
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) – Nachrichten und Berichte zu Kryptowährungen
 - [Modular Crypto](https://modularcrypto.xyz/) – Nachrichten und Bildungsartikel zu Kryptowährungen
@@ -37,7 +37,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 - [web3dev](https://www.web3dev.com.br/) – Content-Hub und Discord-Community für Web3-Entwickler.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) – Ressourcen zum Erlernen von Web3 und Dezentralisierten Finanzen (DeFi)
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) – Nachrichten und Bildung zu Kryptowährungen, einschließlich „Ethereum für Anfänger“ und „DeFi für Anfänger“
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) – Einblicke in den Kryptowährungsbereich, Bildung und Blog
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) – Einblicke in den Kryptowährungsbereich, Bildung und Blog
 - [Cointimes](http://www.cointimes.com.br/) – Nachrichten und Bildung zu Kryptowährungen
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) – Ein Leitfaden, der die am häufigsten gestellten und grundlegendsten Krypto-Fragen beantwortet
 

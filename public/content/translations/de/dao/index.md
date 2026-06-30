@@ -133,20 +133,17 @@ _Wird typischerweise für die dezentrale Entwicklung und Governance von Protokol
 - [DAO-Liste von Tally.xyz](https://www.tally.xyz/explore)
 - [DAO-Liste von DeGov.AI](https://apps.degov.ai/)
 
-### Eine DAO gründen {#start-a-dao}
-
-- [Eine DAO mit DAOHaus ins Leben rufen](https://app.daohaus.club/summon)
+### Eine DAO gründen
+- [Eine DAO mit DAOHaus gründen](https://app.daohaus.club/summon)
 - [Eine Governor-DAO mit Tally gründen](https://www.tally.xyz/get-started)
-- [Eine von Aragon angetriebene DAO erstellen](https://aragon.org/product)
+- [Eine Aragon-basierte DAO erstellen](https://aragon.org/product)
 - [Eine Colony gründen](https://colony.io/)
-- [Eine DAO mit dem Holografischen Konsens von DAOstack erstellen](https://alchemy.daostack.io/daos/create)
 - [Eine DAO mit dem DeGov Launcher starten](https://docs.degov.ai/integration/deploy)
-
 ## Weiterführende Literatur {#further-reading}
 
 ### DAO-Artikel {#dao-articles}
 
-- [Was ist eine DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [Was ist eine DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [Was ist eine DAO und wofür ist sie da?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Wie man eine DAO-gestützte digitale Community gründet](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

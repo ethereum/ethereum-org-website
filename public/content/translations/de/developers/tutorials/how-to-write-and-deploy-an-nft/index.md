@@ -17,7 +17,7 @@ In diesem Tutorial werden wir die Erstellung und Bereitstellung eines ERC-721 Sm
 
 In Teil 2 dieses Tutorials werden wir durchgehen, wie wir unseren Smart Contract verwenden können, um einen NFT zu prägen, und in Teil 3 werden wir erklären, wie Sie Ihren NFT in MetaMask anzeigen können.
 
-Und natürlich, wenn Sie zu irgendeinem Zeitpunkt Fragen haben, zögern Sie nicht, sich im [Alchemy Discord](https://discord.gg/gWuC7zB) zu melden oder die [NFT-API-Dokumentation von Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api) zu besuchen!
+Und natürlich, wenn Sie zu irgendeinem Zeitpunkt Fragen haben, zögern Sie nicht, sich im [Alchemy Discord](https://discord.gg/gWuC7zB) zu melden oder die [NFT-API-Dokumentation von Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart) zu besuchen!
 
 ## Schritt 1: Mit dem Ethereum-Netzwerk verbinden {#connect-to-ethereum}
 
@@ -27,7 +27,7 @@ In diesem Tutorial werden wir auch die Entwicklertools von Alchemy für Überwac
 
 ## Schritt 2: Erstellen Sie Ihre App (und Ihren API-Schlüssel) {#make-api-key}
 
-Sobald Sie ein Alchemy-Konto erstellt haben, können Sie einen API-Schlüssel generieren, indem Sie eine App erstellen. Dies ermöglicht es uns, Anfragen an das Sepolia-Testnetz zu stellen. Sehen Sie sich [diesen Leitfaden](https://docs.alchemyapi.io/guides/choosing-a-network) an, wenn Sie mehr über Testnetze erfahren möchten.
+Sobald Sie ein Alchemy-Konto erstellt haben, können Sie einen API-Schlüssel generieren, indem Sie eine App erstellen. Dies ermöglicht es uns, Anfragen an das Sepolia-Testnetz zu stellen. Sehen Sie sich [diesen Leitfaden](https://www.alchemy.com/docs/choosing-a-web3-network) an, wenn Sie mehr über Testnetze erfahren möchten.
 
 1. Navigieren Sie zur Seite „Create App“ in Ihrem Alchemy-Dashboard, indem Sie mit der Maus über „Apps“ in der Navigationsleiste fahren und auf „Create App“ klicken.
 
@@ -51,28 +51,27 @@ Sie können MetaMask kostenlos [hier](https://metamask.io/download) herunterlade
 
 Um unseren Smart Contract im Testnetz bereitzustellen, benötigen wir etwas falsches ETH. Um ETH zu erhalten, können Sie zum [Sepolia Faucet](https://sepoliafaucet.com/) gehen, das von Alchemy gehostet wird, sich anmelden, Ihre Kontoadresse eingeben und auf „Send Me ETH“ klicken. Sie sollten kurz darauf ETH in Ihrem MetaMask-Konto sehen!
 
-## Schritt 5: Überprüfen Sie Ihr Guthaben {#check-balance}
+## Schritt 5: Überprüfen Sie Ihr Guthaben
 
-Um sicherzustellen, dass unser Guthaben vorhanden ist, stellen wir eine [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)-Anfrage mit dem [Composer-Tool von Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Dies gibt die Menge an ETH in unserer Wallet zurück. Nachdem Sie Ihre MetaMask-Kontoadresse eingegeben und auf „Send Request“ geklickt haben, sollten Sie eine Antwort wie diese sehen:
+Um sicherzugehen, dass unser Guthaben vorhanden ist, stellen wir eine [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)-Anfrage über das [Sandbox-Tool von Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Dies gibt die Menge an ETH in unserer Wallet zurück. Nachdem Sie Ihre MetaMask-Kontoadresse eingegeben und auf „Send Request“ geklickt haben, sollten Sie eine Antwort wie diese sehen:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
 > **Hinweis** Dieses Ergebnis ist in Wei, nicht in ETH. Wei wird als die kleinste Stückelung von Ether verwendet. Die Umrechnung von Wei in ETH lautet 1 ETH = 10<sup>18</sup> Wei. Wenn wir also 0xde0b6b3a7640000 in eine Dezimalzahl umwandeln, erhalten wir 1\*10<sup>18</sup> Wei, was 1 ETH entspricht.
 
 Puh! Unser falsches Geld ist komplett da.
-
-## Schritt 6: Initialisieren Sie unser Projekt {#initialize-project}
+## Schritt 6: Initialisieren Sie unser Projekt
 
 Zuerst müssen wir einen Ordner für unser Projekt erstellen. Navigieren Sie zu Ihrer Befehlszeile und geben Sie ein:
 
     mkdir my-nft
     cd my-nft
 
-Da wir uns nun in unserem Projektordner befinden, verwenden wir npm init, um das Projekt zu initialisieren. Wenn Sie npm noch nicht installiert haben, folgen Sie [diesen Anweisungen](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (wir benötigen auch [Node.js](https://nodejs.org/en/download/), laden Sie das also ebenfalls herunter!).
+Da wir uns nun in unserem Projektordner befinden, verwenden wir npm init, um das Projekt zu initialisieren. Wenn Sie npm noch nicht installiert haben, folgen Sie den [Installationsanweisungen für Node.js](https://nodejs.org/en/download/) (wir benötigen Node.js und npm für dieses Tutorial).
 
     npm init
 
-Es spielt keine große Rolle, wie Sie die Installationsfragen beantworten; hier ist, wie wir es als Referenz gemacht haben:
+Es spielt keine große Rolle, wie Sie die Installationsfragen beantworten; hier sehen Sie als Referenz, wie wir es gemacht haben:
 
 ```json
     package name: (my-nft)
@@ -99,8 +98,7 @@ Es spielt keine große Rolle, wie Sie die Installationsfragen beantworten; hier 
     }
 ```
 
-Bestätigen Sie die package.json, und wir können loslegen!
-
+Genehmigen Sie die package.json, und schon kann es losgehen!
 ## Schritt 7: Installieren Sie [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 Hardhat ist eine Entwicklungsumgebung zum Kompilieren, Bereitstellen, Testen und Debuggen Ihrer Ethereum-Software. Es hilft Entwicklern beim lokalen Erstellen von Smart Contracts und Dapps, bevor sie auf der Live-Chain bereitgestellt werden.
@@ -342,7 +340,7 @@ Die From-Adresse sollte mit Ihrer MetaMask-Kontoadresse übereinstimmen und die 
 
 Jaaaaa! Sie haben gerade Ihren NFT-Smart-Contract auf der Ethereum-Chain (Testnetz) bereitgestellt!
 
-Um zu verstehen, was intern vor sich geht, navigieren wir zur Registerkarte Explorer in unserem [Alchemy-Dashboard](https://dashboard.alchemyapi.io/explorer). Wenn Sie mehrere Alchemy-Apps haben, stellen Sie sicher, dass Sie nach App filtern und „MyNFT“ auswählen.
+Um zu verstehen, was intern vor sich geht, navigieren wir zur Registerkarte Explorer in unserem [Alchemy-Dashboard](https://dashboard.alchemy.com/explorer). Wenn Sie mehrere Alchemy-Apps haben, stellen Sie sicher, dass Sie nach App filtern und „MyNFT“ auswählen.
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

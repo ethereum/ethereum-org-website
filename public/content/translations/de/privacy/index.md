@@ -93,5 +93,5 @@ Einige Projekte, die Privatsphäre beim Beweisen erforschen, umfassen [Client Si
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), ein Forschungs- und Entwicklungslabor der Ethereum Foundation, das sich auf Privatsphäre für das Ökosystem konzentriert
 - [Web3PrivacyNow](https://web3privacy.info/), ein Netzwerk von Menschen, Projekten und gleichgesinnten Organisationen, die Menschenrechte online schützen und fördern
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), eine Bewertungsseite für Ethereum-Wallets, die darauf abzielt, eine umfassende Liste von Wallets, deren Funktionalität, Praktiken und Unterstützung für bestimmte Standards bereitzustellen.
-- [Zk-kit](https://zkkit.pse.dev/): Eine Sammlung von Bibliotheken (Algorithmen, Hilfsfunktionen und Datenstrukturen), die in verschiedenen Projekten und Zero-Knowledge-Protokollen wiederverwendet werden können.
+- [Zk-kit](https://zkkit.org/): Eine Sammlung von Bibliotheken (Algorithmen, Hilfsfunktionen und Datenstrukturen), die in verschiedenen Projekten und Zero-Knowledge-Protokollen wiederverwendet werden können.
 - [Privacy Apps](/apps/categories/privacy/) - Entdecken Sie eine Liste kuratierter Privatsphäre-Anwendungen, die auf Ethereum laufen.

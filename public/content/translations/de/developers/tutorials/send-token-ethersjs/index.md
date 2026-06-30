@@ -17,11 +17,9 @@ published: 2021-04-06
 - Token transferieren
 - Den Gaspreis entsprechend der Netzwerkauslastung festlegen
 
-### Erste Schritte {#to-get-started}
-
-Um zu beginnen, müssen wir zunächst die ethers.js-Bibliothek in unser JavaScript importieren
-ethers.js(5.0) einbinden
-
+### Erste Schritte
+Um zu beginnen, müssen wir zunächst die Ethers.js-Bibliothek in unser JavaScript importieren.
+Ethers.js v5 einbinden
 ### Installation {#install-ethersjs}
 
 ```shell

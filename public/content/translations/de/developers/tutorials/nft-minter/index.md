@@ -33,18 +33,17 @@ Bevor wir uns überhaupt Code ansehen, ist es wichtig zu verstehen, wie das Erst
 
 Der größte Unterschied zwischen den beiden NFT-Smart-Contract-Standards besteht darin, dass ERC-1155 ein Multi-Token-Standard ist und Batch-Funktionalität beinhaltet, während ERC-721 ein Single-Token-Standard ist und daher nur die Übertragung eines Tokens auf einmal unterstützt.
 
-### Die Prägefunktion aufrufen {#minting-function}
+### Die Prägefunktion aufrufen
 
-Normalerweise erfordert diese Prägefunktion, dass du zwei Variablen als Parameter übergibst: erstens die `recipient`, die die Adresse angibt, die dein frisch geprägtes NFT erhalten wird, und zweitens die `tokenURI` des NFTs, eine Zeichenfolge, die auf ein JSON-Dokument verweist, das die Metadaten des NFTs beschreibt.
+Normalerweise erfordert diese Prägefunktion, dass du zwei Variablen als Parameter übergibst: erstens den `recipient`, der die Adresse angibt, die dein frisch geprägtes NFT erhalten wird, und zweitens die `tokenURI` des NFTs, eine Zeichenfolge, die auf ein JSON-Dokument verweist, das die Metadaten des NFTs beschreibt.
 
-Die Metadaten eines NFTs erwecken es erst richtig zum Leben und ermöglichen es ihm, Eigenschaften wie einen Namen, eine Beschreibung, ein Bild (oder einen anderen digitalen Vermögenswert) und andere Attribute zu haben. Hier ist [ein Beispiel für eine tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), die die Metadaten eines NFTs enthält.
+Die Metadaten eines NFTs sind das, was es wirklich zum Leben erweckt und ihm Eigenschaften wie einen Namen, eine Beschreibung, ein Bild (oder einen anderen digitalen Vermögenswert) und andere Attribute verleiht. Hier ist [ein Beispiel für eine tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), die die Metadaten eines NFTs enthält.
 
-In diesem Tutorial konzentrieren wir uns auf Teil 2, den Aufruf der Prägefunktion eines bestehenden NFT-Smart-Contracts über unsere React-Benutzeroberfläche.
+In diesem Tutorial werden wir uns auf Teil 2 konzentrieren: den Aufruf der Prägefunktion eines NFT-Smart-Contracts über unsere React-Benutzeroberfläche.
 
-[Hier ist ein Link](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) zu dem ERC-721-NFT-Smart-Contract, den wir in diesem Tutorial aufrufen werden. Wenn du erfahren möchtest, wie wir ihn erstellt haben, empfehlen wir dir wärmstens unser anderes Tutorial [„Wie man ein NFT erstellt“](https://www.alchemy.com/docs/how-to-create-an-nft).
+Du benötigst einen ERC-721-NFT-Smart-Contract, der in einem unterstützten Testnetz wie Sepolia bereitgestellt wurde. Wenn du selbst einen bereitstellen möchtest, empfehlen wir den Leitfaden von Alchemy zur [Bereitstellung eines Smart Contracts auf Sepolia](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet).
 
 Cool, da wir nun verstehen, wie das Erstellen eines NFTs funktioniert, lass uns unsere Startdateien klonen!
-
 ## Die Startdateien klonen {#clone-the-starter-files}
 
 Gehe zunächst zum [GitHub-Repository nft-minter-tutorial](https://github.com/alchemyplatform/nft-minter-tutorial), um die Startdateien für dieses Projekt zu erhalten. Klone dieses Repository in deine lokale Umgebung.
@@ -195,19 +194,17 @@ Da wir nun verstehen, womit wir arbeiten, lass uns unsere Ethereum-Wallet einric
 
 Damit Benutzer mit deinem Smart Contract interagieren können, müssen sie ihre Ethereum-Wallet mit deiner Dapp verbinden.
 
-### MetaMask herunterladen {#download-metamask}
+### MetaMask herunterladen
 
-Für dieses Tutorial verwenden wir MetaMask, eine virtuelle Wallet im Browser, die zur Verwaltung deiner Ethereum-Konto-Adresse verwendet wird. Wenn du mehr darüber verstehen möchtest, wie Transaktionen auf Ethereum funktionieren, sieh dir [diese Seite](/developers/docs/transactions/) an.
+Für dieses Tutorial verwenden wir MetaMask, eine virtuelle Wallet im Browser, die zur Verwaltung deiner Ethereum-Konto-Adresse verwendet wird. Wenn du mehr darüber erfahren möchtest, wie Transaktionen auf Ethereum funktionieren, sieh dir [diese Seite](/developers/docs/transactions/) an.
 
-Du kannst MetaMask [hier](https://metamask.io/download) kostenlos herunterladen und ein Konto erstellen. Wenn du ein Konto erstellst oder bereits eines hast, stelle sicher, dass du oben rechts zum „Ropsten Test Network“ wechselst (damit wir nicht mit echtem Geld hantieren).
+Du kannst [hier](https://metamask.io/download) kostenlos MetaMask herunterladen und ein Konto erstellen. Wenn du ein Konto erstellst oder bereits eines hast, achte darauf, zu einem unterstützten Testnetz wie Sepolia zu wechseln \(damit wir nicht mit echtem Geld hantieren\).
+### Ether von einem Faucet hinzufügen
 
-### Ether von einem Faucet hinzufügen {#add-ether-from-faucet}
+Um unsere NFTs zu prägen (oder Transaktionen auf der Ethereum-Blockchain zu signieren), benötigen wir etwas Fake-ETH. Um Testnetz-ETH zu erhalten, verwende ein gewartetes Faucet wie das [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia) und gib deine Sepolia-Kontoadresse ein. Du solltest kurz darauf ETH in deinem MetaMask-Konto sehen!
+### Überprüfe dein Guthaben
 
-Um unsere NFTs zu prägen (oder Transaktionen auf der Ethereum-Blockchain zu signieren), benötigen wir etwas Fake-ETH. Um ETH zu erhalten, kannst du zum [Ropsten-Faucet](https://faucet.ropsten.be/) gehen und deine Ropsten-Konto-Adresse eingeben und dann auf „Send Ropsten Eth“ klicken. Du solltest kurz darauf ETH in deinem MetaMask-Konto sehen!
-
-### Deinen Kontostand überprüfen {#check-your-balance}
-
-Um sicherzugehen, dass unser Guthaben da ist, machen wir eine [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)-Anfrage mit dem [Composer-Tool von Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Dies gibt die Menge an ETH in unserer Wallet zurück. Nachdem du deine MetaMask-Konto-Adresse eingegeben und auf „Send Request“ geklickt hast, solltest du eine Antwort wie diese sehen:
+Um noch einmal zu überprüfen, ob unser Guthaben vorhanden ist, stellen wir eine [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)-Anfrage über das [Sandbox-Tool von Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Dadurch wird die Menge an ETH in unserer Wallet zurückgegeben. Nachdem du die Adresse deines MetaMask-Kontos eingegeben und auf „Send Request“ geklickt hast, solltest du eine Antwort wie diese sehen:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
@@ -215,8 +212,7 @@ Um sicherzugehen, dass unser Guthaben da ist, machen wir eine [eth_getBalance](h
 
 **HINWEIS:** Dieses Ergebnis ist in Wei, nicht in ETH. Wei wird als die kleinste Stückelung von Ether verwendet. Die Umrechnung von Wei in ETH lautet: 1 ETH = 10¹⁸ Wei. Wenn wir also 0xde0b6b3a7640000 in eine Dezimalzahl umwandeln, erhalten wir 1\*10¹⁸, was 1 ETH entspricht.
 
-Puh! Unser Fake-Geld ist komplett da! <Emoji text=":money_mouth_face:" size={1} />
-
+Puh! Unser Spielgeld ist komplett da! <Emoji text=":money_mouth_face:" size={1} />
 ## MetaMask mit deiner Benutzeroberfläche verbinden {#connect-metamask-to-your-ui}
 
 Da unsere MetaMask-Wallet nun eingerichtet ist, lass uns unsere Dapp damit verbinden!
@@ -583,30 +579,29 @@ Wenn du unsere Dateien genau untersucht hast, wirst du festgestellt haben, dass 
 
 Wir benötigen außerdem einen Alchemy-API-Schlüssel und die Alchemy-Web3-API, um uns mit der Ethereum-Blockchain zu verbinden und unseren Smart Contract zu laden.
 
-### Deinen Alchemy-API-Schlüssel erstellen {#create-alchemy-api}
+### Deinen Alchemy-API-Schlüssel erstellen
 
 Wenn du noch kein Alchemy-Konto hast, [melde dich hier kostenlos an.](https://alchemy.com/?a=eth-org-nft-minter)
 
-Sobald du ein Alchemy-Konto erstellt hast, kannst du einen API-Schlüssel generieren, indem du eine App erstellst. Dies ermöglicht es uns, Anfragen an das Ropsten-Testnetzwerk zu stellen.
+Sobald du ein Alchemy-Konto erstellt hast, kannst du einen API-Schlüssel generieren, indem du eine App erstellst. Dies ermöglicht es uns, Anfragen an das Sepolia-Testnetz zu stellen.
 
 Navigiere zur Seite „Create App“ in deinem Alchemy-Dashboard, indem du mit der Maus über „Apps“ in der Navigationsleiste fährst und auf „Create App“ klickst.
 
-Benenne deine App (wir haben „My First NFT!“ gewählt), biete eine kurze Beschreibung an, wähle „Staging“ für die Umgebung, die für die Buchhaltung deiner App verwendet wird, und wähle „Ropsten“ für dein Netzwerk.
+Benenne deine App (wir haben „My First NFT!“ gewählt), gib eine kurze Beschreibung an, wähle „Staging“ für die Umgebung (Environment), die für die Verwaltung deiner App verwendet wird, und wähle „Sepolia“ für dein Netzwerk.
 
 Klicke auf „Create app“ und das war's! Deine App sollte in der Tabelle unten erscheinen.
 
-Großartig, da wir nun unsere HTTP-Alchemy-API-URL erstellt haben, kopiere sie in deine Zwischenablage...
+Großartig! Da wir nun unsere HTTP-Alchemy-API-URL erstellt haben, kopiere sie in deine Zwischenablage...
 
-…und fügen wir sie dann zu unserer Datei `.env` hinzu. Insgesamt sollte deine .env-Datei so aussehen:
+…und dann fügen wir sie unserer `.env`-Datei hinzu. Insgesamt sollte deine .env-Datei so aussehen:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 Da wir nun unsere Contract-ABI und unseren Alchemy-API-Schlüssel haben, sind wir bereit, unseren Smart Contract mit [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) zu laden.
-
 ### Deinen Alchemy-Web3-Endpunkt und Vertrag einrichten {#setup-alchemy-endpoint}
 
 Wenn du es noch nicht hast, musst du zuerst [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) installieren, indem du im Terminal zum Home-Verzeichnis `nft-minter-tutorial` navigierst:
@@ -849,12 +844,11 @@ const onMintPressed = async () => {
 }
 ```
 
-## Dein NFT auf einer Live-Website bereitstellen {#deploy-your-nft}
+## Dein NFT auf einer Live-Website bereitstellen
 
-Bereit, dein Projekt live zu schalten, damit Benutzer damit interagieren können? Sieh dir [dieses Tutorial](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) an, um deinen Minter auf einer Live-Website bereitzustellen.
+Bist du bereit, dein Projekt live zu schalten, damit Benutzer damit interagieren können? Sieh dir die [React-Bereitstellungsdokumentation](https://create-react-app.dev/docs/deployment/) an, um deinen Minter auf einer Live-Website bereitzustellen.
 
-Ein letzter Schritt...
-
+Ein letzter Schritt ...
 ## Die Blockchain-Welt im Sturm erobern {#take-the-blockchain-world-by-storm}
 
 Nur ein Scherz, du hast es bis zum Ende des Tutorials geschafft!
@@ -865,6 +859,6 @@ Zusammenfassend hast du durch den Bau eines NFT-Minters erfolgreich gelernt, wie
 - Smart-Contract-Methoden von deinem Frontend aus aufruft
 - Transaktionen mit MetaMask signiert
 
-Vermutlich möchtest du die über deine Dapp geprägten NFTs in deiner Wallet präsentieren können – sieh dir also unbedingt unser kurzes Tutorial [Wie du dein NFT in deiner Wallet anzeigst](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet) an!
+Vermutlich möchtest du die über deine Dapp geprägten NFTs in deiner Wallet präsentieren können – sieh dir also unbedingt unser kurzes Tutorial [Wie du dein NFT in deiner Wallet anzeigst](/developers/tutorials/how-to-view-nft-in-metamask/) an!
 
 Und wie immer, wenn du Fragen hast, sind wir hier, um im [Alchemy Discord](https://discord.gg/gWuC7zB) zu helfen. Wir können es kaum erwarten zu sehen, wie du die Konzepte aus diesem Tutorial in deinen zukünftigen Projekten anwendest!
