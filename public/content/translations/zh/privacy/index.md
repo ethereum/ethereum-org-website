@@ -93,5 +93,5 @@ _示例：[UmbraCash](https://app.umbra.cash/faq)、[FluidKey](https://www.fluid
 - [以太坊隐私守护者](https://pse.dev/) (PSE)，一个专注于生态系统隐私的以太坊基金会研发实验室
 - [Web3PrivacyNow](https://web3privacy.info/)，一个由保护和推进在线人权的个人、项目和结盟组织组成的网络
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/)，一个以太坊钱包评级网站，旨在提供钱包的全面列表、其功能、实践以及对特定标准的支持情况。
-- [Zk-kit](https://zkkit.pse.dev/)：一组可在不同项目和零知识协议中重复使用的库（算法、实用函数和数据结构）。
+- [Zk-kit](https://zkkit.org/)：一组可在不同项目和零知识协议中重复使用的库（算法、实用函数和数据结构）。
 - [隐私应用 (Privacy Apps)](/apps/categories/privacy/) - 探索在以太坊上运行的精选隐私应用程序列表。

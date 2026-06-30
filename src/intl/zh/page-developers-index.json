@@ -137,5 +137,16 @@
   "page-developers-why-title": "获得丰厚报酬。保持远程办公。共建未来。",
   "page-developers-why-subtitle": "超过一半的区块链职位以远程办公为主，一些估计认为这一比例高达 70%。",
   "page-developers-why-avg-salary-dev": "开发者平均薪资",
-  "page-developers-why-avg-salary-blockchain": "区块链行业平均薪资"
+  "page-developers-why-avg-salary-blockchain": "区块链行业平均薪资",
+  "page-developers-why-grid-money-heading": "可编程的货币",
+  "page-developers-why-grid-money-desc": "编写代码来定义价值如何流动、何时流动以及流向谁。没有银行，没有中介，只有你定义的逻辑。",
+  "page-developers-why-grid-skills-heading": "面向未来的技能",
+  "page-developers-why-grid-skills-desc": "学习下一代互联网的构建模块。技术可能会演进，但 Web3 的原则将长存。",
+  "page-developers-why-grid-censorship-heading": "抗审查性",
+  "page-developers-why-grid-censorship-desc": "构建无法被政府、企业或算法压制的项目和商业。只要它有意义，就会一直在线。",
+  "page-developers-why-grid-sovereignty-heading": "数字主权",
+  "page-developers-why-grid-sovereignty-desc": "在网上拥有你的身份、资产和创作，而无需依赖那些可以删除你的平台。",
+  "page-developers-blog-title": "构建者更新",
+  "page-developers-blog-desc": "关于最新以太坊构建者资源、工具和开发动态的见解。",
+  "page-developers-blog-view-all": "查看所有更新"
 }

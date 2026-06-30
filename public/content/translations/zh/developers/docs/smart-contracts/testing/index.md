@@ -184,7 +184,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 ### 运行智能合约基于属性的测试的准则 {#running-property-based-tests}
 
-运行基于属性的测试通常从定义要在智能合约中验证的属性（例如，不存在[整数溢出](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)）或属性集合开始。在编写属性测试时，你可能还需要定义一个值范围，程序可以在该范围内为交易输入生成数据。
+运行基于属性的测试通常从定义要在智能合约中验证的属性（例如，不存在[整数溢出](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)）或属性集合开始。在编写属性测试时，你可能还需要定义一个值范围，程序可以在该范围内为交易输入生成数据。
 
 正确配置后，属性测试工具将使用随机生成的输入执行你的智能合约函数。如果存在任何断言违规，你应该会收到一份报告，其中包含违反正在评估的属性的具体输入数据。请参阅以下一些指南，开始使用不同的工具运行基于属性的测试：
 
@@ -195,7 +195,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 - **[使用埃基德纳 (Echidna) 对合约进行模糊测试](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
 - **[使用 Wake 对合约进行模糊测试](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[使用曼蒂科尔 (Manticore) 对智能合约进行符号执行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
-- **[使用 Mythril 对智能合约进行符号执行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
+- **[使用 Mythril 对智能合约进行符号执行](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
 ## 智能合约的手动测试 {#manual-testing-for-smart-contracts}
 
@@ -289,7 +289,7 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 
 - **[曼蒂科尔 (Manticore)](https://manticore.readthedocs.io/en/latest/index.html)** - *用于分析 EVM 字节码的动态符号执行框架。*
 
-- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - *EVM 字节码评估工具，用于使用污点分析、混合执行分析和控制流检查来检测合约漏洞。*
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - *EVM 字节码评估工具，用于使用污点分析、混合执行分析和控制流检查来检测合约漏洞。*
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - *Scribble 是一种规范语言和运行时验证工具，允许你使用属性注释智能合约，从而允许你使用 Diligence Fuzzing 或 MythX 等工具自动测试合约。*
 

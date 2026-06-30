@@ -123,22 +123,26 @@ title: "..."
 
 如果你没有文字稿，可以将正文留空，团队会生成一份。
 
-#### 第 4 步：选择主题标签 {#step-4}
+#### 第 4 步：选择主题标签
+从下面的列表中选择主题标签。每个标签直接映射到视频库中的一个过滤类别——请完全按照显示的标签名称使用。
 
-选择与视频库中现有类别匹配的主题标签。当前的类别及其标签包括：
+一个视频可以有多个标签，以出现在多个视频库过滤器中：
 
-- **以太坊如何运作**：`how-ethereum-works`、`consensus`、`blockchain`、`cryptography`、`accounts`、`ethereum`、`intro`、`transactions`、`pos`、`smart-contracts`
-- **网络升级**：`network-upgrades`、`upgrades`、`pectra`、`dencun`、`eip-4844`、`blobs`、`fusaka`
-- **路线图与优先级**：`roadmap-and-priorities`、`pbs`、`mev`
-- **扩容与二层网络 (l2)**：`scaling-and-layer-2`、`scaling`、`layer-2`、`rollups`、`optimistic-rollups`、`zk-rollups`
-- **用例**：`use-cases`、`defi`、`finance`、`nfts`、`erc-721`、`erc-1155`、`lending`、`dapps`、`restaking`、`eigenlayer`、`dao`、`identity`、`desci`、`refi`
-- **隐私与安全**：`privacy-and-security`、`privacy`、`authentication`
-- **社区故事**：`community-stories`、`contributing`、`translations`、`community`
+| 标签 | 视频库过滤器 |
+|---|---|
+| `how-ethereum-works` | 以太坊如何运作 |
+| `network-upgrades` | 网络升级 |
+| `roadmap-and-priorities` | 路线图与优先级 |
+| `scaling-and-layer-2` | 扩容与二层网络 (l2) |
+| `use-cases` | 用例 |
+| `privacy` | 隐私 |
+| `security` | 安全 |
+| `community-stories` | 社区故事 |
+| `events` | 活动 |
 
-为确保你的视频出现在视频库的类别栏中，请至少包含一个类别关键标签（短横线分隔的粗体名称，例如 `use-cases` 或 `scaling-and-layer-2`）。没有可识别类别标签的视频将仅出现在“全部”视图和搜索结果中。
+每个视频都应至少包含此列表中的一个标签。没有可识别标签的视频将仅出现在“全部”视图和搜索结果中。
 
-你也可以使用新标签——它们将可用于未来的类别分组。
-
+`community-stories` 标签还会使视频出现在[故事页面](/stories/)上。
 #### 第 5 步：提交你的拉取请求 (PR) {#step-5}
 
 开启一个拉取请求，将你的更改提交到 `dev` 分支。团队将审核你的提交并提供反馈。

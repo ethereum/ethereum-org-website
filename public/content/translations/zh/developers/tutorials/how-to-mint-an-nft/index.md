@@ -21,7 +21,7 @@ published: 2021-04-22
 
 ## 第 1 步：安装 Web3 {#install-web3}
 
-如果你学习了关于创建 NFT 智能合约的第一个教程，那么你已经有了使用 Ethers.js 的经验。Web3 与 Ethers 类似，它也是一个用于简化向[以太坊](/)区块链发送请求的库。在本教程中，我们将使用 [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)，这是一个增强版的 Web3 库，提供自动重试和强大的 WebSocket 支持。
+如果你学习了关于创建 NFT 智能合约的第一个教程，那么你已经有了使用 Ethers.js 的经验。Web3 与 Ethers 类似，它也是一个用于简化向[以太坊](/)区块链发送请求的库。在本教程中，我们将使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)，这是一个增强版的 Web3 库，提供自动重试和强大的 WebSocket 支持。
 
 在你的项目主目录中运行：
 
@@ -40,9 +40,9 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## 第 3 步：获取你的合约 ABI {#contract-abi}
+## 第 3 步：获取你的合约 ABI
 
-我们的合约 ABI（应用二进制接口）是与我们的智能合约进行交互的接口。你可以[在此处](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is)了解有关合约 ABI 的更多信息。Hardhat 会自动为我们生成一个 ABI 并将其保存在 `MyNFT.json` 文件中。为了使用它，我们需要通过在 `mint-nft.js` 文件中添加以下代码行来解析其内容：
+我们的合约 ABI（应用程序二进制接口）是与我们的智能合约进行交互的接口。你可以了解更多关于[合约 ABI](/glossary/#abi) 的信息。Hardhat 会自动为我们生成一个 ABI，并将其保存在 `MyNFT.json` 文件中。为了使用它，我们需要通过在 `mint-nft.js` 文件中添加以下代码行来解析其内容：
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -59,7 +59,6 @@ console.log(JSON.stringify(contract.abi))
 ```js
 node scripts/mint-nft.js
 ```
-
 ## 第 4 步：使用 IPFS 配置 NFT 的元数据 {#config-meta}
 
 如果你还记得我们在第 1 部分的教程，我们的 `mintNFT` 智能合约函数接收一个 tokenURI 参数，该参数应解析为一个描述 NFT 元数据的 JSON 文档——这正是赋予 NFT 生命力的关键，使其能够拥有可配置的属性，例如名称、描述、图像和其他属性。
@@ -136,25 +135,25 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## 第 7 步：创建你的交易 {#create-txn}
+## 第 7 步：创建你的交易
 
 首先，让我们定义一个名为 `mintNFT(tokenData)` 的函数，并通过执行以下操作来创建我们的交易：
 
 1. 从 `.env` 文件中获取你的 _PRIVATE_KEY_ 和 _PUBLIC_KEY_。
 
-1. 接下来，我们需要计算出账户随机数。随机数规范用于跟踪从你的地址发送的交易数量——出于安全目的和防止[重放攻击](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce)，我们需要它。为了获取从你的地址发送的交易数量，我们使用 [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount)。
+1. 接下来，我们需要计算出账户随机数。随机数规范用于跟踪从你的地址发送的交易数量——出于安全目的和防止重放攻击，我们需要它。要获取从你的地址发送的交易数量，我们使用 [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count)。
 
 1. 最后，我们将使用以下信息设置我们的交易：
 
-- `'from': PUBLIC_KEY` — 我们交易的来源是我们的公共地址
+- `'from': PUBLIC_KEY` — 我们交易的起点是我们的公共地址
 
 - `'to': contractAddress` — 我们希望与之交互并发送交易的合约
 
-- `'nonce': nonce` — 包含从我们地址发送的交易数量的账户随机数
+- `'nonce': nonce` — 包含从我们的地址发送的交易数量的账户随机数
 
 - `'gas': estimatedGas` — 完成交易所需的估计 Gas
 
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — 我们希望在此交易中执行的计算——在本例中是铸造 NFT
+- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — 我们希望在此交易中执行的计算——在本例中是铸造一个 NFT
 
 你的 `mint-nft.js` 文件现在应该如下所示：
 
@@ -184,7 +183,6 @@ PUBLIC_KEY = "your-public-account-address"
      };
    }​
 ```
-
 ## 第 8 步：签署交易 {#sign-txn}
 
 现在我们已经创建了交易，我们需要对其进行签名以便将其发送出去。这就是我们将使用私钥的地方。
@@ -317,7 +315,7 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-接下来，访问你的 [Alchemy 内存池](https://dashboard.alchemyapi.io/mempool)以查看你的交易状态（无论是待处理、已打包还是被网络丢弃）。如果你的交易被丢弃，检查 [Blockscout](https://eth-sepolia.blockscout.com/) 并搜索你的交易哈希也会很有帮助。
+接下来，访问你的 [Alchemy 内存池](https://dashboard.alchemy.com/mempool)以查看你的交易状态（无论是待处理、已打包还是被网络丢弃）。如果你的交易被丢弃，检查 [Blockscout](https://eth-sepolia.blockscout.com/) 并搜索你的交易哈希也会很有帮助。
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_在 Etherscan 上查看你的 NFT 交易哈希_
 

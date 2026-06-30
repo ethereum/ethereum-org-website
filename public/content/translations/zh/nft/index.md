@@ -101,16 +101,13 @@ NFT 智能合约可以做几件关键的事情：
   了解有关安全性的更多信息
 </ButtonLink>
 
-## 延伸阅读 {#further-reading}
-
+## 延伸阅读
 - [NFT 初学者指南](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie，2020 年 1 月_
 - [Etherscan NFT 追踪器](https://etherscan.io/nft-top-contracts)
 - [Blockscout NFT 追踪器](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [ERC-721 代币标准](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 代币标准](/developers/docs/standards/tokens/erc-1155/)
-- [热门 NFT 应用程序和工具](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 - [NFT 标准维基](https://nft-standards.gitbook.io/nft-standards-wiki)
-
 ## 其他资源 {#other-resources}
 
 - [NFTScan](https://nftscan.com/)

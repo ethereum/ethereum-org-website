@@ -11,7 +11,7 @@ published: 2021-03-31
 
 如果你是区块链开发的新手并且不知道从何开始，或者你只是想了解如何部署智能合约并与之交互，那么本指南就是为你准备的。我们将逐步介绍如何使用虚拟钱包 [梅塔马斯克](https://metamask.io/)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org/) 和 [Alchemy](https://www.alchemy.com/eth) 在 Sepolia 测试网络上创建和部署一个简单的智能合约（如果你还不懂这些术语的意思，别担心，我们会进行解释）。
 
-在本教程的[第 2 部分](https://docs.alchemy.com/docs/interacting-with-a-smart-contract)中，我们将介绍在智能合约部署后如何与之交互，在[第 3 部分](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan)中，我们将介绍如何将其发布到 Etherscan 上。
+在本教程的[第 2 部分](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract)中，我们将介绍在智能合约部署后如何与之交互，在[第 3 部分](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan)中，我们将介绍如何将其发布到 Etherscan 上。
 
 如果你在任何时候有疑问，请随时在 [Alchemy Discord](https://discord.gg/gWuC7zB) 中提问！
 
@@ -59,7 +59,7 @@ published: 2021-03-31
 >
 > 呼！我们的测试资金都在那里了 <Emoji text=":money_mouth_face:" size={1} />。
 
-## 第 6 步：初始化我们的项目 {#step-6}
+## 第 6 步：初始化我们的项目
 
 首先，我们需要为我们的项目创建一个文件夹。导航到你的命令行并输入：
 
@@ -68,13 +68,13 @@ mkdir hello-world
 cd hello-world
 ```
 
-现在我们进入了项目文件夹，我们将使用 `npm init` 来初始化项目。如果你还没有安装 npm，请按照[这些说明](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm)进行操作（我们还需要 Node.js，所以也请下载它！）。
+现在我们已经进入了项目文件夹，我们将使用 `npm init` 来初始化项目。如果你还没有安装 npm，请按照 [Node.js 安装说明](https://nodejs.org/en/download/)进行操作（本教程需要用到 Node.js 和 npm）。
 
 ```
 npm init
 ```
 
-你如何回答安装问题其实并不重要，以下是我们的操作方式，仅供参考：
+你如何回答安装问题并不重要，以下是我们的操作方式，仅供参考：
 
 ```
 package name: (hello-world)
@@ -94,15 +94,14 @@ About to write to /Users/.../.../.../hello-world/package.json:
   "description": "hello world smart contract",
   "main": "index.js",
   "scripts": {
-     "test": "echo \\"Error: no test specified\\" && exit 1"
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
 }
 ```
 
-确认 package.json 文件，我们就可以开始了！
-
+批准 package.json，我们就可以开始了！
 ## 第 7 步：下载 [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
 Hardhat 是一个用于编译、部署、测试和调试以太坊软件的开发环境。它可以帮助开发者在部署到实时链之前，在本地构建智能合约和去中心化应用 (dapp)。
@@ -350,11 +349,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 恭喜！你刚刚向以太坊链部署了一个智能合约 🎉
 
-为了了解其内部运作原理，让我们导航到 [Alchemy 仪表板](https://dashboard.alchemyapi.io/explorer)中的 Explorer（浏览器）选项卡。如果你有多个 Alchemy 应用，请确保按应用进行过滤并选择“Hello World”。
+为了了解其内部运作原理，让我们导航到 [Alchemy 仪表板](https://dashboard.alchemy.com/explorer)中的 Explorer（浏览器）选项卡。如果你有多个 Alchemy 应用，请确保按应用进行过滤并选择“Hello World”。
 ![hello world explorer](./hello-world-explorer.png)
 
-在这里，你将看到当我们调用 `.deploy()` 函数时，Hardhat/Ethers 在后台为我们发出的一些 JSON-RPC 调用。这里需要指出的两个重要调用是 [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction)（这是将我们的合约实际写入 Sepolia 链的请求）和 [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash)（这是在给定哈希的情况下读取有关我们交易信息的请求，这是发送交易时的典型模式）。要了解有关发送交易的更多信息，请查看这篇关于[使用 Web3 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)的教程。
+在这里，你将看到当我们调用 `.deploy()` 函数时，Hardhat/Ethers 在后台为我们发出的一些 JSON-RPC 调用。这里需要指出的两个重要调用是 [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)（这是将我们的合约实际写入 Sepolia 链的请求）和 [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)（这是在给定哈希的情况下读取有关我们交易信息的请求，这是发送交易时的典型模式）。要了解有关发送交易的更多信息，请查看这篇关于[使用 Web3 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)的教程。
 
-本教程的第 1 部分到此结束，在第 2 部分中，我们将通过更新初始消息来实际[与我们的智能合约进行交互](https://www.alchemy.com/docs/interacting-with-a-smart-contract)，在第 3 部分中，我们将[将我们的智能合约发布到 Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan)，以便每个人都知道如何与之交互。
+本教程的第 1 部分到此结束，在第 2 部分中，我们将通过更新初始消息来实际[与我们的智能合约进行交互](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract)，在第 3 部分中，我们将[将我们的智能合约发布到 Etherscan](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan)，以便每个人都知道如何与之交互。
 
 **想了解更多关于 Alchemy 的信息吗？请访问我们的[网站](https://www.alchemy.com/eth)。不想错过任何更新？在[这里](https://www.alchemy.com/newsletter)订阅我们的时事通讯！也请务必加入我们的 [Discord](https://discord.gg/u72VCg3)。**。

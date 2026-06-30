@@ -117,11 +117,9 @@ _佩克特拉升级包含哪些内容？ - Christine Kim_
 
 _以太坊佩克特拉升级：质押者需要知道什么 — Blockdaemon_
 
-## 延伸阅读 {#further-reading}
-
+## 延伸阅读
 - [以太坊路线图](/roadmap/)
 - [佩克特拉常见问题解答](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf 信息页面](https://pectra.wtf)
 - [佩克特拉如何提升质押者体验](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [EIP-7702 信息页面](https://eip7702.io/)
-- [佩克特拉开发者网络 (devnets)](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)
+- [EIP7702 信息页](https://eip7702.io/)
+- [佩克特拉开发者网络](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

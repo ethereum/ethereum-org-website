@@ -20,11 +20,9 @@ published: 2021-04-06
 - 转账代币
 - 根据网络拥堵情况设置 Gas 价格
 
-### 准备工作 {#to-get-started}
-
+### 准备工作
 首先，我们必须将 ethers.js 库导入到我们的 JavaScript 中
-引入 ethers.js (5.0)
-
+引入 ethers.js v5
 ### 安装 {#install-ethersjs}
 
 ```shell

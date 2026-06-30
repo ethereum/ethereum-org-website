@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "以太坊赏金计划在确定奖励时会考虑多个变量。资格、分数以及与奖励相关的所有条款的决定权完全由以太坊基金会漏洞赏金小组最终裁定。",
   "page-upgrades-bug-bounty-leaderboard": "查看完整排行榜",
   "page-upgrades-bug-bounty-leaderboard-list": "漏洞赏金排行榜",
+  "page-upgrades-bug-bounty-leaderboard-position": "第 {rank} 名，共 {score, plural, one {# 积分} other {# 积分}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "（查看 GitHub 个人资料）",
   "page-upgrades-bug-bounty-leaderboard-points": "积分",
   "page-upgrades-bug-bounty-ledger-desc": "以太坊规范详细说明了执行层和共识层的设计原理。",
   "page-upgrades-bug-bounty-ledger-title": "规范漏洞",

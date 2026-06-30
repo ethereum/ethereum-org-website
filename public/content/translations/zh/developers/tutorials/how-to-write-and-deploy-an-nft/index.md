@@ -17,7 +17,7 @@ Alchemy 非常自豪能够为 NFT 领域的知名项目提供支持，包括 Mak
 
 在本教程的第 2 部分中，我们将介绍如何使用我们的智能合约来铸造 NFT，在第 3 部分中，我们将解释如何在梅塔马斯克上查看你的 NFT。
 
-当然，如果你在任何时候有疑问，请随时在 [Alchemy Discord](https://discord.gg/gWuC7zB) 中联系我们，或访问 [Alchemy 的 NFT API 文档](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)！
+当然，如果你在任何时候有疑问，请随时在 [Alchemy Discord](https://discord.gg/gWuC7zB) 中联系我们，或访问 [Alchemy 的 NFT API 文档](https://www.alchemy.com/docs/reference/nft-api-quickstart)！
 
 ## 第 1 步：连接到以太坊网络 {#connect-to-ethereum}
 
@@ -27,7 +27,7 @@ Alchemy 非常自豪能够为 NFT 领域的知名项目提供支持，包括 Mak
 
 ## 第 2 步：创建你的应用（和 API 密钥） {#make-api-key}
 
-创建 Alchemy 账户后，你可以通过创建应用来生成 API 密钥。这将允许我们向 Sepolia 测试网发出请求。如果你想了解有关测试网的更多信息，请查看[本指南](https://docs.alchemyapi.io/guides/choosing-a-network)。
+创建 Alchemy 账户后，你可以通过创建应用来生成 API 密钥。这将允许我们向 Sepolia 测试网发出请求。如果你想了解有关测试网的更多信息，请查看[本指南](https://www.alchemy.com/docs/choosing-a-web3-network)。
 
 1. 将鼠标悬停在导航栏中的“Apps”上并点击“Create App”，导航到 Alchemy 仪表板中的“Create App”页面。
 
@@ -51,28 +51,25 @@ Alchemy 非常自豪能够为 NFT 领域的知名项目提供支持，包括 Mak
 
 为了将我们的智能合约部署到测试网，我们需要一些测试用的 ETH。要获取 ETH，你可以前往由 Alchemy 托管的 [Sepolia 水龙头](https://sepoliafaucet.com/)，登录并输入你的账户地址，点击“Send Me ETH”。不久之后，你应该就能在你的梅塔马斯克账户中看到 ETH 了！
 
-## 第 5 步：检查你的余额 {#check-balance}
-
-为了再次确认我们的余额已到账，让我们使用 [Alchemy 的 composer 工具](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)发出一个 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 请求。这将返回我们钱包中的 ETH 数量。输入你的梅塔马斯克账户地址并点击“Send Request”后，你应该会看到类似如下的响应：
+## 第 5 步：检查你的余额
+为了再次确认我们的余额已到账，让我们使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)发出一个 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 请求。这将返回我们钱包中的 ETH 数量。输入你的梅塔马斯克账户地址并点击“Send Request”后，你应该会看到类似如下的响应：
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-> **注意** 此结果的单位是 Wei，而不是 ETH。Wei 被用作以太币的最小面额。Wei 到 ETH 的换算关系是 1 ETH = 10<sup>18</sup> Wei。因此，如果我们将 0xde0b6b3a7640000 转换为十进制，我们会得到 1\*10<sup>18</sup> Wei，这等于 1 ETH。
+> **注意** 此结果的单位是 Wei，而不是 ETH。Wei 被用作以太币的最小面额。从 Wei 到 ETH 的转换是 1 ETH = 10<sup>18</sup> Wei。因此，如果我们将 0xde0b6b3a7640000 转换为十进制，我们会得到 1\*10<sup>18</sup> Wei，这等于 1 ETH。
 
-呼！我们的测试资金都在那里了。
-
-## 第 6 步：初始化我们的项目 {#initialize-project}
-
+呼！我们的假钱都在那里了。
+## 第 6 步：初始化我们的项目
 首先，我们需要为我们的项目创建一个文件夹。导航到你的命令行并输入：
 
     mkdir my-nft
     cd my-nft
 
-现在我们进入了项目文件夹，我们将使用 npm init 来初始化项目。如果你还没有安装 npm，请遵循[这些说明](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm)（我们还需要 [Node.js](https://nodejs.org/en/download/)，所以也请下载它！）。
+现在我们已经进入了项目文件夹，我们将使用 npm init 来初始化项目。如果你还没有安装 npm，请按照 [Node.js 安装说明](https://nodejs.org/en/download/)进行操作（本教程需要用到 Node.js 和 npm）。
 
     npm init
 
-你如何回答安装问题并不重要；以下是我们的做法，仅供参考：
+你如何回答安装问题并不重要；以下是我们的做法以供参考：
 
 ```json
     package name: (my-nft)
@@ -100,7 +97,6 @@ Alchemy 非常自豪能够为 NFT 领域的知名项目提供支持，包括 Mak
 ```
 
 批准 package.json，我们就可以开始了！
-
 ## 第 7 步：安装 [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 Hardhat 是一个用于编译、部署、测试和调试以太坊软件的开发环境。它帮助开发者在部署到实时链之前在本地构建智能合约和去中心化应用 (dapp)。
@@ -342,7 +338,7 @@ From 地址应与你的梅塔马斯克账户地址匹配，To 地址将显示“
 
 太棒了！你刚刚将你的 NFT 智能合约部署到了以太坊（测试网）链上！
 
-为了了解内部是如何运作的，让我们导航到 [Alchemy 仪表板](https://dashboard.alchemyapi.io/explorer)中的 Explorer 选项卡。如果你有多个 Alchemy 应用，请确保按应用过滤并选择“MyNFT”。
+为了了解内部是如何运作的，让我们导航到 [Alchemy 仪表板](https://dashboard.alchemy.com/explorer)中的 Explorer 选项卡。如果你有多个 Alchemy 应用，请确保按应用过滤并选择“MyNFT”。
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

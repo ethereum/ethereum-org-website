@@ -14,7 +14,7 @@ source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
-这是一份对初学者友好的指南，介绍如何使用 Web3 发送以太坊交易。向以太坊区块链发送交易主要有三个步骤：创建、签名和广播。我们将逐一介绍这三个步骤，希望能解答你的任何疑问！在本教程中，我们将使用 [Alchemy](https://www.alchemy.com/) 将我们的交易发送到以太坊链。你可以[在此处创建一个免费的 Alchemy 账户](https://auth.alchemyapi.io/signup)。
+这是一份对初学者友好的指南，介绍如何使用 Web3 发送以太坊交易。向以太坊区块链发送交易主要有三个步骤：创建、签名和广播。我们将逐一介绍这三个步骤，希望能解答你的任何疑问！在本教程中，我们将使用 [Alchemy](https://www.alchemy.com/) 将我们的交易发送到以太坊链。你可以[在此处创建一个免费的 Alchemy 账户](https://auth.alchemy.com/signup)。
 
 **注意：** 本指南适用于在应用程序的_后端_对交易进行签名。如果你想在前端集成交易签名，请查看[将 Web3 与浏览器提供程序集成](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider)。
 
@@ -27,11 +27,10 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 - 这意味着 Alchemy 无法代表你签名和发送交易。这样做的原因是出于安全考虑。Alchemy 永远不会要求你分享你的私钥，你也绝不应该与托管节点（或任何人）分享你的私钥。
 - 你可以使用 Alchemy 的核心 API 从区块链读取数据，但要向其写入数据，你需要使用其他工具在通过 Alchemy 发送交易之前对其进行签名（这对于任何其他[节点服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)也是一样的）。
 
-### 2\. 什么是“签名者”？ {#what-is-a-signer}
+### 2\. 什么是“签名者”？
 
-- 签名者将使用你的私钥为你签名交易。在本教程中，我们将使用 [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3) 来签名我们的交易，但你也可以使用任何其他 Web3 库。
-- 在前端，一个很好的签名者示例是 [梅塔马斯克](https://metamask.io/)，它将代表你签名并发送交易。
-
+- 签名者将使用你的私钥为你对交易进行签名。在本教程中，我们将使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) 对我们的交易进行签名，但你也可以使用任何其他 Web3 库。
+- 在前端，签名者的一个很好的例子是[梅塔马斯克](https://metamask.io/)，它将代表你签名并发送交易。
 ### 3\. 为什么我需要对我的交易进行签名？ {#why-do-i-need-to-sign-my-transactions}
 
 - 每个想要在以太坊网络上发送交易的用户都必须（使用其私钥）对交易进行签名，以验证交易的来源是否如其所称。
@@ -46,7 +45,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 `eth_sendTransaction` 和 `eth_sendRawTransaction` 都是以太坊 API 函数，它们将交易广播到以太坊网络，以便将其添加到未来的区块中。它们的区别在于处理交易签名的方式。
 
 - [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction) 用于发送_未签名_的交易，这意味着你发送到的节点必须管理你的私钥，以便在将交易广播到链上之前对其进行签名。由于 Alchemy 不保存用户的私钥，因此他们不支持此方法。
-- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) 用于广播已经签名的交易。这意味着你必须首先使用 [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction)，然后将结果传递给 `eth_sendRawTransaction`。
+- [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) 用于广播已经签名的交易。这意味着你必须首先使用 [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction)，然后将结果传递给 `eth_sendRawTransaction`。
 
 使用 Web3 时，可以通过调用函数 [web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction) 来访问 `eth_sendRawTransaction`。
 
@@ -55,26 +54,25 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ### 6\. 什么是 Web3 库？ {#what-is-the-web3-library}
 
 - Web3.js 是一个围绕标准 JSON-RPC 调用的包装库，在以太坊开发中非常常用。
-- 有许多适用于不同语言的 Web3 库。在本教程中，我们将使用用 JavaScript 编写的 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)。你可以[在此处](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)查看其他选项，例如 [Ethers.js](https://docs.ethers.org/v5/)。
+- 有许多适用于不同语言的 Web3 库。在本教程中，我们将使用用 JavaScript 编写的 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)。你可以[在此处](/developers/docs/apis/javascript/)查看其他选项，例如 [Ethers.js](https://docs.ethers.org/v5/)。
 
 好了，既然我们已经解决了这些问题，让我们继续进入教程。欢迎随时在 Alchemy 的 [Discord](https://discord.gg/gWuC7zB) 中提问！
 
-### 7\. 如何发送安全、Gas 优化的私密交易？ {#how-to-send-secure-gas-optimized-and-private-transactions}
+### 7\. 如何发送安全、Gas 优化和私密的交易？
 
-- [Alchemy 提供了一套交易 API](https://docs.alchemy.com/reference/transact-api-quickstart)。你可以使用它们来发送强化交易、在交易发生前进行模拟、发送私密交易以及发送 Gas 优化的交易。
-- 你还可以使用 [Notify API](https://docs.alchemy.com/docs/alchemy-notify)，以便在你的交易从内存池中被提取并添加到链上时收到警报。
+- [Alchemy 提供了一套交易资源](https://www.alchemy.com/docs/sending-transactions)。你可以使用这些资源来发送交易、在交易发生前模拟交易、发送私密交易以及发送 Gas 优化的交易。
+- 你还可以使用 [Alchemy Webhook](https://www.alchemy.com/docs/reference/webhooks-overview)，以便在你的交易从内存池中被提取并添加到链上时收到警报。
 
-**注意：** 本指南需要一个 Alchemy 账户、一个以太坊地址或梅塔马斯克钱包，并安装 NodeJs 和 npm。如果没有，请按照以下步骤操作：
+**注意：** 本指南需要一个 Alchemy 账户、一个以太坊地址或梅塔马斯克钱包，并安装 Node.js 和 npm。如果没有，请按照以下步骤操作：
 
-1.  [创建一个免费的 Alchemy 账户](https://auth.alchemyapi.io/signup)
+1.  [创建一个免费的 Alchemy 账户](https://auth.alchemy.com/signup)
 2.  [创建梅塔马斯克账户](https://metamask.io/)（或获取一个以太坊地址）
-3.  [按照这些步骤安装 NodeJs 和 NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
-
+3.  [安装 Node.js 和 npm](https://nodejs.org/en/download/)
 ## 发送交易的步骤 {#steps-to-sending-your-transaction}
 
 ### 1\. 在 Sepolia 测试网上创建一个 Alchemy 应用程序 {#create-an-alchemy-app-on-the-sepolia-testnet}
 
-导航到你的 [Alchemy 仪表板](https://dashboard.alchemyapi.io/)并创建一个新的应用程序，为你的网络选择 Sepolia（或任何其他测试网）。
+导航到你的 [Alchemy 仪表板](https://dashboard.alchemy.com/)并创建一个新的应用程序，为你的网络选择 Sepolia（或任何其他测试网）。
 
 ### 2\. 从 Sepolia 水龙头请求 ETH {#request-eth-from-sepolia-faucet}
 
@@ -91,9 +89,9 @@ cd sendtx-example
 
 ### 4\. 安装 Alchemy Web3（或任何 Web3 库） {#install-alchemy-web3}
 
-在你的项目目录中运行以下命令以安装 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)：
+在你的项目目录中运行以下命令以安装 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)：
 
-注意，如果你想使用 Ethers.js 库，请[按照此处的说明进行操作](https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum)。
+注意，如果你想使用 Ethers.js 库，请[按照此处的说明进行操作](https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum)。
 
 ```
 npm install @alch/alchemy-web3
@@ -127,9 +125,9 @@ PRIVATE_KEY = "your-private-key"
 </AlertContent>
 </Alert>
 
-### 7\. 创建 `sendTx.js` 文件 {#create-sendtx-js}
+### 7\. 创建 `sendTx.js` 文件
 
-太好了，现在我们已经在 `.env` 文件中保护了我们的敏感数据，让我们开始编码吧。对于我们的发送交易示例，我们将把 ETH 发送回 Sepolia 水龙头。
+太好了，既然我们已经在 `.env` 文件中保护了我们的敏感数据，让我们开始编码吧。对于我们的发送交易示例，我们将把 ETH 发送回 Sepolia 水龙头。
 
 创建一个 `sendTx.js` 文件，我们将在其中配置并发送我们的示例交易，并向其中添加以下代码行：
 
@@ -155,9 +153,9 @@ async function main() {
 
     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
-      console.log("🎉 你的交易哈希为：", hash, "\n 检查 Alchemy 的内存池以查看你的交易状态！");
+      console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
     } else {
-      console.log("❗提交交易时出错：", error)
+      console.log("❗Something went wrong while submitting your transaction:", error)
     }
    });
 }
@@ -165,28 +163,27 @@ async function main() {
 main();
 ```
 
-确保将**第 6 行**的地址替换为你自己的公共地址。
+请务必将**第 6 行**的地址替换为你自己的公共地址。
 
-现在，在开始运行此代码之前，让我们先讨论一下这里的一些组件。
+现在，在开始运行此代码之前，让我们先谈谈这里的一些组件。
 
-- `nonce`：随机数规范用于跟踪从你的地址发送的交易数量。出于安全目的以及防止[重放攻击](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce)，我们需要它。为了获取从你的地址发送的交易数量，我们使用 [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount)。
+- `nonce`：随机数规范用于跟踪从你的地址发送的交易数量。出于安全目的和防止重放攻击，我们需要它。要获取从你的地址发送的交易数量，我们使用 [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count)。
 - `transaction`：交易对象有几个我们需要指定的方面
-  - `to`：这是我们想要将 ETH 发送到的地址。在本例中，我们将 ETH 发送回我们最初请求的 [Sepolia 水龙头](https://sepoliafaucet.com/)。
+  - `to`：这是我们想要向其发送 ETH 的地址。在这种情况下，我们将 ETH 发送回我们最初请求的 [Sepolia 水龙头](https://sepoliafaucet.com/)。
   - `value`：这是我们希望发送的金额，以 Wei 为单位指定，其中 10^18 Wei = 1 ETH
-  - `gas`：有很多方法可以确定交易中应包含的正确 Gas 数量。Alchemy 甚至提供了一个 [Gas 价格 webhook](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1)，以便在 Gas 价格降至特定阈值内时通知你。对于主网交易，一种好的做法是检查像 [ETH Gas Station](https://ethgasstation.info/) 这样的 Gas 估算器，以确定要包含的正确 Gas 数量。21000 是以太坊上操作将使用的最小 Gas 量，因此为了确保我们的交易被执行，我们在这里填入 30000。
+  - `gas`：有很多方法可以确定交易中应包含的正确 Gas 量。Alchemy 支持可以通知你链上活动的 [Webhook](https://www.alchemy.com/docs/reference/webhooks-overview)。对于主网交易，检查当前的 Gas 状况以确定要包含的正确 Gas 量是一种很好的做法。21000 是以太坊上操作将使用的最小 Gas 量，因此为了确保我们的交易将被执行，我们在这里输入 30000。
   - `nonce`：参见上面的随机数定义。随机数从零开始计数。
-  - [可选] data：用于在转账时发送附加信息，或调用智能合约，余额转账不需要此项，请查看下面的说明。
-- `signedTx`：为了对我们的交易对象进行签名，我们将使用 `signTransaction` 方法和我们的 `PRIVATE_KEY`
+  - [可选] data：用于在转账时发送附加信息，或调用智能合约，余额转账不需要，请查看下面的注释。
+- `signedTx`：为了对我们的交易对象进行签名，我们将使用带有我们 `PRIVATE_KEY` 的 `signTransaction` 方法
 - `sendSignedTransaction`：一旦我们有了签名的交易，我们就可以使用 `sendSignedTransaction` 将其发送出去，以便包含在后续区块中
 
 **关于 data 的说明**
 在以太坊中可以发送两种主要类型的交易。
 
-- 余额转账：将 ETH 从一个地址发送到另一个地址。不需要 data 字段，但是，如果你想在交易中发送附加信息，可以在此字段中以十六进制格式包含该信息。
-  - 例如，假设我们想将 IPFS 文档的哈希写入以太坊链，以便为其提供一个不可变的时间戳。那么我们的 data 字段应该看起来像 data: `web3.utils.toHex(‘IPFS hash‘)`。现在任何人都可以查询该链并查看该文档是何时添加的。
+- 余额转账：将 ETH 从一个地址发送到另一个地址。不需要 data 字段，但是，如果你想在交易中发送附加信息，你可以在此字段中以 HEX 格式包含该信息。
+  - 例如，假设我们想将 IPFS 文档的哈希写入以太坊链，以便为其提供不可变的时间戳。那么我们的 data 字段应该看起来像 data: `web3.utils.toHex(‘IPFS hash‘)`。现在任何人都可以查询该链并查看该文档是何时添加的。
 - 智能合约交易：在链上执行一些智能合约代码。在这种情况下，data 字段应包含你希望执行的智能函数以及任何参数。
-  - 有关实际示例，请查看此 [Hello World 教程](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction)中的第 8 步。
-
+  - 有关实际示例，请查看 [Hello World 智能合约教程](/developers/tutorials/hello-world-smart-contract/)。
 ### 8\. 使用 `node sendTx.js` 运行代码 {#run-the-code-using-node-sendtx-js}
 
 导航回你的终端或命令行并运行：
@@ -195,18 +192,18 @@ main();
 node sendTx.js
 ```
 
-### 9\. 在内存池中查看你的交易 {#see-your-transaction-in-the-mempool}
+### 9\. 在内存池中查看你的交易
 
-在你的 Alchemy 仪表板中打开[内存池页面](https://dashboard.alchemyapi.io/mempool)，并按你创建的应用程序进行过滤以查找你的交易。在这里，我们可以观察我们的交易从待处理状态过渡到已挖掘状态（如果成功）或丢弃状态（如果不成功）。确保将其保持在“全部 (All)”状态，以便捕获“已挖掘 (mined)”、“待处理 (pending)”和“已丢弃 (dropped)”的交易。你还可以通过查找发送到地址 `0x31b98d14007bdee637298086988a0bbd31184523` 的交易来搜索你的交易。
+打开 Alchemy 仪表板中的[内存池页面](https://dashboard.alchemy.com/mempool)，并按你创建的应用程序进行过滤以查找你的交易。在这里，我们可以观察我们的交易从待处理状态过渡到已挖掘状态（如果成功）或丢弃状态（如果不成功）。确保将其保持在“全部 (All)”状态，以便你捕获“已挖掘 (mined)”、“待处理 (pending)”和“已丢弃 (dropped)”的交易。你还可以通过查找发送到地址 `0x31b98d14007bdee637298086988a0bbd31184523` 的交易来搜索你的交易。
 
 找到交易后，要查看其详细信息，请选择交易哈希，这应该会将你带到一个如下所示的视图：
 
-![Mempool watcher screenshot](./mempool.png)
+![内存池观察器屏幕截图](./mempool.png)
 
 从那里，你可以通过单击红色圆圈中的图标在 Etherscan 上查看你的交易！
 
 **太棒了！你刚刚使用 Alchemy 发送了你的第一笔以太坊交易 🎉**
 
-_有关本指南的反馈和建议，请在 Alchemy 的 [Discord](https://discord.gg/A39JVCM) 上给埃兰 (Elan) 留言！_
+_有关本指南的反馈和建议，请在 Alchemy 的 [Discord](https://discord.gg/A39JVCM) 上给 Elan 发消息！_
 
-_最初发布于 [https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy](https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy)_
+_最初由 Alchemy 发布。_
