@@ -178,9 +178,9 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
       <main className="p-page pt-page-2x">
         <I18nProvider locale={locale} messages={messages}>
-          <MainArticle className="flow space-y-space-4x">
+          <MainArticle className="flow">
             <Section id="ways">
-              <h2 className="mb-space-2x text-center text-h1">
+              <h2 className="text-center text-h1">
                 {t("page-get-eth-ways-you-can-get-eth")}
               </h2>
               <Grid columns={3}>
@@ -204,7 +204,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 )}
               </Grid>
 
-              <p className="mt-space text-body-medium">
+              <p className="text-body-medium">
                 <em>
                   {t("listing-policy-disclaimer")}{" "}
                   <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
