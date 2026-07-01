@@ -237,7 +237,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` [OpenGSN](https://www.opengsn.org/) का उपयोग करने के लिए आवश्यक परिभाषाएँ हैं, एक ऐसी प्रणाली जो बिना ईथर वाले उपयोगकर्ताओं
+- `GSN/Context.sol` [OpenGSN](https://opengsn.org/) का उपयोग करने के लिए आवश्यक परिभाषाएँ हैं, एक ऐसी प्रणाली जो बिना ईथर वाले उपयोगकर्ताओं
   को ब्लॉकचेन का उपयोग करने की अनुमति देती है। ध्यान दें कि यह एक पुराना संस्करण है, यदि आप OpenGSN के साथ एकीकृत करना चाहते हैं
   तो [इस ट्यूटोरियल का उपयोग करें](https://docs.opengsn.org/javascript-client/tutorial.html)।
 - [SafeMath लाइब्रेरी](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), जो Solidity संस्करणों **&lt;0.8.0** के लिए

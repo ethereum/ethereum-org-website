@@ -1887,7 +1887,7 @@ Bu, JSON-RPC'nin doğrudan kullanımını gösteren, en yaygın görevlerden baz
 
 ## İlgili konular {#related-topics}
 
-- [JSON-RPC spesifikasyonu](http://www.jsonrpc.org/specification)
+- [JSON-RPC spesifikasyonu](https://www.jsonrpc.org/specification)
 - [Düğümler ve istemciler](/developers/docs/nodes-and-clients/)
 - [JavaScript API'leri](/developers/docs/apis/javascript/)
 - [Arka uç API'leri](/developers/docs/apis/backend/)

@@ -1,6 +1,6 @@
 ---
-title: Comunidades en línea
-description: Descubra foros en línea, salas de chat y comunidades en redes sociales donde los entusiastas de Ethereum se reúnen para debatir y colaborar.
+title: "Comunidades en línea"
+description: "Descubra foros en línea, salas de chat y comunidades en redes sociales donde los entusiastas de Ethereum se reúnen para debatir y colaborar."
 lang: es
 ---
 
@@ -52,7 +52,7 @@ Si cree que una comunidad debería agregarse o eliminarse en función de estas p
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - comunidad de creadores de Web3 donde se reúnen constructores, figuras de la industria y entusiastas de Ethereum. Nos apasiona el desarrollo, el diseño y la cultura de Web3. Venga a construir con nosotros.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat para el desarrollo en Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- foro de preguntas y respuestas</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- foro descentralizado de preguntas y respuestas</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- foro descentralizado de preguntas y respuestas</i></SocialListItem>
 
 ## YouTube y X (anteriormente Twitter) {#youtube-and-twitter}
 

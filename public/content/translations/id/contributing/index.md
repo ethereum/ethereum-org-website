@@ -9,10 +9,8 @@ Ethereum.org adalah proyek sumber terbuka dengan **12.000+** kontributor yang me
 
 Kami adalah komunitas yang ramah yang akan membantu Anda berkembang dan belajar di ekosistem [Ethereum](/) sekaligus memberikan kontribusi yang berarti dan mendapatkan pengalaman praktis yang relevan!
 
-## Cara berkontribusi {#ways-to-contribute}
-
 **Terjemahan**
-- [Bergabunglah dengan program terjemahan](/contributing/translation-program/) – Bantu kami menghadirkan ethereum.org ke dalam bahasa baru
+- [Bergabung dengan program terjemahan](/contributing/translation-program/) – Bantu kami menghadirkan ethereum.org ke dalam bahasa baru
 
 **Pengembangan**
 - [Kerjakan masalah terbuka](https://github.com/ethereum/ethereum-org-website/issues) – Pekerjaan yang telah kami identifikasi dan perlu diselesaikan
@@ -25,8 +23,9 @@ Kami adalah komunitas yang ramah yang akan membantu Anda berkembang dan belajar 
 - [Tulis artikel pembangun](/contributing/adding-articles/) - Kontribusikan artikel untuk bagian [Terbaru](/latest/)
 - [Tambahkan sumber daya komunitas](/contributing/content-resources/) – Tambahkan artikel atau sumber daya yang bermanfaat ke halaman yang relevan
 - [Sarankan laporan](/contributing/adding-reports/) - Sarankan laporan penelitian untuk halaman [Laporan](/reports/)
-- [Sarankan sumber daya desain](/contributing/design/adding-design-resources/) – Tambahkan, perbarui, dan hapus sumber daya desain yang bermanfaat
+- [Bagikan cerita Anda](/contributing/adding-community-stories/) - Kirimkan cerita tentang pengalaman pribadi Anda dengan teknologi sumber terbuka dan perlindungan (sanctuary), bagaimana ekosistem Ethereum telah memengaruhi hidup Anda, atau bagaimana Anda dan komunitas Anda menggunakan Ethereum
 - [Kuis](/contributing/quizzes/) – Tambahkan, perbarui, dan hapus bank soal kuis untuk halaman yang relevan
+- [Sarankan sumber daya desain](/contributing/design/adding-design-resources/) – Tambahkan, perbarui, dan hapus sumber daya desain yang bermanfaat
 - [Sarankan video](/contributing/adding-videos/) – Sarankan video edukasi untuk galeri video
 
 **Ide fitur**
@@ -36,10 +35,10 @@ Kami adalah komunitas yang ramah yang akan membantu Anda berkembang dan belajar 
 - [Tambahkan bursa](/contributing/adding-exchanges/) – Tambahkan bursa ke [pencari bursa](/get-eth/#country-picker) kami
 - [Tambahkan produk](/contributing/adding-products/) – Tambahkan aplikasi terdesentralisasi (dapp) atau dompet ke halaman yang relevan
 - [Tambahkan alat pengembang](/contributing/adding-developer-tools/) – Tambahkan alat pengembang ke halaman yang relevan
-- [Tambahkan lapisan 2 (l2)](/contributing/adding-layer-2s/) – Tambahkan lapisan 2 (l2) ke halaman yang relevan
+- [Tambahkan lapisan 2 (l2)](/contributing/adding-layer-2s/) – Tambahkan l2 ke halaman yang relevan
 - [Tambahkan produk atau layanan staking](/contributing/adding-staking-products/) – Tambahkan proyek yang membantu memfasilitasi staking mandiri, staking gabungan, atau staking sebagai layanan
 - [Tambahkan dompet](/contributing/adding-wallets/) – Tambahkan dompet untuk [halaman temukan dompet](/wallets/find-wallet/)
-- [Sarankan proyek untuk halaman DeSci kami](/contributing/adding-desci-projects/) – Tambahkan proyek yang dibangun di atas Ethereum yang berkontribusi pada sains terdesentralisasi (desci)
+- [Sarankan proyek untuk halaman sains terdesentralisasi (desci) kami](/contributing/adding-desci-projects/) – Tambahkan proyek yang dibangun di Ethereum yang berkontribusi pada desci
 - [Tambahkan sumber daya](/contributing/adding-resources/) – Tambahkan sumber daya yang berguna ke halaman mana pun yang relevan
 
 Ada pertanyaan? 🤔 Bergabunglah dengan [server Discord](https://discord.gg/ethereum-org) kami

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/data-structures-and-encoding/ssz/index.md",
-  "generatedAt": "2026-06-17T21:50:56.644Z",
-  "rootHash": "c2825647d0fb",
+  "generatedAt": "2026-06-29T23:56:45.495Z",
+  "rootHash": "0ab4146a5d54",
   "tree": {
-    "contentHash": "984efa435c1a",
-    "anchorHash": "3d134d721f55",
+    "contentHash": "684b85d7188f",
+    "anchorHash": "4e7d53dac98b",
     "children": {
       "frontmatter:title": {
         "contentHash": "4b7e7bfb94fb",
@@ -36,8 +36,8 @@
         "anchorHash": "e3b0c44298fc"
       },
       "how-does-ssz-work": {
-        "contentHash": "77996145e06e",
-        "anchorHash": "e15ca8d0b006",
+        "contentHash": "43f4776441ec",
+        "anchorHash": "88467dfc9552",
         "labelHash": "d061b52a16e1",
         "children": {
           "_label": {
@@ -119,32 +119,22 @@
             ]
           },
           "deserialization": {
-            "contentHash": "26c1fbfd2da0",
-            "anchorHash": "6bd8652ee483",
+            "contentHash": "1deecb94ce44",
+            "anchorHash": "4b9f7d802648",
             "labelHash": "c2fe10401ac3",
             "children": {
               "_label": {
                 "contentHash": "c2fe10401ac3",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:1": {
-                "contentHash": "e14f6c8f91ff",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "link:0": {
-                "contentHash": "15827fd9bb54",
-                "anchorHash": "2f053b61fd0d"
-              },
-              "prose:2": {
-                "contentHash": "cdfe54009a87",
+              "prose:0": {
+                "contentHash": "5809857e88a7",
                 "anchorHash": "e3b0c44298fc"
               }
             },
             "childrenOrder": [
               "_label",
-              "prose:1",
-              "link:0",
-              "prose:2"
+              "prose:0"
             ]
           }
         },
@@ -267,15 +257,15 @@
         ]
       },
       "further-reading": {
-        "contentHash": "45a3881d9ca7",
-        "anchorHash": "d0e75d6762db",
+        "contentHash": "f83ab8186118",
+        "anchorHash": "3684ca4c65ae",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
             "contentHash": "4082f515b2f4",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:5": {
+          "prose:4": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -283,7 +273,7 @@
             "contentHash": "8dfc7954a485",
             "anchorHash": "2fc5c162f904"
           },
-          "prose:6": {
+          "prose:5": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -291,7 +281,7 @@
             "contentHash": "835f7e089750",
             "anchorHash": "a764c8bc594e"
           },
-          "prose:7": {
+          "prose:6": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -299,35 +289,25 @@
             "contentHash": "f18f9d652480",
             "anchorHash": "67591eb3646e"
           },
-          "prose:8": {
+          "prose:7": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
           "link:3": {
             "contentHash": "984eac1fc558",
             "anchorHash": "e7f5c3092950"
-          },
-          "prose:9": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:4": {
-            "contentHash": "11c89af79624",
-            "anchorHash": "79e7e80860ca"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:5",
+          "prose:4",
           "link:0",
-          "prose:6",
+          "prose:5",
           "link:1",
-          "prose:7",
+          "prose:6",
           "link:2",
-          "prose:8",
-          "link:3",
-          "prose:9",
-          "link:4"
+          "prose:7",
+          "link:3"
         ]
       }
     },
@@ -346,5 +326,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

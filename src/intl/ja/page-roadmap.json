@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "イーサリアムのガバナンスについて詳しく知る",
   "page-roadmap-hero-alt": "イーサリアムのロードマップ",
   "page-roadmap-technical-upgrades-title": "イーサリアムにはどのような技術的アップグレードが予定されていますか？",
+  "page-roadmap-post-quantum-title": "耐量子セキュリティ",
+  "page-roadmap-post-quantum-description": "量子コンピュータはいつの日か、ブロックチェーンが依存する暗号技術を破る可能性があります。イーサリアムの耐量子アップグレードは、量子コンピューティングが現実の脅威となる前に、脆弱なアルゴリズムを置き換えます。",
   "page-roadmap-danksharding-title": "ダンクシャーディング",
   "page-roadmap-danksharding-description": "ダンクシャーディングは、イーサリアムのブロックにデータの「ブロブ」を追加することで、ユーザーにとってレイヤー2 (L2) ロールアップをはるかに安価にします。",
   "page-roadmap-single-slot-finality-title": "シングル・スロット・ファイナリティ",

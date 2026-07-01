@@ -85,8 +85,8 @@ Pelaporan tetap berharga. Laporan membantu penegak hukum melacak sindikat penipu
 ## Jenis penipuan yang harus diwaspadai {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Penipuan giveaway dan airdrop"
+contentPreview="Tidak ada yang membagikan ETH gratis. Penawaran ini selalu merupakan penipuan."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ Penipu membuat undian berhadiah palsu yang menjanjikan untuk melipatgandakan ETH
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Peniruan identitas dan dukungan palsu"
+contentPreview="Tidak ada seorang pun dari Ethereum atau ethereum.org yang akan menghubungi Anda terlebih dahulu."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ Penipu menyamar sebagai anggota tim Ethereum, moderator, atau agen dukungan di D
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Penipuan pemulihan"
+contentPreview="Setelah ditipu, waspadalah terhadap 'pakar pemulihan kripto' palsu."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ Mereka berjanji untuk melacak dan memulihkan kripto Anda yang dicuri dengan imba
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Situs web phishing dan aplikasi palsu"
+contentPreview="Situs penipuan meniru dompet dan bursa asli untuk mencuri kredensial Anda."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

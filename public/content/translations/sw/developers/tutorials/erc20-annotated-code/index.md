@@ -247,7 +247,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` ni ufafanuzi unaohitajika kutumia [OpenGSN](https://www.opengsn.org/), mfumo unaoruhusu watumiaji wasio na Etha
+- `GSN/Context.sol` ni ufafanuzi unaohitajika kutumia [OpenGSN](https://opengsn.org/), mfumo unaoruhusu watumiaji wasio na Etha
   kutumia mnyororo wa vitalu. Kumbuka kuwa hili ni toleo la zamani, ikiwa unataka kuunganisha na OpenGSN
   [tumia mafunzo haya](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [Maktaba ya SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), ambayo inazuia

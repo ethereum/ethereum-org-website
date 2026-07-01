@@ -198,7 +198,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` وہ تعریفیں ہیں جو [OpenGSN](https://www.opengsn.org/) استعمال کرنے کے لیے درکار ہیں، یہ ایک ایسا نظام ہے جو ایتھر کے بغیر صارفین کو بلاک چین استعمال کرنے کی اجازت دیتا ہے۔ نوٹ کریں کہ یہ ایک پرانا ورژن ہے، اگر آپ OpenGSN کے ساتھ انضمام کرنا چاہتے ہیں تو [یہ ٹیوٹوریل استعمال کریں](https://docs.opengsn.org/javascript-client/tutorial.html)۔
+- `GSN/Context.sol` وہ تعریفیں ہیں جو [OpenGSN](https://opengsn.org/) استعمال کرنے کے لیے درکار ہیں، یہ ایک ایسا نظام ہے جو ایتھر کے بغیر صارفین کو بلاک چین استعمال کرنے کی اجازت دیتا ہے۔ نوٹ کریں کہ یہ ایک پرانا ورژن ہے، اگر آپ OpenGSN کے ساتھ انضمام کرنا چاہتے ہیں تو [یہ ٹیوٹوریل استعمال کریں](https://docs.opengsn.org/javascript-client/tutorial.html)۔
 - [SafeMath لائبریری](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)، جو Solidity کے **<span dir="ltr">&lt;0.8.0</span>** ورژنز کے لیے حسابی اوور فلو/انڈر فلو کو روکتی ہے۔ Solidity <span dir="ltr">≥0.8.0</span> میں، حسابی کارروائیاں اوور فلو/انڈر فلو پر خود بخود ریورٹ ہو جاتی ہیں، جس سے SafeMath غیر ضروری ہو جاتا ہے۔ یہ کنٹریکٹ پرانے کمپائلر ورژنز کے ساتھ پچھلی مطابقت (backward compatibility) کے لیے SafeMath کا استعمال کرتا ہے۔
 
 &nbsp;

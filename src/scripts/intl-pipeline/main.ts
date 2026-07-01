@@ -469,20 +469,16 @@ async function runFullTranslation(
     }
   }
 
-  await committer.commitFile(destPath, finalContent, locale)
-  committedFiles.push({ path: destPath, content: finalContent })
-
-  // Build and commit source manifest
+  // Build the manifests BEFORE recording any blob. Manifest construction is
+  // pure and can throw (parse/serialize); doing it first means a builder error
+  // aborts the task without leaving content recorded sans its manifest -- the
+  // same content-without-manifest desync the ref-race fix already closed.
   const sourceManifest =
     file.type === "markdown"
       ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
       : buildJsonManifest(file.content, file.path, baseBranchSha)
-
-  // Commit source manifest
   const smDest = getManifestPath(destPath, "source")
-  await committer.commitFile(smDest, sourceManifest, locale)
 
-  // Commit translation manifest
   const placeholderData =
     result.placeholderOrder && result.placeholderMap
       ? {
@@ -493,9 +489,11 @@ async function runFullTranslation(
         ? extractPlaceholderData(parseEnglishJson(file.content))
         : null
 
+  let translationManifest: string | null = null
+  let tmDest: string | null = null
   if (placeholderData) {
     const parsed = JSON.parse(sourceManifest)
-    const tm = buildLocaleTranslationManifest({
+    translationManifest = buildLocaleTranslationManifest({
       locale,
       englishManifestHash: parsed.rootHash,
       placeholderOrder: placeholderData.placeholderOrder,
@@ -504,8 +502,15 @@ async function runFullTranslation(
         _all: { translatedAt: new Date().toISOString(), status: "success" },
       },
     })
-    const tmDest = getManifestPath(destPath, "translation")
-    await committer.commitFile(tmDest, tm, locale)
+    tmDest = getManifestPath(destPath, "translation")
+  }
+
+  // Record content and its manifest(s) together, manifests last.
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
+  await committer.commitFile(smDest, sourceManifest, locale)
+  if (translationManifest && tmDest) {
+    await committer.commitFile(tmDest, translationManifest, locale)
   }
 
   log(`[${locale}] ${destPath}: committed`)
@@ -614,15 +619,16 @@ async function runIncremental(
     }
   }
 
-  await committer.commitFile(destPath, finalContent, locale)
-  committedFiles.push({ path: destPath, content: finalContent })
-
+  // Build the source manifest before recording any blob (see runFullTranslation):
+  // a builder throw must not leave content recorded without its manifest.
   const sourceManifest =
     file.type === "markdown"
       ? buildMarkdownManifest(englishB, file.path, baseBranchSha)
       : buildJsonManifest(englishB, file.path, baseBranchSha)
-
   const smDest = getManifestPath(destPath, "source")
+
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
   await committer.commitFile(smDest, sourceManifest, locale)
 
   log(`[${locale}] ${destPath}: committed (incremental)`)
@@ -907,9 +913,12 @@ async function main() {
 
   // Log task failures but don't abort -- partial successes ship. Failures are
   // recorded with file context (via submitWithContext) and surfaced in the PR
-  // body with rerun commands. Per-file manifests are only stamped on success,
-  // so a rerun of just the failed combinations naturally retries them without
-  // touching the work that landed this run.
+  // body with rerun commands. A failed task records NEITHER its content nor its
+  // manifest (content+manifests are built then recorded together per task, and
+  // commitFile no longer touches the branch ref mid-run -- see SharedCommitter),
+  // so a failed file simply doesn't appear this run and a rerun re-detects it.
+  // This invariant is what keeps manifest tracking in sync; before it, a
+  // ref-race could ship content without its manifest and desync every rerun.
   if (failures.length > 0) {
     log(
       `${failures.length} task(s) failed (continuing with successes):`,

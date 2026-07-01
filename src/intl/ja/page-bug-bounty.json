@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "イーサリアムのバウンティ・プログラムでは、報酬を決定する際に多くの変数を考慮します。適格性、スコア、および報酬に関連するすべての条件の決定は、イーサリアム財団のバグバウンティ・パネルの独自の最終的な裁量に委ねられます。",
   "page-upgrades-bug-bounty-leaderboard": "リーダーボード全体を見る",
   "page-upgrades-bug-bounty-leaderboard-list": "バグバウンティ・リーダーボード",
+  "page-upgrades-bug-bounty-leaderboard-position": "{score, plural, one {# ポイント} other {# ポイント}}で第{rank}位",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "（GitHubプロフィールを見る）",
   "page-upgrades-bug-bounty-leaderboard-points": "ポイント",
   "page-upgrades-bug-bounty-ledger-desc": "イーサリアムの仕様書には、実行レイヤーとコンセンサス・レイヤーの設計の根拠が詳しく記載されています。",
   "page-upgrades-bug-bounty-ledger-title": "仕様のバグ",

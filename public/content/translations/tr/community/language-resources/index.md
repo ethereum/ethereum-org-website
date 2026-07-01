@@ -1,6 +1,6 @@
 ---
-title: Dil kaynakları
-description: Ethereum hakkında bilgi edinmek için İngilizce dışındaki kaynaklar
+title: "Dil kaynakları"
+description: "Ethereum hakkında bilgi edinmek için İngilizce dışındaki kaynaklar"
 lang: tr
 ---
 
@@ -27,7 +27,7 @@ Ethereum.org, her sayfanın üst kısmında bulunan dil seçici menümüzü kull
 **Haberler**
 
 - [BeInCrypto](http://www.beincrypto.com.br) - Brezilya'da mevcut olan borsaların bir listesi de dahil olmak üzere kripto para haberleri ve makaleleri
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Önemli bir kripto para haber kaynağı olan Cointelegraph'ın Brezilya versiyonu
+- [Cointelegraph](https://cointelegraph.com.br/) - Önemli bir kripto para haber kaynağı olan Cointelegraph'ın Brezilya versiyonu
 - [Livecoins](http://www.livecoins.com.br/ethereum) - kripto para haberleri ve araçları
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - kripto para haberleri ve raporları
 - [Modular Crypto](https://modularcrypto.xyz/) - kripto para haberleri ve eğitim makaleleri
@@ -37,7 +37,7 @@ Ethereum.org, her sayfanın üst kısmında bulunan dil seçici menümüzü kull
 - [web3dev](https://www.web3dev.com.br/) - Web3 geliştiricileri için içerik merkezi ve Discord topluluğu.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - Web3 ve merkeziyetsiz finans (DeFi) öğrenmek için kaynaklar
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - 'Yeni başlayanlar için Ethereum' ve yeni başlayanlar için 'DeFi' dahil olmak üzere kripto para haberleri ve eğitimi
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - kripto para alanından içgörüler, eğitim ve blog
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - kripto para alanından içgörüler, eğitim ve blog
 - [Cointimes](http://www.cointimes.com.br/) - kripto para haberleri ve eğitimi
 - [Web3 başlangıç paketi](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - en sık sorulan ve temel kripto sorularını yanıtlayan bir rehber
 

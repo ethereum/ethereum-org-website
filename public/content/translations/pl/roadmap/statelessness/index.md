@@ -1,6 +1,6 @@
 ---
-title: Bezstanowość, wygasanie stanu i wygasanie historii
-description: Wyjaśnienie wygasania historii i bezstanowego Ethereum
+title: "Bezstanowość, wygasanie stanu i wygasanie historii"
+description: "Wyjaśnienie wygasania historii i bezstanowego Ethereum"
 lang: pl
 ---
 

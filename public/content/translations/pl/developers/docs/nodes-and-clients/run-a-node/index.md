@@ -72,15 +72,18 @@ Rozmiar bazy danych i szybkość początkowej synchronizacji zależą od wybrane
 Upewnij się również, że Twoje połączenie internetowe nie jest ograniczone przez [limit przepustowości](https://wikipedia.org/wiki/Data_cap). Zaleca się korzystanie z nielimitowanego połączenia, ponieważ początkowa synchronizacja i dane przesyłane do sieci mogą przekroczyć Twój limit.
 
 ##### System operacyjny
+
 Wszystkie klienty obsługują główne systemy operacyjne – Linux, macOS, Windows. Oznacza to, że możesz uruchamiać węzły na zwykłych komputerach stacjonarnych lub serwerach z systemem operacyjnym (OS), który najbardziej Ci odpowiada. Upewnij się, że Twój system operacyjny jest aktualny, aby uniknąć potencjalnych problemów i luk w zabezpieczeniach.
 
 ##### Minimalne wymagania
+
 - Procesor z 2+ rdzeniami
 - 8 GB RAM
 - 2 TB SSD
 - Przepustowość 10+ MBit/s
 
 ##### Zalecana specyfikacja
+
 - Szybki procesor z 4+ rdzeniami
 - 16 GB+ RAM
 - Szybki dysk SSD 2+ TB
@@ -149,6 +152,7 @@ Instrukcje instalacji każdego klienta znajdują się w dokumentacji podlinkowan
 Oto strony wydań klientów, na których można znaleźć ich wstępnie skompilowane pliki binarne lub instrukcje instalacji:
 
 ##### Klienty warstwy wykonawczej
+
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads)
@@ -158,6 +162,7 @@ Oto strony wydań klientów, na których można znaleźć ich wstępnie skompilo
 Warto również zauważyć, że różnorodność klientów jest [problemem w warstwie wykonawczej](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Zaleca się, aby czytelnicy rozważyli uruchomienie mniejszościowego klienta warstwy wykonawczej.
 
 ##### Klienty konsensusu
+
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Nie udostępnia wstępnie skompilowanego pliku binarnego, tylko obraz Dockera lub do zbudowania ze źródeł)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
@@ -169,6 +174,7 @@ Warto również zauważyć, że różnorodność klientów jest [problemem w war
 [Zobacz najnowsze statystyki użycia klientów w sieci](https://clientdiversity.org/) i dowiedz się więcej o [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity).
 
 ##### Weryfikacja oprogramowania
+
 Pobierając oprogramowanie z Internetu, zaleca się zweryfikowanie jego integralności. Ten krok jest opcjonalny, ale zwłaszcza w przypadku kluczowego elementu infrastruktury, jakim jest klient Ethereum, ważne jest, aby zdawać sobie sprawę z potencjalnych wektorów ataku i ich unikać. Jeśli pobrałeś wstępnie skompilowany plik binarny, musisz mu zaufać i zaryzykować, że atakujący mógł podmienić plik wykonywalny na złośliwy.
 
 Deweloperzy podpisują wydane pliki binarne swoimi kluczami PGP, dzięki czemu możesz kryptograficznie zweryfikować, czy uruchamiasz dokładnie to oprogramowanie, które stworzyli. Musisz tylko uzyskać klucze publiczne używane przez deweloperów, które można znaleźć na stronach wydań klientów lub w dokumentacji. Po pobraniu wydania klienta i jego podpisu możesz użyć implementacji PGP, np. [GnuPG](https://gnupg.org/download/index.html), aby łatwo je zweryfikować. Sprawdź samouczek dotyczący weryfikacji oprogramowania open-source za pomocą `gpg` w systemie [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) lub [Windows/macOS](https://freedom.press/training/verifying-open-source-software/).
@@ -233,6 +239,7 @@ Pamiętaj, że to tylko podstawowy przykład, wszystkie inne ustawienia zostaną
 > Zauważ, że ukośniki odwrotne (backslashe) `\` w przykładach służą tylko do celów formatowania; flagi konfiguracyjne można zdefiniować w jednej linii.
 
 ##### Running Besu
+
 Ten przykład uruchamia Besu w Sieci głównej, przechowuje dane blockchaina w domyślnym formacie w `/data/ethereum`, włącza JSON-RPC i Engine RPC do łączenia klienta konsensusu. Engine API jest uwierzytelniane za pomocą tokena `jwtsecret` i dozwolone są tylko wywołania z `localhost`.
 
 ```sh
@@ -254,6 +261,7 @@ besu --Xlauncher
 [Dokumentacja Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) zawiera dodatkowe opcje i szczegóły konfiguracji.
 
 ##### Running Erigon
+
 Ten przykład uruchamia Erigona w Sieci głównej, przechowuje dane blockchaina w `/data/ethereum`, włącza JSON-RPC, definiuje, które przestrzenie nazw są dozwolone i włącza uwierzytelnianie do łączenia klienta konsensusu, które jest zdefiniowane przez ścieżkę `jwtsecret`.
 
 ```sh
@@ -266,6 +274,7 @@ erigon --chain mainnet \
 Erigon domyślnie wykonuje pełną synchronizację z 8 GB HDD, co spowoduje powstanie ponad 2 TB danych archiwalnych. Upewnij się, że `datadir` wskazuje na dysk z wystarczającą ilością wolnego miejsca lub zapoznaj się z flagą `--prune`, która może przycinać różne rodzaje danych. Sprawdź `--help` Erigona, aby dowiedzieć się więcej.
 
 ##### Running Geth
+
 Ten przykład uruchamia Getha w Sieci głównej, przechowuje dane blockchaina w `/data/ethereum`, włącza JSON-RPC i definiuje, które przestrzenie nazw są dozwolone. Włącza również uwierzytelnianie do łączenia klienta konsensusu, co wymaga ścieżki do `jwtsecret`, a także opcji definiującej, które połączenia są dozwolone, w naszym przykładzie tylko z `localhost`.
 
 ```sh
@@ -280,6 +289,7 @@ geth --mainnet \
 Sprawdź [dokumentację dla wszystkich opcji konfiguracji](https://geth.ethereum.org/docs/fundamentals/command-line-options) i dowiedz się więcej o [uruchamianiu Getha z klientem konsensusu](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
 ##### Running Nethermind
+
 Nethermind oferuje różne [opcje instalacji](https://docs.nethermind.io/get-started/installing-nethermind). Pakiet zawiera różne pliki binarne, w tym Launcher z konfiguracją z przewodnikiem, który pomoże Ci interaktywnie utworzyć konfigurację. Alternatywnie znajdziesz Runnera, który jest samym plikiem wykonywalnym i możesz go po prostu uruchomić z flagami konfiguracyjnymi. JSON-RPC jest włączone domyślnie.
 
 ```sh
@@ -293,6 +303,7 @@ Dokumentacja Nethermind oferuje [kompletny przewodnik](https://docs.nethermind.i
 Klient warstwy wykonawczej zainicjuje swoje podstawowe funkcje, wybrane punkty końcowe i zacznie szukać węzłów równorzędnych (peers). Po pomyślnym odkryciu węzłów równorzędnych klient rozpoczyna synchronizację. Klient warstwy wykonawczej będzie oczekiwał na połączenie od klienta konsensusu. Aktualne dane blockchaina będą dostępne, gdy klient zostanie pomyślnie zsynchronizowany z bieżącym stanem.
 
 ##### Running Reth
+
 Ten przykład uruchamia Retha w Sieci głównej, używając domyślnej lokalizacji danych. Włącza uwierzytelnianie JSON-RPC i Engine RPC do łączenia klienta konsensusu, które jest zdefiniowane przez ścieżkę `jwtsecret`, przy czym dozwolone są tylko wywołania z `localhost`.
 
 ```sh
@@ -317,6 +328,7 @@ Uruchamiając węzeł Beacon w sieci testowej, możesz zaoszczędzić znaczną i
 #### Uruchamianie klienta konsensusu {#running-a-consensus-client}
 
 ##### Running Lighthouse
+
 Przed uruchomieniem Lighthouse dowiedz się więcej o tym, jak go zainstalować i skonfigurować w [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
 
 ```sh
@@ -329,6 +341,7 @@ lighthouse beacon_node \
 ```
 
 ##### Running Lodestar
+
 Zainstaluj oprogramowanie Lodestar, kompilując je lub pobierając obraz Dockera. Dowiedz się więcej w [dokumentacji](https://chainsafe.github.io/lodestar/) i bardziej kompleksowym [przewodniku konfiguracji](https://hackmd.io/@philknows/rk5cDvKmK).
 
 ```sh
@@ -341,6 +354,7 @@ lodestar beacon \
 ```
 
 ##### Running Nimbus
+
 Nimbus jest dostarczany zarówno z klientem konsensusu, jak i warstwy wykonawczej. Może być uruchamiany na różnych urządzeniach, nawet o bardzo skromnej mocy obliczeniowej.
 Po [zainstalowaniu zależności i samego Nimbusa](https://nimbus.guide/quick-start.html) możesz uruchomić jego klienta konsensusu:
 
@@ -353,6 +367,7 @@ nimbus_beacon_node \
 ```
 
 ##### Running Prysm
+
 Prysm jest dostarczany ze skryptem, który umożliwia łatwą automatyczną instalację. Szczegóły można znaleźć w [dokumentacji Prysma](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
 ```sh
@@ -364,6 +379,7 @@ Prysm jest dostarczany ze skryptem, który umożliwia łatwą automatyczną inst
 ```
 
 ##### Running Teku
+
 ```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \
@@ -371,7 +387,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Kiedy klient konsensusu łączy się z klientem warstwy wykonawczej, aby odczytać kontrakt depozytowy i zidentyfikować walidatory, łączy się również z innymi węzłami równorzędnymi węzła Beacon i rozpoczyna synchronizację slotów konsensusu od bloku genezy (genesis). Gdy węzeł Beacon osiągnie bieżącą epokę, Beacon API staje się użyteczne dla Twoich walidatorów. Dowiedz się więcej o [interfejsach API węzła Beacon](https://eth2docs.vercel.app/).
+Kiedy klient konsensusu łączy się z klientem warstwy wykonawczej, aby odczytać kontrakt depozytowy i zidentyfikować walidatory, łączy się również z innymi węzłami równorzędnymi węzła Beacon i rozpoczyna synchronizację slotów konsensusu od bloku genezy (genesis). Gdy węzeł Beacon osiągnie bieżącą epokę, Beacon API staje się użyteczne dla Twoich walidatorów. Dowiedz się więcej o [interfejsach API węzła Beacon](https://ethereum.github.io/beacon-APIs).
 
 ### Dodawanie walidatorów {#adding-validators}
 
@@ -454,7 +470,7 @@ W ramach monitorowania upewnij się, że masz oko na wydajność swojej maszyny.
 - [Przewodniki po stakingu Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) – _Somer Esat, często aktualizowane_
 - [Przewodnik | Jak skonfigurować walidator do stakingu Ethereum w Sieci głównej](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, często aktualizowane_
 - [Przewodniki ETHStaker dotyczące uruchamiania walidatorów w sieciach testowych](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, regularnie aktualizowane_
-- [Przykładowa aplikacja AWS Blockchain Node Runner dla węzłów Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) – _AWS, często aktualizowane_
+- [Przykładowa aplikacja AWS Blockchain Node Runner dla węzłów Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) – _AWS, często aktualizowane_
 - [FAQ dotyczące The Merge dla operatorów węzłów](https://notes.ethereum.org/@launchpad/node-faq-merge) – _Lipiec 2022_
 - [Analiza wymagań sprzętowych dla w pełni zwalidowanego węzła Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 września 2018_
 - [Uruchamianie pełnych węzłów Ethereum: Przewodnik dla ledwie zmotywowanych](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 listopada 2019_

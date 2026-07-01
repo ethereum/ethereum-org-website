@@ -1888,7 +1888,7 @@ Il s'agissait juste d'une brève introduction à certaines des tâches les plus 
 
 ## Sujets connexes {#related-topics}
 
-- [Spécification JSON-RPC](http://www.jsonrpc.org/specification)
+- [Spécification JSON-RPC](https://www.jsonrpc.org/specification)
 - [Nœuds et clients](/developers/docs/nodes-and-clients/)
 - [API JavaScript](/developers/docs/apis/javascript/)
 - [API backend](/developers/docs/apis/backend/)

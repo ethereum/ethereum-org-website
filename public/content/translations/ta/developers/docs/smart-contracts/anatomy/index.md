@@ -49,7 +49,7 @@ storedData: int128
 
 மேலும் விளக்கத்திற்கு, ஆவணங்களைப் பார்க்கவும்:
 
-- [Vyper வகைகளைப் பார்க்கவும்](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [Vyper வகைகளைப் பார்க்கவும்](https://docs.vyperlang.org/en/stable/types.html#value-types)
 - [Solidity வகைகளைப் பார்க்கவும்](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### நினைவகம் {#memory}

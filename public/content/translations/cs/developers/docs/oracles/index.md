@@ -403,7 +403,7 @@ Existuje několik aplikací orákul, které můžete integrovat do své dapp na 
 
 **[Pyth Network](https://pyth.network/)** - _Síť Pyth je síť finančních orákul první strany navržená k publikování nepřetržitých dat z reálného světa onchain v prostředí odolném proti manipulaci, decentralizovaném a soběstačném._
 
-**[API3 DAO](https://www.api3.org/)** - _API3 DAO dodává řešení orákul první strany, která poskytují větší transparentnost zdrojů, bezpečnost a škálovatelnost v decentralizovaném řešení pro chytré kontrakty_
+**[API3 DAO](https://api3.org/)** - _API3 DAO dodává řešení orákul první strany, která poskytují větší transparentnost zdrojů, bezpečnost a škálovatelnost v decentralizovaném řešení pro chytré kontrakty_
 
 **[Supra](https://supra.com/)** - Vertikálně integrovaná sada nástrojů meziřetězcových řešení, která propojuje všechny blockchainy, veřejné (L1 a L2) nebo soukromé (podnikové), a poskytuje decentralizované cenové zdroje orákul, které lze použít pro onchain a offchain případy užití. 
 

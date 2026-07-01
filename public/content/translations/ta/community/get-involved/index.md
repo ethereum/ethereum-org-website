@@ -1,6 +1,6 @@
 ---
-title: நான் எவ்வாறு ஈடுபடலாம்?
-description: எத்திரியம் சமூகத்தில் எவ்வாறு ஈடுபடுவது.
+title: "நான் எவ்வாறு ஈடுபடலாம்?"
+description: "எத்திரியம் சமூகத்தில் எவ்வாறு ஈடுபடுவது."
 lang: ta
 ---
 
@@ -11,7 +11,7 @@ lang: ta
 ## டெவலப்பர்கள் <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) இல் எத்திரியம் பற்றி அறிந்துகொண்டு முயற்சிக்கவும்
-- உங்களுக்கு அருகிலுள்ள [ETHGlobal](https://ethglobal.co/) ஹேக்கத்தானில் கலந்துகொள்ளுங்கள்!
+- உங்களுக்கு அருகிலுள்ள [ETHGlobal](https://ethglobal.com/) ஹேக்கத்தானில் கலந்துகொள்ளுங்கள்!
 - [உங்கள் நிபுணத்துவப் பகுதி அல்லது நீங்கள் விரும்பும் நிரலாக்க மொழி தொடர்பான திட்டங்களைப்](/developers/docs/programming-languages/) பார்க்கவும்
 - [ஒருமித்த கருத்து மற்றும் செயலாக்க அடுக்கு அழைப்புகளைப்](https://www.youtube.com/@EthereumProtocol/streams) பார்க்கவும் அல்லது அவற்றில் பங்கேற்கவும்
 - [Ecosystem Support Program இன் விருப்பப் பட்டியல்](https://esp.ethereum.foundation/wishlist/) - எத்திரியம் Ecosystem Support Program மானிய விண்ணப்பங்களைச் சுறுசுறுப்பாகத் தேடும் கருவியாக்கம், ஆவணமாக்கல் மற்றும் உள்கட்டமைப்புப் பகுதிகள்
@@ -80,7 +80,7 @@ lang: ta
 
 எத்திரியம் சுற்றுச்சூழல் அமைப்பு பொதுப் பொருட்கள் மற்றும் தாக்கத்தை ஏற்படுத்தும் திட்டங்களுக்கு நிதியளிக்கும் பணியில் உள்ளது. மிகச் சிறிய நன்கொடைகள் மூலம் நீங்கள் உங்கள் ஆதரவைக் காட்டலாம் மற்றும் முக்கியமான பணிகள் நனவாக அனுமதிக்கலாம்.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## நிதி வல்லுநர்கள் & கணக்காளர்கள் <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

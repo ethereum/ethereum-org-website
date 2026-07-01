@@ -2,6 +2,7 @@
 title: Single slot finality
 description: Explanation of single slot finality
 lang: en
+template: roadmap
 ---
 
 It takes about 15 minutes for an [Ethereum](/) block to finalize. However, we can make Ethereum's consensus mechanism validate blocks more efficiently and decrease time-to-finality dramatically. Instead of waiting for fifteen minutes, blocks could get proposed and finalized in the same slot. This concept is known as **single slot finality (SSF)**.

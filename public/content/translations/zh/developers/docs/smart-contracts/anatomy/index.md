@@ -49,7 +49,7 @@ storedData: int128
 
 更多解释，请查看文档：
 
-- [查看 Vyper 类型](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [查看 Vyper 类型](https://docs.vyperlang.org/en/stable/types.html#value-types)
 - [查看 Solidity 类型](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### 内存 {#memory}

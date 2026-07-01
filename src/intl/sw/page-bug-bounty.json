@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "Programu ya tuzo ya Ethereum inazingatia vigezo kadhaa katika kuamua tuzo. Maamuzi ya ustahiki, alama na masharti yote yanayohusiana na tuzo yako chini ya uamuzi wa pekee na wa mwisho wa jopo la tuzo za hitilafu la Taasisi ya Ethereum.",
   "page-upgrades-bug-bounty-leaderboard": "Tazama mbao kamili za wanaoongoza",
   "page-upgrades-bug-bounty-leaderboard-list": "Ubao wa wanaoongoza wa tuzo za hitilafu",
+  "page-upgrades-bug-bounty-leaderboard-position": "Katika nafasi ya {rank} na {score, plural, one {pointi #} other {pointi #}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(Tazama Wasifu wa GitHub)",
   "page-upgrades-bug-bounty-leaderboard-points": "pointi",
   "page-upgrades-bug-bounty-ledger-desc": "Vipimo vya Ethereum vinaeleza kwa kina mantiki ya muundo wa Tabaka la Utekelezaji na Tabaka la Mwafaka.",
   "page-upgrades-bug-bounty-ledger-title": "Hitilafu za vipimo",

@@ -1,6 +1,6 @@
 ---
-title: Tokenler katman 2'ye nasıl köprülenir
-description: Bir köprü kullanarak tokenleri Ethereum'dan katman 2'ye nasıl taşıyacağınızı açıklayan bir rehber.
+title: "Tokenler katman 2'ye nasıl köprülenir"
+description: "Bir köprü kullanarak tokenleri Ethereum'dan katman 2'ye nasıl taşıyacağınızı açıklayan bir rehber."
 lang: tr
 ---
 

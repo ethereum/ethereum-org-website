@@ -23,7 +23,7 @@ import {
 } from "../constants"
 import type { DeveloperToolCategorySlug, DeveloperToolTag } from "../types"
 
-import DevelopersToolsCategoryJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
@@ -85,12 +85,13 @@ const Page = async (props: {
 
   return (
     <>
-      <DevelopersToolsCategoryJsonLD
+      <PageJsonLD
         locale={locale}
         category={category}
         categoryTools={allCategoryData}
         contributors={contributors}
       />
+
       <PageHero
         breadcrumbs={{
           slug: `/developers/tools/${t(`page-developers-tools-category-${category}-breadcrumb`)}`,
@@ -101,40 +102,43 @@ const Page = async (props: {
         )}
         variant="no-divider"
       />
-      <MainArticle className="space-y-20 px-4 py-10 md:px-8">
-        <HighlightsSection tools={highlights} />
 
-        <Section id="tools" className="space-y-4">
-          <h2 className="sr-only">
-            {t("page-developers-tools-applications-title")}
-          </h2>
+      <main className="px-page pt-page-2x pb-page">
+        <MainArticle className="flow">
+          <HighlightsSection tools={highlights} />
 
-          <CategoryToolsGrid
-            tools={allCategoryData}
-            uniqueTags={uniqueTags}
-            tagLabels={tagLabels}
-          />
-        </Section>
+          <Section id="tools">
+            <h2 className="sr-only">
+              {t("page-developers-tools-applications-title")}
+            </h2>
 
-        <Section id="categories" className="space-y-4">
-          <h2>{t("page-developers-tools-categories-title-other")}</h2>
-          <Grid>
-            {DEV_TOOL_CATEGORIES.filter(({ slug }) => slug !== category).map(
-              ({ slug, Icon }) => (
-                <SubpageCard
-                  key={slug}
-                  title={t(`page-developers-tools-category-${slug}-title`)}
-                  description={t(
-                    `page-developers-tools-category-${slug}-description`
-                  )}
-                  icon={<Icon className="size-8" />}
-                  href={`/developers/tools/${slug}`}
-                />
-              )
-            )}
-          </Grid>
-        </Section>
-      </MainArticle>
+            <CategoryToolsGrid
+              tools={allCategoryData}
+              uniqueTags={uniqueTags}
+              tagLabels={tagLabels}
+            />
+          </Section>
+
+          <Section id="categories">
+            <h2>{t("page-developers-tools-categories-title-other")}</h2>
+            <Grid>
+              {DEV_TOOL_CATEGORIES.filter(({ slug }) => slug !== category).map(
+                ({ slug, Icon }) => (
+                  <SubpageCard
+                    key={slug}
+                    title={t(`page-developers-tools-category-${slug}-title`)}
+                    description={t(
+                      `page-developers-tools-category-${slug}-description`
+                    )}
+                    icon={<Icon className="size-8" />}
+                    href={`/developers/tools/${slug}`}
+                  />
+                )
+              )}
+            </Grid>
+          </Section>
+        </MainArticle>
+      </main>
 
       <ToolModalWrapper variant="unstyled" open={!!activeTool}>
         {activeTool && <ToolModalContents tool={activeTool} />}

@@ -271,8 +271,8 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **Mythril** - _一个用于检测以太坊智能合约漏洞的符号执行工具_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [文档](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [文档](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## 延伸阅读 {#further-reading}
 

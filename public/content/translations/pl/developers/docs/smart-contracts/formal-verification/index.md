@@ -271,8 +271,8 @@ Ponadto weryfikatory programów nie zawsze są w stanie określić, czy właści
 
 **Mythril** - _Narzędzie do wykonania symbolicznego służące do wykrywania luk w inteligentnych kontraktach Ethereum_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Dokumentacja](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [Dokumentacja](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## Dalsza lektura {#further-reading}
 

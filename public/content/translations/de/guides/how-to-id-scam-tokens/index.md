@@ -14,7 +14,7 @@ Es gibt zwei wahrscheinliche Wege, auf denen sie versuchen, Sie zu täuschen:
 Um zu veranschaulichen, was Scam-Token sind und wie man sie erkennt, sehen wir uns ein Beispiel an: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Dieser Token versucht, wie der legitime [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1)-Token auszusehen.
 
 <ExpandableCard
-title="What is ARB?"
+title="Was ist ARB?"
 contentPreview=''>
 
 Arbitrum ist eine Organisation, die [Optimistic Rollups](/developers/docs/scaling/optimistic-rollups/) entwickelt und verwaltet. Ursprünglich war Arbitrum als gewinnorientiertes Unternehmen organisiert, unternahm dann aber Schritte, um dezentral zu werden. Als Teil dieses Prozesses gaben sie einen handelbaren [Governance-Token](/dao/#token-based-membership) heraus.
@@ -22,7 +22,7 @@ Arbitrum ist eine Organisation, die [Optimistic Rollups](/developers/docs/scalin
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Warum heißt der Betrugs-Token wARB?"
 contentPreview=''>
 
 Es gibt in Ethereum die Konvention, dass wir, wenn ein Vermögenswert nicht ERC-20-konform ist, eine "Wrapped"-Version (eingepackte Version) davon erstellen, deren Name mit "w" beginnt. So haben wir zum Beispiel wBTC für Bitcoin und <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH für Ether</a>.
@@ -36,7 +36,7 @@ Es macht keinen Sinn, eine Wrapped-Version eines ERC-20-Tokens zu erstellen, der
 Der ganze Sinn von Ethereum ist die Dezentralisierung. Das bedeutet, dass es keine zentrale Autorität gibt, die Ihre Vermögenswerte beschlagnahmen oder Sie daran hindern kann, einen Smart Contract bereitzustellen. Es bedeutet aber auch, dass Betrüger jeden beliebigen Smart Contract bereitstellen können, den sie möchten.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Was sind Smart Contracts?"
 contentPreview=''>
 
 [Smart Contracts](/developers/docs/smart-contracts/) sind die Programme, die auf der Ethereum-Blockchain ausgeführt werden. Jeder ERC-20-Token ist beispielsweise als Smart Contract implementiert.

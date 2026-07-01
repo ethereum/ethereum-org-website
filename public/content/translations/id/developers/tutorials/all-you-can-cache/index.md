@@ -758,9 +758,9 @@ Ini adalah cara kita memverifikasi bahwa kode [memancarkan peristiwa dengan bena
 
 ### Klien {#the-client}
 
-Satu hal yang tidak Anda dapatkan dengan pengujian Solidity adalah kode JavaScript yang dapat Anda potong dan tempel ke dalam aplikasi Anda sendiri. Untuk menulis kode itu, saya menerapkan WORM ke [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), testnet baru [Optimism](https://www.optimism.io/). Itu berada di alamat [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Satu hal yang tidak Anda dapatkan dengan pengujian Solidity adalah kode JavaScript yang dapat Anda potong dan tempel ke dalam aplikasi Anda sendiri. Versi asli dari tutorial ini men-deploy WORM ke Optimism Goerli, yang sejak saat itu telah dihentikan. Untuk menjalankan klien saat ini, deploy ulang WORM ke jaringan OP Stack yang didukung seperti [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), lalu gunakan alamat kontrak yang dihasilkan di klien JavaScript.
 
-[Anda dapat melihat kode JavaScript untuk klien di sini](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Untuk menggunakannya:
+[Anda dapat melihat kode JavaScript untuk klien di sini](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Repositori sampel ditulis untuk Optimism Goerli, jadi sebelum menjalankannya, perbarui titik akhir RPC dan URL penjelajah di `javascript/.env.example` dan `javascript/index.js` untuk jaringan target Anda. Untuk menggunakannya:
 
 1. Kloning repositori git:
 
@@ -785,8 +785,8 @@ Satu hal yang tidak Anda dapatkan dengan pengujian Solidity adalah kode JavaScri
 
    | Parameter           | Nilai                                                                                                                                                               |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | Mnemonic untuk akun yang memiliki cukup ETH untuk membayar transaksi. [Anda bisa mendapatkan ETH gratis untuk jaringan Optimism Goerli di sini](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL ke Optimism Goerli. Titik akhir publik, `https://goerli.optimism.io`, dibatasi kecepatannya tetapi cukup untuk apa yang kita butuhkan di sini |
+   | MNEMONIC            | Mnemonic untuk akun yang memiliki cukup ETH untuk membayar transaksi. [Dokumentasi faucet Optimism](https://docs.optimism.io/app-developers/tools/faucets) mencantumkan faucet testnet saat ini. |
+   | OPTIMISM_GOERLI_URL | URL RPC untuk jaringan tempat Anda men-deploy ulang WORM. Untuk OP Sepolia, gunakan titik akhir RPC OP Sepolia seperti `https://sepolia.optimism.io`, atau titik akhir lain dari penyedia Anda.        |
 
 5. Jalankan `index.js`.
 
@@ -794,9 +794,9 @@ Satu hal yang tidak Anda dapatkan dengan pengujian Solidity adalah kode JavaScri
    node index.js
    ```
 
-   Contoh aplikasi ini pertama-tama menulis entri ke WORM, menampilkan calldata dan tautan ke transaksi di Etherscan. Kemudian ia membaca kembali entri tersebut, dan menampilkan kunci yang digunakannya serta nilai-nilai dalam entri tersebut (nilai, nomor blok, dan penulis).
+   Aplikasi sampel ini pertama-tama menulis entri ke WORM, menampilkan calldata dan tautan ke transaksi di penjelajah blok. Kemudian aplikasi ini membaca kembali entri tersebut, dan menampilkan kunci yang digunakannya serta nilai-nilai dalam entri tersebut (nilai, nomor blok, dan penulis).
 
-Sebagian besar klien adalah JavaScript Dapp normal. Jadi sekali lagi kita hanya akan membahas bagian-bagian yang menarik.
+Sebagian besar klien adalah JavaScript dapp normal. Jadi sekali lagi kita hanya akan membahas bagian-bagian yang menarik.
 
 ```javascript
 .
@@ -805,11 +805,11 @@ Sebagian besar klien adalah JavaScript Dapp normal. Jadi sekali lagi kita hanya 
 const main = async () => {
     const func = await worm.WRITE_ENTRY_CACHED()
 
-    // Perlu kunci baru setiap saat
+    // Membutuhkan kunci baru setiap saat
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-Slot tertentu hanya dapat ditulis satu kali, jadi kita menggunakan stempel waktu untuk memastikan kita tidak menggunakan kembali slot.
+Slot tertentu hanya dapat ditulis satu kali, jadi kita menggunakan stempel waktu untuk memastikan kita tidak menggunakan ulang slot.
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
@@ -827,7 +827,7 @@ tx.data = calldata
 sentTx = await wallet.sendTransaction(tx)
 ```
 
-Sama seperti kode pengujian Solidity, kita tidak dapat memanggil fungsi yang di-cache secara normal. Sebaliknya, kita perlu menggunakan mekanisme tingkat yang lebih rendah.
+Seperti halnya kode pengujian Solidity, kita tidak dapat memanggil fungsi yang di-cache secara normal. Sebaliknya, kita perlu menggunakan mekanisme tingkat yang lebih rendah.
 
 ```javascript
     .
@@ -842,7 +842,6 @@ Sama seperti kode pengujian Solidity, kita tidak dapat memanggil fungsi yang di-
 ```
 
 Untuk membaca entri, kita dapat menggunakan mekanisme normal. Tidak perlu menggunakan caching parameter dengan fungsi `view`.
-
 ## Kesimpulan {#conclusion}
 
 Kode dalam artikel ini adalah bukti konsep, tujuannya adalah untuk membuat ide tersebut mudah dipahami. Untuk sistem yang siap produksi, Anda mungkin ingin mengimplementasikan beberapa fungsionalitas tambahan:

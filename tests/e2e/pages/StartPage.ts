@@ -32,10 +32,7 @@ export class StartPage extends BasePage {
    * Navigate through the start flow and open the wallet connection modal.
    */
   async openWalletConnectionModal() {
-    await this.page
-      .getByRole("paragraph")
-      .filter({ hasText: "I have a wallet." })
-      .click()
+    await this.page.getByRole("checkbox", { name: "I have a wallet." }).click()
     await this.page.getByRole("button", { name: "Continue" }).click()
     await this.page
       .getByRole("button", { name: "Sign in with Ethereum" })

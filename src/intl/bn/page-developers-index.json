@@ -137,5 +137,16 @@
   "page-developers-why-title": "ভালো পারিশ্রমিক পান। রিমোট কাজ করুন। ভবিষ্যৎ নির্মাণ করুন।",
   "page-developers-why-subtitle": "ব্লকচেইন ক্যারিয়ারের অর্ধেকেরও বেশি হলো রিমোট-ফার্স্ট, কিছু অনুমানে এই সংখ্যা 70% পর্যন্ত হতে পারে।",
   "page-developers-why-avg-salary-dev": "ডেভেলপারের গড় বেতন",
-  "page-developers-why-avg-salary-blockchain": "ব্লকচেইন শিল্পে গড় বেতন"
+  "page-developers-why-avg-salary-blockchain": "ব্লকচেইন শিল্পে গড় বেতন",
+  "page-developers-why-grid-money-heading": "যে অর্থ আপনি প্রোগ্রাম করতে পারেন",
+  "page-developers-why-grid-money-desc": "এমন কোড লিখুন যা নির্ধারণ করে কীভাবে, কখন এবং কার কাছে মূল্য স্থানান্তরিত হবে। কোনো ব্যাংক নেই, কোনো মধ্যস্থতাকারী নেই, শুধু আপনার সংজ্ঞায়িত লজিক।",
+  "page-developers-why-grid-skills-heading": "ভবিষ্যৎ-প্রস্তুত দক্ষতা",
+  "page-developers-why-grid-skills-desc": "পরবর্তী ইন্টারনেটের মূল ভিত্তিগুলো শিখুন। প্রযুক্তির বিবর্তন হতে পারে, কিন্তু Web3-এর নীতিগুলো টিকে থাকবে।",
+  "page-developers-why-grid-censorship-heading": "সেন্সরশিপ প্রতিরোধ",
+  "page-developers-why-grid-censorship-desc": "এমন প্রজেক্ট এবং বাণিজ্য তৈরি করুন যা সরকার, কর্পোরেশন বা অ্যালগরিদম দ্বারা স্তব্ধ করা যায় না। যদি এটি গুরুত্বপূর্ণ হয়, তবে এটি অনলাইনে থেকে যায়।",
+  "page-developers-why-grid-sovereignty-heading": "ডিজিটাল সার্বভৌমত্ব",
+  "page-developers-why-grid-sovereignty-desc": "আপনাকে মুছে ফেলতে পারে এমন প্ল্যাটফর্মগুলোর ওপর নির্ভর না করে অনলাইনে আপনার পরিচয়, সম্পদ এবং সৃষ্টির মালিক হোন।",
+  "page-developers-blog-title": "নির্মাতা আপডেট",
+  "page-developers-blog-desc": "সর্বশেষ ইথেরিয়াম নির্মাতা রিসোর্স, টুল এবং ডেভেলপমেন্ট সম্পর্কিত অন্তর্দৃষ্টি।",
+  "page-developers-blog-view-all": "সব আপডেট দেখুন"
 }

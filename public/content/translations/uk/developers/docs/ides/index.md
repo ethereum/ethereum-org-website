@@ -59,6 +59,6 @@ lang: uk
 
 ## Подальше читання {#further-reading}
 
-- [IDE для Етеріуму](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _— Список IDE для Етеріуму від Alchemy_
+- [IDE для Етеріуму](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _— Список IDE для Етеріуму від Alchemy_
 
 _Знаєте ресурс спільноти, який вам допоміг? Відредагуйте цю сторінку та додайте його!_

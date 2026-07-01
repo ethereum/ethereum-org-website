@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "Recursos, herramientas y desarrollos para constructores del ecosistema de Ethereum.",
-  "page-latest-title": "Actualizaciones para constructores",
-  "page-latest-subtitle": "Un espacio compartido para perspectivas de expertos sobre los últimos recursos, herramientas y desarrollos en todo el ecosistema de constructores de Ethereum.",
+  "page-latest-meta-description": "Las últimas publicaciones de blog, noticias y actualizaciones de la comunidad de Ethereum, además de perspectivas de expertos de todo el ecosistema de constructores.",
+  "page-latest-title": "Últimas actualizaciones de Ethereum",
+  "page-latest-subtitle": "Las últimas publicaciones de blog, noticias y actualizaciones de la comunidad, además de perspectivas de expertos sobre los desarrollos en todo el ecosistema de constructores de Ethereum.",
   "page-latest-no-posts": "No se encontraron publicaciones.",
   "page-latest-read-more": "Leer más",
   "page-latest-minute-read": "{minutes} min de lectura",
-  "page-latest-team-attribution": "EF Builder Growth"
+  "page-latest-team-attribution": "EF Builder Growth",
+  "page-latest-cta-submit-resource": "Enviar un recurso",
+  "page-latest-cta-propose-article": "Proponer un artículo",
+  "page-latest-highlights-heading": "Destacados",
+  "page-latest-articles-heading": "Últimos artículos de Ethereum",
+  "page-latest-sources-heading": "Leer más en estos sitios web",
+  "page-latest-see-more": "Ver más ({count})",
+  "page-latest-sort-label": "Ordenar artículos",
+  "page-latest-sort-newest": "Más recientes primero",
+  "page-latest-sort-oldest": "Más antiguos primero",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "Algunos artículos se muestran en su idioma original (inglés).",
+  "page-latest-suggest-heading": "Sugerir un recurso",
+  "page-latest-suggest-description": "¿Conoces un boletín informativo o publicación de investigación de Ethereum que debería aparecer aquí, o tienes en mente un tema para un artículo de constructores? Abre un issue para enviar tu recurso."
 }

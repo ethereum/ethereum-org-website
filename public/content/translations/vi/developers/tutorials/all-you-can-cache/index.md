@@ -762,9 +762,9 @@ Vì chúng ta sử dụng hàm `<address>.call()` cấp thấp, chúng ta không
 
 ### Máy khách {#the-client}
 
-Một điều bạn không nhận được với các bài kiểm tra Solidity là mã JavaScript mà bạn có thể cắt và dán vào ứng dụng của riêng mình. Để viết mã đó, tôi đã triển khai WORM lên [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), mạng thử nghiệm mới của [Optimism](https://www.optimism.io/). Nó ở địa chỉ [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Một điều bạn không có được với các bài kiểm tra Solidity là mã JavaScript mà bạn có thể cắt và dán vào ứng dụng của riêng mình. Phiên bản gốc của hướng dẫn này đã triển khai WORM lên Optimism Goerli, mạng lưới này hiện đã ngừng hoạt động. Để chạy máy khách ngày nay, hãy triển khai lại WORM lên một mạng lưới OP Stack được hỗ trợ như [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), sau đó sử dụng địa chỉ hợp đồng thu được trong máy khách JavaScript.
 
-[Bạn có thể xem mã JavaScript cho máy khách tại đây](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Để sử dụng nó:
+[Bạn có thể xem mã JavaScript cho máy khách tại đây](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Kho lưu trữ mẫu được viết cho Optimism Goerli, vì vậy trước khi chạy nó, hãy cập nhật điểm cuối RPC và URL của trình khám phá trong `javascript/.env.example` và `javascript/index.js` cho mạng lưới mục tiêu của bạn. Để sử dụng nó:
 
 1. Sao chép kho lưu trữ git:
 
@@ -789,8 +789,8 @@ Một điều bạn không nhận được với các bài kiểm tra Solidity l
 
    | Tham số | Giá trị |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC | Cụm từ ghi nhớ cho một tài khoản có đủ ETH để thanh toán cho một giao dịch. [Bạn có thể nhận ETH miễn phí cho mạng lưới Optimism Goerli tại đây](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL đến Optimism Goerli. Điểm cuối công khai, `https://goerli.optimism.io`, bị giới hạn tốc độ nhưng đủ cho những gì chúng ta cần ở đây |
+   | MNEMONIC | Cụm từ ghi nhớ cho một tài khoản có đủ ETH để thanh toán cho một giao dịch. [Tài liệu về vòi của Optimism](https://docs.optimism.io/app-developers/tools/faucets) liệt kê các vòi mạng thử nghiệm hiện tại. |
+   | OPTIMISM_GOERLI_URL | URL RPC cho mạng lưới nơi bạn triển khai lại WORM. Đối với OP Sepolia, hãy sử dụng điểm cuối RPC của OP Sepolia như `https://sepolia.optimism.io` hoặc một điểm cuối khác từ nhà cung cấp của bạn. |
 
 5. Chạy `index.js`.
 
@@ -798,9 +798,9 @@ Một điều bạn không nhận được với các bài kiểm tra Solidity l
    node index.js
    ```
 
-   Ứng dụng mẫu này trước tiên ghi một mục nhập vào WORM, hiển thị dữ liệu lệnh gọi và một liên kết đến giao dịch trên Etherscan. Sau đó, nó đọc lại mục nhập đó và hiển thị khóa mà nó sử dụng cùng các giá trị trong mục nhập (giá trị, số khối và tác giả).
+   Ứng dụng mẫu này trước tiên ghi một mục nhập vào WORM, hiển thị dữ liệu lệnh gọi và một liên kết đến giao dịch trên một trình khám phá khối. Sau đó, nó đọc lại mục nhập đó và hiển thị khóa mà nó sử dụng cùng với các giá trị trong mục nhập (giá trị, số khối và tác giả).
 
-Hầu hết máy khách là JavaScript Dapp thông thường. Vì vậy, một lần nữa chúng ta sẽ chỉ xem xét những phần thú vị.
+Phần lớn máy khách là JavaScript dapp thông thường. Vì vậy, một lần nữa chúng ta sẽ chỉ xem xét những phần thú vị.
 
 ```javascript
 .
@@ -818,11 +818,11 @@ Một khe nhất định chỉ có thể được ghi vào một lần, vì vậ
 ```javascript
 const val = await worm.encodeVal("0x600D")
 
-// Ghi một mục
+// Ghi một mục nhập
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers mong đợi dữ liệu lệnh gọi là một chuỗi hex, `0x` theo sau là một số chẵn các chữ số thập lục phân. Vì `key` và `val` đều bắt đầu bằng `0x`, chúng ta cần loại bỏ các tiêu đề đó.
+Ethers mong đợi dữ liệu lệnh gọi là một chuỗi hex, `0x` theo sau là một số chẵn các chữ số thập lục phân. Vì cả `key` và `val` đều bắt đầu bằng `0x`, chúng ta cần loại bỏ các phần đầu đó.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -837,16 +837,15 @@ Giống như với mã kiểm tra Solidity, chúng ta không thể gọi một h
     .
     .
     .
-    // Đọc mục vừa ghi
-    const realKey = '0x' + key.slice(4)  // xóa cờ FF
+    // Đọc mục nhập vừa được ghi
+    const realKey = '0x' + key.slice(4)  // loại bỏ cờ FF
     const entryRead = await worm.readEntry(realKey)
     .
     .
     .
 ```
 
-Để đọc các mục nhập, chúng ta có thể sử dụng cơ chế thông thường. Không cần sử dụng bộ nhớ đệm tham số với các hàm `view`.
-
+Để đọc các mục nhập, chúng ta có thể sử dụng cơ chế bình thường. Không cần sử dụng bộ nhớ đệm tham số với các hàm `view`.
 ## Kết luận {#conclusion}
 
 Mã trong bài viết này là một bằng chứng khái niệm (proof of concept), mục đích là làm cho ý tưởng dễ hiểu. Đối với một hệ thống sẵn sàng cho sản xuất, bạn có thể muốn triển khai một số chức năng bổ sung:

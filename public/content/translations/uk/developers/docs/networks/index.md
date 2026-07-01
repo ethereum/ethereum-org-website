@@ -41,7 +41,6 @@ lang: uk
 **Sepolia — це рекомендована за замовчуванням тестова мережа для розробки застосунків**. Мережа Sepolia використовує набір валідаторів з обмеженим доступом, який контролюється командами клієнтів та тестувальників.
 
 ##### Ресурси
-
 - [Вебсайт](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -49,7 +48,6 @@ lang: uk
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Крани
-
 - [Кран Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Кран Chain Platform Sepolia](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Кран Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)

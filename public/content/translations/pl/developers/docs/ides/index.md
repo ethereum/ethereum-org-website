@@ -59,6 +59,6 @@ Większość uznanych środowisk IDE posiada wtyczki, które ulepszają doświad
 
 ## Dalsza lektura {#further-reading}
 
-- [Środowiska IDE dla Ethereum](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _– Lista środowisk IDE dla Ethereum od Alchemy_
+- [Środowiska IDE dla Ethereum](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _– Lista środowisk IDE dla Ethereum od Alchemy_
 
 _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!_

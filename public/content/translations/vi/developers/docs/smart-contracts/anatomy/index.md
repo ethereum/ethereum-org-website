@@ -49,7 +49,7 @@ Các kiểu khác bao gồm:
 
 Để có thêm giải thích, hãy xem tài liệu:
 
-- [Xem các kiểu dữ liệu của Vyper](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [Xem các kiểu dữ liệu của Vyper](https://docs.vyperlang.org/en/stable/types.html#value-types)
 - [Xem các kiểu dữ liệu của Solidity](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### Bộ nhớ {#memory}

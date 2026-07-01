@@ -37,41 +37,39 @@ incomplete: true
 
 **இப்போதைக்கு அமைப்பைத் தவிர்த்துவிட்டு, நேரடியாக மாதிரிகளுக்குச் செல்ல விரும்புகிறீர்களா?**
 
-- [Playground](https://playground.nethereum.com/) - உலாவி மூலம் எத்திரியத்துடன் தொடர்புகொண்டு Nethereum ஐ எவ்வாறு பயன்படுத்துவது என்பதை அறியவும்.
+- [Nethereum Playground](https://playground.nethereum.com/) - எத்திரியத்துடன் தொடர்புகொண்டு, உலாவி மூலம் Nethereum ஐ எவ்வாறு பயன்படுத்துவது என்பதை அறியவும்.
   - [கணக்கு இருப்பை வினவுதல்](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
   - [ERC-20 திறன் ஒப்பந்த இருப்பை வினவுதல்](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [ஒரு கணக்கிற்கு ஈதரைப் பரிமாற்றம் செய்தல்](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... மேலும் பல!
-
 ## இடைநிலை கட்டுரைகள் {#intermediate-articles}
 
 - [Nethereum தொடங்குதல் & முதல் திட்டம்](https://docs.nethereum.com/docs/getting-started/first-project)
 - [உங்கள் சொந்த மேம்பாட்டு சோதனைச் சங்கிலிகளை நிலைநிறுத்துங்கள்](https://github.com/Nethereum/Testchains)
-- [Solidity க்கான VSCode Codegen செருகுநிரல்](https://docs.nethereum.com/docs/aspire-templates/guide-codegen)
+- [Nethereum மற்றும் VS Code உடன் குறியீடு உருவாக்கம்](https://docs.nethereum.com/docs/smart-contracts/code-generation/)
 - [Unity மற்றும் எத்திரியம்: ஏன் மற்றும் எப்படி](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
-- [எத்திரியம் dapps க்கான ASP.NET Core Web API ஐ உருவாக்குதல்](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
-- [விநியோகச் சங்கிலி கண்காணிப்பு அமைப்பைச் செயல்படுத்த Nethereum Web3 ஐப் பயன்படுத்துதல்](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
+- [எத்திரியம் பரவலாக்கப்பட்ட செயலிகளுக்கான (dapps) ASP.NET Core Web API ஐ உருவாக்குதல்](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
+- [கட்டமைக்கப்பட்ட சங்கிலிசார் செயலிகளுக்கான Nethereum MUD கட்டமைப்பு](https://docs.nethereum.com/docs/mud-framework/overview/)
 - [Nethereum தொகுதிச்சங்கிலி செயலாக்கம்](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
-- [Nethereum Websocket ஸ்ட்ரீமிங்](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
+- [Nethereum நிகழ்நேர ஸ்ட்ரீமிங்](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido மற்றும் Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum மற்றும் Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-
 ## மேம்பட்ட பயன்பாட்டு முறைகள் {#advanced-use-patterns}
 
-- [Azure Key Vault மற்றும் Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
+- [Azure திறவுகோல் பெட்டகம் மற்றும் Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
-
+- [Ujo Nethereum பின்தள குறிப்பு கட்டமைப்பு](https://github.com/Nethereum/ujo-backend)
 ## .NET திட்டங்கள், கருவிகள் மற்றும் பிற வேடிக்கையான விஷயங்கள் {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _உலாவியில் Nethereum குறியீட்டுத் துணுக்குகளைத் தொகுக்கவும், உருவாக்கவும் மற்றும் இயக்கவும்_
-- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor இல் UI உடன் Nethereum codegen_
-- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _ஒரு .NET Wasm SPA இலகுரக தொகுதிச்சங்கிலி எக்ஸ்ப்ளோரர் மற்றும் எளிய வாலெட்_
+- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor இல் UI உடன் Nethereum குறியீடு உருவாக்கம் (codegen)_
+- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _ஒரு .NET Wasm SPA இலகுரக தொகுதிச்சங்கிலி எக்ஸ்ப்ளோரர் மற்றும் எளிய பணப்பை_
+- [Wonka Business Rules Engine](https://github.com/Nethereum/Wonka) - _இயல்பாகவே மீத்தரவு சார்ந்த ஒரு வணிக விதிகள் இயந்திரம் (.NET இயங்குதளம் மற்றும் எத்திரியம் இயங்குதளம் ஆகிய இரண்டிற்கும்)_
 - [நெதர்மைண்ட்](https://github.com/NethermindEth/nethermind) - _Linux, Windows, MacOS க்கான ஒரு .NET Core எத்திரியம் கிளையண்ட்_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _எத்திரியம் தொடர்பான குறியீட்டுத் தளங்களுடன் பணிபுரிவதற்கான பயன்பாட்டுச் செயல்பாடுகள்_
-- [TestChains](https://github.com/Nethereum/TestChains) - _விரைவான பதிலுக்காக முன்-கட்டமைக்கப்பட்ட .NET மேம்பாட்டுச் சங்கிலிகள் (அதிகாரச் சான்று (PoA))_
+- [TestChains](https://github.com/Nethereum/TestChains) - _விரைவான பதிலளிப்பிற்கான முன்-கட்டமைக்கப்பட்ட .NET மேம்பாட்டுச் சங்கிலிகள் (அதிகாரச் சான்று (PoA))_
 
 மேலும் ஆதாரங்களைத் தேடுகிறீர்களா? [ethereum.org/developers](/developers/) ஐப் பார்க்கவும்.
-
 ## .NET சமூகப் பங்களிப்பாளர்கள் {#dot-net-community-contributors}
 
 Nethereum இல், நாங்கள் பெரும்பாலும் [Gitter](https://gitter.im/Nethereum/Nethereum) இல் இருப்போம், அங்கு அனைவரும் கேள்விகளைக் கேட்க/பதிலளிக்க, உதவி பெற அல்லது சாதாரணமாகப் பேச வரவேற்கப்படுகிறார்கள். [Nethereum GitHub களஞ்சியத்தில்](https://github.com/Nethereum) ஒரு PR செய்ய அல்லது ஒரு சிக்கலைத் திறக்க தயங்க வேண்டாம், அல்லது எங்களிடம் உள்ள பல பக்க/மாதிரி திட்டங்களை உலாவவும். நீங்கள் எங்களை [டிஸ்கார்ட்](https://discord.gg/jQPrR58FxX) இலும் காணலாம்!

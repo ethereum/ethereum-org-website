@@ -388,7 +388,7 @@
   "validium-term": "Validium",
   "validium-definition": "Offchain řešení, které využívá <a href=\"/glossary/#validity-proof\">důkazy platnosti</a> ke zlepšení transakční propustnosti. Na rozdíl od <a href=\"/glossary/#zk-rollup\">rollupů s nulovou znalostí</a> nejsou data Validia uložena na vrstvě 1 Mainnetu. <a href=\"/developers/docs/scaling/validium/\">Více o Validium</a>.",
   "vyper-term": "Vyper",
-  "vyper-definition": "Vysokoúrovňový programovací jazyk se syntaxí podobnou Pythonu. Jeho cílem je přiblížit se čistě funkcionálnímu jazyku. Vytvořil jej Vitalik Buterin. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Více o Vyperu</a>.",
+  "vyper-definition": "Vysokoúrovňový programovací jazyk se syntaxí podobnou Pythonu. Vytvořil jej Vitalik Buterin. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Více o Vyperu</a>.",
   "wallet-term": "Peněženka",
   "wallet-definition": "Peněženka je digitální nástroj pro ukládání, odesílání a přijímání digitální měny, podobně jako virtuální peněženka pro vaše online peníze. <a href=\"/wallets/\">Více o peněženkách na Ethereu</a>.",
   "web2-term": "Web2",

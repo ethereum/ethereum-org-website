@@ -58,8 +58,10 @@ Uthibitisho wa maarifa-sifuri ni muhimu sana katika muktadha wa [utambulisho uli
       <p>
         Jifunze zaidi kuhusu NDI ya Bhutan katika <a href="/decentralized-identity/#national-and-government-id">Uchunguzi kifani wa Utambulisho Uliogatuliwa</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+ 
+</AlertDescription>
+ 
+</AlertContent>
 </Alert>
 
 ### Uthibitisho wa Ubinadamu {#proof-of-humanity}
@@ -235,5 +237,5 @@ ZK-STARK inachukuliwa kuwa na kinga dhidi ya tishio la ukokotoaji wa kwanta, kwa
 - [ZK-STARKs — Unda Uaminifu Unaoweza Kuhakikiwa, hata dhidi ya Kompyuta za Kwanta](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Utangulizi wa makadirio wa jinsi zk-SNARKs zinavyowezekana](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Kwa nini Uthibitisho wa Maarifa-Sifuri (ZKPs) ni Mabadiliko Makubwa kwa Utambulisho wa Kujitawala](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
-- [EIP-7503 Imefafanuliwa: Kuwezesha Uhamishaji wa Faragha Kwenye Ethereum Kwa Uthibitisho wa ZK](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_
+- [EIP-7503 Imefafanuliwa: Kuwezesha Uhamishaji wa Faragha Kwenye Ethereum Kwa Uthibitisho wa ZK](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Mchezo wa Kadi wa ZK: mchezo wa kujifunza misingi ya ZK na matumizi ya maisha halisi](https://github.com/ZK-card/zk-cards) - _Kadi za ZK_

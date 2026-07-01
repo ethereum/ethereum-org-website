@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "Ресурси, інструменти та розробки для будівельників з екосистеми Етеріуму.",
-  "page-latest-title": "Оновлення для будівельників",
-  "page-latest-subtitle": "Спільний простір для експертних поглядів на найновіші ресурси, інструменти та розробки в екосистемі будівельників Етеріуму.",
+  "page-latest-meta-description": "Останні публікації в блогах, новини та оновлення від спільноти Етеріуму, а також експертні думки з усієї екосистеми будівельників.",
+  "page-latest-title": "Останні оновлення Етеріуму",
+  "page-latest-subtitle": "Останні публікації в блогах, новини та оновлення від спільноти, а також експертні думки щодо розробок в екосистемі будівельників Етеріуму.",
   "page-latest-no-posts": "Публікацій не знайдено.",
   "page-latest-read-more": "Читати далі",
   "page-latest-minute-read": "{minutes} хв читання",
-  "page-latest-team-attribution": "EF Builder Growth"
+  "page-latest-team-attribution": "EF Builder Growth",
+  "page-latest-cta-submit-resource": "Надіслати ресурс",
+  "page-latest-cta-propose-article": "Запропонувати статтю",
+  "page-latest-highlights-heading": "Головне",
+  "page-latest-articles-heading": "Останні статті про Етеріум",
+  "page-latest-sources-heading": "Читайте більше на цих вебсайтах",
+  "page-latest-see-more": "Показати більше ({count})",
+  "page-latest-sort-label": "Сортувати статті",
+  "page-latest-sort-newest": "Спочатку нові",
+  "page-latest-sort-oldest": "Спочатку старі",
+  "page-latest-sort-az": "А–Я",
+  "page-latest-i18n-disclaimer": "Деякі статті відображаються мовою оригіналу (англійською).",
+  "page-latest-suggest-heading": "Запропонувати ресурс",
+  "page-latest-suggest-description": "Знаєте інформаційний бюлетень або дослідницьку публікацію про Етеріум, які варто додати сюди, або маєте на думці тему для статті від будівельників? Створіть issue, щоб надіслати свій ресурс."
 }

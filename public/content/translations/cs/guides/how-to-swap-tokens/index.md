@@ -1,6 +1,6 @@
 ---
 title: Jak swapovat tokeny
-description: Průvodce, jak swapovat tokeny na Ethereu.
+description: "Průvodce, jak swapovat tokeny na Ethereu."
 lang: cs
 ---
 

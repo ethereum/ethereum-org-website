@@ -253,17 +253,15 @@ ii. Розробники та команди проєктів, що викори
 
 <VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
-## Додаткова література про оптимістичні ролапи {#further-reading-on-optimistic-rollups}
+## Додаткова інформація про оптимістичні ролапи {#further-reading-on-optimistic-rollups}
 
 - [Як працюють оптимістичні ролапи (Повний посібник)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Що таке блокчейн-ролап? Технічний вступ](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Основний посібник з Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Практичний посібник з ролапів Етеріуму](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [Стан доказів шахрайства на рівнях 2 (l2) Етеріуму](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
 - [Як насправді працює ролап Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [Детальний огляд OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Що таке Оптимістична віртуальна машина?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
 ## Посібники: Оптимістичні ролапи та мости в Етеріумі {#tutorials}
 
 - [Огляд стандартного контракту мосту Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Анотований огляд коду стандартного мосту Optimism для переміщення активів між рівнем 1 (l1) та рівнем 2 (l2)._

@@ -59,6 +59,6 @@ lang: zh
 
 ## 延伸阅读 {#further-reading}
 
-- [以太坊 IDE](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy 的以太坊 IDE 列表_
+- [以太坊 IDE](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Alchemy 的以太坊 IDE 列表_
 
 _知道对你有帮助的社区资源吗？编辑本页面并添加它！_

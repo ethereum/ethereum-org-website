@@ -1,6 +1,6 @@
 ---
-title: Cách nhận biết token lừa đảo
-description: Tìm hiểu về token lừa đảo, cách chúng ngụy trang thành hợp pháp và cách phòng tránh.
+title: "Cách nhận biết token lừa đảo"
+description: "Tìm hiểu về token lừa đảo, cách chúng ngụy trang thành hợp pháp và cách phòng tránh."
 lang: vi
 ---
 
@@ -14,7 +14,7 @@ Có hai cách mà chúng có thể lừa dối bạn:
 Để minh họa token lừa đảo là gì và cách nhận biết chúng, chúng ta sẽ xem xét một ví dụ: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Token này cố gắng ngụy trang giống như token [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) hợp pháp.
 
 <ExpandableCard
-title="What is ARB?"
+title="ARB là gì?"
 contentPreview=''>
 
 Arbitrum là một tổ chức phát triển và quản lý các [bản cuộn optimistic (optimistic rollups)](/developers/docs/scaling/optimistic-rollups/). Ban đầu, Arbitrum được tổ chức dưới dạng một công ty vì lợi nhuận, nhưng sau đó đã thực hiện các bước để phi tập trung hóa. Là một phần của quá trình đó, họ đã phát hành một [token quản trị](/dao/#token-based-membership) có thể giao dịch.
@@ -22,7 +22,7 @@ Arbitrum là một tổ chức phát triển và quản lý các [bản cuộn o
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Tại sao token lừa đảo lại được gọi là wARB?"
 contentPreview=''>
 
 Có một quy ước trên Ethereum là khi một tài sản không tuân thủ ERC-20, chúng ta tạo ra một phiên bản "được bọc" (wrapped) của nó với tên bắt đầu bằng chữ "w". Vì vậy, ví dụ, chúng ta có wBTC cho bitcoin và <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH cho ether</a>.
@@ -36,7 +36,7 @@ Việc tạo ra một phiên bản được bọc của một token ERC-20 đã 
 Mục đích cốt lõi của Ethereum là sự phi tập trung. Điều này có nghĩa là không có cơ quan trung ương nào có thể tịch thu tài sản của bạn hoặc ngăn cản bạn triển khai một hợp đồng thông minh. Nhưng điều đó cũng có nghĩa là những kẻ lừa đảo có thể triển khai bất kỳ hợp đồng thông minh nào chúng muốn.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Hợp đồng thông minh là gì?"
 contentPreview=''>
 
 [Hợp đồng thông minh](/developers/docs/smart-contracts/) là các chương trình chạy trên chuỗi khối Ethereum. Ví dụ, mọi token ERC-20 đều được triển khai dưới dạng một hợp đồng thông minh.

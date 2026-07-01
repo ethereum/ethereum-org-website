@@ -271,8 +271,8 @@ Ayrıca, bir programın asla sonlanmayabileceği için program doğrulayıcılar
 
 **Mythril** - _Ethereum akıllı sözleşmelerindeki güvenlik açıklarını tespit etmek için sembolik bir yürütme aracı_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Belgeler](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [Belgeler](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## Daha fazla bilgi {#further-reading}
 

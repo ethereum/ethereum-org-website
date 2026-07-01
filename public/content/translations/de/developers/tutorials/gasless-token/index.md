@@ -673,7 +673,7 @@ Lassen Sie den Nutzer einen neuen `UserProxy` bereitstellen.
 
 ```js
          <br /><br />
-         <input type="text" placeholder="Oder bestehende Proxy-Adresse eingeben" value={newProxyAddr} onChange={proxyAddressChange} />
+         <input type="text" placeholder="Or enter existing proxy address" value={newProxyAddr} onChange={proxyAddressChange} />
          <br /><br />
          <button
             onClick={() => setProxyAddr(newProxyAddr)}

@@ -16,7 +16,7 @@ published: 2021-03-31
 
 Якщо ви новачок у розробці на блокчейні й не знаєте, з чого почати, або якщо ви просто хочете зрозуміти, як розгортати смарт-контракти та взаємодіяти з ними, цей посібник для вас. Ми розглянемо створення та розгортання простого смарт-контракту в тестовій мережі Sepolia за допомогою віртуального гаманця [МетаМаск](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) та [Alchemy](https://www.alchemy.com/eth) (не хвилюйтеся, якщо ви ще не розумієте, що все це означає, ми все пояснимо).
 
-У [частині 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) цього посібника ми розглянемо, як можна взаємодіяти з нашим смарт-контрактом після його розгортання, а в [частині 3](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) ми розповімо, як опублікувати його на Etherscan.
+У [частині 2](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) цього посібника ми розглянемо, як можна взаємодіяти з нашим смарт-контрактом після його розгортання, а в [частині 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) ми розповімо, як опублікувати його на Etherscan.
 
 Якщо у вас виникнуть запитання на будь-якому етапі, не соромтеся звертатися до [Discord Alchemy](https://discord.gg/gWuC7zB)!
 
@@ -73,13 +73,13 @@ mkdir hello-world
 cd hello-world
 ```
 
-Тепер, коли ми знаходимося в папці нашого проєкту, ми використаємо `npm init` для ініціалізації проєкту. Якщо у вас ще не встановлено npm, дотримуйтесь [цих інструкцій](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (нам також знадобиться Node.js, тому завантажте і його!).
+Тепер, коли ми знаходимося в папці нашого проєкту, ми використаємо `npm init` для ініціалізації проєкту. Якщо у вас ще не встановлено npm, дотримуйтесь [інструкцій зі встановлення Node.js](https://nodejs.org/en/download/) (нам знадобляться Node.js та npm для цього посібника).
 
 ```
 npm init
 ```
 
-Не має великого значення, як ви відповідатимете на запитання під час встановлення, ось як ми це зробили для довідки:
+Не має великого значення, як ви відповісте на запитання під час встановлення, ось як ми це зробили для прикладу:
 
 ```
 package name: (hello-world)
@@ -99,15 +99,14 @@ About to write to /Users/.../.../.../hello-world/package.json:
   "description": "hello world smart contract",
   "main": "index.js",
   "scripts": {
-     "test": "echo \\"Error: no test specified\\" && exit 1"
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
 }
 ```
 
-Схваліть package.json, і ми готові продовжувати!
-
+Схваліть package.json, і ми готові до роботи!
 ## Крок 7: Завантаження [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
 Hardhat — це середовище розробки для компіляції, розгортання, тестування та налагодження вашого програмного забезпечення для Етеріум. Воно допомагає розробникам створювати смарт-контракти та децентралізовані застосунки (dapps) локально перед розгортанням у робочому ланцюзі.
@@ -355,11 +354,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 Вітаємо! Ви щойно розгорнули смарт-контракт у ланцюзі Етеріум 🎉
 
-Щоб зрозуміти, як це працює технічно, давайте перейдемо на вкладку «Explorer» (Провідник) на нашій [панелі керування Alchemy](https://dashboard.alchemyapi.io/explorer). Якщо у вас є кілька застосунків Alchemy, обов'язково відфільтруйте за застосунком і виберіть «Hello World».
+Щоб зрозуміти, як це працює технічно, давайте перейдемо на вкладку «Explorer» (Провідник) на нашій [панелі керування Alchemy](https://dashboard.alchemy.com/explorer). Якщо у вас є кілька застосунків Alchemy, обов'язково відфільтруйте за застосунком і виберіть «Hello World».
 ![hello world explorer](./hello-world-explorer.png)
 
-Тут ви побачите кілька викликів JSON-RPC, які Hardhat/Ethers зробили для нас внутрішньо, коли ми викликали функцію `.deploy()`. Два важливих виклики, на які варто звернути увагу, — це [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction), який є запитом на фактичний запис нашого контракту в ланцюг Sepolia, і [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash), який є запитом на читання інформації про нашу транзакцію за заданим хешем (типовий патерн під час транзакцій). Щоб дізнатися більше про надсилання транзакцій, перегляньте цей посібник із [надсилання транзакцій за допомогою Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+Тут ви побачите кілька викликів JSON-RPC, які Hardhat/Ethers зробили для нас внутрішньо, коли ми викликали функцію `.deploy()`. Два важливих виклики, на які варто звернути увагу, — це [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), який є запитом на фактичний запис нашого контракту в ланцюг Sepolia, і [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), який є запитом на читання інформації про нашу транзакцію за заданим хешем (типовий патерн під час транзакцій). Щоб дізнатися більше про надсилання транзакцій, перегляньте цей посібник із [надсилання транзакцій за допомогою Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 
-Це все для частини 1 цього посібника, у частині 2 ми фактично [взаємодіятимемо з нашим смарт-контрактом](https://www.alchemy.com/docs/interacting-with-a-smart-contract), оновивши наше початкове повідомлення, а в частині 3 ми [опублікуємо наш смарт-контракт на Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan), щоб усі знали, як із ним взаємодіяти.
+Це все для частини 1 цього посібника, у частині 2 ми фактично [взаємодіятимемо з нашим смарт-контрактом](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract), оновивши наше початкове повідомлення, а в частині 3 ми [опублікуємо наш смарт-контракт на Etherscan](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan), щоб усі знали, як із ним взаємодіяти.
 
 **Хочете дізнатися більше про Alchemy? Відвідайте наш [вебсайт](https://www.alchemy.com/eth). Не хочете пропускати оновлення? Підпишіться на нашу розсилку [тут](https://www.alchemy.com/newsletter)! Також обов'язково приєднуйтесь до нашого [Discord](https://discord.gg/u72VCg3).**.

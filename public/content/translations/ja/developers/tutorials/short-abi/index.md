@@ -28,7 +28,7 @@ published: 2022-04-01
 
 [オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups)は、誰でも履歴を確認して現在の状態が正しいことを検証できるように、すべての過去のトランザクションの記録を保存する必要があります。
 イーサリアム・メインネットにデータを取り込む最も安価な方法は、それをコールデータとして書き込むことです。
-この解決策は、[オプティミズム](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-)と[アービトラム](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups)の両方で採用されています。
+この解決策は、[オプティミズム](https://docs.optimism.io/op-stack/protocol/overview)と[アービトラム](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction)の両方で採用されています。
 
 ### L2トランザクションのコスト {#cost-of-l2-transactions}
 
@@ -113,8 +113,7 @@ import { OrisUselessToken } from "./Token.sol";
 呼び出し方を知るために、トークン関数が必要です。
 
 ```solidity
-コントラクト CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -126,7 +125,7 @@ import { OrisUselessToken } from "./Token.sol";
      * @dev トークンのアドレスを指定します
      * @param tokenAddr_ ERC-20コントラクトのアドレス
      */
-    コンストラクタ(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

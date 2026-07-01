@@ -208,12 +208,10 @@ Ein großes Dankeschön an alle, die zu diesem Artikel beigetragen haben, indem 
 
 Podcast: Wie man ein ETH-Ereignis von A bis Z organisiert und bewirbt:
 
-- [Die ETHWarsaw-Fallstudie, von Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
+- [Die ETHWarsaw-Fallstudie von Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 Twitter Space:
 
 - [ETH Community AMA](https://x.com/NapulETH/status/1905732699094151623)
 
 Artikel:
-
-- [Aufbau von ETHKL, von Danny H.](https://sekto.tech/ethkl24)

@@ -676,7 +676,7 @@ Cho phép người dùng triển khai một `UserProxy` mới.
 
 ```js
          <br /><br />
-         <input type="text" placeholder="Hoặc nhập địa chỉ proxy hiện có" value={newProxyAddr} onChange={proxyAddressChange} />
+         <input type="text" placeholder="Or enter existing proxy address" value={newProxyAddr} onChange={proxyAddressChange} />
          <br /><br />
          <button
             onClick={() => setProxyAddr(newProxyAddr)}

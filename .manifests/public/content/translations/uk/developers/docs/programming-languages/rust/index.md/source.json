@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/programming-languages/rust/index.md",
-  "generatedAt": "2026-06-19T18:56:31.430Z",
-  "rootHash": "6759b4dbf857",
+  "generatedAt": "2026-06-29T23:59:58.068Z",
+  "rootHash": "eae38ae5bdad",
   "tree": {
     "contentHash": "92610beacf61",
-    "anchorHash": "a29c96a882c8",
+    "anchorHash": "d4732b0bb864",
     "children": {
       "frontmatter:title": {
         "contentHash": "3fb6ac791c02",
@@ -222,7 +222,7 @@
       },
       "rust-projects-and-tools": {
         "contentHash": "5ce1ed0327df",
-        "anchorHash": "16cdb991708c",
+        "anchorHash": "d4f36aef2ffe",
         "labelHash": "20d74f967f2e",
         "children": {
           "_label": {
@@ -283,7 +283,7 @@
           },
           "link:6": {
             "contentHash": "cd50a37462f3",
-            "anchorHash": "cb9f11c78c6b"
+            "anchorHash": "c0697175968d"
           },
           "prose:23": {
             "contentHash": "5e16c617c4b4",
@@ -463,5 +463,5 @@
       "rust-community-contributors"
     ]
   },
-  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

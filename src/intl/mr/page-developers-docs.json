@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "डेटा आणि ॲनालिटिक्स",
   "docs-nav-data-and-analytics-description": "ब्लॉकचेन डेटा कसा एकत्रित केला जातो, व्यवस्थापित केला जातो आणि विकेंद्रित ॲप्लिकेशन्स (dapps) मध्ये कसा लागू केला जातो",
   "docs-nav-data-availability": "डेटा उपलब्धता",
+  "docs-nav-data-availability-description": "इथेरियममधील डेटा उपलब्धतेशी संबंधित समस्या आणि उपायांचा आढावा",
   "docs-nav-data-availability-storage-strategies": "ब्लॉकचेन डेटा स्टोरेज धोरणे",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "स्थिती प्रमाणीकरण विकासाधीन आहे",
   "layer-2-metis-note": "फसवणुकीचे पुरावे विकासाधीन आहेत",
   "layer-2-optimism-note": "दोष पुरावे विकासाधीन आहेत",
-  "back-to-top": "वर परत जा",
   "banner-page-incomplete": "हे पृष्ठ अपूर्ण आहे आणि आम्हाला तुमच्या मदतीची आवडेल. हे पृष्ठ संपादित करा आणि इतरांना उपयुक्त वाटेल असे काहीही जोडा.",
   "next": "पुढील",
   "previous": "मागील"

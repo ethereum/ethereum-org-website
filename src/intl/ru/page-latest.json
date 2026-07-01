@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "Ресурсы, инструменты и разработки для разработчиков из экосистемы Эфириума.",
-  "page-latest-title": "Обновления для разработчиков",
-  "page-latest-subtitle": "Общее пространство для экспертных мнений о новейших ресурсах, инструментах и разработках в экосистеме разработчиков Эфириума.",
+  "page-latest-meta-description": "Последние публикации в блогах, новости и обновления от сообщества Эфириума, а также мнения экспертов со всей экосистемы разработчиков.",
+  "page-latest-title": "Последние обновления Эфириума",
+  "page-latest-subtitle": "Последние публикации в блогах, новости и обновления от сообщества, а также мнения экспертов о событиях во всей экосистеме разработчиков Эфириума.",
   "page-latest-no-posts": "Публикации не найдены.",
   "page-latest-read-more": "Читать далее",
   "page-latest-minute-read": "{minutes} мин. чтения",
-  "page-latest-team-attribution": "EF Builder Growth"
+  "page-latest-team-attribution": "EF Builder Growth",
+  "page-latest-cta-submit-resource": "Предложить ресурс",
+  "page-latest-cta-propose-article": "Предложить статью",
+  "page-latest-highlights-heading": "Главное",
+  "page-latest-articles-heading": "Последние статьи об Эфириуме",
+  "page-latest-sources-heading": "Читайте больше на этих сайтах",
+  "page-latest-see-more": "Показать еще ({count})",
+  "page-latest-sort-label": "Сортировать статьи",
+  "page-latest-sort-newest": "Сначала новые",
+  "page-latest-sort-oldest": "Сначала старые",
+  "page-latest-sort-az": "А–Я",
+  "page-latest-i18n-disclaimer": "Некоторые статьи отображаются на языке оригинала (английском).",
+  "page-latest-suggest-heading": "Предложить ресурс",
+  "page-latest-suggest-description": "Знаете новостную рассылку или исследовательскую публикацию об Эфириуме, которую следует добавить сюда, или у вас на примете есть тема статьи для разработчиков? Создайте issue, чтобы предложить свой ресурс."
 }

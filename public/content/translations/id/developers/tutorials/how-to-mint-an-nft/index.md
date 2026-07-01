@@ -21,7 +21,7 @@ Mari kita mulai!
 
 ## Langkah 1: Instal Web3 {#install-web3}
 
-Jika Anda mengikuti tutorial pertama tentang pembuatan kontrak pintar NFT Anda, Anda sudah memiliki pengalaman menggunakan Ethers.js. Web3 mirip dengan Ethers, karena ini adalah pustaka yang digunakan untuk mempermudah pembuatan permintaan ke rantai blok [Ethereum](/). Dalam tutorial ini kita akan menggunakan [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), yang merupakan pustaka Web3 yang ditingkatkan yang menawarkan percobaan ulang otomatis dan dukungan WebSocket yang kuat.
+Jika Anda mengikuti tutorial pertama tentang pembuatan kontrak pintar NFT Anda, Anda sudah memiliki pengalaman menggunakan Ethers.js. Web3 mirip dengan Ethers, karena ini adalah pustaka yang digunakan untuk mempermudah pembuatan permintaan ke rantai blok [Ethereum](/). Dalam tutorial ini kita akan menggunakan [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), yang merupakan pustaka Web3 yang ditingkatkan yang menawarkan percobaan ulang otomatis dan dukungan WebSocket yang kuat.
 
 Di direktori beranda proyek Anda, jalankan:
 
@@ -40,9 +40,9 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Langkah 3: Ambil ABI kontrak Anda {#contract-abi}
+## Langkah 3: Dapatkan ABI kontrak Anda {#contract-abi}
 
-ABI (Application Binary Interface) kontrak kita adalah antarmuka untuk berinteraksi dengan kontrak pintar kita. Anda dapat mempelajari lebih lanjut tentang ABI Kontrak [di sini](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat secara otomatis menghasilkan ABI untuk kita dan menyimpannya di file `MyNFT.json`. Untuk menggunakan ini, kita perlu mengurai kontennya dengan menambahkan baris kode berikut ke file `mint-nft.js` kita:
+ABI (Application Binary Interface) kontrak kita adalah antarmuka untuk berinteraksi dengan kontrak pintar kita. Anda dapat mempelajari lebih lanjut tentang [ABI kontrak](/glossary/#abi). Hardhat secara otomatis menghasilkan ABI untuk kita dan menyimpannya di file `MyNFT.json`. Untuk menggunakannya, kita perlu mengurai isinya dengan menambahkan baris kode berikut ke file `mint-nft.js` kita:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -59,7 +59,6 @@ Untuk menjalankan `mint-nft.js` dan melihat ABI Anda dicetak ke konsol, navigasi
 ```js
 node scripts/mint-nft.js
 ```
-
 ## Langkah 4: Konfigurasikan metadata untuk NFT Anda menggunakan IPFS {#config-meta}
 
 Jika Anda ingat dari tutorial kita di Bagian 1, fungsi kontrak pintar `mintNFT` kita menerima parameter tokenURI yang harus merujuk ke dokumen JSON yang mendeskripsikan metadata NFT— yang sebenarnya menghidupkan NFT tersebut, memungkinkannya memiliki properti yang dapat dikonfigurasi, seperti nama, deskripsi, gambar, dan atribut lainnya.
@@ -140,15 +139,15 @@ PUBLIC_KEY = "your-public-account-address"
 
 Pertama, mari kita tentukan fungsi bernama `mintNFT(tokenData)` dan buat transaksi kita dengan melakukan hal berikut:
 
-1. Ambil _PRIVATE_KEY_ dan _PUBLIC_KEY_ Anda dari file `.env`.
+1. Dapatkan _PRIVATE_KEY_ dan _PUBLIC_KEY_ Anda dari file `.env`.
 
-1. Selanjutnya, kita perlu mengetahui nonce akun. Spesifikasi nonce digunakan untuk melacak jumlah transaksi yang dikirim dari alamat Anda — yang kita perlukan untuk tujuan keamanan dan untuk mencegah [serangan pemutaran ulang (replay attacks)](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). Untuk mendapatkan jumlah transaksi yang dikirim dari alamat Anda, kita menggunakan [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+1. Selanjutnya, kita perlu mencari tahu nonce akun. Spesifikasi nonce digunakan untuk melacak jumlah transaksi yang dikirim dari alamat Anda — yang kita butuhkan untuk tujuan keamanan dan untuk mencegah serangan pemutaran ulang (replay attack). Untuk mendapatkan jumlah transaksi yang dikirim dari alamat Anda, kita menggunakan [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
 
-1. Terakhir kita akan menyiapkan transaksi kita dengan info berikut:
+1. Terakhir, kita akan menyiapkan transaksi kita dengan info berikut:
 
 - `'from': PUBLIC_KEY` — Asal transaksi kita adalah alamat publik kita
 
-- `'to': contractAddress` — Kontrak yang ingin kita ajak berinteraksi dan mengirimi transaksi
+- `'to': contractAddress` — Kontrak yang ingin kita ajak berinteraksi dan kirimi transaksi
 
 - `'nonce': nonce` — Nonce akun dengan jumlah transaksi yang dikirim dari alamat kita
 
@@ -156,7 +155,7 @@ Pertama, mari kita tentukan fungsi bernama `mintNFT(tokenData)` dan buat transak
 
 - `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Komputasi yang ingin kita lakukan dalam transaksi ini — yang dalam hal ini adalah mencetak NFT
 
-File `mint-nft.js` Anda seharusnya terlihat seperti ini sekarang:
+File `mint-nft.js` Anda sekarang akan terlihat seperti ini:
 
 ```js
    require('dotenv').config();
@@ -184,7 +183,6 @@ File `mint-nft.js` Anda seharusnya terlihat seperti ini sekarang:
      };
    }​
 ```
-
 ## Langkah 8: Menandatangani transaksi {#sign-txn}
 
 Sekarang setelah kita membuat transaksi kita, kita perlu menandatanganinya untuk mengirimkannya. Di sinilah kita akan menggunakan kunci privat kita.
@@ -317,7 +315,7 @@ Sekarang, jalankan `node scripts/mint-nft.js` untuk menyebarkan NFT Anda. Setela
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-Selanjutnya, kunjungi [mempool Alchemy](https://dashboard.alchemyapi.io/mempool) Anda untuk melihat status transaksi Anda (apakah tertunda, ditambang, atau dibatalkan oleh jaringan). Jika transaksi Anda dibatalkan, ada baiknya juga untuk memeriksa [Blockscout](https://eth-sepolia.blockscout.com/) dan mencari hash transaksi Anda.
+Selanjutnya, kunjungi [mempool Alchemy](https://dashboard.alchemy.com/mempool) Anda untuk melihat status transaksi Anda (apakah tertunda, ditambang, atau dibatalkan oleh jaringan). Jika transaksi Anda dibatalkan, ada baiknya juga untuk memeriksa [Blockscout](https://eth-sepolia.blockscout.com/) dan mencari hash transaksi Anda.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Lihat hash transaksi NFT Anda di Etherscan_
 

@@ -27,7 +27,7 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche partecipa
 **Notizie**
 
 - [BeInCrypto](http://www.beincrypto.com.br) - notizie e articoli sulle criptovalute, incluso un elenco di exchange, disponibili in Brasile
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - versione brasiliana di Cointelegraph, un importante organo di informazione sulle criptovalute
+- [Cointelegraph](https://cointelegraph.com.br/) - versione brasiliana di Cointelegraph, un importante organo di informazione sulle criptovalute
 - [Livecoins](http://www.livecoins.com.br/ethereum) - notizie e strumenti sulle criptovalute
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - notizie e report sulle criptovalute
 - [Modular Crypto](https://modularcrypto.xyz/) - notizie sulle criptovalute e articoli educativi
@@ -37,7 +37,7 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche partecipa
 - [web3dev](https://www.web3dev.com.br/) - Hub di contenuti e community Discord per sviluppatori Web3.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - risorse per imparare il Web3 e la finanza decentralizzata (DeFi)
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - notizie e formazione sulle criptovalute, inclusi "Ethereum per principianti" e "DeFi per principianti"
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - approfondimenti dallo spazio delle criptovalute, formazione e blog
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - approfondimenti dallo spazio delle criptovalute, formazione e blog
 - [Cointimes](http://www.cointimes.com.br/) - notizie e formazione sulle criptovalute
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - una guida che risponde alle domande fondamentali e più frequenti sulle cripto
 

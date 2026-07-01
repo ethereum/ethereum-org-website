@@ -1,6 +1,6 @@
 ---
-title: كيف يمكنني المشاركة؟
-description: كيفية المشاركة في مجتمع إيثيريوم.
+title: "كيف يمكنني المشاركة؟"
+description: "كيفية المشاركة في مجتمع إيثيريوم."
 lang: ar
 ---
 
@@ -11,7 +11,7 @@ lang: ar
 ## المطورون <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - تعرف على إيثيريوم وجربه على [<span dir="ltr">ethereum.org/developers/</span>](/developers/)
-- احضر هاكاثون [ETHGlobal](https://ethglobal.co/) بالقرب منك!
+- احضر هاكاثون [ETHGlobal](https://ethglobal.com/) بالقرب منك!
 - تحقق من [المشاريع المتعلقة بمجال خبرتك أو لغة البرمجة التي تفضلها](/developers/docs/programming-languages/)
 - شاهد أو شارك في [مكالمات طبقة التنفيذ والإجماع](https://www.youtube.com/@EthereumProtocol/streams)
 - [قائمة أمنيات برنامج دعم النظام البيئي](https://esp.ethereum.foundation/wishlist/) - مجالات الأدوات، والتوثيق، والبنية التحتية التي يسعى فيها برنامج دعم النظام البيئي لإيثيريوم بنشاط للحصول على طلبات المنح
@@ -27,14 +27,14 @@ lang: ar
 - اكتب أو راجع مقترح تحسين إيثيريوم (EIP)
   - اكتب EIP
     1. قدم فكرتك على [Ethereum Magicians](https://ethereum-magicians.org)
-    2. اقرأ [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **نعم، هذه هي الوثيقة _بأكملها_.**
-    3. اتبع التوجيهات في EIP-1. ارجع إليها أثناء كتابة مسودتك.
+    2. اقرأ [<span dir="ltr">EIP-1</span>](https://eips.ethereum.org/EIPS/eip-1) - **نعم، هذه هي الوثيقة _بأكملها_.**
+    3. اتبع التوجيهات في <span dir="ltr">EIP-1</span>. ارجع إليها أثناء كتابة مسودتك.
   - تعرف على كيفية أن تصبح [محرر EIP](https://eips.ethereum.org/EIPS/eip-5069)
     - يمكنك مراجعة مقترحات EIP مع النظراء الآن! راجع [طلبات السحب (PRs) المفتوحة التي تحمل العلامة `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). قدم ملاحظات فنية على الرابط `discussion-to`.
   - شارك في [حوكمة EIP](https://github.com/ethereum-cat-herders/EIPIP)
     - انضم إلى [ديسكورد Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
   - [المزيد حول مقترحات EIP](/eips/)
-- [<span dir="ltr">Challenges.ethereum.org</span>](https://challenges.ethereum.org/) - سلسلة من المكافآت البحثية عالية القيمة، حيث يمكنك كسب <span dir="ltr">>$100,000 USD</span>
+- [<span dir="ltr">Challenges.ethereum.org</span>](https://challenges.ethereum.org/) - سلسلة من المكافآت البحثية عالية القيمة، حيث يمكنك كسب <span dir="ltr">$100,000 USD</span>
 - [<span dir="ltr">Ethresear.ch</span>](https://ethresear.ch) - المنتدى الأساسي لأبحاث إيثيريوم، والمنتدى الأكثر تأثيرًا في العالم في مجال اقتصاديات التشفير
 - [جلسات اسألني أي شيء (AMA) لأبحاث مؤسسة إيثيريوم (EF)](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - سلسلة أسئلة وأجوبة مستمرة مع الباحثين. مع فتح كل جزء تالٍ، يمكن لأي شخص طرح الأسئلة.
 - [قائمة أمنيات برنامج دعم النظام البيئي](https://esp.ethereum.foundation/wishlist/) - المجالات البحثية التي يسعى فيها برنامج دعم النظام البيئي لإيثيريوم بنشاط للحصول على طلبات المنح
@@ -80,7 +80,7 @@ lang: ar
 
 النظام البيئي لإيثيريوم في مهمة لتمويل السلع العامة والمشاريع المؤثرة. من خلال تبرعات صغيرة جدًا، يمكنك إظهار دعمك والسماح بإنجاز أعمال مهمة.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [<span dir="ltr">clr.fund</span>](https://clr.fund/#/about)
 
 ## المتخصصون الماليون والمحاسبون <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

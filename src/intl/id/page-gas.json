@@ -32,7 +32,7 @@
   "page-gas-attack-of-the-cryptokitties-text": "Pada bulan November 2017, proyek CryptoKitties yang populer diluncurkan. Lonjakan popularitasnya yang cepat menyebabkan kepadatan jaringan yang signifikan dan biaya gas yang sangat tinggi. Tantangan yang ditimbulkan oleh CryptoKitties mempercepat urgensi untuk menemukan solusi dalam menskalakan Ethereum.",
   "page-gas-why-do-we-need-gas-header": "Mengapa kita membutuhkan gas?",
   "page-gas-why-do-we-need-gas-text": "Gas adalah elemen penting dalam menjaga keamanan Ethereum dan memproses transaksi. Gas membantu dalam banyak hal:",
-  "page-gas-benefits-1-description": "Gas menjaga Ethereum tetap <a href=\"/glossary/#anti-sybil\">tahan sybil</a> dengan mencegah pelaku kejahatan membanjiri jaringan dengan aktivitas penipuan.",
+  "page-gas-benefits-1-description": "Gas menjaga Ethereum tetap <a href=\"/glossary/#anti-sybil\">tahan Sybil</a> dengan mencegah aktor jahat membebani jaringan dengan aktivitas penipuan.",
   "page-gas-benefits-2-description": "Karena komputasi membutuhkan biaya gas, melakukan spamming pada Ethereum dengan transaksi yang mahal, baik secara tidak sengaja maupun dengan niat jahat, tidak akan menguntungkan secara finansial.",
   "page-gas-benefits-3-description": "Batas keras (hard-limit) pada jumlah komputasi yang dapat dilakukan pada satu waktu mencegah Ethereum dari kelebihan beban, membantu memastikan jaringan selalu dapat diakses.",
   "page-gas-how-is-gas-calculated-header": "Bagaimana gas dihitung?",

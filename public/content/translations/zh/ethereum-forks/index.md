@@ -1,6 +1,6 @@
 ---
-title: 所有以太坊分叉的时间线（2014 年至今）
-description: 以太坊区块链的历史，包括主要里程碑、版本发布和分叉。
+title: "所有以太坊分叉的时间线（2014 年至今）"
+description: "以太坊区块链的历史，包括主要里程碑、版本发布和分叉。"
 lang: zh
 sidebarDepth: 1
 authors: ["尼克索"]
@@ -86,15 +86,15 @@ authors: ["尼克索"]
 
 [更多关于弗萨卡的信息](/roadmap/fusaka/)
 
-### 布拉格-厄勒克特拉 ("佩克特拉") {#pectra}
+### 布拉格-Electra ("佩克特拉") {#pectra}
 
 <NetworkUpgradeSummary name="pectra" />
 
-布拉格-厄勒克特拉（“佩克特拉”）升级包含对以太坊协议的多项改进，旨在提升所有用户、二层网络 (l2)、质押者和节点操作员的体验。
+布拉格-Electra (“佩克特拉”) 升级包含了几项对以太坊协议的改进，旨在提升所有用户、二层网络 (l2)、质押者和节点运营商的体验。
 
-质押功能得到了升级，引入了可复利的验证者账户，并通过使用执行提款地址改善了对质押资金的控制。EIP-7251 将单个验证者的最大有效余额增加到 2048，提高了质押者的资金效率。EIP-7002 允许执行账户安全地触发验证者操作，包括退出或提取部分资金，从而改善了 ETH 质押者的体验，同时有助于加强节点操作员的问责制。
+质押功能得到了升级，引入了复利验证者账户，并通过使用执行提款地址改善了对质押资金的控制。EIP-7251 将单个验证者的最大有效余额增加到 2048，从而提高了质押者的资金效率。EIP-7002 允许执行账户安全地触发验证者操作，包括退出或提取部分资金，这改善了 ETH 质押者的体验，同时有助于加强节点运营商的问责制。
 
-升级的其他部分侧重于改善普通用户的体验。EIP-7702 使普通的非智能合约账户（[EOA](/glossary/#eoa)）能够执行类似于智能合约的代码。这为传统的以太坊账户解锁了无限的新功能，例如交易批量处理、Gas 赞助、替代身份验证、可编程支出控制、账户恢复机制等。
+升级的其他部分侧重于改善普通用户的体验。EIP-7702 使普通的非智能合约账户（[外部拥有账户 (EOA)](/glossary/#eoa)）能够执行类似于智能合约的代码。这为传统的以太坊账户解锁了无限的新功能，例如交易批量处理、Gas 赞助、替代身份验证、可编程支出控制、账户恢复机制等。
 
 <ExpandableCard title="佩克特拉 EIP" contentPreview="此次升级中包含的官方改进。">
 
@@ -104,7 +104,7 @@ authors: ["尼克索"]
   <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>设置 EOA 账户代码</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>增加斑点吞吐量</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>增加调用数据成本</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>将斑点时间表添加到执行层配置文件中</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>将斑点时间表添加到执行层配置文件</em></li>
 </ul>
 
 更好的质押体验：
@@ -126,10 +126,9 @@ authors: ["尼克索"]
 
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
 - [佩克特拉将如何提升质押体验](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [阅读厄勒克特拉升级规范](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
-- [布拉格-厄勒克特拉（“佩克特拉”）常见问题解答](/roadmap/pectra/)
+- [阅读 Electra 升级规范](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
+- [布拉格-Electra (“佩克特拉”) 常见问题解答](/roadmap/pectra/)
 
 <Divider />
 

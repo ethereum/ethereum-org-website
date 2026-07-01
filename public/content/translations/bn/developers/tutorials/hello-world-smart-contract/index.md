@@ -11,7 +11,7 @@ published: 2021-03-31
 
 আপনি যদি ব্লকচেইন ডেভেলপমেন্টে নতুন হয়ে থাকেন এবং কোথা থেকে শুরু করবেন তা না জানেন, অথবা আপনি যদি শুধু বুঝতে চান কীভাবে স্মার্ট কন্ট্রাক্ট ডিপ্লয় করতে হয় এবং এর সাথে ইন্টারঅ্যাক্ট করতে হয়, তবে এই গাইডটি আপনার জন্য। আমরা একটি ভার্চুয়াল ওয়ালেট [মেটামাস্ক](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), এবং [Alchemy](https://www.alchemy.com/eth) ব্যবহার করে Sepolia টেস্ট নেটওয়ার্কে একটি সাধারণ স্মার্ট কন্ট্রাক্ট তৈরি এবং ডিপ্লয় করার প্রক্রিয়াটি ধাপে ধাপে দেখব (যদি আপনি এখনও এগুলোর অর্থ না বোঝেন তবে চিন্তা করবেন না, আমরা এটি ব্যাখ্যা করব)।
 
-এই টিউটোরিয়ালের [পার্ট 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract)-এ আমরা দেখব কীভাবে আমাদের স্মার্ট কন্ট্রাক্ট এখানে ডিপ্লয় হওয়ার পর আমরা এর সাথে ইন্টারঅ্যাক্ট করতে পারি, এবং [পার্ট 3](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan)-এ আমরা এটি Etherscan-এ কীভাবে প্রকাশ করতে হয় তা কভার করব।
+এই টিউটোরিয়ালের [পার্ট 2](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract)-এ আমরা দেখব কীভাবে আমাদের স্মার্ট কন্ট্রাক্ট এখানে ডিপ্লয় হওয়ার পর আমরা এর সাথে ইন্টারঅ্যাক্ট করতে পারি, এবং [পার্ট 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan)-এ আমরা এটি Etherscan-এ কীভাবে প্রকাশ করতে হয় তা কভার করব।
 
 যেকোনো পর্যায়ে আপনার যদি কোনো প্রশ্ন থাকে, তবে নির্দ্বিধায় [Alchemy ডিসকর্ড](https://discord.gg/gWuC7zB)-এ যোগাযোগ করুন!
 
@@ -68,7 +68,7 @@ mkdir hello-world
 cd hello-world
 ```
 
-এখন যেহেতু আমরা আমাদের প্রজেক্ট ফোল্ডারের ভেতরে আছি, আমরা প্রজেক্টটি ইনিশিয়ালাইজ করতে `npm init` ব্যবহার করব। আপনার যদি আগে থেকে npm ইনস্টল করা না থাকে, তবে [এই নির্দেশিকাগুলো](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) অনুসরণ করুন (আমাদের Node.js-ও প্রয়োজন হবে তাই সেটিও ডাউনলোড করুন!)।
+এখন যেহেতু আমরা আমাদের প্রজেক্ট ফোল্ডারের ভেতরে আছি, তাই প্রজেক্টটি ইনিশিয়ালাইজ করতে আমরা `npm init` ব্যবহার করব। যদি আপনার আগে থেকেই npm ইনস্টল করা না থাকে, তবে [Node.js ইনস্টলেশন নির্দেশিকা](https://nodejs.org/en/download/) অনুসরণ করুন (এই টিউটোরিয়ালের জন্য আমাদের Node.js এবং npm প্রয়োজন হবে)।
 
 ```
 npm init
@@ -94,7 +94,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
   "description": "hello world smart contract",
   "main": "index.js",
   "scripts": {
-     "test": "echo \\"Error: no test specified\\" && exit 1"
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
@@ -102,7 +102,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 package.json অনুমোদন করুন এবং আমরা কাজ শুরু করতে প্রস্তুত!
-
 ## ধাপ 7: [Hardhat](https://hardhat.org/getting-started/#overview) ডাউনলোড করুন {#step-7}
 
 Hardhat হলো আপনার ইথেরিয়াম সফটওয়্যার কম্পাইল, ডিপ্লয়, টেস্ট এবং ডিবাগ করার জন্য একটি ডেভেলপমেন্ট এনভায়রনমেন্ট। এটি লাইভ চেইনে ডিপ্লয় করার আগে স্থানীয়ভাবে স্মার্ট কন্ট্রাক্ট এবং বিকেন্দ্রীকৃত অ্যাপ্লিকেশন (dapp) তৈরি করার সময় ডেভেলপারদের সাহায্য করে।
@@ -350,11 +349,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 অভিনন্দন! আপনি এইমাত্র ইথেরিয়াম চেইনে একটি স্মার্ট কন্ট্রাক্ট ডিপ্লয় করেছেন 🎉
 
-ভেতরে আসলে কী ঘটছে তা বুঝতে, চলুন আমাদের [Alchemy ড্যাশবোর্ডের](https://dashboard.alchemyapi.io/explorer) এক্সপ্লোরার ট্যাবে যাই। আপনার যদি একাধিক Alchemy অ্যাপ থাকে তবে অ্যাপ অনুযায়ী ফিল্টার করতে ভুলবেন না এবং “Hello World” নির্বাচন করুন।
+ভেতরে আসলে কী ঘটছে তা বুঝতে, চলুন আমাদের [Alchemy ড্যাশবোর্ডের](https://dashboard.alchemy.com/explorer) এক্সপ্লোরার ট্যাবে যাই। আপনার যদি একাধিক Alchemy অ্যাপ থাকে তবে অ্যাপ অনুযায়ী ফিল্টার করতে ভুলবেন না এবং “Hello World” নির্বাচন করুন।
 ![hello world explorer](./hello-world-explorer.png)
 
-এখানে আপনি বেশ কয়েকটি জেসন-আরপিসি কল দেখতে পাবেন যা Hardhat/Ethers আমাদের জন্য ভেতরে ভেতরে তৈরি করেছে যখন আমরা `.deploy()` ফাংশনটি কল করেছিলাম। এখানে উল্লেখ করার মতো দুটি গুরুত্বপূর্ণ কল হলো [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction), যা মূলত Sepolia চেইনে আমাদের কন্ট্রাক্ট লেখার রিকোয়েস্ট, এবং [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash) যা হ্যাশ দেওয়া থাকলে আমাদের ট্রানজ্যাকশন সম্পর্কে তথ্য পড়ার একটি রিকোয়েস্ট (ট্রানজ্যাকশনের ক্ষেত্রে একটি সাধারণ প্যাটার্ন)। ট্রানজ্যাকশন পাঠানো সম্পর্কে আরও জানতে, [Web3 ব্যবহার করে ট্রানজ্যাকশন পাঠানোর](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) ওপর এই টিউটোরিয়ালটি দেখুন।
+এখানে আপনি বেশ কয়েকটি জেসন-আরপিসি কল দেখতে পাবেন যা Hardhat/Ethers আমাদের জন্য ভেতরে ভেতরে তৈরি করেছে যখন আমরা `.deploy()` ফাংশনটি কল করেছিলাম। এখানে উল্লেখ করার মতো দুটি গুরুত্বপূর্ণ কল হলো [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), যা মূলত Sepolia চেইনে আমাদের কন্ট্রাক্ট লেখার রিকোয়েস্ট, এবং [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash) যা হ্যাশ দেওয়া থাকলে আমাদের ট্রানজ্যাকশন সম্পর্কে তথ্য পড়ার একটি রিকোয়েস্ট (ট্রানজ্যাকশনের ক্ষেত্রে একটি সাধারণ প্যাটার্ন)। ট্রানজ্যাকশন পাঠানো সম্পর্কে আরও জানতে, [Web3 ব্যবহার করে ট্রানজ্যাকশন পাঠানোর](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) ওপর এই টিউটোরিয়ালটি দেখুন।
 
-এই টিউটোরিয়ালের পার্ট 1-এর জন্য এটুকুই, পার্ট 2-এ আমরা আমাদের প্রাথমিক বার্তা আপডেট করে আমাদের [স্মার্ট কন্ট্রাক্টের সাথে ইন্টারঅ্যাক্ট করব](https://www.alchemy.com/docs/interacting-with-a-smart-contract), এবং পার্ট 3-এ আমরা [Etherscan-এ আমাদের স্মার্ট কন্ট্রাক্ট প্রকাশ করব](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) যাতে সবাই জানতে পারে কীভাবে এর সাথে ইন্টারঅ্যাক্ট করতে হয়।
+এই টিউটোরিয়ালের পার্ট 1-এর জন্য এটুকুই, পার্ট 2-এ আমরা আমাদের প্রাথমিক বার্তা আপডেট করে আমাদের [স্মার্ট কন্ট্রাক্টের সাথে ইন্টারঅ্যাক্ট করব](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract), এবং পার্ট 3-এ আমরা [Etherscan-এ আমাদের স্মার্ট কন্ট্রাক্ট প্রকাশ করব](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) যাতে সবাই জানতে পারে কীভাবে এর সাথে ইন্টারঅ্যাক্ট করতে হয়।
 
 **Alchemy সম্পর্কে আরও জানতে চান? আমাদের [ওয়েবসাইট](https://www.alchemy.com/eth) দেখুন। কোনো আপডেট মিস করতে চান না? [এখানে](https://www.alchemy.com/newsletter) আমাদের নিউজলেটারে সাবস্ক্রাইব করুন! আমাদের [ডিসকর্ড](https://discord.gg/u72VCg3)-এও যোগ দিতে ভুলবেন না।**।

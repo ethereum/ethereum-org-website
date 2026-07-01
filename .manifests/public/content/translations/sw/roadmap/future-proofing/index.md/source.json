@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/future-proofing/index.md",
-  "generatedAt": "2026-06-18T00:46:15.915Z",
-  "rootHash": "e102cab4aec4",
+  "generatedAt": "2026-06-30T00:52:25.454Z",
+  "rootHash": "e552f428df64",
   "tree": {
-    "contentHash": "506f62852b37",
-    "anchorHash": "7ea8f51052ce",
+    "contentHash": "15a8b695d979",
+    "anchorHash": "c7aecae2c2a9",
     "children": {
       "frontmatter:title": {
         "contentHash": "58fb7e2c80e3",
@@ -40,8 +40,8 @@
         "anchorHash": "e3b0c44298fc"
       },
       "quantum-resistance": {
-        "contentHash": "6a945a6b2b91",
-        "anchorHash": "e2575b274ea1",
+        "contentHash": "a315a8a727fa",
+        "anchorHash": "fd49227ee796",
         "labelHash": "e456dd4f208f",
         "children": {
           "_label": {
@@ -139,8 +139,8 @@
             ]
           },
           "what-is-being-done": {
-            "contentHash": "378d4b0a61df",
-            "anchorHash": "2034a5f2ce16",
+            "contentHash": "a5ffa4d8d598",
+            "anchorHash": "a15ed93f62da",
             "labelHash": "1ad26ce2c708",
             "children": {
               "_label": {
@@ -167,9 +167,9 @@
                 "contentHash": "6257f900618d",
                 "anchorHash": "e3b0c44298fc"
               },
-              "link:2": {
-                "contentHash": "794b37e0dcdc",
-                "anchorHash": "3e288b8e07b3"
+              "html-tag:2": {
+                "contentHash": "793b555df4b4",
+                "anchorHash": "893309bc1cb0"
               }
             },
             "childrenOrder": [
@@ -179,7 +179,7 @@
               "prose:4",
               "link:1",
               "prose:5",
-              "link:2"
+              "html-tag:2"
             ]
           }
         },
@@ -450,5 +450,5 @@
       "current-progress"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

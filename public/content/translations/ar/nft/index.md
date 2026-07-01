@@ -101,16 +101,14 @@ summaryPoints:
   المزيد حول الأمان
 </ButtonLink>
 
-## قراءة إضافية {#further-reading}
+## قراءات إضافية {#further-reading}
 
-- [دليل المبتدئين لـ <span dir="ltr">NFTs</span>](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _ليندا شيه، يناير <span dir="ltr">2020</span>_
-- [متتبع <span dir="ltr">NFT</span> من <span dir="ltr">Etherscan</span>](https://etherscan.io/nft-top-contracts)
-- [متتبع <span dir="ltr">NFT</span> من <span dir="ltr">Blockscout</span>](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
+- [دليل المبتدئين إلى الرموز غير القابلة للاستبدال (<span dir="ltr">NFTs</span>)](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _ليندا شي، يناير 2020_
+- [متتبع <span dir="ltr">NFT</span> على <span dir="ltr">Etherscan</span>](https://etherscan.io/nft-top-contracts)
+- [متتبع <span dir="ltr">NFT</span> على <span dir="ltr">Blockscout</span>](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [معيار الرمز المميز <span dir="ltr">ERC-721</span>](/developers/docs/standards/tokens/erc-721/)
 - [معيار الرمز المميز <span dir="ltr">ERC-1155</span>](/developers/docs/standards/tokens/erc-1155/)
-- [تطبيقات وأدوات <span dir="ltr">NFT</span> الشائعة](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 - [ويكي معايير <span dir="ltr">NFT</span>](https://nft-standards.gitbook.io/nft-standards-wiki)
-
 ## موارد أخرى {#other-resources}
 
 - [<span dir="ltr">NFTScan</span>](https://nftscan.com/)

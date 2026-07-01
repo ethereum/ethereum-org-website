@@ -388,7 +388,7 @@
   "validium-term": "Validium",
   "validium-definition": "Solusi offchain yang menggunakan <a href=\"/glossary/#validity-proof\">bukti validitas</a> untuk meningkatkan laju pemrosesan transaksi. Tidak seperti <a href=\"/glossary/#zk-rollup\">rollup tanpa pengetahuan</a>, data validium tidak disimpan di Mainnet lapisan 1. <a href=\"/developers/docs/scaling/validium/\">Lebih lanjut tentang validium</a>.",
   "vyper-term": "Vyper",
-  "vyper-definition": "Bahasa pemrograman tingkat tinggi dengan sintaks yang mirip dengan Python. Dimaksudkan untuk lebih mendekati bahasa fungsional murni. Dibuat oleh Vitalik Buterin. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Lebih lanjut tentang Vyper</a>.",
+  "vyper-definition": "Bahasa pemrograman tingkat tinggi dengan sintaks mirip Python. Dibuat oleh Vitalik Buterin. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Lebih lanjut tentang Vyper</a>.",
   "wallet-term": "Dompet",
   "wallet-definition": "Dompet adalah alat digital untuk menyimpan, mengirim, dan menerima mata uang digital, seperti dompet virtual untuk uang online Anda. <a href=\"/wallets/\">Lebih lanjut tentang dompet Ethereum</a>.",
   "web2-term": "Web2",

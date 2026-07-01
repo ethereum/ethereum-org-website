@@ -93,5 +93,5 @@ Baadhi ya miradi inayochunguza faragha kwa kuthibitisha inajumuisha [Uthibitisha
 - [Wasimamizi wa Faragha wa Ethereum](https://pse.dev/) (PSE), maabara ya utafiti na maendeleo ya Taasisi ya Ethereum inayolenga faragha kwa mfumo ikolojia
 - [Web3PrivacyNow](https://web3privacy.info/), mtandao wa watu, miradi, na mashirika yaliyokubaliana ambayo yanalinda na kuendeleza haki za binadamu mtandaoni
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), tovuti ya kukadiria mkoba wa Ethereum inayolenga kutoa orodha ya kina ya mikoba, utendaji wao, mbinu, na usaidizi kwa viwango fulani.
-- [Zk-kit](https://zkkit.pse.dev/): Seti ya maktaba (algorithms, kazi za matumizi, na miundo ya data) zinazoweza kutumika tena katika miradi tofauti na itifaki za sifuri-maarifa.
+- [Zk-kit](https://zkkit.org/): Seti ya maktaba (algorithms, kazi za matumizi, na miundo ya data) zinazoweza kutumika tena katika miradi tofauti na itifaki za sifuri-maarifa.
 - [Programu za Faragha](/apps/categories/privacy/) - Gundua orodha ya programu za Faragha zilizoratibiwa zinazoendeshwa kwenye Ethereum.

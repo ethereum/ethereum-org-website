@@ -134,7 +134,7 @@ _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _ఓపెన్ సోర్స్ లావాదేవీ గ్యాస్ ధర అంచనా సాధనం_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _లావాదేవీ ఫీజులను తగ్గించడానికి మరియు డబ్బు ఆదా చేయడానికి ఎథీరియం మరియు L2 గ్యాస్ ధరలను పర్యవేక్షించండి మరియు ట్రాక్ చేయండి_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _టైప్ 0 లెగసీ లావాదేవీలు మరియు టైప్ 2 EIP-1559 లావాదేవీలు రెండింటికీ మద్దతు ఇచ్చే గ్యాస్ అంచనా క్రోమ్ ఎక్స్‌టెన్షన్._
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _మెయిన్‌నెట్, Arbitrum మరియు పాలిగాన్‌లోని విభిన్న లావాదేవీ రకాల కోసం మీ స్థానిక కరెన్సీలో గ్యాస్ ఫీజులను లెక్కించండి._
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _మెయిన్‌నెట్, Arbitrum మరియు పాలిగాన్‌లోని విభిన్న లావాదేవీ రకాల కోసం మీ స్థానిక కరెన్సీలో గ్యాస్ ఫీజులను లెక్కించండి._
 
 ## సంబంధిత సాధనాలు {#related-tools}
 

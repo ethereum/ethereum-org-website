@@ -112,11 +112,15 @@ export const TopicLayout = async ({
       {editBanner}
       <PageHero
         breadcrumbs={{ slug, startDepth: 1 }}
-        heroImg={{
-          src: frontmatter.image,
-          width: frontmatter.imageWidth ?? 760,
-          height: frontmatter.imageHeight ?? 450,
-        }}
+        heroImg={
+          frontmatter.image
+            ? {
+                src: frontmatter.image,
+                width: frontmatter.imageWidth ?? 760,
+                height: frontmatter.imageHeight ?? 450,
+              }
+            : undefined
+        }
         blurDataURL={frontmatter.blurDataURL}
         title={frontmatter.title}
         description={heroDescription}

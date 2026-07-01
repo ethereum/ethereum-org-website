@@ -63,9 +63,9 @@ _గమనిక: నెట్‌వర్క్ రద్దీ కారణం
 
 ### దశ 5: మీ బ్యాలెన్స్‌ని తనిఖీ చేయండి {#step-5-check-your-balance}
 
-మీ వాలెట్‌లో ETH ఉందో లేదో ఒకటికి రెండుసార్లు తనిఖీ చేయడానికి, [Alchemy కంపోజర్ టూల్](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) ఉపయోగించి [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) అభ్యర్థన చేద్దాం. ఇది మన వాలెట్‌లోని ETH మొత్తాన్ని తిరిగి ఇస్తుంది. మరింత తెలుసుకోవడానికి [కంపోజర్ టూల్‌ను ఎలా ఉపయోగించాలో తెలిపే Alchemy చిన్న ట్యుటోరియల్‌ని](https://youtu.be/r6sjRxBZJuU) చూడండి.
+మీ వాలెట్‌లో ETH ఉందో లేదో ఒకసారి నిర్ధారించుకోవడానికి, [Alchemy యొక్క శాండ్‌బాక్స్ టూల్](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) ఉపయోగించి [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) అభ్యర్థనను చేద్దాం. ఇది మన వాలెట్‌లో ఉన్న ETH మొత్తాన్ని తిరిగి ఇస్తుంది. మరింత తెలుసుకోవడానికి [కంపోజర్ టూల్‌ను ఎలా ఉపయోగించాలో తెలిపే Alchemy యొక్క చిన్న ట్యుటోరియల్‌ని](https://youtu.be/r6sjRxBZJuU) చూడండి.
 
-మీ మెటామాస్క్ ఖాతా చిరునామాను నమోదు చేసి, **Send Request**పై క్లిక్ చేయండి. దిగువ కోడ్ స్నిప్పెట్ లాగా కనిపించే ప్రతిస్పందనను మీరు చూస్తారు.
+మీ మెటామాస్క్ ఖాతా చిరునామాను నమోదు చేసి, **Send Request**పై క్లిక్ చేయండి. మీరు దిగువ కోడ్ స్నిప్పెట్ లాంటి ప్రతిస్పందనను చూస్తారు.
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
@@ -74,8 +74,7 @@ _గమనిక: నెట్‌వర్క్ రద్దీ కారణం
 > _గమనిక: ఈ ఫలితం weiలో ఉంది, ETHలో కాదు. ఈథర్ యొక్క అతిచిన్న విలువగా Wei ఉపయోగించబడుతుంది._
 
 హమ్మయ్య! మన నకిలీ డబ్బు అంతా అక్కడే ఉంది.
-
-### దశ 6: మన ప్రాజెక్ట్‌ను ప్రారంభించండి {#step-6-initialize-our-project}
+### దశ 6: మన ప్రాజెక్ట్‌ను ఇనిషియలైజ్ చేయండి {#step-6-initialize-our-project}
 
 ముందుగా, మనం మన ప్రాజెక్ట్ కోసం ఒక ఫోల్డర్‌ను క్రియేట్ చేయాలి. మీ కమాండ్ లైన్‌కి వెళ్లి కింది వాటిని నమోదు చేయండి.
 
@@ -84,11 +83,11 @@ mkdir hello-world
 cd hello-world
 ```
 
-ఇప్పుడు మనం మన ప్రాజెక్ట్ ఫోల్డర్ లోపల ఉన్నాము కాబట్టి, ప్రాజెక్ట్‌ను ప్రారంభించడానికి మనం `npm init`ని ఉపయోగిస్తాము.
+ఇప్పుడు మనం మన ప్రాజెక్ట్ ఫోల్డర్ లోపల ఉన్నాము కాబట్టి, ప్రాజెక్ట్‌ను ఇనిషియలైజ్ చేయడానికి మనం `npm init`ని ఉపయోగిస్తాము.
 
-> మీరు ఇంకా npmని ఇన్‌స్టాల్ చేయకపోతే, [Node.js మరియు npmని ఇన్‌స్టాల్ చేయడానికి ఈ సూచనలను](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) అనుసరించండి.
+> మీరు ఇంకా npmని ఇన్‌స్టాల్ చేయకపోతే, Node.js మరియు npmని ఇన్‌స్టాల్ చేయడానికి [Node.js ఇన్‌స్టాలేషన్ సూచనలను](https://nodejs.org/en/download/) అనుసరించండి.
 
-ఈ ట్యుటోరియల్ ప్రయోజనం కోసం, మీరు ప్రారంభ ప్రశ్నలకు ఎలా సమాధానం ఇస్తారనేది ముఖ్యం కాదు. సూచన కోసం మేము దీన్ని ఎలా చేశామో ఇక్కడ ఉంది:
+ఈ ట్యుటోరియల్ ప్రయోజనం కోసం, మీరు ఇనిషియలైజేషన్ ప్రశ్నలకు ఎలా సమాధానం ఇస్తారనేది ముఖ్యం కాదు. సూచన కోసం మేము దీన్ని ఎలా చేసామో ఇక్కడ ఉంది:
 
 ```
 package name: (hello-world)
@@ -116,8 +115,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-package.jsonని ఆమోదించండి మరియు మనం ముందుకు వెళ్లడానికి సిద్ధంగా ఉన్నాము!
-
+package.jsonని ఆమోదించండి మరియు మనం ఇక ముందుకు సాగవచ్చు!
 ### దశ 7: Hardhatని డౌన్‌లోడ్ చేయండి {#step-7-download-hardhat}
 
 Hardhat అనేది మీ ఎథీరియం సాఫ్ట్‌వేర్‌ను కంపైల్ చేయడానికి, డిప్లాయ్ చేయడానికి, పరీక్షించడానికి మరియు డీబగ్ చేయడానికి ఒక డెవలప్‌మెంట్ పర్యావరణం. లైవ్ చైన్‌కు డిప్లాయ్ చేయడానికి ముందు స్థానికంగా స్మార్ట్ కాంట్రాక్ట్‌లు మరియు వికేంద్రీకృత అప్లికేషన్‌లను (dapps) నిర్మించేటప్పుడు ఇది డెవలపర్‌లకు సహాయపడుతుంది.
@@ -225,7 +223,7 @@ contract HelloWorld {
 
 మీ వాలెట్ నుండి పంపబడే ప్రతి లావాదేవీకి మీ ప్రత్యేకమైన ప్రైవేట్ కీని ఉపయోగించి సంతకం అవసరం. మన ప్రోగ్రామ్‌కు ఈ అనుమతిని అందించడానికి, మనం మన ప్రైవేట్ కీని ఎన్విరాన్‌మెంట్ ఫైల్‌లో సురక్షితంగా నిల్వ చేయవచ్చు. మనం ఇక్కడ Alchemy కోసం API కీని కూడా నిల్వ చేస్తాము.
 
-> లావాదేవీలను పంపడం గురించి మరింత తెలుసుకోవడానికి, Web3 ఉపయోగించి లావాదేవీలను పంపడంపై [ఈ ట్యుటోరియల్‌ని](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) చూడండి.
+> లావాదేవీలను పంపడం గురించి మరింత తెలుసుకోవడానికి, Web3 ఉపయోగించి లావాదేవీలను పంపడంపై [ఈ ట్యుటోరియల్‌ని](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) చూడండి.
 
 ముందుగా, మీ ప్రాజెక్ట్ డైరెక్టరీలో dotenv ప్యాకేజీని ఇన్‌స్టాల్ చేయండి:
 
@@ -255,7 +253,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 ### దశ 12: Ethers.jsని ఇన్‌స్టాల్ చేయండి {#step-12-install-ethersjs}
 
-Ethers.js అనేది [ప్రామాణిక JSON-RPC పద్ధతులను](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) మరింత యూజర్ ఫ్రెండ్లీ పద్ధతులతో ర్యాప్ చేయడం ద్వారా ఎథీరియంతో ఇంటరాక్ట్ అవ్వడాన్ని మరియు అభ్యర్థనలు చేయడాన్ని సులభతరం చేసే లైబ్రరీ.
+Ethers.js అనేది [ప్రామాణిక JSON-RPC పద్ధతులను](/developers/docs/apis/json-rpc/) మరింత యూజర్ ఫ్రెండ్లీ పద్ధతులతో ర్యాప్ చేయడం ద్వారా ఎథీరియంతో ఇంటరాక్ట్ అవ్వడాన్ని మరియు అభ్యర్థనలు చేయడాన్ని సులభతరం చేసే లైబ్రరీ.
 
 అదనపు టూలింగ్ మరియు విస్తరించిన కార్యాచరణ కోసం [ప్లగిన్‌లను](https://hardhat.org/plugins/) ఏకీకృతం చేయడానికి Hardhat మనల్ని అనుమతిస్తుంది. కాంట్రాక్ట్ డిప్లాయ్‌మెంట్ కోసం మనం [Ethers ప్లగిన్‌ను](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) సద్వినియోగం చేసుకుంటాము.
 
@@ -314,7 +312,7 @@ npx hardhat compile
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getకాంట్రాక్ట్Factory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // డిప్లాయ్‌మెంట్ ప్రారంభించండి, కాంట్రాక్ట్ ఆబ్జెక్ట్‌కు రిజాల్వ్ అయ్యే ప్రామిస్‌ను తిరిగి ఇస్తుంది
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -373,7 +371,7 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 ![](./hello-world-explorer.png)
 
-మనం `.deploy()` ఫంక్షన్‌ను కాల్ చేసినప్పుడు Hardhat/Ethers మన కోసం అంతర్గతంగా చేసిన కొన్ని JSON-RPC పద్ధతులను ఇక్కడ మీరు చూస్తారు. ఇక్కడ రెండు ముఖ్యమైన పద్ధతులు [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), ఇది మన కాంట్రాక్ట్‌ను Goerli చైన్‌లో రాయడానికి చేసే అభ్యర్థన, మరియు [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), ఇది హ్యాష్ ఇవ్వబడిన మన లావాదేవీ గురించిన సమాచారాన్ని చదవడానికి చేసే అభ్యర్థన. లావాదేవీలను పంపడం గురించి మరింత తెలుసుకోవడానికి, [Web3 ఉపయోగించి లావాదేవీలను పంపడంపై మా ట్యుటోరియల్‌ని](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) చూడండి.
+మనం `.deploy()` ఫంక్షన్‌ను కాల్ చేసినప్పుడు Hardhat/Ethers మన కోసం అంతర్గతంగా చేసిన కొన్ని JSON-RPC పద్ధతులను ఇక్కడ మీరు చూస్తారు. ఇక్కడ రెండు ముఖ్యమైన పద్ధతులు [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), ఇది మన కాంట్రాక్ట్‌ను Goerli చైన్‌లో రాయడానికి చేసే అభ్యర్థన, మరియు [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), ఇది హ్యాష్ ఇవ్వబడిన మన లావాదేవీ గురించిన సమాచారాన్ని చదవడానికి చేసే అభ్యర్థన. లావాదేవీలను పంపడం గురించి మరింత తెలుసుకోవడానికి, [Web3 ఉపయోగించి లావాదేవీలను పంపడంపై మా ట్యుటోరియల్‌ని](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) చూడండి.
 
 ## పార్ట్ 2: మీ స్మార్ట్ కాంట్రాక్ట్‌తో ఇంటరాక్ట్ అవ్వండి {#part-2-interact-with-your-smart-contract}
 
@@ -486,7 +484,7 @@ main()
 టెర్మినల్‌లో `npx hardhat run scripts/interact.js` ఉపయోగించి ఫైల్‌ను రన్ చేసిన తర్వాత మనం ఈ ప్రతిస్పందనను చూడాలి:
 
 ```
-సందేశం: Hello world!
+The message is: Hello world!
 ```
 
 అభినందనలు! మీరు ఎథీరియం బ్లాక్‌చైన్ నుండి స్మార్ట్ కాంట్రాక్ట్ డేటాను విజయవంతంగా చదివారు, చాలా అద్భుతం!
@@ -566,12 +564,12 @@ main()
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-సందేశం: Hello World!
-సందేశాన్ని అప్‌డేట్ చేస్తోంది...
-కొత్త సందేశం: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
-ఆ స్క్రిప్ట్‌ను రన్ చేస్తున్నప్పుడు, కొత్త సందేశం లోడ్ అయ్యే ముందు `Updating the message...` దశ లోడ్ అవ్వడానికి కొంత సమయం పడుతుందని మీరు గమనించవచ్చు. దానికి కారణం మైనింగ్ ప్రక్రియ; లావాదేవీలు మైన్ అవుతున్నప్పుడు వాటిని ట్రాక్ చేయడం గురించి మీకు ఆసక్తి ఉంటే, లావాదేవీ స్థితిని చూడటానికి [Alchemy మెమ్‌పూల్](https://dashboard.alchemyapi.io/mempool)ని సందర్శించండి. ఒకవేళ లావాదేవీ డ్రాప్ అయితే, [Goerli Etherscan](https://goerli.etherscan.io)ని తనిఖీ చేసి, మీ లావాదేవీ హ్యాష్ కోసం వెతకడం కూడా సహాయకరంగా ఉంటుంది.
+ఆ స్క్రిప్ట్‌ను రన్ చేస్తున్నప్పుడు, కొత్త సందేశం లోడ్ అయ్యే ముందు `Updating the message...` దశ లోడ్ అవ్వడానికి కొంత సమయం పడుతుందని మీరు గమనించవచ్చు. దానికి కారణం మైనింగ్ ప్రక్రియ; లావాదేవీలు మైన్ అవుతున్నప్పుడు వాటిని ట్రాక్ చేయడం గురించి మీకు ఆసక్తి ఉంటే, లావాదేవీ స్థితిని చూడటానికి [Alchemy మెమ్‌పూల్](https://dashboard.alchemy.com/mempool)ని సందర్శించండి. ఒకవేళ లావాదేవీ డ్రాప్ అయితే, [Goerli Etherscan](https://goerli.etherscan.io)ని తనిఖీ చేసి, మీ లావాదేవీ హ్యాష్ కోసం వెతకడం కూడా సహాయకరంగా ఉంటుంది.
 
 ## పార్ట్ 3: మీ స్మార్ట్ కాంట్రాక్ట్‌ను Etherscanలో పబ్లిష్ చేయండి {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -679,7 +677,7 @@ https://goerli.etherscan.io/address/<contract-address>#contracts
 ఈ ట్యుటోరియల్ ముగిసే సమయానికి, మీరు వీటిని ఎలా చేయాలో తెలుసుకుంటారు:
 
 - మీ వికేంద్రీకృత అప్లికేషన్ (dapp)కి మెటామాస్క్ వాలెట్‌ను కనెక్ట్ చేయడం
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) APIని ఉపయోగించి మీ స్మార్ట్ కాంట్రాక్ట్ నుండి డేటాను చదవడం
+- [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) APIని ఉపయోగించి మీ స్మార్ట్ కాంట్రాక్ట్ నుండి డేటాను చదవడం
 - మెటామాస్క్ ఉపయోగించి ఎథీరియం లావాదేవీలపై సంతకం చేయడం
 
 ఈ dapp కోసం, మేము మా ఫ్రంటెండ్ ఫ్రేమ్‌వర్క్‌గా [React](https://react.dev/)ని ఉపయోగిస్తాము; అయితే, మేము మా ప్రాజెక్ట్‌కి Web3 కార్యాచరణను తీసుకురావడంపైనే ఎక్కువగా దృష్టి సారిస్తాము కాబట్టి, దాని ప్రాథమికాలను విచ్ఛిన్నం చేయడానికి మేము ఎక్కువ సమయం వెచ్చించబోమని గమనించడం ముఖ్యం.
@@ -900,33 +898,33 @@ export const updateMessage = async (message) => {}
 
 ఇది చాలా దశల వలె అనిపించవచ్చు, కానీ చింతించకండి! వాటిలో ప్రతిదాన్ని దశలవారీగా ఎలా చేయాలో మేము మీకు మార్గనిర్దేశం చేస్తాము! :\)
 
-#### ఎథీరియం చైన్‌కి API కనెక్షన్‌ని ఏర్పాటు చేయండి {#establish-an-api-connection-to-the-ethereum-chain}
+#### ఎథీరియం చైన్‌కి API కనెక్షన్‌ను ఏర్పాటు చేయండి {#establish-an-api-connection-to-the-ethereum-chain}
 
-ఈ ట్యుటోరియల్ యొక్క పార్ట్ 2లో, [మా స్మార్ట్ కాంట్రాక్ట్ నుండి చదవడానికి మా Alchemy Web3 కీని](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library) ఎలా ఉపయోగించామో గుర్తుందా? చైన్ నుండి చదవడానికి మీ dappలో మీకు Alchemy Web3 కీ కూడా అవసరం.
+ఈ ట్యుటోరియల్ యొక్క పార్ట్ 2లో, మన స్మార్ట్ కాంట్రాక్ట్ నుండి చదవడానికి మనం మన Alchemy Web3 కీని ఎలా ఉపయోగించామో గుర్తుందా? చైన్ నుండి చదవడానికి మీ వికేంద్రీకృత అప్లికేషన్ (dapp)లో కూడా మీకు Alchemy Web3 కీ అవసరం.
 
-మీకు ఇది ఇప్పటికే లేకపోతే, ముందుగా మీ `starter-files` యొక్క రూట్ డైరెక్టరీకి నావిగేట్ చేయడం ద్వారా మరియు మీ టెర్మినల్‌లో ఈ క్రింది వాటిని రన్ చేయడం ద్వారా [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)ని ఇన్‌స్టాల్ చేయండి:
+మీకు ఇది ఇప్పటికే లేకపోతే, ముందుగా మీ `starter-files` యొక్క రూట్ డైరెక్టరీకి నావిగేట్ చేసి, మీ టెర్మినల్‌లో కింది వాటిని రన్ చేయడం ద్వారా [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)ని ఇన్‌స్టాల్ చేయండి:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) అనేది [Web3.js](https://docs.web3js.org/) చుట్టూ ఉన్న ఒక రాపర్, ఇది మెరుగైన API పద్ధతులను మరియు Web3 డెవలపర్‌గా మీ జీవితాన్ని సులభతరం చేయడానికి ఇతర కీలక ప్రయోజనాలను అందిస్తుంది. ఇది కనీస కాన్ఫిగరేషన్ అవసరమయ్యేలా రూపొందించబడింది, కాబట్టి మీరు దీన్ని వెంటనే మీ యాప్‌లో ఉపయోగించడం ప్రారంభించవచ్చు!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) అనేది [Web3.js](https://docs.web3js.org/) చుట్టూ ఉన్న ఒక ర్యాపర్, ఇది మెరుగైన API పద్ధతులను మరియు web3 డెవలపర్‌గా మీ జీవితాన్ని సులభతరం చేయడానికి ఇతర కీలక ప్రయోజనాలను అందిస్తుంది. ఇది కనీస కాన్ఫిగరేషన్ అవసరమయ్యేలా రూపొందించబడింది, కాబట్టి మీరు దీన్ని వెంటనే మీ యాప్‌లో ఉపయోగించడం ప్రారంభించవచ్చు!
 
-తర్వాత, మీ ప్రాజెక్ట్ డైరెక్టరీలో [dotenv](https://www.npmjs.com/package/dotenv) ప్యాకేజీని ఇన్‌స్టాల్ చేయండి, తద్వారా మా API కీని పొందిన తర్వాత దాన్ని నిల్వ చేయడానికి మాకు సురక్షితమైన స్థలం ఉంటుంది.
+ఆ తర్వాత, మీ ప్రాజెక్ట్ డైరెక్టరీలో [dotenv](https://www.npmjs.com/package/dotenv) ప్యాకేజీని ఇన్‌స్టాల్ చేయండి, తద్వారా మనం మన API కీని పొందిన తర్వాత దాన్ని నిల్వ చేయడానికి సురక్షితమైన స్థలం ఉంటుంది.
 
 ```text
 npm install dotenv --save
 ```
 
-మా dapp కోసం, **మేము మా HTTP API కీకి బదులుగా మా Websockets API కీని ఉపయోగిస్తాము**, ఎందుకంటే స్మార్ట్ కాంట్రాక్ట్‌లో నిల్వ చేయబడిన సందేశం మారినప్పుడు గుర్తించే లిజనర్‌ను సెటప్ చేయడానికి ఇది మమ్మల్ని అనుమతిస్తుంది.
+మన dapp కోసం, మనం మన HTTP API కీకి బదులుగా **మన Websockets API కీని ఉపయోగిస్తాము**, ఎందుకంటే స్మార్ట్ కాంట్రాక్ట్‌లో నిల్వ చేయబడిన సందేశం మారినప్పుడు గుర్తించే లిజనర్‌ను సెటప్ చేయడానికి ఇది అనుమతిస్తుంది.
 
-మీరు మీ API కీని పొందిన తర్వాత, మీ రూట్ డైరెక్టరీలో `.env` ఫైల్‌ను సృష్టించండి మరియు దానికి మీ Alchemy Websockets urlని జోడించండి. ఆ తర్వాత, మీ `.env` ఫైల్ ఇలా ఉండాలి:
+మీరు మీ API కీని పొందిన తర్వాత, మీ రూట్ డైరెక్టరీలో `.env` ఫైల్‌ను క్రియేట్ చేసి, దానికి మీ Alchemy Websockets urlని జోడించండి. ఆ తర్వాత, మీ `.env` ఫైల్ ఇలా ఉండాలి:
 
 ```javascript
 REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-ఇప్పుడు, మా dappలో మా Alchemy Web3 ఎండ్‌పాయింట్‌ను సెటప్ చేయడానికి మేము సిద్ధంగా ఉన్నాము! మా `util` ఫోల్డర్ లోపల ఉన్న మా `interact.js`కి తిరిగి వెళ్లి, ఫైల్ ఎగువన ఈ క్రింది కోడ్‌ను జోడిద్దాం:
+ఇప్పుడు, మన dappలో మన Alchemy Web3 ఎండ్‌పాయింట్‌ను సెటప్ చేయడానికి మనం సిద్ధంగా ఉన్నాము! మన `util` ఫోల్డర్ లోపల ఉన్న మన `interact.js`కి తిరిగి వెళ్లి, ఫైల్ ఎగువన కింది కోడ్‌ను జోడిద్దాం:
 
 ```javascript
 // interact.js
@@ -939,10 +937,9 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-పైన, మేము ముందుగా మా `.env` ఫైల్ నుండి Alchemy కీని దిగుమతి చేసాము మరియు మా Alchemy Web3 ఎండ్‌పాయింట్‌ను ఏర్పాటు చేయడానికి మా `alchemyKey`ని `createAlchemyWeb3`కి పంపాము.
+పైన, మనం ముందుగా మన `.env` ఫైల్ నుండి Alchemy కీని దిగుమతి చేసాము మరియు మన Alchemy Web3 ఎండ్‌పాయింట్‌ను స్థాపించడానికి మన `alchemyKey`ని `createAlchemyWeb3`కి పంపాము.
 
-ఈ ఎండ్‌పాయింట్ సిద్ధంగా ఉన్నందున, మా స్మార్ట్ కాంట్రాక్ట్‌ను లోడ్ చేయడానికి ఇది సమయం!
-
+ఈ ఎండ్‌పాయింట్ సిద్ధంగా ఉన్నందున, మన స్మార్ట్ కాంట్రాక్ట్‌ను లోడ్ చేయడానికి ఇది సమయం!
 #### మీ Hello World స్మార్ట్ కాంట్రాక్ట్‌ను లోడ్ చేస్తోంది {#loading-your-hello-world-smart-contract}
 
 మీ Hello World స్మార్ట్ కాంట్రాక్ట్‌ను లోడ్ చేయడానికి, మీకు దాని కాంట్రాక్ట్ చిరునామా మరియు ABI అవసరం, మీరు [ఈ ట్యుటోరియల్ యొక్క పార్ట్ 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)ని పూర్తి చేసి ఉంటే ఈ రెండూ Etherscanలో కనుగొనబడతాయి.
@@ -1034,7 +1031,7 @@ useEffect(async () => {
 
 #### `addSmartContractListener`ని అమలు చేయండి {#implement-addsmartcontractlistener}
 
-మేము [ఈ ట్యుటోరియల్ సిరీస్ యొక్క పార్ట్ 1](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract)లో వ్రాసిన `HelloWorld.sol` ఫైల్ గురించి మీరు ఆలోచిస్తే, మా స్మార్ట్ కాంట్రాక్ట్ యొక్క `update` ఫంక్షన్ ఇన్వోక్ చేయబడిన తర్వాత ఎమిట్ చేయబడే `UpdatedMessages` అనే స్మార్ట్ కాంట్రాక్ట్ ఈవెంట్ ఉందని మీకు గుర్తుంటుంది (లైన్లు 9 మరియు 27 చూడండి):
+మేము [ఈ ట్యుటోరియల్ సిరీస్ యొక్క పార్ట్ 1](#step-10-write-our-contract)లో వ్రాసిన `HelloWorld.sol` ఫైల్ గురించి మీరు ఆలోచిస్తే, మా స్మార్ట్ కాంట్రాక్ట్ యొక్క `update` ఫంక్షన్ ఇన్వోక్ చేయబడిన తర్వాత ఎమిట్ చేయబడే `UpdatedMessages` అనే స్మార్ట్ కాంట్రాక్ట్ ఈవెంట్ ఉందని మీకు గుర్తుంటుంది (లైన్లు 9 మరియు 27 చూడండి):
 
 ```javascript
 // HelloWorld.sol
@@ -1131,16 +1128,15 @@ useEffect(async () => {
 
 #### మీ బ్యాలెన్స్‌ని తనిఖీ చేయండి {#check-your-balance}
 
-మా బ్యాలెన్స్ అక్కడ ఉందో లేదో ఒకటికి రెండుసార్లు తనిఖీ చేయడానికి, [Alchemy యొక్క కంపోజర్ టూల్](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)ని ఉపయోగించి [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) అభ్యర్థనను చేద్దాం. ఇది మా వాలెట్‌లోని Eth మొత్తాన్ని తిరిగి ఇస్తుంది. మీరు మీ మెటామాస్క్ ఖాతా చిరునామాను ఇన్‌పుట్ చేసి, “Send Request” క్లిక్ చేసిన తర్వాత, మీరు ఇలాంటి ప్రతిస్పందనను చూడాలి:
+మన బ్యాలెన్స్ ఉందో లేదో ఒకసారి నిర్ధారించుకోవడానికి, [Alchemy యొక్క శాండ్‌బాక్స్ టూల్](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) ఉపయోగించి [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) అభ్యర్థనను చేద్దాం. ఇది మన వాలెట్‌లోని ETH మొత్తాన్ని తిరిగి ఇస్తుంది. మీరు మీ మెటామాస్క్ ఖాతా చిరునామాను నమోదు చేసి, “Send Request” క్లిక్ చేసిన తర్వాత, మీరు ఇలాంటి ప్రతిస్పందనను చూడాలి:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**గమనిక:** ఈ ఫలితం weiలో ఉంది ethలో కాదు. Wei అనేది ఈథర్ యొక్క అతిచిన్న డినామినేషన్‌గా ఉపయోగించబడుతుంది. wei నుండి ethకి మార్పిడి: 1 eth = 10¹⁸ wei. కాబట్టి మనం 0xde0b6b3a7640000ని దశాంశానికి (decimal) మార్చినట్లయితే మనకు 1\*10¹⁸ వస్తుంది, ఇది 1 ethకి సమానం.
+**గమనిక:** ఈ ఫలితం weiలో ఉంది, ETHలో కాదు. ఈథర్ యొక్క అతిచిన్న విలువగా wei ఉపయోగించబడుతుంది. wei నుండి ETHకి మార్పిడి ఇలా ఉంటుంది: 1 ETH = 10¹⁸ wei. కాబట్టి మనం 0xde0b6b3a7640000ని దశాంశానికి (decimal) మార్చినట్లయితే, మనకు 1\*10¹⁸ వస్తుంది, ఇది 1 ETHకి సమానం.
 
-అమ్మయ్య! మా నకిలీ డబ్బు అంతా అక్కడే ఉంది! 🤑
-
+హమ్మయ్య! మన నకిలీ డబ్బు అంతా అక్కడే ఉంది! 🤑
 ### దశ 5: మీ UIకి మెటామాస్క్‌ను కనెక్ట్ చేయండి {#step-5-connect-metamask-to-your-ui}
 
 ఇప్పుడు మా మెటామాస్క్ వాలెట్ సెటప్ చేయబడినందున, మా dappని దానికి కనెక్ట్ చేద్దాం!
@@ -1539,7 +1535,7 @@ const onUpdatePressed = async () => {
 వావ్, మీరు ట్యుటోరియల్ ముగింపుకు చేరుకున్నారు! సంగ్రహంగా చెప్పాలంటే, మీరు వీటిని ఎలా చేయాలో నేర్చుకున్నారు:
 
 - మీ dapp ప్రాజెక్ట్‌కి మెటామాస్క్ వాలెట్‌ను కనెక్ట్ చేయడం
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) APIని ఉపయోగించి మీ స్మార్ట్ కాంట్రాక్ట్ నుండి డేటాను చదవడం
+- [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) APIని ఉపయోగించి మీ స్మార్ట్ కాంట్రాక్ట్ నుండి డేటాను చదవడం
 - మెటామాస్క్ ఉపయోగించి ఎథీరియం లావాదేవీలపై సంతకం చేయడం
 
 ఇప్పుడు మీరు మీ స్వంత కస్టమ్ dapp ప్రాజెక్ట్‌ను రూపొందించడానికి ఈ ట్యుటోరియల్ నుండి నైపుణ్యాలను వర్తింపజేయడానికి పూర్తిగా సన్నద్ధమయ్యారు! ఎప్పటిలాగే, మీకు ఏవైనా ప్రశ్నలు ఉంటే, [Alchemy డిస్కార్డ్](https://discord.gg/gWuC7zB)లో సహాయం కోసం మమ్మల్ని సంప్రదించడానికి వెనుకాడకండి. 🧙‍♂️

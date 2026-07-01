@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/nft-minter/index.md",
-  "generatedAt": "2026-06-17T00:31:37.432Z",
-  "rootHash": "808d25c6ac9a",
+  "generatedAt": "2026-06-30T00:47:02.589Z",
+  "rootHash": "39ee507a775c",
   "tree": {
-    "contentHash": "d6932051015e",
-    "anchorHash": "b755272d44d5",
+    "contentHash": "5be4c643fec2",
+    "anchorHash": "203567d9983c",
     "children": {
       "frontmatter:title": {
         "contentHash": "f1259169e786",
@@ -76,8 +76,8 @@
         "anchorHash": "e3b0c44298fc"
       },
       "making-nfts-101": {
-        "contentHash": "1e2eddf47c3d",
-        "anchorHash": "d06bfc9666a8",
+        "contentHash": "448b07b4eaa4",
+        "anchorHash": "66c5626faf59",
         "labelHash": "7084baab2651",
         "children": {
           "_label": {
@@ -108,15 +108,15 @@
             ]
           },
           "minting-function": {
-            "contentHash": "b62dfcb7ec64",
-            "anchorHash": "0f24e3838720",
+            "contentHash": "5ee6c64f5997",
+            "anchorHash": "d3c49536bea0",
             "labelHash": "9936021a80e5",
             "children": {
               "_label": {
                 "contentHash": "9936021a80e5",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:5": {
+              "prose:4": {
                 "contentHash": "2c1f52208060",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -124,7 +124,7 @@
                 "contentHash": "e3b0c44298fc",
                 "anchorHash": "665d0698dbc8"
               },
-              "prose:6": {
+              "prose:5": {
                 "contentHash": "12d465b02bc1",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -132,7 +132,7 @@
                 "contentHash": "e3b0c44298fc",
                 "anchorHash": "258ef7f459ec"
               },
-              "prose:7": {
+              "prose:6": {
                 "contentHash": "f012a4d93ea2",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -140,40 +140,30 @@
                 "contentHash": "f2953a29c1e4",
                 "anchorHash": "a2b704c2c3c9"
               },
-              "prose:8": {
-                "contentHash": "9f2d601f2016",
+              "prose:7": {
+                "contentHash": "c58e26787e6b",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:3": {
-                "contentHash": "143df3a3f7ab",
-                "anchorHash": "3ea3ccda5add"
+                "contentHash": "721fb2357dd6",
+                "anchorHash": "1b1adb78e3ce"
               },
-              "prose:9": {
-                "contentHash": "2ba253c85ecb",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "link:4": {
-                "contentHash": "f7a1f5dabbbe",
-                "anchorHash": "2efb5dc15209"
-              },
-              "prose:10": {
+              "prose:8": {
                 "contentHash": "f52ec88e63de",
                 "anchorHash": "e3b0c44298fc"
               }
             },
             "childrenOrder": [
               "_label",
-              "prose:5",
+              "prose:4",
               "inline-code:0",
-              "prose:6",
+              "prose:5",
               "inline-code:1",
-              "prose:7",
+              "prose:6",
               "link:2",
-              "prose:8",
+              "prose:7",
               "link:3",
-              "prose:9",
-              "link:4",
-              "prose:10"
+              "prose:8"
             ]
           }
         },
@@ -624,8 +614,8 @@
         ]
       },
       "set-up-your-ethereum-wallet": {
-        "contentHash": "82aa58048095",
-        "anchorHash": "dfd4305fc085",
+        "contentHash": "6d0ab198527f",
+        "anchorHash": "b1c9bb32ac30",
         "labelHash": "6c3674a01d82",
         "children": {
           "_label": {
@@ -637,7 +627,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "download-metamask": {
-            "contentHash": "9e38136b18f7",
+            "contentHash": "a99496778d48",
             "anchorHash": "ff6f810974cd",
             "labelHash": "c1774ac30412",
             "children": {
@@ -662,7 +652,7 @@
                 "anchorHash": "1e8beaa2bab8"
               },
               "prose:4": {
-                "contentHash": "a231223da203",
+                "contentHash": "9ac6a90ce18f",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -676,8 +666,8 @@
             ]
           },
           "add-ether-from-faucet": {
-            "contentHash": "36a585b27280",
-            "anchorHash": "ac9ff0c5dde2",
+            "contentHash": "dcaa3a9449be",
+            "anchorHash": "391164734e28",
             "labelHash": "3e6ae7970d06",
             "children": {
               "_label": {
@@ -685,15 +675,15 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:1": {
-                "contentHash": "d51d5599d530",
+                "contentHash": "2172bcae293b",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
-                "contentHash": "b21f4c1b7fb8",
-                "anchorHash": "cf6b5245f90a"
+                "contentHash": "f4fda26bccda",
+                "anchorHash": "a75ec8e66aa8"
               },
               "prose:2": {
-                "contentHash": "a213bc4bfc70",
+                "contentHash": "0edd8eb4e713",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -705,8 +695,8 @@
             ]
           },
           "check-your-balance": {
-            "contentHash": "65a2ff6efe39",
-            "anchorHash": "283a954f27f8",
+            "contentHash": "bc597b46440f",
+            "anchorHash": "85370ffb86ce",
             "labelHash": "c7e4c23cafa5",
             "children": {
               "_label": {
@@ -719,15 +709,15 @@
               },
               "link:0": {
                 "contentHash": "633f5d8e09c6",
-                "anchorHash": "9094876f7e9a"
+                "anchorHash": "19974bdfcc7b"
               },
               "prose:3": {
                 "contentHash": "5ed0a3f4758f",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:1": {
-                "contentHash": "dc12fc59041e",
-                "anchorHash": "dc1c5e972723"
+                "contentHash": "269ad565a9d3",
+                "anchorHash": "72f0fc3dfc92"
               },
               "prose:4": {
                 "contentHash": "df299f84e712",
@@ -1827,15 +1817,15 @@
         ]
       },
       "load-your-smart-contract": {
-        "contentHash": "b3dd6710717e",
-        "anchorHash": "4c7e19e0c326",
+        "contentHash": "d0c3dd6efa6b",
+        "anchorHash": "1f6bcb44aeed",
         "labelHash": "5b07a049622b",
         "children": {
           "_label": {
             "contentHash": "5b07a049622b",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:4": {
+          "prose:3": {
             "contentHash": "6ca82cb44590",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1843,7 +1833,7 @@
             "contentHash": "e3b0c44298fc",
             "anchorHash": "4219c5da51e3"
           },
-          "prose:5": {
+          "prose:4": {
             "contentHash": "2694cec27426",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1851,23 +1841,15 @@
             "contentHash": "e3b0c44298fc",
             "anchorHash": "480e30d38345"
           },
-          "prose:6": {
-            "contentHash": "0d5a6ef24e82",
+          "prose:5": {
+            "contentHash": "c9574fec7222",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
-            "contentHash": "36bc96540c29",
-            "anchorHash": "3ea3ccda5add"
+            "contentHash": "721fb2357dd6",
+            "anchorHash": "1b1adb78e3ce"
           },
-          "prose:7": {
-            "contentHash": "ea987b0aa0d2",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:3": {
-            "contentHash": "d37cc5afb708",
-            "anchorHash": "2efb5dc15209"
-          },
-          "prose:8": {
+          "prose:6": {
             "contentHash": "cdb4ee2aea69",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1911,7 +1893,7 @@
             ]
           },
           "create-alchemy-api": {
-            "contentHash": "f475b8dfdb64",
+            "contentHash": "eb2b40c6c7c6",
             "anchorHash": "e7fe9f7c5c36",
             "labelHash": "15af41df9906",
             "children": {
@@ -1928,7 +1910,7 @@
                 "anchorHash": "41f860b4d7f3"
               },
               "prose:3": {
-                "contentHash": "473f2e19ce2c",
+                "contentHash": "8b886454a32f",
                 "anchorHash": "e3b0c44298fc"
               },
               "inline-code:1": {
@@ -1940,7 +1922,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "code-fence:6": {
-                "contentHash": "6debc68fb893",
+                "contentHash": "b32a2b658676",
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:1": {
@@ -1963,7 +1945,7 @@
           },
           "setup-alchemy-endpoint": {
             "contentHash": "9ce346026314",
-            "anchorHash": "b919333ef83c",
+            "anchorHash": "602b5f703e47",
             "labelHash": "de6ebdf46d1c",
             "children": {
               "_label": {
@@ -2012,7 +1994,7 @@
               },
               "code-fence:15": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "a008128a0379"
+                "anchorHash": "dba197df1913"
               },
               "prose:0": {
                 "contentHash": "a0337bacacb2",
@@ -2042,15 +2024,13 @@
         },
         "childrenOrder": [
           "_label",
-          "prose:4",
+          "prose:3",
           "inline-code:0",
-          "prose:5",
+          "prose:4",
           "inline-code:1",
-          "prose:6",
+          "prose:5",
           "link:2",
-          "prose:7",
-          "link:3",
-          "prose:8",
+          "prose:6",
           "contract-abi",
           "create-alchemy-api",
           "setup-alchemy-endpoint"
@@ -2058,7 +2038,7 @@
       },
       "implement-the-mintnft-function": {
         "contentHash": "89cc647cf061",
-        "anchorHash": "38296c2d9a3d",
+        "anchorHash": "9d9ab3fa38be",
         "labelHash": "c588e961442b",
         "children": {
           "_label": {
@@ -2177,7 +2157,7 @@
           },
           "upload-metadata-to-ipfs": {
             "contentHash": "7a5e7186e356",
-            "anchorHash": "673094806cf2",
+            "anchorHash": "7f6a1ce9a425",
             "labelHash": "2d8acf6169de",
             "children": {
               "_label": {
@@ -2322,7 +2302,7 @@
               },
               "code-fence:55": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "082653365355"
+                "anchorHash": "087ede4d658d"
               },
               "prose:19": {
                 "contentHash": "6352682a73f7",
@@ -2410,7 +2390,7 @@
               },
               "code-fence:91": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "897064d65334"
+                "anchorHash": "c7ddf26dbc2d"
               },
               "prose:3": {
                 "contentHash": "386a6578e47a",
@@ -2607,8 +2587,8 @@
         ]
       },
       "deploy-your-nft": {
-        "contentHash": "f04ad86029da",
-        "anchorHash": "d57a7398c7ad",
+        "contentHash": "36ce9faaac29",
+        "anchorHash": "2cbb147004e8",
         "labelHash": "2f1cf710fe02",
         "children": {
           "_label": {
@@ -2616,12 +2596,12 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:1": {
-            "contentHash": "84304a8f91c2",
+            "contentHash": "6ed0f959cbb5",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "bf222c1c7634",
-            "anchorHash": "5380e6ffb068"
+            "contentHash": "ff3eda720c2e",
+            "anchorHash": "1132caf66de1"
           },
           "prose:2": {
             "contentHash": "9fdec62fa0c5",
@@ -2637,7 +2617,7 @@
       },
       "take-the-blockchain-world-by-storm": {
         "contentHash": "f3cbad906cb4",
-        "anchorHash": "5b884581be31",
+        "anchorHash": "05d4508dace7",
         "labelHash": "7d3442c1ffb7",
         "children": {
           "_label": {
@@ -2650,7 +2630,7 @@
           },
           "link:0": {
             "contentHash": "5219418b807d",
-            "anchorHash": "d2fd6e183cc1"
+            "anchorHash": "3766989e5161"
           },
           "prose:3": {
             "contentHash": "b40c55b69634",
@@ -2707,5 +2687,5 @@
       "take-the-blockchain-world-by-storm"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

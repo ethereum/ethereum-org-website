@@ -11,7 +11,7 @@ source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
-Dies ist ein anfängerfreundlicher Leitfaden zum Senden von Ethereum-Transaktionen mit Web3. Es gibt drei Hauptschritte, um eine Transaktion an die Ethereum-Blockchain zu senden: Erstellen, Signieren und Übertragen. Wir werden alle drei durchgehen und hoffentlich alle deine Fragen beantworten! In diesem Tutorial verwenden wir [Alchemy](https://www.alchemy.com/), um unsere Transaktionen an die Ethereum-Chain zu senden. Du kannst [hier ein kostenloses Alchemy-Konto erstellen](https://auth.alchemyapi.io/signup).
+Dies ist ein anfängerfreundlicher Leitfaden zum Senden von Ethereum-Transaktionen mit Web3. Es gibt drei Hauptschritte, um eine Transaktion an die Ethereum-Blockchain zu senden: Erstellen, Signieren und Übertragen. Wir werden alle drei durchgehen und hoffentlich alle deine Fragen beantworten! In diesem Tutorial verwenden wir [Alchemy](https://www.alchemy.com/), um unsere Transaktionen an die Ethereum-Chain zu senden. Du kannst [hier ein kostenloses Alchemy-Konto erstellen](https://auth.alchemy.com/signup).
 
 **HINWEIS:** Dieser Leitfaden ist für das Signieren deiner Transaktionen im _Backend_ deiner App gedacht. Wenn du das Signieren deiner Transaktionen im Frontend integrieren möchtest, sieh dir die Integration von [Web3 mit einem Browser-Provider](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider) an.
 
@@ -26,9 +26,8 @@ Wie die meisten Blockchain-Entwickler zu Beginn hast du vielleicht recherchiert,
 
 ### 2\. Was ist ein „Signer“? {#what-is-a-signer}
 
-- Signer signieren Transaktionen für dich mit deinem privaten Schlüssel. In diesem Tutorial verwenden wir [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), um unsere Transaktion zu signieren, aber du könntest auch jede andere Web3-Bibliothek verwenden.
-- Im Frontend wäre ein gutes Beispiel für einen Signer [MetaMask](https://metamask.io/), das Transaktionen in deinem Namen signiert und sendet.
-
+- Signer signieren Transaktionen für dich mit deinem privaten Schlüssel. In diesem Tutorial verwenden wir [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), um unsere Transaktion zu signieren, aber du könntest auch jede andere Web3-Bibliothek verwenden.
+- Im Frontend wäre [MetaMask](https://metamask.io/) ein gutes Beispiel für einen Signer, der Transaktionen in deinem Namen signiert und sendet.
 ### 3\. Warum muss ich meine Transaktionen signieren? {#why-do-i-need-to-sign-my-transactions}
 
 - Jeder Benutzer, der eine Transaktion im Ethereum-Netzwerk senden möchte, muss die Transaktion (mit seinem privaten Schlüssel) signieren, um zu validieren, dass der Ursprung der Transaktion derjenige ist, der er vorgibt zu sein.
@@ -43,7 +42,7 @@ Wie die meisten Blockchain-Entwickler zu Beginn hast du vielleicht recherchiert,
 `eth_sendTransaction` und `eth_sendRawTransaction` sind beides Ethereum-API-Funktionen, die eine Transaktion an das Ethereum-Netzwerk übertragen, damit sie einem zukünftigen Block hinzugefügt wird. Sie unterscheiden sich darin, wie sie das Signieren der Transaktionen handhaben.
 
 - [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction) wird zum Senden _unsignierter_ Transaktionen verwendet. Das bedeutet, dass der Knoten, an den du sendest, deinen privaten Schlüssel verwalten muss, damit er die Transaktion signieren kann, bevor er sie an die Chain überträgt. Da Alchemy die privaten Schlüssel der Benutzer nicht speichert, unterstützen sie diese Methode nicht.
-- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) wird verwendet, um Transaktionen zu übertragen, die bereits signiert wurden. Das bedeutet, dass du zuerst [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction) verwenden musst und dann das Ergebnis an `eth_sendRawTransaction` übergibst.
+- [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) wird verwendet, um Transaktionen zu übertragen, die bereits signiert wurden. Das bedeutet, dass du zuerst [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction) verwenden musst und dann das Ergebnis an `eth_sendRawTransaction` übergibst.
 
 Bei der Verwendung von Web3 wird auf `eth_sendRawTransaction` zugegriffen, indem die Funktion [web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction) aufgerufen wird.
 
@@ -52,26 +51,25 @@ Genau das werden wir in diesem Tutorial verwenden.
 ### 6\. Was ist die Web3-Bibliothek? {#what-is-the-web3-library}
 
 - Web3.js ist eine Wrapper-Bibliothek um die Standard-JSON-RPC-Aufrufe, die in der Ethereum-Entwicklung sehr häufig verwendet wird.
-- Es gibt viele Web3-Bibliotheken für verschiedene Sprachen. In diesem Tutorial verwenden wir [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), das in JavaScript geschrieben ist. Du kannst dir [hier](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) andere Optionen wie [Ethers.js](https://docs.ethers.org/v5/) ansehen.
+- Es gibt viele Web3-Bibliotheken für verschiedene Sprachen. In diesem Tutorial verwenden wir [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), das in JavaScript geschrieben ist. Du kannst dir [hier](/developers/docs/apis/javascript/) andere Optionen wie [Ethers.js](https://docs.ethers.org/v5/) ansehen.
 
 Okay, da wir nun einige dieser Fragen geklärt haben, machen wir mit dem Tutorial weiter. Du kannst jederzeit Fragen im Alchemy-[Discord](https://discord.gg/gWuC7zB) stellen!
 
 ### 7\. Wie sendet man sichere, gasoptimierte und private Transaktionen? {#how-to-send-secure-gas-optimized-and-private-transactions}
 
-- [Alchemy verfügt über eine Suite von Transact-APIs](https://docs.alchemy.com/reference/transact-api-quickstart). Du kannst diese verwenden, um verstärkte Transaktionen zu senden, Transaktionen vor ihrer Ausführung zu simulieren, private Transaktionen zu senden und gasoptimierte Transaktionen zu senden.
-- Du kannst auch die [Notify-API](https://docs.alchemy.com/docs/alchemy-notify) verwenden, um benachrichtigt zu werden, wenn deine Transaktion aus dem Mempool gezogen und der Chain hinzugefügt wird.
+- [Alchemy verfügt über eine Reihe von Transaktionsressourcen](https://www.alchemy.com/docs/sending-transactions). Du kannst diese verwenden, um Transaktionen zu senden, Transaktionen vor ihrer Ausführung zu simulieren sowie private und gasoptimierte Transaktionen zu senden.
+- Du kannst auch [Alchemy-Webhooks](https://www.alchemy.com/docs/reference/webhooks-overview) verwenden, um benachrichtigt zu werden, wenn deine Transaktion aus dem Mempool geholt und der Chain hinzugefügt wird.
 
-**HINWEIS:** Dieser Leitfaden erfordert ein Alchemy-Konto, eine Ethereum-Adresse oder eine MetaMask-Wallet sowie installierte Node.js und npm. Wenn nicht, befolge diese Schritte:
+**HINWEIS:** Dieser Leitfaden erfordert ein Alchemy-Konto, eine Ethereum-Adresse oder MetaMask-Wallet sowie installierte Node.js und npm. Wenn nicht vorhanden, befolge diese Schritte:
 
-1.  [Erstelle ein kostenloses Alchemy-Konto](https://auth.alchemyapi.io/signup)
+1.  [Erstelle ein kostenloses Alchemy-Konto](https://auth.alchemy.com/signup)
 2.  [Erstelle ein MetaMask-Konto](https://metamask.io/) (oder besorge dir eine Ethereum-Adresse)
-3.  [Befolge diese Schritte, um Node.js und npm zu installieren](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
-
+3.  [Installiere Node.js und npm](https://nodejs.org/en/download/)
 ## Schritte zum Senden deiner Transaktion {#steps-to-sending-your-transaction}
 
 ### 1\. Erstelle eine Alchemy-App im Sepolia-Testnetz {#create-an-alchemy-app-on-the-sepolia-testnet}
 
-Navigiere zu deinem [Alchemy-Dashboard](https://dashboard.alchemyapi.io/) und erstelle eine neue App, wobei du Sepolia (oder ein anderes Testnetz) als dein Netzwerk auswählst.
+Navigiere zu deinem [Alchemy-Dashboard](https://dashboard.alchemy.com/) und erstelle eine neue App, wobei du Sepolia (oder ein anderes Testnetz) als dein Netzwerk auswählst.
 
 ### 2\. Fordere ETH vom Sepolia-Faucet an {#request-eth-from-sepolia-faucet}
 
@@ -88,9 +86,9 @@ cd sendtx-example
 
 ### 4\. Installiere Alchemy Web3 (oder eine beliebige Web3-Bibliothek) {#install-alchemy-web3}
 
-Führe den folgenden Befehl in deinem Projektverzeichnis aus, um [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) zu installieren:
+Führe den folgenden Befehl in deinem Projektverzeichnis aus, um [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) zu installieren:
 
-Hinweis: Wenn du die Ethers.js-Bibliothek verwenden möchtest, [befolge die Anweisungen hier](https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum).
+Hinweis: Wenn du die Ethers.js-Bibliothek verwenden möchtest, [befolge die Anweisungen hier](https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum).
 
 ```
 npm install @alch/alchemy-web3
@@ -124,11 +122,11 @@ Commite <code>.env</code> nicht! Bitte stelle sicher, dass du deine <code>.env</
 </AlertContent>
 </Alert>
 
-### 7\. Erstelle die `sendTx.js`-Datei {#create-sendtx-js}
+### 7\. Erstelle die Datei `sendTx.js` {#create-sendtx-js}
 
-Großartig, da wir nun unsere sensiblen Daten in einer `.env`-Datei geschützt haben, fangen wir an zu programmieren. Für unser Beispiel zum Senden einer Transaktion werden wir ETH an das Sepolia-Faucet zurücksenden.
+Großartig, da wir nun unsere sensiblen Daten in einer `.env`-Datei geschützt haben, lass uns mit dem Programmieren beginnen. Für unser Transaktionsbeispiel senden wir ETH an den Sepolia-Faucet zurück.
 
-Erstelle eine `sendTx.js`-Datei, in der wir unsere Beispieltransaktion konfigurieren und senden werden, und füge ihr die folgenden Codezeilen hinzu:
+Erstelle eine Datei `sendTx.js`, in der wir unsere Beispieltransaktion konfigurieren und senden werden, und füge ihr die folgenden Codezeilen hinzu:
 
 ```
 async function main() {
@@ -145,16 +143,16 @@ async function main() {
      'value': 1000000000000000000, // 1 ETH
      'gas': 30000,
      'nonce': nonce,
-     // optionales Datenfeld zum Senden einer Nachricht oder Ausführen eines Smart Contracts
+     // optionales Datenfeld, um eine Nachricht zu senden oder einen Smart Contract auszuführen
     };
 
     const signedTx = await web3.eth.accounts.signTransaction(transaction, PRIVATE_KEY);
 
     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
-      console.log("🎉 Der Hash deiner Transaktion lautet: ", hash, "\n Überprüfe den Mempool von Alchemy, um den Status deiner Transaktion zu sehen!");
+      console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
     } else {
-      console.log("❗Beim Übermitteln deiner Transaktion ist etwas schiefgelaufen:", error)
+      console.log("❗Something went wrong while submitting your transaction:", error)
     }
    });
 }
@@ -162,28 +160,27 @@ async function main() {
 main();
 ```
 
-Achte darauf, die Adresse in **Zeile 6** durch deine eigene öffentliche Adresse zu ersetzen.
+Stelle sicher, dass du die Adresse in **Zeile 6** durch deine eigene öffentliche Adresse ersetzt.
 
-Bevor wir nun dazu übergehen, diesen Code auszuführen, lass uns über einige der Komponenten hier sprechen.
+Bevor wir nun diesen Code ausführen, lass uns über einige der Komponenten hier sprechen.
 
-- `nonce` : Die Nonce-Spezifikation wird verwendet, um die Anzahl der von deiner Adresse gesendeten Transaktionen zu verfolgen. Wir benötigen dies aus Sicherheitsgründen und um [Replay-Angriffe](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce) zu verhindern. Um die Anzahl der von deiner Adresse gesendeten Transaktionen zu erhalten, verwenden wir [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+- `nonce`: Die Spezifikation der Nonce wird verwendet, um die Anzahl der von deiner Adresse gesendeten Transaktionen zu verfolgen. Wir benötigen dies aus Sicherheitsgründen und um Replay-Angriffe zu verhindern. Um die Anzahl der von deiner Adresse gesendeten Transaktionen zu erhalten, verwenden wir [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
 - `transaction`: Das Transaktionsobjekt hat einige Aspekte, die wir spezifizieren müssen:
-  - `to`: Dies ist die Adresse, an die wir ETH senden möchten. In diesem Fall senden wir ETH an das [Sepolia-Faucet](https://sepoliafaucet.com/) zurück, von dem wir sie ursprünglich angefordert haben.
-  - `value`: Dies ist der Betrag, den wir senden möchten, angegeben in Wei, wobei 10^18 Wei = 1 ETH entsprechen.
-  - `gas`: Es gibt viele Möglichkeiten, die richtige Menge an Gas zu bestimmen, die deiner Transaktion beigefügt werden soll. Alchemy hat sogar einen [Gaspreis-Webhook](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1), um dich zu benachrichtigen, wenn der Gaspreis unter einen bestimmten Schwellenwert fällt. Für Mainnet-Transaktionen ist es eine gute Praxis, einen Gas-Schätzer wie [ETH Gas Station](https://ethgasstation.info/) zu überprüfen, um die richtige Menge an Gas zu bestimmen. 21000 ist die Mindestmenge an Gas, die eine Operation auf Ethereum verbraucht. Um sicherzustellen, dass unsere Transaktion ausgeführt wird, geben wir hier 30000 an.
-  - `nonce`: Siehe obige Nonce-Definition. Die Nonce beginnt bei null zu zählen.
-  - [OPTIONAL] data: Wird zum Senden zusätzlicher Informationen mit deinem Transfer oder zum Aufrufen eines Smart Contracts verwendet. Für Guthabentransfers nicht erforderlich, siehe den Hinweis unten.
+  - `to`: Dies ist die Adresse, an die wir ETH senden möchten. In diesem Fall senden wir ETH an den [Sepolia-Faucet](https://sepoliafaucet.com/) zurück, von dem wir ursprünglich angefordert haben.
+  - `value`: Dies ist der Betrag, den wir senden möchten, angegeben in Wei, wobei 10^18 Wei = 1 ETH sind.
+  - `gas`: Es gibt viele Möglichkeiten, die richtige Menge an Gas zu bestimmen, die deiner Transaktion beigefügt werden soll. Alchemy unterstützt [Webhooks](https://www.alchemy.com/docs/reference/webhooks-overview), die dich über Onchain-Aktivitäten benachrichtigen können. Für Mainnet-Transaktionen ist es eine gute Praxis, die aktuellen Gas-Bedingungen zu überprüfen, um die richtige Menge an Gas zu bestimmen. 21000 ist die Mindestmenge an Gas, die eine Operation auf Ethereum verbraucht, also setzen wir hier 30000 ein, um sicherzustellen, dass unsere Transaktion ausgeführt wird.
+  - `nonce`: Siehe die obige Definition der Nonce. Die Nonce beginnt bei null zu zählen.
+  - [OPTIONAL] data: Wird verwendet, um zusätzliche Informationen mit deinem Transfer zu senden oder einen Smart Contract aufzurufen. Für Guthabentransfers nicht erforderlich, siehe den Hinweis unten.
 - `signedTx`: Um unser Transaktionsobjekt zu signieren, verwenden wir die Methode `signTransaction` mit unserem `PRIVATE_KEY`.
-- `sendSignedTransaction`: Sobald wir eine signierte Transaktion haben, können wir sie absenden, damit sie in einen nachfolgenden Block aufgenommen wird, indem wir `sendSignedTransaction` verwenden.
+- `sendSignedTransaction`: Sobald wir eine signierte Transaktion haben, können wir sie mit `sendSignedTransaction` absenden, damit sie in einen nachfolgenden Block aufgenommen wird.
 
-**Ein Hinweis zu data (Daten)**
-Es gibt zwei Hauptarten von Transaktionen, die in Ethereum gesendet werden können.
+**Ein Hinweis zu data**
+Es gibt zwei Hauptarten von Transaktionen, die auf Ethereum gesendet werden können.
 
-- Guthabentransfer: Sende ETH von einer Adresse an eine andere. Es ist kein Datenfeld erforderlich. Wenn du jedoch zusätzliche Informationen zusammen mit deiner Transaktion senden möchtest, kannst du diese Informationen im HEX-Format in dieses Feld aufnehmen.
-  - Nehmen wir zum Beispiel an, wir wollten den Hash eines IPFS-Dokuments in die Ethereum-Chain schreiben, um ihm einen unveränderlichen Zeitstempel zu geben. Unser Datenfeld sollte dann so aussehen: data: `web3.utils.toHex(‘IPFS hash‘)`. Und nun kann jeder die Chain abfragen und sehen, wann dieses Dokument hinzugefügt wurde.
+- Guthabentransfer: Sende ETH von einer Adresse an eine andere. Es ist kein Datenfeld erforderlich. Wenn du jedoch zusätzliche Informationen neben deiner Transaktion senden möchtest, kannst du diese Informationen im HEX-Format in diesem Feld angeben.
+  - Nehmen wir zum Beispiel an, wir möchten den Hash eines IPFS-Dokuments auf die Ethereum-Chain schreiben, um ihm einen unveränderlichen Zeitstempel zu geben. Unser Datenfeld sollte dann so aussehen: data: `web3.utils.toHex(‘IPFS hash‘)`. Und nun kann jeder die Chain abfragen und sehen, wann das Dokument hinzugefügt wurde.
 - Smart-Contract-Transaktion: Führe Smart-Contract-Code auf der Chain aus. In diesem Fall sollte das Datenfeld die Smart-Funktion, die du ausführen möchtest, zusammen mit allen Parametern enthalten.
-  - Ein praktisches Beispiel findest du in Schritt 8 dieses [Hello-World-Tutorials](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction).
-
+  - Für ein praktisches Beispiel sieh dir das [Tutorial zum Hello World Smart Contract](/developers/tutorials/hello-world-smart-contract/) an.
 ### 8\. Führe den Code mit `node sendTx.js` aus {#run-the-code-using-node-sendtx-js}
 
 Navigiere zurück zu deinem Terminal oder deiner Befehlszeile und führe Folgendes aus:
@@ -194,16 +191,16 @@ node sendTx.js
 
 ### 9\. Sieh dir deine Transaktion im Mempool an {#see-your-transaction-in-the-mempool}
 
-Öffne die [Mempool-Seite](https://dashboard.alchemyapi.io/mempool) in deinem Alchemy-Dashboard und filtere nach der von dir erstellten App, um deine Transaktion zu finden. Hier können wir beobachten, wie unsere Transaktion vom ausstehenden Zustand (pending) in den geminten Zustand (mined) übergeht (falls erfolgreich) oder in den verworfenen Zustand (dropped), falls nicht erfolgreich. Stelle sicher, dass du die Einstellung auf „All“ belässt, damit du „mined“-, „pending“- und „dropped“-Transaktionen erfasst. Du kannst auch nach deiner Transaktion suchen, indem du nach Transaktionen suchst, die an die Adresse `0x31b98d14007bdee637298086988a0bbd31184523` gesendet wurden.
+Öffne die [Mempool-Seite](https://dashboard.alchemy.com/mempool) in deinem Alchemy-Dashboard und filtere nach der von dir erstellten App, um deine Transaktion zu finden. Hier können wir beobachten, wie unsere Transaktion vom ausstehenden Zustand (pending) in den geminten Zustand (mined) übergeht (falls erfolgreich) oder in den verworfenen Zustand (dropped), falls nicht erfolgreich. Stelle sicher, dass du es auf „All“ belässt, damit du „mined“-, „pending“- und „dropped“-Transaktionen erfasst. Du kannst auch nach deiner Transaktion suchen, indem du nach Transaktionen suchst, die an die Adresse `0x31b98d14007bdee637298086988a0bbd31184523` gesendet wurden.
 
 Um die Details deiner Transaktion anzuzeigen, sobald du sie gefunden hast, wähle den tx-Hash aus, was dich zu einer Ansicht führen sollte, die so aussieht:
 
-![Mempool watcher screenshot](./mempool.png)
+![Screenshot des Mempool-Watchers](./mempool.png)
 
 Von dort aus kannst du deine Transaktion auf Etherscan ansehen, indem du auf das rot eingekreiste Symbol klickst!
 
-**Juhuuu! Du hast gerade deine erste Ethereum-Transaktion mit Alchemy gesendet 🎉**
+**Juhu! Du hast gerade deine erste Ethereum-Transaktion mit Alchemy gesendet 🎉**
 
-_Für Feedback und Vorschläge zu diesem Leitfaden schreibe bitte Elan im [Discord](https://discord.gg/A39JVCM) von Alchemy!_
+_Für Feedback und Vorschläge zu diesem Leitfaden schreibe bitte eine Nachricht an Elan auf dem [Discord](https://discord.gg/A39JVCM) von Alchemy!_
 
-_Ursprünglich veröffentlicht unter [https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy](https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy)_
+_Ursprünglich veröffentlicht von Alchemy._

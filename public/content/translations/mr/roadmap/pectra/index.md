@@ -1,7 +1,7 @@
 ---
-title: पेक्ट्रा
-metaTitle: प्राग-इलेक्ट्रा (पेक्ट्रा)
-description: पेक्ट्रा प्रोटोकॉल अपग्रेडबद्दल जाणून घ्या
+title: "पेक्ट्रा"
+metaTitle: "प्राग-इलेक्ट्रा (पेक्ट्रा)"
+description: "पेक्ट्रा प्रोटोकॉल अपग्रेडबद्दल जाणून घ्या"
 lang: mr
 authors: ["Nixo", "मारिओ हॅवेल"]
 ---
@@ -121,7 +121,6 @@ _इथेरियम पेक्ट्रा अपग्रेड: स्ट
 
 - [इथेरियम रोडमॅप](/roadmap/)
 - [पेक्ट्रा FAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf माहिती पृष्ठ](https://pectra.wtf)
-- [पेक्ट्रा स्टेकिंग करणाऱ्यांचा अनुभव कसा वाढवते](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [पेक्ट्रा स्टेकिंग करणाऱ्यांचा अनुभव कसा सुधारते](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 माहिती पृष्ठ](https://eip7702.io/)
 - [पेक्ट्रा डेव्हनेट्स](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

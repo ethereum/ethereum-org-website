@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/scaling/index.md",
-  "generatedAt": "2026-06-19T23:41:48.113Z",
-  "rootHash": "15aeef63fb5c",
+  "generatedAt": "2026-06-30T00:52:58.278Z",
+  "rootHash": "95c91bab37e1",
   "tree": {
     "contentHash": "c2c100ef1284",
-    "anchorHash": "fc8ce987afa0",
+    "anchorHash": "b3e0e789d9ee",
     "children": {
       "frontmatter:title": {
         "contentHash": "0c9caed20ed3",
@@ -115,7 +115,7 @@
       },
       "making-data-cheaper": {
         "contentHash": "a510a07a8649",
-        "anchorHash": "01c7ce5cedb7",
+        "anchorHash": "edf673fdcea1",
         "labelHash": "8994c0422ff6",
         "children": {
           "_label": {
@@ -147,7 +147,7 @@
           },
           "danksharding": {
             "contentHash": "3a1adf5d8cc0",
-            "anchorHash": "314fd07621cf",
+            "anchorHash": "0171873609b2",
             "labelHash": "d5c7c6294c3d",
             "children": {
               "_label": {
@@ -200,7 +200,7 @@
               },
               "html-tag:5": {
                 "contentHash": "0bb078e89485",
-                "anchorHash": "772ff68e3051"
+                "anchorHash": "b842abc21296"
               }
             },
             "childrenOrder": [
@@ -229,7 +229,7 @@
       },
       "decentralizing-rollups": {
         "contentHash": "b47f94d168e3",
-        "anchorHash": "1c484d4dec25",
+        "anchorHash": "49f868d210f3",
         "labelHash": "dd0515626bfc",
         "children": {
           "_label": {
@@ -270,7 +270,7 @@
           },
           "html-tag:4": {
             "contentHash": "e6dffe377268",
-            "anchorHash": "f788507b556e"
+            "anchorHash": "b1f4ab7a8508"
           }
         },
         "childrenOrder": [
@@ -338,5 +338,5 @@
       "current-progress"
     ]
   },
-  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

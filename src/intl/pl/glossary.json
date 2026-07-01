@@ -388,7 +388,7 @@
   "validium-term": "Validium",
   "validium-definition": "Rozwiązanie pozałańcuchowe, które wykorzystuje <a href=\"/glossary/#validity-proof\">dowody ważności</a> do poprawy przepustowości transakcji. W przeciwieństwie do <a href=\"/glossary/#zk-rollup\">rollupów wiedzy zerowej</a>, dane validium nie są przechowywane w sieci głównej warstwy 1 (L1). <a href=\"/developers/docs/scaling/validium/\">Więcej o validium</a>.",
   "vyper-term": "Vyper",
-  "vyper-definition": "Język programowania wysokiego poziomu o składni podobnej do Pythona. Ma na celu zbliżenie się do czysto funkcyjnego języka. Stworzony przez Vitalika Buterina. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Więcej o Vyper</a>.",
+  "vyper-definition": "Wysokopoziomowy język programowania o składni podobnej do języka Python. Stworzony przez Vitalika Buterina. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Więcej o Vyper</a>.",
   "wallet-term": "Portfel",
   "wallet-definition": "Portfel to cyfrowe narzędzie do przechowywania, wysyłania i odbierania waluty cyfrowej, podobnie jak wirtualna portmonetka na Twoje pieniądze online. <a href=\"/wallets/\">Więcej o portfelach Ethereum</a>.",
   "web2-term": "Web2",

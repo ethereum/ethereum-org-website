@@ -1,193 +1,193 @@
 ---
 title: "Finanças descentralizadas (DeFi)"
-metaTitle: "O que é DeFi? | O benefício das Finanças descentralizadas"
-description: "Uma visão geral do DeFi na Ethereum"
+metaTitle: "O que é DeFi? | Benefícios e uso das finanças descentralizadas"
+description: "Uma visão geral sobre DeFi no Ethereum"
 lang: pt-br
 template: use-cases
 image: /images/use-cases/defi.png
-alt: Um logotipo Eth feito de blocos de lego.
+alt: "Um logotipo do Eth feito de peças de Lego."
 sidebarDepth: 2
 summaryPoints:
   - "Uma alternativa global e aberta ao sistema financeiro atual."
-  - "Produtos que deixam você pedir emprestado, economizar, investir, comercializar e muito mais."
-  - "Com base na tecnologia de código aberto com a qual qualquer pessoa pode programar."
+  - "Produtos que permitem tomar emprestado, economizar, investir, negociar e muito mais."
+  - "Baseado em tecnologia de código aberto que qualquer pessoa pode programar."
 ---
 
-A DeFi é um sistema financeiro aberto e global criado para a era da Internet – uma alternativa a um sistema que não é transparente, controlado rigorosamente e mantido por infraestruturas e processos com décadas de existência. Oferece controle e visibilidade sobre o seu dinheiro. Ela fornece exposição aos mercados globais e alternativas a sua moeda local ou opções bancárias. Os produtos DeFi oferecem serviços financeiros a qualquer pessoa com uma conexão com a Internet e são em grande parte de propriedade e mantidos por seus usuários. Até agora, dezenas de bilhões de dólares de criptos foram transacionados através de aplicativos DeFi e seguem crescendo todos os dias.
+O DeFi é um sistema financeiro global e aberto construído para a era da internet – uma alternativa a um sistema que é opaco, rigidamente controlado e mantido por infraestrutura e processos com décadas de idade. Ele dá a você controle e visibilidade sobre o seu dinheiro. Ele lhe dá exposição aos mercados globais e alternativas à sua moeda local ou opções bancárias. Os produtos DeFi abrem os serviços financeiros para qualquer pessoa com uma conexão à internet e são, em grande parte, de propriedade e mantidos por seus usuários. Até agora, dezenas de bilhões de dólares em cripto fluíram por aplicativos DeFi e isso cresce a cada dia.
 
 ## O que é DeFi? {#what-is-defi}
 
-DeFi é um termo coletivo para produtos e serviços financeiros que são acessíveis a qualquer um que possa usar Ethereum – qualquer pessoa com uma conexão com a Internet. Com as DeFi, os mercados estão sempre abertos e não há autoridades centralizadas que possam bloquear pagamentos ou negar o seu acesso a qualquer coisa. Serviços que eram anteriormente lentos e com risco de falha humana se tornam automáticos e mais seguros, agora que são processados por código que qualquer um pode inspecionar e auditar.
+DeFi é um termo coletivo para produtos e serviços financeiros acessíveis a qualquer pessoa que possa usar o [Ethereum](/) – qualquer pessoa com uma conexão à internet. Com o DeFi, os mercados estão sempre abertos e não há autoridades centralizadas que possam bloquear pagamentos ou negar acesso a você a qualquer coisa. Serviços que antes eram lentos e corriam risco de erro humano agora são automáticos e mais seguros, pois são gerenciados por código que qualquer pessoa pode inspecionar e analisar.
 
-Há uma economia cripto em expansão, na qual você pode emprestar, operar long/short, ganhar juros e muito mais. Os argentinos experientes em criptomoedas usaram as DeFi para escapar da inflação devastadora. Empresas começaram a transferir os salários de seus colaboradores em tempo real. Algumas pessoas contrataram e pagaram empréstimos, na casa dos milhões de dólares, sem necessidade de qualquer identificação pessoal.
+Há uma economia cripto em expansão por aí, onde você pode emprestar, tomar emprestado, operar comprado/vendido (long/short), ganhar juros e muito mais. Argentinos experientes em cripto usaram o DeFi para escapar de uma inflação paralisante. As empresas começaram a fazer o streaming dos salários de seus funcionários em tempo real. Algumas pessoas até fizeram e pagaram empréstimos de milhões de dólares sem a necessidade de qualquer identificação pessoal.
 
-<YouTube id="H-O3r2YMWJ4" />
+<VideoWatch slug="defi-future-of-finance" />
 
-## DeFi vs. finanças tradicionais {#defi-vs-tradfi}
+## DeFi vs finanças tradicionais {#defi-vs-tradfi}
 
-Uma das melhores maneiras de avaliar o potencial das DeFi é compreender os problemas que existem hoje.
+Uma das melhores maneiras de ver o potencial do DeFi é entender os problemas que existem hoje.
 
-- Algumas pessoas não têm acesso para abrir uma conta bancária ou usar serviços financeiros.
-- A falta de acesso a serviços financeiros pode comprometer a empregabilidade das pessoas.
-- A falta de acesso a serviços financeiros pode impedir que você seja pago.
-- Uma cobrança oculta dos serviços financeiros são os seus dados pessoais.
-- Os governos e as instituições centralizadas podem fechar os mercados de forma arbitrária.
-- O horário de negociação geralmente é limitado ao horário comercial de um fuso horário específico.
+- Algumas pessoas não têm acesso concedido para abrir uma conta bancária ou usar serviços financeiros.
+- A falta de acesso a serviços financeiros pode impedir que as pessoas consigam emprego.
+- Serviços financeiros podem bloquear o seu pagamento.
+- Uma cobrança oculta dos serviços financeiros são seus dados pessoais.
+- Governos e instituições centralizadas podem fechar mercados à vontade.
+- O horário de negociação costuma ser limitado ao horário comercial de um fuso horário específico.
 - Transferências de dinheiro podem levar dias devido a processos humanos internos.
-- Há um prêmio para operar os serviços financeiros porque as instituições intermediárias cobram a parte delas.
+- Há um prêmio nos serviços financeiros porque as instituições intermediárias precisam de sua parte.
 
 ### Uma comparação {#defi-comparison}
 
-| DeFi                                                                                                                                          | Finanças tradicionais                                                                                                                                                                                |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Você detém seu dinheiro.                                                                                                      | Seu dinheiro é controlado por empresas.                                                                                                                                              |
-| Você controla a destinação de seu dinheiro e como será gasto.                                                                 | Você precisa confiar que as empresas não administrarão os seus fundos indevidamente, como, por exemplo, fazer empréstimos a tomadores de risco.                                      |
-| Transferências de dinheiro acontecem em minutos.                                                                              | Os pagamentos podem levar dias devido a processos manuais.                                                                                                                           |
-| A transação é anônima.                                                                                                        | A operação financeira é fortemente ligada à sua identidade.                                                                                                                          |
-| A DeFi é aberta a qualquer pessoa.                                                                                            | Você deve se cadastrar para usar os serviços financeiros.                                                                                                                            |
-| Os mercados estão sempre abertos.                                                                                             | Mercados fecham porque os empregados cumprem horários.                                                                                                                               |
-| Construído com base na transparência – qualquer pessoa pode ver os dados de um produto e inspecionar como o sistema funciona. | As instituições financeiras são livros fechados: não se pode pedir para ver o histórico de empréstimos, um registro dos seus ativos gerenciados, e assim por diante. |
+| DeFi                                                                                                                               | Finanças tradicionais                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Você guarda seu dinheiro.                                                                                                          | Seu dinheiro é guardado por empresas.                                                                                                                              |
+| Você controla para onde vai o seu dinheiro e como ele é gasto.                                                                     | Você tem que confiar nas empresas para não administrarem mal seu dinheiro, como emprestar a devedores de risco.                                                    |
+| As transferências de fundos acontecem em minutos.                                                                                  | Os pagamentos podem levar dias devido a processos manuais.                                                                                                         |
+| A atividade da transação é pseudônima.                                                                                             | A atividade financeira está fortemente ligada à sua identidade.                                                                                                    |
+| O DeFi está aberto a todos.                                                                                                        | Você deve se candidatar para usar os serviços financeiros.                                                                                                         |
+| Os mercados estão sempre abertos.                                                                                                  | Os mercados fecham porque os funcionários precisam de intervalos.                                                                                                  |
+| É baseado na transparência – qualquer pessoa pode olhar para os dados de um produto e inspecionar como o sistema funciona. | As instituições financeiras são livros fechados: você não pode pedir para ver o histórico de empréstimos, um registro de seus ativos gerenciados e assim por diante. |
 
 <ButtonLink href="/apps/categories/defi">
   Explorar aplicativos DeFi
 </ButtonLink>
 
-## Tudo começou com o Bitcoin... {#bitcoin}
+## Começou com o Bitcoin... {#bitcoin}
 
-O Bitcoin, de muitas maneiras, foi a primeira aplicação DeFi. O Bitcoin permite que você realmente tenha e controle valores e os envie para qualquer lugar ao redor do mundo. Isso é feito oferecendo uma maneira para que um grande número de pessoas, que não confiam umas nas outras, concordem com um livro de contas sem a necessidade de um intermediário confiável. O Bitcoin é aberto a qualquer um e ninguém tem autoridade para alterar suas regras. As regras do Bitcoin, como sua escassez e acessibilidade, estão incorporadas na tecnologia. Não funciona como nas finanças tradicionais, em que os governos podem imprimir moeda que desvaloriza as suas economias e as empresas podem fechar os mercados.
+O Bitcoin, de muitas maneiras, foi o primeiro aplicativo DeFi. O Bitcoin permite que você realmente possua e controle valor e o envie a qualquer lugar do mundo. Ele faz isso fornecendo uma maneira para um grande número de pessoas, que não confiam umas nas outras, concordarem com um livro-razão de contas sem a necessidade de um intermediário de confiança. O Bitcoin é aberto a todos e ninguém tem a autoridade de mudar suas regras. As regras do Bitcoin, como sua escassez e abertura, estão escritas na tecnologia. Não é como as finanças tradicionais, em que os governos podem imprimir dinheiro que desvaloriza suas economias e as empresas podem fechar os mercados.
 
-Ethereum baseia-se nisso. Como o Bitcoin, as regras não mudam por você, e todos têm acesso. Mas também torna esse dinheiro digital programável, usando [contratos inteligentes](/glossary/#smart-contract), para que você possa ir além de armazenar e enviar valores.
+O Ethereum se baseia nisso. Assim como no Bitcoin, as regras não podem mudar para você e todos têm acesso. Mas ele também torna esse dinheiro digital programável, usando [contratos inteligentes](/glossary/#smart-contract), para que você possa ir além do armazenamento e envio de valor.
 
-<YouTube id="qFBYB4W2tqU" />
+<VideoWatch slug="defi-history-inception-to-2021" />
 
 ## Dinheiro programável {#programmable-money}
 
-Isso soa estranho... "por que eu iria querer programar meu dinheiro"? No entanto, esta é mais uma característica padrão dos tokens no Ethereum. Qualquer um pode programar a lógica em pagamentos. Assim, você pode ter o controle e a segurança do Bitcoin somados aos serviços fornecidos por instituições financeiras. Isso permite fazer coisas com criptomoedas que você não poderia fazer com o Bitcoin, tais como emprestar e tomar empréstimos, agendar pagamentos, investir em fundos de índices e mais.
+Isso soa estranho... "por que eu iria querer programar meu dinheiro?". No entanto, isso é mais do que apenas um recurso padrão de tokens no Ethereum. Qualquer pessoa pode programar a lógica em pagamentos. Então você pode obter o controle e a segurança do Bitcoin misturados com os serviços fornecidos por instituições financeiras. Isso permite que você faça coisas com criptomoedas que você não pode fazer com o Bitcoin, como emprestar e tomar emprestado, programar pagamentos, investir em fundos de índice e muito mais.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Explore nossas sugestões de aplicativos DeFi para iniciar se você é novo no Ethereum.</div>
+  <div>Explore nossas sugestões de aplicativos DeFi para testar se você é novo no Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Explorar aplicativos DeFi
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-## O que você pode fazer com DeFi? {#defi-use-cases}
+## O que você pode fazer com o DeFi? {#defi-use-cases}
 
-Há uma alternativa descentralizada para a maioria dos serviços financeiros. Mas o Ethereum também cria oportunidades para a criação de produtos financeiros completamente novos. Esta lista está em constante crescimento.
+Há uma alternativa descentralizada para a maioria dos serviços financeiros. Mas o Ethereum também cria oportunidades para criar produtos financeiros completamente novos. Esta é uma lista em constante crescimento.
 
-- [Enviar dinheiro para o mundo todo](#send-money)
-- [Fazer streaming de dinheiro pelo mundo](#stream-money)
+- [Enviar dinheiro para todo o mundo](#send-money)
+- [Fazer streaming de dinheiro para todo o mundo](#stream-money)
 - [Acessar moedas estáveis](#stablecoins)
-- [Pegar fundos emprestados com garantia](#lending)
-- [Pegar fundos emprestados sem garantia](#flash-loans)
-- [Começar uma poupança em cripto](#saving)
+- [Tomar fundos emprestados com colateral](#lending-2)
+- [Tomar emprestado sem colateral](#flash-loans)
+- [Começar a economizar com cripto](#saving)
 - [Negociar tokens](#swaps)
 - [Aumentar seu portfólio](#investing)
 - [Financiar suas ideias](#crowdfunding)
-- [Contratar seguro](#insurance)
+- [Comprar seguro](#insurance)
 - [Gerenciar seu portfólio](#aggregators)
 
 <Divider />
 
-### Envie dinheiro para o mundo todo rapidamente {#send-money}
+### Enviar dinheiro para todo o mundo de maneira rápida {#send-money}
 
-Como um blockchain, o Ethereum foi concebido para o envio de transações de forma segura e de modo global. Assim como o Bitcoin, o Ethereum torna o envio de dinheiro ao redor do mundo tão fácil quanto enviar um e-mail. Basta inserir o [nome ENS](/glossary/#ens) do destinatário (como bob.eth) ou o endereço da conta dele na sua carteira e seu pagamento irá diretamente para ele em minutos (geralmente). Para enviar ou receber pagamentos, você precisará de uma [carteira](/wallets/).
+Como uma blockchain, o Ethereum é projetado para enviar transações de forma segura e global. Assim como o Bitcoin, o Ethereum torna o envio de dinheiro para todo o mundo tão fácil quanto enviar um e-mail. Basta inserir o [nome ENS](/glossary/#ens) do destinatário (como bob.eth) ou o endereço de conta deles na sua carteira, e seu pagamento irá diretamente para eles em minutos (normalmente). Para enviar ou receber pagamentos, você precisará de uma [carteira](/wallets/). [Saiba mais sobre pagamentos cripto](/payments/).
 
 <ButtonLink href="/apps/categories/defi">
   Ver dapps de pagamento
 </ButtonLink>
 
-#### Pagamentos em tempo real ao redor do mundo... {#stream-money}
+#### Fazer streaming de dinheiro para todo o mundo... {#stream-money}
 
-Você também pode transferir dinheiro através da Ethereum. Isso permite que você pague imediatamente o salário de alguém, dando a essa pessoa acesso ao valor devido sempre que preciso. Ou alugue algo de forma imediata, como um guarda-volume ou uma moto elétrica.
+Você também pode fazer streaming de dinheiro no Ethereum. Isso permite que você pague a alguém seu salário por segundo, dando a eles acesso ao dinheiro sempre que precisarem. Ou alugar algo por segundo, como um armário ou patinete elétrico.
 
-E se você não quiser enviar ou fazer streaming de [ETH](/glossary/#ether) por causa do quanto seu valor pode mudar, existem moedas alternativas no Ethereum: [stablecoins](/glossary/#stablecoin).
+E se você não quiser enviar ou fazer streaming de [ETH](/glossary/#ether) devido a quanto seu valor pode mudar, existem moedas alternativas no Ethereum: [stablecoins](/glossary/#stablecoin).
 
 <Divider />
 
-### Acesso a moedas estáveis {#stablecoins}
+### Acessar moedas estáveis {#stablecoins}
 
-A volatilidade das criptomoedas é um problema para muitos produtos financeiros e gastos em geral. A comunidade DeFi resolveu isso por meio das stablecoins. O valor delas permanece vinculado a outro ativo, geralmente uma moeda popular como o dólar.
+A volatilidade das criptomoedas é um problema para muitos produtos financeiros e gastos gerais. A comunidade DeFi resolveu isso com as stablecoins. O valor delas permanece atrelado a outro ativo, geralmente uma moeda popular como o dólar.
 
-Moedas como Dai ou USDC têm um valor que não superam alguns centavos de dólar. Isso as torna perfeitas para rendimentos ou varejo. Muitas pessoas na América Latina utilizaram as stablecoins como forma de proteger suas poupanças, em tempos de grande incerteza com as moedas emitidas pelos governos.
+Moedas como DAI ou USDC têm um valor que permanece na faixa de alguns centavos de dólar. Isso as torna perfeitas para ganhos ou varejo. Muitas pessoas na América Latina têm usado stablecoins como forma de proteger suas economias em um momento de grande incerteza com as moedas emitidas por seus governos.
 
 <ButtonLink href="/stablecoins/">
-  Mais em moedas estáveis
+  Mais sobre stablecoins
 </ButtonLink>
 
 <Divider />
 
-### Tomar empréstimos {#lending}
+### Empréstimo {#lending}
 
-Empréstimos de recursos de fornecedores descentralizados se dão de duas formas principais.
+Tomar dinheiro emprestado de provedores descentralizados ocorre de duas formas principais.
 
-- Ponto a ponto, quando um mutuário pede emprestado diretamente de um mutuante específico.
-- Pool de fundos, onde credores fornecem fundos (liquidez) a um pool do qual os mutuários podem tomar empréstimo.
+- Ponto a ponto, o que significa que o devedor tomará emprestado diretamente de um credor específico.
+- Baseado em pool, em que os credores fornecem fundos (liquidez) a um pool de onde os devedores podem tomar emprestado.
 
 <ButtonLink href="/apps/categories/defi">
   Ver dapps de empréstimos
 </ButtonLink>
 
-Há diversas vantagens em usar um financiador descentralizado...
+Há muitas vantagens em usar um credor descentralizado...
 
-#### Tomar empréstimos com privacidade {#borrowing-privacy}
+#### Tomar emprestado com privacidade {#borrowing-privacy}
 
-Hoje, pegar dinheiro emprestado ou emprestar gira em torno dos indivíduos envolvidos. Os bancos precisam saber se você terá condições de pagar um empréstimo antes de concedê-lo.
+Hoje em dia, conceder e tomar dinheiro emprestado gira em torno dos indivíduos envolvidos. Os bancos precisam saber se é provável que você pague um empréstimo antes de emprestar.
 
-Os empréstimos descentralizados funcionam sem que as partes tenham que se identificar. Em vez disso, o mutuário deve oferecer uma garantia colateral que o credor receberá automaticamente se o empréstimo não for pago. Alguns credores até aceitam [NFTs](/glossary/#nft) como garantia. Os NFTs são escrituras de ativos únicos, como uma pintura. [Mais sobre NFTs](/nft/)
+O empréstimo descentralizado funciona sem que nenhuma das partes tenha que se identificar. Em vez disso, o devedor deve colocar um colateral que o credor receberá automaticamente se o empréstimo não for reembolsado. Alguns credores até aceitam [NFTs](/glossary/#nft) como colateral. Os NFTs são uma escritura de um ativo único, como uma pintura. [Mais sobre NFTs](/nft/)
 
-Isso permite que você tome empréstimo de dinheiro sem checagem de crédito ou fornecimento de dados pessoais.
+Isso permite que você tome dinheiro emprestado sem verificações de crédito ou fornecimento de informações privadas.
 
 #### Acesso a fundos globais {#access-global-funds}
 
-Quando você usa um mutuante descentralizado, você tem acesso a fundos depositados de todo o mundo, não apenas os fundos em custódia de seu banco ou instituição escolhida. Isso torna os empréstimos mais acessíveis e melhora as taxas de juros.
+Quando você usa um credor descentralizado, você tem acesso a fundos depositados de todo o mundo, e não apenas aos fundos sob a custódia do banco ou da instituição escolhida. Isso torna os empréstimos mais acessíveis e melhora as taxas de juros.
 
-#### Eficiência fiscal {#tax-efficiencies}
+#### Eficiências fiscais {#tax-efficiencies}
 
-Pedir empréstimo pode dar a você acesso aos fundos de que você precisa sem precisar vender seus ETHs (um evento tributável). Em vez disso, você pode usar ETH como garantia colateral de um empréstimo em stablecoin. Isso dá a você acesso ao fluxo de caixa de que você precisa sem abrir mão de seus ETHs. Stablecoins são tokens muito melhores quando você precisa de dinheiro, já que elas não oscilam tanto quanto o ETH. [Mais sobre stablecoins](#stablecoins)
+O empréstimo pode lhe dar acesso aos fundos de que você precisa sem que seja preciso vender seus ETH (um evento tributável). Em vez disso, você pode usar ETH como colateral para um empréstimo de stablecoin. Isso lhe dá o fluxo de caixa de que precisa e permite que você mantenha seu ETH. As stablecoins são tokens muito melhores para quando você precisa de dinheiro (caixa), pois seu valor não flutua como o ETH. [Mais sobre stablecoins](#stablecoins)
 
-#### Empréstimos-relâmpago {#flash-loans}
+#### Empréstimos relâmpago {#flash-loans}
 
-Empréstimos rápidos são uma forma mais experimental de empréstimos descentralizados que permite que você peça empréstimo sem garantia ou sem fornecer qualquer informação pessoal.
+Empréstimos relâmpago são uma forma mais experimental de empréstimo descentralizado que permite que você tome emprestado sem colateral ou sem fornecer informações pessoais.
 
-Neste momento, não estão amplamente acessíveis a pessoas não técnicas, mas dão uma ideia do que poderá ser possível a todos no futuro.
+Atualmente, eles não são amplamente acessíveis para pessoas sem conhecimento técnico, mas dão uma ideia do que pode ser possível para todos no futuro.
 
-Funciona com base no princípio de que o empréstimo é tomado e pago na mesma transação. Se não puder ser pago, a transação retroage como se nada tivesse acontecido.
+Funciona com base no princípio de que o empréstimo é feito e pago na mesma transação. Se não puder ser pago de volta, a transação reverte como se nada tivesse acontecido.
 
-Os fundos que são mais frequentemente utilizados são mantidos em pools de liquidez (grandes pools de fundos utilizados para empréstimos). Se não estiverem sendo utilizados em um dado momento, isso cria uma oportunidade para alguém pedir esses fundos emprestados, fazer negócio com eles e devolver o valor integral literalmente no mesmo momento em que se toma emprestado.
+Os fundos frequentemente usados são mantidos em pools de liquidez (grandes pools de fundos usados para empréstimos). Se não estiverem sendo usados em um determinado momento, isso cria uma oportunidade para que alguém pegue esses fundos emprestados, faça negócios com eles e os pague integralmente, de forma bastante literal, no mesmo momento em que foram pegos emprestados.
 
-Isto significa que muita lógica tem de ser incluída em uma transação sob medida. Um exemplo simples pode ser alguém pedir um empréstimo rápido para adquirir um ativo a um preço para vendê-lo em outra exchange (corretora) onde o preço seja mais alto.
+Isso significa que muita lógica deve ser incluída em uma transação muito personalizada. Um exemplo simples seria alguém usar um empréstimo relâmpago para tomar emprestado o máximo possível de um ativo a um preço, para vendê-lo em uma corretora diferente, onde o preço é mais alto.
 
 Portanto, em uma única transação, ocorre o seguinte:
 
-- Você pega emprestado a quantia X de um ativo $asset por $ 1,00 de uma exchange A
-- Você vende X do $asset na exchange B por $ 1,10
-- Então, você paga o empréstimo na exchange A
-- Você embolsa o lucro menos a taxa de transação
+- Você toma emprestada a quantidade X do $ativo a US$ 1,00 da corretora A
+- Você vende o $ativo X na corretora B por US$ 1,10
+- Você paga o empréstimo à corretora A
+- Você fica com o lucro menos a taxa de transação
 
-Se o estoque da exchange B cair de repente e o usuário não conseguir comprar o suficiente para cobrir o empréstimo original, a transação simplesmente não acontecerá.
+Se a oferta da corretora B caísse de repente e o usuário não pudesse comprar o suficiente para cobrir o empréstimo original, a transação simplesmente falharia.
 
-Para ser capaz de fazer o exemplo acima no mundo financeiro tradicional, você precisaria de uma quantidade enorme de dinheiro. Estas estratégias de fazer dinheiro só são acessíveis aos que já possuem economias. Os empréstimos rápidos são um exemplo do futuro em que possuir dinheiro não é necessariamente uma condição prévia para se fazer dinheiro.
+Para poder fazer o exemplo acima no mundo das finanças tradicionais, você precisaria de uma quantia enorme de dinheiro. Essas estratégias de ganhar dinheiro são acessíveis apenas para aqueles que já possuem riqueza. Os empréstimos relâmpago são um exemplo de um futuro em que ter dinheiro não é necessariamente um pré-requisito para ganhar dinheiro.
 
 <ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
-  Mais sobre empréstimos-relâmpago
+  Mais sobre empréstimos relâmpago
 </ButtonLink>
 
 <Divider />
 
-### Comece a poupar com cripto {#saving}
+### Comece a economizar com cripto {#saving}
 
-#### Empréstimos {#lending}
+#### Empréstimo {#lending-2}
 
-Você pode ganhar juros sobre suas criptomoedas emprestando-as e vendo seus fundos crescerem em tempo real. No momento, as taxas de juros são muito mais altas do que as que você pode obter no seu banco local (se você tiver sorte o suficiente para ter acesso a um). Aqui está um exemplo:
+Você pode ganhar juros sobre sua criptomoeda emprestando-a, e ver seus fundos crescerem em tempo real. Atualmente, as taxas de juros são muito mais altas do que as que você provavelmente receberá no seu banco local (se você tiver a sorte de conseguir acesso a um). Aqui está um exemplo:
 
-- Você empresta seus 100 Dai, uma [stablecoin](/stablecoins/), para um produto como o Aave.
-- Você recebe 100 Aave Dai (aDai) que é um token que representa seus Dai emprestados.
-- Seu aDai aumentará com base nas taxas de juros e você poderá ver o saldo crescendo na sua carteira. Dependendo da [APR](/glossary/#apr), o saldo da sua carteira mostrará algo como 100.1234 após alguns dias ou mesmo horas!
-- Você pode retirar uma quantidade de Dai regular, igual ao seu saldo em aDai, a qualquer momento.
+- Você empresta seus 100 DAI, uma [stablecoin](/stablecoins/), a um produto como o Aave.
+- Você recebe 100 Aave DAI (aDai), que é um token que representa seus DAI emprestados.
+- Seu aDai aumentará com base nas taxas de juros e você pode ver seu saldo crescer em sua carteira. Dependendo da [APR](/glossary/#apr), o saldo da sua carteira apresentará algo como 100,1234 depois de alguns dias ou até horas!
+- Você pode retirar um valor de DAI normal que seja igual ao seu saldo de aDai a qualquer momento.
 
 <ButtonLink href="/apps/categories/defi">
   Ver dapps de empréstimos
@@ -195,15 +195,15 @@ Você pode ganhar juros sobre suas criptomoedas emprestando-as e vendo seus fund
 
 #### Loterias sem perdas {#no-loss-lotteries}
 
-Loterias sem perda como a PoolTogether são uma divertida e inovadora maneira de economizar dinheiro.
+Loterias sem perdas, como a PoolTogether, são uma forma nova, divertida e inovadora de economizar dinheiro.
 
-- Você compra 100 bilhetes usando 100 tokens Dai.
-- Você recebe 100 plDai representando os seus 100 bilhetes.
-- Se um de seus bilhetes for escolhido como vencedor, seu saldo plDai aumentará na proporção do dinheiro acumulado para premiação.
-- Se você não vencer, os seus 100 plDai vão para o sorteio da próxima semana.
-- Você pode retirar uma quantidade de Dai regular, que é igual ao seu saldo plDai, a qualquer momento.
+- Você compra 100 bilhetes usando 100 tokens DAI.
+- Você recebe 100 plDai que representam os seus 100 bilhetes.
+- Se um de seus bilhetes for escolhido como o vencedor, o seu saldo plDai aumentará no valor do prêmio.
+- Se você não ganhar, seus 100 plDai passarão para o sorteio da semana seguinte.
+- Você pode retirar um valor de DAI normal que seja igual ao seu saldo de plDai a qualquer momento.
 
-O dinheiro acumulado para premiação é gerado por todos os juros gerados pelo empréstimo dos bilhetes depositados, como no exemplo de empréstimo acima.
+O prêmio total é gerado por todos os juros provenientes de empréstimos dos depósitos dos bilhetes, como no exemplo de empréstimo acima.
 
 <ButtonLink isSecondary href="https://pooltogether.com">
   Experimente o PoolTogether
@@ -213,9 +213,9 @@ O dinheiro acumulado para premiação é gerado por todos os juros gerados pelo 
 
 ### Trocar tokens {#swaps}
 
-Existem milhares de tokens no Ethereum. Exchanges descentralizadas (DEXs) permitem que você opere diferentes tokens sempre que quiser. Você nunca entrega o controle de seus ativos. Isso é como usar uma exchange quando você visita um país diferente. Mas a versão de DeFi nunca fecha. Os mercados funcionam de maneira ininterrupta e a tecnologia garante que sempre haverá alguém disposto a fazer negociações.
+Existem milhares de tokens no Ethereum. Corretoras descentralizadas (DEXs) permitem que você negocie tokens diferentes sempre que quiser. Você nunca abre mão do controle sobre seus ativos. Isso é como usar uma casa de câmbio ao visitar um país diferente. Mas a versão DeFi nunca fecha. Os mercados funcionam 24/7, 365 dias por ano e a tecnologia garante que sempre haverá alguém para aceitar uma negociação.
 
-Por exemplo, se você quiser usar a loteria sem perda PoolTogether (descrita acima), você precisará de um token como Dai ou USDC. Estas DEXs permitem que você troque seus ETH por esses tokens e reverta novamente quando terminar.
+Por exemplo, se você quiser usar a loteria sem perdas PoolTogether (descrita acima), precisará de um token como o DAI ou o USDC. Essas DEXs permitem que você troque seu ETH por esses tokens e os recupere de volta quando terminar.
 
 <ButtonLink href="/apps/categories/defi">
   Ver corretoras de tokens
@@ -223,23 +223,23 @@ Por exemplo, se você quiser usar a loteria sem perda PoolTogether (descrita aci
 
 <Divider />
 
-### Trading avançado {#trading}
+### Negociação avançada {#trading}
 
-Existem opções mais avançadas para traders que gostam de um pouco mais de controle. Limitar ordens, contratos futuros sem vencimento, trading alavancado e muito mais é possível. Com negociações descentralizadas você obtém acesso à liquidez global, o mercado nunca fecha e você está sempre no controle de seus ativos.
+Há opções mais avançadas para os traders que gostam de um pouco mais de controle. Ordens limitadas, contratos perpétuos, negociações de margem e muito mais, tudo isso é possível. Com a negociação descentralizada, você tem acesso à liquidez global, o mercado nunca fecha e você está sempre no controle de seus ativos.
 
-Quando você usa uma exchange centralizada, tem que depositar seus ativos antes da negociação e confiar a ela o cuidado dos ativos. Embora seus ativos estejam depositados, eles estão em risco, uma vez que as exchanges centralizadas são alvos atraentes para os hackers.
+Ao usar uma corretora centralizada, você tem que depositar os seus ativos antes da negociação e confiar neles para cuidarem deles. Enquanto os seus ativos estiverem depositados, correm riscos, uma vez que as corretoras centralizadas são alvos atrativos para os hackers.
 
 <ButtonLink href="/apps/categories/defi">
-  Ver dapps de trading
+  Ver dapps de negociação
 </ButtonLink>
 
 <Divider />
 
-### Aumente seu portfólio {#investing}
+### Aumentar seu portfólio {#investing}
 
-Existem produtos de gestão de fundos na Ethereum que tentarão aumentar a sua carteira com base em uma estratégia à sua escolha. Isto é automático, aberto a todos, e não precisa de um gerente humano pegando uma fatia de seus lucros.
+Há produtos de gerenciamento de fundos no Ethereum que tentarão aumentar o seu portfólio com base em uma estratégia de sua escolha. Isso é automático, aberto a todos, e não necessita de um gestor humano ficando com uma fatia dos seus lucros.
 
-Um bom exemplo é o [fundo DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Esse é um fundo com balanceamento automático, de forma a garantir que o seu portfólio sempre inclua os principais tokens de DeFi por capitalização de mercado. Nunca é necessário gerenciar nenhum dos detalhes e é possível sacar do fundo sempre que quiser.
+Por exemplo, existem fundos de índice tokenizados que se reequilibram automaticamente para garantir que seu portfólio sempre inclua os principais tokens DeFi por capitalização de mercado. Você nunca precisa administrar os detalhes e pode retirar do fundo sempre que desejar.
 
 <ButtonLink href="/apps/categories/defi">
   Ver dapps de investimento
@@ -249,28 +249,28 @@ Um bom exemplo é o [fundo DeFi Pulse Index (DPI)](https://defipulse.com/blog/de
 
 ### Financie suas ideias {#crowdfunding}
 
-Ethereum é uma plataforma ideal para financiamento colaborativo:
+O Ethereum é uma plataforma ideal para crowdfunding (financiamento coletivo):
 
-- Potenciais financiadores podem vir de qualquer lugar – a Ethereum e seus tokens estão abertos a qualquer pessoa, em qualquer lugar do mundo.
-- É transparente para que os captadores de recursos possam provar quanto dinheiro foi levantado. Você pode até rastrear como os fundos estão sendo gastos posteriormente.
-- Os captadores de recursos podem criar reembolsos automáticos se, por exemplo, houver um prazo específico e um montante mínimo que não seja cumprido.
+- Os possíveis financiadores podem vir de qualquer lugar – o Ethereum e seus tokens são abertos a qualquer pessoa, em qualquer lugar do mundo.
+- É transparente, de forma que os organizadores podem provar quanto dinheiro foi arrecadado. Você pode até monitorar o gasto dos fundos no futuro.
+- Os organizadores podem definir reembolsos automáticos se, por exemplo, houver um prazo específico e um valor mínimo não for atingido.
 
 <ButtonLink href="/apps/categories/defi">
-  Ver dapps de financiamento coletivo
+  Ver dapps de crowdfunding
 </ButtonLink>
 
 #### Financiamento quadrático {#quadratic-funding}
 
-O Ethereum é um software de código aberto, e muito do trabalho até agora tem sido financiado pela comunidade. A essência do código aberto do Ethereum levou ao crescimento de um modelo interessante de captação de recursos: financiamento quadrático. Isto tem o potencial de melhorar a forma como financiamos todos os tipos de bens públicos no futuro.
+O Ethereum é um software de código aberto e grande parte do trabalho tem sido financiado pela comunidade até o momento. Isso gerou o crescimento de um novo e interessante modelo de arrecadação de fundos: o financiamento quadrático. Isso tem o potencial de melhorar a maneira como financiamos todos os tipos de bens públicos no futuro.
 
-O financiamento quadrático assegura que os projetos que recebem mais recursos sejam aqueles com a maior procura. Em outras palavras, projetos que contribuem para melhorar a vida da maioria das pessoas. Funciona assim:
+O financiamento quadrático certifica-se de que os projetos que recebem a maior parte dos fundos são aqueles com a demanda mais singular. Em outras palavras, os projetos que têm a finalidade de melhorar a vida do maior número de pessoas. Veja como ele funciona:
 
-1. Há um pool correspondente de fundos doados.
-2. Começa uma rodada de financiamento público.
-3. As pessoas podem sinalizar a demanda por um projeto através da doação de dinheiro.
-4. Uma vez terminada a rodada, a reserva de fundos correspondente será distribuída aos projetos. Aqueles com a demanda mais alta obtêm o maior valor da reserva de fundos correspondente.
+1. Existe um pool equivalente de fundos doados.
+2. Tem início uma rodada de financiamento público.
+3. As pessoas podem sinalizar sua demanda por um projeto ao doarem um pouco de dinheiro.
+4. Assim que a rodada terminar, o pool de equivalência será distribuído aos projetos. Aqueles com a maior demanda única recebem o maior valor do pool de equivalência.
 
-Isso significa que o Projeto A com suas 100 doações de 1 dólar poderia acabar com mais financiamento que o Projeto B com uma única doação de 10.000 dólares (sujeito ao tamanho do pool correspondente).
+Isso significa que o Projeto A, com 100 doações de US$ 1, pode acabar com mais financiamento do que o Projeto B, com uma única doação de US$ 10.000 (dependendo do tamanho do pool de equivalência).
 
 <ButtonLink href="https://wtfisqf.com">
   Mais sobre financiamento quadrático
@@ -278,11 +278,11 @@ Isso significa que o Projeto A com suas 100 doações de 1 dólar poderia acabar
 
 <Divider />
 
-### Seguro {#insurance}
+### Seguros {#insurance}
 
-Seguros descentralizados visam tornar o seguro mais barato, mais rápido para pagar e mais transparente. Com mais automação, a cobertura é mais acessível e os pagamentos são muito mais rápidos. Os dados utilizados para decidir sobre a sua reivindicação são completamente transparentes.
+Os seguros descentralizados visam tornar os seguros mais baratos, mais rápidos para o pagamento e mais transparentes. Com mais automação, a cobertura é mais acessível e os pagamentos são muito mais rápidos. Os dados usados ​​para decidir sobre sua reivindicação são completamente transparentes.
 
-Os produtos Ethereum, como qualquer software, estão propensos a bugs e exploits. Então, atualmente, muitos produtos na área de seguros visam proteger seus usuários contra a perda de fundos. Entretanto, há projetos que estão começando a criar cobertura para tudo o que a vida pode nos oferecer. Um bom exemplo disso é a cobertura de safra da Etherisc, que visa [proteger pequenos agricultores no Quênia contra secas e inundações](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Um seguro descentralizado pode proporcionar cobertura mais barata aos agricultores que são frequentemente deixados de fora do seguro tradicional.
+Produtos no Ethereum, como qualquer software, podem sofrer com bugs e explorações. Portanto, no momento, muitos produtos de seguros na área se concentram em proteger os seus usuários contra a perda de fundos. No entanto, há projetos começando a criar cobertura para tudo o que a vida pode nos oferecer. Um bom exemplo disso é o Crop Cover, da Etherisc, que visa [proteger os pequenos agricultores no Quênia contra secas e enchentes](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). O seguro descentralizado pode fornecer uma cobertura mais barata para agricultores que muitas vezes não conseguem arcar com os custos dos seguros tradicionais.
 
 <ButtonLink href="/apps/categories/defi">
   Ver dapps de seguros
@@ -290,76 +290,84 @@ Os produtos Ethereum, como qualquer software, estão propensos a bugs e exploits
 
 <Divider />
 
-### Agregadores e gerenciadores de portfólio {#aggregators}
+### Agregadores e gerenciadores de portfólios {#aggregators}
 
-Com tanta coisa acontecendo, você precisará de uma maneira de acompanhar todos os seus investimentos, empréstimos e operações. Há uma série de produtos que permitem coordenar todas as atividades DeFi de um só lugar. Esta é a beleza da arquitetura aberta do DeFi. Equipes podem construir interfaces onde você não somente vê os saldos entre produtos, mas também pode usar os recursos correspondentes. Você vai achar isso útil enquanto aprende mais sobre DeFi.
+Com tanta coisa acontecendo, você precisará de uma maneira de acompanhar todos os seus investimentos, empréstimos e negociações. Há uma série de produtos que permitem que você coordene toda a sua atividade DeFi de um só lugar. Essa é a beleza da arquitetura aberta do DeFi. As equipes podem criar interfaces em que você não apenas pode ver seus saldos em todos os produtos, mas também pode usar os recursos deles. Você pode achar isso útil à medida que explora mais do DeFi.
 
 <ButtonLink href="/apps/categories/defi">
-  Ver dapps de portfólio
+  Ver dapps de portfólios
 </ButtonLink>
 
 <Divider />
 
-## Como o funciona Defi? {#how-defi-works}
+## Como funciona o DeFi? {#how-defi-works}
 
-O DeFi usa criptomoedas e contratos inteligentes para fornecer serviços que não precisam de intermediários. No mundo financeiro de hoje, as instituições financeiras atuam como garantidoras das transações. Isto confere a essas instituições um poder enorme, porque seu dinheiro flui por elas. Além disso, bilhões de pessoas ao redor do mundo não têm acesso a uma conta bancária.
+O DeFi usa criptomoedas e contratos inteligentes para fornecer serviços que não precisam de intermediários. No mundo financeiro atual, as instituições financeiras atuam como avalistas das transações. Isso dá a essas instituições um poder imenso porque o seu dinheiro flui por elas. Além disso, bilhões de pessoas no mundo não têm sequer acesso a uma conta bancária.
 
-No DeFi, um contrato inteligente substitui a instituição financeira na transação. Um contrato inteligente é um tipo de conta Ethereum que pode ter fundos e enviá-los/reembolsá-los com base em certas condições. Ninguém pode alterar esse contrato inteligente quando estiver ativo – ele sempre será executado conforme o programado.
+No DeFi, um contrato inteligente substitui a instituição financeira na transação. Um contrato inteligente é um tipo de conta no Ethereum que pode reter fundos e pode enviar/reembolsá-los com base em certas condições. Ninguém pode alterar esse contrato inteligente quando ele estiver ativo – ele sempre será executado conforme programado.
 
-Um contrato que foi concebido para distribuir um subsídio ou mesada poderia ser programado para enviar dinheiro da Conta A para Conta B todas as sextas-feiras. E isso só poderá acontecer enquanto a Conta A tiver os fundos necessários. Ninguém pode alterar o contrato e adicionar Conta C como beneficiário para roubar fundos.
+Um contrato criado para distribuir uma mesada ou uma pequena quantia em dinheiro, pode ser programado para enviar dinheiro da Conta A para a Conta B, todas as sextas-feiras. E ele só fará isso, desde que a Conta A tenha os fundos necessários. Ninguém pode alterar o contrato ou adicionar a Conta C como destinatária para roubar fundos.
 
-Os contratos também são públicos para qualquer pessoa inspecionar e auditar. Isto significa que os contratos pouco confiáveis passarão frequentemente a estar sob escrutínio comunitário muito rapidamente.
+Os contratos também são públicos para que qualquer pessoa possa inspecionar e auditar. Isso significa que contratos ruins frequentemente serão alvo do escrutínio da comunidade com bastante rapidez.
 
-Isto significa que atualmente há uma necessidade de confiar nos membros mais técnicos da comunidade Ethereum, que podem ler códigos. A comunidade baseada em código aberto ajuda a manter os desenvolvedores sob controle, mas esta necessidade diminuirá ao longo do tempo, à medida que os contratos inteligentes se tornem mais fáceis de ler e que se desenvolvam outras formas de provar a confiança no código.
+Isso significa que, no momento, é necessário confiar nos membros mais técnicos da comunidade do Ethereum que sabem ler código. A comunidade de código aberto ajuda a manter os desenvolvedores na linha, mas essa necessidade diminuirá com o tempo, à medida que os contratos inteligentes se tornarem mais fáceis de ler e outras formas de provar a confiabilidade do código forem desenvolvidas.
 
 ## Ethereum e DeFi {#ethereum-and-defi}
 
-O Ethereum é a base perfeita para DeFi por várias razões:
+O Ethereum é a base perfeita para o DeFi por várias razões:
 
-- Ninguém é proprietário do Ethereum ou dos contratos inteligentes que existem nele – isso dá a todos uma oportunidade de usar o DeFi. Isto também significa que ninguém pode alterar as regras que são aplicadas a ele.
-- Os produtos de DeFi falam todos o mesmo idioma nos bastidores: Ethereum. Isto significa que muitos dos produtos funcionam muito bem em conjunto. Você pode emprestar tokens em uma plataforma e negociar os juros do token em um mercado diferente através de uma aplicação totalmente distinta. Isso é como juntar pontos de fidelidade em seu banco.
-- Tokens e criptomoedas estão integrados no Ethereum, um registro compartilhado – manter o controle das transações e a propriedade são a área de domínio do Ethereum.
-- O Ethereum permite a liberdade financeira total – a maioria dos produtos nunca terá a custódia dos seus fundos, deixando você no controle.
+- Ninguém é dono do Ethereum ou dos contratos inteligentes que existem nele – isso dá a todos a oportunidade de usar o DeFi. Isso também significa que ninguém pode mudar as regras para você.
+- Todos os produtos DeFi falam a mesma linguagem nos bastidores: Ethereum. Isso significa que muitos dos produtos trabalham juntos perfeitamente. Você pode emprestar tokens em uma plataforma e trocar o token que rende juros em um mercado diferente, em um aplicativo totalmente diferente. É como se você pudesse sacar pontos de fidelidade em seu banco.
+- Os tokens e as criptomoedas são construídos no Ethereum, um livro-razão compartilhado – acompanhar transações e propriedades é a especialidade do Ethereum.
+- O Ethereum permite a completa liberdade financeira – a maioria dos produtos nunca assumirá a custódia dos seus fundos, deixando que você tenha todo o controle.
 
-Pense no DeFi como camadas:
+Você pode pensar no DeFi em camadas:
 
-1. O blockchain: Ethereum contém o histórico das transações e o estado das contas.
-2. Os ativos – [ETH](/what-is-ether/) e os outros tokens (moedas).
-3. Os protocolos – [contratos inteligentes](/glossary/#smart-contract) que fornecem a funcionalidade, por exemplo, um serviço que permite o empréstimo descentralizado de ativos.
+1. A blockchain – O Ethereum contém o histórico de transações e o estado das contas.
+2. Os ativos – [ETH](/what-is-ether/) e os demais tokens (moedas).
+3. Os protocolos – [contratos inteligentes](/glossary/#smart-contract) que oferecem a funcionalidade, por exemplo, um serviço que permite o empréstimo descentralizado de ativos.
 4. [Os aplicativos](/apps/) – os produtos que usamos para gerenciar e acessar os protocolos.
 
-Observação: grande parte do DeFi usa o [padrão ERC-20](/glossary/#erc-20). Aplicações em DeFi utilizam um wrapper para ETH chamado Wrapped Ether (WETH). [Saiba mais sobre ether encapsulado](/wrapped-eth).
+Nota: grande parte do DeFi usa o [padrão ERC-20](/glossary/#erc-20). Os aplicativos em DeFi usam um invólucro para ETH chamado ether empacotado (WETH). [Saiba mais sobre o ether empacotado](/wrapped-eth).
 
-## Desenvolva com DeFi {#build-defi}
+## Construa DeFi {#build-defi}
 
-DeFi é um movimento de código aberto. Os protocolos e aplicações DeFi são todos abertos, para você inspecionar, fazer updates e inovar. Por causa dessa pilha em camadas (todos compartilham o mesmo blockchain e ativos base), os protocolos podem ser combinados para proporcionar oportunidades únicas.
+DeFi é um movimento de código aberto. Os protocolos e aplicativos DeFi estão abertos para você inspecionar, fazer uma bifurcação e inovar. Devido a essa pilha em camadas (todos compartilham a mesma blockchain e ativos base), os protocolos podem ser combinados para liberar oportunidades exclusivas de combinação.
 
 <ButtonLink href="/developers/docs/dapps/">
-  Mais sobre a criação de dapps
+  Mais sobre a construção de dapps
 </ButtonLink>
+
+## Além do DeFi tradicional {#beyond-traditional-defi}
+
+O ecossistema DeFi continua se expandindo para novas áreas:
+
+- **[Mercados de previsão](/prediction-markets/)** – Plataformas descentralizadas nas quais você pode apostar no resultado de eventos futuros, desde eleições até eventos esportivos, sem intermediários.
+- **[Ativos do mundo real (RWAs)](/real-world-assets/)** – Tokenização de ativos físicos, como imóveis, commodities e títulos no Ethereum, trazendo trilhões de dólares de valor onchain.
+- **[Pagamentos](/payments/)** – Uso do Ethereum e de stablecoins para pagamentos globais rápidos e de baixo custo, sem a infraestrutura bancária tradicional.
+- **[Agentes de IA](/ai-agents/)** – Agentes autônomos de software que podem realizar transações no Ethereum, permitindo novas formas de negociação automatizada, gerenciamento de portfólio e interação onchain.
 
 ## Leitura adicional {#further-reading}
 
-### Dados de DeFi {#defi-data}
+### Dados sobre DeFi {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
 ### Artigos sobre DeFi {#defi-articles}
 
-- [Um guia para iniciantes sobre DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 de janeiro de 2020_
-- [Diretrizes de Avaliação de Risco DeFi da EEA](https://entethalliance.org/specs/defi-risks/) – Uma visão geral apoiada pela indústria sobre como identificar e avaliar os principais riscos em protocolos DeFi.
+- [Um guia para iniciantes em DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 de janeiro de 2020_
+- [Diretrizes de avaliação de risco em DeFi da EEA](https://entethalliance.org/specs/defi-risks/) – Uma visão geral apoiada pelo setor sobre como identificar e avaliar os principais riscos em protocolos DeFi.
 
 ### Vídeos {#videos}
 
 - [Finematics - educação sobre finanças descentralizadas](https://finematics.com/) – _Vídeos sobre DeFi_
-- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Noções básicas de DeFi: tudo o que você precisa saber para começar neste espaço ocasionalmente desconcertante._
+- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Básico do DeFi: tudo o que você precisa saber para começar neste espaço ocasionalmente desconcertante._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _O que é DeFi?_
 
 ### Comunidades {#communities}
 
 - [Servidor do Discord do DeFi Llama](https://discord.defillama.com/)
-- [Servidor do Discord do DeFi Pulse](https://discord.gg/Gx4TCTk)
 
 <Divider />
 

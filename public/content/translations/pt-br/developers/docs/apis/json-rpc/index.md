@@ -1887,7 +1887,7 @@ Esta foi apenas uma breve introdução a algumas das tarefas mais comuns, demons
 
 ## Tópicos relacionados {#related-topics}
 
-- [Especificação JSON-RPC](http://www.jsonrpc.org/specification)
+- [Especificação JSON-RPC](https://www.jsonrpc.org/specification)
 - [Nós e clientes](/developers/docs/nodes-and-clients/)
 - [APIs JavaScript](/developers/docs/apis/javascript/)
 - [APIs de backend](/developers/docs/apis/backend/)

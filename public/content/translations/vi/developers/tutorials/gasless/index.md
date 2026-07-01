@@ -356,8 +356,8 @@ Một người dùng gửi một lời chào. Có thể nó được cập nhậ
 
 ## Kết luận {#conclusion}
 
-Tại thời điểm này, bạn đã có thể tạo ra trải nghiệm không cần Gas cho người dùng dapp của mình, với cái giá là một chút tập trung hóa.
+Đến thời điểm này, bạn đã có thể tạo ra một trải nghiệm không cần Gas cho người dùng ứng dụng phi tập trung (dapp) của mình, với cái giá là một chút sự tập trung hóa.
 
-Tuy nhiên, điều này chỉ hoạt động với các hợp đồng thông minh hỗ trợ ERC-712. Ví dụ, để chuyển một token ERC-20, cần phải có giao dịch được ký bởi chủ sở hữu thay vì chỉ là một thông điệp. Giải pháp là [trừu tượng hóa tài khoản (ERC-4337)](https://docs.erc4337.io/index.html). Tôi hy vọng sẽ viết một bài hướng dẫn trong tương lai về nó.
+Tuy nhiên, điều này chỉ hoạt động với các hợp đồng thông minh hỗ trợ ERC-712. Ví dụ, để chuyển một token ERC-20, cần phải có giao dịch được ký bởi chủ sở hữu thay vì chỉ là một thông điệp. Giải pháp đơn giản nhất là để tài sản không thuộc sở hữu của Địa chỉ EOA, mà bởi một hợp đồng riêng biệt (một hình thức đơn giản của [trừu tượng hóa tài khoản](/roadmap/account-abstraction/)). Bạn có thể đọc thêm về điều này [trong bài hướng dẫn tiếp theo](/developers/tutorials/gasless-token).
 
-[Xem thêm các bài viết của tôi tại đây](https://cryptodocguy.pro/).
+[Xem thêm các bài viết khác của tôi tại đây](https://cryptodocguy.pro/).

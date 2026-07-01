@@ -134,7 +134,7 @@ Si desea monitorear los precios del gas, para poder enviar su ETH por menos, pue
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimador de código abierto del precio del gas de transacciones_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitoree y rastree los precios del gas de Ethereum y la capa 2 (l2) para reducir las tarifas de transacción y ahorrar dinero_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Extensión de Chrome para la estimación de gas que admite tanto transacciones heredadas de Tipo 0 como transacciones EIP-1559 de Tipo 2._
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calcule las tarifas de gas en su moneda local para diferentes tipos de transacciones en la Red principal, Arbitrum y Polygon._
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calcule las tarifas de gas en su moneda local para diferentes tipos de transacciones en la Red principal, Arbitrum y Polygon._
 
 ## Herramientas relacionadas {#related-tools}
 

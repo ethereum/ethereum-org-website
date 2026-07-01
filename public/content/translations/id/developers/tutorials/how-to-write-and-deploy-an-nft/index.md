@@ -17,7 +17,7 @@ Dalam tutorial ini, kita akan memandu pembuatan dan penyebaran kontrak pintar ER
 
 Di Bagian 2 dari tutorial ini, kita akan membahas bagaimana kita dapat menggunakan kontrak pintar kita untuk mencetak NFT, dan di Bagian 3 kita akan menjelaskan cara melihat NFT Anda di MetaMask.
 
-Dan tentu saja, jika Anda memiliki pertanyaan kapan saja, jangan ragu untuk menghubungi di [Discord Alchemy](https://discord.gg/gWuC7zB) atau kunjungi [dokumentasi API NFT Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
+Dan tentu saja, jika Anda memiliki pertanyaan kapan saja, jangan ragu untuk menghubungi di [Discord Alchemy](https://discord.gg/gWuC7zB) atau kunjungi [dokumentasi API NFT Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart)!
 
 ## Langkah 1: Hubungkan ke jaringan Ethereum {#connect-to-ethereum}
 
@@ -27,7 +27,7 @@ Dalam tutorial ini, kita juga akan memanfaatkan alat pengembang Alchemy untuk pe
 
 ## Langkah 2: Buat aplikasi Anda (dan kunci API) {#make-api-key}
 
-Setelah Anda membuat akun Alchemy, Anda dapat menghasilkan kunci API dengan membuat aplikasi. Ini akan memungkinkan kita untuk membuat permintaan ke testnet Sepolia. Lihat [panduan ini](https://docs.alchemyapi.io/guides/choosing-a-network) jika Anda ingin mempelajari lebih lanjut tentang testnet.
+Setelah Anda membuat akun Alchemy, Anda dapat menghasilkan kunci API dengan membuat aplikasi. Ini akan memungkinkan kita untuk membuat permintaan ke testnet Sepolia. Lihat [panduan ini](https://www.alchemy.com/docs/choosing-a-web3-network) jika Anda ingin mempelajari lebih lanjut tentang testnet.
 
 1. Arahkan ke halaman "Create App" di Dasbor Alchemy Anda dengan mengarahkan kursor ke "Apps" di bilah navigasi dan mengklik "Create App"
 
@@ -53,14 +53,13 @@ Untuk menyebarkan kontrak pintar kita ke testnet, kita akan membutuhkan beberapa
 
 ## Langkah 5: Periksa Saldo Anda {#check-balance}
 
-Untuk memastikan saldo kita ada di sana, mari buat permintaan [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) menggunakan [alat komposer Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Ini akan mengembalikan jumlah ETH di dompet kita. Setelah Anda memasukkan alamat akun MetaMask Anda dan mengklik "Send Request", Anda akan melihat respons seperti ini:
+Untuk memastikan saldo kita ada di sana, mari buat permintaan [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) menggunakan [alat sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Ini akan mengembalikan jumlah ETH di dompet kita. Setelah Anda memasukkan alamat akun MetaMask Anda dan mengklik "Send Request", Anda akan melihat respons seperti ini:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
 > **Catatan** Hasil ini dalam Wei, bukan ETH. Wei digunakan sebagai denominasi terkecil dari Ether. Konversi dari Wei ke ETH adalah 1 eth = 10<sup>18</sup> Wei. Jadi jika kita mengonversi 0xde0b6b3a7640000 ke desimal, kita mendapatkan 1\*10<sup>18</sup> Wei, yang sama dengan 1 ETH.
 
 Fiuh! Uang palsu kita semuanya ada di sana.
-
 ## Langkah 6: Inisialisasi proyek kita {#initialize-project}
 
 Pertama, kita perlu membuat folder untuk proyek kita. Arahkan ke baris perintah Anda dan ketik:
@@ -68,11 +67,11 @@ Pertama, kita perlu membuat folder untuk proyek kita. Arahkan ke baris perintah 
     mkdir my-nft
     cd my-nft
 
-Sekarang setelah kita berada di dalam folder proyek kita, kita akan menggunakan npm init untuk menginisialisasi proyek. Jika Anda belum menginstal npm, ikuti [instruksi ini](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (kita juga akan membutuhkan [Node.js](https://nodejs.org/en/download/), jadi unduh juga!).
+Sekarang setelah kita berada di dalam folder proyek kita, kita akan menggunakan npm init untuk menginisialisasi proyek. Jika Anda belum menginstal npm, ikuti [instruksi instalasi Node.js](https://nodejs.org/en/download/) (kita akan membutuhkan Node.js dan npm untuk tutorial ini).
 
     npm init
 
-Tidak masalah bagaimana Anda menjawab pertanyaan instalasi; berikut adalah cara kami melakukannya sebagai referensi:
+Tidak terlalu penting bagaimana Anda menjawab pertanyaan instalasi; berikut adalah cara kami melakukannya sebagai referensi:
 
 ```json
     package name: (my-nft)
@@ -100,7 +99,6 @@ Tidak masalah bagaimana Anda menjawab pertanyaan instalasi; berikut adalah cara 
 ```
 
 Setujui package.json, dan kita siap untuk melanjutkan!
-
 ## Langkah 7: Instal [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 Hardhat adalah lingkungan pengembangan untuk mengompilasi, menyebarkan, menguji, dan men-debug perangkat lunak Ethereum Anda. Ini membantu pengembang saat membangun kontrak pintar dan aplikasi terdesentralisasi (dapp) secara lokal sebelum menyebarkannya ke rantai langsung.
@@ -342,7 +340,7 @@ Alamat From harus cocok dengan alamat akun MetaMask Anda dan alamat To akan bert
 
 Yasssss! Anda baru saja menyebarkan kontrak pintar NFT Anda ke rantai (testnet) Ethereum!
 
-Untuk memahami apa yang terjadi secara teknis, mari arahkan ke tab Explorer di [dasbor Alchemy](https://dashboard.alchemyapi.io/explorer) kita. Jika Anda memiliki beberapa aplikasi Alchemy, pastikan untuk memfilter berdasarkan aplikasi dan pilih "MyNFT".
+Untuk memahami apa yang terjadi secara teknis, mari arahkan ke tab Explorer di [dasbor Alchemy](https://dashboard.alchemy.com/explorer) kita. Jika Anda memiliki beberapa aplikasi Alchemy, pastikan untuk memfilter berdasarkan aplikasi dan pilih "MyNFT".
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 
