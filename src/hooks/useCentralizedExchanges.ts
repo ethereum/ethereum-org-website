@@ -2,14 +2,6 @@ import { useState } from "react"
 import { shuffle } from "lodash"
 import { useLocale } from "next-intl"
 
-// TODO: Remove unused?
-// import argent from "@/public/images/wallets/argent.png"
-// import binanceus from "@/public/images/exchanges/binance.png"
-// import imtoken from "@/public/images/wallets/imtoken.png"
-// import mycrypto from "@/public/images/wallets/mycrypto.png"
-// import myetherwallet from "@/public/images/wallets/myetherwallet.png"
-// import squarelink from "@/public/images/wallets/squarelink.png"
-// import trust from "@/public/images/wallets/trust.png"
 import type { ImageProps } from "@/components/Image"
 import { SelectOnChange } from "@/components/Select"
 
