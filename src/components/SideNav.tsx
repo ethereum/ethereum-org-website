@@ -56,23 +56,33 @@ const SideNavLink = ({ children, ...props }: LinkProps) => {
 export type NavLinkProps = {
   item: DeveloperDocsLink
   path: string
-  isTopLevel?: boolean
 }
 
-const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
+const normalizePath = (path: string) => path.replace(/\/$/, "")
+
+const isPathMatch = (currentPath: string, targetPath?: string) => {
+  if (!targetPath) return false
+
+  const current = normalizePath(currentPath)
+  const target = normalizePath(targetPath)
+
+  return current === target || current.startsWith(`${target}/`)
+}
+
+const isItemInPath = (item: DeveloperDocsLink, path: string): boolean => {
+  if (isPathMatch(path, item.href)) return true
+
+  return item.items?.some((childItem) => isItemInPath(childItem, path)) ?? false
+}
+
+const NavLink = ({ item, path }: NavLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
-  const isLinkInPath =
-    isTopLevel || path.includes(item.href) || path.includes(item.path)
+  const isLinkInPath = isItemInPath(item, path)
   const [isOpen, setIsOpen] = useState<boolean>(isLinkInPath)
 
   useEffect(() => {
-    // Only set on items that contain a link
-    // Otherwise items w/ `path` would re-open every path change
-    if (item.href) {
-      const shouldOpen = path.includes(item.href) || path.includes(item.path)
-      setIsOpen(shouldOpen)
-    }
-  }, [path, item.path, item.href])
+    setIsOpen(isLinkInPath)
+  }, [isLinkInPath])
 
   if (item.items) {
     return (
@@ -129,9 +139,6 @@ export interface SideNavProps {
   path: string
 }
 
-// TODO set tree state based on if current path is a child
-// of the given parent. Currently all `path` items default to open
-// and they only collapse when clicked on.
 const SideNav = ({ path }: SideNavProps) => {
   const { t } = useTranslation("page-developers-docs")
 
@@ -141,7 +148,7 @@ const SideNav = ({ path }: SideNavProps) => {
       aria-label={t("common:nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
-        <NavLink item={item} path={path} key={idx} isTopLevel />
+        <NavLink item={item} path={path} key={idx} />
       ))}
     </nav>
   )
