@@ -285,7 +285,7 @@ In addition, for long-term sustainability, Glamsterdam introduces Block-Level Ac
 
 Existing contracts will continue to function normally after Glamsterdam. Developers will likely get several new tools and should review their gas usage:
 
-- Increase maximum contract size (or EIP-7954) allows developers to deploy larger applications, raising the maximum contract size limit from roughly 24KiB to 32KiB.
+- Increase maximum contract size (or EIP-7954) allows developers to deploy larger applications, raising the maximum contract size limit from roughly 24KiB to 64KiB.
 - Deterministic factory predeploy (or EIP-7997) introduces a universal, built-in factory contract. It allows developers to deploy their applications and smart contract wallets to the exact same address across all participating EVM chains.
 - If your app relies on complex tracing to find ETH transfers, ETH transfers and burns emit a log (or EIP-7708) will allow you to switch to using logs for more simple and reliable accounting.
 - State creation gas cost increase (or EIP-8037) and state-access gas cost update (or EIP-8038) introduce new sustainability models that will change certain contract deployment costs, as creating new accounts or permanent storage will have a new standardized fixed fee based on the size of the data created.
