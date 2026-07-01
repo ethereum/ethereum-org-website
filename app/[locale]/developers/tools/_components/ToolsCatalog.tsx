@@ -127,7 +127,7 @@ function CategorySidebar({
         return (
           <div key={category.id} className="space-y-1">
             <BaseLink
-              href={`/developers/tools/${category.id}/`}
+              href={`/developers/tools/categories/${category.id}/`}
               className={cn(
                 "flex w-full items-center gap-2 rounded-md px-3 py-2 text-start text-sm no-underline hover:bg-background-highlight",
                 isCategoryActive && "bg-background-highlight text-primary"

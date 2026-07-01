@@ -34,7 +34,10 @@ export default async function DevelopersToolsCategoryJsonLD({
     namespace: "page-developers-tools",
   })
 
-  const url = normalizeUrlForJsonLd(locale, `/developers/tools/${category}`)
+  const url = normalizeUrlForJsonLd(
+    locale,
+    `/developers/tools/categories/${category}`
+  )
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
@@ -111,7 +114,7 @@ export default async function DevelopersToolsCategoryJsonLD({
               getToolPrimaryUrl(tool) ||
               normalizeUrlForJsonLd(
                 locale,
-                `/developers/tools/${category}/${getToolKey(tool)}/`
+                `/developers/tools/${getToolKey(tool)}/`
               ),
             applicationCategory: "DeveloperApplication",
             applicationSubCategory: categoryLabel,

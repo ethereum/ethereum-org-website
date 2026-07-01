@@ -34,11 +34,11 @@ export default async function DevelopersToolsToolJsonLD({
 
   const url = normalizeUrlForJsonLd(
     locale,
-    `/developers/tools/${tool.categoryId}/${getToolKey(tool)}/`
+    `/developers/tools/${getToolKey(tool)}/`
   )
   const categoryUrl = normalizeUrlForJsonLd(
     locale,
-    `/developers/tools/${tool.categoryId}/`
+    `/developers/tools/categories/${tool.categoryId}/`
   )
 
   const contributorList = contributors.map((contributor) => ({

@@ -6,7 +6,7 @@ import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import {
   buildToolLabels,
-  findTool,
+  findToolBySlug,
   normalizeDeveloperToolsData,
   withCategories,
 } from "@/lib/utils/developerToolsData"
@@ -19,15 +19,13 @@ import { getDeveloperToolsData } from "@/lib/data"
 /**
  * Shared body for the intercepting modal slots (index-level and category-level):
  * the compact tool detail rendered inside the client modal shell. The standalone
- * `[category]/[tool]` page has its own wider layout.
+ * `[tool]` page has its own wider layout.
  */
 const InterceptedToolDetail = async ({
   locale,
-  category,
   toolKey,
 }: {
   locale: string
-  category: string
   toolKey: string
 }) => {
   const [data, t] = await Promise.all([
@@ -38,7 +36,7 @@ const InterceptedToolDetail = async ({
   const normalized = normalizeDeveloperToolsData(data)
   if (!normalized) notFound()
 
-  const tool = findTool(withCategories(normalized), category, toolKey)
+  const tool = findToolBySlug(withCategories(normalized), toolKey)
   if (!tool) notFound()
 
   const { categoryLabels, subcategoryLabels, tagLabels } = buildToolLabels(

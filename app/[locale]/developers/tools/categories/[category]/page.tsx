@@ -4,6 +4,14 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type { Lang } from "@/lib/types"
 
 import { PageHero } from "@/components/Hero"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import {
@@ -14,7 +22,7 @@ import {
 } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import ToolsPageBody from "../_components/ToolsPageBody"
+import ToolsPageBody from "../../_components/ToolsPageBody"
 
 import DevelopersToolsCategoryJsonLD from "./page-jsonld"
 
@@ -34,10 +42,11 @@ const Page = async (props: {
 
   setRequestLocale(locale)
 
-  const [data, { contributors }, t] = await Promise.all([
+  const [data, { contributors }, t, tCommon] = await Promise.all([
     getDeveloperToolsData(),
     getAppPageContributorInfo("developers/tools", locale as Lang),
     getTranslations({ locale, namespace: "page-developers-tools" }),
+    getTranslations({ locale, namespace: "common" }),
   ])
 
   const normalized = normalizeDeveloperToolsData(data)
@@ -56,6 +65,41 @@ const Page = async (props: {
 
   const categoryTools = allTools.filter((tool) => tool.categoryId === category)
 
+  // Hand-built breadcrumb: the `/categories/` URL segment has no page of its
+  // own, so a slug-derived crumb would link to a 404. Skip it and link the
+  // real ancestors instead.
+  const breadcrumb = (
+    <Breadcrumb>
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">ethereum.org</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+          /
+        </BreadcrumbSeparator>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/developers/">
+            {tCommon("developers")}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+          /
+        </BreadcrumbSeparator>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/developers/tools/">
+            {tCommon("tools")}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+          /
+        </BreadcrumbSeparator>
+        <BreadcrumbItem>
+          <BreadcrumbPage>{categoryLabels[category]}</BreadcrumbPage>
+        </BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
+  )
+
   return (
     <>
       <DevelopersToolsCategoryJsonLD
@@ -67,7 +111,7 @@ const Page = async (props: {
         contributors={contributors}
       />
       <PageHero
-        breadcrumbs={{ slug: `/developers/tools/${category}` }}
+        breadcrumbs={breadcrumb}
         title={categoryLabels[category]}
         description={currentCategory.description}
         variant="no-divider"
@@ -118,7 +162,7 @@ export async function generateMetadata(props: {
 
   return await getMetadata({
     locale,
-    slug: ["developers", "tools", category],
+    slug: ["developers", "tools", "categories", category],
     title: `${t(`page-developers-tools-category-${category}-title`)} | ${t("page-developers-tools-meta-title")}`,
     description: t("page-developers-tools-meta-description"),
   })

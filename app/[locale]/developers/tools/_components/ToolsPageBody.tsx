@@ -29,7 +29,7 @@ type ToolsPageBodyProps = {
 /**
  * Shared body for `/developers/tools` and `/developers/tools/[category]`:
  * the filterable catalog and the suggest-a-resource CTA. Tool detail is its
- * own route (`[category]/[tool]`), shown as a modal via interception.
+ * own route (`[tool]`), shown as a modal via interception.
  */
 const ToolsPageBody = async ({
   locale,

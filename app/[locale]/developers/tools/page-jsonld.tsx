@@ -88,7 +88,7 @@ export default async function DevelopersToolsJsonLD({
           description: category.description,
           url: normalizeUrlForJsonLd(
             locale,
-            `/developers/tools/${category.id}/`
+            `/developers/tools/categories/${category.id}/`
           ),
         })),
       },

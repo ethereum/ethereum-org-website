@@ -19,9 +19,8 @@ import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import {
-  buildSubcategoryIndex,
   buildToolLabels,
-  findTool,
+  findToolBySlug,
   getRelatedTools,
   getToolKey,
   normalizeDeveloperToolsData,
@@ -29,8 +28,8 @@ import {
 } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import ToolCard from "../../_components/ToolCard"
-import ToolLinks from "../../_components/ToolLinks"
+import ToolCard from "../_components/ToolCard"
+import ToolLinks from "../_components/ToolLinks"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -39,10 +38,10 @@ import { getDeveloperToolsData } from "@/lib/data"
 // Re-render statically generated pages daily to pick up tools data updates
 export const revalidate = 86400
 
-type ToolPageParams = PageParams & { category: string; tool: string }
+type ToolPageParams = PageParams & { tool: string }
 
 const Page = async (props: { params: Promise<ToolPageParams> }) => {
-  const { locale, category, tool: toolKey } = await props.params
+  const { locale, tool: toolKey } = await props.params
   setRequestLocale(locale)
 
   const [data, { contributors }, t, tCommon] = await Promise.all([
@@ -56,7 +55,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   if (!normalized) notFound()
 
   const allTools = withCategories(normalized)
-  const tool = findTool(allTools, category, toolKey)
+  const tool = findToolBySlug(allTools, toolKey)
   if (!tool) notFound()
 
   const relatedTools = getRelatedTools(allTools, tool)
@@ -64,13 +63,14 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
     t,
     normalized.taxonomy
   )
+  const categoryLabel = categoryLabels[tool.categoryId] || tool.categoryId
 
   return (
     <>
       <PageJsonLD
         locale={locale}
         tool={tool}
-        categoryLabel={categoryLabels[tool.categoryId] || tool.categoryId}
+        categoryLabel={categoryLabel}
         contributors={contributors}
       />
       {/* Breadcrumb sits outside <main>, matching PageHero's eyebrow inset on
@@ -101,8 +101,10 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
               /
             </BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbLink href={`/developers/tools/${category}/`}>
-                {categoryLabels[category] || category}
+              <BreadcrumbLink
+                href={`/developers/tools/categories/${tool.categoryId}/`}
+              >
+                {categoryLabel}
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
@@ -140,9 +142,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
                 <div>
-                  <Tag status="tag">
-                    {categoryLabels[tool.categoryId] || tool.categoryId}
-                  </Tag>
+                  <Tag status="tag">{categoryLabel}</Tag>
                 </div>
                 <h1 className="mt-0">{tool.name}</h1>
                 <p className="text-sm text-body-medium">
@@ -192,36 +192,26 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   )
 }
 
-export async function generateStaticParams({
-  params,
-}: {
-  params: { category: string }
-}) {
+export async function generateStaticParams() {
   const data = normalizeDeveloperToolsData(await getDeveloperToolsData())
   if (!data) return []
 
-  const subcategoryToCategory = buildSubcategoryIndex(data.taxonomy)
-
-  return data.resources
-    .filter(
-      (r) => subcategoryToCategory.get(r.subcategory_id) === params.category
-    )
-    .map((r) => ({ tool: getToolKey(r) }))
+  // Flat routes: one entry per tool, keyed by its globally-unique slug.
+  return data.resources.map((r) => ({ tool: getToolKey(r) }))
 }
 
 export async function generateMetadata(props: {
   params: Promise<ToolPageParams>
 }) {
-  const { locale, category, tool: toolKey } = await props.params
+  const { locale, tool: toolKey } = await props.params
 
   const normalized = normalizeDeveloperToolsData(await getDeveloperToolsData())
-  const tool =
-    normalized && findTool(withCategories(normalized), category, toolKey)
+  const tool = normalized && findToolBySlug(withCategories(normalized), toolKey)
   if (!tool) return {}
 
   return await getMetadata({
     locale,
-    slug: ["developers", "tools", category, toolKey],
+    slug: ["developers", "tools", toolKey],
     title: tool.name,
     description: tool.description.slice(0, 160),
   })

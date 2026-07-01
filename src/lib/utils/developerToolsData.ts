@@ -118,15 +118,16 @@ export function countToolsByCategory(
   return counts
 }
 
-/** Resolve a `(category, toolKey)` pair to a tool, or `undefined`. */
-export function findTool(
+/**
+ * Resolve a tool by its URL slug, or `undefined`. Tool pages are flat
+ * (`/developers/tools/[tool]`), so the slug is globally unique — no category
+ * needed to disambiguate.
+ */
+export function findToolBySlug(
   tools: DeveloperToolWithCategory[],
-  category: string,
   toolKey: string
 ): DeveloperToolWithCategory | undefined {
-  return tools.find(
-    (tool) => tool.categoryId === category && getToolKey(tool) === toolKey
-  )
+  return tools.find((tool) => getToolKey(tool) === toolKey)
 }
 
 /** Other tools in the same subcategory, excluding the tool itself. */

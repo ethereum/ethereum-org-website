@@ -114,7 +114,7 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
   const toolsData = normalizeDeveloperToolsData(await getDeveloperToolsData())
   const devToolPaths =
     toolsData?.taxonomy.categories.definitions.map(
-      (category) => `/developers/tools/${category.id}/`
+      (category) => `/developers/tools/categories/${category.id}/`
     ) || []
 
   // App category pages
