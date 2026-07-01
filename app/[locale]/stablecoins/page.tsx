@@ -676,7 +676,12 @@ async function Page(props: { params: Promise<PageParams> }) {
                       key={choice.title}
                       className="ms-4 basis-[80%] sm:basis-1/2 lg:basis-[29%]"
                     >
-                      <Card variant="nested" border className="h-full">
+                      <Card
+                        variant="nested"
+                        border
+                        hoverLift
+                        className="h-full"
+                      >
                         <CardHeader>
                           <CardBanner
                             background="none"
