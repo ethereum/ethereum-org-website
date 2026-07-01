@@ -1,284 +1,183 @@
+import type { getTranslations } from "next-intl/server"
+
 import type {
   BuilderResourcesCatalogResource,
   BuilderResourcesTaxonomy,
-  DeveloperToolsRankingMetadata,
 } from "@/lib/types"
 
 import { slugify } from "@/lib/utils/url"
 
-type UnknownData = Record<string, unknown>
+export type DeveloperTool = BuilderResourcesCatalogResource
+
+export type DeveloperToolWithCategory = DeveloperTool & {
+  categoryId: string
+}
+
+export type DeveloperToolsCategory =
+  BuilderResourcesTaxonomy["categories"]["definitions"][number]
 
 export type NormalizedDeveloperToolsData = {
   taxonomy: BuilderResourcesTaxonomy
   resources: BuilderResourcesCatalogResource[]
-  ranking?: DeveloperToolsRankingMetadata
-  computedAt?: string
 }
 
-function asRepoArray(value: unknown): BuilderResourcesCatalogResource["repos"] {
-  if (!Array.isArray(value)) return []
-  const repos: BuilderResourcesCatalogResource["repos"] = []
-  for (const entry of value) {
-    if (typeof entry === "string") {
-      repos.push(entry)
-      continue
-    }
-    if (
-      entry &&
-      typeof entry === "object" &&
-      "href" in entry &&
-      typeof (entry as { href?: unknown }).href === "string"
-    ) {
-      const parsed = entry as {
-        href: string
-        stargazers?: unknown
-        forks?: unknown
-        watchers?: unknown
-        subscribers?: unknown
-        openIssues?: unknown
-        isArchived?: unknown
-        isFork?: unknown
-        daysSincePush?: unknown
-        officialScore?: unknown
-        inferredScore?: unknown
-        finalScore?: unknown
-        scoreSource?: unknown
-        lastUpdated?: unknown
-      }
-      repos.push({
-        href: parsed.href,
-        stargazers:
-          typeof parsed.stargazers === "number" ? parsed.stargazers : undefined,
-        forks: typeof parsed.forks === "number" ? parsed.forks : undefined,
-        watchers:
-          typeof parsed.watchers === "number" ? parsed.watchers : undefined,
-        subscribers:
-          typeof parsed.subscribers === "number"
-            ? parsed.subscribers
-            : undefined,
-        openIssues:
-          typeof parsed.openIssues === "number" ? parsed.openIssues : undefined,
-        isArchived:
-          typeof parsed.isArchived === "boolean"
-            ? parsed.isArchived
-            : undefined,
-        isFork: typeof parsed.isFork === "boolean" ? parsed.isFork : undefined,
-        daysSincePush:
-          typeof parsed.daysSincePush === "number"
-            ? parsed.daysSincePush
-            : undefined,
-        officialScore:
-          typeof parsed.officialScore === "number"
-            ? parsed.officialScore
-            : undefined,
-        inferredScore:
-          typeof parsed.inferredScore === "number"
-            ? parsed.inferredScore
-            : undefined,
-        finalScore:
-          typeof parsed.finalScore === "number" ? parsed.finalScore : undefined,
-        scoreSource:
-          parsed.scoreSource === "official-weight" ||
-          parsed.scoreSource === "github-inferred" ||
-          parsed.scoreSource === "unscored"
-            ? parsed.scoreSource
-            : undefined,
-        lastUpdated:
-          typeof parsed.lastUpdated === "string" || parsed.lastUpdated === null
-            ? parsed.lastUpdated
-            : undefined,
-      })
-    }
-  }
-  return repos
-}
-
-function asPackageArray(
-  value: unknown
-): NonNullable<BuilderResourcesCatalogResource["packages"]> {
-  if (!Array.isArray(value)) return []
-  const packages: NonNullable<BuilderResourcesCatalogResource["packages"]> = []
-  for (const entry of value) {
-    if (typeof entry === "string") {
-      packages.push(entry)
-      continue
-    }
-    if (
-      entry &&
-      typeof entry === "object" &&
-      "href" in entry &&
-      typeof (entry as { href?: unknown }).href === "string"
-    ) {
-      const parsed = entry as { href: string; downloads?: unknown }
-      packages.push({
-        href: parsed.href,
-        downloads:
-          typeof parsed.downloads === "number" ? parsed.downloads : undefined,
-      })
-    }
-  }
-  return packages
-}
-
-function toResource(entry: UnknownData): BuilderResourcesCatalogResource {
-  const subcategoryId =
-    (typeof entry.subcategory_id === "string" && entry.subcategory_id) ||
-    (typeof entry.subcategoryId === "string" && entry.subcategoryId) ||
-    (typeof entry.categoryId === "string" && `${entry.categoryId}-general`) ||
-    (typeof entry.category === "string" &&
-      `${slugify(entry.category)}-general`) ||
-    "uncategorized-general"
-
-  return {
-    name: typeof entry.name === "string" ? entry.name : "Unnamed tool",
-    description: typeof entry.description === "string" ? entry.description : "",
-    thumbnail_url:
-      typeof entry.thumbnail_url === "string" || entry.thumbnail_url === null
-        ? entry.thumbnail_url
-        : null,
-    banner_url:
-      typeof entry.banner_url === "string" || entry.banner_url === null
-        ? entry.banner_url
-        : null,
-    twitter:
-      typeof entry.twitter === "string" || entry.twitter === null
-        ? entry.twitter
-        : null,
-    repos: asRepoArray(entry.repos),
-    packages: asPackageArray(entry.packages),
-    tags: Array.isArray(entry.tags)
-      ? entry.tags.filter((tag): tag is string => typeof tag === "string")
-      : [],
-    website:
-      typeof entry.website === "string" || entry.website === null
-        ? entry.website
-        : null,
-    llmstext:
-      typeof entry.llmstext === "string" || entry.llmstext === null
-        ? entry.llmstext
-        : null,
-    subcategory_id: subcategoryId,
-    resource_raw_score:
-      typeof entry.resource_raw_score === "number"
-        ? entry.resource_raw_score
-        : undefined,
-    resource_score:
-      typeof entry.resource_score === "number"
-        ? entry.resource_score
-        : undefined,
-    resource_rank:
-      typeof entry.resource_rank === "number" ? entry.resource_rank : undefined,
-    resource_score_source:
-      entry.resource_score_source === "official-weight" ||
-      entry.resource_score_source === "github-inferred" ||
-      entry.resource_score_source === "unscored"
-        ? entry.resource_score_source
-        : undefined,
-  }
-}
-
-function buildFallbackTaxonomy(
-  resources: BuilderResourcesCatalogResource[]
-): BuilderResourcesTaxonomy {
-  const subcategoryMap = new Map<
-    string,
-    { categoryId: string; categoryName: string }
-  >()
-
-  for (const resource of resources) {
-    const subcategoryId = resource.subcategory_id
-    if (subcategoryMap.has(subcategoryId)) continue
-    const categoryId = subcategoryId.endsWith("-general")
-      ? subcategoryId.replace(/-general$/, "")
-      : "uncategorized"
-    const categoryName = categoryId
-      .split("-")
-      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-      .join(" ")
-    subcategoryMap.set(subcategoryId, { categoryId, categoryName })
-  }
-
-  const categories = new Map<
-    string,
-    {
-      id: string
-      name: string
-      description: string
-      subcategories: { id: string; name: string; description: string }[]
-    }
-  >()
-
-  for (const [subcategoryId, meta] of subcategoryMap) {
-    if (!categories.has(meta.categoryId)) {
-      categories.set(meta.categoryId, {
-        id: meta.categoryId,
-        name: meta.categoryName,
-        description: "",
-        subcategories: [],
-      })
-    }
-    categories.get(meta.categoryId)!.subcategories.push({
-      id: subcategoryId,
-      name: subcategoryId
-        .split("-")
-        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-        .join(" "),
-      description: "",
-    })
-  }
-
-  const tags = Array.from(
-    new Set(resources.flatMap((resource) => resource.tags))
-  )
-
-  return {
-    categories: {
-      definitions: Array.from(categories.values()),
-    },
-    tags,
-  }
-}
-
+/**
+ * Validates the persisted developer tools payload before it is consumed by the
+ * catalog pages.
+ *
+ * The data is produced server-side by `fetchDeveloperTools`, which validates,
+ * ranks, and trims every resource down to the small frontend shape before it is
+ * persisted. By the time we read it back it is a trusted `{ taxonomy, resources }`
+ * envelope, so we only need a shallow shape guard here rather than a second
+ * field-by-field re-parse. Returns `null` on missing or malformed data.
+ */
 export function normalizeDeveloperToolsData(
   data: unknown
 ): NormalizedDeveloperToolsData | null {
   if (!data || typeof data !== "object") return null
-  const maybe = data as UnknownData
 
-  if (
-    maybe.taxonomy &&
-    typeof maybe.taxonomy === "object" &&
-    Array.isArray(
-      (maybe.taxonomy as BuilderResourcesTaxonomy).categories?.definitions
-    ) &&
-    Array.isArray(maybe.resources)
-  ) {
-    return {
-      taxonomy: maybe.taxonomy as BuilderResourcesTaxonomy,
-      resources: (maybe.resources as unknown[]).map((entry) =>
-        toResource((entry || {}) as UnknownData)
-      ),
-      ranking:
-        maybe.ranking && typeof maybe.ranking === "object"
-          ? (maybe.ranking as DeveloperToolsRankingMetadata)
-          : undefined,
-      computedAt:
-        typeof maybe.computedAt === "string" ? maybe.computedAt : undefined,
+  const { taxonomy, resources } = data as Partial<NormalizedDeveloperToolsData>
+
+  const hasValidTaxonomy =
+    !!taxonomy &&
+    typeof taxonomy === "object" &&
+    Array.isArray(taxonomy.categories?.definitions)
+
+  if (!hasValidTaxonomy || !Array.isArray(resources)) return null
+
+  return { taxonomy, resources }
+}
+
+/** Canonical mapping from a tool to its URL slug (also its React key). */
+export const getToolKey = (tool: DeveloperTool): string => slugify(tool.name)
+
+const repoEntries = (tool: DeveloperTool) =>
+  tool.repos.map((repo) => (typeof repo === "string" ? { href: repo } : repo))
+
+/** Repo hrefs, most-starred first (matching the ordering shown in ToolLinks). */
+export function getToolRepoHrefs(tool: DeveloperTool): string[] {
+  return repoEntries(tool)
+    .slice()
+    .sort((a, b) => (b.stargazers ?? -1) - (a.stargazers ?? -1))
+    .map((repo) => repo.href)
+}
+
+/** Package hrefs (e.g. npm) for a tool. */
+export function getToolPackageHrefs(tool: DeveloperTool): string[] {
+  return (tool.packages ?? []).map((pkg) =>
+    typeof pkg === "string" ? pkg : pkg.href
+  )
+}
+
+/**
+ * A tool's canonical external URL: its website if it has one, otherwise its
+ * top repo. Many tools are repo-only, so this keeps a valid URL for them.
+ * Returns `undefined` when a tool has neither.
+ */
+export function getToolPrimaryUrl(tool: DeveloperTool): string | undefined {
+  return tool.website || getToolRepoHrefs(tool)[0] || undefined
+}
+
+/** Map every subcategory id to its parent category id. */
+export function buildSubcategoryIndex(
+  taxonomy: BuilderResourcesTaxonomy
+): Map<string, string> {
+  const index = new Map<string, string>()
+  for (const category of taxonomy.categories.definitions) {
+    for (const subcategory of category.subcategories) {
+      index.set(subcategory.id, category.id)
     }
   }
+  return index
+}
 
-  if (maybe.toolsById && typeof maybe.toolsById === "object") {
-    const resources = Object.values(
-      maybe.toolsById as Record<string, unknown>
-    ).map((entry) => toResource((entry || {}) as UnknownData))
-    return {
-      taxonomy: buildFallbackTaxonomy(resources),
-      resources,
-      ranking: undefined,
-      computedAt:
-        typeof maybe.computedAt === "string" ? maybe.computedAt : undefined,
-    }
+/**
+ * Enrich each resource with its parent `categoryId`, dropping resources whose
+ * subcategory doesn't resolve to a category.
+ */
+export function withCategories({
+  taxonomy,
+  resources,
+}: NormalizedDeveloperToolsData): DeveloperToolWithCategory[] {
+  const subcategoryToCategory = buildSubcategoryIndex(taxonomy)
+  return resources.flatMap((tool) => {
+    const categoryId = subcategoryToCategory.get(tool.subcategory_id)
+    if (!categoryId) return []
+    return [{ ...tool, categoryId }]
+  })
+}
+
+/** Tally how many tools fall under each category id. */
+export function countToolsByCategory(
+  tools: DeveloperToolWithCategory[]
+): Record<string, number> {
+  const counts: Record<string, number> = {}
+  for (const tool of tools) {
+    counts[tool.categoryId] = (counts[tool.categoryId] || 0) + 1
   }
+  return counts
+}
 
-  return null
+/**
+ * Resolve a tool by its URL slug, or `undefined`. Tool pages are flat
+ * (`/developers/tools/[tool]`), so the slug is globally unique — no category
+ * needed to disambiguate.
+ */
+export function findToolBySlug(
+  tools: DeveloperToolWithCategory[],
+  toolKey: string
+): DeveloperToolWithCategory | undefined {
+  return tools.find((tool) => getToolKey(tool) === toolKey)
+}
+
+/** Other tools in the same subcategory, excluding the tool itself. */
+export function getRelatedTools(
+  tools: DeveloperToolWithCategory[],
+  tool: DeveloperToolWithCategory,
+  limit = 6
+): DeveloperToolWithCategory[] {
+  const toolKey = getToolKey(tool)
+  return tools
+    .filter(
+      (item) =>
+        item.subcategory_id === tool.subcategory_id &&
+        getToolKey(item) !== toolKey
+    )
+    .slice(0, limit)
+}
+
+type Translator = Awaited<ReturnType<typeof getTranslations>>
+
+/**
+ * Build the i18n label dictionaries (category / subcategory / tag) keyed by id,
+ * derived from the taxonomy. Takes an already-scoped `page-developers-tools`
+ * translator so it stays free of any data fetching.
+ */
+export function buildToolLabels(
+  t: Translator,
+  taxonomy: BuilderResourcesTaxonomy
+) {
+  const categories = taxonomy.categories.definitions
+
+  const categoryLabels = Object.fromEntries(
+    categories.map((category) => [
+      category.id,
+      t(`page-developers-tools-category-${category.id}-title`),
+    ])
+  )
+
+  const subcategoryLabels = Object.fromEntries(
+    categories.flatMap((category) =>
+      category.subcategories.map((subcategory) => [
+        subcategory.id,
+        t(`page-developers-tools-subcategory-${subcategory.id}-title`),
+      ])
+    )
+  )
+
+  const tagLabels = Object.fromEntries(
+    taxonomy.tags.map((tag) => [tag, t(`page-developers-tools-tag-${tag}`)])
+  )
+
+  return { categoryLabels, subcategoryLabels, tagLabels }
 }

@@ -4,9 +4,12 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import {
+  type DeveloperTool,
+  getToolKey,
+  getToolPrimaryUrl,
+} from "@/lib/utils/developerToolsData"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
-
-import type { DeveloperTool } from "../types"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
@@ -15,12 +18,14 @@ export default async function DevelopersToolsCategoryJsonLD({
   locale,
   category,
   categoryLabel,
+  categoryDescription,
   categoryTools,
   contributors,
 }: {
   locale: string
   category: string
   categoryLabel: string
+  categoryDescription: string
   categoryTools: DeveloperTool[]
   contributors: FileContributor[]
 }) {
@@ -29,7 +34,10 @@ export default async function DevelopersToolsCategoryJsonLD({
     namespace: "page-developers-tools",
   })
 
-  const url = normalizeUrlForJsonLd(locale, `/developers/tools/${category}`)
+  const url = normalizeUrlForJsonLd(
+    locale,
+    `/developers/tools/categories/${category}`
+  )
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
@@ -42,7 +50,7 @@ export default async function DevelopersToolsCategoryJsonLD({
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
-        "@type": "WebPage",
+        "@type": "CollectionPage",
         "@id": url,
         name: categoryLabel,
         description: t("page-developers-tools-meta-description"),
@@ -88,15 +96,32 @@ export default async function DevelopersToolsCategoryJsonLD({
         "@type": "ItemList",
         "@id": `${url}#category-tools`,
         name: categoryLabel,
-        description: t("page-developers-tools-meta-description"),
+        description: categoryDescription,
         url: url,
-        numberOfItems: Math.min(categoryTools.length, 10),
+        // Total size of the list; itemListElement below is a truncated subset.
+        numberOfItems: categoryTools.length,
         itemListElement: categoryTools.slice(0, 10).map((tool, index) => ({
           "@type": "ListItem",
           position: index + 1,
-          name: tool.name,
-          description: tool.description,
-          url: tool.website,
+          item: {
+            "@type": "SoftwareApplication",
+            name: tool.name,
+            description: tool.description,
+            // Prefer the tool's own site, fall back to its top repo, and as a
+            // last resort its canonical page here (some tools have neither a
+            // website nor a repo).
+            url:
+              getToolPrimaryUrl(tool) ||
+              normalizeUrlForJsonLd(
+                locale,
+                `/developers/tools/${getToolKey(tool)}/`
+              ),
+            applicationCategory: "DeveloperApplication",
+            applicationSubCategory: categoryLabel,
+            ...(tool.thumbnail_url || tool.banner_url
+              ? { image: tool.thumbnail_url || tool.banner_url }
+              : {}),
+          },
         })),
       },
     ],

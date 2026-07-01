@@ -1,16 +1,19 @@
-import { Suspense } from "react"
 import { getTranslations } from "next-intl/server"
 
+import ContentFeedback from "@/components/ContentFeedback"
 import MainArticle from "@/components/MainArticle"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Section } from "@/components/ui/section"
 
 import type {
   DeveloperToolsCategory,
   DeveloperToolWithCategory,
-} from "../types"
+} from "@/lib/utils/developerToolsData"
 
-import SuggestAResource from "./SuggestAResource"
-import ToolModal from "./ToolModal"
 import ToolsCatalog from "./ToolsCatalog"
+
+const SUGGEST_RESOURCE_ISSUE_URL =
+  "https://github.com/ethereum/builder-resources/issues/new?template=add-resource.yml"
 
 type ToolsPageBodyProps = {
   locale: string
@@ -18,7 +21,6 @@ type ToolsPageBodyProps = {
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
-  tagLabels: Record<string, string>
   countByCategory: Record<string, number>
   totalCount: number
   currentCategoryId?: string
@@ -26,7 +28,8 @@ type ToolsPageBodyProps = {
 
 /**
  * Shared body for `/developers/tools` and `/developers/tools/[category]`:
- * the filterable catalog, the suggest-a-resource CTA, and the tool modal.
+ * the filterable catalog and the suggest-a-resource CTA. Tool detail is its
+ * own route (`[tool]`), shown as a modal via interception.
  */
 const ToolsPageBody = async ({
   locale,
@@ -34,7 +37,6 @@ const ToolsPageBody = async ({
   categories,
   categoryLabels,
   subcategoryLabels,
-  tagLabels,
   countByCategory,
   totalCount,
   currentCategoryId,
@@ -45,11 +47,12 @@ const ToolsPageBody = async ({
   })
 
   return (
-    <>
-      <MainArticle className="space-y-20 px-4 pt-4 pb-10 md:px-8">
+    <main className="pb-page">
+      <MainArticle className="space-y-20 px-page pt-4">
         <ToolsCatalog
           // Reset client filter/search state when navigating between categories
           key={currentCategoryId ?? "all"}
+          locale={locale}
           tools={tools}
           categories={categories}
           currentCategoryId={currentCategoryId}
@@ -61,30 +64,27 @@ const ToolsPageBody = async ({
             searchPlaceholder: t("page-developers-tools-search-placeholder"),
             allCategories: t("page-developers-tools-categories-title"),
             resultsLabel: t("page-developers-tools-results-label"),
+            noResults: t("page-developers-tools-no-results"),
           }}
         />
-        <SuggestAResource
-          title={t("page-developers-tools-suggest-resource-title")}
-          description={t("page-developers-tools-suggest-resource-description")}
-          buttonLabel={t("page-developers-tools-suggest-resource-button")}
-        />
+        <div className="flex flex-col items-center gap-4 rounded-base bg-radial-a p-12">
+          <h2>{t("page-developers-tools-suggest-resource-title")}</h2>
+          <p>{t("page-developers-tools-suggest-resource-description")}</p>
+          <ButtonLink
+            href={SUGGEST_RESOURCE_ISSUE_URL}
+            variant="outline"
+            className="w-fit"
+            hideArrow
+          >
+            {t("page-developers-tools-suggest-resource-button")}
+          </ButtonLink>
+        </div>
       </MainArticle>
 
-      {/* useSearchParams requires a Suspense boundary on static routes */}
-      <Suspense>
-        <ToolModal
-          tools={tools}
-          categoryLabels={categoryLabels}
-          subcategoryLabels={subcategoryLabels}
-          tagLabels={tagLabels}
-          labels={{
-            links: t("page-developers-tools-modal-links"),
-            website: t("page-developers-tools-modal-website"),
-            social: t("page-developers-tools-modal-social"),
-          }}
-        />
-      </Suspense>
-    </>
+      <Section className="px-page">
+        <ContentFeedback />
+      </Section>
+    </main>
   )
 }
 

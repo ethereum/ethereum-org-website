@@ -1,22 +1,25 @@
 "use client"
 
-import { useMemo, useRef, useState } from "react"
-import { AppWindowMac, ChevronRight } from "lucide-react"
+import { useDeferredValue, useMemo, useRef, useState } from "react"
+import { ChevronRight } from "lucide-react"
 
-import AppCard from "@/components/AppCard"
+import { Button } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
 import { BaseLink } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import {
+  type DeveloperToolsCategory,
+  type DeveloperToolWithCategory,
+  getToolKey,
+} from "@/lib/utils/developerToolsData"
+import { numberFormat } from "@/lib/utils/numbers"
 
-import type {
-  DeveloperToolsCategory,
-  DeveloperToolWithCategory,
-} from "../types"
-import { getToolKey } from "../utils"
+import ToolCard from "./ToolCard"
 
 type ToolsCatalogProps = {
+  locale: string
   tools: DeveloperToolWithCategory[]
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
@@ -27,6 +30,7 @@ type ToolsCatalogProps = {
     searchPlaceholder: string
     allCategories: string
     resultsLabel: string
+    noResults: string
   }
   currentCategoryId?: string
 }
@@ -73,33 +77,8 @@ function getToolSortScore(tool: DeveloperToolWithCategory): number {
   return getToolStars(tool)
 }
 
-function ToolCard({ tool }: { tool: DeveloperToolWithCategory }) {
-  const toolKey = getToolKey(tool)
-  return (
-    // content-visibility lets the browser skip layout/paint of off-screen
-    // cards while keeping them in the server HTML for crawlers
-    <div className="min-h-[88px] [contain-intrinsic-size:auto_88px] [content-visibility:auto]">
-      <AppCard
-        name={tool.name}
-        nameClassName="text-base"
-        description={tool.description}
-        descriptionClassName="text-sm [&>p]:text-body-medium"
-        descriptionMaxLines={2}
-        descriptionExpandable={false}
-        thumbnail={tool.thumbnail_url ?? undefined}
-        fallbackIcon={
-          <AppWindowMac className="size-12 text-body-medium group-hover/appcard:text-primary-hover" />
-        }
-        href={`?tool=${encodeURIComponent(toolKey)}`}
-        layout="horizontal"
-        imageSize="thumbnail"
-        className="h-fit p-4"
-      />
-    </div>
-  )
-}
-
 type CategorySidebarProps = {
+  locale: string
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
@@ -113,6 +92,7 @@ type CategorySidebarProps = {
 }
 
 function CategorySidebar({
+  locale,
   categories,
   categoryLabels,
   subcategoryLabels,
@@ -124,6 +104,7 @@ function CategorySidebar({
   selectedSubcategoryId,
   onSelectSubcategory,
 }: CategorySidebarProps) {
+  const nf = numberFormat(locale)
   return (
     <div className="space-y-1">
       <BaseLink
@@ -134,7 +115,9 @@ function CategorySidebar({
         )}
       >
         <span>{allCategoriesLabel}</span>
-        <span className="text-xs text-body-medium">{totalCount}</span>
+        <span className="text-xs text-body-medium">
+          {nf.format(totalCount)}
+        </span>
       </BaseLink>
 
       {categories.map((category) => {
@@ -144,7 +127,7 @@ function CategorySidebar({
         return (
           <div key={category.id} className="space-y-1">
             <BaseLink
-              href={`/developers/tools/${category.id}/`}
+              href={`/developers/tools/categories/${category.id}/`}
               className={cn(
                 "flex w-full items-center gap-2 rounded-md px-3 py-2 text-start text-sm no-underline hover:bg-background-highlight",
                 isCategoryActive && "bg-background-highlight text-primary"
@@ -163,18 +146,20 @@ function CategorySidebar({
                 {getCategoryLabel(category.id, categoryLabels)}
               </span>
               <span className="text-xs text-body-medium">
-                {countByCategory[category.id] || 0}
+                {nf.format(countByCategory[category.id] || 0)}
               </span>
             </BaseLink>
             {isCurrent && (
-              <div className="ml-5 space-y-1 border-l pl-2">
+              <div className="ms-5 space-y-1 border-s ps-2">
                 {category.subcategories.map((subcategory) => (
-                  <button
+                  <Button
                     key={subcategory.id}
+                    variant="ghost"
+                    isSecondary
                     className={cn(
-                      "flex w-full items-center justify-between rounded-md px-3 py-1.5 text-start text-xs hover:bg-background-highlight",
+                      "flex min-h-0 w-full items-center justify-between rounded-md px-3 py-1.5 text-start text-xs font-normal hover:bg-background-highlight",
                       selectedSubcategoryId === subcategory.id &&
-                        "bg-background-highlight text-primary"
+                        "bg-background-highlight"
                     )}
                     onClick={() => {
                       onSelectSubcategory(
@@ -187,10 +172,10 @@ function CategorySidebar({
                     <span>
                       {getSubcategoryLabel(subcategory.id, subcategoryLabels)}
                     </span>
-                    <span className="text-[10px] text-body-medium">
-                      {countBySubcategory[subcategory.id] || 0}
+                    <span className="text-2xs text-body-medium">
+                      {nf.format(countBySubcategory[subcategory.id] || 0)}
                     </span>
-                  </button>
+                  </Button>
                 ))}
               </div>
             )}
@@ -202,6 +187,7 @@ function CategorySidebar({
 }
 
 export default function ToolsCatalog({
+  locale,
   tools,
   categories,
   categoryLabels,
@@ -211,11 +197,18 @@ export default function ToolsCatalog({
   labels,
   currentCategoryId,
 }: ToolsCatalogProps) {
+  const nf = numberFormat(locale)
   const [search, setSearch] = useState("")
   const [selectedSubcategoryId, setSelectedSubcategoryId] = useState<
     string | undefined
   >()
   const resultsTopRef = useRef<HTMLDivElement | null>(null)
+
+  // Defer the heavy filter + grid render so typing and filtering stay responsive
+  const deferredSearch = useDeferredValue(search)
+  const deferredSubcategoryId = useDeferredValue(selectedSubcategoryId)
+  const isStale =
+    search !== deferredSearch || selectedSubcategoryId !== deferredSubcategoryId
 
   const handleSelectSubcategory = (subcategoryId?: string) => {
     setSelectedSubcategoryId(subcategoryId)
@@ -234,11 +227,11 @@ export default function ToolsCatalog({
   }, [tools])
 
   const filteredTools = useMemo(() => {
-    const query = normalize(search)
+    const query = normalize(deferredSearch)
     return tools.filter((tool) => {
       if (
-        selectedSubcategoryId &&
-        tool.subcategory_id !== selectedSubcategoryId
+        deferredSubcategoryId &&
+        tool.subcategory_id !== deferredSubcategoryId
       ) {
         return false
       }
@@ -256,7 +249,13 @@ export default function ToolsCatalog({
         .toLowerCase()
       return searchableText.includes(query)
     })
-  }, [categoryLabels, search, selectedSubcategoryId, subcategoryLabels, tools])
+  }, [
+    categoryLabels,
+    deferredSearch,
+    deferredSubcategoryId,
+    subcategoryLabels,
+    tools,
+  ])
 
   const groupedFilteredTools = useMemo(() => {
     const toolsByCategory = new Map<string, DeveloperToolWithCategory[]>()
@@ -316,6 +315,7 @@ export default function ToolsCatalog({
 
   const sidebar = (
     <CategorySidebar
+      locale={locale}
       categories={categories}
       categoryLabels={categoryLabels}
       subcategoryLabels={subcategoryLabels}
@@ -371,19 +371,27 @@ export default function ToolsCatalog({
           )}
 
           <p className="text-sm text-body-medium">
-            {labels.resultsLabel}: <strong>{filteredTools.length}</strong> /{" "}
-            {tools.length}
+            {labels.resultsLabel}:{" "}
+            <strong>{nf.format(filteredTools.length)}</strong> /{" "}
+            {nf.format(tools.length)}
           </p>
 
-          <div className="space-y-8">
+          <div
+            className={cn(
+              "space-y-8 transition-opacity",
+              isStale && "opacity-60"
+            )}
+          >
             {groupedFilteredTools.map(
               ({ category, subcategoryGroups, count }) => (
                 <div key={category.id} className="space-y-4">
                   <div className="flex items-baseline gap-2 border-b pb-2">
-                    <h2 className="text-xl font-bold">
+                    <h2 className="text-h4">
                       {getCategoryLabel(category.id, categoryLabels)}
                     </h2>
-                    <span className="text-xs text-body-medium">({count})</span>
+                    <span className="text-xs text-body-medium">
+                      ({nf.format(count)})
+                    </span>
                   </div>
 
                   <div className="space-y-6">
@@ -391,14 +399,14 @@ export default function ToolsCatalog({
                       ({ subcategory, tools: subcategoryTools }) => (
                         <div key={subcategory.id} className="space-y-2">
                           <div className="flex items-baseline gap-2">
-                            <h3 className="text-sm font-semibold text-body-medium">
+                            <h3 className="text-sm font-normal text-body-medium">
                               {getSubcategoryLabel(
                                 subcategory.id,
                                 subcategoryLabels
                               )}
                             </h3>
                             <span className="text-xs text-body-medium">
-                              ({subcategoryTools.length})
+                              ({nf.format(subcategoryTools.length)})
                             </span>
                           </div>
                           <div className="grid grid-cols-auto-3 gap-x-8">
@@ -416,7 +424,7 @@ export default function ToolsCatalog({
           </div>
           {filteredTools.length === 0 && (
             <div className="rounded-xl border p-8 text-center text-body-medium">
-              No tools found. Try adjusting your search or filters.
+              {labels.noResults}
             </div>
           )}
         </div>
