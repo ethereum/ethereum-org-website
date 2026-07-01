@@ -24,6 +24,13 @@ it harder to write insecure code than it is in Solidity.
 ## The Contract {#contract}
 
 ```python
+#pragma version >0.3.10
+```
+
+The `#pragma version` line tells the compiler which Vyper versions the contract is written for. `>0.3.10` accepts any
+release newer than 0.3.10, which includes the current 0.4.x series.
+
+```python
 # @dev Implementation of ERC-721 non-fungible token standard.
 # @author Ryuya Nakamura (@nrryuya)
 # Modified from: https://github.com/vyperlang/vyper/blob/de74722bf2d8718cca46902be165f9fe0e3641dd/examples/tokens/ERC721.vy
@@ -34,18 +41,17 @@ Comments in Vyper, as in Python, start with a hash (`#`) and continue to the end
 documentation.
 
 ```python
-from vyper.interfaces import ERC721
+from ethereum.ercs import IERC165
+from ethereum.ercs import IERC721
 
-implements: ERC721
+implements: IERC721
+implements: IERC165
 ```
 
-The ERC-721 interface is built into the Vyper language.
-[You can see the code definition here](https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py).
-The interface definition is written in Python, rather than Vyper, because interfaces are used not only within the
-blockchain, but also when sending the blockchain a transaction from an external client, which may be written in
-Python.
-
-The first line imports the interface, and the second specifies that we are implementing it here.
+The ERC-165 and ERC-721 interfaces ship with the Vyper compiler, so we import them from `ethereum.ercs` rather than
+writing them ourselves. [You can see the ERC-721 interface definition here](https://github.com/vyperlang/vyper/blob/master/vyper/builtins/interfaces/IERC721.vyi).
+The `implements:` lines declare that this contract provides both interfaces, and the compiler checks that every
+function they require is defined below.
 
 ### The ERC721Receiver Interface {#receiver-interface}
 
@@ -87,80 +93,42 @@ the token represents.
 The request can have up to 1024 bytes of user data.
 
 ```python
-        ) -> bytes32: view
+        ) -> bytes4: nonpayable
 ```
 
 To prevent cases in which a contract accidentally accepts a transfer the return value is not a boolean,
-but 256 bits with a specific value.
-
-This function is a `view`, which means it can read the state of the blockchain, but not modify it.
+but a specific four-byte value, the function selector of `onERC721Received`. The function is `nonpayable` because a
+receiving contract may change its own state when it accepts a token.
 
 ### Events {#events}
 
 [Events](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 are emitted to inform users and servers outside of the blockchain of events. Note that the content of events
-is not available to contracts on the blockchain.
+is not available to contracts on the blockchain. The three ERC-721 events are defined by the `IERC721` interface we
+imported, so this contract does not declare them itself; it emits them with `log IERC721.<Event>(...)`, as we will see
+in the transfer functions below.
 
-```python
-# @dev Emits when ownership of any NFT changes by any mechanism. This event emits when NFTs are
-#      created (`from` == 0) and destroyed (`to` == 0). Exception: during contract creation, any
-#      number of NFTs may be created and assigned without emitting Transfer. At the time of any
-#      transfer, the approved address for that NFT (if any) is reset to none.
-# @param _from Sender of NFT (if address is zero address it indicates token creation).
-# @param _to Receiver of NFT (if address is zero address it indicates token destruction).
-# @param _tokenId The NFT that got transferred.
-event Transfer:
-    sender: indexed(address)
-    receiver: indexed(address)
-    tokenId: indexed(uint256)
-```
+`Transfer` (`sender`, `receiver`, `token_id`) reports a change in the ownership of an NFT. This is similar to the
+ERC-20 Transfer event, except that we report a `token_id` instead of an amount. Nobody owns address zero, so by
+convention we use it to report creation and destruction of tokens. The one exception is contract creation, during
+which any number of NFTs may be created and assigned without emitting `Transfer`.
 
-This is similar to the ERC-20 Transfer event, except that we report a `tokenId` instead of an amount.
-Nobody owns address zero, so by convention we use it to report creation and destruction of tokens.
+An ERC-721 approval is similar to an ERC-20 allowance: a specific address is allowed to transfer a specific token,
+and `Approval` (`owner`, `approved`, `token_id`) is emitted whenever that approved address is set or reaffirmed.
+This gives a mechanism for contracts to respond when they accept a token. Contracts cannot listen for events, so if
+you just transfer the token to them they don't "know" about it. This way the owner first submits an approval and
+then sends a request to the contract: "I approved for you to transfer token X, please do ...". This is a design
+choice to make the ERC-721 standard similar to the ERC-20 standard. Because ERC-721 tokens are not fungible, a
+contract can also identify that it got a specific token by looking at the token's ownership.
 
-```python
-# @dev This emits when the approved address for an NFT is changed or reaffirmed. The zero
-#      address indicates there is no approved address. When a Transfer event emits, this also
-#      indicates that the approved address for that NFT (if any) is reset to none.
-# @param _owner Owner of NFT.
-# @param _approved Address that we are approving.
-# @param _tokenId NFT which we are approving.
-event Approval:
-    owner: indexed(address)
-    approved: indexed(address)
-    tokenId: indexed(uint256)
-```
-
-An ERC-721 approval is similar to an ERC-20 allowance. A specific address is allowed to transfer a specific
-token. This gives a mechanism for contracts to respond when they accept a token. Contracts cannot
-listen for events, so if you just transfer the token to them they don't "know" about it. This way the
-owner first submits an approval and then sends a request to the contract: "I approved for you to transfer token
-X, please do ...".
-
-This is a design choice to make the ERC-721 standard similar to the ERC-20 standard. Because
-ERC-721 tokens are not fungible, a contract can also identify that it got a specific token by
-looking at the token's ownership.
-
-```python
-# @dev This emits when an operator is enabled or disabled for an owner. The operator can manage
-#      all NFTs of the owner.
-# @param _owner Owner of NFT.
-# @param _operator Address to which we are setting operator rights.
-# @param _approved Status of operator rights(true if operator rights are given and false if
-# revoked).
-event ApprovalForAll:
-    owner: indexed(address)
-    operator: indexed(address)
-    approved: bool
-```
-
-It is sometimes useful to have an _operator_ that can manage all of an account's tokens of a specific type (those that are managed by
-a specific contract), similar to a power of attorney. For example, I might want to give such a power to a contract that checks if
-I haven't contacted it for six months, and if so distributes my assets to my heirs (if one of them asks for it, contracts
-can't do anything without being called by a transaction). In ERC-20 we can just give a high allowance to an inheritance contract,
-but that doesn't work for ERC-721 because the tokens are not fungible. This is the equivalent.
-
-The `approved` value tells us whether the event is for an approval, or the withdrawal of an approval.
+Finally, `ApprovalForAll` (`owner`, `operator`, `approved`) is emitted when an _operator_ is enabled or disabled for
+an owner. It is sometimes useful to have an operator that can manage all of an account's tokens of a specific type
+(those that are managed by a specific contract), similar to a power of attorney. For example, I might want to give
+such a power to a contract that checks if I haven't contacted it for six months, and if so distributes my assets to
+my heirs (if one of them asks for it, contracts can't do anything without being called by a transaction). In ERC-20
+we can just give a high allowance to an inheritance contract, but that doesn't work for ERC-721 because the tokens
+are not fungible. This is the equivalent. The `approved` value tells us whether the event is for an approval, or the
+withdrawal of an approval.
 
 ### State Variables {#state-vars}
 
@@ -213,18 +181,18 @@ New tokens have to be created somehow. In this contract there is a single entity
 to create a more complicated business logic.
 
 ```python
-# @dev Mapping of interface id to bool about whether or not it's supported
-supportedInterfaces: HashMap[bytes32, bool]
-
-# @dev ERC165 interface ID of ERC165
-ERC165_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000000000000000000000001ffc9a7
-
-# @dev ERC165 interface ID of ERC721
-ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000000000000000000000080ac58cd
+# @dev Static list of supported ERC165 interface ids
+SUPPORTED_INTERFACES: constant(bytes4[2]) = [
+    # ERC165 interface ID of ERC165
+    0x01ffc9a7,
+    # ERC165 interface ID of ERC721
+    0x80ac58cd,
+]
 ```
 
 [ERC-165](https://eips.ethereum.org/EIPS/eip-165) specifies a mechanism for a contract to disclose how applications
-can communicate with it, to which ERCs it conforms. In this case, the contract conforms to ERC-165 and ERC-721.
+can communicate with it, to which ERCs it conforms. `SUPPORTED_INTERFACES` is a constant list of the two four-byte
+interface IDs this contract conforms to: ERC-165 itself and ERC-721.
 
 ### Functions {#functions}
 
@@ -233,11 +201,12 @@ These are the functions that actually implement ERC-721.
 #### Constructor {#constructor}
 
 ```python
-@external
+@deploy
 def __init__():
 ```
 
-In Vyper, as in Python, the constructor function is called `__init__`.
+In Vyper, as in Python, the constructor function is called `__init__`. It is marked with the `@deploy`
+decoration, which means it runs once, when the contract is deployed.
 
 ```python
     """
@@ -250,12 +219,11 @@ with `"""`), and not using it in any way. These comments can also include
 [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html).
 
 ```python
-    self.supportedInterfaces[ERC165_INTERFACE_ID] = True
-    self.supportedInterfaces[ERC721_INTERFACE_ID] = True
     self.minter = msg.sender
 ```
 
-To access state variables you use `self.<variable name>` (again, same as in Python).
+To access state variables you use `self.<variable name>` (again, same as in Python). The constructor records the
+account that deployed the contract as the `minter`.
 
 #### View Functions {#views}
 
@@ -275,23 +243,22 @@ specify the circumstances in which a function can be called.
 - `@external` specifies that this particular function can be called by transactions and by other contracts.
 
 ```python
-def supportsInterface(_interfaceID: bytes32) -> bool:
+def supportsInterface(interface_id: bytes4) -> bool:
 ```
 
 In contrast to Python, Vyper is a [static typed language](https://wikipedia.org/wiki/Type_system#Static_type_checking).
-You can't declare a variable, or a function parameter, without identifying the [data type](https://vyper.readthedocs.io/en/latest/types.html). In this case the input parameter is `bytes32`, a 256-bit value
-(256 bits is the native word size of the [Ethereum Virtual Machine](/developers/docs/evm/)). The output is a boolean
-value. By convention, the names of function parameters start with an underscore (`_`).
+You can't declare a variable, or a function parameter, without identifying the [data type](https://vyper.readthedocs.io/en/latest/types.html). In this case the input parameter is `bytes4`, a four-byte value, and the output is a boolean
+value.
 
 ```python
     """
     @dev Interface identification is specified in ERC-165.
-    @param _interfaceID Id of the interface
+    @param interface_id Id of the interface
     """
-    return self.supportedInterfaces[_interfaceID]
+    return interface_id in SUPPORTED_INTERFACES
 ```
 
-Return the value from the `self.supportedInterfaces` HashMap, which is set in the constructor (`__init__`).
+Return `True` if `interface_id` is one of the interface IDs in the `SUPPORTED_INTERFACES` list.
 
 ```python
 ### VIEW FUNCTIONS ###
@@ -308,11 +275,11 @@ def balanceOf(_owner: address) -> uint256:
          Throws if `_owner` is the zero address. NFTs assigned to the zero address are considered invalid.
     @param _owner Address for whom to query the balance.
     """
-    assert _owner != ZERO_ADDRESS
+    assert _owner != empty(address)
 ```
 
 This line [asserts](https://vyper.readthedocs.io/en/latest/statements.html#assert) that `_owner` is not
-zero. If it is, there is an error and the operation is reverted.
+the zero address, written as `empty(address)`. If it is, there is an error and the operation is reverted.
 
 ```python
     return self.ownerToNFTokenCount[_owner]
@@ -327,7 +294,7 @@ def ownerOf(_tokenId: uint256) -> address:
     """
     owner: address = self.idToOwner[_tokenId]
     # Throws if `_tokenId` is not a valid NFT
-    assert owner != ZERO_ADDRESS
+    assert owner != empty(address)
     return owner
 ```
 
@@ -345,7 +312,7 @@ def getApproved(_tokenId: uint256) -> address:
     @param _tokenId ID of the NFT to query the approval of.
     """
     # Throws if `_tokenId` is not a valid NFT
-    assert self.idToOwner[_tokenId] != ZERO_ADDRESS
+    assert self.idToOwner[_tokenId] != empty(address)
     return self.idToApprovals[_tokenId]
 ```
 
@@ -415,7 +382,7 @@ def _addTokenTo(_to: address, _tokenId: uint256):
          Throws if `_tokenId` is owned by someone.
     """
     # Throws if `_tokenId` is owned by someone
-    assert self.idToOwner[_tokenId] == ZERO_ADDRESS
+    assert self.idToOwner[_tokenId] == empty(address)
     # Change the owner
     self.idToOwner[_tokenId] = _to
     # Change count tracking
@@ -431,7 +398,7 @@ def _removeTokenFrom(_from: address, _tokenId: uint256):
     # Throws if `_from` is not the current owner
     assert self.idToOwner[_tokenId] == _from
     # Change the owner
-    self.idToOwner[_tokenId] = ZERO_ADDRESS
+    self.idToOwner[_tokenId] = empty(address)
     # Change count tracking
     self.ownerToNFTokenCount[_from] -= 1
 ```
@@ -447,9 +414,9 @@ def _clearApproval(_owner: address, _tokenId: uint256):
     """
     # Throws if `_owner` is not the current owner
     assert self.idToOwner[_tokenId] == _owner
-    if self.idToApprovals[_tokenId] != ZERO_ADDRESS:
+    if self.idToApprovals[_tokenId] != empty(address):
         # Reset approvals
-        self.idToApprovals[_tokenId] = ZERO_ADDRESS
+        self.idToApprovals[_tokenId] = empty(address)
 ```
 
 Only change the value if necessary. State variables live in storage. Writing to storage is
@@ -477,7 +444,7 @@ we want only a single location in the code where we do it to make auditing easie
     # Check requirements
     assert self._isApprovedOrOwner(_sender, _tokenId)
     # Throws if `_to` is the zero address
-    assert _to != ZERO_ADDRESS
+    assert _to != empty(address)
     # Clear approval. Throws if `_from` is not the current owner
     self._clearApproval(_from, _tokenId)
     # Remove NFT. Throws if `_tokenId` is not a valid NFT
@@ -485,10 +452,12 @@ we want only a single location in the code where we do it to make auditing easie
     # Add NFT
     self._addTokenTo(_to, _tokenId)
     # Log the transfer
-    log Transfer(_from, _to, _tokenId)
+    log IERC721.Transfer(sender=_from, receiver=_to, token_id=_tokenId)
 ```
 
 To emit an event in Vyper you use a `log` statement ([see here for more details](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
+Because the events belong to the imported interface, we refer to them as `IERC721.Transfer` and pass their fields by
+keyword.
 
 #### Transfer Functions {#transfer-funs}
 
@@ -497,6 +466,7 @@ To emit an event in Vyper you use a `log` statement ([see here for more details]
 ### TRANSFER FUNCTIONS ###
 
 @external
+@payable
 def transferFrom(_from: address, _to: address, _tokenId: uint256):
     """
     @dev Throws unless `msg.sender` is the current owner, an authorized operator, or the approved
@@ -516,8 +486,12 @@ def transferFrom(_from: address, _to: address, _tokenId: uint256):
 This function lets you transfer to an arbitrary address. Unless the address is a user, or a contract that
 knows how to transfer tokens, any token you transfer will be stuck in that address and useless.
 
+The `@payable` decoration is here because the `IERC721` interface declares `transferFrom`, `safeTransferFrom`, and
+`approve` as payable, so a contract that implements the interface has to match those signatures.
+
 ```python
 @external
+@payable
 def safeTransferFrom(
         _from: address,
         _to: address,
@@ -533,7 +507,6 @@ def safeTransferFrom(
          Throws if `_tokenId` is not a valid NFT.
          If `_to` is a smart contract, it calls `onERC721Received` on `_to` and throws if
          the return value is not `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`.
-         NOTE: bytes4 is represented by bytes32 with padding
     @param _from The current owner of the NFT.
     @param _to The new owner.
     @param _tokenId The NFT to transfer.
@@ -555,14 +528,15 @@ into a false sense of security. You can lose tokens, even with `safeTransferFrom
 them to an address for which nobody knows the private key.
 
 ```python
-        returnValue: bytes32 = ERC721Receiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data)
+        returnValue: bytes4 = extcall ERC721Receiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data)
 ```
 
-Call the target contract to see if it can receive ERC-721 tokens.
+Call the target contract to see if it can receive ERC-721 tokens. Vyper 0.4 requires calls to other contracts to
+be marked, so the call is prefixed with `extcall`.
 
 ```python
         # Throws if transfer destination is a contract which does not implement 'onERC721Received'
-        assert returnValue == method_id("onERC721Received(address,address,uint256,bytes)", output_type=bytes32)
+        assert returnValue == method_id("onERC721Received(address,address,uint256,bytes)", output_type=bytes4)
 ```
 
 If the destination is a contract, but one that doesn't accept ERC-721 tokens (or that decided not to accept this
@@ -570,6 +544,7 @@ particular transfer), revert.
 
 ```python
 @external
+@payable
 def approve(_approved: address, _tokenId: uint256):
     """
     @dev Set or reaffirm the approved address for an NFT. The zero address indicates there is no approved address.
@@ -581,7 +556,7 @@ def approve(_approved: address, _tokenId: uint256):
     """
     owner: address = self.idToOwner[_tokenId]
     # Throws if `_tokenId` is not a valid NFT
-    assert owner != ZERO_ADDRESS
+    assert owner != empty(address)
     # Throws if `_approved` is the current owner
     assert _approved != owner
 ```
@@ -600,7 +575,7 @@ To set an approval you can either be the owner, or an operator authorized by the
 ```python
     # Set the approval
     self.idToApprovals[_tokenId] = _approved
-    log Approval(owner, _approved, _tokenId)
+    log IERC721.Approval(owner=owner, approved=_approved, token_id=_tokenId)
 
 
 @external
@@ -616,7 +591,7 @@ def setApprovalForAll(_operator: address, _approved: bool):
     # Throws if `_operator` is the `msg.sender`
     assert _operator != msg.sender
     self.ownerToOperators[msg.sender][_operator] = _approved
-    log ApprovalForAll(msg.sender, _operator, _approved)
+    log IERC721.ApprovalForAll(owner=msg.sender, operator=_operator, approved=_approved)
 ```
 
 #### Mint New Tokens and Destroy Existing Ones {#mint-burn}
@@ -655,10 +630,10 @@ minter privileges to somebody else.
 
 ```python
     # Throws if `_to` is zero address
-    assert _to != ZERO_ADDRESS
+    assert _to != empty(address)
     # Add NFT. Throws if `_tokenId` is owned by someone
     self._addTokenTo(_to, _tokenId)
-    log Transfer(ZERO_ADDRESS, _to, _tokenId)
+    log IERC721.Transfer(sender=empty(address), receiver=_to, token_id=_tokenId)
     return True
 ```
 
@@ -679,10 +654,10 @@ def burn(_tokenId: uint256):
     assert self._isApprovedOrOwner(msg.sender, _tokenId)
     owner: address = self.idToOwner[_tokenId]
     # Throws if `_tokenId` is not a valid NFT
-    assert owner != ZERO_ADDRESS
+    assert owner != empty(address)
     self._clearApproval(owner, _tokenId)
     self._removeTokenFrom(owner, _tokenId)
-    log Transfer(owner, ZERO_ADDRESS, _tokenId)
+    log IERC721.Transfer(sender=owner, receiver=empty(address), token_id=_tokenId)
 ```
 
 Anybody who is allowed to transfer a token is allowed to burn it. While a burn appears equivalent to
@@ -713,4 +688,3 @@ For review, here are some of the most important ideas in this contract:
 Now go and implement secure Vyper contracts.
 
 [See here for more of my work](https://cryptodocguy.pro/).
-
