@@ -15,6 +15,7 @@ import MarkdownCard from "@/components/MarkdownCard"
 import PageActions from "@/components/PageActions"
 import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
+import TranslationBanner from "@/components/TranslationBanner"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
@@ -61,6 +62,8 @@ export const TutorialLayout = ({
 
   return (
     <div className="flex justify-between gap-8">
+      <TranslationBanner contentNotTranslated={contentNotTranslated} />
+
       <main
         className="max-w-4xl min-w-0 px-4 py-8 md:px-8 lg:py-16"
         dir={contentNotTranslated ? "ltr" : "unset"}

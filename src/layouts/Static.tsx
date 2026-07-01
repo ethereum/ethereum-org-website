@@ -16,6 +16,7 @@ import MatomoOptOut from "@/components/MatomoOptOut"
 import PageActions from "@/components/PageActions"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
+import TranslationBanner from "@/components/TranslationBanner"
 import TranslationChartImage from "@/components/TranslationChartImage"
 import { Alert } from "@/components/ui/alert"
 import Callout from "@/components/ui/callout"
@@ -72,6 +73,8 @@ export const StaticLayout = ({
 
   return (
     <div dir={contentNotTranslated ? "ltr" : "unset"}>
+      <TranslationBanner contentNotTranslated={contentNotTranslated} />
+
       {isGuidesHub ? (
         <HubHero
           heroImg={guideHeroImg}

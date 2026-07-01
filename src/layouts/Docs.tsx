@@ -18,6 +18,7 @@ import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import TranslationBanner from "@/components/TranslationBanner"
 import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/hr"
@@ -66,6 +67,8 @@ export const DocsLayout = ({
 
   return (
     <div className="flex w-full flex-col border-b">
+      <TranslationBanner contentNotTranslated={contentNotTranslated} />
+
       <SideNavMobile path={slug} />
       {isPageIncomplete && (
         <Alert variant="banner">
