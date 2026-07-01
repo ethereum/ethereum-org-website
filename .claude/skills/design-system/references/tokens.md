@@ -161,9 +161,9 @@ Use these instead of arbitrary `z-[N]` values:
 
 ### Gradient backgrounds
 
-**One-off design gradients** are named `@utility` classes: `bg-linear-primary`, `bg-linear-secondary`, `bg-linear-tertiary`, and `bg-radial-primary`. **Always check `utilities.css` for an existing one before writing any `bg-linear-*` / `from-*` / `to-*` chain.** A multi-stop gradient typed inline at a call site is a red flag - it almost always belongs in a utility.
+**One-off design gradients** are named `@utility` classes: `bg-linear-primary` and `bg-radial-primary`. **Always check `utilities.css` for an existing one before writing any `bg-linear-*` / `from-*` / `to-*` chain.** A multi-stop gradient typed inline at a call site is a red flag - it almost always belongs in a utility.
 
-For subtle **brand-hue washes** behind content, use the `bg-tint-*` / `bg-fade-*` family (below) - do not write a new named utility per color. A Storybook story lives at `src/styles/gradients.stories.tsx` (Design System / Gradients).
+For subtle **brand-hue washes** behind content, use the `bg-tint-*` / `bg-fade-*` family (below) - do not write a new named utility per color. A Storybook story lives at `src/styles/__stories__/gradients.stories.tsx` (Design System / Gradients).
 
 #### How to reason about a gradient (decision ladder)
 
@@ -223,7 +223,7 @@ A separate utility for a **1px gradient *border*** (not a fill wash). It paints 
 - **The radius is also applied to the first child**, so the inner surface needs no `rounded-*` of its own.
 - Opacity stops are **fixed** (24/8 light, 40/20 dark) -- you choose the hue, not the translucency.
 
-Demo: the `GradientRing` story in `src/styles/gradients.stories.tsx`. Reach for it instead of hand-rolling the `before:-inset-px before:rounded-[calc(...)]` pattern at a call site.
+Demo: the `GradientRing` story in `src/styles/__stories__/gradients.stories.tsx`. Reach for it instead of hand-rolling the `before:-inset-px before:rounded-[calc(...)]` pattern at a call site.
 
 Gotchas:
 

@@ -226,12 +226,10 @@ export const NamedGradients: Story = {
   render: () => (
     <Section
       title="Named design gradients"
-      cols={4}
+      cols={2}
       hint="@utility classes for specific, reused site gradients (light/dark baked in). Reach for the bg-tint-*/bg-fade-* family for brand-hue washes instead of adding new ones here."
     >
       <Swatch classes="bg-linear-primary" />
-      <Swatch classes="bg-linear-secondary" />
-      <Swatch classes="bg-linear-tertiary" />
       <Swatch classes="bg-radial-primary" />
     </Section>
   ),

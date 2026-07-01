@@ -57,7 +57,7 @@ className="from-[#5c1eb4] to-[#7b3fd8]"
 // After:
 className="bg-error"
 className="border-primary/10"
-// For gradients, check utilities.css for an existing one (e.g., bg-linear-primary, bg-linear-secondary).
+// For gradients, check utilities.css for an existing one (e.g., bg-linear-primary, bg-radial-primary).
 // If no token fits, add it to semantic-tokens.css before using a hex value in a component.
 ```
 
@@ -149,7 +149,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
 ```tsx
 // Before:
-<div className="flex flex-col gap-3 rounded-3xl border border-[rgba(159,43,212,0.11)] bg-linear-secondary p-6 hover:bg-linear-tertiary hover:shadow-lg">
+<div className="flex flex-col gap-3 rounded-3xl border border-[rgba(159,43,212,0.11)] bg-linear-primary p-6 hover:shadow-lg">
   <h3>Title</h3>
   <p>Description</p>
 </div>
@@ -326,7 +326,7 @@ See `tokens.md` for the full named z-index scale.
 
 ## Gradients -> named utilities (closed set)
 
-Gradients are the highest-duplication area of the styling system. The target is one class per gradient, with direction/stops/opacity/dark/RTL baked into the definition - no recipe rebuilt at a call site. See `tokens.md` ("Gradient backgrounds") for the decision ladder and rules; the live inventory is the `src/styles/gradients.stories.tsx` story (Design System / Gradients).
+Gradients are the highest-duplication area of the styling system. The target is one class per gradient, with direction/stops/opacity/dark/RTL baked into the definition - no recipe rebuilt at a call site. See `tokens.md` ("Gradient backgrounds") for the decision ladder and rules; the live inventory is the `src/styles/__stories__/gradients.stories.tsx` story (Design System / Gradients).
 
 ### Inlined multi-stop hex gradient -> token utility
 

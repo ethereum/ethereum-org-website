@@ -77,7 +77,7 @@ const cardVariants = tv({
     decoration: {
       none: "",
       "ghost-shadow": "relative before:absolute before:inset-0 before:translate-x-2 before:translate-y-2 before:bg-background-medium before:rounded-base before:-z-10",
-      "purple-gradient": "border border-primary/10 bg-linear-secondary hover:bg-linear-tertiary",
+      "purple-gradient": "border border-primary/10 bg-linear-primary",
     },
     layout: {
       vertical: "flex flex-col",
