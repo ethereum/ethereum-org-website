@@ -26,7 +26,7 @@ const UpgradeStatus = async ({
     <aside
       className={cn(
         "flow w-full rounded-base p-6 shadow-2xl",
-        isShipped ? "bg-tint-success" : "bg-tiny-accent-a"
+        isShipped ? "bg-tint-success" : "bg-tint-accent-a"
       )}
     >
       <h2 className="text-sm font-normal uppercase">
