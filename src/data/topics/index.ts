@@ -1,7 +1,14 @@
+import { roadmap } from "./roadmap"
+import { staking } from "./staking"
+import { upgrade } from "./upgrade"
+import { useCases } from "./use-cases"
+
 export type TopicDropdownItem = {
   textKey: string
   href: string
   matomoEvent: string
+  /** Nested sub-items rendered indented beneath this item in the dropdown. */
+  items?: TopicDropdownItem[]
 }
 
 export type TopicConfig = {
@@ -20,11 +27,6 @@ export type TopicConfig = {
    */
   showLastUpdatedInHero?: boolean
 }
-
-import { roadmap } from "./roadmap"
-import { staking } from "./staking"
-import { upgrade } from "./upgrade"
-import { useCases } from "./use-cases"
 
 export const topics: Record<string, TopicConfig> = {
   roadmap,
