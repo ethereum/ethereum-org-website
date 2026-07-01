@@ -5,13 +5,10 @@ import { Fragment, useState } from "react"
 import type { StablecoinType } from "@/lib/types"
 
 import { Image } from "@/components/Image"
-
-import { cn } from "@/lib/utils/cn"
-
-import { Button } from "./ui/buttons/Button"
-import { Flex } from "./ui/flex"
-import InlineLink from "./ui/Link"
-import { LinkBox, LinkOverlay } from "./ui/link-box"
+import { Button } from "@/components/ui/buttons/Button"
+import { Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import {
   Table,
   TableBody,
@@ -19,8 +16,10 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./ui/table"
-import { Tag } from "./ui/tag"
+} from "@/components/ui/table"
+import { Tag } from "@/components/ui/tag"
+
+import { cn } from "@/lib/utils/cn"
 
 import useTranslation from "@/hooks/useTranslation"
 
@@ -57,8 +56,8 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
   }
 
   return (
-    <div className="mt-6 w-full overflow-x-auto">
-      <Table variant="minimal" className="min-w-[520px]">
+    <div className="w-full overflow-x-auto">
+      <Table variant="minimal" className="min-w-lg">
         <TableHeader>
           <TableRow>
             <TableHead className="w-2/5 whitespace-nowrap">
@@ -145,11 +144,11 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
         </TableBody>
       </Table>
       {hasMoreRows && (
-        <div className="mt-6 flex justify-center">
+        <Flex className="mt-6 justify-center">
           <Button onClick={() => setVisibleRows((prev) => prev + PAGE_SIZE)}>
             {t("page-stablecoins-show-more")}
           </Button>
-        </div>
+        </Flex>
       )}
     </div>
   )
