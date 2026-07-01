@@ -338,11 +338,7 @@ const CardTitle = React.forwardRef<
     <Comp
       ref={ref}
       data-label="card-title"
-      className={cn(
-        titleVariants({ size: variant, spacing }),
-        className,
-        "hover-lift-base/10"
-      )}
+      className={cn(titleVariants({ size: variant, spacing }), className)}
       {...props}
     />
   )
