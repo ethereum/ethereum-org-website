@@ -134,6 +134,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - Per node basis
     - Analytics
+   
+- [**blockmachine**](https://blockmachine.io/)
+  - [Docs](https://blockmachine.io/docs)
+  - Benefits
+    - Unbeatable Value: [Ethereum RPC](https://blockmachine.io/ethereum-rpc) served by competing node operators to bring price down
+    - Verified: Each RPC request verified by merkle proof
+    - High Volume: Serving enterprises of up to 1 billion requests per day
+    - Pay in crypto and x402
+    - HTTP and Web Sockets endpoints provided
 
 - [**BlockPI**](https://blockpi.io/)
   - [Docs](https://docs.blockpi.io/)
