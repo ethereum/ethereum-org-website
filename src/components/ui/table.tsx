@@ -6,12 +6,6 @@ import { tv, type VariantProps } from "tailwind-variants"
 
 import { cn } from "@/lib/utils/cn"
 
-/**
- * TODO: Currently, there are cell spacing issues with some table content.
- * Prefer `table-fixed` utility class in the future when content has been addressed
- * to provide equal cell widths.
- */
-
 const baseStyles = {
   th: "text-start border-b border-body text-body normal-case align-bottom p-4",
   tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
@@ -23,7 +17,7 @@ const stripedTbody = "even:[&_tr]:bg-background-highlight"
 
 const tableVariants = tv({
   slots: {
-    table: "w-full",
+    table: "w-full border-collapse border-spacing-0",
     // slot key with empty string to establish the key name for variants (TypeScript)
     th: "",
     tr: "",
@@ -77,14 +71,23 @@ type TableVariants = VariantProps<typeof tableVariants>
 type TableVariantsReturnType = ReturnType<typeof tableVariants>
 
 /**
- * For `TableCell` and `TableHead` only
- *
- * Applies the `align` prop in name for the `textAlign` CSS property
- * instead of the `align` attribute. (The `align` attribute is deprecated)
+ * Supports the Markdown `align` prop while applying it as CSS `text-align`
+ * instead of forwarding the deprecated HTML `align` attribute.
  */
 type CellPropsWithAlign<C> = Omit<C, "align"> & {
   align?: React.CSSProperties["textAlign"]
 }
+
+const withTextAlign = (
+  style: React.CSSProperties | undefined,
+  textAlign: React.CSSProperties["textAlign"] | undefined
+) =>
+  textAlign === undefined
+    ? style
+    : {
+        ...style,
+        textAlign,
+      }
 
 const TableStylesContext = createContext<{
   [P in keyof TableVariantsReturnType]: TableVariantsReturnType[P]
@@ -144,13 +147,13 @@ TableRow.displayName = "TableRow"
 const TableHead = React.forwardRef<
   HTMLTableCellElement,
   CellPropsWithAlign<React.ThHTMLAttributes<HTMLTableCellElement>>
->(({ className, align, ...props }, ref) => {
+>(({ className, align, style, ...props }, ref) => {
   const { th } = useTableStyles()
   return (
     <th
       ref={ref}
       className={cn(th(), className)}
-      style={{ textAlign: align }}
+      style={withTextAlign(style, align)}
       {...props}
     />
   )
@@ -160,14 +163,14 @@ TableHead.displayName = "TableHead"
 const TableCell = React.forwardRef<
   HTMLTableCellElement,
   CellPropsWithAlign<React.TdHTMLAttributes<HTMLTableCellElement>>
->(({ className, align, children, ...props }, ref) => {
+>(({ className, align, children, style, ...props }, ref) => {
   const { td } = useTableStyles()
 
   return (
     <td
       ref={ref}
       className={cn(td(), className)}
-      style={{ textAlign: align }}
+      style={withTextAlign(style, align)}
       {...props}
     >
       {children}
@@ -182,7 +185,7 @@ const TableCaption = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <caption
     ref={ref}
-    className={cn("mt-4 text-sm text-body-medium", className)}
+    className={cn("text-body-medium mt-4 text-sm", className)}
     {...props}
   />
 ))
