@@ -654,17 +654,6 @@ export type L2beatData = {
   }
 }
 
-export type HomepageActivityMetric =
-  | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
-  | "totalEthStaked"
-  | "totalValueLocked"
-  | GrowThePieMetricKey
-
-export type AllHomepageActivityData = Record<
-  HomepageActivityMetric,
-  MetricReturnData
->
-
 export type EnterpriseActivityMetric =
   | "txCount"
   | "txCostsMedianUsd"
