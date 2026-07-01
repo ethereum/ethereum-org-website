@@ -141,7 +141,7 @@ const ReleaseCarousel = () => {
                           {status === "prod" && (
                             <div
                               className={cn(
-                                "w-fit rounded-lg bg-primary-low-contrast px-2 py-1",
+                                "w-fit rounded-lg bg-success-light px-2 py-1",
                                 currentIndex !== index && "hidden"
                               )}
                             >
@@ -165,7 +165,7 @@ const ReleaseCarousel = () => {
                           {status === "dev" && (
                             <div
                               className={cn(
-                                "w-fit rounded-lg bg-linear-tertiary px-2 py-1",
+                                "w-fit rounded-lg bg-error-light px-2 py-1",
                                 currentIndex !== index && "hidden"
                               )}
                             >

@@ -165,15 +165,7 @@
 
 /* background-image (gradients) */
 @utility bg-linear-primary {
-  @apply bg-linear-to-r from-primary/15 to-accent-a/15;
-}
-
-@utility bg-linear-secondary {
   @apply bg-linear-to-r from-purple-500/20 to-purple-600/10 dark:from-purple-500/25 dark:to-purple-600/15;
-}
-
-@utility bg-linear-tertiary {
-  @apply bg-linear-to-r from-purple-400/20 to-purple-600/20;
 }
 
 @utility bg-radial-primary {

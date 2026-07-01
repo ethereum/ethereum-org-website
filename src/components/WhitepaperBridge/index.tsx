@@ -63,8 +63,8 @@ const WhitepaperBridge = async () => {
         </ButtonLink>
       </Flex>
 
-      {/* What's changed card - uses bg-linear-secondary */}
-      <Card className="border border-primary-low-contrast bg-linear-secondary">
+      {/* What's changed card */}
+      <Card className="border border-primary-low-contrast bg-linear-primary">
         <CardContent className="p-4 md:p-6">
           <p className="mb-4 text-sm font-semibold tracking-wide text-body-medium uppercase">
             {t("whats-changed")}
