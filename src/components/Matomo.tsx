@@ -26,11 +26,6 @@ export default function Matomo() {
       // conditions with Next.js client-side routing
       // See: https://matomo.org/faq/how-to/faq_33087/
       push(["alwaysUseSendBeacon"])
-
-      console.log(
-        "[Matomo] initialized with URL:",
-        process.env.NEXT_PUBLIC_MATOMO_URL
-      )
       matomoInitialized = true
     }
   }, [])
