@@ -213,7 +213,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <Card key={item.title} hoverEffect="lift">
                   <CardHeader className="flex items-center justify-between gap-4">
                     <CardTitle>{item.title}</CardTitle>
-                    <div className="shrink-0">{item.icon}</div>
+                    <div className="shrink-0 text-primary-action">
+                      {item.icon}
+                    </div>
                   </CardHeader>
                   <CardContent>
                     <CardParagraph>{item.description}</CardParagraph>
