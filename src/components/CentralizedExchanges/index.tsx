@@ -37,7 +37,10 @@ const SuccessContainer = (props: ChildOnlyProp) => (
 )
 
 const EmptyStateText = (props: ChildOnlyProp) => (
-  <p className="m-8 max-w-[450px] text-center text-xl" {...props} />
+  <p
+    className="m-8 max-w-[450px] text-center text-xl text-body-medium"
+    {...props}
+  />
 )
 
 const NoResults = ({ children }) => (
@@ -53,7 +56,7 @@ const NoResults = ({ children }) => (
 
 const NoResultsSingle = ({ children }) => (
   <div className="mt-6 flex flex-col items-center justify-center">
-    <p className="mb-16 max-w-[450px]">
+    <p className="mb-16 max-w-[450px] text-body-medium">
       {/* TODO: Fix `children` structure to include email link within i18n string */}
       {children}{" "}
       <InlineLink href={`mailto:${WEBSITE_EMAIL}`}>{WEBSITE_EMAIL}</InlineLink>.
@@ -94,14 +97,6 @@ const CentralizedExchanges = ({
           className="z-50"
         />
       </div>
-      {!hasSelectedCountry && (
-        <EmptyStateContainer>
-          <Emoji text=":world_map:" className="text-[80px]" />
-          <EmptyStateText>
-            {t("page-get-eth-exchanges-empty-state-text")}
-          </EmptyStateText>
-        </EmptyStateContainer>
-      )}
       {/* No results */}
       {hasSelectedCountry && !hasExchangeResults && (
         <ResultsContainer>
@@ -120,7 +115,9 @@ const CentralizedExchanges = ({
               </h3>
               {hasExchangeResults && (
                 <SuccessContainer>
-                  <p>{t("page-get-eth-exchanges-success-exchange")}</p>
+                  <p className="text-body-medium">
+                    {t("page-get-eth-exchanges-success-exchange")}
+                  </p>
                   <CardList items={filteredExchanges} />
                 </SuccessContainer>
               )}
@@ -131,7 +128,7 @@ const CentralizedExchanges = ({
               )}
             </ListContainer>
           </ResultsContainer>
-          <p className="mt-16 max-w-screen-lg">
+          <p className="mt-16 max-w-screen-lg text-body-medium">
             {t("page-get-eth-exchanges-disclaimer")}{" "}
             <InlineLink href={`mailto:${WEBSITE_EMAIL}`}>
               {WEBSITE_EMAIL}
