@@ -29,6 +29,7 @@ import {
 import { getMetadata } from "@/lib/utils/metadata"
 
 import ToolCard from "../_components/ToolCard"
+import ToolDescription from "../_components/ToolDescription"
 import ToolLinks from "../_components/ToolLinks"
 
 import PageJsonLD from "./page-jsonld"
@@ -167,7 +168,10 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
           </div>
 
           {tool.description && (
-            <p className="max-w-3xl whitespace-pre-line">{tool.description}</p>
+            <ToolDescription
+              description={tool.description}
+              className="max-w-3xl"
+            />
           )}
 
           {relatedTools.length > 0 && (

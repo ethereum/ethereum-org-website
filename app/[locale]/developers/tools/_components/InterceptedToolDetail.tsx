@@ -11,6 +11,7 @@ import {
   withCategories,
 } from "@/lib/utils/developerToolsData"
 
+import ToolDescription from "./ToolDescription"
 import ToolDetailModal from "./ToolDetailModal"
 import ToolLinks from "./ToolLinks"
 
@@ -73,7 +74,7 @@ const InterceptedToolDetail = async ({
               className="lowercase"
             />
           </div>
-          <p className="whitespace-pre-line">{tool.description}</p>
+          <ToolDescription description={tool.description} />
           <div className="flex flex-col gap-2">
             <p>{t("page-developers-tools-modal-links")}</p>
             <ToolLinks
