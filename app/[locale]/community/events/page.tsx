@@ -413,7 +413,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
             <Grid columns={2} size="wide">
               {/* Ethereum Everywhere Card */}
-              <Card size="lg" hoverEffect="lift" className="bg-tint-accent-a">
+              <Card size="lg" hoverLift className="bg-tint-accent-a">
                 <CardHeader className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
@@ -479,7 +479,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </Card>
 
               {/* Geode Labs Card */}
-              <Card size="lg" hoverEffect="lift" className="bg-tint-accent-c">
+              <Card size="lg" hoverLift className="bg-tint-accent-c">
                 <CardHeader className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={geodeLabsLogo} alt="" sizes="4rem" />

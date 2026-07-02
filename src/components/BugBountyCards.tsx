@@ -103,7 +103,7 @@ const BugBountyCards = async () => {
           key={`bug-bounty-card-${idx}`}
           variant="nested"
           className="overflow-hidden border"
-          hoverEffect="lift"
+          hoverLift
         >
           <Banner card={card} />
 
