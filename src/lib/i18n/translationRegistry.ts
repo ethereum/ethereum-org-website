@@ -100,7 +100,7 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
   const [
     { appsCategories },
     { getAppsData, getDeveloperToolsData },
-    { normalizeDeveloperToolsData },
+    { getToolKey, normalizeDeveloperToolsData, withCategories },
     { slugify },
   ] = await Promise.all([
     import("@/data/apps/categories"),
@@ -117,6 +117,13 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
       (category) => `/developers/tools/categories/${category.id}/`
     ) || []
 
+  // Individual tool detail pages, matching the [tool] route's static params.
+  const devToolDetailPaths = toolsData
+    ? withCategories(toolsData).map(
+        (tool) => `/developers/tools/${getToolKey(tool)}/`
+      )
+    : []
+
   // App category pages
   const appCategoryPaths = Object.values(appsCategories).map(
     (category) => `/apps/categories/${category.slug}/`
@@ -130,7 +137,12 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
         .map((app) => `/apps/${slugify(app.name)}/`)
     : []
 
-  return [...devToolPaths, ...appCategoryPaths, ...appPaths]
+  return [
+    ...devToolPaths,
+    ...devToolDetailPaths,
+    ...appCategoryPaths,
+    ...appPaths,
+  ]
 }
 
 export async function getAllPagesWithTranslations(): Promise<

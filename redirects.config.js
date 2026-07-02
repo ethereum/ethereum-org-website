@@ -67,6 +67,31 @@ module.exports = [
     "/developers/tools/security",
     "/developers/tools/categories/security-testing/",
   ],
+  // Legacy flat category URLs, now under /categories/.
+  [
+    "/developers/tools/contract-tooling",
+    "/developers/tools/categories/contract-tooling/",
+  ],
+  [
+    "/developers/tools/security-testing",
+    "/developers/tools/categories/security-testing/",
+  ],
+  [
+    "/developers/tools/app-integration",
+    "/developers/tools/categories/app-integration/",
+  ],
+  [
+    "/developers/tools/network-infrastructure",
+    "/developers/tools/categories/network-infrastructure/",
+  ],
+  [
+    "/developers/tools/agent-tooling",
+    "/developers/tools/categories/agent-tooling/",
+  ],
+  [
+    "/developers/tools/education-standards",
+    "/developers/tools/categories/education-standards/",
+  ],
   ["/eth2/beacon-chain", "/roadmap/beacon-chain/"],
   ["/eth2/the-beacon-chain", "/roadmap/beacon-chain/"],
   ["/upgrades/the-beacon-chain", "/roadmap/beacon-chain/"],

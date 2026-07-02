@@ -27,18 +27,11 @@ export default async function DevelopersToolsToolJsonLD({
   categoryLabel: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const url = normalizeUrlForJsonLd(
     locale,
     `/developers/tools/${getToolKey(tool)}/`
-  )
-  const categoryUrl = normalizeUrlForJsonLd(
-    locale,
-    `/developers/tools/categories/${tool.categoryId}/`
   )
 
   const contributorList = contributors.map((contributor) => ({
@@ -70,36 +63,31 @@ export default async function DevelopersToolsToolJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
+        // Mirrors the visible breadcrumb (flat URL, no category crumb).
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
             {
               "@type": "ListItem",
               position: 1,
-              name: "Home",
+              name: "ethereum.org",
               item: normalizeUrlForJsonLd(locale, "/"),
             },
             {
               "@type": "ListItem",
               position: 2,
-              name: "Developers",
+              name: tCommon("developers"),
               item: normalizeUrlForJsonLd(locale, "/developers/"),
             },
             {
               "@type": "ListItem",
               position: 3,
-              name: t("page-developers-tools-meta-title"),
+              name: tCommon("tools"),
               item: normalizeUrlForJsonLd(locale, "/developers/tools/"),
             },
             {
               "@type": "ListItem",
               position: 4,
-              name: categoryLabel,
-              item: categoryUrl,
-            },
-            {
-              "@type": "ListItem",
-              position: 5,
               name: tool.name,
               item: url,
             },

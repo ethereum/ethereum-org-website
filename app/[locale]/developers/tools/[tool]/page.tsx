@@ -102,16 +102,6 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
               /
             </BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbLink
-                href={`/developers/tools/categories/${tool.categoryId}/`}
-              >
-                {categoryLabel}
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-              /
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
               <BreadcrumbPage>{tool.name}</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
@@ -197,11 +187,11 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
 }
 
 export async function generateStaticParams() {
-  const data = normalizeDeveloperToolsData(await getDeveloperToolsData())
-  if (!data) return []
+  const normalized = normalizeDeveloperToolsData(await getDeveloperToolsData())
+  if (!normalized) return []
 
-  // Flat routes: one entry per tool, keyed by its globally-unique slug.
-  return data.resources.map((r) => ({ tool: getToolKey(r) }))
+  // Same categorized, deduped list the page resolves against.
+  return withCategories(normalized).map((tool) => ({ tool: getToolKey(tool) }))
 }
 
 export async function generateMetadata(props: {

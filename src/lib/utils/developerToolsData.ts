@@ -100,9 +100,14 @@ export function withCategories({
   resources,
 }: NormalizedDeveloperToolsData): DeveloperToolWithCategory[] {
   const subcategoryToCategory = buildSubcategoryIndex(taxonomy)
+  const seenKeys = new Set<string>()
   return resources.flatMap((tool) => {
     const categoryId = subcategoryToCategory.get(tool.subcategory_id)
     if (!categoryId) return []
+    // Drop slug collisions: only the first is reachable via findToolBySlug.
+    const key = getToolKey(tool)
+    if (seenKeys.has(key)) return []
+    seenKeys.add(key)
     return [{ ...tool, categoryId }]
   })
 }
