@@ -75,6 +75,18 @@ When you pass `href`, `Card` automatically wraps in `BaseLink` and adds a `group
 | `sm` | 10px | 10px | Compact list cards |
 | `xs` | 0 | 4px | No padding; use when the banner image needs to extend to all edges of the Card |
 
+### Interaction props: `border`, `hoverOutline`, `hoverLift`
+
+Three independent booleans layer edge/interaction treatment on top of `variant`/`size` -- they're additive, so combine freely:
+
+| Prop | Effect | When |
+|---|---|---|
+| `border` | Static hairline edge (`ring ring-border`). It's a `ring`, so it never shifts layout. | A resting outline on `nested`/`ghost` cards that need definition against their background. |
+| `hoverOutline` | Ring that's transparent at rest and turns `ring-primary-hover` on hover. **Auto-enabled whenever the Card has an `href`**, so clickable cards always get the affordance. | Interactive cards. Rarely set by hand -- passing `href` already turns it on. |
+| `hoverLift` | `hover:shadow-md` plus a subtle `hover:scale`. | Clickable cards that should physically lift on hover. |
+
+`border` and `hoverOutline` are both a `ring`, so used together they read as a resting border that brightens to primary on hover (the `ring-border` shows at rest, the `hover:ring-primary-hover` takes over on hover). These three replaced the old `hoverEffect="lift"` prop.
+
 ## Step 4: Border Radius "Just Works"
 
 `Card`'s border-radius is computed from `--banner-radius` + `--card-pad`. The default `--banner-radius` is 4px and it's bumped to 16px when `variant="ghost"` (no inset padding to bridge). You almost never need to override card or banner radius directly. If you do, set `--banner-radius` on the `Card` rather than overriding the `rounded-` class on either element.

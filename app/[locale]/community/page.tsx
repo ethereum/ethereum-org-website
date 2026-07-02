@@ -157,12 +157,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </div>
             <Grid balanced={4}>
               {cards.map((card, idx) => (
-                <Card
-                  key={idx}
-                  href={card.href}
-                  variant="nested"
-                  hoverEffect="lift"
-                >
+                <Card key={idx} href={card.href} variant="nested" hoverLift>
                   <CardHeader>
                     <CardBanner background="none" fit="contain" zoom={false}>
                       <Image
