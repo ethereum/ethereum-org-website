@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/gas/index.md",
-  "generatedAt": "2026-06-18T21:37:19.419Z",
-  "rootHash": "3471327389e7",
+  "generatedAt": "2026-06-29T23:56:47.467Z",
+  "rootHash": "ec6525523017",
   "tree": {
     "contentHash": "5572fe0abd64",
-    "anchorHash": "2aaf04a9bf60",
+    "anchorHash": "683c99d3d031",
     "children": {
       "frontmatter:title": {
         "contentHash": "f5544e76fdee",
@@ -550,7 +550,7 @@
       },
       "monitoring-gas-fees": {
         "contentHash": "731b08bd6c7c",
-        "anchorHash": "25df325247d1",
+        "anchorHash": "e69f1771f540",
         "labelHash": "6848de463c35",
         "children": {
           "_label": {
@@ -595,7 +595,7 @@
           },
           "link:4": {
             "contentHash": "175f2a1b837b",
-            "anchorHash": "c1314209b85f"
+            "anchorHash": "491bd24f9fe8"
           },
           "prose:10": {
             "contentHash": "7d34ca1e20d4",
@@ -751,5 +751,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

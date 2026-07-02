@@ -28,7 +28,7 @@ published: 2022-04-01
 
 [Optimistic 匯總](/developers/docs/scaling/optimistic-rollups)必須保存每筆歷史交易的記錄，以便任何人都能夠檢查它們並驗證當前狀態是否正確。
 將資料輸入以太坊主網最便宜的方法是將其寫入為呼叫資料。
-[Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) 和 [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) 都選擇了這個解決方案。
+[Optimism](https://docs.optimism.io/op-stack/protocol/overview) 和 [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction) 都選擇了這個解決方案。
 
 ### L2 交易成本 {#cost-of-l2-transactions}
 
@@ -111,7 +111,6 @@ import { OrisUselessToken } from "./Token.sol";
 
 ```solidity
 contract CalldataInterpreter {
-
     OrisUselessToken public immutable token;
 ```
 
@@ -123,7 +122,7 @@ contract CalldataInterpreter {
      * @dev 指定代幣地址
      * @param tokenAddr_ ERC-20 合約地址
      */
-    建構函式(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

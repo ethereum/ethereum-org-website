@@ -7,7 +7,6 @@ import {
 
 import type { Lang, PageParams, StakingStatsData } from "@/lib/types"
 
-import { type List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ExpandableCard from "@/components/ExpandableCard"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -28,6 +27,7 @@ import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { computeStakingApr } from "@/lib/utils/staking"
+import { buildTopicDropdown } from "@/lib/utils/topicDropdown"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { staking } from "@/data/topics/staking"
@@ -97,19 +97,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     },
   ]
 
-  const dropdownLinks: ButtonDropdownList = {
-    text: t(staking.dropdown.textKey),
-    ariaLabel: t(staking.dropdown.ariaLabelKey),
-    items: staking.dropdown.items.map((item) => ({
-      text: t(item.textKey),
-      href: item.href,
-      matomo: {
-        eventCategory: staking.dropdown.matomoCategory,
-        eventAction: "Clicked",
-        eventName: item.matomoEvent,
-      },
-    })),
-  }
+  const dropdownLinks = buildTopicDropdown(staking.dropdown, t, "Clicked")
 
   const tocItems = {
     whatIsStaking: {

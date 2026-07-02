@@ -123,22 +123,6 @@ title: "..."
 
 대본이 없는 경우 본문을 비워두면 팀에서 생성해 드립니다.
 
-#### 4단계: 주제 태그 선택 {#step-4}
-
-갤러리에서 사용되는 기존 카테고리와 일치하는 주제 태그를 선택하세요. 현재 카테고리와 해당 태그는 다음과 같습니다:
-
-- **이더리움 작동 방식**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **네트워크 업그레이드**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **로드맵 및 우선순위**: `roadmap-and-priorities`, `pbs`, `mev`
-- **확장성 및 레이어 2 (l2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **사용 사례**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **프라이버시 및 보안**: `privacy-and-security`, `privacy`, `authentication`
-- **커뮤니티 스토리**: `community-stories`, `contributing`, `translations`, `community`
-
-비디오가 갤러리 카테고리 선반에 표시되도록 하려면 최소 하나의 카테고리 키 태그(케밥 케이스로 된 굵은 글씨 이름, 예: `use-cases` 또는 `scaling-and-layer-2`)를 포함하세요. 인식된 카테고리 태그가 없는 비디오는 "전체" 보기 및 검색 결과에만 표시됩니다.
-
-새로운 태그를 사용할 수도 있습니다. 이 태그들은 향후 카테고리 그룹화에 사용될 수 있습니다.
-
 #### 5단계: PR 제출 {#step-5}
 
 변경된 내용을 `dev` 브랜치로 풀 리퀘스트(PR)를 엽니다. 팀에서 제출물을 검토하고 피드백을 제공할 것입니다.

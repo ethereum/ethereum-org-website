@@ -388,7 +388,7 @@
   "validium-term": "밸리디움",
   "validium-definition": "트랜잭션 처리량을 향상시키기 위해 <a href=\"/glossary/#validity-proof\">유효성 증명</a>을 사용하는 오프체인 솔루션입니다. <a href=\"/glossary/#zk-rollup\">영지식 롤업</a>과 달리 밸리디움 데이터는 레이어 1 메인넷에 저장되지 않습니다. <a href=\"/developers/docs/scaling/validium/\">밸리디움에 대해 더 알아보기</a>.",
   "vyper-term": "Vyper",
-  "vyper-definition": "Python과 유사한 구문을 가진 고급 프로그래밍 언어입니다. 순수 함수형 언어에 더 가까워지도록 고안되었습니다. 비탈릭 부테린(Vitalik Buterin)이 만들었습니다. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Vyper에 대해 더 알아보기</a>.",
+  "vyper-definition": "Python과 유사한 구문을 가진 고급 프로그래밍 언어입니다. 비탈릭 부테린이 만들었습니다. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Vyper에 대해 더 알아보기</a>.",
   "wallet-term": "지갑",
   "wallet-definition": "지갑은 온라인 자금을 위한 가상 지갑처럼 디지털 통화를 저장, 전송 및 수신하는 디지털 도구입니다. <a href=\"/wallets/\">이더리움 지갑에 대해 더 알아보기</a>.",
   "web2-term": "웹2",

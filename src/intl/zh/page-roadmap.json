@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "了解更多关于以太坊治理的信息",
   "page-roadmap-hero-alt": "以太坊路线图",
   "page-roadmap-technical-upgrades-title": "以太坊将迎来哪些技术升级？",
+  "page-roadmap-post-quantum-title": "后量子安全",
+  "page-roadmap-post-quantum-description": "量子计算机有朝一日可能会破解区块链所依赖的密码学。以太坊的后量子升级将在量子计算成为真正的威胁之前，替换掉易受攻击的算法。",
   "page-roadmap-danksharding-title": "丹克分片",
   "page-roadmap-danksharding-description": "丹克分片通过向以太坊区块添加数据“斑点”，使用户使用二层网络 (l2) 汇总的成本大大降低。",
   "page-roadmap-single-slot-finality-title": "单槽最终性",

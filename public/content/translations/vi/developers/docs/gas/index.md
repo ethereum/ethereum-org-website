@@ -134,7 +134,7 @@ Nếu bạn muốn theo dõi giá gas để có thể gửi ETH của mình vớ
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Công cụ ước tính giá gas giao dịch mã nguồn mở_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Theo dõi giá gas Ethereum và L2 để giảm phí giao dịch và tiết kiệm tiền_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Tiện ích mở rộng Chrome ước tính gas hỗ trợ cả giao dịch cũ Loại 0 và giao dịch Loại 2 EIP-1559._
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Tính toán phí gas bằng nội tệ của bạn cho các loại giao dịch khác nhau trên Mạng chính, Arbitrum và Polygon._
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Tính toán phí gas bằng nội tệ của bạn cho các loại giao dịch khác nhau trên Mạng chính, Arbitrum và Polygon._
 
 ## Các công cụ liên quan {#related-tools}
 

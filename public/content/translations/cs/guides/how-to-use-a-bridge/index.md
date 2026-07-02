@@ -1,6 +1,6 @@
 ---
-title: Jak přemostit tokeny na vrstvu 2
-description: Průvodce vysvětlující, jak přesunout tokeny z Etherea na vrstvu 2 pomocí mostu.
+title: "Jak přemostit tokeny na vrstvu 2"
+description: "Průvodce vysvětlující, jak přesunout tokeny z Etherea na vrstvu 2 pomocí mostu."
 lang: cs
 ---
 

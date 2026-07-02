@@ -15,18 +15,17 @@ import type { LatestHighlight } from "@/lib/types"
  * Changes ship via deploy (rebuild picks them up). Keep to 2 entries.
  */
 export const LATEST_HIGHLIGHTS: LatestHighlight[] = [
-  { href: "/latest/privacy-apps-on-ethereum" },
+  { href: "/latest/next-great-wallet-private" },
   {
-    // External highlight: a real EF blog post. It resolves from the RSS feed
-    // while it's in-window; the fallback copy/imagery below keeps the slot
-    // filled once it ages out.
-    href: "https://blog.ethereum.org/en/2026/05/11/protocol-update-may-26",
-    title: "Protocol Cluster Updates: May 2026",
-    description:
-      "A semi-regular gathering of Ethereum core devs from various client teams recap recent interop progress.",
+    // External highlight: Local Ethereum newsletter. Resolves from the RSS
+    // feed while in-window; fallback copy/imagery keeps the slot filled once
+    // it ages out.
+    href: "https://localethereum.substack.com/p/local-ethereum-17",
+    title: "Local Ethereum #17",
+    description: "CROPS, CLARITY, and the Road Ahead.",
     image:
-      "https://storage.googleapis.com/ethereum-hackmd/upload_270c7c873d5994bd4e47958030e3599c.png",
-    source: "Ethereum Foundation",
-    date: "2026-05-11",
+      "https://substack-post-media.s3.amazonaws.com/public/images/97a8c107-1161-4e86-a875-d49a92e0de70_3148x2096.png",
+    source: "Local Ethereum",
+    date: "2026-06-04",
   },
 ]

@@ -41,7 +41,6 @@ lang: bn
 **অ্যাপ্লিকেশন ডেভেলপমেন্টের জন্য Sepolia হলো প্রস্তাবিত ডিফল্ট টেস্টনেট**। Sepolia নেটওয়ার্ক ক্লায়েন্ট এবং টেস্টিং দল দ্বারা নিয়ন্ত্রিত একটি অনুমতিসাপেক্ষ ভ্যালিডেটর সেট ব্যবহার করে।
 
 ##### রিসোর্স
-
 - [ওয়েবসাইট](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -49,7 +48,6 @@ lang: bn
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### ফসেট
-
 - [Alchemy Sepolia ফসেট](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [চেইন প্ল্যাটফর্ম Sepolia ফসেট](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia ফসেট](https://faucet.chainstack.com/sepolia-testnet-faucet)

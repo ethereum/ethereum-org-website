@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Ethereum - O guia completo do Ethereum.org",
+  "page-index-meta-title": "Ethereum - O guia completo do ethereum.org",
   "page-index-meta-description": "O Ethereum é uma plataforma global e descentralizada para dinheiro e novos tipos de aplicativos. No Ethereum, você controla seu próprio dinheiro, dados e identidade. Sem banco, sem intermediários, sem necessidade de permissão.",
   "page-index-description": "A principal plataforma para aplicativos inovadores e redes blockchain",
   "page-index-title": "Bem-vindo ao Ethereum",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Redes privadas e permissionadas",
   "page-index-get-started-enterprise-bullet-3": "Recursos institucionais",
   "page-index-get-started-enterprise-cta": "Explorar para empresas",
-  "page-index-simulator-cta": "Experimente mais guias"
+  "page-index-simulator-cta": "Experimente mais guias",
+  "page-index-latest-updates-title": "Últimas atualizações do Ethereum",
+  "page-index-latest-updates-cta": "Ver mais"
 }

@@ -1,6 +1,6 @@
 ---
-title: 언어 리소스
-description: 이더리움에 대해 배울 수 있는 영어가 아닌 리소스
+title: "언어 리소스"
+description: "이더리움에 대해 배울 수 있는 영어가 아닌 리소스"
 lang: ko
 ---
 
@@ -27,7 +27,7 @@ Ethereum.org는 40개 이상의 언어로 기본 번역되어 있으며, 모든 
 **뉴스**
 
 - [BeInCrypto](http://www.beincrypto.com.br) - 브라질에서 이용 가능한 거래소 목록을 포함한 암호화폐 뉴스와 기사
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - 주요 암호화폐 뉴스 매체인 Cointelegraph의 브라질 버전
+- [Cointelegraph](https://cointelegraph.com.br/) - 주요 암호화폐 뉴스 매체인 Cointelegraph의 브라질 버전
 - [Livecoins](http://www.livecoins.com.br/ethereum) - 암호화폐 뉴스와 도구
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - 암호화폐 뉴스와 보고서
 - [Modular Crypto](https://modularcrypto.xyz/) - 암호화폐 뉴스와 교육 기사
@@ -37,7 +37,7 @@ Ethereum.org는 40개 이상의 언어로 기본 번역되어 있으며, 모든 
 - [web3dev](https://www.web3dev.com.br/) - Web3 개발자를 위한 콘텐츠 허브 및 디스코드 커뮤니티.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - Web3 및 탈중앙화 금융(DeFi) 학습을 위한 리소스
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - '초보자를 위한 이더리움' 및 '초보자를 위한 DeFi'를 포함한 암호화폐 뉴스와 교육
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - 암호화폐 분야의 인사이트, 교육 및 블로그
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - 암호화폐 분야의 인사이트, 교육 및 블로그
 - [Cointimes](http://www.cointimes.com.br/) - 암호화폐 뉴스와 교육
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - 가장 자주 묻는 기본적인 암호화폐 질문에 답하는 가이드
 

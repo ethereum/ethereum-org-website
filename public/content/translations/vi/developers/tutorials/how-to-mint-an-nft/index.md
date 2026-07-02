@@ -21,7 +21,7 @@ Hãy cùng bắt đầu nào!
 
 ## Bước 1: Cài đặt Web3 {#install-web3}
 
-Nếu bạn đã làm theo hướng dẫn đầu tiên về cách tạo hợp đồng thông minh NFT của mình, bạn đã có kinh nghiệm sử dụng Ethers.js. Web3 tương tự như Ethers, vì nó là một thư viện được sử dụng để giúp việc tạo các yêu cầu đến chuỗi khối [Ethereum](/) trở nên dễ dàng hơn. Trong hướng dẫn này, chúng ta sẽ sử dụng [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), đây là một thư viện Web3 nâng cao cung cấp tính năng tự động thử lại và hỗ trợ WebSocket mạnh mẽ.
+Nếu bạn đã làm theo hướng dẫn đầu tiên về cách tạo hợp đồng thông minh NFT của mình, bạn đã có kinh nghiệm sử dụng Ethers.js. Web3 tương tự như Ethers, vì nó là một thư viện được sử dụng để giúp việc tạo các yêu cầu đến chuỗi khối [Ethereum](/) trở nên dễ dàng hơn. Trong hướng dẫn này, chúng ta sẽ sử dụng [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), đây là một thư viện Web3 nâng cao cung cấp tính năng tự động thử lại và hỗ trợ WebSocket mạnh mẽ.
 
 Trong thư mục gốc của dự án, hãy chạy:
 
@@ -42,7 +42,7 @@ const web3 = createAlchemyWeb3(API_URL)
 
 ## Bước 3: Lấy ABI hợp đồng của bạn {#contract-abi}
 
-ABI (Giao diện nhị phân ứng dụng) hợp đồng của chúng ta là giao diện để tương tác với hợp đồng thông minh. Bạn có thể tìm hiểu thêm về ABI hợp đồng [tại đây](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat tự động tạo một ABI cho chúng ta và lưu nó trong tệp `MyNFT.json`. Để sử dụng tệp này, chúng ta sẽ cần phân tích cú pháp nội dung bằng cách thêm các dòng mã sau vào tệp `mint-nft.js` của mình:
+ABI (Giao diện nhị phân ứng dụng) hợp đồng của chúng ta là giao diện để tương tác với hợp đồng thông minh của chúng ta. Bạn có thể tìm hiểu thêm về [ABI hợp đồng](/glossary/#abi). Hardhat tự động tạo một ABI cho chúng ta và lưu nó trong tệp `MyNFT.json`. Để sử dụng nó, chúng ta sẽ cần phân tích cú pháp nội dung bằng cách thêm các dòng mã sau vào tệp `mint-nft.js` của chúng ta:
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -59,7 +59,6 @@ console.log(JSON.stringify(contract.abi))
 ```js
 node scripts/mint-nft.js
 ```
-
 ## Bước 4: Cấu hình siêu dữ liệu cho NFT của bạn bằng IPFS {#config-meta}
 
 Nếu bạn còn nhớ từ hướng dẫn của chúng ta trong Phần 1, hàm hợp đồng thông minh `mintNFT` của chúng ta nhận vào một tham số tokenURI sẽ phân giải thành một tài liệu JSON mô tả siêu dữ liệu của NFT — đây thực sự là thứ mang lại sức sống cho NFT, cho phép nó có các thuộc tính có thể cấu hình, chẳng hạn như tên, mô tả, hình ảnh và các thuộc tính khác.
@@ -138,11 +137,11 @@ PUBLIC_KEY = "your-public-account-address"
 
 ## Bước 7: Tạo giao dịch của bạn {#create-txn}
 
-Đầu tiên, hãy định nghĩa một hàm có tên là `mintNFT(tokenData)` và tạo giao dịch của chúng ta bằng cách thực hiện những việc sau:
+Đầu tiên, hãy định nghĩa một hàm có tên là `mintNFT(tokenData)` và tạo giao dịch của chúng ta bằng cách thực hiện các bước sau:
 
 1. Lấy _PRIVATE_KEY_ và _PUBLIC_KEY_ của bạn từ tệp `.env`.
 
-1. Tiếp theo, chúng ta sẽ cần tìm ra nonce của tài khoản. Đặc tả nonce được sử dụng để theo dõi số lượng giao dịch được gửi từ địa chỉ của bạn — điều mà chúng ta cần cho mục đích bảo mật và để ngăn chặn [các cuộc tấn công phát lại (replay attacks)](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). Để lấy số lượng giao dịch được gửi từ địa chỉ của bạn, chúng ta sử dụng [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+1. Tiếp theo, chúng ta sẽ cần tìm ra nonce của tài khoản. Đặc tả nonce được sử dụng để theo dõi số lượng giao dịch được gửi từ địa chỉ của bạn — điều mà chúng ta cần cho mục đích bảo mật và để ngăn chặn các cuộc tấn công phát lại (replay attack). Để lấy số lượng giao dịch được gửi từ địa chỉ của bạn, chúng ta sử dụng [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
 
 1. Cuối cùng, chúng ta sẽ thiết lập giao dịch của mình với các thông tin sau:
 
@@ -154,7 +153,7 @@ PUBLIC_KEY = "your-public-account-address"
 
 - `'gas': estimatedGas` — Lượng Gas ước tính cần thiết để hoàn thành giao dịch
 
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Phép tính mà chúng ta muốn thực hiện trong giao dịch này — trong trường hợp này là việc đúc một NFT
+- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Phép tính mà chúng ta muốn thực hiện trong giao dịch này — trong trường hợp này là đúc một NFT
 
 Tệp `mint-nft.js` của bạn bây giờ sẽ trông như thế này:
 
@@ -184,7 +183,6 @@ Tệp `mint-nft.js` của bạn bây giờ sẽ trông như thế này:
      };
    }​
 ```
-
 ## Bước 8: Ký giao dịch {#sign-txn}
 
 Bây giờ chúng ta đã tạo giao dịch của mình, chúng ta cần ký nó để gửi đi. Đây là lúc chúng ta sẽ sử dụng khóa riêng tư của mình.
@@ -317,7 +315,7 @@ Bây giờ, hãy chạy `node scripts/mint-nft.js` để triển khai NFT của 
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-Tiếp theo, hãy truy cập [mempool Alchemy](https://dashboard.alchemyapi.io/mempool) của bạn để xem trạng thái giao dịch của bạn (cho dù nó đang chờ xử lý, đã được khai thác hay bị mạng lưới loại bỏ). Nếu giao dịch của bạn bị loại bỏ, việc kiểm tra [Blockscout](https://eth-sepolia.blockscout.com/) và tìm kiếm mã băm giao dịch của bạn cũng rất hữu ích.
+Tiếp theo, hãy truy cập [mempool Alchemy](https://dashboard.alchemy.com/mempool) của bạn để xem trạng thái giao dịch của bạn (cho dù nó đang chờ xử lý, đã được khai thác hay bị mạng lưới loại bỏ). Nếu giao dịch của bạn bị loại bỏ, việc kiểm tra [Blockscout](https://eth-sepolia.blockscout.com/) và tìm kiếm mã băm giao dịch của bạn cũng rất hữu ích.
 
 ![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Xem mã băm giao dịch NFT của bạn trên Etherscan_
 

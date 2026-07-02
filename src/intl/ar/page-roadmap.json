@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "المزيد حول حوكمة إيثيريوم",
   "page-roadmap-hero-alt": "خارطة طريق إيثيريوم",
   "page-roadmap-technical-upgrades-title": "ما هي الترقيات التقنية القادمة إلى إيثيريوم؟",
+  "page-roadmap-post-quantum-title": "أمان ما بعد الكم",
+  "page-roadmap-post-quantum-description": "قد تتمكن أجهزة الكمبيوتر الكمومية يومًا ما من كسر علم التشفير الذي تعتمد عليه سلاسل الكتل. ستعمل ترقيات ما بعد الكم في إيثيريوم على استبدال الخوارزميات المعرضة للخطر قبل أن تصبح الحوسبة الكمومية تهديدًا حقيقيًا.",
   "page-roadmap-danksharding-title": "تجزئة دانك",
   "page-roadmap-danksharding-description": "تجعل تجزئة دانك تجميعات ⁦L2⁩ أرخص بكثير للمستخدمين عن طريق إضافة \"كتل بيانات\" إلى كتل إيثيريوم.",
   "page-roadmap-single-slot-finality-title": "نهائية الخانة الواحدة",

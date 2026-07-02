@@ -11,7 +11,7 @@ Inizia leggendo la missione e i valori di ethereum.org nel nostro [codice di con
 ## Sviluppatori <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Scopri e prova Ethereum su [ethereum.org/developers/](/developers/)
-- Partecipa a un hackathon di [ETHGlobal](https://ethglobal.co/) vicino a te!
+- Partecipa a un hackathon di [ETHGlobal](https://ethglobal.com/) vicino a te!
 - Dai un'occhiata ai [progetti relativi alla tua area di competenza o al tuo linguaggio di programmazione preferito](/developers/docs/programming-languages/)
 - Guarda o partecipa alle [chiamate del livello di consenso e del livello di esecuzione](https://www.youtube.com/@EthereumProtocol/streams)
 - [Lista dei desideri dell'Ecosystem Support Program](https://esp.ethereum.foundation/wishlist/): aree relative a strumenti, documentazione e infrastruttura in cui l'Ecosystem Support Program di Ethereum è attivamente alla ricerca di candidature per sovvenzioni
@@ -80,7 +80,7 @@ Mettendo in staking i tuoi ETH puoi guadagnare ricompense aiutando al contempo a
 
 L'ecosistema di Ethereum ha la missione di finanziare beni pubblici e progetti di grande impatto. Con donazioni molto piccole puoi mostrare il tuo supporto e consentire la realizzazione di lavori importanti.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Professionisti finanziari e contabili <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

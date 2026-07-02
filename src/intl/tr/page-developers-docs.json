@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "Veri ve analitik",
   "docs-nav-data-and-analytics-description": "Blokzincir verilerinin nasıl toplandığı, düzenlendiği ve merkeziyetsiz uygulamalara (dapp) uygulandığı",
   "docs-nav-data-availability": "Veri kullanılabilirliği",
+  "docs-nav-data-availability-description": "Ethereum'da veri kullanılabilirliği ile ilgili sorunlara ve çözümlere genel bakış",
   "docs-nav-data-availability-storage-strategies": "Blokzincir veri depolama stratejileri",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "Durum doğrulaması geliştirme aşamasında",
   "layer-2-metis-note": "Sahtekarlık kanıtları geliştirme aşamasında",
   "layer-2-optimism-note": "Hata kanıtları geliştirme aşamasında",
-  "back-to-top": "Başa dön",
   "banner-page-incomplete": "Bu sayfa eksik ve yardımınızı çok isteriz. Bu sayfayı düzenleyin ve başkalarına faydalı olabileceğini düşündüğünüz her şeyi ekleyin.",
   "next": "Sonraki",
   "previous": "Önceki"

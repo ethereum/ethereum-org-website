@@ -584,21 +584,21 @@ uv run test-predictor.py
 Očekávaný výsledek je podobný tomuto:
 
 ```
-Predikce pro 2026-01-05T19:50: předpovězeno 3138.93 USD, skutečnost 3218.92 USD, chyba 79.99 USD
-Predikce pro 2026-01-06T19:56: předpovězeno 3243.39 USD, skutečnost 3221.08 USD, chyba 22.31 USD
-Predikce pro 2026-01-07T20:02: předpovězeno 3223.24 USD, skutečnost 3146.89 USD, chyba 76.35 USD
-Predikce pro 2026-01-08T20:11: předpovězeno 3150.47 USD, skutečnost 3092.04 USD, chyba 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-Predikce pro 2026-01-31T22:33: předpovězeno 2637.73 USD, skutečnost 2417.77 USD, chyba 219.96 USD
-Predikce pro 2026-02-01T22:41: předpovězeno 2381.70 USD, skutečnost 2318.84 USD, chyba 62.86 USD
-Predikce pro 2026-02-02T22:49: předpovězeno 2234.91 USD, skutečnost 2349.28 USD, chyba 114.37 USD
-Průměrná chyba predikce z 29 predikcí: 83.87103448275862068965517241 USD
-Průměrná změna na doporučení: 4.787931034482758620689655172 USD
-Standardní rozptyl změn: 104.42 USD
-Ziskové dny: 51.72%
-Ztrátové dny: 48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 Většina testeru je identická s agentem, ale zde jsou části, které jsou nové nebo upravené.
@@ -766,19 +766,19 @@ Výstup bude vypadat podobně jako tento:
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-Aktuální cena: 1843.16
-V 2026-02-06T23:07, očekávaná cena: 1724.41 USD
-Zůstatky na účtu před obchodem:
-Zůstatek USDC: 927301.578272
-Zůstatek WETH: 500
-Prodat, očekávám, že cena klesne o 118.75 USD
-Transakce schválení odeslána: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-Transakce schválení vytěžena.
-Transakce prodeje odeslána: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-Transakce prodeje vytěžena.
-Zůstatky na účtu po obchodu:
-Zůstatek USDC: 929143.797116
-Zůstatek WETH: 499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 Abyste jej mohli skutečně používat, potřebujete několik drobných změn.

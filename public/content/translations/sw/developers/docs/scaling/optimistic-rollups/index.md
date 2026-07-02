@@ -256,14 +256,12 @@ Je, wewe ni mwanafunzi wa kuona zaidi? Tazama Finematics akielezea mikusanyiko y
 ## Usomaji zaidi kuhusu mikusanyiko ya optimistic {#further-reading-on-optimistic-rollups}
 
 - [Mikusanyiko ya optimistic inafanyaje kazi (Mwongozo Kamili)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Rollup ya Mnyororo wa Vitalu ni nini? Utangulizi wa Kiufundi](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Mwongozo Muhimu wa Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [Mwongozo wa Vitendo wa Mikusanyiko ya Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
-- [Hali ya Ushahidi wa Udanganyifu katika L2 za Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
+- [Hali ya Ushahidi wa Udanganyifu Katika tabaka la 2 (l2) za Ethereum](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
 - [Rollup ya Optimism inafanyaje kazi hasa?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
-- [Uchunguzi wa Kina wa OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [Uchambuzi wa Kina wa OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Mashine Pepe ya Optimistic ni nini?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
 ## Mafunzo: Mikusanyiko ya optimistic na madaraja kwenye Ethereum {#tutorials}
 
 - [Mapitio ya mkataba wa daraja la kawaida la Optimism](/developers/tutorials/optimism-std-bridge-annotated-code/) _– Mapitio ya msimbo yaliyofafanuliwa ya daraja la kawaida la Optimism kwa kusogeza mali kati ya tabaka la 1 (l1) na tabaka la 2 (l2)._

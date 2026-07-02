@@ -1,6 +1,6 @@
 ---
-title: Comunità online
-description: Scopri forum online, chat room e comunità sui social media in cui gli appassionati di Ethereum si riuniscono per discutere e collaborare.
+title: "Comunità online"
+description: "Scopri forum online, chat room e comunità sui social media in cui gli appassionati di Ethereum si riuniscono per discutere e collaborare."
 lang: it
 ---
 
@@ -52,7 +52,7 @@ Se ritieni che una comunità debba essere aggiunta o rimossa in base a queste li
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Discord di Matos</Link> - comunità di creatori del Web3 in cui si ritrovano costruttori, figure di spicco del settore e appassionati di Ethereum. Siamo appassionati di sviluppo, design e cultura del Web3. Vieni a costruire con noi.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat per lo sviluppo in Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- forum di domande e risposte</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- forum decentralizzato di domande e risposte</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- forum decentralizzato di domande e risposte</i></SocialListItem>
 
 ## YouTube e X (in precedenza Twitter) {#youtube-and-twitter}
 

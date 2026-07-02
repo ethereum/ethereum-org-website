@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "Datos y análisis",
   "docs-nav-data-and-analytics-description": "Cómo los datos de la cadena de bloques se agregan, organizan e implementan en las aplicaciones descentralizadas (dapps)",
   "docs-nav-data-availability": "Disponibilidad de datos",
+  "docs-nav-data-availability-description": "Una descripción general de los problemas y soluciones relacionados con la disponibilidad de datos en Ethereum",
   "docs-nav-data-availability-storage-strategies": "Estrategias de almacenamiento de datos de la cadena de bloques",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "Validación de estado en desarrollo",
   "layer-2-metis-note": "Pruebas de fraude en desarrollo",
   "layer-2-optimism-note": "Pruebas de fallas en desarrollo",
-  "back-to-top": "Volver arriba",
   "banner-page-incomplete": "Esta página está incompleta y nos encantaría tu ayuda. Edita esta página y añade cualquier cosa que creas que pueda ser útil para otros.",
   "next": "Siguiente",
   "previous": "Anterior"

@@ -521,7 +521,7 @@ async function Page(props: { params: Promise<PageParams> }) {
             {t("page-stablecoins-types-intro")}
           </p>
           <Tabs defaultValue={types[0].title}>
-            <TabsList>
+            <TabsList className="mx-auto">
               {types.map((type) => (
                 <TabsTrigger key={type.title} value={type.title}>
                   {type.title}
@@ -658,7 +658,7 @@ async function Page(props: { params: Promise<PageParams> }) {
         </Section>
 
         {/* Choose a stablecoin: editor's choices + market cap table */}
-        <div className="my-8 w-full rounded-t-4xl bg-radial-a">
+        <div className="my-8 w-full rounded-t-4xl bg-radial-primary">
           {/* Figma: ~80px top padding, content runs to the band bottom; override
               the default symmetric py so the explicit values win at every bp. */}
           <Section className="pt-16 pb-12 lg:pt-20 lg:pb-16">

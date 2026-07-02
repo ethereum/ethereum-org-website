@@ -135,18 +135,16 @@ _सामान्यतः प्रोटोकॉल आणि [विके
 
 ### DAO सुरू करा {#start-a-dao}
 
-- [DAOHaus सह DAO तयार करा (Summon)](https://app.daohaus.club/summon)
+- [DAOHaus सह DAO तयार करा](https://app.daohaus.club/summon)
 - [Tally सह गव्हर्नर DAO सुरू करा](https://www.tally.xyz/get-started)
 - [Aragon-समर्थित DAO तयार करा](https://aragon.org/product)
-- [कॉलनी (colony) सुरू करा](https://colony.io/)
-- [DAOstack च्या होलोग्राफिक सहमतीसह DAO तयार करा](https://alchemy.daostack.io/daos/create)
+- [colony सुरू करा](https://colony.io/)
 - [DeGov लाँचरसह DAO लाँच करा](https://docs.degov.ai/integration/deploy)
-
 ## पुढील वाचन {#further-reading}
 
 ### DAO लेख {#dao-articles}
 
-- [DAO म्हणजे काय?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [DAO म्हणजे काय?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [हाऊस ऑफ DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [DAO म्हणजे काय आणि ते कशासाठी आहे?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [DAO-समर्थित डिजिटल समुदाय कसा सुरू करावा](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

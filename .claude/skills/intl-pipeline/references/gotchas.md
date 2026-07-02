@@ -17,10 +17,12 @@ The Gemini adapter at `src/scripts/intl-pipeline/lib/llm/gemini.ts` checks `resp
 - `STOP` — normal completion
 - `MAX_TOKENS` — output truncated; section probably too large
 - `SAFETY` — content filter blocked it. Safety settings are `BLOCK_NONE` in the adapter, but blocks can still trigger on some edge content (mining/attack descriptions in certain non-Latin languages). If `BLOCK_NONE` doesn't help, the prompt or content needs rework, not the safety settings.
-- `RECITATION` — model declined to reproduce training data. Rare; restart usually resolves.
+- `RECITATION` — model declined to reproduce training data. **Deterministic per file+language**, NOT transient: the adapter retries the byte-identical prompt up to 3x and gets the identical `RECITATION` every time (`tokens_out=0`), then gives up. The file+lang is then skipped — it ships untranslated (keeps its prior/English state), is recorded as a failed task, and listed in the PR body's failure block. Restarting the whole run will hit the exact same combos. Recurring victims are long reference docs (consensus-mechanisms `pos`/`poa`, `defi`, `ethash`, whitepaper) in fr/es/pt-br. The real fix is upstream of a plain retry: mutate before retrying (smaller chunks, secondary model, reworded prompt) or accept the skip and handle those files out-of-band. Don't burn time expecting a re-run to clear them.
 - `OTHER` — bucket catchall. Log shows full response; debug case-by-case.
 
 Non-STOP finish reasons are logged at WARNING level. Search workflow logs for `FINISH_REASON` if a section seems to be missing translation output.
+
+**Beware: a "success" workflow conclusion does not mean a clean run.** Per-file+lang tasks that fail (RECITATION, blob/build errors) are emitted as `[WARN]`, listed in the PR body's "N task(s) failed" block, and the run still goes green. Always read the PR body's failure block and grep the log before trusting a green run. See `recovery.md` -> "Diagnosing a completed run."
 
 ## `intl-content-tree` is a separate npm package
 

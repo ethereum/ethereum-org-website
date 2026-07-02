@@ -21,7 +21,7 @@ published: 2021-04-22
 
 اس ٹیوٹوریل کے حصہ 2 میں ہم دیکھیں گے کہ ہم اپنے سمارٹ کنٹریکٹ کا استعمال کرتے ہوئے ایک <span dir="ltr">NFT</span> کیسے ڈھال سکتے ہیں، اور حصہ 3 میں ہم وضاحت کریں گے کہ میٹاماسک پر اپنا <span dir="ltr">NFT</span> کیسے دیکھیں۔
 
-اور یقیناً، اگر آپ کے ذہن میں کسی بھی وقت کوئی سوال ہو، تو [<span dir="ltr">Alchemy</span> ڈسکارڈ](https://discord.gg/gWuC7zB) میں رابطہ کرنے سے نہ ہچکچائیں یا [<span dir="ltr">Alchemy</span> کی <span dir="ltr">NFT API</span> دستاویزات](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api) دیکھیں۔
+اور یقیناً، اگر آپ کے ذہن میں کسی بھی وقت کوئی سوال ہو، تو [<span dir="ltr">Alchemy</span> ڈسکارڈ](https://discord.gg/gWuC7zB) میں رابطہ کرنے سے نہ ہچکچائیں یا [<span dir="ltr">Alchemy</span> کی <span dir="ltr">NFT API</span> دستاویزات](https://www.alchemy.com/docs/reference/nft-api-quickstart) دیکھیں۔
 
 ## مرحلہ 1: ایتھیریم نیٹ ورک سے جڑیں {#connect-to-ethereum}
 
@@ -31,7 +31,7 @@ published: 2021-04-22
 
 ## مرحلہ 2: اپنی ایپ (اور <span dir="ltr">API</span> کلید) بنائیں {#make-api-key}
 
-ایک بار جب آپ <span dir="ltr">Alchemy</span> اکاؤنٹ بنا لیتے ہیں، تو آپ ایک ایپ بنا کر <span dir="ltr">API</span> کلید تیار کر سکتے ہیں۔ یہ ہمیں <span dir="ltr">Sepolia</span> آزمائشی نیٹ ورک پر درخواستیں بھیجنے کی اجازت دے گا۔ اگر آپ آزمائشی نیٹ ورکس کے بارے میں مزید جاننے کے متجسس ہیں تو [یہ گائیڈ](https://docs.alchemyapi.io/guides/choosing-a-network) دیکھیں۔
+ایک بار جب آپ <span dir="ltr">Alchemy</span> اکاؤنٹ بنا لیتے ہیں، تو آپ ایک ایپ بنا کر <span dir="ltr">API</span> کلید تیار کر سکتے ہیں۔ یہ ہمیں <span dir="ltr">Sepolia</span> آزمائشی نیٹ ورک پر درخواستیں بھیجنے کی اجازت دے گا۔ اگر آپ آزمائشی نیٹ ورکس کے بارے میں مزید جاننے کے متجسس ہیں تو [یہ گائیڈ](https://www.alchemy.com/docs/choosing-a-web3-network) دیکھیں۔
 
 1. نیویگیشن بار میں "Apps" پر ہوور کر کے اور "Create App" پر کلک کر کے اپنے <span dir="ltr">Alchemy</span> ڈیش بورڈ میں "Create App" صفحہ پر جائیں۔
 
@@ -57,14 +57,13 @@ published: 2021-04-22
 
 ## مرحلہ 5: اپنا بیلنس چیک کریں {#check-balance}
 
-یہ دوبارہ چیک کرنے کے لیے کہ ہمارا بیلنس موجود ہے، آئیے [<span dir="ltr">Alchemy</span> کے کمپوزر ٹول](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) کا استعمال کرتے ہوئے ایک [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) درخواست کریں۔ یہ ہمارے والیٹ میں موجود <span dir="ltr">ETH</span> کی مقدار واپس کرے گا۔ اپنے میٹاماسک اکاؤنٹ کا پتہ درج کرنے اور "Send Request" پر کلک کرنے کے بعد، آپ کو اس طرح کا جواب نظر آنا چاہیے:
+یہ دوبارہ چیک کرنے کے لیے کہ ہمارا بیلنس موجود ہے، آئیے [<span dir="ltr">Alchemy</span> کے سینڈ باکس ٹول](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) کا استعمال کرتے ہوئے ایک [<span dir="ltr">eth_getBalance</span>](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) درخواست کریں۔ یہ ہمارے والیٹ میں موجود <span dir="ltr">ETH</span> کی مقدار واپس کرے گا۔ اپنا میٹاماسک اکاؤنٹ کا پتہ درج کرنے اور "Send Request" پر کلک کرنے کے بعد، آپ کو اس طرح کا جواب نظر آنا چاہیے:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
 > **نوٹ** یہ نتیجہ <span dir="ltr">Wei</span> میں ہے، <span dir="ltr">ETH</span> میں نہیں۔ <span dir="ltr">Wei</span> کو ایتھر کی سب سے چھوٹی اکائی کے طور پر استعمال کیا جاتا ہے۔ <span dir="ltr">Wei</span> سے <span dir="ltr">ETH</span> میں تبدیلی <span dir="ltr">1 eth = 10<sup>18</sup> wei</span> ہے۔ لہذا اگر ہم <span dir="ltr">0xde0b6b3a7640000</span> کو اعشاریہ میں تبدیل کریں تو ہمیں <span dir="ltr">1\*10<sup>18</sup> wei</span> ملتا ہے، جو <span dir="ltr">1 ETH</span> کے برابر ہے۔
 
-شکر ہے! ہماری نقلی رقم پوری طرح موجود ہے۔
-
+شکر ہے! ہماری تمام نقلی رقم وہاں موجود ہے۔
 ## مرحلہ 6: اپنا پروجیکٹ شروع کریں {#initialize-project}
 
 سب سے پہلے، ہمیں اپنے پروجیکٹ کے لیے ایک فولڈر بنانا ہوگا۔ اپنی کمانڈ لائن پر جائیں اور ٹائپ کریں:
@@ -72,11 +71,11 @@ published: 2021-04-22
     mkdir my-nft
     cd my-nft
 
-اب چونکہ ہم اپنے پروجیکٹ فولڈر کے اندر ہیں، ہم پروجیکٹ کو شروع کرنے کے لیے `npm init` استعمال کریں گے۔ اگر آپ کے پاس پہلے سے `npm` انسٹال نہیں ہے، تو [ان ہدایات](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) پر عمل کریں (ہمیں [Node.js](https://nodejs.org/en/download/) کی بھی ضرورت ہوگی، لہذا اسے بھی ڈاؤن لوڈ کریں!)۔
+اب چونکہ ہم اپنے پروجیکٹ فولڈر کے اندر ہیں، ہم پروجیکٹ کو شروع کرنے کے لیے <span dir="ltr">npm init</span> کا استعمال کریں گے۔ اگر آپ کے پاس پہلے سے <span dir="ltr">npm</span> انسٹال نہیں ہے، تو [<span dir="ltr">Node.js</span> کی انسٹالیشن کی ہدایات](https://nodejs.org/en/download/) پر عمل کریں (ہمیں اس ٹیوٹوریل کے لیے <span dir="ltr">Node.js</span> اور <span dir="ltr">npm</span> کی ضرورت ہوگی)۔
 
     npm init
 
-اس سے کوئی خاص فرق نہیں پڑتا کہ آپ انسٹالیشن کے سوالات کا کیا جواب دیتے ہیں؛ حوالے کے لیے ہم نے اسے اس طرح کیا ہے:
+اس سے کوئی خاص فرق نہیں پڑتا کہ آپ انسٹالیشن کے سوالات کے کیا جوابات دیتے ہیں؛ حوالہ کے لیے ہم نے اسے اس طرح کیا ہے:
 
 ```json
     package name: (my-nft)
@@ -103,8 +102,7 @@ published: 2021-04-22
     }
 ```
 
-`package.json` کو منظور کریں، اور ہم تیار ہیں!
-
+<span dir="ltr">package.json</span> کو منظور کریں، اور ہم تیار ہیں!
 ## مرحلہ 7: [Hardhat](https://hardhat.org/getting-started/#overview) انسٹال کریں {#install-hardhat}
 
 Hardhat آپ کے ایتھیریم سافٹ ویئر کو مرتب کرنے، تعینات کرنے، جانچنے اور ڈیبگ کرنے کے لیے ایک ڈیولپمنٹ ماحول ہے۔ یہ ڈیولپرز کو لائیو چین پر تعینات کرنے سے پہلے مقامی طور پر سمارٹ کنٹریکٹس اور غیر مرکزی ایپلی کیشنز (dapps) بنانے میں مدد کرتا ہے۔
@@ -346,7 +344,7 @@ From کا پتہ آپ کے میٹاماسک اکاؤنٹ کے پتے سے مما
 
 زبردست! آپ نے ابھی اپنا <span dir="ltr">NFT</span> سمارٹ کنٹریکٹ ایتھیریم (آزمائشی نیٹ ورک) چین پر تعینات کر دیا ہے!
 
-یہ سمجھنے کے لیے کہ اندرونی طور پر کیا ہو رہا ہے، آئیے اپنے [<span dir="ltr">Alchemy</span> ڈیش بورڈ](https://dashboard.alchemyapi.io/explorer) میں ایکسپلورر ٹیب پر جائیں۔ اگر آپ کے پاس متعدد <span dir="ltr">Alchemy</span> ایپس ہیں تو یقینی بنائیں کہ ایپ کے لحاظ سے فلٹر کریں اور "MyNFT" کو منتخب کریں۔
+یہ سمجھنے کے لیے کہ اندرونی طور پر کیا ہو رہا ہے، آئیے اپنے [<span dir="ltr">Alchemy</span> ڈیش بورڈ](https://dashboard.alchemy.com/explorer) میں ایکسپلورر ٹیب پر جائیں۔ اگر آپ کے پاس متعدد <span dir="ltr">Alchemy</span> ایپس ہیں تو یقینی بنائیں کہ ایپ کے لحاظ سے فلٹر کریں اور "MyNFT" کو منتخب کریں۔
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "Программа вознаграждений Эфириума учитывает ряд переменных при определении вознаграждений. Определение права на участие, количества баллов и всех условий, связанных с вознаграждением, остается на исключительном и окончательном усмотрении комиссии Фонда Ethereum по программе Bug Bounty.",
   "page-upgrades-bug-bounty-leaderboard": "Смотреть полные таблицы лидеров",
   "page-upgrades-bug-bounty-leaderboard-list": "Таблица лидеров Bug Bounty",
+  "page-upgrades-bug-bounty-leaderboard-position": "На месте номер {rank} с {score, plural, one {# баллом} few {# баллами} many {# баллами} other {# баллами}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(Смотреть профиль на GitHub)",
   "page-upgrades-bug-bounty-leaderboard-points": "баллов",
   "page-upgrades-bug-bounty-ledger-desc": "Спецификации Эфириума подробно описывают обоснование архитектуры для уровня исполнения и уровня консенсуса.",
   "page-upgrades-bug-bounty-ledger-title": "Ошибки в спецификациях",

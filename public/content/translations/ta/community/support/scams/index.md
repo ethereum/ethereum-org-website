@@ -1,7 +1,7 @@
 ---
-title: நான் ஏமாற்றப்பட்டேன் அல்லது நிதியை இழந்துவிட்டேன்
-metaTitle: மோசடி உதவி மற்றும் புகாரளித்தல்
-description: நீங்கள் ஏமாற்றப்பட்டிருந்தால் என்ன செய்வது, மீதமுள்ள உங்கள் சொத்துக்களை எவ்வாறு பாதுகாப்பது மற்றும் மோசடி குறித்து எங்கு புகாரளிப்பது.
+title: "நான் ஏமாற்றப்பட்டேன் அல்லது நிதியை இழந்துவிட்டேன்"
+metaTitle: "மோசடி உதவி மற்றும் புகாரளித்தல்"
+description: "நீங்கள் ஏமாற்றப்பட்டிருந்தால் என்ன செய்வது, மீதமுள்ள உங்கள் சொத்துக்களை எவ்வாறு பாதுகாப்பது மற்றும் மோசடி குறித்து எங்கு புகாரளிப்பது."
 lang: ta
 ---
 
@@ -85,8 +85,8 @@ lang: ta
 ## கவனிக்க வேண்டிய மோசடிகளின் வகைகள் {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="பரிசளிப்பு மற்றும் ஏர்ட்ராப் மோசடிகள்"
+contentPreview="யாரும் இலவசமாக ETH-ஐ வழங்குவதில்லை. இந்த சலுகைகள் எப்போதும் மோசடிகளே."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="ஆள்மாறாட்டம் மற்றும் போலி ஆதரவு"
+contentPreview="எத்திரியம் அல்லது ethereum.org-ல் இருந்து யாரும் உங்களை முதலில் தொடர்பு கொள்ள மாட்டார்கள்."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="மீட்பு மோசடிகள்"
+contentPreview="மோசடிக்கு ஆளான பிறகு, போலி 'கிரிப்டோ மீட்பு நிபுணர்கள்' குறித்து எச்சரிக்கையாக இருங்கள்."
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="ஃபிஷிங் இணையதளங்கள் மற்றும் போலி செயலிகள்"
+contentPreview="மோசடி தளங்கள் உங்கள் அடையாளச் சான்றுகளைத் திருட உண்மையான பணப்பைகள் மற்றும் பரிமாற்றங்களைப் போல செயல்படுகின்றன."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

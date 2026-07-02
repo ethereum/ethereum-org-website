@@ -11,6 +11,26 @@ import type { CommittedFile, LanguagePair } from "./types"
 import { logSection } from "./utils"
 
 /**
+ * GitHub rejects PR bodies over 65,536 chars. Keep headroom and clamp before
+ * every create/update so a long failure list or accumulated run history can
+ * never block the PR (this previously failed full-tree runs -- see PR #18471).
+ */
+export const MAX_PR_BODY = 60_000
+/** Cap the per-run failure + rerun lists; full set is in the workflow log. */
+const MAX_FAILURES_LISTED = 40
+
+/**
+ * Clamp a PR body to MAX_PR_BODY, preserving the TAIL (the newest run summary
+ * is the most useful) and prefixing a truncation notice.
+ */
+export function clampBody(body: string): string {
+  if (body.length <= MAX_PR_BODY) return body
+  const notice =
+    "_[earlier content truncated to fit GitHub's PR body limit; see workflow logs for full history]_\n\n"
+  return notice + body.slice(body.length - (MAX_PR_BODY - notice.length))
+}
+
+/**
  * Generate PR title based on language count
  */
 export function generatePRTitle(
@@ -79,16 +99,21 @@ export function generateRunSummary(
   }
 
   if (failures.length > 0) {
-    parts.push("", `**${failures.length} task(s) failed:**`, "")
-    for (const f of failures) {
+    const shown = failures.slice(0, MAX_FAILURES_LISTED)
+    const extra = failures.length - shown.length
+    const cap = extra > 0 ? ` (showing first ${MAX_FAILURES_LISTED})` : ""
+    parts.push("", `**${failures.length} task(s) failed${cap}:**`, "")
+    for (const f of shown) {
       parts.push(`- \`${f.file}\` (${f.locale}): ${f.message}`)
     }
+    if (extra > 0) parts.push(`- ...and ${extra} more (see workflow log)`)
     parts.push("", "Rerun the failed combinations:", "", "```")
-    for (const f of failures) {
+    for (const f of shown) {
       parts.push(
         `gh workflow run "Intl Pipeline" -f target_path="${f.file}" -f target_languages="${f.locale}"`
       )
     }
+    if (extra > 0) parts.push(`# ...and ${extra} more (see workflow log)`)
     parts.push("```")
   }
 
@@ -139,8 +164,9 @@ export async function createOrUpdateTranslationPR(
   const existingPR = await findOpenPR(branch, config.baseBranch)
 
   if (existingPR) {
-    // Append run summary to existing PR body
-    const updatedBody = (existingPR.body || "") + "\n" + runSummary
+    // Append run summary to existing PR body (clamped so accumulated history
+    // can never exceed GitHub's limit).
+    const updatedBody = clampBody((existingPR.body || "") + "\n" + runSummary)
     await updatePRBody(existingPR.number, updatedBody)
     console.log(
       `[pr] Updated existing PR #${existingPR.number}: ${existingPR.html_url}`
@@ -150,7 +176,7 @@ export async function createOrUpdateTranslationPR(
 
   // Create new PR
   const prTitle = generatePRTitle(langCodes, config.allInternalCodes)
-  const prBody = generateInitialPRBody() + "\n" + runSummary
+  const prBody = clampBody(generateInitialPRBody() + "\n" + runSummary)
 
   const pr = await postPullRequest(branch, config.baseBranch, prTitle, prBody)
   console.log(`[pr] Created PR #${pr.number}: ${pr.html_url}`)

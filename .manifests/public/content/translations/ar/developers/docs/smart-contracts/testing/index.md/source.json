@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/smart-contracts/testing/index.md",
-  "generatedAt": "2026-06-17T23:00:48.465Z",
-  "rootHash": "fb49a3c756a2",
+  "generatedAt": "2026-06-30T00:01:58.351Z",
+  "rootHash": "f0da0b1f4fa2",
   "tree": {
     "contentHash": "e742a76dd6f0",
-    "anchorHash": "402aef2431b9",
+    "anchorHash": "f9834754e763",
     "children": {
       "frontmatter:title": {
         "contentHash": "9163aeb9f46f",
@@ -226,7 +226,7 @@
       },
       "automated-testing-for-smart-contracts": {
         "contentHash": "e75aabf3c549",
-        "anchorHash": "81e6bd167ce8",
+        "anchorHash": "7f45d9201ac2",
         "labelHash": "220bf4eb197d",
         "children": {
           "_label": {
@@ -767,7 +767,7 @@
           },
           "running-property-based-tests": {
             "contentHash": "f3c6f72d4ea4",
-            "anchorHash": "316bdf3b7f91",
+            "anchorHash": "16422886a7da",
             "labelHash": "b3a4466629b2",
             "children": {
               "_label": {
@@ -780,7 +780,7 @@
               },
               "link:0": {
                 "contentHash": "0fde3637ade7",
-                "anchorHash": "ab3501bf9098"
+                "anchorHash": "4c7f099b767e"
               },
               "prose:10": {
                 "contentHash": "1fa1966eb941",
@@ -844,7 +844,7 @@
               },
               "link:8": {
                 "contentHash": "a27d9f6ffb83",
-                "anchorHash": "2a42559baa8d"
+                "anchorHash": "f33efd040845"
               },
               "prose:18": {
                 "contentHash": "983987033f0e",
@@ -1057,7 +1057,7 @@
       },
       "testing-tools-and-libraries": {
         "contentHash": "fb3f3a55c521",
-        "anchorHash": "7d6e49577686",
+        "anchorHash": "e26772dc5e4b",
         "labelHash": "4b070843b4de",
         "children": {
           "_label": {
@@ -1175,7 +1175,7 @@
           },
           "property-based-testing-tools": {
             "contentHash": "984b601ff2c2",
-            "anchorHash": "94f50b292db2",
+            "anchorHash": "d210ca95b8e1",
             "labelHash": "487cf6c51a04",
             "children": {
               "_label": {
@@ -1253,7 +1253,7 @@
               },
               "dynamic-analysis-tools": {
                 "contentHash": "1ca83c7b76a9",
-                "anchorHash": "9ef895929a3c",
+                "anchorHash": "953d1a0dcfb9",
                 "labelHash": "1e0f4fd835d4",
                 "children": {
                   "_label": {
@@ -1290,7 +1290,7 @@
                   },
                   "link:3": {
                     "contentHash": "e7e8b4ce20ce",
-                    "anchorHash": "0a76e26c220f"
+                    "anchorHash": "e0860b867896"
                   },
                   "prose:9": {
                     "contentHash": "dfd481621c2e",
@@ -1536,5 +1536,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

@@ -1,7 +1,7 @@
 ---
-title: Web3 소개
-metaTitle: Web3란 무엇이며 왜 중요한가요?
-description: 월드 와이드 웹의 다음 진화 단계인 Web3에 대한 소개와 그 중요성에 대해 알아봅니다.
+title: "Web3 소개"
+metaTitle: "Web3란 무엇이며 왜 중요한가요?"
+description: "월드 와이드 웹의 다음 진화 단계인 Web3에 대한 소개와 그 중요성에 대해 알아봅니다."
 lang: ko
 ---
 

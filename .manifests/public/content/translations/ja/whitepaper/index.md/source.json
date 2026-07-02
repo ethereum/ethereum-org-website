@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/whitepaper/index.md",
-  "generatedAt": "2026-06-08T11:21:11.588Z",
-  "rootHash": "87dd1094d17b",
+  "generatedAt": "2026-06-30T01:02:17.950Z",
+  "rootHash": "376cfa692380",
   "tree": {
-    "contentHash": "15612419865c",
-    "anchorHash": "23d607cbf0b9",
+    "contentHash": "d3c7bc94395a",
+    "anchorHash": "b429ecf90ed3",
     "children": {
       "frontmatter:title": {
         "contentHash": "9c16c962b9f8",
@@ -49,7 +49,7 @@
       },
       "a-next-generation-smart-contract-and-decentralized-application-platform": {
         "contentHash": "ea1d8d62df84",
-        "anchorHash": "82800a725210",
+        "anchorHash": "48f2c369c70a",
         "labelHash": "a83ba3f57f8a",
         "children": {
           "_label": {
@@ -94,7 +94,7 @@
           },
           "link:4": {
             "contentHash": "81fbd2f198c9",
-            "anchorHash": "9f27e962d0e8"
+            "anchorHash": "51f9d98e3795"
           },
           "prose:11": {
             "contentHash": "5f056359182d",
@@ -127,8 +127,8 @@
         ]
       },
       "introduction-to-bitcoin-and-existing-concepts": {
-        "contentHash": "0b0592deb7a5",
-        "anchorHash": "0a68b44e3b6e",
+        "contentHash": "24f90e531b6c",
+        "anchorHash": "faca6e6b11f0",
         "labelHash": "5d881e5506a3",
         "children": {
           "_label": {
@@ -137,7 +137,7 @@
           },
           "history": {
             "contentHash": "1f44ca90f20d",
-            "anchorHash": "5108b25637e6",
+            "anchorHash": "85d0ad0bb1e7",
             "labelHash": "0e7696009337",
             "children": {
               "_label": {
@@ -150,7 +150,7 @@
               },
               "link:0": {
                 "contentHash": "cc99b23eb56b",
-                "anchorHash": "995f0d3d97a0"
+                "anchorHash": "bafe845d23bb"
               },
               "prose:3": {
                 "contentHash": "80e81a544c9e",
@@ -175,8 +175,8 @@
             ]
           },
           "bitcoin-as-a-state-transition-system": {
-            "contentHash": "1eaa78807a5f",
-            "anchorHash": "98327ad777a0",
+            "contentHash": "59597bd5f679",
+            "anchorHash": "ba82f0514b9c",
             "labelHash": "ede8b76d68ff",
             "children": {
               "_label": {
@@ -228,14 +228,79 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "component:13": {
-                "contentHash": "2221ccb36a19",
-                "anchorHash": "4b9f7d802648",
+                "contentHash": "eb390473d479",
+                "anchorHash": "a3dcb97d7f24",
                 "children": {
-                  "prose:0": {
-                    "contentHash": "faa364636d97",
-                    "anchorHash": "e3b0c44298fc"
+                  "component:0": {
+                    "contentHash": "1575e15cf42b",
+                    "anchorHash": "c9bbbcf66821",
+                    "children": {
+                      "prose:0": {
+                        "contentHash": "23245c13bee3",
+                        "anchorHash": "e3b0c44298fc"
+                      },
+                      "component:1": {
+                        "contentHash": "fe4561637728",
+                        "anchorHash": "e2c84f5cb440",
+                        "children": {
+                          "component:0": {
+                            "contentHash": "79a435f47d16",
+                            "anchorHash": "4b9f7d802648",
+                            "children": {
+                              "prose:0": {
+                                "contentHash": "4845573a5b37",
+                                "anchorHash": "e3b0c44298fc"
+                              }
+                            }
+                          },
+                          "component:1": {
+                            "contentHash": "368cb77122e1",
+                            "anchorHash": "4b9f7d802648",
+                            "children": {
+                              "prose:0": {
+                                "contentHash": "8ba8b4f1febc",
+                                "anchorHash": "e3b0c44298fc"
+                              }
+                            }
+                          }
+                        },
+                        "childrenOrder": [
+                          "component:0",
+                          "component:1"
+                        ]
+                      }
+                    },
+                    "childrenOrder": [
+                      "prose:0",
+                      "component:1"
+                    ]
+                  },
+                  "component:1": {
+                    "contentHash": "56320ad08029",
+                    "anchorHash": "4b9f7d802648",
+                    "children": {
+                      "prose:0": {
+                        "contentHash": "87e9ae08d2b6",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    }
+                  },
+                  "component:2": {
+                    "contentHash": "a1f61c4a6b48",
+                    "anchorHash": "4b9f7d802648",
+                    "children": {
+                      "prose:0": {
+                        "contentHash": "ef72743d9726",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    }
                   }
-                }
+                },
+                "childrenOrder": [
+                  "component:0",
+                  "component:1",
+                  "component:2"
+                ]
               }
             },
             "childrenOrder": [
@@ -1966,7 +2031,7 @@
       },
       "notes-and-further-reading": {
         "contentHash": "b946c1d0485b",
-        "anchorHash": "3f64234894b6",
+        "anchorHash": "645272165f41",
         "labelHash": "99deef598e78",
         "children": {
           "_label": {
@@ -1994,7 +2059,7 @@
           },
           "further-reading": {
             "contentHash": "ca446d282185",
-            "anchorHash": "ec2d2058c777",
+            "anchorHash": "0c7c6901b618",
             "labelHash": "bd2e42f237b3",
             "children": {
               "_label": {
@@ -2031,7 +2096,7 @@
               },
               "link:3": {
                 "contentHash": "e40838d58a99",
-                "anchorHash": "995f0d3d97a0"
+                "anchorHash": "bafe845d23bb"
               },
               "prose:27": {
                 "contentHash": "540dd397b2d3",
@@ -2135,7 +2200,7 @@
               },
               "link:16": {
                 "contentHash": "e304cd5eafc9",
-                "anchorHash": "a63464493ed1"
+                "anchorHash": "8683bc556a30"
               },
               "prose:40": {
                 "contentHash": "7b2d3fe05317",
@@ -2269,5 +2334,5 @@
       "notes-and-further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

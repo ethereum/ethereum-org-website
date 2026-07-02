@@ -82,12 +82,7 @@ Jadi, nilai aktual untuk tipe dengan panjang variabel disimpan dalam heap di akh
 
 Ada juga beberapa kasus khusus yang memerlukan perlakuan spesifik, seperti tipe `BitList` yang mewajibkan penambahan batas panjang selama serialisasi dan dihapus selama deserialisasi. Detail lengkap tersedia di [spesifikasi SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
-### Deserialisasi {#deserialization}
-
-Untuk mendeserialisasi objek ini mewajibkan <b>skema</b>. Skema mendefinisikan tata letak yang tepat dari data yang diserialisasi sehingga setiap elemen spesifik dapat dideserialisasi dari blob byte menjadi objek yang bermakna dengan elemen yang memiliki tipe, nilai, ukuran, dan posisi yang tepat. Skemalah yang memberi tahu pendeserialisasi nilai mana yang merupakan nilai aktual dan mana yang merupakan offset. Semua nama bidang menghilang saat objek diserialisasi, tetapi diinstansiasi ulang pada saat deserialisasi sesuai dengan skema.
-
-Lihat [ssz.dev](https://www.ssz.dev/overview) untuk penjelasan interaktif tentang hal ini.
-
+Untuk mendeserialisasi objek ini memerlukan <b>skema</b>. Skema mendefinisikan tata letak yang tepat dari data yang diserialisasi sehingga setiap elemen spesifik dapat dideserialisasi dari blob byte menjadi suatu objek yang bermakna dengan elemen-elemen yang memiliki tipe, nilai, ukuran, dan posisi yang tepat. Skemalah yang memberi tahu pendeserialisasi nilai mana yang merupakan nilai aktual dan mana yang merupakan offset. Semua nama bidang akan menghilang saat sebuah objek diserialisasi, tetapi akan diinstansiasi ulang saat deserialisasi sesuai dengan skema.
 ## Merkleisasi {#merkleization}
 
 Objek yang diserialisasi SSZ ini kemudian dapat di-merkleize - yaitu diubah menjadi representasi pohon Merkle dari data yang sama. Pertama, jumlah potongan 32-byte dalam objek yang diserialisasi ditentukan. Ini adalah "daun" dari pohon tersebut. Jumlah total daun harus merupakan pangkat 2 sehingga proses hash daun-daun tersebut secara bersamaan pada akhirnya menghasilkan satu akar pohon hash (hash-tree-root). Jika secara alami tidak demikian, daun tambahan yang berisi 32 byte nol akan ditambahkan. Secara diagram:
@@ -138,10 +133,9 @@ Hash dari (8,9) harus sama dengan hash (4), yang di-hash dengan 5 untuk menghasi
 8*     9*   10    11   12    13    14    15
 ```
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut
 
-- [Memperbarui Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
-- [Memperbarui Ethereum: Merkleisasi](https://eth2book.info/altair/part2/building_blocks/merkleization)
+- [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
+- [Upgrading Ethereum: Merkleisasi](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [Implementasi SSZ](https://github.com/ethereum/consensus-specs/issues/2138)
 - [Kalkulator SSZ](https://simpleserialize.com/)
-- [SSZ.dev](https://www.ssz.dev/)
