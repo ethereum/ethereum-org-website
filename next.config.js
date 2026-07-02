@@ -263,9 +263,12 @@ module.exports = (phase) => {
           "public/images",
           "public/content",
           // Dev-only files that get traced from the package root but are never
-          // read by the SSR handler at runtime.
-          "tests",
-          "docs",
+          // read by the SSR handler at runtime. Keep dir excludes anchored with
+          // "/**" -- Turbopack matches these globs as substrings during trace
+          // pruning, so a bare "docs" also matches the "@docsearch" SSR chunk
+          // and drops it, 502ing ISR pages that use search.
+          "tests/**",
+          "docs/**",
           "README.md",
           ".all-contributorsrc",
           "tsconfig.tsbuildinfo",
