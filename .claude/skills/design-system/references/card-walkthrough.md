@@ -75,17 +75,18 @@ When you pass `href`, `Card` automatically wraps in `BaseLink` and adds a `group
 | `sm` | 10px | 10px | Compact list cards |
 | `xs` | 0 | 4px | No padding; use when the banner image needs to extend to all edges of the Card |
 
-### Interaction props: `border`, `hoverOutline`, `hoverLift`
+### Interaction props: `border`, `hoverLift` (and the automatic `href` hover ring)
 
-Three independent booleans layer edge/interaction treatment on top of `variant`/`size` -- they're additive, so combine freely:
+Two independent booleans layer edge/interaction treatment on top of `variant`/`size` -- they're additive, so combine freely:
 
 | Prop | Effect | When |
 |---|---|---|
 | `border` | Static hairline edge (`ring ring-border`). It's a `ring`, so it never shifts layout. | A resting outline on `nested`/`ghost` cards that need definition against their background. |
-| `hoverOutline` | Ring that's transparent at rest and turns `ring-primary-hover` on hover. **Auto-enabled whenever the Card has an `href`**, so clickable cards always get the affordance. | Interactive cards. Rarely set by hand -- passing `href` already turns it on. |
-| `hoverLift` | `hover:shadow-md` plus a subtle `hover:scale`. | Clickable cards that should physically lift on hover. |
+| `hoverLift` | `hover:shadow-md` plus a subtle `hover:scale`. | Cards that hold their own actions instead of being a link themselves: multiple action buttons, or text-link actions in the body/footer. The lift signals "interactive content here" without implying the whole card is clickable. |
 
-`border` and `hoverOutline` are both a `ring`, so used together they read as a resting border that brightens to primary on hover (the `ring-border` shows at rest, the `hover:ring-primary-hover` takes over on hover). These three replaced the old `hoverEffect="lift"` prop.
+**There is no `hoverOutline` prop anymore.** Every Card with an `href` gets the hover ring automatically (transparent at rest, `ring-primary-hover` on hover) -- it's baked into the link render path, not a variant you set. It also can't be applied to non-link cards by hand; if a card isn't a link, use `hoverLift` (or nothing).
+
+`border` composes with the automatic ring: on an `href` Card, the `ring-border` shows at rest and `hover:ring-primary-hover` takes over on hover, reading as a resting border that brightens to primary. These props replaced the old `hoverEffect="lift"` prop.
 
 ## Step 4: Border Radius "Just Works"
 
