@@ -110,7 +110,6 @@ export const Success: Story = {
     await waitFor(
       async () => {
         const successIcon = canvas.getByTestId("success-icon")
-        console.log("🚀 ~ successIcon:", successIcon)
         await expect(successIcon).toBeInTheDocument()
         await expect(successIcon).toHaveStyle({
           transform: "none",
