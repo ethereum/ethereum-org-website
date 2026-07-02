@@ -4,7 +4,7 @@ import a16zCover from "@/public/images/reports/a16z-state-of-crypto-2025.webp"
 import bisCover from "@/public/images/reports/bis-papers-156.webp"
 import quantumCover from "@/public/images/reports/coinbase-quantum-blockchain.webp"
 import consensysCover from "@/public/images/reports/consensys-trustware.webp"
-// import ethereumBasicsCover from "@/public/images/reports/ethereum-basics-governments-institutions.webp"
+import ethereumBasicsCover from "@/public/images/reports/ethereum-basics-governments-institutions.webp"
 import fidelityCoinCover from "@/public/images/reports/fidelity-coin-report-ethereum.webp"
 import l2LandscapeCover from "@/public/images/reports/l2-landscape.webp"
 import mckinseyCover from "@/public/images/reports/mckinsey-ripples-to-waves.webp"
@@ -60,16 +60,16 @@ export type Report = {
  * confirmed substantive. See PR description for the full audit.
  */
 export const reports: Report[] = [
-  // TODO: PDF to be uploaded to /public/reports/ — confirm filename + add fileSizeBytes.
-  // {
-  //   slug: "ethereum-basics-governments-institutions",
-  //   title: "Ethereum Basics for Governments and Institutions",
-  //   publisher: "Ethereum Foundation",
-  //   dateIso: "2026",
-  //   category: "ef-original",
-  //   href: "/reports/ethereum-basics-for-governments-and-institutions.pdf",
-  //   imgSrc: ethereumBasicsCover,
-  // },
+  {
+    slug: "ethereum-basics-governments-institutions",
+    title: "Ethereum Basics for Governments and Institutions",
+    publisher: "Ethereum Foundation",
+    dateIso: "2026-06-30",
+    category: "ef-original",
+    href: "/reports/basics-for-governments-institutions.pdf",
+    imgSrc: ethereumBasicsCover,
+    fileSizeBytes: 2152671,
+  },
   {
     slug: "trillion-dollar-security",
     title: "Trillion Dollar Security",
