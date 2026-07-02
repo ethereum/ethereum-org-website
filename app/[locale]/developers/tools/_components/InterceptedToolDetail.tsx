@@ -7,6 +7,7 @@ import { Tag, TagsInlineText } from "@/components/ui/tag"
 import {
   buildToolLabels,
   findToolBySlug,
+  localizeToolDescriptions,
   normalizeDeveloperToolsData,
   withCategories,
 } from "@/lib/utils/developerToolsData"
@@ -29,15 +30,19 @@ const InterceptedToolDetail = async ({
   locale: string
   toolKey: string
 }) => {
-  const [data, t] = await Promise.all([
+  const [data, t, toolDescriptions] = await Promise.all([
     getDeveloperToolsData(),
     getTranslations({ locale, namespace: "page-developers-tools" }),
+    getTranslations({ locale, namespace: "page-developers-tools-descriptions" }),
   ])
 
   const normalized = normalizeDeveloperToolsData(data)
   if (!normalized) notFound()
 
-  const tool = findToolBySlug(withCategories(normalized), toolKey)
+  const tool = findToolBySlug(
+    localizeToolDescriptions(withCategories(normalized), toolDescriptions),
+    toolKey
+  )
   if (!tool) notFound()
 
   const { categoryLabels, subcategoryLabels, tagLabels } = buildToolLabels(

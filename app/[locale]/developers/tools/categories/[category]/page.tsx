@@ -17,6 +17,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import {
   buildToolLabels,
   countToolsByCategory,
+  localizeToolDescriptions,
   normalizeDeveloperToolsData,
   withCategories,
 } from "@/lib/utils/developerToolsData"
@@ -42,18 +43,26 @@ const Page = async (props: {
 
   setRequestLocale(locale)
 
-  const [data, { contributors }, t, tCommon] = await Promise.all([
-    getDeveloperToolsData(),
-    getAppPageContributorInfo("developers/tools", locale as Lang),
-    getTranslations({ locale, namespace: "page-developers-tools" }),
-    getTranslations({ locale, namespace: "common" }),
-  ])
+  const [data, { contributors }, t, tCommon, toolDescriptions] =
+    await Promise.all([
+      getDeveloperToolsData(),
+      getAppPageContributorInfo("developers/tools", locale as Lang),
+      getTranslations({ locale, namespace: "page-developers-tools" }),
+      getTranslations({ locale, namespace: "common" }),
+      getTranslations({
+        locale,
+        namespace: "page-developers-tools-descriptions",
+      }),
+    ])
 
   const normalized = normalizeDeveloperToolsData(data)
   if (!normalized) throw Error("No developer tools data available")
 
   const categories = normalized.taxonomy.categories.definitions
-  const allTools = withCategories(normalized)
+  const allTools = localizeToolDescriptions(
+    withCategories(normalized),
+    toolDescriptions
+  )
   const countByCategory = countToolsByCategory(allTools)
   const { categoryLabels, subcategoryLabels } = buildToolLabels(
     t,

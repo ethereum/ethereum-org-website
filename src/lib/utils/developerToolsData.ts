@@ -5,6 +5,7 @@ import type {
   BuilderResourcesTaxonomy,
 } from "@/lib/types"
 
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { slugify } from "@/lib/utils/url"
 
 export type DeveloperTool = BuilderResourcesCatalogResource
@@ -152,6 +153,27 @@ export function getRelatedTools(
 }
 
 type Translator = Awaited<ReturnType<typeof getTranslations>>
+
+/**
+ * Swap each tool's English description for its localized one from the
+ * `page-developers-tools-descriptions` namespace (falls back to English when a
+ * translation is missing). Keeps rendered content in sync with the hreflang
+ * alternates the tool routes already advertise.
+ */
+export function localizeToolDescriptions<T extends DeveloperTool>(
+  tools: T[],
+  toolDescriptions: Translator
+): T[] {
+  return tools.map((tool) => ({
+    ...tool,
+    description: getLocalizedDescription(
+      toolDescriptions,
+      "tool",
+      tool.name,
+      tool.description
+    ),
+  }))
+}
 
 /**
  * Build the i18n label dictionaries (category / subcategory / tag) keyed by id,

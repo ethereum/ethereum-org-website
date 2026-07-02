@@ -23,6 +23,7 @@ import {
   findToolBySlug,
   getRelatedTools,
   getToolKey,
+  localizeToolDescriptions,
   normalizeDeveloperToolsData,
   withCategories,
 } from "@/lib/utils/developerToolsData"
@@ -45,17 +46,25 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const { locale, tool: toolKey } = await props.params
   setRequestLocale(locale)
 
-  const [data, { contributors }, t, tCommon] = await Promise.all([
-    getDeveloperToolsData(),
-    getAppPageContributorInfo("developers/tools", locale as Lang),
-    getTranslations({ locale, namespace: "page-developers-tools" }),
-    getTranslations({ locale, namespace: "common" }),
-  ])
+  const [data, { contributors }, t, tCommon, toolDescriptions] =
+    await Promise.all([
+      getDeveloperToolsData(),
+      getAppPageContributorInfo("developers/tools", locale as Lang),
+      getTranslations({ locale, namespace: "page-developers-tools" }),
+      getTranslations({ locale, namespace: "common" }),
+      getTranslations({
+        locale,
+        namespace: "page-developers-tools-descriptions",
+      }),
+    ])
 
   const normalized = normalizeDeveloperToolsData(data)
   if (!normalized) notFound()
 
-  const allTools = withCategories(normalized)
+  const allTools = localizeToolDescriptions(
+    withCategories(normalized),
+    toolDescriptions
+  )
   const tool = findToolBySlug(allTools, toolKey)
   if (!tool) notFound()
 
@@ -199,8 +208,16 @@ export async function generateMetadata(props: {
 }) {
   const { locale, tool: toolKey } = await props.params
 
-  const normalized = normalizeDeveloperToolsData(await getDeveloperToolsData())
-  const tool = normalized && findToolBySlug(withCategories(normalized), toolKey)
+  const [normalized, toolDescriptions] = await Promise.all([
+    normalizeDeveloperToolsData(await getDeveloperToolsData()),
+    getTranslations({ locale, namespace: "page-developers-tools-descriptions" }),
+  ])
+  const tool =
+    normalized &&
+    findToolBySlug(
+      localizeToolDescriptions(withCategories(normalized), toolDescriptions),
+      toolKey
+    )
   if (!tool) return {}
 
   return await getMetadata({
