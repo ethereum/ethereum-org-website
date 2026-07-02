@@ -3,7 +3,6 @@ import { getTranslations } from "next-intl/server"
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TopicFrontmatter } from "@/lib/interfaces"
 
-import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
 import PageHero from "@/components/Hero/PageHero"
 import PageActions from "@/components/PageActions"
@@ -12,6 +11,7 @@ import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
 
 import { getEditPath } from "@/lib/utils/editPath"
+import { buildTopicDropdown } from "@/lib/utils/topicDropdown"
 
 import type { TopicConfig } from "@/data/topics"
 
@@ -56,19 +56,7 @@ export const TopicLayout = async ({
     ? await getTranslations("common")
     : null
 
-  const dropdownLinks: ButtonDropdownList = {
-    text: t(config.dropdown.textKey),
-    ariaLabel: t(config.dropdown.ariaLabelKey),
-    items: config.dropdown.items.map((item) => ({
-      text: t(item.textKey),
-      href: item.href,
-      matomo: {
-        eventCategory: config.dropdown.matomoCategory,
-        eventAction: "click",
-        eventName: item.matomoEvent,
-      },
-    })),
-  }
+  const dropdownLinks = buildTopicDropdown(config.dropdown, t)
 
   const baseDescription = frontmatter.summary ? (
     <p className="text-lg">{frontmatter.summary}</p>
