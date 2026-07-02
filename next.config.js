@@ -238,6 +238,13 @@ module.exports = (phase) => {
           "node_modules/@sentry/cli/**/*",
           "node_modules/canvas/**/*",
           "node_modules/@playwright/**/*",
+          // sharp's musl native binaries never load on Netlify's glibc Lambda.
+          // The Netlify plugin already strips them in CI (but not in local
+          // `netlify build`), so excluding here mainly keeps local bundle
+          // measurements representative of production; harmless in CI. sharp
+          // keeps its glibc binary for build-time plaiceholder use.
+          "**/@img+sharp-libvips-linuxmusl-x64@*/**",
+          "**/@img+sharp-linuxmusl-x64@*/**",
           "src/data",
           "public/**/*.jpg",
           "public/**/*.png",
