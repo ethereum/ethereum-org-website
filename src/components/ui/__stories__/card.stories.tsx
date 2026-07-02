@@ -357,14 +357,7 @@ export const BannerPlacement: Story = {
 
 // ---------- Banner Variants (background + size) ----------
 
-const BANNER_BACKGROUNDS = [
-  "accent-a",
-  "accent-b",
-  "accent-c",
-  "primary",
-  "body",
-  "none",
-] as const
+const BANNER_BACKGROUNDS = ["accent-a", "primary", "body", "none"] as const
 
 const BANNER_SIZES = [
   "full",
