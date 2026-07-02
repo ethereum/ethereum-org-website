@@ -59,6 +59,6 @@ lang: ar
 
 ## قراءة إضافية {#further-reading}
 
-- [بيئات التطوير المتكاملة لإيثيريوم](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- قائمة Alchemy لبيئات التطوير المتكاملة لإيثيريوم_
+- [بيئات التطوير المتكاملة لإيثيريوم](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- قائمة Alchemy لبيئات التطوير المتكاملة لإيثيريوم_
 
 _هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذه الصفحة وأضفه!_

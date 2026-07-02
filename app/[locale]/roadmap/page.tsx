@@ -283,7 +283,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   key={item.title}
                   href={item.href}
                   hoverEffect="lift"
-                  className="bg-card-gradient-secondary"
+                  className="bg-linear-primary"
                 >
                   <CardContent>
                     <div className="flex items-center gap-4">

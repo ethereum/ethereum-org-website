@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/real-world-assets/index.md",
-  "generatedAt": "2026-06-17T01:10:11.160Z",
-  "rootHash": "85d63b08d30e",
+  "generatedAt": "2026-06-30T00:51:27.134Z",
+  "rootHash": "83ea52032427",
   "tree": {
-    "contentHash": "82d90416ee99",
-    "anchorHash": "b171db1d6eba",
+    "contentHash": "96d9ff7995d9",
+    "anchorHash": "9e680d6eb0d2",
     "children": {
       "frontmatter:title": {
         "contentHash": "5951c737e488",
@@ -87,8 +87,8 @@
         ]
       },
       "rwas-benefits": {
-        "contentHash": "cce57ed127df",
-        "anchorHash": "cce57ed127df",
+        "contentHash": "f91d8f3cae7e",
+        "anchorHash": "e5d3da6ff29c",
         "labelHash": "cd6af8ee6c9c",
         "children": {
           "_label": {
@@ -96,41 +96,155 @@
             "anchorHash": "e3b0c44298fc"
           },
           "component:1": {
-            "contentHash": "fadbe909da84",
-            "anchorHash": "fadbe909da84",
+            "contentHash": "ebc60eab536d",
+            "anchorHash": "89d36134fcdc",
             "children": {
-              "html-tag:0": {
-                "contentHash": "e3b0c44298fc",
-                "anchorHash": "e3b0c44298fc"
+              "component:0": {
+                "contentHash": "b9374127bd7c",
+                "anchorHash": "9714684c6f25",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "3cc50fd51b68",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "534c8d873647",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "979c6d300195"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
               },
-              "html-tag:1": {
-                "contentHash": "e3b0c44298fc",
-                "anchorHash": "e3b0c44298fc"
+              "component:1": {
+                "contentHash": "c71f723758f1",
+                "anchorHash": "67fa8d5234d1",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "43b5d47dc280",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "80bf8826d888",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "009222903f3b"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
               },
-              "html-tag:2": {
-                "contentHash": "e3b0c44298fc",
-                "anchorHash": "e3b0c44298fc"
+              "component:2": {
+                "contentHash": "6929a20f7a04",
+                "anchorHash": "be7083cbc08e",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "5098c8901f24",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "d49ec5630d35",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "361ac714d28d"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
               },
-              "html-tag:3": {
-                "contentHash": "e3b0c44298fc",
-                "anchorHash": "e3b0c44298fc"
+              "component:3": {
+                "contentHash": "6900fe3e19a1",
+                "anchorHash": "8440122d6444",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "49ffa4bde72b",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "8a4408b6353f",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "3a0ada15656a"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
               },
-              "html-tag:4": {
-                "contentHash": "e3b0c44298fc",
-                "anchorHash": "e3b0c44298fc"
+              "component:4": {
+                "contentHash": "2ad83ea40d79",
+                "anchorHash": "b1437bc11a6a",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "ab980451f98b",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "fa88a025c160",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "d50cec9dd11c"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
               },
-              "html-tag:5": {
-                "contentHash": "e3b0c44298fc",
-                "anchorHash": "e3b0c44298fc"
+              "component:5": {
+                "contentHash": "5b8823acb65c",
+                "anchorHash": "a5ed58e573e6",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "be5dc33527cb",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "034e90db7b5d",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "427274538f1f"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
               }
             },
             "childrenOrder": [
-              "html-tag:0",
-              "html-tag:1",
-              "html-tag:2",
-              "html-tag:3",
-              "html-tag:4",
-              "html-tag:5"
+              "component:0",
+              "component:1",
+              "component:2",
+              "component:3",
+              "component:4",
+              "component:5"
             ]
           }
         },
@@ -465,5 +579,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

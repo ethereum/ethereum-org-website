@@ -1,6 +1,6 @@
 ---
-title: Nasıl dahil olabilirim?
-description: Ethereum topluluğuna nasıl dahil olabilirsiniz.
+title: "Nasıl dahil olabilirim?"
+description: "Ethereum topluluğuna nasıl dahil olabilirsiniz."
 lang: tr
 ---
 
@@ -11,7 +11,7 @@ Ethereum topluluğu, birçok farklı geçmişe ve beceri setine sahip insanları
 ## Geliştiriciler <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) adresinde Ethereum hakkında bilgi edinin ve onu deneyin
-- Yakınınızdaki bir [ETHGlobal](https://ethglobal.co/) hackathon'una katılın!
+- Yakınınızdaki bir [ETHGlobal](https://ethglobal.com/) hackathon'una katılın!
 - [Uzmanlık alanınızla veya tercih ettiğiniz programlama diliyle ilgili projelere](/developers/docs/programming-languages/) göz atın
 - [Mutabakat ve Yürütme Katmanı çağrılarını](https://www.youtube.com/@EthereumProtocol/streams) izleyin veya bunlara katılın
 - [Ekosistem Destek Programı'nın istek listesi](https://esp.ethereum.foundation/wishlist/) - Ethereum Ekosistem Destek Programı'nın aktif olarak hibe başvuruları aradığı araç, belgelendirme ve altyapı alanları
@@ -80,7 +80,7 @@ ETH'nizi stake ederek Ethereum ağının güvenliğini sağlamaya yardımcı olu
 
 Ethereum ekosistemi, kamusal malları ve etkili projeleri finanse etme misyonundadır. Çok küçük bağışlarla desteğinizi gösterebilir ve önemli çalışmaların gerçekleştirilmesine olanak tanıyabilirsiniz.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Finans profesyonelleri ve Muhasebeciler <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

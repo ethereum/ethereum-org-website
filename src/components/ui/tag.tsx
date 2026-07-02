@@ -5,7 +5,7 @@ import { Slot } from "@radix-ui/react-slot"
 import { cn } from "@/lib/utils/cn"
 
 const tagVariants = cva(
-  "inline-flex items-center rounded-full border text-xs uppercase transition-colors",
+  "inline-flex items-center rounded-full border text-xs uppercase transition-[color,box-shadow] duration-200",
   {
     variants: {
       status: {
@@ -153,7 +153,7 @@ const TagButton = forwardRef<HTMLButtonElement, TagButtonProps>(
       <Comp
         ref={ref}
         className={cn(
-          "hover:shadow-[2px_2px] focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-inherit",
+          "hover:shadow-[2px_2px] focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-inherit",
           tagVariants({ variant, status }),
           className
         )}

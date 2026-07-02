@@ -2507,10 +2507,10 @@ author: Ori Pomerantz
   test.describe("fixEscapedQuotesInJsxAttributes", () => {
     test("removes backslash-escaped quotes in JSX attributes", () => {
       const input =
-        '<ButtonLink variant=\\"outline-color\\" href=\\"/roadmap/danksharding/\\">Zaidi</ButtonLink>'
+        '<ButtonLink variant=\\"outline\\" href=\\"/roadmap/danksharding/\\">Zaidi</ButtonLink>'
       const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
       expect(content).toBe(
-        '<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Zaidi</ButtonLink>'
+        '<ButtonLink variant="outline" href="/roadmap/danksharding/">Zaidi</ButtonLink>'
       )
       expect(fixCount).toBeGreaterThan(0)
     })

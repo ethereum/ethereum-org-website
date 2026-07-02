@@ -11,7 +11,7 @@ published: 2021-03-31
 
 Pokud jste ve vývoji na blockchainu nováčkem a nevíte, kde začít, nebo pokud jen chcete pochopit, jak nasadit a interagovat s chytrými kontrakty, tento průvodce je pro vás. Projdeme si vytvoření a nasazení jednoduchého chytrého kontraktu v testovací síti Sepolia pomocí virtuální peněženky [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) a [Alchemy](https://www.alchemy.com/eth) (nebojte se, pokud zatím nerozumíte, co to všechno znamená, vysvětlíme si to).
 
-Ve [2. části](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) tohoto tutoriálu si projdeme, jak můžeme s naším chytrým kontraktem interagovat, jakmile je zde nasazen, a ve [3. části](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) se podíváme na to, jak jej publikovat na Etherscanu.
+Ve [2. části](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) tohoto tutoriálu si projdeme, jak můžeme s naším chytrým kontraktem interagovat, jakmile je zde nasazen, a ve [3. části](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) se podíváme na to, jak jej publikovat na Etherscanu.
 
 Pokud budete mít kdykoli nějaké dotazy, neváhejte se ozvat na [Discordu Alchemy](https://discord.gg/gWuC7zB)!
 
@@ -68,7 +68,7 @@ mkdir hello-world
 cd hello-world
 ```
 
-Nyní, když jsme ve složce našeho projektu, použijeme `npm init` k inicializaci projektu. Pokud ještě nemáte nainstalované npm, postupujte podle [těchto pokynů](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (budeme potřebovat také Node.js, takže si ho stáhněte také!).
+Nyní, když jsme ve složce našeho projektu, použijeme `npm init` k inicializaci projektu. Pokud ještě nemáte nainstalované npm, postupujte podle [pokynů k instalaci Node.js](https://nodejs.org/en/download/) (pro tento tutoriál budeme potřebovat Node.js a npm).
 
 ```
 npm init
@@ -94,7 +94,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
   "description": "hello world smart contract",
   "main": "index.js",
   "scripts": {
-     "test": "echo \\"Error: no test specified\\" && exit 1"
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
@@ -102,7 +102,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 Schvalte soubor package.json a můžeme začít!
-
 ## Krok 7: Stažení [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
 Hardhat je vývojové prostředí pro kompilaci, nasazení, testování a ladění vašeho softwaru pro Ethereum. Pomáhá vývojářům při lokálním vytváření chytrých kontraktů a decentralizovaných aplikací (dapp) před jejich nasazením do živého řetězce.
@@ -350,11 +349,11 @@ Adresa `From` by se měla shodovat s adresou vašeho účtu MetaMask a adresa To
 
 Gratulujeme! Právě jste nasadili chytrý kontrakt do řetězce Ethereum 🎉
 
-Abychom pochopili, co se děje pod pokličkou, přejděme na kartu Explorer (Průzkumník) na našem [panelu Alchemy](https://dashboard.alchemyapi.io/explorer). Pokud máte více aplikací Alchemy, nezapomeňte filtrovat podle aplikace a vybrat „Hello World“.
+Abychom pochopili, co se děje pod pokličkou, přejděme na kartu Explorer (Průzkumník) na našem [panelu Alchemy](https://dashboard.alchemy.com/explorer). Pokud máte více aplikací Alchemy, nezapomeňte filtrovat podle aplikace a vybrat „Hello World“.
 ![hello world explorer](./hello-world-explorer.png)
 
-Zde uvidíte hrstku volání JSON-RPC, která pro nás Hardhat/Ethers pod pokličkou provedly, když jsme zavolali funkci `.deploy()`. Dvě důležitá volání, která zde stojí za zmínku, jsou [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction), což je požadavek na skutečné zapsání našeho kontraktu do řetězce Sepolia, a [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash), což je požadavek na přečtení informací o naší transakci na základě hashe (typický vzor při transakcích). Chcete-li se dozvědět více o odesílání transakcí, podívejte se na tento tutoriál o [odesílání transakcí pomocí Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Zde uvidíte hrstku volání JSON-RPC, která pro nás Hardhat/Ethers pod pokličkou provedly, když jsme zavolali funkci `.deploy()`. Dvě důležitá volání, která zde stojí za zmínku, jsou [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), což je požadavek na skutečné zapsání našeho kontraktu do řetězce Sepolia, a [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), což je požadavek na přečtení informací o naší transakci na základě hashe (typický vzor při transakcích). Chcete-li se dozvědět více o odesílání transakcí, podívejte se na tento tutoriál o [odesílání transakcí pomocí Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
-To je pro 1. část tohoto tutoriálu vše, ve 2. části budeme s naším chytrým kontraktem skutečně [interagovat](https://www.alchemy.com/docs/interacting-with-a-smart-contract) tím, že aktualizujeme naši počáteční zprávu, a ve 3. části [publikujeme náš chytrý kontrakt na Etherscanu](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan), aby všichni věděli, jak s ním interagovat.
+To je pro 1. část tohoto tutoriálu vše, ve 2. části budeme s naším chytrým kontraktem skutečně [interagovat](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) tím, že aktualizujeme naši počáteční zprávu, a ve 3. části [publikujeme náš chytrý kontrakt na Etherscanu](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan), aby všichni věděli, jak s ním interagovat.
 
 **Chcete se o Alchemy dozvědět více? Podívejte se na náš [web](https://www.alchemy.com/eth). Nechcete zmeškat žádnou novinku? Přihlaste se k odběru našeho newsletteru [zde](https://www.alchemy.com/newsletter)! Nezapomeňte se také připojit k našemu [Discordu](https://discord.gg/u72VCg3).**.

@@ -1,6 +1,6 @@
 ---
-title: Wie man Token auf Layer 2 überbrückt
-description: Ein Leitfaden, der erklärt, wie man Token mithilfe einer Brücke von Ethereum auf Layer 2 überträgt.
+title: "Wie man Token auf Layer 2 überbrückt"
+description: "Ein Leitfaden, der erklärt, wie man Token mithilfe einer Brücke von Ethereum auf Layer 2 überträgt."
 lang: de
 ---
 

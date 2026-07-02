@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "ఎథీరియం - Ethereum.org నుండి పూర్తి గైడ్",
+  "page-index-meta-title": "ఎథీరియం - ethereum.org నుండి పూర్తి గైడ్",
   "page-index-meta-description": "ఎథీరియం అనేది డబ్బు మరియు కొత్త రకాల అప్లికేషన్‌ల కోసం ఒక గ్లోబల్, వికేంద్రీకృత ప్లాట్‌ఫారమ్. ఎథీరియంపై, మీ స్వంత డబ్బు, డేటా మరియు గుర్తింపును మీరే నియంత్రిస్తారు. ఏ బ్యాంకు, ఏ మధ్యవర్తి, ఏ అనుమతి అవసరం లేదు.",
   "page-index-description": "వినూత్న యాప్‌లు మరియు బ్లాక్‌చైన్ నెట్‌వర్క్‌ల కోసం ప్రముఖ ప్లాట్‌ఫారమ్",
   "page-index-title": "ఎథీరియంకు స్వాగతం",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "ప్రైవేట్ & అనుమతిగల నెట్‌వర్క్‌లు",
   "page-index-get-started-enterprise-bullet-3": "సంస్థాగత వనరులు",
   "page-index-get-started-enterprise-cta": "ఎంటర్‌ప్రైజ్‌ను అన్వేషించండి",
-  "page-index-simulator-cta": "మరిన్ని గైడ్‌లను ప్రయత్నించండి"
+  "page-index-simulator-cta": "మరిన్ని గైడ్‌లను ప్రయత్నించండి",
+  "page-index-latest-updates-title": "తాజా ఎథీరియం అప్‌డేట్‌లు",
+  "page-index-latest-updates-cta": "మరిన్ని చూడండి"
 }

@@ -210,10 +210,8 @@ Podcast: Cara menyelenggarakan dan mempromosikan peristiwa ETH dari A-Z:
 
 - [Studi kasus ETHWarsaw, oleh Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
-Twitter space:
+Twitter Space:
 
 - [AMA Komunitas ETH](https://x.com/NapulETH/status/1905732699094151623)
 
 Artikel:
-
-- [Membangun ETHKL, oleh Danny H.](https://sekto.tech/ethkl24)

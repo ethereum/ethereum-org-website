@@ -93,5 +93,5 @@ Beberapa proyek yang mengeksplorasi privasi untuk pembuktian termasuk [Client Si
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), laboratorium penelitian dan pengembangan Yayasan Ethereum yang berfokus pada privasi untuk ekosistem
 - [Web3PrivacyNow](https://web3privacy.info/), jaringan orang, proyek, dan organisasi selaras yang melindungi dan memajukan hak asasi manusia secara online
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), situs peringkat dompet Ethereum yang bertujuan untuk menyediakan daftar dompet yang komprehensif, fungsionalitasnya, praktiknya, dan dukungannya untuk standar tertentu.
-- [Zk-kit](https://zkkit.pse.dev/): Serangkaian pustaka (algoritma, fungsi utilitas, dan struktur data) yang dapat digunakan kembali dalam berbagai proyek dan protokol zero-knowledge.
+- [Zk-kit](https://zkkit.org/): Serangkaian pustaka (algoritma, fungsi utilitas, dan struktur data) yang dapat digunakan kembali dalam berbagai proyek dan protokol zero-knowledge.
 - [Aplikasi Privasi](/apps/categories/privacy/) - Temukan daftar aplikasi Privasi terkurasi yang berjalan di Ethereum.

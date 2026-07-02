@@ -9,38 +9,37 @@ lang: ar
 
 نحن مجتمع مرحب سيساعدك على النمو والتعلم في نظام [إيثيريوم](/) البيئي مع تقديم مساهمة هادفة واكتساب خبرة عملية ذات صلة!
 
-## طرق المساهمة {#ways-to-contribute}
-
 **الترجمات**
-- [الانضمام إلى برنامج الترجمة](/contributing/translation-program/) – ساعدنا في توفير <span dir="ltr">ethereum.org</span> بلغات جديدة
+- [انضم إلى برنامج الترجمة](/contributing/translation-program/) – ساعدنا في تقديم <span dir="ltr">ethereum.org</span> بلغات جديدة
 
 **التطوير**
-- [العمل على مشكلة مفتوحة](https://github.com/ethereum/ethereum-org-website/issues) – الأعمال التي حددناها وتحتاج إلى إنجاز
+- [العمل على مشكلة مفتوحة](https://github.com/ethereum/ethereum-org-website/issues) – الأعمال التي حددناها والتي تحتاج إلى إنجاز
 
 **التصميم**
 - [المساعدة في تصميم الموقع](/contributing/design/) – يمكن للمصممين من جميع المستويات المساهمة في تحسين الموقع
 
 **المحتوى**
-- [إنشاء/تعديل المحتوى](/contributing/#how-to-update-content) – اقتراح صفحات جديدة أو إجراء تعديلات على ما هو موجود بالفعل
-- [كتابة مقال باني](/contributing/adding-articles/) - المساهمة بمقال لقسم [الأحدث](/latest/)
-- [إضافة موارد المجتمع](/contributing/content-resources/) – إضافة مقال أو مورد مفيد إلى صفحة ذات صلة
-- [اقتراح تقرير](/contributing/adding-reports/) - اقتراح تقرير بحثي لصفحة [التقارير](/reports/)
-- [اقتراح مورد تصميم](/contributing/design/adding-design-resources/) – إضافة وتحديث وحذف موارد التصميم المفيدة
-- [الاختبارات](/contributing/quizzes/) – إضافة وتحديث وحذف بنوك أسئلة الاختبارات لصفحة ذات صلة
-- [اقتراح فيديو](/contributing/adding-videos/) – اقتراح فيديو تعليمي لمعرض مقاطع الفيديو
+- [إنشاء/تعديل المحتوى](/contributing/#how-to-update-content) – اقترح صفحات جديدة أو قم بإجراء تعديلات على ما هو موجود بالفعل
+- [كتابة مقال باني](/contributing/adding-articles/) - ساهم بمقال في قسم [الأحدث](/latest/)
+- [إضافة موارد المجتمع](/contributing/content-resources/) – أضف مقالاً أو مورداً مفيداً إلى صفحة ذات صلة
+- [اقتراح تقرير](/contributing/adding-reports/) - اقترح تقريراً بحثياً لصفحة [التقارير](/reports/)
+- [شارك قصتك](/contributing/adding-community-stories/) - أرسل قصة حول تجاربك الشخصية مع التقنيات مفتوحة المصدر وتقنيات الملاذ الآمن، وكيف أثر نظام إيثيريوم البيئي على حياتك، أو كيف تستخدم أنت ومجتمعك إيثيريوم
+- [الاختبارات](/contributing/quizzes/) – أضف، وحدث، واحذف بنوك أسئلة الاختبارات لصفحة ذات صلة
+- [اقتراح مورد تصميم](/contributing/design/adding-design-resources/) – أضف، وحدث، واحذف موارد التصميم المفيدة
+- [اقتراح فيديو](/contributing/adding-videos/) – اقترح فيديو تعليمياً لمعرض مقاطع الفيديو
 
 **أفكار الميزات**
 - [طلب ميزة](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – أخبرنا بأي أفكار لديك لميزة أو تصميم جديد
 
 **قوائم المنتجات**
-- [إضافة منصة تداول](/contributing/adding-exchanges/) – إضافة منصة تداول إلى [أداة البحث عن منصات التداول](/get-eth/#country-picker) الخاصة بنا
-- [إضافة منتج](/contributing/adding-products/) – إضافة تطبيق لامركزي (<span dir="ltr">dapp</span>) أو محفظة إلى صفحة ذات صلة
-- [إضافة أدوات المطورين](/contributing/adding-developer-tools/) – إضافة أداة مطور إلى صفحة ذات صلة
-- [إضافة طبقة 2 (<span dir="ltr">L2</span>)](/contributing/adding-layer-2s/) – إضافة طبقة 2 إلى صفحة ذات صلة
-- [إضافة منتج أو خدمة تخزين](/contributing/adding-staking-products/) – إضافة مشروع يساعد في تسهيل التخزين الفردي، أو التخزين المجمع، أو التحصيص كخدمة
-- [إضافة محفظة](/contributing/adding-wallets/) – إضافة محفظة لصفحة [البحث عن المحافظ](/wallets/find-wallet/)
-- [اقتراح مشروع لصفحة العلم اللامركزي (<span dir="ltr">DeSci</span>) الخاصة بنا](/contributing/adding-desci-projects/) – إضافة مشروع مبني على إيثيريوم يساهم في العلم اللامركزي
-- [إضافة مورد](/contributing/adding-resources/) – إضافة مورد مفيد إلى أي صفحة ذات صلة
+- [إضافة منصة تداول](/contributing/adding-exchanges/) – أضف منصة تداول إلى [أداة البحث عن منصات التداول](/get-eth/#country-picker) الخاصة بنا
+- [إضافة منتج](/contributing/adding-products/) – أضف تطبيقاً لامركزياً (<span dir="ltr">dapp</span>) أو محفظة إلى صفحة ذات صلة
+- [إضافة أدوات المطورين](/contributing/adding-developer-tools/) – أضف أداة مطور إلى صفحة ذات صلة
+- [إضافة طبقة 2](/contributing/adding-layer-2s/) – أضف طبقة 2 إلى صفحة ذات صلة
+- [إضافة منتج أو خدمة تخزين](/contributing/adding-staking-products/) – أضف مشروعاً يساعد في تسهيل التخزين الفردي، أو التخزين المجمع، أو التحصيص كخدمة
+- [إضافة محفظة](/contributing/adding-wallets/) – أضف محفظة لصفحة [البحث عن المحافظ](/wallets/find-wallet/)
+- [اقتراح مشروع لصفحة العلم اللامركزي (<span dir="ltr">DeSci</span>) الخاصة بنا](/contributing/adding-desci-projects/) – أضف مشروعاً مبنياً على إيثيريوم يساهم في العلم اللامركزي
+- [إضافة مورد](/contributing/adding-resources/) – أضف مورداً مفيداً إلى أي صفحة ذات صلة
 
 هل لديك أي أسئلة؟ 🤔 انضم إلى [خادم ديسكورد](https://discord.gg/ethereum-org) الخاص بنا
 ## مهام أولى جيدة لبدء المساهمة {#good-first-tasks-to-start-contributing}

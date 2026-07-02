@@ -172,7 +172,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         {/* Still need help? */}
         <Section
           id="still-need-help"
-          className="space-y-8 rounded-4xl border border-accent-a/20 bg-linear-to-b from-accent-a/5 to-accent-a/10 px-8 py-16 lg:px-16 dark:from-accent-a/10 dark:to-accent-a/20"
+          className="space-y-8 rounded-4xl border border-accent-a/20 bg-tint-accent-a px-8 py-16 lg:px-16"
         >
           <div className="flex flex-col items-center gap-6 text-center">
             <h2 className="text-3xl lg:text-4xl">

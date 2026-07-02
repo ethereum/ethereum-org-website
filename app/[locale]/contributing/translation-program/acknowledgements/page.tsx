@@ -132,7 +132,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             )}
           </p>
           <LinkBox className="my-8 flex flex-col shadow-lg hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-xl hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-xl focus:duration-100 md:flex-row">
-            <Flex className="flex h-65 flex-row items-end justify-center bg-linear-to-r from-accent-a/10 to-accent-c/10">
+            <Flex className="flex h-65 flex-row items-end justify-center bg-fade-accent-a">
               <Image
                 src={whatIsEthereumImg}
                 alt=""

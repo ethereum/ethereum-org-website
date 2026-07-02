@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "以太坊賞金計畫在決定獎勵時會考慮多個變數。資格、分數以及與獎勵相關的所有條款的決定，均由以太坊基金會漏洞賞金小組全權且最終決定。",
   "page-upgrades-bug-bounty-leaderboard": "查看完整排行榜",
   "page-upgrades-bug-bounty-leaderboard-list": "漏洞賞金排行榜",
+  "page-upgrades-bug-bounty-leaderboard-position": "第 {rank} 名，共 {score, plural, one {# 積分} other {# 積分}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(查看 GitHub 個人檔案)",
   "page-upgrades-bug-bounty-leaderboard-points": "積分",
   "page-upgrades-bug-bounty-ledger-desc": "以太坊規格詳細說明了執行層和共識層的設計理念。",
   "page-upgrades-bug-bounty-ledger-title": "規格錯誤",

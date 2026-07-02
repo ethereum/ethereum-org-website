@@ -205,7 +205,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` jsou definice potřebné k použití [OpenGSN](https://www.opengsn.org/), systému, který umožňuje uživatelům bez etheru používat blockchain. Všimněte si, že se jedná o starou verzi, pokud se chcete integrovat s OpenGSN, [použijte tento tutoriál](https://docs.opengsn.org/javascript-client/tutorial.html).
+- `GSN/Context.sol` jsou definice potřebné k použití [OpenGSN](https://opengsn.org/), systému, který umožňuje uživatelům bez etheru používat blockchain. Všimněte si, že se jedná o starou verzi, pokud se chcete integrovat s OpenGSN, [použijte tento tutoriál](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [Knihovna SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), která zabraňuje aritmetickému přetečení/podtečení pro verze Solidity **&lt;0.8.0**. V Solidity ≥0.8.0 se aritmetické operace automaticky zvrátí při přetečení/podtečení, takže SafeMath je zbytečná. Tento kontrakt používá SafeMath pro zpětnou kompatibilitu se staršími verzemi kompilátoru.
 
 &nbsp;

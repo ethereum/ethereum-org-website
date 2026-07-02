@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "इथेरियम प्रशासनाबद्दल अधिक",
   "page-roadmap-hero-alt": "इथेरियम रोडमॅप",
   "page-roadmap-technical-upgrades-title": "इथेरियममध्ये कोणते तांत्रिक अपग्रेड्स येत आहेत?",
+  "page-roadmap-post-quantum-title": "पोस्ट-क्वांटम सुरक्षा",
+  "page-roadmap-post-quantum-description": "क्वांटम संगणक एक दिवस ब्लॉकचेन ज्या गूढलेखनावर अवलंबून आहेत ते खंडित करू शकतात. क्वांटम संगणन एक खरा धोका बनण्यापूर्वी इथेरियमचे पोस्ट-क्वांटम अपग्रेड्स असुरक्षित अल्गोरिदम बदलतील.",
   "page-roadmap-danksharding-title": "डँकशार्डिंग",
   "page-roadmap-danksharding-description": "डँकशार्डिंग इथेरियम ब्लॉक्समध्ये डेटाचे \"ब्लॉब\" जोडून वापरकर्त्यांसाठी स्तर २ (l2) रोलअप्स खूप स्वस्त बनवते.",
   "page-roadmap-single-slot-finality-title": "सिंगल स्लॉट अंतिमत्व",

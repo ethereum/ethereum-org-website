@@ -579,21 +579,21 @@ uv run test-predictor.py
 अपेक्षित परिणाम यासारखा आहे:
 
 ```
-2026-01-05T19:50 साठी अंदाज: अंदाजित 3138.93 USD, वास्तविक 3218.92 USD, त्रुटी 79.99 USD
-2026-01-06T19:56 साठी अंदाज: अंदाजित 3243.39 USD, वास्तविक 3221.08 USD, त्रुटी 22.31 USD
-2026-01-07T20:02 साठी अंदाज: अंदाजित 3223.24 USD, वास्तविक 3146.89 USD, त्रुटी 76.35 USD
-2026-01-08T20:11 साठी अंदाज: अंदाजित 3150.47 USD, वास्तविक 3092.04 USD, त्रुटी 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-2026-01-31T22:33 साठी अंदाज: अंदाजित 2637.73 USD, वास्तविक 2417.77 USD, त्रुटी 219.96 USD
-2026-02-01T22:41 साठी अंदाज: अंदाजित 2381.70 USD, वास्तविक 2318.84 USD, त्रुटी 62.86 USD
-2026-02-02T22:49 साठी अंदाज: अंदाजित 2234.91 USD, वास्तविक 2349.28 USD, त्रुटी 114.37 USD
-29 अंदाजांवरील सरासरी अंदाज त्रुटी: 83.87103448275862068965517241 USD
-प्रति शिफारस सरासरी बदल: 4.787931034482758620689655172 USD
-बदलांचे प्रमाणित विचलन: 104.42 USD
-फायदेशीर दिवस: 51.72%
-तोट्याचे दिवस: 48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 टेस्टरचा बहुतांश भाग एजंटसारखाच आहे, परंतु येथे नवीन किंवा सुधारित केलेले भाग आहेत.
@@ -761,19 +761,19 @@ uv run agent.py
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-सध्याची किंमत: 1843.16
-2026-02-06T23:07 मध्ये, अपेक्षित किंमत: 1724.41 USD
-व्यापारापूर्वी खात्यातील शिल्लक:
-USDC शिल्लक: 927301.578272
-WETH शिल्लक: 500
-विक्री करा, मला किंमत 118.75 USD ने खाली जाण्याची अपेक्षा आहे
-मंजूर करा व्यवहार पाठवला: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-मंजूर करा व्यवहार माइन झाला.
-विक्री व्यवहार पाठवला: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-विक्री व्यवहार माइन झाला.
-व्यापारानंतर खात्यातील शिल्लक:
-USDC शिल्लक: 929143.797116
-WETH शिल्लक: 499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 प्रत्यक्षात ते वापरण्यासाठी, तुम्हाला काही किरकोळ बदल करावे लागतील.

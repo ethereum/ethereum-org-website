@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md",
-  "generatedAt": "2026-06-17T00:16:00.714Z",
-  "rootHash": "26fa99195ec5",
+  "generatedAt": "2026-06-30T00:44:11.927Z",
+  "rootHash": "fd5d3569665d",
   "tree": {
-    "contentHash": "71df43a33a99",
-    "anchorHash": "0ad85b1d9561",
+    "contentHash": "b86bbf39bf10",
+    "anchorHash": "59bf67df068d",
     "children": {
       "frontmatter:title": {
         "contentHash": "ff7d77e592df",
@@ -228,8 +228,8 @@
         ]
       },
       "static-analysis": {
-        "contentHash": "eac3da439de0",
-        "anchorHash": "4eea241acab6",
+        "contentHash": "612f8de8142e",
+        "anchorHash": "057066850c18",
         "labelHash": "83976383b3dc",
         "children": {
           "_label": {
@@ -297,8 +297,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "link:7": {
-            "contentHash": "273f46c3d70d",
-            "anchorHash": "539c1da47545"
+            "contentHash": "f1cc3b2b524e",
+            "anchorHash": "acde75977bd2"
           },
           "prose:21": {
             "contentHash": "29989df3d3ec",
@@ -1181,5 +1181,5 @@
       "api-basics"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

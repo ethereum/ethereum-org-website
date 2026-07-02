@@ -52,7 +52,7 @@ Ikiwa unaamini jamii inapaswa kuongezwa au kuondolewa kulingana na miongozo hii,
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Discord ya Matos</Link> - jamii ya waundaji wa Web3 ambapo wajenzi, viongozi wa viwanda, na wapenda Ethereum hujumuika. Tuna shauku kuhusu maendeleo, muundo, na utamaduni wa Web3. Njoo ujenge pamoja nasi.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - soga kwa ajili ya maendeleo ya Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- jukwaa la maswali na majibu</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Jukwaa la Jamii la Peera</Link> <i>- jukwaa lililogatuliwa la maswali na majibu</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Jukwaa la Jamii la Peera</Link> <i>- jukwaa lililogatuliwa la maswali na majibu</i></SocialListItem>
 
 ## YouTube na X (zamani Twitter) {#youtube-and-twitter}
 

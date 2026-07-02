@@ -147,7 +147,7 @@ const ReleaseCarousel = () => {
                     {status === "prod" && (
                       <div
                         className={cn(
-                          "w-fit rounded-lg bg-primary-low-contrast px-2 py-1",
+                          "w-fit rounded-lg bg-success-light px-2 py-1 dark:bg-success-dark",
                           currentIndex !== index && "hidden"
                         )}
                       >
@@ -159,11 +159,11 @@ const ReleaseCarousel = () => {
                     {status === "soon" && (
                       <div
                         className={cn(
-                          "w-fit rounded-lg bg-warning-light px-2 py-1",
+                          "w-fit rounded-lg bg-warning-light px-2 py-1 dark:bg-warning-dark",
                           currentIndex !== index && "hidden"
                         )}
                       >
-                        <p className="text-sm font-bold text-black">
+                        <p className="text-sm font-bold">
                           {t("page-roadmap-release-status-soon")}
                         </p>
                       </div>
@@ -171,7 +171,7 @@ const ReleaseCarousel = () => {
                     {status === "dev" && (
                       <div
                         className={cn(
-                          "w-fit rounded-lg bg-card-gradient-secondary-hover px-2 py-1",
+                          "w-fit rounded-lg bg-error-light px-2 py-1 dark:bg-error-dark",
                           currentIndex !== index && "hidden"
                         )}
                       >

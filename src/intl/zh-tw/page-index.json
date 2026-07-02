@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "以太坊 - 來自 Ethereum.org 的完整指南",
+  "page-index-meta-title": "以太坊 - 來自 ethereum.org 的完整指南",
   "page-index-meta-description": "以太坊是一個全球性、去中心化的金錢與新型態應用程式平台。在以太坊上，你可以掌控自己的金錢、資料與身分。不需要銀行、不需要中間人，也不需要任何許可。",
   "page-index-description": "創新應用程式與區塊鏈網路的領先平台",
   "page-index-title": "歡迎來到以太坊",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "私有與許可制網路",
   "page-index-get-started-enterprise-bullet-3": "機構資源",
   "page-index-get-started-enterprise-cta": "探索企業資源",
-  "page-index-simulator-cta": "嘗試更多指南"
+  "page-index-simulator-cta": "嘗試更多指南",
+  "page-index-latest-updates-title": "以太坊最新更新",
+  "page-index-latest-updates-cta": "查看更多"
 }

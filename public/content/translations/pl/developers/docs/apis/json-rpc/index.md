@@ -1889,7 +1889,7 @@ To było tylko krótkie wprowadzenie do niektórych z najczęstszych zadań, dem
 
 ## Powiązane tematy {#related-topics}
 
-- [Specyfikacja JSON-RPC](http://www.jsonrpc.org/specification)
+- [Specyfikacja JSON-RPC](https://www.jsonrpc.org/specification)
 - [Węzły i klienty](/developers/docs/nodes-and-clients/)
 - [API JavaScript](/developers/docs/apis/javascript/)
 - [API backendowe](/developers/docs/apis/backend/)

@@ -584,21 +584,21 @@ uv run test-predictor.py
 Oczekiwany wynik jest podobny do:
 
 ```
-Przewidywanie dla 2026-01-05T19:50: przewidywana 3138.93 USD, rzeczywista 3218.92 USD, błąd 79.99 USD
-Przewidywanie dla 2026-01-06T19:56: przewidywana 3243.39 USD, rzeczywista 3221.08 USD, błąd 22.31 USD
-Przewidywanie dla 2026-01-07T20:02: przewidywana 3223.24 USD, rzeczywista 3146.89 USD, błąd 76.35 USD
-Przewidywanie dla 2026-01-08T20:11: przewidywana 3150.47 USD, rzeczywista 3092.04 USD, błąd 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-Przewidywanie dla 2026-01-31T22:33: przewidywana 2637.73 USD, rzeczywista 2417.77 USD, błąd 219.96 USD
-Przewidywanie dla 2026-02-01T22:41: przewidywana 2381.70 USD, rzeczywista 2318.84 USD, błąd 62.86 USD
-Przewidywanie dla 2026-02-02T22:49: przewidywana 2234.91 USD, rzeczywista 2349.28 USD, błąd 114.37 USD
-Średni błąd przewidywania dla 29 prognoz: 83.87103448275862068965517241 USD
-Średnia zmiana na rekomendację: 4.787931034482758620689655172 USD
-Wariancja standardowa zmian: 104.42 USD
-Zyskowne dni: 51.72%
-Stratne dni: 48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 Większość testera jest identyczna z agentem, ale oto części, które są nowe lub zmodyfikowane.
@@ -766,19 +766,19 @@ Wynik będzie wyglądał podobnie do:
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-Obecna cena: 1843.16
-W 2026-02-06T23:07, oczekiwana cena: 1724.41 USD
-Salda konta przed transakcją:
-Saldo USDC: 927301.578272
-Saldo WETH: 500
-Sprzedaj, spodziewam się, że cena spadnie o 118.75 USD
-Transakcja zatwierdzenia wysłana: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-Transakcja zatwierdzenia wydobyta.
-Transakcja sprzedaży wysłana: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-Transakcja sprzedaży wydobyta.
-Salda konta po transakcji:
-Saldo USDC: 929143.797116
-Saldo WETH: 499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 Aby faktycznie z niego korzystać, potrzebujesz kilku drobnych zmian.

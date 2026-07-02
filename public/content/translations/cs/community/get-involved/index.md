@@ -11,7 +11,7 @@ Začněte tím, že si přečtete o poslání a hodnotách ethereum.org v našem
 ## Vývojáři <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Zjistěte více o Ethereu a vyzkoušejte si ho na [ethereum.org/developers/](/developers/)
-- Zúčastněte se hackathonu [ETHGlobal](https://ethglobal.co/) ve svém okolí!
+- Zúčastněte se hackathonu [ETHGlobal](https://ethglobal.com/) ve svém okolí!
 - Podívejte se na [projekty související s vaší oblastí odbornosti nebo preferovaným programovacím jazykem](/developers/docs/programming-languages/)
 - Sledujte nebo se zúčastněte [hovorů o konsensu a exekuční vrstvě](https://www.youtube.com/@EthereumProtocol/streams)
 - [Seznam přání Ecosystem Support Program](https://esp.ethereum.foundation/wishlist/) – oblasti nástrojů, dokumentace a infrastruktury, kde Ethereum Ecosystem Support Program aktivně hledá žádosti o granty
@@ -80,7 +80,7 @@ Stakováním svých ETH můžete získávat odměny a zároveň pomáhat zabezpe
 
 Ekosystém Etherea má za cíl financovat veřejné statky a projekty s velkým dopadem. I velmi malými dary můžete projevit svou podporu a umožnit realizaci důležité práce.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Finanční profesionálové a účetní <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

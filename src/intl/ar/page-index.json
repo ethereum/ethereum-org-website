@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "إيثيريوم - الدليل الشامل من ⁦Ethereum.org⁩",
+  "page-index-meta-title": "إيثيريوم - الدليل الشامل من ⁦ethereum.org⁩",
   "page-index-meta-description": "إيثيريوم هي منصة عالمية لامركزية للأموال وأنواع جديدة من التطبيقات. على إيثيريوم، أنت تتحكم في أموالك وبياناتك وهويتك. لا حاجة لبنك، ولا وسيط، ولا إذن.",
   "page-index-description": "المنصة الرائدة للتطبيقات المبتكرة وشبكات سلسلة الكتل",
   "page-index-title": "مرحبًا بك في إيثيريوم",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "الشبكات الخاصة والمصرح بها",
   "page-index-get-started-enterprise-bullet-3": "الموارد المؤسسية",
   "page-index-get-started-enterprise-cta": "استكشف المؤسسات",
-  "page-index-simulator-cta": "جرب المزيد من الأدلة"
+  "page-index-simulator-cta": "جرب المزيد من الأدلة",
+  "page-index-latest-updates-title": "أحدث تحديثات إيثيريوم",
+  "page-index-latest-updates-cta": "عرض المزيد"
 }

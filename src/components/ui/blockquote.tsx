@@ -5,7 +5,10 @@ const Blockquote = ({
   ...props
 }: React.HTMLAttributes<HTMLElement>) => (
   <blockquote
-    className={cn("border-s-2 border-accent-a bg-accent-a/10 p-6", className)}
+    className={cn(
+      "space-y-[1lh] border-s-2 border-accent-a bg-accent-a/10 p-6",
+      className
+    )}
     {...props}
   />
 )

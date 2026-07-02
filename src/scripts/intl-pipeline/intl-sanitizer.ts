@@ -4083,7 +4083,7 @@ function fixImagePathDotSlash(content: string): {
  * Fix backslash-escaped quotes in JSX/MDX attributes.
  *
  * Crowdin sometimes backslash-escapes double quotes in JSX attributes:
- *   <ButtonLink variant=\"outline-color\" href=\"/path/\">
+ *   <ButtonLink variant=\"outline\" href=\"/path/\">
  * This is valid in JSON but breaks MDX compilation.
  * Fix: remove the backslash before quotes in JSX-like tag attributes.
  */

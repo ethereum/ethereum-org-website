@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "Más sobre la gobernanza de Ethereum",
   "page-roadmap-hero-alt": "Hoja de ruta de Ethereum",
   "page-roadmap-technical-upgrades-title": "¿Qué actualizaciones técnicas se avecinan en Ethereum?",
+  "page-roadmap-post-quantum-title": "Seguridad poscuántica",
+  "page-roadmap-post-quantum-description": "Las computadoras cuánticas podrían algún día romper la criptografía de la que dependen las cadenas de bloques. Las actualizaciones poscuánticas de Ethereum reemplazarán los algoritmos vulnerables antes de que la computación cuántica se convierta en una amenaza real.",
   "page-roadmap-danksharding-title": "Danksharding",
   "page-roadmap-danksharding-description": "El danksharding hace que los rollups de capa 2 (l2) sean mucho más baratos para los usuarios al agregar \"blobs\" de datos a los bloques de Ethereum.",
   "page-roadmap-single-slot-finality-title": "Finalidad de un solo slot",

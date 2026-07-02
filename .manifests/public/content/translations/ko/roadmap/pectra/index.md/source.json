@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/pectra/index.md",
-  "generatedAt": "2026-06-08T10:33:43.738Z",
-  "rootHash": "a2d0066392ec",
+  "generatedAt": "2026-06-30T00:52:52.594Z",
+  "rootHash": "72040e9edf74",
   "tree": {
-    "contentHash": "b3755909d836",
-    "anchorHash": "4866c133f57e",
+    "contentHash": "190572ad660d",
+    "anchorHash": "5d4c269c0fc0",
     "children": {
       "frontmatter:title": {
         "contentHash": "e84deb0fe6a2",
@@ -727,15 +727,15 @@
         ]
       },
       "further-reading": {
-        "contentHash": "81f09edfc9c4",
-        "anchorHash": "7b1260526215",
+        "contentHash": "31cae2b238c8",
+        "anchorHash": "ac9c9489688c",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
             "contentHash": "4082f515b2f4",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:6": {
+          "prose:5": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -743,7 +743,7 @@
             "contentHash": "be50ffa0fc02",
             "anchorHash": "0d9f7701bb4e"
           },
-          "prose:7": {
+          "prose:6": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -751,53 +751,43 @@
             "contentHash": "9d2ef76190ce",
             "anchorHash": "b168023ca947"
           },
-          "prose:8": {
+          "prose:7": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
-            "contentHash": "cdb7917b2dfd",
-            "anchorHash": "78d0b3948bca"
+            "contentHash": "e8fd018216ae",
+            "anchorHash": "02b0f4839558"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "ab4d4331c37f",
+            "anchorHash": "9c6bde35a0a0"
           },
           "prose:9": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:3": {
-            "contentHash": "e8fd018216ae",
-            "anchorHash": "02b0f4839558"
-          },
-          "prose:10": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
           "link:4": {
-            "contentHash": "ab4d4331c37f",
-            "anchorHash": "9c6bde35a0a0"
-          },
-          "prose:11": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:5": {
             "contentHash": "9ab86306b6fc",
             "anchorHash": "c054482f5ca8"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:6",
+          "prose:5",
           "link:0",
-          "prose:7",
+          "prose:6",
           "link:1",
-          "prose:8",
+          "prose:7",
           "link:2",
-          "prose:9",
+          "prose:8",
           "link:3",
-          "prose:10",
-          "link:4",
-          "prose:11",
-          "link:5"
+          "prose:9",
+          "link:4"
         ]
       }
     },
@@ -822,5 +812,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }
