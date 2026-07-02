@@ -17,11 +17,10 @@ published: 2021-04-06
 - Kuhamisha tokeni
 - Kuweka bei ya gesi kulingana na hali ya msongamano wa mtandao
 
-### Ili-Kuanza {#to-get-started}
+### Ili Kuanza {#to-get-started}
 
 Ili kuanza, lazima kwanza tuagize maktaba ya ethers.js kwenye JavaScript yetu
-Jumuisha ethers.js(5.0)
-
+Jumuisha ethers.js v5
 ### Kusakinisha {#install-ethersjs}
 
 ```shell

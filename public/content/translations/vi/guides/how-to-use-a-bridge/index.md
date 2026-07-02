@@ -1,6 +1,6 @@
 ---
-title: Cách chuyển token sang lớp 2 bằng cầu nối
-description: Hướng dẫn giải thích cách chuyển token từ Ethereum sang lớp 2 bằng cầu nối.
+title: "Cách chuyển token sang lớp 2 bằng cầu nối"
+description: "Hướng dẫn giải thích cách chuyển token từ Ethereum sang lớp 2 bằng cầu nối."
 lang: vi
 ---
 

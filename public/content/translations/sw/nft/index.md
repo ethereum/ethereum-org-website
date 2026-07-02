@@ -108,9 +108,7 @@ Masuala ya usalama yanayohusiana na NFT mara nyingi yanahusiana na ulaghai wa ku
 - [Kifuatiliaji cha NFT cha Blockscout](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [Kiwango cha tokeni cha ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Kiwango cha tokeni cha ERC-1155](/developers/docs/standards/tokens/erc-1155/)
-- [Programu na Zana Maarufu za NFT](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 - [Wiki ya Viwango vya NFT](https://nft-standards.gitbook.io/nft-standards-wiki)
-
 ## Rasilimali nyingine {#other-resources}
 
 - [NFTScan](https://nftscan.com/)

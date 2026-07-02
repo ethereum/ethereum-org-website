@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { Fragment, useState } from "react"
 import { Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
@@ -24,6 +24,8 @@ export interface ListItem {
     eventName: string
   }
   callback?: (idx: number) => void
+  /** Nested sub-items rendered indented beneath this item. */
+  items?: Array<ListItem>
 }
 
 export interface List {
@@ -46,6 +48,34 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
     setSelectedItem(item.text)
   }
 
+  const renderItems = (items: Array<ListItem>, depth = 0): React.ReactNode =>
+    items.map((item, idx) => {
+      // 2rem base inline-start padding + 1rem per nesting level. Only one
+      // sub-level is used today; the map allows two before capping.
+      const indentClass = ["ps-8", "ps-12", "ps-16"][depth] ?? "ps-16"
+      return (
+        <Fragment key={item.text}>
+          <DropdownMenuItem
+            className={cn("justify-start pe-4 text-start", indentClass)}
+            onClick={() => handleClick(item, idx)}
+            asChild={!!item.href}
+          >
+            {item.href ? (
+              <BaseLink
+                href={item.href}
+                className="text-body no-underline focus-visible:outline-0"
+              >
+                {item.text}
+              </BaseLink>
+            ) : (
+              <span>{item.text}</span>
+            )}
+          </DropdownMenuItem>
+          {item.items?.length ? renderItems(item.items, depth + 1) : null}
+        </Fragment>
+      )
+    })
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -64,25 +94,7 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
         collisionPadding={16}
         sideOffset={8}
       >
-        {list.items.map((item, idx) => (
-          <DropdownMenuItem
-            key={item.text}
-            className="justify-center text-center"
-            onClick={() => handleClick(item, idx)}
-            asChild={!!item.href}
-          >
-            {item.href ? (
-              <BaseLink
-                href={item.href}
-                className="text-body no-underline focus-visible:outline-0"
-              >
-                {item.text}
-              </BaseLink>
-            ) : (
-              <span>{item.text}</span>
-            )}
-          </DropdownMenuItem>
-        ))}
+        {renderItems(list.items)}
       </DropdownMenuContent>
     </DropdownMenu>
   )

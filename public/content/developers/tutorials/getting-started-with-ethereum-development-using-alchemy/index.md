@@ -37,7 +37,7 @@ Fill in the details under “Create App” to get your new key. You can also see
 
 You can also pull existing API keys by hovering over “Apps” and selecting one. You can “View Key” here, as well as “Edit App” to whitelist specific domains, see several developer tools, and view analytics.
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4)
 
 ## 3. Make a Request from the Command Line {#make-a-request-from-the-command-line}
 

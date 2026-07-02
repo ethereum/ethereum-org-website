@@ -1,7 +1,7 @@
 ---
-title: 佩克特拉
-metaTitle: Prague-Electra (佩克特拉)
-description: 了解佩克特拉协议升级
+title: "佩克特拉"
+metaTitle: "Prague-Electra (佩克特拉)"
+description: "了解佩克特拉协议升级"
 lang: zh
 authors: ["Nixo", "马里奥·哈维尔"]
 ---
@@ -103,7 +103,7 @@ EVM 目前提供 `BLOCKHASH` 操作码，使合约开发者能够直接在执行
 ## 硬分叉后如何转换 ETH？ {#scam-alert}
 
 - **您的 ETH 无需任何操作**：在以太坊佩克特拉升级之后，您无需转换或升级您的 ETH。您的账户余额将保持不变，并且您目前持有的 ETH 在硬分叉后仍将以现有形式可用。
-- **谨防诈骗！** <Emoji text="⚠️" /> **任何指示您“升级” ETH 的人都是在试图诈骗您。**关于此次升级，您不需要做任何事情。您的资产将完全不受影响。请记住，保持信息灵通是防范诈骗的最佳方法。
+- **谨防诈骗！** <Emoji text="⚠️" /> <strong>任何指示您“升级” ETH 的人都是在试图诈骗您。</strong>关于此次升级，您不需要做任何事情。您的资产将完全不受影响。请记住，保持信息灵通是防范诈骗的最佳方法。
 
 [了解更多关于识别和避免诈骗的信息](/security/)
 
@@ -121,7 +121,6 @@ _以太坊佩克特拉升级：质押者需要知道什么 — Blockdaemon_
 
 - [以太坊路线图](/roadmap/)
 - [佩克特拉常见问题解答](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf 信息页面](https://pectra.wtf)
 - [佩克特拉如何提升质押者体验](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [EIP-7702 信息页面](https://eip7702.io/)
-- [佩克特拉开发者网络 (devnets)](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)
+- [EIP7702 信息页](https://eip7702.io/)
+- [佩克特拉开发者网络](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

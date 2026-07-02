@@ -84,10 +84,7 @@ También hay algunos casos especiales que requieren un tratamiento específico, 
 
 ### Deserialización {#deserialization}
 
-Para deserializar este objeto se requiere el <b>esquema</b>. El esquema define la disposición precisa de los datos serializados para que cada elemento específico pueda deserializarse de un blob de bytes en algún objeto significativo con los elementos que tienen el tipo, valor, tamaño y posición correctos. Es el esquema el que le dice al deserializador qué valores son valores reales y cuáles son desplazamientos. Todos los nombres de campo desaparecen cuando se serializa un objeto, pero se vuelven a instanciar en la deserialización de acuerdo con el esquema.
-
-Consulte [ssz.dev](https://www.ssz.dev/overview) para obtener una explicación interactiva sobre esto.
-
+Para deserializar este objeto se requiere el <b>esquema</b>. El esquema define la disposición precisa de los datos serializados para que cada elemento específico pueda deserializarse desde un blob de bytes a un objeto significativo donde los elementos tengan el tipo, valor, tamaño y posición correctos. Es el esquema el que indica al deserializador qué valores son valores reales y cuáles son desplazamientos. Todos los nombres de los campos desaparecen cuando se serializa un objeto, pero se vuelven a instanciar durante la deserialización de acuerdo con el esquema.
 ## Merkleización {#merkleization}
 
 Este objeto serializado SSZ puede luego ser merkleizado, es decir, transformado en una representación de árbol de Merkle de los mismos datos. Primero, se determina el número de fragmentos de 32 bytes en el objeto serializado. Estas son las "hojas" del árbol. El número total de hojas debe ser una potencia de 2 para que al aplicar hashing a las hojas juntas finalmente se produzca una única raíz del árbol hash (hash-tree-root). Si este no es el caso de forma natural, se agregan hojas adicionales que contienen 32 bytes de ceros. Esquemáticamente:
@@ -140,8 +137,7 @@ El hash de (8,9) debería ser igual al hash (4), que se somete a hashing con 5 p
 
 ## Más información {#further-reading}
 
-- [Actualizando Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
-- [Actualizando Ethereum: Merkleización](https://eth2book.info/altair/part2/building_blocks/merkleization)
+- [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
+- [Upgrading Ethereum: Merkleización](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [Implementaciones de SSZ](https://github.com/ethereum/consensus-specs/issues/2138)
-- [Calculadora SSZ](https://simpleserialize.com/)
-- [SSZ.dev](https://www.ssz.dev/)
+- [Calculadora de SSZ](https://simpleserialize.com/)

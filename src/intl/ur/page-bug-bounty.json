@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "ایتھیریم باؤنٹی پروگرام انعامات کا تعین کرنے میں متعدد متغیرات پر غور کرتا ہے۔ اہلیت، اسکور اور انعام سے متعلق تمام شرائط کا تعین مکمل طور پر ایتھیریم فاؤنڈیشن کے بگ باؤنٹی پینل کی حتمی صوابدید پر ہے۔",
   "page-upgrades-bug-bounty-leaderboard": "مکمل لیڈر بورڈز دیکھیں",
   "page-upgrades-bug-bounty-leaderboard-list": "بگ باؤنٹی لیڈر بورڈ",
+  "page-upgrades-bug-bounty-leaderboard-position": "مقام نمبر ⁦{rank}⁩ پر {score, plural, one {# پوائنٹ} other {# پوائنٹس}} کے ساتھ",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(⁦GitHub⁩ پروفائل دیکھیں)",
   "page-upgrades-bug-bounty-leaderboard-points": "پوائنٹس",
   "page-upgrades-bug-bounty-ledger-desc": "ایتھیریم کی تفصیلات عمل درآمد کی تہہ اور اتفاق رائے کی تہہ کے ڈیزائن کی منطق کو تفصیل سے بیان کرتی ہیں۔",
   "page-upgrades-bug-bounty-ledger-title": "تفصیلات کے بگز",

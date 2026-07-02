@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "Data na uchanganuzi",
   "docs-nav-data-and-analytics-description": "Jinsi data ya mnyororo wa vitalu inavyokusanywa, kupangwa na kutekelezwa kwenye programu tumizi zilizogatuliwa (dapps)",
   "docs-nav-data-availability": "Upatikanaji wa data",
+  "docs-nav-data-availability-description": "Muhtasari wa matatizo na masuluhisho yanayohusiana na upatikanaji wa data katika Ethereum",
   "docs-nav-data-availability-storage-strategies": "Mikakati ya kuhifadhi data ya mnyororo wa vitalu",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "Uthibitishaji wa hali katika maendeleo",
   "layer-2-metis-note": "Uthibitisho wa udanganyifu katika maendeleo",
   "layer-2-optimism-note": "Uthibitisho wa makosa katika maendeleo",
-  "back-to-top": "Rudi juu",
   "banner-page-incomplete": "Ukurasa huu haujakamilika na tungependa msaada wako. Hariri ukurasa huu na uongeze chochote unachofikiri kinaweza kuwa na manufaa kwa wengine.",
   "next": "Inayofuata",
   "previous": "Iliyotangulia"

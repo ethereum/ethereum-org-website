@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/user-experience/index.md",
-  "generatedAt": "2026-06-18T00:49:07.017Z",
-  "rootHash": "ca853e6b7a3f",
+  "generatedAt": "2026-06-30T00:53:05.409Z",
+  "rootHash": "6826e0ea4c70",
   "tree": {
     "contentHash": "7a0cf4ddc594",
-    "anchorHash": "c41ee9657f56",
+    "anchorHash": "b2fd14b10984",
     "children": {
       "frontmatter:title": {
         "contentHash": "795cdce0d523",
@@ -61,7 +61,7 @@
       },
       "no-more-seed-phrases": {
         "contentHash": "1037c2197e7c",
-        "anchorHash": "8854e91bc80b",
+        "anchorHash": "57cebd920cbd",
         "labelHash": "cc2038140e72",
         "children": {
           "_label": {
@@ -82,7 +82,7 @@
           },
           "html-tag:1": {
             "contentHash": "5bc275a9ef7e",
-            "anchorHash": "02bf765a1fda"
+            "anchorHash": "e31c6a0956a1"
           }
         },
         "childrenOrder": [
@@ -95,7 +95,7 @@
       },
       "nodes-for-everyone": {
         "contentHash": "6d78bff8d703",
-        "anchorHash": "58ec2847d055",
+        "anchorHash": "f0a724ccbe3e",
         "labelHash": "30adcc1f0eae",
         "children": {
           "_label": {
@@ -148,7 +148,7 @@
           },
           "html-tag:5": {
             "contentHash": "985d51bd95f6",
-            "anchorHash": "b74680f7476a"
+            "anchorHash": "70aeaa8045f2"
           },
           "prose:12": {
             "contentHash": "412ee6951a29",
@@ -231,5 +231,5 @@
       "current-progress"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

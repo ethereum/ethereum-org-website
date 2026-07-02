@@ -645,7 +645,7 @@ async function Page(props: { params: Promise<PageParams> }) {
           {/* Full-bleed gradient: the colored wrapper spans the full width while
               the inner Section keeps content at max-w-7xl. `mt-space-3x` restores
               the section-boundary gap the non-section wrapper misses in `flow`. */}
-          <div className="mt-space-3x w-full rounded-t-4xl bg-radial-a">
+          <div className="mt-space-3x w-full rounded-t-4xl bg-radial-primary">
             <Section
               id="choose"
               className="mx-auto w-full max-w-7xl px-page py-space-2x text-center"

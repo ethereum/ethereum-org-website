@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "Chương trình tiền thưởng Ethereum xem xét một số biến số trong việc xác định phần thưởng. Việc xác định tính đủ điều kiện, điểm số và tất cả các điều khoản liên quan đến phần thưởng hoàn toàn do hội đồng tiền thưởng lỗi của Tổ chức Ethereum quyết định cuối cùng.",
   "page-upgrades-bug-bounty-leaderboard": "Xem toàn bộ bảng xếp hạng",
   "page-upgrades-bug-bounty-leaderboard-list": "Bảng xếp hạng tiền thưởng lỗi",
+  "page-upgrades-bug-bounty-leaderboard-position": "Xếp thứ {rank} với {score, plural, one {# điểm} other {# điểm}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(Xem hồ sơ GitHub)",
   "page-upgrades-bug-bounty-leaderboard-points": "điểm",
   "page-upgrades-bug-bounty-ledger-desc": "Các Đặc tả Ethereum trình bày chi tiết cơ sở thiết kế cho Lớp thực thi và Lớp đồng thuận.",
   "page-upgrades-bug-bounty-ledger-title": "Lỗi đặc tả",

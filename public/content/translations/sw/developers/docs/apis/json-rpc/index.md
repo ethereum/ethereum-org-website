@@ -1887,7 +1887,7 @@ Huu ulikuwa utangulizi mfupi tu wa baadhi ya kazi za kawaida, ukionyesha matumiz
 
 ## Mada zinazohusiana {#related-topics}
 
-- [Uainisho wa JSON-RPC](http://www.jsonrpc.org/specification)
+- [Uainisho wa JSON-RPC](https://www.jsonrpc.org/specification)
 - [Nodi na viteja](/developers/docs/nodes-and-clients/)
 - [API za JavaScript](/developers/docs/apis/javascript/)
 - [API za Backend](/developers/docs/apis/backend/)

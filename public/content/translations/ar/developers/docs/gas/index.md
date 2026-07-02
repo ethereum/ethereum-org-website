@@ -134,7 +134,7 @@ _مخطط مقتبس من [توضيح EVM لإيثيريوم](https://takenobu-h
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _مُقدِّر سعر غاز المعاملة مفتوح المصدر_
 - [متتبع غاز ETH](https://www.ethgastracker.com/) _مراقبة وتتبع أسعار الغاز في إيثيريوم وطبقة 2 (L2) لتقليل رسوم المعاملة وتوفير المال_
 - [مُقدِّر غاز ETH من Blocknative](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _إضافة كروم لتقدير الغاز تدعم كلاً من المعاملات القديمة من النوع 0 ومعاملات <span dir="ltr">EIP-1559</span> من النوع 2._
-- [حاسبة رسوم الغاز من Cryptoneur](https://www.cryptoneur.xyz/gas-fees-calculator) _احسب رسوم الغاز بعملتك المحلية لأنواع المعاملات المختلفة على الشبكة الرئيسية، وأربيتروم، وبوليغون._
+- [حاسبة رسوم الغاز من Cryptoneur](https://cryptoneur.xyz/en/gas-fees-calculator) _احسب رسوم الغاز بعملتك المحلية لأنواع المعاملات المختلفة على الشبكة الرئيسية، وأربيتروم، وبوليغون._
 
 ## أدوات ذات صلة {#related-tools}
 

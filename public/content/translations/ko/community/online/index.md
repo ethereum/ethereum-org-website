@@ -1,6 +1,6 @@
 ---
-title: 온라인 커뮤니티
-description: 이더리움 열성 팬들이 모여 토론하고 협력하는 온라인 포럼, 채팅방, 소셜 미디어 커뮤니티를 찾아보세요.
+title: "온라인 커뮤니티"
+description: "이더리움 열성 팬들이 모여 토론하고 협력하는 온라인 포럼, 채팅방, 소셜 미디어 커뮤니티를 찾아보세요."
 lang: ko
 ---
 
@@ -52,7 +52,7 @@ lang: ko
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos 디스코드</Link> - 빌더, 업계 주요 인사, 이더리움 열성 팬들이 모이는 Web3 크리에이터 커뮤니티입니다. 우리는 Web3 개발, 디자인, 문화에 열정을 가지고 있습니다. 함께 만들어가요.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity 개발을 위한 채팅 (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 질의응답 포럼</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- 탈중앙화된 질의응답 포럼</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- 탈중앙화된 질의응답 포럼</i></SocialListItem>
 
 ## 유튜브 및 X(구 트위터) {#youtube-and-twitter}
 

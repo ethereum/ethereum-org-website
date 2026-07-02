@@ -1,6 +1,6 @@
 ---
-title: Prywatność w Ethereum
-description: Narzędzia i techniki ochrony prywatności w Ethereum
+title: "Prywatność w Ethereum"
+description: "Narzędzia i techniki ochrony prywatności w Ethereum"
 lang: pl
 ---
 
@@ -93,5 +93,5 @@ Niektóre projekty badające prywatność przy dowodzeniu obejmują [Client Side
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), laboratorium badawczo-rozwojowe Fundacji Ethereum skupiające się na prywatności w ekosystemie
 - [Web3PrivacyNow](https://web3privacy.info/), sieć ludzi, projektów i sprzymierzonych organizacji, które chronią i promują prawa człowieka w internecie
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), strona z ocenami portfeli Ethereum, której celem jest dostarczenie kompleksowej listy portfeli, ich funkcjonalności, praktyk i wsparcia dla określonych standardów.
-- [Zk-kit](https://zkkit.pse.dev/): Zestaw bibliotek (algorytmów, funkcji narzędziowych i struktur danych), które można ponownie wykorzystać w różnych projektach i protokołach z wiedzą zerową.
+- [Zk-kit](https://zkkit.org/): Zestaw bibliotek (algorytmów, funkcji narzędziowych i struktur danych), które można ponownie wykorzystać w różnych projektach i protokołach z wiedzą zerową.
 - [Privacy Apps](/apps/categories/privacy/) – Odkryj wyselekcjonowaną listę aplikacji chroniących prywatność, które działają w Ethereum.

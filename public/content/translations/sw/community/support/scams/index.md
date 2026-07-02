@@ -85,8 +85,8 @@ Kuripoti bado ni muhimu. Ripoti husaidia vyombo vya sheria kufuatilia mitandao y
 ## Aina za utapeli za kuangalia {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="Ulaghai wa kugawa zawadi na airdrop"
+contentPreview="Hakuna mtu anayegawa ETH bure. Ofa hizi kila wakati ni ulaghai."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ Matapeli huunda zawadi feki wakiahidi kuzidisha ETH yako au kukupa tokeni za bur
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="Uigaji na usaidizi feki"
+contentPreview="Hakuna mtu kutoka Ethereum au ethereum.org atakayewahi kuwasiliana nawe kwanza."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ Matapeli hujifanya kuwa wanachama wa timu ya Ethereum, wasimamizi, au mawakala w
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="Ulaghai wa urejeshaji"
+contentPreview="Baada ya kulaghaiwa, jihadhari na 'wataalamu feki wa kurejesha kripto.'"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ Wanaahidi kufuatilia na kurejesha kripto yako iliyoibiwa kwa ada ya mapema. Baad
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="Tovuti za hadaa na programu feki"
+contentPreview="Tovuti za ulaghai huiga mikoba na masoko halisi ya ubadilishanaji ili kuiba vitambulisho vyako."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

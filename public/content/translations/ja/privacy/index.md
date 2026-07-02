@@ -1,6 +1,6 @@
 ---
-title: イーサリアム上のプライバシー
-description: イーサリアム上でプライバシーを保護するためのツールとテクニック
+title: "イーサリアム上のプライバシー"
+description: "イーサリアム上でプライバシーを保護するためのツールとテクニック"
 lang: ja
 ---
 
@@ -93,5 +93,5 @@ _例: [UmbraCash](https://app.umbra.cash/faq)、[FluidKey](https://www.fluidkey.
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE): エコシステムのプライバシーに焦点を当てたイーサリアム財団の研究開発ラボ
 - [Web3PrivacyNow](https://web3privacy.info/): オンラインでの人権を保護し推進する人々、プロジェクト、および連携組織のネットワーク
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/): ウォレット、その機能、実践、および特定の標準へのサポートの包括的なリストを提供することを目指す、イーサリアム・ウォレットの評価サイト
-- [Zk-kit](https://zkkit.pse.dev/): さまざまなプロジェクトやゼロ知識プロトコルで再利用できるライブラリ（アルゴリズム、ユーティリティ関数、データ構造）のセット
+- [Zk-kit](https://zkkit.org/): さまざまなプロジェクトやゼロ知識プロトコルで再利用できるライブラリ（アルゴリズム、ユーティリティ関数、データ構造）のセット
 - [Privacy Apps](/apps/categories/privacy/) - イーサリアム上で実行される厳選されたプライバシー・アプリケーションのリストを発見できます。

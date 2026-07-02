@@ -229,7 +229,7 @@ Then, create a `.env` file in the root directory of our project, and add your Me
 
 - See below to get HTTP Alchemy API URL and copy it to your clipboard
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4)
 
 Your `.env` should now look like this:
 

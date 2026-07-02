@@ -32,7 +32,7 @@
   "page-gas-attack-of-the-cryptokitties-text": "V listopadu 2017 byl spuštěn populární projekt CryptoKitties. Jeho rychlý nárůst popularity způsobil značné přetížení sítě a extrémně vysoké poplatky za plyn. Výzvy, které CryptoKitties představovaly, urychlily nutnost nalezení řešení pro škálování Etherea.",
   "page-gas-why-do-we-need-gas-header": "Proč potřebujeme gas?",
   "page-gas-why-do-we-need-gas-text": "Gas je kritickým prvkem pro udržení bezpečnosti Etherea a zpracování transakcí. Gas pomáhá v mnoha ohledech:",
-  "page-gas-benefits-1-description": "Gas udržuje Ethereum <a href=\"/glossary/#anti-sybil\">odolné vůči Sybil útokům</a> tím, že brání škodlivým aktérům v přetížení sítě podvodnými aktivitami.",
+  "page-gas-benefits-1-description": "Gas udržuje Ethereum <a href=\"/glossary/#anti-sybil\">odolné vůči Sybil útokům</a> tím, že brání útočníkům v zahlcení sítě podvodnými aktivitami.",
   "page-gas-benefits-2-description": "Protože výpočty stojí gas, spamování Etherea drahými transakcemi, ať už náhodně nebo úmyslně, je finančně nevýhodné.",
   "page-gas-benefits-3-description": "Pevný limit na množství výpočtů, které lze provést v jednom okamžiku, zabraňuje přetížení Etherea a pomáhá zajistit, že síť je vždy přístupná.",
   "page-gas-how-is-gas-calculated-header": "Jak se gas počítá?",

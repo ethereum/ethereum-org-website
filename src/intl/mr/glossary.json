@@ -388,7 +388,7 @@
   "validium-term": "व्हॅलिडियम",
   "validium-definition": "एक साखळीबाह्य उपाय जो व्यवहार प्रक्रिया क्षमता सुधारण्यासाठी <a href=\"/glossary/#validity-proof\">वैधता पुरावे</a> वापरतो. <a href=\"/glossary/#zk-rollup\">शून्य-ज्ञान रोलअप्स</a> च्या विपरीत, व्हॅलिडियम डेटा स्तर 1 मुख्यनेटवर संचयित केला जात नाही. <a href=\"/developers/docs/scaling/validium/\">व्हॅलिडियमबद्दल अधिक</a>.",
   "vyper-term": "Vyper",
-  "vyper-definition": "Python सारखी वाक्यरचना असलेली एक उच्च-स्तरीय प्रोग्रामिंग भाषा. शुद्ध कार्यात्मक भाषेच्या जवळ जाण्याचा हेतू आहे. विटालिक बुटेरिन यांनी तयार केली. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Vyper बद्दल अधिक</a>.",
+  "vyper-definition": "Python-सारखी वाक्यरचना असलेली एक उच्च-स्तरीय प्रोग्रामिंग भाषा. विटालिक् बुटेरिन् यांनी तयार केली. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Vyper बद्दल अधिक</a>.",
   "wallet-term": "वॉलेट",
   "wallet-definition": "वॉलेट हे डिजिटल चलन संचयित करण्यासाठी, पाठवण्यासाठी आणि प्राप्त करण्यासाठी एक डिजिटल साधन आहे, जसे की तुमच्या ऑनलाइन पैशांसाठी एक आभासी पाकीट. <a href=\"/wallets/\">इथेरियम वॉलेट्सबद्दल अधिक</a>.",
   "web2-term": "वेब2",

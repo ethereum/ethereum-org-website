@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/nodes-and-clients/run-a-node/index.md",
-  "generatedAt": "2026-06-19T18:41:04.335Z",
-  "rootHash": "ac8855706fb3",
+  "generatedAt": "2026-06-29T23:58:02.244Z",
+  "rootHash": "2b771248730c",
   "tree": {
     "contentHash": "1ceb07b7d420",
-    "anchorHash": "880cfdab3f2c",
+    "anchorHash": "a6e166ae7400",
     "children": {
       "frontmatter:title": {
         "contentHash": "6a7f9d9e449d",
@@ -448,7 +448,7 @@
       },
       "spinning-up-node": {
         "contentHash": "bc547e01f840",
-        "anchorHash": "638e7971e051",
+        "anchorHash": "e1ee30a5cf49",
         "labelHash": "687b27c42501",
         "children": {
           "_label": {
@@ -540,7 +540,7 @@
           },
           "manual-setup": {
             "contentHash": "a47cab4501fa",
-            "anchorHash": "24ceefd8b841",
+            "anchorHash": "832c5f5c4b02",
             "labelHash": "3090f0dabd88",
             "children": {
               "_label": {
@@ -1350,7 +1350,7 @@
               },
               "running-a-consensus-client": {
                 "contentHash": "bc2917ad149e",
-                "anchorHash": "6a40c46b60f7",
+                "anchorHash": "7e5cb4a682d3",
                 "labelHash": "848e6feb1c79",
                 "children": {
                   "_label": {
@@ -1505,7 +1505,7 @@
                   },
                   "_auto:running-teku": {
                     "contentHash": "97460c39b73e",
-                    "anchorHash": "503e923d3854",
+                    "anchorHash": "7e1b579d0ed1",
                     "labelHash": "52681b6e4e10",
                     "children": {
                       "_label": {
@@ -1522,7 +1522,7 @@
                       },
                       "link:0": {
                         "contentHash": "554c2c70424e",
-                        "anchorHash": "e6c86aa41c78"
+                        "anchorHash": "07418c9da085"
                       },
                       "prose:2": {
                         "contentHash": "cdb4ee2aea69",
@@ -2099,7 +2099,7 @@
       },
       "further-reading": {
         "contentHash": "0f7ddfc2be78",
-        "anchorHash": "03890ff6bbbb",
+        "anchorHash": "db232b97e133",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
@@ -2136,7 +2136,7 @@
           },
           "link:3": {
             "contentHash": "999590fc83ca",
-            "anchorHash": "d00c7ae3efaf"
+            "anchorHash": "2628965bfb1d"
           },
           "prose:13": {
             "contentHash": "79db7763de63",
@@ -2268,5 +2268,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

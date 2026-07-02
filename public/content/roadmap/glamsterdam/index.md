@@ -2,6 +2,7 @@
 title: Glamsterdam
 description: Learn about the Glamsterdam protocol upgrade
 lang: en
+template: upgrade
 ---
 
 <Alert variant="update">

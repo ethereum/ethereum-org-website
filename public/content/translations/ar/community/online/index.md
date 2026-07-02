@@ -1,6 +1,6 @@
 ---
-title: المجتمعات عبر الإنترنت
-description: اكتشف المنتديات عبر الإنترنت، وغرف الدردشة، ومجتمعات وسائل التواصل الاجتماعي حيث يجتمع المتحمسون لشبكة إيثيريوم للمناقشة والتعاون.
+title: "المجتمعات عبر الإنترنت"
+description: "اكتشف المنتديات عبر الإنترنت، وغرف الدردشة، ومجتمعات وسائل التواصل الاجتماعي حيث يجتمع المتحمسون لشبكة إيثيريوم للمناقشة والتعاون."
 lang: ar
 ---
 
@@ -52,7 +52,7 @@ lang: ar
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">ديسكورد <span dir="ltr">Matos</span></Link> - مجتمع منشئي Web3 حيث يتسكع البناة والشخصيات الصناعية البارزة والمتحمسون لشبكة إيثيريوم. نحن شغوفون بتطوير وتصميم وثقافة Web3. تعال وابنِ معنا.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im"><span dir="ltr">Solidity Matrix</span></Link> - دردشة لتطوير Solidity (على <span dir="ltr">Matrix</span>)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/"><span dir="ltr">Ethereum Stack Exchange</span></Link> <i>- منتدى للأسئلة والأجوبة</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">منتدى مجتمع <span dir="ltr">Peera</span></Link> <i>- منتدى لامركزي للأسئلة والأجوبة</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">منتدى مجتمع <span dir="ltr">Peera</span></Link> <i>- منتدى لامركزي للأسئلة والأجوبة</i></SocialListItem>
 
 ## يوتيوب و X (تويتر سابقًا) {#youtube-and-twitter}
 

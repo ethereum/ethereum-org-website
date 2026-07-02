@@ -78,7 +78,7 @@ Once you’ve created an account:
 
 For the more visual learners, the steps above are summarized here:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4)
 
 Now, we’re going to want to upload one more document to Pinata. But before we do that, we need to create it!
 
@@ -106,7 +106,7 @@ Feel free to change the data in the json. You can remove or add to the attribute
 
 Once you’re done editing the JSON file, save it and upload it to Pinata, following the same steps we did for uploading the image.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4)
 
 ## Step 5: Create an instance of your contract {#instance-contract}
 
@@ -249,7 +249,7 @@ Remember the `metadata.json` you uploaded to Pinata? Get its hashcode from Pinat
 
 Here’s how to get the hashcode:
 
-![How to get your nft metadata hashcode on Pinata](./metadataPinata.gif)_How to get your nft metadata hashcode on Pinata_
+![How to get your nft metadata hashcode on Pinata](./metadataPinata.mp4)_How to get your nft metadata hashcode on Pinata_
 
 > Double check that the hashcode you copied links to your **metadata.json** by loading `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>` into a separate window. The page should look similar to the screenshot below:
 

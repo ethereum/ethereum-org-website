@@ -134,7 +134,7 @@ _आरेख [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _ओपन सोर्स लेन-देन गैस मूल्य अनुमानक_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _लेन-देन शुल्क कम करने और पैसे बचाने के लिए इथेरियम और लेयर 2 (l2) गैस मूल्य की निगरानी और ट्रैक करें_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _गैस का अनुमान लगाने वाला क्रोम एक्सटेंशन जो टाइप 0 लिगेसी लेन-देन और टाइप 2 EIP-1559 लेन-देन दोनों का समर्थन करता है।_
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _मेननेट, आर्बिट्रम और पॉलीगॉन पर विभिन्न लेन-देन प्रकारों के लिए अपनी स्थानीय मुद्रा में गैस शुल्क की गणना करें।_
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _मेननेट, आर्बिट्रम और पॉलीगॉन पर विभिन्न लेन-देन प्रकारों के लिए अपनी स्थानीय मुद्रा में गैस शुल्क की गणना करें।_
 
 ## संबंधित टूल {#related-tools}
 

@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-what-is-ether.json",
-  "generatedAt": "2026-05-26T07:08:22.997Z",
-  "rootHash": "68bf01e647e1",
+  "generatedAt": "2026-06-29T23:52:10.922Z",
+  "rootHash": "23fbdadcd162",
   "tree": {
-    "contentHash": "db5bb0302ab2",
+    "contentHash": "5b01ba7d41d9",
     "anchorHash": "dd57aea7ba10",
     "children": {
       "page-what-is-ether-meta-title": {
@@ -20,7 +20,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-what-is-ether-title": {
-        "contentHash": "c4f0ebdf5f11",
+        "contentHash": "2b9001f74ff5",
         "anchorHash": "e3b0c44298fc"
       },
       "page-what-is-ether-hero-description-1": {
@@ -741,5 +741,5 @@
       "page-what-is-ether-gas-table-row-3-1"
     ]
   },
-  "sourceCommitSha": "2b6a038be7d8898383a4f0c64b2494eda62e06db"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

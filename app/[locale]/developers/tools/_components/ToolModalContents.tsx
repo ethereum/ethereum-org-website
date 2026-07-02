@@ -54,7 +54,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
 
   return (
     <div className="bg-background">
-      <div className="h-36 w-full bg-linear-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20">
+      <div className="h-36 w-full bg-tint-accent-a">
         {tool.banner_url && (
           <Image
             src={tool.banner_url}

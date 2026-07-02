@@ -59,6 +59,6 @@ lang: ja
 
 ## 参考文献 {#further-reading}
 
-- [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- AlchemyによるイーサリアムIDEのリスト_
+- [Ethereum IDEs](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- AlchemyによるイーサリアムIDEのリスト_
 
 _役に立つコミュニティリソースをご存知ですか？このページを編集して追加してください！_

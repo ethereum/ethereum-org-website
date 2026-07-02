@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/erc20-annotated-code/index.md",
-  "generatedAt": "2026-06-17T23:41:32.170Z",
-  "rootHash": "88cf8388422b",
+  "generatedAt": "2026-06-30T00:04:42.438Z",
+  "rootHash": "35310007102e",
   "tree": {
     "contentHash": "df2858ac0c61",
-    "anchorHash": "d66540a60697",
+    "anchorHash": "2885e5eb476e",
     "children": {
       "frontmatter:title": {
         "contentHash": "0b4aaa89a1fe",
@@ -340,7 +340,7 @@
       },
       "the-actual-contract": {
         "contentHash": "c08ae14ac2cb",
-        "anchorHash": "82fb3cdbb614",
+        "anchorHash": "cd222bfff7d3",
         "labelHash": "c91f3ab854b4",
         "children": {
           "_label": {
@@ -381,7 +381,7 @@
           },
           "import-statements": {
             "contentHash": "57ad6870998e",
-            "anchorHash": "609303d92efa",
+            "anchorHash": "6b9771ed6319",
             "labelHash": "88147388b5a5",
             "children": {
               "_label": {
@@ -410,7 +410,7 @@
               },
               "link:1": {
                 "contentHash": "ee615c94d3ea",
-                "anchorHash": "d01ae6a42101"
+                "anchorHash": "6a97fcdad3a5"
               },
               "prose:6": {
                 "contentHash": "e790f36fba5d",
@@ -1757,5 +1757,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

@@ -19,9 +19,8 @@ published: 2021-04-06
 
 ### للبدء {#to-get-started}
 
-للبدء، يجب علينا أولاً استيراد مكتبة <span dir="ltr">ethers.js</span> في <span dir="ltr">JavaScript</span> الخاصة بنا
-تضمين <span dir="ltr">ethers.js(5.0)</span>
-
+للبدء، يجب علينا أولاً استيراد مكتبة <span dir="ltr">ethers.js</span> في كود JavaScript الخاص بنا
+تضمين <span dir="ltr">ethers.js v5</span>
 ### التثبيت {#install-ethersjs}
 
 ```shell

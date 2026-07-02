@@ -1,7 +1,7 @@
 ---
-title: 如何使用钱包
-metaTitle: 如何使用以太坊钱包 | 逐步指南
-description: 解释如何发送、接收代币以及连接到 Web3 项目的指南。
+title: "如何使用钱包"
+metaTitle: "如何使用以太坊钱包 | 逐步指南"
+description: "解释如何发送、接收代币以及连接到 Web3 项目的指南。"
 lang: zh
 ---
 
