@@ -137,7 +137,7 @@ const SideNav = ({ path }: SideNavProps) => {
 
   return (
     <nav
-      className="sticky top-19 max-lg:hidden h-[calc(100vh-80px)] w-[calc((100%-1448px)/2+256px)] min-w-64 overflow-y-auto border-e-2 bg-background pt-8 pb-16 transition-transform duration-200"
+      className="sticky top-19 h-[calc(100vh-80px)] w-[calc((100%-1448px)/2+256px)] min-w-64 overflow-y-auto border-e-2 bg-background pt-8 pb-16 transition-transform duration-200 max-lg:hidden"
       aria-label={t("common:nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
