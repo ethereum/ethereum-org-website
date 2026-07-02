@@ -742,7 +742,7 @@ export default async function Page(props: { params: Promise<Params> }) {
           className={cn(
             "w-full justify-center *:max-w-3xl *:flex-1 max-lg:flex-col",
             "mt-space-3x gap-x-space-3x gap-y-space-2x pt-space-3x pb-space-2x",
-            "border-t bg-banner-grid-gradient"
+            "border-t bg-linear-primary"
           )}
         >
           <Section id="el-leaderboard">

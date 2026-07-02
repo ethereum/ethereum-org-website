@@ -37,7 +37,6 @@ import { Divider } from "@/components/ui/hr"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
-import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
@@ -239,10 +238,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
           <Section
             id="country-picker"
-            className={cn(
-              "flex flex-col items-center py-16",
-              "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
-            )}
+            className="flex flex-col items-center bg-fade-accent-a py-16"
           >
             <div className="flex flex-col items-center">
               <h2 className="mb-4">{t("page-get-eth-exchanges-header")}</h2>

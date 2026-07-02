@@ -57,7 +57,7 @@ className="from-[#5c1eb4] to-[#7b3fd8]"
 // After:
 className="bg-error"
 className="border-primary/10"
-// For gradients, check utilities.css for an existing one (e.g., bg-gradient-main, bg-card-gradient-secondary).
+// For gradients, check utilities.css for an existing one (e.g., bg-linear-primary, bg-radial-primary).
 // If no token fits, add it to semantic-tokens.css before using a hex value in a component.
 ```
 
@@ -149,7 +149,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
 ```tsx
 // Before:
-<div className="flex flex-col gap-3 rounded-3xl border border-[rgba(159,43,212,0.11)] bg-card-gradient-secondary p-6 hover:bg-card-gradient-secondary-hover hover:shadow-lg">
+<div className="flex flex-col gap-3 rounded-3xl border border-[rgba(159,43,212,0.11)] bg-linear-primary p-6 hover:shadow-lg">
   <h3>Title</h3>
   <p>Description</p>
 </div>
@@ -324,19 +324,90 @@ className="z-popover"  // 1500
 
 See `tokens.md` for the full named z-index scale.
 
-## Inlined gradient with hex stops -> token gradient
+## Gradients -> named utilities (closed set)
+
+Gradients are the highest-duplication area of the styling system. The target is one class per gradient, with direction/stops/opacity/dark/RTL baked into the definition - no recipe rebuilt at a call site. See `tokens.md` ("Gradient backgrounds") for the decision ladder and rules; the live inventory is the `src/styles/__stories__/gradients.stories.tsx` story (Design System / Gradients).
+
+### Inlined multi-stop hex gradient -> token utility
 
 ```tsx
 // Before:
 className="bg-linear-to-br from-[#7f7fd5]/20 via-[#86a8e7]/20 to-[#91eae4]/20"
 
 // After (if a token gradient matches):
-className="bg-gradient-main"
+className="bg-linear-primary"
 
-// If no existing gradient matches:
-// 1. Add a new @utility to utilities.css
-// 2. Use it
+// If no existing gradient matches: add a new @utility to utilities.css, then use it.
 ```
+
+### Re-spelled token recipe -> named utility / Card variant
+
+```tsx
+// Before (this exact recipe is hand-copied dozens of times):
+className="bg-linear-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20"
+
+// After (closed-set named utility):
+className="bg-tint-accent-a"
+
+// After (when it's a card): use the Card variant, which applies the utility internally:
+<Card decoration="accent-a">...</Card>
+```
+
+### Our-brand hex -> semantic token
+
+```tsx
+// Before (our-brand purples typed as hex):
+className="bg-linear-to-b from-[#5c1eb4] to-[#7b3fd8]"
+
+// After (semantic tokens; or the named utility once it exists):
+className="bg-linear-to-b from-primary to-primary-hover"
+```
+
+Hex is permitted **only** to match an exact *external* brand color (wallet logos, community-hub city brands). For those, don't re-spell the class per entry - pass the hue to a single locked utility:
+
+```tsx
+// Before (per-entity, repeated 50+ times in data):
+twGradiantBrandColor: "from-[#0052FF]"   // applied with bg-linear-to-b at the call site
+
+// After: only the hue varies; direction/opacity/dark fixed by the utility
+<div className="bg-brand-tint" style={{ "--brand-color": brandHex } as CSSProperties} />
+```
+
+### Deprecated v3 gradient syntax -> v4
+
+```tsx
+// Before (Tailwind v3):
+className="bg-gradient-to-b from-purple-700 to-purple-500"
+
+// After (v4 - the project standard):
+className="bg-linear-to-b from-purple-700 to-purple-500"
+```
+
+### Dead gradient utilities
+
+- A gradient `@utility` with zero references is dead - remove it rather than carry it.
+- Don't add a second `@utility` that duplicates an existing gradient under a new name; reuse the existing one.
+
+## Deprecated shadow tokens -> Tailwind defaults / two custom utilities
+
+The old multi-layer CSS-variable shadow set was removed in favor of the Tailwind default scale plus two custom utilities. Map any remaining reference to a default first; only the brand-tinted cases use a custom. The consistent swaps:
+
+| Old custom | Replace with | Notes |
+|---|---|---|
+| `shadow-table-box` | `shadow-xl` | full-width list/article containers |
+| `shadow-drop` | `shadow-lg` | floating tiles / widgets / dropdowns |
+| `shadow-widget` | `shadow-lg` | |
+| `shadow-svg-button-link` | `shadow-lg` | |
+| `shadow-window-box` | `shadow-primary-xl` (custom) | brand-tinted large framed boxes |
+| `shadow-[4px_4px_…primary-low-contrast]` | `shadow-primary-no-blur-1` (custom) | solid hover offset (`-1` = 4px, `-0.5` = 2px) |
+| `shadow-table-item-box` | drop it | hairline rarely read; remove unless clearly needed |
+| `shadow-table-box-hover` (hover lift) | `Card hoverEffect="lift"` / `hover-lift-*` | not a manual shadow swap |
+| `shadow-[1px_0px_0px_…]` (edge line) | a real `border` / `border-e` | shadow-as-border is a smell |
+
+Rules:
+- **Default to the Tailwind scale** (`shadow-md`/`-lg`/`-xl`). A custom shadow needs a brand-tint justification.
+- **Hover elevation is `hover-lift-*`** (`-xs`/`-base`/`-sm`/`-md`) or `Card hoverEffect="lift"`, never a per-component resting/hover shadow pair.
+- **Custom shadows are raw `box-shadow`** (`@utility` writing the property directly), never arbitrary `shadow-[...]` -- arbitrary shadows route color through `--tw-shadow-color`, which `* { dark:shadow-body }` overrides to gray in dark mode.
 
 ## Inline `<div className="flex flex-col gap-2">` -> `Stack`
 

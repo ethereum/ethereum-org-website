@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    @apply scroll-smooth border-border;
+    @apply scroll-smooth border-border dark:shadow-body/15;
   }
 
   body {

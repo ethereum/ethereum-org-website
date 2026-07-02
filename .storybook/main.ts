@@ -12,7 +12,7 @@ const config: StorybookConfig = {
   stories: [
     "../src/components/**/*.stories.{ts,tsx}",
     "../src/layouts/stories/*.stories.tsx",
-    "../src/styles/*.stories.tsx",
+    "../src/styles/__stories__/*.stories.tsx",
     "../app/**/*.stories.{ts,tsx}",
   ],
 

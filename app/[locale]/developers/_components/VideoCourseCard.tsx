@@ -31,7 +31,7 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
       <Image
         src={course.imgSrc}
         alt={course.imgAlt}
-        className="transition-transform group-hover:scale-105 group-hover:transition-transform"
+        className="transition-transform group-hover:scale-105"
         sizes="(max-width: 480px) calc(100vw - 2rem), 300px"
       />
     </CardBanner>

@@ -140,7 +140,7 @@ const RoadmapPage = () => {
               {changesComingItems.map((item) => (
                 <div
                   key={item.title}
-                  className="bg-roadmap-card-gradient flex flex-col gap-4 rounded-3xl border p-6"
+                  className="flex flex-col gap-4 rounded-3xl border p-6"
                 >
                   <div className="flex flex-row items-center justify-between gap-4">
                     <h3 className="m-0">{item.title}</h3>

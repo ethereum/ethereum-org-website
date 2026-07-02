@@ -94,7 +94,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </div>
 
         <div className="w-full px-4 py-8 md:px-8">
-          <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-a px-4 pt-8 lg:px-14 lg:pt-14">
+          <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-primary px-4 pt-8 lg:px-14 lg:pt-14">
             <div className="flex flex-col gap-4 text-center">
               <h2 className="text-4xl font-black">
                 {t("page-10-year-livestream-title")}
@@ -204,7 +204,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <div
           id="torch-history"
-          className="my-32 flex w-full scroll-mt-32 flex-col bg-linear-to-b from-[#161A36] via-[#161A36] via-60% to-[#9C63F8] md:rounded-3xl"
+          // Custom color for 10-year anniversary torch theme, #161A36 matches torch.mp4 background
+          className="my-32 flex w-full scroll-mt-32 flex-col bg-linear-to-b from-[#161A36] from-60% to-purple-600 md:rounded-3xl"
         >
           <div className="p-8">
             <div className="relative">

@@ -381,7 +381,7 @@ const Page = async (props: {
 
           {relatedApps.length > 0 && (
             <div className="flex flex-col px-4 py-10 md:px-8">
-              <div className="flex w-full flex-col items-center gap-8 rounded-base bg-linear-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
+              <div className="flex w-full flex-col items-center gap-8 rounded-base bg-tint-accent-a p-12 px-4 md:px-8">
                 <h2>{t("page-apps-more-apps-like-this")}</h2>
                 <div className="flex w-full flex-col gap-4 lg:flex-row">
                   {relatedApps.map((relatedApp) => (

@@ -71,7 +71,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         />
 
         <MainArticle
-          className="mx-auto my-page w-full max-w-screen-lg shadow-table-box"
+          className="mx-auto my-page w-full max-w-screen-lg shadow-xl"
           dir={dir}
         >
           <TutorialsList internalTutorials={internalTutorials} />

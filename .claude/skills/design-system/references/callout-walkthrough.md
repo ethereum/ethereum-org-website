@@ -12,7 +12,7 @@ A worked example of using the design system correctly when adding an in-content 
 - **Top-of-page full-bleed ribbon** → `<Alert variant="banner">`
 - **Whole-card-clickable wrapper around arbitrary content** → `LinkBox` + `LinkOverlay`
 
-If you're tempted to inline `flex flex-col rounded-base bg-card-gradient-secondary ... p-8` with an `<img>` overhang, you're reinventing `Callout`.
+If you're tempted to inline `flex flex-col rounded-base bg-linear-primary ... p-8` with an `<img>` overhang, you're reinventing `Callout`.
 
 ## Step 2: Compose `Callout`
 

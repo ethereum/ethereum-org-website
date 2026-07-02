@@ -83,7 +83,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             id="stats"
             className="flex flex-col gap-x-6 gap-y-4 px-4 xl:flex-row xl:px-12"
           >
-            <div className="flex-[2] space-y-4 rounded-base border border-primary/10 bg-linear-to-r from-primary/10 to-primary/5 px-8 py-12 text-lg dark:from-primary/20 dark:to-primary/10">
+            <div className="flex-[2] space-y-4 rounded-base border border-primary/10 bg-fade-primary px-8 py-12 text-lg gradient-reverse">
               <h2 className="text-3xl md:text-4xl">
                 {t("page-collectibles-improve-title")}
               </h2>
@@ -110,7 +110,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
             <div className="grid min-w-fit grid-cols-2 place-items-center gap-4 md:grid-cols-3 md:justify-start xl:grid-cols-2">
               {/* Minted */}
-              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-a/20 bg-linear-to-b from-accent-a/5 to-accent-a/15 px-4 py-8 text-accent-a max-md:col-span-2 xl:col-span-2 xl:p-6">
+              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-a/20 bg-tint-accent-a px-4 py-8 text-accent-a max-md:col-span-2 xl:col-span-2 xl:p-6">
                 <div className="text-4xl font-bold md:text-6xl">
                   {stats.collectorsCount
                     ? numberFormat(locale).format(stats.collectorsCount)
@@ -121,7 +121,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </div>
               </div>
               {/* Collectors */}
-              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-b/20 bg-linear-to-b from-accent-b/5 to-accent-b/15 p-6 text-accent-b">
+              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-b/20 bg-tint-accent-b p-6 text-accent-b">
                 <div className="text-4xl font-bold md:text-6xl">
                   {stats.uniqueAddressesCount
                     ? numberFormat(locale).format(stats.uniqueAddressesCount)
@@ -132,7 +132,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </div>
               </div>
               {/* Unique Badges */}
-              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-c/20 bg-linear-to-b from-accent-c/5 to-accent-c/15 p-6 text-accent-c">
+              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-c/20 bg-tint-accent-c p-6 text-accent-c">
                 <div className="text-4xl font-bold md:text-6xl">
                   {stats.collectiblesCount
                     ? numberFormat(locale).format(stats.collectiblesCount)

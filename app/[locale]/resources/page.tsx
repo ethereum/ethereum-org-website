@@ -181,7 +181,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             id="contribute"
             className="relative rounded-4xl border border-body/5 bg-background"
           >
-            <VStack className="rounded-4xl bg-radial-a px-4 py-6 md:py-12">
+            <VStack className="rounded-4xl bg-radial-primary px-4 py-6 md:py-12">
               <Stack className="max-w-xl gap-y-10 py-6 lg:max-w-[700px]">
                 <div className="flex flex-col gap-y-4 text-center">
                   <h2>{t("page-resources-contribute-title")}</h2>
