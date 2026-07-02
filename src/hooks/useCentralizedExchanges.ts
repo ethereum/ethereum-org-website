@@ -274,7 +274,7 @@ const exchanges: ExchangeDetails = {
     name: "OKX",
     url: "https://www.okx.com/",
     image: okx,
-    usaExceptions: [],
+    usaExceptions: ["NY", "TX", "KY", "NV", "HI", "WV"],
   },
   gemini: {
     name: "Gemini",
