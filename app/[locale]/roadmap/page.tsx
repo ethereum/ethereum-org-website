@@ -210,7 +210,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </p>
             <Grid balanced={4}>
               {changesComingItems.map((item) => (
-                <Card key={item.title} hoverEffect="lift">
+                <Card key={item.title} hoverLift>
                   <CardHeader className="flex items-center justify-between gap-4">
                     <CardTitle>{item.title}</CardTitle>
                     <div className="shrink-0 text-primary-action">
@@ -282,7 +282,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <Card
                   key={item.title}
                   href={item.href}
-                  hoverEffect="lift"
+                  hoverLift
                   className="bg-linear-primary"
                 >
                   <CardContent>
