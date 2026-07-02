@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ExternalLink, Globe } from "lucide-react"
+import { Globe } from "lucide-react"
 
 import type {
   Continent,
@@ -15,7 +15,7 @@ import Farcaster from "@/components/icons/farcaster.svg"
 import Telegram from "@/components/icons/telegram.svg"
 import Twitter from "@/components/icons/twitter.svg"
 import { Image } from "@/components/Image"
-import Link from "@/components/ui/Link"
+import Link, { ExternalLinkIcon } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import TabNav from "@/components/ui/TabNav"
 import { Tag } from "@/components/ui/tag"
@@ -116,7 +116,7 @@ export default function ContinentTabs({
   })
 
   return (
-    <div className={cn("space-y-4 lg:space-y-14", className)}>
+    <div className={cn("space-y-space", className)}>
       <TabNav
         sections={sections}
         activeSection={selectedContinent}
@@ -126,8 +126,15 @@ export default function ContinentTabs({
         customEventOptions={matomoNavOptions}
       />
 
+      {/* Persistent polite live region: announces the empty-filter result to screen readers */}
+      <div role="status" className="sr-only">
+        {filteredEvents.length === 0 ? noEventsMessage : ""}
+      </div>
+
       {filteredEvents.length === 0 ? (
-        <p className="py-8 text-center text-body-medium">{noEventsMessage}</p>
+        <p className="mx-auto py-8 text-center text-body-medium">
+          {noEventsMessage}
+        </p>
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-[auto_3fr_2fr_auto]">
           {displayedEvents.map((event) => {
@@ -172,7 +179,7 @@ export default function ContinentTabs({
                     <div className="min-w-0">
                       <p className="flex items-center gap-1 font-bold text-body group-hover:text-primary">
                         {event.title}
-                        <ExternalLink className="size-4 shrink-0" />
+                        <ExternalLinkIcon />
                       </p>
                       <p className="text-body-medium">{event.location}</p>
                     </div>

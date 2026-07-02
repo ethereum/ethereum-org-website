@@ -4,7 +4,7 @@ import type { EventItem } from "@/lib/types"
 
 import { VStack } from "@/components/ui/flex"
 
-import EventCard from "./EventCard"
+import EventCard from "./event-card"
 
 const meta = {
   title: "Molecules / Community / EventCard",

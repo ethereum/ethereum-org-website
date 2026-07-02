@@ -1,18 +1,18 @@
 "use client"
 
 import { useState } from "react"
-import { Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import type { EventItem } from "@/lib/types"
 
-import { Alert, AlertContent } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Grid } from "@/components/ui/grid"
 import Input from "@/components/ui/input"
 
-import EventCard from "../_components/EventCard"
 import { sanitize } from "../utils"
+
+import EventCard from "./event-card"
+import NoResultsAlert from "./no-results-alert"
 
 import useTranslation from "@/hooks/useTranslation"
 
@@ -22,7 +22,9 @@ type FilterProps = { events: EventItem[] }
 
 export default function FilterEvents({ events }: FilterProps) {
   const locale = useLocale()
+
   const { t } = useTranslation("page-community-events")
+
   const [filter, setFilter] = useState<string>("")
 
   const filterEvents = (query: string): EventItem[] => {
@@ -44,11 +46,6 @@ export default function FilterEvents({ events }: FilterProps) {
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setFilter(event.target.value)
-    // trackCustomEvent({
-    //   eventCategory: "events search",
-    //   eventAction: "click",
-    //   eventName: event.target.value,
-    // })
   }
 
   const filteredEvents = filterEvents(filter)
@@ -58,21 +55,14 @@ export default function FilterEvents({ events }: FilterProps) {
 
     if (!filteredEvents.length)
       return (
-        <Alert
-          variant="warning"
-          role="status"
-          className="mx-auto max-w-xl justify-center"
-        >
-          <Info className="size-6 !text-current" />
-          <AlertContent className="flex-none">
-            {t("page-events-search-no-results")}
-          </AlertContent>
-        </Alert>
+        <NoResultsAlert variant="center">
+          {t("page-events-search-no-results")}
+        </NoResultsAlert>
       )
 
     return (
       <>
-        <Grid columns={3}>
+        <Grid columns={3} className="text-start">
           {filteredEvents.slice(0, MAX_RESULTS).map((event) => (
             <EventCard
               key={event.id}
@@ -93,6 +83,7 @@ export default function FilterEvents({ events }: FilterProps) {
             <ButtonLink
               href={`/community/events/search?q=${encodeURIComponent(filter)}`}
               size="lg"
+              className="max-md:w-full"
             >
               {t("page-events-see-all")} ({filteredEvents.length})
             </ButtonLink>
