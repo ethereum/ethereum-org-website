@@ -2,6 +2,7 @@
 title: Proposer-builder separation
 description: Learn how and why Ethereum validators will split their block building and block broadcasting responsibilities.
 lang: en
+template: roadmap
 ---
 
 Present-day [Ethereum](/) validators create _and_ broadcast blocks. They bundle together transactions that they have heard about through the gossip network and package them into a block that is sent out to peers on the Ethereum network. **Proposer-builder separation (PBS)** splits these tasks across multiple validators. Block builders become responsible for creating blocks and offering them to the block proposer in each slot. The block proposer cannot see the contents of the block, they simply choose the most profitable one, receiving a fee from the block builder (or the builder pays a bid to the proposer) before sending the block to its peers.

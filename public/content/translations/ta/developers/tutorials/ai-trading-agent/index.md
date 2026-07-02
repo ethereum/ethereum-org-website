@@ -580,21 +580,21 @@ uv run test-predictor.py
 எதிர்பார்க்கப்படும் முடிவு பின்வருமாறு இருக்கும்:
 
 ```
-2026-01-05T19:50-க்கான கணிப்பு: கணிக்கப்பட்டது 3138.93 USD, உண்மையானது 3218.92 USD, பிழை 79.99 USD
-2026-01-06T19:56-க்கான கணிப்பு: கணிக்கப்பட்டது 3243.39 USD, உண்மையானது 3221.08 USD, பிழை 22.31 USD
-2026-01-07T20:02-க்கான கணிப்பு: கணிக்கப்பட்டது 3223.24 USD, உண்மையானது 3146.89 USD, பிழை 76.35 USD
-2026-01-08T20:11-க்கான கணிப்பு: கணிக்கப்பட்டது 3150.47 USD, உண்மையானது 3092.04 USD, பிழை 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-2026-01-31T22:33-க்கான கணிப்பு: கணிக்கப்பட்டது 2637.73 USD, உண்மையானது 2417.77 USD, பிழை 219.96 USD
-2026-02-01T22:41-க்கான கணிப்பு: கணிக்கப்பட்டது 2381.70 USD, உண்மையானது 2318.84 USD, பிழை 62.86 USD
-2026-02-02T22:49-க்கான கணிப்பு: கணிக்கப்பட்டது 2234.91 USD, உண்மையானது 2349.28 USD, பிழை 114.37 USD
-29 கணிப்புகளில் சராசரி கணிப்புப் பிழை: 83.87103448275862068965517241 USD
-ஒரு பரிந்துரைக்கான சராசரி மாற்றம்: 4.787931034482758620689655172 USD
-மாற்றங்களின் நிலையான மாறுபாடு: 104.42 USD
-லாபகரமான நாட்கள்: 51.72%
-இழப்பு நாட்கள்: 48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 சோதனையாளரின் (tester) பெரும்பகுதி முகவரைப் போலவே இருக்கும், ஆனால் புதிய அல்லது மாற்றியமைக்கப்பட்ட பகுதிகள் இங்கே உள்ளன.
@@ -762,19 +762,19 @@ uv run agent.py
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-தற்போதைய விலை: 1843.16
-2026-02-06T23:07-இல், எதிர்பார்க்கப்படும் விலை: 1724.41 USD
-வர்த்தகத்திற்கு முன் கணக்கு நிலுவைகள்:
-USDC நிலுவை: 927301.578272
-WETH நிலுவை: 500
-விற்கவும், விலை 118.75 USD குறையும் என்று எதிர்பார்க்கிறேன்
-ஒப்புதல் அளிக்கும் பரிவர்த்தனை அனுப்பப்பட்டது: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-ஒப்புதல் அளிக்கும் பரிவர்த்தனை வெட்டியெடுக்கப்பட்டது.
-விற்பனைப் பரிவர்த்தனை அனுப்பப்பட்டது: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-விற்பனைப் பரிவர்த்தனை வெட்டியெடுக்கப்பட்டது.
-வர்த்தகத்திற்குப் பின் கணக்கு நிலுவைகள்:
-USDC நிலுவை: 929143.797116
-WETH நிலுவை: 499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 இதை உண்மையில் பயன்படுத்த, உங்களுக்குச் சில சிறிய மாற்றங்கள் தேவை.

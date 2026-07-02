@@ -58,6 +58,11 @@ export const formatDate = (
   if (/^\d{4}$/.test(date)) {
     return date
   }
+  // Guard malformed input (e.g. RSS pubDate / frontmatter) so callers can
+  // render the result directly without their own NaN check.
+  if (!isValidDate(date)) {
+    return ""
+  }
   return dateTimeFormat(locale, {
     month: "long",
     day: "numeric",

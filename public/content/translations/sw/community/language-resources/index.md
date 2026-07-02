@@ -27,7 +27,7 @@ Ikiwa unazungumza lugha mbili na unataka kutusaidia kufikia watu wengi zaidi, un
 **Habari**
 
 - [BeInCrypto](http://www.beincrypto.com.br) - habari na makala za sarafu-fiche, ikijumuisha orodha ya mabadilishano, inayopatikana nchini Brazili
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Toleo la Brazili la Cointelegraph, chombo kikuu cha habari cha sarafu-fiche
+- [Cointelegraph](https://cointelegraph.com.br/) - Toleo la Brazili la Cointelegraph, chombo kikuu cha habari cha sarafu-fiche
 - [Livecoins](http://www.livecoins.com.br/ethereum) - habari na zana za sarafu-fiche
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - habari na ripoti za sarafu-fiche
 - [Modular Crypto](https://modularcrypto.xyz/) - habari na makala za kuelimisha za sarafu-fiche
@@ -37,7 +37,7 @@ Ikiwa unazungumza lugha mbili na unataka kutusaidia kufikia watu wengi zaidi, un
 - [web3dev](https://www.web3dev.com.br/) - Kitovu cha maudhui na jumuiya ya Discord kwa wasanidi wa Web3.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - rasilimali za kujifunza Web3 na fedha zilizogatuliwa (DeFi)
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - habari na elimu ya sarafu-fiche, ikijumuisha 'Ethereum kwa wanaoanza' na 'DeFi' kwa wanaoanza
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - maarifa kutoka kwenye nafasi ya sarafu-fiche, elimu na blogu
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - maarifa kutoka kwenye nafasi ya sarafu-fiche, elimu na blogu
 - [Cointimes](http://www.cointimes.com.br/) - habari na elimu ya sarafu-fiche
 - [Kifurushi cha kuanzia cha Web3](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - mwongozo unaojibu maswali yanayoulizwa mara kwa mara na ya msingi ya kripto
 

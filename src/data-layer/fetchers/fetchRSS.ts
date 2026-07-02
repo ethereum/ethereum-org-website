@@ -4,11 +4,29 @@ import type { AtomElement, AtomResult, RSSItem, RSSResult } from "@/lib/types"
 
 import { isValidDate } from "@/lib/utils/date"
 
-import { ATTESTANT_BLOG, BLOG_FEEDS } from "@/lib/constants"
+import { LATEST_RSS_WINDOW_DAYS, LATEST_SOURCES } from "@/data/latest/sources"
+
+import { uploadToS3 } from "../s3"
 
 import { fetchRetry } from "./fetchRetry"
 
 export const FETCH_RSS_TASK_ID = "fetch-rss"
+
+const IMG_REGEX = /https?:\/\/[^"]*?\.(jpe?g|png|webp)/g
+const DESCRIPTION_MAX_LENGTH = 200
+const RSS_IMAGE_PREFIX = "latest/thumbnails"
+
+/**
+ * Re-host an external RSS cover image on our S3 bucket so /latest never
+ * hot-links third-party hosts. uploadToS3 de-dupes by content hash, so
+ * re-runs of the task don't re-upload unchanged covers. Returns "" when there
+ * is no image or the upload fails, letting the card fall back to its local
+ * placeholder rather than reintroducing a hot-linked URL.
+ */
+async function toHostedImage(remoteUrl: string): Promise<string> {
+  if (!remoteUrl) return ""
+  return (await uploadToS3(remoteUrl, RSS_IMAGE_PREFIX)) ?? ""
+}
 
 /**
  * Fetches XML data from the specified URL.
@@ -33,22 +51,69 @@ export async function fetchXml(url: string): Promise<Record<string, unknown>> {
   })
 }
 
+/** Strip HTML/markup to a plain-text excerpt suitable for a card. */
+function toExcerpt(raw?: string): string | undefined {
+  if (!raw) return undefined
+  const text = raw
+    .replace(/<[^>]*>/g, " ") // drop tags
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/\s+/g, " ")
+    .trim()
+  if (!text) return undefined
+  if (text.length <= DESCRIPTION_MAX_LENGTH) return text
+  // Truncate at the last word boundary within the limit.
+  const clipped = text.slice(0, DESCRIPTION_MAX_LENGTH)
+  const lastSpace = clipped.lastIndexOf(" ")
+  return `${(lastSpace > 0 ? clipped.slice(0, lastSpace) : clipped).trimEnd()}…`
+}
+
 /**
- * Fetch RSS feeds from community blogs.
- * Returns an array of sources, each containing an array of RSS items.
- * Excludes Attestant blog (handled separately via fetchAttestantPosts).
+ * Fetch RSS/Atom feeds for every source in LATEST_SOURCES.
+ *
+ * Returns one array of items per source (grouped so consumers can apply a
+ * per-source display cap). Items are filtered to a trailing window of
+ * LATEST_RSS_WINDOW_DAYS at fetch time so the window self-rolls daily and the
+ * stored payload stays bounded. Each item carries its source's publication
+ * category and a plain-text description excerpt.
  */
 export async function fetchRSS(): Promise<RSSItem[][]> {
-  // Filter out Attestant blog since it's handled separately
-  const xmlUrls = BLOG_FEEDS.filter((feed) => feed !== ATTESTANT_BLOG)
+  console.log(
+    `Starting RSS feeds data fetch for ${LATEST_SOURCES.length} feeds`
+  )
 
-  console.log(`Starting RSS feeds data fetch for ${xmlUrls.length} feeds`)
+  const cutoff = Date.now() - LATEST_RSS_WINDOW_DAYS * 24 * 60 * 60 * 1000
+  const withinWindow = (date: string) =>
+    isValidDate(date) && new Date(date).getTime() >= cutoff
 
   const allItems: RSSItem[][] = []
   const errors: string[] = []
 
-  for (let i = 0; i < xmlUrls.length; i++) {
-    const url = xmlUrls[i]
+  for (let i = 0; i < LATEST_SOURCES.length; i++) {
+    const {
+      feed: url,
+      name,
+      category,
+      categoryFilter,
+      linkReplace,
+    } = LATEST_SOURCES[i]
+
+    // Sources whose feed mixes unrelated posts (e.g. Besu inside the wider
+    // LF Decentralized Trust feed) restrict items to an RSS `<category>`
+    // allow-list. Sources without a filter keep every item.
+    const matchesCategoryFilter = (itemCategories?: string[]) =>
+      !categoryFilter ||
+      (itemCategories ?? []).some((c) => categoryFilter.includes(c))
+
+    // Swap a dead/old link host for the live one (e.g. vitalik.ca → eth.limo).
+    const rewriteLink = (link: string) =>
+      linkReplace && link.startsWith(linkReplace.from)
+        ? linkReplace.to + link.slice(linkReplace.from.length)
+        : link
 
     // Add a small delay between requests to avoid rate limiting
     // Skip delay for the first request
@@ -61,105 +126,107 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
 
       if ("rss" in response) {
         const [mainChannel] = response.rss.channel
-        const [source] = mainChannel.title
         const [sourceUrl] = mainChannel.link
         const channelImage = mainChannel.image
           ? mainChannel.image[0].url[0]
           : ""
 
-        const parsedRssItems = mainChannel.item
-          // Filter out items with invalid dates
-          .filter((item) => {
-            if (!item.pubDate) return false
-            const [pubDate] = item.pubDate
-            return isValidDate(pubDate)
-          })
-          // Sort by pubDate (most recent is first in array)
-          .sort((a, b) => {
-            const dateA = new Date(a.pubDate[0])
-            const dateB = new Date(b.pubDate[0])
-            return dateB.getTime() - dateA.getTime()
-          })
-          // Keep only latest 3 items (frontend only uses 1 per source)
-          .slice(0, 3)
-          // Map to RSSItem object
-          .map((item) => {
-            const getImgSrc = () => {
-              if (item["content:encoded"])
-                return item["content:encoded"][0].match(
-                  /https?:\/\/[^"]*?\.(jpe?g|png|webp)/g
-                )?.[0]
-              if (item.enclosure) return item.enclosure[0].$.url
-              if (item["media:content"]) return item["media:content"][0].$.url
-              return channelImage
-            }
-            return {
-              pubDate: item.pubDate[0],
-              title: item.title[0],
-              link: item.link[0],
-              imgSrc: getImgSrc(),
-              source,
-              sourceUrl,
-              sourceFeedUrl: url,
-            }
-          })
+        const parsedRssItems: RSSItem[] = await Promise.all(
+          mainChannel.item
+            .filter(
+              (item) =>
+                item.pubDate &&
+                withinWindow(item.pubDate[0]) &&
+                matchesCategoryFilter(item.category)
+            )
+            .sort(
+              (a, b) =>
+                new Date(b.pubDate[0]).getTime() -
+                new Date(a.pubDate[0]).getTime()
+            )
+            .map(async (item) => {
+              const getImgSrc = () => {
+                // Prefer an explicit image attachment (the post's cover) over
+                // scraping the body — body scraping tends to grab the first
+                // inline image, which is often an ad banner or logo. Guard the
+                // enclosure by type so podcast/audio enclosures aren't treated
+                // as images (e.g. Paragraph feeds carry an image/png cover).
+                const enclosure = item.enclosure?.[0]?.$
+                if (enclosure?.url && enclosure.type?.startsWith("image/"))
+                  return enclosure.url
+                if (item["media:content"]) return item["media:content"][0].$.url
+                if (item["content:encoded"]) {
+                  const match = item["content:encoded"][0].match(IMG_REGEX)?.[0]
+                  if (match) return match
+                }
+                return channelImage
+              }
+              return {
+                pubDate: item.pubDate[0],
+                title: item.title[0],
+                link: rewriteLink(item.link[0]),
+                imgSrc: await toHostedImage(getImgSrc()),
+                description: toExcerpt(item.description?.[0]),
+                source: name,
+                category,
+                sourceUrl,
+                sourceFeedUrl: url,
+              }
+            })
+        )
 
         allItems.push(parsedRssItems)
       } else if ("feed" in response) {
-        const [source] = response.feed.title
         const [sourceUrl] = response.feed.id
         const feedImage = response.feed.icon?.[0]
 
-        const parsedAtomItems = response.feed.entry
-          // Filter out items with invalid dates
-          .filter((entry) => {
-            if (!entry.updated) return false
-            const [published] = entry.updated
-            return isValidDate(published)
-          })
-          // Sort by published (most recent is first in array)
-          .sort((a, b) => {
-            const dateA = new Date(a.updated[0])
-            const dateB = new Date(b.updated[0])
-            return dateB.getTime() - dateA.getTime()
-          })
-          // Keep only latest 3 items (frontend only uses 1 per source)
-          .slice(0, 3)
-          // Map to RSSItem object
-          .map((entry) => {
-            const getString = (el?: AtomElement[]): string => {
-              if (!el) return ""
-              const [firstEl] = el
-              if (typeof firstEl === "string") return firstEl
-              return firstEl._ || ""
-            }
-            const getHref = (): string => {
-              if (!entry.link) {
-                console.warn(`No link found for RSS url: ${url}`)
-                return ""
+        const getString = (el?: AtomElement[]): string => {
+          if (!el) return ""
+          const [firstEl] = el
+          if (typeof firstEl === "string") return firstEl
+          return firstEl._ || ""
+        }
+
+        const parsedAtomItems: RSSItem[] = await Promise.all(
+          response.feed.entry
+            .filter((entry) => entry.updated && withinWindow(entry.updated[0]))
+            .sort(
+              (a, b) =>
+                new Date(b.updated[0]).getTime() -
+                new Date(a.updated[0]).getTime()
+            )
+            .map(async (entry) => {
+              const getHref = (): string => {
+                if (!entry.link) {
+                  console.warn(`No link found for RSS url: ${url}`)
+                  return ""
+                }
+                const link = entry.link[0]
+                if (typeof link === "string") return link
+                return link.$.href || ""
               }
-              const link = entry.link[0]
-              if (typeof link === "string") return link
-              return link.$.href || ""
-            }
-            const getImgSrc = (): string => {
-              const imgRegEx = /https?:\/\/[^"]*?\.(jpe?g|png|webp)/g
-              const contentMatch = getString(entry.content).match(imgRegEx)
-              if (contentMatch) return contentMatch[0]
-              const summaryMatch = getString(entry.summary).match(imgRegEx)
-              if (summaryMatch) return summaryMatch[0]
-              return feedImage || ""
-            }
-            return {
-              pubDate: entry.updated[0],
-              title: getString(entry.title),
-              link: getHref(),
-              imgSrc: getImgSrc(),
-              source,
-              sourceUrl,
-              sourceFeedUrl: url,
-            }
-          })
+              const getImgSrc = (): string => {
+                const contentMatch = getString(entry.content).match(IMG_REGEX)
+                if (contentMatch) return contentMatch[0]
+                const summaryMatch = getString(entry.summary).match(IMG_REGEX)
+                if (summaryMatch) return summaryMatch[0]
+                return feedImage || ""
+              }
+              return {
+                pubDate: entry.updated[0],
+                title: getString(entry.title),
+                link: rewriteLink(getHref()),
+                imgSrc: await toHostedImage(getImgSrc()),
+                description: toExcerpt(
+                  getString(entry.summary) || getString(entry.content)
+                ),
+                source: name,
+                category,
+                sourceUrl,
+                sourceFeedUrl: url,
+              }
+            })
+        )
 
         allItems.push(parsedAtomItems)
       } else {
@@ -187,7 +254,7 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
   }
 
   const successCount = allItems.length
-  const totalCount = xmlUrls.length
+  const totalCount = LATEST_SOURCES.length
 
   console.log("Successfully fetched RSS feeds data", {
     successCount,

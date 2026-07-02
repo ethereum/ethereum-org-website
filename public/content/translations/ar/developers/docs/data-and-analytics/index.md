@@ -75,7 +75,7 @@ lang: ar
 - [أساسيات Dune](https://docs.dune.com/#dune-basics)
 - [دليل البدء السريع لإيثيريوم من SubQuery](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [نظرة عامة على شبكة SQD](https://docs.sqd.dev/)
-- [لغة استعلام EVM](https://eql.sh/blog/alpha-release-notes)
+- [لغة استعلام EVM](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## برامج تعليمية: البيانات والتحليلات / SQL على إيثيريوم {#tutorials}
 

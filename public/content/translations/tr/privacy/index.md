@@ -1,6 +1,6 @@
 ---
 title: Ethereum'da Gizlilik
-description: Ethereum'da gizliliğinizi korumak için araçlar ve teknikler
+description: "Ethereum'da gizliliğinizi korumak için araçlar ve teknikler"
 lang: tr
 ---
 
@@ -93,5 +93,5 @@ Bunlar için çoğu araç, sıfır bilgi ispatları gibi kriptografik tekniklere
 - [Ethereum Gizlilik Temsilcileri](https://pse.dev/) (PSE), ekosistem için gizliliğe odaklanan bir Ethereum Vakfı araştırma ve geliştirme laboratuvarı
 - [Web3PrivacyNow](https://web3privacy.info/), çevrimiçi insan haklarını koruyan ve geliştiren insanlardan, projelerden ve uyumlu kuruluşlardan oluşan bir ağ
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), cüzdanların, işlevlerinin, uygulamalarının ve belirli standartlara yönelik desteklerinin kapsamlı bir listesini sunmayı amaçlayan bir Ethereum cüzdan derecelendirme sitesi.
-- [Zk-kit](https://zkkit.pse.dev/): Farklı projelerde ve sıfır bilgi protokollerinde yeniden kullanılabilecek bir dizi kütüphane (algoritmalar, yardımcı işlevler ve veri yapıları).
+- [Zk-kit](https://zkkit.org/): Farklı projelerde ve sıfır bilgi protokollerinde yeniden kullanılabilecek bir dizi kütüphane (algoritmalar, yardımcı işlevler ve veri yapıları).
 - [Gizlilik Uygulamaları](/apps/categories/privacy/) - Ethereum üzerinde çalışan özenle seçilmiş Gizlilik uygulamalarının bir listesini keşfedin.

@@ -35,24 +35,24 @@ Butuh pengantar yang lebih mendasar terlebih dahulu? Lihat [ethereum.org/learn](
 - [Menulis Transaksi Ethereum ke Basis Data SQL Menggunakan Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [Lihat cara mudah menyebarkan kontrak pintar Ethereum menggunakan C# dan VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
-**Ingin melewati penyiapan untuk saat ini, dan langsung menuju ke sampel?**
+**Ingin melewati penyiapan untuk saat ini, dan langsung ke sampel?**
 
-- [Playground](https://playground.nethereum.com/) - Berinteraksi dengan Ethereum dan pelajari cara menggunakan Nethereum melalui peramban.
+- [Nethereum Playground](https://playground.nethereum.com/) - Berinteraksi dengan Ethereum dan pelajari cara menggunakan Nethereum melalui peramban.
   - [Kueri Saldo Akun](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
   - [Kueri Saldo Kontrak Pintar ERC-20](https://docs.nethereum.com/docs/smart-contracts/erc20)
-  - [Transfer ether ke Akun](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
+  - [Transfer Ether ke Akun](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... Dan banyak lagi!
 
 ## Artikel tingkat menengah {#intermediate-articles}
 
 - [Nethereum Memulai & Proyek Pertama](https://docs.nethereum.com/docs/getting-started/first-project)
-- [Sebarkan Rantai Pengujian Pengembangan Anda Sendiri](https://github.com/Nethereum/Testchains)
-- [Plugin Codegen VSCode untuk Solidity](https://docs.nethereum.com/docs/aspire-templates/guide-codegen)
+- [Menyebarkan Rantai Uji Pengembangan Anda Sendiri](https://github.com/Nethereum/Testchains)
+- [Pembuatan kode dengan Nethereum dan VS Code](https://docs.nethereum.com/docs/smart-contracts/code-generation/)
 - [Unity dan Ethereum: Mengapa dan Bagaimana](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
-- [Buat Web API ASP.NET Core untuk dapp Ethereum](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
-- [Menggunakan Web3 Nethereum untuk Mengimplementasikan Sistem Pelacakan Rantai Pasokan](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
+- [Membuat Web API ASP.NET Core untuk aplikasi terdesentralisasi (dapp) Ethereum](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
+- [Kerangka kerja MUD Nethereum untuk aplikasi onchain terstruktur](https://docs.nethereum.com/docs/mud-framework/overview/)
 - [Pemrosesan Rantai Blok Nethereum](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
-- [Streaming Websocket Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
+- [Streaming waktu nyata Nethereum](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido dan Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum dan Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
@@ -60,17 +60,19 @@ Butuh pengantar yang lebih mendasar terlebih dahulu? Lihat [ethereum.org/learn](
 
 - [Azure Key Vault Dan Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
+- [Arsitektur referensi backend Ujo Nethereum](https://github.com/Nethereum/ujo-backend)
 
 ## Proyek, perkakas, dan hal menyenangkan lainnya tentang .NET {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](https://playground.nethereum.com/) - _Kompilasi, buat, dan jalankan cuplikan kode Nethereum di peramban_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Codegen Nethereum dengan UI di Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Penjelajah rantai blok ringan dan dompet sederhana SPA Wasm .NET_
+- [Wonka Business Rules Engine](https://github.com/Nethereum/Wonka) - _Mesin aturan bisnis (baik untuk platform .NET maupun platform Ethereum) yang pada dasarnya digerakkan oleh metadata_
 - [Nethermind](https://github.com/NethermindEth/nethermind) - _Klien Ethereum .NET Core untuk Linux, Windows, MacOS_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _fungsi utilitas untuk bekerja dengan basis kode terkait Ethereum_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Rantai pengembangan .NET yang telah dikonfigurasi sebelumnya untuk respons cepat (bukti otoritas (PoA))_
 
-Mencari lebih banyak sumber daya? Lihat [ethereum.org/developers](/developers/).
+Mencari lebih banyak sumber daya? Kunjungi [ethereum.org/developers](/developers/).
 
 ## Kontributor komunitas .NET {#dot-net-community-contributors}
 

@@ -1,7 +1,7 @@
 ---
-title: Bir cüzdan nasıl kullanılır
-metaTitle: Ethereum Cüzdanları Nasıl Kullanılır | Adım Adım
-description: Token göndermeyi, almayı ve web3 projelerine bağlanmayı açıklayan bir rehber.
+title: "Bir cüzdan nasıl kullanılır"
+metaTitle: "Ethereum Cüzdanları Nasıl Kullanılır | Adım Adım"
+description: "Token göndermeyi, almayı ve web3 projelerine bağlanmayı açıklayan bir rehber."
 lang: tr
 ---
 

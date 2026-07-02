@@ -123,22 +123,6 @@ Use encabezados `###` con marcas de tiempo para señalar las secciones principal
 
 Si no tiene una transcripción, puede dejar el cuerpo vacío y el equipo generará una.
 
-#### Paso 4: Elegir etiquetas de temas {#step-4}
-
-Elija etiquetas de temas que coincidan con las categorías existentes utilizadas en la galería. Las categorías actuales y sus etiquetas incluyen:
-
-- **Cómo funciona Ethereum**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Actualizaciones de la red**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Hoja de ruta y prioridades**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Escalabilidad y capa 2 (l2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Casos de uso**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Privacidad y seguridad**: `privacy-and-security`, `privacy`, `authentication`
-- **Historias de la comunidad**: `community-stories`, `contributing`, `translations`, `community`
-
-Para asegurarse de que su video aparezca en una sección de categoría de la galería, incluya al menos una etiqueta clave de categoría (el nombre en negrita en formato kebab-case, por ejemplo, `use-cases` o `scaling-and-layer-2`). Los videos sin una etiqueta de categoría reconocida solo aparecerán en la vista "Todos" y en los resultados de búsqueda.
-
-También puede usar etiquetas nuevas; estarán disponibles para futuras agrupaciones de categorías.
-
 #### Paso 5: Enviar su PR {#step-5}
 
 Abra una solicitud de extracción (pull request) con sus cambios a la rama `dev`. El equipo revisará su envío y le proporcionará comentarios.

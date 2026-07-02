@@ -1,6 +1,6 @@
 ---
 title: Zustandslosigkeit, Zustandsablauf und Historienverfall
-description: Erklärung von Historienverfall und zustandslosem Ethereum
+description: "Erklärung von Historienverfall und zustandslosem Ethereum"
 lang: de
 ---
 

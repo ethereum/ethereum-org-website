@@ -28,7 +28,7 @@ Termin „warstwa 2 (L2)” jest używany w odniesieniu do rollupa lub dowolnego
 
 [Rollupy optymistyczne](/developers/docs/scaling/optimistic-rollups) muszą zachować rejestr każdej historycznej transakcji, aby każdy mógł je przejrzeć i zweryfikować, czy obecny stan jest poprawny.
 Najtańszym sposobem na wprowadzenie danych do sieci głównej Ethereum jest zapisanie ich jako dane wywołania (calldata).
-To rozwiązanie zostało wybrane zarówno przez [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-), jak i [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+To rozwiązanie zostało wybrane zarówno przez [Optimism](https://docs.optimism.io/op-stack/protocol/overview), jak i [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
 
 ### Koszt transakcji w L2 {#cost-of-l2-transactions}
 
@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 Potrzebujemy funkcji tokena, aby wiedzieć, jak ją wywołać.
 
 ```solidity
-kontrakt CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ Adres tokena, dla którego jesteśmy kontraktem proxy.
      * @dev Określ adres tokena
      * @param tokenAddr_ adres kontraktu ERC-20
      */
-    konstruktor(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

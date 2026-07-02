@@ -22,7 +22,7 @@ const FooterCTA = ({
 }: FooterCTAProps) => (
   <Section
     id={id}
-    className="rounded-4xl border border-accent-a/20 bg-linear-to-b from-accent-a/5 to-accent-a/15 p-page-2x text-center dark:from-accent-a/10 dark:to-accent-a/20"
+    className="rounded-4xl border border-accent-a/20 bg-tint-accent-a p-page-2x text-center"
   >
     <h2>{header}</h2>
     <p className="mx-auto max-w-3xl">{paragraph}</p>

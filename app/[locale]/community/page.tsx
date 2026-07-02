@@ -20,8 +20,8 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import { Divider } from "@/components/ui/divider"
 import { Grid } from "@/components/ui/grid"
+import { Divider } from "@/components/ui/hr"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"

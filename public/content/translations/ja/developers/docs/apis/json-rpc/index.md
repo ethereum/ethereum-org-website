@@ -1887,7 +1887,7 @@ web3.sha3("Print(uint256)")
 
 ## 関連トピック {#related-topics}
 
-- [JSON-RPC仕様](http://www.jsonrpc.org/specification)
+- [JSON-RPC仕様](https://www.jsonrpc.org/specification)
 - [ノードとクライアント](/developers/docs/nodes-and-clients/)
 - [JavaScript API](/developers/docs/apis/javascript/)
 - [バックエンドAPI](/developers/docs/apis/backend/)

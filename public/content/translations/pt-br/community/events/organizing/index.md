@@ -210,10 +210,8 @@ Podcast: Como organizar e promover um evento de ETH de A a Z:
 
 - [O estudo de caso da ETHWarsaw, por Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
-Twitter space:
+Twitter Space:
 
-- [AMA da Comunidade ETH](https://x.com/NapulETH/status/1905732699094151623)
+- [AMA da comunidade ETH](https://x.com/NapulETH/status/1905732699094151623)
 
 Artigos:
-
-- [Construindo a ETHKL, por Danny H.](https://sekto.tech/ethkl24)

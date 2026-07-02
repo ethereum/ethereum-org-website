@@ -14,7 +14,7 @@ const cardVariants = cva(
     "flex flex-col",
     "[--banner-radius:--spacing(1)] rounded-[calc(var(--card-pad)+var(--banner-radius))]",
     "text-body no-underline hover:text-body",
-    "transition-all duration-300 hover:transition-all hover:duration-300",
+    "transition-all duration-300",
     "**:data-[label=card-header]:pb-0 **:data-[label=card-footer]:pt-0"
   ),
   {
@@ -37,7 +37,7 @@ const cardVariants = cva(
         xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
       hoverEffect: {
-        lift: "hover:shadow-md hover:scale-[1.005]",
+        lift: "hover-lift-base",
       },
     },
     defaultVariants: {
@@ -219,15 +219,9 @@ const cardBannerVariants = cva(
   {
     variants: {
       background: {
-        "accent-a":
-          "bg-linear-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20",
-        "accent-b":
-          "bg-linear-to-b from-accent-b/5 to-accent-b/10 dark:from-accent-b/10 dark:to-accent-b/20",
-        "accent-c":
-          "bg-linear-to-b from-accent-c/5 to-accent-c/10 dark:from-accent-c/10 dark:to-accent-c/20",
-        primary:
-          "bg-linear-to-b from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20",
-        body: "bg-linear-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20",
+        "accent-a": "bg-tint-accent-a",
+        primary: "bg-tint-primary",
+        body: "bg-tint-body",
         none: "",
       },
       size: {

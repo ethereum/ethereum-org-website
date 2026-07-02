@@ -1,7 +1,7 @@
 ---
-title: Úvod do Web3
-metaTitle: Co je Web3 a proč je důležitý?
-description: Úvod do Web3 – další evoluce World Wide Webu – a proč na něm záleží.
+title: "Úvod do Web3"
+metaTitle: "Co je Web3 a proč je důležitý?"
+description: "Úvod do Web3 – další evoluce World Wide Webu – a proč na něm záleží."
 lang: cs
 ---
 

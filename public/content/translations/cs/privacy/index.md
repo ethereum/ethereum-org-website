@@ -1,6 +1,6 @@
 ---
-title: Soukromí na Ethereu
-description: Nástroje a techniky pro ochranu vašeho soukromí na Ethereu
+title: "Soukromí na Ethereu"
+description: "Nástroje a techniky pro ochranu vašeho soukromí na Ethereu"
 lang: cs
 ---
 
@@ -93,5 +93,5 @@ Některé projekty zkoumající soukromí pro dokazování zahrnují [Client Sid
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE), výzkumná a vývojová laboratoř Nadace Ethereum zaměřená na soukromí pro ekosystém
 - [Web3PrivacyNow](https://web3privacy.info/), síť lidí, projektů a spřízněných organizací, které chrání a prosazují lidská práva online
 - [WalletBeat](https://beta.walletbeat.eth.limo/wallet/summary/), stránka pro hodnocení peněženek Etherea, jejímž cílem je poskytnout komplexní seznam peněženek, jejich funkčnosti, postupů a podpory určitých standardů.
-- [Zk-kit](https://zkkit.pse.dev/): Sada knihoven (algoritmy, pomocné funkce a datové struktury), které lze znovu použít v různých projektech a protokolech s nulovým vědomím.
+- [Zk-kit](https://zkkit.org/): Sada knihoven (algoritmy, pomocné funkce a datové struktury), které lze znovu použít v různých projektech a protokolech s nulovým vědomím.
 - [Privacy Apps](/apps/categories/privacy/) – Objevte seznam vybraných aplikací pro ochranu soukromí, které běží na Ethereu.

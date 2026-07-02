@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "ইথেরিয়াম - Ethereum.org থেকে সম্পূর্ণ গাইড",
+  "page-index-meta-title": "ইথেরিয়াম - ethereum.org থেকে সম্পূর্ণ গাইড",
   "page-index-meta-description": "ইথেরিয়াম হলো অর্থ এবং নতুন ধরনের অ্যাপ্লিকেশনের জন্য একটি বৈশ্বিক, বিকেন্দ্রীকৃত প্ল্যাটফর্ম। ইথেরিয়ামে, আপনি আপনার নিজের অর্থ, ডেটা এবং পরিচয়ের নিয়ন্ত্রণ রাখেন। কোনো ব্যাংক, কোনো মধ্যস্থতাকারী বা কোনো অনুমতির প্রয়োজন নেই।",
   "page-index-description": "উদ্ভাবনী অ্যাপ এবং ব্লকচেইন নেটওয়ার্কের জন্য শীর্ষস্থানীয় প্ল্যাটফর্ম",
   "page-index-title": "ইথেরিয়ামে স্বাগতম",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "প্রাইভেট এবং অনুমতিসাপেক্ষ নেটওয়ার্ক",
   "page-index-get-started-enterprise-bullet-3": "প্রাতিষ্ঠানিক রিসোর্স",
   "page-index-get-started-enterprise-cta": "এন্টারপ্রাইজ অন্বেষণ করুন",
-  "page-index-simulator-cta": "আরও গাইড ব্যবহার করে দেখুন"
+  "page-index-simulator-cta": "আরও গাইড ব্যবহার করে দেখুন",
+  "page-index-latest-updates-title": "ইথেরিয়ামের সর্বশেষ আপডেট",
+  "page-index-latest-updates-cta": "আরও দেখুন"
 }

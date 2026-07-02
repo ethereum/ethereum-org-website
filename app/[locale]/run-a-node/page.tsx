@@ -42,8 +42,8 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import { Divider } from "@/components/ui/divider"
 import { Grid } from "@/components/ui/grid"
+import { Divider } from "@/components/ui/hr"
 import InlineLink, { BaseLink, LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
@@ -162,7 +162,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <PageHero
-        header={t("page-run-a-node-title")}
+        breadcrumbs={{ slug: "run-a-node" }}
         heroImg={heroImg}
         title={<Translation id="page-run-a-node:page-run-a-node-hero-header" />}
         description={t("page-run-a-node-hero-subtitle")}
@@ -209,7 +209,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
             <Section
               id="who"
-              className="mx-auto max-w-4xl rounded-2xl bg-linear-to-br from-blue-500/20 from-10% to-pink-600/20 to-90% p-page **:[p]:max-w-3xl"
+              className="mx-auto max-w-4xl rounded-2xl bg-fade-primary p-page gradient-reverse **:[p]:max-w-3xl"
             >
               <div className="mb-space flex items-center justify-between gap-8 border-b pb-space max-md:flex-col md:gap-12">
                 <Image
@@ -268,7 +268,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   "*:flex *:items-center *:gap-page *:rounded-2xl *:p-page max-md:*:flex-col!"
                 )}
               >
-                <div className="bg-accent-a/10 md:flex-row-reverse dark:bg-accent-a/20">
+                <div className="bg-tint-accent-a gradient-reverse md:flex-row-reverse">
                   <div data-label="decoration">
                     <Terminal aria-hidden focusable="false" />
                   </div>
@@ -290,7 +290,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </div>
                 </div>
 
-                <div className="bg-accent-b/10 dark:bg-accent-b/20">
+                <div className="bg-tint-accent-b gradient-reverse">
                   <div data-label="decoration">
                     <Dappnode aria-hidden focusable="false" />
                   </div>
@@ -302,7 +302,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </p>
                 </div>
 
-                <div className="bg-accent-c/10 md:flex-row-reverse dark:bg-accent-c/20">
+                <div className="bg-tint-accent-c gradient-reverse md:flex-row-reverse">
                   <div data-label="decoration">
                     <Dapptap aria-hidden focusable="false" />
                   </div>

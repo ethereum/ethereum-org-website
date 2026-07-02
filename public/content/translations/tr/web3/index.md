@@ -1,7 +1,7 @@
 ---
-title: Web3'e Giriş
-metaTitle: Web3 nedir ve neden önemlidir?
-description: World Wide Web'in bir sonraki evrimi olan Web3'e giriş ve neden önemli olduğu.
+title: "Web3'e Giriş"
+metaTitle: "Web3 nedir ve neden önemlidir?"
+description: "World Wide Web'in bir sonraki evrimi olan Web3'e giriş ve neden önemli olduğu."
 lang: tr
 ---
 

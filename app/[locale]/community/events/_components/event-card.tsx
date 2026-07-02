@@ -49,7 +49,7 @@ function EventCardGrid({
         matomoEvent={customEventOptions}
       >
         <div className="flex gap-3">
-          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-linear-to-b from-body/5 to-body/15 dark:from-body/10 dark:to-body/20">
+          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-tint-body">
             {event.logoImage && !logoError ? (
               <Image
                 src={event.logoImage}
@@ -104,7 +104,7 @@ function EventCardHighlight({
         hideArrow
         matomoEvent={customEventOptions}
       >
-        <div className="relative h-50 w-full overflow-hidden rounded-xl bg-linear-to-b from-body/5 to-body/15 dark:from-body/10 dark:to-body/20">
+        <div className="relative h-50 w-full overflow-hidden rounded-xl bg-tint-body">
           {bannerSrc && !bannerError ? (
             <Image
               src={bannerSrc}
@@ -121,7 +121,7 @@ function EventCardHighlight({
           )}
         </div>
         <div className="flex gap-3">
-          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-linear-to-b from-body/5 to-body/15 dark:from-body/10 dark:to-body/20">
+          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-tint-body">
             {event.logoImage && !logoError ? (
               <Image
                 src={event.logoImage}

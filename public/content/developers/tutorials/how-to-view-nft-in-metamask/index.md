@@ -19,7 +19,7 @@ As a prerequisite, you should already have MetaMask on mobile installed, and it 
 
 At the top of the app, press the “Wallet” button, after which you’ll be prompted to select a network. As our NFT was minted on the Sepolia network, you’ll want to select Sepolia as your network.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4)
 
 ## Step 2: Add your collectable to MetaMask {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ Once you’re on the Sepolia network, select the “Collectibles” tab on the r
 
 You may need to refresh a couple times to view your NFT — but it will be there <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4)
 
 Congrats! You have successfully minted an NFT, and you can now view it! We can’t wait to see how you’ll take the NFT world by storm!

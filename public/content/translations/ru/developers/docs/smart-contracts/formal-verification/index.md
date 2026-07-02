@@ -271,8 +271,8 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **Mythril** — _Инструмент символьного выполнения для обнаружения уязвимостей в смарт-контрактах Эфириума_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Документация](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [Документация](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## Дополнительная литература {#further-reading}
 

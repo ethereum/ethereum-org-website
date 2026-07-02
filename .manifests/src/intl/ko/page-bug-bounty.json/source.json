@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-bug-bounty.json",
-  "generatedAt": "2026-05-25T10:43:19.675Z",
-  "rootHash": "e56660a5993b",
+  "generatedAt": "2026-06-29T23:47:44.371Z",
+  "rootHash": "b2d31a456964",
   "tree": {
-    "contentHash": "2a705e2e9c42",
-    "anchorHash": "6fd1aaf42012",
+    "contentHash": "8b9ad562dfec",
+    "anchorHash": "8180f30e072a",
     "children": {
       "page-upgrades-bug-bounty-annotated-specs": {
         "contentHash": "6f7bffb82029",
@@ -137,6 +137,38 @@
       },
       "page-upgrades-bug-bounty-leaderboard-list": {
         "contentHash": "c226ef666e95",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-leaderboard-position": {
+        "contentHash": "8fd337802be5",
+        "anchorHash": "79f80d7908a5",
+        "children": {
+          "prose:2": {
+            "contentHash": "da830035c0b2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "be3c2b53f9b6"
+          },
+          "prose:3": {
+            "contentHash": "0695b563acde",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "deb929a05f3c"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "icu:0",
+          "prose:3",
+          "icu:1"
+        ]
+      },
+      "page-upgrades-bug-bounty-leaderboard-github-profile": {
+        "contentHash": "7ad0e947db21",
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-leaderboard-points": {
@@ -830,6 +862,8 @@
       "page-upgrades-bug-bounty-hunting-li-4",
       "page-upgrades-bug-bounty-leaderboard",
       "page-upgrades-bug-bounty-leaderboard-list",
+      "page-upgrades-bug-bounty-leaderboard-position",
+      "page-upgrades-bug-bounty-leaderboard-github-profile",
       "page-upgrades-bug-bounty-leaderboard-points",
       "page-upgrades-bug-bounty-ledger-desc",
       "page-upgrades-bug-bounty-ledger-title",
@@ -957,5 +991,5 @@
       "page-upgrades-bug-bounty-not-included-li-10"
     ]
   },
-  "sourceCommitSha": "647106d896d17d983a5bec54d4f14ca23f4039cf"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "ایتھیریم ایکو سسٹم سے تعمیر کنندہ کے وسائل، ٹولز، اور پیش رفت۔",
-  "page-latest-title": "تعمیر کنندہ کی اپ ڈیٹس",
-  "page-latest-subtitle": "ایتھیریم تعمیر کنندہ ایکو سسٹم میں تازہ ترین وسائل، ٹولز اور پیش رفت پر ماہرین کے نقطہ نظر کے لیے ایک مشترکہ جگہ۔",
+  "page-latest-meta-description": "ایتھیریم کمیونٹی کی جانب سے تازہ ترین بلاگ پوسٹس، خبریں، اور اپ ڈیٹس، نیز تعمیر کنندہ ایکو سسٹم کے ماہرین کے نقطہ نظر۔",
+  "page-latest-title": "تازہ ترین ایتھیریم اپ ڈیٹس",
+  "page-latest-subtitle": "کمیونٹی کی جانب سے تازہ ترین بلاگ پوسٹس، خبریں، اور اپ ڈیٹس، نیز ایتھیریم تعمیر کنندہ ایکو سسٹم میں ہونے والی پیش رفت پر ماہرین کے نقطہ نظر۔",
   "page-latest-no-posts": "کوئی پوسٹ نہیں ملی۔",
   "page-latest-read-more": "مزید پڑھیں",
   "page-latest-minute-read": "{minutes} منٹ کا مطالعہ",
-  "page-latest-team-attribution": "ای ایف تعمیر کنندہ کی ترقی"
+  "page-latest-team-attribution": "ای ایف تعمیر کنندہ کی ترقی",
+  "page-latest-cta-submit-resource": "وسیلہ جمع کرائیں",
+  "page-latest-cta-propose-article": "مضمون تجویز کریں",
+  "page-latest-highlights-heading": "اہم جھلکیاں",
+  "page-latest-articles-heading": "تازہ ترین ایتھیریم مضامین",
+  "page-latest-sources-heading": "ان ویب سائٹس پر مزید پڑھیں",
+  "page-latest-see-more": "مزید دیکھیں (⁦{count}⁩)",
+  "page-latest-sort-label": "مضامین کو ترتیب دیں",
+  "page-latest-sort-newest": "پہلے تازہ ترین",
+  "page-latest-sort-oldest": "پہلے قدیم ترین",
+  "page-latest-sort-az": "⁦A–Z⁩",
+  "page-latest-i18n-disclaimer": "کچھ مضامین ان کی اصل زبان (انگریزی) میں دکھائے گئے ہیں۔",
+  "page-latest-suggest-heading": "وسیلہ تجویز کریں",
+  "page-latest-suggest-description": "کیا آپ کسی ایسے ایتھیریم نیوز لیٹر یا تحقیقی اشاعت کو جانتے ہیں جسے یہاں درج کیا جانا چاہیے، یا آپ کے ذہن میں تعمیر کنندہ کے مضمون کا کوئی موضوع ہے؟ اپنا وسیلہ جمع کرانے کے لیے ایک ایشو کھولیں۔"
 }

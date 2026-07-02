@@ -49,7 +49,7 @@ Aina zingine ni pamoja na:
 
 Kwa maelezo zaidi, angalia hati:
 
-- [Tazama aina za Vyper](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [Tazama aina za Vyper](https://docs.vyperlang.org/en/stable/types.html#value-types)
 - [Tazama aina za Solidity](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### Kumbukumbu {#memory}

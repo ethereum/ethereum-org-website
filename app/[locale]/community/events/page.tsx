@@ -196,7 +196,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <div
                     key={id}
                     className={cn(
-                      "flex gap-4 rounded-4xl border p-6 shadow-lg sm:gap-6 sm:p-8",
+                      "flex hover-lift-sm gap-4 rounded-4xl border p-6 sm:gap-6 sm:p-8",
                       brandColor
                     )}
                   >
@@ -262,7 +262,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               }}
             >
               <div className="rounded-full border border-dashed border-primary p-3">
-                <Plus className="size-4 transition-transform group-hover:scale-150 group-hover:transition-transform" />
+                <Plus className="size-4 transition-transform group-hover:scale-150" />
               </div>
               {t("page-events-hub-apply-cta")}
             </ButtonLink>
@@ -271,7 +271,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           {/* Find events near you */}
           <Section
             id="search"
-            className="rounded-t-[4rem] bg-gradient-banner px-6 py-12 text-center md:px-12 md:py-16 dark:bg-radial-b"
+            className="rounded-[4rem] bg-radial-primary px-6 py-12 text-center not-dark:[--offset-y:20%] md:px-12 md:py-16"
           >
             <h2>{t("page-events-section-find-events")}</h2>
             <p className="mx-auto max-w-2xl">
@@ -413,11 +413,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
             <Grid columns={2} size="wide">
               {/* Ethereum Everywhere Card */}
-              <Card
-                size="lg"
-                hoverEffect="lift"
-                className="bg-linear-to-b from-accent-a/5 to-accent-a/15 dark:from-accent-a/10 dark:to-accent-a/20"
-              >
+              <Card size="lg" hoverEffect="lift" className="bg-tint-accent-a">
                 <CardHeader className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
@@ -483,11 +479,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </Card>
 
               {/* Geode Labs Card */}
-              <Card
-                size="lg"
-                hoverEffect="lift"
-                className="bg-linear-to-b from-accent-c/5 to-accent-c/15 dark:from-accent-c/10 dark:to-accent-c/20"
-              >
+              <Card size="lg" hoverEffect="lift" className="bg-tint-accent-c">
                 <CardHeader className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={geodeLabsLogo} alt="" sizes="4rem" />

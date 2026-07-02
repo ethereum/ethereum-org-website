@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "इथेरियम इकोसिस्टम से निर्माता संसाधन, उपकरण और विकास।",
-  "page-latest-title": "निर्माता अपडेट",
-  "page-latest-subtitle": "इथेरियम निर्माता इकोसिस्टम में नवीनतम संसाधनों, उपकरणों और विकासों पर विशेषज्ञ दृष्टिकोण के लिए एक साझा स्थान।",
+  "page-latest-meta-description": "इथेरियम समुदाय के नवीनतम ब्लॉग पोस्ट, समाचार और अपडेट, साथ ही निर्माता इकोसिस्टम के विशेषज्ञों के दृष्टिकोण।",
+  "page-latest-title": "नवीनतम इथेरियम अपडेट",
+  "page-latest-subtitle": "समुदाय के नवीनतम ब्लॉग पोस्ट, समाचार और अपडेट, साथ ही इथेरियम निर्माता इकोसिस्टम में हो रहे विकास पर विशेषज्ञों के दृष्टिकोण।",
   "page-latest-no-posts": "कोई पोस्ट नहीं मिली।",
   "page-latest-read-more": "और पढ़ें",
   "page-latest-minute-read": "{minutes} मिनट में पढ़ें",
-  "page-latest-team-attribution": "EF निर्माता विकास"
+  "page-latest-team-attribution": "EF निर्माता विकास",
+  "page-latest-cta-submit-resource": "संसाधन सबमिट करें",
+  "page-latest-cta-propose-article": "लेख का प्रस्ताव दें",
+  "page-latest-highlights-heading": "मुख्य अंश",
+  "page-latest-articles-heading": "नवीनतम इथेरियम लेख",
+  "page-latest-sources-heading": "इन वेबसाइटों पर और पढ़ें",
+  "page-latest-see-more": "और देखें ({count})",
+  "page-latest-sort-label": "लेखों को क्रमबद्ध करें",
+  "page-latest-sort-newest": "सबसे नया पहले",
+  "page-latest-sort-oldest": "सबसे पुराना पहले",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "कुछ लेख उनकी मूल भाषा (अंग्रेज़ी) में दिखाए गए हैं।",
+  "page-latest-suggest-heading": "संसाधन का सुझाव दें",
+  "page-latest-suggest-description": "क्या आप किसी इथेरियम न्यूज़लेटर या शोध प्रकाशन के बारे में जानते हैं जिसे यहाँ सूचीबद्ध किया जाना चाहिए, या आपके दिमाग में कोई निर्माता लेख का विषय है? अपना संसाधन सबमिट करने के लिए एक इश्यू खोलें।"
 }

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/smart-contracts/anatomy/index.md",
-  "generatedAt": "2026-06-19T19:08:10.396Z",
-  "rootHash": "b6195521b95b",
+  "generatedAt": "2026-06-30T00:01:49.038Z",
+  "rootHash": "4d02d87351b8",
   "tree": {
     "contentHash": "4b5ddd81ffcc",
-    "anchorHash": "2277064dced0",
+    "anchorHash": "15910e82d886",
     "children": {
       "frontmatter:title": {
         "contentHash": "5b68622f4a3f",
@@ -54,7 +54,7 @@
       },
       "data": {
         "contentHash": "f6dee0669850",
-        "anchorHash": "1e4c06009542",
+        "anchorHash": "8d189831d8b8",
         "labelHash": "cec3a9b89b2e",
         "children": {
           "_label": {
@@ -83,7 +83,7 @@
           },
           "storage": {
             "contentHash": "a1c0e2f3bd7d",
-            "anchorHash": "a1d2186cf76c",
+            "anchorHash": "2086075b57c0",
             "labelHash": "a69c4dece144",
             "children": {
               "_label": {
@@ -144,7 +144,7 @@
               },
               "link:3": {
                 "contentHash": "329c464c0b93",
-                "anchorHash": "8079601a5ecf"
+                "anchorHash": "527264fd15e4"
               },
               "prose:9": {
                 "contentHash": "3973e022e932",
@@ -258,7 +258,7 @@
       },
       "functions": {
         "contentHash": "05dd71f4ec03",
-        "anchorHash": "e18e896bab96",
+        "anchorHash": "f33868869866",
         "labelHash": "75e942e5b366",
         "children": {
           "_label": {
@@ -367,7 +367,7 @@
           },
           "view-functions": {
             "contentHash": "4f11105c493a",
-            "anchorHash": "79374632f5e6",
+            "anchorHash": "5d807ee27d12",
             "labelHash": "ec13fedebb33",
             "children": {
               "_label": {
@@ -388,7 +388,7 @@
               },
               "code-fence:4": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "cba5692b4992"
+                "anchorHash": "488be73f22d2"
               },
               "prose:5": {
                 "contentHash": "b54dbc2f7e6d",
@@ -456,7 +456,7 @@
           },
           "constructor-functions": {
             "contentHash": "7d97c36943b9",
-            "anchorHash": "97624ff55798",
+            "anchorHash": "f8d005e128b5",
             "labelHash": "167f36828d89",
             "children": {
               "_label": {
@@ -517,7 +517,7 @@
               },
               "code-fence:14": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "678039d476a5"
+                "anchorHash": "cff1e4443e0d"
               }
             },
             "childrenOrder": [
@@ -1483,5 +1483,5 @@
       "related-tutorials"
     ]
   },
-  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

@@ -403,7 +403,7 @@ Il existe de multiples applications d'oracle que vous pouvez intégrer dans votr
 
 **[Réseau Pyth](https://pyth.network/)** - _Le réseau Pyth est un réseau d'oracles financiers de première partie conçu pour publier des données continues du monde réel onchain dans un environnement inviolable, décentralisé et autonome._
 
-**[API3 DAO](https://www.api3.org/)** - _API3 DAO fournit des solutions d'oracles de première partie qui offrent une plus grande transparence des sources, une sécurité et une évolutivité accrues dans une solution décentralisée pour les contrats intelligents._
+**[API3 DAO](https://api3.org/)** - _API3 DAO fournit des solutions d'oracles de première partie qui offrent une plus grande transparence des sources, une sécurité et une évolutivité accrues dans une solution décentralisée pour les contrats intelligents._
 
 **[Supra](https://supra.com/)** - Une boîte à outils verticalement intégrée de solutions inter-chaînes qui relient toutes les chaînes de blocs, publiques (L1 et L2) ou privées (entreprises), fournissant des flux de prix d'oracles décentralisés qui peuvent être utilisés pour des cas d'utilisation onchain et hors chaîne. 
 

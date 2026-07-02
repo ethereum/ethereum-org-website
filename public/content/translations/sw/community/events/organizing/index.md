@@ -206,14 +206,12 @@ Shukrani za dhati kwa kila mtu aliyechangia makala haya kwa kushiriki maarifa ya
 
 ## Rasilimali {#resources}
 
-Podikasti: Jinsi ya kuandaa na kutangaza tukio la ETH kuanzia A-Z:
+Podikasti: Jinsi ya kuandaa na kutangaza tukio la ETH kuanzia A hadi Z:
 
 - [Uchunguzi kifani wa ETHWarsaw, na Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
-Nafasi ya Twitter (Twitter space):
+Twitter space:
 
 - [AMA ya Jamii ya ETH](https://x.com/NapulETH/status/1905732699094151623)
 
 Makala:
-
-- [Kujenga ETHKL, na Danny H.](https://sekto.tech/ethkl24)

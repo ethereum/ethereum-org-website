@@ -583,21 +583,21 @@ uv run test-predictor.py
 अपेक्षित परिणाम इसके समान है:
 
 ```
-2026-01-05T19:50 के लिए भविष्यवाणी: अनुमानित 3138.93 USD, वास्तविक 3218.92 USD, त्रुटि 79.99 USD
-2026-01-06T19:56 के लिए भविष्यवाणी: अनुमानित 3243.39 USD, वास्तविक 3221.08 USD, त्रुटि 22.31 USD
-2026-01-07T20:02 के लिए भविष्यवाणी: अनुमानित 3223.24 USD, वास्तविक 3146.89 USD, त्रुटि 76.35 USD
-2026-01-08T20:11 के लिए भविष्यवाणी: अनुमानित 3150.47 USD, वास्तविक 3092.04 USD, त्रुटि 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-2026-01-31T22:33 के लिए भविष्यवाणी: अनुमानित 2637.73 USD, वास्तविक 2417.77 USD, त्रुटि 219.96 USD
-2026-02-01T22:41 के लिए भविष्यवाणी: अनुमानित 2381.70 USD, वास्तविक 2318.84 USD, त्रुटि 62.86 USD
-2026-02-02T22:49 के लिए भविष्यवाणी: अनुमानित 2234.91 USD, वास्तविक 2349.28 USD, त्रुटि 114.37 USD
-29 भविष्यवाणियों पर औसत भविष्यवाणी त्रुटि: 83.87103448275862068965517241 USD
-प्रति सुझाव औसत परिवर्तन: 4.787931034482758620689655172 USD
-परिवर्तनों का मानक विचरण (Standard variance): 104.42 USD
-लाभदायक दिन: 51.72%
-नुकसान वाले दिन: 48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 अधिकांश टेस्टर एजेंट के समान है, लेकिन यहाँ वे भाग हैं जो नए या संशोधित हैं।
@@ -765,19 +765,19 @@ uv run agent.py
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-वर्तमान कीमत: 1843.16
-2026-02-06T23:07 में, अनुमानित कीमत: 1724.41 USD
-ट्रेड से पहले खाते का बैलेंस:
-USDC बैलेंस: 927301.578272
-WETH बैलेंस: 500
-बेचें, मुझे उम्मीद है कि कीमत 118.75 USD कम हो जाएगी
-स्वीकृति लेन-देन भेजा गया: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-स्वीकृति लेन-देन माइन किया गया।
-बिक्री लेन-देन भेजा गया: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-बिक्री लेन-देन माइन किया गया।
-ट्रेड के बाद खाते का बैलेंस:
-USDC बैलेंस: 929143.797116
-WETH बैलेंस: 499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 वास्तव में इसका उपयोग करने के लिए, आपको कुछ मामूली बदलावों की आवश्यकता है।
