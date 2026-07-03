@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "Ethereum ödül programı, ödülleri belirlerken bir dizi değişkeni dikkate alır. Uygunluk, puan ve bir ödülle ilgili tüm şartların belirlenmesi tamamen ve nihai olarak Ethereum Vakfı hata ödül panelinin takdirindedir.",
   "page-upgrades-bug-bounty-leaderboard": "Tüm liderlik tablolarını gör",
   "page-upgrades-bug-bounty-leaderboard-list": "Hata ödülü liderlik tablosu",
+  "page-upgrades-bug-bounty-leaderboard-position": "{score, plural, one {# puan} other {# puan}} ile {rank}. sırada",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(GitHub Profilini Gör)",
   "page-upgrades-bug-bounty-leaderboard-points": "puan",
   "page-upgrades-bug-bounty-ledger-desc": "Ethereum Spesifikasyonları, yürütme katmanı ve mutabakat katmanı için tasarım mantığını ayrıntılandırır.",
   "page-upgrades-bug-bounty-ledger-title": "Spesifikasyon hataları",

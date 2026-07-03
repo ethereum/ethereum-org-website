@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "Il programma bounty di Ethereum considera una serie di variabili nel determinare le ricompense. Le determinazioni di idoneità, punteggio e tutti i termini relativi a un premio sono a esclusiva e finale discrezione del comitato bug bounty della Fondazione Ethereum.",
   "page-upgrades-bug-bounty-leaderboard": "Vedi le classifiche complete",
   "page-upgrades-bug-bounty-leaderboard-list": "Classifica bug bounty",
+  "page-upgrades-bug-bounty-leaderboard-position": "Alla posizione numero {rank} con {score, plural, one {# punto} other {# punti}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(Vedi profilo GitHub)",
   "page-upgrades-bug-bounty-leaderboard-points": "punti",
   "page-upgrades-bug-bounty-ledger-desc": "Le specifiche di Ethereum dettagliano la logica di progettazione per il livello di esecuzione e il livello di consenso.",
   "page-upgrades-bug-bounty-ledger-title": "Bug delle specifiche",

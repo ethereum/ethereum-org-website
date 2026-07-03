@@ -106,7 +106,6 @@ const QuizWidget = ({
       <div
         className={cn(
           "grid w-full rounded-base *:[grid-area:1/1]",
-          isStandaloneQuiz && "shadow-drop",
           getMainContainerBg()
         )}
       >

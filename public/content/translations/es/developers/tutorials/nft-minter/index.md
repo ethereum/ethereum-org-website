@@ -39,12 +39,11 @@ Por lo general, esta función de acuñación requiere que pases dos variables co
 
 Los metadatos de un NFT son realmente lo que le da vida, permitiéndole tener propiedades, como un nombre, descripción, imagen (o un activo digital diferente) y otros atributos. Aquí tienes [un ejemplo de un tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), que contiene los metadatos de un NFT.
 
-En este tutorial, nos centraremos en la parte 2, llamando a la función de acuñación de un contrato inteligente de NFT existente utilizando nuestra interfaz de usuario en React.
+En este tutorial, nos centraremos en la parte 2: llamar a una función de acuñación de un contrato inteligente de NFT utilizando nuestra interfaz de usuario de React.
 
-[Aquí tienes un enlace](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) al contrato inteligente de NFT ERC-721 al que llamaremos en este tutorial. Si deseas aprender cómo lo hicimos, te recomendamos encarecidamente que consultes nuestro otro tutorial, ["Cómo crear un NFT"](https://www.alchemy.com/docs/how-to-create-an-nft).
+Necesitarás un contrato inteligente de NFT ERC-721 desplegado en una red de prueba compatible, como Sepolia. Si deseas desplegar uno tú mismo, te recomendamos la guía de Alchemy sobre [cómo desplegar un contrato inteligente en Sepolia](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet).
 
 Genial, ahora que entendemos cómo funciona la creación de un NFT, ¡clonemos nuestros archivos de inicio!
-
 ## Clonar los archivos de inicio {#clone-the-starter-files}
 
 Primero, ve al [repositorio de GitHub nft-minter-tutorial](https://github.com/alchemyplatform/nft-minter-tutorial) para obtener los archivos de inicio de este proyecto. Clona este repositorio en tu entorno local.
@@ -195,28 +194,25 @@ Ahora que entendemos con qué estamos trabajando, ¡configuremos nuestra billete
 
 Para que los usuarios puedan interactuar con tu contrato inteligente, deberán conectar su billetera de Ethereum a tu dapp.
 
-### Descarga MetaMask {#download-metamask}
+### Descargar MetaMask {#download-metamask}
 
 Para este tutorial, usaremos MetaMask, una billetera virtual en el navegador que se usa para administrar la dirección de tu cuenta de Ethereum. Si deseas comprender más sobre cómo funcionan las transacciones en Ethereum, consulta [esta página](/developers/docs/transactions/).
 
-Puedes descargar y crear una cuenta de MetaMask de forma gratuita [aquí](https://metamask.io/download). Cuando estés creando una cuenta, o si ya tienes una, asegúrate de cambiar a la "Ropsten Test Network" (Red de prueba Ropsten) en la parte superior derecha \(para que no estemos lidiando con dinero real\).
-
+Puedes descargar y crear una cuenta de MetaMask de forma gratuita [aquí](https://metamask.io/download). Cuando estés creando una cuenta, o si ya tienes una, asegúrate de cambiar a una red de prueba compatible como Sepolia \(para que no estemos lidiando con dinero real\).
 ### Agrega ether desde un faucet {#add-ether-from-faucet}
 
-Para acuñar nuestros NFT (o firmar cualquier transacción en la cadena de bloques de Ethereum), necesitaremos algo de ETH falso. Para obtener ETH, puedes ir al [faucet de Ropsten](https://faucet.ropsten.be/) e ingresar la dirección de tu cuenta de Ropsten, luego haz clic en "Send Ropsten Eth". ¡Deberías ver ETH en tu cuenta de MetaMask poco después!
-
+Para acuñar nuestros NFT (o firmar cualquier transacción en la cadena de bloques de Ethereum), necesitaremos algo de ETH falso. Para obtener ETH de la red de prueba, usa un faucet mantenido como el [faucet de Sepolia de Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia) e ingresa la dirección de tu cuenta de Sepolia. ¡Deberías ver ETH en tu cuenta de MetaMask poco después!
 ### Comprueba tu saldo {#check-your-balance}
 
-Para verificar que nuestro saldo esté ahí, hagamos una solicitud [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando la [herramienta composer de Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto devolverá la cantidad de ETH en nuestra billetera. Después de ingresar la dirección de tu cuenta de MetaMask y hacer clic en "Send Request" (Enviar solicitud), deberías ver una respuesta como esta:
+Para comprobar que nuestro saldo está ahí, hagamos una solicitud [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) usando [la herramienta sandbox de Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Esto devolverá la cantidad de ETH en nuestra billetera. Después de ingresar la dirección de tu cuenta de MetaMask y hacer clic en "Send Request" (Enviar solicitud), deberías ver una respuesta como esta:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**NOTA:** Este resultado está en Wei, no en ether. Wei se utiliza como la denominación más pequeña de ether. La conversión de Wei a ether es: 1 ether = 10¹⁸ Wei. Así que si convertimos 0xde0b6b3a7640000 a decimal obtenemos 1\*10¹⁸, lo que equivale a 1 ether.
+**NOTA:** Este resultado está en Wei, no en ETH. Wei se utiliza como la denominación más pequeña de ether. La conversión de Wei a ETH es: 1 ETH = 10¹⁸ Wei. Así que si convertimos 0xde0b6b3a7640000 a decimal obtenemos 1\*10¹⁸, lo que equivale a 1 ETH.
 
-¡Uf! ¡Nuestro dinero falso está todo ahí! <Emoji text=":money_mouth_face:" size={1} />
-
+¡Uf! ¡Todo nuestro dinero falso está ahí! <Emoji text=":money_mouth_face:" size={1} />
 ## Conecta MetaMask a tu interfaz de usuario {#connect-metamask-to-your-ui}
 
 Ahora que nuestra billetera MetaMask está configurada, ¡conectemos nuestra dapp a ella!
@@ -587,26 +583,25 @@ También vamos a necesitar una clave API de Alchemy y la API Web3 de Alchemy par
 
 Si aún no tienes una cuenta de Alchemy, [regístrate gratis aquí.](https://alchemy.com/?a=eth-org-nft-minter)
 
-Una vez que hayas creado una cuenta de Alchemy, puedes generar una clave API creando una aplicación. Esto nos permitirá hacer solicitudes a la red de prueba Ropsten.
+Una vez que hayas creado una cuenta de Alchemy, puedes generar una clave API creando una aplicación. Esto nos permitirá hacer solicitudes a la red de prueba Sepolia.
 
-Navega a la página "Create App" (Crear aplicación) en tu panel de Alchemy pasando el cursor sobre "Apps" (Aplicaciones) en la barra de navegación y haciendo clic en "Create App".
+Navega a la página "Create App" (Crear aplicación) en tu panel de control de Alchemy pasando el cursor sobre "Apps" (Aplicaciones) en la barra de navegación y haciendo clic en "Create App".
 
-Nombra tu aplicación (nosotros elegimos "My First NFT!"), ofrece una breve descripción, selecciona "Staging" para el entorno utilizado para la contabilidad de tu aplicación y elige "Ropsten" para tu red.
+Ponle un nombre a tu aplicación (nosotros elegimos "My First NFT!"), ofrece una breve descripción, selecciona "Staging" (Pruebas) para el entorno (Environment) utilizado para la gestión de tu aplicación y elige "Sepolia" para tu red.
 
-Haz clic en "Create app" (Crear aplicación) y ¡listo! Tu aplicación debería aparecer en la tabla a continuación.
+Haz clic en "Create app" (Crear aplicación) y ¡listo! Tu aplicación debería aparecer en la tabla de abajo.
 
-Impresionante, así que ahora que hemos creado nuestra URL de la API HTTP de Alchemy, cópiala en tu portapapeles...
+Genial, ahora que hemos creado nuestra URL de la API HTTP de Alchemy, cópiala en tu portapapeles...
 
-…y luego agreguémosla a nuestro archivo `.env`. En conjunto, tu archivo .env debería verse así:
+...y luego agreguémosla a nuestro archivo `.env`. En conjunto, tu archivo .env debería verse así:
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 Ahora que tenemos el ABI de nuestro contrato y nuestra clave API de Alchemy, estamos listos para cargar nuestro contrato inteligente usando [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
-
 ### Configura tu endpoint y contrato de Alchemy Web3 {#setup-alchemy-endpoint}
 
 Primero, si aún no lo tienes, deberás instalar [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) navegando al directorio de inicio: `nft-minter-tutorial` en la terminal:
@@ -851,10 +846,9 @@ const onMintPressed = async () => {
 
 ## Despliega tu NFT en un sitio web en vivo {#deploy-your-nft}
 
-¿Listo para poner tu proyecto en vivo para que los usuarios interactúen con él? Consulta [este tutorial](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) para desplegar tu Minter en un sitio web en vivo.
+¿Listo para publicar tu proyecto para que los usuarios interactúen con él? Consulta la [documentación de despliegue de React](https://create-react-app.dev/docs/deployment/) para desplegar tu Minter en un sitio web en vivo.
 
 Un último paso...
-
 ## Toma el mundo de la cadena de bloques por asalto {#take-the-blockchain-world-by-storm}
 
 Es broma, ¡llegaste al final del tutorial!
@@ -865,6 +859,6 @@ Para recapitular, al construir un acuñador de NFT, aprendiste con éxito a:
 - Llamar a métodos de contratos inteligentes desde tu frontend
 - Firmar transacciones usando MetaMask
 
-Es de suponer que te gustaría poder presumir de los NFT acuñados a través de tu dapp en tu billetera, ¡así que asegúrate de consultar nuestro tutorial rápido [Cómo ver tu NFT en tu billetera](https://www.alchemy.com/docs/how-to-view-your-nft-in-your-mobile-wallet)!
+Es de suponer que te gustaría poder presumir de los NFT acuñados a través de tu dapp en tu billetera, ¡así que asegúrate de consultar nuestro tutorial rápido [Cómo ver tu NFT en tu billetera](/developers/tutorials/how-to-view-nft-in-metamask/)!
 
 Y, como siempre, si tienes alguna pregunta, estamos aquí para ayudarte en el [Discord de Alchemy](https://discord.gg/gWuC7zB). ¡Estamos ansiosos por ver cómo aplicas los conceptos de este tutorial a tus futuros proyectos!

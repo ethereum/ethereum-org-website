@@ -18,15 +18,16 @@ Nous sommes une communauté accueillante qui vous aidera à vous développer et 
 - [Travailler sur un ticket ouvert](https://github.com/ethereum/ethereum-org-website/issues) – Tâches que nous avons identifiées et qui doivent être accomplies
 
 **Design**
-- [Aider à concevoir le site Web](/contributing/design/) – Les designers de tous niveaux peuvent contribuer à l'amélioration du site Web
+- [Aider à concevoir le site Web](/contributing/design/) – Les designers de tous niveaux peuvent contribuer à améliorer le site Web
 
 **Contenu**
 - [Créer/modifier du contenu](/contributing/#how-to-update-content) – Suggérez de nouvelles pages ou apportez des modifications à ce qui existe déjà
-- [Rédiger un article de constructeur](/contributing/adding-articles/) - Contribuez en rédigeant un article pour la section [Dernières actualités](/latest/)
+- [Rédiger un article de constructeur](/contributing/adding-articles/) - Proposez un article pour la section [Dernières actualités](/latest/)
 - [Ajouter des ressources communautaires](/contributing/content-resources/) – Ajoutez un article ou une ressource utile à une page pertinente
 - [Suggérer un rapport](/contributing/adding-reports/) - Suggérez un rapport de recherche pour la page [Rapports](/reports/)
-- [Suggérer une ressource de design](/contributing/design/adding-design-resources/) – Ajoutez, mettez à jour et supprimez des ressources de design utiles
+- [Partager votre histoire](/contributing/adding-community-stories/) - Soumettez une histoire sur vos expériences personnelles avec les technologies open source et sanctuaires, sur la façon dont l'écosystème Ethereum a eu un impact sur votre vie, ou sur la façon dont vous et votre communauté utilisez Ethereum
 - [Quiz](/contributing/quizzes/) – Ajoutez, mettez à jour et supprimez des banques de questions de quiz pour une page pertinente
+- [Suggérer une ressource de design](/contributing/design/adding-design-resources/) – Ajoutez, mettez à jour et supprimez des ressources de design utiles
 - [Suggérer une vidéo](/contributing/adding-videos/) – Suggérez une vidéo éducative pour la galerie vidéo
 
 **Idées de fonctionnalités**
@@ -36,11 +37,11 @@ Nous sommes une communauté accueillante qui vous aidera à vous développer et 
 - [Ajouter une plateforme d'échange](/contributing/adding-exchanges/) – Ajoutez une plateforme d'échange à notre [outil de recherche de plateformes d'échange](/get-eth/#country-picker)
 - [Ajouter un produit](/contributing/adding-products/) – Ajoutez une application décentralisée (dapp) ou un portefeuille à une page pertinente
 - [Ajouter des outils de développement](/contributing/adding-developer-tools/) – Ajoutez un outil de développement à une page pertinente
-- [Ajouter une couche 2](/contributing/adding-layer-2s/) – Ajoutez une couche 2 (l2) à une page pertinente
+- [Ajouter une couche 2 (l2)](/contributing/adding-layer-2s/) – Ajoutez un l2 à une page pertinente
 - [Ajouter un produit ou service de staking](/contributing/adding-staking-products/) – Ajoutez un projet qui facilite le staking en solo, le staking mutualisé ou le staking en tant que service
 - [Ajouter un portefeuille](/contributing/adding-wallets/) – Ajoutez un portefeuille pour la [page de recherche de portefeuilles](/wallets/find-wallet/)
-- [Suggérer un projet pour notre page DeSci](/contributing/adding-desci-projects/) – Ajoutez un projet construit sur Ethereum qui contribue à la science décentralisée (DeSci)
-- [Ajouter une ressource](/contributing/adding-resources/) – Ajoutez une ressource utile à toute page pertinente
+- [Suggérer un projet pour notre page de science décentralisée (DeSci)](/contributing/adding-desci-projects/) – Ajoutez un projet construit sur Ethereum qui contribue à la DeSci
+- [Ajouter une ressource](/contributing/adding-resources/) – Ajoutez une ressource utile à n'importe quelle page pertinente
 
 Des questions ? 🤔 Rejoignez notre [serveur Discord](https://discord.gg/ethereum-org)
 ## Bonnes premières tâches pour commencer à contribuer {#good-first-tasks-to-start-contributing}

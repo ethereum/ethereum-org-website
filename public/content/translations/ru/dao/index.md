@@ -138,15 +138,13 @@ _Обычно используется для децентрализованно
 - [Создать DAO с помощью DAOHaus](https://app.daohaus.club/summon)
 - [Создать Governor DAO с помощью Tally](https://www.tally.xyz/get-started)
 - [Создать DAO на базе Aragon](https://aragon.org/product)
-- [Создать колонию](https://colony.io/)
-- [Создать DAO с голографическим консенсусом DAOstack](https://alchemy.daostack.io/daos/create)
+- [Создать colony](https://colony.io/)
 - [Запустить DAO с помощью DeGov Launcher](https://docs.degov.ai/integration/deploy)
-
 ## Дополнительная литература {#further-reading}
 
 ### Статьи о DAO {#dao-articles}
 
-- [Что такое DAO?](https://aragon.org/dao) — [Aragon](https://aragon.org/)
+- [Что такое DAO?](https://blog.aragon.org/what-is-a-dao/) — [Aragon](https://aragon.org/)
 - [Дом DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) — [Metagame](https://wiki.metagame.wtf/)
 - [Что такое DAO и для чего она нужна?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) — [DAOhaus](https://daohaus.club/)
 - [Как создать цифровое сообщество на базе DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) — [DAOhaus](https://daohaus.club/)

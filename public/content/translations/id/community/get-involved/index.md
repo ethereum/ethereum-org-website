@@ -11,7 +11,7 @@ Mulailah dengan membaca tentang misi dan nilai-nilai ethereum.org dalam [kode et
 ## Pengembang <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Pelajari dan coba Ethereum di [ethereum.org/developers/](/developers/)
-- Hadiri peretasan (hackathon) [ETHGlobal](https://ethglobal.co/) di dekat Anda!
+- Hadiri peretasan (hackathon) [ETHGlobal](https://ethglobal.com/) di dekat Anda!
 - Lihat [proyek-proyek yang terkait dengan bidang keahlian atau bahasa pemrograman pilihan Anda](/developers/docs/programming-languages/)
 - Tonton atau berpartisipasilah dalam [panggilan Konsensus dan Lapisan Eksekusi](https://www.youtube.com/@EthereumProtocol/streams)
 - [Daftar keinginan Program Dukungan Ekosistem](https://esp.ethereum.foundation/wishlist/) - area perkakas, dokumentasi, dan infrastruktur di mana Program Dukungan Ekosistem Ethereum secara aktif mencari aplikasi hibah
@@ -80,7 +80,7 @@ Dengan melakukan staking ETH Anda, Anda bisa mendapatkan imbalan sekaligus memba
 
 Ekosistem Ethereum memiliki misi untuk mendanai barang publik dan proyek-proyek yang berdampak. Dengan donasi yang sangat kecil, Anda dapat menunjukkan dukungan Anda dan memungkinkan pekerjaan penting untuk diwujudkan.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Profesional keuangan & Akuntan <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

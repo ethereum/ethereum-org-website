@@ -1,6 +1,6 @@
 ---
-title: Absence d'état, expiration d'état et expiration de l'historique
-description: Explication de l'expiration de l'historique et de l'absence d'état sur Ethereum
+title: "Absence d'état, expiration d'état et expiration de l'historique"
+description: "Explication de l'expiration de l'historique et de l'absence d'état sur Ethereum"
 lang: fr
 ---
 

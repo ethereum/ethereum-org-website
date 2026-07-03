@@ -1,7 +1,7 @@
 ---
-title: 我被騙了或遺失了資金
-metaTitle: 詐騙協助與檢舉
-description: 如果您遭到詐騙該怎麼辦、如何保護剩餘資產，以及去哪裡檢舉詐欺行為。
+title: "我被騙了或遺失了資金"
+metaTitle: "詐騙協助與檢舉"
+description: "如果您遭到詐騙該怎麼辦、如何保護剩餘資產，以及去哪裡檢舉詐欺行為。"
 lang: zh-tw
 ---
 
@@ -22,7 +22,7 @@ lang: zh-tw
 
 如果您曾與詐騙者互動，或懷疑您的錢包已遭入侵，請立即採取以下步驟：
 
-1. **轉移剩餘資金**至詐騙者無法存取的全新安全錢包
+1. <strong>轉移剩餘資金</strong>至詐騙者無法存取的全新安全錢包
 2. **撤銷代幣授權。** 詐騙者經常誘騙您授權無上限的代幣支出。撤銷這些權限可防止您的錢包被進一步掏空
 3. **更改密碼**（任何可能連結的交易所帳戶）
 4. **啟用雙重驗證 (2FA)**（所有與加密貨幣相關的帳戶）
@@ -85,8 +85,8 @@ lang: zh-tw
 ## 需注意的詐騙類型 {#scam-types}
 
 <ExpandableCard
-title="Giveaway and airdrop scams"
-contentPreview="No one is giving away free ETH. These offers are always scams."
+title="贈品與空投詐騙"
+contentPreview="沒有人會免費贈送 ETH。這些活動都是詐騙。"
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
 >
@@ -100,8 +100,8 @@ eventName="clicked giveaway scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Impersonation and fake support"
-contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
+title="冒充與假客服"
+contentPreview="以太坊或 ethereum.org 的人員絕對不會主動聯絡您。"
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
 >
@@ -118,8 +118,8 @@ eventName="clicked impersonation scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Recovery scams"
-contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
+title="追回詐騙"
+contentPreview="被騙後，請小心假冒的「加密貨幣追回專家」。"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
 >
@@ -133,8 +133,8 @@ eventName="clicked recovery scam"
 </ExpandableCard>
 
 <ExpandableCard
-title="Phishing websites and fake apps"
-contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
+title="釣魚網站與假應用程式"
+contentPreview="詐騙網站會模仿真實的錢包與交易所，以竊取您的憑證。"
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
 >

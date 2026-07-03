@@ -123,22 +123,6 @@ Tumia vichwa vya `###` vilivyo na mihuri ya muda ili kuweka alama kwenye sehemu 
 
 Ikiwa huna nakala ya maandishi, unaweza kuacha mwili wazi na timu itatengeneza moja.
 
-#### Hatua ya 4: Chagua lebo za mada {#step-4}
-
-Chagua lebo za mada zinazolingana na kategoria zilizopo zinazotumika kwenye matunzio. Kategoria za sasa na lebo zake ni pamoja na:
-
-- **Jinsi Ethereum Inavyofanya Kazi**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Maboresho ya Mtandao**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Ramani ya Njia na Vipaumbele**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Kuongeza Uwezo na tabaka la 2 (l2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Kesi za Matumizi**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Faragha na Usalama**: `privacy-and-security`, `privacy`, `authentication`
-- **Hadithi za Jamii**: `community-stories`, `contributing`, `translations`, `community`
-
-Ili kuhakikisha video yako inaonekana kwenye rafu ya kategoria ya matunzio, jumuisha angalau lebo moja kuu ya kategoria (jina lililokolezwa katika kebab-case, k.m. `use-cases` au `scaling-and-layer-2`). Video zisizo na lebo ya kategoria inayotambulika zitaonekana tu katika mwonekano wa "Zote" na matokeo ya utafutaji.
-
-Unaweza pia kutumia lebo mpya — zitapatikana kwa makundi ya kategoria ya baadaye.
-
 #### Hatua ya 5: Wasilisha PR yako {#step-5}
 
 Fungua ombi la kuvuta (pull request) na mabadiliko yako kwenye tawi la `dev`. Timu itakagua wasilisho lako na kutoa maoni.

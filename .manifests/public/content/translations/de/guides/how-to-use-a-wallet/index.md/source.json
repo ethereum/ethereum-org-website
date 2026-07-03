@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/guides/how-to-use-a-wallet/index.md",
-  "generatedAt": "2026-06-08T09:56:09.880Z",
-  "rootHash": "affa6cfe2bf0",
+  "generatedAt": "2026-06-30T00:51:01.886Z",
+  "rootHash": "6472e979e4f6",
   "tree": {
-    "contentHash": "0ae8b2920dcb",
-    "anchorHash": "07ac14694db0",
+    "contentHash": "0c0e8edf71ad",
+    "anchorHash": "41df80ecf2d3",
     "children": {
       "frontmatter:title": {
         "contentHash": "2b58bdf9f156",
@@ -108,15 +108,15 @@
         ]
       },
       "connecting-to-projects": {
-        "contentHash": "76765b3cfb87",
-        "anchorHash": "5a47a12ea20c",
+        "contentHash": "9afa678bda86",
+        "anchorHash": "184e459422e0",
         "labelHash": "efd3be6ddfae",
         "children": {
           "_label": {
             "contentHash": "efd3be6ddfae",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:4": {
+          "prose:3": {
             "contentHash": "c856bf50b53c",
             "anchorHash": "e3b0c44298fc"
           },
@@ -124,7 +124,7 @@
             "contentHash": "30ae9c966d4b",
             "anchorHash": "6feaf9f71edc"
           },
-          "prose:5": {
+          "prose:4": {
             "contentHash": "5312a2a52af6",
             "anchorHash": "e3b0c44298fc"
           },
@@ -132,7 +132,7 @@
             "contentHash": "d7dab77fd0e2",
             "anchorHash": "467faa2b3792"
           },
-          "prose:6": {
+          "prose:5": {
             "contentHash": "c1719caaee3a",
             "anchorHash": "e3b0c44298fc"
           },
@@ -140,17 +140,17 @@
             "contentHash": "46de0975e258",
             "anchorHash": "6c7d348a0523"
           },
-          "prose:7": {
+          "prose:6": {
             "contentHash": "cdb4ee2aea69",
             "anchorHash": "e3b0c44298fc"
           },
-          "html-tag:3": {
+          "component:8": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           },
           "component:9": {
-            "contentHash": "1019a51618fb",
-            "anchorHash": "922415cc666f",
+            "contentHash": "8184307f03ac",
+            "anchorHash": "3f8b8c1f14e1",
             "children": {
               "attr:variant": {
                 "contentHash": "e3b0c44298fc",
@@ -167,26 +167,40 @@
                 }
               },
               "component:1": {
-                "contentHash": "e2a6d4a15100",
-                "anchorHash": "102fdc653ece",
+                "contentHash": "d667df3337db",
+                "anchorHash": "cb22b4d52cd6",
                 "children": {
                   "attr:className": {
                     "contentHash": "e3b0c44298fc",
                     "anchorHash": "e796b9e20a49"
                   },
-                  "prose:1": {
+                  "prose:0": {
                     "contentHash": "9aec37764785",
                     "anchorHash": "e3b0c44298fc"
                   },
-                  "html-tag:0": {
-                    "contentHash": "b47f8105a440",
-                    "anchorHash": "b9dbc082e3fe"
+                  "component:1": {
+                    "contentHash": "7a1de0a9b8a3",
+                    "anchorHash": "1b106ab55d9a",
+                    "children": {
+                      "attr:href": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "65c77e41e1a7"
+                      },
+                      "prose:0": {
+                        "contentHash": "7816680efa5d",
+                        "anchorHash": "e3b0c44298fc"
+                      }
+                    },
+                    "childrenOrder": [
+                      "attr:href",
+                      "prose:0"
+                    ]
                   }
                 },
                 "childrenOrder": [
                   "attr:className",
-                  "prose:1",
-                  "html-tag:0"
+                  "prose:0",
+                  "component:1"
                 ]
               }
             },
@@ -199,14 +213,14 @@
         },
         "childrenOrder": [
           "_label",
-          "prose:4",
+          "prose:3",
           "image:0",
-          "prose:5",
+          "prose:4",
           "image:1",
-          "prose:6",
+          "prose:5",
           "link:2",
-          "prose:7",
-          "html-tag:3",
+          "prose:6",
+          "component:8",
           "component:9"
         ]
       },
@@ -340,5 +354,5 @@
       "frequently-asked-questions"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

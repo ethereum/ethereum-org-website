@@ -271,8 +271,8 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **Mythril** - _이더리움 스마트 컨트랙트의 취약점을 탐지하기 위한 기호 실행 도구_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [문서](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [문서](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## 더 읽어보기 {#further-reading}
 

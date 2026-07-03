@@ -195,7 +195,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol`は、イーサを持たないユーザーがブロックチェーンを使用できるようにするシステムである[OpenGSN](https://www.opengsn.org/)を使用するために必要な定義です。これは古いバージョンであることに注意してください。OpenGSNと統合したい場合は、[こちらのチュートリアルを使用してください](https://docs.opengsn.org/javascript-client/tutorial.html)。
+- `GSN/Context.sol`は、イーサを持たないユーザーがブロックチェーンを使用できるようにするシステムである[OpenGSN](https://opengsn.org/)を使用するために必要な定義です。これは古いバージョンであることに注意してください。OpenGSNと統合したい場合は、[こちらのチュートリアルを使用してください](https://docs.opengsn.org/javascript-client/tutorial.html)。
 - [SafeMathライブラリ](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)は、Solidityバージョン**&lt;0.8.0**での算術オーバーフロー/アンダーフローを防ぎます。Solidity ≥0.8.0では、算術演算はオーバーフロー/アンダーフロー時に自動的にリバートされるため、SafeMathは不要です。このコントラクトは、古いコンパイラバージョンとの下位互換性のためにSafeMathを使用しています。
 
 &nbsp;

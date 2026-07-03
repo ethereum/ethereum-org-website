@@ -1,7 +1,7 @@
 ---
-title: Web3入門
-metaTitle: Web3とは何か、なぜ重要なのか？
-description: World Wide Webの次なる進化であるWeb3の紹介と、それが重要である理由。
+title: "Web3入門"
+metaTitle: "Web3とは何か、なぜ重要なのか？"
+description: "World Wide Webの次なる進化であるWeb3の紹介と、それが重要である理由。"
 lang: ja
 ---
 

@@ -13,7 +13,6 @@ import {
   AlertIcon,
   AlertTitle,
 } from "@/components/ui/alert"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
@@ -23,8 +22,10 @@ import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import FooterCTA from "../events/_components/footer-cta"
+
 import { sections } from "./data"
-import SupportJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 
 const EVENT_CATEGORY = "Support"
 
@@ -42,9 +43,9 @@ export default async function Page(props: { params: Promise<PageParams> }) {
   )
 
   return (
-    <div>
-      <SupportJsonLD locale={locale} contributors={contributors} />
-      {/* Hero */}
+    <>
+      <PageJsonLD locale={locale} contributors={contributors} />
+
       <PageHero
         breadcrumbs={{ slug: "/community/support", startDepth: 1 }}
         title={t("page-community-support-hero-title")}
@@ -61,142 +62,127 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         variant="no-divider"
       />
 
-      <MainArticle className="space-y-16 px-4 py-16 md:px-10 md:py-20">
-        {/* Decentralization alert */}
-        <Alert className="max-w-3xl text-body-medium">
-          <AlertIcon>
-            <Shield />
-          </AlertIcon>
-          <AlertContent>
-            <AlertTitle className="text-body">
-              {t("page-community-support-alert-title")}
-            </AlertTitle>
-            <AlertDescription className="text-sm">
-              {t("page-community-support-alert-description")}
-            </AlertDescription>
-          </AlertContent>
-        </Alert>
+      <main className="px-page pb-page max-lg:pt-page-2x">
+        <MainArticle className="flow">
+          {/* Decentralization alert */}
+          <Alert className="max-w-3xl">
+            <AlertIcon>
+              <Shield />
+            </AlertIcon>
+            <AlertContent>
+              <AlertTitle>{t("page-community-support-alert-title")}</AlertTitle>
+              <AlertDescription className="text-sm">
+                {t("page-community-support-alert-description")}
+              </AlertDescription>
+            </AlertContent>
+          </Alert>
 
-        {/* Section 1: Get help */}
-        <Section id="get-help" className="space-y-6">
-          <h2 className="text-2xl lg:text-3xl">
-            {t("page-community-support-get-help")}
-          </h2>
-          <Grid columns={2} size="wider">
-            {sections.getHelp.map(
-              ({
-                titleKey,
-                Svg,
-                colorClass,
-                descriptionKey,
-                eventAction,
-                items,
-              }) => (
-                <WindowBox
-                  key={titleKey}
-                  title={<h3>{t(titleKey)}</h3>}
-                  svg={<Svg className={cn(colorClass, "size-8")} />}
-                  className="h-fit"
-                >
-                  <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
-                    <p className="text-sm leading-relaxed text-body-medium">
-                      {t(descriptionKey)}
-                    </p>
-                    {items.map(({ labelKey, href, eventName }) => (
-                      <Link
-                        key={href}
-                        className="hover:bg-background-highlight"
-                        href={href}
-                        customEventOptions={{
-                          eventCategory: EVENT_CATEGORY,
-                          eventAction,
-                          eventName,
-                        }}
-                      >
-                        {t(labelKey)}
-                      </Link>
-                    ))}
-                  </div>
-                </WindowBox>
-              )
-            )}
-          </Grid>
-        </Section>
+          {/* Section 1: Get help */}
+          <Section id="get-help">
+            <h2>{t("page-community-support-get-help")}</h2>
+            <Grid columns={2} size="wider">
+              {sections.getHelp.map(
+                ({
+                  titleKey,
+                  Svg,
+                  colorClass,
+                  descriptionKey,
+                  eventAction,
+                  items,
+                }) => (
+                  <WindowBox
+                    key={titleKey}
+                    title={<h3>{t(titleKey)}</h3>}
+                    svg={<Svg className={cn(colorClass, "size-8")} />}
+                    className="h-fit"
+                  >
+                    <div className="*:px-6 *:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
+                      <p className="text-sm leading-relaxed text-body-medium">
+                        {t(descriptionKey)}
+                      </p>
+                      {items.map(({ labelKey, href, eventName }) => (
+                        <Link
+                          key={href}
+                          className="hover:bg-background-highlight"
+                          href={href}
+                          customEventOptions={{
+                            eventCategory: EVENT_CATEGORY,
+                            eventAction,
+                            eventName,
+                          }}
+                        >
+                          {t(labelKey)}
+                        </Link>
+                      ))}
+                    </div>
+                  </WindowBox>
+                )
+              )}
+            </Grid>
+          </Section>
 
-        {/* Section 2: Learn */}
-        <Section id="learn" className="space-y-6">
-          <h2 className="text-2xl lg:text-3xl">
-            {t("page-community-support-learn")}
-          </h2>
-          <Grid columns={2} size="wider">
-            {sections.learn.map(
-              ({
-                titleKey,
-                Svg,
-                colorClass,
-                descriptionKey,
-                eventAction,
-                items,
-              }) => (
-                <WindowBox
-                  key={titleKey}
-                  title={<h3>{t(titleKey)}</h3>}
-                  svg={<Svg className={cn(colorClass, "size-8")} />}
-                  className="h-fit"
-                >
-                  <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
-                    <p className="text-sm leading-relaxed text-body-medium">
-                      {t(descriptionKey)}
-                    </p>
-                    {items.map(({ labelKey, href, eventName }) => (
-                      <Link
-                        key={href}
-                        className="hover:bg-background-highlight"
-                        href={href}
-                        customEventOptions={{
-                          eventCategory: EVENT_CATEGORY,
-                          eventAction,
-                          eventName,
-                        }}
-                      >
-                        {t(labelKey)}
-                      </Link>
-                    ))}
-                  </div>
-                </WindowBox>
-              )
-            )}
-          </Grid>
-        </Section>
+          {/* Section 2: Learn */}
+          <Section id="learn">
+            <h2>{t("page-community-support-learn")}</h2>
+            <Grid columns={2} size="wider">
+              {sections.learn.map(
+                ({
+                  titleKey,
+                  Svg,
+                  colorClass,
+                  descriptionKey,
+                  eventAction,
+                  items,
+                }) => (
+                  <WindowBox
+                    key={titleKey}
+                    title={<h3>{t(titleKey)}</h3>}
+                    svg={<Svg className={cn(colorClass, "size-8")} />}
+                    className="h-fit"
+                  >
+                    <div className="*:px-6 *:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
+                      <p className="text-sm leading-relaxed text-body-medium">
+                        {t(descriptionKey)}
+                      </p>
+                      {items.map(({ labelKey, href, eventName }) => (
+                        <Link
+                          key={href}
+                          className="hover:bg-background-highlight"
+                          href={href}
+                          customEventOptions={{
+                            eventCategory: EVENT_CATEGORY,
+                            eventAction,
+                            eventName,
+                          }}
+                        >
+                          {t(labelKey)}
+                        </Link>
+                      ))}
+                    </div>
+                  </WindowBox>
+                )
+              )}
+            </Grid>
+          </Section>
 
-        {/* Still need help? */}
-        <Section
-          id="still-need-help"
-          className="space-y-8 rounded-4xl border border-accent-a/20 bg-linear-to-b from-accent-a/5 to-accent-a/10 px-8 py-16 lg:px-16 dark:from-accent-a/10 dark:to-accent-a/20"
-        >
-          <div className="flex flex-col items-center gap-6 text-center">
-            <h2 className="text-3xl lg:text-4xl">
-              {t("page-community-support-still-need-help")}
-            </h2>
-            <p className="max-w-lg text-body-medium">
-              {t("page-community-support-still-need-help-description")}
-            </p>
-            <ButtonLink
-              href="https://discord.gg/ethereum-org"
-              customEventOptions={{
-                eventCategory: EVENT_CATEGORY,
-                eventAction: "Still need help?",
-                eventName: "ethereum.org Discord",
-              }}
-            >
-              {t("page-community-support-discord")}
-            </ButtonLink>
-          </div>
-        </Section>
+          {/* Still need help? */}
+          <FooterCTA
+            id="still-need-help"
+            header={t("page-community-support-still-need-help")}
+            paragraph={t("page-community-support-still-need-help-description")}
+            href="https://discord.gg/ethereum-org"
+            customEventOptions={{
+              eventCategory: EVENT_CATEGORY,
+              eventAction: "Still need help?",
+              eventName: "ethereum.org Discord",
+            }}
+            ctaLabel={t("page-community-support-discord")}
+          />
+        </MainArticle>
 
         <ContentFeedback />
-      </MainArticle>
-    </div>
+      </main>
+    </>
   )
 }
 

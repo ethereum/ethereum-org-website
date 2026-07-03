@@ -137,5 +137,16 @@
   "page-developers-why-title": "높은 급여를 받고, 원격으로 일하며, 미래를 구축하세요.",
   "page-developers-why-subtitle": "블록체인 커리어의 절반 이상이 원격 근무를 우선으로 하며, 일부 추정치에 따르면 그 비율은 최대 70%에 달합니다.",
   "page-developers-why-avg-salary-dev": "평균 개발자 급여",
-  "page-developers-why-avg-salary-blockchain": "블록체인 산업 평균 급여"
+  "page-developers-why-avg-salary-blockchain": "블록체인 산업 평균 급여",
+  "page-developers-why-grid-money-heading": "프로그래밍 가능한 돈",
+  "page-developers-why-grid-money-desc": "가치가 언제, 누구에게, 어떻게 이동하는지 정의하는 코드를 작성하세요. 은행이나 중개자 없이 여러분이 정의한 로직만 존재합니다.",
+  "page-developers-why-grid-skills-heading": "미래를 대비하는 기술",
+  "page-developers-why-grid-skills-desc": "차세대 인터넷의 구성 요소를 배워보세요. 기술은 진화할 수 있지만, Web3의 원칙은 계속 유지될 것입니다.",
+  "page-developers-why-grid-censorship-heading": "검열 저항성",
+  "page-developers-why-grid-censorship-desc": "정부, 기업 또는 알고리즘에 의해 침묵당하지 않는 프로젝트와 상거래를 구축하세요. 중요한 것이라면 온라인에 계속 남아있게 됩니다.",
+  "page-developers-why-grid-sovereignty-heading": "디지털 주권",
+  "page-developers-why-grid-sovereignty-desc": "여러분을 삭제할 수 있는 플랫폼에 의존하지 않고 온라인에서 자신의 신원, 자산 및 창작물을 소유하세요.",
+  "page-developers-blog-title": "빌더 업데이트",
+  "page-developers-blog-desc": "최신 이더리움 빌더 리소스, 도구 및 개발에 대한 인사이트를 제공합니다.",
+  "page-developers-blog-view-all": "모든 업데이트 보기"
 }

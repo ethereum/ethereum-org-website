@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "Данные и аналитика",
   "docs-nav-data-and-analytics-description": "Как данные блокчейна агрегируются, организуются и внедряются в децентрализованные приложения (dapp)",
   "docs-nav-data-availability": "Доступность данных",
+  "docs-nav-data-availability-description": "Обзор проблем и решений, связанных с доступностью данных в Эфириуме",
   "docs-nav-data-availability-storage-strategies": "Стратегии хранения данных блокчейна",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "Валидация состояния в разработке",
   "layer-2-metis-note": "Доказательства мошенничества в разработке",
   "layer-2-optimism-note": "Доказательства ошибок в разработке",
-  "back-to-top": "Наверх",
   "banner-page-incomplete": "Эта страница не завершена, и мы будем рады вашей помощи. Отредактируйте эту страницу и добавьте все, что, по вашему мнению, может быть полезно другим.",
   "next": "Далее",
   "previous": "Назад"

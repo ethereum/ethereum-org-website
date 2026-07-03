@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/privacy/index.md",
-  "generatedAt": "2026-06-08T10:03:35.243Z",
-  "rootHash": "636f2837eb7e",
+  "generatedAt": "2026-06-30T00:51:25.263Z",
+  "rootHash": "03eb98b122d6",
   "tree": {
     "contentHash": "02c8ff7e60a9",
-    "anchorHash": "6aafabddd329",
+    "anchorHash": "28e221e84537",
     "children": {
       "frontmatter:title": {
         "contentHash": "d452cb414fe3",
@@ -447,7 +447,7 @@
       },
       "resources": {
         "contentHash": "0b99ae5b5db0",
-        "anchorHash": "66415f9adb18",
+        "anchorHash": "c6a963e2483d",
         "labelHash": "e89b30aa1dc3",
         "children": {
           "_label": {
@@ -484,7 +484,7 @@
           },
           "link:3": {
             "contentHash": "670a1a721a5f",
-            "anchorHash": "1d3e9feef9ae"
+            "anchorHash": "75d052947d13"
           },
           "prose:9": {
             "contentHash": "38f6b039898b",
@@ -532,5 +532,5 @@
       "resources"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

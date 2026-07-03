@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "資料與分析",
   "docs-nav-data-and-analytics-description": "區塊鏈資料如何被聚合、組織並實作到去中心化應用程式 (dapp) 中",
   "docs-nav-data-availability": "資料可用性",
+  "docs-nav-data-availability-description": "以太坊中與資料可用性相關的問題與解決方案概述",
   "docs-nav-data-availability-storage-strategies": "區塊鏈資料儲存策略",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "狀態驗證開發中",
   "layer-2-metis-note": "詐欺證明開發中",
   "layer-2-optimism-note": "錯誤證明開發中",
-  "back-to-top": "回到頂部",
   "banner-page-incomplete": "此頁面尚未完成，我們非常需要您的協助。請編輯此頁面，並加入任何您認為對其他人有用的內容。",
   "next": "下一頁",
   "previous": "上一頁"

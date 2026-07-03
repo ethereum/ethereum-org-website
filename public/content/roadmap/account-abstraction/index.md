@@ -2,6 +2,7 @@
 title: Account abstraction
 description: An overview of Ethereum's plans to make user accounts simpler and safer
 lang: en
+template: roadmap
 summaryPoints:
   - Account abstraction makes it much easier to build smart contract wallets
   - Smart contract wallets make it much easier to manage access to Ethereum accounts

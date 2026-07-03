@@ -1,6 +1,6 @@
 ---
-title: मैं कैसे शामिल हो सकता हूँ?
-description: इथेरियम समुदाय में कैसे शामिल हों।
+title: "मैं कैसे शामिल हो सकता हूँ?"
+description: "इथेरियम समुदाय में कैसे शामिल हों।"
 lang: hi
 ---
 
@@ -11,7 +11,7 @@ lang: hi
 ## डेवलपर्स <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) पर इथेरियम के बारे में जानें और इसे आज़माएं
-- अपने आस-पास किसी [ETHGlobal](https://ethglobal.co/) हैकाथॉन में भाग लें!
+- अपने आस-पास किसी [ETHGlobal](https://ethglobal.com/) हैकाथॉन में भाग लें!
 - [अपनी विशेषज्ञता के क्षेत्र या अपनी पसंद की प्रोग्रामिंग भाषा से संबंधित प्रोजेक्ट्स](/developers/docs/programming-languages/) देखें
 - [सर्वसम्मति और निष्पादन परत कॉल्स](https://www.youtube.com/@EthereumProtocol/streams) देखें या उनमें भाग लें
 - [इकोसिस्टम सपोर्ट प्रोग्राम की विशलिस्ट](https://esp.ethereum.foundation/wishlist/) - टूलिंग, दस्तावेज़ीकरण और बुनियादी ढाँचे के क्षेत्र जहाँ इथेरियम इकोसिस्टम सपोर्ट प्रोग्राम सक्रिय रूप से अनुदान आवेदनों की तलाश कर रहा है
@@ -80,7 +80,7 @@ lang: hi
 
 इथेरियम इकोसिस्टम सार्वजनिक वस्तुओं और प्रभावशाली प्रोजेक्ट्स को वित्तपोषित करने के मिशन पर है। बहुत छोटे दान के साथ आप अपना समर्थन दिखा सकते हैं और महत्वपूर्ण कार्यों को साकार करने की अनुमति दे सकते हैं।
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## वित्तीय पेशेवर और अकाउंटेंट <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

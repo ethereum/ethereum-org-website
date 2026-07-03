@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-staking.json",
-  "generatedAt": "2026-06-07T07:46:27.715Z",
-  "rootHash": "78a107131f31",
+  "generatedAt": "2026-06-29T23:51:13.044Z",
+  "rootHash": "89167b5780c5",
   "tree": {
-    "contentHash": "4a112ecd7120",
+    "contentHash": "128a2eed2f3c",
     "anchorHash": "5d5f6e90bd5a",
     "children": {
       "comp-withdrawal-comparison-current-title": {
@@ -908,7 +908,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-staking-stats-box-metric-2": {
-        "contentHash": "f79709de2486",
+        "contentHash": "69e0c740b01b",
         "anchorHash": "e3b0c44298fc"
       },
       "page-staking-stats-box-metric-3": {
@@ -920,11 +920,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-staking-stats-box-metric-2-tooltip": {
-        "contentHash": "3b98526af070",
+        "contentHash": "506cc3ab31a0",
         "anchorHash": "e3b0c44298fc"
       },
       "page-staking-stats-box-metric-3-tooltip": {
-        "contentHash": "f2085e7323d3",
+        "contentHash": "7bfb3fda8b81",
         "anchorHash": "e3b0c44298fc"
       },
       "page-staking-section-comparison-subtitle": {
@@ -936,7 +936,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-staking-section-comparison-solo-rewards-li1": {
-        "contentHash": "d7a82905dc34",
+        "contentHash": "35e6a5f5f593",
         "anchorHash": "e3b0c44298fc"
       },
       "page-staking-section-comparison-solo-rewards-li2": {
@@ -1612,5 +1612,5 @@
       "page-staking-network-testnet"
     ]
   },
-  "sourceCommitSha": "a2c271d7bb993845e9f4b6ca72140f608d5c3221"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

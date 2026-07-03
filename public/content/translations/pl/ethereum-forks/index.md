@@ -1,6 +1,6 @@
 ---
-title: Oś czasu wszystkich rozwidleń Ethereum (od 2014 do dziś)
-description: Historia blockchaina Ethereum, w tym najważniejsze kamienie milowe, wydania i rozwidlenia.
+title: "Oś czasu wszystkich rozwidleń Ethereum (od 2014 do dziś)"
+description: "Historia blockchaina Ethereum, w tym najważniejsze kamienie milowe, wydania i rozwidlenia."
 lang: pl
 sidebarDepth: 1
 authors: ["Nixo"]
@@ -90,9 +90,9 @@ Szukasz przyszłych aktualizacji protokołu? [Dowiedz się o nadchodzących aktu
 
 <NetworkUpgradeSummary name="pectra" />
 
-Aktualizacja Prague-Electra („Pectra”) wprowadziła kilka ulepszeń do protokołu Ethereum, mających na celu poprawę doświadczeń wszystkich użytkowników, sieci warstwy 2 (L2), stakerów i operatorów węzłów.
+Aktualizacja Prague-Electra („Pectra”) zawierała kilka ulepszeń protokołu Ethereum, których celem była poprawa doświadczeń wszystkich użytkowników, sieci warstwy 2 (L2), stakujących oraz operatorów węzłów.
 
-Staking zyskał aktualizację dzięki kontom walidatorów z kapitalizacją odsetek (compounding) oraz lepszej kontroli nad stakowanymi środkami za pomocą adresu wypłaty w warstwie wykonawczej. EIP-7251 zwiększył maksymalne saldo efektywne dla pojedynczego walidatora do 2048, poprawiając efektywność kapitałową dla stakerów. EIP-7002 umożliwił kontu wykonawczemu bezpieczne wyzwalanie akcji walidatora, w tym wyjście lub wypłatę części środków, co poprawiło doświadczenia stakerów ETH, jednocześnie pomagając wzmocnić odpowiedzialność operatorów węzłów.
+Staking zyskał aktualizację dzięki kontom walidatorów z kapitalizacją odsetek oraz lepszej kontroli nad stakowanymi środkami za pomocą adresu wypłaty w warstwie wykonawczej. EIP-7251 zwiększył maksymalne saldo efektywne dla pojedynczego walidatora do 2048, poprawiając efektywność kapitałową dla stakujących. EIP-7002 umożliwił kontu wykonawczemu bezpieczne wyzwalanie akcji walidatora, w tym wyjście lub wypłatę części środków, co poprawiło doświadczenia stakujących ETH, jednocześnie pomagając wzmocnić odpowiedzialność operatorów węzłów.
 
 Inne części aktualizacji skupiły się na poprawie doświadczeń zwykłych użytkowników. EIP-7702 wprowadził możliwość wykonywania kodu podobnego do inteligentnego kontraktu przez zwykłe konto niebędące inteligentnym kontraktem ([EOA](/glossary/#eoa)). Odblokowało to nieograniczone nowe funkcjonalności dla tradycyjnych kont Ethereum, takie jak wsadowanie transakcji, sponsorowanie gazu, alternatywne uwierzytelnianie, programowalne kontrole wydatków, mechanizmy odzyskiwania kont i wiele innych.
 
@@ -103,11 +103,11 @@ Lepsze doświadczenie użytkownika:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> – <em>Ustawienie kodu konta EOA</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> – <em>Zwiększenie przepustowości blobów</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> – <em>Zwiększenie kosztu danych wywołania (calldata)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> – <em>Zwiększenie kosztu danych wywołania</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> – <em>Dodanie harmonogramu blobów do plików konfiguracyjnych warstwy wykonawczej (EL)</em></li>
 </ul>
 
-Lepsze doświadczenie stakingu:
+Lepsze doświadczenie ze stakingiem:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> – <em>Zwiększenie <code>MAX_EFFECTIVE_BALANCE</code></em></li>
@@ -121,14 +121,13 @@ Poprawa wydajności i bezpieczeństwa protokołu:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> – <em>Prekompilat dla operacji na krzywej BLS12-381</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> – <em>Zapisywanie historycznych hashów bloków w stanie</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> – <em>Przeniesienie indeksu komitetu poza poświadczenie (Attestation)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> – <em>Przeniesienie indeksu komitetu poza poświadczenie</em></li>
 </ul>
 
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
-- [Jak Pectra poprawi doświadczenie stakingu](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Przeczytaj specyfikacje aktualizacji Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
+- [Jak Pectra poprawi doświadczenie ze stakingiem](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [Przeczytaj specyfikację aktualizacji Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [FAQ Prague-Electra („Pectra”)](/roadmap/pectra/)
 
 <Divider />

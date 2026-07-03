@@ -548,4 +548,44 @@ export const KNOWN_PERSONS = {
       "https://dev.to/spalladino",
     ],
   },
+
+  "elliott-alexander": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#elliott-alexander",
+    name: "Elliott Alexander",
+    jobTitle: "Engineer",
+    description:
+      "Elliott Alexander is a full-stack and blockchain engineer who has been building in the Ethereum ecosystem since 2021, most recently working on builder growth at the Ethereum Foundation. His work centers on wallet security, user privacy, and making Ethereum easier for both developers and AI agents to build on through Agent Skills and developer tooling.",
+    knowsAbout: [
+      "Ethereum Application Development",
+      "Wallet Security",
+      "Wallet Privacy",
+      "AI Agent Tooling",
+      "Smart Contract Development",
+      "Ethereum Developer Education",
+    ],
+    alumniOf: [
+      {
+        "@type": "Organization",
+        name: "Ethereum Foundation",
+        url: "https://ethereum.foundation/",
+      },
+      {
+        "@type": "Organization",
+        name: "BuidlGuidl",
+        url: "https://buidlguidl.com/",
+      },
+      {
+        "@type": "Organization",
+        name: "BitPay",
+        url: "https://bitpay.com/",
+      },
+    ],
+    sameAs: [
+      "https://x.com/escottalexander",
+      "https://www.linkedin.com/in/elliott-alexander/",
+      "https://github.com/escottalexander",
+      "https://elliottalexander.xyz",
+    ],
+  },
 } as const

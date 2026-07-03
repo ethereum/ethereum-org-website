@@ -271,8 +271,8 @@ function safe_add(uint x, uint y) returns(uint z){
 
 **Mythril** - _इथेरियम स्मार्ट कॉन्ट्रॅक्ट्समधील असुरक्षा शोधण्यासाठी एक सिम्बॉलिक एक्झिक्यूशन टूल_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [डॉक्युमेंटेशन](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [डॉक्युमेंटेशन](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## पुढील वाचन {#further-reading}
 

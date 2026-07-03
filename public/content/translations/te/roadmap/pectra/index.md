@@ -1,7 +1,7 @@
 ---
-title: పెక్ట్రా
-metaTitle: ⁦Prague-Electra (Pectra)⁩
-description: పెక్ట్రా ప్రోటోకాల్ నవీకరణ గురించి తెలుసుకోండి
+title: "పెక్ట్రా"
+metaTitle: "⁦Prague-Electra (Pectra)⁩"
+description: "పెక్ట్రా ప్రోటోకాల్ నవీకరణ గురించి తెలుసుకోండి"
 lang: te
 authors: ["నిక్సో", "మారియో హావెల్"]
 ---
@@ -121,7 +121,6 @@ _ఎథీరియం పెక్ట్రా నవీకరణ: స్టే
 
 - [ఎథీరియం రోడ్‌మ్యాప్](/roadmap/)
 - [పెక్ట్రా FAQ](https://epf.wiki/#/wiki/pectra-faq)
-- [Pectra.wtf సమాచార పేజీ](https://pectra.wtf)
-- [పెక్ట్రా స్టేకర్ అనుభవాన్ని ఎలా మెరుగుపరుస్తుంది](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [పెక్ట్రా స్టేకర్ల అనుభవాన్ని ఎలా మెరుగుపరుస్తుంది](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 సమాచార పేజీ](https://eip7702.io/)
 - [పెక్ట్రా డెవ్‌నెట్‌లు](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

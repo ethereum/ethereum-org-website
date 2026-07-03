@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "ڈیٹا اور اینالیٹکس",
   "docs-nav-data-and-analytics-description": "بلاک چین ڈیٹا کو کیسے جمع، منظم اور غیر مرکزی ایپلی کیشنز (dapps) میں لاگو کیا جاتا ہے",
   "docs-nav-data-availability": "ڈیٹا کی دستیابی",
+  "docs-nav-data-availability-description": "ایتھیریم میں ڈیٹا کی دستیابی سے متعلق مسائل اور حل کا جائزہ",
   "docs-nav-data-availability-storage-strategies": "بلاک چین ڈیٹا اسٹوریج کی حکمت عملیاں",
   "docs-nav-dart": "⁦Dart⁩",
   "docs-nav-delphi": "⁦Delphi⁩",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "حالت کی توثیق تیاری کے مراحل میں ہے",
   "layer-2-metis-note": "فراڈ کے ثبوت تیاری کے مراحل میں ہیں",
   "layer-2-optimism-note": "نقص کے ثبوت تیاری کے مراحل میں ہیں",
-  "back-to-top": "واپس اوپر جائیں",
   "banner-page-incomplete": "یہ صفحہ نامکمل ہے اور ہمیں آپ کی مدد کی ضرورت ہے۔ اس صفحے میں ترمیم کریں اور کوئی بھی ایسی چیز شامل کریں جو آپ کے خیال میں دوسروں کے لیے مفید ہو سکتی ہے۔",
   "next": "اگلا",
   "previous": "پچھلا"

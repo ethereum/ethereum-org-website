@@ -1,6 +1,6 @@
 ---
-title: Kripto fonlarınıza olan akıllı sözleşme erişimi nasıl iptal edilir
-description: Kötü niyetli akıllı sözleşme token erişimini iptal etme üzerine bir nasıl yapılır rehberi
+title: "Kripto fonlarınıza olan akıllı sözleşme erişimi nasıl iptal edilir"
+description: "Kötü niyetli akıllı sözleşme token erişimini iptal etme üzerine bir nasıl yapılır rehberi"
 lang: tr
 ---
 

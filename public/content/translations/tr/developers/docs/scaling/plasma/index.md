@@ -56,20 +56,19 @@ Plasma zincirine girmek için Alice'in (kullanıcı) Plasma sözleşmesine ETH v
 
 #### Plasma zincirinden çıkış {#exiting-the-plasma-chain}
 
-Plasma zincirinden çıkmak, çeşitli nedenlerden dolayı girmekten daha karmaşıktır. En büyük neden, Ethereum'un Plasma zincirinin durumu hakkında bilgiye sahip olmasına rağmen, bilginin doğru olup olmadığını doğrulayamamasıdır. Kötü niyetli bir kullanıcı yanlış bir iddiada bulunabilir ("1000 ETH'm var") ve bu talebi desteklemek için sahte kanıtlar sunarak bundan sıyrılabilir.
+Plasma zincirinden çıkmak, çeşitli nedenlerden dolayı girmekten daha karmaşıktır. En büyük neden, Ethereum'un Plasma zincirinin durumu hakkında bilgiye sahip olmasına rağmen, bu bilginin doğru olup olmadığını doğrulayamamasıdır. Kötü niyetli bir kullanıcı yanlış bir iddiada bulunabilir ("1000 ETH'm var") ve bu talebi desteklemek için sahte kanıtlar sunarak bundan sıyrılabilir.
 
 Kötü niyetli çekim işlemlerini önlemek için bir "itiraz süresi" getirilmiştir. İtiraz süresi boyunca (genellikle bir hafta), herkes bir sahtekarlık kanıtı kullanarak bir çekim talebine itiraz edebilir. İtiraz başarılı olursa, çekim talebi reddedilir.
 
 Ancak, genellikle kullanıcılar dürüsttür ve sahip oldukları fonlar hakkında doğru taleplerde bulunurlar. Bu senaryoda Alice, Plasma sözleşmesine bir işlem göndererek kök zincirde (Ethereum) bir çekim talebi başlatacaktır.
 
-Ayrıca, Plasma zincirinde fonlarını oluşturan bir işlemin bir bloğa dahil edildiğini doğrulayan bir Merkle kanıtı sunmalıdır. Bu, [UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output) modelini kullanan [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html) gibi Plasma yinelemeleri için gereklidir.
+Ayrıca, Plasma zincirinde fonlarını oluşturan bir işlemin bir bloğa dahil edildiğini doğrulayan bir Merkle kanıtı sunmalıdır. Bu, [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output) modelini kullanan Plasma MVP gibi Plasma yinelemeleri için gereklidir.
 
-[Plasma Cash](https://www.learnplasma.org/en/learn/cash.html) gibi diğerleri, fonları UTXO'lar yerine [değiştirilemez token'lar](/developers/docs/standards/tokens/erc-721/) olarak temsil eder. Bu durumda çekim işlemi, Plasma zincirindeki Token'ların sahiplik kanıtını gerektirir. Bu, Token'ı içeren en son iki işlemin gönderilmesi ve bu işlemlerin bir bloğa dahil edildiğini doğrulayan bir Merkle kanıtı sağlanmasıyla yapılır.
+Plasma Cash gibi diğerleri, fonları UTXO'lar yerine [değiştirilemez Token'lar](/developers/docs/standards/tokens/erc-721/) olarak temsil eder. Bu durumda çekim işlemi, Plasma zincirindeki Token'ların sahiplik kanıtını gerektirir. Bu, Token'ı içeren en son iki işlemin gönderilmesi ve bu işlemlerin bir bloğa dahil edildiğini doğrulayan bir Merkle kanıtı sunulmasıyla yapılır.
 
-Kullanıcı ayrıca dürüst davranışın bir garantisi olarak çekim talebine bir teminat eklemelidir. Bir itirazcı Alice'in çekim talebinin geçersiz olduğunu kanıtlarsa, teminatında kesinti yapılır ve bir kısmı ödül olarak itirazcıya gider.
+Kullanıcı ayrıca dürüst davranışın bir garantisi olarak çekim talebine bir teminat eklemelidir. Bir itirazcı Alice'in çekim talebinin geçersiz olduğunu kanıtlarsa, teminatına ceza kesintisi uygulanır ve bir kısmı itirazcıya ödül olarak gider.
 
 İtiraz süresi kimse bir sahtekarlık kanıtı sunmadan geçerse, Alice'in çekim talebi geçerli kabul edilir ve Ethereum'daki Plasma sözleşmesinden yatırdığı fonları geri almasına olanak tanır.
-
 ### Anlaşmazlık tahkimi {#dispute-arbitration}
 
 Herhangi bir blokzincir gibi, Plasma zincirlerinin de katılımcıların kötü niyetli davranması (örneğin, fonların çifte harcaması) durumunda işlemlerin bütünlüğünü sağlamak için bir mekanizmaya ihtiyacı vardır. Bu amaçla, Plasma zincirleri durum geçişlerinin geçerliliğine ilişkin anlaşmazlıkları çözmek ve kötü davranışları cezalandırmak için sahtekarlık kanıtları kullanır. Sahtekarlık kanıtları, bir Plasma çocuk zincirinin ebeveyn zincirine veya kök zincirine şikayette bulunduğu bir mekanizma olarak kullanılır.
@@ -165,16 +164,14 @@ Birden fazla proje, dapp'lerinize entegre edebileceğiniz Plasma uygulamaları s
 
 - [Polygon](https://polygon.technology/) (önceden Matic Network)
 
-## Daha fazla bilgi {#further-reading}
+## İleri okuma {#further-reading}
 
-- [Plasma'yı Öğrenin](https://www.learnplasma.org/en/)
-- ["Paylaşılan güvenlik" kavramının ne anlama geldiğine ve neden bu kadar önemli olduğuna dair hızlı bir hatırlatma](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
+- ["Paylaşılan güvenlik" kavramının ne anlama geldiğine ve neden bu kadar önemli olduğuna dair kısa bir hatırlatma](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Yan Zincirler, Plasma ve Parçalama Karşılaştırması](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Plasma'yı Anlamak, Bölüm 1: Temeller](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [Plasma'nın Yaşamı ve Ölümü](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
-
 ## Eğitimler: Ethereum'da Plasma zincirleri {#tutorials}
 
 - [Gizliliği koruyan uygulamaya özel bir plasma yazın](/developers/tutorials/app-plasma/) _– Sıfır bilgi ispatları ve zincir dışı bileşenler kullanarak gizliliği koruyan bir plasma uygulaması oluşturun._
