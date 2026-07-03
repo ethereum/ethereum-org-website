@@ -134,7 +134,7 @@ Gas 限制是指你願意在一筆交易中消耗的最大燃料數量。涉及[
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _開源交易 Gas 價格估算器_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _監控和追蹤以太坊及 L2 Gas 價格，以降低交易手續費並節省金錢_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _支援 Type 0 傳統交易和 Type 2 EIP-1559 交易的 Gas 估算 Chrome 擴充功能。_
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _以你的當地貨幣計算主網、Arbitrum 和 Polygon 上不同交易類型的 Gas 費。_
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _以你的當地貨幣計算主網、Arbitrum 和 Polygon 上不同交易類型的 Gas 費。_
 
 ## 相關工具 {#related-tools}
 

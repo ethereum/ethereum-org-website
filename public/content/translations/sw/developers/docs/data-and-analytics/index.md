@@ -75,7 +75,7 @@ Lugha ya Kuuliza ya EVM (EQL) ni lugha inayofanana na SQL iliyoundwa kuuliza min
 - [Misingi ya Dune](https://docs.dune.com/#dune-basics)
 - [Mwongozo wa Kuanza Haraka wa Ethereum wa SubQuery](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [Muhtasari wa Mtandao wa SQD](https://docs.sqd.dev/)
-- [Lugha ya Kuuliza ya EVM](https://eql.sh/blog/alpha-release-notes)
+- [Lugha ya Kuuliza ya EVM](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## Mafunzo: Data na uchanganuzi / SQL kwenye Ethereum {#tutorials}
 

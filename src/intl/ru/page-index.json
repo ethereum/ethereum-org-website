@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Эфириум — полное руководство от Ethereum.org",
+  "page-index-meta-title": "Эфириум — полное руководство от ethereum.org",
   "page-index-meta-description": "Эфириум — это глобальная децентрализованная платформа для денег и новых типов приложений. В Эфириуме вы сами контролируете свои деньги, данные и личность. Никаких банков, посредников и разрешений.",
   "page-index-description": "Ведущая платформа для инновационных приложений и блокчейн-сетей",
   "page-index-title": "Добро пожаловать в Эфириум",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Приватные сети и сети с разрешенным доступом",
   "page-index-get-started-enterprise-bullet-3": "Институциональные ресурсы",
   "page-index-get-started-enterprise-cta": "Изучить решения для бизнеса",
-  "page-index-simulator-cta": "Попробовать больше руководств"
+  "page-index-simulator-cta": "Попробовать больше руководств",
+  "page-index-latest-updates-title": "Последние обновления Эфириума",
+  "page-index-latest-updates-cta": "Посмотреть больше"
 }

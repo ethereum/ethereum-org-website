@@ -29,7 +29,7 @@ published: 2022-04-01
 
 يجب أن تحتفظ [تجميعات ⁦Optimistic⁩](/developers/docs/scaling/optimistic-rollups) بسجل لكل معاملة تاريخية حتى يتمكن أي شخص من مراجعتها والتحقق من أن الحالة الحالية صحيحة.
 أرخص طريقة لإدخال البيانات إلى شبكة إيثيريوم الرئيسية هي كتابتها كبيانات الاستدعاء.
-تم اختيار هذا الحل من قبل كل من [أوبتيميزم](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) و[أربيتروم](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
+تم اختيار هذا الحل من قبل كل من [أوبتيميزم](https://docs.optimism.io/op-stack/protocol/overview) و[أربيتروم](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
 
 ### تكلفة معاملات طبقة 2 (L2) {#cost-of-l2-transactions}
 
@@ -114,8 +114,7 @@ import { OrisUselessToken } from "./Token.sol";
 نحتاج إلى دالة الرمز المميز لمعرفة كيفية استدعائها.
 
 ```solidity
-عقد CalldataInterpreter {
-
+contract CalldataInterpreter {
     OrisUselessToken public immutable token;
 ```
 
@@ -127,7 +126,7 @@ import { OrisUselessToken } from "./Token.sol";
      * @dev تحديد عنوان الرمز المميز
      * @param tokenAddr_ عنوان عقد ERC-20
      */
-    مُنشئ(
+    constructor(
         address tokenAddr_
     )  {
         token = OrisUselessToken(tokenAddr_);

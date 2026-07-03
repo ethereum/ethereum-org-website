@@ -137,5 +137,16 @@
   "page-developers-why-title": "Werde gut bezahlt. Arbeite remote. Baue die Zukunft.",
   "page-developers-why-subtitle": "Über die Hälfte der Blockchain-Karrieren sind Remote-First, wobei einige Schätzungen die Zahl auf bis zu 70 % beziffern.",
   "page-developers-why-avg-salary-dev": "Durchschnittliches Entwicklergehalt",
-  "page-developers-why-avg-salary-blockchain": "Durchschnittsgehalt in der Blockchain-Branche"
+  "page-developers-why-avg-salary-blockchain": "Durchschnittsgehalt in der Blockchain-Branche",
+  "page-developers-why-grid-money-heading": "Geld, das du programmieren kannst",
+  "page-developers-why-grid-money-desc": "Schreibe Code, der definiert, wie sich Werte bewegen, wann und an wen. Keine Banken, keine Mittelsmänner, nur die von dir definierte Logik.",
+  "page-developers-why-grid-skills-heading": "Zukunftssichere Fähigkeiten",
+  "page-developers-why-grid-skills-desc": "Lerne die Bausteine des nächsten Internets kennen. Die Technologie mag sich weiterentwickeln, aber die Prinzipien von Web3 bleiben bestehen.",
+  "page-developers-why-grid-censorship-heading": "Zensurresistenz",
+  "page-developers-why-grid-censorship-desc": "Baue Projekte und Handel auf, die nicht von Regierungen, Unternehmen oder Algorithmen zum Schweigen gebracht werden können. Wenn es wichtig ist, bleibt es online.",
+  "page-developers-why-grid-sovereignty-heading": "Digitale Souveränität",
+  "page-developers-why-grid-sovereignty-desc": "Besitze deine Identität, Vermögenswerte und Kreationen online, ohne auf Plattformen angewiesen zu sein, die dich löschen können.",
+  "page-developers-blog-title": "Builder-Updates",
+  "page-developers-blog-desc": "Einblicke in die neuesten Ressourcen, Werkzeuge und Entwicklungen für Ethereum-Builder.",
+  "page-developers-blog-view-all": "Alle Updates ansehen"
 }

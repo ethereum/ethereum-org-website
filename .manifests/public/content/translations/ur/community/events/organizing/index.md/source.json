@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/community/events/organizing/index.md",
-  "generatedAt": "2026-06-08T07:13:50.236Z",
-  "rootHash": "c38e7fe81055",
+  "generatedAt": "2026-06-29T23:52:34.307Z",
+  "rootHash": "97a1f6f3d8c1",
   "tree": {
-    "contentHash": "fcd31464caf7",
-    "anchorHash": "5aaf2be12ecb",
+    "contentHash": "513cd5c4aa98",
+    "anchorHash": "8b70b92af240",
     "children": {
       "frontmatter:title": {
         "contentHash": "ac2a4a3f001f",
@@ -593,15 +593,15 @@
         ]
       },
       "resources": {
-        "contentHash": "c4a854d6c73b",
-        "anchorHash": "6a8e7b535f26",
+        "contentHash": "27f946977325",
+        "anchorHash": "0358ec0c3bf3",
         "labelHash": "e89b30aa1dc3",
         "children": {
           "_label": {
             "contentHash": "e89b30aa1dc3",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:3": {
+          "prose:2": {
             "contentHash": "64dbfcc17b0e",
             "anchorHash": "e3b0c44298fc"
           },
@@ -609,7 +609,7 @@
             "contentHash": "7a17ac3e2ecb",
             "anchorHash": "4fdcc31dbb64"
           },
-          "prose:4": {
+          "prose:3": {
             "contentHash": "13b6d7819f26",
             "anchorHash": "e3b0c44298fc"
           },
@@ -617,23 +617,18 @@
             "contentHash": "66a55afa4306",
             "anchorHash": "4f63db20e193"
           },
-          "prose:5": {
-            "contentHash": "d04d005245cf",
+          "prose:4": {
+            "contentHash": "244ce0987f17",
             "anchorHash": "e3b0c44298fc"
-          },
-          "link:2": {
-            "contentHash": "258eb79929b6",
-            "anchorHash": "a5b5e9201845"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:3",
+          "prose:2",
           "link:0",
-          "prose:4",
+          "prose:3",
           "link:1",
-          "prose:5",
-          "link:2"
+          "prose:4"
         ]
       }
     },
@@ -651,5 +646,5 @@
       "resources"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

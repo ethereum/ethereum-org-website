@@ -9,9 +9,7 @@ lang: ur
 
 ہم ایک خوش آمدید کہنے والی کمیونٹی ہیں جو آپ کو [ایتھیریم](/) ایکو سسٹم میں ترقی کرنے اور سیکھنے میں مدد دے گی، جبکہ آپ بامعنی تعاون بھی کر سکیں گے اور متعلقہ عملی تجربہ حاصل کر سکیں گے!
 
-## تعاون کرنے کے طریقے {#ways-to-contribute}
-
-**تراجم**
+**ترجمے**
 - [ترجمہ پروگرام میں شامل ہوں](/contributing/translation-program/) – <span dir="ltr">ethereum.org</span> کو نئی زبانوں میں لانے میں ہماری مدد کریں
 
 **ڈیولپمنٹ**
@@ -25,12 +23,13 @@ lang: ur
 - [تعمیر کنندہ کا مضمون لکھیں](/contributing/adding-articles/) - [تازہ ترین](/latest/) سیکشن کے لیے ایک مضمون کا تعاون کریں
 - [کمیونٹی کے وسائل شامل کریں](/contributing/content-resources/) – کسی متعلقہ صفحے پر ایک مفید مضمون یا وسیلہ شامل کریں
 - [رپورٹ تجویز کریں](/contributing/adding-reports/) - [رپورٹس](/reports/) صفحے کے لیے ایک تحقیقی رپورٹ تجویز کریں
-- [ڈیزائن کا وسیلہ تجویز کریں](/contributing/design/adding-design-resources/) – مفید ڈیزائن کے وسائل شامل کریں، اپ ڈیٹ کریں اور حذف کریں
+- [اپنی کہانی شیئر کریں](/contributing/adding-community-stories/) - اوپن سورس اور سینکچری ٹیکنالوجیز کے ساتھ اپنے ذاتی تجربات، ایتھیریم ایکو سسٹم نے آپ کی زندگی کو کیسے متاثر کیا ہے، یا آپ اور آپ کی کمیونٹی ایتھیریم کو کیسے استعمال کرتے ہیں، اس بارے میں ایک کہانی جمع کرائیں
 - [کوئزز](/contributing/quizzes/) – کسی متعلقہ صفحے کے لیے کوئز سوالات کے بینکس شامل کریں، اپ ڈیٹ کریں اور حذف کریں
+- [ڈیزائن کا وسیلہ تجویز کریں](/contributing/design/adding-design-resources/) – مفید ڈیزائن کے وسائل شامل کریں، اپ ڈیٹ کریں اور حذف کریں
 - [ویڈیو تجویز کریں](/contributing/adding-videos/) – ویڈیو گیلری کے لیے ایک تعلیمی ویڈیو تجویز کریں
 
 **فیچر کے آئیڈیاز**
-- [کسی فیچر کی درخواست کریں](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – ہمیں کسی نئے فیچر یا ڈیزائن کے حوالے سے اپنے آئیڈیاز کے بارے میں بتائیں
+- [کسی فیچر کی درخواست کریں](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – ہمیں کسی نئے فیچر یا ڈیزائن کے لیے اپنے آئیڈیاز کے بارے میں بتائیں
 
 **پروڈکٹ کی فہرستیں**
 - [ایکسچینج شامل کریں](/contributing/adding-exchanges/) – ہمارے [ایکسچینج فائنڈر](/get-eth/#country-picker) میں ایک ایکسچینج شامل کریں

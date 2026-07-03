@@ -580,21 +580,21 @@ uv run test-predictor.py
 Beklenen sonuç şuna benzer:
 
 ```
-2026-01-05T19:50 için tahmin: tahmin edilen 3138.93 USD, gerçek 3218.92 USD, hata 79.99 USD
-2026-01-06T19:56 için tahmin: tahmin edilen 3243.39 USD, gerçek 3221.08 USD, hata 22.31 USD
-2026-01-07T20:02 için tahmin: tahmin edilen 3223.24 USD, gerçek 3146.89 USD, hata 76.35 USD
-2026-01-08T20:11 için tahmin: tahmin edilen 3150.47 USD, gerçek 3092.04 USD, hata 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-2026-01-31T22:33 için tahmin: tahmin edilen 2637.73 USD, gerçek 2417.77 USD, hata 219.96 USD
-2026-02-01T22:41 için tahmin: tahmin edilen 2381.70 USD, gerçek 2318.84 USD, hata 62.86 USD
-2026-02-02T22:49 için tahmin: tahmin edilen 2234.91 USD, gerçek 2349.28 USD, hata 114.37 USD
-29 tahmin üzerinden ortalama tahmin hatası: 83.87103448275862068965517241 USD
-Tavsiye başına ortalama değişim: 4.787931034482758620689655172 USD
-Değişimlerin standart varyansı: 104.42 USD
-Kârlı günler: 51.72%
-Kayıplı günler: 48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 Test edicinin çoğu ajanla aynıdır, ancak işte yeni veya değiştirilmiş olan kısımlar.
@@ -762,19 +762,19 @@ uv run agent.py
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-Mevcut fiyat: 1843.16
-2026-02-06T23:07'de beklenen fiyat: 1724.41 USD
-İşlem öncesi Hesap bakiyeleri:
-USDC Bakiyesi: 927301.578272
-WETH Bakiyesi: 500
-Sat, fiyatın 118.75 USD düşmesini bekliyorum
-Onaylama işlemi gönderildi: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-Onaylama işlemi kazıldı.
-Satış işlemi gönderildi: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-Satış işlemi kazıldı.
-İşlem sonrası Hesap bakiyeleri:
-USDC Bakiyesi: 929143.797116
-WETH Bakiyesi: 499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 Gerçekten kullanmak için birkaç küçük değişikliğe ihtiyacınız var.

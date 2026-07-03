@@ -23,8 +23,7 @@ published: 2021-04-06
 ### 准备工作 {#to-get-started}
 
 首先，我们必须将 ethers.js 库导入到我们的 JavaScript 中
-引入 ethers.js (5.0)
-
+引入 ethers.js v5
 ### 安装 {#install-ethersjs}
 
 ```shell

@@ -1,7 +1,7 @@
 ---
-title: Cách sử dụng ví
-metaTitle: Cách sử dụng ví Ethereum | Từng bước một
-description: Hướng dẫn giải thích cách gửi, nhận token và kết nối với các dự án web3.
+title: "Cách sử dụng ví"
+metaTitle: "Cách sử dụng ví Ethereum | Từng bước một"
+description: "Hướng dẫn giải thích cách gửi, nhận token và kết nối với các dự án web3."
 lang: vi
 ---
 

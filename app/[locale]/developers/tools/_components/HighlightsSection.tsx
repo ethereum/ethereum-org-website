@@ -33,7 +33,7 @@ const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
   if (tools.length === 0) return null
 
   return (
-    <Section id="highlights" className="space-y-4">
+    <Section id="highlights">
       <h2>{t("page-developers-tools-highlights")}</h2>
       <EdgeScrollContainer>
         {tools.map((tool) => {

@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md",
-  "generatedAt": "2026-06-19T22:47:51.522Z",
-  "rootHash": "109f85fbefc7",
+  "generatedAt": "2026-06-30T00:06:01.106Z",
+  "rootHash": "fc25ad5e5600",
   "tree": {
-    "contentHash": "a402c0e134af",
-    "anchorHash": "357793a8f146",
+    "contentHash": "6a2fff7a6151",
+    "anchorHash": "1de59e6fd9c4",
     "children": {
       "frontmatter:title": {
         "contentHash": "7ee01cb337b8",
@@ -57,7 +57,7 @@
       },
       "link:1": {
         "contentHash": "2805fc43d2b5",
-        "anchorHash": "587ed7f3c6d3"
+        "anchorHash": "aabdbc65cea9"
       },
       "prose:3": {
         "contentHash": "80c9d887dfa6",
@@ -157,8 +157,8 @@
         ]
       },
       "make-a-request-from-the-command-line": {
-        "contentHash": "6d5cf5f35f09",
-        "anchorHash": "ef988881658f",
+        "contentHash": "58719a327fc0",
+        "anchorHash": "0d495a7c74b4",
         "labelHash": "628808fc7bcd",
         "children": {
           "_label": {
@@ -171,7 +171,7 @@
           },
           "inline-code:0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "5bf552445cee"
+            "anchorHash": "e5889d4723ce"
           },
           "prose:11": {
             "contentHash": "4d327af41f96",
@@ -227,7 +227,7 @@
           },
           "link:7": {
             "contentHash": "cec16c13778c",
-            "anchorHash": "547504fb1cc3"
+            "anchorHash": "191567028ad9"
           },
           "prose:18": {
             "contentHash": "3973e022e932",
@@ -256,10 +256,6 @@
           "prose:2": {
             "contentHash": "26b9d95e28c2",
             "anchorHash": "e3b0c44298fc"
-          },
-          "link:0": {
-            "contentHash": "e5889d4723ce",
-            "anchorHash": "64e99fa562cd"
           },
           "prose:3": {
             "contentHash": "5defc4016fcd",
@@ -299,7 +295,7 @@
           "prose:20",
           "code-fence:22",
           "prose:2",
-          "link:0",
+          "inline-code:0",
           "prose:3",
           "inline-code:1",
           "prose:4",
@@ -307,8 +303,8 @@
         ]
       },
       "set-up-your-web3-client": {
-        "contentHash": "e2e473893694",
-        "anchorHash": "9377fde52596",
+        "contentHash": "aec20c60ac44",
+        "anchorHash": "e86476abe8a8",
         "labelHash": "7aaf04305aaf",
         "children": {
           "_label": {
@@ -324,12 +320,12 @@
             "anchorHash": "80d8bdea15c9"
           },
           "prose:5": {
-            "contentHash": "267eb2e5f747",
+            "contentHash": "eb2c275cf342",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
-            "contentHash": "a361ce3f9176",
-            "anchorHash": "019c62a8d5b2"
+            "contentHash": "4a5face54e26",
+            "anchorHash": "6f1666522a9e"
           },
           "prose:6": {
             "contentHash": "40c4b7f35201",
@@ -337,7 +333,7 @@
           },
           "link:2": {
             "contentHash": "ede9cc089972",
-            "anchorHash": "0d74363c464a"
+            "anchorHash": "93ad88bd412d"
           },
           "prose:7": {
             "contentHash": "b12e9cf630e0",
@@ -345,7 +341,7 @@
           },
           "link:3": {
             "contentHash": "fce32e90ca84",
-            "anchorHash": "f463915cbafa"
+            "anchorHash": "41f860b4d7f3"
           },
           "prose:8": {
             "contentHash": "3a1450acb451",
@@ -387,8 +383,8 @@
         ]
       },
       "write-your-first-web3-script": {
-        "contentHash": "6989bbf510f0",
-        "anchorHash": "e1405ad64fb0",
+        "contentHash": "ffde086a39e7",
+        "anchorHash": "4440046266bc",
         "labelHash": "de8e20949861",
         "children": {
           "_label": {
@@ -437,7 +433,7 @@
           },
           "link:0": {
             "contentHash": "43344f463588",
-            "anchorHash": "2fe6f3a7eeb7"
+            "anchorHash": "ee6b3a042e7d"
           },
           "code-fence:14": {
             "contentHash": "e3b0c44298fc",
@@ -448,19 +444,19 @@
             "anchorHash": "783cbd00631f"
           },
           "prose:5": {
-            "contentHash": "108353634931",
+            "contentHash": "ab7f36c2e59b",
             "anchorHash": "e3b0c44298fc"
           },
           "prose:6": {
-            "contentHash": "5dfbfbac6348",
+            "contentHash": "2c8fa7e86e79",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
-            "contentHash": "45e1aecb4773",
-            "anchorHash": "b3110ec0a243"
+            "contentHash": "646d2302f552",
+            "anchorHash": "c7a2e7f137f4"
           },
           "prose:7": {
-            "contentHash": "314459311f2e",
+            "contentHash": "45e93586fdae",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
@@ -542,5 +538,5 @@
       "write-your-first-web3-script"
     ]
   },
-  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

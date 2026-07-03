@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Етеріум — повний посібник від Ethereum.org",
+  "page-index-meta-title": "Етеріум — повний посібник від ethereum.org",
   "page-index-meta-description": "Етеріум — це глобальна децентралізована платформа для грошей та нових типів застосунків. В Етеріумі ви контролюєте власні гроші, дані та особистість. Жодних банків, посередників чи дозволів.",
   "page-index-description": "Провідна платформа для інноваційних застосунків та блокчейн-мереж",
   "page-index-title": "Ласкаво просимо до Етеріуму",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Приватні мережі та мережі з обмеженим доступом",
   "page-index-get-started-enterprise-bullet-3": "Інституційні ресурси",
   "page-index-get-started-enterprise-cta": "Дослідити рішення для підприємств",
-  "page-index-simulator-cta": "Спробувати більше посібників"
+  "page-index-simulator-cta": "Спробувати більше посібників",
+  "page-index-latest-updates-title": "Останні оновлення Етеріуму",
+  "page-index-latest-updates-cta": "Переглянути більше"
 }

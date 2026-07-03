@@ -16,8 +16,9 @@ type LatestUpdatesProps = {
 }
 
 // Homepage preview of the /latest stream: the three most recent merged
-// articles, rendered with the same card as the /latest grid, plus a CTA to the
-// full page.
+// articles — capped to one per source so a single high-frequency feed (e.g. ETH
+// Daily) can't fill every slot — rendered with the same card as the /latest
+// grid, plus a CTA to the full page.
 const HOMEPAGE_LATEST_COUNT = 3
 
 const LatestUpdates = async ({
@@ -29,7 +30,19 @@ const LatestUpdates = async ({
   const tLatest = await getTranslations("page-latest")
 
   const { articles } = await getLatestArticles(locale)
-  const items = articles.slice(0, HOMEPAGE_LATEST_COUNT)
+
+  // Collapse the newest-first stream to one article per source, then take the
+  // top N. `getLatestArticles` caps each source at LATEST_MAX_PER_SOURCE for the
+  // full /latest grid, but the homepage preview only wants a single most-recent
+  // item per source.
+  const seenSources = new Set<string>()
+  const items = articles
+    .filter((article) => {
+      if (seenSources.has(article.source)) return false
+      seenSources.add(article.source)
+      return true
+    })
+    .slice(0, HOMEPAGE_LATEST_COUNT)
 
   // Nothing to show (e.g. no builder posts and RSS cache empty) — drop the
   // section rather than render an empty heading.

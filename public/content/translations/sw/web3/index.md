@@ -1,7 +1,7 @@
 ---
 title: Utangulizi wa Web3
 metaTitle: Web3 ni nini na kwa nini ni muhimu?
-description: Utangulizi wa Web3—mabadiliko yanayofuata ya Wavuti ya Ulimwenguni Pote (World Wide Web)—na kwa nini ni muhimu.
+description: "Utangulizi wa Web3—mabadiliko yanayofuata ya Wavuti ya Ulimwenguni Pote (World Wide Web)—na kwa nini ni muhimu."
 lang: sw
 ---
 

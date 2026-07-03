@@ -75,7 +75,7 @@ EVM কোয়েরি ল্যাঙ্গুয়েজ (EQL) হলো �
 - [Dune বেসিকস](https://docs.dune.com/#dune-basics)
 - [SubQuery ইথেরিয়াম কুইক স্টার্ট গাইড](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD নেটওয়ার্ক ওভারভিউ](https://docs.sqd.dev/)
-- [EVM কোয়েরি ল্যাঙ্গুয়েজ](https://eql.sh/blog/alpha-release-notes)
+- [EVM কোয়েরি ল্যাঙ্গুয়েজ](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## টিউটোরিয়াল: ডেটা এবং অ্যানালিটিক্স / ইথেরিয়াম-এ SQL {#tutorials}
 

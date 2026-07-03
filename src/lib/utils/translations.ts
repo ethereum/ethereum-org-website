@@ -77,7 +77,6 @@ const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
 const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
   ["/developers/docs/scaling/", ["page-layer-2"]],
   ["/developers/tools/", ["page-developers-tools-descriptions"]],
-  ["/roadmap/vision/", ["page-upgrades-index", "page-roadmap-vision"]],
   ["/gas/", ["page-gas", "page-community"]],
   ["/layer-2/networks/", ["table"]],
   ["/energy-consumption/", ["page-about"]],

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import { Fragment, useState } from "react"
 import { Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
@@ -24,6 +24,8 @@ export interface ListItem {
     eventName: string
   }
   callback?: (idx: number) => void
+  /** Nested sub-items rendered indented beneath this item. */
+  items?: Array<ListItem>
 }
 
 export interface List {
@@ -39,65 +41,60 @@ export type ButtonDropdownProps = {
 
 const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
   const [selectedItem, setSelectedItem] = useState(list.text)
+
   const handleClick = (item: ListItem, idx: number) => {
-    const { matomo, callback } = item
-
-    if (matomo) {
-      trackCustomEvent(matomo)
-    }
-
-    if (callback) {
-      callback(idx)
-    }
+    if (item.matomo) trackCustomEvent(item.matomo)
+    item.callback?.(idx)
     setSelectedItem(item.text)
   }
+
+  const renderItems = (items: Array<ListItem>, depth = 0): React.ReactNode =>
+    items.map((item, idx) => {
+      // 2rem base inline-start padding + 1rem per nesting level. Only one
+      // sub-level is used today; the map allows two before capping.
+      const indentClass = ["ps-8", "ps-12", "ps-16"][depth] ?? "ps-16"
+      return (
+        <Fragment key={item.text}>
+          <DropdownMenuItem
+            className={cn("justify-start pe-4 text-start", indentClass)}
+            onClick={() => handleClick(item, idx)}
+            asChild={!!item.href}
+          >
+            {item.href ? (
+              <BaseLink
+                href={item.href}
+                className="text-body no-underline focus-visible:outline-0"
+              >
+                {item.text}
+              </BaseLink>
+            ) : (
+              <span>{item.text}</span>
+            )}
+          </DropdownMenuItem>
+          {item.items?.length ? renderItems(item.items, depth + 1) : null}
+        </Fragment>
+      )
+    })
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
+          aria-label={list.ariaLabel}
           className={cn("flex justify-between", className)}
         >
-          <Menu />
+          <Menu aria-hidden />
           <span className="flex-1 text-center">{selectedItem}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="w-[var(--radix-dropdown-menu-trigger-width)]"
+        scrollAffordance
+        className="w-(--radix-dropdown-menu-trigger-width)"
+        collisionPadding={16}
         sideOffset={8}
       >
-        {list.items.map((item, idx) => {
-          const { text, href } = item
-
-          if (href) {
-            return (
-              <DropdownMenuItem
-                key={item.text}
-                className="justify-center text-center"
-                onClick={() => handleClick(item, idx)}
-                asChild
-              >
-                <BaseLink
-                  href={item.href!}
-                  className="text-body no-underline focus-visible:outline-0"
-                >
-                  <span>{text}</span>
-                </BaseLink>
-              </DropdownMenuItem>
-            )
-          }
-
-          return (
-            <DropdownMenuItem
-              key={item.text}
-              className="justify-center text-center"
-              onClick={() => handleClick(item, idx)}
-            >
-              <span>{text}</span>
-            </DropdownMenuItem>
-          )
-        })}
+        {renderItems(list.items)}
       </DropdownMenuContent>
     </DropdownMenu>
   )

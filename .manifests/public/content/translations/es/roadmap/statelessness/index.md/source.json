@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/statelessness/index.md",
-  "generatedAt": "2026-06-08T10:44:40.431Z",
-  "rootHash": "7baff35aba3b",
+  "generatedAt": "2026-06-30T00:53:03.353Z",
+  "rootHash": "83ba954dea3d",
   "tree": {
     "contentHash": "d54c64093453",
-    "anchorHash": "57dc5a67858e",
+    "anchorHash": "3b39dcb184fb",
     "children": {
       "frontmatter:title": {
         "contentHash": "cc2bc5908f84",
@@ -136,7 +136,7 @@
       },
       "statelessness-2": {
         "contentHash": "8be299f192ad",
-        "anchorHash": "2dba586bfeb5",
+        "anchorHash": "a5c18be025f5",
         "labelHash": "6c88f20571b1",
         "children": {
           "_label": {
@@ -149,7 +149,7 @@
           },
           "weak-statelessness": {
             "contentHash": "7affc68438cb",
-            "anchorHash": "422b49c85a47",
+            "anchorHash": "34697dcbc159",
             "labelHash": "ab0644f98a87",
             "children": {
               "_label": {
@@ -178,7 +178,7 @@
               },
               "component:6": {
                 "contentHash": "0f465df36908",
-                "anchorHash": "b7eccb554a10",
+                "anchorHash": "1b67c81c2a0b",
                 "children": {
                   "attr:title": {
                     "contentHash": "bd6ac6b30f63",
@@ -198,7 +198,7 @@
                   },
                   "html-tag:0": {
                     "contentHash": "ead508cd11b0",
-                    "anchorHash": "b23a09e4b815"
+                    "anchorHash": "9d50f0a052f4"
                   }
                 },
                 "childrenOrder": [
@@ -442,5 +442,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

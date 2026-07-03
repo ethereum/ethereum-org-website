@@ -24,54 +24,52 @@ Benötigen Sie zuerst eine grundlegendere Einführung? Besuchen Sie [ethereum.or
 
 ## Referenzen und Links für Anfänger {#beginner-references-and-links}
 
-**Einführung in die Nethereum-Bibliothek und VSCode Solidity**
+**Einführung in die Nethereum-Bibliothek und VS Code Solidity**
 
 - [Nethereum, Erste Schritte](https://docs.nethereum.com/docs/getting-started/welcome/)
-- [Installation von VSCode Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
-- [Der Workflow eines .NET-Entwicklers zum Erstellen und Aufrufen von Ethereum Smart Contracts](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Integration von Smart Contracts mit Nethereum](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
-- [Verbindung von .NET und Ethereum-Blockchain Smart Contracts mit Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), auch auf [Chinesisch (中文版)](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
-- [Nethereum – Eine Open-Source-.NET-Integrationsbibliothek für die Blockchain](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
+- [VS Code Solidity installieren](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
+- [Der Workflow eines .NET-Entwicklers zum Erstellen und Aufrufen von Ethereum-Smart-Contracts](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
+- [Smart-Contract-Integration mit Nethereum](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
+- [Verbindung von .NET und Ethereum-Blockchain-Smart-Contracts mit Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), auch auf [Chinesisch](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
+- [Nethereum - Eine Open-Source-.NET-Integrationsbibliothek für die Blockchain](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Schreiben von Ethereum-Transaktionen in eine SQL-Datenbank mit Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [Sehen Sie, wie Sie Ethereum Smart Contracts einfach mit C# und Visual Studio bereitstellen können](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
+- [Sehen Sie, wie Sie Ethereum-Smart-Contracts mit C# und VisualStudio einfach bereitstellen können](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
-**Möchten Sie die Einrichtung vorerst überspringen und direkt zu den Beispielen übergehen?**
+**Möchten Sie die Einrichtung vorerst überspringen und direkt zu den Beispielen springen?**
 
-- [Playground](https://playground.nethereum.com/) – Interagieren Sie mit Ethereum und lernen Sie, wie Sie Nethereum über den Browser verwenden.
+- [Nethereum Playground](https://playground.nethereum.com/) - Interagieren Sie mit Ethereum und lernen Sie, wie Sie Nethereum über den Browser verwenden.
   - [Kontostand abfragen](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
-  - [ERC-20 Smart Contract-Guthaben abfragen](https://docs.nethereum.com/docs/smart-contracts/erc20)
+  - [ERC-20-Smart-Contract-Guthaben abfragen](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [Ether auf ein Konto transferieren](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... Und mehr!
-
 ## Artikel für Fortgeschrittene {#intermediate-articles}
 
 - [Nethereum Erste Schritte & Erstes Projekt](https://docs.nethereum.com/docs/getting-started/first-project)
-- [Stellen Sie Ihre eigenen Entwicklungs-Testchains bereit](https://github.com/Nethereum/Testchains)
-- [VSCode Codegen-Plugin für Solidity](https://docs.nethereum.com/docs/aspire-templates/guide-codegen)
+- [Eigene Entwicklungs-Testchains bereitstellen](https://github.com/Nethereum/Testchains)
+- [Codegenerierung mit Nethereum und VS Code](https://docs.nethereum.com/docs/smart-contracts/code-generation/)
 - [Unity und Ethereum: Warum und wie](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
-- [Erstellen einer ASP.NET Core Web-API für Ethereum-Dapps](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
-- [Verwendung von Nethereum Web3 zur Implementierung eines Supply-Chain-Tracking-Systems](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
+- [ASP.NET Core Web-API für Dezentrale Anwendungen (Dapps) auf Ethereum erstellen](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
+- [Nethereum MUD-Framework für strukturierte Onchain-Anwendungen](https://docs.nethereum.com/docs/mud-framework/overview/)
 - [Nethereum Blockchain-Verarbeitung](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
-- [Nethereum Websocket-Streaming](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
+- [Nethereum Echtzeit-Streaming](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido und Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum und Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-
 ## Fortgeschrittene Nutzungsmuster {#advanced-use-patterns}
 
 - [Azure Key Vault und Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
-
+- [Ujo Nethereum Backend-Referenzarchitektur](https://github.com/Nethereum/ujo-backend)
 ## .NET-Projekte, Tools und andere interessante Dinge {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground](https://playground.nethereum.com/) – _Kompilieren, erstellen und ausführen von Nethereum-Code-Snippets im Browser_
-- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) – _Nethereum-Codegenerierung mit Benutzeroberfläche in Blazor_
-- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) – _Ein .NET Wasm SPA Light-Blockchain-Explorer und einfaches Wallet_
-- [Nethermind](https://github.com/NethermindEth/nethermind) – _Ein .NET Core Ethereum-Client für Linux, Windows, MacOS_
-- [eth-utils](https://github.com/ethereum/eth-utils/) – _Hilfsfunktionen für die Arbeit mit Ethereum-bezogenen Codebasen_
-- [TestChains](https://github.com/Nethereum/TestChains) – _Vorkonfigurierte .NET-Devchains für schnelle Reaktionen (Autoritätsnachweis (PoA))_
+- [Nethereum Playground](https://playground.nethereum.com/) - _Kompilieren, erstellen und ausführen von Nethereum-Code-Snippets im Browser_
+- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum-Codegenerierung mit Benutzeroberfläche in Blazor_
+- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Ein .NET Wasm SPA Light-Blockchain-Explorer und einfaches Wallet_
+- [Wonka Business Rules Engine](https://github.com/Nethereum/Wonka) - _Eine Business-Rules-Engine (sowohl für die .NET-Plattform als auch für die Ethereum-Plattform), die von Grund auf durch Metadaten gesteuert wird_
+- [Nethermind](https://github.com/NethermindEth/nethermind) - _Ein .NET Core Ethereum-Client für Linux, Windows, MacOS_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _Hilfsfunktionen für die Arbeit mit Ethereum-bezogenen Codebasen_
+- [TestChains](https://github.com/Nethereum/TestChains) - _Vorkonfigurierte .NET-Devchains für schnelle Antworten (Autoritätsnachweis (PoA))_
 
 Suchen Sie nach weiteren Ressourcen? Besuchen Sie [ethereum.org/developers](/developers/).
-
 ## Mitwirkende aus der .NET-Community {#dot-net-community-contributors}
 
 Bei Nethereum halten wir uns meistens auf [Gitter](https://gitter.im/Nethereum/Nethereum) auf, wo jeder willkommen ist, Fragen zu stellen/beantworten, Hilfe zu erhalten oder einfach nur zu entspannen. Fühlen Sie sich frei, einen PR zu erstellen oder ein Issue im [Nethereum GitHub-Repository](https://github.com/Nethereum) zu eröffnen, oder stöbern Sie einfach durch die vielen Neben-/Beispielprojekte, die wir haben. Sie finden uns auch auf [Discord](https://discord.gg/jQPrR58FxX)!

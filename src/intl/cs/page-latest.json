@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "Zdroje pro tvůrce, nástroje a novinky z ekosystému Etherea.",
-  "page-latest-title": "Novinky pro tvůrce",
-  "page-latest-subtitle": "Sdílený prostor pro odborné pohledy na nejnovější zdroje, nástroje a novinky v ekosystému tvůrců Etherea.",
+  "page-latest-meta-description": "Nejnovější příspěvky na blogu, novinky a aktualizace z komunity Etherea, plus odborné pohledy z celého ekosystému tvůrců.",
+  "page-latest-title": "Nejnovější aktualizace Etherea",
+  "page-latest-subtitle": "Nejnovější příspěvky na blogu, novinky a aktualizace z komunity, plus odborné pohledy na vývoj napříč ekosystémem tvůrců Etherea.",
   "page-latest-no-posts": "Nebyly nalezeny žádné příspěvky.",
   "page-latest-read-more": "Číst dále",
   "page-latest-minute-read": "{minutes} min čtení",
-  "page-latest-team-attribution": "EF Růst tvůrců"
+  "page-latest-team-attribution": "EF Růst tvůrců",
+  "page-latest-cta-submit-resource": "Odeslat zdroj",
+  "page-latest-cta-propose-article": "Navrhnout článek",
+  "page-latest-highlights-heading": "To nejdůležitější",
+  "page-latest-articles-heading": "Nejnovější články o Ethereu",
+  "page-latest-sources-heading": "Přečtěte si více na těchto webech",
+  "page-latest-see-more": "Zobrazit více ({count})",
+  "page-latest-sort-label": "Seřadit články",
+  "page-latest-sort-newest": "Od nejnovějších",
+  "page-latest-sort-oldest": "Od nejstarších",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "Některé články se zobrazují v původním jazyce (angličtině).",
+  "page-latest-suggest-heading": "Navrhnout zdroj",
+  "page-latest-suggest-description": "Znáte newsletter o Ethereu nebo výzkumnou publikaci, která by zde měla být uvedena, nebo máte na mysli téma článku pro tvůrce? Otevřete issue a odešlete svůj zdroj."
 }

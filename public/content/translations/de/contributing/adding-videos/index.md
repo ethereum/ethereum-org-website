@@ -123,22 +123,6 @@ Verwenden Sie `###`-Überschriften mit Zeitstempeln, um wichtige Abschnitte zu m
 
 Wenn Sie kein Transkript haben, können Sie den Textkörper leer lassen, und das Team wird eines erstellen.
 
-#### Schritt 4: Themen-Tags auswählen {#step-4}
-
-Wählen Sie Themen-Tags, die den bestehenden Kategorien in der Galerie entsprechen. Zu den aktuellen Kategorien und ihren Tags gehören:
-
-- **Wie Ethereum funktioniert**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Netzwerk-Upgrades**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Roadmap & Prioritäten**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Skalierung & Layer 2**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Anwendungsfälle**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Privatsphäre & Sicherheit**: `privacy-and-security`, `privacy`, `authentication`
-- **Community-Geschichten**: `community-stories`, `contributing`, `translations`, `community`
-
-Um sicherzustellen, dass Ihr Video in einem Kategorie-Regal der Galerie erscheint, fügen Sie mindestens ein Kategorie-Schlüssel-Tag hinzu (der fettgedruckte Name in Kebab-Case, z. B. `use-cases` oder `scaling-and-layer-2`). Videos ohne ein erkanntes Kategorie-Tag erscheinen nur in der Ansicht „Alle“ und in den Suchergebnissen.
-
-Sie können auch neue Tags verwenden – diese stehen dann für zukünftige Kategoriegruppierungen zur Verfügung.
-
 #### Schritt 5: Ihren PR einreichen {#step-5}
 
 Erstellen Sie einen Pull Request mit Ihren Änderungen für den Branch `dev`. Das Team wird Ihre Einreichung überprüfen und Feedback geben.

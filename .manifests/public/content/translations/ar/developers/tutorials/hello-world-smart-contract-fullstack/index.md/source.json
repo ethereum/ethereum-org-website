@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/hello-world-smart-contract-fullstack/index.md",
-  "generatedAt": "2026-06-17T23:56:26.189Z",
-  "rootHash": "9ef409b7a543",
+  "generatedAt": "2026-06-30T00:42:45.581Z",
+  "rootHash": "8391285e92e8",
   "tree": {
-    "contentHash": "850ee7c1d2a7",
-    "anchorHash": "8557c2e1a148",
+    "contentHash": "15d87c33abd6",
+    "anchorHash": "2fedff2940bf",
     "children": {
       "frontmatter:title": {
         "contentHash": "9b032f53b4d0",
@@ -92,8 +92,8 @@
         "anchorHash": "e3b0c44298fc"
       },
       "part-1": {
-        "contentHash": "3ac4582f7faf",
-        "anchorHash": "8e01bdb0b2bf",
+        "contentHash": "f9bb7e9197e8",
+        "anchorHash": "a46e7ad3e139",
         "labelHash": "4f287dceaf96",
         "children": {
           "_label": {
@@ -227,8 +227,8 @@
             ]
           },
           "step-5-check-your-balance": {
-            "contentHash": "6827d9b3212e",
-            "anchorHash": "dc9ed6442064",
+            "contentHash": "33e84bd231f1",
+            "anchorHash": "446659808ea1",
             "labelHash": "e41f67969740",
             "children": {
               "_label": {
@@ -241,15 +241,15 @@
               },
               "link:0": {
                 "contentHash": "633f5d8e09c6",
-                "anchorHash": "9094876f7e9a"
+                "anchorHash": "19974bdfcc7b"
               },
               "prose:4": {
                 "contentHash": "5ed0a3f4758f",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:1": {
-                "contentHash": "dc12fc59041e",
-                "anchorHash": "dc1c5e972723"
+                "contentHash": "269ad565a9d3",
+                "anchorHash": "72f0fc3dfc92"
               },
               "prose:5": {
                 "contentHash": "6edb6c5c5a24",
@@ -286,8 +286,8 @@
             ]
           },
           "step-6-initialize-our-project": {
-            "contentHash": "b579d3a6543f",
-            "anchorHash": "6af934eef6ee",
+            "contentHash": "666cf74e02b6",
+            "anchorHash": "b2d79a0af193",
             "labelHash": "b1c3d2d5796c",
             "children": {
               "_label": {
@@ -315,11 +315,11 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "link:1": {
-                "contentHash": "ae3ef7c36507",
-                "anchorHash": "5b28cf787d9a"
+                "contentHash": "4a5face54e26",
+                "anchorHash": "6f1666522a9e"
               },
               "prose:4": {
-                "contentHash": "3f3880b57b2b",
+                "contentHash": "f592a24bf145",
                 "anchorHash": "e3b0c44298fc"
               },
               "code-fence:8": {
@@ -606,7 +606,7 @@
           },
           "step-11-connect-metamask-alchemy-to-your-project": {
             "contentHash": "7a53e6c1b09f",
-            "anchorHash": "63658d52daa7",
+            "anchorHash": "0c309342054a",
             "labelHash": "0c681fd2b66e",
             "children": {
               "_label": {
@@ -619,7 +619,7 @@
               },
               "link:0": {
                 "contentHash": "bf222c1c7634",
-                "anchorHash": "7f384f5e73a4"
+                "anchorHash": "a04fc4065212"
               },
               "prose:2": {
                 "contentHash": "dcc88515eac2",
@@ -723,7 +723,7 @@
           },
           "step-12-install-ethersjs": {
             "contentHash": "b4ff2a30dc9f",
-            "anchorHash": "9954e9b2f5cd",
+            "anchorHash": "d8dede55adc5",
             "labelHash": "4b9d451dd11c",
             "children": {
               "_label": {
@@ -736,7 +736,7 @@
               },
               "link:0": {
                 "contentHash": "e36cc226987d",
-                "anchorHash": "fa4441bbb0d7"
+                "anchorHash": "191567028ad9"
               },
               "prose:4": {
                 "contentHash": "d1138da3afd8",
@@ -1016,7 +1016,7 @@
           },
           "step-16-deploy-our-contract": {
             "contentHash": "110edb6f4849",
-            "anchorHash": "a4436ee101c9",
+            "anchorHash": "8a907298daa1",
             "labelHash": "1a3185ef12f2",
             "children": {
               "_label": {
@@ -1113,7 +1113,7 @@
               },
               "link:9": {
                 "contentHash": "55cca2ec77e2",
-                "anchorHash": "dce760fc9d7c"
+                "anchorHash": "99229f849e92"
               },
               "prose:22": {
                 "contentHash": "a7499f3d8b1a",
@@ -1121,7 +1121,7 @@
               },
               "link:10": {
                 "contentHash": "bf2ba3b2d72f",
-                "anchorHash": "794ad23a7707"
+                "anchorHash": "ed2d017d1c27"
               },
               "prose:23": {
                 "contentHash": "64f553e7ec7b",
@@ -1192,7 +1192,7 @@
       },
       "part-2-interact-with-your-smart-contract": {
         "contentHash": "00b93a2d33e7",
-        "anchorHash": "d8f702dc939e",
+        "anchorHash": "5bf10fdf6ebc",
         "labelHash": "d9a1e52168a8",
         "children": {
           "_label": {
@@ -1625,7 +1625,7 @@
           },
           "read-the-new-message": {
             "contentHash": "38a137b5352c",
-            "anchorHash": "a9647dcd09ad",
+            "anchorHash": "536f88a601f6",
             "labelHash": "a28c5e1a4a97",
             "children": {
               "_label": {
@@ -1694,7 +1694,7 @@
               },
               "link:1": {
                 "contentHash": "b8390a467b2d",
-                "anchorHash": "79b8f5199275"
+                "anchorHash": "7d1018c96cac"
               },
               "link:2": {
                 "contentHash": "d7541e95c5a7",
@@ -2010,8 +2010,8 @@
         ]
       },
       "part-4-integrating-your-smart-contract-with-the-frontend": {
-        "contentHash": "8918f31cae0d",
-        "anchorHash": "2961cad14495",
+        "contentHash": "c4dc065fa321",
+        "anchorHash": "2b47ede3ed5f",
         "labelHash": "fa9911a43945",
         "children": {
           "_label": {
@@ -2024,7 +2024,7 @@
           },
           "link:0": {
             "contentHash": "fce32e90ca84",
-            "anchorHash": "159282be5baa"
+            "anchorHash": "41f860b4d7f3"
           },
           "prose:4": {
             "contentHash": "17f80dbc4b74",
@@ -2727,8 +2727,8 @@
             ]
           },
           "step-3-read-from-your-smart-contract": {
-            "contentHash": "625054fdb21e",
-            "anchorHash": "cbc74d529b59",
+            "contentHash": "2869a1a80684",
+            "anchorHash": "00a34b5a2bd9",
             "labelHash": "0eb0d77b8b60",
             "children": {
               "_label": {
@@ -2740,33 +2740,73 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "establish-an-api-connection-to-the-ethereum-chain": {
-                "contentHash": "573b2ed12a27",
-                "anchorHash": "c70606b9b36e",
+                "contentHash": "ab557de6c28e",
+                "anchorHash": "d3ae09f6a7c2",
                 "labelHash": "987e4e2250c1",
                 "children": {
                   "_label": {
                     "contentHash": "987e4e2250c1",
                     "anchorHash": "e3b0c44298fc"
                   },
-                  "prose:3": {
-                    "contentHash": "920ad3726835",
+                  "prose:2": {
+                    "contentHash": "01f86adebb84",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:0": {
                     "contentHash": "fce32e90ca84",
                     "anchorHash": "41f860b4d7f3"
                   },
+                  "prose:3": {
+                    "contentHash": "920ad3726835",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:1": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "558f3b272fbb"
+                  },
                   "prose:4": {
                     "contentHash": "010b1fdd5857",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "code-fence:6": {
+                    "contentHash": "ff17e130226c",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:1": {
                     "contentHash": "f829674d0e2c",
                     "anchorHash": "e226600312d7"
                   },
+                  "link:2": {
+                    "contentHash": "0261167f888c",
+                    "anchorHash": "1c249713163a"
+                  },
                   "prose:5": {
                     "contentHash": "663ea1bfffe5",
                     "anchorHash": "e3b0c44298fc"
+                  },
+                  "code-fence:13": {
+                    "contentHash": "8de9861263e7",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:0": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e9cbb0224c4a"
+                  },
+                  "code-fence:19": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "7d7b0f136a38"
+                  },
+                  "code-comment:25": {
+                    "contentHash": "1fa251f8fb3d",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "code-comment:26": {
+                    "contentHash": "91f6d7490c5e",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "code-fence:27": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6ff42b4054d3"
                   },
                   "inline-code:2": {
                     "contentHash": "e3b0c44298fc",
@@ -2775,79 +2815,37 @@
                   "prose:6": {
                     "contentHash": "406f987f6f69",
                     "anchorHash": "e3b0c44298fc"
-                  },
-                  "code-fence:8": {
-                    "contentHash": "ff17e130226c",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "link:2": {
-                    "contentHash": "0261167f888c",
-                    "anchorHash": "1c249713163a"
-                  },
-                  "code-fence:15": {
-                    "contentHash": "8de9861263e7",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "prose:2": {
-                    "contentHash": "01f86adebb84",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "inline-code:0": {
-                    "contentHash": "e3b0c44298fc",
-                    "anchorHash": "e9cbb0224c4a"
-                  },
-                  "inline-code:1": {
-                    "contentHash": "e3b0c44298fc",
-                    "anchorHash": "558f3b272fbb"
-                  },
-                  "code-fence:21": {
-                    "contentHash": "e3b0c44298fc",
-                    "anchorHash": "7d7b0f136a38"
-                  },
-                  "code-comment:27": {
-                    "contentHash": "1fa251f8fb3d",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "code-comment:28": {
-                    "contentHash": "91f6d7490c5e",
-                    "anchorHash": "e3b0c44298fc"
-                  },
-                  "code-fence:29": {
-                    "contentHash": "e3b0c44298fc",
-                    "anchorHash": "6ff42b4054d3"
                   }
                 },
                 "childrenOrder": [
                   "_label",
-                  "prose:3",
+                  "prose:2",
                   "link:0",
+                  "prose:3",
+                  "inline-code:1",
                   "prose:4",
-                  "link:1",
-                  "prose:5",
-                  "inline-code:2",
-                  "prose:6",
-                  "code-fence:8",
+                  "code-fence:6",
                   "link:0",
                   "prose:3",
                   "link:1",
                   "prose:4",
                   "link:2",
                   "prose:5",
-                  "code-fence:15",
+                  "code-fence:13",
                   "prose:2",
                   "inline-code:0",
                   "prose:3",
                   "inline-code:1",
                   "prose:4",
-                  "code-fence:21",
+                  "code-fence:19",
                   "prose:2",
                   "inline-code:0",
                   "prose:3",
                   "inline-code:1",
                   "prose:4",
-                  "code-comment:27",
-                  "code-comment:28",
-                  "code-fence:29",
+                  "code-comment:25",
+                  "code-comment:26",
+                  "code-fence:27",
                   "prose:3",
                   "inline-code:0",
                   "prose:4",
@@ -3148,7 +3146,7 @@
               },
               "implement-addsmartcontractlistener": {
                 "contentHash": "3302468ee8c2",
-                "anchorHash": "d73b9f36e271",
+                "anchorHash": "90ef37ce7568",
                 "labelHash": "f2c81adb50ec",
                 "children": {
                   "_label": {
@@ -3169,7 +3167,7 @@
                   },
                   "link:1": {
                     "contentHash": "e6c470a0cdff",
-                    "anchorHash": "c0f1b0b6bdea"
+                    "anchorHash": "8ea6a13ecb71"
                   },
                   "prose:6": {
                     "contentHash": "15e56b7c3499",
@@ -3407,8 +3405,8 @@
             ]
           },
           "step-4-set-up-your-ethereum-wallet": {
-            "contentHash": "ba6549973a98",
-            "anchorHash": "46f02566545a",
+            "contentHash": "b91e74ab501a",
+            "anchorHash": "1b98776155a6",
             "labelHash": "2db9601f17ab",
             "children": {
               "_label": {
@@ -3494,8 +3492,8 @@
                 ]
               },
               "check-your-balance": {
-                "contentHash": "2e30785cbc25",
-                "anchorHash": "f31cae1928b7",
+                "contentHash": "cd895062f16a",
+                "anchorHash": "5af4de888e41",
                 "labelHash": "d7a661f8ada3",
                 "children": {
                   "_label": {
@@ -3508,15 +3506,15 @@
                   },
                   "link:0": {
                     "contentHash": "633f5d8e09c6",
-                    "anchorHash": "9094876f7e9a"
+                    "anchorHash": "19974bdfcc7b"
                   },
                   "prose:3": {
                     "contentHash": "5ed0a3f4758f",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:1": {
-                    "contentHash": "dc12fc59041e",
-                    "anchorHash": "dc1c5e972723"
+                    "contentHash": "269ad565a9d3",
+                    "anchorHash": "72f0fc3dfc92"
                   },
                   "prose:4": {
                     "contentHash": "df299f84e712",
@@ -4580,7 +4578,7 @@
           },
           "make-your-own-custom-dapp": {
             "contentHash": "7faed6cac2ca",
-            "anchorHash": "a53773f7edd3",
+            "anchorHash": "00548e9772c7",
             "labelHash": "8d93a8c4e8d4",
             "children": {
               "_label": {
@@ -4593,7 +4591,7 @@
               },
               "link:0": {
                 "contentHash": "fce32e90ca84",
-                "anchorHash": "159282be5baa"
+                "anchorHash": "41f860b4d7f3"
               },
               "prose:4": {
                 "contentHash": "783db985d88e",
@@ -4675,5 +4673,5 @@
       "part-4-integrating-your-smart-contract-with-the-frontend"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

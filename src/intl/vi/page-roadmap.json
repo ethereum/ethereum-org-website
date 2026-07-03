@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "Tìm hiểu thêm về Quản trị Ethereum",
   "page-roadmap-hero-alt": "Lộ trình Ethereum",
   "page-roadmap-technical-upgrades-title": "Những bản nâng cấp kỹ thuật nào sắp đến với Ethereum?",
+  "page-roadmap-post-quantum-title": "Bảo mật hậu lượng tử",
+  "page-roadmap-post-quantum-description": "Máy tính lượng tử một ngày nào đó có thể phá vỡ mật mã học mà các Chuỗi khối đang dựa vào. Các bản nâng cấp hậu lượng tử của Ethereum sẽ thay thế các thuật toán dễ bị tổn thương trước khi điện toán lượng tử trở thành một mối đe dọa thực sự.",
   "page-roadmap-danksharding-title": "danksharding",
   "page-roadmap-danksharding-description": "danksharding làm cho các bản cuộn lớp 2 (l2) trở nên rẻ hơn nhiều đối với người dùng bằng cách thêm các \"khối dữ liệu\" vào các khối Ethereum.",
   "page-roadmap-single-slot-finality-title": "tính chung cuộc trong một slot",

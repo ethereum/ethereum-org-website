@@ -50,11 +50,11 @@ Don't go from `<h2>` to `<h4>`. Screen reader users navigate by heading level, a
 ### Hero "title" vs "header"
 
 `Hero/*` components use:
-- `header` -- a small uppercase eyebrow, rendered as `<h1>` (intentional in `HubHero` and `PageHero`). In `PageHero`, supplying `header` demotes `title` to `<h2>`, so the eyebrow is the page `<h1>`.
-- `title` -- the visible large title (the `<h1>` when no `header` eyebrow is passed)
+- `title` -- the visible large title. In `PageHero` this is **always** the page `<h1>`.
 - `description` -- the lead paragraph
+- `header` (`HubHero` only) -- a small uppercase eyebrow rendered as `<h1>`. `PageHero` has **no** `header` prop (it was removed; `title` is the `<h1>`).
 
-In `PageHero` the eyebrow slot is a discriminated union: pass **either** `breadcrumbs` (a `{ slug }` object or a custom `<Breadcrumb>` element) **or** `header` -- not both. Don't conflate these fields. See `references/page-hero-walkthrough.md`.
+In `PageHero`, `breadcrumbs` fills the slot above the title (a `{ slug }` object or a custom `<Breadcrumb>` element), and an optional `eyebrow` (`ReactNode`) renders between the breadcrumbs and the title for a status indicator/tag. The hero aside is a discriminated union: `heroImg` **or** `heroComponent`, never both. See `references/page-hero-walkthrough.md`.
 
 ### Markdown page titles
 

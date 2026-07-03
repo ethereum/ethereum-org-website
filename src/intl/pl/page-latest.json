@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "Zasoby, narzędzia i nowości dla budowniczych z ekosystemu Ethereum.",
-  "page-latest-title": "Aktualizacje dla budowniczych",
-  "page-latest-subtitle": "Wspólna przestrzeń dla eksperckich perspektyw na temat najnowszych zasobów, narzędzi i nowości w ekosystemie budowniczych Ethereum.",
+  "page-latest-meta-description": "Najnowsze wpisy na blogu, wiadomości i aktualizacje ze społeczności Ethereum, a także perspektywy ekspertów z całego ekosystemu budowniczych.",
+  "page-latest-title": "Najnowsze aktualizacje Ethereum",
+  "page-latest-subtitle": "Najnowsze wpisy na blogu, wiadomości i aktualizacje ze społeczności, a także perspektywy ekspertów na temat rozwoju w całym ekosystemie budowniczych Ethereum.",
   "page-latest-no-posts": "Nie znaleziono wpisów.",
   "page-latest-read-more": "Czytaj więcej",
   "page-latest-minute-read": "{minutes} min czytania",
-  "page-latest-team-attribution": "EF Builder Growth"
+  "page-latest-team-attribution": "EF Builder Growth",
+  "page-latest-cta-submit-resource": "Zgłoś zasób",
+  "page-latest-cta-propose-article": "Zaproponuj artykuł",
+  "page-latest-highlights-heading": "Wyróżnione",
+  "page-latest-articles-heading": "Najnowsze artykuły o Ethereum",
+  "page-latest-sources-heading": "Czytaj więcej na tych stronach",
+  "page-latest-see-more": "Zobacz więcej ({count})",
+  "page-latest-sort-label": "Sortuj artykuły",
+  "page-latest-sort-newest": "Od najnowszych",
+  "page-latest-sort-oldest": "Od najstarszych",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "Niektóre artykuły są wyświetlane w oryginalnym języku (angielskim).",
+  "page-latest-suggest-heading": "Zaproponuj zasób",
+  "page-latest-suggest-description": "Znasz newsletter lub publikację badawczą o Ethereum, która powinna się tu znaleźć, albo masz pomysł na temat artykułu dla budowniczych? Otwórz zgłoszenie, aby przesłać swój zasób."
 }
