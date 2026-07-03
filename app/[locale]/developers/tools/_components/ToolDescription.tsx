@@ -1,3 +1,5 @@
+import type { ComponentPropsWithoutRef } from "react"
+
 import { htmlElements } from "@/components/MdComponents"
 
 import { cn } from "@/lib/utils/cn"
@@ -25,6 +27,20 @@ const ToolDescription = async ({
       // Demote any headings: the tool name owns the page's heading hierarchy,
       // and anchored headings don't belong inside a description block.
       h1: htmlElements.h2,
+      // Description images come from external repos with no known dimensions.
+      // The default MarkdownImage feeds those into next/image, which throws on
+      // the resulting NaN width — so render a plain responsive <img> instead.
+      img: ({ src, alt }: ComponentPropsWithoutRef<"img">) =>
+        typeof src === "string" ? (
+          // eslint-disable-next-line @next/next/no-img-element -- external, unsized markdown image
+          <img
+            src={src}
+            alt={alt ?? ""}
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            className="mx-auto h-auto max-w-full rounded-sm"
+          />
+        ) : null,
     })
     return <div className={cn("flow", className)}>{content}</div>
   } catch {
