@@ -63,7 +63,7 @@ const MarkdownImage = ({
           loading="lazy"
           src={transformedSrc}
           unoptimized={isAnimated}
-          className="h-auto"
+          className="h-auto rounded-base"
           {...rest}
         />
       </NextLink>

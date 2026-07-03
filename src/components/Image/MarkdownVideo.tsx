@@ -73,7 +73,7 @@ const MarkdownVideo = ({
         // standard ratio letterboxes inside the fixed box rather than shifting
         // layout or distorting.
         className={cn(
-          "h-auto rounded-2xl object-contain",
+          "h-auto rounded-base object-contain",
           isPortrait
             ? "aspect-9/16 max-h-105 w-auto"
             : "aspect-video w-full max-w-full"
