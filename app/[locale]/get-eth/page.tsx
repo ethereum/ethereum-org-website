@@ -156,7 +156,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
       <PageHero
         variant="no-divider"
-        breadcrumbs={{ slug: "get-eth", startDepth: 1 }}
+        breadcrumbs={{ slug: "get-eth" }}
         heroComponent={
           <div className="relative grid size-full place-items-center">
             <Image
