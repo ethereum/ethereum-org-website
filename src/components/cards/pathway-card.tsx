@@ -52,7 +52,6 @@ const PathwayCard = ({
       className={cn("@lg/pathway:flex-row", className)}
       border
       hoverLift
-      hoverOutline
     >
       {banner && (
         <CardBanner
