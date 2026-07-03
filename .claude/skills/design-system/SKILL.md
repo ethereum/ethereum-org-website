@@ -93,7 +93,7 @@ Only **two** project shadows exist, both in `utilities.css`, for the brand-tinte
 - `shadow-primary-xl` -- `shadow-xl` tinted with `primary-low-contrast`, for large framed / window-style boxes.
 - `shadow-primary-no-blur-*` -- functional, spacing-scaled solid (no-blur) offset (`-1` = 4px, `-0.5` = 2px) in `primary-low-contrast`, for hard hover offsets.
 
-Before reaching for anything new: a default almost always fits, and a **hover lift is the `hover-lift-*` utility** (`-xs`/`-base`/`-sm`/`-md`) or `Card hoverEffect="lift"` -- not a bespoke shadow swap. If you genuinely need a custom shadow, write it as a **raw `box-shadow`** (like the two above), never an arbitrary `shadow-[...]`: arbitrary shadows route their color through `--tw-shadow-color`, which the global `* { dark:shadow-body }` rule overrides in dark mode, silently graying your color. Raw `box-shadow` utilities are immune.
+Before reaching for anything new: a default almost always fits, and a **hover lift is the `hover-lift-*` utility** (`-xs`/`-base`/`-sm`/`-md`) or `Card hoverLift` -- not a bespoke shadow swap. If you genuinely need a custom shadow, write it as a **raw `box-shadow`** (like the two above), never an arbitrary `shadow-[...]`: arbitrary shadows route their color through `--tw-shadow-color`, which the global `* { dark:shadow-body }` rule overrides in dark mode, silently graying your color. Raw `box-shadow` utilities are immune.
 
 ### One stray `toLocaleString` in `ui/chart.tsx:241`
 

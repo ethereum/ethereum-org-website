@@ -110,8 +110,6 @@ const GetStartedGrid = async ({
           {cards.map((card) => (
             <Card
               key={card.title}
-              className="border transition-colors hover:border-primary-hover"
-              variant="nested"
               href={card.href}
               size="lg"
               customEventOptions={{
@@ -119,6 +117,8 @@ const GetStartedGrid = async ({
                 eventAction: "section_click",
                 eventName: `get_started/${card.id}`,
               }}
+              variant="nested"
+              border
             >
               <CardHeader>
                 <CardBanner zoom={false}>
