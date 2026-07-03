@@ -1,5 +1,6 @@
-import ProductListComponent from "@/components/ProductList"
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import ProductListComponent, {
+  type ProductListContent,
+} from "@/components/ProductList"
 
 import auger from "@/public/images/dapps/auger.png"
 import kalshi from "@/public/images/dapps/kalshi.png"
@@ -9,69 +10,30 @@ const PredictionMarketLists = () => {
   const productListSets = [
     {
       title: "Polymarket",
-      description: "",
+      description: "A popular forecasting market with real-time trading.",
       image: polymarket,
-      alt: "Polymarket logo",
-      contentItems: [
-        <p key="polymarket-description">
-          A popular forecasting market with real-time trading.
-        </p>,
-        <div key="polymarket-button">
-          <ButtonLink
-            href="https://polymarket.com/"
-            target="_blank"
-            variant="outline"
-          >
-            Explore Polymarket
-          </ButtonLink>
-        </div>,
-      ],
+      href: "https://polymarket.com/",
+      ctaLabel: "Explore Polymarket",
     },
     {
       title: "Augur",
-      description: "",
+      description:
+        "A fully decentralized prediction market protocol used for predicting price trends. Disclaimer: you will need some technical expertise to start using Augur.",
       image: auger,
-      alt: "Augur logo",
-      contentItems: [
-        <p key="auger-description">
-          A fully decentralized prediction market protocol used for predicting
-          price trends. Disclaimer: you will need some technical expertise to
-          start using Augur.
-        </p>,
-        <div key="auger-button">
-          <ButtonLink
-            href="https://github.com/AugurProject"
-            target="_blank"
-            variant="outline"
-          >
-            Dive into Augur
-          </ButtonLink>
-        </div>,
-      ],
+      href: "https://github.com/AugurProject",
+      ctaLabel: "Dive into Augur",
     },
     {
       title: "Kalshi",
-      description: "",
+      description:
+        "A CFTC-compliant platform using Ethereum for USDC deposits. (USA only)",
       image: kalshi,
-      alt: "Kalshi logo",
-      contentItems: [
-        <p key="kalshi-description">
-          a CFTC-compliant platform using Ethereum for USDC deposits. (USA only)
-        </p>,
-        <div key="kalshi-button">
-          <ButtonLink
-            href="https://kalshi.com/"
-            target="_blank"
-            variant="outline"
-          >
-            Try Kalshi
-          </ButtonLink>
-        </div>,
-      ],
+      href: "https://kalshi.com/",
+      ctaLabel: "Try Kalshi",
     },
-  ]
+  ] satisfies ProductListContent[]
 
-  return <ProductListComponent content={productListSets} actionLabel="Go" />
+  return <ProductListComponent content={productListSets} />
 }
 
 export default PredictionMarketLists

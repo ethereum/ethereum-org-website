@@ -1,127 +1,136 @@
+import { useId } from "react"
 import type { ImageProps } from "next/image"
 
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
-import { List, ListItem } from "@/components/ui/list"
+import { Grid } from "@/components/ui/grid"
 
 import { cn } from "@/lib/utils/cn"
 
-type Content = {
+type ProductListContentBase = {
   title: string
-  description: string
-  contentItems?: React.ReactNode[]
-  link?: string
+  description: React.ReactNode | React.ReactNode[]
+  href: string
   image?: ImageProps["src"]
   alt?: string
   id?: string
   className?: string
 }
 
-export type ProductListProps = {
-  content: Content[]
-  category?: string
-  actionLabel: string
-  /** Columns rendered from `md` up. Defaults to a single column. */
-  columns?: 1 | 2
+export type ProductListContent = ProductListContentBase & {
+  /** Per-item CTA label; items without one fall back to `actionLabel` */
+  ctaLabel?: string
 }
+
+// `actionLabel` (the shared CTA fallback) may be omitted only when every
+// content item supplies its own `ctaLabel`.
+export type ProductListProps = {
+  category?: string
+  columns?: 2
+  as?: "h2" | "h4"
+} & (
+  | {
+      content: (ProductListContentBase & { ctaLabel: string })[]
+      actionLabel?: string
+    }
+  | {
+      content: ProductListContent[]
+      actionLabel: string
+    }
+)
 
 const ProductList = ({
   actionLabel,
   content,
   category,
-  columns = 1,
+  columns,
+  as,
 }: ProductListProps) => {
-  const CATEGORY_NAME = "category-name"
+  const headingId = useId()
 
-  // In a two-column grid the bottom row shouldn't draw a divider on `md+` (one
-  // item when the count is odd, two when it's even). On mobile the list is
-  // always a single column, so only the very last item drops its divider.
-  const lastRowSize = content.length % 2 === 0 ? 2 : 1
-
+  // Widen the union: TS can't call .map on a union of array types
+  const items: ProductListContent[] = content
+  const Heading = as || "h3"
   return (
-    <div className="w-full">
+    <div className={cn("mb-4 w-full", !category && "overflow-hidden")}>
       {category && (
-        <h3
-          id={CATEGORY_NAME}
+        <Heading
+          id={headingId}
           className="mt-10 mb-0 border-b-2 border-border pb-4 text-2xl"
         >
           {category}
-        </h3>
+        </Heading>
       )}
-      <List
-        aria-labelledby={CATEGORY_NAME}
-        className={cn(
-          "m-0 mb-4",
-          columns === 2 && "grid grid-cols-1 gap-x-16 md:grid-cols-2"
-        )}
+      {/* Fold-independent dividers: every item draws a border-t; the 1px
+          pull-up hides the top row's line under the heading's border (same
+          token), or overflow-hidden crops it when there's no heading.
+          Pattern notes: design-system skill. */}
+      <Grid
+        asChild
+        columns={columns || 1}
+        className="m-0 -mt-px list-none gap-x-8 gap-y-0 [--grid-gap:--spacing(8)]"
+        size="wider"
       >
-        {content.map(
-          (
-            {
-              title,
-              description,
-              link,
-              image,
-              alt,
-              id,
-              contentItems,
-              className,
-            },
-            idx
-          ) => {
-            const isLast = idx === content.length - 1
-            const inLastGridRow =
-              columns === 2 && idx >= content.length - lastRowSize
-
-            return (
-              <ListItem
-                key={id || idx}
-                color="text"
-                className={cn(
-                  "mt-8 mb-0 flex pb-4",
-                  !isLast && "border-b",
-                  inLastGridRow && "md:border-b-0",
-                  className
-                )}
-              >
-                <div className="w-20">
+        <ul role="list" aria-labelledby={category ? headingId : undefined}>
+          {items.map(
+            (
+              {
+                title,
+                description,
+                href,
+                ctaLabel,
+                image,
+                alt = "",
+                id,
+                className,
+              },
+              idx
+            ) => {
+              const descriptions = Array.isArray(description)
+                ? description
+                : [description]
+              return (
+                <li
+                  key={id || idx}
+                  className={cn(
+                    "m-0 flex border-t border-border p-page",
+                    className
+                  )}
+                >
                   {image && (
                     <Image
                       src={image}
-                      alt={alt || ""}
-                      width={66}
-                      height={66}
-                      className="rounded-xl shadow-lg dark:shadow-body-light"
+                      alt={alt}
+                      width={80}
+                      height={80}
+                      className="aspect-square h-20 rounded-3xl shadow-lg"
                     />
                   )}
-                </div>
-                <Flex className="ms-4 w-full flex-col justify-between pb-4 sm:flex-row">
-                  <div className="flex flex-1 flex-col gap-2">
-                    <div className="text-xl font-bold">{title}</div>
-                    <div className="mb-0 text-sm opacity-60">{description}</div>
-                    {contentItems && (
-                      <div className="mb-0 flex flex-col gap-2 text-sm">
-                        {contentItems}
-                      </div>
-                    )}
-                  </div>
-                  {link && (
-                    <ButtonLink
-                      variant="outline"
-                      href={link}
-                      className="ms-0 mt-4 min-h-fit gap-0 self-start rounded-xs px-6 py-1 sm:ms-8 sm:mt-0 sm:self-center"
-                    >
-                      {actionLabel}
-                      <span className="sr-only">to {title} website</span>
+                  <Flex className="ms-4 w-full justify-between gap-space max-sm:flex-col sm:items-center">
+                    <div className="flow flex-1 self-start">
+                      <p className="text-xl font-bold">{title}</p>
+                      {descriptions.map((desc, idx) => (
+                        <p key={idx} className="mb-0 text-sm text-body-medium">
+                          {desc}
+                        </p>
+                      ))}
+                    </div>
+                    <ButtonLink variant="outline" href={href} className="h-fit">
+                      {ctaLabel || (
+                        <>
+                          {actionLabel}
+                          <span className="sr-only">to {title} website</span>
+                        </>
+                      )}
                     </ButtonLink>
-                  )}
-                </Flex>
-              </ListItem>
-            )
-          }
-        )}
-      </List>
+                  </Flex>
+                </li>
+              )
+            }
+          )}
+        </ul>
+      </Grid>
     </div>
   )
 }
