@@ -5,13 +5,22 @@ import type {
   BuilderResourcesTaxonomy,
 } from "@/lib/types"
 
+import { getToolKey } from "@/lib/utils/getToolKey"
 import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
-import { slugify } from "@/lib/utils/url"
+import { stripMarkdown } from "@/lib/utils/md"
+
+export { getToolKey }
 
 export type DeveloperTool = BuilderResourcesCatalogResource
 
 export type DeveloperToolWithCategory = DeveloperTool & {
   categoryId: string
+  /**
+   * Plain-text description (markdown stripped) for card/preview display, set by
+   * `localizeToolDescriptions`. Detail views render the full markdown
+   * `description` instead.
+   */
+  descriptionStripped?: string
 }
 
 export type DeveloperToolsCategory =
@@ -48,9 +57,6 @@ export function normalizeDeveloperToolsData(
 
   return { taxonomy, resources }
 }
-
-/** Canonical mapping from a tool to its URL slug (also its React key). */
-export const getToolKey = (tool: DeveloperTool): string => slugify(tool.name)
 
 const repoEntries = (tool: DeveloperTool) =>
   tool.repos.map((repo) => (typeof repo === "string" ? { href: repo } : repo))
@@ -158,21 +164,27 @@ type Translator = Awaited<ReturnType<typeof getTranslations>>
  * Swap each tool's English description for its localized one from the
  * `page-developers-tools-descriptions` namespace (falls back to English when a
  * translation is missing). Keeps rendered content in sync with the hreflang
- * alternates the tool routes already advertise.
+ * alternates the tool routes already advertise. Also derives the plain-text
+ * `descriptionStripped` used by cards — done here, after localization, so card
+ * previews match the localized description rather than the English source.
  */
-export function localizeToolDescriptions<T extends DeveloperTool>(
-  tools: T[],
+export function localizeToolDescriptions(
+  tools: DeveloperToolWithCategory[],
   toolDescriptions: Translator
-): T[] {
-  return tools.map((tool) => ({
-    ...tool,
-    description: getLocalizedDescription(
+): DeveloperToolWithCategory[] {
+  return tools.map((tool) => {
+    const description = getLocalizedDescription(
       toolDescriptions,
       "tool",
       tool.name,
       tool.description
-    ),
-  }))
+    )
+    return {
+      ...tool,
+      description,
+      descriptionStripped: stripMarkdown(description),
+    }
+  })
 }
 
 /**

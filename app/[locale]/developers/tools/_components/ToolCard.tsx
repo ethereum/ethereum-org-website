@@ -3,10 +3,8 @@ import { AppWindowMac } from "lucide-react"
 
 import AppCard from "@/components/AppCard"
 
-import {
-  type DeveloperToolWithCategory,
-  getToolKey,
-} from "@/lib/utils/developerToolsData"
+import type { DeveloperToolWithCategory } from "@/lib/utils/developerToolsData"
+import { getToolKey } from "@/lib/utils/getToolKey"
 
 /**
  * Catalog card for a single tool. Shared by the catalog grid and the
@@ -25,7 +23,7 @@ const ToolCard = memo(function ToolCard({
       <AppCard
         name={tool.name}
         nameClassName="text-base"
-        description={tool.description}
+        description={tool.descriptionStripped ?? tool.description}
         descriptionClassName="text-sm [&>p]:text-body-medium"
         descriptionMaxLines={2}
         descriptionExpandable={false}

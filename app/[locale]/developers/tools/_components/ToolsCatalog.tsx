@@ -9,11 +9,11 @@ import { BaseLink } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
-import {
-  type DeveloperToolsCategory,
-  type DeveloperToolWithCategory,
-  getToolKey,
+import type {
+  DeveloperToolsCategory,
+  DeveloperToolWithCategory,
 } from "@/lib/utils/developerToolsData"
+import { getToolKey } from "@/lib/utils/getToolKey"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import ToolCard from "./ToolCard"
