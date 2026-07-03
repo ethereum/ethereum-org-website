@@ -37,8 +37,9 @@ import PageJsonLD from "./page-jsonld"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
-// Re-render statically generated pages daily to pick up tools data updates
+// Rendered on demand and revalidated daily to pick up tools data updates
 export const revalidate = 86400
+export const dynamicParams = true
 
 type ToolPageParams = PageParams & { tool: string }
 
@@ -195,12 +196,8 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   )
 }
 
-export async function generateStaticParams() {
-  const normalized = normalizeDeveloperToolsData(await getDeveloperToolsData())
-  if (!normalized) return []
-
-  // Same categorized, deduped list the page resolves against.
-  return withCategories(normalized).map((tool) => ({ tool: getToolKey(tool) }))
+export function generateStaticParams() {
+  return []
 }
 
 export async function generateMetadata(props: {
@@ -210,7 +207,10 @@ export async function generateMetadata(props: {
 
   const [normalized, toolDescriptions] = await Promise.all([
     normalizeDeveloperToolsData(await getDeveloperToolsData()),
-    getTranslations({ locale, namespace: "page-developers-tools-descriptions" }),
+    getTranslations({
+      locale,
+      namespace: "page-developers-tools-descriptions",
+    }),
   ])
   const tool =
     normalized &&
