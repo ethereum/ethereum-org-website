@@ -23,10 +23,11 @@ type MarkdownVideoProps = {
  * The modern GIF replacement: a `<video>` sized by a fixed CSS aspect ratio (no
  * CLS, no `next/image` — that pipeline can't optimize video anyway), that only
  * plays while on-screen (battery/bandwidth) and never autoplays under
- * `prefers-reduced-motion` (where it shows controls instead). Clips are
- * standardized to one of two ratios at authoring time; orientation is chosen
- * from the markdown via a `-portrait` filename suffix. Mirrors the orientation
- * handling of the `YouTube` embed (`aspect-9/16 max-h-105`).
+ * `prefers-reduced-motion`. Controls are always available so users can pause
+ * looping motion. Clips are standardized to one of two ratios at authoring time;
+ * orientation is chosen from the markdown via a `-portrait` filename suffix.
+ * Mirrors the orientation handling of the `YouTube` embed (`aspect-9/16
+ * max-h-105`).
  */
 const MarkdownVideo = ({
   src,
@@ -44,7 +45,6 @@ const MarkdownVideo = ({
   const isClient = useIsClient()
 
   const shouldPlay = isClient && inView && !prefersReducedMotion
-  const showControls = isClient && prefersReducedMotion
 
   useEffect(() => {
     const video = ref.current
@@ -64,9 +64,12 @@ const MarkdownVideo = ({
         loop
         muted
         playsInline
-        preload="metadata"
+        preload="auto"
         poster={poster}
-        controls={showControls}
+        controls
+        controlsList="nodownload noremoteplayback"
+        disablePictureInPicture
+        disableRemotePlayback
         aria-label={alt || undefined}
         src={src}
         // `object-contain` is a safety net: a clip that isn't exactly the
