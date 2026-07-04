@@ -415,6 +415,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 ## Further reading {#further-reading}
 
 - [List of Ethereum node services](https://ethereumnodes.com/)
+- [OpenChainBench](https://openchainbench.com/benchmarks/ethereum-rpc) _– Open-source, continuously updated latency and reliability benchmark of free public Ethereum RPC endpoints, measured from three regions with public methodology and CC-BY-4.0 data_
 
 ## Related topics {#related-topics}
 
