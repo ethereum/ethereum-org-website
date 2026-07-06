@@ -5,18 +5,45 @@ on:
     - cron: "0 8 * * *"
   workflow_dispatch:
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   stale:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/stale@v3
+      - uses: actions/stale@v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           stale-issue-label: "Status: Stale"
           stale-pr-label: "Status: Stale"
-          stale-issue-message: "This issue is stale because it has been open 30 days with no activity."
-          stale-pr-message: "This issue is stale because it has been open 30 days with no activity."
+          stale-issue-message: >
+            This issue is stale because it has been open 30 days with no
+            activity. It will be closed in 30 days unless there is new
+            activity, the stale label is removed, or an exempt label
+            (`pinned 📌`, `good first issue`, `help wanted`, `epic 💪`) is
+            added.
+          stale-pr-message: >
+            This pull request is stale because it has been open 30 days with
+            no activity. It will be closed in 30 days unless there is new
+            activity, the stale label is removed, or the `pinned 📌` label is
+            added.
+          close-issue-message: >
+            This issue was closed automatically after 60 days without
+            activity. This keeps the issue list actionable — it is not a
+            judgment on the idea. If it is still relevant, please leave a
+            comment and it can be reopened, or open a fresh issue with
+            up-to-date details.
+          close-pr-message: >
+            This pull request was closed automatically after 60 days without
+            activity. The branch is untouched, so it can be reopened at any
+            time. If you would like to continue, please reopen and rebase
+            against `dev`, or open a fresh PR.
           days-before-stale: 30
-          days-before-close: -1
+          days-before-close: 30
+          close-issue-reason: "not_planned"
+          exempt-issue-labels: "pinned 📌,good first issue,help wanted,epic 💪"
+          exempt-pr-labels: "pinned 📌"
           operations-per-run: 250
