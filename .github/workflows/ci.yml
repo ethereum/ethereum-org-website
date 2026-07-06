@@ -18,6 +18,13 @@ env:
 # PRs into master, staging, or test/** branches. Jobs downstream of `build`
 # inherit gating automatically via `needs:` (skipped jobs propagate).
 #
+# Exception: the Storybook Chromatic job (`visual-tests`) also runs on
+# non-draft PRs into dev that touch UI code (see `ui-changes`), so visual
+# changes are reviewed on the PR that introduces them instead of in bulk on
+# the weekly deploy PR. The path gate keeps snapshot usage within the
+# Chromatic plan: skipped-but-billed TurboSnaps cost 1/5 of a snapshot, so
+# content/translation-only PRs must not trigger builds at all.
+#
 # `fetch-depth: 0` is set selectively: lint needs it for `git diff`, and the
 # two Chromatic jobs need it for baseline detection. Other jobs use the default
 # shallow clone for speed.
@@ -66,12 +73,38 @@ jobs:
       - name: Run unit tests
         run: pnpm test:unit
 
+  ui-changes:
+    name: Detect UI changes
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    outputs:
+      ui: ${{ steps.filter.outputs.ui }}
+    steps:
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            ui:
+              - "src/components/**"
+              - "src/layouts/**"
+              - "src/styles/**"
+              - "app/**"
+              - ".storybook/**"
+              - "package.json"
+              - "pnpm-lock.yaml"
+
   visual-tests:
     name: Visual regression (Chromatic)
+    needs: ui-changes
     if: |
       github.base_ref == 'master'
       || github.base_ref == 'staging'
       || startsWith(github.base_ref, 'test/')
+      || (github.base_ref == 'dev'
+        && github.event.pull_request.draft == false
+        && needs.ui-changes.outputs.ui == 'true')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -86,6 +119,9 @@ jobs:
           projectToken: fee8e66c9916
           exitZeroOnChanges: true
           onlyChanged: true
+          # Deploy PRs run on the staging branch; their changes were already
+          # reviewed per-PR on dev, so accept them as baselines automatically.
+          autoAcceptChanges: staging
           zip: true
 
   build:
