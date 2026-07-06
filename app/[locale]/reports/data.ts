@@ -34,6 +34,15 @@ export type Report = {
   /** Publisher (shown as paragraph text under the title) */
   publisher: string
   /**
+   * Publishing organization(s), resolved through the JSON-LD entity alias
+   * map like markdown `authors:` frontmatter (KNOWN_ORGANIZATIONS profile
+   * key or display name). Only needed when `publisher` doesn't resolve on
+   * its own -- compound publishers or prose names. Mirrors the
+   * `authors`/`author` convention: `publishers` wins over `publisher` for
+   * entity resolution; display text on the card stays `publisher`.
+   */
+  publishers?: string[]
+  /**
    * Publication date in ISO 8601 (YYYY, YYYY-MM, or YYYY-MM-DD). Used as
    * `datePublished` in the Report JSON-LD and rendered as short date on card.
    */
@@ -108,6 +117,7 @@ export const reports: Report[] = [
     title: "Quantum Computing & Blockchain",
     publisher:
       "Coinbase Independent Advisory Board on Quantum Computing and Blockchain",
+    publishers: ["coinbase"],
     dateIso: "2026-04-21",
     category: "academic",
     href: "https://assets.ctfassets.net/sygt3q11s4a9/6EjYavuGdtJDYCqaJrASj9/9f464a8bf26f44bd6c85710fe7e4a29f/Quantum_Computing_and_Blockchain_v10.3_15April2026.pdf",
@@ -118,6 +128,7 @@ export const reports: Report[] = [
     slug: "etherealize-productive-money",
     title: "Ethereum and the Era of Productive Money",
     publisher: "Etherealize Research",
+    publishers: ["etherealize"],
     dateIso: "2026-04-14",
     category: "crypto-native",
     href: "https://www.productivemoney.org/productivemoney.pdf",
@@ -148,6 +159,7 @@ export const reports: Report[] = [
     title:
       "The Future of Financial Infrastructure: Ethereum's Layer 2 Landscape",
     publisher: "Etherealize, Nethermind and L2BEAT",
+    publishers: ["etherealize", "nethermind", "l2beat"],
     dateIso: "2025-12-04",
     category: "crypto-native",
     href: "https://cdn.prod.website-files.com/6728e9076a3b5a8ca8ec4816/6931c20f55129e498a8da223_%5BCompressed%5D%20L2s%20Report.pdf",
@@ -158,6 +170,7 @@ export const reports: Report[] = [
     slug: "pse-shutter-state-of-private-voting-2026",
     title: "State of Private Voting 2026",
     publisher: "Privacy Stewards of Ethereum (PSE) and Shutter",
+    publishers: ["privacy-stewards-of-ethereum", "shutter"],
     dateIso: "2025-11-12",
     category: "crypto-native",
     href: "https://pse.dev/articles/state-of-private-voting-2026/state-of-private-voting-2026-v2.pdf",
@@ -197,6 +210,7 @@ export const reports: Report[] = [
     title: "Strengthening American Leadership in Digital Financial Technology",
     publisher:
       "The White House (President's Working Group on Digital Asset Markets)",
+    publishers: ["white-house"],
     dateIso: "2025-07-30",
     category: "regulator",
     href: "https://www.whitehouse.gov/wp-content/uploads/2025/07/Digital-Assets-Report-EO14178.pdf",
