@@ -115,7 +115,7 @@ const PresetCard = ({
           </span>
           <span
             className={cn(
-              "text-left text-xl hyphens-auto transition-all duration-50",
+              "text-left text-xl font-bold hyphens-auto transition-all duration-50",
               colors.text[colorIdx]
             )}
           >
