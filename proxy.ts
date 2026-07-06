@@ -69,6 +69,18 @@ function redirectTo(request: NextRequest, pathname: string, status: number) {
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
+  // Reject malformed percent-encoding (e.g. `%GG`, a bare `%`) with a 400
+  // before route params are decoded. Otherwise the framework-level
+  // decodeURIComponent in the [locale]/[...slug] catch-all throws
+  // "failed to decode param", surfacing as an unhandled 500 (#17967).
+  try {
+    decodeURIComponent(pathname)
+  } catch {
+    return new NextResponse("Bad Request: malformed URL encoding", {
+      status: 400,
+    })
+  }
+
   const lowerPath = pathname.toLowerCase()
   if (pathname !== lowerPath) {
     return redirectTo(request, lowerPath, 301)
