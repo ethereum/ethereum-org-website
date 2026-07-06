@@ -117,7 +117,7 @@ export const reports: Report[] = [
     title: "Quantum Computing & Blockchain",
     publisher:
       "Coinbase Independent Advisory Board on Quantum Computing and Blockchain",
-    publishers: ["coinbase"],
+    publishers: ["coinbase-independent-advisory-board"],
     dateIso: "2026-04-21",
     category: "academic",
     href: "https://assets.ctfassets.net/sygt3q11s4a9/6EjYavuGdtJDYCqaJrASj9/9f464a8bf26f44bd6c85710fe7e4a29f/Quantum_Computing_and_Blockchain_v10.3_15April2026.pdf",
@@ -210,7 +210,7 @@ export const reports: Report[] = [
     title: "Strengthening American Leadership in Digital Financial Technology",
     publisher:
       "The White House (President's Working Group on Digital Asset Markets)",
-    publishers: ["white-house"],
+    publishers: ["presidents-working-group-on-digital-asset-markets"],
     dateIso: "2025-07-30",
     category: "regulator",
     href: "https://www.whitehouse.gov/wp-content/uploads/2025/07/Digital-Assets-Report-EO14178.pdf",

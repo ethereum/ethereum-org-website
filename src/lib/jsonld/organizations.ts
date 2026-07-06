@@ -1,6 +1,31 @@
 import { REFERENCE } from "./references"
 
 /**
+ * Parent organizations extracted to consts so sub-organization entries
+ * (boards, working groups) can embed them as full parentOrganization
+ * nodes. Publisher nodes only enter the page @graph when a report
+ * resolves to them, so a bare @id reference to the parent could dangle.
+ */
+const COINBASE = {
+  "@type": "Organization" as const,
+  "@id": "https://ethereum.org/#coinbase",
+  name: "Coinbase",
+  url: "https://www.coinbase.com/",
+  sameAs: ["https://en.wikipedia.org/wiki/Coinbase", "https://x.com/coinbase"],
+} as const
+
+const WHITE_HOUSE = {
+  "@type": "Organization" as const,
+  "@id": "https://ethereum.org/#white-house",
+  name: "The White House",
+  url: "https://www.whitehouse.gov/",
+  sameAs: [
+    "https://en.wikipedia.org/wiki/White_House",
+    "https://x.com/WhiteHouse",
+  ],
+} as const
+
+/**
  * Known Organization profiles for JSON-LD attribution
  *
  * Each entry is a schema.org Organization with a stable @id. Use for
@@ -117,10 +142,11 @@ export const KNOWN_ORGANIZATIONS = {
     "@type": "Organization" as const,
     "@id": "https://ethereum.org/#galaxy-research",
     name: "Galaxy Research",
-    url: "https://www.galaxy.com/research",
+    url: "https://www.galaxy.com/insights/research",
     sameAs: [
-      "https://en.wikipedia.org/wiki/Galaxy_Digital",
+      "https://en.wikipedia.org/wiki/Galaxy_Digital_(company)",
       "https://x.com/glxyresearch",
+      "https://www.crunchbase.com/organization/galaxy-digital-lp",
     ],
   },
 
@@ -129,17 +155,23 @@ export const KNOWN_ORGANIZATIONS = {
     "@id": "https://ethereum.org/#openzeppelin",
     name: "OpenZeppelin",
     url: "https://www.openzeppelin.com/",
-    sameAs: ["https://github.com/OpenZeppelin", "https://x.com/OpenZeppelin"],
+    sameAs: [
+      "https://github.com/OpenZeppelin",
+      "https://x.com/OpenZeppelin",
+      "https://www.linkedin.com/company/openzeppelin",
+    ],
   },
 
-  coinbase: {
+  coinbase: COINBASE,
+
+  "coinbase-independent-advisory-board": {
     "@type": "Organization" as const,
-    "@id": "https://ethereum.org/#coinbase",
-    name: "Coinbase",
-    url: "https://www.coinbase.com/",
+    "@id": "https://ethereum.org/#coinbase-independent-advisory-board",
+    name: "Coinbase Independent Advisory Board on Quantum Computing and Blockchain",
+    url: "https://www.coinbase.com/blog/coinbase-establishes-independent-advisory-board-on-quantum-computing-and-blockchain",
+    parentOrganization: COINBASE,
     sameAs: [
-      "https://en.wikipedia.org/wiki/Coinbase",
-      "https://x.com/coinbase",
+      "https://fortune.com/2026/01/21/coinbase-launches-expert-board-to-assess-quantum-computing-threat/",
     ],
   },
 
@@ -148,6 +180,11 @@ export const KNOWN_ORGANIZATIONS = {
     "@id": "https://ethereum.org/#etherealize",
     name: "Etherealize",
     url: "https://www.etherealize.com/",
+    sameAs: [
+      "https://x.com/Etherealize_io",
+      "https://www.linkedin.com/company/etherealize",
+      "https://www.bloomberg.com/profile/company/2592590D:US",
+    ],
   },
 
   "enterprise-ethereum-alliance": {
@@ -156,8 +193,10 @@ export const KNOWN_ORGANIZATIONS = {
     name: "Enterprise Ethereum Alliance",
     url: "https://entethalliance.org/",
     sameAs: [
-      "https://en.wikipedia.org/wiki/Enterprise_Ethereum_Alliance",
+      "https://www.investopedia.com/terms/e/ethereum-enterprise-alliance-eea.asp",
       "https://x.com/EntEthAlliance",
+      "https://www.linkedin.com/company/enterpriseethereumalliance",
+      "https://github.com/EntEthAlliance",
     ],
   },
 
@@ -169,6 +208,7 @@ export const KNOWN_ORGANIZATIONS = {
     sameAs: [
       "https://en.wikipedia.org/wiki/Andreessen_Horowitz",
       "https://x.com/a16zcrypto",
+      "https://www.linkedin.com/showcase/a16zcrypto/",
     ],
   },
 
@@ -177,7 +217,11 @@ export const KNOWN_ORGANIZATIONS = {
     "@id": "https://ethereum.org/#nethermind",
     name: "Nethermind",
     url: "https://www.nethermind.io/",
-    sameAs: ["https://github.com/NethermindEth", "https://x.com/NethermindEth"],
+    sameAs: [
+      "https://github.com/NethermindEth",
+      "https://x.com/Nethermind",
+      "https://linkedin.com/company/nethermind",
+    ],
   },
 
   l2beat: {
@@ -185,7 +229,11 @@ export const KNOWN_ORGANIZATIONS = {
     "@id": "https://ethereum.org/#l2beat",
     name: "L2BEAT",
     url: "https://l2beat.com/",
-    sameAs: ["https://github.com/l2beat", "https://x.com/l2beat"],
+    sameAs: [
+      "https://github.com/l2beat",
+      "https://x.com/l2beat",
+      "https://linkedin.com/company/l2beat",
+    ],
   },
 
   "privacy-stewards-of-ethereum": {
@@ -193,7 +241,11 @@ export const KNOWN_ORGANIZATIONS = {
     "@id": "https://ethereum.org/#privacy-stewards-of-ethereum",
     name: "Privacy Stewards of Ethereum",
     url: "https://pse.dev/",
-    sameAs: ["https://github.com/privacy-scaling-explorations"],
+    sameAs: [
+      "https://github.com/privacy-scaling-explorations",
+      "https://x.com/PrivacyEthereum",
+      "https://github.com/privacy-ethereum",
+    ],
   },
 
   shutter: {
@@ -212,7 +264,11 @@ export const KNOWN_ORGANIZATIONS = {
     "@id": "https://ethereum.org/#fidelity-digital-assets",
     name: "Fidelity Digital Assets",
     url: "https://www.fidelitydigitalassets.com/",
-    sameAs: ["https://en.wikipedia.org/wiki/Fidelity_Investments"],
+    sameAs: [
+      "https://www.linkedin.com/showcase/fidelity-digital-assets/",
+      "https://x.com/DigitalAssets",
+      "https://en.wikipedia.org/wiki/Fidelity_Investments",
+    ],
   },
 
   consensys: {
@@ -231,17 +287,25 @@ export const KNOWN_ORGANIZATIONS = {
     "@type": "Organization" as const,
     "@id": "https://ethereum.org/#twinstake",
     name: "Twinstake",
-    url: "https://www.twinstake.io/",
+    url: "https://www.twinstake.com/",
+    sameAs: [
+      "https://x.com/twinstake_io",
+      "https://www.linkedin.com/company/twinstake/",
+    ],
   },
 
-  "white-house": {
+  "white-house": WHITE_HOUSE,
+
+  "presidents-working-group-on-digital-asset-markets": {
     "@type": "Organization" as const,
-    "@id": "https://ethereum.org/#white-house",
-    name: "The White House",
-    url: "https://www.whitehouse.gov/",
+    "@id":
+      "https://ethereum.org/#presidents-working-group-on-digital-asset-markets",
+    name: "President's Working Group on Digital Asset Markets",
+    url: "https://www.whitehouse.gov/crypto/",
+    parentOrganization: WHITE_HOUSE,
     sameAs: [
-      "https://en.wikipedia.org/wiki/White_House",
-      "https://x.com/WhiteHouse",
+      "https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-the-presidents-working-group-on-digital-asset-markets-releases-recommendations-to-strengthen-american-leadership-in-digital-financial-technology/",
+      "https://www.whitehouse.gov/presidential-actions/2025/01/strengthening-american-leadership-in-digital-financial-technology/",
     ],
   },
 
