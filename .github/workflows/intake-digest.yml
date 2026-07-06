@@ -1,0 +1,91 @@
+name: Intake Digest
+
+on:
+  schedule:
+    # Weekday mornings; Monday covers the weekend (72h window)
+    - cron: "0 7 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Collect external intake
+        id: collect
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          hours=24
+          [[ "$(date -u +%u)" == "1" ]] && hours=72
+          since=$(date -u -d "-${hours} hours" +%Y-%m-%dT%H:%M:%SZ)
+          gh api "repos/${REPO}/issues?state=all&sort=created&direction=desc&per_page=100" --paginate \
+            --jq '.[] | {number, title, html_url, created_at, is_pr: has("pull_request"), assoc: .author_association, user_type: .user.type, labels: [.labels[].name]}' \
+            | jq -s --arg since "$since" '
+                [.[] | select(.created_at >= $since)
+                     | select(.user_type != "Bot")
+                     | select(.assoc | IN("OWNER","MEMBER","COLLABORATOR") | not)]' \
+            > items.json
+          echo "count=$(jq length items.json)" >> "$GITHUB_OUTPUT"
+          echo "hours=$hours" >> "$GITHUB_OUTPUT"
+
+      - name: Build digest message
+        id: build
+        if: steps.collect.outputs.count != '0'
+        env:
+          HOURS: ${{ steps.collect.outputs.hours }}
+        run: |
+          node <<'EOF' > message.txt
+          const fs = require("fs")
+          const items = JSON.parse(fs.readFileSync("items.json", "utf8"))
+          const sections = [
+            ["🎨 Design", ["design required 🎨", "ui design 💅"]],
+            ["🔬 UX", ["ux design 🔬"]],
+            ["✍️ Content", ["content 🖋️", "documentation 📖"]],
+            ["🌍 Translation", ["translation 🌍"]],
+            ["🧰 Product listings", ["product 🧰", "wallet 👛"]],
+            ["🔧 Dev", ["dev required", "tooling 🔧", "bug 🐛"]],
+          ]
+          const grouped = new Map(sections.map(([name]) => [name, []]))
+          grouped.set("❓ Unrouted", [])
+          for (const it of items) {
+            const hit = sections.find(([, labels]) =>
+              labels.some((l) => it.labels.includes(l))
+            )
+            grouped.get(hit ? hit[0] : "❓ Unrouted").push(it)
+          }
+          const line = (it) =>
+            `• ${it.is_pr ? "PR" : "Issue"} [#${it.number} ${it.title.slice(0, 80)}](<${it.html_url}>)`
+          const parts = [
+            `📬 **External intake — last ${process.env.HOURS}h** (${items.length} item${items.length === 1 ? "" : "s"})`,
+          ]
+          for (const [name, list] of grouped) {
+            if (!list.length) continue
+            parts.push(`\n**${name}** (${list.length})`)
+            parts.push(...list.slice(0, 6).map(line))
+            if (list.length > 6) parts.push(`…and ${list.length - 6} more`)
+          }
+          let msg = parts.join("\n")
+          if (msg.length > 1900) msg = msg.slice(0, 1890) + "\n…truncated"
+          process.stdout.write(msg)
+          EOF
+          {
+            echo "message<<DIGEST_EOF"
+            cat message.txt
+            echo ""
+            echo "DIGEST_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Post to Discord
+        if: steps.collect.outputs.count != '0'
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_INTAKE_WEBHOOK_URL }}
+          message: ${{ steps.build.outputs.message }}
