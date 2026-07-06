@@ -149,8 +149,8 @@ const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
           prevEl: ".ui-swiper-button-prev",
         }}
         a11y={{
-          prevSlideMessage: t("previous"),
-          nextSlideMessage: t("next"),
+          prevSlideMessage: t("swiper-previous-slide"),
+          nextSlideMessage: t("swiper-next-slide"),
         }}
         pagination={{
           clickable: true,
