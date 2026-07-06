@@ -1014,7 +1014,7 @@
       "isFoss": true,
       "hasBugBounty": true,
       "isTrustless": true,
-      "hasPermissionlessNodes": false,
+      "hasPermissionlessNodes": true,
       "pctMajorityExecutionClient": null,
       "pctMajorityConsensusClient": 42.83,
       "platforms": ["Browser", "Wallet"],
