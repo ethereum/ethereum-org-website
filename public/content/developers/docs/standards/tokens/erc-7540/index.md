@@ -171,7 +171,7 @@ event OperatorSet(
 
 ### Preview functions {#preview-functions}
 
-In asynchronous vaults, `previewDeposit`, `previewMint`, `previewRedeem`, and `previewWithdraw` MUST revert because the exchange rate is not known until the request is fulfilled. This is a key behavioral difference from ERC-4626.
+The preview functions must revert only for the flows that are asynchronous, because the exchange rate is not known until the request is fulfilled. In an async-deposit vault, `previewDeposit` and `previewMint` MUST revert, while `previewRedeem` and `previewWithdraw` keep working as in ERC-4626 (and vice versa for an async-redeem vault). This is a key behavioral difference from ERC-4626.
 
 ## Further reading {#further-reading}
 

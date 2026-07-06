@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" font-family="monospace" font-size="14">
   <style>
-    text { fill: currentColor; }
+    text { fill: #1a1a2e; }
     .label { font-weight: bold; font-size: 13px; }
-    .note { font-size: 12px; opacity: 0.6; }
-    line, path { stroke: currentColor; stroke-width: 1.5; }
+    .note { font-size: 12px; fill: #6b6b7b; }
+    line, path { stroke: #1a1a2e; stroke-width: 1.5; }
   </style>
+
+  <!-- Opaque background so the diagram is legible in both light and dark mode -->
+  <rect x="0" y="0" width="520" height="200" rx="8" fill="#ffffff"/>
 
   <!-- Title -->
   <text x="260" y="24" text-anchor="middle" font-weight="bold" font-size="15">ERC-4626 (synchronous)</text>
@@ -29,7 +32,7 @@
 
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="currentColor"/>
+      <path d="M0,0 L8,3 L0,6" fill="#1a1a2e"/>
     </marker>
   </defs>
 </svg>
