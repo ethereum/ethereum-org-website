@@ -364,6 +364,9 @@ const FindWallets = async ({
                     data-index={index}
                     className={cn(
                       "group/collapsible flex w-full flex-col border-b open:bg-background-highlight hover:bg-background-highlight",
+                      // Skip style/layout for offscreen rows: initial layout of
+                      // all 49 was a ~1s main-thread task on throttled mobile
+                      "[contain-intrinsic-size:auto_240px] [content-visibility:auto]",
                       !initialVisibleIds.has(wallet.id) && "hidden"
                     )}
                   >
