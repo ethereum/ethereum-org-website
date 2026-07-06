@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from "react"
-import { useLocale } from "next-intl"
+"use client"
 
-import { FilterInputState, Lang } from "@/lib/types"
+import { useEffect, useRef, useState } from "react"
 
 import Input from "@/components/ui/input"
 import {
@@ -12,47 +11,47 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
-import { getLanguageCodeName } from "@/lib/utils/intl"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getLanguageCountWalletsData } from "@/lib/utils/wallets"
 
-import { useTranslation } from "@/hooks/useTranslation"
+import type { WalletLanguageOption } from "./types"
+import {
+  useWalletFilterActions,
+  useWalletFilters,
+} from "./WalletFilterProvider"
 
-interface FindWalletLanguageSelectInputProps {
-  filterIndex: number
-  itemIndex: number
-  inputState: FilterInputState
-  updateFilterState: (
-    filterIndex: number,
-    itemIndex: number,
-    newInputState: FilterInputState
-  ) => void
+const trackLanguageSelect = (languageName: string) => {
+  trackCustomEvent({
+    eventCategory: "WalletFilterSidebar",
+    eventAction: "Language search",
+    eventName: languageName,
+  })
 }
 
-const FindWalletLanguageSelectInput = ({
-  filterIndex,
-  itemIndex,
-  inputState,
-  updateFilterState,
-}: FindWalletLanguageSelectInputProps) => {
-  const locale = useLocale()
+const LanguageSelect = ({
+  languages,
+  searchPlaceholder,
+  popularLabel,
+}: {
+  languages: WalletLanguageOption[]
+  searchPlaceholder: string
+  popularLabel: string
+}) => {
   const [searchQuery, setSearchQuery] = useState("")
   const [isSelectOpen, setIsSelectOpen] = useState(false)
   const searchInputRef = useRef<HTMLInputElement>(null)
-  const { t } = useTranslation("page-wallets-find-wallet")
-  const languageCountWalletsData = getLanguageCountWalletsData(locale as string)
-  const countSortedLanguagesCount = [...languageCountWalletsData].sort(
-    (a, b) => b.count - a.count
-  )
+  const { state } = useWalletFilters()
+  const { setLanguage } = useWalletFilterActions()
+
+  const countSortedLanguages = [...languages].sort((a, b) => b.count - a.count)
 
   useEffect(() => {
     if (isSelectOpen) {
-      //Delay focus to ensure input is rendered
+      // Delay focus to ensure input is rendered
       const frame = requestAnimationFrame(() => {
         searchInputRef.current?.focus()
       })
 
-      return () => clearTimeout(frame)
+      return () => cancelAnimationFrame(frame)
     }
   }, [isSelectOpen])
 
@@ -61,14 +60,11 @@ const FindWalletLanguageSelectInput = ({
       <Select
         open={isSelectOpen}
         onOpenChange={setIsSelectOpen}
-        value={inputState as string}
-        onValueChange={(e: Lang) => {
-          trackCustomEvent({
-            eventCategory: "WalletFilterSidebar",
-            eventAction: "Language search",
-            eventName: getLanguageCodeName(e, locale!),
-          })
-          updateFilterState(filterIndex, itemIndex, e)
+        value={state.language}
+        onValueChange={(langCode: string) => {
+          const selected = languages.find((l) => l.langCode === langCode)
+          trackLanguageSelect(selected?.name || langCode)
+          setLanguage(langCode)
           setSearchQuery("") // Reset search when selection is made
         }}
       >
@@ -84,34 +80,26 @@ const FindWalletLanguageSelectInput = ({
             <Input
               ref={searchInputRef}
               type="search"
-              placeholder={t("page-find-wallet-search-languages")}
+              placeholder={searchPlaceholder}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key !== "Enter") return
 
-                const selectedLanguage = languageCountWalletsData.find((lang) =>
+                const selectedLanguage = languages.find((lang) =>
                   lang.name.toLowerCase().includes(searchQuery.toLowerCase())
                 )
                 if (!selectedLanguage) return
 
-                trackCustomEvent({
-                  eventCategory: "WalletFilterSidebar",
-                  eventAction: "Language search",
-                  eventName: selectedLanguage.name,
-                })
-                updateFilterState(
-                  filterIndex,
-                  itemIndex,
-                  selectedLanguage.langCode
-                )
+                trackLanguageSelect(selectedLanguage.name)
+                setLanguage(selectedLanguage.langCode)
                 setIsSelectOpen(false)
                 setSearchQuery("")
               }}
               className="w-full"
             />
           </div>
-          {languageCountWalletsData.map((language) => {
+          {languages.map((language) => {
             const isVisible = language.name
               .toLowerCase()
               .includes(searchQuery.toLowerCase())
@@ -127,22 +115,16 @@ const FindWalletLanguageSelectInput = ({
           })}
         </SelectContent>
       </Select>
-      <p className="text-sm text-body-medium">
-        {t("page-find-wallet-popular-languages")}
-      </p>
+      <p className="text-sm text-body-medium">{popularLabel}</p>
       <div className="flex flex-row flex-wrap gap-2">
-        {countSortedLanguagesCount.slice(0, 5).map((language, index, array) => {
+        {countSortedLanguages.slice(0, 5).map((language, index, array) => {
           return (
             <span
               key={language.langCode}
               className="cursor-pointer text-sm text-primary"
               onClick={() => {
-                trackCustomEvent({
-                  eventCategory: "WalletFilterSidebar",
-                  eventAction: "Language search",
-                  eventName: getLanguageCodeName(language.langCode, locale!),
-                })
-                updateFilterState(filterIndex, itemIndex, language.langCode)
+                trackLanguageSelect(language.name)
+                setLanguage(language.langCode)
               }}
             >
               {`${language.name} (${language.count})${index < array.length - 1 ? ", " : ""}`}
@@ -154,4 +136,4 @@ const FindWalletLanguageSelectInput = ({
   )
 }
 
-export default FindWalletLanguageSelectInput
+export default LanguageSelect

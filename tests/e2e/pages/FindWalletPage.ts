@@ -117,8 +117,10 @@ export class FindWalletPage extends BasePage {
    * Verify wallet expansion shows links section
    */
   async verifyWalletExpanded() {
+    // Detail panels are server-rendered for every row (inside closed
+    // <details>), so scope to the expanded row to keep the locator unique
     await expect(
-      this.page.getByRole("heading", { name: /Links/i })
+      this.walletRows.first().getByRole("heading", { name: /Links/i })
     ).toBeVisible()
   }
 

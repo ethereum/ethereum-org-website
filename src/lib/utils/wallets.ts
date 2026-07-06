@@ -14,13 +14,7 @@ import {
   NEW_TO_CRYPTO_FEATURES,
   NFTS_FEATURES,
 } from "../constants"
-import type {
-  ChainName,
-  FilterOption,
-  WalletData,
-  WalletLanguage,
-  WalletRow,
-} from "../types"
+import type { WalletData, WalletLanguage } from "../types"
 
 export const getSupportedLocaleWallets = (locale: string) =>
   safeShuffle(
@@ -170,57 +164,4 @@ export const getLanguageCountWalletsData = (locale: string) => {
   )
   languageCountWalletsData.sort((a, b) => a.name.localeCompare(b.name))
   return languageCountWalletsData
-}
-
-function getActiveFilterKeys(filters: FilterOption[]): string[] {
-  const keys: string[] = []
-  filters.forEach((filter) => {
-    filter.items.forEach((item) => {
-      if (item.inputState === true && item.options.length === 0) {
-        keys.push(item.filterKey)
-      }
-      if (item.options?.length > 0) {
-        item.options.forEach((option) => {
-          if (option.inputState === true) {
-            keys.push(option.filterKey)
-          }
-        })
-      }
-    })
-  })
-  return keys
-}
-
-export const filterFn = (data: WalletRow[], filters: FilterOption[]) => {
-  let selectedLanguage: string = ""
-  let selectedLayer2: ChainName[] = []
-
-  const activeFilterKeys = getActiveFilterKeys(filters)
-
-  for (const filter of filters) {
-    for (const item of filter.items) {
-      if (item.filterKey === "languages") {
-        selectedLanguage = item.inputState as string
-      } else if (item.filterKey === "layer_2_support") {
-        selectedLayer2 = (item.inputState as ChainName[]) || []
-      }
-    }
-  }
-
-  return data.filter((wallet) => {
-    // Check language support
-    const matchesLanguage = wallet.languages_supported.includes(
-      selectedLanguage as WalletLanguage
-    )
-
-    // Check layer 2 support (empty array means no filter applied)
-    const matchesLayer2 =
-      selectedLayer2.length === 0 ||
-      selectedLayer2.every((chain) => wallet.supported_chains.includes(chain))
-
-    // Check active filter keys
-    const matchesActiveFilters = activeFilterKeys.every((key) => wallet[key])
-
-    return matchesLanguage && matchesLayer2 && matchesActiveFilters
-  })
 }

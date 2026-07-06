@@ -1,15 +1,9 @@
-import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams, WalletData } from "@/lib/types"
 
-import FindWalletProductTable from "@/components/FindWalletProductTable"
+import FindWallets from "@/components/FindWallets"
 import PageHero from "@/components/Hero/PageHero"
-import I18nProvider from "@/components/I18nProvider"
 import ListingMethodology from "@/components/ListingMethodology"
 import MainArticle from "@/components/MainArticle"
 import { UnorderedList } from "@/components/ui/list"
@@ -18,7 +12,6 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   getNonSupportedLocaleWallets,
   getSupportedLanguages,
@@ -57,13 +50,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     ? formatDate(mostRecentWalletUpdate, locale)
     : ""
 
-  // Get i18n messages
-  const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage(
-    "/wallets/find-wallet"
-  )
-  const messages = pick(allMessages, requiredNamespaces)
-
   const { contributors } = await getAppPageContributorInfo(
     "wallets/find-wallet",
     locale as Lang
@@ -77,57 +63,55 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         wallets={walletsData}
       />
 
-      <I18nProvider locale={locale} messages={messages}>
-        <MainArticle className="relative flex flex-col">
-          <PageHero
-            breadcrumbs={{ slug: "/wallets/find-wallet" }}
-            title={t("page-find-wallet-title")}
-            description={t("page-find-wallet-description")}
-            variant="no-divider"
-          />
+      <MainArticle className="relative flex flex-col">
+        <PageHero
+          breadcrumbs={{ slug: "/wallets/find-wallet" }}
+          title={t("page-find-wallet-title")}
+          description={t("page-find-wallet-description")}
+          variant="no-divider"
+        />
 
-          <Section id="wallets">
-            <h2 className="sr-only select-none">
-              {t("page-find-wallet-table-title")}
-            </h2>
-            <FindWalletProductTable wallets={wallets} />
-          </Section>
+        <Section id="wallets">
+          <h2 className="sr-only select-none">
+            {t("page-find-wallet-table-title")}
+          </h2>
+          <FindWallets wallets={wallets} locale={locale as Lang} />
+        </Section>
 
-          <ListingMethodology
-            heading={t("page-find-wallet-methodology-title")}
-            description={t("page-find-wallet-methodology-intro")}
-            lastUpdated={lastUpdatedDisplay}
-            href="/contributing/adding-wallets/"
-            footers={[
-              t("page-find-wallet-footnote-1"),
-              t("page-find-wallet-footnote-2"),
-            ]}
-          >
-            <p>{t("page-find-wallet-methodology-must-haves-label")}</p>
+        <ListingMethodology
+          heading={t("page-find-wallet-methodology-title")}
+          description={t("page-find-wallet-methodology-intro")}
+          lastUpdated={lastUpdatedDisplay}
+          href="/contributing/adding-wallets/"
+          footers={[
+            t("page-find-wallet-footnote-1"),
+            t("page-find-wallet-footnote-2"),
+          ]}
+        >
+          <p>{t("page-find-wallet-methodology-must-haves-label")}</p>
 
-            <UnorderedList className="space-y-2">
-              {[
-                "security",
-                "track-record",
-                "maintenance",
-                "honest-info",
-                "contact",
-                "eip1559",
-                "ux",
-                "ethereum-focused",
-              ].map((key) => (
-                <li key={key}>
-                  {t(`page-find-wallet-methodology-criterion-${key}`)}
-                </li>
-              ))}
-            </UnorderedList>
+          <UnorderedList className="space-y-2">
+            {[
+              "security",
+              "track-record",
+              "maintenance",
+              "honest-info",
+              "contact",
+              "eip1559",
+              "ux",
+              "ethereum-focused",
+            ].map((key) => (
+              <li key={key}>
+                {t(`page-find-wallet-methodology-criterion-${key}`)}
+              </li>
+            ))}
+          </UnorderedList>
 
-            <p>{t("page-find-wallet-methodology-verification")}</p>
+          <p>{t("page-find-wallet-methodology-verification")}</p>
 
-            <p>{t("page-find-wallet-methodology-filters")}</p>
-          </ListingMethodology>
-        </MainArticle>
-      </I18nProvider>
+          <p>{t("page-find-wallet-methodology-filters")}</p>
+        </ListingMethodology>
+      </MainArticle>
     </>
   )
 }
