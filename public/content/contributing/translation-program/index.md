@@ -8,21 +8,15 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 ![](./enterprise-eth.png)
 
-## Help us translate {#help-us-translate}
+## Program status {#program-status}
 
-The ethereum.org Translation Program is open and anyone can contribute!
+The ethereum.org Translation Program is winding down and is no longer onboarding new translators. The Crowdin project is being closed, and we are not accepting new translation submissions through it.
 
-1. You will need to log in to your Crowdin account or sign up.
-2. Select the language you want to contribute to.
-3. Before starting, please check out the [How to translate](/contributing/translation-program/how-to-translate/) guide to learn how to use Crowdin, and the [Translation Style Guide](/contributing/translation-program/translators-guide/) for tips and best practices.
-4. Machine translations will not be approved.
-5. All translations are reviewed before being added to the site, so there will be a short delay before your translations go live.
+We are deeply grateful to the thousands of community translators who made ethereum.org available in dozens of languages over the years — their work remains live on the site, and their recognition on the [acknowledgements](/contributing/translation-program/acknowledgements/) and [contributors](/contributing/translation-program/contributors/) pages stays in place.
 
-_Join the [ethereum.org Discord](https://discord.gg/ethereum-org) to collaborate on translations, ask questions, share feedback and ideas, or join a translation group._
+If you spot an error in an existing translation, please [open an issue on GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-<ButtonLink href="https://crowdin.com/project/ethereum-org/">
-  Start translating
-</ButtonLink>
+_Join the [ethereum.org Discord](https://discord.gg/ethereum-org) to ask questions or share feedback._
 
 ## About the Translation Program {#about-us}
 
@@ -65,11 +59,10 @@ We're constantly thinking of new and innovative ways to reward our contributors,
 
 ### Guides and resources {#guides-and-resources}
 
-If you are contributing to the Translation Program or thinking about getting involved, you should check out the translation guides below:
+These reference materials remain available for translation communities and projects running their own programs:
 
 - [Translation Style Guide](/contributing/translation-program/translators-guide/) _– instructions and tips for ethereum.org translators_
 - [Translation FAQs](/contributing/translation-program/faq/) _– frequently asked questions and answers about the ethereum.org Translation Program_
-- [Crowdin online editor guide](https://support.crowdin.com/online-editor/) _– an in-depth guide to using the Crowdin online editor and some of Crowdin's advanced features_
 
 For other useful translation tools, translator communities and Translation Program blog posts, please visit the [Resources page](/contributing/translation-program/resources/).
 
