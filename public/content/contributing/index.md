@@ -55,7 +55,7 @@ These are few current tasks that you could help us solve and take responsibility
 
 ## How to work on ethereum.org {#how-to-update-content}
 
-For contributing – adding or editing content or visuals to the website, fixing bugs, working on open tasks – you will need a [GitHub](https://github.com/) account. (The [Translation Program](/contributing/translation-program/) is winding down and no longer onboarding new translators.)
+For contributing (adding or editing content or visuals to the website, fixing bugs, working on open tasks) you will need a [GitHub](https://github.com/) account. (The [Translation Program](/contributing/translation-program/) is winding down and no longer onboarding new translators.)
 
 All updates are made via the GitHub PR process. This means you create a local copy of the website, make your changes and request to merge your changes. If you've never done this before, follow the instructions at the bottom of our [GitHub repository](https://github.com/ethereum/ethereum-org-website).
 
