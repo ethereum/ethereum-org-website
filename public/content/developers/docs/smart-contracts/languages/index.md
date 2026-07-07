@@ -103,6 +103,8 @@ This example should give you a sense of what Solidity contract syntax is like. F
 
 For more information, [read the Vyper rationale](https://vyper.readthedocs.io/en/latest/index.html).
 
+Since v0.4.0, Vyper supports a [module system](https://docs.vyperlang.org/en/stable/using-modules.html) for code reuse, which replaces the need for class inheritance by allowing contracts to import and reuse logic from other modules.
+
 ### Important links {#important-links-1}
 
 - [Documentation](https://vyper.readthedocs.io)
