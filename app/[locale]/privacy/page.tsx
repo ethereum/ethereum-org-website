@@ -122,7 +122,9 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       >
         <Card size="lg">
           <CardContent>
-            <CardTitle size="lg">{t("page-privacy-summary-title")}</CardTitle>
+            <CardTitle size="lg" asChild>
+              <h2>{t("page-privacy-summary-title")}</h2>
+            </CardTitle>
             <UnorderedList className="mb-0">
               <ListItem>
                 {t.rich("page-privacy-summary-item-1", { strong: Strong })}
