@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md",
+  "generatedAt": "2026-06-17T00:18:33.002Z",
+  "rootHash": "c15fddc0499d",
+  "tree": {
+    "contentHash": "5538a8daf430",
+    "anchorHash": "01cd549c2e57",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "1228c8dd983a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "e4a211605442",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ad36f50d1fbf"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "a291b867fc3b"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "926f25b882a1"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b4e51747b232"
+      },
+      "frontmatter:source": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "5ac4c3ee1885"
+      },
+      "frontmatter:sourceUrl": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "a8e894def9fe"
+      },
+      "prose:0": {
+        "contentHash": "a954e39ba330",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "soft-prerequisites": {
+        "contentHash": "b33a7617c09c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b3e99d07604d",
+        "children": {
+          "_label": {
+            "contentHash": "b3e99d07604d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9a08642cd071",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "overview": {
+        "contentHash": "a389c90bd54a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "d4b1ea5708dd",
+        "children": {
+          "_label": {
+            "contentHash": "d4b1ea5708dd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "20a1a074ce9c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "usingtellor": {
+        "contentHash": "22a79ae8d1de",
+        "anchorHash": "5552767786d0",
+        "labelHash": "76f6335c2609",
+        "children": {
+          "_label": {
+            "contentHash": "76f6335c2609",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "cfadd9ac3e1f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "bcad907f7860",
+            "anchorHash": "bad59985d0fe"
+          },
+          "prose:3": {
+            "contentHash": "7184b1a2fe2e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3dfc3745194c"
+          },
+          "prose:4": {
+            "contentHash": "a760e537b95e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "btcusd-example": {
+            "contentHash": "8e9feea8744f",
+            "anchorHash": "1262b3e98bd0",
+            "labelHash": "c2ec93e1ff0d",
+            "children": {
+              "_label": {
+                "contentHash": "c2ec93e1ff0d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "e06c11be3c2c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-comment:2": {
+                "contentHash": "9a733a0a766b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:3": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "1a844e096042"
+              },
+              "prose:4": {
+                "contentHash": "2444531d1929",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "fcec91509759",
+                "anchorHash": "8f59c2c9cfd0"
+              },
+              "prose:5": {
+                "contentHash": "7a9931859989",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "3194a5a544a7",
+                "anchorHash": "a480e17060c4"
+              },
+              "prose:6": {
+                "contentHash": "96c78c3a276e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "fcec91509759",
+                "anchorHash": "c17171f24c8b"
+              },
+              "prose:7": {
+                "contentHash": "1bd5d54ab2f3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "fcec91509759",
+                "anchorHash": "595c508b2796"
+              },
+              "prose:8": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "code-comment:2",
+              "code-fence:3",
+              "prose:4",
+              "link:0",
+              "prose:5",
+              "link:1",
+              "prose:6",
+              "link:2",
+              "prose:7",
+              "link:3",
+              "prose:8"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "inline-code:1",
+          "prose:4",
+          "btcusd-example"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:lang",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:published",
+      "frontmatter:source",
+      "frontmatter:sourceUrl",
+      "prose:0",
+      "soft-prerequisites",
+      "overview",
+      "usingtellor"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

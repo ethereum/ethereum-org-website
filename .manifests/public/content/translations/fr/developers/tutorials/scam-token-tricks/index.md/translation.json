@@ -1,0 +1,902 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-17T00:42:32.367Z",
+  "englishManifestHash": "917539f8bba3",
+  "placeholderOrder": [
+    "LINK-6b8ed4",
+    "LINK-8afc64",
+    "LINK-c38973",
+    "LINK-b37f74",
+    "LINK-7d36a3",
+    "LINK-81fc85",
+    "LINK-1e45a7",
+    "LINK-be2064",
+    "LINK-c38973",
+    "LINK-159310",
+    "LINK-541f65",
+    "LINK-362447",
+    "CODE-c84c0c",
+    "LINK-ac889c",
+    "CODE-238c19",
+    "CODE-a0bcfd",
+    "CODE-fc05e9",
+    "CODEBLOCK-5ca292",
+    "LINK-daa40d",
+    "CODE-9445ff",
+    "LINK-e96920",
+    "CODE-124193",
+    "LINK-d35da3",
+    "CODE-89c492",
+    "CODE-6c605c",
+    "CODEBLOCK-781877",
+    "CODE-4eb550",
+    "CODE-01a4a9",
+    "CODEBLOCK-1c1bbb",
+    "LINK-d34fc0",
+    "LINK-046797",
+    "LINK-90b289",
+    "LINK-b25f52",
+    "CODE-ec328d",
+    "LINK-000243",
+    "CODE-ec328d",
+    "CODE-4eb550",
+    "CODEBLOCK-7236b6",
+    "CODEBLOCK-33822b",
+    "CODE-dde8be",
+    "CODE-eeb9b5",
+    "CODE-ec328d",
+    "CODE-3bed2c",
+    "CODE-ec328d",
+    "CODEBLOCK-abf12e",
+    "CODE-27f576",
+    "CODE-b7f373",
+    "CODE-4c8b2a",
+    "CODE-4c8b2a",
+    "CODEBLOCK-008975",
+    "LINK-772316",
+    "CODE-a2edf4",
+    "CODE-a2edf4",
+    "CODEBLOCK-4d1f01",
+    "CODE-ec328d",
+    "CODE-01a4a9",
+    "CODE-eeb9b5",
+    "CODE-733b85",
+    "CODEBLOCK-683ac5",
+    "CODE-0cb04f",
+    "CODEBLOCK-8f7840",
+    "CODEBLOCK-97d085",
+    "CODE-733b85",
+    "LINK-1c9d1e",
+    "CODE-dde8be",
+    "CODE-6007ac",
+    "LINK-8f1b20",
+    "CODE-74e216",
+    "CODE-74e216",
+    "CODEBLOCK-3dd0fe",
+    "CODEBLOCK-19df0d",
+    "CODE-dca6a1",
+    "CODE-01a4a9",
+    "CODEBLOCK-a1d22f",
+    "CODE-719635",
+    "CODE-859fac",
+    "CODE-9ac0bf",
+    "CODE-01a4a9",
+    "CODE-d4536f",
+    "LINK-a89a92",
+    "LINK-827588",
+    "CODE-dc6f17",
+    "CODE-4eb550",
+    "CODE-d4536f",
+    "CODEBLOCK-8a50ae",
+    "CODE-d4536f",
+    "CODEBLOCK-ce8ff4",
+    "CODE-c4d0cf",
+    "CODE-ffeaee",
+    "CODEBLOCK-dde29d",
+    "CODE-9af211",
+    "CODE-01a4a9",
+    "CODE-01a4a9",
+    "CODE-9af211",
+    "CODE-bdf49c",
+    "CODE-7a023d",
+    "CODE-e55cff",
+    "CODE-a2edf4",
+    "CODE-bdf49c",
+    "CODE-7a023d",
+    "CODEBLOCK-baf4fa",
+    "CODE-a2edf4",
+    "CODEBLOCK-7ffa7f",
+    "CODE-bdf49c",
+    "CODE-7a023d",
+    "CODE-01a4a9",
+    "CODE-4eb550",
+    "CODE-147fb8",
+    "LINK-1f2fe2",
+    "CODE-147fb8",
+    "LINK-1c9d1e",
+    "CODE-dde8be",
+    "LINK-d558f6",
+    "CODE-147fb8",
+    "LINK-aae058",
+    "LINK-140df3",
+    "LINK-d16d1b",
+    "LINK-8b32c2",
+    "CODE-a3046d",
+    "CODE-e9cbb0",
+    "CODE-e9cbb0",
+    "CODE-005d0b",
+    "CODE-c7bb32",
+    "CODEBLOCK-8040c9",
+    "CODE-54dd31",
+    "CODEBLOCK-c76696",
+    "CODE-e9cbb0",
+    "CODEBLOCK-be489b",
+    "CODEBLOCK-3816e0",
+    "CODE-4eb550",
+    "CODEBLOCK-af5dc3",
+    "CODEBLOCK-324a84",
+    "CODE-da079b",
+    "CODE-a2593c",
+    "CODE-56ef8f",
+    "CODE-b9f836",
+    "CODEBLOCK-cc74c7",
+    "CODEBLOCK-84f680",
+    "CODE-038d68",
+    "CODE-4e1f49",
+    "CODE-74234e",
+    "CODE-74234e",
+    "CODEBLOCK-1878ce",
+    "CODE-a0bcfd",
+    "CODEBLOCK-42da81",
+    "CODEBLOCK-456a39",
+    "CODEBLOCK-de0ca3",
+    "CODE-3695b5",
+    "CODE-9c15eb",
+    "LINK-c03b58",
+    "CODEBLOCK-180332",
+    "CODE-663ea1",
+    "CODEBLOCK-54bf1b",
+    "CODE-147fb8",
+    "CODEBLOCK-3c22d9",
+    "LINK-90a2d3",
+    "CODE-2d4a63",
+    "CODE-1eec97",
+    "CODE-3e147b",
+    "CODE-1eec97",
+    "CODE-1eec97",
+    "LINK-842490",
+    "CODE-60be98",
+    "CODE-1eec97",
+    "LINK-2e2c13",
+    "CODE-981675",
+    "LINK-6430b1",
+    "CODE-dfc337",
+    "CODE-dde8be",
+    "LINK-f344b2",
+    "CODE-4eb550",
+    "LINK-92b809",
+    "LINK-8fdb7c",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-5ca292": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-781877": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1c1bbb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7236b6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-33822b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-abf12e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-008975": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4d1f01": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-683ac5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8f7840": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-97d085": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3dd0fe": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-19df0d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a1d22f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8a50ae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ce8ff4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dde29d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-baf4fa": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7ffa7f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8040c9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c76696": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-be489b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3816e0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-af5dc3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-324a84": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cc74c7": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-84f680": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1878ce": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-42da81": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-456a39": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-de0ca3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-180332": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-54bf1b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3c22d9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-c84c0c": {
+      "type": "inline-code",
+      "values": {
+        "content": "HOP"
+      }
+    },
+    "CODE-238c19": {
+      "type": "inline-code",
+      "values": {
+        "content": "Ownable"
+      }
+    },
+    "CODE-a0bcfd": {
+      "type": "inline-code",
+      "values": {
+        "content": "_owner"
+      }
+    },
+    "CODE-fc05e9": {
+      "type": "inline-code",
+      "values": {
+        "content": "Ownable.sol"
+      }
+    },
+    "CODE-9445ff": {
+      "type": "inline-code",
+      "values": {
+        "content": "ARB"
+      }
+    },
+    "CODE-124193": {
+      "type": "inline-code",
+      "values": {
+        "content": "proxy"
+      }
+    },
+    "CODE-89c492": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xb50721bcf8d664c30412cfbc6cf7a15145234ad1"
+      }
+    },
+    "CODE-6c605c": {
+      "type": "inline-code",
+      "values": {
+        "content": "ERC1967Upgrade.sol"
+      }
+    },
+    "CODE-4eb550": {
+      "type": "inline-code",
+      "values": {
+        "content": "wARB"
+      }
+    },
+    "CODE-01a4a9": {
+      "type": "inline-code",
+      "values": {
+        "content": "contract_owner"
+      }
+    },
+    "CODE-ec328d": {
+      "type": "inline-code",
+      "values": {
+        "content": "_transfer"
+      }
+    },
+    "CODE-dde8be": {
+      "type": "inline-code",
+      "values": {
+        "content": "Transfer"
+      }
+    },
+    "CODE-eeb9b5": {
+      "type": "inline-code",
+      "values": {
+        "content": "deployer"
+      }
+    },
+    "CODE-3bed2c": {
+      "type": "inline-code",
+      "values": {
+        "content": "internal"
+      }
+    },
+    "CODE-27f576": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer"
+      }
+    },
+    "CODE-b7f373": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFrom"
+      }
+    },
+    "CODE-4c8b2a": {
+      "type": "inline-code",
+      "values": {
+        "content": "_f_"
+      }
+    },
+    "CODE-a2edf4": {
+      "type": "inline-code",
+      "values": {
+        "content": "_mod_"
+      }
+    },
+    "CODE-733b85": {
+      "type": "inline-code",
+      "values": {
+        "content": "dropNewTokens"
+      }
+    },
+    "CODE-0cb04f": {
+      "type": "inline-code",
+      "values": {
+        "content": "auth()"
+      }
+    },
+    "CODE-6007ac": {
+      "type": "inline-code",
+      "values": {
+        "content": "Approve"
+      }
+    },
+    "CODE-74e216": {
+      "type": "inline-code",
+      "values": {
+        "content": "approve"
+      }
+    },
+    "CODE-dca6a1": {
+      "type": "inline-code",
+      "values": {
+        "content": "approver()"
+      }
+    },
+    "CODE-719635": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x00...01"
+      }
+    },
+    "CODE-859fac": {
+      "type": "inline-code",
+      "values": {
+        "content": "burn"
+      }
+    },
+    "CODE-9ac0bf": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x00...00"
+      }
+    },
+    "CODE-d4536f": {
+      "type": "inline-code",
+      "values": {
+        "content": "mount"
+      }
+    },
+    "CODE-dc6f17": {
+      "type": "inline-code",
+      "values": {
+        "content": "mint"
+      }
+    },
+    "CODE-c4d0cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "require"
+      }
+    },
+    "CODE-ffeaee": {
+      "type": "inline-code",
+      "values": {
+        "content": "require(account != address(0), \"<error message>\")"
+      }
+    },
+    "CODE-9af211": {
+      "type": "inline-code",
+      "values": {
+        "content": "account"
+      }
+    },
+    "CODE-bdf49c": {
+      "type": "inline-code",
+      "values": {
+        "content": "auth"
+      }
+    },
+    "CODE-7a023d": {
+      "type": "inline-code",
+      "values": {
+        "content": "approver"
+      }
+    },
+    "CODE-e55cff": {
+      "type": "inline-code",
+      "values": {
+        "content": "mod"
+      }
+    },
+    "CODE-147fb8": {
+      "type": "inline-code",
+      "values": {
+        "content": "Approval"
+      }
+    },
+    "CODE-a3046d": {
+      "type": "inline-code",
+      "values": {
+        "content": ".env.example"
+      }
+    },
+    "CODE-e9cbb0": {
+      "type": "inline-code",
+      "values": {
+        "content": ".env"
+      }
+    },
+    "CODE-005d0b": {
+      "type": "inline-code",
+      "values": {
+        "content": "pnpm install"
+      }
+    },
+    "CODE-c7bb32": {
+      "type": "inline-code",
+      "values": {
+        "content": "pnpm susApproval"
+      }
+    },
+    "CODE-54dd31": {
+      "type": "inline-code",
+      "values": {
+        "content": "viem"
+      }
+    },
+    "CODE-da079b": {
+      "type": "inline-code",
+      "values": {
+        "content": "client.getBytecode"
+      }
+    },
+    "CODE-a2593c": {
+      "type": "inline-code",
+      "values": {
+        "content": "addr"
+      }
+    },
+    "CODE-56ef8f": {
+      "type": "inline-code",
+      "values": {
+        "content": "Address"
+      }
+    },
+    "CODE-b9f836": {
+      "type": "inline-code",
+      "values": {
+        "content": ": boolean"
+      }
+    },
+    "CODE-038d68": {
+      "type": "inline-code",
+      "values": {
+        "content": "(Event | null)"
+      }
+    },
+    "CODE-4e1f49": {
+      "type": "inline-code",
+      "values": {
+        "content": "Event"
+      }
+    },
+    "CODE-74234e": {
+      "type": "inline-code",
+      "values": {
+        "content": "null"
+      }
+    },
+    "CODE-3695b5": {
+      "type": "inline-code",
+      "values": {
+        "content": "txn.from"
+      }
+    },
+    "CODE-9c15eb": {
+      "type": "inline-code",
+      "values": {
+        "content": "ev.args._owner"
+      }
+    },
+    "CODE-663ea1": {
+      "type": "inline-code",
+      "values": {
+        "content": "to"
+      }
+    },
+    "CODE-2d4a63": {
+      "type": "inline-code",
+      "values": {
+        "content": "async"
+      }
+    },
+    "CODE-1eec97": {
+      "type": "inline-code",
+      "values": {
+        "content": "Promise"
+      }
+    },
+    "CODE-3e147b": {
+      "type": "inline-code",
+      "values": {
+        "content": "await x()"
+      }
+    },
+    "CODE-60be98": {
+      "type": "inline-code",
+      "values": {
+        "content": "map"
+      }
+    },
+    "CODE-981675": {
+      "type": "inline-code",
+      "values": {
+        "content": "Promise.all"
+      }
+    },
+    "CODE-dfc337": {
+      "type": "inline-code",
+      "values": {
+        "content": "filter"
+      }
+    },
+    "LINK-6b8ed4": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code"
+      }
+    },
+    "LINK-8afc64": {
+      "type": "link",
+      "values": {
+        "url": "/guides/how-to-id-scam-tokens/"
+      }
+    },
+    "LINK-c38973": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code"
+      }
+    },
+    "LINK-b37f74": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/token/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1"
+      }
+    },
+    "LINK-7d36a3": {
+      "type": "link",
+      "values": {
+        "url": "https://arbitrum.foundation/"
+      }
+    },
+    "LINK-81fc85": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.arbitrum.foundation/deployment-addresses#token"
+      }
+    },
+    "LINK-1e45a7": {
+      "type": "link",
+      "values": {
+        "url": "https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452#code"
+      }
+    },
+    "LINK-be2064": {
+      "type": "link",
+      "values": {
+        "url": "https://optimistic.etherscan.io/token/0x026b623eb4aada7de37ef25256854f9235207178#code"
+      }
+    },
+    "LINK-159310": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/verifyContract"
+      }
+    },
+    "LINK-541f65": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc20-annotated-code/"
+      }
+    },
+    "LINK-362447": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code"
+      }
+    },
+    "LINK-ac889c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/2.x/access-control#ownership-and-ownable"
+      }
+    },
+    "LINK-daa40d": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc85535da2d3c6fc7#code"
+      }
+    },
+    "LINK-e96920": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/contracts/5.x/api/proxy"
+      }
+    },
+    "LINK-d35da3": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1#code"
+      }
+    },
+    "LINK-d34fc0": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0xb40dE7b1beE84Ff2dc22B70a049A07A13a411A33"
+      }
+    },
+    "LINK-046797": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/#externally-owned-accounts-and-key-pairs"
+      }
+    },
+    "LINK-90b289": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/tx/0xf49136198c3f925fcb401870a669d43cecb537bde36eb8b41df77f06d5f6fbc2"
+      }
+    },
+    "LINK-b25f52": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/tx/0xdfd6e717157354e64bbd5d6adf16761e5a5b3f914b1948d3545d39633244d47b"
+      }
+    },
+    "LINK-000243": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc20-annotated-code/#the-_transfer-function-_transfer"
+      }
+    },
+    "LINK-772316": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm"
+      }
+    },
+    "LINK-1c9d1e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20#transfer-1"
+      }
+    },
+    "LINK-8f1b20": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc20-annotated-code/#approve"
+      }
+    },
+    "LINK-a89a92": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20"
+      }
+    },
+    "LINK-827588": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn"
+      }
+    },
+    "LINK-1f2fe2": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20#approval"
+      }
+    },
+    "LINK-d558f6": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin"
+      }
+    },
+    "LINK-aae058": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/#types-of-account"
+      }
+    },
+    "LINK-140df3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20230915-scam-token-detection"
+      }
+    },
+    "LINK-d16d1b": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/"
+      }
+    },
+    "LINK-8b32c2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.typescriptlang.org/docs/"
+      }
+    },
+    "LINK-c03b58": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-55"
+      }
+    },
+    "LINK-90a2d3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.w3schools.com/js/js_async.asp"
+      }
+    },
+    "LINK-842490": {
+      "type": "link",
+      "values": {
+        "url": "https://www.w3schools.com/jsref/jsref_map.asp"
+      }
+    },
+    "LINK-2e2c13": {
+      "type": "link",
+      "values": {
+        "url": "https://www.javascripttutorial.net/es6/javascript-promise-all/"
+      }
+    },
+    "LINK-6430b1": {
+      "type": "link",
+      "values": {
+        "url": "https://www.w3schools.com/jsref/jsref_filter.asp"
+      }
+    },
+    "LINK-f344b2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20230915-scam-token-detection/blob/main/susTransfer.ts"
+      }
+    },
+    "LINK-92b809": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error"
+      }
+    },
+    "LINK-8fdb7c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.investopedia.com/terms/c/caveatemptor.asp"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:42:32.367Z",
+      "status": "success"
+    }
+  }
+}

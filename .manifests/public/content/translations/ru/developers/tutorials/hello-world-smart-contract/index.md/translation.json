@@ -1,0 +1,583 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-06-19T22:51:44.201Z",
+  "englishManifestHash": "5f7e798b8d13",
+  "placeholderOrder": [
+    "LINK-5c9ac9",
+    "LINK-c6b559",
+    "LINK-e4be84",
+    "LINK-52e8dc",
+    "LINK-b51d42",
+    "LINK-20449d",
+    "LINK-34265f",
+    "LINK-57c9e2",
+    "LINK-ef3939",
+    "IMAGE-d0471f",
+    "IMAGE-65300c",
+    "LINK-ab55fe",
+    "LINK-f9ea87",
+    "IMAGE-ea0b7a",
+    "LINK-319a33",
+    "LINK-d3b049",
+    "LINK-5a9478",
+    "CODEBLOCK-7e6aee",
+    "CODEBLOCK-357223",
+    "CODE-5eb4ee",
+    "LINK-90a487",
+    "CODEBLOCK-a87db3",
+    "CODEBLOCK-97f3ec",
+    "LINK-56ca94",
+    "CODE-afa27b",
+    "CODEBLOCK-e234b6",
+    "LINK-88781b",
+    "CODEBLOCK-6e88a6",
+    "CODEBLOCK-0c664b",
+    "CODE-cf4ef7",
+    "CODEBLOCK-4286b8",
+    "CODE-9cc6f2",
+    "CODE-a3e5b0",
+    "LINK-191c9a",
+    "CODEBLOCK-1fa26e",
+    "CODE-293701",
+    "LINK-907faa",
+    "CODEBLOCK-065740",
+    "CODE-e9cbb0",
+    "LINK-29f937",
+    "IMAGE-00aa54",
+    "CODE-e9cbb0",
+    "CODEBLOCK-ee8f86",
+    "CODE-cf4ef7",
+    "HTMLTAG-cee394",
+    "LINK-794750",
+    "LINK-d5ca30",
+    "LINK-459fd8",
+    "LINK-df2c52",
+    "CODEBLOCK-d83db3",
+    "CODE-cf4ef7",
+    "CODE-cf4ef7",
+    "CODE-cf4ef7",
+    "CODEBLOCK-c5754f",
+    "CODE-62e8db",
+    "CODE-eba8dc",
+    "CODEBLOCK-db565a",
+    "CODE-86b4f8",
+    "LINK-5715b2",
+    "CODE-a3e5b0",
+    "CODE-c34f3d",
+    "CODEBLOCK-213f2f",
+    "LINK-dd6f99",
+    "CODEBLOCK-bd5b55",
+    "CODE-05e080",
+    "CODE-872e4e",
+    "CODE-57a849",
+    "CODE-05e080",
+    "CODE-a6f5b0",
+    "CODEBLOCK-0c746b",
+    "CODE-4bef04",
+    "CODE-05e080",
+    "CODE-1eec97",
+    "CODE-a6f5b0",
+    "CODEBLOCK-ff95f3",
+    "CODEBLOCK-07027a",
+    "LINK-18d20e",
+    "IMAGE-cbc5d4",
+    "CODE-218197",
+    "CODE-f4b06e",
+    "IMAGE-38ec00",
+    "LINK-8b3416",
+    "IMAGE-d0e6a7",
+    "CODE-322c90",
+    "LINK-57e82e",
+    "CODE-4731fa",
+    "LINK-cd9198",
+    "CODE-3aa327",
+    "LINK-d2691d",
+    "LINK-e31a7b",
+    "LINK-cd52f7",
+    "LINK-4d83d6",
+    "LINK-872f16",
+    "LINK-8cefa4"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-7e6aee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-357223": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a87db3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-97f3ec": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e234b6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6e88a6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0c664b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4286b8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1fa26e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-065740": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ee8f86": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d83db3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c5754f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-62e8db": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x${PRIVATE_KEY}"
+      }
+    },
+    "CODEBLOCK-db565a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-213f2f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bd5b55": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0c746b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ff95f3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-07027a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "HTMLTAG-cee394": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://git-scm.com/docs/gitignore"
+      }
+    },
+    "CODE-5eb4ee": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm init"
+      }
+    },
+    "CODE-afa27b": {
+      "type": "inline-code",
+      "values": {
+        "content": "hello-world"
+      }
+    },
+    "CODE-cf4ef7": {
+      "type": "inline-code",
+      "values": {
+        "content": "hardhat.config.js"
+      }
+    },
+    "CODE-9cc6f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "contracts/"
+      }
+    },
+    "CODE-a3e5b0": {
+      "type": "inline-code",
+      "values": {
+        "content": "scripts/"
+      }
+    },
+    "CODE-293701": {
+      "type": "inline-code",
+      "values": {
+        "content": "update"
+      }
+    },
+    "CODE-e9cbb0": {
+      "type": "inline-code",
+      "values": {
+        "content": ".env"
+      }
+    },
+    "CODE-eba8dc": {
+      "type": "inline-code",
+      "values": {
+        "content": "compile"
+      }
+    },
+    "CODE-86b4f8": {
+      "type": "inline-code",
+      "values": {
+        "content": "SPDX license identifier not provided in source file"
+      }
+    },
+    "CODE-c34f3d": {
+      "type": "inline-code",
+      "values": {
+        "content": "deploy.js"
+      }
+    },
+    "CODE-05e080": {
+      "type": "inline-code",
+      "values": {
+        "content": "ContractFactory"
+      }
+    },
+    "CODE-872e4e": {
+      "type": "inline-code",
+      "values": {
+        "content": "HelloWorld"
+      }
+    },
+    "CODE-57a849": {
+      "type": "inline-code",
+      "values": {
+        "content": "hardhat-ethers"
+      }
+    },
+    "CODE-a6f5b0": {
+      "type": "inline-code",
+      "values": {
+        "content": "Contract"
+      }
+    },
+    "CODE-4bef04": {
+      "type": "inline-code",
+      "values": {
+        "content": "deploy()"
+      }
+    },
+    "CODE-1eec97": {
+      "type": "inline-code",
+      "values": {
+        "content": "Promise"
+      }
+    },
+    "CODE-218197": {
+      "type": "inline-code",
+      "values": {
+        "content": "From"
+      }
+    },
+    "CODE-f4b06e": {
+      "type": "inline-code",
+      "values": {
+        "content": "To"
+      }
+    },
+    "CODE-322c90": {
+      "type": "inline-code",
+      "values": {
+        "content": ".deploy()"
+      }
+    },
+    "CODE-4731fa": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_sendRawTransaction"
+      }
+    },
+    "CODE-3aa327": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_getTransactionByHash"
+      }
+    },
+    "IMAGE-d0471f": {
+      "type": "image",
+      "values": {
+        "path": "./hello-world-create-app.png"
+      }
+    },
+    "IMAGE-65300c": {
+      "type": "image",
+      "values": {
+        "path": "./create-app-view-hello-world.png"
+      }
+    },
+    "IMAGE-ea0b7a": {
+      "type": "image",
+      "values": {
+        "path": "./metamask-sepolia-example.png"
+      }
+    },
+    "IMAGE-00aa54": {
+      "type": "image",
+      "values": {
+        "path": "./get-alchemy-api-key.png"
+      }
+    },
+    "IMAGE-cbc5d4": {
+      "type": "image",
+      "values": {
+        "path": "./etherscan-contract.png"
+      }
+    },
+    "IMAGE-38ec00": {
+      "type": "image",
+      "values": {
+        "path": "./etherscan-transaction.png"
+      }
+    },
+    "IMAGE-d0e6a7": {
+      "type": "image",
+      "values": {
+        "path": "./hello-world-explorer.png"
+      }
+    },
+    "LINK-5c9ac9": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.io/"
+      }
+    },
+    "LINK-c6b559": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.0/"
+      }
+    },
+    "LINK-e4be84": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/"
+      }
+    },
+    "LINK-52e8dc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/eth"
+      }
+    },
+    "LINK-b51d42": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/docs/interacting-with-a-smart-contract"
+      }
+    },
+    "LINK-20449d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan"
+      }
+    },
+    "LINK-34265f": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/gWuC7zB"
+      }
+    },
+    "LINK-57c9e2": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.alchemy.com/signup"
+      }
+    },
+    "LINK-ef3939": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-f9ea87": {
+      "type": "link",
+      "values": {
+        "url": "https://metamask.io/download"
+      }
+    },
+    "LINK-319a33": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/#sepolia"
+      }
+    },
+    "LINK-d3b049": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/#eth_getbalance"
+      }
+    },
+    "LINK-5a9478": {
+      "type": "link",
+      "values": {
+        "url": "https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest"
+      }
+    },
+    "LINK-90a487": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm"
+      }
+    },
+    "LINK-56ca94": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/getting-started/#overview"
+      }
+    },
+    "LINK-88781b": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/getting-started/#overview"
+      }
+    },
+    "LINK-191c9a": {
+      "type": "link",
+      "values": {
+        "url": "https://code.visualstudio.com/"
+      }
+    },
+    "LINK-907faa": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/"
+      }
+    },
+    "LINK-29f937": {
+      "type": "link",
+      "values": {
+        "url": "https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/"
+      }
+    },
+    "LINK-794750": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-d5ca30": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/plugins/"
+      }
+    },
+    "LINK-459fd8": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers"
+      }
+    },
+    "LINK-df2c52": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethers-io/ethers.js/"
+      }
+    },
+    "LINK-5715b2": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/u72VCg3"
+      }
+    },
+    "LINK-dd6f99": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/tutorial/testing-contracts.html#writing-tests"
+      }
+    },
+    "LINK-18d20e": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia.etherscan.io/"
+      }
+    },
+    "LINK-8b3416": {
+      "type": "link",
+      "values": {
+        "url": "https://dashboard.alchemyapi.io/explorer"
+      }
+    },
+    "LINK-57e82e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction"
+      }
+    },
+    "LINK-cd9198": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash"
+      }
+    },
+    "LINK-d2691d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/"
+      }
+    },
+    "LINK-e31a7b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/interacting-with-a-smart-contract"
+      }
+    },
+    "LINK-cd52f7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan"
+      }
+    },
+    "LINK-4d83d6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/eth"
+      }
+    },
+    "LINK-872f16": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/newsletter"
+      }
+    },
+    "LINK-8cefa4": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/u72VCg3"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T22:51:44.201Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,0 +1,585 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/consensus-mechanisms/pos/index.md",
+  "generatedAt": "2026-06-18T21:08:37.589Z",
+  "rootHash": "7367afbe696a",
+  "tree": {
+    "contentHash": "c8fb789ee0ef",
+    "anchorHash": "32b3906a59a6",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "6ed157982b1b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "b13d4088d52a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:2": {
+        "contentHash": "d353ecc24768",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "0da4a8107e74",
+        "anchorHash": "ab199f905ffa"
+      },
+      "prose:3": {
+        "contentHash": "d77cc7805a18",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "673993a95ab9",
+        "anchorHash": "54f97ec40bbb"
+      },
+      "prose:4": {
+        "contentHash": "e739e840a637",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "4e66fce57bbc",
+        "anchorHash": "c6382a1fd61b",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "ed40dad09508",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7c9492ccf67a",
+            "anchorHash": "ab199f905ffa"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "what-is-pos": {
+        "contentHash": "7517957efe49",
+        "anchorHash": "5eb493ceb97f",
+        "labelHash": "dbe9539035e3",
+        "children": {
+          "_label": {
+            "contentHash": "dbe9539035e3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "04b3a4e91830",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "5f0845d8b16a",
+            "anchorHash": "8a5edab28263"
+          },
+          "prose:2": {
+            "contentHash": "82a7eb473ea9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "validators": {
+        "contentHash": "bd31f4ee87a9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "49df873871d6",
+        "children": {
+          "_label": {
+            "contentHash": "49df873871d6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e8373119a37a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "transaction-execution-ethereum-pos": {
+        "contentHash": "d91702c921e8",
+        "anchorHash": "be0bf2f4a525",
+        "labelHash": "98b8d5d59b02",
+        "children": {
+          "_label": {
+            "contentHash": "98b8d5d59b02",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:12": {
+            "contentHash": "de1922a8bdc0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "ce922519a3c3",
+            "anchorHash": "d20c9fa6d21a"
+          },
+          "prose:13": {
+            "contentHash": "6adfc771d0a7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "cc90ce1732a6",
+            "anchorHash": "24b47bf2445d"
+          },
+          "prose:14": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "10707cea1cf4",
+            "anchorHash": "e226600312d7"
+          },
+          "prose:15": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "e922e023deb6",
+            "anchorHash": "f4ba5145b6f9"
+          },
+          "prose:16": {
+            "contentHash": "44dd2e470326",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "376771824ebe",
+            "anchorHash": "191567028ad9"
+          },
+          "prose:17": {
+            "contentHash": "cc954a766df2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "035211a30290",
+            "anchorHash": "63c94c4ab54e"
+          },
+          "prose:18": {
+            "contentHash": "b3872635a96c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "4347a1eeb801",
+            "anchorHash": "fd885c045956"
+          },
+          "prose:19": {
+            "contentHash": "3769a85dd907",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "2bea1858bbc7",
+            "anchorHash": "e9236bd5c28d"
+          },
+          "prose:20": {
+            "contentHash": "eae9af3223ff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "c01303167119",
+            "anchorHash": "68b074b251cb"
+          },
+          "prose:21": {
+            "contentHash": "2918e67c9d59",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "bd1f8c9dfcb8",
+            "anchorHash": "ab025860b4ed"
+          },
+          "prose:22": {
+            "contentHash": "524020a1eafc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "260b2589479b",
+            "anchorHash": "5c916ecac251"
+          },
+          "prose:23": {
+            "contentHash": "a65e918da94c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "0b03955a5393",
+            "anchorHash": "d8a3189b8b68"
+          },
+          "prose:24": {
+            "contentHash": "9be27c68246f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:12",
+          "link:0",
+          "prose:13",
+          "link:1",
+          "prose:14",
+          "link:2",
+          "prose:15",
+          "link:3",
+          "prose:16",
+          "link:4",
+          "prose:17",
+          "link:5",
+          "prose:18",
+          "link:6",
+          "prose:19",
+          "link:7",
+          "prose:20",
+          "link:8",
+          "prose:21",
+          "link:9",
+          "prose:22",
+          "link:10",
+          "prose:23",
+          "link:11",
+          "prose:24"
+        ]
+      },
+      "finality": {
+        "contentHash": "2bde12d3d7d6",
+        "anchorHash": "50fefa3e96ac",
+        "labelHash": "98606421f2e4",
+        "children": {
+          "_label": {
+            "contentHash": "98606421f2e4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "723a9688a77b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "00b70951e455",
+            "anchorHash": "ab6a879d69e2"
+          },
+          "prose:4": {
+            "contentHash": "e0c3d17dd3b8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "1ae380c3e8d5",
+            "anchorHash": "96b2588e2bb9"
+          },
+          "prose:5": {
+            "contentHash": "3de840c67e0e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "e47e37293d12",
+            "anchorHash": "f4ee9c365ad4"
+          },
+          "prose:6": {
+            "contentHash": "042c0b0fbedf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "crypto-economic-security": {
+        "contentHash": "876d5be06845",
+        "anchorHash": "52dfb2477e14",
+        "labelHash": "27b2959f7b26",
+        "children": {
+          "_label": {
+            "contentHash": "27b2959f7b26",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "b04dc9754d90",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7262e766acf7",
+            "anchorHash": "b810bdad2832"
+          },
+          "prose:2": {
+            "contentHash": "e0e2ba8543d5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "fork-choice": {
+        "contentHash": "1c09ad75e4fb",
+        "anchorHash": "6641950feda6",
+        "labelHash": "98e00165704e",
+        "children": {
+          "_label": {
+            "contentHash": "98e00165704e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "119d32269fe0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "8d4d2d64992c",
+            "anchorHash": "bf359eb8dd42"
+          },
+          "prose:2": {
+            "contentHash": "c8ad82cbaa8d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "pos-and-security": {
+        "contentHash": "02c585ae2b80",
+        "anchorHash": "4d90df97fbf6",
+        "labelHash": "c24f0cf47322",
+        "children": {
+          "_label": {
+            "contentHash": "c24f0cf47322",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "7211cbb0268e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "03ad01db08ac",
+            "anchorHash": "29c3a57725e8"
+          },
+          "prose:2": {
+            "contentHash": "5ab2a79b0fe5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "pros-and-cons": {
+        "contentHash": "52570191a31c",
+        "anchorHash": "196a4464bbc6",
+        "labelHash": "09085a612c0c",
+        "children": {
+          "_label": {
+            "contentHash": "09085a612c0c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "337475853e46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "comparison-to-proof-of-work": {
+            "contentHash": "008a9fb6d70d",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "18106ec5344b",
+            "children": {
+              "_label": {
+                "contentHash": "18106ec5344b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "e9a475b177a8",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "comparison-to-proof-of-work"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "f6782c7bfd1a",
+        "anchorHash": "514eadfcbd16",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "498aa67953b1",
+            "anchorHash": "7634806eec8d"
+          },
+          "prose:9": {
+            "contentHash": "bf33c7600439",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "6571484a6815",
+            "anchorHash": "204940a648ae"
+          },
+          "prose:10": {
+            "contentHash": "ff6ef4253150",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "8c7e31a61d22",
+            "anchorHash": "9a6268bad0fd"
+          },
+          "prose:11": {
+            "contentHash": "bf33c7600439",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "138f6ddb54cb",
+            "anchorHash": "a8d27c6a0425"
+          },
+          "prose:12": {
+            "contentHash": "bf33c7600439",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "dfc591ee345c",
+            "anchorHash": "f1ca5f242868"
+          },
+          "prose:13": {
+            "contentHash": "bf33c7600439",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "bf6378282030",
+            "anchorHash": "eb3219983f46"
+          },
+          "prose:14": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "b9a1a2bdb659",
+            "anchorHash": "e053a407c1ef"
+          },
+          "prose:15": {
+            "contentHash": "bf33c7600439",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "707685ef903a",
+            "anchorHash": "e8e10ade2dfe"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:8",
+          "link:0",
+          "prose:9",
+          "link:1",
+          "prose:10",
+          "link:2",
+          "prose:11",
+          "link:3",
+          "prose:12",
+          "link:4",
+          "prose:13",
+          "link:5",
+          "prose:14",
+          "link:6",
+          "prose:15",
+          "link:7"
+        ]
+      },
+      "related-topics": {
+        "contentHash": "ce3216d2fbf0",
+        "anchorHash": "242c6d7e2e2c",
+        "labelHash": "5a38da0df0ab",
+        "children": {
+          "_label": {
+            "contentHash": "5a38da0df0ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "735f891366e9",
+            "anchorHash": "d61a7ea1fcd6"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "e98666fe5aaf",
+            "anchorHash": "6051eacd0386"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "prerequisites",
+      "what-is-pos",
+      "validators",
+      "transaction-execution-ethereum-pos",
+      "finality",
+      "crypto-economic-security",
+      "fork-choice",
+      "pos-and-security",
+      "pros-and-cons",
+      "further-reading",
+      "related-topics"
+    ]
+  },
+  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+}

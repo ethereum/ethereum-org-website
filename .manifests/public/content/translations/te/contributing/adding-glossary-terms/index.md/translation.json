@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-08T07:45:11.579Z",
+  "englishManifestHash": "61240d4b7eb1",
+  "placeholderOrder": [
+    "LINK-0514bb",
+    "LINK-b678d1"
+  ],
+  "placeholderMap": {
+    "LINK-0514bb": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/"
+      }
+    },
+    "LINK-b678d1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:45:11.579Z",
+      "status": "success"
+    }
+  }
+}

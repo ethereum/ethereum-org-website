@@ -1,26 +1,24 @@
 ---
-title: "''Kuweka maneno ya ufafanuzi.''"
+title: Kuongeza istilahi za faharasa
 lang: sw
-description: "''Vigezo vyetu vya kuongeza maneno mapya kwenye kamusi ya ethereum.org.''"
+description: Vigezo vyetu vya kuongeza istilahi mpya kwenye faharasa ya ethereum.org
 ---
 
-# Kuongeza maneno ya kamusi {#contributing-to-ethereumorg-}
+Sekta hii inabadilika kila siku. Istilahi mpya zinaingia kila mara kwenye msamiati wa watumiaji wa Ethereum, na tunahitaji msaada wako kutoa rejeleo sahihi na la kisasa kwa mambo yote ya Ethereum. Angalia [faharasa](/glossary/) ya sasa na uone hapa chini ikiwa unataka kusaidia!
 
-''Eneo hili hubadilika kila siku.''. ''Maneno mapya huingia mara kwa mara katika msamiati wa watumiaji wa Ethereum, na tunahitaji msaada wako kutoa marejeleo sahihi na ya kisasa kwa maneno yote yanayohusiana na Ethereum.''. Angalia [kamusi](/glossary/) ya sasa na tazama hapa chini ikiwa unataka kusaidia!
+## Vigezo {#criteria}
 
-## Viwango {#criteria}
+Istilahi mpya za faharasa zitatathminiwa kwa vigezo vifuatavyo:
 
-''Masharti mapya ya kamusi yatakaguliwa kwa kuzingatia vigezo ifuatavyo.'':
-
-- ''Je neno/ ufafanuzi huu ni wa kisasa na unahusiana na hali ya sasa?
-- ''Je kuna neno linalofanana tayari kwenye kamusi?''? ''(Iwapo ndivyo, zingatia faida za kuongeza neno jipya dhidi ya kusasisha neno iliyokuwepo tayari).''
-- ''Je neno/ufafanuzi bila matangazo ya bidhaa au maudhui mengine ya matangazo?
-- ''Je neno/ufafanuzi lina uhusiano wa moja kwa moja na Ethereum?
-- ''Je, fasiri hiyo ni ya kimaadili, sahihi na haina maoni ya kibinafsi au upendeleo?
-- ''Je chanzo ni cha kuaminika? ''Je wanafanya vyanzo vyao?
+- Je, istilahi/ufafanuzi ni wa kisasa na unafaa kwa sasa?
+- Je, kuna istilahi inayofanana tayari kwenye kamusi? (Ikiwa ndivyo, fikiria faida za istilahi mpya dhidi ya kusasisha istilahi iliyopo)
+- Je, istilahi/ufafanuzi hauna matangazo ya bidhaa au maudhui mengine ya kukuza?
+- Je, istilahi/ufafanuzi unahusiana moja kwa moja na Ethereum?
+- Je, ufafanuzi haupendelei, ni sahihi na hauna maoni au mitazamo ya kibinafsi?
+- Je, chanzo kinaaminika? Je, wanarejelea vyanzo vyao?
 
 ---
 
-## Ongeza neno lako {#how-decisions-about-the-site-are-made}
+## Ongeza istilahi yako {#how-decisions-about-the-site-are-made}
 
-Ikiwa unataka kuongeza neno la kamusi kwenye ethereum.org na linakidhi vigezo, [tengeneza suala kwenye GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).
+Ikiwa unataka kuongeza istilahi ya faharasa kwenye ethereum.org na inakidhi vigezo, [tengeneza suala kwenye GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).

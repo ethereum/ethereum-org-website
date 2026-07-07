@@ -1,6 +1,6 @@
 ---
 title: ERC-777-Token-Standard
-description: "Erfahren Sie mehr über ERC-777, einen verbesserten Standard für fungible Token mit Hooks, obwohl aus Sicherheitsgründen ERC-20 empfohlen wird."
+description: "Erfahren Sie mehr über ERC-777, einen verbesserten Standard für fungible Token mit Hooks, obwohl ERC-20 aus Sicherheitsgründen empfohlen wird."
 lang: de
 ---
 
@@ -34,7 +34,7 @@ Die Hooks werden mithilfe des [ERC-1820](https://eips.ethereum.org/EIPS/eip-1820
 
 ### Dezimalstellen {#decimals}
 
-Der Standard löst auch die Verwirrung um `decimals`, die in ERC-20 verursacht wurde. Diese Klarheit verbessert die Entwicklererfahrung.
+Der Standard löst auch die Verwirrung um `decimals`, die bei ERC-20 verursacht wurde. Diese Klarheit verbessert die Entwicklererfahrung.
 
 ### Abwärtskompatibilität mit ERC-20 {#backwards-compatibility-with-erc-20}
 

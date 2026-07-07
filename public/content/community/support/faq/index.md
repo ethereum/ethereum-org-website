@@ -4,8 +4,6 @@ description: Common Ethereum questions about wallets, transactions, staking, and
 lang: en
 ---
 
-# Frequently asked questions {#faq}
-
 ## I sent crypto to the wrong address {#wrong-wallet}
 
 A transaction sent on Ethereum is irreversible. Unfortunately, if you sent ETH or tokens to the wrong wallet, there is no way to reverse the transaction.

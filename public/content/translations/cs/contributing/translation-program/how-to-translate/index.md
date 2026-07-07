@@ -1,92 +1,90 @@
 ---
-title: "Jak překládat"
+title: Jak překládat
 lang: cs
-description: "Instrukce pro používání Crowdinu pro překlad ethereum.org"
+description: Pokyny pro používání platformy Crowdin k překladu ethereum.org
 ---
-
-# Jak překládat {#how-to-translate}
 
 ## Vizuální průvodce {#visual-guide}
 
-Pro ty, kteří se lépe učí vizuálně: Podívejte se, jak vás Luka provede nastavením v Crowdinu. Alternativně můžete najít stejné kroky v psaném formátu v následující sekci.
+Pokud se raději učíte vizuálně, podívejte se, jak Luka ukazuje nastavení platformy Crowdin. Případně najdete stejné kroky v písemné podobě v další části.
 
-<YouTube id="Ii7bYhanLs4" />
+<VideoWatch slug="crowdin-translation-guide" />
 
 ## Písemný průvodce {#written-guide}
 
-### Připojte se k našemu projektu v Crowdinu {#join-project}
+### Připojte se k našemu projektu na platformě Crowdin {#join-project}
 
-Budete se muset přihlásit do svého účtu Crowdin nebo se zaregistrovat, pokud ho ještě nemáte. K registraci stačí pouze e-mail a heslo.
+Budete se muset přihlásit ke svému účtu Crowdin, nebo se zaregistrovat, pokud jej ještě nemáte. K registraci je potřeba pouze e-mailový účet a heslo.
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
-  Připojte se k projektu
+  Připojit se k projektu
 </ButtonLink>
 
 ### Otevřete svůj jazyk {#open-language}
 
-Po přihlášení do Crowdinu uvidíte popis projektu a seznam všech dostupných jazyků.
-Každý jazyk také obsahuje informace o celkovém počtu přeložitelných slov a přehled toho, kolik obsahu bylo v daném jazyce přeloženo a schváleno.
+Po přihlášení do platformy Crowdin uvidíte popis projektu a seznam všech dostupných jazyků.
+Každý jazyk také obsahuje informace o celkovém počtu slov k překladu a přehled o tom, kolik obsahu již bylo v daném jazyce přeloženo a schváleno.
 
-Otevřete jazyk, do kterého chcete překládat, abyste viděli seznam souborů dostupných k překladu.
+Otevřete jazyk, do kterého chcete překládat, a zobrazí se vám seznam souborů dostupných k překladu.
 
-![Seznam jazyků v Crowdinu](./list-of-languages.png)
+![List of languages in Crowdin](./list-of-languages.png)
 
-### Najděte dokument, na kterém budete pracovat {#find-document}
+### Najděte si dokument, na kterém chcete pracovat {#find-document}
 
-Obsah webu je rozdělen do několika dokumentů a obsahových bloků. Napravo můžete zkontrolovat pokrok u každého dokumentu – pokud je pokrok překladu pod 100 %, přispějte!
+Obsah webových stránek je rozdělen do řady dokumentů a obsahových skupin (tzv. content buckets). Průběh překladu každého dokumentu můžete zkontrolovat vpravo – pokud je průběh překladu nižší než 100 %, zapojte se prosím!
 
 Nevidíte svůj jazyk v seznamu? [Otevřete issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose) nebo se zeptejte na našem [Discordu](https://discord.gg/ethereum-org)
 
-![Přeložené a nepřeložené soubory v Crowdinu](./crowdin-files.png)
+![Translated and untranslated files in Crowdin](./crowdin-files.png)
 
-Poznámka k obsahovým blokům: V rámci Crowdinu používáme „obsahové bloky“, abychom nejprve přeložili obsah s nejvyšší prioritou. Když se podíváte na jazyk, například [filipínštinu](https://crowdin.com/project/ethereum-org/fil#), uvidíte složky pro obsahové bloky (\"1. Úvodní stránka“, „2. Základy“, „3. Průzkum“ atd.).
+Poznámka k obsahovým skupinám: v platformě Crowdin používáme „obsahové skupiny“ (content buckets), abychom zajistili, že obsah s nejvyšší prioritou bude vydán jako první. Když si otevřete nějaký jazyk, například [filipínštinu](https://crowdin.com/project/ethereum-org/fil#), uvidíte složky pro jednotlivé obsahové skupiny („1. Homepage“, „2. Essentials“, „3. Exploring“ atd.).
 
-Doporučujeme vám překládat v tomto číselném pořadí (1 → 2 → 3 → ⋯), aby byly nejdůležitější stránky přeloženy jako první.
+Doporučujeme překládat v tomto číselném pořadí (1 → 2 → 3 → ⋯), aby byly nejdříve přeloženy stránky s největším dopadem.
 
-### Přeložit {#translate}
+### Překládejte {#translate}
 
-Po výběru souboru, který chcete přeložit, se otevře v online editoru. Pokud jste Crowdin nikdy nepoužívali, projděte si tohoto rychlého průvodce, abyste se seznámili se základy.
+Po výběru souboru, který chcete přeložit, se soubor otevře v online editoru. Pokud jste Crowdin ještě nikdy nepoužívali, můžete využít tohoto stručného průvodce, který vás seznámí se základy.
 
-![Online editor Crowdin](./online-editor.png)
+![Crowdin online editor](./online-editor.png)
 
 **_1 – Levý postranní panel_**
 
-- Nepřeloženo (červeně) – text, na kterém se ještě nepracovalo. Toto jsou řetězce, které byste měli překládat.
-- Přeloženo (zeleně) – text, který již byl přeložen, ale ještě nebyl zkontrolován. Můžete navrhnout alternativní překlady nebo hlasovat o stávajících pomocí tlačítek „+“ a „-“ v editoru.
-- Schváleno (zaškrtnutí) – text, který již byl zkontrolován a je aktuálně naživo na webu.
+- Nepřeloženo (červená) – text, na kterém se ještě nepracovalo. Toto jsou řetězce, které byste měli překládat.
+- Přeloženo (zelená) – text, který již byl přeložen, ale ještě nebyl zkontrolován. Můžete navrhnout alternativní překlady nebo hlasovat pro stávající pomocí tlačítek „+“ a „-“ v editoru.
+- Schváleno (zaškrtnutí) – text, který již byl zkontrolován a je aktuálně zveřejněn na webových stránkách.
 
-Můžete také použít tlačítka nahoře k vyhledávání konkrétních řetězců, filtrování podle stavu nebo změně zobrazení.
+Pomocí tlačítek nahoře můžete také vyhledávat konkrétní řetězce, filtrovat je podle stavu nebo změnit zobrazení.
 
 **_2 – Oblast editoru_**
 
-Hlavní oblast pro překlad - zdrojový text se zobrazuje nahoře s dalším kontextem a screenshoty, pokud jsou k dispozici.
-Chcete-li navrhnout nový překlad, zadejte svůj překlad do pole „Zadejte překlad zde“ a klikněte na Uložit.
+Hlavní oblast pro překlad – zdrojový text je zobrazen nahoře, případně s dodatečným kontextem a snímky obrazovky, pokud jsou k dispozici.
+Chcete-li navrhnout nový překlad, zadejte jej do pole „Enter translation here“ (Zde zadejte překlad) a klikněte na Uložit.
 
-V této sekci také najdete existující překlady řetězce a překlady do jiných jazyků, stejně jako shody z překladové paměti a návrhy strojového překladu.
+V této části najdete také existující překlady daného řetězce a překlady do jiných jazyků, stejně jako shody z překladové paměti a návrhy strojového překladu.
 
 **_3 – Pravý postranní panel_**
 
-Zde můžete najít komentáře, položky překladové paměti a položky glosáře. Výchozí zobrazení ukazuje komentáře a umožňuje překladatelům komunikovat, upozorňovat na problémy nebo hlásit nesprávné překlady.
+Zde najdete komentáře, záznamy z překladové paměti a položky glosáře. Výchozí zobrazení ukazuje komentáře a umožňuje překladatelům komunikovat, upozorňovat na problémy nebo nahlašovat nesprávné překlady.
 
-Pomocí tlačítek nahoře můžete také přepnout na Překladovou paměť, kde můžete vyhledávat existující překlady, nebo na Glosář, který obsahuje popisy a standardní překlady klíčových termínů.
+Pomocí tlačítek nahoře můžete také přepnout na Překladovou paměť (Translation Memory), kde můžete vyhledávat existující překlady, nebo na Glosář (Glossary), který obsahuje popisy a standardní překlady klíčových termínů.
 
-Chcete se dozvědět více? Neváhejte a podívejte se na [dokumentaci k používání online editoru Crowdin](https://support.crowdin.com/online-editor/)
+Chcete se dozvědět více? Neváhejte se podívat do [dokumentace k používání online editoru Crowdin](https://support.crowdin.com/online-editor/)
 
-### Proces revize {#review-process}
+### Proces kontroly {#review-process}
 
-Jakmile dokončíte překlad (tj. všechny soubory pro obsahový blok zobrazují 100 %), naše profesionální překladatelská služba obsah zkontroluje (a případně upraví). Jakmile je revize dokončena (tj. průběh revize je 100 %), přidáme ho na web.
+Jakmile dokončíte překlad (tj. všechny soubory pro danou obsahovou skupinu ukazují 100 %), naše profesionální překladatelská služba obsah zkontroluje (a případně upraví). Po dokončení kontroly (tj. průběh kontroly je 100 %) jej přidáme na webové stránky.
 
 <Alert variant="update">
 <AlertEmoji text=":warning:"/>
 <AlertContent>
-  Prosím, nepoužívejte strojový překlad. Všechny překlady budou před přidáním na web zkontrolovány. Pokud zjistíme, že vaše navržené překlady jsou strojové, budou odmítnuty a přispěvatelé, kteří často používají strojový překlad, budou z projektu odstraněni.
+  K překladu projektu prosím nepoužívejte strojový překlad. Všechny překlady budou před přidáním na webové stránky zkontrolovány. Pokud se zjistí, že vaše navrhované překlady jsou přeloženy strojově, budou zamítnuty a přispěvatelé, kteří strojový překlad používají často, budou z projektu odstraněni.
 </AlertContent>
 </Alert>
 
-### Kontaktujte nás {#get-in-touch}
+### Ozvěte se nám {#get-in-touch}
 
-Máte nějaké otázky? Nebo chcete spolupracovat s naším týmem a dalšími překladateli? Pište prosím do kanálu #translations na našem [Discord serveru ethereum.org](https://discord.gg/ethereum-org).
+Máte nějaké dotazy? Nebo chcete spolupracovat s naším týmem a dalšími překladateli? Napište nám do kanálu #translations na našem [Discord serveru ethereum.org](https://discord.gg/ethereum-org)
 
-Můžete se také obrátit na translations@ethereum.org
+Můžete nás také kontaktovat na adrese translations@ethereum.org
 
-Děkujeme vám za vaši účast v překladatelském programu ethereum.org!
+Děkujeme za vaši účast v překladatelském programu ethereum.org!

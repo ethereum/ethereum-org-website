@@ -139,14 +139,13 @@ _Typically used for decentralized development and governance of protocols and [d
 - [Start a Governor DAO with Tally](https://www.tally.xyz/get-started)
 - [Create an Aragon-powered DAO](https://aragon.org/product)
 - [Start a colony](https://colony.io/)
-- [Create a DAO with DAOstack's holographic consensus](https://alchemy.daostack.io/daos/create)
 - [Launch a DAO with the DeGov Launcher](https://docs.degov.ai/integration/deploy)
 
 ## Further reading {#further-reading}
 
 ### DAO Articles {#dao-articles}
 
-- [What's a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [What's a DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

@@ -1,10 +1,9 @@
 ---
-title: Design contribution
+title: Design contribution to ethereum.org
+metaTitle: Design contribution
 description: Design contribution to ethereum.org
 lang: en
 ---
-
-# Design contribution to ethereum.org {#design-contributions}
 
 Design is a critical component of any project, and by devoting your time and design skills to ethereum.org, you can help to improve the user experience for our visitors. Contributing to an open-source project provides an opportunity to gain relevant experience and develop your skills in a collaborative environment. You will have the chance to work with other designers, developers, and community members, all of whom will have their own unique perspectives and insights.
 

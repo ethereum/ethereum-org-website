@@ -1,99 +1,98 @@
 ---
-title: "Thêm sản phẩm"
-description: "Chính sách áp dụng khi thêm ứng dụng phi tập trung lên ethereum.org"
+title: Thêm các sản phẩm Ethereum
+metaTitle: Thêm sản phẩm
+description: Chính sách chúng tôi sử dụng khi thêm các dapp vào ethereum.org
 lang: vi
 ---
 
-# Thêm các sản phẩm Ethereum {#adding-products}
+Bất kỳ ai cũng có thể tự do đề xuất các ứng dụng phi tập trung (dapp) mới cho nội dung trên ethereum.org, ở những nơi phù hợp. **Không, chúng tôi sẽ không liệt kê dapp của bạn trên trang chủ của chúng tôi đâu** 😜
 
-Bất kì ai đều có thể đề xuất đưa thông tin ứng dụng phi tập trung mới lên ethereum.org, ở những vị trí thích hợp. **Không, chúng tôi sẽ không đưa ứng dụng phi tập trung của bạn lên trang chủ của chúng tôi** 😜
-
-Các ứng dụng phi tập trung hiện được chia sẻ tại:
+Các dapp hiện được liệt kê trên:
 
 - ethereum.org/dapps
 - ethereum.org/get-eth
 
-**Vui lòng chỉ đề xuất những bổ sung mới mẻ cho các trang.**
+**Vui lòng chỉ đề xuất các bổ sung mới trên những trang này.**
 
-Mặc dù chúng tôi chào đón các bổ sung mới, chúng tôi lựa chọn những ứng dụng phi tập trung như hiện có dựa trên trải nghiệm chúng tôi mong muốn đem lại cho người dùng. Những điều đó được dựa trên một số tôn chỉ thiết kế của chúng tôi:
+Mặc dù chúng tôi hoan nghênh các bổ sung mới, chúng tôi đã chọn các dapp hiện tại dựa trên trải nghiệm mà chúng tôi đang cố gắng tạo ra cho người dùng của mình. Những lựa chọn này dựa trên một số nguyên tắc thiết kế của chúng tôi:
 
-- _Truyền cảm hứng: bất cứ thứ gì trên ethereum.org đều mang lại điều mới mẻ cho người dùng
-- _Một câu chuyện hay: những gì được nhắc tới đều mang lại khoảnh khắc bất ngờ
-- _Đáng tin: tất cả dự án/doanh nghiệp đều tuân thủ pháp luật để giảm thiểu rủi ro cho người dùng
+- _Truyền cảm hứng_: bất kỳ thứ gì trên ethereum.org đều nên mang lại điều gì đó mới mẻ cho người dùng
+- _Một câu chuyện hay_: những gì được liệt kê nên mang lại khoảnh khắc "à há"
+- _Đáng tin cậy_: mọi thứ nên là các doanh nghiệp/dự án hợp pháp để giảm thiểu rủi ro cho người dùng
 
-Nhìn chung, **ethereum.org muốn cung cấp một \"trải nghiệm giới thiệu liền mạch\" cho người dùng mới**. Vì lý do đó, chúng tôi đưa ứng dụng phi tập trung vào trang web dựa vào:
+Nhìn chung, **ethereum.org muốn cung cấp một "trải nghiệm tiếp nhận người dùng liền mạch" cho người dùng mới**. Vì lý do đó, chúng tôi thêm các dapp dựa trên:
 
-- dễ dàng sử dụng
+- tính dễ sử dụng
 - khả năng tương tác với các sản phẩm khác
 - tính bảo mật
-- tính bền vững
+- tính lâu dài
 
-Sau đây là khung đưa ra quyết định chi tiết. Vui lòng đưa ra nhận xét hoặc gợi ý thay đổi.
+Dưới đây là chi tiết hơn về khuôn khổ ra quyết định của chúng tôi. Đừng ngần ngại cung cấp phản hồi hoặc đề xuất thay đổi.
 
-## Khung đưa ra quyết định {#decision-framework}
+## Khuôn khổ ra quyết định {#decision-framework}
 
 ### Tiêu chí để được đưa vào: những điều bắt buộc phải có {#criteria-for-inclusion-the-must-haves}
 
-- **Một sản phẩm đã được kiểm tra bảo mật** – cho dù thông qua kiểm toán, đội ngũ bảo mật nội bộ hay một phương pháp nào khác, tính bảo mật của sản phẩm của bạn phải được kiểm tra một cách đáng tin cậy. Điều này giảm thiểu rủi ro cho người dùng và thể hiện bạn coi trọng vấn đề an toàn bảo mật.
-- **Một sản phẩm đã \"hoạt động\" hơn 6 tháng** – đây là một dấu hiệu khác của tính bảo mật. 6 tháng là khung thời gian bảo đảm để phát hiện ra các lỗi nghiêm trọng và các lỗ hỗng dễ bị khai thác, tấn công.
-- **Được một đội ngũ năng động phát triển** – điều này giúp đảm bảo chất lượng và người dùng sẽ nhận được hỗ trợ cho các thắc mắc của họ.
-- **Thông tin niêm yết trung thực và chính xác** - chúng tôi kỳ vọng rằng mọi đề xuất niêm yết từ các dự án đều đi kèm với thông tin trung thực và chính xác. Các sản phẩm đưa thông tin sai sẽ bị gỡ bỏ, ví dụ khai báo sản phảm là "mã nguồn mở" nhưng không phải vậy.
+- **Một sản phẩm đã được kiểm tra bảo mật** – dù thông qua kiểm toán, đội ngũ bảo mật nội bộ hay một phương pháp nào khác, tính bảo mật của sản phẩm của bạn phải được kiểm tra một cách đáng tin cậy. Điều này làm giảm rủi ro cho người dùng của chúng tôi và cho chúng tôi thấy rằng bạn thực sự coi trọng vấn đề bảo mật.
+- **Một sản phẩm đã "hoạt động" được hơn 6 tháng** – đây là một dấu hiệu khác của tính bảo mật. 6 tháng là một khoảng thời gian đủ tốt để các lỗi nghiêm trọng và lỗ hổng khai thác bị phát hiện.
+- **Được phát triển bởi một đội ngũ tích cực** – điều này giúp đảm bảo chất lượng và người dùng sẽ nhận được hỗ trợ cho các thắc mắc của họ.
+- **Thông tin niêm yết trung thực và chính xác** - chúng tôi kỳ vọng rằng bất kỳ đề xuất niêm yết nào từ các dự án đều đi kèm với thông tin trung thực và chính xác. Các sản phẩm làm giả thông tin niêm yết, chẳng hạn như tuyên bố sản phẩm của bạn là "mã nguồn mở" trong khi thực tế không phải vậy, sẽ bị gỡ bỏ.
 
-### Tiêu chí xếp hạng: những điều nên có {#criteria-for-ranking-the-nice-to-haves}
+### Tiêu chí để xếp hạng: những điều nên có {#criteria-for-ranking-the-nice-to-haves}
 
-Ứng dụng phi tập trung của bạn có thể không được xuất hiện nổi bật trên ethereum.org như các dự án khác do các tiêu chí sau đây.
+Dapp của bạn có thể không được liệt kê trên ethereum.org một cách nổi bật như các dapp khác vì các tiêu chí sau.
 
-**Các ứng dụng phi tập trung**
+**Các dapp**
 
-- **Bạn có thể truy cập nó qua phần lớn các ví được niêm yết** – các ứng dụng phi tập trung nên hoạt động với phần lớn các ví được niêm yết trên ethereum.org.
-- **Người dùng có thể tự mình dùng thử –** một người dùng cá nhân có thể sử dụng ứng dụng phi tập trung của bạn và đạt được một điều gì đó hữu hình.
-- **Hướng dẫn người dùng mới** – sản phẩm của bạn nên có trải nghiệm hướng dẫn người dùng mới được thiết kế tốt để giúp đỡ và hướng dẫn người dùng. Hoặc có thể chứng minh qua các nội dung hướng dẫn như bài viết hoặc video.
-- **Không lưu ký** – người dùng kiểm soát tiền của họ. Nếu sản phẩm của bạn biến mất, người dùng vẫn có thể truy cập và chuyển tải sản của họ.
-- **Có thể truy cập toàn cầu** – sản phẩm của bạn không có các giới hạn về địa lý hoặc các yêu cầu KYC loại trừ một số người nhất định khỏi việc truy cập dịch vụ của bạn.
+- **Bạn có thể truy cập nó thông qua phần lớn các ví được liệt kê** – các dapp nên hoạt động với phần lớn các ví được liệt kê trên ethereum.org.
+- **Người dùng có thể tự mình dùng thử –** một người dùng cá nhân nên có khả năng sử dụng dapp của bạn và đạt được một kết quả hữu hình nào đó.
+- **Tiếp nhận người dùng** – sản phẩm của bạn nên có một trải nghiệm tiếp nhận người dùng được thiết kế tốt để giúp đỡ và giáo dục người dùng. Hoặc có bằng chứng về nội dung hướng dẫn như các bài viết hoặc video.
+- **Không lưu ký** – người dùng kiểm soát tiền của họ. Nếu sản phẩm của bạn biến mất, người dùng vẫn có thể truy cập và di chuyển tiền của họ.
+- **Có thể truy cập trên toàn cầu** – sản phẩm của bạn không có giới hạn địa lý hoặc các yêu cầu KYC loại trừ một số người nhất định khỏi việc truy cập dịch vụ của bạn.
 - **Mã nguồn mở** – mã của bạn nên có thể truy cập được và bạn nên chấp nhận các PR từ cộng đồng rộng lớn hơn.
-- **Cộng đồng** – bạn có một cộng đồng riêng, có thể là Discord, nơi người dùng có thể tương tác với đội ngũ của bạn để nhận trợ giúp hoặc đề xuất các tính năng mới.
+- **Cộng đồng** – bạn có một cộng đồng tận tâm, có thể là một kênh Discord, nơi người dùng có thể tương tác với đội ngũ của bạn để nhận trợ giúp hoặc đề xuất các tính năng mới.
 
 ## Tiêu chí trong thực tế {#criteria-in-practice}
 
-Sản phẩm của bạn càng đáp ứng được nhiều tiêu chí, càng có nhiều khả năng để được đưa lên ethereum.org.
+Bạn càng đáp ứng nhiều tiêu chí, sản phẩm của bạn càng có nhiều khả năng được đưa lên ethereum.org.
 
-Một sản phẩm đã đưa lên web nhưng chỉ đáp ứng được các tiêu chỉ bắt buộc tối thiểu có thể bị gỡ bỏ nếu có những sản phẩm mới vừa đáp ứng tiêu chỉ bắt buộc tối thiểu vừa đạt được một số tiêu chí khuyến khích.
+Một sản phẩm được liệt kê chỉ đáp ứng những điều bắt buộc phải có có thể bị gỡ bỏ nếu một sản phẩm mới được đề xuất đáp ứng những điều bắt buộc phải có và một vài điều nên có.
 
-Những yếu tố ảnh hưởng khác đến quyết định:
+Những điều khác sẽ ảnh hưởng đến quyết định này:
 
-- Việc chỉ thêm vào không chịu thay thế có mang lại trải nghiệm kém cho người dùng?
-  - trang web của chúng tôi chủ yếu là cung cấp kiến thức và mục tiêu chính là giải thích Ethereum và các khái niệm liên quan. Khi thêm quá nhiều lựa chọn cho người dùng, các trang sẽ trở nên khó đọc hơn và vì thế trở nên kém hiệu quả.
-- Trang web này có làm rối trí người dùng với các lựa chọn không?
-  - giống như khi bạn ngồi lướt Netflix hàng giờ bởi vì bạn không thể quyết định xem gì. Tấn công người dùng mới với quá nhiều lựa chọn là điều nguy hiểm.
+- Việc thêm vào thay vì thay thế có làm hỏng UX của trang không?
+  - trang web của chúng tôi chủ yếu mang tính giáo dục và mục đích chính là giải thích về Ethereum cùng các khái niệm liên quan. Bằng cách thêm quá nhiều tùy chọn cho người dùng, các trang có thể trở nên khó đọc hơn và do đó kém hữu ích hơn.
+- Trang này hiện có làm người dùng bị tê liệt vì có quá nhiều lựa chọn không?
+  - giống như khi bạn ngồi lướt Netflix hàng giờ vì không thể quyết định xem gì. Làm người dùng mới bối rối với quá nhiều lựa chọn là một rủi ro.
 
-Đây là quyết nghị về thiết kế mà ethereum.org chịu trách nhiệm.
+Đây là một quyết định thiết kế mà ethereum.org chịu trách nhiệm.
 
-Nhưng hãy yên tâm, **sẽ có các liên kết đến các trang web khác xếp hạng nhiều ứng dụng phi tập trung hơn**
+Nhưng hãy yên tâm, **sẽ có các liên kết đến những trang web khác xếp hạng nhiều dapp hơn**
 
-### Thứ tự Dự án {#product-ordering}
+### Thứ tự sản phẩm {#product-ordering}
 
-Các sản phẩm sẽ được liệt kê theo thứ tự ngày tháng gần nhất được thêm vào trang, trừ khi được sắp xếp theo thứ tự cụ thể nào khác, ví dụ như theo bảng chữ cái. Nói cách khác, sản phẩm mới nhất sẽ được thêm vào ở cuối danh sách.
+Trừ khi các sản phẩm được sắp xếp theo một cách cụ thể khác, chẳng hạn như theo thứ tự bảng chữ cái, các sản phẩm sẽ được hiển thị từ được thêm vào trang gần đây nhất đến lâu nhất. Nói cách khác, các sản phẩm mới nhất sẽ được thêm vào cuối danh sách.
 
 ### Điều khoản sử dụng {#terms-of-use}
 
-Vui lòng tham khảo [điều khoản sử dụng](/terms-of-use/) của chúng tôi. Thông tin trên ethereum.org chỉ nhằm mục đích cung cấp thông tin chung.
+Vui lòng tham khảo thêm [điều khoản sử dụng](/terms-of-use/) của chúng tôi. Thông tin trên ethereum.org được cung cấp hoàn toàn cho mục đích thông tin chung.
 
 ## Bảo trì {#maintenance}
 
-Với bản chất luôn biến đổi của Ethereum, các đội ngũ và các sản phẩm đến rồi đi và những đổi mới, sáng tạo diễn ra hằng ngày. Vì vậy, chúng tôi sẽ kiểm tra nội dung web thường xuyên:
+Do bản chất luôn thay đổi của Ethereum, các đội ngũ và sản phẩm đến rồi đi và sự đổi mới diễn ra hàng ngày, vì vậy chúng tôi sẽ thực hiện kiểm tra định kỳ nội dung của mình để:
 
-- đảm bảo các dự án được hiển thị trên web vẫn đạt các tiêu chí
-- kiểm tra danh sách đề xuất không có sản phẩm đáp ứng được nhiều tiêu chí hơn các sản phẩm hiện có trên trang
+- đảm bảo rằng tất cả các dapp được liệt kê vẫn đáp ứng các tiêu chí của chúng tôi
+- xác minh xem có sản phẩm nào được đề xuất đáp ứng nhiều tiêu chí của chúng tôi hơn những sản phẩm hiện đang được liệt kê hay không
 
-Bạn có thể giúp bằng cách kiểm tra và thông báo cho chúng tôi. [Tạo góp ý](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) hoặc gửi email đến [website@ethereum.org](mailto:website@ethereum.org)
+Bạn có thể giúp đỡ việc này bằng cách kiểm tra và cho chúng tôi biết. [Tạo một vấn đề](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) hoặc gửi email tới [website@ethereum.org](mailto:website@ethereum.org)
 
-_Chúng tôi cũng đang nghiên cứu các hình thức bình chọn để cộng đồng có thể tham gia chia sẻ với chúng tôi những sản phẩm yêu thích và giúp những sản phẩm tốt nhất trong thị trường nổi bật hơn._
+_Chúng tôi cũng đang nghiên cứu các tùy chọn để bỏ phiếu nhằm giúp cộng đồng có thể bày tỏ sở thích của họ và làm nổi bật những sản phẩm tốt nhất hiện có để chúng tôi đề xuất._
 
 ---
 
 ## Thêm sản phẩm của bạn {#add-your-product}
 
-Nếu bạn muốn thêm một ứng dụng phi tập trung vào ethereum.org và nó đáp ứng các tiêu chí, vui lòng cho chúng tôi biết.
+Nếu bạn muốn thêm một dapp vào ethereum.org và nó đáp ứng các tiêu chí, vui lòng cho chúng tôi biết.
 
 <ButtonLink href="https://submitapp.paperform.co/">
   Đề xuất một ứng dụng

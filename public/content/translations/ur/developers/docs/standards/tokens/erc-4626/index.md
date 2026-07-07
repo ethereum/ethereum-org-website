@@ -1,42 +1,42 @@
 ---
-title: "ERC-4626 ٹوکنائزڈ والٹ اسٹینڈرڈ"
-description: "ییلڈ بیئرنگ والٹس کے لیے ایک اسٹینڈرڈ۔"
+title: "⁦ERC-4626⁩ ٹوکنائزڈ تجوری کا معیار"
+description: "منافع بخش تجوریوں کے لیے ایک معیار۔"
 lang: ur
 ---
 
 ## تعارف {#introduction}
 
-ERC-4626 ییلڈ بیئرنگ والٹس کے تکنیکی پیرامیٹرز کو بہتر بنانے اور یکجا کرنے کا ایک اسٹینڈرڈ ہے۔ یہ ٹوکنائزڈ ییلڈ بیئرنگ والٹس کے لیے ایک معیاری API فراہم کرتا ہے جو ایک واحد بنیادی ERC-20 ٹوکن کے شیئرز کی نمائندگی کرتے ہیں۔ ERC-4626 ٹوکنائزڈ والٹس کے لیے ایک اختیاری ایکسٹینشن کا خاکہ بھی پیش کرتا ہے جو ERC-20 کا استعمال کرتے ہیں، جو ٹوکنز جمع کرنے، نکالنے اور بیلنس پڑھنے کے لیے بنیادی فعالیت پیش کرتا ہے۔
+<span dir="ltr">ERC-4626</span> منافع بخش تجوریوں کے تکنیکی پیرامیٹرز کو بہتر اور متحد کرنے کا ایک معیار ہے۔ یہ ٹوکنائزڈ منافع بخش تجوریوں کے لیے ایک معیاری <span dir="ltr">API</span> فراہم کرتا ہے جو ایک واحد بنیادی <span dir="ltr">ERC-20</span> ٹوکن کے حصص کی نمائندگی کرتی ہیں۔ <span dir="ltr">ERC-4626</span> <span dir="ltr">ERC-20</span> کا استعمال کرتے ہوئے ٹوکنائزڈ تجوریوں کے لیے ایک اختیاری توسیع کا خاکہ بھی پیش کرتا ہے، جو ٹوکن جمع کرنے، انخلا کرنے اور بیلنس پڑھنے کے لیے بنیادی فعالیت پیش کرتا ہے۔
 
-**ییلڈ بیئرنگ والٹس میں ERC-4626 کا کردار**
+**منافع بخش تجوریوں میں <span dir="ltr">ERC-4626</span> کا کردار**
 
-لینڈنگ مارکیٹس، ایگریگیٹرز، اور اندرونی طور پر سود والے ٹوکنز مختلف حکمت عملیوں پر عمل کر کے صارفین کو ان کے کرپٹو ٹوکنز پر بہترین ییلڈ تلاش کرنے میں مدد کرتے ہیں۔ یہ حکمت عملیاں معمولی تغیر کے ساتھ کی جاتی ہیں، جو غلطی کا شکار ہو سکتی ہیں یا ڈیولپمنٹ کے وسائل کو ضائع کر سکتی ہیں۔
+قرض دینے کی مارکیٹیں، ایگریگیٹرز، اور اندرونی طور پر سود والے ٹوکن مختلف حکمت عملیوں پر عمل کر کے صارفین کو ان کے کرپٹو ٹوکنز پر بہترین منافع تلاش کرنے میں مدد کرتے ہیں۔ یہ حکمت عملیاں معمولی تبدیلی کے ساتھ کی جاتی ہیں، جو غلطیوں کا شکار ہو سکتی ہیں یا ترقیاتی وسائل کو ضائع کر سکتی ہیں۔
 
-ییلڈ بیئرنگ والٹس میں ERC-4626 زیادہ مستقل اور مضبوط نفاذ کے پیٹرنز بنا کر انضمام کی کوشش کو کم کرے گا اور ڈیولپرز کی جانب سے کم خصوصی کوشش کے ساتھ مختلف ایپلی کیشنز میں ییلڈ تک رسائی کو کھولے گا۔
+منافع بخش تجوریوں میں <span dir="ltr">ERC-4626</span> انضمام کی کوشش کو کم کرے گا اور زیادہ مستقل اور مضبوط نفاذ کے نمونے بنا کر ڈیولپرز کی جانب سے کم خصوصی کوشش کے ساتھ مختلف ایپلی کیشنز میں منافع تک رسائی کو کھولے گا۔
 
-ERC-4626 ٹوکن کو [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) میں مکمل طور پر بیان کیا گیا ہے۔
+<span dir="ltr">ERC-4626</span> ٹوکن کو [<span dir="ltr">EIP-4626</span>](https://eips.ethereum.org/EIPS/eip-4626) میں مکمل طور پر بیان کیا گیا ہے۔
 
-**ایسنکرونس والٹ ایکسٹینشن (ERC-7540)**
+**غیر مطابقت پذیر تجوری کی توسیع (<span dir="ltr">ERC-7540</span>)**
 
-ERC-4626 کو ایک حد تک ایٹامک ڈپازٹس اور ریڈیمپشنز کے لیے بہتر بنایا گیا ہے۔ اگر حد پوری ہو جائے تو کوئی نیا ڈپازٹ یا ریڈیمپشن جمع نہیں کرایا جا سکتا۔ یہ حد کسی بھی اسمارٹ کانٹریکٹ سسٹم کے لیے اچھی طرح کام نہیں کرتی جس میں والٹ کے ساتھ انٹرفیس کرنے کے لیے ایسنکرونس ایکشنز یا تاخیر شرط ہو (جیسے، حقیقی دنیا کے اثاثہ پروٹوکولز، انڈرکولیٹرلائزڈ لینڈنگ پروٹوکولز، کراس چین لینڈنگ پروٹوکولز، لیکویڈ اسٹیکنگ ٹوکنز، یا انشورنس سیفٹی ماڈیولز)۔
+<span dir="ltr">ERC-4626</span> کو ایک حد تک ایٹمی ڈپازٹس اور چھٹکارے (redemptions) کے لیے بہتر بنایا گیا ہے۔ اگر حد پوری ہو جائے تو کوئی نیا ڈپازٹ یا چھٹکارا جمع نہیں کیا جا سکتا۔ یہ حد کسی بھی سمارٹ کنٹریکٹ سسٹم کے لیے اچھی طرح کام نہیں کرتی جس میں غیر مطابقت پذیر (asynchronous) کارروائیاں یا تاخیر تجوری کے ساتھ انٹرفیس کرنے کے لیے شرط کے طور پر شامل ہوں (جیسے، حقیقی دنیا کے اثاثہ پروٹوکولز، کم ضمانت والے قرض دینے کے پروٹوکولز، کراس چین قرض دینے کے پروٹوکولز، سیال اسٹیکنگ ٹوکنز (lsts)، یا انشورنس سیفٹی ماڈیولز)۔
 
-ERC-7540 ایسنکرونس استعمال کے کیسز کے لیے ERC-4626 والٹس کی افادیت کو بڑھاتا ہے۔ موجودہ والٹ انٹرفیس (`deposit`/`withdraw`/`mint`/`redeem`) کو ایسنکرونس درخواستوں کا دعویٰ کرنے کے لیے مکمل طور پر استعمال کیا جاتا ہے۔
+<span dir="ltr">ERC-7540</span> غیر مطابقت پذیر استعمال کے معاملات کے لیے <span dir="ltr">ERC-4626</span> تجوریوں کی افادیت کو بڑھاتا ہے۔ موجودہ تجوری انٹرفیس (`deposit`/`withdraw`/`mint`/`redeem`) کو غیر مطابقت پذیر درخواستوں کا دعویٰ کرنے کے لیے مکمل طور پر استعمال کیا جاتا ہے۔
 
-ERC-7540 ایکسٹینشن کو [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) میں مکمل طور پر بیان کیا گیا ہے۔
+<span dir="ltr">ERC-7540</span> توسیع کو [<span dir="ltr">ERC-7540</span>](https://eips.ethereum.org/EIPS/eip-7540) میں مکمل طور پر بیان کیا گیا ہے۔
 
-**ملٹی-ایسیٹ والٹ ایکسٹینشن (ERC-7575)**
+**کثیر اثاثہ تجوری کی توسیع (<span dir="ltr">ERC-7575</span>)**
 
-ایک غائب استعمال کا کیس جو ERC-4626 کے ذریعے تعاون یافتہ نہیں ہے وہ والٹس ہیں جن میں متعدد اثاثے یا انٹری پوائنٹس ہوتے ہیں جیسے لیکویڈیٹی پرووائیڈر (LP) ٹوکنز۔ یہ عام طور پر ERC-4626 کی خود ایک ERC-20 ہونے کی ضرورت کی وجہ سے بوجھل یا غیر تعمیل شدہ ہوتے ہیں۔
+ایک غائب استعمال کا معاملہ جو <span dir="ltr">ERC-4626</span> کے ذریعے تعاون یافتہ نہیں ہے وہ تجوریاں ہیں جن میں متعدد اثاثے یا انٹری پوائنٹس ہوتے ہیں جیسے لیکویڈیٹی فراہم کنندہ (LP) ٹوکنز۔ یہ عام طور پر <span dir="ltr">ERC-4626</span> کی خود ایک <span dir="ltr">ERC-20</span> ہونے کی ضرورت کی وجہ سے بوجھل یا غیر تعمیل شدہ ہوتے ہیں۔
 
-ERC-7575 ERC-4626 کے نفاذ سے ERC-20 ٹوکن کے نفاذ کو بیرونی بنا کر متعدد اثاثوں والے والٹس کے لیے تعاون کا اضافہ کرتا ہے۔
+<span dir="ltr">ERC-7575</span> <span dir="ltr">ERC-4626</span> کے نفاذ سے <span dir="ltr">ERC-20</span> ٹوکن کے نفاذ کو بیرونی بنا کر متعدد اثاثوں والی تجوریوں کے لیے تعاون کا اضافہ کرتا ہے۔
 
-ERC-7575 ایکسٹینشن کو [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) میں مکمل طور پر بیان کیا گیا ہے۔
+<span dir="ltr">ERC-7575</span> توسیع کو [<span dir="ltr">ERC-7575</span>](https://eips.ethereum.org/EIPS/eip-7575) میں مکمل طور پر بیان کیا گیا ہے۔
 
 ## پیشگی شرائط {#prerequisites}
 
-اس صفحے کو بہتر طور پر سمجھنے کے لیے، ہم تجویز کرتے ہیں کہ آپ پہلے [ٹوکن اسٹینڈرڈز](/developers/docs/standards/tokens/) اور [ERC-20](/developers/docs/standards/tokens/erc-20/) کے بارے میں پڑھیں۔
+اس صفحے کو بہتر طور پر سمجھنے کے لیے، ہم تجویز کرتے ہیں کہ آپ پہلے [ٹوکن کے معیارات](/developers/docs/standards/tokens/) اور [<span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/) کے بارے میں پڑھیں۔
 
-## ERC-4626 فنکشنز اور خصوصیات: {#body}
+## <span dir="ltr">ERC-4626</span> کے فنکشنز اور خصوصیات: {#body}
 
 ### طریقے (Methods) {#methods}
 
@@ -46,7 +46,7 @@ ERC-7575 ایکسٹینشن کو [ERC-7575](https://eips.ethereum.org/EIPS/eip-7
 function asset() public view returns (address assetTokenAddress)
 ```
 
-یہ فنکشن اکاؤنٹنگ، جمع کرنے، نکالنے کے لیے والٹ کے لیے استعمال ہونے والے بنیادی ٹوکن کا ایڈریس واپس کرتا ہے۔
+یہ فنکشن اکاؤنٹنگ، جمع کرنے، اور انخلا کے لیے تجوری کے لیے استعمال ہونے والے بنیادی ٹوکن کا پتہ لوٹاتا ہے۔
 
 #### totalAssets {#totalassets}
 
@@ -54,7 +54,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-یہ فنکشن والٹ کے پاس موجود بنیادی اثاثوں کی کل رقم واپس کرتا ہے۔
+یہ فنکشن تجوری کے پاس موجود بنیادی اثاثوں کی کل رقم لوٹاتا ہے۔
 
 #### convertToShares {#convertoshares}
 
@@ -62,7 +62,7 @@ function totalAssets() public view returns (uint256)
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-یہ فنکشن `shares` کی وہ مقدار واپس کرتا ہے جس کا تبادلہ والٹ فراہم کردہ `assets` کی مقدار کے لیے کرے گا۔
+یہ فنکشن `shares` کی وہ مقدار لوٹاتا ہے جس کا تبادلہ تجوری کے ذریعے فراہم کردہ `assets` کی مقدار کے لیے کیا جائے گا۔
 
 #### convertToAssets {#convertoassets}
 
@@ -70,7 +70,7 @@ function convertToShares(uint256 assets) public view returns (uint256 shares)
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
-یہ فنکشن `assets` کی وہ مقدار واپس کرتا ہے جس کا تبادلہ والٹ فراہم کردہ `shares` کی مقدار کے لیے کرے گا۔
+یہ فنکشن `assets` کی وہ مقدار لوٹاتا ہے جس کا تبادلہ تجوری کے ذریعے فراہم کردہ `shares` کی مقدار کے لیے کیا جائے گا۔
 
 #### maxDeposit {#maxdeposit}
 
@@ -78,7 +78,7 @@ function convertToAssets(uint256 shares) public view returns (uint256 assets)
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-یہ فنکشن بنیادی اثاثوں کی زیادہ سے زیادہ مقدار واپس کرتا ہے جو ایک ہی [`deposit`](#deposit) کال میں جمع کی جا سکتی ہے، جس میں `receiver` کے لیے شیئرز منٹ کیے جاتے ہیں۔
+یہ فنکشن بنیادی اثاثوں کی زیادہ سے زیادہ مقدار لوٹاتا ہے جو ایک ہی [`deposit`](#deposit) کال میں جمع کی جا سکتی ہے، جس میں `receiver` کے لیے حصص ڈھالے گئے ہوں۔
 
 #### previewDeposit {#previewdeposit}
 
@@ -86,7 +86,7 @@ function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
-یہ فنکشن صارفین کو موجودہ بلاک پر اپنے ڈپازٹ کے اثرات کی نقل کرنے کی اجازت دیتا ہے۔
+یہ فنکشن صارفین کو موجودہ بلاک پر اپنے ڈپازٹ کے اثرات کی نقل (simulate) کرنے کی اجازت دیتا ہے۔
 
 #### deposit {#deposit}
 
@@ -94,7 +94,7 @@ function previewDeposit(uint256 assets) public view returns (uint256 shares)
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-یہ فنکشن بنیادی ٹوکنز کے `assets` کو والٹ میں جمع کرتا ہے اور `receiver` کو `shares` کی ملکیت دیتا ہے۔
+یہ فنکشن بنیادی ٹوکنز کے `assets` کو تجوری میں جمع کرتا ہے اور `receiver` کو `shares` کی ملکیت دیتا ہے۔
 
 #### maxMint {#maxmint}
 
@@ -102,7 +102,7 @@ function deposit(uint256 assets, address receiver) public returns (uint256 share
 function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-یہ فنکشن شیئرز کی زیادہ سے زیادہ مقدار واپس کرتا ہے جو ایک ہی [`mint`](#mint) کال میں منٹ کی جا سکتی ہے، جس میں `receiver` کے لیے شیئرز منٹ کیے جاتے ہیں۔
+یہ فنکشن حصص کی زیادہ سے زیادہ مقدار لوٹاتا ہے جو ایک ہی [`mint`](#mint) کال میں ڈھالے جا سکتے ہیں، جس میں `receiver` کے لیے حصص ڈھالے گئے ہوں۔
 
 #### previewMint {#previewmint}
 
@@ -110,7 +110,7 @@ function maxMint(address receiver) public view returns (uint256 maxShares)
 function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
-یہ فنکشن صارفین کو موجودہ بلاک پر اپنے منٹ کے اثرات کی نقل کرنے کی اجازت دیتا ہے۔
+یہ فنکشن صارفین کو موجودہ بلاک پر اپنے ڈھالنے (mint) کے اثرات کی نقل کرنے کی اجازت دیتا ہے۔
 
 #### mint {#mint}
 
@@ -118,7 +118,7 @@ function previewMint(uint256 shares) public view returns (uint256 assets)
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-یہ فنکشن بنیادی ٹوکنز کے `assets` جمع کر کے `receiver` کو بالکل `shares` والٹ شیئرز منٹ کرتا ہے۔
+یہ فنکشن بنیادی ٹوکنز کے `assets` جمع کر کے `receiver` کے لیے بالکل `shares` تجوری کے حصص ڈھالتا ہے۔
 
 #### maxWithdraw {#maxwithdraw}
 
@@ -126,7 +126,7 @@ function mint(uint256 shares, address receiver) public returns (uint256 assets)
 function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
-یہ فنکشن بنیادی اثاثوں کی زیادہ سے زیادہ مقدار واپس کرتا ہے جو ایک ہی [`withdraw`](#withdraw) کال کے ساتھ `owner` کے بیلنس سے نکالی جا سکتی ہے۔
+یہ فنکشن بنیادی اثاثوں کی زیادہ سے زیادہ مقدار لوٹاتا ہے جن کا ایک ہی [`withdraw`](#withdraw) کال کے ساتھ `owner` بیلنس سے انخلا کیا جا سکتا ہے۔
 
 #### previewWithdraw {#previewwithdraw}
 
@@ -142,7 +142,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-یہ فنکشن `owner` سے `shares` کو برن کرتا ہے اور والٹ سے `receiver` کو بالکل `assets` ٹوکن بھیجتا ہے۔
+یہ فنکشن `owner` سے `shares` کو جلاتا ہے اور تجوری سے بالکل `assets` ٹوکن `receiver` کو بھیجتا ہے۔
 
 #### maxRedeem {#maxredeem}
 
@@ -150,7 +150,7 @@ function withdraw(uint256 assets, address receiver, address owner) public return
 function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
-یہ فنکشن شیئرز کی زیادہ سے زیادہ مقدار واپس کرتا ہے جو ایک [`redeem`](#redeem) کال کے ذریعے `owner` کے بیلنس سے ریڈیم کی جا سکتی ہے۔
+یہ فنکشن حصص کی زیادہ سے زیادہ مقدار لوٹاتا ہے جنہیں [`redeem`](#redeem) کال کے ذریعے `owner` بیلنس سے چھڑایا (redeem) جا سکتا ہے۔
 
 #### previewRedeem {#previewredeem}
 
@@ -158,7 +158,7 @@ function maxRedeem(address owner) public view returns (uint256 maxShares)
 function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
-یہ فنکشن صارفین کو موجودہ بلاک پر اپنے ریڈیمپشن کے اثرات کی نقل کرنے کی اجازت دیتا ہے۔
+یہ فنکشن صارفین کو موجودہ بلاک پر اپنے چھٹکارے (redemption) کے اثرات کی نقل کرنے کی اجازت دیتا ہے۔
 
 #### redeem {#redeem}
 
@@ -166,7 +166,7 @@ function previewRedeem(uint256 shares) public view returns (uint256 assets)
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-یہ فنکشن `owner` سے ایک مخصوص تعداد میں `shares` کو ریڈیم کرتا ہے اور والٹ سے `receiver` کو بنیادی ٹوکن کے `assets` بھیجتا ہے۔
+یہ فنکشن `owner` سے `shares` کی ایک مخصوص تعداد کو چھڑاتا ہے اور تجوری سے بنیادی ٹوکن کے `assets` کو `receiver` کو بھیجتا ہے۔
 
 #### totalSupply {#totalsupply}
 
@@ -174,7 +174,7 @@ function redeem(uint256 shares, address receiver, address owner) public returns 
 function totalSupply() public view returns (uint256)
 ```
 
-گردش میں موجود غیر ریڈیم شدہ والٹ شیئرز کی کل تعداد واپس کرتا ہے۔
+گردش میں موجود تجوری کے غیر چھڑائے گئے حصص کی کل تعداد لوٹاتا ہے۔
 
 #### balanceOf {#balanceof}
 
@@ -182,17 +182,17 @@ function totalSupply() public view returns (uint256)
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-والٹ شیئرز کی کل مقدار واپس کرتا ہے جو اس وقت `owner` کے پاس ہے۔
+تجوری کے حصص کی کل مقدار لوٹاتا ہے جو اس وقت `owner` کے پاس ہے۔
 
-### انٹرفیس کا نقشہ {#mapOfTheInterface}
+### انٹرفیس کا نقشہ {#mapoftheinterface}
 
-![ERC-4626 انٹرفیس کا نقشہ](./map-of-erc-4626.png)
+![Map of the <span dir="ltr">ERC-4626</span> interface](./map-of-erc-4626.png)
 
 ### ایونٹس {#events}
 
-#### Deposit ایونٹ
+#### ڈپازٹ ایونٹ {#deposit-event}
 
-جب ٹوکنز کو [`mint`](#mint) اور [`deposit`](#deposit) طریقوں کے ذریعے والٹ میں جمع کیا جاتا ہے تو اسے **لازمی** طور پر ایمٹ (emit) کیا جانا چاہیے۔
+جب ٹوکنز کو [`mint`](#mint) اور [`deposit`](#deposit) طریقوں کے ذریعے تجوری میں جمع کیا جائے تو اسے **لازمی** خارج (emit) کیا جانا چاہیے۔
 
 ```solidity
 event Deposit(
@@ -203,11 +203,11 @@ event Deposit(
 )
 ```
 
-جہاں `sender` وہ صارف ہے جس نے `shares` کے لیے `assets` کا تبادلہ کیا، اور ان `shares` کو `owner` کو منتقل کیا۔
+جہاں `sender` وہ صارف ہے جس نے `shares` کے لیے `assets` کا تبادلہ کیا، اور ان `shares` کو `owner` میں منتقل کیا۔
 
-#### Withdraw ایونٹ
+#### انخلا کا ایونٹ {#withdraw-event}
 
-جب کسی جمع کنندہ کی طرف سے [`redeem`](#redeem) یا [`withdraw`](#withdraw) طریقوں میں والٹ سے شیئرز نکالے جاتے ہیں تو اسے **لازمی** طور پر ایمٹ کیا جانا چاہیے۔
+جب کسی جمع کنندہ کی جانب سے [`redeem`](#redeem) یا [`withdraw`](#withdraw) طریقوں میں تجوری سے حصص کا انخلا کیا جائے تو اسے **لازمی** خارج کیا جانا چاہیے۔
 
 ```solidity
 event Withdraw(
@@ -219,9 +219,9 @@ event Withdraw(
 )
 ```
 
-جہاں `sender` وہ صارف ہے جس نے انخلا کو متحرک کیا اور `owner` کی ملکیت والے `shares` کا `assets` کے لیے تبادلہ کیا۔ `receiver` وہ صارف ہے جس نے نکالے گئے `assets` وصول کیے۔
+جہاں `sender` وہ صارف ہے جس نے انخلا کو متحرک کیا اور `owner` کی ملکیت والے `shares` کا `assets` کے لیے تبادلہ کیا۔ `receiver` وہ صارف ہے جس نے انخلا کیے گئے `assets` وصول کیے۔
 
 ## مزید مطالعہ {#further-reading}
 
-- [EIP-4626: ٹوکنائزڈ والٹ اسٹینڈرڈ](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHub ریپو](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [<span dir="ltr">EIP-4626</span>: ٹوکنائزڈ تجوری کا معیار](https://eips.ethereum.org/EIPS/eip-4626)
+- [<span dir="ltr">ERC-4626</span>: <span dir="ltr">GitHub</span> ریپو](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

@@ -239,7 +239,7 @@ For frontmatter translatable fields:
 1. Parse english-B into a content tree (already done in Phase 1; reuse).
 2. Walk the tree for nodes where `elementType === "component-attribute"`.
 3. For each such node, check:
-   - Attribute name is in the allow-list (`TRANSLATABLE_ATTRIBUTES` in `lib/shared-patterns.ts`: title, description, alt, label, aria-label, placeholder, buttonLabel, name, caption, contentPreview, location).
+   - Attribute name is in the allow-list (`TRANSLATABLE_ATTRIBUTES` in `lib/shared-patterns.ts`: title, description, alt, label, aria-label, placeholder, ctaLabel, name, caption, contentPreview, location).
    - Value passes the translatability heuristic in `shared-patterns.ts` (rejects URLs, paths, identifiers, code).
 4. The pass is **idempotent and self-healing**: it filters leaves to only those whose English value still appears verbatim in the locale file. If a leaf's English value isn't found in the locale, it's already been translated -- skip. This means re-running the pipeline on a file with already-translated attrs is a no-op for that file (no LLM call, no commit).
 5. Batch the leaves per language. Send a focused prompt to the LLM with:

@@ -1,0 +1,307 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-08T10:38:18.071Z",
+  "englishManifestHash": "34cc0d5c86b3",
+  "placeholderOrder": [
+    "LINK-bdd8c3",
+    "LINK-20ed84",
+    "LINK-b53eb2",
+    "CODE-579a83",
+    "IMAGE-a86c36",
+    "CODE-2d8e17",
+    "IMAGE-3a2cc6",
+    "CODE-1447db",
+    "LINK-df584c",
+    "CODE-e36ed0",
+    "LINK-303fa5",
+    "IMAGE-0a91aa",
+    "CODE-c58c64",
+    "CODE-e69b73",
+    "IMAGE-93a8d4",
+    "CODE-b3c9b3",
+    "CODE-8b0792",
+    "LINK-697c47",
+    "CODE-e36ed0",
+    "CODE-e36ed0",
+    "LINK-03b655",
+    "CODE-1533ae",
+    "CODE-8bdec7",
+    "CODE-5f5044",
+    "CODE-719141",
+    "CODE-5f5044",
+    "CODE-6f5cf3",
+    "CODE-632912",
+    "LINK-af960d",
+    "LINK-351712",
+    "LINK-175a09",
+    "LINK-c4b116",
+    "LINK-984a72",
+    "LINK-976a70",
+    "LINK-2f583c",
+    "LINK-c05eda",
+    "LINK-7ea0fb",
+    "LINK-4263d8",
+    "LINK-01cae5",
+    "LINK-2f8f9f",
+    "LINK-c96860",
+    "LINK-2bfffe",
+    "LINK-303fa5",
+    "LINK-b6c6ee",
+    "LINK-6103d5"
+  ],
+  "placeholderMap": {
+    "CODE-579a83": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x00..."
+      }
+    },
+    "CODE-2d8e17": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x01..."
+      }
+    },
+    "CODE-1447db": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x02..."
+      }
+    },
+    "CODE-e36ed0": {
+      "type": "inline-code",
+      "values": {
+        "content": "ConsolidationRequest"
+      }
+    },
+    "CODE-c58c64": {
+      "type": "inline-code",
+      "values": {
+        "content": "EXITED"
+      }
+    },
+    "CODE-e69b73": {
+      "type": "inline-code",
+      "values": {
+        "content": "SHARD_COMMITTEE_PERIOD"
+      }
+    },
+    "CODE-b3c9b3": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x15F4B914A0cCd14333D850ff311d6DafbFbAa32b"
+      }
+    },
+    "CODE-8b0792": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xa1d1ad0714035353258038e964ae9675dc0252ee22cea896825c01458e1807bfad2f9969338798548d9858a571f7425c"
+      }
+    },
+    "CODE-1533ae": {
+      "type": "inline-code",
+      "values": {
+        "content": "DOMAIN_CONSOLIDATION_REQUEST"
+      }
+    },
+    "CODE-8bdec7": {
+      "type": "inline-code",
+      "values": {
+        "content": "source_pubkey"
+      }
+    },
+    "CODE-5f5044": {
+      "type": "inline-code",
+      "values": {
+        "content": "BLSPubkey"
+      }
+    },
+    "CODE-719141": {
+      "type": "inline-code",
+      "values": {
+        "content": "target_pubkey"
+      }
+    },
+    "CODE-6f5cf3": {
+      "type": "inline-code",
+      "values": {
+        "content": "source_address"
+      }
+    },
+    "CODE-632912": {
+      "type": "inline-code",
+      "values": {
+        "content": "ExecutionAddress"
+      }
+    },
+    "IMAGE-a86c36": {
+      "type": "image",
+      "values": {
+        "path": "./0x00-wd.png"
+      }
+    },
+    "IMAGE-3a2cc6": {
+      "type": "image",
+      "values": {
+        "path": "./0x01-wd.png"
+      }
+    },
+    "IMAGE-0a91aa": {
+      "type": "image",
+      "values": {
+        "path": "./conversion.png"
+      }
+    },
+    "IMAGE-93a8d4": {
+      "type": "image",
+      "values": {
+        "path": "./consolidation.png"
+      }
+    },
+    "LINK-bdd8c3": {
+      "type": "link",
+      "values": {
+        "url": "https://beaconcha.in/validator/12345"
+      }
+    },
+    "LINK-20ed84": {
+      "type": "link",
+      "values": {
+        "url": "https://launchpad.ethereum.org/validator-actions"
+      }
+    },
+    "LINK-b53eb2": {
+      "type": "link",
+      "values": {
+        "url": "https://beaconcha.in/validator/12345#deposits"
+      }
+    },
+    "LINK-df584c": {
+      "type": "link",
+      "values": {
+        "url": "https://ethstaker.org/about"
+      }
+    },
+    "LINK-303fa5": {
+      "type": "link",
+      "values": {
+        "url": "https://pectrified.com/"
+      }
+    },
+    "LINK-697c47": {
+      "type": "link",
+      "values": {
+        "url": "https://launchpad.ethereum.org/"
+      }
+    },
+    "LINK-03b655": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/beacon-chain.md#compute_signing_root"
+      }
+    },
+    "LINK-af960d": {
+      "type": "link",
+      "values": {
+        "url": "https://launchpad.ethereum.org/en/validator-actions"
+      }
+    },
+    "LINK-351712": {
+      "type": "link",
+      "values": {
+        "url": "https://piertwo.com/"
+      }
+    },
+    "LINK-175a09": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Luganodes/Pectra-Batch-Contract"
+      }
+    },
+    "LINK-c4b116": {
+      "type": "link",
+      "values": {
+        "url": "https://www.luganodes.com/"
+      }
+    },
+    "LINK-984a72": {
+      "type": "link",
+      "values": {
+        "url": "https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html"
+      }
+    },
+    "LINK-976a70": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wealdtech/ethereal"
+      }
+    },
+    "LINK-2f583c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.attestant.io/team/"
+      }
+    },
+    "LINK-c05eda": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/sigp/siren"
+      }
+    },
+    "LINK-7ea0fb": {
+      "type": "link",
+      "values": {
+        "url": "https://sigmaprime.io/"
+      }
+    },
+    "LINK-4263d8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Stakely/consolideth"
+      }
+    },
+    "LINK-01cae5": {
+      "type": "link",
+      "values": {
+        "url": "https://stakely.io/"
+      }
+    },
+    "LINK-2f8f9f": {
+      "type": "link",
+      "values": {
+        "url": "https://eth2book.info/capella/part2/incentives/balances/#hysteresis"
+      }
+    },
+    "LINK-c96860": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md"
+      }
+    },
+    "LINK-2bfffe": {
+      "type": "link",
+      "values": {
+        "url": "https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt"
+      }
+    },
+    "LINK-b6c6ee": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wealdtech/ethereal"
+      }
+    },
+    "LINK-6103d5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/attestantio/batch-validator-depositor"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:38:18.071Z",
+      "status": "success"
+    }
+  }
+}

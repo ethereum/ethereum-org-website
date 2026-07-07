@@ -5,8 +5,8 @@ import { AppCategoryEnum } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import FilterableCategoryAppsGrid from "@/components/Content/apps/FilterableCategoryAppsGrid"
+import { Grid } from "@/components/ui/grid"
 
-import { cn } from "@/lib/utils/cn"
 import { getDayOfYear } from "@/lib/utils/date"
 import { seededShuffle } from "@/lib/utils/random"
 import { slugify } from "@/lib/utils/url"
@@ -91,7 +91,7 @@ const CategoryAppsGrid = async ({
 
   if (hideFilter) {
     return (
-      <div className={cn("grid grid-cols-fill-4 gap-6 md:gap-12", className)}>
+      <Grid className={className}>
         {sortedApps.slice(0, +limit).map((app) => (
           <AppCard
             key={app.name}
@@ -102,7 +102,7 @@ const CategoryAppsGrid = async ({
             href={`/apps/${slugify(app.name)}`}
           />
         ))}
-      </div>
+      </Grid>
     )
   }
 

@@ -1,45 +1,45 @@
 ---
-title: ERC-777 Ishara kiwango
-description: Kujifunza kuhusu ERC-777, kueneza badilishwa ishara kiwango na ndoano, ingawa ERC-20 ni kupendekeza kwa ajili ya usalama.
+title: Kiwango cha Tokeni cha ERC-777
+description: Jifunze kuhusu ERC-777, kiwango kilichoboreshwa cha tokheni mbadala chenye ndoano (hooks), ingawa ERC-20 inapendekezwa kwa usalama.
 lang: sw
 ---
 
 ## Onyo {#warning}
 
-**ERC-777 ni vigumu kutekeleza vizuri, kutokana na yake [usumbufu kwa aina mbalimbali za mashambulizi](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). Kushauriwa kutumia [ERC-20](/developers/docs/standards/tokens/erc-20/) badala yake.** Ukurasa huu kubaki kuwa hifadhi ya kihistoria.
+**ERC-777 ni ngumu kutekeleza ipasavyo, kutokana na [uwezekano wake wa kushambuliwa kwa njia tofauti](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). Inapendekezwa kutumia [ERC-20](/developers/docs/standards/tokens/erc-20/) badala yake.** Ukurasa huu unasalia kama kumbukumbu ya kihistoria.
 
 ## Utangulizi? {#introduction}
 
-ERC-777 ni badilishwa ishara kiwango kueneza zipo [ERC-20](/developers/docs/standards/tokens/erc-20/) kiwango.
+ERC-777 ni kiwango cha tokheni mbadala kinachoboresha kiwango kilichopo cha [ERC-20](/developers/docs/standards/tokens/erc-20/).
 
-## Mahitaji ya awali {#prerequisites}
+## Mahitaji ya Awali {#prerequisites}
 
-Ili kuelewa vizuri ukurasa huu, kupendekeza wewe kwanza kusoma kuhusu [ERC-20](/developers/docs/standards/tokens/erc-20/).
+Ili kuelewa vyema ukurasa huu, tunapendekeza usome kwanza kuhusu [ERC-20](/developers/docs/standards/tokens/erc-20/).
 
-## Ni uenezaji gani ERC-777 kupendekeza juu ya ERC-20? {#-erc-777-vs-erc-20}
+## Je, ERC-777 inapendekeza maboresho gani dhidi ya ERC-20? {#-erc-777-vs-erc-20}
 
-ERC-777 hutoa uenezaji yafuatayo juu ya ERC-20.
+ERC-777 inatoa maboresho yafuatayo dhidi ya ERC-20.
 
-### Vidokezo {#hooks}
+### Ndoano (Hooks) {#hooks}
 
-Vidokezo ni kazi ilivyoelezwa katika kanuni ya mkataba erevu. Vidokezo kupata kuitwa wakati ishara ni kutumwa au kupokea kwa njia ya mkataba. Hii kuruhusu mkataba erevu kuguswa kwa ishara kuingia au zinazotoka.
+Ndoano (Hooks) ni kipengele cha utendaji kilichofafanuliwa katika msimbo wa mkataba mahiri. Ndoano huitwa wakati tokeni zinatumwa au kupokelewa kupitia mkataba. Hii inaruhusu mkataba mahiri kujibu tokeni zinazoingia au kutoka.
 
-Vidokezo ni rekodi na gunduliwa kutumia [ERC-1820](https://eips.ethereum.org/EIPS/eip-1820)kiwango.
+Ndoano hizi husajiliwa na kugunduliwa kwa kutumia kiwango cha [ERC-1820](https://eips.ethereum.org/EIPS/eip-1820).
 
 #### Kwa nini ndoano ni nzuri? {#why-are-hooks-great}
 
-1. Hooki huruhusu kutuma tokeni kwa mkataba na kuuarifu mkataba huo katika muamala mmoja, tofauti na [ERC-20](https://eips.ethereum.org/EIPS/eip-20), ambayo inahitaji simu mbili (`idhinisha`/`hamishaKutoka`) ili kufanikisha hili.
-2. Mikataba ambayo haijasajili hooki haiendani na ERC-777. Mkataba unaotuma utaghairi muamala wakati mkataba unaopokea haujasajili hooki. Hii inazuia uhamishaji wa bahati mbaya kwa mikataba-erevu isiyo ya ERC-777.
-3. Hooki zinaweza kukataa miamala.
+1. Ndoano zinaruhusu kutuma tokeni kwenye mkataba na kuuarifu mkataba katika muamala mmoja, tofauti na [ERC-20](https://eips.ethereum.org/EIPS/eip-20), ambayo inahitaji wito mara mbili (`approve`/`transferFrom`) ili kufanikisha hili.
+2. Mikataba ambayo haijasajili ndoano haiendani na ERC-777. Mkataba unaotuma utakatisha muamala wakati mkataba unaopokea haujasajili ndoano. Hii inazuia uhamishaji wa bahati mbaya kwenda kwenye mikataba mahiri isiyo ya ERC-777.
+3. Ndoano zinaweza kukataa miamala.
 
-### Nukta desimali {#decimals}
+### Desimali {#decimals}
 
-Kiwango hiki pia kinatatua mkanganyiko kuhusu `decimals` uliosababishwa katika ERC-20. Uwazi huu unaboresha uzoefu wa msanidi programu.
+Kiwango hiki pia kinatatua mkanganyiko kuhusu `decimals` uliosababishwa katika ERC-20. Ufafanuzi huu unaboresha uzoefu wa msanidi programu.
 
-### Upatanifu wa nyuma na ERC-20 {#backwards-compatibility-with-erc-20}
+### Utangamano wa kurudi nyuma na ERC-20 {#backwards-compatibility-with-erc-20}
 
-Mikataba ya ERC-777 inaweza kuingiliana nayo kana kwamba ni mikataba ya ERC-20.
+Mikataba ya ERC-777 inaweza kuingiliana kana kwamba ni mikataba ya ERC-20.
 
-## Masomo zaidi {#further-reading}
+## Usomaji Zaidi {#further-reading}
 
 [EIP-777: Kiwango cha Tokeni](https://eips.ethereum.org/EIPS/eip-777)

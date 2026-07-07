@@ -80,9 +80,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         >
           <div className="flex flex-1 flex-col gap-5">
             <div>
-              <h1 className="text-2xl font-bold">
-                {t("page-10-year-hero-title")}
-              </h1>
+              <h1 className="text-2xl">{t("page-10-year-hero-title")}</h1>
             </div>
 
             <div className="flex flex-1 flex-col gap-4">
@@ -96,7 +94,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </div>
 
         <div className="w-full px-4 py-8 md:px-8">
-          <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-a px-4 pt-8 lg:px-14 lg:pt-14">
+          <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-primary px-4 pt-8 lg:px-14 lg:pt-14">
             <div className="flex flex-col gap-4 text-center">
               <h2 className="text-4xl font-black">
                 {t("page-10-year-livestream-title")}
@@ -117,7 +115,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               defaultValue={Object.keys(tenYearEventRegions)[0]}
               className="w-full"
             >
-              <TabsList className="w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 border-b-primary p-0">
+              <TabsList className="flex-nowrap overflow-x-auto overflow-y-hidden">
                 {Object.entries(tenYearEventRegions).map(([key, data]) => (
                   <TabsTrigger
                     key={key}
@@ -157,7 +155,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             key={country}
                             className={cn("flex flex-col border-b px-4 py-6")}
                           >
-                            <h3 className="mb-2 flex items-center gap-2 text-2xl font-bold text-body-medium">
+                            <h3 className="mb-2 flex items-center gap-2 text-2xl text-body-medium">
                               <span className="flex min-h-6 min-w-6 items-center justify-center overflow-hidden rounded-full bg-primary-low-contrast">
                                 <Emoji
                                   text={countryEvents[0].countryFlag}
@@ -206,7 +204,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <div
           id="torch-history"
-          className="my-32 flex w-full scroll-mt-32 flex-col bg-linear-to-b from-[#161A36] via-[#161A36] via-60% to-[#9C63F8] md:rounded-3xl"
+          // Custom color for 10-year anniversary torch theme, #161A36 matches torch.mp4 background
+          className="my-32 flex w-full scroll-mt-32 flex-col bg-linear-to-b from-[#161A36] from-60% to-purple-600 md:rounded-3xl"
         >
           <div className="p-8">
             <div className="relative">
@@ -252,14 +251,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
             <div className="flex flex-1 flex-col gap-8">
               <div>
-                <h3 className="text-lg font-bold">
+                <h3 className="text-lg">
                   {t("page-10-year-torch-one-of-kind-title")}
                 </h3>
                 <p>{t("page-10-year-torch-one-of-kind-description")}</p>
               </div>
 
               <div>
-                <h3 className="text-lg font-bold">
+                <h3 className="text-lg">
                   {t("page-10-year-torch-time-limited-title")}
                 </h3>
                 <p>{t("page-10-year-torch-time-limited-description")}</p>
@@ -315,7 +314,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <div
                 key={`adoption-card-${index}`}
                 className={cn(
-                  "w-[70%] rounded-2xl p-8 shadow",
+                  "w-[70%] rounded-base p-8 shadow",
                   index % 2 === 0 && "ml-auto",
                   index !== 0 && "-mt-10",
                   zIndexClasses[index],
@@ -328,7 +327,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   className="mx-auto mb-4 max-h-[300px] object-contain"
                   sizes="384px"
                 />
-                <h3 className="mb-4 text-2xl font-bold">
+                <h3 className="mb-4 text-2xl">
                   {t(`page-10-year-adoption-card-${index + 1}-title`)}
                 </h3>
                 <p className="mb-8">

@@ -4,11 +4,11 @@ description: "Eine Einführung in die Ethereum-Client-APIs, mit denen Sie von Ih
 lang: de
 ---
 
-Damit eine Softwareanwendung mit der [Ethereum](/)-Blockchain interagieren kann (d. h. Blockchain-Daten lesen und/oder Transaktionen an das Netzwerk senden), muss sie sich mit einem Ethereum-Blockchain-Knoten verbinden.
+Damit eine Softwareanwendung mit der [Ethereum](/)-Blockchain interagieren kann (d. h. Blockchain-Daten lesen und/oder Transaktionen an das Netzwerk senden), muss sie sich mit einem Ethereum-Knoten verbinden.
 
 Zu diesem Zweck implementiert jeder Ethereum-Client die [JSON-RPC](/developers/docs/apis/json-rpc/)-Spezifikation, sodass es eine einheitliche Reihe von [Methoden](/developers/docs/apis/json-rpc/#json-rpc-methods) gibt, auf die sich Anwendungen verlassen können.
 
-Wenn Sie eine bestimmte Programmiersprache verwenden möchten, um sich mit einem Ethereum-Blockchain-Knoten zu verbinden, gibt es im Ökosystem viele praktische Bibliotheken, die dies erheblich erleichtern. Mit diesen Bibliotheken können Entwickler intuitive, einzeilige Methoden schreiben, um (im Hintergrund) JSON-RPC-Anfragen zu initialisieren, die mit Ethereum interagieren.
+Wenn Sie eine bestimmte Programmiersprache verwenden möchten, um sich mit einem Ethereum-Knoten zu verbinden, gibt es im Ökosystem viele praktische Bibliotheken, die dies erheblich erleichtern. Mit diesen Bibliotheken können Entwickler intuitive, einzeilige Methoden schreiben, um JSON-RPC-Anfragen zu initialisieren (intern), die mit Ethereum interagieren.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -16,11 +16,11 @@ Es könnte hilfreich sein, den [Ethereum-Stack](/developers/docs/ethereum-stack/
 
 ## Warum eine Bibliothek verwenden? {#why-use-a-library}
 
-Diese Bibliotheken abstrahieren einen Großteil der Komplexität, die mit der direkten Interaktion mit einem Ethereum-Blockchain-Knoten einhergeht. Sie bieten auch Hilfsfunktionen (z. B. die Umrechnung von ETH in Gwei), sodass Sie als Entwickler weniger Zeit mit den Feinheiten von Ethereum-Clients verbringen müssen und sich mehr auf die einzigartige Funktionalität Ihrer Anwendung konzentrieren können.
+Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten Interaktion mit einem Ethereum-Knoten. Sie bieten auch Hilfsfunktionen (z. B. die Umrechnung von ETH in Gwei), sodass Sie als Entwickler weniger Zeit mit den Feinheiten von Ethereum-Clients verbringen und sich mehr auf die einzigartige Funktionalität Ihrer Anwendung konzentrieren können.
 
 ## Verfügbare Bibliotheken {#available-libraries}
 
-### Infrastruktur und Blockchain-Knoten-Dienste {#infrastructure-and-node-services}
+### Infrastruktur- und Knotendienste {#infrastructure-and-node-services}
 
 **Alchemy -** **_Ethereum-Entwicklungsplattform._**
 
@@ -35,7 +35,7 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität, die mit der di
 - [Dokumentation](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast von Bware Labs -** **_Dezentralisierte APIs für das Ethereum-Mainnet und Testnets._**
+**Blast von Bware Labs -** **_Dezentrale APIs für das Ethereum Mainnet und Testnetze._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Dokumentation](https://docs.blastapi.io)
@@ -52,18 +52,18 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität, die mit der di
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - Blocksuchmaschine und Transaktions-APIs**
+**Etherscan - Block-Explorer und Transaktions-APIs**
 - [Dokumentation](https://docs.etherscan.io/)
 
-**Blockscout - Open-Source-Blocksuchmaschine**
+**Blockscout - Open-Source-Block-Explorer**
 - [Dokumentation](https://docs.blockscout.com/)
 
-**GetBlock-** **_Blockchain-as-a-Service für die Web3-Entwicklung_**
+**GetBlock -** **_Blockchain-as-a-Service für die Web3-Entwicklung_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Dokumentation](https://docs.getblock.io/)
 
-**Infura -** **_Die Ethereum-API as a Service._**
+**Infura -** **_Die Ethereum-API als Service._**
 
 - [infura.io](https://infura.io)
 - [Dokumentation](https://docs.infura.io/api)
@@ -74,24 +74,24 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität, die mit der di
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Dokumentation](https://docs.noderpc.xyz/node-rpc)
 
-**NOWNodes - _Vollständige Blockchain-Knoten und Blocksuchmaschinen._**
+**NOWNodes - _Full Nodes und Block-Explorer._**
 
 - [NOWNodes.io](https://nownodes.io/)
 - [Dokumentation](https://nownodes.gitbook.io/documentation)
 
-**QuickNode -** **_Blockchain-Infrastruktur as a Service._**
+**QuickNode -** **_Blockchain-Infrastruktur als Service._**
 
 - [quicknode.com](https://quicknode.com)
 - [Dokumentation](https://www.quicknode.com/docs/welcome)
 - [Discord](https://discord.gg/quicknode)
 
-**Rivet -** **_Ethereum- und Ethereum-Classic-APIs as a Service, basierend auf Open-Source-Software._**
+**Rivet -** **_Ethereum- und Ethereum Classic-APIs als Service, betrieben durch Open-Source-Software._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Dokumentation](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_Geschwindigkeitsorientierte Ethereum-Blockchain-Knoten als JSON-RPC/WebSockets-API._**
+**Zmok -** **_Geschwindigkeitsorientierte Ethereum-Knoten als JSON-RPC/WebSockets-API._**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -109,14 +109,14 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität, die mit der di
 **Nethereum -** **_Eine Open-Source-.NET-Integrationsbibliothek für die Blockchain._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Dokumentation](https://docs.nethereum.com/en/latest/)
+- [Dokumentation](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-**Python-Tools -** **_Vielzahl von Bibliotheken für die Ethereum-Interaktion über Python._**
+**Python-Tooling -** **_Vielzahl von Bibliotheken für die Ethereum-Interaktion über Python._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [web3.py GitHub](https://github.com/ethereum/web3.py)
-- [web3.py Chat](https://gitter.im/ethereum/web3.py)
+- [Web3.py GitHub](https://github.com/ethereum/web3.py)
+- [Web3.py Chat](https://gitter.im/ethereum/web3.py)
 
 **Tatum -** **_Die ultimative Blockchain-Entwicklungsplattform._**
 
@@ -125,7 +125,7 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität, die mit der di
 - [Dokumentation](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**web3j -** **_Eine Java/Android/Kotlin/Scala-Integrationsbibliothek für Ethereum._**
+**Web3j -** **_Eine Java/Android/Kotlin/Scala-Integrationsbibliothek für Ethereum._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Dokumentation](https://docs.web3j.io/)
@@ -144,7 +144,7 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität, die mit der di
 - [Dokumentation](https://docs.chainbase.com/)
 - [Discord](https://discord.gg/Wx6qpqz4AF)
 
-**Chainstack -** **_Elastische und dedizierte Ethereum-Blockchain-Knoten as a Service._**
+**Chainstack -** **_Elastische und dedizierte Ethereum-Knoten als Service._**
 
 - [chainstack.com](https://chainstack.com)
 - [Dokumentation](https://docs.chainstack.com/)
@@ -155,7 +155,7 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität, die mit der di
 - [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [Dokumentation](https://docs.cdp.coinbase.com/)
 
-**DataHub von Figment -** **_Web3-API-Dienste mit dem Ethereum-Mainnet und Testnets._**
+**DataHub von Figment -** **_Web3-API-Dienste mit dem Ethereum Mainnet und Testnetzen._**
 
 - [DataHub](https://www.figment.io/)
 - [Dokumentation](https://docs.figment.io/)
@@ -168,7 +168,7 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität, die mit der di
 - [Discord](https://moralis.io/joindiscord/)
 - [Forum](https://forum.moralis.io/)
 
-**NFTPort -** **_Ethereum-Daten- und Prägen-APIs._**
+**NFTPort -** **_Ethereum-Daten- und Prägungs-APIs._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Dokumentation](https://docs.nftport.xyz/)
@@ -209,10 +209,10 @@ _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie die
 
 ## Verwandte Themen {#related-topics}
 
-- [Blockchain-Knoten und Clients](/developers/docs/nodes-and-clients/)
+- [Knoten und Clients](/developers/docs/nodes-and-clients/)
 - [Entwicklungs-Frameworks](/developers/docs/frameworks/)
 
 ## Verwandte Tutorials {#related-tutorials}
 
-- [Web3js einrichten, um die Ethereum-Blockchain in JavaScript zu nutzen](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Anleitung zur Einrichtung von web3.js in Ihrem Projekt._
-- [Einen Smart Contract aus JavaScript aufrufen](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Erfahren Sie anhand des DAI-Tokens, wie Sie Vertragsfunktionen mit JavaScript aufrufen._
+- [Web3.js einrichten, um die Ethereum-Blockchain in JavaScript zu nutzen](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Anleitung zur Einrichtung von Web3.js in Ihrem Projekt._
+- [Einen Smart Contract aus JavaScript aufrufen](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Sehen Sie am Beispiel des DAI-Tokens, wie man Vertragsfunktionen mit JavaScript aufruft._

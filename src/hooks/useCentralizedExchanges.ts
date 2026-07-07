@@ -2,14 +2,6 @@ import { useState } from "react"
 import { shuffle } from "lodash"
 import { useLocale } from "next-intl"
 
-// TODO: Remove unused?
-// import argent from "@/public/images/wallets/argent.png"
-// import binanceus from "@/public/images/exchanges/binance.png"
-// import imtoken from "@/public/images/wallets/imtoken.png"
-// import mycrypto from "@/public/images/wallets/mycrypto.png"
-// import myetherwallet from "@/public/images/wallets/myetherwallet.png"
-// import squarelink from "@/public/images/wallets/squarelink.png"
-// import trust from "@/public/images/wallets/trust.png"
 import type { ImageProps } from "@/components/Image"
 import { SelectOnChange } from "@/components/Select"
 
@@ -25,15 +17,14 @@ import bitfinex from "@/public/images/exchanges/bitfinex.png"
 import bitflyer from "@/public/images/exchanges/bitflyer.png"
 import bitkub from "@/public/images/exchanges/bitkub.png"
 import bitso from "@/public/images/exchanges/bitso.png"
-import bittrex from "@/public/images/exchanges/bittrex.png"
 import bitvavo from "@/public/images/exchanges/bitvavo.png"
 import bybit from "@/public/images/exchanges/bybit.png"
 import coinbase from "@/public/images/exchanges/coinbase.png"
 import coinmama from "@/public/images/exchanges/coinmama.png"
 import coinmate from "@/public/images/exchanges/coinmate.png"
 import coinspot from "@/public/images/exchanges/coinspot.png"
+import coinswitch from "@/public/images/exchanges/coinswitch.png"
 import cryptocom from "@/public/images/exchanges/crypto.com.png"
-import easycrypto from "@/public/images/exchanges/easycrypto.png"
 import gateio from "@/public/images/exchanges/gateio.png"
 import gemini from "@/public/images/exchanges/gemini.png"
 import huobiglobal from "@/public/images/exchanges/huobiglobal.png"
@@ -59,15 +50,14 @@ type ExchangeKey =
   | "bitflyer"
   | "bitkub"
   | "bitso"
-  | "bittrex"
   | "bitvavo"
   | "bybit"
   | "coinbase"
   | "coinmama"
   | "coinmate"
   | "coinspot"
+  | "coinswitch"
   | "cryptocom"
-  | "easycrypto"
   | "gateio"
   | "gemini"
   | "huobiglobal"
@@ -147,7 +137,7 @@ const exchanges: ExchangeDetails = {
   },
   bitbuy: {
     name: "Bitbuy",
-    url: "https://bitbuy.ca/",
+    url: "https://bitbuy.ca/en-ca",
     image: bitbuy,
     usaExceptions: [],
   },
@@ -174,12 +164,6 @@ const exchanges: ExchangeDetails = {
     url: "https://bitso.com/",
     image: bitso,
     usaExceptions: [],
-  },
-  bittrex: {
-    name: "Bittrex",
-    url: "https://global.bittrex.com/",
-    image: bittrex,
-    usaExceptions: ["CT", "HI", "NY", "NH", "TX", "VT", "VA"],
   },
   bitvavo: {
     name: "Bitvavo",
@@ -217,33 +201,34 @@ const exchanges: ExchangeDetails = {
     image: coinspot,
     usaExceptions: [],
   },
+  coinswitch: {
+    name: "CoinSwitch",
+    url: "https://coinswitch.co/",
+    // ETH/INR trading: https://coinswitch.co/pro/eth-inr/csx
+    image: coinswitch,
+    usaExceptions: [],
+  },
   cryptocom: {
     name: "Crypto.com",
     url: "https://crypto.com/exchange/",
     image: cryptocom,
     usaExceptions: ["NY"],
   },
-  easycrypto: {
-    name: "Easy Crypto",
-    url: "https://easycrypto.com/",
-    image: easycrypto,
-    usaExceptions: [],
-  },
   gateio: {
-    name: "Gate.io",
-    url: "https://www.gate.io/",
+    name: "Gate",
+    url: "https://www.gate.com/",
     image: gateio,
     usaExceptions: [],
   },
   huobiglobal: {
-    name: "Huobi Global",
-    url: "https://huobi.com/",
+    name: "HTX",
+    url: "https://www.htx.com/",
     image: huobiglobal,
     usaExceptions: [],
   },
   matrixport: {
-    name: "Matrixport",
-    url: "https://www.matrixport.com/",
+    name: "BIT (formerly Matrixport)",
+    url: "https://www.bit.com/",
     image: matrixport,
     usaExceptions: [],
   },
@@ -257,7 +242,7 @@ const exchanges: ExchangeDetails = {
     name: "Kraken",
     url: "https://www.kraken.com/",
     image: kraken,
-    usaExceptions: ["NY, WA"],
+    usaExceptions: ["NY", "WA"],
   },
   kucoin: {
     name: "KuCoin",
@@ -281,7 +266,7 @@ const exchanges: ExchangeDetails = {
     name: "OKX",
     url: "https://www.okx.com/",
     image: okx,
-    usaExceptions: [],
+    usaExceptions: ["NY", "TX", "KY", "NV", "HI", "WV"],
   },
   gemini: {
     name: "Gemini",

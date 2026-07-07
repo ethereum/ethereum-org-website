@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-05-26T09:56:26.552Z",
+  "englishManifestHash": "03b3922883be",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "HTML-TAG-1",
+    "HTML-TAG-2"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#blockchain"
+      }
+    },
+    "HTML-TAG-1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/scaling/sidechains"
+      }
+    },
+    "HTML-TAG-2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/scaling/validium"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-05-26T09:56:26.551Z",
+      "status": "success"
+    }
+  }
+}

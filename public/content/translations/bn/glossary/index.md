@@ -1,10 +1,10 @@
 ---
-title: "ইথিরিয়াম শব্দকোষ"
-description: "ইথিরিয়াম সম্পর্কিত প্রযুক্তিগত এবং অ-প্রযুক্তিগত শব্দগুলোর একটি অসম্পূর্ণ শব্দকোষ"
+title: শব্দকোষ
+metaTitle: ইথেরিয়াম শব্দকোষ
+description: ইথেরিয়াম সম্পর্কিত প্রযুক্তিগত এবং অ-প্রযুক্তিগত পদগুলির একটি অসম্পূর্ণ শব্দকোষ
 lang: bn
+authors: ["আন্দ্রেয়াস আন্তোনোপোলোস"]
 ---
-
-# শব্দকোষ {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: bn
 
 ## উৎস {#sources}
 
-_আংশিকভাবে প্রদান করেছে [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook), যা লিখেছেন [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) CC-BY-SA এর অধীনে_
+_CC-BY-SA এর অধীনে [আন্দ্রেয়াস এম. আন্তোনোপোলোস, গ্যাভিন উড](https://aantonop.com/books/mastering-ethereum) রচিত [মাস্টারিং ইথেরিয়াম](https://github.com/ethereumbook/ethereumbook) থেকে আংশিকভাবে সংগৃহীত_
 
 <Divider />
 
-## এই পেজে অবদান রাখুন {#contribute-to-this-page}
+## এই পৃষ্ঠায় অবদান রাখুন {#contribute-to-this-page}
 
-আমরা কি কিছু বাদ দিয়েছি? কোনো কিছু কি ভুল আছে? গিটহাবে (GitHub) এই শব্দকোষে অবদান রেখে আমাদের উন্নতি করতে সাহায্য করুন!
+আমরা কি কিছু বাদ দিয়েছি? কোনো কিছু কি ভুল আছে? GitHub-এ এই শব্দকোষে অবদান রেখে আমাদের উন্নতি করতে সাহায্য করুন!
 
-[কীভাবে অবদান রাখতে হয় সে সম্পর্কে আরও জানুন](/contributing/adding-glossary-terms)
+[কীভাবে অবদান রাখবেন সে সম্পর্কে আরও জানুন](/contributing/adding-glossary-terms)

@@ -15,6 +15,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import Input from "@/components/ui/input"
 import {
   Select,
@@ -260,9 +261,14 @@ const VideoGalleryFilter = ({
           <p className="text-body-medium">{t("page-videos-no-results")}</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <Grid columns={3}>
           {sortedVideos.map((video) => (
-            <Card key={video.slug} href={`/videos/${video.slug}/`}>
+            <Card
+              key={video.slug}
+              href={`/videos/${video.slug}/`}
+              variant="ghost"
+              size="sm"
+            >
               <CardBanner className="aspect-video h-auto">
                 <Image
                   src={video.thumbnailUrl}
@@ -274,26 +280,21 @@ const VideoGalleryFilter = ({
                 />
               </CardBanner>
               <CardContent>
-                <CardTitle className="text-lg">{video.title}</CardTitle>
-                <CardParagraph
-                  variant="light"
-                  size="sm"
-                  className="line-clamp-2"
-                >
+                <CardTitle size="sm">{video.title}</CardTitle>
+                <CardParagraph size="sm" className="line-clamp-2">
                   {video.description}
                 </CardParagraph>
                 <CardParagraph
-                  variant="light"
                   size="sm"
                   className="inline-flex items-center gap-1"
                 >
-                  <Timer className="mb-px size-[1em]" />
+                  <Timer className="-ms-px mb-0.75 size-[1em]" />
                   {video.duration}
                 </CardParagraph>
               </CardContent>
             </Card>
           ))}
-        </div>
+        </Grid>
       )}
     </div>
   )

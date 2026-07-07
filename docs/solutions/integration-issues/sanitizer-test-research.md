@@ -68,14 +68,15 @@
 | 52 | Orphaned opening backtick with missing closer | pl #17445 | `` `<nazwa opcodu>(...). `` -- opening backtick with no closing backtick; `repairUnclosedBackticks` needs English comparison and may miss cases where English also has backticks but the translated line lost one | High -- exposed MDX tags |
 | 53 | Crowdin misplaces closing backtick before JSX fragment closer | sw #17521 | EN: `` (`<> ... </>`) `` -> SW: `` (`<> ...` </>) `` -- Crowdin moves closing backtick before `</>`, then `escapeMdxAngleBrackets` escapes the exposed `</>` as `\</>`. Fix: detect `` `<content>` </>) `` pattern and move closing backtick to include `</>` | Critical -- breaks MDX display |
 | 54 | Double punctuation after orphaned tag removal | sw #17521 | `kutoa.</em></em>.` -> `kutoa..` -- `removeOrphanedClosingTags` strips orphaned `</em>` tags but leaves behind double periods where the tag sat between two periods. Fix: collapse `..` to `.` after orphan removal | Low -- cosmetic but noticeable |
-| 55 | Escaped quotes `\"` in MDX JSX attributes | sw #17521 | `<ButtonLink variant=\"outline-color\" href=\"/roadmap/\">` -- Crowdin backslash-escapes quotes in JSX attributes; valid in JSON but breaks MDX compilation | Critical -- breaks build |
+| 55 | Escaped quotes `\"` in MDX JSX attributes | sw #17521 | `<ButtonLink variant=\"outline\" href=\"/roadmap/\">` -- Crowdin backslash-escapes quotes in JSX attributes; valid in JSON but breaks MDX compilation | Critical -- breaks build |
 | 56 | Translated interpolation placeholders in JSON | sw #17521 | EN: `{days}` -> SW: `{siku}` -- Crowdin translates the variable name inside `{}` braces; the app expects the English key name | Critical -- breaks rendering |
 
 ## Patterns Already Handled by Sanitizer (Confirmed Working)
 
 These patterns are covered by existing fix functions and should have regression tests:
 
-- **Duplicated headings** (`fixDuplicatedHeadings`) -- `## Text? Text? {#id}`
+- **Duplicated headings** (`fixDuplicatedHeadings`) -- `## Text? Text? {#id}` (intra-line text duplication)
+- **Duplicate ghost heading blocks** (`fixDuplicateHeadingBlocks`) -- an anchor-less "ghost" heading (often an older/differently-worded translation) immediately followed by the correct same-level heading WITH `{#anchor}`, emitted when a structural change to the English source (e.g. the h1 -> frontmatter.title migration) confuses the pipeline's incremental block-matching. Removes the ghost block (heading + duplicate prose up to the anchored twin), keeping the anchored version. Code-fence-safe; leaves lone anchor-less headings to `syncHeaderIdsWithEnglish`. Found in PR #18375 (254 occurrences, 69 files, all 24 langs).
 - **Broken markdown links** (`fixBrokenMarkdownLinks`) -- `] (url)` space
 - **Escaped bold/italic** (`fixEscapedBoldAndItalic`) -- `\*\*text\*\*`; uses lookbehind to skip `\*` used as multiplication (e.g., `operand\*operand`)
 - **ASCII guillemets** (`fixAsciiGuillemets`) -- `<<text>>`

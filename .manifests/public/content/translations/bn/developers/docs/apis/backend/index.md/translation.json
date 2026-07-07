@@ -1,0 +1,695 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-18T20:39:19.859Z",
+  "englishManifestHash": "cb112d9fc41c",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-1291e8",
+    "LINK-6d6811",
+    "LINK-8fc374",
+    "LINK-764cb3",
+    "LINK-0534d3",
+    "LINK-ea865f",
+    "LINK-38b3d5",
+    "LINK-d408d2",
+    "LINK-23a527",
+    "LINK-9ec19b",
+    "LINK-156629",
+    "LINK-6ef096",
+    "LINK-dd6db1",
+    "LINK-482b94",
+    "LINK-176398",
+    "LINK-90d5ad",
+    "LINK-ed76c0",
+    "LINK-a6ef78",
+    "LINK-c5a8f8",
+    "LINK-0f3320",
+    "LINK-ddc2a4",
+    "LINK-195bcf",
+    "LINK-fd39bd",
+    "LINK-fadc5d",
+    "LINK-03928f",
+    "LINK-7c47ab",
+    "LINK-969b0c",
+    "LINK-a2057c",
+    "LINK-07cdaf",
+    "LINK-af1909",
+    "LINK-42a335",
+    "LINK-10a652",
+    "LINK-664132",
+    "LINK-73ef9d",
+    "LINK-448e1e",
+    "LINK-8d763b",
+    "LINK-80d37b",
+    "LINK-4ffa77",
+    "LINK-5ccd0d",
+    "LINK-2564ee",
+    "LINK-62e2b6",
+    "LINK-1a5c7f",
+    "LINK-9544db",
+    "LINK-e3df38",
+    "LINK-6ccd99",
+    "LINK-475f6c",
+    "LINK-4d9489",
+    "LINK-0a0e1b",
+    "LINK-cf3f17",
+    "LINK-59778f",
+    "LINK-ac5de9",
+    "LINK-8c6d50",
+    "LINK-3660b1",
+    "LINK-85560e",
+    "LINK-15810a",
+    "LINK-b61139",
+    "LINK-40a21f",
+    "LINK-f12e29",
+    "LINK-fd6312",
+    "LINK-0badcf",
+    "LINK-639d01",
+    "LINK-11ed25",
+    "LINK-144a16",
+    "LINK-ed127f",
+    "LINK-21ec46",
+    "LINK-b058cf",
+    "LINK-0d48c3",
+    "LINK-16ec4a",
+    "LINK-b7ad31",
+    "LINK-7cc4fe",
+    "LINK-4c8d92",
+    "LINK-74c95d",
+    "LINK-1567a0",
+    "LINK-a3f63b",
+    "LINK-1ee6e3",
+    "LINK-91116f",
+    "LINK-561636",
+    "LINK-f22e12",
+    "LINK-ad6b6c",
+    "LINK-5e5202",
+    "LINK-218f83",
+    "LINK-74730d",
+    "LINK-f22435",
+    "LINK-e719ef",
+    "LINK-873262",
+    "LINK-68c380",
+    "LINK-b11299",
+    "LINK-54add3",
+    "LINK-01d5c0",
+    "LINK-2f54be",
+    "LINK-f7cf1c",
+    "LINK-406d98",
+    "LINK-85eb8f",
+    "LINK-ea9290",
+    "LINK-eec664",
+    "LINK-bab92b"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-1291e8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-6d6811": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/#json-rpc-methods"
+      }
+    },
+    "LINK-8fc374": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/ethereum-stack/"
+      }
+    },
+    "LINK-764cb3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-0534d3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/"
+      }
+    },
+    "LINK-ea865f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/"
+      }
+    },
+    "LINK-38b3d5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/alchemyplatform"
+      }
+    },
+    "LINK-d408d2": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/alchemyplatform"
+      }
+    },
+    "LINK-23a527": {
+      "type": "link",
+      "values": {
+        "url": "https://www.allthatnode.com/"
+      }
+    },
+    "LINK-9ec19b": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.allthatnode.com"
+      }
+    },
+    "LINK-156629": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/GmcdVEUbJM"
+      }
+    },
+    "LINK-6ef096": {
+      "type": "link",
+      "values": {
+        "url": "https://blastapi.io/"
+      }
+    },
+    "LINK-dd6db1": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.blastapi.io"
+      }
+    },
+    "LINK-482b94": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/SaRqmRUjjQ"
+      }
+    },
+    "LINK-176398": {
+      "type": "link",
+      "values": {
+        "url": "https://blockpi.io/"
+      }
+    },
+    "LINK-90d5ad": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.blockpi.io/"
+      }
+    },
+    "LINK-ed76c0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/BlockPILabs"
+      }
+    },
+    "LINK-a6ef78": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/xTvGVrGVZv"
+      }
+    },
+    "LINK-c5a8f8": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cloudflare.com/application-services/products/web3/"
+      }
+    },
+    "LINK-0f3320": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.etherscan.io/"
+      }
+    },
+    "LINK-ddc2a4": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.blockscout.com/"
+      }
+    },
+    "LINK-195bcf": {
+      "type": "link",
+      "values": {
+        "url": "https://getblock.io/"
+      }
+    },
+    "LINK-fd39bd": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.getblock.io/"
+      }
+    },
+    "LINK-fadc5d": {
+      "type": "link",
+      "values": {
+        "url": "https://infura.io"
+      }
+    },
+    "LINK-03928f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.infura.io/api"
+      }
+    },
+    "LINK-7c47ab": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/INFURA"
+      }
+    },
+    "LINK-969b0c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.noderpc.xyz/"
+      }
+    },
+    "LINK-a2057c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.noderpc.xyz/node-rpc"
+      }
+    },
+    "LINK-07cdaf": {
+      "type": "link",
+      "values": {
+        "url": "https://nownodes.io/"
+      }
+    },
+    "LINK-af1909": {
+      "type": "link",
+      "values": {
+        "url": "https://nownodes.gitbook.io/documentation"
+      }
+    },
+    "LINK-42a335": {
+      "type": "link",
+      "values": {
+        "url": "https://quicknode.com"
+      }
+    },
+    "LINK-10a652": {
+      "type": "link",
+      "values": {
+        "url": "https://www.quicknode.com/docs/welcome"
+      }
+    },
+    "LINK-664132": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/quicknode"
+      }
+    },
+    "LINK-73ef9d": {
+      "type": "link",
+      "values": {
+        "url": "https://rivet.cloud"
+      }
+    },
+    "LINK-448e1e": {
+      "type": "link",
+      "values": {
+        "url": "https://rivet.cloud/docs/"
+      }
+    },
+    "LINK-8d763b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/openrelayxyz/ethercattle-deployment"
+      }
+    },
+    "LINK-80d37b": {
+      "type": "link",
+      "values": {
+        "url": "https://zmok.io/"
+      }
+    },
+    "LINK-4ffa77": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/zmok-io"
+      }
+    },
+    "LINK-5ccd0d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.zmok.io/"
+      }
+    },
+    "LINK-2564ee": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/fAHeh3ka6s"
+      }
+    },
+    "LINK-62e2b6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Kr1ptal/ethers-kt"
+      }
+    },
+    "LINK-1a5c7f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Kr1ptal/ethers-kt/tree/master/examples"
+      }
+    },
+    "LINK-9544db": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/rx35NzQGSb"
+      }
+    },
+    "LINK-e3df38": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Nethereum/Nethereum"
+      }
+    },
+    "LINK-6ccd99": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nethereum.com/docs/getting-started/welcome/"
+      }
+    },
+    "LINK-475f6c": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/jQPrR58FxX"
+      }
+    },
+    "LINK-4d9489": {
+      "type": "link",
+      "values": {
+        "url": "https://snakecharmers.ethereum.org/"
+      }
+    },
+    "LINK-0a0e1b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/web3.py"
+      }
+    },
+    "LINK-cf3f17": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/ethereum/web3.py"
+      }
+    },
+    "LINK-59778f": {
+      "type": "link",
+      "values": {
+        "url": "https://tatum.io/"
+      }
+    },
+    "LINK-ac5de9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/tatumio/"
+      }
+    },
+    "LINK-8c6d50": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.tatum.io/"
+      }
+    },
+    "LINK-3660b1": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/EDmW3kjTC9"
+      }
+    },
+    "LINK-85560e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/web3j/web3j"
+      }
+    },
+    "LINK-15810a": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3j.io/"
+      }
+    },
+    "LINK-b61139": {
+      "type": "link",
+      "values": {
+        "url": "https://gitter.im/web3j/web3j"
+      }
+    },
+    "LINK-40a21f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.blockcypher.com/"
+      }
+    },
+    "LINK-f12e29": {
+      "type": "link",
+      "values": {
+        "url": "https://www.blockcypher.com/dev/ethereum/"
+      }
+    },
+    "LINK-fd6312": {
+      "type": "link",
+      "values": {
+        "url": "https://chainbase.com/"
+      }
+    },
+    "LINK-0badcf": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.chainbase.com/"
+      }
+    },
+    "LINK-639d01": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/Wx6qpqz4AF"
+      }
+    },
+    "LINK-11ed25": {
+      "type": "link",
+      "values": {
+        "url": "https://chainstack.com"
+      }
+    },
+    "LINK-144a16": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.chainstack.com/"
+      }
+    },
+    "LINK-ed127f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.chainstack.com/reference/ethereum-getting-started"
+      }
+    },
+    "LINK-21ec46": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coinbase.com/developer-platform"
+      }
+    },
+    "LINK-b058cf": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.cdp.coinbase.com/"
+      }
+    },
+    "LINK-0d48c3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.figment.io/"
+      }
+    },
+    "LINK-16ec4a": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.figment.io/"
+      }
+    },
+    "LINK-b7ad31": {
+      "type": "link",
+      "values": {
+        "url": "https://moralis.io"
+      }
+    },
+    "LINK-7cc4fe": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.moralis.io/"
+      }
+    },
+    "LINK-4c8d92": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/MoralisWeb3"
+      }
+    },
+    "LINK-74c95d": {
+      "type": "link",
+      "values": {
+        "url": "https://moralis.io/joindiscord/"
+      }
+    },
+    "LINK-1567a0": {
+      "type": "link",
+      "values": {
+        "url": "https://forum.moralis.io/"
+      }
+    },
+    "LINK-a3f63b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.nftport.xyz/"
+      }
+    },
+    "LINK-1ee6e3": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.nftport.xyz/"
+      }
+    },
+    "LINK-91116f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/nftport/"
+      }
+    },
+    "LINK-561636": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/K8nNrEgqhE"
+      }
+    },
+    "LINK-f22e12": {
+      "type": "link",
+      "values": {
+        "url": "https://services.tokenview.io/"
+      }
+    },
+    "LINK-ad6b6c": {
+      "type": "link",
+      "values": {
+        "url": "https://services.tokenview.io/docs?type=api"
+      }
+    },
+    "LINK-5e5202": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Tokenview"
+      }
+    },
+    "LINK-218f83": {
+      "type": "link",
+      "values": {
+        "url": "https://watchdata.io/"
+      }
+    },
+    "LINK-74730d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.watchdata.io/"
+      }
+    },
+    "LINK-f22435": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/TZRJbZ6bdn"
+      }
+    },
+    "LINK-e719ef": {
+      "type": "link",
+      "values": {
+        "url": "https://www.codex.io/"
+      }
+    },
+    "LINK-873262": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.codex.io"
+      }
+    },
+    "LINK-68c380": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.codex.io/explore"
+      }
+    },
+    "LINK-b11299": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Codex-Data"
+      }
+    },
+    "LINK-54add3": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/mFpUhT3vAq"
+      }
+    },
+    "LINK-01d5c0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.covalenthq.com/"
+      }
+    },
+    "LINK-2f54be": {
+      "type": "link",
+      "values": {
+        "url": "https://www.covalenthq.com/docs/api/"
+      }
+    },
+    "LINK-f7cf1c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/covalenthq"
+      }
+    },
+    "LINK-406d98": {
+      "type": "link",
+      "values": {
+        "url": "https://www.covalenthq.com/discord/"
+      }
+    },
+    "LINK-85eb8f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-ea9290": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    },
+    "LINK-eec664": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/"
+      }
+    },
+    "LINK-bab92b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/calling-a-smart-contract-from-javascript/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T20:39:19.859Z",
+      "status": "success"
+    }
+  }
+}

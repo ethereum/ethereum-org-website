@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "locale": "pl",
+  "translatedAt": "2026-06-08T08:32:08.347Z",
+  "englishManifestHash": "8273a54647e3",
+  "placeholderOrder": [
+    "IMAGE-3de27c",
+    "LINK-a6934c",
+    "LINK-c5cb45",
+    "IMAGE-35576a",
+    "LINK-1c1894",
+    "IMAGE-0846eb",
+    "LINK-b28c9b",
+    "LINK-5c84b1"
+  ],
+  "placeholderMap": {
+    "IMAGE-3de27c": {
+      "type": "image",
+      "values": {
+        "path": "./list-of-languages.png"
+      }
+    },
+    "IMAGE-35576a": {
+      "type": "image",
+      "values": {
+        "path": "./crowdin-files.png"
+      }
+    },
+    "IMAGE-0846eb": {
+      "type": "image",
+      "values": {
+        "path": "./online-editor.png"
+      }
+    },
+    "LINK-a6934c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new/choose"
+      }
+    },
+    "LINK-c5cb45": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    },
+    "LINK-1c1894": {
+      "type": "link",
+      "values": {
+        "url": "https://crowdin.com/project/ethereum-org/fil#"
+      }
+    },
+    "LINK-b28c9b": {
+      "type": "link",
+      "values": {
+        "url": "https://support.crowdin.com/online-editor/"
+      }
+    },
+    "LINK-5c84b1": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:32:08.347Z",
+      "status": "success"
+    }
+  }
+}

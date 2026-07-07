@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-06-18T21:14:01.621Z",
+  "englishManifestHash": "38c4375e70d3",
+  "placeholderOrder": [
+    "LINK-5d6b2f",
+    "LINK-8d5f08",
+    "LINK-c705fb",
+    "LINK-e34595",
+    "CODE-c4dd67",
+    "CODE-b51c80",
+    "CODE-e6bdd4",
+    "CODE-c4dd67",
+    "CODE-64ba1f",
+    "LINK-f8638c",
+    "CODE-b51c80",
+    "IMAGE-248216",
+    "LINK-d1ffb1",
+    "LINK-126818",
+    "LINK-e1446c",
+    "LINK-e1256e",
+    "LINK-e4e6d2",
+    "LINK-4ceee1",
+    "LINK-23194b",
+    "CODEBLOCK-98caee",
+    "CODEBLOCK-9b886e",
+    "CODEBLOCK-e9e529",
+    "CODE-8a5eda",
+    "CODE-eef0bf",
+    "IMAGE-7db646",
+    "LINK-1f61e6",
+    "LINK-835d56",
+    "LINK-85c1b2",
+    "LINK-209c0c"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-98caee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9b886e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e9e529": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-c4dd67": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x00"
+      }
+    },
+    "CODE-b51c80": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x01"
+      }
+    },
+    "CODE-e6bdd4": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x02"
+      }
+    },
+    "CODE-64ba1f": {
+      "type": "inline-code",
+      "values": {
+        "content": "BLSToExecutionChange"
+      }
+    },
+    "CODE-8a5eda": {
+      "type": "inline-code",
+      "values": {
+        "content": "/"
+      }
+    },
+    "CODE-eef0bf": {
+      "type": "inline-code",
+      "values": {
+        "content": "m/2"
+      }
+    },
+    "IMAGE-248216": {
+      "type": "image",
+      "values": {
+        "path": "validator-key-schematic.png"
+      }
+    },
+    "IMAGE-7db646": {
+      "type": "image",
+      "values": {
+        "path": "multiple-keys.png"
+      }
+    },
+    "LINK-5d6b2f": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Elliptic-curve_cryptography"
+      }
+    },
+    "LINK-8d5f08": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow"
+      }
+    },
+    "LINK-c705fb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    },
+    "LINK-e34595": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/BLS_digital_signature"
+      }
+    },
+    "LINK-f8638c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/"
+      }
+    },
+    "LINK-d1ffb1": {
+      "type": "link",
+      "values": {
+        "url": "https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1"
+      }
+    },
+    "LINK-126818": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7002"
+      }
+    },
+    "LINK-e1446c": {
+      "type": "link",
+      "values": {
+        "url": "/staking/saas/#what-is-staking-as-a-service"
+      }
+    },
+    "LINK-e1256e": {
+      "type": "link",
+      "values": {
+        "url": "https://en.bitcoinwiki.org/wiki/Mnemonic_phrase"
+      }
+    },
+    "LINK-e4e6d2": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0"
+      }
+    },
+    "LINK-4ceee1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki"
+      }
+    },
+    "LINK-23194b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
+      }
+    },
+    "LINK-1f61e6": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2020/05/21/keys"
+      }
+    },
+    "LINK-835d56": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2333"
+      }
+    },
+    "LINK-85c1b2": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250125035123/https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge"
+      }
+    },
+    "LINK-209c0c": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:14:01.621Z",
+      "status": "success"
+    }
+  }
+}

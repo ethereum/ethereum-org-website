@@ -1,19 +1,19 @@
 ---
-title: Esploratori di blocchi
-description: Un'introduzione agli esploratori di blocchi, il tuo portale nel mondo dei dati della blockchain, dove puoi interrogare informazioni su transazioni, account, contratti e altro ancora.
+title: Block explorer
+description: Un'introduzione ai block explorer, il tuo portale nel mondo dei dati della blockchain, dove puoi interrogare informazioni su transazioni, account, contratti e altro ancora.
 lang: it
 sidebarDepth: 3
 ---
 
-Gli esploratori di blocchi sono il tuo portale per i dati di Ethereum. Puoi usarli per visualizzare dati in tempo reale su blocchi, transazioni, validatori, account e altre attività on-chain.
+I block explorer sono il tuo portale per i dati di Ethereum. Puoi usarli per visualizzare dati in tempo reale su blocchi, transazioni, validatori, account e altre attività onchain.
 
 ## Prerequisiti {#prerequisites}
 
-Dovresti comprendere i concetti di base di Ethereum per poter dare un senso ai dati che un esploratore di blocchi ti fornisce. Inizia con [un'introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
+Dovresti comprendere i concetti di base di Ethereum per poter dare un senso ai dati che un block explorer ti fornisce. Inizia con [un'introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Strumenti open source {#open-source-tools}
 
-- [3xpl](https://3xpl.com/ethereum) - Un esploratore di Ethereum senza pubblicità che consente di scaricare i suoi set di dati (open-core: i moduli principali sono open source)
+- [3xpl](https://3xpl.com/ethereum) - Un explorer di Ethereum senza pubblicità che consente di scaricare i suoi set di dati (open-core: i moduli principali sono open source)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockscout](https://eth.blockscout.com/)
 - [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
@@ -21,127 +21,127 @@ Dovresti comprendere i concetti di base di Ethereum per poter dare un senso ai d
 
 ## Servizi {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - Esploratore privato di Ethereum. Utile anche per ordinare e filtrare i dati (mempool). Disponibile in spagnolo, francese, italiano, olandese, portoghese, russo, cinese e farsi
+- [Blockchair](https://blockchair.com/ethereum) - Explorer privato di Ethereum. Utile anche per ordinare e filtrare i dati (della mempool). Disponibile in spagnolo, francese, italiano, olandese, portoghese, russo, cinese e farsi
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - Disponibile anche in cinese, coreano, russo e giapponese
-- [Ethplorer](https://ethplorer.io/) - Un esploratore di blocchi con un focus sui token. Disponibile anche in cinese, spagnolo, francese, turco, russo, coreano e vietnamita
+- [Ethplorer](https://ethplorer.io/) - Un block explorer incentrato sui token. Disponibile anche in cinese, spagnolo, francese, turco, russo, coreano e vietnamita
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 
 ## Dati {#data}
 
-Ethereum è trasparente per concezione, quindi tutto è verificabile. Gli esploratori di blocchi forniscono un'interfaccia per ottenere queste informazioni. E questo vale sia per la rete principale di Ethereum che per le reti di test, nel caso in cui avessi bisogno di quei dati. I dati sono divisi in dati di esecuzione e dati di consenso. I dati di esecuzione si riferiscono alle transazioni che sono state eseguite in un blocco specifico. I dati di consenso si riferiscono ai blocchi stessi e ai validatori che li hanno proposti.
+Ethereum è trasparente per progettazione, quindi tutto è verificabile. I block explorer forniscono un'interfaccia per ottenere queste informazioni. E questo vale sia per la rete principale di Ethereum che per le reti di prova (testnet), nel caso in cui avessi bisogno di quei dati. I dati sono divisi in dati di esecuzione e dati di consenso. I dati di esecuzione si riferiscono alle transazioni che sono state eseguite in un blocco specifico. I dati di consenso si riferiscono ai blocchi stessi e ai validatori che li hanno proposti.
 
-Ecco un riepilogo dei tipi di dati che puoi ottenere da un esploratore di blocchi.
+Ecco un riepilogo dei tipi di dati che puoi ottenere da un block explorer.
 
 ### Dati di esecuzione {#execution-data}
 
-Nuovi blocchi vengono aggiunti a Ethereum ogni 12 secondi (a meno che un proponente del blocco non salti il suo turno), quindi un flusso quasi costante di dati viene aggiunto agli esploratori di blocchi. I blocchi contengono molti dati importanti che potresti trovare utili:
+Nuovi blocchi vengono aggiunti a Ethereum ogni 12 secondi (a meno che un proponente del blocco non salti il proprio turno), quindi un flusso quasi costante di dati viene aggiunto ai block explorer. I blocchi contengono molti dati importanti che potresti trovare utili:
 
 **Dati standard**
 
-- Altezza del blocco (Block height) - Il numero del blocco e la lunghezza della blockchain (in blocchi) alla creazione del blocco corrente
-- Marca temporale (Timestamp) - Il momento in cui un blocco è stato proposto
-- Transazioni (Transactions) - Il numero di transazioni incluse all'interno del blocco
-- Destinatario delle commissioni (Fee recipient) - L'indirizzo che ha ricevuto le mance delle commissioni del gas dalle transazioni
-- Ricompensa del blocco (Block Reward) - La quantità di ETH assegnata al validatore che ha proposto il blocco
-- Dimensione (Size) - La dimensione dei dati all'interno del blocco (misurata in byte)
-- Gas utilizzato (Gas used) - Le unità totali di gas utilizzate dalle transazioni nel blocco
-- Limite del gas (Gas limit) - I limiti totali del gas impostati dalle transazioni nel blocco
-- Commissione di base per gas (Base fee per gas) - Il moltiplicatore minimo richiesto affinché una transazione sia inclusa in un blocco
-- Commissioni bruciate (Burnt fees) - Quanto ETH viene bruciato nel blocco
-- Dati extra (Extra data) - Qualsiasi dato extra che il costruttore ha incluso nel blocco
+- Altezza del blocco - Il numero del blocco e la lunghezza della blockchain (in blocchi) alla creazione del blocco corrente
+- Timestamp - L'ora in cui è stato proposto un blocco
+- Transazioni - Il numero di transazioni incluse nel blocco
+- Destinatario delle commissioni - L'indirizzo che ha ricevuto le mance delle commissioni del gas dalle transazioni
+- Ricompensa del blocco - La quantità di ETH assegnata al validatore che ha proposto il blocco
+- Dimensione - La dimensione dei dati all'interno del blocco (misurata in byte)
+- Gas utilizzato - Le unità totali di gas utilizzate dalle transazioni nel blocco
+- Limite di gas - I limiti di gas totali impostati dalle transazioni nel blocco
+- Commissione di base per gas - Il moltiplicatore minimo richiesto affinché una transazione sia inclusa in un blocco
+- Commissioni bruciate - Quanto ETH viene bruciato nel blocco
+- Dati extra - Qualsiasi dato extra che il costruttore ha incluso nel blocco
 
 **Dati avanzati**
 
 - Hash - L'hash crittografico che rappresenta l'intestazione del blocco (l'identificatore univoco del blocco)
-- Hash genitore (Parent hash) - L'hash del blocco precedente al blocco corrente
-- Radice dello stato (StateRoot) - L'hash radice del trie di Merkle che memorizza l'intero stato del sistema
+- Hash genitore - L'hash del blocco precedente al blocco corrente
+- StateRoot - L'hash radice del trie di Merkle che memorizza l'intero stato del sistema
 
 ### Gas {#gas}
 
-Non solo gli esploratori di blocchi ti forniranno dati sull'utilizzo del gas nelle transazioni e nei blocchi, ma alcuni ti daranno informazioni sui prezzi del gas attuali della rete. Questo ti aiuterà a comprendere l'utilizzo della rete, a inviare transazioni sicure e a non spendere troppo in gas. Cerca le API che possono aiutarti a integrare queste informazioni nell'interfaccia del tuo prodotto. I dati specifici del gas coprono:
+Non solo i block explorer ti forniranno dati sull'utilizzo del gas nelle transazioni e nei blocchi, ma alcuni ti daranno informazioni sui prezzi del gas attuali della rete. Questo ti aiuterà a comprendere l'utilizzo della rete, a inviare transazioni sicure e a non spendere troppo in gas. Cerca le API che possono aiutarti a integrare queste informazioni nell'interfaccia del tuo prodotto. I dati specifici del gas includono:
 
 - Unità stimate di gas necessarie per una transazione sicura ma lenta (+ prezzo e durata stimati)
 - Unità stimate di gas necessarie per una transazione media (+ prezzo e durata stimati)
 - Unità stimate di gas necessarie per una transazione veloce (+ prezzo e durata stimati)
 - Tempo medio di conferma basato sul prezzo del gas
-- Contratti che stanno consumando gas - in altre parole, prodotti popolari che stanno registrando un grande utilizzo sulla rete
-- Account che stanno spendendo gas - in altre parole, utenti frequenti della rete
+- Contratti che consumano gas - in altre parole, prodotti popolari che registrano un elevato utilizzo sulla rete
+- Account che spendono gas - in altre parole, utenti frequenti della rete
 
 ### Transazioni {#transactions}
 
-Gli esploratori di blocchi sono diventati un luogo comune per le persone per tracciare l'avanzamento delle loro transazioni. Questo perché il livello di dettaglio che puoi ottenere fornisce una maggiore certezza. I dati delle transazioni includono:
+I block explorer sono diventati un luogo comune in cui le persone tengono traccia dell'avanzamento delle loro transazioni. Questo perché il livello di dettaglio che puoi ottenere fornisce un'ulteriore certezza. I dati della transazione includono:
 
 **Dati standard**
 
-- Hash della transazione (Transaction hash) - Un hash generato quando la transazione viene inviata
-- Stato (Status) - Un'indicazione se la transazione è in sospeso, fallita o riuscita
-- Blocco (Block) - Il blocco in cui è stata inclusa la transazione
-- Marca temporale (Timestamp) - Il momento in cui una transazione è stata inclusa in un blocco proposto da un validatore
-- Da (From) - L'indirizzo dell'account che ha inviato la transazione
-- A (To) - L'indirizzo del destinatario o del contratto intelligente con cui la transazione interagisce
-- Token trasferiti (Tokens transferred) - Un elenco di token che sono stati trasferiti come parte della transazione
-- Valore (Value) - Il valore totale in ETH che viene trasferito
-- Commissione della transazione (Transaction fee) - L'importo pagato al validatore per elaborare la transazione (calcolato da prezzo del gas\*gas utilizzato)
+- Hash della transazione - Un hash generato quando la transazione viene inviata
+- Stato - Un'indicazione se la transazione è in sospeso, fallita o riuscita
+- Blocco - Il blocco in cui è stata inclusa la transazione
+- Timestamp - L'ora in cui una transazione è stata inclusa in un blocco proposto da un validatore
+- Da - L'indirizzo dell'account che ha inviato la transazione
+- A - L'indirizzo del destinatario o dello smart contract con cui interagisce la transazione
+- Token trasferiti - Un elenco di token che sono stati trasferiti come parte della transazione
+- Valore - Il valore totale in ETH trasferito
+- Commissione di transazione - L'importo pagato al validatore per elaborare la transazione (calcolato da prezzo del gas\*gas utilizzato)
 
 **Dati avanzati**
 
-- Limite del gas (Gas limit) - Il numero massimo di unità di gas che questa transazione può consumare
-- Gas utilizzato (Gas used) - La quantità effettiva di unità di gas consumate dalla transazione
-- Prezzo del gas (Gas price) - Il prezzo impostato per unità di gas
-- Nonce - Il numero della transazione per l'indirizzo `from` (tieni presente che inizia da 0, quindi un nonce di `100` sarebbe in realtà la 101esima transazione inviata da questo account)
-- Dati di input (Input data) - Qualsiasi informazione extra richiesta dalla transazione
+- Limite di gas - Il numero massimo di unità di gas che questa transazione può consumare
+- Gas utilizzato - La quantità effettiva di unità di gas consumate dalla transazione
+- Prezzo del gas - Il prezzo impostato per unità di gas
+- Nonce - Il numero di transazione per l'indirizzo `from` (tieni presente che inizia da 0, quindi un nonce di `100` sarebbe in realtà la 101esima transazione inviata da questo account)
+- Dati di input - Qualsiasi informazione extra richiesta dalla transazione
 
 ### Account {#accounts}
 
-Ci sono molti dati a cui puoi accedere riguardo a un account. Questo è il motivo per cui spesso si consiglia di utilizzare più account in modo che i tuoi asset e il tuo valore non possano essere facilmente tracciati. Ci sono anche alcune soluzioni in fase di sviluppo per rendere le transazioni e l'attività dell'account più private. Ma ecco i dati disponibili per gli account:
+Ci sono molti dati a cui puoi accedere riguardo a un account. Questo è il motivo per cui si consiglia spesso di utilizzare più account in modo che i tuoi asset e il tuo valore non possano essere facilmente tracciati. Ci sono anche alcune soluzioni in fase di sviluppo per rendere le transazioni e l'attività dell'account più private. Ma ecco i dati disponibili per gli account:
 
 **Account utente**
 
-- Indirizzo dell'account (Account address) - L'indirizzo pubblico che puoi utilizzare per inviare fondi
-- Saldo in ETH (ETH balance) - La quantità di ETH associata a quell'account
-- Valore totale in ETH (Total ETH value) - Il valore degli ETH
+- Indirizzo dell'account - L'indirizzo pubblico che puoi utilizzare per inviare fondi
+- Saldo in ETH - La quantità di ETH associata a quell'account
+- Valore totale in ETH - Il valore degli ETH
 - Token - I token associati all'account e il loro valore
-- Cronologia delle transazioni (Transaction history) - Un elenco di tutte le transazioni in cui questo account è stato il mittente o il destinatario
+- Cronologia delle transazioni - Un elenco di tutte le transazioni in cui questo account era il mittente o il destinatario
 
-**Contratti intelligenti**
+**Smart contract**
 
-Gli account dei contratti intelligenti hanno tutti i dati che avrà un account utente, ma alcuni esploratori di blocchi mostreranno persino alcune informazioni sul codice. Gli esempi includono:
+Gli account degli smart contract hanno tutti i dati che avrà un account utente, ma alcuni block explorer mostreranno anche alcune informazioni sul codice. Gli esempi includono:
 
-- Creatore del contratto (Contract creator) - L'indirizzo che ha distribuito il contratto sulla rete principale
-- Transazione di creazione (Creation transaction) - La transazione che ha incluso la distribuzione sulla rete principale
-- Codice sorgente (Source code) - Il codice Solidity o Vyper del contratto intelligente
-- ABI del contratto (Contract ABI) - L'Application Binary Interface del contratto: le chiamate che il contratto effettua e i dati ricevuti
-- Codice di creazione del contratto (Contract creation code) - Il bytecode compilato del contratto intelligente, creato quando compili un contratto intelligente scritto in Solidity o Vyper, ecc.
-- Eventi del contratto (Contract events) - Una cronologia dei metodi chiamati nel contratto intelligente: fondamentalmente un modo per vedere come viene utilizzato il contratto e con quale frequenza
+- Creatore del contratto - L'indirizzo che ha effettuato la distribuzione del contratto sulla Mainnet
+- Transazione di creazione - La transazione che includeva la distribuzione sulla Mainnet
+- Codice sorgente - Il codice Solidity o Vyper dello smart contract
+- ABI del contratto - L'Application Binary Interface del contratto: le chiamate che il contratto effettua e i dati ricevuti
+- Codice di creazione del contratto - Il bytecode compilato dello smart contract, creato quando compili uno smart contract scritto in Solidity o Vyper, ecc.
+- Eventi del contratto - Una cronologia dei metodi chiamati nello smart contract: fondamentalmente un modo per vedere come viene utilizzato il contratto e con quale frequenza
 
 ### Token {#tokens}
 
-I token sono un tipo di contratto, quindi avranno dati simili a un contratto intelligente. Ma poiché hanno un valore e possono essere scambiati, hanno punti dati aggiuntivi:
+I token sono un tipo di contratto, quindi avranno dati simili a uno smart contract. Ma poiché hanno un valore e possono essere scambiati, hanno punti dati aggiuntivi:
 
-- Tipo (Type) - Se sono un ERC-20, ERC-721 o un altro standard di token
-- Prezzo (Price) - Se sono un ERC-20 avranno un valore di mercato attuale
-- Capitalizzazione di mercato (Market cap) - Se sono un ERC-20 avranno una capitalizzazione di mercato (calcolata da prezzo\*offerta totale)
-- Offerta totale (Total supply) - Il numero di token in circolazione
-- Titolari (Holders) - Il numero di indirizzi che detengono il token
-- Trasferimenti (Transfers) - Il numero di volte in cui il token è stato trasferito tra gli account
-- Cronologia delle transazioni (Transaction history) - Una cronologia di tutte le transazioni che includono il token
-- Indirizzo del contratto (Contract address) - L'indirizzo del token che è stato distribuito sulla rete principale
-- Decimali (Decimals) - I token ERC-20 sono divisibili e hanno posizioni decimali
+- Tipo - Se sono un ERC-20, ERC-721 o un altro standard di token
+- Prezzo - Se sono un ERC-20 avranno un valore di mercato attuale
+- Capitalizzazione di mercato - Se sono un ERC-20 avranno una capitalizzazione di mercato (calcolata da prezzo\*offerta totale)
+- Offerta totale - Il numero di token in circolazione
+- Titolari - Il numero di indirizzi che detengono il token
+- Trasferimenti - Il numero di volte in cui il token è stato trasferito tra account
+- Cronologia delle transazioni - Una cronologia di tutte le transazioni che includono il token
+- Indirizzo del contratto - L'indirizzo del token che è stato distribuito sulla Mainnet
+- Decimali - I token ERC-20 sono divisibili e hanno posizioni decimali
 
 ### Rete {#network}
 
 Alcuni dati dei blocchi riguardano la salute di Ethereum in modo più olistico.
 
-- Transazioni totali (Total transactions) - Il numero di transazioni da quando è stato creato Ethereum
-- Transazioni al secondo (Transactions per second) - Il numero di transazioni elaborabili in un secondo
-- Prezzo di ETH (ETH price) - Le valutazioni attuali di 1 ETH
-- Offerta totale di ETH (Total ETH supply) - Numero di ETH in circolazione: ricorda che nuovi ETH vengono creati con la creazione di ogni blocco sotto forma di ricompense del blocco
-- Capitalizzazione di mercato (Market cap) - Calcolo di prezzo\*offerta
+- Transazioni totali - Il numero di transazioni da quando è stato creato Ethereum
+- Transazioni al secondo - Il numero di transazioni elaborabili in un secondo
+- Prezzo di ETH - Le valutazioni attuali di 1 ETH
+- Offerta totale di ETH - Numero di ETH in circolazione: ricorda che nuovi ETH vengono creati con la creazione di ogni blocco sotto forma di ricompense del blocco
+- Capitalizzazione di mercato - Calcolo di prezzo\*offerta
 
 ## Dati del livello di consenso {#consensus-layer-data}
 
@@ -149,90 +149,90 @@ Alcuni dati dei blocchi riguardano la salute di Ethereum in modo più olistico.
 
 Per motivi di sicurezza, comitati randomizzati di validatori vengono creati alla fine di ogni epoca (ogni 6,4 minuti). I dati dell'epoca includono:
 
-- Numero dell'epoca (Epoch number)
-- Stato finalizzato (Finalized status) - Se l'epoca è stata finalizzata (Sì/No)
-- Tempo (Time) - Il momento in cui è terminata l'epoca
-- Attestazioni (Attestations) - Il numero di attestazioni nell'epoca (voti per i blocchi all'interno degli slot)
-- Depositi (Deposits) - Il numero di depositi di ETH inclusi nell'epoca (i validatori devono mettere in stake ETH per diventare validatori)
-- Punizioni (Slashings) - Numero di penalità inflitte ai proponenti dei blocchi o agli attestatori
-- Partecipazione al voto (Voting participation) - La quantità di ETH in stake utilizzata per attestare i blocchi
-- Validatori (Validators) - Numero di validatori attivi per l'epoca
-- Saldo medio del validatore (Average Validator balance) - Saldo medio per i validatori attivi
-- Slot (Slots) - Numero di slot inclusi nell'epoca (gli slot includono un blocco valido)
+- Numero dell'epoca
+- Stato finalizzato - Se l'epoca è stata finalizzata (Sì/No)
+- Ora - L'ora in cui è terminata l'epoca
+- Attestazioni - Il numero di attestazioni nell'epoca (voti per i blocchi all'interno degli slot)
+- Depositi - Il numero di depositi in ETH inclusi nell'epoca (i validatori devono mettere in staking ETH per diventare validatori)
+- Slashing - Numero di penalità inflitte ai proponenti dei blocchi o agli attestatori
+- Partecipazione al voto - La quantità di ETH in staking utilizzata per attestare i blocchi
+- Validatori - Numero di validatori attivi per l'epoca
+- Saldo medio del validatore - Saldo medio per i validatori attivi
+- Slot - Numero di slot inclusi nell'epoca (gli slot includono un blocco valido)
 
 ### Slot {#slot}
 
 Gli slot sono opportunità per la creazione di blocchi, i dati disponibili per ogni slot includono:
 
-- Epoca (Epoch) - L'epoca in cui lo slot è valido
-- Numero dello slot (Slot number)
-- Stato (Status) - Lo stato dello slot (Proposto/Mancato)
-- Tempo (Time) - La marca temporale dello slot
-- Proponente (Proposer) - Il validatore che ha proposto il blocco per lo slot
-- Radice del blocco (Block root) - L'hash-tree-root del BeaconBlock
-- Radice genitore (Parent root) - L'hash del blocco precedente
-- Radice dello stato (State root) - L'hash-tree-root del BeaconState
-- Firma (Signature)
-- Rivelazione Randao (Randao reveal)
+- Epoca - L'epoca in cui lo slot è valido
+- Numero dello slot
+- Stato - Lo stato dello slot (Proposto/Mancato)
+- Ora - Il timestamp dello slot
+- Proponente - Il validatore che ha proposto il blocco per lo slot
+- Radice del blocco - L'hash-tree-root del blocco beacon (BeaconBlock)
+- Radice genitore - L'hash del blocco precedente
+- Radice dello stato - L'hash-tree-root del BeaconState
+- Firma
+- Rivelazione RANDAO
 - Graffiti - Un proponente del blocco può includere un messaggio lungo 32 byte alla sua proposta di blocco
-- Dati di esecuzione (Execution Data)
-  - Hash del blocco (Block hash)
-  - Conteggio dei depositi (Deposit count)
-  - Radice dei depositi (Deposit root)
-- Attestazioni (Attestations) - Numero di attestazioni per il blocco in questo slot
-- Depositi (Deposits) - Il numero di depositi durante questo slot
-- Uscite volontarie (Voluntary exits) - Il numero di validatori che hanno lasciato durante lo slot
-- Punizioni (Slashings) - Numero di penalità inflitte ai proponenti dei blocchi o agli attestatori
-- Voti (Votes) - I validatori che hanno votato per il blocco in questo slot
+- Dati di esecuzione
+  - Hash del blocco
+  - Conteggio dei depositi
+  - Radice del deposito
+- Attestazioni - Numero di attestazioni per il blocco in questo slot
+- Depositi - Il numero di depositi durante questo slot
+- Uscite volontarie - Il numero di validatori che hanno abbandonato durante lo slot
+- Slashing - Numero di penalità inflitte ai proponenti dei blocchi o agli attestatori
+- Voti - I validatori che hanno votato per il blocco in questo slot
 
 ### Blocchi {#blocks-1}
 
-La prova di stake divide il tempo in slot ed epoche. Quindi questo significa nuovi dati!
+La Proof-of-Stake (PoS) divide il tempo in slot ed epoche. Quindi questo significa nuovi dati!
 
-- Proponente (Proposer) - Il validatore che è stato scelto algoritmicamente per proporre il nuovo blocco
-- Epoca (Epoch) - L'epoca in cui è stato proposto il blocco
+- Proponente - Il validatore che è stato scelto algoritmicamente per proporre il nuovo blocco
+- Epoca - L'epoca in cui è stato proposto il blocco
 - Slot - Lo slot in cui è stato proposto il blocco
-- Attestazioni (Attestations) - Il numero di attestazioni incluse nello slot: le attestazioni sono come voti che indicano che il blocco è pronto per andare sulla Beacon Chain
+- Attestazioni - Il numero di attestazioni incluse nello slot: le attestazioni sono come voti che indicano che il blocco è pronto per passare alla Beacon Chain
 
 ### Validatori {#validators}
 
 I validatori sono responsabili della proposta dei blocchi e della loro attestazione all'interno degli slot.
 
-- Numero del validatore (Validator number) - Numero univoco che rappresenta il validatore
-- Saldo attuale (Current balance) - Il saldo del validatore incluse le ricompense
-- Saldo effettivo (Effective balance) - Il saldo del validatore che viene utilizzato per lo staking
-- Reddito (Income) - Le ricompense o le penalità ricevute dal validatore
-- Stato (Status) - Se il validatore è attualmente online e attivo o meno
-- Efficacia dell'attestazione (Attestation effectiveness) - Il tempo medio impiegato affinché le attestazioni del validatore vengano incluse nella catena
-- Idoneità per l'attivazione (Eligibility for activation) - Data (ed epoca) in cui il validatore è diventato disponibile per validare
-- Attivo dal (Active since) - Data (ed epoca) in cui il validatore è diventato attivo
-- Blocchi proposti (Proposed blocks) - Il blocco che il validatore ha proposto
-- Attestazioni (Attestations) - Le attestazioni che il validatore ha fornito
-- Depositi (Deposits) - L'indirizzo di provenienza, l'hash della transazione, il numero del blocco, la marca temporale, l'importo e lo stato del deposito di staking effettuato dal validatore
+- Numero del validatore - Numero univoco che rappresenta il validatore
+- Saldo attuale - Il saldo del validatore incluse le ricompense
+- Saldo effettivo - Il saldo del validatore che viene utilizzato per lo staking
+- Entrate - Le ricompense o le penalità ricevute dal validatore
+- Stato - Se il validatore è attualmente online e attivo o meno
+- Efficacia dell'attestazione - Il tempo medio necessario affinché le attestazioni del validatore vengano incluse nella catena
+- Idoneità per l'attivazione - Data (ed epoca) in cui il validatore è diventato disponibile per la convalida
+- Attivo dal - Data (ed epoca) in cui il validatore è diventato attivo
+- Blocchi proposti - Il blocco che il validatore ha proposto
+- Attestazioni - Le attestazioni che il validatore ha fornito
+- Depositi - L'indirizzo di provenienza, l'hash della transazione, il numero del blocco, il timestamp, l'importo e lo stato del deposito di staking effettuato dal validatore
 
 ### Attestazioni {#attestations}
 
-Le attestazioni sono voti "sì" per includere i blocchi nella catena. I loro dati si riferiscono a un registro dell'attestazione e ai validatori che hanno attestato
+Le attestazioni sono voti "sì" per includere i blocchi nella catena. I loro dati si riferiscono a un record dell'attestazione e ai validatori che hanno attestato
 
 - Slot - Lo slot in cui ha avuto luogo l'attestazione
-- Indice del comitato (Committee index) - L'indice del comitato nello slot specificato
-- Bit di aggregazione (Aggregation bits) - Rappresenta l'attestazione aggregata di tutti i validatori partecipanti all'attestazione
-- Validatori (Validators) - I validatori che hanno fornito attestazioni
-- Radice del blocco beacon (Beacon block root) - Punta al blocco a cui i validatori stanno attestando
-- Origine (Source) - Punta all'ultima epoca giustificata
-- Destinazione (Target) - Punta all'ultimo confine dell'epoca
-- Firma (Signature)
+- Indice del comitato - L'indice del comitato nello slot specificato
+- Bit di aggregazione - Rappresenta l'attestazione aggregata di tutti i validatori partecipanti all'attestazione
+- Validatori - I validatori che hanno fornito attestazioni
+- Radice del blocco beacon - Punta al blocco che i validatori stanno attestando
+- Origine - Punta all'ultima epoca giustificata
+- Destinazione - Punta all'ultimo limite dell'epoca
+- Firma
 
 ### Rete {#network-1}
 
 I dati di primo livello del livello di consenso includono quanto segue:
 
-- Epoca attuale (Current epoch)
-- Slot attuale (Current slot)
-- Validatori attivi (Active validators) - Numero di validatori attivi
-- Validatori in attesa (Pending validators) - Numero di validatori in attesa di essere resi attivi
-- ETH in stake (Staked ETH) - Quantità di ETH in stake nella rete
-- Saldo medio (Average balance) - Saldo medio in ETH dei validatori
+- Epoca corrente
+- Slot corrente
+- Validatori attivi - Numero di validatori attivi
+- Validatori in sospeso - Numero di validatori in attesa di essere resi attivi
+- ETH in staking - Quantità di ETH messi in staking nella rete
+- Saldo medio - Saldo medio in ETH dei validatori
 
 ## Letture consigliate {#further-reading}
 

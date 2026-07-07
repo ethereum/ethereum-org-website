@@ -401,8 +401,6 @@ export const useStakingConsiderations = ({
   }
 
   const indicatorSvgStyle = { width: 20, height: "auto" }
-  const StyledSvg = () =>
-    Svg ? <Svg className="size-[4.5rem]" /> : <div className="hidden" />
 
   return {
     title,
@@ -413,7 +411,7 @@ export const useStakingConsiderations = ({
     dropdownLinks,
     handleSelection,
     indicatorSvgStyle,
-    StyledSvg,
+    Svg,
     pageData,
     activeIndex,
   }

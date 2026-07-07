@@ -1,40 +1,37 @@
 ---
-title: "以太坊基金会"
-description: "了解以太坊基金会（EF），一个致力于支持以太坊和相关技术的非营利组织。"
+title: 以太坊基金会
+description: 了解以太坊基金会（EF），这是一个致力于支持以太坊及相关技术的非营利组织。
 hideEditButton: true
 lang: zh
 ---
 
-# 关于以太坊基金会 {#about-the-ethereum-foundation}
-
 <Logo/>
 
-[以太坊基金会](https://ethereum.foundation/) (EF) 是一个非营利组织，致力于支持[以太坊](/what-is-ethereum/)及相关技术。
+[以太坊基金会](https://ethereum.foundation/)（EF）是一个支持[以太坊](/)生态系统的非营利组织。它资助协议开发，发展生态系统，并倡导以太坊。
 
-EF 不是一家公司，甚至不是传统的非营利组织。 他们的作用不是控制或领导以太坊，也不是为以太坊相关技术的重大开发提供资金的唯一组织。 EF 只是更庞大的[生态系统](/community/)的一部分。
+EF 不是一家公司，甚至不是一个传统的非营利组织。它不控制或领导以太坊，也不是唯一资助以太坊相关技术关键开发的组织。EF 只是一个更庞大的[生态系统](/community/)的一部分。
 
-## 以太坊基金会举措 {#ethereum-foundation-initiatives}
+## EF 使命 {#ef-mandate}
 
-### 生态系统支持计划 {#ecosystem-support-program}
+EF 使命定义了基金会的目标、原则以及对以太坊生态系统的承诺。它发布在链上，将 EF 对**抗审查性、开源、隐私和安全（CROPS）**的奉献确立为不可妥协的优先事项。
 
-[生态系统支持计划](https://esp.ethereum.foundation/)旨在为更广泛的以太坊社区内的项目和实体提供资金和非资金支持，以加速生态系统的发展。 生态系统支持计划是对原始以太坊赠款计划的扩展，该计划主要侧重于财务支持。
+[阅读以太坊基金会使命](/foundation/mandate/)
 
-访问 [esp.ethereum.foundation](https://esp.ethereum.foundation/)，详细了解生态系统支持计划、过往的资助金获得者以及资助金申请流程。 您还可以查看[生态系统支持计划博客](https://blog.ethereum.org/category/ecosystem-support-program/)，或在推特上关注 [@EF_ESP](https://twitter.com/EF_ESP)，了解他们的最新动态和公告。
+## EF 的工作内容 {#what-the-ef-does}
 
-### 以太坊开发者大会 (Devcon) {#devcon}
+- **协议开发** – 支持致力于以太坊核心协议的团队，包括客户端开发、研究、升级以及[漏洞赏金计划](/bug-bounty/)
+- **生态系统资助** – 通过[生态系统支持计划](https://esp.ethereum.foundation/)为在以太坊上构建的项目提供资助和支持
+- **研究** – 资助密码学、共识、扩容、隐私和安全领域的研究
 
-从 2014 年开始，以太坊基金会开始组织“测试版”——所有以太坊开发人员、研究人员、思想家和开发人员的年度会议。
+## 计划与倡议 {#programs-and-initiatives}
 
-自大会创办以来，每年的演讲视频都可以在 [archive.devcon.org](https://archive.devcon.org/) 上观看。
+- **[生态系统支持计划](https://esp.ethereum.foundation/)** – 为在以太坊上构建的开源项目提供资助和支持
+- **[学术资助](https://esp.ethereum.foundation/academic-grants)** – 支持与以太坊相关的学术研究
+- **[Devcon](https://devcon.org/)** – 面向以太坊开发者、研究人员和构建者的年度会议
+- **[漏洞赏金计划](/bug-bounty/)** – 奖励发现以太坊协议漏洞的人员
 
-请访问 [devcon.org](https://devcon.org/) 了解更多信息，查看 [Devcon 博客](https://devcon.org/en/blogs/)，或在推特上关注 [@efdevcon](https://twitter.com/EFDevcon) 获取最新公告。
+## 了解更多 {#learn-more}
 
-### 研究员计划 {#fellowship-program}
-
-[以太坊基金会研究员计划](https://fellowship.ethereum.foundation/)是一项旨在弥合不同文化、国籍和经济阶层之间代表性差距的倡议。 团体计划旨在通过识别和支持独特和有才华的个人来弥补这些差距，帮助实现以太坊的相关性，并为那些将成为 Web3 未来但未被充分代表的人和社区打破进入壁垒。
-
-[在 fellowship.ethereum.foundation 上了解更多信息](https://fellowship.ethereum.foundation/)
-
-<br/>
-
-要了解更多关于基金会及其工作的信息，请访问 [ethereum.foundation](https://ethereum.foundation/)，或者查看[以太坊基金会博客](https://blog.ethereum.org/)，了解以太坊基金会 (EF) 的最新动态和公告。
+- [ethereum.foundation](https://ethereum.foundation/) – EF 官方网站
+- [EF 博客](https://blog.ethereum.org/) – 新闻与公告
+- [生态系统支持计划](https://esp.ethereum.foundation/) – 资助与支持

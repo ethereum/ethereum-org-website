@@ -120,7 +120,7 @@ const Filter = ({ filter, filterIndex, onChange }: FilterProps) => {
                   handleChange
                 )}
                 {item.inputState === true && item.options.length ? (
-                  <FieldSet className="flex flex-row gap-6 px-2 pb-4">
+                  <FieldSet className="flex flex-row flex-wrap gap-x-6 gap-y-2 px-2 pb-4">
                     {item.optionsLegend && (
                       <FieldLegend className="sr-only">
                         {item.optionsLegend}

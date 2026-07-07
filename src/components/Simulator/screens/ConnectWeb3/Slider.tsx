@@ -32,7 +32,7 @@ export const Slider = ({ isConnected, displayUrl, children }: SliderProps) => {
         transition={{ duration: 0.75, ease: "easeOut" }}
         data-testid="slider-box"
       >
-        <VStack className="size-full gap-0 rounded-t-2xl bg-background px-6 py-8">
+        <VStack className="size-full gap-0 rounded-t-base bg-background px-6 py-8">
           {isConnected ? (
             <VStack className="gap-4 pt-8">
               <motion.div

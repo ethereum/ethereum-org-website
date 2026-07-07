@@ -23,24 +23,31 @@ import {
 The canonical card primitive. Composable parts. If `href` is provided, the card auto-wraps in `BaseLink` and propagates a `group/link` class so descendant text can react to card-level hover.
 
 `CardBanner` props worth knowing:
+
 - `background`: `"accent-a" | "accent-b" | "accent-c" | "primary" | "body" | "none"` (default `body`)
-- `size`: `"full" | "thumbnail"` (default `full`)
+- `size`: `"full" | "lg" | "base" | "sm" | "thumbnail-lg" | "thumbnail"` (default `base`)
 - `fit`: `"cover" | "contain"` (default `cover`)
+- `zoom`: `true` (default) | `false` — when the parent `Card` has `href`, controls whether the image scales on hover/focus via `group/link`
 
 When `fit="contain"` and you pass a single `<Image>` child, the banner auto-clones it as a blurred backdrop behind a sharp foreground. Pass two children and you lose this magic.
 
-### Do NOT import `@/components/Card`
+### Markdown shortcode lives in `@/components/MarkdownCard`
 
-```tsx
-// DON'T:
-import Card from "@/components/Card"
-```
-
-This is the legacy card, registered in `MdComponents` for the markdown `<Card>` shortcode. It is reserved for markdown rendering. Importing it from app code is a smell.
+The `<Card>` MDX shortcode (registered in `MdComponents`) is backed by `@/components/MarkdownCard`, which composes the `ui/card` primitives with an MDX-friendly prop shape (`emoji`, `title`, `description`, `ctaLabel`, `href`). Use this wrapper if you have an existing MDX-style API to preserve. For new app code, compose the `ui/card` primitives directly — they're more flexible.
 
 ### Domain-specific cards exist (`AppCard`, `EthPriceCard`, etc.)
 
 These are feature components. Don't reuse them outside their domain.
+
+### Use `@/components/ui/grid` to lay out a collection of cards/items
+
+```tsx
+import { Grid } from "@/components/ui/grid"
+```
+
+`<Grid columns={N}>` instead of hand-rolling `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3`. Renders at most `columns` columns and folds down responsively; tune the per-item min width with `size` and switch `auto-fill`→`auto-fit` with `fit`. See `components.md` for the variant matrix. (The raw `grid-cols-auto-*` utility backs it; the older `grid-cols-fill-*` / `grid-cols-fit-*` classes are legacy.)
+
+Exception: a _fixed_ set of **4 cards** that must reflow **symmetrically** (`4 → 2×2 → 1`, never a lone 3-up row) wants `<Grid balanced={4}>` (a fixed breakpoint ladder that overrides `columns`; `balanced={2}` exists for a fixed pair) or an explicit breakpoint grid — auto-fill would introduce an orphan intermediate row.
 
 ## Modal / Dialog
 
@@ -121,9 +128,9 @@ import InlineLink from "@/components/ui/Link"
 
 // Named exports for specific uses:
 import {
-  BaseLink,        // No visited styling. Use inside LinkOverlay or as ButtonLink's asChild slot.
-  LinkWithArrow,   // Explicit CTA arrow. Reserved for unique cases where the arrow is part of the design intent.
-  ExternalLinkIcon // Just the icon component (rare).
+  BaseLink, // No visited styling. Use inside LinkOverlay or as ButtonLink's asChild slot.
+  LinkWithArrow, // Explicit CTA arrow. Reserved for unique cases where the arrow is part of the design intent.
+  ExternalLinkIcon, // Just the icon component (rare).
 } from "@/components/ui/Link"
 ```
 
@@ -148,7 +155,9 @@ For when an entire card should be clickable but contains other interactive eleme
       <BaseLink href="/x">Title</BaseLink>
     </LinkOverlay>
   </h3>
-  <p>Other content; the LinkOverlay's :before pseudo covers the whole LinkBox.</p>
+  <p>
+    Other content; the LinkOverlay's :before pseudo covers the whole LinkBox.
+  </p>
 </LinkBox>
 ```
 
@@ -157,51 +166,89 @@ If you use `LinkBox` without `LinkOverlay` somewhere inside, the whole-card-clic
 ## Heroes
 
 ```tsx
-import {
-  ContentHero,
-  HomeHero,
-  HubHero,
-  MdxHero,
-  SimpleHero,
-} from "@/components/Hero"
+import { HomeHero, HubHero, PageHero } from "@/components/Hero"
 ```
 
 | Hero | Use case |
 |---|---|
-| `ContentHero` | Most internal pages: 2-column with image, breadcrumb, buttons. The workhorse. |
+| `PageHero` | The workhorse for most internal pages. 2-column with breadcrumbs, an optional `eyebrow`, an aside (`heroImg` **or** `heroComponent`), and up to two buttons -- **or** text-only when you pass neither aside. With `variant="no-divider"` and no aside/`description`, it's the minimal breadcrumb + h1 article hero (the `StaticLayout` default). |
 | `HubHero` | Full-bleed hero image with overlay text card. |
 | `HomeHero` | Homepage only. Async server component. |
-| `SimpleHero` | Text-only with breadcrumb + buttons. No image. |
-| `MdxHero` | Minimal: breadcrumb + h1. For long-form articles. |
 
-### Do NOT use `@/components/PageHero`
+> The former `MdxHero` (minimal breadcrumb + h1 for long-form articles) was removed. Use `PageHero` text-only with `variant="no-divider"` instead.
+
+### `PageHero` props
+
+`PageHero` is a **named** export from `@/components/Hero` and takes discrete props (not a single `content` object):
 
 ```tsx
-// DON'T:
-import PageHero from "@/components/PageHero"
+import { PageHero } from "@/components/Hero"
 ```
 
-`PageHero` predates the `Hero/` directory. It's used by a few legacy pages (`staking`, `run-a-node`) but is on the deprecation track. New pages must pick from `@/components/Hero`.
+Pass `breadcrumbs` (a `{ slug }` object or a custom `<Breadcrumb>` element), an optional `eyebrow` (`ReactNode` above the title), an optional aside -- `heroImg` **or** `heroComponent`, mutually exclusive (omit both for text-only) -- plus `title`, `description`, `buttons` (up to two), and `variant`. `title` is always the `<h1>` (there is no `header` prop).
 
 ## Banners / Callouts / Alerts
 
-### Inline message in content area: `Alert`
+### Inline notice AND top-of-page ribbon: `Alert`
 
 ```tsx
 import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 ```
 
-Variants: `info | error | success | warning | update`. Optional `size: "full"` for borderless full-width.
+One primitive covers both shapes via `variant`:
 
-### In-content / top-of-page callout: `Callout`
+| Use case                                         | Variant                                     |
+| ------------------------------------------------ | ------------------------------------------- |
+| In-prose notice                                  | `info` `error` `success` `warning` `update` |
+| Full-bleed top-of-page ribbon (white-on-primary) | `banner`                                    |
 
-> **Migration in progress.** A unified server-renderable `Callout` component is being built that absorbs the current `Callout`/`CalloutSSR`/`CalloutBanner`/`CalloutBannerSSR`/`BannerNotification`/`DismissableBanner` set into a single primitive with variants. Tracked in a dedicated issue.
+```tsx
+// Top-of-page ribbon:
+<Alert variant="banner">{t("page-roadmap-banner-notification")}</Alert>
 
-Until the unified `Callout` lands:
-- For **in-content** callouts with image + heading: use `CalloutBannerSSR` (NOT `CalloutBanner.tsx`). Server-renderable; uses `cva` with `large | medium | small` sizes.
-- For **big ornamental section dividers** with image overlap: use `CalloutSSR` (NOT `Callout.tsx`). Server-renderable.
-- For **top-of-page site-wide stripes**: use `BannerNotification` (`@/components/Banners/BannerNotification`). Will be absorbed as a `notification` variant on the unified `Callout`.
-- Avoid `Callout.tsx` and `CalloutBanner.tsx` (client-only thunks; superseded by their SSR siblings and ultimately by the unified component).
+// In-content warning:
+<Alert variant="warning">
+  <AlertContent>
+    <AlertDescription>{t("warning-text")}</AlertDescription>
+  </AlertContent>
+</Alert>
+```
+
+`variant="banner"` renders `<aside>` (tangential to main content); other variants render `<div>`. No ARIA role by default -- pass `role="status"` for polite dynamic announcements (e.g. filter result counts) or `role="alert"` for genuine assertive errors. See `references/components.md` for the full parts inventory.
+
+### Do NOT import `BannerNotification`
+
+```tsx
+// DON'T -- file deleted May 2026:
+import BannerNotification from "@/components/Banners/BannerNotification"
+```
+
+The `Banners/` subdirectory is gone. Use `<Alert variant="banner">` for top-of-page ribbons.
+
+### Card-shaped in-content callouts: `Callout`
+
+```tsx
+import Callout, {
+  CalloutBanner,
+  CalloutButtons,
+  CalloutContent,
+  CalloutDescription,
+  CalloutRoot,
+  CalloutTitle,
+} from "@/components/ui/callout"
+```
+
+Server-renderable, takes literal `title` / `description` strings (call site resolves intl). Optional `image` banner (overhangs the gradient card); omit for a content-only callout. `variant`: `base` (default) | `sm`. Children render as buttons via `CalloutButtons`.
+
+```tsx
+<Callout image={someImage} alt="..." title={t("...")} description={t("...")}>
+  <ButtonLink href="/...">{t("...")}</ButtonLink>
+</Callout>
+```
+
+The default export covers the common shape. The named primitives are available for custom composition (interleaving children between parts, applying classNames on individual slots). The legacy `Callout` / `CalloutSSR` / `CalloutBanner` / `CalloutBannerSSR` files at the root of `src/components/` were removed during the unification — do not reintroduce.
+
+Side-by-side equalization is automatic: when two or more `Callout`s share a parent at `md+` viewport, banners pin to a 16rem min-height and buttons bottom-align across cards. See `callout-walkthrough.md`.
 
 ## Tabs / Tab Navigation
 
@@ -226,13 +273,7 @@ URL-fragment-driven section navigation. Uses `useActiveHash` to highlight the cu
 ## Layout primitives
 
 ```tsx
-import {
-  Center,
-  Flex,
-  HStack,
-  Stack,
-  VStack,
-} from "@/components/ui/flex"
+import { Center, Flex, HStack, Stack, VStack } from "@/components/ui/flex"
 ```
 
 `Stack` (default `flex-col gap-2`) supports a `separator` prop that clones a separator element between children. Use these instead of writing `flex flex-col gap-2` everywhere.
@@ -240,7 +281,12 @@ import {
 ## Avatars
 
 ```tsx
-import { Avatar, AvatarImage, AvatarFallback, AvatarGroup } from "@/components/ui/avatar"
+import {
+  Avatar,
+  AvatarImage,
+  AvatarFallback,
+  AvatarGroup,
+} from "@/components/ui/avatar"
 ```
 
 Don't inline a `<div className="rounded-full">` for a user avatar -- use `AvatarFallback`.
@@ -249,14 +295,22 @@ Don't inline a `<div className="rounded-full">` for a user avatar -- use `Avatar
 
 ```tsx
 import { Tag, TagButton } from "@/components/ui/tag"
+import TagFilter from "@/components/ui/tag-filter"
 ```
 
-Big variant matrix: `status` × `variant` × `size`. See `references/components.md` for the full set.
+Big variant matrix: `status` × `variant` × `size`. See `references/components.md` for the full set. `TagFilter` is the controlled multi-select chip filter for tag-filtered lists -- prefer it over a hand-rolled `TagButton` row.
 
 ## Tables
 
 ```tsx
-import { Table, TableHeader, TableBody, TableRow, TableCell, TableHead } from "@/components/ui/table"
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableCell,
+  TableHead,
+} from "@/components/ui/table"
 ```
 
 Variants: `simple | minimal | minimal-striped | simple-striped | product | highlight-first-column`.

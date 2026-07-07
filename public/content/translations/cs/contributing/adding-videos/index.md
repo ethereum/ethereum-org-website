@@ -18,6 +18,7 @@ Ethereum.org je neutrální vzdělávací zdroj. Videogalerie je spravována tak
 
 Stránka nezařazuje videa, která primárně propagují konkrétní produkt, token nebo komerční službu.
 
+
 ## Kritéria pro zařazení {#criteria-for-inclusion}
 
 ### Nutné požadavky {#must-haves}
@@ -33,6 +34,7 @@ Stránka nezařazuje videa, která primárně propagují konkrétní produkt, to
 - **Obsahuje přepis** – Videa s přepisy zlepšují přístupnost a SEO. Pokud jej nemáte, tým ethereum.org vám může pomoci s jeho vytvořením.
 - **Z důvěryhodného zdroje** – Obsah od zavedených vzdělavatelů, výzkumníků a zdrojů má prioritu.
 - **Aktuální a nadčasové** – Obsah, který zůstává relevantní v průběhu času, je upřednostňován před materiálem citlivým na čas.
+
 
 ## Jak přidat video {#how-to-add-a-video}
 
@@ -121,25 +123,10 @@ K označení hlavních sekcí použijte nadpisy `###` s časovými značkami. D�
 
 Pokud nemáte přepis, můžete nechat tělo prázdné a tým jej vygeneruje.
 
-#### Krok 4: Výběr tematických štítků {#step-4}
-
-Vyberte tematické štítky, které odpovídají existujícím kategoriím používaným v galerii. Mezi aktuální kategorie a jejich štítky patří:
-
-- **Jak funguje Ethereum**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Aktualizace sítě**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Plán a priority**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Škálování a vrstva 2 (l2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Případy užití**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Soukromí a bezpečnost**: `privacy-and-security`, `privacy`, `authentication`
-- **Příběhy z komunity**: `community-stories`, `contributing`, `translations`, `community`
-
-Abyste zajistili, že se vaše video objeví v sekci kategorie galerie, zahrňte alespoň jeden klíčový štítek kategorie (tučný název ve formátu kebab-case, např. `use-cases` nebo `scaling-and-layer-2`). Videa bez rozpoznaného štítku kategorie se zobrazí pouze v zobrazení „Vše“ a ve výsledcích vyhledávání.
-
-Můžete také použít nové štítky — budou k dispozici pro budoucí seskupování do kategorií.
-
 #### Krok 5: Odeslání vašeho PR {#step-5}
 
 Otevřete pull request s vašimi změnami do větve `dev`. Tým vaši žádost zkontroluje a poskytne zpětnou vazbu.
+
 
 ## Údržba {#maintenance}
 
@@ -150,6 +137,7 @@ Zařazená videa jsou pravidelně kontrolována, aby se zajistilo, že:
 - Mají funkční odkazy na hosting/YouTube
 
 Pokud si všimnete problému se zařazeným videem, [vytvořte issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) nebo pošlete e-mail na [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Podmínky použití {#terms-of-use}
 

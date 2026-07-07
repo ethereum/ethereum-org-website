@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-08T08:46:17.950Z",
+  "englishManifestHash": "c88b048075a7",
+  "placeholderOrder": [
+    "LINK-cb7c24",
+    "LINK-497b06",
+    "LINK-a894d6",
+    "LINK-ca2085",
+    "IMAGE-c4063a",
+    "IMAGE-2a6a72",
+    "IMAGE-03f878",
+    "IMAGE-fc2dfe",
+    "IMAGE-5ba541",
+    "CODE-925354",
+    "IMAGE-1ff6f4",
+    "CODE-6afd30",
+    "CODE-44f0f3",
+    "IMAGE-93cd22",
+    "CODE-2bc3e0",
+    "CODE-0ee5cd",
+    "CODE-008dde",
+    "CODE-86d01c",
+    "IMAGE-a94097",
+    "CODE-7569d7",
+    "CODE-7618fe",
+    "CODE-7569d7",
+    "CODE-7618fe",
+    "IMAGE-db7cce",
+    "CODE-6afd30",
+    "CODE-7569d7",
+    "IMAGE-5daa65",
+    "IMAGE-dae3d1"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-9f1892": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "strong",
+        "x-id": "1"
+      }
+    },
+    "HTMLTAG-57cf36": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "strong",
+        "x-id": "1"
+      }
+    },
+    "CODE-925354": {
+      "type": "inline-code",
+      "values": {
+        "content": "Alt+C"
+      }
+    },
+    "CODE-6afd30": {
+      "type": "inline-code",
+      "values": {
+        "content": "<0>"
+      }
+    },
+    "CODE-44f0f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "</0>"
+      }
+    },
+    "CODE-2bc3e0": {
+      "type": "inline-code",
+      "values": {
+        "content": "<HTML-PLACEHOLDER-HTMLTAG-9f1892>"
+      }
+    },
+    "CODE-0ee5cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "</HTML-PLACEHOLDER-HTMLTAG-9f1892>"
+      }
+    },
+    "CODE-008dde": {
+      "type": "inline-code",
+      "values": {
+        "content": "<HTML-PLACEHOLDER-HTMLTAG-57cf36>"
+      }
+    },
+    "CODE-86d01c": {
+      "type": "inline-code",
+      "values": {
+        "content": "</HTML-PLACEHOLDER-HTMLTAG-57cf36>"
+      }
+    },
+    "CODE-7569d7": {
+      "type": "inline-code",
+      "values": {
+        "content": "<code>"
+      }
+    },
+    "CODE-7618fe": {
+      "type": "inline-code",
+      "values": {
+        "content": "</code>"
+      }
+    },
+    "IMAGE-c4063a": {
+      "type": "image",
+      "values": {
+        "path": "./article-titles-in-sidebar.png"
+      }
+    },
+    "IMAGE-2a6a72": {
+      "type": "image",
+      "values": {
+        "path": "./article-titles-in-editor.png"
+      }
+    },
+    "IMAGE-03f878": {
+      "type": "image",
+      "values": {
+        "path": "./crowdin-warning-example.png"
+      }
+    },
+    "IMAGE-fc2dfe": {
+      "type": "image",
+      "values": {
+        "path": "./editor-settings.png"
+      }
+    },
+    "IMAGE-5ba541": {
+      "type": "image",
+      "values": {
+        "path": "./hide-tags.png"
+      }
+    },
+    "IMAGE-1ff6f4": {
+      "type": "image",
+      "values": {
+        "path": "./example-of-link.png"
+      }
+    },
+    "IMAGE-93cd22": {
+      "type": "image",
+      "values": {
+        "path": "./example-of-links-inside-tags.png"
+      }
+    },
+    "IMAGE-a94097": {
+      "type": "image",
+      "values": {
+        "path": "./example-of-strong-tags.png"
+      }
+    },
+    "IMAGE-db7cce": {
+      "type": "image",
+      "values": {
+        "path": "./example-of-code-snippets.png"
+      }
+    },
+    "IMAGE-5daa65": {
+      "type": "image",
+      "values": {
+        "path": "./example-of-ambiguous-tags.png"
+      }
+    },
+    "IMAGE-dae3d1": {
+      "type": "image",
+      "values": {
+        "path": "./how-to-find-a-button.png"
+      }
+    },
+    "LINK-cb7c24": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    },
+    "LINK-497b06": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/#how-to-translate"
+      }
+    },
+    "LINK-a894d6": {
+      "type": "link",
+      "values": {
+        "url": "https://support.crowdin.com/online-editor/"
+      }
+    },
+    "LINK-ca2085": {
+      "type": "link",
+      "values": {
+        "url": "https://www.andiamo.co.uk/resources/iso-language-codes/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:46:17.950Z",
+      "status": "success"
+    }
+  }
+}

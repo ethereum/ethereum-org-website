@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Ethereum - Panduan lengkap dari Ethereum.org",
+  "page-index-meta-title": "Ethereum - Panduan lengkap dari ethereum.org",
   "page-index-meta-description": "Ethereum adalah platform global yang terdesentralisasi untuk uang dan jenis aplikasi baru. Di Ethereum, Anda mengendalikan uang, data, dan identitas Anda sendiri. Tanpa bank, tanpa perantara, tanpa perlu izin.",
   "page-index-description": "Platform terkemuka untuk aplikasi inovatif dan jaringan rantai blok",
   "page-index-title": "Selamat datang di Ethereum",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Jaringan privat & berizin",
   "page-index-get-started-enterprise-bullet-3": "Sumber daya institusional",
   "page-index-get-started-enterprise-cta": "Jelajahi perusahaan",
-  "page-index-simulator-cta": "Coba lebih banyak panduan"
+  "page-index-simulator-cta": "Coba lebih banyak panduan",
+  "page-index-latest-updates-title": "Pembaruan Ethereum terbaru",
+  "page-index-latest-updates-cta": "Lihat selengkapnya"
 }

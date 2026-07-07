@@ -1,111 +1,105 @@
 ---
-title: "استخدام عناوين التخفي"
-description: "تسمح عناوين التخفي للمستخدمين بنقل الأصول بشكل مجهول. بعد قراءة هذا المقال، ستكون قادرًا على: شرح ماهية عناوين التخفي وكيفية عملها، وفهم كيفية استخدام عناوين التخفي بطريقة تحافظ على الخصوصية، وكتابة تطبيق ويب يستخدم عناوين التخفي."
-author: "أوري بوميرانتز"
-tags:
-  [
-    "عنوان التخفي",
-    "الخصوصية",
-    "علم التشفير",
-    "Rust",
-    "wasm"
-  ]
+title: "استخدام العناوين المتخفية"
+description: "تتيح العناوين المتخفية للمستخدمين تحويل الأصول بشكل مجهول. بعد قراءة هذا المقال، ستتمكن من: شرح ماهية العناوين المتخفية وكيفية عملها، وفهم كيفية استخدام العناوين المتخفية بطريقة تحافظ على إخفاء الهوية، وكتابة تطبيق ويب يستخدم العناوين المتخفية."
+author: "أوري بوميرانتس"
+tags: ["عنوان متخفي", "الخصوصية", "علم التشفير", "Rust", "wasm"]
 skill: intermediate
+breadcrumb: "العناوين المتخفية"
 published: 2025-11-30
 lang: ar
 sidebarDepth: 3
 ---
 
-أنت بيل. لأسباب لن نخوض فيها، تريد التبرع لحملة "أليس من أجل ملكة العالم" وأن تعلم أليس أنك تبرعت حتى تكافئك إذا فازت. لسوء الحظ، فوزها غير مضمون. هناك حملة منافسة، "كارول من أجل إمبراطورة النظام الشمسي". إذا فازت كارول، واكتشفت أنك تبرعت لأليس، فستقع في ورطة. لذلك لا يمكنك ببساطة تحويل 200 ETH من حسابك إلى حساب أليس.
+أنت بيل. لأسباب لن نخوض فيها، تريد التبرع لحملة "أليس لملكة العالم" وتريد أن تعرف أليس أنك تبرعت حتى تمنحك مكافأة إذا فازت. لسوء الحظ، فوزها ليس مضمونًا. هناك حملة منافسة، "كارول لإمبراطورة النظام الشمسي". إذا فازت كارول، واكتشفت أنك تبرعت لأليس، فستكون في ورطة. لذلك لا يمكنك ببساطة تحويل <span dir="ltr">200 ETH</span> من حسابك إلى حساب أليس.
 
-لدى [ERC-5564](https://eips.ethereum.org/EIPS/eip-5564) الحل. يشرح ERC هذا كيفية استخدام [عناوين التخفي](https://nerolation.github.io/stealth-utils) للتحويل المجهول.
+يقدم [<span dir="ltr">ERC-5564</span>](https://eips.ethereum.org/EIPS/eip-5564) الحل. يشرح هذا الـ ERC كيفية استخدام [العناوين المتخفية](https://nerolation.github.io/stealth-utils) من أجل تحويل مجهول الهوية.
 
-**تحذير**: علم التشفير وراء عناوين التخفي، على حد علمنا، سليم. ومع ذلك، هناك هجمات محتملة عبر القنوات الجانبية. [أدناه](#go-wrong)، سترى ما يمكنك فعله لتقليل هذا الخطر.
+**تحذير**: علم التشفير وراء العناوين المتخفية سليم، على حد علمنا. ومع ذلك، هناك هجمات قناة جانبية محتملة. [أدناه](#go-wrong)، سترى ما يمكنك القيام به لتقليل هذه المخاطر.
 
-## كيفية عمل عناوين التخفي {#how}
+## كيف تعمل العناوين المتخفية {#how}
 
-سيحاول هذا المقال شرح عناوين التخفي بطريقتين. الأولى هي [كيفية استخدامها](#how-use). هذا الجزء كافٍ لفهم بقية المقال. ثم، هناك [شرح للرياضيات التي تقف وراءها](#how-math). إذا كنت مهتمًا بعلم التشفير، فاقرأ هذا الجزء أيضًا.
+سيحاول هذا المقال شرح العناوين المتخفية بطريقتين. الأولى هي [كيفية استخدامها](#how-use). هذا الجزء كافٍ لفهم بقية المقال. ثم، هناك [شرح للرياضيات وراءها](#how-math). إذا كنت مهتمًا بـ علم التشفير، فاقرأ هذا الجزء أيضًا. 
 
-### النسخة المبسطة (كيفية استخدام عناوين التخفي) {#how-use}
+### النسخة المبسطة (كيفية استخدام العناوين المتخفية) {#how-use}
 
-تنشئ أليس مفتاحين خاصين وتنشر المفاتيح العامة المقابلة (والتي يمكن دمجها في عنوان meta-address واحد مزدوج الطول). ينشئ بيل أيضًا مفتاحًا خاصًا وينشر المفتاح العام المقابل.
+تنشئ أليس مفتاحين خاصين وتنشر المفاتيح العامة المقابلة (والتي يمكن دمجها في عنوان وصفي واحد مزدوج الطول). ينشئ بيل أيضًا مفتاحًا خاصًا وينشر المفتاح العام المقابل.
 
-باستخدام المفتاح العام لأحد الطرفين والمفتاح الخاص للطرف الآخر، يمكنك اشتقاق سر مشترك لا يعرفه سوى أليس وبيل (لا يمكن اشتقاقه من المفاتيح العامة وحدها). باستخدام هذا السر المشترك، يحصل بيل على عنوان التخفي ويمكنه إرسال الأصول إليه.
+باستخدام مفتاح عام لأحد الأطراف ومفتاح خاص للطرف الآخر، يمكنك استنتاج سر مشترك لا يعرفه سوى أليس وبيل (لا يمكن استنتاجه من المفاتيح العامة وحدها). باستخدام هذا السر المشترك، يحصل بيل على عنوان متخفي ويمكنه إرسال الأصول إليه.
 
-تحصل أليس أيضًا على العنوان من السر المشترك، ولكن لأنها تعرف المفاتيح الخاصة للمفاتيح العامة التي نشرتها، يمكنها أيضًا الحصول على المفتاح الخاص الذي يسمح لها بالسحب من هذا العنوان.
+تحصل أليس أيضًا على العنوان من السر المشترك، ولكن لأنها تعرف المفاتيح الخاصة للمفاتيح العامة التي نشرتها، يمكنها أيضًا الحصول على مفتاح خاص الذي يتيح لها السحب من ذلك العنوان.
 
-### الرياضيات (لماذا تعمل عناوين التخفي بهذه الطريقة) {#how-math}
+### الرياضيات (لماذا تعمل العناوين المتخفية بهذا الشكل) {#how-math}
 
-تستخدم عناوين التخفي القياسية [تشفير المنحنى الإهليلجي (ECC)](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/#elliptic-curves-building-blocks-of-a-better-trapdoor) للحصول على أداء أفضل مع عدد أقل من بتات المفتاح، مع الحفاظ على نفس مستوى الأمان. ولكن في معظم الأحيان يمكننا تجاهل ذلك والتظاهر بأننا نستخدم الحساب العادي.
+تستخدم العناوين المتخفية القياسية [تشفير المنحنى الإهليلجي (<span dir="ltr">ECC</span>)](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/#elliptic-curves-building-blocks-of-a-better-trapdoor) للحصول على أداء أفضل مع عدد أقل من بتات المفاتيح، مع الحفاظ على نفس مستوى الأمان. ولكن في الغالب يمكننا تجاهل ذلك والتظاهر بأننا نستخدم الحساب العادي.
 
-هناك رقم يعرفه الجميع، _G_. يمكنك الضرب في _G_. ولكن بسبب طبيعة ECC، من المستحيل عمليًا القسمة على _G_. الطريقة التي يعمل بها تشفير المفتاح العام بشكل عام في إيثريوم هي أنه يمكنك استخدام مفتاح خاص، _P<sub>priv</sub>_، لتوقيع المعاملات التي يتم التحقق منها بعد ذلك بواسطة مفتاح عام، _P<sub>pub</sub> = GP<sub>priv</sub>_.
+هناك رقم يعرفه الجميع، *<span dir="ltr">G</span>*. يمكنك الضرب في *<span dir="ltr">G</span>*. ولكن بسبب طبيعة <span dir="ltr">ECC</span>، من المستحيل عمليًا القسمة على *<span dir="ltr">G</span>*. الطريقة التي يعمل بها تشفير المفتاح العام بشكل عام في إيثيريوم هي أنه يمكنك استخدام مفتاح خاص، *<span dir="ltr">P<sub>priv</sub></span>*، لتوقيع المعاملات التي يتم التحقق منها بعد ذلك بواسطة مفتاح عام، *<span dir="ltr">P<sub>pub</sub> = GP<sub>priv</sub></span>*. 
 
-تنشئ أليس مفتاحين خاصين، _K<sub>priv</sub>_ و _V<sub>priv</sub>_. سيتم استخدام _K<sub>priv</sub>_ لإنفاق الأموال من عنوان التخفي، و_V<sub>priv</sub>_ لعرض العناوين التي تنتمي إلى أليس. ثم تنشر أليس المفاتيح العامة: _K<sub>pub</sub> = GK<sub>priv</sub>_ و _V<sub>pub</sub> = GV<sub>priv</sub>_
+تنشئ أليس مفتاحين خاصين، *<span dir="ltr">K<sub>priv</sub></span>* و *<span dir="ltr">V<sub>priv</sub></span>*. سيتم استخدام *<span dir="ltr">K<sub>priv</sub></span>* لإنفاق الأموال من العنوان المتخفي، و *<span dir="ltr">V<sub>priv</sub></span>* لعرض العناوين التي تنتمي إلى أليس. ثم تنشر أليس المفاتيح العامة: *<span dir="ltr">K<sub>pub</sub> = GK<sub>priv</sub></span>* و *<span dir="ltr">V<sub>pub</sub> = GV<sub>priv</sub></span>*
 
-ينشئ بيل مفتاحًا خاصًا ثالثًا، _R<sub>priv</sub>_، وينشر _R<sub>pub</sub> = GR<sub>priv</sub>_ في سجل مركزي (كان بإمكان بيل أيضًا إرساله إلى أليس، لكننا نفترض أن كارول تستمع).
+ينشئ بيل مفتاحًا خاصًا ثالثًا، *<span dir="ltr">R<sub>priv</sub></span>*، وينشر *<span dir="ltr">R<sub>pub</sub> = GR<sub>priv</sub></span>* في سجل مركزي (كان بإمكان بيل أيضًا إرساله إلى أليس، لكننا نفترض أن كارول تستمع).
 
-يحسب بيل _R<sub>priv</sub>V<sub>pub</sub> = GR<sub>priv</sub>V<sub>priv</sub>_، وهو ما يتوقع أن تعرفه أليس أيضًا (مشروح أدناه). تسمى هذه القيمة _S_، السر المشترك. هذا يعطي بيل مفتاحًا عامًا، _P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)_. من هذا المفتاح العام، يمكنه حساب عنوان وإرسال أي موارد يريدها إليه. في المستقبل، إذا فازت أليس، يمكن لبيل أن يخبرها بـ _R<sub>priv</sub>_ لإثبات أن الموارد جاءت منه.
+يحسب بيل *<span dir="ltr">R<sub>priv</sub>V<sub>pub</sub> = GR<sub>priv</sub>V<sub>priv</sub></span>*، والذي يتوقع أن تعرفه أليس أيضًا (موضح أدناه). تسمى هذه القيمة *<span dir="ltr">S</span>*، السر المشترك. يمنح هذا بيل مفتاحًا عامًا، *<span dir="ltr">P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)</span>*. من هذا المفتاح العام، يمكنه حساب عنوان وإرسال أي موارد يريدها إليه. في المستقبل، إذا فازت أليس، يمكن لبيل أن يخبرها بـ *<span dir="ltr">R<sub>priv</sub></span>* لإثبات أن الموارد جاءت منه.
 
-تحسب أليس _R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub>_. وهذا يعطيها نفس السر المشترك، _S_. لأنها تعرف المفتاح الخاص، _K<sub>priv</sub>_، يمكنها حساب _P<sub>priv</sub> = K<sub>priv</sub>+hash(S)_. يسمح لها هذا المفتاح بالوصول إلى الأصول الموجودة في العنوان الناتج عن _P<sub>pub</sub> = GP<sub>priv</sub> = GK<sub>priv</sub>+G\*hash(S) = K<sub>pub</sub>+G\*hash(S)_.
+تحسب أليس *<span dir="ltr">R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub></span>*. هذا يمنحها نفس السر المشترك، *<span dir="ltr">S</span>*. ولأنها تعرف المفتاح الخاص، *<span dir="ltr">K<sub>priv</sub></span>*، يمكنها حساب *<span dir="ltr">P<sub>priv</sub> = K<sub>priv</sub>+hash(S)</span>*. يتيح لها هذا المفتاح الوصول إلى الأصول في العنوان الذي ينتج عن *<span dir="ltr">P<sub>pub</sub> = GP<sub>priv</sub> = GK<sub>priv</sub>+G\*hash(S) = K<sub>pub</sub>+G\*hash(S)</span>*.
 
-لدينا مفتاح عرض منفصل للسماح لأليس بالتعاقد من الباطن مع خدمات حملة Dave للسيطرة على العالم. أليس على استعداد لإبلاغ Dave بالعناوين العامة وإبلاغها عند توفر المزيد من الأموال، لكنها لا تريده أن ينفق أموال حملتها.
+لدينا مفتاح عرض منفصل للسماح لأليس بالتعاقد من الباطن مع خدمات حملة ديف للسيطرة على العالم. أليس مستعدة للسماح لديف بمعرفة العناوين العامة وإبلاغها عند توفر المزيد من الأموال، لكنها لا تريده أن ينفق أموال حملتها.
 
-لأن العرض والإنفاق يستخدمان مفاتيح منفصلة، يمكن لأليس أن تعطي Dave _V<sub>priv</sub>_. ثم يمكن لـ Dave حساب _S = R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub>_ وبهذه الطريقة يحصل على المفاتيح العامة (_P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)_). ولكن بدون _K<sub>priv</sub>_ لا يستطيع Dave الحصول على المفتاح الخاص.
+نظرًا لأن العرض والإنفاق يستخدمان مفاتيح منفصلة، يمكن لأليس إعطاء ديف *<span dir="ltr">V<sub>priv</sub></span>*. ثم يمكن لديف حساب *<span dir="ltr">S = R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub></span>* وبهذه الطريقة يحصل على المفاتيح العامة (*<span dir="ltr">P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)</span>*). ولكن بدون *<span dir="ltr">K<sub>priv</sub></span>* لا يمكن لديف الحصول على المفتاح الخاص.
 
-للتلخيص، هذه هي القيم التي يعرفها المشاركون المختلفون.
+باختصار، هذه هي القيم التي يعرفها المشاركون المختلفون.
 
-| أليس                                                                      | منشور             | بيل                                                                       | ديف                                                                         |                                                 |
-| ------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------- |
-| G                                                                         | G                 | G                                                                         | G                                                                           |                                                 |
-| _K<sub>priv</sub>_                                                        | ـ                 | ـ                                                                         | ـ                                                                           |                                                 |
-| _V<sub>priv</sub>_                                                        | ـ                 | ـ                                                                         | _V<sub>priv</sub>_                                                          |                                                 |
-| _K<sub>pub</sub> = GK<sub>priv</sub>_                                     | _K<sub>pub</sub>_ | _K<sub>pub</sub>_                                                         | _K<sub>pub</sub>_                                                           |                                                 |
-| _V<sub>pub</sub> = GV<sub>priv</sub>_                                     | _V<sub>pub</sub>_ | _V<sub>pub</sub>_                                                         | _V<sub>pub</sub>_                                                           |                                                 |
-| ـ                                                                         | ـ                 | _R<sub>priv</sub>_                                                        | ـ                                                                           |                                                 |
-| _R<sub>pub</sub>_                                                         | _R<sub>pub</sub>_ | _R<sub>pub</sub> = GR<sub>priv</sub>_                                     | _R<sub>pub</sub>_                                                           |                                                 |
-| _S = R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub>_ | ـ                 | _S = R<sub>priv</sub>V<sub>pub</sub> = GR<sub>priv</sub>V<sub>priv</sub>_ | _S = _R<sub>pub</sub>V<sub>priv</sub>_ = GR<sub>priv</sub>V<sub>priv</sub>_ |                                                 |
-| _P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)_         | ـ                 | _P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)_         | _P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)_           |                                                 |
-| _Address=f(P<sub>pub</sub>)_                           | ـ                 | _Address=f(P<sub>pub</sub>)_                           | _Address=f(P<sub>pub</sub>)_                             | _Address=f(P<sub>pub</sub>)_ |
-| _P<sub>priv</sub> = K<sub>priv</sub>+hash(S)_          | ـ                 | ـ                                                                         | ـ                                                                           |                                                 |
+| أليس | منشور | بيل | ديف |
+| - | - | - | - |
+| <span dir="ltr">G</span> | <span dir="ltr">G</span> | <span dir="ltr">G</span> | <span dir="ltr">G</span> |
+| *<span dir="ltr">K<sub>priv</sub></span>* | - | - | - | 
+| *<span dir="ltr">V<sub>priv</sub></span>* | - | - | *<span dir="ltr">V<sub>priv</sub></span>* |
+| *<span dir="ltr">K<sub>pub</sub> = GK<sub>priv</sub></span>* | *<span dir="ltr">K<sub>pub</sub></span>* | *<span dir="ltr">K<sub>pub</sub></span>* | *<span dir="ltr">K<sub>pub</sub></span>* |
+| *<span dir="ltr">V<sub>pub</sub> = GV<sub>priv</sub></span>* | *<span dir="ltr">V<sub>pub</sub></span>* | *<span dir="ltr">V<sub>pub</sub></span>* | *<span dir="ltr">V<sub>pub</sub></span>* |
+| - | - | *<span dir="ltr">R<sub>priv</sub></span>* | - |
+| *<span dir="ltr">R<sub>pub</sub></span>* | *<span dir="ltr">R<sub>pub</sub></span>* | *<span dir="ltr">R<sub>pub</sub> = GR<sub>priv</sub></span>* | *<span dir="ltr">R<sub>pub</sub></span>* |
+| *<span dir="ltr">S = R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub></span>* | - | *<span dir="ltr">S = R<sub>priv</sub>V<sub>pub</sub> = GR<sub>priv</sub>V<sub>priv</sub></span>* | *<span dir="ltr">S = *R<sub>pub</sub>V<sub>priv</sub>* = GR<sub>priv</sub>V<sub>priv</sub></span>* |
+| *<span dir="ltr">P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)</span>* | - | *<span dir="ltr">P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)</span>* | *<span dir="ltr">P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)</span>* |
+| *<span dir="ltr">Address=f(P<sub>pub</sub>)</span>* | - | *<span dir="ltr">Address=f(P<sub>pub</sub>)</span>* | *<span dir="ltr">Address=f(P<sub>pub</sub>)</span>* | *<span dir="ltr">Address=f(P<sub>pub</sub>)</span>*
+| *<span dir="ltr">P<sub>priv</sub> = K<sub>priv</sub>+hash(S)</span>* | - | - | - |
 
-## عندما تسوء عناوين التخفي {#go-wrong}
+## عندما تسير الأمور بشكل خاطئ مع العناوين المتخفية {#go-wrong}
 
-_لا توجد أسرار على البلوكتشين_. بينما يمكن أن توفر لك عناوين التخفي الخصوصية، فإن هذه الخصوصية عرضة لتحليل حركة المرور. لاختيار مثال تافه، تخيل أن بيل يمول عنوانًا ويرسل على الفور معاملة لنشر قيمة _R<sub>pub</sub>_. بدون _V<sub>priv</sub>_ الخاص بأليس، لا يمكننا التأكد من أن هذا عنوان تخفي، ولكن هذا هو الرهان الأرجح. بعد ذلك، نرى معاملة أخرى تحول كل ETH من هذا العنوان إلى عنوان صندوق حملة أليس. قد لا نتمكن من إثبات ذلك، ولكن من المحتمل أن بيل قد تبرع للتو لحملة أليس. بالتأكيد ستفكر كارول كذلك.
+*لا توجد أسرار على سلسلة الكتل*. في حين أن العناوين المتخفية يمكن أن توفر لك الخصوصية، فإن هذه الخصوصية عرضة لتحليل حركة المرور. لنأخذ مثالاً بسيطًا، تخيل أن بيل يمول عنوانًا ويرسل على الفور معاملة لنشر قيمة *<span dir="ltr">R<sub>pub</sub></span>*. بدون *<span dir="ltr">V<sub>priv</sub></span>* الخاص بـ أليس، لا يمكننا التأكد من أن هذا عنوان متخفي، ولكن هذا هو الاحتمال الأرجح. ثم، نرى معاملة أخرى تقوم بـ تحويل كل الـ <span dir="ltr">ETH</span> من ذلك العنوان إلى عنوان صندوق حملة أليس. قد لا نتمكن من إثبات ذلك، ولكن من المحتمل أن بيل قد تبرع للتو لحملة أليس. من المؤكد أن كارول ستعتقد ذلك.
 
-من السهل على بيل فصل نشر _R<sub>pub</sub>_ عن تمويل عنوان التخفي (القيام بهما في أوقات مختلفة، ومن عناوين مختلفة). ومع ذلك، هذا غير كاف. النمط الذي تبحث عنه كارول هو أن بيل يمول عنوانًا، ثم يسحب صندوق حملة أليس منه.
+من السهل على بيل فصل نشر *<span dir="ltr">R<sub>pub</sub></span>* عن تمويل العنوان المتخفي (القيام بهما في أوقات مختلفة، ومن عناوين مختلفة). ومع ذلك، هذا غير كافٍ. النمط الذي تبحث عنه كارول هو أن بيل يمول عنوانًا، ثم يسحب صندوق حملة أليس منه. 
 
-أحد الحلول هو ألا تسحب حملة أليس الأموال مباشرة، بل تستخدمها للدفع لطرف ثالث. إذا أرسلت حملة أليس 10 ETH إلى خدمات حملة Dave للسيطرة على العالم، فإن كارول تعرف فقط أن بيل تبرع لأحد عملاء Dave. إذا كان لدى Dave عدد كافٍ من العملاء، فلن تتمكن كارول من معرفة ما إذا كان بيل قد تبرع لأليس التي تتنافس معها، أو لآدم أو ألبرت أو أبيجيل الذين لا تهتم بهم كارول. يمكن لأليس تضمين قيمة مجزأة مع الدفعة، ثم تزويد Dave بالصورة الأولية، لإثبات أنها كانت تبرعها. بدلاً من ذلك، كما هو مذكور أعلاه، إذا أعطت أليس لـ Dave مفتاحها _V<sub>priv</sub>_، فهو يعرف بالفعل من أين جاءت الدفعة.
+أحد الحلول هو ألا تسحب حملة أليس الأموال مباشرة، بل تستخدمها للدفع لطرف ثالث. إذا أرسلت حملة أليس <span dir="ltr">10 ETH</span> إلى خدمات حملة ديف للسيطرة على العالم، فإن كارول تعرف فقط أن بيل تبرع لأحد عملاء ديف. إذا كان لدى ديف عدد كافٍ من العملاء، فلن تتمكن كارول من معرفة ما إذا كان بيل قد تبرع لأليس التي تتنافس معها، أو لآدم أو ألبرت أو أبيجيل الذين لا تهتم بهم كارول. يمكن لأليس تضمين قيمة تجزئة مع الدفعة، ثم تزويد ديف بالصورة المسبقة (preimage)، لإثبات أنها كانت تبرعها. بدلاً من ذلك، كما لوحظ أعلاه، إذا أعطت أليس ديف *<span dir="ltr">V<sub>priv</sub></span>* الخاص بها، فهو يعرف بالفعل من أين جاءت الدفعة.
 
-المشكلة الرئيسية في هذا الحل هي أنه يتطلب من أليس الاهتمام بالسرية عندما تفيد هذه السرية بيل. قد ترغب أليس في الحفاظ على سمعتها حتى يتبرع لها صديق بيل، بوب، أيضًا. ولكن من الممكن أيضًا ألا تمانع في فضح بيل، لأنه حينها سيخاف مما سيحدث إذا فازت كارول. قد ينتهي الأمر ببيل بتقديم المزيد من الدعم لأليس.
+المشكلة الرئيسية في هذا الحل هي أنه يتطلب من أليس الاهتمام بالسرية عندما تفيد هذه السرية بيل. قد ترغب أليس في الحفاظ على سمعتها حتى يتبرع لها بوب صديق بيل أيضًا. ولكن من الممكن أيضًا ألا تمانع في فضح بيل، لأنه حينها سيخاف مما سيحدث إذا فازت كارول. قد ينتهي الأمر ببيل بتقديم المزيد من الدعم لأليس.
 
 ### استخدام طبقات تخفي متعددة {#multi-layer}
 
-بدلاً من الاعتماد على أليس للحفاظ على خصوصية بيل، يمكن لبيل أن يفعل ذلك بنفسه. يمكنه إنشاء عناوين meta-addresses متعددة لأشخاص وهميين، بوب وبيلا. ثم يرسل بيل ETH إلى بوب، و"بوب" (وهو في الواقع بيل) يرسله إلى بيلا. "بيلا" (وهي أيضًا بيل) ترسلها إلى أليس.
+بدلاً من الاعتماد على أليس للحفاظ على الخصوصية الخاصة بـ بيل، يمكن لبيل القيام بذلك بنفسه. يمكنه إنشاء عناوين وصفية متعددة لأشخاص خياليين، بوب وبيلا. ثم يرسل بيل <span dir="ltr">ETH</span> إلى بوب، و"بوب" (وهو في الواقع بيل) يرسله إلى بيلا. "بيلا" (وهي أيضًا بيل) ترسله إلى أليس.
 
-لا يزال بإمكان كارول إجراء تحليل لحركة المرور ورؤية خط أنابيب بيل-إلى-بوب-إلى-بيلا-إلى-أليس. ومع ذلك، إذا استخدم "بوب" و"بيلا" أيضًا ETH لأغراض أخرى، فلن يظهر أن بيل قد حول أي شيء إلى أليس، حتى لو سحبت أليس على الفور من عنوان التخفي إلى عنوان حملتها المعروف.
+لا يزال بإمكان كارول إجراء تحليل لحركة المرور ورؤية مسار بيل-إلى-بوب-إلى-بيلا-إلى-أليس. ومع ذلك، إذا استخدم "بوب" و"بيلا" أيضًا <span dir="ltr">ETH</span> لأغراض أخرى، فلن يبدو أن بيل قد قام بـ تحويل أي شيء إلى أليس، حتى لو سحبت أليس على الفور من العنوان المتخفي إلى عنوان حملتها المعروف.
 
-## كتابة تطبيق عنوان تخفي {#write-app}
+## كتابة تطبيق للعنوان المتخفي {#write-app}
 
-يشرح هذا المقال تطبيق عنوان تخفي [متوفر على غيت هاب](https://github.com/qbzzt/251022-stealth-addresses.git).
+يشرح هذا المقال تطبيقًا للعنوان المتخفي [متاحًا على <span dir="ltr">GitHub</span>](https://github.com/qbzzt/251022-stealth-addresses.git). 
 
-### أدوات {#tools}
+### الأدوات {#tools}
 
-هناك [مكتبة عناوين تخفي typescript](https://github.com/ScopeLift/stealth-address-sdk) يمكننا استخدامها. ومع ذلك، يمكن أن تكون العمليات المشفرة كثيفة الاستخدام لوحدة المعالجة المركزية. أفضل تنفيذها بلغة مجمعة، مثل [راست](https://rust-lang.org/)، واستخدام [WASM](https://webassembly.org/) لتشغيل النص البرمجي في المتصفح.
+هناك [مكتبة عناوين متخفية بـ <span dir="ltr">TypeScript</span>](https://github.com/ScopeLift/stealth-address-sdk) يمكننا استخدامها. ومع ذلك، يمكن أن تكون عمليات علم التشفير مكثفة لوحدة المعالجة المركزية. أفضل تنفيذها بلغة مجمعة، مثل [<span dir="ltr">Rust</span>](https://rust-lang.org/)، واستخدام [<span dir="ltr">WASM</span>](https://webassembly.org/) لتشغيل الكود في المتصفح.
 
-سنستخدم [فيت](https://vite.dev/) و [رياكت](https://react.dev/). هذه أدوات قياسية في الصناعة؛ إذا لم تكن على دراية بها، يمكنك استخدام [هذا البرنامج التعليمي](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). لاستخدام فيت، نحتاج إلى Node.
+سنستخدم [<span dir="ltr">Vite</span>](https://vite.dev/) و [<span dir="ltr">React</span>](https://react.dev/). هذه أدوات متوافقة مع معايير الصناعة؛ إذا لم تكن على دراية بها، يمكنك استخدام [هذا البرنامج التعليمي](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). لاستخدام <span dir="ltr">Vite</span>، نحتاج إلى <span dir="ltr">Node</span>.
 
-### شاهد عناوين التخفي أثناء العمل {#in-action}
+### رؤية العناوين المتخفية أثناء العمل {#in-action}
 
-1. قم بتثبيت الأدوات اللازمة: [راست](https://rust-lang.org/tools/install/) و [Node](https://nodejs.org/en/download).
+1. قم بتثبيت الأدوات اللازمة: [<span dir="ltr">Rust</span>](https://rust-lang.org/tools/install/) و [<span dir="ltr">Node</span>](https://nodejs.org/en/download).
 
-2. استنسخ مستودع غيت هاب.
+2. استنسخ مستودع <span dir="ltr">GitHub</span>.
 
    ```sh
    git clone https://github.com/qbzzt/251022-stealth-addresses.git
    cd 251022-stealth-addresses
    ```
 
-3. قم بتثبيت المتطلبات الأساسية وتجميع كود راست.
+3. قم بتثبيت المتطلبات الأساسية وتجميع كود <span dir="ltr">Rust</span>.
 
    ```sh
    cd src/rust-wasm
@@ -122,25 +116,25 @@ _لا توجد أسرار على البلوكتشين_. بينما يمكن أن
    npm run dev
    ```
 
-5. تصفح [التطبيق](http://localhost:5173/). تحتوي صفحة التطبيق هذه على إطارين: أحدهما لواجهة مستخدم أليس والآخر لواجهة مستخدم بيل. لا يتواصل الإطاران؛ إنهما على نفس الصفحة فقط للراحة.
+5. تصفح إلى [التطبيق](http://localhost:5173/). تحتوي صفحة التطبيق هذه على إطارين: أحدهما لواجهة مستخدم أليس والآخر لواجهة بيل. الإطاران لا يتواصلان؛ هما فقط في نفس الصفحة للراحة.
 
-6. بصفتك أليس، انقر فوق **إنشاء عنوان Meta-Address للتخفي**. سيعرض هذا عنوان التخفي الجديد والمفاتيح الخاصة المقابلة. انسخ عنوان meta-address التخفي إلى الحافظة.
+6. بصفتك أليس، انقر فوق **Generate a Stealth Meta-Address** (إنشاء عنوان وصفي متخفي). سيعرض هذا العنوان المتخفي الجديد والمفاتيح الخاصة المقابلة. انسخ العنوان الوصفي المتخفي إلى الحافظة.
 
-7. بصفتك بيل، الصق عنوان meta-address التخفي الجديد وانقر فوق **إنشاء عنوان**. يمنحك هذا العنوان لتمويل أليس.
+7. بصفتك بيل، الصق العنوان الوصفي المتخفي الجديد وانقر فوق **Generate an address** (إنشاء عنوان). يمنحك هذا العنوان لتمويله لأليس. 
 
-8. انسخ العنوان والمفتاح العام لبيل والصقهما في منطقة "المفتاح الخاص للعنوان الذي أنشأه بيل" في واجهة مستخدم أليس. بمجرد ملء هذه الحقول، سترى المفتاح الخاص للوصول إلى الأصول الموجودة في ذلك العنوان.
+8. انسخ العنوان والمفتاح العام الخاص بـ بيل والصقهما في منطقة "Private key for address generated by Bill" (المفتاح الخاص للعنوان الذي أنشأه بيل) في واجهة مستخدم أليس. بمجرد ملء هذه الحقول، سترى المفتاح الخاص للوصول إلى الأصول في ذلك العنوان.
 
 9. يمكنك استخدام [آلة حاسبة عبر الإنترنت](https://iancoleman.net/ethereum-private-key-to-address/) للتأكد من أن المفتاح الخاص يتوافق مع العنوان.
 
-### كيفية عمل البرنامج {#how-the-program-works}
+### كيف يعمل البرنامج {#how-the-program-works}
 
 #### مكون WASM {#wasm}
 
-كود المصدر الذي يتم تجميعه في WASM مكتوب بلغة [راست](https://rust-lang.org/). يمكنك رؤيته في [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). هذا الكود هو في المقام الأول واجهة بين كود جافا سكريبت و [مكتبة `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+الكود المصدري الذي يتم تجميعه في <span dir="ltr">WASM</span> مكتوب بلغة [<span dir="ltr">Rust</span>](https://rust-lang.org/). يمكنك رؤيته في [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). هذا الكود هو في الأساس واجهة بين كود <span dir="ltr">JavaScript</span> و [مكتبة `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 **`Cargo.toml`**
 
-[`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) في راست يشبه [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) في جافا سكريبت. يحتوي على معلومات الحزمة، وإعلانات التبعية، وما إلى ذلك.
+[`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) في <span dir="ltr">Rust</span> يشبه [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) في <span dir="ltr">JavaScript</span>. يحتوي على معلومات الحزمة، وإعلانات التبعية، إلخ.
 
 ```toml
 [package]
@@ -155,32 +149,32 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-تحتاج حزمة [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) إلى إنشاء قيم عشوائية. لا يمكن القيام بذلك بوسائل خوارزمية بحتة؛ فهو يتطلب الوصول إلى عملية مادية كمصدر للإنتروبيا. يحدد هذا التعريف أننا سنحصل على تلك الإنتروبيا عن طريق سؤال المتصفح الذي نعمل فيه.
+تحتاج حزمة [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) إلى إنشاء قيم عشوائية. لا يمكن القيام بذلك بوسائل خوارزمية بحتة؛ فهو يتطلب الوصول إلى عملية فيزيائية كمصدر لـ إنتروبيا. يحدد هذا التعريف أننا سنحصل على هذه الـ إنتروبيا عن طريق سؤال المتصفح الذي نعمل فيه.
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-تمنحنا [هذه المكتبة](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) رسائل خطأ ذات مغزى أكبر عندما يصاب كود WASM بالذعر ولا يمكنه المتابعة.
+تمنحنا [هذه المكتبة](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) رسائل خطأ ذات مغزى أكبر عندما يصاب كود <span dir="ltr">WASM</span> بالذعر (panics) ولا يمكنه الاستمرار.
 
 ```toml
 [lib]
 crate-type = ["cdylib", "rlib"]
 ```
 
-نوع الإخراج المطلوب لإنتاج كود WASM.
+نوع المخرجات المطلوب لإنتاج كود <span dir="ltr">WASM</span>.
 
 **`lib.rs`**
 
-هذا هو كود راست الفعلي.
+هذا هو كود <span dir="ltr">Rust</span> الفعلي.
 
 ```rust
 use wasm_bindgen::prelude::*;
 ```
 
-التعريفات لإنشاء حزمة WASM من راست. وهي موثقة [هنا](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
+التعريفات لإنشاء حزمة <span dir="ltr">WASM</span> من <span dir="ltr">Rust</span>. وهي موثقة [هنا](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
 
-```rust
+```rust 
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -188,25 +182,25 @@ use eth_stealth_addresses::{
 };
 ```
 
-الوظائف التي نحتاجها من [مكتبة `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+الدوال التي نحتاجها من [مكتبة `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 ```rust
 use hex::{decode,encode};
 ```
 
-تستخدم راست عادةً [مصفوفات](https://doc.rust-lang.org/std/primitive.array.html) بايت (`[u8; <size>]`) للقيم. ولكن في جافا سكريبت، نستخدم عادةً سلاسل سداسية عشرية. تترجم لنا [مكتبة `hex`](https://docs.rs/hex/latest/hex/) من تمثيل إلى آخر.
+تستخدم <span dir="ltr">Rust</span> عادةً [مصفوفات](https://doc.rust-lang.org/std/primitive.array.html) البايت (`[u8; <size>]`) للقيم. ولكن في <span dir="ltr">JavaScript</span>، نستخدم عادةً السلاسل السداسية العشرية. تترجم [مكتبة `hex`](https://docs.rs/hex/latest/hex/) لنا من تمثيل إلى آخر.
 
 ```rust
 #[wasm_bindgen]
 ```
 
-قم بإنشاء روابط WASM لتتمكن من استدعاء هذه الوظيفة من جافا سكريبت.
+قم بإنشاء روابط <span dir="ltr">WASM</span> لتتمكن من استدعاء هذه الدالة من <span dir="ltr">JavaScript</span>.
 
 ```rust
 pub fn wasm_generate_stealth_meta_address() -> String {
 ```
 
-أسهل طريقة لإرجاع كائن بحقول متعددة هي إرجاع سلسلة JSON.
+أسهل طريقة لإرجاع كائن بحقول متعددة هي إرجاع سلسلة <span dir="ltr">JSON</span>. 
 
 ```rust
     let (address, spend_private_key, view_private_key) = 
@@ -215,11 +209,11 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 
 تُرجع [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) ثلاثة حقول:
 
-- العنوان الوصفي (_K<sub>pub</sub>_ و _V<sub>pub</sub>_)
-- مفتاح العرض الخاص (_V<sub>priv</sub>_)
-- مفتاح الإنفاق الخاص (_K<sub>priv</sub>_)
+- العنوان الوصفي (*<span dir="ltr">K<sub>pub</sub></span>* و *<span dir="ltr">V<sub>pub</sub></span>*)
+- المفتاح الخاص للعرض (*<span dir="ltr">V<sub>priv</sub></span>*)
+- المفتاح الخاص للإنفاق (*<span dir="ltr">K<sub>priv</sub></span>*)
 
-يسمح لنا بناء جملة [tuple](https://doc.rust-lang.org/std/primitive.tuple.html) بفصل هذه القيم مرة أخرى.
+تتيح لنا صيغة [الصفوف (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) فصل هذه القيم مرة أخرى.
 
 ```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
@@ -230,59 +224,59 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 }
 ```
 
-استخدم ماكرو [`format!`](https://doc.rust-lang.org/std/fmt/index.html) لإنشاء السلسلة المشفرة بـ JSON. استخدم [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) لتغيير المصفوفات إلى سلاسل سداسية عشرية.
+استخدم ماكرو [`format!`](https://doc.rust-lang.org/std/fmt/index.html) لإنشاء السلسلة المشفرة بـ <span dir="ltr">JSON</span>. استخدم [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) لتغيير المصفوفات إلى سلاسل سداسية عشرية.
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-تحول هذه الدالة سلسلة سداسية عشرية (مقدمة من جافا سكريبت) إلى مصفوفة بايت. نستخدمها لتحليل القيم المقدمة من كود جافا سكريبت. هذه الدالة معقدة بسبب كيفية تعامل راست مع المصفوفات والمتجهات.
+تحول هذه الدالة سلسلة سداسية عشرية (مقدمة من <span dir="ltr">JavaScript</span>) إلى مصفوفة بايت. نستخدمها لتحليل القيم المقدمة بواسطة كود <span dir="ltr">JavaScript</span>. هذه الدالة معقدة بسبب كيفية تعامل <span dir="ltr">Rust</span> مع المصفوفات والمتجهات.
 
-يُطلق على التعبير `<const N: usize>` اسم [عام](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` هي معلمة تتحكم في طول المصفوفة المرتجعة. الدالة تسمى في الواقع `str_to_array::<n>`، حيث `n` هو طول المصفوفة.
+يُطلق على تعبير `<const N: usize>` اسم [عام (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` هو معلمة تتحكم في طول المصفوفة المرجعة. تسمى الدالة في الواقع `str_to_array::<n>`، حيث `n` هو طول المصفوفة.
 
-القيمة المرتجعة هي `Option<[u8; N]>`، مما يعني أن المصفوفة المرتجعة [اختيارية](https://doc.rust-lang.org/std/option/). هذا نمط نموذجي في راست للوظائف التي قد تفشل.
+القيمة المرجعة هي `Option<[u8; N]>`، مما يعني أن المصفوفة المرجعة [اختيارية](https://doc.rust-lang.org/std/option/). هذا نمط نموذجي في <span dir="ltr">Rust</span> للدوال التي قد تفشل.
 
-على سبيل المثال، إذا استدعينا `str_to_array::10("bad060a7")`، فمن المفترض أن ترجع الدالة مصفوفة من عشر قيم، لكن الإدخال هو أربعة بايت فقط. يجب أن تفشل الدالة، وهي تفعل ذلك عن طريق إرجاع `None`. القيمة المرتجعة لـ `str_to_array::4("bad060a7")` ستكون `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
+على سبيل المثال، إذا استدعينا `str_to_array::10("bad060a7")`، فمن المفترض أن تُرجع الدالة مصفوفة من عشر قيم، لكن الإدخال هو أربعة بايتات فقط. يجب أن تفشل الدالة، وتفعل ذلك عن طريق إرجاع `None`. ستكون القيمة المرجعة لـ `str_to_array::4("bad060a7")` هي `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
 
 ```rust
-    // decode returns Result<Vec<u8>, _>
+    // تُرجع decode Result<Vec<u8>, _>
     let vec = decode(s).ok()?;
 ```
 
-تُرجع الدالة [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) `Result<Vec<u8>, FromHexError>`. يمكن أن يحتوي نوع [`Result`](https://doc.rust-lang.org/std/result/) إما على نتيجة ناجحة (`Ok(value)`) أو خطأ (`Err(error)`).
+تُرجع دالة [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) `Result<Vec<u8>, FromHexError>`. يمكن أن يحتوي نوع [`Result`](https://doc.rust-lang.org/std/result/) إما على نتيجة ناجحة (`Ok(value)`) أو خطأ (`Err(error)`).
 
-يحول الأسلوب `.ok()` `Result` إلى `Option`، وقيمته هي إما قيمة `Ok()` إذا نجحت أو `None` إذا لم تنجح. أخيرًا، يقوم [عامل علامة الاستفهام](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) بإيقاف الوظائف الحالية وإرجاع `None` إذا كان `Option` فارغًا. خلاف ذلك، فإنه يفك القيمة ويعيدها (في هذه الحالة، لتعيين قيمة لـ `vec`).
+تحول طريقة `.ok()` الـ `Result` إلى `Option`، والتي تكون قيمتها إما قيمة `Ok()` إذا نجحت أو `None` إذا لم تنجح. أخيرًا، يقوم [عامل علامة الاستفهام](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) بإحباط الدوال الحالية وإرجاع `None` إذا كان `Option` فارغًا. بخلاف ذلك، فإنه يفك تغليف القيمة ويرجعها (في هذه الحالة، لتعيين قيمة لـ `vec`).
 
-تبدو هذه طريقة معقدة بشكل غريب للتعامل مع الأخطاء، لكن `Result` و`Option` يضمنان معالجة جميع الأخطاء، بطريقة أو بأخرى.
+تبدو هذه طريقة معقدة بشكل غريب للتعامل مع الأخطاء، لكن `Result` و `Option` يضمنان التعامل مع جميع الأخطاء، بطريقة أو بأخرى.
 
 ```rust
     if vec.len() != N { return None; }
 ```
 
-إذا كان عدد البايتات غير صحيح، فهذا فشل، ونقوم بإرجاع `None`.
+إذا كان عدد البايتات غير صحيح، فهذا فشل، ونرجع `None`.
 
 ```rust
-    // try_into consumes vec and attempts to make [u8; N]
+    // تستهلك try_into vec وتحاول إنشاء [u8; N]
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-لدى راست نوعان من المصفوفات. [المصفوفات](https://doc.rust-lang.org/std/primitive.array.html) لها حجم ثابت. يمكن أن تنمو [المتجهات](https://doc.rust-lang.org/std/vec/index.html) وتتقلص. تُرجع `hex::decode` متجهًا، لكن مكتبة `eth_stealth_addresses` تريد استقبال مصفوفات. يحول [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) قيمة إلى نوع آخر، على سبيل المثال، متجه إلى مصفوفة.
+تحتوي <span dir="ltr">Rust</span> على نوعين من المصفوفات. [المصفوفات (Arrays)](https://doc.rust-lang.org/std/primitive.array.html) لها حجم ثابت. يمكن أن تنمو [المتجهات (Vectors)](https://doc.rust-lang.org/std/vec/index.html) وتتقلص. تُرجع `hex::decode` متجهًا، لكن مكتبة `eth_stealth_addresses` تريد تلقي مصفوفات. تقوم [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) بتحويل قيمة إلى نوع آخر، على سبيل المثال، متجه إلى مصفوفة.
 
 ```rust
     Some(array)
 }
 ```
 
-لا تتطلب منك راست استخدام الكلمة المفتاحية [`return`](https://doc.rust-lang.org/std/keyword.return.html) عند إرجاع قيمة في نهاية دالة.
+لا تتطلب منك <span dir="ltr">Rust</span> استخدام الكلمة الأساسية [`return`](https://doc.rust-lang.org/std/keyword.return.html) عند إرجاع قيمة في نهاية الدالة.
 
 ```rust
 #[wasm_bindgen]
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-تتلقى هذه الدالة عنوان meta-address عامًا، والذي يتضمن كلاً من _V<sub>pub</sub>_ و _K<sub>pub</sub>_. ترجع عنوان التخفي، والمفتاح العام للنشر (_R<sub>pub</sub>_)، وقيمة مسح من بايت واحد تسرع من تحديد العناوين المنشورة التي قد تنتمي إلى أليس.
+تتلقى هذه الدالة عنوانًا وصفيًا عامًا، والذي يتضمن كلاً من *<span dir="ltr">V<sub>pub</sub></span>* و *<span dir="ltr">K<sub>pub</sub></span>*. تُرجع العنوان المتخفي، والمفتاح العام المراد نشره (*<span dir="ltr">R<sub>pub</sub></span>*)، وقيمة مسح ضوئي من بايت واحد تسرع من تحديد العناوين المنشورة التي قد تنتمي إلى أليس.
 
-قيمة المسح جزء من السر المشترك (_S = GR<sub>priv</sub>V<sub>priv</sub>_). هذه القيمة متاحة لأليس، والتحقق منها أسرع بكثير من التحقق مما إذا كانت _f(K<sub>pub</sub>+G\*hash(S))_ تساوي العنوان المنشور.
+قيمة المسح الضوئي هي جزء من السر المشترك (*<span dir="ltr">S = GR<sub>priv</sub>V<sub>priv</sub></span>*). هذه القيمة متاحة لأليس، والتحقق منها أسرع بكثير من التحقق مما إذا كان *<span dir="ltr">f(K<sub>pub</sub>+G\*hash(S))</span>* يساوي العنوان المنشور.
 
 ```rust
     let (address, r_pub, scan) = 
@@ -300,7 +294,7 @@ pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 }
 ```
 
-قم بإعداد سلسلة الإخراج المشفرة بـ JSON.
+قم بإعداد سلسلة المخرجات المشفرة بـ <span dir="ltr">JSON</span>.
 
 ```rust
 #[wasm_bindgen]
@@ -316,18 +310,18 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-تستخدم هذه الدالة [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) من المكتبة لحساب المفتاح الخاص للسحب من العنوان (_R<sub>priv</sub>_). يتطلب هذا الحساب القيم التالية:
+تستخدم هذه الدالة [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) الخاصة بالمكتبة لحساب المفتاح الخاص للسحب من العنوان (*<span dir="ltr">R<sub>priv</sub></span>*). يتطلب هذا الحساب هذه القيم:
 
-- العنوان (_Address=f(P<sub>pub</sub>)_)
-- المفتاح العام الذي أنشأه بيل (_R<sub>pub</sub>_)
-- مفتاح العرض الخاص (_V<sub>priv</sub>_)
-- مفتاح الإنفاق الخاص (_K<sub>priv</sub>_)
+- العنوان (*<span dir="ltr">Address=f(P<sub>pub</sub>)</span>*)
+- المفتاح العام الذي أنشأه بيل (*<span dir="ltr">R<sub>pub</sub></span>*)
+- المفتاح الخاص للعرض (*<span dir="ltr">V<sub>priv</sub></span>*)
+- المفتاح الخاص للإنفاق (*<span dir="ltr">K<sub>priv</sub></span>*)
 
 ```rust
 #[wasm_bindgen(start)]
 ```
 
-يحدد [`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) أن الدالة يتم تنفيذها عند تهيئة كود WASM.
+يحدد [`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) أنه يتم تنفيذ الدالة عند تهيئة كود <span dir="ltr">WASM</span>.
 
 ```rust
 pub fn main() {
@@ -335,7 +329,7 @@ pub fn main() {
 }
 ```
 
-يحدد هذا الكود إرسال مخرجات الذعر إلى وحدة تحكم جافا سكريبت. لرؤيته أثناء العمل، استخدم التطبيق وأعط بيل عنوانًا غير صالح لـ meta-address (فقط قم بتغيير رقم سداسي عشري واحد). سترى هذا الخطأ في وحدة تحكم جافا سكريبت:
+يحدد هذا الكود إرسال مخرجات الذعر (panic) إلى وحدة تحكم <span dir="ltr">JavaScript</span>. لرؤية ذلك أثناء العمل، استخدم التطبيق وامنح بيل عنوانًا وصفيًا غير صالح (فقط قم بتغيير رقم سداسي عشري واحد). سترى هذا الخطأ في وحدة تحكم <span dir="ltr">JavaScript</span>:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -344,24 +338,24 @@ assertion `left == right` failed
  right: 1
 ```
 
-يتبعها تتبع المكدس. ثم أعط بيل عنوان meta-address صالحًا، وأعط أليس إما عنوانًا غير صالح أو مفتاحًا عامًا غير صالح. سترى هذا الخطأ:
+متبوعًا بتتبع المكدس (stack trace). ثم امنح بيل العنوان الوصفي الصالح، وامنح أليس إما عنوانًا غير صالح أو مفتاحًا عامًا غير صالح. سترى هذا الخطأ:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
 keys do not generate stealth address
 ```
 
-مرة أخرى، يتبعها تتبع المكدس.
+مرة أخرى، متبوعًا بتتبع المكدس.
 
 #### واجهة المستخدم {#ui}
 
-واجهة المستخدم مكتوبة باستخدام [رياكت](https://react.dev/) ويتم تقديمها بواسطة [فيت](https://vite.dev/). يمكنك التعرف عليها باستخدام [هذا البرنامج التعليمي](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). ليست هناك حاجة لـ [WAGMI](https://wagmi.sh/) هنا لأننا لا نتفاعل مباشرة مع بلوكتشين أو محفظة.
+واجهة المستخدم مكتوبة باستخدام [<span dir="ltr">React</span>](https://react.dev/) ويتم تقديمها بواسطة [<span dir="ltr">Vite</span>](https://vite.dev/). يمكنك التعرف عليها باستخدام [هذا البرنامج التعليمي](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). ليست هناك حاجة لـ [<span dir="ltr">Wagmi</span>](https://wagmi.sh/) هنا لأننا لا نتفاعل مباشرة مع سلسلة الكتل أو محفظة.
 
-الجزء الوحيد غير الواضح في واجهة المستخدم هو اتصال WASM. إليك كيفية عمله.
+الجزء الوحيد غير الواضح في واجهة المستخدم هو اتصال <span dir="ltr">WASM</span>. إليك كيف يعمل.
 
 **`vite.config.js`**
 
-يحتوي هذا الملف على [تكوين فيت](https://vite.dev/config/).
+يحتوي هذا الملف على [تكوين <span dir="ltr">Vite</span>](https://vite.dev/config/).
 
 ```js
 import { defineConfig } from 'vite'
@@ -374,17 +368,17 @@ export default defineConfig({
 })
 ```
 
-نحتاج إلى مكونين إضافيين لـ فيت: [react](https://www.npmjs.com/package/@vitejs/plugin-react) و [wasm](https://github.com/Menci/vite-plugin-wasm#readme).
+نحتاج إلى إضافتين لـ <span dir="ltr">Vite</span>: [react](https://www.npmjs.com/package/@vitejs/plugin-react) و [wasm](https://github.com/Menci/vite-plugin-wasm#readme).
 
 **`App.jsx`**
 
-هذا الملف هو المكون الرئيسي للتطبيق. إنه حاوية تتضمن مكونين: `Alice` و `Bill`، واجهات المستخدم لهؤلاء المستخدمين. الجزء ذو الصلة بـ WASM هو كود التهيئة.
+هذا الملف هو المكون الرئيسي للتطبيق. إنه حاوية تتضمن مكونين: `Alice` و `Bill`، وهما واجهتا المستخدم لهؤلاء المستخدمين. الجزء ذو الصلة بـ <span dir="ltr">WASM</span> هو كود التهيئة.
 
 ```jsx
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-عندما نستخدم [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/)، فإنه ينشئ ملفين نستخدمهما هنا: ملف wasm يحتوي على الكود الفعلي (هنا، `src/rust-wasm/pkg/rust_wasm_bg.wasm`) وملف جافا سكريبت يحتوي على التعريفات اللازمة لاستخدامه (هنا، `src/rust_wasm/pkg/rust_wasm.js`). التصدير الافتراضي لملف جافا سكريبت هذا هو الكود الذي يجب تشغيله لبدء WASM.
+عندما نستخدم [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/)، فإنه ينشئ ملفين نستخدمهما هنا: ملف <span dir="ltr">wasm</span> يحتوي على الكود الفعلي (هنا، `src/rust-wasm/pkg/rust_wasm_bg.wasm`) وملف <span dir="ltr">JavaScript</span> يحتوي على التعريفات لاستخدامه (هنا، `src/rust_wasm/pkg/rust_wasm.js`). التصدير الافتراضي لملف <span dir="ltr">JavaScript</span> هذا هو الكود الذي يجب تشغيله لبدء <span dir="ltr">WASM</span>.
 
 ```jsx
 function App() {
@@ -407,19 +401,19 @@ function App() {
   )
 ```
 
-يتيح لك [خطاف `useEffect`](https://react.dev/reference/react/useEffect) تحديد دالة يتم تنفيذها عند تغيير متغيرات الحالة. هنا، قائمة متغيرات الحالة فارغة (`[]`)، لذلك يتم تنفيذ هذه الدالة مرة واحدة فقط عند تحميل الصفحة.
+يتيح لك [خطاف (hook) `useEffect`](https://react.dev/reference/react/useEffect) تحديد دالة يتم تنفيذها عندما تتغير متغيرات الحالة (state). هنا، قائمة متغيرات الحالة فارغة (`[]`)، لذلك يتم تنفيذ هذه الدالة مرة واحدة فقط عند تحميل الصفحة.
 
-يجب أن تعود دالة التأثير على الفور. لاستخدام كود غير متزامن، مثل `init` الخاص بـ WASM (الذي يجب عليه تحميل ملف `.wasm` وبالتالي يستغرق وقتًا) ، نحدد دالة [`async`](https://en.wikipedia.org/wiki/Async/await) داخلية ونقوم بتشغيلها بدون `await`.
+يجب أن تعود دالة التأثير (effect) على الفور. لاستخدام كود غير متزامن، مثل `init` الخاص بـ <span dir="ltr">WASM</span> (والذي يجب أن يحمل ملف `.wasm` وبالتالي يستغرق وقتًا) نحدد دالة [`async`](https://en.wikipedia.org/wiki/Async/await) داخلية ونقوم بتشغيلها بدون `await`.
 
 **`Bill.jsx`**
 
-هذه هي واجهة المستخدم لبيل. لديها إجراء واحد، وهو إنشاء عنوان بناءً على عنوان meta-address التخفي الذي قدمته أليس.
+هذه هي واجهة المستخدم الخاصة بـ بيل. لها إجراء واحد، وهو إنشاء عنوان بناءً على العنوان الوصفي المتخفي الذي قدمته أليس.
 
 ```jsx
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-بالإضافة إلى التصدير الافتراضي، يصدر كود جافا سكريبت الذي تم إنشاؤه بواسطة `wasm-pack` دالة لكل دالة في كود WASM.
+بالإضافة إلى التصدير الافتراضي، يقوم كود <span dir="ltr">JavaScript</span> الذي تم إنشاؤه بواسطة `wasm-pack` بتصدير دالة لكل دالة في كود <span dir="ltr">WASM</span>.
 
 ```jsx
             <button onClick={() => {
@@ -427,17 +421,17 @@ import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
             }}>
 ```
 
-لاستدعاء دوال WASM، نستدعي ببساطة الدالة التي تم تصديرها بواسطة ملف جافا سكريبت الذي أنشأه `wasm-pack`.
+لاستدعاء دوال <span dir="ltr">WASM</span>، نقوم فقط باستدعاء الدالة المصدرة بواسطة ملف <span dir="ltr">JavaScript</span> الذي تم إنشاؤه بواسطة `wasm-pack`.
 
 **`Alice.jsx`**
 
 الكود في `Alice.jsx` مشابه، باستثناء أن أليس لديها إجراءان:
 
-- إنشاء عنوان meta-address
+- إنشاء عنوان وصفي
 - الحصول على المفتاح الخاص لعنوان نشره بيل
 
-## الخلاصة {#conclusion}
+## الخاتمة {#conclusion}
 
-عناوين التخفي ليست حلاً سحريًا؛ يجب [استخدامها بشكل صحيح](#go-wrong). ولكن عند استخدامها بشكل صحيح، يمكنها تمكين الخصوصية على بلوكتشين عام.
+العناوين المتخفية ليست حلاً سحريًا؛ يجب [استخدامها بشكل صحيح](#go-wrong). ولكن عند استخدامها بشكل صحيح، يمكنها تمكين الخصوصية على سلسلة الكتل العامة.
 
-[انظر هنا لمزيد من أعمالي](https://cryptodocguy.pro/).
+[انظر هنا للمزيد من أعمالي](https://cryptodocguy.pro/).

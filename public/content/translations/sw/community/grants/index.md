@@ -23,6 +23,7 @@ Mipango hii inasaidia mfumo mpana wa ikolojia wa Ethereum kwa kutoa ruzuku kwa w
 - [Kichunguzi cha Ruzuku cha ESP](https://esp.ethereum.foundation/funded-projects) - _Saraka inayotafutika ya miradi 1,000+ inayoungwa mkono na Mpango wa Usaidizi wa Ikolojia_
 - [Ruzuku za Kitaaluma](https://esp.ethereum.foundation/academic-grants) - _Ruzuku za kusaidia kazi za kitaaluma zinazohusiana na Ethereum_
 
+
 ## Vijumuishi vya orodha ya ruzuku na majukwaa {#grant-list-aggregators}
 
 Rasilimali hizi zinakusanya na kupanga fursa mbalimbali za ruzuku katika mfumo mzima wa ikolojia wa Ethereum, na kurahisisha kugundua fursa za ufadhili zinazolingana na mahitaji ya mradi wako. Tumezipanga kulingana na aina ya mtu ili kukusaidia kuanza kupata rasilimali muhimu zaidi kulingana na mahitaji yako mahususi ya ufadhili.
@@ -61,6 +62,7 @@ Mipango hii inalenga kufadhili miradi inayonufaisha jamii pana, bidhaa za umma, 
 - [Giveth](https://giveth.io/) - _Jukwaa la michango ya kripto linalowezesha michango ya moja kwa moja kutoka kwa miradi ya hisani bila ada zozote za ziada_
 - [Artizen](https://artizen.fund/) - _Kusaidia wabunifu kulinganisha ufadhili wa miradi mipya katika Eneo Jipya la sanaa, sayansi, teknolojia na utamaduni_
 - [Kiharakishi cha Kipeo cha Pili](https://qacc.giveth.io/) - _Mpango wa kuharakisha kampuni zinazoanza ambao unatumia ufadhili wa kipeo cha pili kusaidia miradi inayonufaisha umma_
+
 
 ## Fanya kazi katika Ethereum {#work-in-ethereum}
 

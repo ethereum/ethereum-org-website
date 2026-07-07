@@ -1,44 +1,42 @@
 ---
-title: "Élection secrète du leader"
-description: "Explication sur la manière dont l'élection du leader secret peut aider à protéger les validateurs contre certaines attaques"
+title: Élection secrète du leader
+description: Explication de la façon dont l'élection secrète du leader peut aider à protéger les validateurs contre les attaques
 lang: fr
 summaryPoints:
-  - L'adresse IP des proposeurs de blocs peut être connue à l'avance, les rendant vulnérables aux attaques.
-  - L'élection d'un leader secret dissimule l'identité des validateurs de sorte qu'ils ne peuvent pas être connus à l'avance.
-  - Une extension de cette idée est de rendre la sélection des validateurs aléatoire pour chaque créneau.
+  - L'adresse IP des proposeurs de blocs peut être connue à l'avance, ce qui les rend vulnérables aux attaques
+  - L'élection secrète du leader masque l'identité des validateurs afin qu'ils ne soient pas connus à l'avance
+  - Une extension de cette idée consiste à rendre la sélection des validateurs aléatoire dans chaque créneau.
 ---
 
-# Élection secrète d'un leader unique {#single-secret-leader-election}
+Dans le mécanisme de consensus actuel basé sur la [preuve d'enjeu (PoS)](/developers/docs/consensus-mechanisms/pos), la liste des prochains proposeurs de blocs est publique et il est possible de cartographier leurs adresses IP. Cela signifie que des attaquants pourraient identifier quels validateurs doivent proposer un bloc et les cibler avec une attaque par déni de service (DOS) qui les empêcherait de proposer leur bloc à temps.
 
-Dans le mécanisme de consensus actuel basé sur la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos), la liste des futurs proposeurs de blocs est publique et il est possible de cartographier leurs adresses IP. Cela signifie que les attaquants pourraient identifier les validateurs censés proposer un bloc et cibler ces derniers via une attaque par déni de service (DOS) les rendant incapables de proposer leur bloc dans le temps imparti.
+Cela pourrait créer des opportunités de profit pour un attaquant. Par exemple, un proposeur de bloc sélectionné pour le créneau `n+1` pourrait lancer une attaque DOS contre le proposant du créneau `n` afin qu'il manque son opportunité de proposer un bloc. Cela permettrait au proposeur de bloc attaquant d'extraire la MEV des deux créneaux, ou de s'emparer de toutes les transactions qui auraient dû être réparties sur deux blocs pour les inclure toutes dans un seul, empochant ainsi tous les frais associés. Cela risque d'affecter les validateurs à domicile plus que les validateurs institutionnels sophistiqués qui peuvent utiliser des méthodes plus avancées pour se protéger des attaques DOS, et pourrait donc constituer une force de centralisation.
 
-Cela pourrait créer des opportunités de profit pour un attaquant. Par exemple, un proposeur de bloc sélectionné pour le créneau `n+1` pourrait attaquer par DOS le proposeur dans le créneau `n` afin qu'il manque son opportunité de proposer un bloc. Ceci permettrait au proposeur de bloc attaquant d'extraire la MEV (Valeur Maximale Extractible) des deux créneaux, ou de rassembler toutes les transactions qui auraient dû être réparties sur deux blocs et de les inclure toutes dans un seul bloc, et ainsi percevoir l'ensemble des frais associés. Ceci affecterait probablement plutôt les validateurs particuliers que les validateurs institutionnels aguerris qui peuvent utiliser des méthodes plus sophistiquées pour se protéger des attaques DOS, et ainsi former une force centralisatrice.
-
-Il y a plusieurs solutions à ce problème. L'une est la [Technologie des validateurs distribués](https://github.com/ethereum/distributed-validator-specs) qui vise à répartir les diverses tâches liées à l'exécution d'un validateur sur plusieurs machines, avec de la redondance, de sorte qu'il soit beaucoup plus difficile pour un attaquant d'empêcher qu'un bloc soit proposé dans un créneau particulier. Cependant, la solution la plus robuste est l'**élection secrète d'un leader unique (SSLE)**.
+Il existe plusieurs solutions à ce problème. L'une d'elles est la [technologie de validateur distribué (DVT)](https://github.com/ethereum/distributed-validator-specs), qui vise à répartir les différentes tâches liées à l'exécution d'un validateur sur plusieurs machines, avec redondance, de sorte qu'il soit beaucoup plus difficile pour un attaquant d'empêcher la proposition d'un bloc dans un créneau particulier. Cependant, la solution la plus robuste est l'**élection secrète d'un leader unique (SSLE)**.
 
 ## Élection secrète d'un leader unique {#secret-leader-election}
 
-Dans le SSLE, la cryptographie est utilisée de manière astucieuse pour assurer que seul le validateur sélectionné sache qu'il a été sélectionné. Pour que cela fonctionne, chaque validateur doit soumettre un engagement pour un secret qu'ils partagent tous. Les engagements sont mélangés et reconfigurés de sorte que personne ne puisse remonter aux validateurs à partir des engagements mais chaque validateur sait quel engagement lui appartient. Un engagement est alors choisi au hasard. Si un validateur détecte que leur engagement a été choisi, il sait que c'est à son tour de proposer un bloc.
+Dans le SSLE, une cryptographie astucieuse est utilisée pour s'assurer que seul le validateur sélectionné sait qu'il a été sélectionné. Cela fonctionne en demandant à chaque validateur de soumettre un engagement envers un secret qu'ils partagent tous. Les engagements sont mélangés et reconfigurés de sorte que personne ne puisse associer les engagements aux validateurs, mais chaque validateur sait quel engagement lui appartient. Ensuite, un engagement est choisi au hasard. Si un validateur détecte que son engagement a été choisi, il sait que c'est à son tour de proposer un bloc.
 
-La principale mise en œuvre de cette idée s'appelle [Whisk](https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763). Elle fonctionne comme ceci :
+L'implémentation principale de cette idée s'appelle [Whisk](https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763). Elle fonctionne de la manière suivante :
 
-1. Les validateurs s'engagent sur un secret partagé. Le schéma d'engagement est conçu de telle sorte qu'il peut être attaché à l'identité d'un validateur mais il peut aussi être soumis à un aléa afin qu'aucun tiers ne puisse retrouver par ingénierie inversée l'association et relier un engagement particulier à un validateur particulier.
-2. Au début d'une période, un ensemble aléatoire de validateurs est choisi pour échantillonner les engagements de 16 384 validateurs en utilisant RANDAO.
-3. Pour les 8 182 créneaux suivants (1 jour), les proposeurs de bloc mélangent aléatoirement un sous-ensemble d'engagements en utilisant leur propre entropie personnelle.
-4. À la fin du mélange, RANDAO est utilisé pour créer une liste ordonnée des engagements. Cette liste est cartographiée sur les emplacements Ethereum.
-5. Les validateurs voient que leur engagement est attaché à un créneau particulier, et lorsque le créneau arrive, ils proposent un bloc.
-6. Ces étapes sont répétées de sorte que l'affectation des engagements aux créneaux est toujours en avance sur le créneau suivant.
+1. Les validateurs s'engagent sur un secret partagé. Le schéma d'engagement est conçu de telle sorte qu'il peut être lié à l'identité d'un validateur, mais aussi rendu aléatoire afin qu'aucun tiers ne puisse faire d'ingénierie inverse sur ce lien et associer un engagement spécifique à un validateur spécifique.
+2. Au début d'une époque, un ensemble aléatoire de validateurs est choisi pour échantillonner les engagements de 16 384 validateurs, en utilisant RANDAO.
+3. Pour les 8182 créneaux suivants (1 jour), les proposeurs de blocs mélangent et rendent aléatoire un sous-ensemble des engagements en utilisant leur propre entropie privée.
+4. Une fois le mélange terminé, RANDAO est utilisé pour créer une liste ordonnée des engagements. Cette liste est associée aux créneaux Ethereum.
+5. Les validateurs voient que leur engagement est rattaché à un créneau spécifique, et lorsque ce créneau arrive, ils proposent un bloc.
+6. Répétez ces étapes afin que l'attribution des engagements aux créneaux soit toujours très en avance sur le créneau actuel.
 
-Cela empêche les attaquants de connaître à l'avance quel validateur spécifique proposera le bloc suivant, écartant ainsi la possibilité d'attaques DOS.
+Cela empêche les attaquants de savoir à l'avance quel validateur spécifique proposera le prochain bloc, évitant ainsi la possibilité d'attaques DOS.
 
 ## Élection secrète de leader non unique (SnSLE) {#secret-non-single-leader-election}
 
-Il existe également une proposition distincte qui vise à créer un scénario où chaque validateur a une chance aléatoire de proposer un bloc dans chaque créneau, de la même manière que la proposition de bloc était décidée sous la preuve de travail ; ce mécanisme est connu sous le nom d'**élection secrète de leader non unique (SnSLE)**. Une façon assez simple d'agir ainsi est d'utiliser la fonction RANDAO destinée à sélectionner des validateurs de manière aléatoire, au sein du protocole du jour. Le principe de RANDAO est qu'un nombre suffisamment aléatoire est généré en mixant les empreintes soumises par de multiples validateurs indépendants. Avec le protocole SnSLE, ces empreintes peuvent être exploitées pour choisir le proposeur du bloc suivant, par exemple en optant pour l'empreinte de valeur la plus faible. L'éventail des empreintes valides peut être limité, afin d'ajuster l'éventualité de la sélection de validateurs individuels dans chaque créneau. En affirmant que le hachage doit être inférieur à `2^256 * 5 / N` où N = nombre de validateurs actifs, la chance pour un validateur individuel d'être sélectionné dans chaque créneau serait de `5/N`. Dans cet exemple, il y aurait 99,3 % de chances qu'au moins un proposant génère un hachage valide dans chaque créneau.
+Il existe également une proposition distincte qui vise à créer un scénario dans lequel les validateurs ont chacun une chance aléatoire de proposer un bloc dans chaque créneau, de la même manière que la proposition de bloc était décidée sous la preuve de travail (PoW), connue sous le nom d'**élection secrète de leader non unique (SnSLE)**. Une façon simple de le faire est d'utiliser la fonction RANDAO utilisée pour sélectionner aléatoirement les validateurs dans le protocole actuel. L'idée avec RANDAO est qu'un nombre suffisamment aléatoire est généré en mélangeant les hashs soumis par de nombreux validateurs indépendants. Dans le SnSLE, ces hashs pourraient être utilisés pour choisir le prochain proposeur de bloc, par exemple en choisissant le hash de valeur la plus basse. La plage de hashs valides pourrait être restreinte pour ajuster la probabilité que des validateurs individuels soient sélectionnés dans chaque créneau. En affirmant que le hash doit être inférieur à `2^256 * 5 / N` où `N` = nombre de validateurs actifs, la chance qu'un validateur individuel soit sélectionné dans chaque créneau serait de `5/N`. Dans cet exemple, il y aurait 99,3 % de chances qu'au moins un proposant génère un hash valide dans chaque créneau.
 
 ## Progrès actuels {#current-progress}
 
-Les protocoles SSLE et SnSLE sont tous deux en phase de recherche. À ce jour, il n'existe pas encore de spécification finalisée pour l'une ou l'autre de ces idées. SSLE et SnSLE sont des propositions concurrentes qui ne peuvent être toutes deux mises en œuvre. Avant d'être déployés, ces derniers doivent faire l'objet d'une recherche et d'un développement plus approfondis, d'un prototypage et d'une mise en œuvre sur des réseaux de test publics.
+Le SSLE et le SnSLE sont tous deux en phase de recherche. Il n'y a pas encore de spécification finalisée pour l'une ou l'autre de ces idées. Le SSLE et le SnSLE sont des propositions concurrentes qui ne pourraient pas être implémentées toutes les deux. Avant leur déploiement, elles nécessitent davantage de recherche et développement, de prototypage et d'implémentation sur des réseaux de test publics.
 
-## En savoir plus {#further-reading}
+## Complément d'information {#further-reading}
 
 - [SnSLE](https://ethresear.ch/t/secret-non-single-leader-election/11789)

@@ -4,11 +4,11 @@ The highest-value content in this skill. Each entry is a place where the code lo
 
 ## Imports That Look Right But Aren't
 
-### `@/components/Card` vs `@/components/ui/card`
+### `@/components/MarkdownCard` vs `@/components/ui/card`
 
-Default export of `@/components/Card` exists for the markdown `<Card>` shortcode (registered in `MdComponents`). Importing it from app code is wrong, even though it autocompletes.
+`@/components/MarkdownCard` is a thin wrapper that composes the `ui/card` primitives with an MDX-friendly prop shape (`emoji`, `title`, `description`, `ctaLabel`, `href`). It's what the `<Card>` markdown shortcode resolves to via `MdComponents`. Importing it from app code is not wrong, but it's usually a smell — the wrapper's narrow prop surface fights you the moment you need a banner, a custom layout, or anything beyond emoji+title+desc.
 
-**Use `@/components/ui/card`** for any new card UI.
+**Use `@/components/ui/card`** and compose the parts directly for app code. Reach for `MarkdownCard` only when you have an existing MDX-style call shape to preserve.
 
 ### `@/components/ui/tooltip` vs `@/components/Tooltip`
 
@@ -24,9 +24,9 @@ The bare Radix tooltip (`@/components/ui/tooltip`) is hover-only and has no mobi
 
 **Within a feature, don't mix.** Pick one file as your dialog source. The default export from `dialog-modal` is `Modal` (the high-level convenience); use that when you can.
 
-### `PageHero` is on the deprecation track
+### Import heroes from `@/components/Hero`
 
-`@/components/PageHero` predates the `Hero/` directory. New pages must import from `@/components/Hero` (`ContentHero`, `SimpleHero`, `HubHero`, `MdxHero`, `HomeHero`).
+Heroes are named exports of `@/components/Hero`: `PageHero` (the workhorse), `HubHero`, `HomeHero`. `PageHero` takes discrete props -- `breadcrumbs`, an optional `eyebrow`, an aside (`heroImg` **or** `heroComponent`, mutually exclusive), `title`, `description`, `buttons`, `variant`. `title` is always the `<h1>` -- there is no `header` prop (it was removed). (The former `MdxHero` was removed too -- use `PageHero` text-only with `variant="no-divider"`.)
 
 ## Component Behaviors You'd Miss
 
@@ -62,7 +62,7 @@ Same problem -- bypasses focus rings, hover states, and a11y baseline. Use `Butt
 
 ### Reinventing a heading with a `<div>`
 
-`<div className="text-5xl font-bold">Hello</div>` is wrong. Headings are styled by `base.css` defaults on `<h1>` through `<h6>`. Use the semantic tag and override sizes via `className` only when really needed.
+`<div className="text-5xl font-bold">Hello</div>` is wrong. Headings are styled by `base.css` defaults on `<h1>` through `<h6>`. Use the semantic tag and override sizes only when really needed -- with the `text-h1`-`text-h6` utilities (e.g. `<h2 className="text-h1">`), never a hand-reconstructed `text-3xl lg:text-4xl`. Those same `text-h*` utilities are also how you give a non-heading element a heading-level size.
 
 ### Inlining instead of composing
 
@@ -88,9 +88,9 @@ Just be aware which side of the boundary you're on when adding hooks/effects.
 
 Static buttons get unnecessarily forced into client. Splitting would be invasive; for now, just know this is true.
 
-### `Callout` and `CalloutBanner` are pending consolidation
+### `Callout` consolidation is complete
 
-`Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBannerSSR.tsx` exist as client/server pairs today. A unified server-renderable `Callout` component is being built to absorb both pairs (plus `BannerNotification` and `DismissableBanner`) into a single primitive with variants. While the migration is in flight, prefer the `*SSR` variants when the parent can do translation work via `getTranslations`. Tracked in a dedicated issue.
+The legacy `Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBannerSSR.tsx` client/server pairs were unified into a single server-renderable `Callout` at `@/components/ui/callout` (see `callout-walkthrough.md`). The root-level files were removed; don't reintroduce them. `BannerNotification` was absorbed into `Alert` as `variant="banner"` in May 2026 in the same direction-of-travel.
 
 ### Event tracking is automatic on `Button` and `Link`
 
@@ -142,9 +142,9 @@ Configured in `base.css` lines 97-107. Persian fallback. Triggered by `:lang(ur)
 
 ### One `<h1>` per page
 
-`MdxHero` and `HubHero` both render `<h1>`. Most React-page heroes do. Most markdown layouts auto-render the page `title` from frontmatter as the `<h1>`.
+`PageHero` and `HubHero` both render `<h1>`. Most React-page heroes do. Most markdown layouts auto-render the page `title` from frontmatter as the `<h1>`.
 
-**Exception: the `Static` layout**. It does NOT auto-render `title` as `<h1>`. Pages on the `Static` layout MUST include `# Title` in the markdown body to provide the page heading. That's the only place a markdown `# Title` is correct -- on every other layout, a markdown `# Title` creates a duplicate `<h1>`.
+The `Static` layout now follows this same rule: it renders `frontmatter.title` as the `<h1>` through its hero (`PageHero` for normal pages, `HubHero` for the guides hub), so a markdown `# Title` in the body is **redundant** -- it's hidden via CSS (`**:[h1]:hidden` in `Static.tsx`) and the English content has had it removed. Do NOT add a `# Title` to Static markdown. (The CSS hide is transitional, covering non-English content that still carries the legacy `#` line until the pipeline strips it.)
 
 ### Eyebrow text in `HubHero` is rendered as `<h1>`
 
@@ -166,10 +166,14 @@ Chakra leftover, used in 5 places. Don't introduce new uses. Replace with Tailwi
 
 `MdComponents/index.tsx:47,59,74,89` overrides h1/h2 with `text-[2.5rem]`, `text-[2rem]`. These are markdown-specific sizing rules. Don't replicate the arbitrary values in non-markdown code.
 
-### `SimpleHero` and `MdComponents` both use `text-[2.5rem]`
+### `MdComponents` uses `text-[2.5rem]` for the page title
 
-This duplicate "page title size" suggests we need a `--text-page-title` token (or a `Heading` primitive). Until that exists, the arbitrary value is the convention.
+This arbitrary "page title size" suggests we need a `--text-page-title` token (or a `Heading` primitive). Until that exists, the arbitrary value is the convention in markdown rendering. Don't copy it elsewhere -- `PageHero`'s title uses the scale (`text-3xl ... lg:text-6xl`), not `text-[2.5rem]`.
 
 ### `BigNumber` exists -- USE IT
 
 `@/components/BigNumber` is a real component for prominent numeric displays. If you find yourself writing `<p className="text-4xl font-bold">$3000</p>`, you should be using `BigNumber` instead.
+
+### `scroll-mt` is automatic on headings and sections
+
+`base.css` applies `scroll-mt-32` to every `h1`--`h6` and `<section>`, so anchored navigation isn't clipped by the sticky nav. Don't hand-add `scroll-mt-*` to a heading or section, and don't carry over hacks like `scroll-mt-28` / `-scroll-mt-80` -- it's handled globally.

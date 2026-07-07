@@ -14,7 +14,7 @@ const Logo = () => {
   return (
     <Image
       src={image}
-      className="h-[100px] w-auto"
+      className="h-[100px] w-fit"
       alt={t("ethereum-foundation-logo")}
     />
   )

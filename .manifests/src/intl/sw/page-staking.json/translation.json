@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "locale": "sw",
+  "translatedAt": "2026-05-26T07:16:44.447Z",
+  "englishManifestHash": "69ceaa1bf9c5",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "ICU-VARIABLE-1",
+    "ICU-VARIABLE-2",
+    "ICU-VARIABLE-3",
+    "HTML-TAG-4",
+    "HTML-TAG-5",
+    "HTML-TAG-6",
+    "HTML-TAG-7",
+    "HTML-TAG-8",
+    "HTML-TAG-9",
+    "HTML-TAG-10",
+    "HTML-TAG-11",
+    "HTML-TAG-12",
+    "HTML-TAG-13",
+    "ICU-VARIABLE-14",
+    "ICU-VARIABLE-15",
+    "HTML-TAG-16",
+    "HTML-TAG-17",
+    "HTML-TAG-18",
+    "HTML-TAG-19",
+    "HTML-TAG-20",
+    "HTML-TAG-21",
+    "HTML-TAG-22",
+    "HTML-TAG-23",
+    "HTML-TAG-24",
+    "HTML-TAG-25",
+    "ICU-VARIABLE-26"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://launchpad.ethereum.org/withdrawals",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    },
+    "ICU-VARIABLE-1": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{withdrawalAddressLabel}"
+      }
+    },
+    "ICU-VARIABLE-2": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{depositsTab}"
+      }
+    },
+    "ICU-VARIABLE-3": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{network}"
+      }
+    },
+    "HTML-TAG-4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#consensus"
+      }
+    },
+    "HTML-TAG-5": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#validator"
+      }
+    },
+    "HTML-TAG-6": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#block"
+      }
+    },
+    "HTML-TAG-7": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/"
+      }
+    },
+    "HTML-TAG-8": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "span",
+        "class": "gold"
+      }
+    },
+    "HTML-TAG-9": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#erc-20"
+      }
+    },
+    "HTML-TAG-10": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#wallet"
+      }
+    },
+    "HTML-TAG-11": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#key"
+      }
+    },
+    "HTML-TAG-12": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/wallets/"
+      }
+    },
+    "HTML-TAG-13": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/run-a-node/"
+      }
+    },
+    "ICU-VARIABLE-14": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{network}"
+      }
+    },
+    "ICU-VARIABLE-15": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{network}"
+      }
+    },
+    "HTML-TAG-16": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/nodes-and-clients/client-diversity/"
+      }
+    },
+    "HTML-TAG-17": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#liquidity-tokens"
+      }
+    },
+    "HTML-TAG-18": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#defi"
+      }
+    },
+    "HTML-TAG-19": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#smart-contract"
+      }
+    },
+    "HTML-TAG-20": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#execution-client"
+      }
+    },
+    "HTML-TAG-21": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#consensus-client"
+      }
+    },
+    "HTML-TAG-22": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://hoodi.launchpad.ethereum.org",
+        "target": "_blank"
+      }
+    },
+    "HTML-TAG-23": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/staking/pools/"
+      }
+    },
+    "HTML-TAG-24": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/",
+        "target": "_blank"
+      }
+    },
+    "HTML-TAG-25": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://blog.ethereum.org/category/protocol/#subscribe",
+        "target": "_blank"
+      }
+    },
+    "ICU-VARIABLE-26": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{network}"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-05-26T07:16:44.447Z",
+      "status": "success"
+    }
+  }
+}

@@ -7,8 +7,7 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "consensus"
-  - "proof-of-authority"
+  - "how-ethereum-works"
 format: presentation
 author: Cryptoeconomics Study
 breadcrumb: "Proof of Authority"

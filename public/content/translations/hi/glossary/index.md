@@ -1,10 +1,10 @@
 ---
-title: "इथेरियम शब्दावली"
-description: "एथेरियम से संबंधित तकनीकी और गैर-तकनीकी शब्दों की एक अधूरी शब्दावली"
+title: शब्दावली
+metaTitle: इथेरियम शब्दावली
+description: इथेरियम से संबंधित तकनीकी और गैर-तकनीकी शब्दों की एक अपूर्ण शब्दावली
 lang: hi
+authors: ["एंड्रियास एंटोनोपोलोस"]
 ---
-
-# शब्दावली {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: hi
 
 ## स्रोत {#sources}
 
-_CC-BY-SA के तहत [एंड्रियास एम. एंटोनोपोलोस, गेविन वुड](https://aantonop.com/books/mastering-ethereum) द्वारा [मास्टरिंग एथेरियम](https://github.com/ethereumbook/ethereumbook) से आंशिक रूप से प्रदान किया गया_
+_आंशिक रूप से [एंड्रियास एम. एंटोनोपोलोस, गैविन वुड](https://aantonop.com/books/mastering-ethereum) द्वारा लिखित [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) से CC-BY-SA के तहत प्रदान किया गया_
 
 <Divider />
 
-## इस पेज पर योगदान दें {#contribute-to-this-page}
+## इस पृष्ठ में योगदान करें {#contribute-to-this-page}
 
-क्या हमसे कुछ छूट गया है? क्या कुछ गलत है? गिटहब पर इस शब्दावली में योगदान देकर हमें बेहतर बनाने में मदद करें!
+क्या हमसे कुछ छूट गया है? क्या कुछ गलत है? GitHub पर इस शब्दावली में योगदान करके इसे बेहतर बनाने में हमारी मदद करें!
 
 [योगदान करने के तरीके के बारे में अधिक जानें](/contributing/adding-glossary-terms)

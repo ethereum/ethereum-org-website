@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-upgrades.json",
+  "generatedAt": "2026-05-26T07:00:18.167Z",
+  "rootHash": "29edc912d6a5",
+  "tree": {
+    "contentHash": "4bccd47492eb",
+    "anchorHash": "908e261e79dc",
+    "children": {
+      "page-upgrades-merge-infographic-el": {
+        "contentHash": "86405c156836",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-merge-infographic-alt-text": {
+        "contentHash": "cd58f284bef7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-beacon-date": {
+        "contentHash": "26ecbf4452f0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-merge-date": {
+        "contentHash": "d3de569b7c2f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-shards-date": {
+        "contentHash": "b897c385f236",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-pbs": {
+        "contentHash": "07d4718c052c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-post-merge-banner-tutorial-ood": {
+        "contentHash": "a453fd6ef495",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-guide": {
+        "contentHash": "7e4f8471d638",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-docking": {
+        "contentHash": "c09500586c2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-shard-title": {
+        "contentHash": "18d5c3346922",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-beacon-chain": {
+        "contentHash": "b752f00630a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-beaconscan-title": {
+        "contentHash": "fa6fc22dd6a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-beaconscan-in-title": {
+        "contentHash": "685275686a06",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-beaconcha-in-desc": {
+        "contentHash": "c9de8057b294",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-beaconscan-desc": {
+        "contentHash": "43a0561a9f30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-become-staker": {
+        "contentHash": "d3ee775224d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-become-staker-desc": {
+        "contentHash": "0cdcd86ad005",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-explore": {
+        "contentHash": "16711a933d92",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-run-beacon-chain": {
+        "contentHash": "d3d030dadd5c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-run-beacon-chain-desc": {
+        "contentHash": "4b7190559ca2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "read-more": {
+        "contentHash": "83b794145c0c",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-upgrades-merge-infographic-el",
+      "page-upgrades-merge-infographic-alt-text",
+      "page-upgrades-beacon-date",
+      "page-upgrades-merge-date",
+      "page-upgrades-shards-date",
+      "page-upgrades-pbs",
+      "page-upgrades-post-merge-banner-tutorial-ood",
+      "page-upgrades-upgrades-guide",
+      "page-upgrades-upgrades-docking",
+      "page-upgrades-shard-title",
+      "page-upgrades-upgrades-beacon-chain",
+      "consensus-beaconscan-title",
+      "consensus-beaconscan-in-title",
+      "consensus-beaconcha-in-desc",
+      "consensus-beaconscan-desc",
+      "consensus-become-staker",
+      "consensus-become-staker-desc",
+      "consensus-explore",
+      "consensus-run-beacon-chain",
+      "consensus-run-beacon-chain-desc",
+      "read-more"
+    ]
+  },
+  "sourceCommitSha": "2b6a038be7d8898383a4f0c64b2494eda62e06db"
+}

@@ -1,10 +1,10 @@
 ---
-title: "ایتھیریم کی فرہنگ"
+title: "فرہنگ"
+metaTitle: "ایتھیریم کی فرہنگ"
 description: "ایتھیریم سے متعلق تکنیکی اور غیر تکنیکی اصطلاحات کی ایک نامکمل فرہنگ"
 lang: ur
+authors: ["اینڈریاس اینٹونوپولوس"]
 ---
-
-# فرہنگ {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: ur
 
 ## ذرائع {#sources}
 
-_جزوی طور پر [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) از [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) کے ذریعے CC-BY-SA کے تحت فراہم کیا گیا_
+_یہ جزوی طور پر <span dir="ltr">CC-BY-SA</span> کے تحت [اینڈریاس ایم اینٹونوپولوس، گیون وڈ](https://aantonop.com/books/mastering-ethereum) کی کتاب [<span dir="ltr">Mastering Ethereum</span>](https://github.com/ethereumbook/ethereumbook) سے فراہم کیا گیا ہے_
 
 <Divider />
 
 ## اس صفحے میں تعاون کریں {#contribute-to-this-page}
 
-کیا ہم سے کچھ چھوٹ گیا؟ کیا کچھ غلط ہے؟ گٹ ہب (GitHub) پر اس فرہنگ میں تعاون کر کے اسے بہتر بنانے میں ہماری مدد کریں!
+کیا ہم سے کچھ چھوٹ گیا؟ کیا کچھ غلط ہے؟ <span dir="ltr">GitHub</span> پر اس فرہنگ میں تعاون کر کے اسے بہتر بنانے میں ہماری مدد کریں!
 
 [تعاون کرنے کے طریقے کے بارے میں مزید جانیں](/contributing/adding-glossary-terms)

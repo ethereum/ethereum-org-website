@@ -7,13 +7,13 @@ import { cn } from "@/lib/utils/cn"
 import { BaseLink } from "../ui/Link"
 
 const variants = cva(
-  "group relative inline-block w-full text-body-medium no-underline lg:w-auto",
+  "group relative inline-block w-full no-underline lg:w-auto",
   {
     variants: {
       variant: {
-        docs: "py-0.5",
-        card: "[&_[data-label='marker']]:!hidden inline leading-base",
-        left: "",
+        docs: "py-0.5 text-body-medium",
+        card: "[&_[data-label='marker']]:!hidden inline leading-base text-inherit",
+        left: "text-body-medium hover:text-primary-hover",
       },
     },
     defaultVariants: {

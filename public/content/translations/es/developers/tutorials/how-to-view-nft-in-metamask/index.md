@@ -1,34 +1,34 @@
 ---
-title: "Cómo ver su NFT en su billetera (Parte 3/3 de la serie de tutoriales de NFT)"
+title: "Cómo ver su NFT en su billetera (Parte 3/3 de la serie de tutoriales sobre NFT)"
 description: "¡Este tutorial describe cómo ver un NFT existente en MetaMask!"
 author: "Sumi Mudgil"
-tags: [ "ERC-721", "Alchemy", "Solidity" ]
+tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner
-breadcrumb: "Ver NFT en wallet"
+breadcrumb: Ver NFT en la billetera
 lang: es
 published: 2021-04-22
 ---
 
-Este tutorial es la parte 3/3 de la serie de tutoriales de NFT, en la que vemos nuestro NFT recién acuñado. Sin embargo, puede utilizar el tutorial general para cualquier token ERC-721 usando MetaMask, incluso en la red principal o en cualquier red de prueba. Si le gustaría aprender a acuñar su propio NFT en Ethereum, ¡debería consultar la [Parte 1 sobre cómo escribir y desplegar un contrato inteligente de NFT](/developers/tutorials/how-to-write-and-deploy-an-nft)!
+Este tutorial es la Parte 3/3 de la serie de tutoriales sobre NFT, donde vemos nuestro NFT recién acuñado. Sin embargo, puede usar el tutorial general para cualquier token ERC-721 usando MetaMask, incluso en la Red principal o en cualquier red de prueba. Si desea aprender cómo acuñar su propio NFT en Ethereum, ¡debería consultar la [Parte 1 sobre cómo escribir y desplegar un contrato inteligente de NFT](/developers/tutorials/how-to-write-and-deploy-an-nft)!
 
-¡Enhorabuena! Ha llegado a la parte más corta y sencilla de nuestra serie de tutoriales de NFT: cómo ver su NFT recién acuñado en una billetera virtual. Utilizaremos MetaMask para este ejemplo, ya que es lo que usamos en las dos partes anteriores.
+¡Felicidades! Ha llegado a la parte más corta y sencilla de nuestra serie de tutoriales sobre NFT: cómo ver su NFT recién acuñado en una billetera virtual. Usaremos MetaMask para este ejemplo, ya que es lo que usamos en las dos partes anteriores.
 
-Como requisito previo, ya debería tener MetaMask instalado en su móvil, y este debería incluir la cuenta en la que acuñó su NFT. Puede obtener la aplicación de forma gratuita en [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) o [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
+Como requisito previo, ya debería tener instalado MetaMask en su dispositivo móvil, y debería incluir la cuenta en la que acuñó su NFT; puede obtener la aplicación de forma gratuita en [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) o [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
 
 ## Paso 1: Configure su red en Sepolia {#set-network-to-sepolia}
 
-En la parte superior de la aplicación, pulse el botón «Billetera», tras lo cual se le pedirá que seleccione una red. Como nuestro NFT fue acuñado en la red Sepolia, deberá seleccionar Sepolia como su red.
+En la parte superior de la aplicación, presione el botón «Billetera» (Wallet), después de lo cual se le pedirá que seleccione una red. Como nuestro NFT se acuñó en la red Sepolia, querrá seleccionar Sepolia como su red.
 
-![Cómo configurar la red Sepolia en MetaMask para móvil](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
 
-## Paso 2: Añada su coleccionable a MetaMask {#add-nft-to-metamask}
+## Paso 2: Agregue su coleccionable a MetaMask {#add-nft-to-metamask}
 
-Una vez que esté en la red Sepolia, seleccione la pestaña «Coleccionables» a la derecha y añada la dirección del contrato inteligente del NFT y el ID del token ERC-721 de su NFT, que debería poder encontrar en Etherscan a partir del hash de la transacción de su NFT desplegado en la parte II de nuestro tutorial.
+Una vez que esté en la red Sepolia, seleccione la pestaña «Coleccionables» (Collectibles) a la derecha y agregue la dirección del contrato inteligente del NFT y el ID del token ERC-721 de su NFT, que debería poder encontrar en Etherscan según el hash de transacción de su NFT desplegado en la Parte II de nuestro tutorial.
 
-![Cómo encontrar el hash de su transacción y el ID del token ERC-721](./findNFTEtherscan.png)
+![How to find your transaction hash and ERC-721 token ID](./findNFTEtherscan.png)
 
-Puede que necesite actualizar un par de veces la pantalla para ver su NFT, ¡pero estará ahí <Emoji text="😄" size={1} />!
+Es posible que deba actualizar un par de veces para ver su NFT, ¡pero estará allí <Emoji text="😄" size={1} />!
 
-![Cómo subir su NFT a MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
 
-¡Enhorabuena! ¡Ha acuñado con éxito un NFT y ya puede verlo! ¡Estamos deseando ver cómo arrasará en el mundo de los NFT!
+¡Felicidades! Ha acuñado con éxito un NFT y ahora puede verlo. ¡Estamos ansiosos por ver cómo arrasará en el mundo de los NFT!

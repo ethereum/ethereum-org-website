@@ -4,8 +4,6 @@ description: Staying safe on Ethereum
 lang: en
 ---
 
-# Ethereum security and scam prevention {#introduction}
-
 Rising interest in cryptocurrency brings with it growing risk from scammers and hackers. This article lays out some best practices to mitigate these risks.
 
 **Remember: No one from ethereum.org will ever contact you. Don’t reply to emails saying they’re from official Ethereum support.**
@@ -22,7 +20,7 @@ Misunderstandings about how crypto works can lead to costly mistakes. For exampl
   What is Ethereum?
 </DocLink>
 
-<DocLink href="/eth/">
+<DocLink href="/what-is-ether/">
   What is ether?
 </DocLink>
 <Divider />

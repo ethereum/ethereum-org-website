@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-19T18:50:55.592Z",
+  "englishManifestHash": "d44445379499",
+  "placeholderOrder": [
+    "LINK-b561ed",
+    "LINK-65743c",
+    "LINK-e5dbfe",
+    "LINK-43b225",
+    "LINK-b586de",
+    "LINK-97da6f",
+    "LINK-62c6ac",
+    "LINK-5a22d4",
+    "LINK-ff8e39",
+    "LINK-adc8d3",
+    "LINK-fdcd35",
+    "LINK-a96e13",
+    "CODE-838c2e",
+    "LINK-49c8a4",
+    "CODE-7df416",
+    "CODE-054400",
+    "LINK-1bf3b5"
+  ],
+  "placeholderMap": {
+    "CODE-838c2e": {
+      "type": "inline-code",
+      "values": {
+        "content": "@ethereumjs/evm"
+      }
+    },
+    "CODE-7df416": {
+      "type": "inline-code",
+      "values": {
+        "content": "@ethereumjs/client"
+      }
+    },
+    "CODE-054400": {
+      "type": "inline-code",
+      "values": {
+        "content": "merkle-patricia-tree"
+      }
+    },
+    "LINK-b561ed": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereumjs"
+      }
+    },
+    "LINK-65743c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/ethereum-stack/"
+      }
+    },
+    "LINK-e5dbfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/javascript/"
+      }
+    },
+    "LINK-43b225": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-b586de": {
+      "type": "link",
+      "values": {
+        "url": "https://web3js.readthedocs.io"
+      }
+    },
+    "LINK-97da6f": {
+      "type": "link",
+      "values": {
+        "url": "https://ethers.org"
+      }
+    },
+    "LINK-62c6ac": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh"
+      }
+    },
+    "LINK-5a22d4": {
+      "type": "link",
+      "values": {
+        "url": "https://ryangoree.github.io/drift/"
+      }
+    },
+    "LINK-ff8e39": {
+      "type": "link",
+      "values": {
+        "url": "https://solidity.readthedocs.io"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-fdcd35": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-a96e13": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm"
+      }
+    },
+    "LINK-49c8a4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client"
+      }
+    },
+    "LINK-1bf3b5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereumjs"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T18:50:55.592Z",
+      "status": "success"
+    }
+  }
+}

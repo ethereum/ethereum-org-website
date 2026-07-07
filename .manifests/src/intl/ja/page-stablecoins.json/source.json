@@ -1,0 +1,741 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-stablecoins.json",
+  "generatedAt": "2026-06-04T14:52:08.140Z",
+  "rootHash": "75bc03643275",
+  "tree": {
+    "contentHash": "db724f618f74",
+    "anchorHash": "08d0016f7974",
+    "children": {
+      "page-stablecoins-title": {
+        "contentHash": "2d46a862ce8b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-meta-title": {
+        "contentHash": "d771c2841b38",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-meta-description": {
+        "contentHash": "8f5956a64221",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-hero-header": {
+        "contentHash": "1153b56b46c6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-hero-subtitle": {
+        "contentHash": "64458833a463",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-hero-button": {
+        "contentHash": "59cbd3378f5a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-how-they-work-button": {
+        "contentHash": "c337b449242e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-why-stablecoins": {
+        "contentHash": "736cfc79eb01",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-why-stablecoins-intro": {
+        "contentHash": "d983aeff8e5d",
+        "anchorHash": "cb6b43b57239",
+        "children": {
+          "prose:2": {
+            "contentHash": "55436e0afc88",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "ea4c41cd0d88",
+            "anchorHash": "73d51ccd1383"
+          },
+          "prose:3": {
+            "contentHash": "d8369474f96b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "a09382fa91e3"
+          },
+          "prose:4": {
+            "contentHash": "6cf96544c1c4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "html-tag:0",
+          "prose:3",
+          "html-tag:1",
+          "prose:4"
+        ]
+      },
+      "page-stablecoins-feature-1-title": {
+        "contentHash": "a5bc44558149",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-feature-2-title": {
+        "contentHash": "9d50568b8ea0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-feature-3-title": {
+        "contentHash": "92b602a6089b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-feature-4-title": {
+        "contentHash": "c9b86d5bda12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-feature-1": {
+        "contentHash": "4c25fd37fa69",
+        "anchorHash": "23bd1161d322",
+        "children": {
+          "prose:1": {
+            "contentHash": "b665c05f18cd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "6ec05d697fd9",
+            "anchorHash": "21cf9783cd92"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-stablecoins-stablecoins-feature-2": {
+        "contentHash": "675787baecaf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-feature-3": {
+        "contentHash": "8faa2c8a5c2c",
+        "anchorHash": "9c08a0734afc",
+        "children": {
+          "prose:1": {
+            "contentHash": "b3fbd0fbed0e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "c40cc25b38bd",
+            "anchorHash": "f36193b8f637"
+          },
+          "prose:2": {
+            "contentHash": "63b4c061a3e7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-stablecoins-stablecoins-feature-4": {
+        "contentHash": "d245674b1879",
+        "anchorHash": "df8fd8002bc8",
+        "children": {
+          "prose:1": {
+            "contentHash": "24855c13d78b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "e06554818e90",
+            "anchorHash": "f2c7c1743f0b"
+          },
+          "prose:2": {
+            "contentHash": "d91c219cde27",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-stablecoins-bitcoin-pizza": {
+        "contentHash": "46a92d012e14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-bitcoin-pizza-alt": {
+        "contentHash": "f6714485eed2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-bitcoin-pizza-body": {
+        "contentHash": "75fa8550d68a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-types-of-stablecoin": {
+        "contentHash": "0a2a58628f1d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-types-intro": {
+        "contentHash": "e50bded7cd79",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-fiat-backed": {
+        "contentHash": "be7de22765f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-fiat-backed-description": {
+        "contentHash": "bf6778340af4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-fiat-backed-pro-1": {
+        "contentHash": "cfcac0918c68",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-fiat-backed-pro-2": {
+        "contentHash": "d7233479f6b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-fiat-backed-con-1": {
+        "contentHash": "9fa819b40248",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-fiat-backed-con-2": {
+        "contentHash": "18ca841fb48b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-crypto-backed": {
+        "contentHash": "c9ae4c79cc8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-crypto-backed-description": {
+        "contentHash": "4579fca9a8c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-crypto-backed-pro-1": {
+        "contentHash": "bf2aa779ceee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-crypto-backed-pro-2": {
+        "contentHash": "dc5ffef15dfa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-crypto-backed-pro-3": {
+        "contentHash": "cfb822d4b899",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-crypto-backed-con-1": {
+        "contentHash": "5df23e60bdfb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-crypto-backed-con-2": {
+        "contentHash": "c4a52960b7f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-precious-metals": {
+        "contentHash": "425bd73957cb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-precious-metals-description": {
+        "contentHash": "2e03781d00a9",
+        "anchorHash": "a9c82d840724",
+        "children": {
+          "prose:1": {
+            "contentHash": "8a17af798dd6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "f319044114f6",
+            "anchorHash": "0bf1b5918b5b"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0"
+        ]
+      },
+      "page-stablecoins-precious-metals-pro-1": {
+        "contentHash": "cfcac0918c68",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-precious-metals-con-1": {
+        "contentHash": "9fa819b40248",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-precious-metals-con-2": {
+        "contentHash": "e80ef60c8815",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-algorithmic": {
+        "contentHash": "6b64024fbc82",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-algorithmic-description": {
+        "contentHash": "954b0ad6bc95",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-algorithmic-pro-1": {
+        "contentHash": "d4f7455af3f6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-algorithmic-pro-2": {
+        "contentHash": "fdbfaf48c044",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-algorithmic-con-1": {
+        "contentHash": "d122352e769f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-algorithmic-con-2": {
+        "contentHash": "85463e6b5bec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-getting-started-title": {
+        "contentHash": "831d0f72d242",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-getting-started-intro": {
+        "contentHash": "6cd028ec03c6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-getting-started-alt": {
+        "contentHash": "8520aafe8c1b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-download-wallet-title": {
+        "contentHash": "c9ae3b898391",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-download-wallet-description": {
+        "contentHash": "1a5f47d51dbd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-register-exchange-title": {
+        "contentHash": "af25d01e930d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-register-exchange-description": {
+        "contentHash": "e82fe0176cc0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-recommended": {
+        "contentHash": "d70604e84304",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-advanced": {
+        "contentHash": "9f088dbebd6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-choose-title": {
+        "contentHash": "db0c9cc20a15",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-choose-intro": {
+        "contentHash": "814fdd3c9ab5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-choose-link-types": {
+        "contentHash": "66d4ca647485",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-editors-choice": {
+        "contentHash": "aba99d554283",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-editors-choice-intro": {
+        "contentHash": "e906188a2649",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-usds-banner-body": {
+        "contentHash": "ce2ebfee3c80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-usds-banner-swap-button": {
+        "contentHash": "075f6da1493f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-usds-banner-learn-button": {
+        "contentHash": "2889c1a3011d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-usds-logo": {
+        "contentHash": "0f8bff28ec30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-usdc-banner-body": {
+        "contentHash": "ac8de2bf9036",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-usdc-banner-swap-button": {
+        "contentHash": "c1d6e406d331",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-usdc-banner-learn-button": {
+        "contentHash": "ce7f7f66a7d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-usdc-logo": {
+        "contentHash": "68dd1237bec6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-gho-banner-body": {
+        "contentHash": "5be4b7334b43",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-gho-banner-swap-button": {
+        "contentHash": "0386a799f70d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-gho-banner-learn-button": {
+        "contentHash": "079a8e99ca22",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-gho-logo": {
+        "contentHash": "7cb51c27672f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-glo-banner-body": {
+        "contentHash": "6848aebfbda6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-glo-banner-swap-button": {
+        "contentHash": "fa506d3aa7d5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-glo-banner-learn-button": {
+        "contentHash": "fc5693bc8a3e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-glo-logo": {
+        "contentHash": "64fa0018dae8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-top-coins": {
+        "contentHash": "bccdcb080da8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-top-coins-intro": {
+        "contentHash": "720a85b15ded",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-top-coins-intro-code": {
+        "contentHash": "2f1b7b748df3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-table-header-column-1": {
+        "contentHash": "3ac1a9ec4fa7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-table-header-column-2": {
+        "contentHash": "fcc13e6e5953",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-table-header-column-3": {
+        "contentHash": "0c74ee5606ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-table-type-crypto-backed": {
+        "contentHash": "df12b8f89b61",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-table-type-fiat-backed": {
+        "contentHash": "0e2632cda5c1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-table-type-precious-metals-backed": {
+        "contentHash": "425bd73957cb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-table-error": {
+        "contentHash": "b0ca98bf1641",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-show-more": {
+        "contentHash": "f5c9bd131486",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-go-to": {
+        "contentHash": "a8aa078b7ea6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-get-stablecoins": {
+        "contentHash": "30efcfbc944e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-get-intro": {
+        "contentHash": "f0a082f7cf60",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-method-swap-title": {
+        "contentHash": "6ec282d40a8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-method-swap-description": {
+        "contentHash": "7d1397232ca3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-method-buy-title": {
+        "contentHash": "64e3cb0e4960",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-method-buy-description": {
+        "contentHash": "9a8545e4195c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-method-earn-title": {
+        "contentHash": "a697f90fb199",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-method-earn-description": {
+        "contentHash": "ea628a363b53",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-method-borrow-title": {
+        "contentHash": "2edfb168b38b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-method-borrow-description": {
+        "contentHash": "d3f9d324003d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-interest-rate-title": {
+        "contentHash": "8461627c7ceb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-interest-rate-body": {
+        "contentHash": "d6e9c6bd07bf",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8c91791a1c53",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-stablecoins-interest-rate-alt": {
+        "contentHash": "7e45f7db9962",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-apps-earn-interest-title": {
+        "contentHash": "dcbf9d6bb805",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-apps-earn-interest-intro": {
+        "contentHash": "dd4a2c5e5d13",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-learn-more": {
+        "contentHash": "1445799c033a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-dapp-description-1": {
+        "contentHash": "4ba6aacb7dc4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-dapp-description-2": {
+        "contentHash": "5571b15df471",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-dapp-description-4": {
+        "contentHash": "db80a59d393d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-stablecoins-dapp-description-5": {
+        "contentHash": "f9ccefff4d56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-tools-title": {
+        "contentHash": "696074001df8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-category-dashboard-and-education": {
+        "contentHash": "ddd3b9b72df5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-tools-stablecoinswtf-description": {
+        "contentHash": "131f227d6d08",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-tools-stablepulse-description": {
+        "contentHash": "5de9de316517",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-tools-stablesinfo-description": {
+        "contentHash": "afe73058c939",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-tools-dune-description": {
+        "contentHash": "31680fabc5de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-tools-visa-description": {
+        "contentHash": "6be592ff3623",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stablecoins-tools-stablewars-description": {
+        "contentHash": "01d0eaeadeb0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-ready-button": {
+        "contentHash": "6cc8519b9158",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "pros": {
+        "contentHash": "d49dbef4d908",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "cons": {
+        "contentHash": "5c5c68f419f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "example-projects": {
+        "contentHash": "70a78767d158",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "aave-logo": {
+        "contentHash": "899b7dddd231",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "compound-logo": {
+        "contentHash": "0b790e87060c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sparkfi-logo": {
+        "contentHash": "aa42f9dacf39",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "summerfi-logo": {
+        "contentHash": "08dde1396cea",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-stablecoins-title",
+      "page-stablecoins-meta-title",
+      "page-stablecoins-meta-description",
+      "page-stablecoins-hero-header",
+      "page-stablecoins-hero-subtitle",
+      "page-stablecoins-hero-button",
+      "page-stablecoins-how-they-work-button",
+      "page-stablecoins-why-stablecoins",
+      "page-stablecoins-why-stablecoins-intro",
+      "page-stablecoins-feature-1-title",
+      "page-stablecoins-feature-2-title",
+      "page-stablecoins-feature-3-title",
+      "page-stablecoins-feature-4-title",
+      "page-stablecoins-stablecoins-feature-1",
+      "page-stablecoins-stablecoins-feature-2",
+      "page-stablecoins-stablecoins-feature-3",
+      "page-stablecoins-stablecoins-feature-4",
+      "page-stablecoins-bitcoin-pizza",
+      "page-stablecoins-bitcoin-pizza-alt",
+      "page-stablecoins-bitcoin-pizza-body",
+      "page-stablecoins-types-of-stablecoin",
+      "page-stablecoins-types-intro",
+      "page-stablecoins-fiat-backed",
+      "page-stablecoins-fiat-backed-description",
+      "page-stablecoins-fiat-backed-pro-1",
+      "page-stablecoins-fiat-backed-pro-2",
+      "page-stablecoins-fiat-backed-con-1",
+      "page-stablecoins-fiat-backed-con-2",
+      "page-stablecoins-crypto-backed",
+      "page-stablecoins-crypto-backed-description",
+      "page-stablecoins-crypto-backed-pro-1",
+      "page-stablecoins-crypto-backed-pro-2",
+      "page-stablecoins-crypto-backed-pro-3",
+      "page-stablecoins-crypto-backed-con-1",
+      "page-stablecoins-crypto-backed-con-2",
+      "page-stablecoins-precious-metals",
+      "page-stablecoins-precious-metals-description",
+      "page-stablecoins-precious-metals-pro-1",
+      "page-stablecoins-precious-metals-con-1",
+      "page-stablecoins-precious-metals-con-2",
+      "page-stablecoins-algorithmic",
+      "page-stablecoins-algorithmic-description",
+      "page-stablecoins-algorithmic-pro-1",
+      "page-stablecoins-algorithmic-pro-2",
+      "page-stablecoins-algorithmic-con-1",
+      "page-stablecoins-algorithmic-con-2",
+      "page-stablecoins-getting-started-title",
+      "page-stablecoins-getting-started-intro",
+      "page-stablecoins-getting-started-alt",
+      "page-stablecoins-download-wallet-title",
+      "page-stablecoins-download-wallet-description",
+      "page-stablecoins-register-exchange-title",
+      "page-stablecoins-register-exchange-description",
+      "page-stablecoins-recommended",
+      "page-stablecoins-advanced",
+      "page-stablecoins-choose-title",
+      "page-stablecoins-choose-intro",
+      "page-stablecoins-choose-link-types",
+      "page-stablecoins-editors-choice",
+      "page-stablecoins-editors-choice-intro",
+      "page-stablecoins-usds-banner-body",
+      "page-stablecoins-usds-banner-swap-button",
+      "page-stablecoins-usds-banner-learn-button",
+      "page-stablecoins-usds-logo",
+      "page-stablecoins-usdc-banner-body",
+      "page-stablecoins-usdc-banner-swap-button",
+      "page-stablecoins-usdc-banner-learn-button",
+      "page-stablecoins-usdc-logo",
+      "page-stablecoins-gho-banner-body",
+      "page-stablecoins-gho-banner-swap-button",
+      "page-stablecoins-gho-banner-learn-button",
+      "page-stablecoins-gho-logo",
+      "page-stablecoins-glo-banner-body",
+      "page-stablecoins-glo-banner-swap-button",
+      "page-stablecoins-glo-banner-learn-button",
+      "page-stablecoins-glo-logo",
+      "page-stablecoins-top-coins",
+      "page-stablecoins-top-coins-intro",
+      "page-stablecoins-top-coins-intro-code",
+      "page-stablecoins-stablecoins-table-header-column-1",
+      "page-stablecoins-stablecoins-table-header-column-2",
+      "page-stablecoins-stablecoins-table-header-column-3",
+      "page-stablecoins-stablecoins-table-type-crypto-backed",
+      "page-stablecoins-stablecoins-table-type-fiat-backed",
+      "page-stablecoins-stablecoins-table-type-precious-metals-backed",
+      "page-stablecoins-table-error",
+      "page-stablecoins-show-more",
+      "page-stablecoins-go-to",
+      "page-stablecoins-get-stablecoins",
+      "page-stablecoins-get-intro",
+      "page-stablecoins-method-swap-title",
+      "page-stablecoins-method-swap-description",
+      "page-stablecoins-method-buy-title",
+      "page-stablecoins-method-buy-description",
+      "page-stablecoins-method-earn-title",
+      "page-stablecoins-method-earn-description",
+      "page-stablecoins-method-borrow-title",
+      "page-stablecoins-method-borrow-description",
+      "page-stablecoins-interest-rate-title",
+      "page-stablecoins-interest-rate-body",
+      "page-stablecoins-interest-rate-alt",
+      "page-stablecoins-apps-earn-interest-title",
+      "page-stablecoins-apps-earn-interest-intro",
+      "page-stablecoins-learn-more",
+      "page-stablecoins-stablecoins-dapp-description-1",
+      "page-stablecoins-stablecoins-dapp-description-2",
+      "page-stablecoins-stablecoins-dapp-description-4",
+      "page-stablecoins-stablecoins-dapp-description-5",
+      "page-stablecoins-tools-title",
+      "page-stablecoins-category-dashboard-and-education",
+      "page-stablecoins-tools-stablecoinswtf-description",
+      "page-stablecoins-tools-stablepulse-description",
+      "page-stablecoins-tools-stablesinfo-description",
+      "page-stablecoins-tools-dune-description",
+      "page-stablecoins-tools-visa-description",
+      "page-stablecoins-tools-stablewars-description",
+      "page-apps-ready-button",
+      "pros",
+      "cons",
+      "example-projects",
+      "aave-logo",
+      "compound-logo",
+      "sparkfi-logo",
+      "summerfi-logo"
+    ]
+  },
+  "sourceCommitSha": "59be6e5d263dc6f597261ca9585fb53dd5e6c627"
+}

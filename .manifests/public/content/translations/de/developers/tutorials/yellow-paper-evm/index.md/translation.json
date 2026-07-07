@@ -1,0 +1,798 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-19T23:30:44.632Z",
+  "englishManifestHash": "6f3029cd946f",
+  "placeholderOrder": [
+    "LINK-5bdec9",
+    "LINK-299230",
+    "LINK-ea13b2",
+    "LINK-3a0ce1",
+    "LINK-fa9c2b",
+    "LINK-2d8b10",
+    "LINK-30f5c2",
+    "CODE-52e740",
+    "CODE-52d6ec",
+    "LINK-14304d",
+    "CODEBLOCK-3d2aa0",
+    "CODE-9bc461",
+    "CODE-c34db7",
+    "CODE-7d54f4",
+    "CODE-3a6eb0",
+    "CODE-6ba9f2",
+    "CODE-79ebb4",
+    "CODE-6fec0b",
+    "CODE-b50730",
+    "LINK-937d64",
+    "LINK-1be7a2",
+    "CODE-fde9c5",
+    "LINK-7f30cf",
+    "CODE-1ebaba",
+    "LINK-f36f14",
+    "CODE-4c1748",
+    "LINK-be6d03",
+    "LINK-2f415a",
+    "CODE-92822b",
+    "LINK-15f7a3",
+    "CODE-4d693c",
+    "LINK-f36f14",
+    "CODE-4c1748",
+    "LINK-1be7a2",
+    "CODE-fde9c5",
+    "LINK-7f30cf",
+    "CODE-1ebaba",
+    "LINK-068890",
+    "CODE-86c444",
+    "LINK-864cc3",
+    "CODE-f5a29b",
+    "LINK-1ca2da",
+    "CODE-f82068",
+    "LINK-895e81",
+    "CODE-8ed840",
+    "LINK-92aac3",
+    "LINK-cdfd1f",
+    "CODE-19dbf7",
+    "CODE-73ebe2",
+    "LINK-88e354",
+    "CODE-7e84f9",
+    "CODE-c5f58d",
+    "LINK-4f545a",
+    "CODE-7a21eb",
+    "CODE-295f13",
+    "LINK-126773",
+    "CODE-f48990",
+    "CODE-d7ebea",
+    "LINK-11dee5",
+    "CODE-d3abae",
+    "CODE-bfa3d0",
+    "LINK-654f86",
+    "CODE-4e5d03",
+    "CODE-59114e",
+    "LINK-2f415a",
+    "CODE-92822b",
+    "CODE-106fb9",
+    "LINK-51882b",
+    "CODE-a081e0",
+    "LINK-ce0289",
+    "CODE-25df06",
+    "CODE-97b5ad",
+    "CODE-e7d522",
+    "LINK-44df1b",
+    "CODE-c3172d",
+    "LINK-e2a03d",
+    "CODE-0607a7",
+    "LINK-85d76b",
+    "CODE-04dedf",
+    "LINK-00c670",
+    "CODE-4afb86",
+    "CODE-8d7dd1",
+    "LINK-d73c1b",
+    "LINK-e2a03d",
+    "CODE-0607a7",
+    "LINK-44df1b",
+    "CODE-c3172d",
+    "LINK-85d76b",
+    "CODE-04dedf",
+    "LINK-2d8b10",
+    "LINK-e9c391",
+    "LINK-f11ab6",
+    "LINK-ad326d",
+    "LINK-140476",
+    "CODE-f8b3c7",
+    "LINK-664ead",
+    "CODE-04b0b7",
+    "LINK-664ead",
+    "CODE-04b0b7",
+    "LINK-67ac9a",
+    "CODE-fe9808",
+    "LINK-664ead",
+    "CODE-04b0b7",
+    "LINK-664ead",
+    "CODE-04b0b7",
+    "LINK-15f7a3",
+    "CODE-4d693c",
+    "LINK-70aa46",
+    "LINK-f4fc6d",
+    "CODE-c324d8",
+    "LINK-ee2570",
+    "CODE-bad885",
+    "LINK-c6eae6",
+    "CODE-6ea140",
+    "LINK-664ead",
+    "CODE-04b0b7",
+    "LINK-32c733",
+    "CODE-878ab4",
+    "LINK-efe839",
+    "CODE-d53b56",
+    "LINK-f5df46",
+    "CODE-04b0b7",
+    "CODE-04b0b7",
+    "LINK-85d76b",
+    "CODE-04dedf",
+    "LINK-00c670",
+    "CODE-4afb86",
+    "LINK-44df1b",
+    "CODE-c3172d",
+    "LINK-e2a03d",
+    "CODE-0607a7",
+    "LINK-c71553",
+    "CODE-0ecba1",
+    "LINK-b9e2e1",
+    "LINK-bec064",
+    "LINK-e9615d",
+    "CODE-f57252",
+    "LINK-92ee6a",
+    "CODE-e22cee",
+    "LINK-40d42f",
+    "LINK-204c7c",
+    "LINK-ca4b29"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-3d2aa0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-52e740": {
+      "type": "inline-code",
+      "values": {
+        "content": "POP"
+      }
+    },
+    "CODE-52d6ec": {
+      "type": "inline-code",
+      "values": {
+        "content": "DUP_N"
+      }
+    },
+    "CODE-9bc461": {
+      "type": "inline-code",
+      "values": {
+        "content": "mstore"
+      }
+    },
+    "CODE-c34db7": {
+      "type": "inline-code",
+      "values": {
+        "content": "mstore8"
+      }
+    },
+    "CODE-7d54f4": {
+      "type": "inline-code",
+      "values": {
+        "content": "mload"
+      }
+    },
+    "CODE-3a6eb0": {
+      "type": "inline-code",
+      "values": {
+        "content": "data"
+      }
+    },
+    "CODE-6ba9f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldata"
+      }
+    },
+    "CODE-79ebb4": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldatasize"
+      }
+    },
+    "CODE-6fec0b": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldataload"
+      }
+    },
+    "CODE-b50730": {
+      "type": "inline-code",
+      "values": {
+        "content": "calldatacopy"
+      }
+    },
+    "CODE-fde9c5": {
+      "type": "inline-code",
+      "values": {
+        "content": "CREATE"
+      }
+    },
+    "CODE-1ebaba": {
+      "type": "inline-code",
+      "values": {
+        "content": "CREATE2"
+      }
+    },
+    "CODE-4c1748": {
+      "type": "inline-code",
+      "values": {
+        "content": "CALLDATACOPY"
+      }
+    },
+    "CODE-92822b": {
+      "type": "inline-code",
+      "values": {
+        "content": "CODECOPY"
+      }
+    },
+    "CODE-4d693c": {
+      "type": "inline-code",
+      "values": {
+        "content": "RETURNDATACOPY"
+      }
+    },
+    "CODE-86c444": {
+      "type": "inline-code",
+      "values": {
+        "content": "CALL"
+      }
+    },
+    "CODE-f5a29b": {
+      "type": "inline-code",
+      "values": {
+        "content": "CALLCODE"
+      }
+    },
+    "CODE-f82068": {
+      "type": "inline-code",
+      "values": {
+        "content": "STATICCALL"
+      }
+    },
+    "CODE-8ed840": {
+      "type": "inline-code",
+      "values": {
+        "content": "DELEGATECALL"
+      }
+    },
+    "CODE-19dbf7": {
+      "type": "inline-code",
+      "values": {
+        "content": "ADDRESS"
+      }
+    },
+    "CODE-73ebe2": {
+      "type": "inline-code",
+      "values": {
+        "content": "address(this)"
+      }
+    },
+    "CODE-7e84f9": {
+      "type": "inline-code",
+      "values": {
+        "content": "ORIGIN"
+      }
+    },
+    "CODE-c5f58d": {
+      "type": "inline-code",
+      "values": {
+        "content": "tx.origin"
+      }
+    },
+    "CODE-7a21eb": {
+      "type": "inline-code",
+      "values": {
+        "content": "GASPRICE"
+      }
+    },
+    "CODE-295f13": {
+      "type": "inline-code",
+      "values": {
+        "content": "tx.gasprice"
+      }
+    },
+    "CODE-f48990": {
+      "type": "inline-code",
+      "values": {
+        "content": "CALLDATALOAD"
+      }
+    },
+    "CODE-d7ebea": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.data"
+      }
+    },
+    "CODE-d3abae": {
+      "type": "inline-code",
+      "values": {
+        "content": "CALLER"
+      }
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-4e5d03": {
+      "type": "inline-code",
+      "values": {
+        "content": "CALLVALUE"
+      }
+    },
+    "CODE-59114e": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.value"
+      }
+    },
+    "CODE-106fb9": {
+      "type": "inline-code",
+      "values": {
+        "content": "address(this).code"
+      }
+    },
+    "CODE-a081e0": {
+      "type": "inline-code",
+      "values": {
+        "content": "NUMBER"
+      }
+    },
+    "CODE-25df06": {
+      "type": "inline-code",
+      "values": {
+        "content": "DIFFICULTY"
+      }
+    },
+    "CODE-97b5ad": {
+      "type": "inline-code",
+      "values": {
+        "content": "block.number"
+      }
+    },
+    "CODE-e7d522": {
+      "type": "inline-code",
+      "values": {
+        "content": "block.difficulty"
+      }
+    },
+    "CODE-c3172d": {
+      "type": "inline-code",
+      "values": {
+        "content": "RETURN"
+      }
+    },
+    "CODE-0607a7": {
+      "type": "inline-code",
+      "values": {
+        "content": "REVERT"
+      }
+    },
+    "CODE-04dedf": {
+      "type": "inline-code",
+      "values": {
+        "content": "STOP"
+      }
+    },
+    "CODE-4afb86": {
+      "type": "inline-code",
+      "values": {
+        "content": "SELFDESTRUCT"
+      }
+    },
+    "CODE-8d7dd1": {
+      "type": "inline-code",
+      "values": {
+        "content": "Z(σ,μ,A,I)"
+      }
+    },
+    "CODE-f8b3c7": {
+      "type": "inline-code",
+      "values": {
+        "content": "JUMP"
+      }
+    },
+    "CODE-04b0b7": {
+      "type": "inline-code",
+      "values": {
+        "content": "JUMPDEST"
+      }
+    },
+    "CODE-fe9808": {
+      "type": "inline-code",
+      "values": {
+        "content": "JUMPI"
+      }
+    },
+    "CODE-c324d8": {
+      "type": "inline-code",
+      "values": {
+        "content": "LOG0"
+      }
+    },
+    "CODE-bad885": {
+      "type": "inline-code",
+      "values": {
+        "content": "LOG4"
+      }
+    },
+    "CODE-6ea140": {
+      "type": "inline-code",
+      "values": {
+        "content": "SSTORE"
+      }
+    },
+    "CODE-878ab4": {
+      "type": "inline-code",
+      "values": {
+        "content": "PUSH1"
+      }
+    },
+    "CODE-d53b56": {
+      "type": "inline-code",
+      "values": {
+        "content": "PUSH2"
+      }
+    },
+    "CODE-0ecba1": {
+      "type": "inline-code",
+      "values": {
+        "content": "ADD"
+      }
+    },
+    "CODE-f57252": {
+      "type": "inline-code",
+      "values": {
+        "content": "DUP<n>"
+      }
+    },
+    "CODE-e22cee": {
+      "type": "inline-code",
+      "values": {
+        "content": "SWAP<n>"
+      }
+    },
+    "LINK-5bdec9": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
+      }
+    },
+    "LINK-299230": {
+      "type": "link",
+      "values": {
+        "url": "/eips/"
+      }
+    },
+    "LINK-ea13b2": {
+      "type": "link",
+      "values": {
+        "url": "yellow-paper-berlin.pdf"
+      }
+    },
+    "LINK-3a0ce1": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Turing_machine"
+      }
+    },
+    "LINK-fa9c2b": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Turing_completeness"
+      }
+    },
+    "LINK-2d8b10": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Stack_machine"
+      }
+    },
+    "LINK-30f5c2": {
+      "type": "link",
+      "values": {
+        "url": "<https://en.wikipedia.org/wiki/Stack_(abstract_data_type"
+      }
+    },
+    "LINK-14304d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/yul.html"
+      }
+    },
+    "LINK-937d64": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Von_Neumann_architecture"
+      }
+    },
+    "LINK-1be7a2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#f0"
+      }
+    },
+    "LINK-7f30cf": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#f5"
+      }
+    },
+    "LINK-f36f14": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#37"
+      }
+    },
+    "LINK-be6d03": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#37"
+      }
+    },
+    "LINK-2f415a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#39"
+      }
+    },
+    "LINK-15f7a3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#3e"
+      }
+    },
+    "LINK-068890": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#f1"
+      }
+    },
+    "LINK-864cc3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#f2"
+      }
+    },
+    "LINK-1ca2da": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#fa"
+      }
+    },
+    "LINK-895e81": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#f4"
+      }
+    },
+    "LINK-92aac3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-cdfd1f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#30"
+      }
+    },
+    "LINK-88e354": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#32"
+      }
+    },
+    "LINK-4f545a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#3a"
+      }
+    },
+    "LINK-126773": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#35"
+      }
+    },
+    "LINK-11dee5": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#33"
+      }
+    },
+    "LINK-654f86": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#34"
+      }
+    },
+    "LINK-51882b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#43"
+      }
+    },
+    "LINK-ce0289": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#44"
+      }
+    },
+    "LINK-44df1b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#f3"
+      }
+    },
+    "LINK-e2a03d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#fd"
+      }
+    },
+    "LINK-85d76b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#00"
+      }
+    },
+    "LINK-00c670": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#ff"
+      }
+    },
+    "LINK-d73c1b": {
+      "type": "link",
+      "values": {
+        "url": "#942-exceptional-halt"
+      }
+    },
+    "LINK-e9c391": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Boolean_data_type"
+      }
+    },
+    "LINK-f11ab6": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Logical_disjunction"
+      }
+    },
+    "LINK-ad326d": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Logical_conjunction"
+      }
+    },
+    "LINK-140476": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#56"
+      }
+    },
+    "LINK-664ead": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#5b"
+      }
+    },
+    "LINK-67ac9a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#57"
+      }
+    },
+    "LINK-70aa46": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Negation"
+      }
+    },
+    "LINK-f4fc6d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#a0"
+      }
+    },
+    "LINK-ee2570": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#a4"
+      }
+    },
+    "LINK-c6eae6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#55"
+      }
+    },
+    "LINK-32c733": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#60"
+      }
+    },
+    "LINK-efe839": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#61"
+      }
+    },
+    "LINK-f5df46": {
+      "type": "link",
+      "values": {
+        "url": "<https://en.wikipedia.org/wiki/Set_(mathematics"
+      }
+    },
+    "LINK-c71553": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#01"
+      }
+    },
+    "LINK-b9e2e1": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Modulo_operation"
+      }
+    },
+    "LINK-bec064": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2929"
+      }
+    },
+    "LINK-e9615d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#8f"
+      }
+    },
+    "LINK-92ee6a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#9f"
+      }
+    },
+    "LINK-40d42f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/tests"
+      }
+    },
+    "LINK-204c7c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md"
+      }
+    },
+    "LINK-ca4b29": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/execution-specs"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:30:44.632Z",
+      "status": "success"
+    }
+  }
+}

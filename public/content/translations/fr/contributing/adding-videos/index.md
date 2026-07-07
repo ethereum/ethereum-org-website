@@ -18,6 +18,7 @@ Ethereum.org est une ressource éducative et neutre. La galerie vidéo est organ
 
 Le site ne répertorie pas les vidéos qui font principalement la promotion d'un produit spécifique, d'un jeton ou d'un service commercial.
 
+
 ## Critères d'inclusion {#criteria-for-inclusion}
 
 ### Indispensables {#must-haves}
@@ -33,6 +34,7 @@ Le site ne répertorie pas les vidéos qui font principalement la promotion d'un
 - **Possède une transcription** – Les vidéos avec des transcriptions améliorent l'accessibilité et le référencement (SEO). Si vous n'en avez pas, l'équipe d'ethereum.org peut vous aider à en générer une.
 - **Provient d'une source crédible** – Le contenu provenant d'éducateurs, de chercheurs et de sources établis est prioritaire.
 - **Intemporel et toujours d'actualité** – Le contenu qui reste pertinent au fil du temps est préféré au matériel sensible au temps.
+
 
 ## Comment ajouter une vidéo {#how-to-add-a-video}
 
@@ -121,25 +123,10 @@ Utilisez des titres `###` avec des horodatages pour marquer les sections princip
 
 Si vous n'avez pas de transcription, vous pouvez laisser le corps vide et l'équipe en générera une.
 
-#### Étape 4 : Choisir les balises thématiques {#step-4}
-
-Choisissez des balises thématiques qui correspondent aux catégories existantes utilisées dans la galerie. Les catégories actuelles et leurs balises incluent :
-
-- **Comment fonctionne Ethereum** : `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Mises à niveau du réseau** : `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Feuille de route et priorités** : `roadmap-and-priorities`, `pbs`, `mev`
-- **Mise à l'échelle et couche 2 (l2)** : `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Cas d'utilisation** : `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Confidentialité et sécurité** : `privacy-and-security`, `privacy`, `authentication`
-- **Histoires de la communauté** : `community-stories`, `contributing`, `translations`, `community`
-
-Pour vous assurer que votre vidéo apparaisse dans une section de catégorie de la galerie, incluez au moins une balise clé de catégorie (le nom en gras en kebab-case, par exemple `use-cases` ou `scaling-and-layer-2`). Les vidéos sans balise de catégorie reconnue n'apparaîtront que dans la vue « Toutes » et dans les résultats de recherche.
-
-Vous pouvez également utiliser de nouvelles balises — elles seront disponibles pour de futurs regroupements de catégories.
-
 #### Étape 5 : Soumettre votre PR {#step-5}
 
 Ouvrez une demande d'extraction (pull request) avec vos modifications vers la branche `dev`. L'équipe examinera votre soumission et vous fera part de ses commentaires.
+
 
 ## Maintenance {#maintenance}
 
@@ -150,6 +137,7 @@ Les vidéos répertoriées sont régulièrement examinées pour s'assurer qu'ell
 - Ont des liens d'hébergement/YouTube fonctionnels
 
 Si vous remarquez un problème avec une vidéo répertoriée, [créez un ticket (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) ou envoyez un e-mail à [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Conditions d'utilisation {#terms-of-use}
 

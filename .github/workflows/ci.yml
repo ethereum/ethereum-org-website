@@ -136,33 +136,17 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Wait for Netlify deploy preview to be ready
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SHA: ${{ github.event.pull_request.head.sha }}
-          REPO: ${{ github.repository }}
-          CHECK_NAME: netlify/ethereumorg/deploy-preview
+        id: netlify_wait
+        uses: ./.github/actions/wait-for-pr-checks
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_number: ${{ github.event.pull_request.number }}
+          check_name: netlify/ethereumorg/deploy-preview
+
+      - name: Fail if Netlify preview is not ready
+        if: steps.netlify_wait.outputs.outcome != 'success'
         run: |
-          for _ in $(seq 1 60); do
-            STATE=$(curl -sf -H "Authorization: Bearer $GH_TOKEN" \
-              -H "Accept: application/vnd.github+json" \
-              "https://api.github.com/repos/$REPO/commits/$SHA/statuses" \
-              | python3 -c "import json,sys,os; d=json.load(sys.stdin); m=next((s for s in d if s['context']==os.environ['CHECK_NAME']), None); print(m['state'] if m else '')")
-            case "$STATE" in
-              "success")
-                echo "Deploy preview ready for $SHA"
-                exit 0
-                ;;
-              "failure"|"error")
-                echo "Deploy preview failed: $STATE"
-                exit 1
-                ;;
-              *)
-                echo "Deploy preview state='${STATE:-not yet posted}' — waiting 30s"
-                sleep 30
-                ;;
-            esac
-          done
-          echo "Timed out waiting for deploy preview status"
+          echo "::error::Netlify deploy preview outcome: ${{ steps.netlify_wait.outputs.outcome }}"
           exit 1
 
       - name: Warm up Netlify edge cache

@@ -10,7 +10,7 @@ export interface Opcode {
   inputs: string[]
   outputs: string[]
   memStorage: Cell
-notes: Cell
+  notes: Cell
 }
 
 export const OPCODES: Opcode[] = [

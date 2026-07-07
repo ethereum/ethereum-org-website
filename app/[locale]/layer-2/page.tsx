@@ -7,15 +7,17 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import CalloutSSR from "@/components/CalloutSSR"
-import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import HubHero, { type HubHeroProps } from "@/components/Hero/HubHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import Translation from "@/components/Translation"
+import { AccordionContainer } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -107,9 +109,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       },
       {
         content: t("page-layer-2-hero-button-2-content"),
-        href: "#layer-2-powered-by-ethereum",
+        href: "/layer-2/learn",
         matomo: {
-          eventCategory: "l2_hub",
+          eventCategory: "l2_learn_page",
           eventAction: "button_click",
           eventName: "hero_get_started",
         },
@@ -323,20 +325,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
         </div>
 
-        <div id="layer-2-callout-cards" className="w-full px-8 py-9">
-          <div className="flex flex-col gap-9 md:flex-row">
-            {calloutCards.map((card, idx) => (
-              <div key={idx} className="flex flex-1">
-                <Card
-                  description={card.description}
-                  title={card.title}
-                  emoji={card.emoji}
-                  className="flex flex-1 flex-col"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <Grid id="layer-2-callout-cards" columns={3} className="p-8">
+          {calloutCards.map((card, idx) => (
+            <MarkdownCard
+              key={idx}
+              description={card.description}
+              title={card.title}
+              emoji={card.emoji}
+            />
+          ))}
+        </Grid>
 
         <div id="layer-2-ready-to-start" className="w-full px-8 py-9">
           <div className="flex flex-col items-center gap-8">
@@ -358,7 +356,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </div>
 
         <div id="layer-2-cta" className="w-full px-8 py-9">
-          <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-main-gradient p-8">
+          <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-linear-primary p-8">
             <div className="flex flex-col gap-6">
               {userRandomL2s.map((l2, idx) => (
                 <div
@@ -370,7 +368,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   }`}
                 >
                   <div className="flex flex-1 flex-col items-start gap-4 md:flex-row md:items-center">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-drop">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-lg">
                       <Image
                         src={l2.logo}
                         alt={l2.name}
@@ -451,12 +449,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
         </div>
 
-        <div
-          id="layer-2-faq"
-          className="flex w-full max-w-[832px] flex-col gap-12 px-8 py-9"
-        >
+        <div id="layer-2-faq" className="space-y-8 px-8 py-9">
           <h2>{t("page-layer-2-faq-title")}</h2>
-          <div>
+          <AccordionContainer>
             <ExpandableCard
               title={t("page-layer-2-faq-ExpandableCard-1-title")}
               eventCategory="l2_hub"
@@ -503,51 +498,47 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             >
               <p>{t("page-layer-2-faq-ExpandableCard-4-description")}</p>
             </ExpandableCard>
-          </div>
+          </AccordionContainer>
         </div>
-
-        <div
+        <Grid
           id="layer-2-callout-cards"
-          className="flex w-full flex-col px-8 py-8 md:flex-row"
+          columns={2}
+          size="wide"
+          className="p-8"
         >
-          <CalloutSSR
+          <Callout
             image={ExploreImage}
             title={t("page-layer-2-callout-1-title")}
             description={t("page-layer-2-callout-1-description")}
           >
-            <div>
-              <ButtonLink
-                href="/layer-2/networks"
-                customEventOptions={{
-                  eventCategory: "l2_hub",
-                  eventAction: "button_click",
-                  eventName: "bottom_explore_networks",
-                }}
-              >
-                {tCommon("nav-networks-explore-networks-label")}
-              </ButtonLink>
-            </div>
-          </CalloutSSR>
-          <CalloutSSR
+            <ButtonLink
+              href="/layer-2/networks"
+              customEventOptions={{
+                eventCategory: "l2_hub",
+                eventAction: "button_click",
+                eventName: "bottom_explore_networks",
+              }}
+            >
+              {tCommon("nav-networks-explore-networks-label")}
+            </ButtonLink>
+          </Callout>
+          <Callout
             image={WalkingImage}
             title={t("page-layer-2-callout-2-title")}
             description={t("page-layer-2-callout-2-description")}
-            headerClassName="-mt-6"
           >
-            <div>
-              <ButtonLink
-                href="/layer-2/learn"
-                customEventOptions={{
-                  eventCategory: "l2_hub",
-                  eventAction: "button_click",
-                  eventName: "bottom_l2_learn",
-                }}
-              >
-                {tCommon("learn-more")}
-              </ButtonLink>
-            </div>
-          </CalloutSSR>
-        </div>
+            <ButtonLink
+              href="/layer-2/learn"
+              customEventOptions={{
+                eventCategory: "l2_hub",
+                eventAction: "button_click",
+                eventName: "bottom_l2_learn",
+              }}
+            >
+              {tCommon("learn-more")}
+            </ButtonLink>
+          </Callout>
+        </Grid>
       </MainArticle>
     </I18nProvider>
   )

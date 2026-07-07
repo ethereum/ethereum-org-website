@@ -72,12 +72,12 @@ The team prefers `tv` for new and refactored components. No bulk migration of ex
 import { tv, type VariantProps } from "tailwind-variants"
 
 const cardVariants = tv({
-  base: "rounded-2xl text-body",
+  base: "rounded-base text-body",
   variants: {
     decoration: {
       none: "",
-      "ghost-shadow": "relative before:absolute before:inset-0 before:translate-x-2 before:translate-y-2 before:bg-background-medium before:rounded-2xl before:-z-10",
-      "purple-gradient": "border border-primary/10 bg-card-gradient-secondary hover:bg-card-gradient-secondary-hover",
+      "ghost-shadow": "relative before:absolute before:inset-0 before:translate-x-2 before:translate-y-2 before:bg-background-medium before:rounded-base before:-z-10",
+      "purple-gradient": "border border-primary/10 bg-linear-primary",
     },
     layout: {
       vertical: "flex flex-col",
@@ -176,6 +176,9 @@ These are all current candidates for absorption (each is a one-off that could be
 | `SubpageCard.tsx` | `Card` `decoration="purple-gradient"` |
 | `HorizontalCard.tsx` | `Card` `layout="horizontal"` |
 | `FloatingCard.tsx` | `Card` `tone="primary-gradient"` |
-| `FeedbackCard.tsx` | `Card` `tone="feedback-gradient"` |
 
 See `cleanup-playbook.md` for the full list of cleanup-track items.
+
+### Recently absorbed (worked precedent)
+
+`BannerNotification` (a 27-line `Banners/BannerNotification/index.tsx` rendering a full-bleed `<aside>` with `shouldShow` early-return) was deleted in May 2026 and replaced with `<Alert variant="banner">`. The replacement adds a new variant to the existing `Alert` primitive rather than keeping a separate file; the `shouldShow` prop disappears (callers gate at the JSX level with `{condition && <Alert variant="banner">...</Alert>}`). `BugBountyBanner` (a thin one-off wrapper around `BannerNotification`) was deleted in the same pass with no replacement file -- callers inline `<Alert variant="banner">` directly. This is the canonical pattern for absorbing a single-purpose component file into a variant of an existing primitive.

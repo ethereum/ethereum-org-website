@@ -1,16 +1,15 @@
 ---
-title: "تفاعل مع العقود الأخرى من سوليديتي"
+title: "التفاعل مع العقود الأخرى من ⁦Solidity⁩"
 description: "كيفية نشر عقد ذكي من عقد موجود والتفاعل معه"
-author: "jdourlens"
+author: jdourlens
 tags:
-  [
-    "العقود الذكيه ",
-    "Solidity",
-    "Remix",
-    "نشر",
-    "قابلية التركيب"
-  ]
+  - العقود الذكية
+  - solidity
+  - remix
+  - النشر
+  - قابلية التركيب
 skill: advanced
+breadcrumb: "تفاعلات العقد"
 lang: ar
 published: 2020-04-05
 source: EthereumDev
@@ -18,9 +17,9 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-في الدروس التعليمية السابقة، تعلمنا الكثير [كيفية نشر أول عقد ذكي لك](/developers/tutorials/deploying-your-first-smart-contract/) وإضافة بعض الميزات إليه مثل [التحكم في الوصول باستخدام المعدِّلات](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) أو [معالجة الأخطاء في سوليديتي](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). في هذا الدرس التعليمي، سنتعلم كيفية نشر عقد ذكي من عقد موجود والتفاعل معه.
+في البرامج التعليمية السابقة، تعلمنا الكثير حول [كيفية نشر أول عقد ذكي لك](/developers/tutorials/deploying-your-first-smart-contract/) وإضافة بعض الميزات إليه مثل [التحكم في الوصول باستخدام المُعدِّلات](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) أو [معالجة الأخطاء في ⁦Solidity⁩](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). في هذا البرنامج التعليمي، سنتعلم كيفية نشر عقد ذكي من عقد موجود والتفاعل معه.
 
-سننشئ عقدًا يمكّن أي شخص من الحصول على عقد `Counter` الذكي الخاص به عن طريق إنشاء مصنع له، وسيكون اسمه `CounterFactory`. أولاً، إليك النص البرمجي لعقد `Counter` الذكي المبدئي الخاص بنا:
+سنقوم بإنشاء عقد يمكّن أي شخص من امتلاك عقد ذكي `Counter` خاص به عن طريق إنشاء مصنع له، وسيكون اسمه `CounterFactory`. أولاً، إليك كود العقد الذكي `Counter` الأولي الخاص بنا:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -31,13 +30,14 @@ contract Counter {
     address private _owner;
     address private _factory;
 
+
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "أنت لست مالك العقد");
+        require(caller == _owner, "You're not the owner of the contract");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "تحتاج إلى استخدام المصنع");
+        require(msg.sender == _factory, "You need to use the factory");
         _;
     }
 
@@ -57,19 +57,19 @@ contract Counter {
 }
 ```
 
-لاحظ أننا عدّلنا النص البرمجي للعقد قليلاً لتتبع عنوان المصنع وعنوان مالك العقد. عند استدعاء نص برمجي لعقد من عقد آخر، سيشير `msg.sender` إلى عنوان مصنع العقد الخاص بنا. هذه **نقطة مهمة جدًا يجب فهمها** حيث إن استخدام عقد للتفاعل مع عقود أخرى ممارسة شائعة. لذلك يجب عليك الانتباه إلى من هو المرسل في الحالات المعقدة.
+لاحظ أننا قمنا بتعديل كود العقد قليلاً لتتبع عنوان المصنع وعنوان مالك العقد. عندما تستدعي كود عقد من عقد آخر، سيشير <span dir="ltr">msg.sender</span> إلى عنوان مصنع العقود الخاص بنا. هذه **نقطة مهمة حقًا يجب فهمها** لأن استخدام عقد للتفاعل مع عقود أخرى هو ممارسة شائعة. لذلك يجب عليك الانتباه إلى من هو المرسل في الحالات المعقدة.
 
-لهذا أضفنا أيضًا معدِّل `onlyFactory` الذي يضمن أن دالة تغيير الحالة لا يمكن استدعاؤها إلا من قبل المصنع الذي سيمرر المتصل الأصلي كمعامل.
+لهذا أضفنا أيضًا مُعدِّل `onlyFactory` للتأكد من أن دالة تغيير الحالة لا يمكن استدعاؤها إلا بواسطة المصنع الذي سيمرر المتصل الأصلي كمعلمة.
 
-داخل `CounterFactory` الجديد الخاص بنا الذي سيدير جميع عدادات `Counters` الأخرى، سنضيف تعيينًا سيربط المالك بعنوان عقد العداد الخاص به:
+داخل `CounterFactory` الجديد الخاص بنا والذي سيدير جميع العدادات الأخرى، سنضيف تعيينًا (mapping) يربط المالك بعنوان عقد العداد الخاص به:
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-في إيثريوم، التعيينات (mappings) تعادل الكائنات (objects) في جافاسكريبت، فهي تتيح تعيين مفتاح من النوع A إلى قيمة من النوع B. في هذه الحالة، نقوم بتعيين عنوان المالك مع نسخة من `Counter` الخاص به.
+في إيثيريوم، التعيينات (mappings) تعادل الكائنات (objects) في JavaScript، فهي تتيح تعيين مفتاح من النوع <span dir="ltr">A</span> إلى قيمة من النوع <span dir="ltr">B</span>. في هذه الحالة، نقوم بتعيين عنوان المالك مع نسخة العداد الخاصة به.
 
-إنشاء نسخة جديدة من `Counter` لشخص ما سيبدو هكذا:
+سيبدو إنشاء نسخة جديدة من العداد لشخص ما هكذا:
 
 ```solidity
   function createCounter() public {
@@ -78,9 +78,9 @@ mapping(address => Counter) _counters;
   }
 ```
 
-نتحقق أولاً مما إذا كان الشخص يمتلك بالفعل عدادًا. إذا لم يكن يمتلك عدادًا، نقوم بإنشاء عداد جديد عن طريق تمرير عنوانه إلى مُنشئ `Counter` وتعيين النسخة المنشأة حديثًا إلى التعيين.
+نتحقق أولاً مما إذا كان الشخص يمتلك عدادًا بالفعل. إذا لم يكن يمتلك عدادًا، نقوم بإنشاء عداد جديد عن طريق تمرير عنوانه إلى مُنشئ `Counter` وتعيين النسخة المنشأة حديثًا إلى التعيين (mapping).
 
-للحصول على عدد عداد `Counter` معين، سيبدو الأمر هكذا:
+للحصول على عدد عداد معين، سيبدو الأمر هكذا:
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
@@ -93,9 +93,9 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-تتحقق الدالة الأولى مما إذا كان عقد `Counter` موجودًا لعنوان معين ثم تستدعي طريقة `getCount` من النسخة. الدالة الثانية: `getMyCount` هي مجرد نهاية قصيرة لتمرير `msg.sender` مباشرة إلى دالة `getCount`.
+تتحقق الدالة الأولى مما إذا كان عقد العداد موجودًا لعنوان معين ثم تستدعي طريقة `getCount` من النسخة. الدالة الثانية: `getMyCount` هي مجرد اختصار لتمرير <span dir="ltr">msg.sender</span> مباشرة إلى دالة `getCount`.
 
-دالة `increment` مماثلة تمامًا لكنها تمرر مرسل المعاملة الأصلي إلى عقد `Counter`:
+دالة `increment` مشابهة تمامًا ولكنها تمرر مرسل المعاملة الأصلي إلى عقد `Counter`:
 
 ```solidity
 function increment() public {
@@ -104,11 +104,11 @@ function increment() public {
   }
 ```
 
-لاحظ أنه إذا تم استدعاؤه مرات عديدة، فقد يكون العداد الخاص بنا ضحية لفيضان (overflow). يجب عليك استخدام [مكتبة SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) قدر الإمكان للحماية من هذه الحالة المحتملة.
+لاحظ أنه إذا تم استدعاؤه مرات عديدة، فقد يقع العداد الخاص بنا ضحية تجاوز السعة. يجب عليك استخدام مكتبة [SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) قدر الإمكان للحماية من هذه الحالة المحتملة.
 
-لنشر عقدنا، ستحتاج إلى توفير كل من النص البرمجي لـ `CounterFactory` و `Counter`. عند النشر على سبيل المثال في ريميكس، ستحتاج إلى تحديد `CounterFactory`.
+لنشر العقد الخاص بنا، ستحتاج إلى توفير كود كل من `CounterFactory` و `Counter`. عند النشر على سبيل المثال في Remix، ستحتاج إلى تحديد <span dir="ltr">CounterFactory</span>.
 
-إليك النص البرمجي الكامل:
+إليك الكود الكامل:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -119,13 +119,14 @@ contract Counter {
     address private _owner;
     address private _factory;
 
+
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "أنت لست مالك العقد");
+        require(caller == _owner, "You're not the owner of the contract");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "تحتاج إلى استخدام المصنع");
+        require(msg.sender == _factory, "You need to use the factory");
         _;
     }
 
@@ -170,8 +171,8 @@ contract CounterFactory {
 }
 ```
 
-بعد التجميع، في قسم النشر في ريميكس ستحدد المصنع الذي سيتم نشره:
+بعد التصريف، في قسم النشر في Remix، ستحدد المصنع الذي سيتم نشره:
 
-![تحديد المصنع الذي سيتم نشره في ريميكس](./counterfactory-deploy.png)
+![Selecting the factory to be deployed in Remix](./counterfactory-deploy.png)
 
-بعد ذلك يمكنك اللعب بمصنع العقد الخاص بك والتحقق من تغير القيمة. إذا كنت ترغب في استدعاء العقد الذكي من عنوان مختلف، فستحتاج إلى تغيير العنوان في تحديد الحساب في ريميكس.
+ثم يمكنك تجربة مصنع العقود الخاص بك والتحقق من تغير القيمة. إذا كنت ترغب في استدعاء العقد الذكي من عنوان مختلف، فستحتاج إلى تغيير العنوان في قائمة تحديد الحساب (Account) في Remix.

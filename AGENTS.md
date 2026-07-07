@@ -60,7 +60,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 
 ### File Naming
 
-- **Components**: PascalCase (e.g., `ActionCard.tsx`)
+- **Components**: kebab-case (e.g., `button-group.tsx`)
 - **Utilities**: camelCase (e.g., `cn.ts`, `relativePath.ts`)
 - **Pages**: kebab-case following Next.js conventions
 - **Assets**: kebab-case (e.g., `eth-logo.png`)
@@ -125,6 +125,8 @@ pnpm events-import         # Import community events
 - JSON UI strings in `src/intl/[locale]/`; translated markdown content in `public/content/translations/[locale]/`
 - Non-English markdown is propagated by the **intl-pipeline** (`src/scripts/intl-pipeline/`, entry `main.ts`). **Do not hand-propagate English changes into non-English files** -- let the pipeline run, or trigger `intl-pipeline.yml` with `stamp_only: true` if manifests must catch up urgently (e.g. unblocking a build). Hand-fixing a translation error is fine when the English side hasn't moved, since the manifest mapping stays valid. Spec: `tests/specs/PIPELINE-SPEC.md`.
 - Glossary: base URL from `GLOSSARY_API_URL` env var; default in `src/scripts/intl-pipeline/config.ts`. ETHGlossary is authoritative for Ethereum term translations.
+
+For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `intl/pending-{base}` orchestration model, see the **`intl-pipeline` skill** at `.claude/skills/intl-pipeline/`. For translation-quality review (scoring rubric, language-group rules, ETHGlossary-as-authority policy, multi-agent role split), see the **`intl-review` skill** at `.claude/skills/intl-review/`.
 
 ### Markdown Content
 

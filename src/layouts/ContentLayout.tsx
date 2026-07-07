@@ -1,14 +1,28 @@
+import { cva, VariantProps } from "class-variance-authority"
 import type { HTMLAttributes } from "react"
 
 import { FileContributor } from "@/lib/types"
 
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import FileContributors from "@/components/FileContributors"
-import { ContentContainer, Page } from "@/components/MdComponents"
+import ListenToPlayer from "@/components/ListenToPlayer/lazy"
+import MainArticle from "@/components/MainArticle"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import TableOfContents, {
   type TableOfContentsProps,
 } from "@/components/TableOfContents"
+
+const variants = cva("flow flex-1", {
+  variants: {
+    variant: {
+      base: "max-w-4xl",
+      narrow: "max-w-3xl",
+    },
+  },
+  defaultVariants: {
+    variant: "base",
+  },
+})
 
 type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
   Pick<TableOfContentsProps, "dropdownLinks" | "showDropdown"> & {
@@ -17,7 +31,8 @@ type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
     heroSection: React.ReactNode
     contributors: FileContributor[]
     lastEditLocaleTimestamp?: string
-  }
+    listenSlug?: string
+  } & VariantProps<typeof variants>
 
 export const ContentLayout = ({
   children,
@@ -27,34 +42,47 @@ export const ContentLayout = ({
   heroSection,
   contributors,
   lastEditLocaleTimestamp,
+  listenSlug,
+  variant,
   ...props
-}: ContentLayoutProps) => {
-  return (
-    <div {...props}>
-      {heroSection}
+}: ContentLayoutProps) => (
+  <div {...props}>
+    {heroSection}
 
-      <Page>
-        <TableOfContents
-          items={tocItems}
-          dropdownLinks={dropdownLinks}
-          maxDepth={0}
-          showDropdown={showDropdown}
-          variant="left"
-        />
-        <ContentContainer>
-          {children}
-
+    <main className="p-page">
+      <div className="flex justify-between gap-x-space-3x max-lg:flex-col-reverse">
+        <MainArticle className={variants({ variant })}>
           <FileContributors
-            className="my-10 border-t"
             contributors={contributors}
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            variant="compact"
           />
-          <FeedbackCard />
-        </ContentContainer>
-        {showDropdown && dropdownLinks && (
-          <MobileButtonDropdown list={dropdownLinks} />
-        )}
-      </Page>
-    </div>
-  )
-}
+          {listenSlug && (
+            <ListenToPlayer className="mt-space-half" slug={listenSlug} />
+          )}
+
+          {children}
+        </MainArticle>
+
+        <aside>
+          <TableOfContents variant="card" items={tocItems} isMobile />
+
+          <TableOfContents
+            items={tocItems}
+            dropdownLinks={dropdownLinks}
+            maxDepth={0}
+            showDropdown={showDropdown}
+            variant="card"
+          />
+        </aside>
+      </div>
+
+      {/* End-of-page actions */}
+      <ContentFeedback />
+    </main>
+
+    {showDropdown && dropdownLinks && (
+      <MobileButtonDropdown list={dropdownLinks} />
+    )}
+  </div>
+)

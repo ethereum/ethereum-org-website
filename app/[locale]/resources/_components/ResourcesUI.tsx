@@ -11,7 +11,7 @@ export const DashboardBox = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn("overflow-hidden rounded-2xl border shadow-lg", className)}
+    className={cn("overflow-hidden rounded-base border shadow-lg", className)}
     {...props}
   />
 )
@@ -54,7 +54,7 @@ export const ResourcesContainer = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "overflow-hidden rounded-2xl border bg-[#ffffff] dark:bg-[#171717]",
+      "overflow-hidden rounded-base border bg-[#ffffff] dark:bg-[#171717]",
       className
     )}
     {...props}

@@ -56,7 +56,7 @@ const CONFIG: Partial<ContentTreeConfig> = {
     "label",
     "aria-label",
     "placeholder",
-    "buttonLabel",
+    "ctaLabel",
     "name",
     "caption",
     "contentPreview",
@@ -80,14 +80,18 @@ test.describe("Phase 1: Markdown change detection", () => {
   const cs = extractChanges(treeA, treeB)
   const dr = diff(treeA, treeB)
 
+  // NOTE: counts updated for intl-content-tree >= 0.3.1, whose improved
+  // component-attribute extraction changes this fixture's diff totals
+  // (+1 node-level change, +1 inertDrift, -1 unchanged vs 0.3.0).
+
   // --- DiffResult section-level ---
 
-  test("28 unchanged entries", () => {
-    expect(dr.unchanged).toHaveLength(28)
+  test("27 unchanged entries", () => {
+    expect(dr.unchanged).toHaveLength(27)
   })
 
-  test("7 inertDrift entries", () => {
-    expect(dr.inertDrift).toHaveLength(7)
+  test("8 inertDrift entries", () => {
+    expect(dr.inertDrift).toHaveLength(8)
     const ids = dr.inertDrift.map((e) => e.id)
     expect(ids).toContain("frontmatter:image")
     expect(ids).toContain("code-review")
@@ -141,8 +145,8 @@ test.describe("Phase 1: Markdown change detection", () => {
 
   // --- ChangeSet node-level ---
 
-  test("30 node-level changes", () => {
-    expect(cs.changes).toHaveLength(30)
+  test("31 node-level changes", () => {
+    expect(cs.changes).toHaveLength(31)
   })
 
   test("1 section rename: contributing-to-projects -> how-to-contribute", () => {

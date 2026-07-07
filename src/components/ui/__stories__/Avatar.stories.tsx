@@ -1,41 +1,94 @@
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
-import { Avatar, AvatarGroup } from "../avatar"
+import {
+  Avatar,
+  AvatarBase,
+  AvatarFallback,
+  AvatarGroup,
+  AvatarImage,
+} from "../avatar"
 import { HStack, VStack } from "../flex"
 
+const SAMPLE = {
+  name: "Sam Richards",
+  src: "https://avatars.githubusercontent.com/u/8097623?v=4",
+  href: "#",
+}
+
 const meta = {
-  title: "Atoms / Media & Icons / Avatars",
+  title: "UI / Avatar",
   component: Avatar,
+  args: SAMPLE,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "User avatar built on Radix Avatar. `Avatar` is the high-level component (link + image + fallback + optional label). The lower-level `AvatarBase` + `AvatarImage` + `AvatarFallback` primitives are exposed for custom compositions. `AvatarGroup` stacks avatars with overlap and an optional `max` cap.",
+      },
+    },
+  },
 } satisfies Meta<typeof Avatar>
 
 export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Single: Story = {
-  args: {
-    name: "Sam Richards",
-    src: "https://avatars.githubusercontent.com/u/8097623?v=4",
-    href: "#",
-  },
+export const Sizes: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
+  args: SAMPLE,
   render: (args) => (
-    <VStack className="gap-4">
-      {(["lg", "md", "sm", "xs"] as const).map((size) => (
+    <HStack className="items-center gap-4">
+      {(["xs", "sm", "md", "lg"] as const).map((size) => (
         <Avatar key={size} size={size} {...args} />
       ))}
-    </VStack>
+    </HStack>
+  ),
+}
+
+export const WithLabel: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story:
+          "When `label` is provided, the avatar renders alongside the label inside a `LinkBox`. `direction: 'row'` (default) is horizontal; `'column'` stacks vertically.",
+      },
+    },
+  },
+  args: {
+    ...SAMPLE,
+    href: "https://github.com/samajammin",
+    label: "samajammin",
+  },
+  render: (args) => (
+    <HStack className="items-start gap-12">
+      <VStack className="gap-4">
+        {(["md", "sm", "xs"] as const).map((size, idx) => (
+          <Avatar key={idx} size={size} {...args} />
+        ))}
+      </VStack>
+      <VStack className="gap-4">
+        {(["md", "sm", "xs"] as const).map((size, idx) => (
+          <Avatar key={idx} size={size} direction="column" {...args} />
+        ))}
+      </VStack>
+    </HStack>
   ),
 }
 
 export const Group: Story = {
-  args: {
-    name: "Sam Richards",
-    src: "https://avatars.githubusercontent.com/u/8097623?v=4",
-    href: "#",
+  args: SAMPLE,
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "`AvatarGroup` overlaps avatars and renders a `+N` overflow fallback when `max` is exceeded.",
+      },
+    },
   },
   render: (args) => (
-    <VStack className="gap-4">
-      {(["sm", "xs"] as const).map((size) => (
+    <VStack className="items-start gap-4">
+      {(["sm", "md"] as const).map((size) => (
         <AvatarGroup key={size} size={size} max={3}>
           <Avatar dataTest="one" {...args} />
           <Avatar dataTest="two" {...args} />
@@ -49,38 +102,66 @@ export const Group: Story = {
 
 export const BrokenImageFallback: Story = {
   args: {
-    name: "Sam Richards",
+    ...SAMPLE,
     src: "https://placehold.co/404error",
-    href: "#",
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "When the image fails to load, `Avatar` swaps to `AvatarImage` (which then falls back to `AvatarFallback` rendering the user's initials).",
+      },
+    },
   },
   render: (args) => (
-    <VStack className="gap-4">
-      {(["lg", "md", "sm", "xs"] as const).map((size) => (
+    <HStack className="items-center gap-4">
+      {(["xs", "sm", "md", "lg"] as const).map((size) => (
         <Avatar key={size} size={size} {...args} />
       ))}
-    </VStack>
+    </HStack>
   ),
 }
 
-export const WithUsername: Story = {
-  args: {
-    name: "Sam Richards",
-    src: "https://avatars.githubusercontent.com/u/8097623?v=4",
-    href: "https://github.com/samajammin",
-    label: "samajammin",
+export const BasePrimitives: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story:
+          "`AvatarBase`, `AvatarImage`, and `AvatarFallback` exposed for custom compositions. Combine them when the high-level `Avatar` does not fit the use case.",
+      },
+    },
   },
-  render: (args) => (
-    <HStack className="gap-4">
-      <VStack>
-        {(["md", "sm", "xs"] as const).map((size, idx) => (
-          <Avatar key={idx} size={size} {...args} />
-        ))}
-      </VStack>
-      <VStack>
-        {(["md", "sm", "xs"] as const).map((size, idx) => (
-          <Avatar key={idx} size={size} direction="column" {...args} />
-        ))}
-      </VStack>
+  render: () => (
+    <HStack className="items-center gap-4">
+      <AvatarBase size="md">
+        <AvatarImage src="https://avatars.githubusercontent.com/u/8097623?v=4" />
+        <AvatarFallback>SR</AvatarFallback>
+      </AvatarBase>
+      <AvatarBase size="md">
+        <AvatarImage src="" />
+        <AvatarFallback>SR</AvatarFallback>
+      </AvatarBase>
+    </HStack>
+  ),
+}
+
+export const FallbackOnly: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story: "`AvatarFallback` rendered without an image source.",
+      },
+    },
+  },
+  render: () => (
+    <HStack className="items-center gap-4">
+      {(["xs", "sm", "md", "lg"] as const).map((size) => (
+        <AvatarBase key={size} size={size}>
+          <AvatarFallback>SR</AvatarFallback>
+        </AvatarBase>
+      ))}
     </HStack>
   ),
 }

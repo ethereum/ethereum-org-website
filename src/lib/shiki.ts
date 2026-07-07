@@ -6,8 +6,8 @@ import {
 } from "shiki"
 
 const THEMES = {
-  light: "one-light",
-  dark: "one-dark-pro",
+  light: "vitesse-light",
+  dark: "vitesse-dark",
 } as const satisfies Record<string, BundledTheme>
 
 const LANGS = [

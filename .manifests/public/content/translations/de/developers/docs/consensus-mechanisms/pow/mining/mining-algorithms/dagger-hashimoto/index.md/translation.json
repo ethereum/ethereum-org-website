@@ -1,0 +1,510 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-16T22:18:41.730Z",
+  "englishManifestHash": "d1c330e4dc82",
+  "placeholderOrder": [
+    "LINK-35ee2c",
+    "LINK-14f434",
+    "LINK-c705fb",
+    "LINK-139dc0",
+    "LINK-3d4134",
+    "LINK-c56ee8",
+    "CODE-70f09e",
+    "CODEBLOCK-8a32fb",
+    "CODE-4ff5a3",
+    "CODE-57db50",
+    "CODEBLOCK-704d8c",
+    "CODEBLOCK-1f698c",
+    "CODE-5c62e0",
+    "CODE-52b0c7",
+    "CODEBLOCK-6d6d21",
+    "CODE-0675b4",
+    "CODE-de7d1b",
+    "CODE-1e08da",
+    "CODE-2d7116",
+    "CODE-de7d1b",
+    "CODEBLOCK-88afa9",
+    "CODE-9b1946",
+    "LINK-a9a1b8",
+    "CODE-afc613",
+    "CODEBLOCK-a3ba84",
+    "CODEBLOCK-40b936",
+    "CODEBLOCK-c876dd",
+    "CODEBLOCK-3efdc9",
+    "CODEBLOCK-ed052e",
+    "CODEBLOCK-b61959",
+    "CODEBLOCK-40269e",
+    "CODE-cb031a",
+    "CODE-577e56",
+    "CODE-2d7116",
+    "CODE-6b86b2",
+    "CODE-829887",
+    "CODE-59c9c2",
+    "CODE-577e56",
+    "CODE-dae788",
+    "CODE-f64fab",
+    "LINK-3cb30d",
+    "CODE-5c62e0",
+    "CODE-d21cf6",
+    "CODE-2d7116",
+    "LINK-bb499f",
+    "CODE-625fe1",
+    "CODE-62c66a",
+    "CODE-2d7116",
+    "CODE-eddaf1",
+    "CODE-5c62e0",
+    "CODE-d9fe07",
+    "CODE-b72c85",
+    "CODE-2d7116",
+    "CODE-829887",
+    "CODE-d21cf6",
+    "CODE-5c62e0",
+    "CODE-2d7116",
+    "CODE-6b86b2",
+    "CODE-d4735e",
+    "CODE-d21cf6",
+    "CODE-829887",
+    "CODE-2d7116",
+    "CODE-6b86b2",
+    "CODE-2d7116",
+    "CODE-625fe1",
+    "CODE-7b5bc0",
+    "CODE-2d7116",
+    "CODE-d4735e",
+    "CODE-e84682",
+    "CODE-5c62e0",
+    "CODE-104b35",
+    "CODE-d21cf6",
+    "CODE-5c62e0",
+    "CODE-bb5406",
+    "CODE-beffec",
+    "CODE-5c62e0",
+    "CODE-bb5406",
+    "CODE-b7bfbe",
+    "CODE-6b86b2",
+    "CODE-829887",
+    "CODE-829887",
+    "CODE-2d7116",
+    "CODE-eddaf1",
+    "CODE-5c62e0",
+    "CODE-50e721",
+    "CODE-d9fe07",
+    "CODE-b72c85",
+    "CODE-186084",
+    "CODE-6de81f",
+    "CODE-db92e1",
+    "CODE-2955a8",
+    "CODE-5c62e0",
+    "CODE-50e721",
+    "CODE-679d89",
+    "CODE-d77b0e",
+    "CODE-c6af94",
+    "CODE-5c62e0",
+    "CODE-50e721",
+    "CODE-5c62e0",
+    "CODE-50e721",
+    "CODE-829887",
+    "CODE-ca9781",
+    "CODE-3e23e8",
+    "CODE-eddaf1",
+    "CODE-03656a",
+    "CODE-619eef",
+    "CODE-5c62e0",
+    "CODE-50e721",
+    "CODE-829887",
+    "CODE-45db6c",
+    "CODE-5c62e0",
+    "CODE-829887",
+    "CODE-d21cf6",
+    "CODE-829887",
+    "CODE-5c62e0",
+    "CODE-829887",
+    "CODE-954369",
+    "CODEBLOCK-6a9aee"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-8a32fb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-704d8c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1f698c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6d6d21": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-88afa9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a3ba84": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-40b936": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c876dd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3efdc9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ed052e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b61959": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-40269e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6a9aee": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-70f09e": {
+      "type": "inline-code",
+      "values": {
+        "content": "encode_int"
+      }
+    },
+    "CODE-4ff5a3": {
+      "type": "inline-code",
+      "values": {
+        "content": "sha3"
+      }
+    },
+    "CODE-57db50": {
+      "type": "inline-code",
+      "values": {
+        "content": "dbl_sha3"
+      }
+    },
+    "CODE-5c62e0": {
+      "type": "inline-code",
+      "values": {
+        "content": "P"
+      }
+    },
+    "CODE-52b0c7": {
+      "type": "inline-code",
+      "values": {
+        "content": "log₂(P)"
+      }
+    },
+    "CODE-0675b4": {
+      "type": "inline-code",
+      "values": {
+        "content": "sha3(seed)"
+      }
+    },
+    "CODE-de7d1b": {
+      "type": "inline-code",
+      "values": {
+        "content": "i"
+      }
+    },
+    "CODE-1e08da": {
+      "type": "inline-code",
+      "values": {
+        "content": "x % i"
+      }
+    },
+    "CODE-2d7116": {
+      "type": "inline-code",
+      "values": {
+        "content": "x"
+      }
+    },
+    "CODE-9b1946": {
+      "type": "inline-code",
+      "values": {
+        "content": "k=1"
+      }
+    },
+    "CODE-afc613": {
+      "type": "inline-code",
+      "values": {
+        "content": "epochtime"
+      }
+    },
+    "CODE-cb031a": {
+      "type": "inline-code",
+      "values": {
+        "content": "picker"
+      }
+    },
+    "CODE-577e56": {
+      "type": "inline-code",
+      "values": {
+        "content": "pow(x,3,P)"
+      }
+    },
+    "CODE-6b86b2": {
+      "type": "inline-code",
+      "values": {
+        "content": "1"
+      }
+    },
+    "CODE-829887": {
+      "type": "inline-code",
+      "values": {
+        "content": "P-1"
+      }
+    },
+    "CODE-59c9c2": {
+      "type": "inline-code",
+      "values": {
+        "content": "x ∈ [2,P-2]"
+      }
+    },
+    "CODE-dae788": {
+      "type": "inline-code",
+      "values": {
+        "content": "produce_dag"
+      }
+    },
+    "CODE-f64fab": {
+      "type": "inline-code",
+      "values": {
+        "content": "seed**i % P"
+      }
+    },
+    "CODE-d21cf6": {
+      "type": "inline-code",
+      "values": {
+        "content": "(P-1)/2"
+      }
+    },
+    "CODE-625fe1": {
+      "type": "inline-code",
+      "values": {
+        "content": "ℤ/nℤ"
+      }
+    },
+    "CODE-62c66a": {
+      "type": "inline-code",
+      "values": {
+        "content": "m"
+      }
+    },
+    "CODE-eddaf1": {
+      "type": "inline-code",
+      "values": {
+        "content": "ℤ/Pℤ"
+      }
+    },
+    "CODE-d9fe07": {
+      "type": "inline-code",
+      "values": {
+        "content": "x mod P ≠ 1 mod P"
+      }
+    },
+    "CODE-b72c85": {
+      "type": "inline-code",
+      "values": {
+        "content": "x mod P ≠ P-1 mod P"
+      }
+    },
+    "CODE-d4735e": {
+      "type": "inline-code",
+      "values": {
+        "content": "2"
+      }
+    },
+    "CODE-7b5bc0": {
+      "type": "inline-code",
+      "values": {
+        "content": "x ≠ 1"
+      }
+    },
+    "CODE-e84682": {
+      "type": "inline-code",
+      "values": {
+        "content": "x = P-1"
+      }
+    },
+    "CODE-104b35": {
+      "type": "inline-code",
+      "values": {
+        "content": "(picker * init) % P"
+      }
+    },
+    "CODE-bb5406": {
+      "type": "inline-code",
+      "values": {
+        "content": "init"
+      }
+    },
+    "CODE-beffec": {
+      "type": "inline-code",
+      "values": {
+        "content": "[2,2**256+1]"
+      }
+    },
+    "CODE-b7bfbe": {
+      "type": "inline-code",
+      "values": {
+        "content": "pow(sha3(seed) + 2, 3, P)"
+      }
+    },
+    "CODE-50e721": {
+      "type": "inline-code",
+      "values": {
+        "content": "w"
+      }
+    },
+    "CODE-186084": {
+      "type": "inline-code",
+      "values": {
+        "content": "w mod P ≠ P-1 mod P"
+      }
+    },
+    "CODE-6de81f": {
+      "type": "inline-code",
+      "values": {
+        "content": "w mod P ≠ 0 mod P"
+      }
+    },
+    "CODE-db92e1": {
+      "type": "inline-code",
+      "values": {
+        "content": "xʷ mod P ≠ 1 mod P"
+      }
+    },
+    "CODE-2955a8": {
+      "type": "inline-code",
+      "values": {
+        "content": "xʷ mod P ≠ P-1 mod P"
+      }
+    },
+    "CODE-679d89": {
+      "type": "inline-code",
+      "values": {
+        "content": "pow(x, w, P)"
+      }
+    },
+    "CODE-d77b0e": {
+      "type": "inline-code",
+      "values": {
+        "content": "pow(x,9,19)"
+      }
+    },
+    "CODE-c6af94": {
+      "type": "inline-code",
+      "values": {
+        "content": "{1,18}"
+      }
+    },
+    "CODE-ca9781": {
+      "type": "inline-code",
+      "values": {
+        "content": "a"
+      }
+    },
+    "CODE-3e23e8": {
+      "type": "inline-code",
+      "values": {
+        "content": "b"
+      }
+    },
+    "CODE-03656a": {
+      "type": "inline-code",
+      "values": {
+        "content": "aʷ mod P ≡ bʷ mod P"
+      }
+    },
+    "CODE-619eef": {
+      "type": "inline-code",
+      "values": {
+        "content": "a mod P ≡ b mod P"
+      }
+    },
+    "CODE-45db6c": {
+      "type": "inline-code",
+      "values": {
+        "content": "|{pow(x, w, P) : x ∈ ℤ}| = P"
+      }
+    },
+    "CODE-954369": {
+      "type": "inline-code",
+      "values": {
+        "content": "w=3"
+      }
+    },
+    "LINK-35ee2c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/#ethash"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "LINK-c705fb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    },
+    "LINK-139dc0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow"
+      }
+    },
+    "LINK-3d4134": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining"
+      }
+    },
+    "LINK-c56ee8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms"
+      }
+    },
+    "LINK-a9a1b8": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Multiple_buffering"
+      }
+    },
+    "LINK-3cb30d": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Safe_prime"
+      }
+    },
+    "LINK-bb499f": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:18:41.730Z",
+      "status": "success"
+    }
+  }
+}

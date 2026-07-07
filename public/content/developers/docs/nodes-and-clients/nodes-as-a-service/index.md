@@ -271,6 +271,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Multi-chain support
     - Get started for free
 
+- [**NodeFlare**](https://nodeflare.app/)
+  - [Docs](https://nodeflare.app/docs/quick-start)
+  - Features
+    - 8 EVM chains including Ethereum, Base, Arbitrum One, and Optimism
+    - 4 regions (Europe, Asia, North America) with automatic failover to nearest healthy node
+    - Free public endpoint (no API key) + free plan with 3M compute units/month
+    - Compute Unit billing — pay only for what you use, heavier calls cost more
+    - No throttling on paid plans
+
 - [**NOWNodes**](https://nownodes.io/)
   - Features
     - Access to 50+ blockchain nodes

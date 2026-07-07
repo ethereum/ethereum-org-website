@@ -18,6 +18,7 @@ Ethereum.org es un recurso educativo y neutral. La galería de videos está sele
 
 El sitio no incluye videos que promuevan principalmente un producto, token o servicio comercial específico.
 
+
 ## Criterios de inclusión {#criteria-for-inclusion}
 
 ### Requisitos indispensables {#must-haves}
@@ -33,6 +34,7 @@ El sitio no incluye videos que promuevan principalmente un producto, token o ser
 - **Tener una transcripción**: los videos con transcripciones mejoran la accesibilidad y el SEO. Si no tiene una, el equipo de ethereum.org puede ayudar a generarla.
 - **Provenir de una fuente creíble**: el contenido de educadores, investigadores y fuentes establecidas recibe prioridad.
 - **Oportuno y atemporal**: se prefiere el contenido que sigue siendo relevante a lo largo del tiempo sobre el material que depende del tiempo.
+
 
 ## Cómo añadir un video {#how-to-add-a-video}
 
@@ -121,25 +123,10 @@ Use encabezados `###` con marcas de tiempo para señalar las secciones principal
 
 Si no tiene una transcripción, puede dejar el cuerpo vacío y el equipo generará una.
 
-#### Paso 4: Elegir etiquetas de temas {#step-4}
-
-Elija etiquetas de temas que coincidan con las categorías existentes utilizadas en la galería. Las categorías actuales y sus etiquetas incluyen:
-
-- **Cómo funciona Ethereum**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Actualizaciones de la red**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Hoja de ruta y prioridades**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Escalabilidad y capa 2 (l2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Casos de uso**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Privacidad y seguridad**: `privacy-and-security`, `privacy`, `authentication`
-- **Historias de la comunidad**: `community-stories`, `contributing`, `translations`, `community`
-
-Para asegurarse de que su video aparezca en una sección de categoría de la galería, incluya al menos una etiqueta clave de categoría (el nombre en negrita en formato kebab-case, por ejemplo, `use-cases` o `scaling-and-layer-2`). Los videos sin una etiqueta de categoría reconocida solo aparecerán en la vista "Todos" y en los resultados de búsqueda.
-
-También puede usar etiquetas nuevas; estarán disponibles para futuras agrupaciones de categorías.
-
 #### Paso 5: Enviar su PR {#step-5}
 
 Abra una solicitud de extracción (pull request) con sus cambios a la rama `dev`. El equipo revisará su envío y le proporcionará comentarios.
+
 
 ## Mantenimiento {#maintenance}
 
@@ -150,6 +137,7 @@ Los videos incluidos se revisan de forma rutinaria para garantizar que:
 - Tengan enlaces de alojamiento/YouTube que funcionen
 
 Si nota algún problema con un video incluido, [cree un problema (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) o envíe un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Términos de uso {#terms-of-use}
 

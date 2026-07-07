@@ -1,95 +1,95 @@
 ---
-title: "Thêm Layer 2"
-description: "Chính sách chúng tôi sử dụng khi thêm một Lớp 2 vào ethereum.org"
+title: Thêm lớp 2
+description: Chính sách chúng tôi sử dụng khi thêm lớp 2 vào ethereum.org
 lang: vi
 ---
 
-# Thêm các lớp 2 {#adding-layer-2}
+Chúng tôi muốn đảm bảo rằng mình liệt kê các tài nguyên tốt nhất có thể để người dùng có thể điều hướng không gian lớp 2 một cách an toàn và tự tin.
 
-Chúng tôi muốn bảo đảm rằng chúng tôi chia sẻ những nguồn tin tốt nhất có thể, từ đó người dùng có thể định hướng trong mảng Layer 2 một cách an toàn và tự tin.
+Bất kỳ ai cũng có thể tự do đề xuất thêm một lớp 2 trên ethereum.org. Nếu có một lớp 2 nào đó mà chúng tôi đã bỏ sót, **[vui lòng đề xuất nó](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
-Bất kì ai cũng có thể đề xuất thêm Layer 2 lên ethereum.org. Nếu có lớp 2 nào mà chúng tôi đã bỏ lỡ, **[vui lòng đề xuất](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
+Chúng tôi hiện đang liệt kê các L2 trên các trang sau:
 
-Hiện tại chúng tôi công bố danh sách các Layer 2 trên các trang sau đây:
-
-- [Các gộp giao dịch lạc quan](/developers/docs/scaling/optimistic-rollups/)
-- [Các gộp giao dịch không kiến thức](/developers/docs/scaling/zk-rollups/)
+- [Rollup lạc quan](/developers/docs/scaling/optimistic-rollups/)
+- [Rollup không tri thức](/developers/docs/scaling/zk-rollups/)
 - [Lớp 2](/layer-2/)
 
-Layer 2 là một mô hình khá mới và thú vị đối với Ethereum. Chúng tôi đã cố gắng tạo ra khung đánh giá công bằng nhưng các tiêu chí để được đưa vào danh sách trên ethereum.org sẽ thay đổi và chuyển biến theo thời gian.
+Lớp 2 là một mô hình tương đối mới và thú vị đối với Ethereum. Chúng tôi đã cố gắng tạo ra một khuôn khổ công bằng để xem xét trên ethereum.org nhưng các tiêu chí niêm yết sẽ thay đổi và phát triển theo thời gian.
 
-## Khung đưa ra quyết định {#decision-framework}
+## Khuôn khổ quyết định {#decision-framework}
 
-### Tiêu chí để được đưa vào: những điều bắt buộc phải có {#criteria-for-inclusion-the-must-haves}
+### Tiêu chí để đưa vào: những điều bắt buộc phải có {#criteria-for-inclusion-the-must-haves}
 
-**Đưa vào danh sách L2BEAT**
+**Được niêm yết trên L2BEAT**
 
-- Để được xem xét, dự án này phải được niêm yết trên [L2BEAT](https://l2beat.com). L2BEAT cung cấp đánh giá rủi ro toàn diện về các dự án layer 2 mà chúng tôi lấy làm căn cứ đánh giá các dự án đó. **Nếu dự án không góp mặt trên L2BEAT, chúng tôi sẽ không đưa vào danh sách Layer 2 trên ethereum.org.**
+- Để được xem xét, dự án này phải được niêm yết trên [L2BEAT](https://l2beat.com). L2BEAT cung cấp một đánh giá rủi ro mạnh mẽ về các dự án lớp 2 mà chúng tôi dựa vào để đánh giá các dự án L2. **Nếu dự án không có trên L2BEAT, chúng tôi sẽ không liệt kê chúng là L2 trên ethereum.org.**
 - [Tìm hiểu cách thêm dự án L2 của bạn vào L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Mã nguồn mở**
 
-- Bạn cho phép truy cập code và đồng ý tiếp nhận các đề xuất thay đổi từ cộng đồng rộng lớn hơn.
+- Mã của bạn phải có thể truy cập được và bạn nên chấp nhận các PR từ cộng đồng rộng lớn hơn.
 
-**Phân loại Layer 2**
+**Danh mục lớp 2**
 
-Hiện tại chúng tôi công nhận các giải pháp sau đây là Layer 2:
+Chúng tôi hiện coi các giải pháp sau là giải pháp lớp 2:
 
-- Rollup tích cực
-- Gộp giao dịch không kiến thức
+- Rollup lạc quan
+- Rollup không tri thức
 
 _Chúng tôi không coi các giải pháp mở rộng quy mô khác không sử dụng Ethereum cho tính khả dụng của dữ liệu hoặc bảo mật là lớp 2._
 
-**Ethereum dành cho tính sẵn sàng của dữ liệu**
+**Ethereum cho tính khả dụng của dữ liệu**
 
-- Tính sẵn sàng của dữ liệu là một yếu tố then chốt khi phân biệt giữa các giải pháp mở rộng khác và giải pháp layer 2. Một dự án **phải** sử dụng Ethereum Mainnet cho tính khả dụng của dữ liệu để được xem xét niêm yết.
+- Tính khả dụng của dữ liệu là một yếu tố khác biệt quan trọng giữa các giải pháp mở rộng quy mô khác và lớp 2. Một dự án **phải** sử dụng Mạng chính Ethereum cho tính khả dụng của dữ liệu để được xem xét niêm yết.
 
-**Các cầu nối**
+**Cầu nối**
 
-- Người dùng có thể tiếp cận sử dụng layer 2 như thế nào?
+- Làm thế nào để người dùng có thể tham gia vào lớp 2?
 
-**Ngày dự án chính thức hoạt động**
+**Ngày dự án đi vào hoạt động**
 
-- Một giải pháp Layer 2 đã "hoạt động" trên Mainnet trên 6 tháng
+- Một lớp 2 đã "hoạt động" trên Mạng chính trong hơn 6 tháng
 
-- Các dự án mới hơn chưa được người dùng kiểm nghiệm thực tế sẽ ít có khả năng được đưa vào danh sách.
+- Các dự án mới hơn chưa được người dùng thử nghiệm thực tế sẽ ít có khả năng được niêm yết hơn.
 
-**Kiểm toán bảo mật khách quan**
+**Kiểm toán bảo mật bên ngoài**
 
-- Dủ sử dụng đơn vị kiểm toán công nghệ, đội ngũ bảo mật nội bộ hay những phương pháp khác, sản phẩm cần được kiểm thử bảo mật một cách đáng tin cậy. Điều này giảm thiểu rủi ro cho người dùng và thể hiện bạn coi trọng vấn đề an toàn bảo mật.
+- Dù thông qua kiểm toán, nhóm bảo mật nội bộ hay một số phương pháp khác, bảo mật sản phẩm của bạn phải được kiểm tra một cách đáng tin cậy. Điều này làm giảm rủi ro cho người dùng của chúng tôi và cho chúng tôi thấy rằng bạn rất coi trọng vấn đề bảo mật.
 
-**Tệp người dùng ổn định**
+**Cơ sở người dùng bền vững**
 
-- Chúng tôi sẽ xem xét các chỉ số như lịch sử Tổng giá trị tài sản bị khoá, số liệu giao dịch, và có được sử dụng bởi các công ty hoặc dự án có tiếng
+- Chúng tôi sẽ xem xét các số liệu như lịch sử tổng giá trị bị khóa (TVL), thống kê giao dịch và liệu nó có được sử dụng bởi các công ty hoặc dự án đã biết hay không
 
-**Đội ngũ phát triển chuyên cần làm việc**
+**Nhóm phát triển tích cực**
 
-- Chúng tôi sẽ không đưa lên Layer 2 có đội ngũ không thường trực làm việc trong dự án.
+- Chúng tôi sẽ không liệt kê một lớp 2 không có nhóm tích cực làm việc cho dự án.
 
-**Trang tra cứu blockchain**
+**Trình khám phá khối**
 
-- Các dự án được yêu cầu có một trang tra cứu blockchain cho phép người dùng dễ dàng điều hướng, tra cứu và tương tác.
+- Các dự án được niêm yết yêu cầu một trình khám phá khối đang hoạt động để cho phép người dùng dễ dàng điều hướng chuỗi.
 
-### Các tiêu chí khác: những điểm cộng {#nice-to-haves}
+### Các tiêu chí khác: những điều nên có {#nice-to-haves}
 
-**Sàn giao dịch hỗ trợ dự án**
+**Hỗ trợ sàn giao dịch cho dự án**
 
-- Người dùng có thể gửi vào và/hoặc rút ra trực tiếp từ sàn giao dịch?
+- Người dùng có thể nạp và/hoặc rút tiền trực tiếp từ một sàn giao dịch không?
 
-**Đường link đến các ứng dụng phi tập trung trong hệ sinh thái layer 2**
+**Liên kết đến các ứng dụng phi tập trung (dapp) trong hệ sinh thái lớp 2**
 
-- Chúng tôi mong muốn cung cấp thông tin về những gì người dùng có thể thực hiện trên layer 2. (ví dụ: https://portal.arbitrum.io/, https://www.optimism.io/apps)
+- Chúng tôi muốn có thể cung cấp thông tin về những gì người dùng có thể mong đợi làm được trên lớp 2 này. (ví dụ: https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
-**Danh sách địa chỉ hợp đồng token**
+**Danh sách hợp đồng token**
 
-- Do các tài sản sẽ có địa chỉ mới trên layer 2, hãy chia sẻ thông tin danh sách token niêm yết, nếu có.
+- Vì các tài sản sẽ có một địa chỉ mới trên lớp 2, nếu có sẵn tài nguyên danh sách token, vui lòng chia sẻ.
 
 **Hỗ trợ ví gốc**
 
-- Có ví nào hỗ trợ tích hợp Layer 2 sẵn không?
+- Có ví nào hỗ trợ L2 một cách nguyên bản không?
 
 ## Thêm lớp 2 của bạn {#add-exchange}
 
-Nếu bạn muốn thêm layer 2 lên ethereum.org, hãy tạo góp ý trên Github.
+Nếu bạn muốn thêm một lớp 2 vào ethereum.org, hãy tạo một vấn đề trên GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">Tạo góp ý</ButtonLink>
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+  Tạo một vấn đề
+</ButtonLink>

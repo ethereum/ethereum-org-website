@@ -4,6 +4,7 @@ import { useMemo, useState } from "react"
 
 import AppCard from "@/components/AppCard"
 import FilterBar from "@/components/FilterBar"
+import { Grid } from "@/components/ui/grid"
 
 import type { DeveloperTool, DeveloperToolTag } from "../types"
 
@@ -43,7 +44,7 @@ export default function CategoryToolsGrid({
         totalCount={tools.length}
       />
 
-      <div className="grid grid-cols-fill-3 gap-x-8">
+      <Grid columns={3} size="wider">
         {filteredTools.map((tool) => (
           <AppCard
             key={tool.id}
@@ -56,7 +57,7 @@ export default function CategoryToolsGrid({
             className="h-fit p-4"
           />
         ))}
-      </div>
+      </Grid>
     </>
   )
 }

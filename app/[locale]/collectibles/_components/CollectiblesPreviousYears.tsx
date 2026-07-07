@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl"
 
 import IdAnchor from "@/components/IdAnchor"
 import { Image } from "@/components/Image"
+import { Grid } from "@/components/ui/grid"
 import Link, { ExternalLinkIcon } from "@/components/ui/Link"
 import { Tag } from "@/components/ui/tag"
 
@@ -71,7 +72,7 @@ const CollectiblesPreviousYears = ({
                   </Tag>
                 </div>
               </div>
-              <div className="grid grid-cols-fill-10 gap-4 md:gap-6">
+              <Grid columns={10} size="small">
                 {grouped[year].map((badge: Badge) => {
                   const sanitizedName = badge.name
                     .replace(/\s?ethereum.org\s?/i, " ") // Remove "ethereum.org" from label
@@ -95,7 +96,7 @@ const CollectiblesPreviousYears = ({
                         sizes="80px"
                         src={badge.image}
                         alt={badge.name}
-                        className="size-16 transition-transform group-hover:scale-105 group-hover:transition-transform md:size-20"
+                        className="size-16 transition-transform group-hover:scale-105 md:size-20"
                       />
                       <div className="text-xs text-primary md:text-sm">
                         {label}
@@ -104,7 +105,7 @@ const CollectiblesPreviousYears = ({
                     </Link>
                   )
                 })}
-              </div>
+              </Grid>
             </div>
           )
         })

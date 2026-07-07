@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-06-17T22:06:47.127Z",
+  "englishManifestHash": "8cf82a1fba67",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-9117e4",
+    "LINK-4c75e0",
+    "LINK-7be60b",
+    "LINK-0a44b8",
+    "HTMLTAG-bff5ee",
+    "LINK-71b1bd",
+    "LINK-9a0c91",
+    "LINK-e08871",
+    "LINK-e87258",
+    "LINK-1f5f3e",
+    "LINK-032efb",
+    "LINK-6deea9",
+    "LINK-638696",
+    "LINK-1cea3c",
+    "LINK-725fd8",
+    "LINK-34b489",
+    "LINK-adcaad",
+    "LINK-c0372d",
+    "LINK-8a3ac0",
+    "LINK-f16dd6",
+    "LINK-70e61c",
+    "LINK-032efb",
+    "LINK-0ef2cf",
+    "LINK-da5fe9",
+    "LINK-bcad6f",
+    "LINK-55e4a7",
+    "LINK-751dff",
+    "LINK-7fd920",
+    "LINK-699f26",
+    "LINK-4d3609",
+    "LINK-c0372d",
+    "LINK-25a1fe",
+    "LINK-c0372d",
+    "LINK-2c9287",
+    "LINK-15a99a",
+    "LINK-a043ce",
+    "LINK-f46302",
+    "LINK-8b029e",
+    "LINK-3b58c6",
+    "LINK-18c9b0",
+    "LINK-aaf200",
+    "LINK-c0372d",
+    "LINK-c4b279",
+    "LINK-85eb8f"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-bff5ee": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/",
+        "target": "_blank"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-9117e4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-4c75e0": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#execution-layer"
+      }
+    },
+    "LINK-7be60b": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#consensus-layer"
+      }
+    },
+    "LINK-0a44b8": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/vdWijden/status/1437712249926393858"
+      }
+    },
+    "LINK-71b1bd": {
+      "type": "link",
+      "values": {
+        "url": "https://ethernodes.org"
+      }
+    },
+    "LINK-9a0c91": {
+      "type": "link",
+      "values": {
+        "url": "https://clientdiversity.org"
+      }
+    },
+    "LINK-e08871": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/"
+      }
+    },
+    "LINK-e87258": {
+      "type": "link",
+      "values": {
+        "url": "https://www.nethermind.io/nethermind-client"
+      }
+    },
+    "LINK-1f5f3e": {
+      "type": "link",
+      "values": {
+        "url": "https://besu.hyperledger.org/"
+      }
+    },
+    "LINK-032efb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ledgerwatch/erigon"
+      }
+    },
+    "LINK-6deea9": {
+      "type": "link",
+      "values": {
+        "url": "https://lighthouse.sigmaprime.io/"
+      }
+    },
+    "LINK-638696": {
+      "type": "link",
+      "values": {
+        "url": "https://prysmaticlabs.com/#projects"
+      }
+    },
+    "LINK-1cea3c": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.net/knowledge-base/ethereum-2/teku/"
+      }
+    },
+    "LINK-725fd8": {
+      "type": "link",
+      "values": {
+        "url": "https://supermajority.info/"
+      }
+    },
+    "LINK-34b489": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/sigp/blockprint"
+      }
+    },
+    "LINK-adcaad": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/sproulM_/status/1440512518242197516"
+      }
+    },
+    "LINK-c0372d": {
+      "type": "link",
+      "values": {
+        "url": "https://clientdiversity.org/"
+      }
+    },
+    "LINK-8a3ac0": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org"
+      }
+    },
+    "LINK-f16dd6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.hyperledger.org/use/besu"
+      }
+    },
+    "LINK-70e61c": {
+      "type": "link",
+      "values": {
+        "url": "https://downloads.nethermind.io/"
+      }
+    },
+    "LINK-0ef2cf": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/"
+      }
+    },
+    "LINK-da5fe9": {
+      "type": "link",
+      "values": {
+        "url": "https://reth.rs/"
+      }
+    },
+    "LINK-bcad6f": {
+      "type": "link",
+      "values": {
+        "url": "https://nimbus.team/"
+      }
+    },
+    "LINK-55e4a7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/sigp/lighthouse"
+      }
+    },
+    "LINK-751dff": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.io/teku"
+      }
+    },
+    "LINK-7fd920": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ChainSafe/lodestar"
+      }
+    },
+    "LINK-699f26": {
+      "type": "link",
+      "values": {
+        "url": "https://prysm.offchainlabs.com/docs/"
+      }
+    },
+    "LINK-4d3609": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.grandine.io/"
+      }
+    },
+    "LINK-25a1fe": {
+      "type": "link",
+      "values": {
+        "url": "https://www.rated.network/"
+      }
+    },
+    "LINK-2c9287": {
+      "type": "link",
+      "values": {
+        "url": "https://supermajority.info//"
+      }
+    },
+    "LINK-15a99a": {
+      "type": "link",
+      "values": {
+        "url": "https://ethernodes.org/"
+      }
+    },
+    "LINK-a043ce": {
+      "type": "link",
+      "values": {
+        "url": "https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA"
+      }
+    },
+    "LINK-f46302": {
+      "type": "link",
+      "values": {
+        "url": "https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html"
+      }
+    },
+    "LINK-8b029e": {
+      "type": "link",
+      "values": {
+        "url": "https://our.status.im/the-importance-of-client-diversity/"
+      }
+    },
+    "LINK-3b58c6": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumnodes.com/"
+      }
+    },
+    "LINK-18c9b0": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08"
+      }
+    },
+    "LINK-aaf200": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=1hZgCaiqwfU"
+      }
+    },
+    "LINK-c4b279": {
+      "type": "link",
+      "values": {
+        "url": "/run-a-node/"
+      }
+    },
+    "LINK-85eb8f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:06:47.127Z",
+      "status": "success"
+    }
+  }
+}

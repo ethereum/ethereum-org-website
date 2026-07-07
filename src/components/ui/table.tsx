@@ -8,13 +8,9 @@ import { cn } from "@/lib/utils/cn"
 
 const baseStyles = {
   th: "text-start border-b border-body text-body normal-case align-bottom p-4 text-sm font-semibold whitespace-normal break-words",
-
   tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
-
   td: "p-4 text-sm align-top whitespace-normal break-words",
-
-  tbody:
-    "[&_tr]:align-top hover:[&_tr]:bg-background-highlight",
+  tbody: "[&_tr]:align-top hover:[&_tr]:bg-background-highlight",
 }
 
 const stripedTbody = "even:[&_tr]:bg-background-highlight"
@@ -22,6 +18,7 @@ const stripedTbody = "even:[&_tr]:bg-background-highlight"
 const tableVariants = tv({
   slots: {
     table: "w-full table-fixed",
+    // slot key with empty string to establish the key name for variants (TypeScript)
     th: "",
     tr: "",
     td: "",
@@ -49,19 +46,17 @@ const tableVariants = tv({
 
       minimal: {
         ...baseStyles,
+        // No column separators — they're meant to carve gaps between
+        // striped/highlighted cells and only show as stray lines here.
+        tr: "",
       },
 
       product: {
-        table: "caption-bottom text-sm table-fixed",
-
+        table: "caption-bottom text-sm",
         thead: "[&_tr:last-child]:border-0",
-
         tbody: "[&_tr:last-child]:border-0",
-
         tr: "border-t transition-colors first-of-type:border-t-0 hover:bg-muted/50 data-[state=selected]:bg-muted",
-
-        th: "text-muted-foreground h-12 px-4 text-left align-middle font-medium whitespace-normal break-words [&:has([role=checkbox])]:pr-0",
-
+        th: "text-muted-foreground h-12 px-4 text-start align-middle font-medium whitespace-normal break-words [&:has([role=checkbox])]:pr-0",
         td: "p-4 align-middle whitespace-normal break-words [&:has([role=checkbox])]:pr-0",
       },
 
@@ -84,7 +79,10 @@ type TableVariants = VariantProps<typeof tableVariants>
 type TableVariantsReturnType = ReturnType<typeof tableVariants>
 
 /**
- * `align` prop uses CSS textAlign instead of deprecated HTML align attribute
+ * For `TableCell` and `TableHead` only
+ *
+ * Applies the `align` prop in name for the `textAlign` CSS property
+ * instead of the `align` attribute. (The `align` attribute is deprecated)
  */
 type CellPropsWithAlign<C> = Omit<C, "align"> & {
   align?: React.CSSProperties["textAlign"]

@@ -66,7 +66,21 @@ If you're unsure, default to logical.
 
 Right-pointing arrows and chevrons that imply "forward" need to mirror in RTL.
 
-### Pattern: `useRtlFlip`
+### Pattern: inline `rtl:` variant (preferred)
+
+For a simple "mirror this in RTL" flip, just add the `rtl:-scale-x-100` variant directly. No hook, no `"use client"`, no `cn()` -- the variant is applied by the document direction at render time, so it works in server components too:
+
+```tsx
+import { ChevronRight } from "lucide-react"
+
+export function NextLink() {
+  return <ChevronRight className="size-4 rtl:-scale-x-100" />
+}
+```
+
+Reach for the hook only when you also need the `isRtl` boolean or `direction` string for branching logic -- not just to flip an element.
+
+### Pattern: `useRtlFlip` (when you need the direction value)
 
 ```tsx
 "use client"
@@ -75,12 +89,12 @@ import { cn } from "@/lib/utils/cn"
 import { ChevronRight } from "lucide-react"
 
 export function NextLink() {
-  const { twFlipForRtl } = useRtlFlip()
-  return <ChevronRight className={cn("size-4", twFlipForRtl)} />
+  const { twFlipForRtl, isRtl } = useRtlFlip()
+  return <ChevronRight className={cn("size-4", twFlipForRtl)} aria-hidden={isRtl} />
 }
 ```
 
-`twFlipForRtl` returns `"-scale-x-100"` in RTL locales, `""` otherwise.
+`twFlipForRtl` returns the static `"rtl:-scale-x-100"` variant class (it no longer branches on locale -- the variant itself is a no-op in LTR), so it's safe to drop into any `className` unconditionally. The deprecated `flipForRtl` (a `scaleX(-1)` transform string) should not be used in new code.
 
 ### Pattern: pre-flipped icons
 
@@ -224,6 +238,7 @@ H1-H4 headings in markdown require a custom `{#lower-kebab-id}`. Enforced by mar
 - Hard-coding English in JSX
 - `value.toLocaleString()` -- use `numberFormat()`
 - `new Date().toLocaleDateString()` -- use `dateTimeFormat()`
-- Right-pointing chevrons without `useRtlFlip` (or use `ChevronNext` from `@/components/Chevron`)
+- Right-pointing chevrons that don't mirror in RTL (add `rtl:-scale-x-100`, or use `ChevronNext` from `@/components/Chevron`)
+- Reaching for the `useRtlFlip` hook just to flip an element -- use the inline `rtl:-scale-x-100` variant instead; the hook is only for when you need the `isRtl`/`direction` value
 - Manually editing translated markdown files -- let the pipeline propagate
 - Adding `whitespace-nowrap` without considering verbose-language overflow

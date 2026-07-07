@@ -1,67 +1,67 @@
 ---
-title: "Opětovné uzamčení"
-metaTitle: "Co je to opětovné uzamčení? | Výhody a využití opětovného uzamčení"
-description: "Použijte uzamčené ETH k zabezpečení dalších decentralizovaných služeb a získejte další odměny."
+title: Restaking
+metaTitle: "Co je restaking? | Výhody a využití restakingu"
+description: "Využijte stakované ETH k zabezpečení dalších decentralizovaných služeb a získejte extra odměny."
 lang: cs
 template: use-cases
 image: /images/use-cases/restaking.png
-alt: "Vizuální znázornění opětovného uzamčení na Ethereu."
+alt: "Vizuální znázornění restakingu na Ethereu."
 sidebarDepth: 2
 summaryPoints:
-  - "Použijte uzamčené ETH k zabezpečení dalších decentralizovaných služeb a získejte další odměny."
+  - "Využijte stakované ETH k zabezpečení dalších decentralizovaných služeb a získejte extra odměny."
 buttons:
-  - content: Co je to opětovné uzamčení?
+  - content: Co je restaking?
     toId: what-is-restaking
   - content: Jak to funguje?
     toId: how-does-restaking-work
     isSecondary: false
 ---
 
-Síť Ethereum zabezpečuje hodnotu v řádu miliard dolarů 24 hodin denně, 7 dní v týdnu, 365 dní v roce. Jak?
+Síť Ethereum zabezpečuje hodnotu v řádech miliard dolarů 24 hodin denně, 7 dní v týdnu, 365 dní v roce. Jak?
 
-Lidé po celém světě zamykají (neboli „uzamykají“) [ether (ETH)](/eth/) v chytrých kontraktech, aby mohli spouštět software, který zpracovává transakce v síti Ethereum a zabezpečuje ji. Odměnou za to získávají další ETH.
+Lidé po celém světě uzamykají (neboli „stakují“) [ether (ETH)](/what-is-ether/) v chytrých kontraktech, aby mohli provozovat software, který zpracovává transakce na Ethereu a zabezpečuje síť Ethereum. Na oplátku jsou odměňováni dalším ETH.
 
-Opětovné uzamčení je technologie vytvořená pro [stakery](/staking/), kteří mohou toto zabezpečení rozšířit na další služby, aplikace nebo sítě. Na oplátku získávají další odměny za opětovné uzamčení. Zároveň však vystavují své uzamčené ETH většímu riziku.
+Restaking je technologie vytvořená pro [stakery](/staking/), která rozšiřuje toto zabezpečení na další služby, aplikace nebo sítě. Na oplátku získávají dodatečné odměny za restaking. Zároveň tím ale vystavují své stakované ETH většímu riziku.
 
-**Vysvětlení opětovného uzamčení za 18 minut**
+**Vysvětlení restakingu v 18 minutách**
 
-<YouTube id="rOJo7VwPh7I" />
+<VideoWatch slug="restaking-explained" />
 
-## Co je to opětovné uzamčení? {#what-is-restaking}
+## Co je restaking? {#what-is-restaking}
 
-Opětovné uzamčení nastává, když stakeři používají své již uzamčené ETH k zabezpečení dalších decentralizovaných služeb. Na oplátku mohou restakeři získat další odměny z těchto ostatních služeb navíc ke svým běžným odměnám za uzamčení ETH.
+Restaking je proces, kdy stakeři využívají své již stakované ETH k zabezpečení dalších decentralizovaných služeb. Na oplátku mohou restakeři získat od těchto dalších služeb dodatečné odměny nad rámec svých běžných odměn za staking ETH.
 
-Decentralizované služby zabezpečené opětovným uzamčením jsou známé jako "aktivně validované služby" (AVS).
-Stejně jako mnoho stakerů ETH spouští validační software Etherea, mnoho restakerů spouští specializovaný software AVS.
+Decentralizované služby zabezpečené pomocí restakingu jsou známé jako „Aktivně validované služby“ (Actively Validated Services – AVSs).
+Stejně jako mnoho stakerů ETH provozuje validační software Etherea, mnoho restakerů provozuje specializovaný software AVS.
 
 <br/>
 <Alert className="justify-between">
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Dobré vědět</strong></p>
-  <p className="mt-2">Ačkoli je nejběžnější název "aktivně validované služby" (AVS), různé platformy pro opětovné uzamčení mohou pro decentralizované služby, které pomáhají zabezpečit, používat i jiné názvy, jako například "autonomně validované služby", "distribuované zabezpečené služby" nebo "sítě".</p>
+ <p className="mt-0"><strong>Dobré vědět</strong></p>
+  <p className="mt-2">Ačkoli je termín „Aktivně validované služby“ (AVSs) nejběžnější, různé platformy pro restaking mohou pro decentralizované služby, které pomáhají zabezpečit, používat i jiné názvy, například „Autonomně validované služby“, „Distribuované bezpečné služby“ nebo „Sítě“.</p>
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Uzamčení vs. opětovné uzamčení {#staking-vs-restaking}
+## Staking vs. restaking {#staking-vs-restaking}
 
-| Uzamčení                     | Opětovné uzamčení                                  |
-| ---------------------------- | -------------------------------------------------- |
-| Získejte odměny v ETH        | Získejte odměny v ETH + odměny za AVS              |
-| Zabezpečuje síť Ethereum     | Zabezpečuje síť Ethereum + AVS                     |
-| Žádné minimum ETH            | Žádné minimum ETH                                  |
-| Nízká úroveň rizika          | Nízká až vysoká úroveň rizika                      |
-| Doba výběru závisí na frontě | Doba výběru závisí na frontě + období pro odpojení |
+| Staking                        | Restaking                                         |
+| ------------------------------ | ------------------------------------------------- |
+| Získávání odměn v ETH               | Získávání odměn v ETH + odměn z AVS                    |
+| Zabezpečuje síť Ethereum   | Zabezpečuje síť Ethereum + AVS               |
+| Žádné minimum ETH                 | Žádné minimum ETH                                    |
+| Nízká úroveň rizika                 | Nízká až vysoká úroveň rizika                            |
+| Doba výběru závisí na frontě | Doba výběru závisí na frontě + období uvolnění (unbonding period) |
 
-## Proč potřebujeme opětovné uzamčení? {#why-do-we-need-restaking}
+## Proč potřebujeme restaking? {#why-do-we-need-restaking}
 
-Představte si dva světy: jeden s opětovným uzamčením a jeden bez něj.
+Představte si dva světy; jeden s restakingem a jeden bez něj.
 
  <TabbedSection />
 
-V tomto světě s opětovným uzamčením těží jak AVS, tak staker z toho, že se mohou navzájem najít a vyměnit zabezpečení za další odměny.
+V tomto světě s restakingem těží AVS i staker z toho, že se mohou navzájem najít a vyměnit zabezpečení za extra odměny.
 
 <br/>
 
@@ -69,26 +69,23 @@ V tomto světě s opětovným uzamčením těží jak AVS, tak staker z toho, ž
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Další výhoda opětovného uzamčení</strong></p>
-  <p className="mt-2">AVS mohou všechny své zdroje vložit do budování a marketingu svých služeb, místo aby se rozptylovaly decentralizací a zabezpečením.</p>
+ <p className="mt-0"><strong>Další výhoda restakingu</strong></p>
+  <p className="mt-2">AVS mohou vložit všechny své zdroje do budování a marketingu svých služeb, místo aby se rozptylovaly decentralizací a zabezpečením.</p>
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Jak funguje opětovné uzamčení? {#how-does-restaking-work}
+## Jak restaking funguje? {#how-does-restaking-work}
 
-Na opětovném uzamčení se podílí několik subjektů – každý z nich hraje důležitou roli.
+Do restakingu je zapojeno několik subjektů – každý z nich hraje důležitou roli.
 
-| **Pojem**                           | **Popis**                                                                                                                                                                                                                                                                                                                                                                                    |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Platformy pro opětovné uzamčení** | Platforma pro opětovné uzamčení je služba, která propojuje AVS, stakery ETH a operátory. Vytvářejí decentralizované aplikace, kde mohou stakeři opětovně uzamknout své ETH, a tržiště, kde se mohou stakeři, AVS a operátoři navzájem najít.                                                                                                                                                 |
-| **Nativní restakeři**               | Lidé, kteří uzamykají své ETH provozováním vlastních validátorů Etherea, mohou své uzamčené ETH připojit k platformě pro opětovné uzamčení, včetně EigenLayer a dalších, a získat tak odměny za opětovné uzamčení nad rámec odměn pro validátory ETH.                                                                                                                                        |
-|                                     |                                                                                                                                                                                                                                                                                                                                                                                              |
-| **Likvidní restakeři**              | Lidé, kteří uzamykají své ETH prostřednictvím poskytovatele likvidního uzamčení třetí strany, jako je Lido nebo Rocket Pool, získávají tokeny likvidního uzamčení (LST), které představují jejich uzamčené ETH. Tyto LST mohou opětovně uzamknout, aby získali odměny za opětovné uzamčení, zatímco jejich původní ETH zůstává uzamčeno.                                                     |
-|                                     |                                                                                                                                                                                                                                                                                                                                                                                              |
-| **Operátoři**                       | Operátoři provozují software pro opětovné uzamčení od AVS a provádějí validační úkoly, které každá AVS vyžaduje. Operátoři jsou obvykle profesionální poskytovatelé služeb, kteří zaručují například dostupnost a výkon. Stejně jako restakeři, kteří nejsou operátory, používají operátoři uzamčené ETH k zabezpečení AVS, ale operátoři také dostávají další odměny výměnou za svou práci. |
-|                                     |                                                                                                                                                                                                                                                                                                                                                                                              |
-| **AVS**                             | Jedná se o decentralizované služby – jako jsou cenová orákula, přemostění tokenů a datové systémy – které získávají zabezpečení od restakerů a na oplátku nabízejí odměny v tokenech.                                                                                                                                                                                                        |
+| **Pojem**                | **Popis**                                                                                                                                                                                                                                                                                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Platformy pro restaking** | Platforma pro restaking je služba, která propojuje AVS, stakery ETH a operátory. Vytvářejí decentralizované aplikace, kde mohou stakeři restakovat své ETH, a tržiště, kde se mohou stakeři, AVS a operátoři navzájem najít.                                                                                                                |
+| **Nativní restakeři**    | Lidé, kteří stakují své ETH provozováním vlastních validátorů Etherea, mohou připojit své stakované ETH k platformě pro restaking, včetně EigenLayer a dalších, a získávat tak odměny za restaking nad rámec odměn z validátoru ETH.                                                                                                                             |
+| **Likvidní restakeři**    | Lidé, kteří stakují své ETH prostřednictvím poskytovatele likvidního stakingu třetí strany, jako je Lido nebo Rocket Pool, získávají tokeny likvidního stakingu (LST), které představují jejich stakované ETH. Tyto LST mohou restakovat a získávat odměny za restaking, zatímco jejich původní ETH zůstává stakované.                                                                                  |
+| **Operátoři**           | Operátoři provozují restakingový software AVS a provádějí validační úkoly, které každá AVS vyžaduje. Operátoři jsou obvykle profesionální poskytovatelé služeb, kteří zaručují věci jako dostupnost (uptime) a výkon. Stejně jako restakeři, kteří nejsou operátory, využívají operátoři stakované ETH k zabezpečení AVS, ale operátoři navíc dostávají za svou práci extra odměny. |
+| **AVS**                | Jedná se o decentralizované služby – jako jsou cenová orákula, tokenové mosty a datové systémy – které získávají zabezpečení od restakerů a na oplátku nabízejí odměny v tokenech.                                                                                                                                                                              |
 
 <br/>
 
@@ -96,16 +93,16 @@ Na opětovném uzamčení se podílí několik subjektů – každý z nich hraj
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Dobré vědět</strong></p>
-  <p className="mt-2">Nativní a likvidní restakeři často delegují své uzamčené ETH operátorovi, místo aby sami spouštěli software k zabezpečení AVS.</p>
-  <p className="mt-2">Díky tomu se nemusí starat o složité technické požadavky ze strany AVS, i když dostávají nižší odměny než operátoři.</p>
+ <p className="mt-0"><strong>Dobré vědět</strong></p>
+  <p className="mt-2">Nativní a likvidní restakeři často delegují své stakované ETH na operátora, místo aby sami provozovali software k zabezpečení AVS.</p>
+  <p className="mt-2">Tímto způsobem se nemusí starat o složité technické požadavky ze strany AVS, ačkoli dostávají nižší míru odměny než operátoři.</p>
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Jaké jsou příklady opětovného uzamčení? {#what-are-some-examples-of-restaking}
+## Jaké jsou příklady restakingu? {#what-are-some-examples-of-restaking}
 
-Ačkoli se jedná o novou myšlenku, objevilo se několik projektů, které zkoumají možnosti opětovného uzamčení.
+Ačkoli jde o novou myšlenku, objevilo se již několik projektů, které zkoumají možnosti restakingu.
 
 <RestakingList/>
 
@@ -115,26 +112,26 @@ Ačkoli se jedná o novou myšlenku, objevilo se několik projektů, které zkou
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Upozornění na nesprávné označení</strong></p>
-  <p className="mt-2">Někteří lidé si pletou "opětovné uzamčení" s půjčováním LST v DeFi. V obou případech se využívají uzamčené ETH, ale opětovné uzamčení znamená zabezpečení AVS, nikoli jen získávání výnosů z LST.</p>
+ <p className="mt-0"><strong>Pozor na záměnu pojmů</strong></p>
+  <p className="mt-2">Někteří lidé si pletou „restaking“ s půjčováním a vypůjčováním LST v decentralizovaných financích (DeFi). Obojí sice zapojuje stakované ETH do práce, ale restaking znamená zabezpečení AVS, nikoli jen získávání výnosu z LST.</p>
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Kolik si mohu vydělat opětovným uzamčením? {#how-much-can-i-make-from-restaking}
+## Kolik mohu restakingem vydělat? {#how-much-can-i-make-from-restaking}
 
-Zatímco AVS nabízejí různé sazby, tokeny likvidního opětovného uzamčení (LRT), jako je eETH, vám dávají představu o tom, kolik si můžete vydělat. Stejně jako dostáváte LST, jako je stETH, za uzamčení svých ETH, můžete získat LRT, jako je eETH, za opětovné uzamčení stETH. Tyto tokeny získávají odměny za uzamčení ETH a za opětovné uzamčení.
+Ačkoli AVS nabízejí různé sazby, tokeny likvidního restakingu (Liquid Restaking Tokens – LRTs), jako je eETH, vám mohou poskytnout představu o tom, kolik můžete vydělat. Stejně jako získáte LST, jako je stETH, za staking vašeho ETH, můžete získat LRT, jako je eETH, za restaking stETH. Tyto tokeny získávají odměny za staking ETH i za restaking.
 
-**Je důležité si uvědomit rizika spojená s opětovným uzamčením. Potenciální odměny mohou být atraktivní, ale nejsou bez rizika.**
+**Je důležité si uvědomit rizika spojená s restakingem. Potenciální odměny mohou být lákavé, ale nejsou bez rizika.**
 
-## Jaká jsou rizika opětovného uzamčení? {#what-are-the-risks-of-restaking}
+## Jaká jsou rizika restakingu? {#what-are-the-risks-of-restaking}
 
-| **Rizika**                         | **Popis**                                                                                                                                                                                            |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Postihy (neboli "sekání")**      | Stejně jako při uzamčení ETH platí, že pokud restakeři/operátoři přejdou do offline režimu, cenzurují zprávy nebo se pokusí poškodit síť, může být jejich vklad částečně nebo úplně seknut (spálen). |
-| **Centralizace**                   | Pokud by několik málo operátorů ovládalo většinu opětovného uzamčení, mohli by mít velký vliv na restakery, AVS a dokonce i na platformy pro opětovné uzamčení.                                      |
-| **Řetězové reakce**                | Pokud dojde k sekání restakera při zabezpečování více AVS, mohlo by to snížit zabezpečení ostatních AVS a učinit je zranitelnými.                                                                    |
-| **Okamžitý přístup k prostředkům** | Při výběru opětovně uzamčených ETH je třeba počkat (tzv. "období pro odpojení"), takže k nim nemusíte mít vždy okamžitý přístup.                                                                     |
+| **Rizika**                     | **Popis**                                                                                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Penalizace (neboli „slashing“)** | Stejně jako u stakingu ETH, pokud se restakeři/operátoři odpojí, cenzurují zprávy nebo se pokusí narušit síť, může být jejich stake částečně nebo zcela penalizován (spálen). |
+| **Centralizace**            | Pokud by několik málo operátorů ovládlo většinu restakingu, mohli by mít velký vliv na restakery, AVS a dokonce i na platformy pro restaking.                             |
+| **Řetězové reakce**           | Pokud je restaker penalizován při zabezpečování více AVS, mohlo by to snížit zabezpečení ostatních AVS a učinit je zranitelnými.                             |
+| **Okamžitý přístup k prostředkům** | Pro výběr restakovaného ETH existuje čekací doba (neboli „období uvolnění“), takže k nim nemusíte mít vždy okamžitý přístup.                                       |
 
 <br/>
 
@@ -142,21 +139,22 @@ Zatímco AVS nabízejí různé sazby, tokeny likvidního opětovného uzamčen�
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Spoluzakladatel Etherea píše…</strong></p>
+ <p className="mt-0"><strong>Spoluzakladatel Etherea píše…</strong></p>
   <p className="mt-2">
-    Vitalik, spoluzakladatel Etherea, varoval před potenciálními riziky opětovného uzamčení v blogovém příspěvku z roku 2023 s názvem <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Nepřetěžujte konsensus.</a>
-</p>
+    Vitalik, spoluzakladatel Etherea, varoval před potenciálními riziky restakingu v příspěvku na blogu z roku 2021 s názvem <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus.</a>
+  </p>
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Jak začít s opětovným uzamčením? {#how-to-get-started-with-restaking}
+## Jak začít s restakingem? {#how-to-get-started-with-restaking}
 
-| 🫡 Začátečníci                                                                       | 🤓 Pokročilí uživatelé                                                                             |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| 1. Uzamkněte ETH na platformách jako Lido nebo Rocket Pool, abyste získali LST.      | 1. Uzamkněte své ETH jako validátor na Ethereu.                                                    |
-| 2. Použijte tyto LST k zahájení opětovného uzamčení ve službě pro opětovné uzamčení. | 2. Porovnejte služby pro opětovné uzamčení, jako je EigenLayer, Symbiotic a další.                 |
-|                                                                                      | 3. Postupujte podle pokynů a připojte svého validátora k chytrému kontraktu pro opětovné uzamčení. |
+| 🫡 Začátečníci                                                    | 🤓 Pokročilí uživatelé                                                                     |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| 1. Stakujte ETH na platformách jako Lido nebo Rocket Pool a získejte LST. | 1. Stakujte své ETH jako validátor na Ethereu.                                         |
+| 2. Použijte tyto LST k zahájení restakingu ve službě pro restaking.    | 2. Porovnejte služby pro restaking, jako jsou EigenLayer, Symbiotic a další.                  |
+|                                                                 | 3. Postupujte podle pokynů k připojení vašeho validátoru k chytrému kontraktu pro restaking. |
 
 <br/>
 
@@ -164,9 +162,9 @@ Zatímco AVS nabízejí různé sazby, tokeny likvidního opětovného uzamčen�
 <AlertEmoji text=":eyes:"/>
 <AlertContent>
 <AlertDescription>
-  <p className="mt-0"><strong>Uzamčení na Ethereu:</strong> Jak funguje?</p>
+ <p className="mt-0"><strong>Staking Etherea:</strong> Jak to funguje?</p>
   <ButtonLink href="/staking/">
-    Další informace
+    Zjistit více
   </ButtonLink>
 </AlertDescription>
 </AlertContent>
@@ -174,15 +172,15 @@ Zatímco AVS nabízejí různé sazby, tokeny likvidního opětovného uzamčen�
 
 ## Pokročilé {#advanced}
 
-<YouTube id="-V-fG4J1N_M" />
+<VideoWatch slug="eigenlayer-permissionless-features" />
 
 ## Další čtení {#further-reading}
 
-1. [ethereum.org – Průvodce uzamčením ETH](https://ethereum.org/en/staking/)
-2. [Ledger Academy – Co je opětovné uzamčení na Ethereu?](https://www.ledger.com/academy/what-is-ethereum-restaking)
-3. [Consensys – EigenLayer: Vysvětlení decentralizovaného protokolu pro opětovné uzamčení na Ethereu](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
+1. [ethereum.org – Průvodce stakingem ETH](/staking/)
+2. [Ledger Academy – Co je restaking Etherea?](https://www.ledger.com/academy/what-is-ethereum-restaking)
+3. [ConsenSys – EigenLayer: Vysvětlení decentralizovaného protokolu pro restaking Etherea](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin – Nepřetěžujte konsensus Etherea](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)
-5. [Cointelegraph – Co je EigenLayer? Vysvětlení protokolu pro opětovné uzamčení na Ethereu](https://cointelegraph.com/explained/what-is-eigenlayer-ethereums-restaking-protocol-explained)
-6. [a16z crypto research – EigenLayer: Přidání funkce do Etherea bez oprávnění se Sreeramem Kannanem](https://www.youtube.com/watch?v=-V-fG4J1N_M)
-7. [Junion – Vysvětlení EigenLayer: Co je opětovné uzamčení?](https://www.youtube.com/watch?v=5r0SooSQFJg)
-8. [The Block – Řídicí panel dat o opětovném uzamčení](https://www.theblock.co/data/decentralized-finance/restaking)
+5. [Cointelegraph – Co je EigenLayer? Vysvětlení protokolu pro restaking Etherea](https://cointelegraph.com/explained/what-is-eigenlayer-ethereums-restaking-protocol-explained)
+6. [a16z crypto research – EigenLayer: Přidávání funkcí do Etherea nevyžadující povolení se Sreeramem Kannanem](https://www.youtube.com/watch?v=-V-fG4J1N_M)
+7. [Junion – Vysvětlení EigenLayer: Co je restaking?](https://www.youtube.com/watch?v=5r0SooSQFJg)
+8. [The Block – Datový panel restakingu](https://www.theblock.co/data/decentralized-finance/restaking)

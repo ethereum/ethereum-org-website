@@ -1,62 +1,61 @@
 ---
-title: Dodawanie quizu
-description: "Polityka, którą stosujemy podczas dodawania quizów do ethereum.org"
+title: Quizy
+metaTitle: Dodawanie quizu
+description: Zasady, którymi kierujemy się podczas dodawania quizów na ethereum.org
 lang: pl
 ---
 
-# Quizy {#quizzes}
+Quizy to dla użytkowników okazja do sprawdzenia, czy zrozumieli treść strony, którą właśnie przeczytali. Pytania powinny opierać się wyłącznie na treściach zawartych na danej stronie i nie powinny dotyczyć informacji, o których na niej nie wspomniano.
 
-Quizy dają użytkownikom możliwość sprawdzenia siebie i zrozumienia treści zawartych na stronie, którą właśnie przeczytali. Pytania powinny opierać się wyłącznie na treściach udostępnionych na stronie i nie powinny dotyczyć informacji, które nie zostały na niej zawarte.
+Pytania mają następującą strukturę: treść pytania, 1 poprawna odpowiedź z wyjaśnieniem, dlaczego jest poprawna, oraz 3 niepoprawne odpowiedzi z wyjaśnieniem, dlaczego są niepoprawne.
 
-Pytania są skonstruowane w następujący sposób. Pytanie: 1 prawidłowa odpowiedź z wyjaśnieniem, dlaczego jest ona poprawna, 3 nieprawidłowe odpowiedzi z wyjaśnieniem, dlaczego są one nieprawidłowe.
+Przykłady obecnych quizów można znaleźć tutaj:
 
-Przykłady aktualnych quizów można znaleźć tutaj:
-
-- [Warstwa 2](/layer-2)
+- [Warstwa 2 (L2)](/layer-2)
 - [NFT](/nft/)
 - [Czym jest Ethereum?](/what-is-ethereum/)
 - [Czym jest ETH?](/what-is-ether/)
 
-## Dodawanie quizu edukacyjnego
+## Dodawanie quizu edukacyjnego {#adding-a-learn-quiz}
 
-Jeśli istnieje strona, dla której nie został jeszcze utworzony quiz edukacyjny, prosimy o [otwarcie zgłoszenia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) w tej sprawie.
+Jeśli istnieje strona, dla której nie utworzono jeszcze quizu edukacyjnego, [otwórz zgłoszenie](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) w tej sprawie.
 
 Prosimy o podanie następujących informacji:
 
-- Strona, na której chcesz dodać quiz
+- Strona, do której chcesz dodać quiz
 - 5 pytań zawierających następujące informacje:
   - Sekcja strony, na której opiera się pytanie
-  - Monit pytania
-  - 1 prawidłowa odpowiedź z wyjaśnieniem, dlaczego jest prawidłowa
-  - 3 nieprawidłowe odpowiedzi, każda z wyjaśnieniem, dlaczego są nieprawidłowe
+  - Treść pytania
+  - 1 poprawna odpowiedź z wyjaśnieniem, dlaczego jest poprawna
+  - 3 niepoprawne odpowiedzi, każda z wyjaśnieniem, dlaczego jest niepoprawna
 
-## Dodawanie pytania quizowego
+## Dodawanie pytania do quizu {#adding-a-quiz-question}
 
-Jeśli chcesz dodać pytanie do banku pytań do quizu, prosimy o [otwarcie zgłoszenia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) i podanie następujących informacji:
+Jeśli chcesz dodać pytanie do bazy pytań dla danego quizu, [otwórz zgłoszenie](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) i podaj następujące informacje:
 
-- Strona, na której chcesz dodać quiz
-- W każdym pytaniu podaj następujące informacje:
+- Strona, do której chcesz dodać pytanie quizowe
+- Dla każdego pytania podaj następujące informacje:
   - Sekcja strony, na której opiera się pytanie
-  - Monit pytania
-  - 1 prawidłowa odpowiedź z wyjaśnieniem, dlaczego jest prawidłowa
-  - 3 nieprawidłowe odpowiedzi, każda z wyjaśnieniem, dlaczego są nieprawidłowe
+  - Treść pytania
+  - 1 poprawna odpowiedź z wyjaśnieniem, dlaczego jest poprawna
+  - 3 niepoprawne odpowiedzi, każda z wyjaśnieniem, dlaczego jest niepoprawna
 
-## Aktualizowanie pytania quizowego
+## Aktualizacja pytania w quizie {#updating-a-quiz-question}
 
-Jeśli chcesz zaktualizować pytanie w banku pytań do quizu, prosimy o [otwarcie zgłoszenia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) i podanie następujących informacji:
+Jeśli chcesz zaktualizować pytanie w bazie pytań dla danego quizu, [otwórz zgłoszenie](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) i podaj następujące informacje:
 
 - Strona, na której chcesz zaktualizować pytanie quizowe
-- W przypadku każdego aktualizowanego pytania należy podać następujące informacje:
+- Dla każdego aktualizowanego pytania podaj następujące informacje:
   - Sekcja strony, na której opiera się pytanie
-  - Monit pytania, które chcesz zaktualizować
-  - Zaktualizowany monit pytania
-  - 1 prawidłowa odpowiedź z wyjaśnieniem, dlaczego jest prawidłowa
-  - 3 nieprawidłowe odpowiedzi, każda z wyjaśnieniem, dlaczego są nieprawidłowe
+  - Treść pytania, które chcesz zaktualizować
+  - Zaktualizowana treść pytania
+  - 1 poprawna odpowiedź z wyjaśnieniem, dlaczego jest poprawna
+  - 3 niepoprawne odpowiedzi, każda z wyjaśnieniem, dlaczego jest niepoprawna
 
-## Usuwanie pytania quizowego
+## Usuwanie pytania z quizu {#removing-a-quiz-question}
 
-Jeśli treść pytania nie istnieje już na stronie i należy je usunąć, prosimy [otworzyć zgłoszenie](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml), aby usunąć pytanie, i podać następujące informacje:
+Jeśli treść, na której opierało się pytanie, nie istnieje już na stronie i pytanie musi zostać usunięte, [otwórz zgłoszenie](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) w celu jego usunięcia i podaj następujące informacje:
 
-- Strona, na której chcesz usunąć pytanie quizowe
+- Strona, z której chcesz usunąć pytanie quizowe
 - Pytanie, które chcesz usunąć
-- Wyjaśnienie, jeśli jest to konieczne, dlaczego pytanie powinno zostać usunięte
+- Wyjaśnienie (jeśli to konieczne), dlaczego pytanie powinno zostać usunięte

@@ -28,7 +28,8 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/get-eth/": "page-get-eth",
   "/bug-bounty/": "page-bug-bounty",
   "/quizzes/": "learn-quizzes",
-  "/trillion-dollar-security/": "page-trillion-dollar-security",
+  "/reports/": "page-reports",
+  "/reports/trillion-dollar-security/": "page-trillion-dollar-security",
   "/wallets/find-wallet/": "page-wallets-find-wallet",
   "/wallets/": "page-wallets",
   "/what-is-ether/": "page-what-is-ether",
@@ -43,6 +44,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/layer-2/", "page-layer-2"],
   ["/developers/local-environment/", "page-developers-local-environment"],
   ["/developers/learning-tools/", "page-developers-learning-tools"],
+  ["/latest/", "page-latest"],
   ["/developers/tutorials/", "page-developers-tutorials"],
   ["/developers/tools/", "page-developers-tools"],
   ["/developers/", "page-developers-index"],
@@ -58,6 +60,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   // Ordering matters: /videos/ MUST be before /learn/ to prevent false positive matching
   // (because /videos/ paths are prefixed with /learn/ in some contexts or just to avoid overly greedy matches)
   ["/videos/", "page-videos"],
+  ["/stories/", "page-stories"],
   ["/learn/", "page-learn"],
   ["/gas/", "page-gas"],
   ["/what-is-ethereum/", "page-what-is-ethereum"],
@@ -74,7 +77,6 @@ const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
 const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
   ["/developers/docs/scaling/", ["page-layer-2"]],
   ["/developers/tools/", ["page-developers-tools-descriptions"]],
-  ["/roadmap/vision/", ["page-upgrades-index", "page-roadmap-vision"]],
   ["/gas/", ["page-gas", "page-community"]],
   ["/layer-2/networks/", ["table"]],
   ["/energy-consumption/", ["page-about"]],

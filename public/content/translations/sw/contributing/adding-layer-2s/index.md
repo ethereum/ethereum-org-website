@@ -1,97 +1,95 @@
 ---
-title: Kuongeza Tabaka 2s
-description: "''Kanuni tunayotumia wakati wa kuongeza tabaka la 2 kwenye ethereu.org.''"
+title: Kuongeza matabaka ya 2
+description: Sera tunayotumia tunapoongeza tabaka la 2 kwenye ethereum.org
 lang: sw
 ---
 
-# Kuongeza safu za 2 {#adding-layer-2}
+Tunataka kuhakikisha tunaorodhesha rasilimali bora iwezekanavyo ili watumiaji waweze kuvinjari nafasi ya tabaka la 2 kwa njia salama na ya kujiamini.
 
-''Tunataka kuhakikisha tunaorodhesha rasilimali bora zaidi ili watumiaji waweze kuvinjari nafasi ya tabaka la pili 2 kwa usalama wa kujiamini.''.
+Mtu yeyote yuko huru kupendekeza kuongeza tabaka la 2 kwenye ethereum.org. Ikiwa kuna tabaka la 2 ambalo tumelikosa, **[tafadhali lipendekeze](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
-''Kila mtu ana uhuru wa kupendekeza kuongeza tabaka la pili 2 kwenye ethereum.org.''. Ikiwa kuna safu ya 2 ambayo tumeikosa, **[tafadhali pendekeza](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
+Kwa sasa tunaorodhesha l2 kwenye kurasa zifuatazo:
 
-''Kwa sasa tunaorodhesha tabaka la pili kwenye kurasa zifuatazo.'':
+- [Rollup za optimistic](/developers/docs/scaling/optimistic-rollups/)
+- [Mikusanyiko ya maarifa sifuri](/developers/docs/scaling/zk-rollups/)
+- [Tabaka la 2](/layer-2/)
 
-- [Optimistic rollups](/developers/docs/scaling/optimistic-rollups/)
-- [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups/)
-- [Safu ya 2](/layer-2/)
-
-''Tabaka la pili 2 ni dhana mpya na ya kusisimua kwa Ethereum.''. ''Tumejaribu kuunda mfumo wa haki wa kuzingatia kwenye ethereum.org, lakini vigezo vya kuorodhesha vitabadilika na kubadilika kadri muda unavyopita.''.
+Tabaka la 2 ni dhana mpya na ya kusisimua kwa Ethereum. Tumejaribu kuunda mfumo wa haki wa kuzingatiwa kwenye ethereum.org lakini vigezo vya kuorodhesha vitabadilika na kuboreka kadiri muda unavyopita.
 
 ## Mfumo wa uamuzi {#decision-framework}
 
-### Vigezo vya kujumuishwa: ya lazima {#criteria-for-inclusion-the-must-haves}
+### Vigezo vya kujumuishwa: mambo ya lazima {#criteria-for-inclusion-the-must-haves}
 
-**Kuorodhesha kwenye L2BEAT**
+**Kuorodheshwa kwenye L2BEAT**
 
-- Ili mradi huu uzingatiwe, ni lazima uorodheshwe kwenye [L2BEAT](https://l2beat.com). ''L2BEAT inatoa tathmini thabiti ya hatari kwa miradi ya tabaka la pili 2 ambayo tunategemea katika kutathmini miradi ya tabaka la pili L2.''. **Ikiwa mradi haujaangaziwa kwenye L2BEAT, hatutauorodhesha kama L2 kwenye ethereum.org.**
-- [Jifunze jinsi ya kuongeza mradi wako wa L2 kwenye L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Ili mradi uzingatiwe, lazima uwe umeorodheshwa kwenye [L2BEAT](https://l2beat.com). L2BEAT inatoa tathmini thabiti ya hatari ya miradi ya tabaka la 2 ambayo tunaitegemea kutathmini miradi ya l2. **Ikiwa mradi haujaangaziwa kwenye L2BEAT, hatutauorodhesha kama l2 kwenye ethereum.org.**
+- [Jifunze jinsi ya kuongeza mradi wako wa l2 kwenye L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Chanzo wazi**
 
-- ''Kanuni zako lazima ziweze kupatikana na unapaswa kupokea ombi la mchanganyiko wa mabadiliko kutoka kwa jamii pana.''.
+- Msimbo wako lazima uweze kufikiwa na unapaswa kukubali PR kutoka kwa jamii pana.
 
-**Jamii ya safu ya 2**
+**Kategoria ya tabaka la 2**
 
-''Kwa sasa tunazingatia yafuatayo kuwa suluhisho za tabaka la pili 2:
+Kwa sasa tunazingatia yafuatayo kuwa suluhisho za tabaka la 2:
 
-- ''Kuunganisha kwa matumaini.''
-- ''Kuunganisha kwa ujanja wa kukosa maarifa.''
+- Rollup ya optimistic
+- Mkusanyiko wa maarifa sifuri
 
-_Hatuzingatii masuluhisho mengine ya kuongeza kiwango ambayo hayatumii Ethereum kwa upatikanaji wa data au usalama kuwa safu ya 2._
+_Hatuzingatii suluhisho zingine za kuongeza viwango ambazo hazitumii Ethereum kwa upatikanaji wa data au usalama kuwa tabaka la 2._
 
 **Ethereum kwa upatikanaji wa data**
 
-- ''Upatikanaji wa taarifa ni kipengele muhimu kinachotofautisha suluhisho zingine za kuongeza kasi na tabaka la pili 2.''. Mradi **lazima** utumie Ethereum Mainnet kwa upatikanaji wa data ili uzingatiwe kuorodheshwa.
+- Upatikanaji wa data ni sababu muhimu ya kutofautisha kati ya suluhisho zingine za kuongeza viwango na tabaka la 2. Mradi **lazima** utumie Mtandao Mkuu wa Ethereum kwa upatikanaji wa data ili uzingatiwe kuorodheshwa.
 
 **Madaraja**
 
-- ''Watumiaji wanawezaje kujiunga na tabaka la pili 2.''?
+- Watumiaji wanawezaje kujiunga kwenye tabaka la 2?
 
 **Tarehe ambayo mradi ulianza kufanya kazi**
 
-- ''Tabaka la pili 2 ambayo imekua ''hai'' inafanya kazi kwenye wavu kuu kwa zaidi ya miezi sita 6.''
+- Tabaka la 2 ambalo limekuwa "live" kwenye Mtandao Mkuu kwa zaidi ya miezi 6
 
-- ''Miradi mpya ambayo haijajaribiwa kikamilifu na watumiaji ina uwezekano mdogo wa kuorodheshwa.''.
+- Miradi mipya ambayo haijajaribiwa kikamilifu na watumiaji ina uwezekano mdogo wa kuorodheshwa.
 
 **Ukaguzi wa usalama wa nje**
 
-- ''Iwe kupitia ukaguzi, timu ya usalama wa ndani, au njia nyingine yoyote, usalama wa bidhaa yako lazima ijaribiwe kwa kuaminika.''. Hii kupunguza hatari kwa watumiaji wetu na inaonyesha kuwa unachukua usalama kwa makini.
+- Iwe kupitia ukaguzi, timu ya usalama ya ndani au njia nyingine, usalama wa bidhaa yako lazima ujaribiwe kwa uhakika. Hii inapunguza hatari kwa watumiaji wetu na inatuonyesha kuwa unachukulia usalama kwa uzito.
 
 **Msingi endelevu wa watumiaji**
 
-- ''Tutazingatia vipimo kama historia ya TVL, takwimu za muamala, na kama inatumika na kampuni au miradi inavyojulikana.''
+- Tutazingatia vipimo kama vile historia ya jumla ya thamani iliyofungwa (tvl), takwimu za muamala, na ikiwa inatumiwa na kampuni au miradi inayojulikana
 
-**Timu tendaji ya maendeleo**
+**Timu inayoendeleza kwa vitendo**
 
-- ''Hatutaorodhesha tabaka la pili 2 ambayo haina timu inayofanya kazi kwenye mradi.''.
+- Hatutaorodhesha tabaka la 2 ambalo halina timu inayoendeleza mradi kwa vitendo.
 
 **Kichunguzi cha bloku**
 
-- ''Miradi iliyoorodheshwa inahitaji kuwa na kichunguzi cha mnyororo kinachofanya kazi ili kuruhusu watumiaji kuvinjari wavu kwa urahisi.
+- Miradi iliyoorodheshwa inahitaji kichunguzi cha bloku kinachofanya kazi ili kuruhusu watumiaji kuvinjari mnyororo kwa urahisi.
 
-### Vigezo vingine: vinavyopendelewa lakini si vya lazima {#nice-to-haves}
+### Vigezo vingine: mambo mazuri kuwa nayo {#nice-to-haves}
 
-**Usaidizi wa Exchange kwa mradi**
+**Usaidizi wa ubadilishaji kwa mradi**
 
-- ''Je, watumiaji wanaweza kuweka na/au kutoa moja kwa moja kutoka kwenye kubadilishana.''?
+- Je, watumiaji wanaweza kuweka na/au kutoa moja kwa moja kutoka kwenye ubadilishaji?
 
-**Viungo vya mfumo mtawanyo wa kimamlaka katika mfumo-ikolojia wa safu ya 2**
+**Viungo vya programu tumizi iliyogatuliwa (dapp) katika mfumo wa ikolojia wa tabaka la 2**
 
-- ''Tunataka kuwa na uwezo wa kutoa taarifa juu ya kile watumiaji wanaweza kutegemea kuweza kufanya kwenye tabaka la pili 2.''. (k.m., https://portal.arbitrum.io/, https://www.optimism.io/apps)
+- Tunataka kuweza kutoa maelezo kuhusu kile ambacho watumiaji wanaweza kutarajia kufanya kwenye tabaka la 2 hili. (k.m., https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
-**Orodha za mikataba ya tokeni**
+**Orodha za mkataba wa tokeni**
 
-- ''Kwa kuwa mali zitakuwa na anwani mpya kwenye tabaka la pili 2, kama kuna rasilimali za orodha ya tokeni zinapatikana tafadhali shiriki.''.
+- Kwa kuwa rasilimali zitakuwa na anwani mpya kwenye tabaka la 2, ikiwa kuna rasilimali ya orodha ya tokeni inayopatikana tafadhali shiriki.
 
-**Usaidizi wa mkoba asilia**
+**Usaidizi wa mkoba asili**
 
-- ''Je, pochi yoyote inaunga mkono tabaka la pili L2 moja kwa moja?
+- Je, kuna mikoba yoyote inayoauni l2 kiasili?
 
-## Ongeza safu yako ya 2 {#add-exchange}
+## Ongeza tabaka la 2 lako {#add-exchange}
 
-''Kama unataka kuongeza tabaka ya pili 2 kwenye ethereum.org, tengeneza tatizo kwenye GitHub.''.
+Ikiwa unataka kuongeza tabaka la 2 kwenye ethereum.org, fungua suala kwenye GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
-  Unda suala
+  Fungua suala
 </ButtonLink>

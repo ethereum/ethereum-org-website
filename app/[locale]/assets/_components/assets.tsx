@@ -5,10 +5,11 @@ import { HTMLAttributes } from "react"
 import type { ChildOnlyProp } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { Center, Flex } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 
 // import efLogo from "@/public/images/ef-logo.png"
@@ -76,7 +77,7 @@ import wallet from "@/public/images/wallet.png"
 import whatIsEthereum from "@/public/images/what-is-ethereum.png"
 
 const Row = (props: ChildOnlyProp) => (
-  <div className="-mx-4 mb-8 grid grid-cols-fit-4" {...props} />
+  <Grid size="wide" fit className="-mx-4 mb-8" {...props} />
 )
 
 const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -510,7 +511,7 @@ const AssetsPage = () => {
           />
         </Row>
       </MainArticle>
-      <FeedbackCard />
+      <ContentFeedback />
     </Flex>
   )
 }

@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowDownRight, ArrowUpRight, Info } from "lucide-react"
+import { ArrowUpRight, Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import Tooltip from "@/components/Tooltip"
@@ -13,7 +13,6 @@ import { formatPriceUSD, numberToPercent } from "@/lib/utils/numbers"
 import { Flex } from "./ui/flex"
 
 import { useGasEthPrice } from "@/hooks/useGasEthPrice"
-import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const EthPriceCard = ({
@@ -23,7 +22,6 @@ const EthPriceCard = ({
   const locale = useLocale()
   const { t } = useTranslation()
   const { ethPrice, ethPercentChange24h } = useGasEthPrice()
-  const { twFlipForRtl } = useRtlFlip()
 
   const isLoading = ethPrice === 0
   const hasChange = typeof ethPercentChange24h === "number"
@@ -41,10 +39,7 @@ const EthPriceCard = ({
   return (
     <Flex
       className={cn(
-        "max-h-48 w-full max-w-[420px] flex-col items-center justify-between rounded border p-6",
-        isNegativeChange
-          ? "bg-linear-to-b from-error/10 dark:border-error/50"
-          : "bg-linear-to-t from-success/20 dark:border-success/50",
+        "w-full max-w-[320px] flex-col items-center gap-2 rounded-base border bg-background px-8 py-5",
         className
       )}
       {...props}
@@ -56,19 +51,19 @@ const EthPriceCard = ({
         </Tooltip>
       </h4>
 
-      <div className="flex w-full items-center justify-center text-5xl leading-xs">
+      <div className="flex w-full items-center justify-center text-4xl leading-xs">
         {isLoading ? (
-          <Skeleton className="h-[1lh] w-60" />
+          <Skeleton className="h-[1lh] w-48" />
         ) : (
           formatPriceUSD(ethPrice, locale)
         )}
       </div>
 
       {/* min-h-[33px] prevents jump when price loads */}
-      <Flex className="mt-2 min-h-[33px] w-full flex-col-reverse items-center justify-center sm:flex-row">
-        <div className="me-4 flex h-7 w-28 items-center justify-end">
+      <Flex className="min-h-[33px] w-full items-center justify-center gap-2">
+        <div className="flex h-7 items-center">
           {isLoading ? (
-            <Skeleton className="h-full w-full" />
+            <Skeleton className="h-full w-20" />
           ) : (
             hasChange && (
               <span
@@ -81,13 +76,12 @@ const EthPriceCard = ({
                   minimumFractionDigits: 2,
                   maximumFractionDigits: 2,
                 })}
-                {isNegativeChange ? (
-                  <ArrowDownRight
-                    className={cn(twFlipForRtl, "inline-block")}
-                  />
-                ) : (
-                  <ArrowUpRight className={cn(twFlipForRtl, "inline-block")} />
-                )}
+                <ArrowUpRight
+                  className={cn(
+                    "inline-block rtl:-scale-x-100",
+                    isNegativeChange && "-scale-y-100 rtl:-scale-100"
+                  )}
+                />
               </span>
             )
           )}

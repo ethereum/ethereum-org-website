@@ -1,100 +1,100 @@
 ---
 title: "JavaScript APIライブラリ"
-description: "アプリケーションからブロックチェーンへやり取りできるJavaScriptクライアントライブラリの紹介。"
+description: "アプリケーションからブロックチェーンと対話するためのJavaScriptクライアントライブラリの紹介。"
 lang: ja
 ---
 
-ウェブアプリがEthereumブロックチェーンと対話する（すなわち、ブロックチェーンデータの読み取りやネットワークへのトランザクション送信）には、Ethereumノードに接続する必要があります。
+Webアプリがイーサリアムのブロックチェーンと対話する（つまり、ブロックチェーンのデータを読み取ったり、ネットワークにトランザクションを送信したりする）ためには、イーサリアムのノードに接続する必要があります。
 
-この目的のために、すべてのEthereumクライアントは[JSON-RPC](/developers/docs/apis/json-rpc/)仕様を実装しており、アプリケーションが利用できる統一された[メソッド](/developers/docs/apis/json-rpc/#json-rpc-methods)のセットが用意されています。
+この目的のために、すべてのイーサリアムクライアントは[JSON-RPC](/developers/docs/apis/json-rpc/)仕様を実装しているため、アプリケーションが依存できる統一された[メソッド](/developers/docs/apis/json-rpc/#json-rpc-methods)のセットが存在します。
 
-JavaScriptでイーサリアムノードに接続する場合、通常のJavaScriptを使用することは可能です。しかし、エコシステム内には、作業をより簡単にするいくつかの便利なライブラリがあります。 これらのライブラリにより、デベロッパーは直感的な1行のメソッドを作成するだけで、イーサリアムとやり取りするJSON-RPCリクエストを (内部的に) 初期化できるようになります。
+JavaScriptを使用してイーサリアムのノードに接続する場合、バニラJavaScriptを使用することも可能ですが、エコシステム内にはこれをはるかに簡単にする便利なライブラリがいくつか存在します。これらのライブラリを使用すると、開発者は直感的な1行のメソッドを記述するだけで、イーサリアムと対話するJSON-RPCリクエストを（内部的に）初期化できます。
 
-[マージ](/roadmap/merge/)以降は、ノードの実行には、実行クライアントとコンセンサスクライアントという2つの接続されたEthereumソフトウェアが必要になることに注意してください。 必ず、ノードに実行クライアントとコンセンサスクライアントの両方が含まれるようにしてください。 ご使用のノードがローカルマシン上にない場合（例：ノードがAWSインスタンス上で実行されている）、チュートリアルのIPアドレスを適宜更新してください。 詳細については、[ノードの実行](/developers/docs/nodes-and-clients/run-a-node/)に関するページをご覧ください。
+[マージ](/roadmap/merge/)以降、ノードを実行するには、実行クライアントとコンセンサス・クライアントという2つの接続されたイーサリアムソフトウェアが必要になることに注意してください。ノードに実行クライアントとコンセンサス・クライアントの両方が含まれていることを確認してください。ノードがローカルマシン上にない場合（例：ノードがAWSインスタンスで実行されている場合）は、チュートリアルのIPアドレスを適宜更新してください。詳細については、[ノードの実行](/developers/docs/nodes-and-clients/run-a-node/)に関するページをご覧ください。
 
 ## 前提条件 {#prerequisites}
 
-JavaScriptを理解することに加えて、[Ethereumスタック](/developers/docs/ethereum-stack/)と[Ethereumクライアント](/developers/docs/nodes-and-clients/)を理解しておくと役立つでしょう。
+JavaScriptを理解することに加えて、[イーサリアムスタック](/developers/docs/ethereum-stack/)と[イーサリアムクライアント](/developers/docs/nodes-and-clients/)について理解しておくと役立つ場合があります。
 
-## ライブラリの利点 {#why-use-a-library}
+## なぜライブラリを使用するのか？ {#why-use-a-library}
 
-これらのライブラリにより、イーサリアムノードと直接やり取りする際の複雑さが抽象化されます。 また、ユーティリティ関数(例: ETHからGweiへの変換)も提供されているため、開発者はイーサリアムクライアントの複雑な処理に費やす時間を減らし、アプリケーション独自の機能に集中できます。
+これらのライブラリは、イーサリアムのノードと直接対話する際の複雑さの多くを抽象化します。また、ユーティリティ関数（例：ETHからGweiへの変換）も提供するため、開発者はイーサリアムクライアントの複雑な処理に費やす時間を減らし、アプリケーション独自の機能に集中する時間を増やすことができます。
 
 ## ライブラリの機能 {#library-features}
 
-### Ethereumノードへの接続 {#connect-to-ethereum-nodes}
+### イーサリアムのノードへの接続 {#connect-to-ethereum-nodes}
 
-providersライブラリを使用することで、JSON-RPC、INFURA、Etherscan、AlchemyまたはMetaMaskに関係なく、イーサリアムに接続してデータを読み取ることができます。
+プロバイダーを使用することで、これらのライブラリはイーサリアムに接続し、JSON-RPC、Infura、Etherscan、Alchemy、メタマスクのいずれを経由する場合でも、そのデータを読み取ることができます。
 
-> **警告:** Web3.jsは2025年3月4日にアーカイブされました。 [発表を読む](https://blog.chainsafe.io/web3-js-sunset/)。 新しいプロジェクトでは、[ethers.js](https://ethers.org)や[viem](https://viem.sh)のような代替ライブラリの使用を検討してください。
+> **警告:** Web3.jsは2025年3月4日にアーカイブされました。[発表を読む](https://blog.chainsafe.io/web3-js-sunset/)。新しいプロジェクトでは、[ethers.js](https://ethers.org)や[viem](https://viem.sh)などの代替ライブラリの使用を検討してください。
 
-**Ethers.jsを使った例**
+**Ethersの例**
 
 ```js
-// BrowserProviderは標準のWeb3プロバイダをラップしたもので、
-// MetaMaskが各ページにwindow.ethereumとしてインジェクトするものです
+// BrowserProviderは標準のWeb3プロバイダーをラップします。これは
+// メタマスクが各ページにwindow.ethereumとして注入するものです
 const provider = new ethers.BrowserProvider(window.ethereum)
 
-// MetaMaskプラグインは、トランザクションに署名して
-// イーサを送信し、ブロックチェーン内の状態を変更するための支払いを行うこともできます。
-// そのためには、アカウントの署名者が必要です...
+// メタマスクのプラグインは、トランザクションに署名して
+// イーサを送信し、ブロックチェーン内の状態を変更するための支払いをすることも可能にします。
+// このためには、アカウントの署名者（signer）が必要です...
 const signer = provider.getSigner()
 ```
 
-**Web3.jsを使った例**
+**Web3jsの例**
 
 ```js
 var web3 = new Web3("http://localhost:8545")
-// or
+// または
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
-// change provider
+// プロバイダーの変更
 web3.setProvider("ws://localhost:8546")
-// or
+// または
 web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
-// Using the IPC provider in node.js
+// node.jsでIPCプロバイダーを使用する
 var net = require("net")
-var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // mac os path
+var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // Mac OSのパス
 // or
 var web3 = new Web3(
   new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)
-) // mac os path
-// on windows the path is: "\\\\.\\pipe\\geth.ipc"
-// on linux the path is: "/users/myuser/.ethereum/geth.ipc"
+) // Mac OSのパス
+// Windowsでのパス: "\\\\.\\pipe\\geth.ipc"
+// Linuxでのパス: "/users/myuser/.ethereum/geth.ipc"
 ```
 
-一度セットアップすると、ブロックチェーンへ以下のクエリが可能になります。
+セットアップが完了すると、ブロックチェーンに対して以下のクエリを実行できるようになります。
 
 - ブロック番号
-- ガスの推定値
-- スマートコントラクトのイベント
+- ガスの見積もり
+- スマート・コントラクトのイベント
 - ネットワークID
-- 等々。
+- その他...
 
 ### ウォレット機能 {#wallet-functionality}
 
-これらのライブラリは、ウォレットの作成、キーの管理、トランザクションへ署名を行います。
+これらのライブラリは、ウォレットの作成、キーの管理、トランザクションの署名を行う機能を提供します。
 
-Ethers.jsを使った例
+以下はEthersの例です。
 
 ```js
-// ニーモニックからウォレットインスタンスを作成...
+// ニーモニックからウォレットのインスタンスを作成します...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
 walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-// ...または秘密鍵から
+// ...または秘密鍵から作成します
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
 // true
 
-// Signer APIごとのPromiseとしてのアドレス
+// Signer APIによるPromiseとしてのアドレス
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// ウォレットアドレスは同期的に利用することもできます
+// ウォレットのアドレスは同期的にも利用可能です
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
@@ -113,11 +113,11 @@ walletMnemonic.mnemonic
 // }
 
 // 注: 秘密鍵で作成されたウォレットには
-//       ニーモニックがありません (派生によりこれが妨げられるため)
+//       ニーモニックがありません（派生により防がれます）
 walletPrivateKey.mnemonic
 // null
 
-// メッセージへの署名
+// メッセージの署名
 walletMnemonic.signMessage("Hello World")
 // { Promise: '0x14280e5885a19f60e536de50097e96e3738c7acae4e9e62d67272d794b8127d31c03d9cd59781d4ee31fb4e1b893bd9b020ec67dfa65cfb51e2bdadbb1de26d91c' }
 
@@ -126,11 +126,11 @@ tx = {
   value: utils.parseEther("1.0"),
 }
 
-// トランザクションへの署名
+// トランザクションの署名
 walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// connectメソッドは、プロバイダに接続された
+// connectメソッドは、プロバイダーに接続された
 // ウォレットの新しいインスタンスを返します
 wallet = walletMnemonic.connect(provider)
 
@@ -144,22 +144,22 @@ wallet.getTransactionCount()
 wallet.sendTransaction(tx)
 ```
 
-[完全なドキュメントを読む](https://docs.ethers.io/v5/api/signer/#Wallet)
+[ドキュメント全文を読む](https://docs.ethers.io/v5/api/signer/#Wallet)
 
-セットアップ後、以下が可能になります。
+セットアップが完了すると、以下のことができるようになります。
 
 - アカウントの作成
 - トランザクションの送信
-- トランザクションへの署名
-- 等々。
+- トランザクションの署名
+- その他...
 
-### スマートコントラクト関数との対話 {#interact-with-smart-contract-functions}
+### スマート・コントラクトの関数との対話 {#interact-with-smart-contract-functions}
 
-Javascriptクライアントライブラリを使用すると、コンパイルされたコントラクトのアプリケーションバイナリインタフェース (ABI) を読み取ることによって、アプリからスマートコントラクト関数を呼び出せるようになります。
+JavaScriptクライアントライブラリを使用すると、コンパイルされたコントラクトのアプリケーション・バイナリ・インターフェース（ABI）を読み取ることで、アプリケーションからスマート・コントラクトの関数を呼び出すことができます。
 
-ABIには基本的に JSON形式でコントラクトの関数が記述されており、それを通常のJavaScriptオブジェクトのように使用することができます。
+ABIは基本的にコントラクトの関数をJSON形式で説明するものであり、通常のJavaScriptオブジェクトのように使用できるようにします。
 
-以下はSolidityのスマートコントラクトです:
+したがって、以下のSolidityコントラクトは：
 
 ```solidity
 contract Test {
@@ -179,7 +179,7 @@ contract Test {
 }
 ```
 
-上記は次のようなJSONになります:
+次のようなJSONになります。
 
 ```json
 [{
@@ -208,74 +208,81 @@ contract Test {
 }]
 ```
 
-次のことが可能であることを意味します:
+これにより、以下のことが可能になります。
 
-- スマートコントラクトにトランザクションを送信し、メソッドを実行
-- EVMでメソッド実行時にかかるガス代を見積もるためにコール
-- コントラクトのデプロイ
-- その他
+- スマート・コントラクトにトランザクションを送信し、そのメソッドを実行する
+- EVMで実行された場合にメソッドの実行にかかるガスを見積もるために呼び出す
+- コントラクトをデプロイする
+- その他...
 
 ### ユーティリティ関数 {#utility-functions}
 
-ユーティリティ関数は、イーサリアムでの構築を少し簡単にする便利なショートカットです。
+ユーティリティ関数は、イーサリアムでの構築を少し簡単にする便利なショートカットを提供します。
 
-ETHの値は、デフォルトでweiに設定されています。 1 ETHは、1,000,000,000,000,000,000,000,000,000,000,000,000 wei です。つまり、非常に巨大な数値を扱っているということです。 `web3.utils.toWei`は、etherをWeiに変換します。
+ETHの値はデフォルトでWei単位です。1 ETH = 1,000,000,000,000,000,000 WEIであり、これは非常に大きな数値を扱うことを意味します！`web3.utils.toWei`は、イーサをWeiに変換してくれます。
 
-Ethers.jsで記述した場合は次のようになります:
+Ethersでは次のようになります。
 
 ```js
-// Get the balance of an account (by address or ENS name)
+// アカウントの残高を取得する（アドレスまたはENS名による）
 balance = await provider.getBalance("ethers.eth")
 // { BigNumber: "2337132817842795605" }
 
-// Often you will need to format the output for the user
-// which prefer to see values in ether (instead of wei)
+// 多くの場合、ユーザー向けに出力をフォーマットする必要があります
+// ユーザーは（Weiではなく）イーサで値を見ることを好むためです
 ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Web3jsユーティリティ関数](https://docs.web3js.org/api/web3-utils)
-- [Ethersユーティリティ関数](https://docs.ethers.org/v6/api/utils/)
+- [Web3jsのユーティリティ関数](https://docs.web3js.org/api/web3-utils)
+- [Ethersのユーティリティ関数](https://docs.ethers.org/v6/api/utils/)
 
 ## 利用可能なライブラリ {#available-libraries}
 
-**Web3.js -** **_Ethereum JavaScript API_**
+**Web3.js -** **_イーサリアムJavaScript API_**
 
-- [ドキュメンテーション](https://docs.web3js.org)
+- [ドキュメント](https://docs.web3js.org)
 - [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_JavaScriptとTypeScriptにおける完全なEthereumウォレットの実装とユーティリティ。_**
+**Ethers.js -** **_JavaScriptおよびTypeScriptによる完全なイーサリアムウォレットの実装とユーティリティ_**
 
-- [Ethers.jsホーム](https://ethers.org/)
-- [ドキュメンテーション](https://docs.ethers.io)
+- [Ethers.js ホーム](https://ethers.org/)
+- [ドキュメント](https://docs.ethers.io)
 - [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_EthereumとIPFSのデータをインデックス化し、GraphQLを使用してクエリを実行するためのプロトコル。_**
+**The Graph -** **_イーサリアムおよびIPFSのデータをインデックス化し、GraphQLを使用してクエリを実行するためのプロトコル_**
 
 - [The Graph](https://thegraph.com)
 - [Graph Explorer](https://thegraph.com/explorer)
-- [ドキュメンテーション](https://thegraph.com/docs)
+- [ドキュメント](https://thegraph.com/docs)
 - [GitHub](https://github.com/graphprotocol)
-- [Discord](https://thegraph.com/discord)
+- [ディスコード](https://thegraph.com/discord)
 
-**Alchemy SDK -** **_強化されたAPIを備えたEthers.jsのラッパー。_**
+**Alchemy SDK -** **_強化されたAPIを備えたEthers.jsのラッパー_**
 
-- [ドキュメンテーション](https://www.alchemy.com/docs)
+- [ドキュメント](https://www.alchemy.com/docs)
 - [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**viem -** **_EthereumのためのTypeScriptインターフェース。_**
+**viem -** **_イーサリアムのためのTypeScriptインターフェース_**
 
-- [ドキュメンテーション](https://viem.sh)
+- [ドキュメント](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Drift -** **_組み込みのキャッシュ、フック、テストモックを備えたTypeScriptメタライブラリ。_**
+**Codex -** **_数十のチェーンにわたるリアルタイムで強化されたブロックチェーンデータAPI_**
 
-- [ドキュメンテーション](https://ryangoree.github.io/drift/)
+- [ドキュメント](https://docs.codex.io)
+- [エクスプローラー](https://docs.codex.io/explore)
+- [GitHub](https://github.com/Codex-Data)
+- [ディスコード](https://discord.com/invite/mFpUhT3vAq)
+
+**Drift -** **_キャッシュ、フック、テストモックが組み込まれたTypeScriptメタライブラリ_**
+
+- [ドキュメント](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
 
-## 参考リンク {#further-reading}
+## 参考文献 {#further-reading}
 
-_役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
+_役に立ったコミュニティリソースをご存知ですか？このページを編集して追加してください！_
 
 ## 関連トピック {#related-topics}
 
@@ -284,6 +291,10 @@ _役に立つコミュニティリソースを知っていますか? Edit this p
 
 ## 関連チュートリアル {#related-tutorials}
 
-- [JavaScriptでイーサリアムブロックチェーンを使用するためのWeb3.jsのセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトでweb3.jsをセットアップする手順。_
-- [JavaScriptからスマートコントラクトを呼び出す](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAIトークンを使用して、JavaScriptからコントラクト関数を呼び出す方法を説明します。_
-- [web3とAlchemyを使用したトランザクションの送信](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– バックエンドからトランザクションを送信するためのステップバイステップのウォークスルー。_
+- [JavaScriptでイーサリアムのブロックチェーンを使用するためのWeb3jsのセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトでweb3.jsをセットアップするための手順。_
+- [JavaScriptからのスマート・コントラクトの呼び出し](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAIトークンを使用して、JavaScriptでコントラクトの関数を呼び出す方法を確認します。_
+- [Web3とAlchemyを使用したトランザクションの送信](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– バックエンドからトランザクションを送信するためのステップバイステップのウォークスルー。_
+
+## チュートリアル：イーサリアム上のJavaScript APIとWebSocket {#tutorials}
+
+- [WebSocketの使用](/developers/tutorials/using-websockets/) _– AlchemyでWebSocketを使用してイーサリアムのイベントをサブスクライブし、リアルタイムのJSON-RPCリクエストを行う方法。_

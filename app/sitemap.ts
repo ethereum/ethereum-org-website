@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 
-import { getFullUrl } from "@/lib/utils/url"
+import { getFullUrl, toLanguageTag } from "@/lib/utils/url"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -21,7 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
               "x-default": getFullUrl(DEFAULT_LOCALE, normalizedSlug),
               ...Object.fromEntries(
                 translatedLocales.map((locale) => [
-                  locale,
+                  toLanguageTag(locale),
                   getFullUrl(locale, normalizedSlug),
                 ])
               ),

@@ -1,89 +1,93 @@
 ---
 title: Danksharding
-description: "Seznamte se s Proto-Dankshardingem a Dankshardingem - dvěma po sobě jdoucími vylepšeními pro škálování Etherea."
+description: Přečtěte si o proto-dankshardingu a dankshardingu – dvou po sobě jdoucích aktualizacích pro škálování Etherea.
 lang: cs
 summaryPoints:
-  - Danksharding je vícestupňové vylepšení, které má zlepšit škálovatelnost a kapacitu Etherea.
-  - První fáze, Proto-Danksharding, přidává do bloků datové bloby.
-  - Datové bloby nabízejí levnější způsob zveřejnění dat rollupů na Ethereu a tyto náklady mohou být replikovány na uživatele ve formě nižších transakčních poplatků.
-  - V dalších krocích rozloží plný Danksharding odpovědnost za ověřování datových blobů mezi podmnožiny uzlů, což dále škáluje Ethereum na více než 100 000 transakcí za sekundu.
+  - Danksharding je vícefázová aktualizace pro zlepšení škálovatelnosti a kapacity Etherea.
+  - První fáze, proto-danksharding, přidává do bloků datové bloby.
+  - Datové bloby nabízejí rollupům levnější způsob, jak odesílat data do Etherea, a tyto náklady mohou být přeneseny na uživatele ve formě nižších transakčních poplatků.
+  - Později plný danksharding rozdělí odpovědnost za ověřování datových blobů mezi podmnožiny uzlů, čímž se Ethereum dále škáluje na více než 100 000 transakcí za sekundu.
 ---
 
-# Danksharding {#danksharding}
+**Danksharding** je způsob, jakým se [Ethereum](/) stane skutečně škálovatelným blockchainem, ale k dosažení tohoto cíle je zapotřebí několik aktualizací protokolu. **Proto-danksharding** je mezikrokem na této cestě. Oba mají za cíl učinit transakce na vrstvě 2 (l2) pro uživatele co nejlevnějšími a měly by škálovat Ethereum na více než 100 000 transakcí za sekundu.
 
-**Danksharding** je způsob, jehož pomocí se Ethereum stává skutečně škálovatelným blockchainem, ale k tomu je potřeba několik aktualizací protokolu. **Proto-Danksharding** je mezikrokem na této cestě. Obě mají za cíl co nejvíce zlevnit transakce na druhé vrstvě pro uživatele a měly by škálovat Ethereum na >100 000 transakcí za sekundu.
+## Co je proto-danksharding? {#what-is-protodanksharding}
 
-## Co je Proto-Danksharding? {#what-is-protodanksharding}
+Proto-danksharding, známý také jako [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), je způsob, jakým mohou [rollupy](/layer-2/#rollups) přidávat do bloků levnější data. Název pochází od dvou výzkumníků, kteří s tímto nápadem přišli: Protolambda a Dankrad Feist. Historicky byly rollupy omezeny v tom, jak levné mohou být uživatelské transakce, skutečností, že odesílají své transakce v `CALLDATA`.
 
-Proto-Danksharding, známý také jako [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), je způsob, jak mohou [rollupy](/layer-2/#rollups) přidávat do bloků levnější data. Název pochází od dvou výzkumníků, kteří tento nápad navrhli: Protolambdy a Dankrada Feista. Historicky byly rollupy omezeny v tom, jak levně mohly zpracovávat uživatelské transakce, protože své transakce zveřejňovaly v `CALLDATA`.
-
-Toto je drahé, protože CALLDATA jsou zpracovávána všemi uzly na Ethereu a zůstávají na blockchainu navždy, i když rollupy potřebují tato data jen po krátkou dobu. Proto-Danksharding zavádí datové bloby, které mohou být odeslány a připojeny k blokům. Data v těchto blobech nejsou přístupná pro EVM a jsou automaticky smazána po stanovené době (v době psaní tohoto článku to bylo 4 096 epoch, což je přibližně 18 dní). To znamená, že rollupy mohou odesílat svá data mnohem levněji a přenést úspory na koncové uživatele ve formě levnějších transakcí.
+To je drahé, protože je to zpracováváno všemi uzly Etherea a zůstává to onchain navždy, i když rollupy potřebují data jen na krátkou dobu. Proto-danksharding zavádí datové bloby, které lze odesílat a připojovat k blokům. Data v těchto blobech nejsou přístupná pro EVM a jsou automaticky smazána po stanovené době (v době psaní tohoto textu je to nastaveno na 4096 epoch, tedy asi 18 dní). To znamená, že rollupy mohou odesílat svá data mnohem levněji a přenést úspory na koncové uživatele ve formě levnějších transakcí.
 
 <ExpandableCard title="Proč bloby zlevňují rollupy?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
-Rollupy jsou způsobem, jak škálovat Ethereum tím, že sdružují transakce mimo blockchain a poté zveřejňují výsledky na Ethereu. Rollup se v podstatě skládá ze dvou částí: dat a ověření provedení. Data jsou úplné sekvence transakcí, které jsou zpracovány rollupem k vytvoření změny stavu, jež je zveřejněna na Ethereu. Ověření provedení je opětovné provedení těchto transakcí nějakým poctivým aktérem (tzv. „schvalovatel“), aby bylo zajištěno, že navrhovaná změna stavu je správná. K provedení ověření musí být transakční data dostupná dostatečně dlouho na to, aby si je mohl kdokoliv stáhnout a zkontrolovat. To znamená, že jakékoliv nepoctivé chování sequencera rollupu může být identifikováno a napadnuto ověřovatelem. Nicméně není nutné, aby byla tato data dostupná navždy.
+Rollupy jsou způsob, jak škálovat Ethereum dávkováním transakcí offchain a následným odesláním výsledků do Etherea. Rollup se v podstatě skládá ze dvou částí: dat a kontroly provedení. Data představují celou sekvenci transakcí, která je zpracovávána rollupem za účelem vytvoření změny stavu odesílané do Etherea. Kontrola provedení je opětovné provedení těchto transakcí nějakým poctivým aktérem („dokazovatelem“), aby se zajistilo, že navrhovaná změna stavu je správná. K provedení kontroly provedení musí být transakční data k dispozici dostatečně dlouho na to, aby si je kdokoli mohl stáhnout a zkontrolovat. To znamená, že jakékoli nepoctivé chování sekvenceru rollupu může být identifikováno a napadnuto dokazovatelem. Nemusí však být k dispozici navždy.
+
 </ExpandableCard>
 
-<ExpandableCard title="Proč je v pořádku mazat data z blobů?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
+<ExpandableCard title="Proč je v pořádku smazat data blobů?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
-Rollupy zveřejňují závazky ke svým transakčním datům na blockchainu a také zpřístupňují skutečná data v datových blobech. To znamená, že ověřovatelé mohou verifikovat, že jsou závazky platné, nebo napadnout data, která považují za nesprávná. Na úrovni uzlů jsou tyto datové bloby uloženy v konsenzus klientech. Konsenzus klienti potvrzují, že data viděli a že byla rozšířena po celé síti. Pokud by se data uchovávala navždy, tito klienti by zůstali přetíženi, což by vedlo k velkým požadavkům na hardware pro provozování uzlů. Místo toho se data automaticky mažou z uzlu každých 18 dní. Atestace konsenzus klientů prokazují, že ověřovatelé měli dostatečnou příležitost data ověřit. Skutečná data mohou být uložena mimo blockchain provozovateli rollupu, uživateli nebo ostatními.
+Rollupy odesílají závazky ke svým transakčním datům onchain a také zpřístupňují skutečná data v datových blobech. To znamená, že dokazovatelé mohou zkontrolovat, zda jsou závazky platné, nebo napadnout data, o kterých si myslí, že jsou nesprávná. Na úrovni uzlu jsou datové bloby uchovávány v konsensuálním klientovi. Konsensuální klienti potvrzují, že data viděli a že byla šířena po síti. Pokud by se data uchovávala navždy, tito klienti by se neúměrně zvětšili, což by vedlo k velkým hardwarovým požadavkům na provoz uzlů. Místo toho jsou data z uzlu automaticky promazávána každých 18 dní. Potvrzení konsensuálního klienta prokazují, že dokazovatelé měli dostatečnou příležitost data ověřit. Skutečná data mohou být uložena offchain provozovateli rollupů, uživateli nebo jinými subjekty.
+
 </ExpandableCard>
 
 ### Jak jsou data v blobech ověřována? {#how-are-blobs-verified}
 
-Rollupy zveřejňují transakce, které provádějí, v datových blobech. Zároveň k těmto datům zveřejňují „závazek“. Dělají to tak, že datům přizpůsobí polynomiální funkci. Tato funkce může být poté vyhodnocena na různých bodech. Například pokud definujeme extrémně jednoduchou funkci `f(x) = 2x-1`, můžeme ji vyhodnotit pro `x = 1`, `x = 2`, `x = 3` a získáme výsledky `1, 3, 5`. Ověřovatel aplikuje stejnou funkci na data a vyhodnotí ji ve stejných bodech. Pokud byla původní data změněna, funkce nebude identická, a proto ani hodnoty vyhodnocené v každém bodě nejsou stejné. Ve skutečnosti jsou závazek a důkaz složitější, protože jsou zabaleny v kryptografických funkcích.
+Rollupy odesílají transakce, které provádějí, v datových blobech. Odesílají také „závazek“ k těmto datům. Dělají to tak, že na data aplikují polynomiální funkci. Tuto funkci lze poté vyhodnotit v různých bodech. Pokud například definujeme extrémně jednoduchou funkci `f(x) = 2x-1`, pak můžeme tuto funkci vyhodnotit pro `x = 1`, `x = 2`, `x = 3`, což dává výsledky `1, 3, 5`. Dokazovatel aplikuje stejnou funkci na data a vyhodnotí ji ve stejných bodech. Pokud se původní data změní, funkce nebude identická, a proto nebudou identické ani hodnoty vyhodnocené v každém bodě. Ve skutečnosti jsou závazek a důkaz složitější, protože jsou zabaleny do kryptografických funkcí.
 
 ### Co je KZG? {#what-is-kzg}
 
-KZG je zkratka pro jména Kate-Zaverucha-Goldberg – jména tří [původních autorů](https://link.springer.com/chapter/10.1007/978-3-642-17373-8_11) schématu, které redukuje datový blob na malý [kryptografický "závazek"](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html). Blob dat předložený rollupem musí být ověřen, aby bylo zajištěno, že rollup nejedná nepoctivě. To zahrnuje ověřovatelovo opětovné provedení transakcí v blobu, aby bylo ověřeno, že závazek byl platný. To je konceptuálně stejné jako způsob, jakým exekuční klienti kontrolují platnost transakcí na Ethereu na vrstvě 1 pomocí Merkle důkazů. KZG je alternativní důkaz, který přizpůsobí polynomiální rovnici datům. Závazek vyhodnocuje polynom na určitých tajných bodech dat. Ověřovatel by přizpůsobil stejný polynom datům a vyhodnotil ho na stejných hodnotách, přičemž by ověřil, že výsledek je stejný. To je způsob, jak ověřit data, který je kompatibilní s technikami zero-knowledge používanými některými rollupy a nakonec i jinými částmi protokolu Ethereum.
+KZG je zkratka pro Kate-Zaverucha-Goldberg – jména tří [původních autorů](https://link.springer.com/chapter/10.1007/978-3-642-17373-8_11) schématu, které redukuje datový blob na malý [kryptografický „závazek“](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html). Datový blob odeslaný rollupem musí být ověřen, aby se zajistilo, že se rollup nechová nesprávně. To zahrnuje dokazovatele, který znovu provede transakce v blobu, aby zkontroloval, zda byl závazek platný. Koncepčně je to stejné jako způsob, jakým exekuční klienti kontrolují platnost transakcí Etherea na vrstvě 1 (l1) pomocí Merkleových důkazů. KZG je alternativní důkaz, který na data aplikuje polynomiální rovnici. Závazek vyhodnocuje polynom v některých tajných datových bodech. Dokazovatel by aplikoval stejný polynom na data a vyhodnotil jej na stejných hodnotách, přičemž by zkontroloval, zda je výsledek stejný. Jedná se o způsob ověření dat, který je kompatibilní s technikami s nulovým vědomím používanými některými rollupy a případně dalšími částmi protokolu Ethereum.
 
-### Co byl Ceremoniál KZG? {#what-is-a-kzg-ceremony}
+### Co byl ceremoniál KZG? {#what-is-a-kzg-ceremony}
 
-Ceremoniál KZG byla akce, při které se spousta lidí z celé Ethereum komunity společně podílela na vygenerování tajného náhodného řetězce čísel, který lze použít k ověřování dat. Je klíčové, aby tento řetězec čísel nebyl nikomu znám a nemohl být nikým znovu vytvořen. Proto každý účastník ceremoniálu obdržel řetězec od předchozího účastníka. Poté vytvořili nové náhodné hodnoty (např. tím, že svému prohlížeči povolili měřit pohyb myši) a smíchali je s předchozí hodnotou. Následně tuto novou hodnotu odeslal dalšímu účastníkovi a na svém lokálním zařízení ji zničil. Pokud alespoň jeden účastník tohoto ceremoniálu postupoval poctivě, konečná hodnota bude pro útočníka neznámá.
+Ceremoniál KZG byl způsob, jakým mohlo mnoho lidí z celé komunity Etherea společně vygenerovat tajný náhodný řetězec čísel, který lze použít k ověření některých dat. Je velmi důležité, aby tento řetězec čísel nebyl znám a nikdo jej nemohl znovu vytvořit. Aby se to zajistilo, každá osoba, která se ceremoniálu zúčastnila, obdržela řetězec od předchozího účastníka. Poté vytvořila nějaké nové náhodné hodnoty (např. tím, že svému prohlížeči umožnila měřit pohyb myši) a smíchala je s předchozí hodnotou. Následně odeslala hodnotu dalšímu účastníkovi a zničila ji ze svého lokálního počítače. Dokud to alespoň jedna osoba v ceremoniálu udělala poctivě, konečná hodnota bude pro útočníka neznámá.
 
-Ceremoniál KZG EIP-4844 byl veřejný a zúčastnily se ho desítky tisíc uživatelů, kteří přidali svou vlastní entropii (náhodnost). Celkem šlo o 140 000 příspěvků, což z něj činí největší ceremoniál svého druhu na světě. Aby byl ceremoniál znehodnocen, muselo by 100 % účastníků jednat nepoctivě. Z pohledu účastníků stačí vědět, že jen oni jednali poctivě, není třeba důvěřovat nikomu jinému, protože vědí, že ceremoniál zabezpečili (individuálně splnili požadavek, aby alespoň jeden účastník z N byl poctivý).
+Ceremoniál KZG pro EIP-4844 byl otevřen veřejnosti a zúčastnily se ho desítky tisíc lidí, aby přidali svou vlastní entropii (náhodnost). Celkem bylo zaznamenáno více než 140 000 příspěvků, což z něj činí největší ceremoniál svého druhu na světě. Aby byl ceremoniál narušen, muselo by být 100 % těchto účastníků aktivně nepoctivých. Z pohledu účastníků, pokud vědí, že byli poctiví, není třeba důvěřovat nikomu jinému, protože vědí, že ceremoniál zabezpečili (individuálně splnili požadavek 1 z N poctivých účastníků).
 
-<ExpandableCard title="K čemu se používá náhodné číslo z KZG ceremoniálu?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
+<ExpandableCard title="K čemu se používá náhodné číslo z ceremonie KZG?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
-Když rollup zveřejní data v blobu, poskytne také „závazek“, který zveřejní na blockchainu. Tento závazek je výsledkem vyhodnocení polynomu přizpůsobeného datům v určitých bodech. Tyto body jsou definovány náhodnými čísly generovanými v ceremoniálu KZG. Ověřovatelé mohou poté vyhodnotit polynom ve stejných bodech, aby ověřili data – pokud dosáhnou stejných hodnot, jsou data správná.
+Když rollup odešle data v blobu, poskytne „závazek“, který odešle onchain. Tento závazek je výsledkem vyhodnocení polynomu aplikovaného na data v určitých bodech. Tyto body jsou definovány náhodnými čísly vygenerovanými v ceremoniálu KZG. Dokazovatelé pak mohou vyhodnotit polynom ve stejných bodech za účelem ověření dat – pokud dospějí ke stejným hodnotám, pak jsou data správná.
+
 </ExpandableCard>
 
-<ExpandableCard title="Proč musí náhodná data z KZG zůstat v tajnosti?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
+<ExpandableCard title="Proč musí náhodná data KZG zůstat tajná?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
-Pokud někdo zná náhodné body použité pro vytvoření závazku, je pro něj snadné vytvořit nový polynom, který se bude shodovat v těchto konkrétních bodech (tj. "kolize"). To znamená, že by byl schopen přidat nebo odebrat data z blobu a stále poskytovat platný důkaz. Aby se tomu zabránilo, místo toho, aby ověřovatelé dostávali skutečné tajné body, obdrží body zabalené v kryptografické „černé skříňce“ pomocí eliptických křivek. Tyto body efektivně zamíchají hodnoty tak, aby původní hodnoty nemohly být zpětně rekonstruovány, ale s určitým chytrým algebraickým postupem mohou ověřovatelé stále vyhodnotit polynomy v bodech, které reprezentují.
+Pokud někdo zná náhodná místa použitá pro závazek, je pro něj snadné vygenerovat nový polynom, který se shoduje v těchto konkrétních bodech (tj. „kolize“). To znamená, že by mohl přidat nebo odebrat data z blobu a stále poskytnout platný důkaz. Aby se tomu zabránilo, místo toho, aby dokazovatelé dostali skutečná tajná místa, obdrží místa zabalená v kryptografické „černé skříňce“ pomocí eliptických křivek. Ty efektivně zamíchají hodnoty takovým způsobem, že původní hodnoty nelze zpětně analyzovat, ale pomocí chytré algebry mohou dokazovatelé a ověřovatelé stále vyhodnocovat polynomy v bodech, které představují.
+
 </ExpandableCard>
 
-<Alert variant="warning" className="mb-8">
-  Ani Danksharding, ani Proto-Danksharding nesledují tradiční model „tříštění“, který má za cíl rozdělit blockchain do více částí. Shard chainy již nejsou součástí plánu. Místo toho Danksharding využívá ke škálování Etherea distribuované vzorkování dat napříč bloby. To je mnohem jednodušší na implementaci. Tento model je někdy označován jako „tříštění dat“.
+<Alert variant="warning">
+  Ani danksharding, ani proto-danksharding nesledují tradiční model „shardingu“, jehož cílem je rozdělit blockchain na více částí. Shardové řetězce již nejsou součástí plánu. Místo toho danksharding využívá distribuované vzorkování dat napříč bloby ke škálování Etherea. To je mnohem jednodušší na implementaci. Tento model byl někdy označován jako „data-sharding“.
 </Alert>
 
-## Co je Danksharding? {#what-is-danksharding}
+## Co je danksharding? {#what-is-danksharding}
 
-Danksharding je úplná realizace škálování rollupů, které začalo s Proto-Danksharding. Danksharding přinese obrovské množství prostoru na Ethereu, kde mohou rollupy ukládat svá komprimovaná transakční data. To znamená, že Ethereum bude schopno snadno podporovat stovky jednotlivých rollupů a umožní provádění milionů transakcí za sekundu.
+Danksharding je plnou realizací škálování rollupů, které začalo s proto-dankshardingem. Danksharding přinese na Ethereu obrovské množství prostoru pro rollupy, aby mohly ukládat svá komprimovaná transakční data. To znamená, že Ethereum bude schopno snadno podporovat stovky jednotlivých rollupů a učinit miliony transakcí za sekundu realitou.
 
-Funguje to tak, že se rozšíří počet blobů připojených k blokům ze šesti (6) v Proto-Danksharding na 64 v úplném Danksharding. Zbytek změn vyžaduje aktualizace způsobu, jakým konsenzus klienti fungují, aby byli schopni zpracovávat nové velké bloby. Některé z těchto změn jsou již součástí plánu pro jiné účely nezávisle na Danksharding. Např. Danksharding vyžaduje implementaci oddělení navrhovatelů a stavitelů bloků (proposer-builder separation). To je vylepšení, které rozděluje úkoly budování bloků a jejich navrhování mezi různé validátory. Podobně je pro Danksharding potřeba vzorkování dostupnosti dat, ale to je také nezbytné pro vývoj jednoduchých klientů, které neukládají velké množství historických dat („bezstavové klienty“).
+Funguje to tak, že se rozšíří počet blobů připojených k blokům ze šesti (6) v proto-dankshardingu na 64 v plném dankshardingu. Zbytek požadovaných změn jsou všechno aktualizace způsobu, jakým fungují konsensuální klienti, aby jim umožnily zpracovávat nové velké bloby. Několik z těchto změn je již v plánu pro jiné účely nezávislé na dankshardingu. Například danksharding vyžaduje, aby bylo implementováno oddělení navrhovatele a tvůrce (PBS). Jedná se o aktualizaci, která odděluje úkoly vytváření bloků a navrhování bloků mezi různé validátory. Podobně je pro danksharding vyžadováno vzorkování dostupnosti dat, ale je také vyžadováno pro vývoj velmi lehkých klientů, kteří neukládají mnoho historických dat („bezstavoví klienti“).
 
-<ExpandableCard title="Proč Danksharding vyžaduje oddělení navrhovatele a stavitele?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
+<ExpandableCard title="Proč danksharding vyžaduje oddělení navrhovatele a tvůrce?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
-Oddělení navrhovatelů a stavitelů bloků je nezbytné k tomu, aby jednotliví validátoři nemuseli generovat drahé závazky a důkazy pro 32 MB blobových dat. To by příliš zatěžovalo domácí validátory a vyžadovalo by to investice do výkonnějšího hardwaru, což by signifikantně snížilo decentralizaci. Místo toho převezmou zodpovědnost za tuto náročnou výpočetní práci specializovaní stavitelé bloků. Poté zpřístupní své bloky navrhovatelům bloků, aby je mohli šířit. Navrhovatel bloku jednoduše vybere blok, který je nejziskovější. Každý může levně a rychle ověřit bloby, což znamená, že jakýkoliv běžný validátor může zkontrolovat poctivost jednání stavitelů bloků. To umožňuje zpracování velkých blobů bez obětování decentralizace. Nepoctiví stavitelé bloků by mohli být jednoduše vyloučeni ze sítě a penalizováni a další by je nahradili, protože stavba bloků je výnosná činnost.
+Oddělení navrhovatele a tvůrce (PBS) je vyžadováno, aby se zabránilo tomu, že by jednotliví validátoři museli generovat drahé závazky a důkazy pro 32 MB dat v blobech. To by příliš zatěžovalo domácí stakery a vyžadovalo by to od nich investice do výkonnějšího hardwaru, což poškozuje decentralizaci. Místo toho přebírají odpovědnost za tuto nákladnou výpočetní práci specializovaní tvůrci bloků. Poté zpřístupní své bloky navrhovatelům bloků k vysílání. Navrhovatel bloku si jednoduše vybere blok, který je nejziskovější. Kdokoli může bloby levně a rychle ověřit, což znamená, že jakýkoli běžný validátor může zkontrolovat, zda se tvůrci bloků chovají poctivě. To umožňuje zpracovávat velké bloby bez obětování decentralizace. Nepoctiví tvůrci bloků by mohli být jednoduše vyloučeni ze sítě a penalizováni – na jejich místo nastoupí jiní, protože vytváření bloků je zisková činnost.
+
 </ExpandableCard>
 
-<ExpandableCard title="Proč Danksharding vyžaduje vzorkování dostupnosti dat?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="Proč danksharding vyžaduje vzorkování dostupnosti dat?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
-Vzorkování dostupnosti dat je nezbytné pro validátory k rychlému a efektivnímu ověřování blobových dat. Pomocí vzorkování dostupnosti dat si mohou být validátoři jistí, že byla blobová data dostupná a správně potvrzena. Každý validátor může náhodně vybrat jen několik datových bodů a vytvořit důkaz, což znamená, že žádný validátor nemusí kontrolovat celý blob. Pokud nějaká data chybí, budou rychle identifikována a blob bude zamítnut.
+Vzorkování dostupnosti dat je vyžadováno, aby validátoři mohli rychle a efektivně ověřovat data v blobech. Pomocí vzorkování dostupnosti dat si mohou být validátoři velmi jisti, že data v blobech byla dostupná a správně zavázána. Každý validátor může náhodně vzorkovat jen několik datových bodů a vytvořit důkaz, což znamená, že žádný validátor nemusí kontrolovat celý blob. Pokud nějaká data chybí, budou rychle identifikována a blob bude odmítnut.
+
 </ExpandableCard>
 
-### Aktuální postup {#current-progress}
+### Současný pokrok {#current-progress}
 
-Úplný Danksharding je vzdálen několik let. Mezitím ceremoniál KZG skončil s více než 140 000 příspěvky a [EIP](https://eips.ethereum.org/EIPS/eip-4844) pro Proto-Danksharding dozrál. Tento návrh byl plně implementován na všech testovacích sítích a byl spuštěn na hlavní síti s vylepšením sítě Cancun-Deneb („Dencun“) v březnu 2024.
+Plný danksharding je vzdálen několik let. Mezitím byl ceremoniál KZG ukončen s více než 140 000 příspěvky a [EIP](https://eips.ethereum.org/EIPS/eip-4844) pro proto-danksharding dospěl. Tento návrh byl plně implementován ve všech testnetech a byl spuštěn na Mainnetu s aktualizací sítě Cancun-Deneb („Dencun“) v březnu 2024.
 
 ### Další čtení {#further-reading}
 
-- [Poznámky k Proto-Dankshardingu](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) – _Vitalik Buterin_
-- [Dankradovy poznámky o Dankshardingu](https://notes.ethereum.org/@dankrad/new_sharding)
-- [Dankrad, Proto a Vitalik diskutují o Dankshardingu](https://www.youtube.com/watch?v=N5p0TB77flM)
+- [Poznámky k proto-dankshardingu](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) – _Vitalik Buterin_
+- [Dankradovy poznámky k dankshardingu](https://notes.ethereum.org/@dankrad/new_sharding)
+- [Dankrad, Proto a Vitalik diskutují o dankshardingu](https://www.youtube.com/watch?v=N5p0TB77flM)
 - [Ceremoniál KZG](https://ceremony.ethereum.org/)
 - [Přednáška Carla Beekhuizena na Devconu o důvěryhodných nastaveních](https://archive.devcon.org/archive/watch/6/the-kzg-ceremony-or-how-i-learnt-to-stop-worrying-and-love-trusted-setups/?tab=YouTube)
 - [Více o vzorkování dostupnosti dat pro bloby](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
-- [Dankrad Feist o KZG závazcích a důkazech](https://youtu.be/8L2C6RDMV9Q)
-- [KZG polynomiální závazky](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html)
+- [Dankrad Feist o závazcích a důkazech KZG](https://youtu.be/8L2C6RDMV9Q)
+- [Polynomiální závazky KZG](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html)

@@ -10,6 +10,7 @@ import Matomo from "@/components/Matomo"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { toLanguageTag } from "@/lib/utils/url"
 
 import Providers from "./providers"
 
@@ -66,7 +67,7 @@ export default async function LocaleLayout(props: {
 
   return (
     <html
-      lang={locale}
+      lang={toLanguageTag(locale)}
       className={`${inter.variable} ${ibmPlexMono.variable}`}
       suppressHydrationWarning
     >

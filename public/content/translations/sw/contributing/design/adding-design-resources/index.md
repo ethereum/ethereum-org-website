@@ -1,69 +1,67 @@
 ---
-title: Kuongeza rasilimali za kubuni
-description: Miongozo na mahitaji ya kuhakikisha ubora wa vifaa vya kubuni kwenye ethereum.org
+title: Kuongeza rasilimali za usanifu
+description: Miongozo na mahitaji ili kuhakikisha ubora wa nyenzo za usanifu kwenye ethereum.org
 lang: sw
 ---
 
-# Kuongeza rasilimali za usanifu {#adding-design-resources}
+Mtu yeyote anaweza kupendekeza nyenzo mpya za usanifu kwenye [ukurasa wa Usanifu na UX katika Web3](/developers/docs/design-and-ux/).
 
-Mtu yeyote anaweza kupendekeza nyenzo mpya za usanifu kwenye [ukurasa wa Usanifu na UX katika web3](/developers/docs/design-and-ux/).
+Fahamu kuwa lengo la ukurasa huu ni kutoa thamani ya mtumiaji kwa wasanifu wanaotarajia wa Web3. Sehemu ya usanifu haipo hapo kutangaza huduma, bidhaa, au majukwaa yako.
 
-Kuwa na ufahamu kwamba lengo la ukurasa huu ni juu ya kutoa thamani ya mtumiaji kwa wabunifu wa Mtandao wanaotamani. Sehemu ya kubuni si huko kutangaza huduma zako, bidhaa, au majukwaa.
+Ili kuhakikisha kuwa tunadumisha kiwango cha juu cha taarifa na kukuza maarifa muhimu, tumeanzisha sera ya kuorodhesha:
 
-Ili kuhakikisha kwamba kudumisha kiwango cha juu cha habari na endeleza ufahamu wa dhamani, imara hati ya orodha:
+## Tafiti na Dashibodi {#research-studies}
 
-## Tafiti za Utafiti na Dashibodi {#Research-studies}
+1. Mbinu Madhubuti
 
-1. Mbinu Sahihi
+a. Mbinu inapaswa kufafanua wazi jinsi data ilivyokusanywa.
 
-a. Mbinu inapaswa kufafanua wazi jinsi habari kukusanya.
+b. Idadi ya washiriki waliohusika katika utafiti inapaswa kutajwa.
 
-ba. Idadi ya washiriki wanaohusika katika utafiti inapaswa kutajwa.
+c. Mbinu za utafiti zilizotumika zinapaswa kuelezewa.
 
-ka. Mbinu za utafiti wafanyakazi inapaswa kuelezwa.
+2. Umuhimu kwa Wasanifu wa Web3 na Matukio ya Kawaida ya Matumizi ya Usanifu
 
-2. Umuhimu kwa Mtandao wabunifu na kawaida matukio ya matumizi ya kubuni
+a. Mada ya utafiti inapaswa kuwa muhimu kwa wasanifu wa Web3 na kushughulikia matukio ya kawaida ya matumizi ya usanifu.
 
-a. Mada ya utafiti inapaswa kuwa muhimu kwa wabunifu wa Mtandao na kushughulikia kesi za kawaida za matumizi ya muundo.
+3. Kuzingatia kutoa maarifa
 
-3. Kuzingatia kutoa ufahamu
+a. Lengo kuu la maandishi linapaswa kuwa kushiriki maarifa badala ya kutangaza mradi au kampuni mahususi.
 
-a. Lengo kuu la maandishi inapaswa kuwa kushiriki ufahamu badala ya endeleza mradi maalum au kampuni.
+## Makala {#articles}
 
-## Makala {#Articles}
+1. Umuhimu kwa Wasanifu/Watafiti wa Web3 na Matukio ya Kawaida ya Matumizi ya Usanifu wa Web3
 
-1. Umuhimu kwa Mtandao wabunifu / watafiti na kawaida Mtandao matukio ya matumizi ya kesi
+a. Mada ya makala inapaswa kuwa muhimu kwa wasanifu na watafiti wa Web3, ikizingatia matukio ya kawaida ya matumizi ya usanifu wa Web3.
 
-a. Mada ya makala inapaswa kuwa muhimu kwa wabunifu wa Mtandao na watafiti, kuelekeza kesi za kawaida za matumizi ya muundo wa Mtandao.
+2. Ubora wa Msingi wa Uandishi
 
-2. Ubora wa msingi wa kuandika
+a. Makala inapaswa kuwa haina makosa ya sarufi na tahajia.
 
-a. Makala hiyo Haipaswi kuwa na makosa ya sarufi na ya herufi.
+b. Msisitizo unapaswa kuwekwa katika kutoa maarifa na mafunzo muhimu.
 
-ba. Msisitizo unapaswa kuwekwa juu ya kutoa ufahamu muhimu na kujifunza.
+c. Uandishi unapaswa kuwa mfupi na wa moja kwa moja.
 
-ka. Maandishi yapasa kuwa mafupi na ya moja kwa moja.
+3. Lengo la Maandishi
 
-3. Kusudi la maandishi
+a. Lengo kuu la makala linapaswa kuwa kushiriki maarifa badala ya kutangaza mradi au kampuni fulani.
 
-a. Lengo kuu la makala inapaswa kuwa kushiriki ufahamu badala ya kuendeleza mradi fulani au kampuni.
+## Jamii / DAO {#communities-and-daos}
 
-## Jumuiya / DAO {#Communities-and-DAOs}
+1. Tovuti lazima ionyeshe wazi jinsi ya kujiunga na DAO/Jamii
 
-1. Tovuti lazima wazi kuonyesha jinsi ya kujiunga na DAO/ jumuiya
+2. Faida Wazi za Uanachama
 
-2. Manufaa zilizo wazi za ushirikiano
+a. Faida za kuwa mwanachama zinapaswa kuonyeshwa wazi.
 
-a. Manufaa za kuwa mshiriki inapaswa kuonyeshwa waziwazi.
+**Mifano**: kupokea maoni kuhusu kazi, kupata fursa za kazi au zawadi, kushiriki maarifa ya usanifu na utafiti.
 
-**Mifano**: kupokea mrejesho kuhusu kazi, kupata fursa za kazi au zawadi, kushiriki maarifa ya usanifu na utafiti.
+3. Mawasiliano Amilifu na Changamfu kwenye Discord
 
-3. Mawasiliano yenye bidii na yenye nguvu kuhusu ugomvi
+a. Jamii ya Discord inapaswa kuonyesha mawasiliano changamfu na shirikishi.
 
-a. Jumuiya ya Discord inapaswa kuonyesha mawasiliano ya kupendeza na ya kushiriki.
+b. Wasimamizi wanapaswa kushiriki kikamilifu katika kudumisha jamii na kuwezesha majadiliano.
 
-ba. Wasimamizi wanapaswa kushiriki kikamilifu katika kudumisha jamii na kuwezesha majadiliano.
+c. Jamii inapaswa kuonyesha rekodi ya mazungumzo muhimu na yenye tija ndani ya wiki mbili zilizopita.
 
-ka. Jamii inapaswa kuonyesha rekodi ya mazungumzo ya dhamani na yenye tija ndani ya wiki mbili zilizopita.
-
-Kwa kuzingatia vigezo hivi, tuna lengo mlezi mazingira ya kusisimua na kushiriki maarifa ndani ya jamii yetu. Tunaamini kuwa hati hii ya orodha nyeupe kuhakikisha kwamba watumiaji wetu wanapata rasilimali za kuaminika, muhimu, na zenye ufahamu. Asante kwa kuelewa na ushirikiano wako katika kudumisha ubora wa yaliyomo ndani ya jukwaa letu.
+Kwa kuzingatia vigezo hivi, tunalenga kukuza mazingira yanayostawi na ya kushiriki maarifa ndani ya jamii yetu. Tunaamini kwamba sera hii ya kuidhinisha itahakikisha kwamba watumiaji wetu wanapata rasilimali za kuaminika, muhimu, na zenye maarifa. Asante kwa uelewa wako na ushirikiano katika kudumisha ubora wa maudhui ndani ya jukwaa letu.

@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-17T22:20:46.904Z",
+  "englishManifestHash": "07285ef2d9c7",
+  "placeholderOrder": [
+    "LINK-c42188",
+    "LINK-5e5e9b",
+    "LINK-6857cb",
+    "LINK-1200a5",
+    "LINK-456e6f",
+    "LINK-0ab4bf",
+    "LINK-b507fe",
+    "LINK-187a48",
+    "LINK-73a2b8",
+    "LINK-7cbd93",
+    "LINK-3d319f",
+    "LINK-eb929f",
+    "LINK-d8ae59",
+    "LINK-5972a1",
+    "LINK-2ce12f",
+    "LINK-9a23f2",
+    "LINK-ef43a4",
+    "LINK-c6beaf",
+    "LINK-5dda5d",
+    "LINK-d5f957",
+    "LINK-8d80b2",
+    "LINK-6ec59d"
+  ],
+  "placeholderMap": {
+    "LINK-c42188": {
+      "type": "link",
+      "values": {
+        "url": "/learn/"
+      }
+    },
+    "LINK-5e5e9b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-6857cb": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained"
+      }
+    },
+    "LINK-1200a5": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract"
+      }
+    },
+    "LINK-456e6f": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract"
+      }
+    },
+    "LINK-0ab4bf": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment"
+      }
+    },
+    "LINK-b507fe": {
+      "type": "link",
+      "values": {
+        "url": "https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe"
+      }
+    },
+    "LINK-187a48": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@alisinabh/announcing-ethers-a-first-class-ethereum-web3-library-for-elixir-1d64e9409122"
+      }
+    },
+    "LINK-73a2b8": {
+      "type": "link",
+      "values": {
+        "url": "https://kohlerjp.medium.com/how-to-sign-raw-ethereum-contract-transactions-with-elixir-f8822bcc813b"
+      }
+    },
+    "LINK-7cbd93": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/agile-alpha/ethereum-smart-contracts-and-elixir-c7c4b239ddb4"
+      }
+    },
+    "LINK-3d319f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ExWeb3/block_keys"
+      }
+    },
+    "LINK-eb929f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/mana-ethereum/ethereumex"
+      }
+    },
+    "LINK-d8ae59": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ExWeb3/elixir_ethers"
+      }
+    },
+    "LINK-5972a1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ExWeb3/elixir_ethers_kms"
+      }
+    },
+    "LINK-2ce12f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/poanetwork/ex_abi"
+      }
+    },
+    "LINK-9a23f2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ExWeb3/ex_keccak"
+      }
+    },
+    "LINK-ef43a4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/mana-ethereum/ex_rlp"
+      }
+    },
+    "LINK-c6beaf": {
+      "type": "link",
+      "values": {
+        "url": "https://hex.pm/packages/eth"
+      }
+    },
+    "LINK-5dda5d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/hswick/exw3"
+      }
+    },
+    "LINK-d5f957": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/mana-ethereum/mana"
+      }
+    },
+    "LINK-8d80b2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-6ec59d": {
+      "type": "link",
+      "values": {
+        "url": "https://elixir-lang.slack.com/archives/C5RPZ3RJL"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:20:46.904Z",
+      "status": "success"
+    }
+  }
+}

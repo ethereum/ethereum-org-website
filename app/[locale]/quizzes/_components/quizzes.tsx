@@ -4,7 +4,7 @@ import { useMemo, useState } from "react"
 
 import { QuizKey, QuizStatus } from "@/lib/types"
 
-import FeedbackCard from "@/components/FeedbackCard"
+import ContentFeedback from "@/components/ContentFeedback"
 import { HubHero } from "@/components/Hero"
 import Github from "@/components/icons/github.svg"
 import MainArticle from "@/components/MainArticle"
@@ -116,7 +116,7 @@ const QuizzesPage = () => {
           </Flex>
         </div>
         <div className="w-full px-8 py-4">
-          <FeedbackCard />
+          <ContentFeedback />
         </div>
       </MainArticle>
     </>

@@ -1,11 +1,11 @@
 ---
-title: Fulu-Osaka (Fusaka)
+title: "Fusaka 🦓"
+metaTitle: Fulu-Osaka (Fusaka)
 description: Learn about the Fusaka protocol upgrade
 lang: en
+template: upgrade
 authors: ["Nixo", "Mario Havel"]
 ---
-
-# Fusaka <Emoji text="🦓" /> {#fusaka}
 
 **Ethereum's highly anticipated Fusaka upgrade went live on December 3, 2025**
 

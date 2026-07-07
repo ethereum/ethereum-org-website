@@ -1,12 +1,12 @@
 ---
-title: Glossaire Ethereum
-description: "Glossaire non-exhaustif des termes (techniques ou non) liés à Ethereum"
+title: Glossaire
+metaTitle: Glossaire Ethereum
+description: Un glossaire incomplet des termes techniques et non techniques liés à Ethereum
 lang: fr
+authors: ["Andreas Antonopoulos"]
 ---
 
-# Glossaire {#ethereum-glossary}
-
-## # {#section-numbers}
+## \# {#section-numbers}
 
 <GlossaryDefinition term="51%-attack" />
 
@@ -494,12 +494,12 @@ lang: fr
 
 ## Sources {#sources}
 
-_Fourni en partie par [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) par [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) sous licence CC-BY-SA_
+_Fourni en partie par [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) d'[Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) sous licence CC-BY-SA_
 
 <Divider />
 
 ## Contribuer à cette page {#contribute-to-this-page}
 
-Il manque quelque chose ? Vous avez remarqué quelque chose d'incorrect ? Aidez-nous à améliorer cette page en contribuant à ce glossaire sur GitHub !
+Avons-nous oublié quelque chose ? Y a-t-il une erreur ? Aidez-nous à nous améliorer en contribuant à ce glossaire sur GitHub !
 
-[En savoir plus sur la manière de contribuer](/contributing/adding-glossary-terms)
+[En savoir plus sur la façon de contribuer](/contributing/adding-glossary-terms)

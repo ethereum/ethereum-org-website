@@ -1,38 +1,39 @@
 ---
-title: "Thêm sàn giao dịch"
-description: "Chính sách áp dụng khi thêm sàn giao dịch lên ethereum.org"
+title: Thêm các sàn giao dịch Ethereum
+metaTitle: Thêm các sàn giao dịch
+description: Chính sách chúng tôi sử dụng khi thêm các sàn giao dịch vào ethereum.org
 lang: vi
 ---
 
-# Thêm sàn giao dịch Ethereum {#adding-ethereum-exchanges}
+Bất kỳ ai cũng có thể tự do đề xuất các sàn giao dịch mới trên ethereum.org.
 
-Bất kì ai cũng có thể đề xuất sàn giao dịch mới trên ethereum.org.
-
-Hiện tại chúng tôi liệt kê các sàn giao dịch tại:
+Chúng tôi hiện đang liệt kê chúng trên:
 
 - [ethereum.org/get-eth](/get-eth/)
 
-Trang này cho phép người dùng điền thông tin nơi cư trú và tìm kiếm các sàn giao dịch khả dụng. Việc kiểm tra này giúp phát hiện sớm các khu vực địa lý bị hạn chế.
+Trang này cho phép người dùng nhập nơi họ sống và xem những sàn giao dịch nào họ có thể sử dụng. Điều này giúp phát hiện sớm bất kỳ hạn chế địa lý nào.
 
-Do đó, chúng tôi cần bạn cung cấp các thông tin cụ thể khi đề xuất sàn giao dịch.
+Vì bối cảnh này, chúng tôi cần một số thông tin cụ thể khi bạn đề xuất một sàn giao dịch.
 
-**LƯU Ý:** Nếu bạn muốn đưa một sàn giao dịch phi tập trung vào danh sách, hãy xem [chính sách của chúng tôi về việc thêm ví và các ứng dụng phi tập trung](/contributing/adding-products/).
+**LƯU Ý:** Nếu bạn muốn liệt kê một sàn giao dịch phi tập trung, hãy xem [chính sách liệt kê ví và ứng dụng phi tập trung (dapp) của chúng tôi](/contributing/adding-products/).
 
 ## Những gì chúng tôi cần {#what-we-need}
 
-- Các hạn chế khu vực địa lý của sàn giao dịch. Những hạn chế này cần được mô tả chi tiết trên một trang riêng biệt của website sàn giao dịch.
-- Các loại tiền tệ mà người dùng có thể sử dụng để mua đồng ETH
-- Bằng chứng chứng minh sàn giao dịch là một doanh nghiệp thương mại hợp pháp
-- Bất cứ tài liệu thông tin bổ sung nào khác - đây có thể là thông tin về doanh nghiệp như số năm hoạt động, nguồn tài chính, v.v...
+- Các hạn chế địa lý áp dụng cho sàn giao dịch. Các hạn chế địa lý liên quan đến sàn giao dịch nên được trình bày chi tiết trên một trang hoặc phần dành riêng trên trang web của sàn giao dịch.
+- Các loại tiền tệ mà người dùng có thể sử dụng để mua ETH
+- Bằng chứng cho thấy sàn giao dịch là một công ty giao dịch hợp pháp
+- Bất kỳ thông tin bổ sung nào bạn có thể có – đây có thể là thông tin về công ty như số năm hoạt động, hỗ trợ tài chính, v.v.
 
-Chúng tôi cần thông tin này để có thể [giúp người dùng tìm một sàn giao dịch mà họ có thể sử dụng](/get-eth/#country-picker) một cách chính xác.
+Chúng tôi cần thông tin này để có thể [giúp người dùng tìm thấy một sàn giao dịch mà họ có thể sử dụng](/get-eth/#country-picker) một cách chính xác.
 
-Nhờ vậy, ethereum.org có thể tin tưởng sàn giao dịch bảo đảm tính hợp pháp và cung cấp dịch vụ an toàn.
+Và để ethereum.org có thể tự tin hơn rằng sàn giao dịch là một dịch vụ hợp pháp và an toàn.
 
 ---
 
 ## Thêm sàn giao dịch của bạn {#add-exchange}
 
-Nếu bạn muốn thêm sàn giao dịch lên ethereum.org, hãy tạo góp ý trên Github.
+Nếu bạn muốn thêm một sàn giao dịch vào ethereum.org, hãy tạo một issue trên GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">Tạo góp ý</ButtonLink>
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+  Tạo một issue
+</ButtonLink>

@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "¿Qué es Ethereum? (Una guía completa) | ethereum.org",
+  "page-what-is-ethereum-meta-title": "¿Qué es Ethereum? (Una guía completa)",
   "page-what-is-ethereum-meta-description": "Una descripción general completa de qué es Ethereum, cómo funciona, qué hace y cómo empezar a usarlo o desarrollar en él. Explicado en términos sencillos.",
   "page-what-is-ethereum-title": "¿Qué es Ethereum?",
   "page-what-is-ethereum-hero-description-1": "Ethereum es una red de cadena de bloques descentralizada y una plataforma de desarrollo de software, impulsada por la criptomoneda ether (ETH).",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "¿Cuál es la hoja de ruta de Ethereum para 2026?",
   "page-what-is-ethereum-roadmap-intro-1": "Ethereum no sigue una hoja de ruta fija. Sigue una visión compartida.",
   "page-what-is-ethereum-roadmap-intro-2": "Las actualizaciones de la red se realizan como EIPs y son desarrolladas en público por contribuyentes de todo el mundo. No hay un equipo central decidiendo qué sucede, solo personas construyendo lo que creen que es útil según las necesidades de los usuarios.",
-  "page-what-is-ethereum-roadmap-intro-3": "Fusaka es la actualización más reciente, lanzada en diciembre de 2025. Introdujo PeerDAS para una disponibilidad de datos más eficiente en la capa 2 (l2) y aumentó el límite de gas predeterminado a ~60M. De cara a 2026, Glamsterdam está en desarrollo y se espera para el primer semestre de 2026.",
+  "page-what-is-ethereum-roadmap-intro-3": "Fusaka es la actualización más reciente, lanzada en diciembre de 2025. Introdujo PeerDAS para una disponibilidad de datos de la capa 2 (l2) más eficiente y elevó el límite de gas predeterminado a ~60M. De cara a 2026, Glamsterdam está en desarrollo y se espera para el segundo semestre de 2026.",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>De cara al futuro</a>, las prioridades de Ethereum incluyen:",
   "page-what-is-ethereum-roadmap-priority-1": "Hacer que el protocolo principal y sus redes de capa 2 (l2) sean más rápidos y baratos para todos",
   "page-what-is-ethereum-roadmap-priority-2": "Mejorar la experiencia para usuarios y desarrolladores",

@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-17T00:48:03.659Z",
+  "englishManifestHash": "3a1fbbcbd2ad",
+  "placeholderOrder": [
+    "LINK-487118",
+    "LINK-a2fc6f",
+    "LINK-360533",
+    "CODE-c5c7f2",
+    "LINK-dadb11",
+    "LINK-3b441d",
+    "CODE-1e93a3",
+    "LINK-56a5d3",
+    "LINK-d52fab",
+    "LINK-1ed8db",
+    "LINK-aa742d",
+    "LINK-973a8a",
+    "LINK-4c5deb",
+    "LINK-7da477",
+    "LINK-a5b5c7",
+    "LINK-a7dca4",
+    "LINK-ee70b4",
+    "LINK-a20024"
+  ],
+  "placeholderMap": {
+    "CODE-c5c7f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "slither-check-upgradeability"
+      }
+    },
+    "CODE-1e93a3": {
+      "type": "inline-code",
+      "values": {
+        "content": "slither-check-erc"
+      }
+    },
+    "LINK-487118": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither"
+      }
+    },
+    "LINK-a2fc6f": {
+      "type": "link",
+      "values": {
+        "url": "https://crytic.io/"
+      }
+    },
+    "LINK-360533": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/Upgradeability-Checks"
+      }
+    },
+    "LINK-dadb11": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/"
+      }
+    },
+    "LINK-3b441d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither/wiki/ERC-Conformance"
+      }
+    },
+    "LINK-56a5d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/token-integration-checklist/"
+      }
+    },
+    "LINK-d52fab": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph"
+      }
+    },
+    "LINK-1ed8db": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary"
+      }
+    },
+    "LINK-aa742d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization"
+      }
+    },
+    "LINK-973a8a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/guide-to-smart-contract-security-tools/"
+      }
+    },
+    "LINK-4c5deb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/echidna"
+      }
+    },
+    "LINK-7da477": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/verifier.html"
+      }
+    },
+    "LINK-a5b5c7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/"
+      }
+    },
+    "LINK-a7dca4": {
+      "type": "link",
+      "values": {
+        "url": "https://crytic.io"
+      }
+    },
+    "LINK-ee70b4": {
+      "type": "link",
+      "values": {
+        "url": "https://calendly.com/dan-trailofbits/office-hours"
+      }
+    },
+    "LINK-a20024": {
+      "type": "link",
+      "values": {
+        "url": "https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:48:03.659Z",
+      "status": "success"
+    }
+  }
+}

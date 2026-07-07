@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "locale": "zh",
+  "translatedAt": "2026-06-11T18:10:58.655Z",
+  "englishManifestHash": "279c15beefc2",
+  "placeholderOrder": [
+    "LINK-6e1b61",
+    "LINK-9a5c27",
+    "LINK-c2821f"
+  ],
+  "placeholderMap": {
+    "LINK-6e1b61": {
+      "type": "link",
+      "values": {
+        "url": "/reports/"
+      }
+    },
+    "LINK-9a5c27": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?template=content-suggestion.yml"
+      }
+    },
+    "LINK-c2821f": {
+      "type": "link",
+      "values": {
+        "url": "mailto:website@ethereum.org"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-11T18:10:58.655Z",
+      "status": "success"
+    }
+  }
+}

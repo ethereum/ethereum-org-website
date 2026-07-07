@@ -1,56 +1,56 @@
 ---
-title: "面向 Delphi 开发者的以太坊资源"
-description: "学习如何使用 Delphi 编程语言为以太坊开发"
+title: "面向 Delphi 开发者的以太坊"
+description: "学习如何使用 Delphi 编程语言进行以太坊开发"
 lang: zh
 incomplete: true
 ---
 
 <FeaturedText>
 
-学习如何使用 Delphi 编程语言为以太坊开发
+学习如何使用 Delphi 编程语言进行以太坊开发
 
 </FeaturedText>
 
-使用以太坊来创建去中心化应用程序，发挥加密货币和区块链技术的优势。 这些去中心化应用程序可被信任，意味着一旦被部署到以太坊上，它们将总是按既定程序运行。 这些应用程序可以控制数字资产并构建新的金融应用。 它们可以是去中心化的，即没有任何单一实体或个人控制它们，而且它们几乎不可能被审查。
+使用以太坊创建利用加密货币和区块链技术优势的去中心化应用 (dapp)。这些 dapp 是值得信赖的，这意味着一旦它们被部署到以太坊，它们将始终按照编程运行。它们可以控制数字资产，从而创建新型的金融应用。它们可以是去中心化的，这意味着没有单一实体或个人控制它们，并且几乎不可能被审查。
 
-在以太坊顶部构建去中心化应用程序，并使用 Delphi 编程语言与智能合约交互！
+在以太坊上构建去中心化应用，并使用 Delphi 编程语言与智能合约进行交互！
 
-## 从学习智能合约和 Solidity 语言入手 {#getting-started-with-smart-contracts-and-the-solidity-language}
+## 智能合约与 Solidity 语言入门 {#getting-started-with-smart-contracts-and-the-solidity-language}
 
-**迈出第一步，将 Delphi 与以太坊集成**
+**迈出将 Delphi 与以太坊集成的第一步**
 
-想对以太坊有更加全面的认识？ 查看 [ethereum.org/learn](/learn/) 或 [ethereum.org/developers](/developers/)。
+需要先了解更基础的入门知识？请查看 [ethereum.org/learn](/learn/) 或 [ethereum.org/developers](/developers/)。
 
-- [区块链解析](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [区块链解释](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [了解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [编写你的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编译和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## 入门参考资料和链接 {#beginner-references-and-links}
+## 初学者参考资料与链接 {#beginner-references-and-links}
 
-**介绍 Delphereum 库**
+**Delphereum 库简介**
 
-- [Delphereum 是什么？](https://github.com/svanas/delphereum/blob/master/README.md)
+- [什么是 Delphereum？](https://github.com/svanas/delphereum/blob/master/README.md)
 - [将 Delphi 连接到本地（内存中）区块链](https://medium.com/@svanas/connecting-delphi-to-a-local-in-memory-blockchain-9a1512d6c5b0)
 - [将 Delphi 连接到以太坊主网](https://medium.com/@svanas/connecting-delphi-to-the-ethereum-main-net-5faf1feffd83)
 - [将 Delphi 连接到智能合约](https://medium.com/@svanas/connecting-delphi-to-smart-contracts-3146b12803a1)
 
-**想要立即跳过设置，直接查看示例吗？**
+**想暂时跳过设置，直接查看示例吗？**
 
-- [3 分钟了解智能合约与 Delphi — 第 1 部分](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
-- [3 分钟了解智能合约与 Delphi — 第 2 部分](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
+- [3 分钟了解智能合约与 Delphi - 第 1 部分](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
+- [3 分钟了解智能合约与 Delphi - 第 2 部分](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## 中级文章 {#intermediate-articles}
+## 进阶文章 {#intermediate-articles}
 
 - [在 Delphi 中生成以太坊签名的消息签名](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
-- [用 Delphi 转移以太币](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
-- [用 Delphi 转移 ERC-20 代币](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
+- [使用 Delphi 转移以太币](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
+- [使用 Delphi 转移 ERC-20 代币](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
 ## 高级使用模式 {#advanced-use-patterns}
 
 - [Delphi 与以太坊域名服务 (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
-- [QuikNode、以太坊和 Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
-- [Delphi 与以太坊的黑暗森林](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
-- [在 Delphi 中将一种代币交换为另一种代币](https://svanas.medium.com/swap-one-token-for-another-in-delphi-bcb999c47f7)
+- [QuikNode、以太坊与 Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
+- [Delphi 与以太坊黑暗森林](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
+- [在 Delphi 中将一种代币兑换为另一种代币](https://svanas.medium.com/swap-one-token-for-another-in-delphi-bcb999c47f7)
 
-正在寻找更多资源？ 请访问 [ethereum.org/developers](/developers/)。
+寻找更多资源？请查看 [ethereum.org/developers](/developers/)。

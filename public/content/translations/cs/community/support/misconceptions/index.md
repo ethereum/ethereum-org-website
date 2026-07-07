@@ -1,73 +1,71 @@
 ---
-title: "Běžné mylné představy o Ethereu"
-description: "Vysvětlení nejčastějších nedorozumění o tom, jak Ethereum funguje."
+title: Časté mylné představy o Ethereu
+description: Objasnění nejčastějších nedorozumění o tom, jak Ethereum funguje.
 lang: cs
 ---
 
-# Běžné mylné představy o Ethereu {#misconceptions}
-
 ## Je Ethereum společnost? {#not-a-company}
 
-Ethereum je open-source decentralizovaná technologie spravovaná tisíci přispěvateli z celého světa. Neexistuje žádná společnost s názvem "Ethereum", která by spravovala účty, držela prostředky nebo poskytovala zákaznickou podporu.
+Ethereum je open-source, decentralizovaná technologie udržovaná tisíci přispěvateli po celém světě. Neexistuje žádná společnost s názvem „Ethereum“, která by spravovala účty, držela prostředky nebo poskytovala zákaznickou podporu.
 
-[Nadace Ethereum](https://ethereum.foundation/) je nezisková organizace, která podporuje vývoj Etherea, ale nevlastní ani neovládá tuto síť. Žádná jediná entita ji neovládá.
+[Nadace Ethereum](https://ethereum.foundation/) je nezisková organizace, která podporuje vývoj Etherea, ale síť nevlastní ani nekontroluje. Žádný jednotlivý subjekt ji nekontroluje.
 
-**[ethereum.org](/)** je komunitou spravovaný vzdělávací zdroj. Není to burza, peněženka ani finanční instituce. Nedrží žádné finanční prostředky uživatelů a nemůže přistupovat k žádným účtům.
+**[ethereum.org](/)** je komunitou spravovaný vzdělávací zdroj. Není to burza, peněženka ani finanční instituce. Nedrží žádné prostředky uživatelů a nemá přístup k žádným účtům.
 
 <DocLink href="/what-is-ethereum/">
-  Co je to Ethereum?
+  Co je Ethereum?
 </DocLink>
 
-## Může někdo obnovit nebo zmrazit mé finanční prostředky? {#no-fund-access}
+## Může někdo obnovit nebo zmrazit mé prostředky? {#no-fund-access}
 
-Na rozdíl od banky na Ethereu neexistuje žádná centrální autorita, která by mohla zmrazit, zabavit nebo obnovit prostředky. Osoba, která drží soukromé klíče (nebo bezpečnostní frázi), má plnou a výhradní kontrolu nad peněženkou.
+Na rozdíl od banky neexistuje na Ethereu žádná centrální autorita, která by mohla zmrazit, zabavit nebo obnovit prostředky. Osoba, která drží soukromé klíče (nebo seed frázi), má plnou a výhradní kontrolu nad peněženkou.
 
 To znamená:
 
-- **Nikdo nemůže obnovit prostředky**, které jste odeslali na špatnou adresu.
-- **Nikdo nemůže zvrátit** transakci po jejím potvrzení.
-- **Nikdo nemůže zmrazit** vaši peněženku ani blokovat vaše transakce.
-- **Nikdo vám nemůže obnovit heslo**, pokud ztratíte svou bezpečnostní frázi.
+- **Nikdo nemůže obnovit prostředky**, které jste poslali na špatnou adresu
+- **Nikdo nemůže zvrátit** transakci poté, co je potvrzena
+- **Nikdo nemůže zmrazit** vaši peněženku nebo zablokovat vaše transakce
+- **Nikdo nemůže resetovat vaše heslo**, pokud ztratíte svou seed frázi
 
-Proto je ochrana vaší bezpečnostní fráze klíčová. Je to jediný způsob, jak se dostat do vaší peněženky. Pokud ji ztratíte nebo vám bude odcizena, neexistuje žádná možnost obnovy.
+Proto je ochrana vaší seed fráze kriticky důležitá. Je to jediný způsob, jak získat přístup k vaší peněžence. Pokud je ztracena nebo ukradena, neexistuje žádná možnost obnovy.
 
 <DocLink href="/security/">
-  Bezpečnost a předcházení podvodům v Ethereu
+  Bezpečnost Etherea a prevence podvodů
 </DocLink>
 
 ## Mohu stále těžit Ethereum? {#no-mining}
 
-Ethereum přešlo z [důkazu prací](/glossary/#pow) na [důkaz podílem](/glossary/#pos) během [Sloučení](/roadmap/merge/) v září 2022. Těžba na Ethereu již není možná.
+Ethereum přešlo z [důkazu prací (PoW)](/glossary/#pow) na [důkaz podílem (PoS)](/glossary/#pos) během [Merge](/roadmap/merge/) v září 2022. Těžba již na Ethereu není možná.
 
-Síť je nyní zabezpečena validátory, kteří [uzamykají](/glossary/#staking) ETH. Zúčastnit se může kdokoli:
+Síť je nyní zabezpečena validátory, kteří [stakují](/glossary/#staking) ETH. Zúčastnit se může kdokoli:
 
-- **Samostatné uzamčení:** Spusťte si vlastního validátora s 32 ETH – [dozvědět se více](/staking/solo/)
-- **Uzamčení jako služba:** Delegujte provoz uzlu a ponechte si své klíče – [dozvědět se více](/staking/saas/)
-- **Sdružené uzamčení:** Uzamkněte méně než 32 ETH tím, že se připojíte ke sdružení – [dozvědět se více](/staking/pools/)
+- **Sólo staking:** Spusťte svůj vlastní validátor s 32 ETH – [zjistit více](/staking/solo/)
+- **Staking jako služba:** Delegujte provoz uzlu, zatímco si ponecháte své klíče – [zjistit více](/staking/saas/)
+- **Společný staking:** Stakujte s méně než 32 ETH připojením se k poolu – [zjistit více](/staking/pools/)
 
 <DocLink href="/staking/">
-  Více o uzamčení
+  Zjistěte více o stakingu
 </DocLink>
 
-## Existuje tým podpory pro Ethereum? {#no-support-team}
+## Existuje tým podpory Etherea? {#no-support-team}
 
-Hledat "oficiální podporu pro Ethereum" je podobné jako hledat "oficiální podporu pro internet". Ta samozřejmě neexistuje, ale v závislosti na vašem problému můžete vyhledat podporu u svého poskytovatele internetových služeb, výrobce hardwaru routeru nebo u jedné ze společností, které stojí za zařízením, aplikací nebo webovou stránkou, kterou používáte.
+Hledání „oficiální podpory Etherea“ je podobné jako hledání „oficiální podpory internetu“. Ta samozřejmě neexistuje, ale v závislosti na vašem problému můžete vyhledat podporu u svého poskytovatele internetového připojení, výrobce hardwaru vašeho routeru nebo u jedné ze společností, které stojí za zařízením, aplikací nebo webovou stránkou, kterou používáte.
 
-S Ethereem je to podobné. Za Ethereem jako celkem nestojí žádná společnost, tým podpory ani helpdesk, ale v závislosti na problému můžete najít pomoc, když se obrátíte na svého _poskytovatele peněženky_, _službu pro uzamčení_, _burzu_, _finanční instituci_ nebo _tým, který spravuje aplikaci_, kterou používáte.
+S Ethereem je to podobné. Za Ethereem jako celkem nestojí žádná společnost, tým podpory ani helpdesk, ale v závislosti na problému můžete najít pomoc tím, že se obrátíte na svého _poskytovatele peněženky_, _službu pro staking_, _burzu_, _finanční instituci_ nebo _tým udržující aplikaci_, kterou používáte.
 
-Jelikož je Ethereum ve výchozím nastavení veřejně transparentní, mohou se vám hodit i [prohlížeče bloků](/developers/docs/data-and-analytics/block-explorers/), [analytické nástroje](/developers/tools/analytics/) a další [online zdroje pro vyšetřování](/community/support/scams/#analyze) k přímému prozkoumání problému.
+Vzhledem k tomu, že Ethereum je ve výchozím nastavení veřejně transparentní, mohou se vám při přímém zkoumání problému hodit také [prohlížeče bloků](/developers/docs/data-and-analytics/block-explorers/), [analytické nástroje](/developers/tools/analytics/) a další [online zdroje pro vyšetřování](/community/support/scams/#analyze).
 
-To znamená, že vás nikdy nikdo z Etherea ani z ethereum.org nebude:
+Přesto vás nikdo z Etherea ani z ethereum.org nikdy nebude:
 
 - Kontaktovat prostřednictvím přímé zprávy
-- Žádat o vaši bezpečnostní frázi nebo soukromé klíče
-- Žádat o zaslání ETH k ověření vaší peněženky
-- Nabízet pomoc s obnovením prostředků za poplatek
+- Žádat o vaši seed frázi nebo soukromé klíče
+- Žádat, abyste poslali ETH pro ověření vaší peněženky
+- Nabízet pomoc s obnovou prostředků za poplatek
 
-**Každý, kdo dělá cokoli z výše uvedeného, se vás snaží podvést.**
+**Kdokoli, kdo dělá cokoli z výše uvedeného, se vás snaží podvést.**
 
-Pokud potřebujete pomoc, skutečné komunity, které vám mohou pomoci, jsou uvedeny na [stránce podpory](/community/support/). Jedná se o otevřené komunity vedené dobrovolníky – nejedná se o oficiální kanály podpory.
+Pokud potřebujete pomoc, skutečné komunity, které vám mohou pomoci, jsou uvedeny na [stránce podpory](/community/support/). Jedná se o otevřené komunity vedené dobrovolníky – nikoli o oficiální kanály podpory.
 
 <DocLink href="/security/">
-  Bezpečnost a předcházení podvodům v Ethereu
+  Bezpečnost Etherea a prevence podvodů
 </DocLink>

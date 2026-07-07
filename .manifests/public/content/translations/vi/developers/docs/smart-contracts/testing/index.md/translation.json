@@ -1,0 +1,642 @@
+{
+  "version": 1,
+  "locale": "vi",
+  "translatedAt": "2026-06-17T23:04:44.028Z",
+  "englishManifestHash": "fb49a3c756a2",
+  "placeholderOrder": [
+    "LINK-ab1800",
+    "LINK-6d8e85",
+    "LINK-7e47f5",
+    "LINK-adc8d3",
+    "LINK-f11f1f",
+    "LINK-46b4e6",
+    "LINK-dec790",
+    "LINK-4f1196",
+    "LINK-4d844d",
+    "LINK-c7c69c",
+    "LINK-4ca49f",
+    "CODEBLOCK-2bc644",
+    "CODE-f82a04",
+    "CODE-56ed02",
+    "CODE-a7937c",
+    "CODE-f82a04",
+    "CODE-7f4a66",
+    "CODE-e8aac7",
+    "CODE-a7937c",
+    "CODE-7f4a66",
+    "CODE-e8aac7",
+    "LINK-c435c2",
+    "CODE-c4d0cf",
+    "CODE-254506",
+    "CODE-dbd719",
+    "LINK-218fc8",
+    "LINK-28a30a",
+    "LINK-f81660",
+    "LINK-305dc8",
+    "LINK-efb8a2",
+    "LINK-0e4d92",
+    "LINK-bbd934",
+    "LINK-3a2ac7",
+    "LINK-1922c6",
+    "LINK-81a340",
+    "LINK-6c9d91",
+    "LINK-b63beb",
+    "LINK-aea159",
+    "LINK-855de2",
+    "LINK-b0fca6",
+    "LINK-0d53c0",
+    "LINK-ccb5f0",
+    "LINK-cfac8c",
+    "LINK-b990cf",
+    "LINK-e46d86",
+    "LINK-9aae93",
+    "LINK-8334a0",
+    "LINK-8ee08b",
+    "LINK-c204b7",
+    "LINK-07cb50",
+    "LINK-6d0bef",
+    "LINK-8b1b68",
+    "LINK-b4531f",
+    "LINK-9e08f8",
+    "LINK-61616e",
+    "LINK-20beaf",
+    "LINK-e30855",
+    "LINK-d61289",
+    "LINK-2affd4",
+    "LINK-9369e9",
+    "LINK-dd5936",
+    "LINK-ca6af5",
+    "LINK-1bc6e4",
+    "LINK-579869",
+    "LINK-a4957b",
+    "LINK-71833b",
+    "LINK-c7dbca",
+    "LINK-fafd54",
+    "LINK-734dc4",
+    "LINK-af9129",
+    "LINK-8f347f",
+    "LINK-487118",
+    "LINK-4fc249",
+    "LINK-083762",
+    "LINK-70988c",
+    "LINK-f3e207",
+    "LINK-171119",
+    "LINK-f630b0",
+    "LINK-0e128c",
+    "LINK-0ebf13",
+    "LINK-ee08e8",
+    "LINK-09e516",
+    "LINK-b6d344",
+    "LINK-ecb109",
+    "LINK-d89326",
+    "LINK-ce7c07",
+    "LINK-779639",
+    "LINK-db0a08",
+    "LINK-4a61b2",
+    "LINK-050aa1",
+    "LINK-387962",
+    "LINK-750267",
+    "LINK-ce2cc9",
+    "LINK-b6d344"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-2bc644": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-f82a04": {
+      "type": "inline-code",
+      "values": {
+        "content": "highestBid"
+      }
+    },
+    "CODE-56ed02": {
+      "type": "inline-code",
+      "values": {
+        "content": "beneficiary"
+      }
+    },
+    "CODE-a7937c": {
+      "type": "inline-code",
+      "values": {
+        "content": "bid()"
+      }
+    },
+    "CODE-7f4a66": {
+      "type": "inline-code",
+      "values": {
+        "content": "auctionEndTime"
+      }
+    },
+    "CODE-e8aac7": {
+      "type": "inline-code",
+      "values": {
+        "content": "block.timestamp"
+      }
+    },
+    "CODE-c4d0cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "require"
+      }
+    },
+    "CODE-254506": {
+      "type": "inline-code",
+      "values": {
+        "content": "assert"
+      }
+    },
+    "CODE-dbd719": {
+      "type": "inline-code",
+      "values": {
+        "content": "if…else"
+      }
+    },
+    "LINK-ab1800": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/upgrading/"
+      }
+    },
+    "LINK-6d8e85": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/deploying/"
+      }
+    },
+    "LINK-7e47f5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/security/"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-f11f1f": {
+      "type": "link",
+      "values": {
+        "url": "https://en.m.wikipedia.org/wiki/Test_case"
+      }
+    },
+    "LINK-46b4e6": {
+      "type": "link",
+      "values": {
+        "url": "https://rekt.news/leaderboard/"
+      }
+    },
+    "LINK-dec790": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/"
+      }
+    },
+    "LINK-4f1196": {
+      "type": "link",
+      "values": {
+        "url": "https://www.techtarget.com/whatis/definition/script?amp=1"
+      }
+    },
+    "LINK-4d844d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.contrastsecurity.com/glossary/false-positive"
+      }
+    },
+    "LINK-c7c69c": {
+      "type": "link",
+      "values": {
+        "url": "https://en.m.wikipedia.org/wiki/Happy_path"
+      }
+    },
+    "LINK-4ca49f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction"
+      }
+    },
+    "LINK-c435c2": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers"
+      }
+    },
+    "LINK-218fc8": {
+      "type": "link",
+      "values": {
+        "url": "https://en.m.wikipedia.org/wiki/Code_coverage"
+      }
+    },
+    "LINK-28a30a": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html"
+      }
+    },
+    "LINK-f81660": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/forge/writing-tests"
+      }
+    },
+    "LINK-305dc8": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests"
+      }
+    },
+    "LINK-efb8a2": {
+      "type": "link",
+      "values": {
+        "url": "https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests"
+      }
+    },
+    "LINK-0e4d92": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.apeworx.io/ape/stable/userguides/testing.html"
+      }
+    },
+    "LINK-bbd934": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/hardhat-runner/docs/guides/test-contracts"
+      }
+    },
+    "LINK-3a2ac7": {
+      "type": "link",
+      "values": {
+        "url": "https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/"
+      }
+    },
+    "LINK-1922c6": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance"
+      }
+    },
+    "LINK-81a340": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#fork"
+      }
+    },
+    "LINK-6c9d91": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/forge/fork-testing"
+      }
+    },
+    "LINK-b63beb": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/hardhat-network/docs/guides/forking-other-networks"
+      }
+    },
+    "LINK-aea159": {
+      "type": "link",
+      "values": {
+        "url": "https://www.perforce.com/blog/qac/what-is-linting"
+      }
+    },
+    "LINK-855de2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis"
+      }
+    },
+    "LINK-b0fca6": {
+      "type": "link",
+      "values": {
+        "url": "https://en.m.wikipedia.org/wiki/Abstract_syntax_tree"
+      }
+    },
+    "LINK-0d53c0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/"
+      }
+    },
+    "LINK-ccb5f0": {
+      "type": "link",
+      "values": {
+        "url": "https://en.m.wikipedia.org/wiki/Symbolic_execution"
+      }
+    },
+    "LINK-cfac8c": {
+      "type": "link",
+      "values": {
+        "url": "https://owasp.org/www-community/Fuzzing"
+      }
+    },
+    "LINK-b990cf": {
+      "type": "link",
+      "values": {
+        "url": "https://www.halborn.com/blog/post/what-is-fuzz-testing-fuzzing"
+      }
+    },
+    "LINK-e46d86": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ConsenSys/mythril/wiki/Integer-Overflow"
+      }
+    },
+    "LINK-9aae93": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither"
+      }
+    },
+    "LINK-8334a0": {
+      "type": "link",
+      "values": {
+        "url": "https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/"
+      }
+    },
+    "LINK-8ee08b": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html"
+      }
+    },
+    "LINK-c204b7": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/forge/fuzz-testing"
+      }
+    },
+    "LINK-07cb50": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial"
+      }
+    },
+    "LINK-6d0bef": {
+      "type": "link",
+      "values": {
+        "url": "https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/"
+      }
+    },
+    "LINK-8b1b68": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial"
+      }
+    },
+    "LINK-b4531f": {
+      "type": "link",
+      "values": {
+        "url": "https://mythril-classic.readthedocs.io/en/master/tutorial.html"
+      }
+    },
+    "LINK-9e08f8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/development-networks/"
+      }
+    },
+    "LINK-61616e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/composability/"
+      }
+    },
+    "LINK-20beaf": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/development-networks/"
+      }
+    },
+    "LINK-e30855": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/#ethereum-testnets"
+      }
+    },
+    "LINK-d61289": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/development-networks/#public-beacon-testchains"
+      }
+    },
+    "LINK-2affd4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/formal-verification"
+      }
+    },
+    "LINK-9369e9": {
+      "type": "link",
+      "values": {
+        "url": "https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/"
+      }
+    },
+    "LINK-dd5936": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7"
+      }
+    },
+    "LINK-ca6af5": {
+      "type": "link",
+      "values": {
+        "url": "<https://en.wikipedia.org/wiki/White_hat_(computer_security"
+      }
+    },
+    "LINK-1bc6e4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/sc-forks/solidity-coverage"
+      }
+    },
+    "LINK-579869": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-waffle.readthedocs.io/en/latest/"
+      }
+    },
+    "LINK-a4957b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/remix-project/tree/master/libs/remix-tests"
+      }
+    },
+    "LINK-71833b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-test-helpers"
+      }
+    },
+    "LINK-c7dbca": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html"
+      }
+    },
+    "LINK-fafd54": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/foundry-rs/foundry/tree/master/crates/forge"
+      }
+    },
+    "LINK-734dc4": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/hardhat-runner/docs/guides/test-contracts"
+      }
+    },
+    "LINK-af9129": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.apeworx.io/ape/stable/userguides/testing.html"
+      }
+    },
+    "LINK-8f347f": {
+      "type": "link",
+      "values": {
+        "url": "https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/"
+      }
+    },
+    "LINK-487118": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/slither"
+      }
+    },
+    "LINK-4fc249": {
+      "type": "link",
+      "values": {
+        "url": "https://ethlint.readthedocs.io/en/latest/"
+      }
+    },
+    "LINK-083762": {
+      "type": "link",
+      "values": {
+        "url": "https://cyfrin.io/tools/aderyn"
+      }
+    },
+    "LINK-70988c": {
+      "type": "link",
+      "values": {
+        "url": "https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/"
+      }
+    },
+    "LINK-f3e207": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/fvictorio/slippy"
+      }
+    },
+    "LINK-171119": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/crytic/echidna/"
+      }
+    },
+    "LINK-f630b0": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.net/diligence/fuzzing/"
+      }
+    },
+    "LINK-0e128c": {
+      "type": "link",
+      "values": {
+        "url": "https://manticore.readthedocs.io/en/latest/index.html"
+      }
+    },
+    "LINK-0ebf13": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ConsenSys/mythril-classic"
+      }
+    },
+    "LINK-ee08e8": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.net/diligence/scribble/"
+      }
+    },
+    "LINK-09e516": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/guide-to-smart-contract-security-tools/"
+      }
+    },
+    "LINK-b6d344": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/"
+      }
+    },
+    "LINK-ecb109": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/"
+      }
+    },
+    "LINK-d89326": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/"
+      }
+    },
+    "LINK-ce7c07": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-mock-solidity-contracts-for-testing/"
+      }
+    },
+    "LINK-779639": {
+      "type": "link",
+      "values": {
+        "url": "https://www.rareskills.io/post/foundry-testing-solidity"
+      }
+    },
+    "LINK-db0a08": {
+      "type": "link",
+      "values": {
+        "url": "https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297"
+      }
+    },
+    "LINK-4a61b2": {
+      "type": "link",
+      "values": {
+        "url": "https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d"
+      }
+    },
+    "LINK-050aa1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide"
+      }
+    },
+    "LINK-387962": {
+      "type": "link",
+      "values": {
+        "url": "https://forum.openzeppelin.com/t/test-smart-contracts-like-a-rockstar/1001"
+      }
+    },
+    "LINK-750267": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/"
+      }
+    },
+    "LINK-ce2cc9": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-mock-solidity-contracts-for-testing/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:04:44.028Z",
+      "status": "success"
+    }
+  }
+}

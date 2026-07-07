@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-06-08T08:05:59.695Z",
+  "englishManifestHash": "719ea1070dcd",
+  "placeholderOrder": [
+    "LINK-4cd36e",
+    "LINK-16e5a2",
+    "LINK-c2821f"
+  ],
+  "placeholderMap": {
+    "LINK-4cd36e": {
+      "type": "link",
+      "values": {
+        "url": "/resources/"
+      }
+    },
+    "LINK-16e5a2": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?template=bug_report.yaml"
+      }
+    },
+    "LINK-c2821f": {
+      "type": "link",
+      "values": {
+        "url": "mailto:website@ethereum.org"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:05:59.695Z",
+      "status": "success"
+    }
+  }
+}

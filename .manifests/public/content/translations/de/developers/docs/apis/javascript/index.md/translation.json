@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-18T20:42:54.345Z",
+  "englishManifestHash": "0271d702959e",
+  "placeholderOrder": [
+    "LINK-1291e8",
+    "LINK-6d6811",
+    "LINK-14f434",
+    "LINK-e50d5b",
+    "LINK-8fc374",
+    "LINK-764cb3",
+    "LINK-ebefaf",
+    "LINK-ff4b6e",
+    "LINK-62c6ac",
+    "CODEBLOCK-96d449",
+    "CODEBLOCK-fbf52d",
+    "CODEBLOCK-e4d962",
+    "LINK-d56420",
+    "CODEBLOCK-d0696b",
+    "CODEBLOCK-5fe2de",
+    "CODE-c7db4e",
+    "CODEBLOCK-675283",
+    "LINK-63776d",
+    "LINK-f390c0",
+    "LINK-88c686",
+    "LINK-e23c49",
+    "LINK-4d968f",
+    "LINK-42f948",
+    "LINK-b71d28",
+    "LINK-71a34a",
+    "LINK-87ba57",
+    "LINK-71968f",
+    "LINK-62df06",
+    "LINK-08ba17",
+    "LINK-f1bbde",
+    "LINK-8297e9",
+    "LINK-653d7d",
+    "LINK-692024",
+    "LINK-873262",
+    "LINK-68c380",
+    "LINK-b11299",
+    "LINK-54add3",
+    "LINK-6e4459",
+    "LINK-457e76",
+    "LINK-85eb8f",
+    "LINK-ea9290",
+    "LINK-eec664",
+    "LINK-bab92b",
+    "LINK-d2cf84",
+    "LINK-fb335c"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-96d449": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fbf52d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e4d962": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d0696b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5fe2de": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-675283": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-c7db4e": {
+      "type": "inline-code",
+      "values": {
+        "content": "web3.utils.toWei"
+      }
+    },
+    "LINK-1291e8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-6d6811": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/#json-rpc-methods"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "LINK-e50d5b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    },
+    "LINK-8fc374": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/ethereum-stack/"
+      }
+    },
+    "LINK-764cb3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-ebefaf": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.chainsafe.io/web3-js-sunset/"
+      }
+    },
+    "LINK-ff4b6e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethers.org"
+      }
+    },
+    "LINK-62c6ac": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh"
+      }
+    },
+    "LINK-d56420": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.io/v5/api/signer/#Wallet"
+      }
+    },
+    "LINK-63776d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/api/web3-utils"
+      }
+    },
+    "LINK-f390c0": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.org/v6/api/utils/"
+      }
+    },
+    "LINK-88c686": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org"
+      }
+    },
+    "LINK-e23c49": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/web3.js"
+      }
+    },
+    "LINK-4d968f": {
+      "type": "link",
+      "values": {
+        "url": "https://ethers.org/"
+      }
+    },
+    "LINK-42f948": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.io"
+      }
+    },
+    "LINK-b71d28": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethers-io/ethers.js"
+      }
+    },
+    "LINK-71a34a": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com"
+      }
+    },
+    "LINK-87ba57": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/explorer"
+      }
+    },
+    "LINK-71968f": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/docs"
+      }
+    },
+    "LINK-62df06": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/graphprotocol"
+      }
+    },
+    "LINK-08ba17": {
+      "type": "link",
+      "values": {
+        "url": "https://thegraph.com/discord"
+      }
+    },
+    "LINK-f1bbde": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs"
+      }
+    },
+    "LINK-8297e9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/alchemyplatform/alchemy-sdk-js"
+      }
+    },
+    "LINK-653d7d": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh"
+      }
+    },
+    "LINK-692024": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/wagmi-dev/viem"
+      }
+    },
+    "LINK-873262": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.codex.io"
+      }
+    },
+    "LINK-68c380": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.codex.io/explore"
+      }
+    },
+    "LINK-b11299": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Codex-Data"
+      }
+    },
+    "LINK-54add3": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/mFpUhT3vAq"
+      }
+    },
+    "LINK-6e4459": {
+      "type": "link",
+      "values": {
+        "url": "https://ryangoree.github.io/drift/"
+      }
+    },
+    "LINK-457e76": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ryangoree/drift/"
+      }
+    },
+    "LINK-85eb8f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-ea9290": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    },
+    "LINK-eec664": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/"
+      }
+    },
+    "LINK-bab92b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/calling-a-smart-contract-from-javascript/"
+      }
+    },
+    "LINK-d2cf84": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/"
+      }
+    },
+    "LINK-fb335c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/using-websockets/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T20:42:54.345Z",
+      "status": "success"
+    }
+  }
+}

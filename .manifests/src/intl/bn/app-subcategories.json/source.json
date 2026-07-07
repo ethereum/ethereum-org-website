@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/app-subcategories.json",
+  "generatedAt": "2026-05-25T10:37:45.839Z",
+  "rootHash": "086502228a14",
+  "tree": {
+    "contentHash": "3a111bbc71b3",
+    "anchorHash": "9bbabfa8f707",
+    "children": {
+      "subcategory-mmorpg": {
+        "contentHash": "b7b4f0e4a684",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-rpg": {
+        "contentHash": "9871087b1b18",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-strategy": {
+        "contentHash": "6b27710dfaaf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-multiplayer": {
+        "contentHash": "563370a7b0ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-onchain": {
+        "contentHash": "90822ee1d520",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-casual": {
+        "contentHash": "f32445a73e56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-retro-gaming": {
+        "contentHash": "49ec4628f0dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-ai-gaming": {
+        "contentHash": "634b155826d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-action": {
+        "contentHash": "64cff1319d2f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-adventure": {
+        "contentHash": "9a3c16424750",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-card-deck-building": {
+        "contentHash": "664dac214691",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-text-based": {
+        "contentHash": "97ddf6c30c93",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-roguelike": {
+        "contentHash": "78f713af2d33",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-shooter": {
+        "contentHash": "78cbec508481",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-metaverse": {
+        "contentHash": "e9bff721912d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-simulation-and-management": {
+        "contentHash": "4974fc9f748c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-sports-and-fantasy": {
+        "contentHash": "b21e35609eb5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-lending": {
+        "contentHash": "4207fcbaeb53",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-lending-and-borrowing": {
+        "contentHash": "1f130196fed4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-liquid-staking": {
+        "contentHash": "d85f9d8633ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-dex": {
+        "contentHash": "6eeee9f311c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-insurance": {
+        "contentHash": "4594b737568a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-prediction": {
+        "contentHash": "6f2ddd1d52d5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-rwa": {
+        "contentHash": "f9c4c8038044",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-ip": {
+        "contentHash": "bf5505174a73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-art": {
+        "contentHash": "75df3579c730",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-gaming": {
+        "contentHash": "0fadfa228814",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-media": {
+        "contentHash": "d357175cfe89",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-membership": {
+        "contentHash": "9feceb9333b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-market": {
+        "contentHash": "5238d9bd03d5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-social-network": {
+        "contentHash": "90c6a40c8286",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-video": {
+        "contentHash": "d534be829e32",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-messaging": {
+        "contentHash": "eebdbb25cbbc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-identity": {
+        "contentHash": "999f23fcd7be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-native": {
+        "contentHash": "d509e4938852",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-validator-or-oracle": {
+        "contentHash": "8d3b56e18e9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-generalized-message-passing": {
+        "contentHash": "7c1afefee237",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-liquidity-network": {
+        "contentHash": "c7b40e95d535",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-chain-abstraction": {
+        "contentHash": "979b8a567082",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-dns": {
+        "contentHash": "020965a2f08f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-pools": {
+        "contentHash": "d46fbd72dc2e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-payments": {
+        "contentHash": "632e1c583941",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-rpc": {
+        "contentHash": "8f7520013b0a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-stealth-address": {
+        "contentHash": "cdd83c28e867",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-governance": {
+        "contentHash": "86f8a694159b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-delegation": {
+        "contentHash": "a6d910ba93b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-offchain-voting": {
+        "contentHash": "e425c166f708",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "subcategory-organization": {
+        "contentHash": "d764d42592fc",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "subcategory-mmorpg",
+      "subcategory-rpg",
+      "subcategory-strategy",
+      "subcategory-multiplayer",
+      "subcategory-onchain",
+      "subcategory-casual",
+      "subcategory-retro-gaming",
+      "subcategory-ai-gaming",
+      "subcategory-action",
+      "subcategory-adventure",
+      "subcategory-card-deck-building",
+      "subcategory-text-based",
+      "subcategory-roguelike",
+      "subcategory-shooter",
+      "subcategory-metaverse",
+      "subcategory-simulation-and-management",
+      "subcategory-sports-and-fantasy",
+      "subcategory-lending",
+      "subcategory-lending-and-borrowing",
+      "subcategory-liquid-staking",
+      "subcategory-dex",
+      "subcategory-insurance",
+      "subcategory-prediction",
+      "subcategory-rwa",
+      "subcategory-ip",
+      "subcategory-art",
+      "subcategory-gaming",
+      "subcategory-media",
+      "subcategory-membership",
+      "subcategory-market",
+      "subcategory-social-network",
+      "subcategory-video",
+      "subcategory-messaging",
+      "subcategory-identity",
+      "subcategory-native",
+      "subcategory-validator-or-oracle",
+      "subcategory-generalized-message-passing",
+      "subcategory-liquidity-network",
+      "subcategory-chain-abstraction",
+      "subcategory-dns",
+      "subcategory-pools",
+      "subcategory-payments",
+      "subcategory-rpc",
+      "subcategory-stealth-address",
+      "subcategory-governance",
+      "subcategory-delegation",
+      "subcategory-offchain-voting",
+      "subcategory-organization"
+    ]
+  },
+  "sourceCommitSha": "647106d896d17d983a5bec54d4f14ca23f4039cf"
+}

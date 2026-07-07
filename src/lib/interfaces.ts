@@ -1,5 +1,3 @@
-import type { StaticImageData } from "next/image"
-
 import type {
   CommonHeroProps,
   FileContributor,
@@ -76,13 +74,29 @@ export interface VideoFrontmatter extends SharedFrontmatter {
 }
 
 export interface TutorialFrontmatter extends SharedFrontmatter {
-  tags: string[]
+  tags?: string[]
   author: string
   source?: string
   sourceUrl?: string
-  skill: string
+  skill?: string
   published: string
   address?: string
+  team?: string
+  image?: string
+  imageWidth?: number
+  imageHeight?: number
+  blurDataURL?: string
+  hideEditButton?: boolean
+  breadcrumb?: string
+}
+
+export interface BlogFrontmatter extends SharedFrontmatter {
+  tags?: string[]
+  author: string
+  published: string
+  image?: string
+  team?: string
+  sourceUrl?: string
   hideEditButton?: boolean
   breadcrumb?: string
 }
@@ -118,24 +132,6 @@ export interface ReqCommunityEvent {
   summary: string
   htmlLink: string
   location: string
-}
-
-/**
- * Community page
- */
-
-export interface ICard {
-  image: StaticImageData
-  title: string
-  description: string
-  alt: string
-  href: string
-}
-
-export interface IGetInvolvedCard {
-  emoji: string
-  title: string
-  description: string
 }
 
 /**

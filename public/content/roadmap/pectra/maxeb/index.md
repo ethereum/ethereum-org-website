@@ -1,11 +1,10 @@
 ---
-title: Pectra MaxEB
+title: MaxEB
+metaTitle: Pectra MaxEB
 description: Learn more about MaxEB in the Pectra release
 lang: en
 authors: ["Nixo"]
 ---
-
-# MaxEB {#maxeb}
 
 *tl;dr:* The Pectra hard fork allows Ethereum validators to opt into a higher max effective balance and compounding by converting from **Type 1** to **Type 2** withdrawal credentials. The official tool to do this is the Launchpad. This operation cannot be reversed.
 

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "translatedAt": "2026-05-26T10:04:35.499Z",
+  "englishManifestHash": "029f8dd7f7d9",
+  "placeholderOrder": [
+    "ICU-VARIABLE-0"
+  ],
+  "placeholderMap": {
+    "ICU-VARIABLE-0": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{ethskills}"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-05-26T10:04:35.499Z",
+      "status": "success"
+    }
+  }
+}

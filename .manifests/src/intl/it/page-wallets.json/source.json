@@ -1,0 +1,440 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-wallets.json",
+  "generatedAt": "2026-05-26T07:03:29.297Z",
+  "rootHash": "21195adc932a",
+  "tree": {
+    "contentHash": "f0f808719f16",
+    "anchorHash": "2720f7f1b648",
+    "children": {
+      "page-wallets-accounts-addresses": {
+        "contentHash": "45d710500e0f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-accounts-addresses-desc": {
+        "contentHash": "6f7251ef6ec4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-accounts-ethereum-addresses": {
+        "contentHash": "bdcc4fd187fe",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "46988831d412",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-wallets-alt": {
+        "contentHash": "ac6f4d6cf6cb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-ethereum-account": {
+        "contentHash": "a287fa9c382d",
+        "anchorHash": "cb2e4105e54d",
+        "children": {
+          "prose:2": {
+            "contentHash": "0d98630290cd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "279a16d11c66",
+            "anchorHash": "0eb614bd4033"
+          },
+          "prose:3": {
+            "contentHash": "596ac836f936",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "c3d132b07a56",
+            "anchorHash": "42c73f398b58"
+          },
+          "prose:4": {
+            "contentHash": "1fe89d7a313f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "html-tag:0",
+          "prose:3",
+          "html-tag:1",
+          "prose:4"
+        ]
+      },
+      "page-wallets-blog": {
+        "contentHash": "3f1587886fb6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-bookmarking": {
+        "contentHash": "aeab22774f9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-bookmarking-desc": {
+        "contentHash": "7637000d1314",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-cd": {
+        "contentHash": "a12d2db54286",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ced6f1549c2e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-wallets-desc-2": {
+        "contentHash": "783cae2246cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-desc-2-link": {
+        "contentHash": "cccdfc63c129",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-desc-3": {
+        "contentHash": "c20d7484792b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-desc-4": {
+        "contentHash": "84cbd1a58bbe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-description": {
+        "contentHash": "2cec09088c24",
+        "anchorHash": "9ed7acab1b97",
+        "children": {
+          "html-tag:0": {
+            "contentHash": "a13bebeb57e1",
+            "anchorHash": "b85cbdfd493e"
+          },
+          "prose:1": {
+            "contentHash": "eb6c1d4099cb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "html-tag:0",
+          "prose:1"
+        ]
+      },
+      "page-wallets-desktop": {
+        "contentHash": "8e5e1fa7652d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "02e971ed4dd0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-wallets-ethereum-wallet": {
+        "contentHash": "ba8af3c868fd",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b6c5cca75643",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-wallets-explore": {
+        "contentHash": "54ea265fa47f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-features-desc": {
+        "contentHash": "485e0c2100ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-features-title": {
+        "contentHash": "d56a4a75ea2e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-find-wallet-btn": {
+        "contentHash": "dec67e871e24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-find-wallet-link": {
+        "contentHash": "dec67e871e24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-get-some": {
+        "contentHash": "8f1c0203866c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-get-some-alt": {
+        "contentHash": "4f5e34e3fb11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-get-some-btn": {
+        "contentHash": "8f1c0203866c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-get-some-desc": {
+        "contentHash": "e1503f7b6010",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-keys-to-safety": {
+        "contentHash": "1bb2a4e6c288",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-manage-funds": {
+        "contentHash": "137530e58e73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-manage-funds-desc": {
+        "contentHash": "4aec17f46dca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-meta-description": {
+        "contentHash": "62aea234bb76",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-meta-title": {
+        "contentHash": "bb18cb32a6e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-mobile": {
+        "contentHash": "d385194c0125",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "3ec4d4bbdf29",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-wallets-more-on-dapps-btn": {
+        "contentHash": "10c86d5989c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-most-wallets": {
+        "contentHash": "ce277cb2e671",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-protecting-yourself": {
+        "contentHash": "7d0a03e6fdda",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-seed-phrase": {
+        "contentHash": "2b6065f6a402",
+        "anchorHash": "126daee28bee",
+        "children": {
+          "prose:1": {
+            "contentHash": "2d859efc137d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "c8f42dac3381",
+            "anchorHash": "982a1a8db7fb"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0"
+        ]
+      },
+      "page-wallets-seed-phrase-desc": {
+        "contentHash": "794994b08ebc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-seed-phrase-example": {
+        "contentHash": "876b5a5a607a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-seed-phrase-snippet": {
+        "contentHash": "293a785e4f06",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-seed-phrase-write-down": {
+        "contentHash": "50111a391e24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-slogan": {
+        "contentHash": "6dcb7ff39623",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-stay-safe": {
+        "contentHash": "e6e99bd758ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-stay-safe-desc": {
+        "contentHash": "ea6dead2eaea",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "6767235e0f2d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-wallets-subtitle": {
+        "contentHash": "41397474e013",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-take-responsibility": {
+        "contentHash": "4cb5872f764b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-take-responsibility-desc": {
+        "contentHash": "b022e0c4b176",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-tips": {
+        "contentHash": "01f2065dd7b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-tips-community": {
+        "contentHash": "e40f81313b41",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-title": {
+        "contentHash": "5f491e83bc51",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-triple-check": {
+        "contentHash": "c5c554b9872e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-triple-check-desc": {
+        "contentHash": "b4b85061ac12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-try-dapps": {
+        "contentHash": "b4aa2d53eb4f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-try-dapps-alt": {
+        "contentHash": "d3e24e55afbf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-try-dapps-desc": {
+        "contentHash": "6ffd1d25cbdd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-types": {
+        "contentHash": "2f51edc3a57f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-types-desc": {
+        "contentHash": "ac90ac914e44",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-web-browser": {
+        "contentHash": "e0c140a3f0f7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ce9c5dc1abbd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-wallets-web-browser-extension": {
+        "contentHash": "5e941f21a95a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "74a28e3c5afb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-wallets-whats-a-wallet": {
+        "contentHash": "95eea2744e25",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-your-ethereum-account": {
+        "contentHash": "4d8a6124cc03",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-your-ethereum-account-desc": {
+        "contentHash": "fa8e2cc5ae1a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-your-login": {
+        "contentHash": "2557aa4311cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-your-login-desc": {
+        "contentHash": "9cb84af318f5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "additional-reading-how-to-create-an-ethereum-account": {
+        "contentHash": "98647d7f95d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "additional-reading-how-to-use-a-wallet": {
+        "contentHash": "2b58bdf9f156",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-wallets-accounts-addresses",
+      "page-wallets-accounts-addresses-desc",
+      "page-wallets-accounts-ethereum-addresses",
+      "page-wallets-alt",
+      "page-wallets-ethereum-account",
+      "page-wallets-blog",
+      "page-wallets-bookmarking",
+      "page-wallets-bookmarking-desc",
+      "page-wallets-cd",
+      "page-wallets-desc-2",
+      "page-wallets-desc-2-link",
+      "page-wallets-desc-3",
+      "page-wallets-desc-4",
+      "page-wallets-description",
+      "page-wallets-desktop",
+      "page-wallets-ethereum-wallet",
+      "page-wallets-explore",
+      "page-wallets-features-desc",
+      "page-wallets-features-title",
+      "page-wallets-find-wallet-btn",
+      "page-wallets-find-wallet-link",
+      "page-wallets-get-some",
+      "page-wallets-get-some-alt",
+      "page-wallets-get-some-btn",
+      "page-wallets-get-some-desc",
+      "page-wallets-keys-to-safety",
+      "page-wallets-manage-funds",
+      "page-wallets-manage-funds-desc",
+      "page-wallets-meta-description",
+      "page-wallets-meta-title",
+      "page-wallets-mobile",
+      "page-wallets-more-on-dapps-btn",
+      "page-wallets-most-wallets",
+      "page-wallets-protecting-yourself",
+      "page-wallets-seed-phrase",
+      "page-wallets-seed-phrase-desc",
+      "page-wallets-seed-phrase-example",
+      "page-wallets-seed-phrase-snippet",
+      "page-wallets-seed-phrase-write-down",
+      "page-wallets-slogan",
+      "page-wallets-stay-safe",
+      "page-wallets-stay-safe-desc",
+      "page-wallets-subtitle",
+      "page-wallets-take-responsibility",
+      "page-wallets-take-responsibility-desc",
+      "page-wallets-tips",
+      "page-wallets-tips-community",
+      "page-wallets-title",
+      "page-wallets-triple-check",
+      "page-wallets-triple-check-desc",
+      "page-wallets-try-dapps",
+      "page-wallets-try-dapps-alt",
+      "page-wallets-try-dapps-desc",
+      "page-wallets-types",
+      "page-wallets-types-desc",
+      "page-wallets-web-browser",
+      "page-wallets-web-browser-extension",
+      "page-wallets-whats-a-wallet",
+      "page-wallets-your-ethereum-account",
+      "page-wallets-your-ethereum-account-desc",
+      "page-wallets-your-login",
+      "page-wallets-your-login-desc",
+      "additional-reading-how-to-create-an-ethereum-account",
+      "additional-reading-how-to-use-a-wallet"
+    ]
+  },
+  "sourceCommitSha": "2b6a038be7d8898383a4f0c64b2494eda62e06db"
+}

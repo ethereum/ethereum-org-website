@@ -1,198 +1,198 @@
 ---
-title: "معيار الخزنة المميزة ERC-4626"
-description: "معيار للخزائن الحاملة للغلة."
+title: "معيار القبو المرمز ⁦ERC-4626⁩"
+description: "معيار للأقبية المدرة للعوائد."
 lang: ar
 ---
 
 ## مقدمة {#introduction}
 
-ERC-4626 هو معيار لتحسين وتوحيد المعايير الفنية للخزائن الحاملة للعائد. إنه يوفر واجهة برمجة تطبيقات قياسية لخزائن العائد المميزة التي تمثل أسهم رمز ERC-20 أساسي واحد. كما يحدد ERC-4626 امتدادًا اختياريًا للخزائن المميزة التي تستخدم ERC-20، مما يوفر وظائف أساسية لإيداع وسحب الرموز وقراءة الأرصدة.
+<span dir="ltr">ERC-4626</span> هو معيار لتحسين وتوحيد المعلمات الفنية للأقبية المدرة للعوائد. يوفر واجهة برمجة تطبيقات (<span dir="ltr">API</span>) قياسية للأقبية المرمزة المدرة للعوائد والتي تمثل حصصًا لرمز مميز أساسي واحد من نوع <span dir="ltr">ERC-20</span>. يحدد <span dir="ltr">ERC-4626</span> أيضًا امتدادًا اختياريًا للأقبية المرمزة التي تستخدم <span dir="ltr">ERC-20</span>، مما يوفر وظائف أساسية لإيداع وسحب الرموز المميزة وقراءة الأرصدة.
 
-**دور ERC-4626 في الخزائن الحاملة للعائد**
+**دور <span dir="ltr">ERC-4626</span> في الأقبية المدرة للعوائد**
 
-تساعد أسواق الإقراض والمجمعات والرموز المميزة التي تحمل فائدة جوهرية المستخدمين في العثور على أفضل عائد على رموز الكريبتو الخاصة بهم من خلال تنفيذ استراتيجيات مختلفة. يتم تنفيذ هذه الاستراتيجيات مع اختلافات طفيفة، مما قد يؤدي إلى حدوث أخطاء أو إهدار موارد التطوير.
+تساعد أسواق الإقراض، والمجمعات، والرموز المميزة التي تدر فائدة بطبيعتها المستخدمين في العثور على أفضل عائد على رموز الكريبتو المميزة الخاصة بهم من خلال تنفيذ استراتيجيات مختلفة. يتم تنفيذ هذه الاستراتيجيات باختلافات طفيفة، مما قد يكون عرضة للخطأ أو يهدر موارد التطوير.
 
-ستعمل ERC-4626 في خزائن تحمل العائد على تقليل جهد التكامل وفتح الوصول إلى العائد في تطبيقات مختلفة مع القليل من الجهد المتخصص من المطورين من خلال إنشاء أنماط تنفيذ أكثر اتساقًا وقوة.
+سيؤدي استخدام <span dir="ltr">ERC-4626</span> في الأقبية المدرة للعوائد إلى تقليل جهد التكامل وإتاحة الوصول إلى العوائد في تطبيقات مختلفة بجهد متخصص قليل من المطورين من خلال إنشاء أنماط تنفيذ أكثر اتساقًا وقوة.
 
-يتم وصف رمز ERC-4626 بالكامل في [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
+تم وصف الرمز المميز <span dir="ltr">ERC-4626</span> بالكامل في [<span dir="ltr">EIP-4626</span>](https://eips.ethereum.org/EIPS/eip-4626).
 
-**تمديد القبو غير المتزامن (ERC-7540)**
+**امتداد القبو غير المتزامن (<span dir="ltr">ERC-7540</span>)**
 
-تم تحسين ERC-4626 للإيداعات الذرية والاسترداد حتى حد معين. في حالة الوصول إلى الحد الأقصى، لا يمكن تقديم ودائع أو استردادات جديدة. لا يعمل هذا القيد بشكل جيد مع أي نظام عقود ذكية به إجراءات أو تأخيرات غير متزامنة كشرط أساسي للتفاعل مع المخزن (على سبيل المثال، بروتوكولات الأصول في العالم الحقيقي، وبروتوكولات الإقراض غير المضمونة، وبروتوكولات الإقراض عبر السلاسل، ورموز التخزين السائلة، أو وحدات أمان التأمين).
+تم تحسين <span dir="ltr">ERC-4626</span> لعمليات الإيداع والاسترداد الذرية حتى حد معين. إذا تم الوصول إلى الحد، لا يمكن تقديم أي عمليات إيداع أو استرداد جديدة. لا يعمل هذا القيد بشكل جيد مع أي نظام عقد ذكي يحتوي على إجراءات غير متزامنة أو تأخيرات كشرط أساسي للتفاعل مع القبو (على سبيل المثال، بروتوكولات أصول العالم الحقيقي، أو بروتوكولات الإقراض غير المضمونة بالكامل، أو بروتوكولات الإقراض عبر السلاسل، أو رموز التخزين السائل (<span dir="ltr">LST</span>)، أو وحدات أمان التأمين).
 
-يقوم ERC-7540 بتوسيع نطاق فائدة ERC-4626 Vaults لحالات الاستخدام غير المتزامنة. يتم استخدام واجهة المخزن الحالية (`deposit`/`withdraw`/`mint`/`redeem`) بشكل كامل للمطالبة بالطلبات غير المتزامنة.
+يوسع <span dir="ltr">ERC-7540</span> من فائدة أقبية <span dir="ltr">ERC-4626</span> لحالات الاستخدام غير المتزامنة. يتم استخدام واجهة القبو الحالية (`deposit`/`withdraw`/`mint`/`redeem`) بالكامل للمطالبة بالطلبات غير المتزامنة.
 
-تم وصف امتداد ERC-7540 بالكامل في [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+تم وصف امتداد <span dir="ltr">ERC-7540</span> بالكامل في [<span dir="ltr">ERC-7540</span>](https://eips.ethereum.org/EIPS/eip-7540).
 
-**تمديد الخزنة متعددة الأصول (ERC-7575)**
+**امتداد القبو متعدد الأصول (<span dir="ltr">ERC-7575</span>)**
 
-إحدى حالات الاستخدام المفقودة التي لا يدعمها ERC-4626 هي الخزائن التي تحتوي على أصول متعددة أو نقاط دخول مثل رموز مزود السيولة (LP). تعتبر هذه بشكل عام غير عملية أو غير متوافقة بسبب متطلبات ERC-4626 بأن تكون في حد ذاتها ERC-20.
+إحدى حالات الاستخدام المفقودة التي لا يدعمها <span dir="ltr">ERC-4626</span> هي الأقبية التي تحتوي على أصول أو نقاط دخول متعددة مثل الرموز المميزة لمزود السيولة (<span dir="ltr">LP</span>). هذه الأقبية بشكل عام غير عملية أو غير متوافقة بسبب متطلبات <span dir="ltr">ERC-4626</span> بأن يكون هو نفسه <span dir="ltr">ERC-20</span>.
 
-يضيف ERC-7575 الدعم للخزائن ذات الأصول المتعددة من خلال إخراج تنفيذ رمز ERC-20 من تنفيذ ERC-4626.
+يضيف <span dir="ltr">ERC-7575</span> دعمًا للأقبية ذات الأصول المتعددة عن طريق فصل تنفيذ الرمز المميز <span dir="ltr">ERC-20</span> عن تنفيذ <span dir="ltr">ERC-4626</span>.
 
-تم وصف امتداد ERC-7575 بالكامل في [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
+تم وصف امتداد <span dir="ltr">ERC-7575</span> بالكامل في [<span dir="ltr">ERC-7575</span>](https://eips.ethereum.org/EIPS/eip-7575).
 
 ## المتطلبات الأساسية {#prerequisites}
 
-لفهم هذه الصفحة بشكل أفضل، نوصيك أولاً بالقراءة عن [معايير الرموز المميزة](/developers/docs/standards/tokens/) و[ERC-20](/developers/docs/standards/tokens/erc-20/).
+لفهم هذه الصفحة بشكل أفضل، نوصي بقراءة [معايير الرموز المميزة](/developers/docs/standards/tokens/) و[<span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/) أولاً.
 
-## وظائف وميزات ERC-4626: {#body}
+## وظائف وميزات <span dir="ltr">ERC-4626</span>: {#body}
 
-### طرق {#methods}
+### الطرق {#methods}
 
-#### الأصل {#asset}
+#### asset {#asset}
 
 ```solidity
 function asset() public view returns (address assetTokenAddress)
 ```
 
-تعيد هذه الوظيفة عنوان الرمز الأساسي المستخدم للخزنة للمحاسبة والإيداع والسحب.
+تُرجع هذه الدالة عنوان الرمز المميز الأساسي المستخدم للقبو لأغراض المحاسبة، والإيداع، والسحب.
 
-#### إجمالي الأصول {#totalassets}
+#### totalAssets {#totalassets}
 
 ```solidity
 function totalAssets() public view returns (uint256)
 ```
 
-تقوم هذه الوظيفة بإرجاع إجمالي مبلغ الأصول الأساسية الموجودة في الخزنة.
+تُرجع هذه الدالة إجمالي مبلغ الأصول الأساسية التي يحتفظ بها القبو.
 
-#### التحويل إلى حصص {#convertoshares}
+#### convertToShares {#convertoshares}
 
 ```solidity
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-تُرجع هذه الدالة مقدار `shares` (الحصص) التي سيتم تبادلها بواسطة المخزن مقابل مقدار `assets` (الأصول) المُقدمة.
+تُرجع هذه الدالة مقدار `shares` الذي سيتم استبداله بواسطة القبو مقابل مقدار `assets` المقدم.
 
-#### التحويل إلى أصول {#convertoassets}
+#### convertToAssets {#convertoassets}
 
 ```solidity
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
-تُرجع هذه الدالة مقدار `assets` (الأصول) التي سيتم تبادلها بواسطة المخزن مقابل مقدار `shares` (الحصص) المُقدمة.
+تُرجع هذه الدالة مقدار `assets` الذي سيتم استبداله بواسطة القبو مقابل مقدار `shares` المقدم.
 
-#### الحد الأقصى للإيداع {#maxdeposit}
+#### maxDeposit {#maxdeposit}
 
 ```solidity
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-تُرجع هذه الدالة الحد الأقصى لمقدار الأصول الأساسية التي يمكن إيداعها في استدعاء [`deposit`](#deposit) واحد، مع إصدار الحصص لـ `receiver` (المستلم).
+تُرجع هذه الدالة الحد الأقصى لمقدار الأصول الأساسية التي يمكن إيداعها في استدعاء [`deposit`](#deposit) واحد، مع الحصص التي تم سكها لـ `receiver`.
 
-#### معاينة الإيداع {#previewdeposit}
+#### previewDeposit {#previewdeposit}
 
 ```solidity
 function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
-تتيح هذه الوظيفة للمستخدمين محاكاة تأثيرات إيداعهم في الكتلة الحالية.
+تتيح هذه الدالة للمستخدمين محاكاة تأثيرات إيداعهم في الكتلة الحالية.
 
-#### الإيداع {#deposit}
+#### deposit {#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-تقوم هذه الدالة بإيداع `assets` (أصول) من الرموز الأساسية في المخزن وتمنح ملكية `shares` (الحصص) لـ `receiver` (المستلم).
+تقوم هذه الدالة بإيداع `assets` من الرموز المميزة الأساسية في القبو وتمنح ملكية `shares` إلى `receiver`.
 
-#### الحد الأقصى للإصدار {#maxmint}
+#### maxMint {#maxmint}
 
 ```solidity
 function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-تُرجع هذه الدالة الحد الأقصى لعدد الحصص التي يمكن إصدارها في استدعاء [`mint`](#mint) واحد، مع إصدار الحصص لـ `receiver` (المستلم).
+تُرجع هذه الدالة الحد الأقصى لمقدار الحصص التي يمكن سكها في استدعاء [`mint`](#mint) واحد، مع الحصص التي تم سكها لـ `receiver`.
 
-#### معاينة الإصدار {#previewmint}
+#### previewMint {#previewmint}
 
 ```solidity
 function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
-تتيح هذه الوظيفة للمستخدمين محاكاة تأثيرات النعناع الخاص بهم في الكتلة الحالية.
+تتيح هذه الدالة للمستخدمين محاكاة تأثيرات عملية السك الخاصة بهم في الكتلة الحالية.
 
-#### الإصدار {#mint}
+#### mint {#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-تقوم هذه الدالة بإصدار حصص مخزن بمقدار `shares` بالضبط إلى `receiver` (المستلم) عن طريق إيداع `assets` (أصول) من الرموز الأساسية.
+تقوم هذه الدالة بسك `shares` بالضبط من حصص القبو إلى `receiver` عن طريق إيداع `assets` من الرموز المميزة الأساسية.
 
-#### الحد الأقصى للسحب {#maxwithdraw}
+#### maxWithdraw {#maxwithdraw}
 
 ```solidity
 function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
-تُرجع هذه الدالة الحد الأقصى لمقدار الأصول الأساسية التي يمكن سحبها من رصيد `owner` (المالك) من خلال استدعاء [`withdraw`](#withdraw) واحد.
+تُرجع هذه الدالة الحد الأقصى لمقدار الأصول الأساسية التي يمكن سحبها من رصيد `owner` باستدعاء [`withdraw`](#withdraw) واحد.
 
-#### معاينة السحب {#previewwithdraw}
+#### previewWithdraw {#previewwithdraw}
 
 ```solidity
 function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
-تتيح هذه الوظيفة للمستخدمين محاكاة تأثيرات سحبهم عند الكتلة الحالية.
+تتيح هذه الدالة للمستخدمين محاكاة تأثيرات عملية السحب الخاصة بهم في الكتلة الحالية.
 
-#### السحب {#withdraw}
+#### withdraw {#withdraw}
 
 ```solidity
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-تحرق هذه الدالة `shares` (حصص) من `owner` (المالك) وترسل رمز `assets` (أصل) بالضبط من المخزن إلى `receiver` (المستلم).
+تقوم هذه الدالة بحرق `shares` من `owner` وإرسال `assets` بالضبط من الرموز المميزة من القبو إلى `receiver`.
 
-#### الحد الأقصى للاسترداد {#maxredeem}
+#### maxRedeem {#maxredeem}
 
 ```solidity
 function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
-تُرجع هذه الدالة الحد الأقصى لعدد الحصص التي يمكن استردادها من رصيد `owner` (المالك) من خلال استدعاء [`redeem`](#redeem).
+تُرجع هذه الدالة الحد الأقصى لمقدار الحصص التي يمكن استردادها من رصيد `owner` من خلال استدعاء [`redeem`](#redeem).
 
-#### معاينة الاسترداد {#previewredeem}
+#### previewRedeem {#previewredeem}
 
 ```solidity
 function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
-تتيح هذه الوظيفة للمستخدمين محاكاة تأثيرات استردادهم في الكتلة الحالية.
+تتيح هذه الدالة للمستخدمين محاكاة تأثيرات عملية الاسترداد الخاصة بهم في الكتلة الحالية.
 
-#### الاسترداد {#redeem}
+#### redeem {#redeem}
 
 ```solidity
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-تسترد هذه الدالة عددًا محددًا من `shares` (الحصص) من `owner` (المالك) وترسل `assets` (أصول) من الرمز الأساسي من المخزن إلى `receiver` (المستلم).
+تقوم هذه الدالة باسترداد عدد محدد من `shares` من `owner` وترسل `assets` من الرمز المميز الأساسي من القبو إلى `receiver`.
 
-#### إجمالي العرض {#totalsupply}
+#### totalSupply {#totalsupply}
 
 ```solidity
 function totalSupply() public view returns (uint256)
 ```
 
-إرجاع العدد الإجمالي لأسهم الخزنة غير المستردة المتداولة.
+تُرجع إجمالي عدد حصص القبو غير المستردة المتداولة.
 
-#### رصيد {#balanceof}
+#### balanceOf {#balanceof}
 
 ```solidity
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-تُرجع المبلغ الإجمالي لحصص المخزن التي يمتلكها `owner` (المالك) حاليًا.
+تُرجع إجمالي مقدار حصص القبو التي يمتلكها `owner` حاليًا.
 
-### خريطة الواجهة {#mapOfTheInterface}
+### خريطة الواجهة {#mapoftheinterface}
 
-![خريطة واجهة ERC-4626](./map-of-erc-4626.png)
+![Map of the <span dir="ltr">ERC-4626</span> interface](./map-of-erc-4626.png)
 
 ### الأحداث {#events}
 
-#### حدث الإيداع
+#### حدث الإيداع {#deposit-event}
 
-**يجب** أن يتم إصدارها عند إيداع الرموز في المخزن عبر طريقتي [`mint`](#mint) و[`deposit`](#deposit).
+**يجب** إصداره عند إيداع الرموز المميزة في القبو عبر طريقتي [`mint`](#mint) و[`deposit`](#deposit).
 
 ```solidity
 event Deposit(
@@ -203,11 +203,11 @@ event Deposit(
 )
 ```
 
-حيث `sender` (المرسل) هو المستخدم الذي استبدل `assets` (الأصول) مقابل `shares` (الحصص)، ونقل تلك `shares` (الحصص) إلى `owner` (المالك).
+حيث `sender` هو المستخدم الذي استبدل `assets` بـ `shares`، ونقل تلك `shares` إلى `owner`.
 
-#### سحب الحدث
+#### حدث السحب {#withdraw-event}
 
-**يجب** أن يتم إصدارها عند سحب الحصص من المخزن بواسطة المودع في طريقتي [`redeem`](#redeem) أو [`withdraw`](#withdraw).
+**يجب** إصداره عند سحب الحصص من القبو بواسطة مودع في طريقتي [`redeem`](#redeem) أو [`withdraw`](#withdraw).
 
 ```solidity
 event Withdraw(
@@ -219,9 +219,9 @@ event Withdraw(
 )
 ```
 
-حيث `sender` (المرسل) هو المستخدم الذي قام بتشغيل السحب واستبدل `shares` (الحصص)، المملوكة لـ `owner` (المالك)، مقابل `assets` (الأصول). `receiver` (المستلم) هو المستخدم الذي استلم `assets` (الأصول) المسحوبة.
+حيث `sender` هو المستخدم الذي بدأ عملية السحب واستبدل `shares`، المملوكة لـ `owner`، بـ `assets`. و`receiver` هو المستخدم الذي تلقى `assets` المسحوبة.
 
 ## قراءة إضافية {#further-reading}
 
-- [EIP-4626: معيار المخزن المرمز](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: مستودع غيت هاب](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [<span dir="ltr">EIP-4626</span>: معيار القبو المرمز](https://eips.ethereum.org/EIPS/eip-4626)
+- [<span dir="ltr">ERC-4626</span>: مستودع <span dir="ltr">GitHub</span>](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
