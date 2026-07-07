@@ -20,7 +20,7 @@ lang: zh
 published: 2021-10-25
 ---
 
-如果你是区块链开发的新手，不知道从哪里开始，或者不知道如何部署智能合约并与之交互，那么本指南就是为你准备的。我们将逐步介绍如何使用 [梅塔马斯克](https://metamask.io)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org) 和 [Alchemy](https://alchemy.com/eth) 在 Goerli 测试网络上创建和部署一个简单的智能合约。
+如果你是区块链开发的新手，不知道从哪里开始，或者不知道如何部署智能合约并与之交互，那么本指南就是为你准备的。我们将逐步介绍如何使用 [梅塔马斯克](https://metamask.io)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org) 和 [Alchemy](https://alchemy.com/eth) 在 Sepolia 测试网络上创建和部署一个简单的智能合约。
 
 你需要一个 Alchemy 账户才能完成本教程。[注册一个免费账户](https://www.alchemy.com/)。
 
@@ -34,17 +34,17 @@ published: 2021-10-25
 
 ### 创建你的应用和 API 密钥 {#create-your-app-and-api-key}
 
-创建 Alchemy 账户后，你可以通过创建应用来生成 API 密钥。这将允许你向 Goerli 测试网发出请求。如果你不熟悉测试网，可以[阅读 Alchemy 的网络选择指南](https://www.alchemy.com/docs/choosing-a-web3-network)。
+创建 Alchemy 账户后，你可以通过创建应用来生成 API 密钥。这将允许你向 Sepolia 测试网发出请求。如果你不熟悉测试网，可以[阅读 Alchemy 的网络选择指南](https://www.alchemy.com/docs/choosing-a-web3-network)。
 
 在 Alchemy 仪表板上，找到导航栏中的 **Apps** 下拉菜单，然后点击 **Create App**。
 
 ![Hello world create app](./hello-world-create-app.png)
 
-将你的应用命名为“_Hello World_”并写一段简短的描述。选择 **Staging** 作为你的环境，并选择 **Goerli** 作为你的网络。
+将你的应用命名为“_Hello World_”并写一段简短的描述。选择 **Staging** 作为你的环境，并选择 **Sepolia** 作为你的网络。
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-_注意：请务必选择 **Goerli**，否则本教程将无法运行。_
+_注意：请务必选择 **Sepolia**，否则本教程将无法运行。_
 
 点击 **Create app**。你的应用将出现在下表中。
 
@@ -52,11 +52,11 @@ _注意：请务必选择 **Goerli**，否则本教程将无法运行。_
 
 你需要一个以太坊账户来发送和接收交易。我们将使用梅塔马斯克，这是一款浏览器中的虚拟钱包，允许用户管理其以太坊账户地址。
 
-你可以[在此处](https://metamask.io/download)免费下载并创建梅塔马斯克账户。在创建账户时，或者如果你已经有账户，请确保切换到右上角的“Goerli Test Network”（这样我们就不会使用真金白银进行操作）。
+你可以[在此处](https://metamask.io/download)免费下载并创建梅塔马斯克账户。在创建账户时，或者如果你已经有账户，请确保切换到右上角的“Sepolia Test Network”（这样我们就不会使用真金白银进行操作）。
 
 ### 第 4 步：从水龙头添加以太币 {#step-4-add-ether-from-a-faucet}
 
-要将你的智能合约部署到测试网，你需要一些测试用的 ETH。要在 Goerli 网络上获取 ETH，请前往 Goerli 水龙头并输入你的 Goerli 账户地址。请注意，最近 Goerli 水龙头可能有些不稳定 - 请参阅[测试网页面](/developers/docs/networks/#goerli)以获取可尝试的选项列表：
+要将你的智能合约部署到测试网，你需要一些测试用的 ETH。要在 Sepolia 网络上获取 ETH，请前往 Sepolia 水龙头并输入你的 Sepolia 账户地址。请注意，最近 Sepolia 水龙头可能有些不稳定 - 请参阅[测试网页面](/developers/docs/networks/#sepolia)以获取可尝试的选项列表：
 
 _注意：由于网络拥堵，这可能需要一些时间。_
 ``
@@ -245,7 +245,7 @@ npm install dotenv --save
 你的 `.env` 应该如下所示：
 
 ```
-API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-sepolia.alchemyapi.io/v2/your-api-key"
 PRIVATE_KEY = "your-metamask-private-key"
 ```
 
@@ -281,10 +281,10 @@ const { API_URL, PRIVATE_KEY } = process.env
 
 module.exports = {
   solidity: "0.7.3",
-  defaultNetwork: "goerli",
+  defaultNetwork: "sepolia",
   networks: {
     hardhat: {},
-    goerli: {
+    sepolia: {
       url: API_URL,
       accounts: [`0x${PRIVATE_KEY}`],
     },
@@ -346,7 +346,7 @@ const hello_world = await HelloWorld.deploy()
 我们终于准备好部署我们的智能合约了！导航到命令行并运行：
 
 ```bash
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 然后你应该会看到类似以下内容：
@@ -357,7 +357,7 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 **请保存此地址**。我们将在本教程的后面使用它。
 
-如果我们转到 [Goerli Etherscan](https://goerli.etherscan.io) 并搜索我们的合约地址，我们应该能够看到它已成功部署。交易将如下所示：
+如果我们转到 [Sepolia Etherscan](https://sepolia.etherscan.io) 并搜索我们的合约地址，我们应该能够看到它已成功部署。交易将如下所示：
 
 ![](./etherscan-contract.png)
 
@@ -371,11 +371,11 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 ![](./hello-world-explorer.png)
 
-在这里，你将看到当我们调用 `.deploy()` 函数时，Hardhat/Ethers 在内部为我们执行的几个 JSON-RPC 方法。这里有两个重要的方法：[`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)，这是将我们的合约写入 Goerli 链的请求；以及 [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)，这是在给定哈希的情况下读取有关我们交易信息的请求。要了解有关发送交易的更多信息，请查看[我们关于使用 Web3 发送交易的教程](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
+在这里，你将看到当我们调用 `.deploy()` 函数时，Hardhat/Ethers 在内部为我们执行的几个 JSON-RPC 方法。这里有两个重要的方法：[`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)，这是将我们的合约写入 Sepolia 链的请求；以及 [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)，这是在给定哈希的情况下读取有关我们交易信息的请求。要了解有关发送交易的更多信息，请查看[我们关于使用 Web3 发送交易的教程](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
 
 ## 第 2 部分：与你的智能合约交互 {#part-2-interact-with-your-smart-contract}
 
-既然我们已经成功地将智能合约部署到了 Goerli 网络，接下来让我们学习如何与它进行交互。
+既然我们已经成功地将智能合约部署到了 Sepolia 网络，接下来让我们学习如何与它进行交互。
 
 ### 创建 interact.js 文件 {#create-a-interactjs-file}
 
@@ -402,7 +402,7 @@ const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
 ```bash
 # .env
 
-API_URL = "https://eth-goerli.alchemyapi.io/v2/<your-api-key>"
+API_URL = "https://eth-sepolia.alchemyapi.io/v2/<your-api-key>"
 API_KEY = "<your-api-key>"
 PRIVATE_KEY = "<your-metamask-private-key>"
 CONTRACT_ADDRESS = "0x<your contract address>"
@@ -444,7 +444,7 @@ npx hardhat run scripts/interact.js
 
 // Provider
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "goerli"),
+  (network = "sepolia"),
   API_KEY
 )
 
@@ -530,7 +530,7 @@ const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json"
 
 // provider - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "goerli"),
+  (network = "sepolia"),
   API_KEY
 )
 
@@ -561,7 +561,7 @@ main()
 
 现在只需运行脚本，你应该就能看到旧消息、更新状态以及新消息打印到你的终端上！
 
-`npx hardhat run scripts/interact.js --network goerli`
+`npx hardhat run scripts/interact.js --network sepolia`
 
 ```
 The message is: Hello World!
@@ -569,7 +569,7 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-在运行该脚本时，你可能会注意到在加载新消息之前，`Updating the message...` 步骤需要加载一段时间。这是由于挖矿过程造成的；如果你对在交易被打包时跟踪它们感到好奇，请访问 [Alchemy 内存池 (mempool)](https://dashboard.alchemy.com/mempool) 以查看交易状态。如果交易被丢弃，检查 [Goerli Etherscan](https://goerli.etherscan.io) 并搜索你的交易哈希也会很有帮助。
+在运行该脚本时，你可能会注意到在加载新消息之前，`Updating the message...` 步骤需要加载一段时间。这是由于挖矿过程造成的；如果你对在交易被打包时跟踪它们感到好奇，请访问 [Alchemy 内存池 (mempool)](https://dashboard.alchemy.com/mempool) 以查看交易状态。如果交易被丢弃，检查 [Sepolia Etherscan](https://sepolia.etherscan.io) 并搜索你的交易哈希也会很有帮助。
 
 ## 第 3 部分：将你的智能合约发布到 Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -594,7 +594,7 @@ Etherscan API 密钥对于验证你拥有试图发布的智能合约是必不可
 添加后，你的 `.env` 文件应该如下所示：
 
 ```javascript
-API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-sepolia.alchemyapi.io/v2/your-api-key"
 PUBLIC_KEY = "your-public-account-address"
 PRIVATE_KEY = "your-private-account-address"
 CONTRACT_ADDRESS = "your-contract-address"
@@ -624,10 +624,10 @@ const { API_URL, PRIVATE_KEY, ETHERSCAN_API_KEY } = process.env
 
 module.exports = {
   solidity: "0.7.3",
-  defaultNetwork: "goerli",
+  defaultNetwork: "sepolia",
   networks: {
     hardhat: {},
-    goerli: {
+    sepolia: {
       url: API_URL,
       accounts: [`0x${PRIVATE_KEY}`],
     },
@@ -647,10 +647,10 @@ module.exports = {
 运行 `verify` 任务，传入合约地址以及它所部署的网络：
 
 ```text
-npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
+npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-确保 `DEPLOYED_CONTRACT_ADDRESS` 是你在 Goerli 测试网上部署的智能合约的地址。此外，最后一个参数（`'Hello World!'`）必须与[在第 1 部分的部署步骤中](#step-15-write-our-deploy-script)使用的字符串值相同。
+确保 `DEPLOYED_CONTRACT_ADDRESS` 是你在 Sepolia 测试网上部署的智能合约的地址。此外，最后一个参数（`'Hello World!'`）必须与[在第 1 部分的部署步骤中](#step-15-write-our-deploy-script)使用的字符串值相同。
 
 如果一切顺利，你将在终端中看到以下消息：
 
@@ -661,7 +661,7 @@ for verification on Etherscan. Waiting for verification result...
 
 
 Successfully verified contract HelloWorld on Etherscan.
-https://goerli.etherscan.io/address/<contract-address>#contracts
+https://sepolia.etherscan.io/address/<contract-address>#contracts
 ```
 
 恭喜！你的智能合约代码已在 Etherscan 上！
@@ -921,7 +921,7 @@ npm install dotenv --save
 获得 API 密钥后，在你的根目录中创建一个 `.env` 文件，并将你的 Alchemy Websockets URL 添加到其中。之后，你的 `.env` 文件应该如下所示：
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
+REACT_APP_ALCHEMY_KEY = wss://eth-sepolia.ws.alchemyapi.io/v2/<key>
 ```
 
 现在，我们准备好在我们的 dapp 中设置 Alchemy Web3 端点了！让我们回到嵌套在 `util` 文件夹中的 `interact.js`，并在文件顶部添加以下代码：
@@ -946,7 +946,7 @@ const web3 = createAlchemyWeb3(alchemyKey)
 
 #### 如何从 Etherscan 获取合约 ABI {#how-to-get-your-contract-abi-from-etherscan}
 
-如果你跳过了本教程的第 3 部分，你可以使用地址为 [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) 的 HelloWorld 合约。它的 ABI 可以在[这里](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code)找到。
+如果你跳过了本教程的第 3 部分，你可以使用地址为 [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://sepolia.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) 的 HelloWorld 合约。它的 ABI 可以在[这里](https://sepolia.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code)找到。
 
 合约 ABI 对于指定合约将调用哪个函数以及确保函数将以你期望的格式返回数据是必要的。复制合约 ABI 后，让我们将其保存为名为 `contract-abi.json` 的 JSON 文件，放在你的 `src` 目录中。
 
@@ -1120,11 +1120,11 @@ useEffect(async () => {
 
 #### 下载梅塔马斯克 {#download-metamask}
 
-你可以免费在[此处](https://metamask.io/download)下载并创建一个梅塔马斯克账户。在创建账户时，或者如果你已经有账户，请确保切换到右上角的“Goerli 测试网”（这样我们就不会使用真金白银）。
+你可以免费在[此处](https://metamask.io/download)下载并创建一个梅塔马斯克账户。在创建账户时，或者如果你已经有账户，请确保切换到右上角的“Sepolia 测试网”（这样我们就不会使用真金白银）。
 
 #### 从水龙头添加以太币 {#add-ether-from-a-faucet}
 
-要在以太坊区块链上签署交易，我们需要一些假 ETH。要获取 ETH，你可以前往 [FaucETH](https://fauceth.komputing.org) 并输入你的 Goerli 账户地址，点击“Request funds”（请求资金），然后在下拉菜单中选择“Ethereum Testnet Goerli”，最后再次点击“Request funds”按钮。不久之后，你应该会在梅塔马斯克账户中看到 ETH！
+要在以太坊区块链上签署交易，我们需要一些假 ETH。要获取 ETH，你可以前往 [FaucETH](https://fauceth.komputing.org) 并输入你的 Sepolia 账户地址，点击“Request funds”（请求资金），然后在下拉菜单中选择“Ethereum Testnet Sepolia”，最后再次点击“Request funds”按钮。不久之后，你应该会在梅塔马斯克账户中看到 ETH！
 
 #### 检查你的余额 {#check-your-balance}
 
@@ -1429,7 +1429,7 @@ try {
     status: (
       <span>
         ✅{" "}
-        <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
+        <a target="_blank" href={`https://sepolia.etherscan.io/tx/${txHash}`}>
           View the status of your transaction on Etherscan!
         </a>
         <br />
@@ -1495,7 +1495,7 @@ export const updateMessage = async (address, message) => {
       status: (
         <span>
           ✅{" "}
-          <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
+          <a target="_blank" href={`https://sepolia.etherscan.io/tx/${txHash}`}>
             View the status of your transaction on Etherscan!
           </a>
           <br />
