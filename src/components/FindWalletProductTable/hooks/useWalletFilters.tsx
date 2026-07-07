@@ -512,7 +512,7 @@ export const useWalletFilters = (): FilterOption[] => {
       ],
     },
     {
-      title: "Network support",
+      title: t("page-find-wallet-network-support"),
       showFilterOption: true,
       items: [
         {
