@@ -38,6 +38,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import Eyebrow from "@/components/ui/eyebrow"
 import { Grid } from "@/components/ui/grid"
 import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
@@ -58,12 +59,6 @@ import worldMapDark from "@/public/images/get-eth/world-map-dark.png"
 import worldMapLight from "@/public/images/get-eth/world-map-light.png"
 import ethCoins from "@/public/images/get-eth-coins.png"
 import wallet from "@/public/images/wallet.png"
-
-const Eyebrow = ({ children }: { children: ReactNode }) => (
-  <p className="text-sm font-bold tracking-wide text-primary-high-contrast uppercase">
-    {children}
-  </p>
-)
 
 type WayToGetEth = {
   icon: ComponentType<{ className?: string }>
@@ -194,7 +189,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               <Grid columns={3}>
                 {waysToGetEth.map(
                   ({ icon: Icon, title, description, linkText, href }) => (
-                    <Card key={href + String(title)}>
+                    <Card key={href + String(title)} hoverLift>
                       <CardHeader>
                         <CardIconContainer>
                           <Icon />
@@ -225,7 +220,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             <Section>
               <Callout
                 image={handEth}
-                alt=""
                 title={t("page-get-eth-new-to-eth-title")}
                 description={t("page-get-eth-new-to-eth-desc")}
               >
@@ -297,7 +291,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               </Grid>
 
               <Grid columns={3} className="mt-space-2x">
-                <Card variant="nested">
+                <Card variant="nested" hoverLift>
                   <CardContent>
                     <CardTitle>
                       {t("page-get-eth-protect-eth-in-wallet")}
@@ -333,7 +327,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   </CardContent>
                 </Card>
 
-                <Card variant="nested">
+                <Card variant="nested" hoverLift>
                   <CardContent>
                     <CardTitle>
                       {t("page-get-eth-wallet-instructions")}
