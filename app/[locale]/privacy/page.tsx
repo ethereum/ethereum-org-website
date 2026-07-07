@@ -39,7 +39,7 @@ import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import developersEthBlocksImg from "@/public/images/developers-eth-blocks.png"
-import heroImg from "@/public/images/man-and-dog-playing.png"
+import heroImg from "@/public/images/three-people-cat-butterflies-petting-dog.png"
 import walletHeroImg from "@/public/images/wallets/wallet-hero.png"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
