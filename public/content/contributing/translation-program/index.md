@@ -12,7 +12,7 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 The ethereum.org Translation Program is winding down and is no longer onboarding new translators. The Crowdin project is being closed, and we are not accepting new translation submissions through it.
 
-We are deeply grateful to the thousands of community translators who made ethereum.org available in dozens of languages over the years — their work remains live on the site, and their recognition on the [acknowledgements](/contributing/translation-program/acknowledgements/) and [contributors](/contributing/translation-program/contributors/) pages stays in place.
+We are deeply grateful to the thousands of community translators who made ethereum.org available in dozens of languages over the years—their work remains live on the site, and their recognition on the [acknowledgements](/contributing/translation-program/acknowledgements/) and [contributors](/contributing/translation-program/contributors/) pages stays in place.
 
 If you spot an error in an existing translation, please [open an issue on GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 

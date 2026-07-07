@@ -61,7 +61,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 ### Help improve translated Ethereum content {#translate-ethereum}
 
-- The ethereum.org Translation Program is winding down and is no longer onboarding new translators — see the [program page](/contributing/translation-program/) for its status and history
+- The ethereum.org Translation Program is winding down and is no longer onboarding new translators—see the [program page](/contributing/translation-program/) for its status and history
 - You can still help by [reporting errors in existing translations](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 ### Run a node {#run-a-node}
