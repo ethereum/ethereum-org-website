@@ -60,7 +60,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
 - [Ape](https://github.com/ApeWorX/ape) - _The smart contract development tool for Pythonistas, Data Scientists, and Security Professionals_
-- [Moccasin](https://github.com/Cyfrin/moccasin) - _A fast, Pythonic smart contract development and testing framework for Vyper, built on Titanoboa_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementation of the Ethereum Virtual Machine_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _tools for testing Ethereum-based applications_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
@@ -69,6 +68,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _Sign in with Ethereum (siwe) for Python_
 - [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _A Python package with ready integrations for ERC-20, Uniswap and other popular projects_
 - [Wake](https://getwake.io) - _All-in-one Python framework for contracts testing, fuzzing, deployment, vulnerability scanning and code navigation (language server - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _A fast, Pythonic smart contract development and testing framework for Vyper, built on Titanoboa_
 
 ### Archived / No longer maintained: {#archived--no-longer-maintained}
 
