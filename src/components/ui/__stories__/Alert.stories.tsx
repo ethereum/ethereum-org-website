@@ -137,7 +137,7 @@ export const TitleSizes: Story = {
       </Alert>
       <Alert variant="update" {...args}>
         <AlertContent>
-          <AlertTitle size="2xl">{DEMO_TITLE}</AlertTitle>
+          <AlertTitle size="lg">{DEMO_TITLE}</AlertTitle>
           <AlertDescription>{DEMO_DESC}</AlertDescription>
         </AlertContent>
       </Alert>

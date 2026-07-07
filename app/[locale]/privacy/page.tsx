@@ -355,9 +355,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               <Handshake />
             </AlertIcon>
             <AlertContent>
-              <AlertTitle size="2xl">
-                {t("page-privacy-crowd-title")}
-              </AlertTitle>
+              <AlertTitle size="lg">{t("page-privacy-crowd-title")}</AlertTitle>
               <p className="mt-2">{t("page-privacy-crowd-description-1")}</p>
               <p className="mt-2">{t("page-privacy-crowd-description-2")}</p>
             </AlertContent>
