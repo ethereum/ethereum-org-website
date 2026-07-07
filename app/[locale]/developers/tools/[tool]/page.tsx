@@ -14,7 +14,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { Section } from "@/components/ui/section"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -86,7 +85,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
       />
       {/* Breadcrumb sits outside <main>, matching PageHero's eyebrow inset on
           the catalog/category pages so it stays aligned across navigation. */}
-      <div className="p-hero lg:px-hero-1.5x lg:py-hero-2x">
+      <div className="px-page py-hero lg:py-hero-2x">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -118,15 +117,15 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
         </Breadcrumb>
       </div>
 
-      <main className="pb-page">
-        <MainArticle className="flex flex-col gap-10 px-page">
+      <main className="px-page pb-page">
+        <MainArticle className="flex flex-col gap-10">
           {tool.banner_url && (
             <Image
               src={tool.banner_url}
               alt=""
               width={1200}
               height={300}
-              className="h-40 w-full rounded-lg object-cover sm:h-56"
+              className="h-40 w-full rounded-base object-cover sm:h-56"
             />
           )}
 
@@ -137,7 +136,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
                 alt={tool.name}
                 width={124}
                 height={124}
-                className="size-16 shrink-0 rounded-xl object-cover xl:size-[124px]"
+                className="size-16 shrink-0 rounded-xl object-cover xl:size-32"
               />
             )}
             <div className="flex flex-col gap-4">
@@ -188,9 +187,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
           )}
         </MainArticle>
 
-        <Section className="px-page">
-          <ContentFeedback />
-        </Section>
+        <ContentFeedback />
       </main>
     </>
   )

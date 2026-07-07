@@ -33,7 +33,10 @@ const InterceptedToolDetail = async ({
   const [data, t, toolDescriptions] = await Promise.all([
     getDeveloperToolsData(),
     getTranslations({ locale, namespace: "page-developers-tools" }),
-    getTranslations({ locale, namespace: "page-developers-tools-descriptions" }),
+    getTranslations({
+      locale,
+      namespace: "page-developers-tools-descriptions",
+    }),
   ])
 
   const normalized = normalizeDeveloperToolsData(data)
@@ -72,7 +75,7 @@ const InterceptedToolDetail = async ({
             <p className="text-sm text-body-medium">
               {subcategoryLabels[tool.subcategory_id] || tool.subcategory_id}
             </p>
-            <h1 className="text-h3">{tool.name}</h1>
+            <h2 className="text-h3">{tool.name}</h2>
             <TagsInlineText
               list={tool.tags.map((tag) => tagLabels[tag] || tag)}
               variant="light"
