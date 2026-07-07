@@ -166,6 +166,8 @@
 
 @utility hover-lift-base {
   @apply scale-100 shadow-none duration-300 hover:scale-101 hover:shadow-md hover:duration-300;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 @utility hover-lift-sm {
