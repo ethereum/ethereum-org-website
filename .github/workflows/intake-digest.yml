@@ -26,7 +26,8 @@ jobs:
           hours=24
           [[ "$(date -u +%u)" == "1" ]] && hours=72
           since=$(date -u -d "-${hours} hours" +%Y-%m-%dT%H:%M:%SZ)
-          gh api "repos/${REPO}/issues?state=all&sort=created&direction=desc&per_page=100" --paginate \
+          # newest-first, single page: 100 most-recent items always cover a 24-72h window here
+          gh api "repos/${REPO}/issues?state=all&sort=created&direction=desc&per_page=100" \
             --jq '.[] | {number, title, html_url, created_at, is_pr: has("pull_request"), assoc: .author_association, user_type: .user.type, labels: [.labels[].name]}' \
             | jq -s --arg since "$since" '
                 [.[] | select(.created_at >= $since)

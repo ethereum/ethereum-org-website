@@ -32,7 +32,8 @@ runs:
           echo "No Discord webhook configured — skipping."
           exit 0
         fi
-        body=$(jq -nc --arg c "$MSG" '{content: $c}')
+        # parse:[] suppresses @everyone/@here/role/user pings from untrusted message content
+        body=$(jq -nc --arg c "$MSG" '{content: $c, allowed_mentions: {parse: []}}')
         if [[ -n "$MESSAGE_ID" ]]; then
           # Edit the existing message — Discord PATCH returns the updated object.
           response=$(curl -fsSL -X PATCH -H 'Content-Type: application/json' \
