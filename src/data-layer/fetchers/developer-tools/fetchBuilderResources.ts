@@ -30,7 +30,15 @@ export async function fetchBuilderResources(): Promise<{
   }
 
   const taxonomy = (await taxonomyResponse.json()) as BuilderResourcesTaxonomy
-  const resources =
-    (await resourcesResponse.json()) as BuilderResourcesCatalogResource[]
+  // The catalog omits `repos` for resources without a repository (MCP
+  // servers, hosted CLIs, …). Downstream enrichment iterates `repos`
+  // unconditionally, so normalize it to an array at this single entry point.
+  const rawResources = (await resourcesResponse.json()) as Array<
+    Omit<BuilderResourcesCatalogResource, "repos"> &
+      Partial<Pick<BuilderResourcesCatalogResource, "repos">>
+  >
+  const resources: BuilderResourcesCatalogResource[] = rawResources.map(
+    (resource) => ({ ...resource, repos: resource.repos ?? [] })
+  )
   return { resources, taxonomy }
 }
