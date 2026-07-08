@@ -4,28 +4,40 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import {
+  type DeveloperTool,
+  getToolKey,
+  getToolPrimaryUrl,
+} from "@/lib/utils/developerToolsData"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
-export default async function DevelopersToolsJsonLD({
+export default async function DevelopersToolsCategoryJsonLD({
   locale,
+  category,
+  categoryLabel,
+  categoryDescription,
+  categoryTools,
   contributors,
-  categories,
-  categoryLabels,
 }: {
   locale: string
+  category: string
+  categoryLabel: string
+  categoryDescription: string
+  categoryTools: DeveloperTool[]
   contributors: FileContributor[]
-  categories: { id: string; name: string; description: string }[]
-  categoryLabels: Record<string, string>
 }) {
   const t = await getTranslations({
     locale,
     namespace: "page-developers-tools",
   })
 
-  const url = normalizeUrlForJsonLd(locale, "/developers/tools/")
+  const url = normalizeUrlForJsonLd(
+    locale,
+    `/developers/tools/categories/${category}`
+  )
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
@@ -40,7 +52,7 @@ export default async function DevelopersToolsJsonLD({
       {
         "@type": "CollectionPage",
         "@id": url,
-        name: t("page-developers-tools-meta-title"),
+        name: categoryLabel,
         description: t("page-developers-tools-meta-description"),
         url: url,
         inLanguage: locale,
@@ -66,30 +78,50 @@ export default async function DevelopersToolsJsonLD({
               "@type": "ListItem",
               position: 3,
               name: t("page-developers-tools-meta-title"),
+              item: normalizeUrlForJsonLd(locale, "/developers/tools/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 4,
+              name: categoryLabel,
               item: url,
             },
           ],
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#developer-tools` },
+        mainEntity: { "@id": `${url}#category-tools` },
       },
       {
         "@type": "ItemList",
-        "@id": `${url}#developer-tools`,
-        name: t("page-developers-tools-categories-title"),
-        description: t("page-developers-tools-meta-description"),
+        "@id": `${url}#category-tools`,
+        name: categoryLabel,
+        description: categoryDescription,
         url: url,
-        numberOfItems: categories.length,
-        itemListElement: categories.map((category, index) => ({
+        // Total size of the list; itemListElement below is a truncated subset.
+        numberOfItems: categoryTools.length,
+        itemListElement: categoryTools.slice(0, 10).map((tool, index) => ({
           "@type": "ListItem",
           position: index + 1,
-          name: categoryLabels[category.id] || category.name,
-          description: category.description,
-          url: normalizeUrlForJsonLd(
-            locale,
-            `/developers/tools/categories/${category.id}/`
-          ),
+          item: {
+            "@type": "SoftwareApplication",
+            name: tool.name,
+            description: tool.description,
+            // Prefer the tool's own site, fall back to its top repo, and as a
+            // last resort its canonical page here (some tools have neither a
+            // website nor a repo).
+            url:
+              getToolPrimaryUrl(tool) ||
+              normalizeUrlForJsonLd(
+                locale,
+                `/developers/tools/${getToolKey(tool)}/`
+              ),
+            applicationCategory: "DeveloperApplication",
+            applicationSubCategory: categoryLabel,
+            ...(tool.thumbnail_url || tool.banner_url
+              ? { image: tool.thumbnail_url || tool.banner_url }
+              : {}),
+          },
         })),
       },
     ],
