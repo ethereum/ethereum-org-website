@@ -238,7 +238,7 @@ issues.push(...newWarnings)
 npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/
 ```
 
-**All tests must pass** — both the new test and all existing 99+ tests.
+**All tests must pass** — both the new test and all existing 600+ tests.
 
 If a test fails:
 - New test fails → fix the implementation, not the test
@@ -248,15 +248,15 @@ If a test fails:
 
 **CRITICAL: NEVER run the sanitizer against an entire language. It processes thousands of files and will hang for 30+ minutes. Always scope to the specific files from the PR.**
 
-Determine which files to test from the PR context (e.g., `gaming/index.md`). Then run the sanitizer with `TARGET_FILES` to scope it to just those files:
+Determine which files to test from the PR context (e.g., `gaming/index.md`). The sanitizer's only env-var scoping is `TARGET_LANGUAGES` (per-language, not per-file) — there is no `TARGET_FILES`. For single files, write an inline script that calls `processMarkdownFile` directly:
 
 ```bash
-# If TARGET_FILES env var is supported:
-TARGET_FILES="public/content/translations/{LANGUAGE}/{PAGE_PATH}" \
+# Language-level scoping (still processes every file for that language):
+TARGET_LANGUAGES={LANGUAGE} \
   npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/intl-sanitizer.ts
 
-# If not, write a quick inline node script that calls processMarkdownFile directly:
-node -e '
+# Preferred for single files — inline script calling processMarkdownFile directly:
+npx ts-node -O '{"module":"commonjs"}' -e '
 const { _testOnly } = require("./src/scripts/intl-pipeline/intl-sanitizer");
 const fs = require("fs");
 const file = "public/content/translations/{LANGUAGE}/{PAGE_PATH}";
@@ -302,7 +302,7 @@ Test the same page in 2-3 other languages to check for false positives. **NEVER 
 ```bash
 # Test the same page path in a few other languages
 for lang in es tr ja; do
-  node -e "
+  npx ts-node -O '{"module":"commonjs"}' -e "
     const { _testOnly } = require('./src/scripts/intl-pipeline/intl-sanitizer');
     const fs = require('fs');
     const file = 'public/content/translations/$lang/{PAGE_PATH}';
@@ -361,7 +361,7 @@ If the fix worked, move the pattern from "New Patterns Not Yet Covered" to "Patt
 ### Update existing bug docs if relevant
 
 Check if this relates to previously documented bugs:
-- `docs/solutions/integration-issues/post-import-sanitizer-bugs-found-japanese-review.md`
+- `docs/solutions/integration-issues/intl-pipeline-bugs-from-pr-18041-review.md`
 
 ### Report summary
 
@@ -396,8 +396,9 @@ TARGET_LANGUAGES=ja npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pi
 ### Key files
 | File | Purpose |
 |------|---------|
-| `src/scripts/intl-pipeline/intl-sanitizer.ts` | Sanitizer source (~2100 lines) |
+| `src/scripts/intl-pipeline/intl-sanitizer.ts` | Sanitizer source (~5900 lines) |
 | `tests/unit/intl-pipeline/sanitizer/standalone-fixes.spec.ts` | Tests for pure functions |
+| `tests/unit/intl-pipeline/sanitizer/code-block-extractor.spec.ts` | Tests for code-block extraction |
 | `tests/unit/intl-pipeline/sanitizer/english-comparison.spec.ts` | Tests needing English source |
 | `tests/unit/intl-pipeline/sanitizer/warnings.spec.ts` | Tests for warn-only functions |
 | `tests/unit/intl-pipeline/sanitizer/integration.spec.ts` | End-to-end tests |

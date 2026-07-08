@@ -23,7 +23,7 @@ The rule is NOT "never edit locales." It IS "don't hand-propagate English update
 
 1. **ETHGlossary is canonical for term translations.** Brand names, people's names, programming languages, OS/platform names, concept terms — all live in ETHGlossary. Don't maintain parallel term banks. The pipeline queries the API via `GLOSSARY_API_URL` (default in `src/scripts/intl-pipeline/config.ts`).
 2. **One translation PR at a time per base branch.** The pipeline commits to `intl/pending-{base}` (e.g., `intl/pending-dev`). Subsequent runs merge `{base}` into pending first, then translate the delta. Parallel translation PRs against the same base will conflict.
-3. **The pipeline only targets `dev` in production.** Hot fixes to `staging` / `master` go out English-only and catch up via prepare-release. Don't translate against `staging` / `master` unless you have a specific reason and use a custom `translation_branch`.
+3. **The pipeline only targets `dev` in production.** Hot fixes to `staging` / `master` go out English-only and catch up via prepare-release. Don't translate against `staging` / `master` unless you have a specific reason and use a custom `target_branch`.
 4. **Manifests are inseparable from their locale file.** Each translated file has two manifests next to it: `.manifest-source.json` and `.manifest-translation.json`. Delete one, you must regenerate both — easiest via the pipeline in `full` mode for that file+locale. Never hand-edit a manifest.
 5. **The sanitizer runs post-translation, not pre.** Its job is to fix Gemini-introduced artifacts (BiDi mistakes, code-fence drift, brand-name mistranslations). It receives translation outputs, never English source.
 6. **Don't add transliteration data here.** All term/brand/person transliteration policy lives in ETHGlossary's `docs/translation-policy.md` and per-language entries. The intl-pipeline consumes; it does not author.
@@ -74,31 +74,31 @@ JSX attribute values are NOT translated in the main Phase 4 LLM call. Phase 4b i
 
 ### Sanitizer test scope is per-file, never per-language sweep
 
-NEVER run the sanitizer against an entire language. It processes thousands of files and hangs for 30+ minutes. Always scope to specific files via `TARGET_FILES` env var. The slash command `/fix-sanitizer-bug` enforces this; if you script around it, preserve the constraint.
+NEVER run the sanitizer against an entire language. It processes thousands of files and hangs for 30+ minutes. There is no per-file env var — the only env-based scoping is per-language via `TARGET_LANGUAGES` (e.g. `TARGET_LANGUAGES=ja`), which still sweeps that whole language. Scope to specific files programmatically by calling the exported `runSanitizer(filesWithContent)` from `intl-sanitizer.ts` with just the affected file(s). The slash command `/fix-sanitizer-bug` enforces this; if you script around it, preserve the constraint.
 
 ## Quick "Where Do I Look?" Cheatsheet
 
-| I need... | Path |
-|---|---|
-| Pipeline entry | `src/scripts/intl-pipeline/main.ts` |
-| Sanitizer | `src/scripts/intl-pipeline/intl-sanitizer.ts` |
-| Gemini adapter | `src/scripts/intl-pipeline/lib/llm/gemini.ts` |
-| Prompt builder | `src/scripts/intl-pipeline/lib/llm/prompt-builder.ts` |
-| Content normalizer | `src/scripts/intl-pipeline/lib/llm/content-normalizer.ts` |
-| Shared patterns (JSX attrs allow-list) | `src/scripts/intl-pipeline/lib/shared-patterns.ts` |
-| Glossary config | `src/scripts/intl-pipeline/config.ts` |
-| Workflow file | `.github/workflows/intl-pipeline.yml` |
-| Per-file pipeline spec (canonical) | `tests/specs/PIPELINE-SPEC.md` |
-| Concurrency / chunking spec | `tests/specs/CONCURRENCY-SPEC.md` |
-| Test fixture mutation table | `tests/specs/SPEC.md` |
-| Sanitizer test suite | `tests/unit/intl-pipeline/sanitizer/` |
-| Pipeline test suite | `tests/unit/intl-pipeline/` |
-| Future-work backlog | `src/scripts/intl-pipeline/FUTURE.md` |
-| Language config (canonical list) | `i18n.config.json` |
-| ETHGlossary repo | https://github.com/wackerow/ethglossary |
-| ETHGlossary API root | https://ethglossary.visual-20-hoists.workers.dev |
-| Slash command: fix sanitizer bug | `/fix-sanitizer-bug` (`.claude/commands/fix-sanitizer-bug.md`) |
-| Slash command: review translations | `/review-translations` (`.claude/commands/review-translations.md`) |
+| I need...                              | Path                                                               |
+| -------------------------------------- | ------------------------------------------------------------------ |
+| Pipeline entry                         | `src/scripts/intl-pipeline/main.ts`                                |
+| Sanitizer                              | `src/scripts/intl-pipeline/intl-sanitizer.ts`                      |
+| Gemini adapter                         | `src/scripts/intl-pipeline/lib/llm/gemini.ts`                      |
+| Prompt builder                         | `src/scripts/intl-pipeline/lib/llm/prompt-builder.ts`              |
+| Content normalizer                     | `src/scripts/intl-pipeline/lib/llm/content-normalizer.ts`          |
+| Shared patterns (JSX attrs allow-list) | `src/scripts/intl-pipeline/lib/shared-patterns.ts`                 |
+| Glossary config                        | `src/scripts/intl-pipeline/config.ts`                              |
+| Workflow file                          | `.github/workflows/intl-pipeline.yml`                              |
+| Per-file pipeline spec (canonical)     | `tests/specs/PIPELINE-SPEC.md`                                     |
+| Concurrency / chunking spec            | `tests/specs/CONCURRENCY-SPEC.md`                                  |
+| Test fixture mutation table            | `tests/specs/SPEC.md`                                              |
+| Sanitizer test suite                   | `tests/unit/intl-pipeline/sanitizer/`                              |
+| Pipeline test suite                    | `tests/unit/intl-pipeline/`                                        |
+| Future-work backlog                    | `src/scripts/intl-pipeline/FUTURE.md`                              |
+| Language config (canonical list)       | `i18n.config.json`                                                 |
+| ETHGlossary repo                       | https://github.com/wackerow/ethglossary                            |
+| ETHGlossary API root                   | https://ethglossary.visual-20-hoists.workers.dev                   |
+| Slash command: fix sanitizer bug       | `/fix-sanitizer-bug` (`.claude/commands/fix-sanitizer-bug.md`)     |
+| Slash command: review translations     | `/review-translations` (`.claude/commands/review-translations.md`) |
 
 ## When to Load Each Reference
 
