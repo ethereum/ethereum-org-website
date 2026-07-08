@@ -2195,7 +2195,6 @@ export const walletsData: WalletData[] = [
       "bn",
       "cs",
       "da",
-      "fil",
       "ha",
       "ms",
       "nl",
