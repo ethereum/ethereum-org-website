@@ -108,7 +108,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             buttons={[
               {
                 content: t("page-privacy-hero-cta"),
-                href: "#getting-started",
+                href: tocItems[0].url,
               },
             ]}
           />
