@@ -208,23 +208,22 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               strong: Strong,
             })}
           </p>
-          <Card>
+          <Card className="my-space-2x">
             <CardContent>
-              <Grid columns={3} size="narrow">
+              <Grid
+                columns={3}
+                size="narrow"
+                className="*:max-w-64 *:py-0 **:data-[label=value]:text-primary"
+              >
                 <BigNumber
-                  className="items-center py-0 text-center text-body"
                   value={t("page-privacy-metric-value-times", { value: 747 })}
                 >
                   {t("page-privacy-metric-1-description")}
                 </BigNumber>
-                <BigNumber
-                  className="items-center py-0 text-center text-body"
-                  value={numberToPercent(0.74, locale)}
-                >
+                <BigNumber value={numberToPercent(0.74, locale)}>
                   {t("page-privacy-metric-2-description")}
                 </BigNumber>
                 <BigNumber
-                  className="items-center py-0 text-center text-body"
                   value={t("page-privacy-metric-value-plus", {
                     value: numberFormat(locale, {
                       notation: "compact",
