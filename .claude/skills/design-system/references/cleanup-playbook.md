@@ -236,8 +236,8 @@ const t = await getTranslations("page-namespace")
 
 // After (Client Component):
 "use client"
-import { useTranslations } from "next-intl"
-const t = useTranslations("page-namespace")
+import { useTranslation } from "@/hooks/useTranslation"
+const { t } = useTranslation("page-namespace")
 <h1>{t("welcome-heading")}</h1>
 ```
 

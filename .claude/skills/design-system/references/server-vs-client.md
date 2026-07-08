@@ -37,9 +37,9 @@ Primitives that handle their own client boundary:
 
 ## Translation Boundary
 
-`useTranslations` (client) and `getTranslations` (server) serve the same purpose for content. **Don't mark a file `"use client"` just to use `useTranslations`.** Restructure: keep the parent server, let it call `getTranslations`, pass the translated strings down as props.
+The project hook `useTranslation` from `@/hooks/useTranslation` (client, `const { t } = useTranslation("namespace")`) and `getTranslations` from `next-intl/server` (server) serve the same purpose for content. Don't import `useTranslations` from `next-intl` directly in client components -- use the project hook. **Don't mark a file `"use client"` just to translate.** Restructure: keep the parent server, let it call `getTranslations`, pass the translated strings down as props.
 
-The `t()` functions returned by these are *similar but not strictly equivalent* -- variable interpolation, ICU pluralization, and rich-text/htmr patterns can behave differently between server and client paths. If a change touches both, test both. Don't assume swapping `useTranslations` for `getTranslations` (or vice versa) is a no-op.
+The `t()` functions returned by these are *similar but not strictly equivalent* -- variable interpolation, ICU pluralization, and rich-text/htmr patterns can behave differently between server and client paths (see `i18n-rtl.md` for the client hook's interpolation caveat). If a change touches both, test both. Don't assume swapping the client hook for `getTranslations` (or vice versa) is a no-op.
 
 ### Callout is server-renderable (consolidation done)
 
@@ -89,5 +89,6 @@ export default async function Page() {
 
 - **`useEffect` data fetching** in a component that could be a Server Component
 - **`"use client"` at the top of a page** when only a small subtree is interactive
-- **`useTranslations` in a leaf component** instead of restructuring so the parent uses `getTranslations`
+- **Client-side translation in a leaf component** instead of restructuring so the parent uses `getTranslations`
+- **`useTranslations` imported from `next-intl`** instead of the project hook `useTranslation` from `@/hooks/useTranslation`
 - **`useColorModeValue`** (Chakra leftover) -- use Tailwind `dark:` variant instead

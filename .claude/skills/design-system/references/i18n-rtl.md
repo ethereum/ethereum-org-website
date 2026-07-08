@@ -18,15 +18,19 @@ export default async function Page() {
 
 ### Client Components
 
+Use the project hook `useTranslation` from `@/hooks/useTranslation` -- not `useTranslations` from `next-intl` directly:
+
 ```tsx
 "use client"
-import { useTranslations } from "next-intl"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export function Widget() {
-  const t = useTranslations("widget-namespace")
-  return <p>{t("widget-description")}</button>
+  const { t } = useTranslation("widget-namespace")
+  return <p>{t("widget-description")}</p>
 }
 ```
+
+Caveat: the plain-key form (`t("key")`) returns the raw message without ICU interpolation. When passing values, use the namespaced-key form: `t("widget-namespace:key", { name })`. Rich text goes through `t.rich(...)`, which is bound to the root namespace and needs the full dotted key (`t.rich("widget-namespace.key", ...)`).
 
 ### Never hard-code English
 

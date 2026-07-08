@@ -109,7 +109,7 @@ For the minimal breadcrumb + h1 reading hero (what `StaticLayout` renders for no
 
 All user-facing copy in the hero comes from `t()`. Don't hard-code English. Add new keys to `src/intl/en/[page-namespace].json`.
 
-The page above is a Server Component (default), so it uses `getTranslations` from `next-intl/server`. Don't add `"use client"` to use `useTranslations` -- the hero primitives handle their own client boundaries where needed.
+The page above is a Server Component (default), so it uses `getTranslations` from `next-intl/server`. Don't add `"use client"` just to translate (client components use `useTranslation` from `@/hooks/useTranslation`) -- the hero primitives handle their own client boundaries where needed.
 
 ## Step 4: Image
 

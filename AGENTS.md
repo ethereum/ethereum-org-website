@@ -166,7 +166,7 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
 3. **Follow import order** - ESLint will enforce, but be proactive
 4. **Use TypeScript strictly** - No `any` types, prefer `unknown`
 5. **Test in Storybook** - Create stories for new components (filename pattern: `.stories.tsx`)
-6. **Consider i18n** - All user-facing text should be translatable (use `getTranslations` and `getLocale`)
+6. **Consider i18n** - All user-facing text should be translatable. Server components: `getTranslations` and `getLocale` from `next-intl/server`. Client components: the project hook `useTranslation` from `@/hooks/useTranslation` (`const { t } = useTranslation("namespace")`) - do NOT import `useTranslations` from `next-intl` directly
 7. **Mobile-first** - Design for mobile, enhance for desktop
 8. **Accessibility** - Use Radix primitives, semantic HTML
 9. **Use locale-aware formatting wrappers** - Use `numberFormat()` from `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`, and `dateTimeFormat()` from `src/lib/utils/date.ts` instead of `new Intl.DateTimeFormat()` / `.toLocaleDateString()` / `.toLocaleTimeString()`. Both enforce correct numbering systems and calendar for Urdu and Arabic locales.
