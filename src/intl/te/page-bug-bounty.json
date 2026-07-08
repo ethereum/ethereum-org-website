@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "ఎథీరియం బౌంటీ ప్రోగ్రామ్ ప్రతిఫలాలను నిర్ణయించడంలో అనేక వేరియబుల్స్‌ను పరిగణిస్తుంది. అర్హత, స్కోర్ మరియు అవార్డుకు సంబంధించిన అన్ని నిబంధనల నిర్ణయాలు ఎథీరియం ఫౌండేషన్ బగ్ బౌంటీ ప్యానెల్ యొక్క ఏకైక మరియు తుది విచక్షణపై ఆధారపడి ఉంటాయి.",
   "page-upgrades-bug-bounty-leaderboard": "పూర్తి లీడర్‌బోర్డ్‌లను చూడండి",
   "page-upgrades-bug-bounty-leaderboard-list": "బగ్ బౌంటీ లీడర్‌బోర్డ్",
+  "page-upgrades-bug-bounty-leaderboard-position": "{score, plural, one {# పాయింట్‌తో} other {# పాయింట్లతో}} {rank}వ స్థానంలో",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(GitHub ప్రొఫైల్‌ను చూడండి)",
   "page-upgrades-bug-bounty-leaderboard-points": "పాయింట్లు",
   "page-upgrades-bug-bounty-ledger-desc": "ఎథీరియం స్పెసిఫికేషన్‌లు అమలు పొర మరియు ఏకాభిప్రాయ పొర కోసం డిజైన్ హేతుబద్ధతను వివరిస్తాయి.",
   "page-upgrades-bug-bounty-ledger-title": "స్పెసిఫికేషన్ బగ్‌లు",

@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "డేటా మరియు విశ్లేషణలు",
   "docs-nav-data-and-analytics-description": "బ్లాక్‌చైన్ డేటా ఎలా సమగ్రపరచబడుతుంది, నిర్వహించబడుతుంది మరియు వికేంద్రీకృత అప్లికేషన్ (dapp)లలో అమలు చేయబడుతుంది",
   "docs-nav-data-availability": "డేటా లభ్యత",
+  "docs-nav-data-availability-description": "ఎథీరియంలో డేటా లభ్యతకు సంబంధించిన సమస్యలు మరియు పరిష్కారాల అవలోకనం",
   "docs-nav-data-availability-storage-strategies": "బ్లాక్‌చైన్ డేటా నిల్వ వ్యూహాలు",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "స్థితి ధృవీకరణ అభివృద్ధిలో ఉంది",
   "layer-2-metis-note": "ఫ్రాడ్ ప్రూఫ్‌లు అభివృద్ధిలో ఉన్నాయి",
   "layer-2-optimism-note": "ఫాల్ట్ ప్రూఫ్‌లు అభివృద్ధిలో ఉన్నాయి",
-  "back-to-top": "పైకి వెళ్లండి",
   "banner-page-incomplete": "ఈ పేజీ అసంపూర్ణంగా ఉంది మరియు మీ సహాయాన్ని మేము కోరుకుంటున్నాము. ఈ పేజీని సవరించండి మరియు ఇతరులకు ఉపయోగకరంగా ఉంటుందని మీరు భావించే దేనినైనా జోడించండి.",
   "next": "తదుపరి",
   "previous": "మునుపటి"

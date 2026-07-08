@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "எத்திரியம் வெகுமதி திட்டம் வெகுமதிகளைத் தீர்மானிப்பதில் பல மாறிகளைக் கருத்தில் கொள்கிறது. தகுதி, மதிப்பெண் மற்றும் விருது தொடர்பான அனைத்து விதிமுறைகளின் தீர்மானங்களும் எத்தீரியம் அறக்கட்டளை பிழை வெகுமதி குழுவின் தனிப்பட்ட மற்றும் இறுதி விருப்புரிமைக்கு உட்பட்டவை.",
   "page-upgrades-bug-bounty-leaderboard": "முழுமையான தரவரிசைப் பட்டியல்களைக் காண்க",
   "page-upgrades-bug-bounty-leaderboard-list": "பிழை வெகுமதி தரவரிசைப் பட்டியல்",
+  "page-upgrades-bug-bounty-leaderboard-position": "{score, plural, one {# புள்ளி} other {# புள்ளிகள்}} உடன் {rank} ஆவது இடத்தில்",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(GitHub சுயவிவரத்தைக் காண்க)",
   "page-upgrades-bug-bounty-leaderboard-points": "புள்ளிகள்",
   "page-upgrades-bug-bounty-ledger-desc": "எத்திரியம் விவரக்குறிப்புகள் செயலாக்க அடுக்கு மற்றும் கருத்தொருமிப்பு அடுக்குக்கான வடிவமைப்பு காரணங்களை விவரிக்கின்றன.",
   "page-upgrades-bug-bounty-ledger-title": "விவரக்குறிப்பு பிழைகள்",

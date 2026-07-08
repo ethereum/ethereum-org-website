@@ -356,7 +356,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </div>
 
         <div id="layer-2-cta" className="w-full px-8 py-9">
-          <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-main-gradient p-8">
+          <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-linear-primary p-8">
             <div className="flex flex-col gap-6">
               {userRandomL2s.map((l2, idx) => (
                 <div
@@ -368,7 +368,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   }`}
                 >
                   <div className="flex flex-1 flex-col items-start gap-4 md:flex-row md:items-center">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-drop">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-lg">
                       <Image
                         src={l2.logo}
                         alt={l2.name}

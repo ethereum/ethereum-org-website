@@ -1,7 +1,8 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-06-09 (PR #18375: added MDX duplicated-closer / dropped-`>` breakers, the duplicate ghost-heading migration artifact, and the ETHGlossary authority hierarchy for unlisted terms)
+> Last updated: 2026-06-30 (PR #18629 full-tree: empty `{#}` h5 build-breaker, code-fence corruption cluster, the source-language decision rule, and the "deterministic sweeps beat agent triage" methodology note)
+> Previous: 2026-06-09 (PR #18375: MDX duplicated-closer / dropped-`>` breakers, duplicate ghost-heading artifact, ETHGlossary authority hierarchy)
 
 ## Issue Categories
 
@@ -367,6 +368,23 @@ The intl-pipeline extracts attributed HTML tags (`<a href>`, `<img>`) from JSON 
 - **Only critical fleet-wide: pattern 22** -- 7 langs leaked one placeholder in `glossary-tooltip.json` (`ar` wei-definition `#wei`; `cs/ja/ko/pl/uk/zh` ommer-definition `#pow`). All hand-fixed to the correct anchor; pipeline fixed to prevent recurrence.
 - Scores: fr/it/vi 10.0; de/es/hi/id/pl/ru/ur 9.8; tr 9.7; ar/bn/ja/ko/sw/ta/uk/zh 9.6; cs 9.5; mr/te 9.4.
 - Confirmed clean across the fleet: no semantic inversions (PoW/PoS, validator/miner, mainnet/testnet), no translated internal hrefs, no transliterated domains, no cross-script contamination, ICU placeholders + rich-text tags intact, brand/script policy correct per group. zh `智能合约` correct (not `智慧`). Historically weak ar/vi/tr clean of prior failure modes.
+
+### 23. Empty `{#}` Heading Anchors on h5 (CRITICAL — build-breaker)
+
+MT injects empty `{#}` tokens (often duplicated: `{#} {#} {#}`) onto h5 (`#####`) headings that have NO anchor in English (only h1-h4 require `{#id}`). `escapeHeadingIds` only escapes `{#word}` (needs a word char), so empty `{#}` reaches the MDX parser as a `{#}` expression -> "Could not parse expression with acorn" -> build fails. **Detect deterministically** by compiling each changed file through `@mdx-js/mdx` (strip frontmatter + escape `{#id}` first). **Fix:** strip the empty `{#}` tokens (English h5 has no anchor). Seen in PR #18629 `developers/docs/networks/index.md`, all 23 langs, 9 tokens/file.
+
+### 24. Code-Fence Corruption Cluster + the Source-Language Rule (CRITICAL)
+
+**The rule (decision tree for any code-fence content):** look at the *source language* of the line.
+- English prose -> translate. This **includes** English strings inside code: `console.log("Hello world")` -> `console.log("Hola mundo")` is CORRECT, and an untyped (no language) code block is treated like prose and translated (e.g. an LLM-prompt example).
+- A programming-language token (keyword/identifier) -> stays English. Translating Solidity `contract`/`constructor`/`function`, or corrupting a JS identifier like `getContractFactory`, breaks the code.
+- **CAVEAT — reproduced program OUTPUT** shown in a walkthrough (terminal sessions, prediction logs, printed results) stays in whatever the code actually emits. If the code's `print("Current price:")` was left English, the shown output `Current price: 1843.16` must also be English (so the reader can match their terminal). If the `print` string was translated, the output should match the translation. Output must be consistent with its own code.
+
+PR #18629 hit every variant fleet-wide: `short-abi` Solidity keywords (incl. ko SOV word-order: keyword placed *after* or *between* identifier+parens, e.g. `faucet 함수()`, `CalldataInterpreter 컨트랙트 {`); `getContractFactory` -> `get<word>Factory` in both non-Latin (`getКонтрактFactory`) and Latin (`getMkatabaFactory`, `getContratFactory`); verbatim terminal output translated in hello-world / sending-transactions / manticore / ai-trading-agent. **Fix deterministically** with English-anchored line/fence replacement (preserved identifiers, numbers, tx hashes anchor the match across langs).
+
+### 25. Methodology — Deterministic Sweeps Beat Agent Triage for Systematic Code Issues
+
+In PR #18629, deterministic sweeps (MDX compile + anchored grep against English) caught **~2x** the code/output criticals that 24 per-language Sonnet agents found. Agents reported es/id/ko as "0 critical" while all three had `getContractFactory` corrupted; short-abi keyword translation was missed by most agents. **Lesson:** for systematic, file-repeated issues (same English source mistranslated the same way across langs), do NOT rely on per-language agent triage for coverage — run a deterministic detection+fix sweep keyed on stable English anchors, then use agents for the judgment calls (semantics, glossary, tone). Reserve agent findings for what can't be grepped.
 
 ## Agent Architecture Notes
 

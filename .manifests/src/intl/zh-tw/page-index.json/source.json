@@ -1,14 +1,14 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-index.json",
-  "generatedAt": "2026-05-01T17:05:29.008Z",
-  "rootHash": "da509f26f967",
+  "generatedAt": "2026-07-07T22:40:54.769Z",
+  "rootHash": "438a61c8b531",
   "tree": {
-    "contentHash": "8d704d488570",
-    "anchorHash": "c70fa7ea2b59",
+    "contentHash": "3007c6adbb8b",
+    "anchorHash": "846928701ae9",
     "children": {
       "page-index-meta-title": {
-        "contentHash": "3b2d6d66edd3",
+        "contentHash": "2de94f4fbe78",
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-meta-description": {
@@ -176,8 +176,8 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-carousel-remittances-title": {
-        "contentHash": "b8c0db3cc233",
-        "anchorHash": "87b801e9f31d",
+        "contentHash": "b2d9205434e8",
+        "anchorHash": "36ac9a17923c",
         "children": {
           "prose:1": {
             "contentHash": "155a8841c388",
@@ -185,10 +185,10 @@
           },
           "icu:0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "15fe0a36aa0c"
+            "anchorHash": "9d4a43b9a2da"
           },
           "prose:2": {
-            "contentHash": "90e63d85fa1a",
+            "contentHash": "59f006d63bd0",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -295,15 +295,15 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-carousel-remittances-ethereum-value": {
-        "contentHash": "2b80243c9be3",
-        "anchorHash": "b109f5f09c65",
+        "contentHash": "2f99522cbda7",
+        "anchorHash": "3687110e7445",
         "children": {
           "icu:0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "15fe0a36aa0c"
+            "anchorHash": "9d4a43b9a2da"
           },
           "prose:1": {
-            "contentHash": "90e63d85fa1a",
+            "contentHash": "59f006d63bd0",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -616,6 +616,14 @@
       "page-index-simulator-cta": {
         "contentHash": "3e58b342d3c8",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-latest-updates-title": {
+        "contentHash": "1d040dec692d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-latest-updates-cta": {
+        "contentHash": "267e5558ef02",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -729,8 +737,10 @@
       "page-index-get-started-enterprise-bullet-2",
       "page-index-get-started-enterprise-bullet-3",
       "page-index-get-started-enterprise-cta",
-      "page-index-simulator-cta"
+      "page-index-simulator-cta",
+      "page-index-latest-updates-title",
+      "page-index-latest-updates-cta"
     ]
   },
-  "sourceCommitSha": "102e7d69213329505b9595dbf50a235b7e6c2a9d"
+  "sourceCommitSha": "d0c944dc89a0cc0fa82fc57431aa119ebd4cc28e"
 }

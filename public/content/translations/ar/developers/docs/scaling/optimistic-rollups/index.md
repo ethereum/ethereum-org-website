@@ -256,14 +256,12 @@ lang: ar
 ## قراءات إضافية حول رول أب متفائل {#further-reading-on-optimistic-rollups}
 
 - [كيف تعمل رول أب متفائل (الدليل الشامل)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [ما هو تجميع سلسلة الكتل؟ مقدمة فنية](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [الدليل الأساسي إلى أربيتروم](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [الدليل الأساسي لـ أربيتروم](https://www.bankless.com/the-essential-guide-to-arbitrum)
 - [الدليل العملي لتجميعات إيثيريوم](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [حالة إثباتات الاحتيال في طبقات 2 (L2) لإيثيريوم](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
 - [كيف يعمل تجميع أوبتيميزم حقًا؟](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [نظرة متعمقة على OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [ما هي الآلة الافتراضية المتفائلة؟](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-
 ## برامج تعليمية: رول أب متفائل والجسور على إيثيريوم {#tutorials}
 
 - [جولة في عقد جسر أوبتيميزم القياسي](/developers/tutorials/optimism-std-bridge-annotated-code/) _– جولة مشروحة في التعليمات البرمجية لجسر أوبتيميزم القياسي لنقل الأصول بين طبقة 1 (L1) وطبقة 2 (L2)._

@@ -94,4 +94,19 @@ export const KNOWN_ORGANIZATIONS = {
     url: "https://web3privacy.info/",
     sameAs: ["https://x.com/web3privacy"],
   },
+
+  optimist: {
+    "@type": "Organization" as const,
+    "@id": "https://ethereum.org/#optimist",
+    name: "Optimist",
+    url: "https://optimist.co/",
+    description:
+      "Optimist is an Emmy-winning non-profit production studio based in Los Angeles, known for independent feature documentaries including Vitalik: An Ethereum Story, Living On One Dollar, Salam Neighbor, Five Years North, and State of Firsts. Their Community.eth series explores the people and culture behind the Ethereum community.",
+    sameAs: [
+      "https://x.com/optimistfilms",
+      "https://www.youtube.com/@Optimist",
+      "https://www.instagram.com/optimist",
+      "https://www.facebook.com/Optimistfilms/",
+    ],
+  },
 } as const

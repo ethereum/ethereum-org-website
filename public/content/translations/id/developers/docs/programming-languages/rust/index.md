@@ -44,7 +44,7 @@ Butuh panduan dasar terlebih dahulu? Kunjungi [ethereum.org/learn](/learn/) atau
 - [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Referensi API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Alat uji unit Kontrak Pintar Solidity menggunakan EVM Klien Parity asli._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementasi Mesin Virtual Ethereum Rust_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Kontrak pintar Wavelet di Rust_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Kontrak pintar Wavelet di Rust_
 - [Foundry](https://github.com/foundry-rs/foundry) - _Perangkat untuk pengembangan aplikasi Ethereum_
 - [Alloy](https://alloy.rs) - _Pustaka berkinerja tinggi, teruji dengan baik & terdokumentasi untuk berinteraksi dengan Ethereum dan rantai berbasis EVM lainnya._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Pustaka Ethereum dan implementasi dompet_

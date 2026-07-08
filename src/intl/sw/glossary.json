@@ -388,7 +388,7 @@
   "validium-term": "Validium",
   "validium-definition": "Suluhisho la nje ya mnyororo linalotumia <a href=\"/glossary/#validity-proof\">uthibitisho wa uhalali</a> ili kuboresha uwezo wa upitishaji wa muamala. Tofauti na <a href=\"/glossary/#zk-rollup\">mikusanyiko ya maarifa sifuri</a>, data ya Validium haihifadhiwi kwenye Mtandao Mkuu wa tabaka la 1. <a href=\"/developers/docs/scaling/validium/\">Zaidi kuhusu Validium</a>.",
   "vyper-term": "Vyper",
-  "vyper-definition": "Lugha ya upangaji programu ya kiwango cha juu yenye sintaksia inayofanana na Python. Inakusudiwa kukaribia lugha safi ya kiutendaji. Iliundwa na Vitalik Buterin. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Zaidi kuhusu Vyper</a>.",
+  "vyper-definition": "Lugha ya upangaji programu ya kiwango cha juu yenye sintaksia inayofanana na Python. Iliundwa na Vitalik Buterin. <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Zaidi kuhusu Vyper</a>.",
   "wallet-term": "Mkoba",
   "wallet-definition": "Mkoba ni zana ya kidijitali ya kuhifadhi, kutuma, na kupokea sarafu ya kidijitali, kama pochi pepe kwa pesa zako za mtandaoni. <a href=\"/wallets/\">Zaidi kuhusu mikoba ya Ethereum</a>.",
   "web2-term": "Web2",

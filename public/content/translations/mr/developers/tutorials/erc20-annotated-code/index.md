@@ -237,7 +237,7 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` या [OpenGSN](https://www.opengsn.org/) वापरण्यासाठी आवश्यक असलेल्या व्याख्या आहेत, ही एक प्रणाली आहे जी इथर नसलेल्या वापरकर्त्यांना
+- `GSN/Context.sol` या [OpenGSN](https://opengsn.org/) वापरण्यासाठी आवश्यक असलेल्या व्याख्या आहेत, ही एक प्रणाली आहे जी इथर नसलेल्या वापरकर्त्यांना
   ब्लॉकचेन वापरण्याची परवानगी देते. लक्षात घ्या की ही एक जुनी आवृत्ती आहे, जर तुम्हाला OpenGSN सह समाकलित करायचे असेल तर
   [हे ट्युटोरियल वापरा](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [SafeMath लायब्ररी](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), जी

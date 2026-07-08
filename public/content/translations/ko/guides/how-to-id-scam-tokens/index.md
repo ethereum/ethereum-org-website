@@ -1,6 +1,6 @@
 ---
-title: 스캠 토큰을 식별하는 방법
-description: 스캠 토큰의 개념, 합법적인 것처럼 보이게 만드는 방법, 그리고 이를 피하는 방법을 알아봅니다.
+title: "스캠 토큰을 식별하는 방법"
+description: "스캠 토큰의 개념, 합법적인 것처럼 보이게 만드는 방법, 그리고 이를 피하는 방법을 알아봅니다."
 lang: ko
 ---
 
@@ -14,7 +14,7 @@ lang: ko
 스캠 토큰이 무엇인지, 그리고 어떻게 식별하는지 설명하기 위해 [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82)라는 예시를 살펴보겠습니다. 이 토큰은 합법적인 [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) 토큰처럼 보이려고 시도합니다.
 
 <ExpandableCard
-title="What is ARB?"
+title="ARB란 무엇인가요?"
 contentPreview=''>
 
 아비트럼은 [옵티미스틱 롤업](/developers/docs/scaling/optimistic-rollups/)을 개발하고 관리하는 조직입니다. 초기에 아비트럼은 영리 기업으로 조직되었으나, 이후 탈중앙화 단계를 밟았습니다. 그 과정의 일환으로 거래 가능한 [거버넌스 토큰](/dao/#token-based-membership)을 발행했습니다.
@@ -22,7 +22,7 @@ contentPreview=''>
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="스캠 토큰은 왜 wARB라고 불리나요?"
 contentPreview=''>
 
 이더리움에는 자산이 ERC-20을 준수하지 않을 때 이름이 "w"로 시작하는 "래핑된(wrapped)" 버전을 만드는 관례가 있습니다. 예를 들어, 비트코인을 위한 wBTC와 <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">이더를 위한 wETH</a>가 있습니다.
@@ -36,7 +36,7 @@ contentPreview=''>
 이더리움의 핵심은 탈중앙화입니다. 이는 여러분의 자산을 압수하거나 스마트 컨트랙트를 배포하는 것을 막을 수 있는 중앙 권한이 없다는 것을 의미합니다. 하지만 이는 스캐머들 역시 원하는 스마트 컨트랙트를 마음대로 배포할 수 있다는 뜻이기도 합니다.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="스마트 컨트랙트란 무엇인가요?"
 contentPreview=''>
 
 [스마트 컨트랙트](/developers/docs/smart-contracts/)는 이더리움 블록체인 위에서 실행되는 프로그램입니다. 예를 들어, 모든 ERC-20 토큰은 스마트 컨트랙트로 구현됩니다.

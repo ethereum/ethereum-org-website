@@ -49,7 +49,7 @@ storedData: int128
 
 مزید وضاحت کے لیے، دستاویزات پر ایک نظر ڈالیں:
 
-- [Vyper کی اقسام دیکھیں](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [Vyper کی اقسام دیکھیں](https://docs.vyperlang.org/en/stable/types.html#value-types)
 - [Solidity کی اقسام دیکھیں](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### میموری {#memory}

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/nextjs"
 
-import { Blockquote } from "@/components/MdComponents"
+import Blockquote from "@/components/ui/blockquote"
 import { Button } from "@/components/ui/buttons/Button"
 
 /**

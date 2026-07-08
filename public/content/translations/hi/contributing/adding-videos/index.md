@@ -123,22 +123,6 @@ title: "..."
 
 यदि आपके पास ट्रांसक्रिप्ट नहीं है, तो आप मुख्य भाग (body) को खाली छोड़ सकते हैं और टीम इसे जनरेट कर देगी।
 
-#### चरण 4: विषय टैग चुनें {#step-4}
-
-ऐसे विषय टैग चुनें जो गैलरी में उपयोग की जाने वाली मौजूदा श्रेणियों से मेल खाते हों। वर्तमान श्रेणियों और उनके टैग में शामिल हैं:
-
-- **इथेरियम कैसे काम करता है**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **नेटवर्क अपग्रेड**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **रोडमैप और प्राथमिकताएं**: `roadmap-and-priorities`, `pbs`, `mev`
-- **स्केलिंग और लेयर 2 (l2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **उपयोग के मामले (Use Cases)**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **गोपनीयता और सुरक्षा**: `privacy-and-security`, `privacy`, `authentication`
-- **कम्युनिटी की कहानियाँ**: `community-stories`, `contributing`, `translations`, `community`
-
-यह सुनिश्चित करने के लिए कि आपका वीडियो गैलरी श्रेणी शेल्फ में दिखाई दे, कम से कम एक श्रेणी कुंजी टैग (कबाब-केस में बोल्ड नाम, उदा. `use-cases` या `scaling-and-layer-2`) शामिल करें। बिना किसी मान्यता प्राप्त श्रेणी टैग वाले वीडियो केवल "सभी" (All) दृश्य और खोज परिणामों में दिखाई देंगे।
-
-आप नए टैग का भी उपयोग कर सकते हैं — वे भविष्य के श्रेणी समूहों के लिए उपलब्ध होंगे।
-
 #### चरण 5: अपना PR सबमिट करें {#step-5}
 
 `dev` ब्रांच में अपने बदलावों के साथ एक पुल रिक्वेस्ट खोलें। टीम आपके सबमिशन की समीक्षा करेगी और फीडबैक प्रदान करेगी।

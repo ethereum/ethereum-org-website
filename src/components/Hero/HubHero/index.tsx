@@ -42,7 +42,7 @@ const HubHero = ({
           "gap-4 p-4 lg:p-8",
           "text-center xl:text-start",
           "xl:rounded",
-          "xl:bg-hub-hero-content",
+          "xl:bg-background/80 xl:dark:bg-background-highlight/80",
           "xl:absolute xl:top-1/2 xl:max-w-sm",
           "xl:-translate-y-1/2 xl:transform",
           "xl:backdrop-blur xl:backdrop-filter",
@@ -67,24 +67,26 @@ const HubHero = ({
 
           <p className="text-lg">{description}</p>
         </Stack>
-        <Stack
-          className={cn(
-            "flex-col gap-4 md:flex-row",
-            "md:justify-center xl:justify-start"
-          )}
-        >
-          {buttons?.map((button, idx) => {
-            if (!button) return
+        {buttons && (
+          <Stack
+            className={cn(
+              "flex-col gap-4 md:flex-row",
+              "md:justify-center xl:justify-start"
+            )}
+          >
+            {buttons?.map((button, idx) => {
+              if (!button) return
 
-            // If it's a React element, render it directly
-            if (typeof button === "object" && "type" in button) {
-              return <div key={idx}>{button as ReactElement<unknown>}</div>
-            }
+              // If it's a React element, render it directly
+              if (typeof button === "object" && "type" in button) {
+                return <div key={idx}>{button as ReactElement<unknown>}</div>
+              }
 
-            // Otherwise, render as button props
-            return <CallToAction key={idx} index={idx} {...button} />
-          })}
-        </Stack>
+              // Otherwise, render as button props
+              return <CallToAction key={idx} index={idx} {...button} />
+            })}
+          </Stack>
+        )}
       </Stack>
     </div>
   )

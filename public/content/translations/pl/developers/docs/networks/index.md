@@ -41,7 +41,6 @@ Dwie publiczne sieci testowe, które są obecnie utrzymywane przez deweloperów 
 **Sepolia to zalecana domyślna sieć testowa do tworzenia aplikacji**. Sieć Sepolia wykorzystuje zestaw walidatorów wymagający zezwolenia, kontrolowany przez zespoły klienckie i testowe.
 
 ##### Zasoby
-
 - [Strona internetowa](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -49,7 +48,6 @@ Dwie publiczne sieci testowe, które są obecnie utrzymywane przez deweloperów 
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Kraniki
-
 - [Kranik Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Kranik Chain Platform Sepolia](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Kranik Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)

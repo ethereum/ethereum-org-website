@@ -49,7 +49,7 @@ Altri tipi includono:
 
 Per ulteriori spiegazioni, dai un'occhiata alla documentazione:
 
-- [Vedi i tipi di Vyper](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [Vedi i tipi di Vyper](https://docs.vyperlang.org/en/stable/types.html#value-types)
 - [Vedi i tipi di Solidity](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### Memoria {#memory}

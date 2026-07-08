@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-videos.json",
-  "generatedAt": "2026-06-16T16:16:07.027Z",
-  "rootHash": "462ff0aa24ca",
+  "generatedAt": "2026-06-29T23:51:47.403Z",
+  "rootHash": "06d97af509ab",
   "tree": {
-    "contentHash": "f85e8231df7e",
-    "anchorHash": "d5c333f8d157",
+    "contentHash": "290a2011da54",
+    "anchorHash": "513c7b6691ba",
     "children": {
       "page-videos-category-all": {
         "contentHash": "a52ace420f21",
@@ -13,6 +13,10 @@
       },
       "page-videos-category-community-stories": {
         "contentHash": "4b892042c3b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-category-events": {
+        "contentHash": "8d14f6e72de8",
         "anchorHash": "e3b0c44298fc"
       },
       "page-videos-category-how-ethereum-works": {
@@ -23,8 +27,8 @@
         "contentHash": "ea523b78ebfa",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-videos-category-privacy-and-security": {
-        "contentHash": "f38d325999eb",
+      "page-videos-category-privacy": {
+        "contentHash": "54a57c3147c4",
         "anchorHash": "e3b0c44298fc"
       },
       "page-videos-category-roadmap-and-priorities": {
@@ -33,6 +37,10 @@
       },
       "page-videos-category-scaling-and-layer-2": {
         "contentHash": "aa88512fdcd9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-videos-category-security": {
+        "contentHash": "8f6fb4eb7f42",
         "anchorHash": "e3b0c44298fc"
       },
       "page-videos-category-use-cases": {
@@ -99,11 +107,13 @@
     "childrenOrder": [
       "page-videos-category-all",
       "page-videos-category-community-stories",
+      "page-videos-category-events",
       "page-videos-category-how-ethereum-works",
       "page-videos-category-network-upgrades",
-      "page-videos-category-privacy-and-security",
+      "page-videos-category-privacy",
       "page-videos-category-roadmap-and-priorities",
       "page-videos-category-scaling-and-layer-2",
+      "page-videos-category-security",
       "page-videos-category-use-cases",
       "page-videos-date-published",
       "page-videos-filter-clear-all",
@@ -121,5 +131,5 @@
       "page-videos-view-transcript"
     ]
   },
-  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

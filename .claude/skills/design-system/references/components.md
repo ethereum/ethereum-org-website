@@ -202,7 +202,7 @@ Layout primitives.
 `Stack` supports a `separator` prop that clones a separator element between children:
 
 ```tsx
-<Stack separator={<Divider />}>{items}</Stack>
+<Stack separator={<HR />}>{items}</Stack>
 ```
 
 ### `LinkBox` / `LinkOverlay`
@@ -325,6 +325,15 @@ import { Tooltip, TooltipContent } from "@/components/ui/tooltip"
 
 Bare hover-only Radix tooltip. Used only inside `@/components/Tooltip`. Use `@/components/Tooltip` instead.
 
+#### Floating surfaces (Popover, Tooltip) -- the `popover-outline` utility + `nested`
+
+Both `PopoverContent` and `TooltipContent` share the `popover-outline` utility (`src/styles/utilities.css`) for their border + elevation. It exists because a plain CSS `border` traces only the content box and **severs the Radix `Arrow`** (a separate SVG outside the box). `popover-outline` instead draws the 1px themed border *and* the lift as a stack of `drop-shadow()` filters, which follow the box + arrow as one shape.
+
+- **Don't add `border`/`box-shadow` back.** Depth must stay inside the same `filter` -- a `box-shadow` halo becomes the filter's input and the border drop-shadows would trace the faded halo edge and vanish. Adjust elevation by editing the utility, not the call site.
+- **No `overflow-hidden` on the content** -- it clips the Arrow.
+- **Shadow color is themed** via `hsla(var(--body), var(--shadow-opacity))`; `--shadow-opacity` (`0.1` light / `0.15` dark) is set inside the utility, so in dark mode the lift is a light halo by design, not a bug.
+- **`nested` prop** (both components, and `@/components/Tooltip`): swaps the surface + arrow fill from `bg-background-highlight` to the base `bg-background`. Pass it when the floating surface opens over a container that is itself `bg-background-highlight` (e.g. a wallet table row on hover) and would otherwise blend in.
+
 ### `DropdownMenu`
 
 ```tsx
@@ -332,6 +341,8 @@ import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, ... } from "@/c
 ```
 
 Many subparts. Note: this file currently uses several stale shadcn class names that don't resolve in this project's tokens (see `gotchas.md`).
+
+`DropdownMenuContent` is capped to `--radix-dropdown-menu-content-available-height` and scrolls (`overflow-y-auto`) by default, so long menus never overflow off-screen on short displays -- don't hand-roll `max-h`/`overflow` on the consumer. Pass `scrollAffordance` for the up/down chevron + fade indicators (instead of a native scrollbar) when content is clipped; the affordance logic lives in `ui/dropdown-menu-scroll-area.tsx`. `ButtonDropdown` is the reference consumer.
 
 ### `Select`
 
@@ -393,6 +404,25 @@ Big variant matrix.
 **`status`**: `normal | tag | success | error | warning | update | accent-a | accent-b | accent-c | primary | tag-green | tag-yellow | tag-red`
 **`variant`**: `subtle | high-contrast | solid | outline`
 **`size`**: `small | medium`
+
+### `TagFilter`
+
+```tsx
+import TagFilter from "@/components/ui/tag-filter"
+```
+
+Controlled, presentational multi-select chip filter built on `TagButton` -- a wrapping chip row with an optional show-more/show-less expander. **Reach for this instead of hand-rolling a `TagButton` row** whenever a page filters a list by tags. Selection and match semantics (AND vs OR) live in the parent; the component only renders chips and reports toggles.
+
+```tsx
+<TagFilter
+  tags={getTagCounts(items, (i) => i.tags)} // [name, count][], caller pre-sorts/filters
+  value={selectedTags}
+  onChange={setSelectedTags}
+  defaultVisible={12} // chips before the expander; selected-but-hidden tags stay pinned-visible
+/>
+```
+
+**Props**: `tags` (`[name, count][]`, rendered as-is), `value` / `onChange` (controlled), `defaultVisible` (cutoff; omit to show all), `showCount` (default `true`, formats via `numberFormat(locale)`), `className`. Pair with `getTagCounts` from `@/lib/utils/tags` to build count-descending entries from any item list.
 
 ### `Alert`
 
@@ -571,13 +601,25 @@ import Spinner from "@/components/ui/spinner"
 
 Wraps `Loader2` from Lucide.
 
-### `Divider` (deprecation track)
+### `HR` (and the deprecated `Divider`)
 
 ```tsx
-import Divider from "@/components/ui/divider"
+import HR from "@/components/ui/hr" // default export
 ```
 
-Project-specific look: `my-16 h-1 w-[10%] bg-primary-high-contrast` purple bar. **Largely deprecated in current usage.** For visual section separation, prefer a border (`border-t border-border` on a subsequent element) over rendering a `<Divider />`. Don't introduce new `Divider` usage; existing uses can be left until a deliberate cleanup.
+The canonical horizontal rule, also wired as the `hr` MDX element. Always carries `my-space-3x` vertical rhythm. Default (no props) is a plain full-width rule. Two optional axes:
+
+- **`variant`**: `narrow` -- the short legacy purple bar (`h-1 w-1/10 bg-primary-high-contrast`). **Deprecated direction** (per design); it exists only to back the `Divider` wrapper. Don't reach for it in new work -- a plain `<HR />` is the going-forward separator.
+- **`position`**: `indent` -- insets both sides by the responsive `page` padding token via `mx-page` (`--spacing-page`, the same `--page-pad` used for page gutters). Use margin (`mx-`), not padding (`px-`): a default `HR` renders its line as the top border, which spans the full border-box and ignores padding -- only margin shortens it. Only for a full-bleed `HR`; skip it when the rule already sits inside a padded section (e.g. a `px-page` `Section`), or you'll double the gutter.
+
+```tsx
+<HR />               // plain full-width rule
+<HR position="indent" /> // inset on both sides by the page gutter
+```
+
+**`Divider` is deprecated** -- a thin `forwardRef` wrapper that renders `<HR variant="narrow" />`, kept only for backward compatibility and exported (named) from the same file: `import { Divider } from "@/components/ui/hr"`. Don't introduce new `Divider` usage; reach for `HR` directly. For plain section separation, a border on a following element (`border-t border-border`) is still lighter than rendering a rule.
+
+> Moved during the MDX-primitive extraction: the old `@/components/ui/divider` file is gone -- both `HR` and `Divider` now live in `@/components/ui/hr`. Siblings `Blockquote` (`@/components/ui/blockquote`) and `KBD` (`@/components/ui/kbd`) were extracted the same way (both default exports, wired as the `blockquote` / `kbd` MDX elements).
 
 ### `Table`
 
@@ -715,10 +757,10 @@ For prominent numeric displays (e.g., "$3000" prize amounts, statistics). Don't 
 ### Heroes -- `@/components/Hero`
 
 ```tsx
-import { HomeHero, HubHero, MdxHero, PageHero } from "@/components/Hero"
+import { HomeHero, HubHero, PageHero } from "@/components/Hero"
 ```
 
-See `canonical-imports.md` for selection.
+See `canonical-imports.md` for selection. (The former `MdxHero` was removed -- use `PageHero` text-only with `variant="no-divider"`.)
 
 ### Banner-named components
 

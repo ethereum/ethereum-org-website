@@ -123,22 +123,6 @@ Ana bölümleri işaretlemek için zaman damgalarına sahip `###` başlıkların
 
 Eğer bir transkriptiniz yoksa, gövdeyi boş bırakabilirsiniz ve ekip bir tane oluşturacaktır.
 
-#### 4. Adım: Konu etiketlerini seçin {#step-4}
-
-Galeride kullanılan mevcut kategorilerle eşleşen konu etiketlerini seçin. Mevcut kategoriler ve etiketleri şunları içerir:
-
-- **Ethereum Nasıl Çalışır**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Ağ Yükseltmeleri**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Yol Haritası ve Öncelikler**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Ölçeklendirme ve Katman 2**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Kullanım Durumları**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Gizlilik ve Güvenlik**: `privacy-and-security`, `privacy`, `authentication`
-- **Topluluk Hikayeleri**: `community-stories`, `contributing`, `translations`, `community`
-
-Videonuzun bir galeri kategori rafında görünmesini sağlamak için en az bir kategori anahtar etiketi (kebab-case formatındaki kalın isim, örn. `use-cases` veya `scaling-and-layer-2`) ekleyin. Tanınan bir kategori etiketi olmayan videolar yalnızca "Tümü" görünümünde ve arama sonuçlarında görünecektir.
-
-Ayrıca yeni etiketler de kullanabilirsiniz; bunlar gelecekteki kategori gruplandırmaları için kullanılabilir olacaktır.
-
 #### 5. Adım: PR'ınızı gönderin {#step-5}
 
 Değişikliklerinizle birlikte `dev` dalına (branch) bir çekme isteği (pull request) açın. Ekip gönderiminizi inceleyecek ve geri bildirim sağlayacaktır.

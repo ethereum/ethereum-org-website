@@ -4,11 +4,15 @@ import a16zCover from "@/public/images/reports/a16z-state-of-crypto-2025.webp"
 import bisCover from "@/public/images/reports/bis-papers-156.webp"
 import quantumCover from "@/public/images/reports/coinbase-quantum-blockchain.webp"
 import consensysCover from "@/public/images/reports/consensys-trustware.webp"
-// import ethereumBasicsCover from "@/public/images/reports/ethereum-basics-governments-institutions.webp"
+import eeaPrivacyCover from "@/public/images/reports/eea-privacy-enterprise.webp"
+import productiveMoneyCover from "@/public/images/reports/etherealize-productive-money.webp"
+import ethereumBasicsCover from "@/public/images/reports/ethereum-basics-governments-institutions.webp"
 import fidelityCoinCover from "@/public/images/reports/fidelity-coin-report-ethereum.webp"
+import galaxyStrawmapCover from "@/public/images/reports/galaxy-strawmap.webp"
 import l2LandscapeCover from "@/public/images/reports/l2-landscape.webp"
 import mckinseyCover from "@/public/images/reports/mckinsey-ripples-to-waves.webp"
 import openzeppelinCover from "@/public/images/reports/openzeppelin-risk-assessment.webp"
+import pseVotingCover from "@/public/images/reports/pse-shutter-private-voting-2026.webp"
 import tdsCover from "@/public/images/reports/trillion-dollar-security-card.webp"
 import twinstakeCover from "@/public/images/reports/twinstake-pectra.webp"
 import whiteHouseCover from "@/public/images/reports/white-house-crypto.webp"
@@ -60,16 +64,16 @@ export type Report = {
  * confirmed substantive. See PR description for the full audit.
  */
 export const reports: Report[] = [
-  // TODO: PDF to be uploaded to /public/reports/ — confirm filename + add fileSizeBytes.
-  // {
-  //   slug: "ethereum-basics-governments-institutions",
-  //   title: "Ethereum Basics for Governments and Institutions",
-  //   publisher: "Ethereum Foundation",
-  //   dateIso: "2026",
-  //   category: "ef-original",
-  //   href: "/reports/ethereum-basics-for-governments-and-institutions.pdf",
-  //   imgSrc: ethereumBasicsCover,
-  // },
+  {
+    slug: "ethereum-basics-governments-institutions",
+    title: "Ethereum Basics for Governments and Institutions",
+    publisher: "Ethereum Foundation",
+    dateIso: "2026-06-30",
+    category: "ef-original",
+    href: "/reports/basics-for-governments-institutions.pdf",
+    imgSrc: ethereumBasicsCover,
+    fileSizeBytes: 1364988,
+  },
   {
     slug: "trillion-dollar-security",
     title: "Trillion Dollar Security",
@@ -79,6 +83,15 @@ export const reports: Report[] = [
     href: "/reports/trillion-dollar-security/",
     internal: true,
     imgSrc: tdsCover,
+  },
+  {
+    slug: "galaxy-mapping-the-strawmap",
+    title: "Mapping the Strawmap: Ethereum's Big Course Correction",
+    publisher: "Galaxy Research",
+    dateIso: "2026-05-12",
+    category: "crypto-native",
+    href: "https://www.galaxy.com/insights/research/ethereum-strawmap-roadmap-l1-scaling-analysis",
+    imgSrc: galaxyStrawmapCover,
   },
   {
     slug: "openzeppelin-blockchain-network-risk-assessment",
@@ -102,6 +115,25 @@ export const reports: Report[] = [
     fileSizeBytes: 434102,
   },
   {
+    slug: "etherealize-productive-money",
+    title: "Ethereum and the Era of Productive Money",
+    publisher: "Etherealize Research",
+    dateIso: "2026-04-14",
+    category: "crypto-native",
+    href: "https://www.productivemoney.org/productivemoney.pdf",
+    imgSrc: productiveMoneyCover,
+    fileSizeBytes: 3482659,
+  },
+  {
+    slug: "eea-state-of-privacy-enterprise",
+    title: "State of Privacy on Ethereum for Enterprise",
+    publisher: "Enterprise Ethereum Alliance",
+    dateIso: "2026-05-12",
+    category: "crypto-native",
+    href: "https://entethalliance.github.io/wg-privacy/privacy-report.html",
+    imgSrc: eeaPrivacyCover,
+  },
+  {
     slug: "a16z-state-of-crypto-2025",
     title: "State of Crypto Report 2025",
     publisher: "a16z crypto",
@@ -121,6 +153,16 @@ export const reports: Report[] = [
     href: "https://cdn.prod.website-files.com/6728e9076a3b5a8ca8ec4816/6931c20f55129e498a8da223_%5BCompressed%5D%20L2s%20Report.pdf",
     imgSrc: l2LandscapeCover,
     fileSizeBytes: 6953384,
+  },
+  {
+    slug: "pse-shutter-state-of-private-voting-2026",
+    title: "State of Private Voting 2026",
+    publisher: "Privacy Stewards of Ethereum (PSE) and Shutter",
+    dateIso: "2025-11-12",
+    category: "crypto-native",
+    href: "https://pse.dev/articles/state-of-private-voting-2026/state-of-private-voting-2026-v2.pdf",
+    imgSrc: pseVotingCover,
+    fileSizeBytes: 5600739,
   },
   {
     slug: "fidelity-coin-report-ethereum",

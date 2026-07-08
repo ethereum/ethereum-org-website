@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/tutorials/hello-world-smart-contract/index.md",
-  "generatedAt": "2026-06-19T22:51:40.263Z",
-  "rootHash": "5f7e798b8d13",
+  "generatedAt": "2026-06-30T00:41:16.261Z",
+  "rootHash": "7e9f07b08672",
   "tree": {
-    "contentHash": "8c79dc99d08c",
-    "anchorHash": "83d80869a74a",
+    "contentHash": "098d94d68663",
+    "anchorHash": "2cb552c024dc",
     "children": {
       "frontmatter:title": {
         "contentHash": "1c6c5c2b5d0c",
@@ -77,7 +77,7 @@
       },
       "link:4": {
         "contentHash": "427755e659b3",
-        "anchorHash": "b29e0c32dd12"
+        "anchorHash": "4914cf55b8a5"
       },
       "prose:12": {
         "contentHash": "8daa102901a2",
@@ -85,7 +85,7 @@
       },
       "link:5": {
         "contentHash": "085352cbc2ab",
-        "anchorHash": "e8debd578996"
+        "anchorHash": "83c9e9d7d18f"
       },
       "prose:13": {
         "contentHash": "a1d599c93750",
@@ -306,8 +306,8 @@
         ]
       },
       "step-6": {
-        "contentHash": "c9b9558f7160",
-        "anchorHash": "967a7c95b26e",
+        "contentHash": "82aed47f9822",
+        "anchorHash": "276971495da4",
         "labelHash": "b1c3d2d5796c",
         "children": {
           "_label": {
@@ -335,11 +335,11 @@
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
-            "contentHash": "7cb212791b2b",
-            "anchorHash": "5b28cf787d9a"
+            "contentHash": "4a5face54e26",
+            "anchorHash": "6f1666522a9e"
           },
           "prose:4": {
-            "contentHash": "c7e1aa23d350",
+            "contentHash": "adad7c82373d",
             "anchorHash": "e3b0c44298fc"
           },
           "code-fence:8": {
@@ -1025,7 +1025,7 @@
       },
       "step-16-deploy-our-contract": {
         "contentHash": "d5805dea3fa5",
-        "anchorHash": "c37864b1c662",
+        "anchorHash": "e0173f7ead3f",
         "labelHash": "1a3185ef12f2",
         "children": {
           "_label": {
@@ -1090,7 +1090,7 @@
           },
           "link:5": {
             "contentHash": "88639368f8fc",
-            "anchorHash": "b806af7bf126"
+            "anchorHash": "4198c4d7a2fd"
           },
           "prose:22": {
             "contentHash": "741582e1bd30",
@@ -1114,7 +1114,7 @@
           },
           "link:8": {
             "contentHash": "55cca2ec77e2",
-            "anchorHash": "3ffc7bff9ffb"
+            "anchorHash": "99229f849e92"
           },
           "prose:25": {
             "contentHash": "0f142b84c6c6",
@@ -1122,7 +1122,7 @@
           },
           "link:9": {
             "contentHash": "bf2ba3b2d72f",
-            "anchorHash": "63cbddc4ac52"
+            "anchorHash": "ed2d017d1c27"
           },
           "prose:26": {
             "contentHash": "b40d3e2db852",
@@ -1138,7 +1138,7 @@
           },
           "link:11": {
             "contentHash": "377ed9e4a973",
-            "anchorHash": "68afdec73d52"
+            "anchorHash": "4914cf55b8a5"
           },
           "prose:28": {
             "contentHash": "85bbd69cfe49",
@@ -1146,7 +1146,7 @@
           },
           "link:12": {
             "contentHash": "786952044221",
-            "anchorHash": "e8debd578996"
+            "anchorHash": "83c9e9d7d18f"
           },
           "prose:29": {
             "contentHash": "6f67008f9e05",
@@ -1261,5 +1261,5 @@
       "step-16-deploy-our-contract"
     ]
   },
-  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

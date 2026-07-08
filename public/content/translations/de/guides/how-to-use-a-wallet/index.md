@@ -1,7 +1,7 @@
 ---
 title: Wie man eine Wallet verwendet
-metaTitle: Wie man Ethereum-Wallets verwendet | Schritt für Schritt
-description: Ein Leitfaden, der erklärt, wie man Token sendet, empfängt und sich mit Web3-Projekten verbindet.
+metaTitle: "Wie man Ethereum-Wallets verwendet | Schritt für Schritt"
+description: "Ein Leitfaden, der erklärt, wie man Token sendet, empfängt und sich mit Web3-Projekten verbindet."
 lang: de
 ---
 

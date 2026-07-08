@@ -63,7 +63,7 @@ _Catatan: karena kepadatan jaringan, ini mungkin memakan waktu beberapa saat._
 
 ### Langkah 5: Periksa Saldo Anda {#step-5-check-your-balance}
 
-Untuk memastikan kembali bahwa ETH ada di dompet Anda, mari kita buat permintaan [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) menggunakan [alat komposer Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Ini akan mengembalikan jumlah ETH di dompet kita. Untuk mempelajari lebih lanjut, lihat [tutorial singkat Alchemy tentang cara menggunakan alat komposer](https://youtu.be/r6sjRxBZJuU).
+Untuk memeriksa kembali apakah ETH ada di dompet Anda, mari kita buat permintaan [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) menggunakan [alat sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Ini akan mengembalikan jumlah ETH di dompet kita. Untuk mempelajari lebih lanjut, lihat [tutorial singkat Alchemy tentang cara menggunakan alat komposer](https://youtu.be/r6sjRxBZJuU).
 
 Masukkan alamat akun MetaMask Anda dan klik **Send Request**. Anda akan melihat respons yang terlihat seperti cuplikan kode di bawah ini.
 
@@ -74,7 +74,6 @@ Masukkan alamat akun MetaMask Anda dan klik **Send Request**. Anda akan melihat 
 > _Catatan: Hasil ini dalam wei, bukan ETH. Wei digunakan sebagai denominasi terkecil dari ether._
 
 Fiuh! Uang palsu kita semuanya ada di sana.
-
 ### Langkah 6: Inisialisasi proyek kita {#step-6-initialize-our-project}
 
 Pertama, kita perlu membuat folder untuk proyek kita. Navigasikan ke baris perintah Anda dan masukkan yang berikut ini.
@@ -86,7 +85,7 @@ cd hello-world
 
 Sekarang setelah kita berada di dalam folder proyek kita, kita akan menggunakan `npm init` untuk menginisialisasi proyek.
 
-> Jika Anda belum menginstal npm, ikuti [petunjuk ini untuk menginstal Node.js dan npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
+> Jika Anda belum menginstal npm, ikuti [petunjuk penginstalan Node.js](https://nodejs.org/en/download/) untuk menginstal Node.js dan npm.
 
 Untuk tujuan tutorial ini, tidak masalah bagaimana Anda menjawab pertanyaan inisialisasi. Berikut adalah cara kami melakukannya sebagai referensi:
 
@@ -117,7 +116,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 Setujui package.json dan kita siap untuk melanjutkan!
-
 ### Langkah 7: Unduh Hardhat {#step-7-download-hardhat}
 
 Hardhat adalah lingkungan pengembangan untuk mengompilasi, menyebarkan, menguji, dan men-debug perangkat lunak Ethereum Anda. Ini membantu pengembang saat membangun kontrak pintar dan aplikasi terdesentralisasi (dapp) secara lokal sebelum menyebarkannya ke rantai langsung.
@@ -225,7 +223,7 @@ Kita telah membuat dompet MetaMask, akun Alchemy, dan menulis kontrak pintar kit
 
 Setiap transaksi yang dikirim dari dompet Anda memerlukan tanda tangan menggunakan kunci privat unik Anda. Untuk memberikan izin ini kepada program kita, kita dapat menyimpan kunci privat kita dengan aman di file lingkungan (environment file). Kita juga akan menyimpan kunci API untuk Alchemy di sini.
 
-> Untuk mempelajari lebih lanjut tentang mengirim transaksi, lihat [tutorial ini](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) tentang mengirim transaksi menggunakan Web3.
+> Untuk mempelajari lebih lanjut tentang mengirim transaksi, lihat [tutorial ini](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) tentang mengirim transaksi menggunakan Web3.
 
 Pertama, instal paket dotenv di direktori proyek Anda:
 
@@ -255,7 +253,7 @@ Untuk benar-benar menghubungkan ini ke kode kita, kita akan mereferensikan varia
 
 ### Langkah 12: Instal Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js adalah pustaka yang memudahkan untuk berinteraksi dan membuat permintaan ke Ethereum dengan membungkus [metode JSON-RPC standar](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) dengan metode yang lebih ramah pengguna.
+Ethers.js adalah pustaka yang memudahkan untuk berinteraksi dan membuat permintaan ke Ethereum dengan membungkus [metode JSON-RPC standar](/developers/docs/apis/json-rpc/) dengan metode yang lebih ramah pengguna.
 
 Hardhat memungkinkan kita untuk mengintegrasikan [plugin](https://hardhat.org/plugins/) untuk perkakas tambahan dan fungsionalitas yang diperluas. Kita akan memanfaatkan [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) untuk penyebaran kontrak.
 
@@ -314,7 +312,7 @@ Navigasikan ke folder `scripts/` dan buat file baru bernama `deploy.js` , lalu t
 
 ```javascript
 async function main() {
-  const HelloWorld = await ethers.getKontrakFactory("HelloWorld")
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
   // Mulai penyebaran, mengembalikan promise yang menghasilkan objek kontrak
   const hello_world = await HelloWorld.deploy("Hello World!")
@@ -373,7 +371,7 @@ Untuk memahami bagaimana cara kerjanya secara teknis, mari navigasikan ke tab Ex
 
 ![](./hello-world-explorer.png)
 
-Di sini Anda akan melihat beberapa metode JSON-RPC yang dibuat oleh Hardhat/Ethers di balik layar untuk kita saat kita memanggil fungsi `.deploy()`. Dua metode penting di sini adalah [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), yang merupakan permintaan untuk menulis kontrak kita ke rantai Goerli, dan [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), yang merupakan permintaan untuk membaca informasi tentang transaksi kita berdasarkan hash-nya. Untuk mempelajari lebih lanjut tentang mengirim transaksi, lihat [tutorial kami tentang mengirim transaksi menggunakan Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Di sini Anda akan melihat beberapa metode JSON-RPC yang dibuat oleh Hardhat/Ethers di balik layar untuk kita saat kita memanggil fungsi `.deploy()`. Dua metode penting di sini adalah [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), yang merupakan permintaan untuk menulis kontrak kita ke rantai Goerli, dan [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), yang merupakan permintaan untuk membaca informasi tentang transaksi kita berdasarkan hash-nya. Untuk mempelajari lebih lanjut tentang mengirim transaksi, lihat [tutorial kami tentang mengirim transaksi menggunakan Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 ## Bagian 2: Berinteraksi dengan Kontrak Pintar Anda {#part-2-interact-with-your-smart-contract}
 
@@ -486,7 +484,7 @@ main()
 Setelah menjalankan file menggunakan `npx hardhat run scripts/interact.js` di terminal, kita akan melihat respons ini:
 
 ```
-Pesan tersebut adalah: Hello world!
+The message is: Hello world!
 ```
 
 Selamat! Anda baru saja berhasil membaca data kontrak pintar dari rantai blok Ethereum, kerja bagus!
@@ -566,12 +564,12 @@ Sekarang jalankan saja skripnya dan Anda seharusnya dapat melihat pesan lama, st
 `npx hardhat run scripts/interact.js --network goerli`
 
 ```
-Pesan tersebut adalah: Hello World!
-Memperbarui pesan...
-Pesan baru tersebut adalah: This is the new message.
+The message is: Hello World!
+Updating the message...
+The new message is: This is the new message.
 ```
 
-Saat menjalankan skrip tersebut, Anda mungkin menyadari bahwa langkah `Updating the message...` membutuhkan waktu beberapa saat untuk dimuat sebelum pesan baru dimuat. Hal itu disebabkan oleh proses penambangan; jika Anda penasaran tentang pelacakan transaksi saat sedang ditambang, kunjungi [mempool Alchemy](https://dashboard.alchemyapi.io/mempool) untuk melihat status transaksi. Jika transaksi dibatalkan, ada baiknya juga untuk memeriksa [Etherscan Goerli](https://goerli.etherscan.io) dan mencari hash transaksi Anda.
+Saat menjalankan skrip tersebut, Anda mungkin menyadari bahwa langkah `Updating the message...` membutuhkan waktu beberapa saat untuk dimuat sebelum pesan baru dimuat. Hal itu disebabkan oleh proses penambangan; jika Anda penasaran tentang pelacakan transaksi saat sedang ditambang, kunjungi [mempool Alchemy](https://dashboard.alchemy.com/mempool) untuk melihat status transaksi. Jika transaksi dibatalkan, ada baiknya juga untuk memeriksa [Etherscan Goerli](https://goerli.etherscan.io) dan mencari hash transaksi Anda.
 
 ## Bagian 3: Publikasikan Kontrak Pintar Anda ke Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -679,7 +677,7 @@ Saat Anda menavigasi ke tautan yang disediakan di terminal Anda, Anda seharusnya
 Pada akhir tutorial ini, Anda akan mengetahui cara:
 
 - Menghubungkan dompet MetaMask ke aplikasi terdesentralisasi (dapp) Anda
-- Membaca data dari kontrak pintar Anda menggunakan API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Membaca data dari kontrak pintar Anda menggunakan API [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Menandatangani transaksi Ethereum menggunakan MetaMask
 
 Untuk dapp ini, kita akan menggunakan [React](https://react.dev/) sebagai kerangka kerja frontend kita; namun, penting untuk dicatat bahwa kita tidak akan menghabiskan banyak waktu untuk menguraikan dasar-dasarnya, karena kita sebagian besar akan berfokus pada membawa fungsionalitas Web3 ke proyek kita.
@@ -902,15 +900,15 @@ Ini mungkin terdengar seperti banyak langkah, tetapi jangan khawatir! Kami akan 
 
 #### Membangun koneksi API ke rantai Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
 
-Jadi ingat bagaimana di Bagian 2 dari tutorial ini, kita menggunakan [kunci Alchemy Web3 kita untuk membaca dari kontrak pintar kita](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? Anda juga akan memerlukan kunci Alchemy Web3 di dapp Anda untuk membaca dari rantai.
+Jadi, ingatkah Anda bagaimana di Bagian 2 dari tutorial ini, kita menggunakan kunci Alchemy Web3 kita untuk membaca dari kontrak pintar kita? Anda juga akan memerlukan kunci Alchemy Web3 di dapp Anda untuk membaca dari rantai.
 
-Jika Anda belum memilikinya, pertama-tama instal [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) dengan menavigasi ke direktori root dari `starter-files` Anda dan menjalankan yang berikut ini di terminal Anda:
+Jika Anda belum memilikinya, pertama-tama instal [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) dengan menavigasi ke direktori akar `starter-files` Anda dan menjalankan perintah berikut di terminal Anda:
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) adalah pembungkus di sekitar [Web3.js](https://docs.web3js.org/), yang menyediakan metode API yang ditingkatkan dan manfaat penting lainnya untuk membuat hidup Anda sebagai pengembang Web3 lebih mudah. Ini dirancang untuk memerlukan konfigurasi minimal sehingga Anda dapat mulai menggunakannya di aplikasi Anda segera!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) adalah pembungkus di sekitar [Web3.js](https://docs.web3js.org/), yang menyediakan metode API yang ditingkatkan dan manfaat penting lainnya untuk membuat hidup Anda sebagai pengembang Web3 menjadi lebih mudah. Ini dirancang untuk memerlukan konfigurasi minimal sehingga Anda dapat mulai menggunakannya di aplikasi Anda segera!
 
 Kemudian, instal paket [dotenv](https://www.npmjs.com/package/dotenv) di direktori proyek Anda, sehingga kita memiliki tempat yang aman untuk menyimpan kunci API kita setelah kita mengambilnya.
 
@@ -920,13 +918,13 @@ npm install dotenv --save
 
 Untuk dapp kita, **kita akan menggunakan kunci API Websockets kita** alih-alih kunci API HTTP kita, karena ini akan memungkinkan kita untuk menyiapkan pendengar yang mendeteksi ketika pesan yang disimpan di kontrak pintar berubah.
 
-Setelah Anda memiliki kunci API Anda, buat file `.env` di direktori root Anda dan tambahkan url Alchemy Websockets Anda ke dalamnya. Setelah itu, file `.env` Anda akan terlihat seperti ini:
+Setelah Anda memiliki kunci API Anda, buat file `.env` di direktori akar Anda dan tambahkan url Alchemy Websockets Anda ke dalamnya. Setelah itu, file `.env` Anda akan terlihat seperti ini:
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<kunci>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-Sekarang, kita siap untuk menyiapkan titik akhir Alchemy Web3 kita di dapp kita! Mari kita kembali ke `interact.js` kita, yang bersarang di dalam folder `util` kita dan tambahkan kode berikut di bagian atas file:
+Sekarang, kita siap untuk menyiapkan titik akhir Alchemy Web3 kita di dapp kita! Mari kembali ke `interact.js` kita, yang bersarang di dalam folder `util` kita dan tambahkan kode berikut di bagian atas file:
 
 ```javascript
 // interact.js
@@ -942,7 +940,6 @@ const web3 = createAlchemyWeb3(alchemyKey)
 Di atas, pertama-tama kita mengimpor kunci Alchemy dari file `.env` kita dan kemudian meneruskan `alchemyKey` kita ke `createAlchemyWeb3` untuk membangun titik akhir Alchemy Web3 kita.
 
 Dengan titik akhir ini siap, saatnya untuk memuat kontrak pintar kita!
-
 #### Memuat kontrak pintar Hello World Anda {#loading-your-hello-world-smart-contract}
 
 Untuk memuat kontrak pintar Hello World Anda, Anda akan memerlukan alamat kontrak dan ABI-nya, yang keduanya dapat ditemukan di Etherscan jika Anda menyelesaikan [Bagian 3 dari tutorial ini.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
@@ -1034,7 +1031,7 @@ Sekarang berbicara tentang pendengar itu...
 
 #### Implementasikan `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-Jika Anda mengingat kembali file `HelloWorld.sol` yang kita tulis di [Bagian 1 dari seri tutorial ini](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), Anda akan ingat bahwa ada peristiwa kontrak pintar yang disebut `UpdatedMessages` yang dipancarkan setelah fungsi `update` kontrak pintar kita dipanggil \(lihat baris 9 dan 27\):
+Jika Anda mengingat kembali file `HelloWorld.sol` yang kita tulis di [Bagian 1 dari seri tutorial ini](#step-10-write-our-contract), Anda akan ingat bahwa ada peristiwa kontrak pintar yang disebut `UpdatedMessages` yang dipancarkan setelah fungsi `update` kontrak pintar kita dipanggil \(lihat baris 9 dan 27\):
 
 ```javascript
 // HelloWorld.sol
@@ -1131,16 +1128,15 @@ Untuk menandatangani transaksi di rantai blok Ethereum, kita akan membutuhkan be
 
 #### Periksa Saldo Anda {#check-your-balance}
 
-Untuk memeriksa ulang apakah saldo kita ada di sana, mari kita buat permintaan [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) menggunakan [alat komposer Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Ini akan mengembalikan jumlah ETH di dompet kita. Setelah Anda memasukkan alamat akun MetaMask Anda dan mengklik "Send Request", Anda akan melihat respons seperti ini:
+Untuk memeriksa ulang apakah saldo kita ada, mari buat permintaan [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) menggunakan [alat sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Ini akan mengembalikan jumlah ETH di dompet kita. Setelah Anda memasukkan alamat akun MetaMask Anda dan mengeklik “Send Request”, Anda akan melihat respons seperti ini:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**CATATAN:** Hasil ini dalam wei, bukan ETH. Wei digunakan sebagai denominasi terkecil dari Ether. Konversi dari wei ke ETH adalah: 1 ETH = 10¹⁸ wei. Jadi jika kita mengonversi 0xde0b6b3a7640000 ke desimal, kita mendapatkan 1\*10¹⁸ yang sama dengan 1 ETH.
+**CATATAN:** Hasil ini dalam bentuk wei, bukan ETH. Wei digunakan sebagai denominasi terkecil dari ether. Konversi dari wei ke ETH adalah: 1 ETH = 10¹⁸ wei. Jadi, jika kita mengubah 0xde0b6b3a7640000 menjadi desimal, kita mendapatkan 1\*10¹⁸ yang sama dengan 1 ETH.
 
-Fiuh! Uang palsu kita semuanya ada di sana! 🤑
-
+Fiuh! Uang palsu kita sudah masuk semua! 🤑
 ### Langkah 5: Hubungkan MetaMask ke UI Anda {#step-5-connect-metamask-to-your-ui}
 
 Sekarang setelah dompet MetaMask kita disiapkan, mari kita hubungkan dapp kita ke sana!
@@ -1539,7 +1535,7 @@ Silakan dan uji tombol **Update**!
 Wooooo, Anda berhasil mencapai akhir tutorial! Sebagai rekap, Anda telah mempelajari cara:
 
 - Menghubungkan dompet MetaMask ke proyek dapp Anda
-- Membaca data dari kontrak pintar Anda menggunakan API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
+- Membaca data dari kontrak pintar Anda menggunakan API [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)
 - Menandatangani transaksi Ethereum menggunakan MetaMask
 
 Sekarang Anda sepenuhnya siap untuk menerapkan keterampilan dari tutorial ini untuk membangun proyek dapp kustom Anda sendiri! Seperti biasa, jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi kami untuk mendapatkan bantuan di [Discord Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️

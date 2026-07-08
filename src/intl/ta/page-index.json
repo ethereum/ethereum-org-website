@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "எத்திரியம் - Ethereum.org வழங்கும் முழுமையான வழிகாட்டி",
+  "page-index-meta-title": "எத்திரியம் - ethereum.org வழங்கும் முழுமையான வழிகாட்டி",
   "page-index-meta-description": "எத்திரியம் என்பது பணம் மற்றும் புதிய வகையான பயன்பாடுகளுக்கான உலகளாவிய, பரவலாக்கப்பட்ட தளமாகும். எத்திரியத்தில், உங்கள் சொந்த பணம், தரவு மற்றும் அடையாளத்தை நீங்களே கட்டுப்படுத்துகிறீர்கள். வங்கி இல்லை, இடைத்தரகர் இல்லை, எந்த அனுமதியும் தேவையில்லை.",
   "page-index-description": "புதுமையான பயன்பாடுகள் மற்றும் தொகுதிச்சங்கிலி பிணையங்களுக்கான முன்னணி தளம்",
   "page-index-title": "எத்திரியத்திற்கு வரவேற்கிறோம்",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "எத்திரியம் பயன்பாடுகள்",
   "page-index-carousel-privacy-ethereum-value": "இயல்பாகவே தனியுரிமையானது",
   "page-index-carousel-remittances-tag": "எல்லை தாண்டிய கொடுப்பனவுகள்",
-  "page-index-carousel-remittances-title": "{minutes} நிமிடங்களில் வீட்டிற்குப் பணம் அனுப்புங்கள்",
+  "page-index-carousel-remittances-title": "{seconds} வினாடிகளில் வீட்டிற்குப் பணம் அனுப்புங்கள்",
   "page-index-carousel-remittances-subtitle": "{wireFee} கம்பிப் பரிமாற்றக் கட்டணம் மற்றும் {days}+ நாட்கள் காத்திருப்பைத் தவிர்க்கவும்.",
   "page-index-carousel-remittances-description": "உலகில் எங்கும், யாருக்கும் வெறும் {txFee} கட்டணத்தில் <stablecoinsLink>நிலையான நாணயங்களை (stablecoins)</stablecoinsLink> அனுப்புங்கள். அவர்கள் நிதியை உடனடியாகப் பெறுவார்கள்.",
   "page-index-carousel-remittances-cta": "நீங்களே முயன்று பாருங்கள்",
   "page-index-carousel-remittances-traditional-label": "கம்பிப் பரிமாற்றம் (WIRE TRANSFER)",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} நாட்கள்",
   "page-index-carousel-remittances-ethereum-label": "எத்திரியம்",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} நிமிடங்கள்",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} வினாடிகள்",
   "page-index-carousel-borrowing-tag": "நிதி அணுகல்",
   "page-index-carousel-borrowing-title": "கடன் வரலாறு இல்லாமல் கடன் வாங்குதல்",
   "page-index-carousel-borrowing-subtitle": "தொடங்குவதற்கு உங்களுக்கு கடன் மதிப்பெண் (credit score) தேவையில்லை.",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "தனியார் மற்றும் அனுமதிக்குட்பட்ட பிணையங்கள்",
   "page-index-get-started-enterprise-bullet-3": "நிறுவன ஆதாரங்கள்",
   "page-index-get-started-enterprise-cta": "நிறுவனப் பயன்பாடுகளை ஆராயுங்கள்",
-  "page-index-simulator-cta": "மேலும் வழிகாட்டிகளை முயன்று பாருங்கள்"
+  "page-index-simulator-cta": "மேலும் வழிகாட்டிகளை முயன்று பாருங்கள்",
+  "page-index-latest-updates-title": "சமீபத்திய எத்திரியம் புதுப்பிப்புகள்",
+  "page-index-latest-updates-cta": "மேலும் காண்க"
 }

@@ -36,25 +36,22 @@ Ne. Žádný kvantový počítač dnes nedokáže prolomit kryptografii Etherea.
 
 </ExpandableCard>
 
-### Co se s tím dělá? {#what-is-being-done}
-
 Ethereum je v současnosti nejproaktivnějším obráncem proti kvantovým hrozbám v blockchainovém ekosystému. Nadace Ethereum vytvořila v lednu 2026 specializovaný **tým pro postkvantovou bezpečnost** a aktivní práce probíhá napříč mnoha týmy klientů a výzkumnými skupinami. Práce postkvantového týmu Nadace Ethereum je veřejně sledována na [pq.ethereum.org](https://pq.ethereum.org).
 
 Aktivní práce zahrnuje:
 
-- **Podpisy založené na hashi (leanXMSS)**: Náhrada za podpisy validátorů bezpečná proti kvantovým počítačům, postavená na hashovacích funkcích, které kvantové počítače nedokážou efektivně prolomit.
-- **Minimální zkVM (leanVM)**: Protože jsou podpisy bezpečné proti kvantovým počítačům větší než v současnosti používané podpisy, je leanXMSS spárován s minimálním zkVM (leanVM). Tento engine efektivně agreguje podpisy bezpečné proti kvantovým počítačům a komprimuje data 250krát, takže síť zůstane i po přechodu rychlá.
+- **Podpisy založené na hashi (leanXMSS)**: Náhrada podpisů validátorů bezpečná proti kvantovým počítačům, postavená na hashovacích funkcích, které kvantové počítače nedokážou efektivně prolomit.
+- **Minimální zkVM (leanVM)**: Protože podpisy bezpečné proti kvantovým počítačům jsou větší než v současnosti používané podpisy, je leanXMSS spárován s minimálním zkVM (leanVM). Tento engine efektivně agreguje podpisy bezpečné proti kvantovým počítačům a komprimuje data 250krát, takže síť zůstane po přechodu rychlá.
 - **Týdenní testování interoperability**: Více než 10 týmů klientů se účastní pravidelných postkvantových devnetů.
-- **Dostupnost dat:** Upgrade základní kryptografie používané ke zpracování velkého množství síťových dat zajistí, že Ethereum zůstane rychlé a cenově dostupné, aniž by riskovalo budoucí kvantové zranitelnosti.
-- **Cena Poseidon**: Výzkumná cena ve výši 1 milionu dolarů zaměřená na vylepšení kryptografických primitiv založených na hashi.
-- **Standardy NIST**: Americký Národní institut standardů a technologie (NIST) dokončil v srpnu 2024 tři standardy postkvantové kryptografie (ML-KEM, ML-DSA, SLH-DSA). Práce Etherea staví na těchto základech.
+- **Dostupnost dat:** Upgrade základní kryptografie používané ke zpracování velkého množství síťových dat zajistí, že Ethereum zůstane rychlé a cenově dostupné, aniž by hrozila budoucí kvantová zranitelnost.
+- **Poseidon Prize**: Výzkumná cena ve výši 1 milionu dolarů zaměřená na vylepšení kryptografických primitiv založených na hashi.
+- **Standardy NIST**: Americký Národní institut standardů a technologie (NIST) v srpnu 2024 finalizoval tři standardy postkvantové kryptografie (ML-KEM, ML-DSA, SLH-DSA). Práce na Ethereu staví na těchto základech.
 
-Klíčovou součástí strategie přechodu je **EIP-8141**, který zavádí nativní [abstrakci účtu](/roadmap/account-abstraction/). To umožňuje jednotlivým účtům zvolit si vlastní ověření podpisu, což znamená, že by uživatelé mohli přejít na podpisy bezpečné proti kvantovým počítačům, **aniž by museli čekat na jedinou migraci v rámci celého protokolu**. O EIP-8141 se uvažuje pro hard fork Hegotá (plánovaný na druhou polovinu roku 2026).
+Klíčovou součástí strategie přechodu je **EIP-8141**, který zavádí nativní [abstrakci účtu](/roadmap/account-abstraction/). To umožňuje jednotlivým účtům zvolit si vlastní ověřování podpisů, což znamená, že uživatelé by mohli přejít na podpisy bezpečné proti kvantovým počítačům, **aniž by museli čekat na jedinou migraci v rámci celého protokolu**. O EIP-8141 se uvažuje pro hard fork Hegotá (plánovaný na druhou polovinu roku 2026).
 
-Nadace Ethereum nastínila strukturované milníky forků, jejichž cílem je dokončení základní postkvantové infrastruktury přibližně do roku 2029. Jedná se o plánované cíle, nikoli o zaručené závazky.
+Nadace Ethereum nastínila strukturované milníky forků s cílem dokončit základní postkvantovou infrastrukturu přibližně do roku 2029. Jedná se o plánované cíle, nikoli o zaručené závazky.
 
-[Přečtěte si našeho podrobného průvodce postkvantovou kryptografií na Ethereu](/roadmap/future-proofing/quantum-resistance/)
-
+<ButtonLink variant="outline" href="/roadmap/future-proofing/quantum-resistance/">Více o odolnosti vůči kvantovým počítačům</ButtonLink>
 ## Jednodušší a efektivnější Ethereum {#simpler-more-efficient-ethereum}
 
 Složitost vytváří příležitosti pro chyby a zranitelnosti. Část plánu vývoje se zaměřuje na **zjednodušení Etherea a odstranění technického dluhu**, aby bylo snazší protokol udržovat, auditovat a logicky analyzovat.

@@ -1,6 +1,6 @@
 ---
-title: Как я могу принять участие?
-description: Как принять участие в жизни сообщества Эфириума.
+title: "Как я могу принять участие?"
+description: "Как принять участие в жизни сообщества Эфириума."
 lang: ru
 ---
 
@@ -11,7 +11,7 @@ lang: ru
 ## Разработчики <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Узнайте больше об Эфириуме и попробуйте его в деле на [ethereum.org/developers/](/developers/)
-- Посетите хакатон [ETHGlobal](https://ethglobal.co/) рядом с вами!
+- Посетите хакатон [ETHGlobal](https://ethglobal.com/) рядом с вами!
 - Ознакомьтесь с [проектами, связанными с вашей областью знаний или предпочитаемым языком программирования](/developers/docs/programming-languages/)
 - Смотрите или участвуйте в [созвонах, посвященных консенсусу и уровню исполнения](https://www.youtube.com/@EthereumProtocol/streams)
 - [Список пожеланий Программы поддержки экосистемы (Ecosystem Support Program)](https://esp.ethereum.foundation/wishlist/) — инструменты, документация и инфраструктура, для которых Программа поддержки экосистемы Эфириума активно ищет заявки на гранты
@@ -80,7 +80,7 @@ lang: ru
 
 Экосистема Эфириума стремится финансировать общественные блага и значимые проекты. С помощью даже очень небольших пожертвований вы можете выразить свою поддержку и позволить реализовать важную работу.
 
-- [Gitcoin](https://gitcoin.co/fund)
+- [Gitcoin](https://grants.gitcoin.co/)
 - [clr.fund](https://clr.fund/#/about)
 
 ## Финансовые специалисты и бухгалтеры <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}

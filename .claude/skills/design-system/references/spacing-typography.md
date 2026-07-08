@@ -50,11 +50,11 @@ Don't go from `<h2>` to `<h4>`. Screen reader users navigate by heading level, a
 ### Hero "title" vs "header"
 
 `Hero/*` components use:
-- `header` -- a small uppercase eyebrow, rendered as `<h1>` (intentional in `HubHero` and `PageHero`). In `PageHero`, supplying `header` demotes `title` to `<h2>`, so the eyebrow is the page `<h1>`.
-- `title` -- the visible large title (the `<h1>` when no `header` eyebrow is passed)
+- `title` -- the visible large title. In `PageHero` this is **always** the page `<h1>`.
 - `description` -- the lead paragraph
+- `header` (`HubHero` only) -- a small uppercase eyebrow rendered as `<h1>`. `PageHero` has **no** `header` prop (it was removed; `title` is the `<h1>`).
 
-In `PageHero` the eyebrow slot is a discriminated union: pass **either** `breadcrumbs` (a `{ slug }` object or a custom `<Breadcrumb>` element) **or** `header` -- not both. Don't conflate these fields. See `references/page-hero-walkthrough.md`.
+In `PageHero`, `breadcrumbs` fills the slot above the title (a `{ slug }` object or a custom `<Breadcrumb>` element), and an optional `eyebrow` (`ReactNode`) renders between the breadcrumbs and the title for a status indicator/tag. The hero aside is a discriminated union: `heroImg` **or** `heroComponent`, never both. See `references/page-hero-walkthrough.md`.
 
 ### Markdown page titles
 
@@ -155,7 +155,7 @@ import { Stack } from "@/components/ui/flex"
 `Stack` defaults to `flex flex-col gap-2`. It also has a `separator` prop:
 
 ```tsx
-<Stack separator={<Divider />}>{items}</Stack>
+<Stack separator={<HR />}>{items}</Stack>
 ```
 
 `HStack` (`flex-row items-center`) and `VStack` (`flex-col items-center`) are also available.
@@ -168,7 +168,7 @@ import { Stack } from "@/components/ui/flex"
 
 Three responsive design tokens back the standard page metrics; all are registered in `theme.css` so they generate Tailwind spacing utilities (full table in `references/tokens.md`):
 
-- **`--page-pad`** -- standard page/section horizontal padding: `--spacing(4)` (1rem) on mobile, `--spacing(8)` (2rem) from `md`. Use the `page` utilities (`px-page`, `p-page`, `pb-page`, `gap-page`, and the `*-page-2x` step) instead of hard-coding `px-4 md:px-8` or an arbitrary `px-(--page-pad)`. Keeps horizontal page padding consistent across pages.
+- **`--page-pad`** -- standard page/section horizontal padding: `--spacing(4)` (1rem) on mobile, `--spacing(8)` (2rem) from `md`. Use the `page` utilities (`px-page`, `p-page`, `pb-page`, `gap-page`, and the `*-page-2x` step) instead of hard-coding `px-4 md:px-8` or an arbitrary `px-(--page-pad)`. Keeps horizontal page padding consistent across pages. If you must hand-roll a full-bleed breakout, pair `px-page` with `-mx-page` (never a fixed `-mx-8`) so the negative margin tracks the responsive token and stays aligned across the `md` boundary -- but prefer a primitive's built-in full-bleed treatment (`Alert variant="banner"`, `HubHero`, `Card variant="ghost"`/`size="xs"`) over hand-rolling.
 - **`--space`** -- the `.flow` rhythm base (`--spacing(4)` mobile, `--spacing(6)` from `lg`). `.flow` applies it automatically; when you need the same unit *manually* (an explicit gap or margin outside a flow region), reach for the `space` utilities (`mt-space`, `gap-space`, `space-y-space-2x`, `mt-space-half`, `mt-space-3x`, ...) rather than re-deriving `mt-4 lg:mt-6`.
 - **`--hero-pad`** -- `PageHero`'s internal padding (`--spacing(8)`, 2rem). Use the `hero` utilities (`p-hero`, `px-hero`, `py-hero-2x`, `pe-hero`, `*-hero-half/-1.5x/-2x/-3x`) rather than arbitrary `p-(--pad)`/`calc(var(--pad)*1.5)`. Mostly internal to `PageHero`, but available for hero-adjacent chrome.
 

@@ -23,8 +23,8 @@ import { SIMULATOR_ID } from "@/components/Simulator/constants"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
-import { Divider } from "@/components/ui/divider"
 import { Grid } from "@/components/ui/grid"
+import { Divider } from "@/components/ui/hr"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -157,7 +157,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <PageHero
-        header={t("page-wallets-title")}
+        breadcrumbs={{ slug: "wallets" }}
         heroImg={heroImg}
         title={t("page-wallets-slogan")}
         description={t("page-wallets-subtitle")}
@@ -288,7 +288,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             ) : (
               <Section
                 className={cn(
-                  "flow flex flex-col items-center bg-gradient-main py-20 text-center"
+                  "flow flex flex-col items-center bg-linear-primary py-20 text-center"
                 )}
               >
                 <h2>{t("page-wallets-features-title")}</h2>

@@ -1,6 +1,6 @@
 ---
-title: অনলাইন কমিউনিটি
-description: অনলাইন ফোরাম, চ্যাট রুম এবং সোশ্যাল মিডিয়া কমিউনিটিগুলো আবিষ্কার করুন যেখানে ইথেরিয়াম উৎসাহীরা আলোচনা এবং সহযোগিতা করার জন্য একত্রিত হন।
+title: "অনলাইন কমিউনিটি"
+description: "অনলাইন ফোরাম, চ্যাট রুম এবং সোশ্যাল মিডিয়া কমিউনিটিগুলো আবিষ্কার করুন যেখানে ইথেরিয়াম উৎসাহীরা আলোচনা এবং সহযোগিতা করার জন্য একত্রিত হন।"
 lang: bn
 ---
 
@@ -52,7 +52,7 @@ lang: bn
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - Web3 ক্রিয়েটরদের কমিউনিটি যেখানে বিল্ডার, ইন্ডাস্ট্রির শীর্ষস্থানীয় ব্যক্তি এবং ইথেরিয়াম উৎসাহীরা আড্ডা দেন। আমরা Web3 ডেভেলপমেন্ট, ডিজাইন এবং সংস্কৃতি নিয়ে আগ্রহী। আসুন আমাদের সাথে তৈরি করুন।</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity ডেভেলপমেন্টের জন্য চ্যাট (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- প্রশ্নোত্তর ফোরাম</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- বিকেন্দ্রীকৃত প্রশ্নোত্তর ফোরাম</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- বিকেন্দ্রীকৃত প্রশ্নোত্তর ফোরাম</i></SocialListItem>
 
 ## ইউটিউব এবং এক্স (পূর্বে টুইটার) {#youtube-and-twitter}
 

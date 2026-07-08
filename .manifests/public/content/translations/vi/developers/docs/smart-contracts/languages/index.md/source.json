@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/smart-contracts/languages/index.md",
-  "generatedAt": "2026-06-17T22:56:15.050Z",
-  "rootHash": "2c9b43649443",
+  "generatedAt": "2026-06-30T00:01:57.857Z",
+  "rootHash": "b5c90f0b6213",
   "tree": {
     "contentHash": "21aff4df4579",
-    "anchorHash": "337e5db35db4",
+    "anchorHash": "a86b9a6393e7",
     "children": {
       "frontmatter:title": {
         "contentHash": "db9fcb06dc66",
@@ -300,7 +300,7 @@
       },
       "vyper": {
         "contentHash": "e294c69ff450",
-        "anchorHash": "47c18e8d14dd",
+        "anchorHash": "d539b8ef8a1c",
         "labelHash": "f33ac7f36711",
         "children": {
           "_label": {
@@ -445,7 +445,7 @@
           },
           "example": {
             "contentHash": "225f294785ff",
-            "anchorHash": "cbb1586ad357",
+            "anchorHash": "28a6ceec38c0",
             "labelHash": "d029f87e3d80",
             "children": {
               "_label": {
@@ -614,7 +614,7 @@
               },
               "code-fence:41": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "066871cf4926"
+                "anchorHash": "e91eea2d6d29"
               },
               "prose:1": {
                 "contentHash": "aca15320493b",
@@ -1103,5 +1103,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

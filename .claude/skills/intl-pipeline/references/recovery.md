@@ -6,6 +6,8 @@ Load this when "the pipeline did something wrong" — bad translation in product
 
 | Symptom | First check | Likely fix |
 |---|---|---|
+| Run reported "success" but content looks incomplete | Read the PR body's "N task(s) failed" block + grep the log | "Success" ships partial failures; see "Diagnosing a completed run" below |
+| Lots of content changed but few/no manifests in the PR diff | Content and manifests desynced (manifest drift) | See "Manifest drift after a run" below |
 | Translation looks wrong, not yet merged | Is it a glossary deviation? | Re-run pipeline targeting that file+locale; auto-fix should correct |
 | Translation already merged to `dev`, looks wrong | Is the English version up to date? | Re-run with `mode: full` for that file |
 | Manifest file is invalid / missing | One of the two manifests gone? | Delete both manifests for that file+locale; pipeline auto-runs full mode |
@@ -14,6 +16,68 @@ Load this when "the pipeline did something wrong" — bad translation in product
 | LLM returned garbage / refused | Check `finishReason` in logs | Retry with same content; if persistent, file/Latinize the input and retry |
 | English-locale structural mismatch (locale missing inline element vs English) | Look at the manifest's element mapping | Re-run `mode: full` for that file; pipeline regenerates from scratch |
 | Hand-edit slipped through review | Was it pre- or post-English-change? | If pre-: leave it, manifest still valid. If post-: re-run pipeline; will overwrite OR conflict |
+
+## Diagnosing a completed run
+
+A run finished. Before trusting it, audit it — a green "success" conclusion can still hide skipped files (RECITATION etc.). This is the recipe; it's faster than reading the whole log top-to-bottom.
+
+**1. Read the PR body first.** The pipeline's PR body carries the per-run summary and a "N task(s) failed" block with copy-paste rerun commands. That block is the authoritative list of what did NOT translate. (If the PR step itself failed — see "PR body too large" below — the body may be a hand-written recovery summary instead.)
+
+**2. Grep the log for the high-signal lines** (logs are huge; the head is just ~30k-file checkout noise — grep, don't scroll):
+
+```bash
+gh run view <run-id> --log > /tmp/run.log
+grep -iE "\[ERROR\]|##\[error\]|RECITATION|finishReason|Failed to update ref|Merge conflict|TARGET_PATH|task\(s\) failed" /tmp/run.log
+# RECITATION victims (discount large chunked files like apis/json-rpc — chunk fan-out inflates counts):
+grep -oE "file=public/content/[^ ]+ lang=[a-z-]+" /tmp/run.log | sort | uniq -c | sort -rn
+```
+
+**3. Verify content/manifest parity on the branch** (catches manifest drift — see next section):
+
+```bash
+git fetch origin
+git diff --name-only origin/dev...origin/intl/pending-dev > /tmp/changed.txt
+grep -c "content/translations/.*\.md$" /tmp/changed.txt     # translated markdown
+grep -c "^src/intl/.*\.json$" /tmp/changed.txt              # translated JSON (minus manifests)
+grep -c "^\.manifests/.*source\.json$" /tmp/changed.txt     # source manifests
+grep -c "^\.manifests/.*translation\.json$" /tmp/changed.txt # translation manifests
+```
+
+Healthy run: every translated content file has a matching `.manifests/<destPath>/source.json` (+ `translation.json` where placeholders apply). Manifests live in `.manifests/{destPath}/` — NOT next to the locale file. If content counts vastly exceed manifest counts, you have drift.
+
+Error-string -> source map (where to look when a signature appears):
+
+| Log signature | Source |
+|---|---|
+| `Failed to update ref` / squash errors | `lib/github/commits.ts` (`SharedCommitter`) |
+| `Key set mismatch` / `Suspiciously short` / refusal | `lib/llm/output-validation.ts` |
+| `FINISH_REASON` / `RECITATION` | `lib/llm/gemini.ts` |
+| PR body assembly / length | `lib/workflows/pr-creation.ts` |
+| rate-limit backoff (403/429) | `lib/utils/fetch.ts` |
+
+## Manifest drift after a run
+
+**Symptom:** the PR diff shows many translated content files but few/no `.manifests/` updates (content/manifest parity check in step 3 above fails badly).
+
+**What it means:** content shipped without its manifest. The manifest still reflects the pre-run English state, so the NEXT run sees those files as still-needing-translation and re-translates all of them — a churn loop that also blocks running the pipeline on every merge.
+
+**Historical cause (FIXED):** the `SharedCommitter` used to advance the branch ref on every per-file commit. Under the task pool's concurrency those ref updates raced and returned `422 not a fast forward`; a content commit that threw on the 422 aborted before its manifest commit, and the end-of-run squash shipped the (already-recorded) content blob without the (never-recorded) manifest. Fix: `commitFile` now only creates+records a blob and never touches the ref; the squash force-updates once; per task, manifests are built before any blob is recorded so a builder error strands nothing. Guarded by `tests/unit/intl-pipeline/commit-ref-race.spec.ts`. If you see fresh drift on a run AFTER this fix, suspect a new throw point between a content commit and its manifest commit in `main.ts` (`runFullTranslation`/`runIncremental`), not the committer.
+
+**Recovery for a branch already in a drift state** (e.g. PR #18471): the content on the branch is correct, only the manifests are stale. Cheapest correct path is to discard and re-run clean now that the cause is fixed (the job is a few dollars and a re-run validates the fix end to end); the alternative is a `stamp_only` pass to regenerate the missing manifests against the committed content, which is fragile and only worth it to preserve an expensive run.
+
+## PR body too large
+
+**Symptom:** the run translates fine but the pipeline's own PR-creation step fails because the auto-generated body (which lists every changed file) exceeds GitHub's 65,536-char limit. Common on full-tree runs (~900+ files).
+
+**Recovery:** open the PR manually with a consolidated summary (per-language + per-area counts, omit the per-file list), pointing at the run. The translations are already committed to `intl/pending-{base}`; only the PR-body generation failed. Durable fix: cap/clip the body in `lib/workflows/pr-creation.ts`.
+
+## Wedged pending branch (`intl/pending-intl-pending-*`)
+
+**Symptom:** runs fail at the pre-flight merge gate with a doubled branch name like `intl/pending-intl-pending-dev`, and dispatch retries keep cancelling each other under the workflow's concurrency group.
+
+**Cause:** a run was dispatched with a `target_branch`/base that produced a doubled `intl/pending-` prefix; that branch has conflicts so every retry aborts.
+
+**Recovery:** delete the wedged branch, then re-run with the correct (blank or `dev`) base so the target resolves to plain `intl/pending-dev`.
 
 ## Bad translation (not yet merged)
 
