@@ -119,7 +119,7 @@
         "contentHash": "eb4de52c9a0b",
         "anchorHash": "e3b0c44298fc"
       },
-      "app-cowswap-description": {
+      "app-cow-swap-description": {
         "contentHash": "6b8eaf364465",
         "anchorHash": "e3b0c44298fc"
       },
@@ -753,7 +753,7 @@
       "app-cool-cats-description",
       "app-coordinape-description",
       "app-courtyard-description",
-      "app-cowswap-description",
+      "app-cow-swap-description",
       "app-curve-description",
       "app-daimo-pay-description",
       "app-daohaus-description",
