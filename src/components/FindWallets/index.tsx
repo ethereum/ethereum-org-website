@@ -22,7 +22,7 @@ import DesktopFilterPanel from "./DesktopFilterPanel"
 import { buildWalletFilterGroups } from "./filter-groups"
 import IconSprite from "./IconSprite"
 import MobileFilterSheet from "./MobileFilterSheet"
-import PresetCards from "./PresetCards"
+import PresetCardsDeferred from "./PresetCardsDeferred"
 import ResultsBar from "./ResultsBar"
 import { chainTooltipId } from "./tooltip-ids"
 import TooltipLayer from "./TooltipLayer"
@@ -107,7 +107,10 @@ const FindWallets = async ({
   return (
     <WalletFilterProvider locale={locale} entries={entries}>
       <div>
-        <PresetCards personas={personas} legend={strings.personaLegend} />
+        <PresetCardsDeferred
+          personas={personas}
+          legend={strings.personaLegend}
+        />
         <div className="px-4">
           <div className="flex flex-col gap-4 pt-4 pb-6 lg:flex-row lg:gap-6 2xl:px-0">
             <div className="block lg:hidden">
