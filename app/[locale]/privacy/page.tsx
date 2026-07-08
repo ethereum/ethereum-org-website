@@ -101,10 +101,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         className="[&_section>h2]:text-h1"
         heroSection={
           <PageHero
-            breadcrumbs={{
-              slug: "privacy",
-              startDepth: 1,
-            }}
+            breadcrumbs={{ slug: "privacy" }}
             heroImg={heroImg}
             title={t("page-privacy-title")}
             description={t("page-privacy-hero-description")}
