@@ -2,6 +2,7 @@
 
 import { type ReactNode, useEffect, useMemo, useState } from "react"
 import { useSearchParams } from "next/navigation"
+import { useTranslations } from "next-intl"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -29,6 +30,7 @@ type SimulatorProps = {
   data: SimulatorData
 }
 export const Simulator = ({ children, data }: SimulatorProps) => {
+  const t = useTranslations("component-wallet-simulator")
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -129,11 +131,11 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
     if (!nextPathId) return null
     const { title, Icon } = data[nextPathId]
     return {
-      primaryText: "Start next lesson",
+      primaryText: t("sim-start-next-lesson"),
       secondaryText: title,
       Icon,
     }
-  }, [data, simulator])
+  }, [data, simulator, t])
 
   const logFinalCta = (): void => {
     trackCustomEvent({
@@ -157,7 +159,7 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
             const sim = data[id]
             const pathSummary = {
               primaryText: sim.title,
-              secondaryText: "How to?",
+              secondaryText: t("sim-how-to"),
               Icon: sim.Icon,
             }
             return (

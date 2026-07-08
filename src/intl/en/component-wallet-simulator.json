@@ -9,6 +9,8 @@
   "sim-click": "click!",
   "sim-no-nfts": "No NFTs yet!",
   "sim-example-walkthrough": "Example walkthrough",
+  "sim-start-next-lesson": "Start next lesson",
+  "sim-how-to": "How to?",
   "sim-address-tooltip": "Share your address (public identifier) from your own wallet when finished here",
   "sim-try-real-app": "Try out a real Ethereum application when finished here",
   "sim-try-login-app": "Try logging into a real app with your wallet when finished here",
