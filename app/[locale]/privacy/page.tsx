@@ -157,6 +157,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               ),
             })}
           </p>
+          <VideoWatch slug="why-privacy-matters" />
           <p>
             {t.rich("page-privacy-data-against-you-description-3", {
               strong: Strong,
@@ -167,7 +168,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               strong: Strong,
             })}
           </p>
-          <VideoWatch slug="why-privacy-matters" />
           <Alert variant="warning">
             <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
               <Lightbulb />
