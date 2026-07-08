@@ -98,7 +98,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       />
 
       <ContentLayout
-        className="[&_section>h2]:text-h1"
         heroSection={
           <PageHero
             breadcrumbs={{ slug: "privacy" }}
@@ -108,7 +107,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             buttons={[
               {
                 content: t("page-privacy-hero-cta"),
-                href: "#getting-started",
+                href: tocItems[0].url,
               },
             ]}
           />
@@ -157,6 +156,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               ),
             })}
           </p>
+          <VideoWatch slug="why-privacy-matters" />
           <p>
             {t.rich("page-privacy-data-against-you-description-3", {
               strong: Strong,
@@ -167,7 +167,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               strong: Strong,
             })}
           </p>
-          <VideoWatch slug="why-privacy-matters" />
           <Alert variant="warning">
             <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
               <Lightbulb />
@@ -424,7 +423,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         </Section>
 
         <Section id={getId(tocItems[6].url)}>
-          <h2 className="text-h2!">{tocItems[6].title}</h2>
+          <h2>{tocItems[6].title}</h2>
           <p>{t("page-privacy-getting-started-description-1")}</p>
           <p>{t("page-privacy-getting-started-description-2")}</p>
           <PathwayCard
