@@ -98,7 +98,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       />
 
       <ContentLayout
-        className="[&_section>h2]:text-h1"
         heroSection={
           <PageHero
             breadcrumbs={{ slug: "privacy" }}
@@ -424,7 +423,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         </Section>
 
         <Section id={getId(tocItems[6].url)}>
-          <h2 className="text-h2!">{tocItems[6].title}</h2>
+          <h2>{tocItems[6].title}</h2>
           <p>{t("page-privacy-getting-started-description-1")}</p>
           <p>{t("page-privacy-getting-started-description-2")}</p>
           <PathwayCard
