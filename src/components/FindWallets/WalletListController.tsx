@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect } from "react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -11,11 +11,12 @@ import { useWalletFilters } from "./WalletFilterProvider"
 // with the filter state and delegates analytics for expand/link events.
 const WalletListController = () => {
   const { visibleIds } = useWalletFilters()
-  const expandedRef = useRef<Set<string>>(new Set())
 
   useEffect(() => {
     document
-      .querySelectorAll<HTMLElement>('[data-testid="wallet-list"] > details')
+      .querySelectorAll<HTMLElement>(
+        '[data-testid="wallet-list"] > [data-wallet-id]'
+      )
       .forEach((row) => {
         row.classList.toggle("hidden", !visibleIds.has(row.dataset.walletId!))
       })
@@ -25,19 +26,8 @@ const WalletListController = () => {
     const list = document.querySelector('[data-testid="wallet-list"]')
     if (!list) return
 
-    // `toggle` doesn't bubble; capture phase still passes through ancestors
-    const onToggle = (e: Event) => {
-      const details = e.target as HTMLDetailsElement
-      const id = details.dataset?.walletId
-      if (!details.open || !id || expandedRef.current.has(id)) return
-      expandedRef.current.add(id)
-      trackCustomEvent({
-        eventCategory: "find-wallet",
-        eventAction: "expanded",
-        eventName: id,
-      })
-    }
-
+    // Delegate analytics for the wallet links (main "visit website" button and
+    // the row-covering detail link both carry data-matomo)
     const onClick = (e: Event) => {
       const link = (e.target as Element).closest<HTMLElement>("[data-matomo]")
       if (!link) return
@@ -48,10 +38,8 @@ const WalletListController = () => {
       }
     }
 
-    list.addEventListener("toggle", onToggle, true)
     list.addEventListener("click", onClick)
     return () => {
-      list.removeEventListener("toggle", onToggle, true)
       list.removeEventListener("click", onClick)
     }
   }, [])
