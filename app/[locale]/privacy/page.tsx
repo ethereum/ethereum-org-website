@@ -34,6 +34,7 @@ import VideoWatch from "@/components/Videos/VideoWatch"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -212,19 +213,24 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               <Grid columns={3} size="narrow">
                 <BigNumber
                   className="items-center py-0 text-center text-body"
-                  value={t("page-privacy-metric-1-value")}
+                  value={t("page-privacy-metric-value-times", { value: 747 })}
                 >
                   {t("page-privacy-metric-1-description")}
                 </BigNumber>
                 <BigNumber
                   className="items-center py-0 text-center text-body"
-                  value={t("page-privacy-metric-2-value")}
+                  value={numberToPercent(0.74, locale)}
                 >
                   {t("page-privacy-metric-2-description")}
                 </BigNumber>
                 <BigNumber
                   className="items-center py-0 text-center text-body"
-                  value={t("page-privacy-metric-3-value")}
+                  value={t("page-privacy-metric-value-plus", {
+                    value: numberFormat(locale, {
+                      notation: "compact",
+                      maximumSignificantDigits: 1,
+                    }).format(20 * 1e9),
+                  })}
                 >
                   {t("page-privacy-metric-3-description")}
                 </BigNumber>
