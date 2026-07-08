@@ -2,8 +2,9 @@
 title: NFT Minter Tutorial
 description: In this tutorial, you’ll build an NFT minter and learn how to create a full stack dapp by connecting your smart contract to a React frontend using MetaMask and Web3 tools.
 author: "smudgil"
-tags: ["solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata"]
+tags: ["solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata", "erc-721"]
 skill: intermediate
+breadcrumb: NFT minter dapp
 lang: en
 published: 2021-10-06
 ---
@@ -16,9 +17,9 @@ By building an NFT minter — a simple UI where you can input a link to your dig
 - Call smart contract methods from your frontend
 - Sign transactions using MetaMask
 
-In this tutorial, we will be using [React](https://reactjs.org/) as our frontend framework. Because this tutorial is primarily focused on Web3 development, we won't be spending much time breaking down React fundamentals. Instead, we'll be focusing on bringing functionality to our project.
+In this tutorial, we will be using [React](https://react.dev/) as our frontend framework. Because this tutorial is primarily focused on Web3 development, we won't be spending much time breaking down React fundamentals. Instead, we'll be focusing on bringing functionality to our project.
 
-As a prerequisite, you should have a beginner-level understanding of React—know how components, props, useState/useEffect, and basic function calling works. If you've never heard of any of those terms before, you may want to check out this [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html). For the more visual learners, we highly recommend this excellent [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) video series by Net Ninja.
+As a prerequisite, you should have a beginner-level understanding of React—know how components, props, useState/useEffect, and basic function calling works. If you've never heard of any of those terms before, you may want to check out this [Intro to React tutorial](https://react.dev/learn/tutorial-tic-tac-toe). For the more visual learners, we highly recommend this excellent [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) video series by Net Ninja.
 
 And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial as well as build anything on the blockchain. Sign up for a free account [here](https://alchemy.com/).
 
@@ -38,9 +39,9 @@ Usually, this minting function requires you to pass in two variables as paramete
 
 An NFT's metadata is really what brings it to life, allowing it to have properties, such as a name, description, image (or different digital asset), and other attributes. Here's [an example of a tokenURI](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2), which contains an NFT's metadata.
 
-In this tutorial, we're going to focus on part 2, calling an existing NFT's smart contract minting function using our React UI.
+In this tutorial, we're going to focus on part 2, calling an NFT smart contract minting function using our React UI.
 
-[Here's a link](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) to the ERC-721 NFT smart contract we will be calling in this tutorial. If you'd like to learn how we made it, we highly recommend that you check out our other tutorial, ["How to Create an NFT"](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
+You'll need an ERC-721 NFT smart contract deployed to a supported testnet such as Sepolia. If you'd like to deploy one yourself, we recommend Alchemy's guide to [deploying a smart contract to Sepolia](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet).
 
 Cool, now that we understand how making an NFT works, let's clone our starter files!
 
@@ -99,7 +100,7 @@ const [description, setDescription] = useState("")
 const [url, setURL] = useState("")
 ```
 
-Never heard of React state variables or state hooks? Check out [these](https://reactjs.org/docs/hooks-state.html) docs.
+Never heard of React state variables or state hooks? Check out [these](https://legacy.reactjs.org/docs/hooks-state.html) docs.
 
 Here's what each of the variables represent:
 
@@ -125,7 +126,7 @@ const onMintPressed = async () => {
 }
 ```
 
-- [`useEffect`](https://reactjs.org/docs/hooks-effect.html) - this is a React hook that is called after your component is rendered. Because it has an empty array `[]` prop passed into it (see line 3), it will only be called on the component's _first_ render. Here we'll call our wallet listener and another wallet function to update our UI to reflect whether a wallet is already connected.
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html) - this is a React hook that is called after your component is rendered. Because it has an empty array `[]` prop passed into it (see line 3), it will only be called on the component's _first_ render. Here we'll call our wallet listener and another wallet function to update our UI to reflect whether a wallet is already connected.
 - `connectWalletPressed` - this function will be called to connect the user's MetaMask wallet to our dapp.
 - `onMintPressed` - this function will be called to mint the user's NFT.
 
@@ -157,19 +158,19 @@ return (
       <h2>🖼 Link to asset: </h2>
       <input
         type="text"
-        placeholder="e.g. https://gateway.pinata.cloud/ipfs/<hash>"
+        placeholder="e.g., https://gateway.pinata.cloud/ipfs/<hash>"
         onChange={(event) => setURL(event.target.value)}
       />
       <h2>🤔 Name: </h2>
       <input
         type="text"
-        placeholder="e.g. My first NFT!"
+        placeholder="e.g., My first NFT!"
         onChange={(event) => setName(event.target.value)}
       />
       <h2>✍️ Description: </h2>
       <input
         type="text"
-        placeholder="e.g. Even cooler than cryptokitties ;)"
+        placeholder="e.g., Even cooler than cryptokitties ;)"
         onChange={(event) => setDescription(event.target.value)}
       />
     </form>
@@ -197,15 +198,15 @@ For users to be able to interact with your smart contract they will need to conn
 
 For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/).
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
+You can download and create a MetaMask account for free [here](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to a supported test network such as Sepolia \(so that we’re not dealing with real money\).
 
 ### Add ether from a Faucet {#add-ether-from-faucet}
 
-In order to mint our NFTs (or sign any transactions on the Ethereum blockchain), we’ll need some fake Eth. To get Eth you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten Eth.” You should see Eth in your MetaMask account soon after!
+In order to mint our NFTs (or sign any transactions on the Ethereum blockchain), we’ll need some fake ETH. To get testnet ETH, use a maintained faucet such as the [Alchemy Sepolia faucet](https://www.alchemy.com/faucets/ethereum-sepolia) and enter your Sepolia account address. You should see ETH in your MetaMask account soon after!
 
 ### Check your balance {#check-your-balance}
 
-To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
+To double check our balance is there, let’s make an [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) request using [Alchemy’s sandbox tool](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). This will return the amount of Eth in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
@@ -215,7 +216,7 @@ To double check our balance is there, let’s make an [eth_getBalance](https://d
 
 Phew! Our fake money is all there! <Emoji text=":money_mouth_face:" size={1} />
 
-## Connect MetaMask to your UI {#connect-metamask-to-your-UI}
+## Connect MetaMask to your UI {#connect-metamask-to-your-ui}
 
 Now that our MetaMask wallet is set up, let's connect our dapp to it!
 
@@ -254,7 +255,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -364,7 +365,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -428,7 +429,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -439,7 +440,7 @@ function addWalletListener() {
 
 Let's quickly break down what's happening here:
 
-- First, our function checks if `window.ethereum` is enabled \(i.e. MetaMask is installed\).
+- First, our function checks if `window.ethereum` is enabled \(i.e., MetaMask is installed\).
   - If it's not, we simply set our `status` state variable to a JSX string that prompts the user to install MetaMask.
   - If it is enabled, we set up the listener `window.ethereum.on("accountsChanged")` on line 3 that listens for state changes in the MetaMask wallet, which include when the user connects an additional account to the dapp, switches accounts, or disconnects an account. If there is at least one account connected, the `walletAddress` state variable is updated as the first account in the `accounts` array returned by the listener. Otherwise, `walletAddress` is set as an empty string.
 
@@ -471,9 +472,9 @@ The text in the "Link to Asset", "Name", "Description" fields will comprise the 
 
 To store our metadata on IPFS, we will use [Pinata](https://pinata.cloud/), a convenient IPFS API and toolkit. In the next step, we'll explain exactly how to do this!
 
-## Use Pinata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Use Pinata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-ipfs}
 
-If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free account [here](https://pinata.cloud/signup) and complete the steps to verify your email and account.
+If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free account [here](https://app.pinata.cloud/auth/signup) and complete the steps to verify your email and account.
 
 ### Create your Pinata API key {#create-pinata-api-key}
 
@@ -512,7 +513,7 @@ Save the file, and then you're ready to start writing the function to upload you
 
 ### Implement pinJSONToIPFS {#pin-json-to-ipfs}
 
-Fortunately for us, Pinata has an [API specifically for uploading JSON data to IPFS](https://pinata.cloud/documentation#PinJSONToIPFS) and a convenient JavaScript with axios example that we can use, with some slight modifications.
+Fortunately for us, Pinata has an [API specifically for uploading JSON data to IPFS](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) and a convenient JavaScript with axios example that we can use, with some slight modifications.
 
 In your `utils` folder, let's create another file called `pinata.js` and then import our Pinata secret and key from the .env file like so:
 
@@ -573,7 +574,7 @@ As with our `connectWallet`function return types, we're returning JSON objects s
 
 Now that we have a way to upload our NFT metadata to IPFS via our `pinJSONToIPFS` function, we're going to need a way to load an instance of our smart contract so we can call its `mintNFT` function.
 
-As we mentioned earlier, in this tutorial we will be using [this existing NFT smart contract](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); however, if you'd like to learn how we made it, or make one yourself, we highly recommend you check out our other tutorial, ["How to Create an NFT."](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
+As we mentioned earlier, in this tutorial you will need an existing NFT smart contract deployed to a supported testnet such as Sepolia. If you'd like to deploy one yourself, we recommend Alchemy's guide to [deploying a smart contract to Sepolia](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet).
 
 ### The contract ABI {#contract-abi}
 
@@ -585,11 +586,11 @@ We're also going to need an Alchemy API key and the Alchemy Web3 API to connect 
 
 If you don't already have an Alchemy account, [sign up for free here.](https://alchemy.com/?a=eth-org-nft-minter)
 
-Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Ropsten test network.
+Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Sepolia test network.
 
 Navigate to the “Create App” page in your Alchemy Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”.
 
-Name your app we chose "My First NFT!", offer a short description, select “Staging” for the Environment used for your app bookkeeping, and choose “Ropsten” for your network.
+Name your app we chose "My First NFT!", offer a short description, select “Staging” for the Environment used for your app bookkeeping, and choose “Sepolia” for your network.
 
 Click “Create app” and that’s it! Your app should appear in the table below.
 
@@ -600,7 +601,7 @@ Awesome so now that we've created our HTTP Alchemy API URL, copy it to your clip
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
 Now that we have our contract ABI and our Alchemy API key, we're ready to load our smart contract using [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
@@ -634,7 +635,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 
 const contractABI = require("../contract-abi.json")
-const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
+const contractAddress = "<your-contract-address>"
 ```
 
 Once we have both of those, we're ready to start coding our mint function!
@@ -742,7 +743,7 @@ try {
   return {
     success: true,
     status:
-      "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
+      "✅ Check out your transaction on Etherscan: https://sepolia.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
@@ -812,7 +813,7 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
+        "✅ Check out your transaction on Etherscan: https://sepolia.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {
@@ -847,9 +848,9 @@ const onMintPressed = async () => {
 }
 ```
 
-## Deploy your NFT to a live website {#deploy-your-NFT}
+## Deploy your NFT to a live website {#deploy-your-nft}
 
-Ready to take your project live for users to interact with? Check out [this tutorial](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) for deploying your Minter to a live website.
+Ready to take your project live for users to interact with? Check out the [React deployment documentation](https://create-react-app.dev/docs/deployment/) for deploying your Minter to a live website.
 
 One last step...
 
@@ -863,6 +864,6 @@ To recap, by building an NFT minter, you successfully learned how to:
 - Call smart contract methods from your frontend
 - Sign transactions using MetaMask
 
-Presumably, you'd like to be able to show off the NFTs minted via your dapp in your wallet — so be sure to check out our quick tutorial [How to View Your NFT in Your Wallet](https://docs.alchemyapi.io/alchemy/tutorials/how-to-write-and-deploy-a-nft-smart-contract/how-to-view-your-nft-in-your-wallet)!
+Presumably, you'd like to be able to show off the NFTs minted via your dapp in your wallet — so be sure to check out our quick tutorial [How to View Your NFT in Your Wallet](/developers/tutorials/how-to-view-nft-in-metamask/)!
 
 And, as always, if you have any questions, we're here to help in the [Alchemy Discord](https://discord.gg/gWuC7zB). We can't wait to see how you apply the concepts from this tutorial to your future projects!

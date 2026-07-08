@@ -1,45 +1,21 @@
 import { ComponentPropsWithoutRef } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { BsCheck } from "react-icons/bs"
+import { Check } from "lucide-react"
+import { useLocale } from "next-intl"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
 import { CommandItem } from "../ui/command"
-import { Tag } from "../ui/tag"
-
-import ProgressBar from "./ProgressBar"
 
 type ItemProps = ComponentPropsWithoutRef<typeof CommandItem> & {
   displayInfo: LocaleDisplayInfo
 }
 
 const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
-  const {
-    localeOption,
-    sourceName,
-    targetName,
-    approvalProgress,
-    wordsApproved,
-    isBrowserDefault,
-  } = displayInfo
-  const { t } = useTranslation("common")
-  const { locale } = useRouter()
+  const { localeOption, sourceName, targetName } = displayInfo
+  const locale = useLocale()
   const isCurrent = localeOption === locale
-
-  const getProgressInfo = (approvalProgress: number, wordsApproved: number) => {
-    const percentage = new Intl.NumberFormat(locale!, {
-      style: "percent",
-    }).format(approvalProgress / 100)
-    const progress =
-      approvalProgress === 0 ? "<" + percentage.replace("0", "1") : percentage
-    const words = new Intl.NumberFormat(locale!).format(wordsApproved)
-    return { progress, words }
-  }
-
-  const { progress, words } = getProgressInfo(approvalProgress, wordsApproved)
 
   return (
     <CommandItem
@@ -63,23 +39,16 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
             >
               {targetName}
             </p>
-            {isBrowserDefault && (
-              <Tag variant="outline" size="small">
-                {t("page-languages-browser-default")}
-              </Tag>
-            )}
           </div>
-          <p className="text-xs uppercase text-body">{sourceName}</p>
+          <p className="text-xs text-body uppercase">{sourceName}</p>
         </div>
         {isCurrent && (
-          <BsCheck className="text-2xl text-primary-high-contrast" />
+          <Check
+            aria-hidden={true}
+            className="text-2xl text-primary-high-contrast"
+          />
         )}
       </div>
-      <p className="max-w-full text-xs lowercase text-body-medium">
-        {progress} {t("page-languages-translated")} • {words}{" "}
-        {t("page-languages-words")}
-      </p>
-      <ProgressBar value={approvalProgress} />
     </CommandItem>
   )
 }

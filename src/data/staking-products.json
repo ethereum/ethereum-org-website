@@ -40,7 +40,7 @@
           "url": "https://github.com/trailofbits/publications/blob/master/reviews/RocketPool.pdf"
         }
       ],
-      "minEth": 10.4,
+      "minEth": 8,
       "tokens": [
         {
           "name": "Rocket Pool ETH",
@@ -173,7 +173,7 @@
       "platforms": ["Linux"],
       "ui": ["CLI"],
       "socials": {
-        "github": "https://github.com/eth-educators/eth-docker"
+        "github": "https://github.com/ethstaker/eth-docker"
       },
       "matomo": {
         "eventCategory": "StakingProductCard",
@@ -810,6 +810,107 @@
         "eventAction": "Clicked",
         "eventName": "Clicked ConsensysStaking go to link"
       }
+    },
+    {
+      "name": "Serenita",
+      "imageName": "Serenita",
+      "hue": 231,
+      "launchDate": "2023-11-28",
+      "url": "https://serenita.io",
+      "audits": [
+        {
+          "name": "2023-05-Halborn",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2023-05-Halborn.pdf"
+        },
+        {
+          "name": "2023-08-Halborn",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2023-08-Halborn.pdf"
+        },
+        {
+          "name": "2023-08-Sigma-Prime",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2023-08-Sigma-Prime.pdf"
+        },
+        {
+          "name": "2024-03-Consensys-Diligence",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2024-03-Consensys-Diligence.pdf"
+        },
+        {
+          "name": "2024-06-Sigma-Prime",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2024-06-Sigma-Prime.pdf"
+        },
+        {
+          "name": "2024-09-Sigma-Prime",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2024-09-Sigma-Prime.pdf"
+        },
+        {
+          "name": "2025-09-ABDK",
+          "url": "https://github.com/stakewise/v3-core/tree/main/audits/2025-09-ABDK.pdf"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 5,
+      "monthlyFeeUnit": "%",
+      "isFoss": true,
+      "hasBugBounty": true,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "pctMajorityExecutionClient": 0,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "twitter": "https://x.com/SerenitaIO"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Serenita go to link"
+      }
+    },
+    {
+      "name": "Bitwise",
+      "imageName": "Bitwise",
+      "hue": 231,
+      "launchDate": "2020-12-01",
+      "url": "https://www.attestant.io/",
+      "audits": [
+        {
+          "name": "SOC 2 Type II & ISO 27001",
+          "url": "https://www.attestant.io/certifications/"
+        },
+        {
+          "name": "Dedaub - Batch Validator Depositor",
+          "url": "https://dedaub.com/audits/ethereum-foundation/ef-batch-validator-depositor-april-02-2025/"
+        }
+      ],
+      "minEth": 1000,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": null,
+      "monthlyFeeUnit": null,
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "pctMajorityExecutionClient": 0,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/company/attestant/",
+        "twitter": " https://x.com/AttestantIO",
+        "telegram": "https://t.me/attestant",
+        "github": "https://github.com/attestantio"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Bitwise go to link"
+      }
     }
   ],
   "pools": [
@@ -913,7 +1014,7 @@
       "isFoss": true,
       "hasBugBounty": true,
       "isTrustless": true,
-      "hasPermissionlessNodes": false,
+      "hasPermissionlessNodes": true,
       "pctMajorityExecutionClient": null,
       "pctMajorityConsensusClient": 42.83,
       "platforms": ["Browser", "Wallet"],

@@ -1,0 +1,445 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md",
+  "generatedAt": "2026-04-28T22:57:31.772Z",
+  "rootHash": "b8f167e2774d",
+  "tree": {
+    "contentHash": "dfd0426021f2",
+    "anchorHash": "8114930e344f",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "0e8d82f640b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "fe9704b0ea66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c74c5f391636"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ca4926e3b489"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "766271de674d"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "02540942346f"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b1cc2e711844"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6261d4ab968b"
+      },
+      "prose:1": {
+        "contentHash": "4681c4e7fd90",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "422adeaa4fb4"
+      },
+      "prose:2": {
+        "contentHash": "e04b1ae0fddc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "discovering-the-internet-and-early-curiosity-036": {
+        "contentHash": "7ecb6c2b4525",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "7cb56a879f72",
+        "children": {
+          "_label": {
+            "contentHash": "7cb56a879f72",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "556eb9da3cff",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "from-mechanical-engineering-to-software-502": {
+        "contentHash": "a81da00249d0",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a2fe3a2f4c9c",
+        "children": {
+          "_label": {
+            "contentHash": "a2fe3a2f4c9c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2230b3366f14",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-freelance-life-in-louisiana-717": {
+        "contentHash": "b9caff2db5fc",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e245a920f23c",
+        "children": {
+          "_label": {
+            "contentHash": "e245a920f23c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2dbe7171b625",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-dao-hack-and-falling-into-ethereum-1113": {
+        "contentHash": "268206e5ca21",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "eab69cb660c1",
+        "children": {
+          "_label": {
+            "contentHash": "eab69cb660c1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1020a2c9553e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "finding-community-in-open-source-1435": {
+        "contentHash": "9d2f2b4bbf14",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "61648262d158",
+        "children": {
+          "_label": {
+            "contentHash": "61648262d158",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "22ed4cec1483",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "leading-the-merge-1658": {
+        "contentHash": "dd992d45334e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2ae3fd14ab66",
+        "children": {
+          "_label": {
+            "contentHash": "2ae3fd14ab66",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5f3920f7528d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "work-life-balance-and-managing-stress-1807": {
+        "contentHash": "3d9474525485",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "eab844278205",
+        "children": {
+          "_label": {
+            "contentHash": "eab844278205",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "495f4cf4307b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "co-founding-etherealize-2002": {
+        "contentHash": "c0b0cfd9b204",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "91d21f1feea6",
+        "children": {
+          "_label": {
+            "contentHash": "91d21f1feea6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "de355094d3b2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-the-world-needs-ethereum-2410": {
+        "contentHash": "746913541038",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ddc6f2c0c95d",
+        "children": {
+          "_label": {
+            "contentHash": "ddc6f2c0c95d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f54045e9fdf0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-case-for-decentralization-2547": {
+        "contentHash": "d4109cadf3da",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ea3a88a569f2",
+        "children": {
+          "_label": {
+            "contentHash": "ea3a88a569f2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5ba5e458a772",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "wishing-people-were-nicer-2738": {
+        "contentHash": "d4fed0a3b86a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "1b2f78970b42",
+        "children": {
+          "_label": {
+            "contentHash": "1b2f78970b42",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a11f3250dcef",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-ef-leadership-transition-and-taking-a-stand-2900": {
+        "contentHash": "c93a86a072ac",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "62688e79c8f4",
+        "children": {
+          "_label": {
+            "contentHash": "62688e79c8f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1d6bb92743a7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "future-cities-and-being-human-in-the-age-of-ai-3206": {
+        "contentHash": "a60afe49fb0c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c6a3549e36a2",
+        "children": {
+          "_label": {
+            "contentHash": "c6a3549e36a2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b33b94df460a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "kids-and-the-future-3900": {
+        "contentHash": "c73d9384d8d1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "62345e616676",
+        "children": {
+          "_label": {
+            "contentHash": "62345e616676",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b6da01388b01",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "values-and-speaking-to-institutions-4234": {
+        "contentHash": "79318a8a3344",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c2619a1c607d",
+        "children": {
+          "_label": {
+            "contentHash": "c2619a1c607d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "29eaeb3c767c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "life-outside-crypto-4512": {
+        "contentHash": "17fdf7af2dd6",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "05357b8aaadc",
+        "children": {
+          "_label": {
+            "contentHash": "05357b8aaadc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "32853ad2493c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-hosts-origin-story-leaving-optimism-for-the-ef-5650": {
+        "contentHash": "1237e620bf39",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "91cb0efe46df",
+        "children": {
+          "_label": {
+            "contentHash": "91cb0efe46df",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d7ab075a4f35",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "securing-ethereums-future-5926": {
+        "contentHash": "9605a61cf630",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0522d7f2944a",
+        "children": {
+          "_label": {
+            "contentHash": "0522d7f2944a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d2d473605974",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "discovering-the-internet-and-early-curiosity-036",
+      "from-mechanical-engineering-to-software-502",
+      "the-freelance-life-in-louisiana-717",
+      "the-dao-hack-and-falling-into-ethereum-1113",
+      "finding-community-in-open-source-1435",
+      "leading-the-merge-1658",
+      "work-life-balance-and-managing-stress-1807",
+      "co-founding-etherealize-2002",
+      "why-the-world-needs-ethereum-2410",
+      "the-case-for-decentralization-2547",
+      "wishing-people-were-nicer-2738",
+      "the-ef-leadership-transition-and-taking-a-stand-2900",
+      "future-cities-and-being-human-in-the-age-of-ai-3206",
+      "kids-and-the-future-3900",
+      "values-and-speaking-to-institutions-4234",
+      "life-outside-crypto-4512",
+      "the-hosts-origin-story-leaving-optimism-for-the-ef-5650",
+      "securing-ethereums-future-5926"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

@@ -1,6 +1,6 @@
 ---
-title: Évolutivité vers la couche 2
-description: Introduction aux différentes options d'évolutivité actuellement en cours de développement par la communauté Ethereum.
+title: "Évolutivité vers la couche 2"
+description: "Introduction aux différentes options d'évolutivité actuellement en cours de développement par la communauté Ethereum."
 lang: fr
 incomplete: true
 sidebarDepth: 3
@@ -170,7 +170,7 @@ Une chaîne plasma est une blockchain séparée qui est ancrée à la chaîne Et
 ### Chaînes Plasma que vous pouvez utiliser {#use-plasma}
 
 - [OMG Network](https://omg.network/)
-- [Matic Network](https://matic.network/)
+- [Matic Network](https://polygon.technology/)
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
@@ -218,13 +218,12 @@ Combine les meilleures parties des multiples technologies de couche 2, et peut o
 - [Validium et The Layer 2 Two-By-Two - Numéro 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Ajout de la chaîne latérale hybride PoS-Rollup à la plateforme Coherent Layer-2 de Celer sur Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
-- [Évolutivité de la blockchain ZK](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 
 **Canaux d'états**
 
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _- Josh Stark, 12 février 2018_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _- Jeff Coleman, 6 novembre 2015 _
-- [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Basics of State Channels](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 
 **Canaux de paiement**
 

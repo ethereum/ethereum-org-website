@@ -1,0 +1,880 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-08T11:20:59.734Z",
+  "englishManifestHash": "87dd1094d17b",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-0a662d",
+    "LINK-2d5e7e",
+    "LINK-3a68a0",
+    "LINK-eb47ab",
+    "LINK-3b4105",
+    "LINK-511a59",
+    "LINK-a89171",
+    "LINK-5fcfba",
+    "IMAGE-70cc79",
+    "CODEBLOCK-67dd00",
+    "CODEBLOCK-d1f522",
+    "CODEBLOCK-9e7ca5",
+    "LINK-3b380b",
+    "CODE-656f72",
+    "IMAGE-09c57f",
+    "LINK-b17113",
+    "CODE-423674",
+    "CODE-536939",
+    "CODE-1b16b1",
+    "CODE-de7d1b",
+    "CODE-18292e",
+    "CODE-a33107",
+    "CODE-6c2966",
+    "CODE-5fc051",
+    "CODE-536939",
+    "IMAGE-71c7e1",
+    "LINK-612859",
+    "LINK-00f921",
+    "CODE-530ed7",
+    "LINK-2d5e7e",
+    "CODE-513015",
+    "CODE-1cf63d",
+    "CODE-554ff9",
+    "CODE-dc9e4a",
+    "CODE-7a21eb",
+    "CODE-dc9e4a",
+    "CODE-7a21eb",
+    "CODE-dc9e4a",
+    "CODE-86c444",
+    "IMAGE-baa5ed",
+    "CODE-656f72",
+    "CODE-f33449",
+    "CODE-85d35a",
+    "CODEBLOCK-93f2d6",
+    "CODE-d4735e",
+    "CODE-c086a7",
+    "LINK-5f1a11",
+    "CODE-d4735e",
+    "CODE-d4735e",
+    "CODE-c086a7",
+    "CODE-7a21eb",
+    "CODE-fde9c5",
+    "CODE-86c444",
+    "CODE-04dedf",
+    "CODE-c3172d",
+    "CODE-5e8fa0",
+    "CODE-ba86ad",
+    "CODE-d8463b",
+    "CODE-5694d0",
+    "CODE-7060bc",
+    "CODE-0ecba1",
+    "CODE-2fe840",
+    "CODE-d8463b",
+    "CODE-6ea140",
+    "IMAGE-c9bc84",
+    "CODE-423674",
+    "CODE-536939",
+    "CODE-1b16b1",
+    "CODE-de7d1b",
+    "CODE-18292e",
+    "CODE-a33107",
+    "CODE-8b337f",
+    "CODE-894f7e",
+    "CODE-6c2966",
+    "CODE-894f7e",
+    "CODE-df7e70",
+    "CODE-df7e70",
+    "CODEBLOCK-7cfc58",
+    "LINK-be90dd",
+    "LINK-777930",
+    "CODEBLOCK-de8d3b",
+    "CODE-7ac7f4",
+    "CODE-de7d1b",
+    "CODE-86be9a",
+    "CODE-de5a6f",
+    "CODE-684d0a",
+    "CODE-de7d1b",
+    "CODE-1f7dce",
+    "CODE-de7d1b",
+    "LINK-bbd8ed",
+    "LINK-fbb01a",
+    "LINK-607352",
+    "LINK-af6391",
+    "LINK-c3f12a",
+    "CODE-40b6b3",
+    "CODE-8254c3",
+    "CODE-21ba4a",
+    "CODE-8c2574",
+    "CODE-8254c3",
+    "CODE-8c2574",
+    "CODE-6b23c0",
+    "CODE-8ce86a",
+    "CODE-99a2b5",
+    "CODE-fa62d1",
+    "CODE-99a2b5",
+    "CODE-a42a5a",
+    "CODE-716dda",
+    "CODE-3b4e2b",
+    "CODE-8c2574",
+    "CODE-b62907",
+    "CODE-b62907",
+    "LINK-db845b",
+    "CODE-fedbc2",
+    "CODEBLOCK-ff13bd",
+    "CODE-fedbc2",
+    "CODE-3727c6",
+    "CODE-f8b3c7",
+    "CODE-fe9808",
+    "CODE-875a3a",
+    "CODE-dc9e4a",
+    "CODE-056d5e",
+    "CODE-f8b3c7",
+    "CODE-fe9808",
+    "CODEBLOCK-49ad5f",
+    "IMAGE-be9fe9",
+    "CODE-0c8115",
+    "CODE-1b16b1",
+    "LINK-934152",
+    "CODE-6c2966",
+    "CODE-423674",
+    "CODE-4f431f",
+    "CODE-4ad20f",
+    "CODE-de7d1b",
+    "CODE-0fcbd6",
+    "CODE-4f431f",
+    "CODE-4f431f",
+    "LINK-c482fd",
+    "LINK-ecc69d",
+    "LINK-8852d0",
+    "LINK-ef0104",
+    "LINK-f424fd",
+    "LINK-6784d8",
+    "LINK-d8965c",
+    "LINK-00f921",
+    "LINK-10fa62",
+    "LINK-702c69",
+    "LINK-00a8ff",
+    "LINK-ef9d49",
+    "LINK-a63428",
+    "LINK-6ffc01",
+    "LINK-6ccda0",
+    "LINK-77a8bc",
+    "LINK-2d0c59",
+    "LINK-2fd473",
+    "LINK-0366b9",
+    "LINK-6bfbaa",
+    "LINK-b3d810",
+    "LINK-b45dca",
+    "LINK-0691a4"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-67dd00": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d1f522": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9e7ca5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-93f2d6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7cfc58": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-de8d3b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ff13bd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-49ad5f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-656f72": {
+      "type": "inline-code",
+      "values": {
+        "content": "APPLY(S,TX) -> S'"
+      }
+    },
+    "CODE-423674": {
+      "type": "inline-code",
+      "values": {
+        "content": "S[0]"
+      }
+    },
+    "CODE-536939": {
+      "type": "inline-code",
+      "values": {
+        "content": "TX"
+      }
+    },
+    "CODE-1b16b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "n"
+      }
+    },
+    "CODE-de7d1b": {
+      "type": "inline-code",
+      "values": {
+        "content": "i"
+      }
+    },
+    "CODE-18292e": {
+      "type": "inline-code",
+      "values": {
+        "content": "0...n-1"
+      }
+    },
+    "CODE-a33107": {
+      "type": "inline-code",
+      "values": {
+        "content": "S[i+1] = APPLY(S[i],TX[i])"
+      }
+    },
+    "CODE-6c2966": {
+      "type": "inline-code",
+      "values": {
+        "content": "S[n]"
+      }
+    },
+    "CODE-5fc051": {
+      "type": "inline-code",
+      "values": {
+        "content": "APPLY(S,TX)"
+      }
+    },
+    "CODE-530ed7": {
+      "type": "inline-code",
+      "values": {
+        "content": "1LW79wp5ZBqaHW1jL5TCiBCrhQYtHagUWy"
+      }
+    },
+    "CODE-513015": {
+      "type": "inline-code",
+      "values": {
+        "content": "APPLY'"
+      }
+    },
+    "CODE-554ff9": {
+      "type": "inline-code",
+      "values": {
+        "content": "APPLY'(S,TX)"
+      }
+    },
+    "CODE-1cf63d": {
+      "type": "inline-code",
+      "values": {
+        "content": "APPLY'(S,TX) = S"
+      }
+    },
+    "CODE-dc9e4a": {
+      "type": "inline-code",
+      "values": {
+        "content": "STARTGAS"
+      }
+    },
+    "CODE-7a21eb": {
+      "type": "inline-code",
+      "values": {
+        "content": "GASPRICE"
+      }
+    },
+    "CODE-86c444": {
+      "type": "inline-code",
+      "values": {
+        "content": "CALL"
+      }
+    },
+    "CODE-f33449": {
+      "type": "inline-code",
+      "values": {
+        "content": "STARTGAS * GASPRICE"
+      }
+    },
+    "CODE-85d35a": {
+      "type": "inline-code",
+      "values": {
+        "content": "GAS = STARTGAS"
+      }
+    },
+    "CODE-d4735e": {
+      "type": "inline-code",
+      "values": {
+        "content": "2"
+      }
+    },
+    "CODE-c086a7": {
+      "type": "inline-code",
+      "values": {
+        "content": "CHARLIE"
+      }
+    },
+    "CODE-fde9c5": {
+      "type": "inline-code",
+      "values": {
+        "content": "CREATE"
+      }
+    },
+    "CODE-04dedf": {
+      "type": "inline-code",
+      "values": {
+        "content": "STOP"
+      }
+    },
+    "CODE-c3172d": {
+      "type": "inline-code",
+      "values": {
+        "content": "RETURN"
+      }
+    },
+    "CODE-5e8fa0": {
+      "type": "inline-code",
+      "values": {
+        "content": "(block_state, transaction, message, code, memory, stack, pc, gas)"
+      }
+    },
+    "CODE-ba86ad": {
+      "type": "inline-code",
+      "values": {
+        "content": "block_state"
+      }
+    },
+    "CODE-d8463b": {
+      "type": "inline-code",
+      "values": {
+        "content": "pc"
+      }
+    },
+    "CODE-5694d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "code"
+      }
+    },
+    "CODE-7060bc": {
+      "type": "inline-code",
+      "values": {
+        "content": "pc >= len(code)"
+      }
+    },
+    "CODE-0ecba1": {
+      "type": "inline-code",
+      "values": {
+        "content": "ADD"
+      }
+    },
+    "CODE-2fe840": {
+      "type": "inline-code",
+      "values": {
+        "content": "gas"
+      }
+    },
+    "CODE-6ea140": {
+      "type": "inline-code",
+      "values": {
+        "content": "SSTORE"
+      }
+    },
+    "CODE-8b337f": {
+      "type": "inline-code",
+      "values": {
+        "content": "GASLIMIT"
+      }
+    },
+    "CODE-894f7e": {
+      "type": "inline-code",
+      "values": {
+        "content": "S_FINAL"
+      }
+    },
+    "CODE-df7e70": {
+      "type": "inline-code",
+      "values": {
+        "content": "B"
+      }
+    },
+    "CODE-7ac7f4": {
+      "type": "inline-code",
+      "values": {
+        "content": "[0,i,K,V]"
+      }
+    },
+    "CODE-86be9a": {
+      "type": "inline-code",
+      "values": {
+        "content": "K"
+      }
+    },
+    "CODE-de5a6f": {
+      "type": "inline-code",
+      "values": {
+        "content": "V"
+      }
+    },
+    "CODE-684d0a": {
+      "type": "inline-code",
+      "values": {
+        "content": "[1,i]"
+      }
+    },
+    "CODE-1f7dce": {
+      "type": "inline-code",
+      "values": {
+        "content": "[2,i]"
+      }
+    },
+    "CODE-40b6b3": {
+      "type": "inline-code",
+      "values": {
+        "content": "2 <= k <= 7"
+      }
+    },
+    "CODE-8254c3": {
+      "type": "inline-code",
+      "values": {
+        "content": "k"
+      }
+    },
+    "CODE-21ba4a": {
+      "type": "inline-code",
+      "values": {
+        "content": "kR"
+      }
+    },
+    "CODE-8c2574": {
+      "type": "inline-code",
+      "values": {
+        "content": "R"
+      }
+    },
+    "CODE-6b23c0": {
+      "type": "inline-code",
+      "values": {
+        "content": "C"
+      }
+    },
+    "CODE-8ce86a": {
+      "type": "inline-code",
+      "values": {
+        "content": "N"
+      }
+    },
+    "CODE-99a2b5": {
+      "type": "inline-code",
+      "values": {
+        "content": "1/N"
+      }
+    },
+    "CODE-fa62d1": {
+      "type": "inline-code",
+      "values": {
+        "content": "kR/N"
+      }
+    },
+    "CODE-a42a5a": {
+      "type": "inline-code",
+      "values": {
+        "content": "kC"
+      }
+    },
+    "CODE-716dda": {
+      "type": "inline-code",
+      "values": {
+        "content": "kR/N > kC"
+      }
+    },
+    "CODE-3b4e2b": {
+      "type": "inline-code",
+      "values": {
+        "content": "R > NC"
+      }
+    },
+    "CODE-b62907": {
+      "type": "inline-code",
+      "values": {
+        "content": "NC"
+      }
+    },
+    "CODE-fedbc2": {
+      "type": "inline-code",
+      "values": {
+        "content": "BLK_LIMIT_FACTOR"
+      }
+    },
+    "CODE-3727c6": {
+      "type": "inline-code",
+      "values": {
+        "content": "EMA_FACTOR"
+      }
+    },
+    "CODE-f8b3c7": {
+      "type": "inline-code",
+      "values": {
+        "content": "JUMP"
+      }
+    },
+    "CODE-fe9808": {
+      "type": "inline-code",
+      "values": {
+        "content": "JUMPI"
+      }
+    },
+    "CODE-875a3a": {
+      "type": "inline-code",
+      "values": {
+        "content": "while x < 27: x = x * 2"
+      }
+    },
+    "CODE-056d5e": {
+      "type": "inline-code",
+      "values": {
+        "content": "send(A,contract.storage[A]); contract.storage[A] = 0"
+      }
+    },
+    "CODE-0c8115": {
+      "type": "inline-code",
+      "values": {
+        "content": "60102216 * (1.198 + 0.26 * n)"
+      }
+    },
+    "CODE-4f431f": {
+      "type": "inline-code",
+      "values": {
+        "content": "S[i]"
+      }
+    },
+    "CODE-4ad20f": {
+      "type": "inline-code",
+      "values": {
+        "content": "S[i-1]"
+      }
+    },
+    "CODE-0fcbd6": {
+      "type": "inline-code",
+      "values": {
+        "content": "APPLY(S[i-1],TX[i]) -> S[i]"
+      }
+    },
+    "IMAGE-70cc79": {
+      "type": "image",
+      "values": {
+        "path": "./ethereum-state-transition.png"
+      }
+    },
+    "IMAGE-09c57f": {
+      "type": "image",
+      "values": {
+        "path": "./ethereum-blocks.png"
+      }
+    },
+    "IMAGE-71c7e1": {
+      "type": "image",
+      "values": {
+        "path": "./spv-bitcoin.png"
+      }
+    },
+    "IMAGE-baa5ed": {
+      "type": "image",
+      "values": {
+        "path": "./ether-state-transition.png"
+      }
+    },
+    "IMAGE-c9bc84": {
+      "type": "image",
+      "values": {
+        "path": "./ethereum-apply-block-diagram.png"
+      }
+    },
+    "IMAGE-be9fe9": {
+      "type": "image",
+      "values": {
+        "path": "./ethereum-inflation.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-0a662d": {
+      "type": "link",
+      "values": {
+        "url": "https://bitcoinmagazine.com/culture/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it"
+      }
+    },
+    "LINK-2d5e7e": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit"
+      }
+    },
+    "LINK-3a68a0": {
+      "type": "link",
+      "values": {
+        "url": "https://en.bitcoin.it/wiki/Smart_Property"
+      }
+    },
+    "LINK-eb47ab": {
+      "type": "link",
+      "values": {
+        "url": "http://namecoin.org"
+      }
+    },
+    "LINK-3b4105": {
+      "type": "link",
+      "values": {
+        "url": "http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html"
+      }
+    },
+    "LINK-511a59": {
+      "type": "link",
+      "values": {
+        "url": "http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/"
+      }
+    },
+    "LINK-a89171": {
+      "type": "link",
+      "values": {
+        "url": "http://www.weidai.com/bmoney.txt"
+      }
+    },
+    "LINK-5fcfba": {
+      "type": "link",
+      "values": {
+        "url": "https://nakamotoinstitute.org/finney/rpow/"
+      }
+    },
+    "LINK-3b380b": {
+      "type": "link",
+      "values": {
+        "url": "#notes"
+      }
+    },
+    "LINK-b17113": {
+      "type": "link",
+      "values": {
+        "url": "#notes"
+      }
+    },
+    "LINK-612859": {
+      "type": "link",
+      "values": {
+        "url": "https://nakamotoinstitute.org/library/secure-property-titles/"
+      }
+    },
+    "LINK-00f921": {
+      "type": "link",
+      "values": {
+        "url": "https://namecoin.org/"
+      }
+    },
+    "LINK-5f1a11": {
+      "type": "link",
+      "values": {
+        "url": "#notes"
+      }
+    },
+    "LINK-be90dd": {
+      "type": "link",
+      "values": {
+        "url": "http://namecoin.org/"
+      }
+    },
+    "LINK-777930": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Domain_Name_System"
+      }
+    },
+    "LINK-bbd8ed": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Liquid_democracy"
+      }
+    },
+    "LINK-fbb01a": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed"
+      }
+    },
+    "LINK-607352": {
+      "type": "link",
+      "values": {
+        "url": "http://www.cl.cam.ac.uk/~fms27/papers/2008-StajanoCla-cyberdice.pdf"
+      }
+    },
+    "LINK-af6391": {
+      "type": "link",
+      "values": {
+        "url": "https://mason.gmu.edu/~rhanson/futarchy.html"
+      }
+    },
+    "LINK-c3f12a": {
+      "type": "link",
+      "values": {
+        "url": "https://eprint.iacr.org/2013/881.pdf"
+      }
+    },
+    "LINK-db845b": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260"
+      }
+    },
+    "LINK-934152": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/"
+      }
+    },
+    "LINK-c482fd": {
+      "type": "link",
+      "values": {
+        "url": "https://bitcoinmagazine.com/culture/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it"
+      }
+    },
+    "LINK-ecc69d": {
+      "type": "link",
+      "values": {
+        "url": "https://en.bitcoin.it/wiki/Smart_Property"
+      }
+    },
+    "LINK-8852d0": {
+      "type": "link",
+      "values": {
+        "url": "https://en.bitcoin.it/wiki/Contracts"
+      }
+    },
+    "LINK-ef0104": {
+      "type": "link",
+      "values": {
+        "url": "http://www.weidai.com/bmoney.txt"
+      }
+    },
+    "LINK-f424fd": {
+      "type": "link",
+      "values": {
+        "url": "https://nakamotoinstitute.org/finney/rpow/"
+      }
+    },
+    "LINK-6784d8": {
+      "type": "link",
+      "values": {
+        "url": "https://nakamotoinstitute.org/library/secure-property-titles/"
+      }
+    },
+    "LINK-d8965c": {
+      "type": "link",
+      "values": {
+        "url": "https://bitcoin.org/bitcoin.pdf"
+      }
+    },
+    "LINK-10fa62": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Zooko's_triangle"
+      }
+    },
+    "LINK-702c69": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit"
+      }
+    },
+    "LINK-00a8ff": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/mastercoin-MSC/spec"
+      }
+    },
+    "LINK-ef9d49": {
+      "type": "link",
+      "values": {
+        "url": "http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/"
+      }
+    },
+    "LINK-a63428": {
+      "type": "link",
+      "values": {
+        "url": "https://en.bitcoin.it/wiki/Scalability#Simplified_payment_verification"
+      }
+    },
+    "LINK-6ffc01": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Merkle_tree"
+      }
+    },
+    "LINK-6ccda0": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Patricia_tree"
+      }
+    },
+    "LINK-77a8bc": {
+      "type": "link",
+      "values": {
+        "url": "https://eprint.iacr.org/2013/881.pdf"
+      }
+    },
+    "LINK-2d0c59": {
+      "type": "link",
+      "values": {
+        "url": "http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html"
+      }
+    },
+    "LINK-2fd473": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=MVyv4t0OKe4"
+      }
+    },
+    "LINK-0366b9": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/rlp/"
+      }
+    },
+    "LINK-6bfbaa": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/patricia-merkle-trie/"
+      }
+    },
+    "LINK-b3d810": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/"
+      }
+    },
+    "LINK-b45dca": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/"
+      }
+    },
+    "LINK-0691a4": {
+      "type": "link",
+      "values": {
+        "url": "/learn/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T11:20:59.734Z",
+      "status": "success"
+    }
+  }
+}

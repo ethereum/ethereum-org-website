@@ -1,5 +1,7 @@
+"use client"
+
 import { BaseHTMLAttributes } from "react"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import {
   Item,
   List,
@@ -13,18 +15,17 @@ import { cn } from "@/lib/utils/cn"
 import { MAIN_NAV_ID, SECTION_LABELS } from "@/lib/constants"
 
 import { Button } from "../../ui/buttons/Button"
-import type { NavSections } from "../types"
+import { useNavigation } from "../useNavigation"
 
 import MenuContent from "./MenuContent"
 import { useNavMenu } from "./useNavMenu"
 
-type NavMenuProps = BaseHTMLAttributes<HTMLDivElement> & {
-  sections: NavSections
-}
+type NavMenuProps = BaseHTMLAttributes<HTMLDivElement>
 
-const Menu = ({ sections, ...props }: NavMenuProps) => {
+const Menu = ({ ...props }: NavMenuProps) => {
+  const { linkSections } = useNavigation()
   const { activeSection, direction, handleSectionChange, isOpen } =
-    useNavMenu(sections)
+    useNavMenu(linkSections)
 
   return (
     <div {...props}>
@@ -36,7 +37,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
       >
         <List id={MAIN_NAV_ID} className="m-0 flex list-none">
           {SECTION_LABELS.map((sectionKey) => {
-            const { label, items } = sections[sectionKey]
+            const { label, items } = linkSections[sectionKey]
             const isActive = activeSection === sectionKey
 
             return (
@@ -44,7 +45,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                 <Trigger asChild>
                   <Button
                     className={cn(
-                      "relative whitespace-nowrap px-3 py-2 lg:px-4",
+                      "relative px-3 py-2 whitespace-nowrap lg:px-4",
                       isActive ? "text-primary" : "text-body",
                       "after:absolute after:inset-x-0 after:top-full after:h-4 after:content-['']"
                     )}
@@ -64,7 +65,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                 <MenuContent
                   items={items}
                   isOpen={isOpen}
-                  sections={sections}
+                  sections={linkSections}
                 />
               </Item>
             )

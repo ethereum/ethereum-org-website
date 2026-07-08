@@ -1,10 +1,12 @@
-import type { MotionProps } from "framer-motion"
-import { useRouter } from "next/router"
+import type { MotionProps } from "motion/react"
+import { useLocale } from "next-intl"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { usePathname } from "@/i18n/navigation"
 
 export const useSubMenu = () => {
-  const { asPath, locale } = useRouter()
+  const pathname = usePathname()
+  const locale = useLocale()
   const { isRtl } = useRtlFlip()
 
   const menuVariants: MotionProps["variants"] = {
@@ -13,7 +15,7 @@ export const useSubMenu = () => {
   }
 
   return {
-    asPath,
+    asPath: pathname,
     locale,
     menuVariants,
   }

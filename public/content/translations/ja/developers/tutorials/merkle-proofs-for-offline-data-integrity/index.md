@@ -1,45 +1,46 @@
 ---
-title: オフラインデータの完全性のためのマークルプルーフ
-description: オフチェーンに大部分が保存されているデータに対し、オンチェーンでのデータの完全性の確保
-author: Ori Pomerantz
+title: "オフラインデータの完全性のためのマークル証明"
+description: "主にオフチェーンに保存されるデータのオンチェーンでの完全性を確保する"
+author: "オリ・ポメランツ"
 tags:
-  - "ストレージ"
+  - ストレージ
 skill: advanced
+breadcrumb: "マークル証明"
 lang: ja
 published: 2021-12-30
 ---
 
 ## はじめに {#introduction}
 
-すべてのデータは、イーサリアムストレージに保存することが理想的です。このストレージは、数千ものコンピューターに保存され、非常に高い可用性(データは検閲されない)と完全性(データは不正に変更されない)を備えていますが、32バイトワードを保存するのに通常2万ガスがかかります。 執筆時点で、そのコストは$6.60に相当します。 1バイトごとに21セントかかるため、多くの用途には高すぎます。
+理想的には、すべてをイーサリアムのストレージに保存したいところです。イーサリアムのストレージは数千台のコンピューターに分散して保存されており、極めて高い可用性（データは検閲されない）と完全性（データは不正に変更されない）を備えていますが、32バイトのワードを保存するには通常20,000ガスかかります。この記事を書いている時点では、そのコストは6.60ドルに相当します。1バイトあたり21セントでは、多くの用途にとって高すぎます。
 
-この問題を解決するために、イーサリアムのエコシステムでは[データを保存する多くの分散型の方法](/developers/docs/storage/)が開発されました。 通常、これらは可用性と価格のトレードオフを伴います。 しかしながら、一般に完全性は保証されます。
+この問題を解決するために、イーサリアムのエコシステムは[分散型でデータを保存する多くの代替方法](/developers/docs/storage/)を開発しました。通常、これらには可用性と価格のトレードオフが伴います。しかし、完全性は通常保証されています。
 
-この記事では、ブロックチェーンにデータを保存することなくデータ完全性を確保する**方法**として[マークルプルーフ](https://computersciencewiki.org/index.php/Merkle_proof)を使用する方法を学びます。
+この記事では、[マークル証明](https://computersciencewiki.org/index.php/Merkle_proof)を使用して、データをブロックチェーンに保存せずにデータの完全性を確保する**方法**について学びます。
 
-## 仕組み {#how-does-it-work}
+## どのように機能するのか？ {#how-does-it-work}
 
-理論上、チェーン上にデータのハッシュだけを保存し、トランザクション内で必要なすべてのデータを送信することができます。 しかし、これでもまだ高すぎます。 1バイトのデータのトランザクションのコストは約16ガスで、現時点では0.5セントです。つまり、1キロバイトあたり約 $5になります。 1メガバイトでは $5000になり、データをハッシュ化するコストを差し引いても、多くの用途にはまだ高すぎます。
+理論的には、データのハッシュをオンチェーンに保存し、それを必要とするトランザクションですべてのデータを送信するだけで済みます。しかし、これでもまだ高すぎます。トランザクションへの1バイトのデータには約16ガスかかり、現在約0.5セント、つまり1キロバイトあたり約5ドルです。1メガバイトあたり5000ドルでは、データをハッシュ化する追加コストがなくても、多くの用途にとってまだ高すぎます。
 
-これを解決するには、異なるデータのサブセットを繰り返しハッシュ化します。そうすることで、データを送信する必要が無い場合は、ハッシュを送信するだけで済むようになります。 これを行うには、次のようなマークルツリーを使用します。このツリーは、それぞれのノードがその下のノードのハッシュとなるデータ構造を持ちます。
+解決策は、データの異なるサブセットを繰り返しハッシュ化することです。そうすれば、送信する必要のないデータについてはハッシュを送信するだけで済みます。これは、各ノードがその下のノードのハッシュであるツリーデータ構造、マークル・ツリーを使用して行います。
 
-![マークルツリー](tree.png)
+![Merkle Tree](tree.png)
 
-チェーン上に保存する必要があるのは、ルートハッシュのみとなります。 特定の値を証明するには、ルートのハッシュを得るために、その値と結合させる必要があるハッシュをすべて提供します。 例えば、`C`を証明するには、`D`、`H(A-B)`、`H(E-H)`を提供します。
+ルートハッシュは、オンチェーンに保存する必要がある唯一の部分です。特定の値を証明するには、ルートを取得するためにその値と組み合わせる必要があるすべてのハッシュを提供します。たとえば、`C`を証明するには、`D`、`H(A-B)`、および`H(E-H)`を提供します。
 
-![Cの値の証明](proof-c.png)
+![Proof of the value of C](proof-c.png)
 
 ## 実装 {#implementation}
 
-[サンプルコードはこちらで入手できます](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity)。
+[サンプルコードはこちらで提供されています](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity)。
 
-### オフチェーンコード {#off-chain-code}
+### オフチェーンコード {#offchain-code}
 
-この記事では、オフチェーン計算にJavaScriptを使用します。 ほとんどの分散型アプリケーションには、JavaScriptのオフチェーンコンポーネントがあります。
+この記事では、オフチェーンの計算にJavaScriptを使用します。ほとんどの分散型アプリケーション (dapp) は、オフチェーンコンポーネントをJavaScriptで実装しています。
 
-#### マークルルートの作成 {#creating-the-merkle-root}
+#### マークル・ルートの作成 {#creating-the-merkle-root}
 
-最初に、マークルルートをチェーンに提供する必要があります。
+まず、マークル・ルートをチェーンに提供する必要があります。
 
 ```javascript
 const ethers = require("ethers")
@@ -48,58 +49,62 @@ const ethers = require("ethers")
 [ethersパッケージのハッシュ関数を使用します](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256)。
 
 ```javascript
-// The raw data whose integrity we have to verify. The first two bytes a
-// are a user identifier, and the last two bytes the amount of tokens the
-// user owns at present.
+// 整合性を検証する必要がある生データ。最初の2バイトは
+// ユーザー識別子であり、最後の2バイトはユーザーが
+// 現在所有しているトークンの量です。
 const dataArray = [
   0x0bad0010, 0x60a70020, 0xbeef0030, 0xdead0040, 0xca110050, 0x0e660060,
   0xface0070, 0xbad00080, 0x060d0091,
 ]
 ```
 
-各エントリを単一の256ビット整数にエンコードすると、JSONを使用した場合などよりも読みにくいコードになります。 しかし、これによりコントラクト内のデータを取得するための処理量が大幅に削減され、ガス代も大幅に削減されます。 [チェーン上でJSONを読み取ることができますが](https://github.com/chrisdotn/jsmnSol)、回避できるのであれば避けるべきです。
+各エントリを単一の256ビット整数にエンコードすると、たとえばJSONを使用するよりもコードの可読性が低下します。しかし、これはコントラクトでデータを取得するための処理が大幅に少なくなることを意味し、ガスコストがはるかに低くなります。[オンチェーンでJSONを読み取ることは可能ですが](https://github.com/chrisdotn/jsmnSol)、避けられるのであれば避けるべきです。
 
 ```javascript
-// The array of hash values, as BigInts
+// BigIntとしてのハッシュ値の配列
 const hashArray = dataArray
 ```
 
-ここでは、256ビット値のデータで始めるので、処理は必要ありません。 文字列型のようなより複雑なデータ構造を使用する場合は、まずデータをハッシュ化してハッシュ配列を取得する必要があります。 これは、ユーザーが他のユーザーの情報を知っていても知らなくても構わないことを前提にしているためでもあります。 さもなければ、ユーザー1がユーザー0の値がわからないように、ユーザー2がユーザー3の値がわからないように、というようなハッシュ化をしなければならなくなります。
+この場合、データは最初から256ビットの値であるため、処理は必要ありません。文字列などのより複雑なデータ構造を使用する場合は、最初にデータをハッシュ化してハッシュの配列を取得する必要があります。これは、ユーザーが他のユーザーの情報を知っても構わないと考えているためでもあります。そうでない場合は、ユーザー1がユーザー0の値を、ユーザー2がユーザー3の値を知らないようにハッシュ化する必要がありました。
 
 ```javascript
-// Convert between the string the hash function expects and the
-// BigInt we use everywhere else.
+// ハッシュ関数が期待する文字列と、
+// 他のすべての場所で使用するBigIntとの間で変換します。
 const hash = (x) =>
   BigInt(ethers.utils.keccak256("0x" + x.toString(16).padStart(64, 0)))
 ```
 
-ethersのハッシュ関数は、`0x60A7`などの16進数のJavaScript文字列を受け取ることを想定しており、同じ構造の別の文字列で応答します。 ただし、コードの他の部分では、`BigInt`を使う方が簡単なため、16進数文字列に変換してから、もう一度`BigInt`に戻します。
+ethersのハッシュ関数は、`0x60A7`のような16進数を含むJavaScriptの文字列を受け取ることを想定しており、同じ構造の別の文字列を返します。しかし、残りのコードでは`BigInt`を使用する方が簡単なので、16進数の文字列に変換してから元に戻します。
 
 ```javascript
-// ペアの対称ハッシュのため、順序が逆でも構いません。
+// ペアの対称ハッシュ。順序が逆になっても問題ありません。
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
-この関数は対称(a [xor](https://en.wikipedia.org/wiki/Exclusive_or) bのハッシュ)です。 そのため、マークルプルーフを確認するときに、計算された値の前と後のどちらにプルーフの値を配置すべきかについて考慮する必要はありません。 マークルプルーフの確認はオンチェーンで行われるので、必要な処理が少ないほど良いとされます。
+この関数は対称です（aとbの[XOR](https://en.wikipedia.org/wiki/Exclusive_or)のハッシュ）。これは、マークル証明をチェックする際に、証明からの値を計算された値の前に置くか後に置くかを気にする必要がないことを意味します。マークル証明のチェックはオンチェーンで行われるため、そこでの処理は少ないほど良いです。
 
-警告: 暗号技術は見た目以上に難解です。 この記事の最初のバージョンでは、ハッシュ関数`hash(a^b)`を使用していました。 これは、**好ましくない**手法でした。`a`と`b`の正しい値を知っていれば、`b' = a^b^a'`を使用して目的の`a'`の値を証明できるからです。 この関数では、`hash(a') ^ hash(b')`が既知の値(ルートに向かう経路上の隣のブランチ)と等しくなるように`b'`を計算する必要があり、これは非常に困難です。
+警告：
+暗号技術は見た目よりも難しいものです。
+この記事の初期バージョンでは、ハッシュ関数は`hash(a^b)`でした。
+これは**悪い**アイデアでした。なぜなら、`a`と`b`の正当な値を知っていれば、`b' = a^b^a'`を使用して任意の`a'`の値を証明できるからです。
+この関数を使用すると、`hash(a') ^ hash(b')`が既知の値（ルートに向かう次のブランチ）と等しくなるように`b'`を計算する必要があり、これははるかに困難です。
 
 ```javascript
-// The value to denote that a certain branch is empty, doesn't
-// have a value
+// 特定のブランチが空であり、
+// 値を持たないことを示す値
 const empty = 0n
 ```
 
-値の数が2の整数乗ではない時は、空のブランチを処理する必要があります。 このプログラムでは、ゼロをプレースホルダーとして配置する方法を使っています。
+値の数が2の整数乗でない場合は、空のブランチを処理する必要があります。このプログラムでは、プレースホルダーとしてゼロを配置することでこれを行います。
 
-![ブランチが欠けているマークルツリー](merkle-empty-hash.png)
+![Merkle tree with branches missing](merkle-empty-hash.png)
 
 ```javascript
-// Calculate one level up the tree of a hash array by taking the hash of
-// each pair in sequence
+// ハッシュ配列のツリーの1つ上のレベルを計算します。これは、
+// 各ペアのハッシュを順番に取得することで行います
 const oneLevelUp = (inputArray) => {
   var result = []
-  var inp = [...inputArray] // To avoid over writing the input // Add an empty value if necessary (we need all the leaves to be // paired)
+  var inp = [...inputArray] // 入力の上書きを避けるため // 必要に応じて空の値を追加します（すべての葉が // ペアになっている必要があります）
 
   if (inp.length % 2 === 1) inp.push(empty)
 
@@ -110,13 +115,13 @@ const oneLevelUp = (inputArray) => {
 } // oneLevelUp
 ```
 
-この関数は、現在のレイヤーで値のペアをハッシュ化すると、マークルツリーを1レベル「登り」ます。 これは効率性を追求した実装ではないことに留意してください。入力のコピーを避け、ループ内で適切なタイミングで単に`hashEmpty`を加えることもできますが、このコードは読みやすさを重視して最適化されています。
+この関数は、現在のレイヤーの値のペアをハッシュ化することで、マークル・ツリーを1レベル「登り」ます。これは最も効率的な実装ではないことに注意してください。入力のコピーを避け、ループ内の適切な場所で`hashEmpty`を追加するだけでもよかったのですが、このコードは可読性のために最適化されています。
 
 ```javascript
 const getMerkleRoot = (inputArray) => {
   var result
 
-  result = [...inputArray] // Climb up the tree until there is only one value, that is the // root. // // If a layer has an odd number of entries the // code in oneLevelUp adds an empty value, so if we have, for example, // 10 leaves we'll have 5 branches in the second layer, 3 // branches in the third, 2 in the fourth and the root is the fifth
+  result = [...inputArray] // 値が1つ（つまり // ルート）になるまでツリーを登ります。 // // レイヤーのエントリ数が奇数の場合、 // oneLevelUpのコードは空の値を追加します。したがって、たとえば // 10個の葉がある場合、2番目のレイヤーには5つのブランチ、3番目には3つの // ブランチ、4番目には2つのブランチがあり、ルートは5番目になります
 
   while (result.length > 1) result = oneLevelUp(result)
 
@@ -124,37 +129,37 @@ const getMerkleRoot = (inputArray) => {
 }
 ```
 
-ルートを得るには、残っている値が1つしかないところまで登ります。
+ルートを取得するには、値が1つだけ残るまで登ります。
 
-#### マークルプルーフの作成 {#creating-a-merkle-proof}
+#### マークル証明の作成 {#creating-a-merkle-proof}
 
-マークルプルーフは、マークルルートを得るために、証明される値と一緒にハッシュ化する値です。 証明する値は、他のデータから入手することが多いため、コードの一部としてではなく、別に提供することをお勧めします。
+マークル証明は、マークル・ルートを取り戻すために、証明される値と一緒にハッシュ化する値です。証明する値は他のデータから利用できることが多いため、コードの一部としてではなく、個別に提供することを好みます。
 
 ```javascript
-// A merkle proof consists of the value of the list of entries to
-// hash with. Because we use a symmetrical hash function, we don't
-// need the item's location to verify the proof, only to create it
+// マークル証明は、ハッシュ化するエントリのリストの
+// 値で構成されます。対称ハッシュ関数を使用するため、
+// 証明を検証するためにアイテムの場所は必要なく、作成するためだけに必要です
 const getMerkleProof = (inputArray, n) => {
     var result = [], currentLayer = [...inputArray], currentN = n
 
-    // Until we reach the top
+    // 一番上に到達するまで
     while (currentLayer.length > 1) {
-        // No odd length layers
+        // 奇数長のレイヤーはありません
         if (currentLayer.length % 2)
             currentLayer.push(empty)
 
         result.push(currentN % 2
-               // If currentN is odd, add with the value before it to the proof
+               // currentNが奇数の場合、その前の値と一緒に証明に追加します
             ? currentLayer[currentN-1]
-               // If it is even, add the value after it
+               // 偶数の場合、その後の値を追加します
             : currentLayer[currentN+1])
 
 ```
 
-ハッシュ化は、`(v[0],v[1])`、`(v[2],v[3])`のように行っていきます。 したがって、偶数の値の場合はその次の値、基数の値の場合は1つ前の値が必要です。
+`(v[0],v[1])`、`(v[2],v[3])`などをハッシュ化します。したがって、偶数の値には次の値が必要であり、奇数の値には前の値が必要です。
 
 ```javascript
-        // Move to the next layer up
+        // 次の上のレイヤーに移動します
         currentN = Math.floor(currentN/2)
         currentLayer = oneLevelUp(currentLayer)
     }   // while currentLayer.length > 1
@@ -163,9 +168,9 @@ const getMerkleProof = (inputArray, n) => {
 }   // getMerkleProof
 ```
 
-### オンチェーンコード {#on-chain-code}
+### オンチェーンコード {#onchain-code}
 
-最後は、証明を確認するコードです。 オンチェーンコードは、[Solidity](https://docs.soliditylang.org/en/v0.8.11/)で書かれています。 ガス代が比較的高価なため、ここでは最適化がかなり重要になります。
+最後に、証明をチェックするコードがあります。オンチェーンのコードは[Solidity](https://docs.soliditylang.org/en/v0.8.11/)で書かれています。ガスは比較的高価であるため、ここでは最適化がはるかに重要です。
 
 ```solidity
 //SPDX-License-Identifier: Public Domain
@@ -174,7 +179,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 ```
 
-コードの作成には、[Hardhat開発環境](https://hardhat.org/)を使用しました。この環境では、開発している間も[Solidityからコンソール出力](https://hardhat.org/tutorial/debugging-with-hardhat-network.html)を得ることができます。
+これは[Hardhat開発環境](https://hardhat.org/)を使用して書きました。これにより、開発中に[Solidityからのコンソール出力](https://hardhat.org/docs/cookbook/debug-logs)を得ることができます。
 
 ```solidity
 
@@ -185,15 +190,15 @@ contract MerkleProof {
       return merkleRoot;
     }
 
-    // Extremely insecure, in production code access to
-    // this function MUST BE strictly limited, probably to an
-    // owner
+    // 非常に安全ではありません。本番コードでは、
+    // この関数へのアクセスは厳密に制限される必要があり、おそらく
+    // オーナーに制限されます
     function setRoot(uint _merkleRoot) external {
       merkleRoot = _merkleRoot;
     }   // setRoot
 ```
 
-マークルルート用のset関数とget関数が書かれています。 プロダクションシステムにおいて、誰でもマークルルートを更新できるようにすることは、_非常に好ましくない手法_です。 ここでは、サンプルコードをシンプルにするために、あえて行っています。 **データの完全性が重要なシステムでは、行わないでください**。
+マークル・ルートのsetおよびget関数です。本番システムで誰でもマークル・ルートを更新できるようにするのは、_極めて悪いアイデア_です。ここではサンプルコードをシンプルにするために行っています。**データの完全性が実際に重要となるシステムでは行わないでください**。
 
 ```solidity
     function hash(uint _a) internal pure returns(uint) {
@@ -205,12 +210,12 @@ contract MerkleProof {
     }
 ```
 
-この関数は、ペアのハッシュを生成します。 JavaScripコードの`hash`と`pairHash`をSolidityコードに変換したものです。
+この関数はペアハッシュを生成します。これは、`hash`と`pairHash`のJavaScriptコードをSolidityに翻訳しただけのものです。
 
-**注:** これも読みやすさを重視して最適化されています。 [関数定義](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm)によると、データを[`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays)の値として保存することで、変換を回避できる場合があります。
+**注：** これも可読性のための最適化のケースです。[関数定義](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm)に基づくと、データを[`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays)値として保存し、変換を避けることができるかもしれません。
 
 ```solidity
-    // Verify a Merkle proof
+    // マークル証明を検証する
     function verifyProof(uint _value, uint[] calldata _proof)
         public view returns (bool) {
       uint temp = _value;
@@ -226,16 +231,18 @@ contract MerkleProof {
 }  // MarkleProof
 ```
 
-数学的表記では、マークルプルーフの検証は次のようになります。 `H(proof_n, H(proof_n-1, H(proof_n-2, .. H(proof_1, H(proof_0, value))...)))`. これをこのコードで実装しています。
+数学的表記では、マークル証明の検証は次のようになります：`H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`。このコードはそれを実装しています。
 
-## マークルプルーフとロールアップを混在させない {#merkle-proofs-and-rollups}
+## マークル証明とロールアップの相性 {#merkle-proofs-and-rollups}
 
-マークルプルーフは、[ロールアップ](/developers/docs/scaling/#rollups)では、うまく機能しません。 ロールアップでは、すべてのトランザクションデータはL1(レイヤー1)に書き込まれ、処理はL2(レイヤー2)で行われるためです。 マークルプルーフをトランザクションで送信するのにかかるコストは、1レイヤーあたり平均638ガスです(現在のコールデータ1バイトは、ゼロでなければ16ガス、ゼロであれば4ガスかかります)。 1024ワードのデータがある場合、マークルプルーフには10レイヤー、つまり合計で6380ガスが必要になります。
+マークル証明は[ロールアップ](/developers/docs/scaling/#rollups)とは相性が良くありません。その理由は、ロールアップはすべてのトランザクションデータをレイヤー1 (L1) に書き込みますが、処理はレイヤー2 (L2) で行うためです。トランザクションと一緒にマークル証明を送信するコストは、1レイヤーあたり平均638ガスです（現在、コールデータの1バイトはゼロでなければ16ガス、ゼロであれば4ガスかかります）。1024ワードのデータがある場合、マークル証明には10レイヤー、つまり合計6380ガスが必要です。
 
-[Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)の例を見ると、L1への書き込みには約100gweiのガス代がかかり、L2では0.001gweiのガス代がかかります(これは通常の価格であり、混雑とともに上昇する可能性があります) 。 したがって、L1の1回分のガス代で、L2では10万ガスを処理に使えることになります。 ストレージを上書きしないと仮定すると、L1の1回のガス代でL2のストレージに約5ワード書き込めるということになります。 単一のマークルプルーフの場合、1024ワードすべてをストレージに書き込むことができ(トランザクションで提供されるのではなく、最初からチェーン上で計算できると仮定した場合)、依然としてほとんどのガスが残ります。
+たとえば[オプティミズム](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)を見ると、L1ガスの書き込みには約100 Gweiかかり、L2ガスには0.001 Gweiかかります（これは通常価格であり、混雑時には上昇する可能性があります）。したがって、1つのL1ガスのコストで、L2の処理に10万ガスを費やすことができます。ストレージを上書きしないと仮定すると、これは1つのL1ガスの価格でL2のストレージに約5ワードを書き込めることを意味します。1つのマークル証明について、1024ワード全体をストレージに書き込むことができ（トランザクションで提供されるのではなく、最初からオンチェーンで計算できると仮定して）、それでもガスの大部分が残ります。
 
-## まとめ {#conclusion}
+## 結論 {#conclusion}
 
-実際に、マークルツリーを自身で実装することはないかもしれません。 よく知られている監査済みのライブラリを使用できるため、基本的には独自の暗号論的プリミティブを実装しないことをお勧めします。 しかし、マークルプルーフをよく理解し、使いどころを判断できるようになっていただければと思います。
+現実には、マークル・ツリーを自分で実装することは決してないかもしれません。使用できるよく知られた監査済みのライブラリがあり、一般的に言って、暗号技術のプリミティブを自分で実装しないのが最善です。しかし、これでマークル証明についてより深く理解し、いつ使用する価値があるかを判断できるようになることを願っています。
 
-マークルプルーフは、_完全性_を保持しますが、_可用性_は保持しないことに注意してください。 データストレージにアクセスを拒否され、データストレージにアクセスするためのマークルツリーを構築することもできない場合でも、誰も自分の資産を奪うことはできないということを知っていると、ささやかな慰めとなります。 この特性により、マークルツリーは、IPFSなどの分散型ストレージで最もよく使用されています。
+マークル証明は_完全性_を保持しますが、_可用性_は保持しないことに注意してください。データストレージがアクセスを許可しないと決定し、アクセスするためのマークル・ツリーを構築することもできない場合、他の誰もあなたの資産を奪うことができないと知っていても、それは小さな慰めにすぎません。したがって、マークル・ツリーはIPFSなどの何らかの分散型ストレージと一緒に使用するのが最適です。
+
+[私の他の作品はこちらをご覧ください](https://cryptodocguy.pro/)。

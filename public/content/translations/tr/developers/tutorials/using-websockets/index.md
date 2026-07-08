@@ -1,34 +1,31 @@
 ---
 title: WebSocket'leri Kullanmak
-description: JSON-RPC istekleri yapmak ve etkinliklere abone olmak için WebSocket'ler ve Alchemy kullanma kılavuzu.
+description: "JSON-RPC istekleri yapmak ve olaylara abone olmak için WebSocket'leri ve Alchemy'yi kullanma rehberi."
 author: "Elan Halpern"
 lang: tr
-tags:
-  - "alchemy"
-  - "websocket'ler"
-  - "sorgulama"
-  - "javascript"
+tags: ["Alchemy", "websocket'ler", "sorgulama", "JavaScript"]
 skill: beginner
-source: Alchemy belgeleri
-sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
+breadcrumb: WebSocket'ler
+source: Alchemy docs
+sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
 
-Bu, Ethereum blok zincirine talepte bulunmak için WebSocket'leri ve Alchemy'yi kullanmak için giriş seviyesinde bir kılavuzdur.
+Bu, Ethereum Blokzincirine istekler yapmak için WebSocket'leri ve Alchemy'yi kullanmaya yönelik giriş seviyesinde bir rehberdir.
 
-## WebSocket'ler ile HTTP Karşılaştırması {#websockets-vs-http}
+## WebSocket'ler ve HTTP {#websockets-vs-http}
 
-HTTP'den farklı olarak WebSocket'ler ile belirli bilgiler istediğinizde sürekli olarak istekte bulunmanız gerekmez. WebSocket'ler (doğru yapılırsa), sizin için bir ağ bağlantısı sağlar ve değişiklikleri dinler.
+HTTP'nin aksine, WebSocket'ler ile belirli bir bilgi istediğinizde sürekli olarak istek yapmanıza gerek yoktur. WebSocket'ler sizin için bir ağ bağlantısını sürdürür (doğru yapılırsa) ve değişiklikleri dinler.
 
-Herhangi bir ağ bağlantısında olduğu gibi, bir WebSocket'in kesintisiz olarak sonsuza kadar açık kalacağını varsaymamalısınız, ancak kopan bağlantıların doğru bir şekilde düzeltilmesi ve elle yeniden bağlantının düzgün yapılması zor olabilir. WebSocket'lerin bir diğer dezavantajı, yanıtta HTTP durum kodlarını değil, yalnızca hata mesajını almanızdır.
+Herhangi bir ağ bağlantısında olduğu gibi, bir WebSocket'in kesintisiz olarak sonsuza kadar açık kalacağını varsaymamalısınız, ancak kopan bağlantıları ve yeniden bağlanmayı manuel olarak doğru bir şekilde ele almak zor olabilir. WebSocket'lerin bir diğer dezavantajı, yanıtta HTTP durum kodlarını değil, yalnızca hata mesajını almanızdır.
 
-[Alchemy Web3](https://docs.alchemy.com/reference/api-overview), yapılandırma gerektirmeden WebSocket arızaları ve yeniden denemeler için otomatik olarak işleme ekler.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview), hiçbir yapılandırma gerektirmeden WebSocket hataları ve yeniden denemeler için otomatik olarak işleme ekler.
 
 ## Deneyin {#try-it-out}
 
-WebSocket'leri test etmenin en kolay yolu, [wscat](https://github.com/websockets/wscat) gibi WebSocket istekleri yapmak için bir komut satırı aracı yüklemektir. Şunlar gibi istekleri wscat kullanarak gönderebilirsiniz:
+WebSocket'leri test etmenin en kolay yolu, [wscat](https://github.com/websockets/wscat) gibi WebSocket istekleri yapmak için bir komut satırı aracı yüklemektir. wscat kullanarak istekleri aşağıdaki gibi gönderebilirsiniz:
 
-_Not: Bir Alchemy hesabınız varsa `demo`'yu kendi API anahtarınızla değiştirebilirsiniz. [Ücretsiz bir Alchemy hesabı için buradan üye olun!](https://auth.alchemyapi.io/signup)_
+_Not: Bir Alchemy hesabınız varsa `demo` kısmını kendi API anahtarınızla değiştirebilirsiniz. [Buradan ücretsiz bir Alchemy hesabına kaydolun!](https://auth.alchemy.com/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -36,20 +33,19 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
 <  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-
 ```
 
 ## WebSocket'ler nasıl kullanılır {#how-to-use-websockets}
 
-Başlamak için uygulamanızın WebSocket URL'sini kullanarak bir WebSocket açın. Uygulamanızın WebSocket URL'sini [gösterge panelinizde](https://dashboard.alchemyapi.io/) uygulama sayfasını açıp "View Key"e (Anahtarı Görüntüle) tıklayarak bulabilirsiniz. Uygulamanızın WebSocket URL'sinin, HTTP istekleri URL'sinden farklı olduğunu, ancak her ikisinin de "View Key"e tıklanarak bulunabileceğini unutmayın.
+Başlamak için, uygulamanızın WebSocket URL'sini kullanarak bir WebSocket açın. Uygulamanızın WebSocket URL'sini, [kontrol panelinizde](https://dashboard.alchemy.com/) uygulamanın sayfasını açıp "View Key" (Anahtarı Görüntüle) seçeneğine tıklayarak bulabilirsiniz. Uygulamanızın WebSocket'ler için olan URL'sinin HTTP istekleri için olan URL'sinden farklı olduğunu, ancak her ikisinin de "View Key" seçeneğine tıklanarak bulunabileceğini unutmayın.
 
-![Alchemy gösterge panelinizde WebSocket URL'nizi nerede bulabilirsiniz](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
 
-[Alchemy API Referansında](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) listelenen API'lerden herhangi biri WebSocket aracılığıyla kullanılabilir. Bunu yapmak için, HTTP POST isteğinin gövdesi olarak gönderilecek yükün aynısını kullanın, bunun yerine bu yükü WebSocket aracılığıyla gönderin.
+[Alchemy API Referansı](https://www.alchemy.com/docs/reference/api-overview) içinde listelenen API'lerin herhangi biri WebSocket aracılığıyla kullanılabilir. Bunu yapmak için, bir HTTP POST isteğinin gövdesi olarak gönderilecek olan aynı yükü kullanın, ancak bu yükü bunun yerine WebSocket üzerinden gönderin.
 
 ## Web3 ile {#with-web3}
 
-Web3 gibi bir istemci kütüphanesi kullanırken WebSocket'lere geçiş yapmak basittir. Web3 istemcinizi başlatırken HTTP URL'si yerine WebSocket URL'sini iletin. Örneğin:
+Web3 gibi bir istemci Kütüphanesi kullanırken WebSocket'lere geçiş yapmak basittir. Web3 istemcinizi başlatırken HTTP URL'si yerine WebSocket URL'sini iletmeniz yeterlidir. Örneğin:
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -57,9 +53,9 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## Abonelik API {#subscription-api}
+## Abonelik API'si {#subscription-api}
 
-Bir WebSocket aracılığıyla bağlanıldığınızda, iki ek yöntem kullanabilirsiniz: `eth_subscribe` ve `eth_unsubscribe`. Bu yöntemler, belirli olayları dinlemenizi ve anında haberdar olmanızı sağlar.
+Bir WebSocket üzerinden bağlandığınızda, iki ek yöntem kullanabilirsiniz: `eth_subscribe` ve `eth_unsubscribe`. Bu yöntemler, belirli olayları dinlemenize ve anında bildirim almanıza olanak tanır.
 
 ### `eth_subscribe` {#eth-subscribe}
 
@@ -68,29 +64,29 @@ Belirtilen olaylar için yeni bir abonelik oluşturur. [`eth_subscribe` hakkınd
 #### Parametreler {#parameters}
 
 1. Abonelik türleri
-2. Opsiyonel parametreler
+2. İsteğe bağlı parametreler
 
-İlk argüman, dinlenecek olayın türünü belirtir. İkinci argüman, ilk argümana bağlı olan ek seçenekleri içerir. Farklı açıklama türleri, seçenekleri ve olay yükleri aşağıda açıklanmıştır.
+İlk argüman, dinlenecek olayın türünü belirtir. İkinci argüman, ilk argümana bağlı olan ek seçenekler içerir. Farklı açıklama türleri, seçenekleri ve olay yükleri aşağıda açıklanmıştır.
 
-#### Dönüşler {#returns}
+#### Döndürülenler {#returns}
 
-Abonelik ID'si: Bu ID, alınan tüm etkinliklere eklenecektir ve ayrıca `eth_unsubscribe` kullanılarak aboneliği iptal etmek için de kullanılabilir.
+Abonelik kimliği (ID): Bu kimlik, alınan tüm olaylara eklenecektir ve ayrıca `eth_unsubscribe` kullanılarak aboneliği iptal etmek için de kullanılabilir.
 
-#### Abonelik etkinlikleri {#subscription-events}
+#### Abonelik olayları {#subscription-events}
 
-Abonelik aktifken, aşağıdaki alanlara sahip nesneler olan olayları alacaksınız:
+Abonelik aktifken, aşağıdaki alanlara sahip nesneler olan olaylar alacaksınız:
 
 - `jsonrpc`: Her zaman "2.0"
 - `method`: Her zaman "eth_subscription"
-- `params`: Şu alanları içeren bir nesne:
-  - `subscription`: Bu aboneliği oluşturan `eth_subscription` çağrısı tarafından döndürülen abonelik ID'si.
-  - `result`: İçeriği abonelik türüne göre değişen bir nesne.
+- `params`: Aşağıdaki alanlara sahip bir nesne:
+  - `subscription`: Bu aboneliği oluşturan `eth_subscribe` çağrısı tarafından döndürülen abonelik kimliği.
+  - `result`: İçeriği abonelik türüne bağlı olarak değişen bir nesne.
 
 #### Abonelik türleri {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-Bekleme durumuna eklenen tüm işlemler için işlem bilgilerini döndürür. Bu abonelik türü, standart Web3 çağrısına`web3.eth.subscribe("pendingTransactions")` benzer şekilde bekleyen işlemlere abone olur, ancak yalnızca işlem hash değerleri yerine _tam işlem bilgilerini_ yayması bakımından farklılık gösterir.
+Bekleyen duruma eklenen tüm işlemler için işlem bilgilerini döndürür. Bu abonelik türü, standart Web3 çağrısı `web3.eth.subscribe("pendingTransactions")`'a benzer şekilde bekleyen işlemlere abone olur, ancak yalnızca işlem karmaları (hash) yerine _tam işlem bilgilerini_ yayması bakımından farklılık gösterir.
 
 Örnek:
 
@@ -125,9 +121,9 @@ Bekleme durumuna eklenen tüm işlemler için işlem bilgilerini döndürür. Bu
 
 2. `newHeads`
 
-Zincirin yeniden düzenlenmesi de dahil olmak üzere, zincire her yeni başlık eklendiğinde bir olay yayar.
+Bir Zincir yeniden düzenleme süreci de dahil olmak üzere, Zincire yeni bir başlık eklendiğinde her zaman bir olay yayar.
 
-Zincirin yeniden düzenlenmesi gerçekleştiğinde, bu abonelik yeni zincir için tüm yeni başlıkları içeren bir olay yayacaktır. Bu, özellikle aynı yükseklikte birden fazla başlık görebileceğiniz anlamına gelir ve bu olduğunda sonraki başlık, yeniden düzenlemeden sonra doğru olan olarak alınmalıdır.
+Bir Zincir yeniden düzenleme gerçekleştiğinde, bu abonelik yeni Zincir için tüm yeni başlıkları içeren bir olay yayacaktır. Özellikle bu, aynı yükseklikte yayılan birden fazla başlık görebileceğiniz anlamına gelir ve bu gerçekleştiğinde, yeniden düzenleme sonrasında daha sonraki başlık doğru olan olarak kabul edilmelidir.
 
 Örnek:
 
@@ -162,26 +158,26 @@ Zincirin yeniden düzenlenmesi gerçekleştiğinde, bu abonelik yeni zincir içi
 
 3. `logs`
 
-Belirtilen filtre kriterleriyle eşleşen yeni eklenen blokların parçası olan kayıtları yayar.
+Belirtilen filtre kriterleriyle eşleşen yeni eklenen blokların parçası olan günlükleri (log) yayar.
 
-Zincirin yeniden düzenlenmesi gerçekleştiğinde, eski zincirdeki blokların parçası olan günlükler, `removed` özelliği `true` olarak ayarlanmış olarak yeniden yayınlanacaktır. Ayrıca, yeni zincirdeki blokların parçası olan kayıtlar yayınlanır, yani yeniden düzenleme durumunda aynı işlem için kayıtları birden çok kez görmek mümkündür.
+Bir Zincir yeniden düzenleme gerçekleştiğinde, eski Zincirdeki blokların parçası olan günlükler, `removed` özelliği `true` olarak ayarlanmış şekilde tekrar yayılacaktır. Ayrıca, yeni Zincirdeki blokların parçası olan günlükler yayılır, bu da bir yeniden düzenleme durumunda aynı işlem için günlükleri birden çok kez görmenin mümkün olduğu anlamına gelir.
 
 Parametreler
 
 1. Aşağıdaki alanlara sahip bir nesne:
-   - `address` (isteğe bağlı): bir adresi temsil eden bir dize veya bu tür dizelerin bir dizisi.
-     - Yalnızca bu adreslerden birinden oluşturulan kayıtlar yayınlanacaktır.
-   - `topics`: konu belirteçlerinin bir listesi.
-     - Her konu belirteci `null`, bir konuyu temsil eden bir dize veya dizelerden oluşan bir dizi olabilir.
-     - Dizideki `null` olmayan her pozisyon, yayılan kayıtları yalnızca o konumda verilen konulardan birine sahip olanlarla sınırlar.
+   - `address` (isteğe bağlı): bir Adresi temsil eden bir dize veya bu tür dizelerden oluşan bir dizi.
+     - Yalnızca bu Adreslerden birinden oluşturulan günlükler yayılacaktır.
+   - `topics`: konu belirleyicilerinden oluşan bir dizi.
+     - Her konu belirleyicisi ya `null`, bir konuyu temsil eden bir dize ya da dizelerden oluşan bir dizidir.
+     - Dizide `null` olmayan her konum, yayılan günlükleri yalnızca o konumda verilen konulardan birine sahip olanlarla sınırlar.
 
-Konu belirteçlerine ilişkin bazı örnekler:
+Konu belirlemelerine bazı örnekler:
 
 - `[]`: Herhangi bir konuya izin verilir.
-- `[A]`: A ilk pozisyonda (veya sonraki herhangi biri).
-- `[null, B]`: Birinci pozisyondaki herhangi bir şey ve ikinci pozisyondaki B (ve sonraki herhangi bir şey).
-- `[A, B]`: A birinci pozisyonda ve B ikinci pozisyonda (ve sonrasında herhangi bir şey).
-- `[[A, B], [A, B]]`: (A veya B) birinci pozisyonda ve (A veya B) ikinci pozisyonda (ve sonrasında herhangi bir şey).
+- `[A]`: İlk konumda A (ve sonrasında herhangi bir şey).
+- `[null, B]`: İlk konumda herhangi bir şey ve ikinci konumda B (ve sonrasında herhangi bir şey).
+- `[A, B]`: İlk konumda A ve ikinci konumda B (ve sonrasında herhangi bir şey).
+- `[[A, B], [A, B]]`: İlk konumda (A veya B) ve ikinci konumda (A veya B) (ve sonrasında herhangi bir şey).
 
 Örnek:
 
@@ -211,15 +207,15 @@ Konu belirteçlerine ilişkin bazı örnekler:
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
-Başka bir olayın gönderilmemesi için mevcut bir aboneliği iptal eder.
+Daha fazla olay gönderilmemesi için mevcut bir aboneliği iptal eder.
 
 Parametreler
 
-1. Daha önce bir `eth_subscribe` çağrısından döndürülen abonelik ID'si.
+1. Daha önce bir `eth_subscribe` çağrısından döndürülen Abonelik kimliği.
 
-Dönüşler
+Döndürülenler
 
-Bir abonelik başarıyla iptal edildiyse `true` veya verilen ID'de hiçbir abonelik yoksa `false`.
+Bir abonelik başarıyla iptal edildiyse `true`, veya verilen kimliğe sahip bir abonelik yoksa `false`.
 
 Örnek:
 
@@ -230,8 +226,6 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 -X POST
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-
-
 ```
 
 **Sonuç**
@@ -246,4 +240,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Alchemy'ye ücretsiz kaydolun](https://auth.alchemyapi.io/signup), [belgelerimize](https://docs.alchemyapi.io/) göz atın ve en son haberler için bizi [Twitter](https://twitter.com/AlchemyPlatform)'da takip edin.
+Ücretsiz olarak [Alchemy'ye kaydolun](https://auth.alchemy.com), [belgelerimize](https://www.alchemy.com/docs/) göz atın ve en son haberler için bizi [Twitter](https://x.com/AlchemyPlatform) üzerinden takip edin.

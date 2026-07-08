@@ -1,0 +1,98 @@
+import { getTranslations, setRequestLocale } from "next-intl/server"
+
+import type { Lang, PageParams } from "@/lib/types"
+
+import { PageHero } from "@/components/Hero"
+
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import {
+  buildToolLabels,
+  countToolsByCategory,
+  localizeToolDescriptions,
+  normalizeDeveloperToolsData,
+  withCategories,
+} from "@/lib/utils/developerToolsData"
+import { getMetadata } from "@/lib/utils/metadata"
+
+import ToolsPageBody from "./_components/ToolsPageBody"
+import DevelopersToolsJsonLD from "./page-jsonld"
+
+import { getDeveloperToolsData } from "@/lib/data"
+
+// Re-render statically generated page daily to pick up tools data updates
+// (no `searchParams` read here — that would opt the page into dynamic
+// rendering and forfeit static/edge caching).
+export const revalidate = 86400
+
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const { locale } = await props.params
+
+  setRequestLocale(locale)
+
+  const [data, { contributors }, t, toolDescriptions] = await Promise.all([
+    getDeveloperToolsData(),
+    getAppPageContributorInfo("developers/tools", locale as Lang),
+    getTranslations({ locale, namespace: "page-developers-tools" }),
+    getTranslations({ locale, namespace: "page-developers-tools-descriptions" }),
+  ])
+
+  const normalized = normalizeDeveloperToolsData(data)
+  if (!normalized) throw Error("No developer tools data available")
+
+  const categories = normalized.taxonomy.categories.definitions
+  const allTools = localizeToolDescriptions(
+    withCategories(normalized),
+    toolDescriptions
+  )
+  const countByCategory = countToolsByCategory(allTools)
+  const { categoryLabels, subcategoryLabels } = buildToolLabels(
+    t,
+    normalized.taxonomy
+  )
+
+  return (
+    <>
+      <DevelopersToolsJsonLD
+        locale={locale}
+        contributors={contributors}
+        categories={categories}
+        categoryLabels={categoryLabels}
+      />
+      <PageHero
+        breadcrumbs={{ slug: "/developers/tools" }}
+        title={t("page-developers-tools-title")}
+        description={t("page-developers-tools-subtitle")}
+        variant="no-divider"
+      />
+      <ToolsPageBody
+        locale={locale}
+        tools={allTools}
+        categories={categories}
+        categoryLabels={categoryLabels}
+        subcategoryLabels={subcategoryLabels}
+        countByCategory={countByCategory}
+        totalCount={allTools.length}
+      />
+    </>
+  )
+}
+
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
+}) {
+  const params = await props.params
+  const { locale } = params
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-tools",
+  })
+
+  return await getMetadata({
+    locale,
+    slug: ["developers", "tools"],
+    title: t("page-developers-tools-meta-title"),
+    description: t("page-developers-tools-meta-description"),
+  })
+}
+
+export default Page

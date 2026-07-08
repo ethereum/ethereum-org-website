@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import QuizzesStats from "../QuizzesStats"
 
@@ -21,7 +21,9 @@ const meta = {
       web3: [false, 0],
       daos: [false, 0],
       stablecoins: [false, 0],
+      "smart-contracts": [false, 0],
       defi: [false, 0],
+      gas: [false, 0],
     },
     totalCorrectAnswers: 0,
   },

@@ -1,89 +1,93 @@
 ---
-title: 初心者向けのHello Worldスマートコントラクト - フルスタック
-description: イーサリアムでの簡単なスマートコントラクトの作成とデプロイに関する入門チュートリアル
+title: "初心者のためのHello Worldスマート・コントラクト - フルスタック"
+description: "イーサリアム上でシンプルなスマート・コントラクトを記述し、デプロイするための入門チュートリアル。"
 author: "nstrike2"
+breadcrumb: "Hello World フルスタック"
 tags:
-  - "Solidity"
-  - "Hardhat"
-  - "Alchemy"
-  - "スマートコントラクト"
-  - "デプロイ"
-  - "ブロックエクスプローラ"
-  - "フロントエンド"
-  - "トランザクション"
+  [
+    "Solidity",
+    "Hardhat",
+    "Alchemy",
+    "スマート・コントラクト",
+    "デプロイ",
+    "ブロックエクスプローラー",
+    "フロントエンド",
+    "トランザクション",
+    "フレームワーク",
+  ]
 skill: beginner
 lang: ja
 published: 2021-10-25
 ---
 
-このガイドはブロックチェーンの開発の初心者で、どこから始めたらよいか分からなかったり、スマートコントラクトのデプロイやインタラクト方法について分からない方向けのものです。 これから一緒に、Goerliテストネットワーク上で簡単なスマートコントラクトを作成してデプロイする方法を順を追ってたどりましょう。その際、[MetaMask](https://metamask.io)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org)と[Alchemy](https://alchemyapi.io/eth)を使用します。
+ブロックチェーン開発が初めてで、どこから始めればよいか、あるいはスマート・コントラクトをどのようにデプロイして対話すればよいかわからない場合、このガイドはあなたのためのものです。[メタマスク](https://metamask.io)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org)、および[Alchemy](https://alchemy.com/eth)を使用して、ゴエリのテストネットワーク上にシンプルなスマート・コントラクトを作成し、デプロイする手順を説明します。
 
-このチュートリアルを完了するためにはAlchemyのアカウントが必要です。 [無料でアカウント登録する](https://www.alchemy.com/).
+このチュートリアルを完了するには、Alchemyのアカウントが必要です。[無料アカウントに登録してください](https://www.alchemy.com/)。
 
-質問がある場合は、いつでもお気軽に[Alchemy Discord](https://discord.gg/gWuC7zB)でお問い合わせください。
+途中で質問がある場合は、[Alchemyのディスコード](https://discord.gg/gWuC7zB)でお気軽にお問い合わせください！
 
-## パート1: Hardhatを利用してスマートコントラクトを作りデプロイする {#part-1}
+## パート1 - Hardhatを使用したスマート・コントラクトの作成とデプロイ {#part-1}
 
-### イーサリアムネットワークに接続する {#connect-to-the-ethereum-network}
+### イーサリアムネットワークへの接続 {#connect-to-the-ethereum-network}
 
-イーサリアムチェーンにリクエストを行う方法はたくさんあります。 簡略化のため、ここではAlchemyの無料アカウントを使用します。このブロックチェーンのデベロッパープラットフォームとAPIにより、独自のノードを実行することなく、イーサリアムチェーンとの通信が可能になります。 Alchemyには、スマートコントラクトのデプロイメントにおいて内部で何が起こっているのかを把握するためにこのチュートリアルで利用する、監視と分析のためのデベロッパーツールも備わっています。
+イーサリアムチェーンにリクエストを送信する方法はたくさんあります。ここではシンプルにするため、ブロックチェーン開発者向けプラットフォームおよびAPIであるAlchemyの無料アカウントを使用します。これにより、自分でノードを実行することなくイーサリアムチェーンと通信できるようになります。Alchemyには監視や分析のための開発者ツールも備わっており、このチュートリアルではこれらを活用して、スマート・コントラクトのデプロイの内部で何が起こっているのかを理解します。
 
-### アプリのAPIキーの作成 {#create-your-app-and-api-key}
+### アプリとAPIキーの作成 {#create-your-app-and-api-key}
 
-Alchemyのアカウントを作成した後、アプリを作成することでAPIキーを生成することができます。 これにより、Goerliテストネットへのリクエストが可能になります。 テストネットに詳しくない場合は、[Alchemyのネットワークの選択ガイド](https://docs.alchemyapi.io/guides/choosing-a-network)をお読みください。
+Alchemyアカウントを作成したら、アプリを作成してAPIキーを生成できます。これにより、ゴエリテストネットへのリクエストが可能になります。テストネットに馴染みがない場合は、[ネットワークの選択に関するAlchemyのガイド](https://www.alchemy.com/docs/choosing-a-web3-network)をお読みください。
 
-Alchemyダッシュボード上にあるナビゲーションバーで**Apps**ドロップダウンがあります。そこで、**Create App**をクリックします。
+Alchemyのダッシュボードで、ナビゲーションバーの**Apps**ドロップダウンを見つけ、**Create App**をクリックします。
 
-![Hello WorldのCreate App](./hello-world-create-app.png)
+![Hello world create app](./hello-world-create-app.png)
 
-アプリに「_Hello World_」という名前を付けて、短い説明を書きます。 環境は、**Staging**を選択します。ネットワークは、**Goerli**を選択します。
+アプリに「_Hello World_」という名前を付け、短い説明を書きます。環境（Environment）として**Staging**を、ネットワークとして**Goerli**を選択します。
 
-![Hello WorldのCreate App画面](./create-app-view-hello-world.png)
+![create app view hello world](./create-app-view-hello-world.png)
 
-_注意: 必ず**Goerli**を選択してください。そうしないと、このチュートリアルどおり行きません。_
+_注: 必ず**Goerli**を選択してください。そうしないと、このチュートリアルは機能しません。_
 
-**Create app**をクリックしてください。 アプリが下の表に表示されます。
+<strong>Create app</strong>をクリックします。アプリが下の表に表示されます。
 
 ### イーサリアムアカウントの作成 {#create-an-ethereum-account}
 
-トランザクションの送受信には、イーサリアムアカウントが必要です。 ここでは、MetaMaskを使います。MataMaskは、ユーザーがイーサリアムのアカウントアドレスを管理できるブラウザーの仮想ウォレットです。
+トランザクションを送受信するには、イーサリアムアカウントが必要です。ここでは、ユーザーがブラウザ上でイーサリアムアカウントのアドレスを管理できる仮想ウォレットであるメタマスクを使用します。
 
-Metamaskのアカウントは[こちら](https://metamask.io/download.html)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は(実際に支払いが発生しないように)右上の「Goerli Test Network」に切り替えてください。
+メタマスクのアカウントは[こちら](https://metamask.io/download)から無料でダウンロードして作成できます。アカウントを作成する際、またはすでにアカウントを持っている場合は、右上で「Goerli Test Network」に切り替えてください（実際の資金を扱わないようにするためです）。
 
-### ステップ4: フォーセットからイーサリアムを追加する {#step-4-add-ether-from-a-faucet}
+### ステップ4: フォーセットからイーサを追加する {#step-4-add-ether-from-a-faucet}
 
-テストネットワークにスマートコントラクトをデプロイするには、偽のETHが複数必要になります。 GoerliネットワークでETHを取得するには、Goerliフォーセットに移動し、あなたのGoerliのアカウントアドレスを入力します。 Goerliフォーセットは最近、不安定になることがあります。試せるオプションのリストは、[テストネットワークのページ](/developers/docs/networks/#goerli)を参照してください。
+テストネットワークにスマート・コントラクトをデプロイするには、テスト用のETHが必要です。ゴエリネットワークでETHを取得するには、ゴエリのフォーセットにアクセスし、ゴエリアカウントのアドレスを入力します。最近、ゴエリのフォーセットは少し不安定になることがあるため、試せるオプションのリストについては[テストネットワークのページ](/developers/docs/networks/#goerli)を参照してください。
 
-_注意: ネットワークの混雑状況によっては、時間がかかる場合があります。_
+_注: ネットワークの混雑状況により、これには少し時間がかかる場合があります。_
+``
 
 ### ステップ5: 残高を確認する {#step-5-check-your-balance}
 
-あなたのウォレットにETHがあることをダブルチェックし、[eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)リクエストを[Alchemyのコンポーザーツール](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)を使って出してみましょう。 リクエストすると、ウォレット内のETHの量が返却されます。 詳細については、[Alchemyの短いチュートリアルにあるコンポーザーツールの使用方法](https://youtu.be/r6sjRxBZJuU)をご覧ください。
+ウォレットにETHがあることを再確認するために、[Alchemyのサンドボックスツール](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)を使用して[eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)リクエストを送信してみましょう。これにより、ウォレット内のETHの量が返されます。詳細については、[コンポーザーツールの使用方法に関するAlchemyの短いチュートリアル](https://youtu.be/r6sjRxBZJuU)を確認してください。
 
-MetaMaskアカウントのアドレスを入力し、**Send Request**をクリックします。 以下のコードスニペットのようなレスポンスが来ます。
+メタマスクのアカウントアドレスを入力し、**Send Request**をクリックします。以下のコードスニペットのような応答が表示されます。
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> _注意: この結果の単位はweiであり、ETHではありません。 weiはETHの最小単位として使われています。_
+> _注: この結果はETHではなくweiで表示されています。weiはイーサの最小単位として使用されます。_
 
-ご安心ください。 私たちの偽物のお金はすべてそこにあります。
-
+ふう！テスト用の資金は無事に入っていました。
 ### ステップ6: プロジェクトを初期化する {#step-6-initialize-our-project}
 
-まず、プロジェクトのフォルダを作成する必要があります。 コマンドラインに移動し、次のように入力します。
+まず、プロジェクト用のフォルダを作成する必要があります。コマンドラインに移動し、次のように入力します。
 
 ```
 mkdir hello-world
 cd hello-world
 ```
 
-プロジェクトフォルダ内に入ったら、`npm init`を使用してプロジェクトを初期化します。
+プロジェクトフォルダ内に移動したので、`npm init`を使用してプロジェクトを初期化します。
 
-> npmをまだインストールしていない場合は、[こちら](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm)の手順に従いNode.jsとnpmをインストールします。
+> まだnpmをインストールしていない場合は、[Node.jsのインストール手順](https://nodejs.org/en/download/)に従ってNode.jsとnpmをインストールしてください。
 
-このチュートリアルでは、初期化における質問にどのように答えるかには重点を置いていません。 参考までに、私たちは次のように行いました。
+このチュートリアルの目的においては、初期化の質問にどのように答えても問題ありません。参考までに、以下のように設定しました。
 
 ```
 package name: (hello-world)
@@ -111,29 +115,28 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-package.jsonを承認すれば完了です。
+package.jsonを承認すれば、準備完了です！
+### ステップ7: Hardhatをダウンロードする {#step-7-download-hardhat}
 
-### ステップ7: Hardhatのダウンロード {#step-7-download-hardhat}
+Hardhatは、イーサリアムソフトウェアをコンパイル、デプロイ、テスト、およびデバッグするための開発環境です。ライブチェーンにデプロイする前に、ローカルでスマート・コントラクトや分散型アプリケーション (dapp) を構築する開発者を支援します。
 
-Hardhatは、イーサリアムのソフトウェアをコンパイル、デプロイ、テスト、デバッグするための開発環境です。 デベロッパーがライブチェーンにデプロイする前に、スマートコントラクトや分散型アプリケーション(Dapp)をローカルに構築する際に役立ちます。
-
-先ほど作成した`hello-world`プロジェクト内で、以下を実行します。
+`hello-world`プロジェクト内で以下を実行します。
 
 ```
 npm install --save-dev hardhat
 ```
 
-[インストール手順](https://hardhat.org/getting-started/#overview)の詳細については、こちらのページをご覧ください。
+[インストール手順](https://hardhat.org/getting-started/#overview)の詳細については、こちらのページを確認してください。
 
 ### ステップ8: Hardhatプロジェクトを作成する {#step-8-create-hardhat-project}
 
-先ほど作成した`hello-world`プロジェクトフォルダ内で、以下を実行します。
+`hello-world`プロジェクトフォルダ内で、以下を実行します。
 
 ```
 npx hardhat
 ```
 
-ウェルカムメッセージと、次に何をするのかを選択できるオプションが表示されます。 「Create an empty hardhat.config.js」を選択します。
+すると、ウェルカムメッセージと実行したい操作を選択するオプションが表示されます。「create an empty hardhat.config.js」を選択します。
 
 ```
 888    888                      888 888               888
@@ -153,57 +156,57 @@ Create a sample project
 Quit
 ```
 
-これで、プロジェクト内に`hardhat.config.js`ファイルが生成されます。 プロジェクトの設定を明記するのにチュートリアルの後半でこれを使用します。
+これにより、プロジェクト内に`hardhat.config.js`ファイルが生成されます。このファイルは、チュートリアルの後半でプロジェクトの設定を指定するために使用します。
 
 ### ステップ9: プロジェクトフォルダを追加する {#step-9-add-project-folders}
 
-プロジェクトを整理するために、2つの新しいフォルダを作成します。 コマンドラインで、`hello-world`プロジェクトのルートディレクトリに移動し、次のように入力します。
+プロジェクトを整理するために、2つの新しいフォルダを作成しましょう。コマンドラインで`hello-world`プロジェクトのルートディレクトリに移動し、次のように入力します。
 
 ```
 mkdir contracts
 mkdir scripts
 ```
 
-- `contracts/`は、Hello Worldスマートコントラクトのコードファイルを格納する場所です。
-- `scripts/`は、コントラクトをデプロイして対話するスクリプトを保持する場所です。
+- `contracts/` は、Hello Worldスマート・コントラクトのコードファイルを保存する場所です
+- `scripts/` は、コントラクトをデプロイして対話するためのスクリプトを保存する場所です
 
-### ステップ10: コントラクトを作成する {#step-10-write-our-contract}
+### ステップ10: コントラクトを記述する {#step-10-write-our-contract}
 
-一体いつになったらコードを書くのだろうと疑問をお持ちではないでしょうか 。 まさに、その時です!
+いつコードを書くのか疑問に思っているかもしれません。いよいよその時です！
 
-あなたのお気に入りのエディターでhello-worldプロジェクトを開きます。 スマートコントラクトは、最も一般的にはSolidityで書かれています。そのため、Solidityでスマートコントラクトを作成します。
+お気に入りのエディタでhello-worldプロジェクトを開きます。スマート・コントラクトは一般的にSolidityで記述されるため、ここでもSolidityを使用してスマート・コントラクトを記述します。‌
 
-1. `contracts`フォルダに移動し、`HelloWorld.sol`という名前の新規ファイルを作成します。
-2. 以下は、このチュートリアルで使用するHello Worldスマートコントラクトのサンプルです。 以下の内容を`HelloWorld.sol`ファイルにコピーします。
+1. `contracts`フォルダに移動し、`HelloWorld.sol`という新しいファイルを作成します
+2. 以下は、このチュートリアルで使用するHello Worldスマート・コントラクトのサンプルです。以下の内容を`HelloWorld.sol`ファイルにコピーします。
 
-_注意: 必ずコメントを読み、このコントラクトの処理内容を理解してください。_
+_注: コメントを読んで、このコントラクトが何を行うかを理解してください。_
 
 ```
-// Specifies the version of Solidity, using semantic versioning.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// セマンティックバージョニングを使用して、Solidityのバージョンを指定します。
+// 詳細: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity >=0.7.3;
 
-// Defines a contract named `HelloWorld`.
-// A contract is a collection of functions and data (its state). Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// `HelloWorld`という名前のコントラクトを定義します。
+// コントラクトは、関数とデータ（その状態）の集合体です。デプロイされると、コントラクトはイーサリアムブロックチェーン上の特定のアドレスに配置されます。詳細: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-   //Emitted when update function is called
-   //Smart contract events are a way for your contract to communicate that something happened on the blockchain to your app front-end, which can be 'listening' for certain events and take action when they happen.
+   // update関数が呼び出されたときに発行されます
+   // スマート・コントラクトのイベントは、ブロックチェーン上で何かが発生したことをアプリのフロントエンドに伝えるための手段です。フロントエンドは特定のイベントを「リッスン」し、それらが発生したときにアクションを実行できます。
    event UpdatedMessages(string oldStr, string newStr);
 
-   // Declares a state variable `message` of type `string`.
-   // State variables are variables whose values are permanently stored in contract storage. The keyword `public` makes variables accessible from outside a contract and creates a function that other contracts or clients can call to access the value.
+   // `string`型の状態変数`message`を宣言します。
+   // 状態変数は、その値がコントラクトのストレージに永続的に保存される変数です。`public`キーワードを使用すると、コントラクトの外部から変数にアクセスできるようになり、他のコントラクトやクライアントが値にアクセスするために呼び出せる関数が作成されます。
    string public message;
 
-   // Similar to many class-based object-oriented languages, a constructor is a special function that is only executed upon contract creation.
-   // Constructors are used to initialize the contract's data. Learn more:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // 多くのクラスベースのオブジェクト指向言語と同様に、コンストラクタはコントラクトの作成時にのみ実行される特別な関数です。
+   // コンストラクタは、コントラクトのデータを初期化するために使用されます。詳細: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
    constructor(string memory initMessage) {
 
-      // Accepts a string argument `initMessage` and sets the value into the contract's `message` storage variable).
+      // 文字列の引数`initMessage`を受け取り、その値をコントラクトの`message`ストレージ変数に設定します。
       message = initMessage;
    }
 
-   // A public function that accepts a string argument and updates the `message` storage variable.
+   // 文字列の引数を受け取り、`message`ストレージ変数を更新するパブリック関数です。
    function update(string memory newMessage) public {
       string memory oldMsg = message;
       message = newMessage;
@@ -212,15 +215,15 @@ contract HelloWorld {
 }
 ```
 
-これは、作成時にメッセージを保存する基本的なスマートコントラクトです。 `update`関数を呼び出すことで更新できます。
+これは、作成時にメッセージを保存する基本的なスマート・コントラクトです。`update`関数を呼び出すことで更新できます。
 
-### ステップ11: MetaMaskとAlchemyをプロジェクトに接続する {#step-11-connect-metamask-alchemy-to-your-project}
+### ステップ11: メタマスクとAlchemyをプロジェクトに接続する {#step-11-connect-metamask-alchemy-to-your-project}
 
-ここまでで、MetaMaskウォレットとAlchemyアカウントを作成し、スマートコントラクトも作成しました。次はこの3つを接続しましょう。
+メタマスクウォレット、Alchemyアカウントを作成し、スマート・コントラクトを記述しました。次はこれら3つを接続します。
 
-ウォレットから送信されるすべてのトランザクションには、固有の秘密鍵を使用した署名が必要です。 この許可をプログラムに与えるために、秘密鍵を環境ファイルに安全に格納する作業を行います。 AlchemyのAPIキーもここに保存します。
+ウォレットから送信されるすべてのトランザクションには、固有の秘密鍵を使用した署名が必要です。プログラムにこの権限を与えるために、秘密鍵を環境ファイルに安全に保存できます。また、AlchemyのAPIキーもここに保存します。
 
-> トランザクションの送信の詳細については、[こちらのチュートリアル](https://docs.alchemyapi.io/alchemy/tutorials/sending-transactions-using-web3-and-alchemy)のweb3使ったトランザクションの送信に関する内容をご覧ください。
+> トランザクションの送信について詳しくは、Web3を使用したトランザクションの送信に関する[こちらのチュートリアル](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)を確認してください。
 
 まず、プロジェクトディレクトリにdotenvパッケージをインストールします。
 
@@ -228,16 +231,16 @@ contract HelloWorld {
 npm install dotenv --save
 ```
 
-次に、プロジェクトのルートディレクトリに`.env`ファイルを作成します。 MetaMask秘密鍵とHTTP Alchemy API URLをファイルに加えます。
+次に、プロジェクトのルートディレクトリに`.env`ファイルを作成します。そこにメタマスクの秘密鍵とHTTP Alchemy API URLを追加します。
 
-環境ファイルの名前は、必ず`.env`にしてください。そうしないと環境ファイルとして認識されません。
+環境ファイルの名前は`.env`である必要があります。そうでない場合、環境ファイルとして認識されません。
 
-`process.env`や`.env-custom`などの名前を付けないでください。
+`process.env`や`.env-custom`などの他の名前を付けないでください。
 
-- 秘密鍵をエクスポートするには、[こちらの手順](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)に従ってください。
-- HTTP Alchemy APIのURLを取得するには、以下を参照してください。
+- 秘密鍵をエクスポートするには、[こちらの手順](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)に従ってください
+- HTTP Alchemy API URLの取得については以下を参照してください
 
-![](./get-alchemy-api-key.gif)
+![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.gif)
 
 `.env`ファイルは次のようになります。
 
@@ -246,25 +249,25 @@ API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
 PRIVATE_KEY = "your-metamask-private-key"
 ```
 
-これらの変数を実際にコードに接続するために、ステップ13でこれらの変数を`hardhat.config.js`ファイル内で参照します。
+これらを実際にコードに接続するために、ステップ13で`hardhat.config.js`ファイル内のこれらの変数を参照します。
 
 ### ステップ12: Ethers.jsをインストールする {#step-12-install-ethersjs}
 
-Ethers.jsは、よりユーザーフレンドリーなメソッドで[標準のJSON-RPCメソッド](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc)をラップすることにより、イーサリアムとの対話やリクエストを簡単に行うためのライブラリです。
+Ethers.jsは、[標準のJSON-RPCメソッド](/developers/docs/apis/json-rpc/)をよりユーザーフレンドリーなメソッドでラップすることで、イーサリアムとの対話やリクエストの送信を容易にするライブラリです。
 
-Hardhatを使用すると、追加のツールと拡張機能のための[プラグイン](https://hardhat.org/plugins/)を統合できます。 コントラクトのデプロイでは、[Ethersプラグイン](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html)を利用します。
+Hardhatでは、追加のツールや拡張機能のために[プラグイン](https://hardhat.org/plugins/)を統合できます。ここでは、コントラクトのデプロイに[Ethersプラグイン](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)を活用します。
 
-プロジェクトのホームディレクトリで以下を実行します。
+プロジェクトディレクトリで次のように入力します。
 
 ```bash
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### ステップ13: hardhat.config.jsをアップデートする {#step-13-update-hardhat.configjs}
+### ステップ13: hardhat.config.jsを更新する {#step-13-update-hardhat-configjs}
 
-ここまでで、いくつかの依存関係とプラグインを追加しました。次に、`hardhat.config.js`を更新して、プロジェクトがそれらすべてについて認識できるようにする必要があります。
+これまでにいくつかの依存関係とプラグインを追加しました。次に、プロジェクトがそれらすべてを認識できるように`hardhat.config.js`を更新する必要があります。
 
-`hardhat.config.js`を以下のように更新します。
+`hardhat.config.js`を次のように更新します。
 
 ```javascript
 /**
@@ -291,27 +294,27 @@ module.exports = {
 
 ### ステップ14: コントラクトをコンパイルする {#step-14-compile-our-contract}
 
-ここまででしっかりと動作していることを確認するため、コントラクトをコンパイルしてみましょう。 `compile`タスクは、組み込みのHardhatタスクの1つです。
+ここまでがすべて正常に機能していることを確認するために、コントラクトをコンパイルしましょう。`compile`タスクは、Hardhatに組み込まれているタスクの1つです。
 
-コマンドラインで以下を実行します。
+コマンドラインから以下を実行します。
 
 ```bash
 npx hardhat compile
 ```
 
-`SPDX license identifier not provided in source file`という警告が表示される場合がありますが、心配する必要はありません。警告が表示されないのがベストですが、 表示された場合は、いつでも[Alchemy discord](https://discord.gg/u72VCg3)でメッセージを送信できます。
+`SPDX license identifier not provided in source file`に関する警告が表示されるかもしれませんが、心配する必要はありません。他はすべて問題ないはずです！もし問題がある場合は、いつでも[Alchemyのディスコード](https://discord.gg/u72VCg3)でメッセージを送ることができます。
 
-### ステップ15: デプロイスクリプトを書く {#step-15-write-our-deploy-script}
+### ステップ15: デプロイスクリプトを記述する {#step-15-write-our-deploy-script}
 
-コントラクトの作成と設定ファイルの作成が完了したら、いよいよコントラクトのデプロイのためのスクリプトを作成します。
+コントラクトの記述が完了し、設定ファイルの準備も整ったので、コントラクトのデプロイスクリプトを記述します。
 
-`scripts/`フォルダに移動して、`deploy.js`という名前のファイルを新規に作成し、以下の内容を追加します。
+`scripts/`フォルダに移動し、`deploy.js`という新しいファイルを作成して、以下の内容を追加します。
 
 ```javascript
 async function main() {
   const HelloWorld = await ethers.getContractFactory("HelloWorld")
 
-  // Start deployment, returning a promise that resolves to a contract object
+  // デプロイを開始し、コントラクトオブジェクトに解決されるプロミスを返します
   const hello_world = await HelloWorld.deploy("Hello World!")
   console.log("Contract deployed to address:", hello_world.address)
 }
@@ -324,61 +327,61 @@ main()
   })
 ```
 
-Hardhatがコードの各行で行っている驚くべき内容については、Hardhatの[コントラクトチュートリアル](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)で説明されています。以下では、その説明を採用しています。
+Hardhatは、[コントラクトのチュートリアル](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)でこれらのコードの各行が何を行うかを非常にわかりやすく説明しています。ここではその説明を採用しています。
 
 ```javascript
 const HelloWorld = await ethers.getContractFactory("HelloWorld")
 ```
 
-ethers.jsの`ContractFactory`は新しいスマートコントラクトをデプロイするための抽象化であり、ここでの`HelloWorld`はhello worldコントラクトのインスタンスのための[ファクトリ](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming))です。 `hardhat-ethers`プラグインを使用する場合、`ContractFactory`および`Contract`インスタンスはデフォルトで最初の署名者 (所有者) に接続されます。
+ethers.jsの`ContractFactory`は、新しいスマート・コントラクトをデプロイするために使用される抽象化です。したがって、ここでの`HelloWorld`は、Hello Worldコントラクトのインスタンスの[ファクトリ](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)>)です。`hardhat-ethers`プラグインの`ContractFactory`と`Contract`を使用する場合、インスタンスはデフォルトで最初の署名者（所有者）に接続されます。
 
 ```javascript
 const hello_world = await HelloWorld.deploy()
 ```
 
-`ContractFactory`で`deploy()`を呼び出すとデプロイメントが開始され、`Contract`オブジェクトに解決すべき`Promise`が返されます。 これは、スマートコントラクトの各関数に対するメソッドを持つオブジェクトです。
+`ContractFactory`で`deploy()`を呼び出すとデプロイが開始され、`Contract`オブジェクトに解決される`Promise`が返されます。これは、スマート・コントラクトの各関数のメソッドを持つオブジェクトです。
 
 ### ステップ16: コントラクトをデプロイする {#step-16-deploy-our-contract}
 
-ようやく、スマートコントラクトをデプロイする準備が整いました。 コマンドラインに移動し、以下を実行します。
+ついにスマート・コントラクトをデプロイする準備が整いました！コマンドラインに移動して以下を実行します。
 
 ```bash
 npx hardhat run scripts/deploy.js --network goerli
 ```
 
-次のような画面が表示されるはずです。
+すると、次のような出力が表示されるはずです。
 
 ```bash
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-**このアドレスを保存してください**。 このアドレスをチュートリアルの後半で使用します。
+**このアドレスを保存してください**。チュートリアルの後半で使用します。
 
-[Goerli etherscan](https://goerli.etherscan.io)に移動し、コントラクトアドレスを検索すると、コントラクトが正常にデプロイされていることを確認できるはずです。 トランザクションは以下のようなものになります。
+[ゴエリのEtherscan](https://goerli.etherscan.io)にアクセスしてコントラクトのアドレスを検索すると、正常にデプロイされたことが確認できるはずです。トランザクションは次のようになります。
 
 ![](./etherscan-contract.png)
 
-`From`アドレスはMetaMaskアカウントのアドレスと一致し、`To`アドレスは「**Contract Creation**」と表示されます。 トランザクション内容をクリックすると、`To`フィールドにコントラクトアドレスが表示されます.
+`From`のアドレスはメタマスクのアカウントアドレスと一致し、`To`のアドレスには**Contract Creation**と表示されます。トランザクションをクリックすると、`To`フィールドにコントラクトのアドレスが表示されます。
 
 ![](./etherscan-transaction.png)
 
-おめでとうございます！ イーサリアムのテストネットにスマートコントラクトをデプロイできました.
+おめでとうございます！イーサリアムのテストネットにスマート・コントラクトをデプロイしました。
 
-内部で何が起こっているのかを理解するために、[Alchemyダッシュボード](https://dashboard.alchemyapi.io/explorer)のExplorerタブに移動してみましょう。 Alchemyのアプリが複数ある場合は、必ずアプリでフィルタリングし、「**Hello World**」を選択してください。
+内部で何が起こっているのかを理解するために、[Alchemyダッシュボード](https://dashboard.alchemy.com/explorer)のExplorerタブに移動しましょう。複数のAlchemyアプリがある場合は、アプリでフィルタリングして**Hello World**を選択してください。
 
 ![](./hello-world-explorer.png)
 
-ここでは、`.deploy()`関数を呼び出した際に、HardhatもしくはEthersが内部で行ったJSON-RPCメソッドを見ることができます。 ここで2つの重要なメソッドがあります。まずは、[`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction)です。これは、Goerliチェーンにコントラクトを書き込むリクエストです。次に[`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash)は、ハッシュを指定してトランザクションに関する情報を読み取るリクエストです。 トランザクションの送信の詳細については、[こちら](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)のチュートリアルにあるWeb3を使用したトランザクションの送信をご覧ください。
+ここでは、`.deploy()`関数を呼び出したときに、Hardhat/Ethersが内部で実行したいくつかのJSON-RPCメソッドを確認できます。ここで重要な2つのメソッドは、ゴエリチェーンにコントラクトを書き込むためのリクエストである[`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)と、ハッシュを指定してトランザクションに関する情報を読み取るためのリクエストである[`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)です。トランザクションの送信について詳しくは、[Web3を使用したトランザクションの送信に関するチュートリアル](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)を確認してください。
 
-## パート2: スマートコントラクトとのやり取り {#part-2-interact-with-your-smart-contract}
+## パート2: スマート・コントラクトとのやり取り {#part-2-interact-with-your-smart-contract}
 
-スマートコントラクトをGoerliネットワークに正常にデプロイできました。それでは、スマートコントラクトとやり取りする方法について学びましょう。
+ゴエリ・ネットワークへのスマート・コントラクトのデプロイに成功したので、次はそれとやり取りする方法を学びましょう。
 
 ### interact.jsファイルの作成 {#create-a-interactjs-file}
 
-このファイルに、やり取りするスクリプトを記述します。 パート1でインストールしたEthers.jsライブラリを使用します。
+これは、やり取りのためのスクリプトを記述するファイルです。パート1でインストールしたEthers.jsライブラリを使用します。
 
-`scripts/`フォルダ内に、`interact.js`という名前の新しいファイルを作成し、次のコードを追加します。
+`scripts/`フォルダ内に、`interact.js`という名前の新しいファイルを作成し、以下のコードを追加します。
 
 ```javascript
 // interact.js
@@ -390,11 +393,11 @@ const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
 
 ### .envファイルの更新 {#update-your-env-file}
 
-新しい環境変数を使用します。そのため、[以前に作成した](#step-11-connect-metamask-&-alchemy-to-your-project)`.env`ファイルに定義する必要があります。
+新しい環境変数を使用するため、[以前に作成した](#step-11-connect-metamask-alchemy-to-your-project)`.env`ファイルでそれらを定義する必要があります。
 
-Alchemyの`API_KEY`とスマートコントラクトがデプロイされている`CONTRACT_ADDRESS`の定義を加える必要があります。
+Alchemyの`API_KEY`と、スマート・コントラクトがデプロイされた`CONTRACT_ADDRESS`の定義を追加する必要があります。
 
-`.env`ファイルは、以下のようになっていなければなりません。
+`.env`ファイルは次のようになります。
 
 ```bash
 # .env
@@ -405,36 +408,36 @@ PRIVATE_KEY = "<your-metamask-private-key>"
 CONTRACT_ADDRESS = "0x<your contract address>"
 ```
 
-### コントラクトABIを取得する {#grab-your-contract-ABI}
+### コントラクトABIの取得 {#grab-your-contract-abi}
 
-コントラクト[ABI(アプリケーションバイナリインターフェイス)](/glossary/#abi)は、スマートコントラクトと対話するためのインターフェイスです。 Hardhatは自動的にABIを生成して、`HelloWorld.json`ファイルに保存します。 ABIを使うには、`interact.js`ファイルに次のコードを追加して、コンテンツをパースする必要があります。
+コントラクトの[ABI (Application Binary Interface)](/glossary/#abi)は、スマート・コントラクトとやり取りするためのインターフェースです。Hardhatは自動的にABIを生成し、`HelloWorld.json`に保存します。ABIを使用するには、`interact.js`ファイルに以下のコード行を追加して、内容を解析する必要があります。
 
 ```javascript
 // interact.js
 const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json")
 ```
 
-ABIを表示したい場合は、次のコードを追加することでコンソールに出力できます:
+ABIを確認したい場合は、コンソールに出力できます。
 
 ```javascript
 console.log(JSON.stringify(contract.abi))
 ```
 
-コンソールに出力されたABIを確認するには、ターミナルに移動して次のコマンドを実行します。
+コンソールに出力されたABIを確認するには、ターミナルに移動して以下を実行します。
 
 ```bash
 npx hardhat run scripts/interact.js
 ```
 
-### コントラクトのインスタンスを作成する {#create-an-instance-of-your-contract}
+### コントラクトのインスタンスの作成 {#create-an-instance-of-your-contract}
 
-コントラクトを操作するには、コード内にコントラクトのインスタンスを作成する必要があります。 Ethers.jsでこれを行うには、次の3つのコンセプトを機能させる必要があります。
+コントラクトとやり取りするには、コード内でコントラクトのインスタンスを作成する必要があります。Ethers.jsでこれを行うには、3つの概念を扱う必要があります。
 
-1. Provider - ブロックチェーンへの読み取りおよび書き込みアクセスを提供するノードプロバイダです。
-2. Signer - トランザクションに署名するイーサリアムアカウントを表します。
-3. Contract - オンチェーンにデプロイされた特定のコントラクトを表すEthers.jsのオブジェクトです。
+1. プロバイダー (プロバイダー) - ブロックチェーンへの読み書きアクセスを提供するノードプロバイダー
+2. 署名者 (サイナー) - トランザクションに署名できるイーサリアムのアカウントを表す
+3. コントラクト (Contract) - オンチェーンにデプロイされた特定のコントラクトを表すEthers.jsオブジェクト
 
-前の手順で取得したコントラクABIを使って、コントラクトのインスタンスを作成します。
+前のステップのコントラクトABIを使用して、コントラクトのインスタンスを作成します。
 
 ```javascript
 // interact.js
@@ -456,15 +459,15 @@ const helloWorldContract = new ethers.Contract(
 )
 ```
 
-Provider、Signer、Contractの詳細については、[ethers.jsドキュメント](https://docs.ethers.io/v5/)をご覧ください。
+プロバイダー、署名者、コントラクトの詳細については、[ethers.jsのドキュメント](https://docs.ethers.io/v5/)を参照してください。
 
-### initメッセージの読み取り {#read-the-init-message}
+### 初期メッセージの読み取り {#read-the-init-message}
 
-`initMessage = "Hello world!"`を使用してコントラクトをデプロイしたことを思い出せますでしょうか？ ここでは、スマートコントラクトに保存されているメッセージを読み取り、コンソールに出力します。
+`initMessage = "Hello world!"`を使用してコントラクトをデプロイしたことを覚えていますか？これから、スマート・コントラクトに保存されているそのメッセージを読み取り、コンソールに出力します。
 
-JavaScriptでは、ネットワークとのやり取りで非同期関数を使います。 非同期関数の詳細については、[この記事の中ほど](https://blog.bitsrc.io/Understanding-asynchronous-javascript-the-event-loop-74cd408419ff)をご覧ください。
+JavaScriptでは、ネットワークとやり取りする際に非同期関数が使用されます。非同期関数の詳細については、[こちらのMedium記事](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff)をお読みください。
 
-以下のコードを使用して、スマートコントラクトの`message`関数を呼び出し、initメッセージを読み取ります。
+以下のコードを使用して、スマート・コントラクトの`message`関数を呼び出し、初期メッセージを読み取ります。
 
 ```javascript
 // interact.js
@@ -478,19 +481,19 @@ async function main() {
 main()
 ```
 
-ターミナルで`npx hardware run scripts/interact.js`を入力してファイルを実行すると、次のレスポンスが表示されるはずです。
+ターミナルで`npx hardhat run scripts/interact.js`を使用してファイルを実行すると、次の応答が表示されるはずです。
 
 ```
 The message is: Hello world!
 ```
 
-おめでとうございます！ イーサリアムブロックチェーンからスマートコントラクトのデータを正常に読み取ることができました。
+おめでとうございます！イーサリアムのブロックチェーンからスマート・コントラクトのデータを正常に読み取ることができました。よくやりました！
 
 ### メッセージの更新 {#update-the-message}
 
-メッセージを読み取るだけでなく、`update`関数を使ってスマートコントラクトに保存されたメッセージを更新することもできます。 かなりイケてますよね？
+メッセージを読み取るだけでなく、`update`関数を使用してスマート・コントラクトに保存されているメッセージを更新することもできます！素晴らしいですね。
 
-メッセージを更新するには、インスタンス化されたコントラクトのオブジェクトで`update`関数を直接呼び出します。
+メッセージを更新するには、インスタンス化されたContractオブジェクトで`update`関数を直接呼び出します。
 
 ```javascript
 // interact.js
@@ -508,13 +511,13 @@ async function main() {
 main()
 ```
 
-11行目で、返されたトランザクションのオブジェクトに対して `.wait()`を呼び出していることに注目してください。 これにより、スクリプトが関数を終了する前に、トランザクションがブロックチェーン上でマイニングされるまで待機することを確実にします。 `.wait()`を呼び出しを含めなかった場合、スクリプトは、コントラクト内で更新された`message`の値を表示しないことがあります。
+11行目で、返されたトランザクションオブジェクトに対して`.wait()`を呼び出していることに注意してください。これにより、関数を終了する前に、スクリプトがブロックチェーン上でトランザクションがマイニングされるのを待機するようになります。`.wait()`の呼び出しが含まれていない場合、スクリプトはコントラクト内の更新された`message`の値を認識できない可能性があります。
 
 ### 新しいメッセージの読み取り {#read-the-new-message}
 
-[前の手順](#read-the-init-message)を繰り返して、更新された`message`の値を読み取ることができるのに違いありません。 その新しい値を出力するために必要となる変更を、少し考えてみましょう！
+[前のステップ](#read-the-init-message)を繰り返して、更新された`message`の値を読み取ることができるはずです。少し時間を取って、その新しい値を出力するために必要な変更を加えられるか試してみてください！
 
-ヒントが必要ですか？この時点で、あなたの`interact.js`ファイルは次のようになるはずです。
+ヒントが必要な場合、現時点での`interact.js`ファイルは次のようになります。
 
 ```javascript
 // interact.js
@@ -525,16 +528,16 @@ const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
 
 const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json")
 
-// provider - Alchemy
+// プロバイダー - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(
   (network = "goerli"),
   API_KEY
 )
 
-// signer - you
+// サイナー - あなた
 const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider)
 
-// contract instance
+// コントラクトインスタンス
 const helloWorldContract = new ethers.Contract(
   CONTRACT_ADDRESS,
   contract.abi,
@@ -556,7 +559,7 @@ async function main() {
 main()
 ```
 
-このスクリプトを実行するだけで、古いメッセージ、更新ステータス、および新しいメッセージがコンソールに出力されるのを確認できるはずです。
+あとはスクリプトを実行するだけで、古いメッセージ、更新ステータス、そして新しいメッセージがターミナルに出力されるのを確認できるはずです！
 
 `npx hardhat run scripts/interact.js --network goerli`
 
@@ -566,29 +569,29 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-このスクリプトの実行中、新しいメッセージが読み込まれる前に、 `Updating the message...`のステップの読み込みにしばらく時間がかかることに気づくかもしれません。 これはマイニングプロセスによるものです。マイニング中のトランザクションの追跡に興味があるならば、[Alchemy mempool](https://dashboard.alchemyapi.io/mempool)にアクセスしてトランザクションのステータスを確認できます。 トランザクションがドロップされた場合は、[Goerli Etherscan](https://goerli.etherscan.io)を確認してトランザクションのハッシュを検索することもできます。
+スクリプトの実行中、新しいメッセージが読み込まれる前に`Updating the message...`のステップで少し時間がかかることに気づくかもしれません。これはマイニングプロセスによるものです。マイニング中のトランザクションの追跡に興味がある場合は、[Alchemyのメンプール](https://dashboard.alchemy.com/mempool)にアクセスしてトランザクションのステータスを確認してください。トランザクションがドロップされた場合は、[Goerli Etherscan](https://goerli.etherscan.io)を確認し、トランザクションハッシュを検索するのも役立ちます。
 
-## パート3: スマートコントラクトをEtherscanに公開する {#part-3-publish-your-smart-contract-to-etherscan}
+## パート3: スマート・コントラクトをEtherscanに公開する {#part-3-publish-your-smart-contract-to-etherscan}
 
-あなたは、スマートコントラクトに命を吹き込むことに大変な努力をしました。それでは、その努力を世界に共有しましょう！
+スマート・コントラクトを完成させるための大変な作業はすべて終わりました。次はそれを世界と共有する番です！
 
-Etherscanでスマートコントラクトを検証すると、誰でもソースコードを表示して、あなたのスマートコントラクトとやり取りできるようになります。 さあ、始めましょう！
+Etherscanでスマート・コントラクトを検証することで、誰でもソースコードを閲覧し、スマート・コントラクトとやり取りできるようになります。さあ、始めましょう！
 
 ### ステップ1: EtherscanアカウントでAPIキーを生成する {#step-1-generate-an-api-key-on-your-etherscan-account}
 
-EtherscanのAPIキーは、公開しようとしているスマートコントラクトを所有していることを確認するために必要になります。
+公開しようとしているスマート・コントラクトの所有者であることを検証するために、EtherscanのAPIキーが必要です。
 
-Etherscanアカウントをお持ちでない場合は、[アカウントの登録](https://etherscan.io/register)をしてください。
+まだEtherscanアカウントを持っていない場合は、[アカウントを登録してください](https://etherscan.io/register)。
 
-ログインしたら、ナビゲーションバーでユーザー名を見つけ、その上にマウスを移動して、「**My profile**」ボタンを選択します。
+ログインしたら、ナビゲーションバーでユーザー名を見つけ、その上にカーソルを合わせて**My profile**ボタンを選択します。
 
-プロフィールページにサイドナビゲーションバーが表示されます。 サイドナビゲーションバーで、**API Keys**を選択します。 次に、「Add」ボタンを押して新しいAPIキーを作成し、アプリに**hello-world**という名前を付けて、「**Create New API**」ボタンを押します。
+プロフィールページにサイドナビゲーションバーが表示されます。サイドナビゲーションバーから**API Keys**を選択します。次に、「Add」ボタンを押して新しいAPIキーを作成し、アプリに**hello-world**と名付け、**Create New API Key**ボタンを押します。
 
-新しいAPIキーがAPIキーテーブルに表示されるはずです。 APIキーをクリップボードにコピーします。
+新しいAPIキーがAPIキーのテーブルに表示されるはずです。APIキーをクリップボードにコピーします。
 
-次に、EtherscanのAPIキーを`.env`ファイルに加える必要があります。
+次に、EtherscanのAPIキーを`.env`ファイルに追加する必要があります。
 
-そうすると、`.env`ファイルは次のようになります。
+追加すると、`.env`ファイルは次のようになります。
 
 ```javascript
 API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
@@ -598,17 +601,17 @@ CONTRACT_ADDRESS = "your-contract-address"
 ETHERSCAN_API_KEY = "your-etherscan-key"
 ```
 
-### Hardhatにデプロイされたスマートコントラクト {#hardhat-deployed-smart-contracts}
+### Hardhatでデプロイされたスマート・コントラクト {#hardhat-deployed-smart-contracts}
 
 #### hardhat-etherscanのインストール {#install-hardhat-etherscan}
 
-あなたのコントラクトをEtherescanへ公開するのは、Hardhatを使って簡単にできます。 はじめに、まず`hardhat-etherscan`プラグインをインストールしてください。 `hardhat-etherscan`は、スマートコントラクトのソースコードとEtherscan上のABIを自動的に検証します。 インストールするには、`hello-world`ディレクトリで次のコマンドを実行します。
+Hardhatを使用してコントラクトをEtherscanに公開するのは簡単です。始めるには、まず`hardhat-etherscan`プラグインをインストールする必要があります。`hardhat-etherscan`は、Etherscan上でスマート・コントラクトのソースコードとABIを自動的に検証します。これを追加するには、`hello-world`ディレクトリで以下を実行します。
 
 ```text
 npm install --save-dev @nomiclabs/hardhat-etherscan
 ```
 
-インストールをしたら、`hardhat.config.js`の先頭に次のステートメントを含んだEtherscan構成オプションを追加します。
+インストールが完了したら、`hardhat.config.js`の先頭に以下の文を含め、Etherscanの設定オプションを追加します。
 
 ```javascript
 // hardhat.config.js
@@ -630,26 +633,26 @@ module.exports = {
     },
   },
   etherscan: {
-    // Your API key for Etherscan
-    // Obtain one at https://etherscan.io/
+    // EtherscanのAPI鍵
+    // https://etherscan.io/ で取得してください
     apiKey: ETHERSCAN_API_KEY,
   },
 }
 ```
 
-#### Etherscan上でスマートコントラクトを検証する {#verify-your-smart-contract-on-etherscan}
+#### Etherscanでスマート・コントラクトを検証する {#verify-your-smart-contract-on-etherscan}
 
-すべてのファイルが保存され、すべての`.env`変数が正しく構成されていることを確認してください。
+すべてのファイルが保存され、すべての`.env`変数が正しく設定されていることを確認します。
 
-`verify`タスクを実行し、コントラクトのアドレスと、コントラクトがデプロイされているネットワークを渡します。
+コントラクトのアドレスとデプロイ先のネットワークを渡して、`verify`タスクを実行します。
 
 ```text
 npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-`DEPLOYED_CONTRACT_ADDRESS`がGoerliテストネットワーク上にデプロイされたスマートコントラクトのアドレスであることを確認してください。 また、最後の引数 (`'Hello World!'`) は、 [パート1のデプロイ手順](#write-our-deploy-script)で使われたの文字列値と同じでなければなりません。
+`DEPLOYED_CONTRACT_ADDRESS`が、ゴエリのテストネットにデプロイされたスマート・コントラクトのアドレスであることを確認してください。また、最後の引数（`'Hello World!'`）は、[パート1のデプロイ手順](#step-15-write-our-deploy-script)で使用したのと同じ文字列値である必要があります。
 
-順調に行けば、コンソールに次のメッセージが表示されます。
+すべてがうまくいけば、ターミナルに次のメッセージが表示されます。
 
 ```text
 Successfully submitted source code for contract
@@ -661,48 +664,48 @@ Successfully verified contract HelloWorld on Etherscan.
 https://goerli.etherscan.io/address/<contract-address>#contracts
 ```
 
-おめでとうございます！ これで、あなたのスマートコントラクトコードは、Etherscan上にあります。
+おめでとうございます！あなたのスマート・コントラクトのコードがEtherscanに公開されました！
 
-### Etherscanであなたのスマートコントラクトを確認する {#check-out-your-smart-contract-on-etherscan}
+### Etherscanでスマート・コントラクトを確認しましょう！ {#check-out-your-smart-contract-on-etherscan}
 
-コンソールに表示されているリンクに移動すると、Etherscanで公開されているスマートコントラクトコードとABIが表示されます。
+ターミナルに表示されたリンクにアクセスすると、Etherscanに公開されたスマート・コントラクトのコードとABIを確認できるはずです！
 
-**ヤッホー！栄冠を手にしました。 これで、誰でもスマートコントラクトを呼び出したり、書き込んだりできるようになりました。 次にあなたが何を構築するか楽しみにしています。**
+**やったね、大成功です！これで誰でもあなたのスマート・コントラクトを呼び出したり、書き込んだりできるようになりました！次にあなたが何を構築するのか、楽しみにしています！**
 
-## パート4: フロントエンドとスマートコントラクトの統合 {#part-4-integrating-your-smart-contract-with-the-frontend}
+## パート4 - スマート・コントラクトとフロントエンドの統合 {#part-4-integrating-your-smart-contract-with-the-frontend}
 
-このチュートリアルを終えると、次の方法がわかるようになります。
+このチュートリアルを終えると、以下のことができるようになります。
 
-- MetaMaskウォレットをdappに接続する
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) APIを使用してスマートコントラクトからデータを読み取る。
-- MetaMaskを使用してイーサリアムトランザクションに署名する
+- メタマスクウォレットを分散型アプリケーション (dapp) に接続する
+- [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) APIを使用してスマート・コントラクトからデータを読み取る
+- メタマスクを使用してイーサリアムのトランザクションに署名する
 
-このdappでは、フロントエンドフレームワークで[React](https://reactjs.org/)を使っていますが、Web3の機能をプロジェクトに導入することに焦点を当てているので、Reactの基本を説明することに多くの時間を費やさないことに注意してください。
+このdappでは、フロントエンドフレームワークとして[React](https://react.dev/)を使用します。ただし、主にプロジェクトにWeb3機能をもたらすことに焦点を当てるため、Reactの基礎を解説することに多くの時間を費やさない点に注意してください。
 
-前提条件として、Reactについて初心者レベルの理解をしている必要があります。 知らなければ、公式の[React入門チュートリアル](https://reactjs.org/tutorial/tutorial.html)を読むことをお勧めします。
+前提条件として、Reactの初心者レベルの理解が必要です。そうでない場合は、公式の[React入門チュートリアル](https://react.dev/learn)を完了することをお勧めします。
 
 ### スターターファイルのクローン {#clone-the-starter-files}
 
-まず、このプロジェクトの開始ファイルを取得するために[「hello-world-part-four」GitHubリポジトリ](https://github.com/alchemyplatform/hello-world-part-four-tutorial)に行き、このリポジトリのクローンをローカルマシンに作成します。
+まず、[hello-world-part-fourのGitHubリポジトリ](https://github.com/alchemyplatform/hello-world-part-four-tutorial)にアクセスしてこのプロジェクトのスターターファイルを取得し、このリポジトリをローカルマシンにクローンします。
 
-クローンしたリポジトリをローカルで開きます。 `starter-files`と`completed`の2つのフォルダが含まれています。
+クローンしたリポジトリをローカルで開きます。`starter-files`と`completed`の2つのフォルダーが含まれていることに注意してください。
 
-- `starter-files` - **このディレクトリで作業します**。UIをイーサリアムウォレットおよび[パート3](#part-3)でEtherscanに公開したスマートコントラクトに接続します。
-- `completed`には、チュートリアル全体が完了したものが入っています。行き詰まった場合にのみ、参考として使ってください。
+- `starter-files` - **このディレクトリで作業します**。UIをイーサリアムウォレットと、[パート3](#part-3-publish-your-smart-contract-to-etherscan)でEtherscanに公開したスマート・コントラクトに接続します。
+- `completed`には完成したチュートリアル全体が含まれており、行き詰まった場合の参考としてのみ使用してください。
 
-次に、`starter-files`のコピーをお気に入りのコードエディタで開き、`src`フォルダに移動します。
+次に、お気に入りのコードエディターで`starter-files`のコピーを開き、`src`フォルダーに移動します。
 
-これから作成するすべてのコードは、`src`フォルダに保存されます。 `HelloWorld.js`コンポーネントと JavaScriptファイルである`util/interact.js`を編集して、プロジェクトにWeb3の機能を追加していきます。
+記述するコードはすべて`src`フォルダー内に配置されます。`HelloWorld.js`コンポーネントと`util/interact.js` JavaScriptファイルを編集して、プロジェクトにWeb3機能を追加します。
 
 ### スターターファイルの確認 {#check-out-the-starter-files}
 
-コーディングを開始する前に、スターターファイルで提供されるものを探索してみましょう。
+コーディングを始める前に、スターターファイルで提供されているものを確認しましょう。
 
 #### Reactプロジェクトの実行 {#get-your-react-project-running}
 
-まずは、ブラウザでReactプロジェクトを実行しましょう。 Reactの素晴らしいところは、一度ブラウザでプロジェクトを実行すると、保存した変更がブラウザでも同時に更新されることです。
+まずはブラウザでReactプロジェクトを実行してみましょう。Reactの素晴らしい点は、プロジェクトをブラウザで実行すると、保存した変更がブラウザ上でリアルタイムに更新されることです。
 
-プロジェクトを実行するには、次のようにターミナルで`starter-files`フォルダのルートディレクトリに移動し、`npm install`を実行してプロジェクトの依存関係をインストールします。
+プロジェクトを実行するには、`starter-files`フォルダーのルートディレクトリに移動し、ターミナルで`npm install`を実行してプロジェクトの依存関係をインストールします。
 
 ```bash
 cd starter-files
@@ -715,15 +718,15 @@ npm install
 npm start
 ```
 
-これにより、ブラウザで[http://localhost:3000/](http://localhost:3000/)を開くと、プロジェクトのフロントエンドが表示されます。 これは、1つのフィールド \(スマートコントラクトに保存されているメッセージを更新する場所\) である「Connect Wallet」ボタン、および「Update」ボタンで構成されています。
+これにより、ブラウザで[http://localhost:3000/](http://localhost:3000/)が開き、プロジェクトのフロントエンドが表示されるはずです。1つのフィールド（スマート・コントラクトに保存されているメッセージを更新する場所）、「Connect Wallet（ウォレットを接続）」ボタン、「Update（更新）」ボタンで構成されているはずです。
 
-どちらのボタンをクリックしても、機能しないことがわかります。この機能をプログラムする必要があるためです。
+どちらかのボタンをクリックしてみると、機能しないことに気づくでしょう。これは、まだその機能をプログラミングする必要があるためです。
 
 #### `HelloWorld.js`コンポーネント {#the-helloworld-js-component}
 
-エディタの`src`フォルダに戻り、`HelloWorld.js`ファイルを開きましょう。 このファイルには、これから作業を進めていく主要なReactコンポーネントが含まれています。すべての内容を理解することが非常に重要です。
+エディターで`src`フォルダーに戻り、`HelloWorld.js`ファイルを開きましょう。これは私たちが作業する主要なReactコンポーネントであるため、このファイル内のすべてを理解することが非常に重要です。
 
-このファイルの先頭には、いくつかの重要なステートメントがあるこに気が付くでしょう。Reactライブラリ、useEffectフックとuseStateフック、`./util/interact.js`のいくつかのアイテムなど、プロジェクトを実行するために必要になります (これらについては、すぐに詳しく説明します！) 。また、Alchemyのロゴがあります
+このファイルの上部には、Reactライブラリ、useEffectおよびuseStateフック、`./util/interact.js`からのいくつかのアイテム（これらについては後で詳しく説明します！）、Alchemyのロゴなど、プロジェクトを実行するために必要なインポート文がいくつかあることに気づくでしょう。
 
 ```javascript
 // HelloWorld.js
@@ -741,64 +744,64 @@ import {
 import alchemylogo from "./alchemylogo.svg"
 ```
 
-次に、特定のイベントの後に更新するステート変数があります。
+次に、特定のイベントの後に更新する状態変数があります。
 
 ```javascript
 // HelloWorld.js
 
-//State variables
+//状態変数
 const [walletAddress, setWallet] = useState("")
 const [status, setStatus] = useState("")
 const [message, setMessage] = useState("No connection to the network.")
 const [newMessage, setNewMessage] = useState("")
 ```
 
-それぞれの変数は以下の用途で使われます。
+各変数が表すものは以下の通りです。
 
-- `walletAddress` - ユーザーのウォレットアドレスを格納する文字列
-- `status` - ユーザーにdappの操作方法を案内する補助メッセージを文字列として格納する
-- `message` - スマートコントラクトの現在のメッセージを格納する文字列
-- `newMessage` - スマートコントラクトに書き込まれる新しいメッセージを格納する文字列
+- `walletAddress` - ユーザーのウォレットアドレスを保存する文字列
+- `status` - ユーザーにdappとの対話方法を案内する役立つメッセージを保存する文字列
+- `message` - スマート・コントラクト内の現在のメッセージを保存する文字列
+- `newMessage` - スマート・コントラクトに書き込まれる新しいメッセージを保存する文字列
 
-ステート変数の後に、`useEffect` 、`addSmartContractListener`、 `addWalletListener`、 `connectWalletPressed`、`onUpdatePressed`の未実装の5つの関数があります。 次に、それらが何をするのかを説明します。
+状態変数の後には、未実装の5つの関数（`useEffect`、`addSmartContractListener`、`addWalletListener`、`connectWalletPressed`、`onUpdatePressed`）があります。それぞれの機能について以下で説明します。
 
 ```javascript
 // HelloWorld.js
 
-//called only once
+//一度だけ呼び出されます
 useEffect(async () => {
-  //TODO: implement
+  //TODO: 実装する
 }, [])
 
 function addSmartContractListener() {
-  //TODO: implement
+  //TODO: 実装する
 }
 
 function addWalletListener() {
-  //TODO: implement
+  //TODO: 実装する
 }
 
 const connectWalletPressed = async () => {
-  //TODO: implement
+  //TODO: 実装する
 }
 
 const onUpdatePressed = async () => {
-  //TODO: implement
+  //TODO: 実装する
 }
 ```
 
-- [`useEffect`](https://reactjs.org/docs/hooks-effect.html)- コンポーネントがレンダリングされた後に呼び出されるReactフックです。 空の配列`[]`のプロップが渡されているため \(4行目を参照\)、コンポーネントの_最初_のレンダリングでのみ呼び出されます。 ここでは、スマートコントラクトに保存されている現在のメッセージのロード、スマートコントラクトとウォレットリスナーの呼び出し、ウォレットが既に接続されているかどうかを反映してUIを更新するのに使います。
-- `addSmartContractListener` - この関数では、HelloWorldコントラクトの`UpdatedMessages`イベントを監視し、スマートコントラクトでメッセージが変更されたときにUIを更新するリスナーを設定します。
-- `addWalletListener` - この関数では、ユーザーがウォレットを切断したときやアドレスを切り替えたときなど、ユーザーのMetaMaskウォレットのステートの変化を検出するリスナーを設定します。
-- `connectWalletPressed` - この関数は、ユーザーのMetaMaskウォレットをdappに接続するのに呼び出されます。
-- `onUpdatePressed` - この関数は、ユーザーがスマートコントラクトに保存されているメッセージを更新したいときに呼び出されます。
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html) - これはコンポーネントがレンダリングされた後に呼び出されるReactフックです。空の配列`[]`プロパティが渡されているため（4行目を参照）、コンポーネントの_最初_のレンダリング時にのみ呼び出されます。ここでは、スマート・コントラクトに保存されている現在のメッセージを読み込み、スマート・コントラクトとウォレットのリスナーを呼び出し、ウォレットがすでに接続されているかどうかを反映するようにUIを更新します。
+- `addSmartContractListener` - この関数は、HelloWorldコントラクトの`UpdatedMessages`イベントを監視し、スマート・コントラクト内のメッセージが変更されたときにUIを更新するリスナーを設定します。
+- `addWalletListener` - この関数は、ユーザーがウォレットを切断したりアドレスを切り替えたりするなど、ユーザーのメタマスクウォレットの状態の変化を検出するリスナーを設定します。
+- `connectWalletPressed` - この関数は、ユーザーのメタマスクウォレットをdappに接続するために呼び出されます。
+- `onUpdatePressed` - この関数は、ユーザーがスマート・コントラクトに保存されているメッセージを更新したいときに呼び出されます。
 
-このファイルの終盤には、コンポーネントのUIがあります。
+このファイルの終わり近くに、コンポーネントのUIがあります。
 
 ```javascript
 // HelloWorld.js
 
-//the UI of our component
+//コンポーネントのUI
 return (
   <div id="container">
     <img id="logo" src={alchemylogo}></img>
@@ -830,32 +833,34 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+ 
+</div>
+ 
+</div>
 )
 ```
 
-このコードを注意深く読むと、さまざまなステート変数がUIのどの場所で使用されているかがわかります。
+このコードを注意深く見ると、UIでさまざまな状態変数をどこで使用しているかがわかります。
 
-- 6～12行目では、ユーザーのウォレットが接続されている場合 \(すなわち、`walletAddress.length > 0`\)、 ID「walletButton;」に省略されたユーザーの`walletAddress`がボタンに表示されます。 それ以外の場合は、単に「Connect Wallet」と表示されます。
-- 17行目では、`message`文字列でキャプチャされたスマートコントラクトに保存されている現在のメッセージを表示します。
-- 23～26行目では、テキストフィールドの入力が変化したときに[制御コンポーネント](https://reactjs.org/docs/forms.html#controlled-components)を使用して `newMessage`ステート変数を更新します。
+- 6〜12行目では、ユーザーのウォレットが接続されている場合（つまり、`walletAddress.length > 0`）、IDが「walletButton」のボタンにユーザーの`walletAddress`の短縮版を表示します。そうでない場合は、単に「Connect Wallet」と表示します。
+- 17行目では、スマート・コントラクトに保存されている現在のメッセージを表示します。これは`message`文字列にキャプチャされています。
+- 23〜26行目では、[制御されたコンポーネント](https://legacy.reactjs.org/docs/forms.html#controlled-components)を使用して、テキストフィールドの入力が変更されたときに`newMessage`状態変数を更新します。
 
-ステート変数に加えて、IDが`publishButton`と`walletButton`である、それぞれがクリックされると`connectWalletPressed`および`onUpdatePressed`関数が呼び出されることがわります。
+状態変数に加えて、IDが`publishButton`と`walletButton`のボタンがそれぞれクリックされたときに、`connectWalletPressed`と`onUpdatePressed`関数が呼び出されることもわかります。
 
-最後に、この`HelloWorld.js`コンポーネントがどこに加えられるかについて説明します。
+最後に、この`HelloWorld.js`コンポーネントがどこに追加されるかを確認しましょう。
 
-他のすべてのコンポーネントのコンテナとして機能する、Reactのメインコンポーネントである`App.js`ファイルを表示すると、`HelloWorld.js`コンポーネントが7行目に挿入されていることが分かります。
+他のすべてのコンポーネントのコンテナとして機能するReactのメインコンポーネントである`App.js`ファイルを見ると、7行目に`HelloWorld.js`コンポーネントが注入されていることがわかります。
 
-最後の最後となりますが、提供されているもう1つのファイル、`interact.js`ファイルを確認してみましょう。
+最後になりましたが、提供されているもう1つのファイルである`interact.js`ファイルを確認しましょう。
 
 #### `interact.js`ファイル {#the-interact-js-file}
 
-[M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)のパラダイムを実践したいので、dappのロジック、データ、ルールを管理するすべての関数を含んだファイルを分割し、これらの関数をフロントエンド \(`HelloWorld.js`コンポーネント\) にエクスポートできるようにします。
+[M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)パラダイムに従うため、dappのロジック、データ、ルールを管理するすべての関数を含む別のファイルを用意し、それらの関数をフロントエンド（`HelloWorld.js`コンポーネント）にエクスポートできるようにします。
 
-👆🏽まさにこれが`interact.js`ファイルの目的です。
+👆🏽これこそが`interact.js`ファイルの目的です！
 
-`src`ディレクトリの`util`フォルダに移動すると、`interact.js`というファイルが含まれていることがわかります。これには、スマートコントラクトとのやり取り、ウォレット関数と変数が含まれています。
+`src`ディレクトリ内の`util`フォルダーに移動すると、スマート・コントラクトとの対話やウォレットの関数と変数をすべて含む`interact.js`というファイルが含まれていることに気づくでしょう。
 
 ```javascript
 // interact.js
@@ -871,55 +876,55 @@ const getCurrentWalletConnected = async () => {}
 export const updateMessage = async (message) => {}
 ```
 
-ファイルの先頭で、`helloWorldContract`オブジェクトがコメントアウトされていることがわかります。 このチュートリアルの後半で、このオブジェクトのコメントを外し、この変数でスマートコントラクトをインスタンス化し、それを`HelloWorld.js`コンポーネントにエクスポートします。
+ファイルの上部で、`helloWorldContract`オブジェクトがコメントアウトされていることに気づくでしょう。このチュートリアルの後半で、このオブジェクトのコメントを解除し、この変数にスマート・コントラクトをインスタンス化して、`HelloWorld.js`コンポーネントにエクスポートします。
 
-`helloWorldContract`オブジェクトの後の4つの未実装の関数は、次のことを行います。
+`helloWorldContract`オブジェクトの後の4つの未実装の関数は、以下のことを行います。
 
-- `loadCurrentMessage` - この関数は、スマートコントラクトに保存されている現在のメッセージをロードするロジックを扱います。 [Alchemy Web3 API](https://github.com/alchemyplatform/alchemy-web3)を使ってHello Worldスマートコントラクトの_read_の呼び出しを行います。
-- `connectWallet` - この関数は、私たちのdappをユーザーのMetaMaskに接続します。
-- `getCurrentWalletConnected` - この関数は、ページの読み込み時にイーサリアムアカウントが既にdappに接続されているかどうかを確認し、それに応じてUIを更新します。
-- `updateMessage` - この関数は、スマートコントラクトに保存されているメッセージを更新します。 Hello Worldスマートコントラクトで_write_の呼び出しが行われるため、ユーザーのMetaMaskウォレットでは、メッセージを更新するためにイーサリアムトランザクションに署名する必要があります。
+- `loadCurrentMessage` - この関数は、スマート・コントラクトに保存されている現在のメッセージを読み込むロジックを処理します。[Alchemy Web3 API](https://github.com/alchemyplatform/alchemy-web3)を使用して、Hello Worldスマート・コントラクトへの_読み取り_呼び出しを行います。
+- `connectWallet` - この関数は、ユーザーのメタマスクをdappに接続します。
+- `getCurrentWalletConnected` - この関数は、ページ読み込み時にイーサリアムアカウントがすでにdappに接続されているかどうかを確認し、それに応じてUIを更新します。
+- `updateMessage` - この関数は、スマート・コントラクトに保存されているメッセージを更新します。Hello Worldスマート・コントラクトへの_書き込み_呼び出しを行うため、ユーザーのメタマスクウォレットはメッセージを更新するためにイーサリアムのトランザクションに署名する必要があります。
 
-何をするか理解したので、スマートコントラクトから読み取る方法を解明していきましょう。
+作業内容が理解できたところで、スマート・コントラクトから読み取る方法を見ていきましょう！
 
-### ステップ3: スマートコントラクトからの読み込み {#step-3-read-from-your-smart-contract}
+### ステップ3: スマート・コントラクトからの読み取り {#step-3-read-from-your-smart-contract}
 
-スマートコントラクトから読み取るには、次の設定を正しく行う必要があります。
+スマート・コントラクトから読み取るには、以下を正常に設定する必要があります。
 
 - イーサリアムチェーンへのAPI接続
-- あなたのスマートコントラクトがロードされたインスタンス
-- スマートコントラクトの関数を呼び出す関数
-- スマートコントラクトから読み取っているデータが変更されたときの更新を監視するリスナー
+- 読み込まれたスマート・コントラクトのインスタンス
+- スマート・コントラクトの関数を呼び出すための関数
+- スマート・コントラクトから読み取っているデータが変更されたときに更新を監視するリスナー
 
-手順がたくさんあるように感じますが、心配しないでください！ それぞれの方法を1つずつ説明していきます。 :\)
+手順が多いように聞こえるかもしれませんが、心配しないでください！それぞれの手順を段階的に説明します！ :\)
 
-#### イーサリアムチェーンへのAPI接続を確立する {#establish-an-api-connection-to-the-ethereum-chain}
+#### イーサリアムチェーンへのAPI接続の確立 {#establish-an-api-connection-to-the-ethereum-chain}
 
-チュートリアルのパート2で私たちは、[Alchemy Web3キーを使ってスマートコントラクトから読み込みました](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)。 チェーンから読み取るには、あなたのdappでAlchemy Web3キーがまた必要になります。
+このチュートリアルのパート2で、スマート・コントラクトから読み取るためにAlchemy Web3キーを使用したことを覚えていますか？チェーンから読み取るために、分散型アプリケーション (dapp) にもAlchemy Web3キーが必要になります。
 
-もしなければ、最初に、 `starter-files`のルートディレクトリへ移動して、次のコマンドをコンソールで実行して[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)をインストールしてください。
+まだインストールしていない場合は、まず`starter-files`のルートディレクトリに移動し、ターミナルで以下を実行して[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)をインストールします。
 
 ```text
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)は、[Web3.js](https://docs.web3js.org/)のラッパーであり、強化されたAPIメソッドや重要なメリットを提供し、Web3デベロッパーの負担を軽減します。 最小限の設定で使えるように設計されているので、アプリですぐに使用可能です。
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)は[Web3.js](https://docs.web3js.org/)のラッパーであり、拡張されたAPIメソッドやその他の重要な利点を提供することで、Web3開発者としての作業を容易にします。最小限の設定で済むように設計されているため、アプリですぐに使い始めることができます！
 
-次に、[dotenv](https://www.npmjs.com/package/dotenv)パッケージをプロジェクトディレクトリにインストールします。これにより、APIキーを取得した後に安全な場所に保管できるようになります。
+次に、プロジェクトディレクトリに[dotenv](https://www.npmjs.com/package/dotenv)パッケージをインストールして、取得したAPIキーを安全に保存する場所を確保します。
 
 ```text
 npm install dotenv --save
 ```
 
-dappでは、HTTP API キーの代わりに**Websockets APIキー**を使用します。これにより、スマートコントラクトに保存されたメッセージが変更されたときに検出するリスナーを設定できます。
+このdappでは、HTTP APIキーの代わりに**Websockets APIキーを使用します**。これにより、スマート・コントラクトに保存されているメッセージが変更されたときに検出するリスナーを設定できるようになります。
 
-APIキーを取得したら、ルートディレクトリに `.env`ファイルを作成し、Alchemy Websocketsの URLを.envファイルに加えます。 `.env`ファイルは次のようになります。
+APIキーを取得したら、ルートディレクトリに`.env`ファイルを作成し、そこにAlchemy WebsocketsのURLを追加します。その後、`.env`ファイルは次のようになります。
 
 ```javascript
 REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-これで、私たちのdappにAlchemy Web3エンドポイントを設定する準備が整いました。 `util`フォルダー内に入っている`interact.js`に戻り、ファイルの先頭に次のコードを加えてください。
+これで、dappにAlchemy Web3エンドポイントを設定する準備が整いました！`util`フォルダ内にある`interact.js`に戻り、ファイルの先頭に以下のコードを追加しましょう。
 
 ```javascript
 // interact.js
@@ -932,23 +937,22 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-上記のコードでは、まず`.env`ファイルから Alchemyキーをインポートし、次に`alchemyKey`を`createAlchemyWeb3`に渡してAlchemy Web3エンドポイントへ確立しています。
+上記では、まず`.env`ファイルからAlchemyキーをインポートし、次に`alchemyKey`を`createAlchemyWeb3`に渡してAlchemy Web3エンドポイントを確立しました。
 
-エンドポイントの準備できたので、スマートコントラクトをロードするときです！
+このエンドポイントの準備ができたら、いよいよスマート・コントラクトを読み込みます！
+#### Hello Worldスマート・コントラクトの読み込み {#loading-your-hello-world-smart-contract}
 
-#### Hello Worldスマートコントラクトをロードする {#loading-your-hello-world-smart-contract}
+Hello Worldスマート・コントラクトを読み込むには、そのコントラクトアドレスとABIが必要です。これらは両方とも、[このチュートリアルのパート3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)を完了していればEtherscanで見つけることができます。
 
-Hello Worldスマートコントラクトをロードするには、そのコントラクトアドレスとABIが必要です。[このチュートリアルのパート3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)を終了していれば、両方ともEtherscanから入手できます。
+#### EtherscanからコントラクトABIを取得する方法 {#how-to-get-your-contract-abi-from-etherscan}
 
-#### EtherscanからコントラクトABIを入手する方法 {#how-to-get-your-contract-abi-from-etherscan}
+このチュートリアルのパート3をスキップした場合は、アドレス[0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code)のHelloWorldコントラクトを使用できます。そのABIは[こちら](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code)にあります。
 
-このチュートリアルのパート3を飛ばした場合は、アドレス[0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code)にあるHelloWorldコントラクトを使ってください。 ABIは、[こちら](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code)にあります。
+コントラクトABIは、コントラクトがどの関数を呼び出すかを指定し、関数が期待する形式でデータを返すことを保証するために必要です。コントラクトABIをコピーしたら、`src`ディレクトリに`contract-abi.json`というJSONファイルとして保存しましょう。
 
-コントラクトのABIは、コントラクトが呼び出す関数を指定し、関数が確実に意図しているフォーマットでデータを返すようにするために必要です。 コントラクトABIをコピーしたら、それを`contract-abi.json`という名前のJSONファイルとして`src`ディレクトリに保存しましょう。
+contract-abi.jsonはsrcフォルダーに保存する必要があります。
 
-contract-abi.jsonは、srcフォルダーに格納されている必要があります。
-
-コントラクトアドレス、ABI、Alchemy Web3エンドポイントを用意することで、[コントラクトメソッド](https://docs.web3js.org/api/web3-eth-contract/class/Contract)を使ってスマートコントラクトのインスタンスをロードすることができます。 コントラクトABIを`interact.js`ファイルにインポートし、コントラクトアドレスを加えます。
+コントラクトアドレス、ABI、およびAlchemy Web3エンドポイントが揃ったので、[contractメソッド](https://docs.web3js.org/api/web3-eth-contract/class/Contract)を使用してスマート・コントラクトのインスタンスを読み込むことができます。コントラクトABIを`interact.js`ファイルにインポートし、コントラクトアドレスを追加します。
 
 ```javascript
 // interact.js
@@ -957,7 +961,7 @@ const contractABI = require("../contract-abi.json")
 const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
 ```
 
-ついに、`helloWorldContract`変数のコメントを外し、AlchemyWeb3エンドポイントを使用してスマートコントラクトをロードできるようになりました。
+これでようやく`helloWorldContract`変数のコメントを解除し、AlchemyWeb3エンドポイントを使用してスマート・コントラクトを読み込むことができます。
 
 ```javascript
 // interact.js
@@ -967,7 +971,7 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-要約すると、`interact.js`の最初の12行は次のようになります。
+まとめると、`interact.js`の最初の12行は次のようになります。
 
 ```javascript
 // interact.js
@@ -986,13 +990,13 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-私たちのコントラクトがロードされたので、`loadCurrentMessage`関数を実装できます！
+コントラクトが読み込まれたので、`loadCurrentMessage`関数を実装できます！
 
-#### `interact.js`ファイルに`loadCurrentMessage`を実装する {#implementing-loadCurrentMessage-in-your-interact-js-file}
+#### `interact.js`ファイルでの`loadCurrentMessage`の実装 {#implementing-loadcurrentmessage-in-your-interact-js-file}
 
-これは非常にシンプルな関数です。 私たちのコントラクトから読み取るのに、単純な非同期のWeb3の呼び出しを作成します。 この関数では、スマートコントラクトに保存されているメッセージを返します。
+この関数は非常にシンプルです。コントラクトから読み取るために、シンプルな非同期Web3呼び出しを行います。この関数は、スマート・コントラクトに保存されているメッセージを返します。
 
-`interact.js`ファイルの `loadCurrentMessage`を次のように更新してください。
+`interact.js`ファイルの`loadCurrentMessage`を次のように更新します。
 
 ```javascript
 // interact.js
@@ -1003,60 +1007,60 @@ export const loadCurrentMessage = async () => {
 }
 ```
 
-このスマートコントラクトをUIに表示したいので、`HelloWorld.js`コンポーネントの `useEffect`関数を次のように更新します。
+このスマート・コントラクトをUIに表示したいため、`HelloWorld.js`コンポーネントの`useEffect`関数を次のように更新しましょう。
 
 ```javascript
 // HelloWorld.js
 
-//called only once
+//一度だけ呼び出されます
 useEffect(async () => {
   const message = await loadCurrentMessage()
   setMessage(message)
 }, [])
 ```
 
-`loadCurrentMessage`は、コンポーネントの最初のレンダリングで1回だけ呼び出されることに注目してください。 この後、`addSmartContractListener`を実装して、スマートコントラクト内のメッセージが変更された後にUIを自動的に更新できるようにします。
+なお、`loadCurrentMessage`はコンポーネントの最初のレンダリング時に1回だけ呼び出されるようにします。スマート・コントラクト内のメッセージが変更された後にUIを自動的に更新する`addSmartContractListener`をすぐに実装します。
 
-リスナーについて詳しく説明する前に、これまでの内容を確認してみましょう！ `HelloWorld.js`ファイルと`interact.js`ファイルを保存し、[http://localhost: 3000/](http://localhost:3000/)へアクセスしてください。
+リスナーに入る前に、これまでの内容を確認しましょう！`HelloWorld.js`と`interact.js`ファイルを保存し、[http://localhost:3000/](http://localhost:3000/)にアクセスします。
 
-現在、「ネットワークに接続されていません」というメッセージが表示されなくなっていることがわかります。 代わりに、スマート コントラクトに保存されているメッセージが反映されます。 カッコイイ！
+現在のメッセージが「No connection to the network.（ネットワークに接続されていません）」ではなくなっていることに気づくでしょう。代わりに、スマート・コントラクトに保存されているメッセージが反映されています。素晴らしいですね！
 
-#### 今や、UIにスマートコントラクトに保存されたメッセージが反映されるようになりました。 {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
+#### UIにスマート・コントラクトに保存されているメッセージが反映されるはずです {#your-ui-should-now-reflect-the-message-stored-in-the-smart-contract}
 
-それでは、リスナーについて説明していきます。
+さて、そのリスナーについてですが...
 
-#### `addSmartContractListener`を実装する {#implement-addsmartcontractlistener}
+#### `addSmartContractListener`の実装 {#implement-addsmartcontractlistener}
 
-[このチュートリアルのパート1](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract)で記述した`HelloWorld.sol`ファイルについて振り返ると、`UpdatedMessages`というスマートコントラクトのイベントがあったと思います。このイベントは、スマートコントラクトの`update`関数が呼び出された後に発行されます \(9 行目と27行目を参照\)。
+[このチュートリアルシリーズのパート1](#step-10-write-our-contract)で記述した`HelloWorld.sol`ファイルを思い出すと、スマート・コントラクトの`update`関数が呼び出された後に発行される`UpdatedMessages`というスマート・コントラクトイベントがあることを思い出すでしょう（9行目と27行目を参照）。
 
 ```javascript
 // HelloWorld.sol
 
-// Specifies the version of Solidity, using semantic versioning.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// セマンティックバージョニングを使用して、Solidityのバージョンを指定します。
+// 詳細: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.7.3;
 
-// Defines a contract named `HelloWorld`.
-// A contract is a collection of functions and data (its state). Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// `HelloWorld`という名前のコントラクトを定義します。
+// コントラクトは関数とデータ（その状態）の集合です。デプロイされると、コントラクトはイーサリアムブロックチェーン上の特定のアドレスに配置されます。詳細: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-   //Emitted when update function is called
-   //Smart contract events are a way for your contract to communicate that something happened on the blockchain to your app front-end, which can be 'listening' for certain events and take action when they happen.
+   //update関数が呼び出されたときに発行されます
+   //スマート・コントラクトのイベントは、ブロックチェーン上で何かが発生したことをアプリのフロントエンドに伝えるための方法です。フロントエンドは特定のイベントを「リッスン」し、それらが発生したときにアクションを起こすことができます。
    event UpdatedMessages(string oldStr, string newStr);
 
-   // Declares a state variable `message` of type `string`.
-   // State variables are variables whose values are permanently stored in contract storage. The keyword `public` makes variables accessible from outside a contract and creates a function that other contracts or clients can call to access the value.
+   // `string`型の状態変数 `message` を宣言します。
+   // 状態変数は、その値がコントラクトのストレージに永続的に保存される変数です。`public`キーワードを使用すると、コントラクトの外部から変数にアクセスできるようになり、他のコントラクトやクライアントが値にアクセスするために呼び出すことができる関数が作成されます。
    string public message;
 
-   // Similar to many class-based object-oriented languages, a constructor is a special function that is only executed upon contract creation.
-   // Constructors are used to initialize the contract's data. Learn more:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // 多くのクラスベースのオブジェクト指向言語と同様に、コンストラクターはコントラクトの作成時にのみ実行される特別な関数です。
+   // コンストラクターはコントラクトのデータを初期化するために使用されます。詳細: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
    constructor(string memory initMessage) {
 
-      // Accepts a string argument `initMessage` and sets the value into the contract's `message` storage variable).
+      // 文字列の引数 `initMessage` を受け取り、その値をコントラクトの `message` ストレージ変数に設定します）。
       message = initMessage;
    }
 
-   // A public function that accepts a string argument and updates the `message` storage variable.
+   // 文字列の引数を受け取り、`message` ストレージ変数を更新するpublic関数です。
    function update(string memory newMessage) public {
       string memory oldMsg = message;
       message = newMessage;
@@ -1065,9 +1069,9 @@ contract HelloWorld {
 }
 ```
 
-スマートコントラクトイベントは、ブロックチェーンで何かが起こったこと \(すなわち、_イベント_の発生 \) をフロントエンドアプリケーションに伝える方法です。特定のイベントを「リスニング」して、それが起きた時にアクションを実行します。
+スマート・コントラクトイベントは、ブロックチェーン上で何かが起こった（つまり、_イベント_があった）ことをフロントエンドアプリケーションに伝えるためのコントラクトの方法です。フロントエンドアプリケーションは特定のイベントを「リッスン」し、それらが発生したときにアクションを起こすことができます。
 
-具体的には、`addSmartContractListener`関数がHello Worldスマートコントラクトの`UpdatedMessages`イベントをリッスンしており、新しいメッセージを表示するようにUIの更新をします。
+`addSmartContractListener`関数は、Hello Worldスマート・コントラクトの`UpdatedMessages`イベントを特別にリッスンし、新しいメッセージを表示するようにUIを更新します。
 
 `addSmartContractListener`を次のように変更します。
 
@@ -1087,12 +1091,12 @@ function addSmartContractListener() {
 }
 ```
 
-リスナーがイベントを検出したときに何が起こるかを詳しく解説します。
+リスナーがイベントを検出したときに何が起こるかを分解してみましょう。
 
-- イベントの発行時にエラーが発生した場合、そのエラーは`status`ステート変数を介してUIに反映する。
-- それ以外の場合は、返された`data`オブジェクトを使う。 `data.returnValues`は、配列にある最初のエレメントがインデックスの0に格納されている配列です。配列の最初のエレメントには前のメッセージが格納され、2番目のエレメントには更新されたメッセージが格納されます。 つまり、イベントが成功すると、`message`文字列を更新されたメッセージに設定し、`newMessage`文字列をクリアし、`status`ステート変数を更新します。 これにより、新しいメッセージがスマートコントラクトに公開されたことを反映しています。
+- イベントの発行時にエラーが発生した場合、`status`状態変数を介してUIに反映されます。
+- それ以外の場合は、返された`data`オブジェクトを使用します。`data.returnValues`はゼロからインデックス付けされた配列で、配列の最初の要素には前のメッセージが保存され、2番目の要素には更新されたメッセージが保存されます。全体として、イベントが成功すると、`message`文字列を更新されたメッセージに設定し、`newMessage`文字列をクリアして、新しいメッセージがスマート・コントラクトに公開されたことを反映するように`status`状態変数を更新します。
 
-最後に、`useEffect`関数でリスナーを呼び出して、`HelloWorld.js`コンポーネントの最初のレンダリング時にリスナーが初期化されるようにしましょう。 あなたの`useEffect`関数全体は、次のようになります。
+最後に、`HelloWorld.js`コンポーネントの最初のレンダリング時に初期化されるように、`useEffect`関数でリスナーを呼び出しましょう。全体として、`useEffect`関数は次のようになります。
 
 ```javascript
 // HelloWorld.js
@@ -1104,43 +1108,42 @@ useEffect(async () => {
 }, [])
 ```
 
-スマートコントラクトから読み取れるようになったので、スマートコントラクトに書き込む方法も理解できるとなおよいでしょう！ ただし、dappに書き込むには、まずイーサリアムウォレットをdappに接続する必要があります。
+スマート・コントラクトから読み取ることができるようになったので、書き込む方法もわかると素晴らしいですね！ただし、dappに書き込むには、まずイーサリアムウォレットを接続する必要があります。
 
-それでは、次にイーサリアムウォレット \(MetaMask\) を設定し、それをdappに接続することに取り組んでいきましょう！
+そこで、次はイーサリアムウォレット（メタマスク）を設定し、それをdappに接続することに取り組みます！
 
-### ステップ4: イーサリアムウォレットのセットアップ {#step-4-set-up-your-ethereum-wallet}
+### ステップ4: イーサリアムウォレットの設定 {#step-4-set-up-your-ethereum-wallet}
 
-イーサリアムチェーンに何かを書き込むには、ユーザーは仮想ウォレットの秘密鍵を使ってトランザクションに署名しなければなりません。 このチュートリアルでは、イーサリアムアカウントアドレスの管理に使用されるブラウザの仮想ウォレットである[MetaMask](https://metamask.io/)を使用します。これにより、エンドユーザーは、このランザクションの署名がとても簡単になります。
+イーサリアムチェーンに何かを書き込むには、ユーザーは仮想ウォレットの秘密鍵を使用してトランザクションに署名する必要があります。このチュートリアルでは、イーサリアムアカウントアドレスを管理するために使用されるブラウザ内の仮想ウォレットである[メタマスク](https://metamask.io/)を使用します。これにより、エンドユーザーにとってこのトランザクションの署名が非常に簡単になります。
 
-イーサリアムのトランザクションの仕組みの詳細については、イーサリアム・ファウンデーションの[こちらのページ](/developers/docs/transactions/)をご覧ください。
+イーサリアムでのトランザクションの仕組みについてさらに詳しく知りたい場合は、イーサリアム財団の[こちらのページ](/developers/docs/transactions/)を確認してください。
 
-#### MetaMaskをダウンロード {#download-metamask}
+#### メタマスクのダウンロード {#download-metamask}
 
-Metamaskのアカウントは[こちら](https://metamask.io/download.html)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は\( 実際に支払いが発生しないように \)右上の「Goerli Test Network」に切り替えてください。
+[こちら](https://metamask.io/download)から無料でメタマスクをダウンロードしてアカウントを作成できます。アカウントを作成する際、またはすでにアカウントを持っている場合は、右上の「Goerli Test Network」に切り替えてください（実際のお金を扱わないようにするためです）。
 
-#### フォーセットからイーサ(ETH)を追加 {#add-ether-from-a-faucet}
+#### フォーセットからイーサを追加する {#add-ether-from-a-faucet}
 
-イーサリアムブロックチェーンでトランザクションに署名するには、偽のETHが必要になります。 ETHを取得するには、 [FaucETH](https://fauceth.komputing.org)にアクセスしてGoerliアカウントアドレスを入力し、「Request funds」をクリックしてください。 そしてドロップダウンで「Ethereum Testnet Goerli」を選択し、最後に「Request funds」ボタンを再度クリックします。 MetamaskアカウントにETHが表示されるはずです。
+イーサリアムブロックチェーンでトランザクションに署名するには、偽のETHが必要です。ETHを取得するには、[FaucETH](https://fauceth.komputing.org)にアクセスしてゴエリアカウントアドレスを入力し、「Request funds」をクリックして、ドロップダウンで「Ethereum Testnet Goerli」を選択し、最後に「Request funds」ボタンをもう一度クリックします。すぐにメタマスクアカウントにETHが表示されるはずです！
 
 #### 残高の確認 {#check-your-balance}
 
-残高を再確認するために、[Alchemyのコンポーザーツール](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)を使用して[eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)をリクエストしてみましょう。 このリクエストをすると、ウォレット内のETHの額が返されます。 Metamaskアカウントアドレスを入力して「Send Request」をクリックすると、次のようなレスポンスが表示されます。
+残高があることを再確認するために、[Alchemyのサンドボックスツール](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)を使用して[eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)リクエストを行ってみましょう。これにより、ウォレット内のETHの量が返されます。メタマスクのアカウントアドレスを入力して「Send Request」をクリックすると、次のような応答が表示されるはずです。
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**注:** この結果の単位は、ETHではなくweiです。 weiはETHの最小単位として使われています。 weiからETHへ変換すると、1 eth = 10¹⁸ weiになります。 つまり、0xde0b6b3a7640000を10進数に変換すると、1\*10¹⁸となり、1 ETHに相当します。
+**注:** この結果はETHではなくweiで表示されています。weiはイーサの最小単位として使用されます。weiからETHへの変換は、1 ETH = 10¹⁸ weiです。したがって、0xde0b6b3a7640000を10進数に変換すると1\*10¹⁸となり、1 ETHに等しくなります。
 
-ご安心ください。 これで、偽のお金を手に入れました。 🤑
+ふう！偽のお金がすべて揃っていますね！ 🤑
+### ステップ5: メタマスクをUIに接続する {#step-5-connect-metamask-to-your-ui}
 
-### ステップ5: メタマスクをUIへ接続する {#step-5-connect-metamask-to-your-UI}
+メタマスクウォレットの設定が完了したので、dappを接続しましょう！
 
-MetaMaskウォレットが設定されたので、分散型アプリケーション(Dapp)を接続しましょう。
+#### `connectWallet`関数 {#the-connectwallet-function}
 
-#### `connectWallet`関数 {#the-connectWallet-function}
-
-`interact.js`ファイルの`connectWallet`関数を実装します。この関数は、`HelloWorld.js`コンポーネントで呼び出します。
+`interact.js`ファイルで、`connectWallet`関数を実装しましょう。これを`HelloWorld.js`コンポーネントで呼び出すことができます。
 
 `connectWallet`を次のように変更しましょう。
 
@@ -1171,7 +1174,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1183,26 +1186,26 @@ export const connectWallet = async () => {
 }
 ```
 
-この巨大なコードブロックは、正確には何をするのでしょうか?
+では、この巨大なコードブロックは正確に何をするのでしょうか？
 
-まず、ブラウザで`window.ethereum`が有効になっているかどうかをチェックしています。
+まず、ブラウザで`window.ethereum`が有効になっているかどうかを確認します。
 
-`window.ethereum`は、MetaMaskおよび他のウォレットプロバイダーによって挿入されるグローバルAPIであり、ウェブサイトがユーザーのイーサリアムアカウントを要求できるようにするものです。 承認されると、ユーザーが接続しているブロックチェーンからデータを読み取ったり、メッセージやトランザクションへの署名をユーザーに提案したりできるようになります。 詳細については、[MetaMaskのドキュメント](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents)を参照してください。
+`window.ethereum`は、メタマスクやその他のウォレットプロバイダーによって注入されるグローバルAPIであり、Webサイトがユーザーのイーサリアムアカウントを要求できるようにします。承認されると、ユーザーが接続しているブロックチェーンからデータを読み取り、ユーザーにメッセージやトランザクションへの署名を提案できます。詳細については、[メタマスクのドキュメント](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents)を確認してください！
 
-`window.ethereum`が_存在しない_場合は、MeTaMaskがインストールされていないことを意味します。 その結果、空の文字列に設定された、返される`address`と、ユーザーがMetaMaskをインストールする必要があることを伝える`status`JSXオブジェクトが入ったJSONオブジェクトが返されます。
+`window.ethereum`が存在_しない_場合、それはメタマスクがインストールされていないことを意味します。これによりJSONオブジェクトが返され、返される`address`は空の文字列になり、`status` JSXオブジェクトはユーザーがメタマスクをインストールする必要があることを伝えます。
 
-`window.ethereum`が_存在_する場合、興味深いことが起こります。
+一方、`window.ethereum`が存在_する_場合、ここからが面白くなります。
 
-try/catch ループを使用して、[`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts)を呼び出すことでMetaMaskに接続しようとしています。 この関数を呼び出すと、ブラウザでMetaMaskが開き、ユーザーはウォレットを分散型アプリケーション(Dapp)に接続するように求められます。
+try/catchループを使用して、[`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts)を呼び出すことでメタマスクへの接続を試みます。この関数を呼び出すとブラウザでメタマスクが開き、ユーザーはウォレットをdappに接続するように求められます。
 
-- ユーザーが接続を選んだ場合、`method: "eth_requestAccounts"`は、分散型アプリケーション(Dapp)に接続されているすべてのユーザーのアカウントアドレスを含む配列を返します。 `connectWallet`関数は、配列内の_最初の_`address`と\(9 行目参照\)、ユーザーにスマートコントラクトにメッセージを書き込むように促す`status`メッセージが入ったJSONオブジェクトを返します。
-- ユーザーが接続を拒否した場合、JSONオブジェクトには、返される`address`に入る空の文字列と、ユーザーが接続を拒否したことを示す`status`メッセージが入ることになります。
+- ユーザーが接続を選択した場合、`method: "eth_requestAccounts"`はdappに接続されたユーザーのすべてのアカウントアドレスを含む配列を返します。全体として、`connectWallet`関数は、この配列の_最初_の`address`（9行目を参照）と、ユーザーにスマート・コントラクトへのメッセージの書き込みを促す`status`メッセージを含むJSONオブジェクトを返します。
+- ユーザーが接続を拒否した場合、JSONオブジェクトには返される`address`の空の文字列と、ユーザーが接続を拒否したことを反映する`status`メッセージが含まれます。
 
-これで、`connectWallet`関数を作成できたので、次のステップでは、この関数を`HelloWorld.js`コンポーネントに呼び出します。
+この`connectWallet`関数を記述したので、次のステップはそれを`HelloWorld.js`コンポーネントで呼び出すことです。
 
-#### `connect Wallet`関数を`Hello World.js`UIコンポーネントに加える {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
+#### `HelloWorld.js` UIコンポーネントへの`connectWallet`関数の追加 {#add-the-connectwallet-function-to-your-helloworld-js-ui-component}
 
-`HelloWorld.js`にある `connectWalletPressed`関数に移動し、次のように更新します。
+`HelloWorld.js`の`connectWalletPressed`関数に移動し、次のように更新します。
 
 ```javascript
 // HelloWorld.js
@@ -1214,21 +1217,21 @@ const connectWalletPressed = async () => {
 }
 ```
 
-`interact.js`ファイルによって、機能の大部分が`HelloWorld.js`コンポーネントからどのように抽象化されているかに注目してください。 これは、モデルビューコントローラ(M-V-C)パラダイムに準拠しているためです。
+機能の大部分が`interact.js`ファイルから`HelloWorld.js`コンポーネントへと抽象化されていることに気づきましたか？これはM-V-Cパラダイムに準拠するためです！
 
-`connectWalletPressed`では、単にインポートされた`connectWallet`関数のawait呼び出しを行っています。さらに、そのレスポンスを使用し、`status`と`walletAddress`変数を状態フックを介して更新しています。
+`connectWalletPressed`では、インポートされた`connectWallet`関数へのawait呼び出しを単に行い、その応答を使用して、状態フックを介して`status`および`walletAddress`変数を更新します。
 
-それでは、両方のファイル \(`HelloWorld.js`と`interact.js`\) を保存して、これまでのUIをテストしてみましょう。
+それでは、両方のファイル（`HelloWorld.js`と`interact.js`）を保存し、これまでのUIをテストしてみましょう。
 
-[http://localhost:3000/](http://localhost:3000/)でブラウザを開き、ページ右上にある「Connect Wallet」ボタンを押します。
+ブラウザで[http://localhost:3000/](http://localhost:3000/)ページを開き、右上の「Connect Wallet」ボタンを押します。
 
-MetaMaskがインストールされている場合は、ウォレットを分散型アプリケーション(Dapp)に接続するように求められます。 接続リクエストを承認します。
+メタマスクがインストールされている場合は、ウォレットをdappに接続するように求められるはずです。接続の招待を承認します。
 
-ウォレットボタンに、接続した自分のアドレスが表示されているはずです。 やりましたね🔥
+ウォレットボタンにアドレスが接続されていることが反映されるはずです！やったー 🔥
 
-次に、ページを更新してみてください。変ですね。 ウォレットボタンによって、すでに接続しているにもかかわらずMetaMaskに接続するよう求められます。
+次に、ページを更新してみてください...これは奇妙です。すでに接続されているにもかかわらず、ウォレットボタンがメタマスクの接続を求めています...
 
-しかし、恐れるに足りません。 `getCurrentWalletConnected`を実装することで、簡単にこれを修正できます。この関数は、アドレスが分散型アプリケーション(Dapp) にすでに接続されているかどうかを確認し、それに応じてUIを更新します。
+しかし、恐れることはありません！`getCurrentWalletConnected`を実装することで、アドレスがすでにdappに接続されているかどうかを確認し、それに応じてUIを更新することで、この問題には簡単に対処できます！
 
 #### `getCurrentWalletConnected`関数 {#the-getcurrentwalletconnected-function}
 
@@ -1267,7 +1270,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1279,11 +1282,11 @@ export const getCurrentWalletConnected = async () => {
 }
 ```
 
-このコードは、前述の`connectWallet`関数に_非常に_似ています。
+このコードは、前のステップで記述した`connectWallet`関数と_非常_によく似ています。
 
-主な違いとしては、ユーザーがウォレットに接続するためにMetaMaskを開く`eth_requestAccounts`メソッドを呼び出す代わりに、 ここでは`eth_accounts`メソッドを呼び出しています。これは、現在、分散型アプリケーション(Dapp)に接続されているMetaMaskのアドレスを含む配列を単に返すだけです。
+主な違いは、ユーザーがウォレットを接続するためにメタマスクを開く`eth_requestAccounts`メソッドを呼び出す代わりに、ここでは現在dappに接続されているメタマスクアドレスを含む配列を単に返す`eth_accounts`メソッドを呼び出すことです。
 
-この関数を動作させるため、`HelloWorld.js`コンポーネントの`useEffect`関数で呼び出しましょう。
+この関数の動作を確認するために、`HelloWorld.js`コンポーネントの`useEffect`関数で呼び出してみましょう。
 
 ```javascript
 // HelloWorld.js
@@ -1299,15 +1302,15 @@ useEffect(async () => {
 }, [])
 ```
 
-`walletAddress`状態変数と`status`状態変数を更新するのに、呼び出した`getCurrentWalletConnected`のレスポンスを使用していることに注目してください。
+`getCurrentWalletConnected`への呼び出しの応答を使用して、`walletAddress`および`status`状態変数を更新していることに注意してください。
 
-このコードを加えたら、ブラウザウィンドウを更新してみてください。
+このコードを追加したので、ブラウザウィンドウを更新してみましょう。
 
-素晴らしい！ リフレッシュ後も、ボタンには接続されていることが示されており、接続されたウォレットのアドレスのプレビューが表示されているはずです。
+素晴らしい！ボタンには接続されていることが表示され、更新した後でも接続されているウォレットのアドレスのプレビューが表示されるはずです！
 
 #### `addWalletListener`の実装 {#implement-addwalletlistener}
 
-分散型アプリケーション(Dapp)ウォレットの設定の最終ステップは、ウォレットリスナーを実装することです。これにより、ユーザーが接続を切断したり、アカウントを切り替えたりした場合など、ウォレットの状態が変更されたときにUIが更新されます。
+dappウォレット設定の最後のステップは、ユーザーが切断したりアカウントを切り替えたりするなど、ウォレットの状態が変化したときにUIが更新されるようにウォレットリスナーを実装することです。
 
 `HelloWorld.js`ファイルで、`addWalletListener`関数を次のように変更します。
 
@@ -1329,7 +1332,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -1338,13 +1341,13 @@ function addWalletListener() {
 }
 ```
 
-この時点で何が起こっているかを理解するのに私たちの助けは必要ないと思いますが、完璧な理解を目指しているので簡単に説明します。
+現時点では、ここで何が起こっているかを理解するのに私たちの助けは必要ないと思いますが、念のため、簡単に分解してみましょう。
 
-- まず、ブラウザで`window.ethereum`が有効になっているか\(すなわち MetaMaskがインストールされているか\)を関数がチェックしています。
-  - 有効になっていない場合、ユーザーにMetaMaskのインストールを求めるJSX文字列を`status`状態変数に設定します。
-  - 有効になっている場合、MetaMaskウォレットの状態変更をリッスンしている3行目の`window.ethereum.on("accountsChanged")`リスナーを設定します。この状態変更には、ユーザーが追加のアカウントを分散型アプリケーション(Dapp)に接続した場合、アカウントを切り替えた場合、アカウントを切断した場合が含まれます。 少なくとも1つのアカウントが接続されていれば、`accounts`配列の最初のアカウントがリスナーから返されたときに、`walletAddress`状態変数が更新されます。 それ以外の場合は、`walletAddress`に空の文字列が設定されます。
+- まず、関数は`window.ethereum`が有効になっているか（つまり、メタマスクがインストールされているか）を確認します。
+  - 有効になっていない場合は、`status`状態変数を、ユーザーにメタマスクのインストールを促すJSX文字列に設定するだけです。
+  - 有効になっている場合は、3行目でメタマスクウォレットの状態の変化をリッスンするリスナー`window.ethereum.on("accountsChanged")`を設定します。これには、ユーザーが追加のアカウントをdappに接続したとき、アカウントを切り替えたとき、またはアカウントを切断したときが含まれます。少なくとも1つのアカウントが接続されている場合、`walletAddress`状態変数は、リスナーによって返される`accounts`配列の最初のアカウントとして更新されます。それ以外の場合、`walletAddress`は空の文字列として設定されます。
 
-最後に、`useEffect`関数で次のように呼び出す必要があります。
+最後になりましたが、これを`useEffect`関数で呼び出す必要があります。
 
 ```javascript
 // HelloWorld.js
@@ -1362,23 +1365,23 @@ useEffect(async () => {
 }, [])
 ```
 
-完成です！ ウォレットのすべての機能をプログラミングしました。 次は最後のタスクです。スマートコントラクトに保存されているメッセージを更新します。
+これで完了です！すべてのウォレット機能のプログラミングが正常に完了しました！それでは最後のタスク、スマート・コントラクトに保存されているメッセージの更新に進みましょう！
 
-### ステップ6: `updateMessage`関数の実装する {#step-6-implement-the-updateMessage-function}
+### ステップ6: `updateMessage`関数の実装 {#step-6-implement-the-updatemessage-function}
 
-友よ！最終段階にたどり着きました。 `interact.js`ファイルの`updateMessage`で、次のことを実行します。
+さあ皆さん、いよいよ大詰めです！`interact.js`ファイルの`updateMessage`で、以下のことを行います。
 
-1. スマートコンタクトに公開したいメッセージが有効であることを確認する。
-2. MetaMaskを使用してトランザクションに署名する
-3. `HelloWorld.js`フロントエンドコンポーネントでこの関数を呼び出す。
+1. スマート・コントラクトに公開したいメッセージが有効であることを確認する
+2. メタマスクを使用してトランザクションに署名する
+3. `HelloWorld.js`フロントエンドコンポーネントからこの関数を呼び出す
 
-これには、それほど時間を要しません。dappを完成させましょう！
+それほど時間はかかりません。このdappを完成させましょう！
 
 #### 入力エラー処理 {#input-error-handling}
 
-当然ながら、関数の開始時に何らかの入力エラー処理を行うことは理にかなっています。
+当然のことながら、関数の開始時に何らかの入力エラー処理を行うことは理にかなっています。
 
-MetaMaskエクステンションがインストールされていない場合や接続されているウォレットがない場合 \(つまり、渡された `address`が空の文字列\) 、 `message`は空の文字列になります。 次のエラー処理を`updateMessage`に追加しましょう。
+メタマスク拡張機能がインストールされていない場合、ウォレットが接続されていない場合（つまり、渡された`address`が空の文字列である場合）、または`message`が空の文字列である場合は、関数が早期に返されるようにします。`updateMessage`に次のエラー処理を追加しましょう。
 
 ```javascript
 // interact.js
@@ -1399,23 +1402,23 @@ export const updateMessage = async (address, message) => {
 }
 ```
 
-入力エラーを適切に処理できるようなりました。それでは、MetaMaskを介してトランザクションに署名をします。
+適切な入力エラー処理が追加されたので、メタマスクを介してトランザクションに署名する時間です！
 
-#### トランザクションへ署名する {#signing-our-transaction}
+#### トランザクションへの署名 {#signing-our-transaction}
 
-従来のWeb3イーサリアムトランザクションにすでに慣れている場合は、次に記述するコードは非常に馴染みのあるものになるでしょう。 入力エラー処理コードの下に、次の`updateMessage`を加えます。
+従来のWeb3イーサリアムトランザクションにすでに慣れている場合、次に記述するコードは非常に馴染みのあるものになります。入力エラー処理コードの下に、`updateMessage`に次を追加します。
 
 ```javascript
 // interact.js
 
-//set up transaction parameters
+//トランザクションのパラメーターを設定する
 const transactionParameters = {
-  to: contractAddress, // Required except during contract publications.
-  from: address, // must match user's active address.
+  to: contractAddress, // コントラクトの公開時を除き必須です。
+  from: address, // ユーザーのアクティブなアドレスと一致する必要があります。
   data: helloWorldContract.methods.update(message).encodeABI(),
 }
 
-//sign the transaction
+//トランザクションに署名する
 try {
   const txHash = await window.ethereum.request({
     method: "eth_sendTransaction",
@@ -1441,26 +1444,26 @@ try {
 }
 ```
 
-何をしているか、説明していきましょう。 まず、次のようにトランザクションパラメータを設定します。
+何が起こっているかを分解してみましょう。まず、トランザクションパラメーターを設定します。ここで、
 
-- `to`に受取人のアドレス\(スマートコントラクト\)を設定します 。
-- `from`では、関数に渡した`address`変数であるトランザクションの署名者を指定します。
-- `data`には、Hello Worldスマートコントラクトの `update`メソッドへの呼び出しが含まれており、`message`文字列変数を入力として受け取っています。
+- `to`は受信者アドレス（スマート・コントラクト）を指定します
+- `from`はトランザクションの署名者、つまり関数に渡した`address`変数を指定します
+- `data`には、Hello Worldスマート・コントラクトの`update`メソッドへの呼び出しが含まれており、入力として`message`文字列変数を受け取ります
 
-次に、`window.ethereum.request`をawaitで呼び出して、MetaMaskにトランザクションの署名を依頼します。 11行目と12行目で、ethメソッド `eth_sendTransaction`を指定し、`transactionParameters`を渡していることに注目してください。
+次に、await呼び出し`window.ethereum.request`を行い、メタマスクにトランザクションへの署名を要求します。11行目と12行目で、ETHメソッド`eth_sendTransaction`を指定し、`transactionParameters`を渡していることに注意してください。
 
-この時点で、ブラウザでMetaMaskが開かれ、ユーザーにトランザクションの署名または拒否を求めます。
+この時点で、ブラウザでメタマスクが開き、ユーザーにトランザクションへの署名または拒否を求めます。
 
-- トランザクションが成功した場合、この関数は、Etherscanでトランザクションについての詳細を確認するようユーザーに求める`status`JSX文字列が入ったJSONオブジェクトを返します。
-- トランザクションが失敗した場合、この関数は、エラーメッセージを伝える`status`文字列が入ったJSONオブジェクトを返します。
+- トランザクションが成功した場合、関数はJSONオブジェクトを返します。ここで、`status` JSX文字列は、トランザクションの詳細についてEtherscanを確認するようにユーザーに促します。
+- トランザクションが失敗した場合、関数はJSONオブジェクトを返します。ここで、`status`文字列はエラーメッセージを伝えます。
 
-全体では、`updateMessage`関数は次のようになります。
+全体として、`updateMessage`関数は次のようになります。
 
 ```javascript
 // interact.js
 
 export const updateMessage = async (address, message) => {
-  //input error handling
+  //入力エラーの処理
   if (!window.ethereum || address === null) {
     return {
       status:
@@ -1474,14 +1477,14 @@ export const updateMessage = async (address, message) => {
     }
   }
 
-  //set up transaction parameters
+  //トランザクションのパラメーターを設定する
   const transactionParameters = {
-    to: contractAddress, // Required except during contract publications.
-    from: address, // must match user's active address.
+    to: contractAddress, // コントラクトの公開時を除き必須です。
+    from: address, // ユーザーのアクティブなアドレスと一致する必要があります。
     data: helloWorldContract.methods.update(message).encodeABI(),
   }
 
-  //sign the transaction
+  //トランザクションに署名する
   try {
     const txHash = await window.ethereum.request({
       method: "eth_sendTransaction",
@@ -1508,11 +1511,11 @@ export const updateMessage = async (address, message) => {
 }
 ```
 
-最後に、`updateMessage`関数を `HelloWorld.js`コンポーネントに接続する必要があります。
+最後になりましたが、`updateMessage`関数を`HelloWorld.js`コンポーネントに接続する必要があります。
 
 #### `updateMessage`を`HelloWorld.js`フロントエンドに接続する {#connect-updatemessage-to-the-helloworld-js-frontend}
 
-`onUpdatePressed`関数では、インポートされた`updateMessage`関数へのawait呼び出しを行い、トランザクションが成功したか失敗したかを反映するように`status`ステート変数を次のように変更する必要があります。
+`onUpdatePressed`関数は、インポートされた`updateMessage`関数へのawait呼び出しを行い、トランザクションが成功したか失敗したかを反映するように`status`状態変数を変更する必要があります。
 
 ```javascript
 // HelloWorld.js
@@ -1523,18 +1526,18 @@ const onUpdatePressed = async () => {
 }
 ```
 
-とても綺麗ででシンプルです。 そして、なんということでしょう。 dappの完成です。
+非常にクリーンでシンプルです。そしてなんと...あなたのdappが完成しました！！！
 
-**更新**ボタンを試してみてください！
+さあ、**Update**ボタンをテストしてみてください！
 
-### 自分自身でカスタムdappを作る {#make-your-own-custom-dapp}
+### 独自のカスタムdappの作成 {#make-your-own-custom-dapp}
 
-おめでとう！あなたは、このチュートリアルを最後までやりきりました! おさらいすると、以下の方法を学びました。
+おめでとうございます、チュートリアルの最後までやり遂げました！まとめると、以下の方法を学びました。
 
-- MetaMaskウォレットをdappプロジェクトに接続する
-- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) APIを使用してスマートコントラクトからデータを読み取る。
-- MetaMaskを使用してイーサリアムトランザクションに署名する
+- メタマスクウォレットをdappプロジェクトに接続する
+- [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) APIを使用してスマート・コントラクトからデータを読み取る
+- メタマスクを使用してイーサリアムのトランザクションに署名する
 
-これで、このチュートリアルのスキルを応用して独自のカスタムdappプロジェクトを構築するための準備が整いました。 何かご質問がございましたら、[Alchemy Discord](https://discord.gg/gWuC7zB)でいつでもお気軽にお問い合わせください。 🧙‍♂️
+これで、このチュートリアルで得たスキルを応用して、独自のカスタムdappプロジェクトを構築する準備が完全に整いました！いつものように、質問がある場合は、遠慮なく[Alchemyのディスコード](https://discord.gg/gWuC7zB)で助けを求めてください。 🧙‍♂️
 
-このチュートリアルを通して体験したことやフィードバックがあれば、Twitter[@alchemyplatform](https://twitter.com/AlchemyPlatform)でタグ付けしてお知らせください。
+このチュートリアルを完了したら、ツイッターで[@alchemyplatform](https://twitter.com/AlchemyPlatform)をタグ付けして、体験談やフィードバックをお知らせください！

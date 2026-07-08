@@ -1,206 +1,207 @@
 ---
-title: Đặt cọc ETH một mình
-description: Tổng quan về cách bắt đầu đặt cọc ETH một mình
+title: "Đặt cọc ETH của bạn tại nhà"
+description: "Tổng quan về cách bắt đầu đặt cọc ETH của bạn tại nhà"
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: Tê giác Leslie trên chip máy tính riêng.
+alt: "Tê giác Leslie trên con chip máy tính của riêng cô ấy."
 sidebarDepth: 2
 summaryPoints:
-  - Tận hưởng phần thưởng tối đa trực tiếp từ giao thức khi bạn duy trì nút xác thực hoạt động đúng cách và trực tuyến
-  - Việc chạy phần cứng tại nhà và tự mình sẽ gia tăng tính bảo mật và phân quyền của mạng Ethereum
-  - Không phải dựa vào ủy thác và không hề phải từ bỏ quyền kiểm soát chìa khóa đối với tiền của bạn
+  - Nhận phần thưởng tối đa trực tiếp từ giao thức nhờ việc giữ cho trình xác thực của bạn hoạt động bình thường và trực tuyến
+  - Chạy phần cứng tại nhà và đích thân đóng góp vào tính bảo mật và sự phi tập trung của mạng lưới Ethereum
+  - Loại bỏ sự tin cậy và không bao giờ từ bỏ quyền kiểm soát các khóa đối với tiền của bạn
 ---
 
-## Đặt cọc một mình là gì? {#what-is-solo-staking}
+## Đặt cọc tại nhà là gì? {#what-is-solo-staking}
 
-Góp cổ phần một mình là hành động [chạy một nút Ethereum](/run-a-node/) được kết nối với internet và đặt cọc 32 ETH để kích hoạt một [nút xác thực](#faq), cung cấp cho bạn khả năng tham gia trực tiếp vào cơ chế đồng thuận của mạng.
+Đặt cọc tại nhà là hành động [chạy một nút Ethereum](/run-a-node/) được kết nối với internet và gửi 32 ETH để kích hoạt một [trình xác thực](#faq), mang lại cho bạn khả năng tham gia trực tiếp vào sự đồng thuận của mạng lưới.
 
-**Đặt cọc một mình làm gia tăng tính phi tập trung của mạng lưới Ethereum**, giúp Ethereum chống kiểm duyệt và tăng khả năng chống chịu các cuộc tấn công. Các phương pháp đặt cọc khác có thể không hỗ trợ mạng lưới theo cách thức tương tự. Đặt cọc một mình là tùy chọn đặt cọc tốt nhất để bảo vệ Ethereum.
+**Đặt cọc tại nhà làm tăng sự phi tập trung của mạng lưới Ethereum**, giúp [Ethereum](/) có khả năng chống kiểm duyệt tốt hơn và mạnh mẽ hơn trước các cuộc tấn công. Các phương pháp đặt cọc khác có thể không giúp ích cho mạng lưới theo những cách tương tự. Đặt cọc tại nhà là lựa chọn đặt cọc tốt nhất để bảo mật Ethereum.
 
-Một nút Ethereum bao gồm cả máy khách lớp thực thi (EL), cũng như máy khách lớp đồng thuận (CL). Các máy khách này là phần mềm hoạt động cùng nhau, cùng với một bộ khóa ký hợp lệ, để xác minh các giao dịch và khối, chứng thực người đứng đầu chính xác của chuỗi, tổng hợp chứng thực và đề xuất khối.
+Một nút Ethereum bao gồm cả máy khách lớp thực thi (EL) cũng như máy khách lớp đồng thuận (CL). Các máy khách này là phần mềm hoạt động cùng nhau, cùng với một bộ khóa ký hợp lệ, để xác minh các giao dịch và khối, chứng thực phần đầu chính xác của chuỗi, tổng hợp các chứng thực và đề xuất các khối.
 
-Những người góp cổ phần một mình chịu trách nhiệm vận hành phần cứng cần thiết để chạy các máy khách này. Chúng tôi khuyên bạn nên sử dụng một máy chuyên dụng cho việc này mà bạn vận hành tại nhà – điều này cực kỳ có lợi cho sức khỏe của hệ thống mạng.
+Những người đặt cọc tại nhà chịu trách nhiệm vận hành phần cứng cần thiết để chạy các máy khách này. Chúng tôi đặc biệt khuyến nghị sử dụng một máy chuyên dụng cho việc này mà bạn vận hành từ nhà – điều này cực kỳ có lợi cho sức khỏe của mạng lưới.
 
-Những người đặt cọc một mình nhận phần thưởng trực tiếp từ giao thức khi giữ cho nút xác thực của họ hoạt động đúng cách và trực tuyến.
+Người đặt cọc tại nhà nhận được phần thưởng trực tiếp từ giao thức nhờ việc giữ cho trình xác thực của họ hoạt động bình thường và trực tuyến.
 
-## Tại sao nên đặt cọc một mình? {#why-stake-solo}
+## Tại sao nên đặt cọc từ nhà? {#why-stake-solo}
 
-Đặt cọc một mình tuy đi kèm với nhiều trách nhiệm hơn, nhưng bù lại bạn có thể tự do thiết lập và hoàn toàn nắm quyền kiểm soát nguồn tiền và cách đặt cọc.
+Đặt cọc tại nhà đi kèm với nhiều trách nhiệm hơn nhưng cung cấp cho bạn quyền kiểm soát tối đa đối với tiền và thiết lập đặt cọc của mình.
 
-<CardGrid>
-  <Card title="Kiếm ETH mới" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
-  <Card title="Toàn quyển kiểm soát" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="Bảo mật mạng lưới" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
-</CardGrid>
+<Grid>
+  <Card title="Kiếm ETH mới" emoji="💸" description="Kiếm phần thưởng bằng ETH trực tiếp từ giao thức khi trình xác thực của bạn trực tuyến, mà không có bất kỳ bên trung gian nào lấy phần trăm." />
+  <Card title="Toàn quyền kiểm soát" emoji="🎛️" description="Giữ các khóa của riêng bạn. Chọn sự kết hợp giữa các máy khách và phần cứng cho phép bạn giảm thiểu rủi ro và đóng góp tốt nhất cho sức khỏe và bảo mật của mạng lưới. Các dịch vụ đặt cọc của bên thứ ba đưa ra những quyết định này thay bạn và họ không phải lúc nào cũng đưa ra những lựa chọn an toàn nhất." />
+  <Card title="Bảo mật mạng lưới" emoji="🔐" description="Việc đặt cọc tại nhà là cách đặt cọc có tác động lớn nhất. Bằng cách chạy một trình xác thực trên phần cứng của riêng bạn tại nhà, bạn tăng cường sự mạnh mẽ, sự phi tập trung và bảo mật của giao thức Ethereum." />
+</Grid>
 
-## Những điều cần cân nhắc trước khi đặt cọc một mình {#considerations-before-staking-solo}
+## Những điều cần cân nhắc trước khi đặt cọc tại nhà {#considerations-before-staking-solo}
 
-Mặc dù chúng tôi mong muốn mọi người đều có thể đặt cọc một mình dễ dàng và an toàn, nhưng thực tế lại không lý tưởng như vậy. Trước khi quyết định góp ETH một mình, bạn cần cân nhắc đến một số yếu tố thực tế và quan trọng.
+Mặc dù chúng tôi mong muốn rằng việc đặt cọc tại nhà có thể tiếp cận được và không có rủi ro đối với tất cả mọi người, nhưng thực tế không phải vậy. Có một số cân nhắc thực tế và nghiêm túc cần ghi nhớ trước khi chọn đặt cọc ETH của bạn tại nhà.
 
-<InfoGrid>
-<ExpandableCard title="Nội dung cần đọc" eventCategory="SoloStaking" eventName="clicked required reading">
-Khi tự vận hành nút riêng, bạn nên dành thời gian để học cách sử dụng phần mềm đã chọn. Quá trình này bao gồm đọc tài liệu hướng dẫn và theo dõi các kênh thông tin của các nhóm phát triển.
+<ExpandableCard title="Tài liệu bắt buộc đọc" eventCategory="SoloStaking" eventName="clicked required reading">
+Khi vận hành nút của riêng mình, bạn nên dành chút thời gian tìm hiểu cách sử dụng phần mềm mà bạn đã chọn. Điều này liên quan đến việc đọc tài liệu liên quan và theo dõi các kênh liên lạc của các nhóm phát triển đó.
 
-Khi hiểu càng rõ về phần mềm đang chạy và cơ chế hoạt động của Bằng chứng cổ phần, bạn sẽ càng hạn chế được rủi ro khi tham gia góp cổ phần và dễ dàng khắc phục sự cố hơn trong quá trình vận hành nút.
+Càng hiểu rõ về phần mềm bạn đang chạy và cách thức hoạt động của bằng chứng cổ phần (PoS), bạn sẽ càng ít gặp rủi ro với tư cách là người đặt cọc và càng dễ dàng khắc phục mọi sự cố có thể phát sinh trong quá trình vận hành nút.
 </ExpandableCard>
 
-<ExpandableCard title="Thành thạo máy tính" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-Có thể các công cụ mới ra đời dần dần giúp việc thiết lập nút dễ dàng hơn, nhưng bạn vẫn cần có mức độ thành thạo nhất định khi làm việc với máy tính. Kiến thức về giao diện dòng lệnh sẽ hữu ích nhưng không còn hoàn toàn bắt buộc.
+<ExpandableCard title="Sử dụng máy tính thành thạo" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+Việc thiết lập nút yêu cầu mức độ thoải mái nhất định khi làm việc với máy tính, mặc dù các công cụ mới đang làm cho việc này trở nên dễ dàng hơn theo thời gian. Hiểu biết về giao diện dòng lệnh là hữu ích, nhưng không còn bắt buộc một cách nghiêm ngặt nữa.
 
-Ngoài ra, bạn cần hiểu về cấu hình phần cứng cơ bản và thông số tối thiểu được khuyến nghị.
+Nó cũng yêu cầu thiết lập phần cứng rất cơ bản và một số hiểu biết về các thông số kỹ thuật tối thiểu được khuyến nghị.
 </ExpandableCard>
 
-<ExpandableCard title="Quản lý khóa bảo mật" eventCategory="SoloStaking" eventName="clicked secure key management">
-Giống như khóa riêng bảo mật địa chỉ Ethereum của bạn, bạn sẽ cần tạo các khóa riêng biệt cho nút xác thực. Bạn phải hiểu cách giữ an toàn vào bảo mật các cụm từ khởi tạo hoặc khóa riêng.{' '}
+<ExpandableCard title="Quản lý khóa an toàn" eventCategory="SoloStaking" eventName="clicked secure key management">
+Giống như cách các khóa riêng tư bảo mật địa chỉ Ethereum của bạn, bạn sẽ cần tạo các khóa dành riêng cho trình xác thực của mình. Bạn phải hiểu cách giữ an toàn và bảo mật cho bất kỳ cụm từ hạt giống hoặc khóa riêng tư nào.{' '}
 
-<a href="/security/">Bảo mật Ethereum và ngăn chặn lừa đảo</a>
+[Bảo mật Ethereum và phòng chống lừa đảo](/security/)
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
-Phần cứng thỉnh thoảng có thể bị lỗi, kết nối mạng có thể gián đoạn và phần mềm máy khách đôi khi cần được nâng cấp. Công tác bảo trì nút là không thể tránh khỏi và đôi khi đòi hỏi bạn phải chú ý. Bạn nên cập nhật thông tin về các đợt nâng cấp mạng lưới dự kiến hoặc các bản nâng cấp máy khách quan trọng khác.
+<ExpandableCard title="Bảo trì" eventCategory="SoloStaking" eventName="clicked maintenance">
+Phần cứng đôi khi bị lỗi, kết nối mạng bị lỗi và phần mềm máy khách đôi khi cần nâng cấp. Việc bảo trì nút là không thể tránh khỏi và đôi khi sẽ cần sự chú ý của bạn. Bạn sẽ muốn đảm bảo rằng mình luôn nắm rõ mọi bản nâng cấp mạng lưới dự kiến hoặc các bản nâng cấp máy khách quan trọng khác.
 </ExpandableCard>
 
-<ExpandableCard title="Thời gian hoạt động ổn định" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-Phần thưởng đặt cọc phụ thuộc vào thời gian nút xác thực của bạn hoạt động trực tuyến và chứng thực thành công. Ngược lại, thời gian ngoại tuyến sẽ dẫn đến hình phạt tỷ lệ thuận với số lượng nút xác thực ngoại tuyến cùng lúc, <a href="#faq">nhưng không dẫn đến việc bị cắt giảm</a>. Băng thông cũng là yếu tố quan trọng, vì phần thưởng sẽ giảm đối với các chứng thực không được tiếp nhận kịp thời. Các yêu cầu có thể thay đổi, nhưng tốc độ tải lên và tải xuống tối thiểu là 10 Mb/s.
+<ExpandableCard title="Thời gian hoạt động đáng tin cậy" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+Phần thưởng của bạn tỷ lệ thuận với thời gian trình xác thực của bạn trực tuyến và chứng thực đúng cách. Thời gian ngừng hoạt động sẽ phải chịu các hình phạt tỷ lệ thuận với số lượng các trình xác thực khác cũng đang ngoại tuyến cùng lúc, nhưng <a href="#faq">không dẫn đến việc bị phạt cắt giảm</a>. Băng thông cũng quan trọng, vì phần thưởng sẽ bị giảm đối với các chứng thực không được nhận kịp thời. Các yêu cầu sẽ khác nhau, nhưng mức tối thiểu được khuyến nghị là 10 Mb/s cho cả tải lên và tải xuống.
 </ExpandableCard>
 
-<ExpandableCard title="Rủi ro bị cắt" eventCategory="SoloStaking" eventName="clicked slashing risk">
-Khác với hình phạt cho tình trạng ngoại tuyến, <em>cắt giảm</em> là hình phạt nghiêm trọng hơn dành cho các hành vi gian lận. Bằng cách chạy máy khách thiểu số với khóa chỉ được tải trên một máy tính tại một thời điểm, bạn sẽ giảm thiểu nguy cơ bị cắt giảm. Tất cả người đặt cọc theo đó cần nhận thức rõ ràng về rủi ro bị cắt giảm.
+<ExpandableCard title="Rủi ro phạt cắt giảm" eventCategory="SoloStaking" eventName="clicked slashing risk">
+Khác với các hình phạt do không hoạt động vì ngoại tuyến, <em>phạt cắt giảm</em> là một hình phạt nghiêm trọng hơn nhiều dành cho các hành vi vi phạm ác ý. Bằng cách chạy một máy khách thiểu số với các khóa của bạn chỉ được tải trên một máy tại một thời điểm, rủi ro bị phạt cắt giảm của bạn sẽ được giảm thiểu. Mặc dù vậy, tất cả những người đặt cọc đều phải nhận thức được các rủi ro của việc phạt cắt giảm.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Xem thêm về cắt giảm và vòng đời của nút xác thực</a>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Tìm hiểu thêm về phạt cắt giảm và vòng đời trình xác thực</a>
 </ExpandableCard>
-</InfoGrid>
 
 <StakingComparison page="solo" />
 
-## Cơ chế hoạt động {#how-it-works}
+## Cách thức hoạt động {#how-it-works}
 
 <StakingHowSoloWorks />
 
-Trong thời gian hoạt động, nút xác thực của bạn sẽ tự động tích lũy phần thưởng ETH, được chuyển định kỳ đến địa chỉ rút tiền.
+Trong khi hoạt động, bạn sẽ kiếm được phần thưởng ETH, phần thưởng này sẽ được gửi định kỳ vào địa chỉ rút tiền của bạn.
 
-Khi không muốn duy trì vai trò nút xác thực nữa, bạn có thể thoát. Thoát sẽ giúp bạn không bị buộc phải duy trì trạng thái trực tuyến và ngừng nhận phần thưởng. Số dư còn lại sau đó sẽ được rút về địa chỉ rút tiền đã chọn lúc thiết lập.
+Nếu muốn, bạn có thể thoát với tư cách là một trình xác thực, điều này giúp loại bỏ yêu cầu phải trực tuyến và ngừng mọi phần thưởng tiếp theo. Số dư còn lại của bạn sau đó sẽ được rút về địa chỉ rút tiền mà bạn chỉ định trong quá trình thiết lập.
 
-[Thông tin thêm về rút tiền đặt cọc](/staking/withdrawals/)
+[Tìm hiểu thêm về rút tiền đặt cọc](/staking/withdrawals/)
 
-## Bắt đầu với Staking Launchpad {#get-started-on-the-staking-launchpad}
+## Bắt đầu trên Staking Launchpad {#get-started-on-the-staking-launchpad}
 
-Staking Launchpad là ứng dụng mã nguồn mở hỗ trợ bạn trở thành một người đặt cọc. Công cụ này sẽ hướng dẫn bạn lựa chọn máy khách phù hợp, tạo khóa xác thực và gửi ETH vào hợp đồng đặt cọc. Có danh sách kiểm tra để đảm bảo bạn đã làm mọi thứ nhằm thiết lập trình xác thực của mình một cách an toàn.
+Staking Launchpad là một ứng dụng mã nguồn mở sẽ giúp bạn trở thành người đặt cọc. Nó sẽ hướng dẫn bạn cách chọn máy khách, tạo khóa và gửi ETH của bạn vào hợp đồng khoản tiền đặt cọc. Một danh sách kiểm tra được cung cấp để đảm bảo bạn đã nắm rõ mọi thứ nhằm thiết lập trình xác thực của mình một cách an toàn.
 
 <StakingLaunchpadWidget />
 
-## Những điều cần lưu ý về công cụ thiết lập nút và máy khách {#node-tool-considerations}
+## Những điều cần cân nhắc với các công cụ thiết lập nút và máy khách {#node-tool-considerations}
 
-Các giải pháp đặt cọc ETH một mình ngày càng đa dạng, tuy nhiên mỗi giải pháp lại đi kèm với những rủi ro và lợi ích khác nhau.
+Ngày càng có nhiều công cụ và dịch vụ giúp bạn đặt cọc ETH tại nhà, nhưng mỗi công cụ đều đi kèm với những rủi ro và lợi ích khác nhau.
 
-Các chỉ báo thuộc tính được sử dụng bên dưới để cho biết các điểm mạnh hoặc điểm yếu đáng chú ý của từng công cụ góp cổ phần được liệt kê. Hãy sử dụng phần này để tham khảo định nghĩa các thuộc tính này trong quá trình bạn lựa chọn công cụ phù hợp cho hành trình đặt cọc.
+Các chỉ báo thuộc tính được sử dụng bên dưới để báo hiệu những điểm mạnh hoặc điểm yếu đáng chú ý mà một công cụ đặt cọc được liệt kê có thể có. Hãy sử dụng phần này làm tài liệu tham khảo về cách chúng tôi xác định các thuộc tính này trong khi bạn đang chọn các công cụ để hỗ trợ cho hành trình đặt cọc của mình.
 
 <StakingConsiderations page="solo" />
 
-## Tìm hiểu về nút và bộ công cụ thiết lập máy khách {#node-and-client-tools}
+## Khám phá các công cụ thiết lập nút và máy khách {#node-and-client-tools}
 
-Có nhiều tùy chọn có sẵn để giúp bạn thiết lập. Sử dụng các chỉ báo bên trên để giúp hướng dẫn bạn qua các công cụ bên dưới.
+Có nhiều tùy chọn có sẵn để giúp bạn thiết lập. Sử dụng các chỉ báo ở trên để giúp hướng dẫn bạn qua các công cụ bên dưới.
 
 <ProductDisclaimer />
 
-### Bộ công cụ nút
+### Công cụ nút {#node-tools}
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Xin lưu ý rằng sử dụng [máy khách thiểu số](/developers/docs/nodes-and-clients/client-diversity/) sẽ giúp cải thiện tính bảo mật của mạng lưới và giảm thiểu rủi ro cho bạn. Các công cụ hỗ trợ thiết lập máy khách thiểu số được đánh dấu là <em style={{ textTransform: "uppercase" }}>"nhiều máy khách."</em>
+Xin lưu ý tầm quan trọng của việc chọn một [máy khách thiểu số](/developers/docs/nodes-and-clients/client-diversity/) vì nó cải thiện tính bảo mật của mạng lưới và hạn chế rủi ro của bạn. Các công cụ cho phép bạn thiết lập máy khách thiểu số được biểu thị là <em style={{ textTransform: "uppercase" }}>"đa máy khách (multi-client)."</em>
 
-### Trình tạo khóa
+### Trình tạo khóa {#key-generators}
 
-Có thể dùng các công cụ này cho [CLI đặt cọc](https://github.com/ethereum/staking-deposit-cli/) để hỗ trợ tạo khóa.
+Các công cụ này có thể được sử dụng như một giải pháp thay thế cho [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) để hỗ trợ việc tạo khóa.
 
 <StakingProductsCardGrid category="keyGen" />
 
-Bạn có đề xuất về một công cụ đặt cọc mà chúng tôi còn thiếu không? Hãy xem [chính sách danh sách sản phẩm](/contributing/adding-staking-products/) của chúng tôi để xem liệu nó có phù hợp hay không và gửi nó để được xem xét.
+Bạn có đề xuất về một công cụ đặt cọc mà chúng tôi đã bỏ lỡ? Hãy xem [chính sách niêm yết sản phẩm](/contributing/adding-staking-products/) của chúng tôi để xem liệu nó có phù hợp hay không và gửi nó để được xem xét.
 
-## Tìm hiểu nội dung hướng dẫn đặt cọc một mình {#staking-guides}
+## Khám phá các hướng dẫn đặt cọc tại nhà {#staking-guides}
 
 <StakingGuides />
 
-## Những câu hỏi thường gặp {#faq}
+## Các câu hỏi thường gặp {#faq}
 
-Đây là một vài trong số các câu hỏi phổ biến nhất về đặt cọc.
+Đây là một vài trong số những câu hỏi phổ biến nhất về việc đặt cọc mà bạn nên biết.
 
-<ExpandableCard title="Người xác thực là gì?">
+<ExpandableCard title="Trình xác thực là gì?">
 
-<em>validator</em> là một thực thể ảo tồn tại trên Ethereum và tham gia vào quá trình đồng thuận của giao thức Ethereum. Mỗi validator được xác định bởi số dư, khóa công khai và các thuộc tính khác. <em>validator client</em> là phần mềm hoạt động thay mặt cho validator bằng cách nắm giữ và sử dụng khóa riêng tư của nó. Một validator client có thể chứa nhiều cặp khóa, do đó kiểm soát nhiều validator.
+Một <em>trình xác thực</em> là một thực thể ảo tồn tại trên Ethereum và tham gia vào sự đồng thuận của giao thức Ethereum. Các trình xác thực được đại diện bởi số dư, khóa công khai và các thuộc tính khác. Một <em>máy khách trình xác thực</em> là phần mềm hoạt động thay mặt cho trình xác thực bằng cách nắm giữ và sử dụng khóa riêng tư của nó. Một máy khách trình xác thực duy nhất có thể chứa nhiều cặp khóa, kiểm soát nhiều trình xác thực.
 
 </ExpandableCard>
 
-<ExpandableCard title="Tôi có thể đặt cọc nhiều hơn 32 ETH không?">
-Mỗi cặp khóa liên kết với một nút xác thực yêu cầu chính xác 32 ETH để kích hoạt. Thêm ETH vào cùng một bộ khóa sẽ không làm tăng tiềm năng nhận thưởng vì mỗi nút xác thực chỉ được giới hạn ở <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">số dư hiệu quả</a> là 32 ETH. Điều này có nghĩa là đặt cọc theo các mức tăng 32 ETH, mỗi mức có bộ khóa và số dư riêng.
+<ExpandableCard title="Tôi có thể nạp nhiều hơn 32 ETH không?">
+Có, các tài khoản trình xác thực hiện đại có khả năng nắm giữ lên đến 2048 ETH. Số ETH bổ sung trên 32 sẽ được tính lãi kép theo từng bước, tăng theo các mức tăng số nguyên khi số dư thực của bạn tăng lên. Điều này được gọi là <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">số dư hiệu dụng</a> của bạn.
 
-Không đặt cọc quá 32 ETH cho một nút xác thực đơn lẻ. Hành động đó sẽ không làm tăng phần thưởng của bạn. Nếu địa chỉ rút tiền đã được thiết lập cho nút xác thực, số dư vượt quá 32 ETH sẽ tự động được rút về địa chỉ này trong <a href="/staking/withdrawals/#validator-sweeping">lần quét nút xác thực</a> tiếp theo.
+Để tăng số dư hiệu dụng của một tài khoản, và do đó tăng phần thưởng, cần phải vượt qua một bộ đệm là 0,25 ETH trên bất kỳ ngưỡng ETH tròn nào. Ví dụ: một tài khoản có số dư thực là 32,9 và số dư hiệu dụng là 32 sẽ cần kiếm thêm 0,35 ETH để đưa số dư thực của nó lên trên 33,25 trước khi kích hoạt sự gia tăng số dư hiệu dụng.
 
-Nếu góp cổ phần một mình quá phức tạp, bạn có thể cân nhắc sử dụng một nhà cung cấp <a href="/staking/saas/">góp cổ phần dưới dạng dịch vụ</a>, hoặc tham gia các <a href="/staking/pools/">nhóm góp cổ phần</a> nếu số ETH của bạn dưới 32.
+Bộ đệm này cũng ngăn không cho số dư hiệu dụng giảm xuống cho đến khi nó giảm 0,25 ETH dưới mức số dư hiệu dụng hiện tại của nó.
+
+Mỗi cặp khóa được liên kết với một trình xác thực yêu cầu ít nhất 32 ETH để được kích hoạt. Bất kỳ số dư nào trên mức này đều có thể được rút về địa chỉ rút tiền được liên kết bất kỳ lúc nào thông qua một giao dịch được ký bởi địa chỉ này. Bất kỳ khoản tiền nào vượt quá số dư hiệu dụng tối đa sẽ tự động được rút theo định kỳ.
+
+Nếu việc đặt cọc tại nhà có vẻ quá khắt khe đối với bạn, hãy cân nhắc sử dụng nhà cung cấp [dịch vụ đặt cọc (staking-as-a-service)](/staking/saas/), hoặc nếu bạn đang làm việc với ít hơn 32 ETH, hãy xem qua các [nhóm đặt cọc](/staking/pools/).
 </ExpandableCard>
 
-<ExpandableCard title="Tôi có bị cắt giảm không nếu tôi ngoại tuyến? (tóm lại là: Không.)">
-Ngoại tuyến khi mạng lưới đang hoàn tất một cách phù hợp sẽ KHÔNG dẫn đến việc bị cắt giảm. Tuy nhiên, nếu nút xác thực của bạn không hoạt động để xác nhận cho một tham số epoch nhất định (mỗi epoch kéo dài 6,4 phút), bạn sẽ phải chịu một <em>khoản phạt nhỏ vì không hoạt động</em>, nhưng tình huống này rất khác với <em>cắt giảm</em>. Mức phạt này sẽ hơi thấp hơn phần thưởng bạn có thể nhận được nếu có nút xác thực để chứng thực, và bạn có thể bù lỗ bằng khoảng thời gian trực tuyến tương tự.
+<ExpandableCard title="Tôi có bị phạt cắt giảm nếu ngoại tuyến không? (tóm lại: Không.)">
+Việc ngoại tuyến khi mạng lưới đang chung cuộc đúng cách sẽ KHÔNG dẫn đến việc bị phạt cắt giảm. Các <em>hình phạt do không hoạt động</em> nhỏ sẽ phát sinh nếu trình xác thực của bạn không có sẵn để chứng thực cho một kỷ nguyên nhất định (mỗi kỷ nguyên dài 6,4 phút), nhưng điều này rất khác với <em>phạt cắt giảm</em>. Những hình phạt này thấp hơn một chút so với phần thưởng mà bạn có thể kiếm được nếu trình xác thực có sẵn để chứng thực và những tổn thất có thể được kiếm lại với khoảng thời gian trực tuyến trở lại tương đương.
 
-Lưu ý rằng hình phạt vì ngoại tuyến sẽ phụ thuộc vào số lượng nút xác thực ngoại tuyến cùng lúc. Trong trường hợp phần lớn mạng lưới ngoại tuyến cùng một lúc, hình phạt cho mỗi nút xác thực sẽ nặng hơn so với trường hợp chỉ có một nút xác thực không hoạt động.
+Lưu ý rằng các hình phạt do không hoạt động tỷ lệ thuận với số lượng trình xác thực đang ngoại tuyến cùng lúc. Trong trường hợp một phần lớn mạng lưới đều ngoại tuyến cùng một lúc, hình phạt cho mỗi trình xác thực này sẽ lớn hơn so với khi chỉ có một trình xác thực duy nhất không có sẵn.
 
-Trong trường hợp nghiêm trọng, nếu hơn 1/3 số nút xác thực ngoại tuyến khiến mạng lưới ngừng quy trình hoàn tất, những người dùng này sẽ phải chịu <em>rò rỉ do không hoạt động theo cấp số nhân</em>, trong đó ETH bị rút theo cấp số nhân các tài khoản nút xác thực ngoại tuyến. Điều này giúp mạng lưới tự hồi phục bằng cách giảm số ETH của nút xác thực ngoại tuyến cho đến khi số dư của chúng còn lại 16 ETH, lúc đó chúng sẽ tự động bị loại khỏi nhóm của nút xác thực. Cuối cùng, số nút xác thực trực tuyến còn lại sẽ chiếm lại tỷ lệ hơn 2/3 mạng lưới, đủ điều kiện về đa số để một lần nữa hoàn tất chuỗi.
+Trong những trường hợp cực đoan, nếu mạng lưới ngừng chung cuộc do hơn một phần ba số trình xác thực bị ngoại tuyến, những người dùng này sẽ phải chịu cái gọi là <em>rò rỉ do không hoạt động theo cấp số nhân (quadratic inactivity leak)</em>, tức là sự sụt giảm ETH theo cấp số nhân từ các tài khoản trình xác thực ngoại tuyến. Điều này cho phép mạng lưới cuối cùng tự phục hồi bằng cách đốt ETH của các trình xác thực không hoạt động cho đến khi số dư của họ đạt 16 ETH, tại thời điểm đó họ sẽ tự động bị loại khỏi nhóm trình xác thực. Các trình xác thực trực tuyến còn lại cuối cùng sẽ lại chiếm hơn 2/3 mạng lưới, thỏa mãn đa số tuyệt đối cần thiết để một lần nữa chung cuộc chuỗi.
 </ExpandableCard>
 
-<ExpandableCard title="Làm sao để tôi chắc chắn tôi không bị cắt giảm?">
-Tóm lại, không thể hoàn toàn đảm bảo điều này, nhưng nếu bạn hành động thiện chí, chạy máy khách thiểu số và chỉ giữ khóa ký trên một máy tại một thời điểm, thì rủi ro bị cắt giảm gần như bằng 0.
+<ExpandableCard title="Làm cách nào để đảm bảo tôi không bị phạt cắt giảm?">
+Tóm lại, điều này không bao giờ có thể được đảm bảo hoàn toàn, nhưng nếu bạn hành động một cách thiện chí, chạy một máy khách thiểu số và chỉ giữ các khóa ký của bạn trên một máy tại một thời điểm, rủi ro bị phạt cắt giảm gần như bằng không.
 
-Chỉ có một vài trường hợp cụ thể có thể khiến nút xác thực bị cắt giảm và loại khỏi mạng lưới. Hiện tại, các trường hợp cắt giảm xảy ra đều là do thiết lập phần cứng dự phòng, trong đó khóa ký được lưu trữ trên hai máy riêng biệt cùng một lúc. Điều này vô tình có thể dẫn đến hiện tượng <em>phiếu đôi</em> từ các khóa của bạn, đây là hành vi vi phạm có thể dẫn đến bị cắt giảm.
+Chỉ có một vài cách cụ thể có thể dẫn đến việc một trình xác thực bị phạt cắt giảm và bị loại khỏi mạng lưới. Tại thời điểm viết bài, các vụ phạt cắt giảm đã xảy ra hoàn toàn là sản phẩm của các thiết lập phần cứng dự phòng, nơi các khóa ký được lưu trữ trên hai máy riêng biệt cùng một lúc. Điều này có thể vô tình dẫn đến việc <em>bỏ phiếu kép</em> từ các khóa của bạn, đây là một hành vi vi phạm có thể bị phạt cắt giảm.
 
-Chạy máy khách đa số (bất kỳ máy khách nào được sử dụng bởi hơn 2/3 mạng lưới) cũng có nguy cơ tiềm ẩn bị cắt trong trường hợp máy khách này có lỗi dẫn đến tình trạng phân nhánh chuỗi (chain fork). Điều này có thể dẫn đến một nhánh lỗi được hoàn tất. Để quay lại chuỗi dự định, cần phải gửi một <em>phiếu bao quanh</em> bằng cách cố gắng hoàn tác một khối đã được hoàn tất. Đây cũng là hành vi vi phạm có thể bị cắt giảm và có thể tránh được bằng cách chạy máy khách thiểu số.
+Việc chạy một máy khách đa số tuyệt đối (bất kỳ máy khách nào được sử dụng bởi hơn 2/3 mạng lưới) cũng tiềm ẩn rủi ro bị phạt cắt giảm trong trường hợp máy khách này có lỗi dẫn đến phân nhánh chuỗi. Điều này có thể dẫn đến một phân nhánh bị lỗi được chung cuộc. Để sửa lại thành chuỗi dự kiến sẽ yêu cầu gửi một <em>bỏ phiếu bao quanh (surround vote)</em> bằng cách cố gắng hoàn tác một khối đã chung cuộc. Đây cũng là một hành vi vi phạm có thể bị phạt cắt giảm và có thể tránh được một cách đơn giản bằng cách chạy một máy khách thiểu số để thay thế.
 
-Các lỗi tương đương trong <em>máy khách thiểu số sẽ không bao giờ được hoàn tất</em> và do đó sẽ không bao giờ dẫn đến phiếu bao quanh, mà chỉ dẫn đến hình phạt vì không hoạt động chứ <em>không phải hình phạt bị cắt giảm</em>.
+Các lỗi tương đương trong một <em>máy khách thiểu số sẽ không bao giờ chung cuộc</em> và do đó sẽ không bao giờ dẫn đến bỏ phiếu bao quanh, và sẽ chỉ dẫn đến các hình phạt do không hoạt động, <em>chứ không phải phạt cắt giảm</em>.
 
 <ul>
-  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Tìm hiểu thêm về tầm quan trọng của chạy máy khách thiểu số.</a></li>
-  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Tìm hiểu thêm về biện pháp ngăn chặn cắt giảm</a></li>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Tìm hiểu thêm về tầm quan trọng của việc chạy một máy khách thiểu số.</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Tìm hiểu thêm về phòng chống phạt cắt giảm</a></li>
 </ul>
 </ExpandableCard>
 
 <ExpandableCard title="Máy khách nào là tốt nhất?">
-Mỗi máy khách được phát triển bởi các nhóm khác nhau, sử dụng các ngôn ngữ lập trình đa dạng, do đó hiệu suất và giao diện người dùng có thể có chút khác biệt. Tuy nhiên, không có máy khách nào được coi là "tốt nhất". Tất cả các máy khách đang hoạt động đều là những phần mềm tuyệt vời, thực hiện các chức năng cốt lõi giống nhau để đồng bộ hóa và tương tác với chuỗi khối.
+Các máy khách riêng lẻ có thể khác nhau một chút về hiệu suất và giao diện người dùng, vì mỗi máy khách được phát triển bởi các nhóm khác nhau sử dụng nhiều ngôn ngữ lập trình khác nhau. Mặc dù vậy, không có máy khách nào là "tốt nhất". Tất cả các máy khách sản xuất đều là những phần mềm xuất sắc, tất cả đều thực hiện các chức năng cốt lõi giống nhau để đồng bộ hóa và tương tác với chuỗi khối.
 
-Mặc dù tất cả các máy khách hoạt động đều cung cấp các tính năng cơ bản giống nhau, nhưng điều quan trọng là bạn phải chọn một <strong>máy khách thiểu số</strong>, nghĩa là bất kỳ máy khách nào KHÔNG được sử dụng bởi phần lớn nút xác thực trên mạng lưới. Nghe có vẻ mâu thuẫn, nhưng chạy máy khách đa số hoặc siêu đa số sẽ khiến bạn có nguy cơ bị cắt giảm cao hơn trong trường hợp máy khách đó có lỗi. Ngược lại, chạy máy khách thiểu số sẽ giảm thiểu đáng kể những rủi ro này.
+Vì tất cả các máy khách sản xuất đều cung cấp chức năng cơ bản giống nhau, nên điều thực sự rất quan trọng là bạn phải chọn một <strong>máy khách thiểu số</strong>, nghĩa là bất kỳ máy khách nào KHÔNG được sử dụng bởi đa số các trình xác thực trên mạng lưới hiện tại. Điều này nghe có vẻ trái ngược, nhưng việc chạy một máy khách đa số hoặc đa số tuyệt đối khiến bạn có nguy cơ bị phạt cắt giảm cao hơn trong trường hợp có lỗi trong máy khách đó. Việc chạy một máy khách thiểu số sẽ hạn chế đáng kể những rủi ro này.
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Đọc thêm về tầm quan trọng của đa dạng máy khách</a>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Tìm hiểu thêm về lý do tại sao sự đa dạng máy khách lại rất quan trọng</a>
 </ExpandableCard>
 
-<ExpandableCard title="Tôi có thể chỉ sử dụng VPS (máy chủ ảo riêng) không?">
-Mặc dù máy chủ ảo riêng (VPS) có thể thay thế phần cứng tại nhà, nhưng quyền truy cập vật lý và vị trí của máy khách nút xác thực của bạn vẫn là <em>vấn đề quan trọng</em>. Các giải pháp đám mây tập trung như Amazon Web Services hoặc Digital Ocean rất tiện lợi khi không cần phải mua và vận hành phần cứng, nhưng đổi lại sẽ làm tăng tính tập trung của mạng lưới.
+<ExpandableCard title="Tôi có thể chỉ sử dụng VPS (máy chủ riêng ảo) không?">
+Mặc dù máy chủ riêng ảo (VPS) có thể được sử dụng để thay thế cho phần cứng tại nhà, nhưng quyền truy cập vật lý và vị trí của máy khách trình xác thực của bạn <em>thực sự quan trọng</em>. Các giải pháp đám mây tập trung như Amazon Web Services hoặc Digital Ocean mang lại sự tiện lợi khi không phải mua và vận hành phần cứng, nhưng phải trả giá bằng việc tập trung hóa mạng lưới.
 
-Số lượng máy khách nút xác thực chạy trên cùng một giải pháp lưu trữ đám mây tập trung càng nhiều thì người dùng càng gặp rủi ro. Bất kỳ sự kiện nào khiến các nhà cung cấp này ngoại tuyến, do tấn công, yêu cầu pháp lý hoặc chỉ đơn giản là mất điện/mất internet, đều dẫn đến việc tất cả các máy khách nút xác thực phụ thuộc vào máy chủ này cũng ngoại tuyến cùng một lúc.
+Càng nhiều máy khách trình xác thực chạy trên một giải pháp lưu trữ đám mây tập trung duy nhất, thì nó càng trở nên nguy hiểm hơn đối với những người dùng này. Bất kỳ sự kiện nào khiến các nhà cung cấp này ngoại tuyến, cho dù là do một cuộc tấn công, yêu cầu pháp lý hay chỉ là mất điện/internet, đều sẽ dẫn đến việc mọi máy khách trình xác thực dựa vào máy chủ này đều ngoại tuyến cùng một lúc.
 
-Hình phạt vì ngoại tuyến phụ thuộc vào số lượng nút xác thực khác đang ngoại tuyến cùng một lúc. Sử dụng VPS làm tăng đáng kể nguy cơ làm cho hình phạt vì ngoại tuyến trở nên nghiêm trọng hơn, đồng thời tăng nguy cơ rò rỉ theo cấp số nhân hoặc cắt giảm nếu sự cố ngừng chạy đủ lớn. Để giảm thiểu rủi ro cho chính bạn và cho cả mạng lưới, người dùng nên mua và vận hành phần cứng riêng.
+Các hình phạt ngoại tuyến tỷ lệ thuận với số lượng những người khác cũng đang ngoại tuyến cùng lúc. Việc sử dụng VPS làm tăng đáng kể rủi ro các hình phạt ngoại tuyến sẽ nghiêm trọng hơn và làm tăng rủi ro rò rỉ theo cấp số nhân hoặc phạt cắt giảm trong trường hợp sự cố ngừng hoạt động đủ lớn. Để giảm thiểu rủi ro cho chính bạn và rủi ro cho mạng lưới, người dùng được đặc biệt khuyến khích mua và vận hành phần cứng của riêng họ.
 </ExpandableCard>
 
-<ExpandableCard title="Làm sao để tôi mở khóa các phần thưởng hoặc nhận lại ETH?">
+<ExpandableCard title="Làm cách nào để mở khóa phần thưởng hoặc lấy lại ETH của tôi?">
 
-Bất kỳ hình thức rút tiền nào từ Beacon Chain cũng yêu cầu thiết lập thông tin xác thực rút tiền.
+Bất kỳ hình thức rút tiền nào từ Chuỗi Beacon đều yêu cầu phải thiết lập thông tin xác thực rút tiền.
 
-Người đặt cọc mới sẽ thực hiện bước này tại thời điểm tạo khóa và đặt cọc. Người đặt cọc hiện tại chưa thực hiện thiết lập có thể nâng cấp khóa để hỗ trợ chức năng này.
+Những người đặt cọc mới thiết lập điều này tại thời điểm tạo khóa và gửi tiền. Những người đặt cọc hiện tại chưa thiết lập điều này có thể nâng cấp các khóa của họ để hỗ trợ chức năng này.
 
-Sau khi thiết lập thông tin xác thực rút tiền, các khoản thanh toán phần thưởng (ETH tích lũy vượt quá 32 ban đầu) sẽ được phân phối định kỳ tự động đến địa chỉ rút tiền.
+Sau khi thông tin xác thực rút tiền được thiết lập, các khoản thanh toán phần thưởng (ETH tích lũy vượt quá 32 ETH ban đầu) sẽ tự động được phân phối định kỳ đến địa chỉ rút tiền.
 
-Để mở khóa và nhận lại toàn bộ số tiền của bạn, bạn cũng phải hoàn tất quá trình thoát nút xác thực.
+Để mở khóa và nhận lại toàn bộ số dư của mình, bạn cũng phải hoàn tất quá trình thoát trình xác thực của mình.
 
-<ButtonLink href="/staking/withdrawals/">Thông tin thêm về rút tiền đặt cọc</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Tìm hiểu thêm về rút tiền đặt cọc</ButtonLink>
 </ExpandableCard>
 
 ## Đọc thêm {#further-reading}
 
 - [Thư mục đặt cọc Ethereum](https://www.staking.directory/) - _Eridian và Spacesider_
-- [Vấn đề về đa dạng máy khách của Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
-- [Hỗ trợ đa dạng máy khách](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
-- [Đa dạng máy khách trên lớp đồng thuận của Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
-- [Cách: mua phần cứng nút xác thực của Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Hướng Dẫn Từng Bước: Cách tham gia Testnet Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
-- [Các mẹo ngăn bị cắt giảm Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+- [Vấn đề đa dạng máy khách của Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
+- [Hỗ trợ sự đa dạng máy khách](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
+- [Sự đa dạng máy khách trên lớp đồng thuận của Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
+- [Cách thức: Mua sắm phần cứng trình xác thực Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
+- [Mẹo phòng chống phạt cắt giảm Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

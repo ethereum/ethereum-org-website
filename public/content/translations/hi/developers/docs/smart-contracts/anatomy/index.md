@@ -1,111 +1,111 @@
 ---
-title: स्मार्ट अनुबंधों की संरचना
-description: एक स्मार्ट संपर्क की संरचना में गहराई से देखें – फंक्शन, डेटा और वेरिएबल्स।
+title: "स्मार्ट अनुबंधों की संरचना"
+description: "स्मार्ट अनुबंध की संरचना पर एक विस्तृत नज़र – फ़ंक्शन, डेटा और चर (variables)।"
 lang: hi
 ---
 
-एक स्मार्ट अनुबंध एक प्रोग्राम है जो एथेरियम पर एक पते पर चलता है। वे डेटा और फंक्शंस से बने होते हैं जो लेनदेन प्राप्त करने पर निष्पादित हो सकते हैं। स्मार्ट अनुबंध क्या होता है, इसका अवलोकन यहां दिया गया है।
+स्मार्ट अनुबंध एक प्रोग्राम है जो इथेरियम पर एक पते (address) पर चलता है। वे डेटा और फ़ंक्शन से बने होते हैं जो लेन-देन प्राप्त होने पर निष्पादित (execute) हो सकते हैं। यहाँ स्मार्ट अनुबंध के घटकों का अवलोकन दिया गया है।
 
-## आवश्यक शर्तें {#prerequisites}
+## पूर्वापेक्षाएँ {#prerequisites}
 
-सुनिश्चित करें कि आपने पहले [स्मार्ट अनुबंध](/developers/docs/smart-contracts/) के बारे में पढ़ा है। यह दस्तावेज़ मानता है कि आप JavaScript या Python जैसी प्रोग्रामिंग भाषाओं से पहले से ही परिचित हैं।
+सुनिश्चित करें कि आपने पहले [स्मार्ट अनुबंधों](/developers/docs/smart-contracts/) के बारे में पढ़ लिया है। यह दस्तावेज़ मानकर चलता है कि आप पहले से ही JavaScript या Python जैसी प्रोग्रामिंग भाषाओं से परिचित हैं।
 
 ## डेटा {#data}
 
-किसी भी अनुबंध डेटा को किसी स्थान पर असाइन किया जाना चाहिए: या तो `storage` या `memory` को। स्मार्ट अनुबंध में भंडारण को संशोधित करना महंगा है, इसलिए आपको यह विचार करने की आवश्यकता है कि आपका डेटा कहां रहना चाहिए।
+किसी भी अनुबंध डेटा को एक स्थान पर असाइन किया जाना चाहिए: या तो `storage` या `memory` में। स्मार्ट अनुबंध में स्टोरेज को संशोधित करना महंगा होता है, इसलिए आपको यह विचार करने की आवश्यकता है कि आपका डेटा कहाँ रहना चाहिए।
 
 ### स्टोरेज {#storage}
 
-लगातार डेटा को भंडारण के रूप में संदर्भित किया जाता है और इसे स्टेट वेरिएबल्स द्वारा दर्शाया जाता है। ये मान ब्लॉकचेन पर स्थायी रूप से संग्रहित हो जाते हैं। आपको प्रकार घोषित करने की आवश्यकता है ताकि अनुबंध इस बात पर नज़र रख सके कि संकलित होने पर ब्लॉकचेन पर उसे कितने भंडारण की आवश्यकता है।
+स्थायी डेटा को स्टोरेज कहा जाता है और इसे स्थिति (state) चर (variables) द्वारा दर्शाया जाता है। ये मान ब्लॉकचेन पर स्थायी रूप से संग्रहीत हो जाते हैं। आपको प्रकार (type) घोषित करने की आवश्यकता है ताकि अनुबंध संकलित (compile) होने पर यह ट्रैक रख सके कि उसे ब्लॉकचेन पर कितने स्टोरेज की आवश्यकता है।
 
 ```solidity
-// Solidity example
+// Solidity उदाहरण
 contract SimpleStorage {
-    uint storedData; // State variable
+    uint storedData; // स्थिति चर
     // ...
 }
 ```
 
 ```python
-# Vyper example
+# Vyper उदाहरण
 storedData: int128
 ```
 
-यदि आपने पहले से ही ऑब्जेक्ट-ओरिएंटेड भाषाओं को प्रोग्राम किया है, तो आप संभवतः अधिकांश प्रकारों से परिचित होंगे। हालाँकि, यदि आप एथेरियम विकास में नए हैं, तो `address` आपके लिए नया होना चाहिए।
+यदि आपने पहले से ही ऑब्जेक्ट-ओरिएंटेड भाषाओं में प्रोग्रामिंग की है, तो आप संभवतः अधिकांश प्रकारों से परिचित होंगे। हालाँकि, यदि आप [इथेरियम](/) विकास में नए हैं, तो `address` आपके लिए नया होना चाहिए।
 
-एक `address` प्रकार एक एथेरियम पता रख सकता है जो 20 बाइट्स या 160 बिट्स के बराबर होता है। यह हेक्साडेसिमल नोटेशन में अग्रणी 0x के साथ लौटता है।
+एक `address` प्रकार एक इथेरियम पता रख सकता है जो 20 बाइट्स या 160 बिट्स के बराबर होता है। यह 0x से शुरू होने वाले हेक्साडेसिमल नोटेशन में वापस आता है।
 
 अन्य प्रकारों में शामिल हैं:
 
-- बूलियन
-- पूर्णांक
-- निश्चित बिंदु संख्याएँ
-- निश्चित आकार की बाइट सरणियाँ
-- गतिशील आकार की बाइट सरणियाँ
-- तर्कसंगत और पूर्णांक अक्षर
-- स्ट्रिंग अक्षर
-- हेक्साडेसिमल अक्षर
-- एनम्स
+- बूलियन (boolean)
+- पूर्णांक (integer)
+- फिक्स्ड पॉइंट नंबर
+- फिक्स्ड-साइज़ बाइट एरे
+- डायनेमिकली साइज़्ड बाइट एरे
+- रैशनल और इंटीजर लिटरल्स
+- स्ट्रिंग लिटरल्स
+- हेक्साडेसिमल लिटरल्स
+- एनम्स (enums)
 
-अधिक स्पष्टीकरण के लिए, दस्तावेज़ों पर एक नज़र डालें:
+अधिक स्पष्टीकरण के लिए, दस्तावेज़ देखें:
 
-- [Vyper का प्रकार देखें](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [Solidity का प्रकार देखें](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [Vyper प्रकार देखें](https://docs.vyperlang.org/en/stable/types.html#value-types)
+- [Solidity प्रकार देखें](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### मेमोरी {#memory}
 
-मान जो केवल अनुबंध फंक्शन के निष्पादन के जीवनकाल के लिए संग्रहित होते हैं, उन्हें मेमोरी वेरिएबल्स कहा जाता है। चूंकि ये ब्लॉकचेन पर स्थायी रूप से संग्रहित नहीं होते हैं, इसलिए इनका उपयोग करना बहुत सस्ता होता है।
+वे मान जो केवल अनुबंध फ़ंक्शन के निष्पादन के जीवनकाल के लिए संग्रहीत किए जाते हैं, मेमोरी चर (memory variables) कहलाते हैं। चूँकि ये ब्लॉकचेन पर स्थायी रूप से संग्रहीत नहीं होते हैं, इसलिए इनका उपयोग करना बहुत सस्ता होता है।
 
-EVM डेटा (भंडारण, मेमोरी और स्टैक) को [Solidity डॉक्स](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack) में कैसे स्टोर करता है, इसके बारे में और जानें।
+EVM डेटा (स्टोरेज, मेमोरी और स्टैक) को कैसे संग्रहीत करता है, इसके बारे में [Solidity दस्तावेज़ों](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) में अधिक जानें।
 
-### परिवेश वेरिएबल {#environment-variables}
+### पर्यावरण चर (Environment variables) {#environment-variables}
 
-आपके अनुबंध पर आपके द्वारा परिभाषित वेरिएबल्स के अलावा, कुछ विशेष वैश्विक वेरिएबल्स हैं। वे मुख्य रूप से ब्लॉकचेन या वर्तमान लेनदेन के बारे में जानकारी प्रदान करने के लिए उपयोग किए जाते हैं।
+आपके द्वारा अपने अनुबंध पर परिभाषित किए गए चरों के अलावा, कुछ विशेष वैश्विक चर (global variables) होते हैं। इनका उपयोग मुख्य रूप से ब्लॉकचेन या वर्तमान लेन-देन के बारे में जानकारी प्रदान करने के लिए किया जाता है।
 
-उदाहरण
+उदाहरण:
 
-| **प्रॉप**         | **स्टेट वेरिएबल** | **वर्णन**                     |
-| ----------------- | ----------------- | ----------------------------- |
-| `block.timestamp` | uint256           | वर्तमान ब्लॉक युग टाइमस्टैम्प |
-| `msg.sender`      | पता               | संदेश का प्रेषक (वर्तमान कॉल) |
+| **प्रॉप (Prop)** | **स्थिति चर (State variable)** | **विवरण** |
+| ----------------- | ------------------ | ------------------------------------ |
+| `block.timestamp` | uint256            | वर्तमान ब्लॉक एपॉक टाइमस्टैम्प        |
+| `msg.sender`      | address            | संदेश भेजने वाला (वर्तमान कॉल) |
 
-## फंक्शंस {#functions}
+## फ़ंक्शन {#functions}
 
-सबसे सरल शब्दों में, फंक्शंस आने वाले लेनदेन के जवाब में जानकारी प्राप्त कर सकते हैं या जानकारी सेट कर सकते हैं।
+सबसे सरल शब्दों में, फ़ंक्शन आने वाले लेन-देन के जवाब में जानकारी प्राप्त कर सकते हैं या जानकारी सेट कर सकते हैं।
 
-फंक्शन कॉल दो प्रकार के होते हैं:
+फ़ंक्शन कॉल दो प्रकार के होते हैं:
 
 - `internal` – ये EVM कॉल नहीं बनाते हैं
-  - आंतरिक फंक्शंस और स्टेट वेरिएबल्स को केवल आंतरिक रूप से एक्सेस किया जा सकता है (यानी वर्तमान अनुबंध या इससे प्राप्त होने वाले अनुबंधों के भीतर)
-- `external` – ये एक EVM कॉल बनाते हैं
-  - बाहरी फंक्शंस अनुबंध इंटरफ़ेस का हिस्सा हैं, जिसका अर्थ है कि उन्हें अन्य अनुबंधों से और लेनदेन के माध्यम से कॉल किया जा सकता है। एक बाहरी फंक्शन `f` को आंतरिक रूप से कॉल नहीं किया जा सकता है (यानी `f()` काम नहीं करता है, लेकिन `this.f()` काम करता है)।
+  - आंतरिक फ़ंक्शन और स्थिति चर केवल आंतरिक रूप से एक्सेस किए जा सकते हैं (यानी, वर्तमान अनुबंध या इससे प्राप्त अनुबंधों के भीतर से)
+- `external` – ये EVM कॉल बनाते हैं
+  - बाहरी फ़ंक्शन अनुबंध इंटरफ़ेस का हिस्सा होते हैं, जिसका अर्थ है कि उन्हें अन्य अनुबंधों से और लेन-देन के माध्यम से कॉल किया जा सकता है। एक बाहरी फ़ंक्शन `f` को आंतरिक रूप से कॉल नहीं किया जा सकता है (यानी, `f()` काम नहीं करता है, लेकिन `this.f()` काम करता है)।
 
 वे `public` या `private` भी हो सकते हैं
 
-- `public` फंक्शंस को आंतरिक रूप से अनुबंध के भीतर से या बाहरी रूप से संदेशों के माध्यम से कॉल किया जा सकता है
-- `private` फंक्शंस केवल उस अनुबंध के लिए दिखाई देते हैं जिसमें उन्हें परिभाषित किया गया है और व्युत्पन्न अनुबंधों में नहीं
+- `public` फ़ंक्शन को अनुबंध के भीतर से आंतरिक रूप से या संदेशों के माध्यम से बाहरी रूप से कॉल किया जा सकता है
+- `private` फ़ंक्शन केवल उस अनुबंध के लिए दृश्यमान होते हैं जिसमें वे परिभाषित होते हैं और प्राप्त (derived) अनुबंधों में नहीं
 
-दोनों फंक्शंस और स्टेट वेरिएबल्स को सार्वजनिक या निजी बनाया जा सकता है
+फ़ंक्शन और स्थिति चर दोनों को सार्वजनिक (public) या निजी (private) बनाया जा सकता है
 
-अनुबंध पर एक स्टेट वेरिएबल्स को अपडेट करने के लिए एक फंक्शन यहां है:
+यहाँ अनुबंध पर स्थिति चर को अपडेट करने के लिए एक फ़ंक्शन दिया गया है:
 
 ```solidity
-// Solidity example
+// Solidity उदाहरण
 function update_name(string value) public {
     dapp_name = value;
 }
 ```
 
-- प्रकार `string` का पैरामीटर `value` फंक्शन में पास किया जाता है: `update_name`
+- `string` प्रकार का पैरामीटर `value` फ़ंक्शन में पास किया जाता है: `update_name`
 - इसे `public` घोषित किया गया है, जिसका अर्थ है कि कोई भी इसे एक्सेस कर सकता है
-- यह घोषित `view` नहीं है, इसलिए यह अनुबंध की स्थिति को संशोधित कर सकता है
+- इसे `view` घोषित नहीं किया गया है, इसलिए यह अनुबंध की स्थिति को संशोधित कर सकता है
 
-### फंक्शंस देखें {#view-functions}
+### व्यू (View) फ़ंक्शन {#view-functions}
 
-ये फंक्शंस अनुबंध के डेटा की स्थिति को संशोधित नहीं करने का वादा करते हैं। सामान्य उदाहरण "गेटर" फंक्शंस हैं – उदाहरण के लिए आप इसका उपयोग यूज़र की शेष राशि प्राप्त करने के लिए कर सकते हैं।
+ये फ़ंक्शन अनुबंध के डेटा की स्थिति को संशोधित न करने का वादा करते हैं। सामान्य उदाहरण "गेटर (getter)" फ़ंक्शन हैं - उदाहरण के लिए आप इसका उपयोग उपयोगकर्ता का बैलेंस प्राप्त करने के लिए कर सकते हैं।
 
 ```solidity
-// Solidity example
+// Solidity उदाहरण
 function balanceOf(address _owner) public view returns (uint256 _balance) {
     return ownerPizzaCount[_owner];
 }
@@ -120,36 +120,36 @@ def readName() -> string:
   return dappName
 ```
 
-संशोधित स्थिति क्या मानी जाती है:
+स्थिति को संशोधित करना क्या माना जाता है:
 
-1. स्टेट वेरिएबल्स के लिए लेखन।
-2. [उत्सर्जक इवेंट्स](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events)।
-3. [अन्य अनुबंध बनाना](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts)।
-4. `आत्मविनाश` का उपयोग करना।
+1. स्थिति चरों में लिखना।
+2. [घटनाएँ उत्सर्जित (emit) करना](https://docs.soliditylang.org/en/v0.7.0/contracts.html#events)।
+3. [अन्य अनुबंध बनाना](https://docs.soliditylang.org/en/v0.7.0/control-structures.html#creating-contracts)।
+4. `selfdestruct` का उपयोग करना।
 5. कॉल के माध्यम से ईथर भेजना।
-6. किसी भी फंक्शन को कॉल करना जो `view` या `pure` चिह्नित नहीं है।
-7. निम्न-स्तरीय कॉल का उपयोग करना।
-8. इनलाइन असेंबली का उपयोग करना जिसमें कुछ ऑप्कोड होते हैं।
+6. किसी भी ऐसे फ़ंक्शन को कॉल करना जिसे `view` या `pure` के रूप में चिह्नित नहीं किया गया है।
+7. लो-लेवल कॉल का उपयोग करना।
+8. इनलाइन असेंबली का उपयोग करना जिसमें कुछ ओपकोड (opcodes) होते हैं।
 
-### कन्स्ट्रक्टर फंक्शंस {#constructor-functions}
+### कंस्ट्रक्टर फ़ंक्शन {#constructor-functions}
 
-`constructor` फंक्शंस केवल एक बार निष्पादित किए जाते हैं जब अनुबंध पहली बार परिनियोजित किया जाता है। कई वर्ग-आधारित प्रोग्रामिंग भाषाओं में `constructor` की तरह, ये फंक्शंस अक्सर स्टेट वेरिएबल्स को उनके निर्दिष्ट मानों में प्रारंभ करते हैं।
+`constructor` फ़ंक्शन केवल एक बार निष्पादित होते हैं जब अनुबंध पहली बार तैनात किया जाता है। कई क्लास-आधारित प्रोग्रामिंग भाषाओं में `constructor` की तरह, ये फ़ंक्शन अक्सर स्थिति चरों को उनके निर्दिष्ट मानों पर इनिशियलाइज़ करते हैं।
 
 ```solidity
-// Solidity example
-// Initializes the contract's data, setting the `owner`
-// to the address of the contract creator.
+// Solidity उदाहरण
+// अनुबंध के डेटा को प्रारंभ करता है, `owner` को सेट करता है
+// अनुबंध निर्माता के पते पर।
 constructor() public {
-    // All smart contracts rely on external transactions to trigger its functions.
-    // `msg` is a global variable that includes relevant data on the given transaction,
-    // such as the address of the sender and the ETH value included in the transaction.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+    // सभी स्मार्ट अनुबंध अपने कार्यों को ट्रिगर करने के लिए बाहरी लेन-देन पर निर्भर करते हैं।
+    // `msg` एक वैश्विक चर है जिसमें दिए गए लेन-देन पर प्रासंगिक डेटा शामिल है,
+    // जैसे कि प्रेषक का पता और लेन-देन में शामिल ETH मूल्य।
+    // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
     owner = msg.sender;
 }
 ```
 
 ```python
-# Vyper example
+# Vyper उदाहरण
 
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
@@ -158,88 +158,88 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### बिल्ट-इन फंक्शंस {#built-in-functions}
+### अंतर्निहित (Built-in) फ़ंक्शन {#built-in-functions}
 
-आपके अनुबंध पर आपके द्वारा परिभाषित वेरिएबल्स और फंक्शंस के अलावा, कुछ विशेष बिल्ट-इन फंक्शंस हैं। सबसे स्पष्ट उदाहरण है:
+आपके द्वारा अपने अनुबंध पर परिभाषित किए गए चरों और फ़ंक्शन के अलावा, कुछ विशेष अंतर्निहित फ़ंक्शन होते हैं। सबसे स्पष्ट उदाहरण है:
 
 - `address.send()` – Solidity
 - `send(address)` – Vyper
 
-ये अनुबंधों को ETH को अन्य खातों में भेजने की अनुमति देते हैं।
+ये अनुबंधों को अन्य खातों में ETH भेजने की अनुमति देते हैं।
 
-## लेखन फंक्शंस {#writing-functions}
+## फ़ंक्शन लिखना {#writing-functions}
 
-आपका फंक्शन निम्न आवश्यक करता है:
+आपके फ़ंक्शन को आवश्यकता है:
 
-- पैरामीटर वेरिएबल और प्रकार (यदि यह पैरामीटर स्वीकार करता है)
-- internal/external की घोषणा
-- pure/view/payable की घोषणा
-- रिटर्न प्रकार (यदि यह मान लौटाता है)
+- पैरामीटर चर और प्रकार (यदि यह पैरामीटर स्वीकार करता है)
+- आंतरिक/बाहरी (internal/external) की घोषणा
+- शुद्ध/दृश्य/देय (pure/view/payable) की घोषणा
+- रिटर्न प्रकार (यदि यह कोई मान लौटाता है)
 
 ```solidity
 pragma solidity >=0.4.0 <=0.6.0;
 
 contract ExampleDapp {
-    string dapp_name; // state variable
+    string dapp_name; // स्थिति चर
 
-    // Called when the contract is deployed and initializes the value
+    // अनुबंध तैनात होने पर कॉल किया जाता है और मूल्य को प्रारंभ करता है
     constructor() public {
         dapp_name = "My Example dapp";
     }
 
-    // Get Function
+    // Get फ़ंक्शन
     function read_name() public view returns(string) {
         return dapp_name;
     }
 
-    // Set Function
+    // Set फ़ंक्शन
     function update_name(string value) public {
         dapp_name = value;
     }
 }
 ```
 
-एक पूर्ण अनुबंध कुछ इस तरह दिख सकता है। यहां `constructor` फंक्शन `dapp_name` वेरिएबल के लिए प्रारंभिक मान प्रदान करता है।
+एक पूर्ण अनुबंध कुछ इस तरह दिख सकता है। यहाँ `constructor` फ़ंक्शन `dapp_name` चर के लिए एक प्रारंभिक मान प्रदान करता है।
 
-## इवेंट्स और लॉग {#events-and-logs}
+## घटनाएँ और लॉग {#events-and-logs}
 
-इवेंट्स आपके स्मार्ट अनुबंध को आपके फ़्रंटएंड या अन्य सदस्यता लेने वाले एप्लिकेशन के साथ संवाद करने में सक्षम बनाते हैं। एक बार लेनदेन मान्य हो जाने और एक ब्लॉक में जोड़े जाने के बाद, स्मार्ट अनुबंध इवेंट्स का उत्सर्जन कर सकते हैं और जानकारी लॉग कर सकते हैं, जिसे फ्रंटएंड तब संसाधित और उपयोग कर सकता है।
+घटनाएँ आपके स्मार्ट अनुबंध को आपके फ्रंटएंड या अन्य सब्सक्राइबिंग एप्लिकेशन के साथ संवाद करने में सक्षम बनाती हैं। एक बार जब कोई लेन-देन मान्य हो जाता है और ब्लॉक में जुड़ जाता है, तो स्मार्ट अनुबंध घटनाएँ उत्सर्जित कर सकते हैं और जानकारी लॉग कर सकते हैं, जिसे फ्रंटएंड फिर प्रोसेस और उपयोग कर सकता है।
 
 ## एनोटेट किए गए उदाहरण {#annotated-examples}
 
-ये Solidity में लिखे गए कुछ उदाहरण हैं। यदि आप कोड के साथ खेलना चाहते हैं, तो आप उनके साथ [Remix](http://remix.ethereum.org) में इंटरैक्ट कर सकते हैं।
+ये Solidity में लिखे गए कुछ उदाहरण हैं। यदि आप कोड के साथ प्रयोग करना चाहते हैं, तो आप [Remix](https://remix.ethereum.org) में उनके साथ इंटरैक्ट कर सकते हैं।
 
 ### हैलो वर्ल्ड {#hello-world}
 
 ```solidity
-// Specifies the version of Solidity, using semantic versioning.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// सिमेंटिक वर्ज़निंग का उपयोग करके Solidity का संस्करण निर्दिष्ट करता है।
+// अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
 
-// Defines a contract named `HelloWorld`.
-// A contract is a collection of functions and data (its state).
-// Once deployed, a contract resides at a specific address on the Ethereum blockchain.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// `HelloWorld` नामक एक अनुबंध को परिभाषित करता है।
+// एक अनुबंध कार्यों और डेटा (इसकी स्थिति) का एक संग्रह है।
+// एक बार तैनात होने के बाद, एक अनुबंध इथेरियम ब्लॉकचेन पर एक विशिष्ट पते पर रहता है।
+// अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-    // Declares a state variable `message` of type `string`.
-    // State variables are variables whose values are permanently stored in contract storage.
-    // The keyword `public` makes variables accessible from outside a contract
-    // and creates a function that other contracts or clients can call to access the value.
+    // `string` प्रकार का एक स्थिति चर `message` घोषित करता है।
+    // स्थिति चर वे चर होते हैं जिनके मूल्य स्थायी रूप से अनुबंध स्टोरेज में संग्रहीत होते हैं।
+    // `public` कीवर्ड चरों को अनुबंध के बाहर से सुलभ बनाता है
+    // और एक फ़ंक्शन बनाता है जिसे अन्य अनुबंध या क्लाइंट मूल्य तक पहुंचने के लिए कॉल कर सकते हैं।
     string public message;
 
-    // Similar to many class-based object-oriented languages, a constructor is
-    // a special function that is only executed upon contract creation.
-    // Constructors are used to initialize the contract's data.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+    // कई क्लास-आधारित ऑब्जेक्ट-ओरिएंटेड भाषाओं के समान, एक कंस्ट्रक्टर
+    // एक विशेष फ़ंक्शन है जो केवल अनुबंध निर्माण पर निष्पादित होता है।
+    // कंस्ट्रक्टर का उपयोग अनुबंध के डेटा को प्रारंभ करने के लिए किया जाता है।
+    // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
     constructor(string memory initMessage) public {
-        // Accepts a string argument `initMessage` and sets the value
-        // into the contract's `message` storage variable).
+        // एक स्ट्रिंग तर्क `initMessage` स्वीकार करता है और मूल्य को
+        // अनुबंध के `message` स्टोरेज चर में सेट करता है)।
         message = initMessage;
     }
 
-    // A public function that accepts a string argument
-    // and updates the `message` storage variable.
+    // एक सार्वजनिक फ़ंक्शन जो एक स्ट्रिंग तर्क स्वीकार करता है
+    // और `message` स्टोरेज चर को अपडेट करता है।
     function update(string memory newMessage) public {
         message = newMessage;
     }
@@ -252,58 +252,58 @@ contract HelloWorld {
 pragma solidity ^0.5.10;
 
 contract Token {
-    // An `address` is comparable to an email address - it's used to identify an account on Ethereum.
-    // Addresses can represent a smart contract or an external (user) accounts.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
+    // एक पता ईमेल पते के तुलनीय है - इसका उपयोग इथेरियम पर किसी खाते की पहचान करने के लिए किया जाता है।
+    // पते एक स्मार्ट अनुबंध या बाहरी (उपयोगकर्ता) खातों का प्रतिनिधित्व कर सकते हैं।
+    // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
     address public owner;
 
-    // A `mapping` is essentially a hash table data structure.
-    // This `mapping` assigns an unsigned integer (the token balance) to an address (the token holder).
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
+    // एक `mapping` अनिवार्य रूप से एक हैश टेबल डेटा संरचना है।
+    // यह `mapping` एक पते (टोकन धारक) को एक अहस्ताक्षरित पूर्णांक (टोकन बैलेंस) प्रदान करता है।
+    // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
     mapping (address => uint) public balances;
 
-    // Events allow for logging of activity on the blockchain.
-    // Ethereum clients can listen for events in order to react to contract state changes.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
+    // घटनाएँ ब्लॉकचेन पर गतिविधि की लॉगिंग की अनुमति देती हैं।
+    // इथेरियम क्लाइंट अनुबंध की स्थिति में बदलावों पर प्रतिक्रिया देने के लिए घटनाओं को सुन सकते हैं।
+    // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
     event Transfer(address from, address to, uint amount);
 
-    // Initializes the contract's data, setting the `owner`
-    // to the address of the contract creator.
+    // अनुबंध के डेटा को प्रारंभ करता है, `owner` को सेट करता है
+    // अनुबंध निर्माता के पते पर।
     constructor() public {
-        // All smart contracts rely on external transactions to trigger its functions.
-        // `msg` is a global variable that includes relevant data on the given transaction,
-        // such as the address of the sender and the ETH value included in the transaction.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+        // सभी स्मार्ट अनुबंध अपने कार्यों को ट्रिगर करने के लिए बाहरी लेन-देन पर निर्भर करते हैं।
+        // `msg` एक वैश्विक चर है जिसमें दिए गए लेन-देन पर प्रासंगिक डेटा शामिल है,
+        // जैसे कि प्रेषक का पता और लेन-देन में शामिल ETH मूल्य।
+        // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
         owner = msg.sender;
     }
 
-    // Creates an amount of new tokens and sends them to an address.
+    // नए टोकन की एक मात्रा बनाता है और उन्हें एक पते पर भेजता है।
     function mint(address receiver, uint amount) public {
-        // `require` is a control structure used to enforce certain conditions.
-        // If a `require` statement evaluates to `false`, an exception is triggered,
-        // which reverts all changes made to the state during the current call.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // `require` एक नियंत्रण संरचना है जिसका उपयोग कुछ शर्तों को लागू करने के लिए किया जाता है।
+        // यदि एक `require` कथन `false` का मूल्यांकन करता है, तो एक अपवाद ट्रिगर होता है,
+        // जो वर्तमान कॉल के दौरान स्थिति में किए गए सभी परिवर्तनों को वापस कर देता है।
+        // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // Only the contract owner can call this function
+        // केवल अनुबंध स्वामी ही इस फ़ंक्शन को कॉल कर सकता है
         require(msg.sender == owner, "You are not the owner.");
 
-        // Enforces a maximum amount of tokens
+        // टोकन की अधिकतम मात्रा लागू करता है
         require(amount < 1e60, "Maximum issuance exceeded");
 
-        // Increases the balance of `receiver` by `amount`
+        // `receiver` के बैलेंस को `amount` से बढ़ाता है
         balances[receiver] += amount;
     }
 
-    // Sends an amount of existing tokens from any caller to an address.
+    // किसी भी कॉलर से एक पते पर मौजूदा टोकन की एक मात्रा भेजता है।
     function transfer(address receiver, uint amount) public {
-        // The sender must have enough tokens to send
+        // भेजने के लिए प्रेषक के पास पर्याप्त टोकन होने चाहिए
         require(amount <= balances[msg.sender], "Insufficient balance.");
 
-        // Adjusts token balances of the two addresses
+        // दोनों पतों के टोकन बैलेंस को समायोजित करता है
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
 
-        // Emits the event defined earlier
+        // पहले परिभाषित घटना का उत्सर्जन करता है
         emit Transfer(msg.sender, receiver, amount);
     }
 }
@@ -314,74 +314,74 @@ contract Token {
 ```solidity
 pragma solidity ^0.5.10;
 
-// Imports symbols from other files into the current contract.
-// In this case, a series of helper contracts from OpenZeppelin.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
+// अन्य फ़ाइलों से प्रतीकों को वर्तमान अनुबंध में आयात करता है।
+// इस मामले में, OpenZeppelin से सहायक अनुबंधों की एक श्रृंखला।
+// अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// The `is` keyword is used to inherit functions and keywords from external contracts.
-// In this case, `CryptoPizza` inherits from the `IERC721` and `ERC165` contracts.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
+// `is` कीवर्ड का उपयोग बाहरी अनुबंधों से कार्यों और कीवर्ड को इनहेरिट करने के लिए किया जाता है।
+// इस मामले में, `CryptoPizza` `IERC721` और `ERC165` अनुबंधों से इनहेरिट करता है।
+// अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
-    // Uses OpenZeppelin's SafeMath library to perform arithmetic operations safely.
-    // Learn more: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // अंकगणितीय कार्यों को सुरक्षित रूप से करने के लिए OpenZeppelin की SafeMath लाइब्रेरी का उपयोग करता है।
+    // अधिक जानें: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
     using SafeMath for uint256;
 
-    // Constant state variables in Solidity are similar to other languages
-    // but you must assign from an expression which is constant at compile time.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
+    // Solidity में निरंतर स्थिति चर अन्य भाषाओं के समान हैं
+    // लेकिन आपको एक ऐसे व्यंजक से असाइन करना होगा जो संकलन समय पर निरंतर हो।
+    // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Struct types let you define your own type
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
+    // Struct प्रकार आपको अपना स्वयं का प्रकार परिभाषित करने देते हैं
+    // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
     }
 
-    // Creates an empty array of Pizza structs
+    // Pizza structs का एक खाली ऐरे बनाता है
     Pizza[] public pizzas;
 
-    // Mapping from pizza ID to its owner's address
+    // पिज्जा ID से उसके मालिक के पते तक मैपिंग
     mapping(uint256 => address) public pizzaToOwner;
 
-    // Mapping from owner's address to number of owned token
+    // मालिक के पते से स्वामित्व वाले टोकन की संख्या तक मैपिंग
     mapping(address => uint256) public ownerPizzaCount;
 
-    // Mapping from token ID to approved address
+    // टोकन ID से स्वीकृत पते तक मैपिंग
     mapping(uint256 => address) pizzaApprovals;
 
-    // You can nest mappings, this example maps owner to operator approvals
+    // आप मैपिंग को नेस्ट कर सकते हैं, यह उदाहरण मालिक को ऑपरेटर की स्वीकृतियों से मैप करता है
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // Internal function to create a random Pizza from string (name) and DNA
+    // स्ट्रिंग (नाम) और DNA से एक यादृच्छिक पिज्जा बनाने के लिए आंतरिक फ़ंक्शन
     function _createPizza(string memory _name, uint256 _dna)
-        // The `internal` keyword means this function is only visible
-        // within this contract and contracts that derive this contract
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
+        // `internal` कीवर्ड का अर्थ है कि यह फ़ंक्शन केवल
+        // इस अनुबंध और इस अनुबंध से प्राप्त अनुबंधों के भीतर दिखाई देता है
+        // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique` is a function modifier that checks if the pizza already exists
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
+        // `isUnique` एक फ़ंक्शन संशोधक है जो जांचता है कि क्या पिज्जा पहले से मौजूद है
+        // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // Adds Pizza to array of Pizzas and get id
+        // पिज्जा के ऐरे में पिज्जा जोड़ता है और id प्राप्त करता है
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
-        // Checks that Pizza owner is the same as current user
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // जांचता है कि पिज्जा का मालिक वर्तमान उपयोगकर्ता के समान है
+        // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // note that address(0) is the zero address,
-        // indicating that pizza[id] is not yet allocated to a particular user.
+        // ध्यान दें कि address(0) शून्य पता है,
+        // जो यह दर्शाता है कि pizza[id] अभी तक किसी विशेष उपयोगकर्ता को आवंटित नहीं किया गया है।
 
         assert(pizzaToOwner[id] == address(0));
 
-        // Maps the Pizza to the owner
+        // पिज्जा को मालिक से मैप करता है
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -389,38 +389,38 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // Creates a random Pizza from string (name)
+    // स्ट्रिंग (नाम) से एक यादृच्छिक पिज्जा बनाता है
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
     }
 
-    // Generates random DNA from string (name) and address of the owner (creator)
+    // स्ट्रिंग (नाम) और मालिक (निर्माता) के पते से यादृच्छिक DNA उत्पन्न करता है
     function generateRandomDna(string memory _str, address _owner)
         public
-        // Functions marked as `pure` promise not to read from or modify the state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
+        // `pure` के रूप में चिह्नित फ़ंक्शन स्थिति को न पढ़ने या संशोधित न करने का वादा करते हैं
+        // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // Generates random uint from string (name) + address (owner)
+        // स्ट्रिंग (नाम) + पते (मालिक) से यादृच्छिक uint उत्पन्न करता है
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // Returns array of Pizzas found by owner
+    // मालिक द्वारा पाए गए पिज्जा का ऐरे लौटाता है
     function getPizzasByOwner(address _owner)
         public
-        // Functions marked as `view` promise not to modify state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
+        // `view` के रूप में चिह्नित फ़ंक्शन स्थिति को संशोधित न करने का वादा करते हैं
+        // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // Uses the `memory` storage location to store values only for the
-        // lifecycle of this function call.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
+        // `memory` स्टोरेज स्थान का उपयोग मूल्यों को केवल
+        // इस फ़ंक्शन कॉल के जीवनचक्र के लिए संग्रहीत करने के लिए करता है।
+        // अधिक जानें: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -432,7 +432,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return result;
     }
 
-    // Transfers Pizza and ownership to other address
+    // पिज्जा और स्वामित्व को अन्य पते पर स्थानांतरित करता है
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
         require(_from != address(0) && _to != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -443,17 +443,17 @@ contract CryptoPizza is IERC721, ERC165 {
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
         pizzaToOwner[_pizzaId] = _to;
 
-        // Emits event defined in the imported IERC721 contract
+        // आयातित IERC721 अनुबंध में परिभाषित घटना का उत्सर्जन करता है
         emit Transfer(_from, _to, _pizzaId);
         _clearApproval(_to, _pizzaId);
     }
 
     /**
-     * Safely transfers the ownership of a given token ID to another address
-     * If the target address is a contract, it must implement `onERC721Received`,
-     * which is called upon a safe transfer, and return the magic value
-     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * otherwise, the transfer is reverted.
+     * दिए गए टोकन ID के स्वामित्व को सुरक्षित रूप से किसी अन्य पते पर स्थानांतरित करता है
+     * यदि लक्ष्य पता एक अनुबंध है, तो इसे `onERC721Received` लागू करना चाहिए,
+     * जिसे सुरक्षित स्थानांतरण पर कॉल किया जाता है, और जादुई मूल्य
+     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))` लौटाना चाहिए;
+     * अन्यथा, स्थानांतरण वापस कर दिया जाता है।
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -463,11 +463,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Safely transfers the ownership of a given token ID to another address
-     * If the target address is a contract, it must implement `onERC721Received`,
-     * which is called upon a safe transfer, and return the magic value
-     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * otherwise, the transfer is reverted.
+     * दिए गए टोकन ID के स्वामित्व को सुरक्षित रूप से किसी अन्य पते पर स्थानांतरित करता है
+     * यदि लक्ष्य पता एक अनुबंध है, तो इसे `onERC721Received` लागू करना चाहिए,
+     * जिसे सुरक्षित स्थानांतरण पर कॉल किया जाता है, और जादुई मूल्य
+     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))` लौटाना चाहिए;
+     * अन्यथा, स्थानांतरण वापस कर दिया जाता है।
      */
     function safeTransferFrom(
         address from,
@@ -480,8 +480,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Internal function to invoke `onERC721Received` on a target address
-     * The call is not executed if the target address is not a contract
+     * लक्ष्य पते पर `onERC721Received` को लागू करने के लिए आंतरिक फ़ंक्शन
+     * यदि लक्ष्य पता एक अनुबंध नहीं है तो कॉल निष्पादित नहीं की जाती है
      */
     function _checkOnERC721Received(
         address from,
@@ -502,9 +502,9 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Burns a Pizza - destroys Token completely
-    // The `external` function modifier means this function is
-    // part of the contract interface and other contracts can call it
+    // पिज्जा को बर्न करता है - टोकन को पूरी तरह से नष्ट कर देता है
+    // `external` फ़ंक्शन संशोधक का अर्थ है कि यह फ़ंक्शन
+    // अनुबंध इंटरफ़ेस का हिस्सा है और अन्य अनुबंध इसे कॉल कर सकते हैं
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -517,26 +517,26 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // Returns count of Pizzas by address
+    // पते के अनुसार पिज्जा की संख्या लौटाता है
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // Returns owner of the Pizza found by id
+    // id द्वारा पाए गए पिज्जा का मालिक लौटाता है
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
         require(owner != address(0), "Invalid Pizza ID.");
         return owner;
     }
 
-    // Approves other address to transfer ownership of Pizza
+    // पिज्जा के स्वामित्व को स्थानांतरित करने के लिए अन्य पते को स्वीकृति देता है
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // Returns approved address for specific Pizza
+    // विशिष्ट पिज्जा के लिए स्वीकृत पता लौटाता है
     function getApproved(uint256 _pizzaId)
         public
         view
@@ -547,8 +547,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Private function to clear current approval of a given token ID
-     * Reverts if the given address is not indeed the owner of the token
+     * दिए गए टोकन ID की वर्तमान स्वीकृति को साफ़ करने के लिए निजी फ़ंक्शन
+     * यदि दिया गया पता वास्तव में टोकन का मालिक नहीं है तो वापस कर देता है
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -559,8 +559,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /*
-     * Sets or unsets the approval of a given operator
-     * An operator is allowed to transfer all tokens of the sender on their behalf
+     * किसी दिए गए ऑपरेटर की स्वीकृति को सेट या अनसेट करता है
+     * एक ऑपरेटर को प्रेषक की ओर से उनके सभी टोकन स्थानांतरित करने की अनुमति है
      */
     function setApprovalForAll(address to, bool approved) public {
         require(to != msg.sender, "Cannot approve own address");
@@ -568,7 +568,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // Tells whether an operator is approved by a given owner
+    // बताता है कि क्या किसी दिए गए मालिक द्वारा ऑपरेटर को स्वीकृति दी गई है
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -577,27 +577,27 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Takes ownership of Pizza - only for approved users
+    // पिज्जा का स्वामित्व लेता है - केवल स्वीकृत उपयोगकर्ताओं के लिए
     function takeOwnership(uint256 _pizzaId) public {
         require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
 
-    // Checks if Pizza exists
+    // जांचता है कि क्या पिज्जा मौजूद है
     function _exists(uint256 pizzaId) internal view returns (bool) {
         address owner = pizzaToOwner[pizzaId];
         return owner != address(0);
     }
 
-    // Checks if address is owner or is approved to transfer Pizza
+    // जांचता है कि क्या पता मालिक है या पिज्जा स्थानांतरित करने के लिए स्वीकृत है
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // Disable solium check because of
+        // solium जांच को अक्षम करें क्योंकि
         // https://github.com/duaraghav8/Solium/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
@@ -605,7 +605,7 @@ contract CryptoPizza is IERC721, ERC165 {
             this.isApprovedForAll(owner, spender));
     }
 
-    // Check if Pizza is unique and doesn't exist yet
+    // जांचें कि क्या पिज्जा अद्वितीय है और अभी तक मौजूद नहीं है
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -621,15 +621,15 @@ contract CryptoPizza is IERC721, ERC165 {
         _;
     }
 
-    // Returns whether the target address is a contract
+    // लौटाता है कि क्या लक्ष्य पता एक अनुबंध है
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // Currently there is no better way to check if there is a contract in an address
-        // than to check the size of the code at that address.
-        // See https://ethereum.stackexchange.com/a/14016/36603
-        // for more details about how this works.
-        // TODO Check this again before the Serenity release, because all addresses will be
-        // contracts then.
+        // वर्तमान में यह जांचने का कोई बेहतर तरीका नहीं है कि किसी पते में कोई अनुबंध है या नहीं
+        // बजाय इसके कि उस पते पर कोड के आकार की जांच की जाए।
+        // देखें https://ethereum.stackexchange.com/a/14016/36603
+        // यह कैसे काम करता है, इसके बारे में अधिक जानकारी के लिए।
+        // TODO Serenity रिलीज़ से पहले इसे फिर से जांचें, क्योंकि तब सभी पते
+        // अनुबंध होंगे।
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)
@@ -639,20 +639,20 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## अग्रिम पठन {#further-reading}
+## आगे की पढ़ाई {#further-reading}
 
-स्मार्ट अनुबंधों के अधिक संपूर्ण अवलोकन के लिए Solidity और Vyper के प्रलेखन देखें:
+स्मार्ट अनुबंधों के अधिक पूर्ण अवलोकन के लिए Solidity और Vyper के दस्तावेज़ देखें:
 
-- [Solidity](https://solidity.readthedocs.io/)
-- [Vyper](https://vyper.readthedocs.io/)
+- [Solidity](https://docs.soliditylang.org/)
+- [Vyper](https://docs.vyperlang.org/en/stable/)
 
 ## संबंधित विषय {#related-topics}
 
 - [स्मार्ट अनुबंध](/developers/docs/smart-contracts/)
-- [एथेरियम वर्चुअल मशीन](/developers/docs/evm/)
+- [इथेरियम वर्चुअल मशीन](/developers/docs/evm/)
 
 ## संबंधित ट्यूटोरियल {#related-tutorials}
 
-- [अनुबंध आकार सीमा से लड़ने के लिए अनुबंधों को छोटा करना](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– आपके स्मार्ट अनुबंध के आकार को कम करने के लिए कुछ व्यावहारिक सुझाव।_
-- [इवेंट्स के साथ स्मार्ट अनुबंधों से डेटा लॉगिंग](/developers/tutorials/logging-events-smart-contracts/) _– स्मार्ट अनुबंध इवेंट्स का परिचय और आप डेटा लॉग करने के लिए उनका उपयोग कैसे कर सकते हैं।_
-- [Solidity से अन्य अनुबंधों के साथ इंटरैक्ट करें](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– मौजूदा अनुबंध से स्मार्ट अनुबंध कैसे परिनियोजित करें और इसके साथ इंटरैक्ट करें।_
+- [अनुबंध आकार सीमा से लड़ने के लिए अनुबंधों का आकार कम करना](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– आपके स्मार्ट अनुबंध के आकार को कम करने के लिए कुछ व्यावहारिक सुझाव।_
+- [घटनाओं के साथ स्मार्ट अनुबंधों से डेटा लॉग करना](/developers/tutorials/logging-events-smart-contracts/) _– स्मार्ट अनुबंध घटनाओं का परिचय और आप डेटा लॉग करने के लिए उनका उपयोग कैसे कर सकते हैं।_
+- [Solidity से अन्य अनुबंधों के साथ इंटरैक्ट करें](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– मौजूदा अनुबंध से स्मार्ट अनुबंध कैसे तैनात करें और उसके साथ कैसे इंटरैक्ट करें।_

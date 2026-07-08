@@ -8,7 +8,7 @@ Gasper is a combination of Casper the Friendly Finality Gadget (Casper-FFG) and 
 
 **Note** that the original definition of Casper-FFG was updated slightly for inclusion in Gasper. On this page we consider the updated version.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 To understand this material it is necessary to read the introductory page on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
@@ -23,7 +23,7 @@ Finality is a property of certain blocks that means they cannot be reverted unle
 1. Two-thirds of the total staked ether must have voted in favor of that block's inclusion in the canonical chain. This condition upgrades the block to "justified". Justified blocks are unlikely to be reverted, but they can be under certain conditions.
 2. When another block is justified on top of a justified block, it is upgraded to "finalized". Finalizing a block is a commitment to include the block in the canonical chain. It cannot be reverted unless an attacker destroys millions of ether (billions of $USD).
 
-These block upgrades do not happen in every slot. Instead, only epoch-boundary blocks can be justified and finalized. These blocks are known as "checkpoints". Upgrading considers pairs of checkpoints. A "supermajority link" must exist between two successive checkpoints (i.e. two-thirds of the total staked ether voting that checkpoint B is the correct descendant of checkpoint A) to upgrade the less recent checkpoint to finalized and the more recent block to justified.
+These block upgrades do not happen in every slot. Instead, only epoch-boundary blocks can be justified and finalized. These blocks are known as "checkpoints". Upgrading considers pairs of checkpoints. A "supermajority link" must exist between two successive checkpoints (i.e., two-thirds of the total staked ether voting that checkpoint B is the correct descendant of checkpoint A) to upgrade the less recent checkpoint to finalized and the more recent block to justified.
 
 Because finality requires a two-thirds agreement that a block is canonical, an attacker cannot possibly create an alternative finalized chain without:
 

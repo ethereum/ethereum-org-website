@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-06-18T20:31:05.388Z",
+  "englishManifestHash": "c3faffe2d1cc",
+  "placeholderOrder": [
+    "LINK-89da35",
+    "LINK-d89cb7",
+    "LINK-a21a82",
+    "LINK-67d64c",
+    "LINK-2bbbee",
+    "LINK-19467e",
+    "LINK-8248a7",
+    "LINK-23932f",
+    "LINK-f0dc70",
+    "LINK-7e41b7",
+    "LINK-a2bafe",
+    "LINK-c70efa",
+    "LINK-d943d2",
+    "LINK-203310",
+    "LINK-d379a4",
+    "LINK-75819f",
+    "LINK-8f661a",
+    "LINK-3630cf",
+    "LINK-4c4565",
+    "LINK-f87448",
+    "LINK-ca2fe6",
+    "LINK-7bd353",
+    "LINK-b07451",
+    "LINK-5bf8df",
+    "LINK-b6ae40",
+    "LINK-8f3fa0",
+    "LINK-6903ad",
+    "LINK-f7d63c",
+    "LINK-f2ef4c",
+    "LINK-7d8cfc",
+    "LINK-f42696",
+    "LINK-7d8cfc",
+    "LINK-5c93fa",
+    "LINK-fc181a",
+    "LINK-75707d",
+    "LINK-e5b824",
+    "LINK-df885c",
+    "LINK-42fb17",
+    "LINK-d10a6e",
+    "LINK-93c5d0",
+    "LINK-bc2c0a",
+    "LINK-188533"
+  ],
+  "placeholderMap": {
+    "LINK-89da35": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#onchain"
+      }
+    },
+    "LINK-d89cb7": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-67d64c": {
+      "type": "link",
+      "values": {
+        "url": "https://claim.ens.domains/delegate-ranking"
+      }
+    },
+    "LINK-2bbbee": {
+      "type": "link",
+      "values": {
+        "url": "https://nouns.wtf"
+      }
+    },
+    "LINK-19467e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#wallet"
+      }
+    },
+    "LINK-8248a7": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#multisig"
+      }
+    },
+    "LINK-23932f": {
+      "type": "link",
+      "values": {
+        "url": "https://citizen.citydao.io/"
+      }
+    },
+    "LINK-f0dc70": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#permissionless"
+      }
+    },
+    "LINK-7e41b7": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#dex"
+      }
+    },
+    "LINK-a2bafe": {
+      "type": "link",
+      "values": {
+        "url": "https://makerdao.com"
+      }
+    },
+    "LINK-c70efa": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#dapp"
+      }
+    },
+    "LINK-d943d2": {
+      "type": "link",
+      "values": {
+        "url": "https://DXdao.eth.limo"
+      }
+    },
+    "LINK-203310": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#holographic-consensus"
+      }
+    },
+    "LINK-d379a4": {
+      "type": "link",
+      "values": {
+        "url": "/community/get-involved/#decentralized-autonomous-organizations-daos"
+      }
+    },
+    "LINK-75819f": {
+      "type": "link",
+      "values": {
+        "url": "https://app.daohaus.club/explore"
+      }
+    },
+    "LINK-8f661a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tally.xyz/explore"
+      }
+    },
+    "LINK-3630cf": {
+      "type": "link",
+      "values": {
+        "url": "https://apps.degov.ai/"
+      }
+    },
+    "LINK-4c4565": {
+      "type": "link",
+      "values": {
+        "url": "https://app.daohaus.club/summon"
+      }
+    },
+    "LINK-f87448": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tally.xyz/get-started"
+      }
+    },
+    "LINK-ca2fe6": {
+      "type": "link",
+      "values": {
+        "url": "https://aragon.org/product"
+      }
+    },
+    "LINK-7bd353": {
+      "type": "link",
+      "values": {
+        "url": "https://colony.io/"
+      }
+    },
+    "LINK-b07451": {
+      "type": "link",
+      "values": {
+        "url": "https://alchemy.daostack.io/daos/create"
+      }
+    },
+    "LINK-5bf8df": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.degov.ai/integration/deploy"
+      }
+    },
+    "LINK-b6ae40": {
+      "type": "link",
+      "values": {
+        "url": "https://aragon.org/dao"
+      }
+    },
+    "LINK-8f3fa0": {
+      "type": "link",
+      "values": {
+        "url": "https://aragon.org/"
+      }
+    },
+    "LINK-6903ad": {
+      "type": "link",
+      "values": {
+        "url": "https://wiki.metagame.wtf/docs/great-houses/house-of-daos"
+      }
+    },
+    "LINK-f7d63c": {
+      "type": "link",
+      "values": {
+        "url": "https://wiki.metagame.wtf/"
+      }
+    },
+    "LINK-f2ef4c": {
+      "type": "link",
+      "values": {
+        "url": "https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for"
+      }
+    },
+    "LINK-7d8cfc": {
+      "type": "link",
+      "values": {
+        "url": "https://daohaus.club/"
+      }
+    },
+    "LINK-f42696": {
+      "type": "link",
+      "values": {
+        "url": "https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a"
+      }
+    },
+    "LINK-5c93fa": {
+      "type": "link",
+      "values": {
+        "url": "https://coinmarketcap.com/alexandria/article/what-is-a-dao"
+      }
+    },
+    "LINK-fc181a": {
+      "type": "link",
+      "values": {
+        "url": "https://coinmarketcap.com"
+      }
+    },
+    "LINK-75707d": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c"
+      }
+    },
+    "LINK-e5b824": {
+      "type": "link",
+      "values": {
+        "url": "https://daostack.io/"
+      }
+    },
+    "LINK-df885c": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2022/09/20/daos.html"
+      }
+    },
+    "LINK-42fb17": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide"
+      }
+    },
+    "LINK-d10a6e": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org"
+      }
+    },
+    "LINK-93c5d0": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/KHm0uUPqmVE"
+      }
+    },
+    "LINK-bc2c0a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city"
+      }
+    },
+    "LINK-188533": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ted.com/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T20:31:05.388Z",
+      "status": "success"
+    }
+  }
+}

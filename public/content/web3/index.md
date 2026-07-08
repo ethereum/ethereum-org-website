@@ -1,10 +1,9 @@
 ---
-title: What is Web3 and why is it important?
+title: Introduction to Web3
+metaTitle: What is Web3 and why is it important?
 description: An introduction to Web3—the next evolution of the World Wide Web—and why it matters.
 lang: en
 ---
-
-# Introduction to Web3 {#introduction}
 
 Centralization has helped onboard billions of people to the World Wide Web and created the stable, robust infrastructure on which it lives. At the same time, a handful of centralized entities have a stronghold on large swathes of the World Wide Web, unilaterally deciding what should and should not be allowed.
 
@@ -35,7 +34,7 @@ The Web 2.0 period began in 2004 with the emergence of social media platforms. I
 
 ## Web 3.0: Read-Write-Own {#web3}
 
-The premise of 'Web 3.0' was coined by [Ethereum](/what-is-ethereum/) co-founder Gavin Wood shortly after Ethereum launched in 2014. Gavin put into words a solution for a problem that many early crypto adopters felt: the Web required too much trust. That is, most of the Web that people know and use today relies on trusting a handful of private companies to act in the public's best interests.
+The premise of 'Web 3.0' was coined by [Ethereum](/) co-founder Gavin Wood shortly after Ethereum launched in 2014. Gavin put into words a solution for a problem that many early crypto adopters felt: the Web required too much trust. That is, most of the Web that people know and use today relies on trusting a handful of private companies to act in the public's best interests.
 
 ![Decentralized node architecture, representing Web3](./web3.png)
 
@@ -60,14 +59,17 @@ Although Web3's killer features aren't isolated and don't fit into neat categori
 
 Web3 gives you ownership of your digital assets in an unprecedented way. For example, say you're playing a web2 game. If you purchase an in-game item, it is tied directly to your account. If the game creators delete your account, you will lose these items. Or, if you stop playing the game, you lose the value you invested into your in-game items.
 
-Web3 allows for direct ownership through [non-fungible tokens (NFTs)](/glossary/#nft). No one, not even the game's creators, has the power to take away your ownership. And, if you stop playing, you can sell or trade your in-game items on open markets and recoup their value.
+Web3 allows for direct ownership through [non-fungible tokens (NFTs)](/glossary/#nft). No one, not even the game's creators, has the power to take away your ownership. And, if you stop playing, you can sell or trade your in-game items on open markets and recoup their value. Explore [onchain gaming](/gaming/) to see this in action.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Learn more about NFTs</div>
   <ButtonLink href="/nft/">
     More on NFTs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Censorship resistance {#censorship-resistance}
 
@@ -87,12 +89,15 @@ DAOs are defined technically as agreed-upon [smart contracts](/glossary/#smart-c
 
 However, people define many Web3 communities as DAOs. These communities all have different levels of decentralization and automation by code. Currently, we are exploring what DAOs are and how they might evolve in the future.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">
     More on DAOs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Identity {#identity}
 
@@ -105,7 +110,7 @@ Web3 solves these problems by allowing you to control your digital identity with
 Web2's payment infrastructure relies on banks and payment processors, excluding people without bank accounts or those who happen to live within the borders of the wrong country.
 Web3 uses tokens like [ETH](/glossary/#ether) to send money directly in the browser and requires no trusted third party.
 
-<ButtonLink href="/eth/">
+<ButtonLink href="/what-is-ether/">
   More on ETH
 </ButtonLink>
 
@@ -141,7 +146,7 @@ We are only at the beginning of creating a better Web with Web3, but as we conti
 
 - [Get a wallet](/wallets/)
 - [Find a community](/community/)
-- [Explore Web3 applications](/dapps/)
+- [Explore Web3 applications](/apps/)
 - [Join a DAO](/dao/)
 - [Build on Web3](/developers/)
 
@@ -149,11 +154,11 @@ We are only at the beginning of creating a better Web with Web3, but as we conti
 
 Web3 isn’t rigidly defined. Various community participants have different perspectives on it. Here are a few of them:
 
-- [What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Making Sense of Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
-- [Why Web3 Matters](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
+- [Why Web3 Matters](https://a16zcrypto.com/posts/article/why-web3-matters/) — _Chris Dixon_
 - [Why Decentralization Matters](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [The Web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [The Web3 Debate](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [The Web3 Debate](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

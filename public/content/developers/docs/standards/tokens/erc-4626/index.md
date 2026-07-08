@@ -18,7 +18,7 @@ The ERC-4626 token is described fully in [EIP-4626](https://eips.ethereum.org/EI
 
 **Asynchronous vault extension (ERC-7540)**
 
-ERC-4626 is optimized for atomic deposits and redemptions up to a limit. If the limit is reached, no new deposits or redemptions can be submitted. This limitation does not work well for any smart contract system with asynchronous actions or delays as a prerequisite for interfacing with the Vault (e.g. real-world asset protocols, undercollateralized lending protocols, cross-chain lending protocols, liquid staking tokens, or insurance safety modules).
+ERC-4626 is optimized for atomic deposits and redemptions up to a limit. If the limit is reached, no new deposits or redemptions can be submitted. This limitation does not work well for any smart contract system with asynchronous actions or delays as a prerequisite for interfacing with the Vault (e.g., real-world asset protocols, undercollateralized lending protocols, cross-chain lending protocols, liquid staking tokens, or insurance safety modules).
 
 ERC-7540 expands the utility of ERC-4626 Vaults for asynchronous use cases. The existing Vault interface (`deposit`/`withdraw`/`mint`/`redeem`) is fully utilized to claim asynchronous Requests.
 
@@ -78,7 +78,7 @@ This function returns the amount of `assets` that would be exchanged by the vaul
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-This function returns the maximum amount of underlying assets that can be deposited in a single [`deposit`](#deposit) call by the `receiver`.
+This function returns the maximum amount of underlying assets that can be deposited in a single [`deposit`](#deposit) call, with the shares minted for the `receiver`.
 
 #### previewDeposit {#previewdeposit}
 
@@ -102,7 +102,7 @@ This function deposits `assets` of underlying tokens into the vault and grants o
 function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-This function returns the maximum amount of shares that can be minted in a single [`mint`](#mint) call by the `receiver`.
+This function returns the maximum amount of shares that can be minted in a single [`mint`](#mint) call, with the shares minted for the `receiver`.
 
 #### previewMint {#previewmint}
 
@@ -184,13 +184,13 @@ function balanceOf(address owner) public view returns (uint256)
 
 Returns the total amount of vault shares the `owner` currently has.
 
-### Map of the interface {#mapOfTheInterface}
+### Map of the interface {#mapoftheinterface}
 
 ![Map of the ERC-4626 interface](./map-of-erc-4626.png)
 
 ### Events {#events}
 
-#### Deposit Event
+#### Deposit Event {#deposit-event}
 
 **MUST** be emitted when tokens are deposited into the vault via the [`mint`](#mint) and [`deposit`](#deposit) methods.
 
@@ -205,7 +205,7 @@ event Deposit(
 
 Where `sender` is the user who exchanged `assets` for `shares`, and transferred those `shares` to `owner`.
 
-#### Withdraw Event
+#### Withdraw Event {#withdraw-event}
 
 **MUST** be emitted when shares are withdrawn from the vault by a depositor in the [`redeem`](#redeem) or [`withdraw`](#withdraw) methods.
 

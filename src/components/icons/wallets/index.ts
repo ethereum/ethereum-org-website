@@ -1,26 +1,25 @@
-import { BrowserIcon } from "./BrowserIcon"
-import { BuyCryptoIcon } from "./BuyCryptoIcon"
-import { ConnectDappsIcon } from "./ConnectDappsIcon"
-import { DesktopIcon } from "./DesktopIcon"
-import { DevicesIcon } from "./DevicesIcon"
-import { ENSSupportIcon } from "./ENSSupportIcon"
-import { ERC20SupportIcon } from "./ERC20SupportIcon"
-import FilterBurgerIcon from "./filter-burger-icon.svg"
-import { GasFeeCustomizationIcon } from "./GasFeeCustomizationIcon"
-import { HardwareIcon } from "./HardwareIcon"
-import { HardwareSupportIcon } from "./HardwareSupportIcon"
-import { LanguagesIcon } from "./LanguagesIcon"
-import { Layer2Icon } from "./Layer2Icon"
-import { MobileIcon } from "./MobileIcon"
-import { MultisigIcon } from "./MultisigIcon"
-import { NFTSupportIcon } from "./NFTSupportIcon"
-import { NonCustodialIcon } from "./NonCustodialIcon"
-import { OpenSourceWalletIcon } from "./OpenSourceWalletIcon"
-import { RPCImportingIcon } from "./RPCImportingIcon"
-import { SocialRecoverIcon } from "./SocialRecoverIcon"
-import { StakingIcon } from "./StakingIcon"
-import { SwapIcon } from "./SwapIcon"
-import { WithdrawCryptoIcon } from "./WithdrawCryptoIcon"
+import BrowserIcon from "./browser.svg"
+import BuyCryptoIcon from "./buy-crypto.svg"
+import ConnectDappsIcon from "./connect-dapps.svg"
+import DesktopIcon from "./desktop.svg"
+import DevicesIcon from "./devices.svg"
+import ENSSupportIcon from "./ens-support.svg"
+import ERC20SupportIcon from "./erc20-support.svg"
+import GasFeeCustomizationIcon from "./gas-fee-customization.svg"
+import HardwareIcon from "./hardware.svg"
+import HardwareSupportIcon from "./hardware-support.svg"
+import LanguagesIcon from "./languages.svg"
+import Layer2Icon from "./layer2.svg"
+import MobileIcon from "./mobile.svg"
+import MultisigIcon from "./multisig.svg"
+import NFTSupportIcon from "./nft-support.svg"
+import NonCustodialIcon from "./non-custodial.svg"
+import OpenSourceWalletIcon from "./open-source-wallet.svg"
+import RPCImportingIcon from "./rpc-importing.svg"
+import SocialRecoverIcon from "./social-recover.svg"
+import StakingIcon from "./staking.svg"
+import SwapIcon from "./swap.svg"
+import WithdrawCryptoIcon from "./withdraw-crypto.svg"
 
 export {
   BrowserIcon,
@@ -30,7 +29,6 @@ export {
   DevicesIcon,
   ENSSupportIcon,
   ERC20SupportIcon,
-  FilterBurgerIcon,
   GasFeeCustomizationIcon,
   HardwareIcon,
   HardwareSupportIcon,

@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-community-support.json",
+  "generatedAt": "2026-06-16T15:21:04.793Z",
+  "rootHash": "491c3f3b6a31",
+  "tree": {
+    "contentHash": "90b058883ad6",
+    "anchorHash": "6e010280d82a",
+    "children": {
+      "page-community-support-alert-description": {
+        "contentHash": "c859d4a1195b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-alert-title": {
+        "contentHash": "bce044483ca2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-bridge-tokens": {
+        "contentHash": "152ed6d36cf4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-common-misconceptions-description": {
+        "contentHash": "ec1855e3578a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-common-misconceptions": {
+        "contentHash": "0b0717a1c274",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-common-scam-tactics": {
+        "contentHash": "70f21cdf042a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-create-account": {
+        "contentHash": "98647d7f95d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-discord": {
+        "contentHash": "c8fa1aa8342c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-full-security-guide": {
+        "contentHash": "e91c327c6462",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-get-help": {
+        "contentHash": "fd64e81bf74d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-hero-subtitle-1": {
+        "contentHash": "e4d53c9c7649",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-hero-subtitle-2": {
+        "contentHash": "83129ece50d6",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8a52de320bc5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-community-support-hero-title": {
+        "contentHash": "3bfe5dd21951",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-identify-scam-tokens": {
+        "contentHash": "8ba6867e2274",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-is-ethereum-company": {
+        "contentHash": "731001492780",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-is-support-team": {
+        "contentHash": "136b62dd62c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-learn": {
+        "contentHash": "ce78afd0e6a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-lost-funds-scam": {
+        "contentHash": "d319c5bac2e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-lost-wallet-access": {
+        "contentHash": "b9fa47025235",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-meta-description": {
+        "contentHash": "1415ebd5d092",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-mine-ethereum": {
+        "contentHash": "426ade6c33f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-protect-yourself-description": {
+        "contentHash": "dce61a5eaefc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-protect-yourself": {
+        "contentHash": "dc42436fbac9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-recover-freeze-funds": {
+        "contentHash": "a1db683c7bd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-recovery-experts-scams": {
+        "contentHash": "df99bc2a0821",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-report-scam": {
+        "contentHash": "8193fd6d15de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-revoke-approvals": {
+        "contentHash": "5614a3ebfa8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-revoke-token-access": {
+        "contentHash": "5c616b9abf4f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-secure-remaining-funds": {
+        "contentHash": "09c00ae75894",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-sent-wrong-address": {
+        "contentHash": "ea5e8db7e728",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-something-went-wrong-description": {
+        "contentHash": "37cf6e6ffb8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-something-went-wrong": {
+        "contentHash": "ab827e3fe17d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-still-need-help-description": {
+        "contentHash": "35f75ead8f5b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-still-need-help": {
+        "contentHash": "5ff7d19e7579",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-stuck-transaction": {
+        "contentHash": "dc8825bc41d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-swap-tokens": {
+        "contentHash": "d7834a22fa0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-trace-funds": {
+        "contentHash": "3010cf7756e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-use-wallet": {
+        "contentHash": "2b58bdf9f156",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-using-ethereum-description": {
+        "contentHash": "f0f23051b62e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-support-using-ethereum": {
+        "contentHash": "44d27526e8ce",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-community-support-alert-description",
+      "page-community-support-alert-title",
+      "page-community-support-bridge-tokens",
+      "page-community-support-common-misconceptions-description",
+      "page-community-support-common-misconceptions",
+      "page-community-support-common-scam-tactics",
+      "page-community-support-create-account",
+      "page-community-support-discord",
+      "page-community-support-full-security-guide",
+      "page-community-support-get-help",
+      "page-community-support-hero-subtitle-1",
+      "page-community-support-hero-subtitle-2",
+      "page-community-support-hero-title",
+      "page-community-support-identify-scam-tokens",
+      "page-community-support-is-ethereum-company",
+      "page-community-support-is-support-team",
+      "page-community-support-learn",
+      "page-community-support-lost-funds-scam",
+      "page-community-support-lost-wallet-access",
+      "page-community-support-meta-description",
+      "page-community-support-mine-ethereum",
+      "page-community-support-protect-yourself-description",
+      "page-community-support-protect-yourself",
+      "page-community-support-recover-freeze-funds",
+      "page-community-support-recovery-experts-scams",
+      "page-community-support-report-scam",
+      "page-community-support-revoke-approvals",
+      "page-community-support-revoke-token-access",
+      "page-community-support-secure-remaining-funds",
+      "page-community-support-sent-wrong-address",
+      "page-community-support-something-went-wrong-description",
+      "page-community-support-something-went-wrong",
+      "page-community-support-still-need-help-description",
+      "page-community-support-still-need-help",
+      "page-community-support-stuck-transaction",
+      "page-community-support-swap-tokens",
+      "page-community-support-trace-funds",
+      "page-community-support-use-wallet",
+      "page-community-support-using-ethereum-description",
+      "page-community-support-using-ethereum"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

@@ -1,4 +1,6 @@
-import { TwImage } from "@/components/Image"
+"use client"
+
+import { Image } from "@/components/Image"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
 import pageviewsDark from "@/public/images/translation-program/pageviews-dark.png"
@@ -8,7 +10,7 @@ const TranslationChartImage = () => {
   const ethImage = useColorModeValue(pageviewsLight, pageviewsDark)
 
   return (
-    <TwImage
+    <Image
       src={ethImage}
       alt=""
       className="h-[500px] w-auto min-w-[263px] object-contain"

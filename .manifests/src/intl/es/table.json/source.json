@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/table.json",
+  "generatedAt": "2026-05-25T10:46:29.218Z",
+  "rootHash": "7ee9605dba2f",
+  "tree": {
+    "contentHash": "1a23e82b2664",
+    "anchorHash": "83153bb62b5d",
+    "children": {
+      "table-active": {
+        "contentHash": "96879611650f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "table-browser-engines": {
+        "contentHash": "afeebf7e9ecc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "table-desktop-platforms": {
+        "contentHash": "96da12053a6d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "table-filters": {
+        "contentHash": "546ebb8eb993",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "table-mobile-platforms": {
+        "contentHash": "43617fb733b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "table-reset-filters": {
+        "contentHash": "daee7606b339",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "table-showing": {
+        "contentHash": "d604310a789a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "table-what-are-you-looking-for": {
+        "contentHash": "e3ad92be491a",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "table-active",
+      "table-browser-engines",
+      "table-desktop-platforms",
+      "table-filters",
+      "table-mobile-platforms",
+      "table-reset-filters",
+      "table-showing",
+      "table-what-are-you-looking-for"
+    ]
+  },
+  "sourceCommitSha": "647106d896d17d983a5bec54d4f14ca23f4039cf"
+}

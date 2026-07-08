@@ -4,7 +4,7 @@ description: An overview of development networks and the tools available to help
 lang: en
 ---
 
-When building an Ethereum application with smart contracts, you'll want to run it on a local network to see how it works before deploying it.
+When building an [Ethereum](/) application with smart contracts, you'll want to run it on a local network to see how it works before deploying it.
 
 Similar to how you might run a local server on your computer for web development, you can use a development network to create a local blockchain instance to test your dapp. These Ethereum development networks provide features that allow for much faster iteration than a public testnet (for instance you don’t need to deal with acquiring ETH from a testnet faucet).
 
@@ -20,7 +20,7 @@ Development networks are essentially Ethereum clients (implementations of Ethere
 
 You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-node) but since development networks are purpose-built for development, they often come packed with convenient features like:
 
-- Deterministically seeding your local blockchain with data (e.g. accounts with ETH balances)
+- Deterministically seeding your local blockchain with data (e.g., accounts with ETH balances)
 - Instantly producing blocks with each transaction it receives, in order and with no delay
 - Enhanced debugging and logging functionality
 
@@ -35,22 +35,20 @@ A local Ethereum network designed for development. It allows you to deploy your 
 Hardhat Network comes built-in with Hardhat, an Ethereum development environment for professionals.
 
 - [Website](https://hardhat.org/)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [GitHub](https://github.com/NomicFoundation/hardhat)
 
 ### Local Beacon Chains {#local-beacon-chains}
 
 Some consensus clients have built-in tools for spinning up local beacon chains for testing purposes. Instructions for Lighthouse, Nimbus and Lodestar are available:
 
-- [Local testnet using Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Local testnet using Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Local testnet using Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
-- [Local testnet using Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Public Ethereum Test-chains {#public-beacon-testchains}
 
-There are also two maintained public test implementations of Ethereum: Goerli and Sepolia. The recommended testnet with long-term support is Goerli, which anyone is free to validate on. Sepolia is a newer, smaller chain also expected to be maintained for the foreseeable future, with a permissioned validator set (meaning there is no general access to new validators on this testnet). The Ropsten chain is expected to be deprecated in Q4 2022, and the Rinkeby chain is expected to be deprecated in Q2/Q3 2023.
+There are also two maintained public test implementations of Ethereum: Sepolia and Hoodi. The recommended testnet with long-term support is Hoodi, which anyone is free to validate on. Sepolia uses a permissioned validator set, meaning there is no general access to new validators on this testnet.
 
-- [Goerli Staking Launchpad](https://goerli.launchpad.ethereum.org/)
-- [Ropsten, Rinkeby & Kiln Deprecation Announcement](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodi Staking Launchpad](https://hoodi.launchpad.ethereum.org/)
 
 ### Kurtosis Ethereum Package {#kurtosis}
 
@@ -71,3 +69,7 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 - [Development frameworks](/developers/docs/frameworks/)
 - [Set up a local development environment](/developers/local-environment/)
+
+## Tutorials: Development networks & testing environments on Ethereum {#tutorials}
+
+- [Develop and test dApps with a multi-client local Ethereum testnet](/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/) _– How to spin up a local multi-client Ethereum testnet with Kurtosis for dApp development and testing._

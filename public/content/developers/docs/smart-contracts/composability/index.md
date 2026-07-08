@@ -1,6 +1,6 @@
 ---
 title: Smart contract composability
-description:
+description: Learn how smart contracts can be combined like Lego blocks to build complex dapps by reusing existing components.
 lang: en
 incomplete: true
 ---
@@ -29,7 +29,7 @@ Ethereum smart contracts are like public APIs, so anyone can interact with the c
 
 ### Shorter development cycle {#shorter-development-cycle}
 
-Composability reduces the work that developers have to do when creating [dapps](/dapps/#what-are-dapps). [As Naval Ravikant puts it:](https://twitter.com/naval/status/1444366754650656770) "Open source means every problem has to be solved once."
+Composability reduces the work that developers have to do when creating [dapps](/apps/#what-are-dapps). [As Naval Ravikant puts it:](https://twitter.com/naval/status/1444366754650656770) "Open source means every problem has to be solved once."
 
 If there is a smart contract that solves one problem, other developers can reuse it, so they don’t have to solve the same problem. This way, developers can take existing software libraries and add extra functionality to create new dapps.
 
@@ -71,6 +71,6 @@ Instead of building a custom authentication system or relying on centralized pro
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-- [Composability is Innovation](https://future.a16z.com/how-composability-unlocks-crypto-and-everything-else/)
+- [Composability is Innovation](https://a16zcrypto.com/posts/article/how-composability-unlocks-crypto-and-everything-else/)
 - [Why Composability Matters For Web3](https://hackernoon.com/why-composability-matters-for-web3)
 - [What is Composability?](https://blog.aragon.org/what-is-composability/#:~:text=Aragon,connect%20to%20every%20other%20piece.)

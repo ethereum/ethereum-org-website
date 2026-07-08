@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-06-17T23:29:55.979Z",
+  "englishManifestHash": "0580aecbc61e",
+  "placeholderOrder": [
+    "LINK-49ec46",
+    "LINK-0cd6d5",
+    "CODE-921d6c",
+    "CODE-921d6c",
+    "LINK-dac5dc",
+    "LINK-4390ed",
+    "CODE-20580d",
+    "CODE-20580d",
+    "CODE-757ab5",
+    "CODEBLOCK-4180b4",
+    "CODE-20580d",
+    "CODE-20580d",
+    "LINK-263acb",
+    "LINK-c82136",
+    "CODE-e06f46",
+    "CODE-20580d",
+    "LINK-3be441",
+    "CODE-a54942",
+    "CODE-20580d",
+    "CODE-757ab5",
+    "CODE-20580d",
+    "LINK-29ebd5",
+    "CODE-757ab5",
+    "CODE-20580d",
+    "LINK-45a4f3",
+    "CODE-20580d",
+    "CODE-277089",
+    "CODE-71d982",
+    "CODE-ab530a",
+    "LINK-ec23db",
+    "LINK-49ec46"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-4180b4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-921d6c": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x000…"
+      }
+    },
+    "CODE-20580d": {
+      "type": "inline-code",
+      "values": {
+        "content": "isValidSignature"
+      }
+    },
+    "CODE-757ab5": {
+      "type": "inline-code",
+      "values": {
+        "content": "_hash"
+      }
+    },
+    "CODE-e06f46": {
+      "type": "inline-code",
+      "values": {
+        "content": "signMessage(bytes calldata _data)"
+      }
+    },
+    "CODE-a54942": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x"
+      }
+    },
+    "CODE-277089": {
+      "type": "inline-code",
+      "values": {
+        "content": "bytes"
+      }
+    },
+    "CODE-71d982": {
+      "type": "inline-code",
+      "values": {
+        "content": "bytes32"
+      }
+    },
+    "CODE-ab530a": {
+      "type": "inline-code",
+      "values": {
+        "content": "message"
+      }
+    },
+    "LINK-49ec46": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1271"
+      }
+    },
+    "LINK-0cd6d5": {
+      "type": "link",
+      "values": {
+        "url": "https://safe.global/"
+      }
+    },
+    "LINK-dac5dc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum"
+      }
+    },
+    "LINK-4390ed": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Public-key_cryptography"
+      }
+    },
+    "LINK-263acb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol"
+      }
+    },
+    "LINK-c82136": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.stackexchange.com/questions/122635/signing-messages-as-a-gnosis-safe-eip1271-support"
+      }
+    },
+    "LINK-3be441": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol#L32"
+      }
+    },
+    "LINK-29ebd5": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1271"
+      }
+    },
+    "LINK-45a4f3": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2028"
+      }
+    },
+    "LINK-ec23db": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/safe-global/safe-contracts/issues/391#issuecomment-1075427206"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:29:55.979Z",
+      "status": "success"
+    }
+  }
+}

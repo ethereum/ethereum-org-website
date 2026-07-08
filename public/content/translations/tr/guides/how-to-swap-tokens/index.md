@@ -1,67 +1,69 @@
 ---
-title: Token'lar nasıl takar edilir?
-description: Ethereum üzerinde token takasına yönelik bir rehber.
+title: "Token takası nasıl yapılır"
+description: "Ethereum'da token takasının nasıl yapılacağına dair bir rehber."
 lang: tr
 ---
 
-# Token'lar nasıl takar edilir?
+Tüm favori token'larınızı listeleyen bir borsa aramaktan yoruldunuz mu? Token'ların çoğunu [merkeziyetsiz borsalar](/glossary/#dex) kullanarak takas edebilirsiniz.
 
-Favori token'larınızın hepsini listeleyen bir borsa aramaktan sıkıldınız mı? [Merkeziyetsiz borsaları](/glossary/#dex) kullanarak çoğu jetonu takas edebilirsiniz.
+Bir token takası, Ethereum ağında bulunan iki farklı varlığın değişimini içerir, örneğin ETH'yi DAI (bir [ERC-20](/glossary/#erc-20) token'ı) ile takas etmek gibi. Bu işlem çok hızlı ve ucuzdur. Token takas etmek için bir kripto cüzdanına sahip olmanız gerekir.
 
-Jeton takası, Ethereum ağında olan iki farklı varlığın takas edilmesini ifade eder, örneğin ETH ile DAI'yi ([ERC-20](/glossary/#erc-20) jetonu) takas etmek gibi. Bu süreç gayet hızlı ve ucuzdur. Token takas etmek için bir kripto cüzdanına ihtiyaç duyacaksınız.
+**Ön koşul:**
 
-**Ön koşullar:**
+- bir [kripto cüzdanına](/glossary/#wallet) sahip olmak; eğer yoksa, [nasıl Ethereum hesabı oluşturulur](/guides/how-to-create-an-ethereum-account/) hakkındaki bu rehberi takip edebilirsiniz
+- cüzdanınıza fon eklemek
 
-- bir [kripto cüzdana](/glossary/#wallet) sahip olmak, bu öğreticiyi takip edebilirsiniz: [Nasıl yapılır: Bir Ethereum hesabını "kaydetme"](/guides/how-to-create-an-ethereum-account/)
-- cüzdanınıza fon ekleme
-
-## 1. Cüzdanınızı seçtiğiniz merkeziyetsiz borsaya (DEX) bağlayın
+## 1. Cüzdanınızı seçtiğiniz merkeziyetsiz borsaya (DEX) bağlayın {#1-connect-your-wallet-to-the-decentralized-exchange-dex-of-your-choice}
 
 Bazı popüler borsalar şunlardır:
 
 - [Uniswap](https://app.uniswap.org/#/swap)
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
-- [Curve](https://curve.fi/#/ethereum/swap)
+- [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
-İlginizi çekti mi? [Merkeziyetsiz finansın (DeFi)](/defi/) ne olduğu ve bu yeni borsaların nasıl çalıştığı hakkında daha fazla bilgi edinin.
+İlginizi çekti mi? [Merkeziyetsiz finansın (DeFi)](/defi/) ne olduğu ve bu yeni tür borsaların nasıl çalıştığı hakkında daha fazla bilgi edinin.
 
-## 2. Takas etmek istediğiniz token çiftini seçin
+## 2. Takas etmek istediğiniz token çiftini seçin {#2-select-the-pair-of-tokens-you-wish-to-swap}
 
-Örneğin, ETH ve DAI. İki token'dan birinde fona sahip olduğunuzdan emin olun. ![Takas için yaygın arayüz](./swap1.png)
+Örneğin, ETH ve DAI. İki token'dan birinde fonunuz olduğundan emin olun.
+![Common interface for swapping](./swap1.png)
 
-## 3. Takas etmek istediğiniz token miktarını girin ve takasa tıklayın
+## 3. Alım satım yapmak istediğiniz token miktarını girin ve takas et'e tıklayın {#3-enter-the-amount-of-tokens-you-want-to-trade-and-click-swap}
 
-Borsa otomatik olarak alacağınız token miktarını hesaplayacaktır.
+Borsa, kaç token alacağınızı otomatik olarak hesaplayacaktır.
 
-![Takas için yaygın arayüz](./swap2.png)
+![Common interface for swapping](./swap2.png)
 
-## 4. İşlemi onaylayın
+## 4. İşlemi onaylayın {#4-confirm-the-transaction}
 
-İşlemin detaylarını gözden geçirin. Çirkin sürprizlerden kaçınmak için takas oranını ve diğer ücretleri kontrol edin.
+İşlemin detaylarını gözden geçirin. Kötü sürprizleri önlemek için döviz kurunu ve diğer ücretleri kontrol edin.
 
-![İşlemi gözden geçirmek için yaygın arayüz](./swap3.png)
+![Common interface for reviewing the transaction](./swap3.png)
 
-## 5. İşlemin yapılmasını bekleyin
+## 5. İşlemin işlenmesini bekleyin {#5-wait-for-the-transaction-to-be-processed}
 
-Herhangi bir blok zincir tarayıcısında işlemin ilerlemesini görebilirsiniz. Süreç 10 dakikadan fazla sürmemelidir.
+İşlemin ilerlemesini herhangi bir blokzincir gezgininde görüntüleyebilirsiniz. Bu işlem 10 dakikadan uzun sürmemelidir.
 
-İşlem yapıldığında otomatik olarak takas edilmiş token'ları cüzdanınıza alacaksınız.
+İşlem işlendikten sonra takas edilen token'ları otomatik olarak cüzdanınızda alacaksınız.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
+  <div>Daha fazla bilgi edinmek ister misiniz?</div>
   <ButtonLink href="/guides/">
-    Diğer rehberlerimizi inceleyin
+    Diğer rehberlerimize göz atın
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
-## Sıkça sorulan sorular
+## Sıkça sorulan sorular {#frequently-asked-questions}
 
-### Cüzdanımdan BTC için ETH takas edebilir miyim?
+### Cüzdanımdan ETH'yi BTC ile takas edebilir miyim? {#can-i-swap-eth-for-btc-from-my-wallet}
 
-Hayır, sadece Ethereum ağı üzerindeki token'ları takas edebilirsiniz, ETH, ERC-20 token'ları veya NFT'ler gibi. Sadece Bitcoin'in Ethereum üzerinde yaşayan "sarılı" versiyonlarını takas edebilirsiniz.
+Hayır, yalnızca ETH, ERC-20 token'ları veya NFT'ler gibi Ethereum ağına özgü token'ları takas edebilirsiniz. Yalnızca Bitcoin'in Ethereum üzerinde yaşayan "sarılmış" (wrapped) formlarını takas edebilirsiniz.
 
-### Slipaj nedir?
+### Fiyat kayması nedir? {#what-is-slippage}
 
-Beklenen takas oranı ile gerçek takas oranı arasındaki farktır.
+Beklediğiniz döviz kuru ile gerçek kur arasındaki farktır.

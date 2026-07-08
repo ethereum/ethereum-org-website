@@ -1,8 +1,10 @@
+"use client"
+
 import { useEffect, useState } from "react"
 
-import { MATOMO_LS_KEY } from "@/lib/utils/matomo"
+import { clearMatomoOptOutCache, MATOMO_LS_KEY } from "@/lib/utils/matomo"
 
-import Checkbox from "../../tailwind/ui/Checkbox"
+import Checkbox from "./ui/checkbox"
 
 const MatomoOptOut = () => {
   const [loading, setLoading] = useState<boolean>(true)
@@ -27,9 +29,10 @@ const MatomoOptOut = () => {
     setIsOptedOut(!checked)
     // Save selection to localStorage
     localStorage.setItem(MATOMO_LS_KEY, String(!checked))
+    clearMatomoOptOutCache()
   }
   return (
-    <div className="mb-4 mt-8 flex flex-col rounded border border-body-light bg-background p-6">
+    <div className="mt-8 mb-4 flex flex-col rounded border border-body-light bg-background p-6">
       <p className="mb-5 text-error">
         You can opt out of being tracked by Matomo Analytics and prevent the
         website from analysing the actions you take using the website. This will

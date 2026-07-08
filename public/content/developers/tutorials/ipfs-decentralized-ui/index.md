@@ -2,15 +2,16 @@
 title: IPFS for decentralized user interfaces
 description: This tutorial teaches the reader how to use IPFS to store the user interface for a dapp. Although the application's data and business logic are decentralized, without a censorship resistant user interface users might lose access to it anyway.
 author: Ori Pomerantz
-tags: ["ipfs", "user interface"]
+tags: ["ipfs", "dapps", "frontend"]
 skill: beginner
+breadcrumb: IPFS for dapp UIs
 lang: en
 published: 2024-06-29
 ---
 
 You wrote an incredible new dapp. You've even written a [user interface](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) for it. But now you're afraid that somebody will attempt to censor it by bringing down your user interface, which is just one server off in the cloud. In this tutorial you learn how to avoid censorship by putting your user interface up on **[interplanetary file system (IPFS)](https://ipfs.tech/developers/)** so anybody interested will be able to pin it on a server for future access.
 
-You could use a third-party service such as [Fleek](https://docs.fleek.xyz/docs) to do all the work. This tutorial is for people who want to do enough to understand what they are doing even if it is more work.
+You could use a third-party service such as [Fleek](https://resources.fleek.xyz/docs/) to do all the work. This tutorial is for people who want to do enough to understand what they are doing even if it is more work.
 
 ## Getting started locally {#getting-started-locally}
 
@@ -18,7 +19,7 @@ There are multiple [third-party IPFS providers](https://docs.ipfs.tech/how-to/wo
 
 1. Install the [IPFS user interface](https://docs.ipfs.tech/install/ipfs-desktop/#install-instructions).
 
-2. Create a directory with your web site. If you are using [Vite](https://vitejs.dev/), use this command:
+2. Create a directory with your web site. If you are using [Vite](https://vite.dev/), use this command:
 
    ```sh
    pnpm vite build
@@ -66,6 +67,12 @@ You cannot reliably delete IPFS files, so as long as you're modifying your user 
 
 Additionally, some packages have a problem with IPFS, so if your web site is very complicated that may not be a good solution. And of course, anything that relies on server integration cannot be decentralized just by having the client side on IPFS.
 
+## Discoverability via ENS {#discoverability}
+
+If you point an ENS name (like vitalik.eth) to your website, it will be considered a fully decentralized webpage and will be automatically pinned by the [dweb3.wtf](https://dweb3.wtf) service, as well as made searchable through the [web3compass.net](https://web3compass.net) search engine, much like DuckDuckGo, Brave Search or Google does for the traditional web.
+
 ## Conclusion {#conclusion}
 
 Just as Ethereum lets you decentralize the database and business logic aspects of your dapp, IPFS lets you decentralize the user interface. This lets you shut off one more attack vector against your dapp.
+
+[See here for more of my work](https://cryptodocguy.pro/).

@@ -4,8 +4,6 @@ description: Non-english resources to learn about Ethereum
 lang: en
 ---
 
-# Language resources {#language-resources}
-
 The Ethereum community is global and comprised of millions of non-English speakers.
 
 Our aim is to provide educational content in all languages and help overcome the language barriers that make onboarding people from all over the world to Ethereum a challenge.
@@ -29,7 +27,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 **News**
 
 - [BeInCrypto](http://www.beincrypto.com.br) - cryptocurrency news and articles, including a list of exchanges, available in Brazil
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Brazilian version of Cointelegraph, a major cryptocurrency news outlet
+- [Cointelegraph](https://cointelegraph.com.br/) - Brazilian version of Cointelegraph, a major cryptocurrency news outlet
 - [Livecoins](http://www.livecoins.com.br/ethereum) - cryptocurrency news and tools
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - cryptocurrency news and reports
 - [Modular Crypto](https://modularcrypto.xyz/) - cryptocurrency news and educational articles
@@ -39,7 +37,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [web3dev](https://www.web3dev.com.br/) - Content hub and Discord community for web 3 developers.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - resources for learning Web3 and DeFi
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - cryptocurrency news and education, including ‘Ethereum for beginners’ and ‘DeFi’ for beginners
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) - insights from the cryptocurrency space, education and blog
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) - insights from the cryptocurrency space, education and blog
 - [Cointimes](http://www.cointimes.com.br/) - cryptocurrency news and education
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - a guide answering the most frequently asked and fundamental crypto questions
 
@@ -52,7 +50,6 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - community maintained content, covering Ethereum, DeFi, NFT, Web3-related knowledge
 - [123ETH](https://123eth.org/) - a Portal to the Ethereum ecosystem
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - free online courses about cryptocurrency and its applications
-- [Ethereum Whitepaper](https://github.com/ethereum/wiki/wiki/[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - Chinese version of the Ethereum Whitepaper
 
 **Ethereum ecosystem**
 

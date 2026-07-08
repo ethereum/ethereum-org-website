@@ -20,7 +20,7 @@ type AnswerIconProps = {
  * Defaults to the `TrophyIcon` prior to answering a question
  */
 export const AnswerIcon = ({ answerStatus }: AnswerIconProps) => {
-  const commonIconClasses = "fill-background"
+  const commonIconClasses = "text-[28px] text-background"
 
   const IconWrapper = (props: ChildOnlyProp) => {
     const getWrapperBg = () => {

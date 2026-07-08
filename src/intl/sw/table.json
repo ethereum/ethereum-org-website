@@ -1,5 +1,10 @@
 {
-  "table-active": "hai",
-  "table-filters": "Chujio",
-  "table-showing": "Kuonesha "
+  "table-active": "amilifu",
+  "table-browser-engines": "Injini za kivinjari",
+  "table-desktop-platforms": "Majukwaa ya kompyuta ya mezani",
+  "table-filters": "Vichujio",
+  "table-mobile-platforms": "Majukwaa ya simu za mkononi",
+  "table-reset-filters": "Weka upya",
+  "table-showing": "Inaonyesha",
+  "table-what-are-you-looking-for": "Unatafuta nini?"
 }

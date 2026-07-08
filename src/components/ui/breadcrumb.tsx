@@ -1,9 +1,11 @@
 import * as React from "react"
-import Link, { LinkProps } from "next/link"
-import { LuChevronRight, LuMoreHorizontal } from "react-icons/lu"
+import { ChevronRight, MoreHorizontal } from "lucide-react"
+import { getTranslations } from "next-intl/server"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
+
+import { Link } from "@/i18n/navigation"
 
 interface BreadcrumbProps extends React.ComponentPropsWithoutRef<"nav"> {
   separator?: React.ReactNode
@@ -20,7 +22,7 @@ const BreadcrumbList = React.forwardRef<
   <ol
     ref={ref}
     className={cn(
-      "m-0 flex list-none flex-wrap items-center tracking-wider",
+      "m-0 flex list-none flex-wrap items-center text-sm tracking-wider",
       className
     )}
     {...props}
@@ -46,7 +48,7 @@ BreadcrumbItem.displayName = "BreadcrumbItem"
 const BreadcrumbLink = React.forwardRef<
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<"a"> &
-    LinkProps & {
+    React.ComponentPropsWithoutRef<typeof Link> & {
       asChild?: boolean
     }
 >(({ asChild, className, ...props }, ref) => {
@@ -56,7 +58,7 @@ const BreadcrumbLink = React.forwardRef<
     <Comp
       ref={ref}
       className={cn(
-        "uppercase !text-body-medium no-underline transition-colors hover:!text-primary",
+        "!text-body-medium uppercase no-underline transition-colors hover:!text-primary",
         className
       )}
       {...props}
@@ -74,7 +76,7 @@ const BreadcrumbPage = React.forwardRef<
     role="link"
     aria-disabled="true"
     aria-current="page"
-    className={cn("uppercase text-primary", className)}
+    className={cn("text-primary uppercase", className)}
     {...props}
   />
 ))
@@ -91,26 +93,28 @@ const BreadcrumbSeparator = ({
     className={cn("m-0", className)}
     {...props}
   >
-    {children ?? <LuChevronRight />}
+    {children ?? <ChevronRight />}
   </li>
 )
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
 
-const BreadcrumbEllipsis = ({
+const BreadcrumbEllipsis = async ({
   className,
   ...props
-}: React.ComponentProps<"span">) => (
-  <span
-    role="presentation"
-    aria-hidden="true"
-    className={cn("flex h-9 w-9 items-center justify-center", className)}
-    {...props}
-  >
-    <LuMoreHorizontal className="h-4 w-4" />
-    <span className="sr-only">More</span>
-  </span>
-)
-BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
+}: React.ComponentProps<"span">) => {
+  const t = await getTranslations("common")
+  return (
+    <span
+      role="presentation"
+      aria-hidden="true"
+      className={cn("flex h-9 w-9 items-center justify-center", className)}
+      {...props}
+    >
+      <MoreHorizontal className="size-4 text-md" aria-label={t("more")} />
+    </span>
+  )
+}
+BreadcrumbEllipsis.displayName = "BreadcrumbEllipsis"
 
 export {
   Breadcrumb,

@@ -1,12 +1,12 @@
+import { LucideIcon } from "lucide-react"
 import { StaticImageData } from "next/image"
-import type { Icon } from "@chakra-ui/react"
 
 export interface TokenBalance {
   name: string
   ticker: string
   amount: number
   usdConversion: number
-  Icon: typeof Icon
+  Icon: LucideIcon | React.FC<React.SVGProps<SVGElement>>
 }
 
 export interface Contact {

@@ -1,11 +1,11 @@
-import { useTranslation } from "next-i18next"
-
 import Emoji from "@/components/Emoji"
 
 import { cn } from "@/lib/utils/cn"
 
 import { Flex } from "../ui/flex"
 import { BaseLink } from "../ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type AssetDownloadArtistProps = {
   artistName: string

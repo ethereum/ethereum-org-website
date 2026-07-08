@@ -1,94 +1,92 @@
 ---
-title: Akıllı sözleşme güvenlik yönergeleri
-description: Dapp'inizi oluştururken göz önünde bulundurmanız gereken güvenlik yönergelerinin bir kontrol listesi
+title: "Akıllı sözleşme güvenlik yönergeleri"
+description: "Dapp'inizi oluştururken göz önünde bulundurmanız gereken güvenlik yönergelerinin bir kontrol listesi"
 author: "Trailofbits"
-tags:
-  - "solidity"
-  - "akıllı sözleşmeler"
-  - "güvenlik"
+tags: ["Solidity", "akıllı sözleşmeler", "güvenlik"]
 skill: intermediate
+breadcrumb: "Güvenlik yönergeleri"
 lang: tr
 published: 2020-09-06
-source: Güvenli sözleşmeler oluşturmak
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 
 Daha güvenli akıllı sözleşmeler oluşturmak için bu üst düzey önerileri izleyin.
 
-## Tasarım rehberi {#design-guidelines}
+## Tasarım yönergeleri {#design-guidelines}
 
-Herhangi bir kod satırı yazmadan önce sözleşmenin tasarımı önceden tartışılmalıdır.
+Sözleşmenin tasarımı, herhangi bir kod satırı yazılmadan önce önceden tartışılmalıdır.
 
-### Belgeler ve özellikler {#documentation-and-specifications}
+### Belgelendirme ve spesifikasyonlar {#documentation-and-specifications}
 
-Belgeler farklı seviyelerde yazılabilir ve sözleşmeler uygulanırken güncellenmelidir:
+Belgelendirme farklı seviyelerde yazılabilir ve sözleşmeler uygulanırken güncellenmelidir:
 
-- **Sözleşmelerin ne yaptığını ve kod tabanındaki varsayımları açıklayan, sistemin sade bir İngilizce açıklaması**.
-- Sözleşme etkileşimleri ve sistemin durum makinesi dahil **şema ve yapısal diyagramlar**. [Slither yazıcıları](https://github.com/crytic/slither/wiki/Printer-documentation), bu şemaların oluşturulmasına yardımcı olabilir.
-- **Kod belgeleri** ile [Natspec formatı](https://solidity.readthedocs.io/en/develop/natspec-format.html) Solidity için kullanılabilir.
+- **Sistemin sade bir dille açıklaması**, sözleşmelerin ne yaptığını ve kod tabanındaki varsayımları açıklamalıdır.
+- **Şema ve mimari diyagramlar**, sözleşme etkileşimlerini ve sistemin durum (state) makinesini içermelidir. [Slither yazıcıları](https://github.com/crytic/slither/wiki/Printer-documentation) bu şemaları oluşturmaya yardımcı olabilir.
+- **Kapsamlı kod belgelendirmesi**, Solidity için [NatSpec formatı](https://docs.soliditylang.org/en/develop/natspec-format.html) kullanılabilir.
 
-### Zincir üstü ve zincir dışı hesaplama {#on-chain-vs-off-chain-computation}
+### Zincir içi ve zincir dışı hesaplama {#onchain-vs-offchain-computation}
 
-- **Zincir dışı bırakabileceğiniz kadar kod saklayın.** Zincir üstü katmanı küçük tutun. Verileri zincir dışı kodla, zincir üstünde doğrulamanın basit olacağı şekilde ön işleme tabi tutun. Sıralı bir listeye mi ihtiyacınız var? Listeyi zincir dışı sıralayın, ardından yalnızca zincirdeki sırasını kontrol edin.
+- **Mümkün olduğunca çok kodu zincir dışı tutun.** Zincir içi katmanı küçük tutun. Verileri zincir dışı kodla, zincir içi doğrulamanın basit olacağı şekilde önceden işleyin. Sıralı bir listeye mi ihtiyacınız var? Listeyi zincir dışı sıralayın, ardından zincir içinde yalnızca sırasını kontrol edin.
 
 ### Yükseltilebilirlik {#upgradeability}
 
-[Blog gönderimizde](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/) farklı yükseltilebilirlik çözümlerini tartıştık. Herhangi bir kod yazmadan önce yükseltilebilirliği desteklemek için bilinçli bir seçim yapın. Karar, kodumuzu nasıl yapılandırdığınızı etkileyecektir. Genel olarak, şunları öneririz:
+Farklı yükseltilebilirlik çözümlerini [blog yazımızda](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/) tartıştık. Herhangi bir kod yazmadan önce yükseltilebilirliği destekleyip desteklememe konusunda bilinçli bir seçim yapın. Bu karar, kodunuzu nasıl yapılandıracağınızı etkileyecektir. Genel olarak şunları öneriyoruz:
 
-- **Yükseltilebilirlik yerine [sözleşme geçişini](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/) tercih etme.** Geçiş sistemi, dezavantajları olmaksızın yükseltilebilir sistemle aynı avantajların çoğuna sahiptir.
-- **delegatecallproxy yerine veri ayrımı modelini kullanma.** Projenizin net bir soyutlama ayrımı vardır, veri ayrımı kullanılarak yükseltilebilirlik yalnızca birkaç ayarlama gerektirecektir. Delegecallproxy, EVM uzmanlığı gerektirir ve yüksek oranda hataya açıktır.
-- **Dağıtımdan önce taşıma/yükseltme prosedürünü belgeleyin.** Herhangi bir yönerge olmadan stres altında tepki vermeniz gerekiyorsa, hata yaparsınız. İzlenecek prosedürü önceden yazın. Şunları içermeli:
+- **Yükseltilebilirlik yerine [sözleşme taşıma (migration)](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/) işlemini tercih edin.** Taşıma sistemleri, yükseltilebilir sistemlerle aynı avantajların çoğuna sahiptir, ancak onların dezavantajlarını barındırmaz.
+- **delegatecallproxy yerine veri ayırma (data separation) modelini kullanın.** Projenizin net bir soyutlama ayrımı varsa, veri ayırma kullanarak yükseltilebilirlik yalnızca birkaç ayarlama gerektirecektir. delegatecallproxy, EVM uzmanlığı gerektirir ve hataya oldukça açıktır.
+- **Dağıtımdan önce taşıma/yükseltme prosedürünü belgeleyin.** Herhangi bir yönerge olmadan stres altında tepki vermek zorunda kalırsanız hata yaparsınız. İzlenecek prosedürü önceden yazın. Şunları içermelidir:
   - Yeni sözleşmeleri başlatan çağrılar
-  - Anahtarlar nerede saklanır ve bunlara nasıl erişilir
-  - Dağıtımın nasıl kontrol edileceği! Bir dağıtım sonrası komut dosyası geliştirin ve test edin.
+  - Anahtarların nerede saklandığı ve onlara nasıl erişileceği
+  - Dağıtımın nasıl kontrol edileceği! Dağıtım sonrası bir betik geliştirin ve test edin.
 
 ## Uygulama yönergeleri {#implementation-guidelines}
 
-**Sadelik sağlamaya çalışın.** Daima amacınıza uyan en basit çözümü kullanın. Ekibinizin herhangi bir üyesi çözümünüzü anlayabilmelidir.
+**Basitlik için çabalayın.** Her zaman amacınıza uyan en basit çözümü kullanın. Ekibinizin herhangi bir üyesi çözümünüzü anlayabilmelidir.
 
-### Fonksiyon kompozisyonu {#function-composition}
+### İşlev kompozisyonu {#function-composition}
 
-Kod tabanınızın mimarisi, kodunuzun gözden geçirilmesini kolaylaştırmalıdır. Doğruluğu hakkında mantık kurma yeteneğini azaltan mimari seçimlerden kaçının.
+Kod tabanınızın mimarisi, kodunuzun incelenmesini kolaylaştırmalıdır. Doğruluğu hakkında akıl yürütme yeteneğini azaltan mimari seçimlerden kaçının.
 
-- Ya birden çok sözleşme aracılığıyla ya da benzer fonksiyonları aynı grupta toplayarak (örneğin kimlik doğrulama, aritmetik vb.) **sisteminizin mantığını bölün**.
-- **Açık bir amaç ile küçük işlevler yazın.** Bu, incelemeyi kolaylaştıracak ve ayrı bileşenlerin test edilmesini sağlayacaktır.
+- **Sisteminizin mantığını bölün**, bunu ya birden fazla sözleşme aracılığıyla ya da benzer işlevleri bir araya gruplayarak (örneğin; kimlik doğrulama, aritmetik, ...) yapın.
+- **Net bir amacı olan küçük işlevler yazın.** Bu, incelemeyi kolaylaştıracak ve bireysel bileşenlerin test edilmesine olanak tanıyacaktır.
 
 ### Kalıtım {#inheritance}
 
-- **Kalıtımı yönetilebilir seviyede tutun.** Mantığı bölmek için kalıtım kullanılmalıdır ancak projeniz kalıtım ağacının derinliğini ve genişliğini en aza indirmeyi hedeflemelidir.
-- **Sözleşmelerin hiyerarşisini kontrol etmek için Slither'ın [kalıtım yazıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#inheritance-graph) kullanın.** Kalıtım yazıcısı, hiyerarşinin boyutunu gözden geçirmenize yardımcı olur.
+- **Kalıtımı yönetilebilir tutun.** Kalıtım mantığı bölmek için kullanılmalıdır, ancak projeniz kalıtım ağacının derinliğini ve genişliğini en aza indirmeyi hedeflemelidir.
+- **Sözleşmelerin hiyerarşisini kontrol etmek için Slither'ın [kalıtım yazıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#inheritance-graph) kullanın.** Kalıtım yazıcısı, hiyerarşinin boyutunu incelemenize yardımcı olacaktır.
 
 ### Olaylar {#events}
 
-- **Tüm önemli işlemleri kaydedin.** Olaylar, geliştirme sırasında sözleşmede hata ayıklamaya ve dağıtımdan sonra sözleşmeyi izlemeye yardımcı olur.
+- **Tüm önemli işlemleri günlüğe kaydedin.** Olaylar, geliştirme sırasında sözleşmede hata ayıklamaya ve dağıtımdan sonra onu izlemeye yardımcı olacaktır.
 
-### Bilinen hatalardan kaçının {#avoid-known-pitfalls}
+### Bilinen tuzaklardan kaçının {#avoid-known-pitfalls}
 
-- **En yaygın güvenlik sorunlarının farkında olun.** Yaygın sorunlar hakkında bilgi edinmek için [Ethernaut CTF](https://ethernaut.openzeppelin.com/), [Capture the Ether](https://capturetheether.com/) veya [Not so smart contracts](https://github.com/crytic/not-so-smart-contracts/) gibi birçok çevrimiçi kaynak bulunur.
-- **[Solidity belgelerindeki](https://solidity.readthedocs.io/en/latest/) uyarı bölümlerine dikkat edin.** Uyarı bölümleri, dilin açık olmayan davranışı hakkında sizi bilgilendirecektir.
+- **En yaygın güvenlik sorunlarının farkında olun.** Yaygın sorunlar hakkında bilgi edinmek için [Ethernaut CTF](https://ethernaut.openzeppelin.com/), [Capture the Ether](https://capturetheether.com/) veya [Not so smart contracts](https://github.com/crytic/not-so-smart-contracts/) gibi birçok çevrim içi kaynak bulunmaktadır.
+- **[Solidity belgelendirmesindeki](https://docs.soliditylang.org/en/latest/) uyarı bölümlerinin farkında olun.** Uyarı bölümleri, dilin belirgin olmayan davranışları hakkında sizi bilgilendirecektir.
 
 ### Bağımlılıklar {#dependencies}
 
-- **İyi test edilmiş kütüphaneleri kullanın.** İyi test edilmiş kütüphanelerden kod içe aktarmak, hatalı kod yazma olasılığınızı azaltır. Eğer bir ERC20 sözleşmesi yazmak istiyorsanız, [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20) kullanın.
-- **Bir bağımlılık yöneticisi kullanın; kodu kopyalayıp yapıştırmaktan kaçının.** Harici bir kaynak kullanıyorsanız, onu orijinal kaynakla güncel tutmalısınız.
+- **İyi test edilmiş kütüphaneler kullanın.** İyi test edilmiş kütüphanelerden kod içe aktarmak, hatalı kod yazma olasılığınızı azaltacaktır. Bir ERC-20 sözleşmesi yazmak istiyorsanız [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20) kullanın.
+- **Bir bağımlılık yöneticisi kullanın; kodu kopyalayıp yapıştırmaktan kaçının.** Harici bir kaynağa güveniyorsanız, onu orijinal kaynakla güncel tutmalısınız.
 
 ### Test ve doğrulama {#testing-and-verification}
 
-- **Kapsamlı birim testleri yazın.** Yüksek kaliteli yazılım oluşturmak için kapsamlı bir test paketi çok önemlidir.
-- **[Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) ve [Manticore](https://github.com/trailofbits/manticore) özel kontrolleri ve özellikleri yazın.** Otomatikleştirilmiş araçlar sözleşmenizin güvenli olduğundan emin olmaya yardımcı olacaktır. Etkili kontrollerin ve özelliklerin nasıl yazılacağını öğrenmek için bu kılavuzun geri kalanını gözden geçirin.
-- **[crytic.io](https://crytic.io/) kullanın.** Crytic, GitHub ile bütünleşir, özel Slither algılayıcılarına erişim sağlar ve Echidna'dan özel özellik kontrolleri çalıştırır.
+- **Kapsamlı birim testleri yazın.** Yüksek kaliteli yazılım oluşturmak için geniş çaplı bir test paketi çok önemlidir.
+- **[Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) ve [Manticore](https://github.com/trailofbits/manticore) özel kontrolleri ve özellikleri yazın.** Otomatik araçlar, sözleşmenizin güvenli olmasını sağlamaya yardımcı olacaktır. Verimli kontrollerin ve özelliklerin nasıl yazılacağını öğrenmek için bu kılavuzun geri kalanını inceleyin.
+- **[crytic.io](https://crytic.io/) kullanın.** Crytic, GitHub ile entegre çalışır, özel Slither dedektörlerine erişim sağlar ve Echidna'dan özel özellik kontrolleri çalıştırır.
 
 ### Solidity {#solidity}
 
-- **0.4 ve 0.6 yerine Solidity 0.5'i tercih edin.** Bize göre Solidity 0.5, 0.4'ten daha güvenli ve daha iyi yerleşik uygulamalara sahip. Solidity 0.6'nın üretim için fazla dengesiz olduğu tespit edildi ve olgunlaşması için zamana ihtiyacı var.
-- **Derlemek için dengeli bir sürüm kullanın; uyarıları kontrol etmek için en son sürümü kullanın.** Kodunuzun en son derleyici sürümüyle ilgili bildirilen herhangi bir sorun olup olmadığını kontrol edin. Bununla birlikte, Solidity'nin hızlı bir yayın döngüsü ve bir derleyici hataları geçmişi vardır, bu nedenle dağıtım için en son sürümü önermiyoruz (bkz. Slither'ın [solc sürümü önerisi](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33)).
-- **Satır içi derleme kullanmayın.** Derleme, EVM uzmanlığı gerektirir. Sarı kağıtta _ustalaşmadıysanız_ EVM kodu yazmayın.
+- **Solidity 0.5'i 0.4 ve 0.6'ya tercih edin.** Bize göre Solidity 0.5, 0.4'ten daha güvenlidir ve daha iyi yerleşik uygulamalara sahiptir. Solidity 0.6'nın üretim için çok kararsız olduğu kanıtlanmıştır ve olgunlaşması için zamana ihtiyacı vardır.
+- **Derlemek için kararlı bir sürüm kullanın; uyarıları kontrol etmek için en son sürümü kullanın.** Kodunuzun en son derleyici sürümüyle bildirilen hiçbir sorunu olmadığını kontrol edin. Ancak Solidity'nin hızlı bir sürüm döngüsü ve derleyici hataları geçmişi vardır, bu nedenle dağıtım için en son sürümü önermiyoruz (Slither'ın [solc sürüm önerisine](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) bakın).
+- **Satır içi (inline) assembly kullanmayın.** Assembly, EVM uzmanlığı gerektirir. Sarı Bülten'e (Yellow Paper) _tam anlamıyla hakim_ değilseniz EVM kodu yazmayın.
 
 ## Dağıtım yönergeleri {#deployment-guidelines}
 
 Sözleşme geliştirilip dağıtıldıktan sonra:
 
-- **Sözleşmelerinizi izleyin.** Kayıtları izleyin ve sözleşme veya cüzdan güvenliğinin ihlal edilmesi durumunda tepki vermeye hazır olun.
-- **İletişim bilgilerinizi [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts)'e ekleyin.** Bu liste, bir güvenlik açığı tespit edilirse üçüncü tarafların sizinle iletişim kurmasına yardımcı olur.
-- **Ayrıcalıklı kullanıcıların cüzdanlarını güvence altına alın.** [en iyi yönetim uygulamalarımızı](https://blog.trailofbits.com/2018/11/27/10-rules-for-the-secure-use-of-cryptocurrency-hardware-wallets/) takip edin.
-- **Olay planına bir karşılık geliştirin.** Akıllı sözleşmelerinizin güvenliğinin ihlal edilebileceğini unutmayın. Sözleşmeleriniz hata içermese bile bir saldırgan, sözleşme sahibinin anahtarlarının kontrolünü ele geçirebilir.
+- **Sözleşmelerinizi izleyin.** Günlükleri takip edin ve sözleşme veya cüzdanın ele geçirilmesi durumunda tepki vermeye hazır olun.
+- **İletişim bilgilerinizi [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts) listesine ekleyin.** Bu liste, bir güvenlik açığı keşfedildiğinde üçüncü tarafların sizinle iletişime geçmesine yardımcı olur.
+- **Ayrıcalıklı kullanıcıların cüzdanlarını güvence altına alın.** Anahtarları donanım cüzdanlarında saklıyorsanız [en iyi uygulamalarımızı](https://blog.trailofbits.com/2018/11/27/10-rules-for-the-secure-use-of-cryptocurrency-hardware-wallets/) izleyin.
+- **Bir olay müdahale planınız olsun.** Akıllı sözleşmelerinizin ele geçirilebileceğini göz önünde bulundurun. Sözleşmeleriniz hatasız olsa bile, bir saldırgan sözleşme sahibinin anahtarlarının kontrolünü ele geçirebilir.

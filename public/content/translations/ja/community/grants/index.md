@@ -1,47 +1,69 @@
 ---
-title: イーサリアム・ファウンデーションとコミュニティの助成プログラム
-description: イーサリアムエコシステム全体の助成プログラムリスト
+title: "イーサリアム財団およびコミュニティの助成金プログラム"
+description: "イーサリアムエコシステム全体の助成金プログラムの一覧。"
 lang: ja
 ---
 
-# イーサリアムの助成プログラム {#ethereum-grants}
+# イーサリアムの助成金 {#ethereum-grants}
 
-下記のプログラムは、イーサリアムエコシステムの成功と成長を促進するプロジェクトに対して、さまざまな助成を提供しています。 これを手引きとして助成プログラムを探し、申請を行い、ご自身のイーサリアムプロジェクトの成功につなげてください。
+以下にリストされているプログラムは、[イーサリアム](/)エコシステムの成功と成長を促進するために取り組んでいるプロジェクトに対して、さまざまな資金提供（助成金）を提供しています。次のイーサリアムプロジェクトを成功させるための資金を見つけ、申請するためのガイドとしてご活用ください。
 
-これはコミュニティにより収集され、公開されているリストです。 もし不足や誤りがある場合は、このページを編集してください。
+このリストはコミュニティによって管理されています。不足している情報や誤りがある場合は、このページを編集してください！
 
-## イーサリアムエコシステム全般 {#broad-ethereum-ecosystem}
+<Alert variant="update" className="mt-8">
+<Emoji text="🎗️" />
+<div>創業者の方で、ビジネスの加速に支援が必要ですか？[Founders Support（創業者サポート）へアクセスしてください](/founders/)</div>
+</Alert>
 
-これらのプログラムは、広範囲のプロジェクトに助成金を提供し、イーサリアムエコシステムを幅広くサポートするものです。 拡張性、コミュニティ構築、セキュリティ、プライバシーなどのソリューションが対象となり、 どれか1つのイーサリアムプラットフォームに固有の助成プログラムではありません。 不明な場合は、まずはこちらから始めてみてください。
+## 幅広いイーサリアムエコシステム {#broad-ethereum-ecosystem}
 
-- [EFエコシステム・サポート・プログラム](https://esp.ethereum.foundation) - _ユニバーサルツール、インフラストラクチャ、研究、公共財を対象とした、イーサリアムにプラスとなるオープンソース・プロジェクトへの資金提供_
-- [Moloch DAO](https://www.molochdao.com/) - _プライバシー、レイヤー2スケーリング、クライアントセキュリティなど_
-- [分散型自律組織(DAO)の助成](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成プログラムを提供する組織のGoogleスプレッドシート_
-- [学術助成金](https://esp.ethereum.foundation/academic-grants) - _イーサリアム関連の学術研究をサポートする助成金_
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworksは、すべての助成金、RFP、バグ報奨金をディレクトリとしてまとめています。_
+これらのプログラムは、幅広いプロジェクトに助成金を提供することで、イーサリアムエコシステム全体をサポートしています。これには、スケーラビリティ、コミュニティ構築、セキュリティ、プライバシーなどのソリューションが含まれます。これらの助成金は特定のイーサリアムプラットフォームに限定されないため、どこから始めればよいかわからない場合に適しています。
 
-## 固有のプロジェクト {#project-specific}
+- [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _イーサリアムに利益をもたらすオープンソースプロジェクトへの資金提供。特に汎用ツール、インフラストラクチャ、研究、公共財に重点を置いています_
+- [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Ecosystem Support Programが支援する1,000以上のプロジェクトを検索できるディレクトリ_
+- [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _イーサリアム関連の学術研究を支援する助成金_
 
-下記は、独自のテクノロジーの開発とテストを目的とした、プロジェクトに特化した助成プログラムです。
 
-- [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/)の分散型自律組織(DAO)助成プログラム_
-- [Balancer](https://grants.balancer.community/) – _[Balancer](https://balancer.fi/)エコシステムファンド_
-- [Chainlink助成プログラム](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) コミュニティ助成プログラム_
-- [分散型助成金プログラム](https://governance.decentraland.org/grants/) – _[分散型](https://decentraland.org/)DAOメタバース_
-- [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/)金融エコシステム_
-- [MetaMaskプログラム](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/)従業員主導のDAO助成プログラム_
-- [SKALE Network助成金プログラム](https://skale.space/developers#grants) - _[SKALE Network](https://skale.space/)エコシステム_
-- [Swarm Foundation助成金プログラム](https://my.ethswarm.org/grants) - _[Swarm Foundation](https://www.ethswarm.org/)エコシステム_
-- [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/)エコシステム_
-- [ユニスワップ助成金プログラム](https://www.uniswapfoundation.org/approach) – _[ユニスワップ](https://uniswap.org/)コミュニティ_
+## 助成金リストのアグリゲーターとプラットフォーム {#grant-list-aggregators}
 
-## クオドラティック・ファンディング {#quadratic-funding}
+これらのリソースは、イーサリアムエコシステム全体におけるさまざまな助成金の機会を収集・整理しており、プロジェクトのニーズに合った資金提供の機会を見つけやすくしています。特定の資金ニーズに基づいて最も関連性の高いリソースを見つけやすくするため、ペルソナ別に整理しました。
 
-イーサリアムのオープンソースのルーツにより、「クオドラティック・ファンディング」という新しく、興味深い資金調達モデルが成長してきています。 クアドラティック・ファンディングは、将来的にすべての種類の公共財の資金供給方法を改善できる可能性を秘めており、 最もユニークな必要性があるプロジェクトが、最多の資金を受け取るようになっています。 つまり、最も多くの人々が必要なものに資金が渡り、人々の生活の向上につながるプロジェクトです。 [クオドラティック・ファンディングの詳細](/defi/#quadratic-funding)
+### すべての助成金希望者向け: 総合ディレクトリ {#comprehensive-directories}
 
-- [Gitcoin](https://gitcoin.co/grants)
-- [clr.fund](https://clr.fund/)
+これらの一般的なプラットフォームは、Web3スペース全体の助成金を幅広く網羅しており、資金調達を探しているすべての人にとって役立つ出発点となります。
 
-## イーサリアムの人材募集 {#work-in-ethereum}
+- [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - 毎週更新される、すべてのWeb3助成金プログラムのディレクトリ
+- [Etherscan Grant Directory](https://etherscan.io/directory/Others/Grant) - イーサリアムのブロック・エクスプローラー上にある助成金の厳選リスト
 
-自分自身のプロジェクトを始める準備ができていなくても、 イーサリアムエコシステムに取り組み、貢献する情熱的な人材を積極的に探している何百もの企業があります。 詳細は [イーサリアム関連の求人をチェックしてみてください](/community/get-involved/#ethereum-jobs)。
+### 開発者およびビルダー向け {#for-developers-and-builders}
+
+- [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _助成金プログラムの公開Airtableデータベース_
+- [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Web3助成金の機会をまとめたGoogleスプレッドシート_
+- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAOおよび[The Arbitrum Foundation](https://arbitrum.foundation/)
+
+### 分散型金融 (DeFi) プロジェクトおよび金融アプリケーション向け {#for-defi-projects}
+
+- [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _暗号資産およびWeb3助成金の包括的なリスト_
+- [Uniswap Foundation Grants](https://www.uniswapfoundation.org/build) - _Unichainおよびユニスワップ v4の助成金、ならびにDeFiビルダーへのサポート_
+
+### DAOコントリビューターおよびガバナンスのイノベーター向け {#for-dao-contributors}
+
+コミュニティ主導のプロジェクトやガバナンスの実験に関するリソース:
+
+- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成金を提供している組織のGoogleスプレッドシート_
+- [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _包括的なWeb3助成金マップ_
+
+### 公共財とインパクト {#public-goods-and-impact}
+
+これらのプログラムは、より広範なコミュニティ、公共財、およびインパクト・イニシアチブに利益をもたらすプロジェクトへの資金提供に焦点を当てています。これには、助成金提供者のほか、[クアドラティック・ファンディング](/defi/#quadratic-funding)などのオンチェーン資金配分メカニズムを活用した寄付プラットフォームが含まれます。
+
+- [Gitcoin](https://www.gitcoin.co/program) - _Gitcoin Grantsは、複数の資本配分メカニズムを活用して、イーサリアムエコシステム内のオープンソースプロジェクトや公共財に資金を提供します_
+- [Octant](https://octant.app/home) - _公益と個人の経済的エンパワーメントのバランスを取る公共財資金提供エコシステム_
+- [Giveth](https://giveth.io/) - _追加手数料なしで、社会貢献プロジェクトへの直接寄付を可能にする暗号資産寄付プラットフォーム_
+- [Artizen](https://artizen.fund/) - _アート、科学、テクノロジー、文化のフロンティアにおける新しいプロジェクトの資金調達をクリエイターがマッチングできるよう支援します_
+- [Quadratic Accelerator](https://qacc.giveth.io/) - _クアドラティック・ファンディングを使用して、公共財に利益をもたらすプロジェクトを支援するスタートアップ・アクセラレーター・プログラム_
+
+
+## イーサリアムで働く {#work-in-ethereum}
+
+まだ自分のプロジェクトを始める準備ができていませんか？イーサリアムエコシステムで働き、貢献してくれる情熱的な人材を積極的に探している企業は何百もあります。詳細情報をお探しですか？[イーサリアム関連の求人をチェックしてください](/community/get-involved/#ethereum-jobs)

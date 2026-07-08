@@ -1,73 +1,73 @@
 ---
-title: Yan zincirler
-description: Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak yan zincirlere giriş.
+title: Yan Zincirler
+description: "Ethereum topluluğu tarafından halihazırda kullanılan bir ölçeklendirme çözümü olarak yan zincirlere giriş."
 lang: tr
 sidebarDepth: 3
 ---
 
-Yan zincir, Ethereum'dan bağımsız çalışan ve Ethereum Ana Ağı'na bir köprü ile bağlı olan ayrı bir blokzincirdir. Yan zincirler farklı blok parametrelerine ve genellikle işlemlerin verimli işlenmesi için tasarlanmış [mutabakat algoritmalarına](/developers/docs/consensus-mechanisms/) sahip olabilirler. Ethereum'un güvenlik özelliklerini taşımadığı için yan zincir kullanmanın artıları ve eksileri vardır. [Katman 2 ölçeklendirme çözümlerinin](/layer-2/) aksine, yan zincirler işlem bilgilerini ve durum değişikliklerini Ethereum Ana Ağı'na göndermezler.
+Bir yan zincir, [Ethereum](/)'dan bağımsız çalışan ve Ethereum Ana Ağı'na iki yönlü bir köprü ile bağlanan ayrı bir blokzincirdir. Yan zincirler, genellikle işlemlerin verimli bir şekilde işlenmesi için tasarlanmış ayrı blok parametrelerine ve [mutabakat algoritmalarına](/developers/docs/consensus-mechanisms/) sahip olabilir. Ancak, Ethereum'un güvenlik özelliklerini devralmadıkları için bir yan zincir kullanmak bazı ödünler vermeyi gerektirir. [Katman 2 (l2) ölçeklendirme çözümlerinin](/layer-2/) aksine, yan zincirler durum değişikliklerini ve işlem verilerini Ethereum Ana Ağı'na geri göndermez.
 
-Yan zincirler, yüksek verim elde etmek için merkeziyetsizlik veya güvenlikten de bir miktar ödün verirler ([ölçeklendirme üçlü çelişmesi](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Bununla birlikte, yükseltmeler için [vizyon bildirisinde](/roadmap/vision/) özetlendiği üzere Ethereum, merkeziyetsizlikten ve güvenlikten ödün vermeyen ölçeklendirme amacıyla geliştirilmiştir.
+Yan zincirler ayrıca yüksek işlem kapasitesi elde etmek için bir miktar merkeziyetsizlikten veya güvenlikten fedakarlık eder ([ölçeklenebilirlik üçlemi](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Ancak Ethereum, merkeziyetsizlik ve güvenlikten ödün vermeden ölçeklenmeye kararlıdır.
 
 ## Yan zincirler nasıl çalışır? {#how-do-sidechains-work}
 
-Yan zincirler farklı geçmişleri, geliştirme yol haritaları ve tasarım hassasiyetleri olan bağımsız blokzincirlerdir. Yan zincir görünüşte Ethereum ile benzerlikler taşısa da birkaç ayırıcı özelliği vardır.
+Yan zincirler; farklı geçmişlere, geliştirme yol haritalarına ve tasarım hususlarına sahip bağımsız blokzincirlerdir. Bir yan zincir Ethereum ile yüzeysel bazı benzerlikler paylaşsa da, çeşitli ayırt edici özelliklere sahiptir.
 
 ### Mutabakat algoritmaları {#consensus-algorithms}
 
-Yan zincirleri özel yapan niteliklerden biri (yani Ethereum'dan farklı) kullandığı mutabakat algoritmasıdır. Yan zincirler mutabakat konusunda Ethereum'a dayanmadıkları için kendi ihtiyaçlarını karşılayan alternatif mutabakat protokollerini seçebilirler. Yan zincirler tarafından kullanılan bazı mutabakat algoritmaları şunlardır:
+Yan zincirleri benzersiz (yani Ethereum'dan farklı) kılan özelliklerden biri, kullanılan mutabakat algoritmasıdır. Yan zincirler mutabakat için Ethereum'a güvenmez ve ihtiyaçlarına uygun alternatif mutabakat protokolleri seçebilirler. Yan zincirlerde kullanılan mutabakat algoritmalarından bazı örnekler şunlardır:
 
 - [Yetki kanıtı](/developers/docs/consensus-mechanisms/poa/)
-- [Yetkilendirilmiş hisse ispatı](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
+- [Temsili hisse kanıtı](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
 - [Bizans hata toleransı](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained).
 
-Ethereum gibi yan zincirler de işlemleri doğrulayan ve işleyen, bloklar üreten ve blokzincir durumunu depolayan doğrulama düğümlerine sahiptir. Doğrulayıcılar, mutabakatı ağ genelinde sürdürmek ve kötü niyetli saldırılara karşı korumakla yükümlüdür.
+Ethereum gibi, yan zincirlerin de işlemleri doğrulayan ve işleyen, bloklar üreten ve blokzincir durumunu depolayan doğrulayıcı düğümleri vardır. Doğrulayıcılar ayrıca ağ genelinde mutabakatı sürdürmekten ve ağı kötü niyetli saldırılara karşı güvence altına almaktan sorumludur.
 
 #### Blok parametreleri {#block-parameters}
 
-Ethereum, [blok sürelerine](/developers/docs/blocks/#block-time) (örn. yeni blok üretimi için kullandığı zamana) ve [blok boyutlarına](/developers/docs/blocks/#block-size) (örn. gaz cinsinden blok başına düşen veri miktarına) limit koyar. Bunun aksine yan zincirler, yüksek verimlilik, hızlı işlemler ve düşük ücret için genelde daha hızlı blok süreleri ve daha yüksek gaz limitleri gibi farklı parametreler kullanır.
+Ethereum, [blok sürelerine](/developers/docs/blocks/#block-time) (yani yeni bloklar üretmek için geçen süre) ve [blok boyutlarına](/developers/docs/blocks/#block-size) (yani blok başına gaz cinsinden ifade edilen veri miktarı) sınırlar koyar. Aksine, yan zincirler yüksek işlem kapasitesi, hızlı işlemler ve düşük ücretler elde etmek için genellikle daha hızlı blok süreleri ve daha yüksek gaz limitleri gibi farklı parametreler benimser.
 
-Bunun bazı faydaları olsa da, ağın merkeziyetsizliği ve güvenliği açısından önemli sonuçları da vardır. Hızlı blok süreleri ve büyük blok boyutları gibi blok parametreleri, tam bir düğümü çalıştırmanın zorluğunu arttırır ve zincirin güvenliğinden birkaç "süper düğümü" sorumlu bırakır. Böyle bir senaryoda, doğrulayıcı danışıklı dövüşü veya zincirin kötü niyetli bir şekilde ele geçirilmesi olasılığı artar.
+Bunun bazı faydaları olsa da, ağın merkeziyetsizliği ve güvenliği açısından kritik sonuçları vardır. Hızlı blok süreleri ve büyük blok boyutları gibi blok parametreleri, tam düğüm çalıştırmanın zorluğunu artırır ve zinciri güvence altına alma sorumluluğunu birkaç "süper düğüme" bırakır. Böyle bir senaryoda, doğrulayıcıların gizli anlaşma yapma veya zincirin kötü niyetli bir şekilde ele geçirilme olasılığı artar.
 
-Blokzincirlerin merkeziyetsizliğe zarar vermeden ölçeklendirme yapması bir düğüm çalıştırmanın herkese açık olması gerekir; özel donanıma sahip taraflarla sınırlı olmamalıdır. Bu yüzden, Ethereum ağında herkesin [tam düğüm çalıştırabilmesini](/developers/docs/nodes-and-clients/#why-should-i-run-an-ethereum-node) mümkün kılmaya yönelik çabalar sürdürülüyor.
+Blokzincirlerin merkeziyetsizliğe zarar vermeden ölçeklenebilmesi için, bir düğüm çalıştırmak sadece özel donanıma sahip taraflara değil, herkese açık olmalıdır. Bu nedenle, herkesin Ethereum ağında [tam düğüm çalıştırabilmesini](/developers/docs/nodes-and-clients/#why-should-i-run-an-ethereum-node) sağlamak için çalışmalar devam etmektedir.
 
-### Ethereum Sanal Makinesi uyumluluğu {#evm-compatibility}
+### EVM uyumluluğu {#evm-compatibility}
 
-Bazı yan zincirler EVM uyumludur ve [Ethereum Sanal Makinesi (EVM)](/developers/docs/evm/) için geliştirilmiş sözleşmeleri yürütebilir. EVM uyumlu yan zincirler [Solidity'de yazılmış](/developers/docs/smart-contracts/languages/) akıllı sözleşmeleri destekledikleri gibi, diğer EVM akıllı sözleşme dillerini de desteklerler, yani Ethereum Ana Ağı için yazılmış akıllı sözleşmeler EVM uyumlu yan zincirlerde de çalışır.
+Bazı yan zincirler EVM uyumludur ve [Ethereum Sanal Makinesi (EVM)](/developers/docs/evm/) için geliştirilen sözleşmeleri yürütebilir. EVM uyumlu yan zincirler, diğer EVM akıllı sözleşme dillerinin yanı sıra [Solidity ile yazılmış](/developers/docs/smart-contracts/languages/) akıllı sözleşmeleri de destekler; bu da Ethereum Ana Ağı için yazılmış akıllı sözleşmelerin EVM uyumlu yan zincirlerde de çalışacağı anlamına gelir.
 
-Bu, [merkezi olmayan uygulamanızı](/developers/docs/dapps/) bir yan zincirde kullanmak istiyorsanız, [akıllı sözleşmenizi](/developers/docs/smart-contracts/) yan zincire dağıtmanızın yeterli olduğu anlamına gelir. Tıpkı Ana Ağ gibi görünür, hissettirir ve davranır; Solidity'de sözleşmeler yazarsınız ve zincirle RPC yan zincirleri aracılığıyla etkileşime girersiniz.
+Bu, [merkeziyetsiz uygulamanızı (dapp)](/developers/docs/dapps/) bir yan zincirde kullanmak isterseniz, tek yapmanız gerekenin [akıllı sözleşmenizi](/developers/docs/smart-contracts/) bu yan zincire dağıtmak olduğu anlamına gelir. Tıpkı Ana Ağ gibi görünür, hissettirir ve davranır; sözleşmeleri Solidity'de yazar ve yan zincirlerin RPC'si aracılığıyla zincirle etkileşime girersiniz.
 
-Yan zincirler, EVM uyumluluğuna sahip olduğundan Ethereum'a özgü merkeziyetsiz uygulamalar için kullanışlı bir [ölçeklendirme çözümü](/developers/docs/scaling/) olarak görülür. Merkeziyetsiz uygulamanız yan zincirdeyken kullanıcılar, özellikle de Ana Ağ tıkanmışsa daha düşük gaz ücretleri ve daha hızlı işlemlerden faydalanabilir.
+Yan zincirler EVM uyumlu oldukları için, Ethereum'a özgü dapp'ler için faydalı bir [ölçeklendirme çözümü](/developers/docs/scaling/) olarak kabul edilirler. Dapp'inizin bir yan zincirde olmasıyla, özellikle Ana Ağ tıkalıysa, kullanıcılar daha düşük gaz ücretlerinden ve daha hızlı işlemlerden yararlanabilirler.
 
-Ancak önceden açıklandığı üzere, yan zincir kullanmanın önemli avantajları ve dezavantajları vardır. Her yan zincir kendi güvenliğinden sorumludur ve Ethereum'un güvenlik özelliklerini kullanmaz. Bu, kullanıcılarınızı etkileyebilecek ya da fonlarını riske atabilecek kötü niyetli davranış ihtimalini arttırır.
+Ancak, daha önce açıklandığı gibi, bir yan zincir kullanmak önemli ödünler vermeyi gerektirir. Her yan zincir kendi güvenliğinden sorumludur ve Ethereum'un güvenlik özelliklerini devralmaz. Bu, kullanıcılarınızı etkileyebilecek veya fonlarını riske atabilecek kötü niyetli davranış olasılığını artırır.
 
 ### Varlık hareketi {#asset-movement}
 
-Ayrı bir blokzincirin Ethereum Ana Ağı'na bir yan zincir olması için varlıkların Ethereum Ana Ağı'na/Ağı'ndan transferlerini kolaylaştırma yeteneği olmalıdır. Bu Ethereum ile birlikte çalışabilirlik özelliği, bir blokzincir köprüsü kullanılarak elde edilir. [Köprüler](/bridges/), Ethereum Ana Ağı'nda dağıtılmış akıllı sözleşmeler ve aralarında fon akışı için köprü işlevini kontrol etmek için bir yan zincir kullanır.
+Ayrı bir blokzincirin Ethereum Ana Ağı'na bir yan zincir olabilmesi için, Ethereum Ana Ağı'na ve Ana Ağ'dan varlık transferini kolaylaştırma yeteneğine sahip olması gerekir. Ethereum ile bu birlikte çalışabilirlik, bir blokzincir köprüsü kullanılarak elde edilir. [Köprüler](/bridges/), aralarındaki fon köprülemesini kontrol etmek için Ethereum Ana Ağı'na ve bir yan zincire dağıtılmış akıllı sözleşmeleri kullanır.
 
-Köprüler, kullanıcıların Ethereum ve yan zincir arasında fon taşımalarına yardımcı olsa da, varlıklar fiziksel olarak iki zincir arasında taşınmaz. Bunun yerine, zincirler arası değer aktarımı için genelde basım ve yakım içeren mekanizmalar kullanılır. [Köprülerin çalışma şekli](/developers/docs/bridges/#how-do-bridges-work) ile ilgili daha fazla bilgi.
+Köprüler, kullanıcıların Ethereum ve yan zincir arasında fon taşımasına yardımcı olsa da, varlıklar iki zincir arasında fiziksel olarak taşınmaz. Bunun yerine, zincirler arasında değer aktarımı için genellikle basım ve yakım içeren mekanizmalar kullanılır. [Köprülerin nasıl çalıştığı](/developers/docs/bridges/#how-do-bridges-work) hakkında daha fazla bilgi.
 
-## Yan zincirlerin artı ve eksileri {#pros-and-cons-of-sidechains}
+## Yan zincirlerin artıları ve eksileri {#pros-and-cons-of-sidechains}
 
-| Artıları                                                                                                                                     | Eksileri                                                                                                                                     |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yan zincirlerin temelini oluşturan teknoloji köklüdür ve kapsamlı araştırmalar ile tasarım iyileştirmelerinden yararlanır.                   | Yan zincirler, ölçeklenebilirliğe karşılık merkeziyetsizlik ve güven gerektirmezlikten bir miktar feragat eder.                              |
-| Yan zincirler genel hesaplamayı destekler ve EVM uyumluluğu sunar (yan zincirler Ethereum'a özgü merkeziyetsiz uygulamaları çalıştırabilir). | Yan zincirler, ayrı bir mutabakat mekanizması kullanır ve Ethereum'un güvenlik garantilerinden yararlanamaz.                                 |
-| Yan zincirler, işlemleri etkin bir şekilde işlemek ve kullanıcılar için işlem ücretlerini azaltmak için farklı mutabakat modelleri kullanır. | Yan zincirler daha yüksek güven varsayımları gerektirir (örn. kötü niyetli yan zincir doğruyucularının bir çoğunluğu sahtekarlık yapabilir). |
-| EVM uyumlu yan zincirler, merkeziyetsiz uygulamaların ekosistemlerini genişletmelerine izin verirler.                                        |                                                                                                                                              |
+| Artıları                                                                                                                        | Eksileri                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Yan zincirlerin temelini oluşturan teknoloji köklüdür ve kapsamlı araştırmalardan ve tasarımdaki iyileştirmelerden yararlanır. | Yan zincirler, ölçeklenebilirlik için bir miktar merkeziyetsizlikten ve güven gereksinimsizliğinden ödün verir.                          |
+| Yan zincirler genel hesaplamayı destekler ve EVM uyumluluğu sunar (Ethereum'a özgü dapp'leri çalıştırabilirler).                    | Bir yan zincir ayrı bir mutabakat mekanizması kullanır ve Ethereum'un güvenlik garantilerinden yararlanmaz.         |
+| Yan zincirler, işlemleri verimli bir şekilde işlemek ve kullanıcılar için işlem ücretlerini düşürmek amacıyla farklı mutabakat modelleri kullanır.         | Yan zincirler daha yüksek güven varsayımları gerektirir (örneğin, kötü niyetli yan zincir doğrulayıcılarından oluşan bir çoğunluk dolandırıcılık yapabilir). |
+| EVM uyumlu yan zincirler, dapp'lerin ekosistemlerini genişletmelerine olanak tanır.                                                            |                                                                                                                  |
 
-### Yan zincirler kullanın {#use-sidechains}
+### Yan Zincirleri Kullanın {#use-sidechains}
 
-Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz yan zincirlere ilişkin uygulamalar sağlayan birden çok proje mevcuttur:
+Birden fazla proje, dapp'lerinize entegre edebileceğiniz yan zincir uygulamaları sunar:
 
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
-- [Gnosis Zinciri (eskiden xDai)](https://www.gnosischain.com/)
+- [Gnosis Chain (eski adıyla xDai)](https://www.gnosischain.com/)
 - [Loom Network](https://loomx.io/)
 - [Metis Andromeda](https://www.metis.io/)
 
 ## Daha fazla bilgi {#further-reading}
 
-- [Ethereum merkeziyetsiz uygulamalarını Yan Zincirler üzerinden ölçeklendirme](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 Şubat 2018 - Georgios Konstantopoulos_
+- [Yan Zincirler aracılığıyla Ethereum dapp'lerini Ölçeklendirme](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 Şub 2018 - Georgios Konstantopoulos_
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_

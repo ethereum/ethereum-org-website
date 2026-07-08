@@ -1,20 +1,31 @@
-import { Box, Flex, List, ListItem, useToken, VStack } from "@chakra-ui/react"
+"use client"
+
+import { useState } from "react"
 
 import type { StakingPage } from "@/lib/types"
 
 import ButtonDropdown from "@/components/ButtonDropdown"
 import {
-  CautionProductGlyphIcon,
-  GreenCheckProductGlyphIcon,
-  WarningProductGlyphIcon,
+  CautionProductGlyph,
+  GreenCheckProductGlyph,
+  WarningProductGlyph,
 } from "@/components/icons/staking"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
+import { Flex, VStack } from "@/components/ui/flex"
+import { List, ListItem } from "@/components/ui/list"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useStakingConsiderations } from "@/hooks/useStakingConsiderations"
+
+// Concave fillets that flare a highlighted tab's top/bottom edges into the panel.
+// Driven by the local `--tab-r` custom property; `ltr`/`rtl` swap the gradient's
+// open corner so the curve always faces away from the panel seam.
+const TOP_FILLET =
+  "before:absolute before:bottom-full before:end-0 before:size-(--tab-r) before:content-[''] ltr:before:[background-image:radial-gradient(circle_at_top_left,transparent_var(--tab-r),var(--color-background-highlight)_var(--tab-r))] rtl:before:[background-image:radial-gradient(circle_at_top_right,transparent_var(--tab-r),var(--color-background-highlight)_var(--tab-r))]"
+const BOTTOM_FILLET =
+  "after:absolute after:top-full after:end-0 after:size-(--tab-r) after:content-[''] ltr:after:[background-image:radial-gradient(circle_at_bottom_left,transparent_var(--tab-r),var(--color-background-highlight)_var(--tab-r))] rtl:after:[background-image:radial-gradient(circle_at_bottom_right,transparent_var(--tab-r),var(--color-background-highlight)_var(--tab-r))]"
 
 const IndicatorGroup = ({
   label,
@@ -27,21 +38,21 @@ const IndicatorGroup = ({
 }) => {
   const IndicatorIcon = ({ style }) => {
     if (indicatorType === "valid") {
-      return <GreenCheckProductGlyphIcon style={style} />
+      return <GreenCheckProductGlyph style={style} />
     }
 
     if (indicatorType === "caution") {
-      return <CautionProductGlyphIcon style={style} />
+      return <CautionProductGlyph style={style} />
     }
 
-    return <WarningProductGlyphIcon style={style} />
+    return <WarningProductGlyph style={style} />
   }
   return (
-    <VStack spacing={2} flex={1}>
+    <VStack className="flex-1 gap-2">
       <IndicatorIcon style={styleObj} />
-      <Text fontSize="xs" textAlign="center" maxW="{40}">
+      <p className="max-w-[10rem] text-center text-xs">
         <Translation id={label} />
-      </Text>
+      </p>
     </VStack>
   )
 }
@@ -51,11 +62,8 @@ export type StakingConsiderationsProps = {
 }
 
 const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
-  // TODO: Replace with direct token implementation after UI migration is completed
-  const mdBp = useToken("breakpoints", "md")
-
   const {
-    StyledSvg,
+    Svg,
     caution,
     description,
     dropdownLinks,
@@ -68,66 +76,70 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
     activeIndex,
   } = useStakingConsiderations({ page })
 
-  const activeStyles = {
-    bg: "background.highlight",
-    color: "body.base",
-    transition: "background 0.5s, color 0.5s",
-  }
+  // Hover is tracked in JS (not CSS) so the panel can square the corner where a
+  // highlighted first/last tab meets it, and so a hovered tab flares into the
+  // panel like the active one.
+  const [hovered, setHovered] = useState<number | null>(null)
+  const isHighlighted = (i: number) => i === activeIndex || i === hovered
+  const lastIndex = (pageData?.length ?? 0) - 1
 
   return (
-    <Flex flexDir={{ base: "column", md: "row" }}>
+    <Flex className="flex-col md:flex-row">
       <ButtonDropdown list={dropdownLinks} className="mb-4 md:hidden" />
       {/* TODO: Improve a11y */}
-      <Box flex={1} hideBelow={mdBp}>
+      <div className="hidden flex-1 md:block">
         {!!pageData && (
-          <List m={0}>
+          <List
+            className="m-0 [--tab-r:0.75rem]"
+            onMouseLeave={() => setHovered(null)}
+          >
             {/* TODO: Make mobile responsive */}
-            {pageData.map(({ title, matomo }, idx) => (
-              <ListItem
-                key={idx}
-                onClick={() => {
-                  handleSelection(idx)
-                  trackCustomEvent(matomo)
-                }}
-                py={1}
-                cursor="pointer"
-                display="table"
-                w="full"
-                h={8}
-                p="3"
-                mb="0"
-                _hover={activeStyles}
-                position="relative"
-                {...(idx === activeIndex
-                  ? activeStyles
-                  : { color: "primary.base" })}
-              >
-                {title}
-              </ListItem>
-            ))}
+            {pageData.map(({ title, matomo }, idx) => {
+              const highlighted = isHighlighted(idx)
+              return (
+                <ListItem
+                  key={idx}
+                  onClick={() => {
+                    handleSelection(idx)
+                    trackCustomEvent(matomo)
+                  }}
+                  onMouseEnter={() => setHovered(idx)}
+                  className={cn(
+                    "relative mb-0 table h-8 w-full cursor-pointer p-3",
+                    highlighted
+                      ? "bg-background-highlight text-body"
+                      : "text-primary",
+                    // Each highlighted tab is its own rounded pill flaring into
+                    // the panel -- the inter-item gap keeps neighbours visually
+                    // separate, so we always round both start corners rather
+                    // than flattening a shared seam.
+                    highlighted && "rounded-s-(--tab-r)",
+                    // Fillets curve the top/bottom edge into the panel, but never
+                    // poke past the list ends (the panel rounds those corners).
+                    highlighted && idx !== 0 && TOP_FILLET,
+                    highlighted && idx !== lastIndex && BOTTOM_FILLET
+                  )}
+                >
+                  {title}
+                </ListItem>
+              )
+            })}
           </List>
         )}
-      </Box>
+      </div>
       <Flex
-        alignItems="center"
-        flexDir="column"
-        bg="background.highlight"
-        flex={2}
-        minH="410px"
-        p={6}
+        className={cn(
+          "flow min-h-96 flex-2 flex-col items-center rounded-base bg-background-highlight p-6 text-center",
+          // Square the panel's start corner where the highlighted (active or
+          // hovered) first/last tab meets it, so the tab flows flush (desktop only).
+          isHighlighted(0) && "md:rounded-ss-none",
+          isHighlighted(lastIndex) && "md:rounded-es-none"
+        )}
       >
-        <StyledSvg />
-        <OldHeading
-          as="h3"
-          fontWeight={700}
-          fontSize="27px"
-          lineHeight={1.4}
-          mt={10}
-        >
-          {title}
-        </OldHeading>
-        <Text>{description}</Text>
-        <Flex gap={8} justifyContent="center" mt="auto">
+        <Svg className="text-8xl" />
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <Flex className="mt-auto justify-center gap-8">
           {!!valid && (
             <IndicatorGroup
               label={valid}

@@ -1,56 +1,61 @@
 ---
 title: Ethash
-description: Ethash 演算法詳細介紹。
+description: "深入了解 Ethash 演算法。"
 lang: zh-tw
 ---
 
-<InfoBanner emoji=":wave:">
-   Ethash 是以太坊的工作量證明挖礦演算法。 工作量證明現在已經被**完全關閉**，取而代之的是，以太坊現在使用<a href="/developers/docs/consensus-mechanisms/pos/">權益證明</a>來確保安全。 閱讀更多關於<a href="/roadmap/merge/">合併 </a>、<a href="/developers/docs/consensus-mechanisms/pos/">權益證明</a>和<a href="/staking/">質押</a>的資訊。 此頁面僅為滿足對歷史的興趣！  
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
+   Ethash 曾是以太坊的工作量證明 (PoW) 挖礦演算法。工作量證明現已**完全關閉**，以太坊現在改由[權益證明 (PoS)](/developers/docs/consensus-mechanisms/pos/)來保障安全。閱讀更多關於[合併](/roadmap/merge/)、[權益證明](/developers/docs/consensus-mechanisms/pos/)與[質押](/staking/)的資訊。本頁面僅供歷史參考！  
+</AlertDescription>
+</AlertContent>
+</Alert>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) 演算法的修改版。 Ethash 工作量證明是[記憶體密集型](https://wikipedia.org/wiki/Memory-hard_function)演算法，這被認為使演算法具有專用積體電路抗性。 Ethash 專用積體電路最終被開發出來，但圖形處理單元挖礦仍然是一個可行的選擇，直至工作量證明被關閉。 Ethash 仍在其他非以太坊工作量證明網路上用於挖掘其他代幣。
+Ethash 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) 演算法的修改版本。Ethash 工作量證明是[記憶體密集型 (memory hard)](https://wikipedia.org/wiki/Memory-hard_function)，這被認為能使該演算法具備抗 ASIC 的特性。雖然最終還是開發出了 Ethash ASIC，但在工作量證明關閉之前，GPU 挖礦仍然是一個可行的選擇。Ethash 仍被用於在其他非以太坊的工作量證明網路上挖掘其他代幣。
 
 ## Ethash 是如何運作的？ {#how-does-ethash-work}
 
-記憶體密集性是透過工作量證明演算法實現的，需要根據隨機數和區塊頭選擇固定資源子集。 此資源（大小為數 GB）稱為有向無環圖。 有向無環圖每 30000 個區塊更改一次（大約 125 小時的窗口，稱為一個時期（約 5.2 天）），並需要一段時間才能產生。 由於有向無環圖僅依賴區塊高度，因此可以預先生成，但如果沒有，則用戶端需要等到此過程結束後才能生成區塊。 如果用戶端沒有提前預先產生和快取有向無環圖，網路可能會在每個時期過渡時遭遇嚴重的區塊延遲。 請注意，不用產生有向無環圖即可驗證工作量證明，这在本質上允許使用低階中央處理器和小記憶體進行驗證。
+記憶體密集型是透過一種工作量證明演算法來實現的，該演算法需要根據隨機數與區塊頭來選擇固定資源的子集。這個資源（大小為數 GB）被稱為 DAG。DAG 每 30000 個區塊更換一次，這段約 125 小時的期間稱為一個紀元（大約 5.2 天），且生成 DAG 需要花費一些時間。由於 DAG 僅取決於區塊高度，因此可以預先生成；但如果沒有預先生成，用戶端需要等到此過程結束才能產生區塊。如果用戶端沒有提前預先生成並快取 DAG，網路在每次紀元轉換時可能會經歷大規模的區塊延遲。請注意，驗證工作量證明時不需要生成 DAG，這基本上允許在低 CPU 和小記憶體的情況下進行驗證。
 
-此演算法所採取的一般路線如下：
+該演算法的一般流程如下：
 
-1. 存在一個**種子**，可以透過掃描區塊頭直到該點來為每個區塊計算種子。
-2. 從種子可以計算出 **16 MB 的偽隨機快取**。 由輕量用户端儲存該快取。
-3. 我們可以從快取中產生一個 **1 GB 資料集 **，資料集中每個項目僅依賴快取中的一小部分項目。 由全用户端和礦工儲存該資料集。 該资料集隨著時間的流逝而呈線性增長。
-4. 挖礦需要取得該資料集的隨機片段並將它們雜湊在一起。 可以透過使用快取來重新產生你所需要的資料集中的特定片段，以較少的記憶體進行驗證，這樣你就只需要儲存快取。
+1. 存在一個**種子 (seed)**，可以透過掃描到該點為止的區塊頭來為每個區塊計算出該種子。
+2. 從種子中，可以計算出一個 **16 MB 的偽隨機快取**。輕節點會儲存這個快取。
+3. 從快取中，我們可以生成一個 **1 GB 的資料集**，其特性是資料集中的每個項目僅依賴於快取中的少數項目。全節點和礦工會儲存這個資料集。該資料集會隨時間線性增長。
+4. 挖礦涉及抓取資料集的隨機片段並將它們一起進行雜湊運算。驗證可以在低記憶體的情況下完成，方法是使用快取來重新生成你需要的特定資料集片段，因此你只需要儲存快取。
 
-每隔 30,000 個區塊更新一次大資料集，因此，礦工的絕大部分工作都是讀取資料集，而不是對其進行修改。
+大型資料集每 30000 個區塊更新一次，因此礦工的絕大部分工作將是讀取資料集，而不是對其進行更改。
 
 ## 定義 {#definitions}
 
 我們採用以下定義：
 
 ```
-WORD_BYTES = 4                    # bytes in word
-DATASET_BYTES_INIT = 2**30        # bytes in dataset at genesis
-DATASET_BYTES_GROWTH = 2**23      # dataset growth per epoch
-CACHE_BYTES_INIT = 2**24          # bytes in cache at genesis
-CACHE_BYTES_GROWTH = 2**17        # cache growth per epoch
-CACHE_MULTIPLIER=1024             # Size of the DAG relative to the cache
-EPOCH_LENGTH = 30000              # blocks per epoch
-MIX_BYTES = 128                   # width of mix
-HASH_BYTES = 64                   # hash length in bytes
-DATASET_PARENTS = 256             # number of parents of each dataset element
-CACHE_ROUNDS = 3                  # number of rounds in cache production
-ACCESSES = 64                     # number of accesses in hashimoto loop
+WORD_BYTES = 4                    # 字組中的位元組數
+DATASET_BYTES_INIT = 2**30        # 創世時資料集中的位元組數
+DATASET_BYTES_GROWTH = 2**23      # 每個紀元的資料集增長量
+CACHE_BYTES_INIT = 2**24          # 創世時快取中的位元組數
+CACHE_BYTES_GROWTH = 2**17        # 每個紀元的快取增長量
+CACHE_MULTIPLIER=1024             # DAG 相對於快取的大小
+EPOCH_LENGTH = 30000              # 每個紀元的區塊數
+MIX_BYTES = 128                   # 混合寬度
+HASH_BYTES = 64                   # 雜湊長度（位元組）
+DATASET_PARENTS = 256             # 每個資料集元素的父節點數量
+CACHE_ROUNDS = 3                  # 快取生成的回合數
+ACCESSES = 64                     # hashimoto 迴圈中的存取次數
 ```
 
-### 使用「SHA3」 {#sha3}
+### 「SHA3」的使用 {#sha3}
 
-以太坊的開發恰逢 SHA3 標準的製定，標準流程對最終確定的雜湊值演算法的填充做了後期改動，使得以太坊的「sha3_256」和「sha3_512」雜湊值不是標準的 sha3 雜湊值，而是在其他情況下常被稱為「Keccak-256」和「Keccak-512」的變體。 討論請見[此處](https://eips.ethereum.org/EIPS/eip-1803)、[此處](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)，或[此處](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)。
+以太坊的開發與 SHA3 標準的開發同時進行，而標準化過程在已定案的雜湊演算法的填充 (padding) 上做出了較晚的更改，因此以太坊的「sha3_256」和「sha3_512」雜湊並非標準的 sha3 雜湊，而是一種在其他情境中通常被稱為「Keccak-256」和「Keccak-512」的變體。請參閱討論，例如[這裡](https://eips.ethereum.org/EIPS/eip-1803)、[這裡](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)或[這裡](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)。
 
-請記住這一點，因為下面的演算法描述中提到了「sha3」雜湊值。
+在下方演算法的描述中提及「sha3」雜湊時，請牢記這一點。
 
 ## 參數 {#parameters}
 
-Ethash 快取和資料集的參數取決於區塊號。 快取大小和資料集大小都呈線性增長；然而，我們總是取低於線性增長閾值的最大素數，以降低意外的規律導致循環行為的風險。
+Ethash 快取和資料集的參數取決於區塊號。快取大小和資料集大小皆呈線性增長；然而，我們總是取低於線性增長閾值的最大質數，以降低意外規律性導致循環行為的風險。
 
 ```python
 def get_cache_size(block_number):
@@ -68,22 +73,22 @@ def get_full_size(block_number):
     return sz
 ```
 
-附錄中提供了資料集和快取大小值表。
+附錄中提供了資料集和快取大小值的表格。
 
-## 快取產生 {#cache-generation}
+## 快取生成 {#cache-generation}
 
-現在，我們來指定產生快取的函式：
+現在，我們指定用於生成快取的函式：
 
 ```python
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Sequentially produce the initial dataset
+    # 依序產生初始資料集
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Use a low-round version of randmemohash
+    # 使用低回合版本的 randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -92,11 +97,11 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-在快取生成過程中，先依序填入32 MB 存儲體，然後從[_嚴格存儲體密集型雜湊函式_ (2014)](http://www.hashcash.org/papers/memohash.pdf) 執行兩次 Sergio Demian Lerner 的 _RandMemoHash_ 演算法。 輸出一組 524288 個 64 字節位元組值。
+快取生成過程包括首先依序填滿 32 MB 的記憶體，然後執行兩次 Sergio Demian Lerner 在 [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) 中提出的 _RandMemoHash_ 演算法。輸出是一組 524288 個 64 位元組的值。
 
-## 資料匯總函式 {#date-aggregation-function}
+## 資料聚合函式 {#date-aggregation-function}
 
-我們所用演算法的靈感來自 [FNV 雜湊](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)，在部分情況下，這種演算法可用作邏輯 XOR 的非相干替代。 請注意，我們使用全 32 位元輸入乘以素數，與之相對地，FNV-1 規範以單字節位元組（8 位元組）依序乘以素數。
+在某些情況下，我們使用受 [FNV 雜湊](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)啟發的演算法作為 XOR 的非關聯替代方案。請注意，我們將質數與完整的 32 位元輸入相乘，這與 FNV-1 規範中將質數依次與一個位元組（八位元）相乘的做法不同。
 
 ```python
 FNV_PRIME = 0x01000193
@@ -105,57 +110,57 @@ def fnv(v1, v2):
     return ((v1 * FNV_PRIME) ^ v2) % 2**32
 ```
 
-請注意，即使黃皮書指出 fnv 為 v1\*(FNV_PRIME ^ v2)，所有目前實作始終採用上述定義。
+請注意，即使黃皮書將 fnv 指定為 v1\*(FNV_PRIME ^ v2)，目前所有的實作都一致使用上述定義。
 
 ## 完整資料集計算 {#full-dataset-calculation}
 
-整個 1 GB 資料集中的每個 64 字節位元組項目的計算方法如下：
+完整的 1 GB 資料集中的每個 64 位元組項目計算如下：
 
 ```python
 def calc_dataset_item(cache, i):
     n = len(cache)
     r = HASH_BYTES // WORD_BYTES
-    # initialize the mix
+    # 初始化混合
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # fnv it with a lot of random cache nodes based on i
+    # 根據 i 使用大量隨機快取節點對其進行 fnv 運算
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
     return sha3_512(mix)
 ```
 
-基本上，我們會將 256 個偽隨機選取的快取節點的資料合併起來求雜湊值，以計算資料集節點。 然後產生整個資料集：
+基本上，我們結合來自 256 個偽隨機選擇的快取節點的資料，並對其進行雜湊運算以計算資料集節點。然後整個資料集由以下方式生成：
 
 ```python
 def calc_dataset(full_size, cache):
     return [calc_dataset_item(cache, i) for i in range(full_size // HASH_BYTES)]
 ```
 
-## 主循環 {#main-loop}
+## 主迴圈 {#main-loop}
 
-現在，我們指定了類似「hashimoto」的主要循環。在此循環中，我們匯總了整個資料集的資料，以產生特定區塊頭和隨機數的最終值。 在下面的程式碼中，`header` 代表一個_被截斷_區塊頭的遞歸長度前綴表示的 SHA3-256 _雜湊值_。被截斷是指區塊頭排除了 **mixHash** 和 **nonce** 欄位。 `nonce` 是八字節位元組的 64 位元無符號整數，採用高位元組在前順序。 因此，`nonce [::-1]` 是上述值的八位元組高位元組在前順序表示：
+現在，我們指定類似「hashimoto」的主迴圈，我們在其中聚合來自完整資料集的資料，以便為特定的區塊頭和隨機數產生最終值。在下方程式碼中，`header` 代表_截斷的_區塊頭（即排除 **mixHash** 和 **nonce** 欄位的區塊頭）的 RLP 表示形式的 SHA3-256 _雜湊_。`nonce` 是大端序中 64 位元無號整數的八個位元組。因此 `nonce[::-1]` 是該值的八位元組小端序表示形式：
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
     n = full_size / HASH_BYTES
     w = MIX_BYTES // WORD_BYTES
     mixhashes = MIX_BYTES / HASH_BYTES
-    # combine header+nonce into a 64 byte seed
+    # 將區塊頭+隨機數結合成 64 位元組的種子
     s = sha3_512(header + nonce[::-1])
-    # start the mix with replicated s
+    # 使用複製的 s 開始混合
     mix = []
     for _ in range(MIX_BYTES / HASH_BYTES):
         mix.extend(s)
-    # mix in random dataset nodes
+    # 混入隨機資料集節點
     for i in range(ACCESSES):
         p = fnv(i ^ s[0], mix[i % w]) % (n // mixhashes) * mixhashes
         newdata = []
         for j in range(MIX_BYTES / HASH_BYTES):
             newdata.extend(dataset_lookup(p + j))
         mix = map(fnv, mix, newdata)
-    # compress mix
+    # 壓縮混合
     cmix = []
     for i in range(0, len(mix), 4):
         cmix.append(fnv(fnv(fnv(mix[i], mix[i+1]), mix[i+2]), mix[i+3]))
@@ -171,9 +176,9 @@ def hashimoto_full(full_size, dataset, header, nonce):
     return hashimoto(header, nonce, full_size, lambda x: dataset[x])
 ```
 
-基本上，我們保持著一個寬 128 字節位元組的「mix」，多次按順序從整個資料集重複取得 128 字節位元組，並使用 `fnv` 函式將其與 mix 合併。 使用 128 字節位元組的順序存取，以便每輪演算法總是能從隨機存取記憶體獲取完整的頁面，從而盡量減少轉譯後備緩衝區的失誤，而專用積體電路在理論上能夠避免這些失誤。
+基本上，我們維護一個 128 位元組寬的「混合 (mix)」，並重複依序從完整資料集中擷取 128 位元組，然後使用 `fnv` 函式將其與混合結合。使用 128 位元組的循序存取是為了讓演算法的每一回合總是從 RAM 中擷取一個完整的頁面，從而將轉譯後備緩衝區 (TLB) 的未命中率降至最低，這在理論上是 ASIC 能夠避免的。
 
-如果此演算法的輸出低於所需目標，即證明隨機數是有效的。 請注意，在最後額外套用 `sha3_256` 將確保中間隨機數的存在，提供此證據可以證明至少做了少量工作；而且此快速外部工作量證明驗證可以用於反分散式阻斷服務。 它還能提供統計保證，確保結果是一個無偏的 256 位元數。
+如果此演算法的輸出低於預期目標，則該隨機數有效。請注意，最後額外應用的 `sha3_256` 確保存在一個中間隨機數，可以提供該隨機數來證明至少完成了一小部分工作；這種快速的外部工作量證明驗證可用於防範 DDoS 攻擊。它還用於提供統計保證，確保結果是一個無偏差的 256 位元數字。
 
 ## 挖礦 {#mining}
 
@@ -181,7 +186,7 @@ def hashimoto_full(full_size, dataset, header, nonce):
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # zero-pad target to compare with hash on the same digit
+    # 將目標補零，以便與相同位數的雜湊進行比較
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -190,9 +195,9 @@ def mine(full_size, dataset, header, difficulty):
     return nonce
 ```
 
-## 定義種子雜湊值 {#seed-hash}
+## 定義種子雜湊 {#seed-hash}
 
-為了計算用於在給定區塊上挖礦的種子雜湊值，我們使用以下演算法：
+為了計算將用於在給定區塊之上進行挖礦的種子雜湊，我們使用以下演算法：
 
 ```python
  def get_seedhash(block):
@@ -202,20 +207,20 @@ def mine(full_size, dataset, header, difficulty):
      return s
 ```
 
-請注意，為了順利挖礦和驗證，我們建議在單獨執行緒中預先計算未來的種子雜湊值和資料集。
+請注意，為了順利進行挖礦和驗證，我們建議在單獨的執行緒中預先計算未來的種子雜湊和資料集。
 
-## 衍生閱讀 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
-_認識社區或社團資源能幫助大家學習更多? 歡迎自由編輯或添加於本頁!!_
+_知道有什麼社群資源對您有幫助嗎？編輯此頁面並加入它！_
 
 ## 附錄 {#appendix}
 
-如果你有興趣將上述 python 規範作為程式碼運行，應在前面添加以下程式碼。
+如果您有興趣將上述 Python 規範作為程式碼執行，則應在前面加上以下程式碼。
 
 ```python
 import sha3, copy
 
-# Assumes little endian bit ordering (same as Intel architectures)
+# 假設為小端序位元排序（與 Intel 架構相同）
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -243,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 hash function, outputs 64 bytes
+# sha3 雜湊函式，輸出 64 位元組
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -262,7 +267,7 @@ def isprime(x):
 
 ### 資料大小 {#data-sizes}
 
-以下查找表提供了約 2048 個製錶格式的資料大小和快取大小時期。
+以下查找表提供了大約 2048 個紀元的資料大小和快取大小的列表。
 
 ```python
 def get_datasize(block_number):

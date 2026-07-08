@@ -1,139 +1,151 @@
 ---
 title: Gas y tarifas
-description:
+metaTitle: "Gas y tarifas de Ethereum: descripción técnica general"
+description: "Aprenda sobre las tarifas de gas de Ethereum, cómo se calculan y su papel en la seguridad de la red y el procesamiento de transacciones."
 lang: es
 ---
 
-El gas es esencial para la red de Ethereum. Se trata del combustible que le permite operar, de la misma manera que un vehículo necesita gasolina para funcionar.
+El gas es esencial para la red [Ethereum](/). Es el combustible que le permite operar, de la misma manera que un automóvil necesita gasolina para funcionar.
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender mejor esta página, le recomendamos que en primer lugar obtenga información sobre [las transacciones](/developers/docs/transactions/) y [la EVM](/developers/docs/evm/).
+Para comprender mejor esta página, le recomendamos que primero lea sobre las [transacciones](/developers/docs/transactions/) y la [EVM](/developers/docs/evm/).
 
 ## ¿Qué es el gas? {#what-is-gas}
 
-El gas hace referencia a la unidad que mide la cantidad de esfuerzo computacional requerida para ejecutar operaciones específicas en la red de Ethereum.
+El gas se refiere a la unidad que mide la cantidad de esfuerzo computacional requerido para ejecutar operaciones específicas en la red Ethereum.
 
-Dado que la ejecución de cada transacción en Ethereum requiere recursos informáticos, dichos recursos tienen que ser de pago para así poder asegurar que Ethereum no sea vulnerable al correo basura y no se pueda quedar atascado en un lapso computacional infinito. El pago por este recurso computacional se realiza en forma de tarifa de gas.
+Dado que cada transacción de Ethereum requiere recursos computacionales para ejecutarse, esos recursos deben pagarse para garantizar que Ethereum no sea vulnerable al spam y no pueda quedarse atascado en bucles computacionales infinitos. El pago por la computación se realiza en forma de una tarifa de gas.
 
-La tarifa de gas es ** la cantidad de gas usado para hacer alguna operación, multiplicado por el coste unitario del gas**. Al margen de que la transacción se procese de forma exitosa o fallida, se paga igualmente una tarifa.
+La tarifa de gas es **la cantidad de gas utilizada para realizar alguna operación, multiplicada por el costo por unidad de gas**. La tarifa se paga independientemente de si una transacción tiene éxito o falla.
 
-![Un diagrama que muestra dónde se precisa el gas en las operaciones de la EVM.](./gas.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![A diagram showing where gas is needed in EVM operations](./gas.png)
+_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-La tarifa de gas tiene que pagarse en la moneda nativa de Ethereum, el ether (ETH). El precio del gas se suele expresar en gwei, el cual es una denominación del ETH. Cada gwei equivale a 1 billonésima fracción de ETH (0,000000001 ETH o 10<sup>-9</sup> ETH).
+Las tarifas de gas deben pagarse en la moneda nativa de Ethereum, el ether (ETH). Los precios del gas generalmente se cotizan en Gwei, que es una denominación de ETH. Cada Gwei es igual a una milmillonésima parte de un ETH (0.000000001 ETH o 10<sup>-9</sup> ETH).
 
-Por ejemplo, en lugar de decir que su gas cuesta 0,000000001 ether, puede decir que su gas cuesta 1 gwei.
+Por ejemplo, en lugar de decir que su gas cuesta 0.000000001 ether, puede decir que su gas cuesta 1 Gwei.
 
-La palabra «gwei» es una contracción de «giga-wei», que significa «mil millones de weis». Un gwei equivale a mil millones de weis. Wei (nombre acuñado en honor a [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), el creador de [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) es la unidad más pequeña de ETH.
+La palabra 'Gwei' es una contracción de 'giga-wei', que significa 'mil millones de Wei'. Un Gwei es igual a mil millones de Wei. El Wei en sí (llamado así por [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), creador de [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) es la unidad más pequeña de ETH.
 
 ## ¿Cómo se calculan las tarifas de gas? {#how-are-gas-fees-calculated}
 
-Se puede establecer la cantidad de gas que está dispuesto a pagar cuando envíe una transacción. Al ofrecer una cierta cantidad de gas, está pujando para que su transacción se incluya en el siguiente bloque. Si su oferta es insignificante, los validadores estarán menos dispuestos a optar por incluir su transacción, lo que significa que su transacción tal vez se ejecute luego, o no se ejecute del todo. Si su oferta es demasiado elevada, tal vez desperdicie algo de ETH. Entonces, ¿cómo puede saber cuánto debe pagar?
+Puede establecer la cantidad de gas que está dispuesto a pagar cuando envía una transacción. Al ofrecer una cierta cantidad de gas, está pujando para que su transacción se incluya en el siguiente bloque. Si ofrece muy poco, es menos probable que los validadores elijan su transacción para su inclusión, lo que significa que su transacción puede ejecutarse tarde o no ejecutarse en absoluto. Si ofrece demasiado, podría desperdiciar algo de ETH. Entonces, ¿cómo puede saber cuánto pagar?
 
-La cantidad total de gas que paga se divide entre dos componentes: la `tarifa base` y la `tarifa prioritaria` (propina).
+El gas total que paga se divide en dos componentes: la `base fee` y la `priority fee` (tarifa de prioridad).
 
-La `tarifa base` la establece el protocolo, indicándole que al menos tiene que pagar esa cantidad para que su transacción se considere como válida. La `tarifa prioritaria` es la propina que le añade a la tarifa base para que los validadores vean de forma atractiva su transacción y acaben por incluirla en el siguiente bloque.
+La `base fee` es establecida por el protocolo: debe pagar al menos esta cantidad para que su transacción se considere válida. La `priority fee` es una tarifa de prioridad que agrega a la tarifa base para que su transacción sea atractiva para los validadores y la elijan para su inclusión en el siguiente bloque.
 
-Una transacción que solo pague la `tarifa base` es técnicamente válida, pero es improbable que se incluya, ya que el validador no ve ningún incentivo para escogerla por encima de cualquier otra transacción. La `tarifa` «correcta» prioritaria viene determinada por el uso de la red en el momento de enviar la transacción: si hay mucha demanda, entonces debería pensar en establecer una `tarifa` prioritaria más alta, pero si hay poca demanda, puede pagar menos.
+Una transacción que solo paga la `base fee` es técnicamente válida, pero es poco probable que se incluya porque no ofrece ningún incentivo a los validadores para elegirla sobre cualquier otra transacción. La tarifa de `priority` 'correcta' está determinada por el uso de la red en el momento en que envía su transacción: si hay mucha demanda, es posible que deba establecer su tarifa de `priority` más alta, pero cuando hay menos demanda puede pagar menos.
 
-Por ejemplo, digamos que Jordan tiene que pagarle 1 ETH a Taylor. Una transferencia de ETH requiere 21.000 unidades de gas, y la tarifa base es 10 gwei. Jordan incluye una propina de 2 gwei.
+Por ejemplo, digamos que Jordan tiene que pagarle a Taylor 1 ETH. Una transferencia de ETH requiere 21.000 unidades de gas, y la tarifa base es de 10 Gwei. Jordan incluye una tarifa de prioridad de 2 Gwei.
 
-La tarifa total equivale a:
+La tarifa total ahora sería igual a:
 
-`unidades de gas usadas * (tarifa básica + tarifa por prioridad)`
+`units of gas used * (base fee + priority fee)`
 
-donde el valor de la `tarifa base` viene establecido por el protocolo y el valor de la `tarifa prioritaria` la establece el propio usuario como propina para el validador.
+donde la `base fee` es un valor establecido por el protocolo y la `priority fee` es un valor establecido por el usuario como una tarifa de prioridad para el validador.
 
-es decir: `21.000 * (10 + 2) = 252.000 gwei` (0,000252 ETH).
+p. ej., `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
 
-Cuando Jordan envía el dinero, se deducirán 1,00231 ETH de la cuenta de Jordan. A Taylor se le abonarán 1,0000 ETH. El validador recibe una propina de 0,000042 ETH. La `tarifa base` de 0,00021 ETH se consume.
+Cuando Jordan envía el dinero, se deducirán 1.000252 ETH de la cuenta de Jordan. A Taylor se le acreditará 1.0000 ETH. El validador recibe la tarifa de prioridad de 0.000042 ETH. La `base fee` de 0.00021 ETH se quema.
 
 ### Tarifa base {#base-fee}
 
-Cada bloque tiene una tarifa base que funciona como precio de reserva. Para que se pueda incluir en un bloque, el precio por gas ofrecido debe ser por lo menos igual a la tarifa base. La tarifa base se calcula independientemente del bloque actual y viene a su vez determinada por los bloques anteriores a este, lo cual hace que las tarifas por transacción sean más predecibles para los usuarios. Cuando se crea el bloque, esta **tarifa base se «consume»**, es decir, se elimina de la circulación.
+Cada bloque tiene una tarifa base que actúa como un precio de reserva. Para ser elegible para su inclusión en un bloque, el precio ofrecido por gas debe ser al menos igual a la tarifa base. La tarifa base se calcula independientemente del bloque actual y, en su lugar, está determinada por los bloques anteriores, lo que hace que las tarifas de transacción sean más predecibles para los usuarios. Cuando se crea el bloque, esta **tarifa base se "quema"**, eliminándola de la circulación.
 
-La tarifa base se calcula mediante una fórmula que compara el tamaño del bloque anterior (la cantidad de gas usado para todas las transacciones) con el tamaño esperado. La tarifa base aumentará un máximo de 12,5 % por bloque si se supera el tamaño esperado del mismo. Este crecimiento exponencial hace que no sea económicamente rentable que el tamaño de los bloques permanezca elevado indefinidamente.
+La tarifa base se calcula mediante una fórmula que compara el tamaño del bloque anterior (la cantidad de gas utilizada para todas las transacciones) con el tamaño objetivo (la mitad del límite de gas). La tarifa base aumentará o disminuirá en un máximo del 12,5 % por bloque si el tamaño del bloque objetivo está por encima o por debajo del objetivo, respectivamente. Este crecimiento exponencial hace que sea económicamente inviable que el tamaño del bloque se mantenga alto indefinidamente.
 
-| Número de bloque | Gas incluido | Incremento de la tarifa | Tarifa de base actual |
-| ---------------- | ------------:| -----------------------:| ---------------------:|
-| 1                |         15 M |                     0 % |              100 gwei |
-| 2                |         30 M |                     0 % |              100 gwei |
-| 3                |         30 M |                  12,5 % |            112,5 gwei |
-| 4                |         30 M |                  12,5 % |            126,6 gwei |
-| 5                |         30 M |                  12,5 % |            142,4 gwei |
-| 6                |         30 M |                  12,5 % |            160,2 gwei |
-| 7                |         30 M |                  12,5 % |            180,2 gwei |
-| 8                |         30 M |                  12,5 % |            202,7 gwei |
+| Número de bloque | Gas incluido | Aumento de tarifa | Tarifa base actual |
+| ------------ | -----------: | -----------: | ---------------: |
+| 1            |          18M |           0% |         100 Gwei |
+| 2            |          36M |           0% |         100 Gwei |
+| 3            |          36M |        12.5% |       112.5 Gwei |
+| 4            |          36M |        12.5% |       126.6 Gwei |
+| 5            |          36M |        12.5% |       142.4 Gwei |
+| 6            |          36M |        12.5% |       160.2 Gwei |
+| 7            |          36M |        12.5% |       180.2 Gwei |
+| 8            |          36M |        12.5% |       202.7 Gwei |
 
-Siguiendo la tabla anterior, para crear una transacción en el bloque número 9, una cartera informará al usuario con certeza de que la **tarifa de base máxima** que se añadirá al siguiente bloque es la `tarifa de base corriente * 112,5 %` o `202,7 gwei * 112,5 % = 228,1 gwei`.
+En la tabla anterior, se demuestra un ejemplo utilizando 36 millones como límite de gas. Siguiendo este ejemplo, para crear una transacción en el bloque número 9, una billetera le informará al usuario con certeza que la **tarifa base máxima** que se agregará al siguiente bloque es `current base fee * 112.5%` o `202.7 gwei * 112.5% = 228.1 gwei`.
 
-También cabe saber que es improbable que veamos un pico de incremento de bloques llenos, debido a la velocidad con que la tarifa base aumenta antes de que este se llene.
+También es importante tener en cuenta que es poco probable que veamos picos prolongados de bloques llenos debido a la velocidad a la que aumenta la tarifa base antes de un bloque lleno.
 
-| Número de bloque | Gas incluido | Incremento de comisión | Comisión base actual |
-| ---------------- | ------------:| ----------------------:| --------------------:|
-| 30               |         30 M |                 12,5 % |         2.705,6 gwei |
-| ...              |          ... |                 12,5 % |                  ... |
-| 50               |         30 M |                 12,5 % |        28.531,3 gwei |
-| ...              |          ... |                 12,5 % |                  ... |
-| 100              |         30 M |                 12,5 % |    10.302.608,6 gwei |
+| Número de bloque | Gas incluido | Aumento de tarifa | Tarifa base actual |
+| ------------ | -----------: | -----------: | ---------------: |
+| 30           |          36M |        12.5% |      2705.6 Gwei |
+| ...          |          ... |        12.5% |              ... |
+| 50           |          36M |        12.5% |     28531.3 Gwei |
+| ...          |          ... |        12.5% |              ... |
+| 100          |          36M |        12.5% |  10302608.6 Gwei |
 
-### Tarifa prioritaria (propinas) {#priority-fee}
+### Tarifa de prioridad {#priority-fee}
 
-La tarifa prioritaria (propina) incentiva al validador a incluir una transacción en el bloque. Sin propinas, los validadores encontrarían económicamente viable el minar bloques vacíos, dado que ellos recibirían la misma recompensa por bloque. Una pequeña propina le daría un incentivo mínimo al validador para que incluya una transacción. Para que una transacción se ejecute de forma preferencial por encima de otra transacción en el mismo bloque, se puede añadir una propina alta para superar las ofertas de las demás transacciones.
+La tarifa de prioridad incentiva a los validadores a maximizar el número de transacciones en un bloque, limitados únicamente por el límite de gas del bloque. Sin tarifas de prioridad, un validador racional podría incluir menos transacciones, o incluso cero, sin ninguna penalización directa en la capa de ejecución o la capa de consenso, ya que las recompensas de staking son independientes de cuántas transacciones haya en un bloque. Además, las tarifas de prioridad permiten a los usuarios superar las ofertas de otros para obtener prioridad dentro del mismo bloque, lo que indica urgencia de manera efectiva. 
 
 ### Tarifa máxima {#maxfee}
 
-Para ejecutar una transacción en la red, los usuarios pueden especificar la máxima cantidad que están dispuestos a pagar para que su transacción se ejecute. Este parámetro opcional se conoce como `maxFeePerGas`. Para que una transacción se ejecute, la tarifa máxima debe ser superior a la suma de la tarifa de base y la propina. Al emisor de la transacción se le reembolsa la diferencia entre la tarifa máxima y la suma de la tarifa de base y la propina.
+Para ejecutar una transacción en la red, los usuarios pueden especificar un límite máximo que están dispuestos a pagar para que se ejecute su transacción. Este parámetro opcional se conoce como `maxFeePerGas`. Para que se ejecute una transacción, la tarifa máxima debe superar la suma de la tarifa base y la tarifa de prioridad. Al remitente de la transacción se le reembolsa la diferencia entre la tarifa máxima y la suma de la tarifa base y la tarifa de prioridad.
 
 ### Tamaño del bloque {#block-size}
 
-Cada bloque tiene un tamaño esperado de 15 millones de gas, pero el tamaño de los bloques aumentará o disminuirá de acuerdo con la demanda de la red, hasta alcanzar el límite por bloque de 30 millones de gas (el doble del tamaño esperado del bloque). El protocolo alcanza un tamaño de equilibrio del bloque en torno a 15 millones de media, a través del proceso de _«tâtonnement»_ (o tanteo). Esto significa que si el tamaño del bloque es mayor que el esperado, el protocolo aumentará la tarifa de base para el siguiente bloque. De manera similar, el protocolo disminuirá la tarifa de base si el tamaño del bloque es menor que el tamaño esperado. La cantidad que se toma de referencia para ajustar la tarifa de base es proporcional a la diferencia entre el tamaño del bloque actual y el tamaño esperado. [Más información sobre bloques](/developers/docs/blocks/).
+Cada bloque tiene un tamaño objetivo de la mitad del límite de gas actual, pero el tamaño de los bloques aumentará o disminuirá de acuerdo con la demanda de la red, hasta que se alcance el límite del bloque (2 veces el tamaño del bloque objetivo). El protocolo logra un tamaño de bloque promedio de equilibrio en el objetivo a través del proceso de _tâtonnement_ (tanteo). Esto significa que si el tamaño del bloque es mayor que el tamaño del bloque objetivo, el protocolo aumentará la tarifa base para el siguiente bloque. De manera similar, el protocolo disminuirá la tarifa base si el tamaño del bloque es menor que el tamaño del bloque objetivo.
 
-### Cómo calcular las tarifas de gas en la práctica {#calculating-fees-in-practice}
+La cantidad en la que se ajusta la tarifa base es proporcional a qué tan lejos está el tamaño del bloque actual del objetivo. Este es un cálculo lineal desde -12,5 % para un bloque vacío, 0 % en el tamaño objetivo, hasta +12,5 % para un bloque que alcanza el límite de gas. El límite de gas puede fluctuar con el tiempo en función de las señales de los validadores, así como a través de actualizaciones de la red. Puede [ver los cambios en el límite de gas a lo largo del tiempo aquí](https://eth.blockscout.com/stats/averageGasLimit?interval=threeMonths).
 
-Puede declarar explícitamente cuánto está dispuesto a pagar para hacer que su transacción se ejecute. Sin embargo, la mayoría de las carteras establecerán automáticamente una tarifa de transacción recomendada (tarifa básica + tarifa por prioridad recomendada) para solventar la complejidad de la transacción.
+[Más sobre bloques](/developers/docs/blocks/)
 
-## ¿Por qué existen comisiones de gas? {#why-do-gas-fees-exist}
+### Cálculo de las tarifas de gas en la práctica {#calculating-fees-in-practice}
 
-En resumen, las comisiones de gas ayudan a mantener la red de Ethereum segura. Al requerir una tarifa para cada cálculo computacional ejecutado en la red, evitamos que algunas personas envíen correo basura a la red. Para prevenir bucles infinitos provocados o accidentales u otro despilfarro informático en el código, cada transacción tiene que establecer un límite de cuántos pasos informáticos de ejecución de código puede utilizar. La unidad fundamental del cálculo computacional es el gas.
+Puede indicar explícitamente cuánto está dispuesto a pagar para que se ejecute su transacción. Sin embargo, la mayoría de los proveedores de billeteras establecerán automáticamente una tarifa de transacción recomendada (tarifa base + tarifa de prioridad recomendada) para reducir la cantidad de complejidad que recae sobre sus usuarios.
 
-Aunque una transacción incluye un límite, cualquier gas no utilizado en una transacción se devuelve al usuario (o sea, `tarifa máxima: (tarifa de base + prop)` se devuelve).
+## ¿Por qué existen las tarifas de gas? {#why-do-gas-fees-exist}
 
-![Diagrama que muestra la devolución del gas no utilizado.](../transactions/gas-tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+En resumen, las tarifas de gas ayudan a mantener segura la red Ethereum. Al requerir una tarifa por cada computación ejecutada en la red, evitamos que los malos actores envíen spam a la red. Para evitar bucles infinitos accidentales u hostiles u otro desperdicio computacional en el código, se requiere que cada transacción establezca un límite de cuántos pasos computacionales de ejecución de código puede usar. La unidad fundamental de computación es el "gas".
 
-## ¿Cuál es el límite del gas? {#what-is-gas-limit}
+Aunque una transacción incluye un límite, cualquier gas no utilizado en una transacción se devuelve al usuario (p. ej., se devuelve `max fee - (base fee + tip)`).
 
-El límite del gas se refiere a la cantidad máxima de gas que esté dispuesto a que se consuma en una transacción. Las transacciones más complicadas que implican [contratos inteligentes](/developers/docs/smart-contracts/) requieren más trabajo informático, por eso comportan un límite de gas más alto que un pago sencillo. Una transferencia estándar de ETH requiere un límite de gas de 21.000 unidades de gas.
+![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
+_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Por ejemplo, si se pone un límite de gas de 50.000 para una simple transferencia ETH, la EVM consumiría 21.000 y recuperaría los 29.000. Sin embargo, si especifica un límite de gas muy bajo, por ejemplo, un límite de gas de 20.000 para una transacción sencilla de ETH, la EVM consumirá sus 20.000 unidades de gas para intentar completar la transacción, pero no se completará. La EVM entonces revierte cualquier cambio, pero dado que el validador ya se hizo con 20.000 unidades de gas por su trabajo, el gas se consume.
+## ¿Qué es el límite de gas? {#what-is-gas-limit}
 
-## ¿Por qué las comisiones de gas son tan elevadas? {#why-can-gas-fees-get-so-high}
+El límite de gas se refiere a la cantidad máxima de gas que está dispuesto a consumir en una transacción. Las transacciones más complicadas que involucran [contratos inteligentes](/developers/docs/smart-contracts/) requieren más trabajo computacional, por lo que requieren un límite de gas más alto que un pago simple. Una transferencia estándar de ETH requiere un límite de gas de 21.000 unidades de gas.
 
-Las altas comisiones de gas se deben a la popularidad de Ethereum. Si hay mucha demanda, los usuarios deberán ofertar propinas más altas para tratar de superar las transacciones de los otros usuarios. Una propina más alta puede hacer que aumente la probabilidad de que su transacción llegue al siguiente bloque. Asimismo, los contratos inteligentes de aplicaciones más complejos realizarán más operaciones para poder soportar sus funciones, con el consiguiente e ingente consumo de gas.
+Por ejemplo, si pone un límite de gas de 50.000 para una transferencia simple de ETH, la EVM consumiría 21.000 y se le devolverían los 29.000 restantes. Sin embargo, si especifica muy poco gas, por ejemplo, un límite de gas de 20.000 para una transferencia simple de ETH, la transacción fallará durante la fase de validación. Será rechazada antes de ser incluida en un bloque y no se consumirá gas. Por otro lado, si una transacción se queda sin gas durante la ejecución (p. ej., un contrato inteligente agota todo el gas a la mitad), la EVM revertirá cualquier cambio, pero todo el gas proporcionado se consumirá por el trabajo realizado.
 
-## Iniciativas para reducir los costes del gas {#initiatives-to-reduce-gas-costs}
+## ¿Por qué las tarifas de gas pueden llegar a ser tan altas? {#why-can-gas-fees-get-so-high}
 
-Las [mejoras de escalabilidad](/roadmap/) de Ethereum deberían abordar algunos de los problemas de las comisiones de gas, lo que a su vez permitiría que la plataforma procesase miles de transacciones por segundo y a escala global.
+Las altas tarifas de gas se deben a la popularidad de Ethereum. Si hay demasiada demanda, los usuarios deben ofrecer montos de tarifa de prioridad más altos para intentar superar las transacciones de otros usuarios. Una tarifa de prioridad más alta puede hacer que sea más probable que su transacción ingrese al siguiente bloque. Además, las aplicaciones de contratos inteligentes más complejas podrían estar realizando muchas operaciones para respaldar sus funciones, lo que hace que consuman mucho gas.
 
-La escalabilidad de la capa 2 es una iniciativa primordial para mejorar de manera considerable los costes del gas, la experiencia de usuario y la escalabilidad. [Más información sobre la escalabilidad de la capa 2](/developers/docs/scaling/#layer-2-scaling).
+## Iniciativas para reducir los costos de gas {#initiatives-to-reduce-gas-costs}
 
-## Vigilar las tarifas de gas {#monitoring-gas-fees}
+Las [actualizaciones de escalabilidad](/roadmap/) de Ethereum deberían abordar en última instancia algunos de los problemas de las tarifas de gas, lo que, a su vez, permitirá a la plataforma procesar miles de transacciones por segundo y escalar a nivel mundial.
 
-Si desea supervisar las tarifas de gas, para poder enviar sus ETH por menos, puede usar diferentes herramientas, como:
+El escalado de capa 2 (l2) es una iniciativa principal para mejorar en gran medida los costos de gas, la experiencia del usuario y la escalabilidad.
 
-- [Etherscan](https://etherscan.io/gastracker) _Calculador de precios del gas_
-- [Calculadora de gas de ETH de Blocknative](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm)_Extensión de Chrome para el cálculo de gas compatible con ambas transacciones tradicionales Tipo 0 y transacciones EIP-1559 Tipo 2._
-- [Calculadora de tarifas de gas Cryptoneur](https://www.cryptoneur.xyz/gas-fees-calculator) _Calcule las tarifas de gas en su moneda local para diferentes tipos de transacciones en la red principal, Arbitrum y Polygon._
+[Más sobre el escalado de capa 2 (l2)](/developers/docs/scaling/#layer-2-scaling)
+
+## Monitoreo de las tarifas de gas {#monitoring-gas-fees}
+
+Si desea monitorear los precios del gas, para poder enviar su ETH por menos, puede usar muchas herramientas diferentes, como:
+
+- [Etherscan](https://etherscan.io/gastracker) _Estimador del precio del gas de transacciones_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimador de código abierto del precio del gas de transacciones_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitoree y rastree los precios del gas de Ethereum y la capa 2 (l2) para reducir las tarifas de transacción y ahorrar dinero_
+- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Extensión de Chrome para la estimación de gas que admite tanto transacciones heredadas de Tipo 0 como transacciones EIP-1559 de Tipo 2._
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calcule las tarifas de gas en su moneda local para diferentes tipos de transacciones en la Red principal, Arbitrum y Polygon._
 
 ## Herramientas relacionadas {#related-tools}
 
-- [Plataforma de gas de bloques nativos](https://www.blocknative.com/gas)_Estimación de gas API alimentada por la plataforma de datos de la zona de espera mundial de Blocknative_
+- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API de estimación de gas impulsada por la plataforma global de datos de mempool de Blocknative_
+- [Gas Network](https://gas.network) Oráculos de gas en cadena. Soporte para más de 35 cadenas. 
 
-## Más información {#further-reading}
+## Lecturas adicionales {#further-reading}
 
-- [Explicación sobre el gas de Ethereum](https://defiprime.com/gas)
-- [Reducir el consumo de gas de sus contratos inteligentes](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Prueba de participación frente a prueba de trabajo](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
+- [Explicación del gas de Ethereum](https://defiprime.com/gas)
+- [Reducción del consumo de gas de sus contratos inteligentes](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Estrategias de optimización de gas para desarrolladores](https://www.alchemy.com/overviews/solidity-gas-optimization)
-- [Documentacion sobre EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [Recursos Tim Beiko's EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
+- [Documentación de EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
+- [Recursos de EIP-1559 de Tim Beiko](https://hackmd.io/@timbeiko/1559-resources)
+- [EIP-1559: Separando los mecanismos de los memes](https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)

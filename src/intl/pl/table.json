@@ -1,7 +1,10 @@
 {
-  "table-active": "aktywny",
+  "table-active": "aktywne",
+  "table-browser-engines": "Silniki przeglądarek",
+  "table-desktop-platforms": "Platformy desktopowe",
   "table-filters": "Filtry",
-  "table-showing": "Pokazuje ",
+  "table-mobile-platforms": "Platformy mobilne",
   "table-reset-filters": "Resetuj",
-  "table-what-are-you-looking-for": "Czego poszukujesz?"
+  "table-showing": "Wyświetlanie",
+  "table-what-are-you-looking-for": "Czego szukasz?"
 }

@@ -8,7 +8,7 @@ How to prepare your content for translation depends on whether you're working on
 
 **- MDX pages (`public/content/page/`)**
 
-Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `public/content/` with the name of the page, then place index markdown file (ie. `index.md`) within the new folder.
+Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `public/content/` with the name of the page, then place an index markdown file (i.e., `index.md`) within the new folder.
 
 **- React component page**
 
@@ -16,7 +16,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 - [Crowdin](https://crowdin.com/) is the platform we use to manage & crowdsource translation efforts. Please use the following conventions to help streamline this process.
 - Use kebab casing (utilizing-dashes-between-words) for file names and JSON keys
 - Use standard sentence casing for entry values
-  - If capitalization styling required, it is preferable to style with CSS
+  - If capitalization styling is required, it is preferable to style with CSS
     - Do this:
       ```
         JSON `"page-warning": "Be very careful"`
@@ -26,7 +26,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
       ```
         JSON `"page-warning": "BE VERY CAREFUL"`
       ```
-  - This minimizes issues during translation, and allows consistent styling to all languages
+  - This minimizes issues during translation, and allows consistent styling across all languages
 - _Please avoid_ embedding links within a sentence. For a word/phrase to be a link, it requires a key/string in the intl JSON. If this is in the middle of another sentence, this results in the sentence being broken into multiple pieces, and requires coding the sentence structure into the JavaScript.
 
   - This results in significant challenges during the translation process, as written syntax for each language will vary in terms of ordering subjects/verbs/etc.
@@ -39,7 +39,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   </p>
   ```
 
-  Once, you've added your English content to the appropriate JSON file, the above code should look something more like:
+  Once you've added your English content to the appropriate JSON file, the above code should look something more like:
 
   ```tsx
   <p>
@@ -52,12 +52,12 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `next-i18next`
+- This is done using the `Translation` component. However, there is an alternative method for regular JS: using the `t` function from `@/hooks/useTranslation`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
     ```tsx
-    import { Translation } from "src/components/Translation"
+    import Translation from "@/components/Translation"
 
     // Utilize in JSX using
     ;<Translation id="language-json-key" />
@@ -66,7 +66,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - **Method two: `t()`**
 
     ```tsx
-    import { useTranslation } from "next-i18next"
+    import { useTranslation } from "@/hooks/useTranslation"
 
     // Utilize anywhere in JS using
     const { t } = useTranslation()
@@ -102,84 +102,140 @@ export default ComponentName
 
 ## Styling
 
-We use [Chakra UI](https://chakra-ui.com/).
+We use [Tailwind CSS](https://tailwindcss.com/) as our primary styling approach, combined with the [shadcn/ui](https://ui.shadcn.com/) component library built on [Radix UI](https://www.radix-ui.com/) primitives.
 
-`src/@chakra-ui/theme.ts` - Holds all the theme configuration. This is where you can find the colors, fonts, component themes, variants, etc.
+### Styling Approach
 
-- Wrappers or layout divs
+- **Primary**: Tailwind CSS utility classes
+- **Component variants**: Use `tailwind-variants` (`tv`) for new and refactored components; `class-variance-authority` (cva) remains only in legacy components and doesn't need bulk migration
+- **Dynamic classes**: Use `cn()` utility function (combines clsx + tailwind-merge)
+- **Responsive design**: Mobile-first approach with Tailwind breakpoints (`sm:`, `md:`, `lg:`, `xl:`, `2xl:`)
 
-Use the [native layouts components](https://chakra-ui.com/docs/components/box)
+### Layout Components
 
-```tsx
-<Stack direction='row'>
-```
-
-Center things using the `<Center />` component
-
-```tsx
-<Center h="100px">
-```
-
-- Group buttons using `<ButtonGroup />` or `<Wrap />`
+Use standard HTML elements with Tailwind classes for layouts:
 
 ```tsx
-<ButtonGroup variant='outline' spacing={2}>
-  <Button>Button 1</Button>
-  <Button>Button 2</Button>
-</ButtonGroup>
+// Flexbox layouts
+<div className="flex items-center justify-between">
+<div className="flex flex-col gap-4">
 
-// or
-<Wrap spacing={2}>
-  <WrapItem><Button variant="outline">Button 1</Button></WrapItem>
-  <WrapItem><Button variant="outline">Button 2</Button></WrapItem>
-</Wrap>
+// Grid layouts
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+// Centering
+<div className="flex items-center justify-center min-h-screen">
 ```
 
-- Breakpoints
+### Component Styling
 
-Use [the Chakra default breakpoints](https://www.chakra-ui.com/docs/theming/customization/breakpoints).
+Use shadcn/ui components for interactive elements:
 
 ```tsx
-<Container display={{ base: "block", sm: "flex" }} />
+import { Button } from "@/components/ui/button"
+
+;<Button variant="outline" size="sm">
+  Click me
+</Button>
 ```
 
-- Theme colors
+### Colors and Theming
+
+Use CSS custom properties defined in the design system:
 
 ```tsx
-<Text color="primary.base" bg="background.base" />
+<div className="bg-primary text-primary-foreground">
+<div className="border border-border bg-background">
 ```
 
-> Note the dotted notation. In Chakra, the values are referred to as "semantic tokens" and the new theme applies a nested structure of like tokens for better organization. See [semanticTokens.ts](../src/@chakra-ui/semanticTokens.ts)
+- [Motion](https://motion.dev/) (the `motion` package, v12) - An open source and production-ready motion library for React on the web, used for our animated designs. Import from `motion/react`:
 
-> Note 2: all the previous colors defined in the old theme `src/theme.ts` were
-> ported into the new theme for compatibility reasons. Those colors will
-> transition out of the codebase as we adopt the DS colors.
+```tsx
+import { motion } from "motion/react"
+```
 
-- [Framer Motion](https://www.framer.com/motion/) - An open source and production-ready motion library for React on the web, used for our animated designs
-- **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
+- **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by X (formerly Twitter). These are hosted by us, and used to provide a consistent experience across operating systems.
 
 ```tsx
 // Example of emoji use
-import Emoji from "./Emoji"
+import Emoji from "@/components/Emoji"
 
-// Within JSX:
-;<Emoji text=":star:" fontSize="xl" /> // the base fontSize is `md`
+// Within JSX (size with Tailwind text classes via className):
+;<Emoji text=":star:" className="text-xl" />
 ```
 
-- **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)
-  with [Chakra UI Icon component](https://www.chakra-ui.com/docs/components/concepts/overview)
+## Icons: Lucide
+
+We use [Lucide](https://lucide.dev/icons/) for icons, imported via the [lucide-react](https://www.npmjs.com/package/lucide-react) package.
+
+Lucide icons by default use strokes only, with default 2px stroke width, rounded line-caps and line-joins, and follow `currentColor`.
+
+### Basic Usage
 
 ```tsx
-import { Icon } from "@chakra-ui/react"
-import { BsQuestionSquareFill } from "react-icons/bs"
-
-// wrap your imported icon with the `Icon` component from Chakra UI
-;<Icon as={BsQuestionSquareFill} />
+import { Heart } from "lucide-react"
+;<Heart />
 ```
+
+### Sizing
+
+Use tailwind classes to size icons:
+
+- **Static**: example: `size-6` (24px), `size-4` (16px), etc.
+- **Mirror `fontSize`**: `size-[1em]`, `size-[0.875em]` to match surrounding text
+- **Custom (avoid)**: `size-[50px]` for specific dimensions
+
+```tsx
+<Heart className="size-6" />
+```
+
+### Coloring
+
+- **Stroke color**: Follows `currentColor`, use `text-*` classes (e.g., `text-primary`, `text-accent-a`)
+- **Fill**: Avoid using in most cases to maintain consistent theming
+
+```tsx
+<Heart className="text-primary" />
+```
+
+### Stroke Properties
+
+- **`strokeWidth`**: example: `stroke-[3]` (use Tailwind classes),
+- **`strokeLinecap`/`strokeLinejoin`**: Use props directly on the icon component
+
+  ```tsx
+  import { Check } from "lucide-react"
+  ;<Check
+    className="stroke-[4.5]"
+    strokeLinecap="square"
+    strokeLinejoin="miter"
+  />
+  ```
+
+  Options:
+
+  - `strokeLinecap`: `butt`, `round`, `square`
+  - `strokeLinejoin`: `round`, `bevel`, `miter`
+
+### Background Circles
+
+Wrap an icon in a div for circular backgrounds, and color using background:
+
+```tsx
+<div className="grid size-10 place-items-center rounded-full bg-primary/10">
+  <Heart className="size-5 text-primary" />
+</div>
+```
+
+### Repository Preferences
+
+1. **Preferred**: Lucide out-of-the-box with color styling
+2. **Acceptable**: Lucide with stroke property adjustments
+3. **Last resort**: Custom `.svg` imports
 
 ## Using custom `Image` component
 
-[Next Image](https://nextjs.org/docs/pages/api-reference/components/image) is the component of choice to handle responsive images. However, we use a custom version of this component that is properly optimized with Chakra. This way we can use style props from Chakra but still be able to forward common or Next Image-specific props to the component for correct usage and rendering.
+[Next.js Image](https://nextjs.org/docs/app/api-reference/components/image) is the component of choice to handle responsive images. We use a custom version of this component that integrates with our design system.
 
 ```tsx
 import { Image } from "@/components/Image"

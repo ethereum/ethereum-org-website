@@ -1,0 +1,585 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/smart-contracts/upgrading/index.md",
+  "generatedAt": "2026-06-17T23:06:33.564Z",
+  "rootHash": "f59390db26b1",
+  "tree": {
+    "contentHash": "13bc81b33727",
+    "anchorHash": "4e9476240464",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "71facbb2ae28",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "5374d3cb5583",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "d60ad73b5fa6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "47283998b7ba",
+        "anchorHash": "b28affb3ac9a",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3ee1d7218f23",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "c7308a37e8aa"
+          },
+          "prose:4": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "45349bac799c",
+            "anchorHash": "3abd0e284892"
+          },
+          "prose:5": {
+            "contentHash": "c2f9c9e00efb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "6676f17ddccb",
+            "anchorHash": "f68a48502f68"
+          },
+          "prose:6": {
+            "contentHash": "0a0ed0d59ede",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "what-is-a-smart-contract-upgrade": {
+        "contentHash": "755253181651",
+        "anchorHash": "5c0040a615a6",
+        "labelHash": "afe595a07171",
+        "children": {
+          "_label": {
+            "contentHash": "afe595a07171",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4802ab9d7923",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "contract-migration": {
+            "contentHash": "c091028ed941",
+            "anchorHash": "4a53390446b4",
+            "labelHash": "65107f7d29a2",
+            "children": {
+              "_label": {
+                "contentHash": "65107f7d29a2",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "3bf02f1c7a3c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "e4a72e995223",
+                "anchorHash": "fbfebad62dfb"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "data-separation": {
+            "contentHash": "e246121f3833",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "286b45d1714c",
+            "children": {
+              "_label": {
+                "contentHash": "286b45d1714c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "997a9788cd9c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "proxy-patterns": {
+            "contentHash": "036c086f32fb",
+            "anchorHash": "2142e332e111",
+            "labelHash": "42932d41ee03",
+            "children": {
+              "_label": {
+                "contentHash": "42932d41ee03",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:11": {
+                "contentHash": "68eca8405aed",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "42a841eaaf14"
+              },
+              "prose:12": {
+                "contentHash": "9e4d30bdf396",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "42a841eaaf14"
+              },
+              "prose:13": {
+                "contentHash": "b621afafa728",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "42a841eaaf14"
+              },
+              "prose:14": {
+                "contentHash": "a548358e3e19",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "20a7ad42bf56",
+                "anchorHash": "235b62520144"
+              },
+              "prose:15": {
+                "contentHash": "79a2c73abb82",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:4": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "bfa3d07b8f70"
+              },
+              "prose:16": {
+                "contentHash": "6201111b83a0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:5": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "59114e0d1371"
+              },
+              "prose:17": {
+                "contentHash": "9171633b96b0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:6": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "42a841eaaf14"
+              },
+              "prose:18": {
+                "contentHash": "7af05059f5c8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:7": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "5c7ee2074b65"
+              },
+              "prose:19": {
+                "contentHash": "4df21f83eca7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:8": {
+                "contentHash": "152918366b4f",
+                "anchorHash": "2f98a0ca827e"
+              },
+              "prose:20": {
+                "contentHash": "0e93271c64aa",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:9": {
+                "contentHash": "8222d9dce192",
+                "anchorHash": "1148b7fc3c7f"
+              },
+              "prose:21": {
+                "contentHash": "1768748c28da",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:10": {
+                "contentHash": "9836e88745b8",
+                "anchorHash": "282e6b573d63"
+              },
+              "prose:22": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:11",
+              "inline-code:0",
+              "prose:12",
+              "inline-code:1",
+              "prose:13",
+              "inline-code:2",
+              "prose:14",
+              "link:3",
+              "prose:15",
+              "inline-code:4",
+              "prose:16",
+              "inline-code:5",
+              "prose:17",
+              "inline-code:6",
+              "prose:18",
+              "inline-code:7",
+              "prose:19",
+              "link:8",
+              "prose:20",
+              "link:9",
+              "prose:21",
+              "link:10",
+              "prose:22"
+            ]
+          },
+          "strategy-pattern": {
+            "contentHash": "f792fa9396c3",
+            "anchorHash": "195589e37276",
+            "labelHash": "aa6b46758deb",
+            "children": {
+              "_label": {
+                "contentHash": "aa6b46758deb",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "5e8d91614c2c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "bf49410f92b8",
+                "anchorHash": "ac084015f015"
+              },
+              "prose:2": {
+                "contentHash": "28ed58bd9217",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "diamond-pattern": {
+            "contentHash": "9e9563f2b17b",
+            "anchorHash": "811059c6ce72",
+            "labelHash": "d0916230ab98",
+            "children": {
+              "_label": {
+                "contentHash": "d0916230ab98",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "bfa88e25d5bd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "f802e47379f4",
+                "anchorHash": "3ae31bc3e430"
+              },
+              "prose:4": {
+                "contentHash": "2291d6ec76be",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "42a841eaaf14"
+              },
+              "prose:5": {
+                "contentHash": "5355ece20a6a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "4fd30c3d8305",
+                "anchorHash": "7ac458842478"
+              },
+              "prose:6": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "inline-code:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "contract-migration",
+          "data-separation",
+          "proxy-patterns",
+          "strategy-pattern",
+          "diamond-pattern"
+        ]
+      },
+      "pros-and-cons-of-upgrading-smart-contracts": {
+        "contentHash": "76641bd64d62",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e107086b05da",
+        "children": {
+          "_label": {
+            "contentHash": "e107086b05da",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7b56bad40970",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "considerations-for-upgrading-smart-contracts": {
+        "contentHash": "20c22fb23891",
+        "anchorHash": "e4b4ea50d26b",
+        "labelHash": "5969511b2c04",
+        "children": {
+          "_label": {
+            "contentHash": "5969511b2c04",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "ee4c92a20225",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "beed47cbda89",
+            "anchorHash": "08e1b40bd96f"
+          },
+          "prose:3": {
+            "contentHash": "95a8b80429bf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "5a25c1456ab9",
+            "anchorHash": "d1d1f4395a5a"
+          },
+          "prose:4": {
+            "contentHash": "5399d03ecb61",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "resources": {
+        "contentHash": "cd21407cc5f7",
+        "anchorHash": "705335e3b193",
+        "labelHash": "e89b30aa1dc3",
+        "children": {
+          "_label": {
+            "contentHash": "e89b30aa1dc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "20f6df0ba873",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f911e414cf6b",
+            "anchorHash": "6302ec6a3361"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "c205924de0fe",
+            "anchorHash": "574501593d63"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "tutorials": {
+        "contentHash": "dac4eb5cf602",
+        "anchorHash": "fb4b472d6d5f",
+        "labelHash": "8d9f66992dd4",
+        "children": {
+          "_label": {
+            "contentHash": "8d9f66992dd4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "42728bece9c2",
+            "anchorHash": "70c6e505f74c"
+          },
+          "prose:5": {
+            "contentHash": "54aaee97ce13",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "cf4bd7b0fecd",
+            "anchorHash": "9e35f5f25f5e"
+          },
+          "prose:6": {
+            "contentHash": "5521e1747280",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "187189319c64",
+            "anchorHash": "171804993ef1"
+          },
+          "prose:7": {
+            "contentHash": "0b62b43922d6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "aa2f44ce1fce",
+            "anchorHash": "7f1084586d9b"
+          },
+          "prose:8": {
+            "contentHash": "b7162aed7ec4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "0cbebc6b23e2",
+        "anchorHash": "0154778d9308",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "dc3db0cb1933",
+            "anchorHash": "23c2f88b3ac9"
+          },
+          "prose:6": {
+            "contentHash": "3c9c195bfbeb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "92d1d1f874f0",
+            "anchorHash": "708e29bd7d60"
+          },
+          "prose:7": {
+            "contentHash": "d24d801aa66f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "3bca8784704c",
+            "anchorHash": "0cf746092f85"
+          },
+          "prose:8": {
+            "contentHash": "53886bb9a2c5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "f746fc1e9dd9",
+            "anchorHash": "377828a628e8"
+          },
+          "prose:9": {
+            "contentHash": "493e021c66f6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "eb90db14e25c",
+            "anchorHash": "c827c42e81a7"
+          },
+          "prose:10": {
+            "contentHash": "9069ff0a0968",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "prerequisites",
+      "what-is-a-smart-contract-upgrade",
+      "pros-and-cons-of-upgrading-smart-contracts",
+      "considerations-for-upgrading-smart-contracts",
+      "resources",
+      "tutorials",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

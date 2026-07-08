@@ -5,12 +5,13 @@ author: "Tellor"
 lang: en
 tags: ["solidity", "smart contracts", "oracles"]
 skill: beginner
+breadcrumb: Tellor oracle
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 
-Pop Quiz: Your protocol is just about finished, but it needs an oracle to get access to off chain data...What do you do?
+Pop Quiz: Your protocol is just about finished, but it needs an oracle to get access to offchain data...What do you do?
 
 ## (Soft) Prerequisites {#soft-prerequisites}
 
@@ -26,7 +27,7 @@ Tellor is a live and open-sourced oracle ready for implementation. This beginner
 
 ## Overview {#overview}
 
-Tellor is an oracle system where parties can request the value of an offchain data point (e.g. BTC/USD) and reporters compete to add this value to an onchain data-bank, accessible by all Ethereum smart contracts. The inputs to this data-bank are secured by a network of staked reporters. Tellor utilizes crypto-economic incentive mechanisms, rewarding honest data submissions by reporters and punishing bad actors through the issuance of Tellor’s token, Tributes (TRB), and a dispute mechanism.
+Tellor is an oracle system where parties can request the value of an offchain data point (e.g., BTC/USD) and reporters compete to add this value to an onchain data-bank, accessible by all Ethereum smart contracts. The inputs to this data-bank are secured by a network of staked reporters. Tellor utilizes crypto-economic incentive mechanisms, rewarding honest data submissions by reporters and punishing bad actors through the issuance of Tellor’s token, Tributes (TRB), and a dispute mechanism.
 
 In this tutorial we'll go over:
 

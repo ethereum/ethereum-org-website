@@ -1,59 +1,59 @@
 ---
 title: Introduction aux contrats intelligents
-description: Présentation des contrats intelligents, axée sur leurs caractéristiques uniques et leurs limites
+description: "Un aperçu des contrats intelligents, en se concentrant sur leurs caractéristiques uniques et leurs limites."
 lang: fr
 ---
 
 ## Qu'est-ce qu'un contrat intelligent ? {#what-is-a-smart-contract}
 
-Un "contrat intelligent" est simplement un programme exécuté sur la blockchain d'Ethereum. C'est un ensemble de code (ses fonctions) et de données (son état) qui réside à une adresse spécifique sur la blockchain Ethereum.
+Un « contrat intelligent » est simplement un programme qui s'exécute sur la chaîne de blocs [Ethereum](/). C'est un ensemble de code (ses fonctions) et de données (son état) qui réside à une adresse spécifique sur la chaîne de blocs Ethereum.
 
-Le contrat intelligent est un type de [compte Ethereum](/developers/docs/accounts/). Ceci veut dire qu'ils ont un solde et peuvent être la cible de transactions. Cependant, il n'est pas contrôlé par un utilisateur, mais est plutôt déployé et exécuté comme un programme. Les comptes des utilisateurs peuvent ensuite interagir avec un contrat intelligent en soumettant des transactions qui exécutent une fonction définie sur le contrat intelligent. Un contrat intelligent peut définir des règles, comme un contrat normal, et les appliquer automatiquement via le code. Les contrats intelligents ne peuvent pas être supprimés par défaut et les interactions avec eux sont irréversibles.
+Les contrats intelligents sont un type de [compte Ethereum](/developers/docs/accounts/). Cela signifie qu'ils ont un solde et peuvent être la cible de transactions. Cependant, ils ne sont pas contrôlés par un utilisateur, ils sont plutôt déployés sur le réseau et s'exécutent tels qu'ils ont été programmés. Les comptes d'utilisateurs peuvent ensuite interagir avec un contrat intelligent en soumettant des transactions qui exécutent une fonction définie sur le contrat intelligent. Les contrats intelligents peuvent définir des règles, comme un contrat classique, et les appliquer automatiquement via le code. Les contrats intelligents ne peuvent pas être supprimés par défaut, et les interactions avec eux sont irréversibles.
 
 ## Prérequis {#prerequisites}
 
-Si vous venez tout juste de débuter ou si vous cherchez une introduction moins technique, nous vous recommandons notre [introduction aux contrats intelligents](/smart-contracts/).
+Si vous débutez ou si vous recherchez une introduction moins technique, nous vous recommandons notre [introduction aux contrats intelligents](/smart-contracts/).
 
-Assurez-vous d'avoir lu les pages [Contrats](/developers/docs/accounts/), [Transactions](/developers/docs/transactions/) et [Machine virtuelle Ethereum](/developers/docs/evm/) avant de vous lancer dans le monde des contrats intelligents.
+Assurez-vous d'avoir lu les informations sur les [comptes](/developers/docs/accounts/), les [transactions](/developers/docs/transactions/) et la [machine virtuelle Ethereum](/developers/docs/evm/) avant de vous plonger dans le monde des contrats intelligents.
 
-## Distributeur automatique numérique {#a-digital-vending-machine}
+## Un distributeur automatique numérique {#a-digital-vending-machine}
 
-La meilleure métaphore pour décrire un contrat intelligent est peut-être celle d'un distributeur automatique, tel que décrit par [Nick Szabo](https://unenumerated.blogspot.com/). Avec les bonnes entrées, une certaine sortie est garantie.
+La meilleure métaphore pour un contrat intelligent est peut-être celle d'un distributeur automatique, telle que décrite par [Nick Szabo](https://unenumerated.blogspot.com/). Avec les bonnes entrées, une certaine sortie est garantie.
 
-Pour obtenir une sucrerie d'un distributeur automatique :
+Pour obtenir une collation d'un distributeur automatique :
 
 ```
-money + snack selection = snack dispensed
+argent + sélection de la collation = collation distribuée
 ```
 
-Cette logique est programmée dans les distributeurs automatiques.
+Cette logique est programmée dans le distributeur automatique.
 
-Le contrat intelligent, comme un distributeur automatique, possède une logique programmée. Voici un exemple simple de ce à quoi ce distributeur automatique pourrait ressembler s'il était un contrat intelligent rédigé avec Solidity :
+Un contrat intelligent, tout comme un distributeur automatique, intègre une logique programmée. Voici un exemple simple de ce à quoi ressemblerait ce distributeur automatique s'il s'agissait d'un contrat intelligent écrit en Solidity :
 
 ```solidity
 pragma solidity 0.8.7;
 
 contract VendingMachine {
 
-    // Declare state variables of the contract
+    // Déclarer les variables d'état du contrat
     address public owner;
     mapping (address => uint) public cupcakeBalances;
 
-    // When 'VendingMachine' contract is deployed:
-    // 1. set the deploying address as the owner of the contract
-    // 2. set the deployed smart contract's cupcake balance to 100
+    // Lorsque le contrat 'VendingMachine' est déployé :
+    // 1. définir l'adresse de déploiement comme propriétaire du contrat
+    // 2. définir le solde de cupcakes du contrat intelligent déployé à 100
     constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
 
-    // Allow the owner to increase the smart contract's cupcake balance
+    // Permettre au propriétaire d'augmenter le solde de cupcakes du contrat intelligent
     function refill(uint amount) public {
         require(msg.sender == owner, "Only the owner can refill.");
         cupcakeBalances[address(this)] += amount;
     }
 
-    // Allow anyone to purchase cupcakes
+    // Permettre à quiconque d'acheter des cupcakes
     function purchase(uint amount) public payable {
         require(msg.value >= amount * 1 ether, "You must pay at least 1 ETH per cupcake");
         require(cupcakeBalances[address(this)] >= amount, "Not enough cupcakes in stock to complete this purchase");
@@ -63,50 +63,54 @@ contract VendingMachine {
 }
 ```
 
-Tout comme un distributeur automatique peut remplacer un employé dans une boutique, les contrats intelligents peuvent remplacer les intermédiaires dans bon nombre d'industries.
+Tout comme un distributeur automatique élimine le besoin d'un employé de vente, les contrats intelligents peuvent remplacer les intermédiaires dans de nombreux secteurs.
 
-## Sans autorisation {#permissionless}
+## Sans permission {#permissionless}
 
-N'importe qui peut rédiger un contrat intelligent et le déployer sur le réseau. Il vous suffit d'apprendre à coder dans un [langage de contrat intelligent](/developers/docs/smart-contracts/languages/) et de disposer de suffisamment d'ETH pour déployer votre contrat. Techniquement, le fait de déployer un contrat intelligent est une transaction. L'auteur doit donc payer des frais de [gaz](/developers/docs/gas/) de la même façon qu'il s'acquitterait de ces frais pour un simple transfert d'ETH. Toutefois, les frais de gaz pour le déploiement d'un contrat sont beaucoup plus élevés.
+N'importe qui peut écrire un contrat intelligent et le déployer sur le réseau. Il vous suffit d'apprendre à coder dans un [langage de contrat intelligent](/developers/docs/smart-contracts/languages/) et d'avoir suffisamment d'ETH pour déployer votre contrat. Le déploiement d'un contrat intelligent est techniquement une transaction, vous devez donc payer du [gaz](/developers/docs/gas/) de la même manière que vous devez payer du gaz pour un simple transfert d'ETH. Cependant, les coûts en gaz pour le déploiement d'un contrat sont beaucoup plus élevés.
 
-Pour la rédaction des contrats intelligents, Ethereum propose aux développeurs des langages conviviaux :
+Ethereum dispose de langages adaptés aux développeurs pour écrire des contrats intelligents :
 
 - Solidity
 - Vyper
 
-[Plus d'infos sur les langages](/developers/docs/smart-contracts/languages/)
+[En savoir plus sur les langages](/developers/docs/smart-contracts/languages/)
 
-Toutefois, pour que la machine virtuelle Ethereum puisse interpréter et stocker un contrat, il doit être compilé avant d'être déployé. [Plus d'infos sur la compilation](/developers/docs/smart-contracts/compiling/)
+Cependant, ils doivent être compilés avant de pouvoir être déployés afin que la machine virtuelle d'Ethereum puisse interpréter et stocker le contrat. [En savoir plus sur la compilation](/developers/docs/smart-contracts/compiling/)
 
 ## Composabilité {#composability}
 
-Sur Ethereum, les contrats intelligents sont publics. Ils peuvent être considérés comme des API ouvertes. Cela signifie que vous pouvez appeler d'autres contrats intelligents dans votre propre contrat afin d'en étendre considérablement les fonctionnalités. Certains d'entre eux peuvent même déployer d'autres contrats.
+Les contrats intelligents sont publics sur Ethereum et peuvent être considérés comme des API ouvertes. Cela signifie que vous pouvez appeler d'autres contrats intelligents dans votre propre contrat intelligent pour étendre considérablement ce qui est possible. Les contrats peuvent même déployer d'autres contrats.
 
 En savoir plus sur la [composabilité des contrats intelligents](/developers/docs/smart-contracts/composability/).
 
-## Limitations {#limitations}
+## Limites {#limitations}
 
-Les contrats intelligents seuls ne peuvent pas obtenir d'informations sur les événements du "monde réel", dans la mesure où ils ne peuvent pas récupérer de données depuis des sources hors chaîne. Cela signifie qu'ils ne peuvent pas réagir aux événements du monde réel. C'est un choix délibéré. Le fait de s'appuyer sur des informations externes pourrait compromettre le consensus, qui est essentiel en matière de sécurité et de décentralisation.
+Les contrats intelligents seuls ne peuvent pas obtenir d'informations sur les événements du « monde réel » car ils ne peuvent pas récupérer de données provenant de sources hors chaîne. Cela signifie qu'ils ne peuvent pas réagir aux événements du monde réel. C'est intentionnel. S'appuyer sur des informations externes pourrait compromettre le consensus, ce qui est important pour la sécurité et la décentralisation.
 
-Il est toutefois important que les applications de la blockchain puissent utiliser des données hors chaîne. Pour ce faire, il est possible d'utiliser [oracles](/developers/docs/oracles/), des outils capables d'ingérer des données hors chaîne et de mettre à la disposition des contrats intelligents.
+Cependant, il est important pour les applications de la chaîne de blocs de pouvoir utiliser des données hors chaîne. La solution réside dans les [oracles](/developers/docs/oracles/), qui sont des outils qui ingèrent des données hors chaîne et les rendent disponibles pour les contrats intelligents.
 
-Une autre limitation des contrats intelligents est la taille maximale des contrats. Un contrat intelligent ne peut pas dépasser 24 Ko, sans quoi il sera à court de gaz. Ceci peut être contourné en utilisant [Le modèle du diamant](https://eips.ethereum.org/EIPS/eip-2535).
+Une autre limite des contrats intelligents est la taille maximale du contrat. Un contrat intelligent peut faire au maximum 24 Ko, sinon il manquera de gaz. Cela peut être contourné en utilisant [le modèle Diamant (Diamond Pattern)](https://eips.ethereum.org/EIPS/eip-2535).
 
-## Contrats Multisig {#multisig}
+## Contrats multisig {#multisig}
 
-Les contrats multisig (signature multiple) sont des comptes de contrats intelligents nécessitant plusieurs signatures valides pour exécuter une transaction. C'est très utile afin d'éviter les points de défaillance unique pour les contrats contenant des montants conséquents d'ether ou autres tokens. Les signatures multiples partagent la responsabilité d'exécution du contact ainsi que la gestion des clés entre plusieurs parties et évite la perte d'une unique clé privée amenant à la perte irréversible des fonds. Pour ces raisons, les contrats multisig peuvent être utilisés pour la simple gouvernance d'une DAO. La signature multiple requiert N signatures parmi M signatures possibles (où N ≤ M, et M > 1) pour permettre l'exécution. `N = 3, M = 5` et `N = 4, M = 7` sont assez répandus. Une multi-signature 4/7 requiert quatre signatures valides sur les sept possibles. Cela signifie que les fonds restent récupérables même si trois signatures sont perdues. Dans ce cas, cela signifie également que la majorité des détenteurs de clés doivent accepter et signer pour que le contrat puisse être exécuté.
+Les contrats multisig (à signatures multiples) sont des comptes de contrats intelligents qui nécessitent plusieurs signatures valides pour exécuter une transaction. C'est très utile pour éviter les points de défaillance uniques pour les contrats détenant des quantités substantielles d'ether ou d'autres jetons. Les multisigs divisent également la responsabilité de l'exécution du contrat et de la gestion des clés entre plusieurs parties et empêchent la perte d'une seule clé privée d'entraîner une perte irréversible de fonds. Pour ces raisons, les contrats multisig peuvent être utilisés pour la gouvernance simple d'une DAO. Les multisigs nécessitent N signatures sur M signatures acceptables possibles (où N ≤ M, et M > 1) pour s'exécuter. `N = 3, M = 5` et `N = 4, M = 7` sont couramment utilisés. Un multisig 4/7 nécessite quatre signatures valides sur sept possibles. Cela signifie que les fonds sont toujours récupérables même si trois signatures sont perdues. Dans ce cas, cela signifie également que la majorité des détenteurs de clés doivent être d'accord et signer pour que le contrat s'exécute.
 
-## Ressources de contrats intelligents {#smart-contract-resources}
+## Ressources sur les contrats intelligents {#smart-contract-resources}
 
-**Contrats OpenZeppelin -** **_Bibliothèque pour développer des contrats intelligents de façon sécurisée_**
+**Contrats OpenZeppelin -** **_Bibliothèque pour le développement sécurisé de contrats intelligents._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Forum communautaire](https://forum.openzeppelin.com/c/general/16)
 
-## Complément d'information {#further-reading}
+## Lectures complémentaires {#further-reading}
 
-- [Coinbase : Qu'est-ce qu'un contrat intelligent ?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
-- [Chainlink : Qu'est-ce qu'un contrat intelligent ?](https://chain.link/education/smart-contracts)
-- [Vidéo : Expliqués Simplement - Les Contrats Intelligents](https://youtu.be/ZE2HxTmxfrI)
-- [Cyfrin Updraft : plateforme d'apprentissage et d'audit Web3](https://updraft.cyfrin.io)
+- [Coinbase : Qu'est-ce qu'un contrat intelligent ?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
+- [Chainlink : Qu'est-ce qu'un contrat intelligent ?](https://chain.link/education/smart-contracts)
+- [Vidéo : Simplement expliqué - Les contrats intelligents](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft : Plateforme d'apprentissage et d'audit Web3](https://updraft.cyfrin.io)
+
+## Tutoriels : Signatures de contrats intelligents (EIP-1271) sur Ethereum {#tutorials}
+
+- [EIP-1271 : Signature et vérification des signatures de contrats intelligents](/developers/tutorials/eip-1271-smart-contract-signatures/) _– Comment l'EIP-1271 permet aux contrats intelligents de vérifier les signatures, avec une présentation de l'implémentation Safe._

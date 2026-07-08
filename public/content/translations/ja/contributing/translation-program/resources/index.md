@@ -1,45 +1,48 @@
 ---
-title: 翻訳者のためのリソース
+title: リソース
+metaTitle: 翻訳者向けリソース
 lang: ja
-description: ethereum.org翻訳者向けの有用なリソース
+description: ethereum.orgの翻訳者向けの役立つリソース
 ---
 
-# リソース {#resources}
-
-ethereum.org翻訳者向けの有用なガイド、ツール、翻訳コミュニティ、最新情報を以下から見つけられます。
+以下に、ethereum.orgの翻訳者向けの役立つガイドやツール、翻訳コミュニティ、最新情報などを掲載しています。
 
 ## ガイド {#guides}
 
-- [翻訳スタイルガイド](/contributing/translation-program/translators-guide/) _– ethereum.org翻訳者向けの説明とヒント_
-- [翻訳に関するよくある質問](/contributing/translation-program/faq/) _– ethereum.org 翻訳プログラムに関するよくある質問とその回答_
-- [Crowdinオンラインエディタガイド](https://support.crowdin.com/online-editor/) _– Crowdinオンラインエディタと高度な機能を使用するための詳細なガイド_
-- [コンテンツバケット](/contributing/translation-program/content-buckets/) _– ethereum.orgのコンテンツバケットに含まれているページ_
+- [翻訳スタイルガイド](/contributing/translation-program/translators-guide/) _– ethereum.orgの翻訳者向けの手順とヒント_
+- [翻訳に関するよくある質問 (FAQ)](/contributing/translation-program/faq/) _– ethereum.org翻訳プログラムに関するよくある質問と回答_
+- [Crowdinオンラインエディターガイド](https://support.crowdin.com/online-editor/) _– Crowdinオンラインエディターの使用方法とCrowdinの高度な機能に関する詳細なガイド_
 
 ## ツール {#tools}
 
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– 技術用語の標準的な訳語を検索・確認するのに便利なポータル_
-- [Linguee](https://www.linguee.com/) _– 単語やフレーズでの検索が可能な翻訳・辞書検索エンジン_
-- [Proz term search](https://www.proz.com/search/) _– 専門用語の翻訳辞書・用語集のデータベース_
-- [Eurotermbank](https://www.eurotermbank.com/) _– 42言語の欧州用語集_
+- [Linguee](https://www.linguee.com/)
+  _– 単語やフレーズで検索できる翻訳検索エンジンおよび辞書_
+- [Proz用語検索](https://www.proz.com/search/)
+  _– 専門用語の翻訳辞書および用語集のデータベース_
+- [Eurotermbank](https://www.eurotermbank.com/)
+  _– 42言語に対応したヨーロッパの専門用語集_
 
 ## コミュニティ {#communities}
 
-- [言語別のDiscord翻訳グループ](/discord/) _– ethereum.orgの翻訳者を翻訳グループにつなげる取り組み_
-- [中国語翻訳者グループ](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– 中国語翻訳者間の調整を容易にするノーションページ_
+- [言語別のディスコード翻訳グループ](https://discord.gg/ethereum-org)
+  _– ethereum.orgの翻訳者を翻訳グループに繋げるための取り組み_
+- [中国語翻訳者グループ](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
+  _– 中国語翻訳者間の連携を容易にするためのNotionページ_
 
 ## 最新情報 {#latest-updates}
 
-最新の翻訳プログラムの進捗状況については、[イーサリアム・ファウンデーションのブログ](https://blog.ethereum.org/)をご覧ください。
+翻訳プログラムの最新の進捗状況については、[イーサリアム財団ブログ](https://blog.ethereum.org/)をフォローしてください。
 
-- [2021年10月マイルストーンの更新](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [2020年12月マイルストーンの更新](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [2020年7月のマイルストーンの更新](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [2019年8月翻訳プログラム始動](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [2021年10月のマイルストーン更新情報](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [2020年12月のマイルストーン更新情報](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [2020年7月のマイルストーン更新情報](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [2019年8月の翻訳プログラム立ち上げ](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
-## 翻訳者のためのオフィスアワー {#office-hours}
+## 翻訳者向けオフィスアワー {#office-hours}
 
-毎月第2水曜日に翻訳者のためのオフィスアワーを設けています。 これらは、[ethereum.org Discord](/discord/) の#office-hours ボイスチャンネルで行われ、ここで正確な時間や追加の詳細を確認できます。
+毎月第2水曜日に翻訳者向けのオフィスアワーを開催しています。これは[ethereum.orgのディスコード](https://discord.gg/ethereum-org)の#office-hoursボイスチャンネルで開催されており、正確な時間や詳細情報もそこで確認できます。
 
-オフィスアワーには、翻訳者が翻訳プロセスについて質問したり、プログラムについてフィードバックをしたり、アイデアを共有したり、ethereum.orgのコアチームとチャットしたりすることができます。 最終的に、この会話を通じて、翻訳プログラムの最新動向を伝えて、重要なヒントや指示を貢献者の皆様と共有したいと考えています。
+オフィスアワーでは、翻訳者が翻訳プロセスについて質問したり、プログラムに関するフィードバックを提供したり、アイデアを共有したり、あるいは単にethereum.orgのコアチームと雑談したりすることができます。
+最後に、私たちはこの通話を通じて、翻訳プログラムの最近の動向を伝え、コントリビューターと重要なヒントや手順を共有したいと考えています。
 
-ethereum.org の翻訳者、または翻訳者になりたい方は、これらのセッションのいずれかにお気軽にご参加ください。
+ethereum.orgの翻訳者である方、またはこれから翻訳者になりたい方は、ぜひこれらのセッションにお気軽にご参加ください。

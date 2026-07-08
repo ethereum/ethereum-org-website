@@ -1,5 +1,7 @@
+"use client"
+
 import { type ReactNode, useEffect, useMemo, useState } from "react"
-import { useRouter } from "next/router"
+import { useSearchParams } from "next/navigation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -18,7 +20,9 @@ import { Phone } from "./Phone"
 import { SimulatorModal } from "./SimulatorModal"
 import { Template } from "./Template"
 import type { PathId, SimulatorData } from "./types"
-import { getValidPathId } from "./utils"
+import { getValidPathId, isValidPathId } from "./utils"
+
+import { usePathname, useRouter } from "@/i18n/navigation"
 
 type SimulatorProps = {
   children: ReactNode
@@ -26,12 +30,15 @@ type SimulatorProps = {
 }
 export const Simulator = ({ children, data }: SimulatorProps) => {
   const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
 
   // Track step
   const [step, setStep] = useState(0) // 0-indexed to use as array index
 
   // Track pathID
-  const pathId = getValidPathId(router.query.sim as string)
+  const pathIdString = searchParams?.get(PATH_ID_QUERY_PARAM)
+  const pathId = getValidPathId(pathIdString ?? null)
   const simulator: SimulatorDetails | null = pathId ? data[pathId] : null
   const totalSteps: number = simulator ? simulator.explanations.length : 0
 
@@ -39,8 +46,7 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   const isOpen = !!pathId
 
   const clearUrlParams = () => {
-    const pathWithoutParams = router.asPath.replace(/\?[^#]*/, "")
-    router.replace(pathWithoutParams)
+    router.replace(pathname, { scroll: false })
   }
 
   // When simulator closed: log event, clear URL params and close modal
@@ -59,7 +65,9 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   // Remove URL search param if invalid pathId
   useEffect(() => {
     setStep(0)
-    if (!pathId) clearUrlParams()
+    if (pathId && !isValidPathId(pathId)) {
+      clearUrlParams()
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathId])
 
@@ -88,10 +96,15 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
 
   const openPath = (id: PathId): void => {
     // Set new pathId in navigation
-    const params = new URLSearchParams()
-    params.set(PATH_ID_QUERY_PARAM, id)
-    const url = `?${params.toString()}#${SIMULATOR_ID}`
-    router.replace(url)
+    router.replace(
+      {
+        pathname,
+        query: {
+          [PATH_ID_QUERY_PARAM]: id,
+        },
+      },
+      { scroll: false }
+    )
   }
 
   // Navigation object passed to child components
@@ -133,7 +146,7 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   return (
     <div
       id={SIMULATOR_ID}
-      className="grid w-full scroll-mt-[5rem] place-items-center scroll-smooth bg-gradient-to-r from-accent-a/10 to-accent-c/10 p-4 md:p-16 dark:bg-gradient-to-tr dark:from-primary/20 dark:from-20% dark:via-accent-a/20 dark:via-60% dark:to-accent-c/20 dark:to-95%"
+      className="grid w-full scroll-mt-[5rem] place-items-center scroll-smooth bg-linear-primary p-4 md:p-16"
     >
       <Flex className="w-full max-w-[1000px] items-center gap-16 bg-background px-4 py-8 text-center max-md:flex-col md:p-16 md:text-start md:max-lg:gap-8">
         {/* TEXT CONTENT */}

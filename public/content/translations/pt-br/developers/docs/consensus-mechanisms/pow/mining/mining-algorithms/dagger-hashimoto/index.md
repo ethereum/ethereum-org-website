@@ -1,29 +1,29 @@
 ---
 title: Dagger-Hashimoto
-description: O algoritmo Dagger-Hashimoto em detalhes
+description: "Uma visão detalhada do algoritmo Dagger-Hashimoto."
 lang: pt-br
 ---
 
-Dagger-Hashimoto foi a implementação original de pesquisa e especificação para o algoritmo de mineração do Ethereum. Dagger-Hashimoto foi substituído por [Ethash](#ethash). A mineração foi completamente interrompida na [Fusão](/roadmap/merge/) no dia 15 de setembro de 2022. Desde então, o Ethereum foi protegido usando um mecanismo [prova de participação](/developers/docs/consensus-mechanisms/pos). Esta página é para fins históricos. As informações aqui não são mais relevantes para o Ethereum posterior à Fusão.
+Dagger-Hashimoto foi a implementação de pesquisa e especificação original para o algoritmo de mineração do Ethereum. Dagger-Hashimoto foi substituído pelo [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/#ethash). A mineração foi totalmente desativada no [The Merge](/roadmap/merge/) em 15 de setembro de 2022. Desde então, o Ethereum tem sido protegido usando um mecanismo de [Prova de Participação (PoS)](/developers/docs/consensus-mechanisms/pos) em vez disso. Esta página é de interesse histórico - as informações aqui não são mais relevantes para o Ethereum pós-Merge.
 
-## Pré-Requisitos {#prerequisites}
+## Pré-requisitos {#prerequisites}
 
-Para melhor entender esta página, recomendamos que você leia primeiro o [consenso de prova de trabalho](/developers/docs/consensus-mechanisms/pow), [mineração](/developers/docs/consensus-mechanisms/pow/mining) e [algoritmos de mineração](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
+Para entender melhor esta página, recomendamos que você leia primeiro sobre o [consenso de Prova de Trabalho (PoW)](/developers/docs/consensus-mechanisms/pow), [mineração](/developers/docs/consensus-mechanisms/pow/mining) e [algoritmos de mineração](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 
-Dagger-Hashimoto pretende satisfazer dois objetivos:
+O Dagger-Hashimoto visa satisfazer dois objetivos:
 
-1.  **Resistência a ASIC**: o benefício de criar hardware especializado para o algoritmo deve ser o menor possível.
-2.  **Cliente leve verificável**: um bloco deve ser verificável eficientemente por um cliente leve.
+1.  **Resistência a ASIC**: o benefício de criar hardware especializado para o algoritmo deve ser o menor possível
+2.  **Verificabilidade por cliente leve**: um bloco deve ser verificável de forma eficiente por um cliente leve.
 
-Com uma modificação adicional, também especificamos como atingir um terceiro objetivo se desejado, mas à custa de uma complexidade adicional:
+Com uma modificação adicional, também especificamos como cumprir um terceiro objetivo, se desejado, mas ao custo de complexidade adicional:
 
-**Armazenamento completo da cadeia**: a mineração deveria exigir o armazenamento do estado completo da blockchain (devido à estrutura irregular da árvore de estado Ethereum, esperamos que haja um pouco de perda, especialmente de alguns contratos muitas vezes usados, mas queremos minimizar isso).
+**Armazenamento completo da cadeia**: a mineração deve exigir o armazenamento do estado completo da blockchain (devido à estrutura irregular da trie de estado do Ethereum, prevemos que alguma poda será possível, particularmente de alguns contratos frequentemente usados, mas queremos minimizar isso).
 
 ## Geração do DAG {#dag-generation}
 
-O código do algoritmo será definido em Python abaixo. Primeiro, damos `encode_int` para combinar inteiros sem sinal de precisão especificada em strings. Sua inversa também é dada:
+O código para o algoritmo será definido em Python abaixo. Primeiro, fornecemos `encode_int` para organizar inteiros sem sinal de precisão especificada em strings. Seu inverso também é fornecido:
 
 ```python
 NUM_BITS = 512
@@ -45,7 +45,7 @@ def decode_int(s):
     return x
 ```
 
-Em seguida assumimos que `sha3` é uma função que recebe um inteiro e retorna um inteiro, e `dbl_sha3` é uma função double-sha3, se converter este código de referência em uma implementação de uso:
+Em seguida, assumimos que `sha3` é uma função que recebe um inteiro e gera um inteiro, e `dbl_sha3` é uma função double-sha3; se for converter este código de referência em uma implementação, use:
 
 ```python
 from pyethereum import utils
@@ -65,28 +65,28 @@ def dbl_sha3(x):
 Os parâmetros usados para o algoritmo são:
 
 ```python
-SAFE_PRIME_512 = 2**512 - 38117     # Largest Safe Prime less than 2**512
+SAFE_PRIME_512 = 2**512 - 38117     # Maior Primo Seguro menor que 2**512
 
 params = {
-      "n": 4000055296 * 8 // NUM_BITS,  # Size of the dataset (4 Gigabytes); MUST BE MULTIPLE OF 65536
-      "n_inc": 65536,                   # Increment in value of n per period; MUST BE MULTIPLE OF 65536
-                                        # with epochtime=20000 gives 882 MB growth per year
-      "cache_size": 2500,               # Size of the light client's cache (can be chosen by light
-                                        # client; not part of the algo spec)
-      "diff": 2**14,                    # Difficulty (adjusted during block evaluation)
-      "epochtime": 100000,              # Length of an epoch in blocks (how often the dataset is updated)
-      "k": 1,                           # Number of parents of a node
-      "w": w,                          # Used for modular exponentiation hashing
-      "accesses": 200,                  # Number of dataset accesses during hashimoto
-      "P": SAFE_PRIME_512               # Safe Prime for hashing and random number generation
+      "n": 4000055296 * 8 // NUM_BITS,  # Tamanho do conjunto de dados (4 Gigabytes); DEVE SER MÚLTIPLO DE 65536
+      "n_inc": 65536,                   # Incremento no valor de n por período; DEVE SER MÚLTIPLO DE 65536
+                                        # com epochtime=20000 dá um crescimento de 882 MB por ano
+      "cache_size": 2500,               # Tamanho do cache do cliente leve (pode ser escolhido pelo cliente
+                                        # leve; não faz parte da especificação do algoritmo)
+      "diff": 2**14,                    # Dificuldade (ajustada durante a avaliação do bloco)
+      "epochtime": 100000,              # Duração de uma época em blocos (com que frequência o conjunto de dados é atualizado)
+      "k": 1,                           # Número de pais de um nó
+      "w": w,                          # Usado para geração de hash de exponenciação modular
+      "accesses": 200,                  # Número de acessos ao conjunto de dados durante o hashimoto
+      "P": SAFE_PRIME_512               # Primo Seguro para geração de hash e geração de números aleatórios
 }
 ```
 
-`P` neste caso é uma primeira escolha tal que `log(P)` é apenas ligeiramente menor que 512, que corresponde aos 512 bits que temos usado para representar nossos números. Observe que apenas a última metade do DAG precisa realmente ser armazenado, assim o requisito de RAM de-facto começa em 1 GB e cresce 441 MB por ano.
+`P` neste caso é um número primo escolhido de forma que `log₂(P)` seja um pouco menor que 512, o que corresponde aos 512 bits que temos usado para representar nossos números. Observe que apenas a segunda metade do DAG realmente precisa ser armazenada, portanto, o requisito de RAM de fato começa em 1 GB e cresce 441 MB por ano.
 
-### Construção de gráfico Dagger {#dagger-graph-building}
+### Construção do grafo Dagger {#dagger-graph-building}
 
-A construção primitiva de gráfico dagger é definida da seguinte forma:
+A primitiva de construção do grafo Dagger é definida da seguinte forma:
 
 ```python
 def produce_dag(params, seed, length):
@@ -101,13 +101,13 @@ def produce_dag(params, seed, length):
     return o
 ```
 
-Essencialmente, ele começa um gráfico como um único nó, `sha3(seed)`, e de lá começa a adicionar sequencialmente outros nós com base em nós aleatórios anteriores. Quando um novo nó é criado, uma potência modular da semente é computada para aleatoriamente selecionar alguns índices menores que `i` (usando `x % i` acima), e os valores dos nós desses índices são usados em um cálculo para gerar um novo valor para `x`, que é então alimentada em uma pequena função de prova de trabalho (baseada em XOR) para finalmente gerar o valor do gráfico no índice `i`. A lógica por trás deste design específico é forçar o acesso sequencial do DAG; o próximo valor do DAG que será acessado não pode ser determinado até que o valor atual seja conhecido. Finalmente, a exponenciação modular faz o hash do resultado ainda mais.
+Essencialmente, ele inicia um grafo como um único nó, `sha3(seed)`, e a partir daí começa a adicionar sequencialmente outros nós com base em nós anteriores aleatórios. Quando um novo nó é criado, uma potência modular da semente é calculada para selecionar aleatoriamente alguns índices menores que `i` (usando `x % i` acima), e os valores dos nós nesses índices são usados em um cálculo para gerar um novo valor para `x`, que é então alimentado em uma pequena função de Prova de Trabalho (baseada em XOR) para, em última análise, gerar o valor do grafo no índice `i`. A lógica por trás desse design específico é forçar o acesso sequencial do DAG; o próximo valor do DAG que será acessado não pode ser determinado até que o valor atual seja conhecido. Finalmente, a exponenciação modular faz a geração de hash do resultado ainda mais.
 
-Este algoritmo depende de vários resultados da teoria numérica. Veja o apêndice abaixo para uma discussão.
+Este algoritmo depende de vários resultados da teoria dos números. Veja o apêndice abaixo para uma discussão.
 
 ## Avaliação de cliente leve {#light-client-evaluation}
 
-A construção do gráfico acima pretende permitir que cada nó no gráfico seja reconstruído computando uma subárvore com apenas um pequeno número de nós e exigindo uma pequena quantidade de memória auxiliar. Note que com k=1, a subárvore é apenas uma cadeia de valores que vai subindo até o primeiro elemento do DAG.
+A construção do grafo acima pretende permitir que cada nó no grafo seja reconstruído calculando uma subárvore de apenas um pequeno número de nós e exigindo apenas uma pequena quantidade de memória auxiliar. Observe que com k=1, a subárvore é apenas uma cadeia de valores que vai até o primeiro elemento no DAG.
 
 A função de computação do cliente leve para o DAG funciona da seguinte forma:
 
@@ -131,13 +131,13 @@ def quick_calc(params, seed, p):
     return quick_calc_cached(p)
 ```
 
-Essencialmente, é simplesmente uma reescrita do algoritmo acima que remove o loop de computação dos valores de todo o DAG e substitui a pesquisa anterior de nó por uma chamada recursiva ou uma pesquisa de cache. Observe que para `k=1` o cache é desnecessário, embora uma otimização maior na verdade pré-calcula os primeiros poucos milhares de valores do DAG e o mantém como um cache estático para computações; ver o apêndice para uma implementação de código disso.
+Essencialmente, é simplesmente uma reescrita do algoritmo acima que remove o loop de computação dos valores para todo o DAG e substitui a pesquisa de nó anterior por uma chamada recursiva ou uma pesquisa de cache. Observe que para `k=1` o cache é desnecessário, embora uma otimização adicional na verdade pré-calcule os primeiros milhares de valores do DAG e os mantenha como um cache estático para computações; veja o apêndice para uma implementação de código disso.
 
 ## Buffer duplo de DAGs {#double-buffer}
 
-Em um cliente completo, é usado um [_buffer duplo_](https://wikipedia.org/wiki/Multiple_buffering) de 2 DAGs produzidos pela fórmula acima. A ideia é que DAGs são produzidos a cada `epochtime` número de blocos de acordo com os parâmetros acima. Em vez do cliente usar o último DAG produzido, ele usa o anterior. A vantagem disto é permitir que os DAG sejam substituídos com o passar do tempo, sem necessidade de incorporar um passo em que os mineradores devem, de repente, recriar todos os dados. Caso contrário, existe o potencial para um abrandamento abrupto temporário do processamento da cadeia a intervalos regulares e um aumento dramático da centralização. Assim, existe o risco de ataques de 51% dentro desses poucos minutos antes de todos os dados serem recomputados.
+Em um cliente completo, um [_buffer duplo_](https://wikipedia.org/wiki/Multiple_buffering) de 2 DAGs produzidos pela fórmula acima é usado. A ideia é que os DAGs sejam produzidos a cada número `epochtime` de blocos de acordo com os parâmetros acima. Em vez de o cliente usar o último DAG produzido, ele usa o anterior. O benefício disso é que permite que os DAGs sejam substituídos ao longo do tempo sem precisar incorporar uma etapa em que os mineradores devam recalcular repentinamente todos os dados. Caso contrário, há o potencial de uma desaceleração temporária abrupta no processamento da cadeia em intervalos regulares e um aumento dramático da centralização. Assim, há riscos de ataque de 51% naqueles poucos minutos antes que todos os dados sejam recalculados.
 
-O algoritmo usado para gerar o conjunto de DAGs usados para computar o trabalho de um bloco é o seguinte:
+O algoritmo usado para gerar o conjunto de DAGs usado para calcular o trabalho para um bloco é o seguinte:
 
 ```python
 def get_prevhash(n):
@@ -164,7 +164,7 @@ def get_daggerset(params, block):
     dagsz = get_dagsize(params, block)
     seedset = get_seedset(params, block)
     if seedset["front_hash"] <= 0:
-        # No back buffer is possible, just make front buffer
+        # Nenhum back buffer é possível, basta criar o front buffer
         return {"front": {"dag": produce_dag(params, seedset["front_hash"], dagsz),
                           "block_number": 0}}
     else:
@@ -176,7 +176,7 @@ def get_daggerset(params, block):
 
 ## Hashimoto {#hashimoto}
 
-A ideia por trás do Hashimoto original é usar a blockchain como um conjunto de dados, executando um cálculo que seleciona N índices da blockchain, reúne as transações nesses índices, executa um XOR desses dados e retorna o hash do resultado. O algoritmo original de Thaddeus Dryja, convertido para Python para consistência, é o seguinte:
+A ideia por trás do Hashimoto original é usar a blockchain como um conjunto de dados, realizando uma computação que seleciona N índices da blockchain, reúne as transações nesses índices, realiza um XOR desses dados e retorna o hash do resultado. O algoritmo original de Thaddeus Dryja, traduzido para Python por consistência, é o seguinte:
 
 ```python
 def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
@@ -189,7 +189,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
     return txid_mix ^ (nonce << 192)
 ```
 
-Infelizmente, enquanto Hashimoto é considerado de uso intenso de RAM, ele depende da aritmética de 256 bits, o que tem uma sobrecarga computacional considerável. No entanto, Dagger-Hashimoto usa apenas os 64 bits menos significativos ao indexar seu conjunto de dados para resolver esta questão.
+Infelizmente, embora o Hashimoto seja considerado difícil para a RAM (RAM hard), ele depende de aritmética de 256 bits, o que tem uma sobrecarga computacional considerável. No entanto, o Dagger-Hashimoto usa apenas os 64 bits menos significativos ao indexar seu conjunto de dados para resolver esse problema.
 
 ```python
 def hashimoto(dag, dagsize, params, header, nonce):
@@ -200,7 +200,7 @@ def hashimoto(dag, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-O uso duplo do SHA3 permite uma forma de zero dados, pré-verificação quase instantânea, verificando apenas se foi fornecido um valor intermediário correto. Esta camada exterior de prova de trabalho é altamente favorável a ASIC e razoavelmente fraca, mas existe para tornar a DDoS ainda mais difícil, uma vez que essa pequena quantidade de trabalho tem de ser feita para produzir um bloco que não seja imediatamente rejeitado. Aqui está a versão de cliente leve:
+O uso de double SHA3 permite uma forma de pré-verificação quase instantânea e sem dados, verificando apenas se um valor intermediário correto foi fornecido. Esta camada externa de Prova de Trabalho é altamente amigável a ASIC e bastante fraca, mas existe para tornar os ataques DDoS ainda mais difíceis, já que essa pequena quantidade de trabalho deve ser feita para produzir um bloco que não será rejeitado imediatamente. Aqui está a versão para cliente leve:
 
 ```python
 def quick_hashimoto(seed, dagsize, params, header, nonce):
@@ -213,7 +213,7 @@ def quick_hashimoto(seed, dagsize, params, header, nonce):
 
 ## Mineração e verificação {#mining-and-verifying}
 
-Agora, vamos colocar tudo junto no algoritmo de mineração:
+Agora, vamos juntar tudo no algoritmo de mineração:
 
 ```python
 def mine(daggerset, params, block):
@@ -239,7 +239,7 @@ def verify(daggerset, params, block, nonce):
     return result * params["diff"] < 2**256
 ```
 
-Verificação amigável do cliente leve:
+Verificação amigável para cliente leve:
 
 ```python
 def light_verify(params, header, nonce):
@@ -249,59 +249,55 @@ def light_verify(params, header, nonce):
     return result * params["diff"] < 2**256
 ```
 
-Além disso, note que Dagger-Hashimoto impõe requisitos adicionais no cabeçalho do bloco:
+Além disso, observe que o Dagger-Hashimoto impõe requisitos adicionais ao cabeçalho do bloco:
 
-- Para que a verificação em duas camadas funcione, um cabeçalho de bloco deve ter ambos o nonce e o valor do meio pre-sha3
-- Um cabeçalho de bloco deve armazenar o sha3 do seedset atual em algum lugar
+- Para que a verificação de duas camadas funcione, um cabeçalho do bloco deve ter tanto o nonce quanto o valor intermediário pré-sha3
+- Em algum lugar, um cabeçalho do bloco deve armazenar o sha3 do conjunto de sementes atual
 
 ## Leitura adicional {#further-reading}
 
-_Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_
+_Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_
 
 ## Apêndice {#appendix}
 
-Como mencionado acima, o RNG usado para geração de DAGs depende de alguns resultados da teoria de números. Primeiro, nós fornecemos garantias de que o Lehmer RNG, que é a base para a variável `picker`, tenha um longo período. Segundo, mostramos que `pow(x,3,P)` não vai correlacionar `x` para `1` ou `P-1` fornecer `x ∈ [2,P-2]` para começar. Finalmente, mostramos que `pow(x,3,P)` tem uma baixa taxa de colisão quando tratado como uma função de hashing.
+Como observado acima, o RNG (Gerador de Números Aleatórios) usado para a geração do DAG depende de alguns resultados da teoria dos números. Primeiro, fornecemos a garantia de que o RNG de Lehmer, que é a base para a variável `picker`, tem um período amplo. Em segundo lugar, mostramos que `pow(x,3,P)` não mapeará `x` para `1` ou `P-1` desde que `x ∈ [2,P-2]` para começar. Finalmente, mostramos que `pow(x,3,P)` tem uma baixa taxa de colisão quando tratado como uma função de hash.
 
-### Gerador de números aleatórios Lehmer {#lehmer-random-number}
+### Gerador de números aleatórios de Lehmer {#lehmer-random-number}
 
-Enquanto a função `produce_dag` não precisa produzir números aleatórios sem viés, uma ameaça potencial é que `seed**i % P` só absorve um punhado de valores. Isto poderia proporcionar uma vantagem aos mineradores reconhecendo o padrão em relação aos que não o fazem.
+Embora a função `produce_dag` não precise produzir números aleatórios não tendenciosos, uma ameaça potencial é que `seed**i % P` assuma apenas um punhado de valores. Isso poderia fornecer uma vantagem aos mineradores que reconhecem o padrão em relação àqueles que não o fazem.
 
-Para evitar isso, apela-se a um resultado da teoria dos números. Um [_número primo seguro_](https://en.wikipedia.org/wiki/Safe_prime) é definido como sendo um `P` primo tal que `(P-1)/2` também é primo. A _ordem_ de um membro `x` do [grupo multiplicativo](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `Z/nZ` é definido como o mínimo de `m` tal que <pre>xᵐ mod P ≡ 1</pre>
+Para evitar isso, recorre-se a um resultado da teoria dos números. Um [_Primo Seguro_](https://en.wikipedia.org/wiki/Safe_prime) é definido como um número primo `P` tal que `(P-1)/2` também é primo. A _ordem_ de um membro `x` do [grupo multiplicativo](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` é definida como o `m` mínimo tal que <pre>xᵐ mod P ≡ 1</pre>
 Dadas essas definições, temos:
 
-> Observação 1. Deixe `x` ser um membro do grupo multiplicador `Z/PZ` para um `P` primo seguro. Se `x mod P ≠ 1 mod P` e `x mod P ≠ P-1 mod P`, então a ordem de `x` é `P-1` ou `(P-1)/2`.
+> Observação 1. Seja `x` um membro do grupo multiplicativo `ℤ/Pℤ` para um primo seguro `P`. Se `x mod P ≠ 1 mod P` e `x mod P ≠ P-1 mod P`, então a ordem de `x` é `P-1` ou `(P-1)/2`.
 
-_Prova_. Já que `P` é um primo seguro, então pelo \[Teorema de Lagrange\]\[lagrange\] temos que a ordem de `x` é `1`, `2`, `(P-1)/2` ou `P-1`.
+_Prova_. Como `P` é um primo seguro, então pelo [Teorema de Lagrange][lagrange] temos que a ordem de `x` é `1`, `2`, `(P-1)/2` ou `P-1`.
 
-A ordem de `x` não pode ser `1`, já que pelo Pequeno Teorema de Fermat, nós temos:
+A ordem de `x` não pode ser `1`, pois pelo Pequeno Teorema de Fermat temos:
 
 <pre>x<sup>P-1</sup> mod P ≡ 1</pre>
 
-Daí `x` deve ser uma identidade multiplicadora de `Z/nZ`, que é única. Como partimos do princípio de que `x ≠ 1` por suposição, isso não é possível.
+Portanto, `x` deve ser uma identidade multiplicativa de `ℤ/nℤ`, que é única. Como assumimos que `x ≠ 1` por suposição, isso não é possível.
 
-A ordem de `x` não pode ser `2` a menos que `x = P-1`, já que isso violaria o princípio de que `P` é primo.
+A ordem de `x` não pode ser `2` a menos que `x = P-1`, pois isso violaria o fato de que `P` é primo.
 
-A partir da proposta acima, podemos reconhecer que a iteração `(picker * init) % P` terá um ciclo de comprimento de pelo menos `(P-1)/2`. Isso acontece porque selecionamos `P` para ser um primo seguro aproximadamente igual a uma potência de dois mais alta, e `init` está no intervalo `[2,2**256+1]`. Dada a magnitude de `P`, nunca deveríamos esperar um ciclo da exponenciação modular.
+A partir da proposição acima, podemos reconhecer que a iteração de `(picker * init) % P` terá um comprimento de ciclo de pelo menos `(P-1)/2`. Isso ocorre porque selecionamos `P` para ser um primo seguro aproximadamente igual a uma potência superior de dois, e `init` está no intervalo `[2,2**256+1]`. Dada a magnitude de `P`, nunca devemos esperar um ciclo da exponenciação modular.
 
-Quando estamos atribuindo a primeira célula no DAG (a variável rotulada como `init`), nós computamos `pow (sha3(seed) + 2, 3, P)`. À primeira vista, isso não garante que o resultado não é `1` nem `P-1`. No entanto, como `P-1` é um primo seguro, temos a seguinte garantia adicional, que é uma afirmação deduzida da Observação 1:
+Quando estamos atribuindo a primeira célula no DAG (a variável rotulada `init`), calculamos `pow(sha3(seed) + 2, 3, P)`. À primeira vista, isso não garante que o resultado não seja nem `1` nem `P-1`. No entanto, como `P-1` é um primo seguro, temos a seguinte garantia adicional, que é um corolário da Observação 1:
 
-> Observação 2. Deixe `x` ser um membro do grupo multiplicador `Z/PZ` para um `P` primo seguro, e deixe `w` ser um número natural. Se `x mod P ≠ 1 mod P` e `x mod P ≠ P-1 mod P`, assim como `w mod P ≠ P-1 mod P` e `w mod P ≠ 0 mod P`, então `xʷ mod P ≠ 1 mod P` e `xʷ mod P ≠ P-1 mod P`
+> Observação 2. Seja `x` um membro do grupo multiplicativo `ℤ/Pℤ` para um primo seguro `P`, e seja `w` um número natural. Se `x mod P ≠ 1 mod P` e `x mod P ≠ P-1 mod P`, bem como `w mod P ≠ P-1 mod P` e `w mod P ≠ 0 mod P`, então `xʷ mod P ≠ 1 mod P` e `xʷ mod P ≠ P-1 mod P`
 
-### Exponenciação modular como uma função hash {#modular-exponentiation}
+### Exponenciação modular como uma função de hash {#modular-exponentiation}
 
-Para certos valores de `P` e `w`, a função `pow(x, w, P)` pode ter muitas colisões. Por exemplo, `pow(x,9,19)` recebe apenas valores `{1,18}`.
+Para certos valores de `P` e `w`, a função `pow(x, w, P)` pode ter muitas colisões. Por exemplo, `pow(x,9,19)` assume apenas os valores `{1,18}`.
 
-Dado que `P` é primo, então um `w` apropriado para uma função hash de exponenciação modular pode ser escolhida usando o seguinte resultado:
+Dado que `P` é primo, então um `w` apropriado para uma função de hash de exponenciação modular pode ser escolhido usando o seguinte resultado:
 
-> Observação 3. Considere `P` um primo; `w` e `P-1` são relativamente primos, se e somente se para todos `a` e `b` em `Z/PZ`:
-> 
-> <center>
->   `aʷ mod P ≡ bʷ mod P` se e somente se `a mod P ≡ b mod P`
-> </center>
+> Observação 3. Seja `P` um número primo; `w` e `P-1` são primos entre si se e somente se para todos `a` e `b` em `ℤ/Pℤ`:<center>`aʷ mod P ≡ bʷ mod P` se e somente se `a mod P ≡ b mod P`</center>
 
-Assim, dado que `P` é primo e `w` é relativamente primo de `P-1`, temos que `|{pow(x, w, P) : x ∈ ℤ}| = P`, implicando que a função tem a taxa mínima de colisão possível.
+Assim, dado que `P` é primo e `w` é primo entre si em relação a `P-1`, temos que `|{pow(x, w, P) : x ∈ ℤ}| = P`, implicando que a função de hash tem a taxa de colisão mínima possível.
 
-No caso especial que `P` é um primo seguro como selecionamos, então `P-1` só tem fatores 1, 2, `(P-1)/2` e `P-1`. Como `P` > 7, sabemos que 3 é relativamente primo de `P-1`, daí `w=3` satisfaz a proposta acima.
+No caso especial em que `P` é um primo seguro como selecionamos, então `P-1` tem apenas os fatores 1, 2, `(P-1)/2` e `P-1`. Como `P` > 7, sabemos que 3 é primo entre si em relação a `P-1`, portanto `w=3` satisfaz a proposição acima.
 
 ## Algoritmo de avaliação baseado em cache mais eficiente {#cache-based-evaluation}
 

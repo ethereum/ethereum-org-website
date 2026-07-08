@@ -1,48 +1,48 @@
 ---
-title: Daha güvenli bir Ethereum
-description: Ethereum, var olan en güvenli ve merkeziyetsiz akıllı sözleşme platformudur. Bununla birlikte, Ethereum'un gelecekte her türlü saldırıya karşı dayanıklı kalabilmesi için yapılabilecek iyileştirmeler hâlâ var.
+title: "Daha güvenli bir Ethereum"
+description: "Ethereum, var olan en güvenli ve merkeziyetsiz akıllı sözleşme platformudur. Ancak, Ethereum'un gelecekte de her türlü saldırıya karşı dirençli kalabilmesi için yapılabilecek iyileştirmeler hâlâ mevcuttur."
 lang: tr
 image: /images/roadmap/roadmap-security.png
 alt: "Ethereum yol haritası"
 template: roadmap
 ---
 
-**Ethereum halihazırda çok güvenli**, merkeziyetsiz bir [akıllı sözleşme](/glossary/#smart-contract) platformudur. Bununla birlikte, Ethereum'un gelecekte her türlü saldırıya karşı dayanıklı kalabilmesi için yapılabilecek iyileştirmeler hâlâ var. Bunlar arasında [Ethereum istemcilerinin](/glossary/#consensus-client) rakip [bloklarla](/glossary/#block) başa çıkma yönteminde yapılan incelikli değişiklilerin yanı sıra ağın blokları ["kesinleşmiş"](/developers/docs/consensus-mechanisms/pos/#finality) olarak kabul etme hızının arttırılması (yani bir saldırgan için aşırı ekonomik kayıplar olmadan değiştirilememeleri) yer alıyor.
+**Ethereum halihazırda çok güvenli**, merkeziyetsiz bir [akıllı sözleşme](/glossary/#smart-contract) platformudur. Ancak, Ethereum'un gelecekte de her türlü saldırıya karşı dirençli kalabilmesi için yapılabilecek iyileştirmeler hâlâ mevcuttur. Bunlar arasında [Ethereum istemcilerinin](/glossary/#consensus-client) rekabet eden [bloklarla](/glossary/#block) başa çıkma biçimindeki ince değişikliklerin yanı sıra, ağın blokları ["kesinleşmiş"](/developers/docs/consensus-mechanisms/pos/#finality) (yani bir saldırgan için aşırı ekonomik kayıplar olmadan değiştirilemeyecekleri anlamına gelir) olarak kabul etme hızının artırılması yer alır.
 
-Ayrıca, bir istemci sansür uyguladığında belirlenmesini sağlayan, blok önericilerini blokların gerçek içeriğine kör ederek işlemleri sansürlemeyi çok daha zor hale getiren yeni iyileştirmeler de var. Bu iyileştirmelerle birlikte [hisse ispatı](/glossary/#pos) protokolü yükseltilecek ve böylece - bireylerden şirketlere kadar - kullanıcılar, Ethereum'daki uygulamalarına, verilerine ve varlıklarına doğrudan güvenebilecektir.
+Ayrıca, blok teklifçilerini bloklarının gerçek içeriklerine karşı kör hale getirerek işlemleri sansürlemeyi çok daha zorlaştıran iyileştirmeler ve bir istemcinin ne zaman sansür uyguladığını belirlemenin yeni yolları da vardır. Birlikte bu iyileştirmeler, [Hisse Kanıtı (PoS)](/glossary/#pos) protokolünü güncelleyerek bireylerden şirketlere kadar tüm kullanıcıların Ethereum üzerindeki uygulamalarına, verilerine ve varlıklarına anında güven duymalarını sağlayacaktır.
 
-## Hisseden ödeme alma {#staking-withdrawals}
+## Staking çekim işlemleri {#staking-withdrawals}
 
-[İş ispatı](/glossary/#pow)ndan hisse ispatına geçiş, Ethereum'daki öncülerin ETH'lerini bir depozito sözleşmesine "hisselemesi" ile başladı. Adı geçen ETH, ağı korumak için kullanılıyor 12 Nisan 2023'te hisselenen ETH'nin çekilebilmesine olanak sağlayan ikinci bir güncelleme yapıldı. O zamandan beri, doğrulayıcılar özgürce ETH kilitleyebiliyor ya da geri çekebiliyorlar.
+[İş Kanıtı (PoW)](/glossary/#pow) sisteminden Hisse Kanıtı (PoS) sistemine geçiş, Ethereum öncülerinin ETH'lerini bir yatırma sözleşmesinde "stake etmesiyle" başladı. Bu ETH, ağı korumak için kullanılır. 12 Nisan 2023'te doğrulayıcıların stake edilen ETH'leri çekmesine olanak tanıyan ikinci bir güncelleme yapıldı. O zamandan beri doğrulayıcılar serbestçe ETH stake edebilir veya çekebilirler.
 
-<ButtonLink variant="outline-color" href="/staking/withdrawals/">Para çekme hakkındakileri okuyun</ButtonLink>
+<ButtonLink variant="outline-color" href="/staking/withdrawals/">Çekim işlemleri hakkında bilgi edinin</ButtonLink>
 
 ## Saldırılara karşı savunma {#defending-against-attacks}
 
-Ethereum'un hisse ispatı protokolünde yapılabilecek iyileştirmeler de vardır. Bunlardan biri, [görünüm birleştirme](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) olarak bilinen ve belirli karmaşık saldırı türlerini daha zor hale getiren daha güvenli bir [çatallanma](/glossary/#fork) seçim algoritmasıdır.
+Ethereum'un Hisse Kanıtı (PoS) protokolünde yapılabilecek iyileştirmeler vardır. Bunlardan biri, belirli karmaşık saldırı türlerini daha zor hale getiren daha güvenli bir [çatallanma](/glossary/#fork) seçimi algoritması olan [görünüm birleştirme (view-merge)](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) olarak bilinir.
 
-Ethereum'da blokların [sonlandırılma](/glossary/#finality) süresini azaltmak daha iyi bir kullanıcı deneyimi sağlayabilir ve saldıranların yakın zamandaki blokları yeniden karıştırarak kâr elde etmeleri ya da belirli işlemleri sansürlemelerini içeren karmaşık "yeniden örgütlenme" saldırılarını önleyebilir. [**Tek yuva kesinliği (SSF)**](/roadmap/single-slot-finality/)**, sonlandırma gecikmesini küçültecek yollardan biridir**. Şu anda bir saldırganın teorik olarak diğer doğrulayıcıları yeniden yapılandırmaya ikna edebileceği 15 dakika değerinde bloklar var. Bu süre SSF ile birlikte sıfıra iniyor. Bireylerden uygulamalara ve borsalara kadar kullanıcılar, işlemlerinin iptal edilmeyeceğine dair hızlı güvenceden yararlanır, ağ ise bütün bir saldırı grubunu durdurarak fayda sağlar.
+Ethereum'un blokları [kesinleştirmesi](/glossary/#finality) için geçen süreyi azaltmak, daha iyi bir kullanıcı deneyimi sağlayacak ve saldırganların kâr elde etmek veya belirli işlemleri sansürlemek için çok yeni blokları yeniden sıralamaya çalıştığı karmaşık "yeniden düzenleme (re-org)" saldırılarını önleyecektir. [**Tek slot kesinliği (SSF)**](/roadmap/single-slot-finality/), **kesinleşme gecikmesini en aza indirmenin bir yoludur**. Şu anda, bir saldırganın teorik olarak diğer doğrulayıcıları yeniden yapılandırmaya ikna edebileceği 15 dakikalık bloklar bulunmaktadır. SSF ile bu süre 0'dır. Bireylerden uygulamalara ve borsalara kadar tüm kullanıcılar, işlemlerinin geri alınmayacağına dair hızlı güvenceden faydalanır ve ağ, bütün bir saldırı sınıfını kapatarak bundan yarar sağlar.
 
-<ButtonLink variant="outline-color" href="/roadmap/single-slot-finality/">Tek yuva kesinliği hakkındakileri oku</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/single-slot-finality/">Tek slot kesinliği hakkında bilgi edinin</ButtonLink>
 
 ## Sansüre karşı savunma {#defending-against-censorship}
 
-Merkeziyetsizlik, bireylerin ya da [doğrulayıcılar](/glossary/#validator)dan oluşan küçük grupların çok nüfuzlu olmasını engeller. Yeni hisseleme teknolojileri, Ethereum doğrulayıcılarının mümkün olduğunca merkeziyetsiz kalmalarına yardımcı olurken aynı zamanda onları donanım, yazılım ve ağ hatalarına karşı da korur. Bu, doğrulayıcıların sorumluluğunu birçok [düğüm](/glossary/#node) arasında paylaştıracak bir yazılımı içerir. Bu, **dağıtılmış doğrulayıcı teknolojisi (DVT)** olarak bilinir. [Hisseleme havuzları](/glossary/#staking-pool) için DVT kullanımı teşvik edilir çünkü birden fazla bilgisayarın doğrulama sürecine toplu olarak katılmasına olanak tanıyarak yedekleme ve hata toleransı ekler. Aynı zamanda, birden fazla doğrulayıcıyı çalıştıran tek bir operatöre sahip olmak yerine, doğrulayıcı anahtarlarını birkaç sisteme de böler. Bu, sahtekar operatörlerin Ethereum'a karşı saldırı koordine etmesini daha zor hale getirir. Genel olarak fikir, doğrulayıcıları bireyler yerine _topluluklar_ olarak çalıştırarak güvenlik avantajı elde etmektir.
+Merkeziyetsizlik, bireylerin veya küçük [doğrulayıcı](/glossary/#validator) gruplarının çok etkili olmasını engeller. Yeni staking teknolojileri, Ethereum'un doğrulayıcılarının mümkün olduğunca merkeziyetsiz kalmasını sağlarken aynı zamanda onları donanım, yazılım ve ağ arızalarına karşı savunmaya yardımcı olabilir. Buna, doğrulayıcı sorumluluklarını birden fazla [düğüm](/glossary/#node) arasında paylaştıran yazılımlar da dahildir. Bu, **dağıtık doğrulayıcı teknolojisi (DVT)** olarak bilinir. [Staking havuzları](/glossary/#staking-pool), birden fazla bilgisayarın doğrulamaya toplu olarak katılmasına izin vererek yedeklilik ve hata toleransı eklediği için DVT'yi kullanmaya teşvik edilir. Ayrıca, tek bir operatörün birden fazla doğrulayıcı çalıştırması yerine doğrulayıcı anahtarlarını birkaç sistem arasında böler. Bu, dürüst olmayan operatörlerin Ethereum'a yönelik saldırıları koordine etmesini zorlaştırır. Genel olarak fikir, doğrulayıcıları bireyler yerine _topluluklar_ olarak çalıştırarak güvenlik avantajları elde etmektir.
 
-<ButtonLink variant="outline-color" href="/staking/dvt/">Dağıtılmış doğrulayıcı teknolojisi hakkındakileri oku</ButtonLink>
+<ButtonLink variant="outline-color" href="/staking/dvt/">Dağıtık doğrulayıcı teknolojisi hakkında bilgi edinin</ButtonLink>
 
-**Önerici-inşa edici ayrımının (PBS)** uygulanması, Ethereum'un sansüre karşı dahili savunmalarını büyük ölçüde geliştirecektir. PBS, bir doğrulayıcının bir blok oluşturmasına ve diğerinin bunu Ethereum ağında yayınlamasına olanak verir. Bu, profesyonel kâr maksimizasyonu sağlayan ve blok inşa eden algoritmalardan elde edilen kazançların adil bir şekilde dağıtılmasını sağlayarak, zaman içinde en iyi performans gösteren kurumsal paydaşların **hisselemelerinin yoğunlaşmasını engeller**. Blok önerici, bir blok oluşturucu pazarı tarafından kendilerine sunulan en kazançlı bloku seçer. Sansürleme için bir blok önericinin çoğunlukla daha az kazançlı bir blok seçmesi gerekir. Bu **ekonomik açıdan mantıksız ve ağdaki diğer doğrulayıcılar için de aşikardır**.
+**Teklifçi-oluşturucu ayrımının (PBS)** uygulanması, Ethereum'un sansüre karşı yerleşik savunmalarını büyük ölçüde iyileştirecektir. PBS, bir doğrulayıcının bir blok oluşturmasına ve diğerinin bunu Ethereum ağında yayınlamasına olanak tanır. Bu, kârı maksimize eden profesyonel blok oluşturma algoritmalarından elde edilen kazançların ağ genelinde daha adil bir şekilde paylaşılmasını sağlayarak, zaman içinde **stake'in en iyi performans gösteren kurumsal staker'larda yoğunlaşmasını önler**. Blok teklifçisi, blok oluşturuculardan oluşan bir piyasa tarafından kendisine sunulan en kârlı bloğu seçme hakkına sahip olur. Sansür uygulamak için, bir blok teklifçisinin genellikle daha az kârlı bir bloğu seçmesi gerekir; bu da **ekonomik olarak mantıksız olacak ve aynı zamanda ağdaki diğer doğrulayıcılar için bariz olacaktır**.
 
-Ethereum'un sansüre dayanıklılığını daha da arttırabilecek şifrelenmiş işlemler ve dahil etme listeleri gibi potansiyel PBS eklentileri vardır. Bunlar, blok inşa edenlerin ve önerenlerin bloklarına dahil olan asıl işlemleri görmelerini engeller.
+PBS'ye, Ethereum'un sansür direncini daha da artırabilecek şifrelenmiş işlemler ve dahil etme listeleri gibi potansiyel eklentiler vardır. Bunlar, blok oluşturucuyu ve teklif ediciyi bloklarına dahil edilen gerçek işlemlere karşı kör hale getirir.
 
-<ButtonLink variant="outline-color" href="/roadmap/pbs/">Önerici-inşa edici ayrımı hakkındakileri okuyun</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/pbs/">Teklifçi-oluşturucu ayrımı hakkında bilgi edinin</ButtonLink>
 
 ## Doğrulayıcıları koruma {#protecting-validators}
 
-Tecrübeli bir saldırganın, yaklaşan doğrulayıcıları saptayıp, blok önermelerini engellemek için onları spamlaması mümkündür ve buna **hizmet reddi (DoS)** saldırısı denir. [**Gizli lider seçiminin (SLE)**](/roadmap/secret-leader-election) uygulanması, blok önericilerin önceden bilinmesini önleyerek bu tür saldırılara karşı koruma sağlayacaktır. Bu, aday blok önericilerini temsil eden bir dizi kriptografik taahütün sürekli olarak karıştırılarak ve bunların sırasını kullanarak çalışır. Bu şekilde, sadece doğrulayıcıların kendi sıralarını önceden bileceği şekilde hangi doğrulayıcının seçildiği belirlenir.
+Karmaşık bir saldırganın yaklaşan doğrulayıcıları tespit etmesi ve blok teklif etmelerini önlemek için onlara spam göndermesi mümkündür; bu, **hizmet reddi (DoS)** saldırısı olarak bilinir. [**Gizli lider seçiminin (SLE)**](/roadmap/secret-leader-election) uygulanması, blok teklifçilerinin önceden bilinmesini engelleyerek bu tür saldırılara karşı koruma sağlayacaktır. Bu, aday blok teklifçilerini temsil eden bir dizi kriptografik taahhüdü sürekli olarak karıştırarak ve hangi doğrulayıcının seçileceğini belirlemek için sıralarını kullanarak çalışır; öyle ki yalnızca doğrulayıcıların kendileri sıralamalarını önceden bilir.
 
-<ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Gizli lider seçimi hakkındakileri okuyun</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Gizli lider seçimi hakkında bilgi edinin</ButtonLink>
 
-## Güncel ilerleme {#current-progress}
+## Mevcut ilerleme {#current-progress}
 
-**Yol haritasındaki güvenlik yükseltmeleri, araştırmanın ileri aşamalarındadır** ancak bir süre daha uygulanmaya eklenmesi beklenmemektedir. Görüntü birleşiminin sonraki adımları ise PBS, SSF ve SLE'dir, özellikleri kesinleştirip prototip inşa etmeye başlamak içindir.
+**Yol haritasındaki güvenlik yükseltmeleri ileri araştırma aşamalarındadır**, ancak bir süre daha uygulanmaları beklenmemektedir. Görünüm birleştirme (view-merge), PBS, SSF ve SLE için sonraki adımlar, bir spesifikasyonu kesinleştirmek ve prototipler oluşturmaya başlamaktır.

@@ -1,0 +1,216 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-17T23:03:34.630Z",
+  "englishManifestHash": "f59390db26b1",
+  "placeholderOrder": [
+    "LINK-adc8d3",
+    "LINK-59bc42",
+    "LINK-71c926",
+    "LINK-5a47fd",
+    "CODE-42a841",
+    "CODE-42a841",
+    "CODE-42a841",
+    "LINK-796e7a",
+    "CODE-bfa3d0",
+    "CODE-59114e",
+    "CODE-42a841",
+    "CODE-5c7ee2",
+    "LINK-77cc04",
+    "LINK-2e7468",
+    "LINK-7ce3a5",
+    "LINK-091e4b",
+    "LINK-37efe1",
+    "CODE-42a841",
+    "LINK-05e8e3",
+    "LINK-b9eb49",
+    "LINK-11a759",
+    "LINK-3e7078",
+    "LINK-b21e51",
+    "LINK-50e8b4",
+    "LINK-0adc9b",
+    "LINK-691e18",
+    "LINK-314699",
+    "LINK-cea38b",
+    "LINK-8bac06",
+    "LINK-7476a8",
+    "LINK-7b3839",
+    "LINK-df0c73"
+  ],
+  "placeholderMap": {
+    "CODE-42a841": {
+      "type": "inline-code",
+      "values": {
+        "content": "delegatecall"
+      }
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-59114e": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.value"
+      }
+    },
+    "CODE-5c7ee2": {
+      "type": "inline-code",
+      "values": {
+        "content": "fallback"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-59bc42": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/anatomy/"
+      }
+    },
+    "LINK-71c926": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-5a47fd": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/"
+      }
+    },
+    "LINK-796e7a": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries"
+      }
+    },
+    "LINK-77cc04": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/contracts.html#fallback-function"
+      }
+    },
+    "LINK-2e7468": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357"
+      }
+    },
+    "LINK-7ce3a5": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.openzeppelin.com/proxy-patterns/"
+      }
+    },
+    "LINK-091e4b": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Strategy_pattern"
+      }
+    },
+    "LINK-37efe1": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector"
+      }
+    },
+    "LINK-05e8e3": {
+      "type": "link",
+      "values": {
+        "url": "https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w"
+      }
+    },
+    "LINK-b9eb49": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/#multisig"
+      }
+    },
+    "LINK-11a759": {
+      "type": "link",
+      "values": {
+        "url": "/dao/"
+      }
+    },
+    "LINK-3e7078": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-upgrades"
+      }
+    },
+    "LINK-b21e51": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/upgrades"
+      }
+    },
+    "LINK-50e8b4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=bdXJmWajZRY"
+      }
+    },
+    "LINK-0adc9b": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd"
+      }
+    },
+    "LINK-691e18": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.logrocket.com/author/praneshas/"
+      }
+    },
+    "LINK-314699": {
+      "type": "link",
+      "values": {
+        "url": "https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916"
+      }
+    },
+    "LINK-cea38b": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/"
+      }
+    },
+    "LINK-8bac06": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/"
+      }
+    },
+    "LINK-7476a8": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/learn/upgrading-smart-contracts"
+      }
+    },
+    "LINK-7b3839": {
+      "type": "link",
+      "values": {
+        "url": "https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0"
+      }
+    },
+    "LINK-df0c73": {
+      "type": "link",
+      "values": {
+        "url": "https://dev.to/mudgen/how-diamond-upgrades-work-417j"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T23:03:34.630Z",
+      "status": "success"
+    }
+  }
+}

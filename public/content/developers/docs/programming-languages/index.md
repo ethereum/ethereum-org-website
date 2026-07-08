@@ -1,6 +1,6 @@
 ---
 title: Programming languages
-description:
+description: Discover Ethereum development resources for various programming languages including JavaScript, Python, Go, Rust, and more.
 lang: en
 ---
 

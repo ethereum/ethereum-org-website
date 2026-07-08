@@ -1,0 +1,282 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-02T16:02:34.430Z",
+  "englishManifestHash": "b85c9cbd95a5",
+  "placeholderOrder": [
+    "LINK-54fa0a",
+    "LINK-c8fdd8",
+    "LINK-9df1a4",
+    "LINK-f22107",
+    "LINK-703aae",
+    "LINK-d3df1f",
+    "LINK-9b0241",
+    "LINK-a59753",
+    "LINK-1a7aa6",
+    "LINK-407249",
+    "LINK-de11ad",
+    "LINK-c030e8",
+    "LINK-3706ee",
+    "LINK-74b3ba",
+    "CODE-beb87d",
+    "CODE-2c5df9",
+    "CODE-0f95bd",
+    "LINK-5e8fab",
+    "CODE-90efef",
+    "CODE-3e9c1f",
+    "LINK-ff40e2",
+    "LINK-2a467b",
+    "LINK-550ad4",
+    "LINK-3652c8",
+    "LINK-23e3bf",
+    "LINK-fed9cb",
+    "LINK-1ba539",
+    "LINK-507896",
+    "LINK-f9bbaf",
+    "LINK-c033bb",
+    "LINK-8123ce",
+    "LINK-c92a4b",
+    "LINK-4dff28",
+    "LINK-0c0afc",
+    "LINK-7c589f",
+    "LINK-2f00d9",
+    "LINK-2fe316",
+    "LINK-66489d"
+  ],
+  "placeholderMap": {
+    "CODE-beb87d": {
+      "type": "inline-code",
+      "values": {
+        "content": "state_gas_reservoir"
+      }
+    },
+    "CODE-2c5df9": {
+      "type": "inline-code",
+      "values": {
+        "content": "GAS"
+      }
+    },
+    "CODE-0f95bd": {
+      "type": "inline-code",
+      "values": {
+        "content": "gas_left"
+      }
+    },
+    "CODE-90efef": {
+      "type": "inline-code",
+      "values": {
+        "content": "EXTCODESIZE"
+      }
+    },
+    "CODE-3e9c1f": {
+      "type": "inline-code",
+      "values": {
+        "content": "EXTCODECOPY"
+      }
+    },
+    "LINK-54fa0a": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-c8fdd8": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/"
+      }
+    },
+    "LINK-9df1a4": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-f22107": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/"
+      }
+    },
+    "LINK-703aae": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#state"
+      }
+    },
+    "LINK-d3df1f": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#node"
+      }
+    },
+    "LINK-9b0241": {
+      "type": "link",
+      "values": {
+        "url": "https://forkcast.org/upgrade/glamsterdam"
+      }
+    },
+    "LINK-a59753": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/"
+      }
+    },
+    "LINK-1a7aa6": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#validator"
+      }
+    },
+    "LINK-407249": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#layer-2"
+      }
+    },
+    "LINK-de11ad": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7732"
+      }
+    },
+    "LINK-c030e8": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7928"
+      }
+    },
+    "LINK-3706ee": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8159"
+      }
+    },
+    "LINK-74b3ba": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-5e8fab": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8037"
+      }
+    },
+    "LINK-ff40e2": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8038"
+      }
+    },
+    "LINK-2a467b": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8045"
+      }
+    },
+    "LINK-550ad4": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra"
+      }
+    },
+    "LINK-3652c8": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8080"
+      }
+    },
+    "LINK-23e3bf": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-2780"
+      }
+    },
+    "LINK-fed9cb": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7997"
+      }
+    },
+    "LINK-1ba539": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7708"
+      }
+    },
+    "LINK-507896": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7975"
+      }
+    },
+    "LINK-f9bbaf": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-c033bb": {
+      "type": "link",
+      "values": {
+        "url": "https://forkcast.org/upgrade/glamsterdam"
+      }
+    },
+    "LINK-8123ce": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7773"
+      }
+    },
+    "LINK-c92a4b": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026"
+      }
+    },
+    "LINK-4dff28": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=qx9sd50uQjQ"
+      }
+    },
+    "LINK-0c0afc": {
+      "type": "link",
+      "values": {
+        "url": "/security/"
+      }
+    },
+    "LINK-7c589f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-2f00d9": {
+      "type": "link",
+      "values": {
+        "url": "https://ethstaker.org/support"
+      }
+    },
+    "LINK-2fe316": {
+      "type": "link",
+      "values": {
+        "url": "https://dsc.gg/ethstaker"
+      }
+    },
+    "LINK-66489d": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/category/protocol"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-02T16:02:34.430Z",
+      "status": "success"
+    }
+  }
+}

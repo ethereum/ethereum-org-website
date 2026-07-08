@@ -1,222 +1,313 @@
 ---
-title: Węzły i klienci
-description: Przegląd węzłów Ethereum i oprogramowania klienta, a także jak skonfigurować węzeł i dlaczego powinieneś to zrobić.
+title: "Węzły i klienty"
+description: "Przegląd węzłów Ethereum i oprogramowania klienckiego, a także informacje o tym, jak skonfigurować węzeł i dlaczego warto to zrobić."
 lang: pl
 sidebarDepth: 2
-isOutdated: true
 ---
 
-Aby Ethereum działało w sposób zdecentralizowany, potrzebuje rozproszonej sieci węzłów, która może weryfikować bloki i dane transakcji. Potrzebujesz aplikacji znanej jako klient, aby „uruchomić węzeł”.
+[Ethereum](/) to rozproszona sieć komputerów (znanych jako węzły) z uruchomionym oprogramowaniem, które może weryfikować bloki i dane transakcji. Oprogramowanie to musi zostać uruchomione na Twoim komputerze, aby przekształcić go w węzeł Ethereum. Do utworzenia węzła wymagane są dwa oddzielne programy (znane jako „klienty”).
 
 ## Wymagania wstępne {#prerequisites}
 
-Powinieneś zrozumieć koncepcję zdecentralizowanej sieci, zanim zagłębisz się w nią i uruchomisz własną instancję klienta Ethereum. Spójrz na nasze [wprowadzenie do Ethereum](/developers/docs/intro-to-ethereum/).
+Zanim zagłębisz się w temat i uruchomisz własną instancję klienta Ethereum, powinieneś zrozumieć koncepcję sieci peer-to-peer oraz [podstawy EVM](/developers/docs/evm/). Zapoznaj się z naszym [wprowadzeniem do Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Czym są węzły i klienci? {#what-are-nodes-and-clients}
+Jeśli jesteś nowy w temacie węzłów, zalecamy najpierw zapoznać się z naszym przystępnym wprowadzeniem na temat [uruchamiania węzła Ethereum](/run-a-node).
 
-„Węzeł” odnosi się do oprogramowania znanego jako klient. Klient jest implementacją Ethereum, która za zadanie ma weryfikację wszystkich transakcji w kolejnych blokach, utrzymywać bezpieczeństwo sieci i poprawność danych.
+## Czym są węzły i klienty? {#what-are-nodes-and-clients}
 
-Możesz zobaczyć widok sieci Ethereum w czasie rzeczywistym, patrząc na [mapę węzłów](https://etherscan.io/nodetracker).
+„Węzeł” to dowolna instancja oprogramowania klienckiego Ethereum, która jest połączona z innymi komputerami również z uruchomionym oprogramowaniem Ethereum, tworząc sieć. Klient to implementacja Ethereum, która weryfikuje dane zgodnie z zasadami protokołu i dba o bezpieczeństwo sieci. Węzeł musi uruchamiać dwa klienty: klienta konsensusu i klienta warstwy wykonawczej.
 
-Wiele [implementacji klientów Ethereum](/developers/docs/nodes-and-clients/#execution-clients) istnieje w wielu językach. Cechą wspólną tych implementacji klienckich jest to, że wszystkie są zgodne z formalną specyfikacją. Ta specyfikacja określa, jak działa sieć Ethereum i blockchain.
+- Klient warstwy wykonawczej (znany również jako silnik wykonawczy, klient EL lub dawniej klient Eth1) nasłuchuje nowych transakcji rozgłaszanych w sieci, wykonuje je w EVM i przechowuje najnowszy stan oraz bazę danych wszystkich bieżących danych Ethereum.
+- Klient konsensusu (znany również jako węzeł Beacon, klient CL lub dawniej klient Eth2) implementuje algorytm konsensusu dowodu stawki (PoS), który umożliwia sieci osiągnięcie porozumienia na podstawie zweryfikowanych danych od klienta warstwy wykonawczej. Istnieje również trzeci element oprogramowania, znany jako „walidator”, który można dodać do klienta konsensusu, co pozwala węzłowi uczestniczyć w zabezpieczaniu sieci.
 
-![Klient Eth1x](./client-diagram.png) Uproszczony schemat funkcji klienta Ethereum.
+Te klienty współpracują ze sobą, aby śledzić szczyt łańcucha Ethereum i umożliwiać użytkownikom interakcję z siecią Ethereum. Modułowa konstrukcja z wieloma współpracującymi ze sobą elementami oprogramowania nazywana jest [hermetyzacją złożoności](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Takie podejście ułatwiło płynne przeprowadzenie [The Merge](/roadmap/merge), sprawia, że oprogramowanie klienckie jest łatwiejsze w utrzymaniu i rozwoju, a także umożliwia ponowne wykorzystanie poszczególnych klientów, na przykład w [ekosystemie warstwy 2 (L2)](/layer-2/).
+
+![Coupled execution and consensus clients](./eth1eth2client.png)
+Uproszczony schemat połączonego klienta warstwy wykonawczej i konsensusu.
+
+### Różnorodność klientów {#client-diversity}
+
+Zarówno [klienty warstwy wykonawczej](/developers/docs/nodes-and-clients/#execution-clients), jak i [klienty konsensusu](/developers/docs/nodes-and-clients/#consensus-clients) istnieją w różnych językach programowania i są rozwijane przez różne zespoły.
+
+Wiele implementacji klientów może wzmocnić sieć, zmniejszając jej zależność od pojedynczej bazy kodu. Idealnym celem jest osiągnięcie różnorodności bez dominacji żadnego klienta w sieci, co eliminuje potencjalny pojedynczy punkt awarii.
+Różnorodność języków przyciąga również szerszą społeczność programistów i pozwala im tworzyć integracje w preferowanym przez nich języku.
+
+Dowiedz się więcej o [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity/).
+
+Tym, co łączy te implementacje, jest to, że wszystkie opierają się na jednej specyfikacji. Specyfikacje dyktują, jak funkcjonuje sieć i blockchain Ethereum. Każdy szczegół techniczny jest zdefiniowany, a specyfikacje można znaleźć jako:
+
+- Pierwotnie [żółta księga Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
+- [Specyfikacje warstwy wykonawczej](https://github.com/ethereum/execution-specs/)
+- [Specyfikacje konsensusu](https://github.com/ethereum/consensus-specs)
+- [EIP](https://eips.ethereum.org/) zaimplementowane w różnych [aktualizacjach sieci](/ethereum-forks/)
+
+### Śledzenie węzłów w sieci {#network-overview}
+
+Wiele narzędzi śledzących oferuje przegląd węzłów w sieci Ethereum w czasie rzeczywistym. Należy pamiętać, że ze względu na naturę zdecentralizowanych sieci, te roboty indeksujące mogą zapewnić jedynie ograniczony widok sieci i mogą zgłaszać różne wyniki.
+
+- [Mapa węzłów](https://etherscan.io/nodetracker) od Etherscan
+- [Ethernodes](https://ethernodes.org/) od Bitfly
+- [Nodewatch](https://www.nodewatch.io/) od Chainsafe, indeksujący węzły konsensusu
+- [Monitoreth](https://monitoreth.io/) – od MigaLabs, rozproszone narzędzie do monitorowania sieci
+- [Cotygodniowe raporty o stanie sieci](https://probelab.io) – od ProbeLab, wykorzystujące [robota indeksującego Nebula](https://github.com/dennis-tra/nebula) i inne narzędzia
 
 ## Typy węzłów {#node-types}
 
-Jeśli chcesz uruchomić swój własny węzeł, powinieneś zrozumieć, że istnieją różne typy węzłów, które zużywają dane w inny sposób. W rzeczywistości klienci mogą uruchamiać 3 różne typy węzłów — lekki, pełny i archiwalny. Istnieją również opcje różnych strategii synchronizacji, które umożliwiają szybszą synchronizację. Synchronizacja odnosi się do tego, jak szybko może uzyskać najbardziej aktualne informacje o stanie Ethereum.
+Jeśli chcesz [uruchomić własny węzeł](/developers/docs/nodes-and-clients/run-a-node/), powinieneś zrozumieć, że istnieją różne typy węzłów, które w różny sposób konsumują dane. W rzeczywistości klienty mogą uruchamiać trzy różne typy węzłów: lekkie, pełne i archiwalne. Istnieją również opcje różnych strategii synchronizacji, które umożliwiają szybszy czas synchronizacji. Synchronizacja odnosi się do tego, jak szybko węzeł może uzyskać najbardziej aktualne informacje o stanie Ethereum.
 
 ### Pełny węzeł {#full-node}
 
-- Przechowuje pełne dane blockchainu.
-- Uczestniczy w walidacji bloków, weryfikuje wszystkie bloki i stany.
-- Wszystkie stany mogą pochodzić z pełnego węzła.
+Pełne węzły przeprowadzają walidację blockchaina blok po bloku, w tym pobieranie i weryfikację zawartości bloku oraz danych stanu dla każdego bloku. Istnieją różne klasy pełnych węzłów – niektóre zaczynają od bloku genezy i weryfikują każdy pojedynczy blok w całej historii blockchaina. Inne rozpoczynają weryfikację od nowszego bloku, któremu ufają, że jest prawidłowy (np. „snap sync” w Geth). Niezależnie od tego, gdzie rozpoczyna się weryfikacja, pełne węzły przechowują tylko lokalną kopię stosunkowo nowych danych (zazwyczaj 128 najnowszych bloków), co pozwala na usunięcie starszych danych w celu zaoszczędzenia miejsca na dysku. Starsze dane mogą zostać wygenerowane ponownie, gdy będą potrzebne.
+
+- Przechowuje pełne dane blockchaina (chociaż są one okresowo przycinane, więc pełny węzeł nie przechowuje wszystkich danych stanu aż do genezy).
+- Uczestniczy w walidacji bloku, weryfikuje wszystkie bloki i stany.
+- Wszystkie stany mogą być pobrane z pamięci lokalnej lub wygenerowane ponownie z „migawek” przez pełny węzeł.
 - Obsługuje sieć i dostarcza dane na żądanie.
+
+### Węzeł archiwalny {#archive-node}
+
+Węzły archiwalne to pełne węzły, które weryfikują każdy blok od genezy i nigdy nie usuwają żadnych pobranych danych.
+
+- Przechowuje wszystko to, co pełny węzeł, i buduje archiwum stanów historycznych. Jest to potrzebne, jeśli chcesz sprawdzić na przykład saldo konta w bloku nr 4 000 000 lub po prostu i niezawodnie przetestować własny zestaw transakcji bez ich walidacji za pomocą śledzenia.
+- Dane te zajmują terabajty, co sprawia, że węzły archiwalne są mniej atrakcyjne dla przeciętnych użytkowników, ale mogą być przydatne dla usług takich jak eksploratory bloków, dostawcy portfeli i analityka łańcucha.
+
+Synchronizacja klientów w dowolnym trybie innym niż archiwalny spowoduje przycięcie danych blockchaina. Oznacza to, że nie ma archiwum wszystkich stanów historycznych, ale pełny węzeł jest w stanie zbudować je na żądanie.
+
+Dowiedz się więcej o [węzłach archiwalnych](/developers/docs/nodes-and-clients/archive-nodes).
 
 ### Lekki węzeł {#light-node}
 
-- Przechowuje łańcuch nagłówków i żąda wszystkiego innego.
-- Potrafi zweryfikować poprawność danych względem korzeni stanu w nagłówkach bloków.
-- Przydatne dla urządzeń o niskiej przepustowości, takich jak urządzenia wbudowane lub telefony komórkowe, które nie stać na przechowywanie gigabajtów danych blockchainu.
+Zamiast pobierać każdy blok, lekkie węzły pobierają tylko nagłówki bloków. Nagłówki te zawierają podsumowanie informacji o zawartości bloków. Wszelkie inne informacje, których potrzebuje lekki węzeł, są żądane od pełnego węzła. Lekki węzeł może następnie niezależnie zweryfikować otrzymane dane w oparciu o korzenie stanu w nagłówkach bloków. Lekkie węzły umożliwiają użytkownikom uczestnictwo w sieci Ethereum bez potężnego sprzętu lub dużej przepustowości wymaganej do uruchomienia pełnych węzłów. Docelowo lekkie węzły mogą działać na telefonach komórkowych lub urządzeniach wbudowanych. Lekkie węzły nie uczestniczą w konsensusie (tj. nie mogą być walidatorami), ale mogą uzyskać dostęp do blockchaina Ethereum z taką samą funkcjonalnością i gwarancjami bezpieczeństwa jak pełny węzeł.
 
-### Węzeł archiwum {#archive-node}
+Lekkie klienty to obszar aktywnego rozwoju Ethereum i spodziewamy się wkrótce zobaczyć nowe lekkie klienty dla warstwy konsensusu i warstwy wykonawczej.
+Istnieją również potencjalne ścieżki dostarczania danych lekkich klientów przez [sieć plotkarską (gossip network)](https://www.ethportal.net/). Jest to korzystne, ponieważ sieć plotkarska mogłaby obsługiwać sieć lekkich węzłów bez konieczności obsługi żądań przez pełne węzły.
 
-- Przechowuje wszystko w pełnym węźle i buduje archiwum stanów historycznych. Potrzebne, jeśli chcesz zapytać o coś takiego jak saldo konta w bloku #4 000,000.
-- Dane te reprezentują jednostki terabajtów, co sprawia, że ​​węzły archiwów są mniej atrakcyjne dla przeciętnych użytkowników, ale mogą być przydatne w przypadku usług takich jak eksploratory bloków, dostawcy portfeli i analizy łańcuchów.
+Ethereum nie obsługuje jeszcze dużej populacji lekkich węzłów, ale wsparcie dla lekkich węzłów to obszar, który ma się szybko rozwijać w niedalekiej przyszłości. W szczególności klienty takie jak [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios) i [Lodestar](https://lodestar.chainsafe.io/) są obecnie mocno skoncentrowane na lekkich węzłach.
 
-Synchronizowanie klientów w dowolnym trybie innym niż archiwum spowoduje wyczyszczenie danych łańcucha bloków. Oznacza to, że nie ma archiwum wszystkich stanów historycznych, ale cały węzeł jest w stanie budować je na żądanie.
+## Dlaczego powinienem uruchomić węzeł Ethereum? {#why-should-i-run-an-ethereum-node}
 
-## Dlaczego należy uruchomić węzeł Ethereum? {#why-should-i-run-an-ethereum-node}
-
-Uruchomienie węzła pozwala Ci bezspornie i prywatnie korzystać z Ethereum podczas wspierania ekosystemu.
+Uruchomienie węzła pozwala na bezpośrednie, niewymagające zaufania i prywatne korzystanie z Ethereum, jednocześnie wspierając sieć poprzez utrzymywanie jej bardziej solidnej i zdecentralizowanej.
 
 ### Korzyści dla Ciebie {#benefits-to-you}
 
-Prowadzenie własnego węzła umożliwia korzystanie z Ethereum w sposób naprawdę prywatny, samowystarczalny i pozbawiony zaufania. Nie musisz ufać sieci, ponieważ możesz samodzielnie zweryfikować dane ze swoim klientem. „Nie ufaj, sprawdź” jest popularną mantrą blockchainu.
+Uruchomienie własnego węzła umożliwia korzystanie z Ethereum w sposób prywatny, samowystarczalny i niewymagający zaufania. Nie musisz ufać sieci, ponieważ możesz samodzielnie zweryfikować dane za pomocą swojego klienta. „Nie ufaj, weryfikuj” to popularna mantra w świecie blockchaina.
 
-- Twój węzeł samodzielnie weryfikuje wszystkie transakcje i bloki pod kątem zasad konsensusu. Oznacza to, że nie musisz polegać na żadnych innych węzłach w sieci ani w pełni im zaufać.
-- Nie będziesz musiał ujawniać swoich adresów i sald do przypadkowych węzłów. Wszystko można sprawdzić z własnym klientem.
-- Twoja zdecentralizowana aplikacja może być bezpieczniejsza i bardziej prywatna, jeśli używasz własnego węzła. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) i kilka innych portfeli można łatwo skierować na swój własny lokalny węzeł.
+- Twój węzeł samodzielnie weryfikuje wszystkie transakcje i bloki zgodnie z zasadami konsensusu. Oznacza to, że nie musisz polegać na żadnych innych węzłach w sieci ani w pełni im ufać.
+- Możesz używać portfela Ethereum z własnym węzłem. Możesz korzystać ze zdecentralizowanych aplikacji (dapp) bezpieczniej i bardziej prywatnie, ponieważ nie będziesz musiał ujawniać swoich adresów i sald pośrednikom. Wszystko można sprawdzić za pomocą własnego klienta. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) i [wiele innych portfeli](/wallets/find-wallet/) oferuje importowanie RPC, co pozwala im na korzystanie z Twojego węzła.
+- Możesz uruchamiać i samodzielnie hostować inne usługi, które zależą od danych z Ethereum. Na przykład może to być walidator Beacon Chain, oprogramowanie takie jak warstwa 2 (L2), infrastruktura, eksploratory bloków, procesory płatności itp.
+- Możesz udostępniać własne, niestandardowe [punkty końcowe RPC](/developers/docs/apis/json-rpc/). Możesz nawet zaoferować te punkty końcowe publicznie społeczności, aby pomóc im uniknąć dużych, scentralizowanych dostawców.
+- Możesz połączyć się ze swoim węzłem za pomocą **komunikacji międzyprocesowej (IPC)** lub przepisać węzeł, aby załadować swój program jako wtyczkę. Zapewnia to niskie opóźnienia, co bardzo pomaga, np. podczas przetwarzania dużej ilości danych przy użyciu bibliotek Web3 lub gdy musisz jak najszybciej zastąpić swoje transakcje (tj. frontrunning).
+- Możesz bezpośrednio stakować ETH, aby zabezpieczyć sieć i zdobywać nagrody. Zobacz [staking solo](/staking/solo/), aby zacząć.
 
-![Jak uzyskać dostęp do Ethereum za pośrednictwem aplikacji i węzłów](./nodes.png)
+![How you access Ethereum via your application and nodes](./nodes.png)
 
 ### Korzyści dla sieci {#network-benefits}
 
-Różnorodny zestaw węzłów jest ważny dla zdrowia, bezpieczeństwa i odporności operacyjnej Ethereum.
+Zróżnicowany zestaw węzłów jest ważny dla kondycji, bezpieczeństwa i odporności operacyjnej Ethereum.
 
-- Zapewniają one dostęp do danych blockchainu dla niewielkich klientów, którzy od niego zależą. W szczytowych okresach użytkowania musi być wystarczająca liczba pełnych węzłów, aby ułatwić synchronizację lekkich węzłów. Lekkie węzły nie przechowują całego łańcucha bloków, zamiast tego weryfikują dane za pomocą [głównych stanów w nagłówkach bloków](/developers/docs/blocks/#block-anatomy). Mogą żądać więcej informacji od bloków, jeśli ich potrzebują.
-- Pełne węzły wymuszają reguły konsensusu proof-of-work, więc nie można ich oszukać w celu zaakceptowania bloków, które ich nie przestrzegają. Zapewnia to dodatkowe bezpieczeństwo w sieci, ponieważ jeśli wszystkie węzły były lekkimi węzłami, które nie przeprowadzają pełnej weryfikacji, górnicy mogą zaatakować sieć i na przykład tworzyć bloki z wyższymi nagrodami.
+- Pełne węzły egzekwują zasady konsensusu, więc nie można ich oszukać, aby zaakceptowały bloki, które ich nie przestrzegają. Zapewnia to dodatkowe bezpieczeństwo w sieci, ponieważ gdyby wszystkie węzły były lekkimi węzłami, które nie przeprowadzają pełnej weryfikacji, walidatory mogłyby zaatakować sieć.
+- W przypadku ataku, który pokona kryptoekonomiczne mechanizmy obronne [dowodu stawki (PoS)](/developers/docs/consensus-mechanisms/pos/#what-is-pos), pełne węzły mogą przeprowadzić odzyskiwanie społecznościowe, decydując się na podążanie za uczciwym łańcuchem.
+- Większa liczba węzłów w sieci skutkuje bardziej zróżnicowaną i solidną siecią, co jest ostatecznym celem decentralizacji, umożliwiającym stworzenie niezawodnego systemu odpornego na cenzurę.
+- Pełne węzły zapewniają dostęp do danych blockchaina dla lekkich klientów, które od nich zależą. Lekkie węzły nie przechowują całego blockchaina, zamiast tego weryfikują dane za pomocą [korzeni stanu w nagłówkach bloków](/developers/docs/blocks/#block-anatomy). W razie potrzeby mogą zażądać więcej informacji od pełnych węzłów.
 
-Jeśli uruchomisz pełny węzeł, korzysta z niego cała sieć Ethereum.
+Jeśli uruchomisz pełny węzeł, skorzysta na tym cała sieć Ethereum, nawet jeśli nie uruchomisz walidatora.
 
 ## Uruchamianie własnego węzła {#running-your-own-node}
 
-### Projekty {#projects}
+Jesteś zainteresowany uruchomieniem własnego klienta Ethereum?
 
-[**Wybierz klienta i postępuj zgodnie z jego instrukcjami**](#clients)
+Aby uzyskać przyjazne dla początkujących wprowadzenie, odwiedź naszą stronę [uruchom węzeł](/run-a-node), aby dowiedzieć się więcej.
 
-**ethnode —** **_uruchom węzeł Ethereum (Geth lub Parity) do celów rozwoju lokalnego._**
-
-- [GitHub](https://github.com/vrde/ethnode)
-
-**DAppNode —** **_system operacyjny do uruchamiania węzłów Web3, w tym Ethereum, na dedykowanym komputerze._**
-
-- [dappnode.io](https://dappnode.io)
-
-### Źródła {#resources}
-
-- [Uruchamianie pełnych węzłów Ethereum: kompletny przewodnik](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _7 listopada 2019 r. – Justin Leroux_
-- [Schemat konfiguracji węzła](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _5 stycznia, 2019 – Afryka Schoeden_
-- [Jak zainstalować i uruchomić węzeł Geth](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _4 października 2020 r. – Sahil Sen_
-- [Jak zainstalować i uruchomić węzeł OpenEthereum (poprzednio węzeł parzystości)](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _22 września 2020 r. – Sahil Sen_
+Jeśli jesteś bardziej zaawansowanym technicznie użytkownikiem, zagłęb się w szczegóły i opcje dotyczące tego, jak [postawić własny węzeł](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Alternatywy {#alternatives}
 
-Uruchamianie własnego węzła może być trudne i nie zawsze musisz uruchamiać własną instancję. W tym przypadku możesz użyć zewnętrznego dostawcy API, takiego jak [Infura](https://infura.io), [Alchemia](https://alchemyapi.io) lub [QuikNode](https://www.quiknode.io). Alternatywnie [ArchiveNode](https://archivenode.io/) to wspierany przez społeczność węzeł archiwizacji, który ma nadzieję na przekazanie danych archiwalnych w blockchain Ethereum niezależnym programistom, którzy w przeciwnym razie nie mogli sobie na nie pozwolić.
+Konfiguracja własnego węzła może kosztować Cię czas i zasoby, ale nie zawsze musisz uruchamiać własną instancję. W takim przypadku możesz skorzystać z usług zewnętrznego dostawcy API. Aby zapoznać się z przeglądem korzystania z tych usług, sprawdź [węzły jako usługa](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-Jeśli ktoś uruchamia węzeł Ethereum z publicznym API w Twojej społeczności, możesz wskazać swoje lekkie portfele (takie jak MetaMask) do węzła społeczności [za pośrednictwem niestandardowego RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) i zyskać większą prywatność niż korzystając z zaufanej trzeciej strony.
+Jeśli ktoś w Twojej społeczności prowadzi węzeł Ethereum z publicznym API, możesz skierować swoje portfele do węzła społecznościowego za pośrednictwem niestandardowego RPC i zyskać większą prywatność niż w przypadku jakiejś losowej, zaufanej strony trzeciej.
 
-Z drugiej strony, jeśli uruchamiasz klienta, możesz podzielić się nim ze znajomymi, którzy mogą tego potrzebować.
+Z drugiej strony, jeśli uruchomisz klienta, możesz udostępnić go znajomym, którzy mogą go potrzebować.
 
-## Klienci {#execution-clients}
+## Klienty warstwy wykonawczej {#execution-clients}
 
-Ethereum jest zaprojektowany do oferowania różnych klientów, stworzonych przez różne zespoły przy użyciu różnych języków programowania. Dzięki temu sieć jest silniejsza i bardziej zróżnicowana. Idealnym celem jest osiągnięcie różnorodności bez zdominowania przez żadnego klienta w celu zmniejszenia pojedynczych punktów niepowodzenia.
+Społeczność Ethereum utrzymuje wiele klientów warstwy wykonawczej o otwartym kodzie źródłowym (wcześniej znanych jako „klienty Eth1” lub po prostu „klienty Ethereum”), rozwijanych przez różne zespoły przy użyciu różnych języków programowania. Dzięki temu sieć jest silniejsza i bardziej [zróżnicowana](/developers/docs/nodes-and-clients/client-diversity/). Idealnym celem jest osiągnięcie różnorodności bez dominacji żadnego klienta, aby zredukować pojedyncze punkty awarii.
 
-W tabeli przedstawiono podsumowanie poszczególnych klientów. Wszystkie z nich są aktywnie opracowywane, utrzymywane i przechodzą [testy klienckie](https://github.com/ethereum/tests).
+Poniższa tabela podsumowuje różne klienty. Wszystkie z nich przechodzą [testy klientów](https://github.com/ethereum/tests) i są aktywnie utrzymywane, aby być na bieżąco z aktualizacjami sieci.
 
-| Klient                                                       | Język    | Systemy operacyjne    | Sieci                                     | Strategie synchronizacji       | Wycinanie stanu |
-| ------------------------------------------------------------ | -------- | --------------------- | ----------------------------------------- | ------------------------------ | --------------- |
-| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten          | Szybka, pełna                  | Archive, Pruned |
-| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten i więcej          | Warp, pełna                    | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby I więcej | Szybka, pełna                  | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/)              | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, i Görli        | Szybka, pełna                  | Archive, Pruned |
-| [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, Rinkeby i więcej | Pełna, wiązka, szybka/nagłówek | Archive         |
+| Klient                                                                   | Język      | Systemy operacyjne    | Sieci                   | Strategie synchronizacji                                   | Przycinanie stanu    |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | -------------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Sieć główna, Sepolia, Hoodi | [Snap](#snap-sync), [Pełna](#full-sync)                     | Archiwalny, Przycięty |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Sieć główna, Sepolia, Hoodi | [Snap](#snap-sync), Szybka, [Pełna](#full-sync)               | Archiwalny, Przycięty |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Sieć główna, Sepolia, Hoodi | [Snap](#snap-sync), [Szybka](#fast-sync), [Pełna](#full-sync) | Archiwalny, Przycięty |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Sieć główna, Sepolia, Hoodi | [Pełna](#full-sync)                                         | Archiwalny, Przycięty |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Sieć główna, Sepolia, Hoodi | [Pełna](#full-sync)                                         | Archiwalny, Przycięty |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Pełna](#full-sync)                                         | Przycięty            |
 
-Więcej informacji o obsługiwanych sieciach znajdziesz w rozdziale [Sieci Ethereum](/developers/docs/networks/).
+Aby dowiedzieć się więcej o obsługiwanych sieciach, przeczytaj o [sieciach Ethereum](/developers/docs/networks/).
 
-### Zalety różnych implementacji {#advantages-of-different-implementations}
+Każdy klient ma unikalne przypadki użycia i zalety, więc powinieneś wybrać jeden w oparciu o własne preferencje. Różnorodność pozwala implementacjom skupić się na różnych funkcjach i grupach odbiorców. Możesz chcieć wybrać klienta na podstawie funkcji, wsparcia, języka programowania lub licencji.
 
-Każdy klient ma unikalne przypadki i zalety, więc powinieneś wybrać jeden na podstawie własnych preferencji. Różnorodność pozwala implementacjom skupić się na różnych funkcjach i odbiorcach. Możesz wybrać klienta na podstawie funkcji, wsparcia, języka programowania lub licencji.
+### Besu {#besu}
 
-#### Go Ethereum {#geth}
+Hyperledger Besu to klient Ethereum klasy korporacyjnej dla sieci publicznych i wymagających zezwolenia. Obsługuje wszystkie funkcje sieci głównej Ethereum, od śledzenia po GraphQL, ma rozbudowane monitorowanie i jest wspierany przez ConsenSys, zarówno w otwartych kanałach społecznościowych, jak i poprzez komercyjne umowy SLA dla przedsiębiorstw. Jest napisany w języku Java i udostępniany na licencji Apache-2.0.
 
-Go Ethereum (w skrócie Geth) jest jedną z oryginalnych implementacji protokołu Ethereum. Obecnie jest to najbardziej rozpowszechniony klient z największą bazą użytkowników i różnorodnością narzędzi dla użytkowników i programistów. Jest napisany w Go, w pełni open source i licencjonowany na mocy GNU LGPL v3.
+Obszerna [dokumentacja](https://besu.hyperledger.org/en/stable/) Besu poprowadzi Cię przez wszystkie szczegóły dotyczące jego funkcji i konfiguracji.
 
-#### OpenEthereum {#openethereum}
+### Erigon {#erigon}
 
-OpenEthereum jest szybkim, bogatym w funkcje i zaawansowanym klientem Ethereum opartym na CLI. Został zbudowany w celu zapewnienia niezbędnej infrastruktury dla szybkich i niezawodnych usług, które wymagają szybkiej synchronizacji i maksymalnego czasu pracy. Celem OpenEthereum jest być najszybszy, najlżejszy i najbezpieczniejszy klient Ethereum. Zapewnia czystą, modułową bazę kodową pozwalającą na:
+Erigon, wcześniej znany jako Turbo-Geth, rozpoczął się jako rozwidlenie Go Ethereum zorientowane na szybkość i wydajność przestrzeni dyskowej. Erigon to całkowicie przeprojektowana implementacja Ethereum, obecnie napisana w języku Go, ale z implementacjami w innych językach w fazie rozwoju. Celem Erigon jest zapewnienie szybszej, bardziej modułowej i zoptymalizowanej implementacji Ethereum. Może wykonać pełną synchronizację węzła archiwalnego przy użyciu około 2 TB przestrzeni dyskowej w czasie poniżej 3 dni.
 
-- łatwe dostosowywanie.
-- łatwą integrację z usługami lub produktami.
-- minimalną ilość pamięci i miejsca przechowywania.
+### Go Ethereum {#geth}
 
-OpenEthereum jest rozwijany przy użyciu najnowocześniejszego języka programowania Rust i licencjonowanego na licencji GPLv3.
+Go Ethereum (w skrócie Geth) to jedna z oryginalnych implementacji protokołu Ethereum. Obecnie jest to najbardziej rozpowszechniony klient z największą bazą użytkowników i różnorodnością narzędzi dla użytkowników i programistów. Jest napisany w języku Go, w pełni open source i licencjonowany na warunkach GNU LGPL v3.
 
-#### Nethermind {#nethermind}
+Dowiedz się więcej o Geth w jego [dokumentacji](https://geth.ethereum.org/docs).
 
-Nethermind to implementacja Ethereum stworzona za pomocą stosu technologicznego C# .NET, działająca na wszystkich głównych platformach, w tym ARM. Oferuje ona wspaniałe wyniki dzięki:
+### Nethermind {#nethermind}
+
+Nethermind to implementacja Ethereum stworzona przy użyciu stosu technologicznego C# .NET, licencjonowana na warunkach LGPL-3.0, działająca na wszystkich głównych platformach, w tym ARM. Oferuje doskonałą wydajność dzięki:
 
 - zoptymalizowanej maszynie wirtualnej
 - dostępowi do stanu
-- funkcjom sieciowym i bogatym funkcjom, takim jak pulpity nawigacyjne Prometheus/Graphana, obsługa rejestrowania sekwencyjnego dla przedsiębiorstw, śledzenie RPC JSON i wtyczki analityczne.
+- obsłudze sieci i bogatym funkcjom, takim jak pulpity nawigacyjne Prometheus/Grafana, obsługa logowania korporacyjnego seq, śledzenie JSON-RPC i wtyczki analityczne.
 
-Nethermind ma również [dokładną dokumentację](https://docs.nethermind.io), silne wsparcie dla programistów, społeczność online i wsparcie 24/7 dostępne dla użytkowników premium.
+Nethermind posiada również [szczegółową dokumentację](https://docs.nethermind.io), silne wsparcie dla programistów, społeczność online i całodobowe wsparcie dostępne dla użytkowników premium.
 
-#### Besu {#besu}
+### Reth {#reth}
 
-Hyperledger Besu to klient Ethereum klasy korporacyjnej dla sieci publicznych i autoryzowanych. Obsługuje wszystkie funkcje sieci głównej Ethereum, od śledzenia do GraphQL, ma rozbudowany monitoring i jest obsługiwany przez ConsenSys, zarówno w otwartych kanałach społecznościowych, jak i poprzez komercyjne umowy SLA dla przedsiębiorstw. Jest napisany w Java i jest licencjonowany Apache 2.0.
+Reth (skrót od Rust Ethereum) to implementacja pełnego węzła Ethereum, która koncentruje się na byciu przyjazną dla użytkownika, wysoce modułową, szybką i wydajną. Reth został pierwotnie zbudowany i rozwijany przez Paradigm i jest licencjonowany na warunkach licencji Apache i MIT.
 
-### Tryb synchronizacji {#sync-modes}
+Reth jest gotowy do produkcji i nadaje się do użytku w środowiskach o znaczeniu krytycznym, takich jak staking lub usługi o wysokiej dostępności. Sprawdza się w przypadkach użycia, w których wymagana jest wysoka wydajność z dużymi marginesami, takich jak RPC, MEV, indeksowanie, symulacje i działania P2P.
 
-- Pełna – pobiera wszystkie bloki (w tym nagłówki, transakcje i paragony) i generuje stan łańcucha bloków stopniowo poprzez wykonanie każdego bloku.
-- Szybka (domyślna) – pobiera wszystkie bloki (w tym nagłówki, transakcje i paragony), weryfikuje wszystkie nagłówki i pobiera stan i weryfikuje go w nagłówkach.
-- Lekki – pobiera wszystkie nagłówki bloków, dane bloków i weryfikuje niektóre losowo.
-- Synchronizacja warp – co 5000 bloków, węzły wykonają migawkę o krytycznym znaczeniu dla konsensusu. Każdy węzeł może pobrać te zrzuty w sieci, umożliwiając szybką synchronizację. [Więcej o warp](https://openethereum.github.io/wiki/Warp-Sync-Snapshot-Format)
-- Synchronizacja beam – tryb synchronizacji, który umożliwia szybsze działanie. Nie wymaga długich oczekiwań na synchronizację, zamiast tego wypełnia dane z upływem czasu. [Więcej o beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
-- Synchronizacja nagłówka – możesz użyć zaufanego punktu kontrolnego, aby rozpocząć synchronizację od nowszego nagłówka, a następnie pozostawić to procesowi w tle, aby ostatecznie wypełnić luki
+Dowiedz się więcej, sprawdzając [Reth Book](https://reth.rs/) lub [repozytorium Reth na GitHubie](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
-Typ synchronizacji określasz podczas konfiguracji, na przykład:
+### W fazie rozwoju {#execution-in-development}
 
-**Konfigurowanie synchronizacji lekkiej w [GETH](https://geth.ethereum.org/)**
+Te klienty są nadal we wczesnych fazach rozwoju i nie są jeszcze zalecane do użytku produkcyjnego.
 
-`geth --syncmode "light"`
+#### EthereumJS {#ethereumjs}
 
-**Konfigurowanie synchronizacji nagłówka w Trinity**
+Klient warstwy wykonawczej EthereumJS (EthereumJS) jest napisany w języku TypeScript i składa się z wielu pakietów, w tym podstawowych prymitywów Ethereum reprezentowanych przez klasy Block, Transaction i Merkle-Patricia Trie oraz podstawowych komponentów klienta, w tym implementacji maszyny wirtualnej Ethereum (EVM), klasy blockchain i stosu sieciowego devp2p.
 
-`trinity --sync-from-checkpoint eth://block/byhash/0xa65877df954e1ff2012473efee8287252eee956c0d395a5791f1103a950a1e21?score=15,835,269,727,022,672,760,774`
+Dowiedz się więcej na ten temat, czytając jego [dokumentację](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
 
-## Sprzęt {#hardware}
+## Klienty konsensusu {#consensus-clients}
 
-Wymagania sprzętowe różnią się w zależności od klienta, ale zazwyczaj nie są wysokie, ponieważ węzeł musi po prostu pozostać zsynchronizowany. Nie należy mylić tego z wydobywaniem, które wymaga dużo większej mocy obliczeniowej. Jednak czas synchronizacji i wydajność poprawiają się dzięki mocniejszemu sprzętowi. W zależności od Twoich potrzeb i pragnień, Ethereum można uruchomić na Twoim komputerze, serwerze domowym, komputerach jednopłytowych lub wirtualnych serwerach prywatnych w chmurze.
+Istnieje wiele klientów konsensusu (wcześniej znanych jako klienty „Eth2”) wspierających [aktualizacje konsensusu](/roadmap/beacon-chain/). Są one odpowiedzialne za całą logikę związaną z konsensusem, w tym algorytm wyboru rozwidlenia, przetwarzanie atestacji oraz zarządzanie nagrodami i karami w ramach [dowodu stawki (PoS)](/developers/docs/consensus-mechanisms/pos).
 
-Prostym sposobem na uruchomienie własnego węzła jest użycie wtyczek „plug and play”, takich jak [DAppNode](https://dappnode.io/). Zapewnia sprzęt do uruchamiania klientów i aplikacji od nich zależnych z prostym interfejsem użytkownika.
+| Klient                                                        | Język      | Systemy operacyjne    | Sieci                                                   |
+| ------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Pyrmont, Sepolia i inne            |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia i inne                     |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia i inne                     |
+| [Prysm](https://prysm.offchainlabs.com/docs/)                 | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Pyrmont, Sepolia i inne    |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Sepolia i inne             |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia i inne                     |
 
-### Wymagania {#requirements}
+### Lighthouse {#lighthouse}
 
-Przed zainstalowaniem klienta upewnij się, że komputer ma wystarczającą ilość zasobów, aby go uruchomić. Poniżej znajdują się minimalne i zalecane wymagania, jednak kluczowym elementem jest przestrzeń dyskowa. Synchronizacja blockchainu Ethereum jest bardzo intensywna pod kątem wejścia/wyjścia. Najlepiej mieć dysk półprzewodnikowy (SSD). Aby uruchomić klienta Ethereum na dysku twardym, potrzebujesz co najmniej 8 GB pamięci RAM jako pamięci podręcznej.
+Lighthouse to implementacja klienta konsensusu napisana w języku Rust na licencji Apache-2.0. Jest utrzymywana przez Sigma Prime i jest stabilna oraz gotowa do produkcji od czasu genezy Beacon Chain. Polegają na niej różne przedsiębiorstwa, pule stakingowe i osoby prywatne. Jej celem jest zapewnienie bezpieczeństwa, wydajności i interoperacyjności w szerokim zakresie środowisk, od komputerów stacjonarnych po zaawansowane zautomatyzowane wdrożenia.
 
-#### Minimalne wymagania {#recommended-specifications}
+Dokumentację można znaleźć w [Lighthouse Book](https://lighthouse-book.sigmaprime.io/)
 
-- Procesor z 2+ rdzeniami
-- Minimum 4 GB RAM z SSD, 8 GB+ jeśli masz HDD
-- Przepustowość 8 Mbit/s
+### Lodestar {#lodestar}
 
-#### Zalecane specyfikacje {#recommended-specifications}
+Lodestar to gotowa do produkcji implementacja klienta konsensusu napisana w języku TypeScript na licencji LGPL-3.0. Jest utrzymywana przez ChainSafe Systems i jest najnowszym z klientów konsensusu dla osób stakujących solo, programistów i badaczy. Lodestar składa się z węzła Beacon i klienta walidatora zasilanych przez implementacje protokołów Ethereum w języku JavaScript. Lodestar ma na celu poprawę użyteczności Ethereum dzięki lekkim klientom, rozszerzenie dostępności dla większej grupy programistów i dalsze przyczynianie się do różnorodności ekosystemu.
 
-- Szybki procesor z ponad 4 rdzeniami
-- 16 GB+ RAM
-- Szybki SSD z co najmniej 500 GB wolnego miejsca
-- 25+ Mbit/s przepustowość
+Więcej informacji można znaleźć na [stronie internetowej Lodestar](https://lodestar.chainsafe.io/)
 
-W zależności od tego, które oprogramowanie i tryb synchronizacji mają być używane, potrzebne są setki GB przestrzeni dyskowej. Przybliżone wartości i wzrost można znaleźć poniżej.
+### Nimbus {#nimbus}
 
-| Klient          | Rozmiar dysku (szybka synchronizacja) | Rozmiar dysku (pełne archiwum) |
-| --------------- | ------------------------------------- | ------------------------------ |
-| Klient Ethereum | 400 GB+                               | 4,7 TB+                        |
-| OpenEthereum    | 280 GB+                               | 4,6 TB+                        |
-| Nethermind      | 200 GB+                               | 3 TB+                          |
-| Besu            | 750 GB+                               | 4 TB+                          |
+Nimbus to implementacja klienta konsensusu napisana w języku Nim na licencji Apache-2.0. Jest to gotowy do produkcji klient używany przez osoby stakujące solo i pule stakingowe. Nimbus został zaprojektowany z myślą o oszczędności zasobów, co ułatwia jego uruchamianie na urządzeniach o ograniczonych zasobach i infrastrukturze korporacyjnej z równą łatwością, bez uszczerbku dla stabilności lub wydajności nagród. Mniejsze zużycie zasobów oznacza, że klient ma większy margines bezpieczeństwa, gdy sieć jest obciążona.
 
-Te wykresy pokazują, jak zawsze zmieniają się wymagania dotyczące przechowywania. Aby uzyskać najbardziej aktualne dane dla Geth i Parity, zobacz [pełną synchronizację danych](https://etherscan.io/chartsync/chaindefault) i [archiwum danych synchronizacji](https://etherscan.io/chartsync/chainarchive).
+Dowiedz się więcej w [dokumentacji Nimbus](https://nimbus.guide/)
 
-### Ethereum na komputerze jednopłytowym {#ethereum-on-a-single-board-computer}
+### Prysm {#prysm}
 
-Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Nethereumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/developers/tutorials/run-node-raspberry-pi/).
+Prysm to w pełni funkcjonalny klient konsensusu o otwartym kodzie źródłowym napisany w języku Go na licencji GPL-3.0. Posiada opcjonalny interfejs użytkownika aplikacji internetowej i priorytetowo traktuje doświadczenie użytkownika, dokumentację oraz możliwości konfiguracji zarówno dla użytkowników stakujących w domu, jak i instytucjonalnych.
 
-Małe, niedrogie i wydajne urządzenia, takie jak te, są idealne do uruchomienia węzła w domu.
+Odwiedź [dokumentację Prysm](https://prysm.offchainlabs.com/docs/), aby dowiedzieć się więcej.
 
-## Klienci Eth2 {#consensus-clients}
+### Teku {#teku}
 
-Pojawili się nowi klienci obsługujący [aktualizacje Eth2](/roadmap/beacon-chain/). Będą obsługiwać łańcuch śledzący i wspierać nowy mechanizm konsensusu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
+Teku to jeden z oryginalnych klientów genezy Beacon Chain. Oprócz standardowych celów (bezpieczeństwo, solidność, stabilność, użyteczność, wydajność), Teku ma na celu pełną zgodność ze wszystkimi różnymi standardami klientów konsensusu.
+
+Teku oferuje bardzo elastyczne opcje wdrożenia. Węzeł Beacon i klient walidatora mogą być uruchamiane razem jako pojedynczy proces, co jest niezwykle wygodne dla osób stakujących solo, lub węzły mogą być uruchamiane oddzielnie w przypadku zaawansowanych operacji stakingowych. Ponadto Teku jest w pełni interoperacyjny z [Web3Signer](https://github.com/ConsenSys/web3signer/) w celu zapewnienia bezpieczeństwa klucza podpisywania i ochrony przed cięciem (slashing).
+
+Teku jest napisany w języku Java i udostępniany na licencji Apache-2.0. Jest rozwijany przez zespół Protocols w ConsenSys, który jest również odpowiedzialny za Besu i Web3Signer. Dowiedz się więcej w [dokumentacji Teku](https://docs.teku.consensys.net/en/latest/).
+
+### Grandine {#grandine}
+
+Grandine to implementacja klienta konsensusu, napisana w języku Rust na licencji GPL-3.0. Jest utrzymywana przez Grandine Core Team i jest szybka, wysoce wydajna i lekka. Pasuje do szerokiego grona stakujących, od osób stakujących solo na urządzeniach o niskich zasobach, takich jak Raspberry Pi, po dużych stakujących instytucjonalnych obsługujących dziesiątki tysięcy walidatorów.
+
+Dokumentację można znaleźć w [Grandine Book](https://docs.grandine.io/)
+
+## Tryby synchronizacji {#sync-modes}
+
+Aby śledzić i weryfikować bieżące dane w sieci, klient Ethereum musi zsynchronizować się z najnowszym stanem sieci. Odbywa się to poprzez pobieranie danych od węzłów równorzędnych (peers), kryptograficzną weryfikację ich integralności i budowanie lokalnej bazy danych blockchaina.
+
+Tryby synchronizacji reprezentują różne podejścia do tego procesu z różnymi kompromisami. Klienty różnią się również implementacją algorytmów synchronizacji. Zawsze odwołuj się do oficjalnej dokumentacji wybranego klienta, aby uzyskać szczegółowe informacje na temat implementacji.
+
+### Tryby synchronizacji warstwy wykonawczej {#execution-layer-sync-modes}
+
+Warstwa wykonawcza może być uruchamiana w różnych trybach, aby dopasować się do różnych przypadków użycia, od ponownego wykonania stanu świata blockchaina po synchronizację tylko ze szczytem łańcucha z zaufanego punktu kontrolnego.
+
+#### Pełna synchronizacja {#full-sync}
+
+Pełna synchronizacja pobiera wszystkie bloki (w tym nagłówki i zawartość bloków) i przywraca stan blockchaina przyrostowo, wykonując każdy blok od genezy.
+
+- Minimalizuje zaufanie i oferuje najwyższe bezpieczeństwo poprzez weryfikację każdej transakcji.
+- Wraz z rosnącą liczbą transakcji przetwarzanie wszystkich transakcji może zająć od kilku dni do kilku tygodni.
+
+[Węzły archiwalne](#archive-node) wykonują pełną synchronizację, aby zbudować (i zachować) pełną historię zmian stanu wprowadzonych przez każdą transakcję w każdym bloku.
+
+#### Szybka synchronizacja {#fast-sync}
+
+Podobnie jak pełna synchronizacja, szybka synchronizacja pobiera wszystkie bloki (w tym nagłówki, transakcje i paragony). Jednak zamiast ponownie przetwarzać historyczne transakcje, szybka synchronizacja opiera się na paragonach, dopóki nie osiągnie najnowszego szczytu, kiedy to przełącza się na importowanie i przetwarzanie bloków, aby zapewnić pełny węzeł.
+
+- Strategia szybkiej synchronizacji.
+- Zmniejsza zapotrzebowanie na przetwarzanie na rzecz wykorzystania przepustowości.
+
+#### Synchronizacja Snap {#snap-sync}
+
+Synchronizacja Snap również weryfikuje łańcuch blok po bloku. Jednak zamiast zaczynać od bloku genezy, synchronizacja Snap rozpoczyna się od nowszego „zaufanego” punktu kontrolnego, o którym wiadomo, że jest częścią prawdziwego blockchaina. Węzeł zapisuje okresowe punkty kontrolne, usuwając dane starsze niż określony wiek. Te migawki są używane do ponownego generowania danych stanu w razie potrzeby, zamiast przechowywać je na zawsze.
+
+- Najszybsza strategia synchronizacji, obecnie domyślna w sieci głównej Ethereum.
+- Oszczędza dużo miejsca na dysku i przepustowości sieci bez poświęcania bezpieczeństwa.
+
+[Więcej o synchronizacji Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
+
+#### Lekka synchronizacja {#light-sync}
+
+Tryb lekkiego klienta pobiera wszystkie nagłówki bloków, dane bloków i weryfikuje niektóre z nich losowo. Synchronizuje tylko szczyt łańcucha z zaufanego punktu kontrolnego.
+
+- Pobiera tylko najnowszy stan, polegając na zaufaniu do programistów i mechanizmu konsensusu.
+- Klient gotowy do użycia z bieżącym stanem sieci w ciągu kilku minut.
+
+**Uwaga:** Lekka synchronizacja nie działa jeszcze z Ethereum opartym na dowodzie stawki (PoS) – nowe wersje lekkiej synchronizacji powinny pojawić się wkrótce!
+
+[Więcej o lekkich klientach](/developers/docs/nodes-and-clients/light-clients/)
+
+### Tryby synchronizacji warstwy konsensusu {#consensus-layer-sync-modes}
+
+#### Optymistyczna synchronizacja {#optimistic-sync}
+
+Optymistyczna synchronizacja to strategia synchronizacji po The Merge, zaprojektowana jako opcjonalna i wstecznie kompatybilna, umożliwiająca węzłom warstwy wykonawczej synchronizację za pomocą ustalonych metod. Silnik wykonawczy może _optymistycznie_ importować bloki Beacon bez ich pełnej weryfikacji, znaleźć najnowszy szczyt, a następnie rozpocząć synchronizację łańcucha za pomocą powyższych metod. Następnie, po tym jak klient warstwy wykonawczej nadrobi zaległości, poinformuje klienta konsensusu o ważności transakcji w Beacon Chain.
+
+[Więcej o optymistycznej synchronizacji](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
+
+#### Synchronizacja punktu kontrolnego {#checkpoint-sync}
+
+Synchronizacja punktu kontrolnego, znana również jako synchronizacja słabej subiektywności, zapewnia doskonałe wrażenia użytkownika podczas synchronizacji węzła Beacon. Opiera się na założeniach [słabej subiektywności](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/), co umożliwia synchronizację Beacon Chain z niedawnego punktu kontrolnego słabej subiektywności zamiast z genezy. Synchronizacja punktu kontrolnego znacznie przyspiesza początkowy czas synchronizacji przy podobnych założeniach dotyczących zaufania, jak w przypadku synchronizacji z [genezy](/glossary/#genesis-block).
+
+W praktyce oznacza to, że Twój węzeł łączy się ze zdalną usługą w celu pobrania ostatnich sfinalizowanych stanów i kontynuuje weryfikację danych od tego momentu. Strona trzecia dostarczająca dane jest zaufana i powinna być starannie wybrana.
+
+Więcej o [synchronizacji punktu kontrolnego](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Dalsza lektura {#further-reading}
 
-W Internecie jest wiele instrukcji i informacji o klientach Ethereum, tutaj jest kilka, które mogą być pomocne.
-
-- [Ethereum 101 – Część 2 – Zrozumienie węzłów](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _–Wil Barnes, 13 lutego 2019_
-- [Uruchamianie pełnych węzłów Ethereum: kompletny przewodnik](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _7 listopada 2019 r. – Justin Leroux_
-- [Analizowanie wymagań sprzętowych dla Ethereum w pełni zweryfikowany węzeł](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 września 2018 r._
-- [Uruchomienie węzła Besu na Ethereum Mainnet: Korzyści, Wymagania i Ustawienia](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 maja 2020_
+- [Ethereum 101 – Część 2 – Zrozumienie węzłów](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 lutego 2019 r._
+- [Uruchamianie pełnych węzłów Ethereum: Przewodnik dla ledwo zmotywowanych](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 listopada 2019 r._
 
 ## Powiązane tematy {#related-topics}
 
@@ -225,4 +316,4 @@ W Internecie jest wiele instrukcji i informacji o klientach Ethereum, tutaj jest
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Turn your Raspberry Pi 4 into an Eth 1.0 or Eth 2.0 node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)._
+- [Zmień swoje Raspberry Pi 4 w węzeł walidatora po prostu flashując kartę MicroSD – Przewodnik instalacji](/developers/tutorials/run-node-raspberry-pi/) _– Sflashuj swoje Raspberry Pi 4, podłącz kabel Ethernet, podłącz dysk SSD i włącz urządzenie, aby zmienić Raspberry Pi 4 w pełny węzeł Ethereum z uruchomioną warstwą wykonawczą (sieć główna) i/lub warstwą konsensusu (Beacon Chain / walidator)._

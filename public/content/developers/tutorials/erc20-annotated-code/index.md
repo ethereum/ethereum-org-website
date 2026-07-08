@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: en
 tags: ["solidity", "erc-20"]
 skill: beginner
+breadcrumb: ERC-20 walkthrough
 published: 2021-03-09
 ---
 
@@ -22,7 +23,7 @@ This is annotated source code. If you want to implement ERC-20,
 ## The Interface {#the-interface}
 
 The purpose of a standard like ERC-20 is to allow many tokens implementations that are interoperable across applications, like wallets and decentralized exchanges. To achieve that, we create an
-[interface](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Any code that needs to use the token contract
+[interface](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/). Any code that needs to use the token contract
 can use the same definitions in the interface and be compatible with all token contracts that use it, whether it is a wallet such as
 MetaMask, a dapp such as etherscan.io, or a different contract such as liquidity pool.
 
@@ -90,9 +91,9 @@ every node in the blockchain run it. This kind of function does not generate a t
 **Note:** In theory it might appear that a contract's creator could cheat by returning a smaller total supply than the real value, making each token appear
 more valuable than it actually is. However, that fear ignores the true nature of the blockchain. Everything that happens on the blockchain can be verified by
 every node. To achieve this, every contract's machine language code and storage is available on every node. While you are not required to publish the Solidity
-code for your contract, nobody would take you seriously unless you publish the source code and the version of Solidity with which it was complied, so it can
+code for your contract, nobody would take you seriously unless you publish the source code and the version of Solidity with which it was compiled, so it can
 be verified against the machine language code you provided.
-For example, see [this contract](https://etherscan.io/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD#code).
+For example, see [this contract](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract).
 
 &nbsp;
 
@@ -248,12 +249,13 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` is the definitions required to use [OpenGSN](https://www.opengsn.org/), a system that allows users without ether
+- `GSN/Context.sol` is the definitions required to use [OpenGSN](https://opengsn.org/), a system that allows users without ether
   to use the blockchain. Note that this is an old version, if you want to integrate with OpenGSN
   [use this tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
-- [The SafeMath library](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), which is used to make
-  addition and subtraction without overflows. This is necessary because otherwise a person might somehow have one token, spend
-  two tokens, and then have 2^256-1 tokens.
+- [The SafeMath library](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), which prevents
+  arithmetic overflows/underflows for Solidity versions **&lt;0.8.0**. In Solidity ≥0.8.0, arithmetic operations automatically
+  revert on overflow/underflow, making SafeMath unnecessary. This contract uses SafeMath for backward compatibility with
+  older compiler versions.
 
 &nbsp;
 
@@ -354,7 +356,7 @@ As the name suggests, this variable keeps track of the total supply of tokens.
 These three variables are used to improve readability. The first two are self-explanatory, but `_decimals`
 isn't.
 
-On one hand, ethereum does not have floating point or fractional variables. On the other hand,
+On one hand, Ethereum does not have floating point or fractional variables. On the other hand,
 humans like being able to divide tokens. One reason people settled on gold for currency was that
 it was hard to make change when somebody wanted to buy a duck's worth of cow.
 
@@ -380,6 +382,8 @@ token you can select a different value. If dividing the token doesn't make sense
      * construction.
      */
     constructor (string memory name_, string memory symbol_) public {
+        // In Solidity ≥0.7.0, 'public' is implicit and can be omitted.
+
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
@@ -499,7 +503,7 @@ other contract functions. By convention private functions are named `_<something
 variables.
 
 Normally in Solidity we use `msg.sender` for the message sender. However, that breaks
-[OpenGSN](http://opengsn.org/). If we want to allow etherless transactions with our token, we
+[OpenGSN](https://opengsn.org/). If we want to allow etherless transactions with our token, we
 need to use `_msgSender()`. It returns `msg.sender` for normal transactions, but for etherless ones
 return the original signer and not the contract that relayed the message.
 
@@ -551,7 +555,7 @@ This function is called to create an allowance. It is similar to the `transfer` 
 We use internal functions to minimize the number of places where state changes happen. _Any_ function that changes the
 state is a potential security risk that needs to be audited for security. This way we have less chances to get it wrong.
 
-#### The transferFrom function {#transferFrom}
+#### The transferFrom function {#transferfrom}
 
 This is the function that a spender calls to spend an allowance. This requires two operations: transfer the amount
 being spent and reduce the allowance by that amount.
@@ -601,7 +605,7 @@ in the transaction pool he sends a transaction that spends Alice's five tokens a
 higher gas price so it will be mined faster. That way Bill can spend first five tokens and then,
 once Alice's new allowance is mined, spend ten more for a total price of fifteen tokens, more than
 Alice meant to authorize. This technique is called
-[front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+[front-running](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Alice Transaction | Alice Nonce | Bill Transaction              | Bill Nonce | Bill's Allowance | Bill Total Income from Alice |
 | ----------------- | ----------- | ----------------------------- | ---------- | ---------------- | ---------------------------- |
@@ -681,14 +685,14 @@ the way normal addition does.
 
 These are the four functions that do the actual work: `_transfer`, `_mint`, `_burn`, and `_approve`.
 
-#### The \_transfer function {#\_transfer}
+#### The _transfer function {#transfer}
 
 ```solidity
     /**
      * @dev Moves tokens `amount` from `sender` to `recipient`.
      *
      * This is internal function is equivalent to {transfer}, and can be used to
-     * e.g. implement automatic token fees, slashing mechanisms, etc.
+     * e.g., implement automatic token fees, slashing mechanisms, etc.
      *
      * Emits a {Transfer} event.
      *
@@ -757,7 +761,7 @@ is atomic, nothing can happen in the middle of it.
 Finally, emit a `Transfer` event. Events are not accessible to smart contracts, but code running outside the blockchain
 can listen for events and react to them. For example, a wallet can keep track of when the owner gets more tokens.
 
-#### The \_mint and \_burn functions {#\_mint-and-\_burn}
+#### The _mint and _burn functions {#mint-and-burn}
 
 These two functions (`_mint` and `_burn`) modify the total supply of tokens.
 They are internal and there is no function that calls them in this contract,
@@ -819,7 +823,7 @@ Make sure to update `_totalSupply` when the total number of tokens changes.
 
 The `_burn` function is almost identical to `_mint`, except it goes in the other direction.
 
-#### The \_approve function {#\_approve}
+#### The _approve function {#approve-2}
 
 This is the function that actually specifies allowances. Note that it allows an owner to specify
 an allowance that is higher than the owner's current balance. This is OK because the balance is
@@ -831,7 +835,7 @@ created.
      * @dev Sets `amount` as the allowance of `spender` over the `owner` s tokens.
      *
      * This internal function is equivalent to `approve`, and can be used to
-     * e.g. set automatic allowances for certain subsystems, etc.
+     * e.g., set automatic allowances for certain subsystems, etc.
      *
      * Emits an {Approval} event.
      *
@@ -904,7 +908,7 @@ are not designed to handle it.
 This is the hook function to be called during transfers. It is empty here, but if you need
 it to do something you just override it.
 
-# Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 For review, here are some of the most important ideas in this contract (in my opinion, yours is likely to vary):
 
@@ -927,3 +931,5 @@ For review, here are some of the most important ideas in this contract (in my op
 
 Now that you've seen how the OpenZeppelin ERC-20 contract is written, and especially how it is
 made more secure, go and write your own secure contracts and applications.
+
+[See here for more of my work](https://cryptodocguy.pro/).

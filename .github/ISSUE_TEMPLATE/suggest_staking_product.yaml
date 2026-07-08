@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before suggesting a staking product or service, make sure you've read [our listing policy](https://ethereum.org/en/contributing/adding-staking-products/).
+        Before suggesting a staking product or service, make sure you've read [our listing policy](https://ethereum.org/contributing/adding-staking-products/).
   - type: markdown
     attributes:
       value: |
@@ -187,17 +187,17 @@ body:
     id: staking_product_platform_support
     attributes:
       label: What platforms are supported?
-      description: ie. Linux, macOS, Windows, iOS, Android, etc
+      description: i.e., Linux, macOS, Windows, iOS, Android, etc
   - type: input
     id: staking_product_interface
     attributes:
       label: What user interfaces are supported?
-      description: ie. browser app, desktop app, mobile app, CLI app, etc
+      description: i.e., browser app, desktop app, mobile app, CLI app, etc
   - type: textarea
     id: staking_product_socials
     attributes:
       label: Social media links
-      description: List available social media links. ie. Discord, Twitter, Telegram, Reddit
+      description: List available social media links. i.e., Discord, Twitter, Telegram, Reddit
   - type: checkboxes
     id: staking_product_work_on
     attributes:

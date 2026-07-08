@@ -46,7 +46,7 @@ For PBKDF2, the kdfparams include:
 - `salt`: salt passed to PBKDF;
 - `dklen`: length for the derived key. Must be >= 32.
 
-Once the file's key has been derived, it should be verified through the derivation of the MAC. The MAC should be calculated as the SHA3 (keccak-256) hash of the byte array formed as the concatenations of the second-leftmost 16 bytes of the derived key with the `ciphertext` key's contents, i.e.:
+Once the file's key has been derived, it should be verified through the derivation of the MAC. The MAC should be calculated as the SHA3 (keccak-256) hash of the byte array formed as the concatenations of the second-leftmost 16 bytes of the derived key with the `ciphertext` key's contents, i.e.,:
 
 ```js
 KECCAK(DK[16..31] ++ <ciphertext>)
@@ -66,7 +66,7 @@ This cipher takes the following parameters, given as keys to the cipherparams ke
 
 - `iv`: 128-bit initialisation vector for the cipher.
 
-The key for the cipher is the leftmost 16 bytes of the derived key, i.e. `DK[0..15]`
+The key for the cipher is the leftmost 16 bytes of the derived key, i.e., `DK[0..15]`
 
 The creation/encryption of a secret key should be essentially the reverse of these instructions. Make sure the `uuid`, `salt` and `iv` are actually random.
 
@@ -82,7 +82,7 @@ Details:
 - `Password`: `testpassword`
 - `Secret`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
 
-### PBKDF2-SHA-256 {#PBKDF2-SHA-256}
+### PBKDF2-SHA-256 {#pbkdf2-sha-256}
 
 Test vector using `AES-128-CTR` and `PBKDF2-SHA-256`:
 
@@ -190,6 +190,6 @@ Changes have been made to the format to give the following file, functionally eq
 }
 ```
 
-## Alterations from Version 2 {#alterations-from-v2}
+## Alterations from Version 2 {#alterations-from-v2-2}
 
 Version 2 was an early C++ implementation with a number of bugs. All essentials remain unchanged from it.

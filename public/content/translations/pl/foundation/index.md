@@ -1,34 +1,37 @@
 ---
 title: Fundacja Ethereum
-description: Dowiedz się więcej o Fundacji Ethereum (EF), organizacji non-profit poświęconej wspieraniu Ethereum i powiązanych technologii.
+description: Dowiedz się więcej o Fundacji Ethereum (EF), organizacji non-profit zajmującej się wspieraniem Ethereum i powiązanych technologii.
 hideEditButton: true
 lang: pl
 ---
 
-# O Fundacji Ethereum {#about-the-ethereum-foundation}
-
 <Logo/>
 
-[Ethereum Foundation](http://ethereum.foundation/) (EF) jest organizacją non-profit zajmującą się wspieraniem [Ethereum](/what-is-ethereum/) i powiązanych technologii.
+[Fundacja Ethereum](https://ethereum.foundation/) (EF) to organizacja non-profit, która wspiera ekosystem [Ethereum](/). Finansuje rozwój protokołu, rozwija ekosystem i promuje Ethereum.
 
-EF nie jest firmą, ani nawet tradycyjną organizacją non-profit. Ich rolą nie jest kontrolowanie ani kierowanie Ethereum, ani też nie są jedyną organizacją, która finansuje krytyczny rozwój technologii związanych z Ethereum. EF jest częścią znacznie większego [ekosystemu](/community/).
+EF nie jest firmą ani nawet tradycyjną organizacją non-profit. Nie kontroluje ani nie kieruje Ethereum, nie jest też jedyną organizacją, która finansuje kluczowy rozwój technologii związanych z Ethereum. EF jest tylko jedną z części znacznie większego [ekosystemu](/community/).
 
-## Inicjatywy Fundacji Ethereum {#ethereum-foundation-initiatives}
+## Mandat EF {#ef-mandate}
 
-### Program wsparcia ekosystemów {#ecosystem-support-program}
+Mandat EF określa cel, zasady i zobowiązania Fundacji wobec ekosystemu Ethereum. Opublikowany onchain, uświęca zaangażowanie EF w **odporność na cenzurę, otwarte oprogramowanie (open source), prywatność i bezpieczeństwo (CROPS)** jako niepodlegające negocjacjom priorytety.
 
-[Program wsparcia ekosystemów](https://esp.ethereum.foundation/) istnieje w celu zapewnienia finansowego i niefinansowego wsparcia projektom i podmiotom w ramach większej społeczności Ethereum, w celu przyspieszenia wzrostu ekosystemu. Program wspierania ekosystemów stanowi rozszerzenie pierwotnego programu Ethereum Grants skupiającego się głównie na wsparciu finansowym.
+[Przeczytaj Mandat Fundacji Ethereum](/foundation/mandate/)
 
-Dowiedz się więcej o programie wsparcia ekosystemów, beneficjentach dotacji z przeszłości oraz o procesie składania wniosków o przyznanie dotacji pod adresem [esp.ethereum.foundation](https://esp.ethereum.foundation/). Możesz również zobaczyć [Ecosystem Support Program Blog](https://blog.ethereum.org/category/ecosystem-support-program/) lub obserwować [@EF_ESP](https://twitter.com/EF_ESP) aby uzyskać ich najnowsze wiadomości i ogłoszenia.
+## Czym zajmuje się EF {#what-the-ef-does}
 
-### Devcon {#devcon}
+- **Rozwój protokołu** – Wspieranie zespołów pracujących nad głównym protokołem Ethereum, w tym rozwój klientów, badania, aktualizacje oraz [program nagród za znalezienie błędów (bug bounty)](/bug-bounty/)
+- **Finansowanie ekosystemu** – Zapewnianie grantów i wsparcia dla projektów budowanych na Ethereum poprzez [Program Wsparcia Ekosystemu (Ecosystem Support Program)](https://esp.ethereum.foundation/)
+- **Badania** – Finansowanie badań w zakresie kryptografii, konsensusu, skalowania, prywatności i bezpieczeństwa
 
-Od 2014 r. Fundacja Ethereum organizuje Devcon, coroczną konferencję dla wszystkich deweloperów, badaczy, myślicieli i twórców.
+## Programy i inicjatywy {#programs-and-initiatives}
 
-Możesz uzyskać dostęp do wideo zawartości prezentacji konferencji na każdy rok od momentu jej powstania w [archive.devcon.org](https://archive.devcon.org/).
+- **[Program Wsparcia Ekosystemu (Ecosystem Support Program)](https://esp.ethereum.foundation/)** – Granty i wsparcie dla projektów open-source budowanych na Ethereum
+- **[Granty Akademickie](https://esp.ethereum.foundation/academic-grants)** – Wspieranie badań akademickich związanych z Ethereum
+- **[Devcon](https://devcon.org/)** – Coroczna konferencja dla deweloperów, badaczy i twórców Ethereum
+- **[Program Bug Bounty](/bug-bounty/)** – Nagrody za znajdowanie luk w zabezpieczeniach w protokole Ethereum
 
-Dowiedz się więcej na [devcon.org](https://devcon.org/), sprawdź [Devcon Blog](https://devcon.org/en/blogs/), lub przejdź do [@efdevcon](https://twitter.com/EFDevcon), aby uzyskać najnowsze ogłoszenia.
+## Dowiedz się więcej {#learn-more}
 
-<br/>
-
-Aby uzyskać więcej informacji na temat Fundacji i ich pracy, odwiedź [ethereum.foundation](http://ethereum.foundation/)lub sprawdź [Ethereum Foundation Blog](https://blog.ethereum.org/) w celu uzyskania najnowszych informacji i ogłoszeń EF.
+- [ethereum.foundation](https://ethereum.foundation/) – Oficjalna strona internetowa EF
+- [Blog EF](https://blog.ethereum.org/) – Wiadomości i ogłoszenia
+- [Program Wsparcia Ekosystemu](https://esp.ethereum.foundation/) – Granty i wsparcie

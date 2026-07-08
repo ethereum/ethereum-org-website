@@ -1,84 +1,90 @@
 ---
-title: "Optimism standart köprü sözleşmesine genel bakış"
-description: Optimism için standart köprü nasıl çalışır? Neden bu şekilde çalışıyor?
+title: "Optimism standart köprü sözleşmesi incelemesi"
+description: "Optimism için standart köprü nasıl çalışır? Neden bu şekilde çalışır?"
 author: Ori Pomerantz
-tags:
-  - "solidity"
-  - "köprü"
-  - "katman 2"
-skill: advanced
+tags: ["Solidity", "köprü", "katman 2"]
+skill: intermediate
+breadcrumb: "Optimism köprüsü"
 published: 2022-03-30
 lang: tr
 ---
 
-[Optimism](https://www.optimism.io/), bir [İyimser Toplamadır](/developers/docs/scaling/optimistic-rollups/). İyimser toplamalar, işlemleri Ethereum Mainnet'ten (katman 1 veya K1 olarak da bilinir) çok daha düşük bir fiyata işleyebilir çünkü işlemler ağdaki her düğüm yerine yalnızca birkaç düğüm tarafından işlenir. Aynı zamanda, verilerin tümü K1'e yazılır, böylece her şey kanıtlanabilir ve Mainnet'in tüm bütünlük ve kullanılabilirlik garantileriyle yeniden yapılandırılabilir.
+[Optimism](https://www.optimism.io/) bir [İyimser rollup](/developers/docs/scaling/optimistic-rollups/)'tır.
+İyimser toplamalar (optimistic rollups), işlemleri Ethereum Ana Ağı'ndan (katman 1 veya l1 olarak da bilinir) çok daha düşük bir fiyata işleyebilir çünkü işlemler ağdaki her düğüm yerine yalnızca birkaç düğüm tarafından işlenir.
+Aynı zamanda, tüm veriler l1'e yazılır, böylece her şey Ana Ağ'ın tüm bütünlük ve erişilebilirlik garantileriyle kanıtlanabilir ve yeniden oluşturulabilir.
 
-Optimism'de (veya başka herhangi bir K2'de) K1 varlıklarını kullanmak için varlıkların [köprülenmesi](/bridges/#prerequisites) gerekir. Kullanıcıların varlıkları (ETH ve [ERC-20 token'ları](/developers/docs/standards/tokens/erc-20/) en yaygın olanlardır) L1'de kilitlemesi ve L2'de eş değer varlıklar alması bunu başarmanın yollarından biridir. Nihayetinde bu varlıkları alan kişiler bunları tekrar K1'e köprülemek isteyebilir. Bunu yaparken, varlıklar K2'de yakılır ve ardından K1'de kullanıcıya geri verilir.
+L1 varlıklarını Optimism'de (veya başka herhangi bir l2'de) kullanmak için varlıkların [köprülenmesi](/bridges/#prerequisites) gerekir.
+Bunu başarmanın bir yolu, kullanıcıların varlıkları (ETH ve [ERC-20 token'ları](/developers/docs/standards/tokens/erc-20/) en yaygın olanlarıdır) l1'de kilitlemesi ve l2'de kullanmak üzere eşdeğer varlıklar almasıdır.
+Sonunda, bunlara sahip olan kişi onları l1'e geri köprülemek isteyebilir.
+Bunu yaparken, varlıklar l2'de yakılır ve ardından l1'de kullanıcıya geri verilir.
 
-[Optimism standart köprüsü](https://community.optimism.io/docs/developers/bridge/standard-bridge) bu şekilde çalışır. Bu makalede, nasıl çalıştığını görmek için bu köprünün kaynak kodunu gözden geçireceğiz ve onu iyi yazılmış bir Solidity kodu örneği olarak inceleyeceğiz.
+[Optimism standart köprüsü](https://docs.optimism.io/app-developers/bridging/standard-bridge) bu şekilde çalışır.
+Bu makalede, nasıl çalıştığını görmek için bu köprünün kaynak kodunu inceliyor ve iyi yazılmış bir Solidity kodu örneği olarak çalışıyoruz.
 
 ## Kontrol akışları {#control-flows}
 
 Köprünün iki ana akışı vardır:
 
-- Yatırma (K1'den K2'ye)
-- Çekme (K2'den K1'e)
+- Yatırma (l1'den l2'ye)
+- Çekim (l2'den l1'e)
 
 ### Yatırma akışı {#deposit-flow}
 
 #### Katman 1 {#deposit-flow-layer-1}
 
-1. Bir ERC-20 yatırılıyorsa, yatırımcı köprüye yatırılan tutarı harcaması için bir ödenek verir
-2. Yatıran, K1 köprüsünü (`depositERC20`, `depositERC20To`, `depositETH` veya `depositETHTo`) çağırır
-3. K1 köprüsü, köprülenen varlığın sahibi olur
-   - ETH: Varlık, çağrının bir parçası olarak yatıran tarafından aktarılır
-   - ERC-20: Varlık, yatıran tarafından sağlanan ödenek kullanılarak köprü tarafından kendisine devredilir
-4. K1 köprüsü, K2 köprüsünde `finalizeDeposit`'i çağırmak için etki alanları arası mesaj mekanizmasını kullanır
+1. Bir ERC-20 yatırılıyorsa, yatıran kişi köprüye yatırılan miktarı harcaması için bir harcama izni verir
+2. Yatıran kişi l1 köprüsünü çağırır (`depositERC20`, `depositERC20To`, `depositETH` veya `depositETHTo`)
+3. L1 köprüsü, köprülenen varlığın mülkiyetini alır
+   - ETH: Varlık, çağrının bir parçası olarak yatıran kişi tarafından transfer edilir
+   - ERC-20: Varlık, yatıran kişi tarafından sağlanan harcama izni kullanılarak köprü tarafından kendisine transfer edilir
+4. L1 köprüsü, l2 köprüsündeki `finalizeDeposit` işlevini çağırmak için alanlar arası mesaj (cross-domain message) mekanizmasını kullanır
 
 #### Katman 2 {#deposit-flow-layer-2}
 
-5. Katman 2 köprüsü, `finalizeDeposit` çağrısının meşru olduğunu doğrular:
-   - Etki alanları arası mesaj sözleşmesinden geldi
-   - Aslen K1'deki köprüdendi
-6. K2 köprüsü, K2 üzerindeki ERC-20 token sözleşmesinin doğru olup olmadığını kontrol eder:
-   - K2 sözleşmesi, K1 karşılığının, token'ların K1'den geldiği ile aynı olduğunu bildiriyor
-   - K2 sözleşmesi, doğru arayüzü ([ERC-165 kullanarak](https://eips.ethereum.org/EIPS/eip-165)) desteklediğini bildirir.
-7. K2 sözleşmesi doğruysa, uygun adrese uygun sayıda token basması için onu çağırın. Değilse, kullanıcının K1'deki token'ları talep etmesine izin vermek için bir para çekme işlemi başlatın.
+5. L2 köprüsü, `finalizeDeposit` çağrısının meşru olduğunu doğrular:
+   - Alanlar arası mesaj sözleşmesinden geldiğini
+   - Orijinal olarak l1'deki köprüden geldiğini
+6. L2 köprüsü, l2'deki ERC-20 token sözleşmesinin doğru olup olmadığını kontrol eder:
+   - L2 sözleşmesi, l1 karşılığının l1'de token'ların geldiği sözleşmeyle aynı olduğunu bildirir
+   - L2 sözleşmesi, doğru arayüzü desteklediğini bildirir ([ERC-165 kullanarak](https://eips.ethereum.org/EIPS/eip-165)).
+7. L2 sözleşmesi doğruysa, uygun adrese uygun sayıda token basmak için onu çağırır. Değilse, kullanıcının l1'deki token'ları talep etmesine izin vermek için bir çekim işlemi başlatır.
 
-### Çekme akışı {#withdrawal-flow}
+### Çekim akışı {#withdrawal-flow}
 
 #### Katman 2 {#withdrawal-flow-layer-2}
 
-1. Çeken kişi K2 köprüsünü çağırır (`draw` veya `withdrawTo`)
-2. K2 köprüsü, `msg.sender`'a ait uygun sayıda token'ı yakar
-3. K2 köprüsü, K1 köprüsünde `finalizeETHWithdrawal` veya `finalizeERC20Withdrawal`'ı çağırmak için etki alanları arası mesaj mekanizmasını kullanır
+1. Çeken kişi l2 köprüsünü çağırır (`withdraw` veya `withdrawTo`)
+2. L2 köprüsü, `msg.sender` adresine ait uygun sayıda token'ı yakar
+3. L2 köprüsü, l1 köprüsündeki `finalizeETHWithdrawal` veya `finalizeERC20Withdrawal` işlevini çağırmak için alanlar arası mesaj mekanizmasını kullanır
 
 #### Katman 1 {#withdrawal-flow-layer-1}
 
-4. K1 köprüsü, `finalizeETHWithdrawal` veya `finalizeERC20Withdrawal` çağrısının meşru olduğunu doğrular:
-   - Etki alanları arası mesaj mekanizmasından geldi
-   - Aslen K2'deki köprüdendi
-5. K1 köprüsü, uygun varlığı (ETH veya ERC-20) uygun adrese aktarır
+4. L1 köprüsü, `finalizeETHWithdrawal` veya `finalizeERC20Withdrawal` çağrısının meşru olduğunu doğrular:
+   - Alanlar arası mesaj mekanizmasından geldiğini
+   - Orijinal olarak l2'deki köprüden geldiğini
+5. L1 köprüsü, uygun varlığı (ETH veya ERC-20) uygun adrese transfer eder
 
 ## Katman 1 kodu {#layer-1-code}
 
-Bu, Ethereum Mainnet K1 üzerinde çalışan koddur.
+Bu, l1'de, yani Ethereum Ana Ağı'nda çalışan koddur.
 
-### IL1ERC20Bridge {#IL1ERC20Bridge}
+### IL1ERC20Bridge {#il1erc20bridge}
 
-[Bu arayüz burada tanımlanmıştır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol). ERC-20 token'larını köprülemek için gereken fonksiyonları ve tanımları içerir.
+[Bu arayüz burada tanımlanmıştır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol).
+ERC-20 token'larını köprülemek için gereken işlevleri ve tanımları içerir.
 
 ```solidity
 // SPDX-License-Identifier: MIT
 ```
 
-[Optimism'in kodunun çoğu MIT lisansı altında yayınlandı](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
+[Optimism'in kodunun çoğu MIT lisansı altında yayınlanmıştır](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;
 ```
 
-Yazım sırasında Solidity'nin en son sürümü 0.8.12'dir. Sürüm 0.9.0 yayınlanana kadar, bu kodun onunla uyumlu olup olmadığını bilemeyiz.
+Yazının yazıldığı sırada Solidity'nin en son sürümü 0.8.12'dir.
+0.9.0 sürümü yayınlanana kadar bu kodun onunla uyumlu olup olmadığını bilmiyoruz.
 
 ```solidity
 /**
@@ -86,20 +92,23 @@ Yazım sırasında Solidity'nin en son sürümü 0.8.12'dir. Sürüm 0.9.0 yayı
  */
 interface IL1ERC20Bridge {
     /**********
-     * Events *
+     * Olaylar *
      **********/
 
     event ERC20DepositInitiated(
 ```
 
-Optimism köprü terminolojisinde _yatırmak_, K1'den K2'ye transfer anlamına, _çekmek_ K2'den K1'e transfer anlamına gelir.
+Optimism köprü terminolojisinde _yatırma (deposit)_, l1'den l2'ye transfer anlamına gelir ve _çekim (withdrawal)_, l2'den l1'e transfer anlamına gelir.
 
 ```solidity
         address indexed _l1Token,
         address indexed _l2Token,
 ```
 
-Çoğu durumda K1 üzerindeki bir ERC-20 adresi aynı ERC-20'nin K2'deki adresinin aynısı değildir. [Burada token adreslerinin bir listesini görebilirsiniz](https://static.optimism.io/optimism.tokenlist.json). `chainId`'si 1 olan adres K1'de (Mainnet) ve `chainId`'si 10 olan ise K2'de (Optimism). Diğer iki `chainId` değerleri ise Kovan test ağı (42) ve Optimistic Kovan test ağı içindir (69).
+Çoğu durumda l1'deki bir ERC-20'nin adresi, l2'deki eşdeğer ERC-20'nin adresiyle aynı değildir.
+[Token adreslerinin listesini buradan görebilirsiniz](https://static.optimism.io/optimism.tokenlist.json).
+`chainId` 1 olan adres l1'de (Ana Ağ) ve `chainId` 10 olan adres l2'dedir (Optimism).
+Diğer iki `chainId` değeri, Kovan test ağı (42) ve Optimistic Kovan test ağı (69) içindir.
 
 ```solidity
         address indexed _from,
@@ -109,7 +118,7 @@ Optimism köprü terminolojisinde _yatırmak_, K1'den K2'ye transfer anlamına, 
     );
 ```
 
-Transferlere notlar eklemek mümkündür, bu durumda notlar onları rapor eden olaylara eklenirler.
+Transferlere not eklemek mümkündür, bu durumda bunları bildiren olaylara eklenirler.
 
 ```solidity
     event ERC20WithdrawalFinalized(
@@ -122,33 +131,35 @@ Transferlere notlar eklemek mümkündür, bu durumda notlar onları rapor eden o
     );
 ```
 
-Aynı köprü sözleşmesi her yönde transferleri idare eder. K1 köprüsünün durumunda ise bu, yatırımların başlatımı ve çekimlerin sonlandırılması anlamına gelir.
+Aynı köprü sözleşmesi her iki yöndeki transferleri de yönetir.
+L1 köprüsü durumunda bu, yatırma işlemlerinin başlatılması ve çekim işlemlerinin tamamlanması anlamına gelir.
 
 ```solidity
 
     /********************
-     * Public Functions *
+     * Genel Fonksiyonlar *
      ********************/
 
     /**
-     * @dev get the address of the corresponding L2 bridge contract.
-     * @return Address of the corresponding L2 bridge contract.
+     * @dev ilgili l2 köprü Sözleşmesinin Adresini getirir.
+     * @return İlgili l2 köprü Sözleşmesinin Adresi.
      */
     function l2TokenBridge() external returns (address);
 ```
 
-Bu fonksiyona pek gerek duyulmaz, çünkü K2 üzerinde önden dağıtılmış bir sözleşmedir, yani her zaman `0x4200000000000000000000000000000000000010` adresindedir. Burada K2 köprüsüyle simetri için bulunur, çünkü K1 köprüsünün adresinin bilinmesi _önemlidir_.
+Bu işleve aslında gerek yoktur, çünkü l2'de önceden dağıtılmış bir sözleşmedir, bu nedenle her zaman `0x4200000000000000000000000000000000000010` adresindedir.
+L2 köprüsüyle simetri sağlamak için buradadır, çünkü l1 köprüsünün adresini bilmek _kolay_ değildir.
 
 ```solidity
     /**
-     * @dev deposit an amount of the ERC20 to the caller's balance on L2.
-     * @param _l1Token Address of the L1 ERC20 we are depositing
-     * @param _l2Token Address of the L1 respective L2 ERC20
-     * @param _amount Amount of the ERC20 to deposit
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     * @dev l2 üzerindeki çağırıcının bakiyesine bir miktar ERC-20 yatırır.
+     * @param _l1Token Yatırmakta olduğumuz l1 ERC-20 Adresi
+     * @param _l2Token l1'in ilgili l2 ERC-20 Adresi
+     * @param _amount Yatırılacak ERC-20 miktarı
+     * @param _l2Gas l2 üzerinde yatırma işlemini tamamlamak için gereken Gaz limiti.
+     * @param _data l2'ye iletilecek isteğe bağlı veri. Bu veri yalnızca
+     *        harici Sözleşmeler için bir kolaylık olarak sağlanır. Maksimum bir
+     *        uzunluğu zorunlu kılmak dışında, bu Sözleşmeler içeriği hakkında hiçbir garanti vermez.
      */
     function depositERC20(
         address _l1Token,
@@ -159,19 +170,21 @@ Bu fonksiyona pek gerek duyulmaz, çünkü K2 üzerinde önden dağıtılmış b
     ) external;
 ```
 
-`_l2Gas` parametresi işlemin harcamasına izin verilen K2 gaz miktarıdır. [Belirli (yüksek) bir limite kadar bu ücretsizdir](https://community.optimism.io/docs/developers/bridge/messaging/#for-l1-%E2%87%92-l2-transactions-2), yani basım esnasında ERC-20 sözleşmesi gerçekten garip bir şey yapmazsa bu bir sorun olmamalı. Bu fonksiyon, yaygın bir senaryo olan kullanıcının farklı bir blok zincirindeki aynı adrese varlık köprülemesinin üstesinden gelir.
+`_l2Gas` parametresi, işlemin harcamasına izin verilen l2 gaz miktarıdır.
+[Belirli bir (yüksek) sınıra kadar bu ücretsizdir](https://community.optimism.io/docs/developers/bridge/messaging/#for-l1-%E2%87%92-l2-transactions-2), bu nedenle ERC-20 sözleşmesi basım sırasında gerçekten garip bir şey yapmadığı sürece bu bir sorun olmamalıdır.
+Bu işlev, bir kullanıcının varlıkları farklı bir blokzincirdeki aynı adrese köprülediği yaygın senaryoyu ele alır.
 
 ```solidity
     /**
-     * @dev deposit an amount of ERC20 to a recipient's balance on L2.
-     * @param _l1Token Address of the L1 ERC20 we are depositing
-     * @param _l2Token Address of the L1 respective L2 ERC20
-     * @param _to L2 address to credit the withdrawal to.
-     * @param _amount Amount of the ERC20 to deposit.
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     * @dev l2 üzerindeki bir alıcının bakiyesine bir miktar ERC-20 yatırır.
+     * @param _l1Token Yatırmakta olduğumuz l1 ERC-20 Adresi
+     * @param _l2Token l1'in ilgili l2 ERC-20 Adresi
+     * @param _to Çekim işleminin alacaklandırılacağı l2 Adresi.
+     * @param _amount Yatırılacak ERC-20 miktarı.
+     * @param _l2Gas l2 üzerinde yatırma işlemini tamamlamak için gereken Gaz limiti.
+     * @param _data l2'ye iletilecek isteğe bağlı veri. Bu veri yalnızca
+     *        harici Sözleşmeler için bir kolaylık olarak sağlanır. Maksimum bir
+     *        uzunluğu zorunlu kılmak dışında, bu Sözleşmeler içeriği hakkında hiçbir garanti vermez.
      */
     function depositERC20To(
         address _l1Token,
@@ -183,26 +196,26 @@ Bu fonksiyona pek gerek duyulmaz, çünkü K2 üzerinde önden dağıtılmış b
     ) external;
 ```
 
-Bu fonksiyon neredeyse `depositERC20` ile özdeştir, ama farklı bir adrese ERC-20 yollamanıza izin verir.
+Bu işlev `depositERC20` ile neredeyse aynıdır, ancak ERC-20'yi farklı bir adrese göndermenize olanak tanır.
 
 ```solidity
     /*************************
-     * Cross-chain Functions *
+     * Zincirler Arası Fonksiyonlar *
      *************************/
 
     /**
-     * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the
-     * L1 ERC20 token.
-     * This call will fail if the initialized withdrawal from L2 has not been finalized.
+     * @dev l2'den l1'e bir çekim işlemini tamamlar ve fonları alıcının
+     * l1 ERC-20 Token bakiyesine alacak kaydeder.
+     * l2'den başlatılan çekim işlemi sonuçlandırılmamışsa bu çağrı başarısız olur.
      *
-     * @param _l1Token Address of L1 token to finalizeWithdrawal for.
-     * @param _l2Token Address of L2 token where withdrawal was initiated.
-     * @param _from L2 address initiating the transfer.
-     * @param _to L1 address to credit the withdrawal to.
-     * @param _amount Amount of the ERC20 to deposit.
-     * @param _data Data provided by the sender on L2. This data is provided
-     *   solely as a convenience for external contracts. Aside from enforcing a maximum
-     *   length, these contracts provide no guarantees about its content.
+     * @param _l1Token finalizeWithdrawal yapılacak l1 Token Adresi.
+     * @param _l2Token Çekim işleminin başlatıldığı l2 Token Adresi.
+     * @param _from Transferi başlatan l2 Adresi.
+     * @param _to Çekim işleminin alacaklandırılacağı l1 Adresi.
+     * @param _amount Yatırılacak ERC-20 miktarı.
+     * @param _data l2 üzerinde gönderici tarafından sağlanan veri. Bu veri yalnızca
+     *   harici Sözleşmeler için bir kolaylık olarak sağlanır. Maksimum bir
+     *   uzunluğu zorunlu kılmak dışında, bu Sözleşmeler içeriği hakkında hiçbir garanti vermez.
      */
     function finalizeERC20Withdrawal(
         address _l1Token,
@@ -215,16 +228,20 @@ Bu fonksiyon neredeyse `depositERC20` ile özdeştir, ama farklı bir adrese ERC
 }
 ```
 
-Optimism'de çekme işlemleri (ve K2'den K1'e diğer tüm mesajlar) iki adımlı bir süreçtir:
+Optimism'de çekim işlemleri (ve l2'den l1'e giden diğer mesajlar) iki adımlı bir süreçtir:
 
-1. K2 üzerinde başlatıcı işlem.
-2. K1 üzerinde sonlandırıcı veya talep eden bir işlem. Bu işlemin, biten K2 işlemi için olan [hata meydan okuması süresinden](https://community.optimism.io/docs/how-optimism-works/#fault-proofs) sonra gerçekleşmesi gerekir.
+1. L2'de başlatan bir işlem.
+2. L1'de tamamlayan veya talep eden bir işlem.
+   Bu işlemin, l2 işlemi için [hata itiraz süresi (fault challenge period)](https://community.optimism.io/docs/how-optimism-works/#fault-proofs) sona erdikten sonra gerçekleşmesi gerekir.
 
 ### IL1StandardBridge {#il1standardbridge}
 
-[Bu arayüz burada tanımlanmıştır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol). Bu dosya ETH için olay ve fonksiyon tanımlamalarını içerir. Bu tanımlamalar ERC-20 için yukarıdaki `IL1ERC20Bridge`'de belirlenenlere gayet benzerler.
+[Bu arayüz burada tanımlanmıştır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol).
+Bu dosya ETH için olay ve işlev tanımlarını içerir.
+Bu tanımlar, yukarıda ERC-20 için `IL1ERC20Bridge` içinde tanımlananlara çok benzer.
 
-Bazı ERC-20 token'ları özel işlem gerektirdiği ve standart köprü tarafından idare edilemedikleri için köprü arayüzü iki dosyaya bölünmüştür. Bu yolla bu tarz bir token'ı idare eden özel köprü `IL1ERC20Bridge`'i örnek alabilir ve ETH köprülemek zorunda kalmaz.
+Köprü arayüzü iki dosya arasında bölünmüştür çünkü bazı ERC-20 token'ları özel işlem gerektirir ve standart köprü tarafından işlenemez.
+Bu şekilde, böyle bir token'ı işleyen özel köprü `IL1ERC20Bridge` uygulayabilir ve aynı zamanda ETH'yi köprülemek zorunda kalmaz.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -237,7 +254,7 @@ import "./IL1ERC20Bridge.sol";
  */
 interface IL1StandardBridge is IL1ERC20Bridge {
     /**********
-     * Events *
+     * Olaylar *
      **********/
     event ETHDepositInitiated(
         address indexed _from,
@@ -247,7 +264,8 @@ interface IL1StandardBridge is IL1ERC20Bridge {
     );
 ```
 
-Bu olay ERC-20 versiyonunun (`ERC20DepositInitiated`) neredeyse aynısıdır, tek fark K1 ve K2 token adreslerinin olmamasıdır. Aynısı diğer olaylar ve fonksiyonlar için de geçerlidir.
+Bu olay, l1 ve l2 token adresleri olmaması dışında ERC-20 sürümüyle (`ERC20DepositInitiated`) neredeyse aynıdır.
+Aynı durum diğer olaylar ve işlevler için de geçerlidir.
 
 ```solidity
     event ETHWithdrawalFinalized(
@@ -257,11 +275,11 @@ Bu olay ERC-20 versiyonunun (`ERC20DepositInitiated`) neredeyse aynısıdır, te
     );
 
     /********************
-     * Public Functions *
+     * Genel Fonksiyonlar *
      ********************/
 
     /**
-     * @dev Deposit an amount of the ETH to the caller's balance on L2.
+     * @dev l2 üzerindeki çağırıcının bakiyesine bir miktar ETH yatırır.
             .
             .
             .
@@ -269,7 +287,7 @@ Bu olay ERC-20 versiyonunun (`ERC20DepositInitiated`) neredeyse aynısıdır, te
     function depositETH(uint32 _l2Gas, bytes calldata _data) external payable;
 
     /**
-     * @dev Deposit an amount of ETH to a recipient's balance on L2.
+     * @dev l2 üzerindeki bir alıcının bakiyesine bir miktar ETH yatırır.
             .
             .
             .
@@ -281,13 +299,13 @@ Bu olay ERC-20 versiyonunun (`ERC20DepositInitiated`) neredeyse aynısıdır, te
     ) external payable;
 
     /*************************
-     * Cross-chain Functions *
+     * Zincirler Arası Fonksiyonlar *
      *************************/
 
     /**
-     * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the
-     * L1 ETH token. Since only the xDomainMessenger can call this function, it will never be called
-     * before the withdrawal is finalized.
+     * @dev l2'den l1'e bir çekim işlemini tamamlar ve fonları alıcının
+     * l1 ETH Token bakiyesine alacak kaydeder. Bu fonksiyonu yalnızca xDomainMessenger çağırabildiğinden, çekim işlemi sonuçlandırılmadan
+     * önce asla çağrılmayacaktır.
                 .
                 .
                 .
@@ -303,62 +321,65 @@ Bu olay ERC-20 versiyonunun (`ERC20DepositInitiated`) neredeyse aynısıdır, te
 
 ### CrossDomainEnabled {#crossdomainenabled}
 
-[Bu sözleşme](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol) iki köprü tarafından da ([K1](#the-l1-bridge-contract) ve [K2](#the-l2-bridge-contract)) diğer katmana mesajlar göndermek için kalıtım ile alınmıştır.
+[Bu sözleşme](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol), diğer katmana mesaj göndermek için her iki köprü ([l1](#the-l1-bridge-contract) ve [l2](#l2-bridge-code)) tarafından miras alınır.
 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity >0.5.0 <0.9.0;
 
-/* Interface Imports */
+/* Arayüz İçe Aktarımları */
 import { ICrossDomainMessenger } from "./ICrossDomainMessenger.sol";
 ```
 
-[Bu arayüz](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/ICrossDomainMessenger.sol), sözleşmeye alan adları arası mesajcısını kullanarak nasıl diğer katmana mesaj göndereceğini anlatır. Alan adları arası mesajcısı tamamen başka bir sistemdir ve gelecekte yazmayı umduğum kendine özel bir makaleyi hak ediyor.
+[Bu arayüz](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/ICrossDomainMessenger.sol), alanlar arası mesajlaşma aracını (cross domain messenger) kullanarak sözleşmeye diğer katmana nasıl mesaj göndereceğini söyler.
+Bu alanlar arası mesajlaşma aracı tamamen başka bir sistemdir ve gelecekte yazmayı umduğum kendi makalesini hak etmektedir.
 
 ```solidity
 /**
  * @title CrossDomainEnabled
- * @dev Helper contract for contracts performing cross-domain communications
+ * @dev Etki alanları arası iletişim gerçekleştiren Sözleşmeler için yardımcı Sözleşme
  *
- * Compiler used: defined by inheriting contract
+ * Kullanılan derleyici: devralan Sözleşme tarafından tanımlanır
  */
 contract CrossDomainEnabled {
     /*************
-     * Variables *
+     * Değişkenler *
      *************/
 
-    // Diğer etki alanından mesaj göndermek ve almak için kullanılan Messenger sözleşmesi.
+    // Diğer etki alanından mesaj göndermek ve almak için kullanılan haberci Sözleşme.
     address public messenger;
 
     /***************
-     * Constructor *
+     * Kurucu *
      ***************/
 
     /**
-     * @param _messenger Address of the CrossDomainMessenger on the current layer.
+     * @param _messenger Mevcut katmandaki CrossDomainMessenger Adresi.
      */
     constructor(address _messenger) {
         messenger = _messenger;
     }
 ```
 
-Sözleşmenin bilmesi gereken bir parametre, bu katmandaki alan adları arası mesajcısının adresidir. Bu parametre bir defa yapıcıda belirlenir ve asla değişmez.
+Sözleşmenin bilmesi gereken tek parametre, bu katmandaki alanlar arası mesajlaşma aracının adresidir.
+Bu parametre kurucu içinde bir kez ayarlanır ve asla değişmez.
 
 ```solidity
 
     /**********************
-     * Function Modifiers *
+     * Fonksiyon Değiştiricileri *
      **********************/
 
     /**
-     * Enforces that the modified function is only callable by a specific cross-domain account.
-     * @param _sourceDomainAccount The only account on the originating domain which is
-     *  authenticated to call this function.
+     * Değiştirilen fonksiyonun yalnızca belirli bir etki alanları arası hesap tarafından çağrılabilmesini zorunlu kılar.
+     * @param _sourceDomainAccount Kaynak etki alanında bu fonksiyonu çağırmak için
+     *  kimliği doğrulanmış tek hesap.
      */
     modifier onlyFromCrossDomainAccount(address _sourceDomainAccount) {
 ```
 
-Alan adları arası mesajlaşması, çalıştığı blok zincirindeki (ya Ethereum ana ağı ya da Optimism) herhangi bir sözleşmeden erişilebilirdir. Ancak belirli mesajlara _sadece_ öbür taraftaki köprüden gelirse güvenmek için iki tarafta da köprüye ihtiyacımız vardır.
+Alanlar arası mesajlaşmaya, çalıştığı blokzincirdeki (Ethereum Ana Ağı veya Optimism) herhangi bir sözleşme tarafından erişilebilir.
+Ancak her iki taraftaki köprünün _yalnızca_ diğer taraftaki köprüden gelmeleri durumunda belirli mesajlara güvenmesine ihtiyacımız var.
 
 ```solidity
         require(
@@ -367,7 +388,7 @@ Alan adları arası mesajlaşması, çalıştığı blok zincirindeki (ya Ethere
         );
 ```
 
-Sadece uygun alan adları arası mesajcısından (`messenger`, aşağıda gördüğünüz üzere) gelen mesajlara güvenilebilir.
+Yalnızca uygun alanlar arası mesajlaşma aracından (`messenger`, aşağıda gördüğünüz gibi) gelen mesajlara güvenilebilir.
 
 ```solidity
 
@@ -377,9 +398,10 @@ Sadece uygun alan adları arası mesajcısından (`messenger`, aşağıda görd�
         );
 ```
 
-Alan adları arası mesajcısının diğer katman ile mesaj gönderen adresi sağlama yolu, [`.xDomainMessageSender()` fonksiyonudur](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1CrossDomainMessenger.sol#L122-L128). Mesaj tarafından başlatılan işlemde çağrıldığı sürece bu bilgiyi sağlayabilir.
+Alanlar arası mesajlaşma aracının diğer katmanla mesaj gönderen adresi sağlama yolu [`.xDomainMessageSender()` işlevidir](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1CrossDomainMessenger.sol#L122-L128).
+Mesaj tarafından başlatılan işlemde çağrıldığı sürece bu bilgiyi sağlayabilir.
 
-Aldığımız mesajın öbür köprüden geldiğinden emin olmalıyız.
+Aldığımız mesajın diğer köprüden geldiğinden emin olmalıyız.
 
 ```solidity
 
@@ -387,29 +409,30 @@ Aldığımız mesajın öbür köprüden geldiğinden emin olmalıyız.
     }
 
     /**********************
-     * Internal Functions *
+     * Dahili Fonksiyonlar *
      **********************/
 
     /**
-     * Gets the messenger, usually from storage. This function is exposed in case a child contract
-     * needs to override.
-     * @return The address of the cross-domain messenger contract which should be used.
+     * Genellikle depolamadan haberciyi alır. Bu fonksiyon, bir alt Sözleşmenin
+     * geçersiz kılması (override) gerekebileceği durumu için dışa aktarılmıştır.
+     * @return Kullanılması gereken etki alanları arası haberci Sözleşme Adresi.
      */
     function getCrossDomainMessenger() internal virtual returns (ICrossDomainMessenger) {
         return ICrossDomainMessenger(messenger);
     }
 ```
 
-Bu fonksiyon alan adları arası mesajcısını döndürür. Bundan kalıtım ile alan sözleşmelerin, hangi alan adı arası mesajcının kullanılacağını belirtmeleri için bir algoritma kullanmasına izin vermek için `messenger` değişkeni yerine bir fonksiyon kullanıyoruz.
+Bu işlev alanlar arası mesajlaşma aracını döndürür.
+Bundan miras alan sözleşmelerin hangi alanlar arası mesajlaşma aracını kullanacağını belirlemek için bir algoritma kullanmasına izin vermek amacıyla `messenger` değişkeni yerine bir işlev kullanıyoruz.
 
 ```solidity
 
     /**
-     * Sends a message to an account on another domain
-     * @param _crossDomainTarget The intended recipient on the destination domain
-     * @param _message The data to send to the target (usually calldata to a function with
-     *  `onlyFromCrossDomainAccount()`)
-     * @param _gasLimit The gasLimit for the receipt of the message on the target domain.
+     * Başka bir etki alanındaki bir hesaba mesaj gönderir
+     * @param _crossDomainTarget Hedef etki alanındaki amaçlanan alıcı
+     * @param _message Hedefe gönderilecek veri (genellikle `onlyFromCrossDomainAccount()` içeren
+     *  bir fonksiyona çağrı verisi)
+     * @param _gasLimit Hedef etki alanında mesajın alınması için Gaz limiti.
      */
     function sendCrossDomainMessage(
         address _crossDomainTarget,
@@ -417,17 +440,18 @@ Bu fonksiyon alan adları arası mesajcısını döndürür. Bundan kalıtım il
         bytes memory _message
 ```
 
-Son olarak, fonksiyon diğer katmana bir mesaj gönderir.
+Son olarak, diğer katmana mesaj gönderen işlev.
 
 ```solidity
     ) internal {
         // slither-disable-next-line reentrancy-events, reentrancy-benign
 ```
 
-[Slither](https://github.com/crytic/slither) Optimism'in güvenlik açığı ve diğer potansiyel problemleri bulmak için her sözleşmede çalıştırdığı bir statik analizcidir. Bu durumda, sıradaki satır iki açığı tetikler:
+[Slither](https://github.com/crytic/slither), Optimism'in güvenlik açıklarını ve diğer olası sorunları aramak için her sözleşmede çalıştırdığı statik bir analizördür.
+Bu durumda, aşağıdaki satır iki güvenlik açığını tetikler:
 
 1. [Yeniden giriş olayları](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3)
-2. [İyi huylu yeniden giriş](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
+2. [Zararsız yeniden giriş](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
 
 ```solidity
         getCrossDomainMessenger().sendMessage(_crossDomainTarget, _message, _gasLimit);
@@ -435,9 +459,9 @@ Son olarak, fonksiyon diğer katmana bir mesaj gönderir.
 }
 ```
 
-Bu durumda yeniden giriş hakkında kaygılı değiliz, Slither'ın bunu bilmesi mümkün olmasa bile `getCrossDomainMessenger()` öğesinin güvenilir bir adres döndürdüğünü biliyoruz.
+Bu durumda yeniden giriş konusunda endişelenmiyoruz, Slither'ın bunu bilmesinin bir yolu olmasa bile `getCrossDomainMessenger()` işlevinin güvenilir bir adres döndürdüğünü biliyoruz.
 
-### K1 köprü sözleşmesi {#the-l1-bridge-contract}
+### L1 köprü sözleşmesi {#the-l1-bridge-contract}
 
 [Bu sözleşmenin kaynak kodu buradadır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol).
 
@@ -446,30 +470,32 @@ Bu durumda yeniden giriş hakkında kaygılı değiliz, Slither'ın bunu bilmesi
 pragma solidity ^0.8.9;
 ```
 
-Arayüzler diğer sözleşmelerin bir parçası olabilirler, yani geniş aralıkta Solidity sürümlerini desteklemeleri gerekir. Ancak köprü bizim sözleşmemizdir, ve hangi Solidity sürümünü kullandığı hakkında katı davranabiliriz.
+Arayüzler diğer sözleşmelerin bir parçası olabilir, bu nedenle çok çeşitli Solidity sürümlerini desteklemeleri gerekir.
+Ancak köprünün kendisi bizim sözleşmemizdir ve hangi Solidity sürümünü kullandığı konusunda katı olabiliriz.
 
 ```solidity
-/* Interface Imports */
+/* Arayüz İçe Aktarımları */
 import { IL1StandardBridge } from "./IL1StandardBridge.sol";
 import { IL1ERC20Bridge } from "./IL1ERC20Bridge.sol";
 ```
 
-[IL1ERC20Bridge](#IL1ERC20Bridge) ve [IL1StandardBridge](#IL1StandardBridge) yukarıda açıklanmıştır.
+[IL1ERC20Bridge](#il1erc20bridge) ve [IL1StandardBridge](#il1standardbridge) yukarıda açıklanmıştır.
 
 ```solidity
 import { IL2ERC20Bridge } from "../../L2/messaging/IL2ERC20Bridge.sol";
 ```
 
-[Bu arayüz](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) K2 üzerindeki standart köprüyü kontrol etmek için mesajlar oluşturmamızı sağlar.
+[Bu arayüz](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol), l2'deki standart köprüyü kontrol etmek için mesajlar oluşturmamızı sağlar.
 
 ```solidity
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 ```
 
-[Bu arayüz](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) ERC-20 sözleşmelerini kontrol etmemizi sağlar. [Onun hakkında dahasını burada okuyabilirsiniz](/developers/tutorials/erc20-annotated-code/#the-interface).
+[Bu arayüz](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol), ERC-20 sözleşmelerini kontrol etmemizi sağlar.
+[Bunun hakkında daha fazla bilgiyi buradan okuyabilirsiniz](/developers/tutorials/erc20-annotated-code/#the-interface).
 
 ```solidity
-/* Library Imports */
+/* Kütüphane İçe Aktarımları */
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
 ```
 
@@ -479,99 +505,114 @@ import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.so
 import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployAddresses.sol";
 ```
 
-[`Lib_PredeployAddresses`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/constants/Lib_PredeployAddresses.sol) her zaman aynı adrese sahip olan K2 sözleşmelerinin adreslerine sahiptir. Buna K2 üzerindeki standart köprü de dahildir.
+[`Lib_PredeployAddresses`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/constants/Lib_PredeployAddresses.sol), her zaman aynı adrese sahip olan l2 sözleşmelerinin adreslerine sahiptir. Buna l2'deki standart köprü de dahildir.
 
 ```solidity
 import { Address } from "@openzeppelin/contracts/utils/Address.sol";
 ```
 
-[OpenZeppelin'in Address yardımcı araçları](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol). Sözleşme adresleri ve harici olarak sahiplenilmiş hesapların (EOA) ayrımını yapmak için kullanılır.
+[OpenZeppelin'in Adres yardımcı programları](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol). Sözleşme adresleri ile harici olarak sahip olunan hesaplara (EOA) ait olanları ayırt etmek için kullanılır.
 
-Bunun mükemmel bir çözüm olmadığını unutmayın. Bir sözleşmenin yapıcısı tarafından yapılan çağrılar ve doğrudan çağrıların ayrımını yapmanın bir yolu yoktur ama bu en azından bazı yaygın kullanıcı hatalarını tespit etmemizi ve önlememizi sağlar.
+Bunun mükemmel bir çözüm olmadığını unutmayın, çünkü doğrudan çağrılar ile bir sözleşmenin kurucusundan yapılan çağrıları ayırt etmenin bir yolu yoktur, ancak en azından bu, bazı yaygın kullanıcı hatalarını belirlememize ve önlememize olanak tanır.
 
 ```solidity
 import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 ```
 
-[ERC-20 standardı](https://eips.ethereum.org/EIPS/eip-20) biz sözleşmenin hata bildirmesi için iki yolu destekler:
+[ERC-20 standardı](https://eips.ethereum.org/EIPS/eip-20), bir sözleşmenin başarısızlığı bildirmesi için iki yolu destekler:
 
-1. Geri döndür
-2. `false` döndürme
+1. Geri al (Revert)
+2. `false` döndür
 
-Her iki durumu da ele almak kodumuzu daha karmaşık hâle getirecektir, bu nedenle [OpenZeppelin'in `SafeERC20`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol)'sini kullanıyoruz, bu da [tüm hataların bir geri dönüşle sonuçlanmasını](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96) sağlar.
+Her iki durumu da ele almak kodumuzu daha karmaşık hale getirecektir, bu nedenle bunun yerine [tüm başarısızlıkların bir geri alma ile sonuçlanmasını](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96) sağlayan [OpenZeppelin'in `SafeERC20`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol) sarmalayıcısını kullanıyoruz.
 
 ```solidity
 /**
  * @title L1StandardBridge
- * @dev The L1 ETH and ERC20 Bridge is a contract which stores deposited L1 funds and standard
- * tokens that are in use on L2. It synchronizes a corresponding L2 Bridge, informing it of deposits
- * and listening to it for newly finalized withdrawals.
+ * @dev l1 ETH ve ERC-20 köprüsü, yatırılan l1 fonlarını ve l2 üzerinde kullanımda olan standart
+ * Token'ları depolayan bir Sözleşmedir. İlgili bir l2 köprüsünü senkronize eder, onu yatırma işlemleri hakkında bilgilendirir
+ * ve yeni sonuçlandırılan çekim işlemleri için onu dinler.
  *
  */
 contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     using SafeERC20 for IERC20;
 ```
 
-Bu satır `IERC20` arayüzünü her kullandığımızda `SafeERC20` paketleyicisini kullanmasını belirtme yöntemimizdir.
+Bu satır, `IERC20` arayüzünü her kullandığımızda `SafeERC20` sarmalayıcısını kullanmayı nasıl belirttiğimizdir.
 
 ```solidity
 
     /********************************
-     * External Contract References *
+     * Harici Sözleşme Referansları *
      ********************************/
 
     address public l2TokenBridge;
 ```
 
-[L2StandardBridge](#the-l2-bridge-contract) adresi.
+[L2StandardBridge](#l2-bridge-code) adresi.
 
 ```solidity
 
-    // Maps L1 token to L2 token to balance of the L1 token deposited
+    // Yatırılan l1 Token bakiyesi için l1 Token'ı l2 Token'a eşler
     mapping(address => mapping(address => uint256)) public deposits;
 ```
 
-Bunun gibi bir çift [eşleştirme](https://www.tutorialspoint.com/solidity/solidity_mappings.htm), [iki boyutlu bir seyrek diziyi](https://en.wikipedia.org/wiki/Sparse_matrix) tanımlama şeklinizdir. Bu veri yapısındaki değerler `deposit[L1 token addr][L2 token addr]` olarak tanımlanır. Varsayılan değer sıfırdır. Yalnızca farklı bir değere ayarlanmış hücreler depolamaya yazılır.
+Bunun gibi çift bir [eşleme (mapping)](https://www.tutorialspoint.com/solidity/solidity_mappings.htm), [iki boyutlu seyrek bir dizi](https://en.wikipedia.org/wiki/Sparse_matrix) tanımlamanın yoludur.
+Bu veri yapısındaki değerler `deposit[L1 token addr][L2 token addr]` olarak tanımlanır.
+Varsayılan değer sıfırdır.
+Yalnızca farklı bir değere ayarlanan hücreler depolamaya yazılır.
 
 ```solidity
 
     /***************
-     * Constructor *
+     * Kurucu *
      ***************/
 
-    // This contract lives behind a proxy, so the constructor parameters will go unused.
+    // Bu Sözleşme bir proxy arkasında yaşar, bu nedenle kurucu parametreleri kullanılmayacaktır.
     constructor() CrossDomainEnabled(address(0)) {}
 ```
 
-Depodaki tüm değişkenleri kopyalamak zorunda kalmadan bu sözleşmeyi yükseltebilmek istiyoruz. Bunu yapmak için bir [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy) kullanıyoruz. Bu, çağrıları adresi proxy sözleşmesi tarafından saklanan ayrı bir kişiye aktarmak için [`delegatecall`](https://solidity-by-example.org/delegatecall/) kullanan bir sözleşmedir (yükselttiğinizde proxy'ye bu adresi değiştirmesini söylersiniz). `delegatecall` kullandığınızda, depolama alanı _çağırma_ sözleşmesinin deposu olarak kalır, bu nedenle tüm sözleşme durumu değişkenlerinin değerleri etkilenmez.
+Depolamadaki tüm değişkenleri kopyalamak zorunda kalmadan bu sözleşmeyi yükseltebilmek istiyoruz.
+Bunu yapmak için, çağrıları adresi vekil kontrat tarafından saklanan ayrı bir sözleşmeye aktarmak için [`delegatecall`](https://solidity-by-example.org/delegatecall/) kullanan bir sözleşme olan [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy) kullanıyoruz (yükseltme yaptığınızda vekile bu adresi değiştirmesini söylersiniz).
+`delegatecall` kullandığınızda depolama, _çağıran_ sözleşmenin depolaması olarak kalır, bu nedenle tüm sözleşme durum değişkenlerinin değerleri etkilenmez.
 
-`delegecall`'un _callee_'si olan sözleşmenin depolamasının kullanılmaması ve bu nedenle ona iletilen oluşturucu değerlerinin önemli olmaması, bu modelin etkilerinden birisidir. `CrossDomainEnabled` yapıcısına anlamsız bir değer sağlayabilmemizin nedeni budur. Aşağıdaki başlatmanın yapıcıdan ayrı olmasının nedeni de budur.
+Bu modelin bir etkisi, `delegatecall` tarafından _çağrılan_ sözleşmenin depolamasının kullanılmaması ve bu nedenle ona aktarılan kurucu değerlerinin önemli olmamasıdır.
+Bu, `CrossDomainEnabled` kurucusuna anlamsız bir değer sağlayabilmemizin nedenidir.
+Aşağıdaki başlatmanın kurucudan ayrı olmasının nedeni de budur.
 
 ```solidity
     /******************
-     * Initialization *
+     * Başlatma *
      ******************/
 
     /**
-     * @param _l1messenger L1 Messenger address being used for cross-chain communications.
-     * @param _l2TokenBridge L2 standard bridge address.
+     * @param _l1messenger Zincirler arası iletişim için kullanılan l1 Haberci Adresi.
+     * @param _l2TokenBridge l2 standart köprü Adresi.
      */
     // slither-disable-next-line external-function
 ```
 
-Bu [Slither testi](https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external), sözleşme kodundan çağrılır ve bu nedenle `public` yerine `external` olarak bildirilebilir. `external` fonksiyonların kullanım maliyeti, çağrı verilerinde parametrelerle sağlanabildikleri için daha düşük olabilir. `public` olarak tanımlanan fonksiyonlara sözleşme içinden erişilebilir olmalıdır. Sözleşmeler kendi çağrı verilerini değiştiremez, bu nedenle parametrelerin bellekte olması gerekir. Böyle bir fonksiyon harici olarak çağrıldığında, çağrı verilerini belleğe kopyalamak gerekir ve bu da gaz maliyetine neden olur. Bu durumda fonksiyon sadece bir kez çağrılır, bu nedenle verimsizlik bizim için önemli değildir.
+Bu [Slither testi](https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external), sözleşme kodundan çağrılmayan ve bu nedenle `public` yerine `external` olarak bildirilebilecek işlevleri tanımlar.
+`external` işlevlerinin gaz maliyeti daha düşük olabilir, çünkü onlara çağrı verisinde (calldata) parametreler sağlanabilir.
+`public` olarak bildirilen işlevlerin sözleşme içinden erişilebilir olması gerekir.
+Sözleşmeler kendi çağrı verilerini değiştiremezler, bu nedenle parametrelerin bellekte olması gerekir.
+Böyle bir işlev dışarıdan çağrıldığında, çağrı verisini belleğe kopyalamak gerekir, bu da gaza mal olur.
+Bu durumda işlev yalnızca bir kez çağrılır, bu nedenle verimsizlik bizim için önemli değildir.
 
 ```solidity
     function initialize(address _l1messenger, address _l2TokenBridge) public {
         require(messenger == address(0), "Contract has already been initialized.");
 ```
 
-`initialize` fonksiyonu yalnızca bir kez çağrılmalıdır. K1 alan adları arası mesajcısının veya K2 token köprüsünün adresi değişirse, yeni bir proxy ve onu çağıran yeni bir köprü oluştururuz. Bunun, çok nadir gerçekleşen tüm sistemin yükseltilmesi dışında gerçekleşmesi pek olası değildir.
+`initialize` işlevi yalnızca bir kez çağrılmalıdır.
+L1 alanlar arası mesajlaşma aracının veya l2 token köprüsünün adresi değişirse, yeni bir vekil ve onu çağıran yeni bir köprü oluştururuz.
+Tüm sistemin yükseltilmesi dışında bunun gerçekleşmesi pek olası değildir, bu çok nadir görülen bir durumdur.
 
-Bu fonksiyonun, onu _kimin_ arayabileceğini kısıtlayan herhangi bir mekanizmaya sahip olmadığını unutmayın. Bu, teorik olarak bir saldırganın biz proxy'yi ve köprünün ilk sürümünü dağıtana kadar bekleyebileceği ve ardından meşru kullanıcıdan önce `initialize` fonksiyonuna ulaşmak için [front-run](https://solidity-by-example.org/hacks/front-running/) yapabileceği anlamına gelir. Ancak bunu önlemenin iki yöntemi vardır:
+Bu işlevin onu _kimin_ çağırabileceğini kısıtlayan herhangi bir mekanizması olmadığını unutmayın.
+Bu, teorik olarak bir saldırganın vekili ve köprünün ilk sürümünü dağıtana kadar bekleyebileceği ve ardından meşru kullanıcıdan önce `initialize` işlevine ulaşmak için [önden koşma (front-run)](https://solidity-by-example.org/hacks/front-running/) yapabileceği anlamına gelir. Ancak bunu önlemenin iki yöntemi vardır:
 
-1. Sözleşmeler doğrudan bir EOA tarafından değil de [onları oluşturan başka bir sözleşmeye sahip olan bir işlemde](https://medium.com/upstate-interactive/creating-a-contract-with-a-smart-contract-bdb67c5c8595) dağıtılırsa tüm süreç atomik olabilir ve başka herhangi bir işlem yürütülmeden önce tamamlanabilir.
-2. Geçerli `initialize` çağrısı başarısız olursa, yeni oluşturulan proxy ve köprüyü yok saymak ve yenilerini oluşturmak her zaman mümkündür.
+1. Sözleşmeler doğrudan bir EOA tarafından değil, [başka bir sözleşmenin onları oluşturduğu bir işlemde](https://medium.com/upstate-interactive/creating-a-contract-with-a-smart-contract-bdb67c5c8595) dağıtılırsa, tüm süreç atomik olabilir ve başka herhangi bir işlem yürütülmeden önce bitebilir.
+2. `initialize` işlevine yapılan meşru çağrı başarısız olursa, yeni oluşturulan vekili ve köprüyü görmezden gelmek ve yenilerini oluşturmak her zaman mümkündür.
 
 ```solidity
         messenger = _l1messenger;
@@ -579,39 +620,40 @@ Bu fonksiyonun, onu _kimin_ arayabileceğini kısıtlayan herhangi bir mekanizma
     }
 ```
 
-Bunlar, köprünün bilmesi gereken iki parametredir.
+Bunlar köprünün bilmesi gereken iki parametredir.
 
 ```solidity
 
     /**************
-     * Depositing *
+     * Yatırma *
      **************/
 
-    /** @dev Modifier requiring sender to be EOA.  This check could be bypassed by a malicious
-     *  contract via initcode, but it takes care of the user error we want to avoid.
+    /** @dev Göndericinin EOA olmasını require eden değiştirici. Bu kontrol kötü niyetli bir
+     *  Sözleşme tarafından initcode aracılığıyla atlanabilir, ancak kaçınmak istediğimiz kullanıcı hatasını halleder.
      */
     modifier onlyEOA() {
-        // Used to stop deposits from contracts (avoid accidentally lost tokens)
+        // Sözleşmelerden gelen yatırma işlemlerini durdurmak için kullanılır (yanlışlıkla kaybolan Token'ları önlemek için)
         require(!Address.isContract(msg.sender), "Account not EOA");
         _;
     }
 ```
 
-Bu, OpenZeppelin'in `Address` yardımcı araçlarına ihtiyaç duymamızın nedenidir.
+OpenZeppelin'in `Address` yardımcı programlarına ihtiyaç duymamızın nedeni budur.
 
 ```solidity
     /**
-     * @dev This function can be called with no data
-     * to deposit an amount of ETH to the caller's balance on L2.
-     * Since the receive function doesn't take data, a conservative
-     * default amount is forwarded to L2.
+     * @dev Bu fonksiyon, l2 üzerindeki çağırıcının bakiyesine bir miktar ETH yatırmak için
+     * veri olmadan çağrılabilir.
+     * receive fonksiyonu veri almadığından, l2'ye muhafazakar bir
+     * varsayılan miktar iletilir.
      */
     receive() external payable onlyEOA {
         _initiateETHDeposit(msg.sender, msg.sender, 200_000, bytes(""));
     }
 ```
 
-Bu fonksiyon test amaçlı mevcuttur. Arayüz tanımlarında görünmediğine dikkat edin: Normal kullanım için değildir.
+Bu işlev test amacıyla mevcuttur.
+Arayüz tanımlarında görünmediğine dikkat edin - normal kullanım için değildir.
 
 ```solidity
     /**
@@ -633,18 +675,18 @@ Bu fonksiyon test amaçlı mevcuttur. Arayüz tanımlarında görünmediğine di
     }
 ```
 
-Bu iki fonksiyon, gerçek ETH yatırma işlemini yöneten fonksiyon olan `_initiateETHDeposit` etrafındaki paketleyicilerdir.
+Bu iki işlev, asıl ETH yatırma işlemini gerçekleştiren işlev olan `_initiateETHDeposit` etrafındaki sarmalayıcılardır.
 
 ```solidity
     /**
-     * @dev Performs the logic for deposits by storing the ETH and informing the L2 ETH Gateway of
-     * the deposit.
-     * @param _from Account to pull the deposit from on L1.
-     * @param _to Account to give the deposit to on L2.
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     * @dev ETH'yi depolayarak ve l2 ETH Ağ Geçidini yatırma işlemi hakkında bilgilendirerek
+     * yatırma işlemleri için mantığı gerçekleştirir.
+     * @param _from l1 üzerinde yatırma işleminin çekileceği hesap.
+     * @param _to l2 üzerinde yatırma işleminin verileceği hesap.
+     * @param _l2Gas l2 üzerinde yatırma işlemini tamamlamak için gereken Gaz limiti.
+     * @param _data l2'ye iletilecek isteğe bağlı veri. Bu veri yalnızca
+     *        harici Sözleşmeler için bir kolaylık olarak sağlanır. Maksimum bir
+     *        uzunluğu zorunlu kılmak dışında, bu Sözleşmeler içeriği hakkında hiçbir garanti vermez.
      */
     function _initiateETHDeposit(
         address _from,
@@ -652,11 +694,14 @@ Bu iki fonksiyon, gerçek ETH yatırma işlemini yöneten fonksiyon olan `_initi
         uint32 _l2Gas,
         bytes memory _data
     ) internal {
-        // Construct calldata for finalizeDeposit call
+        // finalizeDeposit çağrısı için çağrı verisi oluştur
         bytes memory message = abi.encodeWithSelector(
 ```
 
-Etki alanları arası mesajların çalışma şekli, hedef sözleşmenin çağrı verileri olarak mesajla birlikte çağrılmasıdır. Solidity sözleşmeleri, çağrı verilerini her zaman aşağıdaki [ABI özelliklerine](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html) uygun olarak yorumlar. [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#abi-encoding-and-decoding-functions) Solidity fonksiyonu, bu çağrı verilerini oluşturur.
+Alanlar arası mesajların çalışma şekli, hedef sözleşmenin mesajla birlikte çağrı verisi olarak çağrılmasıdır.
+Solidity sözleşmeleri çağrı verilerini her zaman
+[ABI spesifikasyonlarına](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html) uygun olarak yorumlar.
+Solidity işlevi [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#abi-encoding-and-decoding-functions) bu çağrı verisini oluşturur.
 
 ```solidity
             IL2ERC20Bridge.finalizeDeposit.selector,
@@ -669,24 +714,24 @@ Etki alanları arası mesajların çalışma şekli, hedef sözleşmenin çağr�
         );
 ```
 
-Buradaki mesaj, şu parametrelerle [`finalizeDeposit` fonksiyonunu](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148) çağırmaktır:
+Buradaki mesaj, şu parametrelerle [`finalizeDeposit` işlevini](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148) çağırmaktır:
 
-| Parametre   | Değer                            | Anlam                                                                                                                                           |
-| ----------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| \_l1Token | address(0)                       | K1'de ETH'yi (ERC-20 token'ı değildir) temsil eden özel değer                                                                                   |
-| \_l2Token | Lib_PredeployAddresses.OVM_ETH | Optimism'de ETH'yi yöneten K2 sözleşmesi, `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` (bu sözleşme yalnızca dahili Optimism kullanımı içindir) |
-| \_from    | \_from                         | ETH'yi gönderen K1 üzerindeki adres                                                                                                             |
-| \_to      | \_to                           | ETH'yi alan K2'deki adres                                                                                                                       |
-| amount      | msg.value                        | Gönderilen wei miktarı (zaten köprüye gönderildi)                                                                                               |
-| \_data    | \_data                         | Yatırmaya eklenecek ek tarih                                                                                                                    |
+| Parametre | Değer                          | Anlamı                                                                                                                                       |
+| --------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| \_l1Token | address(0)                     | L1'de ETH'yi (bir ERC-20 token'ı olmayan) temsil eden özel değer                                                                             |
+| \_l2Token | Lib_PredeployAddresses.OVM_ETH | Optimism'de ETH'yi yöneten l2 sözleşmesi, `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` (bu sözleşme yalnızca dahili Optimism kullanımı içindir)          |
+| \_from    | \_from                         | L1'de ETH'yi gönderen adres                                                                                                                  |
+| \_to      | \_to                           | L2'de ETH'yi alan adres                                                                                                                      |
+| amount    | msg.value                      | Gönderilen Wei miktarı (zaten köprüye gönderilmiş olan)                                                                                      |
+| \_data    | \_data                         | Yatırma işlemine eklenecek ek veri                                                                                                           |
 
 ```solidity
-        // Send calldata into L2
+        // çağrı verisini l2'ye gönder
         // slither-disable-next-line reentrancy-events
         sendCrossDomainMessage(l2TokenBridge, _l2Gas, message);
 ```
 
-Mesajı, alan adları arası mesajcısı ile gönderin.
+Mesajı alanlar arası mesajlaşma aracı üzerinden gönderin.
 
 ```solidity
         // slither-disable-next-line reentrancy-events
@@ -694,16 +739,16 @@ Mesajı, alan adları arası mesajcısı ile gönderin.
     }
 ```
 
-Bu transferi dinleyen herhangi bir merkeziyetsiz uygulamayı bilgilendirmek için bir olay yayınlayın.
+Dinleyen herhangi bir merkeziyetsiz uygulamayı (dapp) bu transfer hakkında bilgilendirmek için bir olay yayınlayın.
 
 ```solidity
     /**
      * @inheritdoc IL1ERC20Bridge
      */
     function depositERC20(
-        .
-        .
-        .
+		.
+		.
+		.
     ) external virtual onlyEOA {
         _initiateERC20Deposit(_l1Token, _l2Token, msg.sender, msg.sender, _amount, _l2Gas, _data);
     }
@@ -712,30 +757,30 @@ Bu transferi dinleyen herhangi bir merkeziyetsiz uygulamayı bilgilendirmek içi
      * @inheritdoc IL1ERC20Bridge
      */
     function depositERC20To(
-        .
-        .
-        .
+		.
+		.
+		.
     ) external virtual {
         _initiateERC20Deposit(_l1Token, _l2Token, msg.sender, _to, _amount, _l2Gas, _data);
     }
 ```
 
-Bu iki fonksiyon, gerçek ERC-20 yatırma işlemini yöneten fonksiyon olan `_initiateERC20Deposit` etrafındaki paketleyicilerdir.
+Bu iki işlev, asıl ERC-20 yatırma işlemini gerçekleştiren işlev olan `_initiateERC20Deposit` etrafındaki sarmalayıcılardır.
 
 ```solidity
     /**
-     * @dev Performs the logic for deposits by informing the L2 Deposited Token
-     * contract of the deposit and calling a handler to lock the L1 funds. (e.g. transferFrom)
+     * @dev l2 Yatırılan Token Sözleşmesini yatırma işlemi hakkında bilgilendirerek
+     * ve l1 fonlarını kilitlemek için bir işleyici çağırarak (örn. transferFrom) yatırma işlemleri için mantığı gerçekleştirir.
      *
-     * @param _l1Token Address of the L1 ERC20 we are depositing
-     * @param _l2Token Address of the L1 respective L2 ERC20
-     * @param _from Account to pull the deposit from on L1
-     * @param _to Account to give the deposit to on L2
-     * @param _amount Amount of the ERC20 to deposit.
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     * @param _l1Token Yatırmakta olduğumuz l1 ERC-20 Adresi
+     * @param _l2Token l1'in ilgili l2 ERC-20 Adresi
+     * @param _from l1 üzerinde yatırma işleminin çekileceği hesap
+     * @param _to l2 üzerinde yatırma işleminin verileceği hesap
+     * @param _amount Yatırılacak ERC-20 miktarı.
+     * @param _l2Gas l2 üzerinde yatırma işlemini tamamlamak için gereken Gaz limiti.
+     * @param _data l2'ye iletilecek isteğe bağlı veri. Bu veri yalnızca
+     *        harici Sözleşmeler için bir kolaylık olarak sağlanır. Maksimum bir
+     *        uzunluğu zorunlu kılmak dışında, bu Sözleşmeler içeriği hakkında hiçbir garanti vermez.
      */
     function _initiateERC20Deposit(
         address _l1Token,
@@ -748,26 +793,29 @@ Bu iki fonksiyon, gerçek ERC-20 yatırma işlemini yöneten fonksiyon olan `_in
     ) internal {
 ```
 
-Bu fonksiyon, birkaç önemli farklılık dışında yukarıdaki `_initiateETHDeposit` fonksiyonuna benzer. İlk fark, bu fonksiyonun token adreslerini ve aktarılacak miktarı parametre olarak almasıdır. ETH söz konusu olduğunda köprüye yapılan çağrı, varlığın köprü hesabına (`msg.value`) transferini zaten içerir.
+Bu işlev, birkaç önemli farkla yukarıdaki `_initiateETHDeposit` işlevine benzer.
+İlk fark, bu işlevin token adreslerini ve transfer edilecek miktarı parametre olarak almasıdır.
+ETH durumunda, köprüye yapılan çağrı zaten varlığın köprü hesabına transferini içerir (`msg.value`).
 
 ```solidity
-        // When a deposit is initiated on L1, the L1 Bridge transfers the funds to itself for future
-        // withdrawals. safeTransferFrom also checks if the contract has code, so this will fail if
-        // _from is an EOA or address(0).
+        // l1 üzerinde bir yatırma işlemi başlatıldığında, l1 köprüsü gelecekteki
+        // çekim işlemleri için fonları kendisine transfer eder. safeTransferFrom ayrıca Sözleşmenin koda sahip olup olmadığını da kontrol eder, bu nedenle
+        // _from bir EOA veya address(0) ise bu başarısız olacaktır.
         // slither-disable-next-line reentrancy-events, reentrancy-benign
         IERC20(_l1Token).safeTransferFrom(_from, address(this), _amount);
 ```
 
-ERC-20 token transferleri, ETH'den farklı bir süreci takip eder:
+ERC-20 token transferleri ETH'den farklı bir süreç izler:
 
-1. Kullanıcı (`_from`), köprüye uygun token'ları aktarması için bir izin verir.
-2. Kullanıcı, token sözleşmesinin adresi, miktarı vb. ile birlikte köprüyü çağırır.
-3. Köprü, token'ları yatırma işleminin bir parçası olarak (kendisine) aktarır.
+1. Kullanıcı (`_from`), uygun token'ları transfer etmesi için köprüye bir harcama izni verir.
+2. Kullanıcı, token sözleşmesinin adresi, miktar vb. ile köprüyü çağırır.
+3. Köprü, yatırma işleminin bir parçası olarak token'ları (kendisine) transfer eder.
 
-İlk adım, son ikisinden ayrı bir işlemde gerçekleşebilir. Ancak `_initiateERC20Deposit` çağıran iki fonksiyon, (`depositERC20` ve `DepositERC20To`), bu fonksiyonu `_from` parametresi olarak yalnızca `msg.sender` ile çağırdığından, front-running bir sorun olmaz.
+İlk adım, son ikisinden ayrı bir işlemde gerçekleşebilir.
+Ancak, önden koşma bir sorun değildir çünkü `_initiateERC20Deposit` işlevini çağıran iki işlev (`depositERC20` ve `depositERC20To`), bu işlevi yalnızca `_from` parametresi olarak `msg.sender` ile çağırır.
 
 ```solidity
-        // Construct calldata for _l2Token.finalizeDeposit(_to, _amount)
+        // _l2Token.finalizeDeposit(_to, _amount) için çağrı verisi oluştur
         bytes memory message = abi.encodeWithSelector(
             IL2ERC20Bridge.finalizeDeposit.selector,
             _l1Token,
@@ -778,7 +826,7 @@ ERC-20 token transferleri, ETH'den farklı bir süreci takip eder:
             _data
         );
 
-        // Send calldata into L2
+        // çağrı verisini l2'ye gönder
         // slither-disable-next-line reentrancy-events, reentrancy-benign
         sendCrossDomainMessage(l2TokenBridge, _l2Gas, message);
 
@@ -786,7 +834,8 @@ ERC-20 token transferleri, ETH'den farklı bir süreci takip eder:
         deposits[_l1Token][_l2Token] = deposits[_l1Token][_l2Token] + _amount;
 ```
 
-Yatırılan token miktarını `deposits` veri yapısına ekleyin. K2'de aynı K1 ERC-20 token'ına karşılık gelen birden fazla adres olabilir, bu nedenle yatırma işlemlerini takip etmek için köprünün K1 ERC-20 token bakiyesini kullanmak yeterli değildir.
+Yatırılan token miktarını `deposits` veri yapısına ekleyin.
+L2'de aynı l1 ERC-20 token'ına karşılık gelen birden fazla adres olabilir, bu nedenle yatırma işlemlerini takip etmek için köprünün l1 ERC-20 token bakiyesini kullanmak yeterli değildir.
 
 ```solidity
 
@@ -795,7 +844,7 @@ Yatırılan token miktarını `deposits` veri yapısına ekleyin. K2'de aynı K1
     }
 
     /*************************
-     * Cross-chain Functions *
+     * Zincirler Arası Fonksiyonlar *
      *************************/
 
     /**
@@ -808,20 +857,21 @@ Yatırılan token miktarını `deposits` veri yapısına ekleyin. K2'de aynı K1
         bytes calldata _data
 ```
 
-K2 köprüsü, K2 alan adları arası mesajcısına, K1 alan adları arası mesajcısının bu fonksiyonu çağırmasına neden olan bir mesaj gönderir (bir kez [mesajı sonlandıran işlem](https://community.optimism.io/docs/developers/bridge/messaging/#fees-for-l2-%E2%87%92-l1-transactions) elbette K1'de gönderilir).
+L2 köprüsü, l2 alanlar arası mesajlaşma aracına bir mesaj gönderir ve bu da l1 alanlar arası mesajlaşma aracının bu işlevi çağırmasına neden olur (elbette [mesajı tamamlayan işlem](https://community.optimism.io/docs/developers/bridge/messaging/#fees-for-l2-%E2%87%92-l1-transactions) l1'de gönderildikten sonra).
 
 ```solidity
     ) external onlyFromCrossDomainAccount(l2TokenBridge) {
 ```
 
-Bunun _meşru_ bir mesaj olduğundan, alan adları arası mesajcısından gelen ve K2 token köprüsünden kaynaklanan bir mesaj olduğundan emin olun. Bu fonksiyon, ETH'yi köprüden çekmek için kullanılır, bu nedenle yalnızca yetkili arayan tarafından çağrıldığından emin olmalıyız.
+Bunun alanlar arası mesajlaşma aracından gelen ve l2 token köprüsünden kaynaklanan _meşru_ bir mesaj olduğundan emin olun.
+Bu işlev köprüden ETH çekmek için kullanılır, bu nedenle yalnızca yetkili arayan tarafından çağrıldığından emin olmalıyız.
 
 ```solidity
         // slither-disable-next-line reentrancy-events
         (bool success, ) = _to.call{ value: _amount }(new bytes(0));
 ```
 
-ETH aktarmanın yolu, alıcıyı `msg.value` içindeki wei miktarıyla aramaktır.
+ETH transfer etmenin yolu, alıcıyı `msg.value` içindeki Wei miktarıyla çağırmaktır.
 
 ```solidity
         require(success, "TransferHelper::safeTransferETH: ETH transfer failed");
@@ -830,7 +880,7 @@ ETH aktarmanın yolu, alıcıyı `msg.value` içindeki wei miktarıyla aramaktı
         emit ETHWithdrawalFinalized(_from, _to, _amount, _data);
 ```
 
-Çekme işlemi ile ilgili bir olay yayınlayın.
+Çekim işlemi hakkında bir olay yayınlayın.
 
 ```solidity
     }
@@ -848,7 +898,7 @@ ETH aktarmanın yolu, alıcıyı `msg.value` içindeki wei miktarıyla aramaktı
     ) external onlyFromCrossDomainAccount(l2TokenBridge) {
 ```
 
-Bu fonksiyon, ERC-20 token'ları için gerekli değişikliklerle birlikte yukarıdaki `finalizeETHWithdrawal` fonksiyonuna benzer.
+Bu işlev, ERC-20 token'ları için gerekli değişikliklerle birlikte yukarıdaki `finalizeETHWithdrawal` işlevine benzer.
 
 ```solidity
         deposits[_l1Token][_l2Token] = deposits[_l1Token][_l2Token] - _amount;
@@ -858,7 +908,7 @@ Bu fonksiyon, ERC-20 token'ları için gerekli değişikliklerle birlikte yukar�
 
 ```solidity
 
-        // When a withdrawal is finalized on L1, the L1 Bridge transfers the funds to the withdrawer
+        // l1 üzerinde bir çekim işlemi sonuçlandırıldığında, l1 köprüsü fonları çeken kişiye transfer eder
         // slither-disable-next-line reentrancy-events
         IERC20(_l1Token).safeTransfer(_to, _amount);
 
@@ -868,28 +918,35 @@ Bu fonksiyon, ERC-20 token'ları için gerekli değişikliklerle birlikte yukar�
 
 
     /*****************************
-     * Temporary - Migrating ETH *
+     * Geçici - ETH Taşıma *
      *****************************/
 
     /**
-     * @dev Adds ETH balance to the account. This is meant to allow for ETH
-     * to be migrated from an old gateway to a new gateway.
-     * NOTE: This is left for one upgrade only so we are able to receive the migrated ETH from the
-     * old contract
+     * @dev Hesaba ETH bakiyesi ekler. Bu, ETH'nin eski bir ağ geçidinden
+     * yeni bir ağ geçidine taşınmasına izin vermek içindir.
+     * NOT: Bu yalnızca bir yükseltme için bırakılmıştır, böylece taşınan ETH'yi eski
+     * Sözleşmeden alabiliriz
      */
     function donateETH() external payable {}
 }
 ```
 
-Köprünün daha önce bir uygulaması vardı. Uygulamadan buna geçtiğimizde, tüm varlıkları taşımak zorunda kaldık. ERC-20 token'ları sadece taşınabilir. Ancak, ETH'yi bir sözleşmeye aktarmak için o sözleşmenin onayına ihtiyacınız var ve bu da `donateETH`'in bize sağladığı şeydir.
+Köprünün daha eski bir uygulaması vardı.
+O uygulamadan buna geçtiğimizde tüm varlıkları taşımak zorunda kaldık.
+ERC-20 token'ları kolayca taşınabilir.
+Ancak, bir sözleşmeye ETH transfer etmek için o sözleşmenin onayına ihtiyacınız vardır, `donateETH` bize bunu sağlar.
 
-## K2 üzerinde ERC-20 Token'ları {#erc-20-tokens-on-l2}
+## L2'deki ERC-20 Token'ları {#erc-20-tokens-on-l2}
 
-Bir ERC-20 token'ının standart köprüye sığması için standart köprünün, _sadece ama sadece_ standart köprünün token basmasına izin vermesi gerekir. Bu, köprülerin Optimism üzerinde dolaşan token sayısının K1 köprü sözleşmesi içinde kilitli token sayısına eşit olduğundan emin olması gerektiği için gereklidir. K2'de çok fazla token varsa, bazı kullanıcılar varlıklarını K1'e geri köprüleyemez. Güvenilir bir köprü yerine, esasen [kısmi rezerv bankacılığını](https://www.investopedia.com/terms/f/fractionalreservebanking.asp) yeniden yaratmış olurduk. K1'de çok fazla token varsa, bu token'lardan bazıları köprü sözleşmesinin içinde sonsuza kadar kilitli kalır çünkü K2 token'larını yakmadan onları serbest bırakmanın bir yolu yoktur.
+Bir ERC-20 token'ının standart köprüye uyması için, standart köprünün ve _yalnızca_ standart köprünün token basmasına izin vermesi gerekir.
+Bu gereklidir çünkü köprülerin Optimism'de dolaşan token sayısının l1 köprü sözleşmesinde kilitli olan token sayısına eşit olduğundan emin olması gerekir.
+L2'de çok fazla token varsa, bazı kullanıcılar varlıklarını l1'e geri köprüleyemezler.
+Güvenilir bir köprü yerine, esasen [kısmi rezerv bankacılığını](https://www.investopedia.com/terms/f/fractionalreservebanking.asp) yeniden yaratmış olurduk.
+L1'de çok fazla token varsa, bu token'ların bazıları sonsuza kadar köprü sözleşmesinde kilitli kalacaktır çünkü l2 token'larını yakmadan onları serbest bırakmanın bir yolu yoktur.
 
 ### IL2StandardERC20 {#il2standarderc20}
 
-Standart köprüyü kullanan K2 üzerindeki her ERC-20 token'ının, standart köprünün ihtiyaç duyduğu fonksiyonlara ve olaylara sahip olan [bu arayüzü](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol) sağlaması gerekir.
+Standart köprüyü kullanan l2'deki her ERC-20 token'ının, standart köprünün ihtiyaç duyduğu işlevlere ve olaylara sahip olan [bu arayüzü](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol) sağlaması gerekir.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -898,20 +955,24 @@ pragma solidity ^0.8.9;
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 ```
 
-[Standart ERC-20 arayüzü](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol), `mint` ve `burn` fonksiyonlarını içermez. Bu yöntemler, token'ları oluşturma ve yok etme mekanizmalarını belirsiz bırakan [ERC-20 standardı](https://eips.ethereum.org/EIPS/eip-20) için gerekli değildir.
+[Standart ERC-20 arayüzü](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol), `mint` ve `burn` işlevlerini içermez.
+Bu yöntemler, token'ları oluşturma ve yok etme mekanizmalarını belirtmeyen [ERC-20 standardı](https://eips.ethereum.org/EIPS/eip-20) tarafından gerekli kılınmaz.
 
 ```solidity
 import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
-[ERC-165 arayüzü](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol), bir sözleşmenin hangi fonksiyonları sağladığını belirtmek için kullanılır. [Standardı buradan okuyabilirsiniz](https://eips.ethereum.org/EIPS/eip-165).
+[ERC-165 arayüzü](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol), bir sözleşmenin hangi işlevleri sağladığını belirtmek için kullanılır.
+[Standardı buradan okuyabilirsiniz](https://eips.ethereum.org/EIPS/eip-165).
 
 ```solidity
 interface IL2StandardERC20 is IERC20, IERC165 {
     function l1Token() external returns (address);
 ```
 
-Bu fonksiyon, bu sözleşmeye köprülenen K1 token'ının adresini sağlar. Ters yönde benzer bir fonksiyonumuz olmadığını unutmayın. Uygulandığında K2 desteğinin planlanıp planlanmadığına bakılmaksızın herhangi bir K1 token'ını köprüleyebilmemiz gerekir.
+Bu işlev, bu sözleşmeye köprülenen l1 token'ının adresini sağlar.
+Ters yönde benzer bir işlevimiz olmadığını unutmayın.
+Uygulandığında l2 desteğinin planlanıp planlanmadığına bakılmaksızın herhangi bir l1 token'ını köprüleyebilmemiz gerekir.
 
 ```solidity
 
@@ -924,11 +985,13 @@ Bu fonksiyon, bu sözleşmeye köprülenen K1 token'ının adresini sağlar. Ter
 }
 ```
 
-Token'ları basmak (oluşturmak) ve yakmak (yok etmek) için fonksiyonlar ve olaylar. Köprü, token sayısının doğru (K1'de kilitli token sayısına eşit) olduğundan emin olmak için bu fonksiyonları çalıştırabilen tek varlık olmalıdır.
+Token'ları basmak (oluşturmak) ve yakmak (yok etmek) için işlevler ve olaylar.
+Token sayısının doğru olduğundan (l1'de kilitli olan token sayısına eşit olduğundan) emin olmak için bu işlevleri çalıştırabilen tek varlık köprü olmalıdır.
 
-### L2StandardERC20 {#L2StandardERC20}
+### L2StandardERC20 {#l2standarderc20}
 
-[Bu, `IL2StandardERC20` arayüzü uygulamamızdır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol). Bir tür özel mantığa ihtiyacınız yoksa, bunu kullanmalısınız.
+[Bu, `IL2StandardERC20` arayüzü uygulamamızdır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol).
+Bir tür özel mantığa ihtiyacınız yoksa, bunu kullanmalısınız.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -937,7 +1000,8 @@ pragma solidity ^0.8.9;
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-[OpenZeppelin ERC-20 sözleşmesi](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). Optimism, mevcut özellikler iyi denetlendiğinde ve varlıkları elinde tutacak kadar güvenilir olması gerektiğinde yeni özellikler icat edilmemesi gerektiğine inanır.
+[OpenZeppelin ERC-20 sözleşmesi](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
+Optimism, özellikle tekerlek iyi denetlenmişse ve varlıkları tutacak kadar güvenilir olması gerekiyorsa, tekerleği yeniden icat etmeye inanmaz.
 
 ```solidity
 import "./IL2StandardERC20.sol";
@@ -947,15 +1011,15 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
     address public l2Bridge;
 ```
 
-Bunlar, bizim ihtiyaç duyduğumuz ve normalde ERC-20'nin gerektirmediği iki ek yapılandırma parametresidir.
+Bunlar, bizim gerektirdiğimiz ve ERC-20'nin normalde gerektirmediği iki ek yapılandırma parametresidir.
 
 ```solidity
 
     /**
-     * @param _l2Bridge Address of the L2 standard bridge.
-     * @param _l1Token Address of the corresponding L1 token.
-     * @param _name ERC20 name.
-     * @param _symbol ERC20 symbol.
+     * @param _l2Bridge l2 standart köprü Adresi.
+     * @param _l1Token İlgili l1 Token Adresi.
+     * @param _name ERC-20 adı.
+     * @param _symbol ERC-20 sembolü.
      */
     constructor(
         address _l2Bridge,
@@ -968,7 +1032,7 @@ Bunlar, bizim ihtiyaç duyduğumuz ve normalde ERC-20'nin gerektirmediği iki ek
     }
 ```
 
-Önce kalıtım ile aldığımız sözleşmenin yapıcısını çağırın (`ERC20(_name, _symbol)`) ve sonra kendi değişkenlerimizi ayarlayın.
+Önce miras aldığımız sözleşme için kurucuyu çağırın (`ERC20(_name, _symbol)`) ve ardından kendi değişkenlerimizi ayarlayın.
 
 ```solidity
 
@@ -988,11 +1052,12 @@ Bunlar, bizim ihtiyaç duyduğumuz ve normalde ERC-20'nin gerektirmediği iki ek
     }
 ```
 
-[ERC-165](https://eips.ethereum.org/EIPS/eip-165) bu şekilde çalışır. Her arayüz, desteklenen bir dizi fonksiyondur ve [özel](https://en.wikipedia.org/wiki/Exclusive_or) veya bu fonksiyonların [ABI fonksiyon seçicilerine](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector) ait olarak tanımlanır.
+[ERC-165](https://eips.ethereum.org/EIPS/eip-165) bu şekilde çalışır.
+Her arayüz, desteklenen bir dizi işlevdir ve bu işlevlerin [ABI işlev seçicilerinin](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector) [özel veya (exclusive or)](https://en.wikipedia.org/wiki/Exclusive_or) işlemi olarak tanımlanır.
 
-K2 köprüsü, varlıkları gönderdiği ERC-20 sözleşmesinin bir `IL2StandardERC20` olduğundan emin olmak için doğruluk kontrolü olarak ERC-165'i kullanır.
+L2 köprüsü, varlık gönderdiği ERC-20 sözleşmesinin bir `IL2StandardERC20` olduğundan emin olmak için bir mantık kontrolü (sanity check) olarak ERC-165'i kullanır.
 
-**Not:** Hileli sözleşmenin `supportsInterface` için yanlış yanıtlar vermesini önleyecek hiçbir şey yoktur, bu nedenle bu bir güvenlik mekanizması _değil_, doğruluk kontrol mekanizmasıdır.
+**Not:** Kötü niyetli bir sözleşmenin `supportsInterface` işlevine yanlış yanıtlar vermesini engelleyecek hiçbir şey yoktur, bu nedenle bu bir mantık kontrolü mekanizmasıdır, bir güvenlik mekanizması _değildir_.
 
 ```solidity
     // slither-disable-next-line external-function
@@ -1011,66 +1076,72 @@ K2 köprüsü, varlıkları gönderdiği ERC-20 sözleşmesinin bir `IL2Standard
 }
 ```
 
-Yalnızca K2 köprüsünün varlıkları basmasına ve yakmasına izin verilir.
+Yalnızca l2 köprüsünün varlıkları basmasına ve yakmasına izin verilir.
 
-`_mint` ve `_burn` aslında [OpenZeppelin ERC-20 sözleşmesinde](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) tanımlanmıştır. Bu sözleşme onları harici olarak ifşa etmez, çünkü token'ları basma ve yakma koşulları, ERC-20'yi kullanma yollarının sayısı kadar çeşitlidir.
+`_mint` ve `_burn` aslında [OpenZeppelin ERC-20 sözleşmesinde](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) tanımlanmıştır.
+Bu sözleşme onları dışarıya açık hale getirmez, çünkü token'ları basma ve yakma koşulları, ERC-20'yi kullanma yollarının sayısı kadar çeşitlidir.
 
-## K2 Köprü Kodu {#l2-bridge-code}
+## L2 Köprü Kodu {#l2-bridge-code}
 
-Bu, Optimism üzerindeki köprüyü çalıştıran koddur. [Bu sözleşmenin kaynağı buradadır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol).
+Bu, Optimism'de köprüyü çalıştıran koddur.
+[Bu sözleşmenin kaynağı buradadır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol).
 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-/* Interface Imports */
+/* Arayüz İçe Aktarımları */
 import { IL1StandardBridge } from "../../L1/messaging/IL1StandardBridge.sol";
 import { IL1ERC20Bridge } from "../../L1/messaging/IL1ERC20Bridge.sol";
 import { IL2ERC20Bridge } from "./IL2ERC20Bridge.sol";
 ```
 
-[IL2ERC20Bridge](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) arayüzü, yukarıda gördüğümüz [K1 eş değerine](#IL1ERC20Bridge) çok benzer. İki önemli fark vardır:
+[IL2ERC20Bridge](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) arayüzü, yukarıda gördüğümüz [l1 karşılığına](#il1erc20bridge) çok benzer.
+İki önemli fark vardır:
 
-1. K1'de yatırma işlemini başlatır ve çekme işlemlerini sonlandırırsınız. Burada ise çekme işlemlerini başlatır ve yatırma işlemlerini sonlandırırsınız.
-2. K1'de ETH ve ERC-20 token'ları arasında ayrım yapmak gerekir. K2'de aynı fonksiyonları her ikisi için de kullanabiliriz çünkü Optimism üzerindeki dahili ETH bakiyeleri, [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://optimistic.etherscan.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000) adresiyle bir ERC-20 token'ı olarak işlenir.
+1. L1'de yatırma işlemlerini başlatır ve çekim işlemlerini tamamlarsınız.
+   Burada çekim işlemlerini başlatır ve yatırma işlemlerini tamamlarsınız.
+2. L1'de ETH ve ERC-20 token'ları arasında ayrım yapmak gerekir.
+   L2'de her ikisi için de aynı işlevleri kullanabiliriz çünkü dahili olarak Optimism'deki ETH bakiyeleri [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://explorer.optimism.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000) adresine sahip bir ERC-20 token'ı olarak işlenir.
 
 ```solidity
-/* Library Imports */
+/* Kütüphane İçe Aktarımları */
 import { ERC165Checker } from "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol";
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
 import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployAddresses.sol";
 
-/* Contract Imports */
+/* Sözleşme İçe Aktarımları */
 import { IL2StandardERC20 } from "../../standards/IL2StandardERC20.sol";
 
 /**
  * @title L2StandardBridge
- * @dev The L2 Standard bridge is a contract which works together with the L1 Standard bridge to
- * enable ETH and ERC20 transitions between L1 and L2.
- * This contract acts as a minter for new tokens when it hears about deposits into the L1 Standard
- * bridge.
- * This contract also acts as a burner of the tokens intended for withdrawal, informing the L1
- * bridge to release L1 funds.
+ * @dev l2 Standart köprü, l1 ve l2 arasında ETH ve ERC-20 geçişlerini sağlamak için
+ * l1 Standart köprü ile birlikte çalışan bir Sözleşmedir.
+ * Bu Sözleşme, l1 Standart köprüsüne yapılan yatırma işlemlerini duyduğunda yeni Token'ları basmak için görev yapar.
+ * Bu Sözleşme ayrıca çekim işlemi için amaçlanan Token'ların yakımını gerçekleştirerek l1
+ * köprüsünü l1 fonlarını serbest bırakması için bilgilendirir.
  */
 contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
     /********************************
-     * External Contract References *
+     * Harici Sözleşme Referansları *
      ********************************/
 
     address public l1TokenBridge;
 ```
 
-K1 köprüsünün adresini takip edin. K1 eş değerinin aksine, burada bu değişkene _ihtiyacımız var_. K1 köprüsünün adresi önceden bilinmiyor.
+L1 köprüsünün adresini takip edin.
+L1 karşılığının aksine, burada bu değişkene _ihtiyacımız_ olduğunu unutmayın.
+L1 köprüsünün adresi önceden bilinmemektedir.
 
 ```solidity
 
     /***************
-     * Constructor *
+     * Kurucu *
      ***************/
 
     /**
-     * @param _l2CrossDomainMessenger Cross-domain messenger used by this contract.
-     * @param _l1TokenBridge Address of the L1 bridge deployed to the main chain.
+     * @param _l2CrossDomainMessenger Bu Sözleşme tarafından kullanılan etki alanları arası haberci.
+     * @param _l1TokenBridge Ana zincire dağıtılan l1 köprü Adresi.
      */
     constructor(address _l2CrossDomainMessenger, address _l1TokenBridge)
         CrossDomainEnabled(_l2CrossDomainMessenger)
@@ -1079,7 +1150,7 @@ K1 köprüsünün adresini takip edin. K1 eş değerinin aksine, burada bu deği
     }
 
     /***************
-     * Withdrawing *
+     * Çekim İşlemi *
      ***************/
 
     /**
@@ -1108,21 +1179,23 @@ K1 köprüsünün adresini takip edin. K1 eş değerinin aksine, burada bu deği
     }
 ```
 
-Bu iki fonksiyon çekme işlemlerini başlatır. K1 token adresini belirtmeye gerek olmadığını unutmayın. K2 token'larının bize K1 eş değerinin adresini söylemesi bekleniyor.
+Bu iki işlev çekim işlemlerini başlatır.
+L1 token adresini belirtmeye gerek olmadığını unutmayın.
+L2 token'larının bize l1 karşılığının adresini söylemesi beklenir.
 
 ```solidity
 
     /**
-     * @dev Performs the logic for withdrawals by burning the token and informing
-     *      the L1 token Gateway of the withdrawal.
-     * @param _l2Token Address of L2 token where withdrawal is initiated.
-     * @param _from Account to pull the withdrawal from on L2.
-     * @param _to Account to give the withdrawal to on L1.
-     * @param _amount Amount of the token to withdraw.
-     * @param _l1Gas Unused, but included for potential forward compatibility considerations.
-     * @param _data Optional data to forward to L1. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     * @dev Token yakımı yaparak ve l1 Token Ağ Geçidini çekim işlemi hakkında bilgilendirerek
+     *      çekim işlemleri için mantığı gerçekleştirir.
+     * @param _l2Token Çekim işleminin başlatıldığı l2 Token Adresi.
+     * @param _from l2 üzerinde çekim işleminin çekileceği hesap.
+     * @param _to l1 üzerinde çekim işleminin verileceği hesap.
+     * @param _amount Çekilecek Token miktarı.
+     * @param _l1Gas Kullanılmaz, ancak olası ileriye dönük uyumluluk hususları için dahil edilmiştir.
+     * @param _data l1'e iletilecek isteğe bağlı veri. Bu veri yalnızca
+     *        harici Sözleşmeler için bir kolaylık olarak sağlanır. Maksimum bir
+     *        uzunluğu zorunlu kılmak dışında, bu Sözleşmeler içeriği hakkında hiçbir garanti vermez.
      */
     function _initiateWithdrawal(
         address _l2Token,
@@ -1132,17 +1205,17 @@ Bu iki fonksiyon çekme işlemlerini başlatır. K1 token adresini belirtmeye ge
         uint32 _l1Gas,
         bytes calldata _data
     ) internal {
-        // When a withdrawal is initiated, we burn the withdrawer's funds to prevent subsequent L2
-        // usage
+        // Bir çekim işlemi başlatıldığında, sonraki l2
+        // kullanımını önlemek için çeken kişinin fonlarının yakımını gerçekleştiririz
         // slither-disable-next-line reentrancy-events
         IL2StandardERC20(_l2Token).burn(msg.sender, _amount);
 ```
 
-`_from` parametresine _değil_, sahte olması çok daha zor olan (bildiğim kadarıyla imkansız) `msg.sender` parametresine güvendiğimize dikkat edin.
+`_from` parametresine _değil_, sahtesini yapması çok daha zor olan (bildiğim kadarıyla imkansız) `msg.sender` parametresine güvendiğimize dikkat edin.
 
 ```solidity
 
-        // Construct calldata for l1TokenBridge.finalizeERC20Withdrawal(_to, _amount)
+        // l1TokenBridge.finalizeERC20Withdrawal(_to, _amount) için çağrı verisi oluştur
         // slither-disable-next-line reentrancy-events
         address l1Token = IL2StandardERC20(_l2Token).l1Token();
         bytes memory message;
@@ -1150,7 +1223,7 @@ Bu iki fonksiyon çekme işlemlerini başlatır. K1 token adresini belirtmeye ge
         if (_l2Token == Lib_PredeployAddresses.OVM_ETH) {
 ```
 
-K1'de ETH ve ERC-20 arasında ayrım yapmak gerekir.
+L1'de ETH ve ERC-20 arasında ayrım yapmak gerekir.
 
 ```solidity
             message = abi.encodeWithSelector(
@@ -1172,7 +1245,7 @@ K1'de ETH ve ERC-20 arasında ayrım yapmak gerekir.
             );
         }
 
-        // Send message up to L1 bridge
+        // l1 köprüsüne mesaj gönder
         // slither-disable-next-line reentrancy-events
         sendCrossDomainMessage(l1TokenBridge, _l1Gas, message);
 
@@ -1181,7 +1254,7 @@ K1'de ETH ve ERC-20 arasında ayrım yapmak gerekir.
     }
 
     /************************************
-     * Cross-chain Function: Depositing *
+     * Zincirler Arası Fonksiyon: Yatırma *
      ************************************/
 
     /**
@@ -1196,69 +1269,71 @@ K1'de ETH ve ERC-20 arasında ayrım yapmak gerekir.
         bytes calldata _data
 ```
 
-Bu fonksiyon, `L1StandardBridge` tarafından çağrılır.
+Bu işlev `L1StandardBridge` tarafından çağrılır.
 
 ```solidity
     ) external virtual onlyFromCrossDomainAccount(l1TokenBridge) {
 ```
 
-Mesajın kaynağının meşru olduğundan emin olun. Bu, fonksiyon `_mint`'i çağırdığı ve köprünün Katman 1'de sahip olduğu token'lar tarafından kapsanmayan token'ları vermek için kullanılabileceği için önemlidir.
+Mesajın kaynağının meşru olduğundan emin olun.
+Bu önemlidir çünkü bu işlev `_mint` işlevini çağırır ve köprünün l1'de sahip olduğu token'lar tarafından kapsanmayan token'lar vermek için kullanılabilir.
 
 ```solidity
-        // Check the target token is compliant and
-        // verify the deposited token on L1 matches the L2 deposited token representation here
+        // Hedef Token'ın uyumlu olduğunu kontrol et ve
+        // l1 üzerinde yatırılan Token'ın buradaki l2 yatırılan Token temsiliyle eşleştiğini doğrula
         if (
             // slither-disable-next-line reentrancy-events
             ERC165Checker.supportsInterface(_l2Token, 0x1d1d8b63) &&
             _l1Token == IL2StandardERC20(_l2Token).l1Token()
 ```
 
-Doğruluk testleri:
+Mantık kontrolleri:
 
 1. Doğru arayüz destekleniyor
-2. L2 ERC-20 sözleşmesinin Katman 1 adresi, token'ların Katman 1 kaynağıyla eşleşiyor
+2. L2 ERC-20 sözleşmesinin l1 adresi, token'ların l1 kaynağıyla eşleşiyor
 
 ```solidity
         ) {
-            // When a deposit is finalized, we credit the account on L2 with the same amount of
-            // tokens.
+            // Bir yatırma işlemi sonuçlandırıldığında, l2 üzerindeki hesaba aynı miktarda
+            // Token alacak kaydederiz.
             // slither-disable-next-line reentrancy-events
             IL2StandardERC20(_l2Token).mint(_to, _amount);
             // slither-disable-next-line reentrancy-events
             emit DepositFinalized(_l1Token, _l2Token, _from, _to, _amount, _data);
 ```
 
-Doğruluk testlerini geçerse yatırmayı tamamlayın:
+Mantık kontrolleri geçerse, yatırma işlemini tamamlayın:
 
-1. Token'ları basma
-2. Uygun olayı yayınlama
+1. Token'ları basın
+2. Uygun olayı yayınlayın
 
 ```solidity
         } else {
-            // Either the L2 token which is being deposited-into disagrees about the correct address
-            // of its L1 token, or does not support the correct interface.
-            // This should only happen if there is a  malicious L2 token, or if a user somehow
-            // specified the wrong L2 token address to deposit into.
-            // In either case, we stop the process here and construct a withdrawal
-            // message so that users can get their funds out in some cases.
-            // There is no way to prevent malicious token contracts altogether, but this does limit
-            // user error and mitigate some forms of malicious contract behavior.
+            // Ya yatırma işlemi yapılan l2 Token'ı, l1 Token'ının doğru Adresi
+            // konusunda uyuşmuyor ya da doğru arayüzü desteklemiyor.
+            // Bu yalnızca kötü niyetli bir l2 Token'ı varsa veya bir kullanıcı bir şekilde
+            // yatırma işlemi yapmak için yanlış l2 Token Adresini belirtmişse gerçekleşmelidir.
+            // Her iki durumda da, işlemi burada durdururuz ve bir çekim işlemi
+            // mesajı oluştururuz, böylece kullanıcılar bazı durumlarda fonlarını geri alabilirler.
+            // Kötü niyetli Token Sözleşmelerini tamamen önlemenin bir yolu yoktur, ancak bu
+            // kullanıcı hatasını sınırlar ve bazı kötü niyetli Sözleşme davranış biçimlerini hafifletir.
 ```
 
-Bir kullanıcı yanlış Katman 2 token adresini kullanarak tespit edilebilir bir hata yaptıysa, yatırmayı iptal etmek ve tokenları Katman 1'e iade etmek istiyoruz. Bunu Katman 2'den yapabilmemizin tek yolu, hata meydan okuma süresini beklemek zorunda kalacak bir mesaj göndermektir ancak bu, kullanıcı için token'ları kalıcı olarak kaybetmekten çok daha iyidir.
+Bir kullanıcı yanlış l2 token adresini kullanarak tespit edilebilir bir hata yaptıysa, yatırma işlemini iptal etmek ve token'ları l1'de iade etmek istiyoruz.
+Bunu l2'den yapabilmemizin tek yolu, hata itiraz süresini beklemesi gerekecek bir mesaj göndermektir, ancak bu, kullanıcı için token'ları kalıcı olarak kaybetmekten çok daha iyidir.
 
 ```solidity
             bytes memory message = abi.encodeWithSelector(
                 IL1ERC20Bridge.finalizeERC20Withdrawal.selector,
                 _l1Token,
                 _l2Token,
-                _to, // switched the _to and _from here to bounce back the deposit to the sender
+                _to, // yatırılan miktarı göndericiye geri döndürmek için burada _to ve _from değiştirildi
                 _from,
                 _amount,
                 _data
             );
 
-            // Send message up to L1 bridge
+            // l1 köprüsüne mesaj gönder
             // slither-disable-next-line reentrancy-events
             sendCrossDomainMessage(l1TokenBridge, 0, message);
             // slither-disable-next-line reentrancy-events
@@ -1270,8 +1345,13 @@ Bir kullanıcı yanlış Katman 2 token adresini kullanarak tespit edilebilir bi
 
 ## Sonuç {#conclusion}
 
-Standart köprü, varlık aktarımları için en esnek mekanizmadır. Ancak çok genel olduğu için her zaman kullanması en kolay olan mekanizma değildir. Özellikle çekimler için, çoğu kullanıcı meydan okuma süresini beklemeyen ve çekimi sonlandırmak için bir Merkle ispatı gerektirmeyen [üçüncü parti köprüleri](https://www.optimism.io/apps/bridges) kullanmayı tercih eder.
+Standart köprü, varlık transferleri için en esnek mekanizmadır.
+Ancak, çok genel olduğu için her zaman kullanımı en kolay mekanizma değildir.
+Özellikle çekim işlemleri için çoğu kullanıcı, itiraz süresini beklemeyen ve çekim işlemini tamamlamak için bir Merkle kanıtı gerektirmeyen [üçüncü taraf köprüleri](https://optimism.io/apps#bridge) kullanmayı tercih eder.
 
-Bu köprüler genellikle Katman 1 üzerinde küçük bir ücret (genelde bir standart köprü çekiminin gaz ücretinden daha azına) için anında sağladıkları varlıklara sahip olarak çalışırlar. Köprü (ya da onu çalıştıran insanlar) Katman 1 varlıklarının azaldığını sezdiğinde Katman 2'den yeteri kadar varlığı aktarır. Bunlar çok büyük çekimler olduğu için, çekim ücreti büyük bir miktar üzerinden amorti edilmiştir ve daha küçük bir yüzdeliktir.
+Bu köprüler tipik olarak, küçük bir ücret karşılığında (genellikle standart bir köprü çekim işlemi için gereken gaz maliyetinden daha az) anında sağladıkları l1'deki varlıklara sahip olarak çalışır.
+Köprü (veya onu çalıştıran kişiler) l1 varlıklarının yetersiz kalacağını öngördüğünde, l2'den yeterli varlık transfer eder. Bunlar çok büyük çekim işlemleri olduğundan, çekim maliyeti büyük bir miktar üzerinden amorti edilir ve çok daha küçük bir yüzdeye denk gelir.
 
-Umarım bu makale katman 2'nin nasıl çalıştığı hakkında dahasını anlamanıza; temiz ve güvenli Solidity kodu yazmanıza yardımcı olmuştur.
+Umarım bu makale, katman 2'nin nasıl çalıştığı ve açık ve güvenli Solidity kodunun nasıl yazılacağı hakkında daha fazla bilgi edinmenize yardımcı olmuştur.
+
+[Çalışmalarımın daha fazlası için buraya bakın](https://cryptodocguy.pro/).

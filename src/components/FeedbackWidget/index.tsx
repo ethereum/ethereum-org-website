@@ -1,5 +1,7 @@
-import { useTranslation } from "next-i18next"
-import { MdClose } from "react-icons/md"
+"use client"
+
+import { useContext } from "react"
+import { X } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -13,7 +15,11 @@ import {
 import FixedDot from "./FixedDot"
 import { useFeedbackWidget } from "./useFeedbackWidget"
 
+import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
+import { useTranslation } from "@/hooks/useTranslation"
+
 const FeedbackWidget = () => {
+  const { showFeedbackWidget } = useContext(FeedbackWidgetContext)
   const { t } = useTranslation("common")
   const {
     offsetBottom,
@@ -26,6 +32,9 @@ const FeedbackWidget = () => {
     isExpanded,
     isOpen,
   } = useFeedbackWidget()
+
+  if (!showFeedbackWidget) return null
+
   return (
     <>
       <Popover
@@ -57,17 +66,17 @@ const FeedbackWidget = () => {
                 size="sm"
                 ref={cancelRef}
               >
-                <MdClose className="h-fit w-5" />
+                <X className="h-fit w-5" />
               </Button>
             </PopoverClose>
           </div>
 
           {feedbackSubmitted && (
             <>
-              <div className="text-center text-md font-normal leading-5">
+              <div className="text-center text-md leading-5 font-normal">
                 {t("feedback-widget-thank-you-subtitle")}
               </div>
-              <div className="text-center text-xs font-bold leading-4 tracking-wide text-body-medium">
+              <div className="text-center text-xs leading-4 font-bold tracking-wide text-body-medium">
                 {t("feedback-widget-thank-you-timing")}
               </div>
             </>

@@ -1,13 +1,10 @@
 ---
-title: Rejestrowanie danych z inteligentnych kontraktów ze zdarzeniami
-description: Wprowadzenie do zdarzeń kontraktów inteligentnych i sposobów używania ich rejestrowania danych
+title: "Logowanie danych z inteligentnych kontraktów za pomocą zdarzeń"
+description: "Wprowadzenie do zdarzeń w inteligentnych kontraktach i sposobów ich wykorzystania do logowania danych"
 author: "jdourlens"
-tags:
-  - "inteligentne kontrakty"
-  - "remix"
-  - "solidity"
-  - "zdarzenia"
+tags: ["inteligentne kontrakty", "Remix", "Solidity", "zdarzenia"]
 skill: intermediate
+breadcrumb: "Logowanie zdarzeń"
 lang: pl
 published: 2020-04-03
 source: EthereumDev
@@ -15,34 +12,52 @@ sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-W Solidity [zdarzenia](/developers/docs/smart-contracts/anatomy/#events-and-logs) to wysyłane sygnały, które mogą uruchamiać inteligentne kontrakty. Aplikacje zdecentralizowane lub wszystko, co jest połączone z interfejsem API Ethereum JSON-RPC, może nasłuchiwać tych zdarzeń i odpowiednio działać. Zdarzenie można również zindeksować, aby później można było przeszukiwać historię zdarzeń.
+W języku Solidity [zdarzenia](/developers/docs/smart-contracts/anatomy/#events-and-logs) to wysyłane sygnały, które mogą być wyzwalane przez inteligentne kontrakty. Zdecentralizowane aplikacje (dapp) lub cokolwiek połączonego z API JSON-RPC Ethereum może nasłuchiwać tych zdarzeń i odpowiednio na nie reagować. Zdarzenie może być również indeksowane, dzięki czemu jego historia będzie później możliwa do przeszukiwania.
 
-## Zdarzeniami {#events}
+## Zdarzenia {#events}
 
-Najczęstszym zdarzeniem na blockchainie Ethereum w momencie pisania tego artykułu jest zdarzenie Transfer, które jest emitowane przez tokeny ERC20, gdy ktoś przenosi tokeny.
+Najczęstszym zdarzeniem na blockchainie Ethereum w momencie pisania tego artykułu jest zdarzenie Transfer, które jest emitowane przez tokeny ERC-20, gdy ktoś wykonuje transfer tokenów.
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-Sygnatura zdarzenia jest deklarowana w kodzie kontraktu i może być emitowana za pomocą słowa kluczowego emit. Na przykład dzienniki zdarzeń transferu, nadawca transferu (<em x-id="4">od</em>), odbiorca transferu (_do_) i ilość przeniesionych tokenów (_wartość_).
+Podpis zdarzenia jest deklarowany wewnątrz kodu kontraktu i może być wyemitowany za pomocą słowa kluczowego emit. Na przykład zdarzenie transferu loguje, kto wysłał transfer (_from_), do kogo (_to_) i ile tokenów zostało przetransferowanych (_value_).
 
-Jeśli wrócimy do naszego inteligentnego kontraktu Counter i zdecydujemy się rejestrować za każdym razem, gdy wartość się zmieni. Ponieważ kontrakt ten nie jest przeznaczony do wdrożenia, ale służy jako podstawa do zbudowania kolejnego kontraktu poprzez jego rozszerzenie: nazywa się to kontraktem abstrakcyjnym. W przypadku naszego przykładu counter wyglądałoby to tak:
+Jeśli wrócimy do naszego inteligentnego kontraktu Counter i zdecydujemy się logować każdą zmianę wartości. Ponieważ ten kontrakt nie jest przeznaczony do wdrożenia, ale służy jako baza do budowy innego kontraktu poprzez jego rozszerzenie: nazywa się go kontraktem abstrakcyjnym. W przypadku naszego przykładu licznika wyglądałoby to tak:
 
 ```solidity
-pragma solidity 0.5.17;contract Counter {    event ValueChanged(uint oldValue, uint256 newValue);    // Zmienna prywatna typu unsigned int przechowywania liczby zliczeń    uint256 private count = 0;    // Funkcja zwiększająca licznik    function increment() public {        count += 1;        emit ValueChanged(count - 1, count);    }
+pragma solidity 0.5.17;
 
-    // Getter w celu uzyskania wartości zliczeń    function getCount() public view returns (uint256) {        return count;    }}
+contract Counter {
+
+    event ValueChanged(uint oldValue, uint256 newValue);
+
+    // Prywatna zmienna typu unsigned int do przechowywania liczby zliczeń
+    uint256 private count = 0;
+
+    // Funkcja inkrementująca nasz licznik
+    function increment() public {
+        count += 1;
+        emit ValueChanged(count - 1, count);
+    }
+
+    // Getter do pobierania wartości licznika
+    function getCount() public view returns (uint256) {
+        return count;
+    }
+
+}
 ```
 
 Zauważ, że:
 
-- **Wiersz 5**: deklarujemy nasze wydarzenie i jego zawartość, starą wartość i nową wartość.
+- **Linia 5**: deklarujemy nasze zdarzenie i to, co zawiera, czyli starą i nową wartość.
 
-- **Wiersz 13**: Kiedy zwiększamy naszą zmienną count, emitujemy zdarzenie.
+- **Linia 13**: Kiedy inkrementujemy naszą zmienną count, emitujemy zdarzenie.
 
-Jeżeli teraz wdrożymy umowę i wywołamy funkcję inkrementacji, zobaczymy, że Remix automatycznie ją wyświetli, jeśli zostanie kliknięta nowa transakcja w tablicy nazwanych rejestrów.
+Jeśli teraz wdrożymy kontrakt i wywołamy funkcję increment, zobaczymy, że Remix automatycznie go wyświetli, jeśli klikniesz nową transakcję wewnątrz tablicy o nazwie logs.
 
-![Zrzut ekranu Remix](./remix-screenshot.png)
+![Remix screenshot](./remix-screenshot.png)
 
-Dzienniki są naprawdę przydatne do debugowania inteligentnych kontraktów, ale są również ważne, jeśli tworzysz aplikacje używane przez różne osoby i ułatwiają analizę w celu śledzenia i zrozumienia, w jaki sposób jest używany inteligentny kontrakt. Logi generowane przez transakcje są wyświetlane w popularnych eksploratorach bloków i można je również wykorzystać np. do tworzenia skryptów off-chain do nasłuchiwania określonych zdarzeń i podejmowania działań w momencie ich wystąpienia.
+Logi są naprawdę przydatne do debugowania inteligentnych kontraktów, ale są również ważne, jeśli budujesz aplikacje używane przez różne osoby, ponieważ ułatwiają tworzenie analityki w celu śledzenia i zrozumienia, w jaki sposób używany jest Twój inteligentny kontrakt. Logi generowane przez transakcje są wyświetlane w popularnych eksploratorach bloków, a ponadto możesz na przykład użyć ich do tworzenia skryptów pozałańcuchowych do nasłuchiwania określonych zdarzeń i podejmowania działań, gdy one wystąpią.

@@ -1,6 +1,6 @@
 ---
 title: ERC-20 Token Standard
-description:
+description: Learn about ERC-20, the standard for fungible tokens on Ethereum that enables interoperable token applications.
 lang: en
 ---
 
@@ -8,7 +8,7 @@ lang: en
 
 **What is a Token?**
 
-Tokens can represent virtually anything in Ethereum:
+Tokens can represent virtually anything in [Ethereum](/):
 
 - reputation points in an online platform
 - skills of a character in a game
@@ -76,7 +76,7 @@ Let's see how a Standard is so important to make things simple for us to inspect
 We just need the Contract Application Binary Interface (ABI) to create an interface to any ERC-20 Token. As you can
 see below we will use a simplified ABI, to make it a low friction example.
 
-#### Web3.py Example {#web3py-example}
+#### Web3.py Example {#web3py-example-2}
 
 First, make sure you have installed [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python library:
 
@@ -151,6 +151,8 @@ print("Addr Balance:", addr_balance)
 
 ### ERC-20 token reception issue {#reception-issue}
 
+**As of 06/20/2024 at least $83,656,418 worth of ERC-20 tokens were lost due to this issue. Note that a pure ERC-20 implementation is prone to this problem unless you implement a set of additional restrictions on top of the standard as listed below.**
+
 When ERC-20 tokens are sent to a smart contract that is not designed to handle ERC-20 tokens, those tokens can be permanently lost. This happens because the receiving contract does not have the functionality to recognize or respond to the incoming tokens, and there’s no mechanism in the ERC-20 standard to notify the receiving contract about the incoming tokens. The main ways this issue takes form is through:
 
 1.	Token transfer mechanism
@@ -162,7 +164,16 @@ When ERC-20 tokens are sent to a smart contract that is not designed to handle E
 3.	No built-in handling
 	-	The ERC-20 standard does not include a mandatory function for receiving contracts to implement, leading to a situation where many contracts are unable to manage incoming tokens properly
 
-Some alternative standards have come out of this issue such as [ERC-223](/developers/docs/standards/tokens/erc-223)
+**Possible Solutions**
+
+While it is not possible to prevent this issue with ERC-20 completely there are methods that would allow to significantly reduce the possibility of a tokens loss for the end user:
+
+- The most common problem is when a user sends tokens to the token contract address itself (e.g., USDT deposited to the address of USDT token contract). It is recommended to restrict `transfer(..)` function to revert such transfer attempts. Consider adding `require(_to != address(this));` check within the implementation of the `transfer(..)` function.
+- The `transfer(..)` function in general is not designed for depositing tokens to contracts. `approve(..) & transferFrom(..)` pattern is used to deposit ERC-20 tokens to contracts instead. It is possible to restrict the transfer function to disallow depositing tokens to any contracts with it, however it may break compatibility with contracts that assume tokens can be deposited to contracts with the `transfer(..)` function (e.g., Uniswap liquidity pools).
+- Always assume that ERC-20 tokens can end up in your contract even if your contract is not supposed to ever receive any. There is no way to prevent or reject accidental deposits on the recipients end. It is recommended to implement a function that would allow to extract accidentally deposited ERC-20 tokens.
+- Consider using alternative token standards.
+
+Some alternative standards have come out of this issue such as [ERC-223](/developers/docs/standards/tokens/erc-223) or [ERC-1363](/developers/docs/standards/tokens/erc-1363).
 
 ## Further reading {#further-reading}
 
@@ -171,9 +182,16 @@ Some alternative standards have come out of this issue such as [ERC-223](/develo
 - [OpenZeppelin - ERC-20 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Guide to Solidity ERC20 Tokens](https://www.alchemy.com/overviews/erc20-solidity)
 
-
 ## Other fungible token standards {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenized vaults](/developers/docs/standards/tokens/erc-4626)
+
+## Tutorials: Build with ERC-20 on Ethereum {#tutorials}
+
+- [ERC-20 Contract Walk-Through](/developers/tutorials/erc20-annotated-code/) _– A line-by-line annotated walkthrough of the OpenZeppelin ERC-20 contract implementation._
+- [ERC-20 with Safety Rails](/developers/tutorials/erc20-with-safety-rails/) _– How to add safeguards to ERC-20 tokens to help users avoid common mistakes._
+- [Sending Tokens Using ethers.js](/developers/tutorials/send-token-ethersjs/) _– A beginner-friendly guide to transferring ERC-20 tokens using ethers.js._
+- [Some tricks used by scam tokens and how to detect them](/developers/tutorials/scam-token-tricks/) _– A deep-dive into scam ERC-20 token patterns and how to identify them._

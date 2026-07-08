@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-06-16T22:11:30.911Z",
+  "englishManifestHash": "9c8b1fdcda51",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "CODE-44cd11",
+    "LINK-7fd246",
+    "LINK-e29030",
+    "LINK-195a3d",
+    "LINK-150a7b",
+    "LINK-79116d",
+    "LINK-ccd9ff"
+  ],
+  "placeholderMap": {
+    "CODE-44cd11": {
+      "type": "inline-code",
+      "values": {
+        "content": "1000 x 14,000,000 x 0.33 = $4,620,000,000"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-7fd246": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/1m12zgJ42dI?t=1562"
+      }
+    },
+    "LINK-e29030": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/attack-and-defense"
+      }
+    },
+    "LINK-195a3d": {
+      "type": "link",
+      "values": {
+        "url": "/energy-consumption"
+      }
+    },
+    "LINK-150a7b": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51"
+      }
+    },
+    "LINK-79116d": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake"
+      }
+    },
+    "LINK-ccd9ff": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=M3EFi_POhps"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:11:30.911Z",
+      "status": "success"
+    }
+  }
+}

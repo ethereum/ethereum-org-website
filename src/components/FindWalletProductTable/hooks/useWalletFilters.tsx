@@ -1,32 +1,13 @@
 import { useRef } from "react"
-import { useTranslation } from "next-i18next"
+import { Brain, LayersPlus } from "lucide-react"
+import { useLocale } from "next-intl"
 
 import { FilterOption } from "@/lib/types"
 
 import FindWalletLanguageSelectInput from "@/components/FindWalletProductTable/FindWalletLanguageSelectInput"
 import Layer2SelectInput from "@/components/FindWalletProductTable/Layer2SelectInput"
-import {
-  BrowserIcon,
-  BuyCryptoIcon,
-  ConnectDappsIcon,
-  DesktopIcon,
-  ENSSupportIcon,
-  ERC20SupportIcon,
-  GasFeeCustomizationIcon,
-  HardwareIcon,
-  HardwareSupportIcon,
-  Layer2Icon,
-  MobileIcon,
-  MultisigIcon,
-  NFTSupportIcon,
-  NonCustodialIcon,
-  OpenSourceWalletIcon,
-  RPCImportingIcon,
-  SocialRecoverIcon,
-  StakingIcon,
-  SwapIcon,
-  WithdrawCryptoIcon,
-} from "@/components/icons/wallets"
+import PrivacyIcon from "@/components/icons/privacy.svg"
+import * as icon from "@/components/icons/wallets"
 import CheckboxFilterInput from "@/components/ProductTable/FilterInputs/CheckboxFilterInput"
 import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilterInput"
 
@@ -34,7 +15,10 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 export const useWalletFilters = (): FilterOption[] => {
+  const locale = useLocale()
   const { t } = useTranslation("page-wallets-find-wallet")
   const prevNetworkArray = useRef<string[]>([])
   return [
@@ -47,10 +31,11 @@ export const useWalletFilters = (): FilterOption[] => {
           filterLabel: t("page-find-wallet-mobile"),
           description: "",
           inputState: false,
+          optionsLegend: t("table:table-mobile-platforms") as string,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={MobileIcon}
+                Icon={icon.MobileIcon}
                 label={t("page-find-wallet-mobile")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
@@ -94,7 +79,7 @@ export const useWalletFilters = (): FilterOption[] => {
                     ) => {
                       trackCustomEvent({
                         eventCategory: "WalletFilterSidebar",
-                        eventAction: `${t("page-find-wallet-android")}`,
+                        eventAction: `${locale} - ${t("page-find-wallet-android")}`,
                         eventName: `android ${newInputState}`,
                       })
                       updateFilterState(
@@ -135,7 +120,7 @@ export const useWalletFilters = (): FilterOption[] => {
                     ) => {
                       trackCustomEvent({
                         eventCategory: "WalletFilterSidebar",
-                        eventAction: `${t("page-find-wallet-iOS")}`,
+                        eventAction: `${locale} - ${t("page-find-wallet-iOS")}`,
                         eventName: `iOS ${newInputState}`,
                       })
                       updateFilterState(
@@ -156,10 +141,11 @@ export const useWalletFilters = (): FilterOption[] => {
           filterLabel: t("page-find-wallet-desktop"),
           description: "",
           inputState: false,
+          optionsLegend: t("table:table-desktop-platforms") as string,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={DesktopIcon}
+                Icon={icon.DesktopIcon}
                 label={t("page-find-wallet-desktop")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
@@ -167,7 +153,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-desktop")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-desktop")}`,
                     eventName: `desktop ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -203,7 +189,7 @@ export const useWalletFilters = (): FilterOption[] => {
                     ) => {
                       trackCustomEvent({
                         eventCategory: "WalletFilterSidebar",
-                        eventAction: `${t("page-find-wallet-linux")}`,
+                        eventAction: `${locale} - ${t("page-find-wallet-linux")}`,
                         eventName: `linux ${newInputState}`,
                       })
                       updateFilterState(
@@ -244,7 +230,7 @@ export const useWalletFilters = (): FilterOption[] => {
                     ) => {
                       trackCustomEvent({
                         eventCategory: "WalletFilterSidebar",
-                        eventAction: `${t("page-find-wallet-windows")}`,
+                        eventAction: `${locale} - ${t("page-find-wallet-windows")}`,
                         eventName: `windows ${newInputState}`,
                       })
                       updateFilterState(
@@ -285,7 +271,7 @@ export const useWalletFilters = (): FilterOption[] => {
                     ) => {
                       trackCustomEvent({
                         eventCategory: "WalletFilterSidebar",
-                        eventAction: `${t("page-find-wallet-macOS")}`,
+                        eventAction: `${locale} - ${t("page-find-wallet-macOS")}`,
                         eventName: `macOS ${newInputState}`,
                       })
                       updateFilterState(
@@ -306,10 +292,11 @@ export const useWalletFilters = (): FilterOption[] => {
           filterLabel: t("page-find-wallet-browser"),
           description: "",
           inputState: false,
+          optionsLegend: t("table:table-browser-engines") as string,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={BrowserIcon}
+                Icon={icon.BrowserIcon}
                 label={t("page-find-wallet-browser")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
@@ -317,7 +304,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-browser")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-browser")}`,
                     eventName: `browser ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -353,7 +340,7 @@ export const useWalletFilters = (): FilterOption[] => {
                     ) => {
                       trackCustomEvent({
                         eventCategory: "WalletFilterSidebar",
-                        eventAction: `${t("page-find-wallet-chromium")}`,
+                        eventAction: `${locale} - ${t("page-find-wallet-chromium")}`,
                         eventName: `chromium ${newInputState}`,
                       })
                       updateFilterState(
@@ -394,7 +381,7 @@ export const useWalletFilters = (): FilterOption[] => {
                     ) => {
                       trackCustomEvent({
                         eventCategory: "WalletFilterSidebar",
-                        eventAction: `${t("page-find-wallet-firefox")}`,
+                        eventAction: `${locale} - ${t("page-find-wallet-firefox")}`,
                         eventName: `firefox ${newInputState}`,
                       })
                       updateFilterState(
@@ -418,7 +405,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={HardwareIcon}
+                Icon={icon.HardwareIcon}
                 label={t("page-find-wallet-hardware")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
@@ -426,45 +413,9 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-hardware")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-hardware")}`,
                     eventName: `hardware ${newInputState}`,
                   })
-                  updateFilterState(filterIndex, itemIndex, newInputState)
-                }}
-              />
-            )
-          },
-          options: [],
-        },
-      ],
-    },
-    {
-      title: "Network support",
-      showFilterOption: true,
-      items: [
-        {
-          filterKey: "layer_2_support",
-          filterLabel: "layer_2_support",
-          description: "",
-          inputState: [],
-          ignoreFilterReset: false,
-          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
-            return (
-              <Layer2SelectInput
-                filterIndex={filterIndex}
-                itemIndex={itemIndex}
-                inputState={inputState}
-                updateFilterState={(filterIndex, itemIndex, newInputState) => {
-                  const newArray = newInputState as string[]
-                  const oldArray = prevNetworkArray.current
-                  if (newArray.length > oldArray.length) {
-                    trackCustomEvent({
-                      eventCategory: "WalletFilterSidebar",
-                      eventAction: "network",
-                      eventName: newArray[newArray.length - 1],
-                    })
-                  }
-                  prevNetworkArray.current = newArray
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}
               />
@@ -512,7 +463,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={BuyCryptoIcon}
+                Icon={icon.BuyCryptoIcon}
                 label={t("page-find-wallet-buy-crypto")}
                 description={t("page-find-wallet-buy-crypto-desc")}
                 filterIndex={filterIndex}
@@ -521,7 +472,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-buy-crypto")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-buy-crypto")}`,
                     eventName: `buy_crypto ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -539,7 +490,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={WithdrawCryptoIcon}
+                Icon={icon.WithdrawCryptoIcon}
                 label={t("page-find-wallet-sell-for-fiat")}
                 description={t("page-find-wallet-sell-for-fiat-desc")}
                 filterIndex={filterIndex}
@@ -548,9 +499,45 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-sell-for-fiat")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-sell-for-fiat")}`,
                     eventName: `withdraw_crypto ${newInputState}`,
                   })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
+              />
+            )
+          },
+          options: [],
+        },
+      ],
+    },
+    {
+      title: "Network support",
+      showFilterOption: true,
+      items: [
+        {
+          filterKey: "layer_2_support",
+          filterLabel: "layer_2_support",
+          description: "",
+          inputState: [],
+          ignoreFilterReset: false,
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <Layer2SelectInput
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  const newArray = newInputState as string[]
+                  const oldArray = prevNetworkArray.current
+                  if (newArray.length > oldArray.length) {
+                    trackCustomEvent({
+                      eventCategory: "WalletFilterSidebar",
+                      eventAction: "network",
+                      eventName: newArray[newArray.length - 1],
+                    })
+                  }
+                  prevNetworkArray.current = newArray
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}
               />
@@ -572,7 +559,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={ConnectDappsIcon}
+                Icon={icon.ConnectDappsIcon}
                 label={t("page-find-wallet-connect-to-dapps")}
                 description={t("page-find-wallet-connect-to-dapps-desc")}
                 filterIndex={filterIndex}
@@ -581,7 +568,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-connect-to-dapps")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-connect-to-dapps")}`,
                     eventName: `connect_to_dapps ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -599,7 +586,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={NFTSupportIcon}
+                Icon={icon.NFTSupportIcon}
                 label={t("page-find-wallet-nft-support")}
                 description={t("page-find-wallet-nft-support-desc")}
                 filterIndex={filterIndex}
@@ -608,7 +595,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-nft-support")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-nft-support")}`,
                     eventName: `nft_support ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -626,7 +613,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={StakingIcon}
+                Icon={icon.StakingIcon}
                 label={t("page-find-wallet-staking")}
                 description={t("page-find-wallet-staking-desc")}
                 filterIndex={filterIndex}
@@ -635,7 +622,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-staking")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-staking")}`,
                     eventName: `staking ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -653,7 +640,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={Layer2Icon}
+                Icon={icon.Layer2Icon}
                 label={t("page-find-wallet-layer-2")}
                 description={t("page-find-wallet-layer-2-desc")}
                 filterIndex={filterIndex}
@@ -662,7 +649,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-layer-2")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-layer-2")}`,
                     eventName: `layer_2 ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -680,7 +667,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={SwapIcon}
+                Icon={icon.SwapIcon}
                 label={t("page-find-wallet-swaps")}
                 description={t("page-find-wallet-swaps-desc")}
                 filterIndex={filterIndex}
@@ -689,7 +676,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-swaps")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-swaps")}`,
                     eventName: `swaps ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -707,7 +694,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={HardwareSupportIcon}
+                Icon={icon.HardwareSupportIcon}
                 label={t("page-find-wallet-hardware-wallet-support")}
                 description={t("page-find-wallet-hardware-wallet-support-desc")}
                 filterIndex={filterIndex}
@@ -716,7 +703,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-hardware-wallet-support")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-hardware-wallet-support")}`,
                     eventName: `hardware_support ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -734,7 +721,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={ENSSupportIcon}
+                Icon={icon.ENSSupportIcon}
                 label={t("page-find-wallet-ens-support")}
                 description={t("page-find-wallet-ens-support-desc")}
                 filterIndex={filterIndex}
@@ -743,7 +730,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-ens-support")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-ens-support")}`,
                     eventName: `ens_support ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -767,7 +754,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={OpenSourceWalletIcon}
+                Icon={icon.OpenSourceWalletIcon}
                 label={t("page-find-wallet-open-source")}
                 description={t("page-find-wallet-open-source-desc")}
                 filterIndex={filterIndex}
@@ -776,7 +763,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-open-source")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-open-source")}`,
                     eventName: `open_source ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -794,7 +781,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={NonCustodialIcon}
+                Icon={icon.NonCustodialIcon}
                 label={t("page-find-wallet-non-custodial")}
                 description={t("page-find-wallet-non-custodial-desc")}
                 filterIndex={filterIndex}
@@ -803,7 +790,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-non-custodial")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-non-custodial")}`,
                     eventName: `non_custodial ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -827,7 +814,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={MultisigIcon}
+                Icon={icon.MultisigIcon}
                 label={t("page-find-wallet-multisig")}
                 description={t("page-find-wallet-multisig-desc")}
                 filterIndex={filterIndex}
@@ -836,7 +823,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-multisig")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-multisig")}`,
                     eventName: `multisig ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -854,7 +841,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={SocialRecoverIcon}
+                Icon={icon.SocialRecoverIcon}
                 label={t("page-find-wallet-social-recovery")}
                 description={t("page-find-wallet-social-recovery-desc")}
                 filterIndex={filterIndex}
@@ -863,8 +850,89 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-social-recovery")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-social-recovery")}`,
                     eventName: `social_recovery ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
+              />
+            )
+          },
+          options: [],
+        },
+        {
+          filterKey: "privacy",
+          filterLabel: t("page-find-wallet-privacy"),
+          description: t("page-find-wallet-privacy-desc"),
+          inputState: false,
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <SwitchFilterInput
+                Icon={PrivacyIcon}
+                label={t("page-find-wallet-privacy")}
+                description={t("page-find-wallet-privacy-desc")}
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-privacy")}`,
+                    eventName: `privacy ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
+              />
+            )
+          },
+          options: [],
+        },
+        {
+          filterKey: "eip_4337_support",
+          filterLabel: t("page-find-wallet-smart-accounts"),
+          description: t("page-find-wallet-smart-accounts-desc"),
+          inputState: false,
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <SwitchFilterInput
+                Icon={Brain}
+                label={t("page-find-wallet-smart-accounts")}
+                description={t("page-find-wallet-smart-accounts-desc")}
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${locale} - ${t("page-find-wallet-smart-accounts")}`,
+                    eventName: `eip_4337_support ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
+              />
+            )
+          },
+          options: [],
+        },
+        {
+          filterKey: "eip_7702_support",
+          filterLabel: t("page-find-wallet-account-upgrades"),
+          description: t("page-find-wallet-account-upgrades-desc"),
+          inputState: false,
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <SwitchFilterInput
+                Icon={LayersPlus}
+                label={t("page-find-wallet-account-upgrades")}
+                description={t("page-find-wallet-account-upgrades-desc")}
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${locale} - ${t("page-find-wallet-account-upgrades")}`,
+                    eventName: `eip_7702_support ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}
@@ -887,7 +955,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={RPCImportingIcon}
+                Icon={icon.RPCImportingIcon}
                 label={t("page-find-wallet-rpc-importing")}
                 description={t("page-find-wallet-rpc-importing-desc")}
                 filterIndex={filterIndex}
@@ -896,7 +964,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-rpc-importing")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-rpc-importing")}`,
                     eventName: `rpc_importing ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -914,7 +982,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={ERC20SupportIcon}
+                Icon={icon.ERC20SupportIcon}
                 label={t("page-find-wallet-token-importing")}
                 description={t("page-find-wallet-token-importing-desc")}
                 filterIndex={filterIndex}
@@ -923,7 +991,7 @@ export const useWalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-token-importing")}`,
+                    eventAction: `${locale} - ${t("page-find-wallet-token-importing")}`,
                     eventName: `erc_20_support ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
@@ -941,7 +1009,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={GasFeeCustomizationIcon}
+                Icon={icon.GasFeeCustomizationIcon}
                 label={t("page-find-wallet-gas-fee-customization")}
                 description={t("page-find-wallet-gas-fee-customization-desc")}
                 filterIndex={filterIndex}
@@ -971,7 +1039,7 @@ export const useWalletFilters = (): FilterOption[] => {
           filterLabel: "New to crypto",
           description: "",
           inputState: false,
-          input: (_) => {
+          input: () => {
             return <></>
           },
           options: [],

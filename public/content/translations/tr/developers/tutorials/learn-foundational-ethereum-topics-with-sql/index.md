@@ -1,39 +1,37 @@
 ---
-title: SQL ile Temel Ethereum Konularını Öğrenin
-description: Bu öğretici, okuyucuların Yapılandırılmış Sorgu Dili (SQL) ile zincir verilerini sorgulayarak işlemler, bloklar ve gaz dahil olmak üzere temel Ethereum kavramlarını anlamalarına yardımcı olur.
+title: "SQL ile Temel Ethereum Konularını Öğrenin"
+description: "Bu eğitim, okuyucuların Yapılandırılmış Sorgu Dili (SQL) ile zincir içi verileri sorgulayarak işlemler, bloklar ve gaz dahil olmak üzere temel Ethereum kavramlarını anlamalarına yardımcı olur."
 author: "Paul Apivat"
-tags:
-  - "SQL"
-  - "Sorgulama"
-  - "İşlemler"
+tags: ["SQL", "Sorgulama", "İşlemler", "veri-ve-analitik"]
 skill: beginner
+breadcrumb: SQL ile Ethereum
 lang: tr
 published: 2021-05-11
 source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/
 ---
 
-Birçok Ethereum öğreticisi geliştiricileri hedefler, ancak veri analisti veya bir istemci veya düğüm çalıştırmadan zincir üstü verileri görmek isteyen kişiler için eğitim kaynağı eksikliği vardır.
+Birçok Ethereum eğitimi geliştiricileri hedefler, ancak veri analistleri veya bir istemci veya düğüm çalıştırmadan zincir içi verileri görmek isteyen kişiler için eğitim kaynakları eksikliği vardır.
 
-Bu öğretici, [Dune Analytics](https://dune.xyz/home) tarafından sağlanan bir arayüz aracılığıyla yapılandırılmış sorgu dili (SQL) ile okuyucuların zincir verilerini sorgulayarak işlemler, bloklar ve gaz dahil olmak üzere temel Ethereum kavramlarını anlamalarına yardımcı olur.
+Bu eğitim, okuyucuların [Dune Analytics](https://dune.com/) tarafından sağlanan bir arayüz aracılığıyla yapılandırılmış sorgu dili (SQL) ile zincir içi verileri sorgulayarak işlemler, bloklar ve gaz dahil olmak üzere temel Ethereum kavramlarını anlamalarına yardımcı olur.
 
-Zincir üstü veriler, Ethereum'u bir ağ ve bir bilgi işlem gücü ekonomisi olarak anlamamıza yardımcı olabilir ve bugün Ethereum'un karşılaştığı zorlukları (yani artan gaz fiyatları) ve daha da önemlisi ölçeklendirme çözümleri hakkındaki tartışmaları anlamak için bir temel görevi görebilir.
+Zincir içi veriler, Ethereum'u, ağı ve bilgi işlem gücü için bir ekonomi olarak anlamamıza yardımcı olabilir ve bugün Ethereum'un karşılaştığı zorlukları (örneğin, artan gaz fiyatları) ve daha da önemlisi ölçeklendirme çözümleri etrafındaki tartışmaları anlamak için bir temel görevi görmelidir.
 
 ### İşlemler {#transactions}
 
-Bir kullanıcının Ethereum'daki yolculuğu, kullanıcı tarafından kontrol edilen bir hesabı veya ETH bakiyesi olan bir varlığı başlatmakla başlar. İki hesap türü vardır: Kullanıcı kontrollü hesap veya bir akıllı sözleşme (bkz. [ethereum.org](/developers/docs/accounts/)).
+Bir kullanıcının Ethereum'daki yolculuğu, kullanıcı kontrollü bir hesabı veya ETH bakiyesi olan bir varlığı başlatmasıyla başlar. İki hesap türü vardır: kullanıcı kontrollü veya akıllı sözleşme (bkz. [ethereum.org](/developers/docs/accounts/)).
 
-Herhangi bir hesap, [Etherscan](https://etherscan.io/) gibi bir blok arayıcısında görüntülenebilir. Blok arayıcıları Ethereum'un verisine açılan bir geçittir. Bloklar, işlemler, madenciler, hesaplar ve diğer zincir içi faaliyetlerle ilgili verileri gerçek zamanlı olarak görüntülerler ([buraya](/developers/docs/data-and-analytics/block-explorers/) göz atın).
+Herhangi bir hesap, [Etherscan](https://etherscan.io/) veya [Blockscout](https://eth.blockscout.com/) gibi bir blok gezgininde görüntülenebilir. Blok gezginleri, Ethereum'un verilerine açılan bir portaldır. Bloklar, işlemler, madenciler, hesaplar ve diğer zincir içi etkinlikler hakkındaki verileri gerçek zamanlı olarak görüntülerler (bkz. [burası](/developers/docs/data-and-analytics/block-explorers/)).
 
-Bununla birlikte, bir kullanıcı, harici blok arayıcıları tarafından sağlanan bilgileri karşılaştırmak için verileri doğrudan sorgulamak isteyebilir. [Dune Analytics](https://duneanalytics.com/) SQL bilgisi olan herhangi birine bu kabiliyeti sağlar.
+Ancak bir kullanıcı, harici blok gezginleri tarafından sağlanan bilgileri doğrulamak için verileri doğrudan sorgulamak isteyebilir. [Dune Analytics](https://dune.com/), biraz SQL bilgisi olan herkese bu yeteneği sağlar.
 
-Referans olarak, Ethereum Vakfı (EF) için akıllı sözleşme hesabı [Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) adresinde görüntülenebilir.
+Referans olarak, Ethereum Vakfı (EF) için akıllı sözleşme hesabı [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe) üzerinde görüntülenebilir.
 
-Unutulmaması gereken bir nokta, Ethereum Vakfı'nınki de dahil olmak üzere tüm hesapların işlem göndermek ve almak için kullanılabilecek bir genel adrese sahip olmasıdır.
+Unutulmaması gereken bir nokta, EF'ninki de dahil olmak üzere tüm hesapların, işlem göndermek ve almak için kullanılabilecek açık bir adresi olduğudur.
 
-Etherscan'daki hesap bakiyesi, düzenli işlemler ve dahili işlemlerden oluşur. Adına rağmen dahili işlemler, zincirin durumunu değiştiren _gerçek_ işlemler değildir. Onlar bir sözleşmenin yürütümünden oluşturulan değer transferleridir ([kaynak](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Dahili işlemlerin imzası olmadığı için blok zincirine **dahil edilmezler** ve Dune Analytics ile sorgulanamazlar.
+Etherscan'daki hesap bakiyesi, normal işlemlerden ve dahili işlemlerden oluşur. Dahili işlemler, adına rağmen, zincirin durumunu değiştiren _gerçek_ işlemler değildir. Bunlar, bir sözleşmenin yürütülmesiyle başlatılan değer transferleridir ([kaynak](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Dahili işlemlerin bir imzası olmadığı için blokzincire dahil **edilmezler** ve Dune Analytics ile sorgulanamazlar.
 
-Bu nedenle, bu öğreticide düzenli işlemlere odaklanılacaktır. Bu, şu şekilde sorgulanabilir:
+Bu nedenle, bu eğitim normal işlemlere odaklanacaktır. Bu şu şekilde sorgulanabilir:
 
 ```sql
 WITH temp_table AS (
@@ -61,33 +59,33 @@ SELECT
 FROM temp_table
 ```
 
-Bu, Etherscan'in işlem sayfasında sağlanan bilgilerin aynısını verecektir. Karşılaştırma olarak, burada iki kaynak vardır:
+Bu, Etherscan'ın işlem sayfasında sağlananla aynı bilgileri verecektir. Karşılaştırma için işte iki kaynak:
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Screenshot of Etherscan transaction explorer view](./etherscan_view.png)
 
-[Etherscan üzerinde Ethereum Vakfı'nın sözleşme sayfası.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
+[Blockscout'ta EF'nin sözleşme sayfası.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Screenshot of a Dune Analytics query dashboard](./dune_view.png)
 
-Gösterge panelini [burada](https://duneanalytics.com/paulapivat/Learn-Ethereum) bulabilirsiniz. Sorguyu görmek için tabloya tıklayın (yukarıya da bakın).
+Kontrol panelini [burada](https://dune.com/paulapivat/Learn-Ethereum) bulabilirsiniz. Sorguyu görmek için tabloya tıklayın (ayrıca yukarıya bakın).
 
-### İşlemleri Parçalara Ayırma {#breaking_down_transactions}
+### İşlemleri Parçalara Ayırmak {#breaking-down-transactions}
 
-Gönderilen bir işlem, şunlar da dahil olmak üzere çeşitli bilgiler içerir ([kaynak](/developers/docs/transactions/)):
+Gönderilen bir işlem, aşağıdakiler dahil olmak üzere çeşitli bilgiler içerir ([kaynak](/developers/docs/transactions/)):
 
-- **Recipient**: Alıcı adres ("to" olarak sorgulanır)
-- **Signature**: Göndericinin özel anahtarları bir işlemi imzalarken, SQL ile sorgulayabileceğimiz şey gönderenin açık adresidir ("from").
-- **Value**: Aktarılan ETH miktarı (`ether` sütununa bakınız).
-- **Data**: Bu hash edilmiş olan rastgele veridir (`data` sütununa bakınız)
-- **gasLimit** – işlem tarafından tüketilebilecek maksimum gaz birimi miktarı. Gaz birimleri, bilgi işlem adımlarını temsil eder
-- **maxPriorityFeePerGas** - madenciye bahşiş olarak dahil edilecek maksimum gaz miktarı
-- **maxFeePerGas** - işlem için ödemeye razı olunan maksimum gaz miktarı (baseFeePerGas ve maxPriorityFeePerGas dahil)
+- **Alıcı**: Alıcı adresi ("to" olarak sorgulanır)
+- **İmza**: Bir göndericinin özel anahtarları bir işlemi imzalarken, SQL ile sorgulayabileceğimiz şey göndericinin açık adresidir ("from").
+- **Değer**: Bu, transfer edilen ETH miktarıdır (bkz. `ether` sütunu).
+- **Veri**: Bu, hash edilmiş rastgele veridir (bkz. `data` sütunu)
+- **gasLimit** – işlem tarafından tüketilebilecek maksimum gaz birimi miktarı. Gaz birimleri hesaplama adımlarını temsil eder
+- **maxPriorityFeePerGas** - madenciye öncelik ücreti olarak dahil edilecek maksimum gaz miktarı
+- **maxFeePerGas** - işlem için ödenmek istenen maksimum gaz miktarı (baseFeePerGas ve maxPriorityFeePerGas dahil)
 
-Ethereum Vakfı genel adresine yapılan işlemler için bu belirli bilgileri sorgulayabiliriz:
+Ethereum Vakfı açık adresine yapılan işlemler için bu belirli bilgileri sorgulayabiliriz:
 
 ```sql
 SELECT
@@ -106,15 +104,15 @@ ORDER BY block_time DESC
 
 ### Bloklar {#blocks}
 
-Her işlem Ethereum sanal makinesinin ([EVM](/developers/docs/evm/)) durumunu değiştirir ([kaynak](/developers/docs/transactions/)). İşlemler doğrulanmak üzere ağa yayınlanır ve bir bloğa dahil edilir. Her işlem bir blok numarası ile ilişkilendirilir. Verileri görmek için belirli bir blok numarasını sorgulayabiliriz: 12396854 (bu yazı itibariyle Ethereum Vakfı işlemleri arasında en son blok, 11/5/21).
+Her işlem, Ethereum sanal makinesinin ([EVM](/developers/docs/evm/)) durumunu değiştirecektir ([kaynak](/developers/docs/transactions/)). İşlemler, doğrulanmak ve bir bloka dahil edilmek üzere ağa yayınlanır. Her işlem bir blok numarasıyla ilişkilendirilir. Verileri görmek için belirli bir blok numarasını sorgulayabiliriz: 12396854 (bu yazının yazıldığı tarih itibarıyla Ethereum Vakfı işlemleri arasındaki en son blok, 11/5/21).
 
-Ayrıca, sonraki iki bloğu sorguladığımızda, her bloğun bir önceki bloğun hash değerini (yani üst hash) içerdiğini görebiliriz, bu da blok zincirinin nasıl oluştuğunu gösterir.
+Ayrıca, sonraki iki bloku sorguladığımızda, her blokun bir önceki blokun hash'ini (yani üst hash) içerdiğini görebiliriz, bu da blokzincirin nasıl oluştuğunu gösterir.
 
-Her blok, üst bloğa bir referans içerir. Bu, aşağıda `hash` ve `parent_hash` sütunlarının arasında gösterilmektedir ([kaynak](/developers/docs/blocks/)):
+Her blok, üst blokuna bir referans içerir. Bu, aşağıda `hash` ve `parent_hash` sütunları arasında gösterilmektedir ([kaynak](/developers/docs/blocks/)):
 
 ![parent_hash](./parent_hash.png)
 
-Dune Analytics üzerinde [sorgu](https://duneanalytics.com/queries/44856/88292):
+İşte Dune Analytics üzerindeki [sorgu](https://dune.com/queries/44856/88292):
 
 ```sql
 SELECT
@@ -128,18 +126,18 @@ WHERE "number" = 12396854 OR "number" = 12396855 OR "number" = 12396856
 LIMIT 10
 ```
 
-Bir bloğu zaman, blok numarası, zorluk, hash değeri, üst hash değeri ve nonce değeri sorgulayarak inceleyebiliriz.
+Zaman, blok numarası, zorluk, hash, üst hash ve nonce sorgulayarak bir bloku inceleyebiliriz.
 
-Bu sorgunun kapsamadığı tek şey, aşağıda ayrı bir sorgu gerektiren _işlem listesi_ ve _kök durumdur_. Tam veya arşivsel bir düğüm, tüm işlemleri ve durum geçişlerini depolayarak, istemcilerin herhangi bir zamanda zincirin durumunu sorgulamasına olanak tanır. Bu, büyük depolama alanı gerektirdiğinden zincir verilerini durum verilerinden ayırabiliriz:
+Bu sorgunun kapsamadığı tek şey, aşağıda ayrı bir sorgu gerektiren _işlem listesi_ ve _durum kökü_ (state root). Tam veya arşivsel bir düğüm, tüm işlemleri ve durum geçişlerini depolayarak istemcilerin zincirin durumunu istedikleri zaman sorgulamasına olanak tanır. Bu büyük bir depolama alanı gerektirdiğinden, zincir verilerini durum verilerinden ayırabiliriz:
 
-- Zincir verisi (blokların, işlemlerin listesi)
+- Zincir verileri (blokların, işlemlerin listesi)
 - Durum verileri (her işlemin durum geçişinin sonucu)
 
-Durum kökü ikinci kategoridedir ve _örtülü_ verilerdir (zincirde depolanmaz), zincir verileri ise açık ve zincirin kendisinde depolanır ([kaynak](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
+Durum kökü ikincisine girer ve _örtük_ veridir (zincir içi depolanmaz), zincir verileri ise açıktır ve zincirin kendisinde depolanır ([kaynak](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
 
-Bu eğitimde, Dune Analytics aracılığıyla SQL ile _sorgulanabilecek_ zincir üstü verilere odaklanacağız.
+Bu eğitim için, Dune Analytics aracılığıyla SQL ile sorgulanabilen zincir içi verilere odaklanacağız.
 
-Yukarıda belirtildiği gibi, her blok bir işlem listesi içerir, bunu belirli bir blok için filtreleyerek sorgulayabiliriz. En güncel olan 12396854 bloğunu deneyeceğiz:
+Yukarıda belirtildiği gibi, her blok bir işlem listesi içerir, bunu belirli bir bloku filtreleyerek sorgulayabiliriz. En son bloku, 12396854'ü deneyeceğiz:
 
 ```sql
 SELECT * FROM ethereum."transactions"
@@ -147,13 +145,13 @@ WHERE block_number = 12396854
 ORDER BY block_time DESC`
 ```
 
-Dune üzerindeki SQL çıktısı:
+İşte Dune üzerindeki SQL çıktısı:
 
-![](./list_of_txn.png)
+![Screenshot of a list of Ethereum transactions](./list_of_txn.png)
 
-Zincire eklenen bu tek blok, Ethereum sanal makinesinin durumunu değiştirir ([EVM](/developers/docs/evm/)). Bazen düzinelerce ve hatta yüzlerce işlem aynı anda doğrulanır. Bu özel durumda, 222 işlem dahil edilmiştir.
+Zincire eklenen bu tek blok, Ethereum sanal makinesinin ([EVM](/developers/docs/evm/)) durumunu değiştirir. Bazen düzinelerce, bazen yüzlerce işlem aynı anda doğrulanır. Bu özel durumda, 222 işlem dahil edilmiştir.
 
-Kaç tanesinin gerçekten başarılı olduğunu görmek amacıyla başarılı işlemleri saymak için başka bir filtre ekleriz:
+Gerçekte kaç tanesinin başarılı olduğunu görmek için, başarılı işlemleri saymak üzere başka bir filtre ekleriz:
 
 ```sql
 WITH temp_table AS (
@@ -166,23 +164,23 @@ SELECT
 FROM temp_table
 ```
 
-12396854 bloğu için toplam 222 işlemden 204'ü başarıyla doğrulandı:
+12396854 numaralı blok için, toplam 222 işlemden 204'ü başarıyla doğrulandı:
 
-![](./successful_txn.png)
+![Screenshot of a successful Ethereum transaction](./successful_txn.png)
 
-İşlem istekleri saniyede onlarca kez gerçekleşir, ancak bloklar yaklaşık olarak her 15 saniyede bir işlenir ([kaynak](/developers/docs/blocks/)).
+İşlem istekleri saniyede onlarca kez gerçekleşir, ancak bloklar yaklaşık her 15 saniyede bir işlenir ([kaynak](/developers/docs/blocks/)).
 
-Yaklaşık olarak her 15 saniyede bir blok üretildiğini görmek için bir gündeki saniye sayısını (86400) 15'e bölerek tahmini günlük ortalama blok sayısını (yaklaşık 5760) elde edebiliriz.
+Yaklaşık her 15 saniyede bir üretilen bir blok olduğunu görmek için, bir gündeki saniye sayısını (86400) 15'e bölerek günlük tahmini ortalama blok sayısını (~ 5760) elde edebiliriz.
 
-Günde üretilen Ethereum blokları tablosu (2016 - günümüz):
+Günlük üretilen Ethereum blokları grafiği (2016 - günümüz) şöyledir:
 
-![](./daily_blocks.png)
+![Chart showing daily Ethereum block production](./daily_blocks.png)
 
-Bu süre zarfında günlük olarak üretilen ortalama blok sayısı yaklaşık olarak 5.874'tür:
+Bu zaman diliminde günlük üretilen ortalama blok sayısı ~5.874'tür:
 
-![](./avg_daily_blocks.png)
+![Chart showing daily Ethereum block production](./avg_daily_blocks.png)
 
-Sorgular:
+Sorgular şunlardır:
 
 ```sql
 # query to visualize number of blocks produced daily since 2016
@@ -209,15 +207,15 @@ SELECT
 FROM temp_table
 ```
 
-2016'dan bu yana günlük üretilen ortalama blok sayısı, 5.874 olarak bu sayının biraz üzerindedir. Alternatif olarak, 86.400 saniyenin 5874 ortalama bloğa bölünmesi 14,7 saniyeye veya her 15 saniyede bir yaklaşık bir bloğa denk gelir.
+2016'dan bu yana günlük üretilen ortalama blok sayısı bu rakamın biraz üzerinde, 5.874'tür. Alternatif olarak, 86400 saniyeyi 5874 ortalama bloka bölmek 14,7 saniye veya yaklaşık her 15 saniyede bir blok sonucunu verir.
 
 ### Gaz {#gas}
 
-Bloklar boyut olarak sınırlıdır. Maksimum blok boyutu dinamiktir ve ağ talebine göre 12.500.000 ila 25.000.000 birim arasında değişir. Limitler, keyfi olarak çok büyük blok boyutlarınının disk alanı ve hız gereksinimleri ([kaynak](/developers/docs/blocks/)) açısından tam düğümlere baskı uygulamasını engellemek için gereklidir.
+Blokların boyutu sınırlıdır. Maksimum blok boyutu dinamiktir ve ağ talebine göre 12.500.000 ile 25.000.000 birim arasında değişir. Keyfi olarak büyük blok boyutlarının disk alanı ve hız gereksinimleri açısından tam düğümlere yük bindirmesini önlemek için sınırlar gereklidir ([kaynak](/developers/docs/blocks/)).
 
-Blok gaz sınırını kavramsallaştırmanın bir yolu, bunu toplu işlemlerin gerçekleştirileceği kullanılabilir blok alanının **arz** olarak düşünmektir. Blok gaz limiti 2016'dan günümüze sorgulanabilir ve görselleştirilebilir:
+Blok gaz limitini kavramsallaştırmanın bir yolu, onu işlemleri gruplamak için mevcut blok alanının **arzı** olarak düşünmektir. Blok gaz limiti 2016'dan günümüze kadar sorgulanabilir ve görselleştirilebilir:
 
-![](./avg_gas_limit.png)
+![Chart showing average Ethereum gas limit over time](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -228,9 +226,9 @@ GROUP BY dt
 OFFSET 1
 ```
 
-Ardından, Ethereum zincirinde yapılan hesaplama için günlük olarak kullanılan gerçek gaz vardır (yani: işlem gönderme, akıllı sözleşme çağırma, NFT basma). Bu, kullanılabilir Ethereum blok alanı için **taleptir**:
+Bir de Ethereum zincirinde yapılan hesaplamalar (yani işlem göndermek, akıllı sözleşme çağırmak, bir NFT basımı) için ödeme yapmak üzere günlük olarak kullanılan gerçek gaz vardır. Bu, mevcut Ethereum blok alanı için **taleptir**:
 
-![](./daily_gas_used.png)
+![Chart showing daily Ethereum gas used](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -241,17 +239,17 @@ GROUP BY dt
 OFFSET 1
 ```
 
-Ayrıca, **talep ve arzın** nasıl sıralandığını görmek için bu iki grafiği yan yana koyabiliriz:
+**Arz ve talebin** nasıl hizalandığını görmek için bu iki grafiği yan yana da koyabiliriz:
 
 ![gas_demand_supply](./gas_demand_supply.png)
 
-Böylece, mevcut arz göz önüne alındığında, gaz fiyatlarını Ethereum blok alanı talebinin bir fonksiyonu olarak anlayabiliriz.
+Bu nedenle, mevcut arz göz önüne alındığında, gaz fiyatlarını Ethereum blok alanına olan talebin bir fonksiyonu olarak anlayabiliriz.
 
-Son olarak, Ethereum zinciri için ortalama günlük gaz fiyatlarını sorgulamak isteyebiliriz, ancak bunu yapmak özellikle uzun bir sorgulama süresine neden olur. Bu nedenle sorgumuzu Ethereum Vakfı tarafından işlem başına ödenen ortalama gaz miktarına göre filtreleyeceğiz.
+Son olarak, Ethereum zinciri için günlük ortalama gaz fiyatlarını sorgulamak isteyebiliriz, ancak bunu yapmak özellikle uzun bir sorgu süresine neden olacaktır, bu nedenle sorgumuzu Ethereum Vakfı tarafından işlem başına ödenen ortalama gaz miktarına filtreleyeceğiz.
 
-![](./ef_daily_gas.png)
+![Chart showing Ethereum Foundation daily gas usage](./ef_daily_gas.png)
 
-Yıllar içinde tüm işlemler için Ethereum Foundation adresine ödenmiş gaz ücretlerini görebiliriz. Sorgu burada:
+Yıllar boyunca Ethereum Vakfı adresine yapılan tüm işlemler için ödenen gaz fiyatlarını görebiliriz. İşte sorgu:
 
 ```sql
 SELECT
@@ -265,8 +263,8 @@ ORDER BY block_time DESC
 
 ### Özet {#summary}
 
-Bu öğretici ile, temel Ethereum kavramlarını ve zincir üzerindeki verileri sorgulayarak ve bunlarla uğraşarak Ethereum blok zincirinin nasıl çalıştığını anlıyoruz.
+Bu eğitimle, zincir içi verileri sorgulayarak ve hissederek temel Ethereum kavramlarını ve Ethereum blokzincirinin nasıl çalıştığını anlıyoruz.
 
-Bu öğreticide kullanılan tüm kodları tutan gösterge paneli [burada](https://duneanalytics.com/paulapivat/Learn-Ethereum) bulunabilir.
+Bu eğitimde kullanılan tüm kodları barındıran kontrol paneli [burada](https://dune.com/paulapivat/Learn-Ethereum) bulunabilir.
 
-Verinin web3 keşfi amaçlı daha fazla kullanımı için [bana Twitter'dan ulaşın](https://twitter.com/paulapivat).
+Web3'ü keşfetmek için verilerin daha fazla kullanımı için [beni Twitter'da bulun](https://twitter.com/paulapivat).

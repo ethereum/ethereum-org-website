@@ -1,69 +1,67 @@
 ---
-title: Aggiungere risorse di progettazione
-description: Linee guida e requisiti per assicurare la qualità dei materiali di progettazione su ethereum.org
+title: Aggiungere risorse di design
+description: Linee guida e requisiti per garantire la qualità dei materiali di design su ethereum.org
 lang: it
 ---
 
-# Aggiungere risorse di progettazione {#adding-design-resources}
+Chiunque può suggerire nuovi materiali di design alla [pagina Design e UX nel Web3](/developers/docs/design-and-ux/).
 
-Chiunque può suggerire nuovi materiali di progettazione per il [design e l'UX nella pagina Web3](/developers/docs/design-and-ux/).
+Tieni presente che l'obiettivo di questa pagina è fornire valore agli aspiranti designer del Web3. La sezione di design non è pensata per pubblicizzare i tuoi servizi, prodotti o piattaforme.
 
-Si prega di notare che questa pagina si occupa di fornire il valore dell'utente agli aspiranti designer in Web3. La sezione di progettazione non serve per pubblicizzare i tuoi servizi, prodotti o piattaforme.
+Per assicurarci di mantenere un elevato standard di informazione e promuovere approfondimenti di valore, abbiamo stabilito una politica di inserimento:
 
-Per assicurarci di mantenere uno standard informativo elevato e promuovere informazioni preziose, abbiamo stabilito una politica di elencazione:
+## Studi di ricerca e dashboard {#research-studies}
 
-## Studi di ricerca e pannelli di controllo {#Research-studies}
+1. Metodologia solida
 
-1. Metodologia valida
+a. La metodologia dovrebbe definire chiaramente come sono stati raccolti i dati.
 
-a. La metodologia dovrebbe definire chiaramente come sono raccolti i dati.
+b. Dovrebbe essere indicato il numero di partecipanti coinvolti nella ricerca.
 
-b. Il numero di partecipanti alla ricerca dovrebbe essere dichiarato.
+c. Dovrebbero essere descritti i metodi di ricerca impiegati.
 
-c. I metodi di ricerca impiegati dovrebbero essere descritti.
+2. Rilevanza per i designer del Web3 e casi d'uso comuni di design
 
-2. Pertinenza per i designer in Web3 e casi d'uso di progettazione comuni
+a. L'argomento della ricerca dovrebbe essere rilevante per i designer del Web3 e affrontare casi d'uso comuni di design.
 
-a. L'argomento della ricerca dovrebbe essere pertinente per il designer in Web3 e affrontare i casi d'uso di progettazione comuni.
+3. Focus sulla fornitura di approfondimenti
 
-3. Concentrarsi sulla fornitura di informazioni
+a. L'obiettivo primario del testo dovrebbe essere la condivisione di approfondimenti piuttosto che la promozione di un progetto o di un'azienda specifici.
 
-a. L'obiettivo principale del testo dovrebbe essere condividere informazioni dettagliate piuttosto che promuovere un progetto o un'azienda nello specifico.
+## Articoli {#articles}
 
-## Articoli {#Articles}
+1. Rilevanza per i designer/ricercatori del Web3 e casi d'uso comuni di design nel Web3
 
-1. Pertinenza per i designer/ricercatori in Web3 e casi d'uso di progettazione comuni in Web3
-
-a. L'argomento dell'articolo dovrebbe essere pertinente per i progettisti e ricercatori in Web3, incentrandosi sui casi d'uso di progettazione in Web3 comuni.
+a. L'argomento dell'articolo dovrebbe essere pertinente per i designer e i ricercatori del Web3, concentrandosi sui casi d'uso comuni di design nel Web3.
 
 2. Qualità di base della scrittura
 
 a. L'articolo dovrebbe essere privo di errori grammaticali e ortografici.
 
-b. L'enfasi dovrebbe esser posta sulla fornitura di informazioni e insegnamenti fondamentali.
+b. L'enfasi dovrebbe essere posta sulla fornitura di approfondimenti e insegnamenti chiave.
 
-c. La scrittura dovrebbe essere concisa e pertinente.
+c. La scrittura dovrebbe essere concisa e dritta al punto.
 
 3. Obiettivo del testo
 
-a. L'obiettivo principale dell'articolo dovrebbe essere la condivisione di informazioni dettagliate piuttosto che la promozione di un progetto o un'azienda in particolare.
+a. L'obiettivo primario dell'articolo dovrebbe essere la condivisione di approfondimenti piuttosto che la promozione di un particolare progetto o azienda.
 
-## Comunità / DAO {#Communities-and-DAOs}
+## Community / DAO {#communities-and-daos}
 
-1. Il sito web dovrebbe indicare chiaramente come aderire alla DAO/Comunità
+1. Il sito web deve indicare chiaramente come unirsi alla DAO/Community
 
-2. Vantaggi chiari dell'adesione
+2. Vantaggi chiari dell'iscrizione
 
-a. I benefici dell'adesione dovrebbero essere mostrati in modo visibile.
+a. I vantaggi di diventare un membro dovrebbero essere mostrati in modo ben visibile.
 
-**Esempi**: ricevere feedback sul lavoro, accedere a opportunità lavorative o ricompense per segnalazioni, condividere informazioni di progettazione e ricerca.
+**Esempi**: ricevere feedback sul lavoro, accedere a opportunità di lavoro o taglie (bounty), condividere approfondimenti di design e ricerca.
 
 3. Comunicazione attiva e vivace su Discord
 
-a. La comunità di Discord dovrebbe mostrare una comunicazione vivace e impegnata.
+a. La community su Discord dovrebbe mostrare una comunicazione vivace e coinvolgente.
 
-b. I moderatori dovrebbero essere coinvolti attivamente nel mantenimento della comunità e nel facilitare le discussioni.
+b. I moderatori dovrebbero essere attivamente coinvolti nel mantenimento della community e nel facilitare le discussioni.
 
-c. La comunità dovrebbe dimostrare conversazioni precedenti preziose e produttive nell'ambito delle ultime due settimane.
+c. La community dovrebbe dimostrare uno storico di conversazioni preziose e produttive nelle ultime due settimane.
 
-Aderendo a tali criteri, miriamo a promuovere un ambiente prosperoso e di condivisione della conoscenza nella nostra comunità. Crediamo che questa politica di elencazione assicurerà che i nostri utenti abbiano accesso a risorse affidabili, pertinenti e piene di informazioni. Grazie per la tua comprensione e cooperazione nel mantenimento della qualità dei contenuti, sulla nostra piattaforma.
+Aderendo a questi criteri, miriamo a promuovere un ambiente fiorente e di condivisione della conoscenza all'interno della nostra community. Riteniamo che questa politica di inserimento garantirà ai nostri utenti l'accesso a risorse affidabili, pertinenti e ricche di spunti. Grazie per la comprensione e la collaborazione nel mantenere la qualità dei contenuti all'interno della nostra piattaforma.

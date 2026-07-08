@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "locale": "it",
+  "translatedAt": "2026-06-17T00:22:25.028Z",
+  "englishManifestHash": "e9039eed4cc8",
+  "placeholderOrder": [
+    "LINK-6ce015",
+    "CODEBLOCK-b163a0",
+    "CODEBLOCK-72b027",
+    "IMAGE-531385"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-b163a0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-72b027": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "IMAGE-531385": {
+      "type": "image",
+      "values": {
+        "path": "./remix-screenshot.png"
+      }
+    },
+    "LINK-6ce015": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/anatomy/#events-and-logs"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:22:25.028Z",
+      "status": "success"
+    }
+  }
+}

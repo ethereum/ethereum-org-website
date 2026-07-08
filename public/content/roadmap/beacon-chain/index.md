@@ -5,9 +5,10 @@ lang: en
 template: upgrade
 image: /images/upgrades/core.png
 alt: 
-summaryPoint1: The Beacon Chain introduced proof-of-stake to the Ethereum ecosystem.
-summaryPoint2: It was merged with the original Ethereum proof-of-work chain in September 2022.
-summaryPoint3: The Beacon Chain introduced the consensus logic and block gossip protocol which now secures Ethereum.
+summaryPoints:
+  - "The Beacon Chain introduced proof-of-stake to the Ethereum ecosystem."
+  - "It was merged with the original Ethereum proof-of-work chain in September 2022."
+  - "The Beacon Chain introduced the consensus logic and block gossip protocol which now secures Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -16,7 +17,7 @@ summaryPoint3: The Beacon Chain introduced the consensus logic and block gossip 
 
 ## What is the Beacon Chain? {#what-is-the-beacon-chain}
 
-The Beacon Chain is the name of the original proof-of-stake blockchain that was launched in 2020. It was created to ensure the proof-of-stake consensus logic was sound and sustainable before enabling it on Ethereum Mainnet. Therefore, it ran alongside the original proof-of-work Ethereum. The Beacon Chain was a chain of 'empty' blocks, but switching off proof-of-work and switching on proof-of-stake on Ethereum required instructing the Beacon Chain to accept transaction data from execution clients, bundle them into blocks and then organize them into a blockchain using a proof-of-stake-based consensus mechanism. At the same moment, the original Ethereum clients turned off their mining, block propagation and consensus logic, handing that all over to the Beacon Chain. This event was known as [The Merge](/roadmap/merge/). Once The Merge happened, there were no longer two blockchains. Instead, there was just one proof-of-stake Ethereum, which now requires two different clients per node. The Beacon Chain is now the consensus layer, a peer-to-peer network of consensus clients that handles block gossip and consensus logic, while the original clients form the execution layer, which is responsible for gossiping and executing transactions, and managing Ethereum's state. The two layers can communicate with one another using the Engine API.
+The Beacon Chain is the name of the original proof-of-stake blockchain that was launched in 2020. It was created to ensure the proof-of-stake consensus logic was sound and sustainable before enabling it on [Ethereum](/) Mainnet. Therefore, it ran alongside the original proof-of-work Ethereum. The Beacon Chain was a chain of 'empty' blocks, but switching off proof-of-work and switching on proof-of-stake on Ethereum required instructing the Beacon Chain to accept transaction data from execution clients, bundle them into blocks and then organize them into a blockchain using a proof-of-stake-based consensus mechanism. At the same moment, the original Ethereum clients turned off their mining, block propagation and consensus logic, handing that all over to the Beacon Chain. This event was known as [The Merge](/roadmap/merge/). Once The Merge happened, there were no longer two blockchains. Instead, there was just one proof-of-stake Ethereum, which now requires two different clients per node. The Beacon Chain is now the consensus layer, a peer-to-peer network of consensus clients that handles block gossip and consensus logic, while the original clients form the execution layer, which is responsible for gossiping and executing transactions, and managing Ethereum's state. The two layers can communicate with one another using the Engine API.
 
 ## What does the Beacon Chain do? {#what-does-the-beacon-chain-do}
 
@@ -34,11 +35,15 @@ Staking serves a similar purpose that [mining](/developers/docs/consensus-mechan
 
 The transition to proof-of-stake made Ethereum significantly more secure and decentralized by comparison to proof-of-work. The more people that participate in the network, the more decentralized and safe from attacks it becomes.
 
-And using proof-of-stake as consensus mechanism is a foundational component for [the secure, environmentally friendly and scalable Ethereum we have now](/roadmap/vision/).
 
-<InfoBanner emoji=":money_bag:">
-  If you're interested in becoming a validator and helping secure Ethereum, <a href="/staking/">learn more about staking</a>.
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":money_bag:"/>
+<AlertContent>
+<AlertDescription>
+  If you're interested in becoming a validator and helping secure Ethereum, [learn more about staking](/staking/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Setting up for sharding {#setting-up-for-sharding}
 
@@ -70,8 +75,7 @@ Sharding can only safely enter the Ethereum ecosystem with a proof-of-stake cons
   Shard chains
 </ButtonLink>
 
-## Further Reading
+## Further reading {#further-reading}
 
-- [More on Ethereum's future upgrades](/roadmap/vision)
 - [More on node architecture](/developers/docs/nodes-and-clients/node-architecture)
 - [More of proof-of-stake](/developers/docs/consensus-mechanisms/pos)

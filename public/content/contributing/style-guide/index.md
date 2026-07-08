@@ -1,10 +1,9 @@
 ---
-title: Style Guide
+title: ethereum.org style guide
+metaTitle: Style Guide
 description: Style guide for ethereum.org
 lang: en
 ---
-
-# Ethereum.org style guide {#style-guide}
 
 Content on [ethereum.org](/) is crowdsourced and primarily written by our incredible contributors.
 
@@ -108,15 +107,15 @@ Ethereum.org documentation (and content at large) aims to maintain a credibly ne
 
 **Grand, unverifiable claims about Ethereum or adjacent technologies**
 
-> e.g. _"Ethereum will take over the world because..."_
+> e.g., _"Ethereum will take over the world because..."_
 
 **Hostile or confrontational language aimed at any organization or person**
 
-> e.g. _"Company X is bad because they are centralized!"_
+> e.g., _"Company X is bad because they are centralized!"_
 
 **Politically charged rhetoric**
 
-> e.g. _"This political party is better for decentralization because..."_
+> e.g., _"This political party is better for decentralization because..."_
 
 ### Acronyms {#acronyms}
 

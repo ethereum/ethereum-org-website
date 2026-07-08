@@ -17,7 +17,7 @@ summaryPoints:
 
 Home staking is the act of [running an Ethereum node](/run-a-node/) connected to the internet and depositing 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
 
-**Home staking increases the decentralization of the Ethereum network**, making Ethereum more censorship-resistant and robust against attacks. Other staking methods may not help the network in the same ways. Home staking is the best staking option for securing Ethereum.
+**Home staking increases the decentralization of the Ethereum network**, making [Ethereum](/) more censorship-resistant and robust against attacks. Other staking methods may not help the network in the same ways. Home staking is the best staking option for securing Ethereum.
 
 An Ethereum node consists of both an execution layer (EL) client, as well as a consensus layer (CL) client. These clients are software that work together, along with a valid set of signing keys, to verify transactions and blocks, attest to the correct head of the chain, aggregate attestations, and propose blocks.
 
@@ -29,17 +29,16 @@ A home staker receives rewards directly from the protocol for keeping their vali
 
 Home staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
 
-<CardGrid>
+<Grid>
   <Card title="Earn fresh ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
   <Card title="Full control" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
   <Card title="Network security" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
-</CardGrid>
+</Grid>
 
 ## Considerations before home staking {#considerations-before-staking-solo}
 
 As much as we wish that home staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to home stake your ETH.
 
-<InfoGrid>
 <ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
 When operating your own node you should spend some time learning how to use the software you've chosen. This involves reading relevant documentation and being attune to communication channels of those dev teams.
 
@@ -55,7 +54,7 @@ It also requires very basic hardware setup, and some understanding of minimum re
 <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
 Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.{' '}
 
-<a href="/security/">Ethereum security and scam prevention</a>
+[Ethereum security and scam prevention](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -71,7 +70,6 @@ Different from inactivity penalties for being offline, <em>slashing</em> is a mu
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> More on slashing and validator lifecycle</a>
 </ExpandableCard>
-</InfoGrid>
 
 <StakingComparison page="solo" />
 
@@ -105,13 +103,13 @@ There are a variety of options available to help you with your setup. Use the ab
 
 <ProductDisclaimer />
 
-### Node tools
+### Node tools {#node-tools}
 
 <StakingProductsCardGrid category="nodeTools" />
 
 Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 
-### Key Generators
+### Key Generators {#key-generators}
 
 These tools can be used as an alternative to the [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) to help with key generation.
 
@@ -134,11 +132,15 @@ A <em>validator</em> is a virtual entity that lives on Ethereum and participates
 </ExpandableCard>
 
 <ExpandableCard title="Can I deposit more than 32 ETH?">
-Each key-pair associated with a validator requires exactly 32 ETH to be activated. More ETH deposited to a single set of keys does not increase rewards potential, as each validator is limited to an <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effective balance</a> of 32 ETH. This means that staking is done in 32 ETH increments, each with it's own set of keys and balance.
+Yes, modern validator accounts are capable of holding up to 2048 ETH. Additional ETH over 32 will compound in a step-wise manner, increasing in whole-number increments as your true balance increases. This is known as your <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effective balance</a>.
 
-Do not deposit more than 32 ETH for a single validator. It will not increase your rewards. If a withdrawal address has been set for the validator, excess funds over 32 ETH will be automatically withdrawn to this address during the next <a href="/staking/withdrawals/#validator-sweeping">validator sweep</a>.
+To increase the effective balance of an account, and thus increase rewards, a buffer of 0.25 ETH above any full-ETH threshold must be crossed. For example, an account with a true balance of 32.9 and an effective balance of 32 would need to earn another 0.35 ETH to bring it's true balance above 33.25 before triggering an increase in effective balance.
 
-If home staking seems too demanding for you, consider using a <a href="/staking/saas/">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools/">staking pools</a>.
+This buffer prevents also prevents an effective balance from dropping until it has gone 0.25 ETH below it's current effective balance.
+
+Each key-pair associated with a validator requires at least 32 ETH to be activated. Any balance above this may be withdrawn to the associated withdrawal address at any time via a transaction signed by this address. Any funds over the maximum effective balance will automatically be withdrawn on a periodic basis.
+
+If home staking seems too demanding for you, consider using a [staking-as-a-service](/staking/saas/) provider, or if you're working with less than 32 ETH, check out the [staking pools](/staking/pools/).
 </ExpandableCard>
 
 <ExpandableCard title="Will I be slashed if I go offline? (tldr: No.)">
@@ -200,7 +202,6 @@ To unlock and receive your entire balance back you must also complete the proces
 - [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

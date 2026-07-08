@@ -1,59 +1,61 @@
 ---
-title: Wprowadzenie do stosu Ethereum
-description: Omówienie różnych warstw stosu Ethereum i sposobu, w jaki się ze sobą łączą.
+title: Wprowadzenie do stosu technologicznego Ethereum
+description: "Przegląd różnych warstw stosu technologicznego Ethereum i tego, jak do siebie pasują."
 lang: pl
 ---
 
-Podobnie jak każdy stos oprogramowania, kompletny stos Ethereum będzie się różnił w zależności od projektu w zależności od Twoich celów biznesowych.
+Podobnie jak w przypadku każdego stosu oprogramowania, kompletny „stos Ethereum” będzie się różnić w zależności od projektu i jego celów.
 
-Istnieją jednak podstawowe technologie Ethereum, które pomagają stworzyć model interakcji oprogramowania z blockchainem Ethereum. Zrozumienie warstw stosu pomoże Ci zrozumieć różne sposoby integracji Ethereum z projektami oprogramowania.
+Istnieją jednak podstawowe komponenty Ethereum, które pomagają stworzyć model mentalny tego, jak aplikacje wchodzą w interakcję z blockchainem Ethereum. Zrozumienie warstw stosu pomoże ci pojąć różne sposoby integracji Ethereum z projektami oprogramowania.
 
-## Warstwa 1: Wirtualna Maszyna Ethereum {#ethereum-virtual-machine}
+## Poziom 1: Maszyna Wirtualna Ethereum (EVM) {#ethereum-virtual-machine}
 
-Wirtualna Maszyna Ethereum ([Ethereum Virtual Machine, EVM](/developers/docs/evm/)) jest środowiskiem uruchomieniowym inteligentnych kontraktów w Ethereum. Wszystkie inteligentne kontrakty i zmiany stanu w blockchain Ethereum są wykonywane przez [transakcje](/developers/docs/transactions/). EVM obsługuje cały proces przetwarzania transakcji w sieci Ethereum.
+[Maszyna Wirtualna Ethereum (EVM)](/developers/docs/evm/) to środowisko uruchomieniowe dla inteligentnych kontraktów w Ethereum. Wszystkie inteligentne kontrakty i zmiany stanu na blockchainie Ethereum są wykonywane przez [transakcje](/developers/docs/transactions/). EVM obsługuje całe przetwarzanie transakcji w sieci Ethereum.
 
-Podobnie jak w przypadku dowolnej maszyny wirtualnej, EVM tworzy poziom abstrakcji pomiędzy kodem wykonującym a maszyną wykonującą (węzeł Ethereum). Obecnie EVM działa w tysiącach węzłów rozmieszczonych na całym świecie.
+Podobnie jak każda maszyna wirtualna, EVM tworzy poziom abstrakcji między wykonywanym kodem a maszyną wykonującą (węzłem Ethereum). Obecnie EVM działa na tysiącach węzłów rozproszonych po całym świecie.
 
-EVM używa zbioru instrukcji kodów operacyjnych w celu wykonywania konkretnych zadań. Tych (140 unikatowych) kodów operacji pozwala EVM na [kompletność Turinga](https://pl.wikipedia.org/wiki/Kompletno%C5%9B%C4%87_Turinga) co znaczy tyle, że EVM jest w stanie przetworzyć praktycznie wszystko, jeśli posiada wystarczająco dużo zasobów.
+Wewnętrznie EVM używa zestawu instrukcji kodów operacji do wykonywania określonych zadań. Te (140 unikalnych) kody operacji sprawiają, że EVM jest [kompletna w sensie Turinga](https://en.wikipedia.org/wiki/Turing_completeness), co oznacza, że EVM jest w stanie obliczyć niemal wszystko, jeśli dysponuje wystarczającymi zasobami.
 
-Jako programiści zdecentralizowanych aplikacji nie musimy wiedzieć zbyt wiele na temat EVM poza tym, że istnieje i że niezawodnie zasila wszystkie aplikacje w Ethereum bez przestojów.
+Jako programista zdecentralizowanych aplikacji (dapp), nie musisz wiedzieć o EVM wiele więcej poza tym, że istnieje i niezawodnie napędza wszystkie aplikacje na Ethereum bez przestojów.
 
-## Warstwa 2: Inteligentne kontrakty (Smart Contracts) {#smart-contracts}
+## Poziom 2: Inteligentne kontrakty {#smart-contracts}
 
-[Inteligentne kontrakty](/developers/docs/smart-contracts/) to programy wykonywalne, które działają w łańcuchu bloków Ethereum.
+[Inteligentne kontrakty](/developers/docs/smart-contracts/) to wykonywalne programy działające na blockchainie Ethereum.
 
-Inteligentne kontrakty są napisane przy użyciu określonych [języków programowania](/developers/docs/smart-contracts/languages/) , które kompilują do bytecode EVM (niskopoziomowe instrukcje maszynowe zwane opcode).
+Inteligentne kontrakty są pisane przy użyciu określonych [języków programowania](/developers/docs/smart-contracts/languages/), które kompilują się do kodu bajtowego EVM (niskopoziomowych instrukcji maszynowych zwanych kodami operacji).
 
-Inteligentne kontrakty służą nie tylko jako biblioteki open source, ale są to zasadniczo otwarte usługi API, które działają 24/7 i nie mogą zostać zlikwidowane. Inteligentne kontrakty zapewniają funkcje publiczne, z którymi aplikacje ([dapps](/developers/docs/dapps/)) mogą wchodzić w interakcje bez konieczności uzyskania zezwolenia. Każda aplikacja może zintegrować się z wdrożonymi inteligentnymi kontraktami w celu stworzenia funkcjonalności (takich jak kanały danych lub zdecentralizowana wymiana). Każdy może wdrożyć nowe inteligentne kontrakty do Ethereum w celu dodania niestandardowych funkcji, aby zaspokoić potrzeby ich aplikacji.
+Inteligentne kontrakty nie tylko służą jako biblioteki open source, ale są w zasadzie otwartymi usługami API, które działają bez przerwy i nie mogą zostać wyłączone. Inteligentne kontrakty udostępniają publiczne funkcje, z którymi użytkownicy i aplikacje ([dappy](/developers/docs/dapps/)) mogą wchodzić w interakcje bez konieczności uzyskiwania pozwolenia. Każda aplikacja może zintegrować się z wdrożonymi inteligentnymi kontraktami, aby komponować funkcjonalności, takie jak dodawanie [kanałów danych](/developers/docs/oracles/) lub obsługa wymiany tokenów. Dodatkowo każdy może wdrożyć nowe inteligentne kontrakty w Ethereum, aby dodać niestandardową funkcjonalność spełniającą potrzeby jego aplikacji.
 
-Jako dewelopera dapp musisz zapisać inteligentne kontrakty tylko wtedy, gdy chcesz dodać niestandardowe funkcje w blockchainu Ethereum. Możesz znaleźć że możesz osiągnąć większość lub wszystkie potrzeby swojego projektu jedynie poprzez integrację z istniejącymi inteligentnymi kontraktami, na przykład jeśli chcesz wspierać płatności w stabilnych monetach lub włączyć zdecentralizowaną wymianę tokenów.
+Jako programista dappów, będziesz musiał pisać inteligentne kontrakty tylko wtedy, gdy zechcesz dodać niestandardową funkcjonalność na blockchainie Ethereum. Może się okazać, że zaspokoisz większość lub wszystkie potrzeby swojego projektu, po prostu integrując się z istniejącymi inteligentnymi kontraktami, na przykład jeśli chcesz obsługiwać płatności w stablecoinach lub umożliwić zdecentralizowaną wymianę tokenów.
 
-## Warstwa 3: Węzły Ethereum {#ethereum-nodes}
+## Poziom 3: Węzły Ethereum {#ethereum-nodes}
 
-Aby aplikacja mogła komunikować się z blockchainem Ethereum (np. pobierać dane z blockchainu lub wysyłać transakcje do sieci), musi być podłączona do [węzła w sieci Ethereum](/developers/docs/nodes-and-clients/).
+Aby aplikacja mogła wchodzić w interakcję z blockchainem Ethereum, musi połączyć się z [węzłem Ethereum](/developers/docs/nodes-and-clients/). Połączenie z węzłem pozwala na odczytywanie danych z blockchaina i/lub wysyłanie transakcji do sieci.
 
-Węzły Ethereum są komputerami, które obsługują oprogramowanie - klienta Ethereum. Klient jest implementacją Ethereum, która za zadanie ma weryfikację wszystkich transakcji w kolejnych blokach, utrzymywać bezpieczeństwo sieci i poprawność danych. Węzły Ethereum SĄ blockchainem Ethereum. Kolektywnie przechowują stan sieci Ethereum i ustalają konsensus nad transakcjami, aby zmienić stan blockchainu.
+Węzły Ethereum to komputery z uruchomionym oprogramowaniem – klientem Ethereum. Klient to implementacja Ethereum, która weryfikuje wszystkie transakcje w każdym bloku, dbając o bezpieczeństwo sieci i dokładność danych. **Węzły Ethereum to blockchain Ethereum**. Wspólnie przechowują one stan blockchaina Ethereum i osiągają konsensus w sprawie transakcji w celu zmiany stanu blockchaina.
 
-Poprzez połączenie swojej aplikacji z węzłem Ethereum (przez specyfikację JSON RPC), nasza aplikacja jest w stanie czytać dane pochodzące z blockchinu (takie jak bilans konta użytkownika), jak również rozgłaszać nowe transakcje do sieci (jak transfer ETH pomiędzy kontami użytkowników lub wykonywanie inteligentnych kontraktów).
+Łącząc swoją aplikację z węzłem Ethereum (za pośrednictwem [API JSON-RPC](/developers/docs/apis/json-rpc/)), twoja aplikacja jest w stanie odczytywać dane z blockchaina (takie jak salda kont użytkowników), a także rozgłaszać nowe transakcje do sieci (takie jak przesyłanie ETH między kontami użytkowników lub wykonywanie funkcji inteligentnych kontraktów).
 
-## Warstwa 4: Interfejsy API klienta Ethereum {#ethereum-client-apis}
+## Poziom 4: API klientów Ethereum {#ethereum-client-apis}
 
-Wiele wygodnych bibliotek (zbudowanych i utrzymywanych przez otwartą społeczność Ethereum) pozwala aplikacjom dla użytkowników końcowych na połączenie i komunikowanie z blockchianem Ethereum.
+Wiele wygodnych bibliotek (tworzonych i utrzymywanych przez społeczność open source Ethereum) pozwala twoim aplikacjom łączyć się i komunikować z blockchainem Ethereum.
 
-Jeśli twoja aplikacja skierowana do użytkownika jest aplikacją internetową, możesz wybrać `npm install` a [JavaScript API](/developers/docs/apis/javascript/) bezpośrednio w Twojej witrynie. Możemy także wybrać zainstalowanie tej funkcji po stronie serwera przy użyciu [Pythona](/developers/docs/programming-languages/python/) lub [Javy](/developers/docs/programming-languages/java/).
+Jeśli twoja aplikacja skierowana do użytkownika jest aplikacją internetową, możesz zdecydować się na `npm install` [API JavaScript](/developers/docs/apis/javascript/) bezpośrednio w swoim frontendzie. A może wolisz zaimplementować tę funkcjonalność po stronie serwera, używając API [Python](/developers/docs/programming-languages/python/) lub [Java](/developers/docs/programming-languages/java/).
 
-Chociaż API te nie są niezbędnymi elementami stosu, odsuwają one wiele bezpośrednich interakcyjnych złożoności z węzłem Ethereum. Zapewniają one także użyteczne funkcje (np. konwersję ETH na Gwei), dzięki czemu jako programiści możemy spędzić mniej czasu na zajmowaniu się zawiłościami klientów, a skupić się w głównej mierze na unikalnej funkcji naszej aplikacji.
+Chociaż te API nie są niezbędnym elementem stosu, abstrahują one znaczną część złożoności bezpośredniej interakcji z węzłem Ethereum. Zapewniają również funkcje narzędziowe (np. konwersję ETH na gwei), dzięki czemu jako programista możesz spędzać mniej czasu na radzeniu sobie z zawiłościami klientów Ethereum, a więcej na skupieniu się na funkcjonalności specyficznej dla twojej aplikacji.
 
-## Warstwa 5: Aplikacje użytkownika końcowego {#end-user-applications}
+## Poziom 5: Aplikacje dla użytkowników końcowych {#end-user-applications}
 
-Na samej górze stosu są aplikacje komunikujące się bezpośrednio z użytkownikiem. Są to standardowe aplikacje regularnie używane i budowane w dzisiejszych czasach: głównie aplikacje webowe i mobilne.
+Na najwyższym poziomie stosu znajdują się aplikacje skierowane do użytkownika. Są to standardowe aplikacje, których regularnie używasz i które dziś budujesz: przede wszystkim aplikacje internetowe i mobilne.
 
-Sposób, w jaki tworzone są te interfejsy użytkownika, pozostaje w gruncie rzeczy niezmieniony. Często użytkownicy nie muszą wiedzieć, że używana przez nich aplikacja została utworzona przy użyciu blockchainu.
+Sposób tworzenia tych interfejsów użytkownika pozostaje w zasadzie niezmieniony. Często użytkownicy nie będą musieli wiedzieć, że aplikacja, z której korzystają, jest zbudowana przy użyciu blockchaina.
 
-## Gotowy do stworzenia swojego stosu? {#ready-to-choose-your-stack}
+## Gotowy na wybór swojego stosu? {#ready-to-choose-your-stack}
 
-Sprawdź w przewodniku, w jaki sposób [przygotować lokalne środowisko deweloperskie](/developers/local-environment/) dla Twojej aplikacji na Ethereum.
+Sprawdź nasz przewodnik, aby [skonfigurować lokalne środowisko programistyczne](/developers/local-environment/) dla swojej aplikacji Ethereum.
 
 ## Dalsza lektura {#further-reading}
 
-_Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
+- [Architektura aplikacji Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
+
+_Znasz zasób społeczności, który ci pomógł? Edytuj tę stronę i dodaj go!_

@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-06-19T19:11:16.474Z",
+  "englishManifestHash": "6c1524a12610",
+  "placeholderOrder": [
+    "LINK-d1f55c",
+    "LINK-ab55fe",
+    "LINK-93832b",
+    "LINK-7e5ab7",
+    "LINK-a76617",
+    "LINK-2ff223",
+    "LINK-98bdc0",
+    "LINK-754df5",
+    "LINK-d59a01",
+    "LINK-f72dac",
+    "LINK-a7be73",
+    "LINK-d4d628",
+    "LINK-bf7eba",
+    "LINK-508400",
+    "LINK-277a26",
+    "LINK-00860f",
+    "LINK-8c766a",
+    "LINK-c3faa1",
+    "LINK-6a7344",
+    "LINK-973dea",
+    "LINK-2705ac",
+    "LINK-42f363",
+    "LINK-63efc2",
+    "LINK-fa1d80",
+    "LINK-f97824",
+    "LINK-916127",
+    "LINK-873d2b",
+    "LINK-db1769",
+    "LINK-fdaba1",
+    "LINK-7c285c",
+    "LINK-e54ee6",
+    "LINK-8d26d5",
+    "LINK-ea9290",
+    "LINK-acbb17",
+    "LINK-d77072"
+  ],
+  "placeholderMap": {
+    "LINK-d1f55c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-93832b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/anatomy/"
+      }
+    },
+    "LINK-7e5ab7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-a76617": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/compiling/"
+      }
+    },
+    "LINK-2ff223": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/compiling/"
+      }
+    },
+    "LINK-98bdc0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-754df5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/nodes-as-a-service/"
+      }
+    },
+    "LINK-d59a01": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/docs/tutorial/deploying"
+      }
+    },
+    "LINK-f72dac": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/forge/deploying"
+      }
+    },
+    "LINK-a7be73": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-d4d628": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/verifying/#source-code-verification-tools"
+      }
+    },
+    "LINK-bf7eba": {
+      "type": "link",
+      "values": {
+        "url": "https://remix.ethereum.org"
+      }
+    },
+    "LINK-508400": {
+      "type": "link",
+      "values": {
+        "url": "https://tenderly.co/"
+      }
+    },
+    "LINK-277a26": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.tenderly.co/"
+      }
+    },
+    "LINK-00860f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Tenderly"
+      }
+    },
+    "LINK-8c766a": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/eCWjuvt"
+      }
+    },
+    "LINK-c3faa1": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/getting-started/"
+      }
+    },
+    "LINK-6a7344": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/docs/tutorial/deploying"
+      }
+    },
+    "LINK-973dea": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/nomiclabs/hardhat"
+      }
+    },
+    "LINK-2705ac": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/TETZs2KK4k"
+      }
+    },
+    "LINK-42f363": {
+      "type": "link",
+      "values": {
+        "url": "https://portal.thirdweb.com/deploy/"
+      }
+    },
+    "LINK-63efc2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.crossmint.com"
+      }
+    },
+    "LINK-fa1d80": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.crossmint.com"
+      }
+    },
+    "LINK-f97824": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/crossmint"
+      }
+    },
+    "LINK-916127": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.crossmint.com"
+      }
+    },
+    "LINK-873d2b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/deploying-your-first-smart-contract/"
+      }
+    },
+    "LINK-db1769": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/hello-world-smart-contract/"
+      }
+    },
+    "LINK-fdaba1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/interact-with-other-contracts-from-solidity/"
+      }
+    },
+    "LINK-7c285c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/"
+      }
+    },
+    "LINK-e54ee6": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.openzeppelin.com/learn/deploying-and-interacting"
+      }
+    },
+    "LINK-8d26d5": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/docs/tutorial/deploying"
+      }
+    },
+    "LINK-ea9290": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    },
+    "LINK-acbb17": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    },
+    "LINK-d77072": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/nodes-as-a-service"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T19:11:16.474Z",
+      "status": "success"
+    }
+  }
+}

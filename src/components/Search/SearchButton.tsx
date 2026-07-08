@@ -1,10 +1,11 @@
 import { forwardRef } from "react"
-import { useTranslation } from "next-i18next"
-import { MdSearch } from "react-icons/md"
+import { Search } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
 import { Button, type ButtonProps } from "../ui/buttons/Button"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const SearchButton = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {
@@ -22,7 +23,7 @@ const SearchButton = forwardRef<HTMLButtonElement, ButtonProps>(
         isSecondary
         {...props}
       >
-        <MdSearch />
+        <Search />
       </Button>
     )
   }

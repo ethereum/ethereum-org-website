@@ -1,6 +1,6 @@
-import { useTranslation } from "next-i18next"
-
 import CardList, { type CardProps } from "@/components/CardList"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const MergeArticleList = () => {
   const { t } = useTranslation(["page-upgrades", "page-upgrades-index"])
@@ -54,7 +54,7 @@ const MergeArticleList = () => {
       description: t(
         "page-upgrades-index:page-upgrade-article-author-ethereum-foundation"
       ),
-      link: "https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix",
+      link: "https://github.com/ethereum/consensus-specs/tree/master/specs/bellatrix",
     },
     {
       title: t(

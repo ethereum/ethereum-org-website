@@ -1,7 +1,10 @@
 {
   "table-active": "活跃",
-  "table-filters": "筛选",
-  "table-showing": "显示中",
+  "table-browser-engines": "浏览器引擎",
+  "table-desktop-platforms": "桌面平台",
+  "table-filters": "筛选条件",
+  "table-mobile-platforms": "移动平台",
   "table-reset-filters": "重置",
-  "table-what-are-you-looking-for": "你要找什么?"
+  "table-showing": "显示",
+  "table-what-are-you-looking-for": "您在找什么？"
 }

@@ -30,4 +30,5 @@ export const convertToFileContributorFromCrowdin = (
     login: username,
     avatar_url: avatarUrl,
     html_url: `https://crowdin.com/profile/${username}`,
+    date: new Date(0).toString(),
   }))

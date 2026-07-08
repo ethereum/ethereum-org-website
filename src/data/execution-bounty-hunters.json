@@ -2,7 +2,12 @@
   {
     "username": "holiman",
     "name": "Martin Holst Swende",
-    "score": 42500
+    "score": 64500
+  },  
+  {
+    "username": "guidovranken",
+    "name": "Guido Vranken",
+    "score": 35250
   },
   {
     "username": "samczsun",
@@ -10,9 +15,24 @@
     "score": 35000
   },
   {
+    "username": "",
+    "name": "nrv (@nervoir)",
+    "score": 31000
+  },
+  {
+    "username": "revofusion",
+    "name": "Revofusion",
+    "score": 25000
+  },
+  {
     "username": "chainsecurity",
     "name": "ChainSecurity",
     "score": 24500
+  },
+  {
+    "username": "cyberthirst",
+    "name": "cyberthirst",
+    "score": 21000
   },
   {
     "username": "junorouse",
@@ -25,24 +45,19 @@
     "score": 20000
   },
   {
-    "username": "",
-    "name": "nrv (@nervoir)",
-    "score": 31000
-  },
-  {
     "username": "johnyangk",
     "name": "John Youngseok Yang (Software Platform Lab)",
     "score": 20000
   },
   {
-    "username": "guidovranken",
-    "name": "Guido Vranken",
-    "score": 34250
-  },
-  {
     "username": "peckshield",
     "name": "PeckShield",
     "score": 17000
+  },
+  {
+    "username": "iam-ned",
+    "name": "David Matosse",
+    "score": 16250
   },
   {
     "username": "itsunixiknowthis",
@@ -52,6 +67,11 @@
   {
     "username": "catageek",
     "name": "Bertrand Masius",
+    "score": 15000
+  },
+  {
+    "username": "VulSight",
+    "name": "VulSight",
     "score": 15000
   },
   {
@@ -67,7 +87,7 @@
   {
     "username": "",
     "name": "Bob Conan",
-    "score": 13000
+    "score": 14000
   },
   {
     "username": "lukaszmatczak",
@@ -90,6 +110,16 @@
     "score": 10000
   },
   {
+    "username": "ehdgks0627",
+    "name": "DongHan Kim",
+    "score": 10000
+  },
+  {
+    "username": "cantinaxyz",
+    "name": "Cantina",
+    "score": 10000
+  },
+  {
     "username": "",
     "name": "Sebastian Henningsen",
     "score": 8000
@@ -98,6 +128,11 @@
     "username": "",
     "name": "Dominic Brütsch",
     "score": 7500
+  },
+  {
+    "username": "r9295",
+    "name": "aarnavrotten",
+    "score": 5250
   },
   {
     "username": "HarryR",
@@ -125,8 +160,18 @@
     "score": 5000
   },
   {
+    "username": "Yenya030",
+    "name": "Yenya",
+    "score": 5000
+  },
+  {
     "username": "axic",
     "name": "Alex Beregszaszi",
+    "score": 3500
+  },
+  {
+    "username": "grandchildrice",
+    "name": "grandchildrice (Nyx Foundation)",
     "score": 3500
   },
   {
@@ -242,7 +287,7 @@
   {
     "username": "0xalpharush",
     "name": "alpharush",
-    "score": 1000
+    "score": 3000
   },
   {
     "username": "cybermong",
@@ -250,8 +295,48 @@
     "score": 1000
   },
   {
+    "username": "nerolation",
+    "name": "Toni Wahrstätter",
+    "score": 1000
+  },
+  {
     "username": "iosiro",
     "name": "iosiro",
+    "score": 1000
+  },
+  {
+    "username": "gln7",
+    "name": "gln",
+    "score": 1000
+  },
+  {
+    "username": "DELENE-TCHIO-ROMUALD",
+    "name": "Delene Tchio Romuald",
+    "score": 11250
+  },
+  {
+    "username": "Mart1i1n",
+    "name": "Mingfei Zhang",
+    "score": 1000
+  },
+  {
+    "username": "1033309821",
+    "name": "Fudong Wu",
+    "score": 1000
+  },
+  {
+    "username": "BlockianComp",
+    "name": "Blockian",
+    "score": 1000
+  },
+  {
+    "username": "Audittens",
+    "name": "Audittens",
+    "score": 1000
+  },
+  {
+    "username": "sonny2k",
+    "name": "sonny2k",
     "score": 1000
   },
   {
@@ -298,6 +383,16 @@
     "username": "wadeAlexC",
     "name": "Alexander Wade",
     "score": 500
+  },
+  {
+    "username": "rholterhus",
+    "name": "Riley Holterhus",
+    "score": 250
+  },
+  {
+    "username": "howydev",
+    "name": "Howy",
+    "score": 250
   },
   {
     "username": "gitpusha",

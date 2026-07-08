@@ -1,8 +1,10 @@
-import { useRouter } from "next/router"
-import { FaGithub } from "react-icons/fa"
+import { useLocale } from "next-intl"
 
+import Github from "@/components/icons/github.svg"
 import { Center, Flex } from "@/components/ui/flex"
 import { BaseLink, LinkProps } from "@/components/ui/Link"
+
+import { numberFormat } from "@/lib/utils/numbers"
 
 import Emoji from "./Emoji"
 
@@ -17,9 +19,9 @@ type GitStarsProps = Omit<LinkProps, "href" | "href"> & {
 }
 
 const GitStars = ({ gitHubRepo, hideStars, ...props }: GitStarsProps) => {
-  const { locale } = useRouter()
-  // Use Intl.NumberFormat to format the number for locale
-  const starsString = Intl.NumberFormat(locale, {
+  const locale = useLocale()
+  // Use numberFormat to format the number for locale
+  const starsString = numberFormat(locale, {
     compactDisplay: "short",
   }).format(gitHubRepo.stargazerCount)
 
@@ -32,11 +34,11 @@ const GitStars = ({ gitHubRepo, hideStars, ...props }: GitStarsProps) => {
     >
       <Flex className="items-stretch overflow-hidden rounded bg-background-medium">
         {hideStars ? (
-          <FaGithub className="m-1 text-2xl" />
+          <Github className="m-1 text-2xl" />
         ) : (
           <>
             <Center className="mx-1.5 w-9 justify-between text-2xl">
-              <FaGithub />
+              <Github />
               <Emoji text=":star:" />
             </Center>
             <Flex className="items-center bg-background-highlight px-1.5">

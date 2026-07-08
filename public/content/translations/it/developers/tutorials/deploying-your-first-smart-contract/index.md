@@ -1,13 +1,10 @@
 ---
-title: Distribuzione del primo Smart Contract
-description: Introduzione alla distribuzione del primo Smart Contract su una rete di prova Ethereum
+title: Distribuire il tuo primo smart contract
+description: Un'introduzione alla distribuzione del tuo primo smart contract su una rete di test di Ethereum
 author: "jdourlens"
-tags:
-  - "smart contract"
-  - "remix"
-  - "Solidity"
-  - "distribuzione"
+tags: ["smart contract", "Remix", "Solidity", "distribuzione"]
 skill: beginner
+breadcrumb: Distribuire il primo contratto
 lang: it
 published: 2020-04-03
 source: EthereumDev
@@ -15,15 +12,15 @@ sourceUrl: https://ethereumdev.io/deploying-your-first-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Sicuramente sarai entusiasta almeno quanto noi di [distribuire](/developers/docs/smart-contracts/deploying/) il tuo primo [Smart Contract](/developers/docs/smart-contracts/) e interagirvi sulla blockchain Ethereum.
+Immagino che tu sia entusiasta quanto noi di [distribuire](/developers/docs/smart-contracts/deploying/) e interagire con il tuo primo [smart contract](/developers/docs/smart-contracts/) sulla blockchain di Ethereum.
 
-Non preoccuparti, essendo il nostro primo smart contract, lo distribuiremo su una [rete locale di prova](/developers/docs/networks/) così che non ti costi nulla distribuirlo e giocarci quanto vuoi.
+Non preoccuparti, dato che è il nostro primo smart contract, lo distribuiremo su una [rete di test locale](/developers/docs/networks/) in modo che non ti costi nulla distribuirlo e giocarci quanto vuoi.
 
-## Scrittura del contratto {#writing-our-contract}
+## Scrivere il nostro contratto {#writing-our-contract}
 
-Il primo passaggio consiste nel [visitare Remix](https://remix.ethereum.org/) e creare un nuovo file. Nella parte in alto a sinistra dell'interfaccia di Remix, aggiungi un nuovo file e inserisci il nome che preferisci.
+Il primo passo è [visitare Remix](https://remix.ethereum.org/) e creare un nuovo file. Nella parte in alto a sinistra dell'interfaccia di Remix, aggiungi un nuovo file e inserisci il nome del file che desideri.
 
-![Aggiunta di un nuovo file all'interfaccia di Remix](./remix.png)
+![Adding a new file in the Remix interface](./remix.png)
 
 Nel nuovo file, incolleremo il seguente codice.
 
@@ -33,15 +30,15 @@ pragma solidity >=0.5.17;
 
 contract Counter {
 
-    // Public variable of type unsigned int to keep the number of counts
+    // Variabile pubblica di tipo unsigned int per mantenere il numero di conteggi
     uint256 public count = 0;
 
-    // Function that increments our counter
+    // Funzione che incrementa il nostro contatore
     function increment() public {
         count += 1;
     }
 
-    // Not necessary getter to get the count value
+    // Getter non necessario per ottenere il valore del conteggio
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -49,51 +46,51 @@ contract Counter {
 }
 ```
 
-Se sei familiare con la programmazione, puoi facilmente intuire cosa faccia questo programma. Ecco una spiegazione riga per riga:
+Se hai familiarità con la programmazione, puoi facilmente intuire cosa fa questo programma. Ecco una spiegazione riga per riga:
 
-- Riga 4: definiamo un contratto con il nome `Counter`.
-- Riga 7: il nostro contratto memorizza un numero intero senza firma `count` a partire da 0.
-- Riga 10: la prima funzione modificherà lo stato del contratto e incrementerà (`increment()`) la nostra variabile `count`.
-- Riga 15: la seconda funzione è solo un getter per leggere il valore della variabile `count` al di fuori dello Smart Contract. Nota che, dato che abbiamo definito la variabile `count` come pubblica, questo non è necessario. Lo indichiamo come esempio.
+- Riga 4: Definiamo un contratto con il nome `Counter`.
+- Riga 7: Il nostro contratto memorizza un intero senza segno (unsigned integer) chiamato `count` che parte da 0.
+- Riga 10: La prima funzione modificherà lo stato del contratto e incrementerà (`increment()`) la nostra variabile `count`.
+- Riga 15: La seconda funzione è solo un getter per poter leggere il valore della variabile `count` all'esterno dello smart contract. Nota che, poiché abbiamo definito la nostra variabile `count` come pubblica, questo non è necessario ma è mostrato come esempio.
 
-Questo è tutto per il nostro primo semplice Smart Contract. Come forse saprai, somiglia un po' un linguaggio di OOP (Programmazione Orientata agli Oggetti), come Java o C++. Ora è il momento di sperimentare con il contratto.
+Questo è tutto per il nostro primo semplice smart contract. Come forse saprai, assomiglia a una classe dei linguaggi di programmazione orientata agli oggetti (OOP) come Java o C++. Ora è il momento di giocare con il nostro contratto.
 
-## Distribuzione del contratto {#deploying-our-contract}
+## Distribuire il nostro contratto {#deploying-our-contract}
 
-Una volta scritto il nostro primo Smart Contract, è il momento di distribuirlo sulla blockchain per potervi interagire.
+Avendo scritto il nostro primissimo smart contract, ora lo distribuiremo sulla blockchain per poterci giocare.
 
-[Distribuire il primo Smart Contract sulla blockchain](/developers/docs/smart-contracts/deploying/) significa semplicemente inviare una transazione contenente il codice dello Smart Contract compilato senza specificare nessun destinatario.
+[Distribuire lo smart contract sulla blockchain](/developers/docs/smart-contracts/deploying/) consiste in realtà nell'inviare una transazione contenente il codice dello smart contract compilato senza specificare alcun destinatario.
 
-Dovremo per prima cosa [compilare il contratto](/developers/docs/smart-contracts/compiling/) facendo clic sull'icona di compilazione sul lato sinistro:
+Per prima cosa [compileremo il contratto](/developers/docs/smart-contracts/compiling/) cliccando sull'icona di compilazione sul lato sinistro:
 
-![L'icona compile nella toolbar di Remix](./remix-compile-button.png)
+![The compile icon in the Remix toolbar](./remix-compile-button.png)
 
-Poi facciamo clic sul pulsante di compilazione:
+Quindi clicca sul pulsante di compilazione:
 
-![Il pulsante compile nel compilatore Solidity di Remix](./remix-compile.png)
+![The compile button in the Remix solidity compiler](./remix-compile.png)
 
 Puoi scegliere di selezionare l'opzione "Auto compile" in modo che il contratto venga sempre compilato quando salvi il contenuto nell'editor di testo.
 
-Poi passa alla schermata per la distribuzione e l'esecuzione delle transazioni:
+Quindi naviga alla schermata "deploy and run transactions":
 
-![L'icona deploy nella toolbar di Remix](./remix-deploy.png)
+![The deploy icon in the Remix toolbar](./remix-deploy.png)
 
-Una volta sulla schermata di distribuzione ed esecuzione, controlla bene che appaia il nome del tuo contratto e fai clic su Deploy. Come puoi vedere in alto nella pagina, l'ambiente corrente è "JavaScript VM", che significa che distribuiremo il nostro Smart Contract e interagiremo con esso su una blockchain di test locale per poter effettuare test in modo più veloce e senza commissioni.
+Una volta nella schermata "deploy and run transactions", verifica che appaia il nome del tuo contratto e clicca su Deploy. Come puoi vedere nella parte superiore della pagina, l'ambiente corrente è "JavaScript VM", il che significa che distribuiremo e interagiremo con il nostro smart contract su una blockchain di test locale per poter testare più velocemente e senza alcuna commissione.
 
-![Il pulsante deploy nel compilatore Solidity di Remix](./remix-deploy-button.png)
+![The deploy button in the Remix solidity compiler](./remix-deploy-button.png)
 
-Una volta fatto clic sul pulsante "Deploy", il tuo contratto apparirà nella parte inferiore. Fai clic sulla freccia a sinistra per espanderlo, così da vederne il contenuto. Questa è la nostra variabile `counter`, la nostra funzione `increment()` e il getter `getCounter()`.
+Dopo aver cliccato sul pulsante "Deploy", vedrai apparire il tuo contratto in basso. Clicca sulla freccia a sinistra per espanderlo in modo da vedere il contenuto del nostro contratto. Questa è la nostra variabile `counter`, la nostra funzione `increment()` e il getter `getCounter()`.
 
-Se fai clic sul pulsante `count` o `getCount`, verrà recuperato e mostrato il contenuto della variabile `count` del contratto. Dato che non abbiamo ancora chiamato la funzione `increment`, questa dovrebbe indicare 0.
+Se clicchi sul pulsante `count` o `getCount`, recupererà effettivamente il contenuto della variabile `count` del contratto e lo visualizzerà. Poiché non abbiamo ancora chiamato la funzione `increment`, dovrebbe visualizzare 0.
 
-![Il pulsante function nel compilatore Solidity di Remix](./remix-function-button.png)
+![The function button in the Remix solidity compiler](./remix-function-button.png)
 
-Chiamiamo ora la funzione `increment` facendo clic sul pulsante. Appariranno i log delle transazioni nella parte inferiore della finestra. Vedrai che i log sono diversi quando premi il pulsante per recuperare i dati invece del pulsante `increment`. Questo perché leggere dati sulla blockchain non richiede alcuna transazione (scrittura) o commissione. Perché una transazione è richiesta solo quando si modifica lo stato della blockchain:
+Chiamiamo ora la funzione `increment` cliccando sul pulsante. Vedrai i log delle transazioni effettuate apparire nella parte inferiore della finestra. Noterai che i log sono diversi quando premi il pulsante per recuperare i dati rispetto al pulsante `increment`. Questo perché la lettura dei dati sulla blockchain non richiede alcuna transazione (scrittura) o commissione. Infatti, solo la modifica dello stato della blockchain richiede di effettuare una transazione:
 
-![Un log delle transazioni](./transaction-log.png)
+![A log of transactions](./transaction-log.png)
 
-Dopo aver scelto il pulsante increment che genererà una transazione per chiamare la funzione `increment()`, se facciamo clic di nuovo sui pulsanti count o getCount, leggiamo lo stato aggiornato del nostro Smart Contract con la variabile count maggiore di 0.
+Dopo aver premuto il pulsante di incremento che genererà una transazione per chiamare la nostra funzione `increment()`, se clicchiamo di nuovo sui pulsanti count o getCount leggeremo il nuovo stato aggiornato del nostro smart contract con la variabile count maggiore di 0.
 
-![Il nuovo stato dello Smart Contract aggiornato](./updated-state.png)
+![Newly updated state of the smart contract](./updated-state.png)
 
-Nel prossimo tutorial spiegheremo [come aggiungere eventi agli Smart Contract](/developers/tutorials/logging-events-smart-contracts/). Avere un log degli eventi è un modo comodo per eseguire il debug di uno Smart Contract e per capire cosa succede quando si chiama una funzione.
+Nel prossimo tutorial, tratteremo [come aggiungere eventi ai tuoi smart contract](/developers/tutorials/logging-events-smart-contracts/). Registrare i log degli eventi è un modo conveniente per eseguire il debug del tuo smart contract e capire cosa sta succedendo durante la chiamata di una funzione.

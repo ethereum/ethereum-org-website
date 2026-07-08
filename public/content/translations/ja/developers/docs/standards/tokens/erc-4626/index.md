@@ -1,26 +1,42 @@
 ---
-title: ERC-4626 トークン化ボールト規格
-description: 利回りボールトを対象とする規格。
+title: "ERC-4626 トークン化ヴォールト標準"
+description: "利回り付きヴォールトの標準。"
 lang: ja
 ---
 
 ## はじめに {#introduction}
 
-ERC-4626は、利回りボールトの技術的なパラメータを最適化し、統一するための規格です。 この規格は、ボールトに含まれる単一のERC-20トークンをどれだけ所有しているかを示すトークン化利回りボールトを作成するための標準APIを提供します。 ERC-4626はさらに、ERC-20に基づくトークン化ボールトのオプション拡張機能として、トークンの預入／引出および残高の読み取りといった基本的な機能を提供します。
+ERC-4626は、利回り付きヴォールトの技術的パラメータを最適化し、統一するための標準です。単一の原資産となるERC-20トークンのシェアを表す、トークン化された利回り付きヴォールトのための標準APIを提供します。また、ERC-4626は、ERC-20を利用するトークン化ヴォールトのオプションの拡張機能についても概説しており、トークンの入金、引き出し、残高の読み取りといった基本的な機能を提供します。
 
-**利回りボールトにおけるERC-4626の役割**
+**利回り付きヴォールトにおけるERC-4626の役割**
 
-レンディング市場、アグリゲータ、および内部で利回りが得られるトークンは、ユーザーが様々な戦略を駆使して暗号資産トークンから最適な利回りを獲得する上で有益です。 これらの戦略はそれぞれがわずかな違いを持つため、エラーが発生しやすい場合や開発リソースを浪費してしまう場合があります。
+レンディング市場、アグリゲーター、および本質的に利息を生むトークンは、さまざまな戦略を実行することで、ユーザーが暗号資産トークンで最高の利回りを見つけるのに役立ちます。これらの戦略はわずかな違いを伴って実行されるため、エラーが発生しやすくなったり、開発リソースを浪費したりする可能性があります。
 
-利回りボールトのデベロッパーは、ERC-4626を活用することで、より一貫性が高く堅牢な実装パターンを実現できるため、アプリケーションとの統合にかかる作業を軽減し、様々なアプリケーションにおいて利回りを獲得できるようにするための別途の取り組みを削減することができます。
+利回り付きヴォールトにERC-4626を導入することで、より一貫性のある堅牢な実装パターンが作成され、統合の労力が軽減されます。これにより、開発者が特別な労力をかけることなく、さまざまなアプリケーションで利回りへのアクセスが可能になります。
 
-ERC-4626トークンの詳細については、[EIP-4626](https://eips.ethereum.org/EIPS/eip-4626)をご覧ください。
+ERC-4626トークンの詳細については、[EIP-4626](https://eips.ethereum.org/EIPS/eip-4626)で説明されています。
 
-## 前提知識 {#prerequisites}
+**非同期ヴォールト拡張機能 (ERC-7540)**
 
-この記事をよく理解するには、まず[トークン規格](/developers/docs/standards/tokens/)および[ERC-20](/developers/docs/standards/tokens/erc-20/)に目を通すことをおすすめします。
+ERC-4626は、上限までのアトミックな入金と償還に最適化されています。上限に達すると、新規の入金や償還は送信できなくなります。この制限は、ヴォールトとインターフェースをとるための前提条件として非同期アクションや遅延を伴うスマート・コントラクト・システム（例：現実資産プロトコル、無担保レンディング・プロトコル、クロスチェーン・レンディング・プロトコル、リキッド・ステーキング・トークン (LST)、または保険のセーフティモジュールなど）ではうまく機能しません。
 
-## ERC-4626の機能と特長: {#body}
+ERC-7540は、非同期のユースケース向けにERC-4626ヴォールトの有用性を拡張します。既存のヴォールトのインターフェース（`deposit`/`withdraw`/`mint`/`redeem`）は、非同期リクエストを請求するために完全に活用されます。
+
+ERC-7540拡張機能の詳細については、[ERC-7540](https://eips.ethereum.org/EIPS/eip-7540)で説明されています。
+
+**マルチアセット・ヴォールト拡張機能 (ERC-7575)**
+
+ERC-4626でサポートされていないユースケースの1つに、流動性プロバイダー (LP) トークンのような複数の資産やエントリーポイントを持つヴォールトがあります。ERC-4626自体がERC-20である必要があるため、これらは一般的に扱いにくいか、準拠していません。
+
+ERC-7575は、ERC-20トークンの実装をERC-4626の実装から外部化することで、複数の資産を持つヴォールトのサポートを追加します。
+
+ERC-7575拡張機能の詳細については、[ERC-7575](https://eips.ethereum.org/EIPS/eip-7575)で説明されています。
+
+## 前提条件 {#prerequisites}
+
+このページをよりよく理解するために、まず[トークン標準](/developers/docs/standards/tokens/)と[ERC-20](/developers/docs/standards/tokens/erc-20/)について読むことをお勧めします。
+
+## ERC-4626の機能と特徴: {#body}
 
 ### メソッド {#methods}
 
@@ -30,7 +46,7 @@ ERC-4626トークンの詳細については、[EIP-4626](https://eips.ethereum.
 function asset() public view returns (address assetTokenAddress)
 ```
 
-この関数は、会計処理、入金、および引出のために当該ボールトが使用される原資トークンのアドレスを返します。
+この関数は、会計、入金、引き出しのためにヴォールトで使用される原資産トークンのアドレスを返します。
 
 #### totalAssets {#totalassets}
 
@@ -38,7 +54,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-この関数は、当該ボールトで所有される原資産の総額を返します。
+この関数は、ヴォールトが保有する原資産の総量を返します。
 
 #### convertToShares {#convertoshares}
 
@@ -46,7 +62,7 @@ function totalAssets() public view returns (uint256)
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-この関数は、当該ボールトに提供された`assets`の量に対して交換される`shares`の量を返します。
+この関数は、提供された`assets`の量に対して、ヴォールトが交換する`shares`の量を返します。
 
 #### convertToAssets {#convertoassets}
 
@@ -54,7 +70,7 @@ function convertToShares(uint256 assets) public view returns (uint256 shares)
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
-この関数は、当該ボールトに提供された`shares`の量に対して交換される`assets`の量を返します。
+この関数は、提供された`shares`の量に対して、ヴォールトが交換する`assets`の量を返します。
 
 #### maxDeposit {#maxdeposit}
 
@@ -62,7 +78,7 @@ function convertToAssets(uint256 shares) public view returns (uint256 assets)
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-この関数は、`receiver`が1回の[`deposit`](#deposit)呼び出しで入金できる原資産の上限を返します。
+この関数は、1回の[`deposit`](#deposit)呼び出しで入金できる原資産の最大量を返します。この際、シェアは`receiver`のためにミントされます。
 
 #### previewDeposit {#previewdeposit}
 
@@ -70,15 +86,15 @@ function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
-この関数は、入金が現在のブロックに対してどのような影響をもたらすかをシミュレーションします。
+この関数を使用すると、ユーザーは現在のブロックでの入金の影響をシミュレートできます。
 
-#### 入金 {#deposit}
+#### deposit {#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-この関数は、原資産トークンの`assets`をボールトに入金し、受信者に`shares`の所有権を付与します。
+この関数は、`assets`の原資産トークンをヴォールトに入金し、`shares`の所有権を`receiver`に付与します。
 
 #### maxMint {#maxmint}
 
@@ -86,7 +102,7 @@ function deposit(uint256 assets, address receiver) public returns (uint256 share
 function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-この関数は、`receiver`による1回の[`mint`](#mint)の呼び出しにより、ミント可能なシェア数の上限を返します。
+この関数は、1回の[`mint`](#mint)呼び出しでミントできるシェアの最大量を返します。この際、シェアは`receiver`のためにミントされます。
 
 #### previewMint {#previewmint}
 
@@ -94,15 +110,15 @@ function maxMint(address receiver) public view returns (uint256 maxShares)
 function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
-この関数は、現在のブロックにおける当該ミントの影響をシミュレーションします。
+この関数を使用すると、ユーザーは現在のブロックでのミントの影響をシミュレートできます。
 
-#### mint(ミント) {#mint}
+#### mint {#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-この関数は、原資産トークンの`assets`を預け入れることで、`recevier`のボールトに対して特定の量の`shares`をミントします。
+この関数は、`assets`の原資産トークンを入金することで、正確に`shares`のヴォールトシェアを`receiver`にミントします。
 
 #### maxWithdraw {#maxwithdraw}
 
@@ -110,7 +126,7 @@ function mint(uint256 shares, address receiver) public returns (uint256 assets)
 function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
-この関数は、1回の[`withdraw`](#withdraw)呼び出しにより、`owner`残高から引き出し可能な原資産アセットの上限を返します。
+この関数は、1回の[`withdraw`](#withdraw)呼び出しで`owner`の残高から引き出し可能な原資産の最大量を返します。
 
 #### previewWithdraw {#previewwithdraw}
 
@@ -118,15 +134,15 @@ function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
-この関数は、当該引き出しが現在のブロックに与える影響をシミュレーションします。
+この関数を使用すると、ユーザーは現在のブロックでの引き出しの影響をシミュレートできます。
 
-#### 引き出し {#withdraw}
+#### withdraw {#withdraw}
 
 ```solidity
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-この関数は、`owner`が所有する`shares`をバーンし、正確に一致した`assets`トークンをボールトから`receiver`に送信します。
+この関数は、`owner`から`shares`をバーンし、正確に`assets`のトークンをヴォールトから`receiver`に送信します。
 
 #### maxRedeem {#maxredeem}
 
@@ -134,7 +150,7 @@ function withdraw(uint256 assets, address receiver, address owner) public return
 function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
-この関数は、[`redeem`](#redeem)の呼び出しにより、`owner`の残高から受け取ることができるシェアの上限を返します。
+この関数は、[`redeem`](#redeem)呼び出しを通じて`owner`の残高から償還できるシェアの最大量を返します。
 
 #### previewRedeem {#previewredeem}
 
@@ -142,7 +158,7 @@ function maxRedeem(address owner) public view returns (uint256 maxShares)
 function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
-この関数は、シェアの受け取りが現在のブロックに与える影響をシミュレーションします。
+この関数を使用すると、ユーザーは現在のブロックでの償還の影響をシミュレートできます。
 
 #### redeem {#redeem}
 
@@ -150,7 +166,7 @@ function previewRedeem(uint256 shares) public view returns (uint256 assets)
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-この関数は、一定量の`shares`を`owner`から回収し、原資トークンの`assets`をボールトから`receiver`に送信します。
+この関数は、`owner`から特定の数の`shares`を償還し、`assets`の原資産トークンをヴォールトから`receiver`に送信します。
 
 #### totalSupply {#totalsupply}
 
@@ -158,7 +174,7 @@ function redeem(uint256 shares, address receiver, address owner) public returns 
 function totalSupply() public view returns (uint256)
 ```
 
-ボールト内で流通している未償還のシェアの合計数を返します。
+流通している未償還のヴォールトシェアの総数を返します。
 
 #### balanceOf {#balanceof}
 
@@ -166,17 +182,17 @@ function totalSupply() public view returns (uint256)
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-`owner`が現在ボールトで所有しているシェアの総数を返します。
+`owner`が現在保有しているヴォールトシェアの総量を返します。
 
-### インターフェースのマップ {#mapOfTheInterface}
+### インターフェースのマップ {#mapoftheinterface}
 
-![ERC-4626インターフェースのマップ](./map-of-erc-4626.png)
+![Map of the ERC-4626 interface](./map-of-erc-4626.png)
 
 ### イベント {#events}
 
-#### 入金イベント
+#### Depositイベント {#deposit-event}
 
-[`mint`](#mint)あるいは[`deposit`](#deposit)メソッドによりトークンをボールトに入金する際に、**必ず**発行しなければなりません。
+[`mint`](#mint)および[`deposit`](#deposit)メソッドを介してトークンがヴォールトに入金されたときに発行されなければ**なりません**。
 
 ```solidity
 event Deposit(
@@ -187,11 +203,11 @@ event Deposit(
 )
 ```
 
-このコードにおける`sender`とは、 `assets`を`shares`に交換して、`shares`を`owner`に転送するユーザーです。
+ここで、`sender`は`assets`を`shares`に交換し、その`shares`を`owner`に転送したユーザーです。
 
-#### 出金イベント
+#### Withdrawイベント {#withdraw-event}
 
-[`redeem`](#redeem) あるいは [`withdraw`](#withdraw)メソッドにより、預金者がボールトからシェアを引き出す際に、**必ず**発行しなければなりません。
+[`redeem`](#redeem)または[`withdraw`](#withdraw)メソッドで入金者によってヴォールトからシェアが引き出されたときに発行されなければ**なりません**。
 
 ```solidity
 event Withdraw(
@@ -203,9 +219,9 @@ event Withdraw(
 )
 ```
 
-このコードにおける`sender`とは、出金をトリガーし、`owner`が所有する`shares`を`assets`と交換するユーザーです。 `receiver`は、出金された`assets`を受け取ったユーザーです。
+ここで、`sender`は引き出しをトリガーし、`owner`が所有する`shares`を`assets`に交換したユーザーです。`receiver`は、引き出された`assets`を受け取ったユーザーです。
 
 ## 参考文献 {#further-reading}
 
-- [EIP-4626: トークン化ボールト規格](https://eips.ethereum.org/EIPS/eip-4626)
+- [EIP-4626: トークン化ヴォールト標準](https://eips.ethereum.org/EIPS/eip-4626)
 - [ERC-4626: GitHubリポジトリ](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

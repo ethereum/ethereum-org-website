@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-05-26T10:06:31.518Z",
+  "englishManifestHash": "b2a579282d7b",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "HTML-TAG-1",
+    "HTML-TAG-2",
+    "HTML-TAG-3",
+    "HTML-TAG-4"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#smart-contract"
+      }
+    },
+    "HTML-TAG-1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#dapp"
+      }
+    },
+    "HTML-TAG-2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#dex"
+      }
+    },
+    "HTML-TAG-3": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/glossary/#anti-sybil"
+      }
+    },
+    "HTML-TAG-4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/gas/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-05-26T10:06:31.518Z",
+      "status": "success"
+    }
+  }
+}

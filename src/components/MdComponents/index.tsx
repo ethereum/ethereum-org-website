@@ -1,124 +1,79 @@
-import { type ComponentProps, type HTMLAttributes } from "react"
+import { type HTMLAttributes } from "react"
 
-import type { ChildOnlyProp } from "@/lib/types"
-
+import Codeblock from "@/components/Codeblock"
+import { RestakingList } from "@/components/Content/restaking/RestakingList"
+import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
+import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsStories"
 import Contributors from "@/components/Contributors"
-import MarkdownImage from "@/components/MarkdownImage"
+import DocLink from "@/components/DocLink"
+import Emoji from "@/components/Emoji"
+import ExpandableCard, {
+  type ExpandableCardProps,
+} from "@/components/ExpandableCard"
+import FeaturedText from "@/components/FeaturedText"
+import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
+import IdAnchor from "@/components/IdAnchor"
+import MarkdownImage from "@/components/Image/MarkdownImage" // TODO: Pull into MdComponents
+import IssuesList from "@/components/IssuesList"
+import LocaleDateTime from "@/components/LocaleDateTime"
+import MarkdownCard from "@/components/MarkdownCard"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
+import TweetEmbed from "@/components/TweetEmbed"
+import * as AlertComponents from "@/components/ui/alert"
+import Blockquote from "@/components/ui/blockquote"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Grid } from "@/components/ui/grid"
+import HR, { Divider } from "@/components/ui/hr"
+import KBD from "@/components/ui/kbd"
+import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
+import { mdxTableComponents } from "@/components/ui/mdx-table-components"
+import { Tag } from "@/components/ui/tag"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
 
-import ContributorsQuizBanner from "../Banners/ContributorsQuizBanner"
-import Card from "../Card"
-import DocLink from "../DocLink"
-import Emoji from "../Emoji"
-import ExpandableCard from "../ExpandableCard"
-import FeaturedText from "../FeaturedText"
-import GlossaryTooltip from "../Glossary/GlossaryTooltip"
-import IdAnchor from "../IdAnchor"
-import InfoBanner from "../InfoBanner"
-import IssuesList from "../IssuesList"
-import LocaleDateTime from "../LocaleDateTime"
-import MainArticle from "../MainArticle"
-import { StandaloneQuizWidget } from "../Quiz/QuizWidget"
-import { ButtonLink } from "../ui/buttons/Button"
-import { Divider } from "../ui/divider"
-import { Flex } from "../ui/flex"
-import { ListItem, OrderedList, UnorderedList } from "../ui/list"
-import { mdxTableComponents } from "../ui/Table"
-import { Tag } from "../ui/tag"
-
-export const commonHeadingAttributes = (className: string, id?: string) => ({
-  id,
-  className: cn(
-    "font-bold leading-xs my-8",
-    id && "scroll-mt-28 relative group",
-    className
-  ),
-  "data-group": !!id || undefined,
-})
-
 type HeadingProps = HTMLAttributes<HTMLHeadingElement>
 
-export const Heading1 = ({ children, className, ...rest }: HeadingProps) => (
-  <h1 {...commonHeadingAttributes(cn("text-[2.5rem]", className))} {...rest}>
-    {children}
-  </h1>
-)
-
-export const Heading2 = ({
+export const HeadingWithId = ({
   id,
   children,
   className,
+  as,
   ...rest
-}: HeadingProps) => (
-  <h2
-    {...commonHeadingAttributes(cn("text-[2rem] mt-16", className), id)}
-    {...rest}
-  >
-    <IdAnchor id={id} />
-    {children}
-  </h2>
-)
+}: HeadingProps & { as?: "h3" | "h4" }) => {
+  const Heading = as || "h2"
+  return (
+    <Heading
+      id={id}
+      className={cn("group relative", className)}
+      data-group
+      {...rest}
+    >
+      <IdAnchor id={id} />
+      {children}
+    </Heading>
+  )
+}
 
-export const Heading3 = ({
-  id,
-  children,
-  className,
-  ...rest
-}: HeadingProps) => (
-  <h3
-    {...commonHeadingAttributes(cn("text-2xl mt-10", className), id)}
-    {...rest}
-  >
-    <IdAnchor id={id} />
-    {children}
-  </h3>
-)
-
-export const Heading4 = ({
-  id,
-  children,
-  className,
-  ...rest
-}: HeadingProps) => (
-  <h4
-    {...commonHeadingAttributes(cn("text-xl font-semibold", className), id)}
-    {...rest}
-  >
-    <IdAnchor id={id} />
-    {children}
-  </h4>
-)
-
-export const Pre = (props: ChildOnlyProp) => (
-  <pre
-    className="max-w-full overflow-x-scroll whitespace-pre-wrap rounded border bg-background-highlight p-4"
-    {...props}
-  />
-)
-
-export const Paragraph = (props: ChildOnlyProp) => (
-  <p className="mb-4 mt-8" {...props} />
-)
-
-export const HR = () => (
-  <hr className="mb-4 mt-8 inline-block w-full border-body-medium opacity-60" />
-)
+export const Pre = (props: HTMLAttributes<HTMLDivElement>) => {
+  const match = props.className?.match(/(language-\S+)/)
+  const codeLanguage = match ? match[0] : "plain-text"
+  return <Codeblock codeLanguage={codeLanguage} {...props} />
+}
 
 // All base html element components
 export const htmlElements = {
   a: TooltipLink,
-  h1: Heading1,
-  h2: Heading2,
-  h3: Heading3,
-  h4: Heading4,
+  blockquote: Blockquote,
+  h2: (props: HeadingProps) => <HeadingWithId {...props} />,
+  h3: (props: HeadingProps) => <HeadingWithId as="h3" {...props} />,
+  h4: (props: HeadingProps) => <HeadingWithId as="h4" {...props} />,
   hr: HR,
   img: MarkdownImage,
+  kbd: KBD,
   li: ListItem,
   ol: OrderedList,
-  p: Paragraph,
   pre: Pre,
   time: LocaleDateTime,
   ul: UnorderedList,
@@ -128,48 +83,40 @@ export const htmlElements = {
 /**
  * Custom React components
  */
-export const Page = ({
+const { Alert, ...AlertSubComponents } = AlertComponents
+
+const AlertWithMargins = ({ className, ...props }) => (
+  <Alert className={cn(className)} {...props} />
+)
+
+export const ExpandableCardWithMargin = ({
   className,
   ...props
-}: HTMLAttributes<HTMLDivElement>) => (
-  <Flex
-    className={cn(
-      "mx-auto mb-16 w-full flex-col justify-between lg:flex-row lg:pt-16 lg:first-of-type:[&_h2]:mt-0",
-      className
-    )}
-    {...props}
-  />
+}: ExpandableCardProps) => (
+  <ExpandableCard className={cn("mb-4", className)} {...props} />
 )
-
-export const Title = (props: ChildOnlyProp) => (
-  <Heading1 className="mt-4" {...props} />
-)
-
-export const ContentContainer = (props: ComponentProps<"article">) => {
-  return (
-    <MainArticle className="relative flex-[1_1_992px] px-8 pb-8" {...props} />
-  )
-}
 
 // All custom React components
 export const reactComponents = {
+  Alert: AlertWithMargins,
+  ...AlertSubComponents,
+  BrowseApps,
   ButtonLink,
-  Card,
-  ContentContainer,
+  Card: MarkdownCard,
   Contributors,
-  ContributorsQuizBanner,
   Divider,
   DocLink,
   Emoji,
-  ExpandableCard,
+  ExpandableCard: ExpandableCardWithMargin,
   FeaturedText,
   GlossaryTooltip,
-  InfoBanner,
-  Page,
+  Grid,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
+  RestakingList,
   Tag,
-  Title,
+  TweetEmbed,
+  WhatAreAppsStories,
   YouTube,
 }
 

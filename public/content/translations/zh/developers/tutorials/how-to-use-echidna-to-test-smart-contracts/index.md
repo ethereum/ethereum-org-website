@@ -1,71 +1,72 @@
 ---
-title: 如何使用 Echidna 测试智能合约
-description: 如何使用 Echidna 自动测试智能合约
-author: "Trailofbits"
+title: "如何使用埃基德纳 (Echidna) 测试智能合约"
+description: "如何使用埃基德纳自动测试智能合约"
+author: Trailofbits
 lang: zh
 tags:
-  - "solidity"
-  - "智能合约"
-  - "安全性"
-  - "测试"
-  - "模糊测试"
+  - Solidity
+  - 智能合约
+  - 安全
+  - 测试
+  - 模糊测试
 skill: advanced
+breadcrumb: "埃基德纳"
 published: 2020-04-10
-source: 构建安全的合约
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 
 ## 安装 {#installation}
 
-Echidna 可以通过 docker 或使用预编译的二进制程序安装。
+可以通过 Docker 或使用预编译的二进制文件来安装埃基德纳。
 
-### 通过 docker 安装 Echidna {#echidna-through-docker}
+### 通过 Docker 安装埃基德纳 {#echidna-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
 docker run -it -v "$PWD":/home/training trailofbits/eth-security-toolbox
 ```
 
-_最后一个命令在有权访问当前目录的 docker 中运行 eth-security-toolbox。 你可以从主机更改文件，并在 docker 中对文件运行工具_
+_最后一条命令在 Docker 中运行 eth-security-toolbox，该 Docker 可以访问你当前的目录。你可以从主机更改文件，并在 Docker 中对这些文件运行工具_
 
-在 docker 中，运行：
+在 Docker 内部，运行：
 
 ```bash
 solc-select 0.5.11
 cd /home/training
 ```
 
-### 通过二进制程序安装 {#binary}
+### 二进制文件 {#binary}
 
 [https://github.com/crytic/echidna/releases/tag/v1.4.0.0](https://github.com/crytic/echidna/releases/tag/v1.4.0.0)
 
 ## 基于属性的模糊测试简介 {#introduction-to-property-based-fuzzing}
 
-Echidna 是一个模糊测试工具，我们在之前的博客中描述过（[1](https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/)、[2](https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/)、[3](https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/)）。
+埃基德纳是一个基于属性的模糊测试工具，我们在之前的博客文章中对其进行了描述（[1](https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/)、[2](https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/)、[3](https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/)）。
 
 ### 模糊测试 {#fuzzing}
 
-[模糊测试](https://wikipedia.org/wiki/Fuzzing)是一项在安全技术领域广为人知的技术。 它包括生成或多或少随机的算法输入，以查找程序中的漏洞。 传统软件中的模糊测试工具（例如 [AFL](http://lcamtuf.coredump.cx/afl/) 或 [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)）是发现错误的有效工具。
+[模糊测试](https://wikipedia.org/wiki/Fuzzing)是安全社区中一项众所周知的技术。它包括生成或多或少随机的输入，以发现程序中的错误。用于传统软件的模糊测试工具（例如 [AFL](http://lcamtuf.coredump.cx/afl/) 或 [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)）被认为是发现错误的有效工具。
 
-除了完全随机生成输入值外，还有很多其他的技巧和策略来生成足够好的输入，包括：
+除了纯粹随机生成输入之外，还有许多技术和策略可以生成良好的输入，包括：
 
-- 从每次执行中获取反馈，并使用反馈来指导输入的生成。 例如，如果新生成的输入导致发现一条新的路径，那么，生成接近该路径的新输入是有意义的。
-- 根据结构限制生成输入。 例如，如果你的输入包含一个带有校验和的报文头，则让模糊测试工具生成能够验证校验和的输入将会是很有意义的。
-- 使用已知输入生成新输入：如果你有权访问一个有效输入的大型数据集， 则模糊测试工具可以从中生成新的输入，而不是从头开始生成。 这些通常称为 _种子_。
+- 从每次执行中获取反馈并利用它来指导生成。例如，如果新生成的输入导致了新路径的发现，那么生成接近它的新输入是有意义的。
+- 遵循结构约束生成输入。例如，如果你的输入包含带有校验和的标头，那么让模糊测试工具生成验证校验和的输入是有意义的。
+- 使用已知输入生成新输入：如果你可以访问大量有效输入的数据集，你的模糊测试工具可以从中生成新输入，而不是从头开始生成。这些通常被称为_种子 (seeds)_。
 
 ### 基于属性的模糊测试 {#property-based-fuzzing}
 
-Echidna 属于一种特定的模糊测试工具系列：基于属性的模糊测试，很大程度上受到了 [QuickCheck](https://wikipedia.org/wiki/QuickCheck) 的启发。 与尝试查找崩溃的经典模糊测试工具不同，Echedna 会试图去改变用户定义的不变量。
+埃基德纳属于一个特定的模糊测试工具家族：深受 [QuickCheck](https://wikipedia.org/wiki/QuickCheck) 启发的基于属性的模糊测试。与试图寻找崩溃的经典模糊测试工具相反，埃基德纳将尝试打破用户定义的不变量。
 
-在智能合约中，不变量是 Solidity 函数，可以表示合约可能达到的任何错误或无效状态，包括：
+在智能合约中，不变量是 Solidity 函数，它可以表示合约可能达到的任何不正确或无效的状态，包括：
 
-- 不正确的访问控制：攻击者变成了合约的所有者。
-- 不正确的状态机：合约暂停时代币仍然可以传输。
-- 不正确的算法：用户可以余额不足的情况下获得无限的免费代币。
+- 不正确的访问控制：攻击者成为了合约的所有者。
+- 不正确的状态机：在合约暂停时可以转移代币。
+- 不正确的算术运算：用户的余额可能发生下溢，从而获得无限的免费代币。
 
-### 使用 Echidna 测试属性 {#testing-a-property-with-echidna}
+### 使用埃基德纳测试属性 {#testing-a-property-with-echidna}
 
-我们来看看如何使用 Echidna 测试智能合约。 目标是以下智能合约 [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol)：
+我们将了解如何使用埃基德纳测试智能合约。目标是以下智能合约 [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol)：
 
 ```solidity
 contract Token{
@@ -83,26 +84,26 @@ contract Token{
 }
 ```
 
-我们假定此代币必须具有以下属性：
+我们将假设该代币必须具有以下属性：
 
-- 任何人最多可以持有 1000 代币
-- 代币不能转移（它不是 ERC20 代币）
+- 任何人最多只能拥有 1000 个代币
+- 该代币不能被转移（它不是 ERC-20 代币）
 
-### 写入属性 {#write-a-property}
+### 编写属性 {#write-a-property}
 
-Echidna 的属性是 Solidity 函数。 一个属性必须：
+埃基德纳属性是 Solidity 函数。一个属性必须：
 
-- 没有任何参数
-- 如果成功就返回 `true`
-- 其名字以 `echidna` 开头
+- 没有参数
+- 如果成功，则返回 `true`
+- 其名称以 `echidna` 开头
 
-Echidna 将：
+埃基德纳将：
 
-- 自动生成任意交易来测试属性。
-- 报告导致属性返回 `false` 或引发错误的任何交易。
-- 调用属性时丢弃负面影响（即，如果属性改变了一个状态变量，则在测试后会被丢弃）
+- 自动生成任意交易来测试该属性。
+- 报告任何导致属性返回 `false` 或抛出错误的交易。
+- 在调用属性时丢弃副作用（即，如果属性更改了状态变量，则在测试后将其丢弃）
 
-以下属性会检查调用者持有的代币是否不超过 1000 个：
+以下属性检查调用者拥有的代币是否不超过 1000 个：
 
 ```solidity
 function echidna_balance_under_1000() public view returns(bool){
@@ -110,7 +111,7 @@ function echidna_balance_under_1000() public view returns(bool){
 }
 ```
 
-使用继承将合约与属性分开：
+使用继承将你的合约与你的属性分开：
 
 ```solidity
 contract TestToken is Token{
@@ -120,28 +121,28 @@ contract TestToken is Token{
   }
 ```
 
-[`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol) 实现了这个属性并继承了代币。
+[`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol) 实现了该属性并继承自该代币。
 
 ### 初始化合约 {#initiate-a-contract}
 
-Echidna 需要一个无参 [构造函数](/developers/docs/smart-contracts/anatomy/#constructor-functions)。 如果你的合约需要特定的初始化，则需要相应地改变构造函数。
+埃基德纳需要一个没有参数的[构造函数](/developers/docs/smart-contracts/anatomy/#constructor-functions)。如果你的合约需要特定的初始化，你需要在构造函数中进行。
 
-Echidna 中有一些特定的地址：
+埃基德纳中有一些特定的地址：
 
-- `0x00a329c0648769A73afAc7F9381E08FB43dBEA72` 用于调用构造函数。
-- `0x10000`、`0x20000` 和 `0x00a329C0648769a73afAC7F9381e08fb43DBEA70` 用于随机调用其他函数。
+- `0x00a329c0648769A73afAc7F9381E08FB43dBEA72` 调用构造函数。
+- `0x10000`、`0x20000` 和 `0x00a329C0648769a73afAC7F9381e08fb43DBEA70` 随机调用其他函数。
 
-在当前的示例中，我们不需要进行任何特定的初始化，因为我们的构造函数是空的。
+在我们当前的示例中，我们不需要任何特定的初始化，因此我们的构造函数是空的。
 
-### 运行 Echidna {#run-echidna}
+### 运行埃基德纳 {#run-echidna}
 
-用此命令启动 Echidna：
+使用以下命令启动埃基德纳：
 
 ```bash
 echidna-test contract.sol
 ```
 
-如果 contract.sol 包含多个合约，你可以指定目标合约：
+如果 contract.sol 包含多个合约，你可以指定目标：
 
 ```bash
 echidna-test contract.sol --contract MyContract
@@ -149,7 +150,7 @@ echidna-test contract.sol --contract MyContract
 
 ### 总结：测试属性 {#summary-testing-a-property}
 
-下面总结了我们示例中 Echidna 的运行情况：
+以下总结了埃基德纳在我们示例上的运行情况：
 
 ```solidity
 contract TestToken is Token{
@@ -172,11 +173,12 @@ echidna_balance_under_1000: failed!💥
 ...
 ```
 
-如果 `backdoor` 被调用，Echidna 会发现与该属性发生冲突。
+埃基德纳发现，如果调用 `backdoor`，则该属性会被违反。
 
-## 过滤在模糊测试期间要调用的函数 {#filtering-functions-to-call-during-a-fuzzing-campaign}
+## 在模糊测试活动期间过滤要调用的函数 {#filtering-functions-to-call-during-a-fuzzing-campaign}
 
-我们来了解如何过滤要进行模糊测试的函数。 目标是以下智能合约：
+我们将了解如何过滤要进行模糊测试的函数。
+目标是以下智能合约：
 
 ```solidity
 contract C {
@@ -227,7 +229,9 @@ contract C {
 }
 ```
 
-这个小例子迫使 Echidna 找到特定的交易序列来改变一个状态变量。 这对一个模糊测试工具来说很困难（建议使用符号执行工具，比如 [Manticore](https://github.com/trailofbits/manticore)）。 我们可以运行 Echidna 对此进行验证：
+这个小示例迫使埃基德纳找到特定的交易序列来更改状态变量。
+这对于模糊测试工具来说很困难（建议使用像 [曼蒂科尔 (Manticore)](https://github.com/trailofbits/manticore) 这样的符号执行工具）。
+我们可以运行埃基德纳来验证这一点：
 
 ```bash
 echidna-test multi.sol
@@ -238,28 +242,30 @@ Seed: -3684648582249875403
 
 ### 过滤函数 {#filtering-functions}
 
-Echidna 很难找到测试此合约的正确序列，因为两个重置函数（`reset1` 和 `reset2`）会将所有状态变量设置为 `false`。 但是，我们可以使用特殊的 Echidna 功能将重置函数列入黑名单，或者仅将 `f`、`g`、`h` 和 `i` 列入白名单。
+埃基德纳很难找到正确的序列来测试此合约，因为两个重置函数（`reset1` 和 `reset2`）会将所有状态变量设置为 `false`。
+但是，我们可以使用特殊的埃基德纳功能将重置函数列入黑名单，或者仅将 `f`、`g`、
+`h` 和 `i` 函数列入白名单。
 
-要将函数列入黑名单，我们可以使用下面这个配置文件：
+要将函数列入黑名单，我们可以使用此配置文件：
 
 ```yaml
 filterBlacklist: true
 filterFunctions: ["reset1", "reset2"]
 ```
 
-过滤函数的另一个方法是列出白名单里的函数。 为此，我们可以使用下面这个配置文件：
+过滤函数的另一种方法是列出白名单函数。为此，我们可以使用此配置文件：
 
 ```yaml
 filterBlacklist: false
 filterFunctions: ["f", "g", "h", "i"]
 ```
 
-- 默认情况下，`filterBlacklist` 为 `true`。
-- 只能通过名字进行过滤（不带参数）。 如果你有 `f()` 和 `f(uint256)` 两个函数，则过滤器 `"f"` 会匹配出这两个函数。
+- `filterBlacklist` 默认为 `true`。
+- 过滤将仅按名称执行（不带参数）。如果你有 `f()` 和 `f(uint256)`，则过滤器 `"f"` 将匹配这两个函数。
 
-### 运行 Echidna {#run-echidna-1}
+### 运行埃基德纳 {#run-echidna-1}
 
-使用配置文件 `blacklist.yaml` 运行 Echidna：
+要使用配置文件 `blacklist.yaml` 运行埃基德纳：
 
 ```bash
 echidna-test multi.sol --config blacklist.yaml
@@ -272,11 +278,11 @@ echidna_state4: failed!💥
     i()
 ```
 
-Echidna 几乎立刻就可以找到伪造属性的交易序列。
+埃基德纳将几乎立即找到证伪该属性的交易序列。
 
 ### 总结：过滤函数 {#summary-filtering-functions}
 
-在模糊测试期间，Echidna 可以将要调用的黑名单或白名单函数列入黑名单或白名单，方法是：
+埃基德纳可以使用以下方法在模糊测试活动期间将要调用的函数列入黑名单或白名单：
 
 ```yaml
 filterBlacklist: true
@@ -288,11 +294,11 @@ echidna-test contract.sol --config config.yaml
 ...
 ```
 
-根据 `filterBlacklist` 布尔值的不同，Echidna 开始进行模糊测试时，要么将 `f1`、`f2` 和 `f3` 列入黑名单，要么只调用它们。
+根据 `filterBlacklist` 布尔值，埃基德纳启动模糊测试活动，要么将 `f1`、`f2` 和 `f3` 列入黑名单，要么仅调用这些函数。
 
-## 如何使用 Echidna 测试 Solidity 的断言 {#how-to-test-soliditys-assert-with-echidna}
+## 如何使用埃基德纳测试 Solidity 的断言 {#how-to-test-soliditys-assert-with-echidna}
 
-在这个简短的教程中，我们将演示如何使用 Echidna 测试合约中的断言检查。 假设我们有这样一个合约：
+在这个简短的教程中，我们将展示如何使用埃基德纳来测试合约中的断言检查。假设我们有这样一个合约：
 
 ```solidity
 contract Incrementor {
@@ -307,9 +313,9 @@ contract Incrementor {
 }
 ```
 
-### 写一个断言： {#write-an-assertion}
+### 编写断言 {#write-an-assertion}
 
-我们要确保 `tmp` 返回其差值之后，小于或等于 `counter`。 我们可以写一个 Echidna 属性，但我们需要将 `tmp` 值保存某处。 相反，我们可以使用如下断言：
+我们希望确保在返回差值后，`tmp` 小于或等于 `counter`。我们可以编写一个埃基德纳属性，但我们需要将 `tmp` 的值存储在某个地方。相反，我们可以使用像这样的断言：
 
 ```solidity
 contract Incrementor {
@@ -324,15 +330,15 @@ contract Incrementor {
 }
 ```
 
-### 运行 Echidna {#run-echidna-2}
+### 运行埃基德纳 {#run-echidna-2}
 
-要启用断言失败测试，请创建 [Echidna 配置文件](https://github.com/crytic/echidna/wiki/Config) `config.yaml`：
+要启用断言失败测试，请创建一个[埃基德纳配置文件](https://github.com/crytic/echidna/wiki/Config) `config.yaml`：
 
 ```yaml
 checkAsserts: true
 ```
 
-当我们在 Echidna 上运行这个合约时，我们会获得预期的结果：
+当我们在埃基德纳中运行此合约时，我们获得了预期的结果：
 
 ```bash
 echidna-test assert.sol --config config.yaml
@@ -346,15 +352,15 @@ assertion in inc: failed!💥
 Seed: 1806480648350826486
 ```
 
-正如你所见，Echidna 在 `inc` 函数中报告了一些断言失败。 每个函数可以添加多个断言，但 Echidna 无法判断哪个断言失败了。
+如你所见，埃基德纳报告了 `inc` 函数中的一些断言失败。每个函数可以添加多个断言，但埃基德纳无法分辨哪个断言失败了。
 
-### 使用断言的时机和方式 {#when-and-how-use-assertions}
+### 何时以及如何使用断言 {#when-and-how-use-assertions}
 
-断言可以用作显示属性的替代项，特别是如果要检查的条件与某些操作 `f` 的正确使用直接相关。 在某些代码之后添加断言将强制在代码执行后立即进行检查：
+断言可以用作显式属性的替代方案，特别是当要检查的条件与某些操作 `f` 的正确使用直接相关时。在某些代码之后添加断言将强制在执行后立即进行检查：
 
 ```solidity
 function f(..) public {
-    // some complex code
+    // 一些复杂的代码
     ...
     assert (condition);
     ...
@@ -362,7 +368,7 @@ function f(..) public {
 
 ```
 
-相反， 使用显式的 Echidna 属性将随机执行交易，无法轻松地强制要求何时对其进行检查。 但还是可以做以下变通的：
+相反，使用显式的埃基德纳属性将随机执行交易，并且没有简单的方法来强制准确地在何时进行检查。仍然可以采用这种变通方法：
 
 ```solidity
 function echidna_assert_after_f() public returns (bool) {
@@ -371,22 +377,22 @@ function echidna_assert_after_f() public returns (bool) {
 }
 ```
 
-但是，也存在一些问题：
+但是，存在一些问题：
 
-- 如果 `f` 被声明为 `internal` 或 `external` 则失败.
+- 如果 `f` 被声明为 `internal` 或 `external`，它将失败。
 - 不清楚应该使用哪些参数来调用 `f`。
-- 如果 `f` 回滚，属性将会失败。
+- 如果 `f` 回退，该属性将失败。
 
-一般来说，我们建议遵循 [John Regehr 关于如何使用断言的建议](https://blog.regehr.org/archives/1091)：
+通常，我们建议遵循 [John Regehr 关于如何使用断言的建议](https://blog.regehr.org/archives/1091)：
 
-- 在进行断言检查时不要强制任何负面影响。 例如： `assert(ChangeStateAndReturn() == 1)`
-- 不要断言明显的语句。 例如， 在 `assert(var >= 0)` 中，`var` 被声明为 `uint`。
+- 在断言检查期间不要强制产生任何副作用。例如：`assert(ChangeStateAndReturn() == 1)`
+- 不要断言显而易见的语句。例如 `assert(var >= 0)`，其中 `var` 被声明为 `uint`。
 
-最后，请**不要使用** `require` 代替 `assert`，因为 Echidna 将无法检测到它（但合约仍将回滚）。
+最后，请**不要使用** `require` 代替 `assert`，因为埃基德纳将无法检测到它（但合约无论如何都会回退）。
 
 ### 总结：断言检查 {#summary-assertion-checking}
 
-下面总结了我们示例中 Echidna 的运行情况：
+以下总结了埃基德纳在我们示例上的运行情况：
 
 ```solidity
 contract Incrementor {
@@ -413,11 +419,11 @@ assertion in inc: failed!💥
 Seed: 1806480648350826486
 ```
 
-Echidna 发现，如果使用大参数多次调用此函数，`inc` 中的断言可能会失败。
+埃基德纳发现，如果使用大参数多次调用此函数，`inc` 中的断言可能会失败。
 
-## 收集和修改 Echidna 预料库 {#collecting-and-modifying-an-echidna-corpus}
+## 收集和修改埃基德纳语料库 {#collecting-and-modifying-an-echidna-corpus}
 
-我们来了解如何用 Echidna 收集和使用交易语料库。 目标是以下智能合约 [`magic.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol)：
+我们将了解如何使用埃基德纳收集和使用交易语料库。目标是以下智能合约 [`magic.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol)：
 
 ```solidity
 contract C {
@@ -437,7 +443,9 @@ contract C {
 }
 ```
 
-这个小例子迫使 Echidna 找到一系列交易来改变一个状态变量。 这对一个模糊测试工具来说很困难（建议使用符号执行工具，比如 [Manticore](https://github.com/trailofbits/manticore)）。 我们可以运行 Echidna 对此进行验证：
+这个小示例迫使埃基德纳找到某些值来更改状态变量。这对于模糊测试工具来说很困难
+（建议使用像 [曼蒂科尔 (Manticore)](https://github.com/trailofbits/manticore) 这样的符号执行工具）。
+我们可以运行埃基德纳来验证这一点：
 
 ```bash
 echidna-test magic.sol
@@ -448,30 +456,31 @@ echidna_magic_values: passed! 🎉
 Seed: 2221503356319272685
 ```
 
-然而，当我们运行该模糊测试活动时，我们仍然可以使用 Echidna 来收集语料库。
+但是，在运行此模糊测试活动时，我们仍然可以使用埃基德纳来收集语料库。
 
 ### 收集语料库 {#collecting-a-corpus}
 
-为了启用语料库的收集，请创建一个语料目录：
+要启用语料库收集，请创建一个语料库目录：
 
 ```bash
 mkdir corpus-magic
 ```
 
-和一个 [Echidna 配置文件](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
+以及一个[埃基德纳配置文件](https://github.com/crytic/echidna/wiki/Config) `config.yaml`：
 
 ```yaml
 coverage: true
 corpusDir: "corpus-magic"
 ```
 
-现在，我们可以运行工具并检查收集到的语料库：
+现在我们可以运行我们的工具并检查收集到的语料库：
 
 ```bash
 echidna-test magic.sol --config config.yaml
 ```
 
-Echidna 仍然找不到正确的 magic 值，但我们可以看一看它收集到的语料库。 例如，其中一个文件是：
+埃基德纳仍然无法找到正确的魔法值，但我们可以查看它收集的语料库。
+例如，其中一个文件是：
 
 ```json
 [
@@ -516,17 +525,17 @@ Echidna 仍然找不到正确的 magic 值，但我们可以看一看它收集�
 ]
 ```
 
-显然，此输入不会触发我们属性中的故障。 但是，在下一步，我们将看到如何对此进行修改。
+显然，此输入不会触发我们属性中的失败。但是，在下一步中，我们将了解如何对其进行修改以实现该目的。
 
-### 为语料库生成种子 {#seeding-a-corpus}
+### 为语料库提供种子 {#seeding-a-corpus}
 
-Echidna 需要一些帮助才能处理 `magic` 函数。 我们将复制和修改输入以使用其合适的参数：
+埃基德纳需要一些帮助才能处理 `magic` 函数。我们将复制并修改输入，为其使用合适的参数：
 
 ```bash
 cp corpus/2712688662897926208.txt corpus/new.txt
 ```
 
-我们将修改 `new.txt` 来调用 `magic(42,129,333,0)`。 现在，我们可以重新运行 Echidna：
+我们将修改 `new.txt` 以调用 `magic(42,129,333,0)`。现在，我们可以重新运行埃基德纳：
 
 ```bash
 echidna-test magic.sol --config config.yaml
@@ -542,11 +551,11 @@ Seed: -7293830866560616537
 
 ```
 
-这一次，它立即发现与该属性发生了冲突。
+这一次，它立即发现该属性被违反了。
 
-## 查找消耗大量燃料的交易 {#finding-transactions-with-high-gas-consumption}
+## 寻找高 Gas 消耗的交易 {#finding-transactions-with-high-gas-consumption}
 
-我们来看看如何使用 Echidna 查找燃料消耗大的交易。 目标是以下智能合约：
+我们将了解如何使用埃基德纳寻找高 Gas 消耗的交易。目标是以下智能合约：
 
 ```solidity
 contract C {
@@ -571,9 +580,10 @@ contract C {
 }
 ```
 
-这里的 `expensive` 可能会消耗大量 gas。
+在这里，`expensive` 可能会有很大的 Gas 消耗。
 
-目前，Echidna 总是需要一个属性来测试：这里 `echidna_test` 始终返回 `true`。 我们可以运行 Echidna 对此进行验证：
+目前，埃基德纳总是需要一个属性来测试：这里的 `echidna_test` 总是返回 `true`。
+我们可以运行埃基德纳来验证这一点：
 
 ```
 echidna-test gas.sol
@@ -583,24 +593,24 @@ echidna_test: passed! 🎉
 Seed: 2320549945714142710
 ```
 
-### 测量燃料消耗 {#measuring-gas-consumption}
+### 测量 Gas 消耗 {#measuring-gas-consumption}
 
-要使用 Echidna 测量燃料消耗，请创建配置文件 `config.yaml`：
+要使用埃基德纳启用 Gas 消耗测量，请创建一个配置文件 `config.yaml`：
 
 ```yaml
 estimateGas: true
 ```
 
-在这个例子中，我们还将减少交易序列的大小，以使结果更易于理解：
+在这个示例中，我们还将减小交易序列的大小，以使结果更容易理解：
 
 ```yaml
 seqLen: 2
 estimateGas: true
 ```
 
-### 运行 Echidna {#run-echidna-3}
+### 运行埃基德纳 {#run-echidna-3}
 
-创建好配置文件之后，我们就可以这样运行 Echidna：
+创建配置文件后，我们可以像这样运行埃基德纳：
 
 ```bash
 echidna-test gas.sol --config config.yaml
@@ -617,12 +627,13 @@ Seed: -325611019680165325
 
 ```
 
-- 显示的燃料是由 [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-) 提供的估值。
+- 显示的 Gas 是由 [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-) 提供的估算值。
 
-### 过滤掉燃料消耗减少的调用 {#filtering-out-gas-reducing-calls}
+### 过滤掉减少 Gas 的调用 {#filtering-out-gas-reducing-calls}
 
-以上关于**在模糊测试活动期间过滤要调用的函数**的教程展示了如何从测试中删除一些函数。  
-这对于获得准确的燃料消耗至关重要。 请考虑下面的示例：
+上面关于**在模糊测试活动期间过滤要调用的函数**的教程展示了如何从测试中移除某些函数。  
+这对于获得准确的 Gas 估算至关重要。
+考虑以下示例：
 
 ```solidity
 contract C {
@@ -648,7 +659,7 @@ contract C {
 }
 ```
 
-如果 Echidna 可以调用所有函数，它将无法轻松找到消耗大量燃料的交易：
+如果埃基德纳可以调用所有函数，它将不容易找到具有高 Gas 成本的交易：
 
 ```
 echidna-test pushpop.sol --config config.yaml
@@ -662,7 +673,8 @@ clear used a maximum of 35916 gas
 push used a maximum of 40839 gas
 ```
 
-这是因为成本取决于 `addrs` 的大小，而随机调用往往会使数组几乎为空。 将 `pop` 和 `clear` 加入黑名单却给我们带来了更好的结果:
+这是因为成本取决于 `addrs` 的大小，而随机调用往往会使数组几乎为空。
+然而，将 `pop` 和 `clear` 列入黑名单会给我们带来更好的结果：
 
 ```yaml
 filterBlacklist: true
@@ -677,9 +689,9 @@ push used a maximum of 40839 gas
 check used a maximum of 1484472 gas
 ```
 
-### 总结：查找消耗大量燃料的交易 {#summary-finding-transactions-with-high-gas-consumption}
+### 总结：寻找高 Gas 消耗的交易 {#summary-finding-transactions-with-high-gas-consumption}
 
-Echidna 可以使用 `estimateGas` 配置选项找到消耗大量燃料的交易：
+埃基德纳可以使用 `estimateGas` 配置选项寻找高 Gas 消耗的交易：
 
 ```yaml
 estimateGas: true
@@ -690,4 +702,4 @@ echidna-test contract.sol --config config.yaml
 ...
 ```
 
-模糊测试结束后，Echidna 将报告每个函数中消耗燃料最多的交易。
+一旦模糊测试活动结束，埃基德纳将报告每个函数具有最大 Gas 消耗的序列。

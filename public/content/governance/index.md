@@ -1,12 +1,11 @@
 ---
-title: Ethereum Governance
+title: Introduction to Ethereum governance
+metaTitle: Ethereum Governance
 description: An introduction to how decisions about Ethereum are made.
 lang: en
 ---
 
-# Introduction to Ethereum governance {#introduction}
-
-_If no one owns Ethereum, how are decisions about past and future changes to Ethereum made? Ethereum governance refers to the process that allows such decisions to be made._
+_If no one owns [Ethereum](/), how are decisions about past and future changes to Ethereum made? Ethereum governance refers to the process that allows such decisions to be made._
 
 <Divider />
 
@@ -20,17 +19,19 @@ No one person owns or controls the Ethereum protocol, but decisions still need t
 
 ## Ethereum Governance {#ethereum-governance}
 
-Ethereum governance is the process by which protocol changes are made. It's important to point out that this process isn't related to how people and applications use the protocol - Ethereum is permissionless. Anyone from anywhere in the world can participate in on-chain activities. There are no rules set for who can or cannot build an application or send a transaction. However, there is a process to propose changes to the core protocol, which decentralized applications run on top of. Since so many people depend on Ethereum's stability, there is a very high coordination threshold for core changes, including social and technical processes, to ensure any changes to Ethereum are secure and widely supported by the community.
+Ethereum governance is the process by which protocol changes are made. It's important to point out that this process isn't related to how people and applications use the protocol - Ethereum is permissionless. Anyone from anywhere in the world can participate in onchain activities. There are no rules set for who can or cannot build an application or send a transaction. However, there is a process to propose changes to the core protocol, which decentralized applications run on top of. Since so many people depend on Ethereum's stability, there is a very high coordination threshold for core changes, including social and technical processes, to ensure any changes to Ethereum are secure and widely supported by the community.
 
-### On-chain vs off-chain governance {#on-chain-vs-off-chain}
+<VideoWatch slug="ethereum-core-governance-explained" />
 
-Blockchain technology allows for new governance capabilities, known as on-chain governance. On-chain governance is when proposed protocol changes are decided by a stakeholder vote, usually by holders of a governance token, and voting happens on the blockchain. With some forms of on-chain governance, the proposed protocol changes are already written in code and implemented automatically if the stakeholders approve the changes via signing a transaction.
+### Onchain vs offchain governance {#onchain-vs-offchain}
 
-The opposite approach, off-chain governance, is where any protocol change decisions happen through an informal process of social discussion, which, if approved, would be implemented in code.
+Blockchain technology allows for new governance capabilities, known as onchain governance. Onchain governance is when proposed protocol changes are decided by a stakeholder vote, usually by holders of a governance token, and voting happens on the blockchain. With some forms of onchain governance, the proposed protocol changes are already written in code and implemented automatically if the stakeholders approve the changes via signing a transaction.
 
-**Ethereum governance happens off-chain** with a wide variety of stakeholders involved in the process.
+The opposite approach, offchain governance, is where any protocol change decisions happen through an informal process of social discussion, which, if approved, would be implemented in code.
 
-_Whilst at the protocol level Ethereum governance is off-chain, many use cases built on top of Ethereum, such as DAOs, use on-chain governance._
+**Ethereum governance happens offchain** with a wide variety of stakeholders involved in the process.
+
+_Whilst at the protocol level Ethereum governance is offchain, many use cases built on top of Ethereum, such as DAOs, use onchain governance._
 
 <ButtonLink href="/dao/">
   More on DAOs
@@ -42,15 +43,15 @@ _Whilst at the protocol level Ethereum governance is off-chain, many use cases b
 
 There are various stakeholders in the [Ethereum community](/community/), each playing a role in the governance process. Starting from the stakeholders furthest from the protocol and zooming in, we have:
 
-- **Ether holders**: these people hold an arbitrary amount of ETH. [More on ETH](/eth/).
+- **Ether holders**: these people hold an arbitrary amount of ETH. [More on ETH](/what-is-ether/).
 - **Application Users**: these people interact with applications on the Ethereum blockchain.
-- **Application/Tooling Developers**: these people write applications that run on the Ethereum blockchain (e.g. DeFi, NFTs, etc.) or build tooling to interact with Ethereum (e.g. wallets, test suites, etc.). [More on dapps](/dapps/).
+- **Application/Tooling Developers**: these people write applications that run on the Ethereum blockchain (e.g., DeFi, NFTs, etc.) or build tooling to interact with Ethereum (e.g., wallets, test suites, etc.). [More on dapps](/apps/).
 - **Node Operators**: these people run nodes that propagate blocks and transactions, rejecting any invalid transaction or block that they come across. [More on nodes](/developers/docs/nodes-and-clients/).
 - **EIP Authors**: these people propose changes to the Ethereum protocol, in the form of Ethereum Improvement Proposals (EIPs). [More on EIPs](/eips/).
 - **Validators**: these people run nodes that can add new blocks to the Ethereum blockchain.
-- **Protocol Developers** (a.k.a. "Core Developers" ): these people maintain the various Ethereum implementations (e.g. go-ethereum, Nethermind, Besu, Erigon, Reth at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine at the consensus layer). [More on Ethereum clients](/developers/docs/nodes-and-clients/).
+- **Protocol Developers** (a.k.a. "Core Developers" ): these people maintain the various Ethereum implementations (e.g., go-ethereum, Nethermind, Besu, Erigon, Reth at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine at the consensus layer). [More on Ethereum clients](/developers/docs/nodes-and-clients/).
 
-_Note: any individual can be part of multiple of these groups (e.g. a protocol developer could champion an EIP, and run a beacon chain validator, and use DeFi applications). For conceptual clarity, it is easiest to distinguish between them, though._
+_Note: any individual can be part of multiple of these groups (e.g., a protocol developer could champion an EIP, and run a beacon chain validator, and use DeFi applications). For conceptual clarity, it is easiest to distinguish between them, though._
 
 <Divider />
 
@@ -102,7 +103,7 @@ While some EIPs are straightforward technical improvements with minimal nuance, 
 
 There is no clear playbook on how to handle contentious proposals. This is a result of Ethereum's decentralized design whereby no single stakeholder group can coerce the other through brute force: protocol developers can choose not to implement code changes; node operators can choose not to run the latest Ethereum client; application teams and users can choose not to transact on the chain. Since Protocol Developers have no way to force people to adopt network upgrades, they will generally avoid implementing EIPs where the contentiousness outweighs the benefits to the broader community.
 
-EIP Champions are expected to solicit feedback from all relevant stakeholders. If you find yourself the champion of a contentious EIP, you should try and address objections to build consensus around your EIP. Given the size and diversity of the Ethereum community, there isn't a single metric (e.g. a coin vote) that can be used to gauge community consensus, and EIP Champions are expected to adapt to the circumstances of their proposal.
+EIP Champions are expected to solicit feedback from all relevant stakeholders. If you find yourself the champion of a contentious EIP, you should try and address objections to build consensus around your EIP. Given the size and diversity of the Ethereum community, there isn't a single metric (e.g., a coin vote) that can be used to gauge community consensus, and EIP Champions are expected to adapt to the circumstances of their proposal.
 
 Beyond the security of the Ethereum network, significant weight has historically been placed by Protocol Developers on what Application/Tooling Developers and Application Users value, given that their using and developing on Ethereum is what makes the ecosystem attractive for other stakeholders. Additionally, EIPs need to be implemented across all client implementations, which are managed by distinct teams. Part of this process usually means convincing multiple teams of Protocol Developers that a particular change is valuable and that it helps end-users or solves a security issue.
 
@@ -118,7 +119,7 @@ Generally, disagreements are handled with long-form discussion in public forums 
 
 Forks are when major technical upgrades or changes need to be made to the network and change the "rules" of the protocol. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules.
 
-The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/understanding-dao-hack-journalists) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a new contract allowing anyone who lost funds in the hack to recover them.
+The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/learn/understanding-the-dao-attack) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a new contract allowing anyone who lost funds in the hack to recover them.
 
 This course of action was voted on by the Ethereum community. Any ETH holder was able to vote via a transaction on [a voting platform](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). The decision to fork reached over 85% of the votes.
 
@@ -134,7 +135,7 @@ Today, the Ethereum community has adopted a policy of non-intervention in cases 
 
 Watch more on the DAO hack:
 
-<YouTube id="rNeLuBOVe8A" />
+<VideoWatch slug="dao-hack-ethereum-classic" />
 
 <Divider />
 
@@ -152,7 +153,7 @@ The Ethereum governance process often trades off speed and efficiency for openne
 
 While the specification and development implementations have always been fully open source, the formal processes used to propose updates described above weren't used. This allowed changes to be specified and agreed upon quicker by researchers and implementers.
 
-When the Beacon Chain merged with the Ethereum execution layer on September 15th, 2022 The Merge was complete as part of the [Paris network upgrade](/history/#paris). The proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) was changed from 'Last Call' to 'Final', completing the transition to proof-of-stake.
+When the Beacon Chain merged with the Ethereum execution layer on September 15th, 2022 The Merge was complete as part of the [Paris network upgrade](/ethereum-forks/#paris). The proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) was changed from 'Last Call' to 'Final', completing the transition to proof-of-stake.
 
 <ButtonLink href="/roadmap/merge/">
   More on The Merge
@@ -168,7 +169,7 @@ When the Beacon Chain merged with the Ethereum execution layer on September 15th
 - [Join the Ethereum R&D discord](https://discord.gg/mncqtgVSVw)
 - [Run a node](/developers/docs/nodes-and-clients/run-a-node/)
 - [Contribute to client development](/developers/docs/nodes-and-clients/#execution-clients)
-- [Core Developer Apprenticeship Program](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Core Developer Apprenticeship Program](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort)
 
 ## Further reading {#further-reading}
 
@@ -177,8 +178,8 @@ Governance in Ethereum isn’t rigidly defined. Various community participants h
 - [Notes on Blockchain Governance](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [How does Ethereum Governance work?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [How Ethereum governance works](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [What is an Ethereum core developer?](https://hudsonjameson.com/posts/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Governance, Part 2: Plutocracy Is Still Bad](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Moving beyond coin voting governance](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
-- [Understanding Blockchain Governance](https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
+- [Understanding Blockchain Governance](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
 - [The Ethereum Government](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

@@ -1,11 +1,18 @@
+"use client"
+
 import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
-import { useTranslation } from "next-i18next"
-import { EffectCards, Keyboard, Navigation, Pagination } from "swiper/modules"
+import {
+  EffectCards,
+  Grid,
+  Keyboard,
+  Navigation,
+  Pagination,
+} from "swiper/modules"
 import {
   Swiper as SwiperReact,
   type SwiperProps as SwiperReactProps,
-  SwiperRef,
+  type SwiperRef,
   SwiperSlide,
 } from "swiper/react"
 
@@ -15,10 +22,7 @@ import { cn } from "@/lib/utils/cn"
 
 import { Button, type ButtonProps } from "./buttons/Button"
 
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import "swiper/css/effect-cards"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const SwiperContainer = React.forwardRef<
   HTMLDivElement,
@@ -75,7 +79,7 @@ const SwiperPaginationDots = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "ui-swiper-pagination flex w-fit flex-row",
+      "ui-swiper-pagination flex w-fit flex-row gap-2",
       "[&_.swiper-pagination-bullet]:bg-primary-high-contrast",
       "[&_.swiper-pagination-bullet-active]:bg-primary-hover",
       className
@@ -102,12 +106,21 @@ SwiperNavContainer.displayName = "SwiperNavContainer"
 
 const SwiperNavigation = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & {
+    prevLabel?: string
+    nextLabel?: string
+  }
+>(({ prevLabel, nextLabel, ...props }, ref) => (
   <SwiperNavContainer ref={ref} {...props}>
-    <SwiperPrevButton />
-    <SwiperPaginationDots />
-    <SwiperNextButton />
+    <SwiperPrevButton
+      data-testid="swiper-prev-button"
+      aria-label={prevLabel ?? "Previous slide"}
+    />
+    <SwiperPaginationDots data-testid="swiper-pagination-dots" />
+    <SwiperNextButton
+      data-testid="swiper-next-button"
+      aria-label={nextLabel ?? "Next slide"}
+    />
   </SwiperNavContainer>
 ))
 SwiperNavigation.displayName = "SwiperNavigation"
@@ -144,11 +157,10 @@ const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
           el: ".ui-swiper-pagination",
         }}
         keyboard
-        modules={[Navigation, Pagination, Keyboard, EffectCards]}
+        modules={[Navigation, Pagination, Keyboard, EffectCards, Grid]}
         slidesPerView={1}
         slidesPerGroup={1}
         lazyPreloadPrevNext={0}
-        slideClass="swiper-slide"
         className={cn(variants({ navigationPlacement, className }))}
         {...props}
       >

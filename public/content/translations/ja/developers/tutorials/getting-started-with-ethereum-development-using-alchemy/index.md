@@ -1,60 +1,56 @@
 ---
-title: イーサリアム開発入門
-description: "この文書は、はじめてイーサリアム開発を行う初心者用のガイドです。 APIエンドポイントの立ち上げ、コマンドライン・リクエストの作成、さらにweb3スクリプトの作成までをステップごとに説明します。 ブロックチェーンの開発経験は必要ありません！"
-author: "Elan Halpern"
-tags:
-  - "JavaScript"
-  - "ethers.js"
-  - "ノード"
-  - "クエリ"
-  - "Alchemy"
+title: "イーサリアム開発の始め方"
+description: "これはイーサリアム開発を始めるための初心者向けガイドです。APIエンドポイントの立ち上げから、コマンドラインでのリクエスト、そして初めてのWeb3スクリプトの作成までをご案内します！ブロックチェーン開発の経験は必要ありません！"
+author: "エラン・ハルパーン"
+tags: ["JavaScript", "ethers.js", "ノード", "クエリ", "Alchemy"]
 skill: beginner
+breadcrumb: "始め方"
 lang: ja
 published: 2020-10-30
 source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 
-![イーサリアムおよび Alchemyのロゴ](./ethereum-alchemy.png)
+![Ethereum and Alchemy logos](./ethereum-alchemy.png)
 
-この記事は、はじめてイーサリアム開発を行う初心者向けのガイドです。 このチュートリアルでは、[Alchemy](https://alchemyapi.io/)を使用します。Alchemyは、何百万人ものユーザーを持つ代表的なブロックチェーン開発者向けプラットフォームで、最も人気が高いブロックチェーンアプリ（ Maker、0x、MyEtherWallet、Dharma、Kyberなど）のうち7割がAlchemyを使用しています。 Alchemyを使用するとイーサリアムチェーン上でAPIエンドポイントにアクセスできるため、トランザクションの読み書きが可能になります。
+これはイーサリアム開発を始めるための初心者向けガイドです。このチュートリアルでは、Maker、0x、MyEtherWallet、Dharma、Kyberなど、トップクラスのブロックチェーンアプリの70%から数百万人のユーザーを支える、主要なブロックチェーン開発者プラットフォームである[Alchemy](https://www.alchemy.com/)を使用します。Alchemyは、トランザクションの読み書きができるように、イーサリアム・チェーン上のAPIエンドポイントへのアクセスを提供します。
 
-このチュートリアルでは、Alchemyにサインアップする方法から、最初のweb3 スクリプトを作成するまでを学習します。 ブロックチェーンの開発経験は必要ありません！
+Alchemyへのサインアップから、初めてのWeb3スクリプトの作成までをご案内します！ブロックチェーン開発の経験は必要ありません！
 
 ## 1. 無料のAlchemyアカウントにサインアップする {#sign-up-for-a-free-alchemy-account}
 
-Alchemyのアカウントを作成するのは簡単です。 [こちら](https://auth.alchemyapi.io/signup)から無料でサインアップしてください。
+Alchemyのアカウント作成は簡単です。[こちらから無料でサインアップ](https://auth.alchemy.com/)してください。
 
-## 2. Alchemy アプリを作成する {#create-an-alchemy-app}
+## 2. Alchemyアプリを作成する {#create-an-alchemy-app}
 
-イーサリアムチェーンと通信し、Alchemy製品を使用するには、あなたのリクエストを認証するためのAPIキーが必要になります。
+イーサリアム・チェーンと通信し、Alchemyの製品を使用するには、リクエストを認証するためのAPIキーが必要です。
 
-APIキーは、[ダッシュボード](http://dashboard.alchemyapi.io/)で作成できます。 新規キーを作成するには、以下の手順で「Create App」に移動します。
+[ダッシュボードからAPIキーを作成](https://dashboard.alchemy.com/)できます。新しいキーを作成するには、以下に示すように「Create App」に移動します。
 
-ダッシュボードの表示を許可していただいた[_ShapeShift_](https://shapeshift.com/) _に感謝します！_
+ダッシュボードの表示を許可してくれた[_ShapeShift_](https://shapeshift.com/)_に特別な感謝を捧げます！_
 
-![Alchemyダッシュボード](./alchemy-dashboard.png)
+![Alchemy dashboard](./alchemy-dashboard.png)
 
-「Create App」の下にある詳細情報に記入して、新規キーを取得してください。 ここでは、あなたが以前に作成したアプリや、あなたのチームが作成したアプリも確認できます。 どのアプリについても、「View Key（キーを表示）」をクリックすると既存のキーを取得できます。
+「Create App」の下に詳細を入力して、新しいキーを取得します。ここでは、以前に作成したアプリやチームが作成したアプリも確認できます。任意のアプリの「View Key」をクリックして、既存のキーを取得します。
 
-![Alchemyのスクリーンショットでアプリを作成する](./create-app.png)
+![Create app with Alchemy screenshot](./create-app.png)
 
-あるいは、カーソルを「Apps（アプリ）」の部分に移動させ、希望するアプリを選択する方法でも既存のAPIキーを取得することができます。 ここでは、「View Key（キーを表示）」できる他、「Edit App（アプリを編集）」して、特定のドメインをホワイトリストに追加したり、開発者ツールを参照したり、アナリティクスを確認することができます。
+「Apps」にカーソルを合わせてアプリを選択することでも、既存のAPIキーを取得できます。ここで「View Key」をクリックできるほか、「Edit App」をクリックして特定のドメインをホワイトリストに登録したり、いくつかの開発者ツールを確認したり、分析を表示したりできます。
 
-![APIキーの取得方法をユーザーに表示するGIF画像](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.gif)
 
-## 3. コマンドラインでリクエストを作成する {#make-a-request-from-the-command-line}
+## 3. コマンドラインからリクエストを行う {#make-a-request-from-the-command-line}
 
-JSON-RPCとcurlを使用して、Alchemy経由でイーサリアムブロックチェーンとのやり取りを行います。
+JSON-RPCとcurlを使用して、Alchemy経由でイーサリアム・ブロックチェーンと対話します。
 
-マニュアルでリクエストを作成する場合は、`JSON-RPC`の`POST`リクエストを使ってやりとりすることをお勧めします。 `Content-Type: application/json`のヘッダーと、クエリの`POST`本文に、以下のフィールドを入力してください：
+手動でのリクエストの場合、`POST`リクエストを介して`JSON-RPC`と対話することをお勧めします。`Content-Type: application/json`ヘッダーと、以下のフィールドを持つ`POST`ボディとしてクエリを渡すだけです。
 
-- `jsonrpc`：JSON-RPC のバージョン - 現在対応しているのは バージョン`2.0` のみです。
-- `method`：ETH APIメソッド。 [APIリファレンスを参照してください。](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
-- `params`: メソッドに渡すパラメータのリストです。
-- `id`: このリクエストのIDです。 この値は応答によって返されるため、どのリクエストに対する応答なのかを追跡できます。
+- `jsonrpc`: JSON-RPCのバージョン。現在は`2.0`のみがサポートされています。
+- `method`: ETH APIメソッド。[APIリファレンスを参照してください。](/developers/docs/apis/json-rpc/)
+- `params`: メソッドに渡すパラメータのリスト。
+- `id`: リクエストのID。レスポンスによって返されるため、どのリクエストに対するレスポンスかを追跡できます。
 
-以下の例は、コマンドラインから現在のガス代の情報を取得するコードです。
+以下は、現在のガス価格を取得するためにコマンドラインから実行できる例です。
 
 ```bash
 curl https://eth-mainnet.alchemyapi.io/v2/demo \
@@ -63,37 +59,36 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**注意：** [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo)は、`https://eth-mainnet.alchemyapi.io/v2/**your-api-key` など、あなた自身のAPIキーと置き換えてください。_
+_**注:** `https://eth-mainnet.alchemyapi.io/v2/demo`を自身のAPIキー`https://eth-mainnet.alchemyapi.io/v2/**your-api-key`に置き換えてください。_
 
-**出力：**
+**結果:**
 
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
+## 4. Web3クライアントをセットアップする {#set-up-your-web3-client}
 
-## 4. Web3 クライアントを設定する {#set-up-your-web3-client}
+<strong>既存のクライアントがある場合、</strong>現在のノードプロバイダーのURLを、APIキーを含むAlchemyのURLに変更します: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
-**すでにクライアントをインストール済みの場合は、** 現在のノードプロバイダーのURLを、APIキーを含むAlchemyのURL（ `"https://eth-mainnet.alchemyapi.io/v2/your-api-key"`など）に変更します。
+**_注:_** 以下のスクリプトは、コマンドラインから実行するのではなく、**ノードコンテキスト**で実行するか、**ファイルに保存**する必要があります。Nodeまたはnpmをまだインストールしていない場合は、[Node.jsのインストール手順](https://nodejs.org/en/download/)に従ってください。
 
-**_注意：_** 以下のスクリプトは、 コマンドラインで実行するのではなく、**ノードコンテキスト**または**ファイルに保存した形で**実行する必要があります。 Nodeまたはnpmがインストールされていない場合は、[Mac用設定ガイド](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs) をご覧ください。
+Alchemyと統合できる[Web3ライブラリ](/developers/docs/apis/javascript/)は多数ありますが、Web3.jsの代替としてそのまま使用でき、Alchemyとシームレスに連携するように構築および構成された[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)を使用することをお勧めします。これにより、自動再試行や堅牢なWebSocketサポートなど、複数の利点が得られます。
 
-Alchemyと統合可能な[Web3ライブラリ](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)は無数に存在しますが、このチュートリアルでは、Alchemyとシームレスに動作するように構築・設定されたweb3.jsの完全互換版である[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)をお勧めします。 Alchemy Web3は、自動リトライや WebScoket に対する充実したサポートなどの利点を持っています。
+AlchemyWeb3.jsをインストールするには、**プロジェクトディレクトリに移動**して以下を実行します。
 
-Alchemy Web3.jsをインストールするには、 **プロジェクトディレクトリに移動して**、以下を実行します。
-
-**Yarnの場合：**
+**Yarnの場合:**
 
 ```
 yarn add @alch/alchemy-web3
 ```
 
-**NPMの場合：**
+**NPMの場合:**
 
 ```
 npm install @alch/alchemy-web3
 ```
 
-Alchemyのノードインフラとやり取りするには、Node.jsで実行するか、JavaScriptファイルに以下の行を追加します：
+Alchemyのノードインフラストラクチャと対話するには、Node.jsで実行するか、JavaScriptファイルに以下を追加します。
 
 ```js
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
@@ -101,27 +96,26 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
+## 5. 初めてのWeb3スクリプトを作成する！ {#write-your-first-web3-script}
 
-## 5. はじめてのWeb3スクリプトを作成しましょう！ {#write-your-first-web3-script}
+それでは、Web3プログラミングを実際に体験するために、イーサリアム・メインネットから最新のブロック番号を出力する簡単なスクリプトを作成しましょう。
 
-それではさっそく、実際にweb3のプログラミングを始めましょう。まずは、イーサリアム・メインネットにおける最新のブロック番号を出力する簡単なスクリプトを作成します。
-
-**1. すでに実行していない場合、ターミナルで新規のプロジェクトディレクトリを作成し、cdコマンドで移動します。**
+**1. まだ行っていない場合は、ターミナルで新しいプロジェクトディレクトリを作成し、そこに移動(cd)します。**
 
 ```
 mkdir web3-example
 cd web3-example
 ```
 
-**2. まだ実行していない場合、Alchemy web3（または任意の web3）の依存関係をプロジェクトにインストールします。**
+**2. まだインストールしていない場合は、Alchemy Web3 (または任意のWeb3) 依存関係をプロジェクトにインストールします。**
 
 ```
 npm install @alch/alchemy-web3
 ```
 
-**3. `index.js`という名称のファイルを作成し、以下の内容を追加します：**
+**3. `index.js`という名前のファイルを作成し、以下の内容を追加します。**
 
-> 最終的には、`demo`をあなたのAlchemy HTTP API keyに置き換える必要があります。
+> 最終的には、`demo`を自身のAlchemy HTTP APIキーに置き換える必要があります。
 
 ```js
 async function main() {
@@ -133,22 +127,22 @@ async function main() {
 main()
 ```
 
-非同期関数についてよく理解していない場合は、 この[Mediumの記事](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c)を参照してください。
+非同期(async)処理に慣れていない場合は、こちらの[Mediumの記事](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c)をチェックしてください。
 
-**4. ノードを使用して、ターミナルで実行します。**
+**4. ターミナルでnodeを使用して実行します。**
 
 ```
 node index.js
 ```
 
-**5. コンソールに、最新のブロック番号が出力されるはずです。**
+**5. コンソールに最新のブロック番号が出力されるはずです！**
 
 ```
 The latest block number is 11043912
 ```
 
-**よくできました！ おめでとうございます！ Alchemyを使用した最初のweb3スクリプトが完成しました 🎉**
+**やりましたね！おめでとうございます！Alchemyを使用して初めてのWeb3スクリプトを作成しました 🎉**
 
-次は何を学べば良いのかわからない場合は、 [「ハローワールド・スマートコントラクトガイド」](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract)を使って、はじめてのスマートコントラクトのデプロイとSolidityプログラミングに挑戦するか、[ダッシュボード・デモアプリ](https://docs.alchemyapi.io/tutorials/demo-app)でダッシュボードに関するあなたの知識をテストしてみましょう！
+次に何をすべきか迷っていますか？[Hello Worldスマート・コントラクト・ガイド](/developers/tutorials/hello-world-smart-contract/)で初めてのスマート・コントラクトをデプロイし、Solidityプログラミングを実際に体験してみるか、[Alchemyのドキュメント](https://www.alchemy.com/docs/)でさらに多くの例を引き続き探索してください。
 
-_[Alchemyに無料登録し](https://auth.alchemyapi.io/signup)、[ドキュメンテーション](https://docs.alchemyapi.io/)を確認してください。また、[Twitter](https://twitter.com/AlchemyPlatform)_をフォローして、最新ニュースをチェックしてください。
+_[Alchemyに無料でサインアップ](https://auth.alchemy.com/)し、[ドキュメント](https://www.alchemy.com/docs/)をチェックしてください。最新ニュースについては、[Twitter](https://twitter.com/AlchemyPlatform)でフォローしてください_。

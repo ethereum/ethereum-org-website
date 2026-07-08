@@ -1,94 +1,97 @@
 ---
-title: Arka uç API'si kütüphaneleri
-description: Uygulamanızdan blok zinciri ile etkileşime girmenizi sağlayan Ethereum istemci API'lerine giriş.
+title: "Arka uç API kütüphaneleri"
+description: "Uygulamanızdan blokzincir ile etkileşime girmenizi sağlayan Ethereum istemci API'lerine giriş."
 lang: tr
 ---
 
-Bir yazılım uygulamasının Ethereum blok zinciri ile etkileşime girmesi (yani blok zinciri verilerini okuması ve/veya ağa işlem göndermesi) için bir Ethereum düğümüne bağlanması gerekir.
+Bir yazılım uygulamasının [Ethereum](/) blokzinciri ile etkileşime girebilmesi (yani blokzincir verilerini okuması ve/veya ağa işlemler göndermesi) için bir Ethereum düğümüne bağlanması gerekir.
 
-Bu amaç doğrultusunda her Ethereum istemcisi [JSON-RPC](/developers/docs/apis/json-rpc/) spesifikasyonunu uygular, böylece uygulamaların güvenebileceği tek tip bir [yöntem](/developers/docs/apis/json-rpc/#json-rpc-methods) kümesi mevcut olur.
+Bu amaçla, her Ethereum istemcisi [JSON-RPC](/developers/docs/apis/json-rpc/) spesifikasyonunu uygular, böylece uygulamaların güvenebileceği tek tip bir [yöntemler](/developers/docs/apis/json-rpc/#json-rpc-methods) seti bulunur.
 
-Bir Ethereum düğümüne bağlanmak için belirli bir programlama dili kullanmak istiyorsanız, ekosistem içinde bunu çok daha kolay hâle getiren birkaç kolaylık kütüphanesi vardır. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON RPC taleplerini (arka planda) başlatmak için sezgisel ve tek satırlı yöntemler yazabilirler.
+Bir Ethereum düğümüne bağlanmak için belirli bir programlama dili kullanmak istiyorsanız, ekosistemde bunu çok daha kolaylaştıran birçok kullanışlı kütüphane vardır. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON-RPC isteklerini (arka planda) başlatmak için sezgisel, tek satırlık yöntemler yazabilirler.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-[Ethereum yığınını](/developers/docs/ethereum-stack/) ve [Ethereum istemcilerini](/developers/docs/nodes-and-clients/) anlamak yardımcı olabilir.
+[Ethereum yığınını](/developers/docs/ethereum-stack/) ve [Ethereum istemcilerini](/developers/docs/nodes-and-clients/) anlamak faydalı olabilir.
 
-## Neden bir kütüphane kullanılır? {#why-use-a-library}
+## Neden bir kütüphane kullanılmalı? {#why-use-a-library}
 
-Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın karmaşıklığının çoğunu ortadan kaldırır. Ayrıca, bir geliştirici olarak Ethereum istemcilerinin karmaşıklıkları ile daha az zaman harcayarak ve uygulamanızın benzersiz işlevselliğine daha fazla zaman ayırabilmeniz için yardımcı işlevler (örneğin, ETH'yi Gwei'ye dönüştürmek) sağlarlar.
+Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin karmaşıklığının çoğunu soyutlar. Ayrıca yardımcı işlevler (örneğin, ETH'yi Gwei'ye dönüştürmek) sağlarlar, böylece bir geliştirici olarak Ethereum istemcilerinin incelikleriyle uğraşmak için daha az, uygulamanızın benzersiz işlevselliğine odaklanmak için daha fazla zaman harcayabilirsiniz.
 
 ## Mevcut kütüphaneler {#available-libraries}
 
-### Altyapı ve düğüm servisleri {#infrastructure-and-node-services}
+### Altyapı ve düğüm hizmetleri {#infrastructure-and-node-services}
 
 **Alchemy -** **_Ethereum Geliştirme Platformu._**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [Belgeler](https://docs.alchemy.com/)
+- [Belgeler](https://www.alchemy.com/docs/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
-
-**Düğüm ile İlgili Her Şey -** **_Hizmet olarak Düğüm._**
+  
+**All That Node -** **_Hizmet Olarak Düğüm (Node-as-a-Service)._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Belgeler](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Bware Labs'den Blast -** **_Ethereum Ana Ağı ve Test Ağları için Merkeziyetsiz API'lar._**
+**Bware Labs'ten Blast -** **_Ethereum Ana Ağı ve Test Ağları için Merkeziyetsiz API'ler._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Belgeler](https://docs.blastapi.io)
-- [Discord](https://discord.gg/bwarelabs)
+- [Discord](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi -** **_Daha verimli ve hızlı RPC servisleri sağlamak_**
+**BlockPi -** **_Daha verimli ve hızlı RPC hizmetleri sağlar_**
 
 - [blockpi.io](https://blockpi.io/)
 - [Belgeler](https://docs.blockpi.io/)
 - [GitHub](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
-**Cloudflare Ethereum Ağ Geçidi.**
+**Cloudflare Ethereum Gateway.**
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - Blok Kâşifi ve İşlem API'leri**
+**Etherscan - Blok Gezgini ve İşlem API'leri**
 - [Belgeler](https://docs.etherscan.io/)
 
-**GetBlock-** **_Web3 geliştirme için servis olarak blok zincir_**
+**Blockscout - Açık Kaynaklı Blok Gezgini**
+- [Belgeler](https://docs.blockscout.com/)
+
+**GetBlock-** **_Web3 geliştirmesi için hizmet olarak blokzincir (Blockchain-as-a-service)_**
 
 - [GetBlock.io](https://getblock.io/)
-- [Belgeler](https://getblock.io/docs/)
+- [Belgeler](https://docs.getblock.io/)
 
-**Infura -** **_Hizmet olarak Ethereum API._**
+**Infura -** **_Hizmet olarak Ethereum API'si._**
 
 - [infura.io](https://infura.io)
-- [Dokümanlar](https://docs.infura.io/api)
+- [Belgeler](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Uygun maliyetli EVM JSON-RPC sağlayıcı_**
+**Node RPC - _Uygun maliyetli EVM JSON-RPC sağlayıcısı_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Belgeler](https://docs.noderpc.xyz/node-rpc)
 
-**NOWNodes - _Tam Düğümler ve Blok Arayıcıları._**
+**NOWNodes - _Tam Düğümler ve Blok Gezginleri._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Dokümanlar](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
+- [Belgeler](https://nownodes.gitbook.io/documentation)
 
-**QuickNode -** **_Bir Hizmet Olarak Blok Zincir Altyapısı._**
+**QuickNode -** **_Hizmet Olarak Blokzincir Altyapısı._**
 
 - [quicknode.com](https://quicknode.com)
 - [Belgeler](https://www.quicknode.com/docs/welcome)
 - [Discord](https://discord.gg/quicknode)
 
-**Rivet -** **_Ethereum ve açık kaynaklı yazılım tarafından desteklenen bir hizmet olarak Ethereum Classic API'ları._**
+**Rivet -** **_Açık kaynaklı yazılımlarla desteklenen hizmet olarak Ethereum ve Ethereum Classic API'leri._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Belgeler](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_JSON-RPC/WebSocket API olarak hız odaklı Ethereum düğümleri._**
+**Zmok -** **_JSON-RPC/WebSockets API'si olarak hız odaklı Ethereum düğümleri._**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -97,111 +100,119 @@ Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın ka
 
 ### Geliştirme araçları {#development-tools}
 
-**ethers-kt -** **_EVM tabanlı blokzincirler için eşzamansız, yüksek performanslı Kotlin/Java/Android kütüphanesi._**
+**ethers-kt -** **_EVM tabanlı blokzincirler için asenkron, yüksek performanslı Kotlin/Java/Android kütüphanesi._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Örnekler](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Nethereum ** **_ Blok zincir için açık kaynaklı bir .NET entegrasyon kütüphanesi._**
+**Nethereum -** **_Blokzincir için açık kaynaklı bir .NET entegrasyon kütüphanesi._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Belgeler](http://docs.nethereum.com/en/latest/)
+- [Belgeler](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-**Python Tooling -** **_Python üzerinden Ethereum etkileşimi için çeşitli kütüphaneler._**
+**Python Araçları -** **_Python aracılığıyla Ethereum etkileşimi için çeşitli kütüphaneler._**
 
-- [py.ethereum.org](https://python.ethereum.org/)
-- [web3.py GitHub](https://github.com/ethereum/web3.py)
-- [web3.py Sohbeti](https://gitter.im/ethereum/web3.py)
+- [py.ethereum.org](https://snakecharmers.ethereum.org/)
+- [Web3.py GitHub](https://github.com/ethereum/web3.py)
+- [Web3.py Sohbeti](https://gitter.im/ethereum/web3.py)
 
-**Tatum -** **_üstün blok zincir geliştirme platformu._**
+**Tatum -** **_Nihai blokzincir geliştirme platformu._**
 
 - [Tatum](https://tatum.io/)
 - [GitHub](https://github.com/tatumio/)
 - [Belgeler](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**web3j -** **_Ethereum için bir Java/Android/Kotlin/Scala entegrasyon kütüphanesi._**
+**Web3j -** **_Ethereum için bir Java/Android/Kotlin/Scala entegrasyon kütüphanesi._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Belgeler](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-### Blokzincir servisleri {#blockchain-services}
+### Blokzincir hizmetleri {#blockchain-services}
 
 **BlockCypher -** **_Ethereum Web API'leri._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
-- [Dokümanlar](https://www.blockcypher.com/dev/ethereum/)
+- [Belgeler](https://www.blockcypher.com/dev/ethereum/)
 
-**Chainbase -** **_Ethereum için hepsi bir arada web3 veri altyapısı._**
+**Chainbase -** **_Ethereum için hepsi bir arada Web3 veri altyapısı._**
 
 - [chainbase.com](https://chainbase.com/)
-- [Dokümanlar](https://docs.chainbase.com/)
+- [Belgeler](https://docs.chainbase.com/)
 - [Discord](https://discord.gg/Wx6qpqz4AF)
 
-**Chainstack -** **_Esnek ve özel Ethereum düğüm servisleri._**
+**Chainstack -** **_Hizmet olarak esnek ve özel Ethereum düğümleri._**
 
 - [chainstack.com](https://chainstack.com)
-- [Dokümanlar](https://docs.chainbase.com/docs)
+- [Belgeler](https://docs.chainstack.com/)
 - [Ethereum API referansı](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Coinbase Bulut Düğümü -** **_Blok Zincir Altyapısı API'sı._**
+**Coinbase Cloud Node -** **_Blokzincir Altyapı API'si._**
 
-- [Coinbase Bulut Düğümü](https://www.coinbase.com/cloud)
-- [Dokümanlar](https://docs.cloud.coinbase.com/)
+- [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
+- [Belgeler](https://docs.cdp.coinbase.com/)
 
-**DataHub by Figment -** **_Ethereum Ana Ağı ve test ağları ile Web3 API hizmetleri._**
+**Figment'ten DataHub -** **_Ethereum Ana Ağı ve test ağları ile Web3 API hizmetleri._**
 
 - [DataHub](https://www.figment.io/)
-- [Dokümanlar](https://docs.figment.io/)
+- [Belgeler](https://docs.figment.io/)
 
-**Moralis -** **_Kuruluş Seviyesi EVM API Sağlayıcısı._**
+**Moralis -** **_Kurumsal Düzeyde EVM API Sağlayıcısı._**
 
 - [moralis.io](https://moralis.io)
-- [Dokümanlar](https://docs.moralis.io/)
+- [Belgeler](https://docs.moralis.io/)
 - [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Forum](https://forum.moralis.io/)
 
-**NFTPort -** **_Ethereum Verisi ve Basım API'ları._**
+**NFTPort -** **_Ethereum Veri ve Basım (Mint) API'leri._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
-- [Dokümanlar](https://docs.nftport.xyz/)
+- [Belgeler](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [Discord](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview -** **_Genel Multi Kripto Blok Zincir API'lar Platformu_**
+**Tokenview -** **_Genel Çoklu Kripto Blokzincir API'leri Platformu._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
-- [Dokümanlar](https://services.tokenview.io/docs?type=api)
+- [Belgeler](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_Ethereum blok zincirine basit ve güvenilir API erişimi sağlayın._**
+**Watchdata -** **_Ethereum blokzincirine basit ve güvenilir API erişimi sağlar._**
 
 - [Watchdata](https://watchdata.io/)
-- [Dokümanlar](https://docs.watchdata.io/)
+- [Belgeler](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Covalent -** **_200+ Zincir için Zenginleştirilmiş Blokzincir API'leri._**
+**Codex -** **_Düzinelerce ağda gerçek zamanlı, zenginleştirilmiş blokzincir veri API'si._**
+
+- [codex.io](https://www.codex.io/)
+- [Belgeler](https://docs.codex.io)
+- [Gezgin](https://docs.codex.io/explore)
+- [GitHub](https://github.com/Codex-Data)
+- [Discord](https://discord.com/invite/mFpUhT3vAq)
+
+**Covalent -** **_200'den fazla Ağ için zenginleştirilmiş blokzincir API'leri._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Dokümanlar](https://www.covalenthq.com/docs/api/)
+- [Belgeler](https://www.covalenthq.com/docs/api/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
-_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
 ## İlgili konular {#related-topics}
 
-- [ Düğümler ve İstemciler](/developers/docs/nodes-and-clients/)
-- [Geliştirici çerçeveleri](/developers/docs/frameworks/)
+- [Düğümler ve istemciler](/developers/docs/nodes-and-clients/)
+- [Geliştirme çerçeveleri](/developers/docs/frameworks/)
 
-## İlgili öğreticiler {#related-tutorials}
+## İlgili eğitimler {#related-tutorials}
 
-- [JavaScript'te Ethereum blok zincirini kullanmak için Web3js'yi kurun](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Projenizde web3.js kurulumu için talimatlar._
-- [JavaScript'ten akıllı sözleşme çağırma](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI belirtecini kullanarak, JavaScript kullanan sözleşme işlevini nasıl çağıracağınızı görün._
+- [JavaScript'te Ethereum blokzincirini kullanmak için Web3.js'i kurun](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Projenizde Web3.js'i kurmak için talimatlar._
+- [JavaScript'ten bir akıllı sözleşme çağırmak](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI token'ını kullanarak, JavaScript ile sözleşme işlevlerinin nasıl çağrılacağını görün._

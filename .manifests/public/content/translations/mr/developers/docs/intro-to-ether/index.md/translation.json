@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "locale": "mr",
+  "translatedAt": "2026-06-17T21:54:24.030Z",
+  "englishManifestHash": "6d056af4576e",
+  "placeholderOrder": [
+    "LINK-2752a3",
+    "LINK-21141b",
+    "LINK-2ee939",
+    "LINK-9e07de",
+    "LINK-f61394",
+    "LINK-5d6b06",
+    "LINK-427737",
+    "LINK-d1e15a",
+    "CODE-cd4240",
+    "LINK-5bbb7f",
+    "LINK-c0566c",
+    "LINK-a933de",
+    "CODE-5751e0",
+    "LINK-a17794",
+    "LINK-fd7bd3",
+    "LINK-35de3a",
+    "LINK-a0b036",
+    "LINK-7f5147",
+    "LINK-8c9e1e"
+  ],
+  "placeholderMap": {
+    "CODE-cd4240": {
+      "type": "inline-code",
+      "values": {
+        "content": "value"
+      }
+    },
+    "CODE-5751e0": {
+      "type": "inline-code",
+      "values": {
+        "content": "balance"
+      }
+    },
+    "LINK-2752a3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-21141b": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge"
+      }
+    },
+    "LINK-2ee939": {
+      "type": "link",
+      "values": {
+        "url": "/defi"
+      }
+    },
+    "LINK-9e07de": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/dapps"
+      }
+    },
+    "LINK-f61394": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-5d6b06": {
+      "type": "link",
+      "values": {
+        "url": "https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845"
+      }
+    },
+    "LINK-427737": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/block/22580057"
+      }
+    },
+    "LINK-d1e15a": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
+      }
+    },
+    "LINK-5bbb7f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-c0566c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-a933de": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-a17794": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io"
+      }
+    },
+    "LINK-fd7bd3": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com"
+      }
+    },
+    "LINK-35de3a": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe"
+      }
+    },
+    "LINK-a0b036": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html"
+      }
+    },
+    "LINK-7f5147": {
+      "type": "link",
+      "values": {
+        "url": "/whitepaper/"
+      }
+    },
+    "LINK-8c9e1e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/gwei-calculator"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T21:54:24.030Z",
+      "status": "success"
+    }
+  }
+}

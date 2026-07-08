@@ -4,6 +4,7 @@ description: This tutorial is Part 1 of a series on NFTs that will take you step
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
+breadcrumb: Write and deploy NFT
 lang: en
 published: 2021-04-22
 ---
@@ -16,7 +17,7 @@ In this tutorial, we will walk through creating and deploying an ERC-721 smart c
 
 In Part 2 of this tutorial we’ll go through how we can use our smart contract to mint an NFT, and in Part 3 we’ll explain how to view your NFT on MetaMask.
 
-And of course, if you have questions at any point, don’t hesitate to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB) or visit [Alchemy's NFT API docs](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
+And of course, if you have questions at any point, don’t hesitate to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB) or visit [Alchemy's NFT API docs](https://www.alchemy.com/docs/reference/nft-api-quickstart)!
 
 ## Step 1: Connect to the Ethereum network {#connect-to-ethereum}
 
@@ -26,7 +27,7 @@ In this tutorial, we’ll also take advantage of Alchemy’s developer tools for
 
 ## Step 2: Create your app (and API key) {#make-api-key}
 
-Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Sepolia test network. Check out [this guide](https://docs.alchemyapi.io/guides/choosing-a-network) if you’re curious to learn more about test networks.
+Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Sepolia test network. Check out [this guide](https://www.alchemy.com/docs/choosing-a-web3-network) if you’re curious to learn more about test networks.
 
 1. Navigate to the “Create App” page in your Alchemy Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”
 
@@ -42,7 +43,7 @@ Once you’ve created an Alchemy account, you can generate an API key by creatin
 
 We need an Ethereum account to send and receive transactions. For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Sepolia Test Network” in the upper right (so that we’re not dealing with real money).
+You can download and create a MetaMask account for free [here](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to the “Sepolia Test Network” in the upper right (so that we’re not dealing with real money).
 
 ![Set Sepolia as your network](./metamask-goerli.png)
 
@@ -52,7 +53,7 @@ In order to deploy our smart contract to the test network, we’ll need some fak
 
 ## Step 5: Check your Balance {#check-balance}
 
-To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
+To double check our balance is there, let’s make an [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) request using [Alchemy’s sandbox tool](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). This will return the amount of ETH in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
@@ -67,12 +68,13 @@ First, we’ll need to create a folder for our project. Navigate to your command
     mkdir my-nft
     cd my-nft
 
-Now that we’re inside our project folder, we’ll use npm init to initialize the project. If you don’t already have npm installed, follow [these instructions](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (we’ll also need [Node.js](https://nodejs.org/en/download/), so download that too!).
+Now that we’re inside our project folder, we’ll use npm init to initialize the project. If you don’t already have npm installed, follow [the Node.js installation instructions](https://nodejs.org/en/download/) (we’ll need Node.js and npm for this tutorial).
 
     npm init
 
 It doesn’t really matter how you answer the installation questions; here is how we did it for reference:
 
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -95,6 +97,7 @@ It doesn’t really matter how you answer the installation questions; here is ho
       "author": "",
       "license": "ISC"
     }
+```
 
 Approve the package.json, and we’re good to go!
 
@@ -184,7 +187,7 @@ Open up the my-nft project in your favorite editor (we like [VSCode](https://cod
    }
    ```
 
-3. Because we are inheriting classes from the OpenZeppelin contracts library, in your command line run `npm install @openzeppelin/contracts` to install the library into our folder.
+3. Because we are inheriting classes from the OpenZeppelin contracts library, in your command line run `npm install @openzeppelin/contracts^4.0.0` to install the library into our folder.
 
 So, what does this code _do_ exactly? Let’s break it down, line-by-line.
 
@@ -226,7 +229,7 @@ Then, create a `.env` file in the root directory of our project, and add your Me
 
 - See below to get HTTP Alchemy API URL and copy it to your clipboard
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4)
 
 Your `.env` should now look like this:
 
@@ -241,7 +244,7 @@ To actually connect these to our code, we’ll reference these variables in our 
 
 Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](/developers/docs/apis/json-rpc/) with more user friendly methods.
 
-Hardhat makes it super easy to integrate [Plugins](https://hardhat.org/plugins/) for additional tooling and extended functionality. We’ll be taking advantage of the [Ethers plugin](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) for contract deployment ([Ethers.js](https://github.com/ethers-io/ethers.js/) has some super clean contract deployment methods).
+Hardhat makes it super easy to integrate [Plugins](https://hardhat.org/plugins/) for additional tooling and extended functionality. We’ll be taking advantage of the [Ethers plugin](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) for contract deployment ([Ethers.js](https://github.com/ethers-io/ethers.js/) has some super clean contract deployment methods).
 
 In your project directory type:
 
@@ -255,6 +258,7 @@ We’ve added several dependencies and plugins so far, now we need to update har
 
 Update your hardhat.config.js to look like this:
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -272,6 +276,7 @@ Update your hardhat.config.js to look like this:
           }
        },
     }
+```
 
 ## Step 14: Compile our contract {#compile-contract}
 
@@ -337,7 +342,7 @@ The From address should match your MetaMask account address and the To address w
 
 Yasssss! You just deployed your NFT smart contract to the Ethereum (testnet) chain!
 
-To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
+To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemy.com/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

@@ -5,4 +5,4 @@
 
 ### Thank you for your interest in contributing!
 
-Please see [our contributing guide on ethereum.org](https://ethereum.org/en/contributing/) and [our GitHub repo homepage](https://github.com/ethereum/ethereum-org-website#how-to-contribute) for the latest information on how to contribute!
+Please see [our contributing guide on ethereum.org](https://ethereum.org/contributing/) and [our GitHub repo homepage](https://github.com/ethereum/ethereum-org-website#how-to-contribute) for the latest information on how to contribute!

@@ -1,0 +1,36 @@
+{
+  "txCount": {
+    "value": 21201547,
+    "timestamp": 1765911980702
+  },
+  "txCostsMedianUsd": {
+    "value": 0.0021369059847066454,
+    "timestamp": 1765911980702
+  },
+  "dailyTxCosts": {
+    "ethereum": 0.03326942386369645,
+    "arbitrum": 0.002229593085444855,
+    "base": 0.0006038779516898622,
+    "optimism": 0.000037773431721936106,
+    "zksync_era": 0.3179916842233433,
+    "linea": 0.008866720531871104,
+    "scroll": 0.0006960238817157083,
+    "starknet": 0.008022904792072736,
+    "unichain": 0.000016663839829337946,
+    "ink": 0.00007565276727613611,
+    "zircuit": 0.00012345678901234567
+  },
+  "activeAddresses": {
+    "ethereum": 2367780,
+    "arbitrum": 831630,
+    "base": 2725548,
+    "optimism": 145639,
+    "zksync_era": 103532,
+    "linea": 66221,
+    "scroll": 27214,
+    "starknet": 173451,
+    "unichain": 21490,
+    "ink": 77713,
+    "zircuit": 45000
+  }
+}

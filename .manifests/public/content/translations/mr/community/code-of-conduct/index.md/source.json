@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/community/code-of-conduct/index.md",
+  "generatedAt": "2026-06-08T07:07:14.084Z",
+  "rootHash": "5f873e10c04d",
+  "tree": {
+    "contentHash": "724f6f517b3c",
+    "anchorHash": "e4099b9523a0",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "04b9f0eb98cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "0495c3aa950a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "mission": {
+        "contentHash": "d34da4ed9dd3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e6b85bfbf550",
+        "children": {
+          "_label": {
+            "contentHash": "e6b85bfbf550",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "11717480e582",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "values": {
+        "contentHash": "c0d68a69d8fc",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "53b09e104f60",
+        "children": {
+          "_label": {
+            "contentHash": "53b09e104f60",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fc908eccf14d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-we-are-not": {
+        "contentHash": "ff52d6b35704",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "95d633f1f13c",
+        "children": {
+          "_label": {
+            "contentHash": "95d633f1f13c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "58d267d6b76e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "code-of-conduct-2": {
+        "contentHash": "a010efb250d3",
+        "anchorHash": "4c1d52d95e6f",
+        "labelHash": "04b9f0eb98cc",
+        "children": {
+          "_label": {
+            "contentHash": "04b9f0eb98cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "pledge": {
+            "contentHash": "90c9aeccf0f5",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "6ecacf535168",
+            "children": {
+              "_label": {
+                "contentHash": "6ecacf535168",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "32d6c9d72843",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "scope": {
+            "contentHash": "c1a62c8fd2f5",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "b073f6c68ef8",
+            "children": {
+              "_label": {
+                "contentHash": "b073f6c68ef8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "6e4d83d518b5",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "our-standards": {
+            "contentHash": "95384828159c",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "986b5efd6c12",
+            "children": {
+              "_label": {
+                "contentHash": "986b5efd6c12",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "add98677e5f8",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "reporting": {
+            "contentHash": "238085fef350",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "b1fa104b9bf0",
+            "children": {
+              "_label": {
+                "contentHash": "b1fa104b9bf0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "8f3e62e96a4c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "enforcement": {
+            "contentHash": "40bf6d1985be",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "bda2e3e6c900",
+            "children": {
+              "_label": {
+                "contentHash": "bda2e3e6c900",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "707f4fe84973",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "pledge",
+          "scope",
+          "our-standards",
+          "reporting",
+          "enforcement"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "mission",
+      "values",
+      "what-we-are-not",
+      "code-of-conduct-2"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

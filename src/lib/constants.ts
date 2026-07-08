@@ -1,16 +1,15 @@
-import { ReportsModel } from "@crowdin/crowdin-api-client"
-
 import { NavSectionKey } from "@/components/Nav/types"
 
 import i18nConfig from "../../i18n.config.json"
 
 import type { CommunityBlog } from "./types"
 
-export const OLD_CONTENT_DIR = "src/content"
+export const OLD_CONTENT_DIR = "src/content" // For old git commit history -- do not remove
 export const CONTENT_DIR = "public/content"
-export const TRANSLATIONS_DIR = "public/content/translations"
+export const CONTENT_PATH = "/content"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
 export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
+export const INTERNAL_TUTORIALS_JSON = "src/data/internalTutorials.json"
 export const INTL_JSON_DIR = "src/intl"
 
 export const NULL_VALUE = "—"
@@ -19,20 +18,26 @@ export const NULL_VALUE = "—"
 export const DEFAULT_LOCALE = "en"
 export const FAKE_LOCALE = "default"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
-const BUILD_LOCALES = process.env.BUILD_LOCALES
+const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
 export const LOCALES_CODES = BUILD_LOCALES
   ? BUILD_LOCALES.split(",")
   : i18nConfig.map(({ code }) => code)
 
-// Site urls
-export const SITE_URL = "https://ethereum.org"
-export const DISCORD_PATH = "/discord/"
+// Site URL - resolved at build time in next.config.js from Netlify deploy context
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org"
+
+export const IS_PRODUCTION_DEPLOY =
+  process.env.NEXT_PUBLIC_CONTEXT === "production"
+export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
+export const ENTERPRISE_ETHEREUM_URL = "https://institutions.ethereum.org/"
 export const GITHUB_REPO_URL =
-  "https://github.com/ethereum/ethereum-org-website"
+  "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
 export const MAIN_CONTENT_ID = "main-content"
 export const WEBSITE_EMAIL = "website@ethereum.org"
 export const DEFAULT_OG_IMAGE = "/images/home/hero.png"
+export const SITE_TITLE = "ethereum.org"
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800
@@ -40,12 +45,13 @@ export const GITHUB_BASE_API =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
 export const GITHUB_URL = `https://github.com/`
-export const COINGECKO_API_BASE_URL =
-  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
-export const COINGECKO_API_URL_PARAMS =
-  "&order=market_cap_desc&per_page=100&page=1&sparkline=false"
-export const BASE_TIME_UNIT = 3600 // 1 hour
 export const COLOR_MODE_STORAGE_KEY = "theme"
+
+// API timing
+export const BASE_TIME_UNIT = 3600 // (seconds) 1 hour
+export const TIMEOUT_MS = 5000 // (milliseconds)
+export const MAX_RETRIES = 1
+export const RETRY_DELAY_BASE_MS = 250 // (milliseconds)
 
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"
@@ -58,21 +64,6 @@ export const TOTAL_QUIZ_RETRY_RATE = 15.6
 
 // Crowdin
 export const CROWDIN_PROJECT_URL = "https://crowdin.com/project/ethereum-org"
-export const CROWDIN_PROJECT_ID = 363359
-export const CROWDIN_API_MAX_LIMIT = 500
-export const FIRST_CROWDIN_CONTRIBUTION_DATE = "2019-07-01T00:00:00+00:00"
-export const REGULAR_RATES: ReportsModel.RegularRate[] = [
-  {
-    mode: "tm_match",
-    value: 1.01,
-  },
-  {
-    mode: "no_match",
-    value: 1.01,
-  },
-]
-
-export const languagePathRootRegExp = /^.+\/content\/translations\/[a-z-]*\//
 
 // Metrics
 export const DAYS_TO_FETCH = 1
@@ -108,6 +99,8 @@ export const WALLETS_FILTERS_DEFAULT = {
   withdraw_crypto: false,
   multisig: false,
   social_recovery: false,
+  eip_4337_support: false,
+  eip_7702_support: false,
   new_to_crypto: false,
 }
 
@@ -135,7 +128,10 @@ export const DEVELOPER_FEATURES = [
 // Chains
 export const CHAINID_NETWORK_ENDPOINT = "https://chainid.network/chains.json"
 
+export const CANONICAL_STAKING_TESTNET = "Hoodi"
+
 export const TESTNETS = [
+  "hoodi",
   "goerli",
   "holesky",
   "kiln",
@@ -186,6 +182,7 @@ export const RSS_DISPLAY_COUNT = 6
 
 export const VITALIK_FEED = "https://vitalik.eth.limo/feed.xml"
 export const SOLIDITY_FEED = "https://soliditylang.org/feed.xml"
+export const ATTESTANT_BLOG = "https://www.attestant.io/posts/"
 
 export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
@@ -198,7 +195,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   },
   {
     href: "https://ethpandaops.io/posts/",
-    feed: "https://ethpandaops.io/posts/index.xml",
+    feed: "https://ethpandaops.io/posts/rss.xml",
   },
   {
     href: "https://ethstaker.cc/blog",
@@ -208,26 +205,31 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     name: "0xPARC",
     href: "https://0xparc.org/blog",
   },
-  {
-    href: "https://www.attestant.io/posts/",
-    feed: "https://www.attestant.io/posts/",
-  },
+  { href: ATTESTANT_BLOG, feed: ATTESTANT_BLOG },
   { name: "Devcon", href: "https://devcon.org/en/blogs/" },
   {
     href: "https://soliditylang.org/blog/",
     feed: SOLIDITY_FEED,
   },
   {
-    href: "https://mirror.xyz/privacy-scaling-explorations.eth",
-    feed: "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom",
+    href: "https://paragraph.com/@privacy-scaling-explorations",
+    feed: "https://api.paragraph.com/blogs/rss/@privacy-scaling-explorations",
   },
   {
-    href: "https://stark.mirror.xyz/",
-    feed: "https://stark.mirror.xyz/feed/atom",
+    href: "https://paragraph.com/@josh-stark",
+    feed: "https://api.paragraph.com/blogs/rss/@josh-stark",
   },
   {
     href: "https://medium.com/ethereum-cat-herders/newsletter",
     feed: "https://medium.com/feed/ethereum-cat-herders",
+  },
+  {
+    href: "https://geodework.com/blog",
+    feed: "https://geodework.com/feed.xml",
+  },
+  {
+    href: "https://ethereal.news",
+    feed: "https://ethereal.news/rss.xml",
   },
 ]
 
@@ -236,3 +238,18 @@ export const BLOG_FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(
 ) as string[]
 
 export const BLOGS_WITHOUT_FEED = COMMUNITY_BLOGS.filter((item) => !item.feed)
+
+export const SIZE_CLASS_MAPPING = {
+  10: "size-10",
+  12: "size-12",
+  14: "size-14",
+  16: "size-16",
+  24: "size-24",
+} as const
+
+export const LINE_CLAMP_CLASS_MAPPING = {
+  1: "line-clamp-1",
+  2: "line-clamp-2",
+  3: "line-clamp-3",
+  4: "line-clamp-4",
+} as const

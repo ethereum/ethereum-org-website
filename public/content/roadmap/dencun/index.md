@@ -1,10 +1,10 @@
 ---
-title: Cancun-Deneb (Dencun) FAQ
+title: Cancun-Deneb (Dencun)
+metaTitle: Cancun-Deneb (Dencun) FAQ
 description: Frequently asked questions regarding the Cancun-Deneb (Dencun) network upgrade
 lang: en
+template: upgrade
 ---
-
-# Cancun-Deneb (Dencun) {#dencun}
 
 Cancun-Deneb (Dencun) is an upgrade to the Ethereum network, which activates **Proto-Danksharding (EIP-4844)**, introducing temporary data **blobs** for cheaper [layer 2 (L2)](/glossary/#layer-2) rollup storage.
 
@@ -68,9 +68,9 @@ Yes, Proto-Danksharding (EIP-4844) requires updates to both execution clients an
 
 The consensus clients handle the _Validator_ software, which has all been updated to accommodate the upgrade.
 
-## How does Cancun-Deneb (Dencun) affect Goerli or other Ethereum testnets? {#testnet-impact}
+## How does Cancun-Deneb (Dencun) affect Ethereum testnets? {#testnet-impact}
 
-- Devnets, Goerli, Sepolia and Holesky have all undergone the Dencun upgrade and have Proto-Danksharding fully functioning
+- Devnets, Sepolia and Holesky have all undergone the Dencun upgrade and have Proto-Danksharding fully functioning
 - Rollup developers can use these networks for EIP-4844 testing
 - Most users will be completely unaffected by this change to each testnet
 
@@ -101,11 +101,11 @@ Simply being compatible with the Ethereum Virtual Machine (EVM) does not mean th
 
 ## More of a visual learner? {#visual-learner}
 
-<YouTube id="HT9PHWloIiU" />
+<VideoWatch slug="eip-4844-dencun-explained" />
 
 _Unlocking Ethereum's Scaling, EIP-4844 — Finematics _
 
-<YouTube id="dFjyUY3e53Q" />
+<VideoWatch slug="blobspace-101-dencun" />
 
 _Blobspace 101 with Domothy — Bankless_
 

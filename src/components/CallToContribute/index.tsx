@@ -1,8 +1,6 @@
-import React from "react"
-import { FaGithub } from "react-icons/fa"
-
 import { ChildOnlyProp } from "@/lib/types"
 
+import Github from "@/components/icons/github.svg"
 import Translation from "@/components/Translation"
 
 import { ButtonLink } from "../ui/buttons/Button"
@@ -28,7 +26,7 @@ const CallToContribute = ({ editPath }: CallToContributeProps) => {
   return (
     <aside className="mt-8 items-center rounded-md border border-b-4 border-primary bg-background-highlight">
       <ContentColumn>
-        <h2 className="mb-8 mt-0 p-1 font-monospace uppercase leading-xs">
+        <h2 className="mt-0 mb-8 p-1 font-monospace leading-xs uppercase">
           <Translation id="page-developers-docs:page-calltocontribute-title" />
         </h2>
         <DescriptionParagraph>
@@ -50,7 +48,7 @@ const CallToContribute = ({ editPath }: CallToContributeProps) => {
           </InlineLink>{" "}
         </DescriptionParagraph>
         <ButtonLink href={editPath}>
-          <FaGithub className="h-6 w-6" />
+          <Github className="text-2xl" />
           <Translation id="page-developers-docs:page-calltocontribute-span" />
         </ButtonLink>
       </ContentColumn>

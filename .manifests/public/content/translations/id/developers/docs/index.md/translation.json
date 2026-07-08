@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-17T21:51:43.863Z",
+  "englishManifestHash": "215058b2cb62",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-a871cd",
+    "LINK-43ad80",
+    "LINK-a7be73",
+    "LINK-ab55fe",
+    "LINK-90b5d2",
+    "LINK-557aed",
+    "LINK-adc8d3",
+    "LINK-578ba7",
+    "LINK-9117e4",
+    "LINK-ad42da",
+    "LINK-540746"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-a871cd": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md"
+      }
+    },
+    "LINK-43ad80": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-a7be73": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-90b5d2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    },
+    "LINK-557aed": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-578ba7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/programming-languages/"
+      }
+    },
+    "LINK-9117e4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-ad42da": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networking-layer/"
+      }
+    },
+    "LINK-540746": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T21:51:43.863Z",
+      "status": "success"
+    }
+  }
+}

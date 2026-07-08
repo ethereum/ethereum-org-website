@@ -1,13 +1,10 @@
 ---
-title: ERC-20 token akıllı sözleşmesini anlamak
-description: Ethereum test ağında ilk akıllı sözleşmenizi nasıl dağıtacağınızı öğrenin
+title: "ERC-20 Token akıllı sözleşmesini anlamak"
+description: "Eksiksiz bir Solidity akıllı sözleşme örneği ve açıklamasıyla ERC-20 Token standardını nasıl uygulayacağınızı öğrenin."
 author: "jdourlens"
-tags:
-  - "akıllı kontratlar"
-  - "jetonlar"
-  - "katılık"
-  - "erc-20"
+tags: ["akıllı sözleşmeler", "tokenlar", "Solidity", "erc-20"]
 skill: beginner
+breadcrumb: ERC-20 Token temelleri
 lang: tr
 published: 2020-04-05
 source: EthereumDev
@@ -15,11 +12,11 @@ sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Ethereum'daki en önemli [akıllı sözleşme standartlarından](/developers/docs/standards/) [ERC-20](/developers/docs/standards/tokens/erc-20/) olarak bilinir: Bu standart, Ethereum blok zincirinde tüm değiştirilebilir token uygulamalarının akıllı sözleşmeleri için kullanılan teknik standart olarak öne çıkmıştır.
+Ethereum üzerindeki en önemli [akıllı sözleşme standartlarından](/developers/docs/standards/) biri, misli token uygulamaları için Ethereum blokzincirindeki tüm akıllı sözleşmelerde kullanılan teknik standart olarak ortaya çıkan [ERC-20](/developers/docs/standards/tokens/erc-20/)'dir.
 
-ERC-20 tüm değiştirilebilir Ethereum token'larının uyması gereken ortak bir kural listesi belirler. Bundan dolayı bu token standardı, her türden geliştiriciyi yeni token'ların daha büyük Ethereum sisteminde nasıl çalışacağını isabetli bir şekilde tahmin edebilmeleri için destekler. Bu, token kurallara uyduğu sürece yeni bir token yayınlandığında her yeni projenin yeniden yapılmasına gerek duyulmayacağını bilerek işlerine devam edebilecekleri için geliştiricilerin görevlerini kolaylaştırır ve basitleştirir.
+ERC-20, tüm misli Ethereum tokenlarının uyması gereken ortak bir kurallar listesi tanımlar. Sonuç olarak bu Token standardı, her türden geliştiricinin yeni tokenların daha geniş Ethereum sistemi içinde nasıl işleyeceğini doğru bir şekilde tahmin etmesini sağlar. Bu, geliştiricilerin görevlerini basitleştirir ve kolaylaştırır; çünkü Token kurallara uyduğu sürece, yeni bir Token piyasaya sürüldüğünde her yeni projenin baştan yapılması gerekmeyeceğini bilerek çalışmalarına devam edebilirler.
 
-Burada bir ERC-20'nin uygulaması gereken fonksiyonlar bir arayüz şeklinde sunulmaktadır. Bir arayüzün ne olduğundan emin değilseniz: [Solidity'de OOP programlama](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/) hakkındaki makalemize bakabilirsiniz.
+İşte bir arayüz olarak sunulan, bir ERC-20'nin uygulaması gereken işlevler. Bir arayüzün ne olduğundan emin değilseniz: [Solidity'de OOP programlama](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/) hakkındaki makalemize göz atın.
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -40,27 +37,27 @@ interface IERC20 {
 }
 ```
 
-Burada her bir fonksiyonun ne işe yaradığının satır satır açıklaması mevcuttur. Bundan sonra bir ERC-20 token'ının basit bir uygulamasını göstereceğiz.
+İşte her bir işlevin ne işe yaradığının satır satır açıklaması. Bundan sonra ERC-20 Token'ının basit bir uygulamasını sunacağız.
 
-## Getters {#getters}
+## Getter'lar {#getters}
 
 ```solidity
 function totalSupply() external view returns (uint256);
 ```
 
-Var olan token miktarını döndürür. Bu fonksiyon bir alıcıdır (getter) ve sözleşmenin durumunu değiştirmez. Solidity'de kesirli sayıların bulunmadığını unutmayın. Bu yüzden birçok token 18 ondalığı benimser, toplam arzı ve diğer sonuçları örnek verecek olursak 1 token için 1000000000000000000 şeklinde döndürür. Her token 18 ondalık kullanmaz ve bu, token'larla uğraşırken dikkate almanız gereken şeylerden biridir.
+Var olan Token miktarını döndürür. Bu işlev bir getter'dır ve sözleşmenin durumunu değiştirmez. Solidity'de ondalıklı sayı (float) olmadığını unutmayın. Bu nedenle çoğu Token 18 ondalık basamak benimser ve toplam arzı ve diğer sonuçları 1 Token için 1000000000000000000 şeklinde döndürür. Her Token 18 ondalık basamağa sahip değildir ve bu, tokenlarla uğraşırken gerçekten dikkat etmeniz gereken bir şeydir.
 
 ```solidity
 function balanceOf(address account) external view returns (uint256);
 ```
 
-Bir adresin sahip olduğu token miktarını döndürür (`account`). Bu fonksiyon bir alıcıdır (getter) ve sözleşmenin durumunu değiştirmez.
+Bir adresin (`account`) sahip olduğu Token miktarını döndürür. Bu işlev bir getter'dır ve sözleşmenin durumunu değiştirmez.
 
 ```solidity
 function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-ERC-20 standartı, bir adresin başka bir adresten token alabilmesi için ödenek vermesine izin verir. Bu alıcı, `spender` adresinin `owner` adresinin adına harcayabileceği kalan token'ların sayısını döndürür. Bu fonksiyon bir alıcıdır, sözleşmenin durumunu değiştirmez ve varsayılan olarak 0 döndürür.
+ERC-20 standardı, bir adresin kendisinden Token alabilmesi için başka bir adrese harcama izni vermesine olanak tanır. Bu getter, `spender` adresinin `owner` adına harcamasına izin verilecek kalan Token sayısını döndürür. Bu işlev bir getter'dır, sözleşmenin durumunu değiştirmez ve varsayılan olarak 0 döndürmelidir.
 
 ## İşlevler {#functions}
 
@@ -68,19 +65,19 @@ ERC-20 standartı, bir adresin başka bir adresten token alabilmesi için ödene
 function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-`amount` miktarında tokeni fonksiyon çağıran adresten (`msg.sender`) alıcı adrese aktarır. Bu fonksiyon sonradan belirtilecek olan `Transfer` olayını tetikler. Transfer mümkün olmuşsa "true" döndürür.
+`amount` miktarındaki Token'ı işlevi çağıran adresten (`msg.sender`) alıcı adresine transfer eder. Bu işlev, daha sonra tanımlanan `Transfer` olayını yayar. Transfer mümkün olduysa true döndürür.
 
 ```solidity
 function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-`spender` hesabının fonksiyonu çağıran hesabın (`msg.sender`) bakiyesinden transfer edebileceği `allowance` miktarını belirler. Bu fonksiyon Approval olayını tetikler. Bu fonksiyon, ödeneğin (allowance) başarılı şekilde belirlenip belirlenemediğini döndürür.
+`spender` adresinin, işlevi çağıranın (`msg.sender`) bakiyesinden transfer etmesine izin verilen `allowance` miktarını ayarlar. Bu işlev Approval olayını yayar. İşlev, harcama izninin başarıyla ayarlanıp ayarlanmadığını döndürür.
 
 ```solidity
 function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
-Ödenek mekanizmasını kullanarak `amount` miktarında tokeni `sender` adresinden `recipient` adresine aktarır. miktar bunun sonrasında çağıranın ödeneğinden azaltılır. Bu fonksiyon `Transfer` olayını tetikler.
+Harcama izni mekanizmasını kullanarak `amount` miktarındaki Token'ı `sender` adresinden `recipient` adresine transfer eder. Miktar daha sonra çağıranın harcama izninden düşülür. Bu işlev `Transfer` olayını yayar.
 
 ## Olaylar {#events}
 
@@ -88,19 +85,19 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-Bu olay, token miktarı (value) `from` adresinden `to` adresine gönderilince tetiklenir.
+Bu olay, Token miktarı (value) `from` adresinden `to` adresine gönderildiğinde yayılır.
 
-Yeni tokenlerin basılması durumunda transfer normalde `from` 0x00..0000 şeklinde; buna karşın yakma durumunda ise transfer `to` 0x00..0000 şeklindedir.
+Yeni Token basımı (minting) durumunda, transfer genellikle 0x00..0000 adresinden (`from`) yapılırken, Token yakımı (burn) durumunda transfer 0x00..0000 adresine (`to`) yapılır.
 
 ```solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);
 ```
 
-Bu olay, token miktarının (`value`) `spender` tarafından kullanılması için `owner` tarafından izin verildiğinde tetiklenir.
+Bu olay, Token miktarı (`value`) `owner` tarafından `spender` adresinin kullanımına onaylandığında yayılır.
 
-## Basit bir ERC-20 token uygulaması {#a-basic-implementation-of-erc-20-tokens}
+## ERC-20 tokenlarının temel bir uygulaması {#a-basic-implementation-of-erc-20-tokens}
 
-Bu, ERC-20 token'ınızı temellendirmek için en basit koddur:
+İşte ERC-20 Token'ınızı dayandırabileceğiniz en basit kod:
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -136,11 +133,11 @@ contract ERC20Basic is IERC20 {
 
 
    constructor() {
-    balances[msg.sender] = totalSupply_;
+	balances[msg.sender] = totalSupply_;
     }
 
     function totalSupply() public override view returns (uint256) {
-    return totalSupply_;
+	return totalSupply_;
     }
 
     function balanceOf(address tokenOwner) public override view returns (uint256) {
@@ -178,4 +175,4 @@ contract ERC20Basic is IERC20 {
 }
 ```
 
-[OpenZeppelin ERC-20 uygulaması](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20), ERC-20 token standardının bir diğer mükemmel uygulamasıdır.
+ERC-20 Token standardının bir başka mükemmel uygulaması da [OpenZeppelin ERC-20 uygulamasıdır](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).

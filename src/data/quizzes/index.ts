@@ -53,6 +53,10 @@ const quizzes = {
     title: "learn-quizzes:page-assets-merge",
     questions: ["merge-1", "merge-2", "merge-3", "merge-4", "merge-5"],
   },
+  gas: {
+    title: "gas",
+    questions: ["gas-1", "gas-2", "gas-3", "gas-4", "gas-5"],
+  },
   daos: {
     title: "DAOs",
     questions: ["daos-1", "daos-2", "daos-3", "daos-4", "daos-5"],
@@ -98,6 +102,15 @@ const quizzes = {
     title: "DeFi",
     questions: ["defi-1", "defi-2", "defi-3", "defi-4", "defi-5"],
   },
+  "smart-contracts": {
+    title: "smart-contracts",
+    questions: [
+      "smart-contracts-1",
+      "smart-contracts-2",
+      "smart-contracts-3",
+      "smart-contracts-4",
+    ],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -119,6 +132,10 @@ const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "security",
+    level: "beginner",
+  },
+  {
+    id: "smart-contracts",
     level: "beginner",
   },
 ]
@@ -161,6 +178,10 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
   },
   {
     id: "staking-solo",
+    level: "advanced",
+  },
+  {
+    id: "gas",
     level: "advanced",
   },
 ]

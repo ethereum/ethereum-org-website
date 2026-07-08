@@ -16,7 +16,7 @@ There are multiple ways to store information either directly on the blockchain, 
 The choice of which method to use is based on several criteria:
 
 - The source of the information. Information in calldata cannot come directly from the blockchain itself.
-- The destination of the information. Calldata is available only in the transaction it initiates. Events are not accessible onchain at all.
+- The destination of the information. Calldata is only available in the transaction that includes it. Events are not accessible onchain at all.
 - How much hassle is acceptable? Computers that run a full-scale node can perform more processing than a light client in an application running in a browser.
 - Is it necessary to facilitate easy access to the information from every node?
 - The security requirements.
@@ -29,7 +29,7 @@ In general, information security consists of three attributes:
 
 - _Integrity_, the information is correct, it cannot be changed by unauthorized entities, or in unauthorized ways (for example, transferring [ERC-20 tokens](https://eips.ethereum.org/EIPS/eip-20#events) without a `Transfer` event). On the blockchain, every node verifies every state change, which ensures integrity.
 
-- _Availability_, the information is available to any authorized entity. On the blockchain, this is usually achieved by having the information available on every [full node](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
+- _Availability_, the information is available to any authorized entity. On the blockchain, this is usually achieved by having the information available on every [full node](https://ethereum.org/developers/docs/nodes-and-clients/#full-node).
 
 The different solutions here all have excellent integrity, because hashes are posted on L1. However, they do have different availability guarantees.
 
@@ -39,7 +39,7 @@ You should have a good understanding of [blockchain fundamentals](/developers/do
 
 ## EIP-4844 blobs {#eip-4844-blobs}
 
-Starting with [the Dencun hardfork](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md) the Ethereum blockchain includes [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), which adds to Ethereum data blobs with a limited lifetime (initially about [18 days](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). These blobs are priced separately from the [execution gas](/developers/docs/gas), although using a similar mechanism. They are a cheap way to post temporary data.
+Starting with [the Dencun hardfork](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/beacon-chain.md) the Ethereum blockchain includes [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), which adds to Ethereum data blobs with a limited lifetime (initially about [18 days](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration)). These blobs are priced separately from the [execution gas](/developers/docs/gas), although using a similar mechanism. They are a cheap way to post temporary data.
 
 The main use case for EIP-4844 blobs is for rollups to publish their transactions. [Optimistic rollups](/developers/docs/scaling/optimistic-rollups) need to publish the transactions on their blockchains. Those transactions have to be available to anybody during the [challenge period](https://docs.optimism.io/connect/resources/glossary#challenge-period) to enable [validators](https://docs.optimism.io/connect/resources/glossary#validator) to fix the mistake if the rollup's [sequencer](https://docs.optimism.io/connect/resources/glossary#sequencer) posts an incorrect state root.
 
@@ -63,7 +63,7 @@ Calldata refers to the bytes sent as part of the transaction. It is stored as pa
 
 This is the cheapest method to permanently put data in the blockchain. The cost per byte is either 4 execution gas (if the byte is zero) or 16 gas (any other value). If the data is compressed, which is standard practice, then every byte value is equally likely, so the average cost is approximately 15.95 gas per byte.
 
-At writing the prices are 12 gwei/gas and 2300 $/ETH, which means the cost is approximately 45 cents per kilobyte. Because this was the cheapest method prior to EIP-4844, this is the method rollups used to store transaction information, which need to be available for [fault challenges](https://docs.optimism.io/stack/protocol/overview#fault-proofs), but do not need to be accessible directly onchain.
+At the time of writing, the prices are 12 gwei/gas and 2300 $/ETH, which means the cost is approximately 45 cents per kilobyte. Because this was the cheapest method prior to EIP-4844, this is the method rollups used to store transaction information, which need to be available for [fault challenges](https://docs.optimism.io/stack/protocol/overview#fault-proofs), but do not need to be accessible directly onchain.
 
 Here are the addresses to see the transactions posted by some famous rollups.
 
@@ -110,7 +110,7 @@ This table summarizes the difference options, their advantages and disadvantages
 
 | Storage type                | Source of data      | Availability guarantee                                                                                                             | Onchain availability                                             | Additional limitations                                                  |
 | --------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| EIP-4844 blobs              | Offchain            | Ethereum guarantee for [~18 days](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | Only hash is available                                           |                                                                         |
+| EIP-4844 blobs              | Offchain            | Ethereum guarantee for [~18 days](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Only hash is available                                           |                                                                         |
 | Calldata                    | Offchain            | Ethereum guarantee forever (part of the blockchain)                                                                                | Only available if written to a contract, and at that transaction |
 | Offchain with L1 mechanisms | Offchain            | "One honest verifier" guarantee during the challenge period                                                                        | Hash only                                                        | Guaranteed by the challenge mechanism, only during the challenge period |
 | Contract code               | Onchain or offchain | Ethereum guarantee forever (part of the blockchain)                                                                                | Yes                                                              | Written to a "random" address, cannot start with `0xEF`                 |

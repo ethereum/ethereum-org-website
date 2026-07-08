@@ -1,6 +1,6 @@
 import { ImageProps } from "next/image"
 
-import { TwImage } from "../Image"
+import { Image } from "../Image"
 import { Center } from "../ui/flex"
 
 interface AssetDownloadImageProps {
@@ -10,7 +10,12 @@ interface AssetDownloadImageProps {
 
 const AssetDownloadImage = ({ image, alt }: AssetDownloadImageProps) => (
   <Center className="w-full border p-8">
-    <TwImage src={image} alt={alt} className="w-full self-center" />
+    <Image
+      src={image}
+      alt={alt}
+      className="w-full self-center"
+      sizes="(min-width: 1280px) 300px, (min-width: 992px) calc(33vw - 1.5rem), (min-width: 640px) calc(50vw - 2.5rem), calc(100vw - 4rem)"
+    />
   </Center>
 )
 

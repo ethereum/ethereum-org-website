@@ -1,13 +1,11 @@
 ---
-title: Smart contracts
-metaTitle: "Smart contracts: What are the and benefits"
+title: Introduction to smart contracts
+metaTitle: "Smart contracts: What are they and their benefits"
 description: A non-technical introduction to smart contracts
 lang: en
 ---
 
-# Introduction to smart contracts {#introduction-to-smart-contracts}
-
-Smart contracts are the fundamental building blocks of Ethereum's application layer. They are computer programs stored on the [blockchain](/glossary/#blockchain) that follow "if this then that" logic, and are guaranteed to execute according to the rules defined by its code, which cannot be changed once created.
+Smart contracts are the fundamental building blocks of [Ethereum's](/) application layer. They are computer programs stored on the [blockchain](/glossary/#blockchain) that follow "if this then that" logic, and are guaranteed to execute according to the rules defined by its code, which cannot be changed once created.
 
 Nick Szabo coined the term "smart contract". In 1994, he wrote [an introduction to the concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), and in 1996 he wrote [an exploration of what smart contracts could do](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
@@ -15,7 +13,7 @@ Szabo envisioned a digital marketplace where automatic, [cryptographically-secur
 
 Watch Finematics explain smart contracts:
 
-<YouTube id="pWGLtjG-F5c" />
+<VideoWatch slug="smart-contracts-code-is-law" />
 
 ## Trust in conventional contracts {#trust-and-contracts}
 
@@ -25,7 +23,7 @@ Here is an example:
 
 Alice and Bob are having a bicycle race. Let's say Alice bets Bob $10 that she will win the race. Bob is confident he'll be the winner and agrees to the bet. In the end, Alice finishes the race well ahead of Bob and is the clear winner. But Bob refuses to pay out on the bet, claiming Alice must have cheated.
 
-This silly example illustrates the problem with any non-smart agreement. Even if the conditions of the agreement get met (i.e. you are the winner of the race), you must still trust another person to fulfill the agreement (i.e. payout on the bet).
+This silly example illustrates the problem with any non-smart agreement. Even if the conditions of the agreement get met (i.e., you are the winner of the race), you must still trust another person to fulfill the agreement (i.e., payout on the bet).
 
 ## A digital vending machine {#vending-machine}
 
@@ -59,7 +57,11 @@ Smart contracts also protect your privacy. Since Ethereum is a pseudonymous netw
 
 ## Visible terms {#visible-terms}
 
-Finally, like traditional contracts, you can check what's in a smart contract before you sign it (or otherwise interact with it). A smart contract's transparency guarantees that anyone can scrutinize it.
+Finally, like traditional contracts, you can check what's in a smart contract before you sign it. Unlike a traditional contract, a smart contract's onchain transparency allows anyone to scrutinize and review it before interacting with it. 
+
+However, while anyone can view a smart contract's terms, the raw transaction data is designed to be interpreted by applications and wallets, not humans. Because this data is so difficult to read, users often face a major security risk called "blind signing," or approving a transaction that interacts with a smart contract without actually understanding what it will do. 
+
+The Ethereum ecosystem is transitioning to **[Clear Signing](https://clearsigning.org/)** standards (specifically [ERC-7730](https://eips.ethereum.org/EIPS/eip-7730)). Clear Signing translates opaque smart contract data into plain, human-readable transaction descriptions, ensuring anyone can understand a contract's true intent before they sign.
 
 ## Smart contract use cases {#use-cases}
 
@@ -69,8 +71,8 @@ They can perform computations, create currency, store data, mint [NFTs](/glossar
 
 - [Stablecoins](/stablecoins/)
 - [Creating and distributing unique digital assets](/nft/)
-- [An automatic, open currency exchange](/get-eth/#dex)
-- [Decentralized gaming](/dapps/?category=gaming#explore)
+- [An automatic, open currency exchange](/defi/#swaps)
+- [Decentralized gaming](/apps/categories/gaming)
 - [An insurance policy that pays out automatically](https://etherisc.com/)
 - [A standard that lets people create customized, interoperable currencies](/developers/docs/standards/tokens/)
 
@@ -79,4 +81,8 @@ They can perform computations, create currency, store data, mint [NFTs](/glossar
 - [How Smart Contracts Will Change the World](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Smart contracts for developers](/developers/docs/smart-contracts/)
 - [Learn to write smart-contracts](/developers/learning-tools/)
-- [Mastering Ethereum - What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Mastering Ethereum - What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+
+<Divider />
+
+<QuizWidget quizKey="smart-contracts" />

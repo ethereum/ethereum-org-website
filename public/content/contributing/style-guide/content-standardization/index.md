@@ -4,8 +4,6 @@ description: Guide to use consistent terminology in content writing
 lang: en
 ---
 
-# Content standardization {#content-standardization}
-
 This style guide aims to standardize certain aspects of writing content to make the contribution process smoother.
 
 ## Use American English {#american-english}
@@ -18,7 +16,7 @@ For words that have multiple spellings, use American English over British Englis
 - "color" over "colour"
 - "analyze" over "analyse"
 
-## Terminology {#Terminology}
+## Terminology {#terminology}
 
 ### Ethereum {#ethereum}
 
@@ -35,7 +33,7 @@ Ether is a common noun and should not be capitalized unless at the beginning of 
 
 ### Mainnet {#mainnet}
 
-When referring to the Ethereum Mainnet (i.e. not referring to a testnet) use the proper noun. Proper nouns help avoid confusion and build greater understanding.
+When referring to the Ethereum Mainnet (i.e., not referring to a testnet) use the proper noun. Proper nouns help avoid confusion and build greater understanding.
 
 **Correct usage:**
 
@@ -75,7 +73,7 @@ Smart contract is a common noun and should only be capitalized at the beginning 
 - Smart contract
 - smart contract
 
-** Incorrect usage:**
+**Incorrect usage:**
 
 - Smart Contract
 
@@ -107,7 +105,7 @@ Zero-knowledge is a common noun and should only be capitalized at the beginning 
 - Zero knowledge
 - zero knowledge
 
-### ZK-proof {#ZK-proof}
+### ZK-proof {#zk-proof}
 
 When using the abbreviated form of zero-knowledge proof you should shorten zero-knowledge to ZK, and hyphenate the abbreviation.
 
@@ -124,7 +122,7 @@ When using the abbreviated form of zero-knowledge proof you should shorten zero-
 - zK proof
 - zk proof
 
-### ZK-rollup {#ZK-rollup}
+### ZK-rollup {#zk-rollup}
 
 When using the abbreviated form of zero-knowledge rollup you should shorten zero-knowledge to ZK, and hyphenate the abbreviation.
 
@@ -140,6 +138,8 @@ When using the abbreviated form of zero-knowledge rollup you should shorten zero
 - Zk rollup
 - zK rollup
 - zk rollup
+
+## Writing style guidelines {#writing-style-guidelines}
 
 ### Use active voice {#use-active-voice}
 
@@ -157,7 +157,7 @@ Sentences using active voice are more concise and efficient, making your writing
 
 _This isn't an easy one, especially for non-native English speakers. If you aren't sure, don't worry. We'll help with any of these._
 
-### Date Format {#date-format}
+### Date format {#date-format}
 
 When including dates in markdown content across Ethereum documentation, it is essential to maintain a consistent and clear presentation. In order to achieve this, we recommend the following guidelines:
 
@@ -174,17 +174,18 @@ By adhering to these guidelines, we create a unified approach to presenting date
 
 ### Linking to internal pages {#internal-links}
 
-When linking to another page on Ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e. `/en/`) in any links. This maintains consistent functionality across different language versions of the site.
+When linking to another page on ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e., `/en/`) in any links, and do not include the `https://ethereum.org` domain. This maintains consistent functionality across different language versions of the site.
 
 ```md
 <!-- Good -->
 
-Read more about [smart contracts](/docs/developers/smart-contracts/)
+Read more about [smart contracts](/developers/docs/smart-contracts/)
 
 <!-- Bad -->
 
-Read more about [smart contracts](/en/docs/developers/smart-contracts)
-Read more about [smart contracts](https://ethereum.org/en/docs/developers/smart-contracts)
+Read more about [smart contracts](/en/developers/docs/smart-contracts)
+Read more about [smart contracts](/developers/docs/smart-contracts)
+Read more about [smart contracts](https://ethereum.org/developers/docs/smart-contracts)
 ```
 
 Please also add a trailing slash to all links. This keeps links consistent and avoids redirects, which hurts site performance.
@@ -217,7 +218,7 @@ When adding an image to a page, the image should be downloaded and placed in the
 
 This helps us ensure the image will be available.
 
-### Using emojis {#images}
+### Using emojis {#images-2}
 
 Everyone loves emojis <Emoji text="🥰" size={1} /> To standardize the appearance of all Emojis across browsers, ethereum.org uses an `<Emoji />` React component.
 
@@ -270,3 +271,115 @@ When citing articles from a specific author or organization, use the article's n
 - [A rollup-centric ethereum roadmap by Vitalik Buterin](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [ConsenSys on The History of Ethereum Testnets](https://consensys.net/blog/news/the-history-of-ethereum-testnets/) – _ConsenSys_
 ```
+
+### Onchain and offchain {#onchain-offchain}
+
+Similar to "online" or "offline", the terms "onchain" and "offchain" should be written as one word, without a space or hyphenation.
+
+```md
+<--- Good --->
+Discussion was held in an offchain forum, and the vote was performed onchain.
+
+<--- Bad--->
+Discussion was held in an off-chain forum, and the vote was performed on-chain.
+```
+
+### Hyphen (-), en dash (–), and em dash (—): usage guide {#dash-usage-guide}
+
+For further reading, see [Merriam-Webster: How to Use Em Dashes, En Dashes, and Hyphens](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use)
+
+#### Hyphen (-) {#hyphen}
+
+- **Purpose:** Joins words or parts of words.
+- **Use for:** Compound words (well-known), prefixes (re-enter), word breaks at line ends.
+- **Example:** state-of-the-art, self-aware
+- **How to type:**
+  - Mac: `-` key
+  - Windows: `-` key
+  - Linux: `-` key
+
+```md
+<!-- Good -->
+
+state-of-the-art solution
+re-enter your password
+
+<!-- Bad -->
+
+state of the art solution
+reenter your password
+```
+
+#### En dash (–) {#en-dash}
+
+- **Purpose:** Indicates ranges or relationships.
+- **Use for:** Ranges (dates, numbers), connections (geographical, partnerships).
+- **Example:** 2010–2020, New York–London flight
+- **How to type:**
+  - Mac: `Option` + `-`
+  - Windows: `Alt` + `0150`
+  - Linux: `Ctrl` + `Shift` + `u`, then type `2013`, then press `Space` or `Enter`
+
+```md
+<!-- Good -->
+
+The event runs 10–12 June.
+The Paris–Berlin flight was delayed.
+
+<!-- Bad (uses hyphen or spaces instead of en dash; visually may look similar but is incorrect) -->
+
+The event runs 10-12 June.
+The Paris - Berlin flight was delayed.
+```
+
+#### Em dash (—) {#em-dash}
+
+- **Purpose:** Creates a strong break, sets off information, or shows interruption.
+- **Use for:** Parenthetical statements, abrupt changes, emphasis.
+- **Example:** She was late—again.
+- **How to type:**
+  - Mac: `Option` + `Shift` + `-`
+  - Windows: `Alt` + `0151`
+  - Linux: `Ctrl` + `Shift` + `u`, then type `2014`, then press `Space` or `Enter`
+
+```md
+<!-- Good -->
+
+He was sure of one thing—he would not give up.
+The results—despite initial doubts—were impressive.
+
+<!-- Bad -->
+
+He was sure of one thing — he would not give up.
+The results -- despite initial doubts -- were impressive.
+```
+
+### Examples (e.g.,) and restatements (i.e.,) {#examples-restatements}
+
+When using examples (e.g.,) or restatements (i.e.,) it should include the comma after the second period. 
+
+**Usage:**
+
+- i.e., (that is) introduces a word or phrase that restates what has already been stated.
+- e.g., (for example) is used similarly to "for example" preceding an item or list of items.
+
+This usage will allow for consistency and presentation across the documentation.
+
+**Examples:**
+
+- Preferred: i.e., or e.g.,
+- Avoid: i.e. ie. e.g. or eg.
+
+#### Spacing {#dash-spacing}
+
+No spaces should appear before or after any dash—hyphen, en dash, or em dash—in standard usage.
+
+#### Quick reference table {#dash-reference-table}
+
+| Mark    | Symbol | Main use            | Example                   |
+| ------- | ------ | ------------------- | ------------------------- |
+| Hyphen  | -      | Compound words      | well-known author         |
+| En dash | –      | Ranges, connections | pages 10–20, Paris–Berlin |
+| Em dash | —      | Breaks, emphasis    | He was late—again.        |
+
+**Tip:** Use each dash for its specific purpose, follow spacing rules, and use the correct input method for clear, professional writing.

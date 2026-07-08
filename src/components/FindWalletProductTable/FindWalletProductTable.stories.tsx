@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
-import { Lang } from "@/lib/types"
+import { WalletLanguage } from "@/lib/types"
 
 import FindWalletProductTable from "@/components/FindWalletProductTable"
 
@@ -134,8 +134,9 @@ export const WalletProductTableStory: Story = {
     wallets: walletsData.map((wallet) => {
       return {
         ...wallet,
-        languages_supported: wallet.languages_supported as Lang[],
-        supportedLanguages: wallet.languages_supported as Lang[],
+        id: wallet.name,
+        languages_supported: wallet.languages_supported as WalletLanguage[],
+        supportedLanguages: wallet.languages_supported as WalletLanguage[],
         supported_chains: [],
       }
     }),

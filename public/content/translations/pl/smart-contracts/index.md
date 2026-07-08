@@ -1,82 +1,88 @@
 ---
-title: Inteligentne kontrakty
-description: Wprowadzenie do inteligentnych kontraktów w wersji nietechnicznej
+title: Wprowadzenie do inteligentnych kontraktów
+metaTitle: "Inteligentne kontrakty: Czym są i jakie mają zalety"
+description: Nietechniczne wprowadzenie do inteligentnych kontraktów
 lang: pl
 ---
 
-# Wprowadzenie do inteligentnych kontraktów {#introduction-to-smart-contracts}
+Inteligentne kontrakty to podstawowe bloki budulcowe warstwy aplikacji [Ethereum](/). Są to programy komputerowe przechowywane na [blockchainie](/glossary/#blockchain), które działają zgodnie z logiką „jeśli to, to tamto” i mają gwarancję wykonania zgodnie z zasadami określonymi w ich kodzie, którego nie można zmienić po utworzeniu.
 
-Inteligentne kontrakty są podstawowymi elementami składowymi warstwy aplikacji Ethereum. Są to programy komputerowe przechowywane na [blockchainie](/glossary/#blockchain), które działają zgodnie z logiką „jeśli to, to tamto” i mają gwarancję działania zgodnie z zasadami określonymi przez ich kod, którego nie można zmienić po utworzeniu.
+Nick Szabo ukuł termin „inteligentny kontrakt”. W 1994 roku napisał [wprowadzenie do tej koncepcji](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), a w 1996 roku [analizę tego, co inteligentne kontrakty mogłyby robić](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Termin „inteligentny kontrakt” stworzył Nick Szabo. W 1994 r. napisał [wprowadzenie do tej koncepcji](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), a w 1996 r. opisał [badania na temat możliwości inteligentnych kontraktów i tego co mogą zrobić](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Szabo wyobrażał sobie cyfrowy rynek, na którym automatyczne, [zabezpieczone kryptograficznie](/glossary/#cryptography) procesy umożliwiają realizację transakcji i funkcji biznesowych bez zaufanych pośredników. Inteligentne kontrakty na Ethereum wprowadzają tę wizję w życie.
 
-Szabo wyobraził sobie cyfrowy rynek, na którym automatyczne, [kryptograficznie bezpieczne](/glossary/#cryptography) procesy umożliwiają przeprowadzanie transakcji i funkcji biznesowych bez zaufanych pośredników. Inteligentne kontrakty na Ethereum wprowadzają tę wizję w życie.
+Zobacz, jak Finematics wyjaśnia inteligentne kontrakty:
 
-Zobacz, jak Finematics tłumaczy inteligentne kontrakty:
+<VideoWatch slug="smart-contracts-code-is-law" />
 
-<YouTube id="pWGLtjG-F5c" />
+## Zaufanie w tradycyjnych kontraktach {#trust-and-contracts}
 
-## Zaufanie do konwencjonalnych kontraktów {#trust-and-contracts}
-
-Jednym z największych problemów związanych z tradycyjnym kontraktem jest konieczność przestrzegania jego postanowień przez zaufane osoby.
+Jednym z największych problemów z tradycyjnym kontraktem jest potrzeba zaufanych osób, które dopilnują realizacji jego postanowień.
 
 Oto przykład:
 
-Alicja i Bob urządzają sobie wyścig rowerowy. Załóżmy, że Alice założyła się z Bobem o 10 dolarów, że wygra wyścig. Bob jest przekonany, że to on będzie zwycięzcą, i przyjmuje zakład. Jednak Alice kończy wyścig znacznie przed Bobem i zdecydowanie wygrywa. Bob jednak odmawia wypłacenia pieniędzy z zakładu, twierdząc, że Alicja musiała oszukiwać.
+Alicja i Bob ścigają się na rowerach. Załóżmy, że Alicja zakłada się z Bobem o 10 dolarów, że wygra wyścig. Bob jest pewien, że to on będzie zwycięzcą i zgadza się na zakład. Ostatecznie Alicja kończy wyścig daleko przed Bobem i jest bezdyskusyjną zwyciężczynią. Jednak Bob odmawia wypłaty wygranej, twierdząc, że Alicja musiała oszukiwać.
 
-Ten jaskrawy przykład ilustruje problem z dowolną umową nieinteligentną. Nawet jeśli warunki umowy zostaną spełnione (np. Ty jesteś zwycięzcą wyścigu), nadal musisz ufać innej osobie, że wywiąże się z umowy (np. wypłaci zakład).
+Ten banalny przykład ilustruje problem z każdą umową, która nie jest inteligentnym kontraktem. Nawet jeśli warunki umowy zostaną spełnione (tj. jesteś zwycięzcą wyścigu), nadal musisz ufać innej osobie, że wywiąże się z umowy (tj. wypłaci wygraną z zakładu).
 
-## Cyfrowy automat do sprzedaży {#vending-machine}
+## Cyfrowy automat sprzedający {#vending-machine}
 
-Prostą metaforą inteligentnego kontraktu jest automat sprzedający, który działa nieco podobnie do inteligentnego kontraktu — określone wejścia gwarantują z góry określone wyjścia.
+Prostą metaforą inteligentnego kontraktu jest automat sprzedający, który działa w pewnym sensie podobnie do inteligentnego kontraktu – określone dane wejściowe gwarantują z góry określone wyniki.
 
-- Wybierasz produkt.
-- Automat sprzedający wyświetla cenę
+- Wybierasz produkt
+- Automat wyświetla cenę
 - Płacisz cenę
-- Automat weryfikuje, czy osoba zapłaciła odpowiednią kwotę
-- Automat daje ci twój przedmiot
+- Automat weryfikuje, czy zapłaciłeś odpowiednią kwotę
+- Automat wydaje Ci Twój przedmiot
 
-Automat wyda żądany produkt dopiero po spełnieniu wszystkich wymagań. Jeśli nie wybierzesz produktu lub nie umieścisz wystarczającej ilości pieniędzy, automat sprzedający nie wyda produktu.
+Automat wyda pożądany produkt tylko po spełnieniu wszystkich wymagań. Jeśli nie wybierzesz produktu lub nie wrzucisz wystarczającej ilości pieniędzy, automat nie wyda produktu.
 
 ## Automatyczne wykonanie {#automation}
 
-Główną zaletą inteligentnego kontraktu jest to, że deterministycznie wykonuje on jednoznaczny kod po spełnieniu określonych warunków. Nie ma potrzeby czekania, aż człowiek zinterpretuje lub wynegocjuje wynik. Eliminuje to potrzebę korzystania z zaufanych pośredników.
+Główną zaletą inteligentnego kontraktu jest to, że deterministycznie wykonuje jednoznaczny kod po spełnieniu określonych warunków. Nie ma potrzeby czekać, aż człowiek zinterpretuje lub wynegocjuje wynik. Eliminuje to potrzebę korzystania z zaufanych pośredników.
 
-Można na przykład napisać inteligentny kontrakt, który przechowuje środki finansowe na rzecz dziecka, umożliwiając mu wypłatę środków po określonej dacie. Jeśli spróbują wypłacić przed tą datą, inteligentny kontrakt nie zostanie wykonany. Możesz też napisać kontrakt, który automatycznie udostępni Ci cyfrową wersję tytułu własności samochodu, gdy zapłacisz sprzedawcy.
+Na przykład, możesz napisać inteligentny kontrakt, który przechowuje środki w depozycie dla dziecka, pozwalając mu na ich wypłatę po określonej dacie. Jeśli spróbuje wypłacić je przed tą datą, inteligentny kontrakt nie zostanie wykonany. Możesz też napisać kontrakt, który automatycznie przekaże Ci cyfrową wersję aktu własności samochodu, gdy zapłacisz dealerowi.
 
 ## Przewidywalne wyniki {#predictability}
 
-Tradycyjne kontrakty są niejednoznaczne, ponieważ polegają na interpretacji i realizacji zależnej od człowieka. Na przykład, dwóch sędziów może różnie interpretować kontrakt, co może prowadzić do niespójnych decyzji i niejednakowych wyników. Inteligentne kontrakty usuwają tę możliwość. Zamiast tego, inteligentne kontrakty wykonują dokładnie to, co zostało zapisane w kodzie kontraktu. Dokładność ta oznacza, że w takich samych okolicznościach inteligentny kontrakt wygeneruje taki sam wynik.
+Tradycyjne kontrakty są niejednoznaczne, ponieważ opierają się na ludziach, którzy je interpretują i wdrażają. Na przykład dwóch sędziów może zinterpretować kontrakt inaczej, co może prowadzić do niespójnych decyzji i nierównych wyników. Inteligentne kontrakty eliminują taką możliwość. Zamiast tego inteligentne kontrakty wykonują się precyzyjnie w oparciu o warunki zapisane w kodzie kontraktu. Ta precyzja oznacza, że w tych samych okolicznościach inteligentny kontrakt zawsze wygeneruje ten sam wynik.
 
-## Rekord publiczny {#public-record}
+## Rejestr publiczny {#public-record}
 
-Inteligentne kontrakty są przydatne do celów kontroli i śledzenia. Ponieważ inteligentne kontrakty Ethereum znajdują się w publicznym blockchainie, każdy może natychmiast śledzić transfery aktywów i inne powiązane informacje. Możesz na przykład sprawdzić, czy ktoś wysłał pieniądze na Twój adres.
+Inteligentne kontrakty są przydatne do audytów i śledzenia. Ponieważ inteligentne kontrakty Ethereum znajdują się na publicznym blockchainie, każdy może natychmiast śledzić transfery aktywów i inne powiązane informacje. Na przykład możesz sprawdzić, czy ktoś wysłał pieniądze na Twój adres.
 
 ## Ochrona prywatności {#privacy-protection}
 
-Inteligentne kontrakty chronią również Twoją prywatność. Ponieważ Ethereum jest siecią pseudonimową (Twoje transakcje są związane publicznie z unikalnym adresem kryptograficznym, a nie z Twoją tożsamością), możesz chronić swoją prywatność przed obserwatorami.
+Inteligentne kontrakty chronią również Twoją prywatność. Ponieważ Ethereum jest siecią pseudonimową (Twoje transakcje są publicznie powiązane z unikalnym adresem kryptograficznym, a nie z Twoją tożsamością), możesz chronić swoją prywatność przed obserwatorami.
 
-## Widoczne terminy {#visible-terms}
+## Widoczne warunki {#visible-terms}
 
-Wreszcie, podobnie jak w przypadku tradycyjnych kontraktów, możesz sprawdzić, co jest w inteligentnym kontrakcie, zanim go podpiszesz (lub wejdziesz z nim w interakcje w inny sposób). Przejrzystość inteligentnego kontraktu gwarantuje, że każdy może go przeanalizować.
+Wreszcie, podobnie jak w przypadku tradycyjnych kontraktów, możesz sprawdzić, co znajduje się w inteligentnym kontrakcie, zanim go podpiszesz. W przeciwieństwie do tradycyjnego kontraktu, przejrzystość inteligentnego kontraktu onchain pozwala każdemu na jego dokładne zbadanie i przejrzenie przed wejściem z nim w interakcję. 
 
-## Przykłady wykorzystania inteligentnych kontraktów {#use-cases}
+Jednakże, chociaż każdy może zobaczyć warunki inteligentnego kontraktu, surowe dane transakcji są zaprojektowane tak, aby były interpretowane przez aplikacje i portfele, a nie przez ludzi. Ponieważ te dane są tak trudne do odczytania, użytkownicy często stają w obliczu poważnego ryzyka bezpieczeństwa zwanego „ślepym podpisywaniem” (ang. blind signing), czyli zatwierdzaniem transakcji, która wchodzi w interakcję z inteligentnym kontraktem, bez faktycznego zrozumienia, co ona zrobi. 
 
-Inteligentne kontrakty mogą robić zasadniczo wszystko, co robią programy komputerowe.
+Ekosystem Ethereum przechodzi na standardy **[jasnego podpisywania](https://clearsigning.org/)** (ang. Clear Signing, w szczególności [ERC-7730](https://eips.ethereum.org/EIPS/eip-7730)). Jasne podpisywanie tłumaczy nieprzejrzyste dane inteligentnego kontraktu na proste, czytelne dla człowieka opisy transakcji, zapewniając, że każdy może zrozumieć prawdziwą intencję kontraktu przed jego podpisaniem.
 
-Mogą wykonywać obliczenia, tworzyć walutę, przechowywać dane, wybijać [NFT](/glossary/#nft), wysyłać komunikaty, a nawet generować grafikę. Oto kilka popularnych, rzeczywistych przykładów:
+## Przypadki użycia inteligentnych kontraktów {#use-cases}
+
+Inteligentne kontrakty mogą robić w zasadzie wszystko to, co programy komputerowe.
+
+Mogą wykonywać obliczenia, tworzyć walutę, przechowywać dane, wybijać [NFT](/glossary/#nft), wysyłać komunikaty, a nawet generować grafikę. Oto kilka popularnych przykładów z prawdziwego świata:
 
 - [Stablecoiny](/stablecoins/)
 - [Tworzenie i dystrybucja unikalnych zasobów cyfrowych](/nft/)
-- [Automatyczna otwarta wymiana walut](/get-eth/#dex)
-- [Zdecentralizowane gry](/dapps/?category=gaming#explore)
-- [Polisa ubezpieczeniowa automatycznie wypłacająca odszkodowanie](https://etherisc.com/)
-- [Standard umożliwiający tworzenie niestandardowych, interoperacyjnych walut](/developers/docs/standards/tokens/)
+- [Automatyczna, otwarta wymiana walut](/get-eth/#dex)
+- [Zdecentralizowane gry](/apps/categories/gaming)
+- [Polisa ubezpieczeniowa, która wypłaca środki automatycznie](https://etherisc.com/)
+- [Standard, który pozwala ludziom tworzyć spersonalizowane, interoperacyjne waluty](/developers/docs/standards/tokens/)
 
 ## Dalsza lektura {#further-reading}
 
 - [Jak inteligentne kontrakty zmienią świat](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Inteligentne kontrakty: Technologia łańcucha bloków, która zastąpi prawników](https://blockgeeks.com/guides/smart-contracts/)
-- [Inteligentne kontrakty dla programistów](/developers/docs/smart-contracts/)
+- [Inteligentne kontrakty dla deweloperów](/developers/docs/smart-contracts/)
 - [Naucz się pisać inteligentne kontrakty](/developers/learning-tools/)
-- [Mastering Ethereum - Co to jest inteligentny kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Mastering Ethereum – Czym jest inteligentny kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+
+<Divider />
+
+<QuizWidget quizKey="smart-contracts" />

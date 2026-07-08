@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "locale": "vi",
+  "translatedAt": "2026-06-08T08:09:20.902Z",
+  "englishManifestHash": "b9b481822b2a",
+  "placeholderOrder": [
+    "LINK-051472",
+    "LINK-6a28d9",
+    "LINK-e00379",
+    "LINK-fb2741",
+    "LINK-045da9",
+    "LINK-fc65c4",
+    "LINK-f5838e",
+    "LINK-fdf235"
+  ],
+  "placeholderMap": {
+    "LINK-051472": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml"
+      }
+    },
+    "LINK-6a28d9": {
+      "type": "link",
+      "values": {
+        "url": "/staking/solo/"
+      }
+    },
+    "LINK-e00379": {
+      "type": "link",
+      "values": {
+        "url": "/staking/saas/"
+      }
+    },
+    "LINK-fb2741": {
+      "type": "link",
+      "values": {
+        "url": "/staking/pools/"
+      }
+    },
+    "LINK-045da9": {
+      "type": "link",
+      "values": {
+        "url": "/staking/saas/"
+      }
+    },
+    "LINK-fc65c4": {
+      "type": "link",
+      "values": {
+        "url": "/staking/pools/"
+      }
+    },
+    "LINK-f5838e": {
+      "type": "link",
+      "values": {
+        "url": "#criteria-for-inclusion"
+      }
+    },
+    "LINK-fdf235": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:09:20.902Z",
+      "status": "success"
+    }
+  }
+}

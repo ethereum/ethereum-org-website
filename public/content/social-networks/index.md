@@ -3,15 +3,15 @@ title: Decentralized social networks
 description: An overview of decentralized social networks on Ethereum
 lang: en
 template: use-cases
-emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: Blockchain-based platforms for social interaction and content creation and distribution.
-summaryPoint2: Decentralized social media networks protect user privacy and enhance data security.
-summaryPoint3: Tokens and NFTs create new ways to monetize content.
+summaryPoints:
+  - "Blockchain-based platforms for social interaction and content creation and distribution."
+  - "Decentralized social media networks protect user privacy and enhance data security."
+  - "Tokens and NFTs create new ways to monetize content."
 ---
 
-Social networks play a massive role in our daily communications and interactions. However, centralized control of these platforms has created many problems: data breaches, server outages, de-platforming, censorship, and privacy violations are some of the trade-offs social media often make. To combat these issues, developers are building social networks on Ethereum. Decentralized social networks can fix many of the problems of traditional social networking platforms and improve users' overall experience.
+Social networks play a massive role in our daily communications and interactions. However, centralized control of these platforms has created many problems: data breaches, server outages, de-platforming, censorship, and privacy violations are some of the trade-offs social media often make. To combat these issues, developers are building social networks on [Ethereum](/). Decentralized social networks can fix many of the problems of traditional social networking platforms and improve users' overall experience.
 
 ## What are decentralized social networks? {#what-are-decentralized-social-networks}
 
@@ -19,11 +19,11 @@ Decentralized social networks are [blockchain-based](/glossary/#blockchain) plat
 
 Many decentralized social networks exist as alternatives to established social media services, such as Facebook, LinkedIn, Twitter, and Medium. But blockchain-powered social networks have a number of features that put them ahead of traditional social platforms.
 
-<YouTube id="UdT2lpcGvcQ" />
+<VideoWatch slug="decentralized-social-media" />
 
 ### How do decentralized social networks work? {#decentralized-social-networks-overview}
 
-Decentralized social networks are a class of [decentralized applications (dapps)](/dapps/)—applications powered by [smart contracts](/glossary/#smart-contract) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
+Decentralized social networks are a class of [decentralized applications (dapps)](/apps/)—applications powered by [smart contracts](/glossary/#smart-contract) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
 
 Traditional social media platforms rely on databases to store user information, program code, and other forms of data. But this creates single points-of-failure and introduces significant risk. For instance, Facebook's servers infamously [went offline for hours](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) in October 2021, cutting off users from the platform.
 
@@ -53,6 +53,8 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 
 The Ethereum network has become the preferred tool for developers creating decentralized social media owing to the popularity of its tokens and its massive user base. Here are some examples of Ethereum-based social networks:
 
+<VideoWatch slug="crypto-apps-desocial-linda-xie" />
+
 ### Mirror {#mirror}
 
 [Mirror](https://mirror.xyz/) is a web3-enabled writing platform that aims to be decentralized and user-owned. Users can read and write for free on Mirror by simply connecting their wallets. Users can also collect writing and subscribe to their favorite writers.
@@ -65,24 +67,58 @@ Posts published on Mirror are permanently stored on Arweave, a decentralized sto
 
 Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
+### Farcaster {#farcaster}
+
+[Farcaster](https://farcaster.xyz/) is a "sufficently decentralized" social network similar to X and Reddit that allows users to share and discover "casts". It is built on the Optimism L2 network to keep transactions relatively cheap.
+
 ## Use decentralized social networks {#use-decentralized-social-networks}
 
-- **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
+- **[Status.app](https://status.app/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
 - **[Farcaster](https://farcaster.xyz/)** - _Farcaster is a sufficiently decentralized social network. It is an open protocol that can support many clients, just like email._
+- **[Ethereum Follow Protocol](https://efp.app/)** - _Ethereum Follow Protocol is a fully decentralized onchain social graph for Ethereum accounts, advancing the vision of a modular Ethereum identity stack, complementing ENS and SIWE._
+- **[Ethereum Comments Protocol](https://www.ethcomments.xyz/)** - _A new, programmable social content primitive on Ethereum to put your thoughts onchain._
 
 ## Web2 social networks on Ethereum {#web2-social-networks-and-ethereum}
 
-[Web3](/glossary/#web3) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
+[Web3](/glossary/#web3) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also exploring or have experimented with integrating Ethereum into their infrastructure:
 
-### Reddit {#reddit}
+### Brave Browser {#brave}
 
-Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are ERC-20 tokens that users can earn by posting quality content and contributing to online communities (subreddits). You can redeem these tokens within a subreddit to get exclusive privileges and perks. For this project, Reddit is working with Arbitrum, a [layer 2](/glossary/#layer-2) network designed to scale Ethereum transactions.
+- Brave has integrated the **[Basic Attention Token (BAT)](https://basicattentiontoken.org/)**, an ERC-20 token built on Ethereum, into its browser ecosystem to revolutionize digital advertising and content creator support.
 
-The program is already live, with the r/CryptoCurrency subreddit [running its version of Community Points called "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Per the official description, Moons "reward posters, commenters, and moderators for their contributions to the subreddit." Because these tokens are on the blockchain (users receive them in wallets), they are independent of Reddit and cannot be taken away.
+- The **[Brave Rewards program](https://brave.com/brave-rewards/)** allows users to earn BAT by viewing privacy-respecting ads and then automatically contribute to websites and content creators across various platforms like YouTube, Twitter, and GitHub based on attention time.
 
-Besides using Community Points to unlock special features, users can also trade them for fiat on exchanges. Also, the amount of Community Points a user owns determines their influence on the decision-making process within the community.
+- Content creators can register as **[Brave verified creators](https://creators.brave.com/)** to receive these contributions directly to their Ethereum wallets, creating a bridge between traditional web platforms and blockchain-based monetization.
+
+- BAT tokens exist independently on the Ethereum blockchain, allowing users to transfer them to personal wallets or exchanges once earned.
+
+### Audius Music Platform {#audius}
+
+- **[Audius](https://audius.co/)** is a music streaming platform that uses Ethereum blockchain technology to connect artists directly with fans.
+
+- The platform features a hybrid decentralized architecture where content is stored on IPFS while utilizing blockchain for ownership rights and the **[AUDIO token](https://eth.blockscout.com/token/0x18aaa7115705e8be94bffebde57af9bfc265b998)**.
+
+- Audius has established a **[partnership with TikTok](https://audius.co/tiktok)**, bringing Web3 functionality to mainstream audiences and allowing artists to monetize their content through blockchain technology.
+
+- The platform's technical details are available in their **[whitepaper](https://whitepaper.audius.co/)**, showing how they've built upon Ethereum's infrastructure.
+
+### Sorare Fantasy Sports {#sorare}
+
+- **[Sorare](https://sorare.com/)** is a **[fantasy sports platform built on Ethereum](https://sorare.com/help/a/4402888626577/what-is-a-sorare-wallet)** that allows users to collect, trade, and play with official NFT player cards.
+
+- Player cards are verifiable NFTs on the Ethereum blockchain, and the platform's smart contracts can be viewed on **[Etherscan](https://eth.blockscout.com/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205?tab=contract)**.
+
+- Sorare combines traditional fantasy sports gameplay with blockchain ownership of digital assets, bringing **[Ethereum to fund](https://sorare.com/help/a/10969733392797/what-network-should-i-use-to-fund-my-eth-wallet)** functionality to mainstream sports fans.
+
+### Twitter/X (Crypto Tipping) {#twitter}
+
+**[Twitter](https://x.com)** (now X) has incorporated blockchain technology in multiple ways to enhance creator monetization and digital identity verification:
+
+- **Crypto Tipping**: The platform has integrated **[Ethereum tipping](https://help.x.com/en/using-x/tips)**, enabling users to send payments via Ethereum-based wallets like Strike.
+
+By integrating blockchain features, X is bridging the gap between Web2 social experiences and decentralized digital ownership.
 
 ## Further reading {#further-reading}
 

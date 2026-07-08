@@ -4,9 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
+.pnpm-store/
 
 # testing
 /coverage
+tests/__results__/
+tests/__report__/
+test-results/
 
 # next.js
 /.next/
@@ -23,6 +27,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log
+
+pnpm-lock.yaml.bak
 
 # local env files
 .env*.local
@@ -36,7 +43,7 @@ yarn-error.log*
 next-env.d.ts
 
 # rss feeds
-feed.xml
+/feed.xml
 
 # Sitemaps
 sitemap*.xml
@@ -47,9 +54,6 @@ robots.txt
 # Local Netlify folder
 .netlify
 
-# .crowdin folder used as temp forlder for crowdin-import script
-.crowdin
-
 # workplace configuration
 .vscode
 .idea
@@ -59,4 +63,18 @@ src/data/crowdin/bucketsAwaitingReviewReport.csv
 
 # Storybook
 build-storybook.log
+build-archive.log
 storybook-static
+storybook-static-pages
+
+# Trigger
+.trigger
+
+# Git worktrees for Claude commands
+.worktrees
+
+# Hide skill eval workspaces
+.claude/skills/*-workspace
+
+# Playwright CLI session state
+.playwright-cli

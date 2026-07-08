@@ -1,6 +1,6 @@
 ---
 title: Smart contract libraries
-description:
+description: Discover reusable smart contract libraries and building blocks to accelerate your Ethereum development projects.
 lang: en
 ---
 
@@ -104,7 +104,7 @@ Last, when deciding on whether to include a library, consider its overall usage.
 
 **thirdweb Solidity SDK -** **_Provides the tools needed to build custom smart contracts efficiently_**
 
-- [Documentation](https://portal.thirdweb.com/solidity/)
+- [Documentation](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Related tutorials {#related-tutorials}

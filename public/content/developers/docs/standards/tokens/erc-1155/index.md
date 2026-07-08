@@ -1,12 +1,12 @@
 ---
 title: ERC-1155 Multi-Token Standard
-description:
+description: Learn about ERC-1155, a multi-token standard that combines fungible and non-fungible tokens in a single contract.
 lang: en
 ---
 
 ## Introduction {#introduction}
 
-A standard interface for contracts that manage multiple token types. A single deployed contract may include any combination of fungible tokens, non-fungible tokens or other configurations (e.g. semi-fungible tokens).
+A standard interface for contracts that manage multiple token types. A single deployed contract may include any combination of fungible tokens, non-fungible tokens or other configurations (e.g., semi-fungible tokens).
 
 **What is meant by Multi-Token Standard?**
 
@@ -20,12 +20,12 @@ To better understand this page, we recommend you first read about [token standar
 
 ## ERC-1155 Functions and Features: {#body}
 
-- [Batch Transfer](#batch_transfers): Transfer multiple assets in a single call.
-- [Batch Balance](#batch_balance): Get the balances of multiple assets in a single call.
-- [Batch Approval](#batch_approval): Approve all tokens to an address.
-- [Hooks](#receive_hook): Receive tokens hook.
-- [NFT Support](#nft_support): If supply is only 1, treat it as NFT.
-- [Safe Transfer Rules](#safe_transfer_rule): Set of rules for secure transfer.
+- [Batch Transfer](#batch-transfers): Transfer multiple assets in a single call.
+- [Batch Balance](#batch-balance): Get the balances of multiple assets in a single call.
+- [Batch Approval](#batch-approval): Approve all tokens to an address.
+- [Hooks](#receive-hook): Receive tokens hook.
+- [NFT Support](#nft-support): If supply is only 1, treat it as NFT.
+- [Safe Transfer Rules](#safe-transfer-rule): Set of rules for secure transfer.
 
 ### Batch Transfers {#batch-transfers}
 
@@ -141,6 +141,6 @@ _Note_: All batch functions including the hook also exist as versions without ba
 ## Further reading {#further-reading}
 
 - [EIP-1155: Multi Token Standard](https://eips.ethereum.org/EIPS/eip-1155)
-- [ERC-1155: Openzeppelin Docs](https://docs.openzeppelin.com/contracts/3.x/erc1155)
+- [ERC-1155: Openzeppelin Docs](https://docs.openzeppelin.com/contracts/5.x/erc1155)
 - [ERC-1155: GitHub Repo](https://github.com/enjin/erc-1155)
-- [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)

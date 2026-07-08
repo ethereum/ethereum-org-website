@@ -1,11 +1,11 @@
-import { forwardRef } from "react"
+import { forwardRef, HTMLAttributes } from "react"
 import { cva, VariantProps } from "class-variance-authority"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
 const tagVariants = cva(
-  "inline-flex items-center rounded-full border text-xs uppercase transition-colors",
+  "inline-flex items-center rounded-full border text-xs uppercase transition-[color,box-shadow] duration-200",
   {
     variants: {
       status: {
@@ -18,6 +18,20 @@ const tagVariants = cva(
           "bg-error-light text-error border-error-border hover:shadow-error",
         warning:
           "bg-warning-light text-warning-dark border-warning-border hover:shadow-warning-dark dark:hover:shadow-warning",
+        "accent-a":
+          "bg-accent-a/10 dark:bg-accent-a/20 !text-accent-a hover:shadow-accent-a",
+        "accent-b":
+          "bg-accent-b/10 dark:bg-accent-b/20 !text-accent-b hover:shadow-accent-b",
+        "accent-c":
+          "bg-accent-c/10 dark:bg-accent-c/20 !text-accent-c hover:shadow-accent-c",
+        primary:
+          "bg-primary/10 dark:bg-primary/20 !text-primary hover:shadow-primary",
+        "tag-green":
+          "bg-success/10 dark:bg-success-light/10 !text-success hover:shadow-success",
+        "tag-yellow":
+          "bg-warning/25 dark:bg-warning-light/20 !text-warning-dark dark:!text-yellow-500 hover:shadow-warning",
+        "tag-red":
+          "bg-error/10 dark:bg-error-dark/20 !text-error hover:shadow-error",
       },
       variant: {
         subtle: "border-transparent",
@@ -139,7 +153,7 @@ const TagButton = forwardRef<HTMLButtonElement, TagButtonProps>(
       <Comp
         ref={ref}
         className={cn(
-          "hover:shadow-[2px_2px] focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-inherit",
+          "hover:shadow-[2px_2px] focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-inherit",
           tagVariants({ variant, status }),
           className
         )}
@@ -151,4 +165,38 @@ const TagButton = forwardRef<HTMLButtonElement, TagButtonProps>(
 
 TagButton.displayName = "TagButton"
 
-export { Tag, TagButton }
+const listVariants = cva("", {
+  variants: {
+    variant: {
+      light: "text-sm text-body-medium",
+    },
+  },
+})
+
+export interface TagsInlineTextProps
+  extends Omit<HTMLAttributes<HTMLParagraphElement>, "children">,
+    VariantProps<typeof listVariants> {
+  list: (string | undefined | null)[]
+  delimiter?: string
+  max?: number
+}
+
+const TagsInlineText = forwardRef<HTMLParagraphElement, TagsInlineTextProps>(
+  ({ className, list, delimiter = "·", max, variant, ...props }, ref) => {
+    const renderList = list.filter(Boolean)
+    if (renderList.length < 1) return null
+    return (
+      <p
+        ref={ref}
+        className={cn(listVariants({ variant, className }))}
+        {...props}
+      >
+        {renderList.slice(0, max).join(` ${delimiter} `)}
+      </p>
+    )
+  }
+)
+
+TagsInlineText.displayName = "TagsInlineText"
+
+export { Tag, TagButton, TagsInlineText }

@@ -1,56 +1,61 @@
 ---
 title: Ethash
-description: Ethash algoritmasına ayrıntılı bir bakış.
+description: "Ethash algoritmasına detaylı bir bakış."
 lang: tr
 ---
 
-<InfoBanner emoji=":wave:">
-   Ethash, Ethereum'un iş ispatı madencilik algoritmasıydı. İş ispatı tamamen durdurulmuş ve Ethereum, <a href="/developers/docs/consensus-mechanisms/pos/">hisse ispatı</a> ile güvence altına alınmıştır. <a href="/roadmap/merge/">Birleşim</a>, <a href="/developers/docs/consensus-mechanisms/pos/">hisse ispatı</a>ve <a href="/staking/">hisseleme</a> hakkında daha fazla bilgi edinin. Bu sayfa sadece tarihsel ilgi içindir!  
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
+   Ethash, Ethereum'un İş Kanıtı (PoW) madencilik algoritmasıydı. İş Kanıtı (PoW) artık **tamamen kapatıldı** ve Ethereum artık bunun yerine [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos/) kullanılarak güvence altına alınıyor. [Birleşme](/roadmap/merge/), [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos/) ve [staking](/staking/) hakkında daha fazla bilgi edinin. Bu sayfa tarihi ilgi amaçlıdır!  
+</AlertDescription>
+</AlertContent>
+</Alert>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash), [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) algoritmasının değiştirilmiş bir versiyonudur. Ethash iş ispatı[bellek zor](https://wikipedia.org/wiki/Memory-hard_function) bir işlemdir, bunun algoritmayı ASIC dirençli hale getirdiği düşünülür. Sonunda Ethash ASICleri geliştirildi fakat GPU madenciliği iş ispatı durdurulana kadar hâlâ geçerli bir seçenekti. Ethash, Ethereum olmayan iş ispatı ağlarında hâlâ diğer paraların madenciliğini yapmak için kullanılmaktadır.
+Ethash, [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) algoritmasının değiştirilmiş bir versiyonudur. Ethash İş Kanıtı (PoW) [bellek zorludur (memory hard)](https://wikipedia.org/wiki/Memory-hard_function), bu da algoritmayı ASIC'e dirençli hale getirdiği düşünülen bir özellikti. Ethash ASIC'leri sonunda geliştirildi ancak GPU madenciliği, İş Kanıtı (PoW) kapatılana kadar hala geçerli bir seçenekti. Ethash, Ethereum dışındaki diğer İş Kanıtı (PoW) ağlarında diğer coin'lerin madenciliğini yapmak için hala kullanılmaktadır.
 
 ## Ethash nasıl çalışır? {#how-does-ethash-work}
 
-Bellek sertliği, nonce ve blok başlığına bağlı olarak sabit bir kaynağın alt kümelerinin seçilmesini gerektiren bir iş kanıtı algoritması ile elde edilir. Bu kaynağa (birkaç gigabayt boyutunda) DAG adı verilir. DAG, her 30000 blokta bir değiştirilir, bu devir olarak adlandırılan 125 saatlik bir penceredir (kabaca 5,2 gün) ve oluşturulması biraz zaman alır. DAG yalnızca blok yüksekliğine bağlı olduğundan, önceden oluşturulabilir, ancak böyle değilse, müşterinin bir blok oluşturmak için bu sürecin sonuna kadar beklemesi gerekir. İstemciler DAG'leri önceden oluşturup önbelleğe almazsa, ağ her bir dönem geçişinde büyük blok gecikmesi yaşayabilir. DAG'nin, hem düşük CPU hem de küçük bellek ile doğrulamaya izin veren iş kanıtının doğrulanması için oluşturulması gerekmediğini unutmayın.
+Bellek zorluğu, nonce ve blok başlığına bağlı sabit bir kaynağın alt kümelerinin seçilmesini gerektiren bir İş Kanıtı (PoW) algoritması ile elde edilir. Bu kaynağa (birkaç gigabayt boyutunda) DAG denir. DAG her 30000 blokta bir değiştirilir, bu ~125 saatlik pencereye bir dönem (yaklaşık 5,2 gün) denir ve oluşturulması biraz zaman alır. DAG yalnızca blok yüksekliğine bağlı olduğundan önceden oluşturulabilir, ancak oluşturulmamışsa istemcinin bir blok üretmek için bu sürecin sonuna kadar beklemesi gerekir. İstemciler DAG'leri önceden oluşturup önbelleğe almazlarsa, ağ her dönem geçişinde büyük bir blok gecikmesi yaşayabilir. İş Kanıtı'nı (PoW) doğrulamak için DAG'nin oluşturulmasına gerek olmadığını, bunun da esasen hem düşük CPU hem de küçük bellek ile doğrulamaya izin verdiğini unutmayın.
 
-Algoritmanın izlediği genel rota aşağıdaki gibidir:
+Algoritmanın izlediği genel yol aşağıdaki gibidir:
 
-1. O noktaya kadar blok başlıklarını tarayarak bulunan, her blok için hesaplanabilen bir **tohum** vardır.
-2. Çekirdekten, **16 MB sözderastgele önbellek** hesaplanabilir. Hafif istemciler önbelleği depolar.
-3. Önbellekten, veri kümesindeki her öğenin önbellekten yalnızca az sayıda öğeye bağlı olduğu özelliğiyle, **1 GB'lık bir veri kümesi** oluşturabiliriz. Tam istemciler ve madenciler veri kümesini depolar. Veri kümesi, zamanla doğrusal olarak büyür.
-4. Madencilik, veri setinin rastgele dilimlerini alıp bunları bir araya getirmeyi içerir. Doğrulama, ihtiyacınız olan veri kümesinin belirli parçalarını yeniden oluşturmak için önbelleği kullanarak düşük bellekle yapılabilir, böylece yalnızca önbelleği saklamanız gerekir.
+1. O noktaya kadar olan blok başlıkları taranarak her blok için hesaplanabilen bir **tohum (seed)** vardır.
+2. Tohumdan, **16 MB'lık sözde rastgele bir önbellek** hesaplanabilir. Hafif istemciler önbelleği depolar.
+3. Önbellekten, veri kümesindeki her bir öğenin önbellekteki yalnızca az sayıda öğeye bağlı olması özelliğiyle **1 GB'lık bir veri kümesi** oluşturabiliriz. Tam istemciler ve madenciler veri kümesini depolar. Veri kümesi zamanla doğrusal olarak büyür.
+4. Madencilik, veri kümesinden rastgele dilimler almayı ve bunları birlikte hashlemeyi içerir. Doğrulama, ihtiyacınız olan veri kümesinin belirli parçalarını yeniden oluşturmak için önbelleği kullanarak düşük bellekle yapılabilir, bu nedenle yalnızca önbelleği depolamanız gerekir.
 
-Büyük veri kümesi her 30000 blokta bir güncellenir, bu nedenle bir madencinin çabasının büyük çoğunluğu veri kümesini okumak olacak, değişiklik yapmak değil.
+Büyük veri kümesi her 30000 blokta bir güncellenir, bu nedenle bir madencinin çabasının büyük çoğunluğu veri kümesinde değişiklik yapmak değil, onu okumak olacaktır.
 
-## Tanımlamalar {#definitions}
+## Tanımlar {#definitions}
 
 Aşağıdaki tanımları kullanıyoruz:
 
 ```
-WORD_BYTES = 4                    # bytes in word
-DATASET_BYTES_INIT = 2**30        # bytes in dataset at genesis
-DATASET_BYTES_GROWTH = 2**23      # dataset growth per epoch
-CACHE_BYTES_INIT = 2**24          # bytes in cache at genesis
-CACHE_BYTES_GROWTH = 2**17        # cache growth per epoch
-CACHE_MULTIPLIER=1024             # Size of the DAG relative to the cache
-EPOCH_LENGTH = 30000              # blocks per epoch
-MIX_BYTES = 128                   # width of mix
-HASH_BYTES = 64                   # hash length in bytes
-DATASET_PARENTS = 256             # number of parents of each dataset element
-CACHE_ROUNDS = 3                  # number of rounds in cache production
-ACCESSES = 64                     # number of accesses in hashimoto loop
+WORD_BYTES = 4                    # kelimedeki baytlar
+DATASET_BYTES_INIT = 2**30        # başlangıçtaki veri kümesindeki baytlar
+DATASET_BYTES_GROWTH = 2**23      # dönem başına veri kümesi büyümesi
+CACHE_BYTES_INIT = 2**24          # başlangıçtaki önbellekteki baytlar
+CACHE_BYTES_GROWTH = 2**17        # dönem başına önbellek büyümesi
+CACHE_MULTIPLIER=1024             # Önbelleğe göre DAG'nin boyutu
+EPOCH_LENGTH = 30000              # dönem başına bloklar
+MIX_BYTES = 128                   # karışımın genişliği
+HASH_BYTES = 64                   # bayt cinsinden hash uzunluğu
+DATASET_PARENTS = 256             # her veri kümesi öğesinin ebeveyn sayısı
+CACHE_ROUNDS = 3                  # önbellek üretimindeki tur sayısı
+ACCESSES = 64                     # hashimoto döngüsündeki erişim sayısı
 ```
 
 ### 'SHA3' kullanımı {#sha3}
 
-Ethereum'un gelişimi, SHA3 standardının geliştirilmesiyle çakıştı ve standartlar süreci, sonlandırılmış karma algoritmanın dolgusunda geç bir değişiklik yaptı, böylece Ethereum'un "sha3_256" ve "sha3_512" karmaları standart sha3 karmaları değil, diğer bağlamlarda "Keccak-256" ve "Keccak-512" olarak genellikle atıfta bulunulan bir değişkendir. Tartışmaya ör. [buradan](https://eips.ethereum.org/EIPS/eip-1803), [buradan](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) ve [buradan bakabilirsiniz](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Ethereum'un gelişimi SHA3 standardının gelişimiyle aynı zamana denk geldi ve standartlar süreci, kesinleşmiş hash algoritmasının dolgusunda (padding) geç bir değişiklik yaptı, bu nedenle Ethereum'un "sha3_256" ve "sha3_512" hash'leri standart sha3 hash'leri değil, diğer bağlamlarda genellikle "Keccak-256" ve "Keccak-512" olarak adlandırılan bir varyanttır. Tartışmalara bakın, örn. [burada](https://eips.ethereum.org/EIPS/eip-1803), [burada](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) veya [burada](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
-Lütfen aşağıdaki algoritmanın açıklamasında "sha3" karmalarına atıfta bulunulduğunu unutmayın.
+Aşağıdaki algoritmanın açıklamasında "sha3" hash'lerine atıfta bulunulduğundan lütfen bunu aklınızda bulundurun.
 
 ## Parametreler {#parameters}
 
-Ethash'in önbelleği ve veri kümesi parametreleri, blok numarasına bağlıdır. Önbellek boyutu ve veri kümesi boyutu doğrusal olarak büyür; bununla birlikte, döngüsel davranışa yol açan tesadüfi düzenlilik riskini azaltmak için her zaman doğrusal olarak büyüyen eşiğin altındaki en yüksek asal değeri alırız.
+Ethash'in önbelleği ve veri kümesi için parametreler blok numarasına bağlıdır. Önbellek boyutu ve veri kümesi boyutu doğrusal olarak büyür; ancak, döngüsel davranışa yol açan tesadüfi düzenlilik riskini azaltmak için her zaman doğrusal olarak büyüyen eşiğin altındaki en yüksek asal sayıyı alırız.
 
 ```python
 def get_cache_size(block_number):
@@ -68,22 +73,22 @@ def get_full_size(block_number):
     return sz
 ```
 
-Veri kümesi ve önbellek boyutu değerleri tabloları ekte verilmiştir.
+Veri kümesi ve önbellek boyutu değerlerinin tabloları ekte verilmiştir.
 
-## Önbellek üretimi {#cache-generation}
+## Önbellek oluşturma {#cache-generation}
 
-Şimdi, bir önbellek üretme fonksiyonunu belirtiyoruz:
+Şimdi, bir önbellek üretmek için işlevi belirtiyoruz:
 
 ```python
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Sequentially produce the initial dataset
+    # Başlangıç veri kümesini sırayla üret
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Use a low-round version of randmemohash
+    # Randmemohash'in düşük turlu bir sürümünü kullan
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -92,11 +97,11 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Önbellek üretim süreci, önce 32 MB belleğin sırayla doldurulmasını, ardından Sergio Demian Lerner'in [_Strict Memory Hard Hashing Functions_'tan (2014)](http://www.hashcash.org/papers/memohash.pdf) _RandMemoHash_ algoritmasının iki geçişini gerçekleştirmeyi içerir. Çıktı, 524288 64 baytlık bir değer kümesidir.
+Önbellek üretim süreci, önce 32 MB belleğin sırayla doldurulmasını, ardından Sergio Demian Lerner'ın [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) adlı eserindeki _RandMemoHash_ algoritmasının iki geçişinin gerçekleştirilmesini içerir. Çıktı, 524288 adet 64 baytlık değerden oluşan bir kümedir.
 
-## Veri toplama fonksiyonu {#date-aggregation-function}
+## Veri toplama işlevi {#date-aggregation-function}
 
-Bazı durumlarda XOR için, ilişkisel olmayan bir ikame olarak, [FNV karması](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)ndan esinlenen bir algoritma kullanıyoruz. Asal değeri sırayla bir bayt (sekizli) ile çarpan FNV-1 spesifikasyonunun aksine, asal değeri tam 32 bit girişle çarptığımızı unutmayın.
+Bazı durumlarda XOR'un birleşmeli olmayan (non-associative) bir alternatifi olarak [FNV hash](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)'ten esinlenen bir algoritma kullanıyoruz. Asal sayıyı sırayla bir bayt (sekizli) ile çarpan FNV-1 spesifikasyonunun aksine, asal sayıyı tam 32 bitlik girdiyle çarptığımıza dikkat edin.
 
 ```python
 FNV_PRIME = 0x01000193
@@ -105,28 +110,28 @@ def fnv(v1, v2):
     return ((v1 * FNV_PRIME) ^ v2) % 2**32
 ```
 
-Lütfen sarı kağıdın fnv'yi v1\*(FNV_PRIME ^ v2) olarak belirttiğine dikkat edin, tüm mevcut uygulamalar tutarlı bir şekilde yukarıdaki tanımı kullanır.
+Lütfen unutmayın, Sarı Bülten bile fnv'yi v1\*(FNV_PRIME ^ v2) olarak belirtse de, mevcut tüm uygulamalar tutarlı bir şekilde yukarıdaki tanımı kullanır.
 
 ## Tam veri kümesi hesaplaması {#full-dataset-calculation}
 
-Tam 1 GB veri kümesindeki her 64 baytlık öğe aşağıdaki gibi hesaplanır:
+Tam 1 GB'lık veri kümesindeki her 64 baytlık öğe aşağıdaki gibi hesaplanır:
 
 ```python
 def calc_dataset_item(cache, i):
     n = len(cache)
     r = HASH_BYTES // WORD_BYTES
-    # initialize the mix
+    # karışımı başlat
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # fnv it with a lot of random cache nodes based on i
+    # i'ye dayalı çok sayıda rastgele önbellek düğümü ile fnv işleminden geçir
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
     return sha3_512(mix)
 ```
 
-Esasen, sözde rasgele seçilmiş 256 önbellek düğümünden gelen verileri birleştirir ve veri kümesi düğümünü hesaplamak için bunu kararız. Tüm veri kümesi daha sonra şu şekilde oluşturulur:
+Esasen, sözde rastgele seçilmiş 256 önbellek düğümünden gelen verileri birleştiriyoruz ve veri kümesi düğümünü hesaplamak için bunu hashliyoruz. Tüm veri kümesi daha sonra şu şekilde oluşturulur:
 
 ```python
 def calc_dataset(full_size, cache):
@@ -135,27 +140,27 @@ def calc_dataset(full_size, cache):
 
 ## Ana döngü {#main-loop}
 
-Şimdi, belirli bir başlık ve nonce için nihai değerimizi üretmek için tüm veri kümesinden verileri topladığımız ana "hashimoto" benzeri döngüyü belirtiyoruz. Aşağıdaki kodda, `başlık`, kesilmiş bir _ _ blok başlığı, yani **mixHash** ve **nonce** alanlarını hariç tutan bir başlığının RLP temsilinin SHA3-256 _karmasını_ temsil eder. `nonce`, büyük endian düzende 64 bitlik işaretsiz bir tamsayının sekiz baytıdır. Yani `nonce[::-1]` bu değerin sekiz baytlık küçük endian temsilidir:
+Şimdi, belirli bir başlık ve nonce için nihai değerimizi üretmek amacıyla tam veri kümesinden verileri topladığımız ana "hashimoto" benzeri döngüyü belirtiyoruz. Aşağıdaki kodda, `header`, _kesilmiş_ bir blok başlığının, yani **mixHash** ve **nonce** alanları hariç tutulmuş bir başlığın RLP temsilinin SHA3-256 _hash_'ini temsil eder. `nonce`, büyük uçlu (big-endian) sırasındaki 64 bitlik işaretsiz bir tamsayının sekiz baytıdır. Yani `nonce[::-1]`, bu değerin sekiz baytlık küçük uçlu (little-endian) temsilidir:
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
     n = full_size / HASH_BYTES
     w = MIX_BYTES // WORD_BYTES
     mixhashes = MIX_BYTES / HASH_BYTES
-    # combine header+nonce into a 64 byte seed
+    # başlık+nonce'u 64 baytlık bir tohuma birleştir
     s = sha3_512(header + nonce[::-1])
-    # start the mix with replicated s
+    # karışımı çoğaltılmış s ile başlat
     mix = []
     for _ in range(MIX_BYTES / HASH_BYTES):
         mix.extend(s)
-    # mix in random dataset nodes
+    # rastgele veri kümesi düğümlerini karışıma ekle
     for i in range(ACCESSES):
         p = fnv(i ^ s[0], mix[i % w]) % (n // mixhashes) * mixhashes
         newdata = []
         for j in range(MIX_BYTES / HASH_BYTES):
             newdata.extend(dataset_lookup(p + j))
         mix = map(fnv, mix, newdata)
-    # compress mix
+    # karışımı sıkıştır
     cmix = []
     for i in range(0, len(mix), 4):
         cmix.append(fnv(fnv(fnv(mix[i], mix[i+1]), mix[i+2]), mix[i+3]))
@@ -171,17 +176,17 @@ def hashimoto_full(full_size, dataset, header, nonce):
     return hashimoto(header, nonce, full_size, lambda x: dataset[x])
 ```
 
-Esasen, 128 bayt genişliğinde bir "karışım" sürdürüyoruz ve art arda tam veri kümesinden 128 bayt getiriyoruz ve onu karışımla birleştirmek için `fnv` işlevini kullanıyoruz. 128 bayt sıralı erişim kullanılır, böylece algoritmanın her turu, her zaman RAM'den tam bir sayfa alır ve ASIC'lerin teorik olarak kaçınabileceği çeviriye bakılan arabellek kayıplarını en aza indirir.
+Esasen, 128 bayt genişliğinde bir "karışım" (mix) tutuyoruz ve tam veri kümesinden art arda sırayla 128 bayt alıp bunu karışımla birleştirmek için `fnv` işlevini kullanıyoruz. Algoritmanın her turunun her zaman RAM'den tam bir sayfa getirmesi ve böylece ASIC'lerin teorik olarak kaçınabileceği çeviri arabelleği (TLB) isabet kayıplarını en aza indirmesi için 128 baytlık sıralı erişim kullanılır.
 
-Bu algoritmanın çıktısı istenen hedefin altındaysa nonce geçerlidir. Sondaki fazladan `sha3_256` uygulamasının, en azından küçük bir miktar işin yapıldığını kanıtlamak için sağlanabilecek bir ara nonce'nin var olmasını sağladığına dikkat edin; bu hızlı dış iş kanıtı doğrulaması, DDoS karşıtı amaçlar için kullanılabilir. Ayrıca sonucun tarafsız, 256 bitlik bir sayı olduğuna dair istatistiksel güvence sağlamaya da hizmet eder.
+Bu algoritmanın çıktısı istenen hedefin altındaysa, nonce geçerlidir. Sonundaki ekstra `sha3_256` uygulamasının, en azından küçük bir miktar iş yapıldığını kanıtlamak için sağlanabilecek bir ara nonce olmasını sağladığına dikkat edin; bu hızlı dış İş Kanıtı (PoW) doğrulaması, anti-DDoS amaçları için kullanılabilir. Ayrıca sonucun tarafsız, 256 bitlik bir sayı olduğuna dair istatistiksel güvence sağlamaya da hizmet eder.
 
 ## Madencilik {#mining}
 
-Madencilik algoritması şu şekilde tanımlanır:
+Madencilik algoritması aşağıdaki gibi tanımlanır:
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # zero-pad target to compare with hash on the same digit
+    # aynı basamaktaki hash ile karşılaştırmak için hedefi sıfırla doldur
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -190,9 +195,9 @@ def mine(full_size, dataset, header, difficulty):
     return nonce
 ```
 
-## Tohum karmasını tanımlama {#seed-hash}
+## Tohum hash'ini tanımlama {#seed-hash}
 
-Belirli bir bloğun üzerinde madencilik yapmak için kullanılacak tohum karmasını hesaplamak için aşağıdaki algoritmayı kullanırız:
+Belirli bir bloğun üzerinde madencilik yapmak için kullanılacak tohum hash'ini hesaplamak amacıyla aşağıdaki algoritmayı kullanıyoruz:
 
 ```python
  def get_seedhash(block):
@@ -202,20 +207,20 @@ Belirli bir bloğun üzerinde madencilik yapmak için kullanılacak tohum karmas
      return s
 ```
 
-Sorunsuz madencilik ve doğrulama için, gelecekteki tohum karmalarını ve veri kümelerini ayrı bir iş parçacığında önceden hesaplamanızı öneririz.
+Sorunsuz madencilik ve doğrulama için, gelecekteki tohum hash'lerini ve veri kümelerini ayrı bir iş parçacığında (thread) önceden hesaplamanızı önerdiğimizi unutmayın.
 
 ## Daha fazla okuma {#further-reading}
 
-_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
 ## Ek {#appendix}
 
-Yukarıdaki python spesifikasyonunu kod olarak çalıştırmakla ilgileniyorsanız, aşağıdaki kod, başa eklenmelidir.
+Yukarıdaki Python spesifikasyonunu kod olarak çalıştırmakla ilgileniyorsanız, aşağıdaki kod başa eklenmelidir.
 
 ```python
 import sha3, copy
 
-# Assumes little endian bit ordering (same as Intel architectures)
+# Küçük uçlu bit sıralamasını varsayar (Intel mimarileriyle aynı)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -243,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 hash function, outputs 64 bytes
+# sha3 hash işlevi, 64 bayt çıktı verir
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -260,9 +265,9 @@ def isprime(x):
     return True
 ```
 
-### Veri boyutları {#data-sizes}
+### Veri Boyutları {#data-sizes}
 
-Aşağıdaki arama tabloları, yaklaşık 2048 veri ve önbellek boyutlu dönemleri sunar.
+Aşağıdaki arama tabloları, veri boyutları ve önbellek boyutlarının yaklaşık 2048 tablo haline getirilmiş dönemini sağlar.
 
 ```python
 def get_datasize(block_number):

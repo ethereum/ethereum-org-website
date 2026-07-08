@@ -1,0 +1,12 @@
+{
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "যুক্তরাষ্ট্রে গেমিং",
+  "energy-consumption-chart-global-data-centers-label": "গ্লোবাল ডেটা সেন্টার",
+  "energy-consumption-chart-netflix-label": "নেটফ্লিক্স",
+  "energy-consumption-chart-paypal-label": "পেপ্যাল",
+  "energy-consumption-gold-mining-cbeci-label": "স্বর্ণ মাইনিং",
+  "energy-consumption-chart-legend": "TWh/yr-এ বার্ষিক শক্তি খরচ"
+}

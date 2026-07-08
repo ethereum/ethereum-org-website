@@ -1,40 +1,37 @@
 ---
 title: 以太坊基金會
-description: 了解更多關於以太坊基金會 (EF) 的資訊，這是一個致力於支持以太坊及相關技術的非營利組織。
+description: 了解以太坊基金會 (EF)，這是一個致力於支援以太坊及相關技術的非營利組織。
 hideEditButton: true
 lang: zh-tw
 ---
 
-# 關於以太坊基金會 {#about-the-ethereum-foundation}
-
 <Logo/>
 
-[以太坊基金會 (EF)](http://ethereum.foundation/) 是一個致力於支持[以太坊](/what-is-ethereum/)與相關技術的非營利組織。
+[以太坊基金會](https://ethereum.foundation/) (EF) 是一個支援[以太坊](/)生態系的非營利組織。它資助協定開發、推動生態系成長，並為以太坊發聲。
 
-以太坊基金會並不是公司，甚至不是傳統的非營利組織。 其角色並不控制或主導以太坊發展方向，也僅是資助以太坊相關技術發展的眾多組織之一。 以太坊基金會是更大[生態系統](/community/)的一部分。
+EF 不是一間公司，甚至不是傳統的非營利組織。它不控制或領導以太坊，也不是唯一資助以太坊相關技術關鍵開發的組織。EF 只是更龐大[生態系](/community/)的一部分。
 
-## 以太坊基金會倡議 {#ethereum-foundation-initiatives}
+## EF 使命 {#ef-mandate}
 
-### 生態系支援計畫 {#ecosystem-support-program}
+EF 使命定義了基金會對以太坊生態系的目標、原則與承諾。該使命發布於鏈上，確立了 EF 對**抗審查性、開源、隱私與安全性 (CROPS)** 的奉獻，並將其視為不可妥協的優先事項。
 
-[生態系支援計畫](https://esp.ethereum.foundation/)旨在為更大以太坊社群內的專案和實體提供經濟及非經濟支援，從而刺激生態系成長。 生態系統支援計畫是最初以太坊資助計畫之擴充，後者關注經濟支援。
+[閱讀以太坊基金會使命](/foundation/mandate/)
 
-請造訪 [esp.ethereum.foundation](https://esp.ethereum.foundation/) 了解更多有關生態系統支持計畫、過去資助接收者及資助申請流程的資訊。 你也可閱覽[生態系統支持計畫部落格](https://blog.ethereum.org/category/ecosystem-support-program/)或關注 [@EF_ESP](https://twitter.com/EF_ESP) 取得最新消息及公告。
+## EF 的工作內容 {#what-the-ef-does}
 
-### 開發者展會 {#devcon}
+- **協定開發** – 支援致力於以太坊核心協定的團隊，包含用戶端開發、研究、升級以及[漏洞賞金計畫](/bug-bounty/)
+- **生態系資助** – 透過[生態系支援計畫](https://esp.ethereum.foundation/)，為在以太坊上建置的專案提供獎助金與支援
+- **研究** – 資助涵蓋密碼學、共識、擴容、隱私與安全性的研究
 
-自 2014 年以來，以太坊基金會組織了以太坊開發者大會 Devcon，這是匯聚眾多以太坊開發者、研究者、思考者及創作者的年度盛會。
+## 計畫與倡議 {#programs-and-initiatives}
 
-你可造訪 [archive.devcon.org](https://archive.devcon.org/) 閱覽自成立以來的年度會議影片資料。
+- **[生態系支援計畫](https://esp.ethereum.foundation/)** – 為在以太坊上建置的開源專案提供獎助金與支援
+- **[學術獎助金](https://esp.ethereum.foundation/academic-grants)** – 支援以太坊相關的學術研究
+- **[Devcon](https://devcon.org/)** – 專為以太坊開發者、研究人員與建置者舉辦的年度大會
+- **[漏洞賞金計畫](/bug-bounty/)** – 獎勵在以太坊協定中發現漏洞的人員
 
-請造訪 [devcon.org](https://devcon.org/) 了解更多資訊，查看 [Devcon 部落格](https://devcon.org/en/blogs/)，或關注 [@efdevcon](https://twitter.com/EFDevcon) 取得最新公告。
+## 了解更多 {#learn-more}
 
-### 夥伴計畫 {#fellowship-program}
-
-[以太坊基金會夥伴計畫](https://fellowship.ethereum.foundation/)是一項解決不同文化、國籍與社會階級差距的倡議。 夥伴計劃旨在透過識別和支援獨特且有才華的個人來彌合這些差距，幫助實現以太坊的相關性，並為那些將成為 Web3 未來但代表性不足的的人們和社群打破進入障礙。
-
-[請造訪 fellowship.ethereum.foundation 了解更多資訊](https://fellowship.ethereum.foundation/)。
-
-<br/>
-
-有關基金會及其工作的更多資訊，請訪造 [ethereum.foundation](http://ethereum.foundation/)，或查看[以太坊基金會部落格](https://blog.ethereum.org/)以取得以太坊基金會的最新消息及公告。
+- [ethereum.foundation](https://ethereum.foundation/) – EF 官方網站
+- [EF 部落格](https://blog.ethereum.org/) – 新聞與公告
+- [生態系支援計畫](https://esp.ethereum.foundation/) – 獎助金與支援

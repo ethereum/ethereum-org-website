@@ -1,4 +1,4 @@
-import { FC, Fragment, useEffect, useRef, useState } from "react"
+import React, { Fragment, useEffect, useRef, useState } from "react"
 import {
   ColumnDef,
   flexRender,
@@ -14,15 +14,15 @@ import {
   TableHeader,
   TableProps,
   TableRow,
-} from "@/components/ui/Table"
+} from "@/components/ui/table"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 type DataTableProps<TData, TValue> = TableProps & {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  subComponent?: FC<TData>
-  noResultsComponent?: FC
+  subComponent?: (props: TData, idx: number) => React.ReactNode
+  noResultsComponent?: (props: Record<string, never>) => React.ReactNode
   allDataLength: number
   setMobileFiltersOpen?: (open: boolean) => void
   activeFiltersCount: number
@@ -97,7 +97,7 @@ const DataTable = <TData, TValue>({
     }
 
     previousExpandedRef.current = expanded
-  }, [expanded])
+  }, [expanded, matomoEventCategory, table])
 
   useEffect(() => {
     if (JSON.stringify(data) !== JSON.stringify(previousDataRef.current)) {
@@ -111,11 +111,11 @@ const DataTable = <TData, TValue>({
 
       return () => clearTimeout(timer)
     }
-  }, [data])
+  }, [data, table])
 
   return (
     <div className="relative">
-      <div className="sticky top-[76px] z-10 w-full border-b border-primary bg-background">
+      <div className="sticky top-[76px] z-10 w-full border-b-background-highlight bg-background lg:border-b">
         <Table {...props}>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -137,7 +137,7 @@ const DataTable = <TData, TValue>({
       </div>
       <Table {...props}>
         <TableBody
-          className={`duration-25 transition-opacity ${
+          className={`transition-opacity duration-75 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >

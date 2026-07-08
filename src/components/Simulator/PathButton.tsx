@@ -9,7 +9,6 @@ type PathButtonProps = {
 }
 export const PathButton = ({ pathSummary, handleClick }: PathButtonProps) => {
   const { primaryText, secondaryText, Icon } = pathSummary
-  // TODO: Convert this component to use ButtonLinkTwoLines
   return (
     <Button
       variant="outline"
@@ -17,11 +16,11 @@ export const PathButton = ({ pathSummary, handleClick }: PathButtonProps) => {
       onClick={handleClick}
     >
       <span className="me-2">
-        <Icon />
+        <Icon className="size-8" />
       </span>
       <Flex className="flex-col" asChild>
         <span>
-          <span className="m-0 font-bold leading-6 tracking-[-1.1%]">
+          <span className="m-0 leading-6 font-bold tracking-[-1.1%]">
             {primaryText}
           </span>
           {secondaryText && (

@@ -1,18 +1,29 @@
 import isChromatic from "chromatic/isChromatic"
-import { MotionGlobalConfig } from "framer-motion"
-import type { Preview } from "@storybook/react"
+import { MotionGlobalConfig } from "motion/react"
+import { IBM_Plex_Mono, Inter } from "next/font/google"
+import type { Preview } from "@storybook/nextjs"
 
 import ThemeProvider from "@/components/ThemeProvider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 
-import i18n, { baseLocales } from "./i18next"
+import nextIntl, { baseLocales } from "./next-intl"
 import { withNextThemes } from "./withNextThemes"
 
 import "../src/styles/global.css"
-import "../src/styles/fonts.css"
-import "../src/styles/docsearch.css"
 
-import "@docsearch/css"
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  preload: true,
+})
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-mono",
+})
 
 MotionGlobalConfig.skipAnimations = isChromatic()
 
@@ -26,10 +37,6 @@ export const breakpointSet: [token: string, value: string][] = [
 ]
 
 const preview: Preview = {
-  globals: {
-    locale: "en",
-    locales: baseLocales,
-  },
   decorators: [
     withNextThemes({
       themes: {
@@ -39,15 +46,17 @@ const preview: Preview = {
       defaultTheme: "light",
     }),
     (Story) => (
-      <ThemeProvider>
-        <TooltipProvider>
-          <Story />
-        </TooltipProvider>
-      </ThemeProvider>
+      <div className={`${inter.variable} ${ibmPlexMono.variable}`}>
+        <ThemeProvider>
+          <TooltipProvider>
+            <Story />
+          </TooltipProvider>
+        </ThemeProvider>
+      </div>
     ),
   ],
   parameters: {
-    i18n,
+    nextIntl,
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -65,7 +74,7 @@ const preview: Preview = {
     layout: "centered",
     // Modify viewport selection to match Chakra breakpoints (or custom breakpoints)
     viewport: {
-      viewports: breakpointSet.reduce<{
+      options: breakpointSet.reduce<{
         [token: string]: {
           name: string
           styles: Record<"width" | "height", string>
@@ -83,6 +92,10 @@ const preview: Preview = {
         }
       }, {}),
     },
+  },
+  initialGlobals: {
+    locale: "en",
+    locales: baseLocales,
   },
 }
 

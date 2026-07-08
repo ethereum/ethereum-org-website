@@ -1,30 +1,29 @@
 ---
-title: "ERC-20 合约概览"
-description: OpenZeppelin 的 ERC-20 合约内容和解读
-author: Ori Pomerantz
+title: "ERC-20 合约详解"
+description: "欧本齐柏林 ERC-20 合约中包含什么内容，为什么会包含这些内容？"
+author: "奥里·波梅兰茨"
 lang: zh
-tags:
-  - "solidity"
-  - "erc-20"
+tags: ["Solidity", "erc-20"]
 skill: beginner
+breadcrumb: "ERC-20 详解"
 published: 2021-03-09
 ---
 
 ## 简介 {#introduction}
 
-以太坊最常见的用途之一是由一个团队来打造一种可以交易的代币，在某种意义上是他们自己的货币。 这些代币通常遵循一个标准， [ERC-20](/developers/docs/standards/tokens/erc-20/)。 此标准使得人们能够以此来开发可以用于所有 ERC-20 代币的工具，如流动资金池和钱包。 在这篇文章中，我们将带领大家分析 [OpenZeppelin Solidity ERC20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)以及 [ ERC20 接口定义](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)。
+以太坊最常见的用途之一是让一个群体创建可交易的代币，在某种意义上就是他们自己的货币。这些代币通常遵循一个标准，即 [ERC-20](/developers/docs/standards/tokens/erc-20/)。该标准使得编写能够与所有 ERC-20 代币配合使用的工具（如流动性池和钱包）成为可能。在本文中，我们将分析 [欧本齐柏林 Solidity ERC20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)，以及[接口定义](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)。
 
-这里使用的是附加说明的源代码。 如果想要实现 ERC-20， [请阅读此教程](https://docs.openzeppelin.com/contracts/2.x/erc20-supply)。
+这是带有注释的源代码。如果你想实现 ERC-20，请[阅读本教程](https://docs.openzeppelin.com/contracts/2.x/erc20-supply)。
 
 ## 接口 {#the-interface}
 
-像 ERC-20 这样的标准，其目的是允许符合标准的多种代币，都可以在应用程序之间进行互操作，例如钱包和分布式交易所。 为实现这个目的，我们要创建一个 [接口](https://www.geeksforgeeks.org/solidity-basics-of-interface/)。 任何需要使用代币合约的代码 可以在接口中使用相同的定义，并且与使用它的所有代币合约兼容。无论是像 MetaMask 这样的钱包、 诸如 etherscan.io 之类的去中心化应用程序，或一种不同的合约，例如流动资金池。
+像 ERC-20 这样的标准的目的是允许多种代币实现在不同应用（如钱包和去中心化交易所）之间可互操作。为了实现这一点，我们创建了一个[接口](https://www.geeksforgeeks.org/solidity/solidity-basics-of-interface/)。任何需要使用代币合约的代码都可以使用接口中相同的定义，并与所有使用该接口的代币合约兼容，无论是像梅塔马斯克这样的钱包、像 etherscan.io 这样的去中心化应用 (dapp)，还是像流动性池这样的其他合约。
 
-![ERC-20 接口说明](erc20_interface.png)
+![Illustration of the ERC-20 interface](erc20_interface.png)
 
-如果你是一位经验丰富的程序员，你可能记得在 [Java](https://www.w3schools.com/java/java_interface.asp) 中，甚至在 [C 头文件](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html) 中看到过类似的构造。
+如果你是一位经验丰富的程序员，你可能记得在 [Java](https://www.w3schools.com/java/java_interface.asp) 甚至 [C 语言头文件](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html)中看到过类似的结构。
 
-这是来自 OpenZeppelin 的 [ERC-20 接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) 的定义。 这是将[人类可读标准](https://eips.ethereum.org/EIPS/eip-20)转换为 Solidity 代码。 当然， 接口本身并不定义_如何_做事。 这一点在下文合约的源代码中作了解释。
+这是欧本齐柏林提供的 [ERC-20 接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)定义。它是将[人类可读的标准](https://eips.ethereum.org/EIPS/eip-20)翻译成 Solidity 代码的结果。当然，接口本身并不定义*如何*执行任何操作。这将在下面的合约源代码中解释。
 
 &nbsp;
 
@@ -32,7 +31,7 @@ published: 2021-03-09
 // SPDX-License-Identifier: MIT
 ```
 
-Solidity 文件中一般需要标识软件许可证。 [你可以在这里看到许可证列表](https://spdx.org/licenses/)。 如果需要不同的 许可证，只需在注释中加以说明。
+Solidity 文件应该包含一个许可证标识符。[你可以在这里查看许可证列表](https://spdx.org/licenses/)。如果你需要不同的许可证，只需在注释中说明即可。
 
 &nbsp;
 
@@ -40,17 +39,17 @@ Solidity 文件中一般需要标识软件许可证。 [你可以在这里看到
 pragma solidity >=0.6.0 <0.8.0;
 ```
 
-Solidity 语言仍在迅速地发展，新版本可能不适配旧的代码 ([请点击此处查看](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html))。 因此，最好不仅指定一个最低的 语言版本，也指定一个最高的版本，即测试过代码的最新版本。
+Solidity 语言仍在快速发展，新版本可能与旧代码不兼容（[见此处](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)）。因此，最好不仅指定语言的最低版本，还要指定最高版本，即你测试代码时使用的最新版本。
 
 &nbsp;
 
 ```solidity
 /**
- * @dev Interface of the ERC20 standard as defined in EIP.
+ * @dev EIP中定义的ERC-20标准接口。
  */
 ```
 
-注释中的 `@dev` 是 [NatSpec 格式](https://docs.soliditylang.org/en/develop/natspec-format.html)的一部分，用于 从源代码生成文档。
+注释中的 `@dev` 是 [NatSpec 格式](https://docs.soliditylang.org/en/develop/natspec-format.html)的一部分，用于从源代码生成文档。
 
 &nbsp;
 
@@ -58,135 +57,132 @@ Solidity 语言仍在迅速地发展，新版本可能不适配旧的代码 ([�
 interface IERC20 {
 ```
 
-根据惯例，接口名称以 `I` 开头。
+按照惯例，接口名称以 `I` 开头。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Returns the amount of tokens in existence.
+     * @dev 返回已存在的代币数量。
      */
     function totalSupply() external view returns (uint256);
 ```
 
-此函数标记为 `external`，表示[它只能从合约之外调用](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2)。 它返回的是合约中代币的总供应量 这个值按以太坊中最常见的类型返回，即无符号的 256 位（256 位是 以太坊虚拟机的原生字长宽度）。 此函数也是视图 `view` 类型，这意味着它不会改变合约状态，这样它可以在单个节点上执行，而不需要在区块链的每个节点上执行。 这类函数不会生成交易，也不会消耗[燃料](/developers/docs/gas/)。
+此函数是 `external`，意味着[它只能从合约外部调用](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2)。
+它返回合约中代币的总供应量。此值使用以太坊中最常见的类型（无符号 256 位）返回（256 位是 EVM 的原生字长）。此函数也是一个 `view`，这意味着它不会改变状态，因此它可以在单个节点上执行，而无需区块链中的每个节点都运行它。这种函数不会生成交易，也不消耗 [Gas](/developers/docs/gas/)。
 
-**注意：**理论上讲，合约创建者可能会通过返回比实际数量少的总供应量来做骗局，让每个代币 比实际看起来更有价值。 然而，这种担忧忽视了区块链的真正内涵。 所有在区块链上发生的事情都要通过每个节点 进行验证。 为了实现这一点，每个合约的机器语言代码和存储都可以在每个节点上找到。 虽然无需发布你的合约代码，但这样其它人都不会认真对待你，除非你发布源代码和用于编译的 Solidity 版本，这样人们可以用它来验证你提供的机器语言代码。 例如，请查看[此合约](https://etherscan.io/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD#code)。
+**注意：** 理论上，合约的创建者似乎可以通过返回比实际值更小的总供应量来作弊，使每个代币看起来比实际更有价值。然而，这种担忧忽略了区块链的真实本质。区块链上发生的一切都可以被每个节点验证。为了实现这一点，每个合约的机器语言代码和存储在每个节点上都是可用的。虽然你不必发布合约的 Solidity 代码，但除非你发布源代码以及编译它所用的 Solidity 版本，以便可以根据你提供的机器语言代码进行验证，否则没有人会认真对待你。
+例如，请参阅[此合约](https://eth.blockscout.com/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD?tab=contract)。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Returns the amount of tokens owned by `account`.
+     * @dev 返回`account`拥有的代币数量。
      */
     function balanceOf(address account) external view returns (uint256);
 ```
 
-顾名思义，`balanceOf` 返回一个帐户的余额。 以太坊帐户在 Solidity 中通过 `address` 类型识别，该类型有 160 位。 它也是 `external` 和 `view` 类型。
+顾名思义，`balanceOf` 返回账户的余额。在 Solidity 中，以太坊账户使用 `address` 类型进行标识，该类型占用 160 位。
+它也是 `external` 和 `view`。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Moves `amount` tokens from the caller's account to `recipient`.
+     * @dev 将`amount`数量的代币从调用者的账户转账到`recipient`。
      *
-     * Returns a boolean value indicating whether the operation succeeded.
+     * 返回一个布尔值，指示操作是否成功。
      *
-     * Emits a {Transfer} event.
+     * 触发{Transfer}事件。
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-`transfer` 函数将代币从调用者地址转移到另一个地址。 这涉及到状态的更改，所以它不是 `view` 类型。 当用户调用此函数时，它会创建交易并消耗燃料。 还会触发一个 `Transfer` 事件，以通知区块链上的所有人。
+`transfer` 函数将代币从调用者转账到不同的地址。这涉及状态的改变，因此它不是 `view`。
+当用户调用此函数时，它会创建一笔交易并消耗 Gas。它还会触发一个事件 `Transfer`，以通知区块链上的所有人该事件的发生。
 
-该函数有两种输出，对应两种不同的调用：
+该函数为两种不同类型的调用者提供两种类型的输出：
 
-- 直接从用户接口调用函数的用户。 此类用户通常会提交一个交易 并且不会等待响应，因为响应可能需要无限期的时间。 用户可以查看交易收据 （通常通过交易哈希值识别）或者查看 `Transfer` 事件，以确定发生了什么。
-- 将函数作为整个交易一部分调用的其他合约 这些合约可立即获得结果， 由于它们在相同的交易里运行，因此可以使用函数返回值。
+- 直接从用户界面调用该函数的用户。通常，用户提交交易后不会等待响应，因为这可能需要无限长的时间。用户可以通过查找交易收据（由交易哈希标识）或查找 `Transfer` 事件来查看发生了什么。
+- 其他合约，它们作为整体交易的一部分调用该函数。这些合约会立即获得结果，因为它们在同一笔交易中运行，因此它们可以使用函数的返回值。
 
-更改合约状态的其他函数创建的同类型输出。
+其他改变合约状态的函数也会产生相同类型的输出。
 
 &nbsp;
 
-限额允许帐户使用属于另一位所有者的代币。 比如，当合约作为卖方时，这个函数就很实用。 合约无法 监听事件，如果买方要将代币直接转给卖方合约， 该合约无法知道已经获得付款。 因此，买方允许 卖方合约支付一定的额度，而让卖方转账相应金额。 这通过卖方合约调用的函数完成，这样卖方合约 可以知道是否成功。
+授权额度允许一个账户花费属于不同所有者的一些代币。
+例如，这对于充当卖方的合约非常有用。合约无法监控事件，因此如果买方直接将代币转账给卖方合约，该合约将不知道自己已收到付款。相反，买方允许卖方合约花费一定金额，然后卖方转账该金额。
+这是通过卖方合约调用的函数完成的，因此卖方合约可以知道它是否成功。
 
 ```solidity
     /**
-     * @dev Returns the remaining number of tokens that `spender` will be
-     * allowed to spend on behalf of `owner` through {transferFrom}. This is
-     * zero by default.
+     * @dev 返回`spender`将被允许通过{transferFrom}代表`owner`花费的剩余代币数量。默认值为零。
      *
-     * This value changes when {approve} or {transferFrom} are called.
+     * 当调用{approve}或{transferFrom}时，此值会发生变化。
      */
     function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-`allowance` 函数允许任何人查询一个 地址 (`owner`) 给另一个地址 (`spender`) 的许可额度。
+`allowance` 函数允许任何人查询一个地址（`owner`）允许另一个地址（`spender`）花费的授权额度是多少。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.
+     * @dev 将`amount`设置为`spender`对调用者代币的授权额度。
      *
-     * Returns a boolean value indicating whether the operation succeeded.
+     * 返回一个布尔值，指示操作是否成功。
      *
-     * IMPORTANT: Beware that changing an allowance with this method brings the risk
-     * that someone may use both the old and the new allowance by unfortunate
-     * transaction ordering. One possible solution to mitigate this race
-     * condition is to first reduce the spender's allowance to 0 and set the
-     * desired value afterwards:
+     * 重要提示：请注意，使用此方法更改授权额度会带来风险，即由于不幸的交易顺序，某人可能会同时使用旧的和新的授权额度。缓解这种竞争条件的一种可能解决方案是首先将花费者的授权额度降至0，然后再设置所需的值：
      * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
-     * Emits an {Approval} event.
+     * 触发{Approval}事件。
      */
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-`approve` 函数创建了一个许可额度。 请务必阅读关于 如何避免函数被滥用的信息。 在以太坊中，你可以控制自己交易的顺序， 但无法控制其他方交易的执行顺序， 除非在看到其他方的交易发生之前 不提交你自己的交易。
+`approve` 函数创建一个授权额度。请务必阅读有关它如何被滥用的消息。在以太坊中，你可以控制自己交易的顺序，但你无法控制其他人交易的执行顺序，除非你等到看到对方的交易发生后才提交自己的交易。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev Moves `amount` tokens from `sender` to `recipient` using the
-     * allowance mechanism. `amount` is then deducted from the caller's
-     * allowance.
+     * @dev 使用授权额度机制将`amount`数量的代币从`sender`转账到`recipient`。然后从调用者的授权额度中扣除`amount`。
      *
-     * Returns a boolean value indicating whether the operation succeeded.
+     * 返回一个布尔值，指示操作是否成功。
      *
-     * Emits a {Transfer} event.
+     * 触发{Transfer}事件。
      */
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
-最后，消费者使用 `transferFrom` 函数用来使用许可额度。
+最后，`transferFrom` 被花费者用来实际花费授权额度。
 
 &nbsp;
 
 ```solidity
 
     /**
-     * @dev Emitted when `value` tokens are moved from one account (`from`) to
-     * another (`to`).
+     * @dev 当`value`数量的代币从一个账户（`from`）转账到另一个账户（`to`）时触发。
      *
-     * Note that `value` may be zero.
+     * 请注意，`value`可能为零。
      */
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
-     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
-     * a call to {approve}. `value` is the new allowance.
+     * @dev 当通过调用{approve}设置`spender`对`owner`的授权额度时触发。`value`是新的授权额度。
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 ```
 
-在 ERC-20 合约状态发生变化时就会激发这些事件。
+当 ERC-20 合约的状态发生变化时，会触发这些事件。
 
 ## 实际合约 {#the-actual-contract}
 
-这是实现 ERC-20 标准的实际合约， [摘自此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)。 不能照原样使用，但可以 通过[继承](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm)将其扩展，使之可用。
+这是实现 ERC-20 标准的实际合约，[取自此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)。
+它并不打算按原样使用，但你可以从中[继承](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm)以将其扩展为可用的内容。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -195,9 +191,9 @@ pragma solidity >=0.6.0 <0.8.0;
 
 &nbsp;
 
-### 导入声明 {#import-statements}
+### 导入语句 {#import-statements}
 
-除了上述接口定义外，合约定义还要导入两个其他文件：
+除了上面的接口定义之外，合约定义还导入了另外两个文件：
 
 ```solidity
 
@@ -206,37 +202,29 @@ import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` 是使用 [OpenGSN](https://www.opengsn.org/) 所需的文件，该系统允许用户在没有以太币的情况下 使用区块链。 请注意，这里的文件是旧版本，如果需要集成 OpenGSN， [请使用此教程](https://docs.opengsn.org/javascript-client/tutorial.html)。
-- [SafeMath 库](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)，用于 完成没有溢出问题的加法和减法。 这非常必要，否则会出现，用户仅有一个代币，花掉 两个代币后，反而有了 2^256-1 个代币。
+- `GSN/Context.sol` 是使用 [OpenGSN](https://opengsn.org/) 所需的定义，该系统允许没有以太币的用户使用区块链。请注意，这是一个旧版本，如果你想与 OpenGSN 集成，请[使用本教程](https://docs.opengsn.org/javascript-client/tutorial.html)。
+- [SafeMath 库](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)，它可防止 Solidity 版本 **&lt;0.8.0** 发生算术溢出/下溢。在 Solidity ≥0.8.0 中，算术运算在溢出/下溢时会自动回退，因此不再需要 SafeMath。此合约使用 SafeMath 是为了向后兼容旧的编译器版本。
 
 &nbsp;
 
-这里的注释说明了合约的目的。
+此注释解释了合约的目的。
 
 ```solidity
 /**
- * @dev Implementation of the {IERC20} interface.
+ * @dev {IERC20}接口的实现。
  *
- * This implementation is agnostic to the way tokens are created. This means
- * that a supply mechanism has to be added in a derived contract using {_mint}.
- * For a generic mechanism see {ERC20PresetMinterPauser}.
+ * 此实现与代币的创建方式无关。这意味着必须在派生合约中使用{_mint}添加供应机制。
+ * 有关通用机制，请参见{ERC20PresetMinterPauser}。
  *
- * TIP: For a detailed writeup see our guide
- * https://forum.zeppelin.solutions/t/how-to-implement-erc20-supply-mechanisms/226[How
- * to implement supply mechanisms].
+ * 提示：有关详细说明，请参见我们的指南
+ * https://forum.zeppelin.solutions/t/how-to-implement-erc20-supply-mechanisms/226[如何实现供应机制]。
  *
- * We have followed general OpenZeppelin guidelines: functions revert instead
- * of returning `false` on failure. This behavior is nonetheless conventional
- * and does not conflict with the expectations of ERC20 applications.
+ * 我们遵循了通用的欧本齐柏林指南：函数在失败时回退（revert）而不是返回`false`。尽管如此，这种行为是常规的，并且不与ERC-20应用程序的期望冲突。
  *
- * Additionally, an {Approval} event is emitted on calls to {transferFrom}.
- * This allows applications to reconstruct the allowance for all accounts just
- * by listening to said events. Other implementations of the EIP may not emit
- * these events, as it isn't required by the specification.
+ * 此外，在调用{transferFrom}时会触发{Approval}事件。
+ * 这允许应用程序仅通过监听所述事件来重建所有账户的授权额度。EIP的其他实现可能不会触发这些事件，因为规范并未要求。
  *
- * Finally, the non-standard {decreaseAllowance} and {increaseAllowance}
- * functions have been added to mitigate the well-known issues around setting
- * allowances. See {IERC20-approve}.
+ * 最后，添加了非标准的{decreaseAllowance}和{increaseAllowance}函数，以缓解围绕设置授权额度的众所周知的问题。请参见{IERC20-approve}。
  */
 
 ```
@@ -247,7 +235,7 @@ import "../../math/SafeMath.sol";
 contract ERC20 is Context, IERC20 {
 ```
 
-此行为 OpenGSN 指定继承，在本例中来自上面的 `IERC20` 和 `Context`。
+此行指定了继承，在本例中继承自上面的 `IERC20` 和用于 OpenGSN 的 `Context`。
 
 &nbsp;
 
@@ -257,27 +245,27 @@ contract ERC20 is Context, IERC20 {
 
 ```
 
-此行将 `SafeMath` 库附加到 `uint256` 类型。 你可以在 [此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)找到此程序库。
+此行将 `SafeMath` 库附加到 `uint256` 类型。你可以在[此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)找到此库。
 
-### 变量的定义 {#variable-definitions}
+### 变量定义 {#variable-definitions}
 
-这些定义具体指定了合约的状态变量。 虽然声明这些变量为 `private`，但 这只意味着区块链上的其他合约无法读取它们。 _区块链上 没有秘密_，所有节点上的软件在每个区块上 都有每个合约的状态。 根据惯例，状态变量名称为 `_<something>`。
+这些定义指定了合约的状态变量。这些变量被声明为 `private`，但这仅仅意味着区块链上的其他合约无法读取它们。*区块链上没有秘密*，每个节点上的软件都拥有每个区块中每个合约的状态。按照惯例，状态变量被命名为 `_<something>`。
 
-前两个变量是[映射](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)， 表示它们的结果与[关联数组](https://wikipedia.org/wiki/Associative_array)相同， 不同之处在于关键词为数值。 存储空间仅分配给数值不同于 默认值（零）的条目。
+前两个变量是[映射](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)，这意味着它们的行为与[关联数组](https://wikipedia.org/wiki/Associative_array)大致相同，只是键是数值。仅为值不同于默认值（零）的条目分配存储空间。
 
 ```solidity
     mapping (address => uint256) private _balances;
 ```
 
-第一个映射，`_balances`，是代币地址和对应的余额。 要查看 余额，请使用此语法：`_balances[<address>]`。
+第一个映射 `_balances` 是地址及其各自的该代币余额。要访问余额，请使用此语法：`_balances[<address>]`。
 
 &nbsp;
 
 ```solidity
-    映射 (address => mapping (address => uint256)) private _allowances;
+    mapping (address => mapping (address => uint256)) private _allowances;
 ```
 
-此变量，`_allowances` 存储之前提到过的许可限额。 第一个索引是 代币的所有者，第二个索引是获得许可限额的合约。 要查询地址 A 可以 从地址 B 帐户中支出的额度，请使用 `_allowances[B][A]`。
+此变量 `_allowances` 存储前面解释的授权额度。第一个索引是代币的所有者，第二个是拥有授权额度的合约。要访问地址 A 可以从地址 B 的账户中花费的金额，请使用 `_allowances[B][A]`。
 
 &nbsp;
 
@@ -285,7 +273,7 @@ contract ERC20 is Context, IERC20 {
     uint256 private _totalSupply;
 ```
 
-顾名思义，此变量记录代币供应总量。
+顾名思义，此变量跟踪代币的总供应量。
 
 &nbsp;
 
@@ -295,126 +283,120 @@ contract ERC20 is Context, IERC20 {
     uint8 private _decimals;
 ```
 
-这三个变量用于提高可读性。 前两项的含义不言自明，但 `_decimals` 并非如此。
+这三个变量用于提高可读性。前两个不言自明，但 `_decimals` 不是。
 
-一方面，以太坊不具有浮点数或分数变量。 另一方面， 人们希望能够拆分代币。 人们选择将黄金做为货币的一个原因是 当有人想要购买一只牛的一小部分时，就很难找零。
+一方面，以太坊没有浮点数或小数变量。另一方面，人类喜欢能够分割代币。人们选择黄金作为货币的原因之一是，当有人想买一只鸭子价值的牛时，很难找零。
 
-解决方案是保持整数值，但是计数时使用一个价值非常小的分数代币， 而不是真正的代币。 就以太币而言，分数代币称为 wei，10^18 个 wei 等于一个 以太币。 在撰写本文时，10,000,000,000,000 wei 约等于一美分或欧分。
+解决方案是跟踪整数，但计算的不是真实的代币，而是几乎毫无价值的代币分数单位。以以太币为例，分数单位称为 Wei，10^18 Wei 等于 1 ETH。在撰写本文时，10,000,000,000,000 Wei 约等于一美分或一欧分。
 
-应用程序需要知道如何显示代币余额。 如果某位用户有 3,141,000,000,000,000,000 wei，那是否是 3.14 个以太币？ 31.41 个以太币？ 还是 3,141 个以太币？ 对于以太币，10^18 个 wei 等于 1 个以太币，但对于你的 代币，你可以选择一个不同的值。 如果无法合理拆分代币，你可以将 `_decimals` 值设为零。 如果想要使用与以太币相同的标准，请使用 **18**。
+应用程序需要知道如何显示代币余额。如果用户有 3,141,000,000,000,000,000 Wei，那是 3.14 ETH 吗？31.41 ETH？3,141 ETH？在以太币的情况下，定义为 10^18 Wei 等于 1 ETH，但对于你的代币，你可以选择不同的值。如果分割代币没有意义，你可以使用 `_decimals` 值为零。如果你想使用与 ETH 相同的标准，请使用值 **18**。
 
 ### 构造函数 {#the-constructor}
 
 ```solidity
     /**
-     * @dev Sets the values for {name} and {symbol}, initializes {decimals} with
-     * a default value of 18.
+     * @dev 设置{name}和{symbol}的值，使用默认值18初始化{decimals}。
      *
-     * To select a different value for {decimals}, use {_setupDecimals}.
+     * 要为{decimals}选择不同的值，请使用{_setupDecimals}。
      *
-     * All three of these values are immutable: they can only be set once during
-     * construction.
+     * 这三个值都是不可变的：它们只能在构造期间设置一次。
      */
     constructor (string memory name_, string memory symbol_) public {
+        // 在Solidity ≥0.7.0中，'public'是隐式的，可以省略。
+
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
     }
 ```
 
-构造函数在首次创建合约时调用。 根据惯例，函数参数名为 `<something>_`。
+构造函数在首次创建合约时被调用。按照惯例，函数参数被命名为 `<something>_`。
 
-### 用户接口函数 {#user-interface-functions}
+### 用户界面函数 {#user-interface-functions}
 
 ```solidity
     /**
-     * @dev Returns the name of the token.
+     * @dev 返回代币的名称。
      */
     function name() public view returns (string memory) {
         return _name;
     }
 
     /**
-     * @dev Returns the symbol of the token, usually a shorter version of the
-     * name.
+     * @dev 返回代币的符号，通常是名称的简写版本。
      */
     function symbol() public view returns (string memory) {
         return _symbol;
     }
 
     /**
-     * @dev Returns the number of decimals used to get its user representation.
-     * For example, if `decimals` equals `2`, a balance of `505` tokens should
-     * be displayed to a user as `5,05` (`505 / 10 ** 2`).
+     * @dev 返回用于获取其用户表示形式的小数位数。
+     * 例如，如果`decimals`等于`2`，则`505`个代币的余额应向用户显示为`5,05`（`505 / 10 ** 2`）。
      *
-     * Tokens usually opt for a value of 18, imitating the relationship between
-     * ether and wei. This is the value {ERC20} uses, unless {_setupDecimals} is
-     * called.
+     * 代币通常选择值为18，模仿以太币和Wei之间的关系。这是{ERC20}使用的值，除非调用了{_setupDecimals}。
      *
-     * NOTE: This information is only used for _display_ purposes: it in
-     * no way affects any of the arithmetic of the contract, including
-     * {IERC20-balanceOf} and {IERC20-transfer}.
+     * 注意：此信息仅用于_显示_目的：它绝不会影响合约的任何算术运算，包括{IERC20-balanceOf}和{IERC20-transfer}。
      */
     function decimals() public view returns (uint8) {
         return _decimals;
     }
 ```
 
-这些函数，`name`、`symbol` 和 `decimals` 帮助用户界面了解合约，从而正常演示合约。
+这些函数 `name`、`symbol` 和 `decimals` 帮助用户界面了解你的合约，以便它们能够正确显示它。
 
-返回类型为 `string memory`，意味着返回在内存中存储的字符串。 变量，如 字符串，可以存储在三个位置：
+返回类型是 `string memory`，意味着返回一个存储在内存中的字符串。变量（如字符串）可以存储在三个位置：
 
-|      | 有效时间  | 合约访问 | 燃料成本                |
-| ---- | ----- | ---- | ------------------- |
-| 内存   | 函数调用  | 读/写  | 几十到几百不等（距离越远费用越高）   |
-| 调用数据 | 函数调用  | 只读   | 不可用作返回类型，只可用作函数参数   |
-| 存储   | 直到被修改 | 读/写  | 高（读取需要 800，写入需要 2万） |
+|          | 生命周期      | 合约访问权限 | Gas 成本                                                       |
+| -------- | ------------- | --------------- | -------------------------------------------------------------- |
+| 内存   | 函数调用 | 读/写      | 几十或几百（位置越高成本越高）                 |
+| 调用数据 | 函数调用 | 只读       | 不能用作返回类型，只能用作函数参数类型 |
+| 存储  | 直到被更改 | 读/写      | 高（读取 800，写入 20k）                             |
 
-在这种情况下，`memory` 是最好的选择。
+在这种情况下，`memory` 是最佳选择。
 
 ### 读取代币信息 {#read-token-information}
 
-这些是提供代币信息的函数，不管是总量还是 帐户余额。
+这些是提供有关代币信息的函数，无论是总供应量还是账户余额。
 
 ```solidity
     /**
-     * @dev See {IERC20-totalSupply}.
+     * @dev 参见{IERC20-totalSupply}。
      */
     function totalSupply() public view override returns (uint256) {
         return _totalSupply;
     }
 ```
 
-`totalSupply` 函数返回代币的总量。
+`totalSupply` 函数返回代币的总供应量。
 
 &nbsp;
 
 ```solidity
     /**
-     * @dev See {IERC20-balanceOf}.
+     * @dev 参见{IERC20-balanceOf}。
      */
     function balanceOf(address account) public view override returns (uint256) {
         return _balances[account];
     }
 ```
 
-读取一个帐户的余额。 请注意，任何人都可以查看他人帐户的余额。 试图隐藏此信息没有意义，因为它在每个节点上 都是可见的。 _区块链上没有秘密_
+读取账户的余额。请注意，允许任何人获取任何其他人的账户余额。试图隐藏此信息毫无意义，因为它无论如何都在每个节点上可用。*区块链上没有秘密。*
 
-### 代币转账 {#transfer-tokens}
+### 转账代币 {#transfer-tokens}
 
 ```solidity
     /**
-     * @dev See {IERC20-transfer}.
+     * @dev 参见{IERC20-transfer}。
      *
-     * Requirements:
+     * 要求：
      *
-     * - `recipient` cannot be the zero address.
-     * - the caller must have a balance of at least `amount`.
+     * - `recipient`不能是零地址。
+     * - 调用者必须具有至少`amount`的余额。
      */
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
 ```
 
-调用 `transfer` 函数以从发送人的帐户转移代币到另一个帐户。 注意 虽然函数返回的是布尔值，但那个值始终为**真实值**。 如果转账失败， 合约会撤销调用。
+调用 `transfer` 函数将代币从发送者的账户转账到另一个账户。请注意，即使它返回一个布尔值，该值也始终为 **true**。如果转账失败，合约将回退调用。
 
 &nbsp;
 
@@ -424,44 +406,44 @@ contract ERC20 is Context, IERC20 {
     }
 ```
 
-`_transfer` 函数完成了实际工作。 这是一个私有函数，只能由 其他合约函数调用。 根据常规，私人函数名为 `_<something>`，与状态 变量相同。
+`_transfer` 函数执行实际工作。它是一个私有函数，只能由其他合约函数调用。按照惯例，私有函数被命名为 `_<something>`，与状态变量相同。
 
-在 Solidity 中，我们通常使用 `msg.sender` 代表信息发送人。 然而，这会破坏 [OpenGSN](http://opengsn.org/) 的规则。 如果我们想使用代币进行交易而不用以太币，我们 需要使用 `_msgSender()`。 对于正常交易，它返回 `msg.sender`，但是对于没有以太币的交易， 则返回原始签名而不是传递信息的合约。
+通常在 Solidity 中，我们使用 `msg.sender` 表示消息发送者。然而，这会破坏 [OpenGSN](https://opengsn.org/)。如果我们想允许使用我们的代币进行无以太币交易，我们需要使用 `_msgSender()`。对于普通交易，它返回 `msg.sender`，但对于无以太币交易，它返回原始签名者，而不是中继消息的合约。
 
-### 许可额度函数 {#allowance-functions}
+### 授权额度函数 {#allowance-functions}
 
-这些是实现许可额度功能的函数：`allowance`、`approve`、`transferFrom` 和 `_approve`。 此外，除基本标准外，OpenZeppelin 实现还包含了一些能够提高 安全性的功能：`increaseAllowance` 和 ` decreaseAllowance `。
+这些是实现授权额度功能的函数：`allowance`、`approve`、`transferFrom` 和 `_approve`。此外，欧本齐柏林实现超越了基本标准，包含了一些提高安全性的功能：`increaseAllowance` 和 `decreaseAllowance`。
 
-#### 许可额度函数 {#allowance}
+#### allowance 函数 {#allowance}
 
 ```solidity
     /**
-     * @dev See {IERC20-allowance}.
+     * @dev 参见{IERC20-allowance}。
      */
     function allowance(address owner, address spender) public view virtual override returns (uint256) {
         return _allowances[owner][spender];
     }
 ```
 
-`allowance` 函数使每个人都能检查任何许可额度。
+`allowance` 函数允许所有人检查任何授权额度。
 
-#### 审批函数 {#approve}
+#### approve 函数 {#approve}
 
 ```solidity
     /**
-     * @dev See {IERC20-approve}.
+     * @dev 参见{IERC20-approve}。
      *
-     * Requirements:
+     * 要求：
      *
-     * - `spender` cannot be the zero address.
+     * - `spender`不能是零地址。
      */
     function approve(address spender, uint256 amount) public virtual override returns (bool) {
 ```
 
-调用此函数以创建许可额度。 它与上述 `transfer` 函数相似：
+调用此函数以创建授权额度。它类似于上面的 `transfer` 函数：
 
-- 该函数仅调用一个完成真正工作的内部函数（本例中为 `_approve`）。
-- 函数要么返回 `true`（如果成功），要么撤销（如果失败）。
+- 该函数只是调用一个执行实际工作的内部函数（在本例中为 `_approve`）。
+- 该函数要么返回 `true`（如果成功），要么回退（如果不成功）。
 
 &nbsp;
 
@@ -471,25 +453,23 @@ contract ERC20 is Context, IERC20 {
     }
 ```
 
-我们使用内部函数尽量减少发生状态变化之处。 _任何_可以改变状态的 函数都是一种潜在的安全风险，需要对其安全性进行审核。 这样我们就能减少出错的机会。
+我们使用内部函数来尽量减少状态发生变化的地方的数量。*任何*改变状态的函数都是潜在的安全风险，需要进行安全审计。这样我们出错的机会就更少了。
 
-#### TransferFrom 函数 {#transferFrom}
+#### transferFrom 函数 {#transferfrom}
 
-这个函数被消费者用于使用许可额度。 这里需要两步操作：将消费的金额转账， 并在许可额度中减去这笔金额。
+这是花费者调用以花费授权额度的函数。这需要两个操作：转账被花费的金额，并将授权额度减少该金额。
 
 ```solidity
     /**
-     * @dev See {IERC20-transferFrom}.
+     * @dev 参见{IERC20-transferFrom}。
      *
-     * Emits an {Approval} event indicating the updated allowance. This is not
-     * required by the EIP. See the note at the beginning of {ERC20}.
+     * 触发一个{Approval}事件以指示更新后的授权额度。这不是EIP所要求的。请参见{ERC20}开头的注释。
      *
-     * Requirements:
+     * 要求：
      *
-     * - `sender` and `recipient` cannot be the zero address.
-     * - `sender` must have a balance of at least `amount`.
-     * - the caller must have allowance for ``sender``'s tokens of at least
-     * `amount`.
+     * - `sender`和`recipient`不能是零地址。
+     * - `sender`必须具有至少`amount`的余额。
+     * - 调用者必须对``sender``的代币具有至少`amount`的授权额度。
      */
     function transferFrom(address sender, address recipient, uint256 amount) public virtual
                                                 override returns (bool) {
@@ -498,7 +478,7 @@ contract ERC20 is Context, IERC20 {
 
 &nbsp;
 
-`a.sub(b, "message")` 函数调用做了两件事。 首先，它计算了 `a-b`，这是新的许可额度。 之后，它检查这一结果是否为负数。 如果结果为负，将撤销调用，并发出相应的信息。 请注意，撤销调用后，之前在调用中完成的任何处理都会被忽略，所以我们不需要 撤消 `_transfer`。
+`a.sub(b, "message")` 函数调用执行两项操作。首先，它计算 `a-b`，即新的授权额度。其次，它检查此结果是否为负数。如果为负数，则调用将使用提供的消息回退。请注意，当调用回退时，之前在该调用期间执行的任何处理都将被忽略，因此我们不需要撤消 `_transfer`。
 
 ```solidity
         _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount,
@@ -507,50 +487,49 @@ contract ERC20 is Context, IERC20 {
     }
 ```
 
-#### OpenZeppelin 安全加法 {#openzeppelin-safety-additions}
+#### 欧本齐柏林安全附加功能 {#openzeppelin-safety-additions}
 
-将许可额度从一个非零值设定为另一个非零值是有危险的， 因为你只能控制自己的交易顺序，而无法控制其他人的交易顺序。 假设现在有两个用户，天真的 Alice 和不诚实的 Bill。 Alice 想要从 Bill 处获取一些服务， 她认为值五个代币，所以她给了 Bill 五个代币的许可额度。
+将非零授权额度设置为另一个非零值是危险的，因为你只能控制自己交易的顺序，而不能控制其他任何人的交易顺序。想象一下你有两个用户，天真的 Alice 和不诚实的 Bill。Alice 想要 Bill 提供一些服务，她认为这需要五个代币——所以她给了 Bill 五个代币的授权额度。
 
-之后有了一些变化，Bill 的价格提高到了十个代币。 Alice 仍然想要购买服务，就发送了一笔交易，将 Bill 的许可额度设置为 10。 当 Bill 在交易池中看到这个新的交易时， 他就会发送一笔交易，以花费 Alice 的五个代币，并且设定高得多的 燃料价格，这样就会更快挖矿。 这样的话，Bill 可以先花五个代币，然后 当 Alice 的新许可额度放款后，他就可以再花费十个代币，这样总共花费了 15 个代币， 超过了 Alice 本欲授权的金额。 这种技术叫做 [抢先交易](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+然后情况发生了变化，Bill 的价格上涨到了十个代币。仍然想要该服务的 Alice 发送了一笔交易，将 Bill 的授权额度设置为十。当 Bill 在交易池中看到这笔新交易时，他发送了一笔花费 Alice 五个代币的交易，并设置了更高的 Gas 价格，以便它能更快地被打包。这样，Bill 可以先花费五个代币，然后一旦 Alice 的新授权额度被打包，再花费十个代币，总共十五个代币，超过了 Alice 打算授权的数量。这种技术被称为[抢跑](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running)。
 
-| Alice 的交易         | Alice 的随机数 | Bill 的交易                      | Bill 的随机数 | Bill 的许可额度 | Bill 从 Alice 处获得的总收入 |
-| ----------------- | ---------- | ----------------------------- | --------- | ---------- | -------------------- |
-| approve(Bill, 5)  | 10         |                               |           | 5          | 0                    |
-|                   |            | transferFrom(Alice, Bill, 5)  | 10,123    | 0          | 5                    |
-| approve(Bill, 10) | 11         |                               |           | 10         | 5                    |
-|                   |            | transferFrom(Alice, Bill, 10) | 10,124    | 0          | 15                   |
+| Alice 交易 | Alice 随机数 | Bill 交易              | Bill 随机数 | Bill 的授权额度 | Bill 从 Alice 获得的总收入 |
+| ----------------- | ----------- | ----------------------------- | ---------- | ---------------- | ---------------------------- |
+| approve(Bill, 5)  | 10          |                               |            | 5                | 0                            |
+|                   |             | transferFrom(Alice, Bill, 5)  | 10,123     | 0                | 5                            |
+| approve(Bill, 10) | 11          |                               |            | 10               | 5                            |
+|                   |             | transferFrom(Alice, Bill, 10) | 10,124     | 0                | 15                           |
 
-为了避免这个问题，有两个函数（`increaseAllowance` 和 `decreaseAllowance`）使你 能够修改指定数额的许可额度。 所以，如果 Bill 已经花费了五个代币， 他就只能再花五个代币。 根据时间的不同，有两种方法可以生效， 这两种方法都会使 Bill 最终只得到十个代币：
+为了避免这个问题，这两个函数（`increaseAllowance` 和 `decreaseAllowance`）允许你按特定金额修改授权额度。因此，如果 Bill 已经花费了五个代币，他将只能再花费五个。根据时间的不同，这可以通过两种方式起作用，这两种方式最终都只会让 Bill 获得十个代币：
 
 A：
 
-| Alice 的交易                  | Alice 的随机数 | Bill 的交易                     | Bill 的随机数 | Bill 的许可额度 | Bill 从 Alice 处获得的总收入 |
-| -------------------------- | ----------:| ---------------------------- | ---------:| ----------:| -------------------- |
-| approve(Bill, 5)           |         10 |                              |           |          5 | 0                    |
-|                            |            | transferFrom(Alice, Bill, 5) |    10,123 |          0 | 5                    |
-| increaseAllowance(Bill, 5) |         11 |                              |           |    0+5 = 5 | 5                    |
-|                            |            | transferFrom(Alice, Bill, 5) |    10,124 |          0 | 10                   |
+| Alice 交易          | Alice 随机数 | Bill 交易             | Bill 随机数 | Bill 的授权额度 | Bill 从 Alice 获得的总收入 |
+| -------------------------- | ----------: | ---------------------------- | ---------: | ---------------: | ---------------------------- |
+| approve(Bill, 5)           |          10 |                              |            |                5 | 0                            |
+|                            |             | transferFrom(Alice, Bill, 5) |     10,123 |                0 | 5                            |
+| increaseAllowance(Bill, 5) |          11 |                              |            |          0+5 = 5 | 5                            |
+|                            |             | transferFrom(Alice, Bill, 5) |     10,124 |                0 | 10                           |
 
 B：
 
-| Alice 的交易                  | Alice 的随机数 | Bill 的交易                      | Bill 的随机数 | Bill 的许可额度 | Bill 从 Alice 处获得的总收入 |
-| -------------------------- | ----------:| ----------------------------- | ---------:| ----------:| --------------------:|
-| approve(Bill, 5)           |         10 |                               |           |          5 |                    0 |
-| increaseAllowance(Bill, 5) |         11 |                               |           |   5+5 = 10 |                    0 |
-|                            |            | transferFrom(Alice, Bill, 10) |    10,124 |          0 |                   10 |
+| Alice 交易          | Alice 随机数 | Bill 交易              | Bill 随机数 | Bill 的授权额度 | Bill 从 Alice 获得的总收入 |
+| -------------------------- | ----------: | ----------------------------- | ---------: | ---------------: | ---------------------------: |
+| approve(Bill, 5)           |          10 |                               |            |                5 |                            0 |
+| increaseAllowance(Bill, 5) |          11 |                               |            |         5+5 = 10 |                            0 |
+|                            |             | transferFrom(Alice, Bill, 10) |     10,124 |                0 |                           10 |
 
 ```solidity
     /**
-     * @dev Atomically increases the allowance granted to `spender` by the caller.
+     * @dev 原子性地增加调用者授予`spender`的授权额度。
      *
-     * This is an alternative to {approve} that can be used as a mitigation for
-     * problems described in {IERC20-approve}.
+     * 这是{approve}的替代方案，可用作缓解{IERC20-approve}中描述的问题。
      *
-     * Emits an {Approval} event indicating the updated allowance.
+     * 触发一个{Approval}事件以指示更新后的授权额度。
      *
-     * Requirements:
+     * 要求：
      *
-     * - `spender` cannot be the zero address.
+     * - `spender`不能是零地址。
      */
     function increaseAllowance(address spender, uint256 addedValue) public virtual returns (bool) {
         _approve(_msgSender(), spender, _allowances[_msgSender()][spender].add(addedValue));
@@ -558,23 +537,21 @@ B：
     }
 ```
 
-`a.add(b)` 函数是一个安全加法。 在罕见的情况下，`a`+`b`>=`2^256`，不会发生 普通加法会出现的溢出错误。
+`a.add(b)` 函数是一个安全的加法。在极少数情况下，如果 `a`+`b`>=`2^256`，它不会像普通加法那样发生回绕（溢出）。
 
 ```solidity
 
     /**
-     * @dev Atomically decreases the allowance granted to `spender` by the caller.
+     * @dev 原子性地减少调用者授予`spender`的授权额度。
      *
-     * This is an alternative to {approve} that can be used as a mitigation for
-     * problems described in {IERC20-approve}.
+     * 这是{approve}的替代方案，可用作缓解{IERC20-approve}中描述的问题。
      *
-     * Emits an {Approval} event indicating the updated allowance.
+     * 触发一个{Approval}事件以指示更新后的授权额度。
      *
-     * Requirements:
+     * 要求：
      *
-     * - `spender` cannot be the zero address.
-     * - `spender` must have allowance for the caller of at least
-     * `subtractedValue`.
+     * - `spender`不能是零地址。
+     * - `spender`必须对调用者具有至少`subtractedValue`的授权额度。
      */
     function decreaseAllowance(address spender, uint256 subtractedValue) public virtual returns (bool) {
         _approve(_msgSender(), spender, _allowances[_msgSender()][spender].sub(subtractedValue,
@@ -585,29 +562,28 @@ B：
 
 ### 修改代币信息的函数 {#functions-that-modify-token-information}
 
-这些是完成实际工作的四个函数：`_transfer`、`_mint`、`_burn` 和 `_approve`。
+这是执行实际工作的四个函数：`_transfer`、`_mint`、`_burn` 和 `_approve`。
 
-#### \_transfer 函数 {#\_transfer}
+#### _transfer 函数 {#transfer}
 
 ```solidity
     /**
-     * @dev Moves tokens `amount` from `sender` to `recipient`.
+     * @dev 将`amount`数量的代币从`sender`转账到`recipient`。
      *
-     * This is internal function is equivalent to {transfer}, and can be used to
-     * e.g. implement automatic token fees, slashing mechanisms, etc.
+     * 这个内部函数等同于{transfer}，可用于例如实现自动代币费用、削减机制等。
      *
-     * Emits a {Transfer} event.
+     * 触发{Transfer}事件。
      *
-     * Requirements:
+     * 要求：
      *
-     * - `sender` cannot be the zero address.
-     * - `recipient` cannot be the zero address.
-     * - `sender` must have a balance of at least `amount`.
+     * - `sender`不能是零地址。
+     * - `recipient`不能是零地址。
+     * - `sender`必须具有至少`amount`的余额。
      */
     function _transfer(address sender, address recipient, uint256 amount) internal virtual {
 ```
 
-`_transfer` 这个函数将代币从一个帐户转到另一个帐户。 有两个函数调用它，分别是 `transfer`（从发送人本人帐户发送）和 `transferFrom`（使用许可额度，从其他人的帐户发送）。
+此函数 `_transfer` 将代币从一个账户转账到另一个账户。它由 `transfer`（用于从发送者自己的账户转账）和 `transferFrom`（用于使用授权额度从其他人的账户转账）调用。
 
 &nbsp;
 
@@ -616,7 +592,7 @@ B：
         require(recipient != address(0), "ERC20: transfer to the zero address");
 ```
 
-实际上以太坊中没有人拥有零地址（即不存在对应公钥可以转换为零地址的私钥）。 有人使用该地址时，通常是一个软件漏洞，所以 如果将零地址用作发送人或接收人，交易将失败。
+在以太坊中，实际上没有人拥有零地址（也就是说，没有人知道其匹配的公钥转换为零地址的私钥）。当人们使用该地址时，通常是软件错误——因此，如果将零地址用作发送者或接收者，我们将使操作失败。
 
 &nbsp;
 
@@ -625,14 +601,14 @@ B：
 
 ```
 
-使用该合约有两种方法：
+有两种方法可以使用此合约：
 
-1. 将其作为模板，编写自己的代码
-1. [从它继承](https://www.bitdegree.org/learn/solidity-inheritance)一个合约，并且重写你需要修改的函数
+1. 将其用作你自己代码的模板
+1. [从中继承](https://www.bitdegree.org/learn/solidity-inheritance)，并仅覆盖你需要修改的那些函数
 
-第二种方法要好得多，因为 OpenZeppelin ERC-20 代码已经过审核，其安全性也已得到证实。 当你的合约继承它时， 可以清楚地表明修改了哪些函数，只需要审核这些特定的函数，人们就会信任你的合约。
+第二种方法要好得多，因为欧本齐柏林 ERC-20 代码已经过审计并被证明是安全的。当你使用继承时，你修改了哪些函数一目了然，为了信任你的合约，人们只需要审计那些特定的函数。
 
-代币每次易手时，通常都需要调用一个函数。 然而，`_transfer` 是一个非常重要的函数， 重新编写可能会不安全（见下文），所以最好不要重写。 解决方案是重写 `_beforeTokenTransfer` 函数，这是一个[挂钩函数](https://wikipedia.org/wiki/Hooking)。 你可以重写此函数，之后每次转账都会调用它。
+每次代币易手时执行一个函数通常很有用。然而，`_transfer` 是一个非常重要的函数，并且有可能写得不安全（见下文），因此最好不要覆盖它。解决方案是 `_beforeTokenTransfer`，一个[钩子函数](https://wikipedia.org/wiki/Hooking)。你可以覆盖此函数，它将在每次转账时被调用。
 
 &nbsp;
 
@@ -641,7 +617,7 @@ B：
         _balances[recipient] = _balances[recipient].add(amount);
 ```
 
-这些是实际实现转账的代码。 请注意，将转账金额从发送人帐户上扣除，然后加到接收人帐户之间， 不得有任何**动作**。 这很重要，因为如果 中间调用不同的合约，可能会被用来骗过这个合约。 目前转账为最小操作单元，即中间什么都不会发生。
+这些是实际执行转账的代码行。请注意，它们之间**没有任何内容**，并且我们在将其添加到接收者之前从发送者中减去转账金额。这很重要，因为如果中间调用了不同的合约，它可能会被用来欺骗这个合约。这样转账是原子性的，中间不会发生任何事情。
 
 &nbsp;
 
@@ -650,23 +626,22 @@ B：
     }
 ```
 
-最后，激发一个 `Transfer` 事件。 智能合约无法访问事件，但区块链外运行的代码 可以监听事件并对其作出反应。 例如，钱包可以跟踪所有者获得更多代币事件。
+最后，触发一个 `Transfer` 事件。智能合约无法访问事件，但在区块链外部运行的代码可以监听事件并对其做出反应。例如，钱包可以跟踪所有者何时获得更多代币。
 
-#### \_mint 和 \_burn 函数 {#\_mint-and-\_burn}
+#### _mint 和 _burn 函数 {#mint-and-burn}
 
-这两个函数（`_mint` 和 `_burn`）修改代币的总供应量。 它们都是内部函数，在原有合约中没有任何调用它们的函数。 因此，仅通过继承合约并添加你自己的逻辑， 来决定在什么条件下可以铸造新代币或消耗现有代币时， 它们才是有用的。
+这两个函数（`_mint` 和 `_burn`）修改代币的总供应量。它们是内部函数，并且此合约中没有调用它们的函数，因此只有当你从合约继承并添加自己的逻辑来决定在什么条件下铸造新代币或销毁现有代币时，它们才有用。
 
-**注意：**每一个 ERC-20 代币都通过自己的业务逻辑来决定代币管理。 例如，一个固定供应总量的合约可能只在构造函数中调用 `_mint`，而从不调用 `_burn`。 一个销售代币的合约 将在支付时调用 `_mint`，并大概在某个时间点调用 `_burn`， 以避免过快的通货膨胀。
+**注意：** 每个 ERC-20 代币都有自己的业务逻辑来决定代币管理。例如，固定供应合约可能只在构造函数中调用 `_mint`，而从不调用 `_burn`。出售代币的合约将在收到付款时调用 `_mint`，并可能在某个时候调用 `_burn` 以避免失控的通货膨胀。
 
 ```solidity
-    /** @dev Creates `amount` tokens and assigns them to `account`, increasing
-     * the total supply.
+    /** @dev 创建`amount`数量的代币并将其分配给`account`，增加总供应量。
      *
-     * Emits a {Transfer} event with `from` set to the zero address.
+     * 触发{Transfer}事件，其中`from`设置为零地址。
      *
-     * Requirements:
+     * 要求：
      *
-     * - `to` cannot be the zero address.
+     * - `to`不能是零地址。
      */
     function _mint(address account, uint256 amount) internal virtual {
         require(account != address(0), "ERC20: mint to the zero address");
@@ -677,21 +652,20 @@ B：
     }
 ```
 
-当代币总数发生变化时，请务必更新 `_totalSupply`。
+确保在代币总数发生变化时更新 `_totalSupply`。
 
 &nbsp;
 
-```
+```solidity
     /**
-     * @dev Destroys `amount` tokens from `account`, reducing the
-     * total supply.
+     * @dev 从`account`销毁`amount`数量的代币，减少总供应量。
      *
-     * Emits a {Transfer} event with `to` set to the zero address.
+     * 触发{Transfer}事件，其中`to`设置为零地址。
      *
-     * Requirements:
+     * 要求：
      *
-     * - `account` cannot be the zero address.
-     * - `account` must have at least `amount` tokens.
+     * - `account`不能是零地址。
+     * - `account`必须具有至少`amount`个代币。
      */
     function _burn(address account, uint256 amount) internal virtual {
         require(account != address(0), "ERC20: burn from the zero address");
@@ -704,25 +678,24 @@ B：
     }
 ```
 
-`_burn` 函数与 `_mint` 函数几乎完全相同，但它们的方向相反。
+`_burn` 函数与 `_mint` 几乎相同，只是方向相反。
 
-#### \_approve 函数 {#\_approve}
+#### _approve 函数 {#approve-2}
 
-这是实际设定许可额度的函数。 请注意，它允许所有者指定 一个高于所有者当前余额的许可额度。 这是允许的，因为在转账时 会核查余额，届时可能不同于 创建许可额度时的金额。
+这是实际指定授权额度的函数。请注意，它允许所有者指定高于所有者当前余额的授权额度。这是可以的，因为余额是在转账时检查的，此时的余额可能与创建授权额度时的余额不同。
 
 ```solidity
     /**
-     * @dev Sets `amount` as the allowance of `spender` over the `owner` s tokens.
+     * @dev 将`amount`设置为`spender`对`owner`代币的授权额度。
      *
-     * This internal function is equivalent to `approve`, and can be used to
-     * e.g. set automatic allowances for certain subsystems, etc.
+     * 这个内部函数等同于`approve`，可用于例如为某些子系统设置自动授权额度等。
      *
-     * Emits an {Approval} event.
+     * 触发{Approval}事件。
      *
-     * Requirements:
+     * 要求：
      *
-     * - `owner` cannot be the zero address.
-     * - `spender` cannot be the zero address.
+     * - `owner`不能是零地址。
+     * - `spender`不能是零地址。
      */
     function _approve(address owner, address spender, uint256 amount) internal virtual {
         require(owner != address(0), "ERC20: approve from the zero address");
@@ -733,7 +706,7 @@ B：
 
 &nbsp;
 
-激发一个 `Approval` 事件。 根据应用程序的编写， 消费者合约可以从代币所有者或监听事件的服务器获知审批结果。
+触发一个 `Approval` 事件。根据应用程序的编写方式，可以通过所有者或监听这些事件的服务器将授权告知花费者合约。
 
 ```solidity
         emit Approval(owner, spender, amount);
@@ -741,57 +714,55 @@ B：
 
 ```
 
-### 修改小数点设置变量 {#modify-the-decimals-variable}
+### 修改 Decimals 变量 {#modify-the-decimals-variable}
 
 ```solidity
 
 
     /**
-     * @dev Sets {decimals} to a value other than the default one of 18.
+     * @dev 将{decimals}设置为非默认值18的其他值。
      *
-     * WARNING: This function should only be called from the constructor. Most
-     * applications that interact with token contracts will not expect
-     * {decimals} to ever change, and may work incorrectly if it does.
+     * 警告：此函数只能从构造函数中调用。大多数与代币合约交互的应用程序不会期望{decimals}发生变化，如果发生变化可能会导致工作不正确。
      */
     function _setupDecimals(uint8 decimals_) internal {
         _decimals = decimals_;
     }
 ```
 
-此函数修改了 `>_decimals` 变量，此变量用于设置用户接口如何计算金额。 你应该从构造函数里面调用。 在之后的任何时候调用都是不正当的， 应用程序一般不会处理。
+此函数修改 `_decimals` 变量，该变量用于告诉用户界面如何解释金额。你应该从构造函数中调用它。在随后的任何时候调用它都是不诚实的，并且应用程序并非设计为处理这种情况。
 
 ### 钩子 {#hooks}
 
 ```solidity
 
     /**
-     * @dev Hook that is called before any transfer of tokens. This includes
-     * minting and burning.
+     * @dev 在任何代币转账之前调用的钩子（Hook）。这包括铸造和销毁。
      *
-     * Calling conditions:
+     * 调用条件：
      *
-     * - when `from` and `to` are both non-zero, `amount` of ``from``'s tokens
-     * will be to transferred to `to`.
-     * - when `from` is zero, `amount` tokens will be minted for `to`.
-     * - when `to` is zero, `amount` of ``from``'s tokens will be burned.
-     * - `from` and `to` are never both zero.
+     * - 当`from`和`to`都不为零时，``from``的`amount`数量的代币将被转账到`to`。
+     * - 当`from`为零时，将为`to`铸造`amount`数量的代币。
+     * - 当`to`为零时，``from``的`amount`数量的代币将被销毁。
+     * - `from`和`to`永远不会同时为零。
      *
-     * To learn more about hooks, head to xref:ROOT:extending-contracts.adoc#using-hooks[Using Hooks].
+     * 要了解有关钩子的更多信息，请前往xref:ROOT:extending-contracts.adoc#using-hooks[使用钩子]。
      */
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
 }
 ```
 
-这是转账过程中要调用的挂钩函数。 该函数是空的，但如果你需要 它做一些事情，只需覆盖它即可。
+这是在转账期间调用的钩子函数。它在这里是空的，但如果你需要它做一些事情，你只需覆盖它即可。
 
-# 总结 {#conclusion}
+## 结论 {#conclusion}
 
-复习一下，这些是我认为此合约中最重要的概念（你们的看法可能与我不同）
+作为回顾，以下是本合约中一些最重要的想法（在我看来，你的想法可能会有所不同）：
 
-- _区块链上没有秘密_ 智能合约可以访问的任何信息 都可以提供给全世界。
-- 你可以控制自己交易的订单，但在其他人的交易发生时， 则不能控制。 这就是为什么更改许可额度时会有风险，因为它 允许消费者花掉这两个许可额度的总和。
-- `uint256` 类型值的溢出。 换言之，_0-1=2^256-1_。 如果这不是预期的 行为，你必须自行检查（或使用 SafeMath 库执行该服务）。 请注意， [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html) 中对此进行了更改。
-- 将特定类型变量的状态改变放在一个特定的地方，这样可以使审核更容易。 这就是我们使用以下等函数的原因，例如 `_approve` 函数，它可以被`approve`、`transferFrom`、 `increaseAllowance` 和 `decreaseAllowance` 调用。
-- 状态更改应为最小操作单元，其中没有任何其他动作 （如在 `_transfer` 中所见）。 这是因为在状态更改期间，会出现不一致的情况。 例如， 在减少发送人的余额，和增加接收人的余额之间， 代币总量会小于应有总量。 如果在这两个时刻之间有任何操作， 特别是调用不同的合约，则可能出现滥用。
+- *区块链上没有秘密*。智能合约可以访问的任何信息对全世界都是可用的。
+- 你可以控制自己交易的顺序，但不能控制其他人的交易何时发生。这就是为什么更改授权额度可能很危险的原因，因为它允许花费者花费两个授权额度的总和。
+- `uint256` 类型的值会发生回绕。换句话说，*0-1=2^256-1*。如果这不是期望的行为，你必须检查它（或使用为你执行此操作的 SafeMath 库）。请注意，这在 [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html) 中发生了变化。
+- 在特定位置执行特定类型的所有状态更改，因为这使审计更容易。这就是为什么我们有例如 `_approve` 的原因，它由 `approve`、`transferFrom`、`increaseAllowance` 和 `decreaseAllowance` 调用。
+- 状态更改应该是原子性的，中间没有任何其他操作（正如你在 `_transfer` 中看到的那样）。这是因为在状态更改期间，你处于不一致的状态。例如，在从发送者的余额中扣除和添加到接收者的余额之间，存在的代币少于应有的数量。如果它们之间有操作，特别是调用不同的合约，这可能会被滥用。
 
-现在你已经了解了 OpenZeppelin ERC-20 合约是怎么编写的， 尤其是如何使之更加安全，你即可编写自己的安全合约和应用程序。
+既然你已经了解了欧本齐柏林 ERC-20 合约是如何编写的，特别是它是如何变得更安全的，那就去编写你自己的安全合约和应用程序吧。
+
+[点击此处查看我的更多作品](https://cryptodocguy.pro/)。

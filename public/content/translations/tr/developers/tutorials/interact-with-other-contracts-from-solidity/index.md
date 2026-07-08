@@ -1,14 +1,10 @@
 ---
-title: Solidity'nin diğer sözleşmeleriyle etkileşime geçin
-description: Mevcut bir sözleşmeden akıllı bir sözleşme nasıl kurulur ve onunla nasıl etkileşim kurulur
+title: "Solidity'den diğer sözleşmelerle etkileşim kurun"
+description: "Mevcut bir sözleşmeden bir akıllı sözleşme nasıl dağıtılır ve onunla nasıl etkileşim kurulur"
 author: "jdourlens"
-tags:
-  - "akıllı sözleşmeler"
-  - "solidity"
-  - "remix"
-  - "dağıtma"
-  - "birleştirilebilirlik"
+tags: ["akıllı sözleşmeler", "Solidity", "Remix", "dağıtma", "birleştirilebilirlik"]
 skill: advanced
+breadcrumb: "Sözleşme etkileşimleri"
 lang: tr
 published: 2020-04-05
 source: EthereumDev
@@ -16,9 +12,9 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Önceki öğreticilerde [ilk akıllı sözleşmenizi nasıl dağıtacağınızla](/developers/tutorials/deploying-your-first-smart-contract/) ve ona nasıl [niteleyicilerle erişim kontrolü](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) veya [Solidity'de hata işleme](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/) gibi bazı özellikler ekleyeceğinizle ilgili çok şey öğrendik. Bu öğreticide, mevcut bir sözleşmeden akıllı bir sözleşmenin nasıl dağıtılacağını ve onunla nasıl etkileşime geçileceğini öğreneceğiz.
+Önceki eğitimlerde [ilk akıllı sözleşmenizi nasıl dağıtacağınız](/developers/tutorials/deploying-your-first-smart-contract/) ve ona [değiştiricilerle erişimi kontrol etme](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) veya [Solidity'de hata işleme](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/) gibi bazı özellikleri nasıl ekleyeceğiniz hakkında çok şey öğrendik. Bu eğitimde, mevcut bir sözleşmeden bir akıllı sözleşmeyi nasıl dağıtacağımızı ve onunla nasıl etkileşim kuracağımızı öğreneceğiz.
 
-Bunun için bir fabrika oluşturarak herkesin kendi `Counter` (Sayaç) akıllı sözleşmesine sahip olmasını sağlayan bir sözleşme yapacağız, adı `CounterFactory` (Sayaç Fabrikası) olacak. İlk olarak, ilk `Counter` akıllı sözleşmemizin kodu:
+Herkesin kendi `Counter` akıllı sözleşmesine sahip olmasını sağlayan bir fabrika oluşturarak bir sözleşme yapacağız, adı `CounterFactory` olacak. İlk olarak, başlangıçtaki `Counter` akıllı sözleşmemizin kodu şöyledir:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -56,19 +52,19 @@ contract Counter {
 }
 ```
 
-Fabrikanın adresini ve sözleşme sahibinin adresini takip etmek için sözleşme kodunu biraz değiştirdiğimizi unutmayın. Başka bir sözleşmeden bir sözleşme kodunu aradığınızda, msg.sender sözleşmeli fabrikamızın adresine başvuracaktır. Diğer sözleşmelerle etkileşim kurmak için bir sözleşme kullanmak yaygın bir uygulama olduğundan, bu **anlaşılması gerçekten önemli bir noktadır**. Bu nedenle, karmaşık durumlarda gönderenin kim olduğuna dikkat etmelisiniz.
+Fabrikanın adresini ve sözleşme sahibinin adresini takip etmek için sözleşme kodunu biraz değiştirdiğimizi unutmayın. Başka bir sözleşmeden bir sözleşme kodu çağırdığınızda, msg.sender sözleşme fabrikamızın adresini referans alacaktır. Diğer sözleşmelerle etkileşim kurmak için bir sözleşme kullanmak yaygın bir uygulama olduğundan, bu **anlaşılması gerçekten önemli bir noktadır**. Bu nedenle karmaşık durumlarda gönderenin kim olduğuna dikkat etmelisiniz.
 
-Bunun için ayrıca, durum değiştirme işlevinin yalnızca orijinal çağrı yapan parametre olarak geçirecek olan fabrika tarafından çağrılabilmesini sağlayan bir `onlyFactory` niteleyicisi ekledik.
+Bunun için, durum değiştiren işlevin yalnızca orijinal arayanı bir parametre olarak geçirecek olan fabrika tarafından çağrılabildiğinden emin olan bir `onlyFactory` değiştiricisi de ekledik.
 
-Diğer tüm Counter'ları yönetecek olan yeni `CounterFactory`'nin içine, bir sahibi karşı sözleşmenin adresiyle ilişkilendirecek bir eşleştirme ekleyeceğiz:
+Diğer tüm Sayaçları (Counters) yönetecek olan yeni `CounterFactory` sözleşmemizin içine, bir sahibini kendi sayaç sözleşmesinin adresiyle ilişkilendirecek bir eşleme (mapping) ekleyeceğiz:
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-Ethereum'da eşleştirme, javascript'teki nesnelerin eş değeridir, A tipi bir anahtarı B tipi bir değere eşlemeyi sağlar. Bu durumda, bir sahibinin adresini Counter'ın örneğiyle eşleştiririz.
+Ethereum'da eşlemeler (mapping), JavaScript'teki nesnelerin eşdeğeridir; A türündeki bir anahtarı B türündeki bir değerle eşlemeyi sağlarlar. Bu durumda, bir sahibin adresini kendi Sayacının (Counter) örneğiyle eşliyoruz.
 
-Birisi için yeni bir Counter başlatmak şöyle görünür:
+Birisi için yeni bir Sayaç (Counter) örneği oluşturmak şu şekilde görünecektir:
 
 ```solidity
   function createCounter() public {
@@ -77,9 +73,9 @@ Birisi için yeni bir Counter başlatmak şöyle görünür:
   }
 ```
 
-Önce kişinin zaten bir counter'ı olup olmadığını kontrol ediyoruz. Eğer bir counter'ı yoksa, adresini `Counter` yapıcısına ileterek yeni bir counter başlatırız ve yeni oluşturulan örneği eşleştirmeye atarız.
+Önce kişinin zaten bir sayacı olup olmadığını kontrol ediyoruz. Eğer bir sayacı yoksa, adresini `Counter` kurucusuna geçirerek yeni bir sayaç örneği oluşturuyoruz ve yeni oluşturulan örneği eşlemeye atıyoruz.
 
-Belirli bir Counter'ın sayısını almak için şöyle görünür:
+Belirli bir Sayacın (Counter) sayısını almak şu şekilde görünecektir:
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
@@ -92,9 +88,9 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-İlk işlev, belirli bir adres için Counter sözleşmesinin var olup olmadığını kontrol eder ve ardından örnekten `getCount` yöntemini çağırır. İkinci fonksiyon: `getMyCount` sadece `getCount` fonksiyonuna doğrudan msg.sender geçirmek için bir kısayoldur.
+İlk işlev, belirli bir adres için Sayaç (Counter) sözleşmesinin var olup olmadığını kontrol eder ve ardından örnekten `getCount` yöntemini çağırır. İkinci işlev olan `getMyCount`, msg.sender'ı doğrudan `getCount` işlevine geçirmek için sadece kısa bir yoldur.
 
-`increment` fonksiyonu oldukça benzerdir ancak orijinal işlem göndericisini `Counter` sözleşmesine iletir:
+`increment` işlevi oldukça benzerdir ancak orijinal işlem göndericisini `Counter` sözleşmesine geçirir:
 
 ```solidity
 function increment() public {
@@ -103,11 +99,11 @@ function increment() public {
   }
 ```
 
-Birçok kez aranırsa, counter'ımızın muhtemelen bir taşma kurbanı olabileceğini unutmayın. Bu olası durumdan korunmak için mümkün olduğunca [SafeMath kütüphanesini](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) kullanmalısınız.
+Çok fazla çağrılırsa, sayacımızın muhtemelen bir taşma kurbanı olabileceğini unutmayın. Bu olası durumdan korunmak için mümkün olduğunca [SafeMath kütüphanesini](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) kullanmalısınız.
 
-Sözleşmemizi dağıtmak için hem `CounterFactory` kodunu hem de `Counter` kodunu sağlamanız gerekir. Örneğin Remix'te dağıtırken CounterFactory'yi seçmeniz gerekir.
+Sözleşmemizi dağıtmak için hem `CounterFactory` hem de `Counter` kodunu sağlamanız gerekecektir. Örneğin Remix'te dağıtırken CounterFactory'yi seçmeniz gerekecektir.
 
-Tam kod burada:
+İşte tam kod:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -170,8 +166,8 @@ contract CounterFactory {
 }
 ```
 
-Derlemeden sonra, Remix dağıtımı bölümünde dağıtılacak fabrikayı seçeceksiniz:
+Derlemeden sonra, Remix dağıtma bölümünde dağıtılacak fabrikayı seçeceksiniz:
 
-![Remix'te dağıtılacak fabrikanın seçilmesi](./counterfactory-deploy.png)
+![Selecting the factory to be deployed in Remix](./counterfactory-deploy.png)
 
-Ardından sözleşmeli fabrikanızla oynayabilir ve değerin değiştiğini kontrol edebilirsiniz. Akıllı sözleşmeyi farklı bir adresten aramak isterseniz, Remix'in Hesap seçiminde adresi değiştirmeniz gerekir.
+Ardından sözleşme fabrikanızla oynayabilir ve değişen değeri kontrol edebilirsiniz. Akıllı sözleşmeyi farklı bir adresten çağırmak isterseniz, Remix'in Hesap (Account) seçiminden adresi değiştirmeniz gerekecektir.

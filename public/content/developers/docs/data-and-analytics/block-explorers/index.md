@@ -5,33 +5,31 @@ lang: en
 sidebarDepth: 3
 ---
 
-Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, validators, accounts, and other on-chain activity.
+Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, validators, accounts, and other onchain activity.
 
 ## Prerequisites {#prerequisites}
 
 You should understand the basic concepts of Ethereum so you can make sense of the data that a block explorer gives you. Start with [an intro to Ethereum](/developers/docs/intro-to-ethereum/).
 
+## Open source tools {#open-source-tools}
+
+- [3xpl](https://3xpl.com/ethereum) - An ad-free Ethereum explorer that allows downloading its datasets (open-core: core modules are open source)
+- [Beaconcha.in](https://beaconcha.in/)
+- [Blockscout](https://eth.blockscout.com/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
+- [Otterscan](https://otterscan.io/)
+
 ## Services {#services}
 
-- [Etherscan](https://etherscan.io/) -_Also available in Chinese, Korean, Russian, and Japanese_
-- [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum) -_Also available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi_
-- [Blockscout](https://eth.blockscout.com/)
+- [Blockchair](https://blockchair.com/ethereum) - Private Ethereum explorer. Also for sorting and filtering (mempool) data. Available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer](https://ethplorer.io/) -_Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese_
+- [Etherscan](https://etherscan.io/) - Also available in Chinese, Korean, Russian, and Japanese
+- [Ethplorer](https://ethplorer.io/) - A block explorer with a focus on tokens. Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese
+- [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
-- [Ethseer](https://ethseer.io)
-
-## Open source tools {#open-source-tools}
-
-- [Otterscan](https://otterscan.io/)
-- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## Data {#data}
 
@@ -235,17 +233,6 @@ The consensus layer top-level data includes the following:
 - Pending validators - Number of validators waiting for to be made active
 - Staked ETH - Amount of ETH staked in the network
 - Average balance - Average ETH balance of validators
-
-## Block explorers {#block-explorers}
-
-- [Etherscan](https://etherscan.io/) - a block explorer you can use to fetch data for Ethereum Mainnet and Goerli Testnet
-- [3xpl](https://3xpl.com/ethereum) - an ad-free open-source Ethereum explorer which allows downloading its datasets
-- [Beaconcha.in](https://beaconcha.in/) - an open source block explorer for Ethereum Mainnet and Goerli Testnet
-- [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data
-- [Etherchain](https://www.etherchain.org/) - a block explorer for the Ethereum Mainnet
-- [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet
-- [Rantom](https://rantom.app/) - A user-friendly open-source DeFi & NFT transaction viewer for detailed insights
-- [Ethernow](https://www.ethernow.xyz/) - a real-time transaction explorer that enables you to see the Ethereum Mainnet pre-chain layer
 
 ## Further reading {#further-reading}
 

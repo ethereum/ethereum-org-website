@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-19T18:50:50.549Z",
+  "englishManifestHash": "8c2d8149c246",
+  "placeholderOrder": [
+    "LINK-c42188",
+    "LINK-ae97bb",
+    "LINK-6857cb",
+    "LINK-1200a5",
+    "LINK-456e6f",
+    "LINK-0ab4bf",
+    "LINK-510c31",
+    "LINK-95a369",
+    "LINK-bf4b62",
+    "LINK-916256",
+    "LINK-8d08c8",
+    "LINK-c0fe2a",
+    "LINK-16a70c",
+    "LINK-37d620",
+    "LINK-f2c072",
+    "LINK-0db008",
+    "LINK-56e983",
+    "LINK-3ede2c",
+    "LINK-04451e",
+    "LINK-477866",
+    "LINK-6ecafa",
+    "LINK-85432c",
+    "LINK-58f067",
+    "LINK-da68d0",
+    "LINK-b09d77",
+    "LINK-071fcc",
+    "LINK-cec447",
+    "LINK-ae97bb",
+    "LINK-9c6139",
+    "LINK-866de4"
+  ],
+  "placeholderMap": {
+    "LINK-c42188": {
+      "type": "link",
+      "values": {
+        "url": "/learn/"
+      }
+    },
+    "LINK-ae97bb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/"
+      }
+    },
+    "LINK-6857cb": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained"
+      }
+    },
+    "LINK-1200a5": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract"
+      }
+    },
+    "LINK-456e6f": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract"
+      }
+    },
+    "LINK-0ab4bf": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment"
+      }
+    },
+    "LINK-510c31": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/web3j/web3j"
+      }
+    },
+    "LINK-95a369": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/b9eb647c47a546bc95693acc0be72546/connecting-to-an-ethereum-client-with-java-eclipse-and-web3j"
+      }
+    },
+    "LINK-bf4b62": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/925d923e12c543da9a0a3e617be963b4/manage-an-ethereum-account-with-java-and-web3j"
+      }
+    },
+    "LINK-916256": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/84475132317d4d6a84a2c42eb9348e4b/generate-a-java-wrapper-from-your-smart-contract"
+      }
+    },
+    "LINK-8d08c8": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/14dc434d11ef4ee18bf7d57f079e246e/interacting-with-an-ethereum-smart-contract-in-java"
+      }
+    },
+    "LINK-c0fe2a": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java"
+      }
+    },
+    "LINK-16a70c": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux"
+      }
+    },
+    "LINK-37d620": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests"
+      }
+    },
+    "LINK-f2c072": {
+      "type": "link",
+      "values": {
+        "url": "<https://kauri.io/web3j-cheat-sheet-(java-ethereum"
+      }
+    },
+    "LINK-0db008": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Kr1ptal/ethers-kt"
+      }
+    },
+    "LINK-56e983": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt"
+      }
+    },
+    "LINK-3ede2c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/tokenswapwitheventlistening/TokenSwapWithEventListening.kt"
+      }
+    },
+    "LINK-04451e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/balancetracker/BalanceTracker.kt"
+      }
+    },
+    "LINK-477866": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs"
+      }
+    },
+    "LINK-6ecafa": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/d13e911bbf624108b1d5718175a5e0a0/manage-erc20-tokens-in-java-with-web3j"
+      }
+    },
+    "LINK-85432c": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/4cb780bb4d0846438d11885a25b6d7e7/web3j-transaction-managers"
+      }
+    },
+    "LINK-58f067": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache"
+      }
+    },
+    "LINK-da68d0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/web3j/web3j"
+      }
+    },
+    "LINK-b09d77": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Kr1ptal/ethers-kt"
+      }
+    },
+    "LINK-071fcc": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ConsenSys/eventeum"
+      }
+    },
+    "LINK-cec447": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ConsenSys/mahuta"
+      }
+    },
+    "LINK-9c6139": {
+      "type": "link",
+      "values": {
+        "url": "https://io.builders"
+      }
+    },
+    "LINK-866de4": {
+      "type": "link",
+      "values": {
+        "url": "https://kauri.io"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T18:50:50.549Z",
+      "status": "success"
+    }
+  }
+}

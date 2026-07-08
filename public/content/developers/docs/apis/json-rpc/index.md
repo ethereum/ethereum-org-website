@@ -4,7 +4,7 @@ description: A stateless, light-weight remote procedure call (RPC) protocol for 
 lang: en
 ---
 
-In order for a software application to interact with the Ethereum blockchain - either by reading blockchain data or sending transactions to the network - it must connect to an Ethereum node.
+In order for a software application to interact with the [Ethereum](/) blockchain - either by reading blockchain data or sending transactions to the network - it must connect to an Ethereum node.
 
 For this purpose, every [Ethereum client](/developers/docs/nodes-and-clients/#execution-clients) implements a [JSON-RPC specification](https://github.com/ethereum/execution-apis), so there is a uniform set of methods that applications can rely on regardless of the specific node or client implementation.
 
@@ -26,7 +26,7 @@ An internal API is also used for inter-client communication within a node - that
 
 ## Execution client spec {#spec}
 
-[Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis). This API is documented on the [Execution API webpage](https://ethereum.github.io/execution-apis/api-documentation/) and includes an Inspector to try out all the available methods.
+[Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis). This API is documented on the [Execution API webpage](https://ethereum.github.io/execution-apis/) and includes an Inspector to try out all the available methods.
 
 ## Conventions {#conventions}
 
@@ -58,19 +58,19 @@ Here are some examples:
 - WRONG: 0xf0f0f (must be even number of digits)
 - WRONG: 004200 (must be prefixed 0x)
 
-### The default block parameter {#default-block}
+### The block parameter {#block-parameter}
 
-The following methods have an extra default block parameter:
+The following methods have a block parameter:
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getCode](#eth_getcode)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_call](#eth_call)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getCode](#eth-getcode)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_call](#eth-call)
 
-When requests are made that act on the state of Ethereum, the last default block parameter determines the height of the block.
+When requests are made that query the state of Ethereum, the provided block parameter determines the height of the block.
 
-The following options are possible for the defaultBlock parameter:
+The following options are possible for the block parameter:
 
 - `HEX String` - an integer block number
 - `String "earliest"` for the earliest/genesis block
@@ -79,7 +79,7 @@ The following options are possible for the defaultBlock parameter:
 - `String "finalized"` - for the latest finalized block
 - `String "pending"` - for the pending state/transactions
 
-## Examples
+## Examples {#examples}
 
 On this page we provide examples of how to use individual JSON_RPC API endpoints using the command line tool, [curl](https://curl.se). These individual endpoint examples are found below in the [Curl examples](#curl-examples) section. Further down the page, we also provide an [end-to-end example](#usage-example) for compiling and deploying a smart contract using a Geth node, the JSON_RPC API and curl.
 
@@ -88,7 +88,7 @@ On this page we provide examples of how to use individual JSON_RPC API endpoints
 Examples of using the JSON_RPC API by making [curl](https://curl.se) requests to an Ethereum node are provided below. Each example
 includes a description of the specific endpoint, its parameters, return type, and a worked example of how it should be used.
 
-The curl requests might return an error message relating to the content type. This is because the `--data` option sets the content type to `application/x-www-form-urlencoded`. If your node does complain about this, manually set the header by placing `-H "Content-Type: application/json"` at the start of the call. The examples also do not include the URL/IP & port combination which must be the last argument given to curl (e.g. `127.0.0.1:8545`). A complete curl request including these additional data takes the following form:
+The curl requests might return an error message relating to the content type. This is because the `--data` option sets the content type to `application/x-www-form-urlencoded`. If your node does complain about this, manually set the header by placing `-H "Content-Type: application/json"` at the start of the call. The examples also do not include the URL/IP & port combination which must be the last argument given to curl (e.g., `127.0.0.1:8545`). A complete curl request including these additional data takes the following form:
 
 ```shell
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
@@ -102,44 +102,44 @@ A handful of core JSON-RPC methods require data from the Ethereum network, and f
 
 > These methods track the head of the chain. This is how transactions make their way around the network, find their way into blocks, and how clients find out about new blocks.
 
-- [eth_blockNumber](#eth_blocknumber)
-- [eth_sendRawTransaction](#eth_sendrawtransaction)
+- [eth_blockNumber](#eth-blocknumber)
+- [eth_sendRawTransaction](#eth-sendrawtransaction)
 
-### State Methods {#state_methods}
+### State Methods {#state-methods}
 
 > Methods that report the current state of all the data stored. The "state" is like one big shared piece of RAM, and includes account balances, contract data, and gas estimations.
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getCode](#eth_getcode)
-- [eth_call](#eth_call)
-- [eth_estimateGas](#eth_estimategas)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getCode](#eth-getcode)
+- [eth_call](#eth-call)
+- [eth_estimateGas](#eth-estimategas)
 
-### History Methods {#history_methods}
+### History Methods {#history-methods}
 
 > Fetches historical records of every block back to genesis. This is like one large append-only file, and includes all block headers, block bodies, uncle blocks, and transaction receipts.
 
-- [eth_getBlockTransactionCountByHash](#eth_getblocktransactioncountbyhash)
-- [eth_getBlockTransactionCountByNumber](#eth_getblocktransactioncountbynumber)
-- [eth_getUncleCountByBlockHash](#eth_getunclecountbyblockhash)
-- [eth_getUncleCountByBlockNumber](#eth_getunclecountbyblocknumber)
-- [eth_getBlockByHash](#eth_getblockbyhash)
-- [eth_getBlockByNumber](#eth_getblockbynumber)
-- [eth_getTransactionByHash](#eth_gettransactionbyhash)
-- [eth_getTransactionByBlockHashAndIndex](#eth_gettransactionbyblockhashandindex)
-- [eth_getTransactionByBlockNumberAndIndex](#eth_gettransactionbyblocknumberandindex)
-- [eth_getTransactionReceipt](#eth_gettransactionreceipt)
-- [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
-- [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+- [eth_getBlockTransactionCountByHash](#eth-getblocktransactioncountbyhash)
+- [eth_getBlockTransactionCountByNumber](#eth-getblocktransactioncountbynumber)
+- [eth_getUncleCountByBlockHash](#eth-getunclecountbyblockhash)
+- [eth_getUncleCountByBlockNumber](#eth-getunclecountbyblocknumber)
+- [eth_getBlockByHash](#eth-getblockbyhash)
+- [eth_getBlockByNumber](#eth-getblockbynumber)
+- [eth_getTransactionByHash](#eth-gettransactionbyhash)
+- [eth_getTransactionByBlockHashAndIndex](#eth-gettransactionbyblockhashandindex)
+- [eth_getTransactionByBlockNumberAndIndex](#eth-gettransactionbyblocknumberandindex)
+- [eth_getTransactionReceipt](#eth-gettransactionreceipt)
+- [eth_getUncleByBlockHashAndIndex](#eth-getunclebyblockhashandindex)
+- [eth_getUncleByBlockNumberAndIndex](#eth-getunclebyblocknumberandindex)
 
-## JSON-RPC API Playground
+## JSON-RPC API Playground {#json-rpc-api-playground}
 
 You can use the [playground tool](https://ethereum-json-rpc.com) to discover and try out the API methods. It also shows you which methods and networks are supported by various node providers.
 
 ## JSON-RPC API Methods {#json-rpc-methods}
 
-### web3_clientVersion {#web3_clientversion}
+### web3_clientVersion {#web3-clientversion}
 
 Returns the current client version.
 
@@ -164,7 +164,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 {#web3_sha3}
+### web3_sha3 {#web3-sha3}
 
 Returns Keccak-256 (_not_ the standardized SHA3-256) of the given data.
 
@@ -193,7 +193,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version {#net_version}
+### net_version {#net-version}
 
 Returns the current network id.
 
@@ -208,8 +208,8 @@ None
 The full list of current network IDs is available at [chainlist.org](https://chainlist.org). Some common ones are:
 
 - `1`: Ethereum Mainnet
-- `5`: Goerli testnet
 - `11155111`: Sepolia testnet
+- `560048` : Hoodi Testnet
 
 **Example**
 
@@ -224,7 +224,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_listening}
+### net_listening {#net-listening}
 
 Returns `true` if client is actively listening for network connections.
 
@@ -249,7 +249,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_peercount}
+### net_peerCount {#net-peercount}
 
 Returns number of peers currently connected to the client.
 
@@ -274,7 +274,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 }
 ```
 
-### eth_protocolVersion {#eth_protocolversion}
+### eth_protocolVersion {#eth-protocolversion}
 
 Returns the current Ethereum protocol version. Note that this method is [not available in Geth](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
 
@@ -299,9 +299,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing {#eth_syncing}
+### eth_syncing {#eth-syncing}
 
 Returns an object with data about the sync status or `false`.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_syncing">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -383,9 +387,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase {#eth_coinbase}
+### eth_coinbase {#eth-coinbase}
 
 Returns the client coinbase address.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_coinbase">
+  Try endpoint in playground
+</ButtonLink>
 
 > **Note:** This method has been deprecated as of **v1.14.0** and is no longer supported. Attempting to use this method will result in a "Method not supported" error.
 
@@ -410,9 +418,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId {#eth_chainId}
+### eth_chainId {#eth-chainid}
 
 Returns the chain ID used for signing replay-protected transactions.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_chainId">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -435,9 +447,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining {#eth_mining}
+### eth_mining {#eth-mining}
 
 Returns `true` if client is actively mining new blocks. This can only return `true` for proof-of-work networks and may not be available in some clients since [The Merge](/roadmap/merge/).
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_mining">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -445,7 +461,7 @@ None
 
 **Returns**
 
-`Boolean` - returns `true` of the client is mining, otherwise `false`.
+`Boolean` - returns `true` if the client is mining, otherwise `false`.
 
 **Example**
 
@@ -460,9 +476,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate {#eth_hashrate}
+### eth_hashrate {#eth-hashrate}
 
 Returns the number of hashes per second that the node is mining with. This can only return `true` for proof-of-work networks and may not be available in some clients since [The Merge](/roadmap/merge/).
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_hashrate">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -485,9 +505,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice {#eth_gasprice}
+### eth_gasPrice {#eth-gasprice}
 
 Returns an estimate of the current price per gas in wei. For example, the Besu client examines the last 100 blocks and returns the median gas unit price by default.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -510,9 +534,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
-### eth_accounts {#eth_accounts}
+### eth_accounts {#eth-accounts}
 
 Returns a list of addresses owned by client.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_accounts">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -535,9 +563,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber {#eth_blocknumber}
+### eth_blockNumber {#eth-blocknumber}
 
-Returns the number of most recent block.
+Returns the number of the most recent block.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_blockNumber">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -560,14 +592,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 }
 ```
 
-### eth_getBalance {#eth_getbalance}
+### eth_getBalance {#eth-getbalance}
 
-Returns the balance of the account of given address.
+Returns the balance of the account at a given address.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBalance">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
 1. `DATA`, 20 Bytes - address to check for balance.
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -590,15 +626,19 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 }
 ```
 
-### eth_getStorageAt {#eth_getstorageat}
+### eth_getStorageAt {#eth-getstorageat}
 
 Returns the value from a storage position at a given address.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
 1. `DATA`, 20 Bytes - address of the storage.
 2. `QUANTITY` - integer of the position in the storage.
-3. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+3. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 **Returns**
 
@@ -611,14 +651,14 @@ Calculating the correct position depends on the storage to retrieve. Consider th
 contract Storage {
     uint pos0;
     mapping(address => uint) pos1;
-    function Storage() {
+    constructor() {
         pos0 = 1234;
         pos1[msg.sender] = 5678;
     }
 }
 ```
 
-Retrieving the value of pos0 is straight forward:
+Retrieving the value of pos0 is straightforward:
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -658,14 +698,18 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount {#eth_gettransactioncount}
+### eth_getTransactionCount {#eth-gettransactioncount}
 
 Returns the number of transactions _sent_ from an address.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionCount">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
 1. `DATA`, 20 Bytes - address.
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -676,7 +720,7 @@ params: [
 
 **Returns**
 
-`QUANTITY` - integer of the number of transactions send from this address.
+`QUANTITY` - integer of the number of transactions sent from this address.
 
 **Example**
 
@@ -691,9 +735,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 }
 ```
 
-### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
+### eth_getBlockTransactionCountByHash {#eth-getblocktransactioncountbyhash}
 
 Returns the number of transactions in a block from a block matching the given block hash.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByHash">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -720,13 +768,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 }
 ```
 
-### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
+### eth_getBlockTransactionCountByNumber {#eth-getblocktransactioncountbynumber}
 
 Returns the number of transactions in a block matching the given block number.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 
 ```js
 params: [
@@ -751,9 +803,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 }
 ```
 
-### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
+### eth_getUncleCountByBlockHash {#eth-getunclecountbyblockhash}
 
 Returns the number of uncles in a block from a block matching the given block hash.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -780,13 +836,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 }
 ```
 
-### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
+### eth_getUncleCountByBlockNumber {#eth-getunclecountbyblocknumber}
 
 Returns the number of uncles in a block from a block matching the given block number.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockNumber">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - integer of a block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -811,14 +871,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 }
 ```
 
-### eth_getCode {#eth_getcode}
+### eth_getCode {#eth-getcode}
 
 Returns code at a given address.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getCode">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
 1. `DATA`, 20 Bytes - address
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -844,11 +908,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 }
 ```
 
-### eth_sign {#eth_sign}
+### eth_sign {#eth-sign}
 
 The sign method calculates an Ethereum specific signature with: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
-By adding a prefix to the message makes the calculated signature recognizable as an Ethereum specific signature. This prevents misuse where a malicious dapp can sign arbitrary data (e.g. transaction) and use the signature to impersonate the victim.
+By adding a prefix to the message makes the calculated signature recognizable as an Ethereum specific signature. This prevents misuse where a malicious dapp can sign arbitrary data (e.g., transaction) and use the signature to impersonate the victim.
 
 Note: the address to sign with must be unlocked.
 
@@ -874,9 +938,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction {#eth_signtransaction}
+### eth_signTransaction {#eth-signtransaction}
 
-Signs a transaction that can be submitted to the network at a later time using with [eth_sendRawTransaction](#eth_sendrawtransaction).
+Signs a transaction that can be submitted to the network at a later time using with [eth_sendRawTransaction](#eth-sendrawtransaction).
 
 **Parameters**
 
@@ -908,7 +972,7 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction {#eth_sendtransaction}
+### eth_sendTransaction {#eth-sendtransaction}
 
 Creates new message call transaction or a contract creation, if the data field contains code, and signs it using the account specified in `from`.
 
@@ -942,7 +1006,7 @@ params: [
 
 `DATA`, 32 Bytes - the transaction hash, or the zero hash if the transaction is not yet available.
 
-Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) to get the contract address, after the transaction was proposed in a block, when you created a contract.
+Use [eth_getTransactionReceipt](#eth-gettransactionreceipt) to get the contract address, after the transaction was proposed in a block, when you created a contract.
 
 **Example**
 
@@ -957,7 +1021,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction {#eth_sendrawtransaction}
+### eth_sendRawTransaction {#eth-sendrawtransaction}
 
 Creates new message call transaction or a contract creation for signed transactions.
 
@@ -975,7 +1039,7 @@ params: [
 
 `DATA`, 32 Bytes - the transaction hash, or the zero hash if the transaction is not yet available.
 
-Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) to get the contract address, after the transaction was proposed in a block, when you created a contract.
+Use [eth_getTransactionReceipt](#eth-gettransactionreceipt) to get the contract address, after the transaction was proposed in a block, when you created a contract.
 
 **Example**
 
@@ -990,9 +1054,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call {#eth_call}
+### eth_call {#eth-call}
 
 Executes a new message call immediately without creating a transaction on the blockchain. Often used for executing read-only smart contract functions, for example the `balanceOf` for an ERC-20 contract.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_call">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -1005,7 +1073,7 @@ Executes a new message call immediately without creating a transaction on the bl
 - `value`: `QUANTITY` - (optional) Integer of the value sent with this transaction
 - `input`: `DATA` - (optional) Hash of the method signature and encoded parameters. For details see [Ethereum Contract ABI in the Solidity documentation](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 **Returns**
 
@@ -1024,13 +1092,17 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas {#eth_estimategas}
+### eth_estimateGas {#eth-estimategas}
 
 Generates and returns an estimate of how much gas is necessary to allow the transaction to complete. The transaction will not be added to the blockchain. Note that the estimate may be significantly more than the amount of gas actually used by the transaction, for a variety of reasons including EVM mechanics and node performance.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
-See [eth_call](#eth_call) parameters, except that all properties are optional. If no gas limit is specified geth uses the block gas limit from the pending block as an upper bound. As a result the returned estimate might not be enough to executed the call/transaction when the amount of gas is higher than the pending block gas limit.
+See [eth_call](#eth-call) parameters, except that all properties are optional. If no gas limit is specified geth uses the block gas limit from the pending block as an upper bound. As a result the returned estimate might not be enough to execute the call/transaction when the amount of gas is higher than the pending block gas limit.
 
 **Returns**
 
@@ -1049,9 +1121,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 }
 ```
 
-### eth_getBlockByHash {#eth_getblockbyhash}
+### eth_getBlockByHash {#eth-getblockbyhash}
 
 Returns information about a block by hash.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByHash">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -1072,13 +1148,13 @@ params: [
 - `number`: `QUANTITY` - the block number. `null` when its pending block.
 - `hash`: `DATA`, 32 Bytes - hash of the block. `null` when its pending block.
 - `parentHash`: `DATA`, 32 Bytes - hash of the parent block.
-- `nonce`: `DATA`, 8 Bytes - hash of the generated proof-of-work. `null` when its pending block.
+- `nonce`: `DATA`, 8 Bytes - hash of the generated proof-of-work. `null` when its pending block, `0x0` for proof-of-stake blocks (since The Merge)
 - `sha3Uncles`: `DATA`, 32 Bytes - SHA3 of the uncles data in the block.
 - `logsBloom`: `DATA`, 256 Bytes - the bloom filter for the logs of the block. `null` when its pending block.
 - `transactionsRoot`: `DATA`, 32 Bytes - the root of the transaction trie of the block.
 - `stateRoot`: `DATA`, 32 Bytes - the root of the final state trie of the block.
 - `receiptsRoot`: `DATA`, 32 Bytes - the root of the receipts trie of the block.
-- `miner`: `DATA`, 20 Bytes - the address of the beneficiary to whom the mining rewards were given.
+- `miner`: `DATA`, 20 Bytes - the address of the beneficiary to whom the block rewards were given.
 - `difficulty`: `QUANTITY` - integer of the difficulty for this block.
 - `totalDifficulty`: `QUANTITY` - integer of the total difficulty of the chain until this block.
 - `extraData`: `DATA` - the "extra data" field of this block.
@@ -1096,10 +1172,9 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0xdc0818cf78f21a8e70579cb46a43643f78291264dda342ae31049421c82d21ae", false],"id":1}'
 // Result
 {
-{
-"jsonrpc": "2.0",
-"id": 1,
-"result": {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
     "difficulty": "0x4ea3f27bc",
     "extraData": "0x476574682f4c5649562f76312e302e302f6c696e75782f676f312e342e32",
     "gasLimit": "0x1388",
@@ -1122,17 +1197,21 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
     "transactionsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
     "uncles": [
     ]
-}
+  }
 }
 ```
 
-### eth_getBlockByNumber {#eth_getblockbynumber}
+### eth_getBlockByNumber {#eth-getblockbynumber}
 
 Returns information about a block by block number.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByNumber">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 2. `Boolean` - If `true` it returns the full transaction objects, if `false` only the hashes of the transactions.
 
 ```js
@@ -1143,7 +1222,7 @@ params: [
 ```
 
 **Returns**
-See [eth_getBlockByHash](#eth_getblockbyhash)
+See [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Example**
 
@@ -1152,11 +1231,15 @@ See [eth_getBlockByHash](#eth_getblockbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1}'
 ```
 
-Result see [eth_getBlockByHash](#eth_getblockbyhash)
+Result see [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_getTransactionByHash {#eth_gettransactionbyhash}
+### eth_getTransactionByHash {#eth-gettransactionbyhash}
 
 Returns the information about a transaction requested by transaction hash.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByHash">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -1213,9 +1296,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
+### eth_getTransactionByBlockHashAndIndex {#eth-gettransactionbyblockhashandindex}
 
 Returns information about a transaction by block hash and transaction index position.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -1230,7 +1317,7 @@ params: [
 ```
 
 **Returns**
-See [eth_getTransactionByHash](#eth_gettransactionbyhash)
+See [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Example**
 
@@ -1239,15 +1326,19 @@ See [eth_getTransactionByHash](#eth_gettransactionbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Result see [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Result see [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
+### eth_getTransactionByBlockNumberAndIndex {#eth-gettransactionbyblocknumberandindex}
 
 Returns information about a transaction by block number and transaction index position.
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockNumberAndIndex">
+  Try endpoint in playground
+</ButtonLink>
+
 **Parameters**
 
-1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 2. `QUANTITY` - the transaction index position.
 
 ```js
@@ -1258,7 +1349,7 @@ params: [
 ```
 
 **Returns**
-See [eth_getTransactionByHash](#eth_gettransactionbyhash)
+See [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 **Example**
 
@@ -1267,9 +1358,9 @@ See [eth_getTransactionByHash](#eth_gettransactionbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
-Result see [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Result see [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
-### eth_getTransactionReceipt {#eth_gettransactionreceipt}
+### eth_getTransactionReceipt {#eth-gettransactionreceipt}
 
 Returns the receipt of a transaction by transaction hash.
 
@@ -1302,7 +1393,7 @@ params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 
 It also returns _either_ :
 
-- `root` : `DATA` 32 bytes of post-transaction stateroot (pre Byzantium)
+- `root` : `DATA` 32 bytes of post-transaction state root (pre Byzantium)
 - `status`: `QUANTITY` either `1` (success) or `0` (failure)
 
 **Example**
@@ -1337,9 +1428,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
+### eth_getUncleByBlockHashAndIndex {#eth-getunclebyblockhashandindex}
 
-Returns information about a uncle of a block by hash and uncle index position.
+Returns information about an uncle of a block by hash and uncle index position.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockHashAndIndex">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
@@ -1354,7 +1449,7 @@ params: [
 ```
 
 **Returns**
-See [eth_getBlockByHash](#eth_getblockbyhash)
+See [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Example**
 
@@ -1363,17 +1458,21 @@ See [eth_getBlockByHash](#eth_getblockbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Result see [eth_getBlockByHash](#eth_getblockbyhash)
+Result see [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Note**: An uncle doesn't contain individual transactions.
 
-### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
+### eth_getUncleByBlockNumberAndIndex {#eth-getunclebyblocknumberandindex}
 
-Returns information about a uncle of a block by number and uncle index position.
+Returns information about an uncle of a block by number and uncle index position.
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockNumberAndIndex">
+  Try endpoint in playground
+</ButtonLink>
 
 **Parameters**
 
-1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 2. `QUANTITY` - the uncle's index position.
 
 ```js
@@ -1384,7 +1483,7 @@ params: [
 ```
 
 **Returns**
-See [eth_getBlockByHash](#eth_getblockbyhash)
+See [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Note**: An uncle doesn't contain individual transactions.
 
@@ -1395,12 +1494,12 @@ See [eth_getBlockByHash](#eth_getblockbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-Result see [eth_getBlockByHash](#eth_getblockbyhash)
+Result see [eth_getBlockByHash](#eth-getblockbyhash)
 
-### eth_newFilter {#eth_newfilter}
+### eth_newFilter {#eth-newfilter}
 
 Creates a filter object, based on filter options, to notify when the state changes (logs).
-To check if the state has changed, call [eth_getFilterChanges](#eth_getfilterchanges).
+To check if the state has changed, call [eth_getFilterChanges](#eth-getfilterchanges).
 
 **A note on specifying topic filters:**
 Topics are order-dependent. A transaction with a log with topics [A, B] will be matched by the following topic filters:
@@ -1453,10 +1552,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 }
 ```
 
-### eth_newBlockFilter {#eth_newblockfilter}
+### eth_newBlockFilter {#eth-newblockfilter}
 
 Creates a filter in the node, to notify when a new block arrives.
-To check if the state has changed, call [eth_getFilterChanges](#eth_getfilterchanges).
+To check if the state has changed, call [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Parameters**
 None
@@ -1477,10 +1576,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 }
 ```
 
-### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
+### eth_newPendingTransactionFilter {#eth-newpendingtransactionfilter}
 
 Creates a filter in the node, to notify when new pending transactions arrive.
-To check if the state has changed, call [eth_getFilterChanges](#eth_getfilterchanges).
+To check if the state has changed, call [eth_getFilterChanges](#eth-getfilterchanges).
 
 **Parameters**
 None
@@ -1501,10 +1600,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 }
 ```
 
-### eth_uninstallFilter {#eth_uninstallfilter}
+### eth_uninstallFilter {#eth-uninstallfilter}
 
 Uninstalls a filter with given id. Should always be called when watch is no longer needed.
-Additionally Filters timeout when they aren't requested with [eth_getFilterChanges](#eth_getfilterchanges) for a period of time.
+Additionally Filters timeout when they aren't requested with [eth_getFilterChanges](#eth-getfilterchanges) for a period of time.
 
 **Parameters**
 
@@ -1532,7 +1631,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges {#eth_getfilterchanges}
+### eth_getFilterChanges {#eth-getfilterchanges}
 
 Polling method for a filter, which returns an array of logs which occurred since last poll.
 
@@ -1549,8 +1648,8 @@ params: [
 **Returns**
 `Array` - Array of log objects, or an empty array if nothing has changed since last poll.
 
-- For filters created with `eth_newBlockFilter` the return are block hashes (`DATA`, 32 Bytes), e.g. `["0x3454645634534..."]`.
-- For filters created with `eth_newPendingTransactionFilter ` the return are transaction hashes (`DATA`, 32 Bytes), e.g. `["0x6345343454645..."]`.
+- For filters created with `eth_newBlockFilter` the return are block hashes (`DATA`, 32 Bytes), e.g., `["0x3454645634534..."]`.
+- For filters created with `eth_newPendingTransactionFilter ` the return are transaction hashes (`DATA`, 32 Bytes), e.g., `["0x6345343454645..."]`.
 - For filters created with `eth_newFilter` logs are objects with following params:
   - `removed`: `TAG` - `true` when the log was removed, due to a chain reorganization. `false` if its a valid log.
   - `logIndex`: `QUANTITY` - integer of the log index position in the block. `null` when its pending log.
@@ -1559,8 +1658,9 @@ params: [
   - `blockHash`: `DATA`, 32 Bytes - hash of the block where this log was in. `null` when its pending. `null` when its pending log.
   - `blockNumber`: `QUANTITY` - the block number where this log was in. `null` when its pending. `null` when its pending log.
   - `address`: `DATA`, 20 Bytes - address from which this log originated.
-  - `data`: `DATA` - contains zero or more 32 Bytes non-indexed arguments of the log.
-  - `topics`: `Array of DATA` - Array of 0 to 4 32 Bytes `DATA` of indexed log arguments. (In _solidity_: The first topic is the _hash_ of the signature of the event (e.g. `Deposit(address,bytes32,uint256)`), except you declared the event with the `anonymous` specifier.)
+  - `data`: `DATA` - variable-length non-indexed log data. (In _solidity_: zero or more 32 Bytes non-indexed log arguments.)
+  - `topics`: `Array of DATA` - Array of 0 to 4 32 Bytes `DATA` of indexed log arguments. (In _solidity_: The first topic is the _hash_ of the signature of the event (e.g., `Deposit(address,bytes32,uint256)`), except you declared the event with the `anonymous` specifier.)
+
 - **Example**
 
 ```js
@@ -1585,7 +1685,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs {#eth_getfilterlogs}
+### eth_getFilterLogs {#eth-getfilterlogs}
 
 Returns an array of all logs matching filter with given id.
 
@@ -1600,7 +1700,7 @@ params: [
 ```
 
 **Returns**
-See [eth_getFilterChanges](#eth_getfilterchanges)
+See [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Example**
 
@@ -1609,9 +1709,9 @@ See [eth_getFilterChanges](#eth_getfilterchanges)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":74}'
 ```
 
-Result see [eth_getFilterChanges](#eth_getfilterchanges)
+Result see [eth_getFilterChanges](#eth-getfilterchanges)
 
-### eth_getLogs {#eth_getlogs}
+### eth_getLogs {#eth-getlogs}
 
 Returns an array of all logs matching a given filter object.
 
@@ -1623,7 +1723,7 @@ Returns an array of all logs matching a given filter object.
 - `toBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last proposed block, `"safe"` for the latest safe block, `"finalized"` for the latest finalized block, or `"pending"`, `"earliest"` for transactions not yet in a block.
 - `address`: `DATA|Array`, 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate.
 - `topics`: `Array of DATA`, - (optional) Array of 32 Bytes `DATA` topics. Topics are order-dependent. Each topic can also be an array of DATA with "or" options.
-- `blockhash`: `DATA`, 32 Bytes - (optional, **future**) With the addition of EIP-234, `blockHash` will be a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
+- `blockHash`: `DATA`, 32 Bytes - (optional, **future**) With the addition of EIP-234, `blockHash` will be a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
 
 ```js
 params: [
@@ -1636,7 +1736,7 @@ params: [
 ```
 
 **Returns**
-See [eth_getFilterChanges](#eth_getfilterchanges)
+See [eth_getFilterChanges](#eth-getfilterchanges)
 
 **Example**
 
@@ -1645,7 +1745,7 @@ See [eth_getFilterChanges](#eth_getfilterchanges)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
 
-Result see [eth_getFilterChanges](#eth_getfilterchanges)
+Result see [eth_getFilterChanges](#eth-getfilterchanges)
 
 ## Usage Example {#usage-example}
 
@@ -1676,7 +1776,7 @@ This will start the HTTP RPC interface on `http://localhost:8545`.
 We can verify that the interface is running by retrieving the coinbase address (by obtaining the first address from the array of accounts) and balance using [curl](https://curl.se). Please note that data in these examples will differ on your local node. If you want to try these commands, replace the request params in the second curl request with the result returned from the first.
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[], "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545
@@ -1692,7 +1792,7 @@ web3.fromWei("0x1639e49bba16280000", "ether")
 
 Now that there is some ether on our private development chain, we can deploy the contract. The first step is to compile the Multiply7 contract to byte code that can be sent to the EVM. To install solc, the Solidity compiler, follow the [Solidity documentation](https://docs.soliditylang.org/en/latest/installing-solidity.html). (You might want to use an older `solc` release to match [the version of compiler used for our example](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
 
-The next step is to compile the Multiply7 contract to byte code that can be send to the EVM.
+The next step is to compile the Multiply7 contract to byte code that can be sent to the EVM.
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
@@ -1789,7 +1889,7 @@ This was just a brief introduction into some of the most common tasks, demonstra
 
 ## Related topics {#related-topics}
 
-- [JSON-RPC specification](http://www.jsonrpc.org/specification)
+- [JSON-RPC specification](https://www.jsonrpc.org/specification)
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
 - [JavaScript APIs](/developers/docs/apis/javascript/)
 - [Backend APIs](/developers/docs/apis/backend/)

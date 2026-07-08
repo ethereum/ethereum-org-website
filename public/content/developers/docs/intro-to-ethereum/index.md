@@ -1,5 +1,5 @@
 ---
-title: Intro to Ethereum
+title: Technical intro to Ethereum
 description: A dapp developer's introduction to the core concepts of Ethereum.
 lang: en
 ---
@@ -14,13 +14,13 @@ A blockchain is a public database that is updated and shared across many compute
 
 Every computer in the network must agree upon each new block and the chain as a whole. These computers are known as "nodes". Nodes ensure everyone interacting with the blockchain has the same data. To accomplish this distributed agreement, blockchains need a consensus mechanism.
 
-Ethereum uses a [proof-of-stake-based consensus mechanism](/developers/docs/consensus-mechanisms/pos/). Anyone who wants to add new blocks to the chain must stake ETH - the native currency in Ethereum - as collateral and run validator software. These "validators" can then be randomly selected to propose blocks that other validators check and add to the blockchain. There is a system of rewards and penalties that strongly incentivize participants to be honest and available online as much as possible.
+[Ethereum](/) uses a [proof-of-stake-based consensus mechanism](/developers/docs/consensus-mechanisms/pos/). Anyone who wants to add new blocks to the chain must stake ETH - the native currency in Ethereum - as collateral and run validator software. These "validators" can then be randomly selected to propose blocks that other validators check and add to the blockchain. There is a system of rewards and penalties that strongly incentivize participants to be honest and available online as much as possible.
 
 If you would like to see how blockchain data is hashed and subsequently appended to the history of block references, be sure to check out [this demo](https://andersbrownworth.com/blockchain/blockchain) by Anders Brownworth and watch the accompanying video below.
 
 Watch Anders explain hashes in blockchains:
 
-<YouTube id="_160oMzblY8" />
+<VideoWatch slug="blockchain-101-visual-demo" />
 
 ## What is Ethereum? {#what-is-ethereum}
 
@@ -44,7 +44,7 @@ ETH is also used to provide crypto-economic security to the network in three mai
 
 ## What are smart contracts? {#what-are-smart-contracts}
 
-In practice, participants don't write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM state, and users make requests to execute these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.
+In practice, participants don't write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM state, and users make requests to execute these code snippets with varying parameters. We call the programs uploaded to and executed by the network "smart contracts".
 
 At a very basic level, you can think of a smart contract like a sort of vending machine: a script that, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends ETH to a specific recipient.
 
@@ -104,10 +104,26 @@ A reusable snippet of code (a program) which a developer publishes into EVM stat
 
 [More on smart contracts](/developers/docs/smart-contracts/)
 
+## Where to go next {#where-to-go-next}
+
+Most readers follow the docs in order, but the shortest path depends on what you're trying to build:
+
+- **Dapps that interact with Ethereum:** [accounts](/developers/docs/accounts/) and [transactions](/developers/docs/transactions/), then pick a [framework](/developers/docs/frameworks/).
+- **Smart contract development:** [smart contracts](/developers/docs/smart-contracts/) and [programming languages](/developers/docs/programming-languages/).
+- **Nodes and staking:** [nodes and clients](/developers/docs/nodes-and-clients/), then [consensus mechanisms](/developers/docs/consensus-mechanisms/).
+
 ## Further reading {#further-reading}
 
 - [Ethereum Whitepaper](/whitepaper/)
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** this resource is still valuable but be aware that it predates [The Merge](/roadmap/merge) and therefore still refers to Ethereum's proof-of-work mechanism - Ethereum is actually now secured using [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
+
+### More of a visual learner? {#visual-learner}
+
+This video series offers a thorough exploration of foundational topics:
+
+<VideoWatch slug="ethereum-basics-intro" />
+
+[Ethereum Basics Playlist](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 

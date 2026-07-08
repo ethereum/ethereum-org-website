@@ -1,10 +1,9 @@
 ---
-title: Privacy Policy
+title: Privacy policy
+description: Learn how ethereum.org collects, processes, and protects your personal data in accordance with privacy regulations.
 lang: en
 hideEditButton: true
 ---
-
-# Privacy Policy {#privacy-policy}
 
 **1. General information**
 
@@ -18,7 +17,7 @@ In case you provide us with the personal data of third persons (such as family m
 
 **2. Responsible Person**
 
-For any matters, relating to data protection you may contact <notices@ethereum.org> in writing by e-mail or letter to the following address:
+For any matters, relating to data protection you may contact notices@ethereum.org in writing by e-mail or letter to the following address:
 
     Ethereum Foundation
     Zeughausgasse 7A,
@@ -47,13 +46,13 @@ Furthermore, the IP addresses may be evaluated, together with other data, in cas
 
 **3.2 Use of Website Cookies**
 
-The Websites may use cookies. Cookies are text files that are stored in a computer system via an Internet browser. More detailed information on cookies and how they work can be found at: <http://www.allaboutcookies.org>.
+The Websites may use cookies. Cookies are text files that are stored in a computer system via an Internet browser. More detailed information on cookies and how they work can be found at: https://allaboutcookies.org/.
 
 Many Internet sites and servers use cookies. Many cookies contain a so-called cookie ID. A cookie ID is a unique identifier of the cookie. It consists of a character string through which Internet pages and servers can be assigned to the specific Internet browser in which the cookie was stored. This allows visited Internet sites and servers to differentiate the individual browser of the data subject from other Internet browsers that contain other cookies. A specific Internet browser can be recognized and identified using the unique cookie ID.
 
 Through the use of cookies, the Foundation may provide the users of the Websites with more user-friendly services that would not be possible without the cookie setting.
 
-Cookies may allow us, as previously mentioned, to recognize our Website users. The purpose of this recognition is to make it easier for users to utilize our Websites. The Website user that uses cookies, e.g. does not have to enter access data each time the Website is accessed, because this is taken over by the Website, and the cookie is thus stored on the user's computer system.
+Cookies may allow us, as previously mentioned, to recognize our Website users. The purpose of this recognition is to make it easier for users to utilize our Websites. The Website user that uses cookies, e.g., does not have to enter access data each time the Website is accessed, because this is taken over by the Website, and the cookie is thus stored on the user's computer system.
 
 You may, at any time, prevent the setting of cookies through our Websites by means of a corresponding setting of the Internet browser used, and may thus permanently deny the setting of cookies. Furthermore, previously set cookies may be deleted at any time via an Internet browser or other software programs. This is possible in all popular Internet browsers. If the data subject deactivates the setting of cookies in the Internet browser used, it may not be possible to use all the functions of our Websites.
 
@@ -81,13 +80,13 @@ Any processing of this technical personal data helps us to identify what is work
 
 **3.4 Opening an account for the Ethereum Web Forum**
 
-To access our forums at <https://forum.ethereum.org/> you must set up an account and provide us with your username, e-mail address, skype name, and password.
+To access our forums at [https://forum.ethereum.org/](https://wayback.archive-it.org/16516/20210618210825/) you must set up an account and provide us with your username, e-mail address, skype name, and password.
 
 The collected data, which you have voluntarily provided, is used for the purpose of providing your password-protected access to your base data we have stored. The legal basis for processing the data for this purpose lies in the consent you have provided in accordance with Art. 6 Par. 1 lit. a GDPR.
 
 **3.5 Contact possibility via the Websites**
 
-You may contact us via our Websites’ contact page or by e-mail to the following e-mail address: <support@ethereum.org>. For this, we require the following information: Name, Subject, E-Mail address, message.
+You may contact us via our Websites’ contact page or by e-mail to the following e-mail address: support@ethereum.org. For this, we require the following information: Name, Subject, E-Mail address, message.
 
 We use this data, which you may give voluntarily, only in order to answer your contact question or to reply to your e-mail in the best possible manner. Therefore, the processing of this data is in our legitimate interest in accordance with Art. 6 Par. 1 lit. f GDPR and you have provided consent in accordance with Art. 6 Par. 1 lit. a GDPR.
 
@@ -105,7 +104,7 @@ We may use plug-ins from social networks such as Blog, GitHub, YouTube, Reddit, 
 
 To register for any event organized by the Foundation through our Websites, we may require the following registration data: First and last name, language, company affiliation, company title, credit card information, e-mail address.
 
-We may use this information as well as other information you voluntarily provide (e.g. preferences, comments) only in order to execute the reservation agreement, unless otherwise stated in this Privacy Policy or you have not specifically consented thereto.
+We may use this information as well as other information you voluntarily provide (e.g., preferences, comments) only in order to execute the reservation agreement, unless otherwise stated in this Privacy Policy or you have not specifically consented thereto.
 
 We may process the data by name in order to record your reservation as you have requested, to contact you in case of a question or problem and to ensure correct payment.
 
@@ -132,7 +131,7 @@ They are obliged to protect data privacy to the same extent as we ourselves. If 
 
 We use appropriate technical and organizational security measures to protect your stored personal data against manipulation, partial or complete loss, and unauthorized access by third parties. Our security measures are continuously being improved in line with technical developments.
 
-Please note that any data transmission on the Internet (e.g. communication by e-mail) is generally not secure and we accept no liability for data transmitted to us via the Internet. Unfortunately, absolute protection is not technically possible.
+Please note that any data transmission on the Internet (e.g., communication by e-mail) is generally not secure and we accept no liability for data transmitted to us via the Internet. Unfortunately, absolute protection is not technically possible.
 
 This information does not apply to the Websites of third parties and the corresponding links given on our Websites. The Foundation assumes no responsibility and liability for these.
 
@@ -222,11 +221,11 @@ For more information on applicable privacy regulations, you may refer
 to:
 
 - EU General Data Protection Regulation:
-  <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG>
+  https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG
 - Swiss Federal Act on Data Protection:
-  <https://www.admin.ch/opc/en/classified-compilation/19920153/index.html>
+  https://www.fedlex.admin.ch/eli/cc/2022/491/en
 - Swiss Ordinance to the Federal Act on Data Protection:
-  <https://www.admin.ch/opc/en/classified-compilation/19930159/index.html>
+  https://www.fedlex.admin.ch/eli/cc/2022/568/en
 
 Please do not hesitate to contact us if you have any questions regarding
 this Privacy Policy by contacting us at [support@ethereum.org](mailto:support@ethereum.org).

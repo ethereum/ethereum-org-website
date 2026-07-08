@@ -1,165 +1,163 @@
 ---
-title: Merkeziyetsiz otonom organizasyonlar (DAO'lar)
-description: Ethereum'daki DAO'lara genel bakış
+title: DAO nedir?
+metaTitle: DAO nedir? | Merkeziyetsiz Otonom Organizasyon
+description: "Ethereum'daki DAO'lara genel bir bakış"
 lang: tr
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: Bir teklif üzerinde oy kullanan bir DAO'nun temsili.
-summaryPoint1: Merkezi liderliği olmayan üyelere ait topluluklar.
-summaryPoint2: İnternette tanımadığnız kişilerle iş birliği yapmanın güvenli bir yolu.
-summaryPoint3: Belirli bir amaca para yatırmak için güvenli bir yer.
+alt: "Bir teklif üzerinde oy kullanan bir DAO'nun temsili."
+summaryPoints:
+  - Merkezi bir liderliği olmayan, üyelerin sahip olduğu topluluklar.
+  - İnternetteki yabancılarla iş birliği yapmanın güvenli bir yolu.
+  - Belirli bir amaca fon ayırmak için güvenli bir yer.
 ---
 
-## DAO'lar Nedir? {#what-are-daos}
+## DAO'lar nedir? {#what-are-daos}
 
-DAO, müşterek bir görev için çalışan, müşterek olarak sahip olunan, blokzincir tarafından yönetilen bir organizasyondur.
+Bir DAO, ortak bir misyon doğrultusunda çalışan, kolektif mülkiyete sahip bir organizasyondur.
 
-DAO'lar, fonları veya operasyonları yönetmesi için hayırsever bir lidere güvenmeden dünyanın dört bir yanındaki benzer fikirlere sahip kişilerle çalışmamıza olanak tanır. Burada, fonları canı istediği gibi harcayan bir CEO veya hesapları manipüle edecek bi CFO yok. Bunun yerine, kodda işlenen blok zinciri tabanlı kurallar, kuruluşun nasıl çalıştığını ve fonların nasıl harcandığını tanımlar.
+DAO'lar, fonları veya operasyonları yönetmesi için iyiliksever bir lidere güvenmek zorunda kalmadan, dünyanın dört bir yanındaki kafa dengi insanlarla çalışmamıza olanak tanır. Fonları keyfine göre harcayabilecek bir CEO veya kayıtları manipüle edebilecek bir CFO yoktur. Bunun yerine, koda yerleştirilmiş blokzincir tabanlı kurallar, organizasyonun nasıl çalışacağını ve fonların nasıl harcanacağını tanımlar.
 
-Grubun onayı olmadan kimsenin erişme otoritesine sahip olmadığı yerleşik hazinelere sahiplerdir. Kararlar, kuruluştaki herkesin söz sahibi olmasını sağlamak için teklifler ve oylamalarla yönetilir ve her şey zincir üzerinde şeffaf bir şekilde gerçekleşir.
+Grubun onayı olmadan kimsenin erişme yetkisine sahip olmadığı yerleşik hazinelere sahiptirler. Kararlar, organizasyondaki herkesin söz hakkı olmasını sağlamak için teklifler ve oylama ile yönetilir ve her şey şeffaf bir şekilde [zincir içi](/glossary/#onchain) gerçekleşir.
 
 ## Neden DAO'lara ihtiyacımız var? {#why-dao}
 
-Birisiyle finansman ve para içeren bir organizasyon başlatmak, çalıştığınız kişilerle ileri düzeyde güven gerektirir. Ancak yalnızca internette etkileşimde bulunduğunuz birine güvenmek zordur. DAO'larla gruptaki başka kimseye güvenmeniz gerekmez, yalnızca DAO'nun %100 şeffaf ve herkes tarafından doğrulanabilir koduna güvenmeniz gerekir.
+Birisiyle fon ve para içeren bir organizasyon başlatmak, birlikte çalıştığınız kişilere büyük bir güven duymayı gerektirir. Ancak yalnızca internet üzerinden etkileşimde bulunduğunuz birine güvenmek zordur. DAO'lar ile gruptaki başka hiç kimseye güvenmenize gerek yoktur; yalnızca %100 şeffaf ve herkes tarafından doğrulanabilir olan DAO'nun koduna güvenmeniz yeterlidir.
 
-Bu küresel iş birliği ve koordinasyon için birçok yeni fırsat sunar.
+Bu, küresel iş birliği ve koordinasyon için pek çok yeni fırsatın kapısını aralar.
 
 ### Bir karşılaştırma {#dao-comparison}
 
-| DAO                                                                                                                | Geleneksel bir organizasyon                                                                              |
-| ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
-| Genelde düz ve tamamen demokratikleştirilmiş.                                                                      | Genelde hiyerarşik.                                                                                      |
-| Herhangi bir değişikliğin uygulanması için üyeler tarafından oylama yapılması gerekli.                             | Yapısına bağlı olarak, değişiklikler tekil bir partiden istenebilir veya oylama önerilebilir.            |
-| Oylar toplanır ve sonuç güvenilir bir aracı olmadan otomatik şekilde uygulanır.                                    | Eğer oylamaya izin verildiyse, oylar içeride toplanır ve oylamanın sonucu manuel şekilde idare edilir.   |
-| Teklif edilen servisler merkezi olmadan ve otomatik bir şekilde idare edilir (örnek olarak hayırseverlik fonları). | İnsan idaresi veya merkezi şekilde kontrol edilen bir otomasyon gerektirir, bu da manipülasyona açıktır. |
-| Tüm etkinlikler şeffaftır ve tamamen halka açıktır.                                                                | Etkinlikler genelde gizlidir ve tamamı halka açılmaz.                                                    |
+| DAO                                                                                                                     | Geleneksel bir organizasyon                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Genellikle yataydır ve tamamen demokratikleştirilmiştir.                                                                                   | Genellikle hiyerarşiktir.                                                                            |
+| Herhangi bir değişikliğin uygulanması için üyelerin oy kullanması gerekir.                                                           | Yapıya bağlı olarak, değişiklikler tek bir tarafça talep edilebilir veya oylama sunulabilir.     |
+| Oylar sayılır ve sonuç, güvenilir bir aracı olmadan otomatik olarak uygulanır.                                      | Oylamaya izin verilirse, oylar kendi içinde sayılır ve oylama sonucu manuel olarak işlenmelidir. |
+| Sunulan hizmetler merkeziyetsiz bir şekilde otomatik olarak yürütülür (örneğin hayır kurumu fonlarının dağıtımı). | İnsan müdahalesi veya manipülasyona açık, merkezi olarak kontrol edilen bir otomasyon gerektirir.              |
+| Tüm faaliyetler şeffaftır ve tamamen halka açıktır.                                                                           | Faaliyetler genellikle gizlidir ve halka kapalıdır.                                        |
 
 ### DAO örnekleri {#dao-examples}
 
-Bunun biraz daha mantıklı olması için, burada bir DAO'yu nasıl kullanabileceğiniz hakkında birkaç örnek mevcut:
+Bunun daha anlaşılır olmasına yardımcı olmak için, bir DAO'yu nasıl kullanabileceğinize dair birkaç örnek:
 
-- Hayır kurumu - Dünyanın herhangi bir yerinden bağışları kabul edebilir ve bu bağışların neler için kullanılacağını oylamaya sunabilirsiniz.
-- Kolektif mülkiyet – fiziksel veya dijital varlıklar satın alabilir ve üyeler bunların nasıl kullanılacağına oy verebilir.
-- Girişimler ve hibeler: Yatırım sermayesini bir araya toplayan ve desteklenecek girişimlere oy veren bir girişim fonu oluşturabilirsiniz. Geri ödenen para daha sonrasında DAO üyeleri arasında yeniden dağıtılabilir.
+- **Bir hayır kurumu** – dünyanın herhangi bir yerindeki herkesten bağış kabul edebilir ve hangi amaçların finanse edileceğini oylayabilirsiniz.
+- **Kolektif mülkiyet** – fiziksel veya dijital varlıklar satın alabilirsiniz ve üyeler bunların nasıl kullanılacağını oylayabilir.
+- **Girişimler ve hibeler** – yatırım sermayesini bir araya getiren ve desteklenecek girişimleri oylayan bir girişim fonu oluşturabilirsiniz. Geri ödenen para daha sonra DAO üyeleri arasında yeniden dağıtılabilir.
+
+<VideoWatch slug="dao-build-next-great-city" />
 
 ## DAO'lar nasıl çalışır? {#how-daos-work}
 
-Bir DAO'nun bel kemiği, organizasyonun kurallarını tanımlayan ve grubun hazinesini içeren akıllı sözleşmesidir. Sözleşmenin Ethereum'da yayınlandığı andan itibaren kimse oylama olmadan kuralları değiştiremez. Birisi koddaki kurallara veya mantığa uymayan bir şey yapmaya çalışırsa, başarılı olamaz. Ayrıca, hazinenin de akıllı sözleşme tarafından belirlenmesi, kimsenin grubun onayı olmadan parayı harcayamayacağı anlamına gelir. Bu, DAO'ların merkezi bir otoriteye ihtiyacı olmadığı anlamına gelir. Bunun yerine, grup kararları toplu olarak alır ve oylar geçtiğinde ödemeler otomatik olarak yetkilendirilir.
+Bir DAO'nun omurgası, organizasyonun kurallarını tanımlayan ve grubun hazinesini tutan [akıllı sözleşmesidir](/glossary/#smart-contract). Sözleşme [Ethereum](/) üzerinde yayına girdikten sonra, bir oylama dışında hiç kimse kuralları değiştiremez. Eğer biri koddaki kurallar ve mantık tarafından kapsanmayan bir şey yapmaya çalışırsa, bu işlem başarısız olur. Hazine de akıllı sözleşme tarafından tanımlandığı için, bu aynı zamanda grubun onayı olmadan kimsenin parayı harcayamayacağı anlamına gelir. Bu, DAO'ların merkezi bir otoriteye ihtiyaç duymadığı anlamına gelir. Bunun yerine, grup kararları kolektif olarak alır ve oylamalar geçtiğinde ödemeler otomatik olarak yetkilendirilir.
 
-Bu, akıllı sözleşmelerin Ethereum'da yayınlandıktan sonra kurcalanamaz olmaları sayesinde mümkündür. İnsanlar fark etmeden kodu (yani DAO'ların kurallarını) değiştiremezsiniz çünkü her şey halka açıktır.
-
-<DocLink href="/smart-contracts/">
-  Akıllı kontratlar hakkında daha fazla bilgi
-</DocLink>
+Bu mümkündür çünkü akıllı sözleşmeler Ethereum'da yayına girdikten sonra kurcalamaya karşı korumalıdır. Her şey halka açık olduğu için insanların haberi olmadan kodu (DAO kurallarını) öylece düzenleyemezsiniz.
 
 ## Ethereum ve DAO'lar {#ethereum-and-daos}
 
 Ethereum, birkaç nedenden dolayı DAO'lar için mükemmel bir temeldir:
 
-- Ethereum'un mutabakatı organizasyonların ağa güvenmesini sağlayacak kadar dağıtılmış ve yerleşmiştir.
-- Akıllı sözleşme kodu, yayınlandıktan sonra sahipleri tarafından bile düzenlenemez. Bu, DAO'nun yazıldığı kurallar çerçevesinde çalışmasını sağlar.
-- Akıllı sözleşmeler fon gönderebilir/alabilir. Bu olmasaydı grup fonlarını yönetmek için güvenilir bir aracıya ihtiyacınız olurdu.
-- Ethereum topluluğu, en iyi yöntemlerin ve destek sistemlerinin hızlıca ortaya çıkmasına izin vererek rekabetçi değil; iş birlikçi olduğunu kanıtlamıştır.
+- Ethereum'un kendi mutabakatı, organizasyonların ağa güvenmesi için yeterince merkeziyetsiz ve köklüdür.
+- Akıllı sözleşme kodu yayına girdikten sonra sahipleri tarafından bile değiştirilemez. Bu, DAO'nun programlandığı kurallara göre çalışmasını sağlar.
+- Akıllı sözleşmeler fon gönderip alabilir. Bu olmasaydı, grup fonlarını yönetmek için güvenilir bir aracıya ihtiyacınız olurdu.
+- Ethereum topluluğu, rekabetçiden ziyade iş birlikçi olduğunu kanıtlamıştır; bu da en iyi uygulamaların ve destek sistemlerinin hızla ortaya çıkmasına olanak tanır.
 
 ## DAO yönetişimi {#dao-governance}
 
-Bir DAO'yu yönetirken karar vermeniz gereken birçok husus vardır Mesela oylamaların ve tekliflerin nasıl çalıştığı gibi.
+Bir DAO'yu yönetirken, oylama ve tekliflerin nasıl çalıştığı gibi birçok husus göz önünde bulundurulmalıdır.
 
-### Delegasyon {#governance-delegation}
+### Yetki devri {#governance-delegation}
 
-Delegasyon, temsiliyetçi demokrasinin DAO versiyonu gibidir. Token sahipleri, kendi kendilerini aday gösteren ve protokole hizmet etmeyi ve bilgi sahibi olmayı taahhüt eden kullanıcılara oy yetkisi verir.
+Yetki devri, temsili demokrasinin DAO versiyonu gibidir. Token sahipleri, oylarını kendilerini aday gösteren, protokolü yönetmeyi ve bilgili kalmayı taahhüt eden kullanıcılara devrederler.
 
-#### Meşhur bir örnek {#governance-example}
+#### Ünlü bir örnek {#governance-example}
 
-[ENS](https://claim.ens.domains/delegate-ranking) – ENS sahipleri, kendilerini temsil etmeleri için ilgili topluluk üyelerine oylarını devredebilir.
+[ENS](https://claim.ens.domains/delegate-ranking) – ENS sahipleri, kendilerini temsil etmeleri için oylarını ilgili topluluk üyelerine devredebilirler.
 
-### Otomatik İşlem yönetişimi {#governance-example}
+### Otomatik işlem yönetişimi {#governance-example-2}
 
-Birçok DAO'da, üyelerin çoğunluğu olumlu oy kullanırsa işlemler otomatik olarak yürütülür.
+Birçok DAO'da, üyelerin yeterli çoğunluğu (quorum) olumlu oy kullanırsa işlemler otomatik olarak yürütülür.
 
-#### Meşhur bir örnek {#governance-example}
+#### Ünlü bir örnek {#governance-example-3}
 
-[Nouns](https://nouns.wtf) – Nouns DAO'da, kurucular tarafından veto edilmediği sürece, bir oy yeter sayısı sağlandığında ve çoğunluk olumlu oy kullandığında bir işlem otomatik olarak yürütülür.
+[Nouns](https://nouns.wtf) – Nouns DAO'da, kurucular tarafından veto edilmediği sürece, yeterli oy çoğunluğuna ulaşılırsa ve çoğunluk olumlu oy verirse bir işlem otomatik olarak yürütülür.
 
-### Çoklu imzalı yönetişim {#governance-example}
+### Çoklu imza yönetişimi {#governance-example-4}
 
-DAO'ların binlerce oylama üyesi olabilirken, fonlar güvenilir ve genellikle "doxxed" (topluluk tarafından gerçek kimliği bilinen) olan 5-20 aktif topluluk üyesi tarafından paylaşılan bir cüzdanda tutulabilir. Oylamadan sonra, çoklu imza imzalayacılıları, topluluğun isteğini hayata geçirir.
+DAO'ların binlerce oy kullanan üyesi olabilse de, fonlar güvenilir ve genellikle kimlikleri açık (topluluk tarafından bilinen halka açık kimlikler) 5-20 aktif topluluk üyesi tarafından paylaşılan bir [cüzdanda](/glossary/#wallet) tutulabilir. Bir oylamadan sonra, [çoklu imza](/glossary/#multisig) imzalayıcıları topluluğun iradesini yerine getirir.
 
 ## DAO yasaları {#dao-laws}
 
-1977'de Wyoming, girişimcileri koruyan ve sorumluluklarını sınırlayan LLC'yi (Sınırlı Sorumlu Şirket) icat etti. Daha yakın zamanlarda, DAO'lar için yasal statü oluşturan DAO yasasına öncülük ettiler. Şu anda Wyoming, Vermont ve Virgin Adaları bir şekilde DAO yasalarına sahiptir.
+1977'de Wyoming, girişimcileri koruyan ve sorumluluklarını sınırlayan LLC'yi (Limited Şirket) icat etti. Daha yakın zamanda, DAO'lar için yasal statü oluşturan DAO yasasına öncülük ettiler. Şu anda Wyoming, Vermont ve Virgin Adaları'nın bir tür DAO yasası bulunmaktadır.
 
-### Meşhur bir örnek {#law-example}
+### Ünlü bir örnek {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO, Wyoming'in DAO yasasını kullanarak Yellowstone Milli Parkı yakınında 40 dönümlük arazi satın aldı.
+[CityDAO](https://citizen.citydao.io/) – CityDAO, Yellowstone Ulusal Parkı yakınlarında 40 dönümlük arazi satın almak için Wyoming'in DAO yasasını kullandı.
 
 ## DAO üyeliği {#dao-membership}
 
-DAO üyeliği için farklı modeller bulunmaktadır. Üyelik, oylamanın nasıl işleyeceğini ve DAO'nun diğer önemli kısımlarını belirleyebilir.
+DAO üyeliği için farklı modeller vardır. Üyelik, oylamanın nasıl çalışacağını ve DAO'nun diğer önemli kısımlarını belirleyebilir.
 
 ### Token tabanlı üyelik {#token-based-membership}
 
-Kullanılan token'a bağlı olarak genelde tamamen yetkisizdir. Çoğunlukla bu yönetişim token'ları yetkisiz bir şekilde merkeziyetsiz bir borsada takas edilebilir. Diğerleri ise likidite sağlayarak veya başka bir "iş ispatı" ile kazanılabilir. İki şekilde de sadece token'a sahip olmak oy hakkı sağlar.
+Kullanılan token'a bağlı olarak genellikle tamamen [izinsizdir](/glossary/#permissionless). Çoğunlukla bu yönetişim token'ları, [merkeziyetsiz bir borsada](/glossary/#dex) izinsiz olarak alınıp satılabilir. Diğerleri, likidite sağlayarak veya başka bir 'iş kanıtı (PoW)' aracılığıyla kazanılmalıdır. Her iki durumda da, sadece token'ı elinde tutmak oylamaya erişim sağlar.
 
-_Tipik olarak geniş merkeziyetsiz protokolleri ve/veya token'ları yönetmek için kullanılır._
+_Genellikle geniş merkeziyetsiz protokolleri ve/veya token'ların kendilerini yönetmek için kullanılır._
 
-#### Meşhur bir örnek {#token-example}
+#### Ünlü bir örnek {#token-example}
 
-[MakerDAO](https://makerdao.com) – MakerDAO'nun belirteci MKR, merkezi olmayan borsalarda geniş çapta mevcuttur ve herkes Maker protokolünün geleceği üzerinde oylama gücüne sahip olmayı satın alabilir.
+[MakerDAO](https://makerdao.com) – MakerDAO'nun token'ı MKR, merkeziyetsiz borsalarda yaygın olarak bulunur ve herkes Maker protokolünün geleceği üzerinde oy hakkına sahip olmak için satın alım yapabilir.
 
-### Hisse tabanlı üyelik {#share-based-membership}
+### Pay tabanlı üyelik {#share-based-membership}
 
-Hisse tabanlı DAO'lar daha çok yetki içerir ama yine de oldukça açıktırlar. Herhangi bir olası üye, DAO'ya katılmak için bir teklif sunabilir ve genellikle token veya çalışma şeklinde bir miktar değere sahip bir komisyon sunar. Hisseler, direkt oy gücünü ve sahipliğini temsil eder. Üyeler istedikleri zaman hazineden hisselerini ayrılabilirler.
+Pay tabanlı DAO'lar daha izinlidir, ancak yine de oldukça açıktır. Aday üyeler, genellikle token veya iş şeklinde bir miktar değer sunarak DAO'ya katılmak için bir teklif sunabilirler. Paylar, doğrudan oy gücünü ve mülkiyeti temsil eder. Üyeler, hazinedeki orantılı paylarıyla istedikleri zaman çıkış yapabilirler.
 
-_Tipik olarak hayır kurumları, işçi kolektifleri ve girişim kulüpleri gibi birbirine bağlı, insan merkezli organizasyonlarda kullanılır. Token'ları ve protokolleri de yönetebilir._
+_Genellikle hayır kurumları, işçi kolektifleri ve yatırım kulüpleri gibi daha birbirine bağlı, insan odaklı organizasyonlar için kullanılır. Ayrıca protokolleri ve token'ları da yönetebilir._
 
-#### Meşhur bir örnek {#share-example}
+### İtibar tabanlı üyelik {#reputation-based-membership}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO, Ethereum projelerini finanse etmeye odaklıdır. Üyelik için bir teklif gerektirirler, bu sayede grup potansiyel imtiyaz sahipleri hakkında bilinçli kararlar vermek için yeterli deneyim ve sermayeye sahip olup olmadığınızı değerlendirebilir. Serbest piyasada bir DAO'ya erişim satın alamazsınız.
+İtibar, katılımın kanıtını temsil eder ve DAO'da oy gücü verir. Token veya pay tabanlı üyeliğin aksine, itibar tabanlı DAO'lar mülkiyeti katkıda bulunanlara devretmez. İtibar satın alınamaz, transfer edilemez veya devredilemez; DAO üyeleri itibarı katılım yoluyla kazanmalıdır. Zincir içi oylama izinsizdir ve aday üyeler DAO'ya katılmak için özgürce teklif sunabilir ve katkıları karşılığında ödül olarak itibar ve token almayı talep edebilirler.
 
-### İtibara dayalı üyelik {#reputation-based-membership}
+_Genellikle protokollerin ve [merkeziyetsiz uygulamaların (dapp)](/glossary/#dapp) merkeziyetsiz gelişimi ve yönetişimi için kullanılır, ancak aynı zamanda hayır kurumları, işçi kolektifleri, yatırım kulüpleri vb. gibi çeşitli organizasyonlar için de oldukça uygundur._
 
-İtibar, katılımın kanıtını temsil eder ve DAO'da oy kullanma yetkisi verir. Token veya hisse tabanlı üyeliğin aksine, itibara dayalı DAO'lar mülkiyeti, katkıda bulunanlara devretmez. İtibar satın alınamaz, devredilemez veya başkası tarafından temsil edilemez; DAO üyeleri katılım yoluyla itibar kazanmalıdır. Zincir üzerinde oylama izinsizdir ve potansiyel üyeler, DAO'ya katılmak için serbestçe teklif gönderebilir ve katkıları karşılığında ödül olarak itibar ve token almayı talep edebilir.
+#### Ünlü bir örnek {#reputation-example}
 
-_Protokollerin ve merkeziyetsiz uygulamaların merkeziyetsiz gelişimi ve yönetişimi için kullanılır, ancak aynı zamanda hayır kurumları, işçi kolektifleri, yatırım kulüpleri vb. gibi çeşitli kuruluşlar için de çok uygundur._
+[DXdao](https://DXdao.eth.limo) – DXdao, 2019'dan bu yana merkeziyetsiz protokoller ve uygulamalar inşa eden ve yöneten küresel, egemen bir kolektifti. Fonları koordine etmek ve yönetmek için itibar tabanlı yönetişim ve [holografik mutabakat](/glossary/#holographic-consensus) kullandı; bu da hiç kimsenin geleceğini veya yönetişimini etkilemek için parayla yolunu bulamayacağı anlamına geliyordu.
 
-#### Meşhur bir örnek {#reputation-example}
+## Bir DAO'ya katılın / başlatın {#join-start-a-dao}
 
-[DXdao](https://DXdao.eth.link) – DXdao, 2019'dan beri merkeziyetsiz protokolleri yöneten ve uygulamalar oluşturan küresel bağımsız bir kolektiftir. Fonları koordine etmek ve yönetmek için itibara dayalı yönetişim ve holografik mutabakattan yararlanır, bu da hiç kimsenin geleceğini etkileme yolunu satın alamayacağı anlamına gelir.
+### Bir DAO'ya katılın {#join-a-dao}
 
-## Bir DAO başlatma veya DAO'ya katılma {#join-start-a-dao}
+- [Ethereum topluluğu DAO'ları](/community/get-involved/#decentralized-autonomous-organizations-daos)
+- [DAOHaus'un DAO'lar listesi](https://app.daohaus.club/explore)
+- [Tally.xyz DAO'lar listesi](https://www.tally.xyz/explore)
+- [DeGov.AI DAO'lar listesi](https://apps.degov.ai/)
 
-### Bir DAO'ya katıl {#join-a-dao}
+### Bir DAO başlatın {#start-a-dao}
 
-- [Ethereum topluluk DAO'ları](/community/get-involved/#decentralized-autonomous-organizations-daos)
-- [DAOHaus'un DAO listesi](https://app.daohaus.club/explore)
-- [DAO'ların tally.xyz listesi](https://www.tally.xyz)
-
-### Bir DAO başlatma {#start-a-dao}
-
-- [DAOHaus ile bir DAO çağırma](https://app.daohaus.club/summon)
-- [Tally ile bir Governor DAO başlatma](https://www.tally.xyz/add-a-dao)
-- [Aragon tarafından desteklenen bir DAO oluşturma](https://aragon.org/product)
-- [Bir koloni başlatma](https://colony.io/)
-- [DAOstack'in holografik mutabakatıyla bir DAO oluşturun](https://alchemy.daostack.io/daos/create)
-
-## Daha fazla okuma {#further-reading}
+- [DAOHaus ile bir DAO oluşturun](https://app.daohaus.club/summon)
+- [Tally ile bir Governor DAO başlatın](https://www.tally.xyz/get-started)
+- [Aragon destekli bir DAO oluşturun](https://aragon.org/product)
+- [Bir koloni başlatın](https://colony.io/)
+- [DeGov Launcher ile bir DAO başlatın](https://docs.degov.ai/integration/deploy)
+## Daha fazla bilgi {#further-reading}
 
 ### DAO Makaleleri {#dao-articles}
 
-- [Bir DAO nedir?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
-- [DAO El Kitabı](https://daohandbook.xyz)
-- [DAO'lar Evi](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
-- [Bir DAO nedir ve amacı nedir?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
-- [DAO Destekli bir Dijital Topluluk Nasıl Başlatılır](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
-- [Bir DAO nedir?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+- [DAO nedir?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
+- [DAO'ların Evi](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
+- [DAO nedir ve ne işe yarar?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
+- [DAO Destekli Bir Dijital Topluluk Nasıl Başlatılır](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
+- [DAO nedir?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Holografik Mutabakat Nedir?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO'lar Vitalik'e göre özerk kuruluşlarda ademi merkeziyetçiliğin önemli olduğu şirketler değildir:](https://vitalik.eth.limo/general/2022/09/20/daos.html)
-- [DAO'lar, DAC'ler, DA'lar ve Daha Fazlası: Tamamlanmamış Terminoloji Rehberi](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blogu](https://blog.ethereum.org)
+- [DAO'lar şirket değildir: otonom organizasyonlarda merkeziyetsizlik nerede önemlidir (Vitalik)](https://vitalik.eth.limo/general/2022/09/20/daos.html)
+- [DAO'lar, DAC'ler, DA'lar ve Daha Fazlası: Eksik Bir Terminoloji Rehberi](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blogu](https://blog.ethereum.org)
 
 ### Videolar {#videos}
 
-- [Kripto dünyasında DAO nedir?](https://youtu.be/KHm0uUPqmVE)
-- [Bir DAO Şehir Kurabilir mi?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+- [Kriptoda DAO nedir?](https://youtu.be/KHm0uUPqmVE)
+- [Bir DAO Şehir İnşa Edebilir mi?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+
+<Divider />
+
+<QuizWidget quizKey="daos" />

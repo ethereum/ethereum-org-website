@@ -1,0 +1,415 @@
+{
+  "version": 1,
+  "locale": "mr",
+  "translatedAt": "2026-06-16T22:55:00.093Z",
+  "englishManifestHash": "7087b1b8208a",
+  "placeholderOrder": [
+    "LINK-1baecb",
+    "LINK-21141b",
+    "LINK-a21a82",
+    "LINK-ab55fe",
+    "LINK-08a3d2",
+    "LINK-c705fb",
+    "LINK-9c1fcb",
+    "LINK-a40527",
+    "LINK-68d78e",
+    "LINK-86ebe7",
+    "LINK-c3d128",
+    "LINK-fb2e62",
+    "LINK-baad72",
+    "LINK-7982de",
+    "LINK-6642ff",
+    "LINK-77deb3",
+    "LINK-2635af",
+    "LINK-ea2dce",
+    "LINK-6c2377",
+    "LINK-b19ae5",
+    "LINK-23f2c4",
+    "LINK-a32da0",
+    "LINK-3d0e87",
+    "LINK-8e0228",
+    "LINK-0eec19",
+    "LINK-83a37b",
+    "LINK-14f434",
+    "LINK-88732e",
+    "LINK-599e19",
+    "LINK-74e308",
+    "LINK-263e7f",
+    "LINK-64d947",
+    "LINK-6ba02a",
+    "LINK-986c79",
+    "LINK-7dcf0c",
+    "LINK-e2d2a6",
+    "LINK-d76bb8",
+    "LINK-79c4e4",
+    "LINK-156c35",
+    "LINK-46f136",
+    "LINK-8e7d8f",
+    "IMAGE-9d14c8",
+    "LINK-c32754",
+    "LINK-44fb9d",
+    "LINK-4206c7",
+    "LINK-9dd763",
+    "LINK-131d0a",
+    "LINK-d22c22",
+    "LINK-dd61ab",
+    "LINK-298c3e",
+    "LINK-7d35d5",
+    "LINK-7fde10",
+    "LINK-0fbfd0",
+    "LINK-54f3a5",
+    "LINK-2202a2",
+    "LINK-d75bfc",
+    "LINK-36646f"
+  ],
+  "placeholderMap": {
+    "IMAGE-9d14c8": {
+      "type": "image",
+      "values": {
+        "path": "./mev.png"
+      }
+    },
+    "LINK-1baecb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pow/"
+      }
+    },
+    "LINK-21141b": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-08a3d2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-c705fb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos"
+      }
+    },
+    "LINK-9c1fcb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-a40527": {
+      "type": "link",
+      "values": {
+        "url": "/apps/"
+      }
+    },
+    "LINK-68d78e": {
+      "type": "link",
+      "values": {
+        "url": "/defi/"
+      }
+    },
+    "LINK-86ebe7": {
+      "type": "link",
+      "values": {
+        "url": "#mev-examples-dex-arbitrage"
+      }
+    },
+    "LINK-c3d128": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0x0000000000C521824EaFf97Eac7B73B084ef9306"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-baad72": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#dex"
+      }
+    },
+    "LINK-7982de": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/tx/0x5e1657ef0e9be9bc72efefe59a2528d0d730d478cfc9e6cdd09af9f997bb3ef4"
+      }
+    },
+    "LINK-6642ff": {
+      "type": "link",
+      "values": {
+        "url": "https://www.investopedia.com/terms/m/margincall.asp"
+      }
+    },
+    "LINK-77deb3": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Defi-Cartel/salmonella"
+      }
+    },
+    "LINK-2635af": {
+      "type": "link",
+      "values": {
+        "url": "https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent"
+      }
+    },
+    "LINK-ea2dce": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5?tab=txs"
+      }
+    },
+    "LINK-6c2377": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/IvanBogatyy/status/1422232184493121538"
+      }
+    },
+    "LINK-b19ae5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/flashbots/mev-job-board"
+      }
+    },
+    "LINK-23f2c4": {
+      "type": "link",
+      "values": {
+        "url": "https://dl.acm.org/doi/10.1145/2976749.2978408"
+      }
+    },
+    "LINK-a32da0": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/secret-non-single-leader-election/11789"
+      }
+    },
+    "LINK-3d0e87": {
+      "type": "link",
+      "values": {
+        "url": "/staking/dvt/"
+      }
+    },
+    "LINK-8e0228": {
+      "type": "link",
+      "values": {
+        "url": "/staking/pools/"
+      }
+    },
+    "LINK-0eec19": {
+      "type": "link",
+      "values": {
+        "url": "/staking/solo/"
+      }
+    },
+    "LINK-83a37b": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply"
+      }
+    },
+    "LINK-88732e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
+      }
+    },
+    "LINK-599e19": {
+      "type": "link",
+      "values": {
+        "url": "https://www.investopedia.com/terms/e/economiesofscale.asp#"
+      }
+    },
+    "LINK-74e308": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pbs/"
+      }
+    },
+    "LINK-263e7f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/builder-specs"
+      }
+    },
+    "LINK-64d947": {
+      "type": "link",
+      "values": {
+        "url": "https://www.mev.wiki/attack-examples/time-bandit-attack"
+      }
+    },
+    "LINK-6ba02a": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725"
+      }
+    },
+    "LINK-986c79": {
+      "type": "link",
+      "values": {
+        "url": "https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/"
+      }
+    },
+    "LINK-7dcf0c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#attestation"
+      }
+    },
+    "LINK-e2d2a6": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/pos/#fork-choice"
+      }
+    },
+    "LINK-d76bb8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/builder-specs"
+      }
+    },
+    "LINK-79c4e4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md"
+      }
+    },
+    "LINK-156c35": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/validator.md"
+      }
+    },
+    "LINK-46f136": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/flashbots/mev-boost"
+      }
+    },
+    "LINK-8e7d8f": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.flashbots.net/flashbots-auction/overview"
+      }
+    },
+    "LINK-c32754": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/First-price_sealed-bid_auction"
+      }
+    },
+    "LINK-44fb9d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-availability/"
+      }
+    },
+    "LINK-4206c7": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.flashbots.net/"
+      }
+    },
+    "LINK-9dd763": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/flashbots/pm"
+      }
+    },
+    "LINK-131d0a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.mevboost.org/"
+      }
+    },
+    "LINK-d22c22": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.chain.link/what-is-miner-extractable-value-mev/"
+      }
+    },
+    "LINK-dd61ab": {
+      "type": "link",
+      "values": {
+        "url": "https://www.paradigm.xyz/2021/02/mev-and-me"
+      }
+    },
+    "LINK-298c3e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/"
+      }
+    },
+    "LINK-7d35d5": {
+      "type": "link",
+      "values": {
+        "url": "https://samczsun.com/escaping-the-dark-forest/"
+      }
+    },
+    "LINK-7fde10": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752"
+      }
+    },
+    "LINK-0fbfd0": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/bertcmiller/status/1402665992422047747"
+      }
+    },
+    "LINK-54f3a5": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177"
+      }
+    },
+    "LINK-2202a2": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/overviews/mev-boost"
+      }
+    },
+    "LINK-d75bfc": {
+      "type": "link",
+      "values": {
+        "url": "https://writings.flashbots.net/writings/why-run-mevboost/"
+      }
+    },
+    "LINK-36646f": {
+      "type": "link",
+      "values": {
+        "url": "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:55:00.093Z",
+      "status": "success"
+    }
+  }
+}

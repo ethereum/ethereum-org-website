@@ -4,7 +4,7 @@ description: An overview and comparison of the two main smart contract languages
 lang: en
 ---
 
-A great aspect about Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or any [curly-bracket language](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), you can find a language with familiar syntax.
+A great aspect about [Ethereum](/) is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or any [curly-bracket language](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), you can find a language with familiar syntax.
 
 The two most active and maintained languages are:
 
@@ -113,7 +113,6 @@ For more information, [read the Vyper rationale](https://vyper.readthedocs.io/en
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Smart contract development frameworks and tools for Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - learn to secure and hack Vyper smart contracts](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - Vyper vulnerability examples](https://www.vyperexamples.com/reentrancy)
 - [Vyper Hub for development](https://github.com/zcor/vyper-dev)
 - [Vyper greatest hits smart contract examples](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Awesome Vyper curated resources](https://github.com/spadebuilders/awesome-vyper)
@@ -142,7 +141,7 @@ pendingReturns: public(HashMap[address, uint256])
 # Create a simple auction with `_bidding_time`
 # seconds bidding time on behalf of the
 # beneficiary address `_beneficiary`.
-@external
+@deploy
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
@@ -180,7 +179,7 @@ def withdraw():
 @external
 def endAuction():
     # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send ether)
+    # with other contracts (i.e., they call functions or send ether)
     # into three phases:
     # 1. checking conditions
     # 2. performing actions (potentially changing conditions)
@@ -227,7 +226,6 @@ If you're new to Ethereum and haven't done any coding with smart contract langua
 
 - [Yul Documentation](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ Documentation](https://github.com/fuellabs/yulp)
-- [Yul+ Playground](https://yulp.fuel.sh/)
 - [Yul+ Introduction Post](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Example contract {#example-contract-2}
@@ -266,7 +264,7 @@ If you are already well experienced with smart contracts, a full ERC20 implement
 ### Important links {#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
-- [Fe Announcement](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
+- [Fe Announcement](https://blog.fe-lang.org/posts/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021 Roadmap](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Fe Discord Chat](https://discord.com/invite/ywpkAXFjZH)
 - [Fe Twitter](https://twitter.com/official_fe)
@@ -323,5 +321,5 @@ For comparisons of basic syntax, the contract lifecycle, interfaces, operators, 
 
 ## Further reading {#further-reading}
 
-- [Solidity Contracts Library by OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Solidity Contracts Library by OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Example](https://solidity-by-example.org)

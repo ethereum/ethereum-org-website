@@ -1,6 +1,6 @@
 ---
 title: Staking as a service
-description: An overview of how to get started with pooled ETH staking
+description: Learn about staking as a service
 lang: en
 template: staking
 emoji: ":money_with_wings:"
@@ -19,13 +19,13 @@ Staking as a service (“SaaS") represents a category of staking services where 
 
 ## Why stake with a service? {#why-stake-with-a-service}
 
-The Ethereum protocol does not natively support delegation of stake, so these services have been built out to fill this demand. If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, SaaS services allow you to delegate the hard part while you earn native block rewards.
+The [Ethereum](/) protocol does not natively support delegation of stake, so these services have been built out to fill this demand. If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, SaaS services allow you to delegate the hard part while you earn native block rewards.
 
-<CardGrid>
+<Grid>
   <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="saas" />
 
@@ -43,13 +43,13 @@ Below are some available SaaS providers. Use the above indicators to help guide 
 
 <ProductDisclaimer />
 
-### SaaS providers
+### SaaS providers {#saas-providers-2}
 
 <StakingProductsCardGrid category="saas" />
 
 Please note the importance of supporting [client diversity](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> and <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
 
-### Key Generators
+### Key Generators {#key-generators}
 
 <StakingProductsCardGrid category="keyGen" />
 
@@ -74,7 +74,7 @@ Updating withdrawal credentials is a required step to enable withdrawals\*. This
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Staking withdrawals were implemented in the Shanghai/Capella upgrade in April 2023. Stakers need to provide a withdrawal address (if not provided on initial deposit), and reward payments will begin being distributed automatically on a periodic basis every few days.
+Stakers need to provide a withdrawal address (if not provided on initial deposit), and reward payments will begin being distributed automatically on a periodic basis every few days.
 
 Validators can also fully exit as a validator, which will unlock their remaining ETH balance for withdrawal. Accounts that have provided an execution withdrawal address and completed the exiting process will receive their entire balance to the withdrawal address provided during the next validator sweep.
 
@@ -86,7 +86,7 @@ By using an SaaS provider, you are entrusting the operation of your node to some
 
 Upon completion of the slashing/exiting process, these funds will be transferred to the withdrawal address assigned to the validator. This requires providing a withdrawal address to enable. This may have been provided on initial deposit. If not, the validator withdrawal keys will need to be used to sign a message declaring a withdrawal address. If no withdrawal address has been provided, funds will remain locked until provided.
 
-Contact individual SaaS provider for more details on any guarantees or insurance options, and for instructions on how to provide a withdrawal address. If you'd prefer to be in full control of your validator setup, <a href="/staking/solo/">learn more about how to solo stake your ETH</a>.
+Contact individual SaaS provider for more details on any guarantees or insurance options, and for instructions on how to provide a withdrawal address. If you'd prefer to be in full control of your validator setup, [learn more about how to solo stake your ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Further reading {#further-reading}

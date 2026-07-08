@@ -1,11 +1,12 @@
 ---
-title: イーサリアムブロックチェーン上でJavaScriptを使用するために、web3.jsをセットアップする方法
-description: Solidity言語で書かれたトークンとやりとりするには、スマートコントラクトをどのように使用すればよいか
+title: "JavaScriptでイーサリアムブロックチェーンを使用するためのweb3.jsのセットアップ"
+description: "JavaScriptアプリケーションからイーサリアムブロックチェーンと対話するためのweb3.jsライブラリのセットアップおよび構成方法を学びます。"
 author: "jdourlens"
 tags:
-  - "web3.js"
-  - "JavaScript"
+  - web3.js
+  - javascript
 skill: beginner
+breadcrumb: "web3.jsのセットアップ"
 lang: ja
 published: 2020-04-11
 source: EthereumDev
@@ -13,39 +14,39 @@ sourceUrl: https://ethereumdev.io/setup-web3js-to-use-the-ethereum-blockchain-in
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-このチュートリアルでは、イーサリアム・ブロックチェーンでのやりとりで使用するために[web3.js](https://web3js.readthedocs.io/)を導入する方法を学びます。 Web3.jsは、フロントエンドとバックエンドの両方において、ブロックチェーンからデータを読み取ったり、トランザクションを行ったり、スマートコントラクトをデプロイするために使用できます。
+このチュートリアルでは、イーサリアムブロックチェーンと対話するために[web3.js](https://web3js.readthedocs.io/)を使い始める方法を見ていきます。 Web3.jsは、フロントエンドとバックエンドの両方で使用でき、ブロックチェーンからデータを読み取ったり、トランザクションを作成したり、スマートコントラクトをデプロイしたりすることができます。
 
-まず最初に、あなたのプロジェクトにweb3.jsを追加する必要があります。 Webページで使用するには、JSDeliverのようなCDNを使用してライブラリを直接インポートしてください。
+最初のステップは、プロジェクトにweb3.jsを含めることです。 Webページで使用するには、JSDelivrのようなCDNを使用してライブラリを直接インポートできます。
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 ```
 
-バックエンドで使用するライブラリをインストールしたい場合や、ビルドが必要なフロントエンドのプロジェクトの場合は、 次のようにnpmを使用してインストールします。
+バックエンド、またはビルドを使用するフロントエンドプロジェクトで使用するためにライブラリをインストールしたい場合は、npmを使用してインストールできます。
 
 ```bash
 npm install web3 --save
 ```
 
-次に、Node.jsのスクリプトやBrowserifyのフロントエンド・プロジェクトにWeb3.jsをインポートするには、以下のJavaScriptコードを使用します：
+次に、Node.jsスクリプトまたはBrowserifyフロントエンドプロジェクトにWeb3.jsをインポートするには、次のJavaScriptのコードを使用できます。
 
 ```js
 const Web3 = require("web3")
 ```
 
-プロジェクトにライブラリを追加したので、初期化する必要があります。 プロジェクトは、ブロックチェーンと通信できなければなりません。 イーサリアムのほとんどのライブラリは、リモートプロシージャーコール（RPC）を使って[ノード](/developers/docs/nodes-and-clients/)と通信します。 Web3プロバイダを開始するには、プロバイダのURLをコンストラクタとして橋渡しするWeb3のインスタンスを生成します。 お使いのコンピュータで、ノードあるいは[Ganacheインスタンス](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/)を実行中の場合は、以下のようになります：
+プロジェクトにライブラリを含めたので、それを初期化する必要があります。 プロジェクトはブロックチェーンと通信できる必要があります。 ほとんどのイーサリアムライブラリは、RPC呼び出しを通じて[ノード](/developers/docs/nodes-and-clients/)と通信します。 Web3プロバイダーを初期化するには、プロバイダーのURLをコンストラクタとして渡してWeb3インスタンスをインスタンス化します。 コンピュータ上でノードまたは[Ganacheインスタンスを実行している](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/)場合、次のようになります。
 
 ```js
 const web3 = new Web3("http://localhost:8545")
 ```
 
-ホストされているノードに直接アクセスしたい場合は、[ノード・アズ・ア・サービス](/developers/docs/nodes-and-clients/nodes-as-a-service)の一覧から見つけることができます。
+ホストされているノードに直接アクセスしたい場合は、[サービスとしてのノード(nodes as a service)](/developers/docs/nodes-and-clients/nodes-as-a-service)でオプションを見つけることができます。
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
 ```
 
-Web3インスタンスが正しく設定されたかをテストするために、 `getBlockNumber`関数を使用して、最新のブロック番号を取得してみましょう。 この関数は、コールバックをパラメータとして受け取り、ブロック番号を整数として返します。
+Web3インスタンスが正しく構成されたことをテストするために、`getBlockNumber`関数を使用して最新のブロック番号を取得してみます。 この関数はコールバックをパラメータとして受け取り、ブロック番号を整数として返します。
 
 ```js
 var Web3 = require("web3")
@@ -56,7 +57,7 @@ web3.eth.getBlockNumber(function (error, result) {
 })
 ```
 
-このプログラムを実行すると、最新のブロック番号（ブロックチェーンの最上部） が表示されます。 また、`await/async`の関数呼び出しを使用することで、コードにおける入れ子状の呼び出しを回避することができます。
+このプログラムを実行すると、単に最新のブロック番号、つまりブロックチェーンの先頭が出力されます。 また、コード内でコールバックがネストするのを避けるために、`await/async`関数呼び出しを使用することもできます。
 
 ```js
 async function getBlockNumber() {
@@ -68,27 +69,27 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-Web3インスタンス上で利用可能なすべての関数は、 [web3.jsの公式ドキュメンテーション](https://docs.web3js.org/)をご覧ください。
+Web3インスタンスで利用可能なすべての関数は、[公式のweb3.jsドキュメント](https://docs.web3js.org/)で確認できます。
 
-ほとんどのWeb3ライブラリでは、結果を送り返すノードに対してバックグラウンドでJSON RPCを呼び出すため、非同期で処理を行います。
+バックグラウンドでライブラリがノードに対してJSON-RPC呼び出しを行い、その結果を返すため、ほとんどのWeb3ライブラリは非同期です。
 
 <Divider />
 
-ブラウザで作業している場合、一部のウォレットは、Web3インスタンスを直接注入します。トランザクションを行うためにユーザーのイーサリアムアドレスとやり取りを行う予定がある場合は特に、可能な限り`await/async`関数呼び出しを使用するようにしてください。
+ブラウザで作業している場合、一部のウォレットはWeb3インスタンスを直接挿入します。特にユーザーのイーサリアムアドレスと対話してトランザクションを作成する予定がある場合は、可能な限りそれを使用するようにしてください。
 
-以下のコードスニペットは、MetaMaskウォレットが利用可能か確認し、利用できる場合は有効化するものです。 その後、あなたはユーザーの残高を確認できるようになり、各ユーザーは、あなたが彼らにイーサリアムブロックチェーン上で実行させたいトランザクションを各自で検証できるようになります：
+以下は、メタマスクウォレットが利用可能かどうかを検出し、利用可能な場合はそれを有効にしようとするスニペットです。 これにより、後でユーザーの残高を読み取ったり、イーサリアムブロックチェーン上でユーザーに実行させたいトランザクションを検証させたりできるようになります。
 
 ```js
 if (window.ethereum != null) {
   state.web3 = new Web3(window.ethereum)
   try {
-    // Request account access if needed
+    // 必要に応じてアカウントへのアクセスを要求する
     await window.ethereum.enable()
-    // Accounts now exposed
+    // アカウントが公開されました
   } catch (error) {
-    // User denied account access...
+    // ユーザーがアカウントへのアクセスを拒否しました...
   }
 }
 ```
 
-他にも[Ethers.js](https://docs.ethers.io/) など、 web3.js のようにイーサリアム・ブロックチェーンとやりとりするライブラリがあります。 次のチュートリアルでは、[ブロックチェーンに新たに追加されたブロックを簡単にリッスンし、その内容を確認する方法](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/)を紹介します。
+web3.jsの代替として[Ethers.js](https://docs.ethers.io/)のようなものも存在し、一般的に使用されています。 次のチュートリアルでは、[ブロックチェーン上の新しい受信ブロックを簡単にリッスンし、その内容を確認する方法](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/)を見ていきます。

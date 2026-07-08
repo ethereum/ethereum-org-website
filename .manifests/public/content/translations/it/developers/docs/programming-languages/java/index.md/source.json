@@ -1,0 +1,430 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/programming-languages/java/index.md",
+  "generatedAt": "2026-06-19T18:49:02.009Z",
+  "rootHash": "8c2d8149c246",
+  "tree": {
+    "contentHash": "49d597d2b809",
+    "anchorHash": "fbce47465573",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "f9ab7ab2c95e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "edd1378f9ae5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:incomplete": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "prose:0": {
+        "contentHash": "ee5c9f9002cb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "getting-started-with-smart-contracts-and-solidity": {
+        "contentHash": "9f7b37643b22",
+        "anchorHash": "a48afc0c5e36",
+        "labelHash": "7cd37d52b081",
+        "children": {
+          "_label": {
+            "contentHash": "7cd37d52b081",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "66168bba37d6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f8af7777bb8f",
+            "anchorHash": "da6930f1ec2d"
+          },
+          "prose:7": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "c7c04a0b0432",
+            "anchorHash": "10260c8eaaaa"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "f01579475e2d",
+            "anchorHash": "5458a066d411"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "9254611895b7",
+            "anchorHash": "7365a1c17c2a"
+          },
+          "prose:10": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "9ead8cce16b3",
+            "anchorHash": "a9c9e19634cc"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "bd76d1850071",
+            "anchorHash": "6586070dede3"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5"
+        ]
+      },
+      "working-with-ethereum-clients": {
+        "contentHash": "0418dd740943",
+        "anchorHash": "7ac4892bd1bc",
+        "labelHash": "a15cd2854203",
+        "children": {
+          "_label": {
+            "contentHash": "a15cd2854203",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:13": {
+            "contentHash": "978b8a879c35",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "43557e1b9dec",
+            "anchorHash": "3285da875187"
+          },
+          "prose:14": {
+            "contentHash": "9193dcb3abad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "8ebb3fc50ddb",
+            "anchorHash": "082bc3d47d23"
+          },
+          "prose:15": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "5f6b79220b7b",
+            "anchorHash": "7127ff794e50"
+          },
+          "prose:16": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "256c130fbdd1",
+            "anchorHash": "755e6e166373"
+          },
+          "prose:17": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "15c1688827dc",
+            "anchorHash": "7df1bd194881"
+          },
+          "prose:18": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "5e5f9e6248fd",
+            "anchorHash": "1658a35bff7b"
+          },
+          "prose:19": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "bc1ae910ce01",
+            "anchorHash": "81d6bd8b1378"
+          },
+          "prose:20": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "587b0630633b",
+            "anchorHash": "208b0dd020ea"
+          },
+          "prose:21": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "9ab3f21cf565",
+            "anchorHash": "da5e176df702"
+          },
+          "prose:22": {
+            "contentHash": "8729fba88de1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "1086da4ef974",
+            "anchorHash": "94c91049568d"
+          },
+          "prose:23": {
+            "contentHash": "c39dc5268d9e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "6f85e0c825d0",
+            "anchorHash": "ef02219cc317"
+          },
+          "prose:24": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "7b364c02ee4b",
+            "anchorHash": "920eb7bdda9d"
+          },
+          "prose:25": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:12": {
+            "contentHash": "2f9e0996fa7d",
+            "anchorHash": "ea1d85614b80"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:13",
+          "link:0",
+          "prose:14",
+          "link:1",
+          "prose:15",
+          "link:2",
+          "prose:16",
+          "link:3",
+          "prose:17",
+          "link:4",
+          "prose:18",
+          "link:5",
+          "prose:19",
+          "link:6",
+          "prose:20",
+          "link:7",
+          "prose:21",
+          "link:8",
+          "prose:22",
+          "link:9",
+          "prose:23",
+          "link:10",
+          "prose:24",
+          "link:11",
+          "prose:25",
+          "link:12"
+        ]
+      },
+      "intermediate-articles": {
+        "contentHash": "4a80dd4d381a",
+        "anchorHash": "0c70466f96a4",
+        "labelHash": "a2555da8e22a",
+        "children": {
+          "_label": {
+            "contentHash": "a2555da8e22a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "481851ac1b9b",
+            "anchorHash": "2e75a693e4a7"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d80abda55b55",
+            "anchorHash": "87ce71dc0865"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "c03cc58421c2",
+            "anchorHash": "a669f380f839"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      },
+      "advanced-use-patterns": {
+        "contentHash": "d83b0ebc74b5",
+        "anchorHash": "f8a1bd1c0ce3",
+        "labelHash": "d791bf9455f8",
+        "children": {
+          "_label": {
+            "contentHash": "d791bf9455f8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "680ea0318530",
+            "anchorHash": "4f2585d392d9"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "java-projects-and-tools": {
+        "contentHash": "db783fe41a09",
+        "anchorHash": "e4b2ad048845",
+        "labelHash": "3d27596c0c9c",
+        "children": {
+          "_label": {
+            "contentHash": "3d27596c0c9c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "fb7ddb7cf9c7",
+            "anchorHash": "3285da875187"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "15988f8a50f1",
+            "anchorHash": "94c91049568d"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "3a7096776df8",
+            "anchorHash": "3d020c124ee3"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "cacaf04e8930",
+            "anchorHash": "4a9d96265668"
+          },
+          "prose:9": {
+            "contentHash": "80bfbe8295fe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "c7c04a0b0432",
+            "anchorHash": "10260c8eaaaa"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4"
+        ]
+      },
+      "java-community-contributors": {
+        "contentHash": "a7ef20dff394",
+        "anchorHash": "71ce98b97fef",
+        "labelHash": "d521b4b97da4",
+        "children": {
+          "_label": {
+            "contentHash": "d521b4b97da4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "4911e0596ecd",
+            "anchorHash": "bc49692bfd6a"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "65224649b058",
+            "anchorHash": "5937bf70eea6"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:incomplete",
+      "prose:0",
+      "getting-started-with-smart-contracts-and-solidity",
+      "working-with-ethereum-clients",
+      "intermediate-articles",
+      "advanced-use-patterns",
+      "java-projects-and-tools",
+      "java-community-contributors"
+    ]
+  },
+  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+}

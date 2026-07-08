@@ -1,10 +1,9 @@
 ---
-title: Translation program playbook
+title: Translation Program playbook
+metaTitle: Translation program playbook
 lang: en
 description: A collection of tips and important considerations for setting up a translation program
 ---
-
-# Translation Program Playbook {#translation-program-playbook}
 
 English is one of the most spoken languages in the world and is by far the world’s most studied language. As English is the most common language used on the internet – especially on social media – and multilingual programming languages are scarce, the majority of content in the blockchain space is natively written in English.
 
@@ -302,9 +301,9 @@ This could be as simple as adding a banner or pop-up with a CTA to your product 
 
 If you have a Discord server or Telegram channel, it is easy to use that for outreach, communication with your translators, and acknowledging your contributors.
 
-Platforms like Twitter can also be helpful for onboarding new community members and publicly acknowledging your contributors.
+Platforms like X (formerly Twitter) can also be helpful for onboarding new community members and publicly acknowledging your contributors.
 
-The Linux Foundation has created an extensive report on the [2020 FOSS open-source contributor survey](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf), analyzing open-source contributors and their motivations.
+The Linux Foundation has created an extensive [Report on the 2020 FOSS contributor survey](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf), analyzing open-source contributors and their motivations.
 
 ## Conclusion {#conclusion}
 

@@ -1,0 +1,530 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/eip-1271-smart-contract-signatures/index.md",
+  "generatedAt": "2026-06-17T23:26:40.463Z",
+  "rootHash": "0580aecbc61e",
+  "tree": {
+    "contentHash": "d96f43b9a118",
+    "anchorHash": "015f8429e7e7",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "bc7e47cde2bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "b4db15f897de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bf06683ea0ce"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "67a6373ecc24"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94b038409698"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "da764a5f494a"
+      },
+      "prose:2": {
+        "contentHash": "b344d80e24a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "b21c4d5c06d4",
+        "anchorHash": "9c6865410dbe"
+      },
+      "prose:3": {
+        "contentHash": "2e8e0879dfda",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "4f9f0dabcd26",
+        "anchorHash": "85d7b98bbfb6"
+      },
+      "prose:4": {
+        "contentHash": "9dce6de25570",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-a-signature": {
+        "contentHash": "b2aac3599b56",
+        "anchorHash": "89f3c0a7df3f",
+        "labelHash": "296729167271",
+        "children": {
+          "_label": {
+            "contentHash": "296729167271",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "8f80f5f14dd0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "921d6ceb35cd"
+          },
+          "prose:3": {
+            "contentHash": "b01e698a5d63",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "921d6ceb35cd"
+          },
+          "prose:4": {
+            "contentHash": "e3a347040003",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "inline-code:0",
+          "prose:3",
+          "inline-code:1",
+          "prose:4"
+        ]
+      },
+      "why-does-eip-1271-exist": {
+        "contentHash": "59b1b540faff",
+        "anchorHash": "314573d00d9e",
+        "labelHash": "bd08345d9775",
+        "children": {
+          "_label": {
+            "contentHash": "bd08345d9775",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "9bdfe695c643",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "459a15904b01",
+            "anchorHash": "fc296f82f0ac"
+          },
+          "prose:3": {
+            "contentHash": "501484f1e030",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "34de610f0fda",
+            "anchorHash": "c6bd07731908"
+          },
+          "prose:4": {
+            "contentHash": "ba74516ca830",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "how-does-eip-1271-work": {
+        "contentHash": "a1d054d2af8a",
+        "anchorHash": "2c56230375c9",
+        "labelHash": "11a0a83cff5c",
+        "children": {
+          "_label": {
+            "contentHash": "11a0a83cff5c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "9568e8524250",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20580ded3478"
+          },
+          "prose:3": {
+            "contentHash": "9edd6a1526e9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20580ded3478"
+          },
+          "prose:4": {
+            "contentHash": "fe5ff3275298",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "interface": {
+            "contentHash": "bbf08a4a67f7",
+            "anchorHash": "fae5d0d2a629",
+            "labelHash": "c26b3ed4ce70",
+            "children": {
+              "_label": {
+                "contentHash": "c26b3ed4ce70",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "40a28d86fc7c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "757ab5ddb7e4"
+              },
+              "prose:2": {
+                "contentHash": "e894a6fa5373",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-comment:4": {
+                "contentHash": "7fe327758877",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "code-fence:5": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "96c66a43ab91"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "inline-code:0",
+              "prose:2",
+              "code-comment:4",
+              "code-fence:5"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "inline-code:0",
+          "prose:3",
+          "inline-code:1",
+          "prose:4",
+          "interface"
+        ]
+      },
+      "example-eip-1271-implementation-safe": {
+        "contentHash": "70726db7c76d",
+        "anchorHash": "c4de5e5d9990",
+        "labelHash": "c920ad0e6876",
+        "children": {
+          "_label": {
+            "contentHash": "c920ad0e6876",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:9": {
+            "contentHash": "ce77ed060867",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20580ded3478"
+          },
+          "prose:10": {
+            "contentHash": "100aec84d303",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20580ded3478"
+          },
+          "link:2": {
+            "contentHash": "dec38000c5f8",
+            "anchorHash": "a8e04f3880d2"
+          },
+          "prose:11": {
+            "contentHash": "125b6e95af10",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "0b2dac694987",
+            "anchorHash": "0f4e7e1f15d8"
+          },
+          "prose:12": {
+            "contentHash": "4ec9e8024640",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e06f464630a7"
+          },
+          "prose:13": {
+            "contentHash": "2412a1d36dda",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:5": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20580ded3478"
+          },
+          "prose:14": {
+            "contentHash": "6c203a216f22",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "0ad373b0239b",
+            "anchorHash": "22c47bb08e7f"
+          },
+          "prose:15": {
+            "contentHash": "eeed6305ec01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:7": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a54942c8e365"
+          },
+          "prose:16": {
+            "contentHash": "c372b6e9ef6e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:8": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20580ded3478"
+          },
+          "prose:17": {
+            "contentHash": "67fdd0c747a5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:9",
+          "inline-code:0",
+          "prose:10",
+          "inline-code:1",
+          "link:2",
+          "prose:11",
+          "link:3",
+          "prose:12",
+          "inline-code:4",
+          "prose:13",
+          "inline-code:5",
+          "prose:14",
+          "link:6",
+          "prose:15",
+          "inline-code:7",
+          "prose:16",
+          "inline-code:8",
+          "prose:17"
+        ]
+      },
+      "what-exactly-is-the-hash-parameter-why-not-pass-the-whole-message": {
+        "contentHash": "2cd951acdd44",
+        "anchorHash": "a63a51704b37",
+        "labelHash": "39682c5935fb",
+        "children": {
+          "_label": {
+            "contentHash": "39682c5935fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "4632fc2096bb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20580ded3478"
+          },
+          "prose:6": {
+            "contentHash": "535686c94c21",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "8ba5c3ad6ffd",
+            "anchorHash": "9c6865410dbe"
+          },
+          "prose:7": {
+            "contentHash": "40edc8458592",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "757ab5ddb7e4"
+          },
+          "prose:8": {
+            "contentHash": "f863329a93a5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20580ded3478"
+          },
+          "prose:9": {
+            "contentHash": "1ad7b380966d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "dd53b8b7d168",
+            "anchorHash": "3922f79936bc"
+          },
+          "prose:10": {
+            "contentHash": "c4dfff961929",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "previous-eip-1271-specifications": {
+            "contentHash": "d2119f44816a",
+            "anchorHash": "8d3308da547d",
+            "labelHash": "d04a64bd3c5a",
+            "children": {
+              "_label": {
+                "contentHash": "d04a64bd3c5a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "869c87359cd0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "20580ded3478"
+              },
+              "prose:6": {
+                "contentHash": "0c4c17bbbbbf",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "277089d91c0b"
+              },
+              "prose:7": {
+                "contentHash": "243ce7caa5b9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "71d982e3051e"
+              },
+              "prose:8": {
+                "contentHash": "ac5f74494e42",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:3": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ab530a13e459"
+              },
+              "prose:9": {
+                "contentHash": "c69e32f9a276",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "48d048fac016",
+                "anchorHash": "5615120da039"
+              },
+              "prose:10": {
+                "contentHash": "2140786d3f86",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "inline-code:0",
+              "prose:6",
+              "inline-code:1",
+              "prose:7",
+              "inline-code:2",
+              "prose:8",
+              "inline-code:3",
+              "prose:9",
+              "link:4",
+              "prose:10"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "inline-code:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "inline-code:2",
+          "prose:8",
+          "inline-code:3",
+          "prose:9",
+          "link:4",
+          "prose:10",
+          "previous-eip-1271-specifications"
+        ]
+      },
+      "how-should-eip-1271-be-implemented-in-my-own-contracts": {
+        "contentHash": "8a6e13356586",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "1bb5ffe80946",
+        "children": {
+          "_label": {
+            "contentHash": "1bb5ffe80946",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c15ed104b15e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "conclusion": {
+        "contentHash": "c06086908c3e",
+        "anchorHash": "d9e7bb3b36e4",
+        "labelHash": "89db2ad881f2",
+        "children": {
+          "_label": {
+            "contentHash": "89db2ad881f2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "b21c4d5c06d4",
+            "anchorHash": "9c6865410dbe"
+          },
+          "prose:1": {
+            "contentHash": "14e718b068e6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "link:0",
+          "prose:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:lang",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:published",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "what-is-a-signature",
+      "why-does-eip-1271-exist",
+      "how-does-eip-1271-work",
+      "example-eip-1271-implementation-safe",
+      "what-exactly-is-the-hash-parameter-why-not-pass-the-whole-message",
+      "how-should-eip-1271-be-implemented-in-my-own-contracts",
+      "conclusion"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

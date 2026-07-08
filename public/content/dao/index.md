@@ -4,13 +4,13 @@ metaTitle: What is a DAO? | Decentralized Autonomous Organization
 description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: A representation of a DAO voting on a proposal.
-summaryPoint1: Member-owned communities without centralized leadership.
-summaryPoint2: A safe way to collaborate with internet strangers.
-summaryPoint3: A safe place to commit funds to a specific cause.
+summaryPoints:
+  - "Member-owned communities without centralized leadership."
+  - "A safe way to collaborate with internet strangers."
+  - "A safe place to commit funds to a specific cause."
 ---
 
 ## What are DAOs? {#what-are-daos}
@@ -19,7 +19,7 @@ A DAO is a collectively-owned organization working towards a shared mission.
 
 DAOs allow us to work with like-minded folks around the globe without trusting a benevolent leader to manage the funds or operations. There is no CEO who can spend funds on a whim or CFO who can manipulate the books. Instead, blockchain-based rules baked into the code define how the organization works and how funds are spent.
 
-They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organization has a voice, and everything happens transparently [on-chain](/glossary/#on-chain).
+They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organization has a voice, and everything happens transparently [onchain](/glossary/#onchain).
 
 ## Why do we need DAOs? {#why-dao}
 
@@ -45,11 +45,11 @@ To help this make more sense, here's a few examples of how you could use a DAO:
 - **Collective ownership** – you could purchase physical or digital assets and members can vote on how to use them.
 - **Ventures and grants** – you could create a venture fund that pools investment capital and votes on ventures to back. Repaid money could later be redistributed amongst DAO-members.
 
-<YouTube id="zTStDvUtQWc" />
+<VideoWatch slug="dao-build-next-great-city" />
 
 ## How do DAOs work? {#how-daos-work}
 
-The backbone of a DAO is its [smart contract](/glossary/#smart-contract), which defines the rules of the organization and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead, the group makes decisions collectively, and payments are automatically authorized when votes pass.
+The backbone of a DAO is its [smart contract](/glossary/#smart-contract), which defines the rules of the organization and holds the group's treasury. Once the contract is live on [Ethereum](/), no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead, the group makes decisions collectively, and payments are automatically authorized when votes pass.
 
 This is possible because smart contracts are tamper-proof once they go live on Ethereum. You can't just edit the code (the DAOs rules) without people noticing because everything is public.
 
@@ -74,15 +74,15 @@ Delegation is like the DAO version of representative democracy. Token holders de
 
 [ENS](https://claim.ens.domains/delegate-ranking) – ENS holders can delegate their votes to engaged community members to represent them.
 
-### Automatic transaction governance {#governance-example}
+### Automatic transaction governance {#governance-example-2}
 
 In many DAOs, transactions will be automatically executed if a quorum of members votes affirmative.
 
-#### A famous example {#governance-example}
+#### A famous example {#governance-example-3}
 
 [Nouns](https://nouns.wtf) – In Nouns DAO, a transaction is automatically executed if a quorum of votes is met and a majority votes affirmative, as long as it is not vetoed by the founders.
 
-### Multisig governance {#governance-example}
+### Multisig governance {#governance-example-4}
 
 While DAOs may have thousands of voting members, funds can live in a [wallet](/glossary/#wallet) shared by 5-20 active community members who are trusted and usually doxxed (public identities known to the community). After a vote, the [multisig](/glossary/#multisig) signers execute the will of the community.
 
@@ -92,7 +92,7 @@ In 1977, Wyoming invented the LLC, which protects entrepreneurs and limits their
 
 ### A famous example {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO used Wyoming's DAO law to buy 40 acres of land near Yellowstone National Park.
+[CityDAO](https://citizen.citydao.io/) – CityDAO used Wyoming's DAO law to buy 40 acres of land near Yellowstone National Park.
 
 ## DAO membership {#dao-membership}
 
@@ -114,19 +114,15 @@ Share-based DAOs are more permissioned, but still quite open. Any prospective me
 
 _Typically used for more closer-knit, human-centric organizations like charities, worker collectives, and investment clubs. Can also govern protocols and tokens as well._
 
-#### A famous example {#share-example}
-
-[MolochDAO](http://molochdao.com/) – MolochDAO is focused on funding Ethereum projects. They require a proposal for membership so the group can assess whether you have the necessary expertise and capital to make informed judgments about potential grantees. You can't just buy access to the DAO on the open market.
-
 ### Reputation-based membership {#reputation-based-membership}
 
-Reputation represents proof of participation and grants voting power in the DAO. Unlike token or share-based membership, reputation-based DAOs don't transfer ownership to contributors. Reputation cannot be bought, transferred or delegated; DAO members must earn reputation through participation. On-chain voting is permissionless and prospective members can freely submit proposals to join the DAO and request to receive reputation and tokens as a reward in exchange for their contributions.
+Reputation represents proof of participation and grants voting power in the DAO. Unlike token or share-based membership, reputation-based DAOs don't transfer ownership to contributors. Reputation cannot be bought, transferred or delegated; DAO members must earn reputation through participation. Onchain voting is permissionless and prospective members can freely submit proposals to join the DAO and request to receive reputation and tokens as a reward in exchange for their contributions.
 
 _Typically used for decentralized development and governance of protocols and [dapps](/glossary/#dapp), but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc._
 
 #### A famous example {#reputation-example}
 
-[DXdao](https://DXdao.eth.limo) – DXdao was a global sovereign collective building and governing decentralized protocols and applications since 2019. It leveraged reputation-based governance and [holographic consensus](/glossary/#holographic-consensus) to coordinate and manage funds, meaning no one could buy their way into influencing its future or governance. 
+[DXdao](https://DXdao.eth.limo) – DXdao was a global sovereign collective building and governing decentralized protocols and applications since 2019. It leveraged reputation-based governance and [holographic consensus](/glossary/#holographic-consensus) to coordinate and manage funds, meaning no one could buy their way into influencing its future or governance.
 
 ## Join / start a DAO {#join-start-a-dao}
 
@@ -134,21 +130,22 @@ _Typically used for decentralized development and governance of protocols and [d
 
 - [Ethereum community DAOs](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus's list of DAOs](https://app.daohaus.club/explore)
-- [Tally.xyz list of DAOs](https://www.tally.xyz)
+- [Tally.xyz list of DAOs](https://www.tally.xyz/explore)
+- [DeGov.AI list of DAOs](https://apps.degov.ai/)
 
 ### Start a DAO {#start-a-dao}
 
 - [Summon a DAO with DAOHaus](https://app.daohaus.club/summon)
-- [Start a Governor DAO with Tally](https://www.tally.xyz/add-a-dao)
+- [Start a Governor DAO with Tally](https://www.tally.xyz/get-started)
 - [Create an Aragon-powered DAO](https://aragon.org/product)
 - [Start a colony](https://colony.io/)
-- [Create a DAO with DAOstack's holographic consensus](https://alchemy.daostack.io/daos/create)
+- [Launch a DAO with the DeGov Launcher](https://docs.degov.ai/integration/deploy)
 
 ## Further reading {#further-reading}
 
 ### DAO Articles {#dao-articles}
 
-- [What's a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [What's a DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

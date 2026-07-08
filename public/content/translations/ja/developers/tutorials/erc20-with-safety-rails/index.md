@@ -1,62 +1,62 @@
 ---
-title: ERC-20の安全策
-description: つまらないミスをするのを避ける方法
-author: Ori Pomerantz
+title: "安全対策付きのERC-20"
+description: "ユーザーの単純なミスを防ぐ方法"
+author: "オリ・ポメランツ"
 lang: ja
-tags:
-  - "ERC-20"
+tags: ["erc-20"]
 skill: beginner
+breadcrumb: "ERC-20の安全性"
 published: 2022-08-15
 ---
 
 ## はじめに {#introduction}
 
-イーサリアムの素晴らしい点の1つとして、トランザクションを変更したり取り消したりできる中央機関が存在しないことがあります。 反対に、イーサリアムでは、ユーザーの間違いや不正なトランザクションを取り消す権限を持つ中央機関が存在しないことがデメリットになりえます。 この記事では、[ERC-20](/developers/docs/standards/tokens/erc-20/)トークンでユーザーがしてしまうよくあるミスや、そのミスを防ぐトークンの作成方法について説明します。また、中央機関に権限を与えることについても説明します (例えば、アカウントの凍結など) 。
+イーサリアムの素晴らしい点の1つは、トランザクションを変更したり取り消したりできる中央管理者が存在しないことです。イーサリアムの大きな問題の1つは、ユーザーのミスや不正なトランザクションを取り消す権限を持つ中央管理者が存在しないことです。この記事では、ユーザーが[ERC-20](/developers/docs/standards/tokens/erc-20/)トークンで犯しがちな一般的なミスについて学びます。また、ユーザーがそれらのミスを回避するのに役立つERC-20コントラクトを作成する方法や、中央管理者に（アカウントの凍結などの）一定の権限を与える方法についても学びます。
 
-注意: [OpenZeppelin ERC-20トークンコントラクト](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)を使いますが、このコントラクト自体について詳しくは説明しません。 ERC-20トークンコントラクトの詳細については、[こちら](/developers/tutorials/erc20-annotated-code)をご覧ください。
+なお、この記事では[オープンツェッペリンのERC-20トークンコントラクト](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)を使用しますが、その詳細については説明しません。詳細な情報は[こちら](/developers/tutorials/erc20-annotated-code)で確認できます。
 
-全てのソースコードを表示したい場合は、次のようにします。
+完全なソースコードを確認したい場合は、以下の手順に従ってください。
 
 1. [Remix IDE](https://remix.ethereum.org/)を開きます。
-2. クローンGitHubアイコン (![clone github icon](icon-clone.png)) をクリックします。
-3. GitHubリポジトリ`https://github.com/qbzzt/20220815-erc20-safety-rails`をクローンします。
-4. 「**contracts > erc20-safety-rails.sol**」を開きます。
+2. GitHubのクローンアイコン（![clone github icon](icon-clone.png)）をクリックします。
+3. GitHubリポジトリ `https://github.com/qbzzt/20220815-erc20-safety-rails` をクローンします。
+4. **contracts > erc20-safety-rails.sol** を開きます。
 
 ## ERC-20コントラクトの作成 {#creating-an-erc-20-contract}
 
-安全策を講じるための機能を追加する前に、ERC-20コントラクトが必要になります。 この記事では、[OpenZeppelin Contracts Wizard](https://docs.openzeppelin.com/contracts/4.x/wizard)を使って加えます。 もう一つブラウザで開いて、次の手順に従ってください。
+安全対策の機能を追加する前に、ERC-20コントラクトが必要です。この記事では、[オープンツェッペリンのContracts Wizard](https://docs.openzeppelin.com/contracts/5.x/wizard)を使用します。別のブラウザで開き、以下の手順に従ってください。
 
-1. **ERC20**を選びます。
-2. 次の設定値を入力します。
+1. **ERC20** を選択します。
+2. 以下の設定を入力します。
 
-   | パラメータ          | 値                |
+   | パラメータ | 値 |
    | -------------- | ---------------- |
-   | 名前             | SafetyRailsToken |
-   | Symbol         | SAFE             |
-   | Premint        | 1000             |
-   | 機能             | なし               |
-   | Access Control | Ownable          |
-   | Upgradability  | なし               |
+   | Name | SafetyRailsToken |
+   | Symbol | SAFE |
+   | Premint | 1000 |
+   | Features | None |
+   | Access Control | Ownable |
+   | Upgradability | None |
 
-3. 上にスクロールして (Remixを使う場合は) **Open in Remix**をクリックしてください。別の環境を使う場合は、**ダウンロード**をクリックしてください。 ここでは、Remixを使用していることとします。他の環境を使用する場合は、適宜変更してください。
-4. これで完全なERC-20コントラクトがあります。 「`.deps` > `npm`」でインポートしたコードを展開して確認できます。
-5. コントラクトをコンパイル、デプロイ、そして操作してERC-20 コントラクトとして機能していることを確認します。 Remixの使用方法を学びたいならば、[このチュートリアルが役立ちます](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth)。
+3. 上にスクロールして、**Open in Remix**（Remixの場合）をクリックするか、別の環境を使用する場合は**Download**をクリックします。ここではRemixを使用していると想定して進めますが、別の環境を使用する場合は適宜変更してください。
+4. これで、完全に機能するERC-20コントラクトが完成しました。`.deps` > `npm` を展開すると、インポートされたコードを確認できます。
+5. コンパイル、デプロイし、コントラクトを操作して、ERC-20コントラクトとして機能することを確認します。Remixの使い方がわからない場合は、[こちらのチュートリアル](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth)を参照してください。
 
-## よくあるミス {#common-mistakes}
+## 一般的なミス {#common-mistakes}
 
-### ミスのタイプ {#the-mistakes}
+### ミスの内容 {#the-mistakes}
 
-ユーザーは、間違ったアドレスへトークンを送信してしまうことがあります。 なぜ間違って送ってしまった理由を知ることはできませんが、よく発生するミスのタイプで頻繁に検出できる次のものがあります。
+ユーザーは時折、間違ったアドレスにトークンを送金してしまうことがあります。ユーザーが何を意図していたのか心を読んで知ることはできませんが、頻繁に発生し、簡単に検出できる2つのタイプのエラーがあります。
 
-1. トークンをコントラクト自身のアドレスに送信する。 例えば、[OptimismのOPトークン](https://optimism.mirror.xyz/qvd0WfuLKnePm1Gxb9dpGchPf5uDz5NSMEFdgirDS4c)では、[12万](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042#tokentxns)を超えるOPトークンが2か月もしないうちに累積していることがわかります。 これは、人々の膨大な資産がただ単に失われていることを表しています。
+1. コントラクト自身のアドレスにトークンを送金してしまうこと。例えば、[オプティミズムのOPトークン](https://optimism.mirror.xyz/qvd0WfuLKnePm1Gxb9dpGchPf5uDz5NSMEFdgirDS4c)は、2か月足らずで[120,000以上](https://optimism.blockscout.com/address/0x4200000000000000000000000000000000000042)のOPトークンを蓄積してしまいました。これは、おそらく人々が単に失ってしまったかなりの額の資産を表しています。
 
-2. トークンを[外部所有アカウント](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs)や[スマートコントラクト](/developers/docs/smart-contracts)に相当しない空アドレスへ送信する。 このミスがどのくらいの頻度で発生するかについての統計はありません。[1件のインシデントで2千万トークンを失っているものもあります](https://gov.optimism.io/t/message-to-optimism-community-from-Wintermute/2595)。
+2. 空のアドレス、つまり[外部所有アカウント（EOA）](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs)や[スマート・コントラクト](/developers/docs/smart-contracts)に対応していないアドレスにトークンを送金してしまうこと。これがどのくらいの頻度で発生するかについての統計はありませんが、[あるインシデントでは20,000,000トークンが失われる可能性がありました](https://gov.optimism.io/t/message-to-optimism-community-from-wintermute/2595)。
 
-### 送金を防止する {#preventing-transfers}
+### 送金の防止 {#preventing-transfers}
 
-OpenZeppelinのERC-20コントラクトには、[`_beforeTokenTransfer`というフック](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368)があり、トークンを送金する前に呼び出されます。 デフォルトでは、このフックは何も行いません。しかし、独自の機能をフックに掛けることで、問題がある場合に元に戻すなどのチェックが可能です。
+オープンツェッペリンのERC-20コントラクトには、トークンが送金される前に呼び出される[フック `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368)が含まれています。デフォルトではこのフックは何も行いませんが、問題がある場合にリバートするチェックなど、独自の機能を追加することができます。
 
-このフックを使用するには、コンストラクタの後に次の関数を加えます。
+このフックを使用するには、コンストラクタの後に以下の関数を追加します。
 
 ```solidity
     function _beforeTokenTransfer(address from, address to, uint256 amount)
@@ -67,42 +67,42 @@ OpenZeppelinのERC-20コントラクトには、[`_beforeTokenTransfer`という
     }
 ```
 
-Solidityにあまり詳しくない人ならば、次の関数の箇所は馴染みがないかもしれません。
+Solidityにあまり詳しくない場合、この関数のいくつかの部分は新しく感じるかもしれません。
 
 ```solidity
         internal virtual
 ```
 
-上記の`virtual`キーワードでは、`ERC20`から機能を継承し、関数をオーバーライドして、他のコントラクトも同様にこのコントラクトの機能を継承して、この関数をオーバーライドできるようにしています。
+`virtual` キーワードは、私たちが `ERC20` から機能を継承してこの関数をオーバーライドしたのと同じように、他のコントラクトが私たちから継承してこの関数をオーバーライドできることを意味します。
 
 ```solidity
         override(ERC20)
 ```
 
-ERC20トークンの`_beforeTokenTransfer`の定義を[オーバーライド](https://docs.soliditylang.org/en/v0.8.15/contracts.html#function-overriding)することを明示的に指定しなければなりません。 一般的なセキュリティの観点において、暗黙的な定義よりも明示的な定義の方がはるかに良いとされています。記述されていれば、それが実行されることを忘れないからです。 オーバーライドするスーパークラスの `_beforeTokenTransfer`を指定しなければならないのも同様の理由です。
+ERC20トークンの `_beforeTokenTransfer` の定義を[オーバーライド](https://docs.soliditylang.org/en/v0.8.15/contracts.html#function-overriding)していることを明示的に指定する必要があります。一般的に、セキュリティの観点からは、暗黙的な定義よりも明示的な定義の方がはるかに優れています。目の前にあれば、何かをしたことを忘れることはありません。これが、どのスーパークラスの `_beforeTokenTransfer` をオーバーライドしているかを指定する必要がある理由でもあります。
 
 ```solidity
         super._beforeTokenTransfer(from, to, amount);
 ```
 
-上記は、継承しているコントラクトから継承元のコントラクトの `_beforeTokenTransfer`関数を呼び出しています。 この場合は、`ERC20`のみであり、`Ownable`にはこのフックがありません。 現時点では、`ERC20._beforeTokenTransfer`は何も行いません。コントラクトはデプロイ後に変更できないため、再デプロイによって将来に機能が追加された場合に備えて呼び出しています。
+この行は、継承元のコントラクトのうち、このフックを持つコントラクトの `_beforeTokenTransfer` 関数を呼び出します。この場合、それは `ERC20` のみであり、`Ownable` にはこのフックはありません。現在 `ERC20._beforeTokenTransfer` は何も行いませんが、将来機能が追加された場合に備えて呼び出します（コントラクトはデプロイ後に変更できないため、その場合はコントラクトを再デプロイすることになります）。
 
 ### 要件のコーディング {#coding-the-requirements}
 
-次の要件を関数に対して加えたいと思います。
+この関数に以下の要件を追加したいと思います。
 
-- `to`アドレスをERC-20コントラクト自体のアドレスである`address(this)`と等しくできないようにすること。
-- `to`アドレスを空にすることができないこと。また、次のいずれかであること。
-  - 外部所有アカウント (EOA) 。 アドレスがEOAであるかどうかを直接確認することはできませんが、アドレスのETH残高を確認することはできます。 EOAは、たとえ使用されなくなったとしても、ほとんどの場合、残高が残っています。これは、最後のweiまで使うのは困難だからです。
-  - スマートコントラクト。 アドレスがスマートコントラクトであるかどうかのテストは少し大変です。 [`EXTCODESIZE`](https://www.evm.codes/#3b)という外部コードの長さをチェックするオペコードがありますが、Solidityでは直接使用することはできません。 これには、[Yul](https://docs.soliditylang.org/en/v0.8.15/yul.html)というEVMアセンブリを使う必要があります。 Solidityから使用できる他の値 ([ `<address>.code`および `<address>.codehash`](https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types)) もありますが、コストがそれよりも高くなります。
+- `to` アドレスは、ERC-20コントラクト自身のアドレスである `address(this)` と等しくすることはできません。
+- `to` アドレスは空であってはならず、以下のいずれかである必要があります。
+  - 外部所有アカウント（EOA）。アドレスがEOAであるかどうかを直接確認することはできませんが、アドレスのETH残高を確認することはできます。EOAは、使用されなくなったとしても、ほとんどの場合残高を持っています。最後の1Weiまで空にするのは困難だからです。
+  - スマート・コントラクト。アドレスがスマート・コントラクトであるかどうかをテストするのは少し難しくなります。外部コードの長さを確認するオペコードとして [`EXTCODESIZE`](https://www.evm.codes/#3b) がありますが、Solidityでは直接利用できません。そのためには、EVMアセンブリである[Yul](https://docs.soliditylang.org/en/v0.8.15/yul.html)を使用する必要があります。Solidityから使用できる他の値（[`<address>.code` と `<address>.codehash`](https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types)）もありますが、これらはより多くのコストがかかります。
 
-新しいコードを1行ずつ見てみましょう。
+新しいコードを1行ずつ見ていきましょう。
 
 ```solidity
         require(to != address(this), "Can't send tokens to the contract address");
 ```
 
-これが最初の要件です。`to`と`this(address)`が等しくないことを確認しています。
+これが最初の要件です。`to` と `this(address)` が同じでないことを確認します。
 
 ```solidity
         bool isToContract;
@@ -111,53 +111,53 @@ ERC20トークンの`_beforeTokenTransfer`の定義を[オーバーライド](ht
         }
 ```
 
-上記は、アドレスがコントラクトかどうかを確認する方法です。 Yulから出力を直接受け取ることはできません。そのため、代わりに結果を保持する変数を定義しています (この場合は `isToContract`) 。 Yulでは、すべてのオペコードが関数として動作します。 したがって、最初に[`EXTCODESIZE`](https://www.evm.codes/#3b)を呼び出してコントラクトサイズを取得し、次に[`GT`](https://www.evm.codes/#11)でゼロでないことを確認します (符号なし整数を扱っているため、当然、負の値にすることはできません) 。 その後、結果を`isToContract`に書き込んでいます。
+これが、アドレスがコントラクトであるかどうかを確認する方法です。Yulから直接出力を受け取ることはできないため、代わりに結果を保持する変数（この場合は `isToContract`）を定義します。Yulの仕組みでは、すべてのオペコードが関数と見なされます。そのため、まず [`EXTCODESIZE`](https://www.evm.codes/#3b) を呼び出してコントラクトのサイズを取得し、次に [`GT`](https://www.evm.codes/#11) を使用してそれがゼロでないことを確認します（符号なし整数を扱っているため、当然マイナスにはなりません）。その後、結果を `isToContract` に書き込みます。
 
 ```solidity
         require(to.balance != 0 || isToContract, "Can't send tokens to an empty address");
 ```
 
-最後に、空アドレスのチェックをしています。
+そして最後に、空のアドレスに対する実際のチェックを行います。
 
 ## 管理者アクセス {#admin-access}
 
-間違いを取り消せる管理者がいると、便利なことがあります。 悪用される可能性を減らすには、管理者を[マルチシグ](https://blog.logrocket.com/security-choices-multi-signature-wallets/)にして、各アクションに対する複数人の同意を必要にします。 この記事では、次の2つの管理機能を持つものとします。
+ミスを取り消すことができる管理者がいると便利な場合があります。悪用の可能性を減らすために、この管理者を[マルチシグ](https://blog.logrocket.com/security-choices-multi-signature-wallets/)にして、複数の人がアクションに同意しなければならないようにすることができます。この記事では、2つの管理者機能を実装します。
 
-1. アカウントの凍結と解凍。 これは、アカウントが侵害された可能性がある場合などに役立ちます。
-2. アセットのクリーンアップ。
+1. アカウントの凍結と凍結解除。これは、例えばアカウントが侵害された可能性がある場合などに役立ちます。
+2. 資産のクリーンアップ。
 
-   時には、詐欺師が正当であると思わせるために、本物のトークンコントラクトに偽物のトークンを送信することがあります。 [こちら](https://optimistic.etherscan.io/token/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe?a=0x4200000000000000000000000000000000000042)に、その例があります。 正当なERC-20コントラクトは、[0x4200....0042](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042)です。 装っているスキャムは、[0x234....bbe](https://optimistic.etherscan.io/address/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe)です。
+   詐欺師は、正当性を得るために、本物のトークンのコントラクトに不正なトークンを送金することがあります。例えば、[こちらをご覧ください](https://optimism.blockscout.com/token/0x2348B1a1228DDCd2dB668c3d30207c3E1852fBbe?tab=holders)。正当なERC-20コントラクトは [0x4200....0042](https://optimism.blockscout.com/token/0x4200000000000000000000000000000000000042) です。それを装った詐欺は [0x234....bbe](https://optimism.blockscout.com/token/0x2348B1a1228DDCd2dB668c3d30207c3E1852fBbe) です。
 
-   また、正当なERC-20トークンを誤ってコントラクト自体に送信してしまう可能性もあります。これが、アセットのクリーンアップ方法が必要になるもう1つの理由です。
+   また、人々が誤って正当なERC-20トークンを私たちのコントラクトに送金してしまう可能性もあります。これも、トークンを取り出す方法を用意しておきたい理由の1つです。
 
-OpenZeppelinでは、管理者アクセスを可能にする次の2つのメカニズムを提供しています。
+オープンツェッペリンは、管理者アクセスを有効にするための2つのメカニズムを提供しています。
 
-- [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable)コントラクトでは、所有者は1人です。 `onlyOwner` [modifier](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm)のある関数は、その所有者のみしか呼び出せません。 所有者は、所有権を他の人に譲渡することも、完全に放棄することもできます。 通常、それ以外のアカウントの権限は変わりません。
-- [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control)コントラクトでは、[ロールベースのアクセス制御 (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control)機能があります。
+- [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/access-control#ownership-and-ownable) コントラクトには単一の所有者がいます。`onlyOwner` [修飾子](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm)を持つ関数は、その所有者のみが呼び出すことができます。所有者は、所有権を他の誰かに譲渡したり、完全に放棄したりすることができます。他のすべてのアカウントの権利は通常同一です。
+- [`AccessControl`](https://docs.openzeppelin.com/contracts/5.x/access-control#role-based-access-control) コントラクトには、[ロールベースのアクセス制御（RBAC）](https://en.wikipedia.org/wiki/Role-based_access_control)があります。
 
-この記事では、簡潔にするために`Ownable`を使っています。
+わかりやすくするために、この記事では `Ownable` を使用します。
 
-### コントラクトの凍結および解凍 {#freezing-and-thawing-contracts}
+### コントラクトの凍結と凍結解除 {#freezing-and-thawing-contracts}
 
-コントラクトの凍結と解凍において、次のいくつかの変更が必要になります。
+コントラクトの凍結と凍結解除には、いくつかの変更が必要です。
 
-- どのアドレスが凍結されているかを追跡するために、アドレスを[ブール値](https://en.wikipedia.org/wiki/Boolean_data_type)で[マッピング](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)します。 すべての値の初期値はゼロです。これは、ブール値でfalseとして解釈されます。 デフォルトでは、アカウントを凍結しないため、このようにしています。
+- どのアドレスが凍結されているかを追跡するための、アドレスから[ブール値](https://en.wikipedia.org/wiki/Boolean_data_type)への[マッピング](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)。すべての値は初期状態ではゼロであり、ブール値の場合はfalseとして解釈されます。デフォルトではアカウントは凍結されていないため、これは私たちが望む動作です。
 
   ```solidity
       mapping(address => bool) public frozenAccounts;
   ```
 
-- アカウントが凍結または解除されたときに、関係者に対して[イベント](https://www.tutorialspoint.com/solidity/solidity_events.htm)で通知します。 技術的観点では、アカウントの凍結および解除におけるアクションでは、イベントは必要ありません。しかし、オフチェーンのコードで、これらのイベントをリッスンして何が起こっているかわかると便利です。 関係者に対して何かが発生したときに、スマートコントラクトでイベントを発行することは、良いマナーであるとされています。
+- アカウントが凍結または凍結解除されたときに、関心のある人に知らせるための[イベント](https://www.tutorialspoint.com/solidity/solidity_events.htm)。技術的に言えば、これらのアクションにイベントは必須ではありませんが、オフチェーンのコードがこれらのイベントをリッスンして何が起こっているかを知るのに役立ちます。他の誰かに関連する可能性のある何かが発生したときにイベントを発行することは、スマート・コントラクトにとって良いマナーと考えられています。
 
-  どのタイミングでアカウントの凍結または解除されたかを検索できるように、イベントにインデックスを付けています。
+  イベントはインデックス化されているため、アカウントが凍結または凍結解除されたすべての回数を検索することが可能になります。
 
   ```solidity
-    // When accounts are frozen or unfrozen
+    // アカウントが凍結または凍結解除されたとき
     event AccountFrozen(address indexed _addr);
     event AccountThawed(address indexed _addr);
   ```
 
-- アカウントを凍結および解凍するための関数。 これらの2つの関数は、ほぼ同一であるため凍結する関数についてのみ説明します。
+- アカウントを凍結および凍結解除するための関数。これら2つの関数はほぼ同じであるため、凍結関数についてのみ説明します。
 
   ```solidity
       function freezeAccount(address addr)
@@ -165,7 +165,7 @@ OpenZeppelinでは、管理者アクセスを可能にする次の2つのメカ�
         onlyOwner
   ```
 
-  [`public`](https://www.tutorialspoint.com/solidity/solidity_contracts.htm)が付けられた関数では、他のスマートコントラクトまたはトランザクションから直接呼び出すことができます。
+  [`public`](https://www.tutorialspoint.com/solidity/solidity_contracts.htm) とマークされた関数は、他のスマート・コントラクトから、またはトランザクションによって直接呼び出すことができます。
 
   ```solidity
     {
@@ -175,17 +175,17 @@ OpenZeppelinでは、管理者アクセスを可能にする次の2つのメカ�
     }  // freezeAccount
   ```
 
-  アカウントがすでに凍結されている場合は、処理を取消します。 それ以外の場合は、凍結してイベントを`emit`します。
+  アカウントがすでに凍結されている場合は、リバートします。そうでない場合は、凍結してイベントを `emit` します。
 
-- `_beforeTokenTransfer`を凍結されたアカウントから資金が移動されないよう変更します。 凍結されたアカウントへの送金は、引き続き可能であることに注意してください。
+- 凍結されたアカウントから資金が移動されるのを防ぐために、`_beforeTokenTransfer` を変更します。凍結されたアカウントへの送金は引き続き可能であることに注意してください。
 
   ```solidity
        require(!frozenAccounts[from], "The account is frozen");
   ```
 
-### アセットのクリーンアップ {#asset-cleanup}
+### 資産のクリーンアップ {#asset-cleanup}
 
-コントラクト自体が保持しているERC-20トークンを解放するには、それに属しているトークンコントラクトの関数である[`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer)または[`approve`](https://eips.ethereum.org/EIPS/eip-20#approve)を呼び出す必要があります。 この場合、Allowanceで無駄にガスを消費するのはもったいないため、直接送金 (transfer) の方がよいでしょう。
+このコントラクトが保持しているERC-20トークンを解放するには、それらが属するトークンコントラクトの関数（[`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) または [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve)）を呼び出す必要があります。この場合、アローワンス（許可）にガスを浪費しても意味がないため、直接送金した方がよいでしょう。
 
 ```solidity
     function cleanupERC20(
@@ -198,7 +198,7 @@ OpenZeppelinでは、管理者アクセスを可能にする次の2つのメカ�
         IERC20 token = IERC20(erc20);
 ```
 
-これは、アドレスがトークンを受け取った場合に、コントラクトにオブジェクトを作成するための構文です。 ERC20トークンがソースコード (4行目を参照) の一部として定義されており、OpenZeppelinのERC-20コントラクトのインターフェースである[IERC20の定義](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)がそのファイルに含まれているためこれが可能です。
+これは、アドレスを受け取ったときにコントラクトのオブジェクトを作成するための構文です。ソースコードの一部としてERC20トークンの定義があり（4行目を参照）、そのファイルにオープンツェッペリンのERC-20コントラクトのインターフェースである[IERC20の定義](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)が含まれているため、これを行うことができます。
 
 ```solidity
         uint balance = token.balanceOf(address(this));
@@ -206,8 +206,10 @@ OpenZeppelinでは、管理者アクセスを可能にする次の2つのメカ�
     }
 ```
 
-上記は、すべてのトークンをクリーンアップする関数です。 このプロセスを自動化することで、ユーザーから手動で残高を取得するよりも効率化できます。
+これはクリーンアップ関数であるため、おそらくトークンを残したくはないでしょう。ユーザーから手動で残高を取得する代わりに、プロセスを自動化した方がよいでしょう。
 
 ## まとめ {#conclusion}
 
-「ユーザーの間違い」によって発生する問題に完璧な解決策はないため、これらは完全な解決策ではありません。 しかしながら、この記事のようなチェックをすることで、少なくともいくつかのミスを防止できます。 アカウントの凍結機能は危険を伴うものの、ハッカーが資金を盗むことを防ぎ、ハッキングによる被害を特定の範囲内におさめるために使うことができます。
+これは完璧な解決策ではありません。「ユーザーがミスをした」という問題に対する完璧な解決策はありません。しかし、このようなチェックを使用することで、少なくともいくつかのミスを防ぐことができます。アカウントを凍結する機能は危険ではありますが、ハッカーが盗んだ資金を使用できないようにすることで、特定のハッキングの被害を制限するために使用できます。
+
+[私の他の記事はこちらをご覧ください](https://cryptodocguy.pro/)。

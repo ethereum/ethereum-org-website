@@ -31,7 +31,7 @@ contract SimpleStorage {
 storedData: int128
 ```
 
-If you've already programmed object-oriented languages, you'll likely be familiar with most types. However `address` should be new to you if you're new to Ethereum development.
+If you've already programmed object-oriented languages, you'll likely be familiar with most types. However, `address` should be new to you if you're new to [Ethereum](/) development.
 
 An `address` type can hold an Ethereum address which equates to 20 bytes or 160 bits. It returns in hexadecimal notation with a leading 0x.
 
@@ -41,22 +41,22 @@ Other types include:
 - integer
 - fixed point numbers
 - fixed-size byte arrays
-- dynamically-sized byte arrays
-- Rational and integer literals
-- String literals
-- Hexadecimal literals
-- Enums
+- dynamically sized byte arrays
+- rational and integer literals
+- string literals
+- hexadecimal literals
+- enums
 
 For more explanation, take a look at the docs:
 
-- [See Vyper types](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [See Solidity types](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [See Vyper types](https://docs.vyperlang.org/en/stable/types.html#value-types)
+- [See Solidity types](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### Memory {#memory}
 
 Values that are only stored for the lifetime of a contract function's execution are called memory variables. Since these are not stored permanently on the blockchain, they are much cheaper to use.
 
-Learn more about how the EVM stores data (Storage, Memory, and the Stack) in the [Solidity docs](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+Learn more about how the EVM stores data (Storage, Memory, and the Stack) in the [Solidity docs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack).
 
 ### Environment variables {#environment-variables}
 
@@ -76,9 +76,9 @@ In the most simplistic terms, functions can get information or set information i
 There are two types of function calls:
 
 - `internal` – these don't create an EVM call
-  - Internal functions and state variables can only be accessed internally (i.e. from within the current contract or contracts deriving from it)
+  - Internal functions and state variables can only be accessed internally (i.e., from within the current contract or contracts deriving from it)
 - `external` – these do create an EVM call
-  - External functions are part of the contract interface, which means they can be called from other contracts and via transactions. An external function `f` cannot be called internally (i.e. `f()` does not work, but `this.f()` works).
+  - External functions are part of the contract interface, which means they can be called from other contracts and via transactions. An external function `f` cannot be called internally (i.e., `f()` does not work, but `this.f()` works).
 
 They can also be `public` or `private`
 
@@ -112,19 +112,19 @@ function balanceOf(address _owner) public view returns (uint256 _balance) {
 ```
 
 ```python
-dappName: public(string)
+dappName: public(String[64])
 
 @view
-@public
-def readName() -> string:
-  return dappName
+@external
+def readName() -> String[64]:
+  return self.dappName
 ```
 
 What is considered modifying state:
 
 1. Writing to state variables.
-2. [Emitting events](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events).
-3. [Creating other contracts](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts).
+2. [Emitting events](https://docs.soliditylang.org/en/v0.7.0/contracts.html#events).
+3. [Creating other contracts](https://docs.soliditylang.org/en/v0.7.0/control-structures.html#creating-contracts).
 4. Using `selfdestruct`.
 5. Sending ether via calls.
 6. Calling any function not marked `view` or `pure`.
@@ -151,7 +151,7 @@ constructor() public {
 ```python
 # Vyper example
 
-@external
+@deploy
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
@@ -207,7 +207,7 @@ Events enable your smart contract to communicate with your frontend or other sub
 
 ## Annotated examples {#annotated-examples}
 
-These are some examples written in Solidity. If you'd like to play with the code, you can interact with them in [Remix](http://remix.ethereum.org).
+These are some examples written in Solidity. If you'd like to play with the code, you can interact with them in [Remix](https://remix.ethereum.org).
 
 ### Hello world {#hello-world}
 
@@ -643,8 +643,8 @@ contract CryptoPizza is IERC721, ERC165 {
 
 Check out Solidity and Vyper's documentation for a more complete overview of smart contracts:
 
-- [Solidity](https://solidity.readthedocs.io/)
-- [Vyper](https://vyper.readthedocs.io/)
+- [Solidity](https://docs.soliditylang.org/)
+- [Vyper](https://docs.vyperlang.org/en/stable/)
 
 ## Related topics {#related-topics}
 

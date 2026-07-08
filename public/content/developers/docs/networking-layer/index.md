@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-Ethereum is a peer-to-peer network with thousands of nodes that must be able to communicate with one another using standardized protocols. The "networking layer" is the stack of protocols that allow those nodes to find each other and exchange information. This includes "gossiping" information (one-to-many communication) over the network as well as swapping requests and responses between specific nodes (one-to-one communication). Each node must adhere to specific networking rules to ensure they are sending and receiving the correct information.
+[Ethereum](/) is a peer-to-peer network with thousands of nodes that must be able to communicate with one another using standardized protocols. The "networking layer" is the stack of protocols that allow those nodes to find each other and exchange information. This includes "gossiping" information (one-to-many communication) over the network as well as swapping requests and responses between specific nodes (one-to-one communication). Each node must adhere to specific networking rules to ensure they are sending and receiving the correct information.
 
 There are two parts to the client software (execution clients and consensus clients), each with its own distinct networking stack. As well as communicating with other Ethereum nodes, the execution and consensus clients have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication.
 
@@ -75,7 +75,7 @@ Along with the hello messages, the wire protocol can also send a "disconnect" me
 
 Once peers are connected, and an RLPx session has been started, the wire protocol defines how peers communicate. Initially, the wire protocol defined three main tasks: chain synchronization, block propagation and transaction exchange. However, once Ethereum switched to proof-of-stake, block propagation and chain synchronization became part of the consensus layer. Transaction exchange is still in the remit of the execution clients. Transaction exchange refers to exchanging pending transactions between nodes so that block builders can select some of them for inclusion in the next block. Detailed information about these tasks is available [here](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Clients that support these sub-protocols expose them via the [JSON-RPC](/developers/docs/apis/json-rpc/).
 
-#### les (light ethereum subprotocol) {#les}
+#### les (light Ethereum subprotocol) {#les}
 
 This is a minimal protocol for syncing light clients. Traditionally this protocol has rarely been used because full nodes are required to serve data to light clients without being incentivized. The default behavior of execution clients is not to serve light client data over les. More information is available in the les [spec](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
 
@@ -97,7 +97,7 @@ The consensus clients participate in a separate peer-to-peer network with a diff
 
 ### Discovery {#consensus-discovery}
 
-Similar to the execution clients, consensus clients use [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) over UDP for finding peers. The consensus layer implementation of discv5 differs from that of the execution clients only in that it includes an adaptor connecting discv5 into a [libP2P](https://libp2p.io/) stack, deprecating DevP2P. The execution layer's RLPx sessions are deprecated in favour of libP2P's noise secure channel handshake.
+Similar to the execution clients, consensus clients use [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) over UDP for finding peers. The consensus layer implementation of discv5 differs from that of the execution clients only in that it includes an adaptor connecting discv5 into a [libP2P](https://libp2p.io/) stack, deprecating DevP2P. The execution layer's RLPx sessions are deprecated in favour of libP2P's noise secure channel handshake.
 
 ### ENRs {#consensus-enr}
 
@@ -109,7 +109,7 @@ The libP2P stack supports all communications after discovery. Clients can dial a
 
 ### Gossip {#gossip}
 
-The gossip domain includes all information that has to spread rapidly throughout the network. This includes beacon blocks, proofs, attestations, exits and slashings. This is transmitted using libP2P gossipsub v1 and relies on various metadata being stored locally at each node, including maximum size of gossip payloads to receive and transmit. Detailed information about the gossip domain is available [here](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+The gossip domain includes all information that has to spread rapidly throughout the network. This includes beacon blocks, proofs, attestations, exits and slashings. This is transmitted using libP2P gossipsub v1 and relies on various metadata being stored locally at each node, including maximum size of gossip payloads to receive and transmit. Detailed information about the gossip domain is available [here](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
 ### Request-response {#request-response}
 
@@ -128,9 +128,9 @@ A summary of the control flow is shown below, with the relevant networking stack
 ### When consensus client is not block producer: {#when-consensus-client-is-not-block-producer}
 
 - Consensus client receives a block via the block gossip protocol (consensus p2p)
-- Consensus client pre-validates the block, i.e. ensures it arrived from a valid sender with correct metadata
+- Consensus client pre-validates the block, i.e., ensures it arrived from a valid sender with correct metadata
 - The transactions in the block are sent to the execution layer as an execution payload (local RPC connection)
-- The execution layer executes the transactions and validates the state in the block header (i.e. checks hashes match)
+- The execution layer executes the transactions and validates the state in the block header (i.e., checks hashes match)
 - Execution layer passes validation data back to consensus layer, block now considered to be validated (local RPC connection)
 - Consensus layer adds block to head of its own blockchain and attests to it, broadcasting the attestation over the network (consensus p2p)
 
@@ -146,8 +146,8 @@ A summary of the control flow is shown below, with the relevant networking stack
 
 Once the block has been attested by sufficient validators it is added to the head of the chain, justified and eventually finalized.
 
-![](cons_client_net_layer.png)
-![](exe_client_net_layer.png)
+![Diagram of the Ethereum consensus client networking layer](cons_client_net_layer.png)
+![Diagram of the Ethereum execution client networking layer](exe_client_net_layer.png)
 
 Network layer schematic for consensus and execution clients, from [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
@@ -155,9 +155,9 @@ Network layer schematic for consensus and execution clients, from [ethresear.ch]
 
 [DevP2P](https://github.com/ethereum/devp2p)
 [LibP2p](https://github.com/libp2p/specs)
-[Consensus layer network specs](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)
+[Consensus layer network specs](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure)
 [kademlia to discv5](https://vac.dev/kademlia-to-discv5)
 [kademlia paper](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [intro to Ethereum p2p](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[eth1/eth2 relationship](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[eth1/eth2 relationship](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [merge and eth2 client details video](https://www.youtube.com/watch?v=zNIrIninMgg)

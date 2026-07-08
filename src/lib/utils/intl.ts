@@ -7,3 +7,9 @@ export const getLanguageCodeName = (languageCode: string, locale: string) => {
     }).of(languageCode) as string
   )
 }
+
+export const getCountryCodeName = (countryCode: string, locale: string) => {
+  return new Intl.DisplayNames([locale], {
+    type: "region",
+  }).of(countryCode) as string
+}

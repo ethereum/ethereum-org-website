@@ -1,10 +1,19 @@
-export * from "./DappnodeIcon"
-export * from "./DecentralizationEthGlyphIcon"
-export * from "./DecentralizationGlyphIcon"
-export * from "./DownloadGlyphIcon"
-export * from "./EarthGlyphIcon"
-export * from "./HardwareGlyphIcon"
-export * from "./MegaphoneGlyphIcon"
-export * from "./PrivacyGlyphIcon"
-export * from "./SovereigntyGlyphIcon"
-export * from "./VoteGlyphIcon"
+import DecentralizationGlyphIcon from "./decentralization-glyph.svg"
+import DownloadGlyphIcon from "./download-glyph.svg"
+import EarthGlyphIcon from "./earth-glyph.svg"
+import HardwareGlyphIcon from "./hardware-glyph.svg"
+import MegaphoneGlyphIcon from "./megaphone-glyph.svg"
+import PrivacyGlyphIcon from "./privacy-glyph.svg"
+import SovereigntyGlyphIcon from "./sovereignty-glyph.svg"
+import VoteGlyphIcon from "./vote-glyph.svg"
+
+export {
+  DecentralizationGlyphIcon,
+  DownloadGlyphIcon,
+  EarthGlyphIcon,
+  HardwareGlyphIcon,
+  MegaphoneGlyphIcon,
+  PrivacyGlyphIcon,
+  SovereigntyGlyphIcon,
+  VoteGlyphIcon,
+}

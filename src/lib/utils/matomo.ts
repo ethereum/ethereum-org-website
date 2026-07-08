@@ -1,30 +1,55 @@
 import { push } from "@socialgouv/matomo-next"
 
+import type { MatomoEventOptions } from "@/lib/types"
+
+import { IS_PROD } from "./env"
+
 export const MATOMO_LS_KEY = "ethereum-org.matomo-opt-out"
 
-export interface MatomoEventOptions {
-  eventCategory: string
-  eventAction: string
-  eventName: string
-  eventValue?: string
+let cachedOptOut: boolean | null = null
+
+export const isOptedOut = (): boolean => {
+  if (cachedOptOut !== null) return cachedOptOut
+  try {
+    const value = localStorage.getItem(MATOMO_LS_KEY) || "false"
+    cachedOptOut = JSON.parse(value)
+  } catch {
+    cachedOptOut = false
+  }
+  return cachedOptOut as boolean
 }
 
+export const clearMatomoOptOutCache = () => {
+  cachedOptOut = null
+}
+
+const scheduleIdleCallback =
+  typeof requestIdleCallback === "function"
+    ? requestIdleCallback
+    : (cb: () => void) => setTimeout(cb, 0)
+
+// Use only for user-initiated actions (clicks, submits, swipes). Passive
+// visibility/scroll tracking inflates `nb_actions` and breaks bounce-rate
+// comparability with pages that don't auto-fire events.
 export const trackCustomEvent = ({
   eventCategory,
   eventAction,
   eventName,
   eventValue,
 }: MatomoEventOptions): void => {
-  if (process.env.NODE_ENV !== "production") return
-  const optedOutValue = localStorage.getItem(MATOMO_LS_KEY) || "false"
-  const isOptedOut = JSON.parse(optedOutValue)
-  if (isOptedOut) return
+  if (!IS_PROD) return
 
-  // Set custom URL removing any query params or hash fragments
-  window && push([`setCustomUrl`, window.location.href.replace(/[?#].*$/, "")])
-  push([`trackEvent`, eventCategory, eventAction, eventName, eventValue])
+  // Respect Do Not Track header
+  if (navigator.doNotTrack === "1") return
 
-  console.debug(
-    `[Matomo] event tracked, category: ${eventCategory}, action: ${eventAction}, name: ${eventName}, value: ${eventValue}`
-  )
+  if (isOptedOut()) return
+
+  // Capture URL synchronously — client-side navigations can change
+  // window.location before the idle callback fires
+  const currentUrl = window.location.href.split(/[?#]/)[0]
+
+  scheduleIdleCallback(() => {
+    push([`setCustomUrl`, currentUrl])
+    push([`trackEvent`, eventCategory, eventAction, eventName, eventValue])
+  })
 }

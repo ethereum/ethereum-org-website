@@ -4,6 +4,7 @@ description: Understanding the part of the Yellow Paper, the formal specificatio
 author: "qbzzt"
 tags: ["evm"]
 skill: intermediate
+breadcrumb: Yellow Paper EVM
 lang: en
 published: 2022-05-15
 ---
@@ -34,7 +35,7 @@ This section gives the basics of the EVM and how it compares with other computat
 
 A [stack machine](https://en.wikipedia.org/wiki/Stack_machine) is a computer that stores intermediate data not in registers, but in a [**stack**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). This is the preferred architecture for virtual machines because it is easy to implement meaning that bugs, and security vulnerabilities, are a lot less likely. The memory in the stack is divided into 256-bit words. This was chosen because it is convenient for Ethereum's core cryptographic operations such as Keccak-256 hashing and elliptic curve computations. The maximum size of the stack is 1024 items (1024 x 256 bits). When opcodes are executed they are usually getting their parameters from the stack. There are opcodes specifically for reorganizing elements in the stack such as `POP` (removes item from top of stack), `DUP_N` (duplicated N'th item in stack), etc.
 
-The EVM also has a volatile space called **memory** which is used to store data during execution. This memory is organized into 32-byte words. All memory locations are initialized to zero. If you execute this [Yul](https://docs.soliditylang.org/en/latest/yul.html) code to add a word to memory, it will fill 32 bytes of memory by padding the empty space in the word with zeros, i.e. it creates one word - with zeros in locations 0-29, 0x60 to 30, and 0xA7 to 31.
+The EVM also has a volatile space called **memory** which is used to store data during execution. This memory is organized into 32-byte words. All memory locations are initialized to zero. If you execute this [Yul](https://docs.soliditylang.org/en/latest/yul.html) code to add a word to memory, it will fill 32 bytes of memory by padding the empty space in the word with zeros, i.e., it creates one word - with zeros in locations 0-29, 0x60 to 30, and 0xA7 to 31.
 
 ```yul
 mstore(0, 0x60A7)
@@ -129,7 +130,7 @@ Equations 137-142 give us the initial conditions for running the EVM:
 
 Equation 143 tells us there are four possible conditions at each point in time during execution, and what to do with them:
 
-1.  `Z(σ,μ,A,I)`. Z represents a function that tests whether an operation creates an invalid state transition (see [exceptional halting](#942-exceptional-halting)). If it evaluates to True, the new state is identical to the old one (except gas gets burned) because the changes have not been implemented.
+1.  `Z(σ,μ,A,I)`. Z represents a function that tests whether an operation creates an invalid state transition (see [exceptional halting](#942-exceptional-halt)). If it evaluates to True, the new state is identical to the old one (except gas gets burned) because the changes have not been implemented.
 2.  If the opcode being executed is [`REVERT`](https://www.evm.codes/#fd), the new state is the same as the old state, some gas is lost.
 3.  If the sequence of operations is finished, as signified by a [`RETURN`](https://www.evm.codes/#f3)), the state is updated to the new state.
 4.  If we aren't at one of the end conditions 1-3, continue running.
@@ -173,7 +174,7 @@ We have an exceptional halt if any of these conditions is true:
 
   The function _W(w,μ)_ is defined later in equation 150. _W(w,μ)_ is true if one of these conditions is true:
 
-  - **_w ∈ {CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
+  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
     These opcodes change the state, either by creating a new contract, storing a value, or destroying the current contract.
 
   - **_LOG0≤w ∧ w≤LOG4_**
@@ -240,7 +241,7 @@ The address whose balance we need to find is _μ<sub>s</sub>[0] mod 2<sup>160</s
 
 If _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, it means that there is information about this address. In that case, _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ is the balance for that address. If _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_, it means that this address is uninitialized and the balance is zero. You can see the list of account information fields in section 4.1 on p. 4.
 
-The second equation, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, is related to the difference in cost between access to warm storage (storage that has recently been accessed and is likely to be cached) and cold storage (storage that hasn't been accessed and is likely to be in slower storage that is more expensive to retrieve). _A<sub>a</sub>_ is the list of addresses previously accessed by the transaction, which should therefore be cheaper to access, as defined in section 6.1 on p. 8. You can read more about this subject in [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
+The second equation, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, is related to the difference in cost between access to warm storage (storage that has recently been accessed and is likely to be cached) and cold storage (storage that hasn't been accessed and is likely to be in slower storage that is more expensive to retrieve). _A<sub>a</sub>_ is the list of addresses previously accessed by the transaction, which should therefore be cheaper to access, as defined in section 6.1 on p. 8. You can read more about this subject in [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
 
 | Value | Mnemonic | δ   | α   | Description                             |
 | ----: | -------- | --- | --- | --------------------------------------- |
@@ -274,4 +275,4 @@ Mathematical notation is precise and has allowed the Yellow Paper to specify eve
 - Programmers understand computer code.
   They may or may not understand mathematical notation.
 
-Maybe for these reasons, the newer [consensus layer specs](https://github.com/ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md) are written in Python. There are [execution layer specs in Python](https://ethereum.github.io/execution-specs), but they are not complete. Until and unless the entire Yellow Paper is also translated to Python or a similar language, the Yellow Paper will continue in service, and it is helpful to be able to read it.
+Maybe for these reasons, the newer [consensus layer specs](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) are written in Python. There are [execution layer specs in Python](https://ethereum.github.io/execution-specs), but they are not complete. Until and unless the entire Yellow Paper is also translated to Python or a similar language, the Yellow Paper will continue in service, and it is helpful to be able to read it.

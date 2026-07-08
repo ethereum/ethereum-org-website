@@ -18,9 +18,10 @@ You can use these libraries to interact with smart contracts on Ethereum so it's
 
 **Check out**
 
-- [Web3.js](https://web3js.readthedocs.io/)
-- [Ethers.js](https://docs.ethers.io/) _– includes Ethereum wallet implementation and utilities in JavaScript and TypeScript._
-- [viem](https://viem.sh) – a TypeScript Interface for Ethereum that provides low-level stateless primitives for interacting with Ethereum.
+- [Web3.js](https://web3js.readthedocs.io)
+- [Ethers.js](https://ethers.org) – _includes Ethereum wallet implementation and utilities in JavaScript and TypeScript._
+- [viem](https://viem.sh) – _a TypeScript Interface for Ethereum that provides low-level stateless primitives for interacting with Ethereum._
+- [Drift](https://ryangoree.github.io/drift/) – _a TypeScript meta-library with built-in caching, hooks, and test mocks for effortless Ethereum development across web3 libraries._
 
 ### Smart contracts {#smart-contracts}
 
@@ -46,17 +47,15 @@ This will help you understand things like "what's the data structure of an accou
 
 If you prefer to read code, this JavaScript could be a great alternative to reading through our docs.
 
-**Check out the monorepo**  
-[`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
+**Check out the EVM**  
+[`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
 ### Nodes and clients {#nodes-and-clients}
 
 An Ethereumjs client is in active development that lets you dig into how Ethereum clients work in a language you understand; JavaScript!
 
-It used to be housed in a standalone [`repository`](https://github.com/ethereumjs/ethereumjs-client), however, was later merged into the EthereumVM monorepo as a package.
-
 **Check out the client**  
-[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 ## Other projects {#other-projects}
 

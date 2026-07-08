@@ -1,101 +1,52 @@
-import { useRouter } from "next/router"
-import type { HTMLAttributes } from "react"
-import { Badge } from "@chakra-ui/react"
+import { MDXRemoteProps } from "next-mdx-remote"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
-import { ButtonLink } from "@/components/Buttons"
+import Breadcrumbs from "@/components/Breadcrumbs"
 import CallToContribute from "@/components/CallToContribute"
-import Card from "@/components/Card"
-import Codeblock from "@/components/Codeblock"
+import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
-import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
-import InfoBanner from "@/components/InfoBanner"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import {
-  Heading1 as MdHeading1,
-  Heading2 as MdHeading2,
-  Heading3 as MdHeading3,
-  Heading4 as MdHeading4,
-} from "@/components/MdComponents"
+import MarkdownCard from "@/components/MarkdownCard"
+import PageActions from "@/components/PageActions"
 import TableOfContents from "@/components/TableOfContents"
-import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
-import { mdxTableComponents } from "@/components/ui/Table"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
 
-const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading1
-    className="font-monospace uppercase max-lg:text-[1.75rem]"
-    {...props}
-  />
-)
-
-const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading2
-    className="mt-12 scroll-mt-40 font-monospace uppercase max-md:text-2xl"
-    {...props}
-  />
-)
-
-const Heading3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading3
-    className="scroll-mt-40 font-semibold max-md:text-md"
-    {...props}
-  />
-)
-
-const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading4
-    className="scroll-mt-40 font-semibold max-md:text-md"
-    {...props}
-  />
-)
-
-const Paragraph = (props: HTMLAttributes<HTMLParagraphElement>) => (
-  <p className="mx-0 mb-4 mt-8 break-words" {...props} />
-)
-
-const KBD = (props: HTMLAttributes<HTMLElement>) => (
-  <kbd
-    className="rounded-sm border-2 border-primary px-2 py-0.5 align-middle"
-    {...props}
-  />
-)
-
 export const tutorialsComponents = {
-  a: TooltipLink,
-  h1: Heading1,
-  h2: Heading2,
-  h3: Heading3,
-  h4: Heading4,
-  p: Paragraph,
-  kbd: KBD,
-  pre: Codeblock,
   ...mdxTableComponents,
-  Badge,
   ButtonLink,
   CallToContribute,
-  Card,
+  Card: MarkdownCard,
   Emoji,
   EnvWarningBanner,
-  InfoBanner,
   YouTube,
-}
+} as MDXRemoteProps["components"]
+
 type TutorialLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "tocItems" | "contributors" | "contentNotTranslated"> &
-  Required<Pick<MdPageContent, "lastEditLocaleTimestamp">> & {
+  Pick<
+    MdPageContent,
+    | "tocItems"
+    | "contributors"
+    | "contentNotTranslated"
+    | "slug"
+    | "lastEditLocaleTimestamp"
+  > & {
     frontmatter: TutorialFrontmatter
     timeToRead: number
   }
 
 export const TutorialLayout = ({
   children,
+  slug,
   frontmatter,
   tocItems,
   timeToRead,
@@ -103,38 +54,71 @@ export const TutorialLayout = ({
   contributors,
   contentNotTranslated,
 }: TutorialLayoutProps) => {
-  const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = getEditPath(relativePath)
+  const absoluteEditPath = getEditPath(slug)
+  const heroImage = frontmatter.image
+  const hideEditButton =
+    slug.startsWith("latest/") || !!frontmatter.hideEditButton
 
   return (
-    <div className="flex w-full gap-8 border-b bg-background p-8 lg:mx-auto lg:bg-background-highlight lg:shadow">
-      <MainArticle
-        className="min-w-0 max-w-[1000px] rounded bg-background p-0 lg:p-16 lg:shadow"
+    <div className="flex justify-between gap-8">
+      <main
+        className="max-w-4xl min-w-0 px-4 py-8 md:px-8 lg:py-16"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
-        <Heading1>{frontmatter.title}</Heading1>
-        <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
-        <TableOfContents
-          className="pt-8"
-          items={tocItems}
-          maxDepth={frontmatter.sidebarDepth!}
-          editPath={absoluteEditPath}
-          isMobile
-        />
-        {children}
-        <FileContributors
-          contributors={contributors}
-          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        />
-        <FeedbackCard />
-      </MainArticle>
+        <MainArticle className="flow">
+          <Breadcrumbs
+            slug={[
+              ...slug.split("/").slice(0, -1),
+              frontmatter.breadcrumb || slug.split("/").slice(-1),
+            ].join("/")}
+            startDepth={1}
+          />
+          <h1>{frontmatter.title}</h1>
+          <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
+          <PageActions
+            slug={slug}
+            isTranslated={!contentNotTranslated}
+            editPath={absoluteEditPath}
+            hideEditButton={hideEditButton}
+            className="-ms-2 mb-6 lg:mt-6"
+          />
+          <TableOfContents
+            className="pt-6"
+            items={tocItems}
+            maxDepth={frontmatter.sidebarDepth!}
+            isMobile
+          />
+          {heroImage && (
+            <Image
+              src={heroImage}
+              alt=""
+              width={frontmatter.imageWidth ?? 1200}
+              height={frontmatter.imageHeight ?? 630}
+              blurDataURL={frontmatter.blurDataURL}
+              preload
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="my-6 max-h-128 w-full rounded-xl object-cover"
+            />
+          )}
+          {children}
+          {!frontmatter.hideEditButton && (
+            <FileContributors
+              className="my-10 border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
+          )}
+        </MainArticle>
+
+        {/* End-of-page actions */}
+        <ContentFeedback />
+      </main>
+
       {tocItems && (
         <TableOfContents
-          className="pt-8"
+          className="pt-16"
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
-          editPath={absoluteEditPath}
-          hideEditButton={!!frontmatter.hideEditButton}
         />
       )}
     </div>

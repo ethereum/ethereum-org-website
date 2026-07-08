@@ -1,4 +1,4 @@
-import type { MatomoEventOptions } from "@/lib/utils/matomo"
+import type { MatomoEventOptions } from "@/lib/types"
 
 import type stakingProducts from "@/data/staking-products.json"
 
@@ -13,7 +13,6 @@ export enum FlagType {
 export type Product = {
   name: string
   imageName: string
-  color: string
   url: string
   platforms: Array<string>
   ui: Array<string>

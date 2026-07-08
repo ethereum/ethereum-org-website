@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/design/adding-design-resources/index.md",
+  "generatedAt": "2026-06-08T08:20:05.770Z",
+  "rootHash": "b75625a1d3b5",
+  "tree": {
+    "contentHash": "fb6d4539df91",
+    "anchorHash": "26ec629bcb3c",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "8c7f9b6fe5ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "2cc7c24c0898",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "67a09e138e69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "d66ab4e70d10",
+        "anchorHash": "9d5a65245a69"
+      },
+      "prose:2": {
+        "contentHash": "1f0b11078671",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "research-studies": {
+        "contentHash": "8f7ed7066b57",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e9c9acf6368a",
+        "children": {
+          "_label": {
+            "contentHash": "e9c9acf6368a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "cf23ab96dd5a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "articles": {
+        "contentHash": "d789e8cbb09c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b14ac78a46e9",
+        "children": {
+          "_label": {
+            "contentHash": "b14ac78a46e9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4645ffe22db6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "communities-and-daos": {
+        "contentHash": "aaf0f75258b4",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ce9197a20f73",
+        "children": {
+          "_label": {
+            "contentHash": "ce9197a20f73",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c3db020141ab",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "research-studies",
+      "articles",
+      "communities-and-daos"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

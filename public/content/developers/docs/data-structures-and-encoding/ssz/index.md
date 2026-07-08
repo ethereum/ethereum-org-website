@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-**Simple serialize (SSZ)** is the serialization method used on the Beacon Chain. It replaces the RLP serialization used on the execution layer everywhere across the consensus layer except the peer discovery protocol. SSZ is designed to be deterministic and also to Merkleize efficiently. SSZ can be thought of as having two components: a serialization scheme and a Merkleization scheme that is designed to work efficiently with the serialized data structure.
+**Simple serialize (SSZ)** is the serialization method used on the Beacon Chain. It replaces the RLP serialization used on the execution layer everywhere across the consensus layer except the peer discovery protocol. To learn more about RLP serialization, see [Recursive-length prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp/). SSZ is designed to be deterministic and also to Merkleize efficiently. SSZ can be thought of as having two components: a serialization scheme and a Merkleization scheme that is designed to work efficiently with the serialized data structure.
 
 ## How does SSZ work? {#how-does-ssz-work}
 
@@ -16,7 +16,7 @@ SSZ is a serialization scheme that is not self-describing - rather it relies on 
 - unsigned integers
 - Booleans
 
-For complex "composite" types, serialization is more complicated because the composite type contains multiple elements that might have different types or different sizes, or both. Where these objects all have fixed lengths (i.e. the size of the elements is always going to be constant irrespective of their actual values) the serialization is simply a conversion of each element in the composite type ordered into little-endian bytestrings. These bytestrings are joined together. The serialized object has the bytelist representation of the fixed-length elements in the same order as they appear in the deserialized object.
+For complex "composite" types, serialization is more complicated because the composite type contains multiple elements that might have different types or different sizes, or both. Where these objects all have fixed lengths (i.e., the size of the elements is always going to be constant irrespective of their actual values) the serialization is simply a conversion of each element in the composite type ordered into little-endian bytestrings. These bytestrings are joined together. The serialized object has the bytelist representation of the fixed-length elements in the same order as they appear in the deserialized object.
 
 For types with variable lengths, the actual data gets replaced by an "offset" value in that element's position in the serialized object. The actual data gets added to a heap at the end of the serialized object. The offset value is the index for the start of the actual data in the heap, acting as a pointer to the relevant bytes.
 
@@ -81,13 +81,11 @@ This is still a simplification - the integers and zeros in the schematics above 
 
 So the actual values for variable-length types are stored in a heap at the end of the serialized object with their offsets stored in their correct positions in the ordered list of fields.
 
-There are also some special cases that require specific treatment, such as the `BitList` type that requires a length cap to be added during serialization and removed during deserialization. Full details are available in the [SSZ spec](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md).
+There are also some special cases that require specific treatment, such as the `BitList` type that requires a length cap to be added during serialization and removed during deserialization. Full details are available in the [SSZ spec](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
 ### Deserialization {#deserialization}
 
 To deserialize this object requires the <b>schema</b>. The schema defines the precise layout of the serialized data so that each specific element can be deserialized from a blob of bytes into some meaningful object with the elements having the right type, value, size and position. It is the schema that tells the deserializer which values are actual values and which ones are offsets. All field names disappear when an object is serialized, but reinstantiated on deserialization according to the schema.
-
-See [ssz.dev](https://www.ssz.dev/overview) for an interactive explainer on this.
 
 ## Merkleization {#merkleization}
 
@@ -126,7 +124,7 @@ This representation yields a node index for each piece of data in the Merkle tre
 
 ## Multiproofs {#multiproofs}
 
-Providing the list of generalized indices representing a specific element allows us to verify it against the hash-tree-root. This root is our accepted version of reality. Any data we are provided can be verified against that reality by inserting it into the right place in the Merkle tree (determined by its generalized index) and observing that the root remains constant. There are functions in the spec [here](https://github.com/ethereum/consensus-specs/blob/dev/ssz/merkle-proofs.md#merkle-multiproofs) that show how to compute the minimal set of nodes required to verify the contents of a particular set of generalized indices.
+Providing the list of generalized indices representing a specific element allows us to verify it against the hash-tree-root. This root is our accepted version of reality. Any data we are provided can be verified against that reality by inserting it into the right place in the Merkle tree (determined by its generalized index) and observing that the root remains constant. There are functions in the spec [here](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) that show how to compute the minimal set of nodes required to verify the contents of a particular set of generalized indices.
 
 For example, to verify data in index 9 in the tree below, we need the hash of the data at indices 8, 9, 5, 3, 1.
 The hash of (8,9) should equal hash (4), which hashes with 5 to produce 2, which hashes with 3 to produce the tree root 1. If incorrect data was provided for 9, the root would change - we would detect this and fail to verify the branch.
@@ -147,4 +145,3 @@ The hash of (8,9) should equal hash (4), which hashes with 5 to produce 2, which
 - [Upgrading Ethereum: Merkleization](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [SSZ implementations](https://github.com/ethereum/consensus-specs/issues/2138)
 - [SSZ calculator](https://simpleserialize.com/)
-- [SSZ.dev](https://www.ssz.dev/)

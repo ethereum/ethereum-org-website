@@ -4,8 +4,6 @@ description: The policy we use when adding a staking products or services to eth
 lang: en
 ---
 
-# Adding staking products or services {#adding-staking-products-or-services}
-
 We want to make sure we list the best resources possible while keeping users safe and confident.
 
 Anyone is free to suggest adding a staking products or service on ethereum.org. If there's one that we have missed, **[please suggest it](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
@@ -57,7 +55,7 @@ Staking products or services submissions will be assessed by the following crite
 
 **What platforms are supported?**
 
-- i.e. Linux, macOS, Windows, iOS, Android
+- i.e., Linux, macOS, Windows, iOS, Android
 
 #### Software and smart contracts {#software-and-smart-contracts}
 
@@ -87,18 +85,18 @@ For any custom software or smart contracts involved:
 
 For software products related to node or client setup, management or migration:
 
-**Which consensus layer clients (i.e. Lighthouse, Teku, Nimbus, Prysm, Grandine) are supported?**
+**Which consensus layer clients (i.e., Lighthouse, Teku, Nimbus, Prysm, Grandine) are supported?**
 
 - Which clients are supported? Can the user choose?
 - This is used to determine the products "multi-client" score.
 
 #### Staking as a service {#staking-as-a-service}
 
-For [staking-as-a-service listings](/staking/saas/) (i.e. delegated node operation):
+For [staking-as-a-service listings](/staking/saas/) (i.e., delegated node operation):
 
 **What are the fees associated with using the service?**
 
-- What is the fee structure, e.g. is there a monthly fee for the service?
+- What is the fee structure, e.g., is there a monthly fee for the service?
 - Any additional staking requirements?
 
 **Are users required to sign-up for an account?**
@@ -123,7 +121,7 @@ For [pooled staking services](/staking/pools/):
 
 **What is the minimum ETH required to stake?**
 
-- e.g. 0.01 ETH
+- e.g., 0.01 ETH
 
 **What are the fees or staking requirements involved?**
 
@@ -151,7 +149,7 @@ For [pooled staking services](/staking/pools/):
 
 **What user interfaces are supported?**
 
-- i.e. Browser app, desktop app, mobile app, CLI
+- i.e., Browser app, desktop app, mobile app, CLI
 
 **For node tooling, does the software provide an easy way to switch between clients?**
 
@@ -165,7 +163,7 @@ For [pooled staking services](/staking/pools/):
 
 The [criteria for inclusion](#criteria-for-inclusion) above are used to calculate a cumulative score for each product or service. This is used as a means of sorting and showcasing products that meet certain objective criteria. The more criteria that evidence is provided for, the higher a product will be sorted, with ties being randomized on load.
 
-The code logic and weights for these criteria are currently contained in [this JavaScript component](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) in our repo.
+The code logic and weights for these criteria are currently contained in [this JavaScript component](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid/index.tsx#L350) in our repo.
 
 ## Add your product or service {#add-product}
 

@@ -16,7 +16,7 @@ Proof-of-authority is a modified version of **[proof-of-stake](/developers/docs/
 
 Proof-of-authority requires trusting a set of authorized signers that are set in the [genesis block](/glossary/#genesis-block). In most current implementations, all authorized signers retain equal power and privileges when determining consensus of the chain. The idea behind reputation staking is every authorized validator is well-known to everyone through things like know your customer (KYC), or by having a well-known organization being the only validator—this way if a validator does anything wrong, their identity is known.
 
-There are multiple implementations of PoA, but the standard Ethereum implementation is **clique**, which implements [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique is developer-friendly and an easy-to-implement standard, supporting all client syncing types. Other implementations include [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) and [Aura](https://openethereum.github.io/Chain-specification).
+There are multiple implementations of PoA, but the standard Ethereum implementation is **clique**, which implements [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique is developer-friendly and an easy-to-implement standard, supporting all client syncing types. Other implementations include [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) and [Aura](https://openethereum.github.io/Chain-specification).
 
 ## How it works {#how-it-works}
 
@@ -46,7 +46,7 @@ Another small attack vector is malicious signers injecting new vote proposals in
 
 In a PoA network, When there are N authorized signers, each signer is allowed to mint 1 block out of K, which means that N-K+1 validators are allowed to mint at any given point in time. To prevent these validators from racing for blocks, each signer should add a small random "offset" to the time it releases a new block. Although this process ensures that small forks are rare, occasional forks can still happen, just like mainnet. If a signer is found to be abusing its power and causing chaos, the other signers can vote them out.
 
-If for example there are 10 authorized signers and each signer is allowed to create 1 block out of 20, then at any given time, 11 validators can create blocks. To prevent them from racing to create blocks, each signer adds a small random "offset" to the time they release a new block. This reduces the occurrence of small forks but still allows occasional forks, as seen on the Ethereum Mainnet. If a signer misuses their authority and causes disruptions, they can be voted out of the network.
+If for example there are 10 authorized signers and each signer is allowed to create 1 block out of 6, then at any given time, 5 validators can create blocks. To prevent them from racing to create blocks, each signer adds a small random "offset" to the time they release a new block. This reduces the occurrence of small forks but still allows occasional forks, as seen on the Ethereum Mainnet. If a signer misuses their authority and causes disruptions, they can be voted out of the network.
 
 ## Pros and cons {#pros-and-cons}
 
@@ -65,15 +65,16 @@ If for example there are 10 authorized signers and each signer is allowed to cre
 - [PoA in blockchain](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Clique explained](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [Deprecated PoA, Aura specification](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0, another PoA implementation](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0, another PoA implementation](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### More of a visual learner? {#visual-learner}
 
 Watch a visual explanation of proof-of-authority:
 
-<YouTube id="Mj10HSEM5_8" />
+<VideoWatch slug="proof-of-authority-explained" />
 
 ## Related topics {#related-topics}
 
 - [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+

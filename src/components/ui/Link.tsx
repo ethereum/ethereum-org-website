@@ -1,17 +1,27 @@
-import { AnchorHTMLAttributes, forwardRef } from "react"
-import NextLink, { type LinkProps as NextLinkProps } from "next/link"
-import { useRouter } from "next/router"
-import { RxExternalLink } from "react-icons/rx"
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
+"use client"
+
+import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
+import { ArrowRight, ExternalLink, Mail } from "lucide-react"
+import NextLink from "next/link"
+
+import { MatomoEventOptions } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
-import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRelativePath } from "@/lib/utils/relativePath"
 import * as url from "@/lib/utils/url"
 
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
-import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { Link as I18nLink } from "@/i18n/navigation"
+import { usePathname } from "@/i18n/navigation"
+
+export const ExternalLinkIcon = () => (
+  <ExternalLink
+    data-label="arrow"
+    className="ms-1 mb-0.5! inline-block size-[0.875em] max-h-4 max-w-4 shrink-0 rtl:-scale-x-100"
+  />
+)
 
 type BaseProps = {
   hideArrow?: boolean
@@ -22,19 +32,19 @@ type BaseProps = {
 
 export type LinkProps = BaseProps &
   AnchorHTMLAttributes<HTMLAnchorElement> &
-  Omit<NextLinkProps, "href">
+  Omit<ComponentProps<typeof I18nLink>, "href">
 
 /**
  * Link wrapper which handles:
  *
  * - Hashed links
- * e.g. <Link href="/page-2/#specific-section">
+ * e.g., <Link href="/page-2/#specific-section">
  *
  * - External links
- * e.g. <Link href="https://example.com/">
+ * e.g., <Link href="https://example.com/">
  *
  * - PDFs & static files (which open in a new tab)
- * e.g. <Link href="/eth-whitepaper.pdf">
+ * e.g., <Link href="/eth-whitepaper.pdf">
  */
 export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   {
@@ -45,29 +55,32 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     isPartiallyActive = true,
     activeClassName = "text-primary",
     customEventOptions,
+    onClick,
     ...props
   }: LinkProps,
   ref
 ) {
-  const { asPath } = useRouter()
-  const { twFlipForRtl } = useRtlFlip()
-
+  const pathname = usePathname()
   if (!href) {
-    console.warn("Link component is missing href prop")
+    // If troubleshooting this warning, check for multiple h1's in markdown content—these will result in broken id hrefs
+    console.warn(`Link component missing href prop, pathname: ${pathname}`)
     return <a {...props} />
   }
 
-  const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
+  href = url.normalizeHref(href)
+
+  const isActive = url.isHrefActive(href, pathname || "", isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
-  const isPdf = url.isPdf(href)
+  const isFile = url.isFile(href)
   const isExternal = url.isExternal(href)
-  const isInternalPdf = isPdf && !isExternal
+  const isMailto = url.isMailto(href)
+  const isInternalFile = isFile && !isExternal
   const isHash = url.isHash(href)
 
-  // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
+  // Get proper download link for internally hosted files (ex: whitepaper.pdf)
   // Opens in separate window.
-  if (isInternalPdf) {
-    href = getRelativePath(asPath, href)
+  if (isInternalFile && !href.startsWith("/")) {
+    href = "/" + getRelativePath(pathname, href)
   }
 
   if (isDiscordInvite) {
@@ -81,57 +94,56 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     href,
   }
 
+  // Create click handler that tracks events and calls any passed onClick
+  const createClickHandler =
+    (eventName: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      trackCustomEvent(
+        customEventOptions ?? {
+          eventCategory: "Link",
+          eventAction: "Clicked",
+          eventName: `${eventName} - ${href}`,
+        }
+      )
+      onClick?.(e)
+    }
+
   if (isExternal) {
+    const { className, ...rest } = commonProps
+
     return (
       <a
         target="_blank"
-        rel="noopener"
-        onClick={() =>
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: `Link`,
-              eventAction: `Clicked`,
-              eventName: "Clicked on external link",
-              eventValue: href,
-            }
-          )
-        }
-        {...commonProps}
+        rel="noopener noreferrer"
+        {...rest}
+        onClick={createClickHandler("Clicked on external link")}
+        className={cn("relative", className)}
       >
-        {children}
-        <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-        {!hideArrow && (
-          <RxExternalLink
-            className={cn(
-              "-me-1 inline h-6 w-6 p-1 align-middle",
-              twFlipForRtl
+        {isMailto ? (
+          <span className="text-nowrap">
+            {!hideArrow && (
+              <Mail className="me-1 !mb-0.5 inline-block size-[1em] shrink-0" />
             )}
-          />
+            {children}
+          </span>
+        ) : (
+          children
         )}
+        <span className="sr-only select-none">
+          &nbsp;
+          {isMailto ? "(opens email client)" : "(opens in a new tab)"}
+        </span>
+        {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>
     )
   }
 
-  if (isInternalPdf) {
+  if (isInternalFile) {
     return (
       <NextLink
         target="_blank"
-        rel="noopener"
-        // disable locale prefixing for internal PDFs
-        // TODO: add i18n support using a rehype plugin (similar as we do for
-        // images)
-        locale={false}
-        onClick={() =>
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: `Link`,
-              eventAction: `Clicked`,
-              eventName: "Clicked on internal PDF",
-              eventValue: href,
-            }
-          )
-        }
+        rel="noopener noreferrer"
         {...commonProps}
+        onClick={createClickHandler("Clicked on internal PDF")}
       >
         {children}
       </NextLink>
@@ -139,45 +151,51 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }
 
   if (isHash) {
+    // Use I18nLink for hash links to ensure proper browser history management
+    // This prevents issues where back navigation from a subpage to a page with
+    // a hash URL fails to re-render the page (the browser would interpret it
+    // as a same-page scroll rather than a route change)
     return (
-      <a
+      <I18nLink
+        {...commonProps}
         onClick={(e) => {
           e.stopPropagation()
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: "Link",
-              eventAction: "Clicked",
-              eventName: "Clicked on hash link",
-              eventValue: href,
-            }
-          )
+          createClickHandler("Clicked on hash link")(e)
         }}
-        {...commonProps}
       >
         {children}
-      </a>
+      </I18nLink>
     )
   }
 
   return (
-    <NextLink
-      onClick={() =>
-        trackCustomEvent(
-          customEventOptions ?? {
-            eventCategory: `Link`,
-            eventAction: `Clicked`,
-            eventName: `Clicked on internal link`,
-            eventValue: href,
-          }
-        )
-      }
+    <I18nLink
       {...commonProps}
+      onClick={createClickHandler("Clicked on internal link")}
     >
       {children}
-    </NextLink>
+    </I18nLink>
   )
 })
 BaseLink.displayName = "BaseLink"
+
+export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
+  ({ children, className, ...props }: LinkProps, ref) => (
+    <BaseLink
+      className={cn(
+        "group block w-fit no-underline visited:text-primary-visited",
+        className
+      )}
+      ref={ref}
+      {...props}
+    >
+      <span className="group-hover:underline">{children}</span>
+      &nbsp;
+      <ArrowRight className="mb-1 inline size-[1em] rtl:-scale-x-100" />
+    </BaseLink>
+  )
+)
+LinkWithArrow.displayName = "LinkWithArrow"
 
 const InlineLink = forwardRef<HTMLAnchorElement, LinkProps>(
   (props: LinkProps, ref) => {

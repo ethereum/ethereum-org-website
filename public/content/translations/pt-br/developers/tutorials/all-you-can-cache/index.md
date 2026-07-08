@@ -1,42 +1,40 @@
 ---
-title: "Tudo que você puder armazenar em cache"
-description: Aprenda como criar e usar um contrato de cache para transações de roll-up mais baratas
+title: "Tudo o que você pode armazenar em cache"
+description: "Aprenda a criar e usar um contrato de cache para transações de rollup mais baratas"
 author: Ori Pomerantz
-tags:
-  - "camada 2"
-  - "armazenamento em cache"
-  - "armazenamento"
+tags: ["camada 2", "cache", "armazenamento", "escalabilidade"]
 skill: intermediate
+breadcrumb: Cache para rollups
 published: 2022-09-15
 lang: pt-br
 ---
 
-Ao usar roll-ups, o custo de um byte na transação é muito mais caro que o custo de um slot de armazenamento. Portanto, faz sentido armazenar em cache o máximo de informações possível na cadeia.
+Ao usar rollups, o custo de um byte na transação é muito mais caro do que o custo de um slot de armazenamento. Portanto, faz sentido armazenar em cache o máximo de informações possível onchain.
 
-Neste artigo, você aprenderá como criar e usar um contrato de armazenamento em cache de forma que qualquer valor de parâmetro, provável de ser usado diversas vezes, será armazenado em cache e ficará disponível para uso (depois da primeira vez) com um número muito menor de bytes, e como escrever código off-chain para usar esse cache.
+Neste artigo, você aprenderá como criar e usar um contrato de cache de forma que qualquer valor de parâmetro que provavelmente será usado várias vezes seja armazenado em cache e fique disponível para uso (após a primeira vez) com um número muito menor de bytes, e como escrever código offchain que usa esse cache.
 
-Se você quiser pular o artigo e somente ver o código-fonte, [consulte-o aqui](https://github.com/qbzzt/20220915-all-you-can-cache). A pilha de desenvolvimento é [Foundry](https://book.getfoundry.sh/getting-started/installation).
+Se você quiser pular o artigo e apenas ver o código-fonte, [ele está aqui](https://github.com/qbzzt/20220915-all-you-can-cache). A pilha de desenvolvimento é [Foundry](https://getfoundry.sh/introduction/installation/).
 
-## Design Geral {#overall-design}
+## Design geral {#overall-design}
 
-Para fins de simplicidade, vamos supor que todos os parâmetros de transação são `uint256`, com 32 bytes de tamanho. Quando recebemos uma transação, fazemos o parse em cada parâmetro deste modo:
+Por uma questão de simplicidade, assumiremos que todos os parâmetros da transação são `uint256`, com 32 bytes de comprimento. Quando recebermos uma transação, analisaremos cada parâmetro da seguinte forma:
 
-1. Se o primeiro byte for `0xFF`, pegue os 32 bytes seguintes como um valor de parâmetro e escreva-o no cache.
+1. Se o primeiro byte for `0xFF`, pegue os próximos 32 bytes como um valor de parâmetro e grave-o no cache.
 
-2. Se o primeiro byte for `0xFE`, pegue os próximos 32 bytes como um valor de parâmetro, mas _não_ o escreva no cache.
+2. Se o primeiro byte for `0xFE`, pegue os próximos 32 bytes como um valor de parâmetro, mas _não_ o grave no cache.
 
-3. Para qualquer outro valor, pegue os primeiros quatro bits como o número de bytes adicionais, e os últimos quatro bits como os bits mais significantes da chave do cache. Veja aqui alguns exemplos:
+3. Para qualquer outro valor, pegue os quatro bits superiores como o número de bytes adicionais e os quatro bits inferiores como os bits mais significativos da chave de cache. Aqui estão alguns exemplos:
 
-   | Bytes em calldata | Chave da cache |
-   |:----------------- | --------------:|
-   | 0x0F              |           0x0F |
-   | 0x10,0x10         |           0x10 |
-   | 0x12,0xAC         |         0x02AC |
-   | 0x2D,0xEA, 0xD6   |       0x0DEAD6 |
+   | Bytes nos dados de chamada | Chave de cache |
+   | :---------------- | --------: |
+   | 0x0F              |      0x0F |
+   | 0x10,0x10         |      0x10 |
+   | 0x12,0xAC         |    0x02AC |
+   | 0x2D,0xEA, 0xD6   |  0x0DEAD6 |
 
-## Manipulação do cache {#cache-manipulation}
+## Manipulação de cache {#cache-manipulation}
 
-A cache é implementada em [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Vamos passar por ele linha a linha.
+O cache é implementado em [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Vamos analisá-lo linha por linha.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -49,22 +47,22 @@ contract Cache {
     bytes1 public constant DONT_CACHE = 0xFE;
 ```
 
-Essas constantes são usadas para interpretar os casos especiais nos quais fornecemos todas as informações, independentemente de as querermos escritas no cache ou não. Escrever no cache requer duas operações [`SSTORE`](https://www.evm.codes/#55) nos slots de armazenamento previamente não utilizados, ao custo de 22.100 gás cada. Portanto, deixamos isso opcional.
+Essas constantes são usadas para interpretar os casos especiais em que fornecemos todas as informações e queremos que sejam gravadas no cache ou não. Gravar no cache exige duas operações [`SSTORE`](https://www.evm.codes/#55) em slots de armazenamento não utilizados anteriormente a um custo de 22.100 de gás cada, portanto, tornamos isso opcional.
 
 ```solidity
 
     mapping(uint => uint) public val2key;
 ```
 
-Um [mapeamento](https://www.geeksforgeeks.org/solidity-mappings/) entre os valores e suas chaves. Esta informação é necessária para codificar valores antes de você enviar a transação.
+Um [mapeamento](https://www.geeksforgeeks.org/solidity/solidity-mappings/) entre os valores e suas chaves. Essas informações são necessárias para codificar valores antes de enviar a transação.
 
 ```solidity
-    // Location n has the value for key n+1, because we need to preserve
-    // zero as "not in the cache".
+    // O local n tem o valor para a chave n+1, porque precisamos preservar
+    // zero como "não está no cache".
     uint[] public key2val;
 ```
 
-Podemos usar uma matriz para mapear das chaves aos valores, pois atribuímos as chaves e, para simplificar, fazemos isso de modo sequencial.
+Podemos usar uma matriz para o mapeamento de chaves para valores porque nós atribuímos as chaves e, por simplicidade, fazemos isso sequencialmente.
 
 ```solidity
     function cacheRead(uint _key) public view returns (uint) {
@@ -73,57 +71,57 @@ Podemos usar uma matriz para mapear das chaves aos valores, pois atribuímos as 
     }  // cacheRead
 ```
 
-Ler um valor da cache.
+Lê um valor do cache.
 
 ```solidity
-    // Write a value to the cache if it's not there already
-    // Only public to enable the test to work
+    // Escreve um valor no cache se ele já não estiver lá
+    // Público apenas para permitir que o teste funcione
     function cacheWrite(uint _value) public returns (uint) {
-        // If the value is already in the cache, return the current key
+        // Se o valor já estiver no cache, retorna a chave atual
         if (val2key[_value] != 0) {
             return val2key[_value];
         }
 ```
 
-Não faz sentido colocar o mesmo valor no cache mais de uma vez. Se o valor já está lá, apenas retorne a chave existente.
+Não faz sentido colocar o mesmo valor no cache mais de uma vez. Se o valor já estiver lá, basta retornar a chave existente.
 
 ```solidity
-        // Since 0xFE is a special case, the largest key the cache can
-        // hold is 0x0D followed by 15 0xFF's. If the cache length is already that
-        // large, fail.
+        // Como 0xFE é um caso especial, a maior chave que o cache pode
+        // conter é 0x0D seguido por 15 0xFF's. Se o comprimento do cache já for desse
+        // tamanho, falha.
         //                              1 2 3 4 5 6 7 8 9 A B C D E F
         require(key2val.length+1 < 0x0DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,
             "cache overflow");
 ```
 
-Não acho que iremos algum dia ter um cache tão grande (cerca de 1,8\*10<sup>37</sup> entradas, o que exigiria cerca de 10<sup>27</sup> TB de armazenamento). No entanto, eu sou velho o suficiente para lembrar que ["640kB sempre será o suficiente"](https://quoteinvestigator.com/2011/09/08/640k-enough/). Este teste é muito barato.
+Não acho que teremos um cache tão grande (aproximadamente 1,8\*10<sup>37</sup> entradas, o que exigiria cerca de 10<sup>27</sup> TB para armazenar). No entanto, sou velho o suficiente para lembrar que ["640kB sempre seriam suficientes"](https://quoteinvestigator.com/2011/09/08/640k-enough/). Este teste é muito barato.
 
 ```solidity
-        // Write the value using the next key
+        // Escreve o valor usando a próxima chave
         val2key[_value] = key2val.length+1;
 ```
 
-Adicione a busca reversa (do valor para a chave).
+Adiciona a pesquisa reversa (do valor para a chave).
 
 ```solidity
         key2val.push(_value);
 ```
 
-Adicione a busca para frente (da chave para o valor). Como atribuímos valores de modo sequencial, podemos apenas adicioná-los depois do último valor da matriz.
+Adiciona a pesquisa direta (da chave para o valor). Como atribuímos valores sequencialmente, podemos simplesmente adicioná-lo após o último valor da matriz.
 
 ```solidity
         return key2val.length;
     }  // cacheWrite
 ```
 
-Retorne o novo tamanho de `key2val`, que é a célula onde o novo valor está armazenado.
+Retorna o novo comprimento de `key2val`, que é a célula onde o novo valor é armazenado.
 
 ```solidity
     function _calldataVal(uint startByte, uint length)
         private pure returns (uint)
 ```
 
-Essa função lê um valor de calldata de tamanho arbitrário (até 32 bytes, o tamanho da palavra).
+Esta função lê um valor dos dados de chamada de comprimento arbitrário (até 32 bytes, o tamanho da palavra).
 
 ```solidity
     {
@@ -135,7 +133,7 @@ Essa função lê um valor de calldata de tamanho arbitrário (até 32 bytes, o 
             "_calldataVal trying to read beyond calldatasize");
 ```
 
-A função é interna, por isso, se o resto do código for escrito corretamente, esses testes não serão obrigatórios. Porém, como eles não custam muito, podemos tê-los de qualquer forma.
+Esta função é interna, portanto, se o restante do código for escrito corretamente, esses testes não serão necessários. No entanto, eles não custam muito, então é melhor tê-los.
 
 ```solidity
         assembly {
@@ -143,56 +141,56 @@ A função é interna, por isso, se o resto do código for escrito corretamente,
         }
 ```
 
-Este código está em [Yul](https://docs.soliditylang.org/en/v0.8.16/yul.html). Ele lê um valor de 32 bytes do calldata. Isso funciona até mesmo se o calldata parar antes `startByte+32`, pois o espaço não inicializado na EVM é considerado como zero.
+Este código está em [Yul](https://docs.soliditylang.org/en/v0.8.16/yul.html). Ele lê um valor de 32 bytes dos dados de chamada. Isso funciona mesmo se os dados de chamada pararem antes de `startByte+32` porque o espaço não inicializado na EVM é considerado zero.
 
 ```solidity
         _retVal = _retVal >> (256-length*8);
 ```
 
-Não queremos necessariamente um valor de 32 bytes. Isso elimina os bytes em excesso.
+Não queremos necessariamente um valor de 32 bytes. Isso se livra dos bytes em excesso.
 
 ```solidity
         return _retVal;
     } // _calldataVal
 
 
-    // Read a single parameter from the calldata, starting at _fromByte
+    // Lê um único parâmetro dos dados de chamada, começando em _fromByte
     function _readParam(uint _fromByte) internal
         returns (uint _nextByte, uint _parameterValue)
     {
 ```
 
-Leia um único parâmetro do calldata. Observe que precisamos retornar não somente o valor que lemos, mas também a localização do próximo byte, pois os parâmetros podem estar na faixa de comprimento de 1 byte a 33 bytes.
+Lê um único parâmetro dos dados de chamada. Observe que precisamos retornar não apenas o valor que lemos, mas também a localização do próximo byte, porque os parâmetros podem variar de 1 byte a 33 bytes de comprimento.
 
 ```solidity
-        // The first byte tells us how to interpret the rest
+        // O primeiro byte nos diz como interpretar o resto
         uint8 _firstByte;
 
         _firstByte = uint8(_calldataVal(_fromByte, 1));
 ```
 
-O Solidity tenta reduzir o número de bugs proibindo [conversões de tipo implícitas](https://docs.soliditylang.org/en/v0.8.16/types.html#implicit-conversions) potencialmente perigosas. Um rebaixamento, por exemplo, de 256 bits para 8 bits, precisa ser explícito.
+O Solidity tenta reduzir o número de bugs proibindo [conversões de tipo implícitas](https://docs.soliditylang.org/en/v0.8.16/types.html#implicit-conversions) potencialmente perigosas. Um downgrade, por exemplo, de 256 bits para 8 bits, precisa ser explícito.
 
 ```solidity
 
-        // Read the value, but do not write it to the cache
+        // Lê o valor, mas não o escreve no cache
         if (_firstByte == uint8(DONT_CACHE))
             return(_fromByte+33, _calldataVal(_fromByte+1, 32));
 
-        // Read the value, and write it to the cache
+        // Lê o valor e o escreve no cache
         if (_firstByte == uint8(INTO_CACHE)) {
             uint _param = _calldataVal(_fromByte+1, 32);
             cacheWrite(_param);
             return(_fromByte+33, _param);
         }
 
-        // If we got here it means that we need to read from the cache
+        // Se chegamos aqui, significa que precisamos ler do cache
 
-        // Number of extra bytes to read
+        // Número de bytes extras para ler
         uint8 _extraBytes = _firstByte / 16;
 ```
 
-Pegue o [nibble](https://en.wikipedia.org/wiki/Nibble) inferior e combine-o com os outros bytes para ler o valor do cache.
+Pega o [nibble](https://en.wikipedia.org/wiki/Nibble) inferior e o combina com os outros bytes para ler o valor do cache.
 
 ```solidity
         uint _key = (uint256(_firstByte & 0x0F) << (8*_extraBytes)) +
@@ -203,17 +201,17 @@ Pegue o [nibble](https://en.wikipedia.org/wiki/Nibble) inferior e combine-o com 
     }  // _readParam
 
 
-    // Read n parameters (functions know how many parameters they expect)
+    // Lê n parâmetros (as funções sabem quantos parâmetros esperam)
     function _readParams(uint _paramNum) internal returns (uint[] memory) {
 ```
 
-Poderíamos pegar o número de parâmetros que temos do calldata propriamente dito, mas as funções que nos chamam sabem quantos parâmetros elas esperam. É mais fácil que elas nos contem.
+Poderíamos obter o número de parâmetros que temos dos próprios dados de chamada, mas as funções que nos chamam sabem quantos parâmetros esperam. É mais fácil deixá-las nos dizer.
 
 ```solidity
-        // The parameters we read
+        // Os parâmetros que lemos
         uint[] memory params = new uint[](_paramNum);
 
-        // Parameters start at byte 4, before that it's the function signature
+        // Os parâmetros começam no byte 4, antes disso é a assinatura da função
         uint _atByte = 4;
 
         for(uint i=0; i<_paramNum; i++) {
@@ -221,14 +219,14 @@ Poderíamos pegar o número de parâmetros que temos do calldata propriamente di
         }
 ```
 
-Leia os parâmetros até que você tenha o número de que precisa. Se ultrapassarmos o fim do calldata, `_readParams` reverterá a chamada.
+Lê os parâmetros até ter o número necessário. Se passarmos do final dos dados de chamada, `_readParams` reverterá a chamada.
 
 ```solidity
 
         return(params);
     }   // readParams
 
-    // For testing _readParams, test reading four parameters
+    // Para testar _readParams, testa a leitura de quatro parâmetros
     function fourParam() public
         returns (uint256,uint256,uint256,uint256)
     {
@@ -238,45 +236,45 @@ Leia os parâmetros até que você tenha o número de que precisa. Se ultrapassa
     }    // fourParam
 ```
 
-Uma grande vantagem do Foundry é que ele permite que os testes sejam escritos no Solidity ([veja o teste de cache abaixo](#testing-the-cache)). Isto faz testes unitários muito mais fáceis. Essa é uma função que lê quatro parâmetros e retorna-os para que o teste possa verificar que eles estão corretos.
+Uma grande vantagem do Foundry é que ele permite que os testes sejam escritos em Solidity ([veja Testando o cache abaixo](#testing-the-cache)). Isso torna os testes de unidade muito mais fáceis. Esta é uma função que lê quatro parâmetros e os retorna para que o teste possa verificar se estavam corretos.
 
 ```solidity
-    // Get a value, return bytes that will encode it (using the cache if possible)
+    // Obtém um valor, retorna os bytes que o codificarão (usando o cache, se possível)
     function encodeVal(uint _val) public view returns(bytes memory) {
 ```
 
-`encodeVal` é uma função que o código off-chain chama para ajudar a criar o calldata que usa o cache. Ela recebe um único valor e retorna os bytes que o codificam. Essa função é uma `view`, portanto, ela não requer uma transação e, quando chamada externamente, não custa nenhum gás.
+`encodeVal` é uma função que o código offchain chama para ajudar a criar dados de chamada que usam o cache. Ela recebe um único valor e retorna os bytes que o codificam. Esta função é uma `view`, portanto, não exige uma transação e, quando chamada externamente, não custa nenhum gás.
 
 ```solidity
         uint _key = val2key[_val];
 
-        // The value isn't in the cache yet, add it
+        // O valor ainda não está no cache, adiciona-o
         if (_key == 0)
             return bytes.concat(INTO_CACHE, bytes32(_val));
 ```
 
-Na [EVM](/developers/docs/evm/) todo o armazenamento não inicializado é considerado como zero. Então, se buscarmos a chave de um valor que não está lá, obteremos zero. Nesse caso, os bytes que o codificaram são `INTO_CACHE` (portanto, ele será armazenado em cache da próxima vez), seguido do valor real.
+Na [EVM](/developers/docs/evm/), todo armazenamento não inicializado é assumido como zeros. Portanto, se procurarmos a chave de um valor que não está lá, obteremos um zero. Nesse caso, os bytes que o codificam são `INTO_CACHE` (para que seja armazenado em cache na próxima vez), seguidos pelo valor real.
 
 ```solidity
-        // If the key is <0x10, return it as a single byte
+        // Se a chave for <0x10, retorna-a como um único byte
         if (_key < 0x10)
             return bytes.concat(bytes1(uint8(_key)));
 ```
 
-Bytes únicos são os mais fáceis. Somente usamos [`bytes.concat`](https://docs.soliditylang.org/en/v0.8.16/types.html#the-functions-bytes-concat-and-string-concat) para transformar um tipo de `bytes<n>` em uma matriz de bytes que pode ser de qualquer tamanho. Apesar do nome, isso funciona bem quando fornecemos somente um argumento.
+Bytes únicos são os mais fáceis. Apenas usamos [`bytes.concat`](https://docs.soliditylang.org/en/v0.8.16/types.html#the-functions-bytes-concat-and-string-concat) para transformar um tipo `bytes<n>` em uma matriz de bytes que pode ter qualquer comprimento. Apesar do nome, funciona bem quando fornecido com apenas um argumento.
 
 ```solidity
-        // Two byte value, encoded as 0x1vvv
+        // Valor de dois bytes, codificado como 0x1vvv
         if (_key < 0x1000)
             return bytes.concat(bytes2(uint16(_key) | 0x1000));
 ```
 
-Quando temos uma chave que é inferior a 16<sup>3</sup>, podemos expressá-la em dois bytes. Primeiro, convertemos `_key`, que é um valor de 256 bits, para um valor de 16 bits e usamos um cálculo lógico para adicionar o número de bytes extras ao primeiro byte. Então, convertemos o byte em um valor `bytes2`, que pode ser convertido para `bytes`.
+Quando temos uma chave menor que 16<sup>3</sup>, podemos expressá-la em dois bytes. Primeiro convertemos `_key`, que é um valor de 256 bits, em um valor de 16 bits e usamos o 'ou' lógico para adicionar o número de bytes extras ao primeiro byte. Em seguida, nós o colocamos em um valor `bytes2`, que pode ser convertido em `bytes`.
 
 ```solidity
-        // There is probably a clever way to do the following lines as a loop,
-        // but it's a view function so I'm optimizing for programmer time and
-        // simplicity.
+        // Provavelmente existe uma maneira inteligente de fazer as linhas a seguir como um loop,
+        // mas é uma função view, então estou otimizando para o tempo do programador e
+        // simplicidade.
 
         if (_key < 16*256**2)
             return bytes.concat(bytes3(uint24(_key) | (0x2 * 16 * 256**2)));
@@ -291,14 +289,14 @@ Quando temos uma chave que é inferior a 16<sup>3</sup>, podemos expressá-la em
             return bytes.concat(bytes16(uint128(_key) | (0xF * 16 * 256**15)));
 ```
 
-Os outros valores (3 bytes, 4 bytes, etc.) são manipulados da mesma maneira, apenas com diferentes tamanhos de campo.
+Os outros valores (3 bytes, 4 bytes, etc.) são tratados da mesma maneira, apenas com tamanhos de campo diferentes.
 
 ```solidity
-        // If we get here, something is wrong.
+        // Se chegarmos aqui, algo está errado.
         revert("Error in encodeVal, should not happen");
 ```
 
-Se chegarmos até aí, significa que temos a chave que não é inferior a 16\*256<sup>15</sup>. Porém, `cacheWrite` limita as chaves, portanto, não conseguimos nem mesmo chegar a 14\*256<sup>16</sup> (o que teria o primeiro byte de 0xFE, que se pareceria com `DONT_CACHE`). Mas ele não nos custa tanto para adicionar um teste caso um futuro programador introduza um bug.
+Se chegarmos aqui, significa que obtivemos uma chave que não é menor que 16\*256<sup>15</sup>. Mas `cacheWrite` limita as chaves para que não possamos chegar a 14\*256<sup>16</sup> (que teria um primeiro byte de 0xFE, então se pareceria com `DONT_CACHE`). Mas não nos custa muito adicionar um teste caso um futuro programador introduza um bug.
 
 ```solidity
     } // encodeVal
@@ -308,7 +306,7 @@ Se chegarmos até aí, significa que temos a chave que não é inferior a 16\*25
 
 ### Testando o cache {#testing-the-cache}
 
-Uma das vantagens do Foundry é que [ele deixa você escrever testes em Solidity](https://book.getfoundry.sh/forge/tests), o que facilita escrever testes de unidade. Os testes para a classe `Cache` estão [aqui](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Como o código de teste pode ser repetitivo, assim como os testes tendem a ser, este artigo explica apenas as partes interessantes.
+Uma das vantagens do Foundry é que [ele permite que você escreva testes em Solidity](https://getfoundry.sh/forge/tests/overview/), o que torna mais fácil escrever testes de unidade. Os testes para a classe `Cache` estão [aqui](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Como o código de teste é repetitivo, como os testes tendem a ser, este artigo explica apenas as partes interessantes.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -317,11 +315,11 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 
 
-// Need to run `forge test -vv` for the console.
+// É necessário executar `forge test -vv` para o console.
 import "forge-std/console.sol";
 ```
 
-Isso é apenas um modelo necessário para usar o pacote de teste e `console.log`.
+Isso é apenas um código clichê (boilerplate) necessário para usar o pacote de teste e `console.log`.
 
 ```solidity
 import "src/Cache.sol";
@@ -338,13 +336,13 @@ contract CacheTest is Test {
     }
 ```
 
-A função `setUp` é chamada antes de cada teste. Nesse caso, acabamos de criar um novo cache, de modo que nossos testes não sejam afetados um pelo outro.
+A função `setUp` é chamada antes de cada teste. Neste caso, apenas criamos um novo cache, para que nossos testes não afetem uns aos outros.
 
 ```solidity
     function testCaching() public {
 ```
 
-Testes são funções cujos nomes começam com `test`. Essa função verifica a funcionalidade básica do cache, escrevendo valores e lendo-os novamente.
+Testes são funções cujos nomes começam com `test`. Esta função verifica a funcionalidade básica do cache, gravando valores e lendo-os novamente.
 
 ```solidity
         for(uint i=1; i<5000; i++) {
@@ -355,15 +353,15 @@ Testes são funções cujos nomes começam com `test`. Essa função verifica a 
             assertEq(cache.cacheRead(i), i*i);
 ```
 
-Isto é como você faz teste realmente, usando as funções [`assert...`](https://book.getfoundry.sh/reference/forge-std/std-assertions). Nesse caso, nós verificamos que o valor que escrevemos é o mesmo que lemos. Podemos descartar o resultado de `cache.cacheWrite`, pois sabemos que as chaves do cache são atribuídos linearmente.
+É assim que você faz o teste real, usando [funções `assert...`](https://getfoundry.sh/reference/forge-std/std-assertions/). Neste caso, verificamos se o valor que gravamos é o que lemos. Podemos descartar o resultado de `cache.cacheWrite` porque sabemos que as chaves de cache são atribuídas linearmente.
 
 ```solidity
         }
     }    // testCaching
 
 
-    // Cache the same value multiple times, ensure that the key stays
-    // the same
+    // Armazena em cache o mesmo valor várias vezes, garante que a chave permaneça
+    // a mesma
     function testRepeatCaching() public {
         for(uint i=1; i<100; i++) {
             uint _key1 = cache.cacheWrite(i);
@@ -372,7 +370,7 @@ Isto é como você faz teste realmente, usando as funções [`assert...`](https:
         }
 ```
 
-Primeiro, escrevemos cada valor duas vezes para o cache e nos certificamos de que as chaves são as mesmas (ou seja, a segunda escrita não aconteceu realmente).
+Primeiro, gravamos cada valor duas vezes no cache e nos certificamos de que as chaves sejam as mesmas (o que significa que a segunda gravação não aconteceu de fato).
 
 ```solidity
         for(uint i=1; i<100; i+=3) {
@@ -382,16 +380,16 @@ Primeiro, escrevemos cada valor duas vezes para o cache e nos certificamos de qu
     }    // testRepeatCaching
 ```
 
-Na teoria poderia haver um bug que não afetasse escritas em cache consecutivas. Então, fazemos aqui algumas escritas que não sejam consecutivas e observamos que os valores ainda não foram reescritos.
+Em teoria, poderia haver um bug que não afeta gravações consecutivas no cache. Então, aqui fazemos algumas gravações que não são consecutivas e vemos que os valores ainda não são reescritos.
 
 ```solidity
-    // Read a uint from a memory buffer (to make sure we get back the parameters
-    // we sent out)
+    // Lê um uint de um buffer de memória (para garantir que recebemos de volta os parâmetros
+    // que enviamos)
     function toUint256(bytes memory _bytes, uint256 _start) internal pure
         returns (uint256)
 ```
 
-Leia uma palavra de 256 bits de um buffer de `bytes memory`. Essa função utilitária nos deixa verificar que recebemos os resultados corretos quando executamos uma chamada de função que usa o cache.
+Lê uma palavra de 256 bits de um buffer `bytes memory`. Esta função utilitária nos permite verificar se recebemos os resultados corretos quando executamos uma chamada de função que usa o cache.
 
 ```solidity
     {
@@ -403,31 +401,31 @@ Leia uma palavra de 256 bits de um buffer de `bytes memory`. Essa função utili
         }
 ```
 
-O Yul não suporta estruturas de dados além de `uint256`, então quando você se refere a uma estrutura de dados mais sofisticada, como um buffer de memória `_bytes`, você obtém o endereço dessa estrutura. O Solidity armazena valores `bytes memory` como uma palavra de 32 bytes que contém o tamanho, seguida dos bytes reais, então, para obter o número de bytes `_start`, precisamos calcular `_bytes+32+_start`.
+Yul não suporta estruturas de dados além de `uint256`, portanto, quando você se refere a uma estrutura de dados mais sofisticada, como o buffer de memória `_bytes`, você obtém o endereço dessa estrutura. O Solidity armazena valores `bytes memory` como uma palavra de 32 bytes que contém o comprimento, seguido pelos bytes reais, portanto, para obter o número do byte `_start`, precisamos calcular `_bytes+32+_start`.
 
 ```solidity
 
         return tempUint;
     }     // toUint256
 
-    // Function signature for fourParams(), courtesy of
+    // Assinatura de função para fourParams(), cortesia de
     // https://www.4byte.directory/signatures/?bytes4_signature=0x3edc1e6d
     bytes4 constant FOUR_PARAMS = 0x3edc1e6d;
 
-    // Just some constant values to see we're getting the correct values back
+    // Apenas alguns valores constantes para ver se estamos recebendo os valores corretos de volta
     uint256 constant VAL_A = 0xDEAD60A7;
     uint256 constant VAL_B =     0xBEEF;
     uint256 constant VAL_C =     0x600D;
     uint256 constant VAL_D = 0x600D60A7;
 ```
 
-Algumas constantes de que precisamos para os testes.
+Algumas constantes que precisamos para testar.
 
 ```solidity
     function testReadParam() public {
 ```
 
-Chame `fourParams()`, uma função que usa `readParams`, para testar nós podemos ler parâmetros corretamente.
+Chama `fourParams()`, uma função que usa `readParams`, para testar se podemos ler os parâmetros corretamente.
 
 ```solidity
         address _cacheAddr = address(cache);
@@ -436,23 +434,23 @@ Chame `fourParams()`, uma função que usa `readParams`, para testar nós podemo
         bytes memory _callOutput;
 ```
 
-Não podemos usar o mecanismo de ABI normal para chamar uma função usando o cache, por isso, precisamos usar o mecanismo de baixo nível [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses). Esse mecanismo pega um `bytes memory` como entrada e retorna aquele (assim como o valor booleano) como saída.
+Não podemos usar o mecanismo ABI normal para chamar uma função usando o cache, então precisamos usar o mecanismo de baixo nível [`<address>.call()`](https://docs.soliditylang.org/en/v0.8.16/types.html#members-of-addresses). Esse mecanismo recebe um `bytes memory` como entrada e o retorna (bem como um valor booleano) como saída.
 
 ```solidity
-        // First call, the cache is empty
+        // Primeira chamada, o cache está vazio
         _callInput = bytes.concat(
             FOUR_PARAMS,
 ```
 
-É útil para o mesmo contrato suportar ambas funções em cache (para chamadas diretamente de transações) e funções não em cache (para chamadas de outros contratos inteligentes). Para fazer isso nós precisamos continuar a confiar no mecanismo Solidity para chamar a função correta, ao invés de pôr tudo em [uma função `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Fazer isso torna a componibilidade muito mais fácil. Um único byte seria suficiente para identificar a função na maioria dos casos, por isso, estamos desperdiçando três bytes (16\*3=48 gás). No entanto, no momento em que escrevo este artigo, 48 gás custam 0,07 centavos de dólar, o que é um custo razoável para um código mais simples e menos sujeito a bugs.
+É útil que o mesmo contrato suporte funções em cache (para chamadas diretamente de transações) e funções sem cache (para chamadas de outros contratos inteligentes). Para fazer isso, precisamos continuar a confiar no mecanismo do Solidity para chamar a função correta, em vez de colocar tudo em [uma função `fallback`](https://docs.soliditylang.org/en/v0.8.16/contracts.html#fallback-function). Fazer isso torna a composabilidade muito mais fácil. Um único byte seria suficiente para identificar a função na maioria dos casos, então estamos desperdiçando três bytes (16\*3=48 de gás). No entanto, enquanto escrevo isso, esses 48 de gás custam 0,07 centavos, o que é um custo razoável para um código mais simples e menos propenso a bugs.
 
 ```solidity
-            // First value, add it to the cache
+            // Primeiro valor, adiciona-o ao cache
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 ```
 
-O primeiro valor: Um sinalizador dizendo que é um valor que precisa ser escrito na cache, seguido pelos 32 bytes do valor. Os outros três valores são similares, exceto que `VAL_B` não é escrito no cache e `VAL_C` é ambos o terceiro e quarto parâmetros.
+O primeiro valor: Um sinalizador dizendo que é um valor completo que precisa ser gravado no cache, seguido pelos 32 bytes do valor. Os outros três valores são semelhantes, exceto que `VAL_B` não é gravado no cache e `VAL_C` é tanto o terceiro parâmetro quanto o quarto.
 
 ```solidity
              .
@@ -468,41 +466,41 @@ O primeiro valor: Um sinalizador dizendo que é um valor que precisa ser escrito
         assertEq(_success, true);
 ```
 
-Nós esperamos que a chamada tenha sucesso.
+Esperamos que a chamada seja bem-sucedida.
 
 ```solidity
         assertEq(cache.cacheRead(1), VAL_A);
         assertEq(cache.cacheRead(2), VAL_C);
 ```
 
-Nós começamos com uma cache vazia e então adicionamos `VAL_A` seguida de `VAL_C`. Nós esperaríamos a primeira ter a chave 1, e a segunda ter a 2.
+Começamos com um cache vazio e depois adicionamos `VAL_A` seguido por `VAL_C`. Esperaríamos que o primeiro tivesse a chave 1 e o segundo tivesse 2.
 
 ```
-        assertEq(toUint256(_callOutput,0), VAL_A);
+assertEq(toUint256(_callOutput,0), VAL_A);
         assertEq(toUint256(_callOutput,32), VAL_B);
         assertEq(toUint256(_callOutput,64), VAL_C);
         assertEq(toUint256(_callOutput,96), VAL_C);
 ```
 
-A saída é composta pelos quatro parâmetros. Aqui, verificamos que está correto.
+A saída são os quatro parâmetros. Aqui verificamos se está correto.
 
 ```solidity
-        // Second call, we can use the cache
+        // Segunda chamada, podemos usar o cache
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // First value in the Cache
+            // Primeiro valor no Cache
             bytes1(0x01),
 ```
 
-As chaves de cache abaixo de 16 correspondem a apenas um byte.
+As chaves de cache abaixo de 16 têm apenas um byte.
 
 ```solidity
-            // Second value, don't add it to the cache
+            // Segundo valor, não o adiciona ao cache
             cache.DONT_CACHE(),
             bytes32(VAL_B),
 
-            // Third and fourth values, same value
+            // Terceiro e quarto valores, mesmo valor
             bytes1(0x02),
             bytes1(0x02)
         );
@@ -512,13 +510,13 @@ As chaves de cache abaixo de 16 correspondem a apenas um byte.
     }   // testReadParam
 ```
 
-Os testes depois da chamada são idênticos a aqueles depois da primeira chamada.
+Os testes após a chamada são idênticos aos após a primeira chamada.
 
 ```solidity
     function testEncodeVal() public {
 ```
 
-Esta função é similar a `testReadParam`, exceto que ao invés de escrever os parâmetros explicitamente, nós usamos `encodeVal()`.
+Esta função é semelhante a `testReadParam`, exceto que, em vez de gravar os parâmetros explicitamente, usamos `encodeVal()`.
 
 ```solidity
         .
@@ -538,23 +536,23 @@ Esta função é similar a `testReadParam`, exceto que ao invés de escrever os 
     }   // testEncodeVal
 ```
 
-O único teste adicional em `testEncodeVal()` é verificar que o comprimento de `_callInput` está correto. Para a primeira chamada, ele é 4+33\*4. Para a segunda, na qual cada valor já está no cache, ele é 4+1\*4.
+O único teste adicional em `testEncodeVal()` é verificar se o comprimento de `_callInput` está correto. Para a primeira chamada, é 4+33\*4. Para a segunda, onde cada valor já está no cache, é 4+1\*4.
 
 ```solidity
-    // Test encodeVal when the key is more than a single byte
-    // Maximum three bytes because filling the cache to four bytes takes
-    // too long.
+    // Testa encodeVal quando a chave tem mais de um único byte
+    // Máximo de três bytes porque preencher o cache até quatro bytes leva
+    // muito tempo.
     function testEncodeValBig() public {
-        // Put a number of values in the cache.
-        // To keep things simple, use key n for value n.
+        // Coloca um número de valores no cache.
+        // Para manter as coisas simples, usa a chave n para o valor n.
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }
 ```
 
-A função `testEncodeVal` acima somente escreve quatro valores na cache, então [a parte da função que lida com valores multi-byte](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) não é checada. Porém, esse código é complicado e sujeito a erros.
+A função `testEncodeVal` acima grava apenas quatro valores no cache, portanto, [a parte da função que lida com valores de vários bytes](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) não é verificada. Mas esse código é complicado e propenso a erros.
 
-A primeira parte dessa função é um loop que escreve todos os valores de 1 até 0x1FFF para o cache em ordem, a fim de podermos codificar esses valores e saber para onde eles estão indo.
+A primeira parte desta função é um loop que grava todos os valores de 1 a 0x1FFF no cache em ordem, para que possamos codificar esses valores e saber para onde eles estão indo.
 
 ```solidity
         .
@@ -563,14 +561,14 @@ A primeira parte dessa função é um loop que escreve todos os valores de 1 at�
 
         _callInput = bytes.concat(
             FOUR_PARAMS,
-            cache.encodeVal(0x000F),   // One byte        0x0F
-            cache.encodeVal(0x0010),   // Two bytes     0x1010
-            cache.encodeVal(0x0100),   // Two bytes     0x1100
-            cache.encodeVal(0x1000)    // Three bytes 0x201000
+            cache.encodeVal(0x000F),   // Um byte        0x0F
+            cache.encodeVal(0x0010),   // Dois bytes     0x1010
+            cache.encodeVal(0x0100),   // Dois bytes     0x1100
+            cache.encodeVal(0x1000)    // Três bytes 0x201000
         );
 ```
 
-Teste valores de um byte, dois bytes e três bytes. Não testamos além disso, pois levaria tempo demais para escrever entradas de pilha suficientes (pelo menos 0x10000000, cerca de um quarto de bilhão).
+Testa valores de um byte, dois bytes e três bytes. Não testamos além disso porque levaria muito tempo para gravar entradas de pilha suficientes (pelo menos 0x10000000, aproximadamente um quarto de bilhão).
 
 ```solidity
         .
@@ -580,11 +578,11 @@ Teste valores de um byte, dois bytes e três bytes. Não testamos além disso, p
     }    // testEncodeValBig
 
 
-    // Test what with an excessively small buffer we get a revert
+    // Testa se com um buffer excessivamente pequeno obtemos uma reversão
     function testShortCalldata() public {
 ```
 
-Teste o que acontece no caso anormal em que não há parâmetros suficientes.
+Testa o que acontece no caso anormal em que não há parâmetros suficientes.
 
 ```solidity
         .
@@ -595,10 +593,10 @@ Teste o que acontece no caso anormal em que não há parâmetros suficientes.
     }   // testShortCalldata
 ```
 
-Como ele é revertido, o resultado deve ser `false`.
+Como ele reverte, o resultado que devemos obter é `false`.
 
 ```
-    // Call with cache keys that aren't there
+// Chama com chaves de cache que não estão lá
     function testNoCacheKey() public {
         .
         .
@@ -606,52 +604,52 @@ Como ele é revertido, o resultado deve ser `false`.
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // First value, add it to the cache
+            // Primeiro valor, adicione-o ao cache
             cache.INTO_CACHE(),
             bytes32(VAL_A),
 
-            // Second value
+            // Segundo valor
             bytes1(0x0F),
             bytes2(0x1234),
             bytes11(0xA10102030405060708090A)
         );
 ```
 
-Esta função pega quatro parâmetros perfeitamente legítimos, exceto que a cache está vazia, então não há valores lá para ler.
+Esta função obtém quatro parâmetros perfeitamente legítimos, exceto que o cache está vazio, então não há valores lá para ler.
 
 ```solidity
         .
         .
         .
-    // Test what with an excessively long buffer everything works file
+    // Testa se com um buffer excessivamente longo tudo funciona bem
     function testLongCalldata() public {
         address _cacheAddr = address(cache);
         bool _success;
         bytes memory _callInput;
         bytes memory _callOutput;
 
-        // First call, the cache is empty
+        // Primeira chamada, o cache está vazio
         _callInput = bytes.concat(
             FOUR_PARAMS,
 
-            // First value, add it to the cache
+            // Primeiro valor, adiciona-o ao cache
             cache.INTO_CACHE(), bytes32(VAL_A),
 
-            // Second value, add it to the cache
+            // Segundo valor, adiciona-o ao cache
             cache.INTO_CACHE(), bytes32(VAL_B),
 
-            // Third value, add it to the cache
+            // Terceiro valor, adiciona-o ao cache
             cache.INTO_CACHE(), bytes32(VAL_C),
 
-            // Fourth value, add it to the cache
+            // Quarto valor, adiciona-o ao cache
             cache.INTO_CACHE(), bytes32(VAL_D),
 
-            // And another value for "good luck"
+            // E outro valor para "boa sorte"
             bytes4(0x31112233)
         );
 ```
 
-Esta função envia cinco valores. Sabemos que o quinto valor é ignorado porque não é uma entrada de cache válida, o que causaria uma reversão se não tivesse sido incluída.
+Esta função envia cinco valores. Sabemos que o quinto valor é ignorado porque não é uma entrada de cache válida, o que teria causado uma reversão se não tivesse sido incluído.
 
 ```solidity
         (_success, _callOutput) = _cacheAddr.call(_callInput);
@@ -665,13 +663,13 @@ Esta função envia cinco valores. Sabemos que o quinto valor é ignorado porque
 
 ```
 
-## Uma amostra do aplicativo {#a-sample-app}
+## Um aplicativo de exemplo {#a-sample-app}
 
-Escrever testes em Solidity é tudo muito bem, mas no final do dia, um dapp precisa ser capaz de processar requisições de fora da cadeia para ser útil. Este artigo demonstra como usar o cache em um dapp com `WORM`, que significa “escrever uma vez, ler várias” (em inglês, "Write Once, Read Many"). Se uma chave ainda não estiver escrita, você pode escrever um valor para ela. Se a chave já estiver escrita, você terá uma reversão.
+Escrever testes em Solidity é muito bom, mas no final das contas um dapp precisa ser capaz de processar solicitações de fora da cadeia para ser útil. Este artigo demonstra como usar o cache em um dapp com `WORM`, que significa "Write Once, Read Many" (Grave Uma Vez, Leia Várias). Se uma chave ainda não estiver gravada, você pode gravar um valor nela. Se a chave já estiver gravada, você obterá uma reversão.
 
 ### O contrato {#the-contract}
 
-[Este é o contrato](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/WORM.sol). Ele repete, em grande parte, o que já fizemos com `Cache` e `CacheTest`, então abrangeremos somente as partes que são interessantes.
+[Este é o contrato](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/WORM.sol). Ele repete principalmente o que já fizemos com `Cache` e `CacheTest`, então cobrimos apenas as partes que são interessantes.
 
 ```solidity
 import "./Cache.sol";
@@ -679,7 +677,7 @@ import "./Cache.sol";
 contract WORM is Cache {
 ```
 
-A maneira mais fácil de usar `Cache` é herdá-lo no seu próprio contrato.
+A maneira mais fácil de usar `Cache` é herdá-lo em nosso próprio contrato.
 
 ```solidity
     function writeEntryCached() external {
@@ -688,29 +686,29 @@ A maneira mais fácil de usar `Cache` é herdá-lo no seu próprio contrato.
     }    // writeEntryCached
 ```
 
-Essa função é similar a `fourParam` no `CacheTest` acima. Como nós não seguimos as especificações da ABI, é melhor não declarar nenhum parâmetro dentro da função.
+Esta função é semelhante a `fourParam` em `CacheTest` acima. Como não seguimos as especificações da ABI, é melhor não declarar nenhum parâmetro na função.
 
 ```solidity
-    // Make it easier to call us
-    // Function signature for writeEntryCached(), courtesy of
+    // Torna mais fácil nos chamar
+    // Assinatura de função para writeEntryCached(), cortesia de
     // https://www.4byte.directory/signatures/?bytes4_signature=0xe4e4f2d3
     bytes4 constant public WRITE_ENTRY_CACHED = 0xe4e4f2d3;
 ```
 
-O código externo que chama `writeEntryCached` precisará construir manualmente o calldata, ao invés de usar `worm.writeEntryCached`, porque nós não seguimos as especificações da ABI. Tendo o valor desta constante só facilita escrevê-la.
+O código externo que chama `writeEntryCached` precisará construir manualmente os dados de chamada, em vez de usar `worm.writeEntryCached`, porque não seguimos as especificações da ABI. Ter esse valor constante apenas torna mais fácil escrevê-lo.
 
-Observe que, apesar de definirmos `WRITE_ENTRY_CACHED` como uma variável de estado, para lê-la externamente é necessário usar a função getter, `worm.WRITE_ENTRY_CACHED()`.
+Observe que, embora definamos `WRITE_ENTRY_CACHED` como uma variável de estado, para lê-la externamente é necessário usar a função getter para ela, `worm.WRITE_ENTRY_CACHED()`.
 
 ```solidity
     function readEntry(uint key) public view
         returns (uint _value, address _writtenBy, uint _writtenAtBlock)
 ```
 
-A função de leitura é uma `view`, então ela não requer uma transação e não custa gas. Como resultado, não há benefício de usar cache para o parâmetro. Com funções view é melhor usar o mecanismo padrão, que é mais simples.
+A função de leitura é uma `view`, portanto, não exige uma transação e não custa gás. Como resultado, não há benefício em usar o cache para o parâmetro. Com funções de visualização, é melhor usar o mecanismo padrão que é mais simples.
 
 ### O código de teste {#the-testing-code}
 
-[Este é o código de teste para o contrato](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Novamente, vamos ver somente o que é interessante.
+[Este é o código de teste para o contrato](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Novamente, vamos olhar apenas para o que é interessante.
 
 ```solidity
     function testWReadWrite() public {
@@ -720,27 +718,27 @@ A função de leitura é uma `view`, então ela não requer uma transação e n�
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Este (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) é como especificamos em um teste Foundry que a próxima chamada deve falhar, assim como a razão dessa falha. Isto se aplica quando nós usamos a sintaxe `<contract>.<function name>()` ao invés de construir o calldata e chamar o contrato usando interface de baixo nível (`<contract>.call()`, etc.).
+[É assim (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) que especificamos em um teste do Foundry que a próxima chamada deve falhar e o motivo relatado para uma falha. Isso se aplica quando usamos a sintaxe `<contract>.<function name>()` em vez de construir os dados de chamada e chamar o contrato usando a interface de baixo nível (`<contract>.call()`, etc.).
 
 ```solidity
     function testReadWriteCached() public {
         uint cacheGoat = worm.cacheWrite(0x60A7);
 ```
 
-Aqui nós usamos o fato de `cacheWrite` retornar a chave da cache. Isto não é algo que nós esperaríamos usar em produção, porque `cacheWrite` altera o estado, e por isso pode ser chamado apenas durante a transação. Transações não têm valores de retorno. Se elas têm resultados, esses resultados devem ser supostamente emitidos como eventos. Assim, o valor de retorno de `cacheWrite` é somente acessível do código on-chain, e o código on-chain não precisa armazenar parâmetros em cache.
+Aqui usamos o fato de que `cacheWrite` retorna a chave de cache. Isso não é algo que esperaríamos usar em produção, porque `cacheWrite` altera o estado e, portanto, só pode ser chamado durante uma transação. Transações não têm valores de retorno; se tiverem resultados, esses resultados devem ser emitidos como eventos. Portanto, o valor de retorno de `cacheWrite` só é acessível a partir do código onchain, e o código onchain não precisa de cache de parâmetros.
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
 ```
 
-É assim que contamos ao Solidity que, enquanto `<contract address>.call()` tem dois valores de retorno, só nos importamos com o primeiro.
+É assim que dizemos ao Solidity que, embora `<contract address>.call()` tenha dois valores de retorno, nos importamos apenas com o primeiro.
 
 ```solidity
         (_success,) = address(worm).call(_callInput);
         assertEq(_success, false);
 ```
 
-Como usamos a função de baixo nível `<address>.call()`, não podemos usar `vm.expectRevert()` e temos de olhar para o valor de êxito booleano que obtivemos da chamada.
+Como usamos a função de baixo nível `<address>.call()`, não podemos usar `vm.expectRevert()` e temos que olhar para o valor booleano de sucesso que obtemos da chamada.
 
 ```solidity
     event EntryWritten(uint indexed key, uint indexed value);
@@ -756,13 +754,13 @@ Como usamos a função de baixo nível `<address>.call()`, não podemos usar `vm
         (_success,) = address(worm).call(_callInput);
 ```
 
-Essa é a maneira que verificamos que o código [emite um evento corretamente](https://book.getfoundry.sh/cheatcodes/expect-emit) no Foundry.
+Esta é a maneira como verificamos se o código [emite um evento corretamente](https://getfoundry.sh/reference/cheatcodes/expect-emit/) no Foundry.
 
 ### O cliente {#the-client}
 
-Uma coisa que você não obtém com testes no Solidity é código JavaScript, que você pode cortar e colar no seu próprio aplicativo. Para escrever este código, implantei WORM na [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), a nova rede de teste da [Optimism](https://www.optimism.io/). Ela está no endereço [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+Uma coisa que você não obtém com os testes em Solidity é o código JavaScript que você pode recortar e colar em seu próprio aplicativo. A versão original deste tutorial implantou o WORM na Optimism Goerli, que desde então foi desativada. Para executar o cliente hoje, reimplante o WORM em uma rede OP Stack suportada, como a [OP Sepolia](https://docs.optimism.io/op-stack/introduction/op-stack), e então use o endereço do contrato resultante no cliente JavaScript.
 
-[Você pode ver o código JavaScript para o cliente aqui](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). Para usá-lo:
+[Você pode ver o código JavaScript para o cliente aqui](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). O repositório de exemplo foi escrito para a Optimism Goerli, portanto, antes de executá-lo, atualize o endpoint RPC e as URLs do explorador em `javascript/.env.example` e `javascript/index.js` para a sua rede de destino. Para usá-lo:
 
 1. Clone o repositório git:
 
@@ -783,22 +781,22 @@ Uma coisa que você não obtém com testes no Solidity é código JavaScript, qu
    cp .env.example .env
    ```
 
-4. Edite `.env` para a sua configuração:
+4. Edite o `.env` para a sua configuração:
 
-   | Parâmetro             | Valor                                                                                                                                                                     |
-   | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMÔNICO             | O mnemônico para uma conta que tem ETH suficiente para pagar por uma transação. [Você consegue ETH grátis para a rede Optimism Goerli aqui](https://optimismfaucet.xyz/). |
-   | OPTIMISM_GOERLI_URL | URL da Optimism Goerli. O endpoint público, `https://goerli.optimism.io`, tem taxa limitada mas suficiente para o que precisamos aqui                                     |
+   | Parâmetro           | Valor                                                                                                                                                               |
+   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | O mnemônico para uma conta que tem ETH suficiente para pagar por uma transação. [A documentação de faucet da Optimism](https://docs.optimism.io/app-developers/tools/faucets) lista as faucets atuais da rede de teste. |
+   | OPTIMISM_GOERLI_URL | URL RPC para a rede onde você reimplanta o WORM. Para a OP Sepolia, use um endpoint RPC da OP Sepolia, como `https://sepolia.optimism.io`, ou outro endpoint do seu provedor.        |
 
-5. Rode `index.js`.
+5. Execute o `index.js`.
 
    ```sh
    node index.js
    ```
 
-   Primeiro, esse exemplo de aplicativo escreve uma entrada para WORM, exibindo o calldata e um link para a transação no Etherscan. Em seguida, ele lê novamente essa entrada e exibe a chave que usou e os valores na entrada (valor, bloco, número e autor).
+   Este aplicativo de exemplo primeiro grava uma entrada no WORM, exibindo os dados de chamada e um link para a transação em um explorador de blocos. Em seguida, ele lê essa entrada novamente e exibe a chave que ela usa e os valores na entrada (valor, número do bloco e autor).
 
-A maioria dos clientes é Javascript Dapp normal. Então, novamente, passaremos apenas pelas partes interessantes.
+A maior parte do cliente é JavaScript normal de aplicativo descentralizado (dapp). Então, novamente, abordaremos apenas as partes interessantes.
 
 ```javascript
 .
@@ -807,20 +805,20 @@ A maioria dos clientes é Javascript Dapp normal. Então, novamente, passaremos 
 const main = async () => {
     const func = await worm.WRITE_ENTRY_CACHED()
 
-    // Need a new key every time
+    // Precisa de uma nova chave todas as vezes
     const key = await worm.encodeVal(Number(new Date()))
 ```
 
-Um dado slot pode ser apenas escrito uma vez, então usamos o carimbo de data/hora para ter certeza de que não vamos reutilizar esses slots.
+Um determinado slot só pode ser gravado uma vez, portanto, usamos o carimbo de data/hora para garantir que não reutilizemos os slots.
 
 ```javascript
 const val = await worm.encodeVal("0x600D")
 
-// Write an entry
+// Grava uma entrada
 const calldata = func + key.slice(2) + val.slice(2)
 ```
 
-Ethers espera que o dado da chamada seja uma cadeia de caracteres hexadecimal, `0x` seguida de um número par de dígitos hexadecimais. Como `key` e `val` começam com `0x`, precisamos remover esses cabeçalhos.
+O Ethers espera que os dados de chamada sejam uma string hexadecimal, `0x` seguido por um número par de dígitos hexadecimais. Como `key` e `val` começam com `0x`, precisamos remover esses cabeçalhos.
 
 ```javascript
 const tx = await worm.populateTransaction.writeEntryCached()
@@ -829,39 +827,40 @@ tx.data = calldata
 sentTx = await wallet.sendTransaction(tx)
 ```
 
-Como no código de teste Solidity, não podemos chamar uma função em cache normalmente. Ao invés disso, nós precisamos usar um mecanismo de nível mais baixo.
+Assim como no código de teste em Solidity, não podemos chamar uma função em cache normalmente. Em vez disso, precisamos usar um mecanismo de nível mais baixo.
 
 ```javascript
     .
     .
     .
-    // Read the entry just written
-    const realKey = '0x' + key.slice(4)  // remove the FF flag
+    // Lê a entrada que acabou de ser gravada
+    const realKey = '0x' + key.slice(4)  // remove o sinalizador FF
     const entryRead = await worm.readEntry(realKey)
     .
     .
     .
 ```
 
-Para ler entradas, podemos usar o mecanismo normal. Não há necessidade de armazenar em cache parâmetros com funções `view`.
-
+Para ler entradas, podemos usar o mecanismo normal. Não há necessidade de usar o cache de parâmetros com funções `view`.
 ## Conclusão {#conclusion}
 
-O código neste artigo é uma prova de conceito, a finalidade é tornar a ideia fácil de entender. Para um sistema pronto para produção, recomenda-se implementar funcionalidades adicionais:
+O código neste artigo é uma prova de conceito, o objetivo é tornar a ideia fácil de entender. Para um sistema pronto para produção, você pode querer implementar algumas funcionalidades adicionais:
 
-- Manipular valores que não são `uint256`. Por exemplo, cadeias de caracteres.
+- Lidar com valores que não são `uint256`. Por exemplo, strings.
 - Em vez de um cache global, talvez ter um mapeamento entre usuários e caches. Usuários diferentes usam valores diferentes.
-- Valores usados para endereços são distintos daqueles usados para outras finalidades. Pode fazer sentido ter um cache separado só para endereços.
-- Atualmente, as chaves de cache estão em um algoritmo do tipo “o primeiro que chega tem a chave menor”. Os primeiros dezesseis valores podem ser enviados como um único byte. Os próximos 4.080 valores podem ser enviados como dois bytes. Os próximos milhões de valores são três bytes, etc. Um sistema de produção deveria manter contadores de uso nas entradas de cache e reorganizá-las para que os dezesseis _mais comuns_ valores sejam um byte, os próximos 4080 valores mais comuns sejam dois bytes, etc.
+- Os valores usados para endereços são distintos daqueles usados para outros fins. Pode fazer sentido ter um cache separado apenas para endereços.
+- Atualmente, as chaves de cache estão em um algoritmo "primeiro a chegar, menor chave". Os primeiros dezesseis valores podem ser enviados como um único byte. Os próximos 4080 valores podem ser enviados como dois bytes. Os próximos aproximadamente um milhão de valores são três bytes, etc. Um sistema de produção deve manter contadores de uso nas entradas de cache e reorganizá-los para que os dezesseis valores _mais comuns_ sejam de um byte, os próximos 4080 valores mais comuns sejam de dois bytes, etc.
 
   No entanto, essa é uma operação potencialmente perigosa. Imagine a seguinte sequência de eventos:
 
-  1. Noam Naive chama `encodeVal` para codificar o endereço para o qual ele quer enviar tokens. Este endereço é um dos primeiros usados na aplicação, então o valor codificado é 0x06. Trata-se de uma função `view`, e não uma transação, então ela diz respeito unicamente a Noam e ao nó que ele usa, e ninguém mais sabe disso
+  1. Noam Naive chama `encodeVal` para codificar o endereço para o qual ele deseja enviar tokens. Esse endereço é um dos primeiros usados no aplicativo, então o valor codificado é 0x06. Esta é uma função `view`, não uma transação, então é entre Noam e o nó que ele usa, e ninguém mais sabe sobre isso
 
-  2. Owen Owner executa a operação de reordenação de cache. Muito poucas pessoas realmente usam esse endereço, por isso, ele é agora codificado como 0x201122. Para um valor diferente, 10<sup>18</sup>, é atribuído 0x06.
+  2. Owen Owner executa a operação de reordenação de cache. Muito poucas pessoas realmente usam esse endereço, então agora ele é codificado como 0x201122. Um valor diferente, 10<sup>18</sup>, é atribuído a 0x06.
 
-  3. Noam Naive envia seus tokens para 0x06. Eles vão para o endereço `0x0000000000000000000000000de0b6b3a7640000`, e já que ninguém sabe a chave privada para esse endereço, eles ficam presos lá. Noam _não está contente_.
+  3. Noam Naive envia seus tokens para 0x06. Eles vão para o endereço `0x0000000000000000000000000de0b6b3a7640000` e, como ninguém sabe a chave privada para esse endereço, eles ficam presos lá. Noam _não está feliz_.
 
-  Existem maneiras de resolver esse problema, e o problema relacionado às transações que estão na mempool durante a reordenação do cache, mas você deve estar atento a isso.
+  Existem maneiras de resolver esse problema e o problema relacionado de transações que estão na mempool durante a reordenação do cache, mas você deve estar ciente disso.
 
-Demonstrei o processo de armazenamento em cache aqui com o Optimism, porque sou funcionário da Optimism e esse é o roll-up que conheço melhor. Mas deve funcionar com qualquer rollup que cobre um mínimo custo por processamento interno, de modo que em comparação com escrever os dados da transação na L1 é a maior despesa.
+Demonstrei o cache aqui com a Optimism, porque sou um funcionário da Optimism e este é o rollup que conheço melhor. Mas deve funcionar com qualquer rollup que cobre um custo mínimo para processamento interno, de modo que, em comparação, gravar os dados da transação na L1 seja a maior despesa.
+
+[Veja aqui mais do meu trabalho](https://cryptodocguy.pro/).

@@ -1,105 +1,110 @@
 ---
-title: Çevrimdışı veri bütünlüğü için Merkle ispatları
-description: Genellikle zincir dışında saklanan verilerin zincir üstündeki veri bütünlüğünü sağlamak
+title: "Çevrim dışı veri bütünlüğü için Merkle kanıtları"
+description: "Çoğunlukla zincir dışı depolanan veriler için zincir içi veri bütünlüğünü sağlama"
 author: Ori Pomerantz
 tags:
-  - "depolama"
+  - depolama
 skill: advanced
+breadcrumb: "Merkle kanıtları"
 lang: tr
 published: 2021-12-30
 ---
 
 ## Giriş {#introduction}
 
-İdeal olarak tüm verileri binlerce bilgisayarda depolanan ve son derece yüksek kullanılabilirlik (veri sansürlenemez) ve bütünlüğe (veri yetkisiz bir şekilde değiştirilemez) sahip olan Ethereum depolaması üzerinde saklamak isteriz ancak 32 bayt büyüklüğünde bir kelime depolamanın maliyeti yaklaşık olarak 20,000 gazdır. Bunu yazarken, bu maliyet $6,60'a eşittir. Bayt başına 21 sentlik ücret birçok kullanıcı için çok pahalıdır.
+İdeal olarak her şeyi, binlerce bilgisayarda depolanan ve son derece yüksek erişilebilirliğe (veri sansürlenemez) ve bütünlüğe (veri yetkisiz bir şekilde değiştirilemez) sahip olan Ethereum depolamasında saklamak isteriz, ancak 32 baytlık bir kelimeyi depolamak genellikle 20.000 Gaz'a mal olur. Bunu yazarken, bu maliyet 6,60 dolara eşdeğer. Bayt başına 21 sent ile bu, birçok kullanım için çok pahalıdır.
 
-Bu sorunu çözmek için Ethereum ekosistemi [verileri merkeziyetsiz bir şekilde depolamak için birçok alternatif yol](/developers/docs/storage/) geliştirdi. Eğer ağ müsaitse maliyet daha az olacaktır ancak ağ eğer yoğunsa maliyet daha fazla olacaktır. Ancak ağın bütünlüğü hep aynı olacaktır.
+Bu sorunu çözmek için Ethereum ekosistemi, [verileri merkeziyetsiz bir şekilde depolamak için birçok alternatif yol](/developers/docs/storage/) geliştirdi. Genellikle erişilebilirlik ve fiyat arasında bir ödünleşim içerirler. Ancak, bütünlük genellikle garanti edilir.
 
-Bu makalede blok zinciri üzerinde veri depolamadan [Merkle ispatları](https://computersciencewiki.org/index.php/Merkle_proof) kullanarak **nasıl** veri bütünlüğü sağlanacağını öğreneceksiniz.
+Bu makalede, [Merkle kanıtlarını](https://computersciencewiki.org/index.php/Merkle_proof) kullanarak verileri Blokzincir üzerinde depolamadan veri bütünlüğünü **nasıl** sağlayacağınızı öğreneceksiniz.
 
 ## Nasıl çalışır? {#how-does-it-work}
 
-Teoride verileri şifrelenmiş bir şeklide blok zinciri üzerinde tutup, işlem için gerekli verileri gönderebilirdik. Ancak bu hâlâ çok maliyetlidir. Bir işlem için bir bayt veri yaklaşık 16 gaz harcar. Bu, şu anda yaklaşık yarım sent veya kilobayt başına yaklaşık $5 değerindedir. Megabayt başına $5000, veriyi şifrelemenin maliyetini dahil etmesek bile bir çok kullanım alanı için çok pahalıdır.
+Teoride, verinin hash'ini zincir içi depolayabilir ve tüm veriyi bunu gerektiren işlemlerde gönderebiliriz. Ancak bu hala çok pahalıdır. Bir işleme bir bayt veri eklemek yaklaşık 16 Gaz'a, yani şu anda yaklaşık yarım sente veya kilobayt başına yaklaşık 5 dolara mal olur. Megabayt başına 5000 dolar ile bu, veriyi hashleme ek maliyeti olmasa bile birçok kullanım için hala çok pahalıdır.
 
-Çözüm ise, verilerin farklı alt kümelerini art arda şifrelenmiş hâle getirmektir. Böylece göndermeniz gerekmeyen veriler için sadece bir hash değeri gönderebilirsiniz. Bunu, her düğümün altındaki düğümlerin hash değerlerinden oluştuğu bir ağaç veri yapısı olan bir Merkle ağacını kullanarak yapabilirsiniz:
+Çözüm, verinin farklı alt kümelerini tekrar tekrar hashlemektir, böylece göndermeniz gerekmeyen veriler için sadece bir hash gönderebilirsiniz. Bunu, her bir Düğümün altındaki düğümlerin bir hash'i olduğu bir ağaç veri yapısı olan bir Merkle ağacı kullanarak yaparsınız:
 
-![Merkle Ağacı](tree.png)
+![Merkle Tree](tree.png)
 
-Sadece kök hash değerinin ağ üzerinde depolanmış olması gerekmektedir. Bir değeri kanıtlamak için, o değeri oluşturan tüm hash değerlerini sağlamanız gerekmektedir. Örneğin `C`'yi kanıtlamak için `D`, `H(A-B)` ve `H(E-H)` sağlamak zorundasınız.
+Kök hash, zincir içi depolanması gereken tek kısımdır. Belirli bir değeri kanıtlamak için, kökü elde etmek üzere onunla birleştirilmesi gereken tüm hash'leri sağlarsınız. Örneğin, `C` değerini kanıtlamak için `D`, `H(A-B)` ve `H(E-H)` sağlarsınız.
 
-![C değerinin ispatı](proof-c.png)
+![Proof of the value of C](proof-c.png)
 
 ## Uygulama {#implementation}
 
 [Örnek kod burada sağlanmıştır](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### Zincir dışı kod {#off-chain-code}
+### Zincir dışı kod {#offchain-code}
 
-Bu makalede zincir dışı işlemler için Javascript kullanıyoruz. Çoğu merkeziyetsiz uygulama Javascript'te zincir dışı bileşenlere sahiptir.
+Bu makalede zincir dışı hesaplamalar için JavaScript kullanıyoruz. Çoğu merkeziyetsiz uygulamanın zincir dışı bileşeni JavaScript'tedir.
 
 #### Merkle kökünü oluşturma {#creating-the-merkle-root}
 
-Öncelikle ağa, Merkle kökünü sağlamamız gerekmektedir.
+İlk olarak Merkle kökünü Zincire sağlamamız gerekiyor.
 
 ```javascript
 const ethers = require("ethers")
 ```
 
-[Ethers paketindeki hash fonksiyonunu kullanıyoruz](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
+[ethers paketindeki hash fonksiyonunu kullanıyoruz](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
 
 ```javascript
-// The raw data whose integrity we have to verify. The first two bytes a
-// are a user identifier, and the last two bytes the amount of tokens the
-// user owns at present.
+// Bütünlüğünü doğrulamamız gereken ham veri. İlk iki bayt bir
+// kullanıcı tanımlayıcısıdır ve son iki bayt ise kullanıcının
+// şu anda sahip olduğu token miktarıdır.
 const dataArray = [
   0x0bad0010, 0x60a70020, 0xbeef0030, 0xdead0040, 0xca110050, 0x0e660060,
   0xface0070, 0xbad00080, 0x060d0091,
 ]
 ```
 
-Örneğin her bir girişi 256-bit tam sayı değeri olacak şekilde kodlamak, bir JSON kullanmaktan daha az okunabilir olacaktır. Ancak bu, sözleşmedeki verilere erişmek için kayda değer ölçüde daha az işleme, dolayısıyla çok daha düşük gaz maliyetleri anlamına gelir. [JSON'u blok zinciri üzerinde okuyabilirsiniz](https://github.com/chrisdotn/jsmnSol) ancak bunu yapmak zorunda değilseniz kötü bir fikirdir.
+Her bir girdiyi tek bir 256 bitlik tam sayıya kodlamak, örneğin JSON kullanmaktan daha az okunabilir bir kodla sonuçlanır. Ancak bu, Sözleşmedeki verileri almak için önemli ölçüde daha az işlem yapılması ve dolayısıyla çok daha düşük Gaz maliyetleri anlamına gelir. [JSON'u zincir içi okuyabilirsiniz](https://github.com/chrisdotn/jsmnSol), ancak kaçınılabiliyorsa bu sadece kötü bir fikirdir.
 
 ```javascript
-// The array of hash values, as BigInts
+// BigInt'ler olarak hash değerleri dizisi
 const hashArray = dataArray
 ```
 
-Bu durumda veriler başlangıçta 256-bit değerindedir, bu yüzden herhangi bir işleme gerek yoktur. Eğer satır gibi daha karmaşık bir veri yapısı kullanıyor olsaydık, şifrelenmiş bir satır elde etmek için önce verileri şifrelediğimizden emin olmamız gerekirdi. Bunun ayrıca, kullanıcıların diğer kullanıcıların bilgilerini bilip bilmediklerini umursamamamızdan kaynaklandığını unutmayın. Aksi takdirde şifreleme yapmamız gerekecekti, böylece kullanıcı 1 kullanıcı 0'ın değerini; kullanıcı 2 kullanıcı 3'ün değerini bilmeyecekti vb.
+Bu durumda verilerimiz başlangıçta 256 bitlik değerlerdir, bu nedenle hiçbir işleme gerek yoktur. Dizeler gibi daha karmaşık bir veri yapısı kullanırsak, bir hash dizisi elde etmek için önce verileri hashlediğimizden emin olmalıyız. Bunun aynı zamanda kullanıcıların diğer kullanıcıların bilgilerini bilip bilmemesini umursamadığımız için olduğunu unutmayın. Aksi takdirde, kullanıcı 1'in kullanıcı 0'ın değerini, kullanıcı 2'nin kullanıcı 3'ün değerini vb. bilmemesi için hashleme yapmamız gerekirdi.
 
 ```javascript
-// Convert between the string the hash function expects and the
-// BigInt we use everywhere else.
+// hash fonksiyonunun beklediği dize ile
+// başka her yerde kullandığımız BigInt arasında dönüştürün.
 const hash = (x) =>
   BigInt(ethers.utils.keccak256("0x" + x.toString(16).padStart(64, 0)))
 ```
 
-Ethers hash fonksiyonu, `0x60A7` gibi onaltılık bir sayıya sahip bir JavaScript dizesi almayı bekler ve aynı yapıya sahip başka bir dizeyle yanıt verir. Ancak kodun geri kalanı için `BigInt` kullanmak daha kolaydır. Bu yüzden onu onaltılık bir dizeye ve geri eski hâline dönüştürürüz.
+ethers hash fonksiyonu, `0x60A7` gibi onaltılık bir sayı içeren bir JavaScript dizesi almayı bekler ve aynı yapıya sahip başka bir dizeyle yanıt verir. Ancak, kodun geri kalanı için `BigInt` kullanmak daha kolaydır, bu nedenle onaltılık bir dizeye dönüştürüp tekrar geri alıyoruz.
 
 ```javascript
-// Symmetrical hash of a pair so we won't care if the order is reversed.
+// Bir çiftin simetrik hash'i, böylece sıranın tersine çevrilip çevrilmediğini umursamayacağız.
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
-Bu fonksiyon simetriktir ([xor](https://en.wikipedia.org/wiki/Exclusive_or) b'nin hash değeri). Bu, Merkle ispatını kontrol ettiğimizde, ispattaki değeri hesaplanan değerden önce mi sonra mı koyacağımız konusunda endişelenmemize gerek olmadığı anlamına gelir. Merkel ispatı kontrolü zincir üstünde gerçekleşir, orada ne kadar az kod kullanırsak o kadar iyi.
+Bu fonksiyon simetriktir (a [xor](https://en.wikipedia.org/wiki/Exclusive_or) b'nin hash'i). Bu, Merkle kanıtını kontrol ettiğimizde, kanıttan gelen değeri hesaplanan değerden önce mi yoksa sonra mı koyacağımız konusunda endişelenmemize gerek olmadığı anlamına gelir. Merkle kanıtı kontrolü zincir içi yapılır, bu nedenle orada ne kadar az şey yapmamız gerekirse o kadar iyidir.
 
-Uyarı: Kriptografi göründüğünden daha zordur. Bu belgenin ilk versiyonu, `hash(a^b)` karma fonksiyonuna sahipti. Bu, `a` ve `b`'nin meşru değerlerini bilmeniz durumunda `b' = a^b^a'` denklemini kullanarak istediğiniz `a'` değerini kanıtlayabileceğiniz anlamına geldiği için **kötü** bir fikirdi. Bu fonksiyonla, `hash(a') ^ hash(b')` değeri, bilinen bir değere (köke giden yolda sonraki dal) eşit olacak şekilde `b'` değerini hesaplamanız gerekecekti ve bu çok daha zordur.
+Uyarı:
+Kriptografi göründüğünden daha zordur.
+Bu makalenin ilk sürümünde `hash(a^b)` hash fonksiyonu vardı.
+Bu **kötü** bir fikirdi çünkü `a` ve `b`'nin meşru değerlerini biliyorsanız, istediğiniz herhangi bir `a'` değerini kanıtlamak için `b' = a^b^a'` kullanabileceğiniz anlamına geliyordu.
+Bu fonksiyonla, `hash(a') ^ hash(b')` bilinen bir değere (köke giden yoldaki bir sonraki dal) eşit olacak şekilde `b'` hesaplamanız gerekirdi ki bu çok daha zordur.
 
 ```javascript
-// The value to denote that a certain branch is empty, doesn't
-// have a value
+// Belirli bir dalın boş olduğunu, bir değere sahip
+// olmadığını belirten değer
 const empty = 0n
 ```
 
-Değerler ikinin katı tam sayılar olmadığında bunun yerine boş dalları işlememiz gerekir. Program bunu yapmak için boş dallara varsayılan değer olarak 0 atar.
+Değerlerin sayısı ikinin tam sayı kuvveti olmadığında boş dalları işlememiz gerekir. Bu programın bunu yapma şekli, yer tutucu olarak sıfır koymaktır.
 
-![Dalları eksik olan Merkle ağacı](merkle-empty-hash.png)
+![Merkle tree with branches missing](merkle-empty-hash.png)
 
 ```javascript
-// Calculate one level up the tree of a hash array by taking the hash of
-// each pair in sequence
+// Bir hash dizisinin ağacında bir seviye yukarıyı, sırayla
+// her bir çiftin hash'ini alarak hesaplayın
 const oneLevelUp = (inputArray) => {
   var result = []
-  var inp = [...inputArray] // To avoid over writing the input // Add an empty value if necessary (we need all the leaves to be // paired)
+  var inp = [...inputArray] // Girdinin üzerine yazmaktan kaçınmak için // Gerekirse boş bir değer ekleyin (tüm yaprakların // eşleştirilmesi gerekir)
 
   if (inp.length % 2 === 1) inp.push(empty)
 
@@ -110,13 +115,13 @@ const oneLevelUp = (inputArray) => {
 } // oneLevelUp
 ```
 
-Bu fonksiyon, güncel katmandaki değer çiftlerini karma hâle getirerek bir üst seviyeye "tırmanır". Bunun en verimli uygulama olmadığını unutmayın, girdiyi kopyalamaktan kaçınabilir ve uygun olduğunda döngüye `hashEmpty` ekleyebilirdik, ancak bu kod okunabilirlik için optimize edilmiştir.
+Bu fonksiyon, mevcut katmandaki değer çiftlerini hashleyerek Merkle ağacında bir seviye "tırmanır". Bunun en verimli uygulama olmadığını unutmayın, girdiyi kopyalamaktan kaçınabilir ve döngüde uygun olduğunda sadece `hashEmpty` ekleyebilirdik, ancak bu kod okunabilirlik için optimize edilmiştir.
 
 ```javascript
 const getMerkleRoot = (inputArray) => {
   var result
 
-  result = [...inputArray] // Climb up the tree until there is only one value, that is the // root. // // If a layer has an odd number of entries the // code in oneLevelUp adds an empty value, so if we have, for example, // 10 leaves we'll have 5 branches in the second layer, 3 // branches in the third, 2 in the fourth and the root is the fifth
+  result = [...inputArray] // Sadece bir değer kalana kadar ağaçta yukarı tırmanın, bu // köktür. // // Eğer bir katman tek sayıda girdiye sahipse // oneLevelUp içindeki kod boş bir değer ekler, bu yüzden örneğin // 10 yaprağımız varsa ikinci katmanda 5 dalımız, üçüncü katmanda 3 // dalımız, dördüncü katmanda 2 dalımız olur ve kök beşincidir
 
   while (result.length > 1) result = oneLevelUp(result)
 
@@ -124,37 +129,37 @@ const getMerkleRoot = (inputArray) => {
 }
 ```
 
-Ana değere ulaşmak için ağaçta tek bir değer kalana kadar tırmanın.
+Kökü elde etmek için, geriye sadece bir değer kalana kadar tırmanın.
 
-#### Bir Merkle ispatı oluşturma {#creating-a-merkle-proof}
+#### Bir Merkle kanıtı oluşturma {#creating-a-merkle-proof}
 
-Bir Merkle ispatı, Merkle kökünü geri almak için kanıtlanan değerle birlikte karma hale getirilecek değerlerdir. İspatlanacak olan değer sıklıkla diğer veride bulunabilir. Bu yüzden kodun bir parçası yerine ayrı olarak sağlamayı tercih ederim.
+Bir Merkle kanıtı, Merkle kökünü geri elde etmek için kanıtlanan değerle birlikte hashlenecek değerlerdir. Kanıtlanacak değer genellikle diğer verilerden elde edilebilir, bu nedenle onu kodun bir parçası olarak değil, ayrı olarak sağlamayı tercih ederim.
 
 ```javascript
-// A merkle proof consists of the value of the list of entries to
-// hash with. Simetrik bir karma işlevi kullandığımız için,
-// kanıtı doğrulamak için öğenin konumuna ihtiyacımız var, yalnızca onu oluşturmak için
+// Bir Merkle kanıtı, birlikte hash'lenecek girdiler listesinin
+// değerinden oluşur. Simetrik bir hash fonksiyonu kullandığımız için,
+// kanıtı doğrulamak için öğenin konumuna ihtiyacımız yoktur, sadece onu oluşturmak için gerekir
 const getMerkleProof = (inputArray, n) => {
     var result = [], currentLayer = [...inputArray], currentN = n
 
-    // Until we reach the top
+    // En üste ulaşana kadar
     while (currentLayer.length > 1) {
-        // No odd length layers
+        // Tek uzunluklu katmanlar yok
         if (currentLayer.length % 2)
             currentLayer.push(empty)
 
         result.push(currentN % 2
-               // If currentN is odd, add with the value before it to the proof
+               // Eğer currentN tek ise, ondan önceki değerle birlikte kanıta ekleyin
             ? currentLayer[currentN-1]
-               // If it is even, add the value after it
+               // Eğer çift ise, ondan sonraki değeri ekleyin
             : currentLayer[currentN+1])
 
 ```
 
-`(v[0],v[1])`, `(v[2],v[3])` vb. şeklinde karma hale getiririz. Yani çift değerler için bir sonrakine, tek değerler için bir öncekine ihtiyacımız vardır.
+`(v[0],v[1])`, `(v[2],v[3])` vb. hashliyoruz. Bu yüzden çift değerler için bir sonrakine, tek değerler için bir öncekine ihtiyacımız var.
 
 ```javascript
-        // Move to the next layer up
+        // Bir üst katmana geçin
         currentN = Math.floor(currentN/2)
         currentLayer = oneLevelUp(currentLayer)
     }   // while currentLayer.length > 1
@@ -163,9 +168,9 @@ const getMerkleProof = (inputArray, n) => {
 }   // getMerkleProof
 ```
 
-### Zincir üstü kod {#on-chain-code}
+### Zincir içi kod {#onchain-code}
 
-Nihayet, kanıtları kontrol eden koda ulaştık. Zincir üstü kod, [Solidity](https://docs.soliditylang.org/en/v0.8.11/) ile yazılmıştır. Gaz maliyeti yüksek olduğundan burada optimizasyon çok daha önemlidir.
+Son olarak kanıtı kontrol eden kodumuz var. Zincir içi kod [Solidity](https://docs.soliditylang.org/en/v0.8.11/) ile yazılmıştır. Gaz nispeten pahalı olduğu için optimizasyon burada çok daha önemlidir.
 
 ```solidity
 //SPDX-License-Identifier: Public Domain
@@ -174,7 +179,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 ```
 
-Bunu, [Hardhat geliştirme ortamını kullanarak yazdım](https://hardhat.org/). Bu, geliştirme yaparken [Solidity'den konsol çıktısına](https://hardhat.org/tutorial/debugging-with-hardhat-network.html) sahip olmamızı sağlar.
+Bunu, geliştirme sırasında [Solidity'den konsol çıktısı](https://hardhat.org/docs/cookbook/debug-logs) almamızı sağlayan [Hardhat geliştirme ortamını](https://hardhat.org/) kullanarak yazdım.
 
 ```solidity
 
@@ -185,15 +190,15 @@ contract MerkleProof {
       return merkleRoot;
     }
 
-    // Extremely insecure, in production code access to
-    // this function MUST BE strictly limited, probably to an
-    // owner
+    // Son derece güvensiz, üretim kodunda bu fonksiyona
+    // erişim KESİNLİKLE sınırlandırılmalıdır, muhtemelen bir
+    // sahibe
     function setRoot(uint _merkleRoot) external {
       merkleRoot = _merkleRoot;
     }   // setRoot
 ```
 
-Merkle kökü için ayarlama ve getirme fonksiyonları. Bir üretim sisteminde herkesin Merkle kökünü güncellemesine izin vermek _son derece kötü bir fikirdir_. Örnek kodu basitleştirmek adına bunu burada yapıyorum. **Veri bütünlüğünün önemli olduğu bir sistemde bunu yapmayın**.
+Merkle kökü için ayarlama (set) ve alma (get) fonksiyonları. Herkesin Merkle kökünü güncellemesine izin vermek, bir üretim sisteminde _son derece kötü bir fikirdir_. Bunu burada örnek kod için basitlik adına yapıyorum. **Veri bütünlüğünün gerçekten önemli olduğu bir sistemde bunu yapmayın**.
 
 ```solidity
     function hash(uint _a) internal pure returns(uint) {
@@ -205,12 +210,12 @@ Merkle kökü için ayarlama ve getirme fonksiyonları. Bir üretim sisteminde h
     }
 ```
 
-Bu fonksiyon bir eş karma değeri oluşturur. Bu, sadece `hash` ve `pairHash` için JavaScript kodunun Solidity çevirisidir.
+Bu fonksiyon bir çift hash'i üretir. Sadece `hash` ve `pairHash` için JavaScript kodunun Solidity çevirisidir.
 
-**Not:** Burada da okunabilirlik için optimizasyon yapılmıştır. [Fonksiyon tanımına](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm) dayanarak; [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) olarak veriyi depolamak ve dönüşümleri önlemek mümkün olabilir.
+**Not:** Bu, okunabilirlik için optimizasyonun başka bir durumudur. [Fonksiyon tanımına](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm) dayanarak, verileri bir [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) değeri olarak depolamak ve dönüştürmelerden kaçınmak mümkün olabilir.
 
 ```solidity
-    // Merkle kanıtını doğrulayın
+    // Bir Merkle kanıtını doğrulayın
     function verifyProof(uint _value, uint[] calldata _proof)
         public view returns (bool) {
       uint temp = _value;
@@ -226,16 +231,18 @@ Bu fonksiyon bir eş karma değeri oluşturur. Bu, sadece `hash` ve `pairHash` i
 }  // MarkleProof
 ```
 
-Matematiksel gösterimde Merkle ispatı şöyle görünür: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. Bu kod onu uygular.
+Matematiksel gösterimde Merkle kanıtı doğrulaması şu şekilde görünür: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. Bu kod bunu uygular.
 
-## Merkle ispatları ve toplamalar uyumlu değildir {#merkle-proofs-and-rollups}
+## Merkle kanıtları ve toplamalar birbirine uymaz {#merkle-proofs-and-rollups}
 
-Merkle ispatları, [toplamalar](/developers/docs/scaling/#rollups) ile iyi çalışmaz. Sebebi ise toplamalarda işlemlerin Katman 1 üzerinde yazılması ancak Katman 2 üzerinde işlenmesidir. Bir işlem ile Merkle ispatı göndermenin maliyeti katman başına ortalama 638 gazdır (güncel olarak çağrı verisinde gaz maliyeti, bayt sıfır değilse 16, sıfır ise 4'tür). Eğer 1024 kelimeden oluşan bir verimiz varsa, bir Merkle ispatı 10 katman veya 6380 gaz gerektirir.
+Merkle kanıtları [toplamalar](/developers/docs/scaling/#rollups) ile iyi çalışmaz. Bunun nedeni, toplamaların tüm işlem verilerini katman 1 (l1) üzerine yazması, ancak katman 2 (l2) üzerinde işlemesidir. Bir işlemle birlikte bir Merkle kanıtı göndermenin maliyeti katman başına ortalama 638 Gaz'dır (şu anda çağrı verisindeki bir bayt sıfır değilse 16 Gaz'a, sıfırsa 4 Gaz'a mal olur). 1024 kelimelik verimiz varsa, bir Merkle kanıtı on katman veya toplam 6380 Gaz gerektirir.
 
-Örneğin [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)'e bakacak olursak: Katman 1 gaz yazmak ortalama 100 gwei, Katman 2 gaz yazmak ise 0,001 gwei'ye mal olmaktadır (bu, normal fiyattır ve tıkanıklık olursa artabilir). Yani bir Katman 1 gazının bedeli ile Katman 2 işlemeye yüz bin gaz harcayabiliriz. Depolamanın üzerine yazmadığımızı varsayarsak bu, bir Katman 1 gazı fiyatına Katman 2'deki depolamaya yaklaşık beş kelime yazabileceğimiz anlamına gelir. Tek bir Merkle ispatı için 1024 kelimenin tamamını depolamaya yazabiliriz (bir işlemde sağlanmak yerine zincir üzerinde hesaplayabileceklerini varsayarsak) ve hâlâ gaz maliyetinden tasarruf etme imkanımız olur.
+Örneğin [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)'e bakıldığında, l1 Gazı yazmak yaklaşık 100 Gwei'ye ve l2 Gazı 0,001 Gwei'ye mal olur (bu normal fiyattır, yoğunlukla birlikte artabilir). Yani bir l1 Gazı maliyetine l2 işlemede yüz bin Gaz harcayabiliriz. Depolamanın üzerine yazmadığımızı varsayarsak, bu, bir l1 Gazı fiyatına l2'de depolamaya yaklaşık beş kelime yazabileceğimiz anlamına gelir. Tek bir Merkle kanıtı için tüm 1024 kelimeyi depolamaya yazabiliriz (bir işlemde sağlanmak yerine başlangıçta zincir içi hesaplanabildiklerini varsayarak) ve yine de Gazın çoğunu artırabiliriz.
 
 ## Sonuç {#conclusion}
 
-Gerçek hayatta, Merkle ağaçlarını hiçbir zaman kendi başınıza uygulamayacak olabilirsiniz. Denetlenmiş ve iyi bilinen kütüphaneler mevcuttur. Genel olarak kendi başınıza ilkel kriptografik yöntemleri uygulamamanız en iyi seçimdir. Fakat Merkle ispatlarını ve ne zaman kullanmaya değer olduklarını umarım daha iyi anlamışsınızdır.
+Gerçek hayatta Merkle ağaçlarını asla kendi başınıza uygulamayabilirsiniz. Kullanabileceğiniz iyi bilinen ve denetlenmiş kütüphaneler vardır ve genel olarak konuşmak gerekirse kriptografik ilkelleri kendi başınıza uygulamamak en iyisidir. Ancak umarım artık Merkle kanıtlarını daha iyi anlıyorsunuzdur ve ne zaman kullanmaya değer olduklarına karar verebilirsiniz.
 
-Merkle ispatlarının, _bütünlüğü_ korurken _kullanılabilirlikten_ ödün verdiğini unutmayın. Veri deposuna erişim yoksa ve onlara erişmek için bir Merkle ağacı oluşturamıyorsanız, varlıklarınızı başka kimsenin alamayacağını bilmek küçük bir teselli olur. Yani en iyisi Merkle ağaçlarının IPFS gibi bir merkeziyetsiz depolama ile kullanılmasıdır.
+Merkle kanıtlarının _bütünlüğü_ korurken _erişilebilirliği_ korumadığını unutmayın. Veri depolama birimi erişime izin vermemeye karar verirse ve onlara erişmek için bir Merkle ağacı da oluşturamazsanız, varlıklarınızı başka hiç kimsenin alamayacağını bilmek küçük bir tesellidir. Bu nedenle Merkle ağaçları en iyi IPFS gibi bir tür merkeziyetsiz depolama ile kullanılır.
+
+[Çalışmalarımın daha fazlası için buraya bakın](https://cryptodocguy.pro/).

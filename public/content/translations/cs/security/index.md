@@ -1,229 +1,234 @@
 ---
-title: Bezpečnost a předcházení podvodům v Ethereu
+title: Bezpečnost Etherea a prevence podvodů
 description: Jak zůstat v bezpečí na Ethereu
 lang: cs
 ---
 
-# Bezpečnost a předcházení podvodům v Ethereu {#introduction}
-
-Rostoucí zájem o kryptoměny s sebou přináší rostoucí riziko ze strany podvodníků a hackerů. Tento článek uvádí některé osvědčené postupy ke zmírnění těchto rizik.
+Rostoucí zájem o kryptoměny s sebou přináší i rostoucí riziko ze strany podvodníků a hackerů. Tento článek popisuje některé osvědčené postupy, jak tato rizika zmírnit.
 
 **Pamatujte: Nikdo z ethereum.org vás nikdy nebude kontaktovat. Neodpovídejte na e-maily, které tvrdí, že jsou od oficiální podpory Etherea.**
 
 <Divider />
 
-## Krypto bezpečnost v kostce {#crypto-security}
+## Základy krypto bezpečnosti {#crypto-security}
 
-### Rozšiřte své znalosti {#level-up-your-knowledge}
+### Zlepšete své znalosti {#level-up-your-knowledge}
 
-Nedorozumění ohledně toho, jak kryptoměny fungují, mohou vést k nákladným chybám. Např. pokud se někdo vydává za pracovníka zákaznického servisu, který vám může vrátit ztracené ETH výměnou za vaše privátní klíče, využívá toho, že lidé nerozumí tomu, že Ethereum je decentralizovaná síť, která takovou funkčnost nemá. Vzdělávat se v oblasti fungování Etherea se vyplatí.
+Nedorozumění ohledně toho, jak krypto funguje, mohou vést k nákladným chybám. Pokud se například někdo vydává za agenta zákaznické podpory, který vám může vrátit ztracené ETH výměnou za vaše soukromé klíče, zneužívá toho, že lidé nechápou, že [Ethereum](/) je decentralizovaná síť, která tento druh funkcionality postrádá. Vzdělávat se v tom, jak Ethereum funguje, je investice, která se vyplatí.
 
 <DocLink href="/what-is-ethereum/">
-  Co je to Ethereum?
+  Co je Ethereum?
 </DocLink>
 
-<DocLink href="/eth/">
-  Co je Ether?
+<DocLink href="/what-is-ether/">
+  Co je ether?
 </DocLink>
 <Divider />
 
-## Zabezpečení peněženky {#wallet-security}
+## Bezpečnost peněženky {#wallet-security}
 
-### Nesdílejte své privátní klíče {#protect-private-keys}
+### Nikdy nesdílejte svou obnovovací frázi {#protect-private-keys}
 
-**Nikdy, za žádných okolností, nesdílejte své privátní klíče!**
+**Nikdy, z žádného důvodu, nesdílejte svou obnovovací frázi ani soukromé klíče!**
 
-Privátní klíč k vaší peněžence slouží jako heslo k vaší peněžence Ethereum. Je to jediná věc, která brání tomu, aby někdo, kdo zná adresu vaší peněženky, vybral z vašeho účtu veškerá aktiva!
+Vaše obnovovací fráze (také nazývaná tajná obnovovací fráze nebo seed fráze) je hlavním klíčem k vaší peněžence. Kdokoli ji má, může získat přístup ke všem vašim účtům a vysát veškerá aktiva. Soukromé klíče fungují stejným způsobem pro jednotlivé účty. Žádná legitimní služba, agent podpory ani webová stránka vás o ně nikdy nepožádá.
 
 <DocLink href="/wallets/">
-  Co je Ethereum peněženka?
+  Co je to Ethereum peněženka?
 </DocLink>
 
-#### Nepořizujte si snímky obrazovky s bezpečnostními frázemi / privátními klíči {#screenshot-private-keys}
+#### Nedělejte snímky obrazovky svých seed frází / soukromých klíčů {#screenshot-private-keys}
 
-Pořízení snímku obrazovky s vašimi bezpečnostními frázemi nebo privátními klíči je může synchronizovat s poskytovatelem cloudových služeb, což by je mohlo zpřístupnit hackerům. Získání privátních klíčů z cloudu je běžným způsobem útoku hackerů.
+Pořízení snímku obrazovky vašich seed frází nebo soukromých klíčů je může synchronizovat s poskytovatelem cloudových dat, což by je mohlo zpřístupnit hackerům. Získávání soukromých klíčů z cloudu je pro hackery běžným vektorem útoku.
 
 ### Používejte hardwarovou peněženku {#use-hardware-wallet}
 
-Hardwarová peněženka poskytuje offline úložiště privátních klíčů. Je považována za nejbezpečnější variantu peněženky pro ukládání privátních klíčů: váš privátní klíč se nikdy nedotkne internetu a zůstává zcela lokálně ve vašem zařízení.
+Hardwarová peněženka poskytuje offline úložiště pro soukromé klíče. Považují se za nejbezpečnější možnost peněženky pro uložení vašich soukromých klíčů: váš soukromý klíč se nikdy nedotkne internetu a zůstává zcela lokálně na vašem zařízení.
 
-Uchovávání privátních klíčů offline výrazně snižuje riziko napadení, a to i v případě, že hacker získá kontrolu nad vaším počítačem.
+Udržování soukromých klíčů offline masivně snižuje riziko hacknutí, a to i v případě, že hacker získá kontrolu nad vaším počítačem.
 
 #### Vyzkoušejte hardwarovou peněženku: {#try-hardware-wallet}
 
 - [Ledger](https://www.ledger.com/)
 - [Trezor](https://trezor.io/)
 
-### Dvakrát zkontrolujte transakce před odesláním {#double-check-transactions}
+### Před odesláním transakce dvakrát zkontrolujte {#double-check-transactions}
 
-Častou chybou je náhodné odeslání kryptoměn na nesprávnou adresu peněženky. **Transakce odeslaná na Ethereu je nevratná.** Pokud neznáte vlastníka adresy a nepřesvědčíte ho, aby vám prostředky vrátil, nebudete schopni je získat zpět.
+Náhodné odeslání krypta na špatnou adresu peněženky je běžnou chybou. **Transakce odeslaná na Ethereu je nevratná.** Pokud neznáte vlastníka adresy a nedokážete ho přesvědčit, aby vám prostředky poslal zpět, nebudete moci své prostředky získat zpět.
 
-Před odesláním transakce se vždy ujistěte, že adresa, na kterou odesíláte, přesně odpovídá adrese požadovaného příjemce. Při interakci s chytrým kontraktem je nejlepší si před podpisem přečíst zprávu o transakci.
+Před odesláním transakce se vždy ujistěte, že adresa, na kterou odesíláte, přesně odpovídá adrese požadovaného příjemce.
+Při interakci s chytrým kontraktem je dobrým zvykem si před podepisováním přečíst zprávu transakce.
 
-### Nastavte si u chytrých kontraktů limity převodů {#spend-limits}
+### Nastavte limity útraty pro chytré kontrakty {#spend-limits}
 
-Při interakci s chytrými kontrakty nepovolujte neomezené limity převodů. Neomezené převody by mohly chytrému kontraktu umožnit vyčerpat vaši peněženku. Místo toho nastavte limity převodů pouze na částku nezbytnou pro danou transakci.
+Při interakci s chytrými kontrakty nepovolujte neomezené limity útraty. Neomezená útrata by mohla chytrému kontraktu umožnit vysát vaši peněženku. Místo toho nastavte limity útraty pouze na částku nezbytnou pro transakci.
 
-Mnoho Ethereum peněženek nabízí ochranu limitů, která chrání před vybíráním peněz z účtů.
+Mnoho Ethereum peněženek nabízí ochranu pomocí limitů, která chrání před vysátím účtů.
 
-[Jak zrušit chytrý přístup k Vašim krypto fondům](/guides/how-to-revoke-token-access/)
+[Jak zrušit přístup chytrého kontraktu k vašim krypto prostředkům](/guides/how-to-revoke-token-access/)
 
 <Divider />
 
 ## Běžné podvody {#common-scams}
 
-Podvodníky nelze zcela zastavit, ale můžeme jim ztížit situaci tím, že budeme znát většinu používaných technik. Těchto podvodů existuje mnoho, ale obecně se řídí stejnými základními vzorci. Když už nic jiného, nezapomeňte:
+Je nemožné podvodníky zcela zastavit, ale můžeme snížit jejich efektivitu tím, že budeme znát jejich nejpoužívanější techniky. Existuje mnoho variant těchto podvodů, ale obecně se řídí stejnými základními vzorci. Pokud si nezapamatujete nic jiného, pamatujte si toto:
 
-- být vždy skeptičtí
-- že vám nikdo nedá ETH zdarma ani se slevou
-- že nikdo nepotřebuje přístup k vašim privátním klíčům nebo osobním údajům
+- buďte vždy skeptičtí
+- nikdo vám nedá ETH zdarma nebo se slevou
+- nikdo nepotřebuje přístup k vašim soukromým klíčům nebo osobním údajům
 
-### Reklamní phishing na Twitteru {#ad-phishing}
+### Phishing prostřednictvím reklam na Twitteru {#ad-phishing}
 
-![Phishing v odkazech na Twitteru](./twitterPhishingScam.png)
+![Twitter link phishing](./twitterPhishingScam.png)
 
-Existuje způsob, jak podvrhnout funkci náhledu (rozbalení) odkazu na Twitteru (také známém jako X) za účelem oklamání uživatele. Cílem je vyvolat v uživatelích dojem, že navštěvují legitimní web. Tato technika využívá mechanismus Twitteru pro generování náhledů URL adres sdílených v tweetech a ukazuje náhled například _z ethereum.org_ (viz výše), i když jsou tyto odkazy ve skutečnosti přesměrovány na škodlivý web.
+Existuje metoda pro falšování funkce náhledu odkazů na Twitteru (známém také jako X), která může uživatele oklamat, aby si mysleli, že navštěvují legitimní webovou stránku. Tato technika zneužívá mechanismus Twitteru pro generování náhledů URL adres sdílených v tweetech a zobrazuje například _from ethereum.org_ (jak je ukázáno výše), i když jsou ve skutečnosti přesměrováni na škodlivou stránku.
 
-Vždy se ujistěte, že jste na správné doméně, obzváště poté, co kliknete na odkaz.
+Vždy zkontrolujte, zda jste na správné doméně, zejména po kliknutí na odkaz.
 
-[Další informace](https://harrydenley.com/faking-twitter-unfurling).
+[Více informací naleznete zde](https://harrydenley.com/faking-twitter-unfurling).
 
-### Rozdávací podvod {#giveaway}
+### Podvodné rozdávání (Giveaway scam) {#giveaway}
 
-Jedním z nejčastějších podvodů v oblasti kryptoměn je tzv. rozdávací podvod. Rozdávací podvod může mít mnoho podob, ale obecně funguje tak, že pokud pošlete ETH na uvedenou adresu peněženky, dostanete své ETH zpět, ale navíc zdvojnásobené. *Z tohoto důvodu je také známý jako podvod 2 za 1.*
+Jedním z nejčastějších podvodů v oblasti kryptoměn je podvodné rozdávání (giveaway scam). Tento podvod může mít mnoho podob, ale základní myšlenkou je, že pokud pošlete ETH na uvedenou adresu peněženky, dostanete své ETH zpět, ale zdvojnásobené. *Z tohoto důvodu je také známý jako podvod 2 za 1.*
 
-Tyto podvody obvykle stanovují omezený čas pro možnost nároku na výhru, aby vytvořily falešný pocit naléhavosti.
+Tyto podvody obvykle stanovují omezenou dobu, po kterou si lze nárokovat odměnu, aby vytvořily falešný pocit naléhavosti.
 
-### Podvody na sociálních médiích {#social-media-hacks}
+### Hacknutí sociálních sítí {#social-media-hacks}
 
-K významnému případu došlo v červenci 2020, kdy byly nabourány účty významných osobností a organizací na Twitteru. Hacker zároveň na nabouraných účtech zveřejnil nabídku na rozdávání bitcoinů. Přestože byly klamavé tweety rychle zaznamenány a smazány, hackerům se přesto podařilo uniknout s 11 bitcoiny (v září 2021 to bylo 500 000 dolarů).
+Velmi známá verze tohoto podvodu se odehrála v červenci 2020, kdy byly hacknuty účty na Twitteru patřící prominentním celebritám a organizacím. Hacker na hacknutých účtech současně zveřejnil rozdávání Bitcoinů. Ačkoli si klamavých tweetů lidé rychle všimli a byly smazány, hackerům se i tak podařilo uniknout s 11 bitcoiny (což v září 2021 představovalo 500 000 dolarů).
 
-![Podvod na Twitteru](./appleTwitterScam.png)
+![A scam on Twitter](./appleTwitterScam.png)
 
-### Rozdávání dárků od celebrit {#celebrity-giveaway}
+### Rozdávání celebritami {#celebrity-giveaway}
 
-Další častou formou podvodu je rozdávání dárků od celebrit. Podvodníci vezmou nahraný videorozhovor nebo konferenční přednášku celebrity a živě ji přenášejí na YouTube, aby to vypadalo, že celebrita poskytla živý videorozhovor a podpořila rozdávání kryptoměn.
+Rozdávání celebritami je další běžnou formou podvodného rozdávání. Podvodníci vezmou nahraný videorozhovor nebo přednášku z konference, kterou vedla celebrita, a živě ji vysílají na YouTube – čímž to vypadá, jako by celebrita poskytovala živý videorozhovor, ve kterém podporuje rozdávání kryptoměn.
 
-Nejčastěji je v tomto podvodu využíván Vitalik Buterin, ale i mnoho dalších významných osobností působících v oblasti kryptoměn (např. Elon Musk nebo Charles Hoskinson). Zahrnutí známé osoby dává podvodníkům pocit legitimity (vypadá to pochybně, ale Vitalik je zapojen, takže to musí být v pořádku!).
+Vitalik Buterin je v tomto podvodu využíván nejčastěji, ale zneužíváno je i mnoho dalších prominentních osobností zapojených do krypta (např. Elon Musk nebo Charles Hoskinson). Zahrnutí známé osoby dodává živému vysílání podvodníků pocit legitimity (vypadá to podezřele, ale je v tom zapojen Vitalik, takže to musí být v pořádku!).
 
-**Rozdávání jsou vždycky podvody. Pokud na tyto účty pošlete své prostředky, navždy o ně přijdete.**
+**Rozdávání (giveaways) jsou vždy podvody. Pokud pošlete své prostředky na tyto účty, navždy o ně přijdete.**
 
-![Podvod na YouTube](./youtubeScam.png)
+![A scam on YouTube](./youtubeScam.png)
 
-### Podvody s podporou {#support-scams}
+### Podvody s falešnou podporou {#support-scams}
 
-Kryptoměny jsou relativně mladou a nepochopenou technologií. Častým podvodem, který toho využívá, je podvod s podporou, kdy se podvodníci vydávají za pracovníky podpory populárních peněženek, burz nebo blockchainů.
+Kryptoměny jsou relativně mladou a nepochopenou technologií. Běžným podvodem, který toho využívá, je podvod s falešnou podporou, kdy se podvodníci vydávají za pracovníky podpory populárních peněženek, burz nebo blockchainů.
 
-Velká část diskuzí o Ethereu se odehrává na Discordu. Podvodníci obvykle najdou svůj cíl tak, že vyhledají dotazy na podporu ve veřejných discordových kanálech a poté tazateli pošlou soukromou zprávu s nabídkou podpory. Vybudováním důvěry se vás podvodníci snaží přimět k tomu, abyste jim prozradili své privátní klíče nebo poslali své finanční prostředky do jejich peněženek.
+Velká část diskusí o Ethereu probíhá na Discordu. Podvodníci s falešnou podporou obvykle najdou svůj cíl tak, že hledají dotazy na podporu ve veřejných kanálech na Discordu a poté tazateli pošlou soukromou zprávu s nabídkou podpory. Budováním důvěry se vás podvodníci snaží přimět k tomu, abyste odhalili své soukromé klíče nebo poslali své prostředky do jejich peněženek.
 
-![Podvod s podporou na Discordu](./discordScam.png)
+![A support scam on Discord](./discordScam.png)
 
-Obecně platí, že zaměstnanci s vámi nikdy nebudou komunikovat soukromými, neoficiálními kanály. Při žádosti o podporu je třeba mít na paměti pár jednoduchých věcí:
+Obecným pravidlem je, že personál s vámi nikdy nebude komunikovat prostřednictvím soukromých, neoficiálních kanálů. Několik jednoduchých věcí, které byste měli mít na paměti při jednání s podporou:
 
-- Nikdy nesdílejte své privátní klíče, bezpečnostní fráze ani hesla
-- Nikdy nikomu neumožňujte vzdálený přístup k vašemu počítači
-- Nikdy nekomunikujte mimo kanály určené organizací
+- Nikdy nesdílejte své soukromé klíče, seed fráze ani hesla
+- Nikdy nikomu nedovolte vzdálený přístup do vašeho počítače
+- Nikdy nekomunikujte mimo určené kanály organizace
 
-<InfoBanner emoji=":lock:">
-  <div>
-    Pozor: ačkoli k podvodům s podporou běžně dochází na Discordu, mohou se vyskytovat i v jiných chatovacích aplikacích, kde se diskutuje o kryptoměnách, včetně e-mailu.
-  </div>
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
+    Pozor: ačkoli se podvody ve stylu falešné podpory běžně vyskytují na Discordu, mohou být rozšířené i v jakýchkoli chatovacích aplikacích, kde probíhají diskuse o kryptu, včetně e-mailu.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
-### Podvod s 'Eth2' tokenem {#eth2-token-scam}
+### Podvod s tokenem 'Eth2' {#eth2-token-scam}
 
-Před [Sloučením](/roadmap/merge/) využili podvodníci zmatku kolem termínu "Eth2" a snažili se přimět uživatele, aby vyměnili své ETH za token "ETH2". Žádný "ETH2" neexistuje a žádný jiný legitimní token nebyl se Sloučením zaveden. ETH, které jste vlastnili před Sloučením, jsou stále stejné ETH. Pro přechod z důkazu prací na důkaz podílem **není třeba provádět žádnou akci týkající se vašeho ETH**.
+V období před [Merge](/roadmap/merge/) podvodníci využili zmatku kolem termínu 'Eth2' a snažili se přimět uživatele, aby vyměnili své ETH za token 'ETH2'. Žádné 'ETH2' neexistuje a s Merge nebyl představen žádný jiný legitimní token. ETH, které jste vlastnili před Merge, je stejné ETH jako nyní. Není **potřeba podnikat žádné kroky týkající se vašeho ETH v souvislosti s přechodem z důkazu prací (PoW) na důkaz podílem (PoS)**.
 
-Podvodníci se mohou vydávat za "podporu" a tvrdit vám, že pokud jim dáte vaše ETH, dostanete zpět "ETH2". Neexistuje žádná [oficiální podpora Etherea](/community/support/) ani žádný nový token. Nikdy nikomu nesdělujte bezpečnostní frázi vaší peněženky.
+Podvodníci se mohou vydávat za „podporu“ a tvrdit vám, že pokud vložíte své ETH, dostanete zpět 'ETH2'. Neexistuje žádná [oficiální podpora Etherea](/community/support/) a neexistuje žádný nový token. Nikdy s nikým nesdílejte seed frázi své peněženky.
 
-_Poznámka: Existují odvozené tokeny/tickery, které mohou představovat podílové ETH (tj. rETH od Rocket Pool, stETH od Lido, ETH2 od Coinbase), ale není třeba na ně "migrovat."_
+_Poznámka: Existují derivátové tokeny/tickery, které mohou představovat stakované ETH (např. rETH od Rocket Pool, stETH od Lido, ETH2 od Coinbase), ale to není nic, na co byste museli „migrovat“._
 
 ### Phishingové podvody {#phishing-scams}
 
-Dalším stále častějším úhlem pohledu, který podvodníci využívají k pokusu o krádež peněz z vaší peněženky, jsou phishingové podvody.
+Phishingové podvody jsou dalším stále častějším způsobem, který podvodníci používají k pokusu o krádež prostředků z vaší peněženky.
 
-Některé phishingové e-maily vyzývají uživatele, aby klikli na odkazy, které je přesměrují na falešné webové stránky a požádají je o zadání jejich bezpečnostní fráze, obnovení hesla nebo odeslání ETH. Jiné vás mohou požádat, abyste nevědomky nainstalovali malware, který infikuje váš počítač a umožní podvodníkům přístup k souborům vašeho počítače.
+Některé phishingové e-maily žádají uživatele, aby klikli na odkazy, které je přesměrují na napodobeniny webových stránek, a žádají je o zadání jejich seed fráze, resetování hesla nebo odeslání ETH. Jiné vás mohou požádat, abyste nevědomky nainstalovali malware, který infikuje váš počítač a poskytne podvodníkům přístup k souborům ve vašem počítači.
 
-Pokud obdržíte e-mail od neznámého odesílatele, nezapomeňte:
+Pokud obdržíte e-mail od neznámého odesílatele, pamatujte:
 
-- Nikdy neotvírejte odkazy nebo přílohy z e-mailových adres, které neznáte
+- Nikdy neotevírejte odkaz ani přílohu z e-mailových adres, které neznáte
 - Nikdy nikomu neprozrazujte své osobní údaje ani hesla
 - Mažte e-maily od neznámých odesílatelů
 
-[Další informace o tom, jak se vyhnout phishingovým podvodům](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
+[Více o tom, jak se vyhnout phishingovým podvodům](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
 
-### Podvody s kryptomakléři {#broker-scams}
+### Podvody s krypto brokery {#broker-scams}
 
-Podvodní kryptomakléři tvrdí, že jsou specializovaní makléři s kryptoměnami, kteří vám nabídnou, že převezmou kontrolu nad vašimi penězi a investují je za vás. Poté, co podvodník obdrží vaše finanční prostředky, vás může vést dál a požádat vás o zaslání dalších prostředků, abyste nepřišli o další investiční zisky, nebo může úplně zmizet.
+Podvodní krypto brokeři o sobě tvrdí, že jsou specializovaní brokeři na kryptoměny, kteří vám nabídnou, že si vezmou vaše peníze a budou investovat vaším jménem. Poté, co podvodník obdrží vaše prostředky, může vás tahat za nos a žádat, abyste poslali další prostředky, abyste nepřišli o další investiční zisky, nebo může zcela zmizet.
 
-Tito podvodní makléři vyhledávají své cíle využíváním falešných účtů na YouTube a tím, že začínají zdánlivě přirozené konverzace o "makléři". Tyto konverzace jsou často vysoce hodnocené, aby se zvýšila jejich legitimita, ale všechna hodnocení pocházejí od robotů.
+Tito podvodníci často nacházejí cíle pomocí falešných účtů na YouTube, kde začínají zdánlivě přirozené konverzace o „brokerovi“. Tyto konverzace jsou často vysoce hodnoceny (upvoted), aby se zvýšila jejich legitimita, ale všechna tato hodnocení pocházejí od botů.
 
-**Neumožňujte cizím lidem na internetu, aby za vás investovali. Přijdete o své krypto.**
+**Nedůvěřujte cizím lidem na internetu, že budou investovat vaším jménem. Přijdete o své krypto.**
 
-![Podvodný kryptomakléř na YouTube](./brokerScam.png)
+![A trading broker scam on YouTube](./brokerScam.png)
 
-### Podvody s kryptotěžebními pooly {#mining-pool-scams}
+### Podvody s těžebními pooly {#mining-pool-scams}
 
-Od září 2022 již těžba na Ethereu není možná. Podvody s těžebními pooly však stále existují. Podvody s těžebními pooly spočívají v tom, že vás nevyžádaně kontaktují lidé, kteří tvrdí, že vstupem do těžebního Ethereum poolu můžete dosáhnout vysokých zisků. Podvodník bude vznášet nároky a zůstane s vámi v kontaktu tak dlouho, jak bude potřeba. Podvodník se vás v podstatě bude snažit přesvědčit, že když se připojíte k těžebnímu poolu na Ethereu, budou vaše kryptoměny použity k vytvoření ETH a budou vám vyplaceny dividendy ve formě ETH. Poté uvidíte, že vaše kryptoměna přináší malé výnosy. Je to jen návnada, abyste investovali více. Nakonec budou všechny vaše finanční prostředky odeslány na neznámou adresu a podvodník buď zmizí, nebo v některých případech zůstane v kontaktu, jak se stalo v jednom z nedávných případů.
+Od září 2022 již není těžba na Ethereu možná. Podvody s těžebními pooly však stále existují. Podvody s těžebními pooly spočívají v tom, že vás lidé nevyžádaně kontaktují a tvrdí, že můžete dosáhnout velkých výnosů tím, že se připojíte k těžebnímu poolu Etherea. Podvodník bude vznášet tvrzení a zůstane s vámi v kontaktu tak dlouho, jak to bude nutné. V podstatě se vás podvodník pokusí přesvědčit, že když se připojíte k těžebnímu poolu Etherea, vaše kryptoměna bude použita k vytvoření ETH a že vám budou vypláceny dividendy v ETH. Poté uvidíte, že vaše kryptoměna přináší malé výnosy. To slouží pouze jako návnada, abyste investovali více. Nakonec budou všechny vaše prostředky odeslány na neznámou adresu a podvodník buď zmizí, nebo v některých případech zůstane v kontaktu, jak se stalo v jednom nedávném případě.
 
-Sečteno a podtrženo, buďte obezřetní vůči lidem, kteří vás kontaktují na sociálních sítích a žádají vás o účast v těžebním poolu. Jakmile o kryptoměny přijdete, jsou fuč.
+Sečteno a podtrženo: dejte si pozor na lidi, kteří vás kontaktují na sociálních sítích a žádají vás, abyste se stali součástí těžebního poolu. Jakmile o své krypto přijdete, je pryč.
 
-Několik věcí k zapamatování:
+Několik věcí, které byste si měli pamatovat:
 
-- Dávejte si pozor, aby vás někdo nekontaktoval ohledně způsobů, jak vydělat peníze na vašich kryptoměnách
-- Udělejte si průzkum o stakování, likvidních poolech nebo jiných způsobech investování vašeho krypta
-- Málokdy, pokud vůbec, jsou takové systémy legitimní. Pokud by tomu tak bylo, pravděpodobně by se staly mainstreamem a vy byste o nich určitě slyšeli.
+- Dejte si pozor na kohokoli, kdo vás kontaktuje ohledně způsobů, jak vydělat peníze na vašem kryptu
+- Udělejte si vlastní průzkum o stakingu, poolech likvidity nebo jiných způsobech investování vašeho krypta
+- Zřídkakdy, pokud vůbec někdy, jsou taková schémata legitimní. Kdyby byla, pravděpodobně by byla běžně známá a už byste o nich slyšeli.
 
-[Muž přišel o 200 tisíc dolarů při podvodu s těžebním poolem](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
+[Muž přišel o 200 tisíc dolarů v podvodu s těžebním poolem](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
-### Airdropové podvody {#airdrop-scams}
+### Podvody s airdropy {#airdrop-scams}
 
-Airdropové podvody spočívají v tom, že podvodný projekt vám do peněženky airdropne aktivum (NFT, token) a pošle vás na podvodnou webovou stránku, kde si ho můžete vyzvednout. Při pokusu o vyzvednutí budete vyzváni, abyste se přihlásili pomocí vaší Ethereum peněženky a "schválili" transakci. Tato transakce kompromituje váš účet tím, že podvodníkovi odešle vaše veřejné a privátní klíče. Alternativní forma tohoto podvodu může spočívat v potvrzení transakce, která odešle finanční prostředky na účet podvodníka.
+Podvody s airdropy spočívají v tom, že podvodný projekt provede airdrop aktiva (NFT, tokenu) do vaší peněženky a pošle vás na podvodnou webovou stránku, abyste si airdropnuté aktivum nárokovali. Při pokusu o nárokování budete vyzváni k přihlášení pomocí vaší Ethereum peněženky a ke „schválení“ transakce. Tato transakce kompromituje váš účet tím, že odešle vaše veřejné a soukromé klíče podvodníkovi. Alternativní forma tohoto podvodu vás může přimět k potvrzení transakce, která odešle prostředky na účet podvodníka.
 
-[Více o airdropových podvodech](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+[Více o podvodech s airdropy](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 <Divider />
 
-## Bezpečnost na internetu v kostce {#web-security}
+## Základy webové bezpečnosti {#web-security}
 
 ### Používejte silná hesla {#use-strong-passwords}
 
-[Více než 80 % případů napadení účtu je důsledkem slabých nebo ukradených hesel](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Pro zabezpečení účtů je nejlepší dlouhá kombinace znaků, čísel a symbolů.
+[Více než 80 % hacknutí účtů je důsledkem slabých nebo ukradených hesel](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Dlouhá kombinace znaků, čísel a symbolů pomůže udržet vaše účty v bezpečí.
 
-Běžnou chybou je použití kombinace několika běžných, souvisejících slov. Taková hesla nejsou bezpečná, protože jsou náchylná k jednoduché hackerské technice zvané slovníkový útok.
+Častou chybou je použití kombinace několika běžných, souvisejících slov. Taková hesla jsou nezabezpečená, protože jsou náchylná k hackerské technice zvané slovníkový útok.
 
 ```md
-Příklad slabého hesla: CuteFluffyKittens!
+Příklad slabého hesla: RoztomilaChlupataKotatka!
 
 Příklad silného hesla: ymv\*azu.EAC8eyp8umf
 ```
 
-Další častou chybou je používání hesel, která lze snadno uhodnout nebo zjistit pomocí [sociálního inženýrství](https://wikipedia.org/wiki/Social_engineering_(security)). Použití jména vaší matky za svobodna, jmen dětí nebo domácích mazlíčků nebo dat narození v hesle není bezpečné a zvyšuje riziko prolomení hesla.
+Další častou chybou je používání hesel, která lze snadno uhodnout nebo odhalit prostřednictvím [sociálního inženýrství](<https://wikipedia.org/wiki/Social_engineering_(security)>). Zahrnutí rodného příjmení vaší matky, jmen vašich dětí nebo domácích mazlíčků, případně dat narození do vašeho hesla zvýší riziko hacknutí.
 
-#### Čeho se držet, když vytváříte heslo: {#good-password-practices}
+#### Osvědčené postupy pro hesla: {#good-password-practices}
 
-- Vytvářejte hesla tak dlouhá, jak to umožňuje generátor hesel nebo vyplňovaný formulář
-- Používejte kombinaci velkých a malých písmen, číslic a symbolů
-- V hesle nepoužívejte osobní údaje, například příjmení
-- Vyhněte se běžným výrazům
+- Vytvářejte hesla tak dlouhá, jak to umožňuje váš generátor hesel nebo formulář, který vyplňujete
+- Používejte kombinaci velkých a malých písmen, čísel a symbolů
+- Nepoužívejte v hesle osobní údaje, jako jsou příjmení
+- Vyhněte se běžným slovům
 
 [Více o vytváření silných hesel](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
 
 ### Používejte pro všechno jedinečná hesla {#use-unique-passwords}
 
-Silné heslo, které bylo odhaleno při úniku dat, již není silným heslem. Webová stránka [Have I Been Pwned](https://haveibeenpwned.com) vám umožňuje zkontrolovat, zda vaše účty byly zahrnuty do veřejných úniků dat. Pokud ano, **okamžitě tato hesla změňte**. Používání jedinečných hesel pro každý účet snižuje riziko, že se hackeři dostanou ke všem vašim účtům, pokud jedno z vašich hesel bude kompromitováno.
+Silné heslo, které bylo odhaleno při úniku dat, již není silným heslem. Webová stránka [Have I Been Pwned](https://haveibeenpwned.com) vám umožňuje zkontrolovat, zda vaše účty nebyly součástí nějakého veřejného úniku dat. Pokud ano, **okamžitě tato hesla změňte**. Používání jedinečných hesel pro každý účet snižuje riziko, že hackeři získají přístup ke všem vašim účtům, pokud je jedno z vašich hesel kompromitováno.
 
 ### Používejte správce hesel {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
-    Správce hesel se postará o vytvoření silných a jedinečných hesel a jejich zapamatování! <strong>Vřele</strong> doporučujeme nějaký používat, většina z nich je zdarma!
-  </div>
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
+    Používání správce hesel se postará o vytváření silných, jedinečných hesel a jejich zapamatování! <strong>Důrazně</strong> doporučujeme nějaký používat a většina z nich je zdarma!
+</AlertDescription>
+</AlertContent>
+</Alert>
 
-Pamatovat si silná a jedinečná hesla pro každý účet není ideální. Správce hesel nabízí bezpečné šifrované úložiště všech vašich hesel, ke kterým máte přístup prostřednictvím jednoho silného hlavního hesla. Při registraci do nové služby také doporučují silná hesla, abyste si nemuseli vytvářet vlastní. Mnoho správců hesel vám také oznámí, zda jste byli součástí úniku dat, a umožní vám změnit hesla dříve, než dojde ke škodlivým útokům.
+Pamatovat si silná a jedinečná hesla pro každý váš účet není ideální. Správce hesel nabízí bezpečné, šifrované úložiště pro všechna vaše hesla, ke kterému máte přístup prostřednictvím jednoho silného hlavního hesla. Při registraci do nové služby také navrhují silná hesla, takže si nemusíte vytvářet vlastní. Mnoho správců hesel vám také sdělí, zda jste byli součástí úniku dat, což vám umožní změnit hesla před jakýmikoli škodlivými útoky.
 
-![Příklad použití správce hesel](./passwordManager.png)
+![Example of using a password manager](./passwordManager.png)
 
 #### Vyzkoušejte správce hesel: {#try-password-manager}
 
@@ -232,64 +237,67 @@ Pamatovat si silná a jedinečná hesla pro každý účet není ideální. Spr�
 - [1Password](https://1password.com/)
 - Nebo se podívejte na další [doporučené správce hesel](https://www.privacytools.io/secure-password-manager)
 
-### Používejte dvoufaktorové ověření {#two-factor-authentication}
+### Používejte dvoufaktorové ověřování {#two-factor-authentication}
 
-Někdy můžete být požádáni o ověření své identity prostřednictvím jedinečných důkazů. Tyto důkazy jsou známé jako **faktory**. Tři hlavní faktory jsou:
+Někdy můžete být požádáni o ověření své identity prostřednictvím jedinečných důkazů. Ty jsou známé jako **faktory**. Tři hlavní faktory jsou:
 
-- Něco, co víte (jako třeba heslo nebo bezpečností otázku)
-- Něco, co jste (jako třeba otisk prstu nebo sken duhovky/obličeje)
-- Něco, co vlastníte (bezpečnostní klíč nebo ověřovací aplikace v telefonu)
+- Něco, co znáte (například heslo nebo bezpečnostní otázka)
+- Něco, čím jste (například otisk prstu nebo skener duhovky/obličeje)
+- Něco, co vlastníte (bezpečnostní klíč nebo ověřovací aplikace ve vašem telefonu)
 
-Používání **dvoufaktorového ověřování (2FA)** je dalším *bezpečnostním faktorem* pro vaše online účty. 2FA zajišťuje, že pouze mít vaše heslo nestačí k přístupu k účtu. Druhým faktorem je nejčastěji náhodný šestimístný kód, známý jako **jednorázové heslo (TOTP)**, ke kterému získáte přístup prostřednictvím autentizační aplikace, jako je Google Authenticator nebo Authy. Fungují jako "něco, co vlastníte", protože seed, který generuje časovaný kód, je uložen ve vašem zařízení.
+Použití **dvoufaktorového ověřování (2FA)** poskytuje dodatečný *bezpečnostní faktor* pro vaše online účty. 2FA zajišťuje, že pouhá znalost vašeho hesla nestačí k přístupu k účtu. Nejčastěji je druhým faktorem náhodný 6místný kód, známý jako **časově závislé jednorázové heslo (TOTP)**, ke kterému máte přístup prostřednictvím ověřovací aplikace, jako je Google Authenticator nebo Authy. Ty fungují jako faktor „něco, co vlastníte“, protože seed, který generuje časovaný kód, je uložen ve vašem zařízení.
 
-<InfoBanner emoji=":lock:">
-  <div>
-    Poznámka: Používání 2FA pomocí SMS je náchylné k <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">odcizení SIM karty</a> a není bezpečné. Pro nejlepší ochranu používejte službu jako <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> nebo <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
+    Poznámka: Používání 2FA na bázi SMS je náchylné k <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> a není bezpečné. Pro nejlepší zabezpečení použijte službu jako <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> nebo <a href="https://authy.com/">Authy</a>.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Bezpečnostní klíče {#security-keys}
 
-Bezpečnostní klíč je pokročilejší a bezpečnější typ dvoufaktorového ověřování (2FA). Bezpečnostní klíče jsou fyzická hardwarová ověřovací zařízení, která fungují podobně jako ověřovací aplikace. Nejbezpečnějším způsobem 2FA je použití bezpečnostního klíče. Mnoho těchto klíčů využívá standard FIDO Universal 2nd Factor (U2F). [Zjistěte více o FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
+Bezpečnostní klíč je pokročilejší a bezpečnější typ 2FA. Bezpečnostní klíče jsou fyzická hardwarová ověřovací zařízení, která fungují jako ověřovací aplikace. Použití bezpečnostního klíče je nejbezpečnější způsob 2FA. Mnoho z těchto klíčů využívá standard FIDO Universal 2nd Factor (U2F). [Zjistěte více o FIDO U2F](https://www.yubico.com/resources/glossary/fido-u2f/).
 
-Podívejte se na další informace o 2FA:
+Podívejte se na více informací o 2FA:
 
-<YouTube id="m8jlnZuV1i4" start="3479" />
+<VideoWatch slug="crypto-security-passwords" startTime="3479" />
 
 ### Odinstalujte rozšíření prohlížeče {#uninstall-browser-extensions}
 
-Rozšíření pro prohlížeče, jako jsou rozšíření pro Chrome nebo doplňky pro Firefox, mohou zlepšit funkčnost prohlížeče, ale také přinášejí určitá rizika. Ve výchozím nastavení si většina rozšíření prohlížeče vyžádá přístup ke "čtení a změně dat webu", což jim umožňuje dělat s vašimi daty téměř cokoli. Rozšíření Chrome jsou vždy automaticky aktualizována, takže dříve bezpečné rozšíření může být později aktualizováno a obsahovat škodlivý kód. Většina rozšíření prohlížeče se nesnaží ukrást vaše data, ale měli byste vědět, že to mohou udělat.
+Rozšíření prohlížeče, jako jsou rozšíření pro Chrome nebo doplňky pro Firefox, mohou zlepšit funkčnost prohlížeče, ale přinášejí s sebou i rizika. Ve výchozím nastavení většina rozšíření prohlížeče žádá o přístup ke „čtení a změně dat webů“, což jim umožňuje dělat s vašimi daty téměř cokoli. Rozšíření pro Chrome se vždy automaticky aktualizují, takže dříve bezpečné rozšíření se může později aktualizovat a obsahovat škodlivý kód. Většina rozšíření prohlížeče se nesnaží ukrást vaše data, ale měli byste si být vědomi toho, že mohou.
 
 #### Zůstaňte v bezpečí tím, že: {#browser-extension-safety}
 
-- Budete instalovat rozšíření prohlížeče pouze z důvěryhodných zdrojů
-- Budete odstraňovat nepoužívaná rozšíření prohlížeče
-- Budete instalovat rozšíření Chrome lokálně, abyste zastavili automatické aktualizace (Pokročilé)
+- Instalujte rozšíření prohlížeče pouze z důvěryhodných zdrojů
+- Odstraníte nepoužívaná rozšíření prohlížeče
+- Nainstalujete rozšíření pro Chrome lokálně, abyste zastavili automatické aktualizace (Pokročilé)
 
-[Další informace o rizicích rozšíření prohlížeče](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
+[Více o rizicích rozšíření prohlížeče](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 <Divider />
 
-## Další informace {#further-reading}
+## Další čtení {#further-reading}
 
-### Bezpečnost na internetu {#reading-web-security}
+### Webová bezpečnost {#reading-web-security}
 
-- [Až 3 miliony zařízení infikovaných doplňky pro Chrome a Edge](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
+- [Až 3 miliony zařízení infikovaných doplňky pro Chrome a Edge obsahujícími malware](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [Jak vytvořit silné heslo — které nezapomenete](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [Co je to bezpečnostní klíč?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
 
 ### Krypto bezpečnost {#reading-crypto-security}
 
-- [Jak ochránit sebe a své prostředky](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [Bezpečnostní problémy v běžném kryptokomunikačním softwaru](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media) - _Salus_
-- [Bezpečnostní návod pro ťuňti, ale i pro chytré](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
-- [Krypto bezpečnost: Hesla a Ověřování](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
+- [Ochrana vás a vašich prostředků](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
+- [Bezpečnostní problémy v běžném komunikačním softwaru pro krypto](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media) - _Salus_
+- [Průvodce bezpečností pro hlupáky i chytré lidi](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
+- [Krypto bezpečnost: Hesla a ověřování](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 
-### Výuka o podvodech {#reading-scam-education}
+### Vzdělávání o podvodech {#reading-scam-education}
 
-- [Návod: Jak rozpoznat podvodné tokeny](/guides/how-to-id-scam-tokens/)
-- [Jak zůstat v bezpečí: Časté podvody](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
-- [Předcházení podvodům](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Vlákno na Twitteru o běžných kryptophishingových e-mailech a zprávách](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Průvodce: Jak identifikovat podvodné tokeny](/guides/how-to-id-scam-tokens/)
+- [Jak zůstat v bezpečí: Běžné podvody](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
+- [Jak se vyhnout podvodům](https://bitcoin.org/en/scams) - _Bitcoin.org_
+- [Vlákno na Twitteru o běžných krypto phishingových e-mailech a zprávách](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

@@ -1,36 +1,36 @@
 ---
-title: ERC-721 非代替性トークン（NFT）規格
-description:
+title: "ERC-721 非代替性トークン標準"
+description: "イーサリアム上の固有のデジタル資産を表す非代替性トークン（NFT）の標準であるERC-721について学びます。"
 lang: ja
 ---
 
 ## はじめに {#introduction}
 
-**非代替性トークン（NFT）とは**
+**非代替性トークンとは何ですか？**
 
-非代替性トークン（NFT）は、固有の方法で、人や物を識別するために使われます。 この種類のトークンは、収集用のアイテム、アクセスキー、宝くじ、コンサートやスポーツ試合におけるシート番号付チケットなどを発行するプラットフォームに最も適しています。 この特殊なタイプのトークンはすばらしい可能性を秘めているため、専用の規格としてERC-721を策定しました。
+非代替性トークン（NFT）は、何かまたは誰かを一意に識別するために使用されます。このタイプのトークンは、コレクティブルアイテム、アクセスキー、宝くじ、コンサートやスポーツの試合の指定席などを提供するプラットフォームでの使用に最適です。この特別なタイプのトークンには驚くべき可能性があるため、適切な標準が必要であり、ERC-721がそれを解決するために登場しました！
 
-**ERC-721とは何か？**
+**ERC-721とは何ですか？**
 
-ERC-721は、NFTに対する標準規格です。つまり、この種類のトークンはそれぞれがユニークな存在であり、発行日、希少性、および外見などの点で、同一のスマートコントラクトで発行される他のトークンとは異なる値を持つことができます。 外見が違うとはどういう意味でしょう？
+ERC-721はNFTの標準を導入します。言い換えれば、このタイプのトークンは一意であり、同じスマート・コントラクトからの別のトークンとは異なる価値を持つ可能性があります。それは、年齢、希少性、あるいは見た目のような他の要因によるものかもしれません。えっ、見た目？
 
-はい！ すべてのNFTは、`tokenid`と呼ばれる`unit256`変数を持つため、ERC-721を伴うコントラクトでは、`contract adress, unit 256 tokenid`のペアはグローバルに固有でなければなりません。 その上で、各Dappでは、`tokenid`の入力から、ゾンビ、武器、スキル、あるいは可愛い子猫といったクールな画像を出力する「コンバーター」を搭載することができます。
+はい！すべてのNFTには`tokenId`と呼ばれる`uint256`変数が含まれています。そのため、どのERC-721コントラクトにおいても、`contract address, uint256 tokenId`のペアはグローバルに一意でなければなりません。つまり、分散型アプリケーション (dapp) は、`tokenId`を入力として使用し、ゾンビ、武器、スキル、または素晴らしい子猫のようなクールなものの画像を出力する「コンバーター」を持つことができます！
 
-## 前提知識 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 - [アカウント](/developers/docs/accounts/)
-- [スマートコントラクト](/developers/docs/smart-contracts/)
-- [トークン規格](/developers/docs/standards/tokens/)
+- [スマート・コントラクト](/developers/docs/smart-contracts/)
+- [トークン標準](/developers/docs/standards/tokens/)
 
-## 規格の概要 {#body}
+## 本文 {#body}
 
-ERC-721（Ethereum Request for Comments 721）は、ウィリアム・エントリケン氏、ディーター・シャーリー氏、ジェイコブ・エバンス氏、ナスタシア・サックス氏により2018年1月に提案された、スマートコントラクト内で非代替性トークン（NFT）を取り扱うためのAPIを実装するための規格です。
+2018年1月にWilliam Entriken、Dieter Shirley、Jacob Evans、Nastassia Sachsによって提案されたERC-721（[イーサリアム](/) Request for Comments 721）は、スマート・コントラクト内のトークン用のAPIを実装する非代替性トークン標準です。
 
-この規格により、複数アカウント間のトークンの転送、アカウントにおける現在のトークン残高の取得、トークン所有者の取得、およびネットワーク上で供給されているトークン総数の取得といった機能が提供されます。 さらに、特定のアカウントが所有するトークン残高のうち、サードパーティのアカウントが転送可能な上限の設定を承認するなど、その他の機能も提供されています。
+あるアカウントから別のアカウントへトークンを送金する、アカウントの現在のトークン残高を取得する、特定のトークンの所有者を取得する、ネットワーク上で利用可能なトークンの総供給量を取得するなどの機能を提供します。これらに加えて、アカウントからの一定量のトークンを第三者のアカウントが移動できることを承認するなどの機能もあります。
 
-以下のメソッドおよびイベントを実装したスマートコントラクトはERC-721非代替性トークン（NFT）コントラクトと呼ばれ、デプロイされると、イーサリアム上で作成されたトークンの状況を追跡する機能を提供します。
+スマート・コントラクトが以下のメソッドとイベントを実装している場合、それはERC-721非代替性トークンコントラクトと呼ぶことができ、デプロイされると、イーサリアム上で作成されたトークンを追跡する役割を担います。
 
-[EIP-721](https://eips.ethereum.org/EIPS/eip-721)から引用：
+[EIP-721](https://eips.ethereum.org/EIPS/eip-721)より:
 
 ### メソッド {#methods}
 
@@ -54,13 +54,13 @@ ERC-721（Ethereum Request for Comments 721）は、ウィリアム・エント�
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### 実例： {#web3py-example}
+### 例 {#web3py-example}
 
-イーサリアムネットワークにおけるERC-721トークンコントラクトを詳しく検討することで、ネットワークをシンプルにする上でこれらの規格がいかに重要であるかが理解できるでしょう。 ERC-721トークンを対象とするインターフェイスを開発するには、コントラクトのアブリケーション・バイナリ・インターフェイス（ABI）があれば十分です。 これからつまずかないように簡略化されたABIを使用した例をお見せします。
+イーサリアム上の任意のERC-721トークンコントラクトを検査する際、標準がいかに物事をシンプルにするために重要であるかを見てみましょう。任意のERC-721トークンへのインターフェースを作成するには、コントラクトのアプリケーション・バイナリ・インターフェース（ABI）が必要です。以下に示すように、理解しやすい例にするために簡略化されたABIを使用します。
 
-#### Web3.pyの実例： {#web3py-example}
+#### Web3.pyの例 {#web3py-example-2}
 
-最初に、 Pythonライブラリの[Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation)がインストールされていることを確認してください:
+まず、[Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Pythonライブラリがインストールされていることを確認してください:
 
 ```
 pip install web3
@@ -73,12 +73,12 @@ from web3._utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # クリプトキティーズ・コントラクト
 
-acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Sales Auction
+acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # クリプトキティーズのセールスオークション
 
-# This is a simplified Contract Application Binary Interface (ABI) of an ERC-721 NFT Contract.
-# It will expose only the methods: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
+# これはERC-721 NFTコントラクトの簡略化されたコントラクト・アプリケーション・バイナリ・インターフェース（ABI）です。
+# 以下のメソッドのみを公開します: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'owner', 'type': 'address'}],
@@ -136,7 +136,7 @@ print(f"{name} [{symbol}] NFTs in Auctions: {kitties_auctions}")
 pregnant_kitties = ck_contract.functions.pregnantKitties().call()
 print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
-# Using the Transfer Event ABI to get info about transferred Kitties.
+# TransferイベントのABIを使用して、送金されたKittiesに関する情報を取得します。
 tx_event_abi = {
     'anonymous': False,
     'inputs': [
@@ -147,7 +147,7 @@ tx_event_abi = {
     'type': 'event'
 }
 
-# We need the event's signature to filter the logs
+# ログをフィルタリングするためにイベントのシグネチャが必要です
 event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
 logs = w3.eth.get_logs({
@@ -156,25 +156,25 @@ logs = w3.eth.get_logs({
     "topics": [event_signature]
 })
 
-# Notes:
-#   - Increase the number of blocks up from 120 if no Transfer event is returned.
-#   - If you didn't find any Transfer event you can also try to get a tokenId at:
+# メモ:
+#   - Transferイベントが返されない場合は、ブロック数を120から増やしてください。
+#   - Transferイベントが見つからなかった場合は、以下でtokenIdの取得を試すこともできます:
 #       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-#       Click to expand the event's logs and copy its "tokenId" argument
+#       クリックしてイベントのログを展開し、その「tokenId」引数をコピーします
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
 if recent_tx:
-    kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
+    kitty_id = recent_tx[0]['tokenId'] # 上記のリンクから取得した「tokenId」をここに貼り付けます
     is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
     print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
-CryptoKittiesのコントラクトには、標準的なイベント以外にもいくつか興味深いイベントが含まれています。
+クリプトキティーズのコントラクトには、標準のもの以外にも興味深いイベントがいくつかあります。
 
-特に、`Pregnant`と `Birth`のイベントについて見てみましょう。
+`Pregnant`と`Birth`の2つを確認してみましょう。
 
 ```python
-# 妊娠・出産イベントABIを利用して、新しいキティーの情報を得る。
+# PregnantおよびBirthイベントのABIを使用して、新しいKittiesに関する情報を取得します。
 ck_extra_events_abi = [
     {
         'anonymous': False,
@@ -198,13 +198,13 @@ ck_extra_events_abi = [
         'type': 'event'
     }]
 
-# We need the event's signature to filter the logs
+# ログをフィルタリングするためにイベントのシグネチャが必要です
 ck_event_signatures = [
     w3.keccak(text="Pregnant(address,uint256,uint256,uint256)").hex(),
     w3.keccak(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
-# Here is a Pregnant Event:
+# 以下はPregnantイベントです:
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
 pregnant_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,
@@ -214,7 +214,7 @@ pregnant_logs = w3.eth.get_logs({
 
 recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
 
-# Here is a Birth Event:
+# 以下はBirthイベントです:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
 birth_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,
@@ -225,20 +225,28 @@ birth_logs = w3.eth.get_logs({
 recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## 人気が高いNFTの実例： {#popular-nfts}
+## 人気のNFT {#popular-nfts}
 
-- [イーサスキャンNFTトラッカー](https://etherscan.io/tokens-nft)は、イーサリアムにおけるNFTの取引量ランキングです。
-- [クリプトキティーズ](https://www.cryptokitties.co/)は、クリプトキティーと呼ばれる愛らしい生物を育て、収集するゲームです。
-- [ソラーレ](https://sorare.com/)は、グローバルなファンタジーフットボールゲームで、限定アイテムの収集、チームの管理、および試合を通じて賞品を獲得できます。
-- [ ENS（イーサリアムネームサービス）](https://ens.domains/)は、安全かつ分散型の方法により、ブロックチェーン内外のリソースにシンプルかつ人間が読み取り可能な名称を付与できるサービスです。
-- [POAP](https://poap.xyz)は、イベント参加や特定アクションの実行を行ったユーザーに対し、無料でNFTを提供できます。 POAPは自由に作成し、配布できます。
-- [アンストッパブル・ドメインズ](https://unstoppabledomains.com/)は、 サンフランシスコに本社を置く企業で、ブロックチェーン上のドメイン作成業務を行っています。 ブロックチェーン上のドメインは、暗号通貨のアドレスを人間が読み取り可能な名称に置き換えるもので、ウェブサイトに検閲耐性を持たせるために使用できます。
-- [ゴッズ・アンチェインド・カード](https://godsunchained.com/)は、イーサリアムブロックチェーン上のTCGで、NFTを使ってゲーム内アセットに真の所有権を提供しています。
-- [ボアード・エイプ・ヨット・クラブ](https://boredapeyachtclub.com)は、10,000個の固有NFTのコレクションであると同時にいわゆるレアな美術作品であり、同クラブの会員証であるトークンでもあります。会員は、初回特典に加えて、コミュニティ活動を行うことでより多くの特典を受け取ることができます。
+- [Etherscan NFT Tracker](https://etherscan.io/nft-top-contracts)は、送金量によるイーサリアム上のトップNFTをリストアップしています。
+- [クリプトキティーズ](https://www.cryptokitties.co/)は、繁殖可能でコレクティブルな、とても愛らしいクリプトキティーズと呼ばれる生き物を中心としたゲームです。
+- [Sorare](https://sorare.com/)は、限定版のコレクティブルを集め、チームを管理し、賞品を獲得するために競い合うグローバルなファンタジーフットボールゲームです。
+- [Ethereum Name Service (ENS)](https://ens.domains/)は、シンプルで人間が読める名前を使用して、ブロックチェーンの内外両方のリソースをアドレス指定するための安全で分散型の方法を提供します。
+- [POAP](https://poap.xyz)は、イベントに参加したり特定のアクションを完了したりした人々に無料のNFTを提供します。POAPは無料で作成および配布できます。
+- [Unstoppable Domains](https://unstoppabledomains.com/)は、ブロックチェーン上にドメインを構築しているサンフランシスコを拠点とする企業です。ブロックチェーンのドメインは、暗号資産のアドレスを人間が読める名前に置き換え、検閲耐性のあるウェブサイトを可能にするために使用できます。
+- [Gods Unchained Cards](https://godsunchained.com/)は、イーサリアムブロックチェーン上のTCGであり、NFTを使用してゲーム内資産に真の所有権をもたらします。
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com)は、10,000個のユニークなNFTのコレクションです。証明可能な希少なアート作品であるだけでなく、クラブのメンバーシップトークンとしても機能し、コミュニティの努力の結果として時間とともに増加するメンバーの特典や利益を提供します。
 
 ## 参考文献 {#further-reading}
 
-- [EIP-721：ERC-721 非代替性トークン（NFT）規格](https://eips.ethereum.org/EIPS/eip-721)
-- [OpenZeppelin - ERC-721のドキュメンテーション](https://docs.openzeppelin.com/contracts/3.x/erc721)
-- [OpenZeppelin - ERC-721の実装](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
-- [AlchemyのNFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [EIP-721: ERC-721 非代替性トークン標準](https://eips.ethereum.org/EIPS/eip-721)
+- [オープンツェッペリン - ERC-721 ドキュメント](https://docs.openzeppelin.com/contracts/3.x/erc721)
+- [オープンツェッペリン - ERC-721 実装](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
+- [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
+
+## チュートリアル: イーサリアム上で非代替性トークン（ERC-721）を使用して構築する {#tutorials}
+
+- [Vyper ERC-721 コントラクトのウォークスルー](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyperで書かれた完全なERC-721 NFTコントラクトの注釈付きウォークスルー。_
+- [NFTの書き方とデプロイ方法（パート1/3）](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– 初めてのERC-721スマート・コントラクトを書いてデプロイするためのステップバイステップガイド。_
+- [NFTをミントする方法（パート2/3）](/developers/tutorials/how-to-mint-an-nft/) _– デプロイされたスマート・コントラクトとWeb3を使用してERC-721 NFTをミントする方法。_
+- [ウォレットでNFTを表示する方法（パート3/3）](/developers/tutorials/how-to-view-nft-in-metamask/) _– デプロイ後、ミントしたNFTをメタマスクで表示する方法。_
+- [NFTミンターチュートリアル](/developers/tutorials/nft-minter/) _– Reactフロントエンド、メタマスク、Alchemyを使用して、フルスタックのNFTミンティングdappを構築します。_

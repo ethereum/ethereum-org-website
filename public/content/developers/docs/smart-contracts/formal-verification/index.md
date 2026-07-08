@@ -70,7 +70,7 @@ Low-level formal specifications can be given as either Hoare-style properties or
 
 ### Hoare-style properties {#hoare-style-properties}
 
-[Hoare Logic](https://en.wikipedia.org/wiki/Hoare_logic) provides a set of formal rules for reasoning about the correctness of programs, including smart contracts. A Hoare-style property is represented by a Hoare triple {_P_}_c_{_Q_}, where _c_ is a program and _P_ and _Q_ are predicates on the state of the _c_ (i.e., the program), formally described as _preconditions_ and _postconditions_, respectively.
+[Hoare Logic](https://en.wikipedia.org/wiki/Hoare_logic) provides a set of formal rules for reasoning about the correctness of programs, including smart contracts. A Hoare-style property is represented by a Hoare triple `{P}c{Q}`, where `c` is a program and `P` and `Q` are predicates on the state of the `c` (i.e., the program), formally described as _preconditions_ and _postconditions_, respectively.
 
 A precondition is a predicate describing the conditions required for the correct execution of a function; users calling into the contract must satisfy this requirement. A postcondition is a predicate describing the condition that a function establishes if correctly executed; users can expect this condition to be true after calling into the function. An _invariant_ in Hoare logic is a predicate that is preserved by execution of a function (i.e., it doesn't change).
 
@@ -152,9 +152,10 @@ function safe_add(uint x, uint y) returns(uint z){
   require(z>=y);
 
   return z;
+}
 ```
 
-An execution trace that results in an integer overflow would need to satisfy the formula: `z = x + y AND (z >= x) AND (z=>y) AND (z < x OR z < y)` Such a formula is unlikely to be solved, hence it serves a mathematical proof that the function `safe_add` never overflows.
+An execution trace that results in an integer overflow would need to satisfy the formula: `z = x + y AND (z >= x) AND (z >= y) AND (z < x OR z < y)` Such a formula is unlikely to be solved, hence it serves a mathematical proof that the function `safe_add` never overflows.
 
 ### Why use formal verification for smart contracts? {#benefits-of-formal-verification}
 
@@ -162,7 +163,7 @@ An execution trace that results in an integer overflow would need to satisfy the
 
 Formal verification is used to assess the correctness of safety-critical systems whose failure can have devastating consequences, such as death, injury, or financial ruin. Smart contracts are high-value applications controlling enormous amounts of value, and simple errors in design can lead to [irrecoverable losses for users](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/). Formally verifying a contract before deployment, however, can increase guarantees that it will perform as expected once running on the blockchain.
 
-Reliability is a highly desired quality in any smart contract, especially because code deployed in the Ethereum Virtual Machine (EVM) is typically immutable. With post-launch upgrades not readily accessible, the need to guarantee reliability of contracts makes formal verification necessary. Formal verification is able to detect tricky issues, such as integer underflows and overflow, re-entrancy, and poor gas optimizations, which may slip past auditors and testers.
+Reliability is a highly desired quality in any smart contract, especially because code deployed in the [Ethereum](/) Virtual Machine (EVM) is typically immutable. With post-launch upgrades not readily accessible, the need to guarantee reliability of contracts makes formal verification necessary. Formal verification is able to detect tricky issues, such as integer underflows and overflow, re-entrancy, and poor gas optimizations, which may slip past auditors and testers.
 
 #### Prove functional correctness {#prove-functional-correctness}
 
@@ -215,7 +216,7 @@ Also, it is not always possible for program verifiers to determine if a property
 **Act**: _*Act allows specification of storage updates, pre/post conditions and contract invariants. Its tool suite also has proof backends able to prove many properties via Coq, SMT solvers, or hevm.*_
 
 - [GitHub](https://github.com/ethereum/act)
-- [Documentation](https://ethereum.github.io/act/)
+- [Documentation](https://github.com/argotorg/act)
 
 **Scribble** - _*Scribble transforms code annotations in the Scribble specification language into concrete assertions that check the specification.*_
 
@@ -252,10 +253,10 @@ Also, it is not always possible for program verifiers to determine if a property
 - [GitHub](https://github.com/isabelle-prover)
 - [Documentation](https://isabelle.in.tum.de/documentation.html)
 
-**Coq** - _Coq is an interactive theorem prover that lets you define programs using theorems and interactively generate machine-checked proofs of correctness._
+**Rocq** - _Rocq is an interactive theorem prover that lets you define programs using theorems and interactively generate machine-checked proofs of correctness._
 
-- [GitHub](https://github.com/coq/coq)
-- [Documentation](https://coq.github.io/doc/v8.13/refman/index.html)
+- [GitHub](https://github.com/rocq-prover/rocq)
+- [Documentation](https://rocq-prover.org/docs)
 
 ### Symbolic execution-based tools for detecting vulnerable patterns in smart contracts {#symbolic-execution-tools}
 
@@ -270,13 +271,12 @@ Also, it is not always possible for program verifiers to determine if a property
 
 **Mythril** - _A symbolic execution tool for detecting vulnerabilities in Ethereum smart contracts_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Documentation](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [Documentation](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## Further reading {#further-reading}
 
 - [How Formal Verification of Smart Contracts Works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
-- [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [An Overview of Formal Verification Projects in the Ethereum Ecosystem](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [End-to-End Formal Verification of Ethereum 2.0 Deposit Smart Contract](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
 - [Formally Verifying The World's Most Popular Smart Contract](https://www.zellic.io/blog/formal-verification-weth)

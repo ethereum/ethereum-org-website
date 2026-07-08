@@ -1,0 +1,22 @@
+{
+  "page-title": "Licencias de código abierto",
+  "page-description": "Aprenda sobre las licencias de software libre y cómo <explorer>elegir la adecuada</explorer> para su proyecto.",
+  "hero-cta-primary": "Comenzar",
+  "hero-cta-secondary": "Ver comparación de licencias",
+  "stat-label-projects": "Proyectos de código abierto rastreados",
+  "stat-label-contributors": "Colaboradores activos",
+  "banner-text": "¿Es nuevo en el código abierto? <strong>Comience</strong> con nuestra <a href=\"/contributing/\">guía de contribución</a>.",
+  "footer-note": "Datos de licencias obtenidos de <a href=\"https://spdx.org/licenses/\" target=\"_blank\">SPDX</a>. Herramientas de cumplimiento proporcionadas por <a href=\"https://fossa.com/\" target=\"_blank\">FOSSA</a>.",
+  "filter-label": "Filtrar por tipo de licencia",
+  "empty-results": "No se encontraron licencias que coincidan con sus criterios. Intente ajustar sus filtros.",
+  "welcome-user": "¡Bienvenido de nuevo, {username}!",
+  "project-count": "{count, plural, =0 {No se encontraron proyectos} one {# proyecto encontrado} other {# proyectos encontrados}}",
+  "contribution-status": "{status, select, pending {Su contribución está pendiente de revisión} approved {Su contribución ha sido aprobada} rejected {Su contribución necesita revisiones} other {Estado desconocido}}",
+  "nested": {
+    "section-title": "Recursos adicionales",
+    "section-description": "Explore más sobre las licencias de código abierto y su cumplimiento.",
+    "link-text": "Ver todos los recursos"
+  },
+  "multi-link": "Lea la <a href=\"https://opensource.org/osd\">Definición de código abierto</a>, revise el <a href=\"https://choosealicense.com/\">selector de licencias</a> y consulte los <a href=\"https://spdx.org/\">identificadores SPDX</a>.",
+  "markdown-description": "## Referencia rápida\n\n- **MIT**: La más permisiva, restricciones mínimas\n- **Apache-2.0**: Permisiva con concesión de patentes\n- **GPL-3.0**: Copyleft fuerte, los derivados deben ser GPL\n\nPara obtener más detalles, consulte la [comparación completa](/open-source/#comparison-table)."
+}

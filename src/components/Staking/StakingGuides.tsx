@@ -1,9 +1,9 @@
-import { useTranslation } from "next-i18next"
+import { getTranslations } from "next-intl/server"
 
 import CardList, { type CardProps } from "@/components/CardList"
 
-const StakingGuides = () => {
-  const { t } = useTranslation("page-staking")
+const StakingGuides = async () => {
+  const t = await getTranslations("page-staking")
 
   const guides: CardProps[] = [
     {
@@ -23,12 +23,17 @@ const StakingGuides = () => {
     },
     {
       title: t("page-staking-guide-title-stakewise"),
-      link: "https://docs.stakewise.io/guides/staking#liquid-solo-staking",
+      link: "https://docs.stakewise.io/docs/guides/staking#solo-staking-with-stakewise",
       description: t("page-staking-guide-description-mac-linux-windows"),
+    },
+    {
+      title: t("page-staking-guide-title-lido-csm"),
+      link: "https://docs.lido.fi/run-on-lido/csm/",
+      description: t("page-staking-guide-description-linux"),
     },
   ]
 
-  return <CardList className="flex flex-col gap-4" items={guides} />
+  return <CardList items={guides} />
 }
 
 export default StakingGuides

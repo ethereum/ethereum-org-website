@@ -1,82 +1,88 @@
 ---
-title: Chytré kontrakty
+title: Úvod do chytrých kontraktů
+metaTitle: "Chytré kontrakty: Co to je a jaké mají výhody"
 description: Netechnický úvod do chytrých kontraktů
 lang: cs
 ---
 
-# Úvod do chytrých kontraktů {#introduction-to-smart-contracts}
+Chytré kontrakty jsou základními stavebními kameny aplikační vrstvy [Etherea](/). Jsou to počítačové programy uložené na [blockchainu](/glossary/#blockchain), které se řídí logikou „když se stane toto, udělej tamto“, a je zaručeno, že se provedou podle pravidel definovaných jejich kódem, který po vytvoření nelze změnit.
 
-Chytré kontrakty jsou základními stavebními kameny aplikační vrstvy Etherea. Jsou to počítačové programy uložené na [blockchainu](/glossary/#blockchain), které se řídí logikou „jestli tohle, tak tamto“ a je zaručeno, že se spouštějí podle pravidel definovaných svým kódem, který po vytvoření nelze měnit.
+Termín „chytrý kontrakt“ poprvé použil Nick Szabo. V roce 1994 napsal [úvod do tohoto konceptu](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) a v roce 1996 sepsal [studii o tom, co by chytré kontrakty mohly dokázat](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Nick Szabo zavedl termín „chytrý kontrakt“. V roce 1994 napsal [úvod do tohoto konceptu](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) a v roce 1996 napsal [výzkum činností, které by chytré kontrakty mohly dělat](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Szabo si představoval digitální tržiště, kde automatické, [kryptograficky zabezpečené](/glossary/#cryptography) procesy umožňují provádění transakcí a obchodních funkcí bez důvěryhodných zprostředkovatelů. Chytré kontrakty na Ethereu uvádějí tuto vizi do praxe.
 
-Szabo popsal digitální tržiště, kde automatické, [kryptografií zabezpečené](/glossary/#cryptography), procesy umožňují provádění transakcí a obchodních funkcí bez důvěryhodných zprostředkovatelů. Chytré kontrakty na Ethereu tuto vizi uvedly do praxe.
+Podívejte se, jak Finematics vysvětluje chytré kontrakty:
 
-Koukněte se, jak vysvětlují chytré kontrakty na Finematics:
+<VideoWatch slug="smart-contracts-code-is-law" />
 
-<YouTube id="pWGLtjG-F5c" />
+## Důvěra v tradiční kontrakty {#trust-and-contracts}
 
-## Důvěra v konvenční kontrakty {#trust-and-contracts}
+Jedním z největších problémů tradičního kontraktu je potřeba důvěryhodných osob, které zajistí dodržení jeho výsledků.
 
-Jedním z největších problémů tradičních kontraktů je, že vyžadují, aby důvěryhodné osoby dodržely podmínky kontraktu.
+Zde je příklad:
 
-Tady je ukázka:
+Alice a Bob závodí na kolech. Řekněme, že se Alice vsadí s Bobem o 10 dolarů, že závod vyhraje. Bob je přesvědčen, že vyhraje on, a sázku přijímá. Nakonec Alice dokončí závod s velkým náskokem před Bobem a je jasnou vítězkou. Bob ale odmítá sázku vyplatit a tvrdí, že Alice musela podvádět.
 
-Představme si, že Alice a Bob jedou cyklistický závod. Řekněme, že Alice se vsadí s Bobem o 10 dolarů, že vyhraje závod. Bob si je jistý, že bude vítězem a souhlasí se sázkou. Alice nakonec dojede do cíle o hodně dříve než Bob a je jasným vítězem. Bob však odmítá vyplatit sázku a tvrdí, že Alice musela podvádět.
+Tento hloupý příklad ilustruje problém s jakoukoli dohodou, která není „chytrá“. I když jsou podmínky dohody splněny (tj. jste vítězem závodu), stále musíte důvěřovat jiné osobě, že dohodu splní (tj. vyplatí sázku).
 
-Tento jednoduchý příklad ilustruje problém s jakoukoliv dohodou, která není založená na chytrém kontraktu. I když jsou podmínky dohody splněny (tj. jste vítězem závodu), musíte stále důvěřovat jiné osobě, že splní svou část dohody (např. že vám vyplatí výhru).
+## Digitální prodejní automat {#vending-machine}
 
-## Digitální výdejní automat {#vending-machine}
+Jednoduchou metaforou pro chytrý kontrakt je prodejní automat, který funguje do jisté míry podobně jako chytrý kontrakt – specifické vstupy zaručují předem stanovené výstupy.
 
-Jednoduchá metafora pro chytrý kontrakt je prodejní automat, který funguje podobně jako chytrý kontrakt – konkrétní vstupy zaručují předem stanovené výstupy.
+- Vyberete si produkt
+- Prodejní automat zobrazí cenu
+- Zaplatíte cenu
+- Prodejní automat ověří, že jste zaplatili správnou částku
+- Prodejní automat vám vydá vaši položku
 
-- Vyberete produkt
-- Automat zobrazí cenu
-- Zaplatíte
-- Automat ověří, že jste zaplatili správnou částku
-- Automat vám vydá vybraný produkt
+Prodejní automat vydá požadovaný produkt až po splnění všech požadavků. Pokud si nevyberete produkt nebo nevložíte dostatek peněz, prodejní automat vám produkt nevydá.
 
-Prodejní automat vám vydá požadovaný produkt až po splnění všech požadavků. Pokud si nevyberete produkt nebo nevložíte dostatek peněz, prodejní automat vám produkt nevydá.
+## Automatické provádění {#automation}
 
-## Automatické vykonání požadovaného výsledku {#automation}
+Hlavní výhodou chytrého kontraktu je, že při splnění určitých podmínek deterministicky provede jednoznačný kód. Není třeba čekat, až výsledek interpretuje nebo vyjedná člověk. Tím odpadá potřeba důvěryhodných zprostředkovatelů.
 
-Hlavní výhodou chytrého kontraktu je, že deterministicky provádí jednoznačný kód, pokud jsou splněny určité podmínky. Není třeba čekat na lidskou interpretaci nebo vyjednávat o výsledku. Tím odpadá potřeba důvěryhodných zprostředkovatelů.
+Můžete například napsat chytrý kontrakt, který drží prostředky v úschově pro dítě a umožní mu je vybrat až po určitém datu. Pokud se pokusí o výběr před tímto datem, chytrý kontrakt se neprovede. Nebo můžete napsat kontrakt, který vám automaticky vydá digitální verzi technického průkazu k autu, jakmile zaplatíte prodejci.
 
-Například můžete sepsat chytrý kontrakt, který drží finanční prostředky v úschově pro dítě, a umožní mu vybrat finanční prostředky až po určitém datu. Pokud se pokusí vybrat prostředky před tímto datem, chytrý kontrakt tuto operaci neumožní. Nebo můžete sepsat kontrakt, který vám automaticky poskytne digitální verzi vlastnictví vozidla, když zaplatíte prodejci.
+## Předvídatelné výsledky {#predictability}
 
-## Předpovídatelné výsledky {#predictability}
-
-Tradiční kontrakty jsou nejednoznačné, protože se spoléhají na to, že je interpretují a realizují lidé. Například dva soudci mohou vykládat kontrakt odlišnými způsoby, což může vést k nekonzistentním rozhodnutím a odlišným výsledkům. Chytré kontrakty tuto variantu neumožňují. Místo toho se chytré kontrakty exekuují přesně na základě podmínek napsaných v kódu kontraktu. Tato přesnost znamená, že za stejných okolností bude chytrý kontrakt poskytovat stejný výsledek.
+Tradiční kontrakty jsou nejednoznačné, protože spoléhají na to, že je lidé budou interpretovat a implementovat. Například dva soudci mohou interpretovat kontrakt odlišně, což by mohlo vést k nekonzistentním rozhodnutím a nerovným výsledkům. Chytré kontrakty tuto možnost odstraňují. Místo toho se chytré kontrakty provádějí přesně na základě podmínek zapsaných v kódu kontraktu. Tato přesnost znamená, že za stejných okolností přinese chytrý kontrakt vždy stejný výsledek.
 
 ## Veřejný záznam {#public-record}
 
-Chytré kontrakty jsou užitečným nástrojem pro audity a sledování. Jelikož jsou ethereovské chytré kontrakty na veřejném blockchainu, každý může okamžitě sledovat převody aktiv a další související informace. Můžete například zkontrolovat, zda někdo poslal peníze na vaši adresu.
+Chytré kontrakty jsou užitečné pro audity a sledování. Vzhledem k tomu, že chytré kontrakty na Ethereu jsou na veřejném blockchainu, kdokoli může okamžitě sledovat převody aktiv a další související informace. Můžete například zkontrolovat, zda někdo poslal peníze na vaši adresu.
 
 ## Ochrana soukromí {#privacy-protection}
 
-Chytré kontrakty také chrání vaše soukromí. Protože je Ethereum pseudonymní síť (vaše transakce jsou veřejně vázány na jedinečnou kryptografickou adresu, ne vaši identitu), můžete chránit své soukromí před pozorovateli.
+Chytré kontrakty také chrání vaše soukromí. Vzhledem k tomu, že Ethereum je pseudonymní síť (vaše transakce jsou veřejně vázány na jedinečnou kryptografickou adresu, nikoli na vaši identitu), můžete chránit své soukromí před pozorovateli.
 
-## Transparentní podmínky {#visible-terms}
+## Viditelné podmínky {#visible-terms}
 
-A konečně, stejně jako v případě tradičních kontraktů, můžete prozkoumat, co je obsahem chytrého kontraktu před tím, než ho podepíšete (nebo s ním budete interagovat jiným způsobem). Transparentnost chytrého kontraktu zaručuje, že si ho může prohlédnout kdokoli.
+A konečně, stejně jako u tradičních kontraktů, můžete před podepsáním zkontrolovat, co je v chytrém kontraktu obsaženo. Na rozdíl od tradičního kontraktu umožňuje onchain transparentnost chytrého kontraktu komukoli jej před interakcí podrobně prozkoumat a zkontrolovat. 
 
-## Využití chytrých kontraktů {#use-cases}
+Ačkoli si však kdokoli může prohlédnout podmínky chytrého kontraktu, surová data transakce jsou navržena tak, aby je interpretovaly aplikace a peněženky, nikoli lidé. Protože jsou tato data tak obtížně čitelná, uživatelé často čelí velkému bezpečnostnímu riziku zvanému „slepé podepisování“ (blind signing), neboli schvalování transakce, která interaguje s chytrým kontraktem, aniž by ve skutečnosti chápali, co udělá. 
 
-Chytré kontrakty umí v podstatě cokoli, co umí počítačové programy.
+Ekosystém Etherea přechází na standardy **[jasného podepisování (Clear Signing)](https://clearsigning.org/)** (konkrétně [ERC-7730](https://eips.ethereum.org/EIPS/eip-7730)). Jasné podepisování překládá neprůhledná data chytrého kontraktu do srozumitelných, lidsky čitelných popisů transakcí, čímž zajišťuje, že kdokoli může pochopit skutečný záměr kontraktu předtím, než jej podepíše.
 
-Mohou provádět výpočty, vytvářet měnu, ukládat data, těžit [NFT](/glossary/#nft), odesílat komunikaci a dokonce generovat grafiku. Zde jsou některé reálné populární příklady:
+## Případy užití chytrých kontraktů {#use-cases}
+
+Chytré kontrakty dokážou v podstatě cokoli, co dokážou počítačové programy.
+
+Mohou provádět výpočty, vytvářet měnu, ukládat data, razit [NFT](/glossary/#nft), odesílat komunikaci a dokonce generovat grafiku. Zde jsou některé populární příklady z reálného světa:
 
 - [Stablecoiny](/stablecoins/)
-- [Vytváření a distribuce jedinečných digitálních majetků](/nft/)
-- [Automatická otevřená směnárna](/get-eth/#dex)
-- [Decentralizované počítačové hry](/dapps/?category=gaming#explore)
-- [Pojistná smlouva, která automaticky vyplatí plnění](https://etherisc.com/)
-- [Standard, který umožňuje vytvářet interoperabilní měny dle konkrétních požadavků](/developers/docs/standards/tokens/)
+- [Vytváření a distribuce unikátních digitálních aktiv](/nft/)
+- [Automatická, otevřená směnárna měn](/get-eth/#dex)
+- [Decentralizované hraní](/apps/categories/gaming)
+- [Pojistka, která se automaticky vyplácí](https://etherisc.com/)
+- [Standard, který lidem umožňuje vytvářet přizpůsobené, interoperabilní měny](/developers/docs/standards/tokens/)
 
-## Další informace {#further-reading}
+## Další čtení {#further-reading}
 
 - [Jak chytré kontrakty změní svět](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Chytré kontrakty: Blockchainová technologie, která nahradí právníky](https://blockgeeks.com/guides/smart-contracts/)
 - [Chytré kontrakty pro vývojáře](/developers/docs/smart-contracts/)
 - [Naučte se psát chytré kontrakty](/developers/learning-tools/)
-- [Pochopení Etherea – Co je chytrý kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Mastering Ethereum – Co je to chytrý kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+
+<Divider />
+
+<QuizWidget quizKey="smart-contracts" />

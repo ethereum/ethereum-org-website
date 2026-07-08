@@ -5,10 +5,11 @@ lang: en
 template: upgrade
 image: /images/upgrades/merge.png
 alt: 
-summaryPoint1: Ethereum Mainnet uses proof-of-stake, but this wasn't always the case.
-summaryPoint2: The upgrade from the original proof-of-work mechanism to proof-of-stake was called The Merge.
-summaryPoint3: The Merge refers to the original Ethereum Mainnet merging with a separate proof-of-stake blockchain called the Beacon Chain, now existing as one chain.
-summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
+summaryPoints:
+  - "Ethereum Mainnet uses proof-of-stake, but this wasn't always the case."
+  - "The upgrade from the original proof-of-work mechanism to proof-of-stake was called The Merge."
+  - "The Merge refers to the original Ethereum Mainnet merging with a separate proof-of-stake blockchain called the Beacon Chain, now existing as one chain."
+  - "The Merge reduced Ethereum's energy consumption by ~99.95%."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -17,7 +18,7 @@ summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 
 ## What was The Merge? {#what-is-the-merge}
 
-The Merge was the joining of the original execution layer of Ethereum (the Mainnet that has existed since [genesis](/history/#frontier)) with its new proof-of-stake consensus layer, the Beacon Chain. It eliminated the need for energy-intensive mining and instead enabled the network to be secured using staked ETH. It was a truly exciting step in realizing the Ethereum vision—more scalability, security, and sustainability.
+The Merge was the joining of the original execution layer of Ethereum (the Mainnet that has existed since [genesis](/ethereum-forks/#frontier)) with its new proof-of-stake consensus layer, the Beacon Chain. It eliminated the need for energy-intensive mining and instead enabled the network to be secured using staked ETH. It was a truly exciting step in realizing the [Ethereum](/) vision—more scalability, security, and sustainability.
 
 <MergeInfographic />
 
@@ -37,9 +38,13 @@ The Merge represented the official switch to using the Beacon Chain as the engin
 
 No history was lost in The Merge. As Mainnet merged with the Beacon Chain, it also merged the entire transactional history of Ethereum.
 
-<InfoBanner>
-This transition to proof-of-stake changed the way ether is issued. Learn more about <a href="/roadmap/merge/issuance/">ether issuance before and after The Merge</a>.
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+This transition to proof-of-stake changed the way ether is issued. Learn more about [ether issuance before and after The Merge](/roadmap/merge/issuance/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Users and holders {#users-holders}
 
@@ -92,17 +97,17 @@ title="Dapp and smart contract developers"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-The Merge came with changes to consensus, which also includes changes related to:<
+The Merge came with changes to consensus, which also includes changes related to:
 
 <ul>
   <li>block structure</li>
   <li>slot/block timing</li>
   <li>opcode changes</li>
-  <li>sources of on-chain randomness</li>
+  <li>sources of onchain randomness</li>
   <li>concept of <em>safe head</em> and <em>finalized blocks</em></li>
 </ul>
 
-For more information, check out this blog post by Tim Beiko on <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">How The Merge Impacts Ethereum’s Application Layer</a>.
+For more information, check out this blog post by Tim Beiko on <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">How The Merge Impacts Ethereum’s Application Layer</a>.
 
 </ExpandableCard>
 
@@ -112,25 +117,25 @@ The Merge marked the end of proof-of-work for Ethereum and started the era of a 
 
 ## The Merge and scaling {#merge-and-scaling}
 
-The Merge also set the stage for further scalability upgrades not possible under proof-of-work, bringing Ethereum one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/roadmap/vision/).
+The Merge also set the stage for further scalability upgrades not possible under proof-of-work, bringing Ethereum one step closer to achieving the full scale, security and sustainability that [its roadmap](/roadmap/) is building toward.
 
 ## Misconceptions about The Merge {#misconceptions}
 
 <ExpandableCard
 title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 There are two types of Ethereum nodes: nodes that can propose blocks and nodes that don't.
 
 Nodes that propose blocks are only a small number of the total nodes on Ethereum. This category includes mining nodes under proof-of-work (PoW) and validator nodes under proof-of-stake (PoS). This category requires committing economic resources (such as GPU hash power in proof-of-work or staked ETH in proof-of-stake) in exchange for the ability to occasionally propose the next block and earn protocol rewards.
 
-The other nodes on the network (i.e. the majority) are not required to commit any economic resources beyond a consumer-grade computer with 1-2 TB of available storage and an internet connection. These nodes do not propose blocks, but they still serve a critical role in securing the network by holding all block proposers accountable by listening for new blocks and verifying their validity on arrival according to the network consensus rules. If the block is valid, the node continues propagating it through the network. If the block is invalid for whatever reason, the node software will disregard it as invalid and stop its propagation.
+The other nodes on the network (i.e., the majority) are not required to commit any economic resources beyond a consumer-grade computer with 1-2 TB of available storage and an internet connection. These nodes do not propose blocks, but they still serve a critical role in securing the network by holding all block proposers accountable by listening for new blocks and verifying their validity on arrival according to the network consensus rules. If the block is valid, the node continues propagating it through the network. If the block is invalid for whatever reason, the node software will disregard it as invalid and stop its propagation.
 
 Running a non-block-producing node is possible for anyone under either consensus mechanism (proof-of-work or proof-of-stake); it is <em>strongly encouraged</em> for all users if they have the means. Running a node is immensely valuable for Ethereum and gives added benefits to any individual running one, such as improved security, privacy and censorship resistance.
 
 The ability for anyone to run their own node is <em>absolutely essential</em> to maintaining the decentralization of the Ethereum network.
 
-<a href="/run-a-node/">More on running your own node</a>
+[More on running your own node](/run-a-node/)
 
 </ExpandableCard>
 
@@ -140,7 +145,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Gas fees are a product of network demand relative to the capacity of the network. The Merge deprecated the use of proof-of-work, transitioning to proof-of-stake for consensus, but did not significantly change any parameters that directly influence network capacity or throughput.
 
-With a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centric roadmap</a>, efforts are being focused on scaling user activity at <a href="/layer-2/">layer 2</a>, while enabling layer 1 Mainnet as a secure decentralized settlement layer optimized for rollup data storage to help make rollup transactions exponentially cheaper. The transition to proof-of-stake is a critical precursor to realizing this. <a href="/developers/docs/gas/">More on gas and fees.</a>
+With a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centric roadmap</a>, efforts are being focused on scaling user activity at [layer 2](/layer-2/), while enabling layer 1 Mainnet as a secure decentralized settlement layer optimized for rollup data storage to help make rollup transactions exponentially cheaper. The transition to proof-of-stake is a critical precursor to realizing this. [More on gas and fees.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -149,7 +154,7 @@ title="Misconception: &quot;Transactions were accelerated substantially by The M
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
 A transaction's "speed" can be measured in a few ways, including time to be included in a block and time to finalization. Both of these changes slightly, but not in a way that users will notice.
 
-Historically, on proof-of-work, the target was to have a new block every ~13.3 seconds. Under proof-of-stake, slots occur precisely every 12 seconds, each of which is an opportunity for a validator to publish a block. Most slots have blocks, but not necessarily all (i.e. a validator is offline). In proof-of-stake, blocks are produced ~10% more frequently than on proof-of-work. This was a fairly insignificant change and is unlikely to be noticed by users.
+Historically, on proof-of-work, the target was to have a new block every ~13.3 seconds. Under proof-of-stake, slots occur precisely every 12 seconds, each of which is an opportunity for a validator to publish a block. Most slots have blocks, but not necessarily all (i.e., a validator is offline). In proof-of-stake, blocks are produced ~10% more frequently than on proof-of-work. This was a fairly insignificant change and is unlikely to be noticed by users.
 
 Proof-of-stake introduced the transaction finality concept that did not previously exist. In proof-of-work, the ability to reverse a block gets exponentially more difficult with every passing block mined on top of a transaction, but it never quite reaches zero. Under proof-of-stake, blocks are bundled into epochs (6.4 minute spans of time containing 32 chances for blocks) which validators vote on. When an epoch ends, validators vote on whether to consider the epoch 'justified'. If validators agree to justify the epoch, it gets finalized in the next epoch. Undoing finalized transactions is economically inviable as it would require obtaining and burning over one-third of the total staked ETH.
 
@@ -163,7 +168,7 @@ Initially after The Merge, stakers could only access fee tips and MEV that were 
 
 Since the Shanghai/Capella network upgrade, stakers can now designate a <em>withdrawal address</em> to start receiving automatic payouts of any excess staking balance (ETH over 32 from protocol rewards). This upgrade also enabled the ability for a validator to unlock and reclaim its entire balance upon exiting from the network.
 
-<a href="/staking/withdrawals/">More on staking withdrawals</a>
+[More on staking withdrawals](/staking/withdrawals/)
 
 </ExpandableCard>
 
@@ -191,7 +196,7 @@ To limit confusion, the community has updated these terms:
 
 These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap.
 
-[Learn more about the 'Eth2' renaming](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Learn more about the 'Eth2' renaming](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 

@@ -20,7 +20,7 @@ pragma solidity 0.4.24;
 
 contract Greeter {
 
-    function greet() public constant returns (string) {
+    function greet() public view returns (string memory) {
         return "Hello";
     }
 

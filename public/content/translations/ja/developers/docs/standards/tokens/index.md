@@ -1,39 +1,41 @@
 ---
-title: トークン規格
-description:
+title: "トークン標準"
+description: "代替可能（ファンジブル）および代替不可能（ノンファンジブル）トークンのためのERC-20、ERC-721、ERC-1155などのイーサリアムのトークン標準について説明します。"
 lang: ja
 incomplete: true
 ---
 
 ## はじめに {#introduction}
 
-イーサリアムにおける開発規格の多くは、トークンのインターフェイスを対象としています。 これらの規格は、スマートコントラクトにコンポーザビリティを提供するため、新規プロジェクトで発行されたトークンも既存の分散型取引所で取り扱えるようになります。
+多くの[イーサリアム](/)開発標準は、トークンのインターフェースに焦点を当てています。これらの標準は、スマート・コントラクトがコンポーザブルであることを保証するのに役立ちます。そのため、新しいプロジェクトがトークンを発行する際にも、既存の分散型取引所やアプリケーションとの互換性が維持されます。
 
-## 前提知識 {#prerequisites}
+トークン標準は、イーサリアムエコシステム全体でトークンがどのように機能し、相互作用するかを定義します。これにより、開発者は車輪の再発明をすることなく構築しやすくなり、トークンがウォレット、取引所、DeFiプラットフォームとシームレスに連携することが保証されます。ゲーム、ガバナンス、その他のユースケースのいずれにおいても、これらの標準は一貫性を提供し、イーサリアムの相互接続性を高めます。
 
-- [イーサリアム開発規格](/developers/docs/standards/)
-- [スマートコントラクト](/developers/docs/smart-contracts/)
+## 前提条件 {#prerequisites}
+
+- [イーサリアム開発標準](/developers/docs/standards/)
+- [スマート・コントラクト](/developers/docs/smart-contracts/)
 
 ## トークン標準 {#token-standards}
 
-以下では、イーサリアムにおける最も一般的なトークン規格を説明します:
+イーサリアムで最も人気のあるトークン標準のいくつかを以下に示します。
 
-- [ERC-20](/developers/docs/standards/tokens/erc-20/) - 投票用やステーキング用のトークンあるいは仮想通貨など、代替性を持つ（相互に代替可能な）トークンを対象とする標準的なインターフェイスです。
+- [ERC-20](/developers/docs/standards/tokens/erc-20/) - 投票トークン、ステーキングトークン、仮想通貨などの代替可能（ファンジブル）トークンのための標準インターフェース。
 
-### NFT規格 {#nft-standards}
+### NFT標準 {#nft-standards}
 
-- [ERC-721](/developers/docs/standards/tokens/erc-721/) - アートや楽曲のための証書など、非代替性トークン (NFT) を対象とする標準的なインタフェースです。
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - より効率的な取引や、トランザクションのバンドル化によるコスト軽減を実現できる規格です。 ユーティリティトークン（$BNBや$BATなど）および非代替性トークン（CryptoPunksなど）の両方の作成に使用できます。
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) - アートワークや楽曲の権利書などの代替不可能（ノンファンジブル）トークンのための標準インターフェース。
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155は、より効率的な取引とトランザクションのバンドルを可能にし、コストを削減します。このトークン標準により、$BNBや$BATなどのユーティリティトークンと、CryptoPunksのような代替不可能（ノンファンジブル）トークンの両方を作成できます。
 
-[ERC](https://eips.ethereum.org/erc)提案の全リスト
+[ERC](https://eips.ethereum.org/erc)提案の完全なリスト。
 
 ## 参考文献 {#further-reading}
 
-_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
+_役に立ったコミュニティリソースをご存知ですか？このページを編集して追加してください！_
 
-## 関連トピック {#related-tutorials}
+## 関連チュートリアル {#related-tutorials}
 
-- [トークンの統合作業に関するチェックリスト](/developers/tutorials/token-integration-checklist/) _– トークンのやりとりを統合する際に検討すべき事項が列挙されています。_
-- [ERC20トークンを利用するスマートコントラクトを理解する](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- イーサリアムのテストネットワーク上ではじめてスマートコントラクトをデプロイする初心者向けの入門ガイドです。_
-- [SolidityのスマートコントラクトでERC20トークンを転送、承認する方法](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity言語を用いてトークンのやりとりを行うスマートコントラクトを使用する方法について説明しています。_
-- [ERC721マーケットの実装に関するハウツーガイド](/developers/tutorials/how-to-implement-an-erc721-market/) _– 分散型の掲示板でトークン化アイテムを出品する方法について説明しています。_
+- [トークン統合チェックリスト](/developers/tutorials/token-integration-checklist/) _– トークンとやり取りする際に考慮すべき事項のチェックリスト。_
+- [ERC20トークンのスマート・コントラクトを理解する](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– イーサリアムのテストネットワークに初めてスマート・コントラクトをデプロイするための入門。_
+- [Solidityスマート・コントラクトからのERC20トークンの送金と承認](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity言語を使用して、スマート・コントラクトからトークンとやり取りする方法。_
+- [ERC721マーケットの実装 [ハウツーガイド]](/developers/tutorials/how-to-implement-an-erc721-market/) _– トークン化されたアイテムを分散型のクラシファイド掲示板で販売する方法。_

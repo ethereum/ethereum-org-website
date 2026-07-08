@@ -1,0 +1,346 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-18T21:30:38.362Z",
+  "englishManifestHash": "8efb4d1cca64",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-9c1fcb",
+    "LINK-acf19c",
+    "LINK-5b21a2",
+    "LINK-e815e3",
+    "LINK-65de59",
+    "LINK-c81c80",
+    "LINK-8c0d1c",
+    "LINK-adc8d3",
+    "LINK-96e5bb",
+    "IMAGE-5fe1b2",
+    "LINK-fb70b4",
+    "CODEBLOCK-9e5a42",
+    "CODE-8238a2",
+    "CODE-f6da5a",
+    "CODE-d23451",
+    "CODE-a43e0d",
+    "LINK-4cec3c",
+    "LINK-a7be73",
+    "LINK-d041d4",
+    "LINK-1cfc3d",
+    "CODE-5ce176",
+    "CODE-f8e43b",
+    "LINK-39a385",
+    "CODE-a275a3",
+    "CODE-bd972c",
+    "CODE-0ecba1",
+    "CODE-ea1fae",
+    "CODE-19dbf7",
+    "CODE-c7a6f4",
+    "CODE-1f28e5",
+    "CODE-5ce176",
+    "CODE-f8e43b",
+    "IMAGE-261e9c",
+    "LINK-fb70b4",
+    "LINK-c1c2f2",
+    "LINK-306ac6",
+    "LINK-16e497",
+    "LINK-23e5cf",
+    "LINK-835675",
+    "LINK-d1e15a",
+    "LINK-0bce9b",
+    "LINK-d515d7",
+    "LINK-ee9698",
+    "LINK-6e95bb",
+    "LINK-4b7739",
+    "LINK-f241bb",
+    "LINK-ce8c89",
+    "LINK-a3509b",
+    "LINK-b15096"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-9e5a42": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-8238a2": {
+      "type": "inline-code",
+      "values": {
+        "content": "(S)"
+      }
+    },
+    "CODE-f6da5a": {
+      "type": "inline-code",
+      "values": {
+        "content": "(T)"
+      }
+    },
+    "CODE-d23451": {
+      "type": "inline-code",
+      "values": {
+        "content": "Y(S, T)"
+      }
+    },
+    "CODE-a43e0d": {
+      "type": "inline-code",
+      "values": {
+        "content": "S'"
+      }
+    },
+    "CODE-5ce176": {
+      "type": "inline-code",
+      "values": {
+        "content": "TSTORE"
+      }
+    },
+    "CODE-f8e43b": {
+      "type": "inline-code",
+      "values": {
+        "content": "TLOAD"
+      }
+    },
+    "CODE-a275a3": {
+      "type": "inline-code",
+      "values": {
+        "content": "XOR"
+      }
+    },
+    "CODE-bd972c": {
+      "type": "inline-code",
+      "values": {
+        "content": "AND"
+      }
+    },
+    "CODE-0ecba1": {
+      "type": "inline-code",
+      "values": {
+        "content": "ADD"
+      }
+    },
+    "CODE-ea1fae": {
+      "type": "inline-code",
+      "values": {
+        "content": "SUB"
+      }
+    },
+    "CODE-19dbf7": {
+      "type": "inline-code",
+      "values": {
+        "content": "ADDRESS"
+      }
+    },
+    "CODE-c7a6f4": {
+      "type": "inline-code",
+      "values": {
+        "content": "BALANCE"
+      }
+    },
+    "CODE-1f28e5": {
+      "type": "inline-code",
+      "values": {
+        "content": "BLOCKHASH"
+      }
+    },
+    "IMAGE-5fe1b2": {
+      "type": "image",
+      "values": {
+        "path": "./evm.png"
+      }
+    },
+    "IMAGE-261e9c": {
+      "type": "image",
+      "values": {
+        "path": "../gas/gas.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-9c1fcb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-acf19c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/opcodes/"
+      }
+    },
+    "LINK-5b21a2": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Byte"
+      }
+    },
+    "LINK-e815e3": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Computer_memory"
+      }
+    },
+    "LINK-65de59": {
+      "type": "link",
+      "values": {
+        "url": "<https://wikipedia.org/wiki/Stack_(abstract_data_type"
+      }
+    },
+    "LINK-c81c80": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Cryptographic_hash_function"
+      }
+    },
+    "LINK-8c0d1c": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Merkle_tree"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-96e5bb": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Finite-state_machine"
+      }
+    },
+    "LINK-fb70b4": {
+      "type": "link",
+      "values": {
+        "url": "https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf"
+      }
+    },
+    "LINK-4cec3c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/patricia-merkle-trie/"
+      }
+    },
+    "LINK-a7be73": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-d041d4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/anatomy/"
+      }
+    },
+    "LINK-1cfc3d": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Stack_machine"
+      }
+    },
+    "LINK-39a385": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/opcodes"
+      }
+    },
+    "LINK-c1c2f2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
+      }
+    },
+    "LINK-306ac6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/py-evm"
+      }
+    },
+    "LINK-16e497": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/evmone"
+      }
+    },
+    "LINK-23e5cf": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereumjs/ethereumjs-vm"
+      }
+    },
+    "LINK-835675": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/bluealloy/revm"
+      }
+    },
+    "LINK-d1e15a": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
+      }
+    },
+    "LINK-0bce9b": {
+      "type": "link",
+      "values": {
+        "url": "https://jellopaper.org/"
+      }
+    },
+    "LINK-d515d7": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/chronaeon/beigepaper"
+      }
+    },
+    "LINK-ee9698": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethervm.io/"
+      }
+    },
+    "LINK-6e95bb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/"
+      }
+    },
+    "LINK-4b7739": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6"
+      }
+    },
+    "LINK-f241bb": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc"
+      }
+    },
+    "LINK-ce8c89": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-a3509b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/yellow-paper-evm/"
+      }
+    },
+    "LINK-b15096": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/reverse-engineering-a-contract/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:30:38.362Z",
+      "status": "success"
+    }
+  }
+}

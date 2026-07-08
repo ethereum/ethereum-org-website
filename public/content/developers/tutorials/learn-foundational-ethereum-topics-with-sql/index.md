@@ -1,30 +1,31 @@
 ---
 title: Learn Foundational Ethereum Topics with SQL
-description: This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying on-chain data with Structured Query Language (SQL).
+description: This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying onchain data with Structured Query Language (SQL).
 author: "Paul Apivat"
-tags: ["SQL", "Querying", "Transactions"]
+tags: ["SQL", "Querying", "Transactions", "data-and-analytics"]
 skill: beginner
+breadcrumb: Ethereum with SQL
 lang: en
 published: 2021-05-11
 source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/
 ---
 
-Many Ethereum tutorials target developers, but there’s a lack of educational resources for data analysts or for people who wish to see on-chain data without running a client or node.
+Many Ethereum tutorials target developers, but there’s a lack of educational resources for data analysts or for people who wish to see onchain data without running a client or node.
 
-This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying on-chain data with structured query language (SQL) through an interface provided by [Dune Analytics](https://dune.xyz/home).
+This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying onchain data with structured query language (SQL) through an interface provided by [Dune Analytics](https://dune.com/).
 
-On-chain data can help us understand Ethereum, the network, and as an economy for computing power and should serve as a base for understanding challenges facing Ethereum today (i.e., rising gas prices) and, more importantly, discussions around scaling solutions.
+Onchain data can help us understand Ethereum, the network, and as an economy for computing power and should serve as a base for understanding challenges facing Ethereum today (i.e., rising gas prices) and, more importantly, discussions around scaling solutions.
 
 ### Transactions {#transactions}
 
 A user’s journey on Ethereum starts with initializing a user-controlled account or an entity with an ETH balance. There are two account types - user-controlled or a smart contract (see [ethereum.org](/developers/docs/accounts/)).
 
-Any account can be viewed on a block explorer like [Etherscan](https://etherscan.io/). Block explorers are a portal to Ethereum’s data. They display, in real-time, data on blocks, transactions, miners, accounts and other on-chain activity (see [here](/developers/docs/data-and-analytics/block-explorers/)).
+Any account can be viewed on a block explorer like [Etherscan](https://etherscan.io/) or [Blockscout](https://eth.blockscout.com/). Block explorers are a portal to Ethereum's data. They display, in real-time, data on blocks, transactions, miners, accounts and other onchain activity (see [here](/developers/docs/data-and-analytics/block-explorers/)).
 
-However, a user may wish to query the data directly to reconcile the information provided by external block explorers. [Dune Analytics](https://duneanalytics.com/) provides this capability to anyone with some knowledge of SQL.
+However, a user may wish to query the data directly to reconcile the information provided by external block explorers. [Dune Analytics](https://dune.com/) provides this capability to anyone with some knowledge of SQL.
 
-For reference, the smart contract account for the Ethereum Foundation (EF) can be viewed on [Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae).
+For reference, the smart contract account for the Ethereum Foundation (EF) can be viewed on [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe).
 
 One thing to note is that all accounts, including the EF’s, have a public address that can be used to send and receive transactions.
 
@@ -62,17 +63,17 @@ This will yield the same information as provided on Etherscan's transaction page
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Screenshot of Etherscan transaction explorer view](./etherscan_view.png)
 
-[EF's contract page on Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
+[EF's contract page on Blockscout.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Screenshot of a Dune Analytics query dashboard](./dune_view.png)
 
-You can find dashboard [here](https://duneanalytics.com/paulapivat/Learn-Ethereum). Click on the table to see the query (also see above).
+You can find dashboard [here](https://dune.com/paulapivat/Learn-Ethereum). Click on the table to see the query (also see above).
 
-### Breaking Down Transactions {#breaking_down_transactions}
+### Breaking Down Transactions {#breaking-down-transactions}
 
 A submitted transaction includes several pieces of information including ([source](/developers/docs/transactions/)):
 
@@ -111,7 +112,7 @@ Each block contains a reference to it parent block. This is shown below between 
 
 ![parent_hash](./parent_hash.png)
 
-Here is the [query](https://duneanalytics.com/queries/44856/88292) on Dune Analytics:
+Here is the [query](https://dune.com/queries/44856/88292) on Dune Analytics:
 
 ```sql
 SELECT
@@ -132,9 +133,9 @@ The only thing this query does not cover is _list of transaction_ which requires
 - Chain data (list of blocks, transactions)
 - State data (result of each transaction’s state transition)
 
-State root falls in the latter and is _implicit_ data (not stored on-chain), while chain data is explicit and stored on the chain itself ([source](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
+State root falls in the latter and is _implicit_ data (not stored onchain), while chain data is explicit and stored on the chain itself ([source](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
 
-For this tutorial, we'll be focusing on on-chain data that _can_ be queried with SQL via Dune Analytics.
+For this tutorial, we'll be focusing on onchain data that _can_ be queried with SQL via Dune Analytics.
 
 As stated above, each block contains a list of transactions, we can query this by filtering for a specific block. We'll try the most recent block, 12396854:
 
@@ -146,7 +147,7 @@ ORDER BY block_time DESC`
 
 Here's the SQL output on Dune:
 
-![](./list_of_txn.png)
+![Screenshot of a list of Ethereum transactions](./list_of_txn.png)
 
 This single block being added to the chain changes the state of the Ethereum virtual machine ([EVM](/developers/docs/evm/)). Dozens sometimes, hundreds of transactions are verified at once. In this specific case, 222 transactions were included.
 
@@ -165,7 +166,7 @@ FROM temp_table
 
 For block 12396854, out of 222 total transactions, 204 were successfully verified:
 
-![](./successful_txn.png)
+![Screenshot of a successful Ethereum transaction](./successful_txn.png)
 
 Transactions requests occur dozens of times per second, but blocks are committed approximately once every 15 seconds ([source](/developers/docs/blocks/)).
 
@@ -173,11 +174,11 @@ To see that there is one block produced approximately every 15 seconds, we could
 
 The chart for Ethereum blocks produced per day (2016 - present) is:
 
-![](./daily_blocks.png)
+![Chart showing daily Ethereum block production](./daily_blocks.png)
 
 The average number of blocks produced daily over this time period is ~5,874:
 
-![](./avg_daily_blocks.png)
+![Chart showing daily Ethereum block production](./avg_daily_blocks.png)
 
 The queries are:
 
@@ -214,7 +215,7 @@ Blocks are bounded in size. The maximum block size is dynamic and varies accordi
 
 One way to conceptualize block gas limit is to think of it as the **supply** of available block space in which to batch transactions. The block gas limit can be queried and visualized from 2016 to present day:
 
-![](./avg_gas_limit.png)
+![Chart showing average Ethereum gas limit over time](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -227,7 +228,7 @@ OFFSET 1
 
 Then there is the actual gas used daily to pay for computing done on the Ethereum chain (i.e., sending transaction, calling a smart contract, minting an NFT). This is the **demand** for available Ethereum block space:
 
-![](./daily_gas_used.png)
+![Chart showing daily Ethereum gas used](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -246,7 +247,7 @@ Therefore we can understand gas prices as a function of demand for Ethereum bloc
 
 Finally, we may want to query average daily gas prices for the Ethereum chain, however, doing so will result in an especially long query time, so we’ll filter our query to the average amount of gas paid per transaction by the Ethereum Foundation.
 
-![](./ef_daily_gas.png)
+![Chart showing Ethereum Foundation daily gas usage](./ef_daily_gas.png)
 
 We can see gas prices paid for all transactions made to the Ethereum Foundation address over the years. Here is the query:
 
@@ -262,8 +263,8 @@ ORDER BY block_time DESC
 
 ### Summary {#summary}
 
-With this tutorial, we understand foundational Ethereum concepts and how the Ethereum blockchain works by querying and getting a feel for on-chain data.
+With this tutorial, we understand foundational Ethereum concepts and how the Ethereum blockchain works by querying and getting a feel for onchain data.
 
-The dashboard that holds all code used in this tutorial can be found [here](https://duneanalytics.com/paulapivat/Learn-Ethereum).
+The dashboard that holds all code used in this tutorial can be found [here](https://dune.com/paulapivat/Learn-Ethereum).
 
 For more use of data to explore web3 [find me on Twitter](https://twitter.com/paulapivat).

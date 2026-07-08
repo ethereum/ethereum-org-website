@@ -1,6 +1,11 @@
-import { useTranslation } from "next-i18next"
+"use client"
+import type { JSX } from "react"
 
-import type { StakingPage, TranslationKey } from "@/lib/types"
+import type {
+  MatomoEventOptions,
+  StakingPage,
+  TranslationKey,
+} from "@/lib/types"
 
 import {
   StakingGlyphCloudIcon,
@@ -9,10 +14,12 @@ import {
 } from "@/components/icons/staking"
 
 import { cn } from "@/lib/utils/cn"
-import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Flex } from "../ui/flex"
 import InlineLink from "../ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface DataType {
   title: TranslationKey
@@ -115,8 +122,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
   return (
     <Flex
       className={cn(
-        "mt-16 flex-col gap-8 px-6 py-8 md:px-8",
-        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
+        "mt-16 flex-col gap-8 rounded-base bg-fade-accent-a px-6 py-8 gradient-reverse md:px-8",
         className
       )}
     >

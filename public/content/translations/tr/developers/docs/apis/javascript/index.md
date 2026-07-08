@@ -1,42 +1,44 @@
 ---
-title: JavaScript API kütüphaneleri
-description: Uygulamanızdan blok zinciri ile etkileşime girmenizi sağlayan JavaScript istemci kütüphanelerine giriş.
+title: "JavaScript API kütüphaneleri"
+description: "Uygulamanızdan blokzincir ile etkileşime girmenizi sağlayan JavaScript istemci kütüphanelerine giriş."
 lang: tr
 ---
 
-Bir web uygulamasının Ethereum blok zinciri ile etkileşime girebilmesi için (yani blok zinciri verilerini okuması ve/veya ağa işlem gönderebilmesi) bir Ethereum düğümüne bağlanması gerekir.
+Bir web uygulamasının Ethereum blokzinciri ile etkileşime girebilmesi (yani blokzincir verilerini okuması ve/veya ağa işlemler göndermesi) için bir Ethereum düğümüne bağlanması gerekir.
 
-Bu amaçla, her Ethereum istemcisi [JSON-RPC](/developers/docs/apis/json-rpc/) özelliklerini uygular, böylece uygulamaların güvenebileceği tek tip [metotlar](/developers/docs/apis/json-rpc/#json-rpc-methods) olur.
+Bu amaçla, her Ethereum istemcisi [JSON-RPC](/developers/docs/apis/json-rpc/) spesifikasyonunu uygular, böylece uygulamaların güvenebileceği tek tip bir [yöntemler](/developers/docs/apis/json-rpc/#json-rpc-methods) seti bulunur.
 
-Eğer bir Ethereum düğümüne bağlanmak için JavaScript kullanmak istiyorsanız, düz JavaScript'i kullanmak mümkündür ancak ekosistem içinde bunu çok daha kolay hâle getiren birkaç kolaylık kütüphanesi bulunur. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON RPC taleplerini (arka planda) başlatmak için sezgisel ve tek satırlı yöntemler yazabilirler.
+Bir Ethereum düğümüne bağlanmak için JavaScript kullanmak istiyorsanız, saf (vanilla) JavaScript kullanmak mümkündür ancak ekosistemde bunu çok daha kolaylaştıran çeşitli kolaylık kütüphaneleri mevcuttur. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON-RPC isteklerini (arka planda) başlatmak için sezgisel, tek satırlık yöntemler yazabilirler.
 
-Lütfen "[Birleşim](/roadmap/merge/) olayından bu yana, bir düğümü çalıştırmak için iki bağlantılı Ethereum yazılımının parçası olan bir yürütüm istemcisi ve bir fikir birliği istemcisi gerektiğini unutmayın. Lütfen düğümünüzün hem bir yürütüm hem de fikir birliği istemcisini içerdiğinden emin olun. Eğer düğümünüz yerel makinanızda değilse (ör. düğümünüz bir AWS örneğinde çalışıyorsa) bu eğitimdeki IP adreslerini buna göre güncelleyin. Daha fazla bilgi için lütfen [bir düğüm çalıştırma](/developers/docs/nodes-and-clients/run-a-node/) sayfamıza bakın.
+Lütfen [Birleşme](/roadmap/merge/)'den bu yana, bir düğümü çalıştırmak için birbirine bağlı iki Ethereum yazılımı parçasının (bir yürütme istemcisi ve bir fikir birliği istemcisi) gerekli olduğunu unutmayın. Lütfen düğümünüzün hem bir yürütme hem de fikir birliği istemcisi içerdiğinden emin olun. Düğümünüz yerel makinenizde değilse (örneğin, düğümünüz bir AWS bulut sunucusunda çalışıyorsa) eğitimdeki IP adreslerini buna göre güncelleyin. Daha fazla bilgi için lütfen [bir düğüm çalıştırma](/developers/docs/nodes-and-clients/run-a-node/) sayfamıza bakın.
 
 ## Ön koşullar {#prerequisites}
 
-JavaScript'i anlamanın yanı sıra, [Ethereum Yığınını](/developers/docs/ethereum-stack/) ve [Ethereum istemcilerini](/developers/docs/nodes-and-clients/) de anlamak faydalı olabilir.
+JavaScript'i anlamanın yanı sıra, [Ethereum yığınını](/developers/docs/ethereum-stack/) ve [Ethereum istemcilerini](/developers/docs/nodes-and-clients/) anlamak da faydalı olabilir.
 
-## Neden bir kitaplık kullanılır? {#why-use-a-library}
+## Neden bir kütüphane kullanmalısınız? {#why-use-a-library}
 
-Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın karmaşıklığının çoğunu ortadan kaldırır. Ayrıca, bir geliştirici olarak Ethereum istemcilerinin karmaşıklıkları ile daha az zaman harcayarak ve uygulamanızın benzersiz işlevselliğine daha fazla zaman ayırabilmeniz için yardımcı işlevler (örneğin, ETH'yi Gwei'ye dönüştürmek) sağlarlar.
+Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin karmaşıklığının çoğunu soyutlar. Ayrıca yardımcı işlevler (örneğin, ETH'yi Gwei'ye dönüştürmek) sağlarlar, böylece bir geliştirici olarak Ethereum istemcilerinin incelikleriyle uğraşmak için daha az, uygulamanızın benzersiz işlevselliğine odaklanmak için daha fazla zaman harcayabilirsiniz.
 
 ## Kütüphane özellikleri {#library-features}
 
-### Ethereum düğümlerine bağlanın {#connect-to-ethereum-nodes}
+### Ethereum düğümlerine bağlanma {#connect-to-ethereum-nodes}
 
-Bu kütüphaneler, sağlayıcıları kullanarak JSON-RPC, INFURA, Etherscan, Alchemy veya MetaMask üzerinden Ethereum'a bağlanmanıza ve Ethereum verilerini okumanıza olanak tanır.
+Sağlayıcıları kullanarak bu kütüphaneler, ister JSON-RPC, ister INFURA, Etherscan, Alchemy veya MetaMask üzerinden olsun, Ethereum'a bağlanmanıza ve verilerini okumanıza olanak tanır.
+
+> **Uyarı:** Web3.js, 4 Mart 2025'te arşivlendi. [Duyuruyu okuyun](https://blog.chainsafe.io/web3-js-sunset/). Yeni projeler için [ethers.js](https://ethers.org) veya [viem](https://viem.sh) gibi alternatif kütüphaneler kullanmayı düşünün.
 
 **Ethers örneği**
 
 ```js
-// Bir BrowserProvider, MetaMask'ın her sayfaya window.ethereum
-// olarak enjekte ettiği standart bir Web3 sağlayıcısını sarar
-// sabit sağlayıcı = yeni ethers.BrowserProvider(window.ethereum)
+// Bir BrowserProvider, standart bir Web3 sağlayıcısını sarar, ki bu
+// MetaMask'ın her sayfaya window.ethereum olarak enjekte ettiği şeydir
+const provider = new ethers.BrowserProvider(window.ethereum)
 
-// MetaMask eklentisi ayrıca işlemlerin imzalanmasına, ether göndermeye ve
-// blokzincirdeki durumu değiştirmek için ödeme yapmaya olanak tanır.
-// Bunun için hesap imzalayana ihtiyacımız var...
-sabit imzalayan = sağlayıcı.getSigner()
+// MetaMask eklentisi ayrıca şunlar için işlemleri imzalamaya olanak tanır:
+// ether göndermek ve Blokzincir içindeki durumu değiştirmek için ödeme yapmak.
+// Bunun için hesap imzalayıcısına ihtiyacımız var...
+const signer = provider.getSigner()
 ```
 
 **Web3js örneği**
@@ -46,23 +48,23 @@ var web3 = new Web3("http://localhost:8545")
 // or
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
-// change provider
+// sağlayıcıyı değiştir
 web3.setProvider("ws://localhost:8546")
 // or
 web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
-// Using the IPC provider in node.js
+// node.js'te IPC sağlayıcısını kullanma
 var net = require("net")
-var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // mac os path
+var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // mac os yolu
 // or
 var web3 = new Web3(
   new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)
-) // mac os path
-// on windows the path is: "\\\\.\\pipe\\geth.ipc"
-// on linux the path is: "/users/myuser/.ethereum/geth.ipc"
+) // mac os yolu
+// windows'ta yol şudur: "\\\\.\\pipe\\geth.ipc"
+// linux'ta yol şudur: "/users/myuser/.ethereum/geth.ipc"
 ```
 
-Kurulduktan sonra blok zinciri aşağıdakiler için sorgulayabileceksiniz:
+Kurulum tamamlandıktan sonra blokzinciri şunlar için sorgulayabileceksiniz:
 
 - blok numaraları
 - gaz tahminleri
@@ -72,27 +74,27 @@ Kurulduktan sonra blok zinciri aşağıdakiler için sorgulayabileceksiniz:
 
 ### Cüzdan işlevselliği {#wallet-functionality}
 
-Bu kitaplıklar size cüzdan oluşturma, anahtarları yönetme ve işlemleri imzalama işlevleri sunar.
+Bu kütüphaneler size cüzdan oluşturma, anahtarları yönetme ve işlemleri imzalama işlevselliği sunar.
 
-İşte Ether'lerden bir örnek
+İşte Ethers'tan bir örnek
 
 ```js
-// Bir anımsatıcıdan bir cüzdan örneği oluşturun...
+// Bir anımsatıcıdan bir Cüzdan örneği oluşturun...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
 walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-// ...ya da özel anahtardan
+// ...veya bir özel anahtardan
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
 // true
 
-// Signer API'si uyarınca bir Promise olarak adres
+// İmzalayıcı API'sine göre bir Promise olarak adres
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// Bir cüzdan adresi de senkronize olarak müsaittir
+// Bir Cüzdan adresi senkron olarak da mevcuttur
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
@@ -102,7 +104,7 @@ walletMnemonic.privateKey
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// Cüzdan mnemonic'i
+// Cüzdan anımsatıcısı
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
@@ -110,12 +112,12 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-// Not: Özel anahtarla oluşturulan bir cüzdan
-//       mnemonic'e sahip değildir (türetme bunu engeller)
+// Not: Özel anahtarla oluşturulan bir Cüzdan
+//       bir anımsatıcıya sahip değildir (türetme bunu engeller)
 walletPrivateKey.mnemonic
 // null
 
-// Mesaj imzalama
+// Bir mesajı imzalama
 walletMnemonic.signMessage("Hello World")
 // { Promise: '0x14280e5885a19f60e536de50097e96e3738c7acae4e9e62d67272d794b8127d31c03d9cd59781d4ee31fb4e1b893bd9b020ec67dfa65cfb51e2bdadbb1de26d91c' }
 
@@ -124,12 +126,12 @@ tx = {
   value: utils.parseEther("1.0"),
 }
 
-// İşlem imzalama
+// Bir işlemi imzalama
 walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// Bağlanma metodu yeni bir örneği
-// sağlayıcıya bağlı olan cüzdana gönderir
+// connect yöntemi, bir sağlayıcıya bağlı
+// Cüzdanın yeni bir örneğini döndürür
 wallet = walletMnemonic.connect(provider)
 
 // Ağı sorgulama
@@ -142,20 +144,20 @@ wallet.getTransactionCount()
 wallet.sendTransaction(tx)
 ```
 
-[Belgelerin tamamını okuyun](https://docs.ethers.io/v5/api/signer/#Wallet)
+[Tüm belgeleri okuyun](https://docs.ethers.io/v5/api/signer/#Wallet)
 
-Kurulduktan sonra şunları yapabileceksiniz:
+Kurulum tamamlandıktan sonra şunları yapabileceksiniz:
 
-- hesap oluşturabilirsiniz
-- işlem gönderebilirsiniz
-- işlemleri imzalayabilirsiniz
+- hesaplar oluşturmak
+- işlemler göndermek
+- işlemleri imzalamak
 - ve daha fazlası...
 
-### Akıllı sözleşme fonksiyonlarıyla etkileşim kurmak {#interact-with-smart-contract-functions}
+### Akıllı sözleşme işlevleriyle etkileşim {#interact-with-smart-contract-functions}
 
-Javascript istemci kütüphaneleri, derlenmiş bir sözleşmenin Uygulama İkili Arayüzünü (ABI) okuyarak uygulamanızın akıllı sözleşme fonksiyonlarını çağırmasına olanak tanır.
+JavaScript istemci kütüphaneleri, derlenmiş bir sözleşmenin Uygulama İkili Arabirimini (ABI) okuyarak uygulamanızın akıllı sözleşme işlevlerini çağırmasına olanak tanır.
 
-ABI, esasen sözleşmenin işlevlerini bir JSON formatında açıklar ve bunu normal bir JavaScript nesnesi gibi kullanmanıza izin verir.
+ABI temel olarak sözleşmenin işlevlerini JSON formatında açıklar ve onu normal bir JavaScript nesnesi gibi kullanmanıza olanak tanır.
 
 Yani aşağıdaki Solidity sözleşmesi:
 
@@ -164,7 +166,7 @@ contract Test {
     uint a;
     address d = 0x12345678901234567890123456789012;
 
-    function Test(uint testInt)  { a = testInt;}
+    constructor(uint testInt)  { a = testInt;}
 
     event Event(uint indexed b, bytes32 c);
 
@@ -177,7 +179,7 @@ contract Test {
 }
 ```
 
-Aşağıdaki JSON ile sonuçlanır:
+Aşağıdaki JSON ile sonuçlanacaktır:
 
 ```json
 [{
@@ -206,90 +208,93 @@ Aşağıdaki JSON ile sonuçlanır:
 }]
 ```
 
-Bu, şunları yapabileceğiniz anlamına gelir:
+Bu şu anlama gelir:
 
-- Akıllı sözleşmeye bir işlem gönderin ve yöntemini uygulayın
-- EVM'de yürütüldüğünde bir yöntem yürütmesinin harcayacağı gazı tahmin etme çağrısı
-- Sözleşme dağıtmak
+- Akıllı sözleşmeye bir işlem gönderip yöntemini yürütebilirsiniz
+- EVM'de yürütüldüğünde bir yöntem yürütmesinin alacağı gazı tahmin etmek için çağrı yapabilirsiniz
+- Bir sözleşme dağıtabilirsiniz
 - Ve daha fazlası...
 
-### Yardımcı fonksiyonlar {#utility-functions}
+### Yardımcı işlevler {#utility-functions}
 
-Yardımcı fonksiyonlar, Ethereum ile oluşturmayı biraz daha kolaylaştıran kullanışlı kısayollar sunar.
+Yardımcı işlevler, Ethereum ile geliştirmeyi biraz daha kolaylaştıran kullanışlı kısayollar sunar.
 
-ETH değerleri varsayılan olarak Wei cinsindendir. 1 ETH = 1.000.000.000.000.000.000 WEI – bu, çok sayıda sayıyla uğraştığınız anlamına gelir! `web3.utils.toWei`, ether'ı sizin için Wei'ye dönüştürür.
+ETH değerleri varsayılan olarak Wei cinsindendir. 1 ETH = 1.000.000.000.000.000.000 WEI – bu, çok sayıda rakamla uğraştığınız anlamına gelir! `web3.utils.toWei`, Ether'i sizin için Wei'ye dönüştürür.
 
-Ve ethers cinsinden şöyle görünür:
+Ve ethers'ta şu şekilde görünür:
 
 ```js
-// Get the balance of an account (by address or ENS name)
+// Bir hesabın bakiyesini alma (adres veya ENS adına göre)
 balance = await provider.getBalance("ethers.eth")
 // { BigNumber: "2337132817842795605" }
 
-// Often you will need to format the output for the user
-// which prefer to see values in ether (instead of wei)
+// Genellikle çıktıyı, değerleri ether (Wei yerine) cinsinden
+// görmeyi tercih eden kullanıcı için biçimlendirmeniz gerekecektir
 ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Web3js yardımcı fonksiyonları](https://docs.web3js.org/api/web3-utils)
-- [Ethers yardımcı fonksiyonları](https://docs.ethers.io/v5/api/utils/)
+- [Web3js yardımcı işlevleri](https://docs.web3js.org/api/web3-utils)
+- [Ethers yardımcı işlevleri](https://docs.ethers.org/v6/api/utils/)
 
 ## Mevcut kütüphaneler {#available-libraries}
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
-- [Belgeler](https://docs.web3js.org/)
-- [GitHub](https://github.com/ethereum/web3.js/)
+- [Belgeler](https://docs.web3js.org)
+- [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_JavaScript ve TypeScript'te eksiksiz Ethereum cüzdan uygulamaları ve araçları._**
+**Ethers.js -** **_JavaScript ve TypeScript'te eksiksiz Ethereum cüzdan uygulaması ve yardımcı programları._**
 
-- [Belgeler](https://docs.ethers.io/)
-- [GitHub](https://github.com/ethers-io/ethers.js/)
+- [Ethers.js ana sayfası](https://ethers.org/)
+- [Belgeler](https://docs.ethers.io)
+- [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_Ethereum ve IPFS verilerini endekslemek ve GraphQL kullanarak sorgulamak için bir protokol._**
+**The Graph -** **_Ethereum ve IPFS verilerini indekslemek ve GraphQL kullanarak sorgulamak için bir protokol._**
 
-- [The Graph](https://thegraph.com/)
-- [Graph Gezgini](https://thegraph.com/explorer/)
-- [Belgeler](https://thegraph.com/docs/)
-- [GitHub](https://github.com/graphprotocol/)
+- [The Graph](https://thegraph.com)
+- [Graph Gezgini](https://thegraph.com/explorer)
+- [Belgeler](https://thegraph.com/docs)
+- [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**light.js -** **_Hafif istemciler için yüksek seviyede duyarlı JS kütüphanesidir._**
+**Alchemy SDK -** **_Gelişmiş API'lere sahip Ethers.js sarmalayıcısı._**
 
-- [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
+- [Belgeler](https://www.alchemy.com/docs)
+- [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**Web3-wrapper -** **_Web3.js için alternatif yazı tipi._**
+**viem -** **_Ethereum için TypeScript Arayüzü._**
 
-- [Belgeler](https://0x.org/docs/web3-wrapper#introduction)
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
-
-**Alchemyweb3 -** **_Otomatik yeniden denemeler ve geliştirilmiş API'lar ile Web3.js odaklı paketleyici._**
-
-- [Belgeler](https://docs.alchemy.com/reference/api-overview)
-- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
-
-**Alchemy NFT API -** **_Sahiplik, meta veri özellikleri ve daha fazlası dahil olmak üzere NFT verilerini almak için API._**
-
-- [Belgeler](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
-- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
-
-**viem -** **_Ethereum için TypeScript Arayüzü_**
-
-- [Dokümanlar](https://viem.sh)
+- [Belgeler](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
+
+**Codex -** **_Düzinelerce zincirde gerçek zamanlı, zenginleştirilmiş blokzincir veri API'si._**
+
+- [Belgeler](https://docs.codex.io)
+- [Gezgin](https://docs.codex.io/explore)
+- [GitHub](https://github.com/Codex-Data)
+- [Discord](https://discord.com/invite/mFpUhT3vAq)
+
+**Drift -** **_Yerleşik önbelleğe alma, kancalar (hooks) ve test taklitleri (mocks) içeren TypeScript meta kütüphanesi._**
+
+- [Belgeler](https://ryangoree.github.io/drift/)
+- [GitHub](https://github.com/ryangoree/drift/)
 
 ## Daha fazla bilgi {#further-reading}
 
-_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
 ## İlgili konular {#related-topics}
 
-- [ Düğümler ve İstemciler](/developers/docs/nodes-and-clients/)
-- [Geliştirici çerçeveleri](/developers/docs/frameworks/)
+- [Düğümler ve istemciler](/developers/docs/nodes-and-clients/)
+- [Geliştirme çerçeveleri](/developers/docs/frameworks/)
 
-## İlgili öğreticiler {#related-tutorials}
+## İlgili eğitimler {#related-tutorials}
 
-- [JavaScript'te Ethereum blok zincirini kullanmak için Web3js'yi kurun](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Projenizde web3.js kurulumu için talimatlar._
-- [JavaScript'ten akıllı sözleşme çağırma](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI belirtecini kullanarak, JavaScript kullanan sözleşme işlevini nasıl çağıracağınızı görün._
-- [Web3 ve Alchemy kullanarak işlem gönderme](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Arka uçtan işlem göndermek için adım adım izlenecek yol._
+- [JavaScript'te Ethereum blokzincirini kullanmak için Web3js'i kurun](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Projenizde web3.js'i kurmak için talimatlar._
+- [JavaScript'ten bir akıllı sözleşme çağırma](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI token'ını kullanarak, JavaScript ile sözleşme işlevlerinin nasıl çağrılacağını görün._
+- [web3 ve Alchemy kullanarak işlem gönderme](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Arka uçtan işlem göndermek için adım adım kılavuz._
+
+## Eğitimler: Ethereum'da JavaScript API'leri ve WebSocket'ler {#tutorials}
+
+- [WebSocket'leri Kullanma](/developers/tutorials/using-websockets/) _– Ethereum olaylarına abone olmak ve gerçek zamanlı JSON-RPC istekleri yapmak için Alchemy ile WebSocket'lerin nasıl kullanılacağı._

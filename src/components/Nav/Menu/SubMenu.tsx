@@ -1,5 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion"
-import NextLink from "next/link"
+import { AnimatePresence, motion } from "motion/react"
 import {
   Content,
   Item,
@@ -60,7 +59,7 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
           <List asChild>
             <UnorderedList className="m-0 list-none p-2">
               {items.map((item) => {
-                const { label, icon: Icon, ...action } = item
+                const { label, ...action } = item
                 const subItems = action.items || []
                 const isLink = "href" in action
                 const isActivePage = isLink && cleanPath(asPath) === action.href
@@ -71,40 +70,30 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
                   <Item key={label} asChild>
                     <ListItem className={cn("mb-2 last:mb-0", itemClasses())}>
                       {isLink ? (
-                        <NextLink href={action.href!} passHref legacyBehavior>
-                          <NavigationMenuLink asChild>
-                            <Button
-                              variant="ghost"
-                              className={buttonClasses}
-                              data-active={isActivePage}
-                              onClick={() => {
-                                onClose()
-                                trackCustomEvent({
-                                  eventCategory: "Desktop navigation menu",
-                                  eventAction: `Menu - ${activeSection} - ${locale}`,
-                                  eventName: action.href!,
-                                })
-                              }}
-                              asChild
-                            >
-                              <BaseLink>
-                                {lvl === 1 && Icon ? (
-                                  <Icon className="me-4 h-6 w-6" />
-                                ) : null}
-
-                                <ItemContent item={item} lvl={lvl} />
-                              </BaseLink>
-                            </Button>
-                          </NavigationMenuLink>
-                        </NextLink>
+                        <NavigationMenuLink asChild>
+                          <Button
+                            variant="ghost"
+                            className={buttonClasses}
+                            data-active={isActivePage}
+                            onClick={() => {
+                              onClose()
+                              trackCustomEvent({
+                                eventCategory: "Desktop navigation menu",
+                                eventAction: `Menu - ${activeSection} - ${locale}`,
+                                eventName: action.href!,
+                              })
+                            }}
+                            asChild
+                          >
+                            <BaseLink href={action.href!}>
+                              <ItemContent item={item} lvl={lvl} />
+                            </BaseLink>
+                          </Button>
+                        </NavigationMenuLink>
                       ) : (
                         <>
                           <Trigger asChild>
                             <Button variant="ghost" className={buttonClasses}>
-                              {lvl === 1 && Icon ? (
-                                <Icon className="me-4 h-6 w-6" />
-                              ) : null}
-
                               <ItemContent item={item} lvl={lvl} />
                               <ChevronNext />
                             </Button>

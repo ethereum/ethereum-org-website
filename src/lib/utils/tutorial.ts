@@ -1,8 +1,4 @@
-import { Lang } from "@/lib/types"
-
-import { Skill } from "@/components/TutorialMetadata"
-
-import { IExternalTutorial, ITutorial } from "@/pages/developers/tutorials"
+import { IExternalTutorial, ITutorial, Lang, Skill } from "@/lib/types"
 
 // Take all tutorials, and return a list of tutorials for a specific locale
 export const filterTutorialsByLang = (
@@ -56,33 +52,4 @@ export const filterTutorialsByLang = (
     })
 
   return filteredTutorials
-}
-
-export const getSortedTutorialTagsForLang = (
-  filteredTutorialsByLang: Array<ITutorial> = []
-) => {
-  const allTags = filteredTutorialsByLang.reduce<Array<string>>(
-    (tags, tutorial) => {
-      return [...tags, ...(tutorial.tags || [])]
-    },
-    []
-  )
-
-  const reducedTags = allTags.reduce((acc, tag) => {
-    if (acc[tag]) {
-      acc[tag] = acc[tag] + 1
-    } else {
-      acc[tag] = 1
-    }
-    return acc
-  }, {})
-
-  const sortedTags = Object.keys(reducedTags)
-    .sort()
-    .reduce((obj, key) => {
-      obj[key] = reducedTags[key]
-      return obj
-    }, {})
-
-  return sortedTags
 }

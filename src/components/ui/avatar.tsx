@@ -1,9 +1,12 @@
+"use client"
+
 import * as React from "react"
-import upperCase from "lodash/upperCase"
 import { tv, type VariantProps } from "tailwind-variants"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
 import { cn } from "@/lib/utils/cn"
+
+import { Image } from "../Image"
 
 import { Center } from "./flex"
 import { BaseLink, type LinkProps } from "./Link"
@@ -11,30 +14,33 @@ import { LinkBox, LinkOverlay } from "./link-box"
 
 const avatarStyles = tv({
   slots: {
-    container:
-      "relative shrink-0 overflow-hidden rounded-full focus:outline-4 focus:-outline-offset-1 focus:rounded-full active:shadow-none [&_img]:hover:opacity-70 border border-transparent active:border-primary-hover ",
+    container: cn(
+      "relative shrink-0 overflow-hidden rounded-full focus:outline-4 focus:-outline-offset-1 focus:rounded-full active:shadow-none [&_img]:hover:opacity-70 border border-transparent active:border-primary-hover",
+      // Hover transition properties
+      "transition-shadow duration-300"
+    ),
     fallback: "bg-body text-body-inverse flex justify-center items-center",
   },
   variants: {
     size: {
       xs: {
         container:
-          "size-6 hover:shadow-[2px_2px_0_var(--avatar-base-shadow-color)] peer-hover:shadow-[2px_2px_0_var(--avatar-base-shadow-color)]",
+          "size-6 hover:shadow-primary-no-blur-0.5 peer-hover:shadow-primary-no-blur-0.5",
         fallback: "text-2xs",
       },
       sm: {
         container:
-          "size-8 hover:shadow-[2px_2px_0_var(--avatar-base-shadow-color)] peer-hover:shadow-[2px_2px_0_var(--avatar-base-shadow-color)]",
+          "size-8 hover:shadow-primary-no-blur-0.5 peer-hover:shadow-primary-no-blur-0.5",
         fallback: "text-sm",
       },
       md: {
         container:
-          "size-12 hover:shadow-[4px_4px_0_var(--avatar-base-shadow-color)] peer-hover:shadow-[4px_4px_0_var(--avatar-base-shadow-color)]",
+          "size-12 hover:shadow-primary-no-blur-1 peer-hover:shadow-primary-no-blur-1",
         fallback: "text-lg",
       },
       lg: {
         container:
-          "size-16 hover:shadow-[4px_4px_0_var(--avatar-base-shadow-color)] peer-hover:shadow-[4px_4px_0_var(--avatar-base-shadow-color)]",
+          "size-16 hover:shadow-primary-no-blur-1 peer-hover:shadow-primary-no-blur-1",
         fallback: "text-2xl",
       },
     },
@@ -55,17 +61,12 @@ type AvatarBaseProps = React.ComponentProps<typeof AvatarPrimitive.Root> &
   AvatarVariantProps
 
 const AvatarBase = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Root>,
+  React.ComponentRef<typeof AvatarPrimitive.Root>,
   AvatarBaseProps
 >(({ className, size, ...props }, ref) => (
   <AvatarStylesContext.Provider value={avatarStyles({ size })}>
     <AvatarPrimitive.Root
       ref={ref}
-      style={
-        {
-          "--avatar-base-shadow-color": "hsl(var(--primary-low-contrast))",
-        } as React.CSSProperties
-      }
       className={avatarStyles({ size }).container({ className })}
       {...props}
     />
@@ -74,7 +75,7 @@ const AvatarBase = React.forwardRef<
 AvatarBase.displayName = AvatarPrimitive.Root.displayName
 
 const AvatarImage = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Image>,
+  React.ComponentRef<typeof AvatarPrimitive.Image>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
 >(({ className, alt = "", ...props }, ref) => (
   <AvatarPrimitive.Image
@@ -87,7 +88,7 @@ const AvatarImage = React.forwardRef<
 AvatarImage.displayName = AvatarPrimitive.Image.displayName
 
 const AvatarFallback = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Fallback>,
+  React.ComponentRef<typeof AvatarPrimitive.Fallback>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback> &
     VariantProps<typeof avatarStyles>
 >(({ className, ...props }, ref) => {
@@ -96,7 +97,7 @@ const AvatarFallback = React.forwardRef<
     <AvatarPrimitive.Fallback
       ref={ref}
       className={cn(
-        "flex h-full w-full items-center justify-center rounded-full",
+        "flex h-full w-full items-center justify-center rounded-full uppercase",
         fallback(),
         className
       )}
@@ -119,7 +120,7 @@ export type AvatarProps = AvatarBaseProps &
   }
 
 const Avatar = React.forwardRef<
-  React.ElementRef<"span"> | React.ElementRef<"div">,
+  React.ComponentRef<"span"> | React.ComponentRef<"div">,
   AvatarProps
 >((props, ref) => {
   const {
@@ -133,17 +134,17 @@ const Avatar = React.forwardRef<
     dataTest,
   } = props
 
+  const [hasError, setHasError] = React.useState(false)
+
   const commonLinkProps = {
     href,
     className: "not-[:hover]:no-underline",
   }
 
-  const fallbackInitials = upperCase(
-    name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-  )
+  const fallbackInitials = name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
 
   if (label) {
     const _direction: "flex-col-reverse" | "flex-row-reverse" =
@@ -151,25 +152,35 @@ const Avatar = React.forwardRef<
 
     const _ref = ref as React.ForwardedRef<HTMLDivElement>
     return (
-      <LinkBox
-        // !! Inconsistent strategy, using `as` prop instead of `asChild` bool
-        as={Center}
-        ref={_ref}
-        className={cn(_direction, "gap-x-1 gap-y-0")}
-      >
-        <LinkOverlay
-          asChild
-          className={cn(
-            "peer z-overlay inline-flex items-center gap-1 p-1",
-            size !== "md" ? "text-xs" : "text-sm"
-          )}
-        >
-          <BaseLink {...commonLinkProps}>{label}</BaseLink>
-        </LinkOverlay>
-        <AvatarBase size={size}>
-          <AvatarImage src={src} />
-          <AvatarFallback>{fallbackInitials}</AvatarFallback>
-        </AvatarBase>
+      <LinkBox ref={_ref} className={cn(_direction, "gap-x-1 gap-y-0")} asChild>
+        <Center>
+          <LinkOverlay
+            asChild
+            className={cn(
+              "peer z-overlay inline-flex items-center gap-1 p-1",
+              size !== "md" ? "text-xs" : "text-sm"
+            )}
+          >
+            <BaseLink {...commonLinkProps}>{label}</BaseLink>
+          </LinkOverlay>
+          <AvatarBase size={size}>
+            {src && !hasError ? (
+              <Image
+                className="object-fill"
+                width={128}
+                height={128}
+                sizes="4rem"
+                src={src}
+                alt={name}
+                quality={100}
+                onError={() => setHasError(true)}
+              />
+            ) : (
+              <AvatarImage />
+            )}
+            <AvatarFallback>{fallbackInitials}</AvatarFallback>
+          </AvatarBase>
+        </Center>
       </LinkBox>
     )
   }
@@ -177,7 +188,20 @@ const Avatar = React.forwardRef<
   return (
     <AvatarBase ref={ref} size={size} className={className} asChild>
       <BaseLink title={dataTest} {...commonLinkProps}>
-        <AvatarImage src={src} />
+        {src && !hasError ? (
+          <Image
+            className="object-fill"
+            width={128}
+            height={128}
+            sizes="4rem"
+            src={src}
+            alt={name}
+            quality={100}
+            onError={() => setHasError(true)}
+          />
+        ) : (
+          <AvatarImage />
+        )}
         <AvatarFallback>{fallbackInitials}</AvatarFallback>
       </BaseLink>
     </AvatarBase>
@@ -199,7 +223,7 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
 
     const validChildren = React.Children.toArray(children).filter((child) =>
       React.isValidElement(child)
-    ) as React.ReactElement[]
+    ) as React.ReactElement<unknown>[]
 
     /**
      * The visible avatars from max
@@ -218,10 +242,13 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
 
     const clonedChildren = reversedChildren.map((child, idx) => {
       const isFirst = idx === 0
-      return React.cloneElement(child, {
-        className: cn(isFirst ? "me-0" : "-me-2"),
-        size,
-      })
+      return React.cloneElement(
+        child as React.ReactElement<{ className?: string; size?: string }>,
+        {
+          className: cn(isFirst ? "me-0" : "-me-2"),
+          size,
+        }
+      )
     })
 
     const { container, fallback } = avatarStyles({ size })

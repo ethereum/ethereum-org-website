@@ -24,19 +24,23 @@ For example:
 
 Note that for short headers, simply lowercasing and using hyphens instead of spaces is sufficient. For longer headers, a shortened concise version of the header is encouraged. Must not repeat the same ID on the same page.
 
+## Automated enforcement
+
+Header IDs are enforced automatically for English content files (`public/content/`, excluding translations) by markdownlint via the pre-commit hook (config in `.markdownlint-cli2.jsonc`, custom rules in `.markdownlint-rules/`). Run `pnpm lint:md:fix` to auto-add missing IDs and fix duplicates.
+
 ## How are these used?
 
 When these headers are rendered, they come with a link icon attached to it that can be used to quickly link to that section of the document.
 
 Extending the above example, if we wanted to link to the `A subheading` section of the above document (for example living at path `/docs`), you could use the link`/docs#a-subheading` to link directly to that section.
 
-See a live example on ethereum.org: [https://ethereum.org/en/developers/docs/blocks/#block-anatomy](https://ethereum.org/en/developers/docs/blocks/#block-anatomy)
+See a live example on ethereum.org: [https://ethereum.org/developers/docs/blocks/#block-anatomy](https://ethereum.org/developers/docs/blocks/#block-anatomy)
 
 ## When to use custom header IDs
 
 ### English content
 
-These should be created for header on every new English markdown document.
+These should be created for header in every new English markdown document.
 
 ### Translated content
 
@@ -44,7 +48,7 @@ English files are uploaded to Crowdin for translation. Header ID's should be _in
 
 This is to ensure that the translated content can be linked to from other documents and external links, without breaking the path. This is similar to why path and filenames are not translated, but remain in English to simplify linking and referencing.
 
-See a live example on ethereum.org: [https://ethereum.org/es/developers/docs/blocks/#block-anatomy](https://ethereum.org/en/developers/docs/blocks/#block-anatomy)
+See a live example on ethereum.org: [https://ethereum.org/es/developers/docs/blocks/#block-anatomy](https://ethereum.org/developers/docs/blocks/#block-anatomy)
 
 Notice the header ID is still in English (`#block-anatomy`), but links to the Spanish (`/es/`) version of the site, at the correct section.
 

@@ -1,28 +1,26 @@
 ---
-title: Ethers.js Kullanarak Token Gönderimi
-description: Yeni başlayanlar için Ethers.js kullanarak token gönderme rehberi.
+title: "ethers.js Kullanarak Token Gönderme"
+description: "ethers.js kullanarak token göndermeye yönelik başlangıç dostu rehber."
 author: Kim YongJun
-tags:
-  - "ETHERS.JS"
-  - "ERC-20"
-  - "TOKEN'LAR"
+tags: ["ETHERS.JS", "ERC-20", "TOKENLAR"]
 skill: beginner
+breadcrumb: "Token gönder"
 lang: tr
 published: 2021-04-06
 ---
 
-## ethers.js(5.0) Kullanarak Token Gönderin {#send-token}
+## ethers.js(5.0) Kullanarak Token Gönderme {#send-token}
 
-### Bu Eğitimde Şunların Nasıl Yapılacağını Öğreneceksiniz {#you-learn-about}
+### Bu Eğitimde Neler Öğreneceksiniz {#you-learn-about}
 
-- Ethers.js içe aktarımı
-- Token transferi
-- Gaz fiyatını ağ trafiği durumuna göre ayarlama
+- ethers.js'yi içe aktarma
+- Token transfer etme
+- Ağ trafiği durumuna göre gas fiyatı belirleme
 
-### Başlamak İçin {#to-get-started}
+### Başlarken {#to-get-started}
 
-Başlamak için önce ethers.js kitaplığını javascript'imize aktarmalıyız ethers.js(5.0) dahil
-
+Başlamak için öncelikle ethers.js kütüphanesini JavaScript'imize aktarmalıyız
+ethers.js v5'i dahil edin
 ### Kurulum {#install-ethersjs}
 
 ```shell
@@ -34,7 +32,7 @@ Tarayıcıda ES6
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // Your code here...
+  // Kodunuz buraya...
 </script>
 ```
 
@@ -49,59 +47,59 @@ Tarayıcıda ES3(UMD)
 
 ### Parametreler {#param}
 
-1. **`contract_address`**: Token sözleşme adresi (aktarmak istediğiniz token, ether olmadığında sözleşme adresi gereklidir)
-2. **`send_token_amount`**: Alıcıya göndermek istediğiniz token miktarı
+1. **`contract_address`**: Token sözleşme adresi (transfer etmek istediğiniz token Ether değilse sözleşme adresi gereklidir)
+2. **`send_token_amount`**: Alıcıya göndermek istediğiniz miktar
 3. **`to_address`**: Alıcının adresi
-4. **`send_account`**: Göndericinin adresi
-5. **`private_key`**: İşlemi imzalamak ve token'ları tam olarak aktarmak için göndericinin özel anahtarı
+4. **`send_account`**: Gönderenin adresi
+5. **`private_key`**: İşlemi imzalamak ve token'ları fiilen transfer etmek için gönderenin özel anahtarı
 
-## Uyarı {#notice}
+## Not {#notice}
 
-`sendTransaction()` onu dahili olarak yaptığı için `signTransaction(tx)` kaldırılmıştır.
+`sendTransaction()` bunu dahili olarak yaptığı için `signTransaction(tx)` kaldırılmıştır.
 
-## Gönderim Prosedürleri {#procedure}
+## Gönderme Prosedürleri {#procedure}
 
-### 1. Ağa bağlan (test ağı) {#connect-to-network}
+### 1. Ağa bağlanma (test ağı) {#connect-to-network}
 
-#### Sağlayıcı Ayarla (Infura) {#set-provider}
+#### Sağlayıcıyı Ayarlama (Infura) {#set-provider}
 
-Ropsten test ağına bağlan
+Ropsten test ağına bağlanma
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. Cüzdan oluştur {#create-wallet}
+### 2. Cüzdan oluşturma {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Cüzdanı ağa bağla {#connect-wallet-to-net}
+### 3. Cüzdanı ağa bağlama {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. Mevcut gaz ücretini al {#get-gas}
+### 4. Mevcut gas fiyatını alma {#get-gas}
 
 ```javascript
 window.ethersProvider.getGasPrice() // gasPrice
 ```
 
-### 5. İşlemi tanımla {#define-transaction}
+### 5. İşlemi Tanımlama {#define-transaction}
 
-Aşağıda tanımlanan bu değişkenler, `send_token()` komutuna bağlıdır
+Aşağıda tanımlanan bu değişkenler `send_token()`'e bağlıdır
 
 ### İşlem parametreleri {#transaction-params}
 
-1. **`send_account`**: token göndericisinin adresi
+1. **`send_account`**: token göndereninin adresi
 2. **`to_address`**: token alıcısının adresi
 3. **`send_token_amount`**: gönderilecek token miktarı
-4. **`gas_limit`**: gaz sınırı
-5. **`gas_price`**: gaz ücreti
+4. **`gas_limit`**: gaz limiti
+5. **`gas_price`**: gas fiyatı
 
-[Nasıl kullanılacağını görmek için aşağıya bakınız](#how-to-use)
+[Nasıl kullanılacağını görmek için aşağıya bakın](#how-to-use)
 
 ```javascript
 const tx = {
@@ -114,7 +112,7 @@ const tx = {
 }
 ```
 
-### 6. Aktarım {#transfer}
+### 6. Transfer {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
@@ -148,7 +146,7 @@ send_token(
 
 ### Başarılı! {#success}
 
-![başarılı bir şekilde yapılan işlemin görüntüsü](./successful-transaction.png)
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -168,23 +166,23 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // general token send
+      // genel Token gönderimi
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // How many tokens?
+      // Kaç Token?
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // Send tokens
+      // Token gönder
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
         alert("sent token")
       })
-    } // ether send
+    } // Ether gönderimi
     else {
       const tx = {
         from: send_account,

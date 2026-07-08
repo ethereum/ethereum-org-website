@@ -6,7 +6,7 @@ lang: en
 
 ## What is a smart contract? {#what-is-a-smart-contract}
 
-A "smart contract" is simply a program that runs on the Ethereum blockchain. It's a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain.
+A "smart contract" is simply a program that runs on the [Ethereum](/) blockchain. It's a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain.
 
 Smart contracts are a type of [Ethereum account](/developers/docs/accounts/). This means they have a balance and can be the target of transactions. However they're not controlled by a user, instead they are deployed to the network and run as programmed. User accounts can then interact with a smart contract by submitting transactions that execute a function defined on the smart contract. Smart contracts can define rules, like a regular contract, and automatically enforce them via the code. Smart contracts cannot be deleted by default, and interactions with them are irreversible.
 
@@ -86,9 +86,9 @@ Learn more about [smart contract composability](/developers/docs/smart-contracts
 
 ## Limitations {#limitations}
 
-Smart contracts alone cannot get information about "real-world" events because they can't retrieve data from off-chain sources. This means they can't respond to events in the real world. This is by design. Relying on external information could jeopardise consensus, which is important for security and decentralization.
+Smart contracts alone cannot get information about "real-world" events because they can't retrieve data from offchain sources. This means they can't respond to events in the real world. This is by design. Relying on external information could jeopardise consensus, which is important for security and decentralization.
 
-However, it is important for blockchain applications to be able to use off-chain data. The solution is [oracles](/developers/docs/oracles/) which are tools that ingest off-chain data and make it available to smart contracts.
+However, it is important for blockchain applications to be able to use offchain data. The solution is [oracles](/developers/docs/oracles/) which are tools that ingest offchain data and make it available to smart contracts.
 
 Another limitation of smart contracts is the maximum contract size. A smart contract can be a maximum of 24KB or it will run out of gas. This can be circumnavigated by using [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
 
@@ -110,3 +110,7 @@ Multisig (multiple-signature) contracts are smart contract accounts that require
 - [Chainlink: What is a smart contract?](https://chain.link/education/smart-contracts)
 - [Video: Simply Explained - Smart Contracts](https://youtu.be/ZE2HxTmxfrI)
 - [Cyfrin Updraft: Web3 learning and auditing platform](https://updraft.cyfrin.io)
+
+## Tutorials: Smart contract signatures (EIP-1271) on Ethereum {#tutorials}
+
+- [EIP-1271: Signing and Verifying Smart Contract Signatures](/developers/tutorials/eip-1271-smart-contract-signatures/) _– How EIP-1271 enables smart contracts to verify signatures, with a walkthrough of the Safe implementation._

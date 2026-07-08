@@ -1,7 +1,6 @@
 import { ElementType, useState } from "react"
-import { useTranslation } from "next-i18next"
 
-import type { StakingPage } from "@/lib/types"
+import type { MatomoEventOptions, StakingPage } from "@/lib/types"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import {
@@ -18,7 +17,7 @@ import {
 } from "@/components/icons/staking"
 import { StakingConsiderationsProps } from "@/components/Staking/StakingConsiderations"
 
-import { MatomoEventOptions } from "@/lib/utils/matomo"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type DataType = {
   title: string
@@ -402,8 +401,6 @@ export const useStakingConsiderations = ({
   }
 
   const indicatorSvgStyle = { width: 20, height: "auto" }
-  const StyledSvg = () =>
-    Svg ? <Svg className="size-[4.5rem]" /> : <div className="hidden" />
 
   return {
     title,
@@ -414,7 +411,7 @@ export const useStakingConsiderations = ({
     dropdownLinks,
     handleSelection,
     indicatorSvgStyle,
-    StyledSvg,
+    Svg,
     pageData,
     activeIndex,
   }

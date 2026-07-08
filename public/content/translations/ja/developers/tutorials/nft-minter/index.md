@@ -1,77 +1,71 @@
 ---
-title: 非代替性トークン(NFT)ミンターチュートリアル
-description: このチュートリアルでは、非代替性トークン(NFT)ミンターを構築します。さらに、スマートコントラクトをMetaMaskやWeb3ツールを使用して、Reactフロントエンドへ接続することでフルスタック分散型アプリケーション(Dapp)を作成する方法を学びます。
+title: "NFTミントチュートリアル"
+description: "このチュートリアルでは、NFTミンターを構築し、メタマスクとWeb3ツールを使用してスマート・コントラクトをReactフロントエンドに接続することで、フルスタックの分散型アプリケーション (dapp) を作成する方法を学びます。"
 author: "smudgil"
-tags:
-  - "Solidity"
-  - "NFT"
-  - "alchemy"
-  - "スマートコントラクト"
-  - "フロントエンド"
-  - "Pinata"
+tags: ["Solidity", "NFT", "Alchemy", "スマート・コントラクト", "フロントエンド", "Pinata", "erc-721"]
 skill: intermediate
+breadcrumb: "NFTミンターdapp"
 lang: ja
 published: 2021-10-06
 ---
 
-Web2のバックグラウンドを持つデベロッパーの最大の課題の1つは、スマートコントラクトをフロントエンドのプロジェクトに接続し、やり取りを行う方法を理解することです。
+Web2のバックグラウンドを持つ開発者にとって最大の課題の1つは、スマート・コントラクトをフロントエンドプロジェクトに接続し、それとやり取りする方法を理解することです。
 
-ここでは、デジタル資産へのリンク、タイトル、説明を入力できるシンプルなUIを備えた非代替性トークン(NFT)ミンターを構築することで、次の方法を学びます。
+デジタル資産へのリンク、タイトル、説明を入力できるシンプルなUIであるNFTミンターを構築することで、以下の方法を学びます。
 
-- フロントエンドのプロジェクト経由でMetaMaskに接続する
-- フロントエンドからスマートコントラクトメソッドを呼び出す
-- MetaMaskを使用してトランザクションに署名する
+- フロントエンドプロジェクトを介してメタマスクに接続する
+- フロントエンドからスマート・コントラクトのメソッドを呼び出す
+- メタマスクを使用してトランザクションに署名する
 
-このチュートリアルでは、[React](https://reactjs.org/)をフロントエンドフレームワークとして使用します。 このチュートリアルはWeb3開発に焦点を当てているので、Reactの基礎についての説明に多くの時間を費やせません。 代わりに、プロジェクトの機能性を高めることに注力します。
+このチュートリアルでは、フロントエンドフレームワークとして[React](https://react.dev/)を使用します。このチュートリアルは主にWeb3開発に焦点を当てているため、Reactの基礎を解説することに多くの時間は費やしません。代わりに、プロジェクトに機能をもたらすことに焦点を当てます。
 
-前提条件として、Reactに関する初級レベルの知識を有している必要があります。つまり、コンポーネント、プロパティ(props)、useStateおよびuseEffect、基本関数の呼び出しなどの仕組みを理解している必要があります。 これらの中に初めて耳にする用語がある場合は、[Reactの入門チュートリアル](https://reactjs.org/tutorial/tutorial.html)をご覧ください。 より視覚的な学習を好む方には、Net Ninjaによる素晴らしい[フルモダンReactチュートリアル](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)のビデオシリーズをお勧めします。
+前提条件として、Reactの初心者レベルの理解（コンポーネント、props、useState/useEffect、および基本的な関数呼び出しの仕組み）が必要です。これらの用語を聞いたことがない場合は、この[React入門チュートリアル](https://react.dev/learn/tutorial-tic-tac-toe)を確認することをお勧めします。視覚的に学びたい方には、Net Ninjaによる素晴らしい[Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)ビデオシリーズを強くお勧めします。
 
-まだAlchemyアカウントをお持ちでない場合、このチュートリアルを完了したり、ブロックチェーンで何かを構築したりするために必ず必要になりますので、 [こちらから](https://alchemy.com/)無料アカウントに登録してください。
+また、まだお持ちでない場合は、このチュートリアルを完了し、ブロックチェーン上で何かを構築するために、Alchemyアカウントが絶対に必要になります。[こちら](https://alchemy.com/)から無料アカウントにサインアップしてください。
 
 それでは、さっそく始めましょう！
 
-## 非代替性トークン(NFT)作成入門 {#making-nfts-101}
+## NFT作成の基礎 {#making-nfts-101}
 
-コードを見始める前に、非代替性トークン(NFT)作成の仕組みを理解することが重要です。 それには、次の2つのステップがあります。
+コードを見始める前に、NFTの作成がどのように機能するかを理解することが重要です。これには2つのステップが含まれます。
 
-### イーサリアムブロックチェーン上で非代替性トークン(NFT)スマートコントラクトを公開 {#publish-nft}
+### イーサリアムブロックチェーン上にNFTスマート・コントラクトを公開する {#publish-nft}
 
-ERC-1155とERC-721の2つのスマートコントラクト規格の最大の違いは、ERC-1155はマルチトークン規格でありバッチ機能を備えているのに対し、ERC-721はシングルトークン規格であり一度に1つのトークンの送信しかサポートしていないことです。
+2つのNFTスマート・コントラクト標準の最大の違いは、ERC-1155がマルチトークン標準でありバッチ機能を含んでいるのに対し、ERC-721はシングルトークン標準であるため、一度に1つのトークンの転送しかサポートしていないことです。
 
-### ミント関数の呼び出し {#minting-function}
+### ミンティング関数を呼び出す {#minting-function}
 
-通常、このミント関数は、パラメータとして2つの変数を渡す必要があります。1つ目は、新しくミントされた非代替性トークン(NFT)を受け取るアドレスを指定する`recipient`です。2つ目は、非代替性トークン(NFT)のメタデータを記述するJSONドキュメントに解決される文字列である非代替性トークン(NFT)の`tokenURI`です。
+通常、このミンティング関数では、パラメータとして2つの変数を渡す必要があります。1つ目は、新しくミントされたNFTを受け取るアドレスを指定する`recipient`、2つ目は、NFTのメタデータを記述するJSONドキュメントに解決される文字列であるNFTの`tokenURI`です。
 
-非代替性トークン(NFT)のメタデータは、非代替性トークン(NFT)に名前、説明、画像(または別のデジタル資産)、その他の属性などのプロパティを持たせ、非代替性トークン(NFT)を利用できるようにします。 非代替性トークン(NFT)のメタデータが含まれている[tokenURIの例](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)をご覧ください。
+NFTのメタデータは、NFTに命を吹き込むものであり、名前、説明、画像（または異なるデジタル資産）、その他の属性などのプロパティを持たせることができます。NFTのメタデータを含む[tokenURIの例](https://gateway.pinata.cloud/ipfs/QmSvBcb4tjdFpajGJhbFAWeK3JAxCdNQLQtr6ZdiSi42V2)を次に示します。
 
-このチュートリアルでは、React UIを使用して既存の非代替性トークン(NFT)のスマートコントラクトのミント関数を呼び出すパート2(後半)の方に焦点を当てています。
+このチュートリアルでは、パート2である、React UIを使用したNFTスマート・コントラクトのミンティング関数の呼び出しに焦点を当てます。
 
-このチュートリアルで呼び出すERC-721非代替性トークン(NFT)スマートコントラクトへのリンクは、[こちら](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE)です。 この作成方法について知りたい場合は、[非代替性トークン(NFT)の作り方](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft)という別のチュートリアルを確認することを強くお勧めします。
+SepoliaなどのサポートされているテストネットにデプロイされたERC-721 NFTスマート・コントラクトが必要になります。自分でデプロイしたい場合は、Alchemyの[Sepoliaへのスマート・コントラクトのデプロイ](https://www.alchemy.com/docs/how-to-deploy-a-smart-contract-to-the-sepolia-testnet)に関するガイドをお勧めします。
 
-非代替性トークン(NFT)作成の仕組みを理解したところで、スターターファイルをクローンしましょう。
+これでNFTの作成の仕組みが理解できたので、スターターファイルをクローンしましょう！
+## スターターファイルをクローンする {#clone-the-starter-files}
 
-## スターターファイルのクローン {#clone-the-starter-files}
+まず、[nft-minter-tutorialのGitHubリポジトリ](https://github.com/alchemyplatform/nft-minter-tutorial)にアクセスして、このプロジェクトのスターターファイルを取得します。このリポジトリをローカル環境にクローンしてください。
 
-最初に、[非代替性トークン(NFT)ミンターチュートリアル(nft-minter-tutorial)のGitHubリポジトリ](https://github.com/alchemyplatform/nft-minter-tutorial)にアクセスし、このプロジェクトのスターターファイルを取得します。 リポジトリをローカル環境にクローンします。
+このクローンした`nft-minter-tutorial`リポジトリを開くと、`minter-starter-files`と`nft-minter`の2つのフォルダが含まれていることに気づくでしょう。
 
-クローンされた`nft-minter-tutorial`リポジトリを開くと、`minter-starter-files`と`nft-minter`という2つのフォルダが含まれています。
-
-- `minter-starter-files`には、このプロジェクトのスターターファイル(基本的にはReact UI)が含まれています。 このチュートリアルでは、イーサリアムウォレットと非代替性トークン(NFT)スマートコントラクトに接続することで、このUIを利用できるようにする方法を学ぶ際に、**こちらのディレクトリで作業します**。
-- `nft-minter`には、完成したチュートリアル全体が含まれており、**困ったときに****リファレンス**として利用できます。
+- `minter-starter-files`には、このプロジェクトのスターターファイル（基本的にはReact UI）が含まれています。このチュートリアルでは、このUIをイーサリアムウォレットとNFTスマート・コントラクトに接続して機能させる方法を学ぶため、**このディレクトリで作業します**。
+- `nft-minter`には、完成したチュートリアル全体が含まれており、**行き詰まった場合の参考**として用意されています。
 
 次に、コードエディタで`minter-starter-files`のコピーを開き、`src`フォルダに移動します。
 
-これから作成するすべてのコードは、`src`フォルダに保存されます。 後ほど`Minter.js`コンポーネントを編集し、追加のjavascriptファイルを書くことで、このプロジェクトにWeb3機能を追加します。
+記述するコードはすべて`src`フォルダ内に配置されます。`Minter.js`コンポーネントを編集し、プロジェクトにWeb3機能を追加するための追加のJavaScriptファイルを記述します。
 
-## ステップ2: スターターファイルの確認 {#step-2-check-out-our-starter-files}
+## ステップ2: スターターファイルを確認する {#step-2-check-out-our-starter-files}
 
-コーディングを始める前に、スターターファイルで既に提供されるものを確認することが重要です。
+コーディングを始める前に、スターターファイルで既に提供されているものを確認することが重要です。
 
-### Reactプロジェクトの実行 {#get-your-react-project-running}
+### Reactプロジェクトを実行する {#get-your-react-project-running}
 
-まずは、ブラウザでReactプロジェクトを実行しましょう。 Reactの素晴らしいところは、一度ブラウザでプロジェクトを実行すると、保存した変更がブラウザでも同時に更新されることです。
+ブラウザでReactプロジェクトを実行することから始めましょう。Reactの素晴らしい点は、プロジェクトをブラウザで実行すると、保存した変更がブラウザ上でリアルタイムに更新されることです。
 
-プロジェクトを実行するには、次のようにターミナルで`minter-starter-files`フォルダのルートディレクトリに移動し、`npm install`を実行してプロジェクトの依存関係をインストールします。
+プロジェクトを実行するには、`minter-starter-files`フォルダのルートディレクトリに移動し、ターミナルで`npm install`を実行してプロジェクトの依存関係をインストールします。
 
 ```bash
 cd minter-starter-files
@@ -84,20 +78,20 @@ npm install
 npm start
 ```
 
-これにより、ブラウザでhttp://localhost:3000/が開き、プロジェクトのフロントエンドが表示されます。 フロントエンドは3つのフィールドで構成されており、それぞれ、非代替性トークン(NFT)資産へのリンク、非代替性トークン(NFT)の名前、非代替性トークン(NFT)の説明を入力する場所になっています。
+これにより、ブラウザで http://localhost:3000/ が開き、プロジェクトのフロントエンドが表示されるはずです。これは3つのフィールドで構成されています。NFTの資産へのリンクを入力する場所、NFTの名前を入力する場所、そして説明を提供する場所です。
 
-「Connect Wallet」や「Mint NFT」ボタンをクリックしても、動作しません。これらの機能は、これからプログラムする必要があります。 :\)
+「Connect Wallet」または「Mint NFT」ボタンをクリックしようとすると、機能しないことに気づくでしょう。これは、まだその機能をプログラミングする必要があるためです！ :\)
 
 ### Minter.jsコンポーネント {#minter-js}
 
-**注:** `minter-starter-files`フォルダにいることを確認してください。`nft-minter`フォルダではないことを確認します。
+**注:** `nft-minter`フォルダではなく、`minter-starter-files`フォルダにいることを確認してください！
 
-エディタの`src`フォルダに戻り、`Minter.js`ファイルを開きましょう。 このファイルには、これから作業を進めていく主要なReactコンポーネントが含まれています。すべての内容を理解することが非常に重要です。
+エディタで`src`フォルダに戻り、`Minter.js`ファイルを開きましょう。これは私たちが作業する主要なReactコンポーネントであるため、このファイル内のすべてを理解することが非常に重要です。
 
-このファイルの上部には、特定のイベントの後に更新される状態変数(State Variable)があります。
+このファイルの上部には、特定のイベント後に更新する状態（state）変数があります。
 
 ```javascript
-//State variables
+//状態変数
 const [walletAddress, setWallet] = useState("")
 const [status, setStatus] = useState("")
 const [name, setName] = useState("")
@@ -105,42 +99,42 @@ const [description, setDescription] = useState("")
 const [url, setURL] = useState("")
 ```
 
-Reactの状態変数や状態フック(State Hook)を聞いたことがない場合は、 [こちらの](https://reactjs.org/docs/hooks-state.html)ドキュメントをご覧ください。
+Reactの状態変数やステートフックについて聞いたことがありませんか？[こちら](https://legacy.reactjs.org/docs/hooks-state.html)のドキュメントを確認してください。
 
-それぞれの変数は以下を示します。
+各変数が表すものは次のとおりです。
 
 - `walletAddress` - ユーザーのウォレットアドレスを格納する文字列
 - `status` - UIの下部に表示するメッセージを含む文字列
-- `name` - 非代替性トークン(NFT)の名前を格納する文字列
-- `description` - 非代替性トークン(NFT)の説明を格納する文字列
-- `url` - 非代替性トークン(NFT)のデジタル資産へのリンクを含んだ文字列
+- `name` - NFTの名前を格納する文字列
+- `description` - NFTの説明を格納する文字列
+- `url` - NFTのデジタル資産へのリンクである文字列
 
-状態変数(State Variable)の後に、`useEffect`、`connectWalletPressed`、`onMintPressed`という3つの未実装の関数があります。 これらの関数は、すべて`async`になっています。これは、それぞれの関数で非同期API呼び出しを行うためです。 それぞれの関数の名前は、その機能を示しています。
+状態変数の後には、未実装の3つの関数、`useEffect`、`connectWalletPressed`、および`onMintPressed`があります。これらの関数はすべて`async`であることに気づくでしょう。これは、その中で非同期API呼び出しを行うためです！それらの名前は、その機能にちなんで名付けられています。
 
 ```javascript
 useEffect(async () => {
-  //TODO: implement
+  //TODO: 実装
 }, [])
 
 const connectWalletPressed = async () => {
-  //TODO: implement
+  //TODO: 実装
 }
 
 const onMintPressed = async () => {
-  //TODO: implement
+  //TODO: 実装
 }
 ```
 
-- [`useEffect`](https://reactjs.org/docs/hooks-effect.html) - コンポーネントがレンダリングされた後に呼び出されるReactフックです。 空の配列`[]`のpropが渡される(3行目を参照)ため、コンポーネントの_最初_のレンダリングでのみ呼び出されます。 ここでは、ウォレットリスナーと別のウォレット関数を呼び出し、ウォレットが接続されているかどうかに応じたUIの更新をします。
-- `connectWalletPressed` - この関数は、ユーザーのMataMaskウォレットを分散型アプリケーション(Dapp)に接続するために呼び出されます。
-- `onMintPressed` - この関数は、ユーザーの非代替性トークン(NFT)をミントするために呼び出されます。
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html) - これは、コンポーネントがレンダリングされた後に呼び出されるReactフックです。空の配列`[]`プロパティが渡されているため（3行目を参照）、コンポーネントの_最初_のレンダリング時にのみ呼び出されます。ここでは、ウォレットリスナーと別のウォレット関数を呼び出して、ウォレットが既に接続されているかどうかを反映するようにUIを更新します。
+- `connectWalletPressed` - この関数は、ユーザーのメタマスクウォレットを分散型アプリケーション (dapp) に接続するために呼び出されます。
+- `onMintPressed` - この関数は、ユーザーのNFTをミントするために呼び出されます。
 
-このファイルの終盤には、コンポーネントのUIがあります。 このコードを注意深く読んでいくと、状態変数の`url`、`name`、`description`に対応するテキストフィールドの入力が変更された場合、これらの変数を更新していることが分かります。
+このファイルの終わり近くに、コンポーネントのUIがあります。このコードを注意深く見ると、対応するテキストフィールドの入力が変更されたときに、`url`、`name`、および`description`の状態変数を更新していることがわかります。
 
-さらに、`walletButton`または`mintButton`というIDを持つボタンがクリックされると、それぞれ`connectWalletPressed`または`onMintPressed`が呼び出されることも分かります。
+また、IDが`mintButton`と`walletButton`のボタンがそれぞれクリックされたときに、`connectWalletPressed`と`onMintPressed`が呼び出されることもわかります。
 
 ```javascript
-//the UI of our component
+//コンポーネントのUI
 return (
   <div className="Minter">
     <button id="walletButton" onClick={connectWalletPressed}>
@@ -163,19 +157,19 @@ return (
       <h2>🖼 Link to asset: </h2>
       <input
         type="text"
-        placeholder="e.g. https://gateway.pinata.cloud/ipfs/<hash>"
+        placeholder="e.g., https://gateway.pinata.cloud/ipfs/<hash>"
         onChange={(event) => setURL(event.target.value)}
       />
       <h2>🤔 Name: </h2>
       <input
         type="text"
-        placeholder="e.g. My first NFT!"
+        placeholder="e.g., My first NFT!"
         onChange={(event) => setName(event.target.value)}
       />
       <h2>✍️ Description: </h2>
       <input
         type="text"
-        placeholder="e.g. Even cooler than cryptokitties ;)"
+        placeholder="e.g., Even cooler than cryptokitties ;)"
         onChange={(event) => setDescription(event.target.value)}
       />
     </form>
@@ -183,55 +177,53 @@ return (
       Mint NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+ 
+</div>
 )
 ```
 
-最後に、このミンター(Minter)コンポーネントがどこに加えられるかについて説明します。
+最後に、このMinterコンポーネントがどこに追加されるかについて説明します。
 
-他のすべてのコンポーネントのコンテナとして機能する、Reactのメインコンポーネントである`App.js`ファイルを表示すると、ミンター(Minter)コンポーネントが7行目に挿入されていることが分かります。
+他のすべてのコンポーネントのコンテナとして機能するReactのメインコンポーネントである`App.js`ファイルに移動すると、Minterコンポーネントが7行目に挿入されていることがわかります。
 
-**このチュートリアルでは、`Minter.js`ファイルの編集と、`src`フォルダへのファイルの追加のみを行います。**
+**このチュートリアルでは、`Minter.js file`のみを編集し、`src`フォルダにファイルを追加します。**
 
-これから取り組む内容を理解したところで、イーサリアムウォレットを設定しましょう。
+作業内容を理解したところで、イーサリアムウォレットをセットアップしましょう！
 
-## イーサリアムウォレットの設定 {#set-up-your-ethereum-wallet}
+## イーサリアムウォレットをセットアップする {#set-up-your-ethereum-wallet}
 
-ユーザーがスマートコントラクトとやり取りできるようにするには、自分のイーサリアムウォレットを分散型アプリケーション(Dapp)に接続する必要があります。
+ユーザーがスマート・コントラクトとやり取りできるようにするには、イーサリアムウォレットをdappに接続する必要があります。
 
-### MetaMaskをダウンロード {#download-metamask}
+### メタマスクをダウンロードする {#download-metamask}
 
-このチュートリアルでは、イーサリアムアカウントアドレスを管理するためにブラウザの仮想ウォレットであるMetamaskを使用します。 イーサリアムのトランザクションの仕組みの詳細については、[こちらのページ](/developers/docs/transactions/)をご覧ください。
+このチュートリアルでは、イーサリアムのアカウントアドレスを管理するために使用されるブラウザ内の仮想ウォレットであるメタマスクを使用します。イーサリアム上のトランザクションがどのように機能するかについて詳しく知りたい場合は、[こちらのページ](/developers/docs/transactions/)を確認してください。
 
-Metamaskのアカウントは[こちら](https://metamask.io/download.html)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は、(実際に支払いが発生しないように)右上の「Ropsten Test Network」に切り替えてください。
+[こちら](https://metamask.io/download)から無料でメタマスクをダウンロードし、アカウントを作成できます。アカウントを作成する際、またはすでにアカウントを持っている場合は、（実際の資金を扱わないように）Sepoliaなどのサポートされているテストネットワークに必ず切り替えてください。
+### フォーセットからイーサを追加する {#add-ether-from-faucet}
 
-### フォーセットからイーサ(ETH)を追加 {#add-ether-from-faucet}
+NFTをミントする（またはイーサリアムブロックチェーン上でトランザクションに署名する）には、テスト用のETHが必要になります。テストネットのETHを取得するには、[Alchemy Sepoliaフォーセット](https://www.alchemy.com/faucets/ethereum-sepolia)などのメンテナンスされているフォーセットを使用し、Sepoliaアカウントのアドレスを入力します。すぐにメタマスクアカウントにETHが表示されるはずです！
+### 残高を確認する {#check-your-balance}
 
-非代替性トークン(NFT)をミントする(または、イーサリアムのブロックチェーンのトランザクションに署名する)には、偽のETHが必要です。 ETHを取得するには、[Ropstenフォーセット](https://faucet.ropsten.be/)にアクセスして、Ropstenアカウントアドレスを入力し、「Send Ropsten ETH」をクリックします。 MetamaskアカウントにETHが表示されるはずです。
-
-### 残高の確認 {#check-your-balance}
-
-残高を再確認するために、[Alchemyのコンポーザーツール](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)を使用して[eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)をリクエストしてみましょう。 このリクエストをすると、ウォレット内のETHの額が返されます。 MetaMaskアカウントアドレスを入力して「Send Request」をクリックすると、次のようなレスポンスが表示されます。
+残高があることを再確認するために、[Alchemyのサンドボックスツール](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)を使用して[eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)リクエストを行いましょう。これにより、ウォレット内のETHの量が返されます。メタマスクのアカウントアドレスを入力して「Send Request」をクリックすると、次のような応答が表示されるはずです。
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**注:** この結果の単位は、ETHではなくweiです。 weiはETHの最小単位として使われています。 weiからETHへ変換すると、1 eth = 10¹⁸ weiになります。 つまり、0xde0b6b3a7640000を10進数に変換すると、1\*10¹⁸となり、1 ETHに相当します。
+**注:** この結果はETHではなくWeiで表示されています。Weiはイーサの最小単位として使用されます。WeiからETHへの変換は、1 ETH = 10¹⁸ Weiです。したがって、0xde0b6b3a7640000を10進数に変換すると1\*10¹⁸となり、これは1 ETHに相当します。
 
-ふう! これで、偽のお金を手に入れました。 <Emoji text=":money_mouth_face:" size={1} />
+ふう！テスト用の資金はちゃんと入っていますね！ <Emoji text=":money_mouth_face:" size={1} />
+## メタマスクをUIに接続する {#connect-metamask-to-your-ui}
 
-## MetaMaskをUIに接続 {#connect-metamask-to-your-UI}
+メタマスクウォレットのセットアップが完了したので、dappをそれに接続しましょう！
 
-MetaMaskウォレットが設定されたので、分散型アプリケーション(Dapp)を接続しましょう。
-
-[モデルビューコントローラ(MVC)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)パラダイムを実践したいので、別のファイルを作成し、分散型アプリケーション(Dapp)のロジック、データ、ルールを管理する関数を含めます。次に、それらの関数をフロントエンド(Minter.jsコンポーネント)に渡します。
+[MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)パラダイムに従うため、dappのロジック、データ、ルールを管理する関数を含む別のファイルを作成し、それらの関数をフロントエンド（Minter.jsコンポーネント）に渡します。
 
 ### `connectWallet`関数 {#connect-wallet-function}
 
-これを行うには、`src`ディレクトリに`utils`という新しいフォルダを作成して、そこに`interact.js`というファイルを追加します。このファイルには、ウォレットとスマートコントラクトがやり取りする関数がすべて含まれます。
+これを行うには、`src`ディレクトリに`utils`という新しいフォルダを作成し、その中に`interact.js`というファイルを追加します。このファイルには、ウォレットとスマート・コントラクトのやり取りに関するすべての関数が含まれます。
 
-`interact.js`ファイルに`connectWallet`関数を記述し、この関数を`Minter.js`コンポーネントにインポートして呼び出します。
+`interact.js`ファイルに`connectWallet`関数を記述し、それをインポートして`Minter.js`コンポーネントで呼び出します。
 
 `interact.js`ファイルに以下を追加します。
 
@@ -260,7 +252,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -272,28 +264,28 @@ export const connectWallet = async () => {
 }
 ```
 
-このコードが何をしているのか見てみましょう。
+このコードが何を行うかを分解してみましょう。
 
-まず、ブラウザで`window.ethereum`が有効になっているかどうかを関数がチェックしています。
+まず、関数はブラウザで`window.ethereum`が有効になっているかどうかを確認します。
 
-`window.ethereum`は、MetaMaskおよび他のウォレットプロバイダーによって挿入されるグローバルAPIであり、ウェブサイトがユーザーのイーサリアムアカウントを要求できるようにするものです。 承認されると、ユーザーが接続しているブロックチェーンからデータを読み取ったり、メッセージやトランザクションへの署名をユーザーに提案したりできるようになります。 詳細については、[MetaMaskのドキュメント](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents)を参照してください。
+`window.ethereum`は、メタマスクやその他のウォレットプロバイダーによって挿入されるグローバルAPIであり、ウェブサイトがユーザーのイーサリアムアカウントを要求できるようにします。承認されると、ユーザーが接続しているブロックチェーンからデータを読み取り、ユーザーにメッセージやトランザクションへの署名を提案できます。詳細については、[メタマスクのドキュメント](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents)を確認してください！
 
-`window.ethereum`が_存在しない_場合は、MeTaMaskがインストールされていないことを意味します。 その結果、空の文字列に設定された、返される`address`と、ユーザーがMetaMaskをインストールする必要があることを伝える`status`JSXオブジェクトが入ったJSONオブジェクトが返されます。
+`window.ethereum`が存在_しない_場合、それはメタマスクがインストールされていないことを意味します。これによりJSONオブジェクトが返され、返される`address`は空の文字列になり、`status` JSXオブジェクトはユーザーがメタマスクをインストールする必要があることを伝えます。
 
-**これから記述するほとんどの関数は、状態変数(State Variable)とUIの更新に使用できるJSONオブジェクトを返します。**
+**私たちが記述する関数のほとんどは、状態変数とUIを更新するために使用できるJSONオブジェクトを返します。**
 
-`window.ethereum`が_存在_する場合、興味深いことが起こります。
+さて、`window.ethereum`が存在_する_場合、ここからが面白くなります。
 
-try/catchループを使用して、`[window.ethereum.request({ method: "eth_requestAccounts" });](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts)`を呼び出すことで、MetaMaskへの接続を試みます。 この関数を呼び出すと、ブラウザでMetaMaskが開き、ユーザーはウォレットを分散型アプリケーション(Dapp)に接続するように求められます。
+try/catchループを使用して、[`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts)を呼び出すことでメタマスクへの接続を試みます。この関数を呼び出すと、ブラウザでメタマスクが開き、ユーザーはウォレットをdappに接続するように求められます。
 
-- ユーザーが接続を選んだ場合、`method: "eth_requestAccounts"`は、分散型アプリケーション(Dapp)に接続されているすべてのユーザーのアカウントアドレスを含む配列を返します。 `connectWallet`関数は、配列内の_最初の_`address`と\(9 行目参照\)、ユーザーにスマートコントラクトにメッセージを書き込むように促す`status`メッセージが入ったJSONオブジェクトを返します。
-- ユーザーが接続を拒否した場合、JSONオブジェクトには、返される`address`に入る空の文字列と、ユーザーが接続を拒否したことを示す`status`メッセージが入ることになります。
+- ユーザーが接続を選択した場合、`method: "eth_requestAccounts"`はdappに接続されているユーザーのすべてのアカウントアドレスを含む配列を返します。全体として、`connectWallet`関数は、この配列の_最初_の`address`（9行目を参照）と、ユーザーにスマート・コントラクトへのメッセージの書き込みを促す`status`メッセージを含むJSONオブジェクトを返します。
+- ユーザーが接続を拒否した場合、JSONオブジェクトには返される`address`の空の文字列と、ユーザーが接続を拒否したことを反映する`status`メッセージが含まれます。
 
-### Minter.js UIコンポーネントにconnectWallet関数を追加 {#add-connect-wallet}
+### Minter.js UIコンポーネントにconnectWallet関数を追加する {#add-connect-wallet}
 
-`connectWallet`関数を記述したので、 `Minter.js`コンポーネントに接続しましょう。
+この`connectWallet`関数を記述したので、それを`Minter.js.`コンポーネントに接続しましょう。
 
-まず、`Minter.js`ファイルの上部に`import { connectWallet } from "./utils/interact.js";`を追加して、`Minter.js`ファイルに関数をインポートする必要があります。 `Minter.js`の最初の11行は、次のようになります。
+まず、`Minter.js`ファイルの上部に`import { connectWallet } from "./utils/interact.js";`を追加して、関数を`Minter.js`ファイルにインポートする必要があります。`Minter.js`の最初の11行は次のようになります。
 
 ```javascript
 import { useEffect, useState } from "react";
@@ -301,7 +293,7 @@ import { connectWallet } from "./utils/interact.js";
 
 const Minter = (props) => {
 
-  //State variables
+  //状態変数
   const [walletAddress, setWallet] = useState("");
   const [status, setStatus] = useState("");
   const [name, setName] = useState("");
@@ -309,7 +301,7 @@ const Minter = (props) => {
   const [url, setURL] = useState("");
 ```
 
-次に、`connectWalletPressed`関数の中で、インポートされた`connectWallet`関数を、以下のように呼び出します。
+次に、`connectWalletPressed`関数内で、インポートした`connectWallet`関数を次のように呼び出します。
 
 ```javascript
 const connectWalletPressed = async () => {
@@ -319,25 +311,25 @@ const connectWalletPressed = async () => {
 }
 ```
 
-`interact.js`ファイルによって、機能の大部分が`Minter.js`コンポーネントからどのように抽象化されているかに注目してください。 これは、モデルビューコントローラ(M-V-C)パラダイムに準拠しているためです。
+機能のほとんどが`interact.js`ファイルから`Minter.js`コンポーネントから抽象化されていることに注目してください。これはM-V-Cパラダイムに準拠するためです！
 
-`connectWalletPressed`では、単にインポートされた`connectWallet`関数のawait呼び出しを行っています。さらに、そのレスポンスを使用し、`status`と`walletAddress`変数を状態フックを介して更新しています。
+`connectWalletPressed`では、インポートした`connectWallet`関数に対して単にawait呼び出しを行い、その応答を使用して、ステートフックを介して`status`および`walletAddress`変数を更新します。
 
-それでは、 `Minter.js`と `interact.js`の両方のファイルを保存して、これまでのUIをテストしてみましょう。
+それでは、`Minter.js`と`interact.js`の両方のファイルを保存し、これまでのUIをテストしてみましょう。
 
-localhost:3000でブラウザを開き、ページ右上にある「Connect Wallet」ボタンを押します。
+ブラウザで localhost:3000 を開き、ページの右上にある「Connect Wallet」ボタンを押します。
 
-MetaMaskがインストールされている場合は、ウォレットを分散型アプリケーション(Dapp)に接続するように求められます。 接続リクエストを承認します。
+メタマスクがインストールされている場合は、ウォレットをdappに接続するように求められるはずです。接続の招待を承認します。
 
-ウォレットボタンに、接続した自分のアドレスが表示されているはずです。
+ウォレットボタンにアドレスが接続されていることが反映されるはずです。
 
-次に、ページを更新してみてください。変ですね。 ウォレットボタンによって、すでに接続しているにもかかわらずMetaMaskに接続するよう求められます。
+次に、ページを更新してみてください...これは奇妙です。ウォレットボタンは、既に接続されているにもかかわらず、メタマスクを接続するように求めています...
 
-でも心配しないでください。 `getCurrentWalletConnected`という関数を実装することで、簡単にこれを修正できます。この関数は、アドレスが分散型アプリケーション(Dapp)にすでに接続されているかどうかを確認し、それに応じてUIを更新します。
+でも心配しないでください！`getCurrentWalletConnected`という関数を実装することで、これを簡単に修正できます。この関数は、アドレスが既にdappに接続されているかどうかを確認し、それに応じてUIを更新します！
 
 ### getCurrentWalletConnected関数 {#get-current-wallet}
 
-`interact.js`ファイルに、以下の`getCurrentWalletConnected`関数を追加します。
+`interact.js`ファイルに、次の`getCurrentWalletConnected`関数を追加します。
 
 ```javascript
 export const getCurrentWalletConnected = async () => {
@@ -370,7 +362,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -382,23 +374,23 @@ export const getCurrentWalletConnected = async () => {
 }
 ```
 
-このコードは、_非常に_前述の`connectWallet`関数に似ています。
+このコードは、先ほど記述した`connectWallet`関数に_非常に_似ています。
 
-主な違いとしては、ユーザーがウォレットに接続するためにMetaMaskを開く`eth_requestAccounts`メソッドを呼び出す代わりに、 ここでは`eth_accounts`メソッドを呼び出しています。これは、現在、分散型アプリケーション(Dapp)に接続されているMetaMaskのアドレスを含む配列を単に返すだけです。
+主な違いは、ユーザーがウォレットを接続するためにメタマスクを開くメソッド`eth_requestAccounts`を呼び出す代わりに、ここでは現在dappに接続されているメタマスクアドレスを含む配列を単に返すメソッド`eth_accounts`を呼び出すことです。
 
-この関数を動作させるため、`Minter.js`コンポーネントの`useEffect`関数で呼び出しましょう。
+この関数の動作を確認するために、`Minter.js`コンポーネントの`useEffect`関数で呼び出してみましょう。
 
-`connectWallet`で行ったのと同様に、この関数を`interact.js`ファイルから `Minter.js`ファイルへ次のようにインポートする必要があります。
+`connectWallet`で行ったように、この関数を`interact.js`ファイルから`Minter.js`ファイルに次のようにインポートする必要があります。
 
 ```javascript
 import { useEffect, useState } from "react"
 import {
   connectWallet,
-  getCurrentWalletConnected, //import here
+  getCurrentWalletConnected, //ここにインポート
 } from "./utils/interact.js"
 ```
 
-ここでは、`useEffect`関数で次のように呼び出します。
+これで、`useEffect`関数で単に呼び出すだけです。
 
 ```javascript
 useEffect(async () => {
@@ -408,15 +400,15 @@ useEffect(async () => {
 }, [])
 ```
 
-`walletAddress`状態変数と`status`状態変数を更新するのに、呼び出した`getCurrentWalletConnected`のレスポンスを使用していることに注目してください。
+`getCurrentWalletConnected`への呼び出しの応答を使用して、`walletAddress`および`status`状態変数を更新していることに注目してください。
 
-このコードを追加したら、ブラウザウィンドウを更新してみてください。 リフレッシュ後も、ボタンには接続されていることが示されており、接続されたウォレットのアドレスのプレビューが表示されているはずです。
+このコードを追加したら、ブラウザウィンドウを更新してみてください。ボタンには接続されていることが表示され、更新後でも接続されているウォレットのアドレスのプレビューが表示されるはずです！
 
-### addWalletListenerの実装 {#implement-add-wallet-listener}
+### addWalletListenerを実装する {#implement-add-wallet-listener}
 
-分散型アプリケーション(Dapp)ウォレットの設定の最終ステップは、ウォレットリスナーを実装することです。これにより、ユーザーが接続を切断したり、アカウントを切り替えたりした場合など、ウォレットの状態が変更されたときにUIが更新されます。
+dappウォレットのセットアップの最後のステップは、ユーザーがアカウントを切断したり切り替えたりしたときなど、ウォレットの状態が変化したときにUIが更新されるようにウォレットリスナーを実装することです。
 
-`Minter.js`ファイルで、次のような`addWalletListener`関数を追加してください。
+`Minter.js`ファイルに、次のような関数`addWalletListener`を追加します。
 
 ```javascript
 function addWalletListener() {
@@ -434,7 +426,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -443,13 +435,13 @@ function addWalletListener() {
 }
 ```
 
-ここで何が起きているか、簡単に見ていきましょう。
+ここで何が起こっているかを簡単に分解してみましょう。
 
-- まず、ブラウザで`window.ethereum`が有効になっているか\(すなわち MetaMaskがインストールされているか\)を関数がチェックしています。
-  - 有効になっていない場合、ユーザーにMetaMaskのインストールを求めるJSX文字列を`status`状態変数に設定します。
-  - 有効になっている場合、MetaMaskウォレットの状態変更をリッスンしている3行目の`window.ethereum.on("accountsChanged")`リスナーを設定します。この状態変更には、ユーザーが追加のアカウントを分散型アプリケーション(Dapp)に接続した場合、アカウントを切り替えた場合、アカウントを切断した場合が含まれます。 少なくとも1つのアカウントが接続されていれば、`accounts`配列の最初のアカウントがリスナーから返されたときに、`walletAddress`状態変数が更新されます。 それ以外の場合は、`walletAddress`に空の文字列が設定されます。
+- まず、関数は`window.ethereum`が有効になっているか（つまり、メタマスクがインストールされているか）を確認します。
+  - 有効になっていない場合は、`status`状態変数を、ユーザーにメタマスクのインストールを促すJSX文字列に設定するだけです。
+  - 有効になっている場合は、3行目にリスナー`window.ethereum.on("accountsChanged")`を設定します。これは、ユーザーが追加のアカウントをdappに接続したとき、アカウントを切り替えたとき、またはアカウントを切断したときなど、メタマスクウォレットの状態の変化をリッスンします。少なくとも1つのアカウントが接続されている場合、`walletAddress`状態変数は、リスナーによって返される`accounts`配列の最初のアカウントとして更新されます。それ以外の場合、`walletAddress`は空の文字列として設定されます。
 
-最後に、`useEffect`関数で次のように呼び出す必要があります。
+最後に、これを`useEffect`関数で呼び出す必要があります。
 
 ```javascript
 useEffect(async () => {
@@ -461,66 +453,66 @@ useEffect(async () => {
 }, [])
 ```
 
-これで完了です。 ウォレットのすべての機能をプログラミングしました。 ウォレットが設定されたので、非代替性トークン(NFT)をミントする方法を理解しましょう!
+これで完成です！ウォレット機能のすべてのプログラミングが完了しました！ウォレットのセットアップが完了したので、NFTをミントする方法を考えましょう！
 
-## 非代替性トークン(NFT)メタデータ入門 {#nft-metadata-101}
+## NFTメタデータの基礎 {#nft-metadata-101}
 
-このチュートリアルの最初の方で説明した非代替性トークン(NFT)のメタデータを思い出してください。非代替性トークン(NFT)メタデータは、非代替性トークン(NFT)にデジタル資産、名前、説明、その他の属性などのプロパティーを持たせ、非代替性トークン(NFT)を利用できるようにします。
+このチュートリアルのステップ0で話したNFTメタデータを覚えていますか。これはNFTに命を吹き込み、デジタル資産、名前、説明、その他の属性などのプロパティを持たせることを可能にします。
 
-JSONオブジェクトとしてメタデータを設定し、保存する必要があります。これで、スマートコントラクトの`mintNFT`関数呼び出すときに`tokenURI`パラメータとして渡すことができます。
+このメタデータをJSONオブジェクトとして構成して保存し、スマート・コントラクトの`mintNFT`関数を呼び出すときに`tokenURI`パラメータとして渡せるようにする必要があります。
 
-「Link to Asset」、「Name」、「Description」フィールドのテキストは、非代替性トークン(NFT)のメタデータで別々のプロパティになります。 メタデータをJSONオブジェクトとしてフォーマットしますが、このJSONオブジェクトの格納には、以下のような複数のオプションがあります。
+「Link to Asset」、「Name」、「Description」フィールドのテキストは、NFTのメタデータのさまざまなプロパティを構成します。このメタデータをJSONオブジェクトとしてフォーマットしますが、このJSONオブジェクトを保存する場所にはいくつかのオプションがあります。
 
-- イーサリアムブロックチェーンに格納することができますが、これは非常に高価です。
-- AWSやFirebaseなどの中央集権型サーバーに保存できます。 しかし、これは分散化の信念に反するものです。
-- 惑星間ファイルシステム(IPFS)という、分散型ファイルシステムでデータを保存、共有するための、分散型プロトコルおよびピアツーピア・ネットワークを使用できます。 このプロトコルは、分散化されており無料のため、最良のオプションです。
+- イーサリアムブロックチェーン上に保存することもできますが、そうすると非常に費用がかかります。
+- AWSやFirebaseのような中央集権型サーバーに保存することもできます。しかし、それでは分散化の精神に反してしまいます。
+- 分散型ファイルシステムでデータを保存および共有するための分散型プロトコルおよびピア・ツー・ピアネットワークであるIPFSを使用できます。このプロトコルは分散型であり無料であるため、これが最良のオプションです！
 
-惑星間ファイルシステム(IPFS)にメタデータを保存するには、[Pinata](https://pinata.cloud/)という便利な惑星間ファイルシステム(IPFS) APIとツールキットを使用します。 次のステップでは、この方法を具体的に説明します。
+メタデータをIPFSに保存するには、便利なIPFS APIおよびツールキットである[Pinata](https://pinata.cloud/)を使用します。次のステップで、その正確な方法を説明します！
 
-## Pinataを使用してメタデータをIPFSに固定化 {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Pinataを使用してメタデータをIPFSにピン留めする {#use-pinata-to-pin-your-metadata-to-ipfs}
 
-[Pinata](https://pinata.cloud/)アカウントをお持ちでない場合は、[こちら](https://pinata.cloud/signup)から無料のアカウントにサインアップし、メールアドレスとアカウントの認証手順を完了してください。
+[Pinata](https://pinata.cloud/)アカウントをお持ちでない場合は、[こちら](https://app.pinata.cloud/auth/signup)から無料アカウントにサインアップし、メールアドレスとアカウントを確認する手順を完了してください。
 
-### Pinata APIキーの作成 {#create-pinata-api-key}
+### Pinata APIキーを作成する {#create-pinata-api-key}
 
-[https://pinata.cloud/keys](https://pinata.cloud/keys)ページに移動して、上部にある「New Key」ボタンを選択し、Adminウィジェットを有効(Enabled)に設定してからキーに名前を付けます。
+[https://pinata.cloud/keys](https://pinata.cloud/keys)ページに移動し、上部の「New Key」ボタンを選択して、Adminウィジェットを有効に設定し、キーに名前を付けます。
 
-API情報を含むポップアップが表示されます。 この情報は、必ず安全な場所に保存してください。
+その後、API情報を含むポップアップが表示されます。これを安全な場所に保管してください。
 
-キーの設定が完了したので、プロジェクトに追加して使用できるようにしましょう。
+キーのセットアップが完了したので、プロジェクトに追加して使用できるようにしましょう。
 
-### .envファイルの作成 {#create-a-env}
+### .envファイルを作成する {#create-a-env}
 
-環境ファイルにPinataキーとシークレットを安全に保存できます。 [dotenvパッケージ](https://www.npmjs.com/package/dotenv)をプロジェクトディレクトリにインストールしましょう。
+Pinataキーとシークレットは環境ファイルに安全に保存できます。プロジェクトディレクトリに[dotenvパッケージ](https://www.npmjs.com/package/dotenv)をインストールしましょう。
 
-ターミナルで\(ローカルホストを実行しているタブとは別の\)新しいタブを開き、`minter-starter-files`フォルダにいることを確認してください。次に、ターミナルで以下のコマンドを実行します。
+ターミナルで新しいタブを開き（ローカルホストを実行しているものとは別に）、`minter-starter-files`フォルダにいることを確認してから、ターミナルで次のコマンドを実行します。
 
 ```text
 npm install dotenv --save
 ```
 
-次に、コマンドラインで次のように入力し、`.env`ファイルを`minter-starter-files`のルートディレクトリに作成します。
+次に、コマンドラインに次のように入力して、`minter-starter-files`のルートディレクトリに`.env`ファイルを作成します。
 
 ```javascript
 vim.env
 ```
 
-vim\(テキストエディタ\)で `.env`ファイルが開きます。 保存するには、キーボードで「esc」+「:」+「q」をこの順序で押します。
+これにより、vim（テキストエディタ）で`.env`ファイルが開きます。保存するには、キーボードで「esc」+「:」+「q」の順に押します。
 
-次に、VSCodeで`.env`ファイルに移動し、次のようにしてPinata APIキーとAPIシークレットを追加します。
+次に、VSCodeで`.env`ファイルに移動し、次のようにPinata APIキーとAPIシークレットを追加します。
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-api-key>
 REACT_APP_PINATA_SECRET = <pinata-api-secret>
 ```
 
-ファイルを保存します。これで、JSONメタデータを惑星間ファイルシステム(IPFS)にアップロードする関数を書き始める準備が整いました。
+ファイルを保存すると、JSONメタデータをIPFSにアップロードする関数の記述を開始する準備が整います！
 
-### pinJSONToIPFSの実装 {#pin-json-to-ipfs}
+### pinJSONToIPFSを実装する {#pin-json-to-ipfs}
 
-幸いにもPinataでは、[惑星間ファイルシステム(IPFS)へのJSONデータのアップロードに特化したAPI](https://pinata.cloud/documentation#PinJSONToIPFS)と、少しの変更を加えるだけで使用できるaxiosのサンプルを備えた便利なJavaScriptを使用できます。
+幸いなことに、Pinataには[JSONデータをIPFSにアップロードするための専用API](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json)と、わずかな変更で使用できる便利なaxiosを使用したJavaScriptの例があります。
 
-`utils`フォルダーに`pinata.js`という別のファイルを作成し、.envファイルからPinataのシークレットとキーをインポートしましょう。
+`utils`フォルダに、`pinata.js`という別のファイルを作成し、次のように.envファイルからPinataシークレットとキーをインポートしましょう。
 
 ```javascript
 require("dotenv").config()
@@ -528,7 +520,7 @@ const key = process.env.REACT_APP_PINATA_KEY
 const secret = process.env.REACT_APP_PINATA_SECRET
 ```
 
-次に、`pinata.js`ファイルに以下の追加コードを貼り付けます。 コードの意味はこれから説明しますので、心配する必要はありません。
+次に、以下の追加コードを`pinata.js`ファイルに貼り付けます。心配しないでください、すべてが何を意味するかを分解して説明します！
 
 ```javascript
 require("dotenv").config()
@@ -539,7 +531,7 @@ const axios = require("axios")
 
 export const pinJSONToIPFS = async (JSONBody) => {
   const url = `https://api.pinata.cloud/pinning/pinJSONToIPFS`
-  //making axios POST request to Pinata ⬇️
+  //Pinataへのaxios POSTリクエストを作成 ⬇️
   return axios
     .post(url, JSONBody, {
       headers: {
@@ -564,63 +556,62 @@ export const pinJSONToIPFS = async (JSONBody) => {
 }
 ```
 
-では、このコードは何をしているのでしょうか?
+では、このコードは正確に何を行うのでしょうか？
 
-最初に、ブラウザとnode.jsのためのPromiseベースのHTTPクライアントである[axios](https://www.npmjs.com/package/axios)をインポートしています。axiosは、Pinataへのリクエストで使用します。
+まず、ブラウザおよびNode.js用のプロミスベースのHTTPクライアントである[axios](https://www.npmjs.com/package/axios)をインポートします。これを使用してPinataにリクエストを行います。
 
-その下に、`pinJSONToIPFS`非同期関数があります。この関数は、`pinJSONToIPFS` APIへのPOSTリクエストを行うために、`JSONBody`を入力として取り、PinataのAPIキーとシークレットをヘッダーに入れます。
+次に、非同期関数`pinJSONToIPFS`があります。これは、入力として`JSONBody`を受け取り、ヘッダーにPinata APIキーとシークレットを受け取り、すべて`pinJSONToIPFS` APIへのPOSTリクエストを行うためのものです。
 
-- POSTリクエストが成功した場合、この関数は、trueに設定された`success`ブール値と、メタデータがピン留めされた`pinataUrl`が入ったJSONオブジェクトを返します。 ここで返された`pinataUrl`は、スマートコントラクトのmint関数の`tokenURI`の入力として使用されます。
-- POSTリクエストが失敗した場合、この関数は、falseに設定された`success`ブール値と、エラーを伝える`message`文字列が入ったJSONオブジェクトを返します。
+- このPOSTリクエストが成功した場合、関数は`success`ブール値をtrueとし、メタデータがピン留めされた`pinataUrl`を含むJSONオブジェクトを返します。返されたこの`pinataUrl`を、スマート・コントラクトのミント関数への`tokenURI`入力として使用します。
+- このPOSTリクエストが失敗した場合、関数は`success`ブール値をfalseとし、エラーを伝える`message`文字列を含むJSONオブジェクトを返します。
 
-`connectWallet`関数の戻り値の型と同様に、JSONオブジェクトが返されるので、そのパラメータを状態変数とUIの更新に使用できます。
+`connectWallet`関数の戻り値の型と同様に、JSONオブジェクトを返しているため、そのパラメータを使用して状態変数とUIを更新できます。
 
-## スマートコントラクトのロード {#load-your-smart-contract}
+## スマート・コントラクトをロードする {#load-your-smart-contract}
 
-これで、`pinJSONToIPFS`関数を介して非代替性トークン(NFT)メタデータを惑星間ファイルシステム(IPFS)にアップロードする手段を手に入れました。次は、`mintNFT`関数を呼び出せるように、スマートコントラクトのインスタンスをロードする手段が必要です。
+`pinJSONToIPFS`関数を介してNFTメタデータをIPFSにアップロードする方法ができたので、スマート・コントラクトの`mintNFT`関数を呼び出せるように、スマート・コントラクトのインスタンスをロードする方法が必要になります。
 
-前述したように、このチュートリアルでは、[こちらの既存の非代替性トークン(NFT)スマートコントラクト](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE)を使用します。ただし、この作成方法を学びたい、もしくは自分で作成したい場合は、[「非代替性トークン(NFT)の作り方」](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft)という別のチュートリアルを確認することを強くお勧めします。
+前述のように、このチュートリアルでは[この既存のNFTスマート・コントラクト](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE)を使用します。ただし、その作成方法を学びたい場合、または自分で作成したい場合は、別のチュートリアルである[「NFTの作成方法」](https://www.alchemy.com/docs/how-to-create-an-nft)を確認することを強くお勧めします。
 
-### コントラクトアプリケーションバイナリインターフェース(ABI) {#contract-abi}
+### コントラクトABI {#contract-abi}
 
-ファイルを詳しく調べてみると、`src`ディレクトリに`contract-abi.json`ファイルがあることが分かります。 アプリケーションバイナリインターフェース(ABI)は、コントラクトが呼び出す関数を指定し、関数が確実に意図しているフォーマットでデータを返すようにするために必要です。
+ファイルを注意深く調べた場合、`src`ディレクトリに`contract-abi.json`ファイルがあることに気づいたでしょう。ABIは、コントラクトがどの関数を呼び出すかを指定し、関数が期待する形式でデータを返すことを保証するために必要です。
 
-さらに、イーサリアムブロックチェーンに接続してスマートコントラクトをロードするための、Alchemy APIキーとAlchemy Web3 APIも必要になります。
+また、イーサリアムブロックチェーンに接続してスマート・コントラクトをロードするために、Alchemy APIキーとAlchemy Web3 APIも必要になります。
 
-### Alchemy APIキーの作成 {#create-alchemy-api}
+### Alchemy APIキーを作成する {#create-alchemy-api}
 
-Alchemyのアカウントをお持ちでない場合は、[こちら](https://alchemy.com/?a=eth-org-nft-minter)から無料で登録できます。
+まだAlchemyアカウントをお持ちでない場合は、[こちらから無料でサインアップしてください。](https://alchemy.com/?a=eth-org-nft-minter)
 
-Alchemyのアカウントを作成した後、アプリを作成することでAPIキーを生成することができます。 これにより、Ropstenテストネットワークへのリクエストが可能になります。
+Alchemyアカウントを作成したら、アプリを作成してAPIキーを生成できます。これにより、Sepoliaテストネットワークにリクエストを送信できるようになります。
 
-ナビゲーションバーの「Apps」にマウスを合わせて、「Create App」をクリックし、Alchemyダッシュボードの「Create App」ページに移動してください。
+Alchemyダッシュボードのナビゲーションバーで「Apps」にカーソルを合わせ、「Create App」をクリックして、「Create App」ページに移動します。
 
-アプリに名前を付け(私たちは「My First NFT!」にしました)、簡単な説明を記述し、環境に「Staging」を選択(アプリのブックキーピングに使用)し、ネットワークに「Ropsten」を選択します。
+アプリに名前を付け（ここでは「My First NFT!」としました）、簡単な説明を入力し、アプリの管理に使用するEnvironmentとして「Staging」を選択し、ネットワークに「Sepolia」を選択します。
 
-「Create app」をクリックします。 アプリが下の表に表示されます。
+「Create app」をクリックすれば完了です！アプリが下の表に表示されるはずです。
 
-HTTP Alchemy API URLを作成したので、クリップボードにコピーします。
+素晴らしい！これでHTTP Alchemy API URLが作成されたので、クリップボードにコピーして...
 
-それを`.env`ファイルに追加してみましょう。 これで.envファイル全体は、次のようになります。
+...`.env`ファイルに追加しましょう。最終的に、.envファイルは次のようになります。
 
 ```text
 REACT_APP_PINATA_KEY = <pinata-key>
 REACT_APP_PINATA_SECRET = <pinata-secret>
-REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
+REACT_APP_ALCHEMY_KEY = https://eth-sepolia.g.alchemy.com/v2/<alchemy-key>
 ```
 
-コントラクトアプリケーションバイナリインターフェース(ABI)とAlchemy APIキーが用意できたので、[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)を使用してスマートコントラクトをロードする準備ができました。
+コントラクトABIとAlchemy APIキーが揃ったので、[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)を使用してスマート・コントラクトをロードする準備が整いました。
+### Alchemy Web3エンドポイントとコントラクトをセットアップする {#setup-alchemy-endpoint}
 
-### Alchemy Web3エンドポイントとコントラクトの設定 {#setup-alchemy-endpoint}
-
-まず、[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)がインストールされていない場合は、ターミナルで次のようにホームディレクトリである`nft-minter-tutorial`に移動してインストールする必要があります。
+まず、まだインストールしていない場合は、ターミナルでホームディレクトリ`nft-minter-tutorial`に移動して、[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)をインストールする必要があります。
 
 ```text
 cd ..
 npm install @alch/alchemy-web3
 ```
 
-次に、`interact.js`ファイルに戻りましょう。 .envファイルからAlchemyキーがインポートされ、Alchemy Web3エンドポイントが設定されるように、ファイルの上部に次のコードを追加します。
+次に、`interact.js`ファイルに戻りましょう。ファイルの上部に次のコードを追加して、.envファイルからAlchemyキーをインポートし、Alchemy Web3エンドポイントをセットアップします。
 
 ```javascript
 require("dotenv").config()
@@ -629,9 +620,9 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)は、[Web3.js](https://docs.web3js.org/)のラッパーであり、強化されたAPIメソッドや重要なメリットを提供し、Web3デベロッパーの負担を軽減します。 最小限の設定で使えるように設計されているので、アプリですぐに使用可能です。
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)は[Web3.js](https://docs.web3js.org/)のラッパーであり、強化されたAPIメソッドやその他の重要な利点を提供して、Web3開発者としての生活を楽にします。最小限の構成で済むように設計されているため、アプリですぐに使用を開始できます！
 
-次に、コントラクトアプリケーションバイナリインターフェース(ABI)とコントラクトアドレスをファイルに追加しましょう。
+次に、コントラクトABIとコントラクトアドレスをファイルに追加しましょう。
 
 ```javascript
 require("dotenv").config()
@@ -643,15 +634,15 @@ const contractABI = require("../contract-abi.json")
 const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
 ```
 
-これで両方を追加できたので、mint関数のコーディングを始める準備ができました。
+これら両方が揃ったら、ミント関数のコーディングを開始する準備が整います！
 
-## mintNFT関数の実装 {#implement-the-mintnft-function}
+## mintNFT関数を実装する {#implement-the-mintnft-function}
 
-`interact.js`ファイル内に、`mintNFT`関数を定義しましょう。この関数は、名前が示すとおりに非代替性トークン(NFT)をミントします。
+`interact.js`ファイル内で、その名の通りNFTをミントする関数`mintNFT`を定義しましょう。
 
-多数の非同期呼び出しを\(メタデータをIPFSにピン留めするためにPinataに対して、スマートコントラクトをロードするためにAlchemy Web3に対して、トランザクションに署名するためにMetaMaskに対して\)行うため、この関数もまた非同期になります。
+多数の非同期呼び出し（メタデータをIPFSにピン留めするためのPinata、スマート・コントラクトをロードするためのAlchemy Web3、およびトランザクションに署名するためのメタマスク）を行うため、関数も非同期になります。
 
-この関数への3つの入力は、デジタル資産の`url`、`name`、`description`になります。 `connectWallet`関数の下に、次の関数シグネチャを追加してください。
+関数への3つの入力は、デジタル資産の`url`、`name`、および`description`になります。`connectWallet`関数の下に次の関数シグネチャを追加します。
 
 ```javascript
 export const mintNFT = async (url, name, description) => {}
@@ -659,11 +650,11 @@ export const mintNFT = async (url, name, description) => {}
 
 ### 入力エラー処理 {#input-error-handling}
 
-当然のこととして、関数の開始時に何らかの入力エラー処理を行うことは理にかなっています。入力パラメータが正しくない場合は、関数を終了するようにします。 関数の内部に次のコードを追加しましょう。
+当然のことながら、関数の開始時に何らかの入力エラー処理を行うことは理にかなっているため、入力パラメータが正しくない場合はこの関数を終了します。関数内に次のコードを追加しましょう。
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //error handling
+  //エラー処理
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
@@ -673,25 +664,25 @@ export const mintNFT = async (url, name, description) => {
 }
 ```
 
-基本的に、入力パラメーターのいずれかが空の文字列である場合、falseに設定された`success`ブール値と、UIのすべてのフィールドに入力する必要があることを伝える`status`文字列が入ったJSONオブジェクトを返します。
+基本的に、入力パラメータのいずれかが空の文字列である場合、`success`ブール値がfalseであり、`status`文字列がUIのすべてのフィールドに入力する必要があることを伝えるJSONオブジェクトを返します。
 
-### IPFSにメタデータをアップロード {#upload-metadata-to-ipfs}
+### メタデータをIPFSにアップロードする {#upload-metadata-to-ipfs}
 
-メタデータが適切にフォーマットされていることを確認したら、次のステップは、それをJSONオブジェクトにラップし、作成した`pinJSONToIPFS`を介して惑星間ファイルシステム(IPFS)にアップロードすることです。
+メタデータが適切にフォーマットされていることがわかったら、次のステップはそれをJSONオブジェクトにラップし、記述した`pinJSONToIPFS`を介してIPFSにアップロードすることです！
 
-そのためにはまず、`pinJSONToIPFS`関数を`interact.js`ファイルにインポートする必要があります。 `interact.js`の最上部に、次の行を追加してください。
+これを行うには、まず`pinJSONToIPFS`関数を`interact.js`ファイルにインポートする必要があります。`interact.js`の一番上に次を追加しましょう。
 
 ```javascript
 import { pinJSONToIPFS } from "./pinata.js"
 ```
 
-`pinJSONToIPFS`が、JSON本体を取ることを思い出してください。 そのため、呼び出す前に`url`、`name`、`description`パラメータをJSONオブジェクトにフォーマットする必要があります。
+`pinJSONToIPFS`はJSONボディを受け取ることを思い出してください。したがって、それを呼び出す前に、`url`、`name`、および`description`パラメータをJSONオブジェクトにフォーマットする必要があります。
 
-次のようにコードを更新して、`metadata`というJSONオブジェクトを作成し、この`metadata`パラメータを使用して`pinJSONToIPFS`を呼び出します。
+コードを更新して`metadata`というJSONオブジェクトを作成し、この`metadata`パラメータを使用して`pinJSONToIPFS`を呼び出しましょう。
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //error handling
+  //エラー処理
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
@@ -699,13 +690,13 @@ export const mintNFT = async (url, name, description) => {
     }
   }
 
-  //make metadata
+  //メタデータを作成
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //make pinata call
+  //Pinataを呼び出す
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
@@ -717,29 +708,29 @@ export const mintNFT = async (url, name, description) => {
 }
 ```
 
-`pinJSONToIPFS(metadata)`の呼び出しのレスポンスを、`pinataResponse`オブジェクトに格納していることに注目してください。 次に、このオブジェクトにエラーがないか解析します。
+`pinJSONToIPFS(metadata)`への呼び出しの応答を`pinataResponse`オブジェクトに保存していることに注目してください。次に、このオブジェクトを解析してエラーがないか確認します。
 
-エラーがある場合、falseに設定された`success`ブール値と、呼び出しが失敗したことを伝える`status`文字列が入ったJSONオブジェクトを返します。 それ以外の場合は、`pinataURL`を`pinataResponse`から抽出し、それを`tokenURI`変数として格納します。
+エラーがある場合は、`success`ブール値がfalseであり、`status`文字列が呼び出しに失敗したことを伝えるJSONオブジェクトを返します。それ以外の場合は、`pinataResponse`から`pinataURL`を抽出し、それを`tokenURI`変数として保存します。
 
-では、ファイルの先頭で初期化したAlchemy Web3 APIを使用して、スマートコントラクトをロードしてみましょう。 `mintNFT`関数の下部に次のコードの行を追加して、`window.contract`グローバル変数にコントラクトを設定します。
+これで、ファイルの上部で初期化したAlchemy Web3 APIを使用してスマート・コントラクトをロードする時間です。`mintNFT`関数の下部に次のコード行を追加して、コントラクトを`window.contract`グローバル変数に設定します。
 
 ```javascript
 window.contract = await new web3.eth.Contract(contractABI, contractAddress)
 ```
 
-`mintNFT`関数に最後に追加するのは、イーサリアムのトランザクションです。
+`mintNFT`関数に追加する最後のものは、イーサリアムトランザクションです。
 
 ```javascript
-//set up your Ethereum transaction
+//イーサリアムのトランザクションを設定する
 const transactionParameters = {
-  to: contractAddress, // Required except during contract publications.
-  from: window.ethereum.selectedAddress, // must match user's active address.
+  to: contractAddress, // コントラクトの公開時を除き必須。
+  from: window.ethereum.selectedAddress, // ユーザーのアクティブなアドレスと一致する必要があります。
   data: window.contract.methods
     .mintNFT(window.ethereum.selectedAddress, tokenURI)
-    .encodeABI(), //make call to NFT smart contract
+    .encodeABI(), //NFTスマート・コントラクトを呼び出す
 }
 
-//sign the transaction via MetaMask
+//メタマスク経由でトランザクションに署名する
 try {
   const txHash = await window.ethereum.request({
     method: "eth_sendTransaction",
@@ -759,21 +750,21 @@ try {
 }
 ```
 
-イーサリアムトランザクションをすでによくご存知ならば、構造が今まで見てきたものとかなり似ていることに気付くでしょう。
+イーサリアムトランザクションに既に精通している場合は、構造がこれまで見たものと非常に似ていることに気づくでしょう。
 
-- まず、トランザクションパラメータを設定します。
-  - `to`に受取人のアドレス\(スマートコントラクト\)を設定します 。
-  - `from`にトランザクションの署名者\(MetaMaskに接続されているユーザーのアドレス: `window.ethereum.selectedAddress`\)を指定します。
-  - `data`には、スマートコントラクトの`mintNFT`メソッド呼び出しが含まれ、`tokenURI`とユーザーのウォレットのアドレス`window.ethereum.selectedAddress`を入力として受け取ります。
-- 次に、`window.ethereum.request`をawaitで呼び出して、MetaMaskにトランザクションの署名を依頼します。 このリクエストで、ethメソッド\(eth_sendTransaction\)を指定し、`transactionParameters`を渡していることに注目してください。 この時点で、ブラウザでMetaMaskが開かれ、ユーザーにトランザクションの署名または拒否を求めます。
-  - トランザクションが成功した場合、この関数は、trueに設定された`success`ブール値と、Etherscanでトランザクションについての詳細を確認するようユーザーに求める`status`文字列が入ったJSONオブジェクトを返します。
-  - トランザクションが失敗した場合、この関数は、falseに設定された`success`ブール値と、エラーメッセージを伝える`status`文字列が入ったJSONオブジェクトを返します。
+- まず、トランザクションパラメータをセットアップします。
+  - `to`は受信者アドレス（スマート・コントラクト）を指定します
+  - `from`はトランザクションの署名者（メタマスクに接続されているユーザーのアドレス：`window.ethereum.selectedAddress`）を指定します
+  - `data`には、スマート・コントラクトの`mintNFT`メソッドへの呼び出しが含まれており、入力として`tokenURI`とユーザーのウォレットアドレス`window.ethereum.selectedAddress`を受け取ります
+- 次に、メタマスクにトランザクションへの署名を要求するawait呼び出し`window.ethereum.request,`を行います。このリクエストでは、ethメソッド（eth_SentTransaction）を指定し、`transactionParameters`を渡していることに注目してください。この時点で、ブラウザでメタマスクが開き、ユーザーにトランザクションへの署名または拒否を求めます。
+  - トランザクションが成功した場合、関数はブール値`success`がtrueに設定され、`status`文字列がユーザーにトランザクションの詳細についてEtherscanを確認するように促すJSONオブジェクトを返します。
+  - トランザクションが失敗した場合、関数は`success`ブール値がfalseに設定され、`status`文字列がエラーメッセージを伝えるJSONオブジェクトを返します。
 
-`mintNFT`関数全体は、次のようになります。
+全体として、`mintNFT`関数は次のようになります。
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //error handling
+  //エラー処理
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
@@ -781,13 +772,13 @@ export const mintNFT = async (url, name, description) => {
     }
   }
 
-  //make metadata
+  //メタデータを作成
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //pinata pin request
+  //Pinataのpinリクエスト
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
@@ -797,19 +788,19 @@ export const mintNFT = async (url, name, description) => {
   }
   const tokenURI = pinataResponse.pinataUrl
 
-  //load smart contract
+  //スマート・コントラクトを読み込む
   window.contract = await new web3.eth.Contract(contractABI, contractAddress) //loadContract();
 
-  //set up your Ethereum transaction
+  //イーサリアムのトランザクションを設定する
   const transactionParameters = {
-    to: contractAddress, // Required except during contract publications.
-    from: window.ethereum.selectedAddress, // must match user's active address.
+    to: contractAddress, // コントラクトの公開時を除き必須。
+    from: window.ethereum.selectedAddress, // ユーザーのアクティブなアドレスと一致する必要があります。
     data: window.contract.methods
       .mintNFT(window.ethereum.selectedAddress, tokenURI)
-      .encodeABI(), //make call to NFT smart contract
+      .encodeABI(), //NFTスマート・コントラクトを呼び出す
   }
 
-  //sign transaction via MetaMask
+  //メタマスク経由でトランザクションに署名する
   try {
     const txHash = await window.ethereum.request({
       method: "eth_sendTransaction",
@@ -830,11 +821,11 @@ export const mintNFT = async (url, name, description) => {
 }
 ```
 
-巨大な関数でしたね! あとは、`mintNFT`関数を`Minter.js`コンポーネントに接続するだけです。
+これは巨大な関数ですね！あとは、`mintNFT`関数を`Minter.js`コンポーネントに接続するだけです...
 
-## mintNFTをMinter.jsフロントエンドに接続 {#connect-our-frontend}
+## mintNFTをMinter.jsフロントエンドに接続する {#connect-our-frontend}
 
-`Minter.js`ファイルを開いて、上部の`import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";`の行を次のように更新してください。
+`Minter.js`ファイルを開き、上部の`import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";`行を次のように更新します。
 
 ```javascript
 import {
@@ -844,7 +835,7 @@ import {
 } from "./utils/interact.js"
 ```
 
-最後に、次のように`onMintPressed`関数を実装し、インポートした`mintNFT`関数をawaitで呼び出します。さらに、`status`状態変数を更新し、トランザクションが成功したか失敗したかを反映させるようにします。
+最後に、`onMintPressed`関数を実装して、インポートした`mintNFT`関数へのawait呼び出しを行い、トランザクションが成功したか失敗したかを反映するように`status`状態変数を更新します。
 
 ```javascript
 const onMintPressed = async () => {
@@ -853,22 +844,21 @@ const onMintPressed = async () => {
 }
 ```
 
-## 稼働中のウェブサイトに非代替性トークン(NFT)をデプロイ {#deploy-your-NFT}
+## NFTを公開ウェブサイトにデプロイする {#deploy-your-nft}
 
-プロジェクトを稼働させてユーザーが使える準備ができましたでしょうか？ 稼働しているウェブサイトへMinterをデプロイする[チュートリアル](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online)をご覧ください。
+ユーザーが操作できるようにプロジェクトを公開する準備はできましたか？ミンターを公開ウェブサイトにデプロイする方法については、[Reactのデプロイメントドキュメント](https://create-react-app.dev/docs/deployment/)を確認してください。
 
-次は最後のステップです。
+最後にもう1つ...
+## ブロックチェーンの世界に旋風を巻き起こす {#take-the-blockchain-world-by-storm}
 
-## ブロックチェーンの世界を席巻しよう! {#take-the-blockchain-world-by-storm}
+冗談です、チュートリアルの最後までたどり着きましたね！
 
-これは冗談です。あなたは、このチュートリアルを最後までやりきりました!
+要約すると、NFTミンターを構築することで、以下の方法を無事に学びました。
 
-要約すると、非代替性トークン(NFT)ミンターを構築することで次の方法を学ぶことが出来ました。
+- フロントエンドプロジェクトを介してメタマスクに接続する
+- フロントエンドからスマート・コントラクトのメソッドを呼び出す
+- メタマスクを使用してトランザクションに署名する
 
-- フロントエンドのプロジェクト経由でMetaMaskへアクセス
-- フロントエンドからスマートコントラクトメソッドの呼び出し
-- MetaMaskを使ったトランザクションの署名
+おそらく、dappを介してミントされたNFTをウォレットで披露したいと思うでしょう。そのため、クイックチュートリアル[「ウォレットでNFTを表示する方法」](/developers/tutorials/how-to-view-nft-in-metamask/)を必ず確認してください！
 
-ウォレットに分散型アプリケーション(Dapp)を介してミントされた非代替性トークン(NFT)を表示する方法については、[ウォレットに非代替性トークン(NFT)を表示する方法](https://docs.alchemyapi.io/alchemy/tutorials/how-to-write-and-deploy-a-nft-smart-contract/how-to-view-your-nft-in-your-wallet)という簡単なチュートリアルをご覧ください。
-
-ご不明な点がありましたら、いつでも[Alchemy Discord](https://discord.gg/gWuC7zB)でお問い合わせください。 このチュートリアルのコンセプトが、今後のプロジェクトでどのように応用されるのか楽しみでなりません。
+そして、いつものように、質問がある場合は[Alchemyのディスコード](https://discord.gg/gWuC7zB)でお手伝いします。このチュートリアルの概念を将来のプロジェクトにどのように適用するかを見るのが待ちきれません！

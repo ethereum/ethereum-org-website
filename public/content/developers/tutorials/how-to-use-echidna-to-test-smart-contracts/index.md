@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: en
 tags: ["solidity", "smart contracts", "security", "testing", "fuzzing"]
 skill: advanced
+breadcrumb: Echidna
 published: 2020-04-10
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
@@ -95,7 +96,7 @@ Echidna will:
 
 - Automatically generate arbitrary transactions to test the property.
 - Report any transactions leading a property to return `false` or throw an error.
-- Discard side-effect when calling a property (i.e. if the property changes a state variable, it is discarded after the test)
+- Discard side-effect when calling a property (i.e., if the property changes a state variable, it is discarded after the test)
 
 The following property checks that the caller has no more than 1000 tokens:
 

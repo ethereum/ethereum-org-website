@@ -1,51 +1,46 @@
 ---
-title: ネットワーク
-description: イーサリアムネットワーク概要、およびアプリケーションテスト用のテストネットのイーサ(ETH)の取得場所
+title: "ネットワーク"
+description: "イーサリアムのネットワークの概要と、アプリケーションのテスト用にテストネットのイーサ（ETH）を入手できる場所について説明します。"
 lang: ja
 ---
 
-イーサリアムネットワークは、接続されたコンピューターのグループで、イーサリアムプロトコルを使って通信します。 イーサリアムメインネットは、1つしかありませんが、同じプロトコルのルールに準拠した独立したネットワークをテストや開発のために作成することができます。 プロトコルに準拠した、互いに干渉しない多くの「ネットワーク」が存在します。 自分のコンピュータ上でローカルに起動して、スマートコントラクトやweb3アプリのテストに利用できます。
+[イーサリアム](/)のネットワークは、イーサリアムのプロトコルを使用して通信する、接続されたコンピュータのグループです。イーサリアム・メインネットは1つしかありませんが、テストや開発の目的で、同じプロトコルのルールに準拠した独立したネットワークを作成できます。互いにやり取りすることなくプロトコルに準拠している独立した「ネットワーク」は多数存在します。スマート・コントラクトやWeb3アプリをテストするために、自分のコンピュータ上でローカルにネットワークを立ち上げることも可能です。
 
-イーサリアムアカウントは異なるネットワークすべてで使用できますが、アカウント残高とトランザクション履歴はメインネットから継承されません。 テスト目的に利用可能なネットワークと、テストネットのETHを取得する方法を知っておくと有用です。 セキュリティの観点から、一般にはメインネットのアカウントをテストネットで再利用すること(またはその逆)は推奨されません。
+イーサリアムのアカウントは異なるネットワーク間でも機能しますが、アカウントの残高やトランザクション履歴はメインのイーサリアム・ネットワークから引き継がれません。テスト目的においては、どのネットワークが利用可能か、そして試用するためのテストネットのETHをどのように入手するかを知っておくと便利です。一般的に、セキュリティ上の理由から、メインネットのアカウントをテストネットで再利用したり、その逆を行ったりすることは推奨されません。
 
-## 前提知識 {#prerequisites}
+## 前提条件 {#prerequisites}
 
-テストネットワークは試用目的として、安価で安全なイーサリアムを提供します。それぞれのネットワークを読み進める前に、[イーサリアムの基本](/developers/docs/intro-to-ethereum/)を理解する必要があります。
+テストネットワークは、試用するための安価で安全なバージョンのイーサリアムを提供するため、さまざまなネットワークについて読む前に、[イーサリアムの基礎](/developers/docs/intro-to-ethereum/)を理解しておく必要があります。
 
-## パブリックネットワーク {#public-networks}
+## パブリック・ネットワーク {#public-networks}
 
-パブリックネットワークは、インターネット接続で世界中の誰でもアクセスできます。 誰でも公開ブロックチェーン上でトランザクションを読み取りまたは作成し、実行されているトランザクションを検証できます。 ピア間のコンセンサスにより、トランザクションとネットワークの状態を追加するかが決まります。
+パブリック・ネットワークは、インターネット接続があれば世界中の誰でもアクセスできます。誰でもパブリックなブロックチェーン上でトランザクションを読み取ったり作成したりでき、実行されるトランザクションを検証できます。ピア間のコンセンサスによって、トランザクションの包含とネットワークの状態が決定されます。
 
-### イーサリアムメインネット {#ethereum-mainnet}
+### イーサリアム・メインネット {#ethereum-mainnet}
 
-メインネットは、プライマリ、パブリックのイーサリアム本番環境のブロックチェーンであり、実際の価値を持つトランザクションが分散台帳上で実行されています。
+メインネットは、主要なパブリックのイーサリアム本番ブロックチェーンであり、分散型台帳上で実際の価値を持つトランザクションが発生する場所です。
 
-ユーザーと取引所がETH価格について話す場合は、メインネットのETHを指しています。
+人々や取引所がETHの価格について議論するとき、それはメインネットのETHについて話しています。
 
-### イーサリアムテストネット {#ethereum-testnets}
+### イーサリアムのテストネット {#ethereum-testnets}
 
-メインネットに加えて、パブリックのテストネットがあります。 このテストネットは、プロトコルやスマートコントラクトのデベロッパーが、メインネットへデプロイする前に、実際の運用環境でプロトコルの更新や将来的なスマートコントラクトの双方をテストするためのネットワークです。 これは一般のウェブ開発における、本番とステージングサーバと同じようなものと考えてください。
+メインネットに加えて、パブリックなテストネットがあります。これらは、プロトコル開発者やスマート・コントラクト開発者が、メインネットへのデプロイ前に、本番環境に近い環境でプロトコルのアップグレードや潜在的なスマート・コントラクトをテストするために使用するネットワークです。これは、本番サーバーとステージング・サーバーの関係に似ていると考えてください。
 
-メインネットにデプロイする前に、テストネットで作成したコントラクトコードをテストする必要があります。 既存のスマートコントラクトと統合する分散型アプリ(Dapp)では、ほとんどのプロジェクトはコピーがテストネットにデプロイされています。
+作成したコントラクトのコードは、メインネットにデプロイする前にテストネットでテストする必要があります。既存のスマート・コントラクトと統合する分散型アプリケーション (dapp) のうち、ほとんどのプロジェクトはテストネットにコピーをデプロイしています。
 
-ほとんどのテストネットは、プルーフ・オブ・オーソリティ(PoA)の合意メカニズムで立ち上げられました。 このメカニズムでは、選ばれた少数のノードがトランザクションを検証し、新しいブロックを作成することで、その過程でアイデンティティをステーキングします。 また、テストネットの中にはイーサリアムのメインネットのように、誰もがバリデータの実行をテストできるオープンなプルーフ・オブ・ステークの合意メカニズムを備えているものもあります。
+ほとんどのテストネットは、パーミッションドなプルーフ・オブ・オーソリティのコンセンサス・メカニズムを使用することから始まりました。これは、少数のノードがトランザクションを検証し、新しいブロックを作成するために選ばれることを意味し、その過程で自身のアイデンティティをステーキングします。あるいは、一部のテストネットは、イーサリアム・メインネットと同様に、誰でもバリデータの実行をテストできるオープンなプルーフ・オブ・ステーク (PoS) のコンセンサス・メカニズムを備えています。
 
-テストネット上のETHは、本来は価値がないとされています。しかし、特定のタイプのテストネットでは、希少性や入手が困難なことから、価値を持つようになったETHのマーケットが形成されています。 実際にイーサリアムを利用するには(テストネットであれ)ETHが必要なので、ほとんどの人はフォーセットからテストネットETHを取得します。 ほとんどのフォーセットはWebアプリで、ETHを送信するアドレスを入力します。
+テストネット上のETHには実際の価値はないとされていますが、希少になったり入手が困難になったりした特定の種類のテストネットETHに対して市場が形成されたこともあります。（テストネットであっても）イーサリアムと実際にやり取りするにはETHが必要なため、ほとんどの人はフォーセットから無料でテストネットETHを入手します。ほとんどのフォーセットは、ETHの送信をリクエストするアドレスを入力できるWebアプリです。
 
-#### 推奨テストネット
+#### どのテストネットを使用すべきですか？ {#which-testnet-should-i-use}
 
-現在クライアントデベロッパーによってメンテナンスされているパブリックのテストネットは、SepoliaとGoerliの2つです。 Sepoliaは、コントラクトやアプリケーションのデベロッパーのためのネットワークで、アプリケーションのテストに使用されます。 Goerliは、プロトコルのデベロッパーがネットワークのアップグレードをテストしたり、ステーカーがバリデータの実行をテストしたりするために使用されるネットワークです。
+クライアント開発者が現在維持している2つのパブリックなテストネットは、SepoliaとHoodiです。Sepoliaは、コントラクトおよびアプリケーション開発者が自身のアプリケーションをテストするためのネットワークです。Hoodiネットワークでは、プロトコル開発者がネットワークのアップグレードをテストしたり、ステーカーがバリデータの実行をテストしたりできます。
 
-#### Sepolia(セポリア) {#sepolia}
+#### Sepolia {#sepolia}
 
-**Sepoliaはアプリケーション開発に推奨されるデフォルトのテストネットです。** Sepoliaネットワークは、許可型のバリデータセットを使用しています。 また、まだ新しいものであるため、ステートや履歴などデータ量が少ないことも特徴です。 そのため、ネットワークを素早く同期でき、ノードを実行するのに必要なストレージ容量が少なくて済みます。 これは、ノードを素早く起動してネットワークと直接やり取りしたい場合に便利です。
-
-- クライアントとテストチームが管理する非公開のバリデータセット
-- 他のテストネットに比べてアプリケーションのデプロイが少ない、新しいテストネット
-- 同期が速く、ノードを実行するには最小限のディスク容量が必要
+**Sepoliaは、アプリケーション開発において推奨されるデフォルトのテストネットです**。Sepoliaネットワークは、クライアントおよびテストチームによって管理されるパーミッションドなバリデータセットを使用します。
 
 ##### リソース
-
 - [ウェブサイト](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -53,97 +48,167 @@ lang: ja
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### フォーセット
-
-- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
+- [Alchemy Sepoliaフォーセット](https://www.alchemy.com/faucets/ethereum-sepolia)
+- [Chain Platform Sepoliaフォーセット](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
+- [Chainstack Sepoliaフォーセット](https://faucet.chainstack.com/sepolia-testnet-faucet)
+- [Ethereum Ecosystemフォーセット](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [ethfaucet.com Sepoliaフォーセット](https://ethfaucet.com/networks/ethereum)
+- [Google Cloud Web3 Sepoliaフォーセット](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
-- [Infura Sepolia faucet](https://www.infura.io/faucet)
-- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
-- [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Infura Sepoliaフォーセット](https://www.infura.io/faucet)
+- [PoWフォーセット](https://sepolia-faucet.pk910.de/)
+- [QuickNode Sepoliaフォーセット](https://faucet.quicknode.com/ethereum/sepolia)
 
-#### Goerli(ゴエリ) _(長期サポート)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_注: [Goerliテストネットは廃止予定となっており](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)、2023年に[Holesovice](https://github.com/eth-clients/holesovice)に置き換わります。 アプリケーションのSepoliaへの移行をご検討ください。_
+Hoodiは、検証とステーキングをテストするためのテストネットです。Hoodiネットワークは、テストネットのバリデータを実行したいユーザーに開かれています。したがって、メインネットにデプロイされる前にプロトコルのアップグレードをテストしたいステーカーは、Hoodiを使用する必要があります。
 
-Goerliは、バリデーションやステーキングのテストを行うためのテストネットです。 Goerliネットワークは、テストネットバリデータを実行したいユーザーのために公開されています。 メインネットにデプロイする前にプロトコルのアップグレードをテストしたいステーカーは、Goerliを使用する必要があります。
-
-- オープンなバリデータセット。ステーカーはネットワークのアップグレードをテスト可能。
-- 大きなステート。複雑なスマートコントラクトのインタラクションのテストに有効。
-- 同期に時間がかかり、ノードを実行するために多くのストレージが必要。
+- オープンなバリデータセット。ステーカーはネットワークのアップグレードをテスト可能
+- 大きな状態を持ち、複雑なスマート・コントラクトの相互作用のテストに有用
+- 同期に時間がかかり、ノードの実行により多くのストレージが必要
 
 ##### リソース
 
-- [ウェブサイト](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [ウェブサイト](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [エクスプローラー](https://explorer.hoodi.ethpandaops.io/)
+- [チェックポイント同期](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Otterscan](https://hoodi.otterscan.io/)
+- [Etherscan](https://hoodi.etherscan.io/)
 
 ##### フォーセット
 
-- [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://goerli-faucet.pk910.de/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
-- [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
+- [Chain Platform Hoodiフォーセット](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
+- [Hoodiフォーセット](https://hoodi.ethpandaops.io/)
+- [PoWフォーセット](https://hoodi-faucet.pk910.de/)
 
-Goerliテストネットでバリデータを起動するには、ethstakerの["cheap goerli validator" launchpad](https://holesky.launchpad.ethstaker.cc/en/)を使用してください。
+#### Ephemery {#ephemery}
 
-### レイヤー2テストネット {#layer-2-testnets}
+Ephemeryは、毎月完全にリセットされるユニークな種類のテストネットです。実行とコンセンサスの状態は28日ごとにジェネシスに戻るため、テストネット上で起こることはすべて一時的です。このため、短期的なテスト、高速なノードのブートストラップ、永続性を必要としない「hello world」のようなアプリケーションに最適です。
 
-[レイヤー2(L2)](/layer-2/)は、イーサリアムのスケーリングソリューションの総称であり、 レイヤー2はイーサリアムを拡張し、またイーサリアムのセキュリティ保証を継承する独立したブロックチェーンです。 レイヤー2のテストネットは、通常、パブリックイーサリアムのテストネットと対になっています。
+- 常に新鮮な状態であり、バリデータやアプリの短期的なテストが可能
+- 基本的なコントラクトのセットのみを含む
+- オープンなバリデータセットであり、多額の資金に簡単にアクセス可能
+- 最小のノード要件と最速の同期（平均5GB未満）
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+##### リソース
 
-[Arbitrum](https://arbitrum.io/)のテストネット。
+- [ウェブサイト](https://ephemery.dev/)
+- [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
+- [コミュニティ・チャット](https://matrix.to/#/#staker-testnet:matrix.org)
+- [Blockscout](https://explorer.ephemery.dev/)
+- [Otterscan](https://otter.bordel.wtf/)
+- [ビーコン・エクスプローラー](https://beaconlight.ephemery.dev/)
+- [チェックポイント同期](https://checkpoint-sync.ephemery.ethpandaops.io)
+- [ローンチパッド](https://launchpad.ephemery.dev/)
+
+#### フォーセット {#faucets}
+
+- [Bordelフォーセット](https://faucet.bordel.wtf/)
+- [Pk910 PoWフォーセット](https://ephemery-faucet.pk910.de/)
+
+#### ホルスキー (非推奨) {#holesky}
+
+ホルスキーのテストネットは、2025年9月をもって非推奨となりました。ステーキングのオペレーターやインフラストラクチャのプロバイダーは、バリデータのテストに代わりにHoodiを使用する必要があります。
+
+- [ホルスキー・テストネットのシャットダウンに関するお知らせ](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EFブログ、2025年9月1日_
+- [ホルスキーおよびHoodiテストネットのアップデート](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _EFブログ、2025年3月18日_
+
+### レイヤー2のテストネット {#layer-2-testnets}
+
+[レイヤー2 (L2)](/layer-2/)は、イーサリアムのスケーリング・ソリューションの特定のセットを表す総称です。レイヤー2は、イーサリアムを拡張し、イーサリアムのセキュリティ保証を継承する独立したブロックチェーンです。レイヤー2のテストネットは通常、パブリックなイーサリアムのテストネットと密接に結びついています。
+
+#### アービトラム Sepolia {#arbitrum-sepolia}
+
+[アービトラム](https://arbitrum.io/)のテストネットです。
+
+##### リソース
+
+- [Etherscan](https://sepolia.arbiscan.io/)
+- [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
 ##### フォーセット
 
-- [Chainlinkフォーセット](https://faucets.chain.link/)
+- [Alchemy アービトラム Sepoliaフォーセット](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [チェーンリンク アービトラム Sepoliaフォーセット](https://faucets.chain.link/arbitrum-sepolia)
+- [ethfaucet.com アービトラム Sepoliaフォーセット](https://ethfaucet.com/networks/arbitrum)
+- [QuickNode アービトラム Sepoliaフォーセット](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### オプティミスティック Sepolia {#optimistic-sepolia}
 
-[Optimism](https://www.optimism.io/)のテストネット。
+[オプティミズム](https://www.optimism.io/)のテストネットです。
+
+##### リソース
+
+- [Etherscan](https://sepolia-optimistic.etherscan.io/)
+- [Blockscout](https://optimism-sepolia.blockscout.com/)
 
 ##### フォーセット
 
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Alchemyフォーセット](https://www.alchemy.com/faucets/optimism-sepolia)
+- [チェーンリンク・フォーセット](https://faucets.chain.link/optimism-sepolia)
+- [ethfaucet.com オプティミズム Sepoliaフォーセット](https://ethfaucet.com/networks/optimism)
+- [テストネット・フォーセット](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### Starknet Goerli {#starknet-goerli}
+#### スタークネット Sepolia {#starknet-sepolia}
 
-[Starknet](https://www.starknet.io)のテストネット
+[スタークネット](https://www.starknet.io)のテストネットです。
+
+##### リソース
+
+- [Voyager Sepolia Scan](https://sepolia.voyager.online/)
 
 ##### フォーセット
 
-- [Starknetフォーセット](https://faucet.goerli.starknet.io)
+- [Alchemyフォーセット](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Blast スタークネット Sepoliaフォーセット](https://blastapi.io/faucets/starknet-sepolia-eth)
+- [スタークネット・フォーセット](https://starknet-faucet.vercel.app/)
 
-## プライベートネットワーク {#private-networks}
+## プライベート・ネットワーク {#private-networks}
 
-イーサリアムネットワークは、ノードがパブリックネットワーク(メインネットやテストネット) に接続されていない場合は、プライベートネットワークとなります。 ここでのプライベートとは、保護されており安全という意味ではなく、他のネットワークから分離されているという意味です。
+ノードがパブリック・ネットワーク（つまり、メインネットやテストネット）に接続されていない場合、そのイーサリアム・ネットワークはプライベート・ネットワークです。この文脈において、プライベートとは保護されている、あるいは安全であるという意味ではなく、単に予約されている、または隔離されていることを意味します。
 
-### 開発フレームワーク {#development-networks}
+### 開発ネットワーク {#development-networks}
 
-イーサリアムアプリケーションを構築する場合は、プライベートネットワークで実行して、デプロイする前に動作確認をすることをお勧めします。 自身のコンピュータ上でローカルサーバを作成し、Web開発するのと同様に、ローカルのブロックチェーンインスタンスを作成し、開発中の分散型アプリ(Dapp)をテストできます。 プライベートネットワークでのテストは、パブリックテストネットよりもはるかに高速に反復処理を行うことができます。
+イーサリアムのアプリケーションを開発するには、デプロイする前にプライベート・ネットワーク上で実行し、どのように機能するかを確認する必要があります。Web開発のためにコンピュータ上にローカルサーバーを作成するのと同じように、dappをテストするためのローカルのブロックチェーン・インスタンスを作成できます。これにより、パブリックなテストネットよりもはるかに高速なイテレーションが可能になります。
 
-これをサポートするためのプロジェクトやツールがあります。 [開発ネットワーク](/developers/docs/development-networks/)の詳細をご覧ください。
+これを支援することに特化したプロジェクトやツールがあります。[開発ネットワーク](/developers/docs/development-networks/)についてさらに学ぶ。
 
-### コンソーシアムネットワーク {#consortium-networks}
+### コンソーシアム・ネットワーク {#consortium-networks}
 
-コンセンサスプロセスは、信頼される事前定義された一連のノードにより制御されます。 例えば、既知の学術機関のプライベートネットワークが単一ノードを管理し、ブロックはネットワークの署名者数のしきい値により検証されます。
+コンセンサスのプロセスは、信頼されている事前定義されたノードのセットによって制御されます。例えば、既知の学術機関がそれぞれ単一のノードを管理するプライベート・ネットワークがあり、ネットワーク内の署名者のしきい値によってブロックが検証されるような場合です。
 
-パブリックイーサリアムネットワークがパブリックなインターネットだとすると、コンソーシアムネットワークはプライベートなイントラネットと考えることができます。
+パブリックなイーサリアム・ネットワークがパブリックなインターネットのようなものだとすれば、コンソーシアム・ネットワークはプライベートなイントラネットのようなものです。
+
+## <Emoji text="🚉" /> イーサリアムのテストネットが地下鉄の駅名にちなんで名付けられているのはなぜですか？ {#why-naming}
+
+イーサリアムのテストネットの多くは、現実世界の地下鉄や列車の駅名にちなんで名付けられています。この命名の伝統は初期に始まり、コントリビューターが生活したり働いたりした世界中の都市を反映しています。これは象徴的で、記憶に残りやすく、実用的です。テストネットがイーサリアム・メインネットから隔離されているように、地下鉄の路線も地上の交通とは分離して運行されています。
+
+### <Emoji text="🚧" /> 一般的に使用されているテストネットとレガシーなテストネット {#common-and-legacy-testnets}
+
+- **Sepolia** - ギリシャのアテネにある地下鉄が通る地域。現在はスマート・コントラクトやdappのテストに使用されています。
+- **Hoodi** - インドのベンガルールにあるHoodi地下鉄駅にちなんで名付けられました。バリデータやプロトコルのアップグレードのテストに使用されます。
+- **ゴエリ** _(非推奨)_ - ドイツのベルリンにあるゲルリッツァー駅 (Görlitzer Bahnhof) にちなんで名付けられました。
+- **Rinkeby** _(非推奨)_ - 地下鉄の駅があるストックホルムの郊外にちなんで名付けられました。
+- **ロプステン** _(非推奨)_ - ストックホルムの地域であり、かつてのフェリーおよび地下鉄のターミナルを指します。
+- **Kovan** _(非推奨)_ - シンガポールのMRTの駅にちなんで名付けられました。
+- **Morden** _(非推奨)_ - ロンドン地下鉄の駅にちなんで名付けられました。イーサリアム初のパブリックなテストネットです。
+
+### <Emoji text="🧪" /> その他の特化したテストネット {#other-testnets}
+
+一部のテストネットは、短期的なテストやアップグレードに特化したテストのために作成されており、必ずしも地下鉄をテーマにしているわけではありません。
+
+- **ホルスキー** _(非推奨)_ - プラハのホレショヴィツェ (Holešovice) 駅にちなんで名付けられました。バリデータのテストに使用され、2025年に非推奨となりました。
+- **Kiln**、**Zhejiang**、**Shandong**、**Prater**、**Pyrmont**、**Olympic** _(すべて非推奨)_ および **Ephemery** - マージやシャンハイなどのアップグレードのシミュレーション、またはバリデータの実験のために専用に構築されました。一部の名前は、地下鉄ベースではなく、地域的またはテーマに基づいています。
+
+地下鉄の駅名を使用することで、開発者は数値のチェーンIDに頼ることなく、テストネットをすばやく識別して記憶することができます。これはまた、実用的でグローバル、そして人間中心というイーサリアムの文化を反映しています。
 
 ## 関連ツール {#related-tools}
 
-- [Chainlist](https://chainlist.org/) _ウォレットとプロバイダを適切なチェーンIDとネットワークIDに接続するEVMネットワークのリスト_
-- [EVMベースのチェーン](https://github.com/ethereum-lists/chains) _Chainlist_を動かすチェーンメタデータのGitHubリポジトリ
+- [Chainlist](https://chainlist.org/) _ウォレットやプロバイダーを適切なチェーンIDおよびネットワークIDに接続するためのEVMネットワークのリスト_
+- [EVMベースのチェーン](https://github.com/ethereum-lists/chains) _Chainlistを機能させるチェーンのメタデータのGitHubリポジトリ_
 
 ## 参考文献 {#further-reading}
 
-- [提案: 予測可能なイーサリアムテストネットのライフサイクル](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
-- [イーサリアムテストネットの進化](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
+- [提案: 予測可能なイーサリアム・テストネットのライフサイクル](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
+- [イーサリアム・テストネットの進化](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

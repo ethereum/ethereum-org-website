@@ -1,10 +1,14 @@
 ---
-title: What is Wrapped Ether (WETH)
+title: Wrapped ether (WETH)
+metaTitle: What is Wrapped Ether (WETH)
 description: An introduction to Wrapped ether (WETH)—an ERC20-compatible wrapper for ether (ETH). 
 lang: en
 ---
 
-# Wrapped ether (WETH) {#intro-to-weth}
+<Alert variant="update">
+<Emoji text="🎁" />
+<div>Connect your wallet to wrap or unwrap ETH on any chain at [WrapETH.com](https://www.wrapeth.com/)</div>
+</Alert>
 
 Ether (ETH) is the main currency of Ethereum. It's used for several purposes like staking, as a currency, and paying for gas fees for computation. **WETH is effectively an upgraded form of ETH with some additional functionality required by many applications and [ERC-20 tokens](/glossary/#erc-20)**, which are other types of digital assets on Ethereum. To work with these tokens, ETH must follow the same rules they do, known as the ERC-20 standard.
 
@@ -27,7 +31,7 @@ You are able to unwrap WETH for ETH by using the WETH smart contract. You can re
 
 |            | **Ether (ETH)**                                                                                                                                                                                                                 | **Wrapped Ether (WETH)**                                                                                                                                                                                                                                                                                    |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Supply     | The supply of ETH is managed by the Ethereum protocol. The [issuance](/roadmap/merge/issuance) of ETH is handled by Ethereum validators when processing transactions and creating blocks.                           | WETH is an ERC-20 token whose supply is managed by a smart contract. New units of WETH are issued by the contract after it receives ETH deposits from users, or units of WETH are burned when a user wishes to redeem WETH for ETH.                                                                                                                                        |
+| Supply     | The [supply of ETH](/eth/supply/) is managed by the [Ethereum](/) protocol. The [issuance](/roadmap/merge/issuance) of ETH is handled by Ethereum validators when processing transactions and creating blocks.                           | WETH is an ERC-20 token whose supply is managed by a smart contract. New units of WETH are issued by the contract after it receives ETH deposits from users, or units of WETH are burned when a user wishes to redeem WETH for ETH.                                                                                                                                        |
 | Ownership  | Ownership is managed by the Ethereum protocol through your account balance.  | Ownership of WETH is managed by the WETH token smart contract, secured by the Ethereum protocol.                                                                                                                                         |
 | Gas        | Ether (ETH) is the accepted unit of payment for computation on the Ethereum network. Gas fees are denominated in gwei (a unit of ether).                                                                                    | Paying gas with WETH tokens is not natively supported.                                                                                                                                                                                              |
 
@@ -62,5 +66,5 @@ Besides the [canonical implementation of WETH](https://etherscan.io/token/0xc02a
 ## Further reading {#further-reading}
 
 - [WTF is WETH?](https://weth.tkn.eth.limo/)
-- [WETH token information on Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+- [WETH token information on Blockscout](https://eth.blockscout.com/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Formal Verification of WETH](https://zellic.io/blog/formal-verification-weth)

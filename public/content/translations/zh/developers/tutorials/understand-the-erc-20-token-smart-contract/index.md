@@ -1,13 +1,10 @@
 ---
-title: 了解ERC-20代币智能合约
-description: 如何在以太坊测试网络中部署第一个智能合约
+title: "了解 ERC-20 代币智能合约"
+description: "学习如何通过完整的 Solidity 智能合约示例和解释来实现 ERC-20 代币标准。"
 author: "jdourlens"
-tags:
-  - "智能合约"
-  - "代币"
-  - "solidity"
-  - "erc-20"
+tags: ["智能合约", "代币", "Solidity", "erc-20"]
 skill: beginner
+breadcrumb: "ERC-20 代币基础"
 lang: zh
 published: 2020-04-05
 source: EthereumDev
@@ -15,11 +12,11 @@ sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-[ERC-20](/developers/docs/standards/tokens/erc-20/)是以太坊上最重要的[智能合约标准](/developers/docs/standards/)之一。它已经成为以太坊区块链上用于可替换代币实现的所有智能合约的技术标准。
+以太坊上最重要的[智能合约标准](/developers/docs/standards/)之一被称为 [ERC-20](/developers/docs/standards/tokens/erc-20/)，它已经成为以太坊区块链上所有用于实现同质化代币的智能合约的技术标准。
 
-ERC-20定义了所有可替换的以太坊代币都应该遵守的通用规则列表。 因此，该代币标准使所有类型的开发者能够准确预测新代币在更大的以太坊系统中将如何工作。 这简化了开发者的任务，因为他们可以继续他们的工作，知道只要代币遵循规则，每次发布新的代币时就不需要重做每个新项目。
+ERC-20 定义了一组所有以太坊同质化代币都应遵守的通用规则。因此，该代币标准使各类开发者能够准确预测新代币在更广泛的以太坊系统中的运作方式。这简化并减轻了开发者的任务，因为他们可以继续推进工作，并且知道只要代币遵循这些规则，就不必在每次发布新代币时重做每一个新项目。
 
-这里以接口的形式介绍了ERC-20必须实现的函数。 如果你不知道什么是接口：请查看我们关于[使用Solidity进行OOP编程](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/)的文章。
+下面以接口的形式展示了 ERC-20 必须实现的函数。如果你不确定什么是接口：请查看我们关于 [Solidity 中的面向对象编程 (OOP)](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/) 的文章。
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -40,27 +37,27 @@ interface IERC20 {
 }
 ```
 
-下面逐行解释每个函数的用途。 在这之后，我们将展示一个ERC-20代币的简单实现。
+下面逐行解释每个函数的用途。在此之后，我们将展示一个简单的 ERC-20 代币实现。
 
-## 取值器 {#getters}
+## 获取器 {#getters}
 
 ```solidity
 function totalSupply() external view returns (uint256);
 ```
 
-返回存在的代币数量。 此函数是一个取值器，不会修改合约的状态。 请记住，Solidity中没有浮点数。 因此，大多数代币都会采用18位小数，并且会返回总供应量和其他结果，如下所示：1个代币100000000000000000。 你需要在处理代币时格外注意，并不是每个代币都有18位小数。
+返回存在的代币数量。此函数是一个获取器，不会修改合约的状态。请记住，Solidity 中没有浮点数。因此，大多数代币采用 18 位小数，并会返回总供应量和其他结果，例如 1 个代币表示为 1000000000000000000。并非每个代币都有 18 位小数，这是在处理代币时需要特别注意的地方。
 
 ```solidity
 function balanceOf(address account) external view returns (uint256);
 ```
 
-返回地址拥有的代币数量(`account`)。 此函数是一个取值器，不会修改合约的状态。
+返回某个地址 (`account`) 拥有的代币数量。此函数是一个获取器，不会修改合约的状态。
 
 ```solidity
 function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-ERC-20标准使一个地址能够允许另一个地址从中检索代币。 此取值器返回允许`spender`代表`owner`花费的剩余代币数量。 此函数是一个取值器，不会修改合约的状态，并且默认应返回0。
+ERC-20 标准允许一个地址向另一个地址提供授权额度，使其能够从中提取代币。此获取器返回 `spender` 被允许代表 `owner` 消费的剩余代币数量。此函数是一个获取器，不会修改合约的状态，并且默认应返回 0。
 
 ## 函数 {#functions}
 
@@ -68,19 +65,19 @@ ERC-20标准使一个地址能够允许另一个地址从中检索代币。 此�
 function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-将代币的` amount `从函数调用者地址(`msg.sender`) 移动到接收者地址。 此函数发出稍后定义的`Transfer`事件。 如果可进行转账，它将返回true。
+将 `amount` 数量的代币从函数调用者地址 (`msg.sender`) 转账到接收者地址。此函数会触发稍后定义的 `Transfer` 事件。如果转账成功，则返回 true。
 
 ```solidity
 function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-设置允许`spender`从函数调用方(`msg.sender`)余额转账的`allowance`的数额。 此函数发出Approval事件。 此函数返回是否成功设置了余量。
+设置允许 `spender` 从函数调用者 (`msg.sender`) 余额中转账的 `allowance` 数量。此函数会触发 Approval 事件。该函数返回授权额度是否成功设置。
 
 ```solidity
 function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
-使用余量机制将代币的`amount`从`sender`移动到`recipient`。 然后从调用者的余量中扣除该数额。 此函数发出`Transfer`事件。
+使用授权额度机制将 `amount` 数量的代币从 `sender` 转账到 `recipient`。然后从调用者的授权额度中扣除该数量。此函数会触发 `Transfer` 事件。
 
 ## 事件 {#events}
 
@@ -88,19 +85,19 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-将代币（值）的数量从`from`地址发送到`to`地址时会发出此事件。
+当代币数量 (value) 从 `from` 地址发送到 `to` 地址时，会触发此事件。
 
-在铸造新代币时，转账通常会在 `from` 0x00..0000 地址进行，而在销毁代币时，转账会在 `to` 0x00..0000 地址进行。
+在铸造新代币的情况下，转账通常是 `from` 0x00..0000 地址，而在销毁代币的情况下，转账是 `to` 0x00..0000。
 
 ```solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);
 ```
 
-当`owner`批准要由`spender`使用的代币数量(`value`)时，将发出此事件。
+当代币数量 (`value`) 被 `owner` 批准供 `spender` 使用时，会触发此事件。
 
-## ERC-20代币的基本实现 {#a-basic-implementation-of-erc-20-tokens}
+## ERC-20 代币的基本实现 {#a-basic-implementation-of-erc-20-tokens}
 
-下面是ERC-20代币的最简单代码：
+以下是构建你的 ERC-20 代币的最简单代码基础：
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -136,11 +133,11 @@ contract ERC20Basic is IERC20 {
 
 
    constructor() {
-    balances[msg.sender] = totalSupply_;
+	balances[msg.sender] = totalSupply_;
     }
 
     function totalSupply() public override view returns (uint256) {
-    return totalSupply_;
+	return totalSupply_;
     }
 
     function balanceOf(address tokenOwner) public override view returns (uint256) {
@@ -178,4 +175,4 @@ contract ERC20Basic is IERC20 {
 }
 ```
 
-ERC-20 代币标准的另一个优秀实现是 [OpenZepelin ERC-20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)。
+ERC-20 代币标准的另一个优秀实现是 [欧本齐柏林 ERC-20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)。

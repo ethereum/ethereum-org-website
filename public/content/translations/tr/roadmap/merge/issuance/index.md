@@ -1,134 +1,148 @@
 ---
-title: Birleşim ETH arzını nasıl etkiledi
-description: Birleşim'in ETH arzını nasıl etkilediğinin analizi
+title: "Birleşme ETH arzını nasıl etkiledi"
+description: "Birleşme'nin ETH arzını nasıl etkilediğinin dökümü"
 lang: tr
 ---
 
-# Birleşim ETH arzını nasıl etkiledi {#how-the-merge-impacts-ETH-supply}
+Birleşme, [Ethereum](/) ağının Eylül 2022'de gerçekleşen İş Kanıtı'ndan (PoW) Hisse Kanıtı'na (PoS) geçişini temsil ediyordu. ETH'nin ihraç edilme şekli bu geçiş sırasında değişikliklere uğradı. Önceden, yeni ETH iki kaynaktan ihraç ediliyordu: yürütme katmanı (yani Ana Ağ) ve mutabakat katmanı (yani İşaret Zinciri). Birleşme'den bu yana, yürütme katmanındaki ihraç artık sıfırdır. Bunu ayrıntılı olarak inceleyelim.
 
-Birleşim, Ethereum ağının iş ispatından hisse ispatına geçişini teslim eder, bu olay Eylül 2022'de gerçekleşmiştir. ETH'nin dağıtım methodu bu geçişten sonra değişmiştir. Öncesinde ETH iki kaynaktan dağıtılıyordu: yürütüm katmanı (ör. Ana Ağ) ve fikir birliği katmanı (ör. İşaret Zinciri). Birleşim'den beri yürütüm katmanındaki dağıtım yapılmamaktadır. Hadi açıklayalım.
+## ETH ihracının bileşenleri {#components-of-eth-issuance}
 
-## ETH dağıtımının bileşenleri {#components-of-eth-issuance}
+ETH arzını iki temel güce ayırabiliriz: ihraç ve yakım.
 
-ETH arzını iki parçaya ayırabiliriz: dağıtma ve yakma.
-
-ETH **dağıtımı**, daha önce var olmayan ETH'in oluşturulma sürecidir. ETH **yakımı**, var olan ETH'in yok edilmesi ve kullanımdan kaldırılmasıdır. Dağıtım ve yakım oranları belirli parametreler kullanılarak hesaplanır ve aralarındaki denge, ortaya çıkan Ether enflasyon/deflasyon oranını belirler.
+ETH **ihracı**, daha önce var olmayan ETH'yi yaratma sürecidir. ETH **yakımı**, mevcut ETH'nin yok edilerek dolaşımdan çıkarılmasıdır. İhraç ve yakım oranı çeşitli parametrelere göre hesaplanır ve aralarındaki denge, Ether'in ortaya çıkan enflasyon/deflasyon oranını belirler.
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH dağıtımı &quot;çok uzun, okumadım&quot;">
+title="ETH ihracı özeti">
 
-- Hisse ispatına geçilmeden önce madenciler günlük ortalama 13.000 ETH dağıtıyordu
-- Paydaşlar, 14 milyon hisselenmiş ETH'e dayalı olarak günlük ortalama 1.700 ETH dağıtıyor
-- Kesin dağıtım miktarı hisselenmiş ETH miktarına göre dalgalanıyor
-- Birleşim'den beri günde yaklaşık 1.700 ETH dağıtılıyor, yani üretim nerdeyse %88 oranında düşük
-- Yakma: Ağdaki talebe göre dalgalanıyor. _Eğer_ belirli bir gündeki ortalama gaz ücreti en az 16 gwei ise, bu durum doğrulayıcılara dağıtılan ortalama 1.700 ETH'yi dengeler ve ETH enflasyonunu sıfıra da ya daha aza indirir.
+- Hisse Kanıtı'na (PoS) geçmeden önce, madencilere günde yaklaşık 13.000 ETH ihraç ediliyordu
+- Stake edilen toplam yaklaşık 14 milyon ETH'ye dayanarak, staker'lara günde yaklaşık 1.700 ETH ihraç edilmektedir
+- Kesin staking ihracı, stake edilen toplam ETH miktarına bağlı olarak dalgalanır
+- **Birleşme'den bu yana, yalnızca günlük ~1.700 ETH kalmıştır ve bu da toplam yeni ETH ihracını ~%88 oranında düşürmüştür**
+- Yakım: Bu, ağ talebine göre dalgalanır. Belirli bir gün için en az 16 Gwei'lik ortalama bir gas fiyatı gözlemlenirse, bu durum doğrulayıcılara ihraç edilen ~1.700 ETH'yi etkili bir şekilde dengeler ve o gün için net ETH enflasyonunu sıfıra veya daha altına düşürür.
 
 </Card>
 
-## Birleşim öncesi (tarihsel) {#pre-merge}
+## Birleşme öncesi (tarihsel) {#pre-merge}
 
-### Yürütüm katmanı dağıtımı {#el-issuance-pre-merge}
+### Yürütme katmanı ihracı {#el-issuance-pre-merge}
 
-İş ispatı bünyesinde madenciler sadece yürütüm katmanıyla etkileşime girerdi ve bir sonraki bloku çözen ilk madenci blok ödülüyle ödüllendirilirdi. 2019'da gerçekleşen [Constantinople yükseltmesinden](/history/#constantinople) beri bu ödül blok başına 2 ETH idi. Madenciler en uzun/kurallı zincirde yer almayan geçerli [ommer](/glossary/#ommer) blokların yayınlanması sonucunda da ödüllendirilirdi. Bu ödüller ommer blok başına en fazla 1.75 ETH idi ve kurallı bloka verilen ödüle _ek olarak_ verilirdi. Madencilik süreci ekonomik olarak maliyetliydi ve sürdürülebilmesi zamanında yüksek düzeyde ETH dağıtımı gerekliydi.
+İş Kanıtı (PoW) altında, madenciler yalnızca yürütme katmanıyla etkileşime giriyordu ve bir sonraki bloğu çözen ilk madenci olmaları durumunda blok ödülleriyle ödüllendiriliyorlardı. 2019'daki [Konstantinopolis yükseltmesinden](/ethereum-forks/#constantinople) bu yana bu ödül blok başına 2 ETH idi. Madenciler ayrıca, en uzun/kurallı zincirde yer almayan geçerli bloklar olan [ommer](/glossary/#ommer) bloklarını yayınladıkları için de ödüllendiriliyordu. Bu ödüller ommer başına en fazla 1,75 ETH'ye ulaşıyordu ve kurallı bloktan ihraç edilen ödüle _ek olarak_ veriliyordu. Madencilik süreci, tarihsel olarak sürdürülmesi için yüksek seviyelerde ETH ihracı gerektiren ekonomik açıdan yoğun bir faaliyetti.
 
-### Fikir birliği katmanı dağıtımı {#cl-issuance-pre-merge}
+### Mutabakat katmanı ihracı {#cl-issuance-pre-merge}
 
-[İşaret Zinciri](/history/#beacon-chain-genesis) 2020'de yürürlüğe girdi. Madenciler yerine hisseleme ispatı kullanan doğrulayıcılar tarafından güvence altına alındı. Zincir, Ana Ağ'da (yürütüm katmanında) akıllı kontratlara tek yönlü ETH yatıran Ethereum kullanıcıları tarafından önyüklendi. İşaret Zinciri Ana Ağı dinleyerek kullanıcılara yeni zincirde aynı miktarda ETH yatırdı. Birleşim gerçekleşene kadar İşaret Zinciri'nin doğrulayıcıları işlemleri işlemiyordu, doğrulayıcı havuzunun durumu hakkındaki mutabakata varıyordu.
+[İşaret Zinciri](/ethereum-forks/#beacon-chain-genesis) 2020'de yayına girdi. Madenciler yerine, Hisse Kanıtı (PoS) kullanan doğrulayıcılar tarafından güvence altına alınır. Bu zincir, Ethereum kullanıcılarının Ana Ağ'daki (yürütme katmanı) bir akıllı sözleşmeye tek yönlü olarak ETH yatırmasıyla başlatıldı; İşaret Zinciri bu sözleşmeyi dinleyerek kullanıcıya yeni zincirde eşit miktarda ETH tanımladı. Birleşme gerçekleşene kadar, İşaret Zinciri'nin doğrulayıcıları işlemleri işlemiyordu ve esasen doğrulayıcı havuzunun kendi durumu üzerinde mutabakata varıyorlardı.
 
-İşaret Zincirindeki doğrulayıcılar zincirin durumunu onayladıklarına ve blok önerdiklerinde ETH ile ödüllendirilir. Ödüller (veya cezalar) doğrulayıcı performansına dayanarak her dönemde (6,4 dakikada bir) hesaplanır ve dağıtılır. Doğrulayıcı ödülleri eskiden iş ispatı üzerine dağıtılan madenci ödüllerine kıyasla **çok** düşüktür (her 13,5 saniyede 2 ETH).
+İşaret Zinciri'ndeki doğrulayıcılar, zincirin durumunu onayladıkları ve bloklar önerdikleri için ETH ile ödüllendirilir. Ödüller (veya cezalar), doğrulayıcı performansına dayalı olarak her dönemde (her 6,4 dakikada bir) hesaplanır ve dağıtılır. Doğrulayıcı ödülleri, daha önce İş Kanıtı (PoW) altında ihraç edilen madencilik ödüllerinden (her ~13,5 saniyede 2 ETH) **önemli ölçüde** daha azdır, çünkü bir doğrulayıcı düğüm çalıştırmak ekonomik olarak o kadar yoğun değildir ve bu nedenle bu kadar yüksek bir ödül gerektirmez veya haklı çıkarmaz.
 
-### Birleşim öncesi dağıtım analizi {#pre-merge-issuance-breakdown}
+### Birleşme öncesi ihraç dökümü {#pre-merge-issuance-breakdown}
 
-Toplam ETH arzı: **~120.520.000 ETH** (Birleşim gerçekleştiğinde Eylül 2022'deki veriler)
+Toplam ETH arzı: **\~120.520.000 ETH** (Eylül 2022'deki Birleşme sırasında)
 
-**Yürütüm katmanı dağıtımı:**
+**Yürütme katmanı ihracı:**
 
-- Tahmini her 13,3 saniyede 2,08 ETH \*: bir yılda dağıtılan **~4.930.000** ETH
-- **Nerdeyse %4,09** enflasyon oranı ile sonuçlandı (yılda 4,93M/toplam 120,5M)
-- \* Buna her kurallı blokta 2 ETH ve ek olarak ommer bloklardan zaman içinde ortalama 0,08 ETH dahildir. Hehangi bir [bomba değeri](/glossary/#difficulty-bomb) etkisi olmadan temel blok zaman hedefi 13,3 saniyedir. ([Kaynağı görüntüle](https://bitinfocharts.com/ethereum/))
+- 13,3 saniyede bir 2,08 ETH olarak tahmin ediliyordu\*: Yılda **\~4.930.000** ETH ihraç edildi
+- **Yaklaşık %4,09'luk** bir enflasyon oranıyla sonuçlandı (yılda 4,93M / toplam 120,5M)
+- \*Bu, kurallı blok başına 2 ETH'yi ve ommer bloklarından zaman içinde ortalama 0,08 ETH'yi içerir. Ayrıca, bir [zorluk bombası](/glossary/#difficulty-bomb) etkisi olmayan temel blok süresi hedefi olan 13,3 saniyeyi kullanır. ([Kaynağa bakın](https://bitinfocharts.com/ethereum/))
 
-**Fikir birliği katmanı dağıtımı:**
+**Mutabakat katmanı ihracı:**
 
-- Toplam hisselenen 14.000.000 ETH ile ETH dağıtım oranı ortalama günlük 1700 ETH'dir. ([Kaynağı görüntüle](https://ultrasound.money/))
-- Yıllık **~620.500** dağıtımı ile sonuçlanır
-- **Yaklaşık %0.52** enflasyon oranı ile sonuçlanır (yıllık 620,5K/toplam 119,3M)
+- Stake edilen toplam 14.000.000 ETH kullanıldığında, ETH ihraç oranı yaklaşık 1700 ETH/gündür ([Kaynağa bakın](https://ultrasound.money/))
+- Yılda **\~620.500** ETH ihracıyla sonuçlanır
+- **Yaklaşık %0,52'lik** bir enflasyon oranıyla sonuçlandı (yılda 620,5B / toplam 119,3M)
 
-<InfoBanner>
-<strong>Toplam yıllık dağıtım oranı (Birleşim öncesi): ~%4,61</strong> (%4,09 + %0,52)<br/><br/>
-Dağıtımın <strong>~%88,7'i</strong> yürütüm katmanındaki madencilere gidiyordu (4,09/4,61 * 100)<br/><br/>
-<strong>~%11,3'i</strong> fikir birliği katmanındaki paydaşlara dağıtılıyordu (0,52/4,61 * 100)
-</InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+**Toplam yıllık ihraç oranı (birleşme öncesi): ~%4,61** (%4,09 + %0,52)
 
-## Birleşim sonrası (günümüz) {#post-merge}
+İhracın **\~%88,7'si** yürütme katmanındaki madencilere gidiyordu (4,09 / 4,61 * 100)
 
-### Yürütüm katmanı dağıtımı {#el-issuance-post-merge}
+**\~%11,3'ü** mutabakat katmanındaki staker'lara ihraç ediliyordu (0,52 / 4,61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
-Birleşimden sonra yürütüm katmanı dağıtımı sıfırdır. Güncel mutabakat kuralları çerçevesinde iş ispatı artık geçerli bir blok üretim yöntemi olmaktan çıkmıştır. Tüm yürütüm katmanı aktiviteleri, hisse ispatı doğrulayıcıları tarafından yayınlanan ve kanıtlanan işaret blokları altında toplanmıştır. Kanıtlama ve işaret blokları yayınlama ödülleri fikir birliği katmanında ayrıca hesaplanır.
+## Birleşme sonrası (günümüz) {#post-merge}
 
-### Fikir birliği katmanı dağıtımı {#cl-issuance-post-merge}
+### Yürütme katmanı ihracı {#el-issuance-post-merge}
 
-Fikir birliği katmanı dağıtımı, Birleşim öncesinde olduğu gibi, blok öneren ve kanıtlayan doğrulayıcılara küçük ödüller vererek devam eder. Doğrulayıcı ödülleri, fikir birliği katmanında yönetilen _doğrulayıcı bakiyelerinde_ birikmeye devam eder. Bu Ethereum hesapları ayrıdır ve Ana Ağ üzerinde işlem yapabilen diğer hesapların aksine ("uygulama" hesapları) bunlar diğer Ethereum adresleriyle özgürce işlem yapamaz. Bu hesaplardaki fonlar yalnızca belirlenmiş bir yürütme adresine çekilebilir.
+Birleşme'den bu yana yürütme katmanı ihracı sıfırdır. İş Kanıtı (PoW), yükseltilmiş mutabakat kuralları altında artık geçerli bir blok üretim aracı değildir. Tüm yürütme katmanı etkinliği, Hisse Kanıtı (PoS) doğrulayıcıları tarafından yayınlanan ve onaylanan "işaret blokları" halinde paketlenir. İşaret bloklarını onaylama ve yayınlama ödülleri, mutabakat katmanında ayrı olarak hesaba katılır.
 
-Nisan 2023'te gerçekleşen Shanghai/Capella yükseltmesinden beri bu para çekme işlemleri paydaşlar için etkinleştirilmiştir. Paydaşlar _kazançlarını/ödüllerini (32 ETH üzerindeki bakiye)_ kaldırmak üzere teşvik edilir çünkü bu fonlar hisse ağırlıklarına katkıda bulunmazlar (32 maksimum değerdir).
+### Mutabakat katmanı ihracı {#cl-issuance-post-merge}
 
-Paydaşlar aynı zamanda çıkmayı ve tüm doğrulayıcı bakiyelerini çekmeyi seçebilir. Ethereum'un stabil olduğundan emin olmak için aynı anda sistemi terk eden doğrulayıcı sayısı sınırlanmıştır.
+Mutabakat katmanı ihracı, blokları onaylayan ve öneren doğrulayıcılar için küçük ödüllerle Birleşme öncesinde olduğu gibi bugün de devam etmektedir. Doğrulayıcı ödülleri, mutabakat katmanı içinde yönetilen _doğrulayıcı bakiyelerinde_ birikmeye devam eder. Ana Ağ'da işlem yapabilen mevcut hesapların ("yürütme" hesapları) aksine, bunlar diğer Ethereum hesaplarıyla serbestçe işlem yapamayan ayrı Ethereum hesaplarıdır. Bu hesaplardaki fonlar yalnızca belirtilen tek bir yürütme adresine çekilebilir.
 
-Toplam doğrulayıcıların nerdeyse %0,33'ü belirli bir gün içerisinde çıkabilir. Varsayım olarak her dönemde dört (4) doğrulayıcı çıkabilir (her 6,4 dakikada bir ya da her gün 900). 262.144 (2<sup>18</sup>) üzerindeki her ek 65.536 (2<sup>16</sup>) doğrulayıcı için fazladan bir (1) doğrulayıcının çıkmasına izin verilir. Örneğin 327.680 doğrulayıcı ile her dönemde beş (5) kişi ayrılabilir (günde 1.125). Bu kurala dayalı olarak doğrulayıcı sayısının 393.216 olması durumunda altı (6) kişinin çıkmasına izin verilir.
+Nisan 2023'te gerçekleşen Şanghay/Capella yükseltmesinden bu yana, bu para çekme işlemleri staker'lar için etkinleştirildi. Staker'lar, _kazançlarını/ödüllerini (32 ETH üzerindeki bakiye)_ çekmeye teşvik edilir, çünkü bu fonlar aksi takdirde stake ağırlıklarına (maksimum 32'dir) katkıda bulunmaz.
 
-Daha fazla doğrulayıcı parasını çektikçe, hisselenmiş yüksek miktarda ETH'nin kasıtlı ve eş zamanlı olarak çekilmesini ve istikrar bozulmasını önlemek için mevcut doğrulayıcı sayısı minimum 4 olacak şekilde git gide düşecektir.
+Staker'lar ayrıca çıkış yapmayı ve tüm doğrulayıcı bakiyelerini çekmeyi de seçebilirler. Ethereum'un istikrarlı olmasını sağlamak için aynı anda ayrılan doğrulayıcı sayısı sınırlandırılmıştır.
 
-### Birleşim sonrası enflasyon analizi {#post-merge-inflation-breakdown}
+Belirli bir günde toplam doğrulayıcı sayısının yaklaşık %0,33'ü çıkış yapabilir. Varsayılan olarak, dönem başına (her 6,4 dakikada bir veya günde 900) dört (4) doğrulayıcı çıkış yapabilir. 262.144'ün (2<sup>18</sup>) üzerindeki her 65.536 (2<sup>16</sup>) ek doğrulayıcı için ek bir (1) doğrulayıcının çıkış yapmasına izin verilir. Örneğin, 327.680'den fazla doğrulayıcı ile dönem başına beş (5) kişi ayrılabilir (günde 1.125). Toplam aktif doğrulayıcı sayısı 393.216'nın üzerinde olduğunda altı (6) kişiye izin verilecektir ve bu böyle devam eder.
 
-- Toplam ETH arzı: **~120.520.000 ETH** (Birleşim gerçekleştiğinde Eylül 2022'deki veriler)
-- Yürütüm katmanı dağıtımı: **0**
-- Fikir birliği katmanı dağıtımı: Yukardakiyle aynı şekilde %**~0,52** yıllıklaştırılmış dağıtım oranı (toplam 14 millyon hisselenmiş ETH)
+Daha fazla doğrulayıcı para çektikçe, stake edilen büyük miktarlardaki ETH'nin aynı anda çekilerek istikrarı bozmasını kasıtlı olarak önlemek için çıkan maksimum doğrulayıcı sayısı kademeli olarak en az dörde düşürülecektir.
 
-<InfoBanner>
-Toplam yıllıklaştırılmış dağıtım oranı: <strong>~%0,52</strong><br/><br/>
-ETH dağıtımındaki net azalma: <strong>~%88,7</strong> ((%4,61 - %0,52)/%4,61 * 100)
-</InfoBanner>
+### Birleşme sonrası enflasyon dökümü {#post-merge-inflation-breakdown}
 
-## <Emoji text=":fire:" size="1" />Yakma {#the-burn}
+- [Toplam ETH arzı](/eth/supply/): **\~120.520.000 ETH** (Eylül 2022'deki Birleşme sırasında)
+- Yürütme katmanı ihracı: **0**
+- Mutabakat katmanı ihracı: Yukarıdakiyle aynı, **\~%0,52** yıllık ihraç oranı (toplam 14 milyon ETH stake edilmiş halde)
 
-ETH dağıtımının karşısındaki güç ETH yakma oranıdır. Ethereum üzerinde bir işlemin gerçekleştirilebilmesi için, bir minimum ücret (ana ücret) ödenmelidir ve bu fiyat ağ aktivitesine bağlı olarak sürekli olarak dalgalanır (bloktan bloka). Bu ücret ETH olarak ödenir ve işlemin geçerli olarak kabul edilmesi için _zorunludur_. Bu ücret, işlem sırasında _yakılır_ ve dolaşımdan kaldırılır.
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
+Toplam yıllık ihraç oranı: **\~%0,52**
 
-<InfoBanner>
-Ücret yakımı Ağustos 2021'de <a href="/history/#london">London yükseltmesi</a> ile yürürlüğe girmiştir ve Birleşim'den bu yana değişmemiştir.
-</InfoBanner>
+Yıllık ETH ihracındaki net azalma: **\~%88,7** ((%4,61 - %0,52) / %4,61 * 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
-London yükseltmesinde uygulanan ücret yakımına ek olarak doğrulayıcılar çevrimdışı olmaları sebebiyle ceza alabilir, hatta daha kötüsü, belirli kurallara uymayarak ağın güvenliğini tehdit ettikleri için paralarının bir kısmını kaybedebilir ve atılabilirler. Bu cezalar doğrulayıcı bakiyelerinde azaltma ile sonuçlanabilir ve bu bakiyeler başka hesaplara ödül olarak verilmeden yakılır/dolaşımdan kaldırılır.
+## <Emoji text=":fire:" size="1" /> Yakım {#the-burn}
 
-### Deflasyon için ortalama gaz ücretinin hesaplanması {#calculating-average-gas-price-for-deflation}
+ETH ihracına zıt olan güç, ETH'nin yakılma oranıdır. Ethereum'da bir işlemin yürütülmesi için, ağ etkinliğine bağlı olarak sürekli (bloktan bloğa) dalgalanan minimum bir ücretin ("taban ücret" olarak bilinir) ödenmesi gerekir. Ücret ETH cinsinden ödenir ve işlemin geçerli sayılması için _gereklidir_. Bu ücret işlem süreci sırasında _yakılır_ ve dolaşımdan çıkarılır.
 
-Yukarıda da bahsedildiği gibi, belirli bir günde dağıtılan ETH miktarı, hisselenmiş toplam ETH miktarına bağlıdır. Bu yazı yazıldığı sırada bu miktar ortalama günlük 1700 ETH idi.
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 
-24 saatlik periyotta bu dağıtımı tamamen dengelemek için gerekli gaz ücretini belirlemek için bir gün içindeki toplam blokları hesaplayarak başlayacağız, bir blok zamanını 12 saniye kabul edeceğiz:
+Ücret yakımı, Ağustos 2021'de [Londra yükseltmesi](/ethereum-forks/#london) ile yayına girdi ve Birleşme'den bu yana değişmeden kaldı.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
-- `(1 blok/12 saniye) * (60 saniye/dakika) = 5 blok/dakika`
-- `(5 blok/dakika) * (60 dakika/saat) = 300 blok/saat`
-- `(300 blok/saat) * (24 saat/gün) = 7200 blok/gün`
+Londra yükseltmesi tarafından uygulanan ücret yakımına ek olarak, doğrulayıcılar çevrimdışı oldukları için cezalara çarptırılabilir veya daha kötüsü, ağ güvenliğini tehdit eden belirli kuralları ihlal ettikleri için kesintiye uğrayabilirler. Bu cezalar, söz konusu doğrulayıcının bakiyesinden ETH'nin azalmasıyla sonuçlanır ve bu miktar doğrudan başka hiçbir hesaba ödül olarak verilmez, böylece etkili bir şekilde yakılır/dolaşımdan çıkarılır.
 
-Tüm bloklar `15x10^6 gaz/blok` değerini hedefler ([daha fazla gaz](/developers/docs/gas/)). Bunu kullanarak ve günlük ETH dağıtımını 1700 ETH kabul ederek dağıtımı dengelemek için gereken ortalama gaz ücretini (gwei/gaz birimi olarak) hesaplayabiliriz:
+### Deflasyon için ortalama gas fiyatını hesaplama {#calculating-average-gas-price-for-deflation}
 
-- `7200 blok/gün * 15x10^6 gaz/blok *`**`Y gwei/gaz`**`* 1 ETH/ 10^9 gwei = 1700 ETH/gün`
+Yukarıda tartışıldığı gibi, belirli bir günde ihraç edilen ETH miktarı, stake edilen toplam ETH'ye bağlıdır. Yazının yazıldığı sırada bu miktar yaklaşık 1700 ETH/gündür.
 
-`Y` için çözersek:
+Belirli bir 24 saatlik dönemde bu ihracı tamamen dengelemek için gereken ortalama gas fiyatını belirlemek amacıyla, 12 saniyelik bir blok süresi göz önüne alındığında, bir gündeki toplam blok sayısını hesaplayarak başlayacağız:
 
-- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (yalnızca iki anlamlı basamağa yuvarlandığında)
+- `(1 block / 12 seconds) * (60 seconds/minute) = 5 blocks/minute`
+- `(5 blocks/minute) * (60 minutes/hour) = 300 blocks/hour`
+- `(300 blocks/hour) * (24 hours/day) = 7200 blocks/day`
 
-Sondaki basamağı farklı şekilde düzenlemek için `1700`, günlük ETH dağıtımını temsil edecek `X` değişkeni ile değiştirilebilir ve aşağıdaki gibi basitleştirilebilir:
+Her blok `15x10^6 gas/block` hedefler ([Gaz hakkında daha fazlası](/developers/docs/gas/)). Bunu kullanarak, günlük toplam 1700 ETH ihracı göz önüne alındığında, ihracı dengelemek için gereken ortalama gas fiyatını (Gwei/Gaz birimi cinsinden) bulabiliriz:
+
+- `7200 blocks/day * 15x10^6 gas/block * `**`Y gwei/gas`**` * 1 ETH/ 10^9 gwei = 1700 ETH/day`
+
+`Y` için çözüldüğünde:
+
+- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (yalnızca iki anlamlı basamağa yuvarlanmıştır)
+
+Bu son adımı yeniden düzenlemenin başka bir yolu, `1700` değerini günlük ETH ihracını temsil eden bir `X` değişkeniyle değiştirmek ve geri kalanını şu şekilde basitleştirmek olacaktır:
 
 - `Y = (X(10^3)/(7200 * 15)) = X/108`
 
-Bunu basitçe `X`'in fonksiyonu olarak yazabiliriz:
+Bunu basitleştirebilir ve `X`'nin bir fonksiyonu olarak yazabiliriz:
 
-- `X`'i günlük ETH dağıtımı olarak kabul edersek `f(X) = X/108` ifadesindeki `f(X)` yeni dağıtılan tüm ETH'in dengelenmesi için gereken gwei/gas fiyatını temsil eder.
+- `f(X) = X/108` burada `X` günlük ETH ihracıdır ve `f(X)`, yeni ihraç edilen tüm ETH'yi dengelemek için gereken Gwei/gas fiyatını temsil eder.
 
-Örneğin `X` (günlük ETH dağıtımı), toplamda hisselenmiş ETH'ye bağlı olarak 1800'e çıkarsa, `f(X)` (dağıtımı dengelemek için gereken gwei) `17 gwei ` olacaktır (2 anlamlı basamak kullanılarak)
+Yani, örneğin, `X` (günlük ETH ihracı) stake edilen toplam ETH'ye bağlı olarak 1800'e çıkarsa, `f(X)` (tüm ihracı dengelemek için gereken Gwei) o zaman `17 gwei` olacaktır (2 anlamlı basamak kullanılarak)
 
 ## Daha fazla bilgi {#further-reading}
 
-- [Birleşim](/roadmap/merge/)
-- [Ultrasound.money](https://ultrasound.money/) - _Gerçek zamanlı ETH dağıtımını ve yakımını gösteren tablolara erişebilirsiniz_
-- [Ethereum Dağıtımı Grafikleri](https://www.attestant.io/posts/charting-ethereum-issuance/) - _Jim McDonald 2020_
+- [Birleşme](/roadmap/merge/)
+- [Ultrasound.money](https://ultrasound.money/) - _ETH ihracını ve yakımını gerçek zamanlı olarak görselleştirmek için kullanılabilen panolar_
+- [Ethereum İhracının Grafiğini Çıkarma](https://www.attestant.io/posts/charting-ethereum-issuance/) - _Jim McDonald 2020_

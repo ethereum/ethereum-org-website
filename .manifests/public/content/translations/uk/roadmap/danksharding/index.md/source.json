@@ -1,0 +1,568 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/roadmap/danksharding/index.md",
+  "generatedAt": "2026-06-08T10:08:57.624Z",
+  "rootHash": "68526f6e0bf9",
+  "tree": {
+    "contentHash": "c5f55c4dbe33",
+    "anchorHash": "eb90f9241f31",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d5c7c6294c3d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "1ec5d41d9b76",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:1": {
+        "contentHash": "462a5225342b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:2": {
+        "contentHash": "af5b8e60cad0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-protodanksharding": {
+        "contentHash": "b297bcd9c5b7",
+        "anchorHash": "dfdb0c996850",
+        "labelHash": "50dc2ad15f24",
+        "children": {
+          "_label": {
+            "contentHash": "50dc2ad15f24",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "43b2391f9f49",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "485d37d61486",
+            "anchorHash": "f8f55ea8fe5a"
+          },
+          "prose:4": {
+            "contentHash": "d0c06e988357",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "8bffd6eadddc",
+            "anchorHash": "36e3c993af37"
+          },
+          "prose:5": {
+            "contentHash": "ac70337b8119",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "1945d236048e"
+          },
+          "prose:6": {
+            "contentHash": "51b32dda0212",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:8": {
+            "contentHash": "00460e3db689",
+            "anchorHash": "033687ce8404",
+            "children": {
+              "attr:title": {
+                "contentHash": "23e6391ab703",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "f99c50a31566"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d7d75c7b4dee"
+              },
+              "prose:0": {
+                "contentHash": "c8b193a1b581",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
+          },
+          "component:9": {
+            "contentHash": "741a5d09fda7",
+            "anchorHash": "05bd22fe9842",
+            "children": {
+              "attr:title": {
+                "contentHash": "35cf6f716b33",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "f99c50a31566"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "bf8e35c9c4df"
+              },
+              "prose:0": {
+                "contentHash": "44ff1b7b7c68",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
+          },
+          "how-are-blobs-verified": {
+            "contentHash": "18977b21103f",
+            "anchorHash": "cf4cdc0f11e8",
+            "labelHash": "ad943a3cdb07",
+            "children": {
+              "_label": {
+                "contentHash": "ad943a3cdb07",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:5": {
+                "contentHash": "8dd082c6a337",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "adb123e3d41e"
+              },
+              "prose:6": {
+                "contentHash": "2fd8b8e16141",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "8ff436def145"
+              },
+              "prose:7": {
+                "contentHash": "d03502c43d74",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:2": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "1431b986377b"
+              },
+              "prose:8": {
+                "contentHash": "d03502c43d74",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:3": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "b8478134ca41"
+              },
+              "prose:9": {
+                "contentHash": "805479ade2fb",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:4": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "3c3d6852dc18"
+              },
+              "prose:10": {
+                "contentHash": "97d94505cfa1",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:5",
+              "inline-code:0",
+              "prose:6",
+              "inline-code:1",
+              "prose:7",
+              "inline-code:2",
+              "prose:8",
+              "inline-code:3",
+              "prose:9",
+              "inline-code:4",
+              "prose:10"
+            ]
+          },
+          "what-is-kzg": {
+            "contentHash": "c3de0cf1f4f6",
+            "anchorHash": "ed22b1aa6261",
+            "labelHash": "23bd8b68c0f0",
+            "children": {
+              "_label": {
+                "contentHash": "23bd8b68c0f0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "d7723b7c92b8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "8691746e5202",
+                "anchorHash": "ed8e9a83fbe5"
+              },
+              "prose:3": {
+                "contentHash": "181cb78b3b86",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "c0b68a7aa576",
+                "anchorHash": "211f4aa8a6bd"
+              },
+              "prose:4": {
+                "contentHash": "f5d3760a3590",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          },
+          "what-is-a-kzg-ceremony": {
+            "contentHash": "599ff3a8b799",
+            "anchorHash": "84b95610bb0e",
+            "labelHash": "fe96f7d6470c",
+            "children": {
+              "_label": {
+                "contentHash": "fe96f7d6470c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "1c6efbd2919d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:2": {
+                "contentHash": "971416c61842",
+                "anchorHash": "c48eb122b753",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "3324d319f403",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:eventCategory": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "f99c50a31566"
+                  },
+                  "attr:eventName": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "2b3d64068778"
+                  },
+                  "prose:0": {
+                    "contentHash": "748995069313",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:eventCategory",
+                  "attr:eventName",
+                  "prose:0"
+                ]
+              },
+              "component:3": {
+                "contentHash": "4ce441075cdc",
+                "anchorHash": "27e16f1970a6",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "707997fb5064",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:eventCategory": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "f99c50a31566"
+                  },
+                  "attr:eventName": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "f0ee414a1b29"
+                  },
+                  "prose:0": {
+                    "contentHash": "48945ee6345a",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:eventCategory",
+                  "attr:eventName",
+                  "prose:0"
+                ]
+              },
+              "component:4": {
+                "contentHash": "8000a4527b8f",
+                "anchorHash": "232297b4e801",
+                "children": {
+                  "attr:variant": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "4bd9354bb652"
+                  },
+                  "prose:0": {
+                    "contentHash": "70be348b42e3",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:variant",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "component:2",
+              "component:3",
+              "component:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "inline-code:2",
+          "prose:6",
+          "component:8",
+          "component:9",
+          "how-are-blobs-verified",
+          "what-is-kzg",
+          "what-is-a-kzg-ceremony"
+        ]
+      },
+      "what-is-danksharding": {
+        "contentHash": "36fd0df40831",
+        "anchorHash": "b204b1c74149",
+        "labelHash": "cc5191cb4e4b",
+        "children": {
+          "_label": {
+            "contentHash": "cc5191cb4e4b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f59e741f8529",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "df4df0886eb4",
+            "anchorHash": "ef193d34ed36",
+            "children": {
+              "attr:title": {
+                "contentHash": "ef9b1bdb31cc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "f99c50a31566"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "139d47347792"
+              },
+              "prose:0": {
+                "contentHash": "cff1d5b7b99d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
+          },
+          "component:3": {
+            "contentHash": "e76f0f6dc732",
+            "anchorHash": "a93eb07e6bcd",
+            "children": {
+              "attr:title": {
+                "contentHash": "6df86b038e9f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:eventCategory": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "f99c50a31566"
+              },
+              "attr:eventName": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ab97ee5b4889"
+              },
+              "prose:0": {
+                "contentHash": "dd5c84859959",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:eventCategory",
+              "attr:eventName",
+              "prose:0"
+            ]
+          },
+          "current-progress": {
+            "contentHash": "7c63aa7b6a0e",
+            "anchorHash": "198dd1b64bd5",
+            "labelHash": "46814fcae9de",
+            "children": {
+              "_label": {
+                "contentHash": "46814fcae9de",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "4710cf278a97",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "f194e16a604a",
+                "anchorHash": "f8f55ea8fe5a"
+              },
+              "prose:2": {
+                "contentHash": "379634780146",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "further-reading": {
+            "contentHash": "7b863aa26df2",
+            "anchorHash": "3fcf1ac87df0",
+            "labelHash": "4082f515b2f4",
+            "children": {
+              "_label": {
+                "contentHash": "4082f515b2f4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:8": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "65b1da6e2cba",
+                "anchorHash": "80141f69db53"
+              },
+              "prose:9": {
+                "contentHash": "82a698d6a74f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "fc80065c5f9a",
+                "anchorHash": "58d4b30728df"
+              },
+              "prose:10": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "bcf78fb71819",
+                "anchorHash": "b17ede97d8c3"
+              },
+              "prose:11": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "c3aa992050a1",
+                "anchorHash": "41d14885043b"
+              },
+              "prose:12": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "4e6a578ddbdc",
+                "anchorHash": "9205b7415629"
+              },
+              "prose:13": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "09cb204c717a",
+                "anchorHash": "13f66d435bd9"
+              },
+              "prose:14": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:6": {
+                "contentHash": "eae933e1a561",
+                "anchorHash": "e9d13f1bea84"
+              },
+              "prose:15": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:7": {
+                "contentHash": "ef802b69a067",
+                "anchorHash": "211f4aa8a6bd"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:8",
+              "link:0",
+              "prose:9",
+              "link:1",
+              "prose:10",
+              "link:2",
+              "prose:11",
+              "link:3",
+              "prose:12",
+              "link:4",
+              "prose:13",
+              "link:5",
+              "prose:14",
+              "link:6",
+              "prose:15",
+              "link:7"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "component:3",
+          "current-progress",
+          "further-reading"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:summaryPoints",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "what-is-protodanksharding",
+      "what-is-danksharding"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

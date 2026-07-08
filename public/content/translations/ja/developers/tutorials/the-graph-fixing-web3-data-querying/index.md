@@ -1,26 +1,21 @@
 ---
-title: "The Graph: Web3データクエリ問題を解決"
-description: ブロックチェーンは、SQLのないデータベースのようなものです。 すべてのデータはありますが、アクセスする方法がありません。 The GraphとGraphQLでこの問題を解決する方法をご紹介します。
-author: Markus Waas
+title: "The Graph: Web3のデータクエリの改善"
+description: "ブロックチェーンはSQLのないデータベースのようなものです。すべてのデータはそこにありますが、アクセスする方法がありません。The GraphとGraphQLを使ってこの問題を解決する方法を紹介します。"
+author: "マーカス・ワース"
 lang: ja
-tags:
-  - "Solidity"
-  - "スマートコントラクト"
-  - "クエリ"
-  - "the graph"
-  - "create-eth-app"
-  - "react"
+tags: ["Solidity", "スマート・コントラクト", "クエリ", "the graph", "React"]
 skill: intermediate
+breadcrumb: The Graph
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
 ---
 
-今回は、The Graphについて詳しく見ていきます。The Grashは昨年、分散型アプリケーション(Dapp)を開発するために欠かせない標準スタックの一部となりました。 まずは、従来のやり方から見ていきましょう。
+今回は、昨年分散型アプリケーション (dapp) 開発の標準スタックの一部となったThe Graphについて詳しく見ていきます。まずは、従来の方法でどのように行うかを見てみましょう。
 
-## The Graphを使わない例 {#without-the-graph}
+## The Graphを使用しない場合... {#without-the-graph}
 
-それでは、説明のために簡単な例から始めます。 私たちは皆、ゲームが好きなので、ユーザーが賭けをする次の簡単なゲームを考えてみましょう。
+説明のために簡単な例を見てみましょう。誰もがゲームを好きなので、ユーザーが賭けをする簡単なゲームを想像してみてください。
 
 ```solidity
 pragma solidity 0.7.1;
@@ -46,85 +41,85 @@ contract Game {
 }
 ```
 
-ここでは、分散型アプリケーション(Dapp)で合計賭金、合計勝敗数を表示し、誰かが再度プレイするたびに更新したいとします。 このアプローチは次のようになります。
+さて、このdappで、合計の賭け金、負け/勝ちの合計ゲーム数を表示し、誰かが再びプレイするたびにそれを更新したいとします。そのアプローチは次のようになります。
 
-1. `totalGamesPlayerWon`の取得
-2. `totalGamesPlayerLost`の取得
-3. `BetPlaced`イベントのサブスクライブ
+1. `totalGamesPlayerWon` を取得する。
+2. `totalGamesPlayerLost` を取得する。
+3. `BetPlaced` イベントをサブスクライブする。
 
-右に示したように[Web3イベント](https://docs.web3js.org/api/web3/class/Contract#events)をリッスンできますが、多くのケースを処理する必要があります。
+右に示されているように、[Web3でイベント](https://docs.web3js.org/api/web3/class/Contract#events)をリッスンすることはできますが、かなり多くのケースを処理する必要があります。
 
 ```solidity
 GameContract.events.BetPlaced({
     fromBlock: 0
 }, function(error, event) { console.log(event); })
 .on('data', function(event) {
-    // event fired
+    // イベント発火
 })
 .on('changed', function(event) {
-    // event was removed again
+    // イベントが再度削除された
 })
 .on('error', function(error, receipt) {
-    // tx rejected
+    // トランザクションが拒否された
 });
 ```
 
-ここでの簡単な例では、これはまだある程度は大丈夫のようです。 しかし今度は、現在のプレイヤーが賭けで失った金額と獲得した金額を表示したいとしましょう。 こうなると、運が悪いとしか言えません。これらの値の格納や取得を行う新しいコントラクトをデプロイした方が良いでしょう。 では、さらに複雑なスマートコントラクトと分散型アプリケーション(Dapp)を想像してみてください。あっという間に厄介な状況になります。
+この簡単な例であれば、まだ何とかなります。しかし、現在のプレイヤーの負け/勝ちの賭け金のみを表示したいとします。残念ながら、それらの値を保存する新しいコントラクトをデプロイして取得するしかありません。さらに複雑なスマート・コントラクトとdappを想像してみてください。事態はすぐに収拾がつかなくなる可能性があります。
 
-![単純なクエリではない](./one-does-not-simply-query.jpg)
+![One Does Not Simply Query](./one-does-not-simply-query.jpg)
 
-これが最適でないことは次のことからわかります。
+これが最適ではない理由は以下の通りです。
 
-- すでにデプロイ済みのコントラクトでは機能しないこと
-- これらの値を格納するのに追加のガス代がかかること
-- イーサリアムノードのデータを取得するのに別の呼び出しが必要なこと
+- すでにデプロイされたコントラクトでは機能しない。
+- それらの値を保存するための追加のガスコストがかかる。
+- イーサリアムのノードからデータを取得するために別の呼び出しが必要になる。
 
-![不十分](./not-good-enough.jpg)
+![Thats not good enough](./not-good-enough.jpg)
 
-では、より良い解決策を見ていきましょう。
+では、より良い解決策を見てみましょう。
 
 ## GraphQLの紹介 {#let-me-introduce-to-you-graphql}
 
-最初にGraphQLについて説明します。GraphQLは、もともとフェイスブック社によって設計され、実装されました。 従来のRest APIモデルについては、ご存知かもしれません。 では、今度は次のように必要なデータを正確に取得できるクエリを作成できると想像してみてください。
+まず、フェイスブックによって最初に設計および実装されたGraphQLについて説明します。従来のREST APIモデルには馴染みがあるかもしれません。代わりに、必要なデータだけを正確に取得するクエリを記述できると想像してみてください。
 
-![GraphQL APIとREST APIの比較](./graphql.jpg)
+![GraphQL API vs. REST API](./graphql.jpg)
 
-<img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
 
-2つの画像は、GraphQLの本質をほぼ捉えています。 右のクエリーでは、必要なデータを正確に定義できるので、1回のリクエストで必要なものだけを取得できます。 GraphQLサーバーは必要とされるすべてのデータの取得を処理できるので、フロントエンドのコンシューマ側にとっては極めて使いやすいツールとなっています。 ご興味があれば、サーバーが具体的にどのようにクエリを処理するかについて[わかりやすい説明](https://www.apollographql.com/blog/graphql-explained-5844742f195e/)をご覧ください。
+この2つの画像は、GraphQLの本質をよく表しています。右側のクエリを使用すると、必要なデータを正確に定義できるため、1回のリクエストですべてを取得でき、必要なもの以外は取得しません。GraphQLサーバーが必要なすべてのデータの取得を処理するため、フロントエンドのコンシューマー側にとって非常に使いやすくなっています。興味がある場合は、サーバーがクエリを正確に処理する方法について[こちらでわかりやすく説明されています](https://www.apollographql.com/blog/graphql-explained)。
 
-この知識をもとに、ブロックチェーン空間とThe Graphの世界に入って行きましょう。
+この知識を踏まえて、いよいよブロックチェーンの領域とThe Graphについて見ていきましょう。
 
-## The Graphとは {#what-is-the-graph}
+## The Graphとは？ {#what-is-the-graph}
 
-ブロックチェーンは、分散型データベースですが、通常のデータベースとは対照的に、データベースに対するクエリ言語がありません。 データを取得することにおいては、苦痛を伴うか不可能かのどちらかです。 The Graphは、ブロックチェーンデータのインデックス作成とクエリを行うための分散型プロトコルです。 ご想像の通りThe Graphは、GraphQLをクエリ言語として使用しています。
+ブロックチェーンは分散型データベースですが、通常とは異なり、このデータベース用のクエリ言語がありません。データを取得するための解決策は苦痛を伴うか、完全に不可能です。The Graphは、ブロックチェーンデータのインデックス作成とクエリを行うための分散型プロトコルです。ご想像の通り、クエリ言語としてGraphQLを使用しています。
 
 ![The Graph](./thegraph.png)
 
-何かを理解するには例を見るのが最善なので、先ほどのGameContractでThe Graphを使ってみましょう。
+何かを理解するには例を見るのが一番なので、GameContractの例でThe Graphを使ってみましょう。
 
 ## サブグラフの作成方法 {#how-to-create-a-subgraph}
 
-サブグラフは、データにインデックスを作成する方法を定義するものです。 定義には、次の3つのコンポーネントが必要です。
+データのインデックス作成方法の定義はサブグラフと呼ばれます。これには3つのコンポーネントが必要です。
 
-1. マニフェスト(`subgraph.yaml`)
-2. スキーマ(`schema.graphql`)
-3. マッピング(`mapping.ts`)
+1. マニフェスト (`subgraph.yaml`)
+2. スキーマ (`schema.graphql`)
+3. マッピング (`mapping.ts`)
 
-### マニフェスト(`subgraph.yaml`) {#manifest}
+### マニフェスト (`subgraph.yaml`) {#manifest}
 
-マニフェストは設定ファイルであり、次のことを定義します。
+マニフェストは設定ファイルであり、以下を定義します。
 
-- どのスマートコントラクトにインデックスを作成するか(アドレス、ネットワーク、アプリケーションバイナリインターフェース(ABI)等)
-- どのイベントをリッスンするか
-- 関数呼び出しやブロックなど、その他に何をリッスンするか
-- 呼び出されるマッピング関数 (後述の`mapping.ts`を参照)
+- インデックスを作成するスマート・コントラクト (アドレス、ネットワーク、ABIなど)
+- リッスンするイベント
+- 関数呼び出しやブロックなど、リッスンするその他の要素
+- 呼び出されるマッピング関数 (以下の `mapping.ts` を参照)
 
-マニフェストには複数のコントラクトとハンドラを定義できます。 典型的な設定では、またはHardhatプロジェクト内にサブグラフフォルダと独自のリポジトリがあります。 それにより、簡単にアプリケーションバイナリインターフェース(ABI)を参照することができます。
+ここでは複数のコントラクトとハンドラーを定義できます。一般的なセットアップでは、Hardhatプロジェクト内に独自のリポジトリを持つサブグラフフォルダーを配置します。これにより、ABIを簡単に参照できます。
 
-便利さの観点から、Mustacheのようなテンプレートツールを使用することもできます。 `subgraph.template.yaml`を作成し、最新のデプロイメントに基づいたアドレスを挿入します。 より高度な設定例については、[Aaveサブグラフリポジトリ](https://github.com/aave/aave-protocol/tree/master/thegraph)の例をご覧ください。
+利便性のために、mustacheのようなテンプレートツールを使用することもできます。その場合、`subgraph.template.yaml` を作成し、最新のデプロイに基づいてアドレスを挿入します。より高度なセットアップ例については、[アーベのサブグラフリポジトリ](https://github.com/aave/aave-protocol/tree/master/thegraph)などを参照してください。
 
-ドキュメント全文については、[こちら](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest)をご覧ください。
+完全なドキュメントは[こちら](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest)で確認できます。
 
 ```yaml
 specVersion: 0.0.1
@@ -155,19 +150,19 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-### スキーマ(`schema.graphql`) {#schema}
+### スキーマ (`schema.graphql`) {#schema}
 
-スキーマは、GraphQLのデータ定義です。 必要なエンティティとタイプを定義することができます。 The Graphでサポートされているタイプは、次のとおりです。
+スキーマはGraphQLのデータ定義です。これにより、存在するエンティティとその型を定義できます。The Graphでサポートされている型は以下の通りです。
 
-- バイト型
-- ID型
-- 文字列型
-- ブール型
-- 整数型
-- BigInt型
-- BigDecimal型
+- Bytes
+- ID
+- String
+- Boolean
+- Int
+- BigInt
+- BigDecimal
 
-リレーションシップを定義するために、エンティティをタイプとして使用することもできます。 この例では、プレイヤーと賭け(Bet)で1対多のリレーションシップを定義します。 「!」 は、空の値を取れないこと意味します。 完全なドキュメントは、[こちら](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest)をご覧ください。
+エンティティを型として使用して、関係を定義することもできます。この例では、プレイヤーから賭けへの1対多の関係を定義しています。! は値が空であってはならないことを意味します。完全なドキュメントは[こちら](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest)で確認できます。
 
 ```graphql
 type Bet @entity {
@@ -186,17 +181,17 @@ type Player @entity {
 }
 ```
 
-### マッピング(`mapping.ts`) {#mapping}
+### マッピング (`mapping.ts`) {#mapping}
 
-The Graphのマッピングファイルは、受信したイベントをエンティティに変換する関数を定義します。 TypescriptのサブセットであるAssemblyScriptで書きます。 これは、より効率化され、よりポータブル化されたマッピングの実行を実現するため、WebAssembly(WASM)にコンパイルされます。
+The Graphのマッピングファイルは、受信したイベントをエンティティに変換する関数を定義します。これはTypeScriptのサブセットであるAssemblyScriptで記述されています。つまり、マッピングをより効率的かつポータブルに実行するために、WASM (WebAssembly) にコンパイルできます。
 
-各関数を`subgraph.yaml`ファイルに定義する必要があります。この例では、`handleNewBet`の一つだけが必要です。 まず、idとして送信者アドレスからPlayerエンティティを読み込もうとします。 存在しない場合は、新しいエンティティを作成して開始値を入れます。
+`subgraph.yaml` ファイルで指定された各関数を定義する必要があります。この例では、`handleNewBet` の1つだけが必要です。まず、送信者のアドレスをIDとしてPlayerエンティティを読み込もうとします。存在しない場合は、新しいエンティティを作成し、初期値を入力します。
 
-次に、Betエンティティを作成します。 idは、`event.transaction.hash.toHex() + "-" + event.logIndex.toString()`になり、常に一意の値になります。 誰かがスマートコントラクトを介して1つのトランザクションでplaceBet関数を複数回呼び出す可能性があるため、ハッシュのみの使用では十分ではありません。
+次に、新しいBetエンティティを作成します。このIDは `event.transaction.hash.toHex() + "-" + event.logIndex.toString()` となり、常に一意の値になるようにします。スマート・コントラクトを介して1つのトランザクション内でplaceBet関数を複数回呼び出す可能性があるため、ハッシュだけを使用するのでは不十分です。
 
-最後に、すべてのデータでPlayerエンティティを更新します。 配列を直接プッシュすることはできませんが、ここに示すように更新する必要があります。 betを参照するためにidを使用します。 エンティティを保存するには、`.save()`が最後に必要です。
+最後に、すべてのデータでPlayerエンティティを更新できます。配列は直接プッシュすることはできず、ここに示すように更新する必要があります。IDを使用して賭けを参照します。そして、エンティティを保存するには、最後に `.save()` が必要です。
 
-ドキュメント全文については、こちらをご覧ください。https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings マッピングファイルにログの出力を追加できます。詳細は[こちら](https://thegraph.com/docs/assemblyscript-api#api-reference)をご覧ください。
+完全なドキュメントはこちらで確認できます: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings。マッピングファイルにログ出力を追加することもできます。[こちら](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference)を参照してください。
 
 ```typescript
 import { Bet, Player } from "../generated/schema"
@@ -206,7 +201,7 @@ export function handleNewBet(event: PlacedBet): void {
   let player = Player.load(event.transaction.from.toHex())
 
   if (player == null) {
-    // create if doesn't exist yet
+    // まだ存在しない場合は作成する
     player = new Player(event.transaction.from.toHex())
     player.bets = new Array<string>(0)
     player.totalPlayedCount = 0
@@ -229,7 +224,7 @@ export function handleNewBet(event: PlacedBet): void {
     player.hasLostCount++
   }
 
-  // update array like this
+  // このように配列を更新する
   let bets = player.bets
   bets.push(bet.id)
   player.bets = bets
@@ -240,10 +235,10 @@ export function handleNewBet(event: PlacedBet): void {
 
 ## フロントエンドでの使用 {#using-it-in-the-frontend}
 
-Apollo Boostなどを使うと、The GraphをReact(またはApollo-Vue)の分散型アプリケーション(Dapp)に簡単に統合できます。 特にReactフックとApolloを使用する場合は、コンポーネントに単一のGraphQLクエリを記述するのと同じくらいデータの取得が簡単です。 典型的な設定は次のようになります。
+Apollo Boostなどを使用すると、Reactのdapp (またはApollo-Vue) にThe Graphを簡単に統合できます。特にReactフックとApolloを使用する場合、データの取得はコンポーネント内に単一のGraphQLクエリを記述するのと同じくらい簡単です。一般的なセットアップは次のようになります。
 
 ```javascript
-// See all subgraphs: https://thegraph.com/explorer/
+// すべてのサブグラフを参照: https://thegraph.com/explorer/
 const client = new ApolloClient({
   uri: "{{ subgraphUrl }}",
 })
@@ -256,13 +251,13 @@ ReactDOM.render(
 )
 ```
 
-例えば、下記のようなクエリを書くことができます。 これで以下の情報を取得できます。
+これで、例えば次のようなクエリを記述できます。これにより、以下の情報が取得されます。
 
-- 現在のユーザーの勝利数
-- 現在のユーザーの敗北数
-- 過去の賭けのタイムスタンプのリスト
+- 現在のユーザーが勝った回数
+- 現在のユーザーが負けた回数
+- 過去のすべての賭けのタイムスタンプのリスト
 
-GraphQLサーバーへの単一リクエストですべて取得できます。
+これらすべてをGraphQLサーバーへの1回のリクエストで取得できます。
 
 ```javascript
 const myGraphQlQuery = gql`
@@ -285,29 +280,29 @@ React.useEffect(() => {
 }, [loading, error, data])
 ```
 
-![マジック](./magic.jpg)
+![Magic](./magic.jpg)
 
-しかし、最後のパズルの1つが欠けています。それがサーバーについてです。 自分のノードでサーバーを実行することも、ホストサービスを使用することもできます。
+しかし、パズルの最後のピースが1つ欠けています。それはサーバーです。自分で実行するか、ホスト型サービスを使用することができます。
 
 ## The Graphサーバー {#the-graph-server}
 
-### Graph エクスプローラー: ホストサービス {#graph-explorer-the-hosted-service}
+### Graph Explorer: ホスト型サービス {#graph-explorer-the-hosted-service}
 
-最も簡単な方法は、ホストサービスを利用することです。 [こちらの手順](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/)に従ってサブグラフをデプロイしてください。 [エクスプローラー](https://thegraph.com/explorer/)では、さまざまなプロジェクト向けに既存のサブグラフを探すことができます。
+最も簡単な方法は、ホスト型サービスを使用することです。[こちら](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/)の手順に従ってサブグラフをデプロイします。多くのプロジェクトでは、実際に[エクスプローラー](https://thegraph.com/explorer/)で既存のサブグラフを見つけることができます。
 
-![The Graphエクスプローラー](./thegraph-explorer.png)
+![The Graph-Explorer](./thegraph-explorer.png)
 
-### 自分のノードで実行 {#running-your-own-node}
+### 独自のノードの実行 {#running-your-own-node}
 
-自分のノードでも実行できます。 実行方法については、[こちら](https://github.com/graphprotocol/graph-node#quick-start)のドキュメントをご覧ください。 これにより、ホストサービスでサポートされていないネットワークでも使用できます。 現在サポートしているネットワークについては、[こちら](https://thegraph.com/docs/en/developing/supported-networks/)をご覧ください。
+あるいは、独自のノードを実行することもできます。ドキュメントは[こちら](https://github.com/graphprotocol/graph-node#quick-start)です。これを行う理由の1つは、ホスト型サービスでサポートされていないネットワークを使用することかもしれません。現在サポートされているネットワークは[こちらで確認できます](https://thegraph.com/docs/en/developing/supported-networks/)。
 
-## 非中央集権型の未来 {#the-decentralized-future}
+## 分散型の未来 {#the-decentralized-future}
 
-GraphQLは、新しく受信するイベントのストリームもサポートしています。 これらの機能は、現在オープンベータ版の[Substreams](https://thegraph.com/docs/en/substreams/)を通して、グラフ上でサポートされています。
+GraphQLは、新しく受信したイベントのストリームもサポートしています。これらは、現在オープンベータ版である[Substreams](https://thegraph.com/docs/en/substreams/)を通じてThe Graph上でサポートされています。
 
-[2021](https://thegraph.com/blog/mainnet-migration/)年に、The Graphは分散型インデックスネットワークへの移行を開始しました。 分散型インデックスネットワークのアーキテクチャの詳細については、[こちら](https://thegraph.com/docs/en/network/explorer/)をご覧ください。
+[2021年](https://thegraph.com/blog/mainnet-migration/)に、The Graphは分散型インデックスネットワークへの移行を開始しました。この分散型インデックスネットワークのアーキテクチャについて詳しくは、[こちら](https://thegraph.com/docs/en/network/explorer/)をご覧ください。
 
-次の2つの重要な点があります。
+2つの重要な側面は以下の通りです。
 
-1. ユーザーは、クエリのインデックス作成者に料金を支払う。
-2. インデックス作成者は、グラフトークン(GRT)をステーキングする。
+1. ユーザーはクエリに対してインデクサーに支払う。
+2. インデクサーはGraph Token (GRT) をステークする。

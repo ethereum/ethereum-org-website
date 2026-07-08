@@ -1,79 +1,79 @@
 ---
-title: スマートコントラクト言語
-description: 2つの主要なスマートコントラクト言語であるSolidityとVyperの概要と比較
+title: "スマート・コントラクト言語"
+description: "2つの主要なスマート・コントラクト言語であるSolidityとVyperの概要と機能比較。"
 lang: ja
 ---
 
-イーサリアムの長所は、比較的デベロッパーフレンドリーな言語を使ってスマートコントラクトを記述できることです。 Pythonや[中括弧を使ってブロックを表現する言語](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)を使用している方は、見慣れたような構文を持つ言語を使うことができます。
+[イーサリアム](/)の素晴らしい点は、比較的開発者に優しい言語を使用してスマート・コントラクトをプログラミングできることです。 Pythonや[波括弧を使用する言語](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)の経験があれば、馴染みのある構文を持つ言語を見つけることができます。
 
-最も活発にメンテナンスされている言語は、以下の2つです。
+最も活発にメンテナンスされている2つの言語は以下の通りです。
 
 - Solidity
 - Vyper
 
-Remix IDEは、SolidityとVyperの両方でコントラクトを作成およびテストするための包括的な開発環境を提供します。 [ブラウザ内で動作するRemix IDEを試して](https://remix.ethereum.org)、コーディングを始めましょう。
+Remix IDEは、SolidityとVyperの両方でコントラクトを作成およびテストするための包括的な開発環境を提供します。 コーディングを始めるには、[ブラウザベースのRemix IDEをお試しください](https://remix.ethereum.org)。
 
-また、経験豊富なデベロッパーであれば、[イーサリアム仮想マシン](/developers/docs/evm/)用の中間言語であるYulや、Yulを拡張したYul+を使うのもよいでしょう。
+より経験豊富な開発者は、[イーサリアム仮想マシン (EVM)](/developers/docs/evm/)の中間言語であるYulや、Yulの拡張であるYul+を使用することもできます。
 
-開発中の新しい言語に興味があり、テストに協力したいとお考えの場合は、Feというまだ登場したばかりのスマートコントラクト言語を試してみることができます。
+好奇心旺盛で、現在も活発に開発されている新しい言語のテストに協力したい場合は、まだ初期段階にある新興のスマート・コントラクト言語であるFeを試すことができます。
 
-## 前提知識 {#prerequisites}
+## 前提条件 {#prerequisites}
 
-プログラミング言語、特にJavaScriptやPythonの知識は、スマートコントラクト言語の違いを理解するのに役立ちます。 また、スマートコントラクトをコンセプトとして理解し、言語比較を深く掘り下げることをお勧めします。 [スマートコントラクトの紹介](/developers/docs/smart-contracts/)
+プログラミング言語、特にJavaScriptやPythonの予備知識があると、スマート・コントラクト言語の違いを理解するのに役立ちます。 また、言語の比較を深く掘り下げる前に、概念としてのスマート・コントラクトを理解しておくことをお勧めします。 [スマート・コントラクトの紹介](/developers/docs/smart-contracts/)。
 
 ## Solidity {#solidity}
 
-- スマートコントラクトを実装するためのオブジェクト指向の高級言語
-- C++に強い影響を受けた中括弧を使ってブロックを表現する言語
-- 静的型付け(変数型はコンパイル時に決定される)
-- 以下の言語機能をサポートしている
-  - 継承(他のコントラクトを拡張できる)
-  - ライブラリ(他のオブジェクト指向言語における静的クラスで定義された静的関数のように、さまざまなコントラクトから呼び出すことができる再利用可能なコードを作成できる)
-  - 複雑なユーザー定義型
+- スマート・コントラクトを実装するためのオブジェクト指向の高水準言語。
+- C++から最も強い影響を受けた波括弧を使用する言語。
+- 静的型付け (変数の型がコンパイル時に決定される)。
+- 以下の機能をサポート:
+  - 継承 (他のコントラクトを拡張できる)。
+  - ライブラリ (他のオブジェクト指向プログラミング言語における静的クラスの静的関数のように、異なるコントラクトから呼び出せる再利用可能なコードを作成できる)。
+  - 複雑なユーザー定義型。
 
-### 参照すべきリンク {#important-links}
+### 重要なリンク {#important-links}
 
 - [ドキュメント](https://docs.soliditylang.org/en/latest/)
 - [Solidity言語ポータル](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitterチャットルーム](https://gitter.im/ethereum/solidity)は、[Solidity Matrixチャットルーム](https://matrix.to/#/#ethereum_solidity:gitter.im)へブリッジされました。
+- [Solidity Gitterチャットルーム](https://gitter.im/ethereum/solidity) ([Solidity Matrixチャットルーム](https://matrix.to/#/#ethereum_solidity:gitter.im)にブリッジ)
 - [チートシート](https://reference.auditless.com/cheatsheet)
 - [Solidityブログ](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Solidityのツイッター](https://twitter.com/solidity_lang)
 
-### コントラクトのコード例 {#example-contract}
+### コントラクトの例 {#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // The keyword "public" makes variables
-    // accessible from other contracts
+    // "public" キーワードは変数を
+    // 他のコントラクトからアクセス可能にします
     address public minter;
     mapping (address => uint) public balances;
 
-    // Events allow clients to react to specific
-    // contract changes you declare
+    // イベントにより、クライアントは宣言した特定の
+    // コントラクトの変更に反応できるようになります
     event Sent(address from, address to, uint amount);
 
-    // Constructor code is only run when the contract
-    // is created
+    // コンストラクタのコードは、コントラクトが
+    // 作成されたときにのみ実行されます
     constructor() {
         minter = msg.sender;
     }
 
-    // Sends an amount of newly created coins to an address
-    // Can only be called by the contract creator
+    // 新しく作成されたコインを指定した量だけアドレスに送信します
+    // コントラクトの作成者のみが呼び出すことができます
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
         balances[receiver] += amount;
     }
 
-    // Sends an amount of existing coins
-    // from any caller to an address
+    // 既存のコインを指定した量だけ
+    // 任意の呼び出し元からアドレスに送信します
     function send(address receiver, uint amount) public {
         require(amount <= balances[msg.sender], "Insufficient balance.");
         balances[msg.sender] -= amount;
@@ -83,156 +83,154 @@ contract Coin {
 }
 ```
 
-この例は、Solidityのコントラクト構文がどのようなものか理解するのに役立つでしょう。 関数と変数のより詳細な説明については、[ドキュメント](https://docs.soliditylang.org/en/latest/contracts.html)を参照してください。
+この例から、Solidityのコントラクト構文がどのようなものかを感じ取れるはずです。 関数や変数の詳細については、[ドキュメントを参照してください](https://docs.soliditylang.org/en/latest/contracts.html)。
 
 ## Vyper {#vyper}
 
-- Python的なプログラミング言語
+- Python風のプログラミング言語
 - 強い型付け
-- コンパクトでわかりやすいコンパイラコード
+- 小さく理解しやすいコンパイラコード
 - 効率的なバイトコード生成
-- コントラクトの安全性を確保し、監査が容易になることを目的として、意図的にSolidityよりも機能を絞っている。 Vyperは以下をサポートしていない
-  - modifier修飾子
+- コントラクトをより安全で監査しやすくすることを目的として、意図的にSolidityよりも機能を少なくしています。 Vyperは以下をサポートしていません:
+  - 修飾子 (Modifiers)
   - 継承
   - インラインアセンブリ
   - 関数のオーバーロード
-  - オペレータのオーバーロード
+  - 演算子のオーバーロード
   - 再帰呼び出し
   - 無限ループ
   - 2進固定小数点
 
-詳細については、[Vyperのドキュメント](https://vyper.readthedocs.io/en/latest/index.html)を参照してください。
+詳細については、[Vyperの基本理念をお読みください](https://vyper.readthedocs.io/en/latest/index.html)。
 
-### 参照すべきリンク {#important-links-1}
+### 重要なリンク {#important-links-1}
 
 - [ドキュメント](https://vyper.readthedocs.io)
 - [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
 - [More Vyper by Example](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [VyperコミュニティのDiscordチャット](https://discord.gg/SdvKC79cJk)
+- [Vyperコミュニティのディスコードチャット](https://discord.gg/SdvKC79cJk)
 - [チートシート](https://reference.auditless.com/cheatsheet)
-- [スマートコントラクト開発フレームワークとVyper用ツール](/developers/docs/programming-languages/python/)
-- [VyperPunk - Vyperスマートコントラクトのセキュリティとハッキングを学ぶ](https://github.com/SupremacyTeam/VyperPunk)
-- [VyperExamples - Vyperの脆弱性の例](https://www.vyperexamples.com/reentrancy)
+- [Vyper用スマート・コントラクト開発フレームワークとツール](/developers/docs/programming-languages/python/)
+- [VyperPunk - Vyperスマート・コントラクトの保護とハッキングを学ぶ](https://github.com/SupremacyTeam/VyperPunk)
 - [開発用Vyper Hub](https://github.com/zcor/vyper-dev)
-- [人気を博しているVyperのスマートコントラクトの例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [素晴らしいVyperの厳選されたリソース](https://github.com/spadebuilders/awesome-vyper)
+- [Vyperの優れたスマート・コントラクトの例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Awesome Vyperの厳選リソース](https://github.com/spadebuilders/awesome-vyper)
 
 ### 例 {#example}
 
 ```python
-# Open Auction
+# オープンオークション
 
-# Auction params
-# Beneficiary receives money from the highest bidder
+# オークションのパラメータ
+# 受益者は最高額入札者からお金を受け取ります
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
-# Current state of auction
+# オークションの現在の状態
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Set to true at the end, disallows any change
+# 終了時にtrueに設定され、いかなる変更も許可されなくなります
 ended: public(bool)
 
-# Keep track of refunded bids so we can follow the withdraw pattern
+# 引き出しパターンに従うため、返金された入札を追跡します
 pendingReturns: public(HashMap[address, uint256])
 
-# Create a simple auction with `_bidding_time`
-# seconds bidding time on behalf of the
-# beneficiary address `_beneficiary`.
+# `_bidding_time` を用いてシンプルなオークションを作成します。
+# 入札期間は秒単位で、以下の代理として行われます：
+# 受益者アドレス `_beneficiary`。
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# Bid on the auction with the value sent
-# together with this transaction.
-# The value will only be refunded if the
-# auction is not won.
+# 送信された値でオークションに入札します
+# （このトランザクションと共に）。
+# この値は、次の場合にのみ返金されます
+# オークションに勝てなかった場合。
 @external
 @payable
 def bid():
-    # Check if bidding period is over.
+    # 入札期間が終了しているか確認します。
     assert block.timestamp < self.auctionEnd
-    # Check if bid is high enough
+    # 入札額が十分に高いか確認します
     assert msg.value > self.highestBid
-    # Track the refund for the previous high bidder
+    # 以前の最高額入札者への返金を追跡します
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # Track new high bid
+    # 新しい最高入札額を追跡します
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Withdraw a previously refunded bid. The withdraw pattern is
-# used here to avoid a security issue. If refunds were directly
-# sent as part of bid(), a malicious bidding contract could block
-# those refunds and thus block new higher bids from coming in.
+# 以前に返金された入札を引き出します。ここではセキュリティ上の問題を回避するために
+# 引き出しパターンが使用されています。もし返金が直接
+# bid() の一部として送信された場合、悪意のある入札コントラクトが
+# それらの返金をブロックし、新しいより高額な入札が入るのをブロックする可能性があります。
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# End the auction and send the highest bid
-# to the beneficiary.
+# オークションを終了し、最高入札額を
+# 受益者に送信します。
 @external
 def endAuction():
-    # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send ether)
-    # into three phases:
-    # 1. checking conditions
-    # 2. performing actions (potentially changing conditions)
-    # 3. interacting with other contracts
-    # If these phases are mixed up, the other contract could call
-    # back into the current contract and modify the state or cause
-    # effects (ether payout) to be performed multiple times.
-    # If functions called internally include interaction with external
-    # contracts, they also have to be considered interaction with
-    # external contracts.
+    # 相互作用する関数を構築する際の優れたガイドラインは、
+    # 他のコントラクトと（つまり、関数を呼び出したりEtherを送信したりする場合）、
+    # 以下の3つのフェーズに分割することです：
+    # 1. 条件の確認
+    # 2. アクションの実行（条件を変更する可能性があります）
+    # 3. 他のコントラクトとの相互作用
+    # これらのフェーズが混ざっていると、他のコントラクトが
+    # 現在のコントラクトにコールバックして状態を変更したり、
+    # 効果（Etherの支払い）を複数回実行させたりする可能性があります。
+    # 内部で呼び出される関数に外部の
+    # コントラクトとの相互作用が含まれる場合、それらも
+    # 外部のコントラクトとの相互作用と見なす必要があります。
 
-    # 1. Conditions
-    # Check if auction endtime has been reached
+    # 1. 条件
+    # オークションの終了時間に達しているか確認します
     assert block.timestamp >= self.auctionEnd
-    # Check if this function has already been called
+    # この関数がすでに呼び出されているか確認します
     assert not self.ended
 
-    # 2. Effects
+    # 2. 効果
     self.ended = True
 
-    # 3. Interaction
+    # 3. 相互作用
     send(self.beneficiary, self.highestBid)
 ```
 
-この例は、Vyperのコントラクト構文がどのようなものか理解するのに役立つでしょう。 関数と変数のより詳細な説明については、[ドキュメント](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)を参照してください。
+この例から、Vyperのコントラクト構文がどのようなものかを感じ取れるはずです。 関数や変数の詳細については、[ドキュメントを参照してください](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)。
 
 ## YulとYul+ {#yul}
 
-イーサリアムを使い始めたばかりで、スマートコントラクト言語を使ってコードを書いたことがない場合は、SolidityやVyperを利用することをお勧めします。 YulやYul+を検討するのは、スマートコントラクトのセキュリティの最善の方法や、EVMとの連携の具体的な内容に精通してからにしてください。
+イーサリアムが初めてで、スマート・コントラクト言語でのコーディング経験がない場合は、SolidityまたはVyperから始めることをお勧めします。 スマート・コントラクトのセキュリティのベストプラクティスやEVMの操作の仕様に精通してから、YulやYul+を検討してください。
 
 **Yul**
 
-- イーサリアムのための中間言語
-- [EVM](/developers/docs/evm)および[Ewasm](https://github.com/ewasm)というイーサリアム向けのWebAssemblyをサポートしており、両方のプラットフォームで使用可能な共通部分として設計されている
-- EVMとeWASMの両方のプラットフォームに同程度のメリットをもたらす、高度な最適化段階を経る対象となる
+- イーサリアムの中間言語。
+- [EVM](/developers/docs/evm)と、イーサリアム向けWebAssemblyである[Ewasm](https://github.com/ewasm)をサポートしており、両プラットフォームで利用可能な共通基盤となるように設計されています。
+- EVMとEwasmの両プラットフォームに等しく恩恵をもたらす、高度な最適化段階の優れたターゲットです。
 
 **Yul+**
 
-- Yulに高効率な拡張機能を施した低レベル言語
-- コントラクトの[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups/)のために設計された
-- Yulに新しい機能を追加した実験的なアップグレード案として捉えることができる
+- Yulの低水準で高効率な拡張。
+- 当初は[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups/)のコントラクト用に設計されました。
+- Yul+は、Yulに新機能を追加する実験的なアップグレード提案と見なすことができます。
 
-### 参照すべきリンク {#important-links-2}
+### 重要なリンク {#important-links-2}
 
 - [Yulのドキュメント](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+のドキュメント](https://github.com/fuellabs/yulp)
-- [Yul+ Playground](https://yulp.fuel.sh/)
 - [Yul+の紹介記事](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### コントラクトのコード例 {#example-contract-2}
+### コントラクトの例 {#example-contract-2}
 
-以下の簡単な例では、べき乗関数を実装しています。 `solc --strict-assembly --bin input.yul`を使用してコンパイルすることができます。 この例は、input.yulに記述されます。
+以下の簡単な例は、累乗関数を実装しています。 これは`solc --strict-assembly --bin input.yul`を使用してコンパイルできます。 この例はinput.yulファイルに保存する必要があります。
 
 ```
 {
@@ -253,26 +251,26 @@ def endAuction():
 }
 ```
 
-スマートコントラクトの経験が豊富な場合は、Yulによる[ERC20の完全な実装](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)をご覧ください。
+すでにスマート・コントラクトの経験が豊富な場合、Yulでの完全なERC-20実装を[こちら](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)で見つけることができます。
 
 ## Fe {#fe}
 
-- イーサリアム仮想マシン(EVM)向けの静的型付け言語
-- PythonとRustの影響を受けている
-- イーサリアムのエコシステムに不慣れなデベロッパーでも簡単に学習できる言語であることを目標としている
-- Feの開発は未だ初期段階にあり、2021年1月にアルファ版がリリースされた
+- イーサリアム仮想マシン (EVM) 向けの静的型付け言語。
+- PythonとRustに影響を受けています。
+- イーサリアムエコシステムが初めての開発者にとっても、学びやすいことを目指しています。
+- Feの開発はまだ初期段階にあり、2021年1月にアルファ版がリリースされました。
 
-### 参照すべきリンク {#important-links-3}
+### 重要なリンク {#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
-- [Feに関するアナウンス](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
-- [2021年のFeのロードマップ](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
-- [FeのDiscordチャット](https://discord.com/invite/ywpkAXFjZH)
-- [Twitter](https://twitter.com/official_fe)
+- [Feの発表](https://blog.fe-lang.org/posts/fe-a-new-language-for-the-ethereum-ecosystem/)
+- [Feの2021年ロードマップ](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
+- [Feのディスコードチャット](https://discord.com/invite/ywpkAXFjZH)
+- [Feのツイッター](https://twitter.com/official_fe)
 
-### コントラクトのコード例 {#example-contract-3}
+### コントラクトの例 {#example-contract-3}
 
-Feで実装されたシンプルなコントラクトのコード例を以下に示します。
+以下は、Feで実装されたシンプルなコントラクトです。
 
 ```
 type BookMsg = bytes[100]
@@ -290,37 +288,36 @@ contract GuestBook:
 
     pub def get_msg(addr: address) -> BookMsg:
         return self.guest_book[addr].to_mem()
-
 ```
 
-## 選択方法 {#how-to-choose}
+## 選び方 {#how-to-choose}
 
-他のプログラミング言語と同様に、個人的な好みだけでなく、行いたいことに最適なツールを選択することが重要です。
+他のプログラミング言語と同様に、基本的には適材適所で適切なツールを選ぶことと、個人の好みの問題です。
 
-まだどの言語も試していない場合に考慮すべき事項をいくつか紹介します。
+まだどの言語も試したことがない場合は、以下の点を考慮してみてください。
 
-### Solidityの長所 {#solidity-advantages}
+### Solidityの素晴らしい点は？ {#solidity-advantages}
 
-- 初心者向けに、多くのチュートリアルや学習ツールが用意されている。 詳細については、[コーディングで学ぶ](/developers/learning-tools/)セクションを参照
-- 優れた開発ツールが利用可能
-- Solidityには大きなデベロッパーコミュニティがあり、質問に対する答えをすぐに見つけることができる
+- 初心者向けに、多くのチュートリアルや学習ツールが用意されています。 詳細については、[コーディングによる学習](/developers/learning-tools/)のセクションを参照してください。
+- 優れた開発者ツールが利用可能です。
+- Solidityには大規模な開発者コミュニティがあるため、疑問に対する答えをすぐに見つけられる可能性が高いです。
 
-### Vyperの長所 {#vyper-advatages}
+### Vyperの素晴らしい点は？ {#vyper-advatages}
 
-- Pythonデベロッパーが、スマートコントラクトの記述を始めるのに最適な方法である
-- Vyperの機能の数は絞られているため、アイデアから素早くプロトタイプを構築可能
-- Vyperは監査が容易で、最大限に人間が読めるようにすることを目指している
+- スマート・コントラクトを書きたいPython開発者にとって、始めるのに最適な方法です。
+- Vyperは機能数が少ないため、アイデアの迅速なプロトタイピングに最適です。
+- Vyperは、監査が容易で、人間にとって最大限に読みやすいことを目指しています。
 
-### YulとYul+の長所 {#yul-advantages}
+### YulとYul+の素晴らしい点は？ {#yul-advantages}
 
-- シンプルで機能的な低レベル言語
-- 生のEVMに近づくことができ、コントラクトのガス使用量を最適化するのに役立つ
+- シンプルで機能的な低水準言語です。
+- 生のEVMに非常に近いレベルで操作できるため、コントラクトのガス使用量を最適化するのに役立ちます。
 
-## 言語比較 {#language-comparisons}
+## 言語の比較 {#language-comparisons}
 
-コントラクトのライフサイクル、インターフェイス、演算子、データ構造、関数、制御フローなどの基本的な構文の比較については、 [Auditlessによるチートシート](https://reference.auditless.com/cheatsheet/)を参照してください。
+基本的な構文、コントラクトのライフサイクル、インターフェース、演算子、データ構造、関数、制御フローなどの比較については、[Auditlessによるチートシート](https://reference.auditless.com/cheatsheet/)を確認してください。
 
 ## 参考文献 {#further-reading}
 
-- [OpenZeppelinによるSolidityコントラクトライブラリ](https://docs.openzeppelin.com/contracts)
+- [オープンツェッペリンによるSolidityコントラクトライブラリ](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Example](https://solidity-by-example.org)

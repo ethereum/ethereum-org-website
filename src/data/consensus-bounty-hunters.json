@@ -5,6 +5,11 @@
     "score": 42400
   },
   {
+    "username": "revofusion",
+    "name": "Revofusion",
+    "score": 46250
+  },
+  {
     "username": "cryptosubtlety",
     "name": "Quan Thoi Minh Nguyen",
     "score": 19650
@@ -25,13 +30,23 @@
     "score": 10000
   },
   {
-    "username": "sifraitech",
+    "username": "grandinetech",
     "name": "Grandine team",
     "score": 9000
   },
   {
+    "username": "alexfilippov314",
+    "name": "alexfilippov314",
+    "score": 6000
+  },
+  {
     "username": "kilic",
     "name": "Onur Kılıç",
+    "score": 6000
+  },
+  {
+    "username": "link-infsec",
+    "name": "InfiniteSec",
     "score": 6000
   },
   {
@@ -49,6 +64,11 @@
     "name": "John Stawinski",
     "score": 5000
   },
+  {
+    "username": "sbudella-gco",
+    "name": "Giuseppe Cocomazzi",
+    "score": 5000
+  },  
   {
     "username": "asanso",
     "name": "Antonio Sanso",
@@ -80,6 +100,11 @@
     "score": 2500
   },
   {
+    "username": "sonny2k",
+    "name": "Thanh Luu (sonny2k)",
+    "score": 2500
+  },  
+  {
     "username": "",
     "name": "Akincibor",
     "score": 1750
@@ -92,13 +117,58 @@
   {
     "username": "0xalpharush",
     "name": "alpharush",
-    "score": 1000
+    "score": 2000
   },
   {
     "username": "DragonDev1906",
     "name": "DragonDev1906",
     "score": 1000
-  },  
+  },
+  {
+    "username": "chainsecurity",
+    "name": "ChainSecurity",
+    "score": 1000
+  },
+  {
+    "username": "0xpulp",
+    "name": "0xPulp",
+    "score": 1000
+  },
+  {
+    "username": "quasar",
+    "name": "Evgeny Legerov",
+    "score": 1000
+  },
+  {
+    "username": "0xfadam",
+    "name": "fadam",
+    "score": 1000
+  },
+  {
+    "username": "therealgregoai",
+    "name": "Grego AI",
+    "score": 1000
+  },
+  {
+    "username": "Jeongmin Choi",
+    "name": "Jeongmin Choi",
+    "score": 1000
+  },
+  {
+    "username": "Alleysira",
+    "name": "Jie Ma (UTUX Labs)",
+    "score": 1000
+  },
+  {
+    "username": "sko94",
+    "name": "XDZIBECX",
+    "score": 500
+  },
+  {
+    "username": "cyberthirst",
+    "name": "cyberthirst",
+    "score": 500
+  },
   {
     "username": "mcdee",
     "name": "Jim McDonald",

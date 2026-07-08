@@ -1,0 +1,12 @@
+{
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "Jogos nos EUA",
+  "energy-consumption-chart-global-data-centers-label": "Data centers globais",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-gold-mining-cbeci-label": "Mineração de ouro",
+  "energy-consumption-chart-legend": "Consumo anual de energia em TWh/ano"
+}

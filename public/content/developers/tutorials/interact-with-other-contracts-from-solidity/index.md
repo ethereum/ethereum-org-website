@@ -4,6 +4,7 @@ description: How to deploy a smart contract from an existing contract and intera
 author: "jdourlens"
 tags: ["smart contracts", "solidity", "remix", "deploying", "composability"]
 skill: advanced
+breadcrumb: Contract interactions
 lang: en
 published: 2020-04-05
 source: EthereumDev

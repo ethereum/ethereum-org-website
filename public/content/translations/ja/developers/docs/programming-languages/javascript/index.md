@@ -1,73 +1,72 @@
 ---
-title: JavaScriptデベロッパーのためのイーサリアム
-description: JavaScriptベースのプロジェクトとツールを使ってイーサリアムの開発方法を学ぶ
+title: "JavaScript開発者向けのイーサリアム"
+description: "JavaScriptベースのプロジェクトやツールを使用して、イーサリアム向けに開発する方法を学びます。"
 lang: ja
 ---
 
-JavaScriptはイーサリアムのエコシステムで最も人気のある言語の1つです。 実際、できるだけ多くのイーサリアムの機能をJavaScriptで実装することに注力している専門[チーム](https://github.com/ethereumjs)も存在しています。
+JavaScriptは、イーサリアムエコシステムの中で最も人気のある言語の1つです。実際、イーサリアムの機能を可能な限りJavaScriptに導入することに専念している[チーム](https://github.com/ethereumjs)が存在します。
 
-[スタックのすべてのレベル](/developers/docs/ethereum-stack/)で、JavaScript (または近似の言語) で記述できる機会があります。
+[スタックのすべてのレベル](/developers/docs/ethereum-stack/)で、JavaScript（またはそれに近い言語）を記述する機会があります。
 
-## イーサリアムとのやりとり {#interact-with-ethereum}
+## イーサリアムとのやり取り {#interact-with-ethereum}
 
 ### JavaScript APIライブラリ {#javascript-api-libraries}
 
-JavaScriptでブロックチェーンへのクエリやトランザクションの送信などを行うための最も便利な方法は、[JavaScript APIライブラリ](/developers/docs/apis/javascript/)を使用することです。 このライブラリのAPIを使用すると、デベロッパーは[イーサリアムネットワークのノード](/developers/docs/nodes-and-clients/)と簡単にやり取りできます。
+JavaScriptを記述してブロックチェーンにクエリを実行したり、トランザクションを送信したりする場合、最も便利な方法は[JavaScript APIライブラリ](/developers/docs/apis/javascript/)を使用することです。これらのAPIを使用すると、開発者は[イーサリアムネットワークのノード](/developers/docs/nodes-and-clients/)と簡単にやり取りできます。
 
-このライブラリにより、イーサリアム上のスマートコントラクトとやり取りできるようになります。そのため、JavaScriptのみで既存のコントラクトとやり取りできるdappを構築することが可能になります。
+これらのライブラリを使用してイーサリアム上のスマート・コントラクトとやり取りできるため、JavaScriptを使用するだけで既存のコントラクトとやり取りする分散型アプリケーション (dapp) を構築することが可能です。
 
-**以下をご参照ください。**
+**チェックする**
 
-- [Web3.js](https://web3js.readthedocs.io/)
-- [Ethers.js](https://docs.ethers.io/) - _JavaScriptとTypeScriptでの完全なイーサリアムウォレットの実装とユーティリティを含む_
-- [viem](https://viem.sh) – イーサリアム用のTypeScriptインターフェイスで、イーサリアムとやり取りする低レベルのステートレスプリミティブを提供します。
+- [Web3.js](https://web3js.readthedocs.io)
+- [Ethers.js](https://ethers.org) – _JavaScriptおよびTypeScriptでのイーサリアムウォレットの実装とユーティリティが含まれています。_
+- [viem](https://viem.sh) – _イーサリアムとやり取りするための低レベルのステートレスなプリミティブを提供する、イーサリアム向けのTypeScriptインターフェースです。_
+- [Drift](https://ryangoree.github.io/drift/) – _Web3ライブラリ全体でイーサリアム開発を簡単に行うための、キャッシュ、フック、テストモックが組み込まれたTypeScriptメタライブラリです。_
 
-### スマートコントラクト {#smart-contracts}
+### スマート・コントラクト {#smart-contracts}
 
-独自のスマートコントラクトを作成したいと考えているJavaScriptデベロッパーは、[Solidity](https://solidity.readthedocs.io)について熟知することをお勧めします。 これは最も人気のあるスマートコントラクト言語であり、構文的にはJavaScriptに似ているため、比較的簡単に習得できる可能性があります。
+JavaScript開発者で独自のスマート・コントラクトを記述したい場合は、[Solidity](https://solidity.readthedocs.io)に慣れるとよいでしょう。これは最も人気のあるスマート・コントラクト言語であり、構文がJavaScriptに似ているため、学習しやすいかもしれません。
 
-詳細については、[スマートコントラクト](/developers/docs/smart-contracts/)をご確認ください。
+[スマート・コントラクト](/developers/docs/smart-contracts/)の詳細。
 
-## プロトコルの理解 {#understand-the-protocol}
+## プロトコルを理解する {#understand-the-protocol}
 
 ### イーサリアム仮想マシン {#the-ethereum-virtual-machine}
 
-[イーサリアム仮想マシン](/developers/docs/evm/)のJavaScript実装を利用できます。 これは、最新のフォークルールをサポートしています。 フォークルールとは、計画されたアップグレードの結果としてEVMに加えられた変更のことです。
+[イーサリアム仮想マシン](/developers/docs/evm/)のJavaScript実装が存在します。これは最新のフォークのルールをサポートしています。フォークのルールとは、計画されたアップグレードの結果としてEVMに加えられた変更を指します。
 
-イーサリアム仮想マシンは、さまざまなJavaScriptパッケージに分かれています。これらのパッケージを調べることで、以下の項目について理解を深めることができます。
+これはさまざまなJavaScriptパッケージに分割されており、以下を確認することで理解を深めることができます。
 
 - アカウント
 - ブロック
 - ブロックチェーン自体
 - トランザクション
-- その他
+- その他...
 
-これにより、アカウントのデータ構造などについて理解できるようになります。
+これにより、「アカウントのデータ構造はどのようになっているか？」といったことを理解するのに役立ちます。
 
-コードを読みたい場合は、イーサリアムドキュメントを通読するよりも、上記のJavaScriptのほうが役立ちます。
+コードを読む方が好きな場合、このJavaScriptはドキュメントを読む代わりの素晴らしい選択肢になるでしょう。
 
-**モノリポを調べる**  
-[`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
+**EVMをチェックする**  
+[`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
 ### ノードとクライアント {#nodes-and-clients}
 
-Ethereumjsクライアントは活発に開発されており、JavaScriptで書かれたイーサリアムクライアントの仕組みを詳しく学ぶことができます。
+EthereumJSクライアントは現在活発に開発されており、あなたが理解できる言語であるJavaScriptで、イーサリアムクライアントがどのように機能するかを深く掘り下げることができます！
 
-以前は、スタンドアロンの[`repository`](https://github.com/ethereumjs/ethereumjs-client)に格納されていましたが、後にパッケージとしてEthereumVMモノレポにマージされました。
+**クライアントをチェックする**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
-**クライアントを調べる**  
-[`ethereumjs`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+## その他のプロジェクト {#other-projects}
 
-## 他のプロジェクト {#other-projects}
+イーサリアムのJavaScript領域では、他にも多くのプロジェクトが進行しています。以下はその一部です。
 
-イーサリアムのJavaScript界隈では、その他にも、以下を含めた多くのプロジェクトが進められています。
+- ウォレットユーティリティのライブラリ。
+- イーサリアムのキーを生成、インポート、エクスポートするためのツール。
+- `merkle-patricia-tree`の実装 – イーサリアムのイエロー・ペーパーで概説されているデータ構造。
 
-- ウォレットユーティリティのライブラリ
-- イーサリアムのキーを生成、インポート、エクスポートするためのツール
-- `merkle-patricia-tree`の実装 - イーサリアムの技術仕様書で概説されているデータ構造
-
-[EthereumJSリポジトリ](https://github.com/ethereumjs)で、最も興味があるものについて詳細に調査してみてください。
+[EthereumJSリポジトリ](https://github.com/ethereumjs)で、最も興味のあるものを掘り下げてみてください。
 
 ## 参考文献 {#further-reading}
 
-_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
+_役に立ったコミュニティリソースをご存知ですか？このページを編集して追加してください！_

@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before submitting this suggestion, be sure to read our [listing policy for dev tools](https://ethereum.org/en/contributing/adding-developer-tools/)
+        Before submitting this suggestion, be sure to read our [listing policy for dev tools](https://ethereum.org/contributing/adding-developer-tools/)
   - type: markdown
     id: project_info
     attributes:

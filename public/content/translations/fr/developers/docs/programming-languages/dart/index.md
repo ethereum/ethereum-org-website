@@ -1,28 +1,30 @@
 ---
-title: Ethereum pour les développeurs Dart
-description: Apprendre à développer pour Ethereum avec le langage de programmation Dart
+title: "Ethereum pour les développeurs Dart"
+description: "Apprenez à développer pour Ethereum en utilisant le langage Dart"
 lang: fr
 incomplete: true
 ---
 
-## Débuter avec les Contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Premiers pas avec les contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
 
-## Tutos {#tutorials}
+## Tutoriels {#tutorials}
 
-- [Flutter et blockchain – la dApp Hello World](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) vous emmène à travers toutes les étapes pour bien débuter :
-  1.  Écrire un contrat intelligent avec [Solidity](https://soliditylang.org/)
-  2.  Écrire une interface utilisateur avec Dart
-- [Créer une dApp mobile avec Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) est beaucoup plus court, ce qui pourrait mieux convenir si vous connaissez déjà les bases
-- Si vous préférez apprendre en regardant une vidéo, vous pouvez regarder [Elaborez votre première App Blockchain avec Flutter](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), en une heure.
-- Si vous êtes impatient, vous préférerez peut-être [créer une application décentralisée blockchain avec Flutter et Dart sur Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), en seulement vingt minutes.
-- [Intégration de MetaMask dans l'application Flutter avec Web3Modal de WalletConnect](https://www.youtube.com/watch?v=v_M2buHCpc4). Cette courte vidéo vous explique les étapes d'intégration de MetaMask dans vos applications Flutter avec la bibliothèque [Web3Modal](https://pub.dev/packages/web3modal_flutter) de WalletConnect
-- [Bootcamp pour développeurs Blockchain Mobile avec Solidity & Flutter](https://youtube.com/playlist?list=PL4V4Unlk5luhQ26ERO6hWEbcUwHDSSmVH) - Liste de cours pour développeurs blockchain full stack mobile
+- [Flutter et chaîne de blocs – Hello World Dapp](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) vous guide à travers toutes les étapes pour commencer :
+  1.  Écrire un contrat intelligent en [Solidity](https://soliditylang.org/)
+  2.  Écrire une interface utilisateur en Dart
+- [Créer une dapp mobile avec Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) est beaucoup plus court, ce qui pourrait être préférable si vous connaissez déjà les bases
+- Si vous préférez apprendre en regardant une vidéo, vous pouvez regarder [Créer votre première application Flutter sur chaîne de blocs](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), qui dure environ une heure
+- Si vous êtes impatient, vous préférerez peut-être [Créer une application décentralisée sur chaîne de blocs avec Flutter et Dart sur Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), qui ne dure qu'une vingtaine de minutes
+- [Intégrer MetaMask dans une application Flutter avec Web3Modal par WalletConnect](https://www.youtube.com/watch?v=v_M2buHCpc4) - cette courte vidéo vous guide à travers les étapes d'intégration de MetaMask dans vos applications Flutter avec la bibliothèque [Web3Modal](https://pub.dev/packages/web3modal_flutter) de WalletConnect
+- [Cours intensif de développeur de chaîne de blocs mobile avec Solidity et Flutter](https://youtube.com/playlist?list=PL4V4Unlk5luhQ26ERO6hWEbcUwHDSSmVH) - liste de lecture de cours complets pour développeur de chaîne de blocs mobile full stack
 
-## Travailler avec des clients Ethereum {#working-with-ethereum-clients}
+## Travailler avec les clients Ethereum {#working-with-ethereum-clients}
 
-Vous pouvez utiliser Ethereum pour créer des applications décentralisées (ou « dApps ») qui utilisent les avantages de la technologie des cryptomonnaies et de la blockchain. Il existe au moins deux bibliothèques actuellement maintenues pour Dart permettant d'utiliser l'API [JSON-RPC](/developers/docs/apis/json-rpc/) pour Ethereum.
+Vous pouvez utiliser Ethereum pour créer des applications décentralisées (ou « dapps ») qui utilisent les avantages de la cryptomonnaie et de la technologie de la chaîne de blocs.
+Il existe au moins deux bibliothèques actuellement maintenues pour Dart afin d'utiliser l'[API JSON-RPC](/developers/docs/apis/json-rpc/) pour Ethereum.
 
-1. [Web3dart par simonbutler.eu](https://pub.dev/packages/web3dart)
-1. [Ethereum 5.0.0 par darticulate.com](https://pub.dev/packages/ethereum)
+1. [Web3dart de pwa.ir](https://pub.dev/packages/web3dart)
+1. [Ethereum 5.0.0 de darticulate.com](https://pub.dev/packages/ethereum)
 
-Il existe également des bibliothèques supplémentaires qui vous permettent de manipuler des adresses Ethereum spécifiques, ou qui vous permettent de récupérer les prix de différentes cryptomonnaies. [Vous pouvez consulter la liste complète ici](https://pub.dev/dart/packages?q=ethereum).
+Il existe également des bibliothèques supplémentaires qui vous permettent de manipuler des adresses Ethereum spécifiques, ou qui vous permettent de récupérer les prix de diverses cryptomonnaies.
+[Vous pouvez consulter la liste complète ici](https://pub.dev/dart/packages?q=ethereum).

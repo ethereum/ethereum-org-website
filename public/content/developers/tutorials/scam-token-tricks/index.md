@@ -4,6 +4,7 @@ description: In this tutorial we dissect a scam token to see some of the tricks 
 author: Ori Pomerantz
 tags: ["scam", "solidity", "erc-20", "javascript", "typescript"]
 skill: intermediate
+breadcrumb: Scam token tricks
 published: 2023-09-15
 lang: en
 ---
@@ -49,7 +50,7 @@ abstract contract Ownable is Context {
 }
 ```
 
-The [`ARB` token contract](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc85535da2d3c6fc7#code) does not have a privileged address directly. However, it does not need one. It sits behind a [`proxy`](https://docs.openzeppelin.com/contracts/4.x/api/proxy) at [address `0xb50721bcf8d664c30412cfbc6cf7a15145234ad1`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1#code). That contract has a privileged address (see the fourth file, `ERC1967Upgrade.sol`) that be used for upgrades.
+The [`ARB` token contract](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc85535da2d3c6fc7#code) does not have a privileged address directly. However, it does not need one. It sits behind a [`proxy`](https://docs.openzeppelin.com/contracts/5.x/api/proxy) at [address `0xb50721bcf8d664c30412cfbc6cf7a15145234ad1`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1#code). That contract has a privileged address (see the fourth file, `ERC1967Upgrade.sol`) that be used for upgrades.
 
 ```solidity
     /**
@@ -161,7 +162,7 @@ There are two potential red flags in this function.
 
 - The same issue we saw in `_transfer`, which is when `contract_owner` sends tokens they appear to come from `deployer`.
 
-### The fake events function `dropNewTokens` {#the-fake-events-function-dropNewTokens}
+### The fake events function `dropNewTokens` {#the-fake-events-function-dropnewtokens}
 
 Now we come to something that looks like an actual scam. I edited the function a bit for readability, but it's functionally equivalent.
 
@@ -234,7 +235,7 @@ These code quality issues don't _prove_ that this code is a scam, but they make 
 
 #### The `mount` function {#the-mount-function}
 
-While it is not specified in [the standard](https://eips.ethereum.org/EIPS/eip-20), generally speaking the function that creates new tokens is called [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
+While it is not specified in [the standard](https://eips.ethereum.org/EIPS/eip-20), generally speaking the function that creates new tokens is called [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 
 If we look in the `wARB` constructor, we see the time mint function has been renamed to `mount` for some reason, and is called five times with a fifth of the initial supply, instead of once for the entire amount for efficiency.
 
@@ -459,3 +460,5 @@ Another possible way to identify scam tokens is to see if they have any suspicio
 Automated detection of ERC-20 scams suffers from [false negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error), because a scam can use a perfectly normal ERC-20 token contract that just doesn't represent anything real. So you should always attempt to _get the token address from a trusted source_.
 
 Automated detection can help in certain cases, such as DeFi pieces, where there are many tokens and they need to be handled automatically. But as always [caveat emptor](https://www.investopedia.com/terms/c/caveatemptor.asp), do your own research, and encourage your users to do likewise.
+
+[See here for more of my work](https://cryptodocguy.pro/).

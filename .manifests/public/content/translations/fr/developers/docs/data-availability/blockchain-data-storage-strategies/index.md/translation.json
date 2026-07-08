@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-30T00:00:18.913Z",
+  "englishManifestHash": "ec4849a883b8",
+  "placeholderOrder": [
+    "LINK-5bf5a0",
+    "CODE-dde8be",
+    "LINK-27c59c",
+    "LINK-18f86d",
+    "LINK-08a3d2",
+    "LINK-ab55fe",
+    "LINK-273bda",
+    "LINK-37f8a6",
+    "LINK-4189ff",
+    "LINK-fe1885",
+    "LINK-709d01",
+    "LINK-91b450",
+    "LINK-f0f401",
+    "LINK-2744b3",
+    "LINK-89e94d",
+    "LINK-2cf4cf",
+    "LINK-095850",
+    "LINK-493c9c",
+    "LINK-12c146",
+    "LINK-afd3ed",
+    "CODE-00ebb2",
+    "LINK-c5a507",
+    "LINK-c9e7cc",
+    "CODE-7e36da",
+    "LINK-6ae597",
+    "LINK-e89756",
+    "CODE-d9bddb",
+    "LINK-35d5b1",
+    "LINK-12c146",
+    "LINK-60ec34",
+    "CODE-00ebb2",
+    "LINK-c5a507",
+    "LINK-b6c8db",
+    "CODE-7e36da",
+    "LINK-6ae597",
+    "LINK-65e4f1",
+    "CODE-d9bddb",
+    "LINK-9cdf11",
+    "LINK-2c1e0c",
+    "LINK-fe928b",
+    "LINK-5b2c99",
+    "CODE-3e9c1f",
+    "CODE-3e9c1f",
+    "LINK-b1f498",
+    "CODE-dabe13",
+    "CODE-dabe13",
+    "LINK-e19d28",
+    "LINK-ad72eb",
+    "LINK-f25ef4",
+    "LINK-edd5ca",
+    "LINK-12cd14",
+    "LINK-efd6d9",
+    "CODE-dabe13"
+  ],
+  "placeholderMap": {
+    "CODE-dde8be": {
+      "type": "inline-code",
+      "values": {
+        "content": "Transfer"
+      }
+    },
+    "CODE-00ebb2": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xFF00000000000000000000000000000000000010"
+      }
+    },
+    "CODE-7e36da": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6"
+      }
+    },
+    "CODE-d9bddb": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xFF00000000000000000000000000000000008453"
+      }
+    },
+    "CODE-3e9c1f": {
+      "type": "inline-code",
+      "values": {
+        "content": "EXTCODECOPY"
+      }
+    },
+    "CODE-dabe13": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xEF"
+      }
+    },
+    "LINK-5bf5a0": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20#events"
+      }
+    },
+    "LINK-27c59c": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.org/developers/docs/nodes-and-clients/#full-node"
+      }
+    },
+    "LINK-18f86d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/intro-to-ethereum/"
+      }
+    },
+    "LINK-08a3d2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-273bda": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/beacon-chain.md"
+      }
+    },
+    "LINK-37f8a6": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4844"
+      }
+    },
+    "LINK-4189ff": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration"
+      }
+    },
+    "LINK-fe1885": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas"
+      }
+    },
+    "LINK-709d01": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups"
+      }
+    },
+    "LINK-91b450": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.optimism.io/connect/resources/glossary#challenge-period"
+      }
+    },
+    "LINK-f0f401": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.optimism.io/connect/resources/glossary#validator"
+      }
+    },
+    "LINK-2744b3": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.optimism.io/connect/resources/glossary#sequencer"
+      }
+    },
+    "LINK-89e94d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-and-analytics/block-explorers"
+      }
+    },
+    "LINK-2cf4cf": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups/#data-availability"
+      }
+    },
+    "LINK-095850": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/tx/0xf6cfaf0431c73dd1d96369a5e6707d64f463ccf477a4131265397f1d81466929?tab=index"
+      }
+    },
+    "LINK-493c9c": {
+      "type": "link",
+      "values": {
+        "url": "https://blobscan.com/blocks"
+      }
+    },
+    "LINK-12c146": {
+      "type": "link",
+      "values": {
+        "url": "https://www.optimism.io/"
+      }
+    },
+    "LINK-afd3ed": {
+      "type": "link",
+      "values": {
+        "url": "https://blobscan.com/address/0xFF00000000000000000000000000000000000010"
+      }
+    },
+    "LINK-c5a507": {
+      "type": "link",
+      "values": {
+        "url": "https://arbitrum.io/"
+      }
+    },
+    "LINK-c9e7cc": {
+      "type": "link",
+      "values": {
+        "url": "https://blobscan.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6"
+      }
+    },
+    "LINK-6ae597": {
+      "type": "link",
+      "values": {
+        "url": "https://base.org/"
+      }
+    },
+    "LINK-e89756": {
+      "type": "link",
+      "values": {
+        "url": "https://blobscan.com/address/0xFF00000000000000000000000000000000008453"
+      }
+    },
+    "LINK-35d5b1": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.optimism.io/stack/protocol/overview#fault-proofs"
+      }
+    },
+    "LINK-60ec34": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0xFF00000000000000000000000000000000000010"
+      }
+    },
+    "LINK-b6c8db": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6"
+      }
+    },
+    "LINK-65e4f1": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0xFF00000000000000000000000000000000008453"
+      }
+    },
+    "LINK-9cdf11": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Cryptographic_hash_function"
+      }
+    },
+    "LINK-2c1e0c": {
+      "type": "link",
+      "values": {
+        "url": "https://redstone.xyz/docs/what-is-redstone"
+      }
+    },
+    "LINK-fe928b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/plasma/"
+      }
+    },
+    "LINK-5b2c99": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#3c?fork=shanghai"
+      }
+    },
+    "LINK-b1f498": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/about#memoryexpansion"
+      }
+    },
+    "LINK-e19d28": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@ipsilon/evm-object-format-overview"
+      }
+    },
+    "LINK-ad72eb": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/docs/solidity-events"
+      }
+    },
+    "LINK-f25ef4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#a0?fork=cancun"
+      }
+    },
+    "LINK-edd5ca": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.alchemy.com/docs/smart-contract-storage-layout#what-is-storage-memory"
+      }
+    },
+    "LINK-12cd14": {
+      "type": "link",
+      "values": {
+        "url": "https://www.evm.codes/#55?fork=cancun"
+      }
+    },
+    "LINK-efd6d9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-30T00:00:18.913Z",
+      "status": "success"
+    }
+  }
+}

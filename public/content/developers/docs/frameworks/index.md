@@ -71,7 +71,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 **Tenderly -** **_Web3 development platform that enables blockchain developers to build, test, debug, monitor, and operate smart contracts and improve dapp UX._**
 
 - [Website](https://tenderly.co/)
-- [Documentation](https://docs.tenderly.co/ethereum-development-practices)
+- [Documentation](https://docs.tenderly.co/)
 
 **The Graph -** **_The Graph for querying blockchain data efficiently._**
 
@@ -115,21 +115,19 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 **OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts._**
 
-- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community Forum](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK development has ended**
 
 **Catapulta -** **_Multi-chain smart contracts deployment tool, automate verifications in block explorers, keep track deployed smart contracts and share deployment reports, plug-n-play for Foundry and Hardhat projects._**
 
-- [Website](https://catapulta.sh/)
-- [Documentation](https://catapulta.sh/docs)
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://github.com/catapulta-sh)
 
-**Covalent -** **_Enriched blockchain APIs for 200+ Chains._**
+**GoldRush (powered by Covalent) -** **_GoldRush offers the most comprehensive blockchain data API suite for developers, analysts, and enterprises. Whether you are building a DeFi dashboard, a wallet, a trading bot, an AI agent or a compliance platform, the data APIs provide fast, accurate, and developer-friendly access to the essential onchain data you need_**
 
-- [covalenthq.com](https://www.covalenthq.com/)
-- [Documentation](https://www.covalenthq.com/docs/api/)
+- [Website](https://goldrush.dev/)
+- [Documentation](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
@@ -155,3 +153,7 @@ _Know of a community resource that helped you? Edit this page and add it!_
 ## Related topics {#related-topics}
 
 - [Set up a local development environment](/developers/local-environment/)
+
+## Tutorials: Development frameworks on Ethereum {#tutorials}
+
+- [Hello World Smart Contract for Beginners – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Build and deploy a hello world smart contract using Hardhat, then connect it to a frontend._

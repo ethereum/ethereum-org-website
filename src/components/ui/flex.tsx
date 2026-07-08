@@ -2,7 +2,7 @@ import {
   type BaseHTMLAttributes,
   Children,
   cloneElement,
-  type ElementRef,
+  type ComponentRef,
   forwardRef,
   Fragment,
   isValidElement,
@@ -13,7 +13,7 @@ import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
-type FlexElement = ElementRef<"div">
+type FlexElement = ComponentRef<"div">
 
 type FlexProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
 
@@ -41,23 +41,26 @@ const Center = forwardRef<FlexElement, FlexProps>(
 
 Center.displayName = "Center"
 
-type StackProps = FlexProps & { separator?: ReactElement }
+type StackProps = FlexProps & { separator?: ReactElement<unknown> }
 
 const Stack = forwardRef<FlexElement, StackProps>(
-  ({ className, separator, children, ...props }, ref) => {
+  ({ className, separator, children, asChild, ...props }, ref) => {
     const cloneChildren = useMemo(() => {
-      if (!separator) return children
+      if (asChild || !separator) return children
 
       const validChildren = Children.toArray(children).filter((child) =>
         isValidElement(child)
       )
 
-      const sep = cloneElement(separator, {
-        className: cn(
-          separator.props.className,
-          "size-auto border self-stretch"
-        ),
-      })
+      const sep = cloneElement(
+        separator as ReactElement<{ className?: string }>,
+        {
+          className: cn(
+            (separator as ReactElement<{ className?: string }>).props.className,
+            "size-auto border self-stretch"
+          ),
+        }
+      )
 
       return validChildren.map((child, index) => {
         const key = typeof child.key !== "undefined" ? child.key : index
@@ -69,9 +72,14 @@ const Stack = forwardRef<FlexElement, StackProps>(
           </Fragment>
         )
       })
-    }, [separator, children])
+    }, [separator, children, asChild])
     return (
-      <Flex ref={ref} className={cn("flex-col gap-2", className)} {...props}>
+      <Flex
+        ref={ref}
+        className={cn("flex-col gap-2", className)}
+        asChild={asChild}
+        {...props}
+      >
         {cloneChildren}
       </Flex>
     )

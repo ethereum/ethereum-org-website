@@ -29,20 +29,20 @@ Ideally, ask yourself what design decision/assumptions have been made on the pag
 - form fields abandoned
 - scroll behavior down a page
 
-This data can be later used to decide whether a feature is being used or is underperforming.
+This data can later be used to decide whether a feature is being used or is underperforming.
 
 It's helpful to ask yourself how the results of what we track and measure might influence our decision-making. For example, measuring something that won't help us make concrete product decisions is probably not worth tracking.
 
 # How to name events?
 
-Broadly, events should be grouped by specific topic (e.g. L2 page external links, selected bridge, selected cex).
+Broadly, events should be grouped by specific topic (e.g., L2 page external links, selected bridge, selected cex).
 
-## Each event comprises of 4 hierarchical values:
+## Each event comprises 4 hierarchical values:
 
 1. Category (other events may share the same category if one feature has several actions)
 2. Action
 3. Name (optional)
-4. Value (optional, can be number or text)
+4. Value (optional, can be a number or text)
 
 ## Category
 
@@ -69,7 +69,7 @@ Such division allows us to identify where a user clicked on the page precisely; 
 Ethereum.org has a utility function (`trackCustomEvent`) for easily creating Matomo events.
 
 ```javascript
-import { trackCustomEvent } from "../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 ```
 
 The function requires an object of event options. See the example below.
@@ -91,7 +91,7 @@ Can be used to get more info on the UX.
 
 Examples:
 
-- Use it to track the average position of clicked search result
+- Use it to track the average position of clicked search results
 - What terms are entered into the search field
 - Which option is chosen from a dropdown menu
 - How many or what filters are applied when filtering the list of wallets

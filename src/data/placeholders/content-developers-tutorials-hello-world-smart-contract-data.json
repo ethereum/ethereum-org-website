@@ -1,11 +1,11 @@
 {
   "/content/developers/tutorials/hello-world-smart-contract/hello-world-create-app.png": {
-    "hash": "804f39b3",
-    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAsTAAALEwEAmpwYAAABkklEQVR4nH2LWyhDcQCHf+VFUpLyIOVJ4sWeRBS5RXgh5tKyDMktLeJBymhPkgeXGM01l0K5ZQ1jaEJCbLNZK+1mZY5txjnbHP+Td7++h9/38AEY5wiZQpgM4TO84j3ZqmFQ9oiUdWRsIm8LJXso20edEmIluk4BjHJBxCxiFhElb+m5/vlxWe0u5O+gYBelClQfQKRC0zEaVeg8J8EYMIHIecQtI36lsk2jubJtKCzI2eYaEvCVEB2hVY2Wk79gGBgBJhE6jeg5xC4gbhEJy0heQ9oGsrdQtIMKBWoPITzkGn7NSVWtukyoLm844zedV7ZrasQXgu5LQe+1UHJTJ70VDd3Vj9w3TzyKlwydC/dgWZ/f76nvkPPyB1MLpcm5ksSs/j+SMjl4OQPx6X2ChimWpd9ebXhzUQTDs+NBa9EbnVqdXauz6p+dRHVPDq3BoXuy6Y0Oo9lJuT9N5he8Ux/vlJvM6/WwLPv9/RUMBslxuylyAoEAQ9NEaZrx+Xx2uxUe7yeBYZjgv2MY2myhTq9Mvwu7/Q/DEatXAAAAAElFTkSuQmCC"
+    "hash": "81704af3",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAIAAAAI1ii7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtUlEQVR4nGPo6Jq+fv36vr6+3t7eCxcv5RfXpmYVr9+y8////9++ff8GBv/BAMJmOH363JFDh+7euX33zu3bt2+vXbeuv3/CoUOHvn379uTJk////7e1tamoqGhqaXm6Oh7at4dh6/bdWblF+4+cvHz99uXLVxYtXFRXV7d8+fJLly6dOnXqyZMnZWVlDAwMTCwsJoZ6IA1FpZU+gWHL12w6cPTUkyePO7qmLlq8Fu4eiGOQAQBOR4lyEznMWwAAAABJRU5ErkJggg=="
   },
   "/content/developers/tutorials/hello-world-smart-contract/create-app-view-hello-world.png": {
-    "hash": "e0868934",
-    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAIAAAB/FOjAAAAACXBIWXMAAAsTAAALEwEAmpwYAAABMUlEQVR4nFWOvUrEQBSF79Y+gY2NnViKnaWwomAlWAhqI4haKJZbCz6DD+Ab2C02gpWuiZvfmWTcJLP50012gnGX7AavRiMOH8OZyzlnLkBjHWAVoAmNNZjZgNktmNuG+R1Y2IPFfVg+hKUDWDmB5tnm8SnsXsB0Kip6LslH75MiL4phWY4nhfi+s7IcoRjnqRDiI3sDWTERg1hHraub9qMQGe9HQZwE4Ws0SPpBjNrloaToqm7IGgFqM8QgtKsohFKcokbRVdRnRdV0U5K7Dx2J2nbl/AkgWIPdjNkWpeHvQW0x1w8Hte1fANfwuOe6nh+ESZKmw9Tj3OHRi+OjwbRs1aR/AdykhhBiUiZpX7tVE3T3HCeOA8BHnamwGaOUdGT99l5mjlN148/tu6fzy+tPYicu5RNDWmMAAAAASUVORK5CYII="
+    "hash": "7e7ec7a1",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAIAAAAy3EnLAAAACXBIWXMAAAsTAAALEwEAmpwYAAABaElEQVR4nG3OzS4DURQH8GvnMbyDeARLTyHEVyQiEiuRWFjY2HgAO99EpVGaEg2Nm+aiyBm51enEmZne6T2lJBXCHOk0seGXszz/c/4CoOIAuAkAIKJm4vX1LYoaRI1ms0kJrbUxRiBi3drvODYmqlurtVbqynVdx3nM5mS57CE+lUp3Wmsiagf2UplC8TasPwc+Whu+vNDn5zuRNcbUaqGUUimltUbEziuRRBvMvLGdHhyZW1peHZlcKKo7Iovod6piwiQEAIQ1w8z9A6Oiu3d4Yl6InvGZpTj+QPTNH6Jzg5nX1lNDo9NE9SCwjlPptPonoLUGAGY+PVNDY4tTsyuZY+l5wb/b7UCr7Z05LhRup2ZXNndOM8dSl6t/PwR+gOgLTrRarcOji62dk4N0fj+VP0jnszl5eFTI5uTvnJ2roroXRAQAxhjHqVzKa/Qjtxq41cDzwq3d7E3pAf0IHI/5S4g+Ibp+AKIcjhPUPWqaAAAAAElFTkSuQmCC"
   },
   "/content/developers/tutorials/hello-world-smart-contract/metamask-ropsten-example.png": {
     "hash": "3160c313",
@@ -26,5 +26,13 @@
   "/content/developers/tutorials/hello-world-smart-contract/hello-world-explorer.png": {
     "hash": "0df84580",
     "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAIAAAAy3EnLAAAACXBIWXMAAAsTAAALEwEAmpwYAAABj0lEQVR4nE2QTS9DQRiF319hZWtraWNnbcPKD8CCH8BOJGIhEh/xkQqptUQiQrUEQeo2taBENG1K9eu2c2/nttO5c4erOKoSkzezmJznnDMvEY0TjbZmjDomqGuaumepZ45656lvkfpXaTBAA+udIzNDU1PUP0fc4ZhkKiUkj8Uf1wIHm8HQxlZoazuyGQyvBvaXV3YXlnYuo4/K/zAMgxizyxWrZFa09pLp/O7eRShihE/i4dOb4/O7y+jDdSx5cp54Sj5L2Ujc37eBl2xWiIbW+uvvNJsfSrmM16V6l9q3qlxIGTXiZNlVTKFYUq5SyoP0sw00pZT5fOElm8NtmuWGdK+isV+AZzKZWq0GQgiBHEiV9upCuC0b3FXO/wNV/AEAWhWLJTCMMe4K4SlXK845YxY0ntb7B5EfAHQ6nTZNE96Q+r5v27ajpHzz9PsbeLtlisKH4dN2Qu4153AHIcDQBwATdcf9KYa1IwAa2B0dn7UBhKIPosoVhqXBMpWrZArMtvFiYRyHX90WhieD364rjQQr3VnmAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/hello-world-smart-contract/metamask-sepolia-example.png": {
+    "hash": "081ff163",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAQCAIAAABP3xIpAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzElEQVR4nGMQFBKSkJAQFxeXkJTS1tHR0NTS1tGRkpYWFROXkpYRFBJiEBUTU1VVV1ZR1dM3KC0rz8rJzSsoNDQ2UVRSNjQ2ERMTZxAWEVVWUbW2sbW2dZCQlJKRlVNUUo5PSExISNLQ1JKQlASpkJaVNbOwMLewUlRSNjE1c/fwcnV1c3Zx8fTylZOXZxAWEZGXV3B2dTO3sJKXV5CXV5CRlYMgRSVlYRFRkDtCwiKNTc3hViAjUTExBmUVlV8/viUkp4RHRoeGRSirqMKlNTS1RMXEGcTFJQIDom3tHB0cHW3t7NXU1OEq1NTUQSqERcQcHJJcXD39A4KCQ8L09A3k5RWgKtQ1QCqsLX1e7v2fmlIdl1ji45/kH5QWEJoORmkRcQXKanoM1pa+t9f+Lq/oLans8Q1KDYnIgaCg0MzYpDIVdQMGaSWlbT//u/v5h4SExCckKKuogG1RkpdXALtDjEFCUiqjocvAyERDU0tDUwsSJPLyCsoqqlCXioiIOtjaB4eEVVTWTpo8deq0WVOnzZo0eVpYWKR/YDAk1IXVNbXU1NTBsaqrraOrp6+vraOrpqaupqYuLCLCwMvHx8HJCUMcSAgkwsvHBwBYoXB/jI8RcAAAAABJRU5ErkJggg=="
+  },
+  "/content/developers/tutorials/hello-world-smart-contract/get-alchemy-api-key.png": {
+    "hash": "0c945308",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAADCAIAAAAV0xgDAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgklEQVR4nDXLoQoCQRCA4X2JfdErWpQBy6brpo0bDgaOYwcsm9xBkR1MY5toEa9ahRW/9JffTVPOeWHmlNIwDKr66da/Z2dmiCgirvJ1yafXewUA730IgZkBgIjMrJSCiDFGImqt1Xp2ezhstrvL7a6qZiYizBxC+A3a9XiM43Ge6QvhLWpk8Kke9QAAAABJRU5ErkJggg=="
   }
 }

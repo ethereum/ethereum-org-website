@@ -1,26 +1,22 @@
 ---
-title: 使用 create-eth-app 启动去中心化应用程序前端开发
-description: 如何使用 create-eth-app 及其功能的概述
-author: "Markus Waas"
+title: "使用 create-eth-app 快速启动你的去中心化应用 (dapp) 前端开发"
+description: "概述如何使用 create-eth-app 及其功能"
+author: "马库斯·瓦斯"
 tags:
-  - "create-eth-app"
-  - "前端"
-  - "javascript"
-  - "ethers.js"
-  - "图表"
-  - "defi"
+  ["前端", "JavaScript", "Ethers.js", "The Graph", "DeFi"]
 skill: beginner
+breadcrumb: create-eth-app
 lang: zh
 published: 2020-04-27
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-上一次，我们了解 [Solidity](https://soliditydeveloper.com/solidity-overview-2020) 大的框架时，已经提到了 [create-eth-app](https://github.com/PaulRBerg/create-eth-app)。 现在，您将了解如何使用它，它集成了哪些功能以及如何对其进行扩展等内容。 这个应用程序由 [Sablier](http://sablier.com/)创始人 Paul Razvan Berg 启动，它将启动您的前端开发，并且具有多个可选集成供您选择。
+上次我们探讨了 [Solidity 的全局](https://soliditydeveloper.com/solidity-overview-2020)，并且已经提到了 [create-eth-app](https://github.com/PaulRBerg/create-eth-app)。现在你将了解如何使用它、它集成了哪些功能，以及关于如何扩展它的一些额外想法。这个应用由 [Sablier](https://sablier.com/) 创始人 Paul Razvan Berg 发起，它将快速启动你的前端开发，并附带几个可选的集成供你选择。
 
 ## 安装 {#installation}
 
-安装需要 Yarn 0.25 或更高版本 (`npm install yarn --global`)。 安装就像运行程序一样简单：
+安装需要 Yarn 0.25 或更高版本 (`npm install yarn --global`)。只需运行以下命令即可：
 
 ```bash
 yarn create eth-app my-eth-app
@@ -28,44 +24,44 @@ cd my-eth-app
 yarn react-app:start
 ```
 
-这是正后台使用 [create-react-app](https://github.com/facebook/create-react-app)。 要查看您的应用程序，请打开 `http://localhost:3000/`。 当您准备好部署到生产环境中时，使用 yarn build 创建一个缩小的捆绑包。 一个简单的托管它的方法是使用 [ Netlify](https://www.netlify.com/)。 您可以创建一个 GitHub 存储库，将其添加到 Netlify，设置构建命令，这样就完成了！ 您的应用程序将被托管并可供所有人使用。 所有这些都是免费的。
+它在底层使用了 [create-react-app](https://github.com/facebook/create-react-app)。要查看你的应用，请打开 `http://localhost:3000/`。当你准备好部署到生产环境时，使用 yarn build 创建一个压缩包。托管它的一个简单方法是使用 [Netlify](https://www.netlify.com/)。你可以创建一个 GitHub 仓库，将其添加到 Netlify，设置构建命令，然后就大功告成了！你的应用将被托管并可供所有人使用。而且这一切都是免费的。
 
 ## 功能 {#features}
 
-### React 和 create-react-app {#react--create-react-app}
+### React 与 create-react-app {#react--create-react-app}
 
-首先，我们来了解应用程序的核心：React 和 _create-react-app_ 带来的所有附加功能。 如果您不想集成以太坊，那么仅使用它是一个很好的选择。 [React](https://reactjs.org/) 本身使构建交互式 UI 变得非常容易。 它可能不像 [Vue](https://vuejs.org/) 那样方便初学者，但仍然被广泛使用。 它具有更多的功能，最重要的是还有数千个附加库可供选择。 _create-react-app_ 也使它非常容易开始使用，具有的功能包括：
+首先是应用的核心：React 以及随 _create-react-app_ 提供的所有附加功能。如果你不想集成以太坊，仅使用它也是一个很好的选择。[React](https://react.dev/) 本身使得构建交互式用户界面变得非常容易。它可能不如 [Vue](https://vuejs.org/) 那样对初学者友好，但它仍然是使用最广泛的，拥有更多功能，最重要的是有数千个额外的库可供选择。_create-react-app_ 也使得上手变得非常容易，它包括：
 
 - React、JSX、ES6、TypeScript、Flow 语法支持。
-- ES6 之外的语言附加功能，如对象扩展运算符。
-- 自动添加前缀的 CSS，所以您不需要 -webkit- 或其他前缀。
-- 快速交互式单元测试运行程序，内置对覆盖率报告的支持。
-- 对常见错误发出警告的实时开发服务器。
-- 一个用于捆绑 JS、CSS 和图片的构建脚本，带有哈希值和资源映射。
+- 超越 ES6 的语言附加功能，如对象展开运算符。
+- 自动添加前缀的 CSS，因此你不需要 -webkit- 或其他前缀。
+- 一个快速的交互式单元测试运行器，内置对覆盖率报告的支持。
+- 一个实时开发服务器，会针对常见错误发出警告。
+- 一个构建脚本，用于为生产环境打包 JS、CSS 和图像，并带有哈希和源映射 (sourcemaps)。
 
-尤其是 _create-eth-app_ 正在使用新的 [hooks effect](https://reactjs.org/docs/hooks-effect.html)。 这是一种编写强大而又非常小巧的所谓功能组件的方法。 关于如何在 _create-eth-app_ 中使用 Apollo，请看下面关于 Apollo 的部分。
+_create-eth-app_ 特别利用了新的 [hooks effects](https://legacy.reactjs.org/docs/hooks-effect.html)。这是一种编写强大但非常小巧的所谓函数式组件的方法。请参阅下面关于 Apollo 的部分，了解它们在 _create-eth-app_ 中是如何使用的。
 
-### Yarn Workspace {#yarn-workspaces}
+### Yarn Workspaces {#yarn-workspaces}
 
-[Yarn Workspace](https://classic.yarnpkg.com/en/docs/workspaces/)允许您拥有多个包， 但可以从根目录对他们进行管理，而且可以使用 `yarn install` 一次性安装所有依赖项。 这对于较小的附加包，例如智能合约地址/ABI 管理（关于您在哪里部署了哪些智能合约以及如何与它们通信的信息）或图集成等，尤其有意义，这两个包都是 `create-eth-app` 的一部分。
+[Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) 允许你拥有多个包，但能够从根文件夹管理它们，并使用 `yarn install` 一次性为所有包安装依赖项。这对于较小的附加包特别有意义，例如智能合约地址/ABI 管理（关于你在哪里部署了哪些智能合约以及如何与它们通信的信息）或 The Graph 集成，这两者都是 `create-eth-app` 的一部分。
 
-### ethers.js {#ethersjs}
+### Ethers.js {#ethersjs}
 
-虽然 [Web3](https://docs.web3js.org/) 仍被广泛使用，但 [ethers.js](https://docs.ethers.io/) 作为一种替代方案，在过去一年中获得了更多的关注，并且已集成到 _create-eth-app_ 中。 您可以使用这个操作，将它更改为 Web3，或者考虑升级为 [ethers.js v5](https://docs-beta.ethers.io/)，该版本即将完成测试阶段。
+虽然 [Web3](https://docs.web3js.org/) 仍然是使用最广泛的，但 [Ethers.js](https://docs.ethers.io/) 作为一种替代方案在过去一年中获得了更多的关注，并且它被集成到了 _create-eth-app_ 中。你可以使用它，将其更改为 Web3，或者考虑升级到即将结束测试版的 [Ethers.js v5](https://docs.ethers.org/v5/)。
 
-### 图表 {#the-graph}
+### The Graph {#the-graph}
 
-与 [Restful API](https://restfulapi.net/) 相比，[GraphQL](https://graphql.org/) 是处理数据的另一种方式。 与 Restful Api 相比，它们有几个优势，特别是对于去中心化的区块链数据来说更是如此。 如果您对这背后的原因感兴趣，可以看看 [GraphQL 将为去中心化网络提供动力](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a)。
+与 [Restful API](https://restfulapi.net/) 相比，[GraphQL](https://graphql.org/) 是一种处理数据的替代方法。它们比 Restful API 有几个优势，特别是对于去中心化的区块链数据。如果你对这背后的原因感兴趣，请查看 [GraphQL 将为去中心化网络提供动力](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a)。
 
-通常您会直接从您的智能合约中获取数据。 想要读取上次交易的时间吗？ 只需调用 `MyContract.methods.latestTradeTime().call()`，它将数据从以太坊节点（如 Infura）提取到你的去中心化应用程序。 但如果您需要数百个不同的数据点，该怎么办？ 这将导致在节点上进行数百次数据提取操作，每次都有[往返延时](https://wikipedia.org/wiki/Round-trip_delay_time)，使你的去中心化应用程序缓慢且效率低下。 一个变通的办法是在您的合约中设置一个取数器调用函数，一次性返回多个数据。 但这并不总是理想的。
+通常你会直接从你的智能合约中获取数据。想要读取最新交易的时间？只需调用 `MyContract.methods.latestTradeTime().call()`，它就会从以太坊节点将数据获取到你的去中心化应用 (dapp) 中。但是如果你需要数百个不同的数据点怎么办？这将导致向节点进行数百次数据获取，每次都需要一个 [RTT](https://wikipedia.org/wiki/Round-trip_delay_time)，从而使你的 dapp 变得缓慢且低效。一种解决方法可能是在你的合约中编写一个获取器调用函数，一次返回多个数据。但这并不总是理想的。
 
-然后您可能对历史数据也感兴趣。 您不仅想知道上次交易的时间，还想知道自己做过的所有交易的时间。 使用 _create-eth-app_ 子图包，阅读[文档](https://thegraph.com/docs/define-a-subgraph)并使其适合您自己的合约。 如果您正在寻找受欢迎的智能合约，甚至可能已经有了一个子图。 可以查看[子图浏览器](https://thegraph.com/explorer/)。
+然后你可能也会对历史数据感兴趣。你不仅想知道最后一次交易的时间，还想知道你自己做过的所有交易的时间。使用 _create-eth-app_ 子图包，阅读[文档](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph)并将其调整为适用于你自己的合约。如果你正在寻找流行的智能合约，甚至可能已经有一个子图了。查看[子图浏览器](https://thegraph.com/explorer/)。
 
-有了子图后，你可以在去中心化应用程序中编写一个简单的查询来检索所有重要的区块链数据，包括你需要的历史数据，并且只需一次提取操作即可。
+一旦你有了子图，它就允许你在你的 dapp 中编写一个简单的查询，检索你需要的所有重要区块链数据（包括历史数据），只需要一次获取。
 
 ### Apollo {#apollo}
 
-由于 [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) 集成，你可以轻松将图集成到 React 去中心化应用程序中。 特别是在使用 [React hooks 和 Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2) 时，获取数据就像在您的组件中写一个 GraphQl 查询一样简单：
+得益于 [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) 集成，你可以轻松地在你的 React dapp 中集成 The Graph。特别是在使用 [React hooks 和 Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks) 时，获取数据就像在你的组件中编写一个 GraphQL 查询一样简单：
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)
@@ -79,32 +75,32 @@ React.useEffect(() => {
 
 ## 模板 {#templates}
 
-在顶部，您可以从几个不同的模板中进行选择。 到目前为止，您可以使用 Aave、Comp、UniSwap 或 sablier 集成。 它们都增加了重要的服务智能合约地址以及预先制作的子图集成。 只需将模板添加到创建命令，例如 `yarn create eth-app my-eth-app --with-template aave`。
+此外，你可以从几个不同的模板中进行选择。到目前为止，你可以使用 Aave、Compound、尤尼斯瓦普或 Sablier 集成。它们都添加了重要的服务智能合约地址以及预制的子图集成。只需将模板添加到创建命令中，例如 `yarn create eth-app my-eth-app --with-template aave`。
 
 ### Aave {#aave}
 
-[Aave](https://aave.com/) 是一个去中心化的货币借贷市场。 存款人向市场提供流动性以赚取被动收入，而借款人则可以利用抵押物进行借贷。 Aave 的一个独特功能是那些[闪电贷](https://docs.aave.com/developers/guides/flash-loans)，让您可以在没有任何抵押品的情况下借钱，只要您在一次交易中返还贷款即可。 例如，这对于在套利交易中为您提供额外的现金很有用。
+[Aave](https://aave.com/) 是一个去中心化的货币借贷市场。存款人向市场提供流动性以赚取被动收入，而借款人则能够使用抵押品进行借贷。Aave 的一个独特功能是那些[闪电贷](https://aave.com/docs/developers/flash-loans)，它允许你在没有任何抵押品的情况下借款，只要你在一次交易内偿还贷款即可。这可能很有用，例如在套利交易中为你提供额外的现金。
 
-为您赢得利益的交易代币被称为 _aTokens_。
+为你赚取利息的交易代币被称为 _aTokens_。
 
-当您选择将 Aave 与 _create-eth-app_ 集成时，您将获得[子图集成](https://docs.aave.com/developers/getting-started/using-graphql)。 Aave 使用 The Graph，并且已经在 [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) 和 [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) 上以[原始](https://thegraph.com/explorer/subgraph/aave/protocol-raw)或[格式化](https://thegraph.com/explorer/subgraph/aave/protocol)形式为您提供了几个现成的子图。
+当你选择将 Aave 与 _create-eth-app_ 集成时，你将获得一个[子图集成](https://docs.aave.com/developers/getting-started/using-graphql)。Aave 使用 The Graph，并且已经在 [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) 和[主网](https://thegraph.com/explorer/subgraph/aave/protocol)上为你提供了几个现成的子图，有[原始](https://thegraph.com/explorer/subgraph/aave/protocol-raw)或[格式化](https://thegraph.com/explorer/subgraph/aave/protocol)的形式。
 
-![Aave 闪电贷备忘录 – “是啊，如果我的闪电贷可以保留超过 1 笔交易，那就太好了”](./flashloan-meme.png)
+![Aave Flash Loan meme – "Yeahhh, if I could keep my flash loan longer than 1 transaction, that would be great"](./flashloan-meme.png)
 
 ### Compound {#compound}
 
-[ Compound ](https://compound.finance/) 类似于 Aave。 集成中已包含新的 [Compound v2 Subgraph](https://medium.com/graphprotocol/https-medium-com-graphprotocol-compound-v2-subgraph-highlight-a5f38f094195)。 在这里，赚取利益的代币竟然被称为* cTokens*。
+[Compound](https://compound.finance/) 与 Aave 类似。该集成已经包含了新的 [Compound v2 子图](https://medium.com/graphprotocol/https-medium-com-graphprotocol-compound-v2-subgraph-highlight-a5f38f094195)。令人惊讶的是，这里赚取利息的代币被称为 _cTokens_。
 
-### Uniswap {#uniswap}
+### 尤尼斯瓦普 {#uniswap}
 
-[Uniswap](https://uniswap.exchange/) 是一个去中心化的交易所 (DEX)。 流动性供应商可以通过为交易双方提供所需的代币或以太币来赚取费用。 它正在被广泛使用，因此对于非常多的各种代币来说，它的流动性是最高的当中的一个。 例如，你可以轻松地将其集成到你的去中心化应用程序中，让用户可以将他们的以太币换成 DAI 币。
+[尤尼斯瓦普](https://uniswap.exchange/)是一个去中心化交易所 (DEX)。流动性提供者可以通过为交易双方提供所需的代币或以太币来赚取费用。它被广泛使用，因此对于非常广泛的代币具有最高的流动性之一。你可以轻松地将其集成到你的 dapp 中，例如，允许用户将他们的 ETH 兑换为 DAI。
 
-遗憾的是，在撰写本文时，集成仅针对 Uniswap v1，而不是 [刚刚发布的 v2](https://uniswap.org/blog/uniswap-v2/)。
+不幸的是，在撰写本文时，该集成仅适用于尤尼斯瓦普 v1，而不适用于[刚刚发布的 v2](https://uniswap.org/blog/uniswap-v2/)。
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.com/) 允许用户进行流支付。 完成最初的设置后，您实际上是不断地得到您的货币，而不是在某个支付日，并且不需要进行进一步的管理。 该集成包含了它[自己的子图](https://thegraph.com/explorer/subgraph/sablierhq/sablier)。
+[Sablier](https://sablier.com/) 允许用户进行流式资金支付。与单一的发薪日不同，在初始设置之后，你实际上会不断地收到钱，而无需进一步的管理。该集成包括其[自己的子图](https://thegraph.com/explorer/subgraph/sablierhq/sablier)。
 
-## 接下来是什么？ {#whats-next}
+## 下一步是什么？ {#whats-next}
 
-如果您对 _create-eth-app_ 有任何疑问，请访问 [Sablier 社区服务器](https://discord.gg/bsS8T47)，在那里您可以与 _create-eth-app_ 的作者取得联系。 作为接下来的第一步，您可能希望集成一个 UI 框架，例如 [Material UI](https://material-ui.com/)，为您实际需要的数据编写 GraphQL 查询并设置部署。
+如果你对 _create-eth-app_ 有疑问，请访问 [Sablier 社区服务器](https://discord.gg/bsS8T47)，在那里你可以与 _create-eth-app_ 的作者取得联系。作为接下来的第一步，你可能想要集成一个 UI 框架（如 [Material UI](https://mui.com/material-ui/)），为你实际需要的数据编写 GraphQL 查询，并设置部署。

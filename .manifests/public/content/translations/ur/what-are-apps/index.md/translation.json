@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-18T00:56:49.905Z",
+  "englishManifestHash": "41182d9f3f3a",
+  "placeholderOrder": [
+    "COMPONENT-8c8d48",
+    "COMPONENT-424528",
+    "COMPONENT-7dcca8",
+    "HTMLTAG-da8fa1",
+    "IMAGE-d2a99d",
+    "LINK-dab102",
+    "LINK-a25295",
+    "LINK-de5d38",
+    "COMPONENT-7bda3d",
+    "COMPONENT-6e3f79",
+    "LINK-c21f1d",
+    "COMPONENT-d219c1",
+    "LINK-b581cb"
+  ],
+  "placeholderMap": {
+    "COMPONENT-7bda3d": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "COMPONENT-6e3f79": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "LINK-c21f1d": {
+      "type": "link",
+      "values": {
+        "url": "/get-eth"
+      }
+    },
+    "COMPONENT-d219c1": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "LINK-b581cb": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/find-wallet"
+      }
+    },
+    "COMPONENT-8c8d48": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": ":detective:"
+      }
+    },
+    "COMPONENT-424528": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🌍"
+      }
+    },
+    "COMPONENT-7dcca8": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": ":handshake:"
+      }
+    },
+    "HTMLTAG-da8fa1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "div",
+        "className": "w-full md:w-1/2 mx-auto md:mx-0"
+      }
+    },
+    "IMAGE-d2a99d": {
+      "type": "image",
+      "values": {
+        "path": "./developers-eth-blocks.png"
+      }
+    },
+    "LINK-dab102": {
+      "type": "link",
+      "values": {
+        "url": "/what-is-ethereum"
+      }
+    },
+    "LINK-a25295": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-de5d38": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/dapps/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:56:49.905Z",
+      "status": "success"
+    }
+  }
+}

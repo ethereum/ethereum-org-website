@@ -1,49 +1,45 @@
 ---
-title: Como utilizar o Slither para encontrar bugs nos contratos inteligentes
-description: Como usar o Slither para encontrar automaticamente bugs em contratos inteligentes
+title: Como usar o Slither para encontrar bugs em contratos inteligentes
+description: Como usar o Slither para encontrar bugs automaticamente em contratos inteligentes
 author: Trailofbits
 lang: pt-br
-tags:
-  - "solidity"
-  - "smart contracts"
-  - "segurança"
-  - "testando"
-  - "análise estática"
+tags: ["Solidity", "contratos inteligentes", "segurança", "tes"]
 skill: advanced
+breadcrumb: Slither
 published: 2020-06-09
-source: Construindo contratos seguros
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
 ## Como usar o Slither {#how-to-use-slither}
 
-O objetivo deste tutorial é mostrar como usar o Slither para localizar automaticamente bugs em contratos inteligentes.
+O objetivo deste tutorial é mostrar como usar o Slither para encontrar bugs automaticamente em contratos inteligentes.
 
 - [Instalação](#installation)
 - [Uso da linha de comando](#command-line)
 - [Introdução à análise estática](#static-analysis): Breve introdução à análise estática
-- [API](#api-basics): Descrição da API Python
+- [API](#api-basics): Descrição da API em Python
 
 ## Instalação {#installation}
 
-O Slither requer a versão 3.6 do Python ou superior. Pode ser instalado pelo pip ou usando o docker.
+O Slither requer Python >= 3.6. Ele pode ser instalado através do pip ou usando o Docker.
 
-Slither via pip:
+Slither através do pip:
 
 ```bash
 pip3 install --user slither-analyzer
 ```
 
-Slither através de docker:
+Slither através do Docker:
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
 docker run -it -v "$PWD":/home/trufflecon trailofbits/eth-security-toolbox
 ```
 
-_O último comando roda a eth-security-toolbox em um docker que tem acesso ao seu diretório atual. Você pode alterar os arquivos do seu host e executar as ferramentas nos arquivos através do docker_
+_O último comando executa o eth-security-toolbox em um Docker que tem acesso ao seu diretório atual. Você pode alterar os arquivos do seu host e executar as ferramentas nos arquivos a partir do Docker_
 
-Dentro do docker, execute:
+Dentro do Docker, execute:
 
 ```bash
 solc-select 0.5.11
@@ -52,7 +48,7 @@ cd /home/trufflecon/
 
 ### Executando um script {#running-a-script}
 
-Para executar um script python com python 3:
+Para executar um script Python com Python 3:
 
 ```bash
 python3 script.py
@@ -60,23 +56,23 @@ python3 script.py
 
 ### Linha de comando {#command-line}
 
-**Linha de comando versus scripts definidos pelo usuário.** O Slither vem com um conjunto de detectores predefinidos que encontram muitos bugs comuns. Chamar o Slither na linha de comando irá executar todos os detectores. Nenhum conhecimento detalhado da análise estática é necessária:
+**Linha de comando versus scripts definidos pelo usuário.** O Slither vem com um conjunto de detectores predefinidos que encontram muitos bugs comuns. Chamar o Slither a partir da linha de comando executará todos os detectores, sem a necessidade de conhecimento detalhado de análise estática:
 
 ```bash
 slither project_paths
 ```
 
-Além de detectadores, o Slither possui recursos de revisão de código através de suas [printers](https://github.com/crytic/slither#printers) e [ferramentas](https://github.com/crytic/slither#tools).
+Além dos detectores, o Slither possui recursos de revisão de código através de seus [printers](https://github.com/crytic/slither#printers) e [ferramentas](https://github.com/crytic/slither#tools).
 
-Use [crytic.io](https://github.com/crytic) para obter acesso a detectadores privados e integração GitHub.
+Use o [crytic.io](https://github.com/crytic) para obter acesso a detectores privados e integração com o GitHub.
 
 ## Análise estática {#static-analysis}
 
-Os recursos e design do framework estático de análise do Slither foram descritos nos posts de blog ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/)), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) e em um [documento acadêmico](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
+Os recursos e o design do framework de análise estática do Slither foram descritos em postagens de blog ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) e em um [artigo acadêmico](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
-A análise estática existe em diferentes "flavors". Você provavelmente percebe que compiladores como [clang](https://clang-analyzer.llvm.org/) e [gcc](https://lwn.net/Articles/806099/) dependem destas técnicas de pesquisa, mas também sustenta ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) e ferramentas baseadas em métodos formais como [Frama-C](https://frama-c.com/) e [Polyspace](https://www.mathworks.com/products/polyspace.html).
+A análise estática existe em diferentes formas. Você provavelmente percebe que compiladores como [clang](https://clang-analyzer.llvm.org/) e [gcc](https://lwn.net/Articles/806099/) dependem dessas técnicas de pesquisa, mas ela também sustenta ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/) e ferramentas baseadas em métodos formais como [Frama-C](https://frama-c.com/) e [Polyspace](https://www.mathworks.com/products/polyspace.html).
 
-Nós não analisaremos exaustivamente técnicas de análise estática e pesquisador aqui. Em vez disso, vamos focar no que é necessário para entender como o Slither funciona para que você possa usá-lo de forma mais eficiente para encontrar bugs e entender códigos.
+Não revisaremos exaustivamente as técnicas de análise estática e pesquisas aqui. Em vez disso, focaremos no que é necessário para entender como o Slither funciona, para que você possa usá-lo de forma mais eficaz para encontrar bugs e entender o código.
 
 - [Representação de código](#code-representation)
 - [Análise de código](#analysis)
@@ -84,13 +80,13 @@ Nós não analisaremos exaustivamente técnicas de análise estática e pesquisa
 
 ### Representação de código {#code-representation}
 
-Em contraste com uma análise dinâmica, que justifica um único caminho de execução, razões de análise estática sobre todos os caminhos ao mesmo tempo. Para isso, ele depende de uma representação diferente do código. As duas mais comuns são a árvore de sintaxe abstrata (AST) e o gráfico de fluxo de controle (CFG).
+Em contraste com uma análise dinâmica, que raciocina sobre um único caminho de execução, a análise estática raciocina sobre todos os caminhos de uma só vez. Para fazer isso, ela depende de uma representação de código diferente. As duas mais comuns são a árvore de sintaxe abstrata (AST) e o grafo de fluxo de controle (CFG).
 
-### Árvores de sintaxe abstratas (AST) {#abstract-syntax-trees-ast}
+### Árvores de Sintaxe Abstrata (AST) {#abstract-syntax-trees-ast}
 
-AST é usado toda vez que o compilador analisa o código. É provavelmente a estrutura mais básica sobre a qual se pode efetuar a análise estática.
+As ASTs são usadas toda vez que o compilador analisa o código. É provavelmente a estrutura mais básica sobre a qual a análise estática pode ser realizada.
 
-Em poucas palavras, a AST é uma árvore estruturada onde, normalmente, cada folha contém uma variável ou uma constante e os nós internos são operações ou operações de fluxo de controle. Considere o seguinte código:
+Em resumo, uma AST é uma árvore estruturada onde, geralmente, cada folha contém uma variável ou uma constante e os nós internos são operandos ou operações de fluxo de controle. Considere o seguinte código:
 
 ```solidity
 function safeAdd(uint a, uint b) pure internal returns(uint){
@@ -101,13 +97,13 @@ function safeAdd(uint a, uint b) pure internal returns(uint){
 }
 ```
 
-O AST correspondente é mostrado em:
+A AST correspondente é mostrada em:
 
 ![AST](./ast.png)
 
-O Slither usa o AST exportado pelo solc.
+O Slither usa a AST exportada pelo solc.
 
-Enquanto for simples construir, o AST é uma estrutura aninhada. Por vezes, esta não é a mais simples de analisar. Por exemplo, para identificar as operações usadas pela expressão `a + b <= a`,, primeiro você deve analisar `<=` e, em seguida, `+`. Uma abordagem comum é usar o chamado padrão de visitantes, que navega pela árvore recursivamente. O Slither contém um visitante genérico em [`ExpressionVisitor`](https://github.com/crytic/slither/blob/master/slither/visitors/expression/expression.py).
+Embora simples de construir, a AST é uma estrutura aninhada. Às vezes, não é a mais direta de analisar. Por exemplo, para identificar as operações usadas pela expressão `a + b <= a`, você deve primeiro analisar `<=` e depois `+`. Uma abordagem comum é usar o chamado padrão visitor (visitante), que navega pela árvore recursivamente. O Slither contém um visitor genérico em [`ExpressionVisitor`](https://github.com/crytic/slither/blob/master/slither/visitors/expression/expression.py).
 
 O código a seguir usa `ExpressionVisitor` para detectar se a expressão contém uma adição:
 
@@ -124,58 +120,58 @@ class HasAddition(ExpressionVisitor):
         if expression.type == BinaryOperationType.ADDITION:
             self._result = True
 
-visitor = HasAddition(expression) # expression is the expression to be tested
+visitor = HasAddition(expression) # expression é a expressão a ser testada
 print(f'The expression {expression} has a addition: {visitor.result()}')
 ```
 
-### Controlar Gráfico de Fluxos (CFG) {#control-flow-graph-cfg}
+### Grafo de Fluxo de Controle (CFG) {#control-flow-graph-cfg}
 
-A segunda representação de código mais comum é o gráfico de fluxo de controle (CFG). Como seu nome sugere, é uma representação baseada em gráficos que expõe todos os caminhos de execução. Cada nó contém uma ou várias instruções. Bordas no gráfico representam as operações de fluxo de controle (se/então/outra vez, loop, etc). O nosso exemplo anterior é o do CFG:
+A segunda representação de código mais comum é o grafo de fluxo de controle (CFG). Como o nome sugere, é uma representação baseada em grafos que expõe todos os caminhos de execução. Cada nó contém uma ou várias instruções. As arestas no grafo representam as operações de fluxo de controle (if/then/else, loop, etc). O CFG do nosso exemplo anterior é:
 
 ![CFG](./cfg.png)
 
-O CFG é a representação que está por cima da qual se constrói a maioria das análises.
+O CFG é a representação sobre a qual a maioria das análises é construída.
 
-Existem muitas outras representações de código. Cada representação tem vantagens e desvantagens de acordo com a análise que você deseja realizar.
+Muitas outras representações de código existem. Cada representação tem vantagens e desvantagens de acordo com a análise que você deseja realizar.
 
 ### Análise {#analysis}
 
-O tipo mais simples de análises que você pode realizar com o Slither são análises sintáticas.
+O tipo mais simples de análises que você pode realizar com o Slither são as análises sintáticas.
 
-### Análises de sintaxe {#syntax-analysis}
+### Análise de sintaxe {#syntax-analysis}
 
-O Slither pode navegar através dos diferentes componentes do código e sua representação para encontrar inconsistências e falhas usando uma abordagem semelhante a padrões de correspondência.
+O Slither pode navegar pelos diferentes componentes do código e sua representação para encontrar inconsistências e falhas usando uma abordagem semelhante à correspondência de padrões (pattern matching).
 
-Por exemplo, os seguintes detectores procuram por problemas relacionados à sintaxe:
+Por exemplo, os seguintes detectores procuram problemas relacionados à sintaxe:
 
-- [State variable shadowing](https://github.com/crytic/slither/wiki/Detector-Documentation#state-variable-shadowing): itera sobre todas as variáveis de estado e verifica se tem alguma variável "shadow" de um contrato herdado ([state.py#L51-L62](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/shadowing/state.py#L51-L62))
+- [Sombreamento de variável de estado](https://github.com/crytic/slither/wiki/Detector-Documentation#state-variable-shadowing): itera sobre todas as variáveis de estado e verifica se alguma sombreia uma variável de um contrato herdado ([state.py#L51-L62](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/shadowing/state.py#L51-L62))
 
-- [Interface ERC20 incorreta](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface): procurar por assinaturas de função ERC20 incorretas ([incorrect_erc20_interface.py#L34-L55](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/erc/incorrect_erc20_interface.py#L34-L55))
+- [Interface ERC-20 incorreta](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface): procura por assinaturas de função ERC-20 incorretas ([incorrect_erc20_interface.py#L34-L55](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/erc/incorrect_erc20_interface.py#L34-L55))
 
 ### Análise semântica {#semantic-analysis}
 
-Em contraste com a análise de sintaxe, uma análise semântica vai aprofundar e analisar o "significado" do código. Esta família inclui vários tipos de análises. Conduzem a resultados mais poderosos e úteis, mas são também mais complexos de escrever.
+Em contraste com a análise de sintaxe, uma análise semântica irá mais fundo e analisará o "significado" do código. Esta família inclui alguns tipos amplos de análises. Elas levam a resultados mais poderosos e úteis, mas também são mais complexas de escrever.
 
-Análises semânticas são usadas para detecções de vulnerabilidades mais avançadas.
+As análises semânticas são usadas para as detecções de vulnerabilidades mais avançadas.
 
 #### Análise de dependência de dados {#fixed-point-computation}
 
-Uma variável `variable_a` diz ser dependente de dados `variable_b` se houver um caminho para o qual o valor de `variable_a` seja influenciado pela `variable_b`.
+Diz-se que uma variável `variable_a` é dependente de dados de `variable_b` se houver um caminho para o qual o valor de `variable_a` seja influenciado por `variable_b`.
 
-No código a seguir, `variable_a` depende de `variable_b`:
+No código a seguir, `variable_a` é dependente de `variable_b`:
 
 ```solidity
 // ...
 variable_a = variable_b + 1;
 ```
 
-O Slither vem com capacidades embutidas de [dependência de dados,](https://github.com/crytic/slither/wiki/data-dependency) graças à sua representação intermediária (discutida em uma seção posterior).
+O Slither vem com recursos integrados de [dependência de dados](https://github.com/crytic/slither/wiki/data-dependency), graças à sua representação intermediária (discutida em uma seção posterior).
 
-Um exemplo de uso de dependência de dados pode ser encontrado em ["dangerous strict equality detector"](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities). Aqui o Slither procurará por uma comparação rigorosa de igualdade com um valor perigoso ([incorrect_strict_equality. y#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)), e informará o usuário que deve usar `>=` ou `<=` ao invés de `==`para evitar um invasor para prender o contrato. Entre outros, o detector considerará como perigoso o valor de retorno de uma chamada para o `balanceOf(endereço)` ([incorrect_strict_equality. y#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)), e usará o mecanismo de dependência de dados para rastrear seu uso.
+Um exemplo de uso de dependência de dados pode ser encontrado no [detector de igualdade estrita perigosa](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities). Aqui, o Slither procurará por comparação de igualdade estrita com um valor perigoso ([incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)) e informará ao usuário que ele deve usar `>=` ou `<=` em vez de `==`, para evitar que um invasor prenda o contrato. Entre outros, o detector considerará como perigoso o valor de retorno de uma chamada para `balanceOf(address)` ([incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)) e usará o mecanismo de dependência de dados para rastrear seu uso.
 
-#### Cálculo de ponto fixo {#fixed-point-computation}
+#### Computação de ponto fixo {#fixed-point-computation-2}
 
-Se a sua análise navegar através do CFG e seguir as bordas, é provável que você veja os nós já visitados. Por exemplo, se um loop é apresentado como mostrado abaixo:
+Se sua análise navegar pelo CFG e seguir as arestas, é provável que você veja nós já visitados. Por exemplo, se um loop for apresentado conforme mostrado abaixo:
 
 ```solidity
 for(uint i; i < range; ++){
@@ -183,23 +179,23 @@ for(uint i; i < range; ++){
 }
 ```
 
-A sua análise terá de saber quando parar. Existem duas estratégias principais aqui: (1) iterar em cada nó um número finito de vezes, (2) calcular um chamado _fixpoint_. Um ponto de acesso basicamente significa que a análise deste nó não fornece nenhuma informação significativa.
+Sua análise precisará saber quando parar. Existem duas estratégias principais aqui: (1) iterar em cada nó um número finito de vezes, (2) calcular o chamado _ponto fixo_ (fixpoint). Um ponto fixo significa basicamente que analisar este nó não fornece nenhuma informação significativa.
 
-Um exemplo de fixpoint usado pode ser encontrado nos detectadores de reentrância: Slither explora os nós, e procurar por chamadas externas, escrever e ler para armazenar. Uma vez que chegou a um ponto de correção ("fixpoint") ([reentrancy.py#L125-L131](https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131)), interrompe a exploração e analisa os resultados para ver se uma reentrância está presente, através de diferentes padrões de reentrada ([reentrancy_benign. y](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py), [reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py), [reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py)).
+Um exemplo de ponto fixo usado pode ser encontrado nos detectores de reentrada: o Slither explora os nós e procura por chamadas externas, gravação e leitura no armazenamento. Uma vez que atinge um ponto fixo ([reentrancy.py#L125-L131](https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131)), ele interrompe a exploração e analisa os resultados para ver se uma reentrada está presente, através de diferentes padrões de reentrada ([reentrancy_benign.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py), [reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py), [reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py)).
 
-Escrever análises usando um cálculo de ponto fixo eficiente requer um bom entendimento de como a análise propaga sua informação.
+Escrever análises usando computação de ponto fixo eficiente requer um bom entendimento de como a análise propaga suas informações.
 
 ### Representação intermediária {#intermediate-representation}
 
-Uma representação intermediária (IR) é uma linguagem que deve ser mais acessível à análise estática do que a original. Slither traduz Solidity para seu próprio IR: [SlithIR](https://github.com/crytic/slither/wiki/SlithIR).
+Uma representação intermediária (IR) é uma linguagem destinada a ser mais favorável à análise estática do que a original. O Slither traduz Solidity para sua própria IR: [SlithIR](https://github.com/crytic/slither/wiki/SlithIR).
 
-Compreender o SlithIR não é necessário se você quiser apenas escrever verificações básicas. No entanto, será útil se você planejar escrever análises semânticas avançadas. As [SlithIR](https://github.com/crytic/slither/wiki/Printer-documentation#slithir) e [SSA](https://github.com/crytic/slither/wiki/Printer-documentation#slithir-ssa)printers irão ajudá-lo a entender como o código é traduzido.
+Entender o SlithIR não é necessário se você quiser apenas escrever verificações básicas. No entanto, será útil se você planeja escrever análises semânticas avançadas. Os printers [SlithIR](https://github.com/crytic/slither/wiki/Printer-documentation#slithir) e [SSA](https://github.com/crytic/slither/wiki/Printer-documentation#slithir-ssa) ajudarão você a entender como o código é traduzido.
 
-## API Básica {#api-basics}
+## Noções básicas da API {#api-basics}
 
-Slither tem uma API que permite explorar os atributos básicos do contrato e suas funções.
+O Slither possui uma API que permite explorar atributos básicos do contrato e de suas funções.
 
-Carregando um codebase:
+Para carregar uma base de código:
 
 ```python
 from slither import Slither
@@ -209,30 +205,30 @@ slither = Slither('/path/to/project')
 
 ### Explorando contratos e funções {#exploring-contracts-and-functions}
 
-Um objeto `Slither` contém:
+Um objeto `Slither` possui:
 
-- contracts`contracts (list(Contract)`: lista de contratos
+- `contracts (list(Contract)`: lista de contratos
 - `contracts_derived (list(Contract)`: lista de contratos que não são herdados por outro contrato (subconjunto de contratos)
-- `get_contract_from_name (str)`: Retorna um contrato a partir de seu nome
+- `get_contract_from_name (str)`: Retorna um contrato a partir do seu nome
 
-Um objeto `Slither` contém:
+Um objeto `Contract` possui:
 
 - `name (str)`: Nome do contrato
 - `functions (list(Function))`: Lista de funções
 - `modifiers (list(Modifier))`: Lista de funções
-- `all_functions_called (list(Função/Modificador))`: Lista de todas as funções internas acessíveis pelo contrato
-- `herança (lista(contrato))`: Lista de contratos herdados
-- `get_function_from_signature (str)`: Retorna uma função a partir de sua assinatura
-- `get_function_from_signature (str)`: Retorna uma função a partir de sua assinatura
-- `get_contract_from_name (str)`: Retorna um contrato a partir de seu nome
+- `all_functions_called (list(Function/Modifier))`: Lista de todas as funções internas alcançáveis pelo contrato
+- `inheritance (list(Contract))`: Lista de contratos herdados
+- `get_function_from_signature (str)`: Retorna uma Function a partir de sua assinatura
+- `get_modifier_from_signature (str)`: Retorna um Modifier a partir de sua assinatura
+- `get_state_variable_from_name (str)`: Retorna uma StateVariable a partir de seu nome
 
-Um objeto `Function` ou `Modifier` têm:
+Um objeto `Function` ou `Modifier` possui:
 
 - `name (str)`: Nome da função
 - `contract (contract)`: o contrato onde a função é declarada
 - `nodes (list(Node))`: Lista dos nós que compõem o CFG da função/modificador
 - `entry_point (Node)`: Ponto de entrada do CFG
-- `variables_read (list(variável))`: Lista de variáveis lidas
-- `variables_written (list(variável))`: Lista de variáveis escritas
-- `state_variables_read (list(StateVariable))`: Lista de variáveis de estado lidas (subconjunto de variáveis lidas)
-- `state_variables_written (list(StateVariable))`: Lista de variáveis de estado escritas (subconjunto de variáveis escritas)
+- `variables_read (list(Variable))`: Lista de variáveis lidas
+- `variables_written (list(Variable))`: Lista de variáveis gravadas
+- `state_variables_read (list(StateVariable))`: Lista de variáveis de estado lidas (subconjunto de variables`read)
+- `state_variables_written (list(StateVariable))`: Lista de variáveis de estado gravadas (subconjunto de variables`written)

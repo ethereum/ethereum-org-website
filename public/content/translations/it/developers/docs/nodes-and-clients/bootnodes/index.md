@@ -1,31 +1,31 @@
 ---
-title: Introduzione ai nodi d'avvio di Ethereum
-description: Le informazioni di base necessarie per comprendere i nodi d'avvio
+title: Introduzione ai nodi di avvio di Ethereum
+description: Le informazioni di base necessarie per comprendere i nodi di avvio
 lang: it
 ---
 
-Quando un nuovo nodo si unisce alla rete di Ethereum, deve connettersi ai nodi già sulla rete per poter poi scoprire nuovi pari. Questi punti d'accesso alla rete di Ethereum sono detti nodi d'avvio. I client ne contengono solitamente un elenco a codifica fissa. Questi nodi d'avvio sono tipicamente eseguiti dal team delle operazioni di sviluppo della Ethereum Foundation o dai team degli stessi client. Nota che i nodi d'avvio non equivalgono ai nodi statici. I nodi statici sono chiamati ripetutamente, mentre i nodi d'avvio sono chiamati soltanto se non esistono abbastanza pari a cui connettersi e se un nodo necessita di avviare qualche nuova connessione.
+Quando un nuovo nodo si unisce alla rete Ethereum, deve connettersi ai nodi che sono già sulla rete per poter poi scoprire nuovi peer. Questi punti di ingresso nella rete Ethereum sono chiamati nodi di avvio. I client di solito hanno un elenco di nodi di avvio hardcoded al loro interno. Questi nodi di avvio sono in genere gestiti dal team devops della Fondazione Ethereum o dai team dei client stessi. Nota che i nodi di avvio non sono la stessa cosa dei nodi statici. I nodi statici vengono richiamati ripetutamente, mentre i nodi di avvio vengono interpellati solo se non ci sono abbastanza peer a cui connettersi e un nodo ha bisogno di avviare (bootstrap) alcune nuove connessioni.
 
-## Connettersi a un nodo d'avvio {#connect-to-a-bootnode}
+## Connettersi a un nodo di avvio {#connect-to-a-bootnode}
 
-Gran parte dei client contiene un elenco integrato di nodi d'avvio, ma potresti voler anche eseguire il tuo o utilizzarne uno che non appartenga all'elenco a codifica fissa del client. In questo caso, puoi specificarli all'avvio del tuo client come segue (l'esempio è per Geth, consulta la documentazione del tuo client):
+La maggior parte dei client ha un elenco di nodi di avvio integrato, ma potresti anche voler eseguire il tuo nodo di avvio, o usarne uno che non fa parte dell'elenco hardcoded del client. In questo caso, puoi specificarli all'avvio del tuo client, come segue (l'esempio è per Geth, controlla la documentazione del tuo client):
 
 ```
-geth --bootnodes "enode://<node ID>@<IP address>:<port>"
+geth --bootnodes "enode://<ID del nodo>@<indirizzo IP>:<porta>"
 ```
 
-## Eseguire un nodo d'avvio {#run-a-bootnode}
+## Eseguire un nodo di avvio {#run-a-bootnode}
 
-I nodi d'avvio sono nodi completi non posti dietro una NAT ([Traduzione dell'indirizzo di rete](https://www.geeksforgeeks.org/network-address-translation-nat/)). Ogni nodo completo può agire da nodo d'avvio a condizione che sia pubblicamente disponibile.
+I nodi di avvio sono nodi completi che non si trovano dietro a un NAT ([Network Address Translation](https://www.geeksforgeeks.org/network-address-translation-nat/)). Ogni nodo completo può fungere da nodo di avvio purché sia disponibile pubblicamente.
 
-Quando avvii un nodo, dovrebbe registrare il tuo [enode](/developers/docs/networking-layer/network-addresses/#enode), un identificativo pubblico utilizzabile dagli altri per connettersi al tuo nodo.
+Quando avvii un nodo, dovrebbe registrare nei log il tuo [enode](/developers/docs/networking-layer/network-addresses/#enode), che è un identificatore pubblico che altri possono usare per connettersi al tuo nodo.
 
-L'enode è solitamente rigenerato a ogni riavvio, quindi assicurati di consultare la documentazione del tuo client su come generare un enode persistente per il tuo nodo d'avvio.
+L'enode viene solitamente rigenerato a ogni riavvio, quindi assicurati di consultare la documentazione del tuo client su come generare un enode persistente per il tuo nodo di avvio.
 
-Per poter essere un buon nodo d'avvio è una buona idea incrementare il numero massimo di pari che possono connettersi a esso. L'esecuzione di un nodo d'avvio con molti peer aumenterà in modo significativo i requisiti di larghezza di banda.
+Per essere un buon nodo di avvio, è una buona idea aumentare il numero massimo di peer che possono connettersi ad esso. L'esecuzione di un nodo di avvio con molti peer aumenterà significativamente i requisiti di larghezza di banda.
 
-## Nodi d'avvio disponibili {#available-bootnodes}
+## Nodi di avvio disponibili {#available-bootnodes}
 
-Un elenco di nodi d'avvio integrati in go-ethereum si può trovare [qui](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Questi nodi d'avvio sono mantenuti dalla Ethereum Foundation e dal team di go-ethereum.
+Un elenco di nodi di avvio integrati in go-ethereum può essere trovato [qui](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Questi nodi di avvio sono mantenuti dalla Fondazione Ethereum e dal team di go-ethereum.
 
-Sono disponibili altri elenchi di nodi d'avvio tenuti da volontari. Assicurati di includere sempre almeno un nodo d'avvio ufficiale, altrimenti potresti subire un attacco eclipse.
+Sono disponibili altri elenchi di nodi di avvio mantenuti da volontari. Assicurati di includere sempre almeno un nodo di avvio ufficiale, altrimenti potresti subire un attacco eclipse.

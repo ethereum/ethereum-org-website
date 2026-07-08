@@ -1,57 +1,59 @@
 ---
-title: Wprowadzenie do inteligentnych kontraktów
-description: Przegląd inteligentnych kontraktów ze szczególnym uwzględnieniem ich unikalnych cech i ograniczeń.
+title: "Wprowadzenie do inteligentnych kontraktów"
+description: "Przegląd inteligentnych kontraktów, skupiający się na ich unikalnych cechach i ograniczeniach."
 lang: pl
 ---
 
-## Czym jest inteligentny kontrakt?
+## Czym jest inteligentny kontrakt? {#what-is-a-smart-contract}
 
-„Inteligentny kontrakt" jest po prostu programem, który działa w blockchainie Ethereum. Jest to zbiór kodu (jego funkcje) i danych (jego stan), które znajdują się pod określonym adresem w blockchainie Ethereum.
+"Inteligentny kontrakt" to po prostu program działający na blockchainie [Ethereum](/). Jest to zbiór kodu (jego funkcji) i danych (jego stanu), który znajduje się pod określonym adresem na blockchainie Ethereum.
 
-Inteligentne kontrakty są rodzajem [konta Ethereum](/developers/docs/accounts/). Oznacza to, że mają one saldo i mogą wysyłać transakcje przez sieć. Jednak nie są one kontrolowane przez użytkownika, zamiast tego są wdrażane do sieci i uruchamiane w sposób zaprogramowany. Konta użytkowników mogą następnie wchodzić w interakcję z inteligentnym kontraktem poprzez przesyłanie transakcji, które wykonują funkcję zdefiniowaną w inteligentnym kontrakcie. Inteligentne kontrakty mogą definiować reguły, tak jak zwykłe kontrakty, i automatycznie egzekwować je za pośrednictwem kodu.
+Inteligentne kontrakty to rodzaj [konta Ethereum](/developers/docs/accounts/). Oznacza to, że mają saldo i mogą być celem transakcji. Nie są one jednak kontrolowane przez użytkownika, lecz wdrażane do sieci i działają zgodnie z zaprogramowaniem. Konta użytkowników mogą następnie wchodzić w interakcje z inteligentnym kontraktem, wysyłając transakcje, które wykonują funkcję zdefiniowaną w inteligentnym kontrakcie. Inteligentne kontrakty mogą definiować zasady, podobnie jak zwykły kontrakt, i automatycznie egzekwować je za pomocą kodu. Domyślnie inteligentnych kontraktów nie można usunąć, a interakcje z nimi są nieodwracalne.
 
-## Warunki wstępne {#prerequisites}
+## Wymagania wstępne {#prerequisites}
 
-Upewnij się, że zapoznałeś się z [kontami](/developers/docs/accounts/), [transakcjami](/developers/docs/transactions/) i
+Jeśli dopiero zaczynasz lub szukasz mniej technicznego wprowadzenia, polecamy nasze [wprowadzenie do inteligentnych kontraktów](/smart-contracts/).
 
-## Cyfrowy automat do sprzedaży {#a-digital-vending-machine}
+Zanim zagłębisz się w świat inteligentnych kontraktów, upewnij się, że przeczytałeś o [kontach](/developers/docs/accounts/), [transakcjach](/developers/docs/transactions/) i [wirtualnej maszynie Ethereum](/developers/docs/evm/).
 
-Być może najlepszą metaforą dla inteligentnego kontraktu jest automat do sprzedaży opisany przez Nicka Szabo. Przy odpowiednich nakładach gwarantowany jest określony wynik.
+## Cyfrowy automat sprzedający {#a-digital-vending-machine}
 
-Aby uzyskać przekąskę z automatu do sprzedaży:
+Być może najlepszą metaforą inteligentnego kontraktu jest automat sprzedający, jak opisał to [Nick Szabo](https://unenumerated.blogspot.com/). Przy odpowiednich danych wejściowych gwarantowany jest określony wynik.
+
+Aby otrzymać przekąskę z automatu:
 
 ```
-pieniądze + wybór przekąsek = przekąski wydane
+pieniądze + wybór przekąski = wydana przekąska
 ```
 
 Ta logika jest zaprogramowana w automacie sprzedającym.
 
-Inteligentny kontrakt, jak automat sprzedający, ma zaprogramowaną logikę. Oto prosty przykład, jak taki automat może wyglądać jako inteligentny kontrakt:
+Inteligentny kontrakt, podobnie jak automat sprzedający, ma w sobie zaprogramowaną logikę. Oto prosty przykład tego, jak wyglądałby ten automat, gdyby był inteligentnym kontraktem napisanym w języku Solidity:
 
 ```solidity
-pragma solidity 0.6.11;
+pragma solidity 0.8.7;
 
 contract VendingMachine {
 
-    // Deklaracja zmiennych stanu kontraktu
+    // Zadeklaruj zmienne stanu kontraktu
     address public owner;
     mapping (address => uint) public cupcakeBalances;
 
-    // Kiedy kontrakt 'VendingMachine' jest wdrożony:
-    // 1. ustawia adres podmiotu wdrażającego jako właściciela kontraktu
-    // 2. ustawia bilans babeczek wdrożonego inteligentnego kontraktu na 100
-    constructor() public {
+    // Gdy kontrakt 'VendingMachine' zostanie wdrożony:
+    // 1. ustaw adres wdrażający jako właściciela kontraktu
+    // 2. ustaw saldo babeczek wdrożonego inteligentnego kontraktu na 100
+    constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
 
-    // Umożliwia właścicielowi zwiększenie salda babeczek inteligentnego kontraktu
+    // Pozwól właścicielowi zwiększyć saldo babeczek inteligentnego kontraktu
     function refill(uint amount) public {
         require(msg.sender == owner, "Only the owner can refill.");
         cupcakeBalances[address(this)] += amount;
     }
 
-    // Umożliwia każdemu zakup babeczek
+    // Pozwól każdemu na zakup babeczek
     function purchase(uint amount) public payable {
         require(msg.value >= amount * 1 ether, "You must pay at least 1 ETH per cupcake");
         require(cupcakeBalances[address(this)] >= amount, "Not enough cupcakes in stock to complete this purchase");
@@ -61,47 +63,54 @@ contract VendingMachine {
 }
 ```
 
-Podobnie jak automat sprzedający eliminuje potrzebę zatrudniania pracownika sprzedawcy, inteligentne kontrakty mogą zastąpić pośredników w wielu branżach.
+Podobnie jak automat sprzedający eliminuje potrzebę zatrudniania sprzedawcy, inteligentne kontrakty mogą zastąpić pośredników w wielu branżach.
 
-## Nie wymaga pozwolenia {#permissionless}
+## Niewymagający pozwoleń {#permissionless}
 
-Każdy może napisać inteligentny kontrakt i wdrożyć go do sieci. Musisz tylko nauczyć się kodowania w [języku inteligentnego kontraktu](/developers/docs/smart-contracts/languages/) i mieć wystarczająco dużo ETH, aby go wdrożyć. Wdrożenie inteligentnego kontraktu jest transakcją techniczną, więc musisz zapłacić Koszty gazu związane z wdrożeniem kontraktów są jednak znacznie wyższe.
+Każdy może napisać inteligentny kontrakt i wdrożyć go do sieci. Musisz tylko nauczyć się kodować w [języku inteligentnych kontraktów](/developers/docs/smart-contracts/languages/) i mieć wystarczająco dużo ETH, aby wdrożyć swój kontrakt. Wdrożenie inteligentnego kontraktu jest technicznie transakcją, więc musisz zapłacić za [gaz](/developers/docs/gas/) w taki sam sposób, w jaki płacisz za gaz przy zwykłym transferze ETH. Jednak koszty gazu za wdrożenie kontraktu są znacznie wyższe.
 
-Ethereum ma przyjazne dla deweloperów języki do pisania inteligentnych kontraktów:
+Ethereum posiada przyjazne dla programistów języki do pisania inteligentnych kontraktów:
 
 - Solidity
 - Vyper
 
-[Więcej języków](/developers/docs/smart-contracts/languages/)
+[Więcej o językach](/developers/docs/smart-contracts/languages/)
 
-Muszą one jednak zostać skompilowane przed ich uruchomieniem, tak aby maszyna wirtualna Ethereum mogła zinterpretować i przechowywać kontrakt. [Więcej na temat kompilacji](/developers/docs/smart-contracts/compiling/)
+Muszą one jednak zostać skompilowane przed wdrożeniem, aby wirtualna maszyna Ethereum mogła zinterpretować i przechować kontrakt. [Więcej o kompilacji](/developers/docs/smart-contracts/compiling/)
 
-## Kompozycyjność – o wzajemnej zależności komponentów {#composability}
+## Kompozycyjność {#composability}
 
-Inteligentne kontrakty są publiczne w Ethereum i można je uznać za otwarte API. Oznacza to, że możesz wywoływać inne inteligentne kontrakty w swoim własnym inteligentnym kontrakcie, aby znacznie rozszerzyć zakres możliwości. Kontrakty mogą nawet wdrażać inne kontrakty.
+Inteligentne kontrakty są publiczne na Ethereum i można je traktować jako otwarte API. Oznacza to, że możesz wywoływać inne inteligentne kontrakty we własnym inteligentnym kontrakcie, aby znacznie rozszerzyć jego możliwości. Kontrakty mogą nawet wdrażać inne kontrakty.
 
-Dowiedz się więcej o [kompozycyjności kontraktów inteligentnych](/developers/docs/smart-contracts/composability/).
+Dowiedz się więcej o [kompozycyjności inteligentnych kontraktów](/developers/docs/smart-contracts/composability/).
 
 ## Ograniczenia {#limitations}
 
-Same inteligentne kontrakty nie mogą uzyskać informacji o zdarzeniach z „prawdziwego świata”, ponieważ nie mogą wysyłać żądań HTTP. Jest to celowe, ponieważ poleganie na informacjach z zewnątrz mogłoby zagrozić konsensusowi, który jest ważny dla bezpieczeństwa i decentralizacji.
+Same inteligentne kontrakty nie mogą uzyskiwać informacji o zdarzeniach z „prawdziwego świata”, ponieważ nie mogą pobierać danych ze źródeł pozałańcuchowych. Oznacza to, że nie mogą reagować na zdarzenia w świecie rzeczywistym. Jest to celowe działanie. Poleganie na zewnętrznych informacjach mogłoby zagrozić konsensusowi, który jest ważny dla bezpieczeństwa i decentralizacji.
 
-Istnieją sposoby na obejście tego za pomocą [wyroczni](/developers/docs/oracles/).
+Jednak dla aplikacji blockchain ważne jest, aby mogły korzystać z danych pozałańcuchowych. Rozwiązaniem są [wyrocznie (oracles)](/developers/docs/oracles/), czyli narzędzia, które pobierają dane pozałańcuchowe i udostępniają je inteligentnym kontraktom.
 
-## Zasoby inteligentnych kontraktów {#smart-contract-resources}
+Kolejnym ograniczeniem inteligentnych kontraktów jest ich maksymalny rozmiar. Inteligentny kontrakt może mieć maksymalnie 24 KB, w przeciwnym razie zabraknie mu gazu. Można to obejść, stosując [wzorzec diamentu (The Diamond Pattern)](https://eips.ethereum.org/EIPS/eip-2535).
 
-**Kontrakty OpenZeppelin –** **<em x-id="4">biblioteka do bezpiecznego tworzenia inteligentnych kontraktów.</em>**
+## Kontrakty multisig {#multisig}
+
+Kontrakty multisig (z wieloma podpisami) to konta inteligentnych kontraktów, które wymagają wielu ważnych podpisów do wykonania transakcji. Jest to bardzo przydatne w celu uniknięcia pojedynczych punktów awarii dla kontraktów przechowujących znaczne ilości etheru lub innych tokenów. Multisigi dzielą również odpowiedzialność za wykonanie kontraktu i zarządzanie kluczami między wiele stron i zapobiegają sytuacji, w której utrata pojedynczego klucza prywatnego prowadzi do nieodwracalnej utraty środków. Z tych powodów kontrakty multisig mogą być używane do prostego zarządzania DAO. Multisigi wymagają N podpisów z M możliwych akceptowalnych podpisów (gdzie N ≤ M i M > 1) w celu wykonania. Powszechnie używane są `N = 3, M = 5` i `N = 4, M = 7`. Multisig 4/7 wymaga czterech z siedmiu możliwych ważnych podpisów. Oznacza to, że środki można nadal odzyskać, nawet jeśli trzy podpisy zostaną utracone. W tym przypadku oznacza to również, że większość posiadaczy kluczy musi wyrazić zgodę i złożyć podpis, aby kontrakt został wykonany.
+
+## Zasoby dotyczące inteligentnych kontraktów {#smart-contract-resources}
+
+**OpenZeppelin Contracts -** **_Biblioteka do bezpiecznego tworzenia inteligentnych kontraktów._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Forum społeczności](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys –** **<em x-id="4">bezpieczne, proste, elastyczne elementy konstrukcyjne do inteligentnych kontraktów.</em>**
-
-- [Dappsys](https://dappsys.readthedocs.io/)
-- [GitHub](https://github.com/dapphub/dappsys)
-
 ## Dalsza lektura {#further-reading}
 
-- [Inteligentne kontrakty: technologia blockchain, która zastąpi prawników](https://blockgeeks.com/guides/smart-contracts/) <em x-id="4">– Blockgeeks</em>
-- [Najlepsze praktyki opracowywania inteligentnych kontraktów](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– 10 listopada 2019 r. – Yos Riady_
+- [Coinbase: Czym jest inteligentny kontrakt?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
+- [Chainlink: Czym jest inteligentny kontrakt?](https://chain.link/education/smart-contracts)
+- [Wideo: Po prostu wyjaśnione - Inteligentne kontrakty](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft: Platforma do nauki i audytu Web3](https://updraft.cyfrin.io)
+
+## Samouczki: Podpisy inteligentnych kontraktów (EIP-1271) na Ethereum {#tutorials}
+
+- [EIP-1271: Podpisywanie i weryfikacja podpisów inteligentnych kontraktów](/developers/tutorials/eip-1271-smart-contract-signatures/) _– Jak EIP-1271 umożliwia inteligentnym kontraktom weryfikację podpisów, wraz z omówieniem implementacji Safe._

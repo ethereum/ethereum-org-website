@@ -1,45 +1,45 @@
 ---
-title: Padrão de token ERC-777
-description: Token
+title: "Padrão de token ERC-777"
+description: "Aprenda sobre o ERC-777, um padrão de token fungível aprimorado com hooks, embora o ERC-20 seja recomendado por segurança."
 lang: pt-br
 ---
 
-## Atenção {#warning}
+## Aviso {#warning}
 
-**ERC-777 é difícil de implementar adequadamente, devido à sua [suscetibilidade a diferentes formas de ataque](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). Recomenda-se usar [ERC-20](/developers/docs/standards/tokens/erc-20/) em vez disso.** Esta página permanece como um arquivo histórico.
+**O ERC-777 é difícil de implementar corretamente, devido à sua [suscetibilidade a diferentes formas de ataque](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). Recomenda-se usar o [ERC-20](/developers/docs/standards/tokens/erc-20/) em vez disso.** Esta página permanece como um arquivo histórico.
 
-## Introdução {#introduction}
+## Introdução? {#introduction}
 
-ERC-777 é um padrão de token fungível com o objetivo de aprimorar o padrão [ERC-20](/developers/docs/standards/tokens/erc-20/) existente.
+O ERC-777 é um padrão de token fungível que melhora o padrão [ERC-20](/developers/docs/standards/tokens/erc-20/) existente.
 
-## Pré-Requisitos {#prerequisites}
+## Pré-requisitos {#prerequisites}
 
-Para entender melhor essa página, recomendamos primeiramente uma leitura sobre [ERC-20](/developers/docs/standards/tokens/erc-20/).
+Para entender melhor esta página, recomendamos que você leia primeiro sobre o [ERC-20](/developers/docs/standards/tokens/erc-20/).
 
-## Quais as melhorias do ERC-777 em relação ao ERC-20? {#-erc-777-vs-erc-20}
+## Quais melhorias o ERC-777 propõe em relação ao ERC-20? {#-erc-777-vs-erc-20}
 
-O ERC-777 proporciona as seguintes melhorias em relação ao ERC-20.
+O ERC-777 fornece as seguintes melhorias em relação ao ERC-20.
 
 ### Hooks {#hooks}
 
-Os hooks são funções descritas no código de um contrato inteligente. Eles são invocados quando os tokens são enviados ou recebidos pelo contrato. Isso possibilita que o contrato inteligente reaja aos tokens recebidos ou enviados.
+Hooks são uma função descrita no código de um contrato inteligente. Os hooks são chamados quando tokens são enviados ou recebidos por meio do contrato. Isso permite que um contrato inteligente reaja à entrada ou saída de tokens.
 
-Os hooks são registrados e descobertos utilizando o padrão [ERC-1820](https://eips.ethereum.org/EIPS/eip-1820).
+Os hooks são registrados e descobertos usando o padrão [ERC-1820](https://eips.ethereum.org/EIPS/eip-1820).
 
-#### Porque os hooks são uma vantagem? {#why-are-hooks-great}
+#### Por que os hooks são ótimos? {#why-are-hooks-great}
 
-1. Os hooks possibilitam o envio de tokens para um contrato e a notificação do contrato em apenas uma transação. O [ERC-20](https://eips.ethereum.org/EIPS/eip-20), porém, necessita de duas chamadas (`approve`/`transferFrom`) para fazer isso.
-2. Contratos que não possuem hooks registrados são incompatíveis com o ERC-777. O contrato enviado irá abortar a transação quando o receptor não estiver com um hook registrado. Isso previne transferências acidentais para contratos inteligentes fora do padrão ERC-777.
-3. Hooks podem rejeitas transações.
+1. Os hooks permitem enviar tokens para um contrato e notificar o contrato em uma única transação, ao contrário do [ERC-20](https://eips.ethereum.org/EIPS/eip-20), que requer uma chamada dupla (`approve`/`transferFrom`) para conseguir isso.
+2. Contratos que não registraram hooks são incompatíveis com o ERC-777. O contrato remetente abortará a transação quando o contrato receptor não tiver registrado um hook. Isso evita transferências acidentais para contratos inteligentes não ERC-777.
+3. Os hooks podem rejeitar transações.
 
 ### Decimais {#decimals}
 
-O padrão ERC-777 também soluciona a confusão referente a `decimals` causada pelo ERC-20. Esta clareza melhora a experiência do desenvolvedor.
+O padrão também resolve a confusão em torno de `decimals` causada no ERC-20. Essa clareza melhora a experiência do desenvolvedor.
 
 ### Retrocompatibilidade com o ERC-20 {#backwards-compatibility-with-erc-20}
 
-Contratos ERC-777 permitem interação como se fossem contratos ERC-20.
+É possível interagir com contratos ERC-777 como se fossem contratos ERC-20.
 
-## Leitura Adicional {#further-reading}
+## Leitura adicional {#further-reading}
 
 [EIP-777: Padrão de token](https://eips.ethereum.org/EIPS/eip-777)

@@ -1,108 +1,110 @@
 ---
-title: Bibliothèques d'API JavaScript
-description: Introduction aux bibliothèques clientes JavaScript, qui vous permettent d'interagir avec la blockchain depuis votre application.
+title: "Bibliothèques d'API JavaScript"
+description: "Une introduction aux bibliothèques clientes JavaScript qui vous permettent d'interagir avec la chaîne de blocs depuis votre application."
 lang: fr
 ---
 
-Pour qu'une application Web puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud Ethereum.
+Pour qu'une application web puisse interagir avec la chaîne de blocs Ethereum (c'est-à-dire lire les données de la chaîne de blocs et/ou envoyer des transactions au réseau), elle doit se connecter à un nœud Ethereum.
 
-À cette fin, chaque client Ethereum met en œuvre la spécification [JSON-RPC](/developers/docs/apis/json-rpc/), de sorte qu'il existe un ensemble uniforme de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
+À cette fin, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/), il existe donc un ensemble uniforme de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
 
-Si vous voulez utiliser JavaScript pour vous connecter à un nœud Ethereum, il est possible d'avoir recours à Vanilla JavaScript, mais plusieurs bibliothèques de commodité existent à l'intérieur même de l'écosystème, ce qui rend les choses beaucoup plus simples. Grâce à ces bibliothèques, les développeurs peuvent rédiger des méthodes intuitives d'une seule ligne pour initialiser des demandes RPC JSON (sous le capot) qui interagissent avec Ethereum.
+Si vous souhaitez utiliser JavaScript pour vous connecter à un nœud Ethereum, il est possible d'utiliser du JavaScript pur, mais plusieurs bibliothèques pratiques existent au sein de l'écosystème pour rendre cela beaucoup plus facile. Avec ces bibliothèques, les développeurs peuvent écrire des méthodes intuitives en une seule ligne pour initialiser des requêtes JSON-RPC (en interne) qui interagissent avec Ethereum.
 
-Veuillez noter que depuis [La Fusion](/roadmap/merge/), deux parties de logiciels Ethereum connectés - un client d'exécution et un client de consensus - sont nécessaires pour exécuter un nœud. Veuillez vous assurer que votre nœud inclut à la fois un client d'exécution et un client de consensus. Si votre nœud n'est pas sur votre machine en local (par ex. votre nœud est exécuté sur une instance AWS), mettez à jour les adresses IP dans le tutoriel en conséquence. Pour plus d'informations, veuillez consulter notre page sur [l'exécution d'un noeud](/developers/docs/nodes-and-clients/run-a-node/).
+Veuillez noter que depuis [La Fusion](/roadmap/merge/), deux logiciels Ethereum connectés - un client d'exécution et un client de consensus - sont nécessaires pour faire fonctionner un nœud. Veuillez vous assurer que votre nœud inclut à la fois un client d'exécution et un client de consensus. Si votre nœud ne se trouve pas sur votre machine locale (par exemple, votre nœud s'exécute sur une instance AWS), mettez à jour les adresses IP dans le tutoriel en conséquence. Pour plus d'informations, veuillez consulter notre page sur [l'exécution d'un nœud](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Prérequis {#prerequisites}
 
-Il peut être utile de comprendre non seulement en quoi consiste JavaScript, mais aussi la [pile Ethereum](/developers/docs/ethereum-stack/) et les [clients Ethereum](/developers/docs/nodes-and-clients/).
+En plus de comprendre JavaScript, il peut être utile de comprendre la [pile Ethereum](/developers/docs/ethereum-stack/) et les [clients Ethereum](/developers/docs/nodes-and-clients/).
 
 ## Pourquoi utiliser une bibliothèque ? {#why-use-a-library}
 
-Ces bibliothèques suppriment une grande partie de la complexité d'une interaction directe avec un nœud Ethereum. Elles fournissent également des fonctions utilitaires (par ex. convertir des ETH en gwei) afin que vous puissiez, en tant que développeur, passer moins de temps à gérer les subtilités des clients Ethereum et plus de temps à vous consacrer aux fonctionnalités uniques de votre application.
+Ces bibliothèques font abstraction d'une grande partie de la complexité liée à l'interaction directe avec un nœud Ethereum. Elles fournissent également des fonctions utilitaires (par exemple, la conversion d'ETH en gwei) afin qu'en tant que développeur, vous puissiez passer moins de temps à gérer les subtilités des clients Ethereum et plus de temps à vous concentrer sur les fonctionnalités uniques de votre application.
 
-## Fonctionnalités d'une bibliothèque {#library-features}
+## Fonctionnalités des bibliothèques {#library-features}
 
-### Se connecter à des nœud Ethereum {#connect-to-ethereum-nodes}
+### Se connecter aux nœuds Ethereum {#connect-to-ethereum-nodes}
 
-En utilisant des fournisseurs, les bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit sur JSON-RPC, INFURA, Etherscan, Alchemy ou Metamask.
+En utilisant des fournisseurs, ces bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit via JSON-RPC, Infura, Etherscan, Alchemy ou MetaMask.
 
-**Exemple Ether**
+> **Avertissement :** Web3.js a été archivé le 4 mars 2025. [Lisez l'annonce](https://blog.chainsafe.io/web3-js-sunset/). Envisagez d'utiliser des bibliothèques alternatives comme [ethers.js](https://ethers.org) ou [viem](https://viem.sh) pour les nouveaux projets.
+
+**Exemple avec Ethers**
 
 ```js
-// Un BrowserProvider enveloppe un fournisseur Web3 standard, qui est
-// ce que MetaMask injecte comme window.ethereum dans chaque page.
-const provider = new ethers.providers.BrowserProvider (window.ethereum)
+// Un BrowserProvider enveloppe un fournisseur Web3 standard, ce qui est
+// ce que MetaMask injecte en tant que window.ethereum dans chaque page
+const provider = new ethers.BrowserProvider(window.ethereum)
 
 // Le plugin MetaMask permet également de signer des transactions pour
-// envoyer de l'ether et payer pour changer l'état de la blockchain.
+// envoyer de l'ether et payer pour changer l'état au sein de la chaîne de blocs.
 // Pour cela, nous avons besoin du signataire du compte...
 const signer = provider.getSigner()
 ```
 
-**Exemple Web3js**
+**Exemple avec Web3.js**
 
 ```js
 var web3 = new Web3("http://localhost:8545")
 // or
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
-// change provider
+// changer de fournisseur
 web3.setProvider("ws://localhost:8546")
 // or
 web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
-// Using the IPC provider in node.js
+// Utilisation du fournisseur IPC dans node.js
 var net = require("net")
-var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // mac os path
+var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // chemin mac os
 // or
 var web3 = new Web3(
   new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)
-) // mac os path
-// on windows the path is: "\\\\.\\pipe\\geth.ipc"
-// on linux the path is: "/users/myuser/.ethereum/geth.ipc"
+) // chemin mac os
+// sous windows le chemin est : "\\\\.\\pipe\\geth.ipc"
+// sous linux le chemin est : "/users/myuser/.ethereum/geth.ipc"
 ```
 
-Une fois la configuration effectuée, vous pourrez interroger la blockchain pour :
+Une fois configuré, vous pourrez interroger la chaîne de blocs pour obtenir :
 
-- les numéros de blocs ;
-- le gaz estimé ;
-- les événements du contract intelligent ;
-- l'ID du réseau ;
+- les numéros de bloc
+- les estimations de gaz
+- les événements de contrats intelligents
+- l'identifiant du réseau
 - et plus encore...
 
-### Fonctionnalités d'un portefeuille {#wallet-functionality}
+### Fonctionnalité de portefeuille {#wallet-functionality}
 
-Les bibliothèques vous permettent de créer des portefeuilles, gérer vos clés et signer des transactions.
+Ces bibliothèques vous offrent des fonctionnalités pour créer des portefeuilles, gérer des clés et signer des transactions.
 
-Voici un exemple provenant de la bibliothèque Ethers
+Voici un exemple avec Ethers
 
 ```js
-// Créer une instance de portefeuille à partir d'un mnémonique...
+// Créer une instance de portefeuille à partir d'une mnémonique...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
 walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-// ...or from a private key
+// ...ou à partir d'une clé privée
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
 // true
 
-// The address as a Promise per the Signer API
+// L'adresse sous forme de Promise selon l'API Signer
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// A Wallet address is also available synchronously
+// Une adresse de portefeuille est également disponible de manière synchrone
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
-// The internal cryptographic components
+// Les composants cryptographiques internes
 walletMnemonic.privateKey
 // '0x1da6847600b0ee25e9ad9a52abbd786dd2502fa4005dd5af9310b7cc7a3b25db'
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// The wallet mnemonic
+// La mnémonique du portefeuille
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
@@ -110,12 +112,12 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-// Note: A wallet created with a private key does not
-//       have a mnemonic (the derivation prevents it)
+// Remarque : Un portefeuille créé avec une clé privée n'a pas
+//       de mnémonique (la dérivation l'empêche)
 walletPrivateKey.mnemonic
 // null
 
-// Signing a message
+// Signer un message
 walletMnemonic.signMessage("Hello World")
 // { Promise: '0x14280e5885a19f60e536de50097e96e3738c7acae4e9e62d67272d794b8127d31c03d9cd59781d4ee31fb4e1b893bd9b020ec67dfa65cfb51e2bdadbb1de26d91c' }
 
@@ -124,47 +126,47 @@ tx = {
   value: utils.parseEther("1.0"),
 }
 
-// Signing a transaction
+// Signer une transaction
 walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// The connect method returns a new instance of the
-// Wallet connected to a provider
+// La méthode connect retourne une nouvelle instance du
+// Portefeuille connecté à un fournisseur
 wallet = walletMnemonic.connect(provider)
 
-// Querying the network
+// Interroger le réseau
 wallet.getBalance()
 // { Promise: { BigNumber: "42" } }
 wallet.getTransactionCount()
 // { Promise: 0 }
 
-// Sending ether
+// Envoyer de l'ether
 wallet.sendTransaction(tx)
 ```
 
-[Lire les documents complets](https://docs.ethers.io/v5/api/signer/#Wallet)
+[Lire la documentation complète](https://docs.ethers.io/v5/api/signer/#Wallet)
 
-Une fois la configuration effectuée, vous pourrez :
+Une fois configuré, vous pourrez :
 
-- créer un compte ;
-- envoyer des transactions ;
-- signer des transactions ;
+- créer des comptes
+- envoyer des transactions
+- signer des transactions
 - et plus encore...
 
-### Interagir avec les fonctions d'un contrat intelligent {#interact-with-smart-contract-functions}
+### Interagir avec les fonctions de contrats intelligents {#interact-with-smart-contract-functions}
 
-Les bibliothèques clientes JavaScript autorisent votre application à appeler des fonctions de contrat intelligent en lisant l'interface binaire d'application (ABI) d'un contrat compilé.
+Les bibliothèques clientes JavaScript permettent à votre application d'appeler des fonctions de contrats intelligents en lisant l'interface binaire de l'application (ABI) d'un contrat compilé.
 
-L'ABI explique principalement les fonctions du contrat au format JSON et vous permet de l'utiliser comme un objet JavaScript standard.
+L'ABI explique essentiellement les fonctions du contrat dans un format JSON et vous permet de l'utiliser comme un objet JavaScript normal.
 
-Ainsi, le contrat Solidity ci-dessous :
+Ainsi, le contrat Solidity suivant :
 
 ```solidity
 contract Test {
     uint a;
     address d = 0x12345678901234567890123456789012;
 
-    function Test(uint testInt)  { a = testInt;}
+    constructor(uint testInt)  { a = testInt;}
 
     event Event(uint indexed b, bytes32 c);
 
@@ -206,90 +208,93 @@ Donnerait le JSON suivant :
 }]
 ```
 
-Cela veut dire que vous pouvez :
+Cela signifie que vous pouvez :
 
-- envoyer une transaction vers le contrat intelligent et exécuter sa méthode ;
-- faire un appel afin d'estimer le gaz nécessaire pour exécuter une méthode quand exécutée par le EVM ;
-- déployer un contrat ;
-- et plus encore...
+- Envoyer une transaction au contrat intelligent et exécuter sa méthode
+- Appeler pour estimer le gaz que prendra l'exécution d'une méthode lorsqu'elle sera exécutée dans l'EVM
+- Déployer un contrat
+- Et plus encore...
 
 ### Fonctions utilitaires {#utility-functions}
 
-Les fonctions utilitaires vous offrent des raccourcis pour améliorer le développement Ethereum.
+Les fonctions utilitaires vous offrent des raccourcis pratiques qui rendent le développement avec Ethereum un peu plus facile.
 
-Les valeurs ETH sont en wei par défaut. 1 ETH = 1 000 000 000 000 000 000 WEI – ça en fait, des chiffres à gérer ! `web3.utils.toWei` convertit l'ether en wei pour vous.
+Les valeurs en ETH sont en Wei par défaut. 1 ETH = 1 000 000 000 000 000 000 WEI – cela signifie que vous manipulez beaucoup de chiffres ! `web3.utils.toWei` convertit l'ether en Wei pour vous.
 
-Et en ethers, cela ressemble à ce qui suit :
+Et dans Ethers, cela ressemble à ceci :
 
 ```js
-// Obtenir le solde d'un compte (par l'adresse ou le nom ENS)
+// Obtenir le solde d'un compte (par adresse ou nom ENS)
 balance = await provider.getBalance("ethers.eth")
 // { BigNumber: "2337132817842795605" }
 
-// Vous devrez souvent formatter la sortie pour l'utilisateur
-// qui préfère voir les valeurs en ether (plutôt qu'en wei)
+// Souvent, vous devrez formater la sortie pour l'utilisateur
+// qui préfère voir les valeurs en ether (au lieu de Wei)
 ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Fonctions utilitaires Web3js](https://docs.web3js.org/api/web3-utils)
-- [Fonctions utilitaires Ethers](https://docs.ethers.io/v5/api/utils/)
+- [Fonctions utilitaires de Web3.js](https://docs.web3js.org/api/web3-utils)
+- [Fonctions utilitaires d'Ethers](https://docs.ethers.org/v6/api/utils/)
 
 ## Bibliothèques disponibles {#available-libraries}
 
-**Web3.js -** **_Api JavaScript Ethereum _**
+**Web3.js -** **_API JavaScript Ethereum._**
 
-- [Documentation](https://docs.web3js.org/)
-- [GitHub](https://github.com/ethereum/web3.js/)
+- [Documentation](https://docs.web3js.org)
+- [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_Implémentation complète d'un portefeuille Ethereum, et utilitaires en JavaScript et TypeScript_**
+**Ethers.js -** **_Implémentation complète de portefeuille Ethereum et utilitaires en JavaScript et TypeScript._**
 
-- [Documentation](https://docs.ethers.io/)
-- [GitHub](https://github.com/ethers-io/ethers.js/)
+- [Accueil d'Ethers.js](https://ethers.org/)
+- [Documentation](https://docs.ethers.io)
+- [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_Protocole permettant d'indexer les données Ethereum et IPFS, et d'exécuter des requêtes sur celles-ci en utilisant GraphQL_**
+**The Graph -** **_Un protocole pour indexer les données Ethereum et IPFS et les interroger à l'aide de GraphQL._**
 
-- [The Graph](https://thegraph.com/)
-- [Explorateur Graph](https://thegraph.com/explorer/)
-- [Documentation](https://thegraph.com/docs/)
-- [GitHub](https://github.com/graphprotocol/)
+- [The Graph](https://thegraph.com)
+- [Explorateur Graph](https://thegraph.com/explorer)
+- [Documentation](https://thegraph.com/docs)
+- [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**light.js -** **_Bibliothèque JS réactive de haut niveau optimisée pour les clients légers_**
+**Alchemy SDK -** **_Enveloppe (wrapper) autour d'Ethers.js avec des API améliorées._**
 
-- [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
+- [Documentation](https://www.alchemy.com/docs)
+- [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**Web3-wrapper -** **_Alternative Typescript à Web3.js._**
-
-- [Documentation](https://0x.org/docs/web3-wrapper#introduction)
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
-
-**Alchemyweb3 -** **_Enveloppe autour de Web3.js avec nouvelles tentatives automatiques et API améliorées._**
-
-- [Documentation](https://docs.alchemy.com/reference/api-overview)
-- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
-
-**Alchemy NFT API -** **_API pour récupérer les données NFT, y compris la détention, les attributs de métadonnées et plus encore._**
-
-- [Documentation](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
-- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
-
-**viem -** **_Interface TypeScript pour Ethereum._**
+**Viem -** **_Interface TypeScript pour Ethereum._**
 
 - [Documentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
+**Codex -** **_API de données de chaîne de blocs enrichies en temps réel sur des dizaines de chaînes._**
+
+- [Documentation](https://docs.codex.io)
+- [Explorateur](https://docs.codex.io/explore)
+- [GitHub](https://github.com/Codex-Data)
+- [Discord](https://discord.com/invite/mFpUhT3vAq)
+
+**Drift -** **_Méta-bibliothèque TypeScript avec mise en cache intégrée, hooks et simulations de test (mocks)._**
+
+- [Documentation](https://ryangoree.github.io/drift/)
+- [GitHub](https://github.com/ryangoree/drift/)
+
 ## Complément d'information {#further-reading}
 
-_Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
+_Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette page et ajoutez-la !_ 
 
 ## Sujets connexes {#related-topics}
 
 - [Nœuds et clients](/developers/docs/nodes-and-clients/)
-- [Frameworks de développement](/developers/docs/frameworks/)
+- [Cadres de développement](/developers/docs/frameworks/)
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Configurer Web3js pour utiliser la blockchain Ethereum avec JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/)_ - Instructions pour installer et intégrer Web3js à votre projet_
-- [Appel d'un contrat intelligent à partir de JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ - À l'aide du jeton DAI, découvrez comment appeler une fonction de contrat en utilisant JavaScript._
-- [Envoi des transactions en utilisant Web3 et Alchemy](/developers/tutorials/sending-transactions-using-Web3-and-alchemy/) _ - Procédure étape par étape pour envoyer des transactions depuis le backend._
+- [Configurer Web3.js pour utiliser la chaîne de blocs Ethereum en JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions pour configurer Web3.js dans votre projet._
+- [Appeler un contrat intelligent depuis JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– En utilisant le jeton DAI, découvrez comment appeler une fonction de contrat à l'aide de JavaScript._
+- [Envoyer des transactions à l'aide de Web3 et Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Guide étape par étape pour envoyer des transactions depuis le backend._
+
+## Tutoriels : API JavaScript et WebSockets sur Ethereum {#tutorials}
+
+- [Utiliser les WebSockets](/developers/tutorials/using-websockets/) _– Comment utiliser les WebSockets avec Alchemy pour s'abonner aux événements Ethereum et effectuer des requêtes JSON-RPC en temps réel._

@@ -5,6 +5,7 @@ author: Marc Garreau
 lang: en
 tags: ["python", "web3.py"]
 skill: beginner
+breadcrumb: Ethereum with Python
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
@@ -139,7 +140,7 @@ A similar pattern is used when handling transactions in <b>ether</b>. However, i
 
 </FeaturedText>
 
-Try converting some values to and from wei. Note that [there are names for many of the denominations](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) in between ether and wei. One of the better known among them is **gwei**, as it’s often how transaction fees are represented.
+Try converting some values to and from wei. Note that [there are names for many of the denominations](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) in between ether and wei. One of the better known among them is **gwei**, as it’s often how transaction fees are represented.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')

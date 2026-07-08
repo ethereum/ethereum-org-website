@@ -1,0 +1,1049 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/component-wallet-simulator.json",
+  "generatedAt": "2026-04-20T15:23:22.828Z",
+  "rootHash": "dc3bc3308e2c",
+  "tree": {
+    "contentHash": "cbea2396a120",
+    "anchorHash": "ccb96eed7282",
+    "children": {
+      "sim-back": {
+        "contentHash": "76900f1bfd16",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-more-info": {
+        "contentHash": "7dd4d97d9aae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-your-total": {
+        "contentHash": "5038762bb0d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-send": {
+        "contentHash": "f6f4688ff23d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-receive": {
+        "contentHash": "bac9d15ad9f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-crypto": {
+        "contentHash": "df12b8f89b61",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-nfts": {
+        "contentHash": "d185ae0e6c3b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-click": {
+        "contentHash": "5398a589622e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-no-nfts": {
+        "contentHash": "1c3d913d26d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-example-walkthrough": {
+        "contentHash": "ce256b1ff039",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-address-tooltip": {
+        "contentHash": "11909e2fd6d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-try-real-app": {
+        "contentHash": "cbf641e19235",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-try-login-app": {
+        "contentHash": "547df25bc232",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-contact-last-action": {
+        "contentHash": "2b1c1e3c6e3e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-title": {
+        "contentHash": "798ca2ce18bf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-header-1": {
+        "contentHash": "5bce45b8b4fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-1-p1": {
+        "contentHash": "dd55e0633713",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-1-p2": {
+        "contentHash": "60671a5bf2b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-1-p3": {
+        "contentHash": "c8c87bbaadb1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-header-2": {
+        "contentHash": "3eb5ef33b130",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-2-p1": {
+        "contentHash": "58caeb6a539e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-2-p2": {
+        "contentHash": "d6d92055a844",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-2-p3": {
+        "contentHash": "70a4a11e3926",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-header-3": {
+        "contentHash": "2c4cc89968b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-3-p1": {
+        "contentHash": "375bb72699f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-3-p2": {
+        "contentHash": "b41f6761e6e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-header-4": {
+        "contentHash": "78e4728d557b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-4-p1": {
+        "contentHash": "6d9da57f73d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-header-5": {
+        "contentHash": "710c2afcaac1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-5-p1": {
+        "contentHash": "9c50d7429884",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-5-p2": {
+        "contentHash": "fa4f4ac807d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-header-6": {
+        "contentHash": "cf5c51dedd1f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-6-small-title": {
+        "contentHash": "6aabd7d75e7c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-6-small-1": {
+        "contentHash": "2c9f0c5169d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-6-significant-title": {
+        "contentHash": "9d23e1dc8bb1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-6-significant-1": {
+        "contentHash": "4bbf9a1f5eb0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-6-significant-2": {
+        "contentHash": "2ddd07eed989",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-6-unsafe-title": {
+        "contentHash": "b90ff086711f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-6-unsafe-1": {
+        "contentHash": "7dc4f438cb8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-6-unsafe-2": {
+        "contentHash": "7a4dbf2bbc30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-6-unsafe-3": {
+        "contentHash": "2de42711bc3c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-header-7": {
+        "contentHash": "2d516a0251a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-7-p1": {
+        "contentHash": "78817689e306",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c67b1a66297a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "sim-ca-desc-7-p2": {
+        "contentHash": "01b745b6af1f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f2c592d2d885",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "sim-ca-desc-7-p3": {
+        "contentHash": "b15c931141e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-header-8": {
+        "contentHash": "1254ac1b032c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-desc-8-p1": {
+        "contentHash": "2fcfaa2e95d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-cta-1": {
+        "contentHash": "62be269008cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-cta-2": {
+        "contentHash": "762a16c9c74f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-cta-3": {
+        "contentHash": "798ca2ce18bf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-cta-4": {
+        "contentHash": "1ff57a29d7c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-cta-5": {
+        "contentHash": "860296446ec4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-cta-6": {
+        "contentHash": "1ff57a29d7c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-cta-7": {
+        "contentHash": "484fd4116dc8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-final-cta": {
+        "contentHash": "fee2eb377546",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-welcome-to": {
+        "contentHash": "0e6b8e5c5379",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-wallet-simulator": {
+        "contentHash": "9cfdb65d34fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-generating": {
+        "contentHash": "41aa083e3892",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-account-created": {
+        "contentHash": "e1609e0b8238",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-recovery-title": {
+        "contentHash": "41edd3f47328",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-recovery-desc-1": {
+        "contentHash": "b52b8303e791",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8c640a3fcb4d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "sim-ca-recovery-desc-2": {
+        "contentHash": "c93ce9ff2f7e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-recovery-desc-3": {
+        "contentHash": "f9f910cc97f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-recovery-example": {
+        "contentHash": "6d4b79c1ea64",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-ca-repeat-words": {
+        "contentHash": "4ce2e93166b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-title": {
+        "contentHash": "93277265b340",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-header-1": {
+        "contentHash": "57cbea095232",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-1-p1": {
+        "contentHash": "86bb884569b8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e076a136ebef",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "sim-sr-desc-1-p2": {
+        "contentHash": "0610817d6ae4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-1-p3": {
+        "contentHash": "ae0de69c68c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-header-2": {
+        "contentHash": "40d408650038",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-2-p1": {
+        "contentHash": "0aa719ab41a3",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e678c8e2babf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "sim-sr-desc-2-p2": {
+        "contentHash": "7e1f30c422d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-header-3": {
+        "contentHash": "f3742ae063a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-3-p1": {
+        "contentHash": "30dd8266b48a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-3-p2": {
+        "contentHash": "4f24d3baafcb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-3-p3": {
+        "contentHash": "86c5c7de24b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-header-4": {
+        "contentHash": "6936753710d0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-4-p1": {
+        "contentHash": "fc55b857b66c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-4-p2": {
+        "contentHash": "b7dfb5f771d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-4-p3": {
+        "contentHash": "bea79db5781c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-header-5": {
+        "contentHash": "cb6e37dd86a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-5-p1": {
+        "contentHash": "03e97fd8a43c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-5-p2": {
+        "contentHash": "35cbe86d291b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-5-p3": {
+        "contentHash": "6d90e819527d",
+        "anchorHash": "539d557dca8e",
+        "children": {
+          "prose:1": {
+            "contentHash": "286bdce7cd89",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "aa59f2d8c7f3"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "sim-sr-header-6": {
+        "contentHash": "709f24cc1e2a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-6-p1": {
+        "contentHash": "2816d70abdfc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-6-p2": {
+        "contentHash": "2be05a411320",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-header-7": {
+        "contentHash": "ac138440901f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-desc-7-p1": {
+        "contentHash": "7360263710a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-cta-2": {
+        "contentHash": "a4e124286a23",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-cta-4": {
+        "contentHash": "21eb5f61ae06",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-cta-6": {
+        "contentHash": "588032878324",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-sr-final-cta": {
+        "contentHash": "fee2eb377546",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-receive-title": {
+        "contentHash": "1efc89cc9db1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-receive-qr-desc": {
+        "contentHash": "6d0a0edca7fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-receive-qr-share": {
+        "contentHash": "59781059cda1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-receive-your-address": {
+        "contentHash": "438950b69674",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-receive-copy": {
+        "contentHash": "e21f935f11d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-receive-address-note": {
+        "contentHash": "3225c52b8bf1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-received-toast": {
+        "contentHash": "0a95aae81a4e",
+        "anchorHash": "9dae40fff41e",
+        "children": {
+          "prose:3": {
+            "contentHash": "29131e96c7fe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e186860fdbb5"
+          },
+          "prose:4": {
+            "contentHash": "96cf92ffc832",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "917ffdddd9b6"
+          },
+          "prose:5": {
+            "contentHash": "39f9e9ce26f3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "70caa0801c8a"
+          },
+          "prose:6": {
+            "contentHash": "bb7208bc9b5d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:3",
+          "icu:0",
+          "prose:4",
+          "icu:1",
+          "prose:5",
+          "icu:2",
+          "prose:6"
+        ]
+      },
+      "sim-received-toast-no-sender": {
+        "contentHash": "dc309267e4de",
+        "anchorHash": "979984f090a2",
+        "children": {
+          "prose:2": {
+            "contentHash": "29131e96c7fe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e186860fdbb5"
+          },
+          "prose:3": {
+            "contentHash": "96cf92ffc832",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "917ffdddd9b6"
+          },
+          "prose:4": {
+            "contentHash": "6eff6b3b314b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "icu:0",
+          "prose:3",
+          "icu:1",
+          "prose:4"
+        ]
+      },
+      "sim-send-title": {
+        "contentHash": "f6f4688ff23d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-send-how-much": {
+        "contentHash": "377971dbfd9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-send-choose-value": {
+        "contentHash": "780aff5c8e7a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-send-eth-only-note": {
+        "contentHash": "f59da5433a44",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-send-balance": {
+        "contentHash": "1e75cbad8df6",
+        "anchorHash": "e1f4ef7b5ebe",
+        "children": {
+          "prose:1": {
+            "contentHash": "e0351221d473",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ae74d4a6cb4a"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "sim-send-max": {
+        "contentHash": "a1a5936d3b0f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-contacts-title": {
+        "contentHash": "7a428ba9fcba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-contacts-choose": {
+        "contentHash": "5ca6bc40f76c",
+        "anchorHash": "a7f33a4d4830",
+        "children": {
+          "prose:1": {
+            "contentHash": "c7f937836f5d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5e291d7bcb2d"
+          },
+          "prose:2": {
+            "contentHash": "fc78488a32e2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "sim-contacts-search": {
+        "contentHash": "6d934339aaca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-contacts-my-contacts": {
+        "contentHash": "6add5927687d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-contacts-recent": {
+        "contentHash": "690dbe9dc099",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-summary-title": {
+        "contentHash": "4df6a5ffb485",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-summary-to": {
+        "contentHash": "f4b06ef6d3c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-summary-arrival": {
+        "contentHash": "d0819ece65cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-summary-arrival-est": {
+        "contentHash": "8ca2e6031e13",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-summary-fees": {
+        "contentHash": "598ce3ccc02e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-success-sending": {
+        "contentHash": "feac5f2e5ee9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-success-sent": {
+        "contentHash": "87355e7192d6",
+        "anchorHash": "0e021bd50040",
+        "children": {
+          "prose:3": {
+            "contentHash": "371c0654f4c8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e186860fdbb5"
+          },
+          "prose:4": {
+            "contentHash": "695aa85333d1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "917ffdddd9b6"
+          },
+          "prose:5": {
+            "contentHash": "7408f957a881",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "186f36fbc4a0"
+          },
+          "prose:6": {
+            "contentHash": "b2f69f8100b2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:3",
+          "icu:0",
+          "prose:4",
+          "icu:1",
+          "prose:5",
+          "icu:2",
+          "prose:6"
+        ]
+      },
+      "sim-cw-title": {
+        "contentHash": "1e3f7e0655bd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-header-1": {
+        "contentHash": "0be8bd89e07b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-1-p1": {
+        "contentHash": "1ca51b43e969",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-1-p2": {
+        "contentHash": "c618265f75a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-header-2": {
+        "contentHash": "3226e126dc5a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-2-p1": {
+        "contentHash": "14aa8eb131ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-2-p2": {
+        "contentHash": "aad71f6dcf96",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-header-3": {
+        "contentHash": "96c252fbae84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-3-p1": {
+        "contentHash": "6b12cae7a4cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-3-p2": {
+        "contentHash": "3454bda366df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-header-4": {
+        "contentHash": "28b7f2bd94c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-4-p1": {
+        "contentHash": "38e07474bb6e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-4-p2": {
+        "contentHash": "da8271377449",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-4-p3": {
+        "contentHash": "ece58aea67ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-header-5": {
+        "contentHash": "e43ae268b150",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-5-p1": {
+        "contentHash": "865206bd682f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-5-p2": {
+        "contentHash": "53dd28e9595c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "85587c7cfeaa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "sim-cw-header-6": {
+        "contentHash": "9f613a7c6a05",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-6-p1": {
+        "contentHash": "6c448805cd5f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-6-next": {
+        "contentHash": "6a11451db279",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-6-link-1": {
+        "contentHash": "57f47d1002a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-6-link-2": {
+        "contentHash": "afa8266eedbe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-desc-6-link-3": {
+        "contentHash": "e029addf8e4c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-cta-1": {
+        "contentHash": "5949f77d8d98",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-cta-2": {
+        "contentHash": "7b1f118169bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-cta-3": {
+        "contentHash": "69721816f258",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-cta-4": {
+        "contentHash": "16ede2474bd8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-cta-5": {
+        "contentHash": "7804f7a79a9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-final-cta": {
+        "contentHash": "c96d704b5c33",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-welcome-web3": {
+        "contentHash": "6ef553f59de5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-nft-marketplace": {
+        "contentHash": "4ad53dbe3ea8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-connect-wallet-prompt": {
+        "contentHash": "17e161ff27fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-connect-disclaimer": {
+        "contentHash": "e3c7976a849f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-your-collection": {
+        "contentHash": "1c5151ff999f",
+        "anchorHash": "f13222720333",
+        "children": {
+          "prose:1": {
+            "contentHash": "cfff52faa7d2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9307b2fa1323"
+          },
+          "prose:2": {
+            "contentHash": "ba5ec51d07a4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "sim-cw-nft-title": {
+        "contentHash": "c2a196b6acc3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-nft-actions-tooltip": {
+        "contentHash": "453a3b609bdb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-set-price": {
+        "contentHash": "c1aaa3a218e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-auction-item": {
+        "contentHash": "dc27b45be8ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-transfer-item": {
+        "contentHash": "2a0cd2384b36",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-browse-artwork": {
+        "contentHash": "bcbb2ef7d24a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-mint-nft": {
+        "contentHash": "9855184bff73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-logged-in": {
+        "contentHash": "f80ee7ea608f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-connect-account": {
+        "contentHash": "9b593ae4f751",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sim-cw-search-website": {
+        "contentHash": "d5448701316a",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "sim-back",
+      "sim-more-info",
+      "sim-your-total",
+      "sim-send",
+      "sim-receive",
+      "sim-crypto",
+      "sim-nfts",
+      "sim-click",
+      "sim-no-nfts",
+      "sim-example-walkthrough",
+      "sim-address-tooltip",
+      "sim-try-real-app",
+      "sim-try-login-app",
+      "sim-contact-last-action",
+      "sim-ca-title",
+      "sim-ca-header-1",
+      "sim-ca-desc-1-p1",
+      "sim-ca-desc-1-p2",
+      "sim-ca-desc-1-p3",
+      "sim-ca-header-2",
+      "sim-ca-desc-2-p1",
+      "sim-ca-desc-2-p2",
+      "sim-ca-desc-2-p3",
+      "sim-ca-header-3",
+      "sim-ca-desc-3-p1",
+      "sim-ca-desc-3-p2",
+      "sim-ca-header-4",
+      "sim-ca-desc-4-p1",
+      "sim-ca-header-5",
+      "sim-ca-desc-5-p1",
+      "sim-ca-desc-5-p2",
+      "sim-ca-header-6",
+      "sim-ca-desc-6-small-title",
+      "sim-ca-desc-6-small-1",
+      "sim-ca-desc-6-significant-title",
+      "sim-ca-desc-6-significant-1",
+      "sim-ca-desc-6-significant-2",
+      "sim-ca-desc-6-unsafe-title",
+      "sim-ca-desc-6-unsafe-1",
+      "sim-ca-desc-6-unsafe-2",
+      "sim-ca-desc-6-unsafe-3",
+      "sim-ca-header-7",
+      "sim-ca-desc-7-p1",
+      "sim-ca-desc-7-p2",
+      "sim-ca-desc-7-p3",
+      "sim-ca-header-8",
+      "sim-ca-desc-8-p1",
+      "sim-ca-cta-1",
+      "sim-ca-cta-2",
+      "sim-ca-cta-3",
+      "sim-ca-cta-4",
+      "sim-ca-cta-5",
+      "sim-ca-cta-6",
+      "sim-ca-cta-7",
+      "sim-ca-final-cta",
+      "sim-ca-welcome-to",
+      "sim-ca-wallet-simulator",
+      "sim-ca-generating",
+      "sim-ca-account-created",
+      "sim-ca-recovery-title",
+      "sim-ca-recovery-desc-1",
+      "sim-ca-recovery-desc-2",
+      "sim-ca-recovery-desc-3",
+      "sim-ca-recovery-example",
+      "sim-ca-repeat-words",
+      "sim-sr-title",
+      "sim-sr-header-1",
+      "sim-sr-desc-1-p1",
+      "sim-sr-desc-1-p2",
+      "sim-sr-desc-1-p3",
+      "sim-sr-header-2",
+      "sim-sr-desc-2-p1",
+      "sim-sr-desc-2-p2",
+      "sim-sr-header-3",
+      "sim-sr-desc-3-p1",
+      "sim-sr-desc-3-p2",
+      "sim-sr-desc-3-p3",
+      "sim-sr-header-4",
+      "sim-sr-desc-4-p1",
+      "sim-sr-desc-4-p2",
+      "sim-sr-desc-4-p3",
+      "sim-sr-header-5",
+      "sim-sr-desc-5-p1",
+      "sim-sr-desc-5-p2",
+      "sim-sr-desc-5-p3",
+      "sim-sr-header-6",
+      "sim-sr-desc-6-p1",
+      "sim-sr-desc-6-p2",
+      "sim-sr-header-7",
+      "sim-sr-desc-7-p1",
+      "sim-sr-cta-2",
+      "sim-sr-cta-4",
+      "sim-sr-cta-6",
+      "sim-sr-final-cta",
+      "sim-receive-title",
+      "sim-receive-qr-desc",
+      "sim-receive-qr-share",
+      "sim-receive-your-address",
+      "sim-receive-copy",
+      "sim-receive-address-note",
+      "sim-received-toast",
+      "sim-received-toast-no-sender",
+      "sim-send-title",
+      "sim-send-how-much",
+      "sim-send-choose-value",
+      "sim-send-eth-only-note",
+      "sim-send-balance",
+      "sim-send-max",
+      "sim-contacts-title",
+      "sim-contacts-choose",
+      "sim-contacts-search",
+      "sim-contacts-my-contacts",
+      "sim-contacts-recent",
+      "sim-summary-title",
+      "sim-summary-to",
+      "sim-summary-arrival",
+      "sim-summary-arrival-est",
+      "sim-summary-fees",
+      "sim-success-sending",
+      "sim-success-sent",
+      "sim-cw-title",
+      "sim-cw-header-1",
+      "sim-cw-desc-1-p1",
+      "sim-cw-desc-1-p2",
+      "sim-cw-header-2",
+      "sim-cw-desc-2-p1",
+      "sim-cw-desc-2-p2",
+      "sim-cw-header-3",
+      "sim-cw-desc-3-p1",
+      "sim-cw-desc-3-p2",
+      "sim-cw-header-4",
+      "sim-cw-desc-4-p1",
+      "sim-cw-desc-4-p2",
+      "sim-cw-desc-4-p3",
+      "sim-cw-header-5",
+      "sim-cw-desc-5-p1",
+      "sim-cw-desc-5-p2",
+      "sim-cw-header-6",
+      "sim-cw-desc-6-p1",
+      "sim-cw-desc-6-next",
+      "sim-cw-desc-6-link-1",
+      "sim-cw-desc-6-link-2",
+      "sim-cw-desc-6-link-3",
+      "sim-cw-cta-1",
+      "sim-cw-cta-2",
+      "sim-cw-cta-3",
+      "sim-cw-cta-4",
+      "sim-cw-cta-5",
+      "sim-cw-final-cta",
+      "sim-cw-welcome-web3",
+      "sim-cw-nft-marketplace",
+      "sim-cw-connect-wallet-prompt",
+      "sim-cw-connect-disclaimer",
+      "sim-cw-your-collection",
+      "sim-cw-nft-title",
+      "sim-cw-nft-actions-tooltip",
+      "sim-cw-set-price",
+      "sim-cw-auction-item",
+      "sim-cw-transfer-item",
+      "sim-cw-browse-artwork",
+      "sim-cw-mint-nft",
+      "sim-cw-logged-in",
+      "sim-cw-connect-account",
+      "sim-cw-search-website"
+    ]
+  },
+  "sourceCommitSha": "291369439fa61b40cb4116a5e6b9b918940a5fad"
+}

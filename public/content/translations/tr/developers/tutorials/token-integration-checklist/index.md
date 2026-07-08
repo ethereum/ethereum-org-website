@@ -1,84 +1,81 @@
 ---
 title: Token entegrasyon kontrol listesi
-description: Token'larla etkileşime girerken göz önünde bulundurulacak şeylerin listesi
+description: "Token'larla etkileşime girerken dikkate alınması gerekenlerin bir kontrol listesi"
 author: "Trailofbits"
 lang: tr
-tags:
-  - "solidity"
-  - "akıllı kontratlar"
-  - "güvenlik"
-  - "jetonlar"
+tags: ["Solidity", "akıllı sözleşmeler", "güvenlik", "token'lar"]
 skill: intermediate
+breadcrumb: Token entegrasyonu
 published: 2020-08-13
-source: Güvenli sözleşmeler oluşturmak
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 
-Rastgele token'larla etkileşim kurarken bu kontrol listesini izleyin. Her bir öğeyle ilişkili riskleri anladığınızdan emin olun ve bu kurallardaki istisnaları gerekçelendirin.
+Rastgele token'larla etkileşime girerken bu kontrol listesini izleyin. Her bir maddeyle ilişkili riskleri anladığınızdan emin olun ve bu kuralların istisnalarını gerekçelendirin.
 
-Kolaylık sağlamak için, tüm Slither [yardımcı programları](https://github.com/crytic/slither#tools) doğrudan aşağıdaki gibi bir token adresinde çalıştırılabilir:
+Kolaylık sağlamak adına, tüm Slither [araçları](https://github.com/crytic/slither#tools) doğrudan bir token adresi üzerinde çalıştırılabilir, örneğin:
 
-[Slither öğreticisi kullanılarak](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+[Slither kullanımı eğitimi](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 ```bash
 slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken
 ```
 
-Bu kontrol listesini takip etmek amacıyla token için Slither'den bu çıktıyı almanız gerekir:
+Bu kontrol listesini takip etmek için, token için Slither'dan şu çıktıyı almak isteyeceksiniz:
 
 ```bash
 - slither-check-erc [target] [contractName] [optional: --erc ERC_NUMBER]
 - slither [target] --print human-summary
 - slither [target] --print contract-summary
-- slither-prop . --contract ContractName # requires configuration, and use of Echidna and Manticore
+- slither-prop . --contract ContractName # yapılandırma ve Echidna ile Manticore kullanımını gerektirir
 ```
 
 ## Genel hususlar {#general-considerations}
 
-- **Sözleşmede bir güvenlik incelemesi var.** Güvenlik incelemesi olmayan sözleşmelerle etkileşimde bulunmaktan kaçının. Değerlendirmenin uzunluğunu ("çaba düzeyi" olarak da bilinir), güvenlik firmasının itibarını, bulguların sayısını ve ciddiyetini kontrol edin.
-- **Geliştiricilerle iletişime geçtiniz.** Ekiplerini bir olay hakkında uyarmanız gerekebilir. Uygun sözleşmeleri [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts) üzerinde arayın.
-- **Kritik duyurular için bir güvenlik posta listeleri var.** Ekipleri, kritik sorunlar bulunduğunda veya yükseltmeler gerçekleştiğinde kullanıcılara (sizin gibi!) bilgi vermelidir.
+- **Sözleşmenin bir güvenlik incelemesi vardır.** Güvenlik incelemesi olmayan sözleşmelerle etkileşime girmekten kaçının. Değerlendirmenin süresini (diğer adıyla "çaba düzeyi"), güvenlik firmasının itibarını ve bulguların sayısını ve ciddiyetini kontrol edin.
+- **Geliştiricilerle iletişime geçtiniz.** Ekiplerini bir olay hakkında uyarmanız gerekebilir. [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts) üzerinden uygun kişileri arayın.
+- **Kritik duyurular için bir güvenlik e-posta listeleri vardır.** Ekipleri, kritik sorunlar bulunduğunda veya yükseltmeler gerçekleştiğinde kullanıcıları (sizin gibi!) bilgilendirmelidir.
 
-## ERC uygunluğu {#erc-conformity}
+## ERC uyumluluğu {#erc-conformity}
 
-Slither bir token'ın diğer birçok ERC standardına uyumluğunu gözden geçiren faydalı bir araç olan [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance)'yi bulundurur. Şunları gözden geçirmek için slither-check-erc kullanın:
+Slither, bir token'ın ilgili birçok ERC standardına uygunluğunu inceleyen [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance) adlı bir araç içerir. Şunları incelemek için slither-check-erc kullanın:
 
-- **Transfer ve transferFrom bir boolean döndürür.** Birkaç token bu fonksiyonlarda bir boolean döndürmez. Sonuç olarak, sözleşmedeki çağrıları başarısız olabilir.
-- **Ad, ondalık sayılar ve sembol fonksiyonları kullanılıyorsa mevcuttur.** Bu fonksiyonlar ERC20 standardında isteğe bağlıdır ve mevcut olmayabilir.
-- **Ondalık sayılar bir uint8 döndürür.** Birkaç token hatalı bir şekilde bir uint256 döndürür. Bu durumda, döndürülen değerin 255'in altında olduğundan emin olun.
-- **Token, bilinen [ERC20 yarış koşulunu](https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729) hafifletir.** ERC20 standardı, saldırganların token'ları çalmasını önlemek için hafifletilmesi gereken bilinen bir ERC20 yarış koşuluna sahiptir.
-- **Token bir ERC777 token'ı değil ve transfer ve transferFrom'da harici fonksiyon çağrısına sahip değil.** Aktarım işlevlerindeki harici çağrılar yeniden girişlere yol açabilir.
+- **Transfer ve transferFrom bir boolean döndürür.** Birçok token bu işlevlerde bir boolean döndürmez. Sonuç olarak, sözleşmedeki çağrıları başarısız olabilir.
+- **Kullanılıyorsa name, decimals ve symbol işlevleri mevcuttur.** Bu işlevler ERC-20 standardında isteğe bağlıdır ve mevcut olmayabilir.
+- **Decimals bir uint8 döndürür.** Birçok token yanlışlıkla bir uint256 döndürür. Durum buysa, döndürülen değerin 255'in altında olduğundan emin olun.
+- **Token, bilinen [ERC-20 yarış durumunu (race condition)](https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729) hafifletir.** ERC-20 standardında, saldırganların token'ları çalmasını önlemek için hafifletilmesi gereken bilinen bir ERC-20 yarış durumu vardır.
+- **Token bir ERC-777 token'ı değildir ve transfer ile transferFrom içinde harici bir işlev çağrısı yoktur.** Transfer işlevlerindeki harici çağrılar, yeniden girişlere (reentrancy) yol açabilir.
 
-Slither, birçok yaygın ERC kusurunu keşfedebilen birim testleri ve güvenlik özellikleri üreten bir yardımcı program olan [slither-prop](https://github.com/crytic/slither/wiki/Property-generation)'u içerir. Şunu gözden geçirmek için slither-prop kullanın:
+Slither, birçok yaygın ERC kusurunu keşfedebilen birim testleri ve güvenlik özellikleri üreten [slither-prop](https://github.com/crytic/slither/wiki/Property-generation) adlı bir araç içerir. Şunları incelemek için slither-prop kullanın:
 
-- **Sözleşme, slither-prop'tan tüm birim testlerini ve güvenlik özelliklerini geçer.** Oluşturulan birim testlerini çalıştırın, ardından [Echidna](https://github.com/crytic/echidna) ve [Manticore](https://manticore.readthedocs.io/en/latest/verifier.html) ile özellikleri kontrol edin.
+- **Sözleşme, slither-prop'tan gelen tüm birim testlerini ve güvenlik özelliklerini geçer.** Oluşturulan birim testlerini çalıştırın, ardından özellikleri [Echidna](https://github.com/crytic/echidna) ve [Manticore](https://manticore.readthedocs.io/en/latest/verifier.html) ile kontrol edin.
 
-Son olarak, otomatik olarak tanımlanması zor olan belirli özellikler vardır. Bu koşulları elle gözden geçirin:
+Son olarak, otomatik olarak tanımlanması zor olan bazı özellikler vardır. Bu koşulları manuel olarak inceleyin:
 
-- **Transfer and transferFrom bir ücret almamalıdır.** Deflasyonist token'lar beklenmedik davranışlara yol açabilir.
-- **Token'dan kazanılan potansiyel faiz dikkate alınır.** Bazı token'lar, token sahiplerine faiz dağıtır. Bu faiz, dikkate alınmadığı takdirde sözleşmede sıkışıp kalabilir.
+- **Transfer ve transferFrom bir ücret almamalıdır.** Deflasyonist token'lar beklenmedik davranışlara yol açabilir.
+- **Token'dan kazanılan potansiyel faiz dikkate alınır.** Bazı token'lar token sahiplerine faiz dağıtır. Dikkate alınmazsa bu faiz sözleşmede sıkışıp kalabilir.
 
-## Sözleşme kompozisyonu {#contract-composition}
+## Sözleşme yapısı {#contract-composition}
 
-- **Sözleşme, gereksiz karmaşıklığı önler.** Token basit bir sözleşme olmalıdır; karmaşık kodlu bir token, daha yüksek bir inceleme standardı gerektirir. Karmaşık kodu tanımlamak için Slither'ın [insan-özet yazıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) kullanın.
-- **Sözleşme, SafeMath kullanır.** SafeMath kullanmayan sözleşmeler, daha yüksek bir inceleme standardı gerektirir. SafeMath kullanımı için sözleşmeyi elle inceleyin.
-- **Sözleşmenin yalnızca birkaç token ile ilgili olmayan fonksiyonu vardır.** Token ile ilgili olmayan fonksiyonlar, sözleşmede sorun çıkma olasılığını artırır. Sözleşmede kullanılan kodu geniş olarak gözden geçirmek için Slither'ın [sözleşme-özet yazıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) kullanın.
-- **Token'ın yalnızca bir adresi vardır.** Bakiye güncellemeleri için birden fazla giriş noktasına sahip tokenler, adrese göre dahili muhasebeyi bozabilir (örn. `balances[token_address][msg.sender]` gerçek bakiyeyi yansıtmayabilir).
+- **Sözleşme gereksiz karmaşıklıktan kaçınır.** Token basit bir sözleşme olmalıdır; karmaşık koda sahip bir token daha yüksek bir inceleme standardı gerektirir. Karmaşık kodu belirlemek için Slither'ın [human-summary yazdırıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) kullanın.
+- **Sözleşme SafeMath kullanır.** SafeMath kullanmayan sözleşmeler daha yüksek bir inceleme standardı gerektirir. SafeMath kullanımı için sözleşmeyi manuel olarak inceleyin.
+- **Sözleşmenin token ile ilgili olmayan yalnızca birkaç işlevi vardır.** Token ile ilgili olmayan işlevler, sözleşmede bir sorun çıkma olasılığını artırır. Sözleşmede kullanılan kodu genel olarak incelemek için Slither'ın [contract-summary yazdırıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) kullanın.
+- **Token'ın yalnızca bir adresi vardır.** Bakiye güncellemeleri için birden fazla giriş noktası olan token'lar, adrese dayalı dahili kayıt tutmayı bozabilir (örneğin, `balances[token_address][msg.sender]` gerçek bakiyeyi yansıtmayabilir).
 
 ## Sahip ayrıcalıkları {#owner-privileges}
 
-- **Token yükseltilemez.** Yükseltilebilir sözleşmeler zamanla kurallarını değiştirebilir. Sözleşmenin yükseltilebilir olup olmadığını belirlemek için Slither'ın [insan-özet yazıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) kullanın.
-- **Sahip, sınırlı basım kabiliyetine sahiptir.** Kötü niyetli veya saldırıya uğramış sahipler basım kabiliyetlerini istismar edebilir. Basım kabiliyetlerini gözden geçirmek için Slither'ın [insan-özet yazıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) kullanın ve kodu elle incelemeyi düşünün.
-- **Token duraklatılamaz.** Kötü niyetli veya güvenliği ihlal eden sahipler, duraklatılabilir token'lara dayanarak sözleşmeleri tuzağa düşürebilir. Durdurulabilir kodu elle tanımlayın.
-- **Sahip, sözleşmeyi kara listeye alamaz.** Kötü niyetli veya güvenliği ihlal eden sahipler, token'lara dayanan sözleşmeleri bir kara listeyle tuzağa düşürebilir. Kara listeye alma özelliklerini elle tanımlayın.
-- **Token'ın arkasındaki ekip biliniyor ve kötüye kullanımdan sorumlu tutulabilir.** İsimsiz geliştirme ekipleriyle yapılan veya yasal sığınma alanlarında bulunan sözleşmeler, daha yüksek bir inceleme standardı gerektirmelidir.
+- **Token yükseltilebilir değildir.** Yükseltilebilir sözleşmeler zamanla kurallarını değiştirebilir. Sözleşmenin yükseltilebilir olup olmadığını belirlemek için Slither'ın [human-summary yazdırıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) kullanın.
+- **Sahibinin sınırlı basım yetenekleri vardır.** Kötü niyetli veya ele geçirilmiş sahipler basım yeteneklerini kötüye kullanabilir. Basım yeteneklerini incelemek için Slither'ın [human-summary yazdırıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) kullanın ve kodu manuel olarak incelemeyi düşünün.
+- **Token duraklatılabilir değildir.** Kötü niyetli veya ele geçirilmiş sahipler, duraklatılabilir token'lara dayanan sözleşmeleri tuzağa düşürebilir. Duraklatılabilir kodu manuel olarak belirleyin.
+- **Sahip, sözleşmeyi kara listeye alamaz.** Kötü niyetli veya ele geçirilmiş sahipler, kara listesi olan token'lara dayanan sözleşmeleri tuzağa düşürebilir. Kara listeye alma özelliklerini manuel olarak belirleyin.
+- **Token'ın arkasındaki ekip bilinmektedir ve kötüye kullanımdan sorumlu tutulabilir.** Anonim geliştirme ekiplerine sahip olan veya yasal sığınaklarda bulunan sözleşmeler daha yüksek bir inceleme standardı gerektirmelidir.
 
-## Token nadirliği {#token-scarcity}
+## Token kıtlığı {#token-scarcity}
 
-Token kıtlığı sorunlarına yönelik incelemeler, manuel inceleme gerektirir. Şu koşullar için kontrol edin:
+Token kıtlığı sorunlarına yönelik incelemeler manuel inceleme gerektirir. Şu koşulları kontrol edin:
 
-- **Hiçbir kullanıcı kaynağın çoğuna sahip değildir.** Token'ların çoğuna birkaç kullanıcı sahipse, token'ın yeniden bölünmesine dayalı olarak işlemleri etkileyebilirler.
-- **Toplam arz yeterlidir.** Toplam arzı düşük olan token'lar kolayca manipüle edilebilir.
-- **Token'lar birkaç borsadan daha fazlasında bulunur.** Tüm token'lar tek bir borsadaysa, borsanın güvenliğinin ihlal edilmesi token'a dayanan sözleşmeyi tehlikeye atabilir.
-- **Kullanıcılar, büyük fonlar veya hızlı kredilerle (flash credit) ilgili riskleri anlar.** Token bakiyesine dayanan sözleşmeler, büyük fonlara sahip saldırganları veya hızlı krediler yoluyla saldırıları dikkatle değerlendirmelidir.
-- **Token, hızlı basıma (flash mint) izin vermez**. Hızlı basım, token'ın işleyişinde sıkı ve kapsamlı taşma kontrolleri gerektiren bakiyede ve toplam arzda önemli dalgalanmalara yol açabilir.
+- **Hiçbir kullanıcı arzın çoğuna sahip değildir.** Birkaç kullanıcı token'ların çoğuna sahipse, token'ın dağılımına dayalı olarak işlemleri etkileyebilirler.
+- **Toplam arz yeterlidir.** Düşük toplam arza sahip token'lar kolayca manipüle edilebilir.
+- **Token'lar birkaç borsadan fazlasında bulunur.** Tüm token'lar tek bir borsadaysa, borsanın ele geçirilmesi token'a dayanan sözleşmeyi de tehlikeye atabilir.
+- **Kullanıcılar büyük fonların veya flaş kredilerin (flash loans) ilişkili risklerini anlar.** Token bakiyesine dayanan sözleşmeler, büyük fonlara sahip saldırganları veya flaş krediler aracılığıyla yapılan saldırıları dikkatlice göz önünde bulundurmalıdır.
+- **Token flaş basıma (flash minting) izin vermez**. Flaş basım, bakiye ve toplam arzda önemli dalgalanmalara yol açabilir; bu da token'ın işleyişinde katı ve kapsamlı taşma kontrollerini zorunlu kılar.

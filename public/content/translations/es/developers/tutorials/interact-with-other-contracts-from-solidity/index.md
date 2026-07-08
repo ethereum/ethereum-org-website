@@ -1,14 +1,10 @@
 ---
-title: Interactúe con otros contratos desde Solidity
-description: Cómo implementar un contrato inteligente desde un contrato existente e interactuar con él
+title: Interactuar con otros contratos desde Solidity
+description: "Cómo desplegar un contrato inteligente desde un contrato existente e interactuar con él"
 author: "jdourlens"
-tags:
-  - "contratos inteligentes"
-  - "solidity"
-  - "remix"
-  - "implementación"
-  - "capacidad de composición"
+tags: ["contratos inteligentes", "Solidity", "Remix", "despliegue", "composabilidad"]
 skill: advanced
+breadcrumb: Interacciones de contratos
 lang: es
 published: 2020-04-05
 source: EthereumDev
@@ -16,9 +12,9 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-En los tutoriales anteriores aprendimos mucho sobre [cómo implementar su primer contrato inteligente](/developers/tutorials/deploying-your-first-smart-contract/) y agregar algunas funciones como [control de acceso con modificadores](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) o [manejo de errores en Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). En este tutorial aprenderemos cómo implementar un contrato inteligente desde un contrato existente e interactuar con él.
+En los tutoriales anteriores aprendimos mucho sobre [cómo desplegar tu primer contrato inteligente](/developers/tutorials/deploying-your-first-smart-contract/) y añadirle algunas características como [controlar el acceso con modificadores](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) o [el manejo de errores en Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). En este tutorial aprenderemos cómo desplegar un contrato inteligente desde un contrato existente e interactuar con él.
 
-Vamos a hacer un contrato que permita a cualquiera tener su propio contrato inteligente de `Counter` mediante la creación de una fábrica para tal propósito: se llamará `CounterFactory`. En primer lugar, aquí tenemos el código del contrato inteligente `Counter` inicial:
+Haremos un contrato que permita a cualquiera tener su propio contrato inteligente `Counter` creando una fábrica (factory) para él, su nombre será `CounterFactory`. Primero, aquí está el código de nuestro contrato inteligente `Counter` inicial:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -56,19 +52,19 @@ contract Counter {
 }
 ```
 
-Tenga en cuenta que modificamos ligeramente el código del contrato para controlar la dirección de la fábrica y la dirección del contrato del propietario. Al hacer una llamada al código de un contrato desde otro contrato, msg.sender hará referencia a la dirección de la fábrica del contrato. Este es **un punto realmente importante que hay que entender**, ya que utilizar un contrato para interactuar con otros contratos es una práctica común. Por tanto, se debería prestar a atención a quién es el remitente en casos complejos.
+Ten en cuenta que modificamos ligeramente el código del contrato para hacer un seguimiento de la dirección de la fábrica y la dirección del propietario del contrato. Cuando llamas al código de un contrato desde otro contrato, el msg.sender se referirá a la dirección de nuestra fábrica de contratos. Este es **un punto muy importante de entender**, ya que usar un contrato para interactuar con otros contratos es una práctica común. Por lo tanto, debes tener cuidado de quién es el remitente en casos complejos.
 
-Por esta razón, también añadimos un modificador `onlyFactory` que se asegure de que la función de cambio de estado solo pueda ser invocada por la fábrica que pasará el invocador inicial como parámetro.
+Para esto también añadimos un modificador `onlyFactory` que se asegura de que la función que cambia el estado solo pueda ser llamada por la fábrica que pasará al llamador original como parámetro.
 
-Dentro de nuestro `CounterFactory` que administrará todos los demás Counters, agregaremos un mapeo que asociará a un propieatario con la dirección de este contrato de contador:
+Dentro de nuestro nuevo `CounterFactory` que gestionará todos los demás Counters, añadiremos un mapeo (mapping) que asociará a un propietario con la dirección de su contrato contador:
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-En Ethereum, los mapeos, o mappings, son equivalentes a los objetos en JavaScript: permiten asociar una clave de tipo A a un valor de tipo B. En este caso, asociamos la dirección de un propietario con la instancia de su contador.
+En Ethereum, los mapeos son el equivalente a los objetos en JavaScript, permiten mapear una clave de tipo A a un valor de tipo B. En este caso mapeamos la dirección de un propietario con la instancia de su Counter.
 
-La instanciación de un Contador nuevo para alguien se verá de la siguiente manera:
+Instanciar un nuevo Counter para alguien se verá así:
 
 ```solidity
   function createCounter() public {
@@ -77,9 +73,9 @@ La instanciación de un Contador nuevo para alguien se verá de la siguiente man
   }
 ```
 
-Primero, revisaremos si la persona en cuestión ya es propietaria de un contador. Si ese no es el caso, instanciaremos un nuevo contador pasando su dirección al constructor de `Counter` y asignar la instancia recientemente creada al mapeo.
+Primero comprobamos si la persona ya posee un contador. Si no posee un contador, instanciamos un nuevo contador pasando su dirección al constructor de `Counter` y asignamos la instancia recién creada al mapeo.
 
-Para obtener el conteo de un Contador específico, se verá así:
+Para obtener la cuenta de un Counter específico se verá así:
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
@@ -92,9 +88,9 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-La primera función revisa si el contrato del Contador existe para una dirección proporcionada y luego llama al método `getCount` desde la instancia. La segunda función, `getMyCount`, es solo un extremo corto para pasar el msg.sender directamente a la función `getMyCount`.
+La primera función comprueba si el contrato Counter existe para una dirección dada y luego llama al método `getCount` desde la instancia. La segunda función: `getMyCount` es solo un atajo para pasar el msg.sender directamente a la función `getCount`.
 
-La función `increment` es bastante similar, pero pasa el emisor de la transacción original al contrato `Counter`:
+La función `increment` es bastante similar pero pasa el remitente original de la transacción al contrato `Counter`:
 
 ```solidity
 function increment() public {
@@ -103,11 +99,11 @@ function increment() public {
   }
 ```
 
-Note que si es llamado muchas veces, nuestro contador podría ser víctima del desbordamiento, u overflow. Debe usar la [biblioteca SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) tanto como sea posible para evitar esta situación.
+Ten en cuenta que si se llama demasiadas veces, nuestro contador podría ser víctima de un desbordamiento. Deberías usar la [biblioteca SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) tanto como sea posible para protegerte de este posible caso.
 
-Para implementar nuestro contrato, necesitará proporcionar el código de `CounterFactory` y el `Counter`. Al realizar la implementación, por ejemplo, en Remix, deberá seleccionar CounterFactory.
+Para desplegar nuestro contrato, necesitarás proporcionar tanto el código de `CounterFactory` como el de `Counter`. Al desplegar, por ejemplo en Remix, necesitarás seleccionar CounterFactory.
 
-Este es el código completo:
+Aquí está el código completo:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -170,8 +166,8 @@ contract CounterFactory {
 }
 ```
 
-Luego de la compilación, en la sección de implementación de Remix, debe seleccionar la fábrica a implementar:
+Después de la compilación, en la sección de despliegue de Remix seleccionarás la fábrica que se va a desplegar:
 
-![Seleccionar la fábrica a implementar en Remix](./counterfactory-deploy.png)
+![Selecting the factory to be deployed in Remix](./counterfactory-deploy.png)
 
-Luego puede experimentar con su fábrica de contratos y revisar el valor cambiante. Si desea invocar el contrato inteligente desde una dirección diferente, necesitará cambiar la dirección en la selección de Cuenta en Remix.
+Luego puedes jugar con tu fábrica de contratos y comprobar cómo cambia el valor. Si deseas llamar al contrato inteligente desde una dirección diferente, necesitarás cambiar la dirección en el selector de cuenta (Account) de Remix.

@@ -1,6 +1,6 @@
 ---
 title: Escalado de capa 2
-description: Una introducción a las diferentes opciones de escalado, que desarrolla actualmente la comunidad de Ethereum.
+description: "Una introducción a las diferentes opciones de escalado, que desarrolla actualmente la comunidad de Ethereum."
 lang: es
 incomplete: true
 sidebarDepth: 3
@@ -170,7 +170,7 @@ Una cadena de plasma es una blockchain independiente que está anclada a la cade
 ### Usos de Plasma {#use-plasma}
 
 - [Red OMG](https://omg.network/)
-- [Red Matic](https://matic.network/)
+- [Red Matic](https://polygon.technology/)
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
@@ -218,13 +218,12 @@ Combinan las mejores partes de las tecnologías múltiples de capa 2 y pueden of
 - [Validium y la capa 2, número 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [Evaluación de soluciones de escala de la capa 2 de Ethereum: Una estructura de comparación](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Adición del Rollup de la Prueba de participación híbrida a la plataforma de la capa 2 de Celer en Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
-- [Escalabilidad de la blockchain de conocimiento cero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 
 **Canales de estado**
 
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– 12 de febrero de 2018, Josh Stark_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/), _6 de noviembre de 2015, Jeff Coleman_
-- [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Basics of State Channels](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 
 **Canales de pago**
 

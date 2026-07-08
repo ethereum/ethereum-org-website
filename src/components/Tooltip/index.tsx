@@ -1,4 +1,6 @@
-import React, { ComponentProps, ReactNode, useEffect } from "react"
+"use client"
+
+import { ComponentProps, ReactNode, useEffect } from "react"
 import { Portal } from "@radix-ui/react-portal"
 
 import { isMobile } from "@/lib/utils/isMobile"
@@ -19,6 +21,9 @@ export type TooltipProps = ComponentProps<typeof Popover> & {
   children?: ReactNode
   onBeforeOpen?: () => void
   container?: HTMLElement | null
+  asChild?: boolean
+  /** Base `bg-background` instead of `bg-background-highlight`, for when nested in an already-highlighted container. */
+  nested?: boolean
   customMatomoEvent?: {
     eventCategory: string
     eventAction: string
@@ -31,6 +36,8 @@ const Tooltip = ({
   children,
   onBeforeOpen,
   container,
+  asChild,
+  nested,
   customMatomoEvent,
   ...props
 }: TooltipProps) => {
@@ -98,14 +105,18 @@ const Tooltip = ({
       delayDuration={200}
       {...props}
     >
-      <Trigger className="focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover">
+      <Trigger
+        asChild={asChild}
+        className="focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover"
+      >
         {children}
       </Trigger>
       <Portal container={container}>
         <Content
           side="top"
           sideOffset={2}
-          className="max-w-80 px-5 text-sm"
+          nested={nested}
+          className="z-[10000] w-fit max-w-80 px-5 text-sm"
           data-testid="tooltip-popover"
         >
           {content}

@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-06-16T23:20:11.700Z",
+  "englishManifestHash": "e90e5e83c7a1",
+  "placeholderOrder": [
+    "LINK-f84a92",
+    "LINK-fb2e62",
+    "LINK-fb2e62",
+    "LINK-fb2e62",
+    "LINK-94bc9c",
+    "CODE-74e216",
+    "CODE-b7f373",
+    "LINK-4f7a4c",
+    "CODE-ee80fd",
+    "LINK-d6e06e"
+  ],
+  "placeholderMap": {
+    "CODE-74e216": {
+      "type": "inline-code",
+      "values": {
+        "content": "approve"
+      }
+    },
+    "CODE-b7f373": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFrom"
+      }
+    },
+    "CODE-ee80fd": {
+      "type": "inline-code",
+      "values": {
+        "content": "decimals"
+      }
+    },
+    "LINK-f84a92": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-94bc9c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1820"
+      }
+    },
+    "LINK-4f7a4c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-20"
+      }
+    },
+    "LINK-d6e06e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-777"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T23:20:11.700Z",
+      "status": "success"
+    }
+  }
+}
