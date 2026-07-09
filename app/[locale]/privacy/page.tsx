@@ -173,7 +173,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               <Lightbulb />
             </AlertIcon>
             <AlertContent>
-              <AlertTitle size="lg">
+              <AlertTitle size="lg" className="text-pretty">
                 {t("page-privacy-remember-data-title")}
               </AlertTitle>
               <p className="mt-2">
