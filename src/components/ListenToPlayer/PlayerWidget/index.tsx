@@ -141,7 +141,7 @@ const PlayerWidget = ({
     <div
       className={cn(
         "w-80 border bg-background shadow-lg",
-        isExpanded ? "rounded-base p-4" : "rounded-t-base p-2 border-b-0"
+        isExpanded ? "rounded-base p-4" : "rounded-t-base border-b-0 p-2"
       )}
     >
       <div

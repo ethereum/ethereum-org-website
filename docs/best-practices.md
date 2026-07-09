@@ -57,7 +57,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
     ```tsx
-    import { Translation } from "src/components/Translation"
+    import Translation from "@/components/Translation"
 
     // Utilize in JSX using
     ;<Translation id="language-json-key" />
@@ -107,7 +107,7 @@ We use [Tailwind CSS](https://tailwindcss.com/) as our primary styling approach,
 ### Styling Approach
 
 - **Primary**: Tailwind CSS utility classes
-- **Component variants**: Use `class-variance-authority` (cva) for component variants
+- **Component variants**: Use `tailwind-variants` (`tv`) for new and refactored components; `class-variance-authority` (cva) remains only in legacy components and doesn't need bulk migration
 - **Dynamic classes**: Use `cn()` utility function (combines clsx + tailwind-merge)
 - **Responsive design**: Mobile-first approach with Tailwind breakpoints (`sm:`, `md:`, `lg:`, `xl:`, `2xl:`)
 
@@ -134,7 +134,7 @@ Use shadcn/ui components for interactive elements:
 ```tsx
 import { Button } from "@/components/ui/button"
 
-<Button variant="outline" size="sm">
+;<Button variant="outline" size="sm">
   Click me
 </Button>
 ```
@@ -148,15 +148,20 @@ Use CSS custom properties defined in the design system:
 <div className="border border-border bg-background">
 ```
 
-- [Framer Motion](https://www.framer.com/motion/) - An open source and production-ready motion library for React on the web, used for our animated designs
+- [Motion](https://motion.dev/) (the `motion` package, v12) - An open source and production-ready motion library for React on the web, used for our animated designs. Import from `motion/react`:
+
+```tsx
+import { motion } from "motion/react"
+```
+
 - **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by X (formerly Twitter). These are hosted by us, and used to provide a consistent experience across operating systems.
 
 ```tsx
 // Example of emoji use
-import Emoji from "./Emoji"
+import Emoji from "@/components/Emoji"
 
-// Within JSX:
-;<Emoji text=":star:" fontSize="xl" /> // the base fontSize is `md`
+// Within JSX (size with Tailwind text classes via className):
+;<Emoji text=":star:" className="text-xl" />
 ```
 
 ## Icons: Lucide
@@ -208,6 +213,7 @@ Use tailwind classes to size icons:
   ```
 
   Options:
+
   - `strokeLinecap`: `butt`, `round`, `square`
   - `strokeLinejoin`: `round`, `bevel`, `miter`
 
@@ -216,8 +222,8 @@ Use tailwind classes to size icons:
 Wrap an icon in a div for circular backgrounds, and color using background:
 
 ```tsx
-<div className="bg-primary/10 grid size-10 place-items-center rounded-full">
-  <Heart className="text-primary size-5" />
+<div className="grid size-10 place-items-center rounded-full bg-primary/10">
+  <Heart className="size-5 text-primary" />
 </div>
 ```
 

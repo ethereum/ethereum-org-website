@@ -36,9 +36,8 @@ const cardVariants = cva(
         sm: "[--card-pad:--spacing(2.5)] [--content-space:--spacing(2.5)]",
         xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
-      hoverEffect: {
-        lift: "hover-lift-base",
-      },
+      hoverLift: { true: "hover-lift-base" },
+      border: { true: "ring ring-border" },
     },
     defaultVariants: {
       variant: "base",
@@ -59,18 +58,30 @@ const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
       customEventOptions,
       variant,
       size,
-      hoverEffect,
+      hoverLift,
+      border,
       ...props
     },
     ref
   ) => {
-    const classes = cn(cardVariants({ variant, size, hoverEffect }), className)
+    const classes = cn(
+      cardVariants({
+        variant,
+        size,
+        hoverLift,
+        border,
+      }),
+      className
+    )
     if (href) {
       return (
         <BaseLink
           ref={ref as React.Ref<HTMLAnchorElement>}
           href={href}
-          className={cn(classes, "group/link")}
+          className={cn(
+            "group/link ring ring-transparent hover:ring-primary-hover",
+            classes
+          )}
           customEventOptions={customEventOptions}
           hideArrow
           {...props}

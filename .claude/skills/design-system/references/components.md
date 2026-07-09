@@ -325,6 +325,15 @@ import { Tooltip, TooltipContent } from "@/components/ui/tooltip"
 
 Bare hover-only Radix tooltip. Used only inside `@/components/Tooltip`. Use `@/components/Tooltip` instead.
 
+#### Floating surfaces (Popover, Tooltip) -- the `popover-outline` utility + `nested`
+
+Both `PopoverContent` and `TooltipContent` share the `popover-outline` utility (`src/styles/utilities.css`) for their border + elevation. It exists because a plain CSS `border` traces only the content box and **severs the Radix `Arrow`** (a separate SVG outside the box). `popover-outline` instead draws the 1px themed border *and* the lift as a stack of `drop-shadow()` filters, which follow the box + arrow as one shape.
+
+- **Don't add `border`/`box-shadow` back.** Depth must stay inside the same `filter` -- a `box-shadow` halo becomes the filter's input and the border drop-shadows would trace the faded halo edge and vanish. Adjust elevation by editing the utility, not the call site.
+- **No `overflow-hidden` on the content** -- it clips the Arrow.
+- **Shadow color is themed** via `hsla(var(--body), var(--shadow-opacity))`; `--shadow-opacity` (`0.1` light / `0.15` dark) is set inside the utility, so in dark mode the lift is a light halo by design, not a bug.
+- **`nested` prop** (both components, and `@/components/Tooltip`): swaps the surface + arrow fill from `bg-background-highlight` to the base `bg-background`. Pass it when the floating surface opens over a container that is itself `bg-background-highlight` (e.g. a wallet table row on hover) and would otherwise blend in.
+
 ### `DropdownMenu`
 
 ```tsx

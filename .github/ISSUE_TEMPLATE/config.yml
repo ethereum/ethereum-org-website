@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and discussion
+    url: https://discord.gg/ethereum-org
+    about: Join the ethereum.org Discord to ask questions or discuss ideas with the community.
+  - name: Report a security vulnerability
+    url: https://ethereum.org/en/security/
+    about: Please do not report security vulnerabilities in public issues — see our security page for how to reach us.
+  - name: How to contribute
+    url: https://ethereum.org/en/contributing/
+    about: Read the contributing guide, including listing policies for wallets, exchanges, dapps and other products.
