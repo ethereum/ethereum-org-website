@@ -20,6 +20,7 @@ import {
   DankshardingIcon,
   ExtraSecurityIcon,
   FutureProofingIcon,
+  PrivacyIcon,
   SingleSlotFinalityIcon,
   StatelessnessIcon,
 } from "@/components/icons/roadmap"
@@ -108,6 +109,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       button: {
         label: t("page-roadmap-future-proofing-button"),
         href: "/roadmap/future-proofing",
+      },
+    },
+    {
+      title: t("page-roadmap-privacy-title"),
+      icon: <PrivacyIcon className="h-auto w-12" />,
+      description: t("page-roadmap-privacy-description"),
+      button: {
+        label: t("page-roadmap-privacy-button"),
+        href: "/roadmap/privacy",
       },
     },
   ]
@@ -208,7 +218,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p className="max-w-3xl text-lg">
               <Translation id="page-roadmap:page-roadmap-changes-coming-description" />
             </p>
-            <Grid balanced={4}>
+            <Grid className="grid-cols-1! md:grid-cols-2! xl:grid-cols-5!">
               {changesComingItems.map((item) => (
                 <Card key={item.title} hoverLift>
                   <CardHeader className="flex items-center justify-between gap-4">

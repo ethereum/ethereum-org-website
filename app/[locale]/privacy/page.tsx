@@ -20,6 +20,7 @@ import {
   AlertIcon,
   AlertTitle,
 } from "@/components/ui/alert"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardContent,
@@ -420,6 +421,13 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>
             {t.rich("page-privacy-default-description-3", { strong: Strong })}
           </p>
+          <ButtonLink
+            href="/roadmap/privacy/"
+            variant="outline"
+            data-flow="cta"
+          >
+            {t("page-privacy-default-cta")}
+          </ButtonLink>
         </Section>
 
         <Section id={getId(tocItems[6].url)}>

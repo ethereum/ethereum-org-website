@@ -458,6 +458,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               description: t("nav-roadmap-future-description"),
               href: "/roadmap/future-proofing/",
             },
+            {
+              label: t("nav-roadmap-privacy-label"),
+              description: t("nav-roadmap-privacy-description"),
+              href: "/roadmap/privacy/",
+            },
           ],
         },
         {
