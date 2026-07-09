@@ -6,6 +6,7 @@ import {
   Plus,
   Presentation,
 } from "lucide-react"
+import { notFound } from "next/navigation"
 import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
@@ -41,6 +42,7 @@ import { SECTION_IDS } from "./constants"
 import PageJsonLD from "./page-jsonld"
 import { getMeetupGroups, mapEventTranslations } from "./utils"
 
+import { routing } from "@/i18n/routing"
 import { getEventsData } from "@/lib/data"
 import ethereumEverywhereLogo from "@/public/images/community/ethereum-everywhere-logo.png"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
@@ -564,6 +566,10 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  if (!routing.locales.includes(locale)) {
+    notFound()
+  }
   const t = await getTranslations("page-community-events")
 
   const year = getLocaleYear(locale)

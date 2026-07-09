@@ -1,4 +1,5 @@
 import { pick } from "lodash"
+import { notFound } from "next/navigation"
 import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
@@ -19,6 +20,7 @@ import { getMeetupGroups, mapEventTranslations } from "../utils"
 import FilterMeetups from "./_components/filter-meetups"
 import PageJsonLD from "./page-jsonld"
 
+import { routing } from "@/i18n/routing"
 import { getEventsData } from "@/lib/data"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -91,6 +93,10 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  if (!routing.locales.includes(locale)) {
+    notFound()
+  }
   const t = await getTranslations("page-community-events")
 
   const year = getLocaleYear(locale)

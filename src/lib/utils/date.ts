@@ -2,6 +2,21 @@ import { DEFAULT_LOCALE } from "../constants"
 import type { Lang } from "../types"
 
 /**
+ * Falls back to DEFAULT_LOCALE when `locale` is not a structurally valid
+ * BCP 47 tag (e.g. a crawler-supplied path segment like "undefined" or
+ * "wp_admin" reaching generateMetadata before the layout's locale guard
+ * runs). Intl constructors throw a RangeError on such tags (#18013).
+ */
+export function safeLocale(locale: string): string {
+  try {
+    Intl.getCanonicalLocales(locale)
+    return locale
+  } catch {
+    return DEFAULT_LOCALE
+  }
+}
+
+/**
  * A wrapper for Intl.DateTimeFormat that enforces Web3 date standards.
  * - Forces the Gregorian calendar universally.
  * - Arabic ('ar') and standard locales default to Western numerals (1, 2, 3).
@@ -28,7 +43,7 @@ export function dateTimeFormat(
     ...(numberingSystem && { numberingSystem }),
   }
 
-  return new Intl.DateTimeFormat(locale, finalOptions)
+  return new Intl.DateTimeFormat(safeLocale(locale), finalOptions)
 }
 
 export const dateToString = (published: Date | string) =>
