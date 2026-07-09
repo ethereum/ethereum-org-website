@@ -369,6 +369,13 @@ The intl-pipeline extracts attributed HTML tags (`<a href>`, `<img>`) from JSON 
 - Scores: fr/it/vi 10.0; de/es/hi/id/pl/ru/ur 9.8; tr 9.7; ar/bn/ja/ko/sw/ta/uk/zh 9.6; cs 9.5; mr/te 9.4.
 - Confirmed clean across the fleet: no semantic inversions (PoW/PoS, validator/miner, mainnet/testnet), no translated internal hrefs, no transliterated domains, no cross-script contamination, ICU placeholders + rich-text tags intact, brand/script policy correct per group. zh `智能合约` correct (not `智慧`). Historically weak ar/vi/tr clean of prior failure modes.
 
+### All 24 languages -- page-privacy.json, Reviewed PR #18739 (intl/pending-privacy-page)
+- Single 71-key UI-string JSON (privacy landing page) x 24 langs. Fleet avg **~9.5/10** (range: te 8.3, ur/it 9.3, up to es/id/ko/pt-br 9.8).
+- Structure clean fleet-wide (deterministic script): full key parity, all 6 named rich-text tags (`<dragnet>`, `<ftcReport>`, `<harvest>`, `<manipulate>`, `<nccStudy>`, `<reported>`) + `{value}` placeholder preserved, stats intact (376, 135, years). Two balanced `<strong>` redistributions (ar/ko) safe for RTL/SOV word order. Urdu correctly wraps metric `{value}` in U+2066/U+2069 bidi isolates (RTL-correct, not an artifact).
+- **1 critical (te): pattern 26** -- Uber "does not use" denial inverted by the `-మని` reported-directive suffix. Hand-fixed.
+- Minor fixes applied: de/cs/it/sw grammar+spelling typos; ar detached-lam spacing (2 strings); ru decimal `2.8`->`2,8`; zh/zh-tw/hi/bn "price gouging" softening (pattern 27).
+- Ethereum correctly transliterated per ETHGlossary in every non-Latin script (イーサリアム, 以太坊, 이더리움, Эфириум, إيثيريوم, इथेरियम, எத்திரியம், ఎథీరియం). Glossary density low for this page (~10 matched terms; mostly privacy/metadata/permissionless/zero-knowledge/cryptography).
+
 ### 23. Empty `{#}` Heading Anchors on h5 (CRITICAL — build-breaker)
 
 MT injects empty `{#}` tokens (often duplicated: `{#} {#} {#}`) onto h5 (`#####`) headings that have NO anchor in English (only h1-h4 require `{#id}`). `escapeHeadingIds` only escapes `{#word}` (needs a word char), so empty `{#}` reaches the MDX parser as a `{#}` expression -> "Could not parse expression with acorn" -> build fails. **Detect deterministically** by compiling each changed file through `@mdx-js/mdx` (strip frontmatter + escape `{#id}` first). **Fix:** strip the empty `{#}` tokens (English h5 has no anchor). Seen in PR #18629 `developers/docs/networks/index.md`, all 23 langs, 9 tokens/file.
@@ -385,6 +392,14 @@ PR #18629 hit every variant fleet-wide: `short-abi` Solidity keywords (incl. ko 
 ### 25. Methodology — Deterministic Sweeps Beat Agent Triage for Systematic Code Issues
 
 In PR #18629, deterministic sweeps (MDX compile + anchored grep against English) caught **~2x** the code/output criticals that 24 per-language Sonnet agents found. Agents reported es/id/ko as "0 critical" while all three had `getContractFactory` corrupted; short-abi keyword translation was missed by most agents. **Lesson:** for systematic, file-repeated issues (same English source mistranslated the same way across langs), do NOT rely on per-language agent triage for coverage — run a deterministic detection+fix sweep keyed on stable English anchors, then use agents for the judgment calls (semantics, glossary, tone). Reserve agent findings for what can't be grepped.
+
+### 26. Reported-Speech Negation Inversion in SOV/Agglutinative Langs (CRITICAL — semantic)
+
+A denial in indirect speech ("X says it does **not** do Y") can silently flip to an affirmative directive when the negation rides a verb suffix that collides with a reported-command marker. **Telugu (PR #18739):** "Uber says it does not use this to set fares" became `...దీనిని ఉపయోగించమని Uber చెబుతోంది` -- `-మని` is the standard reported-directive suffix ("says TO use"), so the default parse is the OPPOSITE of the source; only a strained `ఉపయోగించము+అని` (we-do-not-use) reading recovers the negative. On a page making a factual claim about a named company this is a meaning inversion, not a nit. **Fix:** unambiguous negative -- verbal-noun + లేదని (`ఉపయోగించడం లేదని` = "is not using") or 3rd-person negative `ఉపయోగించదని`. **Detection:** agent-only (not greppable) -- flag any "<entity> says ... not ..." denial and confirm the target keeps an explicit negation. Watch other SOV/agglutinative langs (Tamil, Telugu, Korean, Japanese) where negation is a suffix.
+
+### 27. Pejorative / Term-of-Art Flattening -- "price gouging", "surge" (LOW/MEDIUM — nuance)
+
+English words carrying a pejorative or technical shade lose it when MT picks the neutral core sense. Recurring on the privacy page: "algorithmic price **gouging**" -> plain "price increase" (bn, hi) or "price **fraud**" (zh `价格欺诈`, zh-tw `價格欺詐`) -- drops the exploitative-overcharging sense; `"surge" price` (Uber, a quoted term-of-art) collapses into the same word used for "dynamic pricing" (it, pl, pt-br, zh) -- loses the demand-spike nuance and the scare-quote framing. Not build/meaning-breaking; whether to fix depends on how load-bearing the nuance is. **Easy patches:** zh/zh-tw gouging = `哄抬` (哄抬价格/物价, the standard term); insert an "unfair/exploitative" qualifier (hi `अनुचित`, bn `অন্যায্য`) before "increase". **Detection:** agent-only -- give reviewers the loaded source terms explicitly so they verify the shade survived.
 
 ## Agent Architecture Notes
 
