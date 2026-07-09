@@ -42,17 +42,17 @@ import ComponentA from "."
 
 const meta = {
   title: "ComponentA",
-  component: ComponentA
+  component: ComponentA,
 } satisfies Meta<typeof ComponentA>
 
 export default meta
 // Please use `typeof meta` for maximum type safety
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {}
 ```
 
-- With the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e., `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/7.0/react/writing-stories/naming-components-and-hierarchy)
+- With the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e., `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/writing-stories/naming-components-and-hierarchy)
 - The `satisfies` TypeScript keyword is used with the `Meta` type for stricter type checking. This is particularly helpful to make sure required args are not missed. [Storybook Docs regarding `satisfies`](https://storybook.js.org/docs/writing-stories/typescript#using-satisfies-for-better-type-safety)
 - The use of `StoryObj` is to be able to typecheck the creation of a story as an object. This helps with prop inference.
 - We use `StoryObj<typeof meta>` in the event a required arg is provided in the `meta` object, to be applied to all stories in the file. This prevents type errors from being thrown at the story level for a required missing arg.
@@ -67,29 +67,31 @@ Should the component accept props on all or some renders, you can provide an `ar
 Let's say for a `Button` component with different style variants...
 
 ```tsx
+import { VStack } from "@/components/ui/flex"
+
 import Button from "."
 
 type ButtonType = typeof Button
 
 const meta = {
   title: "Atoms / Form / Button",
-  component: Button
+  component: Button,
 } satisfies Meta<ButtonType>
 
 export default meta
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Solid: Story = {
   args: {
-    variant: 'solid',
-    children: 'A Button'
-  }
+    variant: "solid",
+    children: "A Button",
+  },
 }
 export const Outline: Story = {
   args: {
-    variant: 'outline',
-    children: 'A Button'
-  }
+    variant: "outline",
+    children: "A Button",
+  },
 }
 
 /**
@@ -103,15 +105,16 @@ export const Outline: Story = {
  * of the component.
  */
 
-// Assuming `solid` is the default variant in the Chakra theme config
+// `solid` is the default variant in the Button's cva config
+// (see `src/components/ui/buttons/Button.tsx`)
 export const Variants: StoryObj = {
   render: () => (
     <VStack>
       <Button>A Solid Button</Button>
       <Button variant="outline">An Outline Button</Button>
-      <Button variant="unstyled">An Unstyled Button</Button>
+      <Button variant="ghost">A Ghost Button</Button>
     </VStack>
-  )
+  ),
 }
 ```
 
@@ -146,9 +149,9 @@ Outlined below are each of the areas going from left to right in the selections.
 
 | Toolbar above the preview                | Panel below the preview                                                                                                                                                                                                                                                    |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Rerender preview                      | 1. Controls - allows you to interact with a component’s args (inputs) dynamically. Experiment with alternate configurations of the component to discover edge cases. See [Controls addon docs](https://storybook.js.org/docs/7.0/react/essentials/controls)                |
-| 2. Zoom In                               | 2. Actions (if applicable) - help you verify interactions produce the correct outputs via callbacks. See [Actions addon docs](https://storybook.js.org/docs/7.0/react/essentials/actions)                                                                                  |
-| 3. Zoom Out                              | 3. Interactions (if applicable) - In conjunction with the `play` function in a story object, this section allows you to simulate user interactions after the story renders. See [Interactions addon docs](https://storybook.js.org/docs/7.0/react/essentials/interactions) |
+| 1. Rerender preview                      | 1. Controls - allows you to interact with a component’s args (inputs) dynamically. Experiment with alternate configurations of the component to discover edge cases. See [Controls addon docs](https://storybook.js.org/docs/essentials/controls)                          |
+| 2. Zoom In                               | 2. Actions (if applicable) - help you verify interactions produce the correct outputs via callbacks. See [Actions addon docs](https://storybook.js.org/docs/essentials/actions)                                                                                            |
+| 3. Zoom Out                              | 3. Interactions (if applicable) - In conjunction with the `play` function in a story object, this section allows you to simulate user interactions after the story renders. See [Interactions addon docs](https://storybook.js.org/docs/writing-tests/interaction-testing) |
 | 4. Reset Zoom                            | 4. Accessibility provides visual A11y results for each story.<br><br>**NOTE**: To check accessibility for light and dark mode, you will need to toggle the mode, then rerender the preview to update the results.                                                          |
 | 5. Change background                     |
 | 6. Apply grid to preview                 |
@@ -169,7 +172,7 @@ When creating a story, Chromatic creates a "snapshot" of it and sets it as a bas
 
 Depending on the component, we might look for more than just one snapshot per story. In some cases, we might want multiple snapshots showing the story rendered at various viewport widths or in different languages, a combination of both, etc. These are referred to as [Story Modes](https://www.chromatic.com/docs/modes/). Examples of applicable components include the `Footer` and the `HubHero`.
 
-You will currently find the setup of these modes in [the `./storybook/modes.ts` file](../.storybook/modes.ts)
+You will currently find the setup of these modes in [the `.storybook/modes.ts` file](../.storybook/modes.ts)
 
 > Note: At this time we are only considering modes for viewport and languages. Color mode is not possible with the existing setup and is being investigated to make it available, should we want to use it.
 

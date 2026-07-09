@@ -5,7 +5,7 @@ description: Use when building, refactoring, or styling any UI in the ethereum.o
 
 # ethereum.org Design System
 
-Tailwind v4 (CSS-first config, no `tailwind.config.ts`) + React 18 / Next.js App Router + Radix UI primitives + shadcn-style component layer. Tokens live in CSS. Read this file fully on activation; pull from `references/` only when the listed trigger applies.
+Tailwind v4 (CSS-first config, no `tailwind.config.ts`) + React 19 / Next.js App Router + Radix UI primitives + shadcn-style component layer. Tokens live in CSS. Read this file fully on activation; pull from `references/` only when the listed trigger applies.
 
 ## The Core Habit: Reuse Over Reinvent
 

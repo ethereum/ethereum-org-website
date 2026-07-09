@@ -256,14 +256,19 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/developers/tools/",
             },
             {
-              label: t("nav-code-tutorials-label"),
-              description: t("nav-code-tutorials-description"),
+              label: t("learn-ethereum-development"),
+              description: t("nav-learn-ethereum-development-description"),
+              href: "/developers/tools/categories/education-standards/",
+            },
+            {
+              label: t("tutorials"),
+              description: t("nav-tutorials-description"),
               href: "/developers/tutorials/",
             },
             {
               label: t("nav-learn-by-coding-label"),
               description: t("nav-learn-by-coding-description"),
-              href: "/developers/tools/education/",
+              href: "/developers/tools/categories/education-standards/",
             },
           ],
         },
@@ -510,7 +515,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("nav-data-analytics-label"),
               description: t("nav-data-analytics-description"),
-              href: "/developers/tools/analytics/",
+              href: "/developers/tools/categories/network-infrastructure/",
             },
             {
               label: t("nav-ethereum-foundation-label"),
