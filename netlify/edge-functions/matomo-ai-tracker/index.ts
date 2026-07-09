@@ -2,7 +2,13 @@ import { getConfig } from "./config.ts"
 import { sendMatomoHit } from "./http.ts"
 import { createLogger } from "./logger.ts"
 import { buildMatomoPayload } from "./matomo.ts"
-import type { MatomoConfig } from "./types.ts"
+import type { MatomoConfig, NetlifyEdgeContext } from "./types.ts"
+
+declare const Netlify: {
+  env: {
+    toObject: () => Record<string, string | undefined>
+  }
+}
 
 const trackRequest = async (
   request: Request,
@@ -43,14 +49,12 @@ const trackRequest = async (
 
 export default async function handler(
   request: Request,
-  context: {
-    env: Record<string, string | undefined>
-  }
+  context: NetlifyEdgeContext
 ) {
   let config: MatomoConfig | null = null
 
   try {
-    config = getConfig(context.env)
+    config = getConfig(Netlify.env.toObject())
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err)
 
@@ -58,7 +62,7 @@ export default async function handler(
       error: message,
     })
 
-    return fetch(request)
+    return context.next()
   }
 
   const log = createLogger(config.logLevel)
@@ -66,12 +70,11 @@ export default async function handler(
   const start = Date.now()
 
   try {
-    const response = await fetch(request)
+    const response = await context.next()
 
     const durationMs = Date.now() - start
 
-    // Fire-and-forget tracking
-    void trackRequest(request, response, durationMs, config)
+    context.waitUntil(trackRequest(request, response, durationMs, config))
 
     return response
   } catch (err) {
@@ -87,7 +90,7 @@ export default async function handler(
 
     const durationMs = Date.now() - start
 
-    void trackRequest(request, fallback, durationMs, config)
+    context.waitUntil(trackRequest(request, fallback, durationMs, config))
 
     return fallback
   }

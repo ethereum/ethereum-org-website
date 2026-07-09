@@ -39,7 +39,7 @@ export function buildMatomoPayload(
     rec: 1,
     recMode: 1,
     url,
-    source: "Cloudflare",
+    source: "Netlify",
     cdt: formatMatomoDateTime(timestamp),
     ua,
   }

@@ -36,7 +36,7 @@ export interface MatomoPayload {
   rec: 1
   recMode: 1
   url: string
-  source: "Cloudflare"
+  source: "Netlify"
   cdt: string
   ua: string
   download?: string
@@ -47,4 +47,8 @@ export interface MatomoPayload {
 
 export interface WorkerContext {
   waitUntil(promise: Promise<unknown>): void
+}
+
+export interface NetlifyEdgeContext extends WorkerContext {
+  next(): Promise<Response>
 }
