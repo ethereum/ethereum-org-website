@@ -2,6 +2,7 @@
 
 import { type ReactNode, useEffect, useMemo, useState } from "react"
 import { useSearchParams } from "next/navigation"
+import { useTranslations } from "next-intl"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -22,7 +23,6 @@ import { Template } from "./Template"
 import type { PathId, SimulatorData } from "./types"
 import { getValidPathId, isValidPathId } from "./utils"
 
-import { useTranslation } from "@/hooks/useTranslation"
 import { usePathname, useRouter } from "@/i18n/navigation"
 
 type SimulatorProps = {
@@ -30,7 +30,7 @@ type SimulatorProps = {
   data: SimulatorData
 }
 export const Simulator = ({ children, data }: SimulatorProps) => {
-  const { t } = useTranslation("component-wallet-simulator")
+  const t = useTranslations("component-wallet-simulator")
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()

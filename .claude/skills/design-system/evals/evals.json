@@ -68,7 +68,7 @@
         {"text": "Output does NOT import named primitives directly from `@/components/ui/dialog` or `@radix-ui/react-dialog`"},
         {"text": "Trigger uses `<Button>` from `@/components/ui/buttons/Button` (NOT a raw `<button>` element)"},
         {"text": "File begins with `'use client'` (needed for useState + handlers)"},
-        {"text": "All user-facing copy ('Delete account' label, 'are you sure?' warning, confirm/cancel) routed through the `useTranslation` hook from `@/hooks/useTranslation` (no hard-coded English literals in JSX)"},
+        {"text": "All user-facing copy ('Delete account' label, 'are you sure?' warning, confirm/cancel) routed through `useTranslations` (no hard-coded English literals in JSX)"},
         {"text": "notes.md explicitly notes the pushback on the user's 'plain html button' and 'basic radix dialog' framing"}
       ]
     }
