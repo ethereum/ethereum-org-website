@@ -18,12 +18,10 @@ env:
 # PRs into master, staging, or test/** branches. Jobs downstream of `build`
 # inherit gating automatically via `needs:` (skipped jobs propagate).
 #
-# Exception: the Storybook Chromatic job (`visual-tests`) also runs on
-# non-draft PRs into dev that touch UI code (see `ui-changes`), so visual
-# changes are reviewed on the PR that introduces them instead of in bulk on
-# the weekly deploy PR. The path gate keeps snapshot usage within the
-# Chromatic plan: skipped-but-billed TurboSnaps cost 1/5 of a snapshot, so
-# content/translation-only PRs must not trigger builds at all.
+# Exception: Storybook Chromatic (`visual-tests`) also runs on non-draft PRs
+# into dev that touch UI code (see `chromatic-gate`), so visual changes are
+# reviewed on the PR that introduces them. The path gate keeps snapshot usage
+# within the Chromatic plan.
 #
 # `fetch-depth: 0` is set selectively: lint needs it for `git diff`, and the
 # two Chromatic jobs need it for baseline detection. Other jobs use the default
@@ -73,17 +71,21 @@ jobs:
       - name: Run unit tests
         run: pnpm test:unit
 
-  ui-changes:
-    name: Detect UI changes
+  chromatic-gate:
+    name: Chromatic gate
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: read
     outputs:
-      ui: ${{ steps.filter.outputs.ui }}
+      # Release PRs (base master/staging/test/**) always run Chromatic;
+      # dev PRs only when non-draft and touching UI code.
+      run: ${{ github.base_ref != 'dev' || (github.event.pull_request.draft == false && steps.filter.outputs.ui == 'true') }}
     steps:
       - uses: dorny/paths-filter@v3
         id: filter
+        # A filter hiccup must not block release PRs; dev PRs fail closed.
+        continue-on-error: true
         with:
           filters: |
             ui:
@@ -97,14 +99,8 @@ jobs:
 
   visual-tests:
     name: Visual regression (Chromatic)
-    needs: ui-changes
-    if: |
-      github.base_ref == 'master'
-      || github.base_ref == 'staging'
-      || startsWith(github.base_ref, 'test/')
-      || (github.base_ref == 'dev'
-        && github.event.pull_request.draft == false
-        && needs.ui-changes.outputs.ui == 'true')
+    needs: chromatic-gate
+    if: needs.chromatic-gate.outputs.run == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -119,9 +115,9 @@ jobs:
           projectToken: fee8e66c9916
           exitZeroOnChanges: true
           onlyChanged: true
-          # Deploy PRs run on the staging branch; their changes were already
-          # reviewed per-PR on dev, so accept them as baselines automatically.
-          autoAcceptChanges: staging
+          # Release-train builds (dev/staging/master head branches) were
+          # already reviewed per-PR on dev; auto-accept them as baselines.
+          autoAcceptChanges: "{dev,staging,master}"
           zip: true
 
   build:
