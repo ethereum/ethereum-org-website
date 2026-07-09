@@ -19,11 +19,13 @@ interface TruncatedTextProps
     "children" | "className"
   > {
   maxLines?: number
+  showToggle?: boolean
   matomoEvent?: MatomoEventOptions
 }
 
 const TruncatedText = ({
   maxLines = 2,
+  showToggle = true,
   className,
   children,
   matomoEvent,
@@ -35,7 +37,7 @@ const TruncatedText = ({
     <div className={className}>
       <p
         className={cn(
-          "text-body",
+          "break-words text-body",
           !isExpanded && `${LINE_CLAMP_CLASS_MAPPING[maxLines]} overflow-hidden`
         )}
         style={
@@ -54,18 +56,20 @@ const TruncatedText = ({
       >
         {children}
       </p>
-      <Button
-        variant="link"
-        size="sm"
-        onClick={(e) => {
-          e.preventDefault()
-          e.stopPropagation()
-          setIsExpanded(!isExpanded)
-        }}
-        className="relative z-10 mt-1 h-auto p-0 text-sm no-underline"
-      >
-        {isExpanded ? t("show-less") : t("show-more")}
-      </Button>
+      {showToggle && (
+        <Button
+          variant="link"
+          size="sm"
+          onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            setIsExpanded(!isExpanded)
+          }}
+          className="relative z-10 mt-1 h-auto p-0 text-sm no-underline"
+        >
+          {isExpanded ? t("show-less") : t("show-more")}
+        </Button>
+      )}
     </div>
   )
 }

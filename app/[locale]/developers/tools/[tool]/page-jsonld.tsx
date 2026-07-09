@@ -4,33 +4,50 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import {
+  type DeveloperToolWithCategory,
+  getToolKey,
+  getToolPackageHrefs,
+  getToolPrimaryUrl,
+  getToolRepoHrefs,
+} from "@/lib/utils/developerToolsData"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
-
-import type { DeveloperTool, DeveloperToolCategorySlug } from "../types"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
-export default async function DevelopersToolsCategoryJsonLD({
+export default async function DevelopersToolsToolJsonLD({
   locale,
-  category,
-  categoryTools,
+  tool,
+  categoryLabel,
   contributors,
 }: {
   locale: string
-  category: DeveloperToolCategorySlug
-  categoryTools: DeveloperTool[]
+  tool: DeveloperToolWithCategory
+  categoryLabel: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations("page-developers-tools")
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
-  const url = normalizeUrlForJsonLd(locale, `/developers/tools/${category}`)
+  const url = normalizeUrlForJsonLd(
+    locale,
+    `/developers/tools/${getToolKey(tool)}/`
+  )
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
     name: contributor.login,
     url: contributor.html_url,
   }))
+
+  const repoHrefs = getToolRepoHrefs(tool)
+  const externalUrl = getToolPrimaryUrl(tool)
+  // Other web presences of the tool: socials, repos, packages.
+  const sameAs = [
+    tool.twitter,
+    ...repoHrefs,
+    ...getToolPackageHrefs(tool),
+  ].filter(Boolean)
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -39,64 +56,65 @@ export default async function DevelopersToolsCategoryJsonLD({
       {
         "@type": "WebPage",
         "@id": url,
-        name: t(`page-developers-tools-category-${category}-title`),
-        description: t(
-          `page-developers-tools-category-${category}-meta-description`
-        ),
-        url,
+        name: tool.name,
+        description: tool.description,
+        url: url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
+        // Mirrors the visible breadcrumb (flat URL, no category crumb).
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
             {
               "@type": "ListItem",
               position: 1,
-              name: "Home",
+              name: "ethereum.org",
               item: normalizeUrlForJsonLd(locale, "/"),
             },
             {
               "@type": "ListItem",
               position: 2,
-              name: "Developers",
+              name: tCommon("developers"),
               item: normalizeUrlForJsonLd(locale, "/developers/"),
             },
             {
               "@type": "ListItem",
               position: 3,
-              name: t("page-developers-tools-meta-title"),
+              name: tCommon("tools"),
               item: normalizeUrlForJsonLd(locale, "/developers/tools/"),
             },
             {
               "@type": "ListItem",
               position: 4,
-              name: t(`page-developers-tools-category-${category}-title`),
+              name: tool.name,
               item: url,
             },
           ],
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#category-tools` },
+        mainEntity: { "@id": `${url}#tool` },
       },
       {
-        "@type": "ItemList",
-        "@id": `${url}#category-tools`,
-        name: t(`page-developers-tools-category-${category}-title`),
-        description: t(
-          `page-developers-tools-category-${category}-description`
-        ),
-        url,
-        numberOfItems: categoryTools.length,
-        itemListElement: categoryTools.slice(0, 10).map((tool, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          name: tool.name,
-          description: tool.description,
-          url: tool.website,
-        })),
+        "@type": "SoftwareApplication",
+        "@id": `${url}#tool`,
+        name: tool.name,
+        description: tool.description,
+        ...(externalUrl ? { url: externalUrl } : {}),
+        ...(tool.thumbnail_url || tool.banner_url
+          ? { image: tool.thumbnail_url || tool.banner_url }
+          : {}),
+        applicationCategory: "DeveloperApplication",
+        applicationSubCategory: categoryLabel,
+        ...(repoHrefs[0] ? { codeRepository: repoHrefs[0] } : {}),
+        ...(sameAs.length ? { sameAs } : {}),
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
       },
     ],
   }

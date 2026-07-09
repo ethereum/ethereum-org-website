@@ -58,7 +58,7 @@ Do NOT force-push or rebase pending. The pipeline's drift detection depends on p
 
 The pipeline only targets `dev` in production. Hot fixes that land on `staging` or `master` go out **English-only** until the next release cycle, when `dev` (with translations) flows to `staging` then `master` via prepare-release.
 
-If a hot fix translation is genuinely urgent, the pipeline can be manually dispatched with `base_branch=staging` and a custom `translation_branch`, but this is not the standard flow and may create cleanup work later. Default answer: hot fix in English, let translations catch up.
+If a hot fix translation is genuinely urgent, the pipeline can be manually dispatched with `base_branch=staging` and a custom `target_branch`, but this is not the standard flow and may create cleanup work later. Default answer: hot fix in English, let translations catch up.
 
 ## `stamp_only: true` and orchestration
 

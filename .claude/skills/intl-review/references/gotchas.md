@@ -71,9 +71,9 @@ NODE_OPTIONS=--max-old-space-size=8192 NEXT_PUBLIC_BUILD_LOCALES=en,{LANG} pnpm 
 
 Loading the full glossary on every file lookup bloats context and slows the agent.
 
-## "Compound learnings" via `/workflows:compound`
+## "Compound learnings" via `ce-compound`
 
-If a review surfaces a recurring issue worth documenting for the team, `/review-translations` Phase 8 may invoke `/workflows:compound` to capture the learning. Use when:
+If a review surfaces a recurring issue worth documenting for the team, `/review-translations` Phase 8 may invoke `ce-compound` (from the compound-engineering plugin) to capture the learning. Use when:
 
 - A new pattern emerges that affects multiple PRs
 - A sanitizer gap is identified
