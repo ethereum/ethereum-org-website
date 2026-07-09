@@ -133,7 +133,9 @@ const StakingHierarchy = () => {
             <Translation id="page-staking:page-staking-hierarchy-solo-p1" />
           </p>
           <p>{t("page-staking-hierarchy-solo-p2")}</p>
-          <p>{t("page-staking-hierarchy-solo-p3")}</p>
+          <p>
+            <Translation id="page-staking:page-staking-hierarchy-solo-p3" />
+          </p>
           <div>
             <ButtonLink
               href="/staking/solo/"

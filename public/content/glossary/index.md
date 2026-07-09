@@ -272,6 +272,8 @@ authors: ["Andreas Antonopoulos"]
 
 <GlossaryDefinition term="light-client" />
 
+<GlossaryDefinition term="liquid-staking-tokens" />
+
 <GlossaryDefinition term="liquidity" />
 
 <GlossaryDefinition term="liquidity-tokens" />

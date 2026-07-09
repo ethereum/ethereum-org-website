@@ -22,6 +22,9 @@ const StakingHowSoloWorks = () => {
       <Translation id="page-staking:page-staking-how-solo-works-item-4" />
     </p>,
     <p>
+      <Translation id="page-staking:page-staking-how-solo-works-item-6" />
+    </p>,
+    <p>
       <Translation id="page-staking:page-staking-how-solo-works-item-5" />
     </p>,
   ]

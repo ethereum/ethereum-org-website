@@ -15,7 +15,9 @@ summaryPoints:
 
 ## What is home staking? {#what-is-solo-staking}
 
-Home staking is the act of [running an Ethereum node](/run-a-node/) connected to the internet and depositing 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
+Home staking is the act of [running an Ethereum node](/run-a-node/) connected to the internet and depositing at least 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
+
+Home staking is the most direct way to stake. No smart contracts, operators, or custodians stand between you and the protocol: you hold your own keys and receive rewards directly. Every other staking method adds layers on top of this.
 
 **Home staking increases the decentralization of the Ethereum network**, making [Ethereum](/) more censorship-resistant and robust against attacks. Other staking methods may not help the network in the same ways. Home staking is the best staking option for securing Ethereum.
 
@@ -30,9 +32,9 @@ A home staker receives rewards directly from the protocol for keeping their vali
 Home staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
 
 <Grid>
-  <Card title="Earn fresh ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
-  <Card title="Full control" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="Network security" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="Keep all rewards" emoji="💸" description="Home stakers receive 100% of protocol rewards, paid directly by the protocol while your validator is online." />
+  <Card title="Self-sovereignty" emoji="🎛️" description="Keep your own keys and full custody of your funds at all times. Choose the combination of clients and hardware that allows you to minimize your risk. No third party can make these decisions for you or restrict your withdrawals." />
+  <Card title="Client and geographic diversity" emoji="🔐" description="Home stakers running minority clients on hardware spread across many locations strengthen the decentralization and security of the network." />
 </Grid>
 
 ## Considerations before home staking {#considerations-before-staking-solo}
@@ -51,6 +53,14 @@ Node setup requires a reasonable comfort level when working with computers, alth
 It also requires very basic hardware setup, and some understanding of minimum recommended specs.
 </ExpandableCard>
 
+<ExpandableCard title="Hardware requirements" eventCategory="SoloStaking" eventName="clicked hardware requirements">
+Current community guidance for validator hardware and bandwidth is maintained in <a href="https://eips.ethereum.org/EIPS/eip-7870">EIP-7870</a>. As a rough guide, plan for a 4 TB NVMe SSD, 64 GB of RAM (less can work, but this is the recommended headroom), a solid modern multi-core CPU, and an internet connection of around 50 Mbps download / 25 Mbps upload.
+
+Since the Fusaka upgrade introduced PeerDAS, a staking node only needs to store and download a fraction of the network's blob data, significantly reducing disk and bandwidth requirements for home stakers.
+
+[More on running a node](/run-a-node/)
+</ExpandableCard>
+
 <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
 Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.{' '}
 
@@ -62,13 +72,13 @@ Hardware occasionally fails, network connections error out, and client software 
 </ExpandableCard>
 
 <ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties proportional to how many other validators are offline at the same time, but <a href="#faq">does not result in slashing</a>. Bandwidth also matters, as rewards are decreased for attestations that are not received in time. Requirements will vary, but a minimum of 10 Mb/s up and down is recommended.
+Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties proportional to how many other validators are offline at the same time, but <a href="#faq">does not result in slashing</a>. Bandwidth also matters, as rewards are decreased for attestations that are not received in time. Requirements will vary, but current validator guidance ([EIP-7870](https://eips.ethereum.org/EIPS/eip-7870)) recommends around 50 Mbps download and 25 Mbps upload.
 </ExpandableCard>
 
 <ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> More on slashing and validator lifecycle</a>
+<a href="/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/">More on rewards, penalties, and slashing</a>
 </ExpandableCard>
 
 <StakingComparison page="solo" />
@@ -77,9 +87,20 @@ Different from inactivity penalties for being offline, <em>slashing</em> is a mu
 
 <StakingHowSoloWorks />
 
-While active you will earn ETH rewards, which will be periodically deposited into your withdrawal address.
+Once your node is synced and your keys are generated, you deposit your stake to activate your validator. A single validator requires a minimum of 32 ETH, and can hold up to 2048 ETH. The network recognizes deposits in around 13 minutes, but new validators pass through an activation queue before they start attesting; its length varies with demand.
 
-If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Your remaining balance will then be withdrawn to the withdrawal address that you designate during setup.
+While active you will earn ETH rewards. With compounding (0x02) withdrawal credentials, rewards are added to your stake automatically; with regular withdrawals (0x01) credentials, rewards above the initial 32 ETH are periodically swept to your withdrawal address.
+
+If ever desired, you can exit as a validator, which eliminates the requirement to be online and stops any further rewards. Your remaining balance will then be withdrawn to the withdrawal address that you designate during setup. Exits can be initiated with your validator signing keys, or triggered directly from your withdrawal address with an execution layer transaction, so ultimate control of your funds always rests with your withdrawal address.
+
+### Compounding and the 2048 ETH maximum {#compounding-and-max-effective-balance}
+
+Validators have one of two types of withdrawal credentials:
+
+- **Regular withdrawals (0x01)**: the validator's effective balance is capped at 32 ETH, and any balance above that is automatically swept to your withdrawal address every few days.
+- **Compounding (0x02)**: the validator's effective balance can grow up to 2048 ETH. Rewards compound automatically, and you earn rewards on every whole ETH above the 32 ETH minimum, so you can stake flexible amounts like 40 ETH, not just multiples of 32. Only balance above 2048 ETH is swept automatically; withdrawing anything else means manually triggering a partial withdrawal from your withdrawal address, which costs gas.
+
+If you run multiple validators, you can consolidate them into a single compounding validator without exiting and re-entering the network, reducing your maintenance overhead. Consolidation is requested from your withdrawal address and is subject to processing queues. Switching a validator from 0x01 to 0x02 credentials uses this same mechanism, and **cannot be reversed** without fully exiting and depositing again.
 
 [More on staking withdrawals](/staking/withdrawals/)
 
@@ -121,6 +142,35 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 
 <StakingGuides />
 
+## Squad staking: home staking with fault tolerance {#squad-staking}
+
+**Distributed validator technology (DVT)** lets a single validator run across a cluster of machines instead of just one. The validator key is split into shares using distributed key generation, and a threshold of the cluster (for example, any 3 of 4 nodes) must sign together; the full key never exists on any single machine. If one machine fails, goes offline, or is misconfigured, the rest of the cluster keeps the validator attesting.
+
+For home stakers this enables "squad staking": teaming up with friends or other community members to run validators together, removing the single points of failure of a solo setup and reducing the risk of slashing from a single misbehaving machine. Obol and SSV Network both provide production DVT implementations, used today across home staking, staking as a service, and staking pools.
+
+[More on distributed validator technology](/staking/dvt/)
+
+## Run validators for a staking protocol {#run-validators-for-a-staking-protocol}
+
+If you have the hardware and skills to run a node but less than 32 ETH, some staking protocols will match your validator with ETH from their pooled stakers. You post a smaller bond as collateral and run the validator on your own machine; the protocol supplies the rest of the stake, and you earn a share of the rewards.
+
+<ProductDisclaimer />
+
+- **Lido Community Staking Module (CSM)** is permissionless to join, with a bond starting around 2.4 ETH for your first validator key (decreasing for additional keys), or 1.5 ETH for stakers who qualify as Identified Community Stakers.
+- **Rocket Pool megapools** require a 4 ETH bond per validator, with the protocol allocating the remaining 28 ETH from its liquid staking pool. (Rocket Pool's earlier "minipools" were closed to new creation in December 2025.)
+
+This is a hybrid approach: you keep the responsibilities (and satisfaction) of operating your own hardware, but your validator operates under the protocol's smart contracts, governance, and performance rules, which is a different trust profile from staking your own ETH directly. Learn more about how these protocols work, including their trust assumptions and token mechanics, on the [pooled staking page](/staking/pools/).
+
+## Home staking and restaking {#home-staking-and-restaking}
+
+Restaking is often confused with staking, but it is a separate, opt-in system built on top of staking. Restaking protocols reuse staked ETH to help secure additional applications in exchange for extra rewards, introducing additional slashing conditions, smart contract risk, and withdrawal delays that do not exist in Ethereum protocol staking. Restaking is never required: your validator earns full protocol rewards without it, and opting in exposes your stake to risks beyond those described on this page.
+
+[More on restaking](/restaking/)
+
+## More ways to use your node {#run-a-node-without-staking}
+
+You don't need to stake at all to put node-operation skills to work. Anyone can [run an Ethereum node](/run-a-node/) without depositing any ETH. You get a self-verified view of the chain, your own private endpoint for sending transactions and interacting with applications, and you contribute to the health and resilience of the network. Running a node is also a good way to build experience before activating a validator, with no ETH at risk.
+
 ## Frequently asked questions {#faq}
 
 These are a few of the most common questions about staking that are worth knowing about.
@@ -132,15 +182,19 @@ A <em>validator</em> is a virtual entity that lives on Ethereum and participates
 </ExpandableCard>
 
 <ExpandableCard title="Can I deposit more than 32 ETH?">
-Yes, modern validator accounts are capable of holding up to 2048 ETH. Additional ETH over 32 will compound in a step-wise manner, increasing in whole-number increments as your true balance increases. This is known as your <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effective balance</a>.
+Yes. A validator with <em>compounding</em> (0x02) withdrawal credentials can hold an effective balance of up to 2048 ETH, while the minimum to activate remains 32 ETH. Rewards on a compounding validator are added to its stake automatically, and it earns rewards on every whole ETH above the 32 ETH minimum, so you can stake amounts that aren't multiples of 32. See [Compounding and the 2048 ETH maximum](#compounding-and-max-effective-balance).
 
-To increase the effective balance of an account, and thus increase rewards, a buffer of 0.25 ETH above any full-ETH threshold must be crossed. For example, an account with a true balance of 32.9 and an effective balance of 32 would need to earn another 0.35 ETH to bring it's true balance above 33.25 before triggering an increase in effective balance.
+Validators with <em>regular withdrawals</em> (0x01) credentials remain capped at an <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effective balance</a> of 32 ETH, with any balance above that automatically swept to the withdrawal address every few days.
 
-This buffer prevents also prevents an effective balance from dropping until it has gone 0.25 ETH below it's current effective balance.
+For a compounding validator, only balance above the 2048 ETH maximum is swept automatically. To withdraw anything below that, you trigger a partial withdrawal from your withdrawal address (a transaction that costs gas), which can draw down any balance above the 32 ETH minimum. If you run multiple validators, you can also consolidate them into a single compounding validator without exiting the network.
 
-Each key-pair associated with a validator requires at least 32 ETH to be activated. Any balance above this may be withdrawn to the associated withdrawal address at any time via a transaction signed by this address. Any funds over the maximum effective balance will automatically be withdrawn on a periodic basis.
+[More on staking withdrawals](/staking/withdrawals/)
+</ExpandableCard>
 
-If home staking seems too demanding for you, consider using a [staking-as-a-service](/staking/saas/) provider, or if you're working with less than 32 ETH, check out the [staking pools](/staking/pools/).
+<ExpandableCard title="Can I stake with less than 32 ETH and still run my own node?">
+Yes. Activating your own validator directly with the protocol requires 32 ETH, but you can run validators for a staking protocol by posting a smaller bond: Lido's Community Staking Module requires around 2.4 ETH for a first validator key (1.5 ETH for Identified Community Stakers), and Rocket Pool megapools require a 4 ETH bond per validator. In both cases you run the node while the protocol supplies the remainder of the stake, in exchange for operating under its smart contracts and rules. See <a href="#run-validators-for-a-staking-protocol">Run validators for a staking protocol</a> above.
+
+If you don't want to run hardware at all, [staking pools](/staking/pools/) let you participate with any amount of ETH.
 </ExpandableCard>
 
 <ExpandableCard title="Will I be slashed if I go offline? (tldr: No.)">
@@ -161,8 +215,8 @@ Running a supermajority client (any client used by over 2/3 the network) also ho
 Equivalent bugs in a <em>minority client would never finalize</em> and thus would never result in a surround vote, and would simply result in inactivity penalties, <em>not slashing</em>.
 
 <ul>
-  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Learn more about the importance of running a minority client.</a></li>
-  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Learn more about slashing prevention</a></li>
+  <li><a href="https://clientdiversity.org/">Learn more about the importance of running a minority client.</a></li>
+  <li><a href="/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/">Learn more about rewards, penalties, and slashing</a></li>
 </ul>
 </ExpandableCard>
 
@@ -184,13 +238,11 @@ Offline penalties are proportional to how many others are offline at the same ti
 
 <ExpandableCard title="How do I unlock my rewards or get my ETH back?">
 
-Withdrawals of any kind from the Beacon Chain require withdrawal credentials to be set.
+Every withdrawal requires your validator to have a withdrawal address set. New stakers set this at time of key generation and deposit. Stakers from the network's early days who have not yet set a withdrawal address will need to update their withdrawal credentials before withdrawing.
 
-New stakers set this at time of key generation and deposit. Existing stakers who did not already set this can upgrade their keys to support this functionality.
+For validators with regular withdrawals (0x01) credentials, reward payments (accumulated ETH over the initial 32) are periodically distributed to the withdrawal address automatically. For compounding (0x02) validators, rewards remain staked and compound automatically. You can withdraw any balance above 32 ETH by triggering a partial withdrawal from your withdrawal address.
 
-Once withdrawal credentials are set, reward payments (accumulated ETH over the initial 32) will be periodically distributed to the withdrawal address automatically.
-
-To unlock and receive your entire balance back you must also complete the process of exiting your validator.
+To unlock and receive your entire balance back you must exit your validator. You can do this using your validator signing keys, or trigger it directly from your withdrawal address with an execution layer transaction, meaning your funds remain recoverable even if your signing keys are lost.
 
 <ButtonLink href="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
@@ -198,10 +250,15 @@ To unlock and receive your entire balance back you must also complete the proces
 ## Further reading {#further-reading}
 
 - [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
-- [Ethereum's Client Diversity Problem](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
+- [Client diversity statistics and migration guides](https://clientdiversity.org/)
 - [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+- [EIP-7870: Hardware and bandwidth recommendations](https://eips.ethereum.org/EIPS/eip-7870)
+- [The Pectra upgrade: max effective balance and more](/roadmap/pectra/)
+- [Obol documentation](https://docs.obol.org/) - _Obol_
+- [SSV Network documentation](https://docs.ssv.network/) - _SSV_
+- [Lido Community Staking Module operator portal](https://operatorportal.lido.fi/modules/community-staking-module) - _Lido_
+- [Rocket Pool node operator documentation](https://docs.rocketpool.net/) - _Rocket Pool_
 
 <QuizWidget quizKey="staking-solo" />

@@ -87,6 +87,8 @@
   "key-definition": "In the context of Ethereum, keys are digital codes: a public key for receiving transactions and a private key for accessing and sending funds.",
   "layer-2-term": "Layer 2",
   "layer-2-definition": "Layer 2s are another networks built on top of Ethereum main network to make transactions faster and cheaper. <a href=\"/layer-2/\">More on layer 2</a>.",
+  "liquid-staking-tokens-term": "Liquid staking tokens",
+  "liquid-staking-tokens-definition": "Liquid staking tokens (LSTs) are receipt tokens that represent staked cryptocurrency. Some staking platforms mint an LST when you deposit, representing your share of the locked funds. LSTs can be traded, sold, or used in DeFi, so stakers keep access to liquidity while the original assets remain staked.",
   "liquidity-tokens-term": "Liquidity tokens",
   "liquidity-tokens-definition": "Liquidity tokens (LT) are digital tokens issued to participants who deposit assets into a liquidity pool, which is a collection of funds locked in a smart contract and used to facilitate trading on a decentralized exchange (DEX).",
   "mainnet-term": "Mainnet",

@@ -22,6 +22,14 @@ import { Divider } from "@/components/ui/hr"
 import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -97,6 +105,67 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     },
   ]
 
+  const comparisonTableHeaders = [
+    t("page-staking-comparison-table-header-keys"),
+    t("page-staking-comparison-table-header-hardware"),
+    t("page-staking-comparison-table-header-min-eth"),
+    t("page-staking-comparison-table-header-middleware"),
+    t("page-staking-comparison-table-header-rewards"),
+  ]
+
+  const comparisonTableRows = [
+    {
+      label: t("page-staking-dropdown-solo"),
+      cells: [
+        t("page-staking-comparison-table-solo-keys"),
+        t("page-staking-comparison-table-solo-hardware"),
+        t("page-staking-comparison-table-solo-min-eth"),
+        t("page-staking-comparison-table-solo-middleware"),
+        t("page-staking-comparison-table-solo-rewards"),
+      ],
+    },
+    {
+      label: t("page-staking-comparison-table-bonded-label"),
+      cells: [
+        t("page-staking-comparison-table-bonded-keys"),
+        t("page-staking-comparison-table-bonded-hardware"),
+        t("page-staking-comparison-table-bonded-min-eth"),
+        t("page-staking-comparison-table-bonded-middleware"),
+        t("page-staking-comparison-table-bonded-rewards"),
+      ],
+    },
+    {
+      label: t("page-staking-dropdown-saas"),
+      cells: [
+        t("page-staking-comparison-table-saas-keys"),
+        t("page-staking-comparison-table-saas-hardware"),
+        t("page-staking-comparison-table-saas-min-eth"),
+        t("page-staking-comparison-table-saas-middleware"),
+        t("page-staking-comparison-table-saas-rewards"),
+      ],
+    },
+    {
+      label: t("page-staking-dropdown-pools"),
+      cells: [
+        t("page-staking-comparison-table-pools-keys"),
+        t("page-staking-comparison-table-pools-hardware"),
+        t("page-staking-comparison-table-pools-min-eth"),
+        t("page-staking-comparison-table-pools-middleware"),
+        t("page-staking-comparison-table-pools-rewards"),
+      ],
+    },
+    {
+      label: t("page-staking-hierarchy-cex-h2"),
+      cells: [
+        t("page-staking-comparison-table-cex-keys"),
+        t("page-staking-comparison-table-cex-hardware"),
+        t("page-staking-comparison-table-cex-min-eth"),
+        t("page-staking-comparison-table-cex-middleware"),
+        t("page-staking-comparison-table-cex-rewards"),
+      ],
+    },
+  ]
+
   const dropdownLinks = buildTopicDropdown(staking.dropdown, t, "Clicked")
 
   const tocItems = {
@@ -168,6 +237,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <p>
             <Translation id="page-staking:page-staking-description" />
           </p>
+          <p>
+            <Translation id="page-staking:page-staking-description-2" />
+          </p>
+          <p>{t("page-staking-description-3")}</p>
         </Section>
 
         <Section id={tocItems.whyStakeYourEth.id}>
@@ -367,6 +440,34 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </ButtonLink>
             </div>
           </div>
+
+          <h3>{t("page-staking-comparison-table-title")}</h3>
+          <p>{t("page-staking-comparison-table-description")}</p>
+          <Table variant="minimal-striped">
+            <TableHeader>
+              <TableRow>
+                <TableHead>
+                  {t("page-staking-comparison-table-header-option")}
+                </TableHead>
+                {comparisonTableHeaders.map((header) => (
+                  <TableHead key={header}>{header}</TableHead>
+                ))}
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {comparisonTableRows.map(({ label, cells }) => (
+                <TableRow key={label}>
+                  <TableCell className="font-bold">{label}</TableCell>
+                  {cells.map((cell, cellIdx) => (
+                    <TableCell key={cellIdx}>{cell}</TableCell>
+                  ))}
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+          <p>
+            <Translation id="page-staking:page-staking-comparison-restaking-note" />
+          </p>
         </Section>
 
         <Divider />
@@ -391,6 +492,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-staking-faq-5-answer-link")}
               </ButtonLink>
             </ExpandableCard>
+            <ExpandableCard title={t("page-staking-faq-6-question")}>
+              <p>{t("page-staking-faq-6-answer-p1")}</p>
+              <p>{t("page-staking-faq-6-answer-p2")}</p>
+            </ExpandableCard>
+            <ExpandableCard title={t("page-staking-faq-7-question")}>
+              <p>{t("page-staking-faq-7-answer-p1")}</p>
+              <p>{t("page-staking-faq-7-answer-p2")}</p>
+            </ExpandableCard>
             <ExpandableCard title={t("page-staking-faq-1-question")}>
               {t.rich("page-staking-faq-1-answer", { em: Emphasis })}
             </ExpandableCard>
@@ -403,12 +512,23 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <Translation id="page-staking:page-staking-faq-3-answer-p2" />
               </p>
             </ExpandableCard>
+            <ExpandableCard title={t("page-staking-faq-8-question")}>
+              <p>{t("page-staking-faq-8-answer-p1")}</p>
+              <ButtonLink className="self-start" href="/restaking/">
+                {t("page-staking-faq-8-answer-link")}
+              </ButtonLink>
+            </ExpandableCard>
           </AccordionContainer>
         </Section>
 
         <Section id={tocItems.further.id}>
           <h2>{tocItems.further.title}</h2>
           <UnorderedList>
+            <ListItem>
+              <InlineLink href="/roadmap/pectra/">
+                {t("page-staking-further-reading-pectra-link")}
+              </InlineLink>
+            </ListItem>
             <ListItem>
               <InlineLink href="https://notes.ethereum.org/9l707paQQEeI-GPzVK02lA?view#">
                 {t("page-staking-further-reading-2-link")}
@@ -417,16 +537,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <i>{t("page-staking-further-reading-author-vitalik-buterin")}</i>
             </ListItem>
             <ListItem>
-              <InlineLink href="https://hackmd.io/@benjaminion/eth2_news">
+              <InlineLink href="https://eth2book.info/latest/">
                 {t("page-staking-further-reading-4-link")}
               </InlineLink>{" "}
               - <i>{t("page-staking-further-reading-4-author")}</i>
-            </ListItem>
-            <ListItem>
-              <InlineLink href="https://blog.ethereum.org/2022/01/31/finalized-no-33/">
-                {t("page-staking-further-reading-5-link")}
-              </InlineLink>{" "}
-              - <i>{t("page-staking-further-reading-5-author")}</i>
             </ListItem>
             <ListItem>
               <InlineLink href="https://www.attestant.io/posts/">

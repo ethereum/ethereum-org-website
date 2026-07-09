@@ -13,16 +13,23 @@ summaryPoints:
   - Validators who fully exit staking will receive their remaining balance
 ---
 
-**Staking withdrawals** refer to transfers of ETH from a validator account on Ethereum's consensus layer (the Beacon Chain), to the execution layer where it can be transacted with.
+**Staking withdrawals** refer to transfers of ETH from a validator account on Ethereum's consensus layer to the execution layer, where it can be transacted with.
 
-> If you are part of a [staking pool](/staking/pools/) or hold staking tokens, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
+<Alert variant="info">
+<AlertEmoji text="🏊"/>
+<AlertContent>
+<AlertDescription>
+**Staked through a pool or holding a liquid staking token?** You don't withdraw from the protocol yourself. Instead, you redeem your tokens through your provider, subject to its redemption queue and liquidity, or sell them on the open market. Each service operates differently, so check with your provider for details. [More on staking pools](/staking/pools/)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 How withdrawals work depends on your validator's withdrawal credential type:
 
 - **Legacy validators (Type 1)**: Excess balance over 32 ETH is automatically and regularly sent to the withdrawal address linked to the validator. Rewards above 32 ETH do not contribute to the validator's weight on the network.
 - **Compounding validators (Type 2)**: Rewards compound into the validator's effective balance up to 2048 ETH, increasing the validator's weight and earning more rewards. Only balance exceeding 2048 ETH is automatically swept.
 
-Users can also **exit staking entirely**, submitting a transaction to withdraw, waiting for any withdrawal queue timeline (based on network demand), and unlocking their full validator balance.
+Users can also **exit staking entirely**, initiating a voluntary exit, waiting through the exit queue (which varies with network demand), and then receiving their full remaining balance automatically in a later sweep of their account.
 
 ## Staking rewards {#staking-rewards}
 
@@ -86,9 +93,9 @@ Providing a withdrawal address is required before _any_ funds can be transferred
 Users looking to exit staking entirely and withdraw their full balance back must initiate a "voluntary exit." This can be done in two ways:
 
 - **Using validator keys**: Sign and broadcast a voluntary exit message with your validator client, submitted to your consensus node. This does not require gas.
-- **Using withdrawal credentials**: Trigger an exit from the execution layer using your withdrawal address, without needing access to the validator signing key. This requires a transaction and costs gas.
+- **Using withdrawal credentials**: Trigger an exit from the execution layer using your withdrawal address, without needing access to the validator signing key ([EIP-7002](https://eips.ethereum.org/EIPS/eip-7002), introduced in the [Pectra upgrade](/roadmap/pectra/)). This requires a transaction, which costs gas plus a small dynamically priced request fee.
 
-The process of a validator exiting from staking takes variable amounts of time, depending on how many others are exiting at the same time. Once complete, this account will no longer be responsible for performing validator network duties, is no longer eligible for rewards, and no longer has their ETH "at stake". At this time the account will be marked as fully “withdrawable”.
+The process of a validator exiting from staking takes variable amounts of time, depending on how many others are exiting at the same time; this waiting period is known as the exit queue. Once complete, this account will no longer be responsible for performing validator network duties, is no longer eligible for rewards, and no longer has their ETH "at stake". At this time the account will be marked as fully “withdrawable”.
 
 Once an account is flagged as "withdrawable", and withdrawal credentials have been provided, there is nothing more a user needs to do aside from wait. Accounts are automatically and continuously swept by block proposers for eligible exited funds, and your account balance will be transferred in full (also known as a "full withdrawal") during the next <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>sweep</a>.
 
@@ -112,7 +119,7 @@ When a validator is scheduled to propose the next block, it is required to build
 <AlertDescription>
 Think about an analog clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached.
 
-Now instead of 1 through 12, imagine the clock has 0 through N _(N being the total number of validator accounts that have ever been registered on the consensus layer, over 1.2 million as of April 2026)._
+Now instead of 1 through 12, imagine the clock has 0 through N _(N being the total number of validator accounts that have ever been registered on the consensus layer, well over a million)._
 
 The hand on the clock points to the next validator that needs to be checked for eligible withdrawals. It starts at 0, and progresses all the way around without skipping any accounts. When the last validator is reached, the cycle continues back at the beginning.
 </AlertDescription>
@@ -173,9 +180,9 @@ title="Why can a validator's withdrawal address only be set once?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
-Setting a validator's execution layer withdrawal address is permanent change to the validator's credentials on the consensus layer. There is no way to update the consensus layer credentials once they are registered.
+Setting a validator's execution layer withdrawal address is a permanent change to the validator's credentials on the consensus layer. There is no way to update the consensus layer credentials once they are registered.
 
-A validator's withdrawal address credentials can be set to point to either a smart contract (controlled by its code), or an externally owned account (EOA, controlled by its private key). Currently, these accounts have no way to communicate a message back to the consensus layer that would signal a change of validator credentials, and adding this functionality would add unnecessary complexity to the protocol.
+A validator's withdrawal address credentials can be set to point to either a smart contract (controlled by its code), or an externally owned account (EOA, controlled by its private key). Although the withdrawal address can now trigger exits and partial withdrawals from the execution layer ([EIP-7002](https://eips.ethereum.org/EIPS/eip-7002)), there is no protocol operation for changing a withdrawal address once it has been registered, and adding this functionality would add unnecessary complexity to the protocol.
 
 Users seeking flexible withdrawal management can set a smart contract wallet capable of key rotation (such as a [Safe](https://safe.global/)) as the validator's withdrawal address, effectively allowing the ultimate recipient EOA to be updated. If a user has already set an EOA as the withdrawal credential, they must initiate a full exit to recover their staked ETH and then use those funds to activate a new validator with different credentials.
 </ExpandableCard>
@@ -185,7 +192,7 @@ title="How do I withdraw from staking if I stake through a provider, staking poo
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
-If you use a staking pool or hold staking tokens, contact your provider to learn how they handle withdrawals, as processes vary by service. 
+If you use a [staking pool](/staking/pools/) or hold liquid staking tokens, you don't interact with the protocol's withdrawal mechanism directly; the pool's smart contracts and node operators control the validators, and withdrawal credentials typically point to the pool's contracts, not to you. Instead, you typically either redeem your tokens through the provider (subject to its redemption queue and available liquidity) or sell them on the open market. Contact your provider to learn how they handle withdrawals, as processes vary by service.
 
 In general, when staking through a provider or pool, you should be free to reclaim your underlying staked ETH, or to withdraw and change which staking provider you utilize. If a particular pool is getting too large, staked ETH can be exited, redeemed, and staked again with a [smaller provider](https://rated.network/). Or, if you've accumulated enough ETH, you could [stake from home](/staking/solo/).
 
@@ -271,6 +278,6 @@ The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into 
 - [Staking Launchpad Validator Actions](https://launchpad.ethereum.org/validator-actions)
 - [MaxEB deep-dive: compounding and consolidation](/roadmap/pectra/maxeb/)
 - [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
-- [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [EIP-7251: Increase the MAX_EFFECTIVE_BALANCE](https://eips.ethereum.org/EIPS/eip-7251)
+- [EIP-7002: Execution layer triggerable withdrawals](https://eips.ethereum.org/EIPS/eip-7002)
 - [Understanding Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)
