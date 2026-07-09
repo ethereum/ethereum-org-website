@@ -1,4 +1,4 @@
-type Cell = {
+export type Cell = {
   label: string
   href?: string
 }
@@ -125,9 +125,21 @@ export const OPCODES: Opcode[] = [
     name: "SIGNEXTEND",
     gas: { label: "5" },
     inputs: ["b", "x"],
-    outputs: ["SIGNEXTEND(x", "b)"],
+    outputs: ["SIGNEXTEND(x, b)"],
     memStorage: { label: "" },
-    notes: { label: "Sign extend x from (b+1) bytes to 32 bytes" },
+    notes: {
+      label: "Sign extend x from (b+1) bytes to 32 bytes",
+      href: "https://wikipedia.org/wiki/Sign_extension",
+    },
+  },
+  {
+    stack: "0C-0F",
+    name: "_invalid_",
+    gas: { label: "" },
+    inputs: [],
+    outputs: [],
+    memStorage: { label: "" },
+    notes: { label: "" },
   },
 
   // ── Comparison & bitwise ──────────────────────────────────────────────────
@@ -257,6 +269,15 @@ export const OPCODES: Opcode[] = [
     memStorage: { label: "" },
     notes: { label: "Arithmetic shift right" },
   },
+  {
+    stack: "1E-1F",
+    name: "_invalid_",
+    gas: { label: "" },
+    inputs: [],
+    outputs: [],
+    memStorage: { label: "" },
+    notes: { label: "" },
+  },
 
   // ── Hashing ───────────────────────────────────────────────────────────────
   {
@@ -270,6 +291,15 @@ export const OPCODES: Opcode[] = [
     outputs: ["keccak256(mem[ost:ost+len-1])"],
     memStorage: { label: "" },
     notes: { label: "Keccak-256 hash; dynamic gas (see gas.md#a2)" },
+  },
+  {
+    stack: "21-2F",
+    name: "_invalid_",
+    gas: { label: "" },
+    inputs: [],
+    outputs: [],
+    memStorage: { label: "" },
+    notes: { label: "" },
   },
 
   // ── Environment ───────────────────────────────────────────────────────────
@@ -386,7 +416,10 @@ export const OPCODES: Opcode[] = [
     inputs: [],
     outputs: ["tx.gasprice"],
     memStorage: { label: "" },
-    notes: { label: "Gas price of tx, in wei per unit gas" },
+    notes: {
+      label: "Gas price of tx, in wei per unit gas **",
+      href: "https://eips.ethereum.org/EIPS/eip-1559#gasprice",
+    },
   },
   {
     stack: "3B",
@@ -522,7 +555,10 @@ export const OPCODES: Opcode[] = [
     inputs: [],
     outputs: ["chain_id"],
     memStorage: { label: "" },
-    notes: { label: "Current chain id (EIP-155)" },
+    notes: {
+      label: "Current chain id (EIP-155)",
+      href: "https://eips.ethereum.org/EIPS/eip-155",
+    },
   },
   {
     stack: "47",
@@ -549,7 +585,10 @@ export const OPCODES: Opcode[] = [
     inputs: ["idx"],
     outputs: ["tx.blob_versioned_hashes[idx]"],
     memStorage: { label: "" },
-    notes: { label: "Blob versioned hash at index (EIP-4844)" },
+    notes: {
+      label: "Blob versioned hash at index (EIP-4844)",
+      href: "https://eips.ethereum.org/EIPS/eip-4844",
+    },
   },
   {
     stack: "4A",
@@ -558,7 +597,19 @@ export const OPCODES: Opcode[] = [
     inputs: [],
     outputs: ["block.blobbasefee"],
     memStorage: { label: "" },
-    notes: { label: "Blob base fee of current block (EIP-7516)" },
+    notes: {
+      label: "Blob base fee of current block (EIP-7516)",
+      href: "https://eips.ethereum.org/EIPS/eip-7516",
+    },
+  },
+  {
+    stack: "4B-4F",
+    name: "_invalid_",
+    gas: { label: "" },
+    inputs: [],
+    outputs: [],
+    memStorage: { label: "" },
+    notes: { label: "" },
   },
 
   // ── Stack, memory, storage ────────────────────────────────────────────────
@@ -692,7 +743,10 @@ export const OPCODES: Opcode[] = [
     inputs: ["key"],
     outputs: ["tstorage[key]"],
     memStorage: { label: "" },
-    notes: { label: "Read word from transient storage (EIP-1153)" },
+    notes: {
+      label: "Read word from transient storage (EIP-1153)",
+      href: "https://eips.ethereum.org/EIPS/eip-1153",
+    },
   },
   {
     stack: "5D",
@@ -701,7 +755,10 @@ export const OPCODES: Opcode[] = [
     inputs: ["key", "val"],
     outputs: [],
     memStorage: { label: "tstorage[key] := val" },
-    notes: { label: "Write word to transient storage (EIP-1153)" },
+    notes: {
+      label: "Write word to transient storage (EIP-1153)",
+      href: "https://eips.ethereum.org/EIPS/eip-1153",
+    },
   },
   {
     stack: "5E",
@@ -713,7 +770,10 @@ export const OPCODES: Opcode[] = [
     inputs: ["dstOst", "ost", "len"],
     outputs: [],
     memStorage: { label: "mem[dstOst] := mem[ost:ost+len]" },
-    notes: { label: "Copy memory from one area to another (EIP-5656)" },
+    notes: {
+      label: "Copy memory from one area to another (EIP-5656)",
+      href: "https://eips.ethereum.org/EIPS/eip-5656",
+    },
   },
 
   // ── Push ──────────────────────────────────────────────────────────────────
@@ -1378,6 +1438,15 @@ export const OPCODES: Opcode[] = [
       label: "Append log record with 4 topics; dynamic gas (see gas.md#a8)",
     },
   },
+  {
+    stack: "A5-EF",
+    name: "_invalid_",
+    gas: { label: "" },
+    inputs: [],
+    outputs: [],
+    memStorage: { label: "" },
+    notes: { label: "" },
+  },
 
   // ── System ────────────────────────────────────────────────────────────────
   {
@@ -1466,6 +1535,15 @@ export const OPCODES: Opcode[] = [
     },
   },
   {
+    stack: "F6-F9",
+    name: "_invalid_",
+    gas: { label: "" },
+    inputs: [],
+    outputs: [],
+    memStorage: { label: "" },
+    notes: { label: "" },
+  },
+  {
     stack: "FA",
     name: "STATICCALL",
     gas: {
@@ -1478,6 +1556,15 @@ export const OPCODES: Opcode[] = [
     notes: {
       label: "Static call into an account; no state modifications allowed",
     },
+  },
+  {
+    stack: "FB-FC",
+    name: "_invalid_",
+    gas: { label: "" },
+    inputs: [],
+    outputs: [],
+    memStorage: { label: "" },
+    notes: { label: "" },
   },
   {
     stack: "FD",
@@ -1500,7 +1587,10 @@ export const OPCODES: Opcode[] = [
     },
     inputs: [],
     outputs: [],
-    memStorage: { label: "designated invalid opcode (EIP-141)" },
+    memStorage: {
+      label: "designated invalid opcode (EIP-141)",
+      href: "https://eips.ethereum.org/EIPS/eip-141",
+    },
     notes: { label: "Designated invalid opcode — consumes all remaining gas" },
   },
   {

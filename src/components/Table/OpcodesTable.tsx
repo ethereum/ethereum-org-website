@@ -10,12 +10,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
-import { OPCODES } from "@/data/evm/opcodes"
-
-type Cell = {
-  label: string
-  href?: string
-}
+import { type Cell, OPCODES } from "@/data/evm/opcodes"
 
 const renderCell = (cell: Cell) => {
   if (cell.href) {
