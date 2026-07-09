@@ -73,7 +73,19 @@ module.exports = [
   ["/dapps", "/apps/"],
   [
     "/contributing/translation-program/translation-guide",
-    "/contributing/translation-program/faq/",
+    "/contributing/translation-program/",
+  ],
+  [
+    "/contributing/translation-program/faq",
+    "/contributing/translation-program/",
+  ],
+  [
+    "/contributing/translation-program/how-to-translate",
+    "/contributing/translation-program/",
+  ],
+  [
+    "/contributing/translation-program/mission-and-vision",
+    "/contributing/translation-program/",
   ],
   [
     "/contributing/translation-program/content-versions",

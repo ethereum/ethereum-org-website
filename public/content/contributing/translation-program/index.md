@@ -24,8 +24,6 @@ The [Ethereum](/) community aims to be global and inclusive, yet much of its con
 
 The ethereum.org Translation Program aims to make Ethereum accessible to everyone by translating ethereum.org and other Ethereum content into as many languages as possible.
 
-Read more about the ethereum.org Translation Program [mission and vision](/contributing/translation-program/mission-and-vision).
-
 ### Our progress so far {#our-progress}
 
 - [**6,900 +** translators](/contributing/translation-program/contributors/)
@@ -62,7 +60,6 @@ We're constantly thinking of new and innovative ways to reward our contributors,
 These reference materials remain available for translation communities and projects running their own programs:
 
 - [Translation Style Guide](/contributing/translation-program/translators-guide/) _– instructions and tips for ethereum.org translators_
-- [Translation FAQs](/contributing/translation-program/faq/) _– frequently asked questions and answers about the ethereum.org Translation Program_
 
 For other useful translation tools, translator communities and Translation Program blog posts, please visit the [Resources page](/contributing/translation-program/resources/).
 
