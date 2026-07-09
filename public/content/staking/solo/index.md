@@ -17,7 +17,7 @@ summaryPoints:
 
 Home staking is the act of [running an Ethereum node](/run-a-node/) connected to the internet and depositing at least 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
 
-Home staking is the most direct way to stake. No smart contracts, operators, or custodians stand between you and the protocol: you hold your own keys and receive rewards directly. Every other staking method adds layers on top of this.
+Home staking is the most direct way to stake. No smart contracts, operators, or custodians stand between you and the protocol. You hold your own keys, actively participate in validating the Ethereum network, and receive network rewards directly. Every other staking method adds layers of technology, middleware, or services on top of this core network activity.
 
 **Home staking increases the decentralization of the Ethereum network**, making [Ethereum](/) more censorship-resistant and robust against attacks. Other staking methods may not help the network in the same ways. Home staking is the best staking option for securing Ethereum.
 
@@ -154,18 +154,9 @@ For home stakers this enables "squad staking": teaming up with friends or other 
 
 If you have the hardware and skills to run a node but less than 32 ETH, some staking protocols will match your validator with ETH from their pooled stakers. You post a smaller bond as collateral and run the validator on your own machine; the protocol supplies the rest of the stake, and you earn a share of the rewards.
 
-<ProductDisclaimer />
+This is a hybrid approach: you keep the responsibilities (and satisfaction) of operating your own hardware, but your validator operates under the protocol's smart contracts, governance, and performance rules, which is a different trust profile from staking your own ETH directly. 
 
-- **Lido Community Staking Module (CSM)** is permissionless to join, with a bond starting around 2.4 ETH for your first validator key (decreasing for additional keys), or 1.5 ETH for stakers who qualify as Identified Community Stakers.
-- **Rocket Pool megapools** require a 4 ETH bond per validator, with the protocol allocating the remaining 28 ETH from its liquid staking pool. (Rocket Pool's earlier "minipools" were closed to new creation in December 2025.)
-
-This is a hybrid approach: you keep the responsibilities (and satisfaction) of operating your own hardware, but your validator operates under the protocol's smart contracts, governance, and performance rules, which is a different trust profile from staking your own ETH directly. Learn more about how these protocols work, including their trust assumptions and token mechanics, on the [pooled staking page](/staking/pools/).
-
-## Home staking and restaking {#home-staking-and-restaking}
-
-Restaking is often confused with staking, but it is a separate, opt-in system built on top of staking. Restaking protocols reuse staked ETH to help secure additional applications in exchange for extra rewards, introducing additional slashing conditions, smart contract risk, and withdrawal delays that do not exist in Ethereum protocol staking. Restaking is never required: your validator earns full protocol rewards without it, and opting in exposes your stake to risks beyond those described on this page.
-
-[More on restaking](/restaking/)
+Learn more about how these protocols work, including their trust assumptions and token mechanics, on the [pooled staking page](/staking/pools/).
 
 ## More ways to use your node {#run-a-node-without-staking}
 
@@ -184,17 +175,11 @@ A <em>validator</em> is a virtual entity that lives on Ethereum and participates
 <ExpandableCard title="Can I deposit more than 32 ETH?">
 Yes. A validator with <em>compounding</em> (0x02) withdrawal credentials can hold an effective balance of up to 2048 ETH, while the minimum to activate remains 32 ETH. Rewards on a compounding validator are added to its stake automatically, and it earns rewards on every whole ETH above the 32 ETH minimum, so you can stake amounts that aren't multiples of 32. See [Compounding and the 2048 ETH maximum](#compounding-and-max-effective-balance).
 
-Validators with <em>regular withdrawals</em> (0x01) credentials remain capped at an <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effective balance</a> of 32 ETH, with any balance above that automatically swept to the withdrawal address every few days.
+Validators with <em>regular withdrawals</em> (0x01) credentials remain capped at an effective balance of 32 ETH, with any balance above that automatically swept to the withdrawal address every few days.
 
 For a compounding validator, only balance above the 2048 ETH maximum is swept automatically. To withdraw anything below that, you trigger a partial withdrawal from your withdrawal address (a transaction that costs gas), which can draw down any balance above the 32 ETH minimum. If you run multiple validators, you can also consolidate them into a single compounding validator without exiting the network.
 
 [More on staking withdrawals](/staking/withdrawals/)
-</ExpandableCard>
-
-<ExpandableCard title="Can I stake with less than 32 ETH and still run my own node?">
-Yes. Activating your own validator directly with the protocol requires 32 ETH, but you can run validators for a staking protocol by posting a smaller bond: Lido's Community Staking Module requires around 2.4 ETH for a first validator key (1.5 ETH for Identified Community Stakers), and Rocket Pool megapools require a 4 ETH bond per validator. In both cases you run the node while the protocol supplies the remainder of the stake, in exchange for operating under its smart contracts and rules. See <a href="#run-validators-for-a-staking-protocol">Run validators for a staking protocol</a> above.
-
-If you don't want to run hardware at all, [staking pools](/staking/pools/) let you participate with any amount of ETH.
 </ExpandableCard>
 
 <ExpandableCard title="Will I be slashed if I go offline? (tldr: No.)">
@@ -249,16 +234,11 @@ To unlock and receive your entire balance back you must exit your validator. You
 
 ## Further reading {#further-reading}
 
-- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Client diversity statistics and migration guides](https://clientdiversity.org/)
 - [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [EIP-7870: Hardware and bandwidth recommendations](https://eips.ethereum.org/EIPS/eip-7870)
 - [The Pectra upgrade: max effective balance and more](/roadmap/pectra/)
-- [Obol documentation](https://docs.obol.org/) - _Obol_
-- [SSV Network documentation](https://docs.ssv.network/) - _SSV_
-- [Lido Community Staking Module operator portal](https://operatorportal.lido.fi/modules/community-staking-module) - _Lido_
-- [Rocket Pool node operator documentation](https://docs.rocketpool.net/) - _Rocket Pool_
 
 <QuizWidget quizKey="staking-solo" />

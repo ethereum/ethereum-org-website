@@ -84,7 +84,7 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 
 ##### Recommended specifications
 
-Current hardware guidance for node operators is maintained in [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). For a full node it recommends:
+Current hardware guidance for node operators is identified in [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). For a full node it recommends:
 
 - Fast CPU with 4+ cores (8+ cores if validating)
 - 32 GB RAM (64 GB recommended if validating to ensure stability)

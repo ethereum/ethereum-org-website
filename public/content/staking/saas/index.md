@@ -15,7 +15,9 @@ summaryPoints:
 
 ## What is delegated staking? {#what-is-staking-as-a-service}
 
-Delegated staking means you provide the ETH, but hand the operation of the validator to someone else. The [Ethereum](/) protocol does not natively support delegation of stake, so a range of services has been built to fill this demand. This category is best known as **staking as a service (SaaS)**, but it covers a spectrum of arrangements that differ on one key question: how much control do you keep?
+Delegated staking represents a category of staking services where you deposit your own 32 ETH for a validator, but delegate node operations to a third-party operator. The process usually involves being guided through the initial setup, including key generation and deposit, then uploading your signing keys to the operator. You provide the ETH, but hand the operation of the validator's hardware to someone else. 
+
+The [Ethereum](/) protocol does not natively support delegation of stake, so a range of services have been built to fill this demand. This category is best known as **staking as a service (SaaS)**, but it covers a spectrum of arrangements that differ on the key question of how much control you keep over your staked ETH: 
 
 - **Non-custodial staking as a service**: you keep your own withdrawal keys and delegate only validator operation.
 - **Fully custodial staking**: the provider, usually an exchange, holds both the keys and the funds.
@@ -25,11 +27,11 @@ Compared to [solo staking](/staking/solo/), every form of delegation places midd
 ### What delegated staking is not {#what-delegated-staking-is-not}
 
 - **Pooled staking and liquid staking tokens**: with pools you combine any amount of ETH with other stakers, usually receiving a token that represents your share of the pool's stake. You are not delegating your own validator; the pool's smart contracts and node operators control the validators. [More on pooled staking](/staking/pools/)
-- **Bonded node operation**: protocols such as Rocket Pool megapools and Lido's Community Staking Module let you run a validator on your own hardware with less than 32 ETH by posting a bond. That is node operation, the opposite of delegation, and is covered alongside [solo staking](/staking/solo/).
+- **Bonded node operation**: some staking protocols let you run a validator on your own hardware with less than 32 ETH by posting a bond. That is node operation, the opposite of delegation, and is covered alongside [solo staking](/staking/solo/).
 
 ## Why delegate your staking? {#why-stake-with-a-service}
 
-If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, delegated staking services allow you to hand off the hard part while you earn native block rewards.
+If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, delegated staking services allow you to hand off the technical side while you earn native Ethereum block rewards.
 
 <Grid>
   <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
@@ -51,7 +53,7 @@ The validator's _withdrawal credentials_ stay pointed at an address you control.
 
 ### Custodial services and exchange staking {#custodial-and-exchange-staking}
 
-At the fully delegated end of the spectrum sits custodial staking, most commonly offered by centralized exchanges. You never handle keys at all: you hold ETH in your platform account and opt in to staking. This is the simplest possible user experience, and it's a legitimate option for people who already keep funds on an exchange and accept custodial risk.
+At the fully delegated end of the spectrum sits custodial staking, most commonly offered by centralized exchanges. You never handle keys at all; you just hold ETH in your platform account and opt in to staking. This is the simplest possible user experience, and it's a legitimate option for people who already keep funds on an exchange and accept custodial risk.
 
 It also requires the most trust. The provider controls both the signing keys and the withdrawal credentials; what you hold is a balance on their platform, not a validator. That means:
 
@@ -63,25 +65,25 @@ It also requires the most trust. The provider controls both the signing keys and
 
 Delegated staking always means trusting someone else with part of your staking setup. Answer these questions before handing anything over:
 
-- **Who holds the withdrawal keys?** A validator's withdrawal credentials (type 0x01 or 0x02) point to an execution layer address that ultimately controls the stake. If that address is yours, the arrangement is non-custodial: the operator can run (or mismanage) the validator, but the ETH can only ever be withdrawn to you. If the credentials point to the provider's address, you hold a promise, not a stake.
+- **Who holds the withdrawal keys?** A validator's withdrawal credentials (type 0x01 or 0x02) point to an execution layer address that ultimately controls the stake. If that address is yours, the arrangement is non-custodial; the operator can run (or mismanage) the validator, but the ETH can only ever be withdrawn to you. If the credentials point to the provider's address, you hold a promise, not a stake.
 - **Can you exit without the operator?** Since the [Pectra upgrade](/roadmap/pectra/), [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) allows the withdrawal address to trigger a validator exit (or, for compounding 0x02 validators, a partial withdrawal of balance above 32 ETH) directly from the execution layer, without the signing keys. It requires a transaction and costs gas, but it means an unresponsive or defunct operator can no longer hold your validator hostage, provided the withdrawal credentials are yours.
 - **What is the fee structure?** Services charge a flat monthly fee or a percentage of rewards. Check how fees interact with downtime and penalties: who bears the cost if the operator underperforms, and whether any guarantees or insurance are offered.
 - **Which clients does the operator run?** An operator running majority [execution or consensus clients](/developers/docs/nodes-and-clients/client-diversity/) exposes both your stake and the network to correlated failure if that client has a bug. Prefer providers that document minority client usage.
 - **Is the service open and audited?** Providers may run additional software around the standard Ethereum clients that is not open source or auditable. Look for public audits, an established operating history, and a clean slashing record.
-- **What happens if the provider disappears?** A good provider documents its offboarding process: how you exit your validator, recover your keys, or trigger an exit yourself. If the answer depends entirely on the provider staying in business, that's a custodial arrangement in practice, whatever it's called.
+- **What happens if the provider disappears?** A responsible provider documents its offboarding process, providing clear instructions for how you exit your validator, recover your keys, or trigger an exit yourself. If the answer depends entirely on the provider staying in business it is a custodial arrangement. 
 
 <Alert variant="info">
 <AlertEmoji text="🛠️"/>
 <AlertContent>
 <AlertDescription>
-**Some providers can run your validator using distributed validator technology (DVT)**, splitting the signing key across multiple nodes so that no single machine or operator is a point of failure. Ask whether your provider supports it. [More on distributed validator technology](/staking/dvt/)
+**Some providers can run your validator using distributed validator technology (DVT)**, splitting the signing key across multiple nodes so that no single machine or operator is a point of failure. [More on distributed validator technology](/staking/dvt/)
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## What to consider {#what-to-consider}
 
-There are a growing number of providers to help you delegate the operation of your validator, but they all have their own benefits and risks. All delegated options require additional trust assumptions compared to solo staking. Delegated options may have additional code wrapping the Ethereum clients that is not open or auditable. Delegation also has a detrimental effect on network decentralization. Depending on the setup, you may not control your validator - the operator could act dishonestly using your ETH.
+There are a growing number of providers to help you delegate the operation of your validator, but they all have their own benefits and risks. All delegated options require additional trust assumptions compared to solo staking. Delegated options may have additional code wrapping the Ethereum clients that is not open or auditable. Delegation also has a detrimental effect on network decentralization. Depending on the setup, you may not control your validator, andthe operator could act dishonestly using your ETH.
 
 Attribute indicators are used below to signal notable strengths or weaknesses a listed provider may have. Use this section as a reference for how we define these attributes while you're choosing a staking service.
 
@@ -149,7 +151,8 @@ Contact individual providers for more details on any guarantees or insurance opt
 
 ## Further reading {#further-reading}
 
+- [What is Staking-as-a-Service?](https://www.figment.io/insights/staking-as-a-service/) - _Figment_
 - [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Evaluating Staking Services](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_
 - [EIP-7002: Execution layer triggerable withdrawals](https://eips.ethereum.org/EIPS/eip-7002) - _the specification for exiting a validator from its withdrawal address_
-- [EIP-7251: Increase the MAX_EFFECTIVE_BALANCE](https://eips.ethereum.org/EIPS/eip-7251) - _the specification for validators holding up to 2048 ETH_
+- 

@@ -29,7 +29,7 @@ How withdrawals work depends on your validator's withdrawal credential type:
 - **Legacy validators (Type 1)**: Excess balance over 32 ETH is automatically and regularly sent to the withdrawal address linked to the validator. Rewards above 32 ETH do not contribute to the validator's weight on the network.
 - **Compounding validators (Type 2)**: Rewards compound into the validator's effective balance up to 2048 ETH, increasing the validator's weight and earning more rewards. Only balance exceeding 2048 ETH is automatically swept.
 
-Users can also **exit staking entirely**, initiating a voluntary exit, waiting through the exit queue (which varies with network demand), and then receiving their full remaining balance automatically in a later sweep of their account.
+Users can also **exit staking entirely**, submitting a transaction to withdraw, waiting through the exit queue (which varies with network demand), and then receiving their full remaining balance automatically in a later sweep of their account.
 
 ## Staking rewards {#staking-rewards}
 
@@ -276,8 +276,10 @@ The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into 
 
 - [Staking Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals)
 - [Staking Launchpad Validator Actions](https://launchpad.ethereum.org/validator-actions)
+- [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
+- [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [MaxEB deep-dive: compounding and consolidation](/roadmap/pectra/maxeb/)
-- [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
 - [EIP-7251: Increase the MAX_EFFECTIVE_BALANCE](https://eips.ethereum.org/EIPS/eip-7251)
 - [EIP-7002: Execution layer triggerable withdrawals](https://eips.ethereum.org/EIPS/eip-7002)
-- [Understanding Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)
+- [Understanding Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/) - _Attestant_ 
+- [Technical Overview - Deposits and Withdrawals](https://eth2book.info/latest/part2/deposits-withdrawals/) - _eth2 book_
