@@ -1,3 +1,5 @@
+import { useMemo } from "react"
+
 import { FilterOption } from "@/lib/types"
 
 import {
@@ -16,12 +18,13 @@ import useTranslation from "@/hooks/useTranslation"
 export const useNetworkFilters = (): FilterOption[] => {
   const { t } = useTranslation("page-layer-2-networks")
 
-  return [
-    {
-      title: t("page-layer-2-networks-wallet-support"),
-      showFilterOption: true,
-      items: [
-        {
+  return useMemo(
+    () => [
+      {
+        title: t("page-layer-2-networks-wallet-support"),
+        showFilterOption: true,
+        items: [
+          {
           filterKey: "wallets_supported",
           filterLabel: "wallets_supported",
           description: "",
@@ -174,6 +177,8 @@ export const useNetworkFilters = (): FilterOption[] => {
           options: [],
         },
       ],
-    },
-  ]
+      },
+    ],
+    [t]
+  )
 }
