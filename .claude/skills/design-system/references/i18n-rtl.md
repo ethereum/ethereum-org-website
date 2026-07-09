@@ -18,19 +18,26 @@ export default async function Page() {
 
 ### Client Components
 
-Use the project hook `useTranslation` from `@/hooks/useTranslation` -- not `useTranslations` from `next-intl` directly:
-
 ```tsx
 "use client"
-import { useTranslation } from "@/hooks/useTranslation"
+import { useTranslations } from "next-intl"
 
 export function Widget() {
-  const { t } = useTranslation("widget-namespace")
-  return <p>{t("widget-description")}</p>
+  const t = useTranslations("widget-namespace")
+  const tCommon = useTranslations("common")
+  return (
+    <p>
+      {t("widget-description")} {tCommon("learn-more")}
+    </p>
+  )
 }
 ```
 
-Caveat: the plain-key form (`t("key")`) returns the raw message without ICU interpolation. When passing values, use the namespaced-key form: `t("widget-namespace:key", { name })`. Rich text goes through `t.rich(...)`, which is bound to the root namespace and needs the full dotted key (`t.rich("widget-namespace.key", ...)`).
+One namespace-bound function per namespace -- to access another namespace, bind a second function (`tCommon` above) rather than reaching across namespaces from one `t`.
+
+Do not use the legacy `@/hooks/useTranslation` wrapper (`const { t } = useTranslation("ns")` with `namespace:key` syntax) in new code -- it returns raw messages by default and silently skips ICU interpolation in its plain-key form. Existing call sites are being migrated.
+
+Caveat for both APIs: strings with embedded HTML (`<b>`, `<a href>`) predate next-intl and break plain `t()` ICU parsing -- use `t.raw("key")` (rendered downstream via htmr/`Translation`) or `t.rich(...)` for those.
 
 ### Never hard-code English
 
