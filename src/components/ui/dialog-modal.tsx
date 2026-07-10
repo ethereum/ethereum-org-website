@@ -1,5 +1,6 @@
 import * as React from "react"
 import { X } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { tv, type VariantProps } from "tailwind-variants"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 
@@ -7,8 +8,6 @@ import { cn } from "@/lib/utils/cn"
 
 import { Button } from "./buttons/Button"
 import { Center, Flex } from "./flex"
-
-import useTranslation from "@/hooks/useTranslation"
 
 const dialogVariant = tv({
   slots: {
@@ -128,7 +127,7 @@ const DialogHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const { header, close } = useDialogStyles()
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   return (
     <div className={cn(header(), className)} {...props}>
       {children}
