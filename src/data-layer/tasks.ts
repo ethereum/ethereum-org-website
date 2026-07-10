@@ -54,7 +54,7 @@ export const KEYS = {
   RSS: "fetch-rss",
   GITHUB_REPO_DATA: "fetch-github-repo-data",
   EVENTS: "fetch-events",
-  BLOB_STATS: "fetch-blobscan-stats",
+  BLOB_STATS: "fetch-blob-stats",
   ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
   ETHEREUM_STABLECOINS_MCAP: "fetch-ethereum-stablecoins-mcap",
   ETH_PRICE: "fetch-eth-price",
