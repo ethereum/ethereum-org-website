@@ -9,7 +9,7 @@
   "page-get-eth-cex-desc": "거래소는 전통적인 통화를 사용하여 암호화폐를 구매할 수 있게 해주는 기업입니다. 거래소는 사용자가 직접 제어하는 지갑으로 전송하기 전까지 구매한 ETH를 보관합니다.",
   "page-get-eth-checkout-dapps-btn": "탈중앙화 애플리케이션 (dapp) 살펴보기",
   "page-get-eth-community-safety": "보안에 관한 커뮤니티 게시물",
-  "page-get-eth-description": "<a href=\"/\">이더리움</a>은 단일 조직에 의해 통제되지 않으며, 탈중앙화되어 있습니다.",
+  "page-get-eth-description": "이더리움은 단일 조직에 의해 통제되지 않으며, 탈중앙화되어 있습니다.",
   "page-get-eth-dex": "탈중앙화 거래소(DEX)",
   "page-get-eth-dex-desc": "더 많은 제어권을 원한다면 <a href=\"/glossary/#smart-contract\">스마트 컨트랙트</a>를 사용하여 ETH를 구매하세요. DEX를 사용하면 중앙화된 회사에 자금의 제어권을 넘기지 않고도 디지털 자산을 거래할 수 있습니다.",
   "page-get-eth-peers": "피어로부터 ETH 받기",
