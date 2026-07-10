@@ -84,6 +84,8 @@ const DepositContract = () => {
       speech.removeEventListener("end", onEndCallback)
       window.speechSynthesis.cancel()
     }
+    // Mount-only: the utterance is configured once; a locale switch remounts the page
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleTextToSpeech = () => {
