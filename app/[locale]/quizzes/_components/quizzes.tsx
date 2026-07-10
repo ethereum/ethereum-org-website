@@ -1,6 +1,6 @@
 "use client"
-
 import { useMemo, useState } from "react"
+import { useTranslations } from "next-intl"
 
 import { QuizKey, QuizStatus } from "@/lib/types"
 
@@ -23,7 +23,6 @@ import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
 import { INITIAL_QUIZ } from "@/lib/constants"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
-import { useTranslation } from "@/hooks/useTranslation"
 import HeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 
 const handleGHAdd = () =>
@@ -34,7 +33,8 @@ const handleGHAdd = () =>
   })
 
 const QuizzesPage = () => {
-  const { t } = useTranslation("learn-quizzes")
+  const t = useTranslations("learn-quizzes")
+  const tCommon = useTranslations("common")
 
   const [userStats, updateUserStats] = useLocalQuizData()
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
@@ -54,7 +54,7 @@ const QuizzesPage = () => {
     <>
       <MainArticle>
         <HubHero
-          title={t("common:quizzes-title")}
+          title={tCommon("quizzes-title")}
           description={t("quizzes-subtitle")}
           header={t("test-your-knowledge")}
           heroImg={HeroImage}
