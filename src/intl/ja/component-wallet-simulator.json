@@ -9,6 +9,8 @@
   "sim-click": "クリック！",
   "sim-no-nfts": "まだNFTはありません！",
   "sim-example-walkthrough": "体験チュートリアル",
+  "sim-start-next-lesson": "次のレッスンを開始",
+  "sim-how-to": "使い方",
   "sim-address-tooltip": "ここでの操作が完了したら、ご自身のウォレットからアドレス（公開識別子）を共有してください",
   "sim-try-real-app": "ここでの操作が完了したら、実際のイーサリアムアプリケーションを試してみてください",
   "sim-try-login-app": "ここでの操作が完了したら、ウォレットを使って実際のアプリにログインしてみてください",
