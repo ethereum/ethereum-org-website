@@ -1,7 +1,7 @@
 "use client"
-
 import { useContext } from "react"
 import { X } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -16,11 +16,10 @@ import FixedDot from "./FixedDot"
 import { useFeedbackWidget } from "./useFeedbackWidget"
 
 import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
-import { useTranslation } from "@/hooks/useTranslation"
 
 const FeedbackWidget = () => {
   const { showFeedbackWidget } = useContext(FeedbackWidgetContext)
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const {
     offsetBottom,
     cancelRef,

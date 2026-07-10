@@ -1,6 +1,6 @@
 "use client"
-
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 
 import type { MatomoEventOptions } from "@/lib/types"
 
@@ -10,8 +10,6 @@ import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { LINE_CLAMP_CLASS_MAPPING } from "@/lib/constants"
-
-import useTranslation from "@/hooks/useTranslation"
 
 interface TruncatedTextProps
   extends Pick<
@@ -30,7 +28,7 @@ const TruncatedText = ({
   children,
   matomoEvent,
 }: TruncatedTextProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (

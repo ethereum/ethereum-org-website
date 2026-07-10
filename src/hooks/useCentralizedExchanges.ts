@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { shuffle } from "lodash"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { ImageProps } from "@/components/Image"
 import { SelectOnChange } from "@/components/Select"
@@ -10,7 +10,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import exchangeData from "@/data/exchangesByCountry"
 
-import { useTranslation } from "@/hooks/useTranslation"
 import binance from "@/public/images/exchanges/binance.png"
 import bitbuy from "@/public/images/exchanges/bitbuy.png"
 import bitfinex from "@/public/images/exchanges/bitfinex.png"
@@ -314,7 +313,8 @@ const exchanges: ExchangeDetails = {
 
 export const useCentralizedExchanges = () => {
   const locale = useLocale()
-  const { t } = useTranslation("page-get-eth")
+  const t = useTranslations("page-get-eth")
+  const tCommon = useTranslations("common")
   const [selectedCountry, setSelectedCountry] =
     useState<ExchangeByCountryOption | null>()
 
@@ -328,7 +328,7 @@ export const useCentralizedExchanges = () => {
       const countryName =
         countryCode.length === 2
           ? getCountryCodeName(countryCode, locale)
-          : t(`common:region-${countryCode.toLowerCase()}`)
+          : tCommon(`region-${countryCode.toLowerCase()}`)
 
       return {
         value: countryName,

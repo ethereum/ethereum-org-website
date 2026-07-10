@@ -2,7 +2,7 @@
 
 import { useContext, useEffect, useState } from "react"
 import { Howl } from "howler"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { Portal } from "@radix-ui/react-portal"
 
 import PlayerWidget from "@/components/ListenToPlayer/PlayerWidget"
@@ -14,7 +14,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getPlaylistBySlug } from "@/data/listen-to-feature/playlist"
 
 import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
-import { useTranslation } from "@/hooks/useTranslation"
 
 type ListenToPlayerProps = {
   slug: string
@@ -25,7 +24,7 @@ const ListenToPlayer = ({ slug, className }: ListenToPlayerProps) => {
   const { setShowFeedbackWidget } = useContext(FeedbackWidgetContext)
   const { playlist, index } = getPlaylistBySlug(slug)
 
-  const { t } = useTranslation()
+  const t = useTranslations("common")
   const [startedPlaying, setStartedPlaying] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
   const [showWidget, setShowWidget] = useState(false)

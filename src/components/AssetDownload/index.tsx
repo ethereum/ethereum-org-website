@@ -2,6 +2,7 @@ import { extname } from "path"
 
 import { BaseHTMLAttributes } from "react"
 import type { ImageProps, StaticImageData } from "next/image"
+import { useTranslations } from "next-intl"
 
 import AssetDownloadArtist from "@/components/AssetDownload/AssetDownloadArtist"
 import AssetDownloadImage from "@/components/AssetDownload/AssetDownloadImage"
@@ -10,8 +11,6 @@ import { Flex, Stack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type AssetDownloadProps = {
   title: string
@@ -32,7 +31,7 @@ const AssetDownload = ({
   className,
   ...props
 }: AssetDownloadProps) => {
-  const { t } = useTranslation(["page-assets"])
+  const t = useTranslations("page-assets")
   const matomoHandler = () => {
     trackCustomEvent({
       eventCategory: "asset download button",

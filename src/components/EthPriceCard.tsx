@@ -1,7 +1,7 @@
 "use client"
 
 import { ArrowUpRight, Info } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import Tooltip from "@/components/Tooltip"
 import InlineLink from "@/components/ui/Link"
@@ -13,14 +13,13 @@ import { formatPriceUSD, numberToPercent } from "@/lib/utils/numbers"
 import { Flex } from "./ui/flex"
 
 import { useGasEthPrice } from "@/hooks/useGasEthPrice"
-import { useTranslation } from "@/hooks/useTranslation"
 
 const EthPriceCard = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const locale = useLocale()
-  const { t } = useTranslation()
+  const t = useTranslations("common")
   const { ethPrice, ethPercentChange24h } = useGasEthPrice()
 
   const isLoading = ethPrice === 0
