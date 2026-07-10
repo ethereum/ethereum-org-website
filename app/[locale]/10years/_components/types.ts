@@ -5,6 +5,8 @@ export type StoryData = {
   storyKey: string
   /** Story text verbatim as submitted (English for English submissions) */
   storyOriginal: string
+  /** BCP-47 language code of the original submission (not necessarily a site locale) */
+  originalLocale: string
   category: string
   name: string
   date: string

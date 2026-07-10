@@ -50,9 +50,20 @@ export const getCommunityStories = async (
 ): Promise<Story[]> => {
   const t = await getTranslations({ locale, namespace: "community-stories" })
   return tenYearStories.map(
-    ({ storyKey, storyOriginal, category, name, date, country, twitter }) => ({
+    ({
+      storyKey,
+      storyOriginal,
+      originalLocale,
+      category,
       name,
-      story: t(storyKey),
+      date,
+      country,
+      twitter,
+    }) => ({
+      name,
+      // The author's own words beat a round-trip translation when the viewer
+      // reads their language; StoryCard then hides the flip (story === original)
+      story: originalLocale === locale ? storyOriginal : t(storyKey),
       storyOriginal: storyOriginal || null,
       twitter: twitter || null,
       country: country || null,
