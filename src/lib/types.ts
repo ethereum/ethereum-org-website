@@ -1423,7 +1423,8 @@ export type TimeLeftLabels = Record<
 
 export type Story = {
   name: string
-  storyEnglish: string
+  /** Story copy resolved to the viewer's locale (falls back to English) */
+  story: string
   storyOriginal: string | null
   twitter: string | null
   country: string | null

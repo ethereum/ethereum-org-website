@@ -15,7 +15,7 @@ import { dateTimeFormat } from "@/lib/utils/date"
 const stories: Story[] = [
   {
     name: "imrulo.eth",
-    storyEnglish:
+    story:
       "I'm Cuban. I live in Serbia.From Cuba, opening a bank account was almost impossible. Paying online… even more difficult.\n\nWhen I arrived in Serbia, I thought everything would be easier. But in 2021, something happened to me that I'll never forget. A client asked me for a website. He paid me via PayPal. And PayPal… blocked my money. Just when I needed it most.\n\nThat same day, I started looking for solutions. And I found Ethereum.\n\nThat's when everything changed. Thanks to Ethereum, I was able to receive direct payments. Without banks. Without blocks. Without asking permission.\n\nSince then, I fell in love with Ethereum.Because it's not just money. It's freedom. It's being able to work and get paid, no matter where you come from.\n\nEvery time I have something on another network, I try to move it to Ethereum.Because I believe in its potential. In its ability to give opportunities to people like me. People who come from countries where the system closes its doors to you.\n\nFor me, Ethereum isn't just technology. It's a tool for living a better life.",
     storyOriginal:
       "Soy cubano. Vivo en Serbia. Desde Cuba, abrir una cuenta bancaria era casi imposible. Pagar online… aún más difícil.\n\nCuando llegué a Serbia, pensé que todo sería más fácil. Pero en 2021 me pasó algo que no olvido. Un cliente me pidió una página web. Me pagó por PayPal. Y PayPal… me bloqueó el dinero. Justo cuando más lo necesitaba.\n\nEse mismo día me puse a buscar soluciones. Y encontré Ethereum.\n\nAhí cambió todo. Gracias a Ethereum pude recibir pagos directo. Sin bancos. Sin bloqueos. Sin pedir permiso.\n\nDesde entonces, me enamoré de Ethereum. Porque no es solo dinero. Es libertad. Es poder trabajar y cobrar, sin importar de dónde vengas.\n\nCada vez que tengo algo en otra red, trato de moverlo a Ethereum. Porque creo en su potencial. En su capacidad de darle oportunidades a gente como yo. Gente que viene de países donde el sistema te cierra las puertas.\n\nEthereum, para mí, no es solo tecnología. Es una herramienta para vivir mejor.",
@@ -25,7 +25,7 @@ const stories: Story[] = [
   },
   {
     name: "Casio",
-    storyEnglish:
+    story:
       "How DeFi has made an impact on my life: Spent 8 years working regular jobs, perfect credit, no debt and all banks denied my loan apps after months of back n forth. In less than 30 minutes I took a loan agains't my ETH which allowed me to buy the land and start construction.",
     storyOriginal: null,
     twitter: "https://twitter.com/0xCasio",
@@ -34,7 +34,7 @@ const stories: Story[] = [
   },
   {
     name: "Thiago",
-    storyEnglish:
+    story:
       "In emerging regions, instability, distrust, and social inequality are commonplace. Ethereum offers not only a technological alternative, but a philosophical one. It allows us to build systems where transparency is default, trust is programmable, and access is open.",
     storyOriginal: null,
     twitter: null,
@@ -110,7 +110,7 @@ const WhatAreAppsStories = () => {
                 expandedStories[index] && "line-clamp-none"
               )}
             >
-              {story.storyEnglish}
+              {story.story}
             </p>
             <Button
               onClick={() => handleExpand(index)}

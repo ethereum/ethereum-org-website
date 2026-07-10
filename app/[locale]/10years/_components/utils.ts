@@ -1,10 +1,14 @@
 import { getTranslations } from "next-intl/server"
 
+import type { Story } from "@/lib/types"
+
 import { formatDate, isValidDate } from "@/lib/utils/date"
+
+import tenYearStories from "@/data/tenYearStories"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import type { AdoptionCard, InnovationCard, Story } from "./types"
+import type { AdoptionCard, InnovationCard } from "./types"
 
 import Adoption1Image from "@/public/images/10-year-anniversary/adoption-1.png"
 import Adoption2Image from "@/public/images/10-year-anniversary/adoption-2.png"
@@ -36,14 +40,27 @@ const parseDate = (date: string, locale = DEFAULT_LOCALE): string => {
   return date
 }
 
-export const parseStoryDates = (
-  stories: Story[],
+/**
+ * Community stories resolved for rendering: story copy localized via the
+ * "community-stories" namespace (English fallback) and dates formatted for
+ * the locale. Junk spreadsheet fields (region) are dropped here.
+ */
+export const getCommunityStories = async (
   locale = DEFAULT_LOCALE
-): Story[] =>
-  stories.map(({ date, ...story }) => ({
-    ...story,
-    date: parseDate(date, locale),
-  }))
+): Promise<Story[]> => {
+  const t = await getTranslations({ locale, namespace: "community-stories" })
+  return tenYearStories.map(
+    ({ storyKey, storyOriginal, category, name, date, country, twitter }) => ({
+      name,
+      story: t(storyKey),
+      storyOriginal: storyOriginal || null,
+      twitter: twitter || null,
+      country: country || null,
+      date: parseDate(date, locale),
+      category,
+    })
+  )
+}
 
 export const getInnovationCards = async (): Promise<InnovationCard[]> => {
   const t = await getTranslations("page-10-year-anniversary")

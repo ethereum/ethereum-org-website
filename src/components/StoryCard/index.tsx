@@ -27,7 +27,7 @@ type StoryCardProps = {
 }
 
 /**
- * A single community story card with a flip toggle (English <-> original
+ * A single community story card with a flip toggle (localized <-> original
  * language) and an optional read-more expander. Self-contained state so it
  * can be dropped into any layout (single-column list on /10years, masonry on
  * /stories).
@@ -43,7 +43,10 @@ const StoryCard = ({
   const [isExpanded, setIsExpanded] = useState(false)
   const [isFading, setIsFading] = useState(false)
 
-  const hasOriginal = !!story.storyOriginal
+  // No flip when the localized copy matches the original (e.g. an English
+  // submission viewed in English, or a locale still falling back to English)
+  const hasOriginal =
+    !!story.storyOriginal && story.storyOriginal !== story.story
   const showOriginal = isFlipped && hasOriginal
 
   const handleFlip = () => {
@@ -97,7 +100,7 @@ const StoryCard = ({
                 expandable && !isExpanded && "line-clamp-3"
               )}
             >
-              {showOriginal ? story.storyOriginal : story.storyEnglish}
+              {showOriginal ? story.storyOriginal : story.story}
             </p>
             {expandable && !isExpanded && (
               <div className="mb-2">
@@ -122,7 +125,7 @@ const StoryCard = ({
               <p className="text-xs text-body-medium">
                 {showOriginal
                   ? t("story-card-original-language")
-                  : t("story-card-english-translation")}
+                  : t("story-card-translation")}
               </p>
               <Button
                 onClick={handleFlip}
@@ -135,7 +138,7 @@ const StoryCard = ({
                 }}
               >
                 {showOriginal
-                  ? t("story-card-show-english")
+                  ? t("story-card-show-translation")
                   : t("story-card-show-original")}
               </Button>
             </div>

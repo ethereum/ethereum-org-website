@@ -23,7 +23,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import tenYearEventRegions from "@/data/tenYearEventRegions"
-import tenYearStories from "@/data/tenYearStories"
 
 import AdoptionSwiper from "./_components/AdoptionSwiper/lazy"
 import { adoptionStyles } from "./_components/data"
@@ -35,8 +34,8 @@ import { torchHolders } from "./_components/torchHoldersData"
 import Stories from "./_components/UserStories/lazy"
 import {
   getAdoptionCards,
+  getCommunityStories,
   getInnovationCards,
-  parseStoryDates,
 } from "./_components/utils"
 import TenYearJsonLD from "./page-jsonld"
 
@@ -50,7 +49,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   setRequestLocale(locale)
 
-  const stories = parseStoryDates(tenYearStories, locale)
+  const stories = await getCommunityStories(locale)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
