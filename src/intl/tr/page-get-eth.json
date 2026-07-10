@@ -9,7 +9,7 @@
   "page-get-eth-cex-desc": "Borsalar, geleneksel para birimlerini kullanarak kripto satın almanızı sağlayan işletmelerdir. Satın aldığınız herhangi bir ETH'yi, kontrol ettiğiniz bir cüzdana gönderene kadar gözetim altında tutarlar.",
   "page-get-eth-checkout-dapps-btn": "Merkeziyetsiz uygulamalara (dapp) göz atın",
   "page-get-eth-community-safety": "Güvenlik üzerine topluluk gönderileri",
-  "page-get-eth-description": "<a href=\"/\">Ethereum</a> tek bir kuruluş tarafından kontrol edilmez; merkeziyetsizdir.",
+  "page-get-eth-description": "Ethereum tek bir kuruluş tarafından kontrol edilmez; merkeziyetsizdir.",
   "page-get-eth-dex": "Merkeziyetsiz borsalar (DEX'ler)",
   "page-get-eth-dex-desc": "Daha fazla kontrol istiyorsanız, <a href=\"/glossary/#smart-contract\">akıllı sözleşmeler</a> kullanarak ETH satın alın. Bir DEX ile, fonlarınızın kontrolünü hiçbir zaman merkezi bir şirkete vermeden dijital varlıkların ticaretini yapabilirsiniz.",
   "page-get-eth-peers": "Eşlerinizden ETH alın",
