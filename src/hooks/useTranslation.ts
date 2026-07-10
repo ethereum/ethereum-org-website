@@ -16,6 +16,9 @@ import { useTranslations } from "next-intl"
 
 const DEFAULT_NAMESPACE = "common"
 
+/**
+ * @deprecated Use namespace-bound `useTranslations` from "next-intl" directly — one binding per namespace (e.g. `const tCommon = useTranslations("common")` for a second namespace); use `t.raw`/`t.rich` for strings with embedded HTML. Migration: #18742. This file will be deleted once no consumers remain.
+ */
 export function useTranslation(namespaces?: string[] | string) {
   const t = useTranslations()
 

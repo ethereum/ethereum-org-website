@@ -90,4 +90,5 @@ export default async function Page() {
 - **`useEffect` data fetching** in a component that could be a Server Component
 - **`"use client"` at the top of a page** when only a small subtree is interactive
 - **`useTranslations` in a leaf component** instead of restructuring so the parent uses `getTranslations`
+- **Legacy `@/hooks/useTranslation` wrapper in new code** -- use namespace-bound `useTranslations` from `next-intl`; the wrapper's plain-key form returns raw messages and silently skips interpolation
 - **`useColorModeValue`** (Chakra leftover) -- use Tailwind `dark:` variant instead
