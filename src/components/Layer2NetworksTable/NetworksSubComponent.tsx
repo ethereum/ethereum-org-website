@@ -1,9 +1,12 @@
 import { Info } from "lucide-react"
+import { useLocale } from "next-intl"
 
 import { ExtendedRollup } from "@/lib/types"
 
 import NetworkUsageChart from "@/components/Layer2NetworksTable/NetworkUsageChart"
 import Tooltip from "@/components/Tooltip"
+
+import { formatDuration } from "@/lib/utils/time"
 
 import { ButtonLink } from "../ui/buttons/Button"
 import InlineLink from "../ui/Link"
@@ -29,6 +32,7 @@ type NetworkSubComponentProps = {
 
 const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
   const { t } = useTranslation("page-layer-2-networks")
+  const locale = useLocale()
 
   return (
     <div className="flex w-full flex-col gap-4 px-6 pb-4">
@@ -65,19 +69,13 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   </Tooltip>
                 </p>
                 <p>
-                  {(() => {
-                    if (!network.launchDate) return "-"
-                    const launch = new Date(network.launchDate)
-                    const today = new Date()
-                    const yearDiff = today.getFullYear() - launch.getFullYear()
-                    const monthDiff = today.getMonth() - launch.getMonth()
-
-                    const totalMonths = yearDiff * 12 + monthDiff
-                    const years = Math.floor(totalMonths / 12)
-                    const months = totalMonths % 12
-
-                    return `${years ? years + " year" + (years > 1 ? "s" : "") : ""} ${months ? months + " month" + (months > 1 ? "s" : "") : ""}`.trim()
-                  })()}
+                  {network.launchDate
+                    ? formatDuration(
+                        Date.now() - new Date(network.launchDate).getTime(),
+                        locale,
+                        { units: ["y", "mo"], round: true }
+                      )
+                    : "-"}
                 </p>
               </div>
             </div>
@@ -161,7 +159,9 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
-                        <p className="text-lg font-bold">Fee token</p>
+                        <p className="text-lg font-bold">
+                          {t("page-layer-2-networks-fee-token")}
+                        </p>
                         <p>{t("page-layer-2-networks-token-used-to-pay")}</p>
                       </div>
                     }
@@ -271,7 +271,9 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
           </div>
         </div>
         <div className="flex flex-col gap-1">
-          <p className="text-xs text-body-medium">Actions</p>
+          <p className="text-xs text-body-medium">
+            {t("page-layer-2-networks-actions")}
+          </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <ButtonLink
               href={network.bridgeLink}

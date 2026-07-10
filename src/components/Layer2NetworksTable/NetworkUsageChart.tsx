@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl"
 import { Bar, BarChart, LabelList, YAxis } from "recharts"
 
 import { ChartConfig, ChartContainer, ChartLegend } from "@/components/ui/chart"
@@ -8,7 +9,7 @@ const CustomLegend = ({ payload, chartConfig }) => {
       {payload.map((entry, index) => (
         <div key={`legend-${index}`} className="flex items-center">
           <div
-            className="mr-2 h-3 w-3 rounded-full"
+            className="me-2 h-3 w-3 rounded-full"
             style={{ backgroundColor: entry.color }}
           />
           <span className="text-sm">{chartConfig[entry.value].label}</span>
@@ -19,6 +20,7 @@ const CustomLegend = ({ payload, chartConfig }) => {
 }
 
 const NetworkUsageChart = ({ usageData }) => {
+  const t = useTranslations("page-layer-2-networks")
   const chartData = (() => {
     // Calculate the sum of all values to normalize the data
     const total = Object.values(usageData).reduce(
@@ -46,23 +48,23 @@ const NetworkUsageChart = ({ usageData }) => {
 
   const chartConfig = {
     nft: {
-      label: "NFT",
+      label: t("page-layer-2-networks-usage-nft"),
       color: "#0872FC",
     },
     defi: {
-      label: "DeFi",
+      label: t("page-layer-2-networks-usage-defi"),
       color: "#C32E8A",
     },
     social: {
-      label: "Social",
+      label: t("page-layer-2-networks-usage-social"),
       color: "#1B9A92",
     },
     token_transfers: {
-      label: "Token Transfers",
+      label: t("page-layer-2-networks-usage-token-transfers"),
       color: "#8E30FF",
     },
     unlabeled: {
-      label: "Unlabeled",
+      label: t("page-layer-2-networks-usage-unlabeled"),
       color: "hsl(var(--body))",
     },
   } satisfies ChartConfig
