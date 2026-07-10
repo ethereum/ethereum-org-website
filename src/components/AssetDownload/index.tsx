@@ -1,80 +1,103 @@
 import { extname } from "path"
 
-import { BaseHTMLAttributes } from "react"
-import type { ImageProps, StaticImageData } from "next/image"
+import type { StaticImageData } from "next/image"
+import { useTranslations } from "next-intl"
 
-import AssetDownloadArtist from "@/components/AssetDownload/AssetDownloadArtist"
-import AssetDownloadImage from "@/components/AssetDownload/AssetDownloadImage"
+import Emoji from "@/components/Emoji"
+import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Flex, Stack } from "@/components/ui/flex"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardFooter,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
+import InlineLink from "@/components/ui/Link"
 
-import { cn } from "@/lib/utils/cn"
-import { trackCustomEvent } from "@/lib/utils/matomo"
+// Rendered banner width by items-per-row in the parent auto-fit Grid, capped
+// at the max-w-screen-2xl container; offsets track the responsive px-page.
+const SIZES_PER_ROW = {
+  1: "(min-width: 1536px) 1472px, (min-width: 768px) calc(100vw - 4rem), calc(100vw - 2rem)",
+  2: "(min-width: 1536px) 728px, (min-width: 784px) calc(50vw - 2.5rem), (min-width: 768px) calc(100vw - 4rem), calc(100vw - 2rem)",
+  3: "(min-width: 1536px) 480px, (min-width: 1152px) calc(33.3vw - 2rem), (min-width: 784px) calc(50vw - 2.5rem), (min-width: 768px) calc(100vw - 4rem), calc(100vw - 2rem)",
+} as const
 
-import { useTranslation } from "@/hooks/useTranslation"
-
-type AssetDownloadProps = {
+export type AssetDownloadProps = {
   title: string
-  alt: string
+  image: StaticImageData
+  /** Defaults to title */
+  alt?: string
+  svgUrl?: string
   artistName?: string
   artistUrl?: string
-  image: ImageProps["src"]
-  svgUrl?: string
-} & BaseHTMLAttributes<HTMLDivElement>
+  /** Sibling count in the parent row; keeps `sizes` matched to the cell width */
+  perRow?: keyof typeof SIZES_PER_ROW
+  /** Match the surrounding heading hierarchy */
+  titleAs?: "h3" | "h4"
+}
 
 const AssetDownload = ({
+  title,
+  image,
   alt,
+  svgUrl,
   artistName,
   artistUrl,
-  image,
-  svgUrl,
-  title,
-  className,
-  ...props
+  perRow = 2,
+  titleAs: TitleTag = "h3",
 }: AssetDownloadProps) => {
-  const { t } = useTranslation(["page-assets"])
-  const matomoHandler = () => {
-    trackCustomEvent({
-      eventCategory: "asset download button",
-      eventAction: "click",
-      eventName: title,
-    })
+  const t = useTranslations("page-assets")
+
+  const fileExtension = extname(image.src).slice(1)
+  const downloadName = title.replace(/\s+/g, "-").toLowerCase()
+  const matomoEvent = {
+    eventCategory: "asset download button",
+    eventAction: "click",
+    eventName: title,
   }
 
-  const imgSrc = (image as StaticImageData).src
-  const fileExtension = extname(imgSrc).slice(1)
-
   return (
-    <Stack
-      className={cn("m-4 justify-between gap-0 p-0", className)}
-      {...props}
-    >
-      <h4 className="my-8 text-md font-medium md:text-xl">{title}</h4>
-      <div>
-        <AssetDownloadImage image={image} alt={alt} />
+    <Card>
+      <CardBanner size="full" fit="contain">
+        <Image src={image} alt={alt ?? title} sizes={SIZES_PER_ROW[perRow]} />
+      </CardBanner>
+      <CardContent>
+        <CardTitle asChild>
+          <TitleTag>{title}</TitleTag>
+        </CardTitle>
         {artistName && (
-          <AssetDownloadArtist artistName={artistName} artistUrl={artistUrl} />
+          <CardParagraph size="sm">
+            <Emoji text=":artist_palette:" className="me-2 text-md" />
+            {t("page-assets-download-artist")}{" "}
+            {artistUrl ? (
+              <InlineLink href={artistUrl}>{artistName}</InlineLink>
+            ) : (
+              artistName
+            )}
+          </CardParagraph>
         )}
-      </div>
-      <Flex className="mt-4 gap-5">
+      </CardContent>
+      <CardFooter buttons="compact">
         <ButtonLink
-          href={imgSrc}
-          onClick={matomoHandler}
-          download={`${title.replace(/\s+/g, "-").toLowerCase()}.${fileExtension}`}
+          href={image.src}
+          download={`${downloadName}.${fileExtension}`}
+          customEventOptions={matomoEvent}
         >
           {t("page-assets-download-download")} ({fileExtension.toUpperCase()})
         </ButtonLink>
         {svgUrl && (
           <ButtonLink
             href={svgUrl}
-            onClick={matomoHandler}
-            download={`${title.replace(/\s+/g, "-").toLowerCase()}.svg`}
+            download={`${downloadName}.svg`}
+            customEventOptions={matomoEvent}
           >
             {t("page-assets-download-download")} (SVG)
           </ButtonLink>
         )}
-      </Flex>
-    </Stack>
+      </CardFooter>
+    </Card>
   )
 }
 
