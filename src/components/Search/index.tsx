@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import dynamic from "next/dynamic"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { type DocSearchHit, useDocSearchKeyboardEvents } from "@docsearch/react"
 import * as Portal from "@radix-ui/react-portal"
 import { Slot } from "@radix-ui/react-slot"
@@ -17,7 +17,6 @@ import SearchButton from "./SearchButton"
 import SearchInputButton from "./SearchInputButton"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
-import { useTranslation } from "@/hooks/useTranslation"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
@@ -32,7 +31,7 @@ const Search = ({ asChild = false, children }: SearchProps) => {
 
   const locale = useLocale()
   const searchButtonRef = useRef<HTMLButtonElement>(null)
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
 
   const handleOpen = () => {
     onOpen()
@@ -141,7 +140,9 @@ const Search = ({ asChild = false, children }: SearchProps) => {
             fallback={() => (
               <div className="fixed inset-0 z-modal flex items-center justify-center bg-black/50">
                 <div className="mx-4 flex flex-col items-center gap-4 rounded-lg bg-background p-8 text-center shadow-lg">
-                  <p className="text-body-medium">{t("loading-error")}</p>
+                  <p className="text-body-medium">
+                    {t("loading-error-refresh")}
+                  </p>
                   <div className="flex gap-3">
                     <button
                       className="rounded-md bg-primary px-4 py-2 text-sm text-white hover:bg-primary-hover"
