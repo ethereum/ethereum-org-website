@@ -210,7 +210,6 @@ export const reports: Report[] = [
     title: "Strengthening American Leadership in Digital Financial Technology",
     publisher:
       "The White House (President's Working Group on Digital Asset Markets)",
-    publishers: ["presidents-working-group-on-digital-asset-markets"],
     dateIso: "2025-07-30",
     category: "regulator",
     href: "https://www.whitehouse.gov/wp-content/uploads/2025/07/Digital-Assets-Report-EO14178.pdf",

@@ -2,10 +2,9 @@ import { REFERENCE } from "./references"
 
 /**
  * Parent organizations extracted to consts so sub-organization entries
- * (boards, working groups, subsidiaries) can embed them as full
- * parentOrganization nodes. Publisher nodes only enter the page @graph
- * when a report resolves to them, so a bare @id reference to the parent
- * could dangle.
+ * (boards, subsidiaries) can embed them as full parentOrganization
+ * nodes. Publisher nodes only enter the page @graph when a report
+ * resolves to them, so a bare @id reference to the parent could dangle.
  */
 const COINBASE = {
   "@type": "Organization" as const,
@@ -13,17 +12,6 @@ const COINBASE = {
   name: "Coinbase",
   url: "https://www.coinbase.com/",
   sameAs: ["https://en.wikipedia.org/wiki/Coinbase", "https://x.com/coinbase"],
-} as const
-
-const WHITE_HOUSE = {
-  "@type": "Organization" as const,
-  "@id": "https://ethereum.org/#white-house",
-  name: "The White House",
-  url: "https://www.whitehouse.gov/",
-  sameAs: [
-    "https://en.wikipedia.org/wiki/White_House",
-    "https://x.com/WhiteHouse",
-  ],
 } as const
 
 const GALAXY_DIGITAL = {
@@ -195,8 +183,6 @@ export const KNOWN_ORGANIZATIONS = {
     ],
   },
 
-  coinbase: COINBASE,
-
   "coinbase-independent-advisory-board": {
     "@type": "Organization" as const,
     "@id": "https://ethereum.org/#coinbase-independent-advisory-board",
@@ -326,17 +312,6 @@ export const KNOWN_ORGANIZATIONS = {
       "https://x.com/twinstake_io",
       "https://www.linkedin.com/company/twinstake/",
     ],
-  },
-
-  "white-house": WHITE_HOUSE,
-
-  "presidents-working-group-on-digital-asset-markets": {
-    "@type": "Organization" as const,
-    "@id":
-      "https://ethereum.org/#presidents-working-group-on-digital-asset-markets",
-    name: "President's Working Group on Digital Asset Markets",
-    url: "https://www.whitehouse.gov/crypto/",
-    parentOrganization: WHITE_HOUSE,
   },
 
   "bank-for-international-settlements": {
