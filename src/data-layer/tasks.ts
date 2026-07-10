@@ -54,7 +54,6 @@ export const KEYS = {
   RSS: "fetch-rss",
   GITHUB_REPO_DATA: "fetch-github-repo-data",
   EVENTS: "fetch-events",
-  // Key value predates the growthepie migration; kept for storage continuity
   BLOB_STATS: "fetch-blobscan-stats",
   ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
   ETHEREUM_STABLECOINS_MCAP: "fetch-ethereum-stablecoins-mcap",
