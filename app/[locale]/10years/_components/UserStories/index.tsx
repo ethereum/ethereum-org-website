@@ -24,7 +24,7 @@ const Stories = ({ stories }: StoriesProps) => {
   return (
     <div className="flex flex-1 flex-col gap-8">
       {visibleStories.map((story) => (
-        <StoryCard key={story.name} story={story} />
+        <StoryCard key={story.storyKey} story={story} />
       ))}
       {/* Show more button only if there are more stories to show */}
       {storiesToShow < stories.length && (

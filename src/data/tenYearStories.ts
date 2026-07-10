@@ -1,4 +1,4 @@
-import type { StoryData } from "../../app/[locale]/10years/_components/types"
+import type { StoryData } from "@/lib/types"
 
 // `storyKey` references the story copy in src/intl/en/community-stories.json
 // (namespace "community-stories") so it can be translated like any other UI

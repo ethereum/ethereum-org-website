@@ -20,6 +20,7 @@ import YouTube from "@/components/YouTube"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { getCommunityStories } from "@/lib/utils/stories"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import tenYearEventRegions from "@/data/tenYearEventRegions"
@@ -32,11 +33,7 @@ import TenYearHero from "./_components/TenYearHero"
 import TorchHistorySwiper from "./_components/TorchHistorySwiper/lazy"
 import { torchHolders } from "./_components/torchHoldersData"
 import Stories from "./_components/UserStories/lazy"
-import {
-  getAdoptionCards,
-  getCommunityStories,
-  getInnovationCards,
-} from "./_components/utils"
+import { getAdoptionCards, getInnovationCards } from "./_components/utils"
 import TenYearJsonLD from "./page-jsonld"
 
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-heading.svg"
