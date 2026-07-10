@@ -10,7 +10,7 @@
   "explanation": "Пояснення",
   "next-question": "Наступне запитання",
   "next-quiz": "Наступна вікторина",
-  "question-number": "Запитання номер {{number}}:",
+  "question-number": "Запитання номер {number}:",
   "page-assets-merge": "Злиття",
   "passed": "Ви пройшли вікторину!",
   "questions": "Запитання",

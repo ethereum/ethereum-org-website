@@ -10,7 +10,7 @@
   "explanation": "解释",
   "next-question": "下一题",
   "next-quiz": "下一个测验",
-  "question-number": "问题 {{number}}：",
+  "question-number": "问题 {number}：",
   "page-assets-merge": "合并",
   "passed": "你通过了测验！",
   "questions": "问题",
