@@ -139,7 +139,7 @@ const Search = ({ asChild = false, children }: SearchProps) => {
         {isOpen && (
           <ErrorBoundary
             fallback={() => (
-              <div className="fixed inset-0 z-modal flex items-center justify-center bg-black/50">
+              <div className="fixed inset-0 z-modal flex items-center justify-center bg-overlay">
                 <div className="mx-4 flex flex-col items-center gap-4 rounded-lg bg-background p-8 text-center shadow-lg">
                   <p className="text-body-medium">{t("loading-error")}</p>
                   <div className="flex gap-3">

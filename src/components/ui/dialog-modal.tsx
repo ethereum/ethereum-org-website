@@ -15,7 +15,7 @@ const dialogVariant = tv({
     content:
       "z-modal grid w-full gap-4 rounded-md bg-background p-8 shadow-xl focus:outline-hidden data-[state=open]:animate-fade-in",
     overlay:
-      "data-[state=open]:animate-fade-in overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-black/70 z-overlay",
+      "data-[state=open]:animate-fade-in overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-overlay z-overlay",
     header: "relative pe-12",
     title: "text-2xl",
     body: "",
