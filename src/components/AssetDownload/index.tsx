@@ -11,10 +11,13 @@ import {
   CardBanner,
   CardContent,
   CardFooter,
+  CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import InlineLink from "@/components/ui/Link"
+
+import { cn } from "@/lib/utils/cn"
 
 // Rendered banner width by items-per-row in the parent auto-fit Grid, capped
 // at the max-w-screen-2xl container; offsets track the responsive px-page.
@@ -36,6 +39,11 @@ export type AssetDownloadProps = {
   perRow?: keyof typeof SIZES_PER_ROW
   /** Match the surrounding heading hierarchy */
   titleAs?: "h3" | "h4"
+  /** White plate behind transparent artwork that vanishes on dark backgrounds */
+  bgWhite?: boolean
+  /** Breathing room for artwork cropped tight to its bitmap edges, keeping it
+   * clear of the banner's corner rounding (and any white plate's edge) */
+  padded?: boolean
 }
 
 const AssetDownload = ({
@@ -47,6 +55,8 @@ const AssetDownload = ({
   artistUrl,
   perRow = 2,
   titleAs: TitleTag = "h3",
+  bgWhite,
+  padded,
 }: AssetDownloadProps) => {
   const t = useTranslations("page-assets")
 
@@ -59,11 +69,27 @@ const AssetDownload = ({
   }
 
   return (
-    <Card>
-      <CardBanner size="full" fit="contain">
-        <Image src={image} alt={alt ?? title} sizes={SIZES_PER_ROW[perRow]} />
-      </CardBanner>
-      <CardContent>
+    <Card variant="ghost" border>
+      {/* Header takes the row's surplus height so images center vertically
+          and titles/buttons align across a row of mixed aspect ratios */}
+      <CardHeader className="flex flex-1 flex-col justify-center">
+        {/* Banner fills the header (capped at 512px) so a bgWhite plate spans
+            the full height; the image box inside is h-full and paints it */}
+        <CardBanner
+          size="full"
+          fit="contain"
+          background="none"
+          className="max-h-128 flex-1"
+        >
+          <Image
+            src={image}
+            alt={alt ?? title}
+            sizes={SIZES_PER_ROW[perRow]}
+            className={cn(bgWhite && "bg-white", padded && "p-6")}
+          />
+        </CardBanner>
+      </CardHeader>
+      <CardContent className="flex-none">
         <CardTitle asChild>
           <TitleTag>{title}</TitleTag>
         </CardTitle>

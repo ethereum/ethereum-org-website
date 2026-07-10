@@ -201,11 +201,15 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         title: t("page-assets-eth-diamond-glyph"),
         image: ethDiamondGlyph,
         svgUrl: `${svgPath}/eth-diamond-glyph.svg`,
+        bgWhite: true,
+        padded: true,
       },
       {
         title: t("page-assets-eth-diamond-gray"),
         image: ethDiamondBlack,
         svgUrl: `${svgPath}/eth-diamond-black.svg`,
+        bgWhite: true,
+        padded: true,
       },
       {
         title: t("page-assets-eth-diamond-color"),
@@ -230,16 +234,22 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         title: t("page-assets-eth-logo-portrait-gray"),
         image: ethPortraitBlack,
         svgUrl: `${svgPath}/ethereum-logo-portrait-black.svg`,
+        bgWhite: true,
+        padded: true,
       },
       {
         title: t("page-assets-eth-logo-landscape-gray"),
         image: ethLandscapeBlack,
         svgUrl: `${svgPath}/ethereum-logo-landscape-black.svg`,
+        bgWhite: true,
+        padded: true,
       },
       {
         title: t("page-assets-eth-wordmark-gray"),
         image: ethWordmarkBlack,
         svgUrl: `${svgPath}/ethereum-wordmark-black.svg`,
+        bgWhite: true,
+        padded: true,
       },
     ],
     [
@@ -247,16 +257,19 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         title: t("page-assets-eth-logo-portrait-purple"),
         image: ethPortraitPurple,
         svgUrl: `${svgPath}/ethereum-logo-portrait-purple.svg`,
+        padded: true,
       },
       {
         title: t("page-assets-eth-logo-landscape-purple"),
         image: ethLandscapePurple,
         svgUrl: `${svgPath}/ethereum-logo-landscape-purple.svg`,
+        padded: true,
       },
       {
         title: t("page-assets-eth-wordmark-purple"),
         image: ethWordmarkPurple,
         svgUrl: `${svgPath}/ethereum-wordmark-purple.svg`,
+        padded: true,
       },
     ],
   ]
@@ -267,23 +280,30 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         title: t("page-assets-eth-diamond-white"),
         image: ethDiamondBlackWhite,
         svgUrl: `${svgPath}/eth-diamond-black-white.svg`,
+        bgWhite: true,
       },
       {
         title: t("page-assets-eth-diamond-gray"),
         image: ethDiamondBlackGray,
         svgUrl: `${svgPath}/eth-diamond-black-gray.svg`,
       },
-    ],
-    [
       {
         title: t("page-assets-eth-diamond-purple"),
         image: ethDiamondPurplePurple,
         svgUrl: `${svgPath}/eth-diamond-purple-purple.svg`,
       },
+    ],
+    [
       {
         title: t("page-assets-eth-diamond-white"),
         image: ethDiamondPurpleWhite,
         svgUrl: `${svgPath}/eth-diamond-purple-white.svg`,
+        bgWhite: true,
+      },
+      {
+        title: t("page-assets-eth-logo-portrait-white"),
+        image: ethPortraitPurpleWhite,
+        bgWhite: true,
       },
     ],
     [
@@ -321,10 +341,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       },
     ],
     [
-      {
-        title: t("page-assets-eth-logo-portrait-white"),
-        image: ethPortraitPurpleWhite,
-      },
       {
         title: t("page-assets-eth-logo-landscape-white"),
         image: ethLandscapePurpleWhite,
@@ -376,17 +392,17 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             {renderAssetRows(illustrationRows)}
           </Section>
 
-          <Section id="historical">
-            <h2>{t("page-assets-historical-artwork")}</h2>
-            {renderAssetRows(historicalRows)}
-          </Section>
-
           <Section id="brand">
             <h2>{t("page-assets-ethereum-brand-assets")}</h2>
             <h3>{t("page-assets-page-assets-transparent-background")}</h3>
             {renderAssetRows(brandTransparentRows, "h4")}
             <h3>{t("page-assets-page-assets-solid-background")}</h3>
             {renderAssetRows(brandSolidRows, "h4")}
+          </Section>
+
+          <Section id="historical">
+            <h2>{t("page-assets-historical-artwork")}</h2>
+            {renderAssetRows(historicalRows)}
           </Section>
         </MainArticle>
 
