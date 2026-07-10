@@ -1,5 +1,6 @@
 import type { StaticImageData } from "next/image"
 
+import type { KNOWN_ORGANIZATIONS } from "@/lib/jsonld/organizations"
 import a16zCover from "@/public/images/reports/a16z-state-of-crypto-2025.webp"
 import bisCover from "@/public/images/reports/bis-papers-156.webp"
 import quantumCover from "@/public/images/reports/coinbase-quantum-blockchain.webp"
@@ -34,14 +35,14 @@ export type Report = {
   /** Publisher (shown as paragraph text under the title) */
   publisher: string
   /**
-   * Publishing organization(s), resolved through the JSON-LD entity alias
-   * map like markdown `authors:` frontmatter (KNOWN_ORGANIZATIONS profile
-   * key or display name). Only needed when `publisher` doesn't resolve on
-   * its own -- compound publishers or prose names. Mirrors the
+   * Publishing organization(s) as KNOWN_ORGANIZATIONS profile keys,
+   * resolved through the JSON-LD entity alias map like markdown
+   * `authors:` frontmatter. Only needed when `publisher` doesn't resolve
+   * on its own -- compound publishers or prose names. Mirrors the
    * `authors`/`author` convention: `publishers` wins over `publisher` for
    * entity resolution; display text on the card stays `publisher`.
    */
-  publishers?: string[]
+  publishers?: (keyof typeof KNOWN_ORGANIZATIONS)[]
   /**
    * Publication date in ISO 8601 (YYYY, YYYY-MM, or YYYY-MM-DD). Used as
    * `datePublished` in the Report JSON-LD and rendered as short date on card.
@@ -117,7 +118,6 @@ export const reports: Report[] = [
     title: "Quantum Computing & Blockchain",
     publisher:
       "Coinbase Independent Advisory Board on Quantum Computing and Blockchain",
-    publishers: ["coinbase-independent-advisory-board"],
     dateIso: "2026-04-21",
     category: "academic",
     href: "https://assets.ctfassets.net/sygt3q11s4a9/6EjYavuGdtJDYCqaJrASj9/9f464a8bf26f44bd6c85710fe7e4a29f/Quantum_Computing_and_Blockchain_v10.3_15April2026.pdf",

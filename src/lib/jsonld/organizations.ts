@@ -2,9 +2,10 @@ import { REFERENCE } from "./references"
 
 /**
  * Parent organizations extracted to consts so sub-organization entries
- * (boards, working groups) can embed them as full parentOrganization
- * nodes. Publisher nodes only enter the page @graph when a report
- * resolves to them, so a bare @id reference to the parent could dangle.
+ * (boards, working groups, subsidiaries) can embed them as full
+ * parentOrganization nodes. Publisher nodes only enter the page @graph
+ * when a report resolves to them, so a bare @id reference to the parent
+ * could dangle.
  */
 const COINBASE = {
   "@type": "Organization" as const,
@@ -22,6 +23,39 @@ const WHITE_HOUSE = {
   sameAs: [
     "https://en.wikipedia.org/wiki/White_House",
     "https://x.com/WhiteHouse",
+  ],
+} as const
+
+const GALAXY_DIGITAL = {
+  "@type": "Organization" as const,
+  "@id": "https://ethereum.org/#galaxy-digital",
+  name: "Galaxy Digital",
+  url: "https://www.galaxy.com/",
+  sameAs: [
+    "https://en.wikipedia.org/wiki/Galaxy_Digital_(company)",
+    "https://www.crunchbase.com/organization/galaxy-digital-lp",
+  ],
+} as const
+
+const ANDREESSEN_HOROWITZ = {
+  "@type": "Organization" as const,
+  "@id": "https://ethereum.org/#andreessen-horowitz",
+  name: "Andreessen Horowitz",
+  url: "https://a16z.com/",
+  sameAs: [
+    "https://en.wikipedia.org/wiki/Andreessen_Horowitz",
+    "https://x.com/a16z",
+  ],
+} as const
+
+const FIDELITY_INVESTMENTS = {
+  "@type": "Organization" as const,
+  "@id": "https://ethereum.org/#fidelity-investments",
+  name: "Fidelity Investments",
+  url: "https://www.fidelity.com/",
+  sameAs: [
+    "https://en.wikipedia.org/wiki/Fidelity_Investments",
+    "https://x.com/Fidelity",
   ],
 } as const
 
@@ -138,16 +172,15 @@ export const KNOWN_ORGANIZATIONS = {
   /**
    * Publishers of externally-hosted reports surfaced on /reports
    */
+  "galaxy-digital": GALAXY_DIGITAL,
+
   "galaxy-research": {
     "@type": "Organization" as const,
     "@id": "https://ethereum.org/#galaxy-research",
     name: "Galaxy Research",
     url: "https://www.galaxy.com/insights/research",
-    sameAs: [
-      "https://en.wikipedia.org/wiki/Galaxy_Digital_(company)",
-      "https://x.com/glxyresearch",
-      "https://www.crunchbase.com/organization/galaxy-digital-lp",
-    ],
+    parentOrganization: GALAXY_DIGITAL,
+    sameAs: ["https://x.com/glxyresearch"],
   },
 
   openzeppelin: {
@@ -170,9 +203,6 @@ export const KNOWN_ORGANIZATIONS = {
     name: "Coinbase Independent Advisory Board on Quantum Computing and Blockchain",
     url: "https://www.coinbase.com/blog/coinbase-establishes-independent-advisory-board-on-quantum-computing-and-blockchain",
     parentOrganization: COINBASE,
-    sameAs: [
-      "https://fortune.com/2026/01/21/coinbase-launches-expert-board-to-assess-quantum-computing-threat/",
-    ],
   },
 
   etherealize: {
@@ -200,13 +230,15 @@ export const KNOWN_ORGANIZATIONS = {
     ],
   },
 
+  "andreessen-horowitz": ANDREESSEN_HOROWITZ,
+
   "a16z-crypto": {
     "@type": "Organization" as const,
     "@id": "https://ethereum.org/#a16z-crypto",
     name: "a16z crypto",
     url: "https://a16zcrypto.com/",
+    parentOrganization: ANDREESSEN_HOROWITZ,
     sameAs: [
-      "https://en.wikipedia.org/wiki/Andreessen_Horowitz",
       "https://x.com/a16zcrypto",
       "https://www.linkedin.com/showcase/a16zcrypto/",
     ],
@@ -259,15 +291,17 @@ export const KNOWN_ORGANIZATIONS = {
     ],
   },
 
+  "fidelity-investments": FIDELITY_INVESTMENTS,
+
   "fidelity-digital-assets": {
     "@type": "Organization" as const,
     "@id": "https://ethereum.org/#fidelity-digital-assets",
     name: "Fidelity Digital Assets",
     url: "https://www.fidelitydigitalassets.com/",
+    parentOrganization: FIDELITY_INVESTMENTS,
     sameAs: [
       "https://www.linkedin.com/showcase/fidelity-digital-assets/",
       "https://x.com/DigitalAssets",
-      "https://en.wikipedia.org/wiki/Fidelity_Investments",
     ],
   },
 
@@ -303,10 +337,6 @@ export const KNOWN_ORGANIZATIONS = {
     name: "President's Working Group on Digital Asset Markets",
     url: "https://www.whitehouse.gov/crypto/",
     parentOrganization: WHITE_HOUSE,
-    sameAs: [
-      "https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-the-presidents-working-group-on-digital-asset-markets-releases-recommendations-to-strengthen-american-leadership-in-digital-financial-technology/",
-      "https://www.whitehouse.gov/presidential-actions/2025/01/strengthening-american-leadership-in-digital-financial-technology/",
-    ],
   },
 
   "bank-for-international-settlements": {
