@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 
 import Tools from "@/components/icons/tools.svg"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -13,12 +14,10 @@ import { Strong } from "../IntlStringElements"
 import Select, { type SelectOnChange } from "../Select"
 import InlineLink from "../ui/Link"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 type StakingDataOption = { label: string; value: string }
 
 const StakingLaunchpadWidget = () => {
-  const { t } = useTranslation("page-staking")
+  const t = useTranslations("page-staking")
   const [selection, setSelection] = useState("testnet")
 
   const handleChange: SelectOnChange<StakingDataOption> = (data) => {
@@ -35,7 +34,7 @@ const StakingLaunchpadWidget = () => {
 
   const data = {
     testnet: {
-      label: t("page-staking:page-staking-network-testnet", {
+      label: t("page-staking-network-testnet", {
         network: CANONICAL_STAKING_TESTNET,
       }),
       url: `https://${CANONICAL_STAKING_TESTNET.toLowerCase()}.launchpad.ethereum.org`,
@@ -65,7 +64,7 @@ const StakingLaunchpadWidget = () => {
         className="w-full md:max-w-md!"
       />
       <p>
-        {t.rich("page-staking.page-staking-launchpad-widget-p1", {
+        {t.rich("page-staking-launchpad-widget-p1", {
           network: CANONICAL_STAKING_TESTNET,
           strong: Strong,
           link: (chunks) => (
@@ -77,11 +76,11 @@ const StakingLaunchpadWidget = () => {
       </p>
       <p>{t("page-staking-launchpad-widget-p2")}</p>
       <ButtonLink href={data[selection].url} className="max-md:w-full">
-        {t("page-staking:page-staking-launchpad-widget-start", {
+        {t("page-staking-launchpad-widget-start", {
           network:
             selection === "mainnet"
-              ? t("page-staking:page-staking-launchpad-widget-mainnet-label")
-              : t("page-staking:page-staking-network-testnet", {
+              ? t("page-staking-launchpad-widget-mainnet-label")
+              : t("page-staking-network-testnet", {
                   network: CANONICAL_STAKING_TESTNET,
                 }),
         })}
