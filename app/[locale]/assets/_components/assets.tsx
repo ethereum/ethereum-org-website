@@ -1,6 +1,6 @@
 "use client"
-
 import { HTMLAttributes } from "react"
+import { useTranslations } from "next-intl"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -23,7 +23,6 @@ import InlineLink from "@/components/ui/Link"
 // import ethPortraitPurpleWhite from "@/public/images/assets/ethereum-logo-portrait-purple-white.png"
 // import leslieTheRhino from "@/public/images/upgrades/upgrade_rhino.png"
 import useColorModeValue from "@/hooks/useColorModeValue"
-import { useTranslation } from "@/hooks/useTranslation"
 import ethDiamondBlack from "@/public/images/assets/eth-diamond-black.png"
 import ethDiamondBlackGray from "@/public/images/assets/eth-diamond-black-gray.png"
 import ethDiamondBlackWhite from "@/public/images/assets/eth-diamond-black-white.jpg"
@@ -93,7 +92,7 @@ const AssetsPage = () => {
   // SVG path changes from /en/images => /images
   const svgPathFromOrigin = ""
 
-  const { t } = useTranslation("page-assets")
+  const t = useTranslations("page-assets")
   const assetPageHeroImage = useColorModeValue(
     ethDiamondBlack,
     ethDiamondPurple

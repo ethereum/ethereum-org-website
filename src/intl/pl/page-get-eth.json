@@ -9,7 +9,7 @@
   "page-get-eth-cex-desc": "Giełdy to firmy, które pozwalają na zakup krypto za pomocą tradycyjnych walut. Przechowują one zakupione przez Ciebie ETH, dopóki nie wyślesz ich do kontrolowanego przez siebie portfela.",
   "page-get-eth-checkout-dapps-btn": "Sprawdź zdecentralizowane aplikacje (dapp)",
   "page-get-eth-community-safety": "Posty społeczności na temat bezpieczeństwa",
-  "page-get-eth-description": "<a href=\"/\">Ethereum</a> nie jest kontrolowane przez żadną pojedynczą organizację – jest zdecentralizowane.",
+  "page-get-eth-description": "Ethereum nie jest kontrolowane przez żadną pojedynczą organizację – jest zdecentralizowane.",
   "page-get-eth-dex": "Zdecentralizowane giełdy (DEX)",
   "page-get-eth-dex-desc": "Jeśli chcesz mieć większą kontrolę, kup ETH używając <a href=\"/glossary/#smart-contract\">inteligentnych kontraktów</a>. Dzięki DEX możesz handlować cyfrowymi aktywami bez konieczności oddawania kontroli nad swoimi środkami scentralizowanej firmie.",
   "page-get-eth-peers": "Otrzymuj ETH od innych użytkowników",

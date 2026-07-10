@@ -9,7 +9,7 @@
   "page-get-eth-cex-desc": "取引所は、法定通貨を使用して暗号資産を購入できる事業者です。購入したETHは、自身で管理するウォレットに送金するまで、取引所が保管します。",
   "page-get-eth-checkout-dapps-btn": "分散型アプリケーション (dapp) を確認する",
   "page-get-eth-community-safety": "セキュリティに関するコミュニティの投稿",
-  "page-get-eth-description": "<a href=\"/\">イーサリアム</a>は単一の組織によって管理されていません。つまり、分散型です。",
+  "page-get-eth-description": "イーサリアムは単一の組織によって管理されていません。つまり、分散型です。",
   "page-get-eth-dex": "分散型取引所 (DEX)",
   "page-get-eth-dex-desc": "より詳細に管理したい場合は、<a href=\"/glossary/#smart-contract\">スマート・コントラクト</a>を使用してETHを購入します。DEXを使用すると、中央集権的な企業に資金の管理を委ねることなく、デジタル資産を取引できます。",
   "page-get-eth-peers": "ピアからETHを受け取る",

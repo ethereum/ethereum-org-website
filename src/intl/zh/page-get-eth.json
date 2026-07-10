@@ -9,7 +9,7 @@
   "page-get-eth-cex-desc": "交易所是让你使用传统货币购买加密货币的商业机构。在你将购买的 ETH 发送到你控制的钱包之前，它们对这些 ETH 拥有托管权。",
   "page-get-eth-checkout-dapps-btn": "查看去中心化应用 (dapp)",
   "page-get-eth-community-safety": "社区关于安全的帖子",
-  "page-get-eth-description": "<a href=\"/\">以太坊</a>不受任何单一组织控制——它是去中心化的。",
+  "page-get-eth-description": "以太坊不受任何单一组织控制——它是去中心化的。",
   "page-get-eth-dex": "去中心化交易所 (DEX)",
   "page-get-eth-dex-desc": "如果你想要更多的控制权，可以使用<a href=\"/glossary/#smart-contract\">智能合约</a>购买 ETH。使用 DEX，你可以交易数字资产，而无需将资金控制权交给中心化公司。",
   "page-get-eth-peers": "点对点接收 ETH",
