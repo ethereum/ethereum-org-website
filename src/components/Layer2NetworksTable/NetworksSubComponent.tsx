@@ -1,4 +1,5 @@
 import { Info } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { ExtendedRollup } from "@/lib/types"
 
@@ -7,8 +8,6 @@ import Tooltip from "@/components/Tooltip"
 
 import { ButtonLink } from "../ui/buttons/Button"
 import InlineLink from "../ui/Link"
-
-import useTranslation from "@/hooks/useTranslation"
 
 const formatNumber = (num: number): string => {
   if (num >= 1e9) {
@@ -28,7 +27,7 @@ type NetworkSubComponentProps = {
 }
 
 const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
-  const { t } = useTranslation("page-layer-2-networks")
+  const t = useTranslations("page-layer-2-networks")
 
   return (
     <div className="flex w-full flex-col gap-4 px-6 pb-4">
