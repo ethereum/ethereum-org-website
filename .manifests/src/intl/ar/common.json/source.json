@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-06-29T23:46:06.943Z",
-  "rootHash": "860d0a37c7f3",
+  "generatedAt": "2026-07-10T23:42:55.923Z",
+  "rootHash": "f40b9e9929d8",
   "tree": {
-    "contentHash": "504e61bfe801",
-    "anchorHash": "ce8a00a0515c",
+    "contentHash": "5c74c8789c53",
+    "anchorHash": "0d4a08a040a5",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -67,8 +67,16 @@
         "contentHash": "fd215ca4b497",
         "anchorHash": "e3b0c44298fc"
       },
+      "agent-tooling": {
+        "contentHash": "6157ff96ba11",
+        "anchorHash": "e3b0c44298fc"
+      },
       "ai-agents": {
         "contentHash": "3d9e43485a12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-integration": {
+        "contentHash": "cfdddb5e9661",
         "anchorHash": "e3b0c44298fc"
       },
       "apps": {
@@ -141,6 +149,10 @@
       },
       "content-standardization": {
         "contentHash": "f1854793f823",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "contract-tooling": {
+        "contentHash": "6d26d8c2fc81",
         "anchorHash": "e3b0c44298fc"
       },
       "contributing": {
@@ -364,6 +376,10 @@
       },
       "edit-page": {
         "contentHash": "5d2c6743b87c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "education-standards": {
+        "contentHash": "7fbf171be369",
         "anchorHash": "e3b0c44298fc"
       },
       "ef-blog": {
@@ -1568,6 +1584,14 @@
         "contentHash": "1e91cc66da1d",
         "anchorHash": "e3b0c44298fc"
       },
+      "nav-roadmap-account-abstraction": {
+        "contentHash": "2ebcf10050c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-danksharding": {
+        "contentHash": "d5c7c6294c3d",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nav-roadmap-description": {
         "contentHash": "b533eb80a154",
         "anchorHash": "e3b0c44298fc"
@@ -1604,6 +1628,10 @@
         "contentHash": "edbc8cbbe264",
         "anchorHash": "e3b0c44298fc"
       },
+      "nav-roadmap-pbs": {
+        "contentHash": "f04af9b1aa1c",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nav-roadmap-scaling": {
         "contentHash": "f1766cc4ec8d",
         "anchorHash": "e3b0c44298fc"
@@ -1614,6 +1642,10 @@
       },
       "nav-roadmap-scaling-label": {
         "contentHash": "2fc8de069189",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-secret-leader-election": {
+        "contentHash": "9d1a2ca7f4a1",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-roadmap-security": {
@@ -1628,6 +1660,14 @@
         "contentHash": "b209561576f3",
         "anchorHash": "e3b0c44298fc"
       },
+      "nav-roadmap-single-slot-finality": {
+        "contentHash": "26be487ae07f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-statelessness": {
+        "contentHash": "6c88f20571b1",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nav-roadmap-user-experience": {
         "contentHash": "7e9c787bf519",
         "anchorHash": "e3b0c44298fc"
@@ -1638,6 +1678,14 @@
       },
       "nav-roadmap-ux-label": {
         "contentHash": "7e9c787bf519",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-verkle-trees": {
+        "contentHash": "fdf6b8b2922f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-zkevm": {
+        "contentHash": "84685178c6df",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-rwa-description": {
@@ -1741,7 +1789,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "nav-staking-saas-label": {
-        "contentHash": "4c31dec05833",
+        "contentHash": "6561796cd0de",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-staking-solo-description": {
@@ -1850,6 +1898,10 @@
       },
       "nav-zkp-description": {
         "contentHash": "d157dad01986",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "network-infrastructure": {
+        "contentHash": "ff99932523e7",
         "anchorHash": "e3b0c44298fc"
       },
       "nft-page": {
@@ -2034,6 +2086,10 @@
         "contentHash": "8f6fb4eb7f42",
         "anchorHash": "e3b0c44298fc"
       },
+      "security-testing": {
+        "contentHash": "cf78e9359e4f",
+        "anchorHash": "e3b0c44298fc"
+      },
       "see-contributors": {
         "contentHash": "bdcc1746e82a",
         "anchorHash": "e3b0c44298fc"
@@ -2058,20 +2114,24 @@
         "contentHash": "83b794145c0c",
         "anchorHash": "e3b0c44298fc"
       },
+      "story-card-read-less": {
+        "contentHash": "dbda1af80148",
+        "anchorHash": "e3b0c44298fc"
+      },
       "story-card-show-original": {
         "contentHash": "16194a69c43d",
         "anchorHash": "e3b0c44298fc"
       },
-      "story-card-show-english": {
-        "contentHash": "f827a6514dfa",
+      "story-card-show-translation": {
+        "contentHash": "4f8f5dd5cc7b",
         "anchorHash": "e3b0c44298fc"
       },
       "story-card-original-language": {
         "contentHash": "c5c60a2af071",
         "anchorHash": "e3b0c44298fc"
       },
-      "story-card-english-translation": {
-        "contentHash": "3c1709cef10c",
+      "story-card-translation": {
+        "contentHash": "6fbd766b1a71",
         "anchorHash": "e3b0c44298fc"
       },
       "single-slot-finality": {
@@ -2311,7 +2371,9 @@
       "adding-reports",
       "adding-staking-products",
       "adding-wallets",
+      "agent-tooling",
       "ai-agents",
+      "app-integration",
       "apps",
       "aria-toggle-menu-button",
       "aria-toggle-search-button",
@@ -2330,6 +2392,7 @@
       "contact",
       "content-resources",
       "content-standardization",
+      "contract-tooling",
       "contributing",
       "contributors",
       "contributors-thanks",
@@ -2381,6 +2444,7 @@
       "documentation",
       "down",
       "edit-page",
+      "education-standards",
       "ef-blog",
       "eips",
       "energy-consumption",
@@ -2672,6 +2736,8 @@
       "nav-reports-label",
       "nav-research-description",
       "nav-research-label",
+      "nav-roadmap-account-abstraction",
+      "nav-roadmap-danksharding",
       "nav-roadmap-description",
       "nav-roadmap-future-description",
       "nav-roadmap-future-label",
@@ -2681,15 +2747,21 @@
       "nav-roadmap-options",
       "nav-roadmap-options-alt",
       "nav-roadmap-overview-description",
+      "nav-roadmap-pbs",
       "nav-roadmap-scaling",
       "nav-roadmap-scaling-description",
       "nav-roadmap-scaling-label",
+      "nav-roadmap-secret-leader-election",
       "nav-roadmap-security",
       "nav-roadmap-security-description",
       "nav-roadmap-security-label",
+      "nav-roadmap-single-slot-finality",
+      "nav-roadmap-statelessness",
       "nav-roadmap-user-experience",
       "nav-roadmap-ux-description",
       "nav-roadmap-ux-label",
+      "nav-roadmap-verkle-trees",
+      "nav-roadmap-zkevm",
       "nav-rwa-description",
       "nav-run-a-node-description",
       "nav-see-all-guides-description",
@@ -2743,6 +2815,7 @@
       "nav-where-to-start-label",
       "nav-whitepaper-description",
       "nav-zkp-description",
+      "network-infrastructure",
       "nft-page",
       "nfts",
       "no",
@@ -2787,16 +2860,18 @@
       "search-ethereum-org",
       "secret-leader-election",
       "security",
+      "security-testing",
       "see-contributors",
       "start-building",
       "show-all",
       "show-more",
       "show-less",
       "story-card-read-more",
+      "story-card-read-less",
       "story-card-show-original",
-      "story-card-show-english",
+      "story-card-show-translation",
       "story-card-original-language",
-      "story-card-english-translation",
+      "story-card-translation",
       "single-slot-finality",
       "site-description",
       "skip-to-main-content",
@@ -2854,5 +2929,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "04f10b37df0eb7e29b3032cab1d9c881c65b4778"
 }
