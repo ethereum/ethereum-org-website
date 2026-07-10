@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl"
-;("use client")
+"use client"
 
 import { Moon, Sun } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { useThemeToggle } from "../useThemeToggle"
 

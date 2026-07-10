@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl"
-;("use client")
+"use client"
 
 import * as React from "react"
+import { useTranslations } from "next-intl"
 
 import { ErrorBoundary } from "@/components/ui/error-boundary"
 import { PersistentPanel } from "@/components/ui/persistent-panel"

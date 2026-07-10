@@ -1,6 +1,6 @@
-import { useTranslations } from "next-intl"
-;("use client")
+"use client"
 
+import { useTranslations } from "next-intl"
 import { tv, type VariantProps } from "tailwind-variants"
 
 import type { ToCItem } from "@/lib/types"

@@ -1,8 +1,8 @@
-import { useTranslations } from "next-intl"
-;("use client")
+"use client"
 
 import { forwardRef } from "react"
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 

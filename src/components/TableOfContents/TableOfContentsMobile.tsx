@@ -1,8 +1,8 @@
-import { useTranslations } from "next-intl"
-;("use client")
+"use client"
 
 import { cva, type VariantProps } from "class-variance-authority"
 import { ChevronDown } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import type { ToCItem } from "@/lib/types"
 
