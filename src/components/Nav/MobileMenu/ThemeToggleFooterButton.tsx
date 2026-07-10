@@ -1,4 +1,5 @@
-"use client"
+import { useTranslations } from "next-intl"
+;("use client")
 
 import { Moon, Sun } from "lucide-react"
 
@@ -8,10 +9,9 @@ import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
-import { useTranslation } from "@/hooks/useTranslation"
 
 const ThemeToggleFooterButton = () => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const ThemeIcon = useColorModeValue(Moon, Sun)
   const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
   const { toggleColorMode } = useThemeToggle()
