@@ -82,7 +82,7 @@ jobs:
       # dev PRs only when non-draft and touching UI code.
       run: ${{ github.base_ref != 'dev' || (github.event.pull_request.draft == false && steps.filter.outputs.ui == 'true') }}
     steps:
-      - uses: dorny/paths-filter@v3
+      - uses: dorny/paths-filter@7b450fff21473bca461d4b92ce414b9d0420d706 # v4.0.2
         id: filter
         # A filter hiccup must not block release PRs; dev PRs fail closed.
         continue-on-error: true
