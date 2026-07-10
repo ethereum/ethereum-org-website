@@ -52,10 +52,8 @@ type PlaceholderData = Record<Path, Placeholder>
  */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
 
-// Video clips authored as `![](./x.mp4)` declare their intrinsic dimensions
-// via an optional `#WxH` src fragment (see `MarkdownVideo`), so the pipeline
-// doesn't measure them. We only need to recognize video here to skip
-// image-only steps (dimension probing, blur placeholders).
+// Videos are sized by the renderer (see `MarkdownVideo`); recognized here only
+// to skip image-only steps (dimension probing, blur placeholders)
 const VIDEO_EXTENSIONS = [".mp4", ".webm", ".mov"]
 
 const getImageSize = (src: string, dir: string) => {
@@ -169,14 +167,11 @@ const rehypeImg = (options: Options) => {
     visit(tree, "element", (node) => {
       if (node.tagName === "img" && node.properties) {
         const src = node.properties.src as string
-        // A clip src may carry a `#WxH` dimensions fragment; it's presentation
-        // metadata, not part of the file path, so drop it before deriving the
-        // extension.
+        // Strip any `#WxH` dimensions fragment before deriving the extension
         const ext = path.extname(src.split("#")[0]).toLowerCase()
         const isVideo = VIDEO_EXTENSIONS.includes(ext)
 
-        // Videos are sized by the renderer (from the src fragment), so they're
-        // not probed here; they still flow through for src rewriting.
+        // Videos still flow through (for src rewriting); only images are probed
         const dimensions = isVideo ? undefined : getImageSize(src, dir)
 
         // Skip non-video files that have no detectable dimensions

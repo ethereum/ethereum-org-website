@@ -17,11 +17,8 @@ type MarkdownVideoProps = {
   orientation?: VideoOrientation
 }
 
-// An optional `#WxH` fragment on the src declares the clip's intrinsic pixel
-// dimensions, e.g. `![](./demo.mp4#800x400)`. The fragment is presentation
-// metadata only: browsers strip it before requesting, so the asset URL stays
-// canonical (one CDN/browser cache entry), and references without it — e.g.
-// not-yet-repropagated translations — still play in the default box.
+// `#WxH` src fragment = the clip's intrinsic dimensions (`./demo.mp4#800x400`).
+// Browsers strip fragments before requesting, so the asset URL stays canonical.
 const parseDimensionsFragment = (src: string) => {
   const match = src.match(/#(\d+)x(\d+)$/)
   if (!match) return undefined
@@ -29,21 +26,11 @@ const parseDimensionsFragment = (src: string) => {
 }
 
 /**
- * Renders a short, silent, looping clip authored in markdown as `![](./x.mp4)`.
- *
- * The modern GIF replacement: a `<video>` (no `next/image` — that pipeline
- * can't optimize video anyway) that only plays while on-screen
- * (battery/bandwidth) and never autoplays under `prefers-reduced-motion`
- * (where it shows controls instead).
- *
- * Sizing: when the src declares the clip's dimensions via a `#WxH` fragment,
- * the box takes the clip's own aspect ratio so it hugs the video (rounded
- * corners land on the clip, no letterbox): landscape fills the content width,
- * taller-than-wide is height-capped for inline tutorial screen-captures.
- * Without declared dimensions the box falls back to a fixed standard ratio —
- * 16:9, or 9:16 via the `-portrait` filename suffix (mirroring the `YouTube`
- * embed's `aspect-9/16 max-h-105`) — with `object-contain` letterboxing
- * off-ratio clips rather than shifting layout or distorting.
+ * Short, silent, looping clip authored in markdown as `![](./x.mp4)` — the
+ * modern GIF replacement. Plays only while on-screen; shows controls instead
+ * of autoplaying under `prefers-reduced-motion`. A `#WxH` src fragment sizes
+ * the box to the clip's own ratio; without one, a fixed 16:9 / 9:16
+ * (`-portrait`) box letterboxes the clip. Details: design-system skill.
  */
 const MarkdownVideo = ({
   src,
@@ -89,10 +76,8 @@ const MarkdownVideo = ({
         controls={showControls}
         aria-label={alt || undefined}
         src={src}
-        // The attributes give the element its intrinsic size before video
-        // metadata loads; the explicit CSS `aspect-ratio` reserves the box up
-        // front (no CLS) — the spec's attribute→aspect-ratio mapping is
-        // unreliable on `<video>`, and `h-auto` overrides the height attribute.
+        // Attributes size the element before metadata loads; explicit
+        // aspect-ratio reserves the box (attr mapping is unreliable on video).
         width={dimensions?.width}
         height={dimensions?.height}
         style={
@@ -103,14 +88,10 @@ const MarkdownVideo = ({
         className={cn(
           "h-auto rounded-base",
           dimensions
-            ? // Box hugs the clip's own ratio; cap tall clips by height.
-              isPortrait
+            ? isPortrait
               ? "max-h-160 w-auto"
               : "w-full max-w-full"
             : [
-                // No declared dimensions: fixed standard box; `object-contain`
-                // letterboxes off-ratio clips rather than shifting layout or
-                // distorting.
                 "object-contain",
                 isPortrait
                   ? "aspect-9/16 max-h-105 w-auto"
