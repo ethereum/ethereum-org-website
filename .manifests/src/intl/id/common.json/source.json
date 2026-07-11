@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-07-10T23:43:02.595Z",
-  "rootHash": "f40b9e9929d8",
+  "generatedAt": "2026-07-11T18:00:03.760Z",
+  "rootHash": "01286e1bfab4",
   "tree": {
-    "contentHash": "5c74c8789c53",
-    "anchorHash": "0d4a08a040a5",
+    "contentHash": "39b5121b4193",
+    "anchorHash": "382f8c4c4af9",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -2110,30 +2110,6 @@
         "contentHash": "94ea9b1d33a0",
         "anchorHash": "e3b0c44298fc"
       },
-      "story-card-read-more": {
-        "contentHash": "83b794145c0c",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "story-card-read-less": {
-        "contentHash": "dbda1af80148",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "story-card-show-original": {
-        "contentHash": "16194a69c43d",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "story-card-show-translation": {
-        "contentHash": "4f8f5dd5cc7b",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "story-card-original-language": {
-        "contentHash": "c5c60a2af071",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "story-card-translation": {
-        "contentHash": "6fbd766b1a71",
-        "anchorHash": "e3b0c44298fc"
-      },
       "single-slot-finality": {
         "contentHash": "57e99e621b32",
         "anchorHash": "e3b0c44298fc"
@@ -2866,12 +2842,6 @@
       "show-all",
       "show-more",
       "show-less",
-      "story-card-read-more",
-      "story-card-read-less",
-      "story-card-show-original",
-      "story-card-show-translation",
-      "story-card-original-language",
-      "story-card-translation",
       "single-slot-finality",
       "site-description",
       "skip-to-main-content",
@@ -2929,5 +2899,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "04f10b37df0eb7e29b3032cab1d9c881c65b4778"
+  "sourceCommitSha": "8e25023e1d2afab19c877d669db09cea9e0e4ab4"
 }
