@@ -1,4 +1,9 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { pick } from "lodash"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -6,6 +11,7 @@ import BigNumber from "@/components/BigNumber"
 import ContentFeedback from "@/components/ContentFeedback"
 import { CopyButton } from "@/components/CopyToClipboard"
 import { HubHero } from "@/components/Hero"
+import I18nProvider from "@/components/I18nProvider"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
@@ -108,6 +114,10 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-developers-index")
   const tCommon = await getTranslations("common")
 
+  // client messages for the swipers (the page has no root I18nProvider)
+  const allMessages = await getMessages({ locale })
+  const messages = pick(allMessages, "component-swiper")
+
   const paths = await getBuilderPaths()
   const speedRunDetails = {
     title: t("page-developers-start"),
@@ -182,7 +192,12 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
             {/* Mobile */}
             <div className="-mx-page md:hidden">
-              <BuilderSwiper paths={paths} speedRunDetails={speedRunDetails} />
+              <I18nProvider locale={locale} messages={messages}>
+                <BuilderSwiper
+                  paths={paths}
+                  speedRunDetails={speedRunDetails}
+                />
+              </I18nProvider>
             </div>
           </Section>
 
@@ -460,7 +475,9 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
             {/* Mobile */}
             <div className="w-screen max-xl:-ms-page sm:hidden xl:w-full">
-              <VideoCourseSwiper courses={courses} />
+              <I18nProvider locale={locale} messages={messages}>
+                <VideoCourseSwiper courses={courses} />
+              </I18nProvider>
             </div>
           </Section>
 
