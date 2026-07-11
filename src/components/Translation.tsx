@@ -26,7 +26,10 @@ type TranslationProps = {
  *
  * @deprecated Legacy catalog messages only — do not adopt for new strings.
  * Author new messages as plain ICU (`useTranslations`/`getTranslations`) or,
- * when markup is needed, `t.rich` with tags supplied from code.
+ * when markup is needed, `t.rich` with tags supplied from code. Glossary
+ * tooltips don't require this component: render `GlossaryTooltip` directly,
+ * or pass `TooltipLink` as a `t.rich` tag handler with the href in code —
+ * only messages whose href lives inside the translated string need this.
  */
 const Translation = ({
   id,
