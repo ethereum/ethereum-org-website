@@ -72,6 +72,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
 const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
   "/": ["page-10-year-anniversary", "page-app-descriptions"],
   "/wallets/": ["component-wallet-simulator"],
+  "/what-are-apps/": ["component-story-card"],
 }
 
 const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
@@ -81,7 +82,8 @@ const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
   ["/layer-2/networks/", ["table"]],
   ["/energy-consumption/", ["page-about"]],
   ["/glossary/", ["glossary"]],
-  ["/10years/", ["page-10-year-anniversary"]],
+  ["/10years/", ["page-10-year-anniversary", "component-story-card"]],
+  ["/stories/", ["component-story-card"]],
   ["/apps/", ["page-app-descriptions"]],
 ]
 

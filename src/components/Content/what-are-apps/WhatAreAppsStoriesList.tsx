@@ -17,7 +17,7 @@ type WhatAreAppsStoriesListProps = {
 }
 
 const WhatAreAppsStoriesList = ({ stories }: WhatAreAppsStoriesListProps) => {
-  const t = useTranslations("common")
+  const t = useTranslations("component-story-card")
   const [expandedStories, setExpandedStories] = useState<
     Record<number, boolean>
   >({})
@@ -92,9 +92,7 @@ const WhatAreAppsStoriesList = ({ stories }: WhatAreAppsStoriesListProps) => {
               variant="ghost"
               className="h-auto min-h-0 p-0 text-start text-sm"
             >
-              {expandedStories[index]
-                ? t("story-card-read-less")
-                : t("story-card-read-more")}
+              {expandedStories[index] ? t("read-less") : t("read-more")}
             </Button>
           </div>
           <p className="text-sm text-body-medium">{story.date}</p>

@@ -38,7 +38,7 @@ const StoryCard = ({
   expandable = true,
   showDate = true,
 }: StoryCardProps) => {
-  const t = useTranslations("common")
+  const t = useTranslations("component-story-card")
   const [isFlipped, setIsFlipped] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
   const [isFading, setIsFading] = useState(false)
@@ -114,7 +114,7 @@ const StoryCard = ({
                     eventCategory: "community-stories",
                   }}
                 >
-                  {t("story-card-read-more")}
+                  {t("read-more")}
                 </Button>
               </div>
             )}
@@ -123,9 +123,7 @@ const StoryCard = ({
           {hasOriginal && (
             <div>
               <p className="text-xs text-body-medium">
-                {showOriginal
-                  ? t("story-card-original-language")
-                  : t("story-card-translation")}
+                {showOriginal ? t("original-language") : t("translation")}
               </p>
               <Button
                 onClick={handleFlip}
@@ -137,9 +135,7 @@ const StoryCard = ({
                   eventCategory: "community-stories",
                 }}
               >
-                {showOriginal
-                  ? t("story-card-show-translation")
-                  : t("story-card-show-original")}
+                {showOriginal ? t("show-translation") : t("show-original")}
               </Button>
             </div>
           )}
