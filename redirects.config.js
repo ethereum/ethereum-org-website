@@ -14,6 +14,11 @@ module.exports = [
   ["/cli", "/developers/"],
   ["/greeter", "/developers/"],
   ["/roadmap/vision", "/roadmap/"],
+  ["/roadmap/future-proofing", "/roadmap/security/"],
+  [
+    "/roadmap/future-proofing/quantum-resistance",
+    "/roadmap/security/quantum-resistance/",
+  ],
   ["/search", "/"],
   ["/garden", "/roadmap/"],
   ["/download", "/wallets/find-wallet/"],

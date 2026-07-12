@@ -19,7 +19,6 @@ import {
   CheaperTransactionsIcon,
   DankshardingIcon,
   ExtraSecurityIcon,
-  FutureProofingIcon,
   SingleSlotFinalityIcon,
   StatelessnessIcon,
 } from "@/components/icons/roadmap"
@@ -101,15 +100,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         href: "/roadmap/user-experience",
       },
     },
-    {
-      title: t("page-roadmap-future-proofing-title"),
-      icon: <FutureProofingIcon className="h-auto w-12" />,
-      description: t("page-roadmap-future-proofing-description"),
-      button: {
-        label: t("page-roadmap-future-proofing-button"),
-        href: "/roadmap/future-proofing",
-      },
-    },
   ]
 
   const technicalUpgradesItems = [
@@ -117,7 +107,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       icon: <Atom className="size-7" />,
       title: t("page-roadmap-post-quantum-title"),
       description: t("page-roadmap-post-quantum-description"),
-      href: "/roadmap/future-proofing/quantum-resistance",
+      href: "/roadmap/security/quantum-resistance",
     },
     {
       icon: <SingleSlotFinalityIcon className="size-7" />,
