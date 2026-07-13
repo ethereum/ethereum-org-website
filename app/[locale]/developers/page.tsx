@@ -450,12 +450,12 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             <p>{t("page-developers-video-courses-desc")}</p>
 
             {/* Desktop */}
-            <div className="relative flex w-screen gap-6 overflow-x-auto pb-2 max-2xl:-mx-page max-2xl:px-page max-sm:hidden lg:gap-8 2xl:w-full">
+            <div className="relative flex w-screen gap-4 overflow-x-auto p-px pb-2 max-2xl:-mx-page max-2xl:px-page max-sm:hidden 2xl:w-full">
               {courses.map((course, idx) => (
                 <VideoCourseCard
                   key={idx}
                   course={course}
-                  className="w-[20%] max-w-[271px] flex-1 max-2xl:min-w-[20rem] xl:w-full"
+                  className="w-[20%] flex-1 max-2xl:min-w-[20rem] xl:w-full"
                 />
               ))}
             </div>
@@ -709,7 +709,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                     key={event.id}
                     asChild
                     className={cn(
-                      "ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]",
+                      "ms-4 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]",
                       "*:max-w-md *:min-w-72 *:flex-1"
                     )}
                   >
@@ -723,13 +723,19 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                       variant="ghost"
                       size="sm"
                     >
-                      <CardBanner size="sm">
-                        {bannerImage ? (
-                          <CardImage src={bannerImage} />
-                        ) : (
-                          <Image src={fallbackThumbnail} alt="" sizes="276px" />
-                        )}
-                      </CardBanner>
+                      <CardHeader>
+                        <CardBanner size="sm">
+                          {bannerImage ? (
+                            <CardImage src={bannerImage} />
+                          ) : (
+                            <Image
+                              src={fallbackThumbnail}
+                              alt=""
+                              sizes="276px"
+                            />
+                          )}
+                        </CardBanner>
+                      </CardHeader>
                       <CardContent>
                         <CardTitle>{title}</CardTitle>
                         <CardParagraph variant="subtitle" size="sm">
