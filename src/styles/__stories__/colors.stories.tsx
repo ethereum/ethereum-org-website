@@ -185,6 +185,12 @@ const semantic: { title: string; description?: string; classes: string[] }[] = [
     ],
   },
   {
+    title: "Overlay",
+    description:
+      "Modal/sheet backdrop dim. Translucent -- the alpha is baked into the token, so use bg-overlay as-is (no /opacity modifier).",
+    classes: ["bg-overlay"],
+  },
+  {
     title: "Border",
     description: "Border/outline hues (shown as fills here).",
     classes: [
