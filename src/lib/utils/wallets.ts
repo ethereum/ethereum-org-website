@@ -1,6 +1,11 @@
 import { union } from "lodash"
 
 import { getLanguageCodeName } from "@/lib/utils/intl"
+import {
+  formatPriceUSD,
+  numberFormat,
+  numberToPercent,
+} from "@/lib/utils/numbers"
 import { safeShuffle } from "@/lib/utils/random"
 import { capitalize } from "@/lib/utils/string"
 
@@ -18,6 +23,8 @@ import type {
   ChainName,
   FilterOption,
   WalletData,
+  WalletFee,
+  WalletFeeAmount,
   WalletLanguage,
   WalletRow,
 } from "../types"
@@ -108,6 +115,84 @@ export const getSupportedLanguages = (
 // Format languages list to be displayed on UI label
 export const formatStringList = (strings: string[], sliceSize?: number) => {
   return sliceSize ? strings.slice(0, sliceSize).join(", ") : strings.join(", ")
+}
+
+/** Namespace-bound `t` from useTranslations("page-wallets-find-wallet") */
+type WalletFeeTFunc = (
+  key: string,
+  values?: Record<string, string | number>
+) => string
+
+/**
+ * Renders structured wallet fees as one line, e.g. "Device: $149, Swap fee: variable".
+ * Numbers stay canonical in wallet-data.ts; Intl handles per-locale formatting.
+ */
+export const formatWalletFees = (
+  fees: WalletFee[],
+  locale: string,
+  t: WalletFeeTFunc
+): string => {
+  // Node and browser ICU emit different non-breaking space variants around
+  // range dashes; normalize to plain spaces to avoid hydration mismatches
+  const formatRange = (
+    fmt: Intl.NumberFormat,
+    [min, max]: [min: number, max: number]
+  ) => fmt.formatRange(min, max).replace(/\s+/g, " ")
+
+  // Data stores human-readable percents (0.875 -> "0.875%")
+  const percent = (amount: WalletFeeAmount) =>
+    Array.isArray(amount)
+      ? formatRange(
+          numberFormat(locale, { style: "percent", maximumFractionDigits: 3 }),
+          [amount[0] / 100, amount[1] / 100]
+        )
+      : numberToPercent(amount / 100, locale, { maximumFractionDigits: 3 })
+  const usd = (amount: WalletFeeAmount) =>
+    Array.isArray(amount)
+      ? formatRange(
+          numberFormat(locale, {
+            style: "currency",
+            currency: "USD",
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 2,
+          }),
+          amount
+        )
+      : formatPriceUSD(amount, locale, { minimumFractionDigits: 0 })
+
+  const formatValue = (fee: WalletFee): string => {
+    if (fee.text) return t(`page-find-wallet-fee-value-${fee.text}`)
+    if (fee.percent !== undefined) return percent(fee.percent)
+    return usd(fee.usd)
+  }
+
+  const items = fees.map((fee) => {
+    let value = formatValue(fee)
+    if (fee.from) value = t("page-find-wallet-fee-value-from", { value })
+
+    // One-off template without the "{label}: {value}" shape
+    if (fee.type === "free-tier-plans")
+      return t("page-find-wallet-fee-free-tier-plans", { value })
+
+    if (fee.qualifier) {
+      value = t(`page-find-wallet-fee-qualifier-${fee.qualifier}`, {
+        value,
+        ...(fee.qualifierPercent !== undefined && {
+          percent: percent(fee.qualifierPercent),
+        }),
+        ...(fee.qualifierUsd !== undefined && {
+          usd: usd(fee.qualifierUsd),
+        }),
+      })
+    }
+
+    return t("page-find-wallet-fee-item", {
+      label: t(`page-find-wallet-fee-label-${fee.type}`),
+      value,
+    })
+  })
+
+  return items.join(", ")
 }
 
 // Get total count of wallets that support a language

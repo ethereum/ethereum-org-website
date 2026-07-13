@@ -61,7 +61,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
     name: "Keystone",
-    fee_summary: "Device: $149",
+    fees: [{ type: "device", usd: 149 }],
     image: KeystoneImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -110,7 +110,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
     name: "Loopring wallet",
-    fee_summary: "Swap fee: 0.3%",
+    fees: [{ type: "swap", percent: 0.3 }],
     image: LoopringImage,
     twBackgroundColor: "bg-[#446EFF]",
     twGradiantBrandColor: "from-[#446EFF]",
@@ -159,7 +159,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-10-01",
     name: "Railway Wallet",
-    fee_summary: "Shield/unshield fee: 0.25%",
+    fees: [{ type: "shield-unshield", percent: 0.25 }],
     image: RailwayImage,
     twBackgroundColor: "bg-[#000000]",
     twGradiantBrandColor: "from-[#000000]",
@@ -206,7 +206,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-07-15",
     name: "Ready Wallet",
-    fee_summary: "Swap fee: 0.5%",
+    fees: [{ type: "swap", percent: 0.5 }],
     image: ReadyImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -254,7 +254,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2022-11-15",
     name: "Coinbase Wallet",
-    fee_summary: "Swap fee: 1%",
+    fees: [{ type: "swap", percent: 1 }],
     image: CoinbaseImage,
     twBackgroundColor: "bg-[#0052FF]",
     twGradiantBrandColor: "from-[#0052FF]",
@@ -367,7 +367,10 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-03-17",
     name: "MetaMask",
-    fee_summary: "Swap/bridge fee: 0.875%, Buy/sell fee: 1%",
+    fees: [
+      { type: "swap-bridge", percent: 0.875 },
+      { type: "buy-sell", percent: 1 },
+    ],
     image: MetaMaskImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -469,7 +472,10 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-11-06",
     name: "Safe",
-    fee_summary: "Swap fee: 0.05%–0.70%, Staking fee: 20% of rewards",
+    fees: [
+      { type: "swap", percent: [0.05, 0.7] },
+      { type: "staking", percent: 20, qualifier: "of-rewards" },
+    ],
     image: SafeImage,
     twBackgroundColor: "bg-[#12ff80]",
     twGradiantBrandColor: "from-[#12ff80]",
@@ -526,7 +532,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-01-31",
     name: "Coin Wallet",
-    fee_summary: "Swap fee: 0%",
+    fees: [{ type: "swap", percent: 0 }],
     image: CoinWalletImage,
     twBackgroundColor: "bg-[#68c481]",
     twGradiantBrandColor: "from-[#68c481]",
@@ -607,7 +613,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-12-04",
     name: "Ambire",
-    fee_summary: "Swap/bridge fee: 0.5%",
+    fees: [{ type: "swap-bridge", percent: 0.5 }],
     image: AmbireImage,
     twBackgroundColor: "bg-[#aa6aff]",
     twGradiantBrandColor: "from-[#aa6aff]",
@@ -663,7 +669,14 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-08-31",
     name: "imToken",
-    fee_summary: "Swap fee: 0.3% (0.04% stablecoins, lower on L2s)",
+    fees: [
+      {
+        type: "swap",
+        percent: 0.3,
+        qualifier: "stablecoins-lower-l2",
+        qualifierPercent: 0.04,
+      },
+    ],
     image: imTokenImage,
     twBackgroundColor: "bg-[#007fff]",
     twGradiantBrandColor: "from-[#007FFF]",
@@ -730,7 +743,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-12-04",
     name: "io.finnet MPC wallet for Business",
-    fee_summary: "Free tier, paid plans from $399.99/month",
+    fees: [{ type: "free-tier-plans", usd: 399.99 }],
     image: IoFinnetImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#FFFFFF]",
@@ -779,7 +792,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-08-30",
     name: "1inch Wallet",
-    fee_summary: "Swap fee: variable",
+    fees: [{ type: "swap", text: "variable" }],
     image: OneInchWalletImage,
     twBackgroundColor: "bg-[#2F8AF5]",
     twGradiantBrandColor: "from-[#2F8AF5]",
@@ -847,7 +860,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
     name: "FoxWallet",
-    fee_summary: "Swap fee: 0%",
+    fees: [{ type: "swap", percent: 0 }],
     image: FoxWalletImage,
     twBackgroundColor: "bg-[#000000]",
     twGradiantBrandColor: "from-[#000000]",
@@ -914,7 +927,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-01-12",
     name: "PillarX",
-    fee_summary: "Swap fee: 1%",
+    fees: [{ type: "swap", percent: 1 }],
     image: PillarXImage,
     twBackgroundColor: "bg-[#000000]",
     twGradiantBrandColor: "from-[#000000]",
@@ -968,7 +981,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-03-19",
     name: "MEW wallet",
-    fee_summary: "Swap fee: variable",
+    fees: [{ type: "swap", text: "variable" }],
     image: MewImage,
     twBackgroundColor: "bg-[#05C0A5]",
     twGradiantBrandColor: "from-[#05C0A5]",
@@ -1020,7 +1033,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-01-25",
     name: "Unstoppable wallet",
-    fee_summary: "Swap fee: 0%",
+    fees: [{ type: "swap", percent: 0 }],
     image: UnstoppableWalletImage,
     twBackgroundColor: "bg-[#ffbe43]",
     twGradiantBrandColor: "from-[#ffbe43]",
@@ -1067,7 +1080,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2022-06-24",
     name: "AlphaWallet",
-    fee_summary: "Swap fee: 0%",
+    fees: [{ type: "swap", percent: 0 }],
     image: AlphaWalletImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1113,7 +1126,10 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-07-24",
     name: "Bridge wallet",
-    fee_summary: "Swap fee: 0.5%, Buy/sell fee: 0.6%–3.8%",
+    fees: [
+      { type: "swap", percent: 0.5 },
+      { type: "buy-sell", percent: [0.6, 3.8] },
+    ],
     image: BridgeWalletImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1165,7 +1181,9 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-11-06",
     name: "TokenPocket",
-    fee_summary: "Swap fee: not disclosed (TPT-holder discounts)",
+    fees: [
+      { type: "swap", text: "undisclosed", qualifier: "tpt-holder-discounts" },
+    ],
     image: TokenPocketImage,
     twBackgroundColor: "bg-[#2980fe]",
     twGradiantBrandColor: "from-[#2980fe]",
@@ -1244,7 +1262,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2022-06-30",
     name: "Rainbow",
-    fee_summary: "Swap fee: 0.85%",
+    fees: [{ type: "swap", percent: 0.85 }],
     image: RainbowImage,
     twBackgroundColor: "bg-[#001A4D]",
     twGradiantBrandColor: "from-[#001A4D]",
@@ -1312,7 +1330,10 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2026-06-16",
     name: "Trezor",
-    fee_summary: "Device: $59–$129, Swap fee: variable",
+    fees: [
+      { type: "device", usd: [59, 129] },
+      { type: "swap", text: "variable" },
+    ],
     image: TrezorImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1383,7 +1404,10 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-23",
     name: "Ledger",
-    fee_summary: "Device: $79–$399, Swap fee: variable",
+    fees: [
+      { type: "device", usd: [79, 399] },
+      { type: "swap", text: "variable" },
+    ],
     image: LedgerImage,
     twBackgroundColor: "bg-[#fb5e01]",
     twGradiantBrandColor: "from-[#fb5e01]",
@@ -1446,7 +1470,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2022-08-19",
     name: "Exodus",
-    fee_summary: "Swap fee: from 0.5%",
+    fees: [{ type: "swap", percent: 0.5, from: true }],
     image: ExodusImage,
     twBackgroundColor: "bg-[#1F2033]",
     twGradiantBrandColor: "from-[#1F2033]",
@@ -1503,7 +1527,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-07-24",
     name: "Rabby Wallet",
-    fee_summary: "Swap fee: 0.25%",
+    fees: [{ type: "swap", percent: 0.25 }],
     image: RabbyWalletImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#FFFFFF]",
@@ -1563,8 +1587,10 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-09-26",
     name: "Zerion Wallet",
-    fee_summary:
-      "Swap/bridge fee: 0.67% (lower with Premium), Buy fee: set by the provider",
+    fees: [
+      { type: "swap-bridge", percent: 0.67, qualifier: "lower-with-premium" },
+      { type: "buy", text: "set-by-provider" },
+    ],
     image: ZerionImage,
     twBackgroundColor: "bg-[#3232DC]",
     twGradiantBrandColor: "from-[#3232DC]",
@@ -1637,7 +1663,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-09-26",
     name: "Enkrypt",
-    fee_summary: "Swap fee: variable",
+    fees: [{ type: "swap", text: "variable" }],
     image: EnkryptImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1690,7 +1716,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2022-10-31",
     name: "GridPlus Lattice1",
-    fee_summary: "Device: $397",
+    fees: [{ type: "device", usd: 397 }],
     image: GridPlusImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1736,7 +1762,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-11-20",
     name: "Bitget wallet",
-    fee_summary: "Swap fee: variable",
+    fees: [{ type: "swap", text: "variable" }],
     image: BitgetImage,
     twBackgroundColor: "bg-[#00F0FF]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1806,7 +1832,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-31",
     name: "BlockWallet",
-    fee_summary: "Swap/bridge fee: 0.5%",
+    fees: [{ type: "swap-bridge", percent: 0.5 }],
     image: BlockWalletImage,
     twBackgroundColor: "bg-[#52C200]",
     twGradiantBrandColor: "from-[#08090A]",
@@ -1863,7 +1889,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
     name: "OneKey",
-    fee_summary: "Swap/bridge fee: 0.85%",
+    fees: [{ type: "swap-bridge", percent: 0.85 }],
     image: OneKeyImage,
     twBackgroundColor: "bg-[#00B812]",
     twGradiantBrandColor: "from-[#00B812]",
@@ -1936,7 +1962,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2023-04-21",
     name: "Taho",
-    fee_summary: "Swap fee: 0.5%",
+    fees: [{ type: "swap", percent: 0.5 }],
     image: TahoImage,
     twBackgroundColor: "bg-[#FDAE49]",
     twGradiantBrandColor: "from-[#FDAE49]",
@@ -1987,7 +2013,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
     name: "Phantom",
-    fee_summary: "Swap fee: 0.85%",
+    fees: [{ type: "swap", percent: 0.85 }],
     image: PhantomImage,
     twBackgroundColor: "bg-[#AB9FF2]",
     twGradiantBrandColor: "from-[#AB9FF2]",
@@ -2060,7 +2086,13 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-08-22",
     name: "Ctrl Wallet",
-    fee_summary: "Swap/bridge fee: 0.20%–0.60% (lower for token holders)",
+    fees: [
+      {
+        type: "swap-bridge",
+        percent: [0.2, 0.6],
+        qualifier: "lower-for-token-holders",
+      },
+    ],
     image: CtrlWalletImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -2108,7 +2140,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2023-11-02",
     name: "Trust Wallet",
-    fee_summary: "Buy fee: set by the provider",
+    fees: [{ type: "buy", text: "set-by-provider" }],
     image: TrustWalletImage,
     twBackgroundColor: "bg-[#0500FF]",
     twGradiantBrandColor: "from-[#0500FF]",
@@ -2183,8 +2215,14 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-10-20",
     name: "ShapeShift",
-    fee_summary:
-      "Swap/bridge fee: 0.5% (free under $1,000, FOX-holder discounts)",
+    fees: [
+      {
+        type: "swap-bridge",
+        percent: 0.5,
+        qualifier: "free-under-fox-discounts",
+        qualifierUsd: 1000,
+      },
+    ],
     image: ShapeShiftImage,
     twBackgroundColor: "bg-[#386FF9]",
     twGradiantBrandColor: "from-[#386FF9]",
@@ -2249,7 +2287,10 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-02-10",
     name: "Gem Wallet",
-    fee_summary: "Swap fee: 0%, Buy fee: set by the provider",
+    fees: [
+      { type: "swap", percent: 0 },
+      { type: "buy", text: "set-by-provider" },
+    ],
     image: GemWalletImage,
     twBackgroundColor: "bg-[#2D5BE6]",
     twGradiantBrandColor: "from-[#2D5BE6]",
@@ -2322,7 +2363,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-08-24",
     name: "Cypherock X1",
-    fee_summary: "Device: $99–$179",
+    fees: [{ type: "device", usd: [99, 179] }],
     image: CypherockX1Image,
     twBackgroundColor: "bg-[#e9b873]",
     twGradiantBrandColor: "from-[#e9b873]",
@@ -2368,7 +2409,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-05-16",
     name: "Cake Wallet",
-    fee_summary: "Swap fee: variable",
+    fees: [{ type: "swap", text: "variable" }],
     image: CakeWalletImage,
     twBackgroundColor: "bg-[#61C5FF]",
     twGradiantBrandColor: "from-[#61C5FF]",
@@ -2483,7 +2524,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-12-26",
     name: "Braavos",
-    fee_summary: "Swap fee: 0%",
+    fees: [{ type: "swap", percent: 0 }],
     image: BraavosImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -2530,7 +2571,14 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-11-03",
     name: "Coin98 Super Wallet",
-    fee_summary: "Swap fee: 0.5% (0.1% for stablecoins)",
+    fees: [
+      {
+        type: "swap",
+        percent: 0.5,
+        qualifier: "stablecoins",
+        qualifierPercent: 0.1,
+      },
+    ],
     image: Coin98Image,
     twBackgroundColor: "bg-[#F0C43F]",
     twGradiantBrandColor: "from-[#F0C43F]",
@@ -2598,7 +2646,10 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-05-19",
     name: "Burner",
-    fee_summary: "Device: $19/card, Swap fee: not disclosed",
+    fees: [
+      { type: "device", usd: 19, qualifier: "per-card" },
+      { type: "swap", text: "undisclosed" },
+    ],
     image: BurnerImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -2645,7 +2696,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-09-09",
     name: "Edge Wallet",
-    fee_summary: "Swap fee: 0.5%–2%",
+    fees: [{ type: "swap", percent: [0.5, 2] }],
     image: EdgeImage,
     twBackgroundColor: "bg-[#1a1a1a]",
     twGradiantBrandColor: "from-[#1a1a1a]",
@@ -2697,7 +2748,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-02-05",
     name: "NuFi",
-    fee_summary: "Swap fee: 0.75%",
+    fees: [{ type: "swap", percent: 0.75 }],
     image: NuFiImage,
     twBackgroundColor: "bg-[#bae440]",
     twGradiantBrandColor: "from-[#bae440]",
@@ -2750,7 +2801,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-09-24",
     name: "Clave",
-    fee_summary: "Swap fee: 0.5%",
+    fees: [{ type: "swap", percent: 0.5 }],
     image: ClaveWallet,
     twBackgroundColor: "bg-[#000000]",
     twGradiantBrandColor: "from-[#000000]",
@@ -2795,7 +2846,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-02-12",
     name: "Uniswap Wallet",
-    fee_summary: "Swap fee: 0%",
+    fees: [{ type: "swap", percent: 0 }],
     image: UniswapWalletImage,
     twBackgroundColor: "bg-[#EF03AC]",
     twGradiantBrandColor: "from-[#EF03AC]",
@@ -2859,7 +2910,10 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-12-17",
     name: "imKey Pro Hardware Wallet",
-    fee_summary: "Device: $110, Swap fee: 0%",
+    fees: [
+      { type: "device", usd: 110 },
+      { type: "swap", percent: 0 },
+    ],
     image: imKeyImage,
     twBackgroundColor: "bg-[#2A3535]",
     twGradiantBrandColor: "from-[#2A3535]",
@@ -2925,7 +2979,7 @@ export const walletsData: WalletData[] = [
     // https://github.com/ethereum/ethereum-org-website/issues/17586
     last_updated: "2026-02-17",
     name: "Infinex Wallet & Crypto Superapp",
-    fee_summary: "Swap/bridge fee: 0.03%–0.30%",
+    fees: [{ type: "swap-bridge", percent: [0.03, 0.3] }],
     image: InfinexImage,
     twBackgroundColor: "bg-[#FE6F39]",
     twGradiantBrandColor: "from-[#FE6F39]",

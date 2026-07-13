@@ -1,5 +1,6 @@
 import { memo, useMemo } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { ChainName, Wallet } from "@/lib/types"
 
@@ -8,7 +9,11 @@ import { DevicesIcon, FeeIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 
-import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
+import {
+  formatStringList,
+  formatWalletFees,
+  getWalletPersonas,
+} from "@/lib/utils/wallets"
 
 import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
 
@@ -17,14 +22,13 @@ import { TagsInlineText } from "../ui/tag"
 
 import PersonaTags from "./PersonaTags"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 interface WalletInfoProps {
   wallet: Wallet
 }
 
 const WalletInfo = ({ wallet }: WalletInfoProps) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
+  const locale = useLocale()
 
   const walletPersonas = useMemo(() => {
     return getWalletPersonas(wallet)
@@ -55,6 +59,10 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
       wallet.supportedLanguages.length > NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
     )
   }, [wallet.supportedLanguages])
+
+  const feeSummary = useMemo(() => {
+    return wallet.fees ? formatWalletFees(wallet.fees, locale, t) : null
+  }, [wallet.fees, locale, t])
 
   return (
     <div className="relative flex flex-col gap-4">
@@ -108,10 +116,10 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
             </p>
           </div>
 
-          {wallet.fee_summary && (
+          {feeSummary && (
             <div className="col-span-2 flex flex-row gap-2 lg:col-span-1 lg:col-start-2">
               <FeeIcon className="size-6" />
-              <p className="text-md">{wallet.fee_summary}</p>
+              <p className="text-md">{feeSummary}</p>
             </div>
           )}
         </div>
