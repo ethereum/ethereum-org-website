@@ -38,7 +38,24 @@ const cardVariants = cva(
       },
       hoverLift: { true: "hover-lift-base" },
       border: { true: "ring ring-border" },
+      // Set internally from `href` -- names the link-group and drives the
+      // hover affordance below. Not a public prop (omitted from CardProps).
+      interactive: { true: "group/link", false: "" },
     },
+    compoundVariants: [
+      // Ghost link cards fill with the highlight bg on hover, no outline...
+      {
+        interactive: true,
+        variant: "ghost",
+        class: "hover:bg-background-highlight",
+      },
+      // ...every other link card keeps the primary outline ring.
+      {
+        interactive: true,
+        variant: ["base", "nested", "header-bar"],
+        class: "ring ring-transparent hover:ring-primary-hover",
+      },
+    ],
     defaultVariants: {
       variant: "base",
       size: "base",
@@ -48,7 +65,7 @@ const cardVariants = cva(
 
 export type CardProps = React.HTMLAttributes<HTMLElement> &
   Pick<LinkProps, "href" | "customEventOptions"> &
-  VariantProps<typeof cardVariants>
+  Omit<VariantProps<typeof cardVariants>, "interactive">
 
 const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
   (
@@ -70,6 +87,7 @@ const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
         size,
         hoverLift,
         border,
+        interactive: !!href,
       }),
       className
     )
@@ -78,10 +96,7 @@ const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
         <BaseLink
           ref={ref as React.Ref<HTMLAnchorElement>}
           href={href}
-          className={cn(
-            "group/link ring ring-transparent hover:ring-primary-hover",
-            classes
-          )}
+          className={classes}
           customEventOptions={customEventOptions}
           hideArrow
           {...props}
