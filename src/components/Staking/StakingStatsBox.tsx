@@ -1,5 +1,5 @@
 import { Info } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { ChildOnlyProp, StakingStatsData } from "@/lib/types"
 
@@ -9,8 +9,6 @@ import { Flex, VStack } from "@/components/ui/flex"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import InlineLink from "../ui/Link"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 const Cell = ({ children }: ChildOnlyProp) => (
   <VStack className="gap-2 px-8 py-4">{children}</VStack>
@@ -41,7 +39,8 @@ type StakingStatsBoxProps = {
 }
 const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
   const locale = useLocale()
-  const { t } = useTranslation("page-staking")
+  const t = useTranslations("page-staking")
+  const tCommon = useTranslations("common")
 
   // Helper functions
   const formatInteger = (amount: number): string =>
@@ -69,7 +68,7 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
           <DataSourceTooltip>
             <div className="normal-case">
               <p>{t("page-staking-stats-box-metric-1-tooltip")}</p>
-              {t("common:data-provided-by")}{" "}
+              {tCommon("data-provided-by")}{" "}
               <InlineLink href="https://dune.com/">Dune Analytics</InlineLink>
             </div>
           </DataSourceTooltip>
@@ -82,7 +81,7 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
           <DataSourceTooltip>
             <div className="normal-case">
               <p>{t("page-staking-stats-box-metric-2-tooltip")}</p>
-              {t("common:data-provided-by")}{" "}
+              {tCommon("data-provided-by")}{" "}
               <InlineLink href="https://dune.com/">Dune Analytics</InlineLink>
             </div>
           </DataSourceTooltip>
@@ -95,7 +94,7 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
           <DataSourceTooltip>
             <div className="normal-case">
               <p>{t("page-staking-stats-box-metric-3-tooltip")}</p>
-              {t("common:data-provided-by")}{" "}
+              {tCommon("data-provided-by")}{" "}
               <InlineLink href="https://dune.com/">Dune Analytics</InlineLink>
             </div>
           </DataSourceTooltip>

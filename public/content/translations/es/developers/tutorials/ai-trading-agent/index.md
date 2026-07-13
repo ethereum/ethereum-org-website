@@ -580,21 +580,21 @@ uv run test-predictor.py
 El resultado esperado es similar a:
 
 ```
-Predicción para 2026-01-05T19:50: predicho 3138.93 USD, real 3218.92 USD, error 79.99 USD
-Predicción para 2026-01-06T19:56: predicho 3243.39 USD, real 3221.08 USD, error 22.31 USD
-Predicción para 2026-01-07T20:02: predicho 3223.24 USD, real 3146.89 USD, error 76.35 USD
-Predicción para 2026-01-08T20:11: predicho 3150.47 USD, real 3092.04 USD, error 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-Predicción para 2026-01-31T22:33: predicho 2637.73 USD, real 2417.77 USD, error 219.96 USD
-Predicción para 2026-02-01T22:41: predicho 2381.70 USD, real 2318.84 USD, error 62.86 USD
-Predicción para 2026-02-02T22:49: predicho 2234.91 USD, real 2349.28 USD, error 114.37 USD
-Error medio de predicción en 29 predicciones: 83.87103448275862068965517241 USD
-Cambio medio por recomendación: 4.787931034482758620689655172 USD
-Varianza estándar de los cambios: 104.42 USD
-Días rentables: 51.72%
-Días con pérdidas: 48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 La mayor parte del probador es idéntica al agente, pero aquí están las partes que son nuevas o modificadas.
@@ -762,19 +762,19 @@ La salida se verá similar a:
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-Precio actual: 1843.16
-En 2026-02-06T23:07, precio esperado: 1724.41 USD
-Saldos de la cuenta antes de la operación:
-Saldo de USDC: 927301.578272
-Saldo de WETH: 500
-Vender, espero que el precio baje 118.75 USD
-Transacción de aprobación enviada: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-Transacción de aprobación minada.
-Transacción de venta enviada: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-Transacción de venta minada.
-Saldos de la cuenta después de la operación:
-Saldo de USDC: 929143.797116
-Saldo de WETH: 499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 Para usarlo realmente, necesitas algunos cambios menores.

@@ -83,7 +83,10 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
           )}
 
           <div className="col-span-2 lg:col-span-1 lg:col-start-2">
-            <ChainImages chains={wallet.supported_chains as ChainName[]} />
+            <ChainImages
+              chains={wallet.supported_chains as ChainName[]}
+              nested
+            />
           </div>
 
           {deviceLabels.length > 0 && (

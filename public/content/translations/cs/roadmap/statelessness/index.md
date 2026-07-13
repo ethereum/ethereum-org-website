@@ -1,6 +1,6 @@
 ---
 title: Bezstavovost, exspirace stavu a exspirace historie
-description: Vysvětlení exspirace historie a bezstavového Etherea
+description: "Vysvětlení exspirace historie a bezstavového Etherea"
 lang: cs
 ---
 

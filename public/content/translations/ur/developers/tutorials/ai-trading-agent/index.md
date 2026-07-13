@@ -584,21 +584,21 @@ uv run test-predictor.py
 متوقع نتیجہ کچھ اس طرح ہے:
 
 ```
-2026-01-05T19:50 کے لیے پیش گوئی: متوقع 3138.93 USD، اصل 3218.92 USD، غلطی 79.99 USD
-2026-01-06T19:56 کے لیے پیش گوئی: متوقع 3243.39 USD، اصل 3221.08 USD، غلطی 22.31 USD
-2026-01-07T20:02 کے لیے پیش گوئی: متوقع 3223.24 USD، اصل 3146.89 USD، غلطی 76.35 USD
-2026-01-08T20:11 کے لیے پیش گوئی: متوقع 3150.47 USD، اصل 3092.04 USD، غلطی 58.43 USD
+Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 79.99 USD
+Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
+Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
+Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
 .
 .
 .
-2026-01-31T22:33 کے لیے پیش گوئی: متوقع 2637.73 USD، اصل 2417.77 USD، غلطی 219.96 USD
-2026-02-01T22:41 کے لیے پیش گوئی: متوقع 2381.70 USD، اصل 2318.84 USD، غلطی 62.86 USD
-2026-02-02T22:49 کے لیے پیش گوئی: متوقع 2234.91 USD، اصل 2349.28 USD، غلطی 114.37 USD
-29 پیش گوئیوں پر اوسط پیش گوئی کی غلطی: 83.87103448275862068965517241 USD
-فی سفارش اوسط تبدیلی: 4.787931034482758620689655172 USD
-تبدیلیوں کا معیاری تغیر (Standard variance): 104.42 USD
-منافع بخش دن: 51.72%
-نقصان والے دن: 48.28%
+Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
+Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
+Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
+Mean prediction error over 29 predictions: 83.87103448275862068965517241 USD
+Mean change per recommendation: 4.787931034482758620689655172 USD
+Standard variance of changes: 104.42 USD
+Profitable days: 51.72%
+Losing days: 48.28%
 ```
 
 ٹیسٹر کا زیادہ تر حصہ ایجنٹ جیسا ہی ہے، لیکن یہاں وہ حصے ہیں جو نئے ہیں یا جن میں ترمیم کی گئی ہے۔
@@ -766,19 +766,19 @@ uv run agent.py
 
 ```
 (ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
-موجودہ قیمت: 1843.16
-2026-02-06T23:07 میں، متوقع قیمت: 1724.41 USD
-ٹریڈ سے پہلے اکاؤنٹ بیلنس:
-USDC بیلنس: 927301.578272
-WETH بیلنس: 500
-بیچیں، مجھے توقع ہے کہ قیمت 118.75 USD تک گر جائے گی
-منظور کرنے کی ٹرانزیکشن بھیجی گئی: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
-منظور کرنے کی ٹرانزیکشن مائن ہو گئی۔
-بیچنے کی ٹرانزیکشن بھیجی گئی: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
-بیچنے کی ٹرانزیکشن مائن ہو گئی۔
-ٹریڈ کے بعد اکاؤنٹ بیلنس:
-USDC بیلنس: 929143.797116
-WETH بیلنس: 499
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
 ```
 
 اسے درحقیقت استعمال کرنے کے لیے، آپ کو چند معمولی تبدیلیوں کی ضرورت ہے۔

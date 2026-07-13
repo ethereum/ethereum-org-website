@@ -118,7 +118,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       <main className="pb-page">
         <MainArticle className="flow **:data-[label=button-link]:max-md:w-full *:[section]:px-page *:[section]:py-space-2x">
           {/* Why get involved */}
-          <Section>
+          <Section id="why-get-involved">
             <h2 className="md:text-center">
               {t("page-community-why-get-involved-title")}
             </h2>
@@ -157,12 +157,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </div>
             <Grid balanced={4}>
               {cards.map((card, idx) => (
-                <Card
-                  key={idx}
-                  href={card.href}
-                  variant="nested"
-                  hoverEffect="lift"
-                >
+                <Card key={idx} href={card.href} variant="nested" hoverLift>
                   <CardHeader>
                     <CardBanner background="none" fit="contain" zoom={false}>
                       <Image
@@ -183,6 +178,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
           {/* Open source */}
           <Section
+            id="open-source"
             data-flow="skip"
             className="flex gap-space-3x *:flex-1 max-md:flex-col md:items-center"
           >
@@ -214,6 +210,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
           {/* Contribute */}
           <Section
+            id="contribute"
             data-flow="skip"
             className="flex flex-col gap-space-3x *:flex-1 md:flex-row-reverse md:items-center"
           >
@@ -245,6 +242,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
           {/* Support */}
           <Section
+            id="support"
             data-flow="skip"
             className="flex gap-space-3x *:flex-1 max-md:flex-col md:items-center"
           >
@@ -266,7 +264,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           </Section>
 
           {/* Try Ethereum */}
-          <Section>
+          <Section id="try-ethereum">
             <h2>{t("page-community-try-ethereum")}</h2>
             <Grid columns={2} size="wide">
               <Callout

@@ -271,8 +271,8 @@ Selain itu, tidak selalu mungkin bagi pemverifikasi program untuk menentukan apa
 
 **Mythril** - _Alat eksekusi simbolik untuk mendeteksi kerentanan dalam kontrak pintar Ethereum_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Dokumentasi](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [Dokumentasi](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## Bacaan lebih lanjut {#further-reading}
 

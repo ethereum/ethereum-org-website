@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "ইথেরিয়াম গভর্ন্যান্স সম্পর্কে আরও জানুন",
   "page-roadmap-hero-alt": "ইথেরিয়াম রোডম্যাপ",
   "page-roadmap-technical-upgrades-title": "ইথেরিয়ামে কী কী প্রযুক্তিগত আপগ্রেড আসছে?",
+  "page-roadmap-post-quantum-title": "পোস্ট-কোয়ান্টাম নিরাপত্তা",
+  "page-roadmap-post-quantum-description": "কোয়ান্টাম কম্পিউটার একদিন সেই ক্রিপ্টোগ্রাফি ভেঙে ফেলতে পারে যার উপর ব্লকচেইন নির্ভর করে। কোয়ান্টাম কম্পিউটিং একটি বাস্তব হুমকি হয়ে ওঠার আগেই ইথেরিয়ামের পোস্ট-কোয়ান্টাম আপগ্রেডগুলি দুর্বল অ্যালগরিদমগুলিকে প্রতিস্থাপন করবে।",
   "page-roadmap-danksharding-title": "ড্যাঙ্কশার্ডিং",
   "page-roadmap-danksharding-description": "ড্যাঙ্কশার্ডিং ইথেরিয়াম ব্লকগুলিতে ডেটার \"ব্লব\" যোগ করে ব্যবহারকারীদের জন্য লেয়ার ২ (l2) রোলআপগুলিকে অনেক সস্তা করে তোলে।",
   "page-roadmap-single-slot-finality-title": "একক স্লট চূড়ান্তকরণ",

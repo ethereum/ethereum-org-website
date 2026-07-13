@@ -103,14 +103,12 @@ summaryPoints:
 
 ## مزید مطالعہ {#further-reading}
 
-- [<span dir="ltr">NFTs</span> کے لیے ابتدائی افراد کی گائیڈ](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _لنڈا ژی (Linda Xie)، جنوری <span dir="ltr">2020</span>_
+- [<span dir="ltr">NFTs</span> کے لیے ابتدائی افراد کی گائیڈ](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _لنڈا ژی، جنوری 2020_
 - [<span dir="ltr">Etherscan NFT</span> ٹریکر](https://etherscan.io/nft-top-contracts)
 - [<span dir="ltr">Blockscout NFT</span> ٹریکر](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [<span dir="ltr">ERC-721</span> ٹوکن کا معیار](/developers/docs/standards/tokens/erc-721/)
 - [<span dir="ltr">ERC-1155</span> ٹوکن کا معیار](/developers/docs/standards/tokens/erc-1155/)
-- [مقبول <span dir="ltr">NFT</span> ایپس اور ٹولز](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 - [<span dir="ltr">NFT</span> معیارات کی وکی](https://nft-standards.gitbook.io/nft-standards-wiki)
-
 ## دیگر وسائل {#other-resources}
 
 - [<span dir="ltr">NFTScan</span>](https://nftscan.com/)

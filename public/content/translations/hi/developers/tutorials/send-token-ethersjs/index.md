@@ -20,8 +20,7 @@ published: 2021-04-06
 ### शुरुआत करने के लिए {#to-get-started}
 
 शुरुआत करने के लिए, हमें सबसे पहले अपने JavaScript में ethers.js लाइब्रेरी को इंपोर्ट करना होगा
-ethers.js(5.0) शामिल करें
-
+ethers.js v5 शामिल करें
 ### इंस्टॉल करना {#install-ethersjs}
 
 ```shell

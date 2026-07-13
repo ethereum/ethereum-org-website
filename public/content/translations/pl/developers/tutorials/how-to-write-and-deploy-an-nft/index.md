@@ -17,7 +17,7 @@ W tym samouczku przejdziemy przez tworzenie i wdrożenie inteligentnego kontrakt
 
 W części 2 tego samouczka omówimy, jak możemy użyć naszego inteligentnego kontraktu do wybicia NFT, a w części 3 wyjaśnimy, jak wyświetlić swoje NFT w MetaMask.
 
-I oczywiście, jeśli w którymkolwiek momencie będziesz mieć pytania, nie wahaj się skontaktować na [Discordzie Alchemy](https://discord.gg/gWuC7zB) lub odwiedzić [dokumentację API NFT Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
+I oczywiście, jeśli w którymkolwiek momencie będziesz mieć pytania, nie wahaj się skontaktować na [Discordzie Alchemy](https://discord.gg/gWuC7zB) lub odwiedzić [dokumentację API NFT Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart)!
 
 ## Krok 1: Połącz się z siecią Ethereum {#connect-to-ethereum}
 
@@ -27,7 +27,7 @@ W tym samouczku skorzystamy również z narzędzi programistycznych Alchemy do m
 
 ## Krok 2: Utwórz swoją aplikację (i klucz API) {#make-api-key}
 
-Po utworzeniu konta Alchemy możesz wygenerować klucz API, tworząc aplikację. Pozwoli nam to na wysyłanie żądań do sieci testowej Sepolia. Sprawdź [ten przewodnik](https://docs.alchemyapi.io/guides/choosing-a-network), jeśli chcesz dowiedzieć się więcej o sieciach testowych.
+Po utworzeniu konta Alchemy możesz wygenerować klucz API, tworząc aplikację. Pozwoli nam to na wysyłanie żądań do sieci testowej Sepolia. Sprawdź [ten przewodnik](https://www.alchemy.com/docs/choosing-a-web3-network), jeśli chcesz dowiedzieć się więcej o sieciach testowych.
 
 1. Przejdź do strony „Create App” w swoim panelu Alchemy, najechawszy na „Apps” na pasku nawigacyjnym i klikając „Create App”
 
@@ -53,14 +53,13 @@ Aby wdrożyć nasz inteligentny kontrakt w sieci testowej, będziemy potrzebowa�
 
 ## Krok 5: Sprawdź swoje saldo {#check-balance}
 
-Aby upewnić się, że nasze saldo tam jest, wyślijmy żądanie [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) za pomocą [narzędzia composer od Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Zwróci to ilość ETH w naszym portfelu. Po wprowadzeniu adresu konta MetaMask i kliknięciu „Send Request”, powinieneś zobaczyć odpowiedź podobną do tej:
+Aby upewnić się, że nasze saldo tam jest, wyślijmy żądanie [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) za pomocą [narzędzia sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Zwróci to ilość ETH w naszym portfelu. Po wprowadzeniu adresu konta MetaMask i kliknięciu „Send Request”, powinieneś zobaczyć odpowiedź podobną do tej:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-> **Uwaga** Ten wynik jest w wei, a nie w ETH. Wei jest używane jako najmniejszy nominał etheru. Przelicznik z wei na ETH to 1 eth = 10<sup>18</sup> wei. Więc jeśli przekonwertujemy 0xde0b6b3a7640000 na system dziesiętny, otrzymamy 1\*10<sup>18</sup> wei, co równa się 1 ETH.
+> **Uwaga** Ten wynik jest w wei, a nie w ETH. Wei jest używane jako najmniejszy nominał etheru. Przelicznik z wei na ETH to 1 eth = 10<sup>18</sup> wei. Więc jeśli zamienimy 0xde0b6b3a7640000 na system dziesiętny, otrzymamy 1\*10<sup>18</sup> wei, co równa się 1 ETH.
 
 Uff! Nasze fałszywe pieniądze są na miejscu.
-
 ## Krok 6: Zainicjuj nasz projekt {#initialize-project}
 
 Najpierw będziemy musieli utworzyć folder dla naszego projektu. Przejdź do wiersza poleceń i wpisz:
@@ -68,7 +67,7 @@ Najpierw będziemy musieli utworzyć folder dla naszego projektu. Przejdź do wi
     mkdir my-nft
     cd my-nft
 
-Teraz, gdy jesteśmy w folderze naszego projektu, użyjemy npm init, aby zainicjować projekt. Jeśli nie masz jeszcze zainstalowanego npm, postępuj zgodnie z [tymi instrukcjami](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (będziemy również potrzebować [Node.js](https://nodejs.org/en/download/), więc pobierz go również!).
+Teraz, gdy jesteśmy w folderze naszego projektu, użyjemy npm init, aby zainicjować projekt. Jeśli nie masz jeszcze zainstalowanego npm, postępuj zgodnie z [instrukcjami instalacji Node.js](https://nodejs.org/en/download/) (do tego samouczka będziemy potrzebować Node.js i npm).
 
     npm init
 
@@ -100,7 +99,6 @@ Nie ma większego znaczenia, jak odpowiesz na pytania instalacyjne; oto jak my t
 ```
 
 Zatwierdź plik package.json i jesteśmy gotowi do działania!
-
 ## Krok 7: Zainstaluj [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 Hardhat to środowisko programistyczne do kompilacji, wdrażania, testowania i debugowania oprogramowania Ethereum. Pomaga programistom podczas lokalnego budowania inteligentnych kontraktów i zdecentralizowanych aplikacji (dapp) przed wdrożeniem ich w działającym łańcuchu.
@@ -342,7 +340,7 @@ Adres „From” powinien odpowiadać adresowi Twojego konta MetaMask, a adres �
 
 Taaak! Właśnie wdrożyłeś swój inteligentny kontrakt NFT w łańcuchu (sieci testowej) Ethereum!
 
-Aby zrozumieć, co dzieje się pod maską, przejdźmy do zakładki Explorer w naszym [panelu Alchemy](https://dashboard.alchemyapi.io/explorer). Jeśli masz wiele aplikacji Alchemy, upewnij się, że filtrujesz według aplikacji i wybierasz „MyNFT”.
+Aby zrozumieć, co dzieje się pod maską, przejdźmy do zakładki Explorer w naszym [panelu Alchemy](https://dashboard.alchemy.com/explorer). Jeśli masz wiele aplikacji Alchemy, upewnij się, że filtrujesz według aplikacji i wybierasz „MyNFT”.
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

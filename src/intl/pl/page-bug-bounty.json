@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "Program nagród Ethereum bierze pod uwagę wiele zmiennych przy ustalaniu nagród. Ustalenie kwalifikowalności, punktacji i wszystkich warunków związanych z nagrodą leży w wyłącznej i ostatecznej gestii panelu Bug Bounty Fundacji Ethereum.",
   "page-upgrades-bug-bounty-leaderboard": "Zobacz pełne tabele wyników",
   "page-upgrades-bug-bounty-leaderboard-list": "Tabela wyników Bug Bounty",
+  "page-upgrades-bug-bounty-leaderboard-position": "Na miejscu numer {rank} z {score, plural, one {# punktem} other {# punktami}}",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(Zobacz profil na GitHubie)",
   "page-upgrades-bug-bounty-leaderboard-points": "punkty",
   "page-upgrades-bug-bounty-ledger-desc": "Specyfikacje Ethereum szczegółowo opisują uzasadnienie projektowe dla warstwy wykonawczej i warstwy konsensusu.",
   "page-upgrades-bug-bounty-ledger-title": "Błędy w specyfikacji",

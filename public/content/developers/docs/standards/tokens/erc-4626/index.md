@@ -22,7 +22,7 @@ ERC-4626 is optimized for atomic deposits and redemptions up to a limit. If the 
 
 ERC-7540 expands the utility of ERC-4626 Vaults for asynchronous use cases. The existing Vault interface (`deposit`/`withdraw`/`mint`/`redeem`) is fully utilized to claim asynchronous Requests.
 
-The ERC-7540 extension is described fully in [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+Learn more about [ERC-7540 Asynchronous Tokenized Vaults](/developers/docs/standards/tokens/erc-7540/).
 
 **Multi-asset vault extension (ERC-7575)**
 

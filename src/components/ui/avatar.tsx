@@ -14,30 +14,33 @@ import { LinkBox, LinkOverlay } from "./link-box"
 
 const avatarStyles = tv({
   slots: {
-    container:
-      "relative shrink-0 overflow-hidden rounded-full focus:outline-4 focus:-outline-offset-1 focus:rounded-full active:shadow-none [&_img]:hover:opacity-70 border border-transparent active:border-primary-hover ",
+    container: cn(
+      "relative shrink-0 overflow-hidden rounded-full focus:outline-4 focus:-outline-offset-1 focus:rounded-full active:shadow-none [&_img]:hover:opacity-70 border border-transparent active:border-primary-hover",
+      // Hover transition properties
+      "transition-shadow duration-300"
+    ),
     fallback: "bg-body text-body-inverse flex justify-center items-center",
   },
   variants: {
     size: {
       xs: {
         container:
-          "size-6 hover:shadow-[2px_2px_0_var(--avatar-base-shadow-color)] peer-hover:shadow-[2px_2px_0_var(--avatar-base-shadow-color)]",
+          "size-6 hover:shadow-primary-no-blur-0.5 peer-hover:shadow-primary-no-blur-0.5",
         fallback: "text-2xs",
       },
       sm: {
         container:
-          "size-8 hover:shadow-[2px_2px_0_var(--avatar-base-shadow-color)] peer-hover:shadow-[2px_2px_0_var(--avatar-base-shadow-color)]",
+          "size-8 hover:shadow-primary-no-blur-0.5 peer-hover:shadow-primary-no-blur-0.5",
         fallback: "text-sm",
       },
       md: {
         container:
-          "size-12 hover:shadow-[4px_4px_0_var(--avatar-base-shadow-color)] peer-hover:shadow-[4px_4px_0_var(--avatar-base-shadow-color)]",
+          "size-12 hover:shadow-primary-no-blur-1 peer-hover:shadow-primary-no-blur-1",
         fallback: "text-lg",
       },
       lg: {
         container:
-          "size-16 hover:shadow-[4px_4px_0_var(--avatar-base-shadow-color)] peer-hover:shadow-[4px_4px_0_var(--avatar-base-shadow-color)]",
+          "size-16 hover:shadow-primary-no-blur-1 peer-hover:shadow-primary-no-blur-1",
         fallback: "text-2xl",
       },
     },
@@ -64,11 +67,6 @@ const AvatarBase = React.forwardRef<
   <AvatarStylesContext.Provider value={avatarStyles({ size })}>
     <AvatarPrimitive.Root
       ref={ref}
-      style={
-        {
-          "--avatar-base-shadow-color": "hsl(var(--primary-low-contrast))",
-        } as React.CSSProperties
-      }
       className={avatarStyles({ size }).container({ className })}
       {...props}
     />

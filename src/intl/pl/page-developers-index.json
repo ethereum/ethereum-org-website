@@ -137,5 +137,16 @@
   "page-developers-why-title": "Zarabiaj dobrze. Pracuj zdalnie. Buduj przyszłość.",
   "page-developers-why-subtitle": "Ponad połowa karier w branży blockchain to praca zdalna, a niektóre szacunki mówią nawet o 70%.",
   "page-developers-why-avg-salary-dev": "Średnie wynagrodzenie programisty",
-  "page-developers-why-avg-salary-blockchain": "Średnie wynagrodzenie w branży blockchain"
+  "page-developers-why-avg-salary-blockchain": "Średnie wynagrodzenie w branży blockchain",
+  "page-developers-why-grid-money-heading": "Programowalne pieniądze",
+  "page-developers-why-grid-money-desc": "Pisz kod, który określa, jak przemieszcza się wartość, kiedy i do kogo. Żadnych banków, żadnych pośredników, tylko zdefiniowana przez Ciebie logika.",
+  "page-developers-why-grid-skills-heading": "Umiejętności przyszłości",
+  "page-developers-why-grid-skills-desc": "Poznaj fundamenty kolejnej generacji internetu. Technologia może ewoluować, ale zasady Web3 zostaną z nami na stałe.",
+  "page-developers-why-grid-censorship-heading": "Odporność na cenzurę",
+  "page-developers-why-grid-censorship-desc": "Twórz projekty i handel, których nie mogą uciszyć rządy, korporacje ani algorytmy. Jeśli coś ma znaczenie, pozostaje w sieci.",
+  "page-developers-why-grid-sovereignty-heading": "Cyfrowa suwerenność",
+  "page-developers-why-grid-sovereignty-desc": "Bądź właścicielem swojej tożsamości, aktywów i twórczości w sieci, bez polegania na platformach, które mogą Cię usunąć.",
+  "page-developers-blog-title": "Aktualizacje dla budowniczych",
+  "page-developers-blog-desc": "Informacje o najnowszych zasobach, narzędziach i nowościach dla budowniczych Ethereum.",
+  "page-developers-blog-view-all": "Zobacz wszystkie aktualizacje"
 }

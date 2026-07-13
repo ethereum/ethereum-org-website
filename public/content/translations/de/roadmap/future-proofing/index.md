@@ -38,23 +38,22 @@ Nein. Kein Quantencomputer kann heute die Kryptographie von Ethereum knacken. Di
 
 ### Was wird getan? {#what-is-being-done}
 
-Ethereum ist derzeit der proaktivste Verteidiger gegen Quantenbedrohungen im Blockchain-Ökosystem. Die Ethereum Foundation hat im Januar 2026 ein spezielles **Post-Quantum Security Team** gegründet, und die aktive Arbeit erstreckt sich über mehrere Client-Teams und Forschungsgruppen. Die Arbeit des EF Post-Quantum-Teams wird öffentlich unter [pq.ethereum.org](https://pq.ethereum.org) verfolgt.
+Ethereum ist derzeit der proaktivste Verteidiger gegen Quantenbedrohungen im Blockchain-Ökosystem. Die Ethereum Foundation hat im Januar 2026 ein dediziertes **Post-Quantum-Sicherheitsteam** gegründet, und die aktive Arbeit erstreckt sich über mehrere Client-Teams und Forschungsgruppen. Die Arbeit des Post-Quantum-Teams der EF wird öffentlich unter [pq.ethereum.org](https://pq.ethereum.org) verfolgt.
 
 Zu den aktiven Arbeiten gehören:
 
 - **Hash-basierte Signaturen (leanXMSS)**: Ein quantensicherer Ersatz für Validator-Signaturen, der auf Hash-Funktionen aufbaut, die Quantencomputer nicht effizient knacken können.
-- **Minimale zkVM (leanVM)**: Da quantensichere Signaturen größer sind als die derzeit verwendeten Signaturen, wird leanXMSS mit einer minimalen zkVM (leanVM) gekoppelt. Diese Engine aggregiert quantensichere Signaturen effizient und komprimiert die Daten um das 250-fache, sodass das Netzwerk nach dem Übergang schnell bleibt.
-- **Wöchentliche Interop-Tests**: Mehr als 10 Client-Teams nehmen an regelmäßigen Post-Quanten-Devnets teil.
-- **Datenverfügbarkeit:** Die Aktualisierung der zugrunde liegenden Kryptographie, die zur Verarbeitung großer Mengen an Netzwerkdaten verwendet wird, stellt sicher, dass Ethereum schnell und erschwinglich in der Nutzung bleibt, ohne zukünftige Quanten-Schwachstellen zu riskieren.
+- **Minimale zkVM (leanVM)**: Da quantensichere Signaturen größer sind als die derzeit verwendeten Signaturen, wird leanXMSS mit einer minimalen zkVM (leanVM) gekoppelt. Diese Engine aggregiert quantensichere Signaturen effizient und komprimiert die Daten um das 250-Fache, sodass das Netzwerk nach dem Übergang schnell bleibt.
+- **Wöchentliche Interop-Tests**: Mehr als 10 Client-Teams nehmen an regelmäßigen Post-Quantum-Devnets teil.
+- **Datenverfügbarkeit:** Die Aktualisierung der zugrunde liegenden Kryptographie, die zur Verarbeitung großer Mengen an Netzwerkdaten verwendet wird, stellt sicher, dass Ethereum schnell und erschwinglich in der Nutzung bleibt, ohne zukünftige Quantenschwachstellen zu riskieren.
 - **Poseidon-Preis**: Ein Forschungspreis in Höhe von 1 Million US-Dollar, der auf Verbesserungen bei Hash-basierten kryptographischen Primitiven abzielt.
 - **NIST-Standards**: Das US-amerikanische National Institute of Standards and Technology hat im August 2024 drei Standards für Post-Quanten-Kryptographie fertiggestellt (ML-KEM, ML-DSA, SLH-DSA). Die Arbeit von Ethereum baut auf diesen Grundlagen auf.
 
-Ein wichtiger Teil der Übergangsstrategie ist **EIP-8141**, das native [Kontoabstraktion](/roadmap/account-abstraction/) einführt. Dies ermöglicht es einzelnen Konten, ihre eigene Signaturüberprüfung zu wählen, was bedeutet, dass Benutzer zu quantensicheren Signaturen wechseln könnten, **ohne auf eine einzige protokollweite Migration warten zu müssen**. EIP-8141 wird für den Hegotá Hard Fork (geplant für die zweite Hälfte 2026) in Betracht gezogen.
+Ein wichtiger Teil der Übergangsstrategie ist **EIP-8141**, das native [Kontoabstraktion](/roadmap/account-abstraction/) einführt. Dies ermöglicht es einzelnen Konten, ihre eigene Signaturüberprüfung zu wählen, was bedeutet, dass Benutzer zu quantensicheren Signaturen wechseln könnten, **ohne auf eine einzige protokollweite Migration warten zu müssen**. EIP-8141 wird für den Hegotá-Hard-Fork (geplant für die zweite Hälfte 2026) in Betracht gezogen.
 
-Die Ethereum Foundation hat strukturierte Fork-Meilensteine skizziert, die den Abschluss der zentralen Post-Quanten-Infrastruktur bis etwa 2029 anstreben. Dies sind Planungsziele, keine garantierten Zusagen.
+Die Ethereum Foundation hat strukturierte Fork-Meilensteine skizziert, die den Abschluss der zentralen Post-Quantum-Infrastruktur bis etwa 2029 anstreben. Dies sind Planungsziele, keine garantierten Zusagen.
 
-[Lesen Sie unseren detaillierten Leitfaden zur Post-Quanten-Kryptographie auf Ethereum](/roadmap/future-proofing/quantum-resistance/)
-
+<ButtonLink variant="outline" href="/roadmap/future-proofing/quantum-resistance/">Mehr zur Quantenresistenz</ButtonLink>
 ## Einfacheres und effizienteres Ethereum {#simpler-more-efficient-ethereum}
 
 Komplexität schafft Möglichkeiten für Fehler und Schwachstellen. Ein Teil der Roadmap konzentriert sich auf die **Vereinfachung von Ethereum und die Beseitigung technischer Schulden**, damit das Protokoll einfacher zu warten, zu prüfen und zu verstehen ist.

@@ -86,15 +86,13 @@ Unatafuta masasisho ya itifaki ya baadaye? [Jifunze kuhusu masasisho yajayo kwen
 
 [Zaidi kuhusu Fusaka](/roadmap/fusaka/)
 
-### Prague-Electra ("Pectra") {#pectra}
-
 <NetworkUpgradeSummary name="pectra" />
 
-Sasisho la Prague-Electra ("Pectra") lilijumuisha maboresho kadhaa kwenye itifaki ya Ethereum yenye lengo la kuboresha uzoefu kwa watumiaji wote, mitandao ya tabaka la 2 (l2), waweka dhamana na waendeshaji wa nodi.
+Sasisho la Prague-Electra ("Pectra") lilijumuisha maboresho kadhaa kwenye itifaki ya Ethereum yaliyolenga kuboresha uzoefu kwa watumiaji wote, mitandao ya tabaka la 2 (l2), waweka dhamana na waendeshaji wa nodi.
 
-Uwekaji dhamana ulipata sasisho kwa akaunti za mthibitishaji zinazojumuisha, na udhibiti ulioboreshwa wa fedha zilizowekwa dhamana kwa kutumia anwani ya utoaji ya utekelezaji. EIP-7251 iliongeza kiwango cha juu cha salio tendaji kwa mthibitishaji mmoja hadi 2048, na kuboresha ufanisi wa mtaji kwa waweka dhamana. EIP-7002 iliwezesha akaunti ya utekelezaji kuanzisha kwa usalama vitendo vya mthibitishaji, ikiwa ni pamoja na kujitoa, au kutoa sehemu ya fedha, kuboresha uzoefu kwa waweka dhamana wa ETH, huku ikisaidia kuimarisha uwajibikaji kwa waendeshaji wa nodi.
+Uwekaji dhamana ulipata sasisho kwa akaunti za mthibitishaji zinazojilimbikiza, na udhibiti ulioboreshwa wa fedha zilizowekwa dhamana kwa kutumia anwani ya utoaji ya utekelezaji. EIP-7251 iliongeza salio tendaji la juu zaidi kwa mthibitishaji mmoja hadi 2048, na kuboresha ufanisi wa mtaji kwa waweka dhamana. EIP-7002 iliwezesha akaunti ya utekelezaji kuanzisha kwa usalama vitendo vya mthibitishaji, ikiwa ni pamoja na kujitoa, au kutoa sehemu ya fedha, kuboresha uzoefu kwa waweka dhamana wa ETH, huku ikisaidia kuimarisha uwajibikaji kwa waendeshaji wa nodi.
 
-Sehemu nyingine za sasisho zililenga kuboresha uzoefu kwa watumiaji wa kawaida. EIP-7702 ilileta uwezo kwa akaunti ya kawaida isiyo ya mkataba mahiri ([EOA](/glossary/#eoa)) kutekeleza msimbo sawa na mkataba mahiri. Hii ilifungua utendaji mpya usio na kikomo kwa akaunti za asili za Ethereum, kama vile ukusanyaji wa mafungu wa miamala, ufadhili wa gesi, uthibitishaji mbadala, udhibiti wa matumizi unaoweza kupangwa, mifumo ya kurejesha akaunti na zaidi.
+Sehemu nyingine za sasisho zililenga kuboresha uzoefu kwa watumiaji wa kawaida. EIP-7702 ilileta uwezo kwa akaunti ya kawaida isiyo ya mkataba mahiri ([EOA](/glossary/#eoa)) kutekeleza msimbo sawa na mkataba mahiri. Hili lilifungua utendaji mpya usio na kikomo kwa akaunti za kitamaduni za Ethereum, kama vile ukusanyaji wa mafungu wa muamala, ufadhili wa gesi, uthibitishaji mbadala, udhibiti wa matumizi unaoweza kupangwa, mbinu za kurejesha akaunti na zaidi.
 
 <ExpandableCard title="EIP za Pectra" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
 
@@ -116,7 +114,7 @@ Uzoefu bora wa uwekaji dhamana:
   <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Toa amana za mthibitishaji mnyororoni</em></li>
 </ul>
 
-Maboresho ya ufanisi na usalama wa itifaki:
+Ufanisi wa itifaki na maboresho ya usalama:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>Prikampaili kwa operesheni za tao la BLS12-381</em></li>
@@ -126,7 +124,6 @@ Maboresho ya ufanisi na usalama wa itifaki:
 
 </ExpandableCard>
 
-- [Pectra.wtf](https://pectra.wtf)
 - [Jinsi Pectra itakavyoboresha uzoefu wa uwekaji dhamana](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Soma vipimo vya sasisho la Electra](https://github.com/ethereum/consensus-specs/tree/master/specs/electra/)
 - [Maswali Yanayoulizwa Mara kwa Mara kuhusu Prague-Electra ("Pectra")](/roadmap/pectra/)

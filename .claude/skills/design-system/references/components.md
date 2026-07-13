@@ -325,6 +325,15 @@ import { Tooltip, TooltipContent } from "@/components/ui/tooltip"
 
 Bare hover-only Radix tooltip. Used only inside `@/components/Tooltip`. Use `@/components/Tooltip` instead.
 
+#### Floating surfaces (Popover, Tooltip) -- the `popover-outline` utility + `nested`
+
+Both `PopoverContent` and `TooltipContent` share the `popover-outline` utility (`src/styles/utilities.css`) for their border + elevation. It exists because a plain CSS `border` traces only the content box and **severs the Radix `Arrow`** (a separate SVG outside the box). `popover-outline` instead draws the 1px themed border *and* the lift as a stack of `drop-shadow()` filters, which follow the box + arrow as one shape.
+
+- **Don't add `border`/`box-shadow` back.** Depth must stay inside the same `filter` -- a `box-shadow` halo becomes the filter's input and the border drop-shadows would trace the faded halo edge and vanish. Adjust elevation by editing the utility, not the call site.
+- **No `overflow-hidden` on the content** -- it clips the Arrow.
+- **Shadow color is themed** via `hsla(var(--body), var(--shadow-opacity))`; `--shadow-opacity` (`0.1` light / `0.15` dark) is set inside the utility, so in dark mode the lift is a light halo by design, not a bug.
+- **`nested` prop** (both components, and `@/components/Tooltip`): swaps the surface + arrow fill from `bg-background-highlight` to the base `bg-background`. Pass it when the floating surface opens over a container that is itself `bg-background-highlight` (e.g. a wallet table row on hover) and would otherwise blend in.
+
 ### `DropdownMenu`
 
 ```tsx
@@ -332,6 +341,8 @@ import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, ... } from "@/c
 ```
 
 Many subparts. Note: this file currently uses several stale shadcn class names that don't resolve in this project's tokens (see `gotchas.md`).
+
+`DropdownMenuContent` is capped to `--radix-dropdown-menu-content-available-height` and scrolls (`overflow-y-auto`) by default, so long menus never overflow off-screen on short displays -- don't hand-roll `max-h`/`overflow` on the consumer. Pass `scrollAffordance` for the up/down chevron + fade indicators (instead of a native scrollbar) when content is clipped; the affordance logic lives in `ui/dropdown-menu-scroll-area.tsx`. `ButtonDropdown` is the reference consumer.
 
 ### `Select`
 
@@ -777,6 +788,14 @@ import { MdComponents } from "@/components/MdComponents"
 ```
 
 The shortcode registry for markdown content. To add a markdown shortcode, add the component to `MdComponents`.
+
+### `MarkdownVideo` (markdown clips)
+
+Renders `![](./x.mp4)` in markdown content (reached via `MarkdownImage`; not imported in app code) — the modern GIF replacement: silent, looping, plays only while on-screen, controls instead of autoplay under `prefers-reduced-motion`.
+
+**Sizing convention**: an optional `#WxH` fragment on the markdown src declares the clip's intrinsic dimensions — `![](./demo.mp4#800x400)` — and sizes the box to the clip's own aspect ratio (landscape fills the content width; taller-than-wide is height-capped). Without it, a fixed 16:9 box (9:16 via the `-portrait` filename suffix) letterboxes the clip with `object-contain`.
+
+Use the fragment for any off-ratio clip — screen captures usually are. It's presentation metadata only: browsers strip fragments before requesting, so the asset URL stays canonical (one CDN/browser cache entry, no file renames) and references without it — e.g. not-yet-repropagated translations — still play in the default box. **Never rename a video asset to encode metadata.** Implementation notes: `rehypeImg` and `MarkdownImage` strip the fragment before extension checks (an mp4 falling into the image path makes `image-size` throw at build); `MarkdownVideo` sets `width`/`height` attributes plus explicit CSS `aspect-ratio` because the attribute→ratio mapping is unreliable on `<video>` and `h-auto` overrides the height attribute — together they reserve the box before video metadata loads (no CLS).
 
 ## Components NOT to Use
 

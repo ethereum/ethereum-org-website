@@ -1,6 +1,6 @@
 ---
-title: Comment échanger des jetons
-description: Un guide sur la façon d'échanger des jetons sur Ethereum.
+title: "Comment échanger des jetons"
+description: "Un guide sur la façon d'échanger des jetons sur Ethereum."
 lang: fr
 ---
 

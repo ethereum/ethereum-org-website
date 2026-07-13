@@ -117,11 +117,10 @@ _ما الذي تتضمنه ترقية بيكترا؟ - كريستين كيم_
 
 _ترقية بيكترا في إيثيريوم: ما يحتاج المخزنون إلى معرفته — <span dir="ltr">Blockdaemon</span>_
 
-## قراءة إضافية {#further-reading}
+## قراءات إضافية {#further-reading}
 
 - [خارطة طريق إيثيريوم](/roadmap/)
 - [الأسئلة الشائعة حول بيكترا](https://epf.wiki/#/wiki/pectra-faq)
-- [صفحة معلومات <span dir="ltr">Pectra.wtf</span>](https://pectra.wtf)
 - [كيف تعزز بيكترا تجربة المخزنين](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [صفحة معلومات <span dir="ltr">EIP7702</span>](https://eip7702.io/)
 - [شبكات تطوير بيكترا](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

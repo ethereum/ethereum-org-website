@@ -11,7 +11,7 @@ published: 2021-03-31
 
 Ikiwa wewe ni mgeni katika uundaji wa mnyororo wa vitalu na hujui pa kuanzia, au ikiwa unataka tu kuelewa jinsi ya kusambaza na kuingiliana na mikataba mahiri, mwongozo huu ni kwa ajili yako. Tutapitia hatua za kuunda na kusambaza mkataba mahiri rahisi kwenye mtandao wa majaribio wa Sepolia kwa kutumia mkoba wa mtandaoni wa [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), na [Alchemy](https://www.alchemy.com/eth) (usijali ikiwa bado huelewi maana ya haya yote, tutayaeleza).
 
-Katika [sehemu ya 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) ya mafunzo haya tutapitia jinsi tunavyoweza kuingiliana na mkataba wetu mahiri pindi utakapokuwa umesambazwa hapa, na katika [sehemu ya 3](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) tutaangazia jinsi ya kuuchapisha kwenye Etherscan.
+Katika [sehemu ya 2](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) ya mafunzo haya tutapitia jinsi tunavyoweza kuingiliana na mkataba wetu mahiri pindi utakapokuwa umesambazwa hapa, na katika [sehemu ya 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) tutaangazia jinsi ya kuuchapisha kwenye Etherscan.
 
 Ikiwa una maswali wakati wowote jisikie huru kuwasiliana nasi kwenye [Discord ya Alchemy](https://discord.gg/gWuC7zB)!
 
@@ -68,13 +68,13 @@ mkdir hello-world
 cd hello-world
 ```
 
-Kwa kuwa sasa tuko ndani ya folda ya mradi wetu, tutatumia `npm init` kuanzisha mradi. Ikiwa bado hujasakinisha npm, fuata [maagizo haya](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (tutahitaji pia Node.js kwa hivyo pakua hiyo pia!).
+Kwa kuwa sasa tuko ndani ya folda ya mradi wetu, tutatumia `npm init` kuanzisha mradi. Ikiwa bado hujasakinisha npm, fuata [maagizo ya usakinishaji wa Node.js](https://nodejs.org/en/download/) (tutahitaji Node.js na npm kwa mafunzo haya).
 
 ```
 npm init
 ```
 
-Haijalishi sana jinsi unavyojibu maswali ya usakinishaji, hivi ndivyo tulivyofanya kwa ajili ya rejeleo:
+Haijalishi sana jinsi unavyojibu maswali ya usakinishaji, hivi ndivyo tulivyofanya kwa marejeleo:
 
 ```
 package name: (hello-world)
@@ -102,7 +102,6 @@ About to write to /Users/.../.../.../hello-world/package.json:
 ```
 
 Idhinisha package.json na tuko tayari kuendelea!
-
 ## Hatua ya 7: Pakua [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
 Hardhat ni mazingira ya uundaji ya kukusanya, kusambaza, kujaribu, na kutatua programu yako ya Ethereum. Inasaidia wasanidi wanapounda mikataba mahiri na programu tumizi zilizogatuliwa (dapps) kwenye kompyuta zao kabla ya kusambaza kwenye mnyororo wa moja kwa moja.
@@ -350,11 +349,11 @@ Anwani ya `From` inapaswa kulingana na anwani ya akaunti yako ya MetaMask na anw
 
 Hongera! Umetoka tu kusambaza mkataba mahiri kwenye mnyororo wa Ethereum 🎉
 
-Ili kuelewa kinachoendelea kiufundi, hebu twende kwenye kichupo cha Explorer (Kichunguzi) katika [dashibodi yetu ya Alchemy](https://dashboard.alchemyapi.io/explorer). Ikiwa una programu nyingi za Alchemy hakikisha unachuja kulingana na programu na uchague “Hello World”.
+Ili kuelewa kinachoendelea kiufundi, hebu twende kwenye kichupo cha Explorer (Kichunguzi) katika [dashibodi yetu ya Alchemy](https://dashboard.alchemy.com/explorer). Ikiwa una programu nyingi za Alchemy hakikisha unachuja kulingana na programu na uchague “Hello World”.
 ![hello world explorer](./hello-world-explorer.png)
 
-Hapa utaona simu chache za JSON-RPC ambazo Hardhat/Ethers ilitufanyia kiufundi tulipopiga simu kwenye chaguo la kukokotoa la `.deploy()`. Mbili muhimu za kutaja hapa ni [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction), ambalo ni ombi la kuandika mkataba wetu kwenye mnyororo wa Sepolia, na [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash) ambalo ni ombi la kusoma taarifa kuhusu muamala wetu kwa kutumia heshi (mtindo wa kawaida wakati wa miamala). Ili kujifunza zaidi kuhusu kutuma miamala, angalia mafunzo haya kuhusu [kutuma miamala kwa kutumia Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+Hapa utaona simu chache za JSON-RPC ambazo Hardhat/Ethers ilitufanyia kiufundi tulipopiga simu kwenye chaguo la kukokotoa la `.deploy()`. Mbili muhimu za kutaja hapa ni [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), ambalo ni ombi la kuandika mkataba wetu kwenye mnyororo wa Sepolia, na [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash) ambalo ni ombi la kusoma taarifa kuhusu muamala wetu kwa kutumia heshi (mtindo wa kawaida wakati wa miamala). Ili kujifunza zaidi kuhusu kutuma miamala, angalia mafunzo haya kuhusu [kutuma miamala kwa kutumia Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 
-Hiyo ndiyo yote kwa sehemu ya 1 ya mafunzo haya, katika sehemu ya 2 tutaingiliana [na mkataba wetu mahiri](https://www.alchemy.com/docs/interacting-with-a-smart-contract) kwa kusasisha ujumbe wetu wa awali, na katika sehemu ya 3 [tutachapisha mkataba wetu mahiri kwenye Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) ili kila mtu ajue jinsi ya kuingiliana nao.
+Hiyo ndiyo yote kwa sehemu ya 1 ya mafunzo haya, katika sehemu ya 2 tutaingiliana [na mkataba wetu mahiri](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) kwa kusasisha ujumbe wetu wa awali, na katika sehemu ya 3 [tutachapisha mkataba wetu mahiri kwenye Etherscan](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) ili kila mtu ajue jinsi ya kuingiliana nao.
 
 **Unataka kujifunza zaidi kuhusu Alchemy? Angalia [tovuti](https://www.alchemy.com/eth) yetu. Hutaki kamwe kukosa sasisho? Jisajili kwa jarida letu [hapa](https://www.alchemy.com/newsletter)! Hakikisha pia unajiunga na [Discord](https://discord.gg/u72VCg3) yetu.**.

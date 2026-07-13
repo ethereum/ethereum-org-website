@@ -38,23 +38,22 @@ Tidak. Tidak ada komputer kuantum saat ini yang dapat menembus kriptografi Ether
 
 ### Apa yang sedang dilakukan? {#what-is-being-done}
 
-Ethereum saat ini adalah pembela paling proaktif terhadap ancaman kuantum di ekosistem rantai blok. Yayasan Ethereum membentuk **Tim Keamanan Pascakuantum** khusus pada bulan Januari 2026, dan pekerjaan aktif mencakup berbagai tim klien dan kelompok penelitian. Pekerjaan tim Pascakuantum EF dilacak secara publik di [pq.ethereum.org](https://pq.ethereum.org).
+Saat ini, Ethereum adalah pembela paling proaktif terhadap ancaman kuantum di ekosistem rantai blok. Yayasan Ethereum membentuk **tim Keamanan Pascakuantum** khusus pada bulan Januari 2026, dan pekerjaan aktif mencakup berbagai tim klien dan kelompok penelitian. Pekerjaan tim Pascakuantum EF dilacak secara publik di [pq.ethereum.org](https://pq.ethereum.org).
 
 Pekerjaan aktif meliputi:
 
-- **Tanda tangan berbasis hash (leanXMSS)**: Pengganti yang aman dari kuantum untuk tanda tangan validator, dibangun di atas fungsi hash yang tidak dapat ditembus secara efisien oleh komputer kuantum.
-- **zkVM Minimal (leanVM)**: Karena tanda tangan yang aman dari kuantum lebih besar daripada tanda tangan yang digunakan saat ini, leanXMSS dipasangkan dengan zkVM minimal (leanVM). Mesin ini menggabungkan tanda tangan yang aman dari kuantum secara efisien, mengompresi data hingga 250x, sehingga jaringan tetap cepat setelah transisi.
+- **Tanda tangan berbasis hash (leanXMSS)**: Pengganti yang aman dari kuantum untuk tanda tangan validator, dibangun di atas fungsi hash yang tidak dapat dipecahkan secara efisien oleh komputer kuantum.
+- **zkVM minimal (leanVM)**: Karena tanda tangan yang aman dari kuantum lebih besar daripada tanda tangan yang digunakan saat ini, leanXMSS dipasangkan dengan zkVM minimal (leanVM). Mesin ini menggabungkan tanda tangan yang aman dari kuantum secara efisien, mengompresi data hingga 250x, sehingga jaringan tetap cepat setelah transisi.
 - **Pengujian interop mingguan**: Lebih dari 10 tim klien berpartisipasi dalam devnet pascakuantum reguler.
 - **Ketersediaan data:** Meningkatkan kriptografi dasar yang digunakan untuk menangani data jaringan dalam jumlah besar akan memastikan Ethereum tetap cepat dan terjangkau untuk digunakan tanpa mempertaruhkan kerentanan kuantum di masa depan.
 - **Poseidon Prize**: Hadiah penelitian senilai $1 juta yang menargetkan peningkatan pada primitif kriptografi berbasis hash.
-- **Standar NIST**: Institut Nasional Standar dan Teknologi AS (NIST) memfinalisasi tiga standar kriptografi pascakuantum pada bulan Agustus 2024 (ML-KEM, ML-DSA, SLH-DSA). Pekerjaan Ethereum dibangun di atas fondasi ini.
+- **Standar NIST**: Institut Standar dan Teknologi Nasional AS (NIST) memfinalisasi tiga standar kriptografi pascakuantum pada bulan Agustus 2024 (ML-KEM, ML-DSA, SLH-DSA). Pekerjaan Ethereum dibangun di atas fondasi ini.
 
-Bagian penting dari strategi transisi adalah **EIP-8141**, yang memperkenalkan [abstraksi akun](/roadmap/account-abstraction/) bawaan. Ini memungkinkan akun individu untuk memilih verifikasi tanda tangan mereka sendiri, yang berarti pengguna dapat beralih ke tanda tangan yang aman dari kuantum **tanpa menunggu satu migrasi di seluruh protokol**. EIP-8141 sedang dipertimbangkan untuk percabangan keras Hegotá (direncanakan pada paruh kedua tahun 2026).
+Bagian penting dari strategi transisi ini adalah **EIP-8141**, yang memperkenalkan [abstraksi akun](/roadmap/account-abstraction/) bawaan. Ini memungkinkan akun individu untuk memilih verifikasi tanda tangan mereka sendiri, yang berarti pengguna dapat beralih ke tanda tangan yang aman dari kuantum **tanpa menunggu migrasi tunggal di seluruh protokol**. EIP-8141 sedang dipertimbangkan untuk percabangan keras Hegotá (direncanakan pada paruh kedua tahun 2026).
 
 Yayasan Ethereum telah menguraikan pencapaian percabangan terstruktur yang menargetkan penyelesaian infrastruktur pascakuantum inti pada sekitar tahun 2029. Ini adalah target perencanaan, bukan komitmen yang dijamin.
 
-[Baca panduan terperinci kami tentang kriptografi pascakuantum di Ethereum](/roadmap/future-proofing/quantum-resistance/)
-
+<ButtonLink variant="outline" href="/roadmap/future-proofing/quantum-resistance/">Lebih lanjut tentang ketahanan kuantum</ButtonLink>
 ## Ethereum yang lebih sederhana dan lebih efisien {#simpler-more-efficient-ethereum}
 
 Kerumitan menciptakan peluang untuk bug dan kerentanan. Bagian dari peta jalan berfokus pada **menyederhanakan Ethereum dan menghapus utang teknis** sehingga protokol lebih mudah dipelihara, diaudit, dan dipahami.

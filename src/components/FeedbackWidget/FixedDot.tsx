@@ -1,4 +1,5 @@
 import { forwardRef } from "react"
+import { useTranslations } from "next-intl"
 import type { ButtonHTMLAttributes } from "react"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -6,8 +7,6 @@ import { Button } from "@/components/ui/buttons/Button"
 import { cn } from "@/lib/utils/cn"
 
 import { FeedbackGlyphIcon } from "../icons"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type FixedDotProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   isExpanded: boolean
@@ -17,16 +16,16 @@ type FixedDotProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
   ({ offsetBottom, isExpanded, suppressScale, className, ...props }, ref) => {
-    const { t } = useTranslation("common")
+    const t = useTranslations("common")
     return (
       <Button
         ref={ref}
         data-testid="feedback-widget-button"
         aria-label={t("feedback-widget")}
         className={cn(
-          "fixed end-4 bottom-4 z-overlay flex size-12 items-center gap-0 rounded-full text-white shadow-table-item-box",
-          "transition-all duration-200 hover:shadow-none hover:transition-transform hover:duration-200",
-          !suppressScale && "hover:scale-110",
+          "fixed inset-e-4 bottom-4 z-overlay flex size-12 items-center gap-0 rounded-full",
+          "transition-all duration-300 hover-link:transition-all hover-link:duration-300",
+          !suppressScale && "hover:scale-105",
           offsetBottom && "bottom-31 lg:bottom-4",
           isExpanded ? "lg:w-60 lg:gap-3" : "lg:w-12",
           className
@@ -34,7 +33,7 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
         {...props}
       >
         <FeedbackGlyphIcon
-          className={cn("!h-8 !w-[26px] text-white", !isExpanded && "-mx-1")}
+          className={cn("h-8! w-6.5!", !isExpanded && "-mx-1")}
         />
         <div
           className={cn(

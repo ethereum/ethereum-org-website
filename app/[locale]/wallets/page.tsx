@@ -14,7 +14,6 @@ import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import HorizontalCard from "@/components/HorizontalCard"
 import I18nProvider from "@/components/I18nProvider"
-import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
@@ -37,7 +36,6 @@ import { WalletSimulator } from "./WalletSimulator"
 
 import DappsImage from "@/public/images/doge-computer.png"
 import ETHImage from "@/public/images/eth-logo.png"
-import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import heroImg from "@/public/images/wallets/wallet-hero.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -157,46 +155,31 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <PageHero
-        header={t("page-wallets-title")}
+        breadcrumbs={{ slug: "wallets" }}
         heroImg={heroImg}
         title={t("page-wallets-slogan")}
         description={t("page-wallets-subtitle")}
-        // TODO: remove conditional after soft launch
-        buttons={
-          locale === "en"
-            ? [
-                {
-                  href: "/wallets/find-wallet/",
-                  content: t("page-wallets-find-wallet-link"),
-                  matomo: {
-                    eventCategory: "Header buttons",
-                    eventAction: "click",
-                    eventName: "Find_wallet",
-                  },
-                },
-                {
-                  href: `#${SIMULATOR_ID}`,
-                  content: "How to use a wallet",
-                  matomo: {
-                    eventCategory: "Header buttons",
-                    eventAction: "click",
-                    eventName: "How_to_use_wallet",
-                  },
-                  variant: "outline",
-                },
-              ]
-            : [
-                {
-                  href: "/wallets/find-wallet/",
-                  content: t("page-wallets-find-wallet-link"),
-                  matomo: {
-                    eventCategory: "Header button",
-                    eventAction: "click",
-                    eventName: "Find_wallet",
-                  },
-                },
-              ]
-        }
+        buttons={[
+          {
+            href: "/wallets/find-wallet/",
+            content: t("page-wallets-find-wallet-link"),
+            matomo: {
+              eventCategory: "Header buttons",
+              eventAction: "click",
+              eventName: "Find_wallet",
+            },
+          },
+          {
+            href: `#${SIMULATOR_ID}`,
+            content: t("page-wallets-how-to-use-wallet"),
+            matomo: {
+              eventCategory: "Header buttons",
+              eventAction: "click",
+              eventName: "How_to_use_wallet",
+            },
+            variant: "outline",
+          },
+        ]}
         variant="no-divider"
       />
 
@@ -274,43 +257,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </Grid>
             </Section>
 
-            {locale === "en" ? (
-              <Suspense>
-                <WalletSimulator>
-                  <div className="flex flex-col-reverse gap-space">
-                    <h2 className="text-h1">How to use a wallet</h2>
-                    <p className="text-h4 text-body-medium italic">
-                      Interactive tutorial
-                    </p>
-                  </div>
-                </WalletSimulator>
-              </Suspense>
-            ) : (
-              <Section
-                className={cn(
-                  "flow flex flex-col items-center bg-gradient-main py-20 text-center"
-                )}
-              >
-                <h2>{t("page-wallets-features-title")}</h2>
-                <p className="text-xl">{t("page-wallets-features-desc")}</p>
-                <ButtonLink
-                  href="/wallets/find-wallet/"
-                  customEventOptions={{
-                    eventCategory: "header buttons",
-                    eventAction: "click",
-                    eventName: "Find_wallet",
-                  }}
-                >
-                  {t("page-wallets-find-wallet-btn")}
-                </ButtonLink>
-                <Image
-                  src={FindWalletImage}
-                  alt=""
-                  className="w-full max-w-3xl"
-                  sizes="(max-width: 864px) calc(100vw - 64px), 768px"
-                />
-              </Section>
-            )}
+            <Suspense>
+              <WalletSimulator>
+                <div className="flex flex-col-reverse gap-space">
+                  <h2 className="text-h1">
+                    {t("page-wallets-how-to-use-wallet")}
+                  </h2>
+                  <p className="text-h4 text-body-medium italic">
+                    {t("page-wallets-interactive-tutorial")}
+                  </p>
+                </div>
+              </WalletSimulator>
+            </Suspense>
 
             <Section id="safety" className="py-16">
               <Grid balanced={2} className="gap-x-8 gap-y-8 lg:gap-x-16">

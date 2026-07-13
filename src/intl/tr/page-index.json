@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Ethereum - Ethereum.org'dan tam rehber",
+  "page-index-meta-title": "Ethereum - ethereum.org'dan eksiksiz rehber",
   "page-index-meta-description": "Ethereum, para ve yeni tür uygulamalar için küresel, merkeziyetsiz bir platformdur. Ethereum'da kendi paranızı, verilerinizi ve kimliğinizi siz kontrol edersiniz. Banka yok, aracı yok, izne gerek yok.",
   "page-index-description": "Yenilikçi uygulamalar ve Blokzincir ağları için lider platform",
   "page-index-title": "Ethereum'a Hoş Geldiniz",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "ETHEREUM UYGULAMALARI",
   "page-index-carousel-privacy-ethereum-value": "Varsayılan olarak gizli",
   "page-index-carousel-remittances-tag": "SINIR ÖTESİ ÖDEMELER",
-  "page-index-carousel-remittances-title": "Memlekete {minutes} dakika içinde para gönderin",
+  "page-index-carousel-remittances-title": "Memlekete {seconds} saniyede para gönderin",
   "page-index-carousel-remittances-subtitle": "{wireFee} havale ücretini ve {days}+ günlük beklemeyi atlayın.",
   "page-index-carousel-remittances-description": "Dünyanın herhangi bir yerindeki herhangi birine sadece {txFee} karşılığında <stablecoinsLink>sabit coin'ler</stablecoinsLink> gönderin. Fonları neredeyse anında alırlar.",
   "page-index-carousel-remittances-cta": "Kendiniz deneyin",
   "page-index-carousel-remittances-traditional-label": "BANKA HAVALESİ",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} gün",
   "page-index-carousel-remittances-ethereum-label": "ETHEREUM",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} dakika",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} saniye",
   "page-index-carousel-borrowing-tag": "FİNANSAL ERİŞİM",
   "page-index-carousel-borrowing-title": "Kredi geçmişi olmadan borç alın",
   "page-index-carousel-borrowing-subtitle": "Başlamak için bir kredi puanına ihtiyacınız yok.",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Özel ve izinli ağlar",
   "page-index-get-started-enterprise-bullet-3": "Kurumsal kaynaklar",
   "page-index-get-started-enterprise-cta": "Kurumsalı keşfedin",
-  "page-index-simulator-cta": "Daha fazla rehber deneyin"
+  "page-index-simulator-cta": "Daha fazla rehber deneyin",
+  "page-index-latest-updates-title": "En son Ethereum güncellemeleri",
+  "page-index-latest-updates-cta": "Daha fazlasını görüntüle"
 }

@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { tv, type VariantProps } from "tailwind-variants"
 
 import type { ToCItem } from "@/lib/types"
@@ -11,7 +12,6 @@ import ItemsList from "@/components/TableOfContents/ItemsList"
 import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
-import { useTranslation } from "@/hooks/useTranslation"
 
 const toc = tv({
   slots: {
@@ -77,7 +77,7 @@ const TableOfContents = ({
   showDropdown,
   ...rest
 }: TableOfContentsProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const titleIds: Array<string> = []
   if (!isMobile) {
     const getTitleIds = (items: Array<ToCItem>, depth: number): void => {

@@ -5,7 +5,7 @@ description: Use when building, refactoring, or styling any UI in the ethereum.o
 
 # ethereum.org Design System
 
-Tailwind v4 (CSS-first config, no `tailwind.config.ts`) + React 18 / Next.js App Router + Radix UI primitives + shadcn-style component layer. Tokens live in CSS. Read this file fully on activation; pull from `references/` only when the listed trigger applies.
+Tailwind v4 (CSS-first config, no `tailwind.config.ts`) + React 19 / Next.js App Router + Radix UI primitives + shadcn-style component layer. Tokens live in CSS. Read this file fully on activation; pull from `references/` only when the listed trigger applies.
 
 ## The Core Habit: Reuse Over Reinvent
 
@@ -26,7 +26,7 @@ When the existing primitive doesn't quite fit, the answer is usually "add a vari
 2. **No raw color values.** Use semantic tokens (`text-body`, `bg-background`, `border-border`, `text-primary`). Hex literals and `rgb()` calls bypass dark mode.
 3. **Prefer adding a variant** to an existing primitive over creating a new component. Card, Button, Alert, Tag are the most common targets.
 4. **Server Components by default.** Only `"use client"` when you need state, effects, browser APIs, or inline event handlers.
-5. **All text is translatable.** `getTranslations` (server) or `useTranslations` (client) from `next-intl`. Never hard-code user-facing English.
+5. **All text is translatable.** `getTranslations` from `next-intl/server` (server) or `useTranslations` from `next-intl` (client). One namespace-bound `t` per namespace -- bind a second function (e.g. `const tCommon = useTranslations("common")`) to access another namespace. The legacy `@/hooks/useTranslation` wrapper is deprecated for new code. Never hard-code user-facing English.
 6. **Logical CSS for direction.** Use `ms-`/`me-`/`ps-`/`pe-`/`inset-s-`/`inset-e-`/`border-s`/`border-e`/`text-start`/`text-end`. The site supports Arabic and Urdu (RTL). Hard-coded `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` breaks RTL.
 7. **Locale-aware formatters.** `numberFormat()` from `@/lib/utils/numbers`, `dateTimeFormat()` from `@/lib/utils/date`. Never `toLocaleString` / `Intl.NumberFormat` directly.
 8. **`useRtlFlip()` for directional icons** (right-pointing arrows/chevrons). Or use `ChevronNext`/`ChevronPrev` from `@/components/Chevron`.
@@ -43,7 +43,7 @@ These are landmines where the code looks reasonable but the pattern is wrong. Th
 - **Cards**: `import { Card } from "@/components/ui/card"` is canonical for app code. The `<Card>` markdown shortcode is backed by `@/components/MarkdownCard` — that wrapper is rarely imported from app code, since composing the `ui/card` parts directly is more flexible.
 - **Tooltips**: `import Tooltip from "@/components/Tooltip"` (mobile-aware, Matomo-tracked, scroll-close). **Not** `import { Tooltip } from "@/components/ui/tooltip"` (that's the bare Radix primitive used internally).
 - **Modals**: `import Modal from "@/components/ui/dialog-modal"` (default export, the high-level convenience) for typical modal needs. `@/components/ui/dialog` is the vanilla shadcn-style primitive for fine-grained Radix control. Same names exported from both files; **do not mix sources within a feature**.
-- **Heroes**: import from `@/components/Hero` (`PageHero`, `HubHero`, `HomeHero`). `PageHero` is the canonical workhorse, covering image, text-only, and article-style heroes (`variant="no-divider"`, no `heroImg`). The old `MdxHero` was removed -- use `PageHero` text-only for the breadcrumb + h1 article shape it used to provide.
+- **Heroes**: import from `@/components/Hero` (`PageHero`, `HubHero`, `HomeHero`). `PageHero` is the canonical workhorse, covering image, component-aside (`heroComponent`), text-only, and article-style heroes (`variant="no-divider"`, no aside). `title` is always the `<h1>` (no `header` prop); an optional `eyebrow` sits above it. The old `MdxHero` was removed -- use `PageHero` text-only for the breadcrumb + h1 article shape it used to provide.
 
 ### Stale shadcn token names that don't resolve
 
@@ -84,6 +84,16 @@ Whenever you want a non-heading element (or a heading you're resizing) to read a
 ### Spacing: `.flow` + the `page`/`space`/`hero` tokens, not hand-rolled margins
 
 Vertical rhythm between prose blocks is the opt-in `.flow` system -- wrap a region in `flow`, write semantic tags, and skip `mt-*`/`mb-*`. Page/section padding, the flow unit (used manually), and hero padding come from named responsive tokens -- `px-page`/`p-page`, `mt-space`/`gap-space`, `p-hero` -- not `px-4 md:px-8` chains or arbitrary `p-(--var)`. App pages follow a `<main className="p-page"> > <MainArticle className="flow"> > <Section id>` skeleton. Details in `references/spacing-typography.md`; token table in `references/tokens.md`.
+
+### Shadows: default to the Tailwind scale; almost never add a custom one
+
+Elevation uses the **Tailwind default scale** -- `shadow-sm`/`-md`/`-lg`/`-xl`/`-2xl`, `shadow-none` to reset. Pick by surface: dropdowns/tooltips `shadow-md`, cards/popovers/modals `shadow-lg`, large framed boxes/sheets `shadow-xl`. There is **no custom multi-layer token set**.
+
+Only **two** project shadows exist, both in `utilities.css`, for the brand-tinted look defaults can't express:
+- `shadow-primary-xl` -- `shadow-xl` tinted with `primary-low-contrast`, for large framed / window-style boxes.
+- `shadow-primary-no-blur-*` -- functional, spacing-scaled solid (no-blur) offset (`-1` = 4px, `-0.5` = 2px) in `primary-low-contrast`, for hard hover offsets.
+
+Before reaching for anything new: a default almost always fits, and a **hover lift is the `hover-lift-*` utility** (`-xs`/`-base`/`-sm`/`-md`) or `Card hoverLift` -- not a bespoke shadow swap. If you genuinely need a custom shadow, write it as a **raw `box-shadow`** (like the two above), never an arbitrary `shadow-[...]`: arbitrary shadows route their color through `--tw-shadow-color`, which the global `* { dark:shadow-body }` rule overrides in dark mode, silently graying your color. Raw `box-shadow` utilities are immune.
 
 ### One stray `toLocaleString` in `ui/chart.tsx:241`
 

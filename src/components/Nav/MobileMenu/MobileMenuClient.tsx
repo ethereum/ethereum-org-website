@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { useTranslations } from "next-intl"
 
 import { ErrorBoundary } from "@/components/ui/error-boundary"
 import { PersistentPanel } from "@/components/ui/persistent-panel"
@@ -14,7 +15,6 @@ import { SITE_TITLE } from "@/lib/constants"
 import HamburgerButton from "./HamburgerButton"
 
 import { useCloseOnNavigate } from "@/hooks/useCloseOnNavigate"
-import { useTranslation } from "@/hooks/useTranslation"
 
 // Lazy-load the menu content to avoid including it in initial RSC payload
 // This saves ~82KB by not SSR'ing navigation data that's hidden behind a click
@@ -65,7 +65,7 @@ type MobileMenuClientProps = {
 }
 
 const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const [open, setOpen] = useCloseOnNavigate()
   const triggerRef = React.useRef<HTMLButtonElement>(null)
   // Track if menu has ever been opened to keep content loaded after first open
@@ -111,7 +111,7 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
           <ErrorBoundary
             fallback={() => (
               <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
-                <p className="text-body-medium">{t("loading-error")}</p>
+                <p className="text-body-medium">{t("loading-error-refresh")}</p>
                 <div className="flex gap-3">
                   <button
                     className="rounded-md bg-primary px-4 py-2 text-sm text-white hover:bg-primary-hover"
