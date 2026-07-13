@@ -8,6 +8,7 @@ import {
 
 import type { PageParams } from "@/lib/types"
 
+import { ABTest } from "@/components/AB"
 import HomeHero from "@/components/Hero/HomeHero"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
@@ -32,9 +33,14 @@ import IndexPageJsonLD from "./page-jsonld"
 
 import { getAccountHolders, getGrowThePieData } from "@/lib/data"
 
-const Page = async (props: { params: Promise<PageParams> }) => {
+const Page = async (props: {
+  params: Promise<PageParams>
+  /** Precomputed A/B test variant index, passed by the ab-code route */
+  heroVariant?: number
+}) => {
   const params = await props.params
   const { locale } = params
+  const { heroVariant } = props
 
   if (!LOCALES_CODES.includes(locale)) return notFound()
 
@@ -79,7 +85,25 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <IndexPageJsonLD locale={locale} />
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-          <HomeHero eventCategory={eventCategory} />
+          {heroVariant !== undefined ? (
+            <ABTest
+              testKey="HomepageHero"
+              variantIndex={heroVariant}
+              variants={[
+                <HomeHero key="original" eventCategory={eventCategory} />,
+                // Spike placeholder: visibly distinct variant to verify the
+                // preview deploy. Replace with a real variant component.
+                <div key="variant-a" className="w-full">
+                  <div className="bg-warning py-2 text-center font-bold">
+                    A/B VARIANT A (Flags SDK spike)
+                  </div>
+                  <HomeHero eventCategory={eventCategory} />
+                </div>,
+              ]}
+            />
+          ) : (
+            <HomeHero eventCategory={eventCategory} />
+          )}
 
           <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
             <KPISection

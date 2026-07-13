@@ -1,7 +1,10 @@
+import { precompute } from "flags/next"
 import { NextRequest, NextResponse } from "next/server"
 import createMiddleware from "next-intl/middleware"
 
 import { routing } from "./src/i18n/routing"
+import { AB_CODE_SEGMENT } from "./src/lib/ab-testing/constants"
+import { abTestFlags } from "./src/lib/ab-testing/flags"
 import { DEFAULT_LOCALE } from "./src/lib/constants"
 import { getFirstSegment } from "./src/lib/utils/url"
 
@@ -60,13 +63,18 @@ const DEPRECATED_LOCALES = new Set([
   "yo",
 ])
 
+// Routes with active A/B tests. English URLs are unprefixed
+// (localePrefix: "as-needed"), so entries are locale-less paths.
+// Only the default locale is A/B tested.
+const AB_TEST_ROUTES = new Set(["/"])
+
 function redirectTo(request: NextRequest, pathname: string, status: number) {
   const url = request.nextUrl.clone()
   url.pathname = pathname
   return NextResponse.redirect(url, status)
 }
 
-export default function proxy(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   const lowerPath = pathname.toLowerCase()
@@ -81,6 +89,21 @@ export default function proxy(request: NextRequest) {
     const rest = lowerPath.slice(firstSegment.length + 1)
     const newPath = !rest ? "/" : rest
     return redirectTo(request, newPath, 301)
+  }
+
+  // A/B testing: precompute flag variants and rewrite to the coded route,
+  // which serves a statically generated page per variant permutation.
+  // On failure, fall through to normal i18n handling (original variant).
+  if (AB_TEST_ROUTES.has(pathname) && abTestFlags.length > 0) {
+    try {
+      const code = await precompute(abTestFlags)
+      const url = request.nextUrl.clone()
+      const suffix = pathname === "/" ? "/" : pathname
+      url.pathname = `/${DEFAULT_LOCALE}/${AB_CODE_SEGMENT}/${code}${suffix}`
+      return NextResponse.rewrite(url)
+    } catch (error) {
+      console.error("[proxy] A/B precompute failed:", error)
+    }
   }
 
   // Handle i18n routing
