@@ -1,6 +1,8 @@
 import type { NextRequest } from "next/server"
 import { getTranslations } from "next-intl/server"
 
+import { SITE_URL } from "@/lib/constants"
+import { getBlogFallbackHero } from "@/lib/utils/blog"
 import { getBlogPostsData } from "@/lib/utils/md"
 import { getFullUrl } from "@/lib/utils/url"
 
@@ -16,6 +18,25 @@ const XML_ESCAPE: Record<string, string> = {
 
 const escapeXml = (value: string): string =>
   value.replace(/[&<>"']/g, (c) => XML_ESCAPE[c])
+
+const IMAGE_TYPES: Record<string, string> = {
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".png": "image/png",
+  ".svg": "image/svg+xml",
+  ".webp": "image/webp",
+}
+
+const getImageType = (path: string): string => {
+  const cleanPath = path.split(/[?#]/)[0]
+  const extension = cleanPath.includes(".")
+    ? cleanPath.slice(cleanPath.lastIndexOf(".")).toLowerCase()
+    : ""
+  return IMAGE_TYPES[extension] ?? "image/png"
+}
+
+const getAbsoluteImageUrl = (path: string): string =>
+  /^https?:\/\//.test(path) ? path : new URL(path, SITE_URL).toString()
 
 export async function GET(
   _: NextRequest,
@@ -41,6 +62,9 @@ export async function GET(
     .map((post) => {
       const link = getFullUrl(locale, post.href)
       const pubDate = new Date(post.published).toUTCString()
+      const imagePath = post.image ?? getBlogFallbackHero(post.href).src
+      const imageUrl = getAbsoluteImageUrl(imagePath)
+      const imageType = getImageType(imagePath)
       const creator = post.author
         ? `<dc:creator>${escapeXml(post.author)}</dc:creator>`
         : ""
@@ -55,6 +79,7 @@ export async function GET(
         `<description>${escapeXml(post.description)}</description>`,
         creator,
         `<pubDate>${pubDate}</pubDate>`,
+        `<media:content url="${escapeXml(imageUrl)}" medium="image" type="${imageType}" />`,
         categories,
         "</item>",
       ].join("")
@@ -64,7 +89,7 @@ export async function GET(
   const lastBuildDate = new Date().toUTCString()
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">',
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">',
     "<channel>",
     `<title>${escapeXml(channelTitle)}</title>`,
     `<link>${channelLink}</link>`,
