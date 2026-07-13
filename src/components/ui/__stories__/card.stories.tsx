@@ -310,10 +310,10 @@ export const BannerPlacement: Story = {
 
       <div>
         <Label>
-          Direct child of Card + variant=&quot;ghost&quot; (widened
-          --banner-radius)
+          Bare direct child of Card + size=&quot;xs&quot; (edge-to-edge; radii
+          match)
         </Label>
-        <Card variant="ghost">
+        <Card variant="ghost" size="xs">
           <CardBanner>
             <Image
               src={heroLandscape}
@@ -324,9 +324,10 @@ export const BannerPlacement: Story = {
           <CardContent>
             <CardTitle>Edge-to-edge banner</CardTitle>
             <CardParagraph>
-              Banner is a direct child of Card so it sits flush against the card
-              edges. variant=&quot;ghost&quot; removes the surrounding tint and
-              widens --banner-radius to match the card&apos;s outer corners.
+              Banner is a bare direct child of Card, flush to the edges.
+              size=&quot;xs&quot; zeroes --card-pad so the banner radius equals
+              the card&apos;s outer radius. On a padded size, or an href card,
+              wrap the banner in a CardHeader instead (see the banner gotcha).
             </CardParagraph>
           </CardContent>
         </Card>
@@ -562,6 +563,90 @@ export const Linkable: Story = {
   ),
 }
 
+// ---------- Link hover by variant ----------
+// Every Card with an href gets a hover affordance automatically, chosen by
+// variant: ghost link cards fill with bg-background-highlight (no outline)
+// while base/nested/header-bar keep the primary outline ring. Hover each cell.
+
+export const LinkHoverByVariant: Story = {
+  render: () => (
+    <Grid columns={3} size="wide">
+      <div>
+        <Label>
+          href + variant=&quot;ghost&quot; (hover: highlight fill, no ring)
+        </Label>
+        <Card href="#" variant="ghost" size="sm">
+          <CardHeader>
+            <CardBanner size="sm">
+              <Image
+                src={heroLandscape}
+                alt=""
+                sizes="(min-width: 768px) 400px, 100vw"
+              />
+            </CardBanner>
+          </CardHeader>
+          <CardContent>
+            <CardTitle size="sm">Ghost link card</CardTitle>
+            <CardParagraph size="sm">
+              Transparent at rest; hovering fills the whole card with
+              bg-background-highlight and shows no outline. This is the
+              media/link card treatment (video, hackathon, story, latest grids).
+            </CardParagraph>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div>
+        <Label>
+          href + variant=&quot;base&quot; (hover: primary outline ring)
+        </Label>
+        <Card href="#" variant="base" size="sm">
+          <CardHeader>
+            <CardBanner size="sm">
+              <Image
+                src={heroLandscape}
+                alt=""
+                sizes="(min-width: 768px) 400px, 100vw"
+              />
+            </CardBanner>
+          </CardHeader>
+          <CardContent>
+            <CardTitle size="sm">Base link card</CardTitle>
+            <CardParagraph size="sm">
+              Already sits on a fill, so a hover fill would be invisible;
+              hovering shows the ring-primary-hover outline instead.
+            </CardParagraph>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="rounded-lg bg-background-highlight p-4">
+        <Label>
+          href + variant=&quot;nested&quot; (hover: primary outline ring)
+        </Label>
+        <Card href="#" variant="nested" size="sm">
+          <CardHeader>
+            <CardBanner size="sm">
+              <Image
+                src={heroLandscape}
+                alt=""
+                sizes="(min-width: 768px) 400px, 100vw"
+              />
+            </CardBanner>
+          </CardHeader>
+          <CardContent>
+            <CardTitle size="sm">Nested link card</CardTitle>
+            <CardParagraph size="sm">
+              Shown inside a tinted container. Keeps the outline ring on hover;
+              the bg-highlight fill is reserved for ghost.
+            </CardParagraph>
+          </CardContent>
+        </Card>
+      </div>
+    </Grid>
+  ),
+}
+
 // ---------- Composites (production-shape representatives) ----------
 
 export const Composites: Story = {
@@ -608,6 +693,30 @@ export const Composites: Story = {
                 {tDev("page-developers-read-docs")}
               </ButtonLink>
             </CardFooter>
+          </Card>
+        </div>
+
+        {/* Media link card (video / hackathon / story / latest grid shape) */}
+        <div>
+          <Label>Media link card (video / hackathon / story shape)</Label>
+          <Card href="#" variant="ghost" size="sm">
+            <CardHeader>
+              <CardBanner className="aspect-video h-auto">
+                <Image
+                  src={heroLandscape}
+                  alt=""
+                  sizes="(min-width: 768px) 400px, 100vw"
+                />
+              </CardBanner>
+            </CardHeader>
+            <CardContent>
+              <CardTitle size="sm">
+                {tDev("page-developers-learn-tutorials")}
+              </CardTitle>
+              <CardParagraph size="sm">
+                {tDev("page-developers-learn-tutorials-desc")}
+              </CardParagraph>
+            </CardContent>
           </Card>
         </div>
 

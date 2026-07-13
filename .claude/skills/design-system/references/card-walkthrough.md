@@ -52,13 +52,20 @@ import {
 
 When you pass `href`, `Card` automatically wraps in `BaseLink` and adds a `group/link` class so descendants can react to card-level hover/focus. You don't need to nest your own `<a>` for "whole card clickable" cards.
 
+**Rule: a link card needs interior padding, and its banner belongs in a `CardHeader`.** Because an `href` card renders a variant-aware hover state (fill or ring) tight to its outer edge, its contents must sit inset from that edge. In practice:
+
+- If a link card contains a `CardBanner`, **wrap it in a `CardHeader` by default** so the `--card-pad` inset keeps the banner clear of the hover treatment and its corners concentric with the card. Don't drop a bare `CardBanner` straight into an `href` `Card`.
+- Avoid `size="xs"` (which zeroes `--card-pad`) on a link card unless the layout supplies padding another way.
+
+The sanctioned exceptions are cards that arrange the banner differently and **bake the padding into the banner itself** rather than relying on a `CardHeader` -- e.g. `PathwayCard` (`src/components/cards/pathway-card.tsx`), whose banner sits beside the text in a container-query row layout and carries its own `p-*`. If you're building a new bespoke link-card arrangement, follow that model: inset the banner somehow, don't leave it flush.
+
 ## Step 2: Pick the `variant`
 
 | Variant | When to use |
 |---|---|
 | `base` (default) | Standard card on the default page background. Gives `bg-background-highlight` (grey). |
 | `nested` | When the Card sits inside a section that already has a non-default background. Gives `bg-background` (white in light, black in dark) so it visually pops out from the colored container. |
-| `ghost` | No background. The Card behaves like an outlined container. `--banner-radius` is automatically widened (since the banner's edge IS the card's edge), so any `CardBanner` matches the outer corner radius. |
+| `ghost` | No background -- a transparent, outlined-style container. `--banner-radius` is automatically widened so an edge-to-edge `CardBanner` matches the outer corner radius. As a **link** (`href`), a ghost card fills with `bg-background-highlight` on hover instead of showing an outline ring (see Interaction props). |
 | `header-bar` | "Top bar" appearance: only the `CardHeader` region gets the highlight background, the rest is bordered, and the header gets row layout (icon + text) with a bottom border. The variant bakes in all of this — just drop a `CardHeader` inside, no extra props. |
 
 ## Step 3: Pick the `size`
@@ -75,7 +82,7 @@ When you pass `href`, `Card` automatically wraps in `BaseLink` and adds a `group
 | `sm` | 10px | 10px | Compact list cards |
 | `xs` | 0 | 4px | No padding; use when the banner image needs to extend to all edges of the Card |
 
-### Interaction props: `border`, `hoverLift` (and the automatic `href` hover ring)
+### Interaction props: `border`, `hoverLift` (and the automatic `href` hover state)
 
 Two independent booleans layer edge/interaction treatment on top of `variant`/`size` -- they're additive, so combine freely:
 
@@ -84,9 +91,14 @@ Two independent booleans layer edge/interaction treatment on top of `variant`/`s
 | `border` | Static hairline edge (`ring ring-border`). It's a `ring`, so it never shifts layout. | A resting outline on `nested`/`ghost` cards that need definition against their background. |
 | `hoverLift` | `hover:shadow-md` plus a subtle `hover:scale`. | Cards that hold their own actions instead of being a link themselves: multiple action buttons, or text-link actions in the body/footer. The lift signals "interactive content here" without implying the whole card is clickable. |
 
-**There is no `hoverOutline` prop anymore.** Every Card with an `href` gets the hover ring automatically (transparent at rest, `ring-primary-hover` on hover) -- it's baked into the link render path, not a variant you set. It also can't be applied to non-link cards by hand; if a card isn't a link, use `hoverLift` (or nothing).
+**There is no `hoverOutline` prop anymore.** Every Card with an `href` gets a hover affordance automatically, chosen by `variant` -- you don't set it:
 
-`border` composes with the automatic ring: on an `href` Card, the `ring-border` shows at rest and `hover:ring-primary-hover` takes over on hover, reading as a resting border that brightens to primary. These props replaced the old `hoverEffect="lift"` prop.
+- **`ghost` link cards fill on hover** with `bg-background-highlight` and show *no* outline. A ghost card is transparent at rest, so the fill is the affordance; an offset ring would clip against a flush banner and read as noise. This is the treatment for the site's media/link cards (video, hackathon, story, and latest-article grids).
+- **`base`, `nested`, and `header-bar` link cards keep the outline ring** (`ring-transparent` at rest -> `ring-primary-hover` on hover). They already sit on a fill, so a hover fill would be invisible; the ring is what reads.
+
+It's implemented with `compoundVariants` keyed on an internal `interactive` flag (set from `href`, omitted from the public `CardProps`) -- not a variant you pass, and not a class you can hand-apply to a non-link card. If a card isn't a link, use `hoverLift` (or nothing).
+
+`border` composes with the ring on non-ghost link cards: the `ring-border` shows at rest and `hover:ring-primary-hover` takes over, reading as a resting border that brightens to primary. On a `ghost` link card there is no hover ring, so a `border` simply stays as the resting outline while the highlight fills behind it. These props replaced the old `hoverEffect="lift"` prop.
 
 ## Step 4: Border Radius "Just Works"
 
@@ -158,8 +170,8 @@ When *should* you use `className`? Things that are genuinely outside the Card's 
 - `fit="contain"` with a *single* `<Image>` child triggers an auto-blurred-backdrop effect: the same image is cloned, scaled, blurred, and placed behind to fill any letterboxing. If you pass two children, you lose this magic and need to provide your own backdrop.
 - `zoom`: `true` (default) propagates the parent `group/link` hover/focus into an image scale-up; pass `zoom={false}` when the art shouldn't move.
 - Placement:
-  - Inside `CardHeader` (most common): the banner respects `--card-pad` and gets `--banner-radius`-rounded corners.
-  - As a direct child of `Card` (no `CardHeader` wrapper): the banner extends to the card's edges (no padding). Pair with `Card size="xs"` for an edge-to-edge image card, or use `variant="ghost"` for an outlined edge-to-edge look.
+  - **Inside `CardHeader` (the default -- prefer this):** the banner insets by `--card-pad` and its `--banner-radius` corners stay concentric with the card's outer radius. Required on **link** cards (`href`): the inset keeps the hover state clear of the image and the corner radii aligned.
+  - As a bare direct child of `Card` (no `CardHeader`): the banner extends flush to the card's edges. Only safe for a true edge-to-edge image, and pair it with `Card size="xs"` (`--card-pad: 0`) so the banner radius and the card's outer radius match. A bare banner on a padded size (`sm`/`md`/`base`) clips at `--banner-radius` while the card corner is `--card-pad + --banner-radius` -- a visible mismatch, and on a link card the hover treatment has no room to breathe. (See the bare-banner gotcha.)
 
 ### `CardEmoji`
 
@@ -256,7 +268,7 @@ import { Sparkles } from "lucide-react"
 - [ ] No `className` on `Card`/parts that adjusts padding, background, spacing, border-radius, or text color — those go through variants
 - [ ] Heading is `CardTitle`; uses `asChild` if `<h3>` would break heading outline
 - [ ] Description is `CardParagraph`
-- [ ] Image lives in a `CardBanner` (inside `CardHeader` for padded, or as a direct child of `Card` with `size="xs"` or `variant="ghost"` for edge-to-edge)
+- [ ] Image lives in a `CardBanner`, wrapped in `CardHeader` (the default -- keeps banner radius concentric and gives link-hover room). Bare banner only for a true edge-to-edge image, paired with `size="xs"` so radii match
 - [ ] If image needs containment, `fit="contain"` is used to get the auto-blur backdrop
 - [ ] If you added a new variant case to `card.tsx`, story coverage is updated
 - [ ] Tested in light AND dark mode
