@@ -19,9 +19,9 @@ tools:
     toolsets: [default, actions]
 safe-outputs:
   add-comment:
-    max: 8
+    max: 5
   add-labels:
-    max: 24
+    max: 15
     allowed:
       - "recommend close"
       - "Status: Stale"
@@ -30,6 +30,15 @@ safe-outputs:
       - "needs design approval 🧑‍🎨"
       - "needs product review 🕵️"
       - "needs technical content review 🧑‍🏫"
+      - "content 🖋️"
+      - "translation 🌍"
+      - "documentation 📖"
+      - "dependencies 📦"
+      - "tooling 🔧"
+      - "config ⚙️"
+  remove-labels:
+    max: 5
+    allowed:
       - "content 🖋️"
       - "translation 🌍"
       - "documentation 📖"
@@ -57,7 +66,7 @@ You are sweeping the open pull request backlog of ${{ github.repository }}.
 
 ## Selection
 
-Read `/tmp/gh-aw/agent/open-prs.json`. Skip drafts and PRs authored by bots. From the rest, take the **8 oldest by createdAt** that do not already carry a comment from this workflow or the PR Reviewer workflows (check each candidate's comments for the marker `First-pass review`; skip PRs that already have one unless they were updated after it was posted). Also skip any PR where a maintainer (MEMBER/COLLABORATOR/OWNER) commented within the last 14 days — a human sweep is already in progress there, and a bot follow-up on its heels reads as nagging.
+Read `/tmp/gh-aw/agent/open-prs.json`. Skip drafts and PRs authored by bots. From the rest, take the **5 oldest by createdAt** that do not already carry a comment from this workflow or the PR Reviewer workflows (check each candidate's comments for the marker `First-pass review`; skip PRs that already have one unless they were updated after it was posted). Also skip any PR where a maintainer (MEMBER/COLLABORATOR/OWNER) commented within the last 14 days — a human sweep is already in progress there, and a bot follow-up on its heels reads as nagging.
 
 ## For each selected PR
 
@@ -74,4 +83,4 @@ Read `/tmp/gh-aw/agent/open-prs.json`. Skip drafts and PRs authored by bots. Fro
 
 ## Budget and termination
 
-Do not exceed 8 reviewed PRs per run. Every run MUST end with at least one safe-output call; if the backlog is empty or fully covered, call `noop` with a one-line reason.
+Do not exceed 5 reviewed PRs per run. Every run MUST end with at least one safe-output call; if the backlog is empty or fully covered, call `noop` with a one-line reason.

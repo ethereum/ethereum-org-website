@@ -79,6 +79,8 @@ Apply the missing type label for the lane (`content 🖋️`, `translation 🌍`
 - `needs product review 🕵️` — product listings, policy questions, new sections
 - `needs technical content review 🧑‍🏫` — technical accuracy of content
 
+Also correct stale type labels: if an existing type label contradicts the changed paths (e.g. `dependencies 📦` on a PR that touches no `package.json`/`pnpm-lock.yaml`), remove it — the path labeler applies labels at open time and never removes them, so they survive force-pushes that change the file set. Only remove type labels this way; never remove routing or status labels.
+
 ## Step 6 — always end with a safe output
 
 Every run MUST end with at least one safe-output call. If there is nothing useful to do (e.g. the PR was closed while you ran), call `noop` with a one-line reason.

@@ -41,6 +41,15 @@ safe-outputs:
       - "dependencies 📦"
       - "tooling 🔧"
       - "config ⚙️"
+  remove-labels:
+    max: 2
+    allowed:
+      - "content 🖋️"
+      - "translation 🌍"
+      - "documentation 📖"
+      - "dependencies 📦"
+      - "tooling 🔧"
+      - "config ⚙️"
   noop:
   report-failure-as-issue: false
 pre-agent-steps:
