@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server"
 import createMiddleware from "next-intl/middleware"
 
 import { routing } from "./src/i18n/routing"
-import { AB_CODE_SEGMENT } from "./src/lib/ab-testing/constants"
+import { AB_CODE_SEGMENT, encodeABCode } from "./src/lib/ab-testing/constants"
 import { abTestFlags } from "./src/lib/ab-testing/flags"
 import { DEFAULT_LOCALE } from "./src/lib/constants"
 import { getFirstSegment } from "./src/lib/utils/url"
@@ -98,11 +98,8 @@ export default async function proxy(request: NextRequest) {
     try {
       const code = await precompute(abTestFlags)
       const url = request.nextUrl.clone()
-      // No trailing slash after a bare code: the signed code contains dots,
-      // so Next.js treats it as a file path and 308-strips a trailing slash
-      // at the origin, exposing the internal URL (the #17265 failure mode).
       const suffix = pathname === "/" ? "" : pathname
-      url.pathname = `/${DEFAULT_LOCALE}/${AB_CODE_SEGMENT}/${code}${suffix}`
+      url.pathname = `/${DEFAULT_LOCALE}/${AB_CODE_SEGMENT}/${encodeABCode(code)}${suffix}`
       return NextResponse.rewrite(url)
     } catch (error) {
       console.error("[proxy] A/B precompute failed:", error)

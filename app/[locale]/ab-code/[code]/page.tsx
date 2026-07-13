@@ -8,6 +8,7 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import OriginalHomePage from "../../page"
 
+import { decodeABCode, encodeABCode } from "@/lib/ab-testing/constants"
 import { abTestFlags, homepageHeroFlag } from "@/lib/ab-testing/flags"
 
 export { generateMetadata } from "../../page"
@@ -20,8 +21,12 @@ export { generateMetadata } from "../../page"
 export async function generateStaticParams() {
   try {
     const codes = await generatePermutations(abTestFlags)
-    // Only the default locale is A/B tested
-    return codes.map((code) => ({ locale: DEFAULT_LOCALE, code }))
+    // Only the default locale is A/B tested. Codes are dot-encoded to keep
+    // the URL segment directory-like (see encodeABCode).
+    return codes.map((code) => ({
+      locale: DEFAULT_LOCALE,
+      code: encodeABCode(code),
+    }))
   } catch (error) {
     console.warn(
       "[A/B Testing] generatePermutations failed (missing FLAGS_SECRET?):",
@@ -52,7 +57,11 @@ export default async function PrecomputedHomePage({ params }: PageProps) {
 
   let heroVariant: number
   try {
-    ;[heroVariant] = await getPrecomputed([homepageHeroFlag], abTestFlags, code)
+    ;[heroVariant] = await getPrecomputed(
+      [homepageHeroFlag],
+      abTestFlags,
+      decodeABCode(code)
+    )
   } catch {
     // Invalid or tampered code - this route is only reachable via the proxy rewrite
     notFound()
