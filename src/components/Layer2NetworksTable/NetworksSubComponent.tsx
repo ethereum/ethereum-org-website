@@ -1,5 +1,5 @@
 import { Info } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { ExtendedRollup } from "@/lib/types"
 
@@ -10,8 +10,6 @@ import { formatDuration } from "@/lib/utils/time"
 
 import { ButtonLink } from "../ui/buttons/Button"
 import InlineLink from "../ui/Link"
-
-import useTranslation from "@/hooks/useTranslation"
 
 const formatNumber = (num: number): string => {
   if (num >= 1e9) {
@@ -31,7 +29,7 @@ type NetworkSubComponentProps = {
 }
 
 const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
-  const { t } = useTranslation("page-layer-2-networks")
+  const t = useTranslations("page-layer-2-networks")
   const locale = useLocale()
 
   return (

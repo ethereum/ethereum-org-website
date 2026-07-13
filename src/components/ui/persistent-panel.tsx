@@ -134,8 +134,8 @@ const PersistentPanel = ({
   }
 
   const overlayClasses = cn(
-    "fixed inset-0 z-modal bg-gray-800 transition-opacity duration-300",
-    showContent ? "opacity-70" : "opacity-0 pointer-events-none"
+    "fixed inset-0 z-modal bg-overlay transition-opacity duration-300",
+    !showContent && "opacity-0 pointer-events-none"
   )
 
   const contentClasses = cn(

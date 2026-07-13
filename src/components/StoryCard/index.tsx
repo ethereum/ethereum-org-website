@@ -1,6 +1,6 @@
 "use client"
-
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 
 import type { Story } from "@/lib/types"
 
@@ -9,8 +9,6 @@ import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent } from "@/components/ui/card"
 
 import { cn } from "@/lib/utils/cn"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type StoryCardProps = {
   story: Story
@@ -40,7 +38,7 @@ const StoryCard = ({
   expandable = true,
   showDate = true,
 }: StoryCardProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const [isFlipped, setIsFlipped] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
   const [isFading, setIsFading] = useState(false)
