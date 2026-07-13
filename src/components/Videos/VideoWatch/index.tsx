@@ -44,7 +44,7 @@ const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
   const t = await getTranslations("page-videos")
 
   return (
-    <Card className={cn("my-8 max-w-xl border", className)}>
+    <Card className={cn("mx-auto my-8 max-w-xl border", className)}>
       <CardHeader>
         <CardBanner background="none" size="full">
           <YouTube
