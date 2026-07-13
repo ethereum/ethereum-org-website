@@ -98,7 +98,10 @@ export default async function proxy(request: NextRequest) {
     try {
       const code = await precompute(abTestFlags)
       const url = request.nextUrl.clone()
-      const suffix = pathname === "/" ? "/" : pathname
+      // No trailing slash after a bare code: the signed code contains dots,
+      // so Next.js treats it as a file path and 308-strips a trailing slash
+      // at the origin, exposing the internal URL (the #17265 failure mode).
+      const suffix = pathname === "/" ? "" : pathname
       url.pathname = `/${DEFAULT_LOCALE}/${AB_CODE_SEGMENT}/${code}${suffix}`
       return NextResponse.rewrite(url)
     } catch (error) {
