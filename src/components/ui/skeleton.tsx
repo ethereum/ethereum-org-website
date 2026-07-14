@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils/cn"
 
 import { Card, CardBanner, CardContent } from "../ui/card"
 
-// Pseudo-random list of skeleton widths for multiple lines
+// Pseudo-random list of skeleton widths for multiple lines of text
 const widths = [
   "w-2/3",
   "w-1/5",
