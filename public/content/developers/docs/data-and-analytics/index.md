@@ -22,6 +22,19 @@ Many [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) off
 
 Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain). For example, [Etherscan](https://etherscan.io) and [Blockscout](https://eth.blockscout.com) provide execution and consensus data for every 12s slot.
 
+## Envio {#envio}
+
+[Envio](https://envio.dev/?utm_source=ethereum-org&utm_medium=partner-docs) is a high-performance indexing framework that turns smart contract events into a queryable GraphQL API, with managed hosting on Envio Cloud.
+
+With Envio, developers can benefit from:
+
+- HyperSync data engine: Where a chain is available on HyperSync it becomes the default data source, syncing historical data up to 2000x faster than traditional RPC
+- Flexible event handlers: Write handlers in TypeScript, JavaScript, or ReScript, with reorg support and both real-time and historical data
+- Multichain aggregation: Aggregate data across EVM and non-EVM networks from a single indexer
+- Managed hosting: Deploy and scale indexers on Envio Cloud, or self-host
+
+Follow this [quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart?utm_source=ethereum-org&utm_medium=partner-docs) guide to create, deploy, and query an indexer.
+
 ## The Graph {#the-graph}
 
 [The Graph](https://thegraph.com/) is an indexing protocol that provides an easy way to query blockchain data through open APIs known as subgraphs.
