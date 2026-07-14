@@ -25,6 +25,7 @@ Card                         <- parent wrapper, owns CSS vars + variant
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -32,7 +33,8 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-<Card href="/articles/proof-of-stake">
+{/* single CTA: href (whole card links) + CardButtonFake + hoverLift (carries an action) */}
+<Card href="/articles/proof-of-stake" hoverLift>
   <CardHeader>
     <CardBanner background="accent-a">
       <Image src={posIllustration} alt="Stylized validators staking ETH" />
@@ -43,7 +45,7 @@ import {
     <CardParagraph>How Ethereum secures the network.</CardParagraph>
   </CardContent>
   <CardFooter>
-    <ButtonLink href="/learn-more">Learn more</ButtonLink>
+    <CardButtonFake>Learn more</CardButtonFake>
   </CardFooter>
 </Card>
 ```
@@ -51,6 +53,19 @@ import {
 ### `Card` with `href`
 
 When you pass `href`, `Card` automatically wraps in `BaseLink` and adds a `group/link` class so descendants can react to card-level hover/focus. You don't need to nest your own `<a>` for "whole card clickable" cards.
+
+**Two hover signals that can stack -- keep their meanings distinct:**
+
+- **`hoverLift`** (the card raises on hover) means the card **carries an action** -- a CTA button or a text link. Add it to *any* card that holds an action, whether or not the card is also a link.
+- An **outline ring** (or, on a `ghost` card, a **`bg-background-highlight` fill**) means the **whole card is the click target**. An `href` `Card` renders this automatically (see Interaction props). It's *additive* to `hoverLift`, not an alternative.
+
+**The number of actions decides the shape. This is the canonical rule -- follow it for every new/refactored card:**
+
+- **One CTA -> the whole card is the link, and it carries an action.** Put `href` on the `Card` (automatic outline/fill), render the footer button as a **`CardButtonFake`** (not a `ButtonLink`/`Button` -- a real interactive `<a>`/`<button>` nested inside the card's own anchor is invalid HTML with broken keyboard/hit-target behavior; `CardButtonFake` is a presentational `<div>` mirror of `Button` via `asChild` that inherits the card's `group/link` hover), **and** add `hoverLift` so the card advertises the action it carries. (See the `InteractionPatterns` story.)
+- **Two or more CTAs -> the card is NOT a link, but carries actions.** Multiple independent actions can't collapse into one card-level link, so drop `href`, use real `ButtonLink`s (each its own target), and add `hoverLift`. Reach for `CardFooter buttons="compact"` when they should sit inline.
+- **No button, action is an inline link in the copy -> non-link card that carries an action.** Keep the card a plain `<div>` (no `href`), use an `InlineLink` in the copy, and add `hoverLift`. No outline ring, which would falsely imply the entire card is a single link.
+
+(A **pure navigation card** -- an `href` card with no interior button or link, e.g. a media/thumbnail tile -- is the one case that skips `hoverLift`: there's no interior action to advertise, so the automatic outline/fill alone carries the "whole card is clickable" signal.)
 
 **Rule: a link card needs interior padding, and its banner belongs in a `CardHeader`.** Because an `href` card renders a variant-aware hover state (fill or ring) tight to its outer edge, its contents must sit inset from that edge. In practice:
 
@@ -89,14 +104,14 @@ Two independent booleans layer edge/interaction treatment on top of `variant`/`s
 | Prop | Effect | When |
 |---|---|---|
 | `border` | Static hairline edge (`ring ring-border`). It's a `ring`, so it never shifts layout. | A resting outline on `nested`/`ghost` cards that need definition against their background. |
-| `hoverLift` | `hover:shadow-md` plus a subtle `hover:scale`. | Cards that hold their own actions instead of being a link themselves: multiple action buttons, or text-link actions in the body/footer. The lift signals "interactive content here" without implying the whole card is clickable. |
+| `hoverLift` | `hover:shadow-md` plus a subtle `hover:scale`. | Any card that carries an action: a single CTA (alongside the automatic `href` outline/fill), multiple action buttons, or a text link in the body. The lift signals "interactive content here." Skip it only on a pure navigation card (an `href` tile with no interior button/link), where the outline/fill alone carries the signal. |
 
 **There is no `hoverOutline` prop anymore.** Every Card with an `href` gets a hover affordance automatically, chosen by `variant` -- you don't set it:
 
 - **`ghost` link cards fill on hover** with `bg-background-highlight` and show *no* outline. A ghost card is transparent at rest, so the fill is the affordance; an offset ring would clip against a flush banner and read as noise. This is the treatment for the site's media/link cards (video, hackathon, story, and latest-article grids).
 - **`base`, `nested`, and `header-bar` link cards keep the outline ring** (`ring-transparent` at rest -> `ring-primary-hover` on hover). They already sit on a fill, so a hover fill would be invisible; the ring is what reads.
 
-It's implemented with `compoundVariants` keyed on an internal `interactive` flag (set from `href`, omitted from the public `CardProps`) -- not a variant you pass, and not a class you can hand-apply to a non-link card. If a card isn't a link, use `hoverLift` (or nothing).
+It's implemented with `compoundVariants` keyed on an internal `interactive` flag (set from `href`, omitted from the public `CardProps`) -- not a variant you pass, and not a class you can hand-apply to a non-link card. The outline/fill is additive to `hoverLift`: a single-CTA link card gets both (ring/fill from `href`, lift from `hoverLift`); a non-link card that carries an action gets `hoverLift` alone.
 
 `border` composes with the ring on non-ghost link cards: the `ring-border` shows at rest and `hover:ring-primary-hover` takes over, reading as a resting border that brightens to primary. On a `ghost` link card there is no hover ring, so a `border` simply stays as the resting outline while the highlight fills behind it. These props replaced the old `hoverEffect="lift"` prop.
 
@@ -142,17 +157,39 @@ When *should* you use `className`? Things that are genuinely outside the Card's 
 ### `CardFooter`
 
 ```tsx
+{/* single CTA on an href + hoverLift card */}
 <CardFooter>
-  <ButtonLink href="...">CTA</ButtonLink>
+  <CardButtonFake>CTA</CardButtonFake>
 </CardFooter>
-<CardFooter buttons="compact">...</CardFooter>
+{/* two CTAs on a non-link, hoverLift card */}
+<CardFooter buttons="compact">
+  <ButtonLink href="...">Primary</ButtonLink>
+  <ButtonLink href="..." variant="outline">Secondary</ButtonLink>
+</CardFooter>
 ```
 
 - Inherits `--card-pad` from the parent.
 - Defaults to `padding-top: 0` (mirrors `CardHeader`'s `padding-bottom: 0`); the gap between Content and Footer comes from Content's bottom-pad. The parent restores the top-pad automatically for `variant="header-bar"`.
-- `buttons="full"` (default): buttons and ButtonLinks stretch to full width and center their text. Use this when you want CTAs to span the card.
-- `buttons="compact"`: buttons size to fit their content. Use for trailing-link style or when the button shouldn't dominate.
+- `buttons="full"` (default): buttons, `ButtonLink`s, and `CardButtonFake`s stretch to full width and center their text. Use this when you want CTAs to span the card.
+- `buttons="compact"`: buttons size to fit their content. Use for trailing-link style, multi-button footers, or when the button shouldn't dominate.
 - `buttons="inherit"`: opt out of both — buttons render with their own intrinsic width.
+- The layout variants target both real buttons (`[button]`) and `CardButtonFake` (`[data-label=button-link]`), so they apply whichever you use. Which one to use is the single-vs-multiple-CTA rule under [`Card` with `href`](#card-with-href): one CTA -> `CardButtonFake` in an `href` card; two+ -> real `ButtonLink`s in a non-link card.
+
+### `CardButtonFake`
+
+```tsx
+<Card href="/proof-of-stake" hoverLift>
+  ...
+  <CardFooter>
+    <CardButtonFake>Learn more</CardButtonFake>
+  </CardFooter>
+</Card>
+```
+
+- The **only** correct way to render a footer CTA inside an `href` `Card`. It's a presentational `<div>` mirror of `Button` (rendered via `Button asChild`), so it reuses every Button style but is **not** an interactive element -- no nested `<a>`/`<button>` inside the card's anchor.
+- Accepts Button's `variant`, `size`, and `isSecondary`. It carries `data-label="button-link"`, so `CardFooter`'s `buttons` layout variants size it exactly like a real button.
+- Button's `hover-link` styling fires from the card's `group/link`, so hovering anywhere on the card animates the fake button identically to a real hover -- you don't (and can't) hand-wire hover styles onto it.
+- Never use it on a non-link card (there's nothing to click) and never use a real `Button`/`ButtonLink` as the sole CTA of an `href` card (invalid nested anchor). See the single-vs-multiple-CTA rule above.
 
 ### `CardBanner`
 
@@ -265,6 +302,7 @@ import { Sparkles } from "lucide-react"
 
 - [ ] Imports from `@/components/ui/card` (NOT `@/components/MarkdownCard` — that's the MDX shortcode wrapper)
 - [ ] If linkable, uses `Card href="..."` (not a wrapping `<a>`)
+- [ ] `hoverLift` on every card that carries an action (single CTA, multi-CTA, or text-link) -- skip it only on a pure navigation card with no interior button/link. Single CTA -> `href` + `CardButtonFake` + `hoverLift` (never a real `ButtonLink`/`Button` -- no nested anchor); two+ CTAs -> no `href`, real `ButtonLink`s + `hoverLift`; text-link-only -> no `href`, `InlineLink` + `hoverLift`
 - [ ] No `className` on `Card`/parts that adjusts padding, background, spacing, border-radius, or text color — those go through variants
 - [ ] Heading is `CardTitle`; uses `asChild` if `<h3>` would break heading outline
 - [ ] Description is `CardParagraph`
