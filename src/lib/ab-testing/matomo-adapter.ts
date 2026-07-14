@@ -19,6 +19,15 @@ const MOCK_EXPERIMENTS: Record<string, ABTestConfig> = {
       { name: "VariantA", weight: 50 },
     ],
   },
+  FindWalletHero: {
+    name: "FindWalletHero",
+    id: "dev-2",
+    enabled: true,
+    variants: [
+      { name: "Original", weight: 50 },
+      { name: "VariantA", weight: 50 },
+    ],
+  },
 }
 
 function isExperimentActive(exp: MatomoExperiment): boolean {

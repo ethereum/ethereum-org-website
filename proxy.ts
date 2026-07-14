@@ -4,7 +4,7 @@ import createMiddleware from "next-intl/middleware"
 
 import { routing } from "./src/i18n/routing"
 import { AB_CODE_SEGMENT, encodeABCode } from "./src/lib/ab-testing/constants"
-import { abTestFlags } from "./src/lib/ab-testing/flags"
+import { abTestRoutes } from "./src/lib/ab-testing/flags"
 import { DEFAULT_LOCALE } from "./src/lib/constants"
 import { getFirstSegment } from "./src/lib/utils/url"
 
@@ -63,11 +63,6 @@ const DEPRECATED_LOCALES = new Set([
   "yo",
 ])
 
-// Routes with active A/B tests. English URLs are unprefixed
-// (localePrefix: "as-needed"), so entries are locale-less paths.
-// Only the default locale is A/B tested.
-const AB_TEST_ROUTES = new Set(["/"])
-
 function redirectTo(request: NextRequest, pathname: string, status: number) {
   const url = request.nextUrl.clone()
   url.pathname = pathname
@@ -93,10 +88,14 @@ export default async function proxy(request: NextRequest) {
 
   // A/B testing: precompute flag variants and rewrite to the coded route,
   // which serves a statically generated page per variant permutation.
+  // Only exact canonical paths match (non-canonical forms fall through and
+  // get slash-normalized first). Only the default locale is A/B tested:
+  // English URLs are unprefixed, so locale-prefixed paths never match.
   // On failure, fall through to normal i18n handling (original variant).
-  if (AB_TEST_ROUTES.has(pathname) && abTestFlags.length > 0) {
+  const routeFlags = abTestRoutes[pathname]
+  if (routeFlags?.length) {
     try {
-      const code = await precompute(abTestFlags)
+      const code = await precompute(routeFlags)
       const url = request.nextUrl.clone()
       const suffix = pathname === "/" ? "" : pathname
       url.pathname = `/${DEFAULT_LOCALE}/${AB_CODE_SEGMENT}/${encodeABCode(code)}${suffix}`

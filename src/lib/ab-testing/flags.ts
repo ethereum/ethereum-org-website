@@ -74,8 +74,38 @@ export const homepageHeroFlag = flag<number, MatomoEntities>({
 })
 
 /**
- * All A/B test flags for precomputation.
- * Add new flags here as experiments are created in Matomo.
- * The middleware precomputes all of these and rewrites to the coded route.
+ * Find wallet Hero A/B test flag.
+ * Spike example flag for the /wallets/find-wallet redesign test.
  */
-export const abTestFlags = [homepageHeroFlag] as const
+export const findWalletHeroFlag = flag<number, MatomoEntities>({
+  key: "FindWalletHero",
+  defaultValue: 0,
+  description: "Find wallet hero A/B test variant index",
+  options: [
+    { value: 0, label: "Original" },
+    { value: 1, label: "Variant A" },
+  ],
+  identify,
+  adapter: createMatomoAdapter("FindWalletHero"),
+})
+
+/** Flags precomputed for the homepage */
+export const homepageFlags = [homepageHeroFlag] as const
+
+/** Flags precomputed for /wallets/find-wallet */
+export const findWalletFlags = [findWalletHeroFlag] as const
+
+/**
+ * A/B-tested routes and the flags precomputed for each.
+ * Keys are locale-less canonical paths (English URLs are unprefixed, and
+ * non-root paths carry the trailing slash per trailingSlash: true).
+ * Each route gets its own flag group so permutations don't multiply
+ * across pages. Add entries as experiments are created in Matomo.
+ */
+export const abTestRoutes: Record<
+  string,
+  readonly (typeof homepageHeroFlag)[]
+> = {
+  "/": homepageFlags,
+  "/wallets/find-wallet/": findWalletFlags,
+}

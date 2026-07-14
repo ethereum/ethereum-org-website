@@ -6,12 +6,12 @@ import type { Lang } from "@/lib/types"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import OriginalHomePage from "../../page"
+import OriginalFindWalletPage from "../../../../wallets/find-wallet/page"
 
 import { decodeABCode, encodeABCode } from "@/lib/ab-testing/constants"
-import { homepageFlags, homepageHeroFlag } from "@/lib/ab-testing/flags"
+import { findWalletFlags, findWalletHeroFlag } from "@/lib/ab-testing/flags"
 
-export { generateMetadata } from "../../page"
+export { generateMetadata } from "../../../../wallets/find-wallet/page"
 
 /**
  * Generate a static page for each possible combination of flag values.
@@ -20,7 +20,7 @@ export { generateMetadata } from "../../page"
  */
 export async function generateStaticParams() {
   try {
-    const codes = await generatePermutations(homepageFlags)
+    const codes = await generatePermutations(findWalletFlags)
     // Only the default locale is A/B tested. Codes are dot-encoded to keep
     // the URL segment directory-like (see encodeABCode).
     return codes.map((code) => ({
@@ -41,12 +41,12 @@ interface PageProps {
 }
 
 /**
- * Precomputed homepage with A/B test variants.
+ * Precomputed find-wallet page with A/B test variants.
  * The proxy rewrites eligible requests to include the signed flags code,
  * which is used here to retrieve the precomputed flag values.
  * This route is internal-only: it is never linked and only reached via rewrite.
  */
-export default async function PrecomputedHomePage({ params }: PageProps) {
+export default async function PrecomputedFindWalletPage({ params }: PageProps) {
   const { locale, code } = await params
 
   // Only the default locale is A/B tested
@@ -58,8 +58,8 @@ export default async function PrecomputedHomePage({ params }: PageProps) {
   let heroVariant: number
   try {
     ;[heroVariant] = await getPrecomputed(
-      [homepageHeroFlag],
-      homepageFlags,
+      [findWalletHeroFlag],
+      findWalletFlags,
       decodeABCode(code)
     )
   } catch {
@@ -68,7 +68,7 @@ export default async function PrecomputedHomePage({ params }: PageProps) {
   }
 
   return (
-    <OriginalHomePage
+    <OriginalFindWalletPage
       params={Promise.resolve({ locale: locale as Lang })}
       heroVariant={heroVariant}
     />
