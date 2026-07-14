@@ -1,6 +1,6 @@
 "use client"
-
 import { useMemo, useState } from "react"
+import { useTranslations } from "next-intl"
 
 import type { Story } from "@/lib/types"
 
@@ -9,8 +9,6 @@ import { Button } from "@/components/ui/buttons/Button"
 import TagFilter from "@/components/ui/tag-filter"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type CommunityStoriesProps = {
   stories: Story[]
@@ -27,7 +25,7 @@ const parseCategories = (raw?: string) =>
     .filter(Boolean)
 
 const CommunityStories = ({ stories }: CommunityStoriesProps) => {
-  const { t } = useTranslation("page-stories")
+  const tCommon = useTranslations("common")
 
   // Distinct categories as [label, count] entries, sorted by frequency and
   // deduped case-insensitively (the data has casing drift, e.g. "Self-custody"
@@ -120,7 +118,7 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
               eventCategory: "community-stories",
             }}
           >
-            {t("common:show-more")}
+            {tCommon("show-more")}
           </Button>
         </div>
       )}
