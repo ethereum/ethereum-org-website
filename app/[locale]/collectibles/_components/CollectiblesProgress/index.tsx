@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Progress } from "@/components/ui/progress"
 
@@ -9,14 +9,12 @@ import { dateTimeFormat } from "@/lib/utils/date"
 
 import { type BadgeWithOwned } from "../CollectiblesContent"
 
-import useTranslation from "@/hooks/useTranslation"
-
 type CollectiblesProgressProps = {
   badges: BadgeWithOwned[]
 }
 
 const CollectiblesProgress = ({ badges }: CollectiblesProgressProps) => {
-  const { t } = useTranslation("page-collectibles")
+  const t = useTranslations("page-collectibles")
   const locale = useLocale()
 
   const currentYear = new Date().getFullYear().toString()

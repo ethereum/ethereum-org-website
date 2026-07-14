@@ -239,8 +239,8 @@ test.describe("Data-Layer Getters", () => {
   })
 
   test.describe("Stats & Analytics", () => {
-    test("getBlobscanStats returns blobscan stats or null", async () => {
-      const result = await dataLayer.getBlobscanStats()
+    test("getBlobStats returns blob stats or null", async () => {
+      const result = await dataLayer.getBlobStats()
       if (result !== null) {
         expect(result).toHaveProperty("totalBlobs")
         expect(result).toHaveProperty("avgBlobFee")
