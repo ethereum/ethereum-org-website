@@ -35,6 +35,8 @@ With Envio, developers can benefit from:
 
 Follow this [quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart?utm_source=ethereum-org&utm_medium=partner-docs) guide to create, deploy, and query an indexer.
 
+See Envio's [performance benchmarks](https://docs.envio.dev/docs/HyperIndex/benchmarking?utm_source=ethereum-org&utm_medium=partner-docs).
+
 ## The Graph {#the-graph}
 
 [The Graph](https://thegraph.com/) is an indexing protocol that provides an easy way to query blockchain data through open APIs known as subgraphs.
