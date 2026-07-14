@@ -18,7 +18,13 @@ const WhatAreAppsStories = async () => {
   const allStories = await getCommunityStories(locale)
   const stories = FEATURED_STORIES.flatMap(({ storyKey, twitter }) => {
     const story = allStories.find((s) => s.storyKey === storyKey)
-    return story ? [{ ...story, twitter }] : []
+    if (!story) {
+      // Likely a renamed storyKey in tenYearStories -- warn rather than
+      // silently render fewer featured cards
+      console.warn(`WhatAreAppsStories: no story found for "${storyKey}"`)
+      return []
+    }
+    return [{ ...story, twitter }]
   })
 
   return <WhatAreAppsStoriesList stories={stories} />

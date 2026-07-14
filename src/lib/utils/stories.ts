@@ -8,6 +8,8 @@ import tenYearStories from "@/data/tenYearStories"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
+import { loadMessages } from "@/lib/i18n/loadMessages"
+
 const parseDate = (date: string, locale = DEFAULT_LOCALE): string => {
   // TODO: Remove this check when spreadsheet is fixed
   // Currently dates are in the formatted as "DD.MM." which is not parsable by Date.parse
@@ -34,6 +36,13 @@ export const getCommunityStories = async (
   locale = DEFAULT_LOCALE
 ): Promise<Story[]> => {
   const t = await getTranslations({ locale, namespace: "community-stories" })
+  // Keys actually present in this locale's own file (before the English merge
+  // in i18n/request.ts), so we can tell a real translation from a fallback
+  const localeMessages = await loadMessages(locale)
+  const translated = localeMessages["community-stories"] ?? {}
+  const hasTranslation = (key: string) =>
+    locale !== DEFAULT_LOCALE && key in translated
+
   return tenYearStories.map(
     ({
       storyKey,
@@ -44,17 +53,24 @@ export const getCommunityStories = async (
       date,
       country,
       twitter,
-    }) => ({
-      storyKey,
-      name,
-      // The author's own words beat a round-trip translation when the viewer
-      // reads their language; StoryCard then hides the flip (story === original)
-      story: originalLocale === locale ? storyOriginal : t(storyKey),
-      storyOriginal: storyOriginal || null,
-      twitter: twitter || null,
-      country: country || null,
-      date: parseDate(date, locale),
-      category,
-    })
+    }) => {
+      // Prefer the author's verbatim words when the viewer reads the original
+      // language, or (for English submissions) when this locale has no
+      // translation yet -- the verbatim text beats a drift-prone English intl
+      // value. Non-English originals keep t() as a readable English fallback.
+      const useOriginal =
+        originalLocale === locale ||
+        (originalLocale === DEFAULT_LOCALE && !hasTranslation(storyKey))
+      return {
+        storyKey,
+        name,
+        story: useOriginal ? storyOriginal : t(storyKey),
+        storyOriginal: storyOriginal || null,
+        twitter: twitter || null,
+        country: country || null,
+        date: parseDate(date, locale),
+        category,
+      }
+    }
   )
 }
