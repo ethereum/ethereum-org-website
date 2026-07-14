@@ -426,42 +426,6 @@ export const useWalletFilters = (): FilterOption[] => {
       ],
     },
     {
-      title: "Network support",
-      showFilterOption: true,
-      items: [
-        {
-          filterKey: "layer_2_support",
-          filterLabel: "layer_2_support",
-          description: "",
-          inputState: [],
-          ignoreFilterReset: false,
-          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
-            return (
-              <Layer2SelectInput
-                filterIndex={filterIndex}
-                itemIndex={itemIndex}
-                inputState={inputState}
-                updateFilterState={(filterIndex, itemIndex, newInputState) => {
-                  const newArray = newInputState as string[]
-                  const oldArray = prevNetworkArray.current
-                  if (newArray.length > oldArray.length) {
-                    trackCustomEvent({
-                      eventCategory: "WalletFilterSidebar",
-                      eventAction: "network",
-                      eventName: newArray[newArray.length - 1],
-                    })
-                  }
-                  prevNetworkArray.current = newArray
-                  updateFilterState(filterIndex, itemIndex, newInputState)
-                }}
-              />
-            )
-          },
-          options: [],
-        },
-      ],
-    },
-    {
       title: t("page-find-wallet-languages-supported"),
       showFilterOption: true,
       items: [
@@ -538,6 +502,42 @@ export const useWalletFilters = (): FilterOption[] => {
                     eventAction: `${locale} - ${t("page-find-wallet-sell-for-fiat")}`,
                     eventName: `withdraw_crypto ${newInputState}`,
                   })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
+              />
+            )
+          },
+          options: [],
+        },
+      ],
+    },
+    {
+      title: t("page-find-wallet-network-support"),
+      showFilterOption: true,
+      items: [
+        {
+          filterKey: "layer_2_support",
+          filterLabel: "layer_2_support",
+          description: "",
+          inputState: [],
+          ignoreFilterReset: false,
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <Layer2SelectInput
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  const newArray = newInputState as string[]
+                  const oldArray = prevNetworkArray.current
+                  if (newArray.length > oldArray.length) {
+                    trackCustomEvent({
+                      eventCategory: "WalletFilterSidebar",
+                      eventAction: "network",
+                      eventName: newArray[newArray.length - 1],
+                    })
+                  }
+                  prevNetworkArray.current = newArray
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}
               />

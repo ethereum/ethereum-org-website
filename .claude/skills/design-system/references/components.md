@@ -789,6 +789,14 @@ import { MdComponents } from "@/components/MdComponents"
 
 The shortcode registry for markdown content. To add a markdown shortcode, add the component to `MdComponents`.
 
+### `MarkdownVideo` (markdown clips)
+
+Renders `![](./x.mp4)` in markdown content (reached via `MarkdownImage`; not imported in app code) — the modern GIF replacement: silent, looping, plays only while on-screen, controls instead of autoplay under `prefers-reduced-motion`.
+
+**Sizing convention**: an optional `#WxH` fragment on the markdown src declares the clip's intrinsic dimensions — `![](./demo.mp4#800x400)` — and sizes the box to the clip's own aspect ratio (landscape fills the content width; taller-than-wide is height-capped). Without it, a fixed 16:9 box (9:16 via the `-portrait` filename suffix) letterboxes the clip with `object-contain`.
+
+Use the fragment for any off-ratio clip — screen captures usually are. It's presentation metadata only: browsers strip fragments before requesting, so the asset URL stays canonical (one CDN/browser cache entry, no file renames) and references without it — e.g. not-yet-repropagated translations — still play in the default box. **Never rename a video asset to encode metadata.** Implementation notes: `rehypeImg` and `MarkdownImage` strip the fragment before extension checks (an mp4 falling into the image path makes `image-size` throw at build); `MarkdownVideo` sets `width`/`height` attributes plus explicit CSS `aspect-ratio` because the attribute→ratio mapping is unreliable on `<video>` and `h-auto` overrides the height attribute — together they reserve the box before video metadata loads (no CLS).
+
 ## Components NOT to Use
 
 ### Legacy / deprecated

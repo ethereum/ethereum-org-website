@@ -24,9 +24,20 @@ import { useTranslations } from "next-intl"
 
 export function Widget() {
   const t = useTranslations("widget-namespace")
-  return <p>{t("widget-description")}</button>
+  const tCommon = useTranslations("common")
+  return (
+    <p>
+      {t("widget-description")} {tCommon("learn-more")}
+    </p>
+  )
 }
 ```
+
+One namespace-bound function per namespace -- to access another namespace, bind a second function (`tCommon` above) rather than reaching across namespaces from one `t`.
+
+Do not use the legacy `@/hooks/useTranslation` wrapper (`const { t } = useTranslation("ns")` with `namespace:key` syntax) in new code -- it returns raw messages by default and silently skips ICU interpolation in its plain-key form. Existing call sites are being migrated.
+
+Caveat for both APIs: strings with embedded HTML (`<b>`, `<a href>`) predate next-intl and break plain `t()` ICU parsing -- use `t.raw("key")` (rendered downstream via htmr/`Translation`) or `t.rich(...)` for those.
 
 ### Never hard-code English
 

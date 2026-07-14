@@ -217,6 +217,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   sourceName="Glassdoor"
                   sourceUrl="https://www.glassdoor.com/Salaries/developer-salary-SRCH_KO0%2C9.htm"
                   lastUpdated="2025-04-10T12:00:00Z"
+                  center={false}
                 >
                   {t("page-developers-why-avg-salary-dev")}
                 </BigNumber>
@@ -226,6 +227,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   sourceName="Web3 Jobs"
                   sourceUrl="https://web3.career/web3-salaries/united-states"
                   lastUpdated="2025-08-01T12:00:00Z"
+                  center={false}
                 >
                   {t("page-developers-why-avg-salary-blockchain")}
                 </BigNumber>

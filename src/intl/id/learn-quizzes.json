@@ -10,7 +10,7 @@
   "explanation": "Penjelasan",
   "next-question": "Pertanyaan selanjutnya",
   "next-quiz": "Kuis selanjutnya",
-  "question-number": "Pertanyaan nomor {{number}}:",
+  "question-number": "Pertanyaan nomor {number}:",
   "page-assets-merge": "The Merge",
   "passed": "Anda lulus kuis!",
   "questions": "Pertanyaan",

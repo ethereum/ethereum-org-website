@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { Clipboard, ClipboardCheck } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { TranslationKey } from "@/lib/types"
 
@@ -20,8 +20,6 @@ import InlineLink from "@/components/ui/Link"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
-import useTranslation from "@/hooks/useTranslation"
-
 const CHUNKED_ADDRESS =
   DEPOSIT_CONTRACT_ADDRESS.match(/(?:^0x|.{4})/g)?.join(" ")
 
@@ -29,7 +27,7 @@ const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
 const DepositContract = () => {
   const locale = useLocale()
-  const { t } = useTranslation("page-staking-deposit-contract")
+  const t = useTranslations("page-staking-deposit-contract")
 
   const [state, setState] = useState<{
     browserHasTextToSpeechSupport: boolean
@@ -86,6 +84,8 @@ const DepositContract = () => {
       speech.removeEventListener("end", onEndCallback)
       window.speechSynthesis.cancel()
     }
+    // Mount-only: the utterance is configured once; a locale switch remounts the page
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleTextToSpeech = () => {

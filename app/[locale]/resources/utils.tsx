@@ -94,10 +94,7 @@ export const getResources = async ({
     {
       title: t("page-resources-network-layer2-title"),
       metric: (
-        <BigNumber
-          className="items-center"
-          value={"value" in medianTxCost ? medianTxCost.value : "—"}
-        >
+        <BigNumber value={"value" in medianTxCost ? medianTxCost.value : "—"}>
           {t("page-resources-network-layer2-chart-label")}
         </BigNumber>
       ),
@@ -393,11 +390,10 @@ export const getResources = async ({
       title: t("page-resources-blobs-title"),
       metric: (
         <div className="flex gap-4">
-          <BigNumber className="items-center" value={totalBlobs}>
+          <BigNumber value={totalBlobs}>
             {t("page-resources-blobs-metric-total-label")}
           </BigNumber>
           <BigNumber
-            className="items-center"
             value={"value" in avgBlobFeeUsd ? avgBlobFeeUsd.value : "—"}
           >
             {t("page-resources-blobs-metric-fee-label")}
