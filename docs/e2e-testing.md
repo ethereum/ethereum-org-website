@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project uses [Playwright](https://playwright.dev/) for end-to-end testing.
+This project uses [Playwright](https://playwright.dev/) for end-to-end (e2e) testing.
 
 ## Quick Start
 
