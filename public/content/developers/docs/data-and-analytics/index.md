@@ -24,7 +24,7 @@ Developers can then process and transform this data to give their users unique i
 
 ## Envio {#envio}
 
-[Envio](https://envio.dev/?utm_source=ethereum-org&utm_medium=partner-docs) is a high-performance indexing framework that turns smart contract events into a queryable GraphQL API, with managed hosting on Envio Cloud.
+[Envio](https://envio.dev/?utm_source=ethereum-org&utm_medium=partner-docs) is the data layer for blockchain apps. It gives Ethereum developers the fastest, most flexible way to get real-time and historical onchain data, from a single GraphQL API to raw high-speed access, with managed hosting on Envio Cloud.
 
 With Envio, developers can benefit from:
 
