@@ -26,7 +26,7 @@ import { ResourceItem, ResourcesContainer } from "./_components/ResourcesUI"
 import ResourcesPageJsonLD from "./page-jsonld"
 import { getResources } from "./utils"
 
-import { getBlobscanStats, getGrowThePieData } from "@/lib/data"
+import { getBlobStats, getGrowThePieData } from "@/lib/data"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const EVENT_CATEGORY = "dashboard"
@@ -38,30 +38,30 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-resources")
 
   // Fetch data using the new data-layer functions (already cached)
-  const [growThePieData, blobscanOverallStats] = await Promise.all([
+  const [growThePieData, blobOverallStats] = await Promise.all([
     getGrowThePieData(),
-    getBlobscanStats(),
+    getBlobStats(),
   ])
 
   // Handle null cases - throw error if required data is missing
   if (!growThePieData) {
     throw new Error("Failed to fetch GrowThePie data")
   }
-  if (!blobscanOverallStats) {
-    throw new Error("Failed to fetch Blobscan stats data")
+  if (!blobOverallStats) {
+    throw new Error("Failed to fetch blob stats data")
   }
 
   const txCostsMedianUsd = growThePieData?.txCostsMedianUsd ?? {
     error: "No data available",
   }
 
-  // Extract blob stats directly (getBlobscanStats returns BlobscanStats, not wrapped in MetricReturnData)
+  // Extract blob stats directly (getBlobStats returns BlobStats, not wrapped in MetricReturnData)
   const blobStats = {
-    avgBlobFee: blobscanOverallStats.avgBlobFee,
+    avgBlobFee: blobOverallStats.avgBlobFee,
     totalBlobs: numberFormat(locale, {
       notation: "compact",
       maximumFractionDigits: 1,
-    }).format(blobscanOverallStats.totalBlobs),
+    }).format(blobOverallStats.totalBlobs),
   }
 
   const resourceSections = await getResources({

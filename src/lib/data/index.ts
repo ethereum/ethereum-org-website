@@ -115,9 +115,9 @@ export const getStakedPercentageData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getBlobscanStats = createCachedGetter(
-  dataLayer.getBlobscanStats,
-  ["blobscan-stats"],
+export const getBlobStats = createCachedGetter(
+  dataLayer.getBlobStats,
+  ["blob-stats"],
   CACHE_REVALIDATE_DAY
 )
 
