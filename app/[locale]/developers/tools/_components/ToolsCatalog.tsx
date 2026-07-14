@@ -1,9 +1,14 @@
 "use client"
 
 import { useDeferredValue, useMemo, useRef, useState } from "react"
-import { ChevronRight } from "lucide-react"
+import { ChevronDown, ChevronRight } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 import Input from "@/components/ui/input"
 import { BaseLink } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
@@ -89,6 +94,7 @@ type CategorySidebarProps = {
   currentCategoryId?: string
   selectedSubcategoryId?: string
   onSelectSubcategory: (subcategoryId?: string) => void
+  showAllLink?: boolean
 }
 
 function CategorySidebar({
@@ -103,22 +109,25 @@ function CategorySidebar({
   currentCategoryId,
   selectedSubcategoryId,
   onSelectSubcategory,
+  showAllLink = true,
 }: CategorySidebarProps) {
   const nf = numberFormat(locale)
   return (
     <div className="space-y-1">
-      <BaseLink
-        href="/developers/tools/"
-        className={cn(
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-start text-sm no-underline hover:bg-background-highlight",
-          !currentCategoryId && "bg-background-highlight text-primary"
-        )}
-      >
-        <span>{allCategoriesLabel}</span>
-        <span className="text-xs text-body-medium">
-          {nf.format(totalCount)}
-        </span>
-      </BaseLink>
+      {showAllLink && (
+        <BaseLink
+          href="/developers/tools/"
+          className={cn(
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-start text-sm no-underline hover:bg-background-highlight",
+            !currentCategoryId && "bg-background-highlight text-primary"
+          )}
+        >
+          <span>{allCategoriesLabel}</span>
+          <span className="text-xs text-body-medium">
+            {nf.format(totalCount)}
+          </span>
+        </BaseLink>
+      )}
 
       {categories.map((category) => {
         const isCurrent = currentCategoryId === category.id
@@ -313,21 +322,19 @@ export default function ToolsCatalog({
       .filter((group) => group.count > 0)
   }, [categories, filteredTools])
 
-  const sidebar = (
-    <CategorySidebar
-      locale={locale}
-      categories={categories}
-      categoryLabels={categoryLabels}
-      subcategoryLabels={subcategoryLabels}
-      countByCategory={countByCategory}
-      countBySubcategory={countBySubcategory}
-      totalCount={totalCount}
-      allCategoriesLabel={labels.allCategories}
-      currentCategoryId={currentCategoryId}
-      selectedSubcategoryId={selectedSubcategoryId}
-      onSelectSubcategory={handleSelectSubcategory}
-    />
-  )
+  const sidebarProps: CategorySidebarProps = {
+    locale,
+    categories,
+    categoryLabels,
+    subcategoryLabels,
+    countByCategory,
+    countBySubcategory,
+    totalCount,
+    allCategoriesLabel: labels.allCategories,
+    currentCategoryId,
+    selectedSubcategoryId,
+    onSelectSubcategory: handleSelectSubcategory,
+  }
 
   return (
     <Section id="catalog" className="space-y-5">
@@ -341,7 +348,7 @@ export default function ToolsCatalog({
               className="w-full"
             />
             <div className="max-h-[calc(100vh-11rem)] overflow-y-auto rounded-xl border p-2">
-              {sidebar}
+              <CategorySidebar {...sidebarProps} />
             </div>
           </div>
         </aside>
@@ -354,7 +361,29 @@ export default function ToolsCatalog({
               placeholder={labels.searchPlaceholder}
               className="w-full"
             />
-            <div className="rounded-xl border p-2">{sidebar}</div>
+            <Collapsible className="rounded-xl border">
+              <CollapsibleTrigger className="group flex w-full items-center justify-between gap-2 rounded-xl px-4 py-3 text-sm hover:bg-background-highlight focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover">
+                <span className="flex-1 text-start">
+                  {currentCategoryId
+                    ? getCategoryLabel(currentCategoryId, categoryLabels)
+                    : labels.allCategories}
+                </span>
+                <span className="text-xs text-body-medium">
+                  {nf.format(
+                    currentCategoryId
+                      ? countByCategory[currentCategoryId] || 0
+                      : totalCount
+                  )}
+                </span>
+                <ChevronDown className="size-4 shrink-0 text-body-medium transition-transform group-data-[state=open]:rotate-180" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="p-2 pt-0">
+                <CategorySidebar
+                  {...sidebarProps}
+                  showAllLink={!!currentCategoryId}
+                />
+              </CollapsibleContent>
+            </Collapsible>
           </div>
           <div ref={resultsTopRef} className="scroll-mt-24" />
           {(currentCategoryId || selectedSubcategoryId) && (
