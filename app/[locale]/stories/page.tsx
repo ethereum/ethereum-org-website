@@ -29,12 +29,10 @@ import { Section } from "@/components/ui/section"
 
 import { getStoriesData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
+import { getCommunityStories } from "@/lib/utils/stories"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getVideos } from "@/lib/utils/videos"
 
-import tenYearStories from "@/data/tenYearStories"
-
-import { parseStoryDates } from "../10years/_components/utils"
 import { getVideosByCategory } from "../videos/utils"
 
 import CommunityStories from "./_components/CommunityStories"
@@ -53,7 +51,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
 
   const videos = await getVideos(locale)
   const storyVideos = getVideosByCategory(videos, ["community-stories"])
-  const communityStories: Story[] = parseStoryDates(tenYearStories, locale)
+  const communityStories: Story[] = await getCommunityStories(locale)
   const featuredStories = await getStoriesData(locale)
 
   const allMessages = await getMessages({ locale })
