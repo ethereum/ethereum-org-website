@@ -65,6 +65,7 @@ export type ABFlag = ReturnType<typeof flag<number, MatomoEntities>>
  *
  * @param key Must exactly match the experiment name in Matomo - a mismatch
  *   doesn't error, everyone silently gets the original variant.
+ * @param description Human-readable summary shown in Flags SDK tooling.
  * @param numVariants Total variant count including the original (default 2).
  */
 export const defineABFlag = (
