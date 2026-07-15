@@ -96,4 +96,31 @@ export const defineABFlag = (
  * pages. Every route registered here needs a matching coded page under
  * app/[locale]/ab-code/[code]/<path> - see docs/ab-testing.md for the recipe.
  */
-export const abTestRoutes: Record<string, readonly ABFlag[]> = {}
+/**
+ * Homepage Hero A/B test flag.
+ * Demo flag - replace with a real experiment.
+ */
+export const homepageHeroFlag = defineABFlag(
+  "HomepageHero",
+  "Homepage hero A/B test variant index"
+)
+
+/**
+ * Find wallet Hero A/B test flag.
+ * Demo flag for the /wallets/find-wallet redesign test.
+ */
+export const findWalletHeroFlag = defineABFlag(
+  "FindWalletHero",
+  "Find wallet hero A/B test variant index"
+)
+
+/** Flags precomputed for the homepage */
+export const homepageFlags = [homepageHeroFlag] as const
+
+/** Flags precomputed for /wallets/find-wallet */
+export const findWalletFlags = [findWalletHeroFlag] as const
+
+export const abTestRoutes: Record<string, readonly ABFlag[]> = {
+  "/": homepageFlags,
+  "/wallets/find-wallet/": findWalletFlags,
+}

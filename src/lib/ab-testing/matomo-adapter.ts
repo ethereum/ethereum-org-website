@@ -19,7 +19,26 @@ const USE_MOCK_EXPERIMENTS = process.env.USE_MOCK_EXPERIMENTS === "true"
  *     ],
  *   },
  */
-const MOCK_EXPERIMENTS: Record<string, ABTestConfig> = {}
+const MOCK_EXPERIMENTS: Record<string, ABTestConfig> = {
+  HomepageHero: {
+    name: "HomepageHero",
+    id: "dev-1",
+    enabled: true,
+    variants: [
+      { name: "Original", weight: 50 },
+      { name: "VariantA", weight: 50 },
+    ],
+  },
+  FindWalletHero: {
+    name: "FindWalletHero",
+    id: "dev-2",
+    enabled: true,
+    variants: [
+      { name: "Original", weight: 50 },
+      { name: "VariantA", weight: 50 },
+    ],
+  },
+}
 
 function isExperimentActive(exp: MatomoExperiment): boolean {
   const now = new Date()

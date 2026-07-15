@@ -7,6 +7,7 @@ import {
 
 import type { Lang, PageParams, WalletData } from "@/lib/types"
 
+import { ABTest } from "@/components/AB"
 import FindWalletProductTable from "@/components/FindWalletProductTable"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -27,9 +28,14 @@ import {
 
 import FindWalletPageJsonLD from "./page-jsonld"
 
-const Page = async (props: { params: Promise<PageParams> }) => {
+const Page = async (props: {
+  params: Promise<PageParams>
+  /** Precomputed A/B test variant index, passed by the ab-code route */
+  heroVariant?: number
+}) => {
   const params = await props.params
   const { locale } = params
+  const { heroVariant } = props
   const t = await getTranslations("page-wallets-find-wallet")
 
   setRequestLocale(locale)
@@ -79,12 +85,41 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="relative flex flex-col">
-          <PageHero
-            breadcrumbs={{ slug: "/wallets/find-wallet" }}
-            title={t("page-find-wallet-title")}
-            description={t("page-find-wallet-description")}
-            variant="no-divider"
-          />
+          {heroVariant !== undefined ? (
+            <ABTest
+              testKey="FindWalletHero"
+              variantIndex={heroVariant}
+              variants={[
+                <PageHero
+                  key="original"
+                  breadcrumbs={{ slug: "/wallets/find-wallet" }}
+                  title={t("page-find-wallet-title")}
+                  description={t("page-find-wallet-description")}
+                  variant="no-divider"
+                />,
+                // Demo placeholder: visibly distinct variant for preview
+                // verification. Replace with the redesigned hero.
+                <div key="variant-a" className="w-full">
+                  <div className="bg-warning py-2 text-center font-bold">
+                    A/B VARIANT A (FindWalletHero demo)
+                  </div>
+                  <PageHero
+                    breadcrumbs={{ slug: "/wallets/find-wallet" }}
+                    title={t("page-find-wallet-title")}
+                    description={t("page-find-wallet-description")}
+                    variant="no-divider"
+                  />
+                </div>,
+              ]}
+            />
+          ) : (
+            <PageHero
+              breadcrumbs={{ slug: "/wallets/find-wallet" }}
+              title={t("page-find-wallet-title")}
+              description={t("page-find-wallet-description")}
+              variant="no-divider"
+            />
+          )}
 
           <Section id="wallets">
             <h2 className="sr-only select-none">
