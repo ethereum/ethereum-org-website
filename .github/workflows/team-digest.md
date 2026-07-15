@@ -49,6 +49,7 @@ safe-outputs:
               sleep 1
             done
   noop:
+    report-as-issue: false
   report-failure-as-issue: false
 pre-agent-steps:
   - name: Pre-fetch open queue
