@@ -22,18 +22,6 @@
   [headers.values]
     Access-Control-Allow-Origin = "https://esp.ethereum.foundation"
 
-# Internal A/B variant routes: only ever served via proxy rewrite; direct
-# visits 404, but keep crawlers out defensively
-[[headers]]
-  for = "/ab-code/*"
-  [headers.values]
-    X-Robots-Tag = "noindex"
-
-[[headers]]
-  for = "/en/ab-code/*"
-  [headers.values]
-    X-Robots-Tag = "noindex"
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 

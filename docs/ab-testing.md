@@ -16,7 +16,7 @@ The same fingerprint always hashes to the same bucket, so returning visitors get
 ### Scope and safety properties
 
 - **Default locale only.** Route keys are locale-less paths and English URLs are unprefixed, so `/es/...` etc. never match — non-English visitors get the original page with no tracker, entirely outside the experiment.
-- **Internal URLs are not reachable.** Direct visits to `/ab-code/...` URLs get case-mangled by the sitewide lowercase redirect, fail signature verification, and 404. Coded pages also re-export the original page's metadata (canonical URL), and `netlify.toml` sends `X-Robots-Tag: noindex` for `/ab-code/*`.
+- **Internal URLs are not reachable.** Direct visits to `/ab-code/...` URLs get case-mangled by the sitewide lowercase redirect, fail signature verification, and 404. Coded pages also re-export the original page's metadata, so even a hypothetically reachable variant page declares the public URL as canonical. (Don't add an `X-Robots-Tag` header rule for `/ab-code/*`: if the CDN matched it against the middleware-rewrite target, it would noindex the public pages being A/B tested.)
 - **Signed codes.** The variant assignment travels as a JWS signed with `FLAGS_SECRET`; tampered codes 404. Dots in the code are encoded as `~` (`encodeABCode`/`decodeABCode`) — with `trailingSlash: true`, a dotted URL segment reads as a file path and triggers a 308 redirect at the origin that would expose the internal URL (this killed the first attempt, #17265).
 - **Bots** are fingerprint-assigned like any visitor (their UA/IP is stable, so they see a consistent variant); Matomo filters known bots from reports. There is no bot exclusion in the proxy.
 
