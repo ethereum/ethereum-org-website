@@ -4,7 +4,6 @@ import { Strong } from "@/components/IntlStringElements"
 import ProductListComponent, {
   type ProductListContent,
 } from "@/components/ProductList"
-import InlineLink from "@/components/ui/Link"
 
 import aiagenttoolkit from "@/public/images/ai-agents/aiagenttoolkit.png"
 import aixbt from "@/public/images/ai-agents/aixbt.png"
@@ -25,11 +24,6 @@ const AiAgentProductLists = async ({ list }: { list: string }) => {
         description: [
           t.rich("luna-description-1", {
             strong: Strong,
-            a: (chunks) => (
-              <InlineLink href="https://www.tiktok.com/@aidolofficial">
-                {chunks}
-              </InlineLink>
-            ),
           }),
           t("luna-description-2"),
         ],
