@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react"
+import { useTranslations } from "next-intl"
 import * as RadioGroup from "@radix-ui/react-radio-group"
 
 import type {
@@ -14,8 +15,6 @@ import { cn } from "@/lib/utils/cn"
 
 import type { AnswerStatus } from "./useQuizWidget"
 
-import useTranslation from "@/hooks/useTranslation"
-
 type QuizRadioGroupProps = {
   questions: Question[]
   currentQuestionIndex: number
@@ -29,7 +28,7 @@ export const QuizRadioGroup = ({
   answerStatus,
   setCurrentQuestionAnswerChoice,
 }: QuizRadioGroupProps) => {
-  const { t } = useTranslation("learn-quizzes")
+  const t = useTranslations("learn-quizzes")
 
   const [selectedAnswer, setSelectedAnswer] =
     useState<RadioGroup.RadioGroupProps["value"]>("")

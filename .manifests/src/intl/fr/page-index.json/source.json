@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-index.json",
-  "generatedAt": "2026-06-29T23:48:47.987Z",
-  "rootHash": "17a81e1049bc",
+  "generatedAt": "2026-07-07T22:40:24.545Z",
+  "rootHash": "438a61c8b531",
   "tree": {
-    "contentHash": "c5414ba6befd",
-    "anchorHash": "c680a83b839e",
+    "contentHash": "3007c6adbb8b",
+    "anchorHash": "846928701ae9",
     "children": {
       "page-index-meta-title": {
         "contentHash": "2de94f4fbe78",
@@ -176,8 +176,8 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-carousel-remittances-title": {
-        "contentHash": "b8c0db3cc233",
-        "anchorHash": "87b801e9f31d",
+        "contentHash": "b2d9205434e8",
+        "anchorHash": "36ac9a17923c",
         "children": {
           "prose:1": {
             "contentHash": "155a8841c388",
@@ -185,10 +185,10 @@
           },
           "icu:0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "15fe0a36aa0c"
+            "anchorHash": "9d4a43b9a2da"
           },
           "prose:2": {
-            "contentHash": "90e63d85fa1a",
+            "contentHash": "59f006d63bd0",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -295,15 +295,15 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-carousel-remittances-ethereum-value": {
-        "contentHash": "2b80243c9be3",
-        "anchorHash": "b109f5f09c65",
+        "contentHash": "2f99522cbda7",
+        "anchorHash": "3687110e7445",
         "children": {
           "icu:0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "15fe0a36aa0c"
+            "anchorHash": "9d4a43b9a2da"
           },
           "prose:1": {
-            "contentHash": "90e63d85fa1a",
+            "contentHash": "59f006d63bd0",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -742,5 +742,5 @@
       "page-index-latest-updates-cta"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "d0c944dc89a0cc0fa82fc57431aa119ebd4cc28e"
 }

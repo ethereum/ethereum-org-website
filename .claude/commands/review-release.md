@@ -38,8 +38,10 @@ Summarize the changes for the user before proceeding.
 
 ### Step 3: Browser Checks
 
-Use the `/agent-browser` skill to check each key page on the staging deploy at:
+Use `playwright-cli` (the `@playwright/cli` terminal client) via Bash to check each key page on the staging deploy at:
 `https://staging.ethereum.org/`
+
+Workflow: `playwright-cli open` → `playwright-cli goto <url>` → `playwright-cli snapshot` (returns element refs like `e15`) → `playwright-cli click e15` / `playwright-cli fill e22 "text"`. Fall back to the `/agent-browser` skill only if `playwright-cli` is unavailable in the environment.
 
 1. **Open each page** — verify it loads without errors (no 404s, no blank pages)
 2. **Take screenshots** — save to `/tmp/screenshots/` for reference

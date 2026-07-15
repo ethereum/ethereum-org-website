@@ -4,11 +4,7 @@ The site supports 25 languages, including **Arabic** and **Urdu** (RTL). Transla
 
 ## Translation
 
-**Never import `useTranslations` from `next-intl` directly.** There are exactly two sanctioned APIs:
-
-### Server Components (preferred): `await getTranslations`
-
-Any component that needs intl strings and has no genuine client-side requirement (state, effects, event handlers, browser APIs) should be an **async Server Component** using `getTranslations`. This includes small data/list components rendered from MDX -- they don't need to stay sync, and importing a `"use client"` leaf (e.g. `ButtonLink`) does NOT make the component itself client-side.
+### Server Components (preferred)
 
 ```tsx
 import { getLocale, getTranslations } from "next-intl/server"
@@ -20,21 +16,28 @@ export default async function Page() {
 }
 ```
 
-### Client Components (only when genuinely client): `@/hooks/useTranslation`
-
-When a component is legitimately `"use client"`, use the project's custom hook -- not next-intl's `useTranslations`. It adds the `namespace:key` addressing scheme, a `common` default namespace, and missing-key fallback behavior the codebase relies on.
+### Client Components
 
 ```tsx
 "use client"
-import useTranslation from "@/hooks/useTranslation"
+import { useTranslations } from "next-intl"
 
 export function Widget() {
-  const { t } = useTranslation("widget-namespace")
-  return <p>{t("widget-description")}</p>
+  const t = useTranslations("widget-namespace")
+  const tCommon = useTranslations("common")
+  return (
+    <p>
+      {t("widget-description")} {tCommon("learn-more")}
+    </p>
+  )
 }
 ```
 
-Don't mark a file `"use client"` just to fetch strings -- see [server-vs-client.md](server-vs-client.md).
+One namespace-bound function per namespace -- to access another namespace, bind a second function (`tCommon` above) rather than reaching across namespaces from one `t`.
+
+Do not use the legacy `@/hooks/useTranslation` wrapper (`const { t } = useTranslation("ns")` with `namespace:key` syntax) in new code -- it returns raw messages by default and silently skips ICU interpolation in its plain-key form. Existing call sites are being migrated.
+
+Caveat for both APIs: strings with embedded HTML (`<b>`, `<a href>`) predate next-intl and break plain `t()` ICU parsing -- use `t.raw("key")` (rendered downstream via htmr/`Translation`) or `t.rich(...)` for those.
 
 ### Never hard-code English
 

@@ -1,4 +1,5 @@
 "use client"
+import { useTranslations } from "next-intl"
 import type { JSX } from "react"
 
 import type {
@@ -19,8 +20,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { Flex } from "../ui/flex"
 import InlineLink from "../ui/Link"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 interface DataType {
   title: TranslationKey
   linkText: TranslationKey
@@ -36,7 +35,7 @@ export type StakingComparisonProps = {
 }
 
 const StakingComparison = ({ page, className }: StakingComparisonProps) => {
-  const { t } = useTranslation("page-staking")
+  const t = useTranslations("page-staking")
 
   const solo: DataType = {
     title: "page-staking-dropdown-solo",

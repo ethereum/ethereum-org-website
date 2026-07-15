@@ -1,15 +1,13 @@
 "use client"
-
 import { useState } from "react"
 import { Check, ChevronDown, ChevronUp, Copy } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 
 import { cn } from "@/lib/utils/cn"
 
 import { LINES_BEFORE_COLLAPSABLE } from "@/lib/constants"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type CodeblockClientProps = {
   html: string
@@ -32,7 +30,7 @@ const CodeblockClient = ({
   fromHomepage,
   className,
 }: CodeblockClientProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
 
   const codeLineCount = Math.max(totalLines - 1, 1)
   const isCollapsable =

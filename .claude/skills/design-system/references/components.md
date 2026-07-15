@@ -92,7 +92,8 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 
 **`Card` variants**:
 
-- `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius` for edge-to-edge banners) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
+- `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius`; as a link, fills with `bg-background-highlight` on hover instead of an outline ring) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
+- **Link hover is variant-aware** (auto, from `href`): `ghost` link cards fill with `bg-background-highlight` and drop the outline; `base`/`nested`/`header-bar` link cards keep the `ring-primary-hover` outline. Driven by an internal `interactive` compound variant, not a prop.
 - `size`: `lg | base (default) | md | sm | xs`. Controls `--card-pad` (between/around parts) and `--content-space` (within `CardContent`). `xs` = zero padding for edge-to-edge banner imagery.
 - `href`: pass to wrap in `BaseLink` and get whole-card-clickable behavior with `group/link` propagation.
 - Card is always vertical (`flex flex-col`); there is no `orientation` variant.
@@ -115,7 +116,7 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 - `size`: `full | lg | base (default) | sm | thumbnail-lg | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm. `thumbnail-lg` is a 128px square; `thumbnail` is 64px — both `shrink-0` for small logo/icon placements.
 - `fit`: `cover (default) | contain`. With `fit="contain"` and a single `<Image>` child, the banner auto-clones the image as a blurred backdrop. Two children breaks the magic.
 - `zoom`: `true (default) | false`. Controls hover zoom propagation from a parent `group/link`.
-- Placement: inside `CardHeader` for padded; as a direct child of `Card` (pair with `Card size="xs"` or `variant="ghost"`) for edge-to-edge.
+- Placement: inside `CardHeader` (default; keeps banner radius concentric and gives link-hover room). Bare direct child of `Card` only for a true edge-to-edge image, paired with `size="xs"` so radii match (a bare banner on a padded size / link card mismatches corner radius — see gotchas).
 
 **`CardTitle` variants**:
 
@@ -683,6 +684,8 @@ import { Swiper, ... } from "@/components/ui/swiper"
 
 `"use client"`, wraps swiper.js. On the deprecation track. Migrate existing consumers to `EdgeScrollContainer`.
 
+**i18n requirement:** `Swiper` binds `useTranslations("component-swiper")` for its a11y slide announcements. Every page that renders one must ship that namespace to the client — register the route in `src/lib/utils/translations.ts` (`EXACT_PATH_ADDITIONAL_NAMESPACES` / `PREFIX_PATH_ADDITIONAL_NAMESPACES`) or add `"component-swiper"` to the page's `pick()` for its `I18nProvider`. Missing it means screen readers announce raw key tails (`swiper-next-slide`). Currently registered: `/` (hand-pick), `/developers/` (scoped providers), `/start/`, `/10years/`, `/apps/`.
+
 ### `List` / `OrderedList` / `UnorderedList` / `ListItem`
 
 ```tsx
@@ -801,6 +804,14 @@ import { MdComponents } from "@/components/MdComponents"
 ```
 
 The shortcode registry for markdown content. To add a markdown shortcode, add the component to `MdComponents`.
+
+### `MarkdownVideo` (markdown clips)
+
+Renders `![](./x.mp4)` in markdown content (reached via `MarkdownImage`; not imported in app code) — the modern GIF replacement: silent, looping, plays only while on-screen, controls instead of autoplay under `prefers-reduced-motion`.
+
+**Sizing convention**: an optional `#WxH` fragment on the markdown src declares the clip's intrinsic dimensions — `![](./demo.mp4#800x400)` — and sizes the box to the clip's own aspect ratio (landscape fills the content width; taller-than-wide is height-capped). Without it, a fixed 16:9 box (9:16 via the `-portrait` filename suffix) letterboxes the clip with `object-contain`.
+
+Use the fragment for any off-ratio clip — screen captures usually are. It's presentation metadata only: browsers strip fragments before requesting, so the asset URL stays canonical (one CDN/browser cache entry, no file renames) and references without it — e.g. not-yet-repropagated translations — still play in the default box. **Never rename a video asset to encode metadata.** Implementation notes: `rehypeImg` and `MarkdownImage` strip the fragment before extension checks (an mp4 falling into the image path makes `image-size` throw at build); `MarkdownVideo` sets `width`/`height` attributes plus explicit CSS `aspect-ratio` because the attribute→ratio mapping is unreliable on `<video>` and `h-auto` overrides the height attribute — together they reserve the box before video metadata loads (no CLS).
 
 ## Components NOT to Use
 

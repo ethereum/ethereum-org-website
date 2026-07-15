@@ -10,7 +10,7 @@ import {
   Trophy,
   X,
 } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { ITutorial, Lang, SectionNavDetails } from "@/lib/types"
 
@@ -34,8 +34,6 @@ import { filterTutorialsByLang } from "@/lib/utils/tutorial"
 import externalTutorials from "@/data/externalTutorials.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
-
-import useTranslation from "@/hooks/useTranslation"
 
 const MAX_DEFAULT_TAGS = 12
 
@@ -62,7 +60,7 @@ type TutorialsListProps = {
 }
 
 const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
-  const { t } = useTranslation("page-developers-tutorials")
+  const t = useTranslations("page-developers-tutorials")
   const locale = useLocale()
   const effectiveLocale = internalTutorials.length > 0 ? locale : DEFAULT_LOCALE
   const filteredTutorialsByLang = useMemo(

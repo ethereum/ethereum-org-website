@@ -99,21 +99,30 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
   // Next.js-only modules can still load this file to test getTranslatedLocales.
   const [
     { appsCategories },
-    { DEV_TOOL_CATEGORY_SLUG_LIST },
-    { getAppsData },
+    { getAppsData, getDeveloperToolsData },
+    { getToolKey, normalizeDeveloperToolsData, withCategories },
     { slugify },
   ] = await Promise.all([
     import("@/data/apps/categories"),
-    import("@/data/developerTools"),
     import("@/lib/data"),
+    import("@/lib/utils/developerToolsData"),
     import("../utils/url"),
   ])
 
   // discoverStaticPages() excludes dynamic segments, so add known
   // generateStaticParams() routes that should be present in sitemap output.
-  const devToolPaths = DEV_TOOL_CATEGORY_SLUG_LIST.map(
-    (categorySlug) => `/developers/tools/${categorySlug}/`
-  )
+  const toolsData = normalizeDeveloperToolsData(await getDeveloperToolsData())
+  const devToolPaths =
+    toolsData?.taxonomy.categories.definitions.map(
+      (category) => `/developers/tools/categories/${category.id}/`
+    ) || []
+
+  // Individual tool detail pages, matching the [tool] route's static params.
+  const devToolDetailPaths = toolsData
+    ? withCategories(toolsData).map(
+        (tool) => `/developers/tools/${getToolKey(tool)}/`
+      )
+    : []
 
   // App category pages
   const appCategoryPaths = Object.values(appsCategories).map(
@@ -128,7 +137,12 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
         .map((app) => `/apps/${slugify(app.name)}/`)
     : []
 
-  return [...devToolPaths, ...appCategoryPaths, ...appPaths]
+  return [
+    ...devToolPaths,
+    ...devToolDetailPaths,
+    ...appCategoryPaths,
+    ...appPaths,
+  ]
 }
 
 export async function getAllPagesWithTranslations(): Promise<

@@ -101,7 +101,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           {highlights.length > 0 && (
             <Section className="space-y-8 px-4 md:px-8">
               <h2>{t("page-latest-highlights-heading")}</h2>
-              <Grid balanced={2} className="gap-6">
+              <Grid balanced={2}>
                 {highlights.map((highlight) => (
                   <LatestCard
                     key={highlight.href}

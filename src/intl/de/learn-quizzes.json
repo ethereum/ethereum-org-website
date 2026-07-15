@@ -10,7 +10,7 @@
   "explanation": "Erklärung",
   "next-question": "Nächste Frage",
   "next-quiz": "Nächstes Quiz",
-  "question-number": "Frage Nummer {{number}}:",
+  "question-number": "Frage Nummer {number}:",
   "page-assets-merge": "Der Merge",
   "passed": "Du hast das Quiz bestanden!",
   "questions": "Fragen",

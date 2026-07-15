@@ -37,14 +37,9 @@ Primitives that handle their own client boundary:
 
 ## Translation Boundary
 
-Two sanctioned APIs, chosen by where the component runs -- see [i18n-rtl.md](i18n-rtl.md):
+`useTranslations` (client) and `getTranslations` (server) serve the same purpose for content. **Don't mark a file `"use client"` just to use `useTranslations`.** Restructure: keep the parent server, let it call `getTranslations`, pass the translated strings down as props.
 
-- **Server (preferred)**: make the component `async` and `await getTranslations("namespace")` from `next-intl/server`. A sync component that needs intl strings and has no client requirement should become an async Server Component -- there is no reason to reach for a hook. (`useTranslations` from `next-intl` does technically run server-side, but it's not used in this codebase -- don't introduce it.)
-- **Client (only when genuinely `"use client"`)**: the custom `useTranslation` hook from `@/hooks/useTranslation` -- never `useTranslations` from `next-intl` directly.
-
-**Don't mark a file `"use client"` just to fetch strings.** Restructure: keep the parent server, let it call `getTranslations`, pass the translated strings down as props.
-
-The server and client `t()` functions are *similar but not strictly equivalent* -- variable interpolation, ICU pluralization, and rich-text/htmr patterns can behave differently between server and client paths. If a change touches both, test both. Don't assume swapping one for the other is a no-op.
+The `t()` functions returned by these are *similar but not strictly equivalent* -- variable interpolation, ICU pluralization, and rich-text/htmr patterns can behave differently between server and client paths. If a change touches both, test both. Don't assume swapping `useTranslations` for `getTranslations` (or vice versa) is a no-op.
 
 ### Callout is server-renderable (consolidation done)
 
@@ -94,6 +89,6 @@ export default async function Page() {
 
 - **`useEffect` data fetching** in a component that could be a Server Component
 - **`"use client"` at the top of a page** when only a small subtree is interactive
-- **Translation hooks in a leaf component** instead of restructuring so the parent uses `getTranslations`
-- **`import { useTranslations } from "next-intl"`** anywhere -- server components use `await getTranslations`; genuinely-client components use `@/hooks/useTranslation`
+- **`useTranslations` in a leaf component** instead of restructuring so the parent uses `getTranslations`
+- **Legacy `@/hooks/useTranslation` wrapper in new code** -- use namespace-bound `useTranslations` from `next-intl`; the wrapper's plain-key form returns raw messages and silently skips interpolation
 - **`useColorModeValue`** (Chakra leftover) -- use Tailwind `dark:` variant instead
