@@ -159,7 +159,20 @@ Responsive grid for laying out a collection of items (cards, tiles, badges). Ren
 - `size`: `small (7rem) | narrow (12rem) | base (18rem, default) | wide (22rem) | wider (26rem)`. The **min item width** (`--grid-item-min`) — the floor an item shrinks to before a column drops, and so the fold-aggressiveness lever. Pick by item shape: `small` for badges, `base` for standard content cards, `wide`/`wider` for horizontal items like callouts. Larger sizes wrap sooner; keep `columns` small enough that N items of the chosen width fit (min ≤ container/N).
 - `fit`: `boolean` (auto-fill mode only). Default keeps empty tracks (`auto-fill`); `fit` collapses them (`auto-fit`) so a partially-filled row stretches to fill the width.
 - `balanced`: `2 | 4`. A fixed, deterministic **breakpoint** reflow (overrides `columns` via `!important`; `size`/`fit` inert). `balanced={4}` → `4 → 2×2 → 1`, never an orphan 3-up row (which auto-fill produces); `balanced={2}` → `2 → 1` at `md`, a breakpoint-driven alternative to `columns={2}` (which folds by content width). Both fold `1 → 2` at `md`. Use with a **fixed set** of that many items (or a multiple).
-- Applies `gap-4`. `className` is spread last, so override the gap (or `--grid-item-min` / `--grid-repeat`) per call site only when genuinely needed.
+- `asChild`: contribute Grid's classes to the child element (Radix `Slot`) instead of rendering a `div` -- for when the grid must BE a semantic element, e.g. a `<ul>`.
+- Applies `gap-4`. `className` is spread last, so override the gap (or `--grid-item-min` / `--grid-repeat`) per call site only when genuinely needed. **If you override the gap, mirror it in `--grid-gap`** (e.g. `gap-x-8 [--grid-gap:--spacing(8)]`): the `grid-cols-auto-*` fold math assumes the gutter via `var(--grid-gap, 1rem)`, and with a wider real gap the even-share term is computed against the wrong gutter -- a second column may **never** form.
+
+**Grid as a semantic list** (reference implementation: `ProductList`):
+
+```tsx
+<Grid asChild columns={2} size="wider" className="m-0 -mt-px list-none gap-x-8 gap-y-0 [--grid-gap:--spacing(8)]">
+  <ul role="list" aria-labelledby={headingId}>...</ul>
+</Grid>
+```
+
+- `m-0 list-none` reset the legacy global `ul` styles in `base.css` (start margin + `disc` markers; TODO-slated for removal but still live -- a bare `<ul>` renders indented). Item `<li>`s likewise need `m-0` against the global `li` bottom margin.
+- With markers removed (`list-none`), Safari/VoiceOver stops announcing list semantics -- `role="list"` restores them.
+- **Divider lines between rows**: auto-fill folds by *content width*, so anything breakpoint- or width-conditional (`md:border-b-0`, a container query at the computed fold point) desyncs from the actual fold -- the fold constant moves whenever `size`/gap/`columns` change, and rounding at the boundary bites even when the math is right. The fold-independent pattern: **every** item draws a `border-t border-border`, and the list is pulled up 1px (`-mt-px`) so the top row's line is hidden -- under a heading's own `border-border` bottom border when one sits flush above, or cropped by `overflow-hidden` on the parent otherwise. Dividers then appear exactly between rows at any column count with nothing to keep in sync. Caveats: the overlap only disappears if the divider and the heading border share the same color token, and the crop wrapper must be `overflow-hidden`, not `overflow-clip` -- `clip` doesn't establish a BFC, so the negative margin collapses through and nothing gets cropped. Mind BFC side effects: a child heading's `mt-*` no longer collapses out of an `overflow-hidden` parent, so apply the crop only when needed (see `ProductList`: `overflow-hidden` only when no `category` heading renders).
 
 ### `Section`
 

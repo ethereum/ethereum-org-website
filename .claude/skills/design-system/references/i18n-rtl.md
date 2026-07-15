@@ -4,7 +4,11 @@ The site supports 25 languages, including **Arabic** and **Urdu** (RTL). Transla
 
 ## Translation
 
-### Server Components (preferred)
+**Never import `useTranslations` from `next-intl` directly.** There are exactly two sanctioned APIs:
+
+### Server Components (preferred): `await getTranslations`
+
+Any component that needs intl strings and has no genuine client-side requirement (state, effects, event handlers, browser APIs) should be an **async Server Component** using `getTranslations`. This includes small data/list components rendered from MDX -- they don't need to stay sync, and importing a `"use client"` leaf (e.g. `ButtonLink`) does NOT make the component itself client-side.
 
 ```tsx
 import { getLocale, getTranslations } from "next-intl/server"
@@ -16,23 +20,31 @@ export default async function Page() {
 }
 ```
 
-### Client Components
+### Client Components (only when genuinely client): `@/hooks/useTranslation`
+
+When a component is legitimately `"use client"`, use the project's custom hook -- not next-intl's `useTranslations`. It adds the `namespace:key` addressing scheme, a `common` default namespace, and missing-key fallback behavior the codebase relies on.
 
 ```tsx
 "use client"
-import { useTranslations } from "next-intl"
+import useTranslation from "@/hooks/useTranslation"
 
 export function Widget() {
-  const t = useTranslations("widget-namespace")
-  return <p>{t("widget-description")}</button>
+  const { t } = useTranslation("widget-namespace")
+  return <p>{t("widget-description")}</p>
 }
 ```
+
+Don't mark a file `"use client"` just to fetch strings -- see [server-vs-client.md](server-vs-client.md).
 
 ### Never hard-code English
 
 If a string is rendered to a user, it must come from a translation key. The exception is dev-only debug UI (e.g., `AB/TestDebugPanel`) and developer-facing internal copy.
 
 If you find yourself wanting to hard-code, add the key to `src/intl/en/[namespace].json` and use `t()`.
+
+### Interpolate a translated value, never a hard-coded literal
+
+A shared skeleton with an interpolated value -- `t("visit-brand", { brand: t("dune-brand") })` -- is the pattern to reach for: one `"Visit {brand}"` string instead of the `"Visit "` prefix repeated across N labels, and each brand is its own key the pipeline can transliterate or case-adjust per locale. The anti-pattern is passing a hard-coded English literal as the variable (`t("visit-brand", { brand: "Dune" })`): the `"Dune"` literal never enters an intl file, so it stays untranslated English no matter the locale. If a proper noun/brand is enumerable, give it a key and inject the translated value; reserve raw literals for genuinely dynamic runtime values (counts, dates, user input) that can't be keys. `ProductList` CTAs follow this -- see `AiAgentProductLists` and the stablecoins tools list.
 
 ## RTL: Logical CSS Properties
 
