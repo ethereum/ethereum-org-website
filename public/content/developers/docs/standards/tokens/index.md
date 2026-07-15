@@ -33,8 +33,10 @@ The full list of [ERC](https://eips.ethereum.org/erc) proposals.
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-[Awesome Buggy ERC20 Tokens](https://github.com/sec-bit/awesome-buggy-erc20-tokens) collecction of vunerabilities in ERC-20 smart contracts and tokens affected 
-[The Dangers of Token integration](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) slides focused on security of ERC-20 token contract
+- [Token Integration Checklist](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [OpenZeppelin Documentation: Tokens](https://docs.openzeppelin.com/contracts/5.x/tokens) - _OpenZeppelin_
+- [The Dangers of Token integration (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _OpenZeppelin_
+
 
 ## Related tutorials {#related-tutorials}
 
