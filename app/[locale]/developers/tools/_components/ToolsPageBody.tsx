@@ -47,7 +47,7 @@ const ToolsPageBody = async ({
 
   return (
     <main className="pb-page">
-      <MainArticle className="space-y-20 px-page pt-4">
+      <MainArticle className="px-page pt-4">
         <ToolsCatalog
           // Reset client filter/search state when navigating between categories
           key={currentCategoryId ?? "all"}
