@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/security/quantum-resistance/index.md",
-  "generatedAt": "2026-04-24T21:55:46.670Z",
-  "rootHash": "0c3d75173ec0",
+  "generatedAt": "2026-07-15T17:40:41.869Z",
+  "rootHash": "5f784df154b9",
   "tree": {
     "contentHash": "411f78b87e27",
-    "anchorHash": "d5290af52d51",
+    "anchorHash": "d3739b6fa142",
     "children": {
       "frontmatter:title": {
         "contentHash": "4382c08d5852",
@@ -130,7 +130,7 @@
       },
       "four-vulnerable-areas": {
         "contentHash": "97094c139366",
-        "anchorHash": "de1e7faa272a",
+        "anchorHash": "4040761e1164",
         "labelHash": "8c33c8dd9068",
         "children": {
           "_label": {
@@ -151,7 +151,7 @@
           },
           "consensus-bls": {
             "contentHash": "5c09ea51c3fd",
-            "anchorHash": "3b4d1bfcba9f",
+            "anchorHash": "f509c9c8b8c9",
             "labelHash": "52bcd75d0783",
             "children": {
               "_label": {
@@ -172,7 +172,7 @@
               },
               "component:4": {
                 "contentHash": "f092c26cb800",
-                "anchorHash": "80f7109380a7",
+                "anchorHash": "325ab29eefa8",
                 "children": {
                   "attr:title": {
                     "contentHash": "ef78e54015b7",
@@ -180,7 +180,7 @@
                   },
                   "attr:eventCategory": {
                     "contentHash": "e3b0c44298fc",
-                    "anchorHash": "0828c99ca533"
+                    "anchorHash": "c610e6f1f5ed"
                   },
                   "attr:eventName": {
                     "contentHash": "e3b0c44298fc",
@@ -435,7 +435,7 @@
       },
       "faq": {
         "contentHash": "de24545b1552",
-        "anchorHash": "3e91c07cc3a7",
+        "anchorHash": "52f06e8d982f",
         "labelHash": "e956a9404b46",
         "children": {
           "_label": {
@@ -444,7 +444,7 @@
           },
           "component:1": {
             "contentHash": "6559faf02884",
-            "anchorHash": "c90bc3130a31",
+            "anchorHash": "3d878de8d95c",
             "children": {
               "attr:title": {
                 "contentHash": "6a531f983ade",
@@ -452,7 +452,7 @@
               },
               "attr:eventCategory": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "0828c99ca533"
+                "anchorHash": "c610e6f1f5ed"
               },
               "attr:eventName": {
                 "contentHash": "e3b0c44298fc",
@@ -472,7 +472,7 @@
           },
           "component:2": {
             "contentHash": "a109f7425e22",
-            "anchorHash": "5c0aabf7b3f5",
+            "anchorHash": "b3101ca5fb0e",
             "children": {
               "attr:title": {
                 "contentHash": "2754357e0e2b",
@@ -480,7 +480,7 @@
               },
               "attr:eventCategory": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "0828c99ca533"
+                "anchorHash": "c610e6f1f5ed"
               },
               "attr:eventName": {
                 "contentHash": "e3b0c44298fc",
@@ -500,7 +500,7 @@
           },
           "component:3": {
             "contentHash": "d2c546823b39",
-            "anchorHash": "6a564128dbec",
+            "anchorHash": "be13db881ae9",
             "children": {
               "attr:title": {
                 "contentHash": "8b24849c1804",
@@ -508,7 +508,7 @@
               },
               "attr:eventCategory": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "0828c99ca533"
+                "anchorHash": "c610e6f1f5ed"
               },
               "attr:eventName": {
                 "contentHash": "e3b0c44298fc",
@@ -528,7 +528,7 @@
           },
           "component:4": {
             "contentHash": "8c367574c9a8",
-            "anchorHash": "045d4e9816d1",
+            "anchorHash": "99d3860b6983",
             "children": {
               "attr:title": {
                 "contentHash": "89217893d8e2",
@@ -536,7 +536,7 @@
               },
               "attr:eventCategory": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "0828c99ca533"
+                "anchorHash": "c610e6f1f5ed"
               },
               "attr:eventName": {
                 "contentHash": "e3b0c44298fc",
@@ -556,7 +556,7 @@
           },
           "component:5": {
             "contentHash": "574182f0f11c",
-            "anchorHash": "7c06eb80b71b",
+            "anchorHash": "f6e576d33adb",
             "children": {
               "attr:title": {
                 "contentHash": "e3f3119bde5d",
@@ -564,7 +564,7 @@
               },
               "attr:eventCategory": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "0828c99ca533"
+                "anchorHash": "c610e6f1f5ed"
               },
               "attr:eventName": {
                 "contentHash": "e3b0c44298fc",
@@ -584,7 +584,7 @@
           },
           "component:6": {
             "contentHash": "7a7ffdc8385f",
-            "anchorHash": "82b5656264cd",
+            "anchorHash": "fb8de46ff313",
             "children": {
               "attr:title": {
                 "contentHash": "11b7662d79d6",
@@ -592,7 +592,7 @@
               },
               "attr:eventCategory": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "0828c99ca533"
+                "anchorHash": "c610e6f1f5ed"
               },
               "attr:eventName": {
                 "contentHash": "e3b0c44298fc",
@@ -799,5 +799,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "a022ed450bfa7dc241c16f16bcab5a7ab7c243d8"
+  "sourceCommitSha": "7f636101bf3432875bd28b380f802813a5de986c"
 }
