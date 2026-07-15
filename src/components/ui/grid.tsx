@@ -1,6 +1,5 @@
 import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
-import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -61,12 +60,10 @@ const gridVariants = cva("grid gap-4", {
 
 const Grid = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> &
-    VariantProps<typeof gridVariants> & { asChild?: boolean }
->(({ className, columns, size, fit, balanced, asChild, ...props }, ref) => {
-  const Comp = asChild ? Slot : "div"
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof gridVariants>
+>(({ className, columns, size, fit, balanced, ...props }, ref) => {
   return (
-    <Comp
+    <div
       ref={ref}
       data-label="grid"
       className={cn(gridVariants({ columns, size, fit, balanced }), className)}
