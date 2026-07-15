@@ -55,6 +55,7 @@ safe-outputs:
       - "event 📅"
       - "quiz 📚"
   noop:
+    report-as-issue: false
   report-failure-as-issue: false
 pre-agent-steps:
   - name: Pre-fetch triage queue (scheduled runs)
