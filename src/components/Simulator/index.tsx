@@ -23,16 +23,12 @@ import { Template } from "./Template"
 import type { PathId, SimulatorData } from "./types"
 import { getValidPathId, isValidPathId } from "./utils"
 
-import { usePathname, useRouter } from "@/i18n/navigation"
-
 type SimulatorProps = {
   children: ReactNode
   data: SimulatorData
 }
 export const Simulator = ({ children, data }: SimulatorProps) => {
   const t = useTranslations("component-wallet-simulator")
-  const router = useRouter()
-  const pathname = usePathname()
   const searchParams = useSearchParams()
 
   // Track step
@@ -47,8 +43,11 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   // If pathId present, modal is open, else closed
   const isOpen = !!pathId
 
+  // Shallow history updates only: router.replace() serves same-pathname navs
+  // from the client cache, which restores the URL it was created with -- on a
+  // direct load that URL includes ?sim=, making the modal impossible to close
   const clearUrlParams = () => {
-    router.replace(pathname, { scroll: false })
+    window.history.replaceState(null, "", window.location.pathname)
   }
 
   // When simulator closed: log event, clear URL params and close modal
@@ -97,15 +96,10 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   }
 
   const openPath = (id: PathId): void => {
-    // Set new pathId in navigation
-    router.replace(
-      {
-        pathname,
-        query: {
-          [PATH_ID_QUERY_PARAM]: id,
-        },
-      },
-      { scroll: false }
+    window.history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}?${PATH_ID_QUERY_PARAM}=${id}`
     )
   }
 

@@ -12,7 +12,7 @@ import { logger, schedules, task, tasks } from "@trigger.dev/sdk/v3"
 import { fetchDeveloperTools } from "./fetchers/developer-tools"
 import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
 import { fetchApps } from "./fetchers/fetchApps"
-import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
+import { fetchBlobStats } from "./fetchers/fetchBlobStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
@@ -54,7 +54,7 @@ export const KEYS = {
   RSS: "fetch-rss",
   GITHUB_REPO_DATA: "fetch-github-repo-data",
   EVENTS: "fetch-events",
-  BLOBSCAN_STATS: "fetch-blobscan-stats",
+  BLOB_STATS: "fetch-blob-stats",
   ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
   ETHEREUM_STABLECOINS_MCAP: "fetch-ethereum-stablecoins-mcap",
   ETH_PRICE: "fetch-eth-price",
@@ -76,6 +76,7 @@ const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 const DAILY: TaskDef[] = [
   [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
+  [KEYS.BLOB_STATS, fetchBlobStats],
   [KEYS.CALENDAR_EVENTS, fetchCalendarEvents],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
   [KEYS.GFIS, fetchGFIs],
@@ -95,7 +96,6 @@ const DAILY: TaskDef[] = [
 ]
 
 const HOURLY: TaskDef[] = [
-  [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
   [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
   [KEYS.ETH_PRICE, fetchEthPrice],

@@ -1,6 +1,10 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
+import {
+  tv,
+  type VariantProps as TailwindVariantProps,
+} from "tailwind-variants"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
@@ -64,18 +68,32 @@ const AlertContent = React.forwardRef<
 ))
 AlertContent.displayName = "AlertContent"
 
+const alertTitleVariants = tv({
+  base: "text-body",
+  variants: {
+    size: {
+      base: "font-bold",
+      lg: "text-2xl font-black",
+    },
+  },
+  defaultVariants: {
+    size: "base",
+  },
+})
+
 export interface AlertTitleProps
-  extends React.HTMLAttributes<HTMLParagraphElement> {
+  extends React.HTMLAttributes<HTMLParagraphElement>,
+    TailwindVariantProps<typeof alertTitleVariants> {
   asChild?: boolean
 }
 
 const AlertTitle = React.forwardRef<HTMLParagraphElement, AlertTitleProps>(
-  ({ className, asChild, ...props }, ref) => {
+  ({ className, asChild, size, ...props }, ref) => {
     const Comp = asChild ? Slot : "p"
     return (
       <Comp
         ref={ref}
-        className={cn("font-bold text-body", className)}
+        className={cn(alertTitleVariants({ size }), className)}
         {...props}
       />
     )

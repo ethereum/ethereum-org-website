@@ -1,4 +1,9 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { pick } from "lodash"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -6,6 +11,7 @@ import BigNumber from "@/components/BigNumber"
 import ContentFeedback from "@/components/ContentFeedback"
 import { CopyButton } from "@/components/CopyToClipboard"
 import { HubHero } from "@/components/Hero"
+import I18nProvider from "@/components/I18nProvider"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
@@ -108,6 +114,10 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-developers-index")
   const tCommon = await getTranslations("common")
 
+  // client messages for the swipers (the page has no root I18nProvider)
+  const allMessages = await getMessages({ locale })
+  const messages = pick(allMessages, "component-swiper")
+
   const paths = await getBuilderPaths()
   const speedRunDetails = {
     title: t("page-developers-start"),
@@ -182,7 +192,12 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
             {/* Mobile */}
             <div className="-mx-page md:hidden">
-              <BuilderSwiper paths={paths} speedRunDetails={speedRunDetails} />
+              <I18nProvider locale={locale} messages={messages}>
+                <BuilderSwiper
+                  paths={paths}
+                  speedRunDetails={speedRunDetails}
+                />
+              </I18nProvider>
             </div>
           </Section>
 
@@ -202,6 +217,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   sourceName="Glassdoor"
                   sourceUrl="https://www.glassdoor.com/Salaries/developer-salary-SRCH_KO0%2C9.htm"
                   lastUpdated="2025-04-10T12:00:00Z"
+                  center={false}
                 >
                   {t("page-developers-why-avg-salary-dev")}
                 </BigNumber>
@@ -211,6 +227,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   sourceName="Web3 Jobs"
                   sourceUrl="https://web3.career/web3-salaries/united-states"
                   lastUpdated="2025-08-01T12:00:00Z"
+                  center={false}
                 >
                   {t("page-developers-why-avg-salary-blockchain")}
                 </BigNumber>
@@ -448,19 +465,21 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             <p>{t("page-developers-video-courses-desc")}</p>
 
             {/* Desktop */}
-            <div className="relative flex w-screen gap-6 overflow-x-auto pb-2 max-2xl:-mx-page max-2xl:px-page max-sm:hidden lg:gap-8 2xl:w-full">
+            <div className="relative flex w-screen gap-4 overflow-x-auto p-px pb-2 max-2xl:-mx-page max-2xl:px-page max-sm:hidden 2xl:w-full">
               {courses.map((course, idx) => (
                 <VideoCourseCard
                   key={idx}
                   course={course}
-                  className="w-[20%] max-w-[271px] flex-1 max-2xl:min-w-[20rem] xl:w-full"
+                  className="w-[20%] flex-1 max-2xl:min-w-[20rem] xl:w-full"
                 />
               ))}
             </div>
 
             {/* Mobile */}
             <div className="w-screen max-xl:-ms-page sm:hidden xl:w-full">
-              <VideoCourseSwiper courses={courses} />
+              <I18nProvider locale={locale} messages={messages}>
+                <VideoCourseSwiper courses={courses} />
+              </I18nProvider>
             </div>
           </Section>
 
@@ -707,7 +726,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                     key={event.id}
                     asChild
                     className={cn(
-                      "ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]",
+                      "ms-4 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]",
                       "*:max-w-md *:min-w-72 *:flex-1"
                     )}
                   >
@@ -721,13 +740,19 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                       variant="ghost"
                       size="sm"
                     >
-                      <CardBanner size="sm">
-                        {bannerImage ? (
-                          <CardImage src={bannerImage} />
-                        ) : (
-                          <Image src={fallbackThumbnail} alt="" sizes="276px" />
-                        )}
-                      </CardBanner>
+                      <CardHeader>
+                        <CardBanner size="sm">
+                          {bannerImage ? (
+                            <CardImage src={bannerImage} />
+                          ) : (
+                            <Image
+                              src={fallbackThumbnail}
+                              alt=""
+                              sizes="276px"
+                            />
+                          )}
+                        </CardBanner>
+                      </CardHeader>
                       <CardContent>
                         <CardTitle>{title}</CardTitle>
                         <CardParagraph variant="subtitle" size="sm">

@@ -59,7 +59,7 @@ const EthPriceCard = ({
       </div>
 
       {/* min-h-[33px] prevents jump when price loads */}
-      <Flex className="min-h-[33px] w-full items-center justify-center gap-2">
+      <Flex className="min-h-[33px] w-full flex-wrap items-center justify-center gap-x-2 gap-y-1">
         <div className="flex h-7 items-center">
           {isLoading ? (
             <Skeleton className="h-full w-20" />
@@ -67,7 +67,7 @@ const EthPriceCard = ({
             hasChange && (
               <span
                 className={cn(
-                  "text-2xl leading-xs",
+                  "flex items-center text-2xl leading-xs",
                   isNegativeChange ? "text-error" : "text-success"
                 )}
               >
@@ -77,7 +77,7 @@ const EthPriceCard = ({
                 })}
                 <ArrowUpRight
                   className={cn(
-                    "inline-block rtl:-scale-x-100",
+                    "rtl:-scale-x-100",
                     isNegativeChange && "-scale-y-100 rtl:-scale-100"
                   )}
                 />
@@ -85,7 +85,7 @@ const EthPriceCard = ({
             )
           )}
         </div>
-        <div className="text-sm leading-xs tracking-wider text-body-medium uppercase">
+        <div className="text-center text-sm leading-xs tracking-wider text-body-medium uppercase">
           ({t("last-24-hrs")})
         </div>
       </Flex>

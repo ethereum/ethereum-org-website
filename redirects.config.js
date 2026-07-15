@@ -229,7 +229,7 @@ module.exports = [
     "/layer-2-scaling/state-channels",
     "/developers/docs/scaling/state-channels/",
   ],
-  ["/developers/docs/privacy-enhancements", "/privacy/"],
+  ["/developers/docs/privacy-enhancements", "/privacy/ethereum/"],
   ["/developers/docs/wallets", "/wallets/"],
   ["/blog", "https://blog.ethereum.org"],
   // Storybook (Chromatic) convenience redirects
