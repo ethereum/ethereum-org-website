@@ -144,7 +144,7 @@ Configured in `base.css` lines 97-107. Persian fallback. Triggered by `:lang(ur)
 
 ### Bare `<ul>`/`<li>` inherit legacy global list styles
 
-`base.css` still ships global `ul`/`ol` rules (start margin + `disc` markers, TODO-slated for removal) and a global `li` bottom margin. A non-prose `<ul>` (nav, card list, product list) needs `m-0 list-none` on the `ul` and `m-0` on the `li`s or it renders indented with stray spacing. And once `list-none` removes the markers, Safari/VoiceOver drops list semantics -- add `role="list"` to keep the list announced. See the "Grid as a semantic list" pattern in [components.md](components.md).
+`base.css` still ships global `ul`/`ol` rules (start margin + `disc` markers, TODO-slated for removal) and a global `li` bottom margin. A non-prose `<ul>` (nav menu, card list) needs `m-0 list-none` on the `ul` and `m-0` on the `li`s or it renders indented with stray spacing. And once `list-none` removes the markers, Safari/VoiceOver drops list semantics -- add `role="list"` to keep the list announced.
 
 ## Heading Hierarchy
 
