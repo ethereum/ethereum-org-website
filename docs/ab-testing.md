@@ -1,260 +1,174 @@
-# A/B Testing Implementation Guide
+# A/B Testing
 
-This guide explains how to implement server-side A/B tests on ethereum.org using our Matomo API integration.
+GDPR-compliant, cookie-less A/B testing built on the [Flags SDK](https://flags-sdk.dev) precompute pattern, integrated with Matomo. Variants are assigned at the edge and served as **prerendered static pages** — running an experiment does not force dynamic rendering or give up edge caching.
 
-## Overview
+## How it works
 
-Our A/B testing system provides:
+One public URL, several static pages behind it:
 
-- **Server-side rendering** - Users see consistent variants on first page load with no layout shifts
-- **Matomo API integration** - Tests are configured entirely in the Matomo dashboard; no code deployments are needed
-- **GDPR compliance** - Cookie-less tracking using deterministic fingerprinting (IP + User-Agent)
-- **Multi-variant support** - Test 2+ variations with configurable weights / traffic splits
-- **Real-time updates** - Adjust experiment weights instantly via Matomo dashboard
-- **Type safety** - Full TypeScript support with compile-time checks
-- **Automatic fallbacks** - Graceful degradation when API fails (shows original variant)
+1. A request hits `proxy.ts`. If the path is registered in `abTestRoutes`, the proxy fingerprints the request headers (client IP, user agent, accept headers — nothing stored on the device), evaluates the route's flags against the Matomo experiment config, and packs the result into a **signed code** (HMAC, `FLAGS_SECRET`).
+2. The proxy **rewrites** (not redirects) to an internal path: `/en/ab-code/<code>/<path>`. The visitor's address bar never changes.
+3. That internal page was **prerendered at build time** — `generateStaticParams` emits one page per flag permutation — so the response is an edge cache hit, not a server render.
+4. In the browser, `ABTestTracker` pushes `AbTesting::enter` to Matomo with the experiment name and variant, and sets custom dimension 1 for segment queries. Opted-out visitors are skipped.
 
-## Quick Start
+The same fingerprint always hashes to the same bucket, so returning visitors get a consistent variant without cookies. On any failure (Matomo down, no experiment running, invalid code) everything falls through to the original page — a test can never break the site.
 
-### 1. Set Up Goals in Matomo (Design/Product Team)
+### Scope and safety properties
 
-Before creating experiments, ensure you have proper **Goals** configured in Matomo to measure test success:
+- **Default locale only.** Route keys are locale-less paths and English URLs are unprefixed, so `/es/...` etc. never match — non-English visitors get the original page with no tracker, entirely outside the experiment.
+- **Internal URLs are not reachable.** Direct visits to `/ab-code/...` URLs get case-mangled by the sitewide lowercase redirect, fail signature verification, and 404. Coded pages also re-export the original page's metadata (canonical URL), and `netlify.toml` sends `X-Robots-Tag: noindex` for `/ab-code/*`.
+- **Signed codes.** The variant assignment travels as a JWS signed with `FLAGS_SECRET`; tampered codes 404. Dots in the code are encoded as `~` (`encodeABCode`/`decodeABCode`) — with `trailingSlash: true`, a dotted URL segment reads as a file path and triggers a 308 redirect at the origin that would expose the internal URL (this killed the first attempt, #17265).
+- **Bots** are fingerprint-assigned like any visitor (their UA/IP is stable, so they see a consistent variant); Matomo filters known bots from reports. There is no bot exclusion in the proxy.
 
-1. Go to **Goals** → **Manage Goals** in your Matomo dashboard
-2. Create relevant goals for your test (e.g., "Newsletter Signup", "Wallet Connection", "Page Engagement")
-3. Define conversion criteria (URL visits, events, etc.)
+## Adding an experiment
 
-This step is important for measuring experiment effectiveness and should be done by the design/product team before technical implementation.
+Example: testing a new hero on `/wallets/` with a Matomo experiment named `WalletsHero`.
 
-### 2. Create an Experiment in Matomo
+### 1. Define the flag and register the route
 
-1. Go to your Matomo dashboard → **A/B Tests** → **Manage A/B tests**
-2. Click **Create new A/B test**
-3. Define your experiment:
-   - **Name**: Choose a clear name (e.g., "HomepageHero", "WalletCardLayout")
-   - **Hypothesis**: Explain what you predict to happen when you run the A/B test, what the outcome will be and why it will happen.
-   - **Description**: Provide details about the test and its purpose
-   - **Variations**: Add your variants (e.g., "NewDesign", "AlternativeLayout")
-4. Define the remainder of the config:
-   - **Success metrics**: Goals you want to track (select from previously created goals)
-   - **Success conditions**: Statistical thresholds
-   - **Target pages**: Specify the pages where this test will run (e.g., `/`, `/wallet`, etc.)
-   - **Traffic allocation**: Set percentage weights for each variant
-   - **Schedule**: Optionally set start/end dates
+```ts
+// src/lib/ab-testing/flags.ts
+export const walletsHeroFlag = defineABFlag(
+  "WalletsHero", // must exactly match the Matomo experiment name
+  "Wallets landing hero test"
+)
 
-### 3. Implement in Your Component (Development Team)
+export const walletsFlags = [walletsHeroFlag] as const
+
+export const abTestRoutes: Record<string, readonly ABFlag[]> = {
+  "/wallets/": walletsFlags, // locale-less canonical path, trailing slash included
+}
+```
+
+Route keys are locale-less canonical paths — the homepage is `/`, everything else carries its trailing slash. Group flags per route so permutations don't multiply across pages.
+
+### 2. Create the coded page
+
+Mirror the page's path under `ab-code/[code]/`. It's a thin shell: verify the code, extract the variant index, render the real page.
 
 ```tsx
-import ABTestWrapper from "@/components/AB/TestWrapper"
+// app/[locale]/ab-code/[code]/wallets/page.tsx
+import { generatePermutations, getPrecomputed } from "flags/next"
+import { notFound } from "next/navigation"
+import { setRequestLocale } from "next-intl/server"
 
-export default function MyPage() {
+import type { Lang } from "@/lib/types"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
+import OriginalWalletsPage from "../../../wallets/page"
+
+import { decodeABCode, encodeABCode } from "@/lib/ab-testing/constants"
+import { walletsFlags, walletsHeroFlag } from "@/lib/ab-testing/flags"
+
+export { generateMetadata } from "../../../wallets/page"
+
+export async function generateStaticParams() {
+  try {
+    const codes = await generatePermutations(walletsFlags)
+    return codes.map((code) => ({
+      locale: DEFAULT_LOCALE,
+      code: encodeABCode(code),
+    }))
+  } catch {
+    return [] // CI builds without FLAGS_SECRET fall back to on-demand rendering
+  }
+}
+
+export default async function PrecomputedWalletsPage({
+  params,
+}: {
+  params: Promise<{ locale: string; code: string }>
+}) {
+  const { locale, code } = await params
+  if (locale !== DEFAULT_LOCALE) notFound()
+  setRequestLocale(locale)
+
+  let heroVariant: number
+  try {
+    ;[heroVariant] = await getPrecomputed(
+      [walletsHeroFlag],
+      walletsFlags,
+      decodeABCode(code)
+    )
+  } catch {
+    notFound() // invalid or tampered code
+  }
+
   return (
-    <div>
-      <h1>My Page</h1>
-
-      <ABTestWrapper
-        testKey="HomepageHero" // Must match your Matomo experiment name exactly
-        variants={[
-          <OriginalComponent key="current-design" />, // Index 0: Original (matches Matomo order)
-          <NewDesignComponent key="hero-redesign" />, // Index 1: Variation (matches Matomo order)
-        ]}
-      />
-    </div>
+    <OriginalWalletsPage
+      params={Promise.resolve({ locale: locale as Lang })}
+      heroVariant={heroVariant}
+    />
   )
 }
 ```
 
-**Important Notes:**
+### 3. Wrap the tested component in `ABTest`
 
-- Variants are matched by **array index**, not by name
-- Array order must match the exact order of variations in your Matomo experiment
-- JSX `key` props serve as array keys, and human-readable labels in the debug panel (parsed from kebab-case to Title Case)
-
-### 4. Experiment Activation
-
-The experiment will automatically start running when:
-
-1. **Your code is deployed** with the `ABTestWrapper` component
-2. **The first user visits** the page where the component is implemented
-3. **Matomo detects the experiment** and begins tracking
-
-**Manual Control:**
-
-- Use the **Schedule** settings in Matomo to control start/end dates
-- Experiments respect their configured schedule automatically
-- You can pause/resume experiments anytime in the Matomo dashboard
-
-## Multi-Variant Testing
-
-Supports 3+ variants:
+In the real page, accept the optional variant prop. When it's absent (non-tested render — e.g. other locales), render the original directly. **Index 0 is always the original.** Variant content must be translatable like any other UI (`getTranslations`).
 
 ```tsx
-// Matomo experiment configured with variations in this exact order:
-// Index 0: Original (implicit) - 40% weight
-// Index 1: List Layout - 30% weight
-// Index 2: Grid Layout - 20% weight
-// Index 3: Carousel Layout - 10% weight
-
-<ABTestWrapper
-  testKey="WalletLayout"
-  variants={[
-    <OriginalLayout key="original-layout" />, // Index 0
-    <ListLayout key="list-layout" />, // Index 1
-    <GridLayout key="grid-layout" />, // Index 2
-    <CarouselLayout key="carousel-layout" />, // Index 3
-  ]}
-/>
+// app/[locale]/wallets/page.tsx
+const Page = async (props: {
+  params: Promise<PageParams>
+  heroVariant?: number
+}) => {
+  // ...
+  {heroVariant !== undefined ? (
+    <ABTest
+      testKey="WalletsHero"
+      variantIndex={heroVariant}
+      variants={[
+        <CurrentHero key="original" />,    // index 0 = Original
+        <RedesignedHero key="variant-a" />, // index 1 = first Matomo variation
+      ]}
+    />
+  ) : (
+    <CurrentHero />
+  )}
+}
 ```
 
-**Important**:
-
-- Variant array order must exactly **match the order in your Matomo experiment**
-- Assignment is by index (0, 1, 2, 3...), not by name matching
-- Debug panel shows formatted key names: `"list-layout"` → `"List Layout"`
-
-## How It Works
-
-### Cookie-less Tracking
-
-- Uses deterministic assignment based on IP address + User-Agent fingerprint
-- The same user always gets the same variant (consistent experience)
-- GDPR compliant - no cookies or personal data storage required
-- Users can't manually switch variants (prevents data pollution)
-
-### API Integration
-
-- `/api/ab-config` endpoint fetches experiment data from Matomo API
-- Caches results for 1 hour to reduce API calls
-- Real-time cache busting in development environment
-- Automatic fallback to original variant when API fails
-
-## Development Workflow
-
-### Local Development
-
-1. Create your experiment in Matomo (set to "running")
-2. Implement `ABTestWrapper` in your component
-3. Test locally - the debug panel shows the current assignment
-4. Adjust weights in Matomo dashboard to test different scenarios
-
-### Preview Mode
-
-- Preview deployments show a debug panel with a variant selector
-- No tracking occurs in preview mode
-- Allows manual testing of all variants
-
-### Production
-
-1. Deploy your component with `ABTestWrapper`
-2. Monitor the experiment in the Matomo dashboard
-3. Adjust traffic allocation as needed
-4. Analyze results and implement winning variant
-
-## Environment Variables
-
-Required for Matomo integration:
+### 4. Test locally
 
 ```bash
-# Matomo instance URL
-NEXT_PUBLIC_MATOMO_URL=https://your-instance.matomo.cloud/
-
-# Matomo site ID
-NEXT_PUBLIC_MATOMO_SITE_ID=4
-
-# Matomo API token (with experiments access)
-MATOMO_API_TOKEN=your_api_token_here
-
-# Preview mode flag
-NEXT_PUBLIC_IS_PREVIEW_DEPLOY=false
+# .env.local
+FLAGS_SECRET=$(openssl rand -base64 32)
+USE_MOCK_EXPERIMENTS=true
 ```
 
-## Best Practices
+Add a mock entry to `MOCK_EXPERIMENTS` in `src/lib/ab-testing/matomo-adapter.ts`, run `pnpm dev`, and use the 🧪 debug panel (bottom-right, dev and preview deploys only) to force each variant — it sets a `flag_override_<testKey>` cookie and reloads, which the proxy honors. Verify both variants render and the URL never changes.
 
-### Experiment Naming
+### 5. Create the Matomo experiment and ship
 
-- Use clear, descriptive names that match your component purpose
-- Be consistent: `testKey` in code must match Matomo experiment name exactly
-- Examples: "HomepageHero", "WalletCardLayout", "CheckoutFlow"
+In the Matomo dashboard, create an A/B experiment named exactly like the `testKey`. Variations map to the `variants` array **by position**: Matomo's built-in "Original" is index 0, the first variation you add is index 1, and so on. Set traffic weights, start the experiment, merge the PR. Pausing, re-weighting, or scheduling the test afterwards happens entirely in Matomo — no deploy needed.
 
-### Component Design
+To remove a finished test: delete the flag, the `abTestRoutes` entry, the coded page, and the `ABTest` wrapper.
 
-- Keep variants as similar as possible (same props, structure)
-- Always provide a meaningful fallback component
-- Use descriptive kebab-case keys: `key="simplified-checkout"` becomes `"Simplified Checkout"` in debug panel
-- Ensure variant array order matches Matomo experiment order exactly
-- Test all variants in Storybook before deploying
+## The two rules that silently break tests
 
-### Testing Strategy
+1. **Names match exactly.** `testKey`, the flag's `key`, and the Matomo experiment name are the same string. A mismatch doesn't error — everyone quietly gets the original.
+2. **Order is the contract.** Variants pair with Matomo variations by array index, not by name. Don't insert a variation in the middle of a running experiment.
 
-1. **Local Development**: Test with different weights to verify all variants work
-2. **Preview**: Verify Matomo tracking integration
-3. **Production**: Start with small traffic allocation (10-20%), then scale up
+## Environment variables
 
-### Performance
+| Variable | Purpose |
+| --- | --- |
+| `FLAGS_SECRET` | Signs/verifies precomputed codes. Required at build time to prerender variant pages (missing → pages render on demand) and at runtime in the proxy. Generate with `openssl rand -base64 32`. |
+| `MATOMO_API_TOKEN` | Fetches experiment config (`AbTesting.getAllExperiments`). Needs the "experiments" permission. |
+| `NEXT_PUBLIC_MATOMO_URL` / `NEXT_PUBLIC_MATOMO_SITE_ID` | Matomo instance and site. |
+| `USE_MOCK_EXPERIMENTS` | `true` = use `MOCK_EXPERIMENTS` instead of calling Matomo (local dev). |
 
-- Server-side rendering prevents layout shifts
-- Minimal JavaScript overhead (only tracking code)
-- API responses are cached to reduce latency
-- Automatic fallback ensures site never breaks
+## Architecture map
 
-## Troubleshooting
-
-### Test Not Showing Variants
-
-1. **Check Matomo**: Ensure experiment status is "running"
-2. **Check naming**: Verify `testKey` matches Matomo experiment name exactly
-3. **Check API**: Visit `/api/ab-config` to see if your experiment appears
-4. **Check console**: Look for AB testing errors in browser dev tools
-
-### Same Variant Always Shows
-
-1. **Fingerprint consistency**: Same IP + User-Agent = same variant (this is intentional)
-2. **Test from different devices/networks** to see other variants
-3. **Use preview mode** to manually test all variants
-4. **Check weights**: Ensure all variants have weight > 0 in Matomo
-
-### Matomo Not Tracking
-
-1. **Verify experiment ID**: Check that Matomo experiment ID is being used
-2. **Check experiment name**: Must match exactly between code and Matomo
-3. **Verify user hasn't opted out** of tracking
-4. **Preview mode**: No tracking occurs in preview deployments (intentional)
-
-### API Issues
-
-1. **Check environment variables**: Ensure all Matomo config is set
-2. **Verify API token**: Must have "experiments" permission in Matomo
-3. **Check cache**: API responses are cached for 1 hour, use dev mode for real-time updates
-4. **Fallback behavior**: When API fails, all tests show original variant (safe default)
-
-## Debug Panel
-
-In development and preview environments, a debug panel appears showing:
-
-- Current test assignment
-- Available variants
-- Manual variant selector (preview mode only)
-- Assignment metadata (experiment ID, fingerprint hash)
-
-The panel helps verify your test is working correctly before production deployment.
-
-## Architecture
-
-### Core Files
-
-- `app/api/ab-config/route.ts` - Matomo API integration
-- `src/lib/ab-testing/server.ts` - Assignment logic and fingerprinting (index-based)
-- `src/components/AB/TestWrapper.tsx` - Main React component
-- `src/components/AB/TestDebugPanel.tsx` - Development debug interface
-- `src/components/AB/ClientABTestWrapper.tsx` - Client-side rendering with localStorage overrides
-
-### Data Flow
-
-1. Component renders with `ABTestWrapper`
-2. Server fetches user fingerprint (IP + User-Agent)
-3. System checks cache, then fetches experiment config from Matomo API
-4. Deterministic assignment based on fingerprint and experiment weights
-5. Appropriate variant component renders
-6. Tracking data sent to Matomo (production only)
-
-This architecture ensures consistent, performant, and privacy-compliant A/B testing across the entire site.
+| File | Role |
+| --- | --- |
+| `proxy.ts` | Matches `abTestRoutes`, precomputes flags, rewrites to the coded path |
+| `src/lib/ab-testing/flags.ts` | `defineABFlag`, header fingerprinting (`identify`), the `abTestRoutes` map |
+| `src/lib/ab-testing/matomo-adapter.ts` | Fetches Matomo experiments, deterministic weighted assignment (FNV-1a), mocks |
+| `src/lib/ab-testing/constants.ts` | `encodeABCode`/`decodeABCode`, override-cookie prefix, `ab-code` segment |
+| `app/[locale]/ab-code/[code]/…` | One thin coded page per tested route |
+| `src/components/AB/ABTest.tsx` | Renders the chosen variant + tracker + debug panel |
+| `src/components/AB/TestTracker.tsx` | Pushes `AbTesting::enter` + custom dimension 1 to Matomo |
+| `src/components/AB/TestDebugPanel.tsx` | Dev/preview variant switcher via override cookies |
