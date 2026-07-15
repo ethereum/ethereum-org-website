@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 
 import { getFullUrl, toLanguageTag } from "@/lib/utils/url"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { getAllPagesWithTranslations } from "@/lib/i18n/translationRegistry"
 
@@ -13,13 +13,35 @@ import { getAllPagesWithTranslations } from "@/lib/i18n/translationRegistry"
 // re-enters that broken path; freshness rides the deploy cadence instead.
 export const dynamic = "force-static"
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const pages = await getAllPagesWithTranslations()
+// One shard per locale. A single combined document is ~51MB / 17.5k URLs -- over
+// Google's 50MB per-file limit -- so it must be split. Next serves each shard at
+// /sitemap/<id>.xml and emits no index file, so app/robots.ts lists them all.
+export async function generateSitemaps() {
+  return LOCALES_CODES.map((locale) => ({ id: locale }))
+}
+
+// getAllPagesWithTranslations walks the whole content tree; memoize so the
+// per-locale shards share a single traversal instead of repeating it each time.
+let pagesPromise: ReturnType<typeof getAllPagesWithTranslations> | null = null
+const getPages = () => (pagesPromise ??= getAllPagesWithTranslations())
+
+export default async function sitemap({
+  id,
+}: {
+  id: Promise<string>
+}): Promise<MetadataRoute.Sitemap> {
+  const locale = await id
+  const pages = await getPages()
 
   const entries: MetadataRoute.Sitemap = []
   const seenUrls = new Set<string>()
 
   for (const { slug, translatedLocales } of pages) {
+    // This shard only carries URLs for its own locale; the full hreflang
+    // alternates block is still emitted so each URL cross-references every
+    // translated version.
+    if (!translatedLocales.includes(locale)) continue
+
     const normalizedSlug = slug.startsWith("/") ? slug : `/${slug}`
     const alternates =
       translatedLocales.length > 0
@@ -27,29 +49,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             languages: {
               "x-default": getFullUrl(DEFAULT_LOCALE, normalizedSlug),
               ...Object.fromEntries(
-                translatedLocales.map((locale) => [
-                  toLanguageTag(locale),
-                  getFullUrl(locale, normalizedSlug),
+                translatedLocales.map((altLocale) => [
+                  toLanguageTag(altLocale),
+                  getFullUrl(altLocale, normalizedSlug),
                 ])
               ),
             },
           }
         : undefined
 
-    for (const locale of translatedLocales) {
-      const url = getFullUrl(locale, normalizedSlug)
+    const url = getFullUrl(locale, normalizedSlug)
+    if (seenUrls.has(url)) continue
+    seenUrls.add(url)
 
-      if (seenUrls.has(url)) {
-        continue
-      }
-
-      seenUrls.add(url)
-
-      entries.push({
-        url,
-        alternates,
-      })
-    }
+    entries.push({ url, alternates })
   }
 
   return entries
