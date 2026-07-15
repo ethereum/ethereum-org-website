@@ -373,43 +373,61 @@ async function Page(props: { params: Promise<PageParams> }) {
 
   const toolsData: ProductListContent[] = [
     {
-      title: "Stablecoins.wtf",
+      title: t("page-stablecoins-tools-stablecoinswtf-title"),
       description: t("page-stablecoins-tools-stablecoinswtf-description"),
       href: "https://stablecoins.wtf",
       image: stablecoinsWtfImg,
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablecoinswtf-title"),
+      }),
     },
     {
-      title: "Stablepulse",
+      title: t("page-stablecoins-tools-stablepulse-title"),
       description: t("page-stablecoins-tools-stablepulse-description"),
       href: "https://www.stablepulse.org/",
       image: stablePulseImg,
       className: "[&_img]:p-1",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablepulse-title"),
+      }),
     },
     {
-      title: "Stables.info",
+      title: t("page-stablecoins-tools-stablesinfo-title"),
       description: t("page-stablecoins-tools-stablesinfo-description"),
       href: "https://stables.info/",
       image: stablesInfoImg,
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablesinfo-title"),
+      }),
     },
     {
-      title: "Dune Stablecoin Metrics",
+      title: t("page-stablecoins-tools-dune-title"),
       description: t("page-stablecoins-tools-dune-description"),
       href: "https://dune.com/overview/stablecoin",
       image: duneImg,
       className: "dark:[&_img]:invert [&_img]:p-2",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-dune-brand"),
+      }),
     },
     {
-      title: "Visa Onchain Analytics",
+      title: t("page-stablecoins-tools-visa-title"),
       description: t("page-stablecoins-tools-visa-description"),
       href: "https://visaonchainanalytics.com/",
       image: visaImg,
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-visa-brand"),
+      }),
     },
     {
-      title: "Stablewars",
+      title: t("page-stablecoins-tools-stablewars-title"),
       description: t("page-stablecoins-tools-stablewars-description"),
       href: "https://stablewars.xyz/",
       image: stablesWarsImg,
       className: "[&_img]:p-1",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-stablewars-title"),
+      }),
     },
   ]
 
@@ -852,7 +870,6 @@ async function Page(props: { params: Promise<PageParams> }) {
                 category={t(
                   "page-stablecoins-category-dashboard-and-education"
                 )}
-                actionLabel={t("page-apps-ready-button")}
                 content={toolsData}
                 columns={2}
               />

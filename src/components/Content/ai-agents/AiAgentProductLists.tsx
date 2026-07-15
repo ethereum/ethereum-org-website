@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 
 import { Strong } from "@/components/IntlStringElements"
 import ProductListComponent, {
@@ -15,8 +15,8 @@ import cookiefun from "@/public/images/ai-agents/cookiefun.png"
 import heyanon from "@/public/images/ai-agents/heyanon.png"
 import luna from "@/public/images/ai-agents/luna.png"
 
-const AiAgentProductLists = ({ list }: { list: string }) => {
-  const t = useTranslations("component-ai-agent-products")
+const AiAgentProductLists = async ({ list }: { list: string }) => {
+  const t = await getTranslations("component-ai-agent-products")
 
   const productListSets = {
     "ai-agents": [
@@ -74,28 +74,26 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         description: t("aiagenttoolkit-description"),
         image: aiagenttoolkit,
         href: "https://www.aiagenttoolkit.xyz/t/frameworks",
+        ctaLabel: t("visit-brand", { brand: t("aiagenttoolkit-brand") }),
       },
       {
         title: t("cookiefun-title"),
         description: t("cookiefun-description"),
         image: cookiefun,
         href: "https://cookie.fun/",
+        ctaLabel: t("visit-brand", { brand: t("cookiefun-brand") }),
       },
       {
         title: t("clanker-title"),
         description: t("clanker-description"),
         image: clanker,
         href: "https://farcaster.xyz/clanker",
+        ctaLabel: t("visit-brand", { brand: t("clanker-brand") }),
       },
     ],
   } satisfies Record<string, ProductListContent[]>
 
-  return (
-    <ProductListComponent
-      content={productListSets[list]}
-      actionLabel={t("action-label")}
-    />
-  )
+  return <ProductListComponent content={productListSets[list]} />
 }
 
 export default AiAgentProductLists

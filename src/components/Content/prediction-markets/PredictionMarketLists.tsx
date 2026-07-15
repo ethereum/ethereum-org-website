@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server"
+
 import ProductListComponent, {
   type ProductListContent,
 } from "@/components/ProductList"
@@ -6,30 +8,30 @@ import auger from "@/public/images/dapps/auger.png"
 import kalshi from "@/public/images/dapps/kalshi.png"
 import polymarket from "@/public/images/dapps/polymarket.png"
 
-const PredictionMarketLists = () => {
+const PredictionMarketLists = async () => {
+  const t = await getTranslations("component-prediction-market-products")
+
   const productListSets = [
     {
-      title: "Polymarket",
-      description: "A popular forecasting market with real-time trading.",
+      title: t("polymarket-title"),
+      description: t("polymarket-description"),
       image: polymarket,
       href: "https://polymarket.com/",
-      ctaLabel: "Explore Polymarket",
+      ctaLabel: t("polymarket-cta"),
     },
     {
-      title: "Augur",
-      description:
-        "A fully decentralized prediction market protocol used for predicting price trends. Disclaimer: you will need some technical expertise to start using Augur.",
+      title: t("augur-title"),
+      description: t("augur-description"),
       image: auger,
       href: "https://github.com/AugurProject",
-      ctaLabel: "Dive into Augur",
+      ctaLabel: t("augur-cta"),
     },
     {
-      title: "Kalshi",
-      description:
-        "A CFTC-compliant platform using Ethereum for USDC deposits. (USA only)",
+      title: t("kalshi-title"),
+      description: t("kalshi-description"),
       image: kalshi,
       href: "https://kalshi.com/",
-      ctaLabel: "Try Kalshi",
+      ctaLabel: t("kalshi-cta"),
     },
   ] satisfies ProductListContent[]
 

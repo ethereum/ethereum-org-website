@@ -1,5 +1,5 @@
 {
-  "action-label": "Go",
+  "aiagenttoolkit-brand": "Aiagenttoolkit.xyz",
   "aiagenttoolkit-description": "A curated list of AI agents, frameworks, launchpads & resources",
   "aiagenttoolkit-title": "Aiagenttoolkit.xyz",
   "aixbt-brand": "AIXBT",
@@ -13,8 +13,10 @@
   "botto-description": "Botto creates art and NFTs, with the community voting on its best work. Users formed a DAO that guides Botto’s artistic evolution while also earning token rewards for participation.",
   "botto-title": "Botto: Decentralized autonomous artist",
   "chat-with-brand": "Chat with {brand}",
+  "clanker-brand": "Clanker",
   "clanker-description": "AI that can create a token for you by tagging it on farcaster",
   "clanker-title": "Clanker",
+  "cookiefun-brand": "Cookie.fun",
   "cookiefun-description": "AI agents tracker",
   "cookiefun-title": "Cookie.fun",
   "heyanon-brand": "HeyAnon",
