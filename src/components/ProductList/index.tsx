@@ -1,4 +1,3 @@
-import { useId } from "react"
 import type { ImageProps } from "next/image"
 
 import { Image } from "@/components/Image"
@@ -8,59 +7,44 @@ import { Grid } from "@/components/ui/grid"
 
 import { cn } from "@/lib/utils/cn"
 
-type ProductListContentBase = {
+export type ProductListContent = {
   title: string
   description: React.ReactNode | React.ReactNode[]
   href: string
+  /** Complete, self-descriptive CTA label, e.g. "Visit EigenLayer" */
+  ctaLabel: string
   image?: ImageProps["src"]
   alt?: string
   id?: string
   className?: string
 }
 
-export type ProductListContent = ProductListContentBase & {
-  /** Per-item CTA label; items without one fall back to `actionLabel` */
-  ctaLabel?: string
-}
-
-// `actionLabel` (the shared CTA fallback) may be omitted only when every
-// content item supplies its own `ctaLabel`.
 export type ProductListProps = {
+  content: ProductListContent[]
   category?: string
   columns?: 2
-  as?: "h2" | "h4"
-} & (
-  | {
-      content: (ProductListContentBase & { ctaLabel: string })[]
-      actionLabel?: string
-    }
-  | {
-      content: ProductListContent[]
-      actionLabel: string
-    }
-)
+  parentHeadingLevel?: 1 | 2 | 3
+}
 
 const ProductList = ({
-  actionLabel,
   content,
   category,
   columns,
-  as,
+  parentHeadingLevel = 2,
 }: ProductListProps) => {
-  const headingId = useId()
+  const CategoryHeading = `h${parentHeadingLevel + 1}` as "h2" | "h3" | "h4"
+  const ProductHeading = `h${parentHeadingLevel + (category ? 2 : 1)}` as
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
 
-  // Widen the union: TS can't call .map on a union of array types
-  const items: ProductListContent[] = content
-  const Heading = as || "h3"
   return (
     <div className={cn("mb-4 w-full", !category && "overflow-hidden")}>
       {category && (
-        <Heading
-          id={headingId}
-          className="mt-10 mb-0 border-b-2 border-border pb-4 text-2xl"
-        >
+        <CategoryHeading className="mt-space-2x border-b pb-space-half text-h3">
           {category}
-        </Heading>
+        </CategoryHeading>
       )}
       {/* Fold-independent dividers: every item draws a border-t; the 1px
           pull-up hides the top row's line under the heading's border (same
@@ -69,11 +53,11 @@ const ProductList = ({
       <Grid
         asChild
         columns={columns || 1}
-        className="m-0 -mt-px list-none gap-x-8 gap-y-0 [--grid-gap:--spacing(8)]"
+        className="m-0 -mt-px list-none gap-y-0"
         size="wider"
       >
-        <ul role="list" aria-labelledby={category ? headingId : undefined}>
-          {items.map(
+        <ul role="list">
+          {content.map(
             (
               {
                 title,
@@ -94,7 +78,7 @@ const ProductList = ({
                 <li
                   key={id || idx}
                   className={cn(
-                    "m-0 flex border-t border-border p-page",
+                    "@container/list m-0 flex gap-4 border-t p-page",
                     className
                   )}
                 >
@@ -104,25 +88,26 @@ const ProductList = ({
                       alt={alt}
                       width={80}
                       height={80}
-                      className="aspect-square h-20 rounded-3xl shadow-lg"
+                      className="aspect-square h-20 rounded-xl shadow-lg"
                     />
                   )}
-                  <Flex className="ms-4 w-full justify-between gap-space max-sm:flex-col sm:items-center">
-                    <div className="flow flex-1 self-start">
-                      <p className="text-xl font-bold">{title}</p>
+                  <Flex className="w-full flex-col gap-space">
+                    <div className="space-y-space-half">
+                      <ProductHeading className="text-h5 font-bold">
+                        {title}
+                      </ProductHeading>
                       {descriptions.map((desc, idx) => (
-                        <p key={idx} className="mb-0 text-sm text-body-medium">
+                        <p key={idx} className="text-sm text-body-medium">
                           {desc}
                         </p>
                       ))}
                     </div>
-                    <ButtonLink variant="outline" href={href} className="h-fit">
-                      {ctaLabel || (
-                        <>
-                          {actionLabel}
-                          <span className="sr-only">to {title} website</span>
-                        </>
-                      )}
+                    <ButtonLink
+                      variant="outline"
+                      href={href}
+                      className="mt-auto @md/list:w-fit"
+                    >
+                      {ctaLabel}
                     </ButtonLink>
                   </Flex>
                 </li>
