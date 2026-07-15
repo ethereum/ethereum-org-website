@@ -55,6 +55,14 @@ const cardVariants = cva(
         variant: ["base", "nested", "header-bar"],
         class: "ring ring-transparent hover:ring-primary-hover",
       },
+      // ...but a `border` link card keeps its border visible at rest (this must
+      // come after the rule above so `ring-border` wins over `ring-transparent`).
+      {
+        interactive: true,
+        border: true,
+        variant: ["base", "nested", "header-bar"],
+        class: "ring-border",
+      },
     ],
     defaultVariants: {
       variant: "base",
