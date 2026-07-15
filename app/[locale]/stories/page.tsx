@@ -138,20 +138,22 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
                   variant="ghost"
                   size="sm"
                 >
-                  <CardBanner className="aspect-video h-auto">
-                    {video.thumbnailUrl ? (
-                      <Image
-                        src={video.thumbnailUrl}
-                        alt={video.title}
-                        width={480}
-                        height={270}
-                        sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <div className="size-full bg-background-highlight" />
-                    )}
-                  </CardBanner>
+                  <CardHeader>
+                    <CardBanner className="aspect-video h-auto">
+                      {video.thumbnailUrl ? (
+                        <Image
+                          src={video.thumbnailUrl}
+                          alt={video.title}
+                          width={480}
+                          height={270}
+                          sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="size-full bg-background-highlight" />
+                      )}
+                    </CardBanner>
+                  </CardHeader>
                   <CardContent>
                     <CardTitle>{video.title}</CardTitle>
                     <CardParagraph size="sm" className="line-clamp-2">
