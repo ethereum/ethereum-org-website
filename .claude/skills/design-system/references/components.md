@@ -671,6 +671,8 @@ import { Swiper, ... } from "@/components/ui/swiper"
 
 `"use client"`, wraps swiper.js. On the deprecation track. Migrate existing consumers to `EdgeScrollContainer`.
 
+**i18n requirement:** `Swiper` binds `useTranslations("component-swiper")` for its a11y slide announcements. Every page that renders one must ship that namespace to the client — register the route in `src/lib/utils/translations.ts` (`EXACT_PATH_ADDITIONAL_NAMESPACES` / `PREFIX_PATH_ADDITIONAL_NAMESPACES`) or add `"component-swiper"` to the page's `pick()` for its `I18nProvider`. Missing it means screen readers announce raw key tails (`swiper-next-slide`). Currently registered: `/` (hand-pick), `/developers/` (scoped providers), `/start/`, `/10years/`, `/apps/`.
+
 ### `List` / `OrderedList` / `UnorderedList` / `ListItem`
 
 ```tsx
