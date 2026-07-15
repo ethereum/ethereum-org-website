@@ -86,17 +86,6 @@ export const defineABFlag = (
   })
 
 /**
- * A/B-tested routes and the flags precomputed for each.
- *
- * Keys are locale-less canonical paths: English URLs are unprefixed
- * (localePrefix: "as-needed"), and non-root paths carry the trailing slash
- * per trailingSlash: true. Only the default locale is A/B tested.
- *
- * Each route gets its own flag group so permutations don't multiply across
- * pages. Every route registered here needs a matching coded page under
- * app/[locale]/ab-code/[code]/<path> - see docs/ab-testing.md for the recipe.
- */
-/**
  * Homepage Hero A/B test flag.
  * Demo flag - replace with a real experiment.
  */
@@ -120,6 +109,17 @@ export const homepageFlags = [homepageHeroFlag] as const
 /** Flags precomputed for /wallets/find-wallet */
 export const findWalletFlags = [findWalletHeroFlag] as const
 
+/**
+ * A/B-tested routes and the flags precomputed for each.
+ *
+ * Keys are locale-less canonical paths: English URLs are unprefixed
+ * (localePrefix: "as-needed"), and non-root paths carry the trailing slash
+ * per trailingSlash: true. Only the default locale is A/B tested.
+ *
+ * Each route gets its own flag group so permutations don't multiply across
+ * pages. Every route registered here needs a matching coded page under
+ * app/[locale]/ab-code/[code]/<path> - see docs/ab-testing.md for the recipe.
+ */
 export const abTestRoutes: Record<string, readonly ABFlag[]> = {
   "/": homepageFlags,
   "/wallets/find-wallet/": findWalletFlags,
