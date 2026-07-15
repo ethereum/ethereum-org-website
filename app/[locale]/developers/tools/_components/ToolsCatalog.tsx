@@ -3,7 +3,7 @@
 import { useDeferredValue, useMemo, useRef, useState } from "react"
 import { ChevronRight } from "lucide-react"
 
-import { Button } from "@/components/ui/buttons/Button"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
 import { BaseLink } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
@@ -31,7 +31,9 @@ type ToolsCatalogProps = {
     allCategories: string
     resultsLabel: string
     noResults: string
+    suggestButton: string
   }
+  suggestUrl: string
   currentCategoryId?: string
 }
 
@@ -195,6 +197,7 @@ export default function ToolsCatalog({
   countByCategory,
   totalCount,
   labels,
+  suggestUrl,
   currentCategoryId,
 }: ToolsCatalogProps) {
   const nf = numberFormat(locale)
@@ -329,20 +332,33 @@ export default function ToolsCatalog({
     />
   )
 
+  const suggestCta = (
+    <ButtonLink
+      href={suggestUrl}
+      variant="outline"
+      size="sm"
+      className="w-full shrink-0"
+      hideArrow
+    >
+      {labels.suggestButton}
+    </ButtonLink>
+  )
+
   return (
     <Section id="catalog" className="space-y-5">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[280px_1fr]">
         <aside className="hidden lg:block">
-          <div className="sticky top-24 space-y-4">
+          <div className="sticky top-24 flex max-h-[calc(100vh-8rem)] flex-col gap-4">
             <Input
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder={labels.searchPlaceholder}
-              className="w-full"
+              className="w-full shrink-0"
             />
-            <div className="max-h-[calc(100vh-11rem)] overflow-y-auto rounded-xl border p-2">
+            <div className="min-h-0 overflow-y-auto rounded-xl border p-2">
               {sidebar}
             </div>
+            {suggestCta}
           </div>
         </aside>
 
@@ -355,6 +371,7 @@ export default function ToolsCatalog({
               className="w-full"
             />
             <div className="rounded-xl border p-2">{sidebar}</div>
+            {suggestCta}
           </div>
           <div ref={resultsTopRef} className="scroll-mt-24" />
           {(currentCategoryId || selectedSubcategoryId) && (
