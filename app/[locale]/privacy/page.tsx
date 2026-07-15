@@ -452,6 +452,8 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-privacy")
 
   return await getMetadata({

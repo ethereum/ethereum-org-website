@@ -110,6 +110,8 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const { locale, slug } = await props.params
 
+  setRequestLocale(locale)
+
   let data
   try {
     data = await getVideoData(slug, locale)
