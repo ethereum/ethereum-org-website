@@ -1,8 +1,15 @@
 import type { ImageProps } from "next/image"
 
 import { Image } from "@/components/Image"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Flex } from "@/components/ui/flex"
+import {
+  Card,
+  CardBanner,
+  CardButtonFake,
+  CardContent,
+  CardFooter,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 
 import { cn } from "@/lib/utils/cn"
@@ -40,81 +47,74 @@ const ProductList = ({
     | "h5"
 
   return (
-    <div className={cn("mb-4 w-full", !category && "overflow-hidden")}>
+    <div className="mb-4 w-full space-y-space">
       {category && (
         <CategoryHeading className="mt-space-2x border-b pb-space-half text-h3">
           {category}
         </CategoryHeading>
       )}
-      {/* Fold-independent dividers: every item draws a border-t; the 1px
-          pull-up hides the top row's line under the heading's border (same
-          token), or overflow-hidden crops it when there's no heading.
-          Pattern notes: design-system skill. */}
-      <Grid
-        asChild
-        columns={columns || 1}
-        className="m-0 -mt-px list-none gap-y-0"
-        size="wider"
-      >
-        <ul role="list">
-          {content.map(
-            (
-              {
-                title,
-                description,
-                href,
-                ctaLabel,
-                image,
-                alt = "",
-                id,
-                className,
-              },
-              idx
-            ) => {
-              const descriptions = Array.isArray(description)
-                ? description
-                : [description]
-              return (
-                <li
-                  key={id || idx}
-                  className={cn(
-                    "@container/list m-0 flex gap-4 border-t p-page",
-                    className
-                  )}
-                >
-                  {image && (
-                    <Image
-                      src={image}
-                      alt={alt}
-                      width={80}
-                      height={80}
-                      className="aspect-square h-20 rounded-xl shadow-lg"
-                    />
-                  )}
-                  <Flex className="w-full flex-col gap-space">
-                    <div className="space-y-space-half">
-                      <ProductHeading className="text-h5 font-bold">
-                        {title}
-                      </ProductHeading>
-                      {descriptions.map((desc, idx) => (
-                        <p key={idx} className="text-sm text-body-medium">
-                          {desc}
-                        </p>
-                      ))}
-                    </div>
-                    <ButtonLink
+      <Grid columns={columns || 1} size="wider">
+        {content.map(
+          (
+            {
+              title,
+              description,
+              href,
+              ctaLabel,
+              image,
+              alt = "",
+              id,
+              className,
+            },
+            idx
+          ) => {
+            const descriptions = Array.isArray(description)
+              ? description
+              : [description]
+            return (
+              <Card
+                key={id || idx}
+                variant="ghost"
+                href={href}
+                hoverLift
+                className={cn("@container/card flex-row", className)}
+              >
+                {image && (
+                  <CardContent className="flex-none pe-0">
+                    <CardBanner
+                      background="none"
+                      fit="contain"
+                      size="thumbnail"
+                      zoom={false}
+                    >
+                      <Image src={image} alt={alt} width={128} height={128} />
+                    </CardBanner>
+                  </CardContent>
+                )}
+                <div className="flex flex-col">
+                  <CardContent>
+                    <CardTitle asChild>
+                      <ProductHeading>{title}</ProductHeading>
+                    </CardTitle>
+                    {descriptions.map((desc, i) => (
+                      <CardParagraph key={i}>{desc}</CardParagraph>
+                    ))}
+                  </CardContent>
+                  {/* Full-width CTA when the card is narrow; fit-content once
+                      the card is wide enough (most visible at 1 column). */}
+                  <CardFooter className="mt-auto" buttons="inherit">
+                    <CardButtonFake
                       variant="outline"
-                      href={href}
-                      className="mt-auto @md/list:w-fit"
+                      className="w-full @md/card:w-fit"
                     >
                       {ctaLabel}
-                    </ButtonLink>
-                  </Flex>
-                </li>
-              )
-            }
-          )}
-        </ul>
+                    </CardButtonFake>
+                  </CardFooter>
+                </div>
+              </Card>
+            )
+          }
+        )}
       </Grid>
     </div>
   )
