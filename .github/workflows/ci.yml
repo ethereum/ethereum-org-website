@@ -113,7 +113,9 @@ jobs:
         uses: chromaui/action@v16
         with:
           projectToken: fee8e66c9916
-          exitZeroOnChanges: true
+          # Fail the check when unaccepted visual changes exist, so a maintainer
+          # must accept them in Chromatic (then re-run this job) before merge.
+          exitZeroOnChanges: false
           onlyChanged: true
           # Release-train builds (dev/staging/master head branches) were
           # already reviewed per-PR on dev; auto-accept them as baselines.
