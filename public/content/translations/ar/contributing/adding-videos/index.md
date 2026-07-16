@@ -123,22 +123,6 @@ title: "..."
 
 إذا لم يكن لديك نص مكتوب، يمكنك ترك النص الأساسي فارغاً وسيقوم الفريق بإنشائه.
 
-#### الخطوة 4: اختيار وسوم الموضوعات {#step-4}
-
-اختر وسوم الموضوعات التي تتطابق مع الفئات الحالية المستخدمة في المعرض. تشمل الفئات الحالية ووسومها ما يلي:
-
-- **كيف تعمل إيثيريوم**: `how-ethereum-works`، `consensus`، `blockchain`، `cryptography`، `accounts`، `ethereum`، `intro`، `transactions`، `pos`، `smart-contracts`
-- **ترقيات الشبكة**: `network-upgrades`، `upgrades`، `pectra`، `dencun`، `eip-4844`، `blobs`، `fusaka`
-- **خارطة الطريق والأولويات**: `roadmap-and-priorities`، `pbs`، `mev`
-- **التوسع وطبقة 2 (L2)**: `scaling-and-layer-2`، `scaling`، `layer-2`، `rollups`، `optimistic-rollups`، `zk-rollups`
-- **حالات الاستخدام**: `use-cases`، `defi`، `finance`، `nfts`، `erc-721`، `erc-1155`، `lending`، `dapps`، `restaking`، `eigenlayer`، `dao`، `identity`، `desci`، `refi`
-- **الخصوصية والأمان**: `privacy-and-security`، `privacy`، `authentication`
-- **قصص المجتمع**: `community-stories`، `contributing`، `translations`، `community`
-
-لضمان ظهور مقطع الفيديو الخاص بك في رف فئة المعرض، قم بتضمين وسم مفتاح فئة واحد على الأقل (الاسم الغامق بتنسيق <span dir="ltr">kebab-case</span>، على سبيل المثال `use-cases` أو `scaling-and-layer-2`). ستظهر مقاطع الفيديو التي لا تحتوي على وسم فئة معترف به فقط في عرض "الكل" ونتائج البحث.
-
-يمكنك أيضاً استخدام وسوم جديدة — ستكون متاحة لتجميعات الفئات المستقبلية.
-
 #### الخطوة 5: إرسال طلب السحب (PR) {#step-5}
 
 افتح طلب سحب (Pull request) بتغييراتك على فرع `dev`. سيقوم الفريق بمراجعة طلبك وتقديم الملاحظات.

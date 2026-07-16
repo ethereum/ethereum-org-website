@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/ides/index.md",
-  "generatedAt": "2026-06-16T22:51:27.102Z",
-  "rootHash": "93dfb7febd40",
+  "generatedAt": "2026-06-29T23:56:57.264Z",
+  "rootHash": "9a0235960c21",
   "tree": {
     "contentHash": "b934d1613b65",
-    "anchorHash": "e717a5fa9713",
+    "anchorHash": "561dc5e72390",
     "children": {
       "frontmatter:title": {
         "contentHash": "806dd64b2f7c",
@@ -320,7 +320,7 @@
       },
       "further-reading": {
         "contentHash": "7153ae36a073",
-        "anchorHash": "84aca16abc1d",
+        "anchorHash": "3e8d4cd82901",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
@@ -333,7 +333,7 @@
           },
           "link:0": {
             "contentHash": "cb27d63db08c",
-            "anchorHash": "9738570c047f"
+            "anchorHash": "59a7a39f953e"
           },
           "prose:2": {
             "contentHash": "1edd079949e3",
@@ -361,5 +361,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

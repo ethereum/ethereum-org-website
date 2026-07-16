@@ -115,9 +115,9 @@ export const getStakedPercentageData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getBlobscanStats = createCachedGetter(
-  dataLayer.getBlobscanStats,
-  ["blobscan-stats"],
+export const getBlobStats = createCachedGetter(
+  dataLayer.getBlobStats,
+  ["blob-stats"],
   CACHE_REVALIDATE_DAY
 )
 
@@ -179,6 +179,19 @@ export const getDeveloperToolsData = createCachedGetter(
   dataLayer.getDeveloperToolsData,
   ["developer-tools-data"],
   CACHE_REVALIDATE_DAY
+)
+
+/**
+ * Static-cached version of getDeveloperToolsData -- no revalidation.
+ * Used by the force-static sitemap: a finite revalidate opts the route into
+ * ISR, whose serverless re-render can't read public/content (excluded from the
+ * function bundle), yielding a truncated/empty sitemap. Refreshes on deploy.
+ * See: docs/solutions/integration-issues/netlify-isr-404-async-server-components.md
+ */
+export const getStaticDeveloperToolsData = createCachedGetter(
+  dataLayer.getDeveloperToolsData,
+  ["developer-tools-data-static"],
+  false
 )
 
 export const getAccountHolders = createCachedGetter(

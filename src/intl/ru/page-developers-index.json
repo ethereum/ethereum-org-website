@@ -137,5 +137,16 @@
   "page-developers-why-title": "Получайте хорошую зарплату. Работайте удаленно. Создавайте будущее.",
   "page-developers-why-subtitle": "Более половины вакансий в сфере блокчейна предполагают удаленную работу, а по некоторым оценкам эта цифра достигает 70%.",
   "page-developers-why-avg-salary-dev": "Средняя зарплата разработчика",
-  "page-developers-why-avg-salary-blockchain": "Средняя зарплата в блокчейн-индустрии"
+  "page-developers-why-avg-salary-blockchain": "Средняя зарплата в блокчейн-индустрии",
+  "page-developers-why-grid-money-heading": "Программируемые деньги",
+  "page-developers-why-grid-money-desc": "Пишите код, который определяет, как, когда и кому передается ценность. Никаких банков и посредников — только заданная вами логика.",
+  "page-developers-why-grid-skills-heading": "Навыки будущего",
+  "page-developers-why-grid-skills-desc": "Изучите фундаментальные элементы интернета следующего поколения. Технологии могут меняться, но принципы Web3 останутся навсегда.",
+  "page-developers-why-grid-censorship-heading": "Устойчивость к цензуре",
+  "page-developers-why-grid-censorship-desc": "Создавайте проекты и коммерческие решения, которые не смогут заблокировать правительства, корпорации или алгоритмы. Если это важно, оно останется в сети.",
+  "page-developers-why-grid-sovereignty-heading": "Цифровой суверенитет",
+  "page-developers-why-grid-sovereignty-desc": "Владейте своей цифровой личностью, активами и творениями в интернете, не полагаясь на платформы, которые могут вас удалить.",
+  "page-developers-blog-title": "Обновления для разработчиков",
+  "page-developers-blog-desc": "Обзоры новейших ресурсов, инструментов и решений для разработчиков на Эфириуме.",
+  "page-developers-blog-view-all": "Смотреть все обновления"
 }

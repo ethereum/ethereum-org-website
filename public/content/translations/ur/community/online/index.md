@@ -1,6 +1,6 @@
 ---
-title: آن لائن کمیونٹیز
-description: آن لائن فورمز، چیٹ رومز، اور سوشل میڈیا کمیونٹیز دریافت کریں جہاں ایتھیریم کے شائقین بات چیت اور تعاون کے لیے جمع ہوتے ہیں۔
+title: "آن لائن کمیونٹیز"
+description: "آن لائن فورمز، چیٹ رومز، اور سوشل میڈیا کمیونٹیز دریافت کریں جہاں ایتھیریم کے شائقین بات چیت اور تعاون کے لیے جمع ہوتے ہیں۔"
 lang: ur
 ---
 
@@ -52,7 +52,7 @@ lang: ur
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/"><span dir="ltr">Matos</span> ڈسکارڈ</Link> - Web3 تخلیق کاروں کی کمیونٹی جہاں بلڈرز، صنعتی رہنما، اور ایتھیریم کے شائقین جمع ہوتے ہیں۔ ہم Web3 ڈیولپمنٹ، ڈیزائن، اور کلچر کے بارے میں پرجوش ہیں۔ آئیں ہمارے ساتھ مل کر بنائیں۔</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im"><span dir="ltr">Solidity Matrix</span></Link> - Solidity ڈیولپمنٹ کے لیے چیٹ (<span dir="ltr">Matrix</span>)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/"><span dir="ltr">Ethereum Stack Exchange</span></Link> <i>- سوال و جواب کا فورم</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/"><span dir="ltr">Peera Community Forum</span></Link> <i>- لامركزی سوال و جواب کا فورم</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum"><span dir="ltr">Peera Community Forum</span></Link> <i>- لامركزی سوال و جواب کا فورم</i></SocialListItem>
 
 ## یوٹیوب اور X (سابقہ ٹوئٹر) {#youtube-and-twitter}
 

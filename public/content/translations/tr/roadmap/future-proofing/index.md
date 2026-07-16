@@ -36,25 +36,22 @@ Hayır. Bugün hiçbir kuantum bilgisayar Ethereum'un kriptografisini kıramaz. 
 
 </ExpandableCard>
 
-### Neler yapılıyor? {#what-is-being-done}
-
-Ethereum şu anda blokzincir ekosistemindeki kuantum tehditlerine karşı en proaktif savunucudur. Ethereum Vakfı, Ocak 2026'da özel bir **Kuantum Sonrası Güvenlik ekibi** kurdu ve aktif çalışmalar birden fazla istemci ekibine ve araştırma grubuna yayılıyor. EV Kuantum Sonrası ekibinin çalışmaları [pq.ethereum.org](https://pq.ethereum.org) adresinden herkese açık olarak takip edilmektedir.
+Ethereum, şu anda Blokzincir ekosisteminde kuantum tehditlerine karşı en proaktif savunucudur. Ethereum Vakfı, Ocak 2026'da özel bir **Kuantum Sonrası Güvenlik ekibi** kurdu ve aktif çalışmalar birden fazla istemci ekibi ile araştırma grubuna yayılmış durumdadır. EF Kuantum Sonrası ekibinin çalışmaları [pq.ethereum.org](https://pq.ethereum.org) adresinden herkese açık olarak takip edilmektedir.
 
 Aktif çalışmalar şunları içerir:
 
 - **Hash tabanlı imzalar (leanXMSS)**: Kuantum bilgisayarların verimli bir şekilde kıramayacağı hash fonksiyonları üzerine inşa edilmiş, doğrulayıcı imzaları için kuantum güvenli bir alternatif.
-- **Minimal zkVM (leanVM)**: Kuantum güvenli imzalar şu anda kullanılan imzalardan daha büyük olduğundan, leanXMSS minimal bir zkVM (leanVM) ile eşleştirilir. Bu motor, kuantum güvenli imzaları verimli bir şekilde bir araya getirerek verileri 250 kat sıkıştırır, böylece ağ geçişten sonra hızlı kalır.
+- **Minimal zkVM (leanVM)**: Kuantum güvenli imzalar şu anda kullanılan imzalardan daha büyük olduğu için leanXMSS, minimal bir zkVM (leanVM) ile eşleştirilir. Bu motor, kuantum güvenli imzaları verimli bir şekilde bir araya getirerek verileri 250 kat sıkıştırır, böylece ağ geçişten sonra da hızlı kalır.
 - **Haftalık birlikte çalışabilirlik testleri**: 10'dan fazla istemci ekibi düzenli kuantum sonrası geliştirici ağlarına (devnet) katılır.
-- **Veri kullanılabilirliği:** Büyük miktarda ağ verisini işlemek için kullanılan temel kriptografiyi güncellemek, gelecekteki kuantum güvenlik açıklarını riske atmadan Ethereum'un hızlı ve uygun maliyetli kalmasını sağlayacaktır.
+- **Veri kullanılabilirliği:** Büyük miktarda ağ verisini işlemek için kullanılan temel kriptografiyi yükseltmek, Ethereum'un gelecekteki kuantum güvenlik açıklarını riske atmadan hızlı ve uygun maliyetli kalmasını sağlayacaktır.
 - **Poseidon Ödülü**: Hash tabanlı kriptografik ilkellerdeki iyileştirmeleri hedefleyen 1 milyon dolarlık bir araştırma ödülü.
 - **NIST standartları**: ABD Ulusal Standartlar ve Teknoloji Enstitüsü, Ağustos 2024'te üç kuantum sonrası kriptografi standardını (ML-KEM, ML-DSA, SLH-DSA) kesinleştirdi. Ethereum'un çalışmaları bu temeller üzerine inşa edilmektedir.
 
-Geçiş stratejisinin önemli bir parçası, yerel [hesap soyutlama](/roadmap/account-abstraction/) getiren **EIP-8141**'dir. Bu, bireysel hesapların kendi imza doğrulamalarını seçmelerine olanak tanır, yani kullanıcılar **protokol çapında tek bir geçişi beklemeden** kuantum güvenli imzalara geçebilirler. EIP-8141, Hegotá sert çatallanması (2026'nın ikinci yarısı için planlanıyor) için değerlendirilmektedir.
+Geçiş stratejisinin önemli bir parçası, yerel [hesap soyutlama](/roadmap/account-abstraction/) özelliğini tanıtan **EIP-8141**'dir. Bu, bireysel hesapların kendi imza doğrulamalarını seçmelerine olanak tanır; bu da kullanıcıların **protokol çapında tek bir geçişi beklemeden** kuantum güvenli imzalara geçebilecekleri anlamına gelir. EIP-8141, Hegotá sert çatallanması (2026'nın ikinci yarısı için planlanıyor) için değerlendirilmektedir.
 
-Ethereum Vakfı, temel kuantum sonrası altyapının yaklaşık 2029 yılına kadar tamamlanmasını hedefleyen yapılandırılmış çatallanma kilometre taşlarını ana hatlarıyla belirlemiştir. Bunlar planlama hedefleridir, garantili taahhütler değildir.
+Ethereum Vakfı, temel kuantum sonrası altyapının yaklaşık 2029 yılına kadar tamamlanmasını hedefleyen yapılandırılmış çatallanma kilometre taşlarını ana hatlarıyla belirlemiştir. Bunlar planlama hedefleridir, garanti edilen taahhütler değildir.
 
-[Ethereum'da kuantum sonrası kriptografi hakkındaki ayrıntılı kılavuzumuzu okuyun](/roadmap/future-proofing/quantum-resistance/)
-
+<ButtonLink variant="outline" href="/roadmap/future-proofing/quantum-resistance/">Kuantum direnci hakkında daha fazlası</ButtonLink>
 ## Daha basit ve daha verimli Ethereum {#simpler-more-efficient-ethereum}
 
 Karmaşıklık, hatalar ve güvenlik açıkları için fırsatlar yaratır. Yol haritasının bir kısmı, protokolün bakımını, denetimini ve üzerinde düşünülmesini kolaylaştırmak için **Ethereum'u basitleştirmeye ve teknik borcu ortadan kaldırmaya** odaklanmaktadır.

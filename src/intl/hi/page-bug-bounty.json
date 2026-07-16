@@ -32,6 +32,8 @@
   "page-upgrades-bug-bounty-hunting-li-4": "इथेरियम बाउंटी प्रोग्राम पुरस्कार निर्धारित करने में कई चरों पर विचार करता है। पात्रता, स्कोर और पुरस्कार से संबंधित सभी शर्तों का निर्धारण पूरी तरह से और अंतिम रूप से एथेरियम फाउंडेशन बग बाउंटी पैनल के विवेक पर है।",
   "page-upgrades-bug-bounty-leaderboard": "पूरा लीडरबोर्ड देखें",
   "page-upgrades-bug-bounty-leaderboard-list": "बग बाउंटी लीडरबोर्ड",
+  "page-upgrades-bug-bounty-leaderboard-position": "{rank} स्थान पर {score, plural, one {# अंक} other {# अंकों}} के साथ",
+  "page-upgrades-bug-bounty-leaderboard-github-profile": "(GitHub प्रोफ़ाइल देखें)",
   "page-upgrades-bug-bounty-leaderboard-points": "अंक",
   "page-upgrades-bug-bounty-ledger-desc": "इथेरियम विशिष्टताएं निष्पादन परत और सर्वसम्मति परत के लिए डिज़ाइन के तर्क का विवरण देती हैं।",
   "page-upgrades-bug-bounty-ledger-title": "विशिष्टता बग",

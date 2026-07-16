@@ -388,7 +388,7 @@
   "validium-term": "Validium",
   "validium-definition": "一种使用<a href=\"/glossary/#validity-proof\">有效性证明</a>来提高交易吞吐量的链下解决方案。与<a href=\"/glossary/#zk-rollup\">零知识卷叠</a>不同，Validium 数据不存储在一层网络 (l1) 主网上。<a href=\"/developers/docs/scaling/validium/\">更多关于 Validium 的信息</a>。",
   "vyper-term": "Vyper",
-  "vyper-definition": "一种具有类似 Python 语法的高级编程语言。旨在更接近纯函数式语言。由 Vitalik Buterin 创建。<a href=\"/developers/docs/smart-contracts/languages/#vyper\">更多关于 Vyper 的信息</a>。",
+  "vyper-definition": "一种具有类似 Python 语法的高级编程语言。由维塔利克·布特林创建。<a href=\"/developers/docs/smart-contracts/languages/#vyper\">更多关于 Vyper 的信息</a>。",
   "wallet-term": "钱包",
   "wallet-definition": "钱包是一种用于存储、发送和接收数字货币的数字工具，就像您在线资金的虚拟钱包。<a href=\"/wallets/\">更多关于以太坊钱包的信息</a>。",
   "web2-term": "Web2",

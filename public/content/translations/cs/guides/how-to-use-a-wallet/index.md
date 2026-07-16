@@ -1,7 +1,7 @@
 ---
-title: Jak používat peněženku
-metaTitle: Jak používat Ethereum peněženky | Krok za krokem
-description: Průvodce vysvětlující, jak odesílat a přijímat tokeny a jak se připojit k web3 projektům.
+title: "Jak používat peněženku"
+metaTitle: "Jak používat Ethereum peněženky | Krok za krokem"
+description: "Průvodce vysvětlující, jak odesílat a přijímat tokeny a jak se připojit k web3 projektům."
 lang: cs
 ---
 

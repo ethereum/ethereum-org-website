@@ -1,6 +1,6 @@
 import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
@@ -23,7 +23,6 @@ import Arbitrum from "./logos/arbitrum.svg"
 import Base from "./logos/base.svg"
 import Devconnect from "./logos/devconnect.svg"
 import EcosystemSupport from "./logos/ecosystem-support-program.svg"
-import EFFounderSuccess from "./logos/ef-founder-success.svg"
 import EnsBuilderGrants from "./logos/ens-builder-grants.svg"
 import EthGlobal from "./logos/ethglobal.svg"
 // import Gitcoin from "./logos/gitcoin.svg"
@@ -314,18 +313,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             name: "ETHGlobal",
           }),
         },
-        {
-          name: "Ethereum Foundation Founder Support",
-          Logo: EFFounderSuccess,
-          tags: [],
-          subtitle: t("page-founders-partnerships-ef-founder-support-subtitle"),
-          description: t(
-            "page-founders-partnerships-ef-founder-support-description"
-          ),
-          highlights: [],
-          href: "https://efdn.notion.site/255d989555418113975ff62641d9c814",
-          ctaLabel: t("page-founders-partnerships-ef-founder-support-cta"),
-        },
         // {
         //   name: "Base",
         //   Logo: Base,
@@ -458,6 +445,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-founders")
 

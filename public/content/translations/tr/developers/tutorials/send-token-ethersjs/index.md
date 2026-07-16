@@ -19,9 +19,8 @@ published: 2021-04-06
 
 ### Başlarken {#to-get-started}
 
-Başlamak için öncelikle ethers.js kütüphanesini JavaScript'imize içe aktarmalıyız
-ethers.js(5.0)'i dahil edin
-
+Başlamak için öncelikle ethers.js kütüphanesini JavaScript'imize aktarmalıyız
+ethers.js v5'i dahil edin
 ### Kurulum {#install-ethersjs}
 
 ```shell

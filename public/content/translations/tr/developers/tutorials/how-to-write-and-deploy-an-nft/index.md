@@ -17,7 +17,7 @@ Bu eğitimde, [MetaMask](https://metamask.io/), [Solidity](https://docs.solidity
 
 Bu eğitimin 2. Bölümünde, bir NFT basmak için akıllı sözleşmemizi nasıl kullanabileceğimizi inceleyeceğiz ve 3. Bölümde NFT'nizi MetaMask'te nasıl görüntüleyeceğinizi açıklayacağız.
 
-Ve elbette, herhangi bir noktada sorularınız olursa, [Alchemy Discord](https://discord.gg/gWuC7zB) üzerinden ulaşmaktan veya [Alchemy'nin NFT API belgelerini](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api) ziyaret etmekten çekinmeyin!
+Ve elbette, herhangi bir noktada sorularınız olursa, [Alchemy Discord](https://discord.gg/gWuC7zB) üzerinden ulaşmaktan veya [Alchemy'nin NFT API belgelerini](https://www.alchemy.com/docs/reference/nft-api-quickstart) ziyaret etmekten çekinmeyin!
 
 ## 1. Adım: Ethereum ağına bağlanın {#connect-to-ethereum}
 
@@ -27,7 +27,7 @@ Bu eğitimde, akıllı sözleşme dağıtımımızın arka planında neler olup 
 
 ## 2. Adım: Uygulamanızı (ve API anahtarınızı) oluşturun {#make-api-key}
 
-Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anahtarı üretebilirsiniz. Bu, Sepolia test ağına istekte bulunmamızı sağlayacaktır. Test ağları hakkında daha fazla bilgi edinmek isterseniz [bu rehbere](https://docs.alchemyapi.io/guides/choosing-a-network) göz atın.
+Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anahtarı üretebilirsiniz. Bu, Sepolia test ağına istekte bulunmamızı sağlayacaktır. Test ağları hakkında daha fazla bilgi edinmek isterseniz [bu rehbere](https://www.alchemy.com/docs/choosing-a-web3-network) göz atın.
 
 1. Gezinme çubuğundaki "Apps" (Uygulamalar) üzerine gelip "Create App" (Uygulama Oluştur) seçeneğine tıklayarak Alchemy Kontrol Panelinizdeki "Create App" sayfasına gidin.
 
@@ -51,16 +51,15 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anah
 
 Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacımız olacak. ETH almak için Alchemy tarafından barındırılan [Sepolia Musluğu](https://sepoliafaucet.com/)'na gidebilir, giriş yapıp hesap adresinizi girebilir ve "Send Me ETH" (Bana ETH Gönder) düğmesine tıklayabilirsiniz. Kısa bir süre sonra MetaMask hesabınızda ETH görmelisiniz!
 
-## 5. Adım: Bakiyenizi Kontrol Edin {#check-balance}
+## 5. Adım: Bakiyenizi kontrol edin {#check-balance}
 
-Bakiyemizin orada olduğunu iki kez kontrol etmek için, [Alchemy'nin oluşturucu aracını](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) kullanarak bir [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) isteği yapalım. Bu, cüzdanımızdaki ETH miktarını döndürecektir. MetaMask hesap adresinizi girip "Send Request" (İstek Gönder) düğmesine tıkladıktan sonra şöyle bir yanıt görmelisiniz:
+Bakiyemizin orada olduğunu iki kez kontrol etmek için, [Alchemy'nin sandbox aracını](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) kullanarak bir [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) isteği yapalım. Bu, cüzdanımızdaki ETH miktarını döndürecektir. MetaMask hesap adresinizi girip "Send Request" (İsteği Gönder) düğmesine tıkladıktan sonra, şuna benzer bir yanıt görmelisiniz:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-> **Not** Bu sonuç ETH değil, Wei cinsindendir. Wei, Ether'in en küçük birimi olarak kullanılır. Wei'den ETH'ye dönüşüm 1 eth = 10<sup>18</sup> Wei şeklindedir. Yani 0xde0b6b3a7640000 değerini ondalık sayıya çevirirsek 1\*10<sup>18</sup> Wei elde ederiz, bu da 1 ETH'ye eşittir.
+> **Not** Bu sonuç ETH değil, Wei cinsindendir. Wei, Ether'in en küçük birimi olarak kullanılır. Wei'den ETH'ye dönüşüm 1 eth = 10<sup>18</sup> wei şeklindedir. Yani 0xde0b6b3a7640000 değerini ondalık sayıya dönüştürürsek 1\*10<sup>18</sup> wei elde ederiz, bu da 1 ETH'ye eşittir.
 
 Oh be! Sahte paramızın hepsi orada.
-
 ## 6. Adım: Projemizi başlatın {#initialize-project}
 
 İlk olarak, projemiz için bir klasör oluşturmamız gerekecek. Komut satırınıza gidin ve şunu yazın:
@@ -68,7 +67,7 @@ Oh be! Sahte paramızın hepsi orada.
     mkdir my-nft
     cd my-nft
 
-Artık proje klasörümüzün içinde olduğumuza göre, projeyi başlatmak için npm init kullanacağız. Eğer npm henüz yüklü değilse, [bu talimatları](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) izleyin (ayrıca [Node.js](https://nodejs.org/en/download/)'e de ihtiyacımız olacak, bu yüzden onu da indirin!).
+Artık proje klasörümüzün içinde olduğumuza göre, projemizi başlatmak için npm init kullanacağız. Eğer npm henüz kurulu değilse, [Node.js kurulum talimatlarını](https://nodejs.org/en/download/) izleyin (bu eğitim için Node.js ve npm'e ihtiyacımız olacak).
 
     npm init
 
@@ -99,8 +98,7 @@ Kurulum sorularını nasıl yanıtladığınız pek önemli değil; referans olm
     }
 ```
 
-package.json dosyasını onaylayın, artık hazırız!
-
+package.json dosyasını onaylayın, artık başlamaya hazırız!
 ## 7. Adım: [Hardhat](https://hardhat.org/getting-started/#overview) Kurulumu {#install-hardhat}
 
 Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Canlı zincire dağıtmadan önce yerel olarak akıllı sözleşmeler ve merkeziyetsiz uygulamalar (dapp'ler) oluştururken geliştiricilere yardımcı olur.
@@ -342,7 +340,7 @@ From (Gönderen) adresi MetaMask hesap adresinizle eşleşmeli ve To (Alıcı) a
 
 Eveeeet! NFT akıllı sözleşmenizi Ethereum (test ağı) zincirine başarıyla dağıttınız!
 
-Arka planda neler olup bittiğini anlamak için [Alchemy kontrol panelimizdeki](https://dashboard.alchemyapi.io/explorer) Explorer (Gezgin) sekmesine gidelim. Birden fazla Alchemy uygulamanız varsa, uygulamaya göre filtrelediğinizden ve "MyNFT"yi seçtiğinizden emin olun.
+Arka planda neler olup bittiğini anlamak için [Alchemy kontrol panelimizdeki](https://dashboard.alchemy.com/explorer) Explorer (Gezgin) sekmesine gidelim. Birden fazla Alchemy uygulamanız varsa, uygulamaya göre filtrelediğinizden ve "MyNFT"yi seçtiğinizden emin olun.
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

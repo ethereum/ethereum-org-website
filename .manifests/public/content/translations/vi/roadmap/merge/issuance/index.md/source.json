@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/roadmap/merge/issuance/index.md",
-  "generatedAt": "2026-06-08T10:25:25.138Z",
-  "rootHash": "ce563a53f2f1",
+  "generatedAt": "2026-06-30T00:52:41.186Z",
+  "rootHash": "6042ebca6731",
   "tree": {
-    "contentHash": "a4ef57320efa",
-    "anchorHash": "175384bf597b",
+    "contentHash": "bd3a08b9828c",
+    "anchorHash": "c8f2b3b7f0de",
     "children": {
       "frontmatter:title": {
         "contentHash": "53b7490818a9",
@@ -32,27 +32,46 @@
         "anchorHash": "e3b0c44298fc"
       },
       "components-of-eth-issuance": {
-        "contentHash": "b00d58110a02",
-        "anchorHash": "e266ae6930f5",
+        "contentHash": "443526ac67b3",
+        "anchorHash": "cdbae0c21660",
         "labelHash": "640e988e3d7f",
         "children": {
           "_label": {
             "contentHash": "640e988e3d7f",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:1": {
+          "prose:0": {
             "contentHash": "3e09bc169b19",
             "anchorHash": "e3b0c44298fc"
           },
-          "html-tag:0": {
-            "contentHash": "2aeb0ffe94b8",
-            "anchorHash": "cf33a81cca02"
+          "component:2": {
+            "contentHash": "107cf72a5c66",
+            "anchorHash": "c891b518721c",
+            "children": {
+              "attr:title": {
+                "contentHash": "c8559648a0d6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "attr:emoji": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "f4f828dfb319"
+              },
+              "prose:0": {
+                "contentHash": "b129fc7f0ca2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "attr:emoji",
+              "prose:0"
+            ]
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:1",
-          "html-tag:0"
+          "prose:0",
+          "component:2"
         ]
       },
       "pre-merge": {
@@ -683,5 +702,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

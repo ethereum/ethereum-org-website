@@ -27,6 +27,7 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/founders/": "page-founders",
   "/get-eth/": "page-get-eth",
   "/bug-bounty/": "page-bug-bounty",
+  "/privacy/": "page-privacy",
   "/quizzes/": "learn-quizzes",
   "/reports/": "page-reports",
   "/reports/trillion-dollar-security/": "page-trillion-dollar-security",
@@ -71,7 +72,10 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
 
 const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
   "/": ["page-10-year-anniversary", "page-app-descriptions"],
+  "/developers/": ["component-swiper"],
+  "/start/": ["component-swiper"],
   "/wallets/": ["component-wallet-simulator"],
+  "/what-are-apps/": ["component-story-card"],
 }
 
 const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
@@ -81,8 +85,12 @@ const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
   ["/layer-2/networks/", ["table"]],
   ["/energy-consumption/", ["page-about"]],
   ["/glossary/", ["glossary"]],
-  ["/10years/", ["page-10-year-anniversary"]],
-  ["/apps/", ["page-app-descriptions"]],
+  [
+    "/10years/",
+    ["page-10-year-anniversary", "component-swiper", "component-story-card"],
+  ],
+  ["/stories/", ["component-story-card"]],
+  ["/apps/", ["page-app-descriptions", "component-swiper"]],
 ]
 
 const SUFFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [

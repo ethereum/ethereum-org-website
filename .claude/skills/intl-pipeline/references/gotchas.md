@@ -82,9 +82,9 @@ Frontmatter is a distinct YAML scope. Inert frontmatter fields (`image`, `lang`,
 
 `tags` arrays have a mixed policy (brand tags English, concept tags translated) — see `intl-review/SKILL.md` for the rule. For tag-related sanitizer bugs, the fix is in the sanitizer; the pipeline itself just runs the section through Phase 4.
 
-## TARGET_FILES env var for sanitizer scoping
+## Sanitizer scoping: TARGET_LANGUAGES env var or programmatic file list
 
-The sanitizer's `processMarkdownFile` and `processJsonFile` can be scoped via `TARGET_FILES` env var (comma-separated paths). The `/fix-sanitizer-bug` slash command uses this. Don't run the sanitizer unscoped — see SKILL.md gotcha for why.
+There is no `TARGET_FILES` env var — the sanitizer only reads `TARGET_LANGUAGES` (comma-separated language codes, e.g. `TARGET_LANGUAGES=ja`) from the environment. Per-file scoping exists only programmatically: call the exported `runSanitizer(filesWithContent)` with the specific file(s). Don't run the sanitizer unscoped — see SKILL.md gotcha for why.
 
 ## Glossary ID vs term confusion
 

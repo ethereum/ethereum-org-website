@@ -44,7 +44,7 @@ incomplete: true
 - [<span dir="ltr">oasis_std</span>](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _<span dir="ltr">OASIS API</span> کا حوالہ_
 - [<span dir="ltr">Solaris</span>](https://github.com/paritytech/sol-rs) - _مقامی <span dir="ltr">Parity</span> کلائنٹ <span dir="ltr">EVM</span> کا استعمال کرتے ہوئے <span dir="ltr">Solidity</span> سمارٹ کنٹریکٹس یونٹ ٹیسٹ ہارنس۔_
 - [<span dir="ltr">SputnikVM</span>](https://github.com/rust-blockchain/evm) - _<span dir="ltr">Rust</span> ایتھیریم ورچوئل مشین کا نفاذ_
-- [<span dir="ltr">Wavelet</span>](https://wavelet.perlin.net/docs/smart-contracts) - _<span dir="ltr">Rust</span> میں <span dir="ltr">Wavelet</span> سمارٹ کنٹریکٹ_
+- [<span dir="ltr">Wavelet</span>](https://github.com/perlin-network/smart-contract-rs) - _<span dir="ltr">Rust</span> میں <span dir="ltr">Wavelet</span> سمارٹ کنٹریکٹ_
 - [<span dir="ltr">Foundry</span>](https://github.com/foundry-rs/foundry) - _ایتھیریم ایپلی کیشن ڈیولپمنٹ کے لیے ٹول کٹ_
 - [<span dir="ltr">Alloy</span>](https://alloy.rs) - _ایتھیریم اور دیگر <span dir="ltr">EVM</span> پر مبنی چینز کے ساتھ تعامل کے لیے اعلیٰ کارکردگی والی، اچھی طرح سے ٹیسٹ شدہ اور دستاویزی لائبریریاں۔_
 - [<span dir="ltr">Ethers_rs</span>](https://github.com/gakonst/ethers-rs) - _ایتھیریم لائبریری اور والیٹ کا نفاذ_

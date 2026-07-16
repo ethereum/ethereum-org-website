@@ -82,12 +82,7 @@ Die tatsächlichen Werte für Typen mit variabler Länge werden also in einem He
 
 Es gibt auch einige Sonderfälle, die eine spezifische Behandlung erfordern, wie z. B. der Typ `BitList`, bei dem während der Serialisierung eine Längenbegrenzung hinzugefügt und bei der Deserialisierung entfernt werden muss. Alle Details finden Sie in der [SSZ-Spezifikation](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
-### Deserialisierung {#deserialization}
-
-Um dieses Objekt zu deserialisieren, wird das <b>Schema</b> benötigt. Das Schema definiert das genaue Layout der serialisierten Daten, sodass jedes spezifische Element aus einem Blob von Bytes in ein sinnvolles Objekt deserialisiert werden kann, wobei die Elemente den richtigen Typ, Wert, die richtige Größe und Position haben. Das Schema teilt dem Deserialisierer mit, welche Werte tatsächliche Werte und welche Offsets sind. Alle Feldnamen verschwinden, wenn ein Objekt serialisiert wird, werden aber bei der Deserialisierung gemäß dem Schema wiederhergestellt.
-
-Siehe [ssz.dev](https://www.ssz.dev/overview) für eine interaktive Erklärung dazu.
-
+Um dieses Objekt zu deserialisieren, wird das <b>Schema</b> benötigt. Das Schema definiert das genaue Layout der serialisierten Daten, sodass jedes spezifische Element aus einem Blob von Bytes in ein sinnvolles Objekt deserialisiert werden kann, bei dem die Elemente den richtigen Typ, Wert, die richtige Größe und Position haben. Das Schema teilt dem Deserialisierer mit, welche Werte tatsächliche Werte und welche Offsets sind. Alle Feldnamen verschwinden, wenn ein Objekt serialisiert wird, werden aber bei der Deserialisierung gemäß dem Schema wiederhergestellt.
 ## Merkleisierung {#merkleization}
 
 Dieses SSZ-serialisierte Objekt kann dann merkleisiert werden – das heißt, in eine Merkle-Baum-Darstellung derselben Daten umgewandelt werden. Zunächst wird die Anzahl der 32-Byte-Blöcke im serialisierten Objekt bestimmt. Dies sind die „Blätter“ des Baumes. Die Gesamtzahl der Blätter muss eine Zweierpotenz sein, damit das gemeinsame Hashing der Blätter schließlich eine einzige Hash-Baum-Wurzel ergibt. Wenn dies von Natur aus nicht der Fall ist, werden zusätzliche Blätter hinzugefügt, die 32 Bytes an Nullen enthalten. Schematisch dargestellt:
@@ -138,10 +133,7 @@ Der Hash von (8,9) sollte gleich dem Hash (4) sein, der mit 5 gehasht wird, um 2
 8*     9*   10    11   12    13    14    15
 ```
 
-## Weiterführende Literatur {#further-reading}
-
 - [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [Upgrading Ethereum: Merkleisierung](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [SSZ-Implementierungen](https://github.com/ethereum/consensus-specs/issues/2138)
 - [SSZ-Rechner](https://simpleserialize.com/)
-- [SSZ.dev](https://www.ssz.dev/)

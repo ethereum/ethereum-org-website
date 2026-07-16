@@ -82,12 +82,7 @@ Ainsi, les valeurs réelles pour les types à longueur variable sont stockées d
 
 Il existe également des cas particuliers qui nécessitent un traitement spécifique, comme le type `BitList` qui nécessite l'ajout d'une limite de longueur lors de la sérialisation et sa suppression lors de la désérialisation. Tous les détails sont disponibles dans les [spécifications SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
 
-### Désérialisation {#deserialization}
-
-Désérialiser cet objet nécessite le <b>schéma</b>. Le schéma définit la disposition précise des données sérialisées afin que chaque élément spécifique puisse être désérialisé à partir d'un blob d'octets en un objet significatif dont les éléments ont le bon type, la bonne valeur, la bonne taille et la bonne position. C'est le schéma qui indique au désérialiseur quelles valeurs sont des valeurs réelles et lesquelles sont des décalages. Tous les noms de champs disparaissent lorsqu'un objet est sérialisé, mais sont réinstanciés lors de la désérialisation conformément au schéma.
-
-Consultez [ssz.dev](https://www.ssz.dev/overview) pour une explication interactive à ce sujet.
-
+La désérialisation de cet objet nécessite le <b>schéma</b>. Le schéma définit la disposition précise des données sérialisées afin que chaque élément spécifique puisse être désérialisé à partir d'un blob d'octets en un objet significatif dont les éléments ont le bon type, la bonne valeur, la bonne taille et la bonne position. C'est le schéma qui indique au désérialiseur quelles valeurs sont des valeurs réelles et lesquelles sont des décalages. Tous les noms de champs disparaissent lorsqu'un objet est sérialisé, mais sont réinstanciés lors de la désérialisation conformément au schéma.
 ## Merkleisation {#merkleization}
 
 Cet objet sérialisé SSZ peut ensuite être merkleisé, c'est-à-dire transformé en une représentation en arbre de Merkle de ces mêmes données. Tout d'abord, le nombre de morceaux de 32 octets dans l'objet sérialisé est déterminé. Ce sont les « feuilles » de l'arbre. Le nombre total de feuilles doit être une puissance de 2 afin que le hachage conjoint des feuilles produise finalement une seule racine d'arbre de hachage (hash-tree-root). Si ce n'est pas naturellement le cas, des feuilles supplémentaires contenant 32 octets de zéros sont ajoutées. Sous forme de diagramme :
@@ -138,10 +133,7 @@ Le hash de (8,9) doit être égal au hash (4), qui est haché avec 5 pour produi
 8*     9*   10    11   12    13    14    15
 ```
 
-## Complément d'information {#further-reading}
-
-- [Mise à niveau d'Ethereum : SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
-- [Mise à niveau d'Ethereum : Merkleisation](https://eth2book.info/altair/part2/building_blocks/merkleization)
+- [Upgrading Ethereum : SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
+- [Upgrading Ethereum : Merkleisation](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [Implémentations SSZ](https://github.com/ethereum/consensus-specs/issues/2138)
 - [Calculateur SSZ](https://simpleserialize.com/)
-- [SSZ.dev](https://www.ssz.dev/)

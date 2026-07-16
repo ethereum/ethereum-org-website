@@ -75,7 +75,7 @@ Die EVM Query Language (EQL) ist eine SQL-ähnliche Sprache, die für die Abfrag
 - [Dune-Grundlagen](https://docs.dune.com/#dune-basics)
 - [SubQuery Ethereum-Schnellstartanleitung](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [Übersicht über das SQD-Netzwerk](https://docs.sqd.dev/)
-- [EVM Query Language](https://eql.sh/blog/alpha-release-notes)
+- [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## Tutorials: Daten & Analysen / SQL auf Ethereum {#tutorials}
 

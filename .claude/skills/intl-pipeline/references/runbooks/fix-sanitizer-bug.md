@@ -23,12 +23,12 @@ When NOT to invoke:
 
 Flags:
 
-| Flag | Effect |
-|---|---|
-| `--language=CODE` | Target locale where the issue was spotted (ja, ko, fr, etc.) |
-| `--issue="..."` | Brief description of the bug |
-| `--file=PATH` | Specific file where the issue was spotted |
-| `--skip-build` | Skip the build verification step (use for non-MDX-affecting fixes) |
+| Flag              | Effect                                                             |
+| ----------------- | ------------------------------------------------------------------ |
+| `--language=CODE` | Target locale where the issue was spotted (ja, ko, fr, etc.)       |
+| `--issue="..."`   | Brief description of the bug                                       |
+| `--file=PATH`     | Specific file where the issue was spotted                          |
+| `--skip-build`    | Skip the build verification step (use for non-MDX-affecting fixes) |
 
 ## Workflow (what the slash command enforces)
 
@@ -47,7 +47,7 @@ Flags:
 6. **Wire it in** to `processMarkdownFile` or `processJsonFile` via `applyFix` helper.
 7. **Verify**:
    - Run all sanitizer tests (`npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/`)
-   - Run the sanitizer on the affected file via `TARGET_FILES` (never on a whole language)
+   - Run the sanitizer on the affected file via `runSanitizer(filesWithContent)` (never on a whole language)
    - Spot-check 2-3 other languages on the same file
    - Run a scoped build if the fix touches MDX syntax (`NEXT_PUBLIC_BUILD_LOCALES=en,{LANG} pnpm build`)
 8. **Update docs** — move the pattern from "New Patterns Not Yet Covered" to "Patterns Already Handled" in `sanitizer-test-research.md` with the function name.
@@ -55,20 +55,20 @@ Flags:
 ## Common pitfalls
 
 - **Forgetting the code-block split** — the most common review reject. The pattern MUST be the first operation in any text transformation, even if it feels redundant for a fix that "would never match inside code anyway."
-- **Running the sanitizer unscoped** — processes thousands of files, hangs for 30+ minutes. Always use `TARGET_FILES`.
+- **Running the sanitizer unscoped** — processes thousands of files, hangs for 30+ minutes. Always scope: per-file via `runSanitizer(filesWithContent)`, or at minimum per-language via `TARGET_LANGUAGES=ja`.
 - **Adding a fix without a test** — sanitizer tests are the contract. No test → no merge.
 - **False-positive across languages** — a fix tuned for one language may break another. Always spot-check at least 2-3 other languages on the same file.
 - **MDX build not run** — if the fix touches angle brackets, backticks, JSX, or quoting, the locale build needs to pass. Don't skip the build-verification step for those cases.
 
 ## Quick reference
 
-| Need | Path |
-|---|---|
-| Slash command source | `.claude/commands/fix-sanitizer-bug.md` |
-| Sanitizer source | `src/scripts/intl-pipeline/intl-sanitizer.ts` |
-| Pattern catalog | `docs/solutions/integration-issues/sanitizer-test-research.md` |
-| Test files | `tests/unit/intl-pipeline/sanitizer/*.spec.ts` |
-| Sanitizer overview | `references/sanitizer.md` |
+| Need                 | Path                                                           |
+| -------------------- | -------------------------------------------------------------- |
+| Slash command source | `.claude/commands/fix-sanitizer-bug.md`                        |
+| Sanitizer source     | `src/scripts/intl-pipeline/intl-sanitizer.ts`                  |
+| Pattern catalog      | `docs/solutions/integration-issues/sanitizer-test-research.md` |
+| Test files           | `tests/unit/intl-pipeline/sanitizer/*.spec.ts`                 |
+| Sanitizer overview   | `references/sanitizer.md`                                      |
 
 ## See also
 

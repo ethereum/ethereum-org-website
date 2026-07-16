@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/component-swiper.json",
+  "generatedAt": "2026-07-14T17:32:23.387Z",
+  "rootHash": "faefe793571c",
+  "tree": {
+    "contentHash": "17f5cf39183e",
+    "anchorHash": "f5818652a990",
+    "children": {
+      "swiper-next-slide": {
+        "contentHash": "cdc93d1c8fe9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "swiper-previous-slide": {
+        "contentHash": "bfb549220c60",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "swiper-next-slide",
+      "swiper-previous-slide"
+    ]
+  },
+  "sourceCommitSha": "775d68671a756bcd0db81828094c44e68f18e108"
+}

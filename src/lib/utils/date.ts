@@ -87,7 +87,14 @@ export const formatDateRange = (
     month: "short",
     day: "numeric",
     ...options,
-  }).formatRange(new Date(start), new Date(end || start))
+  })
+    .formatRange(new Date(start), new Date(end || start))
+    // Normalize whitespace to avoid SSR/client hydration mismatches: Node's ICU
+    // and the browser's ICU can emit different space characters (e.g. U+202F
+    // narrow no-break space vs a regular U+0020) around the range en-dash. The
+    // two render identically but differ byte-for-byte, tripping React's
+    // hydration check. Collapsing whitespace makes the output deterministic.
+    .replace(/\s+/g, " ")
 
 export const getLocaleYear = (
   locale: string = "en-US",

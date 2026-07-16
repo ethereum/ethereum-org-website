@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -622,6 +622,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-the-ethereum-network")
 

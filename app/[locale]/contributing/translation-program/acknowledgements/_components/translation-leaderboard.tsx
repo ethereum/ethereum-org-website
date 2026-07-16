@@ -1,7 +1,7 @@
 "use client"
-
 import { useState } from "react"
 import { reverse, sortBy } from "lodash"
+import { useTranslations } from "next-intl"
 
 import type { CostLeaderboardData } from "@/lib/types"
 
@@ -11,8 +11,6 @@ import { Button } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 const AvatarWithFallback = ({
   username,
@@ -122,7 +120,7 @@ const TranslationLeaderboard = ({
     updateFilterAmount(50)
   }
 
-  const { t } = useTranslation(
+  const t = useTranslations(
     "page-contributing-translation-program-acknowledgements"
   )
 

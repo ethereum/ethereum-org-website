@@ -1,5 +1,6 @@
 import { memo, useMemo } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import type { ChainName, Wallet } from "@/lib/types"
 
@@ -17,14 +18,12 @@ import { TagsInlineText } from "../ui/tag"
 
 import PersonaTags from "./PersonaTags"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 interface WalletInfoProps {
   wallet: Wallet
 }
 
 const WalletInfo = ({ wallet }: WalletInfoProps) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
 
   const walletPersonas = useMemo(() => {
     return getWalletPersonas(wallet)
@@ -83,7 +82,10 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
           )}
 
           <div className="col-span-2 lg:col-span-1 lg:col-start-2">
-            <ChainImages chains={wallet.supported_chains as ChainName[]} />
+            <ChainImages
+              chains={wallet.supported_chains as ChainName[]}
+              nested
+            />
           </div>
 
           {deviceLabels.length > 0 && (

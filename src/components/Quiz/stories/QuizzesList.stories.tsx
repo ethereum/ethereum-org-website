@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl"
 import { fn } from "storybook/test"
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
@@ -6,8 +7,6 @@ import type { CompletedQuizzes } from "@/lib/types"
 import { ethereumBasicsQuizzes } from "@/data/quizzes"
 
 import QuizzesListComponent from "../QuizzesList"
-
-import useTranslation from "@/hooks/useTranslation"
 
 /**
  * This story also renders the `QuizItem` component.
@@ -36,7 +35,7 @@ export default meta
 
 export const Default: StoryObj<typeof meta> = {
   render: (args) => {
-    const { t } = useTranslation("learn-quizzes")
+    const t = useTranslations("learn-quizzes")
     return (
       <QuizzesListComponent
         {...args}
@@ -60,7 +59,7 @@ export const OneCompletedQuiz: StoryObj<typeof meta> = {
     },
   },
   render: (args) => {
-    const { t } = useTranslation("learn-quizzes")
+    const t = useTranslations("learn-quizzes")
     return (
       <QuizzesListComponent
         {...args}

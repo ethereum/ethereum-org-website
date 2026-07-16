@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "Sumber daya, alat, dan perkembangan pembangun dari ekosistem Ethereum.",
-  "page-latest-title": "Pembaruan pembangun",
-  "page-latest-subtitle": "Ruang bersama untuk perspektif ahli tentang sumber daya, alat, dan perkembangan terbaru di seluruh ekosistem pembangun Ethereum.",
+  "page-latest-meta-description": "Pos blog, berita, dan pembaruan terbaru dari komunitas Ethereum, ditambah perspektif ahli dari seluruh ekosistem pembangun.",
+  "page-latest-title": "Pembaruan Ethereum terbaru",
+  "page-latest-subtitle": "Pos blog, berita, dan pembaruan terbaru dari komunitas, ditambah perspektif ahli tentang perkembangan di seluruh ekosistem pembangun Ethereum.",
   "page-latest-no-posts": "Tidak ada pos yang ditemukan.",
   "page-latest-read-more": "Baca selengkapnya",
   "page-latest-minute-read": "{minutes} menit waktu baca",
-  "page-latest-team-attribution": "Pertumbuhan Pembangun EF"
+  "page-latest-team-attribution": "Pertumbuhan Pembangun EF",
+  "page-latest-cta-submit-resource": "Kirimkan sumber daya",
+  "page-latest-cta-propose-article": "Usulkan artikel",
+  "page-latest-highlights-heading": "Sorotan",
+  "page-latest-articles-heading": "Artikel Ethereum terbaru",
+  "page-latest-sources-heading": "Baca selengkapnya di situs web ini",
+  "page-latest-see-more": "Lihat selengkapnya ({count})",
+  "page-latest-sort-label": "Urutkan artikel",
+  "page-latest-sort-newest": "Terbaru lebih dulu",
+  "page-latest-sort-oldest": "Terlama lebih dulu",
+  "page-latest-sort-az": "A–Z",
+  "page-latest-i18n-disclaimer": "Beberapa artikel ditampilkan dalam bahasa aslinya (bahasa Inggris).",
+  "page-latest-suggest-heading": "Sarankan sumber daya",
+  "page-latest-suggest-description": "Tahu buletin atau publikasi penelitian Ethereum yang seharusnya dicantumkan di sini, atau memiliki ide topik artikel pembangun? Buka sebuah isu untuk mengirimkan sumber daya Anda."
 }

@@ -10,7 +10,7 @@
   "explanation": "விளக்கம்",
   "next-question": "அடுத்த கேள்வி",
   "next-quiz": "அடுத்த வினாடி வினா",
-  "question-number": "கேள்வி எண் {{number}}:",
+  "question-number": "கேள்வி எண் {number}:",
   "page-assets-merge": "ஒருங்கிணைப்பு",
   "passed": "நீங்கள் வினாடி வினாவில் தேர்ச்சி பெற்றுவிட்டீர்கள்!",
   "questions": "கேள்விகள்",

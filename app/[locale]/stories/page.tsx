@@ -29,12 +29,10 @@ import { Section } from "@/components/ui/section"
 
 import { getStoriesData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
+import { getCommunityStories } from "@/lib/utils/stories"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getVideos } from "@/lib/utils/videos"
 
-import tenYearStories from "@/data/tenYearStories"
-
-import { parseStoryDates } from "../10years/_components/utils"
 import { getVideosByCategory } from "../videos/utils"
 
 import CommunityStories from "./_components/CommunityStories"
@@ -53,7 +51,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
 
   const videos = await getVideos(locale)
   const storyVideos = getVideosByCategory(videos, ["community-stories"])
-  const communityStories: Story[] = parseStoryDates(tenYearStories, locale)
+  const communityStories: Story[] = await getCommunityStories(locale)
   const featuredStories = await getStoriesData(locale)
 
   const allMessages = await getMessages({ locale })
@@ -78,7 +76,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
 
         {featuredStories.length > 0 && (
           <Section id="discover" className="px-4 md:px-8">
-            <div className="rounded-4xl bg-radial-a px-4 py-12 md:px-8 md:py-16">
+            <div className="rounded-4xl bg-radial-primary px-4 py-12 md:px-8 md:py-16">
               <div className="mx-auto mb-10 flex max-w-2xl flex-col gap-3 text-center">
                 <h2>{t("page-stories-discover-title")}</h2>
                 <p className="text-lg text-body-medium">
@@ -140,20 +138,22 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
                   variant="ghost"
                   size="sm"
                 >
-                  <CardBanner className="aspect-video h-auto">
-                    {video.thumbnailUrl ? (
-                      <Image
-                        src={video.thumbnailUrl}
-                        alt={video.title}
-                        width={480}
-                        height={270}
-                        sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <div className="size-full bg-background-highlight" />
-                    )}
-                  </CardBanner>
+                  <CardHeader>
+                    <CardBanner className="aspect-video h-auto">
+                      {video.thumbnailUrl ? (
+                        <Image
+                          src={video.thumbnailUrl}
+                          alt={video.title}
+                          width={480}
+                          height={270}
+                          sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="size-full bg-background-highlight" />
+                      )}
+                    </CardBanner>
+                  </CardHeader>
                   <CardContent>
                     <CardTitle>{video.title}</CardTitle>
                     <CardParagraph size="sm" className="line-clamp-2">
@@ -184,7 +184,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
         </Section>
 
         <Section id="share" className="px-4 md:px-8">
-          <div className="flex flex-col items-center gap-12 rounded-4xl bg-radial-a px-4 pt-20 pb-8 md:px-8">
+          <div className="flex flex-col items-center gap-12 rounded-4xl bg-radial-primary px-4 pt-20 pb-8 md:px-8">
             <div className="flex flex-col items-center gap-2 text-center">
               <h2>{t("page-stories-banner-title")}</h2>
               <p className="max-w-[42rem] text-lg text-body-medium lg:text-2xl">
@@ -216,6 +216,8 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await props.params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-stories")
 

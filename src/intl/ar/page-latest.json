@@ -1,9 +1,22 @@
 {
-  "page-latest-meta-description": "موارد وأدوات وتطورات الباني من منظومة إيثيريوم البيئية.",
-  "page-latest-title": "تحديثات الباني",
-  "page-latest-subtitle": "مساحة مشتركة لوجهات نظر الخبراء حول أحدث الموارد والأدوات والتطورات في منظومة باني إيثيريوم البيئية.",
+  "page-latest-meta-description": "أحدث منشورات المدونة والأخبار والتحديثات من مجتمع إيثيريوم، بالإضافة إلى وجهات نظر الخبراء من جميع أنحاء منظومة الباني البيئية.",
+  "page-latest-title": "أحدث تحديثات إيثيريوم",
+  "page-latest-subtitle": "أحدث منشورات المدونة والأخبار والتحديثات من المجتمع، بالإضافة إلى وجهات نظر الخبراء حول التطورات في جميع أنحاء منظومة الباني البيئية لإيثيريوم.",
   "page-latest-no-posts": "لم يتم العثور على أي منشورات.",
   "page-latest-read-more": "اقرأ المزيد",
   "page-latest-minute-read": "{minutes} دقيقة للقراءة",
-  "page-latest-team-attribution": "نمو باني ⁦EF⁩"
+  "page-latest-team-attribution": "نمو باني ⁦EF⁩",
+  "page-latest-cta-submit-resource": "إرسال مورد",
+  "page-latest-cta-propose-article": "اقتراح مقال",
+  "page-latest-highlights-heading": "أبرز النقاط",
+  "page-latest-articles-heading": "أحدث مقالات إيثيريوم",
+  "page-latest-sources-heading": "اقرأ المزيد على هذه المواقع",
+  "page-latest-see-more": "رؤية المزيد (⁦{count}⁩)",
+  "page-latest-sort-label": "فرز المقالات",
+  "page-latest-sort-newest": "الأحدث أولاً",
+  "page-latest-sort-oldest": "الأقدم أولاً",
+  "page-latest-sort-az": "أ-ي",
+  "page-latest-i18n-disclaimer": "تُعرض بعض المقالات بلغتها الأصلية (الإنجليزية).",
+  "page-latest-suggest-heading": "اقتراح مورد",
+  "page-latest-suggest-description": "هل تعرف نشرة إخبارية أو منشورًا بحثيًا عن إيثيريوم يجب إدراجه هنا، أو لديك موضوع مقال باني في ذهنك؟ افتح مشكلة لإرسال موردك."
 }

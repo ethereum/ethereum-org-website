@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "이더리움 거버넌스에 대해 더 알아보기",
   "page-roadmap-hero-alt": "이더리움 로드맵",
   "page-roadmap-technical-upgrades-title": "이더리움에 어떤 기술적 업그레이드가 예정되어 있나요?",
+  "page-roadmap-post-quantum-title": "양자 내성 보안",
+  "page-roadmap-post-quantum-description": "양자 컴퓨터는 언젠가 블록체인이 의존하는 암호학을 무력화할 수 있습니다. 이더리움의 양자 내성 업그레이드는 양자 컴퓨팅이 실질적인 위협이 되기 전에 취약한 알고리즘을 대체할 것입니다.",
   "page-roadmap-danksharding-title": "댕크샤딩",
   "page-roadmap-danksharding-description": "댕크샤딩은 이더리움 블록에 데이터 \"블롭\"을 추가하여 사용자가 레이어 2 (l2) 롤업을 훨씬 더 저렴하게 이용할 수 있게 해줍니다.",
   "page-roadmap-single-slot-finality-title": "단일 슬롯 완결성",

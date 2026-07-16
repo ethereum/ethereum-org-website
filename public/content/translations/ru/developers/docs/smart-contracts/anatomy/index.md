@@ -49,7 +49,7 @@ storedData: int128
 
 Для получения дополнительных объяснений загляните в документацию:
 
-- [Смотреть типы Vyper](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [Смотреть типы Vyper](https://docs.vyperlang.org/en/stable/types.html#value-types)
 - [Смотреть типы Solidity](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### Память (Memory) {#memory}
