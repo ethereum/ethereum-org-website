@@ -1,5 +1,4 @@
 "use client"
-
 import React from "react"
 import {
   CircleCheckIcon,
@@ -8,6 +7,7 @@ import {
   PencilRulerIcon,
   Zap,
 } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -32,8 +32,6 @@ import {
 import { cn } from "@/lib/utils/cn"
 
 import { BadgeWithOwned } from "./CollectiblesContent"
-
-import useTranslation from "@/hooks/useTranslation"
 
 const HighlightCardGrid = ({
   className,
@@ -142,7 +140,7 @@ const CollectiblesCurrentYear = ({
   badges,
   address,
 }: CollectiblesCurrentYearProps) => {
-  const { t } = useTranslation("page-collectibles")
+  const t = useTranslations("page-collectibles")
 
   const socialBadges = React.useMemo(
     () => badges.filter((b) => b.category === "Events/Calls"),

@@ -69,7 +69,6 @@ import compoundImg from "@/public/images/stablecoins/compound.png"
 import ghoLargeImg from "@/public/images/stablecoins/gho-large.png"
 import gloLargeImg from "@/public/images/stablecoins/glo-large.png"
 import heroImg from "@/public/images/stablecoins/gold-rollup-spaceship-with-coins.png"
-import gettingStartedImg from "@/public/images/stablecoins/three-people-cat-butterflies-petting-dog.png"
 import duneImg from "@/public/images/stablecoins/tools/dune.png"
 import stablePulseImg from "@/public/images/stablecoins/tools/stable-pulse.png"
 import stablecoinsWtfImg from "@/public/images/stablecoins/tools/stablecoinswtf.png"
@@ -78,6 +77,7 @@ import stablesWarsImg from "@/public/images/stablecoins/tools/stables-wars.png"
 import visaImg from "@/public/images/stablecoins/tools/visa.png"
 import usdcLargeImg from "@/public/images/stablecoins/usdc-large.png"
 import usdsLargeImg from "@/public/images/stablecoins/usds-large.png"
+import gettingStartedImg from "@/public/images/three-people-cat-butterflies-petting-dog.png"
 import earnCardImg from "@/public/images/upgrades/core.png"
 import borrowCardImg from "@/public/images/upgrades/upgrade_eth.png"
 import walletCardImg from "@/public/images/wallets/wallet-hero.png"
@@ -879,6 +879,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-stablecoins")
 

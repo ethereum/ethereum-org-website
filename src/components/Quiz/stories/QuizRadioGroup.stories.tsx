@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl"
 import { expect, fireEvent, fn, within } from "storybook/test"
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
@@ -6,14 +7,12 @@ import { QuizRadioGroup } from "../QuizWidget/QuizRadioGroup"
 
 import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
 
-import useTranslation from "@/hooks/useTranslation"
-
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / RadioGroup",
   component: QuizRadioGroup,
   decorators: [
     (Story, { args }) => {
-      const { t } = useTranslation()
+      const t = useTranslations("common")
       return (
         <QuizContent
           title={t(LAYER_2_QUIZ_TITLE_KEY)}

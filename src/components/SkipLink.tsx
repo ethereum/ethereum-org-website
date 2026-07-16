@@ -1,15 +1,13 @@
 "use client"
-
+import { useTranslations } from "next-intl"
 import type { MouseEvent } from "react"
 
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
 import { MAIN_CONTENT_ID } from "@/lib/constants"
 
-import useTranslation from "@/hooks/useTranslation"
-
 const SkipLink = () => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     const target = document.getElementById(MAIN_CONTENT_ID)

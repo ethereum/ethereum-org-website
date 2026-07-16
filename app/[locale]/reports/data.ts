@@ -1,5 +1,6 @@
 import type { StaticImageData } from "next/image"
 
+import type { KNOWN_ORGANIZATIONS } from "@/lib/jsonld/organizations"
 import a16zCover from "@/public/images/reports/a16z-state-of-crypto-2025.webp"
 import bisCover from "@/public/images/reports/bis-papers-156.webp"
 import quantumCover from "@/public/images/reports/coinbase-quantum-blockchain.webp"
@@ -33,6 +34,15 @@ export type Report = {
   title: string
   /** Publisher (shown as paragraph text under the title) */
   publisher: string
+  /**
+   * Publishing organization(s) as KNOWN_ORGANIZATIONS profile keys,
+   * resolved through the JSON-LD entity alias map like markdown
+   * `authors:` frontmatter. Only needed when `publisher` doesn't resolve
+   * on its own -- compound publishers or prose names. Mirrors the
+   * `authors`/`author` convention: `publishers` wins over `publisher` for
+   * entity resolution; display text on the card stays `publisher`.
+   */
+  publishers?: (keyof typeof KNOWN_ORGANIZATIONS)[]
   /**
    * Publication date in ISO 8601 (YYYY, YYYY-MM, or YYYY-MM-DD). Used as
    * `datePublished` in the Report JSON-LD and rendered as short date on card.
@@ -118,6 +128,7 @@ export const reports: Report[] = [
     slug: "etherealize-productive-money",
     title: "Ethereum and the Era of Productive Money",
     publisher: "Etherealize Research",
+    publishers: ["etherealize"],
     dateIso: "2026-04-14",
     category: "crypto-native",
     href: "https://www.productivemoney.org/productivemoney.pdf",
@@ -148,6 +159,7 @@ export const reports: Report[] = [
     title:
       "The Future of Financial Infrastructure: Ethereum's Layer 2 Landscape",
     publisher: "Etherealize, Nethermind and L2BEAT",
+    publishers: ["etherealize", "nethermind", "l2beat"],
     dateIso: "2025-12-04",
     category: "crypto-native",
     href: "https://cdn.prod.website-files.com/6728e9076a3b5a8ca8ec4816/6931c20f55129e498a8da223_%5BCompressed%5D%20L2s%20Report.pdf",
@@ -158,6 +170,7 @@ export const reports: Report[] = [
     slug: "pse-shutter-state-of-private-voting-2026",
     title: "State of Private Voting 2026",
     publisher: "Privacy Stewards of Ethereum (PSE) and Shutter",
+    publishers: ["privacy-stewards-of-ethereum", "shutter"],
     dateIso: "2025-11-12",
     category: "crypto-native",
     href: "https://pse.dev/articles/state-of-private-voting-2026/state-of-private-voting-2026-v2.pdf",

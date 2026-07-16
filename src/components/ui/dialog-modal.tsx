@@ -1,5 +1,6 @@
 import * as React from "react"
 import { X } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { tv, type VariantProps } from "tailwind-variants"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 
@@ -8,14 +9,12 @@ import { cn } from "@/lib/utils/cn"
 import { Button } from "./buttons/Button"
 import { Center, Flex } from "./flex"
 
-import useTranslation from "@/hooks/useTranslation"
-
 const dialogVariant = tv({
   slots: {
     content:
       "z-modal grid w-full gap-4 rounded-md bg-background p-8 shadow-xl focus:outline-hidden data-[state=open]:animate-fade-in",
     overlay:
-      "data-[state=open]:animate-fade-in overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-black/70 z-overlay",
+      "data-[state=open]:animate-fade-in overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-overlay z-overlay",
     header: "relative pe-12",
     title: "text-2xl",
     body: "",
@@ -128,7 +127,7 @@ const DialogHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const { header, close } = useDialogStyles()
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   return (
     <div className={cn(header(), className)} {...props}>
       {children}

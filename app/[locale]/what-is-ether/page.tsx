@@ -635,6 +635,8 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-what-is-ether")
 
   return await getMetadata({

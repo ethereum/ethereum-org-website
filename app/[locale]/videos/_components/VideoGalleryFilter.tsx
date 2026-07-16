@@ -12,6 +12,7 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -269,16 +270,18 @@ const VideoGalleryFilter = ({
               variant="ghost"
               size="sm"
             >
-              <CardBanner className="aspect-video h-auto">
-                <Image
-                  src={video.thumbnailUrl}
-                  alt={video.title}
-                  width={480}
-                  height={270}
-                  sizes="(max-width: 479px) 100vw, (max-width: 991px) 50vw, 33vw"
-                  loading="lazy"
-                />
-              </CardBanner>
+              <CardHeader>
+                <CardBanner className="aspect-video h-auto">
+                  <Image
+                    src={video.thumbnailUrl}
+                    alt={video.title}
+                    width={480}
+                    height={270}
+                    sizes="(max-width: 479px) 100vw, (max-width: 991px) 50vw, 33vw"
+                    loading="lazy"
+                  />
+                </CardBanner>
+              </CardHeader>
               <CardContent>
                 <CardTitle size="sm">{video.title}</CardTitle>
                 <CardParagraph size="sm" className="line-clamp-2">

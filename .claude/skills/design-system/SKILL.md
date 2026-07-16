@@ -26,7 +26,7 @@ When the existing primitive doesn't quite fit, the answer is usually "add a vari
 2. **No raw color values.** Use semantic tokens (`text-body`, `bg-background`, `border-border`, `text-primary`). Hex literals and `rgb()` calls bypass dark mode.
 3. **Prefer adding a variant** to an existing primitive over creating a new component. Card, Button, Alert, Tag are the most common targets.
 4. **Server Components by default.** Only `"use client"` when you need state, effects, browser APIs, or inline event handlers.
-5. **All text is translatable.** `getTranslations` (server) or `useTranslations` (client) from `next-intl`. Never hard-code user-facing English.
+5. **All text is translatable.** `getTranslations` from `next-intl/server` (server) or `useTranslations` from `next-intl` (client). One namespace-bound `t` per namespace -- bind a second function (e.g. `const tCommon = useTranslations("common")`) to access another namespace. The legacy `@/hooks/useTranslation` wrapper is deprecated for new code. Never hard-code user-facing English.
 6. **Logical CSS for direction.** Use `ms-`/`me-`/`ps-`/`pe-`/`inset-s-`/`inset-e-`/`border-s`/`border-e`/`text-start`/`text-end`. The site supports Arabic and Urdu (RTL). Hard-coded `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` breaks RTL.
 7. **Locale-aware formatters.** `numberFormat()` from `@/lib/utils/numbers`, `dateTimeFormat()` from `@/lib/utils/date`. Never `toLocaleString` / `Intl.NumberFormat` directly.
 8. **`useRtlFlip()` for directional icons** (right-pointing arrows/chevrons). Or use `ChevronNext`/`ChevronPrev` from `@/components/Chevron`.

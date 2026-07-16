@@ -10,7 +10,7 @@
   "explanation": "Maelezo",
   "next-question": "Swali linalofuata",
   "next-quiz": "Chemsha bongo inayofuata",
-  "question-number": "Nambari ya swali {{number}}:",
+  "question-number": "Nambari ya swali {number}:",
   "page-assets-merge": "Unganisho",
   "passed": "Umefaulu chemsha bongo!",
   "questions": "Maswali",

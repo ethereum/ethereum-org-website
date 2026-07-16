@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl"
+
 import type { QuizzesSection } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
@@ -8,8 +10,6 @@ import { Button } from "../ui/buttons/Button"
 import { Flex, Stack } from "../ui/flex"
 import { ListItem } from "../ui/list"
 import { Tag } from "../ui/tag"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 export type QuizzesListItemProps = Omit<QuizzesSection, "id"> & {
   isCompleted: boolean
@@ -25,7 +25,7 @@ const QuizItem = ({
   numberOfQuestions,
   handleStart,
 }: QuizzesListItemProps) => {
-  const { t } = useTranslation("learn-quizzes")
+  const t = useTranslations("learn-quizzes")
 
   return (
     <ListItem
@@ -49,7 +49,7 @@ const QuizItem = ({
           <Flex className="gap-3 font-normal">
             {/* number of questions - label */}
             <Tag className="lg:-ms-2">
-              {t(`${numberOfQuestions} ${t("questions")}`)}
+              {`${numberOfQuestions} ${t("questions")}`}
             </Tag>
 
             {/* difficulty - label */}
