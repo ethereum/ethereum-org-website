@@ -41,6 +41,10 @@ Primitives that handle their own client boundary:
 
 The `t()` functions returned by these are *similar but not strictly equivalent* -- variable interpolation, ICU pluralization, and rich-text/htmr patterns can behave differently between server and client paths. If a change touches both, test both. Don't assume swapping `useTranslations` for `getTranslations` (or vice versa) is a no-op.
 
+### `<Translation>` is server-renderable -- *except* with a glossary link
+
+`@/components/Translation` renders fine in a Server Component and needs no `I18nProvider`, with one catch: it maps `<a>` tags in the string to `TooltipLink`, and when an href matches `/glossary/#term` that becomes `GlossaryTooltip` -- a `"use client"` component that reads the `glossary-tooltip` namespace from the **client** context. So a `<Translation>` whose string contains a glossary link (e.g. `...keeps Ethereum <a href="/glossary/#anti-sybil">Sybil-resistant</a>...`) must sit inside an `I18nProvider` carrying that namespace. A plain link (`href="/foo"`) does not trigger this -- `TooltipLink` only swaps to the glossary tooltip for `/glossary/#`. Rule of thumb when deciding whether a page needs a provider: grep its `<Translation>` strings for `/glossary/#` (and account for genuine client widgets like quiz/exchange tables); `common`-only client components such as `ContentFeedback` are already covered by the layout-level provider.
+
 ### Callout is server-renderable (consolidation done)
 
 The unified `Callout` at `@/components/ui/callout` is a Server Component — the old client/server pairs (`Callout.tsx`/`CalloutSSR.tsx`, `CalloutBanner.tsx`/`CalloutBannerSSR.tsx`) were merged and the legacy files removed. Resolve intl at the parent (server) via `getTranslations` and pass plain strings into `title` / `description`.

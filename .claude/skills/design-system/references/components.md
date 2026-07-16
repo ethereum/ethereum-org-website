@@ -662,6 +662,8 @@ import {
 
 CSS-var driven (`--edge-spacing`, `--edge-mask-size`, `--edge-overflow-y-pad`). Mask fade only at `2xl+`.
 
+`--edge-spacing` defaults to `1rem` (`md:2rem`) so it tracks `px-page`. On the standard model — `px-page` on `<main>`, page content sitting in that padded column — the negative-margin breakout lands flush with the page padding and needs **no override**. Don't reach for a flat `[--edge-spacing:Nrem]`: if it exceeds the surrounding horizontal padding at any breakpoint (e.g. `2rem` while mobile `px-page` is `1rem`), the breakout overshoots and the page scrolls horizontally. Override it only for a genuine exception where the surrounding padding really differs from `px-page`.
+
 ### `Swiper` (deprecation track)
 
 ```tsx
