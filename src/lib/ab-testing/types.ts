@@ -27,7 +27,6 @@ export type ABTestAssignment = {
   experimentName: string
   variant: string
   variantIndex: number
-  assignedAt: number
 }
 
 // Type-safe tuple for at least 2 variants

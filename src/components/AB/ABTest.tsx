@@ -63,7 +63,6 @@ export function ABTest({ testKey, variantIndex, variants }: ABTestProps) {
           experimentName: testKey,
           variant: availableVariants[safeIndex],
           variantIndex: safeIndex,
-          assignedAt: Date.now(),
         }}
       />
 
