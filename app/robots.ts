@@ -1,13 +1,12 @@
 import type { MetadataRoute } from "next"
 
-import { IS_PRODUCTION_DEPLOY, LOCALES_CODES, SITE_URL } from "@/lib/constants"
+import { IS_PRODUCTION_DEPLOY, SITE_URL } from "@/lib/constants"
 
-// The sitemap is sharded per locale via generateSitemaps() (app/sitemap.ts).
-// Next serves each shard at /sitemap/<locale>.xml and emits no index file, so
-// every shard is listed here for crawler discovery.
-const sitemapShards = LOCALES_CODES.map(
-  (locale) => `${SITE_URL}/sitemap/${locale}.xml`
-)
+// The sitemap is sharded per locale via generateSitemaps()
+// (app/sitemaps/sitemap.ts) and indexed by a <sitemapindex> at /sitemap.xml
+// (app/sitemap.xml/route.ts). Point crawlers at that single index; it enumerates
+// every per-locale shard.
+const sitemapIndex = `${SITE_URL}/sitemap.xml`
 
 export default function robots(): MetadataRoute.Robots {
   if (!IS_PRODUCTION_DEPLOY) {
@@ -20,7 +19,7 @@ export default function robots(): MetadataRoute.Robots {
 
   return {
     rules: [{ userAgent: "*", allow: "/" }],
-    sitemap: sitemapShards,
+    sitemap: sitemapIndex,
     host: SITE_URL,
   }
 }

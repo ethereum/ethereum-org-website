@@ -14,8 +14,10 @@ import { getAllPagesWithTranslations } from "@/lib/i18n/translationRegistry"
 export const dynamic = "force-static"
 
 // One shard per locale. A single combined document is ~51MB / 17.5k URLs -- over
-// Google's 50MB per-file limit -- so it must be split. Next serves each shard at
-// /sitemap/<id>.xml and emits no index file, so app/robots.ts lists them all.
+// Google's 50MB per-file limit -- so it must be split. Nested here (not at the
+// app root) so the reserved /sitemap.xml path is free for the <sitemapindex>
+// router in app/sitemap.xml/route.ts; the convention serves each shard at
+// /sitemaps/sitemap/<id>.xml, which that index enumerates.
 export async function generateSitemaps() {
   return LOCALES_CODES.map((locale) => ({ id: locale }))
 }
