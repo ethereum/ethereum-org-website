@@ -1,7 +1,7 @@
 "use client"
 
 import { useCallback, useEffect, useMemo, useState } from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -19,11 +19,9 @@ import { dateTimeFormat, formatDate } from "@/lib/utils/date"
 
 import { getReleasesData, Release } from "@/data/roadmap/releases"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const ReleaseCarousel = () => {
   const locale = useLocale()
-  const { t } = useTranslation("page-roadmap")
+  const t = useTranslations("page-roadmap")
 
   const releasesData = useMemo(() => getReleasesData(t), [t])
 
