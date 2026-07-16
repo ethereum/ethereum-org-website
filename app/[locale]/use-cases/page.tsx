@@ -12,6 +12,7 @@ import Callout from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -57,9 +58,9 @@ const UseCaseCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card>
+  <Card href={href} hoverLift>
     <CardHeader>
-      <CardBanner background="none" fit="contain">
+      <CardBanner background="none" fit="contain" zoom={false}>
         <Image
           src={image}
           alt=""
@@ -72,9 +73,7 @@ const UseCaseCard = ({
       <CardParagraph>{description}</CardParagraph>
     </CardContent>
     <CardFooter>
-      <ButtonLink href={href} className="w-full">
-        {ctaLabel}
-      </ButtonLink>
+      <CardButtonFake>{ctaLabel}</CardButtonFake>
     </CardFooter>
   </Card>
 )
