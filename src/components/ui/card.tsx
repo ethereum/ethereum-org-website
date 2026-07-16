@@ -172,6 +172,12 @@ const buttonVariants = cva("gap-4", {
       full: "flex flex-col *:[button]:w-full *:[button]:text-center *:data-[label=button-link]:w-full *:data-[label=button-link]:text-center",
       compact:
         "*:[button]:w-fit *:data-[label=button-link]:w-fit flex flex-wrap",
+      // Full-width stacked on mobile, natural-width inline from `md` up -- so
+      // buttons don't stretch edge-to-edge inside wide cards on desktop.
+      responsive: cn(
+        "flex flex-col *:[button]:w-full *:[button]:text-center *:data-[label=button-link]:w-full *:data-[label=button-link]:text-center",
+        "md:flex-row md:flex-wrap md:*:[button]:w-fit md:*:[button]:text-center md:*:data-[label=button-link]:w-fit md:*:data-[label=button-link]:text-center"
+      ),
       inherit: "",
     },
   },

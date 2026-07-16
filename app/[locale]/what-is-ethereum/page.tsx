@@ -607,7 +607,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-what-is-ethereum-start-individuals-desc-5")}
               </CardParagraph>
             </CardContent>
-            <CardFooter>
+            <CardFooter buttons="responsive">
               <ButtonLink href="/start/">
                 {t("page-what-is-ethereum-start-individuals-cta-1")}
               </ButtonLink>
@@ -656,7 +656,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-what-is-ethereum-start-developers-desc-4")}
               </CardParagraph>
             </CardContent>
-            <CardFooter>
+            <CardFooter buttons="responsive">
               <ButtonLink href="/developers/">
                 {t("page-what-is-ethereum-start-developers-cta")}
               </ButtonLink>
@@ -701,7 +701,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 })}
               </CardParagraph>
             </CardContent>
-            <CardFooter>
+            <CardFooter buttons="responsive">
               <ButtonLink href={ENTERPRISE_ETHEREUM_URL}>
                 {t("page-what-is-ethereum-start-business-cta")}
               </ButtonLink>
