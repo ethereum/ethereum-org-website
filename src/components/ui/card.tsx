@@ -172,11 +172,16 @@ const buttonVariants = cva("gap-4", {
       full: "flex flex-col *:[button]:w-full *:[button]:text-center *:data-[label=button-link]:w-full *:data-[label=button-link]:text-center",
       compact:
         "*:[button]:w-fit *:data-[label=button-link]:w-fit flex flex-wrap",
+      responsive: cn(
+        "@container flex flex-wrap",
+        "*:[button]:w-full *:data-[label=button-link]:w-full",
+        "@lg:*:[button]:w-fit @lg:*:data-[label=button-link]:w-fit"
+      ),
       inherit: "",
     },
   },
   defaultVariants: {
-    buttons: "full",
+    buttons: "responsive",
   },
 })
 
