@@ -551,8 +551,6 @@ export type EthPriceData =
   | { value: number; timestamp?: number; percentChange24h?: number }
   | { error: string }
 
-export type StatsBoxState = ValueOrError<string>
-
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
 /**
@@ -649,17 +647,6 @@ export type L2beatData = {
   }
 }
 
-export type HomepageActivityMetric =
-  | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
-  | "totalEthStaked"
-  | "totalValueLocked"
-  | GrowThePieMetricKey
-
-export type AllHomepageActivityData = Record<
-  HomepageActivityMetric,
-  MetricReturnData
->
-
 export type EnterpriseActivityMetric =
   | "txCount"
   | "txCostsMedianUsd"
@@ -671,14 +658,6 @@ export type AllEnterpriseActivityData = Record<
   EnterpriseActivityMetric,
   MetricReturnData
 >
-
-export type StatsBoxMetric = {
-  label: string
-  description?: string
-  state: StatsBoxState
-  apiUrl?: string
-  apiProvider?: string
-}
 
 export type SimulatorNavProps = {
   nav: SimulatorNav
