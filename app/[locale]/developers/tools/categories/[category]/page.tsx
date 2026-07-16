@@ -155,6 +155,8 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale, category } = params
 
+  setRequestLocale(locale)
+
   // Guard against legacy/invalid slugs: the page itself redirects or 404s,
   // so skip building metadata from a nonexistent translation key
   const data = await getDeveloperToolsData()

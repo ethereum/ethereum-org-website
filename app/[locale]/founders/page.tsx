@@ -1,6 +1,6 @@
 import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
@@ -445,6 +445,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-founders")
 

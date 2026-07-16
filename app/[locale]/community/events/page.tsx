@@ -6,7 +6,11 @@ import {
   Plus,
   Presentation,
 } from "lucide-react"
-import { getMessages, getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
@@ -564,6 +568,9 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-community-events")
 
   const year = getLocaleYear(locale)

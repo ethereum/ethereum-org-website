@@ -415,6 +415,16 @@ A denial in indirect speech ("X says it does **not** do Y") can silently flip to
 
 English words carrying a pejorative or technical shade lose it when MT picks the neutral core sense. Recurring on the privacy page: "algorithmic price **gouging**" -> plain "price increase" (bn, hi) or "price **fraud**" (zh `价格欺诈`, zh-tw `價格欺詐`) -- drops the exploitative-overcharging sense; `"surge" price` (Uber, a quoted term-of-art) collapses into the same word used for "dynamic pricing" (it, pl, pt-br, zh) -- loses the demand-spike nuance and the scare-quote framing. Not build/meaning-breaking; whether to fix depends on how load-bearing the nuance is. **Easy patches:** zh/zh-tw gouging = `哄抬` (哄抬价格/物价, the standard term); insert an "unfair/exploitative" qualifier (hi `अनुचित`, bn `অন্যায্য`) before "increase". **Detection:** agent-only -- give reviewers the loaded source terms explicitly so they verify the shade survived.
 
+### All 24 languages -- community-stories.json (26 keys) + 3 common.json keys, Reviewed PR #18772 (stories-intl)
+- New namespace of first-person community testimonials; fleet avg ~9.6/10, 7 criticals across 6 languages, all hand-fixed in-branch.
+- **zh-tw 智慧合約 REGRESSION**: the exact PR #18344 error recurred in all 4 "smart contract" occurrences (3 keys) of the new import -- the pipeline does not consult prior review fixes; check this term on EVERY zh-tw import.
+- **RTL untranslated Latin date fragments** (new tell): "March 2020" shipped bidi-isolated but untranslated in ar AND ur (story-dorgo-eth) while all Latin-script langs translated it. Deterministic detection: grep English month names in RTL/Indic/CJK locale files.
+- **Passive-voice agency reversal** (pattern 4 variant): sw rendered "all banks denied my loan apps" as "benki zote zilikataliwa" (banks WERE denied). Passive constructions can invert who-did-what without touching an antonym pair.
+- **Double-negation inversion** (pattern 4 variant): hi rendered "a lack of trust" as "अविश्वास की कमी" (lack of DIStrust). Negating an already-negative noun flips polarity.
+- **tr stablecoin**: ETHGlossary has NO tr entry (old KB note "sabit para" is stale); locale convention is the fused loanword "sabitcoin" (~130 occurrences) -- the import's spaced hybrid "sabit coin" was collapsed to match.
+- Scores: it/de 9.9, vi 9.9, cs/es/fr/pt-br/ru/uk/zh 9.8, id 9.7, ar/ja/ko/mr/te(9.4) 9.4-9.6, ta 9.5, pl 9.6, tr 9.2, sw 9.1, ur 9.1, bn 9.4, hi 8.2, zh-tw 8.3.
+- Clean fleet-wide: key parity 26/26 everywhere, ICU-safe, \n\n paragraph structure exact in all 4 multi-paragraph stories, no placeholder leaks, no cross-script contamination, amounts intact, no untranslated chunks (vi's historical failure mode absent).
+
 ## Agent Architecture Notes
 
 - JSON files with 40+ entries can exceed Opus context window — plan for Sonnet fallback or 3-way split

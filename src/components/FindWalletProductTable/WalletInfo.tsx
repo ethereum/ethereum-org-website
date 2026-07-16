@@ -1,5 +1,6 @@
 import { memo, useMemo } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import type { ChainName, Wallet } from "@/lib/types"
 
@@ -17,14 +18,12 @@ import { TagsInlineText } from "../ui/tag"
 
 import PersonaTags from "./PersonaTags"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 interface WalletInfoProps {
   wallet: Wallet
 }
 
 const WalletInfo = ({ wallet }: WalletInfoProps) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
 
   const walletPersonas = useMemo(() => {
     return getWalletPersonas(wallet)
