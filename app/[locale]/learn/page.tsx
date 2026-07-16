@@ -27,7 +27,7 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import LearnPageJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
@@ -48,9 +48,9 @@ const AdditionalDocReading = ({
   heading: string
   docLinks: DocLinkProps[]
 }) => (
-  <div className="mt-24 space-y-8">
-    <h3 className="text-center text-md lg:text-xl">{heading}</h3>
-    <div className="flex flex-col gap-4 xl:mx-36">
+  <div className="flow mt-space-3x">
+    <h3 className="text-center text-h5">{heading}</h3>
+    <div className="flow xl:mx-36">
       {docLinks.map(({ children, ...rest }) => (
         <DocLink key={rest.href} {...rest}>
           {children}
@@ -230,7 +230,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
   return (
     <>
-      <LearnPageJsonLD locale={locale} contributors={contributors} />
+      <PageJsonLD locale={locale} contributors={contributors} />
 
       <ContentLayout
         tocItems={tocData}
