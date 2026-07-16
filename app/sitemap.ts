@@ -6,6 +6,13 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { getAllPagesWithTranslations } from "@/lib/i18n/translationRegistry"
 
+// Generate at build time only. Without this the route's transitive data-layer
+// dependency (finite-revalidate getters) opts it into ISR, so Netlify re-renders
+// it in the serverless function where public/content is excluded from the bundle
+// -- yielding empty markdown slugs and a truncated sitemap. No `revalidate`: ISR
+// re-enters that broken path; freshness rides the deploy cadence instead.
+export const dynamic = "force-static"
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages = await getAllPagesWithTranslations()
 
