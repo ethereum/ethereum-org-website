@@ -274,7 +274,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 - [**NodeFlare**](https://nodeflare.app/)
   - [Docs](https://nodeflare.app/docs/quick-start)
   - Features
-    - 23 EVM chains including Ethereum, Base, Polygon, Arbitrum One & Nova, Optimism, Linea, Unichain and Sonic
+    - 23 EVM chains including Ethereum, Base, Arbitrum One & Nova, Optimism, Linea, and Unichain
     - 5 regions (Europe, UK, Asia, US-East, US-West) with automatic failover to nearest healthy node
     - Free public endpoint (no API key) + free plan with 3M compute units/month
     - Compute Unit billing — pay only for what you use, heavier calls cost more
