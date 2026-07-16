@@ -162,7 +162,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <Section
             id="what-is-layer-1"
-            className="rounded-2xl bg-background-highlight p-8 md:p-12"
+            className="rounded-base bg-background-highlight p-8 md:p-12"
           >
             <h2>{t("page-layer-2-learn-what-is-layer-1-title")}</h2>
             <div className="flex gap-space-2x *:flex-1 max-md:flex-col">
@@ -305,7 +305,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <Section
             id="dyor-risks"
-            className="rounded-2xl bg-tint-warning p-8 md:p-12"
+            className="rounded-base bg-tint-warning p-8 *:max-w-4xl md:p-12"
           >
             <h2>{t("page-layer-2-learn-dyor-title")}</h2>
             <p>
@@ -325,14 +325,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </ButtonLink>
           </Section>
 
-          <Section id="note-on-alt-l1">
+          <Section id="note-on-alt-l1" className="*:max-w-4xl">
             <h2>{t("page-layer-2-learn-note-on-alt-l1-title")}</h2>
-            <div className="flex gap-space-2x *:flex-1 max-md:flex-col">
-              <p>{t("page-layer-2-learn-note-on-alt-l1-1")}</p>
-              <p>
-                <Translation id="page-layer-2-learn:page-layer-2-learn-note-on-alt-l1-2" />
-              </p>
-            </div>
+            <p>{t("page-layer-2-learn-note-on-alt-l1-1")}</p>
+            <p>
+              <Translation id="page-layer-2-learn:page-layer-2-learn-note-on-alt-l1-2" />
+            </p>
           </Section>
 
           <Section id="callouts">
@@ -372,9 +370,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Grid>
           </Section>
 
-          <Section id="quiz">
-            <StandaloneQuizWidget quizKey="layer-2" />
-          </Section>
+          <StandaloneQuizWidget quizKey="layer-2" />
 
           <FileContributors
             className="border-t"
