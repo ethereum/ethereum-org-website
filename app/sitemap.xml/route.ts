@@ -1,4 +1,4 @@
-import { IS_PRODUCTION_DEPLOY, LOCALES_CODES, SITE_URL } from "@/lib/constants"
+import { LOCALES_CODES, SITE_URL } from "@/lib/constants"
 
 // Next's generateSitemaps (app/sitemaps/sitemap.ts) serves one shard per locale
 // at /sitemaps/sitemap/<locale>.xml but never emits an index for them. This
@@ -19,12 +19,12 @@ const escapeXml = (value: string): string =>
   value.replace(/[&<>"']/g, (c) => XML_ESCAPE[c])
 
 export function GET() {
-  // Match app/robots.ts: no sitemaps advertised off production.
-  const shards = IS_PRODUCTION_DEPLOY
-    ? LOCALES_CODES.map(
-        (locale) => `${SITE_URL}/sitemaps/sitemap/${locale}.xml`
-      )
-    : []
+  // Always enumerate every shard, mirroring the shards themselves (which emit on
+  // all deploy contexts, using the context's SITE_URL). robots.txt -- not an
+  // empty index -- is what keeps non-production deploys out of search indexes.
+  const shards = LOCALES_CODES.map(
+    (locale) => `${SITE_URL}/sitemaps/sitemap/${locale}.xml`
+  )
 
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
