@@ -959,7 +959,8 @@ Armed with our contract address, ABI, and Alchemy Web3 endpoint, we can use the 
 // interact.js
 
 const contractABI = require("../contract-abi.json")
-const contractAddress = "<your-contract-address>"
+// Use your contract address here
+const contractAddress = "0x..."
 ```
 
 We can now finally uncomment our `helloWorldContract` variable, and load the smart contract using our AlchemyWeb3 endpoint:
