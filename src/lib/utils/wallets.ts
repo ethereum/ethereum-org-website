@@ -192,7 +192,7 @@ export const formatWalletFees = (
     })
   })
 
-  return items.join(", ")
+  return new Intl.ListFormat(locale, { style: "narrow" }).format(items)
 }
 
 // Get total count of wallets that support a language
