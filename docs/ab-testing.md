@@ -13,6 +13,10 @@ One public URL, several static pages behind it:
 
 The same fingerprint always hashes to the same bucket, so returning visitors get a consistent variant without cookies. On any failure (Matomo down, no experiment running, invalid code) everything falls through to the original page — a test can never break the site.
 
+### Config propagation and latency
+
+Next's Data Cache doesn't exist in the proxy runtime, so the adapter caches the Matomo config at **module level per edge isolate with a 1-hour TTL** (plus in-flight dedupe). Cost per request: one ~50–160 ms Matomo round-trip per isolate per TTL window, ~0 otherwise. Dashboard changes (pause, re-weight, scheduling) propagate within ~1 hour — no deploy needed. The fetch is bounded by a 2 s timeout; on failure the isolate keeps serving the last known config (stale-if-error) and retries after 60 s.
+
 ### Scope and safety properties
 
 - **Default locale only.** Route keys are locale-less paths and English URLs are unprefixed, so `/es/...` etc. never match — non-English visitors get the original page with no tracker, entirely outside the experiment.
@@ -142,7 +146,9 @@ Add a mock entry to `MOCK_EXPERIMENTS` in `src/lib/ab-testing/matomo-adapter.ts`
 
 ### 5. Create the Matomo experiment and ship
 
-In the Matomo dashboard, create an A/B experiment named exactly like the `testKey`. Variations map to the `variants` array **by position**: Matomo's built-in "Original" is index 0, the first variation you add is index 1, and so on. Set traffic weights, start the experiment, merge the PR. Pausing, re-weighting, or scheduling the test afterwards happens entirely in Matomo — no deploy needed.
+In the Matomo dashboard, create an A/B experiment named exactly like the `testKey`. Variations map to the `variants` array **by position**: Matomo's built-in "Original" is index 0, the first variation you add is index 1, and so on. Set traffic weights, start the experiment, merge the PR. Pausing, re-weighting, or scheduling the test afterwards happens entirely in Matomo — no deploy needed (changes propagate within ~1 hour).
+
+An experiment buckets users only while it's **running** (and inside its date window, if set). A merely **created** experiment stays inactive unless it has an explicit `start_date` — so you can safely prepare experiments in the dashboard ahead of launch.
 
 To remove a finished test: delete the flag, the `abTestRoutes` entry, the coded page, and the `ABTest` wrapper.
 
