@@ -238,14 +238,16 @@ Tailwind text size utilities. Pair with leading utilities (`leading-base`, `lead
 | `text-xs` | 12px | Tags, captions, helper text |
 | `text-sm` | 14px | Secondary body, button labels (sm) |
 | `text-base` | 16px | Body text default |
-| `text-md` | 18px | Slightly emphasized body |
-| `text-lg` | 20px | Lead paragraphs, h5 |
-| `text-xl` | 24px | h4 (mobile) |
-| `text-2xl` | 28px | h3 (mobile), h4 (desktop) |
-| `text-3xl` | 32px | h2 (mobile), h3 (desktop) |
-| `text-4xl` | 40px | h1 (mobile), h2 (desktop) |
+| `text-md` | 16px | Same font-size as `text-base` (`--text-md` is `1rem`; only line-height differs) -- prefer `text-base` |
+| `text-lg` | 18px | Lead paragraphs |
+| `text-xl` | 20px | h4 (mobile) |
+| `text-2xl` | 24px | h3 (mobile), h4 (desktop) |
+| `text-3xl` | 30px | h2 (mobile), h3 (desktop) |
+| `text-4xl` | 36px | h1 (mobile), h2 (desktop) |
 | `text-5xl` | 48px | h1 (desktop) |
-| `text-6xl` / `text-7xl` | 56-72px | Special: `HomeHero` only |
+| `text-6xl` / `text-7xl` | 60-64px | Special: `HomeHero` only |
+
+Sizes are the `--text-*` tokens in `theme.css` (the authoritative source). Note `text-md` resolves to `1rem` -- the same font-size as `text-base` (only line-height differs) -- so **prefer `text-base`** for body copy; `text-md` reads like a distinct step but isn't one.
 
 The "Common use" column maps these raw sizes to heading levels for reference. When your intent is "match a heading level's size," reach for the `text-h1`-`text-h6` utilities (see "Heading Sizes" above) instead of the raw class -- they bundle the responsive size + line-height and track `base.css`.
 
