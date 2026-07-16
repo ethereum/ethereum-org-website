@@ -6,6 +6,12 @@ import { tv, type VariantProps } from "tailwind-variants"
 
 import { cn } from "@/lib/utils/cn"
 
+/**
+ * TODO: Currently, there are cell spacing issues with some table content.
+ * Prefer `table-fixed` utility class in the future when content has been addressed
+ * to provide equal cell widths.
+ */
+
 const baseStyles = {
   th: "text-start border-b border-body text-body normal-case align-bottom p-4",
   tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
@@ -17,7 +23,7 @@ const stripedTbody = "even:[&_tr]:bg-background-highlight"
 
 const tableVariants = tv({
   slots: {
-    table: "w-full border-collapse border-spacing-0",
+    table: "w-full",
     // slot key with empty string to establish the key name for variants (TypeScript)
     th: "",
     tr: "",
@@ -71,8 +77,10 @@ type TableVariants = VariantProps<typeof tableVariants>
 type TableVariantsReturnType = ReturnType<typeof tableVariants>
 
 /**
- * Supports the Markdown `align` prop while applying it as CSS `text-align`
- * instead of forwarding the deprecated HTML `align` attribute.
+ * For `TableCell` and `TableHead` only
+ *
+ * Applies the `align` prop in name for the `textAlign` CSS property
+ * instead of the `align` attribute. (The `align` attribute is deprecated)
  */
 type CellPropsWithAlign<C> = Omit<C, "align"> & {
   align?: React.CSSProperties["textAlign"]
@@ -185,7 +193,7 @@ const TableCaption = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <caption
     ref={ref}
-    className={cn("text-body-medium mt-4 text-sm", className)}
+    className={cn("mt-4 text-sm text-body-medium", className)}
     {...props}
   />
 ))
