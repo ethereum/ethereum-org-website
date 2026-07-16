@@ -7,14 +7,19 @@ The site supports 25 languages, including **Arabic** and **Urdu** (RTL). Transla
 ### Server Components (preferred)
 
 ```tsx
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
-export default async function Page() {
+export default async function Page({ params }) {
+  const { locale } = await params
+
+  setRequestLocale(locale) // MUST run before any next-intl API (see note below)
+
   const t = await getTranslations("page-namespace")
-  const locale = await getLocale()
   return <h1>{t("page-title")}</h1>
 }
 ```
+
+`setRequestLocale(locale)` **must** be the first statement in every page and `generateMetadata` under `app/[locale]/`, before any next-intl API -- including the `getMetadata`/`getMdMetadata` helpers, which call `getTranslations("common")` internally. Skipping it forces dynamic rendering and throws `Page changed from static to dynamic at runtime, reason: headers` for on-demand params. Descendant server components (no `params`) read the locale with `getLocale()`, which resolves statically once the page has primed the cache. Full root cause and prevention: `docs/solutions/architecture/setrequestlocale-static-to-dynamic-rendering.md`.
 
 ### Client Components
 
@@ -245,6 +250,7 @@ H1-H4 headings in markdown require a custom `{#lower-kebab-id}`. Enforced by mar
 
 ## Common Mistakes
 
+- Calling a next-intl API (`getTranslations`, `getLocale`, or the `getMetadata`/`getMdMetadata` helpers) before `setRequestLocale(locale)` in a page or `generateMetadata` -- opts the route into dynamic rendering and throws `Page changed from static to dynamic at runtime, reason: headers` for on-demand params
 - Using `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` for layout (use logical equivalents)
 - Hard-coding English in JSX
 - `value.toLocaleString()` -- use `numberFormat()`

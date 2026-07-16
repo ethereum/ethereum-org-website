@@ -82,6 +82,8 @@ Markdown will be translated as whole pages of content, so no specific action is 
     const siteTitle = t("site-title")
     ```
 
+    > **In an `app/[locale]/` page or `generateMetadata`, call `setRequestLocale(locale)` before any next-intl API** (including the `getMetadata`/`getMdMetadata` helpers). Otherwise on-demand renders throw `Page changed from static to dynamic at runtime, reason: headers`. See `docs/solutions/architecture/setrequestlocale-static-to-dynamic-rendering.md`.
+
 ## React Hooks
 
 - Components and pages are written using arrow function syntax with React hooks in lieu of using class-based components
