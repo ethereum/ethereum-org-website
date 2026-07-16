@@ -30,48 +30,46 @@ incomplete: true
 - [安裝 VS Code Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [.NET 開發人員建立與呼叫以太坊智能合約的工作流程](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
 - [使用 Nethereum 整合智能合約](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
-- [使用 Nethereum 介接 .NET 與以太坊區塊鏈智能合約](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)，也有 [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
-- [Nethereum - 一個用於區塊鏈的開源 .NET 整合函式庫](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
+- [使用 Nethereum 介接 .NET 與以太坊區塊鏈智能合約](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)，也有[中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
+- [Nethereum - 區塊鏈的開源 .NET 整合函式庫](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [使用 Nethereum 將以太坊交易寫入 SQL 資料庫](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [了解如何使用 C# 與 Visual Studio 輕鬆部署以太坊智能合約](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
+- [了解如何使用 C# 與 VisualStudio 輕鬆部署以太坊智能合約](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
-**想暫時跳過設定，直接查看範例嗎？**
+**想先跳過設定，直接看範例嗎？**
 
-- [遊樂場 (Playground)](https://playground.nethereum.com/) - 透過瀏覽器與以太坊互動並學習如何使用 Nethereum。
+- [Nethereum Playground](https://playground.nethereum.com/) - 透過瀏覽器與以太坊互動並學習如何使用 Nethereum。
   - [查詢帳戶餘額](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
   - [查詢 ERC-20 智能合約餘額](https://docs.nethereum.com/docs/smart-contracts/erc20)
   - [轉帳以太幣至帳戶](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
-  - ... 以及更多！
-
+  - ... 還有更多！
 ## 中階文章 {#intermediate-articles}
 
 - [Nethereum 入門與第一個專案](https://docs.nethereum.com/docs/getting-started/first-project)
 - [部署你自己的開發測試鏈](https://github.com/Nethereum/Testchains)
-- [適用於 Solidity 的 VSCode 程式碼產生外掛程式](https://docs.nethereum.com/docs/aspire-templates/guide-codegen)
+- [使用 Nethereum 與 VS Code 產生程式碼](https://docs.nethereum.com/docs/smart-contracts/code-generation/)
 - [Unity 與以太坊：原因與方法](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
-- [為以太坊 dapp 建立 ASP.NET Core Web API](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
-- [使用 Nethereum Web3 實作供應鏈追蹤系統](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
+- [為以太坊去中心化應用程式 (dapp) 建立 ASP.NET Core Web API](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
+- [用於結構化鏈上應用程式的 Nethereum MUD 框架](https://docs.nethereum.com/docs/mud-framework/overview/)
 - [Nethereum 區塊鏈處理](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
-- [Nethereum Websocket 串流](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
+- [Nethereum 即時串流](https://docs.nethereum.com/docs/core-foundation/guide-realtime-streaming/)
 - [Kaleido 與 Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum 與 Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
-
 ## 進階使用模式 {#advanced-use-patterns}
 
 - [Azure Key Vault 與 Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
-
+- [Ujo Nethereum 後端參考架構](https://github.com/Nethereum/ujo-backend)
 ## .NET 專案、工具與其他有趣的東西 {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum 遊樂場](https://playground.nethereum.com/) - _在瀏覽器中編譯、建立與執行 Nethereum 程式碼片段_
+- [Nethereum Playground](https://playground.nethereum.com/) - _在瀏覽器中編譯、建立與執行 Nethereum 程式碼片段_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _在 Blazor 中具有使用者介面的 Nethereum 程式碼產生器_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _一個 .NET Wasm SPA 輕量級區塊鏈瀏覽器與簡易錢包_
+- [Wonka 業務規則引擎](https://github.com/Nethereum/Wonka) - _一個本質上由中繼資料驅動的業務規則引擎（適用於 .NET 平台與以太坊平台）_
 - [奈瑟邁 (Nethermind)](https://github.com/NethermindEth/nethermind) - _適用於 Linux、Windows、MacOS 的 .NET Core 以太坊用戶端_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _用於處理以太坊相關程式碼庫的公用程式函式_
-- [TestChains](https://github.com/Nethereum/TestChains) - _預先設定的 .NET 開發鏈，用於快速回應 (權威證明 (PoA))_
+- [TestChains](https://github.com/Nethereum/TestChains) - _預先設定的 .NET 開發鏈，用於快速回應（權威證明 (PoA)）_
 
 正在尋找更多資源嗎？請查看 [ethereum.org/developers](/developers/)。
-
 ## .NET 社群貢獻者 {#dot-net-community-contributors}
 
 在 Nethereum，我們主要在 [Gitter](https://gitter.im/Nethereum/Nethereum) 上交流，歡迎大家在這裡提問/回答問題、尋求幫助，或者只是閒聊。歡迎在 [Nethereum GitHub 儲存庫](https://github.com/Nethereum) 上提交 PR 或建立 issue，或者只是瀏覽我們眾多的周邊/範例專案。你也可以在 [Discord](https://discord.gg/jQPrR58FxX) 上找到我們！

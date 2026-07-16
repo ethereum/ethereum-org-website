@@ -1,7 +1,7 @@
 ---
-title: Cómo usar una billetera
-metaTitle: Cómo usar billeteras de Ethereum | Paso a paso
-description: Una guía que explica cómo enviar y recibir tokens, y cómo conectarse a proyectos web3.
+title: "Cómo usar una billetera"
+metaTitle: "Cómo usar billeteras de Ethereum | Paso a paso"
+description: "Una guía que explica cómo enviar y recibir tokens, y cómo conectarse a proyectos web3."
 lang: es
 ---
 

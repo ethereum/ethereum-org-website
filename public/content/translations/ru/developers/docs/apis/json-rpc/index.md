@@ -1888,7 +1888,7 @@ web3.sha3("Print(uint256)")
 
 ## Связанные темы {#related-topics}
 
-- [Спецификация JSON-RPC](http://www.jsonrpc.org/specification)
+- [Спецификация JSON-RPC](https://www.jsonrpc.org/specification)
 - [Узлы и клиенты](/developers/docs/nodes-and-clients/)
 - [API JavaScript](/developers/docs/apis/javascript/)
 - [API бэкенда](/developers/docs/apis/backend/)

@@ -1,6 +1,6 @@
 ---
-title: Cómo revocar el acceso de los contratos inteligentes a tus fondos de criptomonedas
-description: Una guía práctica sobre cómo revocar el acceso abusivo de los contratos inteligentes a tus tokens
+title: "Cómo revocar el acceso de los contratos inteligentes a tus fondos de criptomonedas"
+description: "Una guía práctica sobre cómo revocar el acceso abusivo de los contratos inteligentes a tus tokens"
 lang: es
 ---
 

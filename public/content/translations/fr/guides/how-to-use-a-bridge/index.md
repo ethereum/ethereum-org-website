@@ -1,6 +1,6 @@
 ---
-title: Comment transférer des jetons vers une couche 2 via un pont
-description: Un guide expliquant comment transférer des jetons d'Ethereum vers une couche 2 à l'aide d'un pont.
+title: "Comment transférer des jetons vers une couche 2 via un pont"
+description: "Un guide expliquant comment transférer des jetons d'Ethereum vers une couche 2 à l'aide d'un pont."
 lang: fr
 ---
 

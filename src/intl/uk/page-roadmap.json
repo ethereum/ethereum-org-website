@@ -26,6 +26,8 @@
   "page-roadmap-governance-button": "Більше про управління Етеріумом",
   "page-roadmap-hero-alt": "Дорожня карта Етеріуму",
   "page-roadmap-technical-upgrades-title": "Які технічні оновлення чекають на Етеріум?",
+  "page-roadmap-post-quantum-title": "Постквантова безпека",
+  "page-roadmap-post-quantum-description": "Квантові комп'ютери одного дня можуть зламати криптографію, на яку покладаються блокчейни. Постквантові оновлення Етеріуму замінять вразливі алгоритми до того, як квантові обчислення стануть реальною загрозою.",
   "page-roadmap-danksharding-title": "Данкшардинг",
   "page-roadmap-danksharding-description": "Данкшардинг робить ролапи рівня 2 (l2) набагато дешевшими для користувачів завдяки додаванню «блобів» даних до блоків Етеріуму.",
   "page-roadmap-single-slot-finality-title": "Однослотова фіналізація",

@@ -85,7 +85,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               }) => (
                 <Card key={slug} href={href}>
                   <CardHeader>
-                    <CardBanner size="full" fit="contain">
+                    <CardBanner
+                      size="full"
+                      fit="contain"
+                      className="aspect-[1/calc(sqrt(2))]" // Force A0 paper ratio
+                    >
                       <Image
                         src={imgSrc}
                         alt=""
@@ -161,6 +165,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-reports")
 

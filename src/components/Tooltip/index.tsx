@@ -1,6 +1,6 @@
 "use client"
 
-import React, { ComponentProps, ReactNode, useEffect } from "react"
+import { ComponentProps, ReactNode, useEffect } from "react"
 import { Portal } from "@radix-ui/react-portal"
 
 import { isMobile } from "@/lib/utils/isMobile"
@@ -22,6 +22,8 @@ export type TooltipProps = ComponentProps<typeof Popover> & {
   onBeforeOpen?: () => void
   container?: HTMLElement | null
   asChild?: boolean
+  /** Base `bg-background` instead of `bg-background-highlight`, for when nested in an already-highlighted container. */
+  nested?: boolean
   customMatomoEvent?: {
     eventCategory: string
     eventAction: string
@@ -35,6 +37,7 @@ const Tooltip = ({
   onBeforeOpen,
   container,
   asChild,
+  nested,
   customMatomoEvent,
   ...props
 }: TooltipProps) => {
@@ -112,7 +115,8 @@ const Tooltip = ({
         <Content
           side="top"
           sideOffset={2}
-          className="z-[10000] max-w-80 px-5 text-sm"
+          nested={nested}
+          className="z-[10000] w-fit max-w-80 px-5 text-sm"
           data-testid="tooltip-popover"
         >
           {content}

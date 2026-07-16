@@ -17,7 +17,7 @@ V tomto tutoriálu si projdeme vytvoření a nasazení chytrého kontraktu ERC-7
 
 Ve 2. části tohoto tutoriálu si projdeme, jak můžeme náš chytrý kontrakt použít k ražení NFT, a ve 3. části si vysvětlíme, jak si své NFT zobrazit v MetaMasku.
 
-A samozřejmě, pokud budete mít kdykoli nějaké dotazy, neváhejte se ozvat na [Discordu Alchemy](https://discord.gg/gWuC7zB) nebo navštivte [dokumentaci k NFT API od Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
+A samozřejmě, pokud budete mít kdykoli nějaké dotazy, neváhejte se ozvat na [Discordu Alchemy](https://discord.gg/gWuC7zB) nebo navštivte [dokumentaci k NFT API od Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart)!
 
 ## Krok 1: Připojení k síti Ethereum {#connect-to-ethereum}
 
@@ -27,7 +27,7 @@ V tomto tutoriálu také využijeme vývojářské nástroje Alchemy pro monitor
 
 ## Krok 2: Vytvoření aplikace (a API klíče) {#make-api-key}
 
-Jakmile si vytvoříte účet na Alchemy, můžete si vygenerovat API klíč vytvořením aplikace. To nám umožní zadávat požadavky na testnet Sepolia. Pokud se chcete o testnetech dozvědět více, podívejte se na [tento průvodce](https://docs.alchemyapi.io/guides/choosing-a-network).
+Jakmile si vytvoříte účet na Alchemy, můžete si vygenerovat API klíč vytvořením aplikace. To nám umožní zadávat požadavky na testnet Sepolia. Pokud se chcete o testnetech dozvědět více, podívejte se na [tento průvodce](https://www.alchemy.com/docs/choosing-a-web3-network).
 
 1. Přejděte na stránku „Create App“ (Vytvořit aplikaci) na svém panelu Alchemy tak, že najedete myší na „Apps“ (Aplikace) v navigačním panelu a kliknete na „Create App“.
 
@@ -53,14 +53,13 @@ Abychom mohli nasadit náš chytrý kontrakt na testnet, budeme potřebovat něj
 
 ## Krok 5: Kontrola zůstatku {#check-balance}
 
-Abychom si ověřili, že tam náš zůstatek je, vytvořme požadavek [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) pomocí [nástroje composer od Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Ten nám vrátí množství ETH v naší peněžence. Po zadání adresy vašeho účtu v MetaMasku a kliknutí na „Send Request“ (Odeslat požadavek) byste měli vidět podobnou odpověď:
+Abychom si ověřili, že tam náš zůstatek je, vytvořme požadavek [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) pomocí [nástroje sandbox od Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). To nám vrátí množství ETH v naší peněžence. Po zadání adresy vašeho účtu v MetaMasku a kliknutí na „Send Request“ byste měli vidět podobnou odpověď:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
 > **Poznámka** Tento výsledek je ve Wei, nikoli v ETH. Wei se používá jako nejmenší nominální hodnota etheru. Převod z Wei na ETH je 1 eth = 10<sup>18</sup> Wei. Pokud tedy převedeme 0xde0b6b3a7640000 do desítkové soustavy, dostaneme 1\*10<sup>18</sup> Wei, což se rovná 1 ETH.
 
-Uf! Naše falešné peníze jsou všechny tam.
-
+Uf! Naše falešné peníze tam všechny jsou.
 ## Krok 6: Inicializace našeho projektu {#initialize-project}
 
 Nejprve budeme muset vytvořit složku pro náš projekt. Přejděte do příkazového řádku a zadejte:
@@ -68,7 +67,7 @@ Nejprve budeme muset vytvořit složku pro náš projekt. Přejděte do příkaz
     mkdir my-nft
     cd my-nft
 
-Nyní, když jsme ve složce našeho projektu, použijeme npm init k inicializaci projektu. Pokud ještě nemáte nainstalované npm, postupujte podle [těchto pokynů](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (budeme také potřebovat [Node.js](https://nodejs.org/en/download/), takže si ho stáhněte také!).
+Nyní, když jsme uvnitř složky našeho projektu, použijeme npm init k inicializaci projektu. Pokud ještě nemáte nainstalované npm, postupujte podle [pokynů k instalaci Node.js](https://nodejs.org/en/download/) (pro tento tutoriál budeme potřebovat Node.js a npm).
 
     npm init
 
@@ -100,7 +99,6 @@ Nezáleží na tom, jak odpovíte na instalační otázky; zde je pro referenci 
 ```
 
 Schvalte soubor package.json a můžeme jít na to!
-
 ## Krok 7: Instalace [Hardhatu](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 Hardhat je vývojové prostředí pro kompilaci, nasazení, testování a ladění vašeho softwaru pro Ethereum. Pomáhá vývojářům při lokálním vytváření chytrých kontraktů a decentralizovaných aplikací (dapp) před jejich nasazením do živého řetězce.
@@ -342,7 +340,7 @@ Adresa From (Od) by se měla shodovat s adresou vašeho účtu v MetaMasku a adr
 
 Jupííí! Právě jste nasadili svůj chytrý kontrakt pro NFT do řetězce Ethereum (testnet)!
 
-Abychom pochopili, co se děje pod pokličkou, přejděme na kartu Explorer (Průzkumník) na našem [panelu Alchemy](https://dashboard.alchemyapi.io/explorer). Pokud máte více aplikací Alchemy, nezapomeňte filtrovat podle aplikace a vybrat „MyNFT“.
+Abychom pochopili, co se děje pod pokličkou, přejděme na kartu Explorer (Průzkumník) na našem [panelu Alchemy](https://dashboard.alchemy.com/explorer). Pokud máte více aplikací Alchemy, nezapomeňte filtrovat podle aplikace a vybrat „MyNFT“.
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 

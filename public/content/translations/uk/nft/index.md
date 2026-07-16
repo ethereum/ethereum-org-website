@@ -103,14 +103,12 @@ NFT, як і будь-які цифрові об'єкти в блокчейні 
 
 ## Додаткова література {#further-reading}
 
-- [Посібник з NFT для початківців](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) — _Лінда Се (Linda Xie), січень 2020 року_
+- [Посібник з NFT для початківців](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) — _Лінда Се, січень 2020 року_
 - [Трекер NFT на Etherscan](https://etherscan.io/nft-top-contracts)
 - [Трекер NFT на Blockscout](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [Стандарт токенів ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Стандарт токенів ERC-1155](/developers/docs/standards/tokens/erc-1155/)
-- [Популярні застосунки та інструменти для NFT](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 - [Вікі стандартів NFT](https://nft-standards.gitbook.io/nft-standards-wiki)
-
 ## Інші ресурси {#other-resources}
 
 - [NFTScan](https://nftscan.com/)

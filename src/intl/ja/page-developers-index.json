@@ -137,5 +137,16 @@
   "page-developers-why-title": "高収入を得て、リモートで働き、未来を築く。",
   "page-developers-why-subtitle": "ブロックチェーン関連のキャリアの半分以上はリモートファーストであり、その割合は最大70%に達するという推定もあります。",
   "page-developers-why-avg-salary-dev": "開発者の平均給与",
-  "page-developers-why-avg-salary-blockchain": "ブロックチェーン業界の平均給与"
+  "page-developers-why-avg-salary-blockchain": "ブロックチェーン業界の平均給与",
+  "page-developers-why-grid-money-heading": "プログラム可能なお金",
+  "page-developers-why-grid-money-desc": "価値がどのように、いつ、誰に移動するかを定義するコードを記述します。銀行も仲介者も存在せず、あなたが定義したロジックだけが存在します。",
+  "page-developers-why-grid-skills-heading": "将来性のあるスキル",
+  "page-developers-why-grid-skills-desc": "次世代インターネットの構成要素を学びましょう。テクノロジーは進化するかもしれませんが、Web3の原則は今後も残り続けます。",
+  "page-developers-why-grid-censorship-heading": "検閲耐性",
+  "page-developers-why-grid-censorship-desc": "政府、企業、アルゴリズムによって封殺されることのないプロジェクトやコマースを構築しましょう。重要なものであれば、オンラインに残り続けます。",
+  "page-developers-why-grid-sovereignty-heading": "デジタル主権",
+  "page-developers-why-grid-sovereignty-desc": "あなたを削除できるプラットフォームに依存することなく、オンラインで自身のアイデンティティ、資産、制作物を所有しましょう。",
+  "page-developers-blog-title": "ビルダー向けアップデート",
+  "page-developers-blog-desc": "最新のイーサリアムのビルダー向けリソース、ツール、開発に関するインサイト。",
+  "page-developers-blog-view-all": "すべてのアップデートを見る"
 }

@@ -388,7 +388,7 @@
   "validium-term": "ویلیڈیم",
   "validium-definition": "ایک آف چین حل جو ٹرانزیکشن کے تھرو پٹ کو بہتر بنانے کے لیے <a href=\"/glossary/#validity-proof\">درستگی کے ثبوت</a> استعمال کرتا ہے۔ <a href=\"/glossary/#zk-rollup\">زیرو نالج رول اپس</a> کے برعکس، ویلیڈیم کا ڈیٹا لیئر ۱ مین نیٹ پر محفوظ نہیں کیا جاتا ہے۔ <a href=\"/developers/docs/scaling/validium/\">ویلیڈیم کے بارے میں مزید</a>۔",
   "vyper-term": "Vyper",
-  "vyper-definition": "Python جیسے سنٹیکس کے ساتھ ایک اعلیٰ سطحی پروگرامنگ زبان۔ اس کا مقصد ایک خالص فنکشنل زبان کے قریب تر ہونا ہے۔ اسے وٹالک بوٹرین نے بنایا تھا۔ <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Vyper کے بارے میں مزید</a>۔",
+  "vyper-definition": "ایک اعلیٰ سطح کی پروگرامنگ زبان جس کا سنٹیکس Python جیسا ہے۔ اسے وٹالک بوٹرین نے بنایا تھا۔ <a href=\"/developers/docs/smart-contracts/languages/#vyper\">Vyper کے بارے میں مزید</a>۔",
   "wallet-term": "والیٹ",
   "wallet-definition": "والیٹ ڈیجیٹل کرنسی کو ذخیرہ کرنے، بھیجنے اور وصول کرنے کا ایک ڈیجیٹل ٹول ہے، بالکل آپ کی آن لائن رقم کے لیے ایک ورچوئل پرس کی طرح۔ <a href=\"/wallets/\">ایتھیریم والیٹس کے بارے میں مزید</a>۔",
   "web2-term": "ویب۲",

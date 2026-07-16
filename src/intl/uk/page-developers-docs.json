@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "Дані та аналітика",
   "docs-nav-data-and-analytics-description": "Як дані блокчейну агрегуються, організовуються та впроваджуються в децентралізовані застосунки (dapp)",
   "docs-nav-data-availability": "Доступність даних",
+  "docs-nav-data-availability-description": "Огляд проблем та рішень, пов'язаних із доступністю даних в Етеріумі",
   "docs-nav-data-availability-storage-strategies": "Стратегії зберігання даних блокчейну",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "Перевірка стану в процесі розробки",
   "layer-2-metis-note": "Доведення шахрайства в процесі розробки",
   "layer-2-optimism-note": "Доведення помилок у процесі розробки",
-  "back-to-top": "Повернутися вгору",
   "banner-page-incomplete": "Ця сторінка неповна, і ми будемо раді вашій допомозі. Відредагуйте цю сторінку та додайте все, що, на вашу думку, може бути корисним для інших.",
   "next": "Далі",
   "previous": "Назад"

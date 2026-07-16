@@ -1,6 +1,6 @@
 ---
-title: Zasoby językowe
-description: Nieanglojęzyczne zasoby do nauki o Ethereum
+title: "Zasoby językowe"
+description: "Nieanglojęzyczne zasoby do nauki o Ethereum"
 lang: pl
 ---
 
@@ -27,7 +27,7 @@ Jeśli jesteś osobą dwujęzyczną i chcesz pomóc nam dotrzeć do większej li
 **Wiadomości**
 
 - [BeInCrypto](http://www.beincrypto.com.br) – wiadomości i artykuły o kryptowalutach, w tym lista giełd dostępnych w Brazylii
-- [Cointelegraph](http://cointelegraph.com.br/category/analysis) – brazylijska wersja Cointelegraph, głównego serwisu informacyjnego o kryptowalutach
+- [Cointelegraph](https://cointelegraph.com.br/) – brazylijska wersja Cointelegraph, głównego serwisu informacyjnego o kryptowalutach
 - [Livecoins](http://www.livecoins.com.br/ethereum) – wiadomości i narzędzia ze świata kryptowalut
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) – wiadomości i raporty o kryptowalutach
 - [Modular Crypto](https://modularcrypto.xyz/) – wiadomości o kryptowalutach i artykuły edukacyjne
@@ -37,7 +37,7 @@ Jeśli jesteś osobą dwujęzyczną i chcesz pomóc nam dotrzeć do większej li
 - [web3dev](https://www.web3dev.com.br/) – centrum treści i społeczność na Discordzie dla deweloperów Web3.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) – zasoby do nauki Web3 i zdecentralizowanych finansów (DeFi)
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) – wiadomości i edukacja o kryptowalutach, w tym „Ethereum dla początkujących” i „DeFi dla początkujących”
-- [CriptoAtivos](http://www.criptoativos.wiki.br/) – spostrzeżenia z przestrzeni kryptowalut, edukacja i blog
+- [CriptoAtivos](https://web.archive.org/web/20220916210708/https://www.criptoativos.wiki.br/) – spostrzeżenia z przestrzeni kryptowalut, edukacja i blog
 - [Cointimes](http://www.cointimes.com.br/) – wiadomości i edukacja o kryptowalutach
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) – przewodnik odpowiadający na najczęściej zadawane i podstawowe pytania dotyczące krypto
 

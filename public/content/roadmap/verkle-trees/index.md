@@ -2,6 +2,7 @@
 title: Verkle trees
 description: A high level description of Verkle trees and how they will be used to upgrade Ethereum
 lang: en
+template: roadmap
 summaryPoints:
   - Discover what Verkle trees are
   - Read why Verkle Trees are a useful upgrade for Ethereum

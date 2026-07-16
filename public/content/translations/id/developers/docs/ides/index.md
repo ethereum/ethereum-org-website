@@ -59,6 +59,6 @@ Sebagian besar IDE yang sudah mapan telah membangun plugin untuk meningkatkan pe
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [IDE Ethereum](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Daftar IDE Ethereum dari Alchemy_
+- [IDE Ethereum](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Daftar IDE Ethereum dari Alchemy_
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

@@ -14,7 +14,7 @@ const cardVariants = cva(
     "flex flex-col",
     "[--banner-radius:--spacing(1)] rounded-[calc(var(--card-pad)+var(--banner-radius))]",
     "text-body no-underline hover:text-body",
-    "transition-all duration-300 hover:transition-all hover:duration-300",
+    "transition-all duration-300",
     "**:data-[label=card-header]:pb-0 **:data-[label=card-footer]:pt-0"
   ),
   {
@@ -36,10 +36,34 @@ const cardVariants = cva(
         sm: "[--card-pad:--spacing(2.5)] [--content-space:--spacing(2.5)]",
         xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
-      hoverEffect: {
-        lift: "hover:shadow-md hover:scale-[1.005]",
-      },
+      hoverLift: { true: "hover-lift-base" },
+      border: { true: "ring ring-border" },
+      // Set internally from `href` -- names the link-group and drives the
+      // hover affordance below. Not a public prop (omitted from CardProps).
+      interactive: { true: "group/link", false: "" },
     },
+    compoundVariants: [
+      // Ghost link cards fill with the highlight bg on hover, no outline...
+      {
+        interactive: true,
+        variant: "ghost",
+        class: "hover:bg-background-highlight",
+      },
+      // ...every other link card keeps the primary outline ring.
+      {
+        interactive: true,
+        variant: ["base", "nested", "header-bar"],
+        class: "ring ring-transparent hover:ring-primary-hover",
+      },
+      // ...but a `border` link card keeps its border visible at rest (this must
+      // come after the rule above so `ring-border` wins over `ring-transparent`).
+      {
+        interactive: true,
+        border: true,
+        variant: ["base", "nested", "header-bar"],
+        class: "ring-border",
+      },
+    ],
     defaultVariants: {
       variant: "base",
       size: "base",
@@ -49,7 +73,7 @@ const cardVariants = cva(
 
 export type CardProps = React.HTMLAttributes<HTMLElement> &
   Pick<LinkProps, "href" | "customEventOptions"> &
-  VariantProps<typeof cardVariants>
+  Omit<VariantProps<typeof cardVariants>, "interactive">
 
 const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
   (
@@ -59,18 +83,28 @@ const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
       customEventOptions,
       variant,
       size,
-      hoverEffect,
+      hoverLift,
+      border,
       ...props
     },
     ref
   ) => {
-    const classes = cn(cardVariants({ variant, size, hoverEffect }), className)
+    const classes = cn(
+      cardVariants({
+        variant,
+        size,
+        hoverLift,
+        border,
+        interactive: !!href,
+      }),
+      className
+    )
     if (href) {
       return (
         <BaseLink
           ref={ref as React.Ref<HTMLAnchorElement>}
           href={href}
-          className={cn(classes, "group/link")}
+          className={classes}
           customEventOptions={customEventOptions}
           hideArrow
           {...props}
@@ -219,15 +253,9 @@ const cardBannerVariants = cva(
   {
     variants: {
       background: {
-        "accent-a":
-          "bg-linear-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20",
-        "accent-b":
-          "bg-linear-to-b from-accent-b/5 to-accent-b/10 dark:from-accent-b/10 dark:to-accent-b/20",
-        "accent-c":
-          "bg-linear-to-b from-accent-c/5 to-accent-c/10 dark:from-accent-c/10 dark:to-accent-c/20",
-        primary:
-          "bg-linear-to-b from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20",
-        body: "bg-linear-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20",
+        "accent-a": "bg-tint-accent-a",
+        primary: "bg-tint-primary",
+        body: "bg-tint-body",
         none: "",
       },
       size: {

@@ -1887,7 +1887,7 @@ web3.sha3("Print(uint256)")
 
 ## مواضيع ذات صلة {#related-topics}
 
-- [مواصفات <span dir="ltr">JSON-RPC</span>](http://www.jsonrpc.org/specification)
+- [مواصفات <span dir="ltr">JSON-RPC</span>](https://www.jsonrpc.org/specification)
 - [العقد والعملاء](/developers/docs/nodes-and-clients/)
 - [واجهات برمجة تطبيقات (<span dir="ltr">APIs</span>) لـ <span dir="ltr">JavaScript</span>](/developers/docs/apis/javascript/)
 - [واجهات برمجة تطبيقات (<span dir="ltr">APIs</span>) للواجهة الخلفية](/developers/docs/apis/backend/)

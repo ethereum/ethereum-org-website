@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Ethereum - Le guide complet d'Ethereum.org",
+  "page-index-meta-title": "Ethereum - Le guide complet d'ethereum.org",
   "page-index-meta-description": "Ethereum est une plateforme mondiale et décentralisée pour la monnaie et de nouveaux types d'applications. Sur Ethereum, vous contrôlez votre propre argent, vos données et votre identité. Aucune banque, aucun intermédiaire, aucune permission requise.",
   "page-index-description": "La plateforme de référence pour les applications innovantes et les réseaux de chaînes de blocs",
   "page-index-title": "Bienvenue sur Ethereum",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "APPLICATIONS ETHEREUM",
   "page-index-carousel-privacy-ethereum-value": "Confidentiel par défaut",
   "page-index-carousel-remittances-tag": "PAIEMENTS TRANSFRONTALIERS",
-  "page-index-carousel-remittances-title": "Envoyez de l'argent au pays en {minutes} minutes",
+  "page-index-carousel-remittances-title": "Envoyez de l'argent au pays en {seconds} secondes",
   "page-index-carousel-remittances-subtitle": "Évitez les frais de virement de {wireFee} et l'attente de plus de {days} jours.",
   "page-index-carousel-remittances-description": "Envoyez des <stablecoinsLink>stablecoins</stablecoinsLink> à n'importe qui, n'importe où dans le monde, pour seulement {txFee}. Ils reçoivent les fonds presque instantanément.",
   "page-index-carousel-remittances-cta": "Essayez par vous-même",
   "page-index-carousel-remittances-traditional-label": "VIREMENT BANCAIRE",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} jours",
   "page-index-carousel-remittances-ethereum-label": "ETHEREUM",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} minutes",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} secondes",
   "page-index-carousel-borrowing-tag": "ACCÈS FINANCIER",
   "page-index-carousel-borrowing-title": "Empruntez sans historique de crédit",
   "page-index-carousel-borrowing-subtitle": "Vous n'avez pas besoin d'une cote de crédit pour commencer.",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Réseaux privés et à permission",
   "page-index-get-started-enterprise-bullet-3": "Ressources institutionnelles",
   "page-index-get-started-enterprise-cta": "Explorer pour les entreprises",
-  "page-index-simulator-cta": "Essayer d'autres guides"
+  "page-index-simulator-cta": "Essayer d'autres guides",
+  "page-index-latest-updates-title": "Dernières mises à jour d'Ethereum",
+  "page-index-latest-updates-cta": "Voir plus"
 }

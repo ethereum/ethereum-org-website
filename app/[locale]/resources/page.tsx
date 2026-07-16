@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -26,7 +26,7 @@ import { ResourceItem, ResourcesContainer } from "./_components/ResourcesUI"
 import ResourcesPageJsonLD from "./page-jsonld"
 import { getResources } from "./utils"
 
-import { getBlobscanStats, getGrowThePieData } from "@/lib/data"
+import { getBlobStats, getGrowThePieData } from "@/lib/data"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const EVENT_CATEGORY = "dashboard"
@@ -35,33 +35,35 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-resources")
 
   // Fetch data using the new data-layer functions (already cached)
-  const [growThePieData, blobscanOverallStats] = await Promise.all([
+  const [growThePieData, blobOverallStats] = await Promise.all([
     getGrowThePieData(),
-    getBlobscanStats(),
+    getBlobStats(),
   ])
 
   // Handle null cases - throw error if required data is missing
   if (!growThePieData) {
     throw new Error("Failed to fetch GrowThePie data")
   }
-  if (!blobscanOverallStats) {
-    throw new Error("Failed to fetch Blobscan stats data")
+  if (!blobOverallStats) {
+    throw new Error("Failed to fetch blob stats data")
   }
 
   const txCostsMedianUsd = growThePieData?.txCostsMedianUsd ?? {
     error: "No data available",
   }
 
-  // Extract blob stats directly (getBlobscanStats returns BlobscanStats, not wrapped in MetricReturnData)
+  // Extract blob stats directly (getBlobStats returns BlobStats, not wrapped in MetricReturnData)
   const blobStats = {
-    avgBlobFee: blobscanOverallStats.avgBlobFee,
+    avgBlobFee: blobOverallStats.avgBlobFee,
     totalBlobs: numberFormat(locale, {
       notation: "compact",
       maximumFractionDigits: 1,
-    }).format(blobscanOverallStats.totalBlobs),
+    }).format(blobOverallStats.totalBlobs),
   }
 
   const resourceSections = await getResources({
@@ -181,7 +183,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             id="contribute"
             className="relative rounded-4xl border border-body/5 bg-background"
           >
-            <VStack className="rounded-4xl bg-radial-a px-4 py-6 md:py-12">
+            <VStack className="rounded-4xl bg-radial-primary px-4 py-6 md:py-12">
               <Stack className="max-w-xl gap-y-10 py-6 lg:max-w-[700px]">
                 <div className="flex flex-col gap-y-4 text-center">
                   <h2>{t("page-resources-contribute-title")}</h2>
@@ -236,6 +238,9 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  // Set locale before next-intl APIs so on-demand renders stay static
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-resources")
 

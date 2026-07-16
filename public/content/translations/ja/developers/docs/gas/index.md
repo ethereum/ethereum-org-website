@@ -134,7 +134,7 @@ _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _オープンソースのトランザクションガス価格見積もりツール_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _イーサリアムおよびL2のガス価格を監視・追跡し、トランザクション手数料を削減して節約_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Type 0のレガシートランザクションとType 2のEIP-1559トランザクションの両方をサポートする、ガス見積もり用のクローム拡張機能。_
-- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _メインネット、アービトラム、ポリゴンでのさまざまなトランザクションタイプのガス代を現地通貨で計算。_
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _メインネット、アービトラム、ポリゴンでのさまざまなトランザクションタイプのガス代を現地通貨で計算。_
 
 ## 関連ツール {#related-tools}
 

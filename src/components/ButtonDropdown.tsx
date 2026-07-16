@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { Fragment, useState } from "react"
 import { Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
@@ -24,7 +24,13 @@ export interface ListItem {
     eventName: string
   }
   callback?: (idx: number) => void
+  /** Nested sub-items rendered beneath this item, marked with a leading dash per level. */
+  items?: Array<ListItem>
 }
+
+/** Visual nesting marker; excluded from accessible names. Levels past the first indent the dash with an em space per extra level. */
+const SUB_ITEM_MARKER = "–" // en dash
+const SUB_ITEM_INDENT = " " // em space
 
 export interface List {
   text: string
@@ -46,6 +52,41 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
     setSelectedItem(item.text)
   }
 
+  const renderItems = (items: Array<ListItem>, depth = 0): React.ReactNode =>
+    items.map((item, idx) => {
+      const label = (
+        <>
+          {depth > 0 && (
+            <span aria-hidden className="me-2">
+              {SUB_ITEM_INDENT.repeat(depth - 1) + SUB_ITEM_MARKER}
+            </span>
+          )}
+          {item.text}
+        </>
+      )
+      return (
+        <Fragment key={item.text}>
+          <DropdownMenuItem
+            className="justify-start ps-8 pe-4 text-start"
+            onClick={() => handleClick(item, idx)}
+            asChild={!!item.href}
+          >
+            {item.href ? (
+              <BaseLink
+                href={item.href}
+                className="text-body no-underline focus-visible:outline-0"
+              >
+                {label}
+              </BaseLink>
+            ) : (
+              <span>{label}</span>
+            )}
+          </DropdownMenuItem>
+          {item.items?.length ? renderItems(item.items, depth + 1) : null}
+        </Fragment>
+      )
+    })
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -64,25 +105,7 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
         collisionPadding={16}
         sideOffset={8}
       >
-        {list.items.map((item, idx) => (
-          <DropdownMenuItem
-            key={item.text}
-            className="justify-center text-center"
-            onClick={() => handleClick(item, idx)}
-            asChild={!!item.href}
-          >
-            {item.href ? (
-              <BaseLink
-                href={item.href}
-                className="text-body no-underline focus-visible:outline-0"
-              >
-                {item.text}
-              </BaseLink>
-            ) : (
-              <span>{item.text}</span>
-            )}
-          </DropdownMenuItem>
-        ))}
+        {renderItems(list.items)}
       </DropdownMenuContent>
     </DropdownMenu>
   )

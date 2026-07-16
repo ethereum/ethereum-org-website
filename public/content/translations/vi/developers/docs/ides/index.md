@@ -59,6 +59,6 @@ Hầu hết các IDE lâu đời đều đã xây dựng các plugin để nâng
 
 ## Đọc thêm {#further-reading}
 
-- [Các IDE Ethereum](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Danh sách các IDE Ethereum của Alchemy_
+- [Các IDE Ethereum](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Danh sách các IDE Ethereum của Alchemy_
 
 _Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho bạn? Hãy chỉnh sửa trang này và thêm nó vào!_

@@ -1888,7 +1888,7 @@ web3.sha3("Print(uint256)")
 
 ## متعلقہ موضوعات {#related-topics}
 
-- [جے سن آر پی سی کی تفصیلات](http://www.jsonrpc.org/specification)
+- [جے سن آر پی سی کی تفصیلات](https://www.jsonrpc.org/specification)
 - [نوڈز اور کلائنٹس](/developers/docs/nodes-and-clients/)
 - [<span dir="ltr">JavaScript APIs</span>](/developers/docs/apis/javascript/)
 - [بیک اینڈ <span dir="ltr">APIs</span>](/developers/docs/apis/backend/)

@@ -59,6 +59,6 @@ lang: ko
 
 ## 더 읽어보기 {#further-reading}
 
-- [이더리움 IDE](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy의 이더리움 IDE 목록_
+- [이더리움 IDE](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Alchemy의 이더리움 IDE 목록_
 
 _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 편집하여 추가해 주세요!_

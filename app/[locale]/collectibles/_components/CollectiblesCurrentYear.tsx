@@ -1,5 +1,4 @@
 "use client"
-
 import React from "react"
 import {
   CircleCheckIcon,
@@ -8,6 +7,7 @@ import {
   PencilRulerIcon,
   Zap,
 } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -32,8 +32,6 @@ import {
 import { cn } from "@/lib/utils/cn"
 
 import { BadgeWithOwned } from "./CollectiblesContent"
-
-import useTranslation from "@/hooks/useTranslation"
 
 const HighlightCardGrid = ({
   className,
@@ -80,7 +78,7 @@ const HighlightCardBody = ({
         height={500}
         alt={alt}
         sizes="(min-width: 768px) 160px, 128px"
-        className="w-32 transition-transform group-hover:scale-105 group-hover:transition-transform md:w-40"
+        className="w-32 transition-transform group-hover:scale-105 md:w-40"
       />
     </Link>
     <div className="w-full">{children}</div>
@@ -142,7 +140,7 @@ const CollectiblesCurrentYear = ({
   badges,
   address,
 }: CollectiblesCurrentYearProps) => {
-  const { t } = useTranslation("page-collectibles")
+  const t = useTranslations("page-collectibles")
 
   const socialBadges = React.useMemo(
     () => badges.filter((b) => b.category === "Events/Calls"),
@@ -524,7 +522,7 @@ const CollectiblesCurrentYear = ({
                   alt={badge.name}
                   sizes="(min-width: 768px) 128px, 96px"
                   className={cn(
-                    "size-24 transition-transform group-hover:scale-105 group-hover:transition-transform md:size-32",
+                    "size-24 transition-transform group-hover:scale-105 md:size-32",
                     address && !badge.owned && "grayscale"
                   )}
                 />

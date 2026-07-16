@@ -162,7 +162,7 @@ export const StakingProductCard = async ({
   ].filter(({ status }) => !!status)
 
   return (
-    <Card hoverEffect="lift">
+    <Card hoverLift>
       <CardHeader className="space-y-4">
         <div className="flex gap-3">
           {!!Svg && <Svg className="size-12 shrink-0" />}

@@ -41,7 +41,6 @@ lang: ur
 **ایپلی کیشن کی ترقی کے لیے Sepolia تجویز کردہ ڈیفالٹ آزمائشی نیٹ ورک ہے**۔ Sepolia نیٹ ورک کلائنٹ اور ٹیسٹنگ ٹیموں کے زیر کنٹرول ایک اجازت یافتہ توثیق کار سیٹ استعمال کرتا ہے۔
 
 ##### وسائل
-
 - [ویب سائٹ](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -49,7 +48,6 @@ lang: ur
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### فوسٹس
-
 - [Alchemy Sepolia فوسٹ](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia فوسٹ](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia فوسٹ](https://faucet.chainstack.com/sepolia-testnet-faucet)

@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "إيثيريوم - الدليل الشامل من ⁦Ethereum.org⁩",
+  "page-index-meta-title": "إيثيريوم - الدليل الشامل من ⁦ethereum.org⁩",
   "page-index-meta-description": "إيثيريوم هي منصة عالمية لامركزية للأموال وأنواع جديدة من التطبيقات. على إيثيريوم، أنت تتحكم في أموالك وبياناتك وهويتك. لا حاجة لبنك، ولا وسيط، ولا إذن.",
   "page-index-description": "المنصة الرائدة للتطبيقات المبتكرة وشبكات سلسلة الكتل",
   "page-index-title": "مرحبًا بك في إيثيريوم",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "تطبيقات إيثيريوم",
   "page-index-carousel-privacy-ethereum-value": "خاصة افتراضيًا",
   "page-index-carousel-remittances-tag": "المدفوعات عبر الحدود",
-  "page-index-carousel-remittances-title": "أرسل الأموال إلى وطنك في {minutes} دقائق",
+  "page-index-carousel-remittances-title": "أرسل الأموال إلى وطنك خلال ⁦{seconds}⁩ ثانية",
   "page-index-carousel-remittances-subtitle": "تخطَّ رسوم التحويل البالغة {wireFee} وانتظار ⁦{days}+⁩ أيام.",
   "page-index-carousel-remittances-description": "أرسل <stablecoinsLink>العملات المستقرة</stablecoinsLink> إلى أي شخص، في أي مكان في العالم، مقابل {txFee} فقط. وسيتلقون الأموال على الفور تقريبًا.",
   "page-index-carousel-remittances-cta": "جربها بنفسك",
   "page-index-carousel-remittances-traditional-label": "التحويل البنكي",
   "page-index-carousel-remittances-traditional-value": "⁦{min}-{max}⁩ أيام",
   "page-index-carousel-remittances-ethereum-label": "إيثيريوم",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} دقائق",
+  "page-index-carousel-remittances-ethereum-value": "⁦{seconds}⁩ ثانية",
   "page-index-carousel-borrowing-tag": "الوصول المالي",
   "page-index-carousel-borrowing-title": "الاقتراض بدون سجل ائتماني",
   "page-index-carousel-borrowing-subtitle": "لا تحتاج إلى درجة ائتمانية للبدء.",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "الشبكات الخاصة والمصرح بها",
   "page-index-get-started-enterprise-bullet-3": "الموارد المؤسسية",
   "page-index-get-started-enterprise-cta": "استكشف المؤسسات",
-  "page-index-simulator-cta": "جرب المزيد من الأدلة"
+  "page-index-simulator-cta": "جرب المزيد من الأدلة",
+  "page-index-latest-updates-title": "أحدث تحديثات إيثيريوم",
+  "page-index-latest-updates-cta": "عرض المزيد"
 }

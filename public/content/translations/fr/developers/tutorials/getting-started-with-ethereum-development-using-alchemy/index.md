@@ -13,7 +13,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Ethereum and Alchemy logos](./ethereum-alchemy.png)
 
-Ceci est un guide pour débutants pour faire ses premiers pas dans le développement sur Ethereum. Pour ce tutoriel, nous utiliserons [Alchemy](https://alchemyapi.io/), la principale plateforme de développement de chaîne de blocs qui alimente des millions d'utilisateurs provenant de 70 % des meilleures applications de chaîne de blocs, notamment Maker, 0x, MyEtherWallet, Dharma et Kyber. Alchemy nous donnera accès à un point de terminaison d'API sur la chaîne Ethereum afin que nous puissions lire et écrire des transactions.
+Ceci est un guide pour débutants pour faire ses premiers pas dans le développement sur Ethereum. Pour ce tutoriel, nous utiliserons [Alchemy](https://www.alchemy.com/), la principale plateforme de développement de chaîne de blocs qui alimente des millions d'utilisateurs provenant de 70 % des meilleures applications de chaîne de blocs, notamment Maker, 0x, MyEtherWallet, Dharma et Kyber. Alchemy nous donnera accès à un point de terminaison d'API sur la chaîne Ethereum afin que nous puissions lire et écrire des transactions.
 
 Nous vous accompagnerons de l'inscription sur Alchemy jusqu'à l'écriture de votre premier script Web3 ! Aucune expérience en développement de chaîne de blocs n'est requise !
 
@@ -45,10 +45,10 @@ Interagissez avec la chaîne de blocs Ethereum via Alchemy en utilisant JSON-RPC
 
 Pour les requêtes manuelles, nous recommandons d'interagir avec le `JSON-RPC` via des requêtes `POST`. Passez simplement l'en-tête `Content-Type: application/json` et votre requête dans le corps du `POST` avec les champs suivants :
 
-- `jsonrpc` : La version de JSON-RPC — actuellement, seul `2.0` est pris en charge.
-- `method` : La méthode de l'API ETH. [Voir la référence de l'API.](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
+- `jsonrpc` : La version de JSON-RPC — actuellement, seule la version `2.0` est prise en charge.
+- `method` : La méthode de l'API ETH. [Voir la référence de l'API.](/developers/docs/apis/json-rpc/)
 - `params` : Une liste de paramètres à passer à la méthode.
-- `id` : L'ID de votre requête. Il sera renvoyé par la réponse afin que vous puissiez garder une trace de la requête à laquelle appartient une réponse.
+- `id` : L'ID de votre requête. Sera renvoyé par la réponse afin que vous puissiez garder une trace de la requête à laquelle appartient une réponse.
 
 Voici un exemple que vous pouvez exécuter depuis la ligne de commande pour récupérer le prix du gaz actuel :
 
@@ -59,21 +59,20 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**REMARQUE :** Remplacez [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) par votre propre clé d'API `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
+_**REMARQUE :** Remplacez `https://eth-mainnet.alchemyapi.io/v2/demo` par votre propre clé d'API `https://eth-mainnet.alchemyapi.io/v2/**votre-cle-api`._
 
 **Résultats :**
 
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-
 ## 4. Configurer votre client Web3 {#set-up-your-web3-client}
 
-**Si vous avez un client existant,** remplacez l'URL de votre fournisseur de nœud actuel par une URL Alchemy avec votre clé d'API : `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+**Si vous avez un client existant,** remplacez l'URL de votre fournisseur de nœud actuel par une URL Alchemy avec votre clé d'API : `“https://eth-mainnet.alchemyapi.io/v2/votre-cle-api"`
 
-**_REMARQUE :_** Les scripts ci-dessous doivent être exécutés dans un **contexte Node** ou **enregistrés dans un fichier**, et non exécutés depuis la ligne de commande. Si Node ou npm ne sont pas encore installés, consultez ce [guide de configuration rapide pour Mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
+**_REMARQUE :_** Les scripts ci-dessous doivent être exécutés dans un **contexte Node** ou **enregistrés dans un fichier**, et non exécutés depuis la ligne de commande. Si Node ou npm ne sont pas encore installés, suivez [les instructions d'installation de Node.js](https://nodejs.org/en/download/).
 
-Il existe des tonnes de [bibliothèques Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) que vous pouvez intégrer avec Alchemy, cependant, nous recommandons d'utiliser [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), un remplacement direct pour Web3.js, conçu et configuré pour fonctionner de manière transparente avec Alchemy. Cela offre de multiples avantages tels que des tentatives automatiques et une prise en charge robuste des WebSockets.
+Il existe des tonnes de [bibliothèques Web3](/developers/docs/apis/javascript/) que vous pouvez intégrer avec Alchemy, cependant, nous recommandons d'utiliser [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), un remplacement direct de Web3.js, conçu et configuré pour fonctionner de manière transparente avec Alchemy. Cela offre de multiples avantages tels que des tentatives automatiques et une prise en charge robuste des WebSockets.
 
 Pour installer AlchemyWeb3.js, **accédez au répertoire de votre projet** et exécutez :
 
@@ -89,18 +88,17 @@ yarn add @alch/alchemy-web3
 npm install @alch/alchemy-web3
 ```
 
-Pour interagir avec l'infrastructure de nœuds d'Alchemy, exécutez dans NodeJS ou ajoutez ceci à un fichier JavaScript :
+Pour interagir avec l'infrastructure de nœud d'Alchemy, exécutez dans Node.js ou ajoutez ceci à un fichier JavaScript :
 
 ```js
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(
-  "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
+  "https://eth-mainnet.alchemyapi.io/v2/votre-cle-api"
 )
 ```
-
 ## 5. Écrire votre premier script Web3 ! {#write-your-first-web3-script}
 
-Maintenant, pour mettre la main à la pâte avec un peu de programmation Web3, nous allons écrire un script simple qui affiche le dernier numéro de bloc du réseau principal Ethereum.
+Maintenant, pour mettre les mains dans le cambouis avec un peu de programmation Web3, nous allons écrire un script simple qui affiche le dernier numéro de bloc du réseau principal Ethereum.
 
 **1. Si ce n'est pas déjà fait, dans votre terminal, créez un nouveau répertoire de projet et accédez-y avec cd :**
 
@@ -129,7 +127,7 @@ async function main() {
 main()
 ```
 
-Vous n'êtes pas familier avec les concepts asynchrones ? Consultez cet [article Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c).
+Peu familier avec les concepts asynchrones ? Consultez cet [article Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c).
 
 **4. Exécutez-le dans votre terminal en utilisant node**
 
@@ -145,6 +143,6 @@ The latest block number is 11043912
 
 **Youpi ! Félicitations ! Vous venez d'écrire votre premier script Web3 en utilisant Alchemy 🎉**
 
-Vous ne savez pas quoi faire ensuite ? Essayez de déployer votre premier contrat intelligent et mettez la main à la pâte avec un peu de programmation Solidity dans notre [Guide du contrat intelligent Hello World](https://www.alchemy.com/docs/hello-world-smart-contract), ou testez vos connaissances du tableau de bord avec l'[Application de démonstration du tableau de bord](https://docs.alchemyapi.io/tutorials/demo-app) !
+Vous ne savez pas quoi faire ensuite ? Essayez de déployer votre premier contrat intelligent et mettez les mains dans le cambouis avec un peu de programmation Solidity dans notre [Guide de contrat intelligent Hello World](/developers/tutorials/hello-world-smart-contract/), ou continuez à explorer la [documentation d'Alchemy](https://www.alchemy.com/docs/) pour plus d'exemples.
 
 _[Inscrivez-vous gratuitement sur Alchemy](https://auth.alchemy.com/), consultez notre [documentation](https://www.alchemy.com/docs/), et pour les dernières nouvelles, suivez-nous sur [Twitter](https://twitter.com/AlchemyPlatform)_.

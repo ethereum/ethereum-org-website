@@ -75,7 +75,7 @@ EVM 쿼리 언어(EQL)는 EVM(이더리움 가상 머신) 체인을 쿼리하도
 - [Dune 기초](https://docs.dune.com/#dune-basics)
 - [SubQuery 이더리움 빠른 시작 가이드](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD 네트워크 개요](https://docs.sqd.dev/)
-- [EVM 쿼리 언어](https://eql.sh/blog/alpha-release-notes)
+- [EVM 쿼리 언어](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## 튜토리얼: 데이터 및 분석 / 이더리움의 SQL {#tutorials}
 

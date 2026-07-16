@@ -1,11 +1,11 @@
 ---
 name: page-visual-tests
-description: Playwright + Chromatic full-page visual tests for ethereum.org. Trigger on "add a page to the visual suite", "the snapshot keeps changing", "chromatic pages", "chromatic playwright", or edits to `tests/visual/`, `playwright.visual.config.ts`, or `.github/workflows/chromatic-pages.yml`. Skip for Storybook Chromatic (`chromatic.yml`), e2e (`tests/e2e/`), unit (`tests/unit/`).
+description: Playwright + Chromatic full-page visual tests for ethereum.org. Trigger on "add a page to the visual suite", "the snapshot keeps changing", "chromatic pages", "chromatic playwright", or edits to `tests/visual/`, `playwright.visual.config.ts`, or the `page-visual-tests` job in `.github/workflows/ci.yml`. Skip for Storybook Chromatic (the `visual-tests` job in ci.yml), e2e (`tests/e2e/`), unit (`tests/unit/`).
 ---
 
 # Page Visual Tests (Playwright + Chromatic)
 
-This repo has two Chromatic projects: Storybook (`chromatic.yml` + `pnpm chromatic`) and **page visual tests** (`chromatic-pages.yml` + `pnpm chromatic:pages`). This skill is the second one only.
+This repo has two Chromatic projects: Storybook (the `visual-tests` job in `.github/workflows/ci.yml`, which calls `chromaui/action` directly; `pnpm chromatic` still exists for local runs) and **page visual tests** (the `page-visual-tests` job in ci.yml + `pnpm chromatic:pages`). This skill is the second one only.
 
 The Playwright suite captures DOM archives (not PNGs) per page × viewport; Chromatic re-renders them in the cloud to diff. A green local `pnpm test:visual` just means archives were produced — the diff happens after upload.
 
@@ -14,7 +14,7 @@ The Playwright suite captures DOM archives (not PNGs) per page × viewport; Chro
 - `playwright.visual.config.ts` — visual-only config (3 viewports + `webServer`)
 - `playwright.config.ts` — base (e2e + unit; **no `webServer`**)
 - `tests/visual/pages.spec.ts` — page list + readiness pattern
-- `.github/workflows/chromatic-pages.yml` — CI
+- `.github/workflows/ci.yml` — CI (the `page-visual-tests` job)
 - `src/components/ui/skeleton.tsx`, `src/components/ui/spinner.tsx` — loading primitives
 - `package.json` scripts: `test:visual*`, `chromatic:pages`
 
@@ -28,9 +28,9 @@ The Playwright suite captures DOM archives (not PNGs) per page × viewport; Chro
 
 **Imports come from `@chromatic-com/playwright`, not `@playwright/test`.** The two packages re-export `expect` with skewed types, so `expect(...).toHaveCount(0)` misbehaves — prefer `page.waitForFunction` for the loading wait.
 
-**Environment.** `USE_MOCK_DATA=true` and `NEXT_PUBLIC_BUILD_LOCALES=en` are required at build and test time. Paths in the spec are unprefixed (`/wallets/`, not `/en/wallets/`) because `localePrefix: "as-needed"` serves English at the root — adding `/en` would just trigger a redirect.
+**Environment.** `USE_MOCK_DATA=true` and `NEXT_PUBLIC_BUILD_LOCALES` are required at build and test time. The local `test:visual:build` script sets `NEXT_PUBLIC_BUILD_LOCALES=en`; CI's shared build in ci.yml uses `NEXT_PUBLIC_BUILD_LOCALES: "en,es,zh,ar"` because one build artifact serves the e2e, lighthouse, and visual jobs. Paths in the spec are unprefixed (`/wallets/`, not `/en/wallets/`) because `localePrefix: "as-needed"` serves English at the root — adding `/en` would just trigger a redirect.
 
-**Random ordering: `maybeShuffle`.** Lodash `shuffle` and `.sort(() => Math.random() - 0.5)` flake snapshots independently of loaders. Wrap them with `maybeShuffle` from `src/lib/utils/random.ts` — it returns the list unchanged when `IS_VISUAL_TEST=true`. Current call sites: `wallets.ts`, `apps.ts` (Highlights/Discover/AppOfTheWeek), `useStakingProductsCardGrid.ts`. The env var is exposed to the client bundle via `next.config.js`'s `env` block; without that, `process.env.IS_VISUAL_TEST` evaluates to `undefined` in client components and the shuffle still runs.
+**Random ordering: `safeShuffle`.** Lodash `shuffle` and `.sort(() => Math.random() - 0.5)` flake snapshots independently of loaders. Wrap them with `safeShuffle` from `src/lib/utils/random.ts` — it returns the list unchanged when `IS_VISUAL_TEST=true`. Current call sites: `wallets.ts`, `apps.ts` (Highlights/Discover/AppOfTheWeek), `src/components/Staking/StakingProductsCardGrid/index.tsx`. The env var is exposed to the client bundle via `next.config.js`'s `env` block; without that, `process.env.IS_VISUAL_TEST` evaluates to `undefined` in client components and the shuffle still runs.
 
 **Use `domcontentloaded`, not `networkidle`.** Analytics and background fetches keep the network perpetually busy.
 
@@ -52,6 +52,10 @@ test.describe("Page Visual Tests", () => {
       await page.waitForFunction(
         () => document.querySelectorAll('[data-slot="loading"]').length === 0
       )
+      // FeedbackWidget is dynamic({ ssr: false }); waiting for its button proves
+      // hydration finished and dynamic chunks landed — same pattern other
+      // ssr:false components (Emoji/Twemoji) rely on to render.
+      await page.waitForSelector('[data-testid="feedback-widget-button"]')
       await takeSnapshot(page, testInfo)
     })
   }

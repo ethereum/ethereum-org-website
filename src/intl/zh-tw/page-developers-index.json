@@ -137,5 +137,16 @@
   "page-developers-why-title": "獲得優渥報酬。保持遠端工作。打造未來。",
   "page-developers-why-subtitle": "超過一半的區塊鏈職涯以遠端工作為主，有些估計甚至高達 70%。",
   "page-developers-why-avg-salary-dev": "開發人員平均薪資",
-  "page-developers-why-avg-salary-blockchain": "區塊鏈產業平均薪資"
+  "page-developers-why-avg-salary-blockchain": "區塊鏈產業平均薪資",
+  "page-developers-why-grid-money-heading": "可程式化的金錢",
+  "page-developers-why-grid-money-desc": "撰寫程式碼來定義價值的流動方式、時間和對象。沒有銀行，沒有仲介，只有你定義的邏輯。",
+  "page-developers-why-grid-skills-heading": "經得起未來考驗的技能",
+  "page-developers-why-grid-skills-desc": "學習下一代網際網路的建構基礎。技術可能會演進，但 Web3 的原則將會長存。",
+  "page-developers-why-grid-censorship-heading": "抗審查性",
+  "page-developers-why-grid-censorship-desc": "建置不會被政府、企業或演算法噤聲的專案與商業活動。只要它重要，就會保持上線狀態。",
+  "page-developers-why-grid-sovereignty-heading": "數位主權",
+  "page-developers-why-grid-sovereignty-desc": "在網路上擁有你的身分、資產與創作，而無需依賴那些可以刪除你的平台。",
+  "page-developers-blog-title": "建構者最新動態",
+  "page-developers-blog-desc": "深入了解最新的以太坊建構者資源、工具與發展。",
+  "page-developers-blog-view-all": "檢視所有最新動態"
 }

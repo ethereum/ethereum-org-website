@@ -59,6 +59,6 @@ lang: ur
 
 ## مزید مطالعہ {#further-reading}
 
-- [ایتھیریم <span dir="ltr">IDEs</span>](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy کی ایتھیریم <span dir="ltr">IDEs</span> کی فہرست_
+- [ایتھیریم <span dir="ltr">IDEs</span>](https://www.alchemy.com/dapps/list-of/solidity-developer-tools-on-ethereum) _- Alchemy کی ایتھیریم <span dir="ltr">IDEs</span> کی فہرست_
 
 _کسی ایسی کمیونٹی ریسورس کے بارے میں جانتے ہیں جس نے آپ کی مدد کی ہو؟ اس صفحے میں ترمیم کریں اور اسے شامل کریں!_

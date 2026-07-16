@@ -388,7 +388,7 @@
   "validium-term": "バリディウム",
   "validium-definition": "トランザクションのスループットを向上させるために<a href=\"/glossary/#validity-proof\">有効性証明</a>を使用するオフチェーン・ソリューションです。<a href=\"/glossary/#zk-rollup\">ゼロ知識ロールアップ</a>とは異なり、バリディウムのデータはレイヤー1のメインネットには保存されません。<a href=\"/developers/docs/scaling/validium/\">バリディウムの詳細</a>。",
   "vyper-term": "Vyper",
-  "vyper-definition": "Pythonに似た構文を持つ高水準プログラミング言語です。純粋な関数型言語に近づくことを意図しています。ヴィタリック・ブテリンによって作成されました。<a href=\"/developers/docs/smart-contracts/languages/#vyper\">Vyperの詳細</a>。",
+  "vyper-definition": "Pythonに似た構文を持つ高水準プログラミング言語です。ヴィタリック・ブテリンによって作成されました。<a href=\"/developers/docs/smart-contracts/languages/#vyper\">Vyperの詳細</a>。",
   "wallet-term": "ウォレット",
   "wallet-definition": "ウォレットは、オンライン・マネーの仮想の財布のように、デジタル通貨を保存、送信、受信するためのデジタル・ツールです。<a href=\"/wallets/\">イーサリアム・ウォレットの詳細</a>。",
   "web2-term": "Web2",

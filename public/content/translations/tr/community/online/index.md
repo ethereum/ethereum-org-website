@@ -1,6 +1,6 @@
 ---
-title: Çevrimiçi topluluklar
-description: Ethereum meraklılarının tartışmak ve işbirliği yapmak için bir araya geldiği çevrimiçi forumları, sohbet odalarını ve sosyal medya topluluklarını keşfedin.
+title: "Çevrimiçi topluluklar"
+description: "Ethereum meraklılarının tartışmak ve işbirliği yapmak için bir araya geldiği çevrimiçi forumları, sohbet odalarını ve sosyal medya topluluklarını keşfedin."
 lang: tr
 ---
 
@@ -52,7 +52,7 @@ Bu yönergelere dayanarak bir topluluğun eklenmesi veya kaldırılması gerekti
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - geliştiricilerin, endüstri liderlerinin ve Ethereum meraklılarının takıldığı Web3 yaratıcıları topluluğu. Web3 geliştirme, tasarım ve kültürü konusunda tutkuluyuz. Gelin bizimle inşa edin.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity geliştirme sohbeti (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- soru ve cevap forumu</i></SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- merkeziyetsiz soru ve cevap forumu</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://www.peera.ai/community-forum">Peera Community Forum</Link> <i>- merkeziyetsiz soru ve cevap forumu</i></SocialListItem>
 
 ## YouTube ve X (eski adıyla Twitter) {#youtube-and-twitter}
 

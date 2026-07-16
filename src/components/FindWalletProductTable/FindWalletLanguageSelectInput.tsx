@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { FilterInputState, Lang } from "@/lib/types"
 
@@ -15,8 +15,6 @@ import {
 import { getLanguageCodeName } from "@/lib/utils/intl"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLanguageCountWalletsData } from "@/lib/utils/wallets"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 interface FindWalletLanguageSelectInputProps {
   filterIndex: number
@@ -39,7 +37,7 @@ const FindWalletLanguageSelectInput = ({
   const [searchQuery, setSearchQuery] = useState("")
   const [isSelectOpen, setIsSelectOpen] = useState(false)
   const searchInputRef = useRef<HTMLInputElement>(null)
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
   const languageCountWalletsData = getLanguageCountWalletsData(locale as string)
   const countSortedLanguagesCount = [...languageCountWalletsData].sort(
     (a, b) => b.count - a.count
