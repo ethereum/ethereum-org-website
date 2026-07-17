@@ -2239,6 +2239,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Equious"><img src="https://avatars.githubusercontent.com/u/76449140?v=4?s=100" width="100px;" alt="Equious"/><br /><sub><b>Equious</b></sub></a><br /><a href="#tool-Equious" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://0xheycat.xyz/"><img src="https://avatars.githubusercontent.com/u/81378817?v=4?s=100" width="100px;" alt="0xheycat"/><br /><sub><b>0xheycat</b></sub></a><br /><a href="#content-0xheycat" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
