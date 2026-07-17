@@ -14378,6 +14378,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "nodeflareapp",
+      "name": "NodeFlare",
+      "avatar_url": "https://avatars.githubusercontent.com/u/302281547?v=4",
+      "profile": "https://nodeflare.app",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
