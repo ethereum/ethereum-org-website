@@ -147,6 +147,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [NPM Package](https://www.npmjs.com/package/@veramo/core)
 
+**Moccasin -** **_A fast, Pythonic smart contract development and testing framework for Vyper, built on Titanoboa._**
+
+- [Documentation](https://cyfrin.github.io/moccasin/)
+- [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
