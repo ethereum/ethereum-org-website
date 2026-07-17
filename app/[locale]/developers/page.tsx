@@ -14,7 +14,6 @@ import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
-import CardImage from "@/components/Image/CardImage"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -39,13 +38,14 @@ import { TerminalTypewriter } from "@/components/ui/terminal-typewriter"
 import { getBlogFallbackHero } from "@/lib/utils/blog"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { formatDate, formatDateRange } from "@/lib/utils/date"
+import { formatDate } from "@/lib/utils/date"
 import { getBlogPostsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
 import BuilderCard from "./_components/BuilderCard"
 import BuilderSwiper from "./_components/BuilderSwiper/lazy"
+import HackathonsList from "./_components/HackathonsList"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
@@ -57,10 +57,7 @@ import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-s
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
 import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
 import dogeImage from "@/public/images/doge-computer.png"
-import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
-
-export const revalidate = 86400
 
 const WhyGrid = ({
   items,
@@ -712,65 +709,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             <h2>{t("page-developers-hackathons-title")}</h2>
             <p>{t("page-developers-hackathons-desc")}</p>
 
-            <EdgeScrollContainer>
-              {hackathons.map((event) => {
-                const {
-                  title,
-                  link,
-                  bannerImage,
-                  location,
-                  startTime,
-                  endTime,
-                } = event
-
-                return (
-                  <EdgeScrollItem
-                    key={event.id}
-                    asChild
-                    className={cn(
-                      "ms-4 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]",
-                      "*:max-w-md *:min-w-72 *:flex-1"
-                    )}
-                  >
-                    <Card
-                      href={link}
-                      customEventOptions={{
-                        eventCategory: "hackathons",
-                        eventAction: "click",
-                        eventName: title,
-                      }}
-                      variant="ghost"
-                      size="sm"
-                    >
-                      <CardHeader>
-                        <CardBanner size="sm">
-                          {bannerImage ? (
-                            <CardImage src={bannerImage} />
-                          ) : (
-                            <Image
-                              src={fallbackThumbnail}
-                              alt=""
-                              sizes="276px"
-                            />
-                          )}
-                        </CardBanner>
-                      </CardHeader>
-                      <CardContent>
-                        <CardTitle>{title}</CardTitle>
-                        <CardParagraph variant="subtitle" size="sm">
-                          {formatDateRange(startTime, endTime, locale, {
-                            year: "numeric",
-                          })}
-                        </CardParagraph>
-                        <CardParagraph variant="subtitle" size="sm">
-                          {location}
-                        </CardParagraph>
-                      </CardContent>
-                    </Card>
-                  </EdgeScrollItem>
-                )
-              })}
-            </EdgeScrollContainer>
+            <HackathonsList initial={hackathons} locale={locale} />
 
             <div
               className={cn("flex", hackathons.length > 0 && "justify-center")}
