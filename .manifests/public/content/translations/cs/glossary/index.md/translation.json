@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-06-08T09:36:19.005Z",
+  "englishManifestHash": "4471efb51a1f",
+  "placeholderOrder": [
+    "LINK-75f9aa",
+    "LINK-53ac39",
+    "LINK-e2835f"
+  ],
+  "placeholderMap": {
+    "LINK-75f9aa": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereumbook/ethereumbook"
+      }
+    },
+    "LINK-53ac39": {
+      "type": "link",
+      "values": {
+        "url": "https://aantonop.com/books/mastering-ethereum"
+      }
+    },
+    "LINK-e2835f": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-glossary-terms"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:36:19.005Z",
+      "status": "success"
+    }
+  }
+}

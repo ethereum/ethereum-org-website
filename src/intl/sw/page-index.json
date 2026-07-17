@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Ethereum - Mwongozo kamili kutoka Ethereum.org",
+  "page-index-meta-title": "Ethereum - Mwongozo kamili kutoka ethereum.org",
   "page-index-meta-description": "Ethereum ni jukwaa la kimataifa, lililogatuliwa kwa ajili ya pesa na aina mpya za programu. Kwenye Ethereum, unadhibiti pesa, data na utambulisho wako mwenyewe. Hakuna benki, hakuna mtu wa kati, hakuna ruhusa inayohitajika.",
   "page-index-description": "Jukwaa linaloongoza kwa programu bunifu na mitandao ya mnyororo wa vitalu",
   "page-index-title": "Karibu kwenye Ethereum",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "PROGRAMU ZA ETHEREUM",
   "page-index-carousel-privacy-ethereum-value": "Faragha kwa chaguo-msingi",
   "page-index-carousel-remittances-tag": "MALIPO YA KUVUKA MIPAKA",
-  "page-index-carousel-remittances-title": "Tuma pesa nyumbani ndani ya dakika {minutes}",
+  "page-index-carousel-remittances-title": "Tuma pesa nyumbani ndani ya sekunde {seconds}",
   "page-index-carousel-remittances-subtitle": "Ruka ada ya uhamisho ya {wireFee} na usubiri wa siku {days}+.",
   "page-index-carousel-remittances-description": "Tuma <stablecoinsLink>sarafu thabiti (stablecoins)</stablecoinsLink> kwa mtu yeyote, popote duniani, kwa {txFee} pekee. Wanapokea pesa karibu mara moja.",
   "page-index-carousel-remittances-cta": "Jaribu mwenyewe",
   "page-index-carousel-remittances-traditional-label": "UHAMISHO WA KIELEKTRONIKI",
   "page-index-carousel-remittances-traditional-value": "Siku {min}-{max}",
   "page-index-carousel-remittances-ethereum-label": "ETHEREUM",
-  "page-index-carousel-remittances-ethereum-value": "Dakika {minutes}",
+  "page-index-carousel-remittances-ethereum-value": "Sekunde {seconds}",
   "page-index-carousel-borrowing-tag": "UFIKIAJI WA KIFEDHA",
   "page-index-carousel-borrowing-title": "Kopa bila historia ya mkopo",
   "page-index-carousel-borrowing-subtitle": "Huhitaji alama ya mkopo ili kuanza.",
@@ -79,7 +79,7 @@
   "page-index-features-ownership-description-custody": "ahadi ya utunzaji",
   "page-index-features-ownership-description-2": "Salio lako la Ethereum ni umiliki wa kweli.",
   "page-index-features-ownership-stat": "{volume}+",
-  "page-index-features-ownership-stat-label": "Kiasi cha biashara cha kila siku",
+  "page-index-features-ownership-stat-label": "Kiasi cha biashara cha kila siku (USD)",
   "page-index-features-public-rules-title": "Sheria za umma",
   "page-index-features-public-rules-description": "Msimbo ni wa umma, makubaliano yanatekelezwa kama yalivyoandikwa. Fikiria mashine ya kuuza bidhaa dhidi ya kutumaini keshia atakupa chenji sahihi.",
   "page-index-features-global-title": "Kimataifa",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Mitandao ya faragha na yenye ruhusa",
   "page-index-get-started-enterprise-bullet-3": "Rasilimali za taasisi",
   "page-index-get-started-enterprise-cta": "Gundua biashara",
-  "page-index-simulator-cta": "Jaribu miongozo zaidi"
+  "page-index-simulator-cta": "Jaribu miongozo zaidi",
+  "page-index-latest-updates-title": "Masasisho ya hivi punde ya Ethereum",
+  "page-index-latest-updates-cta": "Tazama zaidi"
 }

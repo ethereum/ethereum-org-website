@@ -7,7 +7,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 import { getLocaleYear } from "@/lib/utils/date"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 function toEventNode(event: EventItem) {
   return {
@@ -63,7 +64,7 @@ export default async function MeetupsJsonLD({
         "@id": url,
         name: t("page-events-meetups-hero-title", { year }),
         description: t("page-events-meta-description", { year }),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

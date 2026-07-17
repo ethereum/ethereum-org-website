@@ -37,13 +37,7 @@ const YouTube = ({
   const params = new URLSearchParams()
   ;+start > 0 && params.set("start", start)
   return (
-    <figure
-      className={cn(
-        "my-8 max-w-[560px]",
-        portrait && "aspect-[9/16] max-h-[420px]",
-        className
-      )}
-    >
+    <figure className={cn(portrait && "aspect-9/16 max-h-105", className)}>
       <LiteYouTubeEmbed
         aspectHeight={portrait ? 16 : 9}
         aspectWidth={portrait ? 9 : 16}

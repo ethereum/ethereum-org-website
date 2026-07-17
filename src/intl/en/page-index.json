@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Ethereum - The complete guide from Ethereum.org",
+  "page-index-meta-title": "Ethereum - The complete guide from ethereum.org",
   "page-index-meta-description": "Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you control your own money, data, and identity. No bank, no middleman, no permission needed.",
   "page-index-description": "The leading platform for innovative apps and blockchain networks",
   "page-index-title": "Welcome to Ethereum",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "ETHEREUM APPS",
   "page-index-carousel-privacy-ethereum-value": "Private by default",
   "page-index-carousel-remittances-tag": "CROSS-BORDER PAYMENTS",
-  "page-index-carousel-remittances-title": "Send money home in {minutes} minutes",
+  "page-index-carousel-remittances-title": "Send money home in {seconds} seconds",
   "page-index-carousel-remittances-subtitle": "Skip the {wireFee} wire fee and the {days}+ day wait.",
   "page-index-carousel-remittances-description": "Send <stablecoinsLink>stablecoins</stablecoinsLink> to anyone, anywhere in the world, for just {txFee}. They receive the funds almost instantly.",
   "page-index-carousel-remittances-cta": "Try it yourself",
   "page-index-carousel-remittances-traditional-label": "WIRE TRANSFER",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} days",
   "page-index-carousel-remittances-ethereum-label": "ETHEREUM",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} minutes",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} seconds",
   "page-index-carousel-borrowing-tag": "FINANCIAL ACCESS",
   "page-index-carousel-borrowing-title": "Borrow without credit history",
   "page-index-carousel-borrowing-subtitle": "You don't need a credit score to get started.",
@@ -79,7 +79,7 @@
   "page-index-features-ownership-description-custody": "custody promise",
   "page-index-features-ownership-description-2": "Your Ethereum balance is true ownership.",
   "page-index-features-ownership-stat": "{volume}+",
-  "page-index-features-ownership-stat-label": "Daily trading volume",
+  "page-index-features-ownership-stat-label": "Daily trading volume (USD)",
   "page-index-features-public-rules-title": "Public rules",
   "page-index-features-public-rules-description": "The code is public, agreements execute exactly as written. Think vending machine versus hoping the cashier gives correct change.",
   "page-index-features-global-title": "Global",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Private & permissioned networks",
   "page-index-get-started-enterprise-bullet-3": "Institutional resources",
   "page-index-get-started-enterprise-cta": "Explore enterprise",
-  "page-index-simulator-cta": "Try more guides"
+  "page-index-simulator-cta": "Try more guides",
+  "page-index-latest-updates-title": "Latest Ethereum updates",
+  "page-index-latest-updates-cta": "View more"
 }

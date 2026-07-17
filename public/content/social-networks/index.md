@@ -3,12 +3,12 @@ title: Decentralized social networks
 description: An overview of decentralized social networks on Ethereum
 lang: en
 template: use-cases
-emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: Blockchain-based platforms for social interaction and content creation and distribution.
-summaryPoint2: Decentralized social media networks protect user privacy and enhance data security.
-summaryPoint3: Tokens and NFTs create new ways to monetize content.
+summaryPoints:
+  - "Blockchain-based platforms for social interaction and content creation and distribution."
+  - "Decentralized social media networks protect user privacy and enhance data security."
+  - "Tokens and NFTs create new ways to monetize content."
 ---
 
 Social networks play a massive role in our daily communications and interactions. However, centralized control of these platforms has created many problems: data breaches, server outages, de-platforming, censorship, and privacy violations are some of the trade-offs social media often make. To combat these issues, developers are building social networks on [Ethereum](/). Decentralized social networks can fix many of the problems of traditional social networking platforms and improve users' overall experience.

@@ -1,21 +1,19 @@
 ---
 title: Mission und Vision
 lang: de
-description: "Mission und Vision des Übersetzungsprogramms von ethereum.org"
+description: Mission und Vision des ethereum.org-Übersetzungsprogramms
 ---
-
-# Mission und Vision {#mission-and-vision}
 
 Die Ethereum-Community strebt danach, global und inklusiv zu sein, doch ein Großteil ihrer Inhalte richtet sich nur an englischsprachige Personen, wodurch die 6 Milliarden nicht-englischsprachigen Menschen weltweit ausgeschlossen werden. Damit ethereum.org als Portal zu Ethereum für die weltweite Community fungieren kann, halten wir es für unerlässlich, nicht-englischsprachigen Personen Ethereum-Inhalte in ihren Muttersprachen zur Verfügung zu stellen.
 
-Das Übersetzungsprogramm von ethereum.org zielt darauf ab, Ethereum für jeden zugänglich zu machen, indem ethereum.org und andere Ethereum-Inhalte in so viele Sprachen wie möglich übersetzt werden.
+Das ethereum.org-Übersetzungsprogramm zielt darauf ab, Ethereum für alle zugänglich zu machen, indem ethereum.org und andere Ethereum-Inhalte in so viele Sprachen wie möglich übersetzt werden.
 
 ## Unsere Mission {#our-mission}
 
-- Bereitstellung übersetzter Versionen der Website, um Besuchern weltweit die Möglichkeit zu geben, in ihrer Muttersprache mehr über Ethereum zu erfahren
+- Bereitstellung übersetzter Versionen der Website, um Besuchern weltweit zu ermöglichen, in ihrer Muttersprache mehr über Ethereum zu erfahren
 - Erleichterung des Onboardings weiterer Mitglieder in die globale Ethereum-Community
-- Ermöglichung eines zugänglicheren und inklusiveren Austauschs von Informationen und Wissen über Ethereum
-- Befähigung von Community-Mitgliedern, Übersetzungen zu Ethereum beizutragen und das Ökosystem aktiv mitzugestalten
+- Ermöglichung eines zugänglicheren und inklusiveren Austauschs von Ethereum-Informationen und -Wissen
+- Befähigung von Community-Mitgliedern, Übersetzungen zu Ethereum beizutragen und das Ökosystem mitzugestalten
 - Identifizierung, Vernetzung und Anleitung von leidenschaftlichen Mitwirkenden, die sich im Ökosystem engagieren möchten
 
 ## Unsere Vision {#our-vision}

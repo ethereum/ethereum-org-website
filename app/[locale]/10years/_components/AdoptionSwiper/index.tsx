@@ -30,14 +30,15 @@ const AdoptionSwiper = ({
           return (
             <SwiperSlide key={title}>
               <div
-                className={cn("h-full rounded-2xl p-8", adoptionStyles[index])}
+                className={cn("h-full rounded-base p-8", adoptionStyles[index])}
               >
                 <Image
                   src={image}
                   alt={title}
                   className="mx-auto mb-4 h-36 object-contain"
+                  sizes="256px"
                 />
-                <h3 className="mb-4 text-2xl font-bold">{title}</h3>
+                <h3 className="mb-4 text-2xl">{title}</h3>
                 <p className="mb-8">
                   <Translation
                     id={`page-10-year-adoption-card-${index + 1}-description`}

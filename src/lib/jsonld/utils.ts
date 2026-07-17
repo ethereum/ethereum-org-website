@@ -1,8 +1,8 @@
 import * as Sentry from "@sentry/nextjs"
 
-import { REFERENCE } from "./constants"
 import { KNOWN_ORGANIZATIONS } from "./organizations"
 import { KNOWN_PERSONS } from "./persons"
+import { REFERENCE } from "./references"
 import type { KnownEntity } from "./types"
 
 /**
@@ -68,10 +68,24 @@ function buildEntityAliases(): Record<string, KnownEntity> {
 }
 
 /**
+ * Resolve entity name(s) into known entities via the alias map. Matches
+ * against both KNOWN_PERSONS and KNOWN_ORGANIZATIONS by profile key,
+ * display name, or GitHub handle. Accepts a single string or an array;
+ * values that don't resolve are dropped.
+ */
+export function resolveKnownEntities(
+  values?: string | string[]
+): KnownEntity[] {
+  const list = !values ? [] : Array.isArray(values) ? values : [values]
+  return list
+    .map((v): KnownEntity | null => ENTITY_ALIASES[v.toLowerCase()] ?? null)
+    .filter((e): e is KnownEntity => e !== null)
+}
+
+/**
  * Resolve frontmatter author field(s) into JSON-LD @graph nodes and @id
- * references. Matches against both KNOWN_PERSONS and KNOWN_ORGANIZATIONS
- * by profile key, display name, or GitHub handle. Handles both the
- * `authors` array and legacy singular `author` string.
+ * references. Handles both the `authors` array and legacy singular
+ * `author` string.
  *
  * Falls back to the community organization reference when nothing
  * resolves.
@@ -80,10 +94,7 @@ export function resolveAuthorsFromFrontmatter(authors?: string | string[]): {
   authorGraphNodes: KnownEntity[]
   authorIds: Array<{ "@id": string }>
 } {
-  const values = !authors ? [] : Array.isArray(authors) ? authors : [authors]
-  const entities = values
-    .map((v): KnownEntity | null => ENTITY_ALIASES[v.toLowerCase()] ?? null)
-    .filter((e): e is KnownEntity => e !== null)
+  const entities = resolveKnownEntities(authors)
 
   return {
     authorGraphNodes: entities,

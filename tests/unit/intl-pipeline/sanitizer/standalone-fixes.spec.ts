@@ -9,6 +9,7 @@ import { _testOnly } from "@/scripts/intl-pipeline/intl-sanitizer"
 
 const {
   fixDuplicatedHeadings,
+  fixDuplicateHeadingBlocks,
   fixBrokenMarkdownLinks,
   fixEscapedBoldAndItalic,
   fixAsciiGuillemets,
@@ -27,6 +28,7 @@ const {
   splitIntoBlocks,
   fixBackslashBeforeClosingTag,
   fixAsymmetricBackticks,
+  fixEmptyHeadingAnchors,
   fixJunkAfterHeadingAnchors,
   fixBacktickWrappedLinks,
   fixMissingLinkParentheses,
@@ -61,6 +63,10 @@ const {
   fixUnitOutsideSpan,
   fixMisalignedCodeFences,
   convertSpansToJsonBidi,
+  fixUnclosedParagraphTags,
+  fixFullwidthParensInLinks,
+  fixDroppedAutolinkClose,
+  fixHyphenatedInterfaceIdentifiers,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -394,6 +400,107 @@ test.describe("Standalone Fixes", () => {
     test("does not escape backslash-escaped < before single digit", () => {
       const input = "do the same in \\<10 minutes"
       const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("escapes < before a fullwidth paren", () => {
+      const input = "uint256の「より小さい（<）」"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe("uint256の「より小さい（&lt;）」")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not escape < before a space (a < b)", () => {
+      const input = "if a < b then"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not escape valid tags or <_ <$ starts", () => {
+      const input = "<div>x</p> <_x <$x"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not escape fullwidth-paren < inside code blocks", () => {
+      const input = "```\n（<）\n```"
+      const { content, fixCount } = escapeMdxAngleBrackets(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixUnclosedParagraphTags", () => {
+    test("restores dropped </p> when next non-blank line is a tag", () => {
+      const input =
+        '<AlertContent>\n<p className="mt-0"><strong>Buono a sapersi</strong>\n<p className="mt-2">Gli agenti IA...</p>\n</AlertContent>'
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(
+        '<AlertContent>\n<p className="mt-0"><strong>Buono a sapersi</strong></p>\n<p className="mt-2">Gli agenti IA...</p>\n</AlertContent>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves a balanced single-line <p>...</p> unchanged", () => {
+      const input = '<p className="mt-0"><strong>Already closed</strong></p>'
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a multi-line <p> whose next line is prose", () => {
+      const input = "<p>This paragraph continues\non the next line.</p>"
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input = "```html\n<p>unclosed\n<div>next</div>\n```"
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixFullwidthParensInLinks", () => {
+    test("fixes fullwidth ) closing an autolink markdown link", () => {
+      const input =
+        "[堆栈](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>）"
+      const { content, fixCount } = fixFullwidthParensInLinks(input)
+      expect(content).toBe(
+        "[堆栈](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>)"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes fullwidth ) closing a simple markdown link", () => {
+      const input = "see [docs](https://example.org/page）here"
+      const { content, fixCount } = fixFullwidthParensInLinks(input)
+      expect(content).toBe("see [docs](https://example.org/page)here")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves a normal link unchanged", () => {
+      const input = "[x](https://y)"
+      const { content, fixCount } = fixFullwidthParensInLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a fullwidth ) in prose unchanged", () => {
+      const input = "これは（注釈）です"
+      const { content, fixCount } = fixFullwidthParensInLinks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = "```\n[x](https://y）\n```"
+      const { content, fixCount } = fixFullwidthParensInLinks(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
@@ -1775,41 +1882,34 @@ author: Ori Pomerantz
   })
 
   test.describe("fixKnownBrandGarbles", () => {
-    test("fixes GitHub garble to Latin without locale (fallback)", () => {
+    test("fixes GitHub garble to canonical Latin form", () => {
       const input = "- [يجتبه](https://github.com/alchemyplatform)"
       const { content, fixCount } = fixKnownBrandGarbles(input)
       expect(content).toBe("- [GitHub](https://github.com/alchemyplatform)")
       expect(fixCount).toBe(1)
     })
 
-    test("fixes GitHub garble to Arabic transliteration with ar locale", () => {
-      const input = "- [يجتبه](https://github.com/alchemyplatform)"
-      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
-      expect(content).toBe("- [غيت هاب](https://github.com/alchemyplatform)")
-      expect(fixCount).toBe(1)
-    })
-
-    test("fixes multiple GitHub garbles with locale", () => {
+    test("fixes multiple GitHub garbles", () => {
       const input =
         "- [يجتبه](https://github.com/foo)\n- [يجتبه](https://github.com/bar)"
-      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      const { content, fixCount } = fixKnownBrandGarbles(input)
       expect(content).toBe(
-        "- [غيت هاب](https://github.com/foo)\n- [غيت هاب](https://github.com/bar)"
+        "- [GitHub](https://github.com/foo)\n- [GitHub](https://github.com/bar)"
       )
       expect(fixCount).toBe(2)
     })
 
-    test("fixes Solidity garble to Arabic transliteration in tags", () => {
+    test("fixes Solidity garble in tags to canonical Latin", () => {
       const input = 'tags: ["الصلابة", "Waffle", "الاختبار"]'
-      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
-      expect(content).toBe('tags: ["سوليديتي", "Waffle", "الاختبار"]')
+      const { content, fixCount } = fixKnownBrandGarbles(input)
+      expect(content).toBe('tags: ["Solidity", "Waffle", "الاختبار"]')
       expect(fixCount).toBe(1)
     })
 
-    test("fixes Solidity garble to Arabic transliteration in prose", () => {
+    test("fixes Solidity garble in prose to canonical Latin", () => {
       const input = "يمكنك كتابة العقود الذكية باستخدام الصلابة"
-      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
-      expect(content).toBe("يمكنك كتابة العقود الذكية باستخدام سوليديتي")
+      const { content, fixCount } = fixKnownBrandGarbles(input)
+      expect(content).toBe("يمكنك كتابة العقود الذكية باستخدام Solidity")
       expect(fixCount).toBe(1)
     })
 
@@ -1822,7 +1922,7 @@ author: Ori Pomerantz
 
     test("skips code blocks", () => {
       const input = "```\nيجتبه\n```"
-      const { content, fixCount } = fixKnownBrandGarbles(input, "ar")
+      const { content, fixCount } = fixKnownBrandGarbles(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
@@ -2407,10 +2507,10 @@ author: Ori Pomerantz
   test.describe("fixEscapedQuotesInJsxAttributes", () => {
     test("removes backslash-escaped quotes in JSX attributes", () => {
       const input =
-        '<ButtonLink variant=\\"outline-color\\" href=\\"/roadmap/danksharding/\\">Zaidi</ButtonLink>'
+        '<ButtonLink variant=\\"outline\\" href=\\"/roadmap/danksharding/\\">Zaidi</ButtonLink>'
       const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
       expect(content).toBe(
-        '<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Zaidi</ButtonLink>'
+        '<ButtonLink variant="outline" href="/roadmap/danksharding/">Zaidi</ButtonLink>'
       )
       expect(fixCount).toBeGreaterThan(0)
     })
@@ -3020,6 +3120,202 @@ author: Ori Pomerantz
       const { content, fixCount } = fixMisalignedCodeFences(input)
       expect(content).toBe("    ~~~sh\n    cmd\n    ~~~")
       expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixDuplicateHeadingBlocks", () => {
+    test("removes an anchor-less ghost heading block before its anchored twin", () => {
+      const input =
+        "Intro paragraph.\n\n## Skalierung\n\nGhost paragraph.\n\n## Skalierung neu {#scale}\n\nReal paragraph."
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(
+        "Intro paragraph.\n\n## Skalierung neu {#scale}\n\nReal paragraph."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles a ghost heading directly followed by the anchored twin", () => {
+      const input = "## FAQ\n## Häufig gestellte Fragen {#faq}\n\nBody."
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe("## Häufig gestellte Fragen {#faq}\n\nBody.")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves clean anchored headings unchanged", () => {
+      const input =
+        "## One {#one}\n\nA paragraph.\n\n## Two {#two}\n\nAnother paragraph."
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a lone anchor-less heading untouched (no anchored same-level twin)", () => {
+      // Next heading is a different level -> not a ghost twin; needs an anchor
+      // ADDED by syncHeaderIdsWithEnglish, not removal here.
+      const input = "## Lonely\n\npara\n\n### Sub {#sub}\n\nmore"
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("ignores heading-like lines inside code fences", () => {
+      const input =
+        "## Real {#real}\n\npara\n\n```md\n## not a heading\nmore\n```"
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not delete across a code fence between ghost and twin", () => {
+      const input =
+        "## Ghost\n\n```text\n## fake\n```\n\n## Ghost real {#ghost}\n\nbody"
+      const { content, fixCount } = fixDuplicateHeadingBlocks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixEmptyHeadingAnchors", () => {
+    test("strips an empty {#} anchor from an h5 heading", () => {
+      const { content, fixCount } = fixEmptyHeadingAnchors(
+        "##### Operating system {#}"
+      )
+      expect(content).toBe("##### Operating system")
+      expect(fixCount).toBe(1)
+    })
+
+    test("strips only the empty anchor among mixed headings", () => {
+      const input =
+        "## Intro {#intro}\n\nsome text\n\n##### Operating system {#}\n\n### Done {#done}"
+      const { content, fixCount } = fixEmptyHeadingAnchors(input)
+      expect(content).toBe(
+        "## Intro {#intro}\n\nsome text\n\n##### Operating system\n\n### Done {#done}"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves non-empty anchors untouched", () => {
+      const input = "### Real heading {#real-id}"
+      const { content, fixCount } = fixEmptyHeadingAnchors(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves an empty {#} inside a code fence untouched", () => {
+      const input = "```md\n##### Operating system {#}\n```"
+      const { content, fixCount } = fixEmptyHeadingAnchors(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("strips an empty anchor with inner whitespace {# }", () => {
+      const { content, fixCount } = fixEmptyHeadingAnchors("## Title {# }")
+      expect(content).toBe("## Title")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixDroppedAutolinkClose", () => {
+    test("restores a dropped > on a wiki autolink ending in )", () => {
+      const input =
+        "[Stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type))"
+      const { content, fixCount } = fixDroppedAutolinkClose(input)
+      expect(content).toBe(
+        "[Stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>)"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("restores a dropped > with locale text glued after", () => {
+      const input = "[Set](<https://en.wikipedia.org/wiki/Set_(mathematics)인"
+      const { content, fixCount } = fixDroppedAutolinkClose(input)
+      expect(content).toBe(
+        "[Set](<https://en.wikipedia.org/wiki/Set_(mathematics)>)인"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("restores a dropped > on a minesweeper autolink", () => {
+      const input =
+        "[Minesweeper](<https://en.wikipedia.org/wiki/Minesweeper_(video_game))"
+      const { content, fixCount } = fixDroppedAutolinkClose(input)
+      expect(content).toBe(
+        "[Minesweeper](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>)"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("converts a fullwidth close paren after the autolink to ASCII", () => {
+      const input =
+        "[Stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>）"
+      const { content, fixCount } = fixDroppedAutolinkClose(input)
+      expect(content).toBe(
+        "[Stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>)"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves a correct autolink unchanged", () => {
+      const input =
+        "[Stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>)"
+      const { content, fixCount } = fixDroppedAutolinkClose(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a normal markdown link unchanged", () => {
+      const input = "[home](https://ethereum.org)"
+      const { content, fixCount } = fixDroppedAutolinkClose(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a fullwidth paren in ordinary prose unchanged", () => {
+      const input = "이것은（예시）입니다."
+      const { content, fixCount } = fixDroppedAutolinkClose(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips a broken autolink inside a code fence", () => {
+      const input =
+        "```\n[Stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type))\n```"
+      const { content, fixCount } = fixDroppedAutolinkClose(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixHyphenatedInterfaceIdentifiers", () => {
+    test("reverts IERC-165 to IERC165 in an import statement", () => {
+      const input =
+        'import { IERC-165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";'
+      const { content, fixCount } = fixHyphenatedInterfaceIdentifiers(input)
+      expect(content).toBe(
+        'import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("reverts other hyphenated interface identifiers", () => {
+      const input = "IERC-20, IERC-721, IERC-1155"
+      const { content, fixCount } = fixHyphenatedInterfaceIdentifiers(input)
+      expect(content).toBe("IERC20, IERC721, IERC1155")
+      expect(fixCount).toBe(3)
+    })
+
+    test("leaves a correct interface identifier unchanged", () => {
+      const input = "IERC165 is the introspection interface"
+      const { content, fixCount } = fixHyphenatedInterfaceIdentifiers(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch the standard ERC-165 name in prose", () => {
+      const input = "ERC-165 and ERC-20 are token standards"
+      const { content, fixCount } = fixHyphenatedInterfaceIdentifiers(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
     })
   })
 })

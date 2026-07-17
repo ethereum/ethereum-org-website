@@ -8,79 +8,79 @@ lang: tr
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-İş ispatı artık Ethereum'un mutabakat mekanizmasının bir parçası değil, yani madencilik kapatıldı. Bunun yerine Ethereum, ETH hisseleyen doğrulayıcılar tarafından güvence altına alınır. ETH'nizi hisselemeye bugün başlayabilirsiniz. <a href='/roadmap/merge/'>Birleşim</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>hisse ispatı </a> ve <a href='/staking/'>hisseleme</a> hakkında daha fazla bilgi edinin. Bu sayfa sadece tarihsel ilgi içindir.
+İş Kanıtı (PoW) artık Ethereum'un mutabakat mekanizmasının temelini oluşturmuyor, bu da madenciliğin kapatıldığı anlamına geliyor. Bunun yerine, [Ethereum](/), ETH stake eden doğrulayıcılar tarafından güvence altına alınmaktadır. Bugün ETH'nizi stake etmeye başlayabilirsiniz. <a href='/roadmap/merge/'>Birleşme</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>Hisse Kanıtı (PoS)</a> ve <a href='/staking/'>staking</a> hakkında daha fazla bilgi edinin. Bu sayfa yalnızca tarihsel ilgi amaçlıdır.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Ön Koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamak için öncelikle [işlemler](/developers/docs/transactions/), [bloklar](/developers/docs/blocks/) ve [iş ispatı](/developers/docs/consensus-mechanisms/pow/) hakkında bilgi edinmenizi öneririz.
+Bu sayfayı daha iyi anlamak için öncelikle [işlemler](/developers/docs/transactions/), [bloklar](/developers/docs/blocks/) ve [İş Kanıtı (PoW)](/developers/docs/consensus-mechanisms/pow/) hakkında okuma yapmanızı öneririz.
 
 ## Ethereum madenciliği nedir? {#what-is-ethereum-mining}
 
-Madencilik, Ethereum'un artık kullanımdan kaldırdığı iş ispatı mimarisinde Ethereum blok zincirine eklenecek bir işlem blokunu oluşturma sürecidir.
+Madencilik, Ethereum'un artık kullanımdan kaldırılmış İş Kanıtı (PoW) mimarisinde Ethereum Blokzincirine eklenecek bir işlem bloğu oluşturma sürecidir.
 
-Madencilik kelimesi, kripto para birimleri için altın analojisinden gelmektedir. Dijital token'lar da tıpkı altın ya da diğer kıymetli metaller gibi sınırlı bulunur ve bir iş ispatı sistemindeki toplam hacmi artırmanın tek yolu madenciliktir. İş ispatına dayalı Ethereum'da tek ihraç şekli madencilik yoluyla yapıldı. Ancak altın analojisinden farklı olarak madencilik; blok zincirde bloklar oluşturarak, doğrulayarak, yayımlayarak ve yayarak ağı güvence altına almanın bir yoludur.
+Madencilik kelimesi, kripto paralar için kullanılan altın analojisi bağlamından gelmektedir. Altın veya değerli metaller kıttır, dijital tokenlar da öyledir ve bir İş Kanıtı (PoW) sisteminde toplam hacmi artırmanın tek yolu madenciliktir. İş Kanıtı (PoW) Ethereum'da tek ihraç yöntemi madencilikti. Ancak altın veya değerli metallerin aksine, Ethereum madenciliği aynı zamanda Blokzincirde bloklar oluşturarak, doğrulayarak, yayınlayarak ve yayarak ağı güvence altına almanın da yoluydu.
 
-Ether madenciliği = Ağ Güvenliği
+Ether madenciliği = Ağı Güvence Altına Almak
 
-Madencilik herhangi bir iş ispatına dayalı blok zincir modelinin can damarıdır. Ethereum madencileri - yazılımı çalıştıran bilgisayarlar - hisse ispatına geçmeden önce işlemleri işlemek ve bloklar üretmek için zamanlarını ve hesaplama güçlerini kullandılar.
+Madencilik, herhangi bir İş Kanıtı (PoW) Blokzincirinin can damarıdır. Ethereum madencileri (yazılım çalıştıran bilgisayarlar), Hisse Kanıtı (PoS) sistemine geçişten önce işlemleri işlemek ve bloklar üretmek için zamanlarını ve hesaplama güçlerini kullandılar.
 
 ## Madenciler neden var? {#why-do-miners-exist}
 
-Ethereum gibi merkeziyetsiz sistemlerde, herkesin işlemlerin sırası konusunda anlaşmasını sağlamalıyız. Madenciler, ağı saldırılardan korumanın bir yolu olarak hizmet veren bloklar üretmek için hesaplama açısından zor bulmacaları çözerek bunun gerçekleşmesine yardımcı oldular.
+Ethereum gibi merkeziyetsiz sistemlerde, herkesin işlemlerin sırası konusunda hemfikir olduğundan emin olmamız gerekir. Madenciler, bloklar üretmek için hesaplama açısından zor bulmacaları çözerek ve ağı saldırılara karşı güvence altına alarak bunun gerçekleşmesine yardımcı oldular.
 
-[İş ispatı hakkında daha fazlası](/developers/docs/consensus-mechanisms/pow/)
+[İş Kanıtı (PoW) hakkında daha fazlası](/developers/docs/consensus-mechanisms/pow/)
 
-Daha önceleri herhangi bir kişi bilgisayarını kullanarak Ethereum ağında madencilik yapabiliyordu. Ancak herkes kârlı şekilde Ether (ETH) madenciliği yapamazdı. Birçok durumda madencilerin bu konuya özelleşmiş bilgisayar donanımları almaları ve ucuz enerji kaynaklarına erişimlerinin olması gerekiyordu. Ortalama bir bilgisayarın madencilikle ilgili maliyetleri karşılamaya yetecek kadar blok ödülü kazanması pek olası değildi.
+Daha önce herkes bilgisayarını kullanarak Ethereum ağında madencilik yapabiliyordu. Ancak herkes kârlı bir şekilde Ether (ETH) madenciliği yapamıyordu. Çoğu durumda, madencilerin özel bilgisayar donanımı satın almaları ve ucuz enerji kaynaklarına erişimleri olması gerekiyordu. Ortalama bir bilgisayarın, madencilikle ilişkili maliyetleri karşılayacak kadar blok ödülü kazanması pek olası değildi.
 
 ### Madencilik maliyeti {#cost-of-mining}
 
-- Bir madencilik teçhizatı inşa etmek ve yürütmek için gerekli donanımların potansiyel maliyeti
-- Madencilik teçhizatına güç vermenin elektriksel maliyeti
-- Bir havuzda madencilik yapıyorsanız, madencilik havuzları genelde havuz tarafından üretilen her blok için sabit bir yüzdelik ödeme alırlar
-- Madencilik teçhizatını desteklemek için gereken ekipmanların potansiyel maliyeti (havalandırma, enerji takibi, elektrik tesisatı vb.)
+- Bir madencilik teçhizatı kurmak ve sürdürmek için gerekli donanımın potansiyel maliyetleri
+- Madencilik teçhizatına güç sağlamanın elektrik maliyeti
+- Eğer bir havuzda madencilik yapıyorsanız, bu havuzlar genellikle havuz tarafından üretilen her bloktan sabit bir % ücret alırdı
+- Madencilik teçhizatını destekleyecek ekipmanların potansiyel maliyeti (havalandırma, enerji izleme, elektrik tesisatı vb.)
 
-Madencilik kârlılığını daha ayrıntılı incelemek için [Etherscan](https://etherscan.io/ether-mining-calculator) tarafından sağlanan gibi bir madencilik hesaplayıcısı kullanın.
+Madencilik kârlılığını daha fazla incelemek için, [Etherscan](https://etherscan.io/ether-mining-calculator) tarafından sağlanan gibi bir madencilik hesaplayıcısı kullanın.
 
 ## Ethereum işlemleri nasıl kazılırdı {#how-ethereum-transactions-were-mined}
 
-Aşağıda Ethereum iş ispatında işlemler için nasıl madencilik yapıldığına dair bir genel bakış verilmektedir. Bu sürecin Ethereum hisse ispatı için benzer bir açıklaması [burada](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos) bulunabilir.
+Aşağıda, Ethereum İş Kanıtı (PoW) sisteminde işlemlerin nasıl kazıldığına dair bir genel bakış sunulmaktadır. Ethereum Hisse Kanıtı (PoS) için bu sürecin benzer bir açıklaması [burada](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos) bulunabilir.
 
-1. Bir kullanıcı, bir [hesabın](/developers/docs/accounts/) özel anahtarı ile bir [işlem](/developers/docs/transactions/) talebi yazar ve imzalar.
-2. Kullanıcı, işlem talebini bir [düğümden](/developers/docs/nodes-and-clients/) tüm Ethereum ağına yayınlar.
-3. Ethereum ağındaki her düğüm, yeni işlem talebini duyduktan sonra talebi, duydukları ve henüz bir blokta blok zincirine taahhüt edilmemiş tüm işlem isteklerinin bir listesi olan yerel bellek havuzuna ekler.
-4. Bir noktada, bir madencilik düğümü, blok gaz limitinin altında kalırken kazandıkları [işlem ücretlerini](/developers/docs/gas/) en üst düzeye çıkaracak şekilde birkaç düzine veya yüz işlem talebini potansiyel bir [blokta](/developers/docs/blocks/) toplar. Madencilik düğümü daha sonra:
-   1. Her işlem talebinin geçerliliğini doğrular (yani, hiç kimsenin imza oluşturmadığı bir hesaptan ether aktarmaya çalışmaması, talebin hatalı biçimlendirilmemesi vb.) ve sonra talebin kodunu yürüterek Ethereum Sanal Makinesi'nin (EVM) yerel kopyasının durumunu değiştirir. Madenci, bu tür her bir işlem talebinin işlem ücretini kendi hesabına aktarır.
-   2. Bloktaki tüm işlem talepleri doğrulandıktan ve yerel EVM kopyasında yürütüldükten sonra, potansiyel blok için iş ispatı "meşruiyet sertifikası" üretme sürecine başlar.
-5. Sonunda bir madenci, belirli işlem talebimizi içeren bir blok için sertifika üretmeyi tamamlar. Madenci daha sonra, talep edilen yeni EVM durumunun sertifikasını ve sağlama toplamını içeren tamamlanmış bloğu yayınlar.
-6. Diğer düğümler yeni bloğu duyar. Sertifikayı doğrularlar, bloktaki tüm işlemleri kendileri yürütürler (başlangıçta kullanıcımız tarafından yayınlanan işlem dahil) ve tüm işlemlerin yürütülmesinden sonra yeni EVM durumlarının sağlama toplamının, madenci bloğu tarafından talep edilen durumun sağlama toplamı ile eşleştiğini doğrularlar. Ancak o zaman bu düğümler bu bloğu blok zincirlerinin kuyruğuna ekler ve yeni EVM durumunu kurallı durum olarak kabul eder.
-7. Her düğüm, yeni bloktaki tüm işlemleri, yerine getirilmemiş işlem taleplerinin yerel bellek havuzlarından kaldırır.
-8. Ağa katılan yeni düğümler, ilgilendiğimiz işlemi içeren blok da dahil olmak üzere tüm blokları sırayla indirir. Yerel bir EVM kopyasını başlatırlar (boş durumlu bir EVM olarak başlar) ve ardından yol boyunca her blokta durum sağlama toplamlarını doğrulayarak yerel EVM kopyalarının üzerindeki her bloktaki her işlemi yürütme sürecinden geçerler.
+1. Bir kullanıcı, bir [Hesabın](/developers/docs/accounts/) özel anahtarı ile bir [işlem](/developers/docs/transactions/) talebi yazar ve imzalar.
+2. Kullanıcı, işlem talebini bir [Düğüm](/developers/docs/nodes-and-clients/) üzerinden tüm Ethereum ağına yayınlar.
+3. Yeni işlem talebini duyan Ethereum ağındaki her Düğüm, talebi yerel bellek havuzuna (henüz Blokzincirde bir bloğa işlenmemiş, duydukları tüm işlem taleplerinin bir listesi) ekler.
+4. Bir noktada, bir madenci Düğümü, blok gaz limitinin altında kalırken kazandığı [işlem ücretlerini](/developers/docs/gas/) en üst düzeye çıkaracak şekilde birkaç düzine veya yüzlerce işlem talebini potansiyel bir [Blok](/developers/docs/blocks/) içinde bir araya getirir. Madenci Düğümü daha sonra:
+   1. Her işlem talebinin geçerliliğini doğrular (örneğin, kimsenin imza üretmediği bir Hesaptan Ether transfer etmeye çalışmadığını, talebin hatalı biçimlendirilmediğini vb. kontrol eder) ve ardından talebin kodunu yürüterek EVM'nin yerel kopyasının durumunu değiştirir. Madenci, bu tür her işlem talebi için işlem ücretini kendi Hesabına ödül olarak ekler.
+   2. Bloktaki tüm işlem talepleri doğrulandıktan ve yerel EVM kopyasında yürütüldükten sonra, potansiyel blok için İş Kanıtı (PoW) "meşruiyet sertifikası" üretme sürecine başlar.
+5. Sonunda bir madenci, belirli işlem talebimizi içeren bir blok için sertifika üretmeyi bitirir. Madenci daha sonra sertifikayı ve iddia edilen yeni EVM durumunun bir sağlama toplamını (checksum) içeren tamamlanmış bloğu yayınlar.
+6. Diğer Düğümler yeni bloğu duyar. Sertifikayı doğrularlar, bloktaki tüm işlemleri (kullanıcımız tarafından ilk yayınlanan işlem dahil) kendileri yürütürler ve tüm işlemlerin yürütülmesinden sonraki yeni EVM durumlarının sağlama toplamının, madencinin bloğu tarafından iddia edilen durumun sağlama toplamıyla eşleştiğini doğrularlar. Ancak o zaman bu Düğümler bu bloğu Blokzincirlerinin sonuna ekler ve yeni EVM durumunu kurallı (canonical) durum olarak kabul ederler.
+7. Her Düğüm, yeni bloktaki tüm işlemleri, yerine getirilmemiş işlem taleplerinin bulunduğu yerel bellek havuzundan çıkarır.
+8. Ağa katılan yeni Düğümler, ilgilendiğimiz işlemi içeren blok da dahil olmak üzere tüm blokları sırayla indirir. Yerel bir EVM kopyası başlatırlar (bu, boş durumlu bir EVM olarak başlar) ve ardından yerel EVM kopyalarının üzerinde her bloktaki her işlemi yürütme sürecinden geçerler ve yol boyunca her blokta durum sağlama toplamlarını doğrularlar.
 
-Her işlem bir kez madencilik sürecinden geçer (yeni bir bloka dahil edilir ve ilk kez yayılır) ancak kurallı Ethereum Sanal Makinesi durumunu geliştirme sürecinde her katılımcı tarafından yürütülür ve doğrulanır. Bu, blokzincirin temel mantralarından birini vurgular: **Güvenme, doğrula**.
+Her işlem bir kez kazılır (yeni bir bloğa dahil edilir ve ilk kez yayılır), ancak kurallı EVM durumunu ilerletme sürecinde her katılımcı tarafından yürütülür ve doğrulanır. Bu, Blokzincirin temel mantralarından birini vurgular: **Güvenme, doğrula**.
 
 ## Ommer (amca) blokları {#ommer-blocks}
 
-İş ispatında blok madenciliği olasılıksaldır, bu da bazen ağ gecikmesi nedeniyle aynı anda iki geçerli blokun ağda yayımlandığı anlamına gelir. Bu durumda protokol, önerilen dahil edilmemiş geçerli bloku kısmen ödüllendirerek madencilere karşı adaleti sağlarken en uzun (yani en "geçerli") zinciri belirlemek zorundaydı. Bu, daha fazla gecikmeyle karşı karşıya kalabilecek daha küçük madencilerin yine de [ommer](/glossary/#ommer) blok ödülleri aracılığıyla getiri sağlayabildikleri için ağın daha fazla merkezsizleştirilmesini teşvik etti.
+İş Kanıtı (PoW) üzerinde blok madenciliği olasılıksaldı, yani bazen ağ gecikmesi nedeniyle iki geçerli blok aynı anda yayınlanabiliyordu. Bu durumda Protokol, önerilen ancak dahil edilmeyen geçerli bloğu kısmen ödüllendirerek madencilere karşı adaleti sağlarken en uzun (ve dolayısıyla en "geçerli") Zinciri belirlemek zorundaydı. Bu, daha fazla gecikmeyle karşılaşabilecek daha küçük madencilerin [ommer (amca) bloğu](/glossary/#ommer) ödülleri aracılığıyla hala getiri elde edebilmesi sayesinde ağın daha fazla merkeziyetsizliğini teşvik etti.
 
-"Ommer" terimi, bir ebeveyn bloğunun kardeşi için tercih edilen, cinsiyetten bağımsız bir terimdir ancak buna bazen "amca" da denir. **Ethereum'un hisse ispatına geçişinden bu yana, her yuvada yalnızca bir teklif sahibi seçildiği için ommer blokları artık kazılmamaktadır**. Bu değişikliği, kazılmış ommer bloklarının [tarihsel grafiğine](https://ycharts.com/indicators/ethereum_uncle_rate) bakarak görebilirsiniz.
+"Ommer" terimi, bir ebeveyn bloğun kardeşi için tercih edilen cinsiyetsiz bir terimdir, ancak buna bazen "amca" (uncle) da denir. **Ethereum'un Hisse Kanıtı (PoS) sistemine geçişinden bu yana, her slotta yalnızca bir teklif edici seçildiği için ommer (amca) blokları artık kazılmamaktadır.** Kazılan ommer (amca) bloklarının [tarihsel grafiğini](https://ycharts.com/indicators/ethereum_uncle_rate) görüntüleyerek bu değişikliği görebilirsiniz.
 
 ## Görsel bir demo {#a-visual-demo}
 
-Austin'in madenciliği ve iş ispatı blok zincirini, size açıklamasını izleyin.
+Austin'in size madencilik ve İş Kanıtı (PoW) Blokzincirini adım adım anlatmasını izleyin.
 
-<YouTube id="zcX7OJ-L8XQ" />
+<VideoWatch slug="blockchain-eth-build" />
 
 ## Madencilik algoritması {#mining-algorithm}
 
-Ethereum Ana Ağı şimdiye kadar yalnızca bir madencilik algoritması kullandı - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethash, ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/) olarak bilinen orijinal bir Ar-Ge algoritmasının devamıydı.
+Ethereum Ana Ağı yalnızca tek bir madencilik algoritması kullandı: ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethash, ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/) olarak bilinen orijinal bir Ar-Ge algoritmasının halefiydi.
 
 [Madencilik algoritmaları hakkında daha fazlası](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
 
-## Alakalı başlıklar {#related-topics}
+## İlgili konular {#related-topics}
 
 - [Gaz](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)
-- [İş ispatı](/developers/docs/consensus-mechanisms/pow/)
+- [İş Kanıtı (PoW)](/developers/docs/consensus-mechanisms/pow/)

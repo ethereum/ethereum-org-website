@@ -4,10 +4,18 @@ import { extname, join } from "path"
 import matter from "gray-matter"
 import readingTime from "reading-time"
 
-import type { Frontmatter, ITutorial, Skill, SlugPageParams } from "@/lib/types"
+import type {
+  BlogPost,
+  Frontmatter,
+  ITutorial,
+  Skill,
+  SlugPageParams,
+  StoryPreview,
+} from "@/lib/types"
 
 import { dateToString } from "@/lib/utils/date"
 
+import blogPostSlugs from "@/data/blogPosts.json"
 import internalTutorialSlugs from "@/data/internalTutorials.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
@@ -74,71 +82,87 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
   }
 }
 
-export const getTutorialsData = async (
-  locale: string
-): Promise<ITutorial[]> => {
+/**
+ * Generic helper for reading a list of content slugs, resolving locale
+ * fallback, parsing frontmatter, and mapping to a typed result.
+ *
+ * Both getTutorialsData and getBlogPostsData delegate to this to avoid
+ * duplicating the slug-resolution and frontmatter-parsing boilerplate.
+ */
+const getContentListData = async <T>(
+  locale: string,
+  slugs: string[],
+  contentDir: string,
+  mapEntry: (
+    frontmatter: Frontmatter,
+    content: string,
+    slug: string,
+    isTranslated: boolean
+  ) => T,
+  label: string
+): Promise<T[]> => {
   const contentRoot = join(process.cwd(), "public/content")
 
-  const tutorialPromises = (internalTutorialSlugs as string[]).map(
-    async (slug) => {
-      try {
-        let fileContents: string
-        let isTranslated = true
+  const promises = slugs.map(async (slug) => {
+    try {
+      let fileContents: string
+      let isTranslated = true
 
-        const enPath = join(
+      const enPath = join(contentRoot, contentDir, slug, "index.md")
+
+      if (locale === DEFAULT_LOCALE) {
+        fileContents = await fsp.readFile(enPath, "utf-8")
+      } else {
+        const translatedPath = join(
           contentRoot,
-          "developers/tutorials",
+          "translations",
+          locale,
+          contentDir,
           slug,
           "index.md"
         )
-
-        if (locale === DEFAULT_LOCALE) {
+        try {
+          fileContents = await fsp.readFile(translatedPath, "utf-8")
+        } catch {
           fileContents = await fsp.readFile(enPath, "utf-8")
-        } else {
-          const translatedPath = join(
-            contentRoot,
-            "translations",
-            locale,
-            "developers/tutorials",
-            slug,
-            "index.md"
-          )
-          try {
-            fileContents = await fsp.readFile(translatedPath, "utf-8")
-          } catch {
-            fileContents = await fsp.readFile(enPath, "utf-8")
-            isTranslated = false
-          }
+          isTranslated = false
         }
-
-        const { data, content } = matter(fileContents)
-        const frontmatter = data as Frontmatter
-
-        return {
-          href: `/developers/tutorials/${slug}`,
-          title: frontmatter.title,
-          description: frontmatter.description,
-          author: frontmatter.author || "",
-          tags: frontmatter.tags,
-          skill: frontmatter.skill as Skill,
-          timeToRead: Math.round(readingTime(content).minutes),
-          published: dateToString(frontmatter.published),
-          lang: frontmatter.lang,
-          isExternal: false,
-          isTranslated,
-        }
-      } catch (error) {
-        // Only warn if English content is missing (actual error)
-        console.warn(`Error reading tutorial ${slug}:`, error)
-        return null
       }
+
+      const { data, content } = matter(fileContents)
+      return mapEntry(data as Frontmatter, content, slug, isTranslated)
+    } catch (error) {
+      console.warn(`Error reading ${label} ${slug}:`, error)
+      return null
     }
+  })
+
+  const results = await Promise.all(promises)
+  return results.filter((item) => item !== null) as T[]
+}
+
+export const getTutorialsData = async (
+  locale: string
+): Promise<ITutorial[]> => {
+  return getContentListData(
+    locale,
+    internalTutorialSlugs as string[],
+    "developers/tutorials",
+    (frontmatter, content, slug, isTranslated) => ({
+      href: `/developers/tutorials/${slug}`,
+      title: frontmatter.title,
+      description: frontmatter.description,
+      author: frontmatter.author || "",
+      tags: frontmatter.tags,
+      skill: frontmatter.skill as Skill,
+      timeToRead: Math.round(readingTime(content).minutes),
+      published: dateToString(frontmatter.published),
+      lang: frontmatter.lang,
+      isExternal: false,
+      isTranslated,
+    }),
+    "tutorial"
   )
-
-  const results = await Promise.all(tutorialPromises)
-
-  // Filter out null results (missing tutorials)
-  return results.filter((tutorial) => tutorial !== null) as ITutorial[]
 }
 
 export const checkPathValidity = (
@@ -184,4 +208,83 @@ export function stripMarkdown(
     : result.replace(/\s+/g, " ")
 
   return result.trim()
+}
+
+export const getBlogPostsData = async (locale: string): Promise<BlogPost[]> => {
+  const posts = await getContentListData(
+    locale,
+    blogPostSlugs as string[],
+    "latest",
+    (frontmatter, content, slug) => ({
+      href: `/latest/${slug}`,
+      title: frontmatter.title,
+      description: frontmatter.description,
+      author: frontmatter.author || "",
+      team: frontmatter.team || "",
+      tags: frontmatter.tags,
+      timeToRead: Math.round(readingTime(content).minutes),
+      published: dateToString(frontmatter.published),
+      lang: frontmatter.lang,
+      image: frontmatter.image,
+    }),
+    "blog post"
+  )
+
+  return posts.sort(
+    (a, b) => new Date(b.published).getTime() - new Date(a.published).getTime()
+  )
+}
+
+/**
+ * Lists the story slugs under public/content/stories/, skipping the
+ * `translations` directory the intl pipeline writes into. Returns an empty
+ * array when the directory doesn't exist yet.
+ */
+export const getStorySlugs = async (): Promise<string[]> => {
+  const storiesRoot = join(getContentRoot(), "stories")
+
+  try {
+    const entries = await fsp.readdir(storiesRoot, { withFileTypes: true })
+    return entries
+      .filter((entry) => entry.isDirectory() && entry.name !== "translations")
+      .map((entry) => entry.name)
+  } catch (error) {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      console.warn(
+        `Content directory ${storiesRoot} not found, returning empty story list`
+      )
+      return []
+    }
+    throw error
+  }
+}
+
+/**
+ * Reads every story under public/content/stories/{slug}/index.md and returns
+ * its card preview (title, description, cover image) straight from frontmatter,
+ * newest first. The /stories Discover section is rendered from this -- no
+ * hardcoded copy or image imports.
+ */
+export const getStoriesData = async (
+  locale: string
+): Promise<StoryPreview[]> => {
+  const slugs = await getStorySlugs()
+
+  const stories = await getContentListData(
+    locale,
+    slugs,
+    "stories",
+    (frontmatter, _, slug) => ({
+      slug,
+      title: frontmatter.title,
+      description: frontmatter.description,
+      image: frontmatter.image ?? "",
+      published: dateToString(frontmatter.published),
+    }),
+    "story"
+  )
+
+  return stories.sort(
+    (a, b) => new Date(b.published).getTime() - new Date(a.published).getTime()
+  )
 }

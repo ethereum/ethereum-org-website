@@ -5,8 +5,6 @@ hideEditButton: true
 lang: en
 ---
 
-# Ethereum Foundation {#ethereum-foundation}
-
 <Logo/>
 
 The [Ethereum Foundation](https://ethereum.foundation/) (EF) is a non-profit organization that supports the [Ethereum](/) ecosystem. It funds protocol development, grows the ecosystem, and advocates for Ethereum.

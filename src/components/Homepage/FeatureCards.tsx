@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
-import { formatCompactNumber } from "@/lib/utils/numbers"
+import { formatSmallUSD } from "@/lib/utils/numbers"
 
 import freeAccessImage from "@/public/images/homepage/features/free-access.png"
 import globalImage from "@/public/images/homepage/features/global.png"
@@ -25,9 +25,7 @@ const FeatureCards = async ({
   const t = await getTranslations("page-index")
   const locale = await getLocale()
 
-  const volume = formatCompactNumber(4_600_000_000, locale, {
-    maximumSignificantDigits: 2,
-  })
+  const volume = formatSmallUSD(4_600_000_000, locale)
 
   return (
     <Section
@@ -60,12 +58,12 @@ const FeatureCards = async ({
               />
 
               <div className="relative z-10 flex flex-col gap-6">
-                <div className="flex size-16 items-center justify-center rounded-2xl bg-white/20">
+                <div className="flex size-16 items-center justify-center rounded-base bg-white/20">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/homepage/eth.svg" alt="eth logo" />
                 </div>
 
-                <h3 className="text-4xl font-bold text-white lg:text-5xl">
+                <h3 className="text-4xl text-white lg:text-5xl">
                   {t("page-index-features-ownership-title")}
                 </h3>
 

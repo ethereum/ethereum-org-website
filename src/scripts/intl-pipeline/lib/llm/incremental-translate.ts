@@ -105,6 +105,7 @@ RULES:
 - Use <SECTION action="CONTEXT"> sections for tone and terminology reference. Do NOT retranslate them.
 - Preserve all markdown syntax, heading anchors {#id}, and placeholder tags exactly.
 - Preserve heading anchor IDs exactly as in English ({#anchor-id}).
+- Never translate the English word "or" when it appears as a substring inside a larger word, a URL, a domain, or an identifier (for example inside "tutorial", "uniform", "information", or the ".org" in "ethers.org"). Only translate "or" when it stands alone as a separate English word.
 
 PLACEHOLDER RULES:
 Self-closing placeholders (preserve exactly): <HTML-PLACEHOLDER-CODEBLOCK-****** />, <HTML-PLACEHOLDER-CODE-****** />, <HTML-PLACEHOLDER-IMAGE-****** />

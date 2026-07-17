@@ -37,8 +37,61 @@ module.exports = [
   ],
   ["/beginners", "/what-is-ethereum/"],
   ["/build", "/developers/tools/"],
-  ["/developers/learning-tools", "/developers/tools/education/"],
+  [
+    "/developers/learning-tools",
+    "/developers/tools/categories/education-standards/",
+  ],
   ["/developers/local-environment", "/developers/tools/"],
+  [
+    "/developers/tools/interoperability",
+    "/developers/tools/categories/network-infrastructure/",
+  ],
+  [
+    "/developers/tools/transactions",
+    "/developers/tools/categories/app-integration/",
+  ],
+  [
+    "/developers/tools/analytics",
+    "/developers/tools/categories/network-infrastructure/",
+  ],
+  [
+    "/developers/tools/education",
+    "/developers/tools/categories/education-standards/",
+  ],
+  ["/developers/tools/sdks", "/developers/tools/categories/app-integration/"],
+  [
+    "/developers/tools/contracts",
+    "/developers/tools/categories/contract-tooling/",
+  ],
+  [
+    "/developers/tools/security",
+    "/developers/tools/categories/security-testing/",
+  ],
+  // Legacy flat category URLs, now under /categories/.
+  [
+    "/developers/tools/contract-tooling",
+    "/developers/tools/categories/contract-tooling/",
+  ],
+  [
+    "/developers/tools/security-testing",
+    "/developers/tools/categories/security-testing/",
+  ],
+  [
+    "/developers/tools/app-integration",
+    "/developers/tools/categories/app-integration/",
+  ],
+  [
+    "/developers/tools/network-infrastructure",
+    "/developers/tools/categories/network-infrastructure/",
+  ],
+  [
+    "/developers/tools/agent-tooling",
+    "/developers/tools/categories/agent-tooling/",
+  ],
+  [
+    "/developers/tools/education-standards",
+    "/developers/tools/categories/education-standards/",
+  ],
   ["/eth2/beacon-chain", "/roadmap/beacon-chain/"],
   ["/eth2/the-beacon-chain", "/roadmap/beacon-chain/"],
   ["/upgrades/the-beacon-chain", "/roadmap/beacon-chain/"],
@@ -101,7 +154,8 @@ module.exports = [
   ["/enterprise/private-ethereum", "https://institutions.ethereum.org/"],
   ["/enterprise/use-cases", "https://institutions.ethereum.org/", false],
   ["/dashboards", "/resources"],
-  ["/tds", "/trillion-dollar-security"],
+  ["/tds", "/reports/trillion-dollar-security"],
+  ["/trillion-dollar-security", "/reports/trillion-dollar-security"],
   ["/10-years", "/10years"],
   ["/history", "/ethereum-forks"],
   ["/developers/docs/scaling/rollups", "/developers/docs/scaling/#rollups"],
@@ -115,6 +169,12 @@ module.exports = [
     "/contributing/translation-program/blog-translations",
     "/contributing/translation-program/",
   ],
+  ["/contributing/translation-program/translatathon/details", "/contributing/"],
+  [
+    "/contributing/translation-program/translatathon/terms-and-conditions",
+    "/contributing/",
+  ],
+  ["/contributing/translation-program/translatathon", "/contributing/"],
   ["/donate", "/"],
   [
     "/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash",
@@ -164,7 +224,14 @@ module.exports = [
     "/layer-2-scaling/state-channels",
     "/developers/docs/scaling/state-channels/",
   ],
-  ["/developers/docs/privacy-enhancements", "/privacy/"],
+  ["/developers/docs/privacy-enhancements", "/privacy/ethereum/"],
   ["/developers/docs/wallets", "/wallets/"],
   ["/blog", "https://blog.ethereum.org"],
+  // Storybook (Chromatic) convenience redirects
+  ["/storybook", "https://master--63b7ea99632763723c7f4d6b.chromatic.com/"],
+  ["/storybook/dev", "https://dev--63b7ea99632763723c7f4d6b.chromatic.com/"],
+  [
+    "/storybook/staging",
+    "https://staging--63b7ea99632763723c7f4d6b.chromatic.com/",
+  ],
 ]

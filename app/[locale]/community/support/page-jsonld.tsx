@@ -8,7 +8,8 @@ import { isExternal, normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { sections } from "./data"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function SupportJsonLD({
   locale,
@@ -59,7 +60,7 @@ export default async function SupportJsonLD({
         "@id": url,
         name: t("page-community-support-hero-title"),
         description: t("page-community-support-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

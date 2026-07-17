@@ -1,12 +1,17 @@
 import type { MetadataRoute } from "next"
 
-import { getFullUrl } from "@/lib/utils/url"
-import { getVideoSlugs } from "@/lib/utils/videos"
+import { getFullUrl, toLanguageTag } from "@/lib/utils/url"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import { routing } from "@/i18n/routing"
 import { getAllPagesWithTranslations } from "@/lib/i18n/translationRegistry"
+
+// Generate at build time only. Without this the route's transitive data-layer
+// dependency (finite-revalidate getters) opts it into ISR, so Netlify re-renders
+// it in the serverless function where public/content is excluded from the bundle
+// -- yielding empty markdown slugs and a truncated sitemap. No `revalidate`: ISR
+// re-enters that broken path; freshness rides the deploy cadence instead.
+export const dynamic = "force-static"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages = await getAllPagesWithTranslations()
@@ -23,7 +28,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
               "x-default": getFullUrl(DEFAULT_LOCALE, normalizedSlug),
               ...Object.fromEntries(
                 translatedLocales.map((locale) => [
-                  locale,
+                  toLanguageTag(locale),
                   getFullUrl(locale, normalizedSlug),
                 ])
               ),
@@ -43,35 +48,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       entries.push({
         url,
         alternates,
-      })
-    }
-  }
-
-  // Add video pages (dynamic routes not discovered by getAllPagesWithTranslations)
-  const videoSlugs = await getVideoSlugs()
-  for (const slug of videoSlugs) {
-    const videoSlug = `/videos/${slug}/`
-    const alternates = {
-      languages: {
-        "x-default": getFullUrl(DEFAULT_LOCALE, videoSlug),
-        ...Object.fromEntries(
-          routing.locales.map((locale) => [
-            locale,
-            getFullUrl(locale, videoSlug),
-          ])
-        ),
-      },
-    }
-
-    for (const locale of routing.locales) {
-      const url = getFullUrl(locale, videoSlug)
-      if (seenUrls.has(url)) continue
-      seenUrls.add(url)
-      entries.push({
-        url,
-        alternates,
-        changeFrequency: "monthly",
-        priority: 0.6,
       })
     }
   }

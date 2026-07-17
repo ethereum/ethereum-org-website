@@ -6,7 +6,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function GasPageJsonLD({
   locale,
@@ -27,16 +28,19 @@ export default async function GasPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#gas` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-gas-meta-title"),
         description: t("page-gas-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -60,11 +64,12 @@ export default async function GasPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#gas` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#gas`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-gas-hero-title"),
         description: t("page-gas-meta-description"),
         contributor: contributorList,

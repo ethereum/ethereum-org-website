@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-assets.json",
+  "generatedAt": "2026-06-16T15:16:28.410Z",
+  "rootHash": "77fdf947d8ee",
+  "tree": {
+    "contentHash": "85a188c44340",
+    "anchorHash": "ead381364fed",
+    "children": {
+      "page-assets-bazaar": {
+        "contentHash": "c7af6e96bfdf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-beacon-chain": {
+        "contentHash": "1c677c008e2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-blocks": {
+        "contentHash": "8d09a1432e43",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-dao": {
+        "contentHash": "74421bd4bcec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-defi": {
+        "contentHash": "3871f97fc9a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-merge": {
+        "contentHash": "c09500586c2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-doge": {
+        "contentHash": "8ae668d814bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-download-artist": {
+        "contentHash": "c733974af1bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-download-download": {
+        "contentHash": "d6eafe823591",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-enterprise": {
+        "contentHash": "775979611b68",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth": {
+        "contentHash": "35ca1814c05c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-diamond-color": {
+        "contentHash": "9220e88aa70d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-diamond-glyph": {
+        "contentHash": "c5ba002acef5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-diamond-gray": {
+        "contentHash": "4f448508c546",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-diamond-purple": {
+        "contentHash": "4143f23be9ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-diamond-white": {
+        "contentHash": "035c44524480",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-diamond-colored": {
+        "contentHash": "f87631528256",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-diamond-colored-svg": {
+        "contentHash": "bfa8d7935248",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-glyph-video-dark": {
+        "contentHash": "1fce5a5256a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-glyph-video-light": {
+        "contentHash": "76aa917a1386",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-logo-landscape-gray": {
+        "contentHash": "3d9b90c104b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-logo-landscape-purple": {
+        "contentHash": "e6769c0bd19c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-logo-landscape-white": {
+        "contentHash": "61e1a01c7f66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-logo-portrait-gray": {
+        "contentHash": "e92e625f8348",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-logo-portrait-purple": {
+        "contentHash": "1d57439d141a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-logo-portrait-white": {
+        "contentHash": "1cee34a12cf8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-wordmark-gray": {
+        "contentHash": "d88c3167e71b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-wordmark-purple": {
+        "contentHash": "d52f66cf8e73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-eth-wordmark-white": {
+        "contentHash": "e17b4e3c72ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-ethereum-brand-assets": {
+        "contentHash": "15fdb0c6c53c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-finance": {
+        "contentHash": "b696d75511dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-future": {
+        "contentHash": "61636cdef547",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-h1": {
+        "contentHash": "adffff7250b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-hero": {
+        "contentHash": "db72bffcbe19",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-hero-panda": {
+        "contentHash": "842a1013d4b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-merge-panda": {
+        "contentHash": "b44003766dcf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-merge-panda-svg": {
+        "contentHash": "f3af31c32d8c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-hero-particles": {
+        "contentHash": "bd818d5d4f32",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-historical-artwork": {
+        "contentHash": "97312a14b23b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-illustrations": {
+        "contentHash": "cea180e9ab13",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-impact": {
+        "contentHash": "d1f23f0d1361",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-infrastructure": {
+        "contentHash": "ce0cff719a94",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-leslie-the-rhino": {
+        "contentHash": "7975386a09d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-meta-desc": {
+        "contentHash": "c3f0eb69d062",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-meta-title": {
+        "contentHash": "1e8655d5ae07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-mainnet": {
+        "contentHash": "23b4803f3d70",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-page-assets-solid-background": {
+        "contentHash": "d84533865da8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-page-assets-transparent-background": {
+        "contentHash": "0fcc9d09de99",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-robot": {
+        "contentHash": "21d40c8f5b69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-sharding": {
+        "contentHash": "18d5c3346922",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-hackathon": {
+        "contentHash": "bbe1f7f613ca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-learn-hero-name": {
+        "contentHash": "12d68a6a43a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-community-hero-name": {
+        "contentHash": "c8b7eba0c13a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-quizzes-hero-name": {
+        "contentHash": "967afd4a21d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-developers-hero-name": {
+        "contentHash": "0ce3d35d1ce3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-garden-name": {
+        "contentHash": "65539a6442c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-roadmap-hero-name": {
+        "contentHash": "31a262338704",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-layer-2-hero-name": {
+        "contentHash": "6ffc72946842",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-guides-hero-name": {
+        "contentHash": "73033412e481",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-assets-bazaar",
+      "page-assets-beacon-chain",
+      "page-assets-blocks",
+      "page-assets-dao",
+      "page-assets-defi",
+      "page-assets-merge",
+      "page-assets-doge",
+      "page-assets-download-artist",
+      "page-assets-download-download",
+      "page-assets-enterprise",
+      "page-assets-eth",
+      "page-assets-eth-diamond-color",
+      "page-assets-eth-diamond-glyph",
+      "page-assets-eth-diamond-gray",
+      "page-assets-eth-diamond-purple",
+      "page-assets-eth-diamond-white",
+      "page-assets-eth-diamond-colored",
+      "page-assets-eth-diamond-colored-svg",
+      "page-assets-eth-glyph-video-dark",
+      "page-assets-eth-glyph-video-light",
+      "page-assets-eth-logo-landscape-gray",
+      "page-assets-eth-logo-landscape-purple",
+      "page-assets-eth-logo-landscape-white",
+      "page-assets-eth-logo-portrait-gray",
+      "page-assets-eth-logo-portrait-purple",
+      "page-assets-eth-logo-portrait-white",
+      "page-assets-eth-wordmark-gray",
+      "page-assets-eth-wordmark-purple",
+      "page-assets-eth-wordmark-white",
+      "page-assets-ethereum-brand-assets",
+      "page-assets-finance",
+      "page-assets-future",
+      "page-assets-h1",
+      "page-assets-hero",
+      "page-assets-hero-panda",
+      "page-assets-merge-panda",
+      "page-assets-merge-panda-svg",
+      "page-assets-hero-particles",
+      "page-assets-historical-artwork",
+      "page-assets-illustrations",
+      "page-assets-impact",
+      "page-assets-infrastructure",
+      "page-assets-leslie-the-rhino",
+      "page-assets-meta-desc",
+      "page-assets-meta-title",
+      "page-assets-mainnet",
+      "page-assets-page-assets-solid-background",
+      "page-assets-page-assets-transparent-background",
+      "page-assets-robot",
+      "page-assets-sharding",
+      "page-assets-hackathon",
+      "page-assets-learn-hero-name",
+      "page-assets-community-hero-name",
+      "page-assets-quizzes-hero-name",
+      "page-assets-developers-hero-name",
+      "page-assets-garden-name",
+      "page-assets-roadmap-hero-name",
+      "page-assets-layer-2-hero-name",
+      "page-assets-guides-hero-name"
+    ]
+  },
+  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+}

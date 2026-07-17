@@ -9,7 +9,6 @@ type PathButtonProps = {
 }
 export const PathButton = ({ pathSummary, handleClick }: PathButtonProps) => {
   const { primaryText, secondaryText, Icon } = pathSummary
-  // TODO: Convert this component to use ButtonLinkTwoLines
   return (
     <Button
       variant="outline"

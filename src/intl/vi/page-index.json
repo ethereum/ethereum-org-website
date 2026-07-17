@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Ethereum - Hướng dẫn toàn tập từ Ethereum.org",
+  "page-index-meta-title": "Ethereum - Hướng dẫn toàn tập từ ethereum.org",
   "page-index-meta-description": "Ethereum là một nền tảng phi tập trung toàn cầu dành cho tiền tệ và các loại ứng dụng mới. Trên Ethereum, bạn kiểm soát tiền, dữ liệu và danh tính của chính mình. Không cần ngân hàng, không cần trung gian, không cần cấp phép.",
   "page-index-description": "Nền tảng hàng đầu cho các ứng dụng đổi mới và mạng lưới chuỗi khối",
   "page-index-title": "Chào mừng đến với Ethereum",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "ỨNG DỤNG ETHEREUM",
   "page-index-carousel-privacy-ethereum-value": "Riêng tư theo mặc định",
   "page-index-carousel-remittances-tag": "THANH TOÁN XUYÊN BIÊN GIỚI",
-  "page-index-carousel-remittances-title": "Gửi tiền về nhà trong {minutes} phút",
+  "page-index-carousel-remittances-title": "Gửi tiền về nhà trong {seconds} giây",
   "page-index-carousel-remittances-subtitle": "Bỏ qua khoản phí chuyển khoản {wireFee} và thời gian chờ đợi hơn {days} ngày.",
   "page-index-carousel-remittances-description": "Gửi <stablecoinsLink>stablecoin</stablecoinsLink> cho bất kỳ ai, ở bất kỳ đâu trên thế giới, chỉ với {txFee}. Họ nhận được tiền gần như ngay lập tức.",
   "page-index-carousel-remittances-cta": "Tự mình trải nghiệm",
   "page-index-carousel-remittances-traditional-label": "CHUYỂN KHOẢN NGÂN HÀNG",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} ngày",
   "page-index-carousel-remittances-ethereum-label": "ETHEREUM",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} phút",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} giây",
   "page-index-carousel-borrowing-tag": "TIẾP CẬN TÀI CHÍNH",
   "page-index-carousel-borrowing-title": "Vay mượn không cần lịch sử tín dụng",
   "page-index-carousel-borrowing-subtitle": "Bạn không cần điểm tín dụng để bắt đầu.",
@@ -79,7 +79,7 @@
   "page-index-features-ownership-description-custody": "lời hứa lưu ký",
   "page-index-features-ownership-description-2": "Số dư Ethereum của bạn là quyền sở hữu thực sự.",
   "page-index-features-ownership-stat": "{volume}+",
-  "page-index-features-ownership-stat-label": "Khối lượng giao dịch hàng ngày",
+  "page-index-features-ownership-stat-label": "Khối lượng giao dịch hàng ngày (USD)",
   "page-index-features-public-rules-title": "Quy tắc công khai",
   "page-index-features-public-rules-description": "Mã nguồn là công khai, các thỏa thuận thực thi chính xác như những gì được viết. Hãy nghĩ đến máy bán hàng tự động so với việc hy vọng nhân viên thu ngân trả lại đúng tiền thừa.",
   "page-index-features-global-title": "Toàn cầu",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Các mạng lưới riêng tư & có cấp phép",
   "page-index-get-started-enterprise-bullet-3": "Tài nguyên dành cho tổ chức",
   "page-index-get-started-enterprise-cta": "Khám phá mảng doanh nghiệp",
-  "page-index-simulator-cta": "Thử thêm các hướng dẫn"
+  "page-index-simulator-cta": "Thử thêm các hướng dẫn",
+  "page-index-latest-updates-title": "Các bản cập nhật Ethereum mới nhất",
+  "page-index-latest-updates-cta": "Xem thêm"
 }

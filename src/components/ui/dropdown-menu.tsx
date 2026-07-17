@@ -4,6 +4,8 @@ import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 
 import { cn } from "@/lib/utils/cn"
 
+import { DropdownMenuScrollArea } from "./dropdown-menu-scroll-area"
+
 const DropdownMenu = DropdownMenuPrimitive.Root
 
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
@@ -56,20 +58,46 @@ DropdownMenuSubContent.displayName =
 
 const DropdownMenuContent = React.forwardRef<
   React.ComponentRef<typeof DropdownMenuPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>
->(({ className, sideOffset = 4, ...props }, ref) => (
-  <DropdownMenuPrimitive.Portal>
-    <DropdownMenuPrimitive.Content
-      ref={ref}
-      sideOffset={sideOffset}
-      className={cn(
-        "z-popover min-w-[8rem] overflow-hidden rounded border border-body bg-background py-2 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
-        className
-      )}
-      {...props}
-    />
-  </DropdownMenuPrimitive.Portal>
-))
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content> & {
+    /**
+     * Surface up/down chevron affordances (with a fade) when the menu is taller
+     * than the available viewport height. Without it the capped menu still
+     * scrolls, just with a native scrollbar.
+     */
+    scrollAffordance?: boolean
+  }
+>(
+  (
+    { className, sideOffset = 4, scrollAffordance = false, children, ...props },
+    ref
+  ) => (
+    <DropdownMenuPrimitive.Portal>
+      <DropdownMenuPrimitive.Content
+        ref={ref}
+        sideOffset={sideOffset}
+        className={cn(
+          // Cap to the space Radix measures between the trigger and the viewport
+          // edge so long menus never overflow off-screen on short displays.
+          "z-popover max-h-(--radix-dropdown-menu-content-available-height) min-w-[8rem] rounded border border-body bg-background data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
+          scrollAffordance
+            ? // The scroll area owns padding + overflow; the content is a
+              // positioned flex column so the absolute chevron bars pin to its
+              // own edges (inside the border) rather than the popper wrapper.
+              "relative flex flex-col overflow-hidden p-0"
+            : "overflow-x-hidden overflow-y-auto py-2",
+          className
+        )}
+        {...props}
+      >
+        {scrollAffordance ? (
+          <DropdownMenuScrollArea>{children}</DropdownMenuScrollArea>
+        ) : (
+          children
+        )}
+      </DropdownMenuPrimitive.Content>
+    </DropdownMenuPrimitive.Portal>
+  )
+)
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName
 
 const DropdownMenuItem = React.forwardRef<

@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-08T09:49:27.573Z",
+  "englishManifestHash": "fbc89685d900",
+  "placeholderOrder": [
+    "LINK-74b3ba",
+    "LINK-98464c",
+    "LINK-19467e",
+    "LINK-86372d",
+    "LINK-0fe1cb",
+    "LINK-f19fd4",
+    "LINK-fc4fc7",
+    "LINK-0ae2a5",
+    "HTMLTAG-7a1718",
+    "LINK-7b68bc"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-7a1718": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "br"
+      }
+    },
+    "LINK-74b3ba": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-98464c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#gas"
+      }
+    },
+    "LINK-19467e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#wallet"
+      }
+    },
+    "LINK-86372d": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/tokenapprovalchecker"
+      }
+    },
+    "LINK-0fe1cb": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/essential-dapps/revoke"
+      }
+    },
+    "LINK-f19fd4": {
+      "type": "link",
+      "values": {
+        "url": "https://revoke.cash/"
+      }
+    },
+    "LINK-fc4fc7": {
+      "type": "link",
+      "values": {
+        "url": "https://app.unrekt.net/"
+      }
+    },
+    "LINK-0ae2a5": {
+      "type": "link",
+      "values": {
+        "url": "https://everrise.com/everrevoke/"
+      }
+    },
+    "LINK-7b68bc": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#defi"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:49:27.573Z",
+      "status": "success"
+    }
+  }
+}

@@ -55,7 +55,7 @@ export const TRANSLATABLE_ATTRIBUTES = [
   "label",
   "aria-label",
   "placeholder",
-  "buttonLabel",
+  "ctaLabel",
   "name",
   "caption",
   "contentPreview",

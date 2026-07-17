@@ -1,60 +1,60 @@
 ---
-title: Pectra MaxEB
+title: MaxEB
+metaTitle: Pectra MaxEB
 description: Jifunze zaidi kuhusu MaxEB katika toleo la Pectra
 lang: sw
+authors: ["Nixo"]
 ---
 
-# MaxEB {#maxeb}
-
-_tl;dr:_ Mgawanyiko mkali wa Pectra unaruhusu wathibitishaji wa Ethereum kuchagua salio la juu la ufanisi na kujumuisha kwa kubadilisha kutoka stakabadhi za uondoaji za **Aina ya 1** hadi **Aina ya 2**. Zana rasmi ya kufanya hivi ni Launchpad. Operesheni hii haiwezi kubadilishwa.
+*Kwa ufupi:* Mchepuo mgumu wa Pectra unaruhusu wathibitishaji wa Ethereum kuchagua salio tendaji la juu zaidi na kujilimbikiza kwa kubadilisha kutoka **Aina ya 1** hadi **Aina ya 2** ya vitambulisho vya uondoaji. Zana rasmi ya kufanya hivi ni Launchpad. Operesheni hii haiwezi kutenguliwa.
 
 ## Muhtasari {#overview}
 
-### Nani anayeathirika? {#who-is-affected}
+### Nani anaathirika? {#who-is-affected}
 
-Mtu yeyote anayeendesha mthibitishaji - huyu anawezekana kuwa mtu anayejua faharasa (k.m., [Mthibitishaji #12345](https://beaconcha.in/validator/12345)) ya mthibitishaji anayemdhibiti. Ikiwa unatumia itifaki kuendesha mthibitishaji (k.m., Lido CSM au Rocket Pool), utalazimika kuwasiliana nao ili kuona ikiwa na lini wanasaidia maxEB.
+Mtu yeyote anayeendesha mthibitishaji - huyu huenda ni mtu anayejua faharisi (k.m., [Mthibitishaji #12345](https://beaconcha.in/validator/12345)) ya mthibitishaji anayemdhibiti. Ikiwa unatumia itifaki kuendesha mthibitishaji (k.m., Lido CSM au Rocket Pool), itabidi uangalie nao ili kuona kama na lini wanaunga mkono maxEB.
 
-Ikiwa unasimamisha kwa kutumia tokeni ya kusimamisha kioevu (k.m., rETH au stETH), hakuna hatua inayohitajika au inayopendekezwa.
+Ikiwa unaweka dhamana ukitumia tokani ya uwekaji amana wenye ukwasi (lst) (k.m., rETH au stETH), hakuna hatua inayohitajika au kupendekezwa.
 
-### Nini maana ya "maxEB"? {#what-is-maxeb}
+### "maxEB" ni nini? {#what-is-maxeb}
 
-maxEB = Salio la Juu la Ufanisi la mthibitishaji. Hadi mgawanyiko mkali wa Pectra, kila mthibitishaji anapata faida kwenye kiwango cha juu cha ETH 32. Baada ya Pectra, wathibitishaji wana fursa ya kupata faida kwenye salio lolote kati ya ETH 32 na 2048, kwa nyongeza za ETH 1 kwa kukubali mabadiliko.
+maxEB = Salio Tendaji la JUU ZAIDI la mthibitishaji. Hadi mchepuo mgumu wa Pectra, kila mthibitishaji anachuma kwa kiwango cha juu cha 32 ETH. Baada ya Pectra, wathibitishaji wana chaguo la kuchuma kwenye salio lolote kati ya 32 na 2048 ETH, katika nyongeza za 1 ETH kwa kuchagua mabadiliko hayo.
 
-### Mthibitishaji anachaguaje kuingia? {#how-does-a-validator-opt-in}
+### Mthibitishaji anachaguaje kushiriki? {#how-does-a-validator-opt-in}
 
-Mthibitishaji anachagua kuingia kwenye mabadiliko ya maxEB kwa kubadilisha kutoka stakabadhi za uondoaji za **Aina ya 1** hadi **Aina ya 2**. Hili linaweza kufanywa kwenye [Launchpad (Vitendo vya Mthibitishaji)](https://launchpad.ethereum.org/validator-actions) baada ya mgawanyiko mkali wa Pectra kuanza kutumika. Kama ilivyo kwa **Aina ya 0** → **Aina ya 1**, kubadilisha kutoka **Aina ya 1** → **Aina ya 2** ni mchakato usioweza kubadilishwa.
+Mthibitishaji anachagua mabadiliko ya maxEB kwa kubadilisha kutoka **Aina ya 1** hadi **Aina ya 2** ya vitambulisho vya uondoaji. Hili linaweza kufanywa kwenye [Launchpad (Vitendo vya Mthibitishaji)](https://launchpad.ethereum.org/validator-actions) baada ya mchepuo mgumu wa Pectra kuanza kutumika. Kama ilivyo kwa **Aina ya 0** → **Aina ya 1**, kubadilisha kutoka **Aina ya 1** → **Aina ya 2** ni mchakato usioweza kutenguliwa.
 
-### Stakabadhi ya uondoaji ni nini? {#whats-a-withdrawal-credential}
+### Kitambulisho cha uondoaji ni nini? {#whats-a-withdrawal-credential}
 
-Unapoendesha mthibitishaji, unakuwa na seti ya stakabadhi za uondoaji. Hizi zinaweza kupatikana kwenye data yako ya json ya amana au unaweza kuzitazama kwenye [kichupo cha amana](https://beaconcha.in/validator/12345#deposits) cha beaconcha.in cha mthibitishaji wako.
+Unapoendesha mthibitishaji, unakuwa na seti ya vitambulisho vya uondoaji. Hivi vinaweza kupatikana katika json yako ya data ya amana au unaweza kuvitazama kwenye [kichupo cha amana](https://beaconcha.in/validator/12345#deposits) cha beaconcha.in cha mthibitishaji wako.
 
-1. Stakabadhi za uondoaji za **Aina ya 0**: Ikiwa stakabadhi za uondoaji za mthibitishaji wako zinaanza na `0x00...`, uliweka amana kabla ya mgawanyiko mkali wa Shapella na bado hujaweka anwani ya uondoaji.
+1. Vitambulisho vya uondoaji vya **Aina ya 0**: Ikiwa vitambulisho vya uondoaji vya mthibitishaji wako vinaanza na `0x00...`, uliweka amana kabla ya mchepuo mgumu wa Shapella na bado hujaweka anwani ya utoaji.
 
-![Stakabadhi ya uondoaji ya Aina ya 0](./0x00-wd.png)
+![Type 0 withdrawal credential](./0x00-wd.png)
 
-2. Stakabadhi za uondoaji za **Aina ya 1**: Ikiwa stakabadhi za uondoaji za mthibitishaji wako zinaanza na `0x01...`, uliweka amana baada ya mgawanyiko mkali wa Shapella au tayari umebadilisha stakabadhi zako za **Aina ya 0** kuwa stakabadhi za **Aina ya 1**.
+2. Vitambulisho vya uondoaji vya **Aina ya 1**: Ikiwa vitambulisho vya uondoaji vya mthibitishaji wako vinaanza na `0x01...`, uliweka amana baada ya mchepuo mgumu wa Shapella au tayari ulibadilisha vitambulisho vyako vya **Aina ya 0** kuwa vitambulisho vya **Aina ya 1**.
 
-![Stakabadhi ya uondoaji ya Aina ya 1](./0x01-wd.png)
+ ![Type 1 withdrawal credential](./0x01-wd.png)
 
-3. Stakabadhi za uondoaji za **Aina ya 2**: Aina hii mpya ya stakabadhi ya uondoaji itaanza na `0x02...` na itawashwa baada ya Pectra. Wathibitishaji walio na stakabadhi za uondoaji za **Aina ya 2** wakati mwingine huitwa "**wathibitishaji wanaojumuisha**"
+3. Vitambulisho vya uondoaji vya **Aina ya 2**: Aina hii mpya ya kitambulisho cha uondoaji itaanza na `0x02...` na itawezeshwa baada ya Pectra. Wathibitishaji wenye vitambulisho vya uondoaji vya **Aina ya 2** wakati mwingine huitwa "**wathibitishaji wanaolimbikiza**"
 
-| **Inaruhusiwa**         | **Hairuhusiwi**         |
-| ----------------------- | ----------------------- |
+| **Inaruhusiwa** | **Hairuhusiwi** |
+| --- | --- |
 | ✅ Aina ya 0 → Aina ya 1 | ❌ Aina ya 0 → Aina ya 2 |
 | ✅ Aina ya 1 → Aina ya 2 | ❌ Aina ya 1 → Aina ya 0 |
-|                         | ❌ Aina ya 2 → Aina ya 1 |
-|                         | ❌ Aina ya 2 → Aina ya 0 |
+|  | ❌ Aina ya 2 → Aina ya 1 |
+|  | ❌ Aina ya 2 → Aina ya 0 |
 
 ### Hatari {#risks}
 
-MaxEB inamwezesha mthibitishaji kutuma salio lake lote kwa mthibitishaji mwingine. Watumiaji wanaowasilisha ombi la ujumuishaji wanapaswa kuthibitisha chanzo na yaliyomo kwenye muamala wanaosaini. Zana rasmi ya kutumia vipengele vya maxEB ni Launchpad. Ukiamua kutumia zana ya mtu mwingine, unapaswa kuthibitisha kuwa:
+MaxEB inamwezesha mthibitishaji kutuma salio lake lote kwa mthibitishaji mwingine. Watumiaji wanaowasilisha ombi la ujumuishaji wanapaswa kuthibitisha chanzo na yaliyomo kwenye muamala wanaosaini. Zana rasmi ya kutumia vipengele vya maxEB ni Launchpad. Ikiwa utaamua kutumia zana ya wahusika wengine, unapaswa kuthibitisha kwamba:
 
-- Ufunguo wa umma na anwani ya uondoaji ya mthibitishaji chanzo zinafanana na mthibitishaji anayemdhibiti
-- Ufunguo wa umma wa mthibitishaji lengwa ni sahihi na ni mali yake
-- Ombi ni la ubadilishaji, si ujumuishaji, ikiwa hawakusudii kutuma fedha kwa mthibitishaji mwingine
-- Muamala unasainiwa na anwani sahihi ya uondoaji
+- Ufunguo wa umma wa mthibitishaji chanzo na anwani ya utoaji vinalingana na mthibitishaji wanayemdhibiti
+- Ufunguo wa umma wa mthibitishaji lengwa ni sahihi na ni wao
+- Ombi ni ubadilishaji, sio ujumuishaji, ikiwa hawakusudii kutuma fedha kwa mthibitishaji mwingine
+- Muamala unasainiwa na anwani sahihi ya utoaji
 
-**Tunapendekeza sana** kujadili zana yoyote ya mtu mwingine unayopanga kutumia na [jamii ya EthStaker](https://ethstaker.org/about). Ni mahali pazuri pa kuthibitisha usahihi wa mbinu yako na kuepuka makosa. Ukitumia zana mbovu au iliyosanidiwa vibaya, **salio lote la mthibitishaji wako linaweza kutumwa kwa mthibitishaji usiyemdhibiti** — bila njia ya kulirudisha.
+Tunapendekeza **kwa dhati** kujadili zana yoyote ya wahusika wengine unayopanga kutumia na [jumuiya ya EthStaker](https://ethstaker.org/about). Ni mahali pazuri pa kuhakiki mbinu yako na kuepuka makosa. Ikiwa unatumia zana hasidi au iliyosanidiwa vibaya, **salio lako lote la mthibitishaji linaweza kutumwa kwa mthibitishaji usiyemdhibiti** — bila njia ya kulipata tena.
 
 ## Maelezo ya kiufundi {#technical-details}
 
@@ -63,142 +63,142 @@ MaxEB inamwezesha mthibitishaji kutuma salio lake lote kwa mthibitishaji mwingin
 Kutakuwa na matumizi mawili ya operesheni ya `ConsolidationRequest`:
 
 1. Kubadilisha mthibitishaji aliyepo kutoka mthibitishaji wa **Aina ya 1** hadi **Aina ya 2**
-2. Kujumuisha wathibitishaji wengine katika mthibitishaji aliyepo wa **Aina ya 2**
+2. Kujumuisha wathibitishaji wengine kwenye mthibitishaji wa **Aina ya 2** aliyepo
 
-Katika ubadilishaji wa mthibitishaji wa **Aina ya 1** hadi **Aina ya 2**, _chanzo_ na _lengo_ vitakuwa mthibitishaji unayembadilisha. Operesheni itagharimu gesi na itawekwa kwenye foleni nyuma ya maombi mengine ya ujumuishaji. Foleni hii ni **tofauti** na foleni ya amana na haiathiriwi na amana mpya za wathibitishaji na inaweza kutazamwa kwenye [pectrified.com](https://pectrified.com/).
+Katika ubadilishaji wa mthibitishaji wa **Aina ya 1** hadi **Aina ya 2**, *chanzo* na *lengo* vitakuwa mthibitishaji unayembadilisha. Operesheni itagharimu gesi na itawekwa kwenye foleni nyuma ya maombi mengine ya ujumuishaji. Foleni hii inajitegemea **kando** na foleni ya amana na haiathiriwi na amana mpya za wathibitishaji na inaweza kutazamwa kwenye [pectrified.com](https://pectrified.com/).
 
-Ili kujumuisha wathibitishaji, lazima uwe na _mthibitishaji lengwa_ aliye na stakabadhi ya uondoaji ya **Aina ya 2**. Hii ndiyo sehemu ya salio la mthibitishaji yeyote anayejumuishwa, na faharasa inayohifadhiwa.
+Ili kujumuisha wathibitishaji, lazima uwe na *mthibitishaji lengwa* ambaye ana kitambulisho cha uondoaji cha **Aina ya 2**. Hiki ndicho kituo cha mwisho cha salio lolote la mthibitishaji linalojumuishwa, na faharisi inayohifadhiwa.
 
 ### Mahitaji ya kubadilisha hadi Aina ya 2 {#requirements-for-converting-to-type-2}
 
-Hili litahitajika kwa mthibitishaji wa kwanza unayembadilisha kuwa **Aina ya 2**. Faharasa ya mthibitishaji huyu inahifadhiwa na iko hai. Kwa ubadilishaji, _mthibitishaji chanzo_ == _mthibitishaji lengwa._
+Hili litahitajika kwa mthibitishaji wa kwanza unayembadilisha kuwa **Aina ya 2**. Faharisi ya mthibitishaji huyu inahifadhiwa na inafanya kazi. Kwa ubadilishaji, *mthibitishaji chanzo* == *mthibitishaji lengwa.*
 
 Mthibitishaji lazima...
 
-- awe hai
-- awe na stakabadhi za uondoaji za **Aina ya 1**
-- asiwe katika hali ya kutoka (au kupunguzwa)
-- asiwe na uondoaji unaosubiri ulioanzishwa mwenyewe (haitumiki kwa kufagia)
+- awe anafanya kazi
+- awe na vitambulisho vya uondoaji vya **Aina ya 1**
+- asiwe katika hali ya kujitoa (au kufanyiwa ukataji)
+- asiwe na utoaji unaosubiri ulioanzishwa kwa mikono (haitumiki kwa ufagiaji)
 
-![mfano wa ubadilishaji](./conversion.png)
+![conversion illustration](./conversion.png)
 
-### Mahitaji ya ujumuishaji {#requirements-for-consolidating}
+### Mahitaji ya kujumuisha {#requirements-for-consolidating}
 
-Hii ni _operesheni sawa_ na kubadilisha lakini ni wakati _mthibitishaji chanzo_ ni tofauti na _mthibitishaji lengwa_. Faharasa ya mthibitishaji lengwa inahifadhiwa na inapokea salio kutoka kwa mthibitishaji chanzo. Faharasa ya mthibitishaji chanzo inawekwa katika hali ya `EXITED`.
+Hii ni *operesheni sawa* na kubadilisha lakini ni wakati *mthibitishaji chanzo* ni tofauti na *mthibitishaji lengwa*. Faharisi ya mthibitishaji lengwa inahifadhiwa na inapokea salio kutoka kwa mthibitishaji chanzo. Faharisi ya mthibitishaji chanzo inawekwa katika hali ya `EXITED`.
 
-Katika kesi hii, mthibitishaji chanzo ana mahitaji yote sawa na hapo juu pamoja na:
+Katika hali hii, mthibitishaji chanzo ana mahitaji yote sawa na hapo juu pamoja na:
 
-- amekuwa hai kwa angalau saa ~27.3 (moja `SHARD_COMMITTEE_PERIOD`)
+- amekuwa akifanya kazi kwa angalau saa ~27.3 (moja `SHARD_COMMITTEE_PERIOD`)
 
 Mthibitishaji lengwa lazima
 
-- awe na stakabadhi za uondoaji za **Aina ya 2**
-- asiwe katika hali ya kutoka.
+- awe na vitambulisho vya uondoaji vya **Aina ya 2**
+- asiwe katika hali ya kujitoa.
 
-![mfano wa ujumuishaji](./consolidation.png)
+![consolidation illustration](./consolidation.png)
 
 ### Ombi la ujumuishaji {#the-consolidation-request}
 
-Ombi la ujumuishaji litasainiwa na anwani ya uondoaji inayohusiana na mthibitishaji chanzo na litakuwa na:
+Ombi la ujumuishaji litasainiwa na anwani ya utoaji inayohusishwa na mthibitishaji chanzo na kuwa na:
 
 1. Anwani ya mthibitishaji chanzo (k.m., `0x15F4B914A0cCd14333D850ff311d6DafbFbAa32b`)
 2. Ufunguo wa umma wa mthibitishaji chanzo (k.m., `0xa1d1ad0714035353258038e964ae9675dc0252ee22cea896825c01458e1807bfad2f9969338798548d9858a571f7425c`)
-3. Ufunguo wa umma wa mthibitishaji lengwa huyo
+3. Ufunguo wa umma wa mthibitishaji huyo lengwa
 
 Katika ubadilishaji, 2 & 3 zitakuwa sawa. Operesheni hii inaweza kufanywa kwenye [Launchpad](https://launchpad.ethereum.org/).
 
 ### Mahitaji ya kusaini {#signing-requirements}
 
-Ili kuwasilisha `ConsolidationRequest`, **anwani ya uondoaji ya mthibitishaji chanzo** lazima isaini ombi. Hii inathibitisha udhibiti juu ya fedha za mthibitishaji.
+Ili kuwasilisha `ConsolidationRequest`, **anwani ya utoaji ya mthibitishaji chanzo** lazima isaini ombi. Hii inathibitisha udhibiti wa fedha za mthibitishaji.
 
 ### Nini kinasainiwa? {#what-is-signed}
 
-Mzizi wa kusaini uliotenganishwa na kikoa wa kitu cha `ConsolidationRequest` hutumiwa.
+[Mzizi wa kusaini](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/beacon-chain.md#compute_signing_root) uliotenganishwa na kikoa wa kipengee cha `ConsolidationRequest` unatumika.
 
 - **Kikoa:** `DOMAIN_CONSOLIDATION_REQUEST`
-- **Sehemu za mzizi wa kusaini:**
+- **Nyanja za mzizi wa kusaini:**
   - `source_pubkey`: `BLSPubkey`
   - `target_pubkey`: `BLSPubkey`
   - `source_address`: `ExecutionAddress`
 
-Sahihi ya **BLS** inayotokana inawasilishwa pamoja na ombi.
+**Sahihi ya BLS** inayotokana inawasilishwa pamoja na ombi.
 
-Kumbuka: Usainiaji unafanywa na anwani ya uondoaji, sio ufunguo wa mthibitishaji.
+Kumbuka: Kusaini kunafanywa na anwani ya utoaji, sio ufunguo wa mthibitishaji.
 
-### Uondoaji wa sehemu {#partial-withdrawals}
+### Utoaji wa kiasi {#partial-withdrawals}
 
-Wathibitishaji walio na stakabadhi za **Aina ya 1** hupata ufagiaji wa kiotomatiki, usio na gesi wa salio lao la ziada (chochote zaidi ya ETH 32) hadi kwenye anwani yao ya uondoaji. Kwa sababu **Aina ya 2** inaruhusu mthibitishaji kujumuisha salio kwa nyongeza za ETH 1, haitafagia salio kiotomatiki hadi ifike ETH 2048. Uondoaji wa sehemu kwa wathibitishaji wa **Aina ya 2** lazima uanzishwe mwenyewe na utagharimu gesi.
+Wathibitishaji wenye vitambulisho vya **Aina ya 1** hupata ufagiaji wa kiotomatiki, usio na gesi wa salio lao la ziada (chochote zaidi ya 32 ETH) kwenye anwani yao ya utoaji. Kwa sababu **Aina ya 2** inamruhusu mthibitishaji kulimbikiza masalio katika nyongeza za 1 ETH, haitafagia masalio kiotomatiki hadi ifikie 2048 ETH. Utoaji wa kiasi kwa wathibitishaji wa **Aina ya 2** lazima uanzishwe kwa mikono na utagharimu gesi.
 
 ## Zana za ujumuishaji {#consolidation-tooling}
 
-Kuna zana kadhaa zinazopatikana za kudhibiti ujumuishaji. Zana rasmi, iliyoundwa na Ethereum Foundation, ni [Launchpad](https://launchpad.ethereum.org/en/validator-actions). Pia kuna zana za watu wengine zilizoundwa na mashirika kutoka kwa jamii ya kusimamisha ambazo zinaweza kutoa vipengele visivyotolewa na Launchpad. Ingawa zana zilizopo hapa hazijakaguliwa au kuidhinishwa na Ethereum Foundation, zifuatazo ni zana za chanzo-wazi kutoka kwa wanajamii wanaojulikana.
+Kuna zana kadhaa zinazopatikana za kudhibiti ujumuishaji. Zana rasmi, iliyoundwa na Taasisi ya Ethereum, ni [Launchpad](https://launchpad.ethereum.org/en/validator-actions). Pia kuna zana za wahusika wengine zilizoundwa na taasisi kutoka kwa jumuiya ya uwekaji dhamana ambazo zinaweza kutoa vipengele ambavyo havitolewi na Launchpad. Ingawa zana hapa hazijakaguliwa au kuidhinishwa na Taasisi ya Ethereum, zifuatazo ni zana za chanzo wazi na wanachama wanaojulikana wa jumuiya.
 
-| Zana                                                 | Tovuti                                                                                                    | Chanzo cha wazi                  | Muundaji                                       | Iliyokaguliwa                                                                                                                                        | Kiolesura                                                                              | Vipengele muhimu                                                               |
-| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Meneja wa Kusimamisha wa Pectra                      | pectrastaking.com                                                                         | Ndio, Apache 2.0 | [Pier Two](https://piertwo.com/)               | Hapana                                                                                                                                               | UI ya Wavuti                                                                           | Wallet Connect, inafanya kazi na SAFE                                          |
-| Zana ya CLI ya Uendeshaji wa Mthibitishaji wa Pectra | [GitHub](https://github.com/Luganodes/Pectra-Batch-Contract)                                              | Ndio, MIT                        | [Luganodes](https://www.luganodes.com/)        | Ndio, Quantstamp [Mei 2025](https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html) | Mstari wa amri                                                                         | Kukusanya, kwa wathibitishaji wengi kwa wakati mmoja                           |
-| Ethereal                                             | [GitHub](https://github.com/wealdtech/ethereal)                                                           | Ndio, Apache 2.0 | [Jim McDonald](https://www.attestant.io/team/) | Hapana                                                                                                                                               | Mstari wa amri                                                                         | Seti kamili ya vipengele kwa ajili ya usimamizi wa wathibitishaji na nodi      |
-| Siren                                                | [GitHub](https://github.com/sigp/siren)                                                                   | Ndio, Apache 2.0 | [Sigma Prime](https://sigmaprime.io/)          | Hapana                                                                                                                                               | Mstari fulani wa amri, lakini hasa UI ya wavuti                                        | Inafanya kazi tu ikiwa unatumia mteja wa makubaliano wa Lighthouse             |
-| Consolideth.app                      | https://consolideth.app/ [GitHub](https://github.com/Stakely/consolideth) | Ndio, leseni za MIT              | [Stakely](https://stakely.io/)                 | Hapana                                                                                                                                               | UI ya wavuti, inayopangishwa na Stakely na iko tayari kupangishwa mwenyewe bila malipo | Inasaidia viunganisho vikuu vya mkoba ikiwa ni pamoja na Safe na WalletConnect |
+| Zana | Tovuti | Chanzo wazi | Muundaji | Imekaguliwa | Kiolesura | Vipengele muhimu |
+| --- | --- | --- | --- | --- | --- | --- |
+| Pectra Staking Manager | pectrastaking.com | Ndiyo, Apache 2.0 | [Pier Two](https://piertwo.com/) | Hapana | Kiolesura cha Wavuti | WalletConnect, inafanya kazi na SAFE |
+| Pectra Validator Ops CLI Tool | [GitHub](https://github.com/Luganodes/Pectra-Batch-Contract) | Ndiyo, MIT | [Luganodes](https://www.luganodes.com/) | Ndiyo, Quantstamp [Mei 2025](https://certificate.quantstamp.com/full/luganodes-pectra-batch-contract/23f0765f-969a-4798-9edd-188d276c4a2b/index.html) | Mstari wa amri | Ukusanyaji wa mafungu, kwa wathibitishaji wengi kwa wakati mmoja |
+| Ethereal | [GitHub](https://github.com/wealdtech/ethereal) | Ndiyo, Apache 2.0 | [Jim McDonald](https://www.attestant.io/team/) | Hapana | Mstari wa amri | Seti kamili ya vipengele kwa usimamizi wa mthibitishaji na nodi |
+| Siren | [GitHub](https://github.com/sigp/siren) | Ndiyo, Apache 2.0 | [Sigma Prime](https://sigmaprime.io/) | Hapana | Baadhi ya mstari wa amri, lakini hasa kiolesura cha wavuti | Inafanya kazi tu ikiwa unatumia mteja wa mwafaka wa Lighthouse |
+| Consolideth.app | https://consolideth.app/ [GitHub](https://github.com/Stakely/consolideth) | Ndiyo, leseni za MIT | [Stakely](https://stakely.io/) | Hapana | Kiolesura cha Wavuti, kinapangishwa na stakely na kiko tayari kupangishwa kibinafsi bila malipo| Inasaidia miunganisho mikuu ya mkoba ikiwa ni pamoja na safe na WalletConnect |
 
 ## Maswali Yanayoulizwa Mara kwa Mara {#faq}
 
-### Je, kuchagua kuingia kunabadilisha bahati yangu ya pendekezo au zawadi? {#change-luck-or-rewards}
+### Je, kuchagua kushiriki kunabadilisha bahati yangu ya pendekezo au tuzo? {#change-luck-or-rewards}
 
-Hapana. Kuchagua kuingia hakupunguzi mabadiliko yako ya pendekezo - majukumu yako na uteuzi wa pendekezo vinabaki vile vile. Kwa mfano, ikiwa una wathibitishaji wawili wa ETH 32 dhidi ya mthibitishaji mmoja wa ETH 64, utakuwa na nafasi sawa za jumla za kuchaguliwa kupendekeza bloku na kupata zawadi.
+Hapana. Kuchagua kushiriki hakupunguzi nafasi yako ya pendekezo - majukumu yako na uteuzi wa pendekezo unabaki vile vile. Kwa mfano, ikiwa una wathibitishaji wawili wa 32 ETH dhidi ya mthibitishaji mmoja wa 64 ETH, utakuwa na nafasi sawa za jumla za kuchaguliwa kupendekeza kitalu na kupata tuzo.
 
-### Je, kuchagua kuingia kunabadilisha hatari yangu ya kupunguzwa? {#change-slashing-risk}
+### Je, kuchagua kushiriki kunabadilisha hatari yangu ya ukataji? {#change-slashing-risk}
 
-Kwa waendeshaji wadogo au wasio wa kitaalamu, jibu fupi ni hapana. Jibu refu ni kwamba, kwa waendeshaji wa kitaalamu wanaoendesha wathibitishaji wengi kwa kila nodi na arifa za haraka, kujumuisha katika wathibitishaji wachache kunaweza kupunguza uwezo wao wa kukabiliana na upunguzaji na kuzuia matukio ya mfululizo. Adhabu ya awali ya _upunguzaji_ kwa wathibitishaji wote imepunguzwa sana kutoka ETH 1 (kwa ETH 32) hadi ETH 0.0078125 (kwa ETH 32) ili kukabiliana na hatari hii.
+Kwa waendeshaji wadogo au wasio wa kitaalamu, jibu fupi ni hapana. Jibu refu ni kwamba, kwa waendeshaji wa kitaalamu wanaoendesha wathibitishaji wengi kwa kila nodi na arifa za haraka, kujumuisha kuwa wathibitishaji wachache kunaweza kupunguza uwezo wao wa kukabiliana na ukataji na kuzuia matukio mfululizo. *Adhabu* ya awali ya ukataji kwa wathibitishaji wote imepunguzwa kwa kiasi kikubwa kutoka 1 ETH (kwa kila 32 ETH) hadi 0.0078125 ETH (kwa kila 32 ETH) ili kufidia hatari hii.
 
-### Je, ni lazima niondoke kwenye mthibitishaji wangu ili kubadilisha? {#exit-validator}
+### Je, lazima nimtoe mthibitishaji wangu ili kubadilisha? {#exit-validator}
 
-Hapana. Unaweza kubadilisha papo hapo bila kutoka.
+Hapana. Unaweza kubadilisha hapo hapo bila kujitoa.
 
 ### Itachukua muda gani kubadilisha / kujumuisha? {#how-long}
 
-Kiwango cha chini cha saa 27.3 lakini ujumuishaji pia unategemea foleni. Foleni hii ni huru kutoka kwa foleni za amana na uondoaji na haiathiriwi nazo.
+Kiwango cha chini cha saa 27.3 lakini ujumuishaji pia unategemea foleni. Foleni hii inajitegemea kando na foleni za amana na utoaji na haiathiriwi nazo.
 
-### Je, naweza kuweka faharasa yangu ya mthibitishaji? {#keep-validator-index}
+### Je, ninaweza kuhifadhi faharisi yangu ya mthibitishaji? {#keep-validator-index}
 
-Ndiyo. Ubadilishaji wa papo hapo huhifadhi faharasa sawa ya mthibitishaji. Ukijumuisha wathibitishaji wengi, utaweza tu kuweka faharasa ya _mthibitishaji lengwa_.
+Ndiyo. Ubadilishaji wa hapo hapo unahifadhi faharisi sawa ya mthibitishaji. Ikiwa unajumuisha wathibitishaji wengi, utaweza tu kuhifadhi faharisi ya *mthibitishaji lengwa*.
 
 ### Je, nitakosa uthibitisho? {#miss-attestations}
 
-Wakati wa ujumuishaji katika mthibitishaji mwingine, mthibitishaji chanzo hutoka na kuna kipindi cha kusubiri cha takriban saa 27 kabla salio kuwa hai kwenye mthibitishaji lengwa. Kipindi hiki **hakiathiri vipimo vya utendaji**.
+Wakati wa ujumuishaji kwenye mthibitishaji mwingine, mthibitishaji chanzo anajitoa na kuna kipindi cha kusubiri cha saa ~27 kabla ya salio kufanya kazi kwenye mthibitishaji lengwa. Kipindi hiki **hakiathiri vipimo vya utendaji**.
 
 ### Je, nitapata adhabu? {#incur-penalties}
 
-Hapana. Muda wote mthibitishaji wako yuko mtandaoni, hutapata adhabu.
+Hapana. Mradi mthibitishaji wako yuko mtandaoni, hutapata adhabu.
 
-### Je, anwani za uondoaji za wathibitishaji wanaojumuishwa zinapaswa kufanana? {#withdrawal-addresses-match}
+### Je, anwani za utoaji za wathibitishaji wanaojumuishwa lazima zilingane? {#withdrawal-addresses-match}
 
-Hapana. Lakini _chanzo_ lazima kiidhinishe ombi kutoka kwa anwani yake yenyewe.
+Hapana. Lakini *chanzo* lazima kiidhinishe ombi kutoka kwa anwani yake yenyewe.
 
-### Je, zawadi zangu zitajumuika baada ya kubadilisha? {#rewards-compound}
+### Je, tuzo zangu zitalimbikizwa baada ya kubadilisha? {#rewards-compound}
 
-Ndiyo. Kwa stakabadhi za **Aina ya 2**, zawadi zilizo juu ya ETH 32 huwekwa tena kiotomatiki — lakini si papo hapo. Kwa sababu ya bafa ndogo (inayoitwa [_hysteresis_](https://eth2book.info/capella/part2/incentives/balances/#hysteresis)), salio lako linahitaji kufikia **takriban ETH 1.25 zaidi** kabla ya ziada kuwekwa tena. Kwa hivyo badala ya kujumuisha kwa ETH 33.0, inatokea kwa 33.25 (salio la ufanisi = ETH 33), kisha 34.25 (salio la ufanisi = ETH 34), na kadhalika.
+Ndiyo. Ukiwa na vitambulisho vya **Aina ya 2**, tuzo zilizo juu ya 32 ETH zinawekwa dhamana tena kiotomatiki — lakini si mara moja. Kwa sababu ya bafa ndogo (inayoitwa [*hysteresis*](https://eth2book.info/capella/part2/incentives/balances/#hysteresis)), salio lako linahitaji kufikia **zaidi ya 1.25 ETH** kabla ya ziada kuwekwa dhamana tena. Kwa hivyo badala ya kulimbikiza kwa 33.0 ETH, inafanyika kwa 33.25 (salio tendaji = 33 ETH), kisha 34.25 (salio tendaji = 34 ETH), na kuendelea.
 
-### Je, bado naweza kupata ufagiaji wa kiotomatiki baada ya kubadilisha? {#automatic-sweep}
+### Je, bado ninaweza kupata ufagiaji wa kiotomatiki baada ya kubadilisha? {#automatic-sweep}
 
-Ufagiaji wa kiotomatiki utatokea tu kwa salio la ziada zaidi ya 2048. Kwa uondoaji mwingine wote wa sehemu, utahitaji kuuanzisha mwenyewe.
+Ufagiaji wa kiotomatiki utafanyika tu kwa masalio ya ziada zaidi ya 2048. Kwa utoaji mwingine wote wa kiasi, utahitaji kuanzisha kwa mikono.
 
-### Je, naweza kubadilisha mawazo yangu na kurudi kutoka Aina ya 2 hadi Aina ya 1? {#go-back-to-type1}
+### Je, ninaweza kubadili mawazo yangu na kurudi kutoka Aina ya 2 hadi Aina ya 1? {#go-back-to-type1}
 
-Hapana. Kubadilisha kuwa **Aina ya 2** hakuwezi kubadilishwa.
+Hapana. Kubadilisha hadi **Aina ya 2** hakuwezi kutenguliwa.
 
-### Ikiwa ninataka kujumuisha wathibitishaji wengi, je, ni lazima nibadilishe kila mmoja kuwa Aina ya 2 kwanza? {#consolidate-multiple-validators}
+### Ikiwa ninataka kujumuisha wathibitishaji wengi, je, lazima nibadilishe kila mmoja kuwa Aina ya 2 kwanza? {#consolidate-multiple-validators}
 
-Hapana! Badilisha mthibitishaji mmoja kuwa Aina ya 2 kisha tumia huyo kama lengo. Wathibitishaji wengine wote waliojumuishwa katika lengo hilo la Aina ya 2 wanaweza kuwa Aina ya 1 au Aina ya 2
+Hapana! Badilisha mthibitishaji mmoja kuwa Aina ya 2 kisha umtumie huyo kama lengo. Wathibitishaji wengine wote waliojumuishwa kwenye lengo hilo la Aina ya 2 wanaweza kuwa Aina ya 1 au Aina ya 2
 
-### Mthibitishaji wangu yuko nje ya mtandao au chini ya ETH 32 - je, bado naweza kuubadilisha? {#offline-or-below-32eth}
+### Mthibitishaji wangu yuko nje ya mtandao au chini ya 32 ETH - je, bado ninaweza kumbadilisha? {#offline-or-below-32eth}
 
-Ndiyo. Muda wote ukiwa hai (haujatoka) na unaweza kusaini na anwani yake ya uondoaji, unaweza kuubadilisha.
+Ndiyo. Mradi anafanya kazi (hajajitoa) na unaweza kusaini na anwani yake ya utoaji, unaweza kumbadilisha.
 
 ## Rasilimali {#resources}
 
-- [Vipimo vya makubaliano ya Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md): Hili ndilo toleo 'halisi' zaidi unalopaswa kutegemea. Ukiwa na shaka, soma vipimo
-- Sio kila mtu anayestarehe kupitia msimbo, kwa hivyo [hii maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) inaweza kusaidia kutafsiri vipimo. _Kanusho: Vipimo, sio AI, vinapaswa kutegemewa kama ukweli, kwani AI inaweza kutafsiri taarifa vibaya au kutoa majibu ya kubuni_
-- [pectrified.com](https://pectrified.com/): Tazama hali ya ujumuishaji, amana, na muda wa kusubiri kwenye foleni
-- [Ethereal](https://github.com/wealdtech/ethereal): Zana ya CLI iliyoundwa na jamii kwa ajili ya kudhibiti kazi za kawaida za wathibitishaji
-- [batch-validator-depositor](https://github.com/attestantio/batch-validator-depositor): Mkataba ulioundwa na jamii unaoruhusu wathibitishaji wengi wa Ethereum kuwekwa amana katika muamala mmoja
+- [Vipimo vya mwafaka vya Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md): Hili ndilo toleo 'la kweli zaidi' ambalo unapaswa kutegemea. Ukiwa na shaka, soma vipimo
+- Sio kila mtu anastarehe kupitia msimbo, kwa hivyo [maxEB-GPT hii](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) inaweza kusaidia kutafsiri vipimo. *Kanusho: Vipimo, sio AI, vinapaswa kutegemewa kama ukweli, kwani AI inaweza kutafsiri vibaya habari au kubuni majibu*
+- [pectrified.com](https://pectrified.com/): Tazama hali ya ujumuishaji, amana, na nyakati za kusubiri kwenye foleni
+- [Ethereal](https://github.com/wealdtech/ethereal): Zana ya CLI iliyoundwa na jumuiya kwa ajili ya kudhibiti kazi za kawaida za mthibitishaji
+- [batch-validator-depositor](https://github.com/attestantio/batch-validator-depositor): Mkataba ulioundwa na jumuiya unaoruhusu wathibitishaji wengi wa Ethereum kuwekewa amana katika muamala mmoja

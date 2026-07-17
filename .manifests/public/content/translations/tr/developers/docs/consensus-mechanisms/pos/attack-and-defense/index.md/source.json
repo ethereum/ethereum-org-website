@@ -1,0 +1,889 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md",
+  "generatedAt": "2026-06-16T22:03:50.289Z",
+  "rootHash": "44acdbf15125",
+  "tree": {
+    "contentHash": "a076eb6cbe52",
+    "anchorHash": "a7afedf03a52",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "c3398486ac97",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "aa7e97113b83",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:2": {
+        "contentHash": "01735db359cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:3": {
+        "contentHash": "d9e90dd50c03",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "47371e7de0d8",
+        "anchorHash": "eb3219983f46"
+      },
+      "prose:4": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "74adcabbc371",
+        "anchorHash": "a062e608794c",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "a5fea931dd51",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "769e0b8515e3",
+            "anchorHash": "0e500613f6a4"
+          },
+          "prose:4": {
+            "contentHash": "2ac5f578671d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "06986e17dcf9",
+            "anchorHash": "f063434f7153"
+          },
+          "prose:5": {
+            "contentHash": "1ba1fee588dd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "8d4d2d64992c",
+            "anchorHash": "55eb14c71747"
+          },
+          "prose:6": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "what-do-attackers-want": {
+        "contentHash": "7fde92ee71d6",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "880ab57fb0cc",
+        "children": {
+          "_label": {
+            "contentHash": "880ab57fb0cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0f74078ebd01",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "methods-of-attack": {
+        "contentHash": "68f12a2f7e1a",
+        "anchorHash": "049bd9ec68b5",
+        "labelHash": "7788fbda1c3b",
+        "children": {
+          "_label": {
+            "contentHash": "7788fbda1c3b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "layer-0": {
+            "contentHash": "a8eb9b241ac5",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "9eb04eb08ab8",
+            "children": {
+              "_label": {
+                "contentHash": "9eb04eb08ab8",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "4b6a0be61e6e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "attacking-the-protocol": {
+            "contentHash": "5df42b601a95",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "9b705a4fbc91",
+            "children": {
+              "_label": {
+                "contentHash": "9b705a4fbc91",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "601712e5883e",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "attacks-by-small-stakeholders": {
+            "contentHash": "ee59f15ecb4a",
+            "anchorHash": "c4d87dec8728",
+            "labelHash": "098d9340b88b",
+            "children": {
+              "_label": {
+                "contentHash": "098d9340b88b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "reorgs": {
+                "contentHash": "7115e6b58905",
+                "anchorHash": "886495378a94",
+                "labelHash": "e4ad2d6da07f",
+                "children": {
+                  "_label": {
+                    "contentHash": "e4ad2d6da07f",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:23": {
+                    "contentHash": "00f781da5740",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "20e82cda2844",
+                    "anchorHash": "7ecc51ba137f"
+                  },
+                  "prose:24": {
+                    "contentHash": "267e2d3bc5ed",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:1": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "df7e70e50215"
+                  },
+                  "prose:25": {
+                    "contentHash": "00f781da5740",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:2": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "1f97d653b7ed"
+                  },
+                  "prose:26": {
+                    "contentHash": "f7f7af17d139",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:3": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "fc314b71d7a9"
+                  },
+                  "prose:27": {
+                    "contentHash": "777cc0119520",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:4": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "559aead08264"
+                  },
+                  "prose:28": {
+                    "contentHash": "8aec7eb76ec8",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:5": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "df7e70e50215"
+                  },
+                  "prose:29": {
+                    "contentHash": "51c8369f8749",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:6": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "559aead08264"
+                  },
+                  "prose:30": {
+                    "contentHash": "7d38cee2ba37",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:7": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "df7e70e50215"
+                  },
+                  "prose:31": {
+                    "contentHash": "eb732669de3c",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:8": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "df7e70e50215"
+                  },
+                  "prose:32": {
+                    "contentHash": "7abb5fd54df9",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:9": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "559aead08264"
+                  },
+                  "prose:33": {
+                    "contentHash": "324b354540a6",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:10": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "3f39d5c348e5"
+                  },
+                  "prose:34": {
+                    "contentHash": "5f1967e6313a",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:11": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "3f39d5c348e5"
+                  },
+                  "prose:35": {
+                    "contentHash": "d78f3bb46229",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:12": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "df7e70e50215"
+                  },
+                  "prose:36": {
+                    "contentHash": "28363615d2cc",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:13": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "3f39d5c348e5"
+                  },
+                  "prose:37": {
+                    "contentHash": "7b038e6c2402",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:14": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "1b16b1df538b"
+                  },
+                  "prose:38": {
+                    "contentHash": "87bb05df2ee2",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:15": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "6b23c0d5f35d"
+                  },
+                  "prose:39": {
+                    "contentHash": "280964bdb582",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:16": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "fc314b71d7a9"
+                  },
+                  "prose:40": {
+                    "contentHash": "2132f6a25e5c",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:17": {
+                    "contentHash": "126b5b44153b",
+                    "anchorHash": "4209a469a7ea"
+                  },
+                  "prose:41": {
+                    "contentHash": "c942caf09391",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:18": {
+                    "contentHash": "dfce016b03a9",
+                    "anchorHash": "eb52bdb98b17"
+                  },
+                  "prose:42": {
+                    "contentHash": "51e99ebe2d77",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:19": {
+                    "contentHash": "030b608c0bb3",
+                    "anchorHash": "e5924826057f"
+                  },
+                  "prose:43": {
+                    "contentHash": "5f52c9cdb3bd",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:20": {
+                    "contentHash": "4ccd81f41f0f",
+                    "anchorHash": "ccde5b3a48f5"
+                  },
+                  "prose:44": {
+                    "contentHash": "4612664c8e1f",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:21": {
+                    "contentHash": "193758799551",
+                    "anchorHash": "ab2573c661d4"
+                  },
+                  "prose:45": {
+                    "contentHash": "98b62e950d7f",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "image:22": {
+                    "contentHash": "d5668f7266db",
+                    "anchorHash": "1c1ca3af2d10"
+                  },
+                  "prose:46": {
+                    "contentHash": "5e2a86a46c76",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "component:48": {
+                    "contentHash": "4b9f7d802648",
+                    "anchorHash": "7985428bec84",
+                    "children": {
+                      "attr:slug": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "7ee1bf9aa5a2"
+                      }
+                    }
+                  },
+                  "prose:16": {
+                    "contentHash": "5d794b7b8bf5",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:17": {
+                    "contentHash": "925bb6f19db7",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "ee9f73b33cfa",
+                    "anchorHash": "75f17eca4e5c"
+                  },
+                  "prose:18": {
+                    "contentHash": "ca799e3214e3",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:2": {
+                    "contentHash": "043e53c30e0e",
+                    "anchorHash": "f072cbc9ad65"
+                  },
+                  "prose:19": {
+                    "contentHash": "cfc35a8ea36f",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:3": {
+                    "contentHash": "265bf7b116a6",
+                    "anchorHash": "85756c54420d"
+                  },
+                  "prose:20": {
+                    "contentHash": "630ba62cbeee",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:21": {
+                    "contentHash": "0d175150f8f3",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:22": {
+                    "contentHash": "70cde5712a61",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:10": {
+                    "contentHash": "766c0be72f2f",
+                    "anchorHash": "e6eb4aca5972"
+                  },
+                  "link:11": {
+                    "contentHash": "b1435f3b8251",
+                    "anchorHash": "7716f252d126"
+                  },
+                  "link:12": {
+                    "contentHash": "fc551808b9f3",
+                    "anchorHash": "18a61b62a116"
+                  },
+                  "link:13": {
+                    "contentHash": "d89663522bfc",
+                    "anchorHash": "209d3fbc92ee"
+                  },
+                  "link:15": {
+                    "contentHash": "a9ce31dfd72b",
+                    "anchorHash": "4e4a0d94bd88"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:23",
+                  "link:0",
+                  "prose:24",
+                  "inline-code:1",
+                  "prose:25",
+                  "inline-code:2",
+                  "prose:26",
+                  "inline-code:3",
+                  "prose:27",
+                  "inline-code:4",
+                  "prose:28",
+                  "inline-code:5",
+                  "prose:29",
+                  "inline-code:6",
+                  "prose:30",
+                  "inline-code:7",
+                  "prose:31",
+                  "inline-code:8",
+                  "prose:32",
+                  "inline-code:9",
+                  "prose:33",
+                  "inline-code:10",
+                  "prose:34",
+                  "inline-code:11",
+                  "prose:35",
+                  "inline-code:12",
+                  "prose:36",
+                  "inline-code:13",
+                  "prose:37",
+                  "inline-code:14",
+                  "prose:38",
+                  "inline-code:15",
+                  "prose:39",
+                  "inline-code:16",
+                  "prose:40",
+                  "link:17",
+                  "prose:41",
+                  "link:18",
+                  "prose:42",
+                  "link:19",
+                  "prose:43",
+                  "link:20",
+                  "prose:44",
+                  "link:21",
+                  "prose:45",
+                  "image:22",
+                  "prose:46",
+                  "component:48",
+                  "prose:16",
+                  "link:0",
+                  "prose:17",
+                  "link:1",
+                  "prose:18",
+                  "link:2",
+                  "prose:19",
+                  "link:3",
+                  "prose:20",
+                  "inline-code:4",
+                  "prose:21",
+                  "inline-code:5",
+                  "prose:22",
+                  "inline-code:6",
+                  "prose:23",
+                  "inline-code:7",
+                  "prose:24",
+                  "inline-code:8",
+                  "prose:25",
+                  "inline-code:9",
+                  "prose:26",
+                  "link:10",
+                  "prose:27",
+                  "link:11",
+                  "prose:28",
+                  "link:12",
+                  "prose:29",
+                  "link:13",
+                  "prose:30",
+                  "inline-code:14",
+                  "prose:31",
+                  "link:15",
+                  "prose:32"
+                ]
+              },
+              "finality-delay": {
+                "contentHash": "f29eb9996af0",
+                "anchorHash": "1335a101aff6",
+                "labelHash": "864c642c65a5",
+                "children": {
+                  "_label": {
+                    "contentHash": "864c642c65a5",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "fa660445abbc",
+                    "anchorHash": "ddb252f68294"
+                  },
+                  "prose:1": {
+                    "contentHash": "6551def693ec",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "link:0",
+                  "prose:1"
+                ]
+              },
+              "long-range-attacks": {
+                "contentHash": "dc9c736e1a6f",
+                "anchorHash": "11468bc92af2",
+                "labelHash": "acf581364707",
+                "children": {
+                  "_label": {
+                    "contentHash": "acf581364707",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:1": {
+                    "contentHash": "7f81c35a8df8",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "ffa8b0327b3c",
+                    "anchorHash": "f1ca5f242868"
+                  },
+                  "prose:2": {
+                    "contentHash": "191bfbc1ad1b",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:1",
+                  "link:0",
+                  "prose:2"
+                ]
+              },
+              "denial-of-service": {
+                "contentHash": "888fca1b728e",
+                "anchorHash": "cf3d146f3889",
+                "labelHash": "ce5389cfe6cc",
+                "children": {
+                  "_label": {
+                    "contentHash": "ce5389cfe6cc",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:1": {
+                    "contentHash": "df46fb6043fd",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "28191c082cdc",
+                    "anchorHash": "d03cd45d99cf"
+                  },
+                  "prose:2": {
+                    "contentHash": "2670b14e4514",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:1",
+                  "link:0",
+                  "prose:2"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "reorgs",
+              "finality-delay",
+              "long-range-attacks",
+              "denial-of-service"
+            ]
+          },
+          "attackers-with-33-stake": {
+            "contentHash": "20f71909b1d4",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "11ed945e9a45",
+            "children": {
+              "_label": {
+                "contentHash": "11ed945e9a45",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "ca37e22646bd",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "attackers-with-50-stake": {
+            "contentHash": "fedf245094a2",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "1961212464c6",
+            "children": {
+              "_label": {
+                "contentHash": "1961212464c6",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "4ca1a99013fe",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "attackers-with-66-stake": {
+            "contentHash": "0a43527a97f7",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "e7edefc3dbe4",
+            "children": {
+              "_label": {
+                "contentHash": "e7edefc3dbe4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "85fbaaa37379",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "layer-0",
+          "attacking-the-protocol",
+          "attacks-by-small-stakeholders",
+          "attackers-with-33-stake",
+          "attackers-with-50-stake",
+          "attackers-with-66-stake"
+        ]
+      },
+      "people-the-last-line-of-defense": {
+        "contentHash": "94e110588919",
+        "anchorHash": "26f84aed51d5",
+        "labelHash": "99b3947704a5",
+        "children": {
+          "_label": {
+            "contentHash": "99b3947704a5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "7f567ecd6014",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "78e80891d96e",
+            "anchorHash": "9f2cf4698585"
+          },
+          "prose:7": {
+            "contentHash": "2bde179562e8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "fcec91509759",
+            "anchorHash": "f1af44cfeb02"
+          },
+          "prose:8": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "fcec91509759",
+            "anchorHash": "f3e45e7db4f8"
+          },
+          "prose:9": {
+            "contentHash": "8a5e376e7f47",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "fcec91509759",
+            "anchorHash": "b500c83f8e2c"
+          },
+          "prose:10": {
+            "contentHash": "bfec0ffb867a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "e55c466d7f5f",
+            "anchorHash": "250a9ef2f203"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "dc8ffdbf2736",
+            "anchorHash": "f340d4389afa"
+          },
+          "prose:12": {
+            "contentHash": "646a99cbedd6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "link:0",
+          "prose:7",
+          "link:1",
+          "prose:8",
+          "link:2",
+          "prose:9",
+          "link:3",
+          "prose:10",
+          "link:4",
+          "prose:11",
+          "link:5",
+          "prose:12"
+        ]
+      },
+      "summary": {
+        "contentHash": "95a30ecbf90f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "8e76a94ac832",
+        "children": {
+          "_label": {
+            "contentHash": "8e76a94ac832",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0353b4520ba8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "45a86e815fad",
+        "anchorHash": "dd54d3aff993",
+        "labelHash": "bd2e42f237b3",
+        "children": {
+          "_label": {
+            "contentHash": "bd2e42f237b3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "c109d0f54985",
+            "anchorHash": "eb3219983f46"
+          },
+          "prose:9": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "e3705410ad06",
+            "anchorHash": "96b2588e2bb9"
+          },
+          "prose:10": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "3f2018905aa5",
+            "anchorHash": "fa28e105e9d8"
+          },
+          "prose:11": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "98a55d53b8cc",
+            "anchorHash": "42c57df8a3f5"
+          },
+          "prose:12": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "68a675be3bdd",
+            "anchorHash": "bf359eb8dd42"
+          },
+          "prose:13": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "bb8d573b0c61",
+            "anchorHash": "7ecc51ba137f"
+          },
+          "prose:14": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "84a454d97904",
+            "anchorHash": "75f17eca4e5c"
+          },
+          "prose:15": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "89f9cdb17893",
+            "anchorHash": "d03cd45d99cf"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:8",
+          "link:0",
+          "prose:9",
+          "link:1",
+          "prose:10",
+          "link:2",
+          "prose:11",
+          "link:3",
+          "prose:12",
+          "link:4",
+          "prose:13",
+          "link:5",
+          "prose:14",
+          "link:6",
+          "prose:15",
+          "link:7"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "prerequisites",
+      "what-do-attackers-want",
+      "methods-of-attack",
+      "people-the-last-line-of-defense",
+      "summary",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

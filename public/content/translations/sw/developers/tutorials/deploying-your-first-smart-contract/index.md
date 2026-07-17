@@ -1,9 +1,10 @@
 ---
-title: Kupeleka mkataba-erevu wako wa kwanza
-description: Utangulizi wa kupeleka mkataba-erevu wako wa kwanza kwenye mtandao wa majaribio wa Ethereum
+title: Kusambaza mkataba mahiri wako wa kwanza
+description: Utangulizi wa kusambaza mkataba mahiri wako wa kwanza kwenye mtandao wa majaribio wa Ethereum
 author: "jdourlens"
-tags: [ "mikataba erevu", "Remix", "Solidity", "upelekaji" ]
+tags: ["mikataba mahiri", "Remix", "Solidity", "kusambaza"]
 skill: beginner
+breadcrumb: Sambaza mkataba wa kwanza
 lang: sw
 published: 2020-04-03
 source: EthereumDev
@@ -11,17 +12,17 @@ sourceUrl: https://ethereumdev.io/deploying-your-first-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Nadhani una msisimko kama sisi [kupeleka](/developers/docs/smart-contracts/deploying/) na kuingiliana na [mkataba-erevu](/developers/docs/smart-contracts/) wako wa kwanza kwenye mnyororo wa bloku wa Ethereum.
+Nadhani una msisimko kama sisi wa [kusambaza](/developers/docs/smart-contracts/deploying/) na kuingiliana na [mkataba mahiri](/developers/docs/smart-contracts/) wako wa kwanza kwenye mnyororo wa vitalu wa Ethereum.
 
-Usijali, kwa kuwa ni mkataba-erevu wetu wa kwanza, tutaupeleka kwenye [mtandao wa majaribio wa ndani](/developers/docs/networks/) kwa hivyo haitakugharimu chochote kupeleka na kucheza nao kadri upendavyo.
+Usiwe na wasiwasi, kwa kuwa ni mkataba mahiri wetu wa kwanza, tutausambaza kwenye [mtandao wa majaribio wa ndani](/developers/docs/networks/) ili isikugharimu chochote kuusambaza na kucheza nao kadri utakavyo.
 
 ## Kuandika mkataba wetu {#writing-our-contract}
 
-Hatua ya kwanza ni [kutembelea Remix](https://remix.ethereum.org/) na kuunda faili mpya. Kwenye sehemu ya juu kushoto ya kiolesura cha Remix ongeza faili mpya na uweke jina la faili unalotaka.
+Hatua ya kwanza ni [kutembelea Remix](https://remix.ethereum.org/) na kuunda faili jipya. Kwenye sehemu ya juu kushoto ya kiolesura cha Remix ongeza faili jipya na uweke jina la faili unalotaka.
 
-![Kuongeza faili mpya katika kiolesura cha Remix](./remix.png)
+![Adding a new file in the Remix interface](./remix.png)
 
-Katika faili mpya, tutabandika msimbo ufuatao.
+Kwenye faili jipya, tutabandika msimbo ufuatao.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -29,15 +30,15 @@ pragma solidity >=0.5.17;
 
 contract Counter {
 
-    // Kigezo cha umma cha aina ya nambari kamili isiyo na alama ili kuweka idadi ya hesabu
+    // Kibadili cha umma cha aina ya unsigned int ili kuhifadhi idadi ya hesabu
     uint256 public count = 0;
 
-    // Kitendakazi kinachoongeza kaunta yetu
+    // Fankisheni inayoongeza kihesabu chetu
     function increment() public {
         count += 1;
     }
 
-    // Kipataji kisicho lazima cha kupata thamani ya hesabu
+    // Getter isiyo ya lazima ili kupata thamani ya hesabu
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -45,51 +46,51 @@ contract Counter {
 }
 ```
 
-Ikiwa umezoea programu unaweza kukisia kwa urahisi kile programu hii inafanya. Hapa kuna maelezo mstari kwa mstari:
+Ikiwa umezoea upangaji programu unaweza kukisia kwa urahisi kile programu hii inafanya. Hapa kuna maelezo mstari kwa mstari:
 
-- Mstari wa 4: Tunafafanua mkataba wenye jina la `Counter`.
-- Mstari wa 7: Mkataba wetu unahifadhi nambari kamili moja isiyo na alama inayoitwa `count` inayoanzia 0.
-- Mstari wa 10: Kitendakazi cha kwanza kitabadilisha hali ya mkataba na kuongeza kigezo chetu cha `count`.
-- Mstari wa 15: Kitendakazi cha pili ni kipataji tu ili kuweza kusoma thamani ya kigezo cha `count` nje ya mkataba-erevu. Kumbuka kwamba, kwa vile tulifafanua kigezo chetu cha `count` kama cha umma hii si lazima lakini inaonyeshwa kama mfano.
+- Mstari wa 4: Tunafafanua mkataba wenye jina `Counter`.
+- Mstari wa 7: Mkataba wetu unahifadhi nambari kamili moja isiyo na saini inayoitwa `count` inayoanzia 0.
+- Mstari wa 10: Kazi ya kwanza itabadilisha hali ya mkataba na `increment()` kigezo chetu cha `count`.
+- Mstari wa 15: Kazi ya pili ni kipataji (getter) tu ili kuweza kusoma thamani ya kigezo cha `count` nje ya mkataba mahiri. Kumbuka kwamba, kwa kuwa tulifafanua kigezo chetu cha `count` kama cha umma hii si lazima lakini imeonyeshwa kama mfano.
 
-Hayo ndiyo yote kwa mkataba-erevu wetu wa kwanza rahisi. Kama unavyoweza kujua, inaonekana kama darasa kutoka kwa lugha za OOP (Upangaji Unaolenga Kitu) kama Java au C++. Sasa ni wakati wa kucheza na mkataba wetu.
+Haya ndiyo yote kwa mkataba mahiri wetu wa kwanza rahisi. Kama unavyoweza kujua, inaonekana kama darasa kutoka kwa lugha za OOP (Upangaji Programu Unaoelekezwa kwa Kitu) kama Java au C++. Sasa ni wakati wa kucheza na mkataba wetu.
 
-## Kupeleka mkataba wetu {#deploying-our-contract}
+## Kusambaza mkataba wetu {#deploying-our-contract}
 
-Kwa vile tumeandika mkataba-erevu wetu wa kwanza kabisa, sasa tutaupeleka kwenye mnyororo wa bloku ili tuweze kucheza nao.
+Kwa kuwa tumeandika mkataba mahiri wetu wa kwanza kabisa, sasa tutausambaza kwenye mnyororo wa vitalu ili kuweza kucheza nao.
 
-[Kupeleka mkataba-erevu kwenye mnyororo wa bloku](/developers/docs/smart-contracts/deploying/) ni kutuma tu muamala wenye msimbo wa mkataba-erevu ulioandaliwa bila kubainisha wapokeaji wowote.
+[Kusambaza mkataba mahiri kwenye mnyororo wa vitalu](/developers/docs/smart-contracts/deploying/) kwa kweli ni kutuma tu muamala ulio na msimbo wa mkataba mahiri uliokusanywa bila kubainisha wapokeaji wowote.
 
-Kwanza [tutaandaa mkataba](/developers/docs/smart-contracts/compiling/) kwa kubofya aikoni ya kuandaa iliyo upande wa kushoto:
+Kwanza [tutakusanya mkataba](/developers/docs/smart-contracts/compiling/) kwa kubofya ikoni ya kukusanya (compile) upande wa kushoto:
 
-![Aikoni ya kuandaa katika upau wa vidhibiti wa Remix](./remix-compile-button.png)
+![The compile icon in the Remix toolbar](./remix-compile-button.png)
 
-Kisha bofya kwenye kitufe cha kuandaa:
+Kisha bofya kitufe cha kukusanya (compile):
 
-![Kitufe cha kuandaa katika kiandaaji cha Remix solidity](./remix-compile.png)
+![The compile button in the Remix solidity compiler](./remix-compile.png)
 
-Unaweza kuchagua chaguo la “Kuandaa Kiotomatiki” ili mkataba uwe unaandaliwa kila wakati unapohifadhi maudhui kwenye kihariri cha maandishi.
+Unaweza kuchagua chaguo la “Kukusanya kiotomatiki” (Auto compile) ili mkataba uwe unakusanywa kila wakati unapohifadhi maudhui kwenye kihariri cha maandishi.
 
-Kisha nenda kwenye skrini ya "peleka na endesha miamala":
+Kisha nenda kwenye skrini ya "sambaza na uendeshe miamala" (deploy and run transactions):
 
-![Aikoni ya kupeleka katika upau wa vidhibiti wa Remix](./remix-deploy.png)
+![The deploy icon in the Remix toolbar](./remix-deploy.png)
 
-Ukishakuwa kwenye skrini ya "peleka na endesha miamala", hakikisha mara mbili kwamba jina la mkataba wako linaonekana na ubofye Peleka. Kama unavyoona juu ya ukurasa, mazingira ya sasa ni “JavaScript VM” hii inamaanisha kuwa tutapeleka na kuingiliana na mkataba-erevu wetu kwenye mnyororo wa bloku wa majaribio wa ndani ili kuweza kupima haraka zaidi na bila ada zozote.
+Mara tu unapokuwa kwenye skrini ya "sambaza na uendeshe miamala", hakikisha mara mbili kwamba jina la mkataba wako linaonekana na ubofye Sambaza (Deploy). Kama unavyoweza kuona juu ya ukurasa, mazingira ya sasa ni “JavaScript VM” ambayo inamaanisha kwamba tutasambaza na kuingiliana na mkataba mahiri wetu kwenye mnyororo wa vitalu wa majaribio wa ndani ili kuweza kujaribu haraka na bila ada yoyote.
 
-![Kitufe cha kupeleka katika kiandaaji cha Remix solidity](./remix-deploy-button.png)
+![The deploy button in the Remix solidity compiler](./remix-deploy-button.png)
 
-Mara tu unapobofya kitufe cha “Peleka”, utaona mkataba wako ukionekana chini. Bofya mshale ulio upande wa kushoto ili kuipanua ili tuone maudhui ya mkataba wetu. Hiki ni kigezo chetu cha `counter`, kitendakazi chetu cha `increment()` na kipataji cha `getCounter()`.
+Mara tu unapobofya kitufe cha “Sambaza” (Deploy), utaona mkataba wako ukionekana chini. Bofya mshale ulio upande wa kushoto ili kuupanua ili tuone maudhui ya mkataba wetu. Hiki ni kigezo chetu cha `counter`, kazi yetu ya `increment()` na kipataji cha `getCounter()`.
 
-Ukibofya kitufe cha `count` au `getCount`, kwa kweli kitachukua maudhui ya kigezo cha `count` cha mkataba na kuyaonyesha. Kwa kuwa bado hatujaita kitendakazi cha `increment`, inapaswa kuonyesha 0.
+Ikiwa utabofya kitufe cha `count` au `getCount`, kwa kweli itarejesha maudhui ya kigezo cha `count` cha mkataba na kuionyesha. Kwa kuwa bado hatujaita kazi ya `increment`, inapaswa kuonyesha 0.
 
-![Kitufe cha kitendakazi katika kiandaaji cha Remix solidity](./remix-function-button.png)
+![The function button in the Remix solidity compiler](./remix-function-button.png)
 
-Sasa hebu tuite kitendakazi cha `increment` kwa kubofya kitufe. Utaona kumbukumbu za miamala inayofanywa zikionekana chini ya dirisha. Utaona kuwa kumbukumbu ni tofauti unapobonyeza kitufe cha kuchukua data badala ya kitufe cha `increment`. Ni kwa sababu kusoma data kwenye mnyororo wa bloku hakuhitaji miamala yoyote (kuandika) au ada. Kwa sababu kurekebisha tu hali ya mnyororo wa bloku ndiko kunahitaji kufanya muamala:
+Sasa tuite kazi ya `increment` kwa kubofya kitufe. Utaona logi za miamala inayofanywa zikionekana chini ya dirisha. Utaona kwamba logi ni tofauti unapobonyeza kitufe ili kurejesha data badala ya kitufe cha `increment`. Ni kwa sababu kusoma data kwenye mnyororo wa vitalu hakuhitaji miamala yoyote (kuandika) au ada. Kwa sababu kurekebisha tu hali ya mnyororo wa vitalu kunahitaji kufanya muamala:
 
-![Kumbukumbu ya miamala](./transaction-log.png)
+![A log of transactions](./transaction-log.png)
 
-Baada ya kubonyeza kitufe cha increment ambacho kitazalisha muamala wa kuita kitendakazi chetu cha `increment()`, tukibofya tena vitufe vya count au getCount tutasoma hali mpya iliyosasishwa ya mkataba-erevu wetu huku kigezo cha count kikiwa kikubwa kuliko 0.
+Baada ya kubonyeza kitufe cha kuongeza (increment) ambacho kitazalisha muamala wa kuita kazi yetu ya `increment()` ikiwa tutabofya tena kwenye vitufe vya count au getCount tutasoma hali mpya iliyosasishwa ya mkataba mahiri wetu huku kigezo cha count kikiwa kikubwa kuliko 0.
 
-![Hali mpya iliyosasishwa ya mkataba-erevu](./updated-state.png)
+![Newly updated state of the smart contract](./updated-state.png)
 
-Katika mafunzo yajayo, tutaangazia [jinsi unavyoweza kuongeza matukio kwenye mikataba-erevu yako](/developers/tutorials/logging-events-smart-contracts/). Kurekodi matukio ni njia rahisi ya kutatua mkataba-erevu wako na kuelewa kinachoendelea unapoita kitendakazi.
+Katika mafunzo yajayo, tutaangazia [jinsi unavyoweza kuongeza matukio kwenye mikataba mahiri yako](/developers/tutorials/logging-events-smart-contracts/). Kuweka logi za matukio ni njia rahisi ya kutatua mkataba mahiri wako na kuelewa kile kinachotokea wakati wa kuita kazi.

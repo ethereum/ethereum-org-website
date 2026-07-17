@@ -8,7 +8,8 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { DevelopersPath, VideoCourse } from "./types"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function DevelopersPageJsonLD({
   locale,
@@ -42,7 +43,7 @@ export default async function DevelopersPageJsonLD({
         "@id": url,
         name: t("page-developer-meta-title"),
         description: t("page-developers-meta-desc"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -74,7 +75,7 @@ export default async function DevelopersPageJsonLD({
         name: t("page-developer-meta-title"),
         description:
           "Comprehensive resources for building on Ethereum including tutorials, tools, documentation, and courses",
-        url: url,
+        url,
         numberOfItems: paths.length + courses.length + hackathons.length,
         itemListElement: [
           ...paths.map((path, index) => ({

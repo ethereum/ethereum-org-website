@@ -1,0 +1,445 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-06-18T21:28:20.400Z",
+  "englishManifestHash": "fddc6feaf417",
+  "placeholderOrder": [
+    "LINK-653efa",
+    "CODE-a06363",
+    "CODE-c69ea1",
+    "CODEBLOCK-fc0db6",
+    "CODE-348a62",
+    "CODE-305531",
+    "CODE-d75678",
+    "CODE-1122ef",
+    "CODE-906955",
+    "CODE-7dc7c7",
+    "CODE-12157a",
+    "CODE-22cd1a",
+    "CODE-b2b87d",
+    "CODE-22cd1a",
+    "CODE-c6130b",
+    "CODE-9e7b69",
+    "CODE-d13f21",
+    "CODE-2e7d2c",
+    "CODE-63479a",
+    "CODE-15fbc3",
+    "CODE-305531",
+    "CODEBLOCK-9b9eb8",
+    "CODE-cfc0c0",
+    "CODE-348a62",
+    "CODE-305531",
+    "CODE-c806cd",
+    "CODE-2e18a9",
+    "CODE-b8395f",
+    "CODE-0ab306",
+    "CODE-359a49",
+    "CODE-756666",
+    "CODE-63479a",
+    "CODE-0ab306",
+    "CODE-5ca4f3",
+    "CODE-7d9b02",
+    "CODE-56ef8f",
+    "CODE-594de5",
+    "CODE-030676",
+    "CODE-7db468",
+    "CODE-2a898b",
+    "CODE-a6df6d",
+    "CODE-e7cf3e",
+    "CODE-9f735e",
+    "CODE-7e32a7",
+    "CODE-d8ae63",
+    "CODE-c45d2f",
+    "CODE-c7e092",
+    "CODE-956f06",
+    "CODEBLOCK-e2ab0c",
+    "CODE-353306",
+    "CODE-3d3b2d",
+    "CODE-311b18",
+    "CODE-177b2f",
+    "CODE-1f6368",
+    "CODE-866ffb",
+    "CODE-3d3341",
+    "CODE-fdc385",
+    "CODEBLOCK-ab2a07",
+    "CODE-353306",
+    "CODE-0f2915",
+    "CODE-311b18",
+    "CODE-da447b",
+    "CODE-1f6368",
+    "CODE-20a633",
+    "CODE-3d3341",
+    "CODE-245428",
+    "LINK-ca50fa",
+    "CODE-150fe5",
+    "CODE-dd1679",
+    "CODE-dc46e5",
+    "CODE-c806cd",
+    "CODE-1f6368",
+    "CODEBLOCK-162933"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-fc0db6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9b9eb8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e2ab0c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ab2a07": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-162933": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-a06363": {
+      "type": "inline-code",
+      "values": {
+        "content": "web3"
+      }
+    },
+    "CODE-c69ea1": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth"
+      }
+    },
+    "CODE-348a62": {
+      "type": "inline-code",
+      "values": {
+        "content": "mac"
+      }
+    },
+    "CODE-305531": {
+      "type": "inline-code",
+      "values": {
+        "content": "ciphertext"
+      }
+    },
+    "CODE-d75678": {
+      "type": "inline-code",
+      "values": {
+        "content": "~/.web3/keystore"
+      }
+    },
+    "CODE-1122ef": {
+      "type": "inline-code",
+      "values": {
+        "content": "~/AppData/Web3/keystore"
+      }
+    },
+    "CODE-906955": {
+      "type": "inline-code",
+      "values": {
+        "content": "<uuid>.json"
+      }
+    },
+    "CODE-7dc7c7": {
+      "type": "inline-code",
+      "values": {
+        "content": "<uuid>"
+      }
+    },
+    "CODE-12157a": {
+      "type": "inline-code",
+      "values": {
+        "content": ".json"
+      }
+    },
+    "CODE-22cd1a": {
+      "type": "inline-code",
+      "values": {
+        "content": "kdf"
+      }
+    },
+    "CODE-b2b87d": {
+      "type": "inline-code",
+      "values": {
+        "content": "kdfparams"
+      }
+    },
+    "CODE-c6130b": {
+      "type": "inline-code",
+      "values": {
+        "content": "pbkdf2"
+      }
+    },
+    "CODE-9e7b69": {
+      "type": "inline-code",
+      "values": {
+        "content": "prf"
+      }
+    },
+    "CODE-d13f21": {
+      "type": "inline-code",
+      "values": {
+        "content": "hmac-sha256"
+      }
+    },
+    "CODE-2e7d2c": {
+      "type": "inline-code",
+      "values": {
+        "content": "c"
+      }
+    },
+    "CODE-63479a": {
+      "type": "inline-code",
+      "values": {
+        "content": "salt"
+      }
+    },
+    "CODE-15fbc3": {
+      "type": "inline-code",
+      "values": {
+        "content": "dklen"
+      }
+    },
+    "CODE-cfc0c0": {
+      "type": "inline-code",
+      "values": {
+        "content": "++"
+      }
+    },
+    "CODE-c806cd": {
+      "type": "inline-code",
+      "values": {
+        "content": "cipher"
+      }
+    },
+    "CODE-2e18a9": {
+      "type": "inline-code",
+      "values": {
+        "content": "cipherparams"
+      }
+    },
+    "CODE-b8395f": {
+      "type": "inline-code",
+      "values": {
+        "content": "cipher: aes-128-ctr"
+      }
+    },
+    "CODE-0ab306": {
+      "type": "inline-code",
+      "values": {
+        "content": "iv"
+      }
+    },
+    "CODE-359a49": {
+      "type": "inline-code",
+      "values": {
+        "content": "DK[0..15]"
+      }
+    },
+    "CODE-756666": {
+      "type": "inline-code",
+      "values": {
+        "content": "uuid"
+      }
+    },
+    "CODE-5ca4f3": {
+      "type": "inline-code",
+      "values": {
+        "content": "version"
+      }
+    },
+    "CODE-7d9b02": {
+      "type": "inline-code",
+      "values": {
+        "content": "minorversion"
+      }
+    },
+    "CODE-56ef8f": {
+      "type": "inline-code",
+      "values": {
+        "content": "Address"
+      }
+    },
+    "CODE-594de5": {
+      "type": "inline-code",
+      "values": {
+        "content": "008aeeda4d805471df9b2a5b0f38a0c3bcba786b"
+      }
+    },
+    "CODE-030676": {
+      "type": "inline-code",
+      "values": {
+        "content": "ICAP"
+      }
+    },
+    "CODE-7db468": {
+      "type": "inline-code",
+      "values": {
+        "content": "XE542A5PZHH8PYIZUBEJEO0MFWRAPPIL67"
+      }
+    },
+    "CODE-2a898b": {
+      "type": "inline-code",
+      "values": {
+        "content": "UUID"
+      }
+    },
+    "CODE-a6df6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "3198bc9c-6672-5ab3-d9954942343ae5b6"
+      }
+    },
+    "CODE-e7cf3e": {
+      "type": "inline-code",
+      "values": {
+        "content": "Password"
+      }
+    },
+    "CODE-9f735e": {
+      "type": "inline-code",
+      "values": {
+        "content": "testpassword"
+      }
+    },
+    "CODE-7e32a7": {
+      "type": "inline-code",
+      "values": {
+        "content": "Secret"
+      }
+    },
+    "CODE-d8ae63": {
+      "type": "inline-code",
+      "values": {
+        "content": "7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d"
+      }
+    },
+    "CODE-c45d2f": {
+      "type": "inline-code",
+      "values": {
+        "content": "AES-128-CTR"
+      }
+    },
+    "CODE-c7e092": {
+      "type": "inline-code",
+      "values": {
+        "content": "PBKDF2-SHA-256"
+      }
+    },
+    "CODE-956f06": {
+      "type": "inline-code",
+      "values": {
+        "content": "~/.web3/keystore/3198bc9c-6672-5ab3-d9954942343ae5b6.json"
+      }
+    },
+    "CODE-353306": {
+      "type": "inline-code",
+      "values": {
+        "content": "Derived key"
+      }
+    },
+    "CODE-3d3b2d": {
+      "type": "inline-code",
+      "values": {
+        "content": "f06d69cdc7da0faffb1008270bca38f5e31891a3a773950e6d0fea48a7188551"
+      }
+    },
+    "CODE-311b18": {
+      "type": "inline-code",
+      "values": {
+        "content": "MAC Body"
+      }
+    },
+    "CODE-177b2f": {
+      "type": "inline-code",
+      "values": {
+        "content": "e31891a3a773950e6d0fea48a71885515318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46"
+      }
+    },
+    "CODE-1f6368": {
+      "type": "inline-code",
+      "values": {
+        "content": "MAC"
+      }
+    },
+    "CODE-866ffb": {
+      "type": "inline-code",
+      "values": {
+        "content": "517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2"
+      }
+    },
+    "CODE-3d3341": {
+      "type": "inline-code",
+      "values": {
+        "content": "Cipher key"
+      }
+    },
+    "CODE-fdc385": {
+      "type": "inline-code",
+      "values": {
+        "content": "f06d69cdc7da0faffb1008270bca38f5"
+      }
+    },
+    "CODE-0f2915": {
+      "type": "inline-code",
+      "values": {
+        "content": "7446f59ecc301d2d79bc3302650d8a5cedc185ccbb4bf3ca1ebd2c163eaa6c2d"
+      }
+    },
+    "CODE-da447b": {
+      "type": "inline-code",
+      "values": {
+        "content": "edc185ccbb4bf3ca1ebd2c163eaa6c2ddd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2"
+      }
+    },
+    "CODE-20a633": {
+      "type": "inline-code",
+      "values": {
+        "content": "337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c"
+      }
+    },
+    "CODE-245428": {
+      "type": "inline-code",
+      "values": {
+        "content": "7446f59ecc301d2d79bc3302650d8a5c"
+      }
+    },
+    "CODE-150fe5": {
+      "type": "inline-code",
+      "values": {
+        "content": "Salt"
+      }
+    },
+    "CODE-dd1679": {
+      "type": "inline-code",
+      "values": {
+        "content": "Version"
+      }
+    },
+    "CODE-dc46e5": {
+      "type": "inline-code",
+      "values": {
+        "content": "KDF"
+      }
+    },
+    "LINK-653efa": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/web3.js/"
+      }
+    },
+    "LINK-ca50fa": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T21:28:20.400Z",
+      "status": "success"
+    }
+  }
+}

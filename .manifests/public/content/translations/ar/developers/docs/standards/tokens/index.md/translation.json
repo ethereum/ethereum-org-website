@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "locale": "ar",
+  "translatedAt": "2026-06-19T19:21:07.864Z",
+  "englishManifestHash": "5409462b09cf",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-5432a7",
+    "LINK-efc0b7",
+    "LINK-fb2e62",
+    "LINK-b5355b",
+    "LINK-c0a85d",
+    "LINK-4f0bca",
+    "LINK-31ec34",
+    "LINK-14fbc7",
+    "LINK-d1a24b"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-5432a7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/"
+      }
+    },
+    "LINK-efc0b7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-b5355b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-721/"
+      }
+    },
+    "LINK-c0a85d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-1155/"
+      }
+    },
+    "LINK-4f0bca": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/erc"
+      }
+    },
+    "LINK-31ec34": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/token-integration-checklist/"
+      }
+    },
+    "LINK-14fbc7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/understand-the-erc-20-token-smart-contract/"
+      }
+    },
+    "LINK-d1a24b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T19:21:07.864Z",
+      "status": "success"
+    }
+  }
+}

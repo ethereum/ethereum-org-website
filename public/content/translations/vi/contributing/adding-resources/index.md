@@ -1,51 +1,51 @@
 ---
-title: "Thêm Tài nguyên"
-description: "Chính sách áp dụng khi thêm tài nguyên vào ethereum.org"
+title: Thêm tài nguyên
+description: Chính sách chúng tôi sử dụng khi thêm tài nguyên vào ethereum.org
 lang: vi
 ---
 
-# Thêm tài nguyên {#adding-resources}
+Chúng tôi muốn đảm bảo rằng mình liệt kê các tài nguyên tốt nhất có thể trong khi vẫn giữ cho người dùng an toàn và tự tin.
 
-Chúng tôi muốn đảm bảo rằng chúng tôi giới thiệu những nguồn tài liệu tốt nhất, đồng thời giúp người dùng an toàn và tự tin.
+Bất kỳ ai cũng có thể tự do đề xuất các tài nguyên mới để thêm vào bảng điều khiển tài nguyên trên ethereum.org, hiện có tại [ethereum.org/resources](/resources/).
 
-Bất kì ai cũng có thể đề xuất tài nguyên mới để thêm vào bảng điều khiển quản trị trên ethereum.org, hiện có thể tìm thấy tại [ethereum.org/resources](/resources/).
+Mặc dù chúng tôi hoan nghênh các bổ sung mới, các tài nguyên hiện tại đã được chọn dựa trên trải nghiệm mà chúng tôi đang cố gắng tạo ra cho người dùng của mình. Những điều này dựa trên một số nguyên tắc thiết kế của chúng tôi:
 
-Mặc dù chúng tôi chào đón các bổ sung mới, chúng tôi lựa chọn những tài nguyên như hiện có dựa trên trải nghiệm chúng tôi mong muốn đem lại cho người dùng. Những điều đó được dựa trên một số tôn chỉ thiết kế của chúng tôi:
+- _Truyền cảm hứng_: bất kỳ điều gì trên ethereum.org đều nên mang lại điều gì đó mới mẻ cho người dùng
+- _Một câu chuyện hay_: những gì được liệt kê nên mang lại khoảnh khắc "à há"
+- _Đáng tin cậy_: mọi thứ nên là các doanh nghiệp/dự án hợp pháp để giảm thiểu rủi ro cho người dùng
 
-- _Truyền cảm hứng: bất cứ thứ gì trên ethereum.org đều mang lại điều mới mẻ cho người dùng
-- _Một câu chuyện hay: những gì được nhắc tới đều mang lại khoảnh khắc bất ngờ
-- _Đáng tin: tất cả dự án/doanh nghiệp đều tuân thủ pháp luật để giảm thiểu rủi ro cho người dùng
+Nhìn chung **ethereum.org hướng tới việc cung cấp một trải nghiệm tiếp nhận người dùng liền mạch cho người dùng mới**. Vì lý do đó, chúng tôi thêm các tài nguyên dựa trên:
 
-Nói chung, **ethereum.org mong muốn tạo ra một trải nghiệm sử dụng lần đầu mượt mà cho người dùng mới**. Vì lý do đó, chúng tôi thêm tài nguyên thông tin vào trang web dựa trên:
-
-- dễ dàng sử dụng
+- tính dễ sử dụng
 - tính chính xác
 - khả năng bảo trì
 
-## Khung đưa ra quyết định {#decision-framework}
+## Khung quyết định {#decision-framework}
 
 ### Tiêu chí {#criteria}
 
-- **Cung cấp thông tin trung thực và chính xác** - bất kì đề xuất lên trang nào cũng phải cung cấp thông tin trung thực và chính xác. Những sản phẩm cũng cấp thông tin sai lệch sẽ bị gỡ bỏ.
-- **Dự án đang hoạt động** - Tài nguyên phải được bảo trì bởi mội đội ngũ hoạt động chuyên cần để đảm bảo chất lượng và hỗ trợ người dùng. Tài nguyên lỗi thời sẽ bị gỡ bỏ.
+- **Thông tin niêm yết trung thực và chính xác** - Bất kỳ danh sách đề xuất nào cũng phải đi kèm với thông tin trung thực và chính xác. Các sản phẩm làm giả thông tin sẽ bị xóa.
+- **Dự án đang hoạt động** – Tài nguyên nên được bảo trì bởi một đội ngũ đang hoạt động để đảm bảo chất lượng và hỗ trợ cho người dùng. Các tài nguyên lỗi thời có thể bị xóa.
 
-### Thứ tự Dự án {#product-ordering}
+### Sắp xếp sản phẩm {#product-ordering}
 
-Chúng tôi có quyền sắp xếp thứ tự các sản phẩm dựa trên sức ảnh hưởng. Sản phẩm mới nói chung sẽ được thêm vào ở cuối danh sách, trừ khi có quy định khác.
+Chúng tôi có quyền sắp xếp các sản phẩm dựa trên tác động của chúng. Các sản phẩm mới thường sẽ được thêm vào cuối danh sách trừ khi có quy định khác.
 
 ## Bảo trì {#maintenance}
 
-Vì hệ sinh thái Ethereum luôn biến đổi, chúng tôi sẽ thường xuyên kiểm tra nội dung để:
+Khi hệ sinh thái Ethereum phát triển, chúng tôi sẽ thường xuyên kiểm tra nội dung của mình để:
 
-- Đảm bảo các tài nguyên hiển thị trên web vẫn đạt các tiêu chí
-- Kiểm tra danh sách đề xuất không có sản phẩm đáp ứng được nhiều tiêu chí hơn các sản phẩm trong danh sách niêm yết.
+- Đảm bảo rằng tất cả các tài nguyên được liệt kê vẫn đáp ứng các tiêu chí của chúng tôi
+- Xác minh xem có sản phẩm nào được đề xuất đáp ứng nhiều tiêu chí của chúng tôi hơn những sản phẩm hiện đang được liệt kê hay không
 
-Bạn có thể giúp bằng cách kiểm tra và thông báo cho chúng tôi. [Tạo góp ý](https://github.com/ethereum/ethereum-org-website/issues/new?template=bug_report.yaml) hoặc gửi email đến [website@ethereum.org](mailto:website@ethereum.org).
+Bạn có thể giúp đỡ việc này bằng cách kiểm tra và cho chúng tôi biết. [Tạo một issue](https://github.com/ethereum/ethereum-org-website/issues/new?template=bug_report.yaml) hoặc gửi email tới [website@ethereum.org](mailto:website@ethereum.org).
 
 ---
 
 ## Thêm tài nguyên của bạn {#add-your-resource}
 
-Nếu bạn muốn thêm tài nguyên của bạn vào trang ethereum.org và ứng dụng đạt các tiêu chí, hãy tạo góp ý trên Github.
+Nếu bạn muốn thêm một tài nguyên vào ethereum.org và nó đáp ứng các tiêu chí, hãy tạo một issue trên GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=resource+📚&template=suggest_resource.yaml">Tạo góp ý</ButtonLink>
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=resource+📚&template=suggest_resource.yaml">
+  Tạo một issue
+</ButtonLink>

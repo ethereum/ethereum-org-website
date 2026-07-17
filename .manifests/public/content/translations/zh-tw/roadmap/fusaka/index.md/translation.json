@@ -1,0 +1,507 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-08T10:18:34.593Z",
+  "englishManifestHash": "67f558495c4b",
+  "placeholderOrder": [
+    "LINK-8a188b",
+    "LINK-a21a82",
+    "LINK-54fa0a",
+    "LINK-c8fdd8",
+    "LINK-9ab0c3",
+    "LINK-338d55",
+    "LINK-a91df3",
+    "LINK-b1a251",
+    "LINK-999e6d",
+    "CODE-34a040",
+    "CODE-9baf3a",
+    "IMAGE-06bd77",
+    "LINK-051efb",
+    "LINK-d8eaf5",
+    "LINK-d8a274",
+    "LINK-40eb17",
+    "LINK-3b52be",
+    "LINK-cc2800",
+    "LINK-2fd059",
+    "LINK-227705",
+    "LINK-c65505",
+    "LINK-d37c5c",
+    "CODE-523885",
+    "LINK-146a3e",
+    "LINK-73b1c5",
+    "CODE-7a0fc0",
+    "CODE-19cf91",
+    "CODE-23166f",
+    "LINK-b5369a",
+    "LINK-d20e4b",
+    "LINK-c28038",
+    "LINK-6f70c9",
+    "LINK-b3a91f",
+    "CODE-be6eb7",
+    "LINK-b395af",
+    "LINK-9d90eb",
+    "CODE-83b9e2",
+    "CODE-97b056",
+    "CODE-c6c1c9",
+    "CODE-3547cb",
+    "CODE-be6206",
+    "CODE-26532f",
+    "LINK-10fdb2",
+    "LINK-7c589f",
+    "LINK-2f00d9",
+    "LINK-2fe316",
+    "LINK-0c0afc",
+    "LINK-ed406a",
+    "LINK-479f4d",
+    "LINK-4ec173",
+    "LINK-66489d",
+    "LINK-105cda",
+    "LINK-d775d2",
+    "LINK-6416e8",
+    "LINK-5e6d40",
+    "LINK-cbe720",
+    "LINK-f70fd9",
+    "CODE-67b330",
+    "LINK-d65365",
+    "CODE-17a675",
+    "LINK-107674",
+    "CODE-67b330",
+    "LINK-ad5014",
+    "LINK-f9bbaf",
+    "LINK-33409a",
+    "LINK-f39233",
+    "LINK-d20b77",
+    "LINK-2b4e01",
+    "LINK-13bba0",
+    "LINK-c04361",
+    "LINK-fec507"
+  ],
+  "placeholderMap": {
+    "CODE-34a040": {
+      "type": "inline-code",
+      "values": {
+        "content": "target"
+      }
+    },
+    "CODE-9baf3a": {
+      "type": "inline-code",
+      "values": {
+        "content": "max"
+      }
+    },
+    "CODE-523885": {
+      "type": "inline-code",
+      "values": {
+        "content": "MODEXP"
+      }
+    },
+    "CODE-7a0fc0": {
+      "type": "inline-code",
+      "values": {
+        "content": "MAX_BLOCK_SIZE = 10,485,760"
+      }
+    },
+    "CODE-19cf91": {
+      "type": "inline-code",
+      "values": {
+        "content": "SAFETY_MARGIN = 2,097,152"
+      }
+    },
+    "CODE-23166f": {
+      "type": "inline-code",
+      "values": {
+        "content": "MAX_RLP_BLOCK_SIZE = MAX_BLOCK_SIZE − SAFETY_MARGIN"
+      }
+    },
+    "CODE-be6eb7": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x100"
+      }
+    },
+    "CODE-83b9e2": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_config"
+      }
+    },
+    "CODE-97b056": {
+      "type": "inline-code",
+      "values": {
+        "content": "current"
+      }
+    },
+    "CODE-c6c1c9": {
+      "type": "inline-code",
+      "values": {
+        "content": "next"
+      }
+    },
+    "CODE-3547cb": {
+      "type": "inline-code",
+      "values": {
+        "content": "last"
+      }
+    },
+    "CODE-be6206": {
+      "type": "inline-code",
+      "values": {
+        "content": "chainId"
+      }
+    },
+    "CODE-26532f": {
+      "type": "inline-code",
+      "values": {
+        "content": "forkId"
+      }
+    },
+    "CODE-67b330": {
+      "type": "inline-code",
+      "values": {
+        "content": "ModExp"
+      }
+    },
+    "CODE-17a675": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_call"
+      }
+    },
+    "IMAGE-06bd77": {
+      "type": "image",
+      "values": {
+        "path": "./average-blob-count-per-block.webp"
+      }
+    },
+    "LINK-8a188b": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-54fa0a": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-c8fdd8": {
+      "type": "link",
+      "values": {
+        "url": "/ethereum-forks/"
+      }
+    },
+    "LINK-9ab0c3": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@fradamt/das-fork-choice"
+      }
+    },
+    "LINK-338d55": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/peerdas/"
+      }
+    },
+    "LINK-a91df3": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7594"
+      }
+    },
+    "LINK-b1a251": {
+      "type": "link",
+      "values": {
+        "url": "https://youtu.be/bONWd1x2TjQ?t=328"
+      }
+    },
+    "LINK-999e6d": {
+      "type": "link",
+      "values": {
+        "url": "https://eprint.iacr.org/2024/1362.pdf"
+      }
+    },
+    "LINK-051efb": {
+      "type": "link",
+      "values": {
+        "url": "https://dune.com/hildobby/blobs"
+      }
+    },
+    "LINK-d8eaf5": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7892"
+      }
+    },
+    "LINK-d8a274": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7918"
+      }
+    },
+    "LINK-40eb17": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@anderselowsson/AIG"
+      }
+    },
+    "LINK-3b52be": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2025/07/08/partial-history-exp"
+      }
+    },
+    "LINK-cc2800": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.org/roadmap/merge/"
+      }
+    },
+    "LINK-2fd059": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7642"
+      }
+    },
+    "LINK-227705": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7823"
+      }
+    },
+    "LINK-c65505": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7825"
+      }
+    },
+    "LINK-d37c5c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7825"
+      }
+    },
+    "LINK-146a3e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7883"
+      }
+    },
+    "LINK-73b1c5": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-structures-and-encoding/rlp/"
+      }
+    },
+    "LINK-b5369a": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7934"
+      }
+    },
+    "LINK-d20e4b": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7935"
+      }
+    },
+    "LINK-c28038": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/based-preconfirmations/17353"
+      }
+    },
+    "LINK-6f70c9": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7917"
+      }
+    },
+    "LINK-b3a91f": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7939"
+      }
+    },
+    "LINK-b395af": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7951"
+      }
+    },
+    "LINK-9d90eb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/blog/what-is-rip-7212"
+      }
+    },
+    "LINK-10fdb2": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7910"
+      }
+    },
+    "LINK-7c589f": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-2f00d9": {
+      "type": "link",
+      "values": {
+        "url": "https://ethstaker.org/support"
+      }
+    },
+    "LINK-2fe316": {
+      "type": "link",
+      "values": {
+        "url": "https://dsc.gg/ethstaker"
+      }
+    },
+    "LINK-0c0afc": {
+      "type": "link",
+      "values": {
+        "url": "/security/"
+      }
+    },
+    "LINK-ed406a": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/hwwonx/status/1431970802040127498"
+      }
+    },
+    "LINK-479f4d": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/peerdas"
+      }
+    },
+    "LINK-4ec173": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/category/protocol"
+      }
+    },
+    "LINK-66489d": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/category/protocol"
+      }
+    },
+    "LINK-105cda": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2025/09/26/fusaka-testnet-announcement"
+      }
+    },
+    "LINK-d775d2": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7870"
+      }
+    },
+    "LINK-6416e8": {
+      "type": "link",
+      "values": {
+        "url": "https://ethpandaops.io/posts/fusaka-bandwidth-estimation/#theoretical-requirements"
+      }
+    },
+    "LINK-5e6d40": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7825"
+      }
+    },
+    "LINK-cbe720": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7939"
+      }
+    },
+    "LINK-f70fd9": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7883"
+      }
+    },
+    "LINK-d65365": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7825"
+      }
+    },
+    "LINK-107674": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7883"
+      }
+    },
+    "LINK-ad5014": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7825"
+      }
+    },
+    "LINK-f9bbaf": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-33409a": {
+      "type": "link",
+      "values": {
+        "url": "https://forkcast.org/upgrade/fusaka"
+      }
+    },
+    "LINK-f39233": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7607"
+      }
+    },
+    "LINK-d20b77": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2025/09/26/fusaka-testnet-announcement"
+      }
+    },
+    "LINK-2b4e01": {
+      "type": "link",
+      "values": {
+        "url": "https://www.bankless.com/read/what-fusaka-pectra-will-bring-ethereum"
+      }
+    },
+    "LINK-13bba0": {
+      "type": "link",
+      "values": {
+        "url": "https://x.com/BanklessHQ/status/1956017743289020633?t=502"
+      }
+    },
+    "LINK-c04361": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/playlist?list=PL4cwHXAawZxpz-erUbKKUnnGoQNdF8s7Z"
+      }
+    },
+    "LINK-fec507": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/playlist?list=PL4cwHXAawZxoIenfk7OJry4rxcqX-eqBt"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:18:34.593Z",
+      "status": "success"
+    }
+  }
+}

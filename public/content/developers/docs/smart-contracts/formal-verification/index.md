@@ -271,8 +271,8 @@ Also, it is not always possible for program verifiers to determine if a property
 
 **Mythril** - _A symbolic execution tool for detecting vulnerabilities in Ethereum smart contracts_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Documentation](https://mythril-classic.readthedocs.io/en/develop/)
+- [GitHub](https://github.com/ConsenSysDiligence/mythril)
+- [Documentation](https://github.com/ConsenSysDiligence/mythril/tree/develop/docs/source)
 
 ## Further reading {#further-reading}
 

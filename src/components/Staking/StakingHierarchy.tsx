@@ -1,6 +1,7 @@
 "use client"
 
 import React, { HTMLAttributes } from "react"
+import { useTranslations } from "next-intl"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -17,8 +18,6 @@ import {
 import Translation from "../Translation"
 import { ButtonLink } from "../ui/buttons/Button"
 import { Center, Flex, VStack } from "../ui/flex"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type SectionGridProps = ChildOnlyProp
 
@@ -104,10 +103,15 @@ const Content = ({ children }: ChildOnlyProp) => (
 )
 
 const StakingHierarchy = () => {
-  const { t } = useTranslation("page-staking")
+  const t = useTranslations("page-staking")
 
   return (
-    <VStack className="gap-16 bg-gradient-staking p-8 md:gap-0 md:rounded-lg">
+    <VStack
+      className={cn(
+        "gap-16 p-8 md:gap-0 md:rounded-lg",
+        "bg-linear-to-b/increasing from-yellow-300/10 from-10% via-blue-400/10 via-70% to-red-200/10 to-80%"
+      )}
+    >
       <SectionGrid>
         <StyledEtherSvg className="size-[100%] text-staking-gold" />
         <Line />

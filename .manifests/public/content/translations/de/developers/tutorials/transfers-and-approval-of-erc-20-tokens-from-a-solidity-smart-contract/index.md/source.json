@@ -1,0 +1,360 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md",
+  "generatedAt": "2026-06-19T23:21:46.628Z",
+  "rootHash": "ce07b1c71686",
+  "tree": {
+    "contentHash": "8197fffa418d",
+    "anchorHash": "a5d753ec0758",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "a5afd7d95e57",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "48994ad9ab8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "32c02afec79d"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "15f36bb8e03d"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "41d82405b699"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7efb8574f56d"
+      },
+      "frontmatter:source": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f26cb6fb8ba7"
+      },
+      "frontmatter:sourceUrl": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c6d73ddad7be"
+      },
+      "frontmatter:address": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "875b7ef46ba2"
+      },
+      "prose:2": {
+        "contentHash": "98544d0803f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "15b5928d3b83",
+        "anchorHash": "3a3cb8c6c35d"
+      },
+      "prose:3": {
+        "contentHash": "e9df716de545",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "29e1dcec5e51",
+        "anchorHash": "68c1f3dae0e4"
+      },
+      "prose:4": {
+        "contentHash": "ee9f1ac8a982",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:16": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6a0bf65c1c6a"
+      },
+      "prose:0": {
+        "contentHash": "f1c8b69f0df1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-comment:18": {
+        "contentHash": "337e547a950f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-comment:19": {
+        "contentHash": "337e547a950f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:20": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "043345470194"
+      },
+      "inline-code:0": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e8197b20f8e7"
+      },
+      "inline-code:1": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c0f21d451463"
+      },
+      "the-buy-function": {
+        "contentHash": "c3849c91dd7c",
+        "anchorHash": "3621ea94e841",
+        "labelHash": "6c5d74fe1393",
+        "children": {
+          "_label": {
+            "contentHash": "6c5d74fe1393",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "dc7dd46c7182",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dde8bef78cbb"
+          },
+          "prose:2": {
+            "contentHash": "b0864c197b04",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "473b73b38e3e"
+          },
+          "prose:3": {
+            "contentHash": "8472355132c6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "44359e21492d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c67941a4f76a"
+          },
+          "prose:5": {
+            "contentHash": "99c9423c65c8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:2": {
+            "contentHash": "7d82705ced0c",
+            "anchorHash": "22e70736669f"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "inline-code:0",
+          "prose:2",
+          "code-fence:4",
+          "prose:3",
+          "inline-code:0",
+          "prose:4",
+          "inline-code:1",
+          "prose:5",
+          "image:2"
+        ]
+      },
+      "the-sell-function": {
+        "contentHash": "a2bf18f7b195",
+        "anchorHash": "f6eb76fc4386",
+        "labelHash": "70a7673ee527",
+        "children": {
+          "_label": {
+            "contentHash": "70a7673ee527",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "fa0124bc597f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dde8bef78cbb"
+          },
+          "prose:5": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2561555cf5bd"
+          },
+          "prose:6": {
+            "contentHash": "80ae995d7f05",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "74e21680eac7"
+          },
+          "prose:7": {
+            "contentHash": "c0ed7a51c3f0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c0f21d451463"
+          },
+          "prose:8": {
+            "contentHash": "ad99001e5b21",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:10": {
+            "contentHash": "1cdce4929bc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:11": {
+            "contentHash": "00975eb47b10",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:12": {
+            "contentHash": "f7f4c28d79ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:13": {
+            "contentHash": "ff8f0bb12b88",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:14": {
+            "contentHash": "2c7f9b7a4433",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:15": {
+            "contentHash": "6a42a79f93ac",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:16": {
+            "contentHash": "b3e133ff1d51",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:17": {
+            "contentHash": "c00fb481156c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:18": {
+            "contentHash": "ec4ea6026fc2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:19": {
+            "contentHash": "d68d41ea7f9c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:20": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "08e88e511412"
+          },
+          "prose:0": {
+            "contentHash": "9054e4cc33ca",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:22": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "eb73d40cb11b"
+          },
+          "prose:3": {
+            "contentHash": "36d39ea5a88f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:2": {
+            "contentHash": "a3d334d1f862",
+            "anchorHash": "02b6ceca0839"
+          },
+          "component:29": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "868e8fd17b51",
+            "anchorHash": "b7954eec50aa"
+          },
+          "link:3": {
+            "contentHash": "56cd50ceb318",
+            "anchorHash": "1539979c47fd"
+          },
+          "code-fence:39": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e6c14a348b9f"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "inline-code:0",
+          "prose:5",
+          "inline-code:1",
+          "prose:6",
+          "inline-code:2",
+          "prose:7",
+          "inline-code:3",
+          "prose:8",
+          "code-comment:10",
+          "code-comment:11",
+          "code-comment:12",
+          "code-comment:13",
+          "code-comment:14",
+          "code-comment:15",
+          "code-comment:16",
+          "code-comment:17",
+          "code-comment:18",
+          "code-comment:19",
+          "code-fence:20",
+          "prose:0",
+          "code-fence:22",
+          "prose:3",
+          "inline-code:0",
+          "prose:4",
+          "inline-code:1",
+          "prose:5",
+          "image:2",
+          "component:29",
+          "prose:4",
+          "inline-code:0",
+          "prose:5",
+          "inline-code:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8",
+          "code-fence:39"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:tags",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "frontmatter:published",
+      "frontmatter:source",
+      "frontmatter:sourceUrl",
+      "frontmatter:address",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "code-fence:16",
+      "prose:0",
+      "code-comment:18",
+      "code-comment:19",
+      "code-fence:20",
+      "prose:2",
+      "inline-code:0",
+      "prose:3",
+      "inline-code:1",
+      "prose:4",
+      "the-buy-function",
+      "the-sell-function"
+    ]
+  },
+  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+}

@@ -1,0 +1,412 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/what-are-apps/index.md",
+  "generatedAt": "2026-06-18T00:55:04.954Z",
+  "rootHash": "41182d9f3f3a",
+  "tree": {
+    "contentHash": "20d01754e9db",
+    "anchorHash": "282f7731c079",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "0d502367792d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "317949d39e48"
+      },
+      "frontmatter:description": {
+        "contentHash": "9b7034f488dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2290d7d70dea"
+      },
+      "frontmatter:emoji": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7c3d9b9ac524"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:showDropdown": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "fcbcf165908d"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1adb32e2a85c"
+      },
+      "frontmatter:summary": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "9b7034f488dd"
+      },
+      "apps-with-superpowers": {
+        "contentHash": "bb123dffa4ba",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "fa74a74b7b52",
+        "children": {
+          "_label": {
+            "contentHash": "fa74a74b7b52",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ab293c7e3792",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-is-a-dapp": {
+        "contentHash": "8bc440461cfa",
+        "anchorHash": "b837d1401aaf",
+        "labelHash": "1a5baadfa082",
+        "children": {
+          "_label": {
+            "contentHash": "1a5baadfa082",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ff6e59ec4ec8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "93b208ae5786",
+            "anchorHash": "ea81d0d37123",
+            "children": {
+              "component:0": {
+                "contentHash": "07d277dde7f1",
+                "anchorHash": "b739c1a37a18",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "42f835d3f570",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "a7897a78f0e7",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "eeb183631eec"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
+              },
+              "component:1": {
+                "contentHash": "86123b2ac041",
+                "anchorHash": "42ba373c6b2b",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "324035b70cee",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "a0baba2bc080",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "8cba3282fe37"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
+              },
+              "component:2": {
+                "contentHash": "1c2a29f5f0c8",
+                "anchorHash": "27707ac65329",
+                "children": {
+                  "attr:title": {
+                    "contentHash": "e9871f982f77",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:description": {
+                    "contentHash": "5d2b808ffd66",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "attr:emoji": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "d9433600ad3b"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:title",
+                  "attr:description",
+                  "attr:emoji"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "component:0",
+              "component:1",
+              "component:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "why-does-this-matter": {
+        "contentHash": "a76441cd17ec",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "7446070860ca",
+        "children": {
+          "_label": {
+            "contentHash": "7446070860ca",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "3937f966d7ba",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-does-it-work": {
+        "contentHash": "ed3c985f0dd0",
+        "anchorHash": "2c3ae80a6e99",
+        "labelHash": "55b79e5dc2a4",
+        "children": {
+          "_label": {
+            "contentHash": "55b79e5dc2a4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "60d6ef4e066d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:3": {
+            "contentHash": "a3baa3fcd4c8",
+            "anchorHash": "20c1b530cc60",
+            "children": {
+              "attr:className": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "0ec6c63698ea"
+              },
+              "image:0": {
+                "contentHash": "508c3edab434",
+                "anchorHash": "c01f77393099"
+              }
+            },
+            "childrenOrder": [
+              "attr:className",
+              "image:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "component:3"
+        ]
+      },
+      "ethereum-apps-are-like-legos": {
+        "contentHash": "578a5cafc9b6",
+        "anchorHash": "f5818652a990",
+        "labelHash": "61e5fe52db57",
+        "children": {
+          "_label": {
+            "contentHash": "61e5fe52db57",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7231e1e683bd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "ca385f050f74",
+        "anchorHash": "97a5a26627f8",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "aea06b60f88a",
+            "anchorHash": "cf9f2c5f50ec"
+          },
+          "prose:4": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "389ceb72dce6",
+            "anchorHash": "c7308a37e8aa"
+          },
+          "prose:5": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "ddf975d51454",
+            "anchorHash": "585d8438b20c"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2"
+        ]
+      },
+      "faq": {
+        "contentHash": "fcd746faa25e",
+        "anchorHash": "b0b6fa178baa",
+        "labelHash": "e956a9404b46",
+        "children": {
+          "_label": {
+            "contentHash": "e956a9404b46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "1b45ae0cdaab",
+            "anchorHash": "f5818652a990",
+            "children": {
+              "attr:title": {
+                "contentHash": "c9b2e948766e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "cada3809456d",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "prose:0"
+            ]
+          },
+          "component:2": {
+            "contentHash": "a291c37e202f",
+            "anchorHash": "7644b89457ac",
+            "children": {
+              "attr:title": {
+                "contentHash": "07f7b48fa657",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "08219323ed6a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "8c677f2fb12b",
+                "anchorHash": "3eeb90643e1e"
+              },
+              "prose:2": {
+                "contentHash": "6878f8476135",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "component:3": {
+            "contentHash": "f7011a0a3073",
+            "anchorHash": "9bd93d41574a",
+            "children": {
+              "attr:title": {
+                "contentHash": "bb3de46790b9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "76a64c166377",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "9ec988c0b056",
+                "anchorHash": "d722be877886"
+              },
+              "prose:2": {
+                "contentHash": "6878f8476135",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:title",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1",
+          "component:2",
+          "component:3"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:emoji",
+      "frontmatter:sidebarDepth",
+      "frontmatter:showDropdown",
+      "frontmatter:image",
+      "frontmatter:summary",
+      "apps-with-superpowers",
+      "what-is-a-dapp",
+      "why-does-this-matter",
+      "how-does-it-work",
+      "ethereum-apps-are-like-legos",
+      "further-reading",
+      "faq"
+    ]
+  },
+  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+}

@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/data-structures-and-encoding/index.md",
+  "generatedAt": "2026-06-16T22:28:41.768Z",
+  "rootHash": "296f46770e92",
+  "tree": {
+    "contentHash": "74a940e0ed29",
+    "anchorHash": "4994e9c3af79",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "33d90e3eb884",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "6745017675b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "prose:1": {
+        "contentHash": "8d5e7ce84c4f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "097541f929a5",
+        "anchorHash": "2aca232aec5a"
+      },
+      "prose:2": {
+        "contentHash": "d1b07194a69f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prerequisites": {
+        "contentHash": "22931ff1cf39",
+        "anchorHash": "9b8777408789",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "cb204742fa58",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e01ae22541cd",
+            "anchorHash": "94d095604d5e"
+          },
+          "prose:3": {
+            "contentHash": "75da5799175b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "f6b68317fc9a",
+            "anchorHash": "a360e235e901"
+          },
+          "prose:4": {
+            "contentHash": "f2e972f68f52",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "data-structures": {
+        "contentHash": "1431fb0dd071",
+        "anchorHash": "e6b2628f64be",
+        "labelHash": "ec0aec2d8cae",
+        "children": {
+          "_label": {
+            "contentHash": "ec0aec2d8cae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "patricia-merkle-tries": {
+            "contentHash": "3079519b10d0",
+            "anchorHash": "0f7be19d304f",
+            "labelHash": "56199fbe207b",
+            "children": {
+              "_label": {
+                "contentHash": "56199fbe207b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "58cefaa921c5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "3c6b313400d0",
+                "anchorHash": "8cc2907393e1"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "recursive-length-prefix": {
+            "contentHash": "d47efdd71cef",
+            "anchorHash": "a8d062749a09",
+            "labelHash": "28f012106039",
+            "children": {
+              "_label": {
+                "contentHash": "28f012106039",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "8110a0fc515a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "a77597efe8f0",
+                "anchorHash": "4dabfac62e98"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          },
+          "simple-serialize": {
+            "contentHash": "b1fa2adb652f",
+            "anchorHash": "bfc1a532d712",
+            "labelHash": "5fa4115be57b",
+            "children": {
+              "_label": {
+                "contentHash": "5fa4115be57b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "7e9984077234",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "34491b10e41c",
+                "anchorHash": "d9b98393e1c9"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "patricia-merkle-tries",
+          "recursive-length-prefix",
+          "simple-serialize"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:sidebarDepth",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "prerequisites",
+      "data-structures"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

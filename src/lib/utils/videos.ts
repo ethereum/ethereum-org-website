@@ -50,11 +50,14 @@ export async function getVideoData(
   const cached = videoDataCache.get(cacheKey)
   if (cached) return cached
 
-  // Always read English source for full metadata
+  // Always read English source for full metadata.
+  // gray-matter has a global content-keyed cache that returns a shallow copy
+  // (`data` shared by reference), so we spread to avoid mutating the cached
+  // object — otherwise overriding title/description below leaks across locales.
   const enPath = videoPath(slug, DEFAULT_LOCALE)
   const enRaw = await readFile(enPath, "utf-8")
   const enParsed = matter(enRaw)
-  const frontmatter = enParsed.data as VideoFrontmatter
+  const frontmatter = { ...enParsed.data } as VideoFrontmatter
 
   // gray-matter auto-converts YAML dates to Date objects; coerce back to string
   if ((frontmatter.uploadDate as unknown) instanceof Date) {
@@ -120,8 +123,21 @@ export async function getVideoSlugs(): Promise<string[]> {
   if (slugsCache) return slugsCache
 
   const videosDir = join(process.cwd(), CONTENT_DIR, "videos")
-  const entries = await readdir(videosDir, { withFileTypes: true })
-  slugsCache = entries.filter((e) => e.isDirectory()).map((e) => e.name)
+  try {
+    const entries = await readdir(videosDir, { withFileTypes: true })
+    slugsCache = entries.filter((e) => e.isDirectory()).map((e) => e.name)
+  } catch (error) {
+    // Directory absent in the serverless runtime (public/content excluded from
+    // the function bundle). Match getPostSlugs: warn and return an empty list.
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      console.warn(
+        `Content directory ${videosDir} not found, returning empty slug list`
+      )
+      slugsCache = []
+    } else {
+      throw error
+    }
+  }
   return slugsCache
 }
 

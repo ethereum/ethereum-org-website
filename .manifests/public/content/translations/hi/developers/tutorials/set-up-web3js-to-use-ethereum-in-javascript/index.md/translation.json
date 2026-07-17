@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-06-18T00:21:01.148Z",
+  "englishManifestHash": "b022d7ff816a",
+  "placeholderOrder": [
+    "LINK-4873ab",
+    "CODEBLOCK-b319d8",
+    "CODEBLOCK-14648f",
+    "CODEBLOCK-eaa842",
+    "LINK-bc04f7",
+    "LINK-8f619a",
+    "CODEBLOCK-3bfb42",
+    "LINK-fdebe8",
+    "CODEBLOCK-701a39",
+    "CODE-8e3619",
+    "CODEBLOCK-563a92",
+    "CODE-27e99b",
+    "CODEBLOCK-33c194",
+    "LINK-7702e8",
+    "CODEBLOCK-b25574",
+    "LINK-414043",
+    "LINK-e6eafd"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-b319d8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-14648f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-eaa842": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3bfb42": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-701a39": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-563a92": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-33c194": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b25574": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-8e3619": {
+      "type": "inline-code",
+      "values": {
+        "content": "getBlockNumber"
+      }
+    },
+    "CODE-27e99b": {
+      "type": "inline-code",
+      "values": {
+        "content": "await/async"
+      }
+    },
+    "LINK-4873ab": {
+      "type": "link",
+      "values": {
+        "url": "https://web3js.readthedocs.io/"
+      }
+    },
+    "LINK-bc04f7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-8f619a": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/"
+      }
+    },
+    "LINK-fdebe8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/nodes-as-a-service"
+      }
+    },
+    "LINK-7702e8": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.web3js.org/"
+      }
+    },
+    "LINK-414043": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.io/"
+      }
+    },
+    "LINK-e6eafd": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:21:01.148Z",
+      "status": "success"
+    }
+  }
+}

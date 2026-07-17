@@ -1,0 +1,278 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-06-08T08:25:39.458Z",
+  "englishManifestHash": "90b9b5b64a3f",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-43417f",
+    "LINK-e873ee",
+    "LINK-a9f7af",
+    "LINK-95e7e8",
+    "LINK-72df26",
+    "LINK-a01f09",
+    "LINK-837103",
+    "LINK-e05109",
+    "LINK-4ed14b",
+    "LINK-96a38f",
+    "LINK-8f97b8",
+    "LINK-260ad5",
+    "LINK-25fcd6",
+    "LINK-aa1cd8",
+    "LINK-f4951c",
+    "LINK-96cec3",
+    "LINK-039efd",
+    "LINK-a0bdd3",
+    "LINK-02e5c7",
+    "LINK-8eab9b",
+    "LINK-ae8c7a",
+    "LINK-0cc943",
+    "LINK-72f811",
+    "LINK-c1da92",
+    "LINK-4eeac0",
+    "LINK-8eab9b",
+    "LINK-54992c",
+    "LINK-8b3c8c",
+    "LINK-9eb8b1",
+    "LINK-bcc978",
+    "LINK-c2821f",
+    "LINK-3c2e71",
+    "LINK-8eab9b",
+    "LINK-be5a55",
+    "LINK-04ca22",
+    "LINK-7db671",
+    "LINK-8eab9b",
+    "CODE-b3c8a8",
+    "LINK-228dbd"
+  ],
+  "placeholderMap": {
+    "CODE-b3c8a8": {
+      "type": "inline-code",
+      "values": {
+        "content": "#🥇 | proof-of-contribution"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-43417f": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/"
+      }
+    },
+    "LINK-e873ee": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues"
+      }
+    },
+    "LINK-a9f7af": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/design/"
+      }
+    },
+    "LINK-95e7e8": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/#how-to-update-content"
+      }
+    },
+    "LINK-72df26": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/content-resources/"
+      }
+    },
+    "LINK-a01f09": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/design/adding-design-resources/"
+      }
+    },
+    "LINK-837103": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/quizzes/"
+      }
+    },
+    "LINK-e05109": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-videos/"
+      }
+    },
+    "LINK-4ed14b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title="
+      }
+    },
+    "LINK-96a38f": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-exchanges/"
+      }
+    },
+    "LINK-8f97b8": {
+      "type": "link",
+      "values": {
+        "url": "/get-eth/#country-picker"
+      }
+    },
+    "LINK-260ad5": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-products/"
+      }
+    },
+    "LINK-25fcd6": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-developer-tools/"
+      }
+    },
+    "LINK-aa1cd8": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-layer-2s/"
+      }
+    },
+    "LINK-f4951c": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-staking-products/"
+      }
+    },
+    "LINK-96cec3": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-wallets/"
+      }
+    },
+    "LINK-039efd": {
+      "type": "link",
+      "values": {
+        "url": "/wallets/find-wallet/"
+      }
+    },
+    "LINK-a0bdd3": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-desci-projects/"
+      }
+    },
+    "LINK-02e5c7": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-resources/"
+      }
+    },
+    "LINK-8eab9b": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    },
+    "LINK-ae8c7a": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/"
+      }
+    },
+    "LINK-0cc943": {
+      "type": "link",
+      "values": {
+        "url": "https://crowdin.com/project/ethereum-org"
+      }
+    },
+    "LINK-72f811": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/"
+      }
+    },
+    "LINK-c1da92": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website"
+      }
+    },
+    "LINK-4eeac0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website"
+      }
+    },
+    "LINK-54992c": {
+      "type": "link",
+      "values": {
+        "url": "/about/"
+      }
+    },
+    "LINK-8b3c8c": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/design-principles/"
+      }
+    },
+    "LINK-9eb8b1": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/style-guide/"
+      }
+    },
+    "LINK-bcc978": {
+      "type": "link",
+      "values": {
+        "url": "/community/code-of-conduct"
+      }
+    },
+    "LINK-c2821f": {
+      "type": "link",
+      "values": {
+        "url": "mailto:website@ethereum.org"
+      }
+    },
+    "LINK-3c2e71": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/ethdotorg"
+      }
+    },
+    "LINK-be5a55": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22"
+      }
+    },
+    "LINK-04ca22": {
+      "type": "link",
+      "values": {
+        "url": "https://app.galxe.com/quest/ethereumorg"
+      }
+    },
+    "LINK-7db671": {
+      "type": "link",
+      "values": {
+        "url": "https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03"
+      }
+    },
+    "LINK-228dbd": {
+      "type": "link",
+      "values": {
+        "url": "https://www.gitpoap.io"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:25:39.458Z",
+      "status": "success"
+    }
+  }
+}

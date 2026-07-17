@@ -9,6 +9,8 @@
   "sim-click": "点击！",
   "sim-no-nfts": "暂无 NFT！",
   "sim-example-walkthrough": "示例演练",
+  "sim-start-next-lesson": "开始下一课",
+  "sim-how-to": "如何操作？",
   "sim-address-tooltip": "在这里完成后，从你自己的钱包分享你的地址（公开标识符）",
   "sim-try-real-app": "在这里完成后，尝试使用一个真实的以太坊应用程序",
   "sim-try-login-app": "在这里完成后，尝试使用你的钱包登录一个真实的应用程序",

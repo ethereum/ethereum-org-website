@@ -9,7 +9,8 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 import { COLLECTIBLES_BASE_URL } from "./constants"
 import type { Badge, Stats } from "./types"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function CollectiblesJsonLD({
   locale,
@@ -41,7 +42,7 @@ export default async function CollectiblesJsonLD({
         "@id": url,
         name: t("page-collectibles-hero-header"),
         description: t("page-collectibles-hero-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -72,7 +73,7 @@ export default async function CollectiblesJsonLD({
         "@id": `${url}#collectibles`,
         name: t("page-collectibles-hero-header"),
         description: t("page-collectibles-hero-description"),
-        url: url,
+        url,
         numberOfItems: stats.collectiblesCount || badges.length,
         itemListElement: badges.slice(0, 10).map((badge, index) => ({
           "@type": "ListItem",

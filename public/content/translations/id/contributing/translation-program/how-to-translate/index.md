@@ -1,16 +1,14 @@
 ---
 title: Cara menerjemahkan
 lang: id
-description: Instruksi untuk menggunakan Crowdin untuk menerjemahkan ethereum.org
+description: Instruksi untuk menggunakan Crowdin guna menerjemahkan ethereum.org
 ---
-
-# Cara menerjemahkan {#how-to-translate}
 
 ## Panduan visual {#visual-guide}
 
-Bagi Anda yang lebih suka belajar secara visual, tonton Luka memandu cara menyiapkan Crowdin. Sebagai alternatif, Anda dapat menemukan langkah-langkah yang sama dalam format tertulis di bagian selanjutnya.
+Bagi Anda yang lebih suka belajar secara visual, tonton Luka menjelaskan cara menyiapkan Crowdin. Sebagai alternatif, Anda dapat menemukan langkah-langkah yang sama dalam format tertulis di bagian selanjutnya.
 
-<YouTube id="Ii7bYhanLs4" />
+<VideoWatch slug="crowdin-translation-guide" />
 
 ## Panduan tertulis {#written-guide}
 
@@ -29,7 +27,7 @@ Setiap bahasa juga berisi informasi tentang jumlah total kata yang dapat diterje
 
 Buka bahasa yang ingin Anda terjemahkan untuk melihat daftar file yang tersedia untuk diterjemahkan.
 
-![Daftar bahasa di Crowdin](./list-of-languages.png)
+![List of languages in Crowdin](./list-of-languages.png)
 
 ### Temukan dokumen untuk dikerjakan {#find-document}
 
@@ -37,23 +35,23 @@ Konten situs web dibagi menjadi sejumlah dokumen dan keranjang konten (content b
 
 Tidak melihat bahasa Anda terdaftar? [Buka sebuah isu](https://github.com/ethereum/ethereum-org-website/issues/new/choose) atau tanyakan di [Discord](https://discord.gg/ethereum-org) kami
 
-![File yang diterjemahkan dan belum diterjemahkan di Crowdin](./crowdin-files.png)
+![Translated and untranslated files in Crowdin](./crowdin-files.png)
 
-Catatan tentang keranjang konten: kami menggunakan 'keranjang konten' di dalam Crowdin agar konten dengan prioritas tertinggi dirilis terlebih dahulu. Saat Anda memeriksa suatu bahasa, misalnya, [Filipino](https://crowdin.com/project/ethereum-org/fil#) Anda akan melihat folder untuk keranjang konten ("1. Homepage", "2. Essentials", "3. Exploring", dll.).
+Catatan tentang keranjang konten: kami menggunakan 'keranjang konten' di dalam Crowdin agar konten dengan prioritas tertinggi dirilis terlebih dahulu. Saat Anda memeriksa suatu bahasa, misalnya, [Filipina](https://crowdin.com/project/ethereum-org/fil#) Anda akan melihat folder untuk keranjang konten ("1. Homepage", "2. Essentials", "3. Exploring", dll.).
 
 Kami mendorong Anda untuk menerjemahkan dalam urutan numerik ini (1 → 2 → 3 → ⋯) untuk memastikan halaman dengan dampak tertinggi diterjemahkan terlebih dahulu.
 
-### Terjemahkan {#translate}
+### Menerjemahkan {#translate}
 
 Setelah memilih file yang ingin Anda terjemahkan, file tersebut akan terbuka di editor online. Jika Anda belum pernah menggunakan Crowdin sebelumnya, Anda dapat menggunakan panduan singkat ini untuk mempelajari dasar-dasarnya.
 
-![Editor online Crowdin](./online-editor.png)
+![Crowdin online editor](./online-editor.png)
 
 **_1 – Bilah sisi kiri_**
 
 - Belum diterjemahkan (merah) – teks yang belum dikerjakan. Ini adalah string yang harus Anda terjemahkan.
 - Diterjemahkan (hijau) – teks yang sudah diterjemahkan, tetapi belum ditinjau. Anda dipersilakan untuk menyarankan terjemahan alternatif, atau memberikan suara pada terjemahan yang ada menggunakan tombol ‘’+’’ dan ‘’-‘‘ di editor.
-- Disetujui (tanda centang) – teks yang sudah ditinjau dan saat ini tayang di situs web.
+- Disetujui (tanda centang) – teks yang telah ditinjau dan saat ini ditayangkan di situs web.
 
 Anda juga dapat menggunakan tombol di bagian atas untuk mencari string tertentu, memfilternya berdasarkan status, atau mengubah tampilan.
 
@@ -66,9 +64,9 @@ Anda juga dapat menemukan terjemahan string yang ada dan terjemahan ke bahasa la
 
 **_3 – Bilah sisi kanan_**
 
-Di sinilah Anda dapat menemukan komentar, entri memori terjemahan, dan entri glosarium. Tampilan default menunjukkan komentar dan memungkinkan penerjemah untuk berkomunikasi, mengangkat masalah, atau melaporkan terjemahan yang salah.
+Di sinilah Anda dapat menemukan komentar, entri memori terjemahan, dan entri glosarium. Tampilan default menunjukkan komentar dan memungkinkan penerjemah untuk berkomunikasi, mengangkat isu, atau melaporkan terjemahan yang salah.
 
-Dengan menggunakan tombol di bagian atas, Anda juga dapat beralih ke Memori Terjemahan, tempat Anda dapat mencari terjemahan yang ada, atau ke Glosarium, yang berisi deskripsi dan terjemahan standar dari istilah-istilah utama.
+Dengan menggunakan tombol di bagian atas, Anda juga dapat beralih ke Memori Terjemahan, tempat Anda dapat mencari terjemahan yang ada, atau ke Glosarium, yang berisi deskripsi dan terjemahan standar dari istilah-istilah kunci.
 
 Ingin mempelajari lebih lanjut? Jangan ragu untuk memeriksa [dokumentasi tentang penggunaan editor online Crowdin](https://support.crowdin.com/online-editor/)
 

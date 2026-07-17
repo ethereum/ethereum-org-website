@@ -1,62 +1,61 @@
 ---
-title: "Añadir un test"
-description: "Las políticas que nosotros usamos cuando agregamos quizzes en ethereum.org"
+title: Cuestionarios
+metaTitle: Añadir un cuestionario
+description: La política que utilizamos al añadir cuestionarios a ethereum.org
 lang: es
 ---
 
-# Cuestionarios {#quizzes}
+Los cuestionarios son una oportunidad para que los usuarios se pongan a prueba y vean si han entendido el contenido de la página que acaban de leer. Las preguntas solo deben basarse en el contenido proporcionado en la página y no deben preguntar sobre información que no se mencione en ella.
 
-Los Quizzes son una oportunidad para que los usuarios se prueben ellos mismo para ver si entiendieron el contenido de la página que ellos acabaron de leer. Las preguntas solo deben ser basadas en el contenido proporcionado en la página y no debería de preguntar acerca información que no es mencionada en la página.
+Las preguntas se estructuran de la siguiente manera: el enunciado de la pregunta, 1 respuesta correcta con una explicación de por qué es correcta y 3 respuestas incorrectas con una explicación de por qué son incorrectas.
 
-Las preguntas son estructuras de la siguiente manera. La pregunta requiere, una respuesta correcta con una explicación de por qué es correcta y tres respuestas incorrectas con la explicación de por qué son incorrectas.
+Aquí se pueden encontrar algunos ejemplos de cuestionarios actuales:
 
-He aquí algunos ejemplos de los tests actuales:
-
-- [Capa 2](/layer-2)
+- [Capa 2 (l2)](/layer-2)
 - [NFT](/nft/)
 - [¿Qué es Ethereum?](/what-is-ethereum/)
 - [¿Qué es ETH?](/what-is-ether/)
 
-## Añadir un test de aprendizaje
+## Añadir un cuestionario de aprendizaje {#adding-a-learn-quiz}
 
-Si hay una página para la que no se ha creado un cuestionario de aprendizaje, [abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) para ello.
+Si hay una página para la que no se ha creado un cuestionario de aprendizaje, por favor [abre un issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) para ello.
 
-Sea tan amable de facilitar la siguiente información:
+Por favor, proporciona la siguiente información:
 
-- La página en la que desea añadir un test .
-- Cinco preguntas con la siguiente información:
-  - La sección en la página, sobre la cual está basada la pregunta.
-  - Indicativo de la pregunta.
-  - Una respuesta correcta con la explicación acerca de por qué es correcta.
-  - Tres respuestas incorrectas, cada una de ellas con la explicación acerca de por qué son incorrectas.
+- La página en la que deseas añadir un cuestionario
+- 5 preguntas con la siguiente información:
+  - La sección de la página en la que se basa la pregunta
+  - Enunciado de la pregunta
+  - 1 respuesta correcta con una explicación de por qué es correcta
+  - 3 respuestas incorrectas, cada una con una explicación de por qué son incorrectas
 
-## Añadir una pregunta tipo test
+## Añadir una pregunta de cuestionario {#adding-a-quiz-question}
 
-Si hay una pregunta que quiera añadir al banco de preguntas para un cuestionario, [abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporcione la siguiente información:
+Si hay una pregunta que deseas añadir al banco de preguntas de un cuestionario, por favor [abre un issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporciona la siguiente información:
 
-- La página en la que quiera añadir la pregunta tipo test.
-- Para cada pregunta, proporcione la siguiente información:
-  - La sección en la página, sobre la cual está basada la pregunta.
-  - Indicativo de la pregunta.
-  - Una respuesta correcta con la explicación acerca de por qué es correcta.
-  - Tres respuestas incorrectas, cada una de ellas con la explicación acerca de por qué son incorrectas.
+- La página en la que deseas añadir una pregunta de cuestionario
+- Para cada pregunta, proporciona la siguiente información:
+  - La sección de la página en la que se basa la pregunta
+  - Enunciado de la pregunta
+  - 1 respuesta correcta con una explicación de por qué es correcta
+  - 3 respuestas incorrectas, cada una con una explicación de por qué son incorrectas
 
-## Actualizar una pregunta tipo test
+## Actualizar una pregunta de cuestionario {#updating-a-quiz-question}
 
-Si hay una pregunta que quiera actualizar en un banco de preguntas para un cuestionario, [abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporcione la siguiente información:
+Si hay una pregunta que deseas actualizar en el banco de preguntas de un cuestionario, por favor [abre un issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporciona la siguiente información:
 
-- La página para la que quiere actualizar la pregunta.
-- Por cada pregunta que se actualice, proporcione la siguiente información:
-  - La sección en la página, sobre la cual está basada la pregunta.
-  - Indicar la pregunta que se quiera actualizar.
-  - Actualizar el indicativo de la pregunta.
-  - Una respuesta correcta con la explicación acerca de por qué es correcta.
-  - Tres respuestas incorrectas, cada una de ellas con la explicación acerca de por qué son incorrectas.
+- La página en la que deseas actualizar una pregunta de cuestionario
+- Para cada pregunta que se actualice, proporciona la siguiente información:
+  - La sección de la página en la que se basa la pregunta
+  - Enunciado de la pregunta que deseas actualizar
+  - Enunciado de la pregunta actualizado
+  - 1 respuesta correcta con una explicación de por qué es correcta
+  - 3 respuestas incorrectas, cada una con una explicación de por qué son incorrectas
 
-## Eliminar una pregunta tipo test
+## Eliminar una pregunta de cuestionario {#removing-a-quiz-question}
 
-Si el contenido de una pregunta ya no existe en la página y necesita eliminarse, [abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) para eliminar la pregunta y proporcione la siguiente información:
+Si el contenido de una pregunta ya no existe en la página y es necesario eliminarla, por favor [abre un issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) para eliminar la pregunta y proporciona la siguiente información:
 
-- La página en la que desea eliminar una pregunta tipo test.
-- La pregunta que quiere eliminar.
-- Una explicación, si es preciso, del por qué debe eliminar la pregunta.
+- La página en la que deseas eliminar una pregunta de cuestionario
+- La pregunta que deseas eliminar
+- Explicación, si es necesaria, de por qué se debe eliminar la pregunta

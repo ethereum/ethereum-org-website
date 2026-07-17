@@ -109,15 +109,15 @@ export const getAttestantPosts = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getBeaconchainData = createCachedGetter(
-  dataLayer.getBeaconchainData,
-  ["beaconchain-data"],
+export const getStakedPercentageData = createCachedGetter(
+  dataLayer.getStakedPercentageData,
+  ["staked-percentage-data"],
   CACHE_REVALIDATE_DAY
 )
 
-export const getBlobscanStats = createCachedGetter(
-  dataLayer.getBlobscanStats,
-  ["blobscan-stats"],
+export const getBlobStats = createCachedGetter(
+  dataLayer.getBlobStats,
+  ["blob-stats"],
   CACHE_REVALIDATE_DAY
 )
 
@@ -181,6 +181,19 @@ export const getDeveloperToolsData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+/**
+ * Static-cached version of getDeveloperToolsData -- no revalidation.
+ * Used by the force-static sitemap: a finite revalidate opts the route into
+ * ISR, whose serverless re-render can't read public/content (excluded from the
+ * function bundle), yielding a truncated/empty sitemap. Refreshes on deploy.
+ * See: docs/solutions/integration-issues/netlify-isr-404-async-server-components.md
+ */
+export const getStaticDeveloperToolsData = createCachedGetter(
+  dataLayer.getDeveloperToolsData,
+  ["developer-tools-data-static"],
+  false
+)
+
 export const getAccountHolders = createCachedGetter(
   dataLayer.getAccountHolders,
   ["account-holders"],
@@ -193,16 +206,18 @@ export const getTranslationGlossary = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getGitHubContributors = createCachedGetter(
-  dataLayer.getGitHubContributors,
-  ["github-contributors"],
-  CACHE_REVALIDATE_DAY
-)
-
+/**
+ * No revalidation: both consumers (/videos and /stories) are statically
+ * generated and read public/content markdown at build time. A finite
+ * revalidate would opt those routes into ISR, whose serverless re-render
+ * can't read public/content (excluded from the function bundle), leaving
+ * their content empty. Thumbnails refresh on deploy.
+ * See: docs/solutions/integration-issues/netlify-isr-404-async-server-components.md
+ */
 export const getVideoThumbnails = createCachedGetter(
   dataLayer.getVideoThumbnails,
   ["video-thumbnails"],
-  CACHE_REVALIDATE_DAY
+  false
 )
 
 /**

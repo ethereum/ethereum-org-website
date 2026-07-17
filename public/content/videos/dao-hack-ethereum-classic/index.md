@@ -7,9 +7,7 @@ uploadDate: 2021-12-15
 duration: "0:09:48"
 educationLevel: beginner
 topic:
-  - "governance"
-  - "history"
-  - "dao"
+  - "use-cases"
 format: explainer
 author: Junion
 breadcrumb: "The DAO Hack"

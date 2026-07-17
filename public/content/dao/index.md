@@ -4,13 +4,13 @@ metaTitle: What is a DAO? | Decentralized Autonomous Organization
 description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: A representation of a DAO voting on a proposal.
-summaryPoint1: Member-owned communities without centralized leadership.
-summaryPoint2: A safe way to collaborate with internet strangers.
-summaryPoint3: A safe place to commit funds to a specific cause.
+summaryPoints:
+  - "Member-owned communities without centralized leadership."
+  - "A safe way to collaborate with internet strangers."
+  - "A safe place to commit funds to a specific cause."
 ---
 
 ## What are DAOs? {#what-are-daos}
@@ -114,10 +114,6 @@ Share-based DAOs are more permissioned, but still quite open. Any prospective me
 
 _Typically used for more closer-knit, human-centric organizations like charities, worker collectives, and investment clubs. Can also govern protocols and tokens as well._
 
-#### A famous example {#share-example}
-
-[MolochDAO](https://molochdao.com/) – MolochDAO is focused on funding Ethereum projects. They require a proposal for membership so the group can assess whether you have the necessary expertise and capital to make informed judgments about potential grantees. You can't just buy access to the DAO on the open market.
-
 ### Reputation-based membership {#reputation-based-membership}
 
 Reputation represents proof of participation and grants voting power in the DAO. Unlike token or share-based membership, reputation-based DAOs don't transfer ownership to contributors. Reputation cannot be bought, transferred or delegated; DAO members must earn reputation through participation. Onchain voting is permissionless and prospective members can freely submit proposals to join the DAO and request to receive reputation and tokens as a reward in exchange for their contributions.
@@ -143,14 +139,13 @@ _Typically used for decentralized development and governance of protocols and [d
 - [Start a Governor DAO with Tally](https://www.tally.xyz/get-started)
 - [Create an Aragon-powered DAO](https://aragon.org/product)
 - [Start a colony](https://colony.io/)
-- [Create a DAO with DAOstack's holographic consensus](https://alchemy.daostack.io/daos/create)
 - [Launch a DAO with the DeGov Launcher](https://docs.degov.ai/integration/deploy)
 
 ## Further reading {#further-reading}
 
 ### DAO Articles {#dao-articles}
 
-- [What's a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [What's a DAO?](https://blog.aragon.org/what-is-a-dao/) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)

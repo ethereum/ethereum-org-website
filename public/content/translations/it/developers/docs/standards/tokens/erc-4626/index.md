@@ -1,34 +1,34 @@
 ---
 title: Standard dei Vault Tokenizzati ERC-4626
-description: Uno standard per i vault che generano rendimento.
+description: Uno standard per i vault fruttiferi.
 lang: it
 ---
 
 ## Introduzione {#introduction}
 
-L'ERC-4626 è uno standard per ottimizzare e unificare i parametri tecnici dei vault che generano rendimento. Fornisce un'API standard per i vault tokenizzati che generano rendimento che rappresentano quote di un singolo token ERC-20 sottostante. L'ERC-4626 delinea anche un'estensione opzionale per i vault tokenizzati che utilizzano l'ERC-20, offrendo funzionalità di base per depositare, prelevare token e leggere i saldi.
+ERC-4626 è uno standard per ottimizzare e unificare i parametri tecnici dei vault fruttiferi (yield-bearing). Fornisce un'API standard per i vault fruttiferi tokenizzati che rappresentano quote di un singolo token ERC-20 sottostante. ERC-4626 delinea anche un'estensione opzionale per i vault tokenizzati che utilizzano ERC-20, offrendo funzionalità di base per il deposito, il prelievo di token e la lettura dei saldi.
 
-**Il ruolo dell'ERC-4626 nei vault che generano rendimento**
+**Il ruolo di ERC-4626 nei vault fruttiferi**
 
-I mercati di prestito, gli aggregatori e i token intrinsecamente fruttiferi aiutano gli utenti a trovare il miglior rendimento sui loro token crittografici eseguendo diverse strategie. Queste strategie vengono eseguite con lievi variazioni, il che potrebbe essere soggetto a errori o sprecare risorse di sviluppo.
+I mercati di prestito, gli aggregatori e i token intrinsecamente fruttiferi aiutano gli utenti a trovare il miglior rendimento sui loro token cripto eseguendo diverse strategie. Queste strategie vengono realizzate con lievi variazioni, il che potrebbe essere soggetto a errori o sprecare risorse di sviluppo.
 
-L'ERC-4626 nei vault che generano rendimento ridurrà lo sforzo di integrazione e sbloccherà l'accesso al rendimento in varie applicazioni con poco sforzo specializzato da parte degli sviluppatori, creando modelli di implementazione più coerenti e robusti.
+L'ERC-4626 nei vault fruttiferi ridurrà lo sforzo di integrazione e sbloccherà l'accesso al rendimento in varie applicazioni con poco sforzo specializzato da parte degli sviluppatori, creando modelli di implementazione più coerenti e robusti.
 
 Il token ERC-4626 è descritto completamente nell'[EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
 **Estensione asincrona del vault (ERC-7540)**
 
-L'ERC-4626 è ottimizzato per depositi e rimborsi atomici fino a un limite. Se il limite viene raggiunto, non possono essere inviati nuovi depositi o rimborsi. Questa limitazione non funziona bene per alcun sistema di contratto intelligente con azioni asincrone o ritardi come prerequisito per interfacciarsi con il Vault (ad es. protocolli di asset del mondo reale, protocolli di prestito sottocollateralizzati, protocolli di prestito cross-chain, token di staking liquido o moduli di sicurezza assicurativa).
+L'ERC-4626 è ottimizzato per depositi e rimborsi atomici fino a un limite. Se il limite viene raggiunto, non possono essere inviati nuovi depositi o rimborsi. Questa limitazione non funziona bene per alcun sistema di smart contract con azioni asincrone o ritardi come prerequisito per interfacciarsi con il vault (ad es. protocolli di asset del mondo reale, protocolli di prestito sottocollateralizzati, protocolli di prestito cross-chain, token di liquid staking (LST) o moduli di sicurezza assicurativi).
 
-L'ERC-7540 espande l'utilità dei Vault ERC-4626 per i casi d'uso asincroni. L'interfaccia esistente del Vault (`deposit`/`withdraw`/`mint`/`redeem`) è completamente utilizzata per rivendicare le Richieste asincrone.
+L'ERC-7540 espande l'utilità dei vault ERC-4626 per i casi d'uso asincroni. L'interfaccia esistente del vault (`deposit`/`withdraw`/`mint`/`redeem`) è completamente utilizzata per il riscatto di richieste asincrone.
 
 L'estensione ERC-7540 è descritta completamente nell'[ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
 
 **Estensione del vault multi-asset (ERC-7575)**
 
-Un caso d'uso mancante che non è supportato dall'ERC-4626 sono i Vault che hanno più asset o punti di ingresso come i Token dei fornitori di liquidità (LP). Questi sono generalmente poco maneggevoli o non conformi a causa del requisito dell'ERC-4626 di essere esso stesso un ERC-20.
+Un caso d'uso mancante che non è supportato dall'ERC-4626 sono i vault che hanno più asset o punti di ingresso, come i token del fornitore di liquidità (LP). Questi sono generalmente poco maneggevoli o non conformi a causa del requisito dell'ERC-4626 di essere esso stesso un ERC-20.
 
-L'ERC-7575 aggiunge il supporto per i Vault con più asset esternalizzando l'implementazione del token ERC-20 dall'implementazione dell'ERC-4626.
+L'ERC-7575 aggiunge il supporto per i vault con più asset esternalizzando l'implementazione del token ERC-20 dall'implementazione dell'ERC-4626.
 
 L'estensione ERC-7575 è descritta completamente nell'[ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
 
@@ -62,7 +62,7 @@ Questa funzione restituisce l'importo totale degli asset sottostanti detenuti da
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-Questa funzione restituisce la quantità di `shares` (quote) che verrebbe scambiata dal vault per la quantità di `assets` fornita.
+Questa funzione restituisce la quantità di `shares` che verrebbe scambiata dal vault per la quantità di `assets` fornita.
 
 #### convertToAssets {#convertoassets}
 
@@ -94,7 +94,7 @@ Questa funzione consente agli utenti di simulare gli effetti del loro deposito a
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-Questa funzione deposita gli `assets` dei token sottostanti nel vault e concede la proprietà delle `shares` al `receiver`.
+Questa funzione deposita `assets` di token sottostanti nel vault e concede la proprietà di `shares` a `receiver`.
 
 #### maxMint {#maxmint}
 
@@ -118,7 +118,7 @@ Questa funzione consente agli utenti di simulare gli effetti della loro coniazio
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-Questa funzione conia esattamente le `shares` del vault per il `receiver` depositando gli `assets` dei token sottostanti.
+Questa funzione conia esattamente `shares` quote del vault per `receiver` depositando `assets` di token sottostanti.
 
 #### maxWithdraw {#maxwithdraw}
 
@@ -126,7 +126,7 @@ Questa funzione conia esattamente le `shares` del vault per il `receiver` deposi
 function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
-Questa funzione restituisce l'importo massimo di asset sottostanti che possono essere prelevati dal saldo dell'`owner` con una singola chiamata [`withdraw`](#withdraw).
+Questa funzione restituisce l'importo massimo di asset sottostanti che possono essere prelevati dal saldo di `owner` con una singola chiamata [`withdraw`](#withdraw).
 
 #### previewWithdraw {#previewwithdraw}
 
@@ -142,7 +142,7 @@ Questa funzione consente agli utenti di simulare gli effetti del loro prelievo a
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Questa funzione brucia le `shares` dall'`owner` e invia esattamente i token `assets` dal vault al `receiver`.
+Questa funzione brucia `shares` da `owner` e invia esattamente `assets` token dal vault a `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -150,7 +150,7 @@ Questa funzione brucia le `shares` dall'`owner` e invia esattamente i token `ass
 function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
-Questa funzione restituisce la quantità massima di quote che possono essere rimborsate dal saldo dell'`owner` tramite una chiamata [`redeem`](#redeem).
+Questa funzione restituisce la quantità massima di quote che possono essere rimborsate dal saldo di `owner` tramite una chiamata [`redeem`](#redeem).
 
 #### previewRedeem {#previewredeem}
 
@@ -166,7 +166,7 @@ Questa funzione consente agli utenti di simulare gli effetti del loro rimborso a
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-Questa funzione rimborsa un numero specifico di `shares` dall'`owner` e invia gli `assets` del token sottostante dal vault al `receiver`.
+Questa funzione rimborsa un numero specifico di `shares` da `owner` e invia `assets` di token sottostante dal vault a `receiver`.
 
 #### totalSupply {#totalsupply}
 
@@ -182,15 +182,15 @@ Restituisce il numero totale di quote del vault non rimborsate in circolazione.
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-Restituisce l'importo totale delle quote del vault che l'`owner` possiede attualmente.
+Restituisce l'importo totale delle quote del vault che `owner` possiede attualmente.
 
-### Mappa dell'interfaccia {#mapOfTheInterface}
+### Mappa dell'interfaccia {#mapoftheinterface}
 
-![Mappa dell'interfaccia ERC-4626](./map-of-erc-4626.png)
+![Map of the ERC-4626 interface](./map-of-erc-4626.png)
 
 ### Eventi {#events}
 
-#### Evento Deposit
+#### Evento Deposit {#deposit-event}
 
 **DEVE** essere emesso quando i token vengono depositati nel vault tramite i metodi [`mint`](#mint) e [`deposit`](#deposit).
 
@@ -203,9 +203,9 @@ event Deposit(
 )
 ```
 
-Dove `sender` è l'utente che ha scambiato gli `assets` per le `shares` e ha trasferito tali `shares` all'`owner`.
+Dove `sender` è l'utente che ha scambiato `assets` per `shares` e ha trasferito quelle `shares` a `owner`.
 
-#### Evento Withdraw
+#### Evento Withdraw {#withdraw-event}
 
 **DEVE** essere emesso quando le quote vengono prelevate dal vault da un depositante nei metodi [`redeem`](#redeem) o [`withdraw`](#withdraw).
 
@@ -219,7 +219,7 @@ event Withdraw(
 )
 ```
 
-Dove `sender` è l'utente che ha attivato il prelievo e ha scambiato le `shares`, di proprietà dell'`owner`, per gli `assets`. `receiver` è l'utente che ha ricevuto gli `assets` prelevati.
+Dove `sender` è l'utente che ha attivato il prelievo e ha scambiato `shares`, di proprietà di `owner`, per `assets`. `receiver` è l'utente che ha ricevuto i `assets` prelevati.
 
 ## Letture consigliate {#further-reading}
 

@@ -6,7 +6,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function VideosPageJsonLD({
   locale,
@@ -28,7 +29,7 @@ export default async function VideosPageJsonLD({
         "@id": url,
         name: t("page-videos-meta-title"),
         description: t("page-videos-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,

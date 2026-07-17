@@ -1,17 +1,10 @@
 ---
-title: "Interakce s dalšími kontrakty ze Solidity"
+title: "Interakce s jinými kontrakty ze Solidity"
 description: "Jak nasadit chytrý kontrakt z existujícího kontraktu a interagovat s ním"
 author: "jdourlens"
-tags:
-  [
-    "smart kontrakt účty",
-    "solidity",
-    "remix",
-    "nasazování",
-    "složitelnost"
-  ]
+tags: ["chytré kontrakty", "Solidity", "Remix", "nasazování", "skládatelnost"]
 skill: advanced
-breadcrumb: "Interakce kontraktu"
+breadcrumb: "Interakce kontraktů"
 lang: cs
 published: 2020-04-05
 source: EthereumDev
@@ -19,9 +12,9 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-V předchozích návodech jsme se toho hodně naučili [jak nasadit svůj první chytrý kontrakt](/developers/tutorials/deploying-your-first-smart-contract/) a přidat do něj některé funkce, jako je [řízení přístupu pomocí modifikátorů](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) nebo [zpracování chyb v Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). V tomto návodu se naučíme, jak nasadit chytrý kontrakt z existujícího kontraktu a jak s ním interagovat.
+V předchozích tutoriálech jsme se naučili mnoho o tom, [jak nasadit svůj první chytrý kontrakt](/developers/tutorials/deploying-your-first-smart-contract/) a přidat do něj některé funkce, jako je [řízení přístupu pomocí modifikátorů](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) nebo [zpracování chyb v Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). V tomto tutoriálu se naučíme, jak nasadit chytrý kontrakt z existujícího kontraktu a interagovat s ním.
 
-Vytvoříme kontrakt, který komukoli umožní mít svůj vlastní `Counter` chytrý kontrakt tím, že pro něj vytvoříme továrnu (factory). Její název bude `CounterFactory`. Nejdříve si ukážeme kód našeho původního `Counter` chytrého kontraktu:
+Vytvoříme kontrakt, který komukoli umožní mít svůj vlastní chytrý kontrakt `Counter` tím, že pro něj vytvoříme továrnu (factory), jejíž název bude `CounterFactory`. Nejprve je zde kód našeho výchozího chytrého kontraktu `Counter`:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -59,19 +52,19 @@ contract Counter {
 }
 ```
 
-Všimni si, že jsme mírně upravili kód kontraktu, abychom mohli sledovat adresu továrny a adresu vlastníka kontraktu. Když voláš kód kontraktu z jiného kontraktu, msg.sender bude odkazovat na adresu naší továrny na kontrakty. Toto je **opravdu důležitý bod k pochopení**, protože použití kontraktu k interakci s jinými kontrakty je běžnou praxí. Proto by sis měl v komplexních případech dávat pozor, kdo je odesílatel.
+Všimněte si, že jsme kód kontraktu mírně upravili, abychom uchovávali adresu továrny a adresu vlastníka kontraktu. Když voláte kód kontraktu z jiného kontraktu, msg.sender bude odkazovat na adresu naší továrny na kontrakty. To je **velmi důležitý bod k pochopení**, protože používání kontraktu k interakci s jinými kontrakty je běžná praxe. Ve složitějších případech byste proto měli dávat pozor na to, kdo je odesílatelem.
 
 Z tohoto důvodu jsme také přidali modifikátor `onlyFactory`, který zajišťuje, že funkci měnící stav může volat pouze továrna, která předá původního volajícího jako parametr.
 
-Do naší nové `CounterFactory`, která bude spravovat všechny ostatní čítače (Counters), přidáme mapování, které přiřadí vlastníka k adrese jeho kontraktu čítače:
+Uvnitř naší nové `CounterFactory`, která bude spravovat všechny ostatní Countery, přidáme mapování, které přiřadí vlastníka k adrese jeho kontraktu počítadla:
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-V Ethereu je mapování ekvivalentem objektů v javascriptu, umožňují mapovat klíč typu A na hodnotu typu B. V tomto případě mapujeme adresu vlastníka s instancí jeho Čítače (Counter).
+V Ethereu jsou mapování ekvivalentem objektů v JavaScriptu, umožňují mapovat klíč typu A na hodnotu typu B. V tomto případě mapujeme adresu vlastníka na instanci jeho Counteru.
 
-Vytvoření instance nového čítače (Counter) pro někoho bude vypadat takto:
+Vytvoření instance nového Counteru pro někoho bude vypadat takto:
 
 ```solidity
   function createCounter() public {
@@ -80,9 +73,9 @@ Vytvoření instance nového čítače (Counter) pro někoho bude vypadat takto:
   }
 ```
 
-Nejdříve zkontrolujeme, zda daná osoba již nějaký čítač (counter) vlastní. Pokud čítač nevlastní, vytvoříme instanci nového čítače předáním jeho adresy do konstruktoru `Counter` a přiřadíme nově vytvořenou instanci do mapování.
+Nejprve zkontrolujeme, zda daná osoba již vlastní počítadlo. Pokud počítadlo nevlastní, vytvoříme instanci nového počítadla předáním její adresy do konstruktoru `Counter` a nově vytvořenou instanci přiřadíme do mapování.
 
-Získání počtu pro konkrétní čítač (Counter) bude vypadat takto:
+Získání počtu z konkrétního Counteru bude vypadat takto:
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
@@ -95,9 +88,9 @@ function getMyCount() public view returns (uint256) {
 }
 ```
 
-První funkce zkontroluje, zda kontrakt Čítače (Counter) existuje pro danou adresu, a poté zavolá metodu `getCount` z instance. Druhá funkce: `getMyCount` je jen zkratka pro přímé předání msg.sender do funkce `getCount`.
+První funkce zkontroluje, zda pro danou adresu existuje kontrakt Counter, a poté zavolá metodu `getCount` z této instance. Druhá funkce: `getMyCount` je jen zkratka pro předání msg.sender přímo do funkce `getCount`.
 
-Funkce `increment` je poměrně podobná, ale předává původního odesílatele transakce do kontraktu `Counter`:
+Funkce `increment` je velmi podobná, ale předává původního odesílatele transakce do kontraktu `Counter`:
 
 ```solidity
 function increment() public {
@@ -106,11 +99,11 @@ function increment() public {
   }
 ```
 
-Všimni si, že pokud se bude volat příliš často, může se náš čítač stát obětí přetečení (overflow). Pro ochranu před tímto možným případem bys měl co nejvíce používat [knihovnu SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/).
+Všimněte si, že pokud by bylo naše počítadlo voláno příliš mnohokrát, mohlo by se stát obětí přetečení. Abyste se před tímto možným případem chránili, měli byste co nejvíce používat [knihovnu SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/).
 
-Pro nasazení našeho kontraktu budeš muset poskytnout kód jak pro `CounterFactory`, tak pro `Counter`. Při nasazování například v Remixu budeš muset vybrat CounterFactory.
+K nasazení našeho kontraktu budete muset poskytnout kód `CounterFactory` i `Counter`. Při nasazování například v Remixu budete muset vybrat CounterFactory.
 
-Zde je celý kód:
+Zde je kompletní kód:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -173,8 +166,8 @@ contract CounterFactory {
 }
 ```
 
-Po zkompilování v sekci pro nasazení v Remixu vybereš továrnu (factory), která se má nasadit:
+Po kompilaci vyberete v sekci pro nasazení v Remixu továrnu, která má být nasazena:
 
-![Výběr továrny (factory) k nasazení v Remixu](./counterfactory-deploy.png)
+![Selecting the factory to be deployed in Remix](./counterfactory-deploy.png)
 
-Poté si můžeš hrát s továrnou na kontrakty a sledovat, jak se mění hodnota. Pokud bys chtěl volat chytrý kontrakt z jiné adresy, budeš muset změnit adresu ve výběru účtu (Account) v Remixu.
+Poté si můžete hrát se svou továrnou na kontrakty a sledovat, jak se hodnota mění. Pokud byste chtěli zavolat chytrý kontrakt z jiné adresy, budete muset změnit adresu ve výběru účtu v Remixu.

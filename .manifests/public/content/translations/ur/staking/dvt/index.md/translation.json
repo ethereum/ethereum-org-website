@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-08T11:08:13.348Z",
+  "englishManifestHash": "eea73d61bda6",
+  "placeholderOrder": [
+    "IMAGE-04a541",
+    "LINK-a21a82",
+    "LINK-c37b45",
+    "LINK-08db1a",
+    "LINK-b8f21f",
+    "LINK-ce42cb",
+    "LINK-7f87f4",
+    "LINK-29734c",
+    "LINK-c1c765",
+    "LINK-10e939"
+  ],
+  "placeholderMap": {
+    "IMAGE-04a541": {
+      "type": "image",
+      "values": {
+        "path": "./dvt-cluster.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-c37b45": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648"
+      }
+    },
+    "LINK-08db1a": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/BLS_digital_signature"
+      }
+    },
+    "LINK-b8f21f": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca"
+      }
+    },
+    "LINK-ce42cb": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620"
+      }
+    },
+    "LINK-7f87f4": {
+      "type": "link",
+      "values": {
+        "url": "https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains"
+      }
+    },
+    "LINK-29734c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/distributed-validator-specs"
+      }
+    },
+    "LINK-c1c765": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec"
+      }
+    },
+    "LINK-10e939": {
+      "type": "link",
+      "values": {
+        "url": "https://iancoleman.io/shamir/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T11:08:13.348Z",
+      "status": "success"
+    }
+  }
+}

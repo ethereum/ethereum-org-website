@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "इथेरियम - Ethereum.org कडून संपूर्ण मार्गदर्शक",
+  "page-index-meta-title": "इथेरियम - ethereum.org कडील संपूर्ण मार्गदर्शक",
   "page-index-meta-description": "इथेरियम हे पैसे आणि नवीन प्रकारच्या ॲप्लिकेशन्ससाठी एक जागतिक, विकेंद्रित प्लॅटफॉर्म आहे. इथेरियमवर, तुमचे स्वतःचे पैसे, डेटा आणि ओळखीवर तुमचे नियंत्रण असते. कोणतीही बँक नाही, मध्यस्थ नाही, कोणत्याही परवानगीची आवश्यकता नाही.",
   "page-index-description": "नाविन्यपूर्ण ॲप्स आणि ब्लॉकचेन नेटवर्कसाठी एक प्रमुख प्लॅटफॉर्म",
   "page-index-title": "इथेरियमवर आपले स्वागत आहे",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "इथेरियम ॲप्स",
   "page-index-carousel-privacy-ethereum-value": "बाय डीफॉल्ट गोपनीय",
   "page-index-carousel-remittances-tag": "सीमापार पेमेंट्स",
-  "page-index-carousel-remittances-title": "{minutes} मिनिटांत घरी पैसे पाठवा",
+  "page-index-carousel-remittances-title": "{seconds} सेकंदात घरी पैसे पाठवा",
   "page-index-carousel-remittances-subtitle": "{wireFee} वायर फी आणि {days}+ दिवसांची प्रतीक्षा टाळा.",
   "page-index-carousel-remittances-description": "जगात कुठेही, कोणालाही फक्त {txFee} मध्ये <stablecoinsLink>स्टेबलकॉइन्स</stablecoinsLink> पाठवा. त्यांना जवळजवळ त्वरित निधी मिळतो.",
   "page-index-carousel-remittances-cta": "स्वतः वापरून पहा",
   "page-index-carousel-remittances-traditional-label": "वायर ट्रान्सफर",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} दिवस",
   "page-index-carousel-remittances-ethereum-label": "इथेरियम",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} मिनिटे",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} सेकंद",
   "page-index-carousel-borrowing-tag": "आर्थिक प्रवेश",
   "page-index-carousel-borrowing-title": "क्रेडिट हिस्ट्रीशिवाय कर्ज घेणे",
   "page-index-carousel-borrowing-subtitle": "सुरुवात करण्यासाठी तुम्हाला क्रेडिट स्कोअरची आवश्यकता नाही.",
@@ -79,7 +79,7 @@
   "page-index-features-ownership-description-custody": "कस्टडीचे वचन आहे",
   "page-index-features-ownership-description-2": "तुमचा इथेरियम बॅलन्स ही खरी मालकी आहे.",
   "page-index-features-ownership-stat": "{volume}+",
-  "page-index-features-ownership-stat-label": "दैनिक ट्रेडिंग व्हॉल्यूम",
+  "page-index-features-ownership-stat-label": "दैनिक ट्रेडिंग व्हॉल्यूम (USD)",
   "page-index-features-public-rules-title": "सार्वजनिक नियम",
   "page-index-features-public-rules-description": "कोड सार्वजनिक आहे, करार अगदी लिहिल्याप्रमाणे अंमलात आणले जातात. कॅशियर योग्य सुट्टे पैसे देईल अशी आशा करण्याऐवजी वेंडिंग मशीनचा विचार करा.",
   "page-index-features-global-title": "जागतिक",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "खाजगी आणि परवानगीयुक्त नेटवर्क",
   "page-index-get-started-enterprise-bullet-3": "संस्थात्मक संसाधने",
   "page-index-get-started-enterprise-cta": "एंटरप्राइझ एक्सप्लोर करा",
-  "page-index-simulator-cta": "अधिक मार्गदर्शक वापरून पहा"
+  "page-index-simulator-cta": "अधिक मार्गदर्शक वापरून पहा",
+  "page-index-latest-updates-title": "नवीनतम इथेरियम अपडेट्स",
+  "page-index-latest-updates-cta": "अधिक पहा"
 }

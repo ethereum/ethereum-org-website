@@ -528,6 +528,17 @@ const chains = [
     chain: "river",
   },
   {
+    name: "BattleChain Mainnet",
+    infoURL: "https://battlechain.com",
+    chainId: 626,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Redstone",
     infoURL: "https://redstone.xyz",
     chainId: 690,
@@ -1031,7 +1042,7 @@ const chains = [
       symbol: "ETH",
       decimals: 18,
     },
-    chain: "ETH",
+    chain: "MegaETH",
   },
   {
     name: "OEV Network",
@@ -1186,6 +1197,17 @@ const chains = [
       decimals: 18,
     },
     chain: "Polynomial",
+  },
+  {
+    name: "ACME Mainnet Stealth",
+    infoURL: "",
+    chainId: 8224,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ASM",
   },
   {
     name: "B3",
@@ -1672,17 +1694,6 @@ const chains = [
     chain: "ETH",
   },
   {
-    name: "Condrieu",
-    infoURL: "https://condrieu.ethdevops.io",
-    chainId: 69420,
-    nativeCurrency: {
-      name: "Condrieu Testnet Ether",
-      symbol: "CTE",
-      decimals: 18,
-    },
-    chain: "ETH",
-  },
-  {
     name: "Proof of Play - Apex",
     infoURL: "https://proofofplay.com",
     chainId: 70700,
@@ -1892,7 +1903,7 @@ const chains = [
     chain: "Eventum",
   },
   {
-    name: "Taiko Alethia",
+    name: "Taiko",
     infoURL: "https://taiko.xyz",
     chainId: 167000,
     nativeCurrency: {
@@ -2278,6 +2289,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "MAKI Chain",
+    infoURL: "https://makiai.app",
+    chainId: 8000008,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "MAKI",
+  },
+  {
     name: "Hokum",
     infoURL: "https://hokum.gg",
     chainId: 8080808,
@@ -2320,6 +2342,17 @@ const chains = [
       decimals: 18,
     },
     chain: "ILT",
+  },
+  {
+    name: "Crynux on Base",
+    infoURL: "https://crynux.io",
+    chainId: 18896214,
+    nativeCurrency: {
+      name: "Crynux",
+      symbol: "CNX",
+      decimals: 18,
+    },
+    chain: "ETH",
   },
   {
     name: "DBK Chain",

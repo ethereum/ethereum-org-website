@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Ethereum – Kompletní průvodce od Ethereum.org",
+  "page-index-meta-title": "Ethereum - Kompletní průvodce od ethereum.org",
   "page-index-meta-description": "Ethereum je globální, decentralizovaná platforma pro peníze a nové druhy aplikací. Na Ethereu máte pod kontrolou své vlastní peníze, data a identitu. Nepotřebujete žádnou banku, prostředníka ani povolení.",
   "page-index-description": "Přední platforma pro inovativní aplikace a blockchainové sítě",
   "page-index-title": "Vítejte v Ethereu",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "APLIKACE NA ETHEREU",
   "page-index-carousel-privacy-ethereum-value": "Ve výchozím nastavení soukromé",
   "page-index-carousel-remittances-tag": "PŘESHRANIČNÍ PLATBY",
-  "page-index-carousel-remittances-title": "Pošlete peníze domů za {minutes} minut",
+  "page-index-carousel-remittances-title": "Pošlete peníze domů za {seconds} sekund",
   "page-index-carousel-remittances-subtitle": "Vyhněte se poplatku za bankovní převod ve výši {wireFee} a čekání delšímu než {days} dny.",
   "page-index-carousel-remittances-description": "Pošlete <stablecoinsLink>stablecoiny</stablecoinsLink> komukoli a kamkoli na světě za pouhých {txFee}. Prostředky obdrží téměř okamžitě.",
   "page-index-carousel-remittances-cta": "Vyzkoušejte si to sami",
   "page-index-carousel-remittances-traditional-label": "BANKOVNÍ PŘEVOD",
   "page-index-carousel-remittances-traditional-value": "{min}–{max} dní",
   "page-index-carousel-remittances-ethereum-label": "ETHEREUM",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} minut",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} sekund",
   "page-index-carousel-borrowing-tag": "FINANČNÍ PŘÍSTUP",
   "page-index-carousel-borrowing-title": "Vypůjčte si bez úvěrové historie",
   "page-index-carousel-borrowing-subtitle": "Do začátku nepotřebujete žádné úvěrové skóre.",
@@ -79,7 +79,7 @@
   "page-index-features-ownership-description-custody": "příslib úschovy",
   "page-index-features-ownership-description-2": "Váš zůstatek na Ethereu je skutečné vlastnictví.",
   "page-index-features-ownership-stat": "{volume}+",
-  "page-index-features-ownership-stat-label": "Denní objem obchodování",
+  "page-index-features-ownership-stat-label": "Denní objem obchodování (USD)",
   "page-index-features-public-rules-title": "Veřejná pravidla",
   "page-index-features-public-rules-description": "Kód je veřejný, dohody se plní přesně tak, jak jsou napsány. Představte si to jako prodejní automat v porovnání s nadějí, že vám pokladní vrátí správné drobné.",
   "page-index-features-global-title": "Globální",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Soukromé sítě a sítě s řízeným přístupem",
   "page-index-get-started-enterprise-bullet-3": "Institucionální zdroje",
   "page-index-get-started-enterprise-cta": "Prozkoumat řešení pro podniky",
-  "page-index-simulator-cta": "Vyzkoušejte další průvodce"
+  "page-index-simulator-cta": "Vyzkoušejte další průvodce",
+  "page-index-latest-updates-title": "Nejnovější aktualizace Etherea",
+  "page-index-latest-updates-cta": "Zobrazit více"
 }

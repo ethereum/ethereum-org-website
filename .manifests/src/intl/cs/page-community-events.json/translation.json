@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "locale": "cs",
+  "translatedAt": "2026-05-13T10:42:00.443Z",
+  "englishManifestHash": "7d795af799ad",
+  "placeholderOrder": [
+    "ICU-VARIABLE-0",
+    "ICU-VARIABLE-1",
+    "ICU-VARIABLE-2",
+    "ICU-VARIABLE-3",
+    "ICU-VARIABLE-4",
+    "ICU-VARIABLE-5",
+    "ICU-VARIABLE-6",
+    "ICU-VARIABLE-7",
+    "ICU-VARIABLE-8"
+  ],
+  "placeholderMap": {
+    "ICU-VARIABLE-0": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{year}"
+      }
+    },
+    "ICU-VARIABLE-1": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{year}"
+      }
+    },
+    "ICU-VARIABLE-2": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{year}"
+      }
+    },
+    "ICU-VARIABLE-3": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{q}"
+      }
+    },
+    "ICU-VARIABLE-4": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{location}"
+      }
+    },
+    "ICU-VARIABLE-5": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{year}"
+      }
+    },
+    "ICU-VARIABLE-6": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{year}"
+      }
+    },
+    "ICU-VARIABLE-7": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{year}"
+      }
+    },
+    "ICU-VARIABLE-8": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{item}"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-05-13T10:42:00.443Z",
+      "status": "success"
+    }
+  }
+}

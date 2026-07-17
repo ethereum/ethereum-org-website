@@ -46,6 +46,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               description: t("nav-ethereum-vs-bitcoin-description"),
               href: "/ethereum-vs-bitcoin/",
             },
+            {
+              label: t("nav-stories-label"),
+              description: t("nav-stories-description"),
+              href: "/stories/",
+            },
           ],
         },
         {
@@ -251,14 +256,19 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/developers/tools/",
             },
             {
-              label: t("nav-code-tutorials-label"),
-              description: t("nav-code-tutorials-description"),
+              label: t("learn-ethereum-development"),
+              description: t("nav-learn-ethereum-development-description"),
+              href: "/developers/tools/categories/education-standards/",
+            },
+            {
+              label: t("tutorials"),
+              description: t("nav-tutorials-description"),
               href: "/developers/tutorials/",
             },
             {
               label: t("nav-learn-by-coding-label"),
               description: t("nav-learn-by-coding-description"),
-              href: "/developers/tools/education/",
+              href: "/developers/tools/categories/education-standards/",
             },
           ],
         },
@@ -303,6 +313,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               label: t("nav-institution-enterprise-label"),
               description: t("nav-institution-enterprise-description"),
               href: ENTERPRISE_ETHEREUM_URL,
+            },
+            {
+              label: t("nav-iptf-label"),
+              description: t("nav-iptf-description"),
+              href: "https://iptf.ethereum.org/",
             },
           ],
         },
@@ -402,6 +417,12 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           href: "/whitepaper/",
         },
         {
+          id: "research/reports",
+          label: t("nav-reports-label"),
+          description: t("nav-reports-description"),
+          href: "/reports/",
+        },
+        {
           id: "research/governance",
           label: t("nav-governance-label"),
           description: t("nav-governance-description"),
@@ -462,7 +483,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("nav-trillion-dollar-security-label"),
               description: t("nav-trillion-dollar-security-description"),
-              href: "/trillion-dollar-security/",
+              href: "/reports/trillion-dollar-security/",
             },
           ],
         },
@@ -494,7 +515,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("nav-data-analytics-label"),
               description: t("nav-data-analytics-description"),
-              href: "/developers/tools/analytics/",
+              href: "/developers/tools/categories/network-infrastructure/",
             },
             {
               label: t("nav-ethereum-foundation-label"),

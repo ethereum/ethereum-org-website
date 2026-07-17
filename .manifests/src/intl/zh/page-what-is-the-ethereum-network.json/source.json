@@ -1,0 +1,636 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-what-is-the-ethereum-network.json",
+  "generatedAt": "2026-05-26T07:11:39.472Z",
+  "rootHash": "3582b2b356f1",
+  "tree": {
+    "contentHash": "32256024dc56",
+    "anchorHash": "d71102eb9016",
+    "children": {
+      "page-what-is-ethereum-network-meta-title": {
+        "contentHash": "f914ad8e59c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-meta-description": {
+        "contentHash": "418c6b7d79e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-twitter-meta-description": {
+        "contentHash": "472e9de0f79b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-title": {
+        "contentHash": "f914ad8e59c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-description-1": {
+        "contentHash": "226abbad2171",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-description-2": {
+        "contentHash": "a8307f9a1fc0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-network-fees-title": {
+        "contentHash": "cc0933cd6b63",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-staking-title": {
+        "contentHash": "ffc0c2a5b2c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-layer-2s-title": {
+        "contentHash": "940368bb72f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-live-network-data-title": {
+        "contentHash": "c169f70a779a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-read-next-title": {
+        "contentHash": "d80f7041674e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-read-next-item-1": {
+        "contentHash": "82250b455b82",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-read-next-item-2": {
+        "contentHash": "2b9001f74ff5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-read-next-item-3": {
+        "contentHash": "f5d8be05c68e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-read-next-item-4": {
+        "contentHash": "2c2069ffee7d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-1": {
+        "contentHash": "77111c98fdc2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-2": {
+        "contentHash": "be5dacd2eefc",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a3ff28e75107",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-section-description-3": {
+        "contentHash": "4f462fb3908f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b97d7e1d9c93",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-section-description-4": {
+        "contentHash": "c6b59f43c2bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-5": {
+        "contentHash": "18c04bea5a07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-6": {
+        "contentHash": "727f54c8ecbd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-7": {
+        "contentHash": "9c021ac23d03",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-8": {
+        "contentHash": "4d943ba15448",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-9": {
+        "contentHash": "3aa4bcb38cd4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-10": {
+        "contentHash": "fdcaac71d750",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e738e2a98cbc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-section-description-11": {
+        "contentHash": "f4e8ebaccff5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-12": {
+        "contentHash": "e9aad7e1131f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b507657476ae",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-section-description-13": {
+        "contentHash": "1524bfce7a34",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-14": {
+        "contentHash": "28eaf9632b23",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-15": {
+        "contentHash": "b6b3d3dc54f0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-16": {
+        "contentHash": "dcb10f9b1980",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-17": {
+        "contentHash": "d1610a482121",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-18": {
+        "contentHash": "334ea1dcf58d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-section-description-19": {
+        "contentHash": "4029e0373b54",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "97d6c7bd7fe4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-gas-section-description-1": {
+        "contentHash": "f47f94b9ca6a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-gas-section-description-2": {
+        "contentHash": "65d7f4e5eb26",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7c855892e5bb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-gas-section-description-3": {
+        "contentHash": "1a59597a5d6d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-gas-section-description-4": {
+        "contentHash": "87da1314abe0",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "18a4cbabb373",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-gas-section-description-5": {
+        "contentHash": "cf81caf84efa",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9a0ab43560a1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-gas-section-description-6": {
+        "contentHash": "e0729439af10",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "cff5ebecd127",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-gas-section-description-7": {
+        "contentHash": "55564ae348c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-gas-section-description-8": {
+        "contentHash": "ace9e73595ac",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "831f18c7b1ea",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-gas-section-description-9": {
+        "contentHash": "5f5a2dde948f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-gas-section-description-10": {
+        "contentHash": "08e810179cd6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-staking-section-description-1": {
+        "contentHash": "fd34341a9dfc",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "848357775fe4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-staking-section-description-2": {
+        "contentHash": "ecd832f63eeb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-staking-section-description-3": {
+        "contentHash": "ba52d15902d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-staking-section-description-4": {
+        "contentHash": "ece976446cd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-staking-section-description-5": {
+        "contentHash": "915c4741bd95",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "52a89389369f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-staking-section-description-6": {
+        "contentHash": "848072e1ccd5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-staking-section-description-7": {
+        "contentHash": "fc47ccd27dc5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "36a2e2a7d568",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-staking-section-description-8": {
+        "contentHash": "c01c393c90e0",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "37b111330b56",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-staking-section-description-9": {
+        "contentHash": "2b80d550c593",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-staking-section-description-10": {
+        "contentHash": "f331dabac686",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-staking-section-description-11": {
+        "contentHash": "a348a0ccf30a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "51e69944f211",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-staking-section-description-12": {
+        "contentHash": "a6aa4498faf9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-staking-section-description-13": {
+        "contentHash": "bed71f7e29fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-layer-2s-section-description-1": {
+        "contentHash": "f8f963b29ba2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "cdec1106b994",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-layer-2s-section-description-2": {
+        "contentHash": "ac642527fdaa",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1dc72796449b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-layer-2s-section-description-3": {
+        "contentHash": "b091b8178736",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-layer-2s-section-description-4": {
+        "contentHash": "2729a6c8150f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f13b0f63a017",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-layer-2s-section-description-5": {
+        "contentHash": "4d2f05bd532f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "19562c1591b2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-layer-2s-section-description-6": {
+        "contentHash": "a5915f180f99",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "be7ab1156f8b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-layer-2s-section-description-7": {
+        "contentHash": "6520580586d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-layer-2s-section-description-8": {
+        "contentHash": "754dbf0de7e2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1d0da70ccf45",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-layer-2s-section-description-9": {
+        "contentHash": "7e3d937b8ff0",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "62076f020f85",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-layer-2s-section-description-10": {
+        "contentHash": "80d4f9402e1e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-1": {
+        "contentHash": "05f542a1b04f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-2": {
+        "contentHash": "79a1214528df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-3": {
+        "contentHash": "fbaf0363fc12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-4": {
+        "contentHash": "bd5b23c9855a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-5": {
+        "contentHash": "66dfb037d323",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-6": {
+        "contentHash": "86e8d903d153",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-7": {
+        "contentHash": "0a88a5d044ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-8": {
+        "contentHash": "6d038e269b7b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-9": {
+        "contentHash": "1bc8ca964b7e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7f349687d44d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-10": {
+        "contentHash": "8ff007217659",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e062470d8297",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-11": {
+        "contentHash": "1f2cc34a351a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e4bb9128c05f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-12": {
+        "contentHash": "fb801e25976b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a3977fa24fa0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-13": {
+        "contentHash": "e40d2d82f711",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "2093dc5650c0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-14": {
+        "contentHash": "a0751a40078c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "3180fb261901",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-15": {
+        "contentHash": "b5968ebd91e7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "55030bb68a94",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-16": {
+        "contentHash": "69b1e1b2e2b5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8028e2456d6c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-17": {
+        "contentHash": "ecb71df9d934",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "3ce2063fc73f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-18": {
+        "contentHash": "37953dc42e52",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-19": {
+        "contentHash": "9e4c23140459",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-what-is-ethereum-network-live-network-data-section-description-20": {
+        "contentHash": "4b68203c2d60",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-what-is-ethereum-network-meta-title",
+      "page-what-is-ethereum-network-meta-description",
+      "page-what-is-ethereum-network-twitter-meta-description",
+      "page-what-is-ethereum-network-title",
+      "page-what-is-ethereum-network-description-1",
+      "page-what-is-ethereum-network-description-2",
+      "page-what-is-ethereum-network-section-network-fees-title",
+      "page-what-is-ethereum-network-section-staking-title",
+      "page-what-is-ethereum-network-section-layer-2s-title",
+      "page-what-is-ethereum-network-section-live-network-data-title",
+      "page-what-is-ethereum-network-read-next-title",
+      "page-what-is-ethereum-network-read-next-item-1",
+      "page-what-is-ethereum-network-read-next-item-2",
+      "page-what-is-ethereum-network-read-next-item-3",
+      "page-what-is-ethereum-network-read-next-item-4",
+      "page-what-is-ethereum-network-section-description-1",
+      "page-what-is-ethereum-network-section-description-2",
+      "page-what-is-ethereum-network-section-description-3",
+      "page-what-is-ethereum-network-section-description-4",
+      "page-what-is-ethereum-network-section-description-5",
+      "page-what-is-ethereum-network-section-description-6",
+      "page-what-is-ethereum-network-section-description-7",
+      "page-what-is-ethereum-network-section-description-8",
+      "page-what-is-ethereum-network-section-description-9",
+      "page-what-is-ethereum-network-section-description-10",
+      "page-what-is-ethereum-network-section-description-11",
+      "page-what-is-ethereum-network-section-description-12",
+      "page-what-is-ethereum-network-section-description-13",
+      "page-what-is-ethereum-network-section-description-14",
+      "page-what-is-ethereum-network-section-description-15",
+      "page-what-is-ethereum-network-section-description-16",
+      "page-what-is-ethereum-network-section-description-17",
+      "page-what-is-ethereum-network-section-description-18",
+      "page-what-is-ethereum-network-section-description-19",
+      "page-what-is-ethereum-network-gas-section-description-1",
+      "page-what-is-ethereum-network-gas-section-description-2",
+      "page-what-is-ethereum-network-gas-section-description-3",
+      "page-what-is-ethereum-network-gas-section-description-4",
+      "page-what-is-ethereum-network-gas-section-description-5",
+      "page-what-is-ethereum-network-gas-section-description-6",
+      "page-what-is-ethereum-network-gas-section-description-7",
+      "page-what-is-ethereum-network-gas-section-description-8",
+      "page-what-is-ethereum-network-gas-section-description-9",
+      "page-what-is-ethereum-network-gas-section-description-10",
+      "page-what-is-ethereum-network-staking-section-description-1",
+      "page-what-is-ethereum-network-staking-section-description-2",
+      "page-what-is-ethereum-network-staking-section-description-3",
+      "page-what-is-ethereum-network-staking-section-description-4",
+      "page-what-is-ethereum-network-staking-section-description-5",
+      "page-what-is-ethereum-network-staking-section-description-6",
+      "page-what-is-ethereum-network-staking-section-description-7",
+      "page-what-is-ethereum-network-staking-section-description-8",
+      "page-what-is-ethereum-network-staking-section-description-9",
+      "page-what-is-ethereum-network-staking-section-description-10",
+      "page-what-is-ethereum-network-staking-section-description-11",
+      "page-what-is-ethereum-network-staking-section-description-12",
+      "page-what-is-ethereum-network-staking-section-description-13",
+      "page-what-is-ethereum-network-layer-2s-section-description-1",
+      "page-what-is-ethereum-network-layer-2s-section-description-2",
+      "page-what-is-ethereum-network-layer-2s-section-description-3",
+      "page-what-is-ethereum-network-layer-2s-section-description-4",
+      "page-what-is-ethereum-network-layer-2s-section-description-5",
+      "page-what-is-ethereum-network-layer-2s-section-description-6",
+      "page-what-is-ethereum-network-layer-2s-section-description-7",
+      "page-what-is-ethereum-network-layer-2s-section-description-8",
+      "page-what-is-ethereum-network-layer-2s-section-description-9",
+      "page-what-is-ethereum-network-layer-2s-section-description-10",
+      "page-what-is-ethereum-network-live-network-data-section-description-1",
+      "page-what-is-ethereum-network-live-network-data-section-description-2",
+      "page-what-is-ethereum-network-live-network-data-section-description-3",
+      "page-what-is-ethereum-network-live-network-data-section-description-4",
+      "page-what-is-ethereum-network-live-network-data-section-description-5",
+      "page-what-is-ethereum-network-live-network-data-section-description-6",
+      "page-what-is-ethereum-network-live-network-data-section-description-7",
+      "page-what-is-ethereum-network-live-network-data-section-description-8",
+      "page-what-is-ethereum-network-live-network-data-section-description-9",
+      "page-what-is-ethereum-network-live-network-data-section-description-10",
+      "page-what-is-ethereum-network-live-network-data-section-description-11",
+      "page-what-is-ethereum-network-live-network-data-section-description-12",
+      "page-what-is-ethereum-network-live-network-data-section-description-13",
+      "page-what-is-ethereum-network-live-network-data-section-description-14",
+      "page-what-is-ethereum-network-live-network-data-section-description-15",
+      "page-what-is-ethereum-network-live-network-data-section-description-16",
+      "page-what-is-ethereum-network-live-network-data-section-description-17",
+      "page-what-is-ethereum-network-live-network-data-section-description-18",
+      "page-what-is-ethereum-network-live-network-data-section-description-19",
+      "page-what-is-ethereum-network-live-network-data-section-description-20"
+    ]
+  },
+  "sourceCommitSha": "2b6a038be7d8898383a4f0c64b2494eda62e06db"
+}

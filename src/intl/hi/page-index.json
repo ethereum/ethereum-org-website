@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "इथेरियम - Ethereum.org की ओर से संपूर्ण गाइड",
+  "page-index-meta-title": "इथेरियम - ethereum.org से संपूर्ण गाइड",
   "page-index-meta-description": "इथेरियम पैसे और नए प्रकार के एप्लिकेशन के लिए एक वैश्विक, विकेंद्रीकृत प्लेटफॉर्म है। इथेरियम पर, आप अपने पैसे, डेटा और पहचान को खुद नियंत्रित करते हैं। किसी बैंक, किसी बिचौलिए, किसी अनुमति की आवश्यकता नहीं है।",
   "page-index-description": "इनोवेटिव ऐप्स और ब्लॉकचेन नेटवर्क के लिए अग्रणी प्लेटफॉर्म",
   "page-index-title": "इथेरियम में आपका स्वागत है",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "इथेरियम ऐप्स",
   "page-index-carousel-privacy-ethereum-value": "डिफ़ॉल्ट रूप से निजी",
   "page-index-carousel-remittances-tag": "सीमा-पार भुगतान",
-  "page-index-carousel-remittances-title": "{minutes} मिनट में घर पैसे भेजें",
+  "page-index-carousel-remittances-title": "{seconds} सेकंड में घर पैसे भेजें",
   "page-index-carousel-remittances-subtitle": "{wireFee} वायर शुल्क और {days}+ दिन के इंतज़ार से बचें।",
   "page-index-carousel-remittances-description": "दुनिया में कहीं भी, किसी को भी सिर्फ {txFee} में <stablecoinsLink>स्टेबलकॉइन्स</stablecoinsLink> भेजें। उन्हें फंड लगभग तुरंत मिल जाता है।",
   "page-index-carousel-remittances-cta": "इसे खुद आज़माएं",
   "page-index-carousel-remittances-traditional-label": "वायर ट्रांसफर",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} दिन",
   "page-index-carousel-remittances-ethereum-label": "इथेरियम",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} मिनट",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} सेकंड",
   "page-index-carousel-borrowing-tag": "वित्तीय पहुंच",
   "page-index-carousel-borrowing-title": "बिना क्रेडिट इतिहास के उधार लें",
   "page-index-carousel-borrowing-subtitle": "शुरू करने के लिए आपको क्रेडिट स्कोर की आवश्यकता नहीं है।",
@@ -79,7 +79,7 @@
   "page-index-features-ownership-description-custody": "कस्टडी का वादा है",
   "page-index-features-ownership-description-2": "आपका इथेरियम बैलेंस सच्चा स्वामित्व है।",
   "page-index-features-ownership-stat": "{volume}+",
-  "page-index-features-ownership-stat-label": "दैनिक ट्रेडिंग वॉल्यूम",
+  "page-index-features-ownership-stat-label": "दैनिक ट्रेडिंग वॉल्यूम (USD)",
   "page-index-features-public-rules-title": "सार्वजनिक नियम",
   "page-index-features-public-rules-description": "कोड सार्वजनिक है, समझौते ठीक वैसे ही निष्पादित होते हैं जैसे लिखे गए हैं। इसकी तुलना वेंडिंग मशीन से करें, न कि इस उम्मीद से कि कैशियर सही छुट्टे पैसे देगा।",
   "page-index-features-global-title": "वैश्विक",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "निजी और अनुमति-प्राप्त नेटवर्क",
   "page-index-get-started-enterprise-bullet-3": "संस्थागत संसाधन",
   "page-index-get-started-enterprise-cta": "एंटरप्राइज़ एक्सप्लोर करें",
-  "page-index-simulator-cta": "और गाइड आज़माएं"
+  "page-index-simulator-cta": "और गाइड आज़माएं",
+  "page-index-latest-updates-title": "इथेरियम के नवीनतम अपडेट",
+  "page-index-latest-updates-cta": "और देखें"
 }

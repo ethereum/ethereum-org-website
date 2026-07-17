@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
@@ -15,8 +15,6 @@ import {
   BreadcrumbProps,
   BreadcrumbSeparator,
 } from "../ui/breadcrumb"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 export type BreadcrumbsProps = BreadcrumbProps & {
   slug: string
@@ -44,7 +42,7 @@ type Crumb = {
 //   { fullPath: "/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
 const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const locale = useLocale()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
   const normalizedSlug = normalizeSlug(slug)

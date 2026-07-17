@@ -6,7 +6,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function TutorialsPageJsonLD({
   locale,
@@ -36,7 +37,7 @@ export default async function TutorialsPageJsonLD({
         "@id": url,
         name: t("page-tutorials-meta-title"),
         description: t("page-tutorials-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -73,7 +74,7 @@ export default async function TutorialsPageJsonLD({
         "@id": `${url}#tutorials`,
         name: t("page-tutorial-title"),
         description: t("page-tutorials-meta-description"),
-        url: url,
+        url,
         numberOfItems: internalTutorials.length,
         itemListElement: internalTutorials
           .slice(0, 10)

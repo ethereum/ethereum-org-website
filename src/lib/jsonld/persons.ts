@@ -270,10 +270,10 @@ export const KNOWN_PERSONS = {
     "@type": "Person" as const,
     "@id": "https://ethereum.org/#austin-griffith",
     name: "Austin Griffith",
-    jobTitle: "Head of Developer Growth",
+    jobTitle: "Head of Builder Growth",
     worksFor: { "@id": "https://ethereum.foundation/#organization" },
     description:
-      "Austin Griffith is the Head of Developer Growth at the Ethereum Foundation and the creator of Scaffold-ETH, BuidlGuidl, and SpeedRunEthereum. He is dedicated to educating builders and simplifying the onboarding process for Web3 developers.",
+      "Austin Griffith leads the Ethereum Foundation's Builder Growth team and is the creator of Scaffold-ETH, BuidlGuidl, and SpeedRunEthereum. He is dedicated to educating builders and simplifying the onboarding process for Web3 developers.",
     knowsAbout: [
       "Ethereum Development",
       "Smart Contract Engineering",
@@ -301,6 +301,121 @@ export const KNOWN_PERSONS = {
       "https://x.com/austingriffith",
       "https://www.linkedin.com/in/austin-griffith-65ba2a2/",
       "https://www.youtube.com/@austingriffith3550",
+    ],
+  },
+
+  "philip-krause": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#philip-krause",
+    name: "Philip Krause",
+    jobTitle: "Builder Growth",
+    worksFor: { "@id": "https://ethereum.foundation/#organization" },
+    description:
+      "Philip Krause is a member of the Ethereum Foundation's Builder Growth team, where he focuses on developer onboarding, ecosystem communications, reducing barriers for builders shipping on Ethereum, and develops educational resources and tooling. Before joining the Ethereum Foundation, he advised on DeFi product strategy at fija Finance and held consulting and investment roles in traditional finance. His current work spans AI agents on Ethereum, Solidity security and auditing, zero-knowledge applications with Noir, and translating protocol upgrades into practical guidance for application developers.",
+    knowsAbout: [
+      "AI Agents on Ethereum",
+      "Solidity Security and Auditing",
+      "Ethereum Protocol and Roadmap",
+      "Foundry",
+      "Scaffold-ETH",
+      "Zero-Knowledge Applications (Noir)",
+      "Layer 2 Scaling and Bridging",
+      "Account Abstraction",
+    ],
+    alumniOf: [
+      {
+        "@type": "Organization",
+        name: "BuidlGuidl",
+        url: "https://buidlguidl.com/",
+      },
+      {
+        "@type": "Organization",
+        name: "fija Finance GmbH",
+        url: "https://fija.finance/",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+        url: "https://www.fau.eu/",
+      },
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/philip-krause-7b597711a/",
+      "https://x.com/phipsae",
+      "https://github.com/phipsae",
+    ],
+  },
+
+  "sophia-dew": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#sophia-dew",
+    name: "Sophia Dew",
+    jobTitle: "Builder Growth",
+    worksFor: { "@id": "https://ethereum.foundation/#organization" },
+    description:
+      "Sophia Dew is a member of the Ethereum Foundation's Builder Growth team, where she focuses on AI agent infrastructure, developer education, and onchain agent standards. She previously served as a Developer Relations Engineering Lead at the Celo Foundation and worked on public goods infrastructure at Gitcoin. She holds a BS in Computer Science and Product Design from Stanford University.",
+    knowsAbout: [
+      "AI Agents on Ethereum",
+      "Onchain Agent Standards",
+      "Agent Frameworks and MCP Tooling",
+      "Ethereum L1 Scaling",
+      "Ethereum Protocol Architecture",
+      "Agent Security and Guardrails",
+      "Developer Relations",
+      "Public Goods Infrastructure",
+    ],
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Stanford University",
+        url: "https://www.stanford.edu/",
+      },
+      {
+        "@type": "Organization",
+        name: "Stanford Blockchain Club",
+        url: "https://stanfordblockchain.org/",
+      },
+      {
+        "@type": "Organization",
+        name: "Gitcoin",
+        url: "https://www.gitcoin.co/",
+      },
+      {
+        "@type": "Organization",
+        name: "Celo Foundation",
+        url: "https://celo.org/",
+      },
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/sophiadew/",
+      "https://x.com/sodofi_",
+      "https://github.com/sodofi",
+    ],
+  },
+
+  rick: {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#rick",
+    name: "Rick",
+    jobTitle: "Builder Growth",
+    worksFor: { "@id": "https://ethereum.foundation/#organization" },
+    url: "https://www.rick.build/",
+    description:
+      "Rick is a member of the Ethereum Foundation's Builder Growth team, where he focuses on agentic commerce infrastructure, sovereign AI agents, and developer education. He writes about the Ethereum standards stack for autonomous agent economies, including ERC-8004, ERC-8183, x402, and onchain agent primitives.",
+    knowsAbout: [
+      "Agentic Commerce Infrastructure",
+      "AI Agents on Ethereum",
+      "Onchain Agent Standards",
+      "Sovereign AI and Local Inference",
+      "Ethereum Developer Education",
+      "Agent Key Management and Wallets",
+      "Layer 2 Ecosystem and Adoption",
+      "SpeedRunEthereum",
+    ],
+    sameAs: [
+      "https://www.rick.build/",
+      "https://x.com/rickdotbuild",
+      "https://github.com/rickkdev",
     ],
   },
 
@@ -332,6 +447,145 @@ export const KNOWN_PERSONS = {
       "https://anders94.medium.com",
       "https://www.youtube.com/anders94",
       "https://www.linkedin.com/in/andersbrownworth",
+    ],
+  },
+
+  "tarrence-van-as": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#tarrence-van-as",
+    name: "Tarrence van As",
+    jobTitle: "CEO & Co-Founder",
+    worksFor: {
+      "@type": "Organization",
+      name: "Cartridge",
+      url: "https://cartridge.gg/",
+    },
+    description:
+      "Tarrence van As is the CEO and co-founder of Cartridge, a developer ecosystem for fully onchain games, and co-founder of Dojo, an open-source framework for building onchain games and Autonomous Worlds on Starknet. He also co-founded Dope World, an evolving onchain playground of games, story, and culture built on Starknet.",
+    knowsAbout: [
+      "Fully Onchain Games",
+      "Autonomous Worlds",
+      "Starknet Development",
+      "Game Engine Architecture",
+      "Digital Ownership",
+      "Blockchain Gaming Infrastructure",
+    ],
+    sameAs: [
+      "https://x.com/tarrence",
+      "https://github.com/tarrencev",
+      "https://www.linkedin.com/in/tarrence-van-as-b1440a23",
+    ],
+  },
+
+  "emily-yang": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#emily-yang",
+    name: "Emily Yang",
+    alternateName: "pplpleasr",
+    jobTitle: "Co-Founder",
+    worksFor: {
+      "@type": "Organization",
+      name: "Shibuya",
+      url: "https://www.shibuya.xyz/",
+    },
+    description:
+      "Emily Yang, known as pplpleasr, is a multidisciplinary artist and co-founder of Shibuya, a decentralized content studio pioneering permissionless creativity. From visual effects on feature films including Batman v Superman and Wonder Woman to defining the visual identity of the DeFi movement, she created Fortune magazine's first NFT cover and co-executive produced the Emmy-winning Vitalik: An Ethereum Story. She co-founded PleasrDAO and plsA0k1, a collaborative vault supporting emerging female artists in the NFT space.",
+    knowsAbout: [
+      "Decentralized Content Creation",
+      "NFT Art and Culture",
+      "DeFi Visual Identity",
+      "Permissionless Creativity",
+      "Onchain Film Production",
+      "Community-Funded Storytelling",
+    ],
+    sameAs: [
+      "https://x.com/pplpleasr1",
+      "https://pplplsr.com/",
+      "https://www.instagram.com/pplpleasr/",
+      "https://www.televisionacademy.com/bios/emily-yang",
+      "https://www.forbes.com/profile/emily-yang/",
+    ],
+  },
+
+  "santiago-palladino": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#santiago-palladino",
+    name: "Santiago Palladino",
+    jobTitle: "Engineer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Aztec",
+      url: "https://aztec.network/",
+    },
+    description:
+      "Santiago Palladino is a software engineer at Aztec and a councilmember at The Graph, with over two decades of professional development experience and nine years in the Ethereum ecosystem. Formerly at OpenZeppelin, where he contributed to smart contract security audits and led development of open-source tools for Ethereum applications. He authored Ethereum for Web Developers and holds an MSc in Computer Science from the University of Buenos Aires, where he taught Algorithms and Numerical Methods for seven years.",
+    knowsAbout: [
+      "Ethereum Application Development",
+      "Smart Contract Security",
+      "Privacy-Preserving Blockchains",
+      "Open-Source Developer Tooling",
+      "Layer 2 Scaling",
+      "Ethereum Developer Education",
+    ],
+    alumniOf: [
+      {
+        "@type": "Organization",
+        name: "OpenZeppelin",
+        url: "https://www.openzeppelin.com/",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Universidad de Buenos Aires",
+        url: "https://www.uba.ar/",
+      },
+    ],
+    sameAs: [
+      "https://x.com/smpalladino",
+      "https://palla.dev/",
+      "https://github.com/spalladino",
+      "https://www.linkedin.com/in/spalladino",
+      "https://www.youtube.com/@spalladino",
+      "https://dev.to/spalladino",
+    ],
+  },
+
+  "elliott-alexander": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#elliott-alexander",
+    name: "Elliott Alexander",
+    jobTitle: "Engineer",
+    description:
+      "Elliott Alexander is a full-stack and blockchain engineer who has been building in the Ethereum ecosystem since 2021, most recently working on builder growth at the Ethereum Foundation. His work centers on wallet security, user privacy, and making Ethereum easier for both developers and AI agents to build on through Agent Skills and developer tooling.",
+    knowsAbout: [
+      "Ethereum Application Development",
+      "Wallet Security",
+      "Wallet Privacy",
+      "AI Agent Tooling",
+      "Smart Contract Development",
+      "Ethereum Developer Education",
+    ],
+    alumniOf: [
+      {
+        "@type": "Organization",
+        name: "Ethereum Foundation",
+        url: "https://ethereum.foundation/",
+      },
+      {
+        "@type": "Organization",
+        name: "BuidlGuidl",
+        url: "https://buidlguidl.com/",
+      },
+      {
+        "@type": "Organization",
+        name: "BitPay",
+        url: "https://bitpay.com/",
+      },
+    ],
+    sameAs: [
+      "https://x.com/escottalexander",
+      "https://www.linkedin.com/in/elliott-alexander/",
+      "https://github.com/escottalexander",
+      "https://elliottalexander.xyz",
     ],
   },
 } as const

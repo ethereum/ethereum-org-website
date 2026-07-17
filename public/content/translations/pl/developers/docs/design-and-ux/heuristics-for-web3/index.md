@@ -1,138 +1,132 @@
 ---
-title: 7 heurystyk dla projektowania interfejsu Web3
+title: "7 heurystyk projektowania interfejsów Web3"
 description: "Zasady poprawiające użyteczność Web3"
 lang: pl
 ---
 
-Heurystyki użyteczności to ogólne „praktyczne zasady”, których możesz użyć do pomiaru użyteczności swojej witryny.
-Przedstawione tutaj 7 heurystyk jest specjalnie dostosowanych do Web3 i powinno się je stosować wraz z [10 ogólnymi zasadami projektowania interakcji](https://www.nngroup.com/articles/ten-usability-heuristics/) Jakoba Nielsena.
+Heurystyki użyteczności to ogólne „praktyczne zasady”, których można użyć do pomiaru użyteczności witryny.
+Przedstawione tutaj 7 heurystyk jest specjalnie dostosowanych do Web3 i powinno być stosowanych wraz z [10 ogólnymi zasadami projektowania interakcji](https://www.nngroup.com/articles/ten-usability-heuristics/) Jakoba Nielsena.
 
-## Siedem heurystyk użyteczności dla web3 {#seven-usability-heuristics-for-web3}
+## Siedem heurystyk użyteczności dla Web3 {#seven-usability-heuristics-for-web3}
 
 1. Informacja zwrotna następuje po akcji
 2. Bezpieczeństwo i zaufanie
 3. Najważniejsze informacje są oczywiste
 4. Zrozumiała terminologia
-5. Akcje są jak najkrótsze
+5. Akcje są tak krótkie, jak to możliwe
 6. Połączenia sieciowe są widoczne i elastyczne
 7. Kontrola z poziomu aplikacji, a nie portfela
+
 
 ## Definicje i przykłady {#definitions-and-examples}
 
 ### 1. Informacja zwrotna następuje po akcji {#feedback-follows-action}
 
-**Powinno być oczywiste, kiedy coś się wydarzyło lub dzieje się.**
+**Powinno być oczywiste, kiedy coś się wydarzyło lub właśnie się dzieje.**
 
-Użytkownicy decydują o swoich następnych krokach na podstawie wyników swoich poprzednich kroków. Dlatego ważne jest, aby byli na bieżąco informowani o stanie systemu. Jest to szczególnie ważne w Web3, ponieważ zatwierdzenie transakcji w łańcuchu bloków może czasami zająć trochę czasu. Jeśli nie ma informacji zwrotnej informującej ich, że mają czekać, użytkownicy nie są pewni, czy cokolwiek się wydarzyło.
+Użytkownicy decydują o swoich kolejnych krokach na podstawie wyników poprzednich działań. Dlatego ważne jest, aby byli na bieżąco informowani o stanie systemu. Jest to szczególnie ważne w Web3, ponieważ transakcje mogą czasami wymagać chwili na zatwierdzenie w blockchainie. Jeśli nie ma informacji zwrotnej informującej o konieczności oczekiwania, użytkownicy nie są pewni, czy cokolwiek się wydarzyło.
 
-**Wskazówki:**
-
+**Wskazówki:** 
 - Informuj użytkownika za pomocą wiadomości, powiadomień i innych alertów.
-- Wyraźnie komunikuj czasy oczekiwania.
-- Jeśli akcja ma zająć więcej niż kilka sekund, uspokój użytkownika za pomocą licznika czasu lub animacji, aby poczuł, że coś się dzieje.
-- Jeśli proces składa się z wielu kroków, pokaż każdy krok.
+- Jasno komunikuj czas oczekiwania.
+- Jeśli akcja potrwa dłużej niż kilka sekund, uspokój użytkownika za pomocą licznika czasu lub animacji, aby miał poczucie, że coś się dzieje.
+- Jeśli proces składa się z wielu kroków, pokaż każdy z nich.
 
 **Przykład:**
-Pokazanie każdego kroku związanego z transakcją pomaga użytkownikom dowiedzieć się, na jakim etapie procesu się znajdują. Odpowiednie ikony informują użytkownika o stanie jego działań.
+Pokazanie każdego kroku związanego z transakcją pomaga użytkownikom zorientować się, na jakim etapie procesu się znajdują. Odpowiednie ikony informują użytkownika o statusie jego działań.
 
-![Informowanie użytkownika o każdym kroku podczas wymiany tokenów](./Image1.png)
+![Informing the user about each step when swapping tokens](./Image1.png)
 
 ### 2. Bezpieczeństwo i zaufanie są wbudowane {#security-and-trust-are-backed-in}
 
-Bezpieczeństwo powinno być traktowane priorytetowo i należy to podkreślać użytkownikowi.
-Ludzie bardzo dbają o swoje dane. Bezpieczeństwo jest często główną troską użytkowników, więc powinno być brane pod uwagę na wszystkich poziomach projektowania. Zawsze powinieneś starać się zdobyć zaufanie swoich użytkowników, ale sposób, w jaki to robisz, może oznaczać różne rzeczy w różnych aplikacjach. Nie powinno to być coś, o czym myśli się na końcu, ale powinno być świadomie projektowane na każdym etapie. Buduj zaufanie w całym doświadczeniu użytkownika, włączając w to kanały społecznościowe i dokumentację, a także ostateczny interfejs użytkownika. Kwestie takie jak poziom decentralizacji, status multi-sig skarbca i to, czy tożsamość zespołu jest publiczna, wszystko to wpływa na zaufanie użytkowników.
+Bezpieczeństwo powinno być priorytetem i należy to podkreślać użytkownikowi. 
+Ludzie bardzo dbają o swoje dane. Bezpieczeństwo jest często głównym zmartwieniem użytkowników, dlatego należy je uwzględniać na wszystkich poziomach projektowania. Zawsze powinieneś dążyć do zdobycia zaufania swoich użytkowników, ale sposób, w jaki to robisz, może oznaczać różne rzeczy w różnych aplikacjach. Nie powinno to być refleksją po fakcie, ale powinno być świadomie projektowane od samego początku. Buduj zaufanie poprzez całe doświadczenie użytkownika, w tym kanały społecznościowe i dokumentację, a także końcowy interfejs użytkownika (UI). Rzeczy takie jak poziom decentralizacji, status portfela multi-sig skarbca i to, czy zespół jest publicznie znany (doxxed), wpływają na zaufanie użytkowników.
 
 **Wskazówki:**
-
 - Z dumą wymieniaj swoje audyty
-- Uzyskaj wiele audytów
+- Przeprowadź wiele audytów
 - Reklamuj wszelkie zaprojektowane przez siebie funkcje bezpieczeństwa
-- Podkreślaj możliwe zagrożenia, w tym te związane z integracjami bazowymi
+- Podkreślaj możliwe ryzyka, w tym integracje bazowe
 - Komunikuj złożoność strategii
-- Rozważ kwestie niezwiązane z interfejsem użytkownika, które mogą wpływać na postrzeganie bezpieczeństwa przez użytkowników
+- Weź pod uwagę kwestie niezwiązane z interfejsem użytkownika, które mogą wpłynąć na postrzeganie bezpieczeństwa przez użytkowników
 
-**Przykład:**
+**Przykład:** 
 Umieść swoje audyty w stopce, w widocznym rozmiarze.
 
-![Audyty, do których odniesiono się w stopce strony internetowej](./Image2.png)
+![Audits referenced in the website footer](./Image2.png)
 
 ### 3. Najważniejsze informacje są oczywiste {#the-most-important-info-is-obvious}
 
-W przypadku złożonych systemów pokazuj tylko najistotniejsze dane. Określ, co jest najważniejsze, i nadaj priorytet wyświetlaniu tych informacji.
-Zbyt wiele informacji jest przytłaczające, a użytkownicy zazwyczaj opierają się na jednej informacji przy podejmowaniu decyzji. W DeFi prawdopodobnie będzie to APR w aplikacjach do generowania zysków i LTV w aplikacjach pożyczkowych.
+W przypadku złożonych systemów pokazuj tylko najistotniejsze dane. Określ, co jest najważniejsze, i nadaj priorytet temu wyświetlaniu. 
+Zbyt duża ilość informacji przytłacza, a użytkownicy zazwyczaj opierają się na jednej informacji podczas podejmowania decyzji. W zdecentralizowanych finansach (DeFi) będzie to prawdopodobnie APR w aplikacjach dochodowych i LTV w aplikacjach do pożyczania.
 
 **Wskazówki:**
-
 - Badania użytkowników pozwolą odkryć najważniejszą metrykę
-- Kluczowe informacje przedstaw w dużym rozmiarze, a pozostałe szczegóły w małym i dyskretnym.
-- Ludzie nie czytają, oni skanują wzrokiem; upewnij się, że Twój projekt można łatwo przeskanować wzrokiem.
+- Spraw, aby kluczowe informacje były duże, a inne szczegóły małe i dyskretne
+- Ludzie nie czytają, oni skanują tekst; upewnij się, że Twój projekt jest łatwy do skanowania wzrokiem
 
-**Przykład:** duże, kolorowe tokeny są łatwe do znalezienia podczas skanowania wzrokiem. Wartość APR jest duża i podświetlona kolorem akcentującym.
+**Przykład:** Duże tokeny w pełnym kolorze są łatwe do znalezienia podczas skanowania wzrokiem. APR jest duże i wyróżnione kolorem akcentującym.
 
-![Token i APR są łatwe do znalezienia](./Image3.png)
+![The token and APR are easy to find](./Image3.png)
 
-### 4. Zrozumiała terminologia {#clear-terminology}
+### 4. Jasna terminologia {#clear-terminology}
 
 Terminologia powinna być zrozumiała i odpowiednia.
-Żargon techniczny może być ogromną przeszkodą, ponieważ wymaga zbudowania zupełnie nowego modelu myślowego. Użytkownicy nie są w stanie odnieść projektu do słów, zwrotów i pojęć, które już znają. Wszystko wydaje się mylące i nieznane, a do tego dochodzi stroma krzywa uczenia się, zanim w ogóle będą mogli spróbować z tego skorzystać. Użytkownik może podejść do DeFi, chcąc zaoszczędzić trochę pieniędzy, a to, co znajduje, to: Mining, farming, staking, emisje, łapówki, skarbce, schowki, veTokeny, vesting, epoki, zdecentralizowane algorytmy, płynność należąca do protokołu...
-Staraj się używać prostych terminów, które będą zrozumiałe dla jak najszerszej grupy osób. Nie wymyślaj zupełnie nowych terminów tylko na potrzeby swojego projektu.
+Techniczny żargon może być ogromną przeszkodą, ponieważ wymaga zbudowania całkowicie nowego modelu mentalnego. Użytkownicy nie są w stanie powiązać projektu ze słowami, frazami i koncepcjami, które już znają. Wszystko wydaje się mylące i nieznane, a krzywa uczenia się jest stroma, zanim w ogóle będą mogli spróbować z tego skorzystać. Użytkownicy mogą podejść do zdecentralizowanych finansów (DeFi), chcąc zaoszczędzić trochę pieniędzy, a to, co znajdują, to: kopanie, farmienie, staking, emisje, łapówki (bribes), skarbce (vaults), blokady (lockers), veTokeny, vesting, epoki, zdecentralizowane algorytmy, płynność będąca własnością protokołu…
+Staraj się używać prostych terminów, które będą zrozumiałe dla jak najszerszej grupy ludzi. Nie wymyślaj zupełnie nowych terminów tylko dla swojego projektu.
 
 **Wskazówki:**
-
 - Używaj prostej i spójnej terminologii
 - W miarę możliwości używaj istniejącego języka
 - Nie wymyślaj własnych terminów
-- Postępuj zgodnie z pojawiającymi się konwencjami
-- W miarę możliwości edukuj użytkowników
+- Przestrzegaj konwencji w miarę ich pojawiania się
+- Edukuj użytkowników w jak największym stopniu
 
 **Przykład:**
-„Twoje nagrody” to szeroko rozumiane, neutralne pojęcie, a nie nowe słowo wymyślone na potrzeby tego projektu. Nagrody są wyrażone w USD, aby pasowały do rzeczywistych modeli myślowych, nawet jeśli same nagrody są w innym tokenie.
+„Twoje nagrody” to powszechnie zrozumiały, neutralny termin; nie jest to nowe słowo wymyślone na potrzeby tego projektu. Nagrody są denominowane w USD, aby pasowały do modeli mentalnych ze świata rzeczywistego, nawet jeśli same nagrody są w innym tokenie.
 
-![Nagrody w tokenach, wyświetlane w dol. amerykańskich](./Image4.png)
+![Token rewards, displayed in U.S. dollars](./Image4.png)
 
-### 5. Akcje są jak najkrótsze {#actions-are-as-short-as-possible}
+### 5. Akcje są tak krótkie, jak to możliwe {#actions-are-as-short-as-possible}
 
-Przyspiesz interakcje użytkownika, grupując pod-akcje.
-Można to zrobić na poziomie inteligentnego kontraktu, jak również w interfejsie użytkownika. Użytkownik nie powinien musieć przechodzić z jednej części systemu do drugiej – ani całkowicie opuszczać systemu – aby wykonać typową akcję.
+Przyspiesz interakcje użytkownika, grupując akcje podrzędne. 
+Można to zrobić na poziomie inteligentnego kontraktu, a także w interfejsie użytkownika. Użytkownik nie powinien musieć przechodzić z jednej części systemu do drugiej – ani całkowicie opuszczać systemu – aby wykonać typową akcję. 
 
 **Wskazówki:**
-
-- Łącz „Zatwierdź” z innymi akcjami, jeśli to możliwe
+- Tam, gdzie to możliwe, połącz „Zatwierdź” z innymi akcjami
 - Grupuj kroki podpisywania tak blisko siebie, jak to możliwe
 
-**Przykład:** Połączenie „dodaj płynność” i „stake” jest prostym przykładem akceleratora, który oszczędza czas i gaz użytkownika.
+**Przykład:** Połączenie „dodaj płynność” i „stakuj” to prosty przykład akceleratora, który oszczędza użytkownikowi zarówno czas, jak i gaz.
 
-![Modal pokazujący przełącznik do łączenia akcji wpłaty i stakowania](./Image5.png)
+![Modal showing a switch to combine the deposit and stake actions](./Image5.png)
 
 ### 6. Połączenia sieciowe są widoczne i elastyczne {#network-connections-are-visible-and-flexible}
 
-Informuj użytkownika, z którą siecią jest połączony, i zapewnij przejrzyste skróty do zmiany sieci.
-Jest to szczególnie ważne w aplikacjach wielołańcuchowych. Główne funkcje aplikacji powinny być nadal widoczne po rozłączeniu lub połączeniu z nieobsługiwaną siecią.
+Poinformuj użytkownika, do jakiej sieci jest podłączony, i zapewnij wyraźne skróty do zmiany sieci. 
+Jest to szczególnie ważne w aplikacjach wielosieciowych (multichain). Główne funkcje aplikacji powinny być nadal widoczne po odłączeniu lub podłączeniu do nieobsługiwanej sieci.
 
 **Wskazówki:**
-
-- Pokaż jak najwięcej z aplikacji, gdy jesteś rozłączony
-- Pokaż, z którą siecią użytkownik jest aktualnie połączony
+- Pokazuj jak najwięcej aplikacji w stanie odłączenia
+- Pokaż, do jakiej sieci użytkownik jest obecnie podłączony
 - Nie zmuszaj użytkownika do przechodzenia do portfela w celu zmiany sieci
-- Jeśli aplikacja wymaga od użytkownika zmiany sieci, wywołaj akcję z głównego wezwania do działania
-- Jeśli aplikacja zawiera rynki lub skarbce dla wielu sieci, jasno określ, który zestaw użytkownik aktualnie przegląda
+- Jeśli aplikacja wymaga od użytkownika zmiany sieci, wywołaj tę akcję z głównego wezwania do działania (CTA)
+- Jeśli aplikacja zawiera rynki lub skarbce dla wielu sieci, jasno określ, na który zestaw użytkownik obecnie patrzy
 
-**Przykład:** Pokaż użytkownikowi, z którą siecią jest połączony, i pozwól mu ją zmienić na pasku aplikacji.
+**Przykład:** Pokaż użytkownikowi, do jakiej sieci jest podłączony, i pozwól mu ją zmienić na pasku aplikacji.
 
-![Przycisk rozwijany pokazujący podłączoną sieć](./Image6.png)
+![Dropdown button showing the connected network](./Image6.png)
 
 ### 7. Kontrola z poziomu aplikacji, a nie portfela {#control-from-the-app-not-the-wallet}
 
-Interfejs użytkownika powinien informować użytkownika o wszystkim, co musi wiedzieć, i dawać mu kontrolę nad wszystkim, co musi zrobić.
-W Web3 istnieją akcje, które podejmujesz w interfejsie użytkownika, i akcje, które podejmujesz w portfelu. Zazwyczaj inicjujesz akcję w interfejsie użytkownika, a następnie potwierdzasz ją w portfelu. Użytkownicy mogą czuć się niekomfortowo, jeśli te dwa wątki nie są starannie zintegrowane.
+Interfejs użytkownika powinien mówić użytkownikowi wszystko, co musi wiedzieć, i dawać mu kontrolę nad wszystkim, co musi zrobić. 
+W Web3 istnieją akcje, które wykonujesz w interfejsie użytkownika, oraz akcje, które wykonujesz w portfelu. Zazwyczaj inicjujesz akcję w interfejsie użytkownika, a następnie potwierdzasz ją w portfelu. Użytkownicy mogą czuć się niekomfortowo, jeśli te dwa wątki nie są ze sobą starannie zintegrowane.
 
 **Wskazówki:**
-
-- Komunikuj stan systemu za pomocą informacji zwrotnych w interfejsie użytkownika
+- Komunikuj stan systemu poprzez informacje zwrotne w interfejsie użytkownika
 - Prowadź rejestr ich historii
 - Udostępniaj linki do eksploratorów bloków dla starych transakcji
-- Udostępnij skróty do zmiany sieci.
+- Zapewnij skróty do zmiany sieci. 
 
-**Przykład:** Dyskretny kontener pokazuje użytkownikowi, jakie odpowiednie tokeny ma w swoim portfelu, a główne wezwanie do działania zapewnia skrót do zmiany sieci.
+**Przykład:** Subtelny kontener pokazuje użytkownikowi, jakie odpowiednie tokeny ma w swoim portfelu, a główne wezwanie do działania (CTA) zapewnia skrót do zmiany sieci.
 
-![Główne wezwanie do działania skłania użytkownika do zmiany sieci](./Image7.png)
+![Main CTA is prompting the user to switch network](./Image7.png)

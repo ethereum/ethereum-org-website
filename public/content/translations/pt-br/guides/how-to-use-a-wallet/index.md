@@ -1,91 +1,91 @@
 ---
 title: Como usar uma carteira
-metaTitle: Como usar o Ethreum Wallets| Passo a passo
-description: Uma guia explicando como enviar, receber tokens e conectar-se aos projetos da web3.
+metaTitle: Como usar carteiras Ethereum | Passo a passo
+description: Um guia explicando como enviar e receber tokens e se conectar a projetos web3.
 lang: pt-br
 ---
 
-# Como usar uma carteira
+Aprenda a operar todas as funções básicas de uma carteira. Se você ainda não tem uma, confira nosso guia [Como criar uma conta Ethereum](/guides/how-to-create-an-ethereum-account/).
 
-Aprenda como operar todas as funções básicas de uma carteira. Se você ainda não tem uma conta, confira nosso [Como criar uma conta Ethereum](/guides/how-to-create-an-ethereum-account/).
+## Abra sua carteira {#open-your-wallet}
 
-## Abra sua conta
+Você deve ver um painel que provavelmente mostrará seu saldo e conterá botões para enviar e receber tokens.
 
-Você verá um painel que provavelmente mostrará seu saldo e os botões para enviar e receber tokens.
+## Receber criptomoeda {#receive-cryptocurrency}
 
-## Receber criptomoedas
+Você quer receber cripto na sua carteira?
 
-Você quer receber criptomoedas na sua carteira?
+Cada conta Ethereum tem seu próprio endereço de recebimento, que é uma sequência única de números e letras. O endereço funciona como o número de uma conta bancária. Os endereços Ethereum sempre começarão com "0x". Você pode compartilhar esse endereço com qualquer pessoa: é seguro fazer isso.
 
-Cada conta do Ethereum possui seu próprio endereço de recebimento, que é uma sequência única de números e letras. O endereço funciona como um número de conta bancária ou chave pix. Os endereços Ethereum sempre começarão com “0x”. Você pode compartilhar esse endereço com qualquer pessoa: é seguro fazê-lo.
+Seu endereço é como o endereço da sua casa: você precisa dizer às pessoas qual é para que elas possam encontrá-lo. É seguro fazer isso, porque você ainda pode trancar a porta da frente com outra chave que só você controla, para que ninguém possa entrar, mesmo que saibam onde você mora.
 
-O seu endereço é como o endereço da sua casa: você precisa dizer às pessoas para que elas possam encontrar você. É seguro fazer isso, porque você ainda pode trancar a porta da frente com outra chave que só você controla para que ninguém possa entrar, mesmo que saibam onde você mora.
+Você precisa fornecer seu endereço público a quem quiser lhe enviar dinheiro. Muitos aplicativos de carteira permitem que você copie seu endereço ou mostre um código QR para escanear, facilitando o uso. Evite digitar qualquer endereço Ethereum manualmente. Isso pode facilmente levar a erros de digitação e perda de fundos.
 
-Você precisa fornecer seu endereço público a quem desejar enviar dinheiro a você. Muitos aplicativos de carteira permitem que você copie seu endereço ou mostre um código QR para facilitar o uso. Evite digitar qualquer endereço Ethereum manualmente. Isso pode facilmente levar a erros administrativos e perda de fundos.
+Diferentes aplicativos podem variar ou usar uma linguagem diferente, mas eles devem guiá-lo por um processo semelhante se você estiver tentando transferir fundos.
 
-Aplicativos diferentes podem variar ou usar linguagens diferentes, mas devem conduzir você por um processo semelhante se estiver tentando transferir fundos.
+1. Abra seu aplicativo de carteira.
+2. Clique em "Receber" (ou em uma opção com palavras semelhantes).
+3. Copie seu endereço Ethereum para a área de transferência.
+4. Forneça ao remetente o seu endereço Ethereum de recebimento.
 
-1. Abra o aplicativo da sua carteira.
-2. Clique em “Receber” (ou na opção com palavras semelhantes).
-3. Copie o seu endereço Ethereum para a área de transferência.
-4. Forneça ao remetente o seu endereço Ethereum.
+## Enviar criptomoeda {#send-cryptocurrency}
 
-## Enviar criptomoeda
+Você gostaria de enviar ETH para outra carteira?
 
-Deseja enviar ETH para outra carteira?
+1. Abra seu aplicativo de carteira.
+2. Obtenha o endereço de recebimento e certifique-se de estar conectado à mesma rede que o destinatário.
+3. Insira o endereço de recebimento ou escaneie um código QR com sua câmera para não precisar escrever o endereço manualmente.
+4. Clique no botão "Enviar" na sua carteira (ou em uma alternativa com palavras semelhantes).
 
-1. Abra o aplicativo da sua carteira.
-2. Obtenha o endereço de recebimento e verifique se está conectado à mesma rede do destinatário.
-3. Insira o endereço de recebimento ou digitalize um código QR com a sua câmera para que você não precise escrever o endereço manualmente.
-4. Clique no botão “Enviar” em sua carteira (ou uma alternativa com palavras semelhantes).
+![Send field for crypto address](./send.png)
+<br/>
 
-![Campo de envio para endereço de criptomoeda](./send.png) <br/>
+5. Muitos ativos, como DAI ou USDC, existem em várias redes. Ao transferir tokens cripto, certifique-se de que o destinatário esteja usando a mesma rede que você, pois eles não são intercambiáveis.
+6. Certifique-se de que sua carteira tenha ETH suficiente para cobrir a taxa de transação, que varia dependendo das condições da rede. A maioria das carteiras adicionará automaticamente a taxa sugerida à transação, que você poderá confirmar em seguida.
+7. Assim que sua transação for processada, a quantia correspondente de cripto aparecerá na conta do destinatário. Isso pode levar de alguns segundos a alguns minutos, dependendo do quanto a rede está sendo usada no momento.
 
-5. Muitos ativos, como DAI e USDC, existem em várias redes. Ao transferir tokens de criptomoedas, certifique-se de que o destinatário está usando a mesma rede que você, já que isso não pode ser alterado.
-6. Certifique-se de que sua carteira tenha ETH suficiente para cobrir a taxa de transação, que varia dependendo das condições da rede. A maioria das carteiras adicionará automaticamente a taxa sugerida para a transação. Em seguida, você pode confirmar.
-7. Uma vez que a transação é processada, o valor de cripto correspondente aparecerá na conta do destinatário. Isso pode demorar de alguns segundos a alguns minutos, dependendo do quanto a rede está sendo usada atualmente.
+## Conectando-se a projetos {#connecting-to-projects}
 
-## Conectando-se a projetos
+Seu endereço será o mesmo em todos os projetos Ethereum. Você não precisa se registrar individualmente em nenhum projeto. Depois de ter uma carteira, você pode se conectar a qualquer projeto Ethereum sem nenhuma informação adicional. Não são necessários e-mails ou quaisquer outras informações pessoais.
 
-Seu endereço será o mesmo em todos os projetos do Ethereum. Você não precisa se registrar individualmente em nenhum projeto. Quando tiver uma carteira, você poderá se conectar a qualquer projeto na rede Ethereum sem quaisquer informações adicionais. Não são necessários e-mails ou outras informações pessoais.
+1. Visite o site de qualquer projeto.
+2. Se a página inicial do projeto for apenas uma descrição estática do projeto, você deve conseguir clicar em um botão "Abrir o aplicativo" no menu, que o levará ao aplicativo da web real.
+3. Quando estiver no aplicativo, clique em "Conectar".
 
-1. Visite o website do projeto.
-2. Se a página inicial do projeto for apenas uma descrição estática do projeto, você deve poder clicar em um botão “Abrir o App” no menu que irá navegar para o aplicativo web real.
-3. Quando estiver no aplicativo, clique em “Conectar”.
+![Button allowing user to connect to the website with a wallet](./connect1.png)
 
-![Botão que permite ao usuário se conectar ao site com uma carteira](./connect1.png)
+4. Selecione sua carteira na lista de opções fornecida. Se você não conseguir ver sua carteira, ela pode estar oculta na opção "WalletConnect".
 
-4. Selecione sua carteira da lista de opções fornecidas. Se você não conseguir ver sua carteira, ela pode estar escondida na a opção “WalletConnect”.
+![Selecting from a list of wallets to connect with](./connect2.png)
 
-![Selecionando em uma lista de carteiras para conectar](./connect2.png)
-
-5. Confirme o pedido de assinatura na sua carteira para estabelecer a conexão. **A assinatura desta mensagem não dever exigir o gasto de nenhum ETH**.
-6. É isso! Comece a usar o app. Você pode encontrar alguns projetos interessantes em nossa [página de dApps](/apps/#explore). <br />
+5. Confirme a solicitação de assinatura na sua carteira para estabelecer a conexão. **Assinar esta mensagem não deve exigir o gasto de nenhum ETH**.
+6. É isso! Comece a usar o aplicativo. Você pode encontrar alguns projetos interessantes em nossa [página de aplicativos descentralizados (dapps)](/apps/#explore).
+   <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Quer saber mais?</div>
+  <div>Quer aprender mais?</div>
   <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-## Perguntas frequentes
+## Perguntas frequentes {#frequently-asked-questions}
 
-### Se eu tenho um endereço de ETH, o endereço é o mesmo para outras blockchains?
+### Se eu possuo um endereço ETH, eu possuo o mesmo endereço em outras blockchains? {#if-i-own-an-eth-address-do-i-own-the-same-address-on-other-blockchains}
 
-Você pode utilizar o mesmo endereço em todos os blockchains compatíveis com EVM (se você tiver o tipo de carteira com uma frase de recuperação). Esta [lista](https://chainlist.org/) mostra quais blockchains você pode usar com o mesmo endereço. Algumas blockchains, como o Bitcoin, implementam um conjunto completamente separado de regras de rede e você precisará de um endereço diferente com um formato diferente. Se você tem uma carteira de contrato inteligente, você deve verificar o site do produto para mais informações sobre quais blockchains são suportadas.
+Você pode usar o mesmo endereço em todas as blockchains compatíveis com a EVM (se você tiver o tipo de carteira com uma frase de recuperação). Esta [lista](https://chainlist.org/) mostrará quais blockchains você pode usar com o mesmo endereço. Algumas blockchains, como o Bitcoin, implementam um conjunto completamente separado de regras de rede e você precisará de um endereço diferente com um formato diferente. Se você tiver uma carteira de contrato inteligente, verifique o site do produto para obter mais informações sobre quais blockchains são suportadas.
 
-### Posso usar o mesmo endereço em vários dispositivos?
+### Posso usar o mesmo endereço em vários dispositivos? {#can-i-use-the-same-address-on-multiple-devices}
 
-Sim, você pode utilizar o mesmo endereço em diversos dispositivos. Tecnicamente, carteiras são apenas uma interface para mostrar o seu saldo e fazer transações — sua conta não está armazenada na carteira, mas na blockchain.
+Sim, você pode usar o mesmo endereço em vários dispositivos. As carteiras são tecnicamente apenas uma interface para mostrar seu saldo e fazer transações; sua conta não é armazenada dentro da carteira, mas na blockchain.
 
-### Eu não recebi a criptomoeda. Onde posso verificar o status da transação?
+### Não recebi a cripto, onde posso verificar o status de uma transação? {#i-have-not-received-the-crypto-where-can-i-check-the-status-of-a-transaction}
 
 Você pode usar [exploradores de blocos](/developers/docs/data-and-analytics/block-explorers/) para ver o status de qualquer transação em tempo real. Tudo o que você precisa fazer é pesquisar o endereço da sua carteira ou o ID da transação.
 
-### Posso cancelar ou retornar transações?
+### Posso cancelar ou devolver transações? {#can-i-cancel-or-return-transactions}
 
-Não, uma vez que uma transação é confirmada, você não pode cancelá-la.
+Não, uma vez que uma transação é confirmada, você não pode cancelar a transação.

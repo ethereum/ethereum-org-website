@@ -18,6 +18,7 @@ Ethereum.org adalah sumber daya edukasi yang netral. Galeri video dikurasi untuk
 
 Situs ini tidak mencantumkan video yang utamanya mempromosikan produk, token, atau layanan komersial tertentu.
 
+
 ## Kriteria penyertaan {#criteria-for-inclusion}
 
 ### Wajib ada {#must-haves}
@@ -33,6 +34,7 @@ Situs ini tidak mencantumkan video yang utamanya mempromosikan produk, token, at
 - **Memiliki transkrip** – Video dengan transkrip meningkatkan aksesibilitas dan SEO. Jika Anda tidak memilikinya, tim ethereum.org dapat membantu membuatnya.
 - **Dari sumber yang kredibel** – Konten dari pendidik, peneliti, dan sumber yang sudah mapan mendapat prioritas.
 - **Tepat waktu dan abadi (evergreen)** – Konten yang tetap relevan seiring berjalannya waktu lebih disukai daripada materi yang sensitif terhadap waktu.
+
 
 ## Cara menambahkan video {#how-to-add-a-video}
 
@@ -121,25 +123,10 @@ Gunakan heading `###` dengan stempel waktu untuk menandai bagian-bagian utama. I
 
 Jika Anda tidak memiliki transkrip, Anda dapat membiarkan bagian isi (body) kosong dan tim akan membuatnya.
 
-#### Langkah 4: Pilih tag topik {#step-4}
-
-Pilih tag topik yang cocok dengan kategori yang ada yang digunakan di galeri. Kategori saat ini dan tagnya meliputi:
-
-- **Cara Kerja Ethereum**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Peningkatan Jaringan**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Peta Jalan & Prioritas**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Penskalaan & Lapisan 2**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Kasus Penggunaan**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Privasi & Keamanan**: `privacy-and-security`, `privacy`, `authentication`
-- **Kisah Komunitas**: `community-stories`, `contributing`, `translations`, `community`
-
-Untuk memastikan video Anda muncul di rak kategori galeri, sertakan setidaknya satu tag kunci kategori (nama yang dicetak tebal dalam format kebab-case, mis. `use-cases` atau `scaling-and-layer-2`). Video tanpa tag kategori yang dikenali hanya akan muncul di tampilan "Semua" dan hasil pencarian.
-
-Anda juga dapat menggunakan tag baru — tag tersebut akan tersedia untuk pengelompokan kategori di masa mendatang.
-
 #### Langkah 5: Kirimkan PR Anda {#step-5}
 
 Buka pull request dengan perubahan Anda ke cabang `dev`. Tim akan meninjau kiriman Anda dan memberikan umpan balik.
+
 
 ## Pemeliharaan {#maintenance}
 
@@ -150,6 +137,7 @@ Video yang dicantumkan ditinjau secara rutin untuk memastikan video tersebut:
 - Memiliki tautan hosting/YouTube yang berfungsi
 
 Jika Anda melihat masalah pada video yang dicantumkan, [buat sebuah isu](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) atau kirim email ke [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Ketentuan penggunaan {#terms-of-use}
 

@@ -1,0 +1,320 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/programming-languages/javascript/index.md",
+  "generatedAt": "2026-06-19T18:52:17.168Z",
+  "rootHash": "d44445379499",
+  "tree": {
+    "contentHash": "780a8a931374",
+    "anchorHash": "a9b9f5ef0287",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "2066561345a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "8f4280e99169",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:2": {
+        "contentHash": "2497b5d36e7b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "ca8b22d0db83",
+        "anchorHash": "ff2b5d6ebc89"
+      },
+      "prose:3": {
+        "contentHash": "22ae2ac09bb2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "be61bcca51d0",
+        "anchorHash": "496b8e555c12"
+      },
+      "prose:4": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "interact-with-ethereum": {
+        "contentHash": "5a19b2cbdfcc",
+        "anchorHash": "2e915a89e690",
+        "labelHash": "ec6ac0d814bc",
+        "children": {
+          "_label": {
+            "contentHash": "ec6ac0d814bc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "javascript-api-libraries": {
+            "contentHash": "a767c741cfc7",
+            "anchorHash": "a2093ac2edb6",
+            "labelHash": "e0b3e7eb7935",
+            "children": {
+              "_label": {
+                "contentHash": "e0b3e7eb7935",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:6": {
+                "contentHash": "eae2fd67f8fa",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "223e61870b1c",
+                "anchorHash": "93ad88bd412d"
+              },
+              "prose:7": {
+                "contentHash": "826d45dee64d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "3271ce14f5b9",
+                "anchorHash": "94d095604d5e"
+              },
+              "prose:8": {
+                "contentHash": "819612614fe7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "f829674d0e2c",
+                "anchorHash": "bac2804032cb"
+              },
+              "prose:9": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "fb639b361f17",
+                "anchorHash": "3db5753b9a9f"
+              },
+              "prose:10": {
+                "contentHash": "e3a0108a20e1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:4": {
+                "contentHash": "54dd3142a834",
+                "anchorHash": "4830d959990c"
+              },
+              "prose:11": {
+                "contentHash": "6668c38e9225",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "8b4c82401c9c",
+                "anchorHash": "979fedf5d571"
+              },
+              "prose:12": {
+                "contentHash": "145375aed0d8",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:6",
+              "link:0",
+              "prose:7",
+              "link:1",
+              "prose:8",
+              "link:2",
+              "prose:9",
+              "link:3",
+              "prose:10",
+              "link:4",
+              "prose:11",
+              "link:5",
+              "prose:12"
+            ]
+          },
+          "smart-contracts": {
+            "contentHash": "867b40465360",
+            "anchorHash": "9915b3335c27",
+            "labelHash": "c9239b20a918",
+            "children": {
+              "_label": {
+                "contentHash": "c9239b20a918",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "2a304858adff",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "7ead9d0680ad",
+                "anchorHash": "9d79f96a14ba"
+              },
+              "prose:3": {
+                "contentHash": "fd66c0ebc60e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "81fbd2f198c9",
+                "anchorHash": "c7308a37e8aa"
+              },
+              "prose:4": {
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "javascript-api-libraries",
+          "smart-contracts"
+        ]
+      },
+      "understand-the-protocol": {
+        "contentHash": "bb60427a88de",
+        "anchorHash": "aae1853f51ea",
+        "labelHash": "33a966bdaf04",
+        "children": {
+          "_label": {
+            "contentHash": "33a966bdaf04",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "the-ethereum-virtual-machine": {
+            "contentHash": "bd4c503b1830",
+            "anchorHash": "26a9f68aff67",
+            "labelHash": "8bd0babae450",
+            "children": {
+              "_label": {
+                "contentHash": "8bd0babae450",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "843587775856",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "eb78c2900674",
+                "anchorHash": "f68a48502f68"
+              },
+              "prose:3": {
+                "contentHash": "6d337d0b1997",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "ced659a817ad",
+                "anchorHash": "9a942096bac8"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1"
+            ]
+          },
+          "nodes-and-clients": {
+            "contentHash": "6c9445a88025",
+            "anchorHash": "449d1e376720",
+            "labelHash": "0e034426d05b",
+            "children": {
+              "_label": {
+                "contentHash": "0e034426d05b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "a45ddba7250a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "488e0482880a",
+                "anchorHash": "4425358e3e68"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "the-ethereum-virtual-machine",
+          "nodes-and-clients"
+        ]
+      },
+      "other-projects": {
+        "contentHash": "9dc4dbe804bd",
+        "anchorHash": "1225a46e0806",
+        "labelHash": "7b4418d894c3",
+        "children": {
+          "_label": {
+            "contentHash": "7b4418d894c3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "5dd2d5aafeb6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "0544000409ee"
+          },
+          "prose:3": {
+            "contentHash": "0d9f61e1d211",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "90a153417e84",
+            "anchorHash": "ff2b5d6ebc89"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "inline-code:0",
+          "prose:3",
+          "link:1"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "7b6014df0830",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "123ee5ac559d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "interact-with-ethereum",
+      "understand-the-protocol",
+      "other-projects",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+}

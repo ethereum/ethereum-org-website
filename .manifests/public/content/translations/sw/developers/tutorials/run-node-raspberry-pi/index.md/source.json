@@ -1,0 +1,507 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/tutorials/run-node-raspberry-pi/index.md",
+  "generatedAt": "2026-06-19T23:13:31.781Z",
+  "rootHash": "2e208c15468b",
+  "tree": {
+    "contentHash": "4b50d3c4a400",
+    "anchorHash": "0b3a4e397c18",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "4c1c024c7b45",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "8c3cd81dc95a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "04b900ede5cb"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e7ca5f587ecb"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:skill": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4e12bfb83165"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2c15d78de30b"
+      },
+      "frontmatter:source": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "cb550428f72d"
+      },
+      "frontmatter:sourceUrl": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "78ed71efe873"
+      },
+      "prose:0": {
+        "contentHash": "9bbc0b037ee1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "why-run-ethereum-on-arm": {
+        "contentHash": "2d3fca29fcfc",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2c725f298af1",
+        "children": {
+          "_label": {
+            "contentHash": "2c725f298af1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0cfaf6fd66e9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-does-it-work": {
+        "contentHash": "b3e9e54d375b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c3f15799af50",
+        "children": {
+          "_label": {
+            "contentHash": "c3f15799af50",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "8e4f54f36930",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "note-on-execution-and-consensus-clients": {
+        "contentHash": "f7bf53079f47",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "fe8d331749a8",
+        "children": {
+          "_label": {
+            "contentHash": "fe8d331749a8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5d8a2033a78e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "downloading-the-image": {
+        "contentHash": "efc081050d4f",
+        "anchorHash": "db3b2f992e90",
+        "labelHash": "9f05752b5983",
+        "children": {
+          "_label": {
+            "contentHash": "9f05752b5983",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "7ba3f75a9a93",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "86a9f9a9141d",
+            "anchorHash": "78ed71efe873"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:4": {
+            "contentHash": "a5d96d989ef7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:5": {
+            "contentHash": "022ad1e641b7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ea28219e3150"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "code-comment:4",
+          "code-comment:5",
+          "code-fence:6",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "flashing-the-microsd": {
+        "contentHash": "22a727a3adc5",
+        "anchorHash": "ecae3c673461",
+        "labelHash": "2ae3d116af89",
+        "children": {
+          "_label": {
+            "contentHash": "2ae3d116af89",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ee0e83ff752a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:2": {
+            "contentHash": "0b021359ee0f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "84f970ab4108"
+          },
+          "prose:1": {
+            "contentHash": "c1b767dcd4a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9b7ecc6eeb83"
+          },
+          "prose:2": {
+            "contentHash": "da24aaa0ca20",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:7": {
+            "contentHash": "1c1a991a3837",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:8": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "86e681e6c415"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "code-comment:2",
+          "code-fence:3",
+          "prose:1",
+          "inline-code:0",
+          "prose:2",
+          "code-comment:7",
+          "code-fence:8",
+          "prose:0"
+        ]
+      },
+      "start-the-node": {
+        "contentHash": "867893396fa1",
+        "anchorHash": "2d0aa5f3db60",
+        "labelHash": "7e058d022aff",
+        "children": {
+          "_label": {
+            "contentHash": "7e058d022aff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "b78a4eb3516c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b60d7bdd334c"
+          },
+          "prose:2": {
+            "contentHash": "0e95ba8f2d72",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "38715df4b88f"
+          },
+          "prose:0": {
+            "contentHash": "feff2a31d616",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e9f591892975"
+          },
+          "code-fence:8": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2f76706bfc87"
+          },
+          "code-fence:10": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "0e0a8ee433d8"
+          },
+          "prose:4": {
+            "contentHash": "e3d2dc45310d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e9c185a85287",
+            "anchorHash": "36f1bef6482f"
+          },
+          "prose:5": {
+            "contentHash": "5bfde04d8230",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "45d2e5f3d90a"
+          },
+          "prose:6": {
+            "contentHash": "1260ed790fd2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "42dc9a012ea9"
+          },
+          "prose:7": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a0eb683616ab"
+          },
+          "prose:8": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "inline-code:0",
+          "prose:2",
+          "code-fence:4",
+          "prose:0",
+          "code-fence:6",
+          "prose:0",
+          "code-fence:8",
+          "prose:0",
+          "code-fence:10",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "inline-code:1",
+          "prose:6",
+          "inline-code:2",
+          "prose:7",
+          "inline-code:3",
+          "prose:8"
+        ]
+      },
+      "validators": {
+        "contentHash": "baf3f048f4e4",
+        "anchorHash": "281b0acad9b6",
+        "labelHash": "49df873871d6",
+        "children": {
+          "_label": {
+            "contentHash": "49df873871d6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "5c64747a7144",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "502650dcf8af",
+            "anchorHash": "b51ad1e80e48"
+          },
+          "prose:2": {
+            "contentHash": "3d7234c47156",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8c2086b33c00"
+          },
+          "prose:4": {
+            "contentHash": "bc006726769d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "a3aee6368560",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "fe38987a12e3"
+          },
+          "prose:6": {
+            "contentHash": "2b6840e61ac8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a318c24216de"
+          },
+          "prose:7": {
+            "contentHash": "b74bccbb0456",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "86a994c4056f",
+            "anchorHash": "78ed71efe873"
+          },
+          "prose:8": {
+            "contentHash": "e7ac0786668e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:14": {
+            "contentHash": "191a15d509b8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:15": {
+            "contentHash": "6432956fe704",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-comment:16": {
+            "contentHash": "1fc446c19770",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "code-fence:17": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3631a6839003"
+          },
+          "prose:0": {
+            "contentHash": "4753b65057b2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "code-fence:4",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "inline-code:1",
+          "prose:6",
+          "inline-code:2",
+          "prose:7",
+          "link:3",
+          "prose:8",
+          "code-comment:14",
+          "code-comment:15",
+          "code-comment:16",
+          "code-fence:17",
+          "prose:0"
+        ]
+      },
+      "more-details": {
+        "contentHash": "56a2de0fc220",
+        "anchorHash": "db15fdf831fb",
+        "labelHash": "b5eff1dbd015",
+        "children": {
+          "_label": {
+            "contentHash": "b5eff1dbd015",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "cde1a93d0724",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "852a48873fd3",
+            "anchorHash": "78ed71efe873"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "feedback-appreciated": {
+        "contentHash": "4ab189c95e6a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "dd45d3e9eb87",
+        "children": {
+          "_label": {
+            "contentHash": "dd45d3e9eb87",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "15fe18ae62d6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "references": {
+        "contentHash": "e9430021acd4",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "69824d3b0e70",
+        "children": {
+          "_label": {
+            "contentHash": "69824d3b0e70",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9ccd5097bdda",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:tags",
+      "frontmatter:lang",
+      "frontmatter:skill",
+      "frontmatter:breadcrumb",
+      "frontmatter:published",
+      "frontmatter:source",
+      "frontmatter:sourceUrl",
+      "prose:0",
+      "why-run-ethereum-on-arm",
+      "how-does-it-work",
+      "note-on-execution-and-consensus-clients",
+      "downloading-the-image",
+      "flashing-the-microsd",
+      "start-the-node",
+      "validators",
+      "more-details",
+      "feedback-appreciated",
+      "references"
+    ]
+  },
+  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+}

@@ -2,7 +2,8 @@
  * Chunking Tests -- CONCURRENCY-SPEC.md Part 2
  *
  * Validates byte-size-aware chunking for JSON, Markdown, and incremental sections.
- * MAX_CHUNK_BYTES = 65,536 (64KB)
+ * MAX_CHUNK_BYTES is imported from constants.ts; assertions stay parametric so
+ * the tests survive future budget adjustments.
  *
  * Tests with stubs will throw until real implementations are wired in.
  */
@@ -60,11 +61,11 @@ test.describe("JSON chunking (byte-size-aware)", () => {
     expect(chunks).toHaveLength(1)
   })
 
-  test("50 keys averaging 2KB each (~100KB) produces 2 chunks", () => {
+  test("50 keys averaging 2KB each (~100KB) splits into multiple chunks within budget", () => {
     const large = makeJsonWithKeys(50, 2000)
     expect(byteSize(large)).toBeGreaterThan(MAX_CHUNK_BYTES)
     const chunks = chunkJson(large)
-    expect(chunks).toHaveLength(2)
+    expect(chunks.length).toBeGreaterThan(1)
     for (const chunk of chunks) {
       expect(byteSize(chunk)).toBeLessThanOrEqual(MAX_CHUNK_BYTES + 1024)
     }
@@ -177,8 +178,11 @@ test.describe("Markdown chunking (heading + paragraph aware)", () => {
     expect(chunks).toHaveLength(1)
   })
 
-  test("3 sections of 40KB each produces 3 chunks", () => {
-    const large = makeMarkdownSections(3, 40_000)
+  test("3 sections each under budget but total over produces 3 chunks", () => {
+    // Each section sized at 60% of budget so it fits in its own chunk; total
+    // (180%) exceeds budget so chunker must split at heading boundaries.
+    const sectionSize = Math.floor(MAX_CHUNK_BYTES * 0.6)
+    const large = makeMarkdownSections(3, sectionSize)
     expect(byteSize(large)).toBeGreaterThan(MAX_CHUNK_BYTES)
     const chunks = chunkMarkdownProse(large)
     expect(chunks).toHaveLength(3)

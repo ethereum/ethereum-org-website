@@ -1,60 +1,58 @@
 ---
-title: "Geliştirici araçları ekleme"
+title: Geliştirici araçları ekleme
 lang: tr
-description: "Ethereum.org'da geliştirici araçlarını listeleme kriterlerimiz"
+description: ethereum.org'da geliştirici araçlarını listeleme kriterlerimiz
 ---
 
-# Geliştirici araçları ekleme {#contributing-to-ethereumorg-}
+İnsanların güvenle inşa edebilmeleri ve ihtiyaç duydukları desteği alabilmeleri için mümkün olan en iyi geliştirici kaynaklarını listelediğimizden emin olmak istiyoruz.
 
-İnsanların güvenle inşa edebilmeleri ve ihtiyaç duydukları desteğe sahip olabilmeleri için mümkün olan en iyi geliştirici kaynaklarını listelediğimizden emin olmak istiyoruz.
+Gözden kaçırdığımız yararlı bir geliştirici aracı varsa, bunu uygun bir yerde önermekten çekinmeyin.
 
-Kaçırdığımız yararlı bir geliştirici aracı varsa, uygun bir yerde önermekten çekinmeyin.
-
-Şu anda [geliştirici portalımızda](/developers/) geliştirici araçlarını listeliyoruz.
+Şu anda geliştirici araçlarını [geliştirici portalımız](/developers/) genelinde listeliyoruz.
 
 **Uygun sayfalara yeni eklemeler önermekten çekinmeyin.**
 
 ## Nasıl karar veriyoruz {#ways-to-contribute}
 
-Geliştirici aracı gönderimleri aşağıdaki kriterlere göre değerlendirilecektir:
+Geliştirici aracı başvuruları aşağıdaki kriterlere göre değerlendirilecektir:
 
-**Hâlihazırda listelenen araçlardan anlamlı bir şekilde farklı mı?**
+**Halihazırda listelenen araçlardan anlamlı bir şekilde farklılaşıyor mu?**
 
-- Yeni kategoriler veya araç türleri
+- Yeni araç kategorileri veya türleri
 - Mevcut benzer araçlara kıyasla yeni özellikler
-- Mevcut benzer araçlar tarafından kapsanmayan farklı bir kullanım alanına yönelik olması
+- Mevcut benzer araçların kapsamadığı farklı bir kullanım durumunu hedeflemesi
 
 **Araç iyi belgelenmiş mi?**
 
-- Belgeler mevcut mu?
-- Aracı kullanmak yeterli mi?
+- Belgeleri mevcut mu?
+- Aracı kullanmak için yeterli mi?
 - Yakın zamanda güncellenmiş mi?
 
 **Araç yaygın olarak kullanılıyor mu?**
 
-- GitHub yıldızları, indirme istatistikleri ve bilinen şirketler veya projeler tarafından kullanılıp kullanılmadığı gibi ölçümleri dikkate alacağız
+- GitHub yıldızları, indirme istatistikleri ve bilinen şirketler veya projeler tarafından kullanılıp kullanılmadığı gibi metrikleri dikkate alacağız
 
 **Araç yeterli kalitede mi?**
 
-- Tekrar eden hatalar mevcut mu?
+- Tekrarlayan hatalar var mı?
 - Araç güvenilir mi?
 - Araç aktif olarak sürdürülüyor mu?
 
 **Araç açık kaynaklı mı?**
 
-Ethereum alanındaki birçok proje açık kaynak kodludur. Topluluk geliştiricilerinin kodu incelemesine ve ona katkıda bulunmasına olanak tanıyan açık kaynaklı projeleri listeleme olasılığımız daha yüksektir.
+Ethereum alanındaki birçok proje açık kaynaklıdır. Topluluk geliştiricilerinin kodu incelemesine ve koda katkıda bulunmasına olanak tanıyan açık kaynaklı projeleri listeleme olasılığımız daha yüksektir.
 
 ---
 
 ## Ürün Sıralaması {#product-ordering}
 
-Ürünler özel olarak sıralanmadıkça, örneğin alfabetik olarak, uzak geçmişten yakın geçmişe göre sayfaya eklenir. Diğer bir deyişle, en yeni ürünler listenin en altına eklenir.
+Ürünler alfabetik gibi özel bir şekilde sıralanmadıkça, sayfaya en eskiden en yeni eklenene doğru görüntülenecektir. Başka bir deyişle, en yeni ürünler listenin en altına eklenir.
 
 ---
 
 ## Geliştirici aracınızı ekleyin {#how-decisions-about-the-site-are-made}
 
-Eğer ethereum.org'a geliştirici aracı eklemek istiyorsanız ve kriterleri karşılıyorsa GitHub'da bir konu oluşturun.
+ethereum.org'a bir geliştirici aracı eklemek istiyorsanız ve bu araç kriterleri karşılıyorsa, GitHub'da bir sorun (issue) oluşturun.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
   Sorun oluştur

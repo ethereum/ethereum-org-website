@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-05-26T16:55:35.640Z",
+  "englishManifestHash": "c267aed4475a",
+  "placeholderOrder": [
+    "JSON-VALUE-0",
+    "IMAGE-1",
+    "IMAGE-2",
+    "JSON-VALUE-3",
+    "JSON-VALUE-4",
+    "JSON-VALUE-5",
+    "JSON-VALUE-6",
+    "JSON-VALUE-7",
+    "JSON-VALUE-8",
+    "JSON-VALUE-9",
+    "JSON-VALUE-10"
+  ],
+  "placeholderMap": {
+    "JSON-VALUE-0": {
+      "type": "json-value",
+      "values": {
+        "containsMarkdown": "true"
+      }
+    },
+    "IMAGE-1": {
+      "type": "image",
+      "values": {
+        "src": "https://raw.githubusercontent.com/BuidlGuidl/abi.ninja/main/.github/img/ui1.png"
+      }
+    },
+    "IMAGE-2": {
+      "type": "image",
+      "values": {
+        "src": "https://raw.githubusercontent.com/BuidlGuidl/abi.ninja/main/.github/img/ui2.png"
+      }
+    },
+    "JSON-VALUE-3": {
+      "type": "json-value",
+      "values": {
+        "containsMarkdown": "true"
+      }
+    },
+    "JSON-VALUE-4": {
+      "type": "json-value",
+      "values": {
+        "containsMarkdown": "true"
+      }
+    },
+    "JSON-VALUE-5": {
+      "type": "json-value",
+      "values": {
+        "containsMarkdown": "true"
+      }
+    },
+    "JSON-VALUE-6": {
+      "type": "json-value",
+      "values": {
+        "containsMarkdown": "true"
+      }
+    },
+    "JSON-VALUE-7": {
+      "type": "json-value",
+      "values": {
+        "containsMarkdown": "true"
+      }
+    },
+    "JSON-VALUE-8": {
+      "type": "json-value",
+      "values": {
+        "containsMarkdown": "true"
+      }
+    },
+    "JSON-VALUE-9": {
+      "type": "json-value",
+      "values": {
+        "containsMarkdown": "true"
+      }
+    },
+    "JSON-VALUE-10": {
+      "type": "json-value",
+      "values": {
+        "containsMarkdown": "true"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-05-26T16:55:35.640Z",
+      "status": "success"
+    }
+  }
+}

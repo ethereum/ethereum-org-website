@@ -1,0 +1,76 @@
+{
+  "skill_name": "intl-pipeline",
+  "notes": "Output evals for the intl-pipeline skill. Each prompt exercises a distinct high-leverage rule: don't-hand-propagate on English change, sanitizer pattern-gap workflow, manifest corruption recovery, missing ETHGlossary term protocol, hot-fix translation policy. Run with the skill-creator workflow (`python -m scripts.run_loop` against the eval JSON) or manually by reading SKILL.md and answering each prompt, then grading against the assertions.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "dont-hand-propagate-on-english-update",
+      "prompt": "I just updated the description in the frontmatter of public/content/staking/index.md (English) -- it used to say 'staking ETH' but now says 'staking your ETH for rewards'. There are 24 translated versions of this page. Should I just go update each translated frontmatter to match, or is there a special process? Deadline is Monday.",
+      "expected_output": "Skill should advise against hand-editing the 24 translated frontmatter files. Should recommend triggering the pipeline (intl-pipeline.yml) on the changed English file -- the pipeline will incremental-translate just the changed `description` field across all locales. Should explain that hand-edits desync the manifest and cause future runs to misclassify. Should NOT suggest stamp_only as the primary fix (that's for build-breaking emergencies, not routine content updates).",
+      "files": [],
+      "assertions": [
+        {"text": "Output explicitly advises against hand-editing the 24 translated frontmatter files to match"},
+        {"text": "Output recommends triggering the pipeline (intl-pipeline.yml or workflow_dispatch) for the changed English file"},
+        {"text": "Output references manifest tracking (or the manifest map between English and locale) as the reason hand-edits are problematic"},
+        {"text": "Output does NOT recommend `stamp_only: true` as the primary fix for this scenario"},
+        {"text": "Output mentions or implies the `references/non-english-edits.md` material (allowed vs not-allowed edits) OR the don't-hand-propagate rule from SKILL.md"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "sanitizer-pattern-gap-workflow",
+      "prompt": "running into a weird thing with the Japanese translation of dapps/index.md -- when the sanitizer runs, it's leaving `\\</strong>` (with a backslash before the slash) and it's breaking the build for the Japanese locale. seems like this happens on multiple files. is this a sanitizer bug? how do I add a fix?",
+      "expected_output": "Skill should recommend the `/fix-sanitizer-bug` slash command (test-first workflow). Should mention that fix functions MUST start with the code-block split pattern. Should point to sanitizer-test-research.md as the pattern catalog. Should NOT recommend hand-fixing individual files as the primary fix when the pattern is systemic.",
+      "files": [],
+      "assertions": [
+        {"text": "Output recommends the `/fix-sanitizer-bug` slash command (or its test-first workflow if not by name)"},
+        {"text": "Output mentions writing a failing test before implementing the fix"},
+        {"text": "Output mentions the code-block-split pattern as the required first operation in any fix function"},
+        {"text": "Output points to `docs/solutions/integration-issues/sanitizer-test-research.md` OR the runbook at `references/runbooks/fix-sanitizer-bug.md`"},
+        {"text": "Output does NOT recommend hand-fixing the affected files as the primary fix for a systemic pattern"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "manifest-corruption-recovery",
+      "prompt": "i think one of the manifest files got corrupted somehow. The build is failing on the Korean version of beginner-intro-to-ethereum/index.md and when I look at .manifest-source.json it has weird hashes that don't match the English. what's the recovery procedure? can I just delete the bad one?",
+      "expected_output": "Skill should explain that both manifests (source + translation) must be handled together -- delete one, must delete the other. Then re-run the pipeline (full mode) for that file+locale to regenerate. Should NOT recommend hand-editing the manifest JSON. References recovery.md.",
+      "files": [],
+      "assertions": [
+        {"text": "Output explains that both manifest files (.manifest-source.json AND .manifest-translation.json) must be deleted together, not just one"},
+        {"text": "Output recommends running the pipeline (mode: full or equivalent) for that file+locale to regenerate manifests"},
+        {"text": "Output does NOT recommend hand-editing the manifest JSON content"},
+        {"text": "Output mentions or references `references/recovery.md` material (the recovery procedures)"},
+        {"text": "Output explains why the manifest matters (e.g., pipeline uses it for drift detection / change classification)"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "missing-ethglossary-term-protocol",
+      "prompt": "reviewing some translations and noticed that 'Tornado Cash' isn't in ETHGlossary -- it's just rendering whatever Gemini produced for each language, which varies. should I just add the translations to the local file at .claude/translation-review/transliterations/? or is there a better way?",
+      "expected_output": "Skill should say DON'T add a local override. Flag the missing term in the review report. Optionally note in per-language findings file. ETHGlossary is the canonical source -- coordinate upstream rather than maintaining a parallel local bank. Should NOT recommend committing a PR against the ETHGlossary repo as part of the review workflow (separate maintainer task).",
+      "files": [],
+      "assertions": [
+        {"text": "Output explicitly says NOT to add a local override for the term in `.claude/translation-review/transliterations/` (or anywhere local)"},
+        {"text": "Output recommends flagging the missing term in the review report (and optionally per-language findings)"},
+        {"text": "Output mentions ETHGlossary as the canonical / authoritative source for term translations"},
+        {"text": "Output does NOT direct the user to immediately open a PR or issue against `wackerow/ethglossary` as part of the review workflow"},
+        {"text": "Output does NOT suggest editing the deprecated `.claude/translation-review/transliterations/*.json` files"}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "hot-fix-staging-translation-policy",
+      "prompt": "we have a hotfix going to staging tomorrow that updates a fee disclosure on the staking page. it's a copy change -- adds two sentences. do we need to translate this for the staging deploy or how does that work?",
+      "expected_output": "Skill should say hot fixes to staging or master go out English-only. Translations catch up on the next release cycle when dev (with translations) flows through prepare-release. Should NOT recommend dispatching the pipeline against staging as the standard answer (it's possible but non-standard).",
+      "files": [],
+      "assertions": [
+        {"text": "Output states that hot fixes to staging or master go out English-only (not translated for the immediate deploy)"},
+        {"text": "Output explains that translations catch up on the next release cycle when dev flows through prepare-release"},
+        {"text": "Output does NOT recommend dispatching `intl-pipeline.yml` against staging or master with a custom branch as the standard answer"},
+        {"text": "Output mentions or implies that the pipeline only targets `dev` in production by design"},
+        {"text": "Output does NOT block the hotfix on translations"}
+      ]
+    }
+  ]
+}

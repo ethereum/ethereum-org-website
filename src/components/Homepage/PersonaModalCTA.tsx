@@ -119,7 +119,7 @@ const CategoryCard = ({
     <div className="mb-6 flex flex-col gap-2 md:mb-8 md:gap-4">
       <div
         className={cn(
-          "grid size-8 place-items-center rounded-lg md:size-16 md:rounded-2xl",
+          "grid size-8 place-items-center rounded-lg md:size-16 md:rounded-base",
           iconBgClass
         )}
       >

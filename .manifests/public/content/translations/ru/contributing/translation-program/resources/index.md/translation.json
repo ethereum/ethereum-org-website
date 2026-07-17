@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-06-08T08:43:09.737Z",
+  "englishManifestHash": "d2cb2b3f9636",
+  "placeholderOrder": [
+    "LINK-c35225",
+    "LINK-78799d",
+    "LINK-0f400d",
+    "LINK-20421e",
+    "LINK-e6243d",
+    "LINK-7c833a",
+    "LINK-4dc120",
+    "LINK-80b8a1",
+    "LINK-c4abdb",
+    "LINK-506e05",
+    "LINK-9e720b",
+    "LINK-99fcf8",
+    "LINK-94a35d",
+    "LINK-20d0cc"
+  ],
+  "placeholderMap": {
+    "LINK-c35225": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/translators-guide/"
+      }
+    },
+    "LINK-78799d": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/translation-program/faq/"
+      }
+    },
+    "LINK-0f400d": {
+      "type": "link",
+      "values": {
+        "url": "https://support.crowdin.com/online-editor/"
+      }
+    },
+    "LINK-20421e": {
+      "type": "link",
+      "values": {
+        "url": "https://www.linguee.com/"
+      }
+    },
+    "LINK-e6243d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.proz.com/search/"
+      }
+    },
+    "LINK-7c833a": {
+      "type": "link",
+      "values": {
+        "url": "https://www.eurotermbank.com/"
+      }
+    },
+    "LINK-4dc120": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    },
+    "LINK-80b8a1": {
+      "type": "link",
+      "values": {
+        "url": "https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171"
+      }
+    },
+    "LINK-c4abdb": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/"
+      }
+    },
+    "LINK-506e05": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2021/10/04/translation-program-update"
+      }
+    },
+    "LINK-9e720b": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20"
+      }
+    },
+    "LINK-99fcf8": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone"
+      }
+    },
+    "LINK-94a35d": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community"
+      }
+    },
+    "LINK-20d0cc": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/ethereum-org"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:43:09.737Z",
+      "status": "success"
+    }
+  }
+}

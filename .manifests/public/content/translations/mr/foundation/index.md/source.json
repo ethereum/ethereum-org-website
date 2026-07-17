@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/foundation/index.md",
+  "generatedAt": "2026-06-08T09:22:14.993Z",
+  "rootHash": "a3bcfab70eca",
+  "tree": {
+    "contentHash": "461af8cc2107",
+    "anchorHash": "0bea6224d5b4",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "b1cc2e711844",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "8d6a29f6b390",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:hideEditButton": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "component:4": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:3": {
+        "contentHash": "b344d80e24a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "b1cc2e711844",
+        "anchorHash": "fa9b795ca9b9"
+      },
+      "prose:4": {
+        "contentHash": "f60f21547f1a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "8a5edab28263"
+      },
+      "prose:5": {
+        "contentHash": "03ac74adc442",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "570dd38dc5ba",
+        "anchorHash": "106212d5766d"
+      },
+      "prose:6": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ef-mandate": {
+        "contentHash": "c6f0affe9b31",
+        "anchorHash": "022f511b66bf",
+        "labelHash": "cdccc77237db",
+        "children": {
+          "_label": {
+            "contentHash": "cdccc77237db",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "f06cc297bf21",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "8db57e6ba41a",
+            "anchorHash": "690e486bcad5"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0"
+        ]
+      },
+      "what-the-ef-does": {
+        "contentHash": "c168489e4dfb",
+        "anchorHash": "d2c17f9eae9c",
+        "labelHash": "047eeec46ffd",
+        "children": {
+          "_label": {
+            "contentHash": "047eeec46ffd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "d8428220881a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e001e77f79fa",
+            "anchorHash": "7d8e03075ee2"
+          },
+          "prose:3": {
+            "contentHash": "43721a20976a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "026022cfd560",
+            "anchorHash": "5baf4d40a57f"
+          },
+          "prose:4": {
+            "contentHash": "ba0f184ecc4a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "programs-and-initiatives": {
+        "contentHash": "21d9c68746f1",
+        "anchorHash": "3f6f5833341f",
+        "labelHash": "25f3de7c1ece",
+        "children": {
+          "_label": {
+            "contentHash": "25f3de7c1ece",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "ebcb914270e3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "026022cfd560",
+            "anchorHash": "5baf4d40a57f"
+          },
+          "prose:5": {
+            "contentHash": "08594d2913e0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "6dcf875f2962",
+            "anchorHash": "542b405abb20"
+          },
+          "prose:6": {
+            "contentHash": "25171e83259c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "fb7c67ccf472",
+            "anchorHash": "c1616047befa"
+          },
+          "prose:7": {
+            "contentHash": "0aa0996cf103",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "01a8935da13f",
+            "anchorHash": "7d8e03075ee2"
+          },
+          "prose:8": {
+            "contentHash": "fd00b7f86c8e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      },
+      "learn-more": {
+        "contentHash": "9ce9c8c7e98d",
+        "anchorHash": "7fbc403b443c",
+        "labelHash": "1445799c033a",
+        "children": {
+          "_label": {
+            "contentHash": "1445799c033a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d3f2440884e8",
+            "anchorHash": "fa9b795ca9b9"
+          },
+          "prose:4": {
+            "contentHash": "49cf079b18f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3fcbd36a2814",
+            "anchorHash": "7319680e225b"
+          },
+          "prose:5": {
+            "contentHash": "76f51228d778",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "026022cfd560",
+            "anchorHash": "5baf4d40a57f"
+          },
+          "prose:6": {
+            "contentHash": "e89e70cd5911",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:hideEditButton",
+      "frontmatter:lang",
+      "component:4",
+      "prose:3",
+      "link:0",
+      "prose:4",
+      "link:1",
+      "prose:5",
+      "link:2",
+      "prose:6",
+      "ef-mandate",
+      "what-the-ef-does",
+      "programs-and-initiatives",
+      "learn-more"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

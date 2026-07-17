@@ -11,10 +11,10 @@ import type { PageParams } from "@/lib/types"
 import HomeHero from "@/components/Hero/HomeHero"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
+import LatestUpdates from "@/components/Homepage/LatestUpdates"
 import TrustLogos from "@/components/Homepage/TrustLogos"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
-import { TrackedSection } from "@/components/TrackedSection"
 import { LinkWithArrow } from "@/components/ui/Link"
 import { SectionHeader, SectionTag } from "@/components/ui/section"
 
@@ -63,7 +63,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const allMessages = await getMessages()
   const glossary = allMessages["glossary-tooltip"] as Record<string, string>
   const messages = {
-    ...pick(allMessages, "page-index", "component-wallet-simulator"),
+    ...pick(
+      allMessages,
+      "page-index",
+      "component-swiper",
+      "component-wallet-simulator"
+    ),
     "glossary-tooltip": pick(glossary, [
       "nft-term",
       "nft-definition",
@@ -82,63 +87,50 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <HomeHero eventCategory={eventCategory} />
 
           <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
-            <TrackedSection id="kpi" eventCategory={eventCategory}>
-              <KPISection
-                accountHolders={accountHolders}
-                transactionsToday={transactionsToday}
-                className="py-12"
-              />
-            </TrackedSection>
+            <KPISection
+              accountHolders={accountHolders}
+              transactionsToday={transactionsToday}
+              className="py-12"
+            />
 
-            <TrackedSection id="savings_carousel" eventCategory={eventCategory}>
-              <SavingsCarousel
-                className="py-12"
-                eventCategory={eventCategory}
-              />
-            </TrackedSection>
+            <SavingsCarousel className="py-12" eventCategory={eventCategory} />
 
-            <TrackedSection id="trust_logos" eventCategory={eventCategory}>
-              <TrustLogos className="py-12" eventCategory={eventCategory} />
-            </TrackedSection>
+            <TrustLogos className="py-12" eventCategory={eventCategory} />
 
-            <TrackedSection id="simulator" eventCategory={eventCategory}>
-              <SimulatorSection
-                className="py-12"
-                header={
-                  <div className="flex flex-col items-center gap-4 text-center">
-                    <SectionTag variant="plain">
-                      {t("page-index-simulator-tag")}
-                    </SectionTag>
-                    <SectionHeader className="mt-0 mb-0 leading-tight lg:text-6xl">
-                      {t("page-index-simulator-title")}
-                    </SectionHeader>
-                    <p className="text-lg text-body-medium md:text-xl">
-                      {t("page-index-simulator-subtitle")}
-                    </p>
-                  </div>
-                }
-                footer={
-                  <LinkWithArrow
-                    href="/guides/"
-                    customEventOptions={{
-                      eventCategory,
-                      eventAction: "section_click",
-                      eventName: "simulator/explore_guides",
-                    }}
-                  >
-                    {t("page-index-simulator-cta")}
-                  </LinkWithArrow>
-                }
-              />
-            </TrackedSection>
+            <SimulatorSection
+              className="py-12"
+              header={
+                <div className="flex flex-col items-center gap-4 text-center">
+                  <SectionTag variant="plain">
+                    {t("page-index-simulator-tag")}
+                  </SectionTag>
+                  <SectionHeader className="mt-0 mb-0 leading-tight lg:text-6xl">
+                    {t("page-index-simulator-title")}
+                  </SectionHeader>
+                  <p className="text-lg text-body-medium md:text-xl">
+                    {t("page-index-simulator-subtitle")}
+                  </p>
+                </div>
+              }
+              footer={
+                <LinkWithArrow
+                  href="/guides/"
+                  customEventOptions={{
+                    eventCategory,
+                    eventAction: "section_click",
+                    eventName: "simulator/explore_guides",
+                  }}
+                >
+                  {t("page-index-simulator-cta")}
+                </LinkWithArrow>
+              }
+            />
 
-            <TrackedSection id="feature_cards" eventCategory={eventCategory}>
-              <FeatureCards eventCategory={eventCategory} />
-            </TrackedSection>
+            <FeatureCards eventCategory={eventCategory} />
 
-            <TrackedSection id="get_started" eventCategory={eventCategory}>
-              <GetStartedGrid eventCategory={eventCategory} />
-            </TrackedSection>
+            <LatestUpdates eventCategory={eventCategory} />
+
+            <GetStartedGrid eventCategory={eventCategory} />
           </div>
         </MainArticle>
       </I18nProvider>
@@ -151,6 +143,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   try {
     const t = await getTranslations("page-index")

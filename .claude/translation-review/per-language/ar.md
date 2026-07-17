@@ -84,3 +84,15 @@ Key terms to verify in future reviews:
 - Glossary has "إيثريوم" (without extra ي) -- community may prefer either form
 - Cross-script contamination detected: CJK characters (以, 太, 坊, 年, 月, 日) in translators-guide
 - Arabic question mark (؟) used inconsistently vs Latin (?)
+
+---
+
+## PR #18418 (intl/pending-dev) -- 2026-06-16 -- Score 9.6/10
+
+- 21 UI-string JSONs reviewed. 1 critical fixed: `glossary-tooltip.json` `wei-definition` leaked a sanitizer placeholder `<HTML-PLACEHOLDER-HTMLTAG-063f8a>` -> restored to `<a href="/glossary/#wei">` (pattern 22; pipeline fixed to prevent recurrence).
+- Prior ar failure modes (Igbo/Farsi contamination, GitHub garble, "state"=nation-state, transliterated domains, semantic inversions) did NOT recur. MSA register consistent. Note: current ETHGlossary table now gives staking=التخزين and validator=مُدَقِّق -- translations follow the API (authoritative) over this file's older entries.
+
+## PR #18772 (community-stories.json, 2026-07-10) -- 9.6/10
+- CRIT fixed: story-dorgo-eth bidi-isolated untranslated "March 2020" -> مارس 2020. Same artifact existed in ur -- grep English month names in RTL files on every import.
+- Ethereum/Bitcoin transliteration consistency was PERFECT across 26 entries (major improvement over PR #17105's 5-variant drift).
+- Open judgment call: MoneyGram/Western Union kept Latin vs PayPal transliterated باي بال (both non-glossary; fleet-wide inconsistency, not fixed).

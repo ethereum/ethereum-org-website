@@ -1,10 +1,10 @@
 ---
-title: "Глосарій Ethereum"
-description: "Неповний глосарій технічних та нетехнічних термінів, пов'язаних з Ethereum"
+title: Глосарій
+metaTitle: Глосарій Етеріуму
+description: Неповний глосарій технічних та нетехнічних термінів, пов'язаних з Етеріумом
 lang: uk
+authors: ["Андреас Антонопулос"]
 ---
-
-# Глосарій {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: uk
 
 ## Джерела {#sources}
 
-_Частково надано [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) авторства [Андреаса М. Антонопулоса, Гевіна Вуда](https://aantonop.com/books/mastering-ethereum) за ліцензією CC-BY-SA_
+_Частково взято з [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) авторів [Андреаса М. Антонопулоса та Гевіна Вуда](https://aantonop.com/books/mastering-ethereum) за ліцензією CC-BY-SA_
 
 <Divider />
 
-## Зробіть свій внесок у цю сторінку {#contribute-to-this-page}
+## Зробіть внесок у цю сторінку {#contribute-to-this-page}
 
-Ми щось пропустили? Щось пішло не так? Допоможіть нам вдосконалитись, сприяючи цьому словнику на GitHub!
+Ми щось пропустили? Щось вказано неправильно? Допоможіть нам стати краще, зробивши свій внесок до цього глосарію на GitHub!
 
 [Дізнайтеся більше про те, як зробити внесок](/contributing/adding-glossary-terms)

@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "以太坊 - 来自 Ethereum.org 的完整指南",
+  "page-index-meta-title": "以太坊 - 来自 ethereum.org 的完整指南",
   "page-index-meta-description": "以太坊是一个全球性的去中心化金钱和新型应用平台。在以太坊上，你可以掌控自己的资金、数据和身份。无需银行，无需中介，无需许可。",
   "page-index-description": "用于创新应用和区块链网络的领先平台",
   "page-index-title": "欢迎来到以太坊",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "以太坊应用",
   "page-index-carousel-privacy-ethereum-value": "默认保护隐私",
   "page-index-carousel-remittances-tag": "跨境支付",
-  "page-index-carousel-remittances-title": "在 {minutes} 分钟内将钱汇回家",
+  "page-index-carousel-remittances-title": "在 {seconds} 秒内汇款回家",
   "page-index-carousel-remittances-subtitle": "省去 {wireFee} 的电汇费用和 {days} 天以上的等待时间。",
   "page-index-carousel-remittances-description": "只需 {txFee}，即可向世界上任何地方的任何人发送<stablecoinsLink>稳定币</stablecoinsLink>。他们几乎可以立即收到资金。",
   "page-index-carousel-remittances-cta": "亲自体验",
   "page-index-carousel-remittances-traditional-label": "电汇",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} 天",
   "page-index-carousel-remittances-ethereum-label": "以太坊",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} 分钟",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} 秒",
   "page-index-carousel-borrowing-tag": "金融服务获取",
   "page-index-carousel-borrowing-title": "无需信用记录即可借款",
   "page-index-carousel-borrowing-subtitle": "你不需要信用评分即可开始。",
@@ -79,7 +79,7 @@
   "page-index-features-ownership-description-custody": "托管承诺",
   "page-index-features-ownership-description-2": "你的以太坊余额才是真正的所有权。",
   "page-index-features-ownership-stat": "{volume}+",
-  "page-index-features-ownership-stat-label": "日交易量",
+  "page-index-features-ownership-stat-label": "日交易量 (美元)",
   "page-index-features-public-rules-title": "公开的规则",
   "page-index-features-public-rules-description": "代码是公开的，协议完全按照编写的方式执行。就像自动售货机与指望收银员找对零钱的区别。",
   "page-index-features-global-title": "全球化",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "私有与许可型网络",
   "page-index-get-started-enterprise-bullet-3": "机构资源",
   "page-index-get-started-enterprise-cta": "探索企业应用",
-  "page-index-simulator-cta": "体验更多指南"
+  "page-index-simulator-cta": "体验更多指南",
+  "page-index-latest-updates-title": "以太坊最新动态",
+  "page-index-latest-updates-cta": "查看更多"
 }

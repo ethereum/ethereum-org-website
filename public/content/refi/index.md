@@ -3,13 +3,13 @@ title: Regenerative Finance (ReFi)
 description: An overview of ReFi and its current use cases.
 lang: en
 template: use-cases
-emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: An alternative economic system built on regenerative principles
-summaryPoint2: An attempt to harness Ethereum to solve global-level coordination crises such as climate change
-summaryPoint3: A tool to drastically scale ecological benefit assets like verified carbon credits
+summaryPoints:
+  - "An alternative economic system built on regenerative principles"
+  - "An attempt to harness Ethereum to solve global-level coordination crises such as climate change"
+  - "A tool to drastically scale ecological benefit assets like verified carbon credits"
 ---
 
 ## What is ReFi? {#what-is-refi}

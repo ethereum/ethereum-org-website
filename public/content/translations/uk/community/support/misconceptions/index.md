@@ -1,73 +1,71 @@
 ---
-title: Common misconceptions about Ethereum
-description: Clearing up the most common misunderstandings about how Ethereum works.
+title: Поширені хибні уявлення про Етеріум
+description: Розвінчування найпоширеніших хибних уявлень про те, як працює Етеріум.
 lang: uk
 ---
 
-# Common misconceptions about Ethereum {#misconceptions}
+## Чи є Етеріум компанією? {#not-a-company}
 
-## Чи є Ethereum компанією? {#not-a-company}
+Етеріум — це децентралізована технологія з відкритим вихідним кодом, яку підтримують тисячі учасників по всьому світу. Не існує компанії під назвою «Етеріум», яка б керувала акаунтами, зберігала кошти або надавала підтримку клієнтам.
 
-Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
+[Фундація Ethereum](https://ethereum.foundation/) — це некомерційна організація, яка підтримує розробку Етеріуму, але вона не володіє мережею та не контролює її. Жодна окрема організація цього не робить.
 
-The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
-
-**[ethereum.org](/)** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
+**[ethereum.org](/)** — це освітній ресурс, яким керує спільнота. Це не біржа, не гаманець і не фінансова установа. Він не зберігає кошти користувачів і не має доступу до жодних акаунтів.
 
 <DocLink href="/what-is-ethereum/">
-  Що таке Ethereum?
+  Що таке Етеріум?
 </DocLink>
 
 ## Чи може хтось відновити або заморозити мої кошти? {#no-fund-access}
 
-Unlike a bank, there is no central authority on Ethereum that can freeze, seize, or recover funds. The person holding the private keys (or seed phrase) has full and sole control over a wallet.
+На відміну від банку, в Етеріумі немає центрального органу, який міг би заморозити, конфіскувати або відновити кошти. Особа, яка володіє приватними ключами (або сід-фразою), має повний і одноосібний контроль над гаманцем.
 
-This means:
+Це означає:
 
-- **No one can recover funds** you sent to the wrong address
-- **No one can reverse** a transaction after it is confirmed
-- **No one can freeze** your wallet or block your transactions
-- **No one can reset your password** if you lose your seed phrase
+- **Ніхто не зможе відновити кошти**, які ви надіслали на неправильну адресу
+- **Ніхто не зможе скасувати** транзакцію після її підтвердження
+- **Ніхто не зможе заморозити** ваш гаманець або заблокувати ваші транзакції
+- **Ніхто не зможе скинути ваш пароль**, якщо ви втратите свою сід-фразу
 
-This is why protecting your seed phrase is critical. It is the only way to access your wallet. If it is lost or stolen, there is no recovery option.
+Ось чому захист вашої сід-фрази є критично важливим. Це єдиний спосіб отримати доступ до вашого гаманця. Якщо її буде втрачено або вкрадено, можливості відновлення не буде.
 
 <DocLink href="/security/">
-  Безпека Ethereum і запобігання шахрайству
+  Безпека в Етеріумі та запобігання шахрайству
 </DocLink>
 
-## Чи можна ще майнити Ethereum? {#no-mining}
+## Чи можу я досі майнити Етеріум? {#no-mining}
 
-Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Mining is no longer possible on Ethereum.
+Етеріум перейшов від [доказу виконання роботи (PoW)](/glossary/#pow) до [доказу частки (PoS)](/glossary/#pos) під час [Злиття](/roadmap/merge/) у вересні 2022 року. Майнінг в Етеріумі більше неможливий.
 
-The network is now secured by validators who [stake](/glossary/#staking) ETH. Anyone can participate:
+Тепер мережу захищають валідатори, які [стейкають](/glossary/#staking) ETH. Будь-хто може взяти участь:
 
-- **Solo staking:** Run your own validator with 32 ETH—[learn more](/staking/solo/)
-- **Staking as a service:** Delegate node operation while keeping your keys—[learn more](/staking/saas/)
-- **Pooled staking:** Stake with less than 32 ETH by joining a pool—[learn more](/staking/pools/)
+- **Соло-стейкінг:** запустіть власний валідатор із 32 ETH — [дізнатися більше](/staking/solo/)
+- **Стейкінг як послуга:** делегуйте роботу вузла, зберігаючи свої ключі — [дізнатися більше](/staking/saas/)
+- **Спільний стейкінг:** стейкайте менше ніж 32 ETH, приєднавшись до пулу — [дізнатися більше](/staking/pools/)
 
 <DocLink href="/staking/">
-  Learn more about staking
+  Дізнатися більше про стейкінг
 </DocLink>
 
-## Чи існує служба підтримки Ethereum? {#no-support-team}
+## Чи існує служба підтримки Етеріуму? {#no-support-team}
 
-Looking for "official Ethereum support" is similar to looking for "official internet support." This of course doesn't exist, but depending on your issue you may be able to seek out support from your internet service provider, your router hardware manufacturer, or one of the companies behind the device, app or website you're using.
+Шукати «офіційну підтримку Етеріуму» — це те саме, що шукати «офіційну підтримку інтернету». Її, звісно, не існує, але залежно від вашої проблеми ви можете звернутися за підтримкою до свого інтернет-провайдера, виробника вашого маршрутизатора або однієї з компаній, що стоять за пристроєм, застосунком чи вебсайтом, яким ви користуєтеся.
 
-Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
+З Етеріумом ситуація схожа. За Етеріумом загалом не стоїть жодна компанія, служба підтримки чи довідковий центр, але залежно від проблеми ви можете знайти допомогу, звернувшись до _провайдера вашого гаманця_, _сервісу для стейкінгу_, _біржі_, _фінансової установи_ або _команди, яка підтримує застосунок_, яким ви користуєтеся.
 
-Since Ethereum is publicly transparent by default, you may also find [block explorers](/developers/docs/data-and-analytics/block-explorers/), [analytics tools](/developers/tools/analytics/), and other [online investigation resources](/community/support/scams/#analyze) useful in looking into a problem directly.
+Оскільки Етеріум за замовчуванням є публічно прозорим, вам також можуть стати в пригоді [оглядачі блоків](/developers/docs/data-and-analytics/block-explorers/), [аналітичні інструменти](/developers/tools/analytics/) та інші [ресурси для онлайн-розслідувань](/community/support/scams/#analyze), щоб безпосередньо розібратися в проблемі.
 
-That said, no one from Ethereum or ethereum.org will ever:
+З огляду на це, ніхто з Етеріуму або ethereum.org ніколи не буде:
 
-- Contact you via direct message
-- Ask for your seed phrase or private keys
-- Ask you to send ETH to verify your wallet
-- Offer to help you recover funds for a fee
+- Зв'язуватися з вами через особисті повідомлення
+- Просити вашу сід-фразу або приватні ключі
+- Просити вас надіслати ETH для підтвердження вашого гаманця
+- Пропонувати допомогу у відновленні коштів за винагороду
 
-**Anyone doing any of the above is trying to scam you.**
+**Будь-хто, хто робить щось із переліченого вище, намагається вас ошукати.**
 
-If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities—not official support channels.
+Якщо вам потрібна допомога, справжні спільноти, які можуть допомогти, перелічені на [сторінці підтримки](/community/support/). Це відкриті спільноти, якими керують волонтери, а не офіційні канали підтримки.
 
 <DocLink href="/security/">
-  Безпека Ethereum і запобігання шахрайству
+  Безпека в Етеріумі та запобігання шахрайству
 </DocLink>

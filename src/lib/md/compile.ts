@@ -1,6 +1,7 @@
 import fs from "fs"
 import { join } from "path"
 
+import sizeOf from "image-size"
 import { compileMDX, MDXRemoteProps } from "next-mdx-remote/rsc"
 import { getPlaiceholder } from "plaiceholder"
 import remarkSlug from "rehype-slug"
@@ -21,13 +22,11 @@ export const compile = async ({
   slugArray,
   locale,
   components = {},
-  scope = {},
 }: {
   markdown: string
   slugArray: string[]
   locale: string
   components: MDXRemoteProps["components"]
-  scope?: Record<string, unknown>
 }) => {
   let tocNodeItems: TocNodeType[] = []
   const tocCallback = (toc: TocNodeType): void => {
@@ -56,14 +55,19 @@ export const compile = async ({
     options: {
       parseFrontmatter: true,
       mdxOptions,
-      scope,
     },
   })
 
-  // If the page has a hero image, generate a blurDataURL for it
+  // If the page has a hero image, derive its intrinsic dimensions and
+  // generate a blurDataURL for it.
   if ("image" in frontmatter) {
     const heroImagePath = join(process.cwd(), "public", frontmatter.image)
     const imageBuffer = fs.readFileSync(heroImagePath)
+    const { width, height } = sizeOf(imageBuffer)
+    if (width && height) {
+      frontmatter.imageWidth = width
+      frontmatter.imageHeight = height
+    }
     const { base64 } = await getPlaiceholder(imageBuffer, { size: 16 })
     frontmatter.blurDataURL = base64
   }

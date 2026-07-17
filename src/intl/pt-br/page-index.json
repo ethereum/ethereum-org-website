@@ -1,5 +1,5 @@
 {
-  "page-index-meta-title": "Ethereum - O guia completo do Ethereum.org",
+  "page-index-meta-title": "Ethereum - O guia completo do ethereum.org",
   "page-index-meta-description": "O Ethereum é uma plataforma global e descentralizada para dinheiro e novos tipos de aplicativos. No Ethereum, você controla seu próprio dinheiro, dados e identidade. Sem banco, sem intermediários, sem necessidade de permissão.",
   "page-index-description": "A principal plataforma para aplicativos inovadores e redes blockchain",
   "page-index-title": "Bem-vindo ao Ethereum",
@@ -41,14 +41,14 @@
   "page-index-carousel-privacy-ethereum-label": "APLICATIVOS ETHEREUM",
   "page-index-carousel-privacy-ethereum-value": "Privado por padrão",
   "page-index-carousel-remittances-tag": "PAGAMENTOS TRANSFRONTEIRIÇOS",
-  "page-index-carousel-remittances-title": "Envie dinheiro para casa em {minutes} minutos",
+  "page-index-carousel-remittances-title": "Envie dinheiro para casa em {seconds} segundos",
   "page-index-carousel-remittances-subtitle": "Evite a taxa de transferência de {wireFee} e a espera de mais de {days} dias.",
   "page-index-carousel-remittances-description": "Envie <stablecoinsLink>stablecoins</stablecoinsLink> para qualquer pessoa, em qualquer lugar do mundo, por apenas {txFee}. Eles recebem os fundos quase instantaneamente.",
   "page-index-carousel-remittances-cta": "Experimente você mesmo",
   "page-index-carousel-remittances-traditional-label": "TRANSFERÊNCIA BANCÁRIA",
   "page-index-carousel-remittances-traditional-value": "{min}-{max} dias",
   "page-index-carousel-remittances-ethereum-label": "ETHEREUM",
-  "page-index-carousel-remittances-ethereum-value": "{minutes} minutos",
+  "page-index-carousel-remittances-ethereum-value": "{seconds} segundos",
   "page-index-carousel-borrowing-tag": "ACESSO FINANCEIRO",
   "page-index-carousel-borrowing-title": "Faça um empréstimo sem histórico de crédito",
   "page-index-carousel-borrowing-subtitle": "Você não precisa de uma pontuação de crédito para começar.",
@@ -79,7 +79,7 @@
   "page-index-features-ownership-description-custody": "promessa de custódia",
   "page-index-features-ownership-description-2": "Seu saldo no Ethereum é propriedade verdadeira.",
   "page-index-features-ownership-stat": "{volume}+",
-  "page-index-features-ownership-stat-label": "Volume de negociação diário",
+  "page-index-features-ownership-stat-label": "Volume diário de negociação (USD)",
   "page-index-features-public-rules-title": "Regras públicas",
   "page-index-features-public-rules-description": "O código é público, os acordos são executados exatamente como foram escritos. Pense em uma máquina de venda automática em vez de esperar que o caixa dê o troco correto.",
   "page-index-features-global-title": "Global",
@@ -109,5 +109,7 @@
   "page-index-get-started-enterprise-bullet-2": "Redes privadas e permissionadas",
   "page-index-get-started-enterprise-bullet-3": "Recursos institucionais",
   "page-index-get-started-enterprise-cta": "Explorar para empresas",
-  "page-index-simulator-cta": "Experimente mais guias"
+  "page-index-simulator-cta": "Experimente mais guias",
+  "page-index-latest-updates-title": "Últimas atualizações do Ethereum",
+  "page-index-latest-updates-cta": "Ver mais"
 }

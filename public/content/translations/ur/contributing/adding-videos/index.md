@@ -18,6 +18,7 @@ lang: ur
 
 یہ سائٹ ایسی ویڈیوز کو فہرست میں شامل نہیں کرتی جو بنیادی طور پر کسی مخصوص پروڈکٹ، ٹوکن، یا تجارتی سروس کی تشہیر کرتی ہوں۔
 
+
 ## شمولیت کا معیار {#criteria-for-inclusion}
 
 ### لازمی شرائط {#must-haves}
@@ -33,6 +34,7 @@ lang: ur
 - **ٹرانسکرپٹ کا ہونا** – ٹرانسکرپٹ والی ویڈیوز رسائی اور SEO کو بہتر بناتی ہیں۔ اگر آپ کے پاس یہ نہیں ہے، تو <span dir="ltr">ethereum.org</span> کی ٹیم اسے تیار کرنے میں مدد کر سکتی ہے۔
 - **قابل اعتماد ذریعہ سے** – مستند ماہرین تعلیم، محققین، اور ذرائع کے مواد کو ترجیح دی جاتی ہے۔
 - **بروقت اور سدا بہار** – ایسا مواد جو وقت گزرنے کے ساتھ متعلقہ رہے، اسے وقت کے لحاظ سے حساس مواد پر ترجیح دی جاتی ہے۔
+
 
 ## ویڈیو کیسے شامل کریں {#how-to-add-a-video}
 
@@ -121,25 +123,10 @@ title: "..."
 
 اگر آپ کے پاس ٹرانسکرپٹ نہیں ہے، تو آپ باڈی کو خالی چھوڑ سکتے ہیں اور ٹیم اسے تیار کر لے گی۔
 
-#### مرحلہ 4: موضوع کے ٹیگز منتخب کریں {#step-4}
-
-ایسے موضوع کے ٹیگز منتخب کریں جو گیلری میں استعمال ہونے والی موجودہ کیٹیگریز سے مماثل ہوں۔ موجودہ کیٹیگریز اور ان کے ٹیگز میں شامل ہیں:
-
-- **ایتھیریم کیسے کام کرتا ہے**: `how-ethereum-works`، `consensus`، `blockchain`، `cryptography`، `accounts`، `ethereum`، `intro`، `transactions`، `pos`، `smart-contracts`
-- **نیٹ ورک اپ گریڈز**: `network-upgrades`، `upgrades`، `pectra`، `dencun`، `eip-4844`، `blobs`، `fusaka`
-- **روڈ میپ اور ترجیحات**: `roadmap-and-priorities`، `pbs`، `mev`
-- **اسکیلنگ اور لیئر ۲ (l2)**: `scaling-and-layer-2`، `scaling`، `layer-2`، `rollups`، `optimistic-rollups`، `zk-rollups`
-- **استعمال کے کیسز**: `use-cases`، `defi`، `finance`، `nfts`، `erc-721`، `erc-1155`، `lending`، `dapps`، `restaking`، `eigenlayer`، `dao`، `identity`، `desci`، `refi`
-- **رازداری اور سیکیورٹی**: `privacy-and-security`، `privacy`، `authentication`
-- **کمیونٹی کی کہانیاں**: `community-stories`، `contributing`، `translations`، `community`
-
-اس بات کو یقینی بنانے کے لیے کہ آپ کی ویڈیو گیلری کی کیٹیگری شیلف میں ظاہر ہو، کم از کم ایک کیٹیگری کلیدی ٹیگ شامل کریں (<span dir="ltr">kebab-case</span> میں جلی حروف والا نام، جیسے `use-cases` یا `scaling-and-layer-2`)۔ کسی تسلیم شدہ کیٹیگری ٹیگ کے بغیر ویڈیوز صرف "تمام" (All) ویو اور تلاش کے نتائج میں ظاہر ہوں گی۔
-
-آپ نئے ٹیگز بھی استعمال کر سکتے ہیں — وہ مستقبل کی کیٹیگری گروپنگ کے لیے دستیاب ہوں گے۔
-
 #### مرحلہ 5: اپنی PR جمع کرائیں {#step-5}
 
 `dev` برانچ میں اپنی تبدیلیوں کے ساتھ ایک پل ریکوئسٹ کھولیں۔ ٹیم آپ کی جمع کرائی گئی درخواست کا جائزہ لے گی اور فیڈ بیک فراہم کرے گی۔
+
 
 ## دیکھ بھال {#maintenance}
 
@@ -150,6 +137,7 @@ title: "..."
 - ان کے ہوسٹنگ/YouTube لنکس کام کر رہے ہیں
 
 اگر آپ کو فہرست میں شامل کسی ویڈیو میں کوئی مسئلہ نظر آتا ہے، تو [ایک ایشو بنائیں](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) یا [<span dir="ltr">website@ethereum.org</span>](mailto:website@ethereum.org) پر ای میل بھیجیں۔
+
 
 ## استعمال کی شرائط {#terms-of-use}
 

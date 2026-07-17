@@ -1,69 +1,67 @@
 ---
-title: "Bổ sung tài nguyên thiết kế"
-description: "Hướng dẫn và quy tắc bảo đảm chất lượng các sản phẩm thiết kế trên ethereum.org"
+title: Thêm tài nguyên thiết kế
+description: Các nguyên tắc và yêu cầu để đảm bảo chất lượng của các tài liệu thiết kế trên ethereum.org
 lang: vi
 ---
 
-# Thêm tài nguyên thiết kế {#adding-design-resources}
+Bất kỳ ai cũng có thể đề xuất các tài liệu thiết kế mới cho [trang Thiết kế và UX trong Web3](/developers/docs/design-and-ux/).
 
-Bất kỳ ai cũng có thể đề xuất tài liệu thiết kế mới cho trang [Thiết kế và UX trong web3](/developers/docs/design-and-ux/).
+Xin lưu ý rằng trọng tâm của trang này là cung cấp giá trị người dùng cho các nhà thiết kế Web3 đầy tham vọng. Phần thiết kế không nhằm mục đích quảng cáo các dịch vụ, sản phẩm hoặc nền tảng của bạn.
 
-Hãy lưu ý rằng trọng tâm của trang này là cung cấp giá trị người dùng cho những nhà thiết kế trong mảng web3. Mục thiết kế không dành cho quảng bá dịch vụ, sản phẩm, hay nền tảng của bạn.
+Để đảm bảo rằng chúng tôi duy trì tiêu chuẩn thông tin cao và thúc đẩy những hiểu biết sâu sắc có giá trị, chúng tôi đã thiết lập một chính sách niêm yết:
 
-Để đảm bảo rằng chúng ta duy trì đạt tiêu chuẩn về thông tin và thúc đẩy hiểu biết sâu sắc, chúng tôi đã thiết lập chính sách phê duyệt thêm vào trang:
+## Các nghiên cứu và Bảng điều khiển {#research-studies}
 
-## Nghiên cứu và Bảng điều khiển {#Research-studies}
+1. Phương pháp luận hợp lý
 
-1. Phương pháp luận có cơ sở
+a. Phương pháp luận phải xác định rõ cách thức thu thập dữ liệu.
 
-a. Phương pháp luận định nghĩa rõ ràng về cách dữ liệu được thu thập.
+b. Số lượng người tham gia vào nghiên cứu phải được nêu rõ.
 
-b. Số lượng người tham gia vào nghiên cứu cần được ghi lại.
+c. Các phương pháp nghiên cứu được sử dụng phải được mô tả.
 
-c. Mô tả về các phương pháp nghiên cứu đã áp dụng.
+2. Mức độ liên quan đối với các nhà thiết kế Web3 và các trường hợp sử dụng thiết kế phổ biến
 
-2. Sự tương quan với những nhà thiết kế Web3 và Các tình huống Ứng dụng Phổ biến
+a. Chủ đề của nghiên cứu phải phù hợp với các nhà thiết kế Web3 và giải quyết các trường hợp sử dụng thiết kế phổ biến.
 
-a. Chủ đề nghiên cứu có liên quan đến các nhà thiết kế web3 và nhấn mạnh về các tình huống thiết kế phổ biến.
+3. Tập trung vào việc cung cấp những hiểu biết sâu sắc
 
-3. Tập trung vào đem lại những hiểu biết sâu sắc
+a. Mục tiêu chính của văn bản phải là chia sẻ những hiểu biết sâu sắc thay vì quảng bá một dự án hoặc công ty cụ thể.
 
-a. Mục tiêu chính của nội dung là chia sẻ hiểu biết, không phải quảng bá một dự án hay công ty cụ thể nào.
+## Bài viết {#articles}
 
-## Các bài viết {#Articles}
+1. Mức độ liên quan đối với các nhà thiết kế/nhà nghiên cứu Web3 và các trường hợp sử dụng thiết kế Web3 phổ biến
 
-1. Sự tương quan với những nhà thiết kế Web3 và Các tình huống Ứng dụng Phổ biến
+a. Chủ đề của bài viết phải phù hợp với các nhà thiết kế và nhà nghiên cứu Web3, tập trung vào các trường hợp sử dụng thiết kế Web3 phổ biến.
 
-a. Chủ đề bài viết phải liên quan đến các nhà thiết kế và nhà nghiên cứu trong lĩnh vực web3, tập trung vào các tình huống thiết kế web3 phổ biến.
+2. Chất lượng bài viết cơ bản
 
-2. Chất lượng bài viết tiêu chuẩn
+a. Bài viết không được có lỗi ngữ pháp và chính tả.
 
-a. Bài viết không mắc lỗi chính tả và lỗi đánh chữ.
+b. Cần nhấn mạnh vào việc cung cấp những hiểu biết sâu sắc và bài học chính.
 
-b. Điểm nhấn trong bài viết nên là các phần mang lại hiểu biết sâu sắc hoặc kiến thức.
+c. Văn phong phải súc tích và đi thẳng vào vấn đề.
 
-c. Hành văn cần súc tích và đúng trọng tâm.
+3. Mục tiêu của văn bản
 
-3. Mục tiêu đối với nội dung chữ
+a. Mục tiêu chính của bài viết phải là chia sẻ những hiểu biết sâu sắc thay vì quảng bá một dự án hoặc công ty cụ thể.
 
-a. Mục tiêu chính của nội dung là chia sẻ hiểu biết, không phải quảng bá một dự án hay công ty cụ thể nào.
+## Cộng đồng / DAO {#communities-and-daos}
 
-## Cộng đồng / DAO {#Communities-and-DAOs}
+1. Trang web phải chỉ rõ cách tham gia DAO/Cộng đồng
 
-1. Trang web cần hướng dẫn rõ cách tham gia Tổ chức tự trị phi tập trung/Cộng đồng
+2. Lợi ích rõ ràng của tư cách thành viên
 
-2. Quyền lợi thành viên được nêu rõ
+a. Những lợi ích khi trở thành thành viên phải được hiển thị nổi bật.
 
-a. Quyèn lợi thành viên phải được thể hiện rõ ràng.
+**Ví dụ**: nhận phản hồi về công việc, tiếp cận các cơ hội việc làm hoặc tiền thưởng, chia sẻ những hiểu biết sâu sắc về thiết kế và nghiên cứu.
 
-**Ví dụ**: nhận phản hồi về công việc, tiếp cận cơ hội việc làm hoặc tiền thưởng, chia sẻ các thông tin chi tiết về thiết kế và nghiên cứu.
+3. Giao tiếp tích cực và sôi nổi trên Discord
 
-3. Cộng đồng hoạt động tích cực và sôi nổi trên Discord
+a. Cộng đồng Discord phải thể hiện sự giao tiếp sôi nổi và gắn kết.
 
-a. Cộng đồng trên Discord cho thấy các cuộc trò chuyện sôi nổi có sự tham gia tích cực từ cộng đồng.
+b. Những người điều hành phải tích cực tham gia vào việc duy trì cộng đồng và tạo điều kiện cho các cuộc thảo luận.
 
-b. Điều phối viên tích cực tham gia trong việc duy trì cộng đồng và khởi gợi, thúc đẩy các cuộc trò chuyện.
+c. Cộng đồng phải có minh chứng về các cuộc trò chuyện có giá trị và hiệu quả trong vòng hai tuần qua.
 
-c. Cộng đồng cho thấy các đoạn lịch sử trao đổi tích cực và có giá trị trong vòng hai tuần gần nhất.
-
-Bằng cách tuân thủ các tiêu chí trên, chúng tôi nỗ lực phấn đấu tạo nên một môi trường chia sẻ kiến thức hữu ích ngày càng lớn mạnh trong cộng đồng. Chúng tôi tin rằng chính sách phê duyệt nội dung này giúp người dùng có thể tiếp cận với các nguồn tài nguyên thông tin đáng tin cậy, có tương quan và hữu ích. Cảm ơn bạn đã thấu hiểu và hợp tác trong việc duy trì chất lượng nội dung trên nền tảng của chúng tôi.
+Bằng cách tuân thủ các tiêu chí này, chúng tôi hướng tới việc thúc đẩy một môi trường phát triển mạnh mẽ và chia sẻ kiến thức trong cộng đồng của mình. Chúng tôi tin rằng chính sách danh sách trắng (whitelist) này sẽ đảm bảo người dùng của chúng tôi có quyền truy cập vào các tài nguyên đáng tin cậy, phù hợp và sâu sắc. Cảm ơn bạn đã thấu hiểu và hợp tác trong việc duy trì chất lượng nội dung trên nền tảng của chúng tôi.

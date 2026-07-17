@@ -1,161 +1,541 @@
 [
   [
     {
-      "pubDate": "Tue, 25 Nov 2025 00:00:00 +0000",
-      "title": "Plinko PIR tutorial",
-      "link": "https://vitalik.ca/general/2025/11/25/plinko.html",
-      "imgSrc": "http://vitalik.ca/images/icon.png",
-      "source": "Vitalik Buterin's website",
-      "sourceUrl": "https://vitalik.ca/",
-      "sourceFeedUrl": "https://vitalik.eth.limo/feed.xml"
+      "pubDate": "Tue, 12 May 2026 00:00:00 GMT",
+      "title": "Clear Signing: Making Transaction Approvals Safer on Ethereum",
+      "link": "https://blog.ethereum.org/en/2026/05/12/clear-signing-announcement",
+      "imgSrc": "https://blog.ethereum.org/images/ethereum-blog-og-image.png",
+      "description": "An Ethereum Working Group consisting of wallet developers, security firms and the Ethereum Foundation’s Trillion Dollar Security Initiative today launched an open standard designed to end blind…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
     },
     {
-      "pubDate": "Fri, 07 Nov 2025 00:00:00 +0000",
-      "title": "Galaxy brain resistance",
-      "link": "https://vitalik.ca/general/2025/11/07/galaxybrain.html",
-      "imgSrc": "http://vitalik.ca/images/icon.png",
-      "source": "Vitalik Buterin's website",
-      "sourceUrl": "https://vitalik.ca/",
-      "sourceFeedUrl": "https://vitalik.eth.limo/feed.xml"
+      "pubDate": "Mon, 11 May 2026 00:00:00 GMT",
+      "title": "Protocol Cluster Updates: May 2026",
+      "link": "https://blog.ethereum.org/en/2026/05/11/protocol-update-may-26",
+      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_270c7c873d5994bd4e47958030e3599c.png",
+      "description": "A semi-regular gathering of Ethereum core devs from various client teams, or interop, recently took place in Svalbard, Norway. Over the week-long event, teams focused on hardening and preparation for…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
+    },
+    {
+      "pubDate": "Sat, 02 May 2026 00:00:00 GMT",
+      "title": "Soldøgn Interop Recap ☀️",
+      "link": "https://blog.ethereum.org/en/2026/05/02/soldogn-interop-recap",
+      "imgSrc": "https://notes.ethereum.org/_uploads/B17NArz0Zg.jpg",
+      "description": "This past week, just over 100 Ethereum core contributors gathered above the Arctic Circle — in Longyearbyen, Svalbard — for the Soldøgn Interop: a week of intense work on the Glamsterdam network…",
+      "source": "Ethereum Foundation",
+      "category": "Foundation",
+      "sourceUrl": "https://blog.ethereum.org",
+      "sourceFeedUrl": "https://blog.ethereum.org/feed.xml"
     }
   ],
   [
     {
-      "pubDate": "Thu, 04 Dec 2025 00:00:00 GMT",
-      "title": "Devconnect Argentina Recap",
-      "link": "https://blog.ethereum.org/en/2025/12/04/devconnect-arg-wrap",
-      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_1c3b8dfb30c6ab02602f40f675d59422.jpeg",
-      "source": "Ethereum Foundation Blog",
-      "sourceUrl": "https://blog.ethereum.org",
-      "sourceFeedUrl": "https://blog.ethereum.org/en/feed.xml"
+      "pubDate": "Tue, 27 Jan 2026 00:00:00 GMT",
+      "title": "How Ethereum Decides What Ships",
+      "link": "https://blog.echinstitute.org/NetworkUpgradeStages",
+      "imgSrc": "https://raw.githubusercontent.com/ethcatherders/ech-blog/refs/heads/main/blogs/images/NetworkUpgrade.webp",
+      "description": "## Inside the EIP-7723 Inclusion Lifecycle For years, selecting which changes make it into an Ethereum network upgrade (“hard fork”) was a complex and often ad-hoc process. With nearly ten client…",
+      "source": "Ethereum Cat Herders",
+      "category": "Protocol",
+      "sourceUrl": "https://blog.echinstitute.org",
+      "sourceFeedUrl": "https://blog.echinstitute.org/feed.xml"
     },
     {
-      "pubDate": "Tue, 02 Dec 2025 00:00:00 GMT",
-      "title": "Allocation Update - Q3 2025",
-      "link": "https://blog.ethereum.org/en/2025/12/02/allocation-q3-25",
-      "imgSrc": "https://storage.googleapis.com/ethereum-hackmd/upload_fd63dc334e72e1c2885cb7969adc1faf.jpg",
-      "source": "Ethereum Foundation Blog",
-      "sourceUrl": "https://blog.ethereum.org",
-      "sourceFeedUrl": "https://blog.ethereum.org/en/feed.xml"
+      "pubDate": "Mon, 12 Jan 2026 00:00:00 GMT",
+      "title": "The Protocol Post #1",
+      "link": "https://blog.echinstitute.org/newsletter001",
+      "imgSrc": "https://raw.githubusercontent.com/ethcatherders/ech-blog/refs/heads/main/blogs/images/The%20Protocol%20Post%201.png",
+      "description": "Your Weekly Dose of Protocol Updates with ECH! Strengthening Ethereum standards, governance, and public-goods infrastructure ## Overview Happy New Year 2026! This is the first _Protocol Post_ from…",
+      "source": "Ethereum Cat Herders",
+      "category": "Protocol",
+      "sourceUrl": "https://blog.echinstitute.org",
+      "sourceFeedUrl": "https://blog.echinstitute.org/feed.xml"
+    },
+    {
+      "pubDate": "Thu, 01 Jan 2026 00:00:00 GMT",
+      "title": "It's a Wrap: ECH Institute 2025",
+      "link": "https://blog.echinstitute.org/2025YearEndRecap",
+      "imgSrc": "https://raw.githubusercontent.com/ethcatherders/ech-blog/refs/heads/main/blogs/images/2025RecapImage.png",
+      "description": "### ECH 2025: Pectra upgrade, Fusaka upgrade, 10 Years of Ethereum celebration, Devconnect, EIP Summit, WiEP, PEEPanEIP and much more! With 2025 winding down, we at ECH Institute are looking back on…",
+      "source": "Ethereum Cat Herders",
+      "category": "Protocol",
+      "sourceUrl": "https://blog.echinstitute.org",
+      "sourceFeedUrl": "https://blog.echinstitute.org/feed.xml"
     }
   ],
   [
     {
-      "pubDate": "Wed, 03 Dec 2025 00:00:00 GMT",
-      "title": "Announcing Live Custody Monitoring for PeerDAS",
-      "link": "https://ethpandaops.io/posts/live-custody-monitoring-peerdas/",
-      "imgSrc": "https://ethpandaops.io/img/blog/announcing-dasmon.png",
-      "source": "ethPandaOps Blog",
+      "pubDate": "Mon, 20 Apr 2026 00:00:00 GMT",
+      "title": "Ethereum Protocol Fellowship Cohort 6 Recap",
+      "link": "https://ps.ethereum.foundation/blog/epf6-recap",
+      "imgSrc": "",
+      "description": "The EPF successfully concluded the sixth cohort, Study Group 2026 and is preparing for cohort seven (EPF7)",
+      "source": "Protocol Support",
+      "category": "Protocol",
+      "sourceUrl": "https://ps.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://ps.ethereum.foundation/feed.xml"
+    },
+    {
+      "pubDate": "Mon, 16 Mar 2026 00:00:00 GMT",
+      "title": "Helping EIP Champions Build Stronger Proposals",
+      "link": "https://ps.ethereum.foundation/blog/helping-eip-champions-build-stronger-proposals",
+      "imgSrc": "",
+      "description": "Introducing the EIP Champion's Handbook — a new resource suite to help champions navigate the ACD process and build compelling cases for EIP inclusion.",
+      "source": "Protocol Support",
+      "category": "Protocol",
+      "sourceUrl": "https://ps.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://ps.ethereum.foundation/feed.xml"
+    },
+    {
+      "pubDate": "Thu, 05 Feb 2026 00:00:00 GMT",
+      "title": "Welcome to Protocol Support",
+      "link": "https://ps.ethereum.foundation/blog/welcome-to-protocol-support",
+      "imgSrc": "",
+      "description": "Introducing the Protocol Support team website - your gateway to understanding Ethereum protocol governance and development.",
+      "source": "Protocol Support",
+      "category": "Protocol",
+      "sourceUrl": "https://ps.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://ps.ethereum.foundation/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Wed, 03 Jun 2026 00:00:00 GMT",
+      "title": "Panda: one tool for the whole data stack",
+      "link": "https://ethpandaops.io/posts/panda/",
+      "imgSrc": "https://ethpandaops.io/img/blog/panda/header.png",
+      "description": "How we stopped drowning our agents in JSON.",
+      "source": "ethPandaOps",
+      "category": "Protocol",
       "sourceUrl": "https://ethpandaops.io/posts/",
       "sourceFeedUrl": "https://ethpandaops.io/posts/rss.xml"
     },
     {
-      "pubDate": "Fri, 14 Nov 2025 00:00:00 GMT",
-      "title": "Introducing The Lab",
-      "link": "https://ethpandaops.io/posts/the-lab/",
-      "imgSrc": "https://ethpandaops.io/img/blog/the-new-lab/header.png",
-      "source": "ethPandaOps Blog",
+      "pubDate": "Tue, 26 May 2026 00:00:00 GMT",
+      "title": "Replaying a year of mainnet with the Fast Confirmation Rule",
+      "link": "https://ethpandaops.io/posts/fcr-simulator/",
+      "imgSrc": "https://ethpandaops.io/img/blog/fcr-simulator/header.png",
+      "description": "We replayed 12 months of mainnet beacon chain history through 4 consensus-layer implementations of the Fast Confirmation Rule.",
+      "source": "ethPandaOps",
+      "category": "Protocol",
+      "sourceUrl": "https://ethpandaops.io/posts/",
+      "sourceFeedUrl": "https://ethpandaops.io/posts/rss.xml"
+    },
+    {
+      "pubDate": "Thu, 21 May 2026 00:00:00 GMT",
+      "title": "Validator Report: Investigate Validator Performance",
+      "link": "https://ethpandaops.io/posts/validator-report/",
+      "imgSrc": "https://ethpandaops.io/img/blog/validator-report/header.png",
+      "description": "Use the Validator Report page in The Lab to scan validators, catch missed proposals, drill from day to hour to slot, and export Markdown evidence.",
+      "source": "ethPandaOps",
+      "category": "Protocol",
       "sourceUrl": "https://ethpandaops.io/posts/",
       "sourceFeedUrl": "https://ethpandaops.io/posts/rss.xml"
     }
   ],
   [
     {
-      "pubDate": "Mon, 27 Oct 2025 10:23:24 GMT",
-      "title": "Making Sense of a ZK Staking Node",
-      "link": "https://paragraph.com/@ethstaker/making-sense-of-a-zk-staking-node",
-      "imgSrc": "https://watch.protocol.berlin&quot;,&quot;description&quot;:&quot;Without clear goals for what our network should provide, we end up optimising for our means rather than for our ends. In this talk, I'll discuss the goals of our network - scale, hardness, verifiability and censorship-resistance - and how some of the means (\\&quot;local building\\&quot;, \\&quot;solo staking\\&quot;) should be re-evaluated in light of their contributions to these goals, given advances in protocol research.&quot;,&quot;title&quot;:&quot;What we want from our nodes&quot;,&quot;thumbnail_width&quot;:1280,&quot;url&quot;:&quot;https://watch.protocol.berlin/65a90bf47932ebe436ba9351/watch?session=6858d70d90bd41297b7bc45d&quot;,&quot;thumbnail_url&quot;:&quot;https://storage.googleapis.com/papyrus_images/5040d0969c85a369a71fbf7bfa2d26fd43f4129f454329d478e62a8b6016925f.jpg",
-      "source": "ethstaker",
-      "sourceUrl": "https://paragraph.com/@ethstaker",
-      "sourceFeedUrl": "https://raw.githubusercontent.com/eth-educators/github-actions/refs/heads/main/_data/blog_data.xml"
-    },
-    {
-      "pubDate": "Tue, 29 Jul 2025 18:31:18 GMT",
-      "title": "2025 Staking Survey Results",
-      "link": "https://paragraph.com/@ethstaker/staking-survey-2025",
-      "imgSrc": "https://storage.googleapis.com/papyrus_images/db4017de64f4be77f2acd1bae1dc5875.png",
-      "source": "ethstaker",
-      "sourceUrl": "https://paragraph.com/@ethstaker",
-      "sourceFeedUrl": "https://raw.githubusercontent.com/eth-educators/github-actions/refs/heads/main/_data/blog_data.xml"
+      "pubDate": "Thu, 15 Jan 2026 00:00:00 GMT",
+      "title": "Argot Roadmap Update 2026 (1/2)",
+      "link": "https://argot.org/blog/2026-01-15-argot-roadmap-update-2026-1",
+      "imgSrc": "",
+      "description": "This blog post recaps the Argot Collective’s work from the second half of 2025 and provides a detailed outline of priorities and upcoming milestones for the first half of 2026.",
+      "source": "Argot Collective",
+      "category": "Protocol",
+      "sourceUrl": "https://argot.org/blog",
+      "sourceFeedUrl": "https://www.argot.org/feed.xml"
     }
   ],
   [
     {
-      "pubDate": "Thu, 04 Dec 2025 00:00:00 GMT",
-      "title": "Solidity Summit 2025 Recap",
-      "link": "https://soliditylang.org///blog/2025/12/04/solidity-summit-2025-recap",
+      "pubDate": "2026-06-09T12:00:00+10:00",
+      "title": "Go for Security Auditors: Part 1 - Syntax That Will Trip You Up",
+      "link": "https://blog.sigmaprime.io/go-for-security-auditors-part-1.html",
+      "imgSrc": "",
+      "description": "The first in a three-part series on auditing Go code, covering deceptive syntax, common pitfalls like nil maps and slice aliasing, testing gotchas, and compiler pragmas that hide security-relevant…",
+      "source": "Lighthouse",
+      "category": "Clients",
+      "sourceUrl": "https://blog.sigmaprime.io/",
+      "sourceFeedUrl": "https://lighthouse-blog.sigmaprime.io/feeds/all.atom.xml"
+    },
+    {
+      "pubDate": "2026-05-08T13:00:00+10:00",
+      "title": "Soldøgn Interop Recap: Glamsterdam & ePBS",
+      "link": "https://blog.sigmaprime.io/soldogn-interop-glamsterdam-ePBS.html",
+      "imgSrc": "",
+      "description": "A recap of Soldøgn Interop, covering Lighthouse’s work on Glamsterdam and progress toward implementing Enshrined Proposer-Builder Separation (ePBS).",
+      "source": "Lighthouse",
+      "category": "Clients",
+      "sourceUrl": "https://blog.sigmaprime.io/",
+      "sourceFeedUrl": "https://lighthouse-blog.sigmaprime.io/feeds/all.atom.xml"
+    },
+    {
+      "pubDate": "2026-04-01T00:00:00+11:00",
+      "title": "Defensive Protocol Design",
+      "link": "https://blog.sigmaprime.io/defensive-protocol-design.html",
+      "imgSrc": "",
+      "description": "This article covers protective steps developers can take to prevent protocol exploits via defensive design.",
+      "source": "Lighthouse",
+      "category": "Clients",
+      "sourceUrl": "https://blog.sigmaprime.io/",
+      "sourceFeedUrl": "https://lighthouse-blog.sigmaprime.io/feeds/all.atom.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Mon, 02 Mar 2026 12:34:11 GMT",
+      "title": "The Nimbus Unified Client",
+      "link": "https://blog.nimbus.team/the-nimbus-unified-client/",
+      "imgSrc": "https://blog.nimbus.team/content/images/2026/02/Nimbus-Unified-Client-5.png",
+      "description": "Back to the Good Old Days of Running Ethereum There was a time&#x2014;the pre-Merge days&#x2014;when running Ethereum felt refreshingly simple. You ran one client, one process, one database. Back…",
+      "source": "Nimbus",
+      "category": "Clients",
+      "sourceUrl": "https://blog.nimbus.team/",
+      "sourceFeedUrl": "https://blog.nimbus.team/rss/"
+    }
+  ],
+  [
+    {
+      "pubDate": "Mon, 20 Apr 2026 14:43:23 GMT",
+      "title": "Optimizing Besu Performance: Parallelizing State Root Computation",
+      "link": "https://www.lfdecentralizedtrust.org/blog/optimizing-besu-performance-parallelizing-state-root-computation",
+      "imgSrc": "https://www.lfdecentralizedtrust.org/hubfs/Besu%20Exam%20post-1.jpg",
+      "description": "In the ever-evolving blockchain landscape, optimizing execution performance is essential. State root computation is one of the primary bottlenecks in Ethereum execution clients, becoming critical…",
+      "source": "Besu",
+      "category": "Clients",
+      "sourceUrl": "https://www.lfdecentralizedtrust.org/blog",
+      "sourceFeedUrl": "https://www.lfdecentralizedtrust.org/blog/rss.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Mon, 01 Jun 2026 00:00:00 GMT",
+      "title": "Sonobe Updates 2026 Part 1: Audit Report",
+      "link": "https://pse.dev/blog/sonobe-updates-1",
+      "imgSrc": "https://pse.dev/favicon.ico",
+      "description": "Ahead of Sonobe's first release, we had our folding-schemes and IVC library audited by both a human auditor and an AI auditor. This article summarizes their findings.",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Thu, 28 May 2026 00:00:00 GMT",
+      "title": "EVM Verification of WHIR over a 31-bit Field",
+      "link": "https://pse.dev/blog/evm-verification-of-whir-31bit",
+      "imgSrc": "https://pse.dev/articles/evm-verification-of-whir-31bit/cover.webp",
+      "description": "A standalone WHIR verifier over the 31-bit KoalaBear field can verify a 2^22 polynomial opening on EVM with 100-bit Johnson-bound soundness for 5.65 MGas in software, or 4.33 MGas with experimental…",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    },
+    {
+      "pubDate": "Fri, 22 May 2026 00:00:00 GMT",
+      "title": "Announcing the Private Transfers Dashboard",
+      "link": "https://pse.dev/blog/announcing-private-transfers-dashboard",
+      "imgSrc": "https://pse.dev/articles/private-transfers-dashboard-announcement/cover.webp",
+      "description": "Compare private transfer protocols across a variety of different metrics",
+      "source": "Privacy & Scaling Explorations",
+      "category": "Research",
+      "sourceUrl": "https://pse.dev",
+      "sourceFeedUrl": "https://pse.dev/api/rss"
+    }
+  ],
+  [
+    {
+      "pubDate": "Wed, 20 May 2026 00:00:00 GMT",
+      "title": "On Formal Verification and a Bug in SP1 Hypercube",
+      "link": "https://zkevm.ethereum.foundation/blog/sp1-fv",
+      "imgSrc": "",
+      "description": "A practical study in establishing and validating formal correctness guarantees",
+      "source": "zkEVM",
+      "category": "Research",
+      "sourceUrl": "https://zkevm.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://zkevm.ethereum.foundation/feed.xml"
+    },
+    {
+      "pubDate": "Thu, 14 May 2026 00:00:00 GMT",
+      "title": "EIP-8025: bringing optional execution proofs to Hegotá",
+      "link": "https://zkevm.ethereum.foundation/blog/eip-8025-optional-execution-proofs-hegota",
+      "imgSrc": "",
+      "description": "The non-headliner proposal window for Hegotá - the fork planned to follow Glamsterdam - is open, and the L1-zkEVM workstream is putting EIP-8025 (Optional Execution Proofs) forward for inclusion.",
+      "source": "zkEVM",
+      "category": "Research",
+      "sourceUrl": "https://zkevm.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://zkevm.ethereum.foundation/feed.xml"
+    },
+    {
+      "pubDate": "Mon, 16 Feb 2026 00:00:00 GMT",
+      "title": "Ethereum zkVM Interoperability: zkVM Standards v0",
+      "link": "https://zkevm.ethereum.foundation/blog/zkevm-standards-v0-release",
+      "imgSrc": "",
+      "description": "The first release of zkVM-standards establishes three initial standards for zkVM development: RV64IM target architecture, C interfaces for precompiles, and standardized IO handling.",
+      "source": "zkEVM",
+      "category": "Research",
+      "sourceUrl": "https://zkevm.ethereum.foundation/blog",
+      "sourceFeedUrl": "https://zkevm.ethereum.foundation/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Mon, 18 May 2026 00:00:00 +0000",
+      "title": "A shallow dive into formal verification",
+      "link": "https://vitalik.eth.limo/general/2026/05/18/fv.html",
+      "imgSrc": "http://vitalik.ca/images/icon.png",
+      "source": "Vitalik Buterin",
+      "category": "Research",
+      "sourceUrl": "https://vitalik.ca/",
+      "sourceFeedUrl": "https://vitalik.eth.limo/feed.xml"
+    },
+    {
+      "pubDate": "Thu, 02 Apr 2026 00:00:00 +0000",
+      "title": "My self-sovereign / local / private / secure LLM setup, April 2026",
+      "link": "https://vitalik.eth.limo/general/2026/04/02/secure_llms.html",
+      "imgSrc": "http://vitalik.ca/images/icon.png",
+      "source": "Vitalik Buterin",
+      "category": "Research",
+      "sourceUrl": "https://vitalik.ca/",
+      "sourceFeedUrl": "https://vitalik.eth.limo/feed.xml"
+    },
+    {
+      "pubDate": "Tue, 30 Dec 2025 00:00:00 +0000",
+      "title": "Balance of power",
+      "link": "https://vitalik.eth.limo/general/2025/12/30/balance_of_power.html",
+      "imgSrc": "http://vitalik.ca/images/icon.png",
+      "source": "Vitalik Buterin",
+      "category": "Research",
+      "sourceUrl": "https://vitalik.ca/",
+      "sourceFeedUrl": "https://vitalik.eth.limo/feed.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Tue, 05 May 2026 00:00:00 GMT",
+      "title": "Pattern Matching in Core Solidity",
+      "link": "https://soliditylang.org///blog/2026/05/05/pattern-matching-in-core-solidity",
       "imgSrc": "https://soliditylang.org//assets/solidity-logo.svg",
-      "source": "Solidity Lang Blog",
+      "description": "Smart contracts often need to handle values that come in several variants: a payment might be native ETH, an ERC20 transfer, or an NFT transfer; an auction can be not-started, active, ended, or…",
+      "source": "Solidity",
+      "category": "Dev tooling",
       "sourceUrl": "https://soliditylang.org/",
       "sourceFeedUrl": "https://soliditylang.org/feed.xml"
     },
     {
-      "pubDate": "Wed, 03 Dec 2025 00:00:00 GMT",
-      "title": "Solidity 0.8.31 Release Announcement",
-      "link": "https://soliditylang.org///blog/2025/12/03/solidity-0.8.31-release-announcement",
+      "pubDate": "Wed, 29 Apr 2026 00:00:00 GMT",
+      "title": "Solidity 0.8.35 Release Announcement",
+      "link": "https://soliditylang.org///blog/2026/04/29/solidity-0.8.35-release-announcement",
       "imgSrc": "https://soliditylang.org//assets/solidity-logo.svg",
-      "source": "Solidity Lang Blog",
+      "description": "We are excited to announce the release of the Solidity Compiler v0.8.35! This release introduces a new builtin, erc7201, that computes the base slot of an ERC-7201 namespaced storage layout from its…",
+      "source": "Solidity",
+      "category": "Dev tooling",
+      "sourceUrl": "https://soliditylang.org/",
+      "sourceFeedUrl": "https://soliditylang.org/feed.xml"
+    },
+    {
+      "pubDate": "Wed, 15 Apr 2026 00:00:00 GMT",
+      "title": "Solidity Developer Survey 2025 Results",
+      "link": "https://soliditylang.org///blog/2026/04/15/solidity-developer-survey-2025-results",
+      "imgSrc": "https://soliditylang.org//assets/solidity-logo.svg",
+      "description": "The Solidity Developer Survey 2025, our sixth annual survey, collected 1,095 responses from developers across 87 countries. Thank you to everyone who participated. This post covers the key findings.…",
+      "source": "Solidity",
+      "category": "Dev tooling",
       "sourceUrl": "https://soliditylang.org/",
       "sourceFeedUrl": "https://soliditylang.org/feed.xml"
     }
   ],
   [
     {
-      "pubDate": "Mon, 26 May 2025 17:52:38 GMT",
-      "title": "We're moving! 👋 ",
-      "link": "https://paragraph.com/@privacy-scaling-explorations/we-re-moving",
-      "source": "Privacy and Scaling Explorations",
-      "sourceUrl": "https://paragraph.com/@privacy-scaling-explorations",
-      "sourceFeedUrl": "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom"
+      "pubDate": "Tue, 12 May 2026 00:00:00 GMT",
+      "title": "Making Clear Signing the default on Ethereum",
+      "link": "https://docs.sourcify.dev/blog/clear-signing-launch/",
+      "imgSrc": "https://docs.sourcify.dev/assets/images/clear-sign-card-0fc0cf272b4655a0f51b849449957e3d.png",
+      "description": "Clear Signing Working Group",
+      "source": "Sourcify",
+      "category": "Dev tooling",
+      "sourceUrl": "https://docs.sourcify.dev/blog/",
+      "sourceFeedUrl": "https://docs.sourcify.dev/blog/rss.xml"
     },
     {
-      "pubDate": "Mon, 07 Apr 2025 11:58:40 GMT",
-      "title": "Code Optimizations in the Landscape of Post-Quantum Cryptography",
-      "link": "https://paragraph.com/@privacy-scaling-explorations/code-optimizations-in-the-landscape-of-post-quantum-cryptography",
-      "imgSrc": "https://storage.googleapis.com/papyrus_images/135ee851eb93742b292de6194b3dd99e9ff593201202de6678f8e539eb3c05bc.png",
-      "source": "Privacy and Scaling Explorations",
-      "sourceUrl": "https://paragraph.com/@privacy-scaling-explorations",
-      "sourceFeedUrl": "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom"
+      "pubDate": "Wed, 06 May 2026 00:00:00 GMT",
+      "title": "API v1 Brownouts: Time to Move to v2",
+      "link": "https://docs.sourcify.dev/blog/api-v1-brownouts/",
+      "imgSrc": "",
+      "description": "Sourcify's legacy v1 API has been deprecated for a while. v2 has been the primary, recommended API for over a year: async job-based verification (no more hanging requests), richer responses (storage…",
+      "source": "Sourcify",
+      "category": "Dev tooling",
+      "sourceUrl": "https://docs.sourcify.dev/blog/",
+      "sourceFeedUrl": "https://docs.sourcify.dev/blog/rss.xml"
     }
   ],
   [
     {
-      "pubDate": "Wed, 30 Jul 2025 17:23:39 GMT",
-      "title": "Happy 10 years of community building with Ethereum!!",
-      "link": "https://medium.com/ethereum-cat-herders/happy-10-years-of-community-building-with-ethereum-7786bfff67c6?source=rss----cb99bef2c5dc---4",
-      "imgSrc": "https://cdn-images-1.medium.com/max/1024/1*RdyIAn70mZa9N9SukJ1Vlg.png",
-      "source": "EthCatHerders - Medium",
-      "sourceUrl": "https://medium.com/ethereum-cat-herders?source=rss----cb99bef2c5dc---4",
-      "sourceFeedUrl": "https://medium.com/feed/ethereum-cat-herders"
+      "pubDate": "Thu, 11 Jun 2026 03:43:38 GMT",
+      "title": "Join the Remix AI Bootcamp for Real World Impact",
+      "link": "https://ethereumremix.substack.com/p/join-the-remix-ai-bootcamp-for-real",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/12c890b1-8939-44f9-9a75-7022680b22d3_1200x536.png",
+      "description": "5 weeks, top-tier ecosystem partners, and the latest RemixAI features to bring your real-world dApps to life.",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
     },
     {
-      "pubDate": "Tue, 06 May 2025 23:02:00 GMT",
-      "title": "It’s Pectra Time!",
-      "link": "https://medium.com/ethereum-cat-herders/its-pectra-time-0cf5561f662c?source=rss----cb99bef2c5dc---4",
-      "imgSrc": "https://cdn-images-1.medium.com/max/1024/1*sCDRZdHLR2DX32DyCUipNA.png",
-      "source": "EthCatHerders - Medium",
-      "sourceUrl": "https://medium.com/ethereum-cat-herders?source=rss----cb99bef2c5dc---4",
-      "sourceFeedUrl": "https://medium.com/feed/ethereum-cat-herders"
+      "pubDate": "Thu, 14 May 2026 17:52:29 GMT",
+      "title": "⏳ QF Round Last Call for Remix",
+      "link": "https://ethereumremix.substack.com/p/qf-round-last-call-for-remix",
+      "imgSrc": "https://substackcdn.com/image/fetch/$s_!Ey39!,w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fac1e8de7-4e95-493d-98fd-e1621f7d6faa_512x512.png",
+      "description": "Help Remix Secure Ethereum (for just $1)",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
+    },
+    {
+      "pubDate": "Thu, 16 Apr 2026 02:10:46 GMT",
+      "title": "Remix Release v2.1.0",
+      "link": "https://ethereumremix.substack.com/p/remix-release-v210",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/b0627e5b-1677-4bd0-ae18-fc22d24dfad6_840x420.png",
+      "description": "Updates to the UI of Deploy & Run, Bug fixes, MCP Tricks",
+      "source": "Ethereum Remix",
+      "category": "Dev tooling",
+      "sourceUrl": "https://ethereumremix.substack.com",
+      "sourceFeedUrl": "https://ethereumremix.substack.com/feed"
     }
   ],
   [
     {
-      "pubDate": "Fri, 12 Dec 2025 00:00:00 GMT",
-      "title": "Local Ethereum #11",
-      "link": "https://geodework.com/blog/local-ethereum-11",
-      "imgSrc": "https://geodework.com/og?title=Geode%20Labs%20Blog",
-      "source": "Geode Labs Blog",
-      "sourceUrl": "https://geodework.com",
-      "sourceFeedUrl": "https://geodework.com/feed.xml"
+      "pubDate": "Mon, 23 Mar 2026 12:33:03 GMT",
+      "title": "The 2026 Staking Survey is Now Open!",
+      "link": "https://paragraph.com/@ethstaker/the-2026-staking-survey-is-now-open",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/4258a1c5a8b4bfbbfa502151ef5775f5.jpg",
+      "description": "The 2026 Staking Landscape Survey from EthStaker is now open! Fill it out here. As in recent years, the survey collects a snapshot of the staking landscape and community sentiment. It also shows…",
+      "source": "EthStaker",
+      "category": "Staking",
+      "sourceUrl": "https://paragraph.com/@ethstaker",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethstaker"
     },
     {
-      "pubDate": "Fri, 05 Dec 2025 12:00:00 GMT",
-      "title": "Philippines Ethereum Ecosystem Overview",
-      "link": "https://geodework.com/blog/philippines-ethereum-ecosystem-overview",
-      "imgSrc": "https://geodework.com/og?title=Geode%20Labs%20Blog",
-      "source": "Geode Labs Blog",
-      "sourceUrl": "https://geodework.com",
-      "sourceFeedUrl": "https://geodework.com/feed.xml"
+      "pubDate": "Mon, 12 Jan 2026 15:30:02 GMT",
+      "title": "Introducing the Staker Console",
+      "link": "https://paragraph.com/@ethstaker/introducing-the-staker-console",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/88e1532fc1d76bd6da02f103e260fc967229f609c72f2bf5afd4f662bd40aad1.jpg",
+      "description": "Today we are excited to share the Staker Console, a new interface for interacting with the Ethereum staking contract. It is built for solo stakers and home operators who want a clear, reliable place…",
+      "source": "EthStaker",
+      "category": "Staking",
+      "sourceUrl": "https://paragraph.com/@ethstaker",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethstaker"
+    }
+  ],
+  [
+    {
+      "pubDate": "Thu, 04 Jun 2026 09:41:15 GMT",
+      "title": "Local Ethereum #17",
+      "link": "https://localethereum.substack.com/p/local-ethereum-17",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/97a8c107-1161-4e86-a875-d49a92e0de70_3148x2096.png",
+      "description": "CROPS, CLARITY, and the Road Ahead.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Tue, 26 May 2026 09:13:35 GMT",
+      "title": "Türkiye Ethereum Ecosystem Overview",
+      "link": "https://localethereum.substack.com/p/turkiye-ethereum-ecosystem-overview",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/de3e6b11-ae4f-41e6-9775-94e381fba893_2912x2096.png",
+      "description": "&#127481;&#127479; Where crisis meets innovation.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    },
+    {
+      "pubDate": "Wed, 06 May 2026 09:01:43 GMT",
+      "title": "Local Ethereum #16",
+      "link": "https://localethereum.substack.com/p/local-ethereum-16",
+      "imgSrc": "https://substack-post-media.s3.amazonaws.com/public/images/55c13d99-60c2-4e18-a624-ed6f3ae80500_3148x2096.png",
+      "description": "April was a month of extremes, and a reminder of what makes Ethereum different.",
+      "source": "Local Ethereum",
+      "category": "Community",
+      "sourceUrl": "https://localethereum.substack.com",
+      "sourceFeedUrl": "https://localethereum.substack.com/feed"
+    }
+  ],
+  [
+    {
+      "pubDate": "Fri, 19 Jun 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #28",
+      "link": "https://ethereal.news/ethereal-news-weekly-28/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Hsiao-Wei Wang stepped down, 1M lifetime developers, Glamsterdam upgrade adds separate builder deposit & exit contracts",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 12 Jun 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #27",
+      "link": "https://ethereal.news/ethereal-news-weekly-27/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "LG Electronics built L2 for advertising, Aave risk framework proposed, history of account abstraction",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    },
+    {
+      "pubDate": "Fri, 05 Jun 2026 00:00:00 GMT",
+      "title": "Ethereal news weekly #26",
+      "link": "https://ethereal.news/ethereal-news-weekly-26/",
+      "imgSrc": "https://ethereal.news/etherealnews.jpg",
+      "description": "Justin Drake qday odds: 10% by 2030 & 50% by 2032, Aave rsETH post mortem, glamsterdam-devnet-5 launched",
+      "source": "Ethereal",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethereal.news/",
+      "sourceFeedUrl": "https://ethereal.news/rss.xml"
+    }
+  ],
+  [
+    {
+      "pubDate": "Fri, 19 Jun 2026 01:33:03 GMT",
+      "title": "#971 - Hsiao-Wei Wang Steps Down, Base Beryl Upgrade, Aztec Exploit",
+      "link": "https://ethdaily.io/971",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/7dbe8d593510839d955ef0a929c37cad822ad11cbd96bf879376dac4133744ad.png",
+      "description": "Hsiao-Wei Wang steps down as EF co-executive director, Base ships its Beryl upgrade to testnet, and Aztec investigates a second rollup exploit.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Fri, 19 Jun 2026 00:48:02 GMT",
+      "title": "Ethereum Foundation Leadership: The Complete Tracker",
+      "link": "https://ethdaily.io/ef-leadership-tracker",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/6411dc51a35f847d66d8bf7a6d69206480a6513bbf512dd0b701f7fd7b8f89bc.png",
+      "description": "The Ethereum Foundation has undergone significant leadership changes since 2025, including a governance restructuring and high-profile departures. These shifts reflect a redefined, narrower mandate…",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
+    },
+    {
+      "pubDate": "Thu, 18 Jun 2026 21:45:49 GMT",
+      "title": "Aztec Hit By Second Deprecated Rollup Exploit",
+      "link": "https://ethdaily.io/aztec-hit-by-second-deprecated-rollup-exploit",
+      "imgSrc": "https://storage.googleapis.com/papyrus_images/3321e0f806dc3313f5102c6a03657932816156b3020057f87f9d86bc4e7e6cd1.png",
+      "description": "Aztec Labs is investigating a second exploit that drained roughly $2 million from a deprecated, immutable rollup on June 17. This follows a $2.19 million exploit of Aztec Connect on June 14.",
+      "source": "ETH Daily",
+      "category": "Newsletters",
+      "sourceUrl": "https://ethdaily.io",
+      "sourceFeedUrl": "https://api.paragraph.com/blogs/rss/@ethdaily"
     }
   ]
 ]

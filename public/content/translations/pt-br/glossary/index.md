@@ -1,10 +1,10 @@
 ---
-title: "Glossário do Ethereum"
-description: "Um glossário incompleto de termos técnicos e não técnicos relacionados ao Ethereum"
+title: Glossário
+metaTitle: Glossário da Ethereum
+description: Um glossário incompleto de termos técnicos e não técnicos relacionados à Ethereum
 lang: pt-br
+authors: ["Andreas Antonopoulos"]
 ---
-
-# Glossário {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: pt-br
 
 ## Fontes {#sources}
 
-_Fornecido em parte por [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) de [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) sob CC-BY-SA_
+_Fornecido em parte por [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) de [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) sob a licença CC-BY-SA_
 
 <Divider />
 
 ## Contribua com esta página {#contribute-to-this-page}
 
-Faltou algum termo? Algo parece estar errado? Ajude-nos a melhorar esta página contribuindo com este glossário no GitHub!
+Deixamos passar alguma coisa? Algo está incorreto? Ajude-nos a melhorar contribuindo para este glossário no GitHub!
 
 [Saiba mais sobre como contribuir](/contributing/adding-glossary-terms)

@@ -1,92 +1,90 @@
 ---
 title: Comment traduire
 lang: fr
-description: Instructions d'utilisation de Crowdin pour traduire ethereum.org
+description: Instructions pour utiliser Crowdin afin de traduire ethereum.org
 ---
-
-# Comment traduire {#how-to-translate}
 
 ## Guide visuel {#visual-guide}
 
-Pour les apprenants plus visuels, regardez la vidéo de Luka qui présente le paramétrage de Crowdin. Vous pouvez également trouver les mêmes étapes sous forme écrite dans la section suivante.
+Pour ceux qui préfèrent un support visuel, regardez Luka vous guider dans la configuration de Crowdin. Autrement, vous pouvez retrouver les mêmes étapes au format écrit dans la section suivante.
 
-<YouTube id="Ii7bYhanLs4" />
+<VideoWatch slug="crowdin-translation-guide" />
 
 ## Guide écrit {#written-guide}
 
-### Rejoignez notre projet sur Crowdin {#join-project}
+### Rejoindre notre projet sur Crowdin {#join-project}
 
-Vous devrez vous connecter à votre compte Crowdin ou vous inscrire si vous n'avez pas encore de compte. Tout ce qui est nécessaire pour vous inscrire est un compte de messagerie et un mot de passe.
+Vous devrez vous connecter à votre compte Crowdin ou vous inscrire si vous n'en avez pas déjà un. Tout ce qui est requis pour s'inscrire est une adresse e-mail et un mot de passe.
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Rejoindre le projet
 </ButtonLink>
 
-### Ouvrez votre langue {#open-language}
+### Ouvrir votre langue {#open-language}
 
-Après vous être connecté à Crowdin, vous verrez une description du projet et une liste de toutes les langues disponibles.
-Chaque langue contient également des informations sur le nombre total de mots traduisibles et une vue d'ensemble de la quantité de contenu qui a été traduite et approuvée dans une langue spécifique.
+Après vous être connecté à Crowdin, vous verrez une description du projet et la liste de toutes les langues disponibles.
+Chaque langue contient également des informations sur le nombre total de mots traduisibles et un aperçu de la quantité de contenu qui a été traduite et approuvée dans une langue spécifique.
 
-Ouvrez la langue dans laquelle vous souhaitez traduire pour voir la liste des fichiers disponibles pour la traduction.
+Ouvrez la langue vers laquelle vous souhaitez traduire pour voir la liste des fichiers disponibles pour la traduction.
 
-![Liste des langues dans Crowdin](./list-of-languages.png)
+![List of languages in Crowdin](./list-of-languages.png)
 
-### Trouvez un document sur lequel travailler {#find-document}
+### Trouver un document sur lequel travailler {#find-document}
 
-Le contenu du site web est divisé en un certain nombre de documents et d'ensembles de contenus. Vous pouvez vérifier la progression de chaque document sur la droite. Si la progression de la traduction est inférieure à 100 %, n'hésitez pas à y contribuer !
+Le contenu du site Web est divisé en un certain nombre de documents et de groupes de contenu. Vous pouvez vérifier la progression de chaque document sur la droite – si la progression de la traduction est inférieure à 100 %, n'hésitez pas à contribuer !
 
-Votre langage n'est pas répertorié ici ? [Ouvrez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ou demandez sur notre [Discord](https://discord.gg/ethereum-org)
+Vous ne voyez pas votre langue dans la liste ? [Ouvrez un ticket (issue)](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ou demandez sur notre [Discord](https://discord.gg/ethereum-org)
 
-![Fichiers traduits et non traduits dans Crowdin](./crowdin-files.png)
+![Translated and untranslated files in Crowdin](./crowdin-files.png)
 
-Une remarque sur les ensembles de contenu : nous utilisons des « ensembles de contenu » dans Crowdin pour que le contenu le plus prioritaire soit publié en premier. Lorsque vous consultez une langue, par exemple, le [philippin](https://crowdin.com/project/ethereum-org/fil#) vous verrez des dossiers pour l'ensemble de contenu ("1. Homepage », « 2. Essentials », « 3. Exploring », etc.).
+Une remarque sur les groupes de contenu : nous utilisons des « groupes de contenu » (content buckets) dans Crowdin pour publier en premier le contenu le plus prioritaire. Lorsque vous consultez une langue, par exemple le [philippin](https://crowdin.com/project/ethereum-org/fil#), vous verrez des dossiers pour chaque groupe de contenu (« 1. Homepage », « 2. Essentials », « 3. Exploring », etc.).
 
-Nous vous encourageons à traduire dans cet ordre numérique (1 → 2 → 3 → ⋯) afin de garantir que les pages ayant le plus fort impact soient traduites en premier.
+Nous vous encourageons à traduire dans cet ordre numérique (1 → 2 → 3 → ⋯) pour vous assurer que les pages ayant le plus d'impact soient traduites en premier.
 
 ### Traduire {#translate}
 
-Après avoir sélectionné le dossier que vous souhaitez traduire, il s'ouvrira dans l'éditeur en ligne. Si vous n'avez jamais utilisé Crowdin auparavant, vous pouvez utiliser ce guide rapide pour passer en revue les bases.
+Après avoir sélectionné le fichier que vous souhaitez traduire, il s'ouvrira dans l'éditeur en ligne. Si vous n'avez jamais utilisé Crowdin auparavant, vous pouvez utiliser ce guide rapide pour revoir les bases.
 
-![Éditeur en ligne de Crowdin](./online-editor.png)
+![Crowdin online editor](./online-editor.png)
 
 **_1 – Barre latérale gauche_**
 
-- Non traduit (rouge) : texte qui n'a pas encore été travaillé. Ce sont les phrases (ou chaînes) que vous devez traduire.
-- Traduit (vert) : texte qui a déjà été traduit, mais pas encore vérifié. Vous pouvez suggérer des traductions alternatives ou voter pour/contre les traductions existantes en utilisant les boutons « + » et « - » dans l'éditeur.
-- Approuvé (coche) : texte qui a déjà été vérifié et qui est actuellement sur le site web.
+- Non traduit (rouge) – texte qui n'a pas encore été traité. Ce sont les chaînes de caractères que vous devriez traduire.
+- Traduit (vert) – texte qui a déjà été traduit, mais pas encore révisé. Vous êtes invité à suggérer des traductions alternatives, ou à voter pour celles existantes en utilisant les boutons « + » et « - » dans l'éditeur.
+- Approuvé (coche) – texte qui a déjà été révisé et qui est actuellement en ligne sur le site Web.
 
-Vous pouvez également utiliser les boutons situés en haut pour rechercher des phrases précises, les filtrer par statut ou changer la vue.
+Vous pouvez également utiliser les boutons en haut pour rechercher des chaînes spécifiques, les filtrer par statut ou modifier l'affichage.
 
-**_2 – Zone éditeur_**
+**_2 – Zone de l'éditeur_**
 
-Il s'agit de la zone de traduction principale. Le texte source est affiché en haut, avec du contexte et des captures d'écran supplémentaires, si disponibles.
-Pour proposer une nouvelle traduction, tapez votre traduction dans le champ « Enter translation here » (Entrez la traduction ici), puis cliquez sur « Save » (Enregistrer).
+La zone de traduction principale – le texte source est affiché en haut, avec du contexte supplémentaire et des captures d'écran, si disponibles.
+Pour suggérer une nouvelle traduction, saisissez votre traduction dans le champ « Enter translation here » (Saisir la traduction ici) et cliquez sur Save (Enregistrer).
 
-Dans cette section, vous pouvez également trouver des traductions existantes de la phrase dans d'autres langues, ainsi que des correspondances issues de la mémoire de traduction et des suggestions de traduction automatique.
+Vous pouvez également trouver des traductions existantes de la chaîne et des traductions dans d'autres langues dans cette section, ainsi que des correspondances de mémoire de traduction et des suggestions de traduction automatique.
 
 **_3 – Barre latérale droite_**
 
-C'est ici que vous pouvez trouver des commentaires, des entrées de mémoire de traduction et le glossaire. La vue par défaut affiche les commentaires et permet aux traducteurs de communiquer, de soulever des problèmes ou de signaler des traductions incorrectes.
+C'est ici que vous pouvez trouver les commentaires, les entrées de la mémoire de traduction et les entrées du glossaire. La vue par défaut affiche les commentaires et permet aux traducteurs de communiquer, de soulever des problèmes ou de signaler des traductions incorrectes.
 
-En utilisant les boutons situés en haut, vous pouvez également accéder à la mémoire de traduction, où vous pouvez rechercher des traductions existantes, ou au glossaire, qui contient des descriptions et traductions de termes clés.
+En utilisant les boutons en haut, vous pouvez également passer à la mémoire de traduction (Translation Memory), où vous pouvez rechercher des traductions existantes, ou au glossaire (Glossary), qui contient des descriptions et des traductions standard des termes clés.
 
-Vous voulez en savoir plus ? N'hésitez pas à consulter la [documentation sur l'utilisation de l'éditeur en ligne de Crowdin](https://support.crowdin.com/online-editor/)
+Vous voulez en savoir plus ? N'hésitez pas à consulter la [documentation sur l'utilisation de l'éditeur en ligne Crowdin](https://support.crowdin.com/online-editor/)
 
 ### Processus de révision {#review-process}
 
-Une fois que vous avez terminé la traduction (c'est-à-dire que tous les fichiers pour un ensemble de contenu affichent une progression à 100 %), notre service de traduction professionnel examinera (et, éventuellement, modifiera) le contenu. Une fois la révision terminée (c'est-à-dire que la progression de la révision est de 100 %), nous ajouterons le contenu sur le site web.
+Une fois que vous avez terminé la traduction (c'est-à-dire que tous les fichiers d'un groupe de contenu affichent 100 %), notre service de traduction professionnel révisera (et potentiellement modifiera) le contenu. Une fois la révision terminée (c'est-à-dire que la progression de la révision est de 100 %), nous l'ajouterons au site Web.
 
 <Alert variant="update">
 <AlertEmoji text=":warning:"/>
 <AlertContent>
-  Veuillez ne pas utiliser de traduction automatique pour traduire le projet. Toutes les traductions seront examinées avant d'être ajoutées au site web. S'il apparaît que les traductions que vous proposez sont traduites automatiquement, elles seront rejetées et les contributeurs qui utilisent souvent la traduction automatique seront retirés du projet.
+  Veuillez ne pas utiliser la traduction automatique pour traduire le projet. Toutes les traductions seront révisées avant d'être ajoutées au site Web. Si vos suggestions de traduction s'avèrent être traduites automatiquement, elles seront rejetées et les contributeurs qui utilisent souvent la traduction automatique seront retirés du projet.
 </AlertContent>
 </Alert>
 
-### Contactez-nous {#get-in-touch}
+### Nous contacter {#get-in-touch}
 
-Avez-vous d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Veuillez publier un message dans le canal #translations de notre [serveur Discord ethereum.org](https://discord.gg/ethereum-org)
+Avez-vous des questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Veuillez publier un message dans le canal #translations de notre [serveur Discord ethereum.org](https://discord.gg/ethereum-org)
 
 Vous pouvez également nous contacter à l'adresse translations@ethereum.org
 
-Merci de votre participation au programme de traduction ethereum.org !
+Merci pour votre participation au programme de traduction d'ethereum.org !

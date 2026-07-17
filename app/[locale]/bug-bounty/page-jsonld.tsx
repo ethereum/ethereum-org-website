@@ -6,8 +6,9 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { KNOWN_PERSONS } from "@/lib/jsonld/persons"
+import { REFERENCE } from "@/lib/jsonld/references"
 import { personReference } from "@/lib/jsonld/utils"
 
 export default async function BugBountyJsonLD({
@@ -37,7 +38,7 @@ export default async function BugBountyJsonLD({
         "@id": url,
         name: t("page-upgrades-bug-bounty-meta-title"),
         description: t("page-upgrades-bug-bounty-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [
