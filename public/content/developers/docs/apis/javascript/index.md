@@ -268,6 +268,16 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
+**wagmi -** **_React hooks library for Ethereum, built on top of viem._**
+
+- [Documentation](https://wagmi.sh)
+- [GitHub](https://github.com/wevm/wagmi)
+
+**RainbowKit -** **_React library for adding wallet connection to dapps, built on wagmi and viem._**
+
+- [Documentation](https://www.rainbowkit.com)
+- [GitHub](https://github.com/rainbow-me/rainbowkit)
+
 **Codex -** **_Real-time, enriched blockchain data API across dozens of chains._**
 
 - [Documentation](https://docs.codex.io)
@@ -283,11 +293,6 @@ ethers.utils.formatEther(balance)
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
-
-- **[Wagmi](https://wagmi.sh/)** - _React Hooks library for Ethereum, built on top of viem._
-- **[RainbowKit](https://www.rainbowkit.com/)** - _The best way to connect a wallet. Fast, highly customizable, and easy to use._
-- **[Scaffold-ETH 2](https://scaffoldeth.io/)** - _An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain._
-- **[JSON-RPC API Reference](/developers/docs/apis/json-rpc/)** - _Learn more about the underlying JSON-RPC methods these libraries abstract away._
 
 ## Related topics {#related-topics}
 
