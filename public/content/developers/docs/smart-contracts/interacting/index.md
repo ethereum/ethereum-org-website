@@ -6,7 +6,7 @@ lang: en
 
 You don't always need to write and deploy your own smart contract. Most of the time as a developer, you'll want to interact with smart contracts that others have already deployed to the Ethereum network.
 
-This page covers the two fundamental ways to interact with a smart contract — **reading** data and **writing** data — and the tools you need to do both.
+This page covers the two fundamental ways to interact with a smart contract—**reading** data and **writing** data—and the tools you need to do both.
 
 ## Prerequisites {#prerequisites}
 
@@ -48,7 +48,7 @@ Writing always requires:
 2. A transaction signed by the account's private key
 3. The transaction to be mined and included in a block
 
-With [account abstraction](/roadmap/account-abstraction/), a smart contract account can also initiate writes, and a paymaster can cover gas on the user's behalf — so an EOA holding ETH is not strictly required.
+With [account abstraction](/roadmap/account-abstraction/), a smart contract account can also initiate writes, and a paymaster can cover gas on the user's behalf—so an EOA holding ETH is not strictly required.
 
 ## Understanding contract ABIs {#understanding-contract-abis}
 
@@ -60,13 +60,13 @@ An ABI is a JSON document that describes:
 - Every event the contract can emit
 - How to encode and decode data when talking to the contract
 
-Think of the ABI as the contract's instruction manual — without it, your application doesn't know which functions exist or what parameters they expect.
+Think of the ABI as the contract's instruction manual—without it, your application doesn't know which functions exist or what parameters they expect.
 
 ### Where to find a contract's ABI {#where-to-find-abis}
 
-- **Verified contracts on Etherscan** — [Etherscan](https://etherscan.io) automatically exposes the ABI for verified source code
-- **From the developer** — many projects publish their ABIs in their documentation or npm packages
-- **Generate from source** — if you have the Solidity source code, you can [compile it](/developers/docs/smart-contracts/compiling/) to produce the ABI
+- **Verified contracts on Etherscan** - [Etherscan](https://etherscan.io) automatically exposes the ABI for verified source code
+- **From the developer** - many projects publish their ABIs in their documentation or npm packages
+- **Generate from source** - if you have the Solidity source code, you can [compile it](/developers/docs/smart-contracts/compiling/) to produce the ABI
 
 ## Tools and libraries for interacting with contracts {#tools-and-libraries}
 
@@ -74,15 +74,15 @@ Developers typically use a JavaScript/TypeScript library to interact with contra
 
 ### Client libraries (JavaScript/TypeScript) {#client-libraries}
 
-- **[Viem](https://viem.sh)** — Modern, lightweight TypeScript interface for Ethereum with first-class type safety
-- **[ethers.js](https://docs.ethers.org/)** — Battle-tested library for interacting with the Ethereum blockchain
-- **[web3.js](https://web3js.org/)** — The original Ethereum JavaScript API
+- **[Viem](https://viem.sh)** - Modern, lightweight TypeScript interface for Ethereum with first-class type safety
+- **[ethers.js](https://docs.ethers.org/)** - Battle-tested library for interacting with the Ethereum blockchain
+- **[web3.js](https://web3js.org/)** - The original Ethereum JavaScript API
 
 ### Backend libraries {#backend-libraries}
 
-- **[ethers.js](https://docs.ethers.org/)** — Also works in Node.js for server-side scripts and bots
-- **[web3.py](https://web3py.readthedocs.io/)** — Python library for Ethereum interaction
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** — Official Go library from the Geth team
+- **[ethers.js](https://docs.ethers.org/)** - Also works in Node.js for server-side scripts and bots
+- **[web3.py](https://web3py.readthedocs.io/)** - Python library for Ethereum interaction
+- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Official Go library from the Geth team
 
 ### Example: reading a token balance with Viem {#example-viem}
 
@@ -148,7 +148,7 @@ const unwatch = client.watchEvent({
 
 ## Simulating transactions {#simulating}
 
-Before sending a transaction, you can **simulate** it to check if it would succeed — and to see its return value — without spending gas. This is useful for catching errors early and for previewing outcomes.
+Before sending a transaction, you can **simulate** it to check if it would succeed—and to see its return value—without spending gas. This is useful for catching errors early and for previewing outcomes.
 
 Most client libraries support this through `eth_call`:
 
@@ -180,7 +180,7 @@ In a dapp, the user's wallet (like MetaMask, Rainbow, or WalletConnect) handles 
 - [Viem documentation: Reading and writing to contracts](https://viem.sh/docs/contract/readContract)
 - [ethers.js documentation: Contracts](https://docs.ethers.org/v6/api/contract/)
 - [Solidity ABI specification](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [What is an ABI? — Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [What is an ABI? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
 
 ## Related topics {#related-topics}
 
