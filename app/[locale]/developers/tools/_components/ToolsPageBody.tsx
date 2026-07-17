@@ -67,7 +67,7 @@ const ToolsPageBody = async ({
             noResults: t("page-developers-tools-no-results"),
           }}
         />
-        <div className="flex flex-col items-center gap-4 rounded-base bg-radial-a p-12">
+        <div className="bg-radial-a flex flex-col items-center gap-4 rounded-base p-12">
           <h2>{t("page-developers-tools-suggest-resource-title")}</h2>
           <p>{t("page-developers-tools-suggest-resource-description")}</p>
           <ButtonLink
