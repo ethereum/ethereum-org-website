@@ -2234,6 +2234,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lufa23"><img src="https://avatars.githubusercontent.com/u/67415638?v=4?s=100" width="100px;" alt="lufa23"/><br /><sub><b>lufa23</b></sub></a><br /><a href="#maintenance-lufa23" title="Maintenance">🚧</a> <a href="#tool-lufa23" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://mobula.io"><img src="https://avatars.githubusercontent.com/u/89188530?v=4?s=100" width="100px;" alt="Sacha Marcus"/><br /><sub><b>Sacha Marcus</b></sub></a><br /><a href="#tool-NBMSacha" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MegaRedHand"><img src="https://avatars.githubusercontent.com/u/47506558?v=4?s=100" width="100px;" alt="Tomás Grüner"/><br /><sub><b>Tomás Grüner</b></sub></a><br /><a href="#tool-MegaRedHand" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://nodeflare.app"><img src="https://avatars.githubusercontent.com/u/302281547?v=4?s=100" width="100px;" alt="NodeFlare"/><br /><sub><b>NodeFlare</b></sub></a><br /><a href="#maintenance-nodeflareapp" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
