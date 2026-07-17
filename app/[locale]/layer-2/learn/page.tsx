@@ -36,12 +36,12 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import PageJsonLD from "./page-jsonld"
 
-import callout2Image from "@/public/images/layer-2/learn-hero.png"
-import heroImg from "@/public/images/layer-2/learn-hero.png"
+import layer2NetworksCalloutImage from "@/public/images/counter-screen-network-towers-rings-collage-cut-out.png"
+import heroImg from "@/public/images/network-column-rooftop-piping-construction.png"
 import optimisticRollupImage from "@/public/images/layer-2/optimistic_rollup.png"
 import rollupImage from "@/public/images/layer-2/rollup-2.png"
 import zkRollupImage from "@/public/images/layer-2/zk_rollup.png"
-import callout1Image from "@/public/images/man-and-dog-playing.png"
+import layer2CalloutImage from "@/public/images/man-and-dog-playing.png"
 import daoImage from "@/public/images/use-cases/dao-2.png"
 import whatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 
@@ -336,7 +336,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <Section id="callouts">
             <Grid columns={2} size="wide">
               <Callout
-                image={callout1Image}
+                image={layer2CalloutImage}
                 title={t("page-layer-2-learn-callout-1-title")}
                 description={t("page-layer-2-learn-callout-1-description")}
               >
@@ -352,7 +352,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </ButtonLink>
               </Callout>
               <Callout
-                image={callout2Image}
+                image={layer2NetworksCalloutImage}
                 title={t("page-layer-2-learn-callout-2-title")}
                 description={t("page-layer-2-learn-callout-2-description")}
               >

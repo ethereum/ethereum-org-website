@@ -26,10 +26,10 @@ import { layer2Data } from "@/data/networks/networks"
 import PageJsonLD from "./page-jsonld"
 
 import { getGrowThePieData, getL2beatData } from "@/lib/data"
-import heroImage from "@/public/images/heroes/layer-2-hub-hero.png"
+import heroImg from "@/public/images/heroes/layer-2-hub-hero.png"
 import ethereumLogo from "@/public/images/layer-2/ethereum.png"
-import walkingImage from "@/public/images/layer-2/layer-2-walking.png"
-import exploreImage from "@/public/images/layer-2/learn-hero.png"
+import layer2LearnCalloutImage from "@/public/images/network-column-rooftop-piping-construction.png"
+import layer2NetworksCalloutImage from "@/public/images/counter-screen-network-towers-rings-collage-cut-out.png"
 import mainnetImage from "@/public/images/mainnet.png"
 import manDogCardImage from "@/public/images/man-and-dog-playing.png"
 
@@ -88,7 +88,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     title: t("page-layer-2-hero-title"),
     header: t("page-layer-2-hero-header"),
     description: t("page-layer-2-hero-description"),
-    heroImg: heroImage,
+    heroImg: heroImg,
     buttons: [
       {
         content: tCommon("nav-networks-explore-networks-label"),
@@ -461,7 +461,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <Section id="callouts">
           <Grid columns={2} size="wide">
             <Callout
-              image={exploreImage}
+              image={layer2NetworksCalloutImage}
               title={t("page-layer-2-callout-1-title")}
               description={t("page-layer-2-callout-1-description")}
             >
@@ -477,7 +477,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </ButtonLink>
             </Callout>
             <Callout
-              image={walkingImage}
+              image={layer2LearnCalloutImage}
               title={t("page-layer-2-callout-2-title")}
               description={t("page-layer-2-callout-2-description")}
             >

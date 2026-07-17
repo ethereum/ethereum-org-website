@@ -45,9 +45,9 @@ import {
   getGrowThePieMasterData,
   getL2beatData,
 } from "@/lib/data"
-import heroImg from "@/public/images/heroes/layer-2-hub-hero.png"
-import callout2Image from "@/public/images/layer-2/layer-2-walking.png"
-import callout1Image from "@/public/images/man-and-dog-playing.png"
+import heroImg from "@/public/images/counter-screen-network-towers-rings-collage-cut-out.png"
+import layer2LearnCalloutImage from "@/public/images/network-column-rooftop-piping-construction.png"
+import layer2CalloutImage from "@/public/images/man-and-dog-playing.png"
 import developingImage from "@/public/images/network-maturity/developing.svg"
 import emergingImage from "@/public/images/network-maturity/emerging.svg"
 import maturingImage from "@/public/images/network-maturity/maturing.svg"
@@ -312,7 +312,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <Section id="callouts">
             <Grid columns={2} size="wide">
               <Callout
-                image={callout1Image}
+                image={layer2CalloutImage}
                 title={t("page-layer-2-networks-callout-1-title")}
                 description={t("page-layer-2-networks-callout-1-description")}
               >
@@ -328,7 +328,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </ButtonLink>
               </Callout>
               <Callout
-                image={callout2Image}
+                image={layer2LearnCalloutImage}
                 title={t("page-layer-2-networks-callout-2-title")}
                 description={t("page-layer-2-networks-callout-2-description")}
               >
