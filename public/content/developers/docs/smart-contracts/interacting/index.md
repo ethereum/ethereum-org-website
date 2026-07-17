@@ -48,6 +48,8 @@ Writing always requires:
 2. A transaction signed by the account's private key
 3. The transaction to be mined and included in a block
 
+With [account abstraction](/roadmap/account-abstraction/), a smart contract account can also initiate writes, and a paymaster can cover gas on the user's behalf — so an EOA holding ETH is not strictly required.
+
 ## Understanding contract ABIs {#understanding-contract-abis}
 
 To interact with a smart contract, your application needs to know *what* the contract can do. This is where the **Application Binary Interface (ABI)** comes in.
@@ -171,7 +173,7 @@ In a dapp, the user's wallet (like MetaMask, Rainbow, or WalletConnect) handles 
 
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [Sending transactions using web3.js and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
-- [How to view NFT metadata with JavaScript](/developers/tutorials/how-to-view-nft-in-metamask/)
+- [How to view your NFT in your wallet](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## Further reading {#further-reading}
 
