@@ -170,7 +170,7 @@ In a dapp, the user's wallet (like MetaMask, Rainbow, or WalletConnect) handles 
 ## Related tutorials {#related-tutorials}
 
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
-- [Sending transactions using web3.js and Alchemy](/developers/tutorials/sending-transactions-using-web3js-and-alchemy/)
+- [Sending transactions using web3.js and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [How to view NFT metadata with JavaScript](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## Further reading {#further-reading}
