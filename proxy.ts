@@ -103,12 +103,5 @@ export default function proxy(request: NextRequest) {
 
 // Simplified matcher pattern
 export const config = {
-  matcher: [
-    "/((?!api|_next|_vercel|.well-known|.*\\.[^/]*$).*)",
-    // Opt feed routes back in: The first pattern excludes any path with a file
-    // extension, which would otherwise bypass next-intl locale handling for
-    // /latest/feed.xml and short-circuit the canonical redirect for
-    // /en/latest/feed.xml.
-    "/:locale?/latest/feed.xml",
-  ],
+  matcher: ["/((?!api|_next|_vercel|.well-known|.*\\.[^/]*$).*)"],
 }

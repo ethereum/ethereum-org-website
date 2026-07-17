@@ -40,7 +40,7 @@ const SwitchFilterInput = ({
           htmlFor={id}
           className="flex w-fit cursor-pointer flex-row items-center gap-0 text-base leading-normal font-normal"
         >
-          <span className="h-8 w-8">
+          <span className="h-8 w-8 shrink-0">
             {Icon && (
               <Icon className="mt-0.5 size-7" strokeWidth={1} aria-hidden />
             )}
@@ -59,7 +59,7 @@ const SwitchFilterInput = ({
       {description && (
         <FieldDescription
           id={descriptionId}
-          className="ms-8 text-base leading-normal font-normal text-body-medium"
+          className="ps-8 text-base leading-normal font-normal text-body-medium"
         >
           {description}
         </FieldDescription>

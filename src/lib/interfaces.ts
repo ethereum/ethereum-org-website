@@ -1,5 +1,3 @@
-import type { StaticImageData } from "next/image"
-
 import type {
   CommonHeroProps,
   FileContributor,
@@ -134,24 +132,6 @@ export interface ReqCommunityEvent {
   summary: string
   htmlLink: string
   location: string
-}
-
-/**
- * Community page
- */
-
-export interface ICard {
-  image: StaticImageData
-  title: string
-  description: string
-  alt: string
-  href: string
-}
-
-export interface IGetInvolvedCard {
-  emoji: string
-  title: string
-  description: string
 }
 
 /**

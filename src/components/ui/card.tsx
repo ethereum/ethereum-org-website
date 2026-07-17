@@ -6,6 +6,7 @@ import Emoji from "@/components/Emoji"
 
 import { cn } from "@/lib/utils/cn"
 
+import { Button, type ButtonProps } from "./buttons/Button"
 import { BaseLink, LinkProps } from "./Link"
 
 const cardVariants = cva(
@@ -13,7 +14,7 @@ const cardVariants = cva(
     "flex flex-col",
     "[--banner-radius:--spacing(1)] rounded-[calc(var(--card-pad)+var(--banner-radius))]",
     "text-body no-underline hover:text-body",
-    "transition-all duration-300 hover:transition-all hover:duration-300",
+    "transition-all duration-300",
     "**:data-[label=card-header]:pb-0 **:data-[label=card-footer]:pt-0"
   ),
   {
@@ -35,7 +36,34 @@ const cardVariants = cva(
         sm: "[--card-pad:--spacing(2.5)] [--content-space:--spacing(2.5)]",
         xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
+      hoverLift: { true: "hover-lift-base" },
+      border: { true: "ring ring-border" },
+      // Set internally from `href` -- names the link-group and drives the
+      // hover affordance below. Not a public prop (omitted from CardProps).
+      interactive: { true: "group/link", false: "" },
     },
+    compoundVariants: [
+      // Ghost link cards fill with the highlight bg on hover, no outline...
+      {
+        interactive: true,
+        variant: "ghost",
+        class: "hover:bg-background-highlight",
+      },
+      // ...every other link card keeps the primary outline ring.
+      {
+        interactive: true,
+        variant: ["base", "nested", "header-bar"],
+        class: "ring ring-transparent hover:ring-primary-hover",
+      },
+      // ...but a `border` link card keeps its border visible at rest (this must
+      // come after the rule above so `ring-border` wins over `ring-transparent`).
+      {
+        interactive: true,
+        border: true,
+        variant: ["base", "nested", "header-bar"],
+        class: "ring-border",
+      },
+    ],
     defaultVariants: {
       variant: "base",
       size: "base",
@@ -43,26 +71,53 @@ const cardVariants = cva(
   }
 )
 
-export type CardProps = React.HTMLAttributes<HTMLDivElement> &
+export type CardProps = React.HTMLAttributes<HTMLElement> &
   Pick<LinkProps, "href" | "customEventOptions"> &
-  VariantProps<typeof cardVariants>
+  Omit<VariantProps<typeof cardVariants>, "interactive">
 
-const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, href, customEventOptions, variant, size, ...props }, ref) => {
-    const classNames = [cardVariants({ variant, size }), className]
+const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
+  (
+    {
+      className,
+      href,
+      customEventOptions,
+      variant,
+      size,
+      hoverLift,
+      border,
+      ...props
+    },
+    ref
+  ) => {
+    const classes = cn(
+      cardVariants({
+        variant,
+        size,
+        hoverLift,
+        border,
+        interactive: !!href,
+      }),
+      className
+    )
     if (href) {
       return (
         <BaseLink
+          ref={ref as React.Ref<HTMLAnchorElement>}
           href={href}
-          className={cn(...classNames, "group/link")}
+          className={classes}
           customEventOptions={customEventOptions}
           hideArrow
-        >
-          <div ref={ref} className="flex flex-1 flex-col" {...props} />
-        </BaseLink>
+          {...props}
+        />
       )
     }
-    return <div ref={ref} className={cn(...classNames, "group")} {...props} />
+    return (
+      <div
+        ref={ref as React.Ref<HTMLDivElement>}
+        className={cn(classes, "group")}
+        {...props}
+      />
+    )
   }
 )
 Card.displayName = "Card"
@@ -74,6 +129,7 @@ const childSpacingVariants = cva("", {
       md: "[--content-space:--spacing(4)]",
       sm: "[--content-space:--spacing(2.5)]",
       xs: "[--content-space:--spacing(1)]",
+      none: "[--content-space:--spacing(0)]",
     },
   },
 })
@@ -102,7 +158,7 @@ const CardContent = React.forwardRef<
     className={cn(
       childSpacingVariants({ spacing }),
       "flex-1 space-y-(--content-space) p-(--card-pad)",
-      "text-body-medium **:data-[label=card-title]:text-body **:[strong]:text-body",
+      "text-body-medium **:data-[label=card-title]:text-body **:[:is(h2,h3,h4,h5,h6,strong)]:text-body",
       className
     )}
     {...props}
@@ -110,11 +166,12 @@ const CardContent = React.forwardRef<
 ))
 CardContent.displayName = "CardContent"
 
-const buttonVariants = cva("", {
+const buttonVariants = cva("gap-4", {
   variants: {
     buttons: {
-      full: "*:[button]:w-full *:[button]:text-center *:data-[label=button-link]:w-full *:data-[label=button-link]:text-center",
-      compact: "*:[button]:w-fit *:data-[label=button-link]:w-fit",
+      full: "flex flex-col *:[button]:w-full *:[button]:text-center *:data-[label=button-link]:w-full *:data-[label=button-link]:text-center",
+      compact:
+        "*:[button]:w-fit *:data-[label=button-link]:w-fit flex flex-wrap",
       inherit: "",
     },
   },
@@ -136,6 +193,28 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = "CardFooter"
 
+/**
+ * Presentational mirror of `Button` rendered as a non-interactive `<div>`, for use
+ * inside a `Card` that has an `href` (where the whole card is the anchor and a real
+ * `Button`/`ButtonLink` would nest an interactive element inside the link). Reuses all
+ * Button styling via `asChild`; Button's `hover-link` variant makes its hover state
+ * fire off the card's `group/link`, so hovering anywhere on the card is visually
+ * identical to hovering the button itself -- no hover styles are duplicated here.
+ */
+type CardButtonFakeProps = React.HTMLAttributes<HTMLDivElement> &
+  Pick<ButtonProps, "variant" | "size" | "isSecondary">
+
+const CardButtonFake = React.forwardRef<HTMLDivElement, CardButtonFakeProps>(
+  ({ className, variant, size, isSecondary, children, ...props }, ref) => (
+    <Button asChild variant={variant} size={size} isSecondary={isSecondary}>
+      <div ref={ref} data-label="button-link" className={className} {...props}>
+        {children}
+      </div>
+    </Button>
+  )
+)
+CardButtonFake.displayName = "CardButtonFake"
+
 const CardEmoji = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & { text: string }
@@ -151,6 +230,21 @@ const CardEmoji = React.forwardRef<
 ))
 CardEmoji.displayName = "CardEmoji"
 
+const CardIconContainer = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, children, ...props }, ref) => (
+  <div
+    ref={ref}
+    data-label="card-icon"
+    className={cn("text-primary *:size-12", className)}
+    {...props}
+  >
+    {children}
+  </div>
+))
+CardIconContainer.displayName = "CardIconContainer"
+
 const cardBannerVariants = cva(
   cn(
     "overflow-hidden rounded-(--banner-radius)",
@@ -159,15 +253,9 @@ const cardBannerVariants = cva(
   {
     variants: {
       background: {
-        "accent-a":
-          "bg-linear-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20",
-        "accent-b":
-          "bg-linear-to-b from-accent-b/5 to-accent-b/10 dark:from-accent-b/10 dark:to-accent-b/20",
-        "accent-c":
-          "bg-linear-to-b from-accent-c/5 to-accent-c/10 dark:from-accent-c/10 dark:to-accent-c/20",
-        primary:
-          "bg-linear-to-b from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20",
-        body: "bg-linear-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20",
+        "accent-a": "bg-tint-accent-a",
+        primary: "bg-tint-primary",
+        body: "bg-tint-body",
         none: "",
       },
       size: {
@@ -176,6 +264,7 @@ const cardBannerVariants = cva(
         base: "h-48 w-full self-stretch",
         sm: "h-36 w-full self-stretch",
         thumbnail: "size-16 shrink-0",
+        "thumbnail-lg": "size-32 shrink-0",
       },
       fit: {
         cover: "[&_img]:object-cover",
@@ -250,13 +339,12 @@ const CardBanner = React.forwardRef<HTMLDivElement, CardBannerProps>(
 CardBanner.displayName = "CardBanner"
 
 const titleVariants = cva(
-  "group-hover/link:underline group-focus/link:underline text-pretty",
+  "group-hover/link:underline group-focus/link:underline text-pretty text-2xl",
   {
     variants: {
-      variant: {
-        semibold: "text-lg font-semibold",
-        bold: "text-2xl font-bold",
-        black: "text-3xl font-black",
+      size: {
+        sm: "text-lg",
+        lg: "text-3xl",
       },
       spacing: {
         quarter:
@@ -267,7 +355,6 @@ const titleVariants = cva(
     },
 
     defaultVariants: {
-      variant: "bold",
       spacing: "quarter",
     },
   }
@@ -279,13 +366,13 @@ const CardTitle = React.forwardRef<
     VariantProps<typeof titleVariants> & {
       asChild?: boolean
     }
->(({ asChild, className, variant, spacing, ...props }, ref) => {
+>(({ asChild, className, size: variant, spacing, ...props }, ref) => {
   const Comp = asChild ? Slot : "h3"
   return (
     <Comp
       ref={ref}
       data-label="card-title"
-      className={cn(titleVariants({ variant, spacing }), className)}
+      className={cn(titleVariants({ size: variant, spacing }), className)}
       {...props}
     />
   )
@@ -324,10 +411,12 @@ CardParagraph.displayName = "CardParagraph"
 export {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardEmoji,
   CardFooter,
   CardHeader,
+  CardIconContainer,
   CardParagraph,
   CardTitle,
 }

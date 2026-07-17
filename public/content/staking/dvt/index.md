@@ -4,8 +4,6 @@ description: Distributed validator technology enables the distributed operation 
 lang: en
 ---
 
-# Distributed validator technology {#distributed-validator-technology}
-
 Distributed validator technology (DVT) is an approach to validator security that spreads out key management and signing responsibilities across multiple parties, to reduce single points of failure, and increase validator resiliency.
 
 It does this by **splitting the private key** used to secure a validator **across many computers** organized into a "cluster". The benefit of this is that it makes it very difficult for attackers to gain access to the key, because it is not stored in full on any single machine. It also allows for some nodes to go offline, as the necessary signing can be done by a subset of the machines in each cluster. This reduces single points of failure from the network and makes the whole validator set more robust.

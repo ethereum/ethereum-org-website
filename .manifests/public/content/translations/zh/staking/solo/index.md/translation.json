@@ -1,0 +1,301 @@
+{
+  "version": 1,
+  "locale": "zh",
+  "translatedAt": "2026-06-18T00:55:39.731Z",
+  "englishManifestHash": "d6f7d4806ea9",
+  "placeholderOrder": [
+    "LINK-2a7890",
+    "LINK-732d7c",
+    "LINK-a21a82",
+    "COMPONENT-318b54",
+    "COMPONENT-2cc484",
+    "COMPONENT-1586c8",
+    "COMPONENT-37974a",
+    "COMPONENT-2d3f82",
+    "COMPONENT-c28d99",
+    "LINK-7cd43f",
+    "COMPONENT-d85931",
+    "HTMLTAG-092ec9",
+    "COMPONENT-21a5fb",
+    "HTMLTAG-91be55",
+    "LINK-8ee4c0",
+    "LINK-775270",
+    "HTMLTAG-a2abfe",
+    "LINK-9677ba",
+    "LINK-8bde19",
+    "COMPONENT-a4ae03",
+    "COMPONENT-68d072",
+    "HTMLTAG-09f065",
+    "LINK-cbc0ee",
+    "LINK-13e7fd",
+    "COMPONENT-6feef7",
+    "COMPONENT-de9c4d",
+    "HTMLTAG-87f84c",
+    "HTMLTAG-ded77f",
+    "COMPONENT-2a7d9b",
+    "HTMLTAG-36b875",
+    "COMPONENT-d5079f",
+    "COMPONENT-4e8e8f",
+    "LINK-11109b",
+    "LINK-5e75de",
+    "LINK-5b6f31",
+    "LINK-a043ce",
+    "LINK-46b55d",
+    "LINK-2e3347"
+  ],
+  "placeholderMap": {
+    "COMPONENT-37974a": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SoloStaking",
+        "eventName": "clicked required reading"
+      }
+    },
+    "COMPONENT-2d3f82": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SoloStaking",
+        "eventName": "clicked comfortable with computers"
+      }
+    },
+    "COMPONENT-c28d99": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SoloStaking",
+        "eventName": "clicked secure key management"
+      }
+    },
+    "LINK-7cd43f": {
+      "type": "link",
+      "values": {
+        "url": "/security/"
+      }
+    },
+    "COMPONENT-d85931": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SoloStaking",
+        "eventName": "clicked reliable uptime"
+      }
+    },
+    "HTMLTAG-092ec9": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "#faq"
+      }
+    },
+    "COMPONENT-21a5fb": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SoloStaking",
+        "eventName": "clicked slashing risk"
+      }
+    },
+    "HTMLTAG-91be55": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"
+      }
+    },
+    "COMPONENT-a4ae03": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "COMPONENT-68d072": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-09f065": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://www.attestant.io/posts/understanding-validator-effective-balance/"
+      }
+    },
+    "LINK-cbc0ee": {
+      "type": "link",
+      "values": {
+        "url": "/staking/saas/"
+      }
+    },
+    "LINK-13e7fd": {
+      "type": "link",
+      "values": {
+        "url": "/staking/pools/"
+      }
+    },
+    "COMPONENT-6feef7": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "COMPONENT-de9c4d": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-87f84c": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://hackernoon.com/ethereums-client-diversity-problem"
+      }
+    },
+    "HTMLTAG-ded77f": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50"
+      }
+    },
+    "COMPONENT-2a7d9b": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "HTMLTAG-36b875": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA"
+      }
+    },
+    "COMPONENT-d5079f": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "COMPONENT-4e8e8f": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard"
+      }
+    },
+    "COMPONENT-318b54": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "💸"
+      }
+    },
+    "COMPONENT-2cc484": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🎛️"
+      }
+    },
+    "COMPONENT-1586c8": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "emoji": "🔐"
+      }
+    },
+    "HTMLTAG-a2abfe": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "em"
+      }
+    },
+    "LINK-2a7890": {
+      "type": "link",
+      "values": {
+        "url": "/run-a-node/"
+      }
+    },
+    "LINK-732d7c": {
+      "type": "link",
+      "values": {
+        "url": "#faq"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-8ee4c0": {
+      "type": "link",
+      "values": {
+        "url": "/staking/withdrawals/"
+      }
+    },
+    "LINK-775270": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/client-diversity/"
+      }
+    },
+    "LINK-9677ba": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/staking-deposit-cli/"
+      }
+    },
+    "LINK-8bde19": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/adding-staking-products/"
+      }
+    },
+    "LINK-11109b": {
+      "type": "link",
+      "values": {
+        "url": "https://www.staking.directory/"
+      }
+    },
+    "LINK-5e75de": {
+      "type": "link",
+      "values": {
+        "url": "https://hackernoon.com/ethereums-client-diversity-problem"
+      }
+    },
+    "LINK-5b6f31": {
+      "type": "link",
+      "values": {
+        "url": "https://www.attestant.io/posts/helping-client-diversity/"
+      }
+    },
+    "LINK-a043ce": {
+      "type": "link",
+      "values": {
+        "url": "https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA"
+      }
+    },
+    "LINK-46b55d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=C2wwu1IlhDc"
+      }
+    },
+    "LINK-2e3347": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:55:39.731Z",
+      "status": "success"
+    }
+  }
+}

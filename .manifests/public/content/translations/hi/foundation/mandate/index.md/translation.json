@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "locale": "hi",
+  "translatedAt": "2026-06-08T09:32:05.818Z",
+  "englishManifestHash": "b905d5da8dec",
+  "placeholderOrder": [
+    "LINK-6ebfa7",
+    "LINK-f0e698",
+    "HTMLTAG-8af39f"
+  ],
+  "placeholderMap": {
+    "HTMLTAG-8af39f": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "div",
+        "className": "text-sm [&_p]:mb-2 [&_p]:mt-0"
+      }
+    },
+    "LINK-6ebfa7": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.foundation/ef-mandate.pdf"
+      }
+    },
+    "LINK-f0e698": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/tx/0x5dd574df963a1df1f064791e0f6ff41ec972cdbba12293b7e1ece582052ba855"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T09:32:05.818Z",
+      "status": "success"
+    }
+  }
+}

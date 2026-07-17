@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "Apa itu Ethereum? (Panduan Lengkap) | ethereum.org",
+  "page-what-is-ethereum-meta-title": "Apa itu Ethereum? (Panduan Lengkap)",
   "page-what-is-ethereum-meta-description": "Gambaran lengkap tentang apa itu Ethereum, bagaimana cara kerjanya, apa fungsinya, dan bagaimana mulai menggunakan atau membangun di atasnya. Dijelaskan dengan istilah yang sederhana.",
   "page-what-is-ethereum-title": "Apa itu Ethereum?",
   "page-what-is-ethereum-hero-description-1": "Ethereum adalah jaringan rantai blok terdesentralisasi dan platform pengembangan perangkat lunak, yang didukung oleh mata uang kripto ether (ETH).",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "Apa peta jalan Ethereum untuk tahun 2026?",
   "page-what-is-ethereum-roadmap-intro-1": "Ethereum tidak mengikuti peta jalan yang tetap. Ethereum mengikuti visi bersama.",
   "page-what-is-ethereum-roadmap-intro-2": "Peningkatan jaringan dibuat sebagai EIP dan dikembangkan secara publik oleh kontributor di seluruh dunia. Tidak ada tim pusat yang memutuskan apa yang terjadi, hanya orang-orang yang membangun apa yang mereka yakini berguna berdasarkan kebutuhan pengguna.",
-  "page-what-is-ethereum-roadmap-intro-3": "Fusaka adalah peningkatan terbaru, diluncurkan pada bulan Desember 2025. Peningkatan ini memperkenalkan PeerDAS untuk ketersediaan data lapisan 2 (l2) yang lebih efisien dan menaikkan batas gas bawaan menjadi ~60 juta. Menatap tahun 2026, Glamsterdam sedang dalam pengembangan dan diharapkan hadir pada paruh pertama tahun 2026.",
+  "page-what-is-ethereum-roadmap-intro-3": "Fusaka adalah peningkatan terbaru, yang diluncurkan pada bulan Desember 2025. Peningkatan ini memperkenalkan PeerDAS untuk ketersediaan data l2 yang lebih efisien dan menaikkan batas gas bawaan menjadi ~60M. Menatap tahun 2026, Glamsterdam sedang dalam tahap pengembangan dan diharapkan hadir pada paruh kedua tahun 2026.",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>Ke depannya</a>, prioritas Ethereum meliputi:",
   "page-what-is-ethereum-roadmap-priority-1": "Membuat protokol inti dan lapisan 2 (l2)-nya lebih cepat dan lebih murah untuk semua orang",
   "page-what-is-ethereum-roadmap-priority-2": "Meningkatkan pengalaman bagi pengguna dan pengembang",

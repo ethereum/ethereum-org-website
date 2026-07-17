@@ -1,0 +1,375 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/eth/supply/index.md",
+  "generatedAt": "2026-06-08T09:10:30.572Z",
+  "rootHash": "54ca69e2cfb0",
+  "tree": {
+    "contentHash": "154e5afc4f2f",
+    "anchorHash": "7e85bc56fb55",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "5d73cf97791a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "5228b2b6c1d2"
+      },
+      "frontmatter:description": {
+        "contentHash": "f552f47ac84c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prerequisites": {
+        "contentHash": "bc461835d6bc",
+        "anchorHash": "9c2fb015995c",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "130c9b73ef38",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f56b9841cfbb",
+            "anchorHash": "38bd8ce2b030"
+          },
+          "prose:5": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "60496f0cfa8a",
+            "anchorHash": "d61a7ea1fcd6"
+          },
+          "prose:6": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "6ed157982b1b",
+            "anchorHash": "0e500613f6a4"
+          },
+          "prose:7": {
+            "contentHash": "4aa9bfd2f175",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "0cd361a3dd6a",
+            "anchorHash": "4dff7446d93b"
+          },
+          "prose:8": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      },
+      "current-eth-supply": {
+        "contentHash": "5eb66b506dcd",
+        "anchorHash": "012de777414d",
+        "labelHash": "d322cf58bd51",
+        "children": {
+          "_label": {
+            "contentHash": "d322cf58bd51",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "2b938deb6586",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "00e4762b6821",
+            "anchorHash": "93b7e104b610"
+          },
+          "prose:2": {
+            "contentHash": "80b222afceac",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "why-eth-supply-matters": {
+        "contentHash": "880e8946ea28",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "895d1c302bf4",
+        "children": {
+          "_label": {
+            "contentHash": "895d1c302bf4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9930fd9e49c4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "eth-issuance": {
+        "contentHash": "91e6d79cf98d",
+        "anchorHash": "196a4464bbc6",
+        "labelHash": "a66122d3bebd",
+        "children": {
+          "_label": {
+            "contentHash": "a66122d3bebd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "284202c6802f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "in-simple-terms": {
+            "contentHash": "ad58e32f1340",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "bc09b8f6b271",
+            "children": {
+              "_label": {
+                "contentHash": "bc09b8f6b271",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "5379128d86a3",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "in-simple-terms"
+        ]
+      },
+      "eth-supply-today": {
+        "contentHash": "4c2c8cb176c0",
+        "anchorHash": "2167e3b5ef39",
+        "labelHash": "b497af75384c",
+        "children": {
+          "_label": {
+            "contentHash": "b497af75384c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "e34a1aba701a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "00e4762b6821",
+            "anchorHash": "93b7e104b610"
+          },
+          "prose:2": {
+            "contentHash": "0098275aaa4c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "tools-to-track-eth-supply-and-issuance": {
+            "contentHash": "d096ba6f4053",
+            "anchorHash": "b63840b06114",
+            "labelHash": "2755305a1cfd",
+            "children": {
+              "_label": {
+                "contentHash": "2755305a1cfd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:2": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "00e4762b6821",
+                "anchorHash": "93b7e104b610"
+              },
+              "prose:3": {
+                "contentHash": "fb8ed6f83630",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "d0299bb7f22b",
+                "anchorHash": "fa8d01891bbc"
+              },
+              "prose:4": {
+                "contentHash": "a7ade0c76e78",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "tools-to-track-eth-supply-and-issuance"
+        ]
+      },
+      "future-eth-supply": {
+        "contentHash": "03fef829b7a8",
+        "anchorHash": "d993acf0c0c6",
+        "labelHash": "f4aebef2e6b2",
+        "children": {
+          "_label": {
+            "contentHash": "f4aebef2e6b2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "3331670fd179",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d9a998cac660",
+            "anchorHash": "28704a15211d"
+          },
+          "prose:4": {
+            "contentHash": "a3a61f7cc166",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3dfd705f6349",
+            "anchorHash": "d08920759d1c"
+          },
+          "prose:5": {
+            "contentHash": "ac9f9a10ec9a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "be50ffa0fc02",
+            "anchorHash": "0d9f7701bb4e"
+          },
+          "prose:6": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
+        ]
+      },
+      "recap": {
+        "contentHash": "975604ed009e",
+        "anchorHash": "265fd077240b",
+        "labelHash": "f1826f963403",
+        "children": {
+          "_label": {
+            "contentHash": "f1826f963403",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "d0ec1021a5c0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "00e4762b6821",
+            "anchorHash": "93b7e104b610"
+          },
+          "prose:6": {
+            "contentHash": "42d35ae52515",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "00e4762b6821",
+            "anchorHash": "93b7e104b610"
+          },
+          "prose:7": {
+            "contentHash": "b88c03d410ed",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "16b89e552762",
+            "anchorHash": "e2d7840a7d2a"
+          },
+          "prose:8": {
+            "contentHash": "8e4ec8df5c0e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "00e4762b6821",
+            "anchorHash": "93b7e104b610"
+          },
+          "prose:9": {
+            "contentHash": "1c86e991710c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "87ae3b3dd4be",
+            "anchorHash": "28704a15211d"
+          },
+          "prose:10": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prerequisites",
+      "current-eth-supply",
+      "why-eth-supply-matters",
+      "eth-issuance",
+      "eth-supply-today",
+      "future-eth-supply",
+      "recap"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

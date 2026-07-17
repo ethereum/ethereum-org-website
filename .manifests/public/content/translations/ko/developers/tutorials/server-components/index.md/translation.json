@@ -1,0 +1,654 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-06-18T00:19:17.557Z",
+  "englishManifestHash": "ab55bb4d8808",
+  "placeholderOrder": [
+    "IMAGE-22341d",
+    "IMAGE-e9d4f9",
+    "LINK-f03bb5",
+    "LINK-330783",
+    "LINK-fdcb1c",
+    "LINK-5ed86a",
+    "LINK-cfd598",
+    "CODEBLOCK-a972f6",
+    "LINK-dd003e",
+    "CODEBLOCK-7c5e37",
+    "CODE-e9cbb0",
+    "LINK-4b2ff8",
+    "CODEBLOCK-9ca8e9",
+    "CODEBLOCK-270309",
+    "LINK-3f5784",
+    "CODE-841254",
+    "LINK-45e67d",
+    "CODE-841254",
+    "CODEBLOCK-6f39b6",
+    "LINK-55276b",
+    "LINK-1b6462",
+    "CODE-56ef8f",
+    "LINK-a31a27",
+    "LINK-f24d01",
+    "CODEBLOCK-56eef0",
+    "LINK-7b2ffb",
+    "CODEBLOCK-94290e",
+    "LINK-aa1cea",
+    "CODEBLOCK-126bc8",
+    "CODE-e9cbb0",
+    "CODEBLOCK-f20180",
+    "LINK-52b07d",
+    "CODE-adf33a",
+    "CODEBLOCK-0704e9",
+    "LINK-b6bd6c",
+    "LINK-1d6dbc",
+    "CODE-2bcb43",
+    "CODEBLOCK-2739e0",
+    "LINK-50dc49",
+    "CODE-a97d74",
+    "CODE-742bc7",
+    "CODE-e0ed47",
+    "CODE-a54942",
+    "CODE-c52233",
+    "LINK-84500b",
+    "CODE-306679",
+    "CODEBLOCK-6f8d92",
+    "LINK-b38f83",
+    "CODEBLOCK-774211",
+    "LINK-5c534b",
+    "CODEBLOCK-a8479e",
+    "LINK-535395",
+    "CODE-2bcb43",
+    "LINK-d317b7",
+    "CODE-b8ba2e",
+    "CODE-331634",
+    "LINK-43426a",
+    "CODE-231bf8",
+    "LINK-9ea2a7",
+    "CODE-1aefe4",
+    "LINK-a58df6",
+    "CODE-1aefe4",
+    "CODE-2d4a63",
+    "CODEBLOCK-a52e23",
+    "CODE-2d4a63",
+    "CODE-2d4a63",
+    "CODE-1eec97",
+    "CODE-a2e1e8",
+    "CODE-1eec97",
+    "CODEBLOCK-278922",
+    "CODE-10fd87",
+    "LINK-079437",
+    "CODE-ca1919",
+    "CODEBLOCK-b8c1f8",
+    "CODEBLOCK-bbd0ae",
+    "LINK-2e3e9b",
+    "CODE-042303",
+    "CODE-c986a5",
+    "CODEBLOCK-cc76ea",
+    "CODE-a51c57",
+    "CODEBLOCK-17ae81",
+    "CODE-efb344",
+    "CODE-0a367b",
+    "CODE-18f6b0",
+    "CODEBLOCK-388333",
+    "CODE-ca1919",
+    "CODE-7ae45a",
+    "LINK-24f7cc",
+    "LINK-0ce682",
+    "CODEBLOCK-606559",
+    "CODEBLOCK-c9b459",
+    "CODE-cced28",
+    "CODE-5efcd7",
+    "CODE-969545",
+    "CODE-a28223",
+    "CODEBLOCK-fb4c4c",
+    "CODE-120970",
+    "CODE-1aefe4",
+    "CODEBLOCK-3e098a",
+    "CODE-969545",
+    "CODE-19ed40",
+    "LINK-f1b2a9",
+    "CODE-a43a91",
+    "LINK-fcd23e",
+    "CODEBLOCK-8f0e07",
+    "CODE-36964a",
+    "LINK-f03bb5",
+    "LINK-f915fb"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-a972f6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7c5e37": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9ca8e9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-270309": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6f39b6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-56eef0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-94290e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-126bc8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f20180": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-0704e9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2739e0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-6f8d92": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-774211": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a8479e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a52e23": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-278922": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b8c1f8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-bbd0ae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-cc76ea": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-17ae81": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-388333": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-606559": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c9b459": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-fb4c4c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3e098a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-8f0e07": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-e9cbb0": {
+      "type": "inline-code",
+      "values": {
+        "content": ".env"
+      }
+    },
+    "CODE-841254": {
+      "type": "inline-code",
+      "values": {
+        "content": "src/app.ts"
+      }
+    },
+    "CODE-56ef8f": {
+      "type": "inline-code",
+      "values": {
+        "content": "Address"
+      }
+    },
+    "CODE-adf33a": {
+      "type": "inline-code",
+      "values": {
+        "content": "as const"
+      }
+    },
+    "CODE-2bcb43": {
+      "type": "inline-code",
+      "values": {
+        "content": "view"
+      }
+    },
+    "CODE-a97d74": {
+      "type": "inline-code",
+      "values": {
+        "content": "process.env"
+      }
+    },
+    "CODE-742bc7": {
+      "type": "inline-code",
+      "values": {
+        "content": "string | undefined"
+      }
+    },
+    "CODE-e0ed47": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x${string}"
+      }
+    },
+    "CODE-a54942": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x"
+      }
+    },
+    "CODE-c52233": {
+      "type": "inline-code",
+      "values": {
+        "content": "PRIVATE_KEY"
+      }
+    },
+    "CODE-306679": {
+      "type": "inline-code",
+      "values": {
+        "content": "privateKeyToAccount"
+      }
+    },
+    "CODE-b8ba2e": {
+      "type": "inline-code",
+      "values": {
+        "content": "pure"
+      }
+    },
+    "CODE-331634": {
+      "type": "inline-code",
+      "values": {
+        "content": "read"
+      }
+    },
+    "CODE-231bf8": {
+      "type": "inline-code",
+      "values": {
+        "content": "greet"
+      }
+    },
+    "CODE-1aefe4": {
+      "type": "inline-code",
+      "values": {
+        "content": "await"
+      }
+    },
+    "CODE-2d4a63": {
+      "type": "inline-code",
+      "values": {
+        "content": "async"
+      }
+    },
+    "CODE-1eec97": {
+      "type": "inline-code",
+      "values": {
+        "content": "Promise"
+      }
+    },
+    "CODE-a2e1e8": {
+      "type": "inline-code",
+      "values": {
+        "content": "Promise<any>"
+      }
+    },
+    "CODE-10fd87": {
+      "type": "inline-code",
+      "values": {
+        "content": "write"
+      }
+    },
+    "CODE-ca1919": {
+      "type": "inline-code",
+      "values": {
+        "content": "setGreeting"
+      }
+    },
+    "CODE-042303": {
+      "type": "inline-code",
+      "values": {
+        "content": "watchEvent"
+      }
+    },
+    "CODE-c986a5": {
+      "type": "inline-code",
+      "values": {
+        "content": "SetGreeting"
+      }
+    },
+    "CODE-a51c57": {
+      "type": "inline-code",
+      "values": {
+        "content": "onLogs"
+      }
+    },
+    "CODE-efb344": {
+      "type": "inline-code",
+      "values": {
+        "content": "logs[0].args"
+      }
+    },
+    "CODE-0a367b": {
+      "type": "inline-code",
+      "values": {
+        "content": "sender"
+      }
+    },
+    "CODE-18f6b0": {
+      "type": "inline-code",
+      "values": {
+        "content": "greeting"
+      }
+    },
+    "CODE-7ae45a": {
+      "type": "inline-code",
+      "values": {
+        "content": "package.json"
+      }
+    },
+    "CODE-cced28": {
+      "type": "inline-code",
+      "values": {
+        "content": "start"
+      }
+    },
+    "CODE-5efcd7": {
+      "type": "inline-code",
+      "values": {
+        "content": "tsc"
+      }
+    },
+    "CODE-969545": {
+      "type": "inline-code",
+      "values": {
+        "content": "typescript"
+      }
+    },
+    "CODE-a28223": {
+      "type": "inline-code",
+      "values": {
+        "content": "node_modules/.bin"
+      }
+    },
+    "CODE-120970": {
+      "type": "inline-code",
+      "values": {
+        "content": "module"
+      }
+    },
+    "CODE-19ed40": {
+      "type": "inline-code",
+      "values": {
+        "content": "process"
+      }
+    },
+    "CODE-a43a91": {
+      "type": "inline-code",
+      "values": {
+        "content": "^<version>"
+      }
+    },
+    "CODE-36964a": {
+      "type": "inline-code",
+      "values": {
+        "content": "dist/app.js"
+      }
+    },
+    "IMAGE-22341d": {
+      "type": "image",
+      "values": {
+        "path": "./fig-1.svg"
+      }
+    },
+    "IMAGE-e9d4f9": {
+      "type": "image",
+      "values": {
+        "path": "./fig-2.svg"
+      }
+    },
+    "LINK-f03bb5": {
+      "type": "link",
+      "values": {
+        "url": "/zero-knowledge-proofs"
+      }
+    },
+    "LINK-330783": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/oracles/"
+      }
+    },
+    "LINK-fdcb1c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/mev/#mev-examples-dex-arbitrage"
+      }
+    },
+    "LINK-5ed86a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240715-server-component"
+      }
+    },
+    "LINK-cfd598": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code"
+      }
+    },
+    "LINK-dd003e": {
+      "type": "link",
+      "values": {
+        "url": "https://nodejs.org/en/download/package-manager"
+      }
+    },
+    "LINK-4b2ff8": {
+      "type": "link",
+      "values": {
+        "url": "https://holesky-faucet.pk910.de/"
+      }
+    },
+    "LINK-3f5784": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract"
+      }
+    },
+    "LINK-45e67d": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240715-server-component/blob/main/src/app.ts"
+      }
+    },
+    "LINK-55276b": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/"
+      }
+    },
+    "LINK-1b6462": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/glossary/types#address"
+      }
+    },
+    "LINK-f24d01": {
+      "type": "link",
+      "values": {
+        "url": "https://www.typescriptlang.org/"
+      }
+    },
+    "LINK-a31a27": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Strong_and_weak_typing"
+      }
+    },
+    "LINK-7b2ffb": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/accounts/privateKey"
+      }
+    },
+    "LINK-aa1cea": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/eth-clients/holesky"
+      }
+    },
+    "LINK-52b07d": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#abi"
+      }
+    },
+    "LINK-b6bd6c": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/clients/public.html"
+      }
+    },
+    "LINK-1d6dbc": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_view_functions.htm"
+      }
+    },
+    "LINK-50dc49": {
+      "type": "link",
+      "values": {
+        "url": "https://www.totaltypescript.com/how-to-strongly-type-process-env"
+      }
+    },
+    "LINK-84500b": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/accounts/privateKey"
+      }
+    },
+    "LINK-b38f83": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/clients/wallet"
+      }
+    },
+    "LINK-5c534b": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/contract/getContract"
+      }
+    },
+    "LINK-535395": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_view_functions.htm"
+      }
+    },
+    "LINK-d317b7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm"
+      }
+    },
+    "LINK-43426a": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217"
+      }
+    },
+    "LINK-9ea2a7": {
+      "type": "link",
+      "values": {
+        "url": "https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE"
+      }
+    },
+    "LINK-a58df6": {
+      "type": "link",
+      "values": {
+        "url": "https://www.w3schools.com/js/js_promise.asp"
+      }
+    },
+    "LINK-079437": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862"
+      }
+    },
+    "LINK-2e3e9b": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/actions/public/watchEvent"
+      }
+    },
+    "LINK-24f7cc": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/qbzzt/20240715-server-component/blob/main/package.json"
+      }
+    },
+    "LINK-0ce682": {
+      "type": "link",
+      "values": {
+        "url": "https://nodejs.org/en"
+      }
+    },
+    "LINK-f1b2a9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/npm/node-semver?tab=readme-ov-file#caret-ranges-123-025-004"
+      }
+    },
+    "LINK-fcd23e": {
+      "type": "link",
+      "values": {
+        "url": "https://semver.org"
+      }
+    },
+    "LINK-f915fb": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptodocguy.pro/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-18T00:19:17.557Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "version": 1,
+  "locale": "ur",
+  "translatedAt": "2026-06-19T23:01:27.286Z",
+  "englishManifestHash": "483c0e342949",
+  "placeholderOrder": [
+    "LINK-58024a",
+    "LINK-282029",
+    "LINK-2abfba",
+    "LINK-8a4f66",
+    "LINK-401851",
+    "LINK-58024a",
+    "LINK-bf0d80",
+    "LINK-025d70",
+    "CODEBLOCK-8b766b",
+    "IMAGE-5fd42b",
+    "LINK-a7e8fd",
+    "IMAGE-d42916",
+    "LINK-b49fa8",
+    "LINK-eedb51",
+    "CODE-8fe215",
+    "CODE-3a6eb0",
+    "CODEBLOCK-438825",
+    "LINK-6c4cfe",
+    "LINK-eedb51",
+    "CODE-d04b98",
+    "CODE-2dbec1",
+    "LINK-3d0e6d",
+    "IMAGE-6fb7a9",
+    "LINK-2016eb",
+    "CODEBLOCK-436eed",
+    "LINK-47f23c",
+    "CODEBLOCK-ed31f3",
+    "IMAGE-240bce",
+    "LINK-6c4cfe",
+    "CODEBLOCK-16c87f",
+    "IMAGE-8de478",
+    "LINK-3d0e6d",
+    "IMAGE-37083a",
+    "IMAGE-f3fdff",
+    "CODEBLOCK-044101",
+    "LINK-3d0e6d",
+    "IMAGE-e87e03",
+    "CODEBLOCK-3a6d03",
+    "IMAGE-4fa05d",
+    "CODEBLOCK-2c916d",
+    "IMAGE-decc20",
+    "IMAGE-72e23b",
+    "CODEBLOCK-00dabd",
+    "LINK-b49fa8",
+    "LINK-87f099"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-8b766b": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-438825": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-436eed": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ed31f3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-16c87f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-044101": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3a6d03": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2c916d": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-00dabd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-8fe215": {
+      "type": "inline-code",
+      "values": {
+        "content": "ether"
+      }
+    },
+    "CODE-3a6eb0": {
+      "type": "inline-code",
+      "values": {
+        "content": "data"
+      }
+    },
+    "CODE-d04b98": {
+      "type": "inline-code",
+      "values": {
+        "content": "hash"
+      }
+    },
+    "CODE-2dbec1": {
+      "type": "inline-code",
+      "values": {
+        "content": "parent_hash"
+      }
+    },
+    "IMAGE-5fd42b": {
+      "type": "image",
+      "values": {
+        "path": "./etherscan_view.png"
+      }
+    },
+    "IMAGE-d42916": {
+      "type": "image",
+      "values": {
+        "path": "./dune_view.png"
+      }
+    },
+    "IMAGE-6fb7a9": {
+      "type": "image",
+      "values": {
+        "path": "./parent_hash.png"
+      }
+    },
+    "IMAGE-240bce": {
+      "type": "image",
+      "values": {
+        "path": "./list_of_txn.png"
+      }
+    },
+    "IMAGE-8de478": {
+      "type": "image",
+      "values": {
+        "path": "./successful_txn.png"
+      }
+    },
+    "IMAGE-37083a": {
+      "type": "image",
+      "values": {
+        "path": "./daily_blocks.png"
+      }
+    },
+    "IMAGE-f3fdff": {
+      "type": "image",
+      "values": {
+        "path": "./avg_daily_blocks.png"
+      }
+    },
+    "IMAGE-e87e03": {
+      "type": "image",
+      "values": {
+        "path": "./avg_gas_limit.png"
+      }
+    },
+    "IMAGE-4fa05d": {
+      "type": "image",
+      "values": {
+        "path": "./daily_gas_used.png"
+      }
+    },
+    "IMAGE-decc20": {
+      "type": "image",
+      "values": {
+        "path": "./gas_demand_supply.png"
+      }
+    },
+    "IMAGE-72e23b": {
+      "type": "image",
+      "values": {
+        "path": "./ef_daily_gas.png"
+      }
+    },
+    "LINK-58024a": {
+      "type": "link",
+      "values": {
+        "url": "https://dune.com/"
+      }
+    },
+    "LINK-282029": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-2abfba": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/"
+      }
+    },
+    "LINK-8a4f66": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/"
+      }
+    },
+    "LINK-401851": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-and-analytics/block-explorers/"
+      }
+    },
+    "LINK-bf0d80": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe"
+      }
+    },
+    "LINK-025d70": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions"
+      }
+    },
+    "LINK-a7e8fd": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe"
+      }
+    },
+    "LINK-b49fa8": {
+      "type": "link",
+      "values": {
+        "url": "https://dune.com/paulapivat/Learn-Ethereum"
+      }
+    },
+    "LINK-eedb51": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-3d0e6d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-2016eb": {
+      "type": "link",
+      "values": {
+        "url": "https://dune.com/queries/44856/88292"
+      }
+    },
+    "LINK-47f23c": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored"
+      }
+    },
+    "LINK-87f099": {
+      "type": "link",
+      "values": {
+        "url": "https://twitter.com/paulapivat"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-19T23:01:27.286Z",
+      "status": "success"
+    }
+  }
+}

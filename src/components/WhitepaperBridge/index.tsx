@@ -1,15 +1,10 @@
 import { ArrowRight, CheckCircle2, Info } from "lucide-react"
-import { getLocale, getTranslations } from "next-intl/server"
-
-import { Lang } from "@/lib/types"
+import { getTranslations } from "next-intl/server"
 
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Flex } from "@/components/ui/flex"
 import { Tag } from "@/components/ui/tag"
-
-import { cn } from "@/lib/utils/cn"
-import { getDirection } from "@/lib/utils/direction"
 
 import { UnorderedList } from "../ui/list"
 import { Section } from "../ui/section"
@@ -26,8 +21,6 @@ import { Section } from "../ui/section"
  * find a 2014 historical document. This component bridges that gap.
  */
 const WhitepaperBridge = async () => {
-  const locale = await getLocale()
-  const { twFlipForRtl } = getDirection(locale as Lang)
   const t = await getTranslations("component-whitepaper")
 
   const evolutionKeys = [
@@ -38,7 +31,7 @@ const WhitepaperBridge = async () => {
   ] as const
 
   return (
-    <Section className="my-8 space-y-6 rounded-2xl border border-primary-low-contrast bg-radial-a p-6 md:p-8">
+    <Section className="my-8 space-y-6 rounded-base border border-primary-low-contrast bg-radial-primary p-6 md:p-8">
       {/* Eyebrow tag - uses warning status for attention */}
       <Tag status="warning" variant="outline" size="small" className="gap-1.5">
         <Info className="size-3.5" />
@@ -47,9 +40,7 @@ const WhitepaperBridge = async () => {
 
       {/* Main heading */}
       <div className="space-y-3">
-        <h2 className="text-2xl font-bold text-body md:text-3xl">
-          {t("heading")}
-        </h2>
+        <h2 className="text-2xl text-body md:text-3xl">{t("heading")}</h2>
         <p className="max-w-2xl text-body-medium">
           {t.rich("description", {
             strong: (chunks) => <strong className="text-body">{chunks}</strong>,
@@ -61,7 +52,7 @@ const WhitepaperBridge = async () => {
       <Flex className="flex-wrap gap-3">
         <ButtonLink href="/learn/" size="lg">
           {t("cta-learn")}
-          <ArrowRight className={cn("size-5", twFlipForRtl)} />
+          <ArrowRight className="size-5 rtl:-scale-x-100" />
         </ButtonLink>
         <ButtonLink
           href="/content/whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf"
@@ -72,8 +63,8 @@ const WhitepaperBridge = async () => {
         </ButtonLink>
       </Flex>
 
-      {/* What's changed card - uses card-gradient-secondary */}
-      <Card className="border border-primary-low-contrast bg-card-gradient-secondary">
+      {/* What's changed card */}
+      <Card className="border border-primary-low-contrast bg-linear-primary">
         <CardContent className="p-4 md:p-6">
           <p className="mb-4 text-sm font-semibold tracking-wide text-body-medium uppercase">
             {t("whats-changed")}

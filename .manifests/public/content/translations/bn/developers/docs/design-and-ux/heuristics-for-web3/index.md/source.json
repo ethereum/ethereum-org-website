@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/design-and-ux/heuristics-for-web3/index.md",
+  "generatedAt": "2026-06-16T22:40:32.988Z",
+  "rootHash": "cf48f7c62f53",
+  "tree": {
+    "contentHash": "9c3ba8275432",
+    "anchorHash": "dd8879e33ecd",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "3a6353c6efb4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "390d961455b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:1": {
+        "contentHash": "a6360c26ad62",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "51f566c9ccfb",
+        "anchorHash": "e17bbd264207"
+      },
+      "prose:2": {
+        "contentHash": "cdb4ee2aea69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "seven-usability-heuristics-for-web3": {
+        "contentHash": "02b68bfd0935",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "025adef2e4e7",
+        "children": {
+          "_label": {
+            "contentHash": "025adef2e4e7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "606d497daa9e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "definitions-and-examples": {
+        "contentHash": "da8fcea51f97",
+        "anchorHash": "ac129ad635f9",
+        "labelHash": "8101114822f8",
+        "children": {
+          "_label": {
+            "contentHash": "8101114822f8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "feedback-follows-action": {
+            "contentHash": "419fd503ef3b",
+            "anchorHash": "dad495130603",
+            "labelHash": "ca56d4d96434",
+            "children": {
+              "_label": {
+                "contentHash": "ca56d4d96434",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "df39478be869",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "96039b1309a3",
+                "anchorHash": "bfc5b8284463"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "image:0"
+            ]
+          },
+          "security-and-trust-are-backed-in": {
+            "contentHash": "64ffa3d62e2c",
+            "anchorHash": "e191524564c2",
+            "labelHash": "c29ed451d6b9",
+            "children": {
+              "_label": {
+                "contentHash": "c29ed451d6b9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "4da8d4b3d39b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "39888a05c6d2",
+                "anchorHash": "4fe2049d8006"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "image:0"
+            ]
+          },
+          "the-most-important-info-is-obvious": {
+            "contentHash": "4a3d30602697",
+            "anchorHash": "df009ef82c2c",
+            "labelHash": "1829a0f0541d",
+            "children": {
+              "_label": {
+                "contentHash": "1829a0f0541d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "70aa171125cb",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "61b0a672c4e8",
+                "anchorHash": "b835621270c3"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "image:0"
+            ]
+          },
+          "clear-terminology": {
+            "contentHash": "37980ae98e89",
+            "anchorHash": "c81f92682d8b",
+            "labelHash": "e2ff0dec4a51",
+            "children": {
+              "_label": {
+                "contentHash": "e2ff0dec4a51",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "aeeb6e7b994e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "e208af28afd8",
+                "anchorHash": "bb4d3873ab5c"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "image:0"
+            ]
+          },
+          "actions-are-as-short-as-possible": {
+            "contentHash": "d8fbec34869f",
+            "anchorHash": "bcbd123b2a34",
+            "labelHash": "c2f241d5b291",
+            "children": {
+              "_label": {
+                "contentHash": "c2f241d5b291",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "40c9b01c1f87",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "581aedee4eef",
+                "anchorHash": "974db5bee605"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "image:0"
+            ]
+          },
+          "network-connections-are-visible-and-flexible": {
+            "contentHash": "a89d314d205f",
+            "anchorHash": "7a26b2dc4d93",
+            "labelHash": "c84700f90b56",
+            "children": {
+              "_label": {
+                "contentHash": "c84700f90b56",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "6f219249ba8a",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "53bf65ac90cd",
+                "anchorHash": "f6d5871edfd8"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "image:0"
+            ]
+          },
+          "control-from-the-app-not-the-wallet": {
+            "contentHash": "46045fa7be9e",
+            "anchorHash": "9c5a20d4c561",
+            "labelHash": "39fe75f94b52",
+            "children": {
+              "_label": {
+                "contentHash": "39fe75f94b52",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "cf5dd3305e63",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "image:0": {
+                "contentHash": "38d0ac694429",
+                "anchorHash": "1b05e495bd50"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "image:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "feedback-follows-action",
+          "security-and-trust-are-backed-in",
+          "the-most-important-info-is-obvious",
+          "clear-terminology",
+          "actions-are-as-short-as-possible",
+          "network-connections-are-visible-and-flexible",
+          "control-from-the-app-not-the-wallet"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "seven-usability-heuristics-for-web3",
+      "definitions-and-examples"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

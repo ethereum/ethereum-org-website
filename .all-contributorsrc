@@ -13427,7 +13427,7 @@
       "login": "nixorokish",
       "name": "nixo",
       "avatar_url": "https://avatars.githubusercontent.com/u/23272494?v=4",
-      "profile": "http://ethereum.org",
+      "profile": "https://ethereum.org",
       "contributions": [
         "content",
         "maintenance"
@@ -14283,6 +14283,125 @@
       "name": "Ricardo Gonçalves",
       "avatar_url": "https://avatars.githubusercontent.com/u/35004742?v=4",
       "profile": "https://github.com/ricardo-jtg",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "BabyScope",
+      "name": "BabyScope",
+      "avatar_url": "https://avatars.githubusercontent.com/u/163932585?v=4",
+      "profile": "https://nodeflare.app",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "andreivladbrg",
+      "name": "Andrei Vlad Birgaoanu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99738872?v=4",
+      "profile": "https://github.com/andreivladbrg",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "onchainze",
+      "name": "onchainze",
+      "avatar_url": "https://avatars.githubusercontent.com/u/288279120?v=4",
+      "profile": "https://github.com/onchainze",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "icmoore",
+      "name": "Ian Moore",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48072017?v=4",
+      "profile": "https://defimind.ai",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "sawaadee",
+      "name": "sawadee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/170385320?v=4",
+      "profile": "https://github.com/sawaadee",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "alerodriargui",
+      "name": "Alejandro Rodríguez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80339818?v=4",
+      "profile": "https://github.com/alerodriargui",
+      "contributions": [
+        "bug",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "vikramsingh786lemonn",
+      "name": "vikramsingh786lemonn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/289930201?v=4",
+      "profile": "https://github.com/vikramsingh786lemonn",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "lufa23",
+      "name": "lufa23",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67415638?v=4",
+      "profile": "https://github.com/lufa23",
+      "contributions": [
+        "maintenance",
+        "tool"
+      ]
+    },
+    {
+      "login": "NBMSacha",
+      "name": "Sacha Marcus",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89188530?v=4",
+      "profile": "https://mobula.io",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "MegaRedHand",
+      "name": "Tomás Grüner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47506558?v=4",
+      "profile": "https://github.com/MegaRedHand",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "nodeflareapp",
+      "name": "NodeFlare",
+      "avatar_url": "https://avatars.githubusercontent.com/u/302281547?v=4",
+      "profile": "https://nodeflare.app",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "hidargmax27-cmyk",
+      "name": "hidargmax27-cmyk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/250812573?v=4",
+      "profile": "https://github.com/hidargmax27-cmyk",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "Equious",
+      "name": "Equious",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76449140?v=4",
+      "profile": "https://github.com/Equious",
       "contributions": [
         "tool"
       ]

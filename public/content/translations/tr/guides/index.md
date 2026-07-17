@@ -1,27 +1,25 @@
 ---
 title: Ethereum rehberleri
-description: "Başlangıç seviyesindeki kullanıcılar için Ethereum'un temellerini açıklayan pratik rehberler koleksiyonu."
+description: Yeni başlayanlar için Ethereum kullanımının temellerini açıklayan pratik rehberler koleksiyonu.
 lang: tr
 ---
 
-# Ethereum rehberleri
+Ethereum yolculuğunuza başlamak ister misiniz? Pratik rehberlerimiz, başlarken size adım adım yol gösterir ve bu yeni teknolojide gezinmeyi kolaylaştırır.
 
-Ethereum yolculuğuna başlamak ister misin? Pratik rehberlerimiz başlangıç için size adım adım yol gösterecek ve bu yeni teknolojide gezinmeyi kolaylaştıracaktır.
+## Başlarken {#getting-started}
 
-## Başlarken
+1. [Bir Ethereum hesabı nasıl "oluşturulur"](/guides/how-to-create-an-ethereum-account/) - Herkes ücretsiz olarak bir cüzdan oluşturabilir. Bu rehber size nereden başlayacağınızı gösterecektir.
 
-1. [Bir Ethereum hesabı nasıl "oluşturulur"](/guides/how-to-create-an-ethereum-account/) - Herkes ücretsiz bir cüzdan oluşturabilir. Bu rehber size nereden başlayacağınızı gösterecektir.
+2. [Bir cüzdan nasıl kullanılır](/guides/how-to-use-a-wallet/) - Cüzdanınızda nasıl token gönderip alacağınızı ve cüzdanı projelere nasıl bağlayacağınızı öğrenin.
 
-2. [Bir cüzdan nasıl kullanılır](/guides/how-to-use-a-wallet/) - Cüzdanınızla nasıl jeton gönderip alacağınızı ve cüzdanınızı projelere nasıl bağlayacağınızı öğrenin.
+## Güvenlik temelleri {#security-basics}
 
-## Güvenlik temelleri
+1. [Kripto fonlarınıza olan akıllı sözleşme erişimi nasıl iptal edilir](/guides/how-to-revoke-token-access/) - Cüzdanınızda aniden sizin başlatmadığınız bir işlem görürseniz, bu rehber size bunun tekrar olmasını nasıl önleyeceğinizi öğretecektir.
 
-1. [Kripto fonlarınıza akıllı sözleşme erişimini iptal etme](/guides/how-to-revoke-token-access/) - Cüzdanınızda sizin başlatmadığınız bir işlem görürseniz bu rehber size benzer durumları nasıl önleyebileceğinizi öğretecektir.
+2. [Dolandırıcı token'lar nasıl tespit edilir](/guides/how-to-id-scam-tokens/) - Dolandırıcı token'lar nelerdir? Kendilerini nasıl meşru gösterirler ve kendinizi korumak ve dolandırılmaktan kaçınmak için onları nasıl tespit edersiniz?
 
-2. [Dolandırıcı jetonları nasıl tespit edilir](/guides/how-to-id-scam-tokens/) - Dolandırıcı jetonları nedir? Kendilerini nasıl meşru gösteriyorlar, kendinizi korumak ve dolandırılmaktan kaçınmak için onları nasıl tespit edebilirsiniz?
+## Ethereum'u kullanmak {#using-ethereum}
 
-## Ethereum'u kullanma
+1. [Token'lar katman 2'ye nasıl köprülenir](/guides/how-to-use-a-bridge/) - Ethereum işlemleri çok mu maliyetli? Katman 2 (L2) adı verilen Ethereum ölçeklendirme çözümlerine geçmeyi düşünün.
 
-1. [Katman 2'ye jetonları köprüleme](/guides/how-to-use-a-bridge/) - Ethereum işlemleri çok maliyetli mi? Katman 2 olarak adlandırılan Ethereum ölçeklendirme çözümlerine geçmeyi düşünebilirsiniz.
-
-2. [Jeton takası nasıl yapılır](/guides/how-to-swap-tokens/) - Jetonlarınızı farklı bir jetonla değiştirmek mi istiyorsunuz? Bu basit rehber, bunun nasıl yapılacağını gösterecektir.
+2. [Token'lar nasıl takas edilir](/guides/how-to-swap-tokens/) - Token'larınızı farklı bir token ile değiştirmek mi istiyorsunuz? Bu basit rehber size bunu nasıl yapacağınızı gösterecektir.

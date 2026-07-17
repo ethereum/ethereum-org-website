@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-06-16T15:19:54.408Z",
+  "englishManifestHash": "312e8f816e6f",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "ICU-VARIABLE-1",
+    "ICU-VARIABLE-2",
+    "HTML-TAG-3",
+    "HTML-TAG-4"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://github.com/ethereum/ethereum-org-website"
+      }
+    },
+    "ICU-VARIABLE-1": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, =0 {no badges} =1 {1 badge} other {# badges}}"
+      }
+    },
+    "ICU-VARIABLE-2": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, =0 {no collectors} =1 {1 collector} other {# collectors}}"
+      }
+    },
+    "HTML-TAG-3": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://discord.gg/ethereum-org/"
+      }
+    },
+    "HTML-TAG-4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://crowdin.com/project/ethereum-org"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T15:19:54.408Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,11 +1,11 @@
 import { useTranslations } from "next-intl"
-import { Meta, StoryObj } from "@storybook/nextjs"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
-import { TerminalTypewriter as TerminalTypewriterComponent } from "../terminal-typewriter"
+import { TerminalTypewriter } from "../terminal-typewriter"
 
 const meta = {
-  title: "Molecules / Display Content / TerminalTypewriter",
-  component: TerminalTypewriterComponent,
+  title: "UI / TerminalTypewriter",
+  component: TerminalTypewriter,
   decorators: [
     (Story) => (
       <div className="w-[42rem]">
@@ -13,16 +13,24 @@ const meta = {
       </div>
     ),
   ],
-} satisfies Meta<typeof TerminalTypewriterComponent>
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "Terminal-style typewriter that types each message, pauses, deletes it, and moves on. Loops through `messages` indefinitely. Always renders LTR (`dir='ltr'`) and uses a dark theme regardless of the active Storybook theme so it reads as a code prompt.",
+      },
+    },
+  },
+} satisfies Meta<typeof TerminalTypewriter>
 
 export default meta
 
 type Story = StoryObj<typeof meta>
 
-const TerminalTypewriter = () => {
+const TranslatedMessages = () => {
   const t = useTranslations("page-developers-index")
   return (
-    <TerminalTypewriterComponent
+    <TerminalTypewriter
       messages={[
         t("page-developers-ethskills-msg-1"),
         t("page-developers-ethskills-msg-2"),
@@ -35,8 +43,80 @@ const TerminalTypewriter = () => {
 }
 
 export const Default: Story = {
-  args: {
-    messages: [],
+  args: { messages: [] },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "Real-world usage: messages pulled from the `page-developers-index` namespace. Toggle the locale in the Storybook toolbar to see translated copy cycle.",
+      },
+    },
   },
-  render: () => <TerminalTypewriter />,
+  render: () => <TranslatedMessages />,
+}
+
+export const StaticMessages: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story:
+          "Hard-coded English messages. Use when the typewriter content is fixed and not user-facing copy.",
+      },
+    },
+  },
+  args: {
+    messages: [
+      "Build dapps with Solidity",
+      "Deploy to mainnet or layer 2",
+      "Scale with rollups",
+      "Inherit Ethereum's security",
+    ],
+  },
+}
+
+export const SingleMessage: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story:
+          "With only one message in the array, the component types and deletes the same string indefinitely.",
+      },
+    },
+  },
+  args: {
+    messages: ["The only message keeps re-typing on loop."],
+  },
+}
+
+export const LongMessage: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story:
+          "Long messages wrap within the terminal frame on small viewports.",
+      },
+    },
+  },
+  args: {
+    messages: [
+      "Smart contracts running on the Ethereum Virtual Machine settle to layer 1 with finality measured in slots.",
+      "Layer 2 rollups bundle thousands of transactions into a single proof posted to mainnet.",
+    ],
+  },
+}
+
+export const Empty: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story:
+          "When `messages` is empty, the component renders nothing. Useful as a safety check while data loads.",
+      },
+    },
+  },
+  args: { messages: [] },
 }

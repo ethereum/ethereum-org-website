@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-wallets.json",
-  "generatedAt": "2026-05-26T07:04:36.258Z",
-  "rootHash": "21195adc932a",
+  "generatedAt": "2026-07-08T20:24:19.458Z",
+  "rootHash": "ffae765c20f4",
   "tree": {
-    "contentHash": "f0f808719f16",
-    "anchorHash": "2720f7f1b648",
+    "contentHash": "56c64deaf003",
+    "anchorHash": "60f16093cc56",
     "children": {
       "page-wallets-accounts-addresses": {
         "contentHash": "45d710500e0f",
@@ -142,18 +142,6 @@
         "contentHash": "54ea265fa47f",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-wallets-features-desc": {
-        "contentHash": "485e0c2100ff",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-wallets-features-title": {
-        "contentHash": "d56a4a75ea2e",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-wallets-find-wallet-btn": {
-        "contentHash": "dec67e871e24",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-wallets-find-wallet-link": {
         "contentHash": "dec67e871e24",
         "anchorHash": "e3b0c44298fc"
@@ -172,6 +160,14 @@
       },
       "page-wallets-get-some-desc": {
         "contentHash": "e1503f7b6010",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-how-to-use-wallet": {
+        "contentHash": "2b58bdf9f156",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-interactive-tutorial": {
+        "contentHash": "9ec489502aaf",
         "anchorHash": "e3b0c44298fc"
       },
       "page-wallets-keys-to-safety": {
@@ -387,14 +383,13 @@
       "page-wallets-desktop",
       "page-wallets-ethereum-wallet",
       "page-wallets-explore",
-      "page-wallets-features-desc",
-      "page-wallets-features-title",
-      "page-wallets-find-wallet-btn",
       "page-wallets-find-wallet-link",
       "page-wallets-get-some",
       "page-wallets-get-some-alt",
       "page-wallets-get-some-btn",
       "page-wallets-get-some-desc",
+      "page-wallets-how-to-use-wallet",
+      "page-wallets-interactive-tutorial",
       "page-wallets-keys-to-safety",
       "page-wallets-manage-funds",
       "page-wallets-manage-funds-desc",
@@ -436,5 +431,5 @@
       "additional-reading-how-to-use-a-wallet"
     ]
   },
-  "sourceCommitSha": "2b6a038be7d8898383a4f0c64b2494eda62e06db"
+  "sourceCommitSha": "a77613a9678f5a4deeebf95cfc1299103aeaf03a"
 }

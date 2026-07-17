@@ -4,7 +4,7 @@ import ButtonDropdown, {
 
 const MobileButtonDropdown = (props: ButtonDropdownProps) => {
   return (
-    <div className="sticky bottom-0 z-sticky w-full bg-background p-8 shadow-md lg:hidden">
+    <div className="sticky bottom-0 z-sticky w-full bg-background px-page py-8 shadow-md lg:hidden">
       <ButtonDropdown {...props} className="w-full lg:w-auto" />
     </div>
   )

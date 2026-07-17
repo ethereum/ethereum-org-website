@@ -1,10 +1,9 @@
 ---
-title: Resources for translators
+title: Resources
+metaTitle: Resources for translators
 lang: en
 description: Useful resources for ethereum.org translators
 ---
-
-# Resources {#resources}
 
 You can find some useful guides and tools for ethereum.org translators, as well as translation communities and updates below.
 

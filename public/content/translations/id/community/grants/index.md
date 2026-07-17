@@ -23,6 +23,7 @@ Program-program ini mendukung ekosistem Ethereum secara luas dengan menawarkan h
 - [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Direktori yang dapat dicari dari 1.000+ proyek yang didukung oleh Ecosystem Support Program_
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _Hibah untuk mendukung karya akademik terkait Ethereum_
 
+
 ## Agregator dan platform daftar hibah {#grant-list-aggregators}
 
 Sumber daya ini menyusun dan mengatur berbagai peluang hibah di seluruh ekosistem Ethereum, sehingga memudahkan untuk menemukan peluang pendanaan yang sesuai dengan kebutuhan proyek Anda. Kami telah mengaturnya berdasarkan persona untuk membantu Anda mulai menemukan sumber daya yang paling relevan berdasarkan kebutuhan pendanaan spesifik Anda.
@@ -61,6 +62,7 @@ Program-program ini berfokus pada pendanaan proyek yang bermanfaat bagi komunita
 - [Giveth](https://giveth.io/) - _Platform donasi kripto yang memungkinkan donasi langsung dari proyek-proyek untuk kebaikan tanpa biaya tambahan_
 - [Artizen](https://artizen.fund/) - _Membantu kreator mencocokkan dana untuk proyek baru di garis depan seni, sains, teknologi, dan budaya_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Program akselerator perusahaan rintisan (start-up) yang menggunakan pendanaan kuadratik untuk mendukung proyek yang bermanfaat bagi barang publik_
+
 
 ## Bekerja di Ethereum {#work-in-ethereum}
 

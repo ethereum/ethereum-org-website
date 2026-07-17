@@ -18,6 +18,7 @@ lang: ar
 
 لا يُدرج الموقع مقاطع الفيديو التي تروج بشكل أساسي لمنتج معين، أو رمز مميز، أو خدمة تجارية.
 
+
 ## معايير الإدراج {#criteria-for-inclusion}
 
 ### المتطلبات الأساسية {#must-haves}
@@ -33,6 +34,7 @@ lang: ar
 - **يحتوي على نص مكتوب** – تعمل مقاطع الفيديو المصحوبة بنصوص مكتوبة على تحسين إمكانية الوصول وتحسين محركات البحث (SEO). إذا لم يكن لديك واحد، يمكن لفريق <span dir="ltr">ethereum.org</span> المساعدة في إنشائه.
 - **من مصدر موثوق** – يُعطى المحتوى المقدم من معلمين وباحثين ومصادر راسخة الأولوية.
 - **محتوى دائم الصلاحية** – يُفضل المحتوى الذي يظل ذا صلة بمرور الوقت على المواد الحساسة للوقت.
+
 
 ## كيفية إضافة مقطع فيديو {#how-to-add-a-video}
 
@@ -121,25 +123,10 @@ title: "..."
 
 إذا لم يكن لديك نص مكتوب، يمكنك ترك النص الأساسي فارغاً وسيقوم الفريق بإنشائه.
 
-#### الخطوة 4: اختيار وسوم الموضوعات {#step-4}
-
-اختر وسوم الموضوعات التي تتطابق مع الفئات الحالية المستخدمة في المعرض. تشمل الفئات الحالية ووسومها ما يلي:
-
-- **كيف تعمل إيثيريوم**: `how-ethereum-works`، `consensus`، `blockchain`، `cryptography`، `accounts`، `ethereum`، `intro`، `transactions`، `pos`، `smart-contracts`
-- **ترقيات الشبكة**: `network-upgrades`، `upgrades`، `pectra`، `dencun`، `eip-4844`، `blobs`، `fusaka`
-- **خارطة الطريق والأولويات**: `roadmap-and-priorities`، `pbs`، `mev`
-- **التوسع وطبقة 2 (L2)**: `scaling-and-layer-2`، `scaling`، `layer-2`، `rollups`، `optimistic-rollups`، `zk-rollups`
-- **حالات الاستخدام**: `use-cases`، `defi`، `finance`، `nfts`، `erc-721`، `erc-1155`، `lending`، `dapps`، `restaking`، `eigenlayer`، `dao`، `identity`، `desci`، `refi`
-- **الخصوصية والأمان**: `privacy-and-security`، `privacy`، `authentication`
-- **قصص المجتمع**: `community-stories`، `contributing`، `translations`، `community`
-
-لضمان ظهور مقطع الفيديو الخاص بك في رف فئة المعرض، قم بتضمين وسم مفتاح فئة واحد على الأقل (الاسم الغامق بتنسيق <span dir="ltr">kebab-case</span>، على سبيل المثال `use-cases` أو `scaling-and-layer-2`). ستظهر مقاطع الفيديو التي لا تحتوي على وسم فئة معترف به فقط في عرض "الكل" ونتائج البحث.
-
-يمكنك أيضاً استخدام وسوم جديدة — ستكون متاحة لتجميعات الفئات المستقبلية.
-
 #### الخطوة 5: إرسال طلب السحب (PR) {#step-5}
 
 افتح طلب سحب (Pull request) بتغييراتك على فرع `dev`. سيقوم الفريق بمراجعة طلبك وتقديم الملاحظات.
+
 
 ## الصيانة {#maintenance}
 
@@ -150,6 +137,7 @@ title: "..."
 - تحتوي على روابط استضافة/YouTube تعمل
 
 إذا لاحظت مشكلة في مقطع فيديو مدرج، [قم بإنشاء مشكلة (Issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) أو أرسل بريداً إلكترونياً إلى [<span dir="ltr">website@ethereum.org</span>](mailto:website@ethereum.org).
+
 
 ## شروط الاستخدام {#terms-of-use}
 

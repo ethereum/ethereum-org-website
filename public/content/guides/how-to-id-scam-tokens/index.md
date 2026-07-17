@@ -4,8 +4,6 @@ description: Understanding scam tokens, how they make themselves look legitimate
 lang: en
 ---
 
-# How to identify scam tokens {#identify-scam-tokens}
-
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). However, anywhere there are legitimate use cases that bring value, there are also criminals who try to steal that value for themselves.
 
 There are two ways in which they are likely to deceive you:

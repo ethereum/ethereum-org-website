@@ -528,6 +528,17 @@ const chains = [
     chain: "river",
   },
   {
+    name: "BattleChain Mainnet",
+    infoURL: "https://battlechain.com",
+    chainId: 626,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Redstone",
     infoURL: "https://redstone.xyz",
     chainId: 690,
@@ -1186,6 +1197,17 @@ const chains = [
       decimals: 18,
     },
     chain: "Polynomial",
+  },
+  {
+    name: "ACME Mainnet Stealth",
+    infoURL: "",
+    chainId: 8224,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ASM",
   },
   {
     name: "B3",
@@ -2320,6 +2342,17 @@ const chains = [
       decimals: 18,
     },
     chain: "ILT",
+  },
+  {
+    name: "Crynux on Base",
+    infoURL: "https://crynux.io",
+    chainId: 18896214,
+    nativeCurrency: {
+      name: "Crynux",
+      symbol: "CNX",
+      decimals: 18,
+    },
+    chain: "ETH",
   },
   {
     name: "DBK Chain",

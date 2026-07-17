@@ -5,6 +5,22 @@
    (e.g. .dark containers). */
 
 @theme inline {
+  /* Layout spacing */
+  --spacing-page: var(--page-pad); /* The single base unit for standard page padding; responsive. */
+  --spacing-page-2x: calc(var(--page-pad) * 2);
+
+  --spacing-hero-half: calc(var(--hero-pad) * 0.5);
+  --spacing-hero: var(--hero-pad); /* The single base unit for standard page hero padding. */
+  --spacing-hero-1.5x:  calc(var(--hero-pad) * 1.5);
+  --spacing-hero-2x:  calc(var(--hero-pad) * 2);
+  --spacing-hero-3x:  calc(var(--hero-pad) * 3);
+  
+  --spacing-space-half: calc(var(--space) * 0.5);
+  --spacing-space: var(--space); /* The single base unit for the whole flow rhythm; responsive */
+  --spacing-space-2x: calc(var(--space) * 2);
+  --spacing-space-3x: calc(var(--space) * 3);
+  --spacing-space-4x: calc(var(--space) * 4);
+
   /* Reset default breakpoints (project uses non-standard sm=480) */
   --breakpoint-*: initial;
 
@@ -142,6 +158,7 @@
   --color-background-low: hsla(var(--background-low));
   --color-background-medium: hsla(var(--background-medium));
   --color-background-high: hsla(var(--background-high));
+  --color-overlay: hsla(var(--overlay));
 
   /* Colors: border */
   --color-border: hsla(var(--border));
@@ -194,39 +211,8 @@
   --color-staking-red: hsla(var(--staking-red));
   --color-staking-red-fill: hsla(var(--staking-red-fill));
 
-  /* Colors: misc / deprecated */
-  --color-switch-background: hsla(var(--switch-background));
-  --color-tooltip-shadow: var(--tooltip-shadow);
-  --color-hub-hero-content: var(--hub-hero-content);
-  --color-search-background: var(--search-background);
-  --color-gradient-step-1: var(--gradient-step-1);
-
-  /* Custom spacing (additions to built-in scale) */
-  --spacing-7_5: 1.875rem;
-  --spacing-10_5: 2.625rem;
-  --spacing-19: 4.75rem;
-  --spacing-31: 7.75rem;
-  --spacing-128: 32rem;
-
   /* Border radius */
-  --radius-4xl: 2rem;
-
-  /* Box shadows */
-  --shadow-table-box: var(--table-box-shadow);
-  --shadow-table: 0 14px 66px rgba(0, 0, 0, 0.07), 0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
-  --shadow-drop: 0 4px 17px 0 rgba(0, 0, 0, 0.08);
-  --shadow-table-box-hover: 0px 8px 17px rgba(0, 0, 0, 0.15);
-  --shadow-table-item-box: var(--table-item-box-shadow);
-  --shadow-table-item-box-hover: 0 0 1px hsla(var(--primary));
-  --shadow-grid-yellow-box-shadow: 8px 8px 0px 0px #ffe78e;
-  --shadow-grid-blue-box-shadow: 8px 8px 0px 0px #a7d0f4;
-  --shadow-menu-accordion: 0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset;
-  --shadow-tooltip: 0 0 16px var(--tooltip-shadow);
-  --shadow-svg-button-link: var(--shadow-svg-button-link-1), var(--shadow-svg-button-link-2), var(--shadow-svg-button-link-3), var(--shadow-svg-button-link-4);
-  --shadow-svg-button-link-hover: var(--shadow-svg-button-link-1-hover), var(--shadow-svg-button-link-2-hover), var(--shadow-svg-button-link-3-hover), var(--shadow-svg-button-link-4-hover);
-  --shadow-card-hover: var(--shadow-body-md), var(--shadow-body-lg);
-  --shadow-window-box: var(--shadow-window-box-1), var(--shadow-window-box-2), var(--shadow-window-box-3), var(--shadow-window-box-4), var(--shadow-window-box-5);
-  --shadow-widget: var(--shadow-widget);
+  --radius-base: var(--radius-2xl);
 
   /* Animations — tokens */
   --animate-accordion-down: accordion-down 0.2s ease-out;

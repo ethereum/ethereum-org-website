@@ -1,18 +1,16 @@
 ---
-title: Common misconceptions about Ethereum
-description: Clearing up the most common misunderstandings about how Ethereum works.
+title: Equívocos comuns sobre o Ethereum
+description: Esclarecendo os mal-entendidos mais comuns sobre como o Ethereum funciona.
 lang: pt-br
 ---
 
-# Common misconceptions about Ethereum {#misconceptions}
-
 ## O Ethereum é uma empresa? {#not-a-company}
 
-Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
+O Ethereum é uma tecnologia de código aberto e descentralizada mantida por milhares de colaboradores em todo o mundo. Não existe uma empresa chamada "Ethereum" que gerencie contas, guarde fundos ou forneça suporte ao cliente.
 
-The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
+A [Fundação Ethereum](https://ethereum.foundation/) é uma organização sem fins lucrativos que apoia o desenvolvimento do Ethereum, mas não possui nem controla a rede. Nenhuma entidade única o faz.
 
-**[ethereum.org](/)** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
+O **[ethereum.org](/)** é um recurso educacional administrado pela comunidade. Não é uma corretora (exchange), carteira ou instituição financeira. Ele não guarda fundos de usuários e não pode acessar nenhuma conta.
 
 <DocLink href="/what-is-ethereum/">
   O que é o Ethereum?
@@ -20,54 +18,54 @@ The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organiza
 
 ## Alguém pode recuperar ou congelar meus fundos? {#no-fund-access}
 
-Unlike a bank, there is no central authority on Ethereum that can freeze, seize, or recover funds. The person holding the private keys (or seed phrase) has full and sole control over a wallet.
+Diferente de um banco, não há autoridade central no Ethereum que possa congelar, confiscar ou recuperar fundos. A pessoa que possui as chaves privadas (ou frase semente) tem controle total e exclusivo sobre uma carteira.
 
-This means:
+Isso significa que:
 
-- **No one can recover funds** you sent to the wrong address
-- **No one can reverse** a transaction after it is confirmed
-- **No one can freeze** your wallet or block your transactions
-- **No one can reset your password** if you lose your seed phrase
+- **Ninguém pode recuperar fundos** que você enviou para o endereço errado
+- **Ninguém pode reverter** uma transação depois que ela for confirmada
+- **Ninguém pode congelar** sua carteira ou bloquear suas transações
+- **Ninguém pode redefinir sua senha** se você perder sua frase semente
 
-This is why protecting your seed phrase is critical. It is the only way to access your wallet. If it is lost or stolen, there is no recovery option.
+É por isso que proteger sua frase semente é fundamental. É a única maneira de acessar sua carteira. Se for perdida ou roubada, não há opção de recuperação.
 
 <DocLink href="/security/">
-  Segurança e prevenção de golpes no Ethereum
+  Segurança do Ethereum e prevenção de golpes
 </DocLink>
 
 ## Ainda posso minerar Ethereum? {#no-mining}
 
-Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Mining is no longer possible on Ethereum.
+O Ethereum mudou da [Prova de Trabalho (PoW)](/glossary/#pow) para a [Prova de Participação (PoS)](/glossary/#pos) durante o [The Merge](/roadmap/merge/) em setembro de 2022. A mineração não é mais possível no Ethereum.
 
-The network is now secured by validators who [stake](/glossary/#staking) ETH. Anyone can participate:
+A rede agora é protegida por validadores que fazem [stake](/glossary/#staking) de ETH. Qualquer pessoa pode participar:
 
-- **Solo staking:** Run your own validator with 32 ETH—[learn more](/staking/solo/)
-- **Staking as a service:** Delegate node operation while keeping your keys—[learn more](/staking/saas/)
-- **Pooled staking:** Stake with less than 32 ETH by joining a pool—[learn more](/staking/pools/)
+- **Staking solo:** Execute seu próprio validador com 32 ETH—[saiba mais](/staking/solo/)
+- **Staking como serviço:** Delegue a operação do nó enquanto mantém suas chaves—[saiba mais](/staking/saas/)
+- **Staking em pool:** Faça staking com menos de 32 ETH juntando-se a um pool—[saiba mais](/staking/pools/)
 
 <DocLink href="/staking/">
-  Learn more about staking
+  Saiba mais sobre staking
 </DocLink>
 
 ## Existe uma equipe de suporte do Ethereum? {#no-support-team}
 
-Looking for "official Ethereum support" is similar to looking for "official internet support." This of course doesn't exist, but depending on your issue you may be able to seek out support from your internet service provider, your router hardware manufacturer, or one of the companies behind the device, app or website you're using.
+Procurar por "suporte oficial do Ethereum" é semelhante a procurar por "suporte oficial da internet". Isso, obviamente, não existe, mas dependendo do seu problema, você pode buscar suporte do seu provedor de serviços de internet, do fabricante do seu roteador ou de uma das empresas por trás do dispositivo, aplicativo ou site que você está usando.
 
-Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
+O Ethereum é semelhante. Não há empresa, equipe de suporte ou central de ajuda por trás do Ethereum como um todo, mas dependendo do problema, você pode encontrar ajuda entrando em contato com o seu _provedor de carteira_, _serviço de staking_, _corretora_, _instituição financeira_ ou a _equipe que mantém um aplicativo_ que você está usando.
 
-Since Ethereum is publicly transparent by default, you may also find [block explorers](/developers/docs/data-and-analytics/block-explorers/), [analytics tools](/developers/tools/analytics/), and other [online investigation resources](/community/support/scams/#analyze) useful in looking into a problem directly.
+Como o Ethereum é publicamente transparente por padrão, você também pode achar [exploradores de blocos](/developers/docs/data-and-analytics/block-explorers/), [ferramentas de análise](/developers/tools/analytics/) e outros [recursos de investigação online](/community/support/scams/#analyze) úteis para analisar um problema diretamente.
 
-That said, no one from Ethereum or ethereum.org will ever:
+Dito isso, ninguém do Ethereum ou do ethereum.org jamais:
 
-- Contact you via direct message
-- Ask for your seed phrase or private keys
-- Ask you to send ETH to verify your wallet
-- Offer to help you recover funds for a fee
+- Entrará em contato com você por mensagem direta
+- Pedirá sua frase semente ou chaves privadas
+- Pedirá que você envie ETH para verificar sua carteira
+- Oferecerá ajuda para recuperar fundos em troca de uma taxa
 
-**Anyone doing any of the above is trying to scam you.**
+**Qualquer pessoa que faça qualquer uma das coisas acima está tentando aplicar um golpe em você.**
 
-If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities—not official support channels.
+Se você precisar de ajuda, as comunidades reais que podem ajudar estão listadas na [página de suporte](/community/support/). Estas são comunidades abertas e administradas por voluntários — não são canais de suporte oficiais.
 
 <DocLink href="/security/">
-  Segurança e prevenção de golpes no Ethereum
+  Segurança do Ethereum e prevenção de golpes
 </DocLink>

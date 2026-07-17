@@ -8,16 +8,16 @@ This is the official Ethereum.org website - a Next.js application that serves as
 
 ### Core Framework
 
-- **Next.js 14.2+** - React framework with App Router
-- **React 18** - UI library
+- **Next.js 16+** - React framework with App Router (Turbopack is the default bundler; webpack available via `pnpm dev:webpack` / `pnpm build:webpack`)
+- **React 19** - UI library
 - **TypeScript 5.5+** - Type safety and development experience
 - **Tailwind CSS 4+** - Utility-first CSS framework (CSS-first config in `src/styles/global.css`)
 
 ### Key Dependencies
 
-- **next-intl 3.26+** - Internationalization (i18n) with 25 languages
+- **next-intl 4+** - Internationalization (i18n) with 25 languages
 - **next-mdx-remote 5.0+** - MDX content processing
-- **Framer Motion 10.13+** - Animations and transitions
+- **Motion 12+** (`motion` package, formerly Framer Motion) - Animations and transitions; import from `motion/react`
 - **Radix UI** - Accessible component primitives
 - **shadcn/ui** - Component library built on Radix UI
 - **Recharts** - Data visualization
@@ -25,7 +25,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 
 ### Development & Testing
 
-- **Storybook 8.6+** - Component development and testing
+- **Storybook 10+** - Component development and testing
 - **Chromatic** - Visual regression testing
 - **ESLint** - Code linting with custom rules
 - **Prettier** - Code formatting
@@ -60,7 +60,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 
 ### File Naming
 
-- **Components**: PascalCase (e.g., `ActionCard.tsx`)
+- **Components**: kebab-case (e.g., `button-group.tsx`)
 - **Utilities**: camelCase (e.g., `cn.ts`, `relativePath.ts`)
 - **Pages**: kebab-case following Next.js conventions
 - **Assets**: kebab-case (e.g., `eth-logo.png`)
@@ -89,14 +89,22 @@ For UI work, see the **`design-system` skill** at `.claude/skills/design-system/
 
 ```bash
 # Development
-pnpm dev                    # Start development server
-pnpm build                  # Build for production
+pnpm dev                    # Start development server (Turbopack)
+pnpm dev:webpack            # Start development server with webpack
+pnpm build                  # Build for production (Turbopack)
+pnpm build:webpack          # Build for production with webpack
 pnpm start                  # Start production server
 
 # Code Quality
 pnpm lint                   # Run ESLint
 pnpm lint:fix              # Fix ESLint issues
+pnpm type-check            # TypeScript type checking
 pnpm format                # Format with Prettier
+
+# Testing
+pnpm test:unit             # Playwright unit tests (unit project)
+pnpm test:e2e              # Playwright end-to-end tests
+pnpm test:visual           # Playwright + Chromatic full-page visual tests
 
 # Storybook
 pnpm storybook             # Start Storybook dev server
@@ -106,16 +114,15 @@ pnpm chromatic             # Run Chromatic visual tests
 # Content Management
 pnpm lint:md               # Lint English markdown content
 pnpm lint:md:fix           # Auto-fix header IDs and duplicates
-pnpm markdown-checker      # Validate markdown content
-pnpm events-import         # Import community events
 ```
 
 ### Testing Strategy
 
-- **Visual Testing**: Storybook + Chromatic for component regression
+- **Unit Testing**: Playwright `unit` project (`pnpm test:unit`) — heaviest coverage is the intl-pipeline sanitizer
+- **E2E Testing**: Playwright (`pnpm test:e2e`), see `docs/e2e-testing.md`
+- **Visual Testing**: Storybook + Chromatic for component regression; Playwright + Chromatic for full pages (see the `page-visual-tests` skill)
 - **Type Safety**: TypeScript strict mode enabled
 - **Linting**: ESLint with custom rules for imports and TypeScript
-- **Manual Testing**: No automated unit tests - relies on type safety and visual testing
 
 ## Content Management
 
@@ -159,7 +166,7 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
 3. **Follow import order** - ESLint will enforce, but be proactive
 4. **Use TypeScript strictly** - No `any` types, prefer `unknown`
 5. **Test in Storybook** - Create stories for new components (filename pattern: `.stories.tsx`)
-6. **Consider i18n** - All user-facing text should be translatable (use `getTranslations` and `getLocale`)
+6. **Consider i18n** - All user-facing text should be translatable. Server components: `getTranslations` and `getLocale` from `next-intl/server`. Client components: `useTranslations` from `next-intl`, one namespace-bound function per namespace - to access a second namespace, bind another function (e.g. `const tCommon = useTranslations("common")`) rather than reaching across namespaces
 7. **Mobile-first** - Design for mobile, enhance for desktop
 8. **Accessibility** - Use Radix primitives, semantic HTML
 9. **Use locale-aware formatting wrappers** - Use `numberFormat()` from `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`, and `dateTimeFormat()` from `src/lib/utils/date.ts` instead of `new Intl.DateTimeFormat()` / `.toLocaleDateString()` / `.toLocaleTimeString()`. Both enforce correct numbering systems and calendar for Urdu and Arabic locales.
@@ -169,7 +176,7 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
 1. Create component in appropriate `src/components/` subdirectory
    - Use `src/components/ui` for shadcn components or pure UI components
 2. Add TypeScript types and proper props interface
-3. Implement with proper forwardRef if needed
+3. Accept `ref` as a regular prop when needed (React 19); `forwardRef` only survives in legacy components
 4. Add Storybook story in same directory
 5. Export from appropriate index file
 6. Update documentation if adding new patterns
@@ -211,7 +218,7 @@ This project enforces type-safe chain names via TypeScript. When working with la
 
 - `@radix-ui/*` - Accessible component primitives
 - `tailwind-variants` - Component variant patterns
-- `framer-motion` - Animation library
+- `motion` - Animation library (formerly framer-motion; import from `motion/react`)
 - `lucide-react` - Icon library
 
 ### Content & Data
@@ -227,62 +234,11 @@ This project enforces type-safe chain names via TypeScript. When working with la
 
 ## A/B Testing
 
-### Overview
+The site uses a GDPR-compliant, cookie-less A/B testing system integrated with Matomo. Experiments are configured in the Matomo dashboard (no code changes or deployments needed); components opt in via `ABTestWrapper` from `@/components/AB/TestWrapper`, rendered server-side with graceful fallback to the original variant.
 
-The site uses a GDPR-compliant, cookie-less A/B testing system integrated with Matomo. Tests are configured entirely through the Matomo dashboard with no code changes required.
+Key gotcha: **variants are matched by array index, not names** — the `variants` array order must match the Matomo experiment order exactly, and the `testKey` must match the Matomo experiment name exactly.
 
-### Key Features
-
-- **Matomo API Integration** - Experiments configured in Matomo dashboard
-- **Cookie-less Variant Persistence** - Uses deterministic IP + User-Agent fingerprinting for variant assignment
-- **Server-side Rendering** - No layout shifts, consistent variants on first load
-- **Real-time Updates** - Change weights instantly via Matomo (no deployments)
-- **Preview Mode** - Debug panel available in development and preview environments
-- **Automatic Fallbacks** - Graceful degradation when API fails (shows original variant)
-
-### Adding a New A/B Test
-
-1. **Create experiment in Matomo dashboard**:
-
-   - Go to Experiments → Manage Experiments
-   - Create new experiment with desired name (e.g., "HomepageHero")
-   - Add variations with weights (original is implicit)
-   - Set status to "running"
-
-2. **Implement in component**:
-
-   ```tsx
-   import ABTestWrapper from "@/components/AB/TestWrapper"
-   ;<ABTestWrapper
-     testKey="HomepageHero" // Must match Matomo experiment name exactly
-     variants={[
-       <OriginalComponent key="current-hero" />, // Index 0: Original
-       <NewComponent key="redesigned-hero" />, // Index 1: Variation
-     ]}
-     fallback={<OriginalComponent />}
-   />
-   ```
-
-**Important**:
-
-- Variants matched by **array index**, not names
-- Array order must match Matomo experiment order exactly
-- JSX `key` props become debug panel labels: `"redesigned-hero"` → `"Redesigned Hero"`
-- No TypeScript changes required - system fetches configuration from Matomo
-
-### Architecture
-
-- **`/api/ab-config`** - Fetches experiment data from Matomo API
-- **`src/lib/ab-testing/`** - Core logic for assignment and tracking
-- **`src/components/AB/`** - React components for testing and debugging
-
-### Environment Variables
-
-Required for Matomo integration:
-
-- `NEXT_PUBLIC_MATOMO_URL` - Matomo instance URL
-- `NEXT_PUBLIC_MATOMO_SITE_ID` - Site ID in Matomo
-- `MATOMO_API_TOKEN` - API token with experiments access
+Full guide (setup, example, architecture, env vars): `docs/ab-testing.md`. Code: `app/api/ab-config/`, `src/lib/ab-testing/`, `src/components/AB/`.
 
 ## Deployment
 

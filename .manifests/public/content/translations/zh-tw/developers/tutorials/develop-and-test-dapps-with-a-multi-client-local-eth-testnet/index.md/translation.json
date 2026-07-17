@@ -1,0 +1,437 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-17T00:01:53.344Z",
+  "englishManifestHash": "fe584d255c19",
+  "placeholderOrder": [
+    "LINK-414550",
+    "LINK-c80d64",
+    "CODE-d19b08",
+    "LINK-414550",
+    "LINK-459cf1",
+    "CODE-11a913",
+    "LINK-e7bab7",
+    "CODE-1563fc",
+    "LINK-b62e7c",
+    "CODE-b370de",
+    "LINK-f4a3e7",
+    "CODE-210c02",
+    "LINK-87b2b3",
+    "LINK-b0b193",
+    "LINK-2c960e",
+    "LINK-0ce682",
+    "LINK-50a9b8",
+    "LINK-76dfbb",
+    "CODEBLOCK-e34c9f",
+    "CODE-3f0d33",
+    "CODEBLOCK-4233c9",
+    "CODE-b370de",
+    "CODE-11a913",
+    "LINK-bc168b",
+    "CODE-d19b08",
+    "LINK-cd95aa",
+    "LINK-9cd522",
+    "LINK-b40325",
+    "CODE-56cf76",
+    "CODEBLOCK-3637ff",
+    "LINK-8227ce",
+    "LINK-e4be84",
+    "LINK-ce869a",
+    "CODE-9cc6f2",
+    "LINK-98ade9",
+    "CODE-a3e5b0",
+    "LINK-eb9b11",
+    "CODE-a963ec",
+    "LINK-d3341b",
+    "CODE-57cf53",
+    "CODE-57cf53",
+    "CODE-822406",
+    "CODE-0da3ef",
+    "CODE-5ffcf1",
+    "CODE-bb607d",
+    "CODE-57cf53",
+    "CODEBLOCK-947650",
+    "CODEBLOCK-1cb361",
+    "CODEBLOCK-b3a1d6",
+    "CODE-d19b08",
+    "CODE-9bbbec",
+    "CODEBLOCK-13d706",
+    "CODEBLOCK-7c8371",
+    "CODE-bb6bf4",
+    "CODEBLOCK-202348",
+    "CODEBLOCK-3182ae",
+    "CODE-d19b08",
+    "CODE-11a913",
+    "CODE-b370de",
+    "CODE-11a913",
+    "CODE-210c02",
+    "CODE-11a913",
+    "CODE-1563fc",
+    "CODEBLOCK-1e3eae",
+    "CODE-34ef94",
+    "CODE-34ef94",
+    "CODE-34ef94",
+    "CODE-c7a75c",
+    "CODEBLOCK-5d97dc",
+    "CODE-a23da1",
+    "CODEBLOCK-f08a5f",
+    "CODE-57cf53",
+    "CODE-822406",
+    "CODE-0da3ef",
+    "CODE-5ffcf1",
+    "LINK-c13fab",
+    "LINK-b236fe",
+    "LINK-aadbc1",
+    "LINK-598c03",
+    "LINK-ef29cf",
+    "LINK-1d381e"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-e34c9f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4233c9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3637ff": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-947650": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1cb361": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b3a1d6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-13d706": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7c8371": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-202348": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3182ae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1e3eae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-5d97dc": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-f08a5f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-d19b08": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth-network-package"
+      }
+    },
+    "CODE-11a913": {
+      "type": "inline-code",
+      "values": {
+        "content": "geth"
+      }
+    },
+    "CODE-1563fc": {
+      "type": "inline-code",
+      "values": {
+        "content": "teku"
+      }
+    },
+    "CODE-b370de": {
+      "type": "inline-code",
+      "values": {
+        "content": "lighthouse"
+      }
+    },
+    "CODE-210c02": {
+      "type": "inline-code",
+      "values": {
+        "content": "lodestar"
+      }
+    },
+    "CODE-3f0d33": {
+      "type": "inline-code",
+      "values": {
+        "content": "--enclave"
+      }
+    },
+    "CODE-56cf76": {
+      "type": "inline-code",
+      "values": {
+        "content": "prelaunch-data-generator"
+      }
+    },
+    "CODE-9cc6f2": {
+      "type": "inline-code",
+      "values": {
+        "content": "contracts/"
+      }
+    },
+    "CODE-a3e5b0": {
+      "type": "inline-code",
+      "values": {
+        "content": "scripts/"
+      }
+    },
+    "CODE-a963ec": {
+      "type": "inline-code",
+      "values": {
+        "content": "test/"
+      }
+    },
+    "CODE-57cf53": {
+      "type": "inline-code",
+      "values": {
+        "content": "hardhat.config.ts"
+      }
+    },
+    "CODE-0da3ef": {
+      "type": "inline-code",
+      "values": {
+        "content": "<$YOUR_PORT>"
+      }
+    },
+    "CODE-822406": {
+      "type": "inline-code",
+      "values": {
+        "content": "localnet"
+      }
+    },
+    "CODE-5ffcf1": {
+      "type": "inline-code",
+      "values": {
+        "content": "el-client-<num>"
+      }
+    },
+    "CODE-bb607d": {
+      "type": "inline-code",
+      "values": {
+        "content": "64248"
+      }
+    },
+    "CODE-9bbbec": {
+      "type": "inline-code",
+      "values": {
+        "content": "ChipToken.sol"
+      }
+    },
+    "CODE-bb6bf4": {
+      "type": "inline-code",
+      "values": {
+        "content": "simple.js"
+      }
+    },
+    "CODE-34ef94": {
+      "type": "inline-code",
+      "values": {
+        "content": "participants"
+      }
+    },
+    "CODE-c7a75c": {
+      "type": "inline-code",
+      "values": {
+        "content": "network_params"
+      }
+    },
+    "CODE-a23da1": {
+      "type": "inline-code",
+      "values": {
+        "content": "kurtosis clean -a"
+      }
+    },
+    "LINK-c80d64": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/eth-network-package"
+      }
+    },
+    "LINK-414550": {
+      "type": "link",
+      "values": {
+        "url": "https://www.kurtosis.com/"
+      }
+    },
+    "LINK-459cf1": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/"
+      }
+    },
+    "LINK-e7bab7": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.io/teku"
+      }
+    },
+    "LINK-b62e7c": {
+      "type": "link",
+      "values": {
+        "url": "https://lighthouse.sigmaprime.io/"
+      }
+    },
+    "LINK-f4a3e7": {
+      "type": "link",
+      "values": {
+        "url": "https://lodestar.chainsafe.io/"
+      }
+    },
+    "LINK-87b2b3": {
+      "type": "link",
+      "values": {
+        "url": "https://www.kurtosis.com/blog/testing-the-ethereum-merge"
+      }
+    },
+    "LINK-b0b193": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.kurtosis.com/install/#i-install--start-docker"
+      }
+    },
+    "LINK-2c960e": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.kurtosis.com/install#ii-install-the-cli"
+      }
+    },
+    "LINK-0ce682": {
+      "type": "link",
+      "values": {
+        "url": "https://nodejs.org/en"
+      }
+    },
+    "LINK-50a9b8": {
+      "type": "link",
+      "values": {
+        "url": "https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable"
+      }
+    },
+    "LINK-76dfbb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.npmjs.com/package/npx"
+      }
+    },
+    "LINK-bc168b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/eth-network-package"
+      }
+    },
+    "LINK-cd95aa": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.kurtosis.com/advanced-concepts/enclaves/"
+      }
+    },
+    "LINK-9cd522": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.kurtosis.com/advanced-concepts/files-artifacts/"
+      }
+    },
+    "LINK-b40325": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethpandaops/ethereum-genesis-generator"
+      }
+    },
+    "LINK-8227ce": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example"
+      }
+    },
+    "LINK-e4be84": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/"
+      }
+    },
+    "LINK-ce869a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts"
+      }
+    },
+    "LINK-98ade9": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts"
+      }
+    },
+    "LINK-eb9b11": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test"
+      }
+    },
+    "LINK-d3341b": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts"
+      }
+    },
+    "LINK-c13fab": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/kurtosis/issues/new/choose"
+      }
+    },
+    "LINK-b236fe": {
+      "type": "link",
+      "values": {
+        "url": "mailto:feedback@kurtosistech.com"
+      }
+    },
+    "LINK-aadbc1": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.kurtosis.com/quickstart"
+      }
+    },
+    "LINK-598c03": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/awesome-kurtosis"
+      }
+    },
+    "LINK-ef29cf": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/eth2-package"
+      }
+    },
+    "LINK-1d381e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T00:01:53.344Z",
+      "status": "success"
+    }
+  }
+}

@@ -327,6 +327,27 @@ body
       expect(content).toContain('"Por qué (esto) no funciona?"')
       expect(appliedCount).toBe(1)
     })
+
+    test("inserts $-bearing values literally (no capture-group expansion)", () => {
+      const locale = `<Card title="Up to $14 fees" />`
+      const leaves: AttributeLeaf[] = [
+        {
+          id: "x",
+          componentName: "Card",
+          attributeName: "title",
+          englishValue: "Up to $14 fees",
+        },
+      ]
+      // A string replacement would expand "$14" -> capture group 1 + "4"
+      // (injecting `title="`). The function replacer keeps it literal.
+      const { content, appliedCount } = applyAttributeTranslations(
+        locale,
+        leaves,
+        ["Hasta $14, menos de $0.01"]
+      )
+      expect(content).toBe(`<Card title="Hasta $14, menos de $0.01" />`)
+      expect(appliedCount).toBe(1)
+    })
   })
 
   test.describe("translateJsxAttributes (orchestrator)", () => {

@@ -1,6 +1,10 @@
 "use client"
 
-import { Swiper, SwiperSlide } from "@/components/ui/swiper"
+import {
+  Swiper,
+  SwiperNavigation,
+  SwiperSlide,
+} from "@/components/ui/swiper"
 
 import type { DevelopersPath } from "../../types"
 import BuilderCard from "../BuilderCard"
@@ -37,6 +41,7 @@ const BuilderSwiper = ({ paths, speedRunDetails }: BuilderSwiperProps) => {
       <SwiperSlide>
         <SpeedRunCard {...speedRunDetails} className="me-16" />
       </SwiperSlide>
+      <SwiperNavigation />
     </Swiper>
   )
 }

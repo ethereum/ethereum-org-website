@@ -1,57 +1,58 @@
 ---
-title: Jinsi ya kuendeleza na kujaribu dApp kwenye testnet ya ndani, yenye wateja wengi
-description: Mwongozo huu kwanza utakuelekeza jinsi ya kuanzisha na kusanidi testnet ya ndani ya Ethereum yenye wateja wengi kabla ya kutumia testnet kupeleka na kujaribu dApp.
+title: Jinsi ya kuunda na kujaribu dapp kwenye mtandao wa majaribio wa ndani, wa wateja wengi
+description: Mwongozo huu kwanza utakuelekeza jinsi ya kuanzisha na kusanidi mtandao wa majaribio wa ndani wa Ethereum wa wateja wengi kabla ya kutumia mtandao wa majaribio kusambaza na kujaribu dapp.
 author: "Tedi Mitiku"
 tags:
   [
     "wateja",
     "nodi",
-    "mikataba erevu",
-    "utunzi",
-    "safu ya makubaliano",
-    "safu ya utekelezaji",
-    "majaribio"
+    "mikataba mahiri",
+    "uwezo wa kuunganishwa",
+    "tabaka la mwafaka",
+    "tabaka la utekelezaji",
+    "majaribio",
   ]
 skill: intermediate
+breadcrumb: Mtandao wa majaribio wa wateja wengi
 lang: sw
 published: 2023-04-11
 ---
 
 ## Utangulizi {#introduction}
 
-Mwongozo huu unakuelekeza katika mchakato wa kuanzisha testnet ya Ethereum ya ndani inayoweza kusanidiwa, kupeleka mkataba-erevu kwayo, na kutumia testnet kufanya majaribio dhidi ya dApp yako. Mwongozo huu umeundwa kwa ajili ya wasanidi programu wa dApp wanaotaka kuendeleza na kujaribu dApps zao ndani dhidi ya usanidi tofauti wa mtandao kabla ya kupeleka kwenye testnet hai au Mtandao Mkuu.
+Mwongozo huu unakuelekeza katika mchakato wa kuanzisha mtandao wa majaribio wa ndani wa Ethereum unaoweza kusanidiwa, kusambaza mkataba mahiri kwake, na kutumia mtandao wa majaribio kuendesha majaribio dhidi ya programu tumizi iliyogatuliwa (dapp) yako. Mwongozo huu umeundwa kwa ajili ya wasanidi wa dapp wanaotaka kuunda na kujaribu dapp zao ndani ya nchi dhidi ya usanidi tofauti wa mtandao kabla ya kusambaza kwenye mtandao wa majaribio wa moja kwa moja au Mtandao Mkuu.
 
-Katika mwongozo huu, utaweza:
+Katika mwongozo huu, uta:
 
-- Anzisha testnet ya Ethereum ya ndani na [`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) ukitumia [Kurtosis](https://www.kurtosis.com/),
-- Unganisha mazingira yako ya uendelezaji wa dApp ya Hardhat kwenye testnet ya ndani ili kuandaa, kupeleka, na kujaribu dApp, na
-- Sanidi testnet ya ndani, ikijumuisha vigezo kama idadi ya nodi na jozi maalum za mteja wa EL/CL, ili kuwezesha mtiririko wa kazi wa uendelezaji na upimaji dhidi ya usanidi mbalimbali wa mtandao.
+- Kuanzisha mtandao wa majaribio wa ndani wa Ethereum na [`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) ukitumia [Kurtosis](https://www.kurtosis.com/),
+- Kuunganisha mazingira yako ya uundaji wa dapp ya Hardhat kwenye mtandao wa majaribio wa ndani ili kukusanya, kusambaza, na kujaribu dapp, na
+- Kusanidi mtandao wa majaribio wa ndani, ikijumuisha vigezo kama vile idadi ya nodi na uoanishaji maalum wa wateja wa EL/CL, ili kuwezesha mtiririko wa kazi wa uundaji na majaribio dhidi ya usanidi mbalimbali wa mtandao.
 
 ### Kurtosis ni nini? {#what-is-kurtosis}
 
-[Kurtosis](https://www.kurtosis.com/) ni mfumo wa ujenzi unaoweza kuunganishwa ulioundwa kwa ajili ya kusanidi mazingira ya majaribio ya makontena mengi. Inawawezesha wasanidi programu kuunda mazingira yanayoweza kurudiwa ambayo yanahitaji mantiki ya usanidi inayobadilika, kama vile testnets za mnyororo wa bloku.
+[Kurtosis](https://www.kurtosis.com/) ni mfumo wa ujenzi unaoweza kuunganishwa ulioundwa kwa ajili ya kusanidi mazingira ya majaribio ya kontena nyingi. Huwawezesha wasanidi programu haswa kuunda mazingira yanayoweza kuzalishwa tena ambayo yanahitaji mantiki ya usanidi inayobadilika, kama vile mitandao ya majaribio ya mnyororo wa vitalu.
 
-Katika mwongozo huu, kifurushi cha eth-network cha Kurtosis kinawasha testnet ya ndani ya Ethereum inayotumia mteja wa Safu ya Utekelezaji (EL) wa [`geth`](https://geth.ethereum.org/), pamoja na wateja wa Safu ya Makubaliano (CL) wa [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/), na [`lodestar`](https://lodestar.chainsafe.io/). Kifurushi hiki kinatumika kama mbadala unaoweza kusanidiwa na kuunganishwa kwa mitandao katika mifumo kama vile Mtandao wa Hardhat, Ganache, na Anvil. Kurtosis huwapa wasanidi programu udhibiti na wepesi zaidi juu ya testnets wanazotumia, ambayo ni sababu kubwa kwa nini [Msingi wa Ethereum ulitumia Kurtosis kupima Muungano](https://www.kurtosis.com/blog/testing-the-ethereum-merge) na unaendelea kuitumia kwa kupima masasisho ya mtandao.
+Katika mwongozo huu, kifurushi cha mtandao cha eth cha Kurtosis kinaanzisha mtandao wa majaribio wa ndani wa Ethereum kwa usaidizi wa mteja wa tabaka la utekelezaji (EL) wa [`geth`](https://geth.ethereum.org/), pamoja na wateja wa tabaka la mwafaka (CL) wa [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/), na [`lodestar`](https://lodestar.chainsafe.io/). Kifurushi hiki hutumika kama mbadala unaoweza kusanidiwa na unaoweza kuunganishwa kwa mitandao katika mifumo kama vile Hardhat Network, Ganache, na Anvil. Kurtosis inawapa wasanidi udhibiti mkubwa na unyumbufu juu ya mitandao ya majaribio wanayotumia, ambayo ni sababu kuu kwa nini [Taasisi ya Ethereum ilitumia Kurtosis kujaribu Unganisho](https://www.kurtosis.com/blog/testing-the-ethereum-merge) na inaendelea kuitumia kwa majaribio ya uboreshaji wa mtandao.
 
 ## Kusanidi Kurtosis {#setting-up-kurtosis}
 
 Kabla ya kuendelea, hakikisha una:
 
 - [Umesakinisha na kuanzisha injini ya Docker](https://docs.kurtosis.com/install/#i-install--start-docker) kwenye mashine yako ya ndani
-- [Umesakinisha Kurtosis CLI](https://docs.kurtosis.com/install#ii-install-the-cli) (au umeisasisha hadi toleo jipya zaidi, ikiwa tayari una CLI iliyosakinishwa)
-- Umesakinisha [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable), na [npx](https://www.npmjs.com/package/npx) (kwa mazingira yako ya dApp)
+- [Umesakinisha Kurtosis CLI](https://docs.kurtosis.com/install#ii-install-the-cli) (au umeiboresha hadi toleo la hivi punde, ikiwa tayari umesakinisha CLI)
+- Umesakinisha [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable), na [npx](https://www.npmjs.com/package/npx) (kwa mazingira yako ya dapp)
 
-## Kuanzisha testnet ya Ethereum ya ndani {#instantiate-testnet}
+## Kuanzisha mtandao wa majaribio wa ndani wa Ethereum {#instantiate-testnet}
 
-Ili kuwasha testnet ya Ethereum ya ndani, endesha:
+Ili kuanzisha mtandao wa majaribio wa ndani wa Ethereum, endesha:
 
 ```python
 kurtosis --enclave local-eth-testnet run github.com/kurtosis-tech/eth-network-package
 ```
 
-Kumbuka: Amri hii inaupa mtandao wako jina: \"local-eth-testnet\" kwa kutumia kiashiria cha `--enclave`.
+Kumbuka: Amri hii inaupa jina mtandao wako: "local-eth-testnet” kwa kutumia alama ya `--enclave`.
 
-Kurtosis itachapisha hatua inazochukua chinichini inapofanya kazi ya kufasiri, kuhakiki, na kisha kutekeleza maagizo. Mwishowe, unapaswa kuona matokeo yanayofanana na yafuatayo:
+Kurtosis itachapisha hatua inazochukua kiufundi inapofanya kazi kutafsiri, kuthibitisha, na kisha kutekeleza maagizo. Mwishoni, unapaswa kuona matokeo yanayofanana na yafuatayo:
 
 ```python
 INFO[2023-04-04T18:09:44-04:00] ======================================================
@@ -91,46 +92,46 @@ d7b802f623e8   el-client-0                                    engine-rpc: 8551/t
 
 ```
 
-Hongera! Ulitumia Kurtosis kuanzisha testnet ya Ethereum ya ndani, na mteja wa CL (`lighthouse`) na EL (`geth`), juu ya Docker.
+Hongera! Umetumia Kurtosis kuanzisha mtandao wa majaribio wa ndani wa Ethereum, ukiwa na mteja wa CL (`lighthouse`) na EL (`geth`), kupitia Docker.
 
 ### Mapitio {#review-instantiate-testnet}
 
-Katika sehemu hii, ulitekeleza amri iliyoelekeza Kurtosis kutumia [`eth-network-package` iliyohifadhiwa mbali kwenye GitHub](https://github.com/kurtosis-tech/eth-network-package) kuwasha testnet ya Ethereum ya ndani ndani ya [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/) ya Kurtosis. Ndani ya enclave yako, utapata "file artifacts" na "user services".
+Katika sehemu hii, ulitekeleza amri iliyoelekeza Kurtosis kutumia [`eth-network-package` iliyopangishwa kwa mbali kwenye GitHub](https://github.com/kurtosis-tech/eth-network-package) ili kuanzisha mtandao wa majaribio wa ndani wa Ethereum ndani ya [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/) ya Kurtosis. Ndani ya enclave yako, utapata "file artifacts" na "user services".
 
-[Vifaa vya Faili](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) katika enclave yako vinajumuisha data zote zilizozalishwa na kutumika kuanzisha wateja wa EL na CL. Data iliundwa kwa kutumia huduma ya `prelaunch-data-generator` iliyojengwa kutoka kwa [picha hii ya Docker](https://github.com/ethpandaops/ethereum-genesis-generator)
+[File Artifacts](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) katika enclave yako inajumuisha data yote iliyozalishwa na kutumika kuanzisha wateja wa EL na CL. Data iliundwa kwa kutumia huduma ya `prelaunch-data-generator` iliyojengwa kutoka kwa [taswira hii ya Docker](https://github.com/ethpandaops/ethereum-genesis-generator)
 
-Huduma za mtumiaji huonyesha huduma zote zilizowekwa kwenye kontena zinazofanya kazi katika enclave yako. Utaona kwamba nodi moja, yenye mteja wa EL na mteja wa CL, imeundwa.
+Huduma za mtumiaji zinaonyesha huduma zote zilizowekwa kwenye kontena zinazofanya kazi katika enclave yako. Utagundua kuwa nodi moja, inayoangazia mteja wa EL na mteja wa CL, imeundwa.
 
-## Unganisha mazingira yako ya uendelezaji wa dApp kwenye testnet ya Ethereum ya ndani {#connect-your-dapp}
+## Unganisha mazingira yako ya uundaji wa dapp kwenye mtandao wa majaribio wa ndani wa Ethereum {#connect-your-dapp}
 
-### Sanidi mazingira ya uendelezaji wa dApp {#set-up-dapp-env}
+### Sanidi mazingira ya uundaji wa dapp {#set-up-dapp-env}
 
-Sasa kwa kuwa una testnet ya ndani inayofanya kazi, unaweza kuunganisha mazingira yako ya uendelezaji wa dApp ili kutumia testnet yako ya ndani. Mfumo wa Hardhat utatumika katika mwongozo huu kupeleka dApp ya blackjack kwenye testnet yako ya ndani.
+Kwa kuwa sasa una mtandao wa majaribio wa ndani unaofanya kazi, unaweza kuunganisha mazingira yako ya uundaji wa dapp ili kutumia mtandao wako wa majaribio wa ndani. Mfumo wa Hardhat utatumika katika mwongozo huu kusambaza dapp ya blackjack kwenye mtandao wako wa majaribio wa ndani.
 
-Ili kusanidi mazingira yako ya uendelezaji wa dApp, nakili hazina iliyo na sampuli yetu ya dApp na usakinishe vitegemezi vyake, endesha:
+Ili kusanidi mazingira yako ya uundaji wa dapp, nakili hazina iliyo na sampuli yetu ya dapp na usakinishe vitegemezi vyake, endesha:
 
 ```python
 git clone https://github.com/kurtosis-tech/awesome-kurtosis.git && cd awesome-kurtosis/smart-contract-example && yarn
 ```
 
-Folda ya [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) inayotumiwa hapa ina usanidi wa kawaida kwa msanidi programu wa dApp anayetumia mfumo wa [Hardhat](https://hardhat.org/):
+Folda ya [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) inayotumika hapa ina usanidi wa kawaida kwa msanidi wa dapp anayetumia mfumo wa [Hardhat](https://hardhat.org/):
 
-- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) ina mikataba-erevu michache rahisi kwa ajili ya dApp ya Blackjack
-- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) ina hati ya kupeleka mkataba wa tokeni kwenye mtandao wako wa ndani wa Ethereum
-- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) ina jaribio rahisi la .js kwa mkataba wako wa tokeni ili kuthibitisha kila mchezaji katika dApp yetu ya Blackjack ametengenezewa 1000
+- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) ina mikataba mahiri michache rahisi kwa dapp ya Blackjack
+- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) ina hati ya kusambaza mkataba wa tokeni kwenye mtandao wako wa ndani wa Ethereum
+- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) ina jaribio rahisi la .js kwa mkataba wako wa tokeni ili kuthibitisha kila mchezaji katika dapp yetu ya Blackjack ana 1000 zilizotengenezwa kwa ajili yao
 - [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts) inasanidi usanidi wako wa Hardhat
 
-### Sanidi Hardhat ili itumie testnet ya ndani {#configure-hardhat}
+### Sanidi Hardhat kutumia mtandao wa majaribio wa ndani {#configure-hardhat}
 
-Pamoja na mazingira yako ya uendelezaji wa dApp yakiwa yamesanidiwa, sasa utaunganisha Hardhat ili itumie testnet ya Ethereum ya ndani iliyoundwa kwa kutumia Kurtosis. Ili kufanikisha hili, badilisha `<$YOUR_PORT>` katika muundo wa `localnet` katika faili yako ya usanidi ya `hardhat.config.ts` na bandari ya matokeo ya rpc uri kutoka huduma yoyote ya `el-client-<num>`. Katika kisa hiki cha sampuli, bandari itakuwa `64248`. Bandari yako itakuwa tofauti.
+Ukiwa na mazingira yako ya uundaji wa dapp yaliyosanidiwa, sasa utaunganisha Hardhat ili kutumia mtandao wa majaribio wa ndani wa Ethereum uliotengenezwa kwa kutumia Kurtosis. Ili kukamilisha hili, badilisha `<$YOUR_PORT>` katika muundo wa `localnet` kwenye faili yako ya usanidi ya `hardhat.config.ts` na lango la matokeo ya rpc uri kutoka kwa huduma yoyote ya `el-client-<num>`. Katika sampuli hii, lango litakuwa `64248`. Lango lako litakuwa tofauti.
 
 Mfano katika `hardhat.config.ts`:
 
 ```js
 localnet: {
-url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: BADILISHA $YOUR_PORT NA BANDARI YA URI YA NODI ILIYOTOLEWA NA KIFURUSHI CHA MTANDAO WA ETH CHA KURTOSIS
+url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: BADILISHA $YOUR_PORT NA LANGO LA URI YA NODI ILIYOZALISHWA NA KIFURUSHI CHA KURTOSIS CHA MTANDAO WA ETH
 
-// Hizi ni funguo za faragha zinazohusiana na akaunti za majaribio zilizofadhiliwa awali zilizoundwa na kifurushi cha eth-network
+// Hizi ni funguo za siri zinazohusiana na akaunti za majaribio zilizowekewa fedha mapema zilizoundwa na eth-network-package
 // <https://github.com/kurtosis-tech/eth-network-package/blob/main/src/prelaunch_data_generator/genesis_constants/genesis_constants.star>
 accounts: [
     "ef5177cd0b6b21c87db5a0bf35d4084a8a57a9d6a064f86d51ac85f2b873a4e2",
@@ -143,7 +144,7 @@ accounts: [
 },
 ```
 
-Mara tu unapohifadhi faili yako, mazingira yako ya uendelezaji wa dApp ya Hardhat sasa yameunganishwa na testnet yako ya Ethereum ya ndani! Unaweza kuthibitisha kwamba testnet yako inafanya kazi kwa kuendesha:
+Mara tu unapohifadhi faili yako, mazingira yako ya uundaji wa dapp ya Hardhat sasa yameunganishwa kwenye mtandao wako wa majaribio wa ndani wa Ethereum! Unaweza kuthibitisha kuwa mtandao wako wa majaribio unafanya kazi kwa kuendesha:
 
 ```python
 npx hardhat balances --network localnet
@@ -160,13 +161,13 @@ Matokeo yanapaswa kuonekana kama hivi:
 0x1F6298457C5d76270325B724Da5d1953923a6B88 has balance 10000000000000000000000000
 ```
 
-Hii inathibitisha kuwa Hardhat inatumia testnet yako ya ndani na inagundua akaunti zilizofadhiliwa awali zilizoundwa na `eth-network-package`.
+Hii inathibitisha kuwa Hardhat inatumia mtandao wako wa majaribio wa ndani na inatambua akaunti zilizofadhiliwa mapema zilizoundwa na `eth-network-package`.
 
-### Peleka na ujaribu dApp yako ndani {#deploy-and-test-dapp}
+### Sambaza na ujaribu dapp yako ndani ya nchi {#deploy-and-test-dapp}
 
-Wakati mazingira ya uendelezaji wa dApp yameunganishwa kikamilifu kwenye testnet ya Ethereum ya ndani, sasa unaweza kuendesha mtiririko wa kazi wa uendelezaji na upimaji dhidi ya dApp yako ukitumia testnet ya ndani.
+Huku mazingira ya uundaji wa dapp yakiwa yameunganishwa kikamilifu kwenye mtandao wa majaribio wa ndani wa Ethereum, sasa unaweza kuendesha mtiririko wa kazi wa uundaji na majaribio dhidi ya dapp yako ukitumia mtandao wa majaribio wa ndani.
 
-Ili kuandaa na kupeleka mkataba-erevu wa `ChipToken.sol` kwa ajili ya uundaji wa mfano wa ndani na uendelezaji, endesha:
+Ili kukusanya na kusambaza mkataba mahiri wa `ChipToken.sol` kwa ajili ya uundaji wa mfano na uundaji wa ndani, endesha:
 
 ```python
 npx hardhat compile
@@ -176,10 +177,10 @@ npx hardhat run scripts/deploy.ts --network localnet
 Matokeo yanapaswa kuonekana kama:
 
 ```python
-ChipToken imepelekwa kwa: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
+ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
 ```
 
-Sasa jaribu kuendesha jaribio la `simple.js` dhidi ya dApp yako ya ndani ili kuthibitisha kila mchezaji katika dApp yetu ya Blackjack ametengenezewa 1000:
+Sasa jaribu kuendesha jaribio la `simple.js` dhidi ya dapp yako ya ndani ili kuthibitisha kila mchezaji katika dapp yetu ya Blackjack ana 1000 zilizotengenezwa kwa ajili yao:
 
 Matokeo yanapaswa kuonekana kama hivi:
 
@@ -191,33 +192,33 @@ Matokeo yanapaswa kuonekana kama hivi:
 
 ```python
 ChipToken
-    tengeneza
-      ✔ inapaswa kutengeneza chipu 1000 kwa MCHEZAJI MMOJA
+    mint
+      ✔ should mint 1000 chips for PLAYER ONE
 
-  1 imepita (654ms)
+  1 passing (654ms)
 ```
 
 ### Mapitio {#review-dapp-workflows}
 
-Kufikia hapa, sasa umesanidi mazingira ya uendelezaji wa dApp, umeiunganisha kwenye mtandao wa Ethereum wa ndani ulioundwa na Kurtosis, na umeandaa, umepeleka, na umeendesha jaribio rahisi dhidi ya dApp yako.
+Kufikia hapa, sasa umesanidi mazingira ya uundaji wa dapp, ukayaunganisha kwenye mtandao wa ndani wa Ethereum ulioundwa na Kurtosis, na umekusanya, kusambaza, na kuendesha jaribio rahisi dhidi ya dapp yako.
 
-Sasa hebu tuchunguze jinsi unavyoweza kusanidi mtandao wa msingi kwa ajili ya kupima dApps zetu chini ya usanidi mbalimbali wa mtandao.
+Sasa hebu tuchunguze jinsi unavyoweza kusanidi mtandao wa msingi kwa ajili ya kujaribu dapp zetu chini ya usanidi tofauti wa mtandao.
 
-## Kusanidi testnet ya Ethereum ya ndani {#configure-testnet}
+## Kusanidi mtandao wa majaribio wa ndani wa Ethereum {#configure-testnet}
 
 ### Kubadilisha usanidi wa mteja na idadi ya nodi {#configure-client-config-and-num-nodes}
 
-Testnet yako ya Ethereum ya ndani inaweza kusanidiwa kutumia jozi tofauti za wateja wa EL na CL, pamoja na idadi tofauti ya nodi, kulingana na hali na usanidi maalum wa mtandao unaotaka kuendeleza au kupima. Hii inamaanisha kuwa, mara tu itakaposanidiwa, unaweza kuwasha testnet ya ndani iliyobinafsishwa na kuitumia kuendesha mtiririko sawa wa kazi (upelekaji, majaribio, n.k.) chini ya usanidi mbalimbali wa mtandao ili kuhakikisha kila kitu kinafanya kazi kama inavyotarajiwa. Ili kujifunza zaidi kuhusu vigezo vingine unavyoweza kurekebisha, tembelea kiungo hiki.
+Mtandao wako wa majaribio wa ndani wa Ethereum unaweza kusanidiwa kutumia jozi tofauti za wateja wa EL na CL, pamoja na idadi tofauti ya nodi, kulingana na hali na usanidi maalum wa mtandao unaotaka kuunda au kujaribu. Hii inamaanisha kuwa, ukishasanidiwa, unaweza kuanzisha mtandao wa majaribio wa ndani uliobinafsishwa na kuutumia kuendesha mtiririko wa kazi sawa (usambazaji, majaribio, n.k.) chini ya usanidi mbalimbali wa mtandao ili kuhakikisha kila kitu kinafanya kazi kama inavyotarajiwa. Ili kujifunza zaidi kuhusu vigezo vingine unavyoweza kurekebisha, tembelea kiungo hiki.
 
-Jaribu! Unaweza kupitisha chaguo mbalimbali za usanidi kwa `eth-network-package` kupitia faili ya JSON. Faili hii ya JSON ya vigezo vya mtandao hutoa usanidi maalum ambao Kurtosis utatumia kusanidi mtandao wa ndani wa Ethereum.
+Ijaribu! Unaweza kupitisha chaguo mbalimbali za usanidi kwa `eth-network-package` kupitia faili ya JSON. Faili hii ya JSON ya vigezo vya mtandao hutoa usanidi maalum ambao Kurtosis itatumia kusanidi mtandao wa ndani wa Ethereum.
 
-Chukua faili chaguo-msingi ya usanidi na uihariri ili kuwasha nodi mbili zenye jozi tofauti za EL/CL:
+Chukua faili ya usanidi chaguomsingi na uihariri ili kuanzisha nodi mbili zilizo na jozi tofauti za EL/CL:
 
-- Nodi ya 1 na `geth`/`lighthouse`
-- Nodi ya 2 na `geth`/`lodestar`
-- Nodi ya 3 na `geth`/`teku`
+- Nodi 1 yenye `geth`/`lighthouse`
+- Nodi 2 yenye `geth`/`lodestar`
+- Nodi 3 yenye `geth`/`teku`
 
-Usanidi huu unaunda mtandao wenye utekelezaji mchanganyiko wa nodi za Ethereum kwa ajili ya kupima dApp yako. Faili yako ya usanidi sasa inapaswa kuonekana hivi:
+Usanidi huu unaunda mtandao tofauti wa utekelezaji wa nodi za Ethereum kwa ajili ya kujaribu dapp yako. Faili yako ya usanidi sasa inapaswa kuonekana kama:
 
 ```yaml
 {
@@ -273,19 +274,19 @@ Usanidi huu unaunda mtandao wenye utekelezaji mchanganyiko wa nodi za Ethereum k
 }
 ```
 
-Kila muundo wa `participants` unahusiana na nodi moja katika mtandao, kwa hivyo miundo 3 ya `participants` itaiambia Kurtosis iwashe nodi 3 kwenye mtandao wako. Kila muundo wa `participants` utakuruhusu kubainisha jozi ya EL na CL inayotumika kwa nodi hiyo maalum.
+Kila muundo wa `participants` unalingana na nodi katika mtandao, kwa hivyo miundo 3 ya `participants` itaiambia Kurtosis kuanzisha nodi 3 katika mtandao wako. Kila muundo wa `participants` utakuruhusu kubainisha jozi ya EL na CL inayotumika kwa nodi hiyo maalum.
 
-Muundo wa `network_params` unasanidi mipangilio ya mtandao inayotumika kuunda faili za genesis kwa kila nodi pamoja na mipangilio mingine kama sekunde kwa kila slot ya mtandao.
+Muundo wa `network_params` unasanidi mipangilio ya mtandao inayotumika kuunda faili za mwanzo kwa kila nodi pamoja na mipangilio mingine kama vile sekunde kwa kila sloti ya mtandao.
 
-Hifadhi faili yako ya vigezo iliyohaririwa katika saraka yoyote unayotaka (katika mfano hapa chini, imehifadhiwa kwenye eneo-kazi) na kisha itumie kuendesha kifurushi chako cha Kurtosis kwa kuendesha:
+Hifadhi faili yako ya vigezo iliyohaririwa katika saraka yoyote unayotaka (katika mfano hapa chini, imehifadhiwa kwenye eneo-kazi) na kisha uitumie kuendesha kifurushi chako cha Kurtosis kwa kuendesha:
 
 ```python
-kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/kurtosis-tech/eth-network-package \"$(cat ~/eth-network-params.json)\"
+kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/kurtosis-tech/eth-network-package "$(cat ~/eth-network-params.json)"
 ```
 
-Kumbuka: amri ya `kurtosis clean -a` inatumika hapa kuielekeza Kurtosis kuharibu testnet ya zamani na yaliyomo kabla ya kuanzisha mpya.
+Kumbuka: amri ya `kurtosis clean -a` inatumika hapa kuelekeza Kurtosis kuharibu mtandao wa majaribio wa zamani na yaliyomo kabla ya kuanzisha mpya.
 
-Tena, Kurtosis itafanya kazi kwa muda mfupi na kuchapisha hatua za kibinafsi zinazofanyika. Hatimaye, matokeo yanapaswa kuonekana kama:
+Tena, Kurtosis itafanya kazi kwa muda na kuchapisha hatua za kibinafsi zinazofanyika. Hatimaye, matokeo yanapaswa kuonekana kama:
 
 ```python
 Starlark code successfully run. No output was returned.
@@ -351,22 +352,22 @@ ad6f401126fa   el-client-2                                    engine-rpc: 8551/t
 3d4aaa75e218   prelaunch-data-generator-1680882122201668972   <none>                                           STOPPED
 ```
 
-Hongera! Umefanikiwa kusanidi testnet yako ya ndani iwe na nodi 3 badala ya 1. Ili kuendesha mtiririko sawa wa kazi uliofanya hapo awali dhidi ya dApp yako (kupeleka na kupima), fanya shughuli zilezile tulizofanya hapo awali kwa kubadilisha `<$YOUR_PORT>` katika muundo wa `localnet` katika faili yako ya usanidi ya `hardhat.config.ts` na bandari ya matokeo ya rpc uri kutoka huduma yoyote ya `el-client-<num>` katika testnet yako mpya ya ndani yenye nodi 3.
+Hongera! Umefanikiwa kusanidi mtandao wako wa majaribio wa ndani kuwa na nodi 3 badala ya 1. Ili kuendesha mtiririko wa kazi sawa na uliofanya hapo awali dhidi ya dapp yako (kusambaza na kujaribu), fanya shughuli sawa na tulizofanya hapo awali kwa kubadilisha `<$YOUR_PORT>` katika muundo wa `localnet` kwenye faili yako ya usanidi ya `hardhat.config.ts` na lango la matokeo ya rpc uri kutoka kwa huduma yoyote ya `el-client-<num>` katika mtandao wako mpya wa majaribio wa ndani wa nodi 3.
 
 ## Hitimisho {#conclusion}
 
-Na ndivyo hivyo! Ili kufupisha mwongozo huu mfupi, wewe:
+Na ndivyo hivyo! Ili kurejelea mwongozo huu mfupi, wewe:
 
-- Uliunda testnet ya Ethereum ya ndani juu ya Docker ukitumia Kurtosis
-- Uliunganisha mazingira yako ya uendelezaji wa dApp ya ndani kwenye mtandao wa Ethereum wa ndani
-- Ulipeleka dApp na kuendesha jaribio rahisi dhidi yake kwenye mtandao wa Ethereum wa ndani
-- Ulisanidi mtandao wa msingi wa Ethereum uwe na nodi 3
+- Umeunda mtandao wa majaribio wa ndani wa Ethereum kupitia Docker ukitumia Kurtosis
+- Umeunganisha mazingira yako ya uundaji wa dapp ya ndani kwenye mtandao wa ndani wa Ethereum
+- Umesambaza dapp na kuendesha jaribio rahisi dhidi yake kwenye mtandao wa ndani wa Ethereum
+- Umesanidi mtandao wa msingi wa Ethereum kuwa na nodi 3
 
-Tungependa kusikia kutoka kwako juu ya kile kilichokwenda vizuri kwako, kile kinachoweza kuboreshwa, au kujibu maswali yako yoyote. Usisite kuwasiliana kupitia [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) au [tutumie barua pepe](mailto:feedback@kurtosistech.com)!
+Tungependa kusikia kutoka kwako kuhusu kile kilichokwenda vizuri kwako, kile kinachoweza kuboreshwa, au kujibu maswali yako yoyote. Usisite kuwasiliana kupitia [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) au [tutumie barua pepe](mailto:feedback@kurtosistech.com)!
 
 ### Mifano na miongozo mingine {#other-examples-guides}
 
-Tunakuhimiza uangalie [mwongozo wetu wa haraka](https://docs.kurtosis.com/quickstart) (ambapo utajenga hifadhidata ya Postgres na API juu yake) na mifano yetu mingine katika [hazina yetu ya awesome-kurtosis](https://github.com/kurtosis-tech/awesome-kurtosis) ambapo utapata mifano mizuri, ikijumuisha vifurushi vya:
+Tunakuhimiza uangalie [mwongozo wetu wa kuanza haraka](https://docs.kurtosis.com/quickstart) (ambapo utajenga hifadhidata ya Postgres na API juu yake) na mifano yetu mingine katika [hazina yetu ya awesome-kurtosis](https://github.com/kurtosis-tech/awesome-kurtosis) ambapo utapata mifano mizuri, ikijumuisha vifurushi vya:
 
-- [Kuwasha testnet ileile ya ndani ya Ethereum](https://github.com/kurtosis-tech/eth2-package), lakini na huduma za ziada zilizounganishwa kama vile mtumaji taka wa miamala (kuiga miamala), kifuatiliaji cha uma, na nakala iliyounganishwa ya Grafana na Prometheus
-- Kufanya [jaribio la mtandao-ndogo](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test) dhidi ya mtandao uleule wa ndani wa Ethereum
+- [Kuanzisha mtandao wa majaribio wa ndani wa Ethereum sawa](https://github.com/kurtosis-tech/eth2-package), lakini ukiwa na huduma za ziada zilizounganishwa kama vile mtumaji taka wa miamala (ili kuiga miamala), kichunguzi cha mchepuo, na mfano uliounganishwa wa Grafana na Prometheus
+- Kufanya [jaribio la mtandao mdogo](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test) dhidi ya mtandao wa ndani wa Ethereum sawa

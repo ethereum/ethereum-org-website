@@ -1,0 +1,242 @@
+{
+  "version": 1,
+  "locale": "zh-tw",
+  "translatedAt": "2026-06-17T22:33:44.760Z",
+  "englishManifestHash": "3f0df6710b33",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-74dd5e",
+    "LINK-07eb0a",
+    "LINK-a17248",
+    "LINK-d4248e",
+    "LINK-4d5ec8",
+    "LINK-0dd731",
+    "LINK-2257cf",
+    "LINK-bb88ca",
+    "LINK-8600d9",
+    "LINK-06d799",
+    "LINK-e6284b",
+    "LINK-fe8132",
+    "LINK-c0955e",
+    "LINK-d0f32c",
+    "LINK-0627b4",
+    "LINK-b3c0d4",
+    "LINK-bb88ca",
+    "LINK-bb5fa8",
+    "LINK-0dd731",
+    "LINK-ddb2fa",
+    "LINK-dfa0db",
+    "LINK-728668",
+    "LINK-402fcb",
+    "LINK-b0e77e",
+    "LINK-f3957d",
+    "LINK-c377a8",
+    "LINK-e48670",
+    "LINK-6f7397",
+    "LINK-5de451",
+    "LINK-370129",
+    "LINK-05f33e",
+    "LINK-e8389d",
+    "LINK-065586"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-74dd5e": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-07eb0a": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#mainnet"
+      }
+    },
+    "LINK-a17248": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-d4248e": {
+      "type": "link",
+      "values": {
+        "url": "#layer-2-scaling"
+      }
+    },
+    "LINK-4d5ec8": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding"
+      }
+    },
+    "LINK-0dd731": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups/"
+      }
+    },
+    "LINK-2257cf": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups/"
+      }
+    },
+    "LINK-bb88ca": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/state-channels/"
+      }
+    },
+    "LINK-8600d9": {
+      "type": "link",
+      "values": {
+        "url": "#sidechains"
+      }
+    },
+    "LINK-06d799": {
+      "type": "link",
+      "values": {
+        "url": "#validium"
+      }
+    },
+    "LINK-e6284b": {
+      "type": "link",
+      "values": {
+        "url": "#plasma"
+      }
+    },
+    "LINK-fe8132": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-c0955e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#fraud-proof"
+      }
+    },
+    "LINK-d0f32c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups/"
+      }
+    },
+    "LINK-0627b4": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#validity-proof"
+      }
+    },
+    "LINK-b3c0d4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups/"
+      }
+    },
+    "LINK-bb5fa8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/sidechains/"
+      }
+    },
+    "LINK-ddb2fa": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/plasma/"
+      }
+    },
+    "LINK-dfa0db": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/validium/"
+      }
+    },
+    "LINK-728668": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698"
+      }
+    },
+    "LINK-402fcb": {
+      "type": "link",
+      "values": {
+        "url": "https://www.l2beat.com/"
+      }
+    },
+    "LINK-b0e77e": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955"
+      }
+    },
+    "LINK-f3957d": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2021/01/05/rollup.html"
+      }
+    },
+    "LINK-c377a8": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@canti/rkUT0BD8K"
+      }
+    },
+    "LINK-e48670": {
+      "type": "link",
+      "values": {
+        "url": "https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/"
+      }
+    },
+    "LINK-6f7397": {
+      "type": "link",
+      "values": {
+        "url": "https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48"
+      }
+    },
+    "LINK-5de451": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2022/09/17/layer_3.html"
+      }
+    },
+    "LINK-370129": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20250515194659/https://web.archive.org/web/20241108192208/https://research.2077.xyz/data-availability-or-how-rollups-learned-to-stop-worrying-and-love-ethereum"
+      }
+    },
+    "LINK-05f33e": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups"
+      }
+    },
+    "LINK-e8389d": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/all-you-can-cache/"
+      }
+    },
+    "LINK-065586": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/short-abi/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:33:44.760Z",
+      "status": "success"
+    }
+  }
+}

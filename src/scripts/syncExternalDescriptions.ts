@@ -84,7 +84,7 @@ interface ToolItem {
 }
 
 interface ToolsEnvelope {
-  toolsById: Record<string, ToolItem>
+  resources: ToolItem[]
 }
 
 // ── Extraction ──────────────────────────────────────────────────────────────
@@ -110,7 +110,7 @@ function extractToolDescriptions(
 ): Record<string, string> {
   const namespace: Record<string, string> = {}
 
-  for (const tool of Object.values(toolsData.toolsById)) {
+  for (const tool of toolsData.resources) {
     if (!tool.name || !tool.description) continue
     const key = `tool-${slugify(tool.name)}-description`
     namespace[key] = tool.description

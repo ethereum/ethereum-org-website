@@ -10,7 +10,7 @@
   "explanation": "Giải thích",
   "next-question": "Câu hỏi tiếp theo",
   "next-quiz": "Bài trắc nghiệm tiếp theo",
-  "question-number": "Câu hỏi số {{number}}:",
+  "question-number": "Câu hỏi số {number}:",
   "page-assets-merge": "The Merge",
   "passed": "Bạn đã vượt qua bài trắc nghiệm!",
   "questions": "Câu hỏi",

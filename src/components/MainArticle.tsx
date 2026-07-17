@@ -8,7 +8,11 @@ const MainArticle = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <article
     id={MAIN_CONTENT_ID}
-    className={cn("scroll-mt-24 [&_section]:scroll-mt-24", className)}
+    tabIndex={-1}
+    className={cn(
+      "scroll-mt-24 wrap-break-word outline-none [&_section]:scroll-mt-24",
+      className
+    )}
     {...props}
   />
 )

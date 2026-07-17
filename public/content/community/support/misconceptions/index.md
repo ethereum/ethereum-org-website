@@ -4,8 +4,6 @@ description: Clearing up the most common misunderstandings about how Ethereum wo
 lang: en
 ---
 
-# Common misconceptions about Ethereum {#misconceptions}
-
 ## Is Ethereum a company? {#not-a-company}
 
 Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.

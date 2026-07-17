@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-wallets-find-wallet.json",
-  "generatedAt": "2026-05-01T17:06:32.452Z",
-  "rootHash": "9fe49b58e802",
+  "generatedAt": "2026-06-29T23:52:05.657Z",
+  "rootHash": "2b4426411cc7",
   "tree": {
-    "contentHash": "666a7264298b",
-    "anchorHash": "f99d57092e14",
+    "contentHash": "e3edf59b22dc",
+    "anchorHash": "780a94ec49dc",
     "children": {
       "page-find-wallet-clear": {
         "contentHash": "7179ea0035fc",
@@ -32,11 +32,15 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-meta-title": {
-        "contentHash": "9748cdae7ea9",
+        "contentHash": "d4529680c439",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-title": {
         "contentHash": "aecbd96c0c74",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-table-title": {
+        "contentHash": "06bcf5d56104",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-try-removing": {
@@ -295,6 +299,28 @@
         "contentHash": "96c8377da701",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-find-wallet-persona-legend": {
+        "contentHash": "304f0a9d87f6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-persona-count-available": {
+        "contentHash": "22649a9fe635",
+        "anchorHash": "7d651101a50c",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9307b2fa1323"
+          },
+          "prose:1": {
+            "contentHash": "ddd9818abacf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
       "page-find-wallet-active": {
         "contentHash": "96879611650f",
         "anchorHash": "e3b0c44298fc"
@@ -470,6 +496,7 @@
       "page-find-wallet-meta-description",
       "page-find-wallet-meta-title",
       "page-find-wallet-title",
+      "page-find-wallet-table-title",
       "page-find-wallet-try-removing",
       "page-stake-eth",
       "page-find-wallet-open-source",
@@ -534,6 +561,8 @@
       "page-find-wallet-finance-desc",
       "page-find-wallet-developer-title",
       "page-find-wallet-developer-desc",
+      "page-find-wallet-persona-legend",
+      "page-find-wallet-persona-count-available",
       "page-find-wallet-active",
       "page-find-wallet-footnote-1",
       "page-find-wallet-footnote-2",
@@ -570,5 +599,5 @@
       "page-find-wallet-methodology-filters"
     ]
   },
-  "sourceCommitSha": "102e7d69213329505b9595dbf50a235b7e6c2a9d"
+  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
 }

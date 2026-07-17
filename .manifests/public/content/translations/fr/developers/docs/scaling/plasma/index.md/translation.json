@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "translatedAt": "2026-06-17T22:39:51.655Z",
+  "englishManifestHash": "cba9df3ccfcc",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-8db804",
+    "LINK-0dd731",
+    "LINK-061e30",
+    "LINK-946735",
+    "LINK-6258d8",
+    "LINK-76de4c",
+    "LINK-74d94b",
+    "LINK-574b79",
+    "LINK-e115ea",
+    "LINK-400f0c",
+    "LINK-1477b4",
+    "LINK-ff590d",
+    "LINK-378723",
+    "LINK-8183cd",
+    "LINK-a6333e",
+    "LINK-480798",
+    "LINK-2a25ec",
+    "LINK-149ae7",
+    "LINK-adc8d3",
+    "LINK-003906",
+    "LINK-c553dc",
+    "LINK-08f029",
+    "LINK-1f6415",
+    "LINK-4d5ec8",
+    "LINK-3b3a0f",
+    "LINK-b202b4",
+    "LINK-44fb77",
+    "LINK-80cf4f",
+    "LINK-13e2bd",
+    "LINK-024702",
+    "LINK-c738e0"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-8db804": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#fraud-proof"
+      }
+    },
+    "LINK-0dd731": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/optimistic-rollups/"
+      }
+    },
+    "LINK-061e30": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-946735": {
+      "type": "link",
+      "values": {
+        "url": "https://plasma.io/plasma.pdf"
+      }
+    },
+    "LINK-6258d8": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/bridges/"
+      }
+    },
+    "LINK-76de4c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/sidechains/"
+      }
+    },
+    "LINK-74d94b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/consensus-mechanisms/"
+      }
+    },
+    "LINK-574b79": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Commitment_scheme"
+      }
+    },
+    "LINK-e115ea": {
+      "type": "link",
+      "values": {
+        "url": "/whitepaper/#merkle-trees"
+      }
+    },
+    "LINK-400f0c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/merkle-proofs-for-offline-data-integrity/#main-content"
+      }
+    },
+    "LINK-1477b4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.learnplasma.org/en/learn/mvp.html"
+      }
+    },
+    "LINK-ff590d": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Unspent_transaction_output"
+      }
+    },
+    "LINK-378723": {
+      "type": "link",
+      "values": {
+        "url": "https://www.learnplasma.org/en/learn/cash.html"
+      }
+    },
+    "LINK-8183cd": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-721/"
+      }
+    },
+    "LINK-a6333e": {
+      "type": "link",
+      "values": {
+        "url": "/layer-2/"
+      }
+    },
+    "LINK-480798": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups"
+      }
+    },
+    "LINK-2a25ec": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/why-smart-contracts-are-not-feasible-on-plasma/2598/4"
+      }
+    },
+    "LINK-149ae7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-003906": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/dapps/"
+      }
+    },
+    "LINK-c553dc": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/a-zk-evm-specification/11549"
+      }
+    },
+    "LINK-08f029": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/sidechains/"
+      }
+    },
+    "LINK-1f6415": {
+      "type": "link",
+      "values": {
+        "url": "/bridges/"
+      }
+    },
+    "LINK-4d5ec8": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding"
+      }
+    },
+    "LINK-3b3a0f": {
+      "type": "link",
+      "values": {
+        "url": "https://polygon.technology/"
+      }
+    },
+    "LINK-b202b4": {
+      "type": "link",
+      "values": {
+        "url": "https://www.learnplasma.org/en/"
+      }
+    },
+    "LINK-44fb77": {
+      "type": "link",
+      "values": {
+        "url": "https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/"
+      }
+    },
+    "LINK-80cf4f": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html"
+      }
+    },
+    "LINK-13e2bd": {
+      "type": "link",
+      "values": {
+        "url": "https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics"
+      }
+    },
+    "LINK-024702": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#"
+      }
+    },
+    "LINK-c738e0": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/app-plasma/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-17T22:39:51.655Z",
+      "status": "success"
+    }
+  }
+}

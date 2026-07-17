@@ -64,6 +64,17 @@ runs:
                 ((.context // "") | test($name; "i"))
               )]
             ')
+          elif [[ -n "$REQUIRED_CHECKS" ]]; then
+            # Gate only on the required checks. Other checks (e.g. Chromatic
+            # "UI Review"/"UI Tests") sit PENDING awaiting manual approval and
+            # must not block success — that approval is a post-review human step.
+            filtered=$(echo "$rollup" | jq --arg req "$REQUIRED_CHECKS" '
+              ($req | split(",") | map(ascii_downcase | gsub("^\\s+|\\s+$"; ""))) as $needles
+              | [.[] | select(
+                  ((.name // .context // "") | ascii_downcase) as $n
+                  | [$needles[] | . as $needle | $n | contains($needle)] | any
+                )]
+            ')
           else
             filtered="$rollup"
           fi

@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "locale": "te",
+  "translatedAt": "2026-06-16T22:58:41.251Z",
+  "englishManifestHash": "af1133adf188",
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-9117e4",
+    "LINK-8a3ac0",
+    "LINK-6b9915",
+    "LINK-f3bfdd",
+    "LINK-1e5648",
+    "LINK-af2306",
+    "LINK-31fb17",
+    "LINK-9fe6f1",
+    "IMAGE-eab026",
+    "LINK-293225",
+    "LINK-194993",
+    "LINK-6c4cfe",
+    "LINK-d59bc8",
+    "LINK-3f81dd",
+    "LINK-91b760",
+    "LINK-e24bd5",
+    "LINK-f45079",
+    "LINK-007d81",
+    "LINK-0ba8c1"
+  ],
+  "placeholderMap": {
+    "IMAGE-eab026": {
+      "type": "image",
+      "values": {
+        "path": "portal-network-devp2p-libp2p.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-9117e4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/"
+      }
+    },
+    "LINK-8a3ac0": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org"
+      }
+    },
+    "LINK-6b9915": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/statelessness/#history-expiry"
+      }
+    },
+    "LINK-f3bfdd": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/statelessness/#state-expiry"
+      }
+    },
+    "LINK-1e5648": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/statelessness/"
+      }
+    },
+    "LINK-af2306": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/light-clients/"
+      }
+    },
+    "LINK-31fb17": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networking-layer/#devp2p"
+      }
+    },
+    "LINK-9fe6f1": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networking-layer/#libp2p"
+      }
+    },
+    "LINK-293225": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/json-rpc/"
+      }
+    },
+    "LINK-194993": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Distributed_hash_table"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-d59bc8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/trin"
+      }
+    },
+    "LINK-3f81dd": {
+      "type": "link",
+      "values": {
+        "url": "https://fluffy.guide"
+      }
+    },
+    "LINK-91b760": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereumjs/ultralight"
+      }
+    },
+    "LINK-e24bd5": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/zen-eth/shisui"
+      }
+    },
+    "LINK-f45079": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=0stc9jnQLXA"
+      }
+    },
+    "LINK-007d81": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/CFFnmE7Hbs"
+      }
+    },
+    "LINK-0ba8c1": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethportal.net/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T22:58:41.251Z",
+      "status": "success"
+    }
+  }
+}

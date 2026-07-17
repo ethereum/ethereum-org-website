@@ -32,7 +32,7 @@
   "page-gas-attack-of-the-cryptokitties-text": "2017 年 11 月，受歡迎的加密貓專案正式推出。其受歡迎程度的迅速飆升導致了嚴重的網路擁塞和極高的 Gas 費。加密貓帶來的挑戰加速了尋找以太坊擴容解決方案的急迫性。",
   "page-gas-why-do-we-need-gas-header": "為什麼我們需要燃料？",
   "page-gas-why-do-we-need-gas-text": "燃料是保持以太坊安全和處理交易的關鍵要素。燃料在許多方面都有幫助：",
-  "page-gas-benefits-1-description": "燃料透過防止惡意行為者以詐欺活動癱瘓網路，使以太坊保持<a href=\"/glossary/#anti-sybil\">抗女巫攻擊</a>的能力。",
+  "page-gas-benefits-1-description": "燃料透過防止惡意行為者以詐欺活動癱瘓網路，使以太坊保持<a href=\"/glossary/#anti-sybil\">抗女巫攻擊</a>的特性。",
   "page-gas-benefits-2-description": "因為運算需要消耗燃料，所以無論是意外還是惡意地用昂貴的交易向以太坊發送垃圾訊息，在財務上都是不划算的。",
   "page-gas-benefits-3-description": "對任何一次可執行的運算量設定硬性限制，可以防止以太坊過載，有助於確保網路始終可供存取。",
   "page-gas-how-is-gas-calculated-header": "燃料是如何計算的？",

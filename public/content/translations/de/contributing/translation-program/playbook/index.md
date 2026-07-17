@@ -1,18 +1,17 @@
 ---
-title: "Playbook für Übersetzungsprogramme"
+title: Playbook für das Übersetzungsprogramm
+metaTitle: Playbook für das Übersetzungsprogramm
 lang: de
-description: "Eine Sammlung von Tipps und wichtigen Überlegungen zur Einrichtung eines Übersetzungsprogramms"
+description: Eine Sammlung von Tipps und wichtigen Überlegungen zur Einrichtung eines Übersetzungsprogramms
 ---
 
-# Playbook für Übersetzungsprogramme {#translation-program-playbook}
+Englisch ist eine der meistgesprochenen Sprachen der Welt und mit Abstand die am häufigsten gelernte Sprache. Da Englisch die am häufigsten im Internet verwendete Sprache ist – insbesondere in den sozialen Medien – und mehrsprachige Programmiersprachen selten sind, wird der Großteil der Inhalte im Blockchain-Bereich ursprünglich auf Englisch verfasst.
 
-Englisch ist eine der meistgesprochenen Sprachen der Welt und mit Abstand die am häufigsten gelernte Sprache. Da Englisch die am häufigsten im Internet verwendete Sprache ist – insbesondere in den sozialen Medien – und mehrsprachige Programmiersprachen rar sind, wird der Großteil der Inhalte im Blockchain-Bereich nativ auf Englisch verfasst.
-
-Da jedoch über 6 Milliarden Menschen auf der Welt (mehr als 75 % der Bevölkerung) überhaupt kein Englisch sprechen, stellt dies für die überwiegende Mehrheit der Weltbevölkerung eine massive Eintrittsbarriere zu Ethereum dar.
+Da jedoch über 6 Milliarden Menschen auf der Welt (mehr als 75 % der Bevölkerung) überhaupt kein Englisch sprechen, stellt dies für die überwiegende Mehrheit der Weltbevölkerung eine massive Einstiegsbarriere zu Ethereum dar.
 
 Aus diesem Grund versuchen immer mehr Projekte in diesem Bereich, ihre Inhalte in verschiedene Sprachen übersetzen und für globale Communitys lokalisieren zu lassen.
 
-Die Bereitstellung mehrsprachiger Inhalte ist eine einfache und effektive Möglichkeit, Ihre globale Community zu vergrößern, Nicht-Muttersprachlern Bildung zu bieten, sicherzustellen, dass Ihre Inhalte und Kommunikation ein breiteres Publikum erreichen, und mehr Menschen in den Bereich einzuführen.
+Die Bereitstellung mehrsprachiger Inhalte ist eine einfache und effektive Möglichkeit, Ihre globale Community zu vergrößern, Nicht-Englischsprachigen Bildung zu bieten, sicherzustellen, dass Ihre Inhalte und Kommunikation ein breiteres Publikum erreichen, und das Onboarding von mehr Menschen in diesen Bereich zu erleichtern.
 
 Dieser Leitfaden zielt darauf ab, die häufigsten Herausforderungen und Missverständnisse bei der Lokalisierung von Inhalten anzugehen. Er bietet eine Schritt-für-Schritt-Anleitung zur Verwaltung von Inhalten, zum Übersetzungs- und Überprüfungsprozess, zur Qualitätssicherung, zur Kontaktaufnahme mit Übersetzern und zu anderen wichtigen Aspekten des Lokalisierungsprozesses.
 
@@ -22,9 +21,9 @@ Das Content-Management für Übersetzungen bezieht sich auf den Prozess der Auto
 
 Es gibt viele verschiedene Ansätze für das Content-Management im Lokalisierungsprozess, abhängig von den Inhalten und Ihren Anforderungen.
 
-Die grundlegende Methode zur Verwaltung von Inhalten besteht darin, zweisprachige Dateien zu erstellen, die den Ausgangs- und Zieltext enthalten. Dies wird bei Übersetzungen selten verwendet, da es abgesehen von der Einfachheit keine wesentlichen Vorteile bietet.
+Die grundlegende Methode zur Verwaltung von Inhalten ist die Erstellung zweisprachiger Dateien, die den Ausgangs- und Zieltext enthalten. Dies wird bei Übersetzungen jedoch selten verwendet, da es abgesehen von der Einfachheit keine wesentlichen Vorteile bietet.
 
-Übersetzungsagenturen gehen das Übersetzungsmanagement in der Regel durch den Einsatz von Übersetzungsmanagement-Software oder Lokalisierungstools an, die Projektmanagementfunktionen bieten und eine viel größere Kontrolle über die Dateien, Inhalte und Linguisten ermöglichen.
+Übersetzungsagenturen gehen das Übersetzungsmanagement in der Regel durch den Einsatz von Übersetzungsmanagement-Software oder Lokalisierungstools an, die Projektmanagement-Funktionen bieten und eine viel größere Kontrolle über die Dateien, Inhalte und Linguisten ermöglichen.
 
 Lesen Sie mehr über Content-Management:
 
@@ -36,7 +35,7 @@ Lesen Sie mehr über Content-Management:
 
 Es gibt viele Übersetzungsmanagementsysteme und Lokalisierungstools, und die Wahl der Software hängt hauptsächlich von Ihren Anforderungen ab.
 
-Während sich einige Projekte gegen den Einsatz von Übersetzungsmanagementsystemen entscheiden und es vorziehen, Übersetzungen manuell zu handhaben – entweder direkt in zweisprachigen Dateien oder auf Hosting-Diensten wie GitHub –, verringert dies die Kontrolle, Produktivität, Qualität, Skalierbarkeit und Möglichkeiten zur Zusammenarbeit drastisch. Ein solcher Ansatz könnte für kleine oder einmalige Übersetzungsprojekte am vorteilhaftesten sein.
+Während sich einige Projekte gegen den Einsatz von Übersetzungsmanagementsystemen entscheiden und es vorziehen, Übersetzungen manuell zu handhaben – entweder direkt in zweisprachigen Dateien oder auf Hosting-Diensten wie GitHub –, verringert dies die Kontrolle, Produktivität, Qualität, Skalierbarkeit und die Möglichkeiten zur Zusammenarbeit drastisch. Ein solcher Ansatz ist möglicherweise am ehesten für kleine oder einmalige Übersetzungsprojekte von Vorteil.
 
 Ein kurzer Blick auf einige der leistungsstärksten und am weitesten verbreiteten Übersetzungsmanagement-Tools:
 
@@ -45,59 +44,59 @@ Ein kurzer Blick auf einige der leistungsstärksten und am weitesten verbreitete
 [Crowdin](https://crowdin.com/)
 
 - Kostenlos für Open-Source-Projekte (unbegrenzte Anzahl von Strings und Projekten)
-- TM und Glossar in allen Plänen verfügbar
+- TM (Translation Memory) und Glossar in allen Tarifen verfügbar
 - Über 60 unterstützte Dateiformate, über 70 API-Integrationen
 
 [Lokalise](https://lokalise.com/)
 
-- Kostenlos für 2 Teammitglieder, kostenpflichtige Pläne für mehr Mitwirkende (begrenzte Anzahl von Strings für die meisten Pläne)
-- TM und Glossar in einigen kostenpflichtigen Plänen verfügbar
+- Kostenlos für 2 Teammitglieder, kostenpflichtige Tarife für mehr Mitwirkende (begrenzte Anzahl von Strings bei den meisten Tarifen)
+- TM und Glossar in einigen kostenpflichtigen Tarifen verfügbar
 - Über 30 unterstützte Dateiformate, über 40 API-Integrationen
 
 [Transifex](https://www.transifex.com/)
 
-- Nur kostenpflichtige Pläne (begrenzte Anzahl von Strings für die meisten Pläne)
-- TM und Glossar in allen kostenpflichtigen Plänen verfügbar
+- Nur kostenpflichtige Tarife (begrenzte Anzahl von Strings bei den meisten Tarifen)
+- TM und Glossar in allen kostenpflichtigen Tarifen verfügbar
 - Über 30 unterstützte Dateiformate, über 20 API-Integrationen
 
 [Phrase](https://phrase.com/)
 
-- Nur kostenpflichtige Pläne (unbegrenzte Anzahl von Strings für alle Pläne, begrenzte Anzahl von Projekten und Teammitgliedern)
-- TM und Glossar in einigen kostenpflichtigen Plänen verfügbar
+- Nur kostenpflichtige Tarife (unbegrenzte Anzahl von Strings in allen Tarifen, begrenzte Anzahl von Projekten und Teammitgliedern)
+- TM und Glossar in einigen kostenpflichtigen Tarifen verfügbar
 - Über 40 unterstützte Dateiformate, über 20 API-Integrationen
 
 [Smartcat](https://www.smartcat.com/)
 
-- Kostenloser Basisplan mit kostenpflichtigen erweiterten Funktionen (unbegrenzte Anzahl von Strings und Projekten für alle Pläne)
-- TM und Glossar in allen Plänen verfügbar
+- Kostenloser Basis-Tarif mit kostenpflichtigen erweiterten Funktionen (unbegrenzte Anzahl von Strings und Projekten in allen Tarifen)
+- TM und Glossar in allen Tarifen verfügbar
 - Über 60 unterstützte Dateiformate, über 20 API-Integrationen
 
 [POEditor](https://poeditor.com/)
 
 - Kostenlos für Open-Source-Projekte (begrenzte Anzahl von Strings für alle Projekte, unbegrenzt für Open-Source-Projekte)
-- TM und Glossar für kostenpflichtige Pläne verfügbar
+- TM und Glossar in kostenpflichtigen Tarifen verfügbar
 - Über 20 unterstützte Dateiformate, über 10 API-Integrationen
 
-und viele andere...
+und viele andere ...
 
 **Professionelle Übersetzungstools**
 
 [SDL Trados Studio](https://www.trados.com/products/trados-studio/)
 
-- Kostenpflichtige Pläne für freiberufliche Übersetzer und Teams
-- Sehr leistungsstarkes Tool für computerunterstützte Übersetzung (CAT) und Produktivitätssoftware für Übersetzer
+- Kostenpflichtige Tarife für freiberufliche Übersetzer und Teams
+- Sehr leistungsstarkes Tool für computergestützte Übersetzung (CAT) und Produktivitätssoftware für Übersetzer
 
 [MemoQ](https://www.memoq.com/)
 
-- Eingeschränkte kostenlose Version verfügbar mit mehreren kostenpflichtigen Plänen für erweiterte Funktionen
+- Eingeschränkte kostenlose Version verfügbar, mit mehreren kostenpflichtigen Tarifen für erweiterte Funktionen
 - Übersetzungsmanagement-Software für Unternehmen, Sprachdienstleister und Übersetzer
 
 [Memsource](https://www.memsource.com/)
 
-- Kostenlos für einzelne Übersetzer mit mehreren kostenpflichtigen Plänen für Teams
-- Cloud-basiertes System für computerunterstützte Übersetzung und Übersetzungsmanagement
+- Kostenlos für einzelne Übersetzer, mit mehreren kostenpflichtigen Tarifen für Teams
+- Cloudbasiertes System für computergestützte Übersetzung und Übersetzungsmanagement
 
-und viele andere...
+und viele andere ...
 
 Lesen Sie mehr über Übersetzungsmanagement-Software:
 
@@ -119,11 +118,11 @@ Wir werden beide im Folgenden untersuchen.
 
 Dies ist wahrscheinlich die häufigste Art, über Übersetzungs-Workflows nachzudenken, und etwas, das einem normalerweise in den Sinn kommt, wenn man das Wort Workflow hört.
 
-Im Wesentlichen ist es der „Arbeitsfluss“ von den ersten Gedanken über Übersetzungen bis hin zur Verwendung der übersetzten Inhalte in Ihrem Produkt.
+Im Kern ist es der „Arbeitsfluss“ von den ersten Gedanken über Übersetzungen bis hin zur Verwendung der übersetzten Inhalte in Ihrem Produkt.
 
 Ein beispielhafter Workflow in diesem Fall wäre:
 
-1. **Vorbereitung der Dateien für die Übersetzung** – Es klingt einfach; Sie müssen jedoch einige wichtige Dinge beachten. In diesem Schritt sollten Sie einen klaren Plan haben, wie der gesamte Prozess ablaufen soll.
+1. **Vorbereitung der Dateien für die Übersetzung** – Es klingt einfach, jedoch müssen Sie einige wichtige Dinge beachten. In diesem Schritt sollten Sie einen klaren Plan haben, wie der gesamte Prozess ablaufen soll.
 
 - _Welche Dateitypen werden Sie verwenden? In welchem Format möchten Sie Ihre übersetzten Dateien erhalten?_
   - Wenn Ihre Inhalte im DOCX- oder MD-Format vorliegen, ist der Ansatz viel unkomplizierter, als wenn Sie eine PDF-Version Ihres Whitepapers oder anderer Dokumente übersetzen.
@@ -132,36 +131,36 @@ Ein beispielhafter Workflow in diesem Fall wäre:
 - _Wer wird die Inhalte übersetzen? Werden Sie professionelle Übersetzungen in Auftrag geben oder sich auf Freiwillige verlassen?_
   - Dies wirkt sich auf eine Reihe anderer Entscheidungen aus, die Sie treffen müssen. Beispielsweise arbeiten professionelle Übersetzer lieber mit fortschrittlichen Lokalisierungstools als Freiwillige.
 - _Was sind Ihre Erwartungen an die Linguisten? Wenn Sie einen Sprachdienstleister beauftragen, was erwartet dieser von Ihnen?_
-  - Dies ist der Schritt, um sicherzustellen, dass Ihre Ziele, Erwartungen und Zeitpläne aufeinander abgestimmt sind.
+  - In diesem Schritt stellen Sie sicher, dass Ihre Ziele, Erwartungen und Zeitpläne aufeinander abgestimmt sind.
 - _Sind alle zu übersetzenden Inhalte gleich wichtig? Sollten einige Inhalte zuerst übersetzt werden?_
-  - Es gibt einige Möglichkeiten, bestimmte Inhalte zu priorisieren, die zuerst übersetzt und implementiert werden sollten. Wenn Sie beispielsweise viele Inhalte zur Übersetzung haben, können Sie die Versionskontrolle verwenden, um sicherzustellen, dass die Übersetzer wissen, welche sie priorisieren sollten.
+  - Es gibt Möglichkeiten, bestimmte Inhalte zu priorisieren, die zuerst übersetzt und implementiert werden sollten. Wenn Sie beispielsweise viele Inhalte zur Übersetzung haben, können Sie die Versionskontrolle nutzen, um sicherzustellen, dass die Übersetzer wissen, was sie priorisieren sollen.
 
-2. **Freigabe der Dateien zur Übersetzung** – Dieser Schritt erfordert ebenfalls etwas langfristiges Denken und ist nicht so unkompliziert wie das Senden der Quelldateien an einen Sprachdienstleister.
+2. **Freigabe der Dateien zur Übersetzung** – Dieser Schritt erfordert ebenfalls etwas langfristiges Denken und ist nicht so unkompliziert wie das bloße Senden der Quelldateien an einen Sprachdienstleister.
 
 - _Wer wird die Inhalte übersetzen? Wie viele Personen werden an diesem Prozess beteiligt sein?_
   - Wenn Sie planen, ein Lokalisierungstool zu verwenden, wird dieser Schritt vereinfacht, da Sie die Quelldateien direkt in das Tool hochladen können. Dies gilt auch, wenn der Übersetzungsprozess auf dem Hosting-Dienst stattfindet, da die Quelldateien nirgendwohin exportiert werden müssen.
 - _Werden die Quelldateien manuell verarbeitet oder kann dieser Prozess automatisiert werden?_
-  - Die meisten Lokalisierungstools ermöglichen eine Art Integration oder Automatisierung des Dateiverwaltungsprozesses. Wenn Sie hingegen mit einzelnen Übersetzern arbeiten und kein Lokalisierungstool verwenden, ist das manuelle Senden von Quelldateien an Hunderte oder Tausende von Übersetzern kein skalierbarer Prozess.
+  - Die meisten Lokalisierungstools ermöglichen eine Art von Integration oder Automatisierung des Dateiverwaltungsprozesses. Wenn Sie hingegen mit einzelnen Übersetzern arbeiten und kein Lokalisierungstool verwenden, ist das manuelle Senden von Quelldateien an Hunderte oder Tausende von Übersetzern kein skalierbarer Prozess.
 - _Welche Tools werden für die Lokalisierung verwendet?_
-  - Die Antwort auf diese Frage bestimmt, wie Sie alles andere angehen. Die Auswahl des richtigen Tools kann Ihnen helfen, das Content-Management, die Verwaltung von Translation Memory und Glossar, die Verwaltung von Übersetzern, die Verfolgung des Übersetzungs-/Überprüfungsfortschritts usw. zu automatisieren. Nehmen Sie sich also etwas Zeit und recherchieren Sie, welches Tool Sie verwenden möchten. Wenn Sie nicht planen, ein Lokalisierungstool zu verwenden, müssen alle oben genannten Schritte manuell durchgeführt werden.
+  - Die Antwort auf diese Frage bestimmt, wie Sie alles Weitere angehen. Die Auswahl des richtigen Tools kann Ihnen helfen, das Content-Management, die Verwaltung von Translation Memory und Glossar, die Verwaltung von Übersetzern, die Verfolgung des Übersetzungs-/Überprüfungsfortschritts usw. zu automatisieren. Nehmen Sie sich also etwas Zeit und recherchieren Sie, welches Tool Sie verwenden möchten. Wenn Sie nicht planen, ein Lokalisierungstool zu verwenden, müssen alle oben genannten Schritte manuell durchgeführt werden.
 - _Wie lange wird der Übersetzungsprozess dauern? Wie viel wird er kosten?_
-  - Zu diesem Zeitpunkt sollten Sie bereit sein, die Quelldateien mit dem Sprachdienstleister oder dem Übersetzerpool zu teilen. Der Sprachdienstleister kann Ihnen helfen, die Wortzahl zu analysieren und ein Angebot zu erstellen, das die Preise und den Zeitplan für den Übersetzungsprozess enthält.
+  - Zu diesem Zeitpunkt sollten Sie bereit sein, die Quelldateien mit dem Sprachdienstleister oder dem Übersetzerpool zu teilen. Der Sprachdienstleister kann Ihnen helfen, die Wortanzahl zu analysieren und ein Angebot zu erstellen, das die Preise und den Zeitplan für den Übersetzungsprozess enthält.
 - _Planen Sie, während dieses Prozesses Änderungen an den Quellinhalten vorzunehmen oder diese zu aktualisieren?_
-  - Wenn Ihre Inhalte dynamisch sind und sich häufig ändern, können Änderungen oder Aktualisierungen den Übersetzungsfortschritt stören. Die Verwendung eines Translation Memory kann helfen, dies erheblich abzumildern, obwohl es dennoch wichtig ist, darüber nachzudenken, wie der Prozess ablaufen wird und wie Sie verhindern können, dass der Fortschritt der Übersetzer zurückgeworfen wird.
+  - Wenn Ihre Inhalte dynamisch sind und sich häufig ändern, können Änderungen oder Aktualisierungen den Übersetzungsfortschritt stören. Die Verwendung eines Translation Memory kann dies erheblich abmildern, obwohl es dennoch wichtig ist, darüber nachzudenken, wie der Prozess ablaufen wird und wie Sie verhindern können, dass der Fortschritt der Übersetzer zunichte gemacht wird.
 
-3. **Verwaltung des Übersetzungsprozesses** – Ihre Arbeit ist nicht erledigt, sobald die Quellinhalte an den Sprachdienstleister oder die Übersetzer übergeben wurden. Um eine optimale Qualität der Übersetzungen zu gewährleisten, sollten die Ersteller von Inhalten so stark wie möglich in den Übersetzungsprozess eingebunden sein.
+3. **Verwaltung des Übersetzungsprozesses** – Ihre Arbeit ist nicht erledigt, sobald die Quellinhalte an den Sprachdienstleister oder die Übersetzer übergeben wurden. Um eine optimale Qualität der Übersetzungen zu gewährleisten, sollten die Ersteller der Inhalte so stark wie möglich in den Übersetzungsprozess eingebunden sein.
 
 - _Wie planen Sie, mit den Übersetzern zu kommunizieren?_
-  - Wenn Sie planen, ein Lokalisierungstool zu verwenden, kann die Kommunikation direkt im Tool stattfinden. Die Einrichtung eines alternativen Kommunikationskanals mit den Übersetzern wird ebenfalls empfohlen, da sie möglicherweise weniger zögern, sich zu melden, und Messaging-Tools eine fließendere Kommunikation ermöglichen.
+  - Wenn Sie planen, ein Lokalisierungstool zu verwenden, kann die Kommunikation direkt im Tool stattfinden. Die Einrichtung eines alternativen Kommunikationskanals mit den Übersetzern wird ebenfalls empfohlen, da sie sich dann möglicherweise weniger scheuen, sich zu melden, und Messaging-Tools eine flüssigere Kommunikation ermöglichen.
 - _Wie geht man mit Fragen von Übersetzern um? Wer sollte diese Fragen beantworten?_
   - Übersetzer (sowohl professionelle als auch nicht-professionelle) melden sich oft mit Fragen und Bitten um Klärung oder zusätzlichen Kontext sowie mit Feedback und Ideen für Verbesserungen. Die Beantwortung dieser Anfragen kann oft zu einem besseren Engagement und einer höheren Qualität der übersetzten Inhalte führen. Es ist auch wertvoll, ihnen so viele Ressourcen wie möglich zur Verfügung zu stellen (z. B. Leitfäden, Tipps, Terminologierichtlinien, FAQs usw.).
-- _Wie geht man mit dem Überprüfungsprozess um? Möchten Sie ihn auslagern oder haben Sie die Kapazität, Überprüfungen intern durchzuführen?_
+- _Wie soll der Überprüfungsprozess gehandhabt werden? Möchten Sie ihn auslagern oder haben Sie die Kapazität, Überprüfungen intern durchzuführen?_
   - Obwohl nicht immer notwendig, sind Überprüfungen ein wesentlicher Bestandteil eines optimalen Übersetzungsprozesses. In der Regel ist es am einfachsten, den Überprüfungsprozess an professionelle Prüfer auszulagern. Wenn Sie jedoch über ein großes internationales Team verfügen, können die Überprüfungen oder die Qualitätssicherung (QA) auch intern durchgeführt werden.
 
-4. **Implementierung der übersetzten Inhalte** – Der letzte Teil des Workflows, der jedoch im Voraus bedacht werden sollte.
+4. **Implementierung der übersetzten Inhalte** – Der letzte Teil des Workflows, der jedoch dennoch im Voraus bedacht werden sollte.
 
 - _Werden alle Übersetzungen gleichzeitig abgeschlossen sein?_
-  - Wenn nicht, sollten Sie darüber nachdenken, welche Übersetzungen priorisiert werden sollten, wie Sie den Überblick über die laufenden Übersetzungen behalten und wie die Implementierung gehandhabt wird, während die Übersetzungen durchgeführt werden.
+  - Wenn nicht, sollten Sie darüber nachdenken, welche Übersetzungen priorisiert werden sollten, wie Sie den Überblick über die laufenden Übersetzungen behalten und wie die Implementierung gehandhabt wird, während die Übersetzungen angefertigt werden.
 - _Wie werden Ihnen die übersetzten Inhalte geliefert? In welchem Format werden sie vorliegen?_
   - Dies ist eine wichtige Überlegung, unabhängig davon, welchen Ansatz Sie verwenden. Lokalisierungstools ermöglichen es Ihnen, die Kontrolle über das Zieldateiformat und den Exportprozess zu behalten, und unterstützen in der Regel die Automatisierung, z. B. durch die Ermöglichung der Integration mit dem Hosting-Dienst.
 - _Wie werden Sie die Übersetzungen in Ihrem Projekt implementieren?_
@@ -182,8 +181,8 @@ Ein beispielhafter Workflow in diesem Fall wäre:
 
 2. _Übersetzung → Überprüfung → Implementierung_
 
-- Ein fortschrittlicherer Workflow, der einen Überprüfungs- und Bearbeitungsprozess umfasst, um sicherzustellen, dass die Qualität der Übersetzungen akzeptabel und konsistent ist.
-- Es gibt eine Reihe von Ansätzen für diesen Workflow, bei denen die Übersetzungen von professionellen Übersetzern oder Freiwilligen durchgeführt werden könnten, während der Überprüfungsprozess wahrscheinlich von professionellen Prüfern gehandhabt wird, die mit allen Grammatik- und Orthografieregeln vertraut sind, die in der Zielsprache beachtet werden müssen.
+- Ein fortgeschrittenerer Workflow, der einen Überprüfungs- und Bearbeitungsprozess umfasst, um sicherzustellen, dass die Qualität der Übersetzungen akzeptabel und konsistent ist.
+- Es gibt eine Reihe von Ansätzen für diesen Workflow, bei denen die Übersetzungen von professionellen Übersetzern oder Freiwilligen durchgeführt werden können, während der Überprüfungsprozess wahrscheinlich von professionellen Prüfern gehandhabt wird, die mit allen Grammatik- und Orthografieregeln vertraut sind, die in der Zielsprache beachtet werden müssen.
 
 3. _Übersetzung → Überprüfung → QA → Implementierung_
 
@@ -202,9 +201,9 @@ Lesen Sie mehr über Übersetzungs-Workflows:
 
 Die Erstellung eines klaren Plans zum Umgang mit Terminologie ist einer der wichtigsten Schritte, um die Qualität und Konsistenz Ihrer Übersetzungen sicherzustellen und Ihren Übersetzern Zeit zu sparen.
 
-Im Übersetzungsbereich ist dies als Terminologiemanagement bekannt und gehört zu den wichtigsten Dienstleistungen, die Sprachdienstleister ihren Kunden anbieten, zusätzlich zum Zugang zu ihrem Pool von Linguisten und zum Content-Management.
+Im Übersetzungsbereich ist dies als Terminologiemanagement bekannt und gehört zu den wichtigsten Dienstleistungen, die Sprachdienstleister ihren Kunden anbieten, zusätzlich zum Zugang zu ihrem Linguistenpool und zum Content-Management.
 
-Terminologiemanagement bezieht sich auf den Prozess der Identifizierung, Sammlung und Verwaltung von Terminologie, die für Ihr Projekt wichtig ist und immer korrekt und konsistent übersetzt werden sollte.
+Terminologiemanagement bezieht sich auf den Prozess der Identifizierung, Erfassung und Verwaltung von Terminologie, die für Ihr Projekt wichtig ist und immer korrekt und konsistent übersetzt werden sollte.
 
 Es gibt einige Schritte, die Sie befolgen sollten, wenn Sie anfangen, über Terminologiemanagement nachzudenken:
 
@@ -230,11 +229,11 @@ Schauen wir uns an, was diese Begriffe bedeuten und wie sie sich voneinander unt
 
 **Translation Memory (TM)** – Eine Datenbank, die automatisch Segmente oder Strings speichert, einschließlich längerer Textblöcke, vollständiger Sätze, Absätze und einzelner Begriffe, sowie deren aktuelle und frühere Übersetzungen in jeder Sprache.
 
-Die meisten Lokalisierungstools, Übersetzungsmanagementsysteme und Tools für computerunterstützte Übersetzung verfügen über integrierte Translation Memorys, die in der Regel exportiert und auch in anderen ähnlichen Tools verwendet werden können.
+Die meisten Lokalisierungstools, Übersetzungsmanagementsysteme und Tools für computergestützte Übersetzung verfügen über integrierte Translation Memorys, die in der Regel exportiert und auch in anderen ähnlichen Tools verwendet werden können.
 
 Zu den Vorteilen der Verwendung eines Translation Memory gehören schnellere Übersetzungen, eine bessere Übersetzungsqualität, die Möglichkeit, bestimmte Übersetzungen bei der Aktualisierung oder Änderung von Quellinhalten beizubehalten, und geringere Übersetzungskosten für sich wiederholende Inhalte.
 
-Translation Memorys arbeiten basierend auf einer prozentualen Übereinstimmung zwischen verschiedenen Segmenten und sind in der Regel am nützlichsten, wenn zwei Segmente zu über 50 % denselben Inhalt enthalten. Sie werden auch verwendet, um sich wiederholende Segmente, die zu 100 % übereinstimmen, automatisch zu übersetzen, wodurch die Notwendigkeit entfällt, sich wiederholende Inhalte jemals mehr als einmal zu übersetzen.
+Translation Memorys arbeiten auf der Grundlage einer prozentualen Übereinstimmung zwischen verschiedenen Segmenten und sind in der Regel am nützlichsten, wenn zwei Segmente zu über 50 % denselben Inhalt aufweisen. Sie werden auch verwendet, um sich wiederholende Segmente, die zu 100 % übereinstimmen, automatisch zu übersetzen, sodass sich wiederholende Inhalte nie mehr als einmal übersetzt werden müssen.
 
 Lesen Sie mehr über Translation Memorys:
 
@@ -244,11 +243,11 @@ Lesen Sie mehr über Translation Memorys:
 
 **Glossar –** Eine Liste wichtiger oder sensibler Begriffe, ihrer Definitionen, Funktionen und etablierten Übersetzungen. Der Hauptunterschied zwischen einem Glossar und einem Translation Memory besteht darin, dass ein Glossar nicht automatisch erstellt wird und keine Übersetzungen ganzer Sätze enthält.
 
-Die meisten Lokalisierungstools, Übersetzungsmanagementsysteme und Tools für computerunterstützte Übersetzung verfügen über integrierte Glossare, die Sie pflegen können, um sicherzustellen, dass sie für Ihr Projekt wichtige Terminologie enthalten. Wie das TM kann das Glossar in der Regel exportiert und in anderen Lokalisierungstools verwendet werden.
+Die meisten Lokalisierungstools, Übersetzungsmanagementsysteme und Tools für computergestützte Übersetzung verfügen über integrierte Glossare, die Sie pflegen können, um sicherzustellen, dass sie die für Ihr Projekt wichtige Terminologie enthalten. Wie das TM kann das Glossar in der Regel exportiert und in anderen Lokalisierungstools verwendet werden.
 
 Bevor Sie Ihr Übersetzungsprojekt starten, wird dringend empfohlen, sich etwas Zeit zu nehmen und ein Glossar für Ihre Übersetzer und Prüfer zu erstellen. Die Verwendung eines Glossars stellt sicher, dass wichtige Begriffe korrekt übersetzt werden, bietet Übersetzern den dringend benötigten Kontext und garantiert Konsistenz bei den Übersetzungen.
 
-Während Glossare meistens etablierte Übersetzungen in den Zielsprachen enthalten, sind sie auch ohne diese nützlich. Auch ohne etablierte Übersetzungen kann ein Glossar Definitionen von Fachbegriffen enthalten, Begriffe hervorheben, die nicht übersetzt werden sollten, und Übersetzer darüber informieren, ob ein bestimmter Begriff als Substantiv, Verb, Eigenname oder als ein anderer Wortart verwendet wird.
+Während Glossare meistens etablierte Übersetzungen in den Zielsprachen enthalten, sind sie auch ohne diese nützlich. Selbst ohne etablierte Übersetzungen kann ein Glossar Definitionen von Fachbegriffen enthalten, Begriffe hervorheben, die nicht übersetzt werden sollten, und Übersetzer darüber informieren, ob ein bestimmter Begriff als Substantiv, Verb, Eigenname oder als eine andere Wortart verwendet wird.
 
 Lesen Sie mehr über Glossare:
 
@@ -256,9 +255,9 @@ Lesen Sie mehr über Glossare:
 
 [Transifex über Glossare](https://docs.transifex.com/glossary/glossary)
 
-Wenn Sie nicht planen, ein Lokalisierungstool für Ihr Projekt zu verwenden, werden Sie wahrscheinlich kein Translation Memory und Glossar verwenden können (Sie könnten ein Glossar oder eine Terminologiedatenbank in einer Excel-Datei erstellen, jedoch entfällt bei automatisierten Glossaren die Notwendigkeit für Übersetzer, manuell nach Begriffen und deren Definitionen zu suchen).
+Wenn Sie nicht planen, ein Lokalisierungstool für Ihr Projekt zu verwenden, werden Sie wahrscheinlich kein Translation Memory und Glossar verwenden können (Sie könnten ein Glossar oder eine Terminologiedatenbank in einer Excel-Datei erstellen, jedoch machen automatisierte Glossare die manuelle Suche nach Begriffen und deren Definitionen durch Übersetzer überflüssig).
 
-Dies bedeutet, dass alle sich wiederholenden und ähnlichen Inhalte jedes Mal manuell übersetzt werden müssten. Darüber hinaus müssten sich Übersetzer mit Fragen melden, ob ein bestimmter Begriff übersetzt werden muss oder nicht, wie er im Text verwendet wird und ob es für einen Begriff bereits eine etablierte Übersetzung gibt.
+Dies bedeutet, dass alle sich wiederholenden und ähnlichen Inhalte jedes Mal manuell übersetzt werden müssten. Darüber hinaus müssten sich Übersetzer mit Fragen dazu melden, ob ein bestimmter Begriff übersetzt werden muss oder nicht, wie er im Text verwendet wird und ob es für einen Begriff bereits eine etablierte Übersetzung gibt.
 
 _Möchten Sie das Translation Memory und Glossar von ethereum.org in Ihrem Projekt verwenden? Kontaktieren Sie uns unter translations@ethereum.org._
 
@@ -270,41 +269,41 @@ Wenn Sie mit einem Sprachdienstleister und dessen professionellen Übersetzern z
 
 In diesem Fall ist es wichtig, einen Sprachdienstleister auszuwählen, der über die Kapazität verfügt, alle von Ihnen benötigten Dienstleistungen (z. B. Übersetzung, Überprüfung, QA) in vielen Sprachen anzubieten.
 
-Obwohl es verlockend sein mag, einen Sprachdienstleister ausschließlich aufgrund seiner angebotenen Preise auszuwählen, ist es wichtig zu beachten, dass die größten Sprachdienstleister aus gutem Grund höhere Preise haben.
+Auch wenn es verlockend sein mag, einen Sprachdienstleister ausschließlich aufgrund seiner angebotenen Preise auszuwählen, ist es wichtig zu beachten, dass die größten Sprachdienstleister aus gutem Grund höhere Preise haben.
 
-- Sie haben Zehntausende von Linguisten in ihrer Datenbank, was bedeutet, dass sie Ihrem Projekt Übersetzer mit ausreichender Erfahrung und Kenntnissen in Ihrem speziellen Sektor (d. h. technische Übersetzer) zuweisen können.
+- Sie haben Zehntausende von Linguisten in ihrer Datenbank, was bedeutet, dass sie Ihrem Projekt Übersetzer mit ausreichender Erfahrung und Kenntnissen in Ihrem speziellen Sektor zuweisen können (d. h. technische Übersetzer).
 - Sie verfügen über umfangreiche Erfahrung in der Arbeit an verschiedenen Projekten und der Erfüllung der vielfältigen Bedürfnisse ihrer Kunden. Dies bedeutet, dass sie sich eher an Ihren speziellen Workflow anpassen, wertvolle Vorschläge und potenzielle Verbesserungen für Ihren Übersetzungsprozess anbieten und Ihre Bedürfnisse, Anforderungen und Fristen erfüllen können.
-- Die meisten der größten Sprachdienstleister verfügen auch über eigene Lokalisierungstools, Translation Memorys und Glossare, die Sie verwenden können. Wenn nicht, haben sie zumindest genügend Linguisten in ihrem Pool, um sicherzustellen, dass ihre Übersetzer mit jedem Lokalisierungstool, das Sie verwenden möchten, vertraut sind und damit arbeiten können.
+- Die meisten der größten Sprachdienstleister verfügen auch über eigene Lokalisierungstools, Translation Memorys und Glossare, die Sie nutzen können. Wenn nicht, haben sie zumindest genügend Linguisten in ihrem Pool, um sicherzustellen, dass ihre Übersetzer mit jedem Lokalisierungstool, das Sie verwenden möchten, vertraut sind und damit arbeiten können.
 
-Einen detaillierten Vergleich der größten Sprachdienstleister der Welt, einige Details zu jedem von ihnen und Aufschlüsselungen nach den von ihnen angebotenen Dienstleistungen, geografischen Daten usw. finden Sie im [Nimdzi 100-Bericht 2021](https://www.nimdzi.com/nimdzi-100-top-lsp/).
+Einen detaillierten Vergleich der größten Sprachdienstleister der Welt, einige Details zu jedem von ihnen sowie Aufschlüsselungen nach den von ihnen angebotenen Dienstleistungen, geografischen Daten usw. finden Sie im [Nimdzi 100-Bericht 2021](https://www.nimdzi.com/nimdzi-100-top-lsp/).
 
 **Zusammenarbeit mit nicht-professionellen Übersetzern**
 
-Möglicherweise arbeiten Sie mit nicht-professionellen Übersetzern zusammen und suchen nach Freiwilligen, die Ihnen bei der Übersetzung helfen.
+Möglicherweise arbeiten Sie mit nicht-professionellen Übersetzern zusammen und suchen nach Freiwilligen, die Ihnen beim Übersetzen helfen.
 
 Es gibt verschiedene Möglichkeiten, Menschen zu erreichen und sie einzuladen, sich Ihrem Projekt anzuschließen. Dies hängt weitgehend von Ihrem Produkt ab und davon, wie groß Ihre Community bereits ist.
 
-Einige Möglichkeiten zum Onboarding von Freiwilligen sind im Folgenden aufgeführt:
+Einige Möglichkeiten für das Onboarding von Freiwilligen werden im Folgenden skizziert:
 
 **Kontaktaufnahme –** Obwohl dies in den folgenden Punkten teilweise behandelt wird, kann die Kontaktaufnahme mit potenziellen Freiwilligen und die Sicherstellung, dass sie von Ihrer Übersetzungsinitiative wissen, an sich schon effektiv sein.
 
-Viele Menschen möchten sich engagieren und zu ihren Lieblingsprojekten beitragen, sehen aber oft keinen klaren Weg, dies zu tun, ohne Entwickler zu sein oder über spezielle technische Fähigkeiten zu verfügen. Wenn Sie das Bewusstsein für Ihr Projekt schärfen können, werden wahrscheinlich viele Zweisprachige daran interessiert sein, sich zu engagieren.
+Viele Menschen möchten sich engagieren und zu ihren Lieblingsprojekten beitragen, sehen aber oft keinen klaren Weg, dies zu tun, ohne Entwickler zu sein oder über spezielle technische Fähigkeiten zu verfügen. Wenn Sie die Bekanntheit Ihres Projekts steigern können, werden sich wahrscheinlich viele Zweisprachige gerne engagieren.
 
 **Suche innerhalb Ihrer Community –** Die meisten Projekte in diesem Bereich haben bereits große und aktive Communitys. Viele Ihrer Community-Mitglieder würden wahrscheinlich die Möglichkeit schätzen, auf einfache Weise zum Projekt beizutragen.
 
 Während der Beitrag zu Open-Source-Projekten oft auf intrinsischer Motivation beruht, ist es auch eine fantastische Lernerfahrung. Jeder, der daran interessiert ist, mehr über Ihr Projekt zu erfahren, würde sich wahrscheinlich gerne als Freiwilliger an einem Übersetzungsprogramm beteiligen, da es ihm ermöglichen würde, die Tatsache, dass er zu etwas beigetragen hat, das ihm wichtig ist, mit einer intensiven praktischen Lernerfahrung zu verbinden.
 
-**Erwähnung der Initiative in Ihrem Produkt –** Wenn Ihr Produkt beliebt ist und von einer großen Anzahl von Menschen genutzt wird, kann es äußerst effektiv sein, Ihr Übersetzungsprogramm hervorzuheben und Benutzer während der Nutzung des Produkts zum Handeln aufzurufen.
+**Erwähnung der Initiative in Ihrem Produkt –** Wenn Ihr Produkt beliebt ist und von einer großen Anzahl von Menschen genutzt wird, kann es äußerst effektiv sein, Ihr Übersetzungsprogramm hervorzuheben und die Benutzer während der Nutzung des Produkts zum Handeln aufzurufen.
 
 Dies könnte so einfach sein wie das Hinzufügen eines Banners oder Pop-ups mit einem CTA (Call-to-Action) zu Ihrem Produkt für Anwendungen und Websites. Dies ist effektiv, da Ihre Zielgruppe Ihre Community ist – die Menschen, die sich am ehesten engagieren werden.
 
-**Soziale Medien –** Soziale Medien können eine effektive Möglichkeit sein, das Bewusstsein für Ihr Übersetzungsprogramm zu schärfen und Ihre Community-Mitglieder sowie andere Personen zu erreichen, die noch nicht Mitglied Ihrer Community sind.
+**Soziale Medien –** Soziale Medien können ein effektiver Weg sein, um die Bekanntheit Ihres Übersetzungsprogramms zu steigern und Ihre Community-Mitglieder sowie andere Personen zu erreichen, die noch nicht Teil Ihrer Community sind.
 
-Wenn Sie einen Discord-Server oder Telegram-Kanal haben, können Sie diesen ganz einfach für die Kontaktaufnahme, die Kommunikation mit Ihren Übersetzern und die Anerkennung Ihrer Mitwirkenden nutzen.
+Wenn Sie einen Discord-Server oder einen Telegram-Kanal haben, können Sie diesen ganz einfach für die Kontaktaufnahme, die Kommunikation mit Ihren Übersetzern und die Anerkennung Ihrer Mitwirkenden nutzen.
 
-Plattformen wie X (ehemals Twitter) können auch hilfreich sein, um neue Community-Mitglieder an Bord zu holen und Ihre Mitwirkenden öffentlich anzuerkennen.
+Plattformen wie X (ehemals Twitter) können auch hilfreich sein, um neue Community-Mitglieder durch Onboarding einzubinden und Ihre Mitwirkenden öffentlich anzuerkennen.
 
-Die Linux Foundation hat einen ausführlichen [Bericht über die FOSS-Mitwirkenden-Umfrage 2020](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf) erstellt, in dem Open-Source-Mitwirkende und ihre Motivationen analysiert werden.
+Die Linux Foundation hat einen umfangreichen [Bericht über die FOSS-Mitwirkenden-Umfrage 2020](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf) erstellt, der Open-Source-Mitwirkende und ihre Motivationen analysiert.
 
 ## Fazit {#conclusion}
 
@@ -312,6 +311,6 @@ Dieses Dokument enthält einige wichtige Überlegungen, die jedem Übersetzungsp
 
 Wenn Sie nach detaillierteren Anweisungen und Aufschlüsselungen verschiedener Tools, Prozesse und kritischer Aspekte der Verwaltung eines Übersetzungsprogramms suchen, pflegen einige der größten Sprachdienstleister Blogs und veröffentlichen häufig Artikel zu verschiedenen Aspekten des Lokalisierungsprozesses. Dies sind die besten Ressourcen, wenn Sie tiefer in eines der oben genannten Themen eintauchen und verstehen möchten, wie der Lokalisierungsprozess professionell abläuft.
 
-Einige relevante Links sind am Ende jedes Abschnitts enthalten; Sie können jedoch viele weitere Ressourcen online finden.
+Einige relevante Links sind am Ende jedes Abschnitts aufgeführt; Sie können jedoch viele weitere Ressourcen online finden.
 
 Für Kooperationsvorschläge oder zusätzliche Informationen, Erkenntnisse und Best Practices, die wir durch die Pflege des Übersetzungsprogramms von ethereum.org gesammelt haben, können Sie uns gerne unter translations@ethereum.org kontaktieren.

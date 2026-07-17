@@ -4,18 +4,18 @@ description: "Gambaran umum dan perbandingan dua bahasa kontrak pintar utama –
 lang: id
 ---
 
-Aspek yang luar biasa tentang [Ethereum](/) adalah bahwa kontrak pintar dapat diprogram menggunakan bahasa yang relatif ramah pengembang. Jika Anda berpengalaman dengan Python atau [bahasa kurung kurawal](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) apa pun, Anda dapat menemukan bahasa dengan sintaksis yang familier.
+Aspek hebat dari [Ethereum](/) adalah kontrak pintar dapat diprogram menggunakan bahasa yang relatif ramah pengembang. Jika Anda berpengalaman dengan Python atau [bahasa kurung kurawal](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) apa pun, Anda dapat menemukan bahasa dengan sintaksis yang familier.
 
 Dua bahasa yang paling aktif dan dipelihara adalah:
 
 - Solidity
 - Vyper
 
-Remix IDE menyediakan lingkungan pengembangan yang komprehensif untuk membuat dan menguji kontrak di Solidity dan Vyper. [Coba Remix IDE di dalam peramban](https://remix.ethereum.org) untuk mulai membuat kode.
+Remix IDE menyediakan lingkungan pengembangan yang komprehensif untuk membuat dan menguji kontrak di Solidity dan Vyper. [Coba Remix IDE di peramban](https://remix.ethereum.org) untuk mulai membuat kode.
 
-Pengembang yang lebih berpengalaman mungkin juga ingin menggunakan Yul, bahasa perantara untuk [Mesin Virtual Ethereum](/developers/docs/evm/), atau Yul+, sebuah ekstensi untuk Yul.
+Pengembang yang lebih berpengalaman mungkin juga ingin menggunakan Yul, bahasa perantara untuk [Mesin Virtual Ethereum (EVM)](/developers/docs/evm/), atau Yul+, ekstensi untuk Yul.
 
-Jika Anda penasaran dan ingin membantu menguji bahasa baru yang masih dalam tahap pengembangan berat, Anda dapat bereksperimen dengan Fe, bahasa kontrak pintar baru yang saat ini masih dalam tahap awal.
+Jika Anda penasaran dan ingin membantu menguji bahasa baru yang masih dalam tahap pengembangan intensif, Anda dapat bereksperimen dengan Fe, bahasa kontrak pintar baru yang saat ini masih dalam tahap awal.
 
 ## Prasyarat {#prerequisites}
 
@@ -45,35 +45,35 @@ Pengetahuan sebelumnya tentang bahasa pemrograman, terutama JavaScript atau Pyth
 ### Contoh kontrak {#example-contract}
 
 ```solidity
-// SPDX-License-Identifier: GPL-3.0 // SPDX-License-Identifier: GPL-3.0
+// SPDX-License-Identifier: GPL-3.0
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // The keyword "public" makes variables // Kata kunci "public" membuat variabel
-    // accessible from other contracts // dapat diakses dari kontrak lain
+    // Kata kunci "public" membuat variabel
+    // dapat diakses dari kontrak lain
     address public minter;
     mapping (address => uint) public balances;
 
-    // Events allow clients to react to specific // Event memungkinkan klien bereaksi terhadap
-    // contract changes you declare // perubahan kontrak tertentu yang Anda deklarasikan
+    // Event memungkinkan klien untuk bereaksi terhadap
+    // perubahan kontrak spesifik yang Anda deklarasikan
     event Sent(address from, address to, uint amount);
 
-    // Constructor code is only run when the contract // Kode konstruktor hanya dijalankan ketika kontrak
-    // is created // dibuat
+    // Kode konstruktor hanya dijalankan ketika kontrak
+    // dibuat
     constructor() {
         minter = msg.sender;
     }
 
-    // Sends an amount of newly created coins to an address // Mengirim sejumlah koin yang baru dibuat ke sebuah alamat
-    // Can only be called by the contract creator // Hanya dapat dipanggil oleh pembuat kontrak
+    // Mengirim sejumlah koin yang baru dibuat ke sebuah alamat
+    // Hanya dapat dipanggil oleh pembuat kontrak
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
         balances[receiver] += amount;
     }
 
-    // Sends an amount of existing coins // Mengirim sejumlah koin yang ada
-    // from any caller to an address // dari pemanggil mana pun ke sebuah alamat
+    // Mengirim sejumlah koin yang ada
+    // dari pemanggil mana pun ke sebuah alamat
     function send(address receiver, uint amount) public {
         require(amount <= balances[msg.sender], "Insufficient balance.");
         balances[msg.sender] -= amount;
@@ -83,25 +83,25 @@ contract Coin {
 }
 ```
 
-Contoh ini akan memberi Anda gambaran tentang seperti apa sintaksis kontrak Solidity. Untuk deskripsi yang lebih mendetail tentang fungsi dan variabel, [lihat dokumentasinya](https://docs.soliditylang.org/en/latest/contracts.html).
+Contoh ini akan memberi Anda gambaran tentang seperti apa sintaksis kontrak Solidity. Untuk deskripsi yang lebih mendetail tentang fungsi dan variabel, [lihat dokumentasi](https://docs.soliditylang.org/en/latest/contracts.html).
 
 ## Vyper {#vyper}
 
-- Bahasa pemrograman Pythonic
-- Pengetikan yang kuat
+- Bahasa pemrograman bergaya Python (Pythonic)
+- Pengetikan kuat (strong typing)
 - Kode kompilator yang kecil dan mudah dipahami
-- Pembuatan bytecode yang efisien
+- Pembuatan kode bita yang efisien
 - Sengaja memiliki lebih sedikit fitur daripada Solidity dengan tujuan membuat kontrak lebih aman dan lebih mudah diaudit. Vyper tidak mendukung:
-  - Modifier
+  - Pengubah (modifiers)
   - Pewarisan
-  - Inline assembly
-  - Function overloading
-  - Operator overloading
+  - Perakitan sebaris (inline assembly)
+  - Kelebihan beban fungsi (function overloading)
+  - Kelebihan beban operator (operator overloading)
   - Pemanggilan rekursif
-  - Perulangan tak terbatas
-  - Titik tetap biner
+  - Perulangan dengan panjang tak terbatas
+  - Titik tetap biner (binary fixed points)
 
-Untuk informasi lebih lanjut, [baca rasional Vyper](https://vyper.readthedocs.io/en/latest/index.html).
+Untuk informasi lebih lanjut, [baca dasar pemikiran Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Tautan penting {#important-links-1}
 
@@ -114,113 +114,113 @@ Untuk informasi lebih lanjut, [baca rasional Vyper](https://vyper.readthedocs.io
 - [Kerangka kerja dan alat pengembangan kontrak pintar untuk Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - belajar mengamankan dan meretas kontrak pintar Vyper](https://github.com/SupremacyTeam/VyperPunk)
 - [Vyper Hub untuk pengembangan](https://github.com/zcor/vyper-dev)
-- [Contoh kontrak pintar Vyper greatest hits](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Sumber daya kurasi Awesome Vyper](https://github.com/spadebuilders/awesome-vyper)
+- [Contoh kontrak pintar terbaik Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Sumber daya pilihan Awesome Vyper](https://github.com/spadebuilders/awesome-vyper)
 
 ### Contoh {#example}
 
 ```python
-# Open Auction # Lelang Terbuka
+# Lelang Terbuka
 
-# Auction params # Parameter lelang
-# Beneficiary receives money from the highest bidder # Penerima manfaat menerima uang dari penawar tertinggi
+# Parameter lelang
+# Penerima manfaat menerima uang dari penawar tertinggi
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
-# Current state of auction # Status lelang saat ini
+# Status lelang saat ini
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Set to true at the end, disallows any change # Ditetapkan menjadi true pada akhirnya, tidak mengizinkan perubahan apa pun
+# Ditetapkan ke true pada akhirnya, tidak mengizinkan perubahan apa pun
 ended: public(bool)
 
-# Keep track of refunded bids so we can follow the withdraw pattern # Melacak penawaran yang dikembalikan sehingga kita dapat mengikuti pola penarikan
+# Melacak tawaran yang dikembalikan sehingga kita dapat mengikuti pola penarikan
 pendingReturns: public(HashMap[address, uint256])
 
-# Create a simple auction with `_bidding_time` # Buat lelang sederhana dengan `_bidding_time`
-# seconds bidding time on behalf of the # detik waktu penawaran atas nama
-# beneficiary address `_beneficiary`. # alamat penerima manfaat `_beneficiary`.
+# Buat lelang sederhana dengan `_bidding_time`
+# detik waktu penawaran atas nama
+# alamat penerima manfaat `_beneficiary`.
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# Bid on the auction with the value sent # Menawar pada lelang dengan nilai yang dikirimkan
-# together with this transaction. # bersama dengan transaksi ini.
-# The value will only be refunded if the # Nilai hanya akan dikembalikan jika
-# auction is not won. # lelang tidak dimenangkan.
+# Menawar pada lelang dengan nilai yang dikirimkan
+# bersama dengan transaksi ini.
+# Nilai hanya akan dikembalikan jika
+# lelang tidak dimenangkan.
 @external
 @payable
 def bid():
-    # Check if bidding period is over. # Periksa apakah periode penawaran telah berakhir.
+    # Periksa apakah periode penawaran telah berakhir.
     assert block.timestamp < self.auctionEnd
-    # Check if bid is high enough # Periksa apakah penawaran cukup tinggi
+    # Periksa apakah tawaran cukup tinggi
     assert msg.value > self.highestBid
-    # Track the refund for the previous high bidder # Lacak pengembalian dana untuk penawar tertinggi sebelumnya
+    # Lacak pengembalian dana untuk penawar tertinggi sebelumnya
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # Track new high bid # Lacak penawaran tertinggi baru
+    # Lacak tawaran tertinggi baru
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Withdraw a previously refunded bid. The withdraw pattern is # Tarik penawaran yang sebelumnya dikembalikan. Pola penarikan
-# used here to avoid a security issue. If refunds were directly # digunakan di sini untuk menghindari masalah keamanan. Jika pengembalian dana langsung
-# sent as part of bid(), a malicious bidding contract could block # dikirim sebagai bagian dari bid(), kontrak penawaran berbahaya dapat memblokir
-# those refunds and thus block new higher bids from coming in. # pengembalian dana tersebut dan dengan demikian memblokir penawaran baru yang lebih tinggi untuk masuk.
+# Tarik tawaran yang sebelumnya dikembalikan. Pola penarikan
+# digunakan di sini untuk menghindari masalah keamanan. Jika pengembalian dana langsung
+# dikirim sebagai bagian dari bid(), kontrak penawaran berbahaya dapat memblokir
+# pengembalian dana tersebut dan dengan demikian memblokir tawaran baru yang lebih tinggi untuk masuk.
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# End the auction and send the highest bid # Akhiri lelang dan kirim penawaran tertinggi
-# to the beneficiary. # ke penerima manfaat.
+# Akhiri lelang dan kirim tawaran tertinggi
+# ke penerima manfaat.
 @external
 def endAuction():
-    # It is a good guideline to structure functions that interact # Ini adalah pedoman yang baik untuk menyusun fungsi yang berinteraksi
-    # with other contracts (i.e., they call functions or send ether) # dengan kontrak lain (yaitu, mereka memanggil fungsi atau mengirim ether)
-    # into three phases: # ke dalam tiga fase:
-    # 1. checking conditions # 1. memeriksa kondisi
-    # 2. performing actions (potentially changing conditions) # 2. melakukan tindakan (berpotensi mengubah kondisi)
-    # 3. interacting with other contracts # 3. berinteraksi dengan kontrak lain
-    # If these phases are mixed up, the other contract could call # Jika fase-fase ini dicampuradukkan, kontrak lain dapat memanggil
-    # back into the current contract and modify the state or cause # kembali ke kontrak saat ini dan memodifikasi status atau menyebabkan
-    # effects (ether payout) to be performed multiple times. # efek (pembayaran ether) dilakukan berkali-kali.
-    # If functions called internally include interaction with external # Jika fungsi yang dipanggil secara internal mencakup interaksi dengan
-    # contracts, they also have to be considered interaction with # kontrak eksternal, mereka juga harus dianggap sebagai interaksi dengan
-    # external contracts. # kontrak eksternal.
+    # Ini adalah pedoman yang baik untuk menyusun fungsi yang berinteraksi
+    # dengan kontrak lain (yaitu, memanggil fungsi atau mengirim ether)
+    # ke dalam tiga fase:
+    # 1. memeriksa kondisi
+    # 2. melakukan tindakan (berpotensi mengubah kondisi)
+    # 3. berinteraksi dengan kontrak lain
+    # Jika fase-fase ini dicampuradukkan, kontrak lain dapat memanggil
+    # kembali ke kontrak saat ini dan memodifikasi status atau menyebabkan
+    # efek (pembayaran ether) dilakukan berkali-kali.
+    # Jika fungsi yang dipanggil secara internal mencakup interaksi dengan
+    # kontrak eksternal, fungsi tersebut juga harus dianggap sebagai interaksi dengan
+    # kontrak eksternal.
 
-    # 1. Conditions # 1. Kondisi
-    # Check if auction endtime has been reached # Periksa apakah waktu akhir lelang telah tercapai
+    # 1. Kondisi
+    # Periksa apakah waktu akhir lelang telah tercapai
     assert block.timestamp >= self.auctionEnd
-    # Check if this function has already been called # Periksa apakah fungsi ini sudah dipanggil
+    # Periksa apakah fungsi ini telah dipanggil
     assert not self.ended
 
-    # 2. Effects # 2. Efek
+    # 2. Efek
     self.ended = True
 
-    # 3. Interaction # 3. Interaksi
+    # 3. Interaksi
     send(self.beneficiary, self.highestBid)
 ```
 
-Contoh ini akan memberi Anda gambaran tentang seperti apa sintaksis kontrak Vyper. Untuk deskripsi yang lebih mendetail tentang fungsi dan variabel, [lihat dokumentasinya](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
+Contoh ini akan memberi Anda gambaran tentang seperti apa sintaksis kontrak Vyper. Untuk deskripsi yang lebih mendetail tentang fungsi dan variabel, [lihat dokumentasi](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
 ## Yul dan Yul+ {#yul}
 
-Jika Anda baru mengenal Ethereum dan belum pernah melakukan pengodean dengan bahasa kontrak pintar, kami menyarankan Anda untuk memulai dengan Solidity atau Vyper. Pelajari Yul atau Yul+ hanya setelah Anda familier dengan praktik terbaik keamanan kontrak pintar dan spesifikasi bekerja dengan EVM.
+Jika Anda baru mengenal Ethereum dan belum pernah membuat kode dengan bahasa kontrak pintar, kami menyarankan untuk memulai dengan Solidity atau Vyper. Pelajari Yul atau Yul+ hanya setelah Anda familier dengan praktik terbaik keamanan kontrak pintar dan spesifikasi bekerja dengan EVM.
 
 **Yul**
 
 - Bahasa perantara untuk Ethereum.
-- Mendukung [EVM](/developers/docs/evm) dan [Ewasm](https://github.com/ewasm), WebAssembly dengan cita rasa Ethereum, dan dirancang untuk menjadi penyebut umum yang dapat digunakan dari kedua platform tersebut.
+- Mendukung [EVM](/developers/docs/evm) dan [Ewasm](https://github.com/ewasm), WebAssembly dengan cita rasa Ethereum, dan dirancang untuk menjadi penyebut umum yang dapat digunakan dari kedua platform.
 - Target yang baik untuk tahap pengoptimalan tingkat tinggi yang dapat menguntungkan platform EVM dan Ewasm secara setara.
 
 **Yul+**
 
 - Ekstensi tingkat rendah dan sangat efisien untuk Yul.
-- Awalnya dirancang untuk kontrak [optimistic rollup](/developers/docs/scaling/optimistic-rollups/).
-- Yul+ dapat dilihat sebagai proposal peningkatan eksperimental untuk Yul, yang menambahkan fitur-fitur baru ke dalamnya.
+- Awalnya dirancang untuk kontrak [rollup Optimistic](/developers/docs/scaling/optimistic-rollups/).
+- Yul+ dapat dilihat sebagai proposal peningkatan eksperimental untuk Yul, yang menambahkan fitur baru ke dalamnya.
 
 ### Tautan penting {#important-links-2}
 
@@ -251,7 +251,7 @@ Contoh sederhana berikut mengimplementasikan fungsi pangkat. Ini dapat dikompila
 }
 ```
 
-Jika Anda sudah sangat berpengalaman dengan kontrak pintar, implementasi ERC20 penuh di Yul dapat ditemukan [di sini](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Jika Anda sudah sangat berpengalaman dengan kontrak pintar, implementasi ERC-20 penuh di Yul dapat ditemukan [di sini](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## Fe {#fe}
 
@@ -288,7 +288,6 @@ contract GuestBook:
 
     pub def get_msg(addr: address) -> BookMsg:
         return self.guest_book[addr].to_mem()
-
 ```
 
 ## Cara memilih {#how-to-choose}
@@ -312,7 +311,7 @@ Berikut adalah beberapa hal yang perlu dipertimbangkan jika Anda belum mencoba s
 ### Apa yang hebat dari Yul dan Yul+? {#yul-advantages}
 
 - Bahasa tingkat rendah yang sederhana dan fungsional.
-- Memungkinkan untuk lebih dekat dengan EVM mentah, yang dapat membantu mengoptimalkan penggunaan gas dari kontrak Anda.
+- Memungkinkan untuk lebih dekat dengan EVM mentah, yang dapat membantu mengoptimalkan penggunaan gas kontrak Anda.
 
 ## Perbandingan bahasa {#language-comparisons}
 

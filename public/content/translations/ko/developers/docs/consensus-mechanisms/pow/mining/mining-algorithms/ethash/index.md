@@ -1,6 +1,6 @@
 ---
-title: Ethash
-description: "이더해시 알고리즘 자세히 살펴보기."
+title: "이더해시"
+description: "이더해시 알고리즘에 대한 자세한 살펴보기."
 lang: ko
 ---
 
@@ -8,57 +8,54 @@ lang: ko
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash는 이더리움의 작업 증명 채굴 알고리즘이었습니다. 이제 작업 증명은 <strong>완전히 중단</strong>되었으며, 대신 [지분 증명](/developers/docs/consensus-mechanisms/pos/)을 사용하여 이더리움을 보호합니다. [병합](/roadmap/merge/), [지분 증명](/developers/docs/consensus-mechanisms/pos/), [스테이킹](/staking/)에 대해 자세히 알아보세요. 이 페이지는 역사적 참고 자료로만 제공됩니다!
+   이더해시는 이더리움의 작업증명(PoW) 채굴 알고리즘이었습니다. 작업증명은 이제 **완전히 종료되었으며**, 이더리움은 대신 [지분 증명(PoS)](/developers/docs/consensus-mechanisms/pos/)을 사용하여 보호됩니다. [머지](/roadmap/merge/), [지분 증명](/developers/docs/consensus-mechanisms/pos/) 및 [스테이킹](/staking/)에 대해 자세히 알아보세요. 이 페이지는 역사적 참고용입니다!  
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-이더해시는 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) 알고리즘의 수정된 버전입니다. 이더해시 작업 증명은 [메모리 집약적](https://wikipedia.org/wiki/Memory-hard_function)이며, 이는 이 알고리즘을 ASIC 저항적으로 만든다고 여겨졌습니다. 결국 이더해시 ASIC가 개발되었지만, 작업 증명이 중단될 때까지 GPU 채굴은 여전히 실행 가능한 옵션이었습니다. 이더해시는 이더리움이 아닌 다른 작업 증명 네트워크에서 다른 코인을 채굴하는 데 여전히 사용됩니다.
+이더해시는 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) 알고리즘의 수정된 버전입니다. 이더해시 작업증명은 [메모리 하드(memory hard)](https://wikipedia.org/wiki/Memory-hard_function) 특성을 가지며, 이는 알고리즘이 ASIC에 내성을 갖도록 만든다고 여겨졌습니다. 결국 이더해시 ASIC이 개발되었지만, 작업증명이 종료될 때까지 GPU 채굴은 여전히 실행 가능한 옵션이었습니다. 이더해시는 여전히 이더리움이 아닌 다른 작업증명 네트워크에서 다른 코인을 채굴하는 데 사용됩니다.
 
 ## 이더해시는 어떻게 작동하나요? {#how-does-ethash-work}
 
-메모리 집약성은 nonce 및 블록 헤더에 따라 고정된 리소스의 하위 집합을 선택해야 하는 작업 증명 알고리즘을 통해 달성됩니다. 이 리소스(크기는 수 기가바이트)를 DAG라고 합니다. DAG는 30,000 블록마다 변경되며, 에폭(약 5.2일)이라고 하는 약 125시간의 기간이며 생성하는 데 시간이 걸립니다. DAG는 블록 높이에만 의존하기 때문에 사전 생성이 가능하지만, 그렇지 않은 경우 클라이언트는 블록을 생성하기 위해 이 프로세스가 끝날 때까지 기다려야 합니다. 클라이언트가 미리 DAG를 생성하여 캐시하지 않으면 각 에폭 전환 시 네트워크에 엄청난 블록 지연이 발생할 수 있습니다. 작업 증명을 검증하기 위해 DAG를 생성할 필요가 없으므로 낮은 CPU와 적은 메모리로도 검증이 가능합니다.
+메모리 하드 특성은 논스와 블록 헤더에 종속된 고정 리소스의 하위 집합을 선택해야 하는 작업증명 알고리즘을 통해 달성됩니다. 이 리소스(수 기가바이트 크기)를 DAG라고 합니다. DAG는 30000 블록마다 변경되며, 이 약 125시간의 기간(대략 5.2일)을 에포크라고 부르고 생성하는 데 시간이 꽤 걸립니다. DAG는 블록 높이에만 의존하므로 미리 생성할 수 있지만, 그렇지 않은 경우 클라이언트는 블록을 생성하기 위해 이 프로세스가 끝날 때까지 기다려야 합니다. 클라이언트가 DAG를 미리 생성하고 캐시하지 않으면, 네트워크는 각 에포크 전환 시 대규모 블록 지연을 겪을 수 있습니다. 작업증명을 검증하는 데는 DAG를 생성할 필요가 없으므로, 본질적으로 낮은 CPU와 적은 메모리로도 검증이 가능하다는 점에 유의하세요.
 
-알고리즘이 따르는 일반적인 경로는 다음과 같습니다.
+알고리즘이 취하는 일반적인 경로는 다음과 같습니다.
 
-1. 각 블록의 헤더를 해당 지점까지 스캔하여 계산할 수 있는 <strong>시드</strong>가 존재합니다.
-2. 시드에서 <strong>16MB 의사 난수 캐시</strong>를 계산할 수 있습니다. 라이트 클라이언트는 캐시를 저장합니다.
-3. 캐시에서 <strong>1GB 데이터세트</strong>를 생성할 수 있으며, 데이터세트의 각 항목은 캐시의 적은 수의 항목에만 종속된다는 속성이 있습니다. 풀 클라이언트와 채굴자는 데이터세트를 저장합니다. 데이터세트는 시간에 따라 선형적으로 증가합니다.
-4. 채굴에는 데이터세트의 무작위 슬라이스를 가져와 함께 해싱하는 작업이 포함됩니다. 캐시를 사용하여 필요한 데이터세트의 특정 부분을 재생성하여 적은 메모리로 검증할 수 있으므로 캐시만 저장하면 됩니다.
+1. 해당 시점까지의 블록 헤더를 스캔하여 각 블록에 대해 계산할 수 있는 <strong>시드(seed)</strong>가 존재합니다.
+2. 시드로부터 <strong>16 MB의 의사 난수 캐시(pseudorandom cache)</strong>를 계산할 수 있습니다. 경량 클라이언트는 이 캐시를 저장합니다.
+3. 캐시로부터 <strong>1 GB 데이터 세트</strong>를 생성할 수 있으며, 데이터 세트의 각 항목은 캐시의 소수 항목에만 의존하는 특성을 가집니다. 풀 클라이언트와 채굴자는 이 데이터 세트를 저장합니다. 데이터 세트는 시간에 따라 선형적으로 증가합니다.
+4. 채굴은 데이터 세트의 무작위 조각을 가져와 함께 해싱하는 과정을 포함합니다. 검증은 캐시를 사용하여 필요한 데이터 세트의 특정 조각을 다시 생성함으로써 적은 메모리로 수행할 수 있으므로, 캐시만 저장하면 됩니다.
 
-대용량 데이터세트는 30,000 블록마다 한 번씩 업데이트되므로, 채굴자 노력의 대부분은 데이터세트를 변경하는 것이 아니라 읽는 데 사용됩니다.
+대규모 데이터 세트는 30000 블록마다 한 번씩 업데이트되므로, 채굴자 노력의 대부분은 데이터 세트를 변경하는 것이 아니라 읽는 데 집중됩니다.
 
 ## 정의 {#definitions}
 
-다음과 같은 정의를 사용합니다.
+다음 정의를 사용합니다.
 
 ```
-WORD_BYTES = 4                    # 워드의 바이트
-DATASET_BYTES_INIT = 2**30        # 제네시스의 데이터세트 바이트
-DATASET_BYTES_GROWTH = 2**23      # 에폭당 데이터세트 증가량
-CACHE_BYTES_INIT = 2**24          # 제네시스의 캐시 바이트
-CACHE_BYTES_GROWTH = 2**17        # 에폭당 캐시 증가량
-CACHE_MULTIPLIER=1024             # 캐시에 대한 DAG의 크기
-EPOCH_LENGTH = 30000              # 에폭당 블록 수
-MIX_BYTES = 128                   # 믹스 너비
+WORD_BYTES = 4                    # 워드의 바이트 수
+DATASET_BYTES_INIT = 2**30        # 제네시스 시점의 데이터 세트 바이트 수
+DATASET_BYTES_GROWTH = 2**23      # 에포크당 데이터 세트 증가량
+CACHE_BYTES_INIT = 2**24          # 제네시스 시점의 캐시 바이트 수
+CACHE_BYTES_GROWTH = 2**17        # 에포크당 캐시 증가량
+CACHE_MULTIPLIER=1024             # 캐시 대비 DAG 크기
+EPOCH_LENGTH = 30000              # 에포크당 블록 수
+MIX_BYTES = 128                   # 믹스(mix)의 너비
 HASH_BYTES = 64                   # 해시 길이(바이트)
-DATASET_PARENTS = 256             # 각 데이터세트 요소의 부모 수
-CACHE_ROUNDS = 3                  # 캐시 생성 라운드 수
-ACCESSES = 64                     # 해시모토 루프의 액세스 수
+DATASET_PARENTS = 256             # 각 데이터 세트 요소의 부모 수
+CACHE_ROUNDS = 3                  # 캐시 생성 시 라운드 수
+ACCESSES = 64                     # hashimoto 루프의 접근 횟수
 ```
 
 ### 'SHA3'의 사용 {#sha3}
 
-이더리움 개발은 SHA3 표준 개발과 동시에 이루어졌으며,
-표준화 과정에서 최종 해시 알고리즘의 패딩이 늦게 변경되어 이더리움의
-'sha3_256' 및 'sha3_512' 해시는 표준 sha3 해시가 아니라 다른 맥락에서 흔히
-'Keccak-256' 및 'Keccak-512'라고 불리는 변형입니다. 예를 들어 [여기](https://eips.ethereum.org/EIPS/eip-1803), [여기](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), 또는 [여기](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)의 논의를 참조하세요.
+이더리움의 개발은 SHA3 표준의 개발과 동시에 이루어졌으며, 표준화 과정에서 완결된 해시 알고리즘의 패딩에 뒤늦은 변경이 있었습니다. 따라서 이더리움의 "sha3_256" 및 "sha3_512" 해시는 표준 sha3 해시가 아니라, 다른 문맥에서 종종 "케착-256(Keccak-256)" 및 "Keccak-512"로 불리는 변형입니다. 관련 논의는 [여기](https://eips.ethereum.org/EIPS/eip-1803), [여기](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) 또는 [여기](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)를 참조하세요.
 
-아래 알고리즘 설명에서 'sha3' 해시가 언급되므로 이 점을 유념해 주시기 바랍니다.
+아래 알고리즘 설명에서 "sha3" 해시가 언급될 때 이 점을 유의하시기 바랍니다.
 
-## 파라미터 {#parameters}
+## 매개변수 {#parameters}
 
-이더해시의 캐시 및 데이터세트 파라미터는 블록 번호에 따라 달라집니다. 캐시 크기와 데이터세트 크기는 모두 선형적으로 증가하지만, 주기적인 동작으로 이어지는 우발적인 규칙성의 위험을 줄이기 위해 선형적으로 증가하는 임계값보다 낮은 가장 높은 소수를 항상 사용합니다.
+이더해시의 캐시 및 데이터 세트 매개변수는 블록 번호에 따라 달라집니다. 캐시 크기와 데이터 세트 크기는 모두 선형적으로 증가하지만, 우발적인 규칙성으로 인해 순환 동작이 발생하는 위험을 줄이기 위해 항상 선형적으로 증가하는 임계값 아래의 가장 큰 소수를 취합니다.
 
 ```python
 def get_cache_size(block_number):
@@ -76,7 +73,7 @@ def get_full_size(block_number):
     return sz
 ```
 
-데이터세트 및 캐시 크기 값의 표는 부록에 제공됩니다.
+데이터 세트 및 캐시 크기 값의 표는 부록에 제공됩니다.
 
 ## 캐시 생성 {#cache-generation}
 
@@ -86,12 +83,12 @@ def get_full_size(block_number):
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # 초기 데이터세트를 순차적으로 생성
+    # 초기 데이터셋을 순차적으로 생성한다
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # randmemohash의 낮은 라운드 버전을 사용
+    # randmemohash의 낮은 라운드 버전을 사용한다
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -100,11 +97,11 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-캐시 생성 과정은 먼저 32MB의 메모리를 순차적으로 채운 다음, [_엄격한 메모리 집약적 해싱 함수(Strict Memory Hard Hashing Functions)_ (2014)](http://www.hashcash.org/papers/memohash.pdf)에서 Sergio Demian Lerner의 _RandMemoHash_ 알고리즘을 두 번 통과시키는 것을 포함합니다. 출력은 524288개의 64바이트 값 집합입니다.
+캐시 생성 프로세스는 먼저 32 MB의 메모리를 순차적으로 채운 다음, [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf)에 나오는 Sergio Demian Lerner의 _RandMemoHash_ 알고리즘을 두 번 통과시키는 과정을 포함합니다. 출력은 524288개의 64바이트 값 세트입니다.
 
 ## 데이터 집계 함수 {#date-aggregation-function}
 
-경우에 따라 XOR의 비결합적 대체물로 [FNV 해시](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)에서 영감을 받은 알고리즘을 사용합니다. 소수에 차례로 1바이트(옥텟)를 곱하는 FNV-1 사양과 달리, 전체 32비트 입력에 소수를 곱한다는 점에 유의하세요.
+우리는 XOR의 비결합적(non-associative) 대체재로서 일부 경우에 [FNV 해시](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)에서 영감을 받은 알고리즘을 사용합니다. 소수(prime)를 한 번에 1바이트(옥텟)씩 곱하는 FNV-1 사양과 달리, 전체 32비트 입력에 소수를 곱한다는 점에 유의하세요.
 
 ```python
 FNV_PRIME = 0x01000193
@@ -113,28 +110,28 @@ def fnv(v1, v2):
     return ((v1 * FNV_PRIME) ^ v2) % 2**32
 ```
 
-옐로페이퍼에서는 fnv를 v1\*(FNV_PRIME ^ v2)로 지정하고 있지만, 현재 모든 구현에서는 일관되게 위의 정의를 사용하고 있습니다.
+황서(yellow paper)조차도 fnv를 v1\*(FNV_PRIME ^ v2)로 명시하고 있지만, 현재의 모든 구현은 일관되게 위의 정의를 사용한다는 점에 유의하세요.
 
-## 전체 데이터세트 계산 {#full-dataset-calculation}
+## 전체 데이터 세트 계산 {#full-dataset-calculation}
 
-전체 1GB 데이터세트의 각 64바이트 항목은 다음과 같이 계산됩니다.
+전체 1 GB 데이터 세트의 각 64바이트 항목은 다음과 같이 계산됩니다.
 
 ```python
 def calc_dataset_item(cache, i):
     n = len(cache)
     r = HASH_BYTES // WORD_BYTES
-    # 믹스 초기화
+    # 믹스를 초기화한다
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # i를 기반으로 하는 많은 무작위 캐시 노드로 fnv 수행
+    # i를 기반으로 다수의 무작위 캐시 노드와 fnv 연산을 수행한다
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
     return sha3_512(mix)
 ```
 
-기본적으로 256개의 의사 난수적으로 선택된 캐시 노드의 데이터를 결합하고 이를 해싱하여 데이터세트 노드를 계산합니다. 그런 다음 전체 데이터세트는 다음에 의해 생성됩니다.
+본질적으로, 의사 난수로 선택된 256개의 캐시 노드에서 데이터를 결합하고 이를 해싱하여 데이터 세트 노드를 계산합니다. 그런 다음 전체 데이터 세트는 다음을 통해 생성됩니다.
 
 ```python
 def calc_dataset(full_size, cache):
@@ -143,27 +140,27 @@ def calc_dataset(full_size, cache):
 
 ## 메인 루프 {#main-loop}
 
-이제 특정 헤더와 nonce에 대한 최종 값을 생성하기 위해 전체 데이터세트의 데이터를 집계하는 메인 '해시모토'와 유사한 루프를 지정합니다. 아래 코드에서 `header`는 **mixHash** 및 **nonce** 필드를 제외한 _잘린_ 블록 헤더, 즉 RLP 표현의 SHA3-256 <em>해시</em>를 나타냅니다. `nonce`는 빅 엔디안 순서의 64비트 부호 없는 정수의 8바이트입니다. 따라서 `nonce[::-1]`는 해당 값의 8바이트 리틀 엔디안 표현입니다.
+이제 특정 헤더와 논스에 대한 최종 값을 생성하기 위해 전체 데이터 세트에서 데이터를 집계하는 메인 "hashimoto" 유사 루프를 지정합니다. 아래 코드에서 `header`는 _잘린(truncated)_ 블록 헤더, 즉 **mixHash** 및 **nonce** 필드를 제외한 헤더의 RLP 표현에 대한 SHA3-256 <em>해시</em>를 나타냅니다. `nonce`는 빅 엔디언 순서의 64비트 부호 없는 정수의 8바이트입니다. 따라서 `nonce[::-1]`는 해당 값의 8바이트 리틀 엔디언 표현입니다.
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
     n = full_size / HASH_BYTES
     w = MIX_BYTES // WORD_BYTES
     mixhashes = MIX_BYTES / HASH_BYTES
-    # 헤더+nonce를 64바이트 시드로 결합
+    # 헤더+논스를 결합하여 64바이트 시드로 만든다
     s = sha3_512(header + nonce[::-1])
-    # 복제된 s로 믹스 시작
+    # 복제된 s로 믹스를 시작한다
     mix = []
     for _ in range(MIX_BYTES / HASH_BYTES):
         mix.extend(s)
-    # 무작위 데이터세트 노드에서 믹스
+    # 무작위 데이터셋 노드를 섞어 넣는다
     for i in range(ACCESSES):
         p = fnv(i ^ s[0], mix[i % w]) % (n // mixhashes) * mixhashes
         newdata = []
         for j in range(MIX_BYTES / HASH_BYTES):
             newdata.extend(dataset_lookup(p + j))
         mix = map(fnv, mix, newdata)
-    # 믹스 압축
+    # 믹스를 압축한다
     cmix = []
     for i in range(0, len(mix), 4):
         cmix.append(fnv(fnv(fnv(mix[i], mix[i+1]), mix[i+2]), mix[i+3]))
@@ -179,9 +176,9 @@ def hashimoto_full(full_size, dataset, header, nonce):
     return hashimoto(header, nonce, full_size, lambda x: dataset[x])
 ```
 
-기본적으로 128바이트 너비의 '믹스'를 유지하고 전체 데이터세트에서 128바이트를 반복적으로 순차적으로 가져와 `fnv` 함수를 사용하여 믹스와 결합합니다. 128바이트의 순차적 액세스는 알고리즘의 각 라운드가 항상 RAM에서 전체 페이지를 가져오도록 하여 이론적으로 ASIC이 피할 수 있는 변환 색인 버퍼(TLB) 누락을 최소화하는 데 사용됩니다.
+본질적으로, 128바이트 너비의 "믹스(mix)"를 유지하고, 전체 데이터 세트에서 128바이트를 반복적으로 순차적으로 가져와 `fnv` 함수를 사용하여 믹스와 결합합니다. 알고리즘의 각 라운드가 항상 RAM에서 전체 페이지를 가져오도록 128바이트의 순차적 접근이 사용되며, 이는 이론적으로 ASIC이 피할 수 있는 변환 색인 버퍼(TLB) 미스를 최소화합니다.
 
-이 알고리즘의 출력이 원하는 대상보다 낮으면 nonce는 유효합니다. 마지막에 `sha3_256`을 추가로 적용하면 최소한의 작업이 수행되었음을 증명하기 위해 제공할 수 있는 중간 nonce가 존재하도록 보장합니다. 이 빠른 외부 PoW 검증은 안티-DDoS 목적으로 사용될 수 있습니다. 또한 결과가 편향되지 않은 256비트 숫자라는 통계적 보증을 제공하는 역할도 합니다.
+이 알고리즘의 출력이 원하는 목표값보다 작으면 논스가 유효합니다. 마지막에 `sha3_256`를 추가로 적용하면 최소한 적은 양의 작업이 수행되었음을 증명하기 위해 제공할 수 있는 중간 논스가 존재하도록 보장합니다. 이 빠른 외부 작업증명(PoW) 검증은 DDoS 방지 목적으로 사용될 수 있습니다. 또한 결과가 편향되지 않은 256비트 숫자라는 통계적 보증을 제공하는 역할도 합니다.
 
 ## 채굴 {#mining}
 
@@ -189,7 +186,7 @@ def hashimoto_full(full_size, dataset, header, nonce):
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # 동일한 숫자의 해시와 비교하기 위해 대상에 0을 채움
+    # 동일한 자릿수에서 해시와 비교하기 위해 타겟에 0을 채운다
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -200,7 +197,7 @@ def mine(full_size, dataset, header, difficulty):
 
 ## 시드 해시 정의 {#seed-hash}
 
-주어진 블록 위에 채굴하는 데 사용될 시드 해시를 계산하기 위해 다음 알고리즘을 사용합니다.
+주어진 블록 위에서 채굴하는 데 사용될 시드 해시를 계산하기 위해 다음 알고리즘을 사용합니다.
 
 ```python
  def get_seedhash(block):
@@ -210,20 +207,20 @@ def mine(full_size, dataset, header, difficulty):
      return s
 ```
 
-원활한 채굴 및 검증을 위해 별도의 스레드에서 향후 시드해시 및 데이터세트를 미리 계산하는 것을 권장합니다.
+원활한 채굴 및 검증을 위해 별도의 스레드에서 미래의 시드 해시와 데이터 세트를 미리 계산하는 것을 권장합니다.
 
-## 더 읽어보기 {#further-reading}
+## 더 읽을거리 {#further-reading}
 
-_도움이 되었던 커뮤니티 참고 자료를 알고 계신가요? 이 페이지를 편집해서 추가하세요!_
+_도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 편집하여 추가해 주세요!_
 
 ## 부록 {#appendix}
 
-위의 파이썬 사양을 코드로 실행하는 데 관심이 있다면 다음 코드를 앞에 추가해야 합니다.
+위의 Python 사양을 코드로 실행하는 데 관심이 있다면 다음 코드를 앞에 추가해야 합니다.
 
 ```python
 import sha3, copy
 
-# 리틀 엔디안 비트 순서를 가정합니다 (인텔 아키텍처와 동일)
+# 리틀 엔디언 비트 순서를 가정한다 (인텔 아키텍처와 동일)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -251,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 해시 함수, 64바이트 출력
+# sha3 해시 함수, 64바이트를 출력한다
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -270,7 +267,7 @@ def isprime(x):
 
 ### 데이터 크기 {#data-sizes}
 
-다음 조회 테이블은 약 2048개의 표로 정리된 데이터 크기 및 캐시 크기의 에폭을 제공합니다.
+다음 조회 테이블은 약 2048개의 에포크에 대한 데이터 크기 및 캐시 크기를 표 형태로 제공합니다.
 
 ```python
 def get_datasize(block_number):
@@ -860,7 +857,7 @@ cache_sizes = [
 158334656, 158464832, 158596288, 158727616, 158858048, 158988992,
 159121216, 159252416, 159381568, 159513152, 159645632, 159776192,
 159906496, 160038464, 160169536, 160300352, 160430656, 160563008,
-160693952, 16082208, 160956352, 161086784, 161217344, 161349184,
+160693952, 160822208, 160956352, 161086784, 161217344, 161349184,
 161480512, 161611456, 161742272, 161873216, 162002752, 162135872,
 162266432, 162397888, 162529216, 162660032, 162790976, 162922048,
 163052096, 163184576, 163314752, 163446592, 163577408, 163707968,

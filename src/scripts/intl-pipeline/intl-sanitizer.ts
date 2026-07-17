@@ -49,8 +49,7 @@ const BLOCK_MDX_COMPONENTS = [
   "AlertEmoji",
   "AlertContent",
   "AlertDescription",
-  "CardGrid",
-  "InfoGrid",
+  "Grid",
   "InfoBanner",
   "Tabs",
   "TabItem",
@@ -613,6 +612,29 @@ function fixDuplicatedTagValues(content: string): {
 }
 
 /**
+ * Revert wrongly-hyphenated Solidity interface identifiers.
+ * The pipeline's ERC-number normalization sometimes turns `IERC165` into
+ * `IERC-165` (also IERC20, IERC721, IERC1155, etc.). `IERC-<digits>` is never a
+ * valid identifier — the `I`-prefixed interface is always `IERC<digits>` — so
+ * this is safe to revert everywhere, inside and outside code. Note this does NOT
+ * touch the standard names `ERC-165` / `ERC-20` (no leading `I`), which are
+ * correct in prose.
+ */
+function fixHyphenatedInterfaceIdentifiers(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const fixed = content.replace(/\bIERC-(\d+)/g, (_, digits) => {
+    fixCount++
+    return `IERC${digits}`
+  })
+
+  return { content: fixed, fixCount }
+}
+
+/**
  * Restore abbreviations stripped from parentheses in frontmatter.
  * When English has "(RWA)" but translation has "()", restore the abbreviation.
  * Only restores ASCII/Latin abbreviations (not translated text).
@@ -959,6 +981,82 @@ function fixDuplicatedHeadings(content: string): {
   })
 
   return { content: result, fixCount }
+}
+
+/**
+ * Remove duplicate "ghost" heading blocks.
+ *
+ * When a structural change to the English source shifts block layout (e.g. the
+ * h1 -> frontmatter.title migration that removed leading `#` page titles), the
+ * pipeline's incremental block-matching can emit a section twice: an
+ * anchor-less "ghost" heading (often an older or differently-worded
+ * translation, sometimes a different formality register) immediately followed
+ * by the correct same-level heading WITH a `{#anchor}`. The reader sees the
+ * section rendered twice in a row.
+ *
+ * This removes the ghost block (the anchor-less heading plus the duplicate
+ * prose up to the anchored twin), keeping the canonical anchored version that
+ * matches the English source. English requires `{#id}` on every heading and
+ * `syncHeaderIdsWithEnglish` runs before this, so any remaining anchor-less
+ * heading is an artifact.
+ *
+ * Conservative by design — only acts when the immediately-following heading is
+ * the SAME level and HAS an anchor, and the lines between contain no code
+ * fence. It never half-cuts a fenced block, and it leaves "lone" anchor-less
+ * headings (no anchored twin) untouched — those need an anchor ADDED, which is
+ * `syncHeaderIdsWithEnglish`'s job, not this one.
+ */
+function fixDuplicateHeadingBlocks(content: string): {
+  content: string
+  fixCount: number
+} {
+  const lines = content.split("\n")
+  const headingRe = /^(#{1,6})\s+\S/
+  const anchorRe = /\{#[^}]+\}/
+  const fenceRe = /^\s*(```|~~~)/
+
+  // Index headings, skipping fenced code blocks.
+  const heads: Array<{ idx: number; level: number; hasAnchor: boolean }> = []
+  let inFence = false
+  for (let i = 0; i < lines.length; i++) {
+    if (fenceRe.test(lines[i])) {
+      inFence = !inFence
+      continue
+    }
+    if (inFence) continue
+    const m = lines[i].match(headingRe)
+    if (m) {
+      heads.push({
+        idx: i,
+        level: m[1].length,
+        hasAnchor: anchorRe.test(lines[i]),
+      })
+    }
+  }
+
+  const drop = new Set<number>()
+  let fixCount = 0
+  for (let h = 0; h < heads.length - 1; h++) {
+    const ghost = heads[h]
+    const twin = heads[h + 1]
+    if (ghost.hasAnchor) continue
+    if (twin.level !== ghost.level || !twin.hasAnchor) continue
+    // The lines between the ghost heading and its anchored twin must contain no
+    // code fence — guarantees we never half-cut a fenced block.
+    let safe = true
+    for (let k = ghost.idx + 1; k < twin.idx; k++) {
+      if (fenceRe.test(lines[k])) {
+        safe = false
+        break
+      }
+    }
+    if (!safe) continue
+    for (let k = ghost.idx; k < twin.idx; k++) drop.add(k)
+    fixCount++
+  }
+
+  if (fixCount === 0) return { content, fixCount: 0 }
+  return { content: lines.filter((_, i) => !drop.has(i)).join("\n"), fixCount }
 }
 
 /**
@@ -3405,6 +3503,20 @@ function escapeMdxAngleBrackets(content: string): {
         return `\\<${after}`
       })
 
+      // Escape a raw < when the following char cannot start a valid JSX tag
+      // name and is not whitespace or a digit (digits handled above). This
+      // catches `<` before punctuation/CJK/fullwidth chars, e.g. the fullwidth
+      // paren in `uint256の「より小さい（<）」`. Valid tag-name starts that are
+      // preserved: a-zA-Z, /, _, $, > (the <> and </> fragments are handled
+      // by the rules above). `a < b` (space after) is preserved too.
+      parts[i] = parts[i].replace(
+        /(?<!&lt|&|\\|`)<(?![a-zA-Z\d/_$>\s])/g,
+        () => {
+          fixCount++
+          return "&lt;"
+        }
+      )
+
       if (parts[i] !== original) changed = true
     }
 
@@ -3414,6 +3526,92 @@ function escapeMdxAngleBrackets(content: string): {
   }
 
   return { content: lines.join("\n"), fixCount }
+}
+
+/**
+ * Restore a dropped `</p>` closing tag on a single-line block paragraph.
+ * Translation sometimes drops the closing `</p>` (e.g. inside `<AlertContent>`),
+ * leaving an unclosed `<p>` that breaks MDX. Uses a conservative heuristic to
+ * avoid touching genuinely multi-line `<p>...</p>` blocks: only appends `</p>`
+ * when the next non-blank line begins with another tag (`<`), which means the
+ * paragraph text could not legitimately continue there. Skips fenced code.
+ */
+function fixUnclosedParagraphTags(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const lines = content.split("\n")
+  let inFencedBlock = false
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+
+    // Track fenced code block boundaries
+    if (/^(`{3,}|~{3,})/.test(line)) {
+      inFencedBlock = !inFencedBlock
+      continue
+    }
+    if (inFencedBlock) continue
+
+    const trimmed = line.trim()
+    if (!/^<p(\s|>)/.test(trimmed)) continue
+
+    const opens = (line.match(/<p(\s|>)/g) || []).length
+    const closes = (line.match(/<\/p>/g) || []).length
+    if (opens <= closes) continue // already balanced on this line
+
+    // Find next non-blank line (not crossing a code fence)
+    let j = i + 1
+    while (j < lines.length && lines[j].trim() === "") j++
+    if (j >= lines.length) continue
+    const nextTrimmed = lines[j].trim()
+
+    // Only restore if the next line starts a tag — prose continuation would
+    // mean this is a legitimate multi-line paragraph and we must not touch it.
+    if (nextTrimmed.startsWith("<")) {
+      lines[i] = line + "</p>"
+      fixCount++
+    }
+  }
+
+  return { content: lines.join("\n"), fixCount }
+}
+
+/**
+ * Fix a fullwidth `）` (U+FF09) that closes a markdown link `](...)`.
+ * Translation can convert the ASCII `)` closing a link into the fullwidth
+ * variant, so the link never closes. Handles two precise forms: an angle-bracket
+ * autolink `](<...>）` (whose URL may itself contain ASCII parens) and a simple
+ * `](url）` with no nested parens. Skips fenced/inline code.
+ */
+function fixFullwidthParensInLinks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks and inline code
+
+    // Autolink form: ](<...>） -> ](<...>)
+    parts[i] = parts[i].replace(/(\]\(<[^>\n]+>)）/g, (_, prefix) => {
+      fixCount++
+      return `${prefix})`
+    })
+
+    // Simple form: ](url） with no nested parens -> ](url)
+    parts[i] = parts[i].replace(/(\]\([^()（）\n]+)）/g, (_, prefix) => {
+      fixCount++
+      return `${prefix})`
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
 }
 
 /**
@@ -3548,6 +3746,40 @@ function fixBackslashBeforeClosingTag(content: string): {
  * after the {#anchor-id} tag, e.g. {#network-impact}네트워크-충격
  * These break rendering and must be stripped.
  */
+/**
+ * Strip empty heading anchors ({#} or {# }) from markdown headings.
+ *
+ * English h5 headings have no anchor, but the pipeline can inject an empty
+ * {#} onto translated h5 headings. MDX parses {#} as a JS expression and
+ * acorn rejects it, breaking the build (PR #18438 hit 70 files / 24 locales).
+ * An empty {#} is never valid, so stripping it is always correct.
+ *
+ * Example: "##### Operating system {#}" -> "##### Operating system"
+ */
+function fixEmptyHeadingAnchors(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    parts[i] = parts[i].replace(
+      /^(#{1,6} .*?)[ \t]*\{#[ \t]*\}[ \t]*$/gm,
+      (_, heading) => {
+        fixCount++
+        return heading
+      }
+    )
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
 function fixJunkAfterHeadingAnchors(content: string): {
   content: string
   fixCount: number
@@ -3746,6 +3978,50 @@ function fixMissingLinkParentheses(content: string): {
 }
 
 /**
+ * Fix markdown angle-bracket autolinks of the form `](<URL>)` that lost their
+ * closing `>` during translation, or had it converted to a fullwidth `）`.
+ * Angle-bracket autolinks are used when a URL itself contains parentheses
+ * (e.g. Wikipedia articles like `Stack_(abstract_data_type)`). When the closing
+ * `>` is dropped, MDX parses `<https://...` as a JSX tag and the build breaks.
+ *
+ * Restores `](<URL>)`. Operates outside code blocks.
+ */
+function fixDroppedAutolinkClose(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip code blocks
+
+    // (a) Dropped `>`: autolink open `](<`, a URL containing a parenthesised
+    // segment, optionally followed by a stray duplicate `)`, and NOT already
+    // followed by the closing `>`. The negative lookahead leaves correct
+    // `](<URL>)` untouched.
+    parts[i] = parts[i].replace(
+      /\]\(<(https?:\/\/[^\s<>]*\([^\s<>()]*\))\)?(?!>)/g,
+      (_, url) => {
+        fixCount++
+        return `](<${url}>)`
+      }
+    )
+
+    // (b) Fullwidth close: a complete autolink `](<URL>)` written with a
+    // fullwidth `）` instead of an ASCII `)`.
+    parts[i] = parts[i].replace(/(\]\(<[^>\n]+>)）/g, (_, autolink) => {
+      fixCount++
+      return `${autolink})`
+    })
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
  * Fix missing </em> closing tags before </li> in HTML lists.
  * Crowdin sometimes drops the </em> when translating list items.
  * Pattern: <em>text.</li> → <em>text.</em></li>
@@ -3807,7 +4083,7 @@ function fixImagePathDotSlash(content: string): {
  * Fix backslash-escaped quotes in JSX/MDX attributes.
  *
  * Crowdin sometimes backslash-escapes double quotes in JSX attributes:
- *   <ButtonLink variant=\"outline-color\" href=\"/path/\">
+ *   <ButtonLink variant=\"outline\" href=\"/path/\">
  * This is valid in JSON but breaks MDX compilation.
  * Fix: remove the backslash before quotes in JSX-like tag attributes.
  */
@@ -4471,6 +4747,10 @@ function processMarkdownFile(
     (n) => `Fixed ${n} duplicated tag value(s)`
   )
   applyFix(
+    () => fixHyphenatedInterfaceIdentifiers(content),
+    (n) => `Fixed ${n} hyphenated interface identifier(s)`
+  )
+  applyFix(
     () => fixSmartQuotesInJsxAttributes(content),
     (n) => `Fixed smart quotes in ${n} JSX tag attribute(s)`
   )
@@ -4491,6 +4771,10 @@ function processMarkdownFile(
     (n) => `Fixed ${n} duplicated headings`
   )
   applyFix(
+    () => fixDuplicateHeadingBlocks(content),
+    (n) => `Removed ${n} duplicate ghost heading block(s)`
+  )
+  applyFix(
     () => fixBrokenMarkdownLinks(content),
     (n) => `Fixed ${n} broken markdown links`
   )
@@ -4499,8 +4783,16 @@ function processMarkdownFile(
     (n) => `Fixed ${n} links with missing parentheses`
   )
   applyFix(
+    () => fixDroppedAutolinkClose(content),
+    (n) => `Restored ${n} dropped autolink close bracket(s)`
+  )
+  applyFix(
     () => fixBacktickWrappedLinks(content),
     (n) => `Unwrapped ${n} backtick-wrapped markdown links`
+  )
+  applyFix(
+    () => fixEmptyHeadingAnchors(content),
+    (n) => `Stripped ${n} empty {#} heading anchor(s)`
   )
   applyFix(
     () => fixJunkAfterHeadingAnchors(content),
@@ -4610,6 +4902,14 @@ function processMarkdownFile(
   applyFix(
     () => fixAsymmetricBackticks(content),
     (n) => `Fixed ${n} asymmetric backtick pairs`
+  )
+  applyFix(
+    () => fixFullwidthParensInLinks(content),
+    (n) => `Fixed ${n} fullwidth paren(s) closing markdown link(s)`
+  )
+  applyFix(
+    () => fixUnclosedParagraphTags(content),
+    (n) => `Restored ${n} dropped </p> closing tag(s)`
   )
   applyFix(
     () => fixMisplacedBacktickAroundJsxFragment(content),
@@ -5508,6 +5808,7 @@ function fixJsxAttributeSpacing(content: string): {
 export const _testOnly = {
   // Standalone fixes
   fixDuplicatedHeadings,
+  fixDuplicateHeadingBlocks,
   fixBrokenMarkdownLinks,
   fixEscapedBoldAndItalic,
   fixAsciiGuillemets,
@@ -5520,6 +5821,8 @@ export const _testOnly = {
   fixBrandCapitalization,
   fixMisplacedBacktickAroundJsxFragment,
   escapeMdxAngleBrackets,
+  fixUnclosedParagraphTags,
+  fixFullwidthParensInLinks,
   removeOrphanedClosingTags,
   normalizeFrontmatterDates,
   quoteFrontmatterNonAscii,
@@ -5547,11 +5850,13 @@ export const _testOnly = {
   // Warnings
   warnPunctuationOnlyHeadings,
   fixBackslashBeforeClosingTag,
+  fixEmptyHeadingAnchors,
   fixJunkAfterHeadingAnchors,
   fixNonAsciiHeadingIds,
   fixJsxMarkdownHybrids,
   fixBacktickWrappedLinks,
   fixMissingLinkParentheses,
+  fixDroppedAutolinkClose,
   fixMissingClosingEmTag,
   fixImagePathDotSlash,
   fixEscapedQuotesInJsxAttributes,
@@ -5566,6 +5871,7 @@ export const _testOnly = {
   fixSmartQuotesInJsxAttributes,
   stripCrowdinBoilerplate,
   fixDuplicatedTagValues,
+  fixHyphenatedInterfaceIdentifiers,
   fixKnownBrandGarbles,
   restoreStrippedAbbreviations,
   fixMergedSupDigits,

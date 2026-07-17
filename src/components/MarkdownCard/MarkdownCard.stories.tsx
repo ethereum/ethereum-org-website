@@ -1,7 +1,9 @@
+import { Sparkles } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Meta, type StoryObj } from "@storybook/nextjs"
 
 import { Button } from "../ui/buttons/Button"
+import { Grid } from "../ui/grid"
 
 import CardComponent, { MarkdownCardProps } from "."
 
@@ -11,11 +13,11 @@ const meta = {
   parameters: { layout: "fullscreen" },
   decorators: [
     (Story) => (
-      <div className="grid w-full grid-cols-fill-3 gap-8 p-8">
+      <Grid className="w-full p-8">
         {Array.from({ length: 3 }).map((_, idx) => (
           <Story key={idx} />
         ))}
-      </div>
+      </Grid>
     ),
   ],
 } satisfies Meta<typeof CardComponent>
@@ -30,6 +32,29 @@ export const Card: StoryObj<MarkdownCardProps> = {
 
     const defaultProps: MarkdownCardProps = {
       emoji: ":woman_student:",
+      title: t("page-developers-learn"),
+      description: t("page-developers-learn-desc"),
+    }
+
+    return (
+      <CardComponent {...defaultProps} {...args}>
+        <Button>{t("page-developers-read-docs")}</Button>
+      </CardComponent>
+    )
+  },
+}
+
+/**
+ * Preferred going forward: pass a Lucide `icon` instead of an `emoji`. The two
+ * props are mutually exclusive — `icon` renders through `CardIconContainer`
+ * (sized to 48px, tinted `text-primary`) rather than the `Emoji` glyph.
+ */
+export const CardWithIcon: StoryObj<MarkdownCardProps> = {
+  render: (args) => {
+    const t = useTranslations(DEVELOPS_INDEX_NS)
+
+    const defaultProps: MarkdownCardProps = {
+      icon: <Sparkles />,
       title: t("page-developers-learn"),
       description: t("page-developers-learn-desc"),
     }

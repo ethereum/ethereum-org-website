@@ -36,7 +36,7 @@ Content PRs are considered medium-priority. Depending on their content, they can
 
 ### Typographical and grammatical errors
 
-Typographical and grammatical errors are medium-priority as small errors of this kind can have second-order ramifications for the linguists of the ~50 languages we currently translate to. Though technically a subgroup of ‘content PRs’, typos and grammar errors take significantly less time to review and, as a result, are treated differently.
+Typographical and grammatical errors are medium-priority as small errors of this kind can have second-order ramifications for the linguists of the ~50 languages with active translation efforts on Crowdin (25 locales are currently shipped on the site — see `i18n.config.json`). Though technically a subgroup of ‘content PRs’, typos and grammar errors take significantly less time to review and, as a result, are treated differently.
 
 **Timeline:** Typo or grammar pull requests should be merged within 8 days of opening.
 

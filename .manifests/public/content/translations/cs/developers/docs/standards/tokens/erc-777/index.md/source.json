@@ -1,0 +1,300 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/developers/docs/standards/tokens/erc-777/index.md",
+  "generatedAt": "2026-06-16T23:18:40.416Z",
+  "rootHash": "e90e5e83c7a1",
+  "tree": {
+    "contentHash": "e01d67070adc",
+    "anchorHash": "49936df9cd1a",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "4f0253ac7e70",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "8ff11af75f83",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "warning": {
+        "contentHash": "6c8909d7dded",
+        "anchorHash": "3dc3723b381b",
+        "labelHash": "e981ddae45d8",
+        "children": {
+          "_label": {
+            "contentHash": "e981ddae45d8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "cf351827acf8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "254fd60a747c",
+            "anchorHash": "23506efa7805"
+          },
+          "prose:3": {
+            "contentHash": "e954142ac4ad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "1f090d6c3bb9",
+            "anchorHash": "68c1f3dae0e4"
+          },
+          "prose:4": {
+            "contentHash": "dbd267f0bab2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "introduction": {
+        "contentHash": "4a2317cee75e",
+        "anchorHash": "d3b7cd471010",
+        "labelHash": "00c7c830439e",
+        "children": {
+          "_label": {
+            "contentHash": "00c7c830439e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "f5f38272dd35",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "1f090d6c3bb9",
+            "anchorHash": "68c1f3dae0e4"
+          },
+          "prose:2": {
+            "contentHash": "ae425457683c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "prerequisites": {
+        "contentHash": "52188bc44473",
+        "anchorHash": "d3b7cd471010",
+        "labelHash": "865514682d01",
+        "children": {
+          "_label": {
+            "contentHash": "865514682d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "bec393eb3ea0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "1f090d6c3bb9",
+            "anchorHash": "68c1f3dae0e4"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "-erc-777-vs-erc-20": {
+        "contentHash": "cbbfd19aca27",
+        "anchorHash": "e360a4ec939a",
+        "labelHash": "40912bf5b62e",
+        "children": {
+          "_label": {
+            "contentHash": "40912bf5b62e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "efcf0d2a5d04",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "hooks": {
+            "contentHash": "3e46f165c3e4",
+            "anchorHash": "d6ad419b8a5f",
+            "labelHash": "d412a062620e",
+            "children": {
+              "_label": {
+                "contentHash": "d412a062620e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "f4c81e646a73",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "46ba4a986dd0",
+                "anchorHash": "d7fb50186bd3"
+              },
+              "prose:2": {
+                "contentHash": "ae425457683c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "why-are-hooks-great": {
+                "contentHash": "43e88664b852",
+                "anchorHash": "198ee9e37ea6",
+                "labelHash": "b0474629a7b6",
+                "children": {
+                  "_label": {
+                    "contentHash": "b0474629a7b6",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "prose:3": {
+                    "contentHash": "7e55bcbe05fa",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "1f090d6c3bb9",
+                    "anchorHash": "ac4ad503a551"
+                  },
+                  "prose:4": {
+                    "contentHash": "34724a5fde6e",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:1": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "74e21680eac7"
+                  },
+                  "prose:5": {
+                    "contentHash": "8a5edab28263",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "inline-code:2": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "b7f373226f52"
+                  },
+                  "prose:6": {
+                    "contentHash": "f707da6a547c",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "_label",
+                  "prose:3",
+                  "link:0",
+                  "prose:4",
+                  "inline-code:1",
+                  "prose:5",
+                  "inline-code:2",
+                  "prose:6"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2",
+              "why-are-hooks-great"
+            ]
+          },
+          "decimals": {
+            "contentHash": "ac01cc2eacb6",
+            "anchorHash": "bce633da748d",
+            "labelHash": "74672912045e",
+            "children": {
+              "_label": {
+                "contentHash": "74672912045e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "66b7c2eacac0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "inline-code:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "ee80fd2f1e03"
+              },
+              "prose:2": {
+                "contentHash": "dde50787e7e5",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "inline-code:0",
+              "prose:2"
+            ]
+          },
+          "backwards-compatibility-with-erc-20": {
+            "contentHash": "c7820b15ddc1",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "1c0f324a2e5e",
+            "children": {
+              "_label": {
+                "contentHash": "1c0f324a2e5e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "9d4837c198fd",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "hooks",
+          "decimals",
+          "backwards-compatibility-with-erc-20"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "e48c849d461e",
+        "anchorHash": "e00248b5009e",
+        "labelHash": "bd2e42f237b3",
+        "children": {
+          "_label": {
+            "contentHash": "bd2e42f237b3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3642e8481bac",
+            "anchorHash": "ee60ed846cbf"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "link:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "warning",
+      "introduction",
+      "prerequisites",
+      "-erc-777-vs-erc-20",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+}

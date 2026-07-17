@@ -1,77 +1,75 @@
 ---
-title: "Kodeks postępowania"
-description: "Podstawowe standardy, do których dążymy w przestrzeniach ethereum.org."
+title: Kodeks postępowania
+description: Podstawowe standardy, do których dążymy we wszystkich przestrzeniach ethereum.org.
 lang: pl
 ---
 
-# Kodeks postępowania {#code-of-conduct}
-
 ## Misja {#mission}
 
-Rozwijanie i utrzymanie najbardziej obszernego i dostępnego centrum wiedzy na temat Ethereum.
+Rozwój i utrzymanie najbardziej wszechstronnego i przystępnego centrum wiedzy o Ethereum.
 
 ## Wartości {#values}
 
-Społeczność ethereum.org dąży do bycia:
+Społeczność ethereum.org dąży do tego, aby być:
 
-- edukacyjną, mającą na celu pomóc każdemu zrozumieć Ethereum
-- inkluzywną
-- dostępną
-- kierowaną przez społeczność
-- skupioną na podstawowej technologii Ethereum i przypadkach jej użycia
-- skupioną na koncepcjach i zasadach projektowania Ethereum
+- edukacyjna, mająca na celu pomoc każdemu w zrozumieniu Ethereum
+- inkluzywna
+- przystępna
+- napędzana przez społeczność
+- skupiona na technologii leżącej u podstaw Ethereum i przypadkach użycia
+- skupiona na koncepcjach i zasadach projektowania Ethereum
 
 ## Czym nie jesteśmy {#what-we-are-not}
 
-- Stroną Fundacji Ethereum
-- Platformą do promowania inwestycji lub czerpania jakichkolwiek zysków
-- Platformą do wyróżniania lub wspierania poszczególnych projektów lub organizacji
-- DEX, CEX lub jakąkolwiek inną formą platformy finansowej
+- Stroną internetową Fundacji Ethereum
+- Platformą do promowania inwestycji lub jakiegokolwiek czerpania zysków
+- Platformą do wywyższania lub popierania poszczególnych projektów lub organizacji
+- DEX-em, CEX-em ani żadną inną formą platformy finansowej
 - Platformą udzielającą jakichkolwiek porad finansowych lub prawnych
 
-## Kodeks postępowania {#code-of-conduct}
+## Kodeks postępowania {#code-of-conduct-2}
 
 ### Zobowiązanie {#pledge}
 
-Otwarte uczestnictwo jest podstawą etosu ethereum.org. Jesteśmy witryną i społecznością utrzymywaną przez tysiące współtwórców, a jest to możliwe tylko wtedy, gdy utrzymujemy przyjazne i partycypacyjne środowisko. W tym celu współtwórcy tej witryny zobowiązują się do utrzymywania środowiska wolnego od nękania dla wszystkich uczestników na wszystkich platformach ethereum.org i w przestrzeniach społecznościowych. Społeczność ethereum.org akceptuje i ceni każdego, kto chce uczestniczyć w konstruktywny i przyjazny sposób, bez względu na wiek, niepełnosprawność, pochodzenie etniczne, cechy płciowe, tożsamość płciową, poziom doświadczenia, obszar specjalizacji, wykształcenie, status społeczno-ekonomiczny, narodowość, wygląd osobisty, rasę, religię lub jakikolwiek inny wymiar różnorodności.
+Otwarte uczestnictwo jest podstawą etosu ethereum.org. Jesteśmy stroną internetową i społecznością utrzymywaną przez tysiące współtwórców, a jest to możliwe tylko wtedy, gdy utrzymujemy przyjazne, sprzyjające uczestnictwu środowisko. W tym celu współtwórcy tej strony zobowiązują się do utrzymania środowiska wolnego od nękania dla wszystkich uczestników na wszystkich platformach i w przestrzeniach społecznościowych ethereum.org. Społeczność ethereum.org wita i ceni każdego, kto chce uczestniczyć w konstruktywny i przyjazny sposób, niezależnie od wieku, niepełnosprawności, pochodzenia etnicznego, cech płciowych, tożsamości płciowej, poziomu doświadczenia, obszaru specjalizacji, wykształcenia, statusu społeczno-ekonomicznego, narodowości, wyglądu osobistego, rasy, religii lub jakiegokolwiek innego wymiaru różnorodności.
 
 ### Zakres {#scope}
 
-Niniejszy Kodeks postępowania ma zastosowanie do wszystkich przestrzeni ethereum.org (takich jak GitHub, Discord, Figma, Crowdin, X (dawniej Twitter) i inne platformy internetowe), a także ma zastosowanie, gdy społeczność jest reprezentowana w publicznych przestrzeniach w świecie rzeczywistym, takich jak spotkania, konferencje i wydarzenia.
+Niniejszy Kodeks postępowania ma zastosowanie do wszystkich przestrzeni ethereum.org (takich jak GitHub, Discord, Figma, Crowdin, X (dawniej Twitter) i innych platform internetowych), a także ma zastosowanie, gdy społeczność jest reprezentowana w rzeczywistych przestrzeniach publicznych, takich jak spotkania, konferencje i zdarzenia.
 
 ### Nasze standardy {#our-standards}
 
 Przykłady zachowań, które przyczyniają się do tworzenia pozytywnego środowiska, obejmują:
 
 - Używanie przyjaznego i inkluzywnego języka
-- Szanowanie odmiennych punktów widzenia oraz doświadczeń
-- Przyjmowanie lub udzielanie konstruktywnej krytyki z wdziękiem i/lub empatią
-- Zachowanie spokoju i profesjonalizmu podczas rozwiązywania konfliktów lub nieporozumień
+- Szanowanie odmiennych punktów widzenia i doświadczeń
+- Z klasą przyjmowanie i/lub empatyczne udzielanie konstruktywnej krytyki
+- Spokojne i profesjonalne działanie podczas rozwiązywania konfliktów lub nieporozumień
 - Okazywanie empatii i tolerancji wobec innych członków społeczności
 - Zachęcanie i wzmacnianie nowych głosów w społeczności
 
 Przykłady niedopuszczalnych zachowań uczestników obejmują:
 
-- Przemoc fizyczna, grożenie przemocą fizyczną lub zachęcanie do przemocy fizycznej jakiegokolwiek rodzaju
-- Używanie języka lub obrazów o charakterze seksualnym lub narzucanie niepożądanej uwagi o charakterze seksualnym.
-- Podszywanie się pod inną osobę lub w inny sposób nieuczciwe twierdzenie o powiązaniu z jakąś osobą lub organizacją.
-- Trolling, obraźliwe/uwłaczające komentarze oraz ataki osobiste lub polityczne
-- Nękanie innych członków społeczności na kanałach publicznych lub prywatnych.
-- Publikowanie prywatnych informacji innych osób, takich jak adres fizyczny lub elektroniczny, bez ich wyraźnej zgody.
-- Inżynieria społeczna, oszustwa lub innego rodzaju manipulowanie innymi członkami społeczności.
-- Promowanie inwestycji, tokenów, projektów lub czegokolwiek innego w celu uzyskania osobistych korzyści pieniężnych lub niepieniężnych
-- Spamowanie serwerów treściami niezwiązanymi z tematem.
-- Lekceważenie próśb lub ostrzeżeń moderatorów społeczności
-- Angażowanie się w inne zachowania, które mogłyby zostać uznane za niewłaściwe w środowisku profesjonalnym
+- Przemoc fizyczną, grożenie przemocą fizyczną lub zachęcanie do jakiejkolwiek przemocy fizycznej
+- Używanie zseksualizowanego języka lub obrazów, lub narzucanie niechcianej uwagi o charakterze seksualnym
+- Podszywanie się pod inną osobę lub w inny sposób nieuczciwe twierdzenie o powiązaniach z jakąś osobą lub organizacją
+- Trolling, obraźliwe/lekceważące komentarze oraz ataki osobiste lub polityczne
+- Nękanie innych członków społeczności na kanałach publicznych lub prywatnych
+- Publikowanie prywatnych informacji innych osób, takich jak adres fizyczny lub elektroniczny, bez wyraźnej zgody
+- Inżynierię społeczną, oszustwa lub inne manipulowanie członkami społeczności
+- Promowanie inwestycji, tokenów, projektów lub czegokolwiek innego w celu uzyskania osobistych korzyści majątkowych lub niemajątkowych
+- Spamowanie serwerów treściami niezwiązanymi z tematem
+- Lekceważenie próśb lub ostrzeżeń od moderatorów społeczności
+- Angażowanie się w inne zachowania, które można by racjonalnie uznać za niewłaściwe w środowisku profesjonalnym
 
 ### Zgłaszanie {#reporting}
 
-Naruszenia kodeksu postępowania będą zwykle widoczne dla społeczności, ponieważ staramy się robić wszystko w otwartych, publicznych kanałach, umożliwiając członkom społeczności samokontrolę.
+Naruszenia kodeksu postępowania będą zazwyczaj widoczne dla społeczności, ponieważ staramy się robić wszystko na otwartych, publicznych kanałach, pozwalając członkom społeczności na samokontrolę.
 
-Jeśli jednak wydarzy się coś, co Twoim zdaniem wymaga uwagi, możesz zgłosić to osobie pełniącej rolę moderatora (np. rola „guide” na Discordzie), aby mogła pomóc zbadać sprawę i podjąć odpowiednie działania.
+Jeśli jednak wydarzy się coś, co Twoim zdaniem wymaga uwagi, możesz zgłosić to osobie pełniącej rolę moderatora (np. przewodnikowi na Discordzie), aby mogła pomóc w zbadaniu sprawy i podjęciu odpowiednich działań.
 
-Podczas zgłaszania prosimy o podanie jak największej liczby szczegółów, w tym konkretnych przykładów i znaczników czasu. Pomoże to zapewnić uczciwy rezultat.
+Podczas zgłaszania prosimy o podanie jak największej liczby szczegółów, w tym konkretnych przykładów i znaczników czasu. Pomoże to zapewnić sprawiedliwe rozstrzygnięcie.
 
 ### Egzekwowanie {#enforcement}
 
-W zależności od wagi naruszenia, osoby łamiące kodeks postępowania mogą otrzymać ostrzeżenia, tymczasowe lub stałe bany od społeczności ethereum.org.
+W zależności od wagi przewinienia, osoby naruszające kodeks postępowania mogą otrzymać ostrzeżenia, tymczasowe bany lub stałe bany w społecznościach ethereum.org.

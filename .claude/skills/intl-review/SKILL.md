@@ -25,6 +25,11 @@ Use the `/filter` endpoint to get the subset of glossary terms that actually app
 6. **MDX syntax errors are CRITICAL (build-breaking).** Raw `<` before numbers, unclosed backticks, orphaned closing tags, JSX attributes with embedded unescaped quotes — any of these breaks the build for that locale. Flag and fix.
 7. **Reporting zero critical issues is a valid outcome.** Don't invent issues to "show your work." If a thorough review surfaces no criticals, report `0 critical, N warnings` (or `0/0`) and that's a valid result.
 8. **Auto-fix is opt-out, not opt-in.** `/review-translations` applies fixes by default. Use `--no-fix` for review-only runs (GitHub Actions context, no commit auth). The review report still lists what would have been fixed.
+9. **All review changes go on the `intl/pending-*` branch being reviewed — NEVER `dev`.** Translation fixes AND knowledge-base updates (`known-patterns.md`, `per-language/{lang}.md`) for a given review are committed to that review's own `intl/pending-{base}` branch so they ride with the PR to GitHub. See the next section.
+
+## Where Review Changes Live
+
+Both translation fixes and knowledge-base updates (`per-language/{lang}.md`, `known-patterns.md`) go on the `intl/pending-{base}` branch under review — the `/review-translations` worktree — so they ride with the PR. Never leave review artifacts on `dev`; if you catch yourself editing `.claude/translation-review/` in the `dev` checkout, move them to the review branch and restore `dev`. Sequence: commit → push → submit review (`--approve` once the fix is pushed and no criticals remain, else `--comment`).
 
 ## Highest-Value Gotchas
 
@@ -57,7 +62,7 @@ Real translation values sometimes contain "Lorem ipsum dolor sit amet" or simila
 
 ### Asymmetric backticks and orphaned HTML tags
 
-Single-open / double-close backticks (`` `text`` ``), missing `</em>` before `</li>`, raw `</a>` without opener — all break MDX compilation. Critical.
+Single-open / double-close backticks (`` `text`` ``), missing `</em>`before`</li>`, raw `</a>` without opener — all break MDX compilation. Critical.
 
 ### `/review-translations` requires a named branch, never detached HEAD
 
@@ -69,20 +74,20 @@ The slash command's worktree setup enforces this; if you script around it, the b
 
 ## Quick "Where Do I Look?" Cheatsheet
 
-| I need... | Path |
-|---|---|
-| Slash command (full pipeline) | `/review-translations` (`.claude/commands/review-translations.md`) |
-| Issue-pattern catalog | `.claude/translation-review/known-patterns.md` + `references/known-patterns.md` |
-| Per-language rules | `references/language-rules.md` (sourced from `.claude/translation-review/localization-rules-by-language-group.md`) |
-| Scoring rubric | `references/scoring-rubric.md` |
-| Per-language findings | `.claude/translation-review/per-language/{lang}.md` |
-| ETHGlossary terms (filtered to source) | `POST /api/v1/filter` |
-| ETHGlossary terms (full per-language) | `GET /api/v1/translations/{lang}` |
-| ETHGlossary policy | https://github.com/wackerow/ethglossary/blob/main/docs/translation-policy.md |
-| Sanitizer source | `src/scripts/intl-pipeline/intl-sanitizer.ts` |
-| Sanitizer test research | `docs/solutions/integration-issues/sanitizer-test-research.md` |
-| Past review post-mortems | `docs/solutions/translation-review/` |
-| Language config | `i18n.config.json` |
+| I need...                              | Path                                                                                                               |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Slash command (full pipeline)          | `/review-translations` (`.claude/commands/review-translations.md`)                                                 |
+| Issue-pattern catalog                  | `.claude/translation-review/known-patterns.md` + `references/known-patterns.md`                                    |
+| Per-language rules                     | `references/language-rules.md` (sourced from `.claude/translation-review/localization-rules-by-language-group.md`) |
+| Scoring rubric                         | `references/scoring-rubric.md`                                                                                     |
+| Per-language findings                  | `.claude/translation-review/per-language/{lang}.md`                                                                |
+| ETHGlossary terms (filtered to source) | `POST /api/v1/filter`                                                                                              |
+| ETHGlossary terms (full per-language)  | `GET /api/v1/translations/{lang}`                                                                                  |
+| ETHGlossary policy                     | https://github.com/wackerow/ethglossary/blob/main/docs/translation-policy.md                                       |
+| Sanitizer source                       | `src/scripts/intl-pipeline/intl-sanitizer.ts`                                                                      |
+| Sanitizer test research                | `docs/solutions/integration-issues/sanitizer-test-research.md`                                                     |
+| Past review post-mortems               | `docs/solutions/integration-issues/` + `docs/solutions/logic-errors/`                                              |
+| Language config                        | `i18n.config.json`                                                                                                 |
 
 ## When to Load Each Reference
 
@@ -113,4 +118,5 @@ Before submitting a translation-quality review:
 - [ ] Per-language quality score produced in the 5-category rubric
 - [ ] Per-language findings file updated at `.claude/translation-review/per-language/{lang}.md`
 - [ ] If new issue pattern surfaced, added to `references/known-patterns.md` (or `known-patterns.md` in the KB)
+- [ ] All review changes (fixes + knowledge-base updates) committed to the `intl/pending-*` branch under review and pushed — never left on `dev`
 - [ ] Build verification (`--build-local` or `--netlify-check`) run if the review touched MDX-syntax-related issues

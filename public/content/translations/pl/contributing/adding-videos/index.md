@@ -18,6 +18,7 @@ Ethereum.org to neutralne, edukacyjne źródło informacji. Galeria wideo jest m
 
 Strona nie umieszcza filmów, które w głównej mierze promują konkretny produkt, token lub usługę komercyjną.
 
+
 ## Kryteria włączenia {#criteria-for-inclusion}
 
 ### Wymagania konieczne {#must-haves}
@@ -33,6 +34,7 @@ Strona nie umieszcza filmów, które w głównej mierze promują konkretny produ
 - **Posiada transkrypcję** – Filmy z transkrypcjami poprawiają dostępność i SEO. Jeśli jej nie masz, zespół ethereum.org może pomóc w jej wygenerowaniu.
 - **Pochodzi z wiarygodnego źródła** – Treści od uznanych edukatorów, badaczy i źródeł mają priorytet.
 - **Aktualne i ponadczasowe** – Treści, które pozostają aktualne z biegiem czasu, są preferowane w stosunku do materiałów szybko tracących na ważności.
+
 
 ## Jak dodać film {#how-to-add-a-video}
 
@@ -121,25 +123,10 @@ Użyj nagłówków `###` ze znacznikami czasu, aby oznaczyć główne sekcje. Dz
 
 Jeśli nie masz transkrypcji, możesz zostawić treść pustą, a zespół ją wygeneruje.
 
-#### Krok 4: Wybierz tagi tematyczne {#step-4}
-
-Wybierz tagi tematyczne, które pasują do istniejących kategorii używanych w galerii. Obecne kategorie i ich tagi to:
-
-- **Jak działa Ethereum**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
-- **Aktualizacje sieci**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
-- **Mapa drogowa i priorytety**: `roadmap-and-priorities`, `pbs`, `mev`
-- **Skalowanie i warstwa 2 (L2)**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
-- **Przypadki użycia**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
-- **Prywatność i bezpieczeństwo**: `privacy-and-security`, `privacy`, `authentication`
-- **Historie społeczności**: `community-stories`, `contributing`, `translations`, `community`
-
-Aby upewnić się, że Twój film pojawi się w sekcji kategorii galerii, dołącz co najmniej jeden kluczowy tag kategorii (pogrubiona nazwa w formacie kebab-case, np. `use-cases` lub `scaling-and-layer-2`). Filmy bez rozpoznanego tagu kategorii pojawią się tylko w widoku „Wszystkie” i w wynikach wyszukiwania.
-
-Możesz również użyć nowych tagów — będą one dostępne dla przyszłych grup kategorii.
-
 #### Krok 5: Prześlij swój PR {#step-5}
 
 Otwórz pull request ze swoimi zmianami do gałęzi `dev`. Zespół przejrzy Twoje zgłoszenie i przekaże opinię.
+
 
 ## Utrzymanie {#maintenance}
 
@@ -150,6 +137,7 @@ Umieszczone filmy są rutynowo sprawdzane, aby upewnić się, że:
 - Mają działające linki do hostingu/YouTube
 
 Jeśli zauważysz problem z umieszczonym filmem, [utwórz zgłoszenie (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) lub wyślij e-mail na adres [website@ethereum.org](mailto:website@ethereum.org).
+
 
 ## Warunki użytkowania {#terms-of-use}
 

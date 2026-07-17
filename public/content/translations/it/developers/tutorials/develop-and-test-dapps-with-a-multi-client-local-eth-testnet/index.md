@@ -1,58 +1,58 @@
 ---
-title: Come sviluppare e testare una dApp su una rete di test locale multi-client
-description: "Questa guida ti illustrerà prima come istanziare e configurare una rete di test locale di Ethereum multi-client prima di utilizzare la rete di test per distribuire e testare una dApp."
+title: Come sviluppare e testare una dapp su una testnet locale multi-client
+description: "Questa guida ti illustrerà prima come istanziare e configurare una testnet Ethereum locale multi-client prima di utilizzare la testnet per distribuire e testare un'applicazione decentralizzata (dapp)."
 author: "Tedi Mitiku"
 tags:
   [
     "client",
     "nodi",
-    "contratti intelligenti",
+    "smart contract",
     "componibilità",
     "livello di consenso",
     "livello di esecuzione",
     "test",
   ]
 skill: intermediate
-breadcrumb: Rete di test multi-client
+breadcrumb: Testnet multi-client
 lang: it
 published: 2023-04-11
 ---
 
 ## Introduzione {#introduction}
 
-Questa guida ti accompagna nel processo di istanziazione di una rete di test locale e configurabile di Ethereum, di distribuzione di un contratto intelligente su di essa e di utilizzo della rete di test per eseguire test sulla tua dApp. Questa guida è progettata per gli sviluppatori di dApp che desiderano sviluppare e testare le proprie dApp localmente su diverse configurazioni di rete prima di distribuirle su una rete di test attiva o sulla rete principale.
+Questa guida ti accompagna nel processo di istanziazione di una testnet Ethereum locale configurabile, nella distribuzione di uno smart contract su di essa e nell'utilizzo della testnet per eseguire test sulla tua applicazione decentralizzata (dapp). Questa guida è pensata per gli sviluppatori di dapp che desiderano sviluppare e testare le proprie dapp localmente su diverse configurazioni di rete prima di distribuirle su una testnet pubblica o sulla Mainnet.
 
-In questa guida, potrai:
+In questa guida:
 
-- Istanziare una rete di test locale di Ethereum con l'[`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) utilizzando [Kurtosis](https://www.kurtosis.com/),
-- Connettere il tuo ambiente di sviluppo di dApp Hardhat alla rete di test locale per compilare, distribuire e testare una dApp, e
-- Configurare la rete di test locale, inclusi parametri come il numero di nodi e specifici abbinamenti di client EL/CL, per abilitare flussi di lavoro di sviluppo e test su varie configurazioni di rete.
+- Istanzierai una testnet Ethereum locale con [`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) utilizzando [Kurtosis](https://www.kurtosis.com/),
+- Connetterai il tuo ambiente di sviluppo per dapp Hardhat alla testnet locale per compilare, distribuire e testare una dapp, e
+- Configurerai la testnet locale, inclusi parametri come il numero di nodi e gli abbinamenti specifici di client EL/CL, per abilitare i flussi di lavoro di sviluppo e test su varie configurazioni di rete.
 
 ### Cos'è Kurtosis? {#what-is-kurtosis}
 
-[Kurtosis](https://www.kurtosis.com/) è un sistema di compilazione componibile progettato per configurare ambienti di test multi-container. Consente specificamente agli sviluppatori di creare ambienti riproducibili che richiedono logiche di configurazione dinamiche, come le reti di test blockchain.
+[Kurtosis](https://www.kurtosis.com/) è un sistema di build componibile progettato per configurare ambienti di test multi-container. Consente specificamente agli sviluppatori di creare ambienti riproducibili che richiedono una logica di configurazione dinamica, come le testnet blockchain.
 
-In questa guida, l'eth-network-package di Kurtosis avvia una rete di test locale di Ethereum con supporto per il client del livello di esecuzione (EL) [`geth`](https://geth.ethereum.org/), oltre ai client del livello di consenso (CL) [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/) e [`lodestar`](https://lodestar.chainsafe.io/). Questo pacchetto funge da alternativa configurabile e componibile alle reti in framework come Hardhat Network, Ganache e Anvil. Kurtosis offre agli sviluppatori un maggiore controllo e flessibilità sulle reti di test che utilizzano, che è uno dei motivi principali per cui la [Fondazione Ethereum ha utilizzato Kurtosis per testare il Merge](https://www.kurtosis.com/blog/testing-the-ethereum-merge) e continua a utilizzarlo per testare gli aggiornamenti della rete.
+In questa guida, il pacchetto eth-network-package di Kurtosis avvia una testnet Ethereum locale con supporto per il client del livello di esecuzione (EL) [`geth`](https://geth.ethereum.org/), oltre ai client del livello di consenso (CL) [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/) e [`lodestar`](https://lodestar.chainsafe.io/). Questo pacchetto funge da alternativa configurabile e componibile alle reti in framework come Hardhat Network, Ganache e Anvil. Kurtosis offre agli sviluppatori un maggiore controllo e flessibilità sulle testnet che utilizzano, il che è uno dei motivi principali per cui la [Ethereum Foundation ha utilizzato Kurtosis per testare The Merge](https://www.kurtosis.com/blog/testing-the-ethereum-merge) e continua a utilizzarlo per testare gli aggiornamenti della rete.
 
-## Configurare Kurtosis {#setting-up-kurtosis}
+## Configurazione di Kurtosis {#setting-up-kurtosis}
 
 Prima di procedere, assicurati di aver:
 
 - [Installato e avviato il motore Docker](https://docs.kurtosis.com/install/#i-install--start-docker) sulla tua macchina locale
 - [Installato la CLI di Kurtosis](https://docs.kurtosis.com/install#ii-install-the-cli) (o aggiornata all'ultima versione, se hai già installato la CLI)
-- Installato [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) e [npx](https://www.npmjs.com/package/npx) (per il tuo ambiente dApp)
+- Installato [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) e [npx](https://www.npmjs.com/package/npx) (per il tuo ambiente dapp)
 
-## Istanziare una rete di test locale di Ethereum {#instantiate-testnet}
+## Istanziare una testnet Ethereum locale {#instantiate-testnet}
 
-Per avviare una rete di test locale di Ethereum, esegui:
+Per avviare una testnet Ethereum locale, esegui:
 
 ```python
 kurtosis --enclave local-eth-testnet run github.com/kurtosis-tech/eth-network-package
 ```
 
-Nota: questo comando nomina la tua rete: "local-eth-testnet" utilizzando il flag `--enclave`.
+Nota: questo comando nomina la tua rete: "local-eth-testnet” utilizzando il flag `--enclave`.
 
-Kurtosis stamperà i passaggi che sta eseguendo in background mentre lavora per interpretare, convalidare e quindi eseguire le istruzioni. Alla fine, dovresti vedere un output simile al seguente:
+Kurtosis stamperà i passaggi che sta eseguendo internamente mentre lavora per interpretare, convalidare e quindi eseguire le istruzioni. Alla fine, dovresti vedere un output simile al seguente:
 
 ```python
 INFO[2023-04-04T18:09:44-04:00] ======================================================
@@ -92,44 +92,44 @@ d7b802f623e8   el-client-0                                    engine-rpc: 8551/t
 
 ```
 
-Congratulazioni! Hai utilizzato Kurtosis per istanziare una rete di test locale di Ethereum, con un client CL (`lighthouse`) ed EL (`geth`), su Docker.
+Congratulazioni! Hai utilizzato Kurtosis per istanziare una testnet Ethereum locale, con un client CL (`lighthouse`) e un client EL (`geth`), su Docker.
 
-### Revisione {#review-instantiate-testnet}
+### Riepilogo {#review-instantiate-testnet}
 
-In questa sezione, hai eseguito un comando che ha indicato a Kurtosis di utilizzare l'[`eth-network-package` ospitato in remoto su GitHub](https://github.com/kurtosis-tech/eth-network-package) per avviare una rete di test locale di Ethereum all'interno di un'[Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/) di Kurtosis. All'interno della tua enclave, troverai sia "artefatti di file" che "servizi utente".
+In questa sezione, hai eseguito un comando che ha indicato a Kurtosis di utilizzare il pacchetto [`eth-network-package` ospitato in remoto su GitHub](https://github.com/kurtosis-tech/eth-network-package) per avviare una testnet Ethereum locale all'interno di un'[Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/) di Kurtosis. All'interno della tua enclave, troverai sia "artefatti di file" che "servizi utente".
 
-Gli [Artefatti di File](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) nella tua enclave includono tutti i dati generati e utilizzati per avviare i client EL e CL. I dati sono stati creati utilizzando il servizio `prelaunch-data-generator` creato da questa [immagine Docker](https://github.com/ethpandaops/ethereum-genesis-generator)
+Gli [Artefatti di file](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) nella tua enclave includono tutti i dati generati e utilizzati per avviare i client EL e CL. I dati sono stati creati utilizzando il servizio `prelaunch-data-generator` compilato da questa [immagine Docker](https://github.com/ethpandaops/ethereum-genesis-generator)
 
 I servizi utente mostrano tutti i servizi containerizzati operativi nella tua enclave. Noterai che è stato creato un singolo nodo, che presenta sia un client EL che un client CL.
 
-## Connettere il tuo ambiente di sviluppo di dApp alla rete di test locale di Ethereum {#connect-your-dapp}
+## Connettere l'ambiente di sviluppo della dapp alla testnet Ethereum locale {#connect-your-dapp}
 
-### Configurare l'ambiente di sviluppo della dApp {#set-up-dapp-env}
+### Configurare l'ambiente di sviluppo della dapp {#set-up-dapp-env}
 
-Ora che hai una rete di test locale in esecuzione, puoi connettere il tuo ambiente di sviluppo di dApp per utilizzare la tua rete di test locale. Il framework Hardhat verrà utilizzato in questa guida per distribuire una dApp di blackjack sulla tua rete di test locale.
+Ora che hai una testnet locale in esecuzione, puoi connettere il tuo ambiente di sviluppo per dapp per utilizzare la tua testnet locale. In questa guida verrà utilizzato il framework Hardhat per distribuire una dapp di blackjack sulla tua testnet locale.
 
-Per configurare il tuo ambiente di sviluppo di dApp, clona il repository che contiene la nostra dApp di esempio e installa le sue dipendenze, esegui:
+Per configurare il tuo ambiente di sviluppo per dapp, clona il repository che contiene la nostra dapp di esempio e installa le sue dipendenze, esegui:
 
 ```python
 git clone https://github.com/kurtosis-tech/awesome-kurtosis.git && cd awesome-kurtosis/smart-contract-example && yarn
 ```
 
-La cartella [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) utilizzata qui contiene la configurazione tipica per uno sviluppatore di dApp che utilizza il framework [Hardhat](https://hardhat.org/):
+La cartella [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) utilizzata qui contiene la configurazione tipica per uno sviluppatore di dapp che utilizza il framework [Hardhat](https://hardhat.org/):
 
-- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) contiene alcuni semplici contratti intelligenti per una dApp di Blackjack
-- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) contiene uno script per distribuire un contratto di token sulla tua rete locale di Ethereum
-- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) contiene un semplice test .js per il tuo contratto di token per confermare che ogni giocatore nella nostra dApp di Blackjack abbia 1000 token coniati per loro
+- [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) contiene alcuni semplici smart contract per una dapp di Blackjack
+- [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) contiene uno script per distribuire un contratto di token sulla tua rete Ethereum locale
+- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) contiene un semplice test .js per il tuo contratto di token per confermare che ogni giocatore nella nostra dapp di Blackjack abbia 1000 token coniati per sé
 - [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts) configura la tua installazione di Hardhat
 
-### Configurare Hardhat per utilizzare la rete di test locale {#configure-hardhat}
+### Configurare Hardhat per utilizzare la testnet locale {#configure-hardhat}
 
-Con il tuo ambiente di sviluppo di dApp configurato, ora connetterai Hardhat per utilizzare la rete di test locale di Ethereum generata utilizzando Kurtosis. Per farlo, sostituisci `<$YOUR_PORT>` nella struttura `localnet` nel tuo file di configurazione `hardhat.config.ts` con la porta dell'URI RPC in output da qualsiasi servizio `el-client-<num>`. In questo caso di esempio, la porta sarebbe `64248`. La tua porta sarà diversa.
+Con il tuo ambiente di sviluppo per dapp configurato, ora connetterai Hardhat per utilizzare la testnet Ethereum locale generata utilizzando Kurtosis. Per farlo, sostituisci `<$YOUR_PORT>` nella struttura `localnet` nel tuo file di configurazione `hardhat.config.ts` con la porta dell'URI RPC in output da qualsiasi servizio `el-client-<num>`. In questo caso di esempio, la porta sarebbe `64248`. La tua porta sarà diversa.
 
 Esempio in `hardhat.config.ts`:
 
 ```js
 localnet: {
-url: 'http://127.0.0.1:<$YOUR_PORT>', // TODO: SOSTITUISCI $YOUR_PORT CON LA PORTA DI UN URI DEL NODO PRODOTTO DAL PACCHETTO ETH NETWORK KURTOSIS
+url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: SOSTITUISCI $YOUR_PORT CON LA PORTA DI UN URI DEL NODO PRODOTTO DAL PACCHETTO KURTOSIS DELLA RETE ETH
 
 // Queste sono chiavi private associate ad account di test prefinanziati creati dall'eth-network-package
 // <https://github.com/kurtosis-tech/eth-network-package/blob/main/src/prelaunch_data_generator/genesis_constants/genesis_constants.star>
@@ -144,7 +144,7 @@ accounts: [
 },
 ```
 
-Una volta salvato il file, il tuo ambiente di sviluppo di dApp Hardhat è ora connesso alla tua rete di test locale di Ethereum! Puoi verificare che la tua rete di test funzioni eseguendo:
+Una volta salvato il file, il tuo ambiente di sviluppo per dapp Hardhat è ora connesso alla tua testnet Ethereum locale! Puoi verificare che la tua testnet funzioni eseguendo:
 
 ```python
 npx hardhat balances --network localnet
@@ -161,13 +161,13 @@ L'output dovrebbe essere simile a questo:
 0x1F6298457C5d76270325B724Da5d1953923a6B88 has balance 10000000000000000000000000
 ```
 
-Questo conferma che Hardhat sta utilizzando la tua rete di test locale e rileva gli account prefinanziati creati dall'`eth-network-package`.
+Questo conferma che Hardhat sta utilizzando la tua testnet locale e rileva gli account prefinanziati creati da `eth-network-package`.
 
-### Distribuire e testare la tua dApp localmente {#deploy-and-test-dapp}
+### Distribuire e testare la tua dapp localmente {#deploy-and-test-dapp}
 
-Con l'ambiente di sviluppo della dApp completamente connesso alla rete di test locale di Ethereum, ora puoi eseguire flussi di lavoro di sviluppo e test sulla tua dApp utilizzando la rete di test locale.
+Con l'ambiente di sviluppo per dapp completamente connesso alla testnet Ethereum locale, ora puoi eseguire flussi di lavoro di sviluppo e test sulla tua dapp utilizzando la testnet locale.
 
-Per compilare e distribuire il contratto intelligente `ChipToken.sol` per la prototipazione e lo sviluppo locale, esegui:
+Per compilare e distribuire lo smart contract `ChipToken.sol` per la prototipazione e lo sviluppo locale, esegui:
 
 ```python
 npx hardhat compile
@@ -180,7 +180,7 @@ L'output dovrebbe essere simile a:
 ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
 ```
 
-Ora prova a eseguire il test `simple.js` sulla tua dApp locale per confermare che ogni giocatore nella nostra dApp di Blackjack abbia 1000 token coniati per loro:
+Ora prova a eseguire il test `simple.js` sulla tua dapp locale per confermare che ogni giocatore nella nostra dapp di Blackjack abbia 1000 token coniati per sé:
 
 L'output dovrebbe essere simile a questo:
 
@@ -198,19 +198,19 @@ ChipToken
   1 passing (654ms)
 ```
 
-### Revisione {#review-dapp-workflows}
+### Riepilogo {#review-dapp-workflows}
 
-A questo punto, hai configurato un ambiente di sviluppo di dApp, lo hai connesso a una rete locale di Ethereum creata da Kurtosis e hai compilato, distribuito ed eseguito un semplice test sulla tua dApp.
+A questo punto, hai configurato un ambiente di sviluppo per dapp, lo hai connesso a una rete Ethereum locale creata da Kurtosis e hai compilato, distribuito ed eseguito un semplice test sulla tua dapp.
 
-Ora esploriamo come puoi configurare la rete sottostante per testare le nostre dApp in diverse configurazioni di rete.
+Ora esploriamo come puoi configurare la rete sottostante per testare le nostre dapp in diverse configurazioni di rete.
 
-## Configurare la rete di test locale di Ethereum {#configure-testnet}
+## Configurare la testnet Ethereum locale {#configure-testnet}
 
 ### Modificare le configurazioni dei client e il numero di nodi {#configure-client-config-and-num-nodes}
 
-La tua rete di test locale di Ethereum può essere configurata per utilizzare diverse coppie di client EL e CL, oltre a un numero variabile di nodi, a seconda dello scenario e della specifica configurazione di rete che desideri sviluppare o testare. Ciò significa che, una volta configurata, puoi avviare una rete di test locale personalizzata e utilizzarla per eseguire gli stessi flussi di lavoro (distribuzione, test, ecc.) in varie configurazioni di rete per assicurarti che tutto funzioni come previsto. Per saperne di più sugli altri parametri che puoi modificare, visita questo link.
+La tua testnet Ethereum locale può essere configurata per utilizzare diverse coppie di client EL e CL, oltre a un numero variabile di nodi, a seconda dello scenario e della configurazione di rete specifica che desideri sviluppare o testare. Ciò significa che, una volta configurata, puoi avviare una testnet locale personalizzata e utilizzarla per eseguire gli stessi flussi di lavoro (distribuzione, test, ecc.) in varie configurazioni di rete per assicurarti che tutto funzioni come previsto. Per saperne di più sugli altri parametri che puoi modificare, visita questo link.
 
-Fai una prova! Puoi passare varie opzioni di configurazione all'`eth-network-package` tramite un file JSON. Questo file JSON dei parametri di rete fornisce le configurazioni specifiche che Kurtosis utilizzerà per configurare la rete locale di Ethereum.
+Fai una prova! Puoi passare varie opzioni di configurazione a `eth-network-package` tramite un file JSON. Questo file JSON dei parametri di rete fornisce le configurazioni specifiche che Kurtosis utilizzerà per configurare la rete Ethereum locale.
 
 Prendi il file di configurazione predefinito e modificalo per avviare due nodi con diverse coppie EL/CL:
 
@@ -218,7 +218,7 @@ Prendi il file di configurazione predefinito e modificalo per avviare due nodi c
 - Nodo 2 con `geth`/`lodestar`
 - Nodo 3 con `geth`/`teku`
 
-Questa configurazione crea una rete eterogenea di implementazioni di nodi Ethereum per testare la tua dApp. Il tuo file di configurazione dovrebbe ora apparire così:
+Questa configurazione crea una rete eterogenea di implementazioni di nodi Ethereum per testare la tua dapp. Il tuo file di configurazione dovrebbe ora apparire così:
 
 ```yaml
 {
@@ -274,19 +274,19 @@ Questa configurazione crea una rete eterogenea di implementazioni di nodi Ethere
 }
 ```
 
-Ogni struttura `participants` è mappata a un nodo nella rete, quindi 3 strutture `participants` diranno a Kurtosis di avviare 3 nodi nella tua rete. Ogni struttura `participants` ti consentirà di specificare la coppia EL e CL utilizzata per quel nodo specifico.
+Ogni struttura `participants` è mappata a un nodo nella rete, quindi 3 strutture `participants` indicheranno a Kurtosis di avviare 3 nodi nella tua rete. Ogni struttura `participants` ti consentirà di specificare la coppia EL e CL utilizzata per quel nodo specifico.
 
 La struttura `network_params` configura le impostazioni di rete che vengono utilizzate per creare i file di genesi per ogni nodo, oltre ad altre impostazioni come i secondi per slot della rete.
 
-Salva il tuo file dei parametri modificato in qualsiasi directory desideri (nell'esempio seguente, è salvato sul desktop) e quindi utilizzalo per eseguire il tuo pacchetto Kurtosis eseguendo:
+Salva il file dei parametri modificato in qualsiasi directory desideri (nell'esempio seguente, è salvato sul desktop) e quindi utilizzalo per eseguire il tuo pacchetto Kurtosis eseguendo:
 
 ```python
 kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/kurtosis-tech/eth-network-package "$(cat ~/eth-network-params.json)"
 ```
 
-Nota: il comando `kurtosis clean -a` viene utilizzato qui per istruire Kurtosis a distruggere la vecchia rete di test e i suoi contenuti prima di avviarne una nuova.
+Nota: il comando `kurtosis clean -a` viene utilizzato qui per indicare a Kurtosis di distruggere la vecchia testnet e i suoi contenuti prima di avviarne una nuova.
 
-Ancora una volta, Kurtosis lavorerà per un po' e stamperà i singoli passaggi che stanno avendo luogo. Alla fine, l'output dovrebbe essere simile a:
+Ancora una volta, Kurtosis lavorerà per un po' e stamperà i singoli passaggi in corso. Alla fine, l'output dovrebbe essere simile a:
 
 ```python
 Starlark code successfully run. No output was returned.
@@ -352,22 +352,22 @@ ad6f401126fa   el-client-2                                    engine-rpc: 8551/t
 3d4aaa75e218   prelaunch-data-generator-1680882122201668972   <none>                                           STOPPED
 ```
 
-Congratulazioni! Hai configurato con successo la tua rete di test locale per avere 3 nodi invece di 1. Per eseguire gli stessi flussi di lavoro che hai fatto prima sulla tua dApp (distribuzione e test), esegui le stesse operazioni che abbiamo fatto prima sostituendo `<$YOUR_PORT>` nella struttura `localnet` nel tuo file di configurazione `hardhat.config.ts` con la porta dell'URI RPC in output da qualsiasi servizio `el-client-<num>` nella tua nuova rete di test locale a 3 nodi.
+Congratulazioni! Hai configurato con successo la tua testnet locale per avere 3 nodi invece di 1. Per eseguire gli stessi flussi di lavoro di prima sulla tua dapp (distribuzione e test), esegui le stesse operazioni di prima sostituendo `<$YOUR_PORT>` nella struttura `localnet` nel tuo file di configurazione `hardhat.config.ts` con la porta dell'URI RPC in output da qualsiasi servizio `el-client-<num>` nella tua nuova testnet locale a 3 nodi.
 
 ## Conclusione {#conclusion}
 
 E questo è tutto! Per riassumere questa breve guida, hai:
 
-- Creato una rete di test locale di Ethereum su Docker utilizzando Kurtosis
-- Connesso il tuo ambiente di sviluppo di dApp locale alla rete locale di Ethereum
-- Distribuito una dApp ed eseguito un semplice test su di essa sulla rete locale di Ethereum
+- Creato una testnet Ethereum locale su Docker utilizzando Kurtosis
+- Connesso il tuo ambiente di sviluppo per dapp locale alla rete Ethereum locale
+- Distribuito una dapp ed eseguito un semplice test su di essa sulla rete Ethereum locale
 - Configurato la rete Ethereum sottostante per avere 3 nodi
 
 Ci piacerebbe sapere da te cosa è andato bene, cosa potrebbe essere migliorato o rispondere a qualsiasi tua domanda. Non esitare a contattarci tramite [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) o [inviaci un'e-mail](mailto:feedback@kurtosistech.com)!
 
 ### Altri esempi e guide {#other-examples-guides}
 
-Ti invitiamo a dare un'occhiata alla nostra [guida rapida](https://docs.kurtosis.com/quickstart) (dove costruirai un database Postgres e un'API su di esso) e ai nostri altri esempi nel nostro [repository awesome-kurtosis](https://github.com/kurtosis-tech/awesome-kurtosis) dove troverai alcuni ottimi esempi, inclusi pacchetti per:
+Ti invitiamo a dare un'occhiata alla nostra [guida rapida](https://docs.kurtosis.com/quickstart) (dove costruirai un database Postgres e un'API su di esso) e agli altri nostri esempi nel nostro [repository awesome-kurtosis](https://github.com/kurtosis-tech/awesome-kurtosis) dove troverai alcuni ottimi esempi, inclusi pacchetti per:
 
-- [Avviare la stessa rete di test locale di Ethereum](https://github.com/kurtosis-tech/eth2-package), ma con servizi aggiuntivi connessi come uno spammer di transazioni (per simulare transazioni), un monitor di biforcazione e un'istanza Grafana e Prometheus connessa
-- Eseguire un [test di sotto-rete](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test) sulla stessa rete locale di Ethereum
+- [Avviare la stessa testnet Ethereum locale](https://github.com/kurtosis-tech/eth2-package), ma con servizi aggiuntivi connessi come uno spammer di transazioni (per simulare transazioni), un monitor di fork e un'istanza Grafana e Prometheus connessa
+- Eseguire un [test di sottorete](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test) sulla stessa rete Ethereum locale

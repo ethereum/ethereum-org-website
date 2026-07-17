@@ -21,6 +21,7 @@
   "docs-nav-data-and-analytics": "डेटा और एनालिटिक्स",
   "docs-nav-data-and-analytics-description": "ब्लॉकचेन डेटा को कैसे एकत्रित, व्यवस्थित और विकेंद्रीकृत एप्लिकेशन (dapp) में लागू किया जाता है",
   "docs-nav-data-availability": "डेटा उपलब्धता",
+  "docs-nav-data-availability-description": "इथेरियम में डेटा उपलब्धता से संबंधित समस्याओं और समाधानों का अवलोकन",
   "docs-nav-data-availability-storage-strategies": "ब्लॉकचेन डेटा स्टोरेज रणनीतियां",
   "docs-nav-dart": "Dart",
   "docs-nav-delphi": "Delphi",
@@ -149,7 +150,6 @@
   "layer-2-boba-note": "स्थिति सत्यापन विकास के अधीन है",
   "layer-2-metis-note": "फ्रॉड प्रूफ विकास के अधीन हैं",
   "layer-2-optimism-note": "फॉल्ट प्रूफ विकास के अधीन हैं",
-  "back-to-top": "वापस ऊपर जाएं",
   "banner-page-incomplete": "यह पृष्ठ अधूरा है और हमें आपकी मदद की आवश्यकता है। इस पृष्ठ को संपादित करें और कुछ भी जोड़ें जो आपको लगता है कि दूसरों के लिए उपयोगी हो सकता है।",
   "next": "अगला",
   "previous": "पिछला"

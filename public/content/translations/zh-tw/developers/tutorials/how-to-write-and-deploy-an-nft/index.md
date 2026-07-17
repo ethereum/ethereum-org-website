@@ -1,84 +1,81 @@
 ---
-title: "如何撰寫與部署 NFT (NFT 教學系列第 1/3 部分)"
-description: "這篇教學是是一個關於NFT教學系列的文章之一，這將會帶著你一步步地學習如何撰寫與部署一個非同質化代幣 (ERC-721 代幣) 的智慧型合約在以太坊以及星際檔案系統(IPFS) 上"
-author: "Sumi Mudgil"
-tags: [ "ERC-721", "Alchemy", "Solidity", "smart contracts" ]
+title: "如何撰寫與部署 NFT（NFT 教學系列 1/3）"
+description: "本教學為 NFT 系列的第一部分，將帶您逐步了解如何使用以太坊與星際檔案系統 (IPFS) 撰寫並部署非同質化代幣（ERC-721 代幣）智能合約。"
+author: "蘇米·穆吉爾"
+tags:
+  - ERC-721
+  - Alchemy
+  - Solidity
+  - 智能合約
 skill: beginner
-breadcrumb: "編寫和部署NFT"
+breadcrumb: "撰寫與部署 NFT"
 lang: zh-tw
 published: 2021-04-22
 ---
 
-隨著 NFT 將區塊鏈帶入公眾視野，現在正是您親自了解這股熱潮的絕佳機會，只要在以太坊區塊鏈上發佈您自己的 NFT 合約 (ERC-721 代幣) 即可！
+隨著 NFT 將區塊鏈帶入大眾視野，現在正是您親自在以太坊區塊鏈上發布自己的 NFT 合約（ERC-721 代幣），以了解這股熱潮的絕佳機會！
 
-Alchemy 非常自豪能為 NFT 領域中最頂尖的品牌提供技術支援，包括 Makersplace (最近在佳士得拍賣會上以 6900 萬美元創下數位藝術品銷售記錄)、Dapper Labs (NBA Top Shot 和 CryptoKitties 的創造者)、OpenSea (全球最大的 NFT 市場)、Zora、Super Rare、NFTfi、Foundation、Enjin、Origin Protocol、Immutable 等等。
+Alchemy 非常自豪能為 NFT 領域的知名專案提供支援，包括 Makersplace（最近在佳士得以 6,900 萬美元創下數位藝術品拍賣紀錄）、Dapper Labs（NBA Top Shot 與 Crypto Kitties 的創作者）、OpenSea（全球最大的 NFT 市場）、Zora、Super Rare、NFTfi、Foundation、Enjin、Origin Protocol、Immutable 等等。
 
-在本教學中，我們將逐步解說如何使用 [MetaMask](https://metamask.io/)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org/)、[Pinata](https://pinata.cloud/) 和 [Alchemy](https://alchemy.com/signup/eth) 在 Sepolia 測試網上建立與部署 ERC-721 智慧合約（如果您還不了解這些術語的含義，請別擔心——我們會一一解釋！）。
+在本教學中，我們將逐步介紹如何使用 [梅塔馬斯克](https://metamask.io/)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org/)、[Pinata](https://pinata.cloud/) 與 [Alchemy](https://alchemy.com/signup/eth) 在 Sepolia 測試網上建立並部署 ERC-721 智能合約（如果您還不了解這些名詞的意思，請別擔心——我們將會一一解釋！）。
 
-在這個教學的第二部分，我們將會瀏覽如何使用我們的智慧型合約去件至一個NFT，在第三部分我們將解釋如何在MeraMask查閱你的NFT。
+在本教學的第 2 部分，我們將介紹如何使用我們的智能合約來鑄造 NFT，而在第 3 部分，我們將解釋如何在梅塔馬斯克上檢視您的 NFT。
 
-當然，如果您在任何時候有任何問題，請隨時到 [Alchemy Discord](https://discord.gg/gWuC7zB) 提問，或造訪 [Alchemy 的 NFT API 文件](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)！
+當然，如果您在任何時候有疑問，請隨時在 [Alchemy Discord](https://discord.gg/gWuC7zB) 中提問，或造訪 [Alchemy 的 NFT API 文件](https://www.alchemy.com/docs/reference/nft-api-quickstart)！
 
-## 第 1 步：連線至以太坊網路 {#connect-to-ethereum}
+## 第 1 步：連接至以太坊網路 {#connect-to-ethereum}
 
-有很多方法可以向以太坊區塊鏈發出請求，但為了簡化流程，我們將使用 [Alchemy](https://alchemy.com/signup/eth) 的免費帳戶。它是一個區塊鏈開發人員平台與 API，可讓我們在不需執行自有節點的情況下與以太坊鏈進行通訊。
+向以太坊區塊鏈發出請求的方法有很多種，但為了簡單起見，我們將在 [Alchemy](https://alchemy.com/signup/eth) 上使用免費帳戶。Alchemy 是一個區塊鏈開發者平台與 API，允許我們與以太坊鏈進行通訊，而無需執行我們自己的節點。
 
-在這個教學裡，我們也將會使用Alchemy的開發者工具監控與分析了解我們的智慧型合約部署方式 如果您還沒有 Alchemy 帳戶，可以點擊[此處](https://alchemy.com/signup/eth)免費註冊。
+在本教學中，我們還將利用 Alchemy 的開發者工具進行監控與分析，以了解我們智能合約部署的內部運作原理。如果您還沒有 Alchemy 帳戶，可以在[這裡](https://alchemy.com/signup/eth)免費註冊。
 
-## 第 2 步：建立您的應用程式 (和 API 金鑰) {#make-api-key}
+## 第 2 步：建立您的應用程式（與 API 金鑰） {#make-api-key}
 
-一旦你已經創建好一個Alchemy的帳戶，你可以通過建立一個程式來生成一個API鑰匙。 這將讓我們能向 Sepolia 測試網發出請求。 如果您想深入了解測試網，請參閱[本指南](https://docs.alchemyapi.io/guides/choosing-a-network)。
+建立 Alchemy 帳戶後，您可以透過建立應用程式來產生 API 金鑰。這將允許我們向 Sepolia 測試網發出請求。如果您想了解更多關於測試網的資訊，請查看[本指南](https://www.alchemy.com/docs/choosing-a-web3-network)。
 
-1. 將滑鼠移至標題列上方的"Apps"以及點選"Create App"以前往到在你的Alchemy Dashboard 上的"Create App"頁面。
+1. 將滑鼠懸停在導覽列中的「Apps」上，然後點擊「Create App」，導覽至 Alchemy 儀表板中的「Create App」頁面。
 
-![建立您的應用程式](./create-your-app.png)
+![Create your app](./create-your-app.png)
 
-2. 為您的應用程式命名 (我們選擇「My First NFT!」)、提供簡短描述、在「Chain」欄位選取「Ethereum」，並為您的網路選取「Sepolia」。 自「合併」後，其他測試網皆已棄用。
+2. 為您的應用程式命名（我們選擇了「My First NFT!」），提供簡短描述，在 Chain 選擇「Ethereum」，並在 network 選擇「Sepolia」。自從合併 (The Merge) 以來，其他測試網已被棄用。
 
-![設定並發布您的應用程式](./alchemy-explorer-sepolia.png)
+![Configure and publish your app](./alchemy-explorer-sepolia.png)
 
-3. 點擊「創建程式」然後就好了！ 你的程式應該會在下列圖表中出現。
+3. 點擊「Create app」，就這麼簡單！您的應用程式應該會出現在下方的表格中。
 
-## 第 3 步：建立以太坊帳戶 (地址) {#create-eth-address}
+## 第 3 步：建立以太坊帳戶（地址） {#create-eth-address}
 
-我們需要一個乙太坊帳戶去接收或發送交易。 為此教學，我們將會使用 MetaMask。它是一個在瀏覽器上管理你的乙太坊帳戶地址的虛擬錢包。 如果您想深入了解以太坊上的交易如何運作，請參閱以太坊基金會的[此頁面](/developers/docs/transactions/)。
+我們需要一個以太坊帳戶來發送與接收交易。在本教學中，我們將使用梅塔馬斯克，這是一個瀏覽器中的虛擬錢包，用於管理您的以太坊帳戶地址。如果您想進一步了解以太坊上的交易如何運作，請查看以太坊基金會的[這個頁面](/developers/docs/transactions/)。
 
-您可以在[這裡](https://metamask.io/download)免費下載並建立 MetaMask 帳戶。 建立帳戶時，或如果您已有帳戶，請務必在右上角切換至「Sepolia 測試網」(這樣我們就不用處理真實貨幣)。
+您可以免費在[這裡](https://metamask.io/download)下載並建立梅塔馬斯克帳戶。當您建立帳戶時，或者如果您已經有帳戶，請確保切換到右上角的「Sepolia Test Network」（這樣我們就不會使用真實資金進行操作）。
 
-![將 Sepolia 設為您的網路](./metamask-goerli.png)
+![Set Sepolia as your network](./metamask-goerli.png)
 
-## 第 4 步：從水龍頭取得以太幣 {#step-4-add-ether-from-a-faucet}
+## 第 4 步：從水龍頭添加以太幣 {#step-4-add-ether-from-a-faucet}
 
-為了部屬我們的智慧型合約到測試網上，我們將會需要一些假的以太幣(ETH)。 若要取得 ETH，您可以前往由 Alchemy 託管的 [Sepolia Faucet](https://sepoliafaucet.com/)，登入並輸入您的帳戶地址，然後點擊「Send Me ETH」。 接著你應蓋到你的MetaMask帳戶確認你的ETH!
+為了將我們的智能合約部署到測試網，我們需要一些測試用的 ETH。要獲取 ETH，您可以前往由 Alchemy 託管的 [Sepolia 水龍頭](https://sepoliafaucet.com/)，登入並輸入您的帳戶地址，點擊「Send Me ETH」。不久之後，您應該就會在您的梅塔馬斯克帳戶中看到 ETH！
 
 ## 第 5 步：檢查您的餘額 {#check-balance}
 
-為了再次確認我們的餘額，我們將使用 [Alchemy 的編輯器工具](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) 發出 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 請求。 這將會回傳你的錢包裡的餘額。 在你輸入自己的MetaMask帳戶地址，並且點下「寄送請求」後，你理應會看見一個這樣子的回應：
+為了再次確認我們的餘額是否已入帳，讓我們使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 請求。這將回傳我們錢包中的 ETH 數量。在您輸入您的梅塔馬斯克帳戶地址並點擊「Send Request」後，您應該會看到類似以下的響應：
 
-    ```
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
-    ```
 
-> **注意**：此結果以 wei 為單位，而非 ETH。 Wei是一個被用來計算以太最少分數的單位。 「1 eth = 10<sup>18</sup> wei」他是這樣轉換的。 所以如果我們轉換0xde0b6b3a7640000到十進制，我們將會獲得1\*10<sup>18</sup>wei，這剛好是1ETH。
+> **注意** 此結果的單位是 Wei，而不是 ETH。Wei 被用作以太幣的最小面額。從 Wei 到 ETH 的轉換為 1 ETH = 10<sup>18</sup> Wei。因此，如果我們將 0xde0b6b3a7640000 轉換為十進位，我們會得到 1\*10<sup>18</sup> Wei，這等於 1 ETH。
 
-哈! 我們的假錢都在這。
-
+呼！我們的假錢都在那裡了。
 ## 第 6 步：初始化我們的專案 {#initialize-project}
 
-首先，我們需要一個資料夾給我們的專案。 前往到你的指令介面(powershell, cmd 或 Terminal) 接著輸入:
+首先，我們需要為我們的專案建立一個資料夾。導覽至您的命令列並輸入：
 
-    ```
     mkdir my-nft
     cd my-nft
-    ```
 
-現在我們已經在我們的專案資料夾底下了，接著我們將會使用npm去初始化我們的專案。 如果您尚未安裝 npm，請遵循[這些指示](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (我們也需要 [Node.js](https://nodejs.org/en/download/)，所以也請一併下載！)。
+現在我們已經在專案資料夾中，我們將使用 npm init 來初始化專案。如果您尚未安裝 npm，請遵循 [Node.js 安裝指示](https://nodejs.org/en/download/)（在本教學中我們將需要 Node.js 與 npm）。
 
-    ```
     npm init
-    ```
 
-你如何回答安裝問題並不重要，這是我們提供的參考:
+您如何回答安裝問題其實並不重要；以下是我們的做法以供參考：
 
 ```json
     package name: (my-nft)
@@ -105,31 +102,25 @@ Alchemy 非常自豪能為 NFT 領域中最頂尖的品牌提供技術支援，�
     }
 ```
 
-同意創建package.json，接著我們已經準備好開始了!
-
+核准 package.json，我們就可以開始了！
 ## 第 7 步：安裝 [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
-Hardhat 是一個開發環境，提供你去編譯、部屬、測試、以及除錯你的以太坊軟體。 它能協助開發人員在部署至即時鏈之前，於本機建立智慧合約和去中心化應用程式。
+Hardhat 是一個用於編譯、部署、測試與除錯以太坊軟體的開發環境。它能幫助開發者在部署到即時鏈之前，於本機端建置智能合約與去中心化應用程式 (dapp)。
 
-在我們的 my-nft 專案下執行:
+在我們的 my-nft 專案中執行：
 
-    ```
     npm install --save-dev hardhat
-    ```
 
-如需更多[安裝指示](https://hardhat.org/getting-started/#overview)的詳細資訊，請查看此頁面。
+查看此頁面以獲取有關[安裝指示](https://hardhat.org/getting-started/#overview)的更多詳細資訊。
 
 ## 第 8 步：建立 Hardhat 專案 {#create-hardhat-project}
 
-在你的專案資料夾下執行：
+在我們的專案資料夾中執行：
 
-    ```
     npx hardhat
-    ```
 
-你接下來會看到歡迎訊息以及關於你想做什麼的選項。 選擇"create an empty hardhat.config.js":
+然後您應該會看到一條歡迎訊息以及選擇您想做什麼的選項。選擇「create an empty hardhat.config.js」：
 
-    ```
     888    888                      888 888               888
     888    888                      888 888               888
     888    888                      888 888               888
@@ -143,35 +134,32 @@ Hardhat 是一個開發環境，提供你去編譯、部屬、測試、以及除
     Create a sample project
     ❯ Create an empty hardhat.config.js
     Quit
-    ```
 
-這將會摻生一個 hardhat.config.js file 給我們。
+這將為我們產生一個 hardhat.config.js 檔案，我們將在其中指定專案的所有設定（在第 13 步）。
 
-## 第 9 步：新增專案資料夾 {#add-project-folders}
+## 第 9 步：添加專案資料夾 {#add-project-folders}
 
-為了保持我們的資料夾的結構性，我們將會創建兩個資料夾。 在你的指令介面返回到到專案資料夾，接著輸入：
+為了保持專案井然有序，我們將建立兩個新資料夾。在命令列中導覽至專案的根目錄並輸入：
 
-    ```
     mkdir contracts
     mkdir scripts
-    ```
 
-- contracts/ 是放置我們智慧型合約程式碼的地方
+- contracts/ 是我們存放 NFT 智能合約程式碼的地方
 
-- scripts/ 是我們部屬我們的智慧型合約的地方
+- scripts/ 是我們存放用於部署與互動智能合約的腳本的地方
 
 ## 第 10 步：撰寫我們的合約 {#write-contract}
 
-現在我們的環境已經設定好了，接下來是更令人興奮的部分：_撰寫我們的智慧合約程式碼！_
+現在我們的環境已經設定好了，接下來是更令人興奮的事情：_撰寫我們的智能合約程式碼！_
 
-在您偏好的編輯器中開啟 my-nft 專案 (我們推薦 [VSCode](https://code.visualstudio.com/))。 我們撰寫智慧型合約的語言稱作 Solidity 這將是我們使用去撰寫 MyNFT.sol智慧型合約。
+在您最喜歡的編輯器中打開 my-nft 專案（我們喜歡 [VSCode](https://code.visualstudio.com/)）。智能合約是使用一種名為 Solidity 的語言撰寫的，我們將使用它來撰寫我們的 MyNFT.sol 智能合約。‌
 
-1. 前往 `contracts` 資料夾，並建立一個名為 MyNFT.sol 的新檔案
+1. 導覽至 `contracts` 資料夾並建立一個名為 MyNFT.sol 的新檔案。
 
-2. 以下是我們的 NFT 智慧合約程式碼，此程式碼以 [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721) 函式庫的 ERC-721 實作為基礎。 複製與貼上下面的內容到你的MyNFT.sol檔案。
+2. 以下是我們的 NFT 智能合約程式碼，我們基於 [歐本齊柏林](https://docs.openzeppelin.com/contracts/3.x/erc721) 函式庫的 ERC-721 實作。將以下內容複製並貼上到您的 MyNFT.sol 檔案中。
 
    ```solidity
-   //合約基於 [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
+   //基於 [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721) 的合約
    // SPDX-License-Identifier: MIT
    pragma solidity ^0.8.0;
 
@@ -201,82 +189,76 @@ Hardhat 是一個開發環境，提供你去編譯、部屬、測試、以及除
    }
    ```
 
-3. 因為我們繼承了 OpenZeppelin 合約函式庫的類別，所以請在命令列中執行 `npm install @openzeppelin/contracts^4.0.0`，將函式庫安裝至我們的資料夾中。
+3. 因為我們繼承了歐本齊柏林合約函式庫中的類別，請在您的命令列中執行 `npm install @openzeppelin/contracts^4.0.0` 以將該函式庫安裝到我們的資料夾中。
 
-那麼，這段程式碼的確切功用是什麼？ 讓我們拆解他，一行一行解說。
+那麼，這段程式碼究竟_做_了什麼？讓我們逐行分解。
 
-在智慧合約的頂部，我們匯入了三個 [OpenZeppelin](https://openzeppelin.com/) 智慧合約類別：
+在我們智能合約的頂部，我們匯入了三個 [歐本齊柏林](https://openzeppelin.com/) 智能合約類別：
 
-- @openzeppelin/contracts/token/ERC721/ERC721.sol 包含了ERC-721的執行標準，我們的智慧型合約將會繼承他。 要成為一個有效的非同質化代幣 (NFT)，你的智慧型合約必須執行所有在ERR-721標準裡的方法。 若要深入了解繼承的 ERC-721 函式，請參閱[此處](https://eips.ethereum.org/EIPS/eip-721)的介面定義。
+- @openzeppelin/contracts/token/ERC721/ERC721.sol 包含了 ERC-721 標準的實作，我們的 NFT 智能合約將繼承它。（要成為有效的 NFT，您的智能合約必須實作 ERC-721 標準的所有方法。）要了解更多關於繼承的 ERC-721 函式，請查看[這裡](https://eips.ethereum.org/EIPS/eip-721)的介面定義。
 
-- @openzeppelin/contracts/utils/Counters.sol 提供一個儘可以逐一遞減或遞增的計數器。 我們的智慧型合約使用一個計數器去持續追蹤所有NFT的鑄造數與設定一個唯一的ID在每一個新NFT。 (每一個被鑄造的NFT都要用一個智慧型合約分配一個唯一的ID -- 我們的ID在這裡只有使用NFT總數來決定。 舉一個例子，我們鑄造的第一個NFT擁有一個「1」的ID，第二個則是「2」，依此類推。)
+- @openzeppelin/contracts/utils/Counters.sol 提供了只能遞增或遞減一的計數器。我們的智能合約使用計數器來追蹤已鑄造的 NFT 總數，並在我們的新 NFT 上設定唯一 ID。（每個使用智能合約鑄造的 NFT 都必須分配一個唯一 ID——在這裡，我們的唯一 ID 僅由現存的 NFT 總數決定。例如，我們使用智能合約鑄造的第一個 NFT 的 ID 為「1」，第二個 NFT 的 ID 為「2」，依此類推。）
 
-- @openzeppelin/contracts/access/Ownable.sol 會在我們的智慧合約上設定[存取權控制](https://docs.openzeppelin.com/contracts/3.x/access-control)，如此一來，只有智慧合約的擁有者 (也就是您) 可以鑄造 NFT。 (編註: 包括使用權控制指示一種偏好。 如果你不喜歡有人可以使用你的智慧型合約鑄造NFT，移除在第十行的的"Ownable"，以及第17行的"onlyOwner"。)
+- @openzeppelin/contracts/access/Ownable.sol 在我們的智能合約上設定了[存取控制](https://docs.openzeppelin.com/contracts/3.x/access-control)，因此只有智能合約的擁有者（您）可以鑄造 NFT。（注意，包含存取控制完全是個人偏好。如果您希望任何人都能使用您的智能合約鑄造 NFT，請移除第 10 行的 Ownable 與第 17 行的 onlyOwner。）
 
-在引入以上函式庫後，我們有我們傳統的NFT智慧型合約，程式碼意外的短，他只包刮一個計數器，一個構建函數，和一個函式! 這要歸功於我們繼承的 OpenZeppelin 合約，它實作了我們建立 NFT 所需的大部分方法，例如傳回 NFT 擁有者的 `ownerOf`，以及將 NFT 擁有權從一個帳戶轉移至另一個帳戶的 `transferFrom`。
+在我們的匯入語句之後，是我們自訂的 NFT 智能合約，它出奇地短——只包含一個計數器、一個建構函式與單一函式！這要歸功於我們繼承的歐本齊柏林合約，它實作了我們建立 NFT 所需的大部分方法，例如回傳 NFT 擁有者的 `ownerOf`，以及將 NFT 擁有權從一個帳戶轉移到另一個帳戶的 `transferFrom`。
 
-在我們的 ERC-721 的建構函數裡(constractor)，你可能會注意到我們傳入了兩個字串，"MyNFT" 和 "NFT"。 第一個變數是智慧型合約名稱，第二個則是他的代號(象徵 symbol)。 你可以為每一個變數命名。
+在我們的 ERC-721 建構函式中，您會注意到我們傳遞了 2 個字串：「MyNFT」與「NFT」。第一個變數是智能合約的名稱，第二個是它的符號。您可以隨意命名這些變數！
 
-最後，我們有了函式 `mintNFT(address recipient, string memory tokenURI)`，可以用來鑄造 NFT！ 你可能會注意到這個函數傳入了兩個變數:
+最後，我們有 `mintNFT(address recipient, string memory tokenURI)` 函式，它允許我們鑄造 NFT！您會注意到這個函式接收兩個變數：
 
-- `address recipient` 會指定接收您剛鑄造好的 NFT 的地址
+- `address recipient` 指定將接收您剛鑄造的 NFT 的地址
 
-- `string memory tokenURI` 是一個字串，應解析為描述 NFT 元資料的 JSON 文件。 NFT的後設數據(metadata) 實際上是使其生存的原因，允許它具有可配置的屬性，例如名稱，描述，圖像和其他屬性。 在這個教學的第二部份我們將會解釋如何設定這個後設資料(metadata)。
+- `string memory tokenURI` 是一個字串，應解析為描述 NFT 中繼資料的 JSON 文件。NFT 的中繼資料才是真正賦予它生命的東西，允許它擁有可設定的屬性，例如名稱、描述、圖片與其他屬性。在本教學的第 2 部分，我們將描述如何設定此中繼資料。
 
-`mintNFT` 會從繼承的 ERC-721 函式庫呼叫一些方法，並最終傳回一個數字，此數字代表新鑄造的 NFT 的 ID。
+`mintNFT` 呼叫了繼承的 ERC-721 函式庫中的一些方法，並最終回傳一個代表剛鑄造的 NFT ID 的數字。
 
-## 第 11 步：將 MetaMask 和 Alchemy 連線至您的專案 {#connect-metamask-and-alchemy}
+## 第 11 步：將梅塔馬斯克與 Alchemy 連接至您的專案 {#connect-metamask-and-alchemy}
 
-現在，我們已經創建了一個MetaMask錢包、Alchemy帳戶，並編寫了我們的智慧型合約，是時候將這三者連接起來了。
+現在我們已經建立了梅塔馬斯克錢包、Alchemy 帳戶，並撰寫了我們的智能合約，是時候將這三者連接起來了。
 
-每一個從你的虛擬錢包送出的交易都需要用你的私鑰簽名。 為了給予程式這個權限，我們可以把私鑰（還有 Alchemy API key）存在環境檔案中。
+從您的虛擬錢包發送的每筆交易都需要使用您獨特的私鑰進行簽章。為了向我們的程式提供此權限，我們可以安全地將我們的私鑰（與 Alchemy API 金鑰）儲存在環境檔案中。
 
-若要深入了解傳送交易，請參閱這篇關於使用 web3 傳送交易的[教學文章](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
+要了解更多關於發送交易的資訊，請查看[這篇關於使用 Web3 發送交易的教學](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
 
-首先，安裝 dotenv 套件。
+首先，在您的專案目錄中安裝 dotenv 套件：
 
-    ```
     npm install dotenv --save
-    ```
 
-然後，在我們專案的根目錄中建立一個 `.env` 檔案，並在其中新增您的 MetaMask 私鑰和 HTTP Alchemy API URL。
+然後，在我們專案的根目錄中建立一個 `.env` 檔案，並將您的梅塔馬斯克私鑰與 HTTP Alchemy API URL 添加到其中。
 
-- 請遵循[這些指示](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)從 MetaMask 匯出您的私鑰
+- 遵循[這些指示](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)從梅塔馬斯克匯出您的私鑰
 
-- 請參見下麵獲取HTTP Alchemy 接口地址並將其複製到剪貼板
+- 請參閱下方以獲取 HTTP Alchemy API URL 並將其複製到您的剪貼簿
 
-![複製您的 Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
 
-您的 `.env` 檔案現在應該會像這樣：
+您的 `.env` 現在應該看起來像這樣：
 
-    ```
     API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
-    ```
 
-為了將這些變數實際連線至我們的程式碼，我們會在第 13 步的 hardhat.config.js 檔案中參考這些變數。
+為了實際將這些連接到我們的程式碼，我們將在第 13 步的 hardhat.config.js 檔案中參考這些變數。
 
 <EnvWarningBanner />
 
 ## 第 12 步：安裝 Ethers.js {#install-ethers}
 
-Ethers.js 是一個函式庫，它將[標準 JSON-RPC 方法](/developers/docs/apis/json-rpc/)包裝成更方便使用者使用的方法，讓與以太坊互動和發出請求變得更簡單。
+Ethers.js 是一個函式庫，它透過將[標準 JSON-RPC 方法](/developers/docs/apis/json-rpc/)包裝成更使用者友善的方法，使與以太坊互動及發出請求變得更加容易。
 
-Hardhat 讓整合[外掛程式](https://hardhat.org/plugins/)以取得額外工具和擴充功能變得超級簡單。 我們將利用 [Ethers plugin](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) 進行合約部署 ([Ethers.js](https://github.com/ethers-io/ethers.js/) 有一些非常簡潔的合約部署方法)。
+Hardhat 使得整合[外掛程式](https://hardhat.org/plugins/)以獲得額外工具與擴充功能變得超級容易。我們將利用 [Ethers 外掛程式](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)進行合約部署（[Ethers.js](https://github.com/ethers-io/ethers.js/) 有一些非常簡潔的合約部署方法）。
 
-在你的專案目錄輸入：
+在您的專案目錄中輸入：
 
-    ```
     npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0
-    ```
 
-我們會在下一步 hardhat.config.js 將 ethers 納入進來。
+在下一步中，我們還需要在我們的 hardhat.config.js 中引入 ethers。
 
 ## 第 13 步：更新 hardhat.config.js {#update-hardhat-config}
 
-我們目前已經新增了幾個套件，現在則是要更新 hardhat.config.js ，告訴專案我們要用它們。
+到目前為止，我們已經添加了幾個相依套件與外掛程式，現在我們需要更新 hardhat.config.js，以便我們的專案知道它們的存在。
 
-將 hardhat.config.js 更新成如下方：
+將您的 hardhat.config.js 更新為如下所示：
 
 ```js
     /**
@@ -300,27 +282,25 @@ Hardhat 讓整合[外掛程式](https://hardhat.org/plugins/)以取得額外工�
 
 ## 第 14 步：編譯我們的合約 {#compile-contract}
 
-為了確認一切運作正常，我們來編譯合約。 編譯任務是安全帽的內部任務之一
+為了確保到目前為止一切運作正常，讓我們編譯我們的合約。編譯任務是內建的 Hardhat 任務之一。
 
-在命令列工具輸入：
+從命令列執行：
 
-    ```
     npx hardhat compile
-    ```
 
-你可能會看到關於“源文件中未提供SPDX許可證識別碼”的警告，但是不用擔心，希望其他的看起來都正常 如果沒有，您隨時可以在 [Alchemy discord](https://discord.gg/u72VCg3) 中傳送訊息。
+您可能會收到關於原始碼檔案中未提供 SPDX 授權識別碼的警告，但無需擔心——希望其他一切看起來都不錯！如果沒有，您隨時可以在 [Alchemy Discord](https://discord.gg/u72VCg3) 中留言。
 
 ## 第 15 步：撰寫我們的部署腳本 {#write-deploy}
 
-現在我們已經寫好了合約，並且也搞定配置檔案。現在我們該來撰寫部署合約的腳本。
+現在我們的合約已經寫好，設定檔也準備就緒，是時候撰寫我們的合約部署腳本了。
 
-前往 `scripts/` 資料夾並建立一個名為 `deploy.js` 的新檔案，在其中加入以下內容：
+導覽至 `scripts/` 資料夾並建立一個名為 `deploy.js` 的新檔案，將以下內容添加到其中：
 
 ```js
 async function main() {
   const MyNFT = await ethers.getContractFactory("MyNFT")
 
-  // 開始部署，傳回一個解析為合約物件的 promise
+  // 開始部署，回傳一個解析為合約物件的 Promise
   const myNFT = await MyNFT.deploy()
   await myNFT.deployed()
   console.log("Contract deployed to address:", myNFT.address)
@@ -334,48 +314,40 @@ main()
   })
 ```
 
-Hardhat 在其[合約教學文章](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)中詳細地解釋了每一行程式碼的作用，我們在此採用了他們的解釋。
+Hardhat 在他們的[合約教學](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)中非常出色地解釋了這些程式碼每一行的作用，我們在這裡採用了他們的解釋。
 
-    ```
     const MyNFT = await ethers.getContractFactory("MyNFT");
-    ```
 
-Ethers.js 中的 ContractFactory 是用於部署新智慧型合約的抽象對象。所以這裡的MyNFT是我們NFT合約實例的工廠 使用 hardhat-ethers 插件时，ContractFactory 和合約實例默認與第一個簽名帳戶相連。
+Ethers.js 中的 ContractFactory 是一個用於部署新智能合約的抽象概念，因此這裡的 MyNFT 是我們 NFT 合約實例的工廠。當使用 hardhat-ethers 外掛程式時，ContractFactory 與 Contract 實例預設會連接到第一個簽署者。
 
-    ```
     const myNFT = await MyNFT.deploy();
-    ```
 
-調用 ContractFactory 程式碼中的 deploy() 函數會啟動合約部署，然後返回解析為合約的Promise。 這就是和我們的智慧型合約函數有一對一的方法的物件。
+在 ContractFactory 上呼叫 deploy() 將開始部署，並回傳一個解析為 Contract 的 Promise。這是一個為我們每個智能合約函式提供方法的物件。
 
 ## 第 16 步：部署我們的合約 {#deploy-contract}
 
-我們終於準備好要部署合約了！ 返回你專案目錄的根目錄，在命令行中於行：
+我們終於準備好部署我們的智能合約了！導覽回專案目錄的根目錄，並在命令列中執行：
 
-    ```
     npx hardhat --network sepolia run scripts/deploy.js
-    ```
 
-你會看到像這樣的輸出：
+然後您應該會看到類似以下的內容：
 
-    ```
-    合約已部署至地址：0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
-    ```
+    Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
 
-如果我們前往 [Sepolia etherscan](https://sepolia.etherscan.io/) 並搜尋我們的合約地址，我們應該能夠看到它已成功部署。 如果你沒立即看到它，請稍等片刻，因為它可能需要一些時間。 這個交易執行看起來會像這樣：
+如果我們前往 [Sepolia Etherscan](https://sepolia.etherscan.io/) 並搜尋我們的合約地址，我們應該能夠看到它已成功部署。如果您無法立即看到它，請稍候片刻，因為這可能需要一些時間。交易看起來會像這樣：
 
-![在 Etherscan 上檢視您的交易地址](./etherscan-sepoila-contract-creation.png)
+![View your transaction address on Etherscan](./etherscan-sepoila-contract-creation.png)
 
-「From」地址應與您的 MetaMask 帳戶地址相符，而「To」地址將顯示「Contract Creation」。 如果我們電機進入交易，我們將在“To”字段中看到我們的合約地址：
+From 地址應與您的梅塔馬斯克帳戶地址相符，而 To 地址將顯示「Contract Creation」。如果我們點擊進入交易，我們會在 To 欄位中看到我們的合約地址：
 
-![在 Etherscan 上檢視您的合約地址](./etherscan-sepolia-tx-details.png)
+![View your contract address on Etherscan](./etherscan-sepolia-tx-details.png)
 
-太棒了！ 您剛剛已將您的 NFT 智慧合約部署到以太坊 (測試網) 鏈上了！
+太棒了！您剛剛將您的 NFT 智能合約部署到了以太坊（測試網）鏈上！
 
-為了了解幕後情況，讓我們前往 [Alchemy 儀表板](https://dashboard.alchemyapi.io/explorer)中的「Explorer」分頁。 如果你有多個Alchemy應用程序，請確保按應用程序篩選，然後選擇“MyNFT”。
+為了了解內部運作原理，讓我們導覽至 [Alchemy 儀表板](https://dashboard.alchemy.com/explorer)中的 Explorer 索引標籤。如果您有多個 Alchemy 應用程式，請確保按應用程式篩選並選擇「MyNFT」。
 
-![使用 Alchemy 的 Explorer 儀表板檢視「幕後」進行的呼叫](./alchemy-explorer-goerli.png)
+![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 
-在這裡你會看到Hardhat/Ethers 替我們在後端完成的一系列JSON-RPC調用，當我們調用.deploy() 函數時候。 這裡要特別提出兩個重要的呼叫：[eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction) 是將我們的智慧合約實際寫入 Sepolia 鏈的請求；[eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) 則是在給定哈希的情況下讀取交易資訊的請求 (這是傳送交易時的典型模式)。 若要深入了解傳送交易，請參閱這篇關於[使用 Web3 傳送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)的教學文章。
+在這裡，您會看到當我們呼叫 .deploy() 函式時，Hardhat/Ethers 在底層為我們發出的一些 JSON-RPC 呼叫。這裡要特別指出的兩個重要呼叫是 [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction)（這是實際將我們的智能合約寫入 Sepolia 鏈的請求），以及 [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash)（這是在給定雜湊值的情況下讀取有關我們交易資訊的請求，這是發送交易時的典型模式）。要了解更多關於發送交易的資訊，請查看這篇關於[使用 Web3 發送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)的教學。
 
-以上即為這個教程的第1部分全部內容。 在[第 2 部分，我們將透過鑄造 NFT 來實際與我們的智慧合約互動](/developers/tutorials/how-to-mint-an-nft/)，而在[第 3 部分，我們將示範如何在您的以太坊錢包中檢視您的 NFT](/developers/tutorials/how-to-view-nft-in-metamask/)！
+本教學的第 1 部分就到此結束。在[第 2 部分中，我們將透過鑄造 NFT 來實際與我們的智能合約互動](/developers/tutorials/how-to-mint-an-nft/)，而在[第 3 部分中，我們將向您展示如何在您的以太坊錢包中檢視您的 NFT](/developers/tutorials/how-to-view-nft-in-metamask/)！

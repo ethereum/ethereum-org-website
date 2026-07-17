@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/learn-quizzes.json",
-  "generatedAt": "2026-05-07T18:21:28.797Z",
-  "rootHash": "8b5e4c6a75a7",
+  "generatedAt": "2026-07-10T04:59:04.320Z",
+  "rootHash": "0561335dbe12",
   "tree": {
-    "contentHash": "6ff4d2a951e5",
+    "contentHash": "4ba0d2099539",
     "anchorHash": "5593dd9060f1",
     "children": {
       "add-quiz": {
@@ -52,11 +52,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "question-number": {
-        "contentHash": "3f0df6500564",
+        "contentHash": "11f03a62b80b",
         "anchorHash": "10d7fcd5c413",
         "children": {
           "prose:1": {
-            "contentHash": "ded4c6350fd1",
+            "contentHash": "925a785ad06a",
             "anchorHash": "e3b0c44298fc"
           },
           "icu:0": {
@@ -64,7 +64,7 @@
             "anchorHash": "ba58697be4db"
           },
           "prose:2": {
-            "contentHash": "7413958e5dc6",
+            "contentHash": "e7ac0786668e",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -3510,5 +3510,5 @@
       "smart-contracts-4-d-explanation"
     ]
   },
-  "sourceCommitSha": "37d70722cfa869934ca70dab17c0dc37f73bf30d"
+  "sourceCommitSha": "5035db81f97e3a15f7c8b71bf91b72c02ad8a11a"
 }

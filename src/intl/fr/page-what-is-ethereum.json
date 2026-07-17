@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "Qu'est-ce qu'Ethereum ? (Un guide complet) | ethereum.org",
+  "page-what-is-ethereum-meta-title": "Qu'est-ce qu'Ethereum ? (Un guide complet)",
   "page-what-is-ethereum-meta-description": "Un aperçu complet de ce qu'est Ethereum, de son fonctionnement, de son utilité et de la manière de commencer à l'utiliser ou à développer dessus. Expliqué en termes simples.",
   "page-what-is-ethereum-title": "Qu'est-ce qu'Ethereum ?",
   "page-what-is-ethereum-hero-description-1": "Ethereum est un réseau de chaîne de blocs décentralisé et une plateforme de développement logiciel, alimenté par la cryptomonnaie ether (ETH).",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "Quelle est la feuille de route d'Ethereum pour 2026 ?",
   "page-what-is-ethereum-roadmap-intro-1": "Ethereum ne suit pas une feuille de route fixe. Il suit une vision partagée.",
   "page-what-is-ethereum-roadmap-intro-2": "Les mises à jour du réseau sont effectuées sous forme d'EIP et développées publiquement par des contributeurs du monde entier. Il n'y a pas d'équipe centrale qui décide de ce qui se passe, juste des personnes qui construisent ce qu'elles estiment utile en fonction des besoins des utilisateurs.",
-  "page-what-is-ethereum-roadmap-intro-3": "Fusaka est la mise à jour la plus récente, lancée en décembre 2025. Elle a introduit PeerDAS pour une disponibilité des données plus efficace sur la couche 2 (l2) et a augmenté la limite de gaz par défaut à environ 60M. En ce qui concerne 2026, Glamsterdam est en cours de développement et est attendue pour le premier semestre 2026.",
+  "page-what-is-ethereum-roadmap-intro-3": "Fusaka est la mise à jour la plus récente, lancée en décembre 2025. Elle a introduit PeerDAS pour une disponibilité des données l2 plus efficace et a augmenté la limite de gaz par défaut à ~60M. En prévision de 2026, Glamsterdam est en cours de développement et est attendue pour le second semestre 2026.",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>Pour l'avenir</a>, les priorités d'Ethereum incluent :",
   "page-what-is-ethereum-roadmap-priority-1": "Rendre le protocole de base et ses l2 plus rapides et moins chers pour tout le monde",
   "page-what-is-ethereum-roadmap-priority-2": "Améliorer l'expérience pour les utilisateurs et les développeurs",

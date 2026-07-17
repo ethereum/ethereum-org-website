@@ -1,31 +1,29 @@
 ---
-title: "Přidávání zdrojů obsahu"
+title: Přidávání obsahových zdrojů
 lang: cs
-description: "Naše kritéria pro přidávání zdrojů obsahu na ethereum.org"
+description: Naše kritéria pro zařazení obsahových zdrojů na ethereum.org
 ---
 
-# Přidávání zdrojů obsahu {#adding-content-resources}
+Nemůžeme doufat, že pokryjeme všechno ohledně Etherea, a proto se snažíme upozorňovat na některé ze skvělých článků, návodů, newsletterů, pracovních portálů a různých obsahových zdrojů, které komunita vytváří. Ty často poskytují podrobnější informace o tématech, která by uživatele mohla zajímat.
 
-Nemůžeme doufat, že se budeme věnovat všemu, co se týká Etherea, a proto se snažíme představit některé z vynikajících článků, návodů, zpravodajů, pracovních nástěnek a různých zdrojů obsahu, které komunita vytváří. Ty často poskytují podrobnější informace o tématech, která mohou uživatele zajímat.
+Pokud existuje obsahový zdroj, který by podle vás měl být přidán na nějakou stránku, neváhejte ho navrhnout na vhodném místě.
 
-Pokud si myslíte, že by na stránku měl být přidán nějaký zdroj obsahu, neváhejte ho na vhodném místě navrhnout.
+## Jak rozhodujeme {#how-we-decide}
 
-## Jak se rozhodujeme {#how-we-decide}
-
-Zdroje obsahu budou posuzovány podle následujících kritérií:
+Vzdělávací zdroje budou posuzovány podle následujících kritérií:
 
 - Je obsah aktuální?
-- Je obsah zpoplatněn?
-- Jsou informace přesné? Jsou založeny na faktech nebo názorech?
-- Je autor důvěryhodný? Odkazují na své zdroje?
-- Přináší tento obsah výraznou přidanou hodnotu, kterou stávající zdroje / odkazy nepokrývají?
+- Je obsah skrytý za paywallem?
+- Jsou informace přesné? Zakládají se na faktech, nebo na názorech?
+- Je autor důvěryhodný? Odkazuje na své zdroje?
+- Přináší tento obsah jasnou přidanou hodnotu, kterou stávající zdroje/odkazy nepokrývají?
 - Slouží tento obsah jedné z našich [uživatelských person](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)?
 
 ---
 
-## Přidejte svůj zdroj obsahu {#add-your-content-resource}
+## Přidejte svůj obsahový zdroj {#add-your-content-resource}
 
-Pokud chcete přidat zdroj obsahu na ethereum.org a splňujete kritéria, vytvořte problém na GitHubu.
+Pokud chcete přidat obsahový zdroj na ethereum.org a splňuje daná kritéria, vytvořte issue na GitHubu.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   Vytvořit issue

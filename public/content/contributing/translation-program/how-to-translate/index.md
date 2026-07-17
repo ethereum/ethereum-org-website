@@ -4,8 +4,6 @@ lang: en
 description: Instructions for using Crowdin to translate ethereum.org
 ---
 
-# How to translate {#how-to-translate}
-
 ## Visual guide {#visual-guide}
 
 For more visual learners, watch Luka walk through getting set up with Crowdin. Alternatively, you can find the same steps in a written format in the next section.

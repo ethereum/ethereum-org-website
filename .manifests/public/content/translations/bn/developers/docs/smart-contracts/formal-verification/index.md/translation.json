@@ -1,0 +1,494 @@
+{
+  "version": 1,
+  "locale": "bn",
+  "translatedAt": "2026-06-16T23:07:02.905Z",
+  "englishManifestHash": "14897d0fa572",
+  "placeholderOrder": [
+    "LINK-efc0b7",
+    "LINK-0d96a2",
+    "LINK-318e45",
+    "LINK-aee267",
+    "LINK-851715",
+    "LINK-6c4cfe",
+    "LINK-0b6c48",
+    "LINK-529574",
+    "LINK-fc58f3",
+    "LINK-fb091d",
+    "LINK-0190ac",
+    "LINK-48b291",
+    "LINK-926c6d",
+    "CODE-b4bc9b",
+    "CODE-d7ab40",
+    "LINK-7e0f36",
+    "LINK-2cfa88",
+    "CODE-13618b",
+    "CODE-2e7d2c",
+    "CODE-5c62e0",
+    "CODE-4ae815",
+    "CODE-2e7d2c",
+    "CODE-c4d0cf",
+    "CODE-254506",
+    "CODE-c4d0cf",
+    "CODE-254506",
+    "CODE-c4d0cf",
+    "CODE-254506",
+    "LINK-ef9204",
+    "LINK-d99d65",
+    "LINK-d59515",
+    "CODE-45c423",
+    "CODE-200592",
+    "CODE-997317",
+    "LINK-ad6858",
+    "CODE-c3f202",
+    "CODE-2d7116",
+    "CODE-2d7116",
+    "CODE-ef2d12",
+    "CODE-4a44dc",
+    "CODE-2d7116",
+    "CODE-1f2f65",
+    "CODE-2d7116",
+    "CODE-2d7116",
+    "CODE-110713",
+    "CODE-110713",
+    "CODE-2d7116",
+    "CODE-790269",
+    "CODEBLOCK-d30cf5",
+    "CODE-9ac09b",
+    "CODE-db118e",
+    "LINK-3c9d61",
+    "LINK-a21a82",
+    "LINK-74272e",
+    "LINK-899322",
+    "LINK-82e6cd",
+    "LINK-5970cf",
+    "LINK-56ec1c",
+    "LINK-6a3061",
+    "LINK-8854a5",
+    "LINK-cb6250",
+    "LINK-8dc2b0",
+    "LINK-c6ac7c",
+    "LINK-7d5a1b",
+    "LINK-3a8ded",
+    "LINK-b02deb",
+    "LINK-42d6da",
+    "LINK-ddf4e7",
+    "LINK-cdc1e0",
+    "LINK-6dbd1e",
+    "LINK-fefc0c",
+    "LINK-37cbed",
+    "LINK-f26eca",
+    "LINK-eddbec",
+    "LINK-64afac",
+    "LINK-db36d6",
+    "LINK-aae8fd",
+    "LINK-65920d"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-d30cf5": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-b4bc9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "transfer()"
+      }
+    },
+    "CODE-d7ab40": {
+      "type": "inline-code",
+      "values": {
+        "content": "transferFrom()"
+      }
+    },
+    "CODE-13618b": {
+      "type": "inline-code",
+      "values": {
+        "content": "{P}c{Q}"
+      }
+    },
+    "CODE-2e7d2c": {
+      "type": "inline-code",
+      "values": {
+        "content": "c"
+      }
+    },
+    "CODE-5c62e0": {
+      "type": "inline-code",
+      "values": {
+        "content": "P"
+      }
+    },
+    "CODE-4ae815": {
+      "type": "inline-code",
+      "values": {
+        "content": "Q"
+      }
+    },
+    "CODE-c4d0cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "require"
+      }
+    },
+    "CODE-254506": {
+      "type": "inline-code",
+      "values": {
+        "content": "assert"
+      }
+    },
+    "CODE-45c423": {
+      "type": "inline-code",
+      "values": {
+        "content": "selfdestruct"
+      }
+    },
+    "CODE-997317": {
+      "type": "inline-code",
+      "values": {
+        "content": "x > 5"
+      }
+    },
+    "CODE-200592": {
+      "type": "inline-code",
+      "values": {
+        "content": "x == 5"
+      }
+    },
+    "CODE-c3f202": {
+      "type": "inline-code",
+      "values": {
+        "content": "uint"
+      }
+    },
+    "CODE-2d7116": {
+      "type": "inline-code",
+      "values": {
+        "content": "x"
+      }
+    },
+    "CODE-ef2d12": {
+      "type": "inline-code",
+      "values": {
+        "content": "5"
+      }
+    },
+    "CODE-4a44dc": {
+      "type": "inline-code",
+      "values": {
+        "content": "10"
+      }
+    },
+    "CODE-1f2f65": {
+      "type": "inline-code",
+      "values": {
+        "content": "X > 5 ∧ X < 10"
+      }
+    },
+    "CODE-110713": {
+      "type": "inline-code",
+      "values": {
+        "content": "x = X > 5 ∧ X < 10"
+      }
+    },
+    "CODE-790269": {
+      "type": "inline-code",
+      "values": {
+        "content": "7"
+      }
+    },
+    "CODE-9ac09b": {
+      "type": "inline-code",
+      "values": {
+        "content": "z = x + y AND (z >= x) AND (z >= y) AND (z < x OR z < y)"
+      }
+    },
+    "CODE-db118e": {
+      "type": "inline-code",
+      "values": {
+        "content": "safe_add"
+      }
+    },
+    "LINK-efc0b7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-0d96a2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/security/"
+      }
+    },
+    "LINK-318e45": {
+      "type": "link",
+      "values": {
+        "url": "https://www.brookings.edu/techstream/formal-methods-as-a-path-toward-better-cybersecurity/"
+      }
+    },
+    "LINK-aee267": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Model_of_computation"
+      }
+    },
+    "LINK-851715": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Control-flow_graph"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-0b6c48": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Logic_programming"
+      }
+    },
+    "LINK-529574": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Reachability_problem"
+      }
+    },
+    "LINK-fc58f3": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Temporal_logic"
+      }
+    },
+    "LINK-fb091d": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Hoare_logic"
+      }
+    },
+    "LINK-0190ac": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Finite-state_machine"
+      }
+    },
+    "LINK-48b291": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Temporal_logic"
+      }
+    },
+    "LINK-926c6d": {
+      "type": "link",
+      "values": {
+        "url": "https://www.techtarget.com/whatis/definition/deadlock"
+      }
+    },
+    "LINK-7e0f36": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html"
+      }
+    },
+    "LINK-2cfa88": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Hoare_logic"
+      }
+    },
+    "LINK-ef9204": {
+      "type": "link",
+      "values": {
+        "url": "https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/"
+      }
+    },
+    "LINK-d99d65": {
+      "type": "link",
+      "values": {
+        "url": "/dao/"
+      }
+    },
+    "LINK-d59515": {
+      "type": "link",
+      "values": {
+        "url": "https://www.baeldung.com/cs/propositional-logic"
+      }
+    },
+    "LINK-ad6858": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Satisfiability_modulo_theories"
+      }
+    },
+    "LINK-3c9d61": {
+      "type": "link",
+      "values": {
+        "url": "https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-74272e": {
+      "type": "link",
+      "values": {
+        "url": "https://en.wikipedia.org/wiki/Decision_problem"
+      }
+    },
+    "LINK-899322": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/act"
+      }
+    },
+    "LINK-82e6cd": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/argotorg/act"
+      }
+    },
+    "LINK-5970cf": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.scribble.codes/"
+      }
+    },
+    "LINK-56ec1c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/dafny-lang/dafny"
+      }
+    },
+    "LINK-6a3061": {
+      "type": "link",
+      "values": {
+        "url": "https://www.certora.com/"
+      }
+    },
+    "LINK-8854a5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.certora.com/en/latest/index.html"
+      }
+    },
+    "LINK-cb6250": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/solidity"
+      }
+    },
+    "LINK-8dc2b0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/SRI-CSL/solidity"
+      }
+    },
+    "LINK-c6ac7c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/runtimeverification/evm-semantics"
+      }
+    },
+    "LINK-7d5a1b": {
+      "type": "link",
+      "values": {
+        "url": "https://jellopaper.org/"
+      }
+    },
+    "LINK-3a8ded": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/isabelle-prover"
+      }
+    },
+    "LINK-b02deb": {
+      "type": "link",
+      "values": {
+        "url": "https://isabelle.in.tum.de/documentation.html"
+      }
+    },
+    "LINK-42d6da": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/rocq-prover/rocq"
+      }
+    },
+    "LINK-ddf4e7": {
+      "type": "link",
+      "values": {
+        "url": "https://rocq-prover.org/docs"
+      }
+    },
+    "LINK-cdc1e0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/trailofbits/manticore"
+      }
+    },
+    "LINK-6dbd1e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/trailofbits/manticore/wiki"
+      }
+    },
+    "LINK-fefc0c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/dapphub/dapptools/tree/master/src/hevm"
+      }
+    },
+    "LINK-37cbed": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ConsenSys/mythril-classic"
+      }
+    },
+    "LINK-f26eca": {
+      "type": "link",
+      "values": {
+        "url": "https://mythril-classic.readthedocs.io/en/develop/"
+      }
+    },
+    "LINK-eddbec": {
+      "type": "link",
+      "values": {
+        "url": "https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/"
+      }
+    },
+    "LINK-64afac": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/leonardoalt/ethereum_formal_verification_overview"
+      }
+    },
+    "LINK-db36d6": {
+      "type": "link",
+      "values": {
+        "url": "https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/"
+      }
+    },
+    "LINK-aae8fd": {
+      "type": "link",
+      "values": {
+        "url": "https://www.zellic.io/blog/formal-verification-weth"
+      }
+    },
+    "LINK-65920d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/v0.8.15/smtchecker.html"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-16T23:07:02.905Z",
+      "status": "success"
+    }
+  }
+}

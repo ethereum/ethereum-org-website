@@ -2,6 +2,7 @@
 
 import { cva, type VariantProps } from "class-variance-authority"
 import { ChevronDown } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import type { ToCItem } from "@/lib/types"
 
@@ -14,14 +15,11 @@ import {
 
 import ItemsListMobile from "./ItemsListMobile"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const variants = cva("flex w-full justify-between lg:hidden", {
   variants: {
     variant: {
       docs: "",
       card: "[&>span]:flex-none mb-16 justify-center rounded-lg border-border bg-accent-a/10 text-lg font-bold",
-      left: "",
     },
   },
   defaultVariants: {
@@ -35,7 +33,7 @@ export type TableOfContentsMobileProps = {
 } & VariantProps<typeof variants>
 
 const Mobile = ({ items, maxDepth, variant }: TableOfContentsMobileProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
 
   if (!items) {
     return null

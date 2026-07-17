@@ -1,13 +1,13 @@
 ---
-title: Definition der Web3-Geheimnisspeicherung
-description: "Formale Definition für die Web3-Geheimnisspeicherung"
+title: Web3-Secret-Storage-Definition
+description: "Formale Definition für den Web3-Secret-Storage"
 lang: de
 sidebarDepth: 2
 ---
 
-Damit Ihre App auf Ethereum funktioniert, können Sie das Web3-Objekt verwenden, das von der web3.js-Bibliothek bereitgestellt wird. Unter der Haube kommuniziert es über RPC-Aufrufe mit einem lokalen Blockchain-Knoten. [web3](https://github.com/ethereum/web3.js/) funktioniert mit jedem Ethereum-Blockchain-Knoten, der eine RPC-Schicht bereitstellt.
+Damit deine App auf Ethereum funktioniert, kannst du das Web3-Objekt verwenden, das von der Web3.js-Bibliothek bereitgestellt wird. Intern kommuniziert es über RPC-Aufrufe mit einem lokalen Knoten. [web3](https://github.com/ethereum/web3.js/) funktioniert mit jedem Ethereum-Knoten, der eine RPC-Schicht bereitstellt.
 
-`web3` enthält das `eth`-Objekt – web3.eth.
+`web3` enthält das Objekt `eth` – web3.eth.
 
 ```js
 var fs = require("fs")
@@ -18,39 +18,35 @@ fs.readFile("keyfile.json", (err, data) => {
   var result = recognizer(json)
 })
 
-/* * Ergebnis
- *               [ 'web3', 3 ]   web3 (v3) Schlüsseldatei
+/** Ergebnis
+ *               [ 'web3', 3 ]   Web3 (v3) Schlüsseldatei
  *  [ 'ethersale', undefined ]   Ethersale-Schlüsseldatei
- *                        null     ungültige Schlüsseldatei */
-
-
-
-
-
+ *                        null     ungültige Schlüsseldatei
+ */
 ```
 
-Dies dokumentiert **Version 3** der Definition der Web3-Geheimnisspeicherung.
+Dies dokumentiert **Version 3** der Web3-Secret-Storage-Definition.
 
 ## Definition {#definition}
 
-Die eigentliche Kodierung und Dekodierung der Datei bleibt im Vergleich zu Version 1 weitgehend unverändert, außer dass der Krypto-Algorithmus nicht mehr auf AES-128-CBC festgelegt ist (AES-128-CTR ist jetzt die Mindestanforderung). Die meisten Bedeutungen/Algorithmen ähneln Version 1, mit Ausnahme von `mac`, das als SHA3 (keccak-256) der Verkettungen der zweit-linkesten 16 Bytes des abgeleiteten Schlüssels zusammen mit dem vollständigen `ciphertext` angegeben wird.
+Die eigentliche Kodierung und Dekodierung der Datei bleibt im Vergleich zu Version 1 weitgehend unverändert, außer dass der Krypto-Algorithmus nicht mehr auf AES-128-CBC festgelegt ist (AES-128-CTR ist nun die Mindestanforderung). Die meisten Bedeutungen/Algorithmen ähneln Version 1, mit Ausnahme von `mac`, das als SHA3 (Keccak-256) der Verkettung der zweit-linkesten 16 Bytes des abgeleiteten Schlüssels zusammen mit dem vollständigen `ciphertext` angegeben wird.
 
-Geheime Schlüsseldateien werden direkt in `~/.web3/keystore` (für Unix-ähnliche Systeme) und `~/AppData/Web3/keystore` (für Windows) gespeichert. Sie können beliebig benannt werden, aber eine gute Konvention ist `<uuid>.json`, wobei `<uuid>` die 128-Bit-UUID ist, die dem geheimen Schlüssel zugewiesen wird (ein datenschutzfreundlicher Stellvertreter für die Adresse des geheimen Schlüssels).
+Geheime Schlüsseldateien werden direkt in `~/.web3/keystore` (für Unix-ähnliche Systeme) und `~/AppData/Web3/keystore` (für Windows) gespeichert. Sie können beliebig benannt werden, aber eine gute Konvention ist `<uuid>.json`, wobei `<uuid>` die 128-Bit-UUID ist, die dem geheimen Schlüssel zugewiesen wurde (ein die Privatsphäre wahrender Stellvertreter für die Adresse des geheimen Schlüssels).
 
-Alle solchen Dateien haben ein zugehöriges Passwort. Um den geheimen Schlüssel einer bestimmten `.json`-Datei abzuleiten, leiten Sie zunächst den Verschlüsselungsschlüssel der Datei ab; dies geschieht, indem das Passwort der Datei durch eine Schlüsselableitungsfunktion geleitet wird, wie durch den Schlüssel `kdf` beschrieben. KDF-abhängige statische und dynamische Parameter für die KDF-Funktion werden im Schlüssel `kdfparams` beschrieben.
+Alle solchen Dateien haben ein zugehöriges Passwort. Um den geheimen Schlüssel einer bestimmten `.json`-Datei abzuleiten, muss zunächst der Verschlüsselungsschlüssel der Datei abgeleitet werden; dies geschieht, indem das Passwort der Datei durch eine Schlüsselableitungsfunktion (Key Derivation Function, KDF) geleitet wird, wie durch den Schlüssel `kdf` beschrieben. KDF-abhängige statische und dynamische Parameter für die KDF-Funktion werden im Schlüssel `kdfparams` beschrieben.
 
 PBKDF2 muss von allen minimal konformen Implementierungen unterstützt werden, gekennzeichnet durch:
 
 - `kdf`: `pbkdf2`
 
-Für PBKDF2 umfassen die `kdfparams`:
+Für PBKDF2 umfassen die kdfparams:
 
 - `prf`: Muss `hmac-sha256` sein (kann in Zukunft erweitert werden);
 - `c`: Anzahl der Iterationen;
 - `salt`: Salt, das an PBKDF übergeben wird;
 - `dklen`: Länge für den abgeleiteten Schlüssel. Muss >= 32 sein.
 
-Sobald der Schlüssel der Datei abgeleitet wurde, sollte er durch die Ableitung des MAC verifiziert werden. Der MAC sollte als SHA3-Hash (keccak-256) des Byte-Arrays berechnet werden, das als Verkettung der zweit-linkesten 16 Bytes des abgeleiteten Schlüssels mit dem Inhalt des Schlüssels `ciphertext` gebildet wird, d. h.:
+Sobald der Schlüssel der Datei abgeleitet wurde, sollte er durch die Ableitung des MAC verifiziert werden. Der MAC sollte als SHA3-Hash (Keccak-256) des Byte-Arrays berechnet werden, das aus der Verkettung der zweit-linkesten 16 Bytes des abgeleiteten Schlüssels mit dem Inhalt des Schlüssels `ciphertext` gebildet wird, d. h.:
 
 ```js
 KECCAK(DK[16..31] ++ <ciphertext>)
@@ -60,21 +56,21 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 
 Dieser Wert sollte mit dem Inhalt des Schlüssels `mac` verglichen werden; wenn sie unterschiedlich sind, sollte ein alternatives Passwort angefordert (oder der Vorgang abgebrochen) werden.
 
-Nachdem der Schlüssel der Datei verifiziert wurde, kann der Geheimtext (der Schlüssel `ciphertext` in der Datei) mit dem symmetrischen Verschlüsselungsalgorithmus entschlüsselt werden, der durch den Schlüssel `cipher` angegeben und durch den Schlüssel `cipherparams` parametrisiert wird. Wenn die Größe des abgeleiteten Schlüssels und die Schlüsselgröße des Algorithmus nicht übereinstimmen, sollten die mit Nullen aufgefüllten, rechtesten Bytes des abgeleiteten Schlüssels als Schlüssel für den Algorithmus verwendet werden.
+Nachdem der Schlüssel der Datei verifiziert wurde, kann der Geheimtext (der Schlüssel `ciphertext` in der Datei) mit dem symmetrischen Verschlüsselungsalgorithmus entschlüsselt werden, der durch den Schlüssel `cipher` spezifiziert und durch den Schlüssel `cipherparams` parametrisiert wird. Wenn die Größe des abgeleiteten Schlüssels und die Schlüsselgröße des Algorithmus nicht übereinstimmen, sollten die mit Nullen aufgefüllten, rechtesten Bytes des abgeleiteten Schlüssels als Schlüssel für den Algorithmus verwendet werden.
 
 Alle minimal konformen Implementierungen müssen den Algorithmus AES-128-CTR unterstützen, gekennzeichnet durch:
 
 - `cipher: aes-128-ctr`
 
-Diese Chiffre nimmt die folgenden Parameter an, die als Schlüssel für den Schlüssel `cipherparams` angegeben werden:
+Diese Chiffre nimmt die folgenden Parameter an, die als Schlüssel an den Schlüssel cipherparams übergeben werden:
 
 - `iv`: 128-Bit-Initialisierungsvektor für die Chiffre.
 
 Der Schlüssel für die Chiffre sind die linkesten 16 Bytes des abgeleiteten Schlüssels, d. h. `DK[0..15]`
 
-Die Erstellung/Verschlüsselung eines geheimen Schlüssels sollte im Wesentlichen die Umkehrung dieser Anweisungen sein. Stellen Sie sicher, dass `uuid`, `salt` und `iv` tatsächlich zufällig sind.
+Die Erstellung/Verschlüsselung eines geheimen Schlüssels sollte im Wesentlichen die Umkehrung dieser Anweisungen sein. Stelle sicher, dass `uuid`, `salt` und `iv` tatsächlich zufällig sind.
 
-Zusätzlich zum Feld `version`, das als „harter“ Identifikator der Version dienen sollte, können Implementierungen auch `minorversion` verwenden, um kleinere, nicht bahnbrechende Änderungen am Format zu verfolgen.
+Zusätzlich zum Feld `version`, das als „harter“ Identifikator der Version dienen sollte, können Implementierungen auch `minorversion` verwenden, um kleinere, nicht abwärtsinkompatible Änderungen am Format zu verfolgen.
 
 ## Testvektoren {#test-vectors}
 
@@ -86,7 +82,7 @@ Details:
 - `Password`: `testpassword`
 - `Secret`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
 
-### PBKDF2-SHA-256 {#PBKDF2-SHA-256}
+### PBKDF2-SHA-256 {#pbkdf2-sha-256}
 
 Testvektor unter Verwendung von `AES-128-CTR` und `PBKDF2-SHA-256`:
 
@@ -159,14 +155,14 @@ Testvektor unter Verwendung von AES-128-CTR und Scrypt:
 
 Diese Version behebt mehrere Inkonsistenzen mit der [hier](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst) veröffentlichten Version 1. Kurz gesagt sind dies:
 
-- Die Groß- und Kleinschreibung ist ungerechtfertigt und inkonsistent (scrypt kleingeschrieben, Kdf gemischt, MAC großgeschrieben).
-- Adresse ist unnötig und beeinträchtigt den Datenschutz.
+- Die Groß- und Kleinschreibung ist ungerechtfertigt und inkonsistent (scrypt klein, Kdf gemischt, MAC groß).
+- Adresse ist unnötig und gefährdet die Privatsphäre.
 - `Salt` ist an sich ein Parameter der Schlüsselableitungsfunktion und sollte mit dieser verknüpft werden, nicht mit der Krypto im Allgemeinen.
-- _SaltLen_ ist unnötig (einfach aus Salt ableiten).
-- Die Schlüsselableitungsfunktion ist vorgegeben, der Krypto-Algorithmus ist jedoch fest spezifiziert.
+- _SaltLen_ ist unnötig (einfach aus dem Salt ableiten).
+- Die Schlüsselableitungsfunktion ist angegeben, der Krypto-Algorithmus ist jedoch fest vorgegeben.
 - `Version` ist an sich numerisch, aber ein String (strukturierte Versionierung wäre mit einem String möglich, kann aber für ein sich selten änderndes Konfigurationsdateiformat als außerhalb des Rahmens betrachtet werden).
-- `KDF` und `cipher` sind konzeptionell verwandte Konzepte, werden aber unterschiedlich organisiert.
-- `MAC` wird durch ein Leerzeichen-agnostisches Datenstück berechnet(!)
+- `KDF` und `cipher` sind konzeptionell verwandte Konzepte, aber unterschiedlich organisiert.
+- `MAC` wird durch ein Leerzeichen-unabhängiges Datenstück berechnet(!)
 
 Es wurden Änderungen am Format vorgenommen, um die folgende Datei zu erhalten, die funktional dem Beispiel auf der zuvor verlinkten Seite entspricht:
 
@@ -194,6 +190,6 @@ Es wurden Änderungen am Format vorgenommen, um die folgende Datei zu erhalten, 
 }
 ```
 
-## Änderungen gegenüber Version 2 {#alterations-from-v2}
+## Änderungen gegenüber Version 2 {#alterations-from-v2-2}
 
 Version 2 war eine frühe C++-Implementierung mit einer Reihe von Fehlern. Alle wesentlichen Elemente bleiben davon unverändert.

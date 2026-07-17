@@ -2,12 +2,11 @@
 title: Verkle trees
 description: A high level description of Verkle trees and how they will be used to upgrade Ethereum
 lang: en
+template: roadmap
 summaryPoints:
   - Discover what Verkle trees are
   - Read why Verkle Trees are a useful upgrade for Ethereum
 ---
-
-# Verkle trees {#verkle-trees}
 
 Verkle trees (a portmanteau of "Vector commitment" and "Merkle Trees") are a data structure that can be used to upgrade [Ethereum](/) nodes so that they can stop storing large amounts of state data without losing the ability to validate blocks.
 

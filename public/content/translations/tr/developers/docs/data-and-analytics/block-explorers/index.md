@@ -1,253 +1,244 @@
 ---
-title: "Blok arayıcıları"
-description: "İşlemler, hesaplar, sözleşmeler ve daha fazlası hakkında bilgi sorgulayabileceğiniz blok zinciri verileri dünyasına açılan portalınız olan blok arayıcılarına giriş."
+title: Blok gezginleri
+description: "İşlemler, hesaplar, sözleşmeler ve daha fazlası hakkında bilgi sorgulayabileceğiniz, blokzincir verileri dünyasına açılan portalınız olan blok gezginlerine bir giriş."
 lang: tr
 sidebarDepth: 3
 ---
 
-Blok arayıcıları, Ethereum'un verilerine açılan portalınızdır. Bunları; bloklar, işlemler, doğrulayıcılar, hesaplar ve diğer zincir üstü olaylarla ilgili gerçek zamanlı verileri görmek için kullanabilirsiniz.
+Blok gezginleri, Ethereum'un verilerine açılan portalınızdır. Bunları bloklar, işlemler, doğrulayıcılar, hesaplar ve diğer zincir içi etkinlikler hakkında gerçek zamanlı verileri görmek için kullanabilirsiniz.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Bir blok arayıcısının size verdiği verileri anlamlandırabilmeniz için Ethereum'un temel kavramlarını anlamalısınız. [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) ile başlayın.
-
-## Hizmetler {#services}
-
-- [Etherscan](https://etherscan.io/) -_Ayrıca Çince, Korece, Rusça ve Japonca dillerinde de mevcuttur_
-- [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum) -_Ayrıca İspanyolca, Fransızca, İtalyanca, Hollandaca, Portekizce, Rusça, Çince ve Farsça dillerinde de mevcuttur_
-- [Blockscout](https://eth.blockscout.com/)
-- [Chainlens](https://www.chainlens.com/)
-- [DexGuru Blok Arayıcısı](https://ethereum.dex.guru/)
-- [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer.io/) -_Ayrıca Çince, İspanyolca, Fransızca, Türkçe, Rusça, Korece ve Vietnamca dillerinde de mevcuttur_
-- [EthVM](https://www.ethvm.com/)
-- [OKLink](https://www.oklink.com/eth)
-- [Ethseer](https://ethseer.io)
+Bir blok gezgininin size verdiği verileri anlamlandırabilmek için Ethereum'un temel kavramlarını anlamalısınız. [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) ile başlayın.
 
 ## Açık kaynaklı araçlar {#open-source-tools}
 
-- [Otterscan](https://otterscan.io/)
+- [3xpl](https://3xpl.com/ethereum) - Veri kümelerinin indirilmesine olanak tanıyan reklamsız bir Ethereum gezgini (açık çekirdek: çekirdek modüller açık kaynaktır)
+- [Beaconcha.in](https://beaconcha.in/)
+- [Blockscout](https://eth.blockscout.com/)
 - [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
+- [Otterscan](https://otterscan.io/)
+
+## Hizmetler {#services}
+
+- [Blockchair](https://blockchair.com/ethereum) - Özel Ethereum gezgini. Ayrıca (bellek havuzu) verilerini sıralamak ve filtrelemek içindir. İspanyolca, Fransızca, İtalyanca, Felemenkçe, Portekizce, Rusça, Çince ve Farsça dillerinde mevcuttur
+- [Chainlens](https://www.chainlens.com/)
+- [DexGuru Blok Gezgini](https://ethereum.dex.guru/)
+- [Etherchain](https://www.etherchain.org/)
+- [Etherscan](https://etherscan.io/) - Ayrıca Çince, Korece, Rusça ve Japonca dillerinde mevcuttur
+- [Ethplorer](https://ethplorer.io/) - Token odaklı bir blok gezgini. Ayrıca Çince, İspanyolca, Fransızca, Türkçe, Rusça, Korece ve Vietnamca dillerinde mevcuttur
+- [Ethseer](https://ethseer.io)
+- [EthVM](https://www.ethvm.com/)
+- [OKLink](https://www.oklink.com/eth)
 
 ## Veri {#data}
 
-Ethereum, tasarımı itibariyle şeffaf olduğu için yapılan her işlem doğrulanabilir. Blok arayıcıları bu bilgiyi almak için bir arayüz desteği sağlar. Ve bu, verilere ihtiyacınız olması durumunda hem ana Ethereum ağı hem de test ağları için kullanılabilir. Veri, yürütme ve mutabakat verisi olarak ayrılır. Yürütme verisi, spesifik bir blokta yürütülen işlemleri ifade eder. Mutabakat verisi, blokların kendilerini ve bunları öneren doğrulayıcıları ifade eder.
+Ethereum tasarımı gereği şeffaftır, bu nedenle her şey doğrulanabilir. Blok gezginleri bu bilgileri almak için bir arayüz sağlar. Ve bu, söz konusu verilere ihtiyaç duymanız halinde hem ana Ethereum ağı hem de test ağları içindir. Veriler, yürütme verileri ve mutabakat verileri olarak ikiye ayrılır. Yürütme verileri, belirli bir blokta yürütülen işlemleri ifade eder. Mutabakat verileri, blokların kendilerini ve onları teklif eden doğrulayıcıları ifade eder.
 
-İşte bir blok arayıcısından alabileceğiniz veri türlerinin bir özeti.
+İşte bir blok gezgininden alabileceğiniz veri türlerinin bir özeti.
 
 ### Yürütme verileri {#execution-data}
 
-Her 12 saniyede bir Ethereum'a yeni bloklar eklenir (eğer ki bir blok önericisi kendi turunu kaçırmazsa), yani blok arayıcılarına eklenen neredeyse sabit bir veri akışı vardır. Bloklar, yararlı bulabileceğiniz birçok önemli veri içerir:
+Ethereum'a her 12 saniyede bir yeni bloklar eklenir (bir blok teklifçisi sırasını kaçırmadığı sürece), bu nedenle blok gezginlerine neredeyse sabit bir veri akışı eklenir. Bloklar, yararlı bulabileceğiniz birçok önemli veri içerir:
 
 **Standart veriler**
 
-- Blok yüksekliği - Mevcut blokun oluşturulduğu anda blok zincirinin (blok cinsinden) blok numarası ve uzunluğu
-- Zaman damgası - Bir blokun önerildiği zaman
-- İşlemler - Blok içinde yer alan işlem sayısı
-- Ücret alıcısı - İşlemlerden gaz ücret bahşişleri alan adres
-- Blok Ödülü - Bloku öneren doğrulayıcının ödüllendirildiği ETH miktarı
-- Boyut - Blok içindeki verilerin boyutu (bayt olarak ölçülür)
-- Kullanılan gaz - Bloktaki işlemler tarafından kullanılan toplam gaz birimleri
+- Blok yüksekliği - Mevcut bloğun oluşturulması sırasındaki blok numarası ve blokzincirin (blok cinsinden) uzunluğu
+- Zaman damgası - Bir bloğun teklif edildiği zaman
+- İşlemler - Bloğa dahil edilen işlem sayısı
+- Ücret alıcısı - İşlemlerden gaz ücreti bahşişlerini alan adres
+- Blok Ödülü - Bloğu teklif eden doğrulayıcıya verilen ETH miktarı
+- Boyut - Blok içindeki verilerin boyutu (bayt cinsinden ölçülür)
+- Kullanılan gaz - Bloktaki işlemler tarafından kullanılan toplam gaz birimi
 - Gaz limiti - Bloktaki işlemler tarafından belirlenen toplam gaz limitleri
-- Gaz başına ana ücret - Bir işlemin bir bloka dahil edilmesi için gereken minimum katsayı
-- Yakılmış ücretler - Blokta yakılan ETH miktarı
-- Ekstra veri - Geliştiricinin bloğa dahil ettiği herhangi bir ekstra veri
+- Gaz başına taban ücret - Bir işlemin bir bloğa dahil edilmesi için gereken minimum çarpan
+- Yakılan ücretler - Blokta ne kadar ETH yakıldığı
+- Ekstra veri - Oluşturucunun bloğa dahil ettiği herhangi bir ekstra veri
 
 **Gelişmiş veriler**
 
-- Karma - Blok başlığını temsil eden kriptografik karma değeri (blokun benzersiz tanımlayıcısı)
-- Üst karma – Mevcut bloktan önce gelen blokun karma değeri
-- StateRoot - Sistemin tüm durumunu saklayan Merkle ağacının kök karma değeri
+- Hash - Blok başlığını temsil eden kriptografik hash (bloğun benzersiz tanımlayıcısı)
+- Ebeveyn hash'i - Mevcut bloktan önce gelen bloğun hash'i
+- StateRoot - Sistemin tüm durumunu depolayan Merkle ağacının kök hash'i
 
 ### Gaz {#gas}
 
-Blok araştırmacıları size işlemlerde ve bloklarda Gaz kullanımı hakkında bilgi vermekle kalmaz, bazıları size ağın mevcut gaz fiyatları hakkında da bilgi verir. Bu, ağ kullanımını anlamanıza, güvenli işlemler göndermenize ve fazla gaz harcamamanıza yardımcı olacaktır. Bu bilgileri ürününüzün arayüzüne almanıza yardımcı olabilecek API'lara bakın. Gaza özgü veriler şunları kapsar:
+Blok gezginleri size yalnızca işlem ve bloklardaki Gaz kullanımı hakkında veri vermekle kalmaz, aynı zamanda bazıları ağın mevcut gas fiyatları hakkında da bilgi verir. Bu, ağ kullanımını anlamanıza, güvenli işlemler göndermenize ve gaz için gereğinden fazla harcama yapmamanıza yardımcı olacaktır. Bu bilgileri ürününüzün arayüzüne almanıza yardımcı olabilecek API'lere göz atın. Gaza özgü veriler şunları kapsar:
 
 - Güvenli ancak yavaş bir işlem için gereken tahmini gaz birimi (+ tahmini fiyat ve süre)
 - Ortalama bir işlem için gereken tahmini gaz birimi (+ tahmini fiyat ve süre)
 - Hızlı bir işlem için gereken tahmini gaz birimi (+ tahmini fiyat ve süre)
-- Gaz fiyatına dayalı ortalama onay süresi
-- Gaz tüketen sözleşmeler - diğer bir deyişle, ağda çokça kullanılan popüler ürünler
-- Gaz harcayan hesaplar - başka bir deyişle, ağı sık kullanan kullanıcılar
+- Gas fiyatına dayalı ortalama onay süresi
+- Gaz tüketen sözleşmeler - başka bir deyişle, ağda çok fazla kullanım gören popüler ürünler
+- Gaz harcayan hesaplar - başka bir deyişle, sık ağ kullanıcıları
 
 ### İşlemler {#transactions}
 
-Blok arayıcıları, insanların işlemlerinin ilerlemesini takip etmeleri için ortak bir yer haline geldi. Bunun nedeni, alabileceğiniz ayrıntı düzeyinin ekstra kesinlik sağlamasıdır. İşlem verileri şunları içerir:
+Blok gezginleri, insanların işlemlerinin ilerlemesini takip etmeleri için yaygın bir yer haline gelmiştir. Bunun nedeni, elde edebileceğiniz ayrıntı düzeyinin ekstra kesinlik sağlamasıdır. İşlem verileri şunları içerir:
 
 **Standart veriler**
 
-- İşlem karması - İşlem gönderildiğinde oluşturulan karma
-- Durum - İşlemin beklemede mi, başarısız mı yoksa başarılı mı olduğunun bir göstergesi
+- İşlem hash'i - İşlem gönderildiğinde oluşturulan bir hash
+- Durum - İşlemin beklemede, başarısız veya başarılı olup olmadığının bir göstergesi
 - Blok - İşlemin dahil edildiği blok
-- Timestamp - Bir işlemin doğrulayıcı tarafından önerilen bir bloğa dahil edildiği zaman
+- Zaman damgası - Bir işlemin bir doğrulayıcı tarafından teklif edilen bir bloğa dahil edildiği zaman
 - Gönderen - İşlemi gönderen hesabın adresi
-- Alıcı - İşlemin etkileşimde bulunduğu alıcının veya akıllı sözleşmenin adresi
-- Transfer edilen token'lar - İşlemin bir parçası olarak transfer edilen token'ların listesi
+- Alıcı - İşlemin etkileşime girdiği alıcının veya akıllı sözleşmenin adresi
+- Transfer edilen token'lar - İşlemin bir parçası olarak transfer edilen token'ların bir listesi
 - Değer - Transfer edilen toplam ETH değeri
-- İşlem ücreti - İşlemi gerçekleştirmek için doğrulayıcıya ödenen miktar (gaz fiyatı\*kullanılan gaz ile hesaplanır)
+- İşlem ücreti - İşlemi gerçekleştirmesi için doğrulayıcıya ödenen miktar (gas fiyatı\*kullanılan gaz ile hesaplanır)
 
 **Gelişmiş veriler**
 
 - Gaz limiti - Bu işlemin tüketebileceği maksimum gaz birimi sayısı
 - Kullanılan gaz - İşlemin tükettiği gerçek gaz birimi miktarı
-- Gaz fiyatı - Gaz birimi başına belirlenen fiyat
-- Nonce - `from` adresi için işlem numarasıdır (bunun 0'dan başladığını, bu nedenle `100`'lük bir nonce'nin aslında bu hesap tarafından gönderilen 101. işlem olacağını unutmayın)
-- Giriş verisi – İşlemin gerektirdiği herhangi bir ek bilgi
+- Gas fiyatı - Gaz birimi başına belirlenen fiyat
+- Nonce - `from` adresi için işlem numarası (bunun 0'dan başladığını unutmayın, bu nedenle `100` değerindeki bir nonce aslında bu hesap tarafından gönderilen 101. işlem olacaktır)
+- Girdi verisi - İşlem tarafından gereksinim duyulan herhangi bir ekstra bilgi
 
 ### Hesaplar {#accounts}
 
-Bir hesap hakkında erişebileceğiniz çok fazla veri var. Bu nedenle, varlıklarınızın ve değerinizin kolayca izlenememesi için genellikle birden fazla hesap kullanmanız önerilir. İşlemleri ve hesap hareketlerini daha özel hale getirmek için geliştirilmekte olan bazı çözümler de bulunmaktadır. Ancak, işte hesaplar hakkında mevcut olan veriler:
+Bir hesap hakkında erişebileceğiniz çok fazla veri vardır. Bu nedenle, varlıklarınızın ve değerinizin kolayca takip edilememesi için genellikle birden fazla hesap kullanılması önerilir. Ayrıca işlemleri ve hesap etkinliğini daha gizli hale getirmek için geliştirilmekte olan bazı çözümler de vardır. Ancak hesaplar için mevcut olan veriler şunlardır:
 
 **Kullanıcı hesapları**
 
-- Hesap adresi - Fon göndermek için kullanabileceğiniz herkese açık adres
-- ETH bakiyesi - Bu hesapla ilişkili ETH miktarı
+- Hesap adresi - Fon göndermek için kullanabileceğiniz açık adres
+- ETH bakiyesi - O hesapla ilişkili ETH miktarı
 - Toplam ETH değeri - ETH'nin değeri
-- Token'lar - Hesapla ilişkili token'lar ve bunların değeri
-- İşlem geçmişi - Bu hesabın gönderen veya alıcı olduğu tüm işlemlerin listesi
+- Token'lar - Hesapla ilişkili token'lar ve değerleri
+- İşlem geçmişi - Bu hesabın gönderici veya alıcı olduğu tüm işlemlerin bir listesi
 
 **Akıllı sözleşmeler**
 
-Akıllı sözleşme hesapları, bir kullanıcı hesabının sahip olacağı tüm verilere sahiptir ancak bazı blok arayıcıları bazı kod bilgilerini de görüntüler. Örneğin:
+Akıllı sözleşme hesapları, bir kullanıcı hesabının sahip olacağı tüm verilere sahiptir, ancak bazı blok gezginleri bazı kod bilgilerini bile görüntüler. Örnekler şunları içerir:
 
-- Sözleşme yaratıcısı - Sözleşmeyi Ana Ağ'a dağıtan adres
-- Yaratım işlemi - Ana Ağ'a dağıtımı içeren işlem
-- Kaynak kodu - Akıllı sözleşmenin solidity veya vyper kodu
-- Sözleşme ABI'sı - Sözleşmenin Uygulama İkili Arayüzü - sözleşmenin yaptığı çağrılar ve alınan veriler
-- Sözleşme oluşturma kodu - Akıllı sözleşmenin derlenmiş bayt kodu - Solidity veya Vyper vb. ile yazılmış bir akıllı sözleşmeyi derlerken oluşturulur.
-- Sözleşme olayları - Akıllı sözleşmede çağırılan metotların bir geçmişi - temelde sözleşmenin nasıl ve ne sıklıkla kullanıldığını görmek için bir yol
+- Sözleşme oluşturucu - Sözleşmeyi Ana Ağ'a dağıtan adres
+- Oluşturma işlemi - Ana Ağ'a dağıtımı içeren işlem
+- Kaynak kodu - Akıllı sözleşmenin Solidity veya Vyper kodu
+- Sözleşme ABI'si - Sözleşmenin Uygulama İkili Arayüzü (Application Binary Interface)—sözleşmenin yaptığı çağrılar ve alınan veriler
+- Sözleşme oluşturma kodu - Akıllı sözleşmenin derlenmiş baytkodu—Solidity veya Vyper vb. ile yazılmış bir akıllı sözleşmeyi derlediğinizde oluşturulur.
+- Sözleşme olayları - Akıllı sözleşmede çağrılan yöntemlerin bir geçmişi—temel olarak sözleşmenin nasıl ve ne sıklıkla kullanıldığını görmenin bir yolu
 
-### Jetonlar {#tokens}
+### Token'lar {#tokens}
 
-Token'lar bir tür sözleşmedir, bu nedenle akıllı sözleşmelere benzer verilere sahip olurlar. Ancak değerli oldukları ve alınıp satılabildikleri için ek veri noktalarına sahiptirler:
+Token'lar bir sözleşme türüdür, bu nedenle akıllı bir sözleşmeye benzer verilere sahip olacaklardır. Ancak değerleri olduğu ve alınıp satılabildikleri için ek veri noktalarına sahiptirler:
 
-- Tür - ERC-20, ERC-721 veya diğer token standartları arasında hangi türden oldukları bilgisi
-- Fiyat - Eğer bir ERC-20 ise, mevcut piyasa fiyatına sahiptirler
-- Piyasa değeri - Eğer bir ERC-20 ise, bir piyasa değerine sahip olurlar (fiyat\*toplam arza göre hesaplanır)
+- Tür - ERC-20, ERC-721 veya başka bir token standardı olup olmadıkları
+- Fiyat - Eğer bir ERC-20 iseler mevcut bir piyasa değerine sahip olacaklardır
+- Piyasa değeri - Eğer bir ERC-20 iseler bir piyasa değerine sahip olacaklardır (fiyat\*toplam arz ile hesaplanır)
 - Toplam arz - Dolaşımdaki token sayısı
-- Sahipler - Token'ı tutan adreslerin sayısı
-- Transferler - Token'ın hesaplar arasında kaç kez transfer edildiği
-- İşlem geçmişi - Token dahil tüm işlemlerin geçmişi
+- Sahipler - Token'ı elinde bulunduran adreslerin sayısı
+- Transferler - Token'ın hesaplar arasında transfer edilme sayısı
+- İşlem geçmişi - Token'ı içeren tüm işlemlerin bir geçmişi
 - Sözleşme adresi - Ana Ağ'a dağıtılan token'ın adresi
-- Ondalık Sayılar - ERC20 token'ları bölünebilirdir ve ondalık basamaklara sahiptir
+- Ondalıklar - ERC-20 token'ları bölünebilirdir ve ondalık basamaklara sahiptir
 
 ### Ağ {#network}
 
-Bazı blok verileri Ethereum'un durumu hakkında daha bütüncül olarak endişelidir.
+Bazı blok verileri, Ethereum'un sağlığıyla daha bütünsel olarak ilgilenir.
 
-- Toplam işlem - Ethereum'un oluşturulmasından bu yana gerçekleşen işlem sayısı
-- Saniyedeki işlem sayısı - Bir saniye içinde işlenebilen işlem sayısı
-- ETH fiyatı - 1 ETH'nin mevcut değerlemesi
-- Toplam ETH arzı - Dolaşımdaki ETH sayısı–her bloğun oluşumu ile blok ödülleri şeklinde yeni ETH oluşturulduğunu unutmayın
-- Piyasa değeri - Fiyat\*arz ile hesaplanır
+- Toplam işlemler - Ethereum oluşturulduğundan beri yapılan işlem sayısı
+- Saniye başına işlem - Bir saniye içinde işlenebilen işlem sayısı
+- ETH fiyatı - 1 ETH'nin mevcut değerlemeleri
+- Toplam ETH arzı - Dolaşımdaki ETH sayısı—her bloğun oluşturulmasıyla blok ödülleri şeklinde yeni ETH yaratıldığını unutmayın
+- Piyasa değeri - Fiyat\*arz hesaplaması
 
 ## Mutabakat katmanı verileri {#consensus-layer-data}
 
 ### Dönem {#epoch}
 
-Güvenlik sebeplerinden dolayı, her dönemin sonunda (her 6,4 dakikada bir) doğrulayıcılardan rastgele kurullar oluşturulmaktadır. Dönem verileri şunları içerir:
+Güvenlik nedenleriyle, her dönemin sonunda (her 6,4 dakikada bir) rastgele doğrulayıcı komiteleri oluşturulur. Dönem verileri şunları içerir:
 
 - Dönem numarası
-- Kesinleşmiş durum - Dönemin kesinleşmiş olup olmadığı (Evet/Hayır)
+- Kesinleşmiş durum - Dönemin kesinleşmiş olup olmadığı (Evet/Hayır)
 - Zaman - Dönemin sona erdiği zaman
-- Tasdikler - Dönemdeki tasdik sayısı (yuvalar içindeki bloklar için oy)
-- Yatırmalar - Döneme dahil olan ETH yatırma işlemlerinin sayısı (doğrulayıcıların doğrulayıcı olmak için ETH hisselemeleri gerekir)
-- Cezalar - Blok önerenlere veya tasdik edenlere verilen cezaların sayısı
-- Oylama katılımı - Blokları tasdik etmek için kullanılan hisselenmiş ETH miktarı
-- Doğrulayıcılar - Dönem için aktif olan doğrulayıcıların sayısı
+- Onaylar - Dönemdeki onay sayısı (slotlar içindeki bloklar için oylar)
+- Depozitolar - Döneme dahil edilen ETH depozitolarının sayısı (doğrulayıcıların doğrulayıcı olmak için ETH stake etmesi gerekir)
+- Kesintiler (Slashings) - Blok teklifçilerine veya onaylayıcılara verilen cezaların sayısı
+- Oy katılımı - Blokları onaylamak için kullanılan stake edilmiş ETH miktarı
+- Doğrulayıcılar - Dönem için aktif olan doğrulayıcı sayısı
 - Ortalama Doğrulayıcı bakiyesi - Aktif doğrulayıcılar için ortalama bakiye
-- Yuvalar - Döneme dahil edilen yuva sayısı (yuvalar bir geçerli blok içerir)
+- Slotlar - Döneme dahil edilen slot sayısı (slotlar bir geçerli blok içerir)
 
-### Yuva {#slot}
+### Slot {#slot}
 
-Yuvalar, blok oluşturma fırsatlarıdır; her yuva için mevcut veriler şunları içerir:
+Slotlar blok oluşturma fırsatlarıdır, her slot için mevcut veriler şunları içerir:
 
-- Dönem - Yuvanın geçerli olduğu dönem
-- Yuva numarası
-- Durum - Yuvanın durumu (Önerilen/Kaçırılmış)
-- Süre - Yuvanın zaman damgası
-- Önerici - Yuva için bloku öneren doğrulayıcı
-- Blok kökü - BeaconBlock'un karma ağaç kökü
-- Üst kök - Daha önce gelen blokun karma değeri
-- Durum kökü - BeaconState'in karma ağaç kökü
+- Dönem - Slotun geçerli olduğu dönem
+- Slot numarası
+- Durum - Slotun durumu (Teklif Edildi/Kaçırıldı)
+- Zaman - Slot zaman damgası
+- Teklif edici - Slot için bloğu teklif eden doğrulayıcı
+- Blok kökü - İşaret bloğunun (BeaconBlock) hash ağacı kökü
+- Ebeveyn kökü - Önceki bloğun hash'i
+- Durum kökü - İşaret durumunun (BeaconState) hash ağacı kökü
 - İmza
-- Randao gösterimi
-- Graffiti - Blok öneren varlık, blok önerisine 32 bayt uzunluğunda bir mesaj ekleyebilir
-- Yürütme Verisi
-  - Blok karması
-  - Yatırma sayısı
-  - Yatırma kökü
-- Tasdikler - Bu yuvadaki blok için tasdik sayısı
-- Yatırmalar - Bu yuva esnasındaki yatırma sayısı
-- Gönüllü çıkışlar - Yuva esnasında çıkan doğrulayıcıların sayısı
-- Cezalar - Blok önerenlere veya tasdik edenlere verilen cezaların sayısı
-- Oylar - Bu yuvadaki bloka oy veren doğrulayıcılar
+- RANDAO ifşası
+- Grafiti - Bir blok teklifçisi, blok teklifine 32 bayt uzunluğunda bir mesaj ekleyebilir
+- Yürütme Verileri
+  - Blok hash'i
+  - Depozito sayısı
+  - Depozito kökü
+- Onaylar - Bu slottaki blok için onay sayısı
+- Depozitolar - Bu slot sırasındaki depozito sayısı
+- Gönüllü çıkışlar - Slot sırasında ayrılan doğrulayıcı sayısı
+- Kesintiler (Slashings) - Blok teklifçilerine veya onaylayıcılara verilen cezaların sayısı
+- Oylar - Bu slottaki blok için oy veren doğrulayıcılar
 
 ### Bloklar {#blocks-1}
 
-Hisse ispatı, zamanı yuvalar ve dönemlere böler. Yani bu yeni veriler demektir!
+Hisse Kanıtı (PoS) zamanı slotlara ve dönemlere böler. Bu da yeni veriler anlamına gelir!
 
-- Önerici - Yeni bloku önermek için algoritmik olarak seçilen doğrulayıcı
-- Dönem - Blokun önerildiği dönem
-- Yuva - Blokun önerildiği yuva
-- Tasdikler - Yuvaya dahil olan tasdiklerin sayısı - tasdikler blokun İşaret Zinciri'ne gitmeye hazır olduğunu gösteren oylar gibidirler
+- Teklif edici - Yeni bloğu teklif etmek için algoritmik olarak seçilen doğrulayıcı
+- Dönem - Bloğun teklif edildiği dönem
+- Slot - Bloğun teklif edildiği slot
+- Onaylar - Slota dahil edilen onay sayısı—onaylar, bloğun İşaret zincirine gitmeye hazır olduğunu gösteren oylar gibidir
 
 ### Doğrulayıcılar {#validators}
 
-Doğrulayıcılar, bloklar önermekten ve bu blokları yuvalar içinde tasdik etmekten sorumludur.
+Doğrulayıcılar, blokları teklif etmekten ve slotlar içinde onları onaylamaktan sorumludur.
 
-- Doğrulayıcı numarası - Doğrulayıcıyı temsil eden benzersiz bir sayı
-- Mevcut bakiye - Ödüller dahil doğrulayıcının bakiyesi
-- Etkin bakiye - Doğrulayıcının hisseleme için kullanılan bakiyesi
+- Doğrulayıcı numarası - Doğrulayıcıyı temsil eden benzersiz numara
+- Mevcut bakiye - Doğrulayıcının ödüller dahil bakiyesi
+- Etkin bakiye - Doğrulayıcının staking için kullanılan bakiyesi
 - Gelir - Doğrulayıcı tarafından alınan ödüller veya cezalar
 - Durum - Doğrulayıcının şu anda çevrimiçi ve aktif olup olmadığı
-- Tasdik etkililiği - Doğrulayıcının tasdiklerinin zincire dahil edilmesi için geçen ortalama süre
-- Aktivasyon için uygunluk - Doğrulayıcının doğrulamaya uygun hale geldiği tarih (ve dönem)
-- Şu zamandan beri aktif - Doğrulayıcının aktif hale geldiği tarih (ve dönem)
-- Önerilen bloklar - Doğrulayıcının önerdiği blok
-- Tasdikler - Doğrulayıcının sağladığı tasdikler
-- Yatırımlar - Gönderen adresi, işlem karması, blok numarası, zaman damgası ve doğrulayıcının hisse yatırma miktarı ve durumu
+- Onay etkinliği - Doğrulayıcının onaylarının zincire dahil edilmesi için geçen ortalama süre
+- Etkinleştirme uygunluğu - Doğrulayıcının doğrulamaya uygun hale geldiği tarih (ve dönem)
+- Aktif olma tarihi - Doğrulayıcının aktif hale geldiği tarih (ve dönem)
+- Teklif edilen bloklar - Doğrulayıcının teklif ettiği blok
+- Onaylar - Doğrulayıcının sağladığı onaylar
+- Depozitolar - Doğrulayıcı tarafından yapılan staking depozitosunun gönderen adresi, işlem hash'i, blok numarası, zaman damgası, miktarı ve durumu
 
-### Tasdikler {#attestations}
+### Onaylar {#attestations}
 
-Tasdikler, zincire blok eklemek için verilen "evet" oylarıdır. Verileri, tasdikin kaydı ve tasdik eden doğrulayıcılarla ilgilidir.
+Onaylar, blokları zincire dahil etmek için verilen "evet" oylarıdır. Verileri, onayın ve onaylayan doğrulayıcıların bir kaydıyla ilgilidir
 
-- Yuva - Tasdikin gerçekleştiği yuva
-- Kurul endeksi - Verilen yuvadaki kurulun endeksi
-- Toplama bitleri - Tasdike katılan tüm doğrulayıcıların toplanmış tasdikini temsil eder
-- Doğrulayıcılar - Tasdik sağlayan doğrulayıcılar
-- İşaret bloku kökü - Doğrulayıcıların tasdik ettiği bloka işaret eder
-- Kaynak - En son gerekçelendirilmiş dönemi gösterir
-- Hedef - En son dönem sınırını gösterir
+- Slot - Onayın gerçekleştiği slot
+- Komite endeksi - Verilen slottaki komitenin endeksi
+- Toplama bitleri - Onaya katılan tüm doğrulayıcıların toplanmış onayını temsil eder
+- Doğrulayıcılar - Onay sağlayan doğrulayıcılar
+- İşaret bloğu kökü - Doğrulayıcıların onayladığı bloğu işaret eder
+- Kaynak - En son gerekçelendirilmiş dönemi işaret eder
+- Hedef - En son dönem sınırını işaret eder
 - İmza
 
 ### Ağ {#network-1}
 
-Fikir birliği katmanı üst düzey verileri şunları içerir:
+Mutabakat katmanı üst düzey verileri şunları içerir:
 
 - Mevcut dönem
-- Mevcut yuva
-- Aktif doğrulayıcılar - Aktif doğrulayıcıların sayısı
-- Bekleyen doğrulayıcılar - Etkinleştirilmeyi bekleyen doğrulayıcıların sayısı
-- Hisselenmiş ETH - Ağda hisselenmiş ETH miktarı
+- Mevcut slot
+- Aktif doğrulayıcılar - Aktif doğrulayıcı sayısı
+- Bekleyen doğrulayıcılar - Aktif hale getirilmeyi bekleyen doğrulayıcı sayısı
+- Stake edilmiş ETH - Ağda stake edilen ETH miktarı
 - Ortalama bakiye - Doğrulayıcıların ortalama ETH bakiyesi
 
-## Blok Arayıcıları {#block-explorers}
+## Daha fazla bilgi {#further-reading}
 
-- [Etherscan](https://etherscan.io/) - Ethereum Ana Ağı ve test ağından veri çekmek için kullanabileceğiniz bir blok arayıcısı
-- [3xpl](https://3xpl.com/ethereum) - veri kümelerini indirmeye izin veren, reklamsız, açık kaynaklı bir Ethereum arayıcısı
-- [Beaconcha.in](https://beaconcha.in/) - Ethereum Ana Ağı ve test ağı için açık kaynaklı bir blok arayıcısı
-- [Blockchair](https://blockchair.com/ethereum) - en özel Ethereum arayıcısı. Ayrıca (bellek havuzu) verileri sıralamak ve filtrelemek için kullanılır
-- [Etherchain](https://www.etherchain.org/) - Ethereum Ana Ağı için bir blok arayıcısı
-- [Ethplorer](https://ethplorer.io/) - Ethereum Ana Ağı ve Kovan test ağı için jetonlara odaklanan bir blok arayıcısı
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## Daha fazla kaynak {#further-reading}
-
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
-
-## Alakalı başlıklar {#related-topics}
+## İlgili konular {#related-topics}
 
 - [İşlemler](/developers/docs/transactions/)
 - [Hesaplar](/developers/docs/accounts/)

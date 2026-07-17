@@ -1,0 +1,713 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/gaming/index.md",
+  "generatedAt": "2026-06-11T14:42:22.320Z",
+  "rootHash": "9998a7c6df52",
+  "tree": {
+    "contentHash": "1b1a843ac292",
+    "anchorHash": "5cc073c9dca5",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "1ebf1ba9edef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "37f2a12d72b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:template": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2290d7d70dea"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2fcbf19a791e"
+      },
+      "frontmatter:sidebarDepth": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d4735e3a265e"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:buttons": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:- content": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8c8dd53bb9de"
+      },
+      "frontmatter:toId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "cd7ac4c61fd8"
+      },
+      "frontmatter:isSecondary": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "fcbcf165908d"
+      },
+      "gaming-on-ethereum": {
+        "contentHash": "a02dc7a2660f",
+        "anchorHash": "cc9e0638a478",
+        "labelHash": "1ebf1ba9edef",
+        "children": {
+          "_label": {
+            "contentHash": "1ebf1ba9edef",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "9cec9c9a9042",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "b2d2587d3e64",
+            "anchorHash": "807fefbb8050"
+          },
+          "prose:5": {
+            "contentHash": "11e8ee47a1ee",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "232ba9913c89",
+            "anchorHash": "7375970ed0c6"
+          },
+          "prose:6": {
+            "contentHash": "81b3b40f169b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "ba1aa7f3c474",
+            "anchorHash": "2e179be950fc"
+          },
+          "prose:7": {
+            "contentHash": "a8511931b5ad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "69c691bdf488",
+            "anchorHash": "ad39b889632e"
+          },
+          "prose:8": {
+            "contentHash": "21e1d8364433",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      },
+      "rise-of-ethereum-gaming": {
+        "contentHash": "5b6d33c449cf",
+        "anchorHash": "cbacc9ddd2e1",
+        "labelHash": "b2acb93d5bad",
+        "children": {
+          "_label": {
+            "contentHash": "b2acb93d5bad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "2c6d071502be",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "49773a2eb306",
+            "anchorHash": "c0128095822f"
+          },
+          "prose:3": {
+            "contentHash": "50f0db3310ea",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "fbfb119aebb0",
+            "anchorHash": "93534db0d912"
+          },
+          "prose:4": {
+            "contentHash": "4dae05edc135",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "ethereums-gaming-ecosystem-overview": {
+        "contentHash": "406c41e96015",
+        "anchorHash": "0617fdf00ca2",
+        "labelHash": "cf015508fcce",
+        "children": {
+          "_label": {
+            "contentHash": "cf015508fcce",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:19": {
+            "contentHash": "1e6a75190cd1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7b56affacc72",
+            "anchorHash": "cc70a10012a5"
+          },
+          "prose:20": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "a22979efeb74",
+            "anchorHash": "8b2fad4dba13"
+          },
+          "prose:21": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "d21b4a64a2d8",
+            "anchorHash": "fed9a5db3772"
+          },
+          "prose:22": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "1e408dc27422",
+            "anchorHash": "769634f96825"
+          },
+          "prose:23": {
+            "contentHash": "4aa9bfd2f175",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "7b47361aad19",
+            "anchorHash": "207c9a1ec73e"
+          },
+          "prose:24": {
+            "contentHash": "2c856d77902e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "af85365331ce",
+            "anchorHash": "bebbfa59ebe3"
+          },
+          "prose:25": {
+            "contentHash": "1d29925f4242",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "c09e5feb70f2",
+            "anchorHash": "6ffb00876c7e"
+          },
+          "prose:26": {
+            "contentHash": "befc641580fd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "35fa8aa7361e",
+            "anchorHash": "f320e579fcaa"
+          },
+          "prose:27": {
+            "contentHash": "cfe49afca998",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "afb1347aeac8",
+            "anchorHash": "a95313decd7b"
+          },
+          "prose:28": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "87387b554cb4",
+            "anchorHash": "544a45e05240"
+          },
+          "prose:29": {
+            "contentHash": "7f1dbff08c07",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "f821e7c97842",
+            "anchorHash": "43e5c2bc364f"
+          },
+          "prose:30": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "a52ff9359818",
+            "anchorHash": "faafe1abd45b"
+          },
+          "prose:31": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:12": {
+            "contentHash": "3bff0401e43e",
+            "anchorHash": "660bc4e6b26e"
+          },
+          "prose:32": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:13": {
+            "contentHash": "1825acc4697c",
+            "anchorHash": "8787597360be"
+          },
+          "prose:33": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:14": {
+            "contentHash": "fd5226aef1f9",
+            "anchorHash": "d8b2926ff3fc"
+          },
+          "prose:34": {
+            "contentHash": "4aa9bfd2f175",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:15": {
+            "contentHash": "b7a8948e7d2f",
+            "anchorHash": "61e9b1789341"
+          },
+          "prose:35": {
+            "contentHash": "7e00b1aabc59",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:16": {
+            "contentHash": "43fa81126094",
+            "anchorHash": "3d4d508980e9"
+          },
+          "prose:36": {
+            "contentHash": "487f6297ec60",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:17": {
+            "contentHash": "27b243326fcf",
+            "anchorHash": "3e6698fae7b2"
+          },
+          "prose:37": {
+            "contentHash": "a6b9c66d2510",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:18": {
+            "contentHash": "df705ccf040d",
+            "anchorHash": "1e1b45860aec"
+          },
+          "prose:38": {
+            "contentHash": "2ec68888fdf8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:19",
+          "link:0",
+          "prose:20",
+          "link:1",
+          "prose:21",
+          "link:2",
+          "prose:22",
+          "link:3",
+          "prose:23",
+          "link:4",
+          "prose:24",
+          "link:5",
+          "prose:25",
+          "link:6",
+          "prose:26",
+          "link:7",
+          "prose:27",
+          "link:8",
+          "prose:28",
+          "link:9",
+          "prose:29",
+          "link:10",
+          "prose:30",
+          "link:11",
+          "prose:31",
+          "link:12",
+          "prose:32",
+          "link:13",
+          "prose:33",
+          "link:14",
+          "prose:34",
+          "link:15",
+          "prose:35",
+          "link:16",
+          "prose:36",
+          "link:17",
+          "prose:37",
+          "link:18",
+          "prose:38"
+        ]
+      },
+      "games": {
+        "contentHash": "fb3c2f4b6ca6",
+        "anchorHash": "244feddbc36f",
+        "labelHash": "58c3b91a43c4",
+        "children": {
+          "_label": {
+            "contentHash": "58c3b91a43c4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "7cab0b754212",
+            "children": {
+              "attr:category": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "8517b64a7dfa"
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1"
+        ]
+      },
+      "features-of-onchain-games": {
+        "contentHash": "a0b7172223b7",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0494f685a8eb",
+        "children": {
+          "_label": {
+            "contentHash": "0494f685a8eb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c075658fb0d6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-games-integrate-blockchains": {
+        "contentHash": "c7e02906614d",
+        "anchorHash": "55d95a9615d7",
+        "labelHash": "ddfedf42d676",
+        "children": {
+          "_label": {
+            "contentHash": "ddfedf42d676",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "19bbb0d8809b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "sign-in-with-ethereum": {
+            "contentHash": "557b2a8d0987",
+            "anchorHash": "d1f1d3ce6d57",
+            "labelHash": "470b472ee274",
+            "children": {
+              "_label": {
+                "contentHash": "470b472ee274",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "309bb548694d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "f7925209bc63",
+                "anchorHash": "f68a48502f68"
+              },
+              "prose:2": {
+                "contentHash": "23eccb0778c3",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "fungible-tokens": {
+            "contentHash": "7a21848d0423",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "fdb55c43955f",
+            "children": {
+              "_label": {
+                "contentHash": "fdb55c43955f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "3c549f4a4f0c",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "non-fungible-tokens": {
+            "contentHash": "2b3a5a583dc1",
+            "anchorHash": "ef43b85c23e2",
+            "labelHash": "7781b6717959",
+            "children": {
+              "_label": {
+                "contentHash": "7781b6717959",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "257814b5ee78",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "2618427c76d8",
+                "anchorHash": "1a78b36534fd"
+              },
+              "prose:2": {
+                "contentHash": "e017efecc6cf",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "smart-contracts": {
+            "contentHash": "e899eb91f46e",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "c9239b20a918",
+            "children": {
+              "_label": {
+                "contentHash": "c9239b20a918",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "4ed3147a99e8",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "sign-in-with-ethereum",
+          "fungible-tokens",
+          "non-fungible-tokens",
+          "smart-contracts"
+        ]
+      },
+      "evolution-of-player-ux-improvements": {
+        "contentHash": "66c4da692b30",
+        "anchorHash": "baf458626f0b",
+        "labelHash": "8860884d92e0",
+        "children": {
+          "_label": {
+            "contentHash": "8860884d92e0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "interoperability-and-cross-chain-play": {
+            "contentHash": "190cff77f138",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "6d2ca7044630",
+            "children": {
+              "_label": {
+                "contentHash": "6d2ca7044630",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "b345f6e376af",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "scalability-and-gas-fee-improvements": {
+            "contentHash": "cdb05bca0923",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "86ad6de41d51",
+            "children": {
+              "_label": {
+                "contentHash": "86ad6de41d51",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "5618620b1938",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "social-logins": {
+            "contentHash": "1f29d6205f47",
+            "anchorHash": "33f902a3307a",
+            "labelHash": "d8f3b910b96c",
+            "children": {
+              "_label": {
+                "contentHash": "d8f3b910b96c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:1": {
+                "contentHash": "9a90740399a1",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "1859ef770ef0",
+                "anchorHash": "fc7323d31c9f"
+              },
+              "prose:2": {
+                "contentHash": "2b7c8d92777a",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:1",
+              "link:0",
+              "prose:2"
+            ]
+          },
+          "paymaster-and-session-keys": {
+            "contentHash": "b75857cb0993",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "f46135e8783f",
+            "children": {
+              "_label": {
+                "contentHash": "f46135e8783f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "c7c5525e1ace",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "interoperability-and-cross-chain-play",
+          "scalability-and-gas-fee-improvements",
+          "social-logins",
+          "paymaster-and-session-keys"
+        ]
+      },
+      "get-started-with-gaming-on-ethereum": {
+        "contentHash": "8688137c7b9a",
+        "anchorHash": "958893d7ff1b",
+        "labelHash": "6196a311c979",
+        "children": {
+          "_label": {
+            "contentHash": "6196a311c979",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "8265ddda2bd4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "7a2fcb40eafa",
+            "anchorHash": "49e2a6568a94"
+          },
+          "prose:5": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "cf63c1ea5370",
+            "anchorHash": "4905e1aec9fb"
+          },
+          "prose:6": {
+            "contentHash": "4aa9bfd2f175",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "7e4461ba8598",
+            "anchorHash": "00597e36726c"
+          },
+          "prose:7": {
+            "contentHash": "a0c0ef7676b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "8e3aaefa54a0",
+            "anchorHash": "a16dbfe881c7"
+          },
+          "prose:8": {
+            "contentHash": "f839fd0c3ee8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:template",
+      "frontmatter:image",
+      "frontmatter:sidebarDepth",
+      "frontmatter:summaryPoints",
+      "frontmatter:buttons",
+      "frontmatter:- content",
+      "frontmatter:toId",
+      "frontmatter:- content",
+      "frontmatter:toId",
+      "frontmatter:isSecondary",
+      "gaming-on-ethereum",
+      "rise-of-ethereum-gaming",
+      "ethereums-gaming-ecosystem-overview",
+      "games",
+      "features-of-onchain-games",
+      "how-games-integrate-blockchains",
+      "evolution-of-player-ux-improvements",
+      "get-started-with-gaming-on-ethereum"
+    ]
+  },
+  "sourceCommitSha": "00bf978e1e7448b7856edcbb16a608f3bae980ef"
+}
